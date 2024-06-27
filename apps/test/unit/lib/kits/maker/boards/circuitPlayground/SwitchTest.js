@@ -1,10 +1,12 @@
-import {expect} from '../../../../../../util/reconfiguredChai';
-import sinon from 'sinon';
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
+import sinon from 'sinon';
+
 import Switch, {
   READ_ONLY_PROPERTIES,
   READ_WRITE_PROPERTIES,
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Switch';
+
+import {expect} from '../../../../../../util/reconfiguredChai';
 
 describe('Switch', () => {
   let fakeJohnnyFiveSwitch;

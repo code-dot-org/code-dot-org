@@ -1,10 +1,12 @@
-import React from 'react';
-import {assert} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
 import {UnconnectedUnitOverview as UnitOverview} from '@cdo/apps/code-studio/components/progress/UnitOverview';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+
+import {assert} from '../../../../util/reconfiguredChai';
 
 const defaultProps = {
   excludeCsfColumnInLegend: true,

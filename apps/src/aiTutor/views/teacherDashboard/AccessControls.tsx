@@ -8,9 +8,10 @@ import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {tableLayoutStyles as tableStyles} from '@cdo/apps/templates/tables/tableConstants';
 
 import {styleOverrides} from './InteractionsTable';
-import style from './interactions-table.module.scss';
-import StudentAccessToggle from './StudentAccessToggle';
 import SectionAccessToggle from './SectionAccessToggle';
+import StudentAccessToggle from './StudentAccessToggle';
+
+import style from './interactions-table.module.scss';
 
 /**
  * Renders toggles to control student access to AI Tutor.

@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import {VersionNotFoundAlert} from '@cdo/apps/code-studio/initApp/renderVersionNotFound';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('VersionNotFoundAlert', () => {
   it('renders AlertExclamation with message', () => {

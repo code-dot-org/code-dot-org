@@ -1,0 +1,1900 @@
+{
+  "script": {
+    "name": "sandbox-welcome-to-maker",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2024-06-26 17:32:16 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "sandbox-welcome-to-maker"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Welcome to Maker with micro:bit",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker"
+      }
+    },
+    {
+      "key": "Dance Party",
+      "name": "Dance Party",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Consider the need for headphones. This activity relies on sound.",
+        "purpose": "This lesson introduces the core CS concepts of coding and event programming (using blocks)."
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker"
+      }
+    },
+    {
+      "key": "Overfishing Simulation",
+      "name": "Overfishing Simulation",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "preparation": "- Play through the levels and review the <a href=\"https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview\" target=\"_blank\">lesson slides</a> \n- Decide on pacing between student work time and whole group instruction.\n- Consider assigning students the recommended preparation \n([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911962))\n- Consider these related extensions options ([link](https://studio.code.org/s/csc-ecosystems-2023/lessons/1#activity-4911963)) to explore after the last lesson.\n\n#####Optional:\n- [Optional] Review this <a href=\"https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview\" target=\"_blank\">Helpful Hints</a>  slideshow. \n- [Optional] Review this <a href=\"https://code.org/curriculum/docs/k-5/DebuggingTeacher.pdf\" target=\"_blank\">teacher’s guide to debugging</a>  to be prepared to help students find and fix errors in their code. \n",
+        "purpose": "Students will learn that marine ecosystems have many organisms which interact and keep each other in balance. This lesson combines computer science with life sciences as students create a model that simulates the effects of overfishing using conditional statements in computer science to show cause and effect in real life. "
+      },
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "8ce368bc-3384-45a5-a674-178a64c0a4a7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8ce368bc-3384-45a5-a674-178a64c0a4a7",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker"
+      }
+    },
+    {
+      "key": "5c5db00d-b41d-47ed-b783-e48ebbbcf56d",
+      "position": 1,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5c5db00d-b41d-47ed-b783-e48ebbbcf56d",
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker"
+      }
+    },
+    {
+      "key": "727746cb-d1cc-4e64-be65-e1684c037730",
+      "position": 1,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "727746cb-d1cc-4e64-be65-e1684c037730",
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "d02a223c-dfac-48c6-b928-5fca53e32973",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d02a223c-dfac-48c6-b928-5fca53e32973",
+        "lesson_activity.key": "8ce368bc-3384-45a5-a674-178a64c0a4a7"
+      }
+    },
+    {
+      "key": "707405a2-c98f-4489-aeb4-9c45e3b5528c",
+      "position": 1,
+      "properties": {
+        "name": "Level by Level Support",
+        "progression_name": "Video: Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "707405a2-c98f-4489-aeb4-9c45e3b5528c",
+        "lesson_activity.key": "5c5db00d-b41d-47ed-b783-e48ebbbcf56d"
+      }
+    },
+    {
+      "key": "418c88b2-ca82-47fd-9fab-12ee29c844ce",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "418c88b2-ca82-47fd-9fab-12ee29c844ce",
+        "lesson_activity.key": "5c5db00d-b41d-47ed-b783-e48ebbbcf56d"
+      }
+    },
+    {
+      "key": "2e5d1c87-32d7-4f54-9cf7-9e7f7ef9d36a",
+      "position": 3,
+      "properties": {
+        "progression_name": "Video: Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "2e5d1c87-32d7-4f54-9cf7-9e7f7ef9d36a",
+        "lesson_activity.key": "5c5db00d-b41d-47ed-b783-e48ebbbcf56d"
+      }
+    },
+    {
+      "key": "f460f223-b0d4-45a6-926a-c813434d2f01",
+      "position": 4,
+      "properties": {
+        "progression_name": "Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "f460f223-b0d4-45a6-926a-c813434d2f01",
+        "lesson_activity.key": "5c5db00d-b41d-47ed-b783-e48ebbbcf56d"
+      }
+    },
+    {
+      "key": "3bb18732-5d91-4556-acde-d5cb6def1a61",
+      "position": 5,
+      "properties": {
+        "progression_name": "Video: Measures"
+      },
+      "seeding_key": {
+        "activity_section.key": "3bb18732-5d91-4556-acde-d5cb6def1a61",
+        "lesson_activity.key": "5c5db00d-b41d-47ed-b783-e48ebbbcf56d"
+      }
+    },
+    {
+      "key": "8cae45e1-0169-40fb-9d19-e60702cadd94",
+      "position": 6,
+      "properties": {
+        "progression_name": "Measures"
+      },
+      "seeding_key": {
+        "activity_section.key": "8cae45e1-0169-40fb-9d19-e60702cadd94",
+        "lesson_activity.key": "5c5db00d-b41d-47ed-b783-e48ebbbcf56d"
+      }
+    },
+    {
+      "key": "860dbade-3c22-4dab-a697-889ec2bb0112",
+      "position": 7,
+      "properties": {
+        "progression_name": "Video: Properties"
+      },
+      "seeding_key": {
+        "activity_section.key": "860dbade-3c22-4dab-a697-889ec2bb0112",
+        "lesson_activity.key": "5c5db00d-b41d-47ed-b783-e48ebbbcf56d"
+      }
+    },
+    {
+      "key": "4f6b2c35-77c8-4b20-9b11-fd5b7989c696",
+      "position": 8,
+      "properties": {
+        "progression_name": "Properties"
+      },
+      "seeding_key": {
+        "activity_section.key": "4f6b2c35-77c8-4b20-9b11-fd5b7989c696",
+        "lesson_activity.key": "5c5db00d-b41d-47ed-b783-e48ebbbcf56d"
+      }
+    },
+    {
+      "key": "5a47ae8f-16f0-4c0c-9bee-abeec93e9b3c",
+      "position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5a47ae8f-16f0-4c0c-9bee-abeec93e9b3c",
+        "lesson_activity.key": "5c5db00d-b41d-47ed-b783-e48ebbbcf56d"
+      }
+    },
+    {
+      "key": "57f2bbd6-5043-47d1-b1cc-7a5a1458815e",
+      "position": 10,
+      "properties": {
+        "progression_name": "Video: Wrap-up"
+      },
+      "seeding_key": {
+        "activity_section.key": "57f2bbd6-5043-47d1-b1cc-7a5a1458815e",
+        "lesson_activity.key": "5c5db00d-b41d-47ed-b783-e48ebbbcf56d"
+      }
+    },
+    {
+      "key": "e2996fd8-b1ee-4762-a400-aff272122cbf",
+      "position": 11,
+      "properties": {
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "e2996fd8-b1ee-4762-a400-aff272122cbf",
+        "lesson_activity.key": "5c5db00d-b41d-47ed-b783-e48ebbbcf56d"
+      }
+    },
+    {
+      "key": "c32db61a-7741-45a5-aa0d-b795d88778b3",
+      "position": 12,
+      "properties": {
+        "progression_name": "Lesson Extras"
+      },
+      "seeding_key": {
+        "activity_section.key": "c32db61a-7741-45a5-aa0d-b795d88778b3",
+        "lesson_activity.key": "5c5db00d-b41d-47ed-b783-e48ebbbcf56d"
+      }
+    },
+    {
+      "key": "b165a540-79e2-4da0-8e9b-671459a5d0b6",
+      "position": 1,
+      "properties": {
+        "progression_name": "Ecosystems Simulation"
+      },
+      "seeding_key": {
+        "activity_section.key": "b165a540-79e2-4da0-8e9b-671459a5d0b6",
+        "lesson_activity.key": "727746cb-d1cc-4e64-be65-e1684c037730"
+      }
+    },
+    {
+      "key": "2300ae80-2bbe-43e0-934c-ecc4e13f8056",
+      "position": 2,
+      "properties": {
+        "progression_name": "Food Chain Setup"
+      },
+      "seeding_key": {
+        "activity_section.key": "2300ae80-2bbe-43e0-934c-ecc4e13f8056",
+        "lesson_activity.key": "727746cb-d1cc-4e64-be65-e1684c037730"
+      }
+    },
+    {
+      "key": "ae735cae-523e-4d45-9680-e70a98c25743",
+      "position": 3,
+      "properties": {
+        "progression_name": "If... then... Conditional Statements"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae735cae-523e-4d45-9680-e70a98c25743",
+        "lesson_activity.key": "727746cb-d1cc-4e64-be65-e1684c037730"
+      }
+    },
+    {
+      "key": "fa98475d-9c30-4673-9681-538481623f77",
+      "position": 4,
+      "properties": {
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "fa98475d-9c30-4673-9681-538481623f77",
+        "lesson_activity.key": "727746cb-d1cc-4e64-be65-e1684c037730"
+      }
+    },
+    {
+      "key": "7ed86740-7c83-4a23-bbff-3ba6db7f7b8b",
+      "position": 5,
+      "properties": {
+        "progression_name": "Next Steps"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ed86740-7c83-4a23-bbff-3ba6db7f7b8b",
+        "lesson_activity.key": "727746cb-d1cc-4e64-be65-e1684c037730"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_welcome_objectives"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_welcome_objectives"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "d02a223c-dfac-48c6-b928-5fca53e32973"
+      },
+      "level_keys": [
+        "self-paced-pl-microbit_welcome_objectives"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_welcome_Path"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_welcome_Path"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "d02a223c-dfac-48c6-b928-5fca53e32973"
+      },
+      "level_keys": [
+        "self-paced-pl-microbit_welcome_Path"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_welcome_courses"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_welcome_courses"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "d02a223c-dfac-48c6-b928-5fca53e32973"
+      },
+      "level_keys": [
+        "self-paced-pl-microbit_welcome_courses"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "self-paced-pl-microbit_welcome_this_PL"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_welcome_this_PL"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "d02a223c-dfac-48c6-b928-5fca53e32973"
+      },
+      "level_keys": [
+        "self-paced-pl-microbit_welcome_this_PL"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid1_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "707405a2-c98f-4489-aeb4-9c45e3b5528c"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_vid1_PL"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_01_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "418c88b2-ca82-47fd-9fab-12ee29c844ce"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_01_PL"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid2_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "2e5d1c87-32d7-4f54-9cf7-9e7f7ef9d36a"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_vid2_PL"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_02_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "f460f223-b0d4-45a6-926a-c813434d2f01"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_02_PL"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_03_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "f460f223-b0d4-45a6-926a-c813434d2f01"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_03_PL"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Measures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid3_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "3bb18732-5d91-4556-acde-d5cb6def1a61"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_vid3_PL"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Measures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_04_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "8cae45e1-0169-40fb-9d19-e60702cadd94"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_04_PL"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Measures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_05_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "8cae45e1-0169-40fb-9d19-e60702cadd94"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_05_PL"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Measures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_06_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "8cae45e1-0169-40fb-9d19-e60702cadd94"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_06_PL"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid4_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "860dbade-3c22-4dab-a697-889ec2bb0112"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_vid4_PL"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_07_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "4f6b2c35-77c8-4b20-9b11-fd5b7989c696"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_07_PL"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_08_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "4f6b2c35-77c8-4b20-9b11-fd5b7989c696"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_08_PL"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_09_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "4f6b2c35-77c8-4b20-9b11-fd5b7989c696"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_09_PL"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Wrap-up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid5_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "57f2bbd6-5043-47d1-b1cc-7a5a1458815e"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_vid5_PL"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_10_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "e2996fd8-b1ee-4762-a400-aff272122cbf"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_10_PL"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_bonus1_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "c32db61a-7741-45a5-aa0d-b795d88778b3"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_bonus1_PL"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 17,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_bonus3_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "c32db61a-7741-45a5-aa0d-b795d88778b3"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_bonus3_PL"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Ecosystems Simulation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLIntro to Events_1_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "b165a540-79e2-4da0-8e9b-671459a5d0b6"
+      },
+      "level_keys": [
+        "PLIntro to Events_1_pl"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Ecosystems Simulation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-k5-2-eventsvideo_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "b165a540-79e2-4da0-8e9b-671459a5d0b6"
+      },
+      "level_keys": [
+        "pl-k5-2-eventsvideo_pl"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Ecosystems Simulation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_fish_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "b165a540-79e2-4da0-8e9b-671459a5d0b6"
+      },
+      "level_keys": [
+        "csc_ecosystems_ocean_fish_pl"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Food Chain Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_algae_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "2300ae80-2bbe-43e0-934c-ecc4e13f8056"
+      },
+      "level_keys": [
+        "csc_ecosystems_ocean_algae_pl"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Food Chain Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_boat_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "2300ae80-2bbe-43e0-934c-ecc4e13f8056"
+      },
+      "level_keys": [
+        "csc_ecosystems_ocean_boat_pl"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Food Chain Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_matching_events_maker_grade3_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "2300ae80-2bbe-43e0-934c-ecc4e13f8056"
+      },
+      "level_keys": [
+        "csc_ecosystems_matching_events_maker_grade3_pl"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "If... then... Conditional Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_conditionals_overview_maker_grade3_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "ae735cae-523e-4d45-9680-e70a98c25743"
+      },
+      "level_keys": [
+        "csc_ecosystems_conditionals_overview_maker_grade3_pl"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "If... then... Conditional Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_coral_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "ae735cae-523e-4d45-9680-e70a98c25743"
+      },
+      "level_keys": [
+        "csc_ecosystems_ocean_coral_pl"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "If... then... Conditional Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_coral_health_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "ae735cae-523e-4d45-9680-e70a98c25743"
+      },
+      "level_keys": [
+        "csc_ecosystems_ocean_coral_health_pl"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 10,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "If... then... Conditional Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_justright_algae_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "ae735cae-523e-4d45-9680-e70a98c25743"
+      },
+      "level_keys": [
+        "csc_ecosystems_ocean_justright_algae_pl"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 11,
+      "activity_section_position": 5,
+      "assessment": true,
+      "properties": {
+        "progression": "If... then... Conditional Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_matching_conditionals_maker_grade3_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "ae735cae-523e-4d45-9680-e70a98c25743"
+      },
+      "level_keys": [
+        "csc_ecosystems_matching_conditionals_maker_grade3_pl"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csc_ecosystems_algae_freeplay_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "fa98475d-9c30-4673-9681-538481623f77"
+      },
+      "level_keys": [
+        "csc_ecosystems_algae_freeplay_pl"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 13,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Next Steps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSF_maker_microbit_PL_end_naviagtion_D_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "7ed86740-7c83-4a23-bbff-3ba6db7f7b8b"
+      },
+      "level_keys": [
+        "CSF_maker_microbit_PL_end_naviagtion_D_pl"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-microbit_welcome_objectives",
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_welcome_objectives"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "d02a223c-dfac-48c6-b928-5fca53e32973"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-microbit_welcome_Path",
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_welcome_Path"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "d02a223c-dfac-48c6-b928-5fca53e32973"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-microbit_welcome_courses",
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_welcome_courses"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "d02a223c-dfac-48c6-b928-5fca53e32973"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-microbit_welcome_this_PL",
+        "script_level.level_keys": [
+          "self-paced-pl-microbit_welcome_this_PL"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "d02a223c-dfac-48c6-b928-5fca53e32973"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_vid1_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid1_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "707405a2-c98f-4489-aeb4-9c45e3b5528c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_01_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_01_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "418c88b2-ca82-47fd-9fab-12ee29c844ce"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_vid2_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid2_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "2e5d1c87-32d7-4f54-9cf7-9e7f7ef9d36a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_02_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_02_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "f460f223-b0d4-45a6-926a-c813434d2f01"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_03_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_03_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "f460f223-b0d4-45a6-926a-c813434d2f01"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_vid3_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid3_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "3bb18732-5d91-4556-acde-d5cb6def1a61"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_04_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_04_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "8cae45e1-0169-40fb-9d19-e60702cadd94"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_05_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_05_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "8cae45e1-0169-40fb-9d19-e60702cadd94"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_06_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_06_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "8cae45e1-0169-40fb-9d19-e60702cadd94"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_vid4_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid4_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "860dbade-3c22-4dab-a697-889ec2bb0112"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_07_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_07_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "4f6b2c35-77c8-4b20-9b11-fd5b7989c696"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_08_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_08_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "4f6b2c35-77c8-4b20-9b11-fd5b7989c696"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_09_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_09_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "4f6b2c35-77c8-4b20-9b11-fd5b7989c696"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_vid5_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid5_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "57f2bbd6-5043-47d1-b1cc-7a5a1458815e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_10_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_10_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "e2996fd8-b1ee-4762-a400-aff272122cbf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_bonus1_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_bonus1_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "c32db61a-7741-45a5-aa0d-b795d88778b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_bonus3_PL",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_bonus3_PL"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "c32db61a-7741-45a5-aa0d-b795d88778b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLIntro to Events_1_pl",
+        "script_level.level_keys": [
+          "PLIntro to Events_1_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "b165a540-79e2-4da0-8e9b-671459a5d0b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-k5-2-eventsvideo_pl",
+        "script_level.level_keys": [
+          "pl-k5-2-eventsvideo_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "b165a540-79e2-4da0-8e9b-671459a5d0b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_ocean_fish_pl",
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_fish_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "b165a540-79e2-4da0-8e9b-671459a5d0b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_ocean_algae_pl",
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_algae_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "2300ae80-2bbe-43e0-934c-ecc4e13f8056"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_ocean_boat_pl",
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_boat_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "2300ae80-2bbe-43e0-934c-ecc4e13f8056"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_matching_events_maker_grade3_pl",
+        "script_level.level_keys": [
+          "csc_ecosystems_matching_events_maker_grade3_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "2300ae80-2bbe-43e0-934c-ecc4e13f8056"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_conditionals_overview_maker_grade3_pl",
+        "script_level.level_keys": [
+          "csc_ecosystems_conditionals_overview_maker_grade3_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "ae735cae-523e-4d45-9680-e70a98c25743"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_ocean_coral_pl",
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_coral_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "ae735cae-523e-4d45-9680-e70a98c25743"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_ocean_coral_health_pl",
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_coral_health_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "ae735cae-523e-4d45-9680-e70a98c25743"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_ocean_justright_algae_pl",
+        "script_level.level_keys": [
+          "csc_ecosystems_ocean_justright_algae_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "ae735cae-523e-4d45-9680-e70a98c25743"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_matching_conditionals_maker_grade3_pl",
+        "script_level.level_keys": [
+          "csc_ecosystems_matching_conditionals_maker_grade3_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "ae735cae-523e-4d45-9680-e70a98c25743"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csc_ecosystems_algae_freeplay_pl",
+        "script_level.level_keys": [
+          "csc_ecosystems_algae_freeplay_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "fa98475d-9c30-4673-9681-538481623f77"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSF_maker_microbit_PL_end_naviagtion_D_pl",
+        "script_level.level_keys": [
+          "CSF_maker_microbit_PL_end_naviagtion_D_pl"
+        ],
+        "lesson.key": "Overfishing Simulation",
+        "lesson_group.key": "",
+        "script.name": "sandbox-welcome-to-maker",
+        "activity_section.key": "7ed86740-7c83-4a23-bbff-3ba6db7f7b8b"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "**Grade 3 - Maker with micro:bit slides ",
+      "url": "https://docs.google.com/presentation/d/1-RZPTODOwGros3IUSArOIeAddsMTNyhBciJt8eeRrr8/template/preview",
+      "key": "_grade_3_-_maker_with_micro_bit_slides",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1-RZPTODOwGros3IUSArOIeAddsMTNyhBciJt8eeRrr8/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "_grade_3_-_maker_with_micro_bit_slides"
+      }
+    },
+    {
+      "name": "**Grade 5 - Maker with micro:bit slides",
+      "url": "https://docs.google.com/presentation/d/1CrNrbnG4-DuDf4Pejrcnz1ZStBotO-Oq59aik-iq4DE/template/preview",
+      "key": "_grade_5_-_maker_with_micro_bit_slides",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1CrNrbnG4-DuDf4Pejrcnz1ZStBotO-Oq59aik-iq4DE/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "_grade_5_-_maker_with_micro_bit_slides"
+      }
+    },
+    {
+      "name": "Dance Party Project Guide",
+      "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+      "key": "dance_party_project_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Worksheet"
+      },
+      "seeding_key": {
+        "resource.key": "dance_party_project_guide"
+      }
+    },
+    {
+      "name": "Dance Party: Unplugged",
+      "url": "https://curriculum.code.org/hoc/unplugged/4/",
+      "key": "dance_party_unplugged",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "dance_party_unplugged"
+      }
+    },
+    {
+      "name": "Open-ended Programming Levels",
+      "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
+      "key": "open-ended_programming_levels",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "open-ended_programming_levels"
+      }
+    },
+    {
+      "name": "Spotify Playlist (all ages)",
+      "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw",
+      "key": "spotify_playlist_all_ages_",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "spotify_playlist_all_ages_"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "resource.key": "_grade_5_-_maker_with_micro_bit_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "resource.key": "dance_party_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "resource.key": "dance_party_unplugged"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "resource.key": "open-ended_programming_levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "resource.key": "spotify_playlist_all_ages_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "resource.key": "_grade_3_-_maker_with_micro_bit_slides"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "code",
+      "word": "code",
+      "definition": "(v) to write code, or to write instructions for a computer.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "key": "condition",
+      "word": "Condition",
+      "definition": "Something a program checks to see if it is true before allowing an action",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "condition"
+      }
+    },
+    {
+      "key": "conditionals",
+      "word": "Conditionals",
+      "definition": "Statements that only run under certain conditions.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "key": "ecosystem",
+      "word": "Ecosystem",
+      "definition": "A biological community of interacting organisms and their environment",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "ecosystem"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "overfishing",
+      "word": "Overfishing",
+      "definition": "Removal of fish faster than they can reproduce",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "overfishing"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "key": "simulation",
+      "word": "Simulation",
+      "definition": "A computer model for the purpose of study.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "simulation"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "vocabulary.key": "program"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "vocabulary.key": "condition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "vocabulary.key": "ecosystem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "vocabulary.key": "overfishing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "vocabulary.key": "simulation"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "5e5b9cf0-7898-4e8d-ae70-f8de10cec4fe",
+      "properties": {
+        "description": "Develop a simulation of the effects of overfishing on an aquatic ecosystem"
+      },
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "objective.key": "5e5b9cf0-7898-4e8d-ae70-f8de10cec4fe"
+      }
+    },
+    {
+      "key": "79aef721-2e8e-4472-bacb-0888b41917aa",
+      "properties": {
+        "description": "Analyze the effects of too much, too little or just the right amount of algae in a marine ecosystem. "
+      },
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "objective.key": "79aef721-2e8e-4472-bacb-0888b41917aa"
+      }
+    },
+    {
+      "key": "d8b17b3c-eb1c-4a9e-8328-e97f3442080d",
+      "properties": {
+        "description": "Use conditional statements to show a cause and effect scenario in nature."
+      },
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "objective.key": "d8b17b3c-eb1c-4a9e-8328-e97f3442080d"
+      }
+    },
+    {
+      "key": "d9f69a1f-63df-466e-96ca-d80f3bbe42ac",
+      "properties": {
+        "description": "Develop programs that respond to user input"
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "objective.key": "d9f69a1f-63df-466e-96ca-d80f3bbe42ac"
+      }
+    },
+    {
+      "key": "dd0985ed-0716-41fa-adca-c3a55c91a1e6",
+      "properties": {
+        "description": "Develop programs that respond to timed events"
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "objective.key": "dd0985ed-0716-41fa-adca-c3a55c91a1e6"
+      }
+    },
+    {
+      "key": "f0fd5c6c-1e06-428b-a76c-41630836dece",
+      "properties": {
+        "description": "Create dance animations with code"
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "objective.key": "f0fd5c6c-1e06-428b-a76c-41630836dece"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "framework.shortcode": "ngss",
+        "standard.shortcode": "3-LS4-3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "framework.shortcode": "ngss",
+        "standard.shortcode": "3-LS4-4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Overfishing Simulation",
+        "framework.shortcode": "ngss",
+        "standard.shortcode": "5-PS3-1"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

@@ -47,23 +47,26 @@ export default function LtiRosterSyncSettings(props) {
         size={'s'}
         name={'lti_roster_sync_enabled'}
       />
-      <button
-        type={'button'}
-        className={'btn'}
-        style={styles.button}
-        onClick={handleSubmit}
-        tabIndex={'0'}
-        disabled={!changed}
-      >
-        {i18n.ltiSectionSyncSettingsButtonText()}
-      </button>
+      <div style={styles.buttonContainer}>
+        <button
+          type={'button'}
+          className={'btn'}
+          onClick={handleSubmit}
+          tabIndex={'0'}
+          disabled={!changed}
+        >
+          {i18n.ltiSectionSyncSettingsButtonText()}
+        </button>
+      </div>
     </div>
   );
 }
 
 const styles = {
-  button: {
-    float: 'right',
+  buttonContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
   },
 };
 

@@ -21,6 +21,12 @@ describe I18n::Resources::Dashboard::TextToSpeech::SyncOut do
     assert_equal I18n::Utils::SyncOutBase, described_class.superclass
   end
 
+  describe 'TTS_LOCALES' do
+    it 'returns TextToSpeech VOICES keys excluding :en-US' do
+      _(described_class::TTS_LOCALES).must_equal %i[es-ES es-MX it-IT pt-BR]
+    end
+  end
+
   describe '#perform' do
     let(:perform_sync_out) {described_instance.perform}
 
@@ -41,7 +47,7 @@ describe I18n::Resources::Dashboard::TextToSpeech::SyncOut do
     end
 
     around do |test|
-      I18nScriptUtils.stub_const(:TTS_LOCALES, [locale]) {test.call}
+      described_class.stub_const(:TTS_LOCALES, [locale]) {test.call}
     end
 
     before do
@@ -123,7 +129,7 @@ describe I18n::Resources::Dashboard::TextToSpeech::SyncOut do
     end
 
     it 'uploads the level TTS "short_instructions" localization to S3' do
-      level.expects(:tts_upload_to_s3).with(level_tts_short_instructions_l10n, 'update_level_i18n', locale: locale).once
+      level.expects(:tts_upload_to_s3).with(level_tts_short_instructions_l10n, 'short_instructions', 'update_level_i18n', locale: locale).once
       upload_level_tts_short_instructions_l10n
     end
 
@@ -163,7 +169,7 @@ describe I18n::Resources::Dashboard::TextToSpeech::SyncOut do
     end
 
     it 'uploads the level TTS "long_instructions" localization to S3' do
-      level.expects(:tts_upload_to_s3).with(level_tts_long_instructions_l10n, 'update_level_i18n', locale: locale).once
+      level.expects(:tts_upload_to_s3).with(level_tts_long_instructions_l10n, 'long_instructions', 'update_level_i18n', locale: locale).once
       upload_level_tts_long_instructions_l10n
     end
 
@@ -217,7 +223,7 @@ describe I18n::Resources::Dashboard::TextToSpeech::SyncOut do
     end
 
     it 'uploads the level TTS "authored_hints" localization to S3' do
-      level.expects(:tts_upload_to_s3).with(level_tts_authored_hint_markdown_l10n, 'update_level_i18n', locale: locale)
+      level.expects(:tts_upload_to_s3).with(level_tts_authored_hint_markdown_l10n, 'hint_markdown', 'update_level_i18n', locale: locale)
       upload_level_tts_authored_hints_l10n
     end
 

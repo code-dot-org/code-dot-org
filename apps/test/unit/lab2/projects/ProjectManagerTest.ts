@@ -1,11 +1,12 @@
+import {expect, assert} from 'chai';
+import sinon, {stubObject, StubbedInstance} from 'ts-sinon';
+
 import {RemoteChannelsStore} from '@cdo/apps/lab2/projects/ChannelsStore';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import {RemoteSourcesStore} from '@cdo/apps/lab2/projects/SourcesStore';
 import {ValidationError} from '@cdo/apps/lab2/responseValidators';
 import {ProjectSources, Channel} from '@cdo/apps/lab2/types';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
-import {expect, assert} from 'chai';
-import sinon, {stubObject, StubbedInstance} from 'ts-sinon';
 
 const FAKE_CHANNEL_ID = 'fakeChannelId';
 

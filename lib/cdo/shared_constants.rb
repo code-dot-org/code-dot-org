@@ -651,8 +651,8 @@ module SharedConstants
 
   CHILD_ACCOUNT_COMPLIANCE_STATES = OpenStruct.new(
     {
+      GRACE_PERIOD: 'p',
       LOCKED_OUT: 'l',
-      REQUEST_SENT: 's',
       PERMISSION_GRANTED: 'g'
     }
   ).freeze
@@ -727,11 +727,6 @@ module SharedConstants
     COMPILATION: 'compilation',
     VALIDATION: 'validation',
     GENERAL_CHAT: 'general_chat',
-  }.freeze
-
-  AICHAT_ERROR_TYPE = {
-    PROFANITY_MODEL: 'profanity_model',
-    PROFANITY_USER: 'profanity_user'
   }.freeze
 
   USER_TYPES = OpenStruct.new(

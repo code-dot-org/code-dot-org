@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
+
 import NewDataDocForm from '@cdo/apps/lib/levelbuilder/data-docs-editor/NewDataDocForm';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('NewDataDocForm', () => {
   it('renders form', () => {

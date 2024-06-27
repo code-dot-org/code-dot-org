@@ -1,0 +1,16 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "game_id": 72,
+  "created_at": "2024-06-20T19:41:40.000Z",
+  "level_num": "custom",
+  "user_id": 1054,
+  "properties": {
+    "encrypted": "false",
+    "project_template_level_name": "data-science-sample-pbt-1",
+    "long_instructions": "## Step 6: Analyze the Output\r\nTake a look at the resulting bar chart.\r\n\r\n**Which products perform better or worse in terms of customer ratings? Why do you think this might be the case?**\r\n",
+    "teacher_markdown": "Encourage students to not only describe what they see in the graph but also to interpret the implications of these visual data insights. Discuss common pitfalls in data interpretation, such as correlation not implying causation. Suggest that students consider external factors that could influence the ratings, adding depth to their analysis.",
+    "hide_share_and_remix": "false"
+  },
+  "published": true
+}]]></config>
+</Pythonlab>

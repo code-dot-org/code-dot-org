@@ -1,13 +1,9 @@
-import sinon from 'sinon';
 import ReactDOM from 'react-dom';
-import {expect} from '../../util/reconfiguredChai';
-import Javalab from '@cdo/apps/javalab/Javalab';
+import sinon from 'sinon';
+
 import project from '@cdo/apps/code-studio/initApp/project';
-import {
-  singleton as studioApp,
-  stubStudioApp,
-  restoreStudioApp,
-} from '@cdo/apps/StudioApp';
+import Javalab from '@cdo/apps/javalab/Javalab';
+import {setAllSourcesAndFileMetadata} from '@cdo/apps/javalab/redux/editorRedux';
 import {
   getStore,
   registerReducers,
@@ -15,7 +11,13 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
-import {setAllSourcesAndFileMetadata} from '@cdo/apps/javalab/redux/editorRedux';
+import {
+  singleton as studioApp,
+  stubStudioApp,
+  restoreStudioApp,
+} from '@cdo/apps/StudioApp';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('Javalab', () => {
   let javalab;

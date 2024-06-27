@@ -1,23 +1,25 @@
 /** @file Test SetupChecklist component */
-import React from 'react';
-import sinon from 'sinon';
-import {expect} from '../../../../../util/reconfiguredChai';
 import {fireEvent, render, screen} from '@testing-library/react';
-import * as utils from '@cdo/apps/utils';
-import * as boardUtils from '@cdo/apps/lib/kits/maker/util/boardUtils';
-import SetupChecklist from '@cdo/apps/lib/kits/maker/ui/SetupChecklist';
-import SetupChecker from '@cdo/apps/lib/kits/maker/util/SetupChecker';
+import React from 'react';
 import {Provider} from 'react-redux';
+import sinon from 'sinon';
+
+import microBitReducer, {
+  setMicroBitFirmataUpdatePercent,
+} from '@cdo/apps/lib/kits/maker/microBitRedux';
+import SetupChecklist from '@cdo/apps/lib/kits/maker/ui/SetupChecklist';
+import * as boardUtils from '@cdo/apps/lib/kits/maker/util/boardUtils';
+import SetupChecker from '@cdo/apps/lib/kits/maker/util/SetupChecker';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import microBitReducer, {
-  setMicroBitFirmataUpdatePercent,
-} from '@cdo/apps/lib/kits/maker/microBitRedux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../../../../../util/reconfiguredChai';
 
 // Speed up the tests by reducing the artificial delay between steps
 const STEP_DELAY_MS = 1;

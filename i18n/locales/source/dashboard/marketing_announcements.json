@@ -16,7 +16,14 @@
       "buttonText": "Learn more"
     },
     "lms-launch": {
+      "title": "Discover our new LMS integrations",
+      "body": "We've added new LMS integrations for Canvas and Schoology! Connect existing LMS classrooms in your school to Code.org with one-click Roster Syncing, Single Sign-On, and integrated access to curriculum.",
       "buttonText": "Learn more"
+    },
+    "curriculum-launch-2024": {
+      "title": "Discover new and updated curriculum!",
+      "body": "Explore our latest units and professional learning resources to inspire future tech innovators.",
+      "buttonText": "See what's new"
     }
   }
 }

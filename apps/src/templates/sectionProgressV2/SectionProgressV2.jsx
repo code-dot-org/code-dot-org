@@ -3,6 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {Heading1, Heading6} from '@cdo/apps/componentLibrary/typography';
+import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
@@ -14,6 +15,7 @@ import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 import UnitSelectorV2 from '../UnitSelectorV2';
 
 import IconKey from './IconKey';
+import MoreOptionsDropdown from './MoreOptionsDropdown';
 import ProgressTableV2 from './ProgressTableV2';
 
 import styles from './progress-table-v2.module.scss';
@@ -44,6 +46,11 @@ function SectionProgressV2({
 }) {
   const [expandedLessonIds, setExpandedLessonIds] = React.useState(() =>
     getLocalStorage(scriptId, sectionId)
+  );
+
+  const expandedMetadataEnabled = React.useMemo(
+    () => DCDO.get('progress-v2-metadata-enabled', false),
+    []
   );
 
   React.useEffect(() => {
@@ -101,6 +108,7 @@ function SectionProgressV2({
           {i18n.lessonsIn()}
 
           <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
+          {expandedMetadataEnabled && <MoreOptionsDropdown />}
         </Heading6>
       </div>
       <ProgressTableV2

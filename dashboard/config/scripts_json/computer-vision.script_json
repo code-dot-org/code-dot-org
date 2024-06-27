@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "computer-vision",
-    "serialized_at": "2024-06-17 22:34:45 UTC",
+    "serialized_at": "2024-06-26 19:31:59 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -29,22 +29,87 @@
   },
   "lesson_groups": [
     {
-      "key": "",
-      "user_facing": false,
+      "key": "lessonGroup-3",
+      "user_facing": true,
       "position": 1,
       "properties": {
+        "display_name": "Pre-Module Survey"
       },
       "seeding_key": {
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "computer-vision"
+      }
+    },
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Content, Part 1"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Mid-Module Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "computer-vision"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Content, Part 2"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "computer-vision"
+      }
+    },
+    {
+      "key": "lessonGroup-6",
+      "user_facing": true,
+      "position": 5,
+      "properties": {
+        "display_name": "Post-Module Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "computer-vision"
       }
     }
   ],
   "lessons": [
     {
+      "key": "lesson-1",
+      "name": "Pre-Module Survey",
+      "absolute_position": 1,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "assessment": true
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "computer-vision"
+      }
+    },
+    {
       "key": "Introduction to Computer Vision",
       "name": "Introduction to Computer Vision",
-      "absolute_position": 1,
+      "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 1,
@@ -55,14 +120,14 @@
       },
       "seeding_key": {
         "lesson.key": "Introduction to Computer Vision",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
     {
       "key": "Empathizing with Users",
       "name": "Empathizing with Users",
-      "absolute_position": 2,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
@@ -73,14 +138,14 @@
       },
       "seeding_key": {
         "lesson.key": "Empathizing with Users",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
     {
       "key": "Gathering User Data",
       "name": "Gathering User Data",
-      "absolute_position": 3,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
@@ -91,14 +156,14 @@
       },
       "seeding_key": {
         "lesson.key": "Gathering User Data",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
     {
       "key": "Data Visualizations",
       "name": "Data Visualizations",
-      "absolute_position": 4,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
@@ -109,14 +174,14 @@
       },
       "seeding_key": {
         "lesson.key": "Data Visualizations",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
     {
       "key": "User Stories and Problem Statements",
       "name": "User Stories and Problem Statements",
-      "absolute_position": 5,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
@@ -127,14 +192,14 @@
       },
       "seeding_key": {
         "lesson.key": "User Stories and Problem Statements",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
     {
       "key": "Pixels and QR Codes",
       "name": "Pixels and QR Codes",
-      "absolute_position": 6,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
@@ -145,14 +210,14 @@
       },
       "seeding_key": {
         "lesson.key": "Pixels and QR Codes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
     {
       "key": "Edge Detection",
       "name": "Edge Detection",
-      "absolute_position": 7,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
@@ -163,14 +228,30 @@
       },
       "seeding_key": {
         "lesson.key": "Edge Detection",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Mid-Module Survey",
+      "absolute_position": 9,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "assessment": true
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "computer-vision"
       }
     },
     {
       "key": "Datasets and Models",
       "name": "Datasets and Models",
-      "absolute_position": 8,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
@@ -181,14 +262,14 @@
       },
       "seeding_key": {
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
     {
       "key": "Training Data and Bias",
       "name": "Training Data and Bias",
-      "absolute_position": 9,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
@@ -199,14 +280,14 @@
       },
       "seeding_key": {
         "lesson.key": "Training Data and Bias",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
     {
       "key": "Training a Model",
       "name": "Training a Model",
-      "absolute_position": 10,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 10,
@@ -217,14 +298,14 @@
       },
       "seeding_key": {
         "lesson.key": "Training a Model",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
     {
       "key": "Impacts of Computer Vision",
       "name": "Impacts of Computer Vision",
-      "absolute_position": 11,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 11,
@@ -235,14 +316,14 @@
       },
       "seeding_key": {
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
     {
       "key": "Prototype Development, Part 1",
       "name": "Prototype Development, Part 1",
-      "absolute_position": 12,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 12,
@@ -253,14 +334,14 @@
       },
       "seeding_key": {
         "lesson.key": "Prototype Development, Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
     {
       "key": "Prototype Development, Part 2",
       "name": "Prototype Development, Part 2",
-      "absolute_position": 13,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 13,
@@ -270,14 +351,14 @@
       },
       "seeding_key": {
         "lesson.key": "Prototype Development, Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
     {
       "key": "User Feedback",
       "name": "User Feedback",
-      "absolute_position": 14,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 14,
@@ -288,14 +369,14 @@
       },
       "seeding_key": {
         "lesson.key": "User Feedback",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
     {
       "key": "Implementing Feedback",
       "name": "Implementing Feedback",
-      "absolute_position": 15,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 15,
@@ -306,12 +387,40 @@
       },
       "seeding_key": {
         "lesson.key": "Implementing Feedback",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "computer-vision"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Post-Module Survey",
+      "absolute_position": 18,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "assessment": true
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "computer-vision"
       }
     }
   ],
   "lesson_activities": [
+    {
+      "key": "c582bab5-d357-4683-9855-65434e8b87b8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c582bab5-d357-4683-9855-65434e8b87b8",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "computer-vision"
+      }
+    },
     {
       "key": "e97760a8-0005-4918-82cc-01c34870f228",
       "position": 1,
@@ -322,7 +431,7 @@
       "seeding_key": {
         "lesson_activity.key": "e97760a8-0005-4918-82cc-01c34870f228",
         "lesson.key": "Introduction to Computer Vision",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -336,7 +445,7 @@
       "seeding_key": {
         "lesson_activity.key": "b4de69c3-6bea-4a65-ab47-b2fe371f1f25",
         "lesson.key": "Introduction to Computer Vision",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -350,7 +459,7 @@
       "seeding_key": {
         "lesson_activity.key": "387829bb-271a-465e-8199-e15e2a956052",
         "lesson.key": "Introduction to Computer Vision",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -364,7 +473,7 @@
       "seeding_key": {
         "lesson_activity.key": "5c0b2d51-69a6-436f-9b5a-5fda75fd2f8c",
         "lesson.key": "Empathizing with Users",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -378,7 +487,7 @@
       "seeding_key": {
         "lesson_activity.key": "8d2c7be6-f2d9-44b5-8a95-a162c314c3af",
         "lesson.key": "Empathizing with Users",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -392,7 +501,7 @@
       "seeding_key": {
         "lesson_activity.key": "1c7252dc-fdbb-4087-adab-afc69c9cc1bf",
         "lesson.key": "Empathizing with Users",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -406,7 +515,7 @@
       "seeding_key": {
         "lesson_activity.key": "57afaad9-8601-438d-b12d-e19111d3da63",
         "lesson.key": "Gathering User Data",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -420,7 +529,7 @@
       "seeding_key": {
         "lesson_activity.key": "56e485b8-9a98-451e-bc17-5c4354007059",
         "lesson.key": "Gathering User Data",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -434,7 +543,7 @@
       "seeding_key": {
         "lesson_activity.key": "b97fbb78-8663-4dc0-8f30-14239584542e",
         "lesson.key": "Gathering User Data",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -448,7 +557,7 @@
       "seeding_key": {
         "lesson_activity.key": "fdd1b92b-91a9-4d86-932e-106bffa482b7",
         "lesson.key": "Data Visualizations",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -462,7 +571,7 @@
       "seeding_key": {
         "lesson_activity.key": "8b617f93-2888-44bd-bf7f-12dc15202843",
         "lesson.key": "Data Visualizations",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -476,7 +585,7 @@
       "seeding_key": {
         "lesson_activity.key": "3681b01c-b446-4aeb-a334-592ee1b50025",
         "lesson.key": "Data Visualizations",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -490,7 +599,7 @@
       "seeding_key": {
         "lesson_activity.key": "a255528b-bcdf-41ac-9ad3-1f8de81e8556",
         "lesson.key": "User Stories and Problem Statements",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -504,7 +613,7 @@
       "seeding_key": {
         "lesson_activity.key": "c949464e-2c7d-44f2-b70a-76456196df0d",
         "lesson.key": "User Stories and Problem Statements",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -518,7 +627,7 @@
       "seeding_key": {
         "lesson_activity.key": "d267a158-cf8b-496c-a061-7c828b45db96",
         "lesson.key": "User Stories and Problem Statements",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -532,7 +641,7 @@
       "seeding_key": {
         "lesson_activity.key": "df4931f9-44d7-480d-9869-187c03cebe56",
         "lesson.key": "Pixels and QR Codes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -546,7 +655,7 @@
       "seeding_key": {
         "lesson_activity.key": "dd7bb71a-d751-46b9-8382-006b0f9632a4",
         "lesson.key": "Pixels and QR Codes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -560,7 +669,7 @@
       "seeding_key": {
         "lesson_activity.key": "d43e15ed-518c-47a4-a26b-c4c7c6af85c7",
         "lesson.key": "Pixels and QR Codes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -574,7 +683,7 @@
       "seeding_key": {
         "lesson_activity.key": "ed0d1918-2f32-46f0-8da8-5f9009fc89de",
         "lesson.key": "Edge Detection",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -588,7 +697,7 @@
       "seeding_key": {
         "lesson_activity.key": "6719c352-8331-4de8-b44b-a1ecceeba464",
         "lesson.key": "Edge Detection",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -602,7 +711,19 @@
       "seeding_key": {
         "lesson_activity.key": "02045366-94ac-4236-b403-3b0a988b3cd1",
         "lesson.key": "Edge Detection",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision"
+      }
+    },
+    {
+      "key": "e7641a2a-de49-490e-a6f3-92c206636231",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e7641a2a-de49-490e-a6f3-92c206636231",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "computer-vision"
       }
     },
@@ -616,7 +737,7 @@
       "seeding_key": {
         "lesson_activity.key": "84e5b613-8cde-4b87-852e-938344f2d082",
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -630,7 +751,7 @@
       "seeding_key": {
         "lesson_activity.key": "d6a9c577-a65a-4338-a03a-8c5c747c8208",
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -644,7 +765,7 @@
       "seeding_key": {
         "lesson_activity.key": "803b1081-9ef3-4822-aa85-83574caca513",
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -658,7 +779,7 @@
       "seeding_key": {
         "lesson_activity.key": "2299880f-4589-404f-9251-dcfac42545e9",
         "lesson.key": "Training Data and Bias",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -672,7 +793,7 @@
       "seeding_key": {
         "lesson_activity.key": "c4d1d730-7745-4fe0-bc12-2bcca877f8b3",
         "lesson.key": "Training Data and Bias",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -686,7 +807,7 @@
       "seeding_key": {
         "lesson_activity.key": "930ea9cf-5a2d-406b-8de7-b5889bf37a50",
         "lesson.key": "Training Data and Bias",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -700,7 +821,7 @@
       "seeding_key": {
         "lesson_activity.key": "7bb3709f-a535-4b3a-96a9-a0e981cb9979",
         "lesson.key": "Training a Model",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -714,7 +835,7 @@
       "seeding_key": {
         "lesson_activity.key": "3e02099a-4aa0-4f0a-ba3b-bd72ba974c50",
         "lesson.key": "Training a Model",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -728,7 +849,7 @@
       "seeding_key": {
         "lesson_activity.key": "383c91ef-02b9-42f6-b5b3-150807adfe99",
         "lesson.key": "Training a Model",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -742,7 +863,7 @@
       "seeding_key": {
         "lesson_activity.key": "0f988d9d-7cc3-4481-9989-7036821dd71b",
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -756,7 +877,7 @@
       "seeding_key": {
         "lesson_activity.key": "3bda7820-c464-43ad-9da8-390a2d6c5f82",
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -770,7 +891,7 @@
       "seeding_key": {
         "lesson_activity.key": "395da187-e41d-43e6-8596-a1ca22b1a5b0",
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -784,7 +905,7 @@
       "seeding_key": {
         "lesson_activity.key": "dcd22052-1a70-4b84-ae16-05a0ef6fdad8",
         "lesson.key": "Prototype Development, Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -798,7 +919,7 @@
       "seeding_key": {
         "lesson_activity.key": "16809e0b-dddd-4257-9942-1c84d03a1d0c",
         "lesson.key": "Prototype Development, Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -812,7 +933,7 @@
       "seeding_key": {
         "lesson_activity.key": "d3660592-031c-412b-8578-aa946b2ef542",
         "lesson.key": "Prototype Development, Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -826,7 +947,7 @@
       "seeding_key": {
         "lesson_activity.key": "922023c3-9f05-4922-bc95-7e1661485977",
         "lesson.key": "Prototype Development, Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -840,7 +961,7 @@
       "seeding_key": {
         "lesson_activity.key": "028bb578-2d0c-4761-affb-ead97f3ef5fb",
         "lesson.key": "Prototype Development, Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -854,7 +975,7 @@
       "seeding_key": {
         "lesson_activity.key": "efc9f23a-837a-40cd-a8df-61d6bf88df75",
         "lesson.key": "Prototype Development, Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -868,7 +989,7 @@
       "seeding_key": {
         "lesson_activity.key": "94697415-e05a-4e74-ab95-5389a87c40b4",
         "lesson.key": "User Feedback",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -882,7 +1003,7 @@
       "seeding_key": {
         "lesson_activity.key": "75862838-fb39-4ee1-bcd0-6a915d3d75bd",
         "lesson.key": "User Feedback",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -896,7 +1017,7 @@
       "seeding_key": {
         "lesson_activity.key": "1bf19ce2-d1be-4429-8ddc-819f3f445c94",
         "lesson.key": "User Feedback",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -910,7 +1031,7 @@
       "seeding_key": {
         "lesson_activity.key": "a9e02cc3-0487-4740-88d8-9014efc4b79d",
         "lesson.key": "Implementing Feedback",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -924,7 +1045,7 @@
       "seeding_key": {
         "lesson_activity.key": "9f2bd694-380f-4cef-9a4c-49fccdfed77a",
         "lesson.key": "Implementing Feedback",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision"
       }
     },
@@ -938,12 +1059,35 @@
       "seeding_key": {
         "lesson_activity.key": "de9290f3-95b0-4d47-9ac8-c6066e895174",
         "lesson.key": "Implementing Feedback",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "computer-vision"
+      }
+    },
+    {
+      "key": "224c11c1-acd9-4819-aac7-af96d31319b4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "224c11c1-acd9-4819-aac7-af96d31319b4",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "computer-vision"
       }
     }
   ],
   "activity_sections": [
+    {
+      "key": "a356024a-1869-4365-9527-827c0b2b3ff3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Pre-Module Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "a356024a-1869-4365-9527-827c0b2b3ff3",
+        "lesson_activity.key": "c582bab5-d357-4683-9855-65434e8b87b8"
+      }
+    },
     {
       "key": "63029c31-334f-4292-8a5f-a672c58aabe1",
       "position": 1,
@@ -1090,16 +1234,33 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 2 to complete the reflection question:\n\n* _What is your definition of computer vision?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goal:** This activity allows students to share what they have constructed as their working definition of computer vision thus far. This definition is sure to evolve and grow as the module progresses. Some possible examples for a working definition that students might construct include: \n* Computer vision is like when your computer tries to figure out what's in a picture, kind of like how we recognize our friends' faces or stuff in photos \n* Computer vision helps computers 'see' and understand the images and videos like we do, but through cameras and algorithms \n* It's like teaching a computer to see and interpret the world around it, so it can recognize objects, people, and even actions \n* It's a part of artificial intelligence where computers are trained to interpret and understand the visual world.",
-        "progression_name": "Reflection",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "It might prove to be an interesting experience to revisit these student responses to this question at the end of the module to see what has changed and why."
-          }
-        ]
+        "progression_name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "ef4655bf-d645-45a4-8551-89e0501f2b1c",
+        "lesson_activity.key": "387829bb-271a-465e-8199-e15e2a956052"
+      }
+    },
+    {
+      "key": "8a6d8d58-2dfc-45e7-bcb1-c5764bf5fd31",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8a6d8d58-2dfc-45e7-bcb1-c5764bf5fd31",
+        "lesson_activity.key": "387829bb-271a-465e-8199-e15e2a956052"
+      }
+    },
+    {
+      "key": "5a2ae495-4449-4496-8b1c-3aa87e2eb6b0",
+      "position": 3,
+      "properties": {
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "name": "(Optional) JuiceMind Assessment",
+        "progression_name": "JuiceMind Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "5a2ae495-4449-4496-8b1c-3aa87e2eb6b0",
         "lesson_activity.key": "387829bb-271a-465e-8199-e15e2a956052"
       }
     },
@@ -1259,7 +1420,7 @@
       "key": "5112c678-0a5b-4d55-a3ea-2191eb719f4f",
       "position": 9,
       "properties": {
-        "description": "Next, we are going to practice turning observations about problems facing a community into questions that will allow us to gather more information about our users’ needs. For this, let’s return to the example of FarmWise employees volunteering on farms and interviewing farmers.\n\nWe already discussed some things that the FarmWise employees might have learned from their interviews. Let’s break down the process of gathering that information a little bit more, starting with some observations that the designers might have made while volunteering as a part of the farming community: Lack of access to enough water Trouble finding enough workers to hire Challenges minimizing the loss of crops due to pests and disease.\n\nThese problems and the needs associated with them might be obvious to members of the community, but as designers, our job is to find out more about what our users need instead of making assumptions. To do this, we need to dig a bit deeper by talking with users, just like the FarmWise employees interviewed farmers.\n\nTurning these observations into research questions will help you as a designer gather more data about your users and help you more clearly define the problem you are trying to solve.\n\nHere is an example of a question that the employees at FarmWise might have asked to learn more about the issue of water scarcity. Can you think of questions they might ask about labor shortages or pest and disease management?",
+        "description": "Next, we are going to practice turning observations about problems facing a community, into questions that will allow us to gather more information about our users' needs. For this, let's return to the example of FarmWise employees volunteering on farms, and interviewing farmers.\n\nWe already discussed some things that the FarmWise employees might have learned from their interviews. Let's break down the process of gathering that information a little bit more, starting with some observations that the designers might have made while volunteering as part of the farming community: lack of access to enough water, trouble finding enough workers to hire, and challenges minimizing the loss of crops due to pests and disease.\n\nThese problems and the needs associated with them might be obvious to members of the community. But, as designers, our job is to find out more about what our users need instead of making assumptions. To do this, we need to dig a bit deeper by talking with users, just like the FarmWise employees interviewed farmers.\n\nTurning these observations into research questions will help you, as a designer, gather more data about your users and help you more clearly define the problem you are trying to solve.\n\nHere is an example of a question that the employees at FarmWise might have asked to learn more about the issue of water scarcity. Can you think of questions they might ask about labor shortages, or pest and disease management?",
         "remarks": true
       },
       "seeding_key": {
@@ -1343,6 +1504,29 @@
       },
       "seeding_key": {
         "activity_section.key": "f8baf136-2ec3-4294-8194-c43cdcef137b",
+        "lesson_activity.key": "1c7252dc-fdbb-4087-adab-afc69c9cc1bf"
+      }
+    },
+    {
+      "key": "4ca58aff-a143-4208-8b13-4d40b6a175c7",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4ca58aff-a143-4208-8b13-4d40b6a175c7",
+        "lesson_activity.key": "1c7252dc-fdbb-4087-adab-afc69c9cc1bf"
+      }
+    },
+    {
+      "key": "96c72b37-884d-4d27-bc3d-2187adea75a5",
+      "position": 5,
+      "properties": {
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://www.play.juicemind.com/quizzes/oh3RsgEInYZlgKlp3oM3).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "name": "(Optional) JuiceMind Assessment",
+        "progression_name": "JuiceMind Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "96c72b37-884d-4d27-bc3d-2187adea75a5",
         "lesson_activity.key": "1c7252dc-fdbb-4087-adab-afc69c9cc1bf"
       }
     },
@@ -1461,6 +1645,29 @@
       },
       "seeding_key": {
         "activity_section.key": "bc9d6b75-bfb1-4679-acc8-06808b3d4135",
+        "lesson_activity.key": "b97fbb78-8663-4dc0-8f30-14239584542e"
+      }
+    },
+    {
+      "key": "cd7e047e-6d7d-4e57-a6a7-b19d4857f42f",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "cd7e047e-6d7d-4e57-a6a7-b19d4857f42f",
+        "lesson_activity.key": "b97fbb78-8663-4dc0-8f30-14239584542e"
+      }
+    },
+    {
+      "key": "e712616d-ea4b-4c31-945f-9fc149b6e0b1",
+      "position": 3,
+      "properties": {
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://www.play.juicemind.com/quizzes/VIobnrAsH2Gj1zJWkG2L).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "name": "(Optional) JuiceMind Assessment",
+        "progression_name": "JuiceMind Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "e712616d-ea4b-4c31-945f-9fc149b6e0b1",
         "lesson_activity.key": "b97fbb78-8663-4dc0-8f30-14239584542e"
       }
     },
@@ -1634,12 +1841,35 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "Review the different analyses that students performed on their data in order to know which groups might need more assistance at the next stage of project development, in which they will be taking this observation / question / inference and turning it into a user persona that attempts to define the type of user that might use their product, and what problem they have that might be potentially solved with a computer vision application."
+            "markdown": "Review the different analyses that students performed on their data to identify which groups might need more assistance at the next stage of project development. In the next phase of the project, they will use this to define the type of user that might use their product and what problem they have that could be solved with a computer vision application."
           }
         ]
       },
       "seeding_key": {
         "activity_section.key": "d78f8b37-cd36-45b9-b305-474d8ac49a6c",
+        "lesson_activity.key": "3681b01c-b446-4aeb-a334-592ee1b50025"
+      }
+    },
+    {
+      "key": "52377278-691f-4c67-8b29-baf5137257dc",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "52377278-691f-4c67-8b29-baf5137257dc",
+        "lesson_activity.key": "3681b01c-b446-4aeb-a334-592ee1b50025"
+      }
+    },
+    {
+      "key": "6afe8f87-8055-418f-a161-0cfef009d711",
+      "position": 3,
+      "properties": {
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://www.play.juicemind.com/quizzes/YBRHUa5z28OpnPvCU7w2).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "name": "(Optional) JuiceMind Assessment",
+        "progression_name": "JuiceMind Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "6afe8f87-8055-418f-a161-0cfef009d711",
         "lesson_activity.key": "3681b01c-b446-4aeb-a334-592ee1b50025"
       }
     },
@@ -1869,6 +2099,29 @@
       },
       "seeding_key": {
         "activity_section.key": "f4bcf09d-9edb-4f1c-84d7-facd68c80205",
+        "lesson_activity.key": "d267a158-cf8b-496c-a061-7c828b45db96"
+      }
+    },
+    {
+      "key": "6f44f491-ff19-43a6-8ea8-6eb943d0c2d2",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6f44f491-ff19-43a6-8ea8-6eb943d0c2d2",
+        "lesson_activity.key": "d267a158-cf8b-496c-a061-7c828b45db96"
+      }
+    },
+    {
+      "key": "2fcc8b18-8991-42c1-8117-503cd45ad7eb",
+      "position": 3,
+      "properties": {
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://www.play.juicemind.com/quizzes/gaHKHyGramrmMcTQs8e8).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "name": "(Optional) JuiceMind Assessment",
+        "progression_name": "JuiceMind Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "2fcc8b18-8991-42c1-8117-503cd45ad7eb",
         "lesson_activity.key": "d267a158-cf8b-496c-a061-7c828b45db96"
       }
     },
@@ -2109,6 +2362,29 @@
       }
     },
     {
+      "key": "bb16eacf-edb3-42e8-aea0-4448aa68f74a",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bb16eacf-edb3-42e8-aea0-4448aa68f74a",
+        "lesson_activity.key": "d43e15ed-518c-47a4-a26b-c4c7c6af85c7"
+      }
+    },
+    {
+      "key": "8d5de666-17e1-4e2b-85c6-b1ea7c12f1e6",
+      "position": 3,
+      "properties": {
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://www.play.juicemind.com/quizzes/U3o2bLdZlZmZokSVmxaK).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "name": "(Optional) JuiceMind Assessment",
+        "progression_name": "JuiceMind Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "8d5de666-17e1-4e2b-85c6-b1ea7c12f1e6",
+        "lesson_activity.key": "d43e15ed-518c-47a4-a26b-c4c7c6af85c7"
+      }
+    },
+    {
       "key": "8c3da77d-2d7d-48ba-9038-d8a8cfaa5c6c",
       "position": 1,
       "properties": {
@@ -2282,6 +2558,40 @@
       "seeding_key": {
         "activity_section.key": "cf99cdd6-86aa-466e-acdf-786c6a9971e0",
         "lesson_activity.key": "02045366-94ac-4236-b403-3b0a988b3cd1"
+      }
+    },
+    {
+      "key": "33ce88fb-3ae6-473c-8d4a-c81b3258acaf",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "33ce88fb-3ae6-473c-8d4a-c81b3258acaf",
+        "lesson_activity.key": "02045366-94ac-4236-b403-3b0a988b3cd1"
+      }
+    },
+    {
+      "key": "cdfb7a9c-4cea-421c-b8d8-6b736d85ac4f",
+      "position": 3,
+      "properties": {
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://www.play.juicemind.com/quizzes/x0Jx9owE8cFyGjkhfbh9).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "name": "(Optional) JuiceMind Assessment",
+        "progression_name": "JuiceMind Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "cdfb7a9c-4cea-421c-b8d8-6b736d85ac4f",
+        "lesson_activity.key": "02045366-94ac-4236-b403-3b0a988b3cd1"
+      }
+    },
+    {
+      "key": "46396d29-1cd8-43af-921c-f7a7c926e51a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Mid-Module Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "46396d29-1cd8-43af-921c-f7a7c926e51a",
+        "lesson_activity.key": "e7641a2a-de49-490e-a6f3-92c206636231"
       }
     },
     {
@@ -2628,6 +2938,29 @@
       }
     },
     {
+      "key": "fd63f08d-b0da-4692-9927-31a9ed446b68",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fd63f08d-b0da-4692-9927-31a9ed446b68",
+        "lesson_activity.key": "803b1081-9ef3-4822-aa85-83574caca513"
+      }
+    },
+    {
+      "key": "797dd0ca-f067-4eea-81c7-6cd6e30016b3",
+      "position": 3,
+      "properties": {
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://www.play.juicemind.com/quizzes/T7zAMuu6D1Ddk32FjuT7).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "name": "(Optional) JuiceMind Assessment",
+        "progression_name": "JuiceMind Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "797dd0ca-f067-4eea-81c7-6cd6e30016b3",
+        "lesson_activity.key": "803b1081-9ef3-4822-aa85-83574caca513"
+      }
+    },
+    {
       "key": "9e4395c2-4463-4f5a-bc99-e9e22576fbd1",
       "position": 1,
       "properties": {
@@ -2854,6 +3187,29 @@
       }
     },
     {
+      "key": "01c8a991-c448-464f-9ec3-ebeb5cf2bff4",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "01c8a991-c448-464f-9ec3-ebeb5cf2bff4",
+        "lesson_activity.key": "930ea9cf-5a2d-406b-8de7-b5889bf37a50"
+      }
+    },
+    {
+      "key": "43ca4e0b-1de9-4d98-864e-ea88da3f530b",
+      "position": 4,
+      "properties": {
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://www.play.juicemind.com/quizzes/HAfzlTnvR0qCEiUtxC03).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "name": "(Optional) JuiceMind Assessment",
+        "progression_name": "JuiceMind Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "43ca4e0b-1de9-4d98-864e-ea88da3f530b",
+        "lesson_activity.key": "930ea9cf-5a2d-406b-8de7-b5889bf37a50"
+      }
+    },
+    {
       "key": "21257e14-d185-4a14-868c-4095cf0468c1",
       "position": 1,
       "properties": {
@@ -2957,6 +3313,29 @@
       }
     },
     {
+      "key": "7d21e990-3707-44c1-8868-0021ed7a9163",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7d21e990-3707-44c1-8868-0021ed7a9163",
+        "lesson_activity.key": "383c91ef-02b9-42f6-b5b3-150807adfe99"
+      }
+    },
+    {
+      "key": "0c2c2366-9c0f-4bdb-92b9-a32dc185f5c7",
+      "position": 3,
+      "properties": {
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://www.play.juicemind.com/quizzes/MH8FI9D4jhpQWriej3hf).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "name": "(Optional) JuiceMind Assessment",
+        "progression_name": "JuiceMind Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "0c2c2366-9c0f-4bdb-92b9-a32dc185f5c7",
+        "lesson_activity.key": "383c91ef-02b9-42f6-b5b3-150807adfe99"
+      }
+    },
+    {
       "key": "48ccc453-1571-48cd-b2c9-5cf78501859e",
       "position": 1,
       "properties": {
@@ -3052,6 +3431,29 @@
       }
     },
     {
+      "key": "1f1769f4-6e7b-4e3c-b664-c2fc990aa6b0",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1f1769f4-6e7b-4e3c-b664-c2fc990aa6b0",
+        "lesson_activity.key": "395da187-e41d-43e6-8596-a1ca22b1a5b0"
+      }
+    },
+    {
+      "key": "e97074bf-7b80-49d7-8c15-c08f937bdd2f",
+      "position": 3,
+      "properties": {
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://www.play.juicemind.com/quizzes/EAt1pCsqphibIYNFPSCS).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "name": "(Optional) JuiceMind Assessment",
+        "progression_name": "JuiceMind Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "e97074bf-7b80-49d7-8c15-c08f937bdd2f",
+        "lesson_activity.key": "395da187-e41d-43e6-8596-a1ca22b1a5b0"
+      }
+    },
+    {
       "key": "d3968ea9-88a9-4423-ab2a-9f7f24889121",
       "position": 1,
       "properties": {
@@ -3129,6 +3531,28 @@
       },
       "seeding_key": {
         "activity_section.key": "43af4336-25d1-42ea-9894-f7be4a556c79",
+        "lesson_activity.key": "d3660592-031c-412b-8578-aa946b2ef542"
+      }
+    },
+    {
+      "key": "9fba7ec2-66f2-420a-97e9-eda6eb322e3e",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9fba7ec2-66f2-420a-97e9-eda6eb322e3e",
+        "lesson_activity.key": "d3660592-031c-412b-8578-aa946b2ef542"
+      }
+    },
+    {
+      "key": "70c9f94e-c343-40dd-ae0d-a213e298fb0e",
+      "position": 3,
+      "properties": {
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://www.play.juicemind.com/quizzes/8ruRZ8fwXhdAXIXQqcly).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "name": "(Optional) JuiceMind Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "70c9f94e-c343-40dd-ae0d-a213e298fb0e",
         "lesson_activity.key": "d3660592-031c-412b-8578-aa946b2ef542"
       }
     },
@@ -3224,6 +3648,29 @@
       }
     },
     {
+      "key": "5ed10670-4bf6-4441-b4b1-080b3b634732",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5ed10670-4bf6-4441-b4b1-080b3b634732",
+        "lesson_activity.key": "efc9f23a-837a-40cd-a8df-61d6bf88df75"
+      }
+    },
+    {
+      "key": "06657cb8-7c2a-4353-858f-99c4a0fda125",
+      "position": 3,
+      "properties": {
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://www.play.juicemind.com/quizzes/K1AWyxLCrhASKgfQYX5N).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "name": "(Optional) JuiceMind Assessment",
+        "progression_name": "JuiceMind Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "06657cb8-7c2a-4353-858f-99c4a0fda125",
+        "lesson_activity.key": "efc9f23a-837a-40cd-a8df-61d6bf88df75"
+      }
+    },
+    {
       "key": "f768d737-5efc-43d6-8280-aa7992b922d6",
       "position": 1,
       "properties": {
@@ -3307,6 +3754,29 @@
       },
       "seeding_key": {
         "activity_section.key": "b8556db2-ed9f-49bd-aa9d-ad97556537eb",
+        "lesson_activity.key": "1bf19ce2-d1be-4429-8ddc-819f3f445c94"
+      }
+    },
+    {
+      "key": "6d503bf9-d28b-43c8-964d-c4dd312003df",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6d503bf9-d28b-43c8-964d-c4dd312003df",
+        "lesson_activity.key": "1bf19ce2-d1be-4429-8ddc-819f3f445c94"
+      }
+    },
+    {
+      "key": "e74bf027-d2db-446f-a82e-222cc8a389a2",
+      "position": 3,
+      "properties": {
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://www.play.juicemind.com/quizzes/K77b2uriN9o4oV1LzEGx).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "name": "(Optional) JuiceMind Assessment",
+        "progression_name": "JuiceMind Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "e74bf027-d2db-446f-a82e-222cc8a389a2",
         "lesson_activity.key": "1bf19ce2-d1be-4429-8ddc-819f3f445c94"
       }
     },
@@ -3628,6 +4098,27 @@
         "activity_section.key": "10e5e893-5cfa-435f-92ba-a1de04ea23ab",
         "lesson_activity.key": "de9290f3-95b0-4d47-9ac8-c6066e895174"
       }
+    },
+    {
+      "key": "235001e0-1054-4530-a7e7-6554bb2d3d56",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "235001e0-1054-4530-a7e7-6554bb2d3d56",
+        "lesson_activity.key": "de9290f3-95b0-4d47-9ac8-c6066e895174"
+      }
+    },
+    {
+      "key": "f4075c68-1877-40de-8104-ccc0ddeff97c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Post-Module Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "f4075c68-1877-40de-8104-ccc0ddeff97c",
+        "lesson_activity.key": "224c11c1-acd9-4819-aac7-af96d31319b4"
+      }
     }
   ],
   "script_levels": [
@@ -3635,8 +4126,36 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "cv-studentsurvey-premodule"
+        ],
+        "progression": "Pre-Module Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cv-studentsurvey-premodule"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "computer-vision",
+        "activity_section.key": "a356024a-1869-4365-9527-827c0b2b3ff3"
+      },
+      "level_keys": [
+        "cv-studentsurvey-premodule"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Search for Pixel - review copy_2024"
+        ],
         "progression": "The Search for Pixel"
       },
       "bonus": false,
@@ -3645,7 +4164,7 @@
           "The Search for Pixel - review copy_2024"
         ],
         "lesson.key": "Introduction to Computer Vision",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "a740116c-dd23-43f0-8cbe-60b5fbf261ea"
       },
@@ -3654,11 +4173,14 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L1_Reflection_1_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -3667,7 +4189,7 @@
           "CV_L1_Reflection_1_2024"
         ],
         "lesson.key": "Introduction to Computer Vision",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "ef4655bf-d645-45a4-8551-89e0501f2b1c"
       },
@@ -3676,47 +4198,25 @@
       ]
     },
     {
-      "chapter": 3,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "Reflection"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CV_L2_Reflection_1_2024"
-        ],
-        "lesson.key": "Empathizing with Users",
-        "lesson_group.key": "",
-        "script.name": "computer-vision",
-        "activity_section.key": "f8baf136-2ec3-4294-8194-c43cdcef137b"
-      },
-      "level_keys": [
-        "CV_L2_Reflection_1_2024"
-      ]
-    },
-    {
       "chapter": 4,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": true,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
-        "progression": "Reflection"
+        "progression": "JuiceMind Assessment"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CV_L2_Reflection_2_2024"
+          "computervision-lesson1-juicemindquiz"
         ],
-        "lesson.key": "Empathizing with Users",
-        "lesson_group.key": "",
+        "lesson.key": "Introduction to Computer Vision",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
-        "activity_section.key": "f8baf136-2ec3-4294-8194-c43cdcef137b"
+        "activity_section.key": "5a2ae495-4449-4496-8b1c-3aa87e2eb6b0"
       },
       "level_keys": [
-        "CV_L2_Reflection_2_2024"
+        "computervision-lesson1-juicemindquiz"
       ]
     },
     {
@@ -3725,6 +4225,81 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L2_Reflection_1_2024"
+        ],
+        "progression": "Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L2_Reflection_1_2024"
+        ],
+        "lesson.key": "Empathizing with Users",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "f8baf136-2ec3-4294-8194-c43cdcef137b"
+      },
+      "level_keys": [
+        "CV_L2_Reflection_1_2024"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CV_L2_Reflection_2_2024"
+        ],
+        "progression": "Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_L2_Reflection_2_2024"
+        ],
+        "lesson.key": "Empathizing with Users",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "f8baf136-2ec3-4294-8194-c43cdcef137b"
+      },
+      "level_keys": [
+        "CV_L2_Reflection_2_2024"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "JuiceMind Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computervision-lesson2-juicemindquiz"
+        ],
+        "lesson.key": "Empathizing with Users",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "96c72b37-884d-4d27-bc3d-2187adea75a5"
+      },
+      "level_keys": [
+        "computervision-lesson2-juicemindquiz"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CV_L3_Reflection_1_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -3733,7 +4308,7 @@
           "CV_L3_Reflection_1_2024"
         ],
         "lesson.key": "Gathering User Data",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "bc9d6b75-bfb1-4679-acc8-06808b3d4135"
       },
@@ -3742,11 +4317,36 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "JuiceMind Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computervision-lesson3-juicemindquiz"
+        ],
+        "lesson.key": "Gathering User Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "e712616d-ea4b-4c31-945f-9fc149b6e0b1"
+      },
+      "level_keys": [
+        "computervision-lesson3-juicemindquiz"
+      ]
+    },
+    {
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L4_ResourceLinks_2024"
+        ],
         "progression": "Visualizing Data"
       },
       "bonus": false,
@@ -3755,7 +4355,7 @@
           "CV_L4_ResourceLinks_2024"
         ],
         "lesson.key": "Data Visualizations",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "25fe7eaf-a281-4011-ab90-116bab975b9f"
       },
@@ -3764,11 +4364,14 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 11,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L4_DataToViz_Link_2024"
+        ],
         "progression": "From Data to Visualization"
       },
       "bonus": false,
@@ -3777,7 +4380,7 @@
           "CV_L4_DataToViz_Link_2024"
         ],
         "lesson.key": "Data Visualizations",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "aaeec524-92a5-4d78-97a7-8f7c27546c8a"
       },
@@ -3786,11 +4389,14 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 12,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L4_Reflection_1_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -3799,7 +4405,7 @@
           "CV_L4_Reflection_1_2024"
         ],
         "lesson.key": "Data Visualizations",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "d78f8b37-cd36-45b9-b305-474d8ac49a6c"
       },
@@ -3808,11 +4414,36 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "JuiceMind Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computervision-lesson4-juicemindquiz"
+        ],
+        "lesson.key": "Data Visualizations",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "6afe8f87-8055-418f-a161-0cfef009d711"
+      },
+      "level_keys": [
+        "computervision-lesson4-juicemindquiz"
+      ]
+    },
+    {
+      "chapter": 14,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L5_Reflection_1_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -3821,7 +4452,7 @@
           "CV_L5_Reflection_1_2024"
         ],
         "lesson.key": "User Stories and Problem Statements",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "f4bcf09d-9edb-4f1c-84d7-facd68c80205"
       },
@@ -3830,11 +4461,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 15,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L5_Reflection_2_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -3843,7 +4477,7 @@
           "CV_L5_Reflection_2_2024"
         ],
         "lesson.key": "User Stories and Problem Statements",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "f4bcf09d-9edb-4f1c-84d7-facd68c80205"
       },
@@ -3852,11 +4486,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 16,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L5_Reflection_3_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -3865,7 +4502,7 @@
           "CV_L5_Reflection_3_2024"
         ],
         "lesson.key": "User Stories and Problem Statements",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "f4bcf09d-9edb-4f1c-84d7-facd68c80205"
       },
@@ -3874,11 +4511,36 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 17,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "JuiceMind Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computervision-lesson5-juicemindquiz"
+        ],
+        "lesson.key": "User Stories and Problem Statements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "2fcc8b18-8991-42c1-8117-503cd45ad7eb"
+      },
+      "level_keys": [
+        "computervision-lesson5-juicemindquiz"
+      ]
+    },
+    {
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L6_BaseToBinary_Link_2024"
+        ],
         "progression": "QR Code Exploration"
       },
       "bonus": false,
@@ -3887,7 +4549,7 @@
           "CV_L6_BaseToBinary_Link_2024"
         ],
         "lesson.key": "Pixels and QR Codes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "eccc53c4-adbb-4370-b127-1e4eacc53228"
       },
@@ -3896,11 +4558,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 19,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L6_GoogleColorPicker_Link_2024"
+        ],
         "progression": "QR Code Exploration"
       },
       "bonus": false,
@@ -3909,7 +4574,7 @@
           "CV_L6_GoogleColorPicker_Link_2024"
         ],
         "lesson.key": "Pixels and QR Codes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "eccc53c4-adbb-4370-b127-1e4eacc53228"
       },
@@ -3918,11 +4583,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 20,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L6_Reflection_1_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -3931,7 +4599,7 @@
           "CV_L6_Reflection_1_2024"
         ],
         "lesson.key": "Pixels and QR Codes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "7e497cc5-3003-4faa-82ca-ec26bdaa674e"
       },
@@ -3940,11 +4608,36 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 21,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "JuiceMind Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computervision-lesson6-juicemindquiz"
+        ],
+        "lesson.key": "Pixels and QR Codes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "8d5de666-17e1-4e2b-85c6-b1ea7c12f1e6"
+      },
+      "level_keys": [
+        "computervision-lesson6-juicemindquiz"
+      ]
+    },
+    {
+      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L7_Reflection_1_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -3953,7 +4646,7 @@
           "CV_L7_Reflection_1_2024"
         ],
         "lesson.key": "Edge Detection",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "cf99cdd6-86aa-466e-acdf-786c6a9971e0"
       },
@@ -3962,11 +4655,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 23,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L7_Reflection_2_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -3975,7 +4671,7 @@
           "CV_L7_Reflection_2_2024"
         ],
         "lesson.key": "Edge Detection",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "cf99cdd6-86aa-466e-acdf-786c6a9971e0"
       },
@@ -3984,11 +4680,61 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 24,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "JuiceMind Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computervision-lesson7-juicemindquiz"
+        ],
+        "lesson.key": "Edge Detection",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "cdfb7a9c-4cea-421c-b8d8-6b736d85ac4f"
+      },
+      "level_keys": [
+        "computervision-lesson7-juicemindquiz"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "cv-studentsurvey-midmodule"
+        ],
+        "progression": "Mid-Module Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cv-studentsurvey-midmodule"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "computer-vision",
+        "activity_section.key": "46396d29-1cd8-43af-921c-f7a7c926e51a"
+      },
+      "level_keys": [
+        "cv-studentsurvey-midmodule"
+      ]
+    },
+    {
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L8_COCO_Link_2024"
+        ],
         "progression": "COCO Dataset"
       },
       "bonus": false,
@@ -3997,7 +4743,7 @@
           "CV_L8_COCO_Link_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "c6ce6ee5-3c90-40fe-89e2-1ff3e7f043f0"
       },
@@ -4006,11 +4752,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L8_MediaPipe_ObjectDet_Link_2024"
+        ],
         "progression": "MediaPipe Object Detection"
       },
       "bonus": false,
@@ -4019,7 +4768,7 @@
           "CV_L8_MediaPipe_ObjectDet_Link_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "9bfa8d09-3497-4707-927e-f3b0675e5a32"
       },
@@ -4028,11 +4777,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L8_ResourceLinks_2024"
+        ],
         "progression": "Garden Image Files"
       },
       "bonus": false,
@@ -4041,7 +4793,7 @@
           "CV_L8_ResourceLinks_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "dd3b68e5-a4c8-4800-94d9-643319e1b8be"
       },
@@ -4050,11 +4802,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L8_MediaPipe_ImageClass_Link_2024"
+        ],
         "progression": "MediaPipe Image Classification"
       },
       "bonus": false,
@@ -4063,7 +4818,7 @@
           "CV_L8_MediaPipe_ImageClass_Link_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "57f8b4b9-c30b-4fe5-bebc-2710dd8d1c6c"
       },
@@ -4072,11 +4827,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 30,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L8_Reflection_1_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4085,7 +4843,7 @@
           "CV_L8_Reflection_1_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "5738164b-bfca-4b39-a664-ea87deef03a0"
       },
@@ -4094,11 +4852,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 31,
       "position": 6,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L8_Reflection_2_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4107,7 +4868,7 @@
           "CV_L8_Reflection_2_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "5738164b-bfca-4b39-a664-ea87deef03a0"
       },
@@ -4116,11 +4877,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 32,
       "position": 7,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L8_Reflection_3_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4129,7 +4893,7 @@
           "CV_L8_Reflection_3_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "5738164b-bfca-4b39-a664-ea87deef03a0"
       },
@@ -4138,11 +4902,36 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 33,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "JuiceMind Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computervision-lesson8-juicemindquiz"
+        ],
+        "lesson.key": "Datasets and Models",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "computer-vision",
+        "activity_section.key": "797dd0ca-f067-4eea-81c7-6cd6e30016b3"
+      },
+      "level_keys": [
+        "computervision-lesson8-juicemindquiz"
+      ]
+    },
+    {
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L9_MediaPipe_ObDet-Images_Link_2024"
+        ],
         "progression": "MediaPipe Object Detection and Image Files"
       },
       "bonus": false,
@@ -4151,7 +4940,7 @@
           "CV_L9_MediaPipe_ObDet-Images_Link_2024"
         ],
         "lesson.key": "Training Data and Bias",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "8a76f868-a89a-4338-a074-72637947f61b"
       },
@@ -4160,11 +4949,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L9_Reflection_1_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4173,7 +4965,7 @@
           "CV_L9_Reflection_1_2024"
         ],
         "lesson.key": "Training Data and Bias",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "bf29ae7f-76b2-46a6-99d1-7ee87f46e606"
       },
@@ -4182,11 +4974,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L9_Reflection_2_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4195,7 +4990,7 @@
           "CV_L9_Reflection_2_2024"
         ],
         "lesson.key": "Training Data and Bias",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "bf29ae7f-76b2-46a6-99d1-7ee87f46e606"
       },
@@ -4204,11 +4999,36 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 37,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "JuiceMind Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computervision-lesson9-juicemindquiz"
+        ],
+        "lesson.key": "Training Data and Bias",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "computer-vision",
+        "activity_section.key": "43ca4e0b-1de9-4d98-864e-ea88da3f530b"
+      },
+      "level_keys": [
+        "computervision-lesson9-juicemindquiz"
+      ]
+    },
+    {
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L10_TeachableMachine_Link_2024"
+        ],
         "progression": "Teachable Machine"
       },
       "bonus": false,
@@ -4217,7 +5037,7 @@
           "CV_L10_TeachableMachine_Link_2024"
         ],
         "lesson.key": "Training a Model",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "6e3df592-b227-4c89-ae68-c614e74565d1"
       },
@@ -4226,11 +5046,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L10_Reflection_1_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4239,7 +5062,7 @@
           "CV_L10_Reflection_1_2024"
         ],
         "lesson.key": "Training a Model",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "07144221-0b91-4065-9361-c142dcc3be0f"
       },
@@ -4248,11 +5071,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 40,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L10_Reflection_2_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4261,7 +5087,7 @@
           "CV_L10_Reflection_2_2024"
         ],
         "lesson.key": "Training a Model",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "07144221-0b91-4065-9361-c142dcc3be0f"
       },
@@ -4270,11 +5096,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 41,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L10_Reflection_3_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4283,7 +5112,7 @@
           "CV_L10_Reflection_3_2024"
         ],
         "lesson.key": "Training a Model",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "07144221-0b91-4065-9361-c142dcc3be0f"
       },
@@ -4292,11 +5121,36 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 42,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "JuiceMind Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computervision-lesson10-juicemindquiz"
+        ],
+        "lesson.key": "Training a Model",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "computer-vision",
+        "activity_section.key": "0c2c2366-9c0f-4bdb-92b9-a32dc185f5c7"
+      },
+      "level_keys": [
+        "computervision-lesson10-juicemindquiz"
+      ]
+    },
+    {
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L11_EthicsExploration_ChoiceLevels_2024"
+        ],
         "progression": "Ethics Exploration"
       },
       "bonus": false,
@@ -4305,7 +5159,7 @@
           "CV_L11_EthicsExploration_ChoiceLevels_2024"
         ],
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "584cb41b-45ea-4e9e-b487-9324e26043d4"
       },
@@ -4314,11 +5168,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L11_Reflection_1_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4327,7 +5184,7 @@
           "CV_L11_Reflection_1_2024"
         ],
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "82ace473-e389-4d7b-958c-f7571bfbc04d"
       },
@@ -4336,11 +5193,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 45,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L11_Reflection_2_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4349,7 +5209,7 @@
           "CV_L11_Reflection_2_2024"
         ],
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "82ace473-e389-4d7b-958c-f7571bfbc04d"
       },
@@ -4358,11 +5218,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 46,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L11_Reflection_3_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4371,7 +5234,7 @@
           "CV_L11_Reflection_3_2024"
         ],
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "82ace473-e389-4d7b-958c-f7571bfbc04d"
       },
@@ -4380,11 +5243,36 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 47,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "JuiceMind Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computervision-lesson11-juicemindquiz"
+        ],
+        "lesson.key": "Impacts of Computer Vision",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "computer-vision",
+        "activity_section.key": "e97074bf-7b80-49d7-8c15-c08f937bdd2f"
+      },
+      "level_keys": [
+        "computervision-lesson11-juicemindquiz"
+      ]
+    },
+    {
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L12_Reflection_1_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4393,7 +5281,7 @@
           "CV_L12_Reflection_1_2024"
         ],
         "lesson.key": "Prototype Development, Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "43af4336-25d1-42ea-9894-f7be4a556c79"
       },
@@ -4402,11 +5290,14 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L12_Reflection_2_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4415,7 +5306,7 @@
           "CV_L12_Reflection_2_2024"
         ],
         "lesson.key": "Prototype Development, Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "43af4336-25d1-42ea-9894-f7be4a556c79"
       },
@@ -4424,11 +5315,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L13_PrototypeComponents_2024"
+        ],
         "progression": "Prototype Components"
       },
       "bonus": false,
@@ -4437,7 +5331,7 @@
           "CV_L13_PrototypeComponents_2024"
         ],
         "lesson.key": "Prototype Development, Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "a1585f1f-f996-42ee-a8ba-d6059175f37b"
       },
@@ -4446,11 +5340,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L13_Reflection_1_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4459,7 +5356,7 @@
           "CV_L13_Reflection_1_2024"
         ],
         "lesson.key": "Prototype Development, Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "1d0a1526-f56c-440c-aaef-65ff9c9bd9f1"
       },
@@ -4468,11 +5365,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 52,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L13_Reflection_2_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4481,7 +5381,7 @@
           "CV_L13_Reflection_2_2024"
         ],
         "lesson.key": "Prototype Development, Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "1d0a1526-f56c-440c-aaef-65ff9c9bd9f1"
       },
@@ -4490,11 +5390,36 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 53,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "JuiceMind Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computervision-lesson13-juicemindquiz"
+        ],
+        "lesson.key": "Prototype Development, Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "computer-vision",
+        "activity_section.key": "06657cb8-7c2a-4353-858f-99c4a0fda125"
+      },
+      "level_keys": [
+        "computervision-lesson13-juicemindquiz"
+      ]
+    },
+    {
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L14_Reflection_1_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4503,7 +5428,7 @@
           "CV_L14_Reflection_1_2024"
         ],
         "lesson.key": "User Feedback",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "b8556db2-ed9f-49bd-aa9d-ad97556537eb"
       },
@@ -4512,11 +5437,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L14_Reflection_2_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4525,7 +5453,7 @@
           "CV_L14_Reflection_2_2024"
         ],
         "lesson.key": "User Feedback",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "b8556db2-ed9f-49bd-aa9d-ad97556537eb"
       },
@@ -4534,11 +5462,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L14_Reflection_3_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4547,7 +5478,7 @@
           "CV_L14_Reflection_3_2024"
         ],
         "lesson.key": "User Feedback",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "b8556db2-ed9f-49bd-aa9d-ad97556537eb"
       },
@@ -4556,11 +5487,36 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 57,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "JuiceMind Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "computervision-lesson14-juicemindquiz"
+        ],
+        "lesson.key": "User Feedback",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "computer-vision",
+        "activity_section.key": "e74bf027-d2db-446f-a82e-222cc8a389a2"
+      },
+      "level_keys": [
+        "computervision-lesson14-juicemindquiz"
+      ]
+    },
+    {
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L15_Reflection_1_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4569,7 +5525,7 @@
           "CV_L15_Reflection_1_2024"
         ],
         "lesson.key": "Implementing Feedback",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "10e5e893-5cfa-435f-92ba-a1de04ea23ab"
       },
@@ -4578,11 +5534,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L15_Reflection_2_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4591,7 +5550,7 @@
           "CV_L15_Reflection_2_2024"
         ],
         "lesson.key": "Implementing Feedback",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "10e5e893-5cfa-435f-92ba-a1de04ea23ab"
       },
@@ -4600,11 +5559,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 60,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CV_L15_Reflection_3_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4613,16 +5575,53 @@
           "CV_L15_Reflection_3_2024"
         ],
         "lesson.key": "Implementing Feedback",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "10e5e893-5cfa-435f-92ba-a1de04ea23ab"
       },
       "level_keys": [
         "CV_L15_Reflection_3_2024"
       ]
+    },
+    {
+      "chapter": 61,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "cv-studentsurvey-postmodule"
+        ],
+        "progression": "Post-Module Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cv-studentsurvey-postmodule"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "computer-vision",
+        "activity_section.key": "f4075c68-1877-40de-8104-ccc0ddeff97c"
+      },
+      "level_keys": [
+        "cv-studentsurvey-postmodule"
+      ]
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "cv-studentsurvey-premodule",
+        "script_level.level_keys": [
+          "cv-studentsurvey-premodule"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "computer-vision",
+        "activity_section.key": "a356024a-1869-4365-9527-827c0b2b3ff3"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "The Search for Pixel - review copy_2024",
@@ -4630,7 +5629,7 @@
           "The Search for Pixel - review copy_2024"
         ],
         "lesson.key": "Introduction to Computer Vision",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "a740116c-dd23-43f0-8cbe-60b5fbf261ea"
       }
@@ -4642,9 +5641,21 @@
           "CV_L1_Reflection_1_2024"
         ],
         "lesson.key": "Introduction to Computer Vision",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "ef4655bf-d645-45a4-8551-89e0501f2b1c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computervision-lesson1-juicemindquiz",
+        "script_level.level_keys": [
+          "computervision-lesson1-juicemindquiz"
+        ],
+        "lesson.key": "Introduction to Computer Vision",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "5a2ae495-4449-4496-8b1c-3aa87e2eb6b0"
       }
     },
     {
@@ -4654,7 +5665,7 @@
           "CV_L2_Reflection_1_2024"
         ],
         "lesson.key": "Empathizing with Users",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "f8baf136-2ec3-4294-8194-c43cdcef137b"
       }
@@ -4666,9 +5677,21 @@
           "CV_L2_Reflection_2_2024"
         ],
         "lesson.key": "Empathizing with Users",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "f8baf136-2ec3-4294-8194-c43cdcef137b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computervision-lesson2-juicemindquiz",
+        "script_level.level_keys": [
+          "computervision-lesson2-juicemindquiz"
+        ],
+        "lesson.key": "Empathizing with Users",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "96c72b37-884d-4d27-bc3d-2187adea75a5"
       }
     },
     {
@@ -4678,9 +5701,21 @@
           "CV_L3_Reflection_1_2024"
         ],
         "lesson.key": "Gathering User Data",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "bc9d6b75-bfb1-4679-acc8-06808b3d4135"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computervision-lesson3-juicemindquiz",
+        "script_level.level_keys": [
+          "computervision-lesson3-juicemindquiz"
+        ],
+        "lesson.key": "Gathering User Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "e712616d-ea4b-4c31-945f-9fc149b6e0b1"
       }
     },
     {
@@ -4690,7 +5725,7 @@
           "CV_L4_ResourceLinks_2024"
         ],
         "lesson.key": "Data Visualizations",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "25fe7eaf-a281-4011-ab90-116bab975b9f"
       }
@@ -4702,7 +5737,7 @@
           "CV_L4_DataToViz_Link_2024"
         ],
         "lesson.key": "Data Visualizations",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "aaeec524-92a5-4d78-97a7-8f7c27546c8a"
       }
@@ -4714,9 +5749,21 @@
           "CV_L4_Reflection_1_2024"
         ],
         "lesson.key": "Data Visualizations",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "d78f8b37-cd36-45b9-b305-474d8ac49a6c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computervision-lesson4-juicemindquiz",
+        "script_level.level_keys": [
+          "computervision-lesson4-juicemindquiz"
+        ],
+        "lesson.key": "Data Visualizations",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "6afe8f87-8055-418f-a161-0cfef009d711"
       }
     },
     {
@@ -4726,7 +5773,7 @@
           "CV_L5_Reflection_1_2024"
         ],
         "lesson.key": "User Stories and Problem Statements",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "f4bcf09d-9edb-4f1c-84d7-facd68c80205"
       }
@@ -4738,7 +5785,7 @@
           "CV_L5_Reflection_2_2024"
         ],
         "lesson.key": "User Stories and Problem Statements",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "f4bcf09d-9edb-4f1c-84d7-facd68c80205"
       }
@@ -4750,9 +5797,21 @@
           "CV_L5_Reflection_3_2024"
         ],
         "lesson.key": "User Stories and Problem Statements",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "f4bcf09d-9edb-4f1c-84d7-facd68c80205"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computervision-lesson5-juicemindquiz",
+        "script_level.level_keys": [
+          "computervision-lesson5-juicemindquiz"
+        ],
+        "lesson.key": "User Stories and Problem Statements",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "2fcc8b18-8991-42c1-8117-503cd45ad7eb"
       }
     },
     {
@@ -4762,7 +5821,7 @@
           "CV_L6_BaseToBinary_Link_2024"
         ],
         "lesson.key": "Pixels and QR Codes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "eccc53c4-adbb-4370-b127-1e4eacc53228"
       }
@@ -4774,7 +5833,7 @@
           "CV_L6_GoogleColorPicker_Link_2024"
         ],
         "lesson.key": "Pixels and QR Codes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "eccc53c4-adbb-4370-b127-1e4eacc53228"
       }
@@ -4786,9 +5845,21 @@
           "CV_L6_Reflection_1_2024"
         ],
         "lesson.key": "Pixels and QR Codes",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "7e497cc5-3003-4faa-82ca-ec26bdaa674e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computervision-lesson6-juicemindquiz",
+        "script_level.level_keys": [
+          "computervision-lesson6-juicemindquiz"
+        ],
+        "lesson.key": "Pixels and QR Codes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "8d5de666-17e1-4e2b-85c6-b1ea7c12f1e6"
       }
     },
     {
@@ -4798,7 +5869,7 @@
           "CV_L7_Reflection_1_2024"
         ],
         "lesson.key": "Edge Detection",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "cf99cdd6-86aa-466e-acdf-786c6a9971e0"
       }
@@ -4810,9 +5881,33 @@
           "CV_L7_Reflection_2_2024"
         ],
         "lesson.key": "Edge Detection",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "cf99cdd6-86aa-466e-acdf-786c6a9971e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computervision-lesson7-juicemindquiz",
+        "script_level.level_keys": [
+          "computervision-lesson7-juicemindquiz"
+        ],
+        "lesson.key": "Edge Detection",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "cdfb7a9c-4cea-421c-b8d8-6b736d85ac4f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cv-studentsurvey-midmodule",
+        "script_level.level_keys": [
+          "cv-studentsurvey-midmodule"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "computer-vision",
+        "activity_section.key": "46396d29-1cd8-43af-921c-f7a7c926e51a"
       }
     },
     {
@@ -4822,7 +5917,7 @@
           "CV_L8_COCO_Link_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "c6ce6ee5-3c90-40fe-89e2-1ff3e7f043f0"
       }
@@ -4834,7 +5929,7 @@
           "CV_L8_MediaPipe_ObjectDet_Link_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "9bfa8d09-3497-4707-927e-f3b0675e5a32"
       }
@@ -4846,7 +5941,7 @@
           "CV_L8_ResourceLinks_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "dd3b68e5-a4c8-4800-94d9-643319e1b8be"
       }
@@ -4858,7 +5953,7 @@
           "CV_L8_MediaPipe_ImageClass_Link_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "57f8b4b9-c30b-4fe5-bebc-2710dd8d1c6c"
       }
@@ -4870,7 +5965,7 @@
           "CV_L8_Reflection_1_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "5738164b-bfca-4b39-a664-ea87deef03a0"
       }
@@ -4882,7 +5977,7 @@
           "CV_L8_Reflection_2_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "5738164b-bfca-4b39-a664-ea87deef03a0"
       }
@@ -4894,9 +5989,21 @@
           "CV_L8_Reflection_3_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "5738164b-bfca-4b39-a664-ea87deef03a0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computervision-lesson8-juicemindquiz",
+        "script_level.level_keys": [
+          "computervision-lesson8-juicemindquiz"
+        ],
+        "lesson.key": "Datasets and Models",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "computer-vision",
+        "activity_section.key": "797dd0ca-f067-4eea-81c7-6cd6e30016b3"
       }
     },
     {
@@ -4906,7 +6013,7 @@
           "CV_L9_MediaPipe_ObDet-Images_Link_2024"
         ],
         "lesson.key": "Training Data and Bias",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "8a76f868-a89a-4338-a074-72637947f61b"
       }
@@ -4918,7 +6025,7 @@
           "CV_L9_Reflection_1_2024"
         ],
         "lesson.key": "Training Data and Bias",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "bf29ae7f-76b2-46a6-99d1-7ee87f46e606"
       }
@@ -4930,9 +6037,21 @@
           "CV_L9_Reflection_2_2024"
         ],
         "lesson.key": "Training Data and Bias",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "bf29ae7f-76b2-46a6-99d1-7ee87f46e606"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computervision-lesson9-juicemindquiz",
+        "script_level.level_keys": [
+          "computervision-lesson9-juicemindquiz"
+        ],
+        "lesson.key": "Training Data and Bias",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "computer-vision",
+        "activity_section.key": "43ca4e0b-1de9-4d98-864e-ea88da3f530b"
       }
     },
     {
@@ -4942,7 +6061,7 @@
           "CV_L10_TeachableMachine_Link_2024"
         ],
         "lesson.key": "Training a Model",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "6e3df592-b227-4c89-ae68-c614e74565d1"
       }
@@ -4954,7 +6073,7 @@
           "CV_L10_Reflection_1_2024"
         ],
         "lesson.key": "Training a Model",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "07144221-0b91-4065-9361-c142dcc3be0f"
       }
@@ -4966,7 +6085,7 @@
           "CV_L10_Reflection_2_2024"
         ],
         "lesson.key": "Training a Model",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "07144221-0b91-4065-9361-c142dcc3be0f"
       }
@@ -4978,9 +6097,21 @@
           "CV_L10_Reflection_3_2024"
         ],
         "lesson.key": "Training a Model",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "07144221-0b91-4065-9361-c142dcc3be0f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computervision-lesson10-juicemindquiz",
+        "script_level.level_keys": [
+          "computervision-lesson10-juicemindquiz"
+        ],
+        "lesson.key": "Training a Model",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "computer-vision",
+        "activity_section.key": "0c2c2366-9c0f-4bdb-92b9-a32dc185f5c7"
       }
     },
     {
@@ -4990,7 +6121,7 @@
           "CV_L11_EthicsExploration_ChoiceLevels_2024"
         ],
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "584cb41b-45ea-4e9e-b487-9324e26043d4"
       }
@@ -5002,7 +6133,7 @@
           "CV_L11_Reflection_1_2024"
         ],
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "82ace473-e389-4d7b-958c-f7571bfbc04d"
       }
@@ -5014,7 +6145,7 @@
           "CV_L11_Reflection_2_2024"
         ],
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "82ace473-e389-4d7b-958c-f7571bfbc04d"
       }
@@ -5026,9 +6157,21 @@
           "CV_L11_Reflection_3_2024"
         ],
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "82ace473-e389-4d7b-958c-f7571bfbc04d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computervision-lesson11-juicemindquiz",
+        "script_level.level_keys": [
+          "computervision-lesson11-juicemindquiz"
+        ],
+        "lesson.key": "Impacts of Computer Vision",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "computer-vision",
+        "activity_section.key": "e97074bf-7b80-49d7-8c15-c08f937bdd2f"
       }
     },
     {
@@ -5038,7 +6181,7 @@
           "CV_L12_Reflection_1_2024"
         ],
         "lesson.key": "Prototype Development, Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "43af4336-25d1-42ea-9894-f7be4a556c79"
       }
@@ -5050,7 +6193,7 @@
           "CV_L12_Reflection_2_2024"
         ],
         "lesson.key": "Prototype Development, Part 1",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "43af4336-25d1-42ea-9894-f7be4a556c79"
       }
@@ -5062,7 +6205,7 @@
           "CV_L13_PrototypeComponents_2024"
         ],
         "lesson.key": "Prototype Development, Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "a1585f1f-f996-42ee-a8ba-d6059175f37b"
       }
@@ -5074,7 +6217,7 @@
           "CV_L13_Reflection_1_2024"
         ],
         "lesson.key": "Prototype Development, Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "1d0a1526-f56c-440c-aaef-65ff9c9bd9f1"
       }
@@ -5086,9 +6229,21 @@
           "CV_L13_Reflection_2_2024"
         ],
         "lesson.key": "Prototype Development, Part 2",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "1d0a1526-f56c-440c-aaef-65ff9c9bd9f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computervision-lesson13-juicemindquiz",
+        "script_level.level_keys": [
+          "computervision-lesson13-juicemindquiz"
+        ],
+        "lesson.key": "Prototype Development, Part 2",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "computer-vision",
+        "activity_section.key": "06657cb8-7c2a-4353-858f-99c4a0fda125"
       }
     },
     {
@@ -5098,7 +6253,7 @@
           "CV_L14_Reflection_1_2024"
         ],
         "lesson.key": "User Feedback",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "b8556db2-ed9f-49bd-aa9d-ad97556537eb"
       }
@@ -5110,7 +6265,7 @@
           "CV_L14_Reflection_2_2024"
         ],
         "lesson.key": "User Feedback",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "b8556db2-ed9f-49bd-aa9d-ad97556537eb"
       }
@@ -5122,9 +6277,21 @@
           "CV_L14_Reflection_3_2024"
         ],
         "lesson.key": "User Feedback",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "b8556db2-ed9f-49bd-aa9d-ad97556537eb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "computervision-lesson14-juicemindquiz",
+        "script_level.level_keys": [
+          "computervision-lesson14-juicemindquiz"
+        ],
+        "lesson.key": "User Feedback",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "computer-vision",
+        "activity_section.key": "e74bf027-d2db-446f-a82e-222cc8a389a2"
       }
     },
     {
@@ -5134,7 +6301,7 @@
           "CV_L15_Reflection_1_2024"
         ],
         "lesson.key": "Implementing Feedback",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "10e5e893-5cfa-435f-92ba-a1de04ea23ab"
       }
@@ -5146,7 +6313,7 @@
           "CV_L15_Reflection_2_2024"
         ],
         "lesson.key": "Implementing Feedback",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "10e5e893-5cfa-435f-92ba-a1de04ea23ab"
       }
@@ -5158,9 +6325,21 @@
           "CV_L15_Reflection_3_2024"
         ],
         "lesson.key": "Implementing Feedback",
-        "lesson_group.key": "",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "computer-vision",
         "activity_section.key": "10e5e893-5cfa-435f-92ba-a1de04ea23ab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "cv-studentsurvey-postmodule",
+        "script_level.level_keys": [
+          "cv-studentsurvey-postmodule"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "computer-vision",
+        "activity_section.key": "f4075c68-1877-40de-8104-ccc0ddeff97c"
       }
     }
   ],
@@ -5381,6 +6560,19 @@
       },
       "seeding_key": {
         "resource.key": "edge_detection"
+      }
+    },
+    {
+      "name": "Edge Detection Algorithm Guide",
+      "url": "https://docs.google.com/document/d/105VSDMbOHSkPw2J3IDxJ8naTEGFgH1S2EHF6FY_NfB8/edit?usp=sharing",
+      "key": "edge_detection_algorithm_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "edge_detection_algorithm_guide"
       }
     },
     {
@@ -5820,6 +7012,12 @@
       "seeding_key": {
         "lesson.key": "Edge Detection",
         "resource.key": "edge_detection"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Edge Detection",
+        "resource.key": "edge_detection_algorithm_guide"
       }
     },
     {

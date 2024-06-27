@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-customizing-pilot-v2",
-    "serialized_at": "2024-06-18 03:49:36 UTC",
+    "serialized_at": "2024-06-27 00:08:27 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -224,6 +224,7 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "overview": "This lesson has two central parts - first students explore how to act as user testers for a chatbot app, then students help decide what the next-steps should be for a chatbot based on the testing data. This lesson builds to the project students will complete at the end of the unit, where they will user-test each other’s apps using the same structure in this lesson. Students also wrestle with the responsible use of AI and help decide whether or not a chatbot should be launched publicly even when some flaws are uncovered, emphasizing how humans remain decision-makers for how AI products impact society."
       },
       "seeding_key": {
         "lesson.key": "lesson-12",
@@ -239,6 +240,7 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
+        "overview": "In this lesson, students create their project for the unit. In the project, students create a chatbot that addresses a personally relevant issue or an issue in their community. Students rely on the user-centered design strategies they’ve seen throughout the unit to create issue statements, design a chatbot, perform user testing, and reflect on the results. Optionally, students can design a presentation on their project and the problem it was designed to address."
       },
       "seeding_key": {
         "lesson.key": "lesson-13",
@@ -291,6 +293,19 @@
       }
     },
     {
+      "key": "88debed3-b72a-493b-be79-2c911f964514",
+      "position": 4,
+      "properties": {
+        "name": "Student Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "88debed3-b72a-493b-be79-2c911f964514",
+        "lesson.key": "Introduction to Generative AI",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2"
+      }
+    },
+    {
       "key": "83d6ace9-6252-4aaa-993e-c95541dd358a",
       "position": 1,
       "properties": {
@@ -333,13 +348,13 @@
       }
     },
     {
-      "key": "b3a690ce-4789-433b-8cd3-a356141f8f39",
+      "key": "c8dce35e-fb5e-4e2e-9b9d-64f033721b5a",
       "position": 4,
       "properties": {
-        "name": "Pilot Feedback"
+        "name": "Student Survey"
       },
       "seeding_key": {
-        "lesson_activity.key": "b3a690ce-4789-433b-8cd3-a356141f8f39",
+        "lesson_activity.key": "c8dce35e-fb5e-4e2e-9b9d-64f033721b5a",
         "lesson.key": "Interacting with Language Models",
         "lesson_group.key": "",
         "script.name": "gen-ai-customizing-pilot-v2"
@@ -391,7 +406,7 @@
       "key": "1a38fafc-71b9-4abb-9717-2e04fb6de9a8",
       "position": 4,
       "properties": {
-        "name": "Pilot Feedback"
+        "name": "Student Survey"
       },
       "seeding_key": {
         "lesson_activity.key": "1a38fafc-71b9-4abb-9717-2e04fb6de9a8",
@@ -446,7 +461,7 @@
       "key": "4d02302a-48b9-4d1e-a2c5-f817ffe2b2ed",
       "position": 4,
       "properties": {
-        "name": "Pilot Feedback"
+        "name": "Student Survey"
       },
       "seeding_key": {
         "lesson_activity.key": "4d02302a-48b9-4d1e-a2c5-f817ffe2b2ed",
@@ -501,7 +516,7 @@
       "key": "5df35b55-1e3c-4f23-bb1d-69a19967f532",
       "position": 4,
       "properties": {
-        "name": "Pilot Feedback"
+        "name": "Student Survey"
       },
       "seeding_key": {
         "lesson_activity.key": "5df35b55-1e3c-4f23-bb1d-69a19967f532",
@@ -556,7 +571,7 @@
       "key": "eefe0aa2-3787-49c9-b8ca-5071d648ec72",
       "position": 4,
       "properties": {
-        "name": "Pilot Feedback"
+        "name": "Student Survey"
       },
       "seeding_key": {
         "lesson_activity.key": "eefe0aa2-3787-49c9-b8ca-5071d648ec72",
@@ -611,7 +626,7 @@
       "key": "cf75dfda-a55c-4a08-89dc-6c886c5b38cf",
       "position": 4,
       "properties": {
-        "name": "Pilot Feedback"
+        "name": "Student Survey"
       },
       "seeding_key": {
         "lesson_activity.key": "cf75dfda-a55c-4a08-89dc-6c886c5b38cf",
@@ -663,13 +678,13 @@
       }
     },
     {
-      "key": "f9a30655-d798-4919-a16b-7f2ff984629a",
+      "key": "ac824227-25ff-42a7-98c4-d4ad49493c35",
       "position": 4,
       "properties": {
-        "name": "Pilot Feedback"
+        "name": "Student Survey"
       },
       "seeding_key": {
-        "lesson_activity.key": "f9a30655-d798-4919-a16b-7f2ff984629a",
+        "lesson_activity.key": "ac824227-25ff-42a7-98c4-d4ad49493c35",
         "lesson.key": "Fine Tuning - Exploration",
         "lesson_group.key": "",
         "script.name": "gen-ai-customizing-pilot-v2"
@@ -721,7 +736,7 @@
       "key": "702b249c-c705-435e-86e0-28679f5c243d",
       "position": 4,
       "properties": {
-        "name": "Pilot Feedback"
+        "name": "Student Survey"
       },
       "seeding_key": {
         "lesson_activity.key": "702b249c-c705-435e-86e0-28679f5c243d",
@@ -776,7 +791,7 @@
       "position": 4,
       "properties": {
         "duration": 5,
-        "name": "Pilot Feedback"
+        "name": "Student Survey"
       },
       "seeding_key": {
         "lesson_activity.key": "5e50485e-d0cd-4551-beb2-a52b5f9be575",
@@ -823,6 +838,142 @@
       "seeding_key": {
         "lesson_activity.key": "b2918152-1af6-4519-badc-65a86aec068d",
         "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2"
+      }
+    },
+    {
+      "key": "ae831dad-220f-4441-800e-e529513a55a5",
+      "position": 4,
+      "properties": {
+        "name": "Student Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ae831dad-220f-4441-800e-e529513a55a5",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2"
+      }
+    },
+    {
+      "key": "40002f08-0480-4706-b84d-d5833eb5ab2e",
+      "position": 1,
+      "properties": {
+        "name": "Before the Lesson"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "40002f08-0480-4706-b84d-d5833eb5ab2e",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2"
+      }
+    },
+    {
+      "key": "97a4860f-8d6e-431c-9359-16ee0d368746",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "97a4860f-8d6e-431c-9359-16ee0d368746",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2"
+      }
+    },
+    {
+      "key": "15b3f3e3-a496-4492-8bd9-2ac80d5d27bf",
+      "position": 3,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "15b3f3e3-a496-4492-8bd9-2ac80d5d27bf",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2"
+      }
+    },
+    {
+      "key": "e92b96ac-6147-405c-8fd5-90053233fcf6",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e92b96ac-6147-405c-8fd5-90053233fcf6",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2"
+      }
+    },
+    {
+      "key": "5e75ad80-37b8-462c-9fa0-5310de236299",
+      "position": 5,
+      "properties": {
+        "name": "Student Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5e75ad80-37b8-462c-9fa0-5310de236299",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2"
+      }
+    },
+    {
+      "key": "99d6df78-1c34-4f13-b66e-18cf688d8dc7",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "99d6df78-1c34-4f13-b66e-18cf688d8dc7",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2"
+      }
+    },
+    {
+      "key": "1067fbc1-2e98-4745-a076-eb09a1b6e56b",
+      "position": 2,
+      "properties": {
+        "duration": 170,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1067fbc1-2e98-4745-a076-eb09a1b6e56b",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2"
+      }
+    },
+    {
+      "key": "f0664d2b-154a-4210-aefe-2c1f3796dc03",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f0664d2b-154a-4210-aefe-2c1f3796dc03",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2"
+      }
+    },
+    {
+      "key": "18fb4ae2-2885-47ff-b350-42899831760b",
+      "position": 4,
+      "properties": {
+        "name": "Student Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "18fb4ae2-2885-47ff-b350-42899831760b",
+        "lesson.key": "lesson-13",
         "lesson_group.key": "",
         "script.name": "gen-ai-customizing-pilot-v2"
       }
@@ -917,6 +1068,18 @@
       "seeding_key": {
         "activity_section.key": "f5215f9d-5578-440e-8bee-f76e0fb095b6",
         "lesson_activity.key": "a9368b7e-7da7-408c-ad61-3e3023cb1a00"
+      }
+    },
+    {
+      "key": "1b59cfff-33c1-45c2-bc4a-4402f765d571",
+      "position": 1,
+      "properties": {
+        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-1](https://bit.ly/create-pilot-lesson-1)",
+        "progression_name": "End-Of-Lesson Survey!"
+      },
+      "seeding_key": {
+        "activity_section.key": "1b59cfff-33c1-45c2-bc4a-4402f765d571",
+        "lesson_activity.key": "88debed3-b72a-493b-be79-2c911f964514"
       }
     },
     {
@@ -1116,14 +1279,15 @@
       }
     },
     {
-      "key": "5fd4e29f-8efd-43f3-b0f5-d5fcd37b38a3",
+      "key": "e9a4fcd9-1844-48d6-a50b-953988776c76",
       "position": 1,
       "properties": {
-        "description": "Please let us know how this lesson went!\n- [Report a Typo / Bug / Unclear Directions](https://docs.google.com/forms/d/e/1FAIpQLScERCG76MbaK7SFjHgSAeaMKl5a3B8JaUTPkQlQIMKThKSglA/viewform)\n- [Submit Feedback on the Lesson](https://docs.google.com/forms/d/e/1FAIpQLSevew-9Arb6tEGRQfHxmPLTdUsL4mHNWoPIE9DRXJpf_d2C5g/viewform) (required for Amazon Gift Card!)\n- [Share Takeaways and Experiences in the Forum!](https://forum.code.org/c/generative-ai-pilot/460)\n"
+        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-2](https://bit.ly/create-pilot-lesson-2)",
+        "progression_name": "End-Of-Lesson Survey!"
       },
       "seeding_key": {
-        "activity_section.key": "5fd4e29f-8efd-43f3-b0f5-d5fcd37b38a3",
-        "lesson_activity.key": "b3a690ce-4789-433b-8cd3-a356141f8f39"
+        "activity_section.key": "e9a4fcd9-1844-48d6-a50b-953988776c76",
+        "lesson_activity.key": "c8dce35e-fb5e-4e2e-9b9d-64f033721b5a"
       }
     },
     {
@@ -1304,7 +1468,8 @@
       "key": "aa25c46c-dad1-4e85-8e3f-a66bb18aa85d",
       "position": 1,
       "properties": {
-        "description": "Please let us know how this lesson went!\n- [Report a Typo / Bug / Unclear Directions](https://docs.google.com/forms/d/e/1FAIpQLScERCG76MbaK7SFjHgSAeaMKl5a3B8JaUTPkQlQIMKThKSglA/viewform)\n- [Submit Feedback on the Lesson](https://docs.google.com/forms/d/e/1FAIpQLSevew-9Arb6tEGRQfHxmPLTdUsL4mHNWoPIE9DRXJpf_d2C5g/viewform) (required for Amazon Gift Card!)\n- [Share Takeaways and Experiences in the Forum!](https://forum.code.org/c/generative-ai-pilot/460)\n"
+        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-3](https://bit.ly/create-pilot-lesson-3)",
+        "progression_name": "End-Of-Lesson Survey!"
       },
       "seeding_key": {
         "activity_section.key": "aa25c46c-dad1-4e85-8e3f-a66bb18aa85d",
@@ -1490,7 +1655,8 @@
       "key": "a883e3e9-2515-429c-ba50-4506ebca7a1d",
       "position": 1,
       "properties": {
-        "description": "Please let us know how this lesson went!\n- [Report a Typo / Bug / Unclear Directions](https://docs.google.com/forms/d/e/1FAIpQLScERCG76MbaK7SFjHgSAeaMKl5a3B8JaUTPkQlQIMKThKSglA/viewform)\n- [Submit Feedback on the Lesson](https://docs.google.com/forms/d/e/1FAIpQLSevew-9Arb6tEGRQfHxmPLTdUsL4mHNWoPIE9DRXJpf_d2C5g/viewform) (required for Amazon Gift Card!)\n- [Share Takeaways and Experiences in the Forum!](https://forum.code.org/c/generative-ai-pilot/460)\n"
+        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-4](https://bit.ly/create-pilot-lesson-4)",
+        "progression_name": "End-Of-Lesson Survey!"
       },
       "seeding_key": {
         "activity_section.key": "a883e3e9-2515-429c-ba50-4506ebca7a1d",
@@ -1663,7 +1829,8 @@
       "key": "590e1331-04cc-4493-b62e-0930cc2e99a2",
       "position": 1,
       "properties": {
-        "description": "Please let us know how this lesson went!\n- [Report a Typo / Bug / Unclear Directions](https://docs.google.com/forms/d/e/1FAIpQLScERCG76MbaK7SFjHgSAeaMKl5a3B8JaUTPkQlQIMKThKSglA/viewform)\n- [Submit Feedback on the Lesson](https://docs.google.com/forms/d/e/1FAIpQLSevew-9Arb6tEGRQfHxmPLTdUsL4mHNWoPIE9DRXJpf_d2C5g/viewform) (required for Amazon Gift Card!)\n- [Share Takeaways and Experiences in the Forum!](https://forum.code.org/c/generative-ai-pilot/460)\n"
+        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-5](https://bit.ly/create-pilot-lesson-5)",
+        "progression_name": "End-Of-Lesson Survey!"
       },
       "seeding_key": {
         "activity_section.key": "590e1331-04cc-4493-b62e-0930cc2e99a2",
@@ -1848,7 +2015,8 @@
       "key": "23201d70-c554-44fb-bb15-746165b91f74",
       "position": 1,
       "properties": {
-        "description": "Please let us know how this lesson went!\n- [Report a Typo / Bug / Unclear Directions](https://docs.google.com/forms/d/e/1FAIpQLScERCG76MbaK7SFjHgSAeaMKl5a3B8JaUTPkQlQIMKThKSglA/viewform)\n- [Submit Feedback on the Lesson](https://docs.google.com/forms/d/e/1FAIpQLSevew-9Arb6tEGRQfHxmPLTdUsL4mHNWoPIE9DRXJpf_d2C5g/viewform) (required for Amazon Gift Card!)\n- [Share Takeaways and Experiences in the Forum!](https://forum.code.org/c/generative-ai-pilot/460)\n"
+        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-6](https://bit.ly/create-pilot-lesson-6)",
+        "progression_name": "End-Of-Lesson Survey!"
       },
       "seeding_key": {
         "activity_section.key": "23201d70-c554-44fb-bb15-746165b91f74",
@@ -2010,7 +2178,8 @@
       "key": "191fab96-0221-46de-8a9c-a489967b27c6",
       "position": 1,
       "properties": {
-        "description": "Please let us know how this lesson went!\n- [Report a Typo / Bug / Unclear Directions](https://docs.google.com/forms/d/e/1FAIpQLScERCG76MbaK7SFjHgSAeaMKl5a3B8JaUTPkQlQIMKThKSglA/viewform)\n- [Submit Feedback on the Lesson](https://docs.google.com/forms/d/e/1FAIpQLSevew-9Arb6tEGRQfHxmPLTdUsL4mHNWoPIE9DRXJpf_d2C5g/viewform) (required for Amazon Gift Card!)\n- [Share Takeaways and Experiences in the Forum!](https://forum.code.org/c/generative-ai-pilot/460)\n"
+        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-7](https://bit.ly/create-pilot-lesson-7)",
+        "progression_name": "End-Of-Lesson Survey!"
       },
       "seeding_key": {
         "activity_section.key": "191fab96-0221-46de-8a9c-a489967b27c6",
@@ -2018,13 +2187,13 @@
       }
     },
     {
-      "key": "0199f2c8-b48d-4caf-b313-877355b54609",
+      "key": "6c97be09-28f0-4d20-ae56-19d21441ccf0",
       "position": 1,
       "properties": {
         "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2b5b268c506_0_173\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What’s an example of an inside-joke or slang expression or a family phrase you only hear or say with certain people? Think of phrases that are difficult to explain to others outside this group of people. For Example: “Semper Fi” is a phrase with a specific meaning to Marine Corps veterans with deep meaning that is hard to explain to folks outside the Marine Corps.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Help students come up with examples of these. A good example can also come from your classroom, if there’s a specific inside-joke or phrase that only students in your class would understand. Also encourage students to consider phrases that the elders in their family say which may have additional meaning, especially phrases they would use when they were younger and would get in trouble or would celebrate.\n\t\t<br />\n\t\t<br />Do not regroup for a class discussion yet - instead, continue to the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What would it take to get a chatbot to understand this phrase? Or, do you think it’s impossible?\n\t\t<br />\n\t\t<br />Let students discuss in small groups before having a full-group shareout.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should call out how difficult it is to understand the complex history of phrases like this. In the case of an inside joke, it would mean explaining not only the situation that led to the joke, but all of the ways the joke has been built-up over time. Or in the case of a phrase like “Semper Fi”, it may seem impossible because the chatbot is unable to “live through” the experiences required to relate to other marine corps veterans who use the phrase. Emphasize that even if this were possible, it would require more than just the system prompting and retrieval we’ve been using.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2b5b268c506_0_197\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Getting a chatbot to understand these phrases at a deep level may seem difficult, and will definitely require more than just system prompting and retrieval. This will be our focus today - exploring ways to change the core behaviors of a chatbot after it’s been trained.\n\t\t<br />\n\t\t<br /><strong>Question of the Day:</strong> How can we make deep changes to chatbots that affect it’s core behavior?\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
-        "activity_section.key": "0199f2c8-b48d-4caf-b313-877355b54609",
+        "activity_section.key": "6c97be09-28f0-4d20-ae56-19d21441ccf0",
         "lesson_activity.key": "64473a5a-08f8-4661-a656-7671b7cada4f"
       }
     },
@@ -2085,8 +2254,19 @@
       }
     },
     {
-      "key": "fcf563f5-0ccf-43cd-880f-1895c887470e",
+      "key": "1f4965b8-8776-4dbf-8fdd-f6e3ad389e14",
       "position": 6,
+      "properties": {
+        "progression_name": "Make"
+      },
+      "seeding_key": {
+        "activity_section.key": "1f4965b8-8776-4dbf-8fdd-f6e3ad389e14",
+        "lesson_activity.key": "e603b07a-e761-47a1-ab17-8688052d3ffb"
+      }
+    },
+    {
+      "key": "6e6263b2-67b0-489c-bba4-553750f9512f",
+      "position": 7,
       "properties": {
         "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_13\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We’re going to watch a video of an expert attempt to explain a complex topic to a group of people. Right now, we’re only going to watch the Level 1 and Level 2 explanations. After the video, you should rate how well you understand the topic.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=opqIa5Jiwuw\" target=\"_blank\">5 Levels: Connectome video</a> up until 2:40 (the video in the slide should stop here automatically)\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> From 1-5: How well do you feel like you understand this topic after watching the first part of the video?\n\t\t<br />\n\t\t<br />Have students show you their fingers. Students should mostly be in the 4-5 range for these initial explanations.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
         "name": "Teaching Guide",
@@ -2098,59 +2278,60 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "fcf563f5-0ccf-43cd-880f-1895c887470e",
+        "activity_section.key": "6e6263b2-67b0-489c-bba4-553750f9512f",
         "lesson_activity.key": "e603b07a-e761-47a1-ab17-8688052d3ffb"
       }
     },
     {
-      "key": "43c43c0a-549b-490e-9679-37e953b2b43e",
-      "position": 7,
-      "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_24\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Now we’re going to skip ahead and listen to conversation between these two experts. As you watch, count how many times you get lost in the conversation or hear a word you do not understand. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=opqIa5Jiwuw\" target=\"_blank\">5 Levels: Connectome video</a>  for a minute from 6:39-7:39 (the video in the slide should automatically play this section)\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How many times did you get lost in the conversation?\n\t\t<br />\n\t\t<br />Students should enthusiastically respond that they didn’t understand large portions of the conversation. However, also point out that the two people in the video seemed to be completely comfortable with the conversation and were able to go back-and-forth in their dialogue as though they spoke the same language from the same experience.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_33\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In many ways, the chatbots we’ve been making are like the host of this show - we can use system prompting to get it to “explain to a five-year old” or “explain to student”, which works most of the time.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> But what about situations where we need to make chatbots that talk to an expert, like the last conversation we saw? How well can our chatbot handle those kinds of interactions?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g28f631e6845_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 9 Level 1.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Follow the instructions on the level\n\t\t<br />1) Test at least 4 prompts asking the chatbot to describe how one of your organs or muscles work in your body. \n\t\t<br />2) Read over the responses and rate how understandable they are\n\t\t<br />\n\t\t<br />You may decide to do this level as a class, or have students complete it independently.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g28f631e6845_0_200\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 9 Level 2. In this Predict & Discuss level, students see a screenshot of a new model, BioMistral, and are asked what they notice and what they wonder about the prompt.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Here is another new feature for our chatbots: we can now change the base model we use in our chat. This is like changing the chatbot we’re talking to. We’ll learn more about this as the lesson progresses, but for right now, I just want you to look at this and write down one thing you Notice and one thing you Wonder. There is no right or wrong answer here - it’s a deliberately open-ended question!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Once you type in your answer, press the Run button to lock it in. This will also change your screen to green. Once most people have their answers locked in, we’ll discuss as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Make sure students are answering the questions. If you plan to share student responses using one of the teaching strategies in the <a href=\"https://docs.google.com/document/d/1wESWwYm7Ty46eEK9qFcYfYI7NfG9mqodD12YOmuUcrs/edit#heading=h.9hdpc4hbmimr\" target=\"_blank\">Guide to Incorporating Student Responses</a>, then you should be monitoring responses via the <a href=\"https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels\" target=\"_blank\">Student Summary</a> feature on this level.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_76\"></td>\n    <td style=\"width: 75%\">\n      (Optional) Display: This slide is provided if you would like to display student responses as part of the discussion. If you decide to use this strategy, paste in student responses from the summary page and unhide this slide once you are ready. If you are skipping this strategy, then ignore this and continue to the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_212\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What do you notice? What do you wonder?\n\t\t<br />\n\t\t<br />Ask a few students to share what they wrote in their level.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This is a purposefully low-floor, open-ended prompt designed to activate student thinking and pay explicit attention to this new feature. Some students may not really know how to respond and will say very obvious things - this is fine and can still be celebrated. Some students may use this as an opportunity to make some interesting observations, such as:\n\t\t<br />- The model seems specialized in healthcare and medicine\n\t\t<br />- It seems to use new data from medical sources\n\t\t<br />\n\t\t<br />As students share responses, encourage students to respond non-verbally if they had a similar thought (for example, by snapping their fingers or shaking their hands). After hearing from a few students, continue to the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_57\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 9 Level 3. In this Predict & Discuss level, students are asked to make a prediction of what will happen.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This is the same image from before, but this time I’m asking you to make a formal prediction - what do you think will happen when we interact with this chatbot? What’s a question you might try asking it, and what do you think the response will be?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> This question is all about students planting their feet and making a prediction that they can test in the next few levels. Make sure students come up with at least one question that they can test. If you plan to share student responses using one of the teaching strategies in the <a href=\"https://docs.google.com/document/d/1wESWwYm7Ty46eEK9qFcYfYI7NfG9mqodD12YOmuUcrs/edit#heading=h.9hdpc4hbmimr\" target=\"_blank\">Guide to Incorporating Student Responses</a>, then you should be monitoring responses via the <a href=\"https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels\" target=\"_blank\">Student Summary</a> feature on this level.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_236\"></td>\n    <td style=\"width: 75%\">\n      (Optional) Display: This slide is provided if you would like to display student responses as part of the discussion. If you decide to use this strategy, paste in student responses from the summary page and unhide this slide once you are ready. If you are skipping this strategy, then ignore this and continue to the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_272\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Try to predict how this chatbot will behave when you ask it questions. What's a question you might ask, and what answer would you expect?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> There is still no right-or-wrong answer here, since students are just making predictions based on their intuition. What’s more important is that students lock-in an expectation that they can test in the next few levels. When listening to responses, try not to give anything away or validate responses as “on the right track” - letting students discover if their prediction is right-or-wrong in the next levels is an engagement strategy that hooks students into the lesson.\n\t\t<br />\n\t\t<br />As students share responses, encourage students to respond non-verbally if they had a similar thought (for example, by snapping their fingers or shaking their hands). After hearing from a few students, continue to the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_288\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 9 Level 4. In this Investigate level, students can now interact with the chatbot they’ve seen screenshots of in the last few levels\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Follow the instructions on the level.\n\t\t<br />1) Test the same prompts from before in this chatbot.\n\t\t<br />2) Read over the responses and rate how understandable they are\n\t\t<br />\n\t\t<br />Students can complete this level with a neighbor and have the discussion as a small group rather than a full class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Listen for students comparing the results of their investigation to their predictions, or the predictions of classmates.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How would you rate how understandable the responses are?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should notice that the responses from this chatbot are more technical and contain additional jargon than the previous chatbot. This should be relatable to the experience with the last conversation in the 5 Levels video, where it was harder to follow the specific language used in the responses.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This level uses a different base chatbot in its conversations. This chatbot has been especially designed to speak as an expert on medical issues. You could imagine a doctor using a chatbot like this to have a more technical conversation than we would want to have.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g28f631e6845_0_237\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 9 Level 5. In this Investigate level, students can switch back and forth between chatbots.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In this level, you can decide which chatbot you would like to interact with. Use the “Compare Models” button to decide between chatbots and test out their responses.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Have students use the dropdown to update their chatbot and test different prompts with each chatbot.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Teaching Tip: Special Note for the Pilot** - We want to be honest and transparent: this level isn’t very engaging for the pilot. Once students know how to use the dropdown and “Compare Models” button, you may want to move past it quickly. That’s because, for the pilot, we only have 2 choices in the dropdown: the base model students have been using all along (Mistral 7B), and the medically-trained one they just experimented with (BioMistral). This means, for the pilot, there really isn’t anything “new” to explore. By the time we launch, we hope to have 5 or 6 different choices so students can spend some time in this level comparing the different models and seeing how the responses differ. But unfortunately for this pilot, we just have these two (which students have already seen)."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "43c43c0a-549b-490e-9679-37e953b2b43e",
-        "lesson_activity.key": "e603b07a-e761-47a1-ab17-8688052d3ffb"
-      }
-    },
-    {
-      "key": "17f7368e-730e-46d0-9e9b-beb5b4158532",
+      "key": "2cf94610-8fac-465d-848a-7848223ef25f",
       "position": 8,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2d216853e75_0_6\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In the last level, you could change which model was being used by your chatbot. Each model is designed to perform well on certain things\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> The Mistral 7B model is like the generalist chatbot we’ve been using this whole time. It’s like the host of the show, able to talk to different audiences with all of the information it’s been trained on.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> BioMistral is a specialized chatbot - it’s like talking to the expert in the video, who can only speak with very complex, deep knowledge of the subject.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> That’s because we gave this model a specific set of additional data to look at: new text and articles from special biomedical journals. This is like giving the model a new set of experiences to rely on, and changing its core behavior with new data sources.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_320\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This happens with a process called Fine-Tuning. This is where you re-train a model with additional data to help it solve certain problems, like chatting with advanced medical students.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Behind the scenes, fine-tuning impacts the Processing layer of a large language model. This is where a model stores how it represents language and the relationships between certain topics. With fine-tuning, we’re able to adjust these relationships and tweak the underlying neural networks.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_340\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> With our models, you may have noticed they both have similar names\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> They both have “Mistral 7B” in the title.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> That’s because the original model is called Mistral, and is the one we’ve been using throughout this class.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In order to create BioMistral, this model was fine-tuned by providing lots and lots of additional data sources from biomedical journals and other sources.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> And when it was done, the underlying model itself had changed into what we call BioMistral.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_366\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Open up the <a href=\"https://huggingface.co/models?pipeline_tag=text-generation&library=transformers&sort=trending\" target=\"_blank\">HuggingFace link</a>. It should link to a page pre-filtered to text-based generative models. HuggingFace is an AI community where companies host their AI models for others to use and build on. \n\t\t<br />\n\t\t<br /><strong>Model:</strong> As a class, explore at least 3 models on the Hugging Face website. Click into the model and skim the description, focusing on the type of data used to create the model. The goal is to emphasize that there are many different kinds of base models you could use in a chatbot, and also emphasize how many models are fine-tuned versions of existing models using different data. For example:\n<br />\n\t\t<br />- Try to find a model that has been fine-tuned to use data in a different language, such as having a conversation in Chinese or Korean.\n\t\t<br />- Try to find a model from a major company students may recognize. Companies like Meta, Google, and Microsoft all host their models in this community.\n\t\t<br />- Try to find a model that has been fine-tuned for a specific purpose, like additional medical chatbots. Finance chatbots are also popular.\n\t\t<br />\n\t\t<br />The lesson doesn’t include specific models to look for because the landscape changes so rapidly. Instead, browse around whichever models are popular on the list generated on the website.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_24\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Now we’re going to skip ahead and listen to conversation between these two experts. As you watch, count how many times you get lost in the conversation or hear a word you do not understand. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> <strong>Video:</strong> Watch the <a href=\"https://www.youtube.com/watch?v=opqIa5Jiwuw\" target=\"_blank\">5 Levels: Connectome video</a>  for a minute from 6:39-7:39 (the video in the slide should automatically play this section)\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How many times did you get lost in the conversation?\n\t\t<br />\n\t\t<br />Students should enthusiastically respond that they didn’t understand large portions of the conversation. However, also point out that the two people in the video seemed to be completely comfortable with the conversation and were able to go back-and-forth in their dialogue as though they spoke the same language from the same experience.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_33\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In many ways, the chatbots we’ve been making are like the host of this show - we can use system prompting to get it to “explain to a five-year old” or “explain to student”, which works most of the time.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> But what about situations where we need to make chatbots that talk to an expert, like the last conversation we saw? How well can our chatbot handle those kinds of interactions?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g28f631e6845_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 9 Level 1.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Follow the instructions on the level\n\t\t<br />1) Test at least 4 prompts asking the chatbot to describe how one of your organs or muscles work in your body. \n\t\t<br />2) Read over the responses and rate how understandable they are\n\t\t<br />\n\t\t<br />You may decide to do this level as a class, or have students complete it independently.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g28f631e6845_0_200\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 9 Level 2. In this Predict & Discuss level, students see a screenshot of a new model, BioMistral, and are asked what they notice and what they wonder about the prompt.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Here is another new feature for our chatbots: we can now change the base model we use in our chat. This is like changing the chatbot we’re talking to. We’ll learn more about this as the lesson progresses, but for right now, I just want you to look at this and write down one thing you Notice and one thing you Wonder. There is no right or wrong answer here - it’s a deliberately open-ended question!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Once you type in your answer, press the Run button to lock it in. This will also change your screen to green. Once most people have their answers locked in, we’ll discuss as a class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Make sure students are answering the questions. If you plan to share student responses using one of the teaching strategies in the <a href=\"https://docs.google.com/document/d/1wESWwYm7Ty46eEK9qFcYfYI7NfG9mqodD12YOmuUcrs/edit#heading=h.9hdpc4hbmimr\" target=\"_blank\">Guide to Incorporating Student Responses</a>, then you should be monitoring responses via the <a href=\"https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels\" target=\"_blank\">Student Summary</a> feature on this level.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_76\"></td>\n    <td style=\"width: 75%\">\n      (Optional) Display: This slide is provided if you would like to display student responses as part of the discussion. If you decide to use this strategy, paste in student responses from the summary page and unhide this slide once you are ready. If you are skipping this strategy, then ignore this and continue to the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_212\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What do you notice? What do you wonder?\n\t\t<br />\n\t\t<br />Ask a few students to share what they wrote in their level.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This is a purposefully low-floor, open-ended prompt designed to activate student thinking and pay explicit attention to this new feature. Some students may not really know how to respond and will say very obvious things - this is fine and can still be celebrated. Some students may use this as an opportunity to make some interesting observations, such as:\n\t\t<br />- The model seems specialized in healthcare and medicine\n\t\t<br />- It seems to use new data from medical sources\n\t\t<br />\n\t\t<br />As students share responses, encourage students to respond non-verbally if they had a similar thought (for example, by snapping their fingers or shaking their hands). After hearing from a few students, continue to the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_57\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 9 Level 3. In this Predict & Discuss level, students are asked to make a prediction of what will happen.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This is the same image from before, but this time I’m asking you to make a formal prediction - what do you think will happen when we interact with this chatbot? What’s a question you might try asking it, and what do you think the response will be?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> This question is all about students planting their feet and making a prediction that they can test in the next few levels. Make sure students come up with at least one question that they can test. If you plan to share student responses using one of the teaching strategies in the <a href=\"https://docs.google.com/document/d/1wESWwYm7Ty46eEK9qFcYfYI7NfG9mqodD12YOmuUcrs/edit#heading=h.9hdpc4hbmimr\" target=\"_blank\">Guide to Incorporating Student Responses</a>, then you should be monitoring responses via the <a href=\"https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels\" target=\"_blank\">Student Summary</a> feature on this level.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_236\"></td>\n    <td style=\"width: 75%\">\n      (Optional) Display: This slide is provided if you would like to display student responses as part of the discussion. If you decide to use this strategy, paste in student responses from the summary page and unhide this slide once you are ready. If you are skipping this strategy, then ignore this and continue to the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_272\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Try to predict how this chatbot will behave when you ask it questions. What's a question you might ask, and what answer would you expect?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> There is still no right-or-wrong answer here, since students are just making predictions based on their intuition. What’s more important is that students lock-in an expectation that they can test in the next few levels. When listening to responses, try not to give anything away or validate responses as “on the right track” - letting students discover if their prediction is right-or-wrong in the next levels is an engagement strategy that hooks students into the lesson.\n\t\t<br />\n\t\t<br />As students share responses, encourage students to respond non-verbally if they had a similar thought (for example, by snapping their fingers or shaking their hands). After hearing from a few students, continue to the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_288\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 9 Level 4. In this Investigate level, students can now interact with the chatbot they’ve seen screenshots of in the last few levels\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Follow the instructions on the level.\n\t\t<br />1) Test the same prompts from before in this chatbot.\n\t\t<br />2) Read over the responses and rate how understandable they are\n\t\t<br />\n\t\t<br />Students can complete this level with a neighbor and have the discussion as a small group rather than a full class.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Listen for students comparing the results of their investigation to their predictions, or the predictions of classmates.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How would you rate how understandable the responses are?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should notice that the responses from this chatbot are more technical and contain additional jargon than the previous chatbot. This should be relatable to the experience with the last conversation in the 5 Levels video, where it was harder to follow the specific language used in the responses.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This level uses a different base chatbot in its conversations. This chatbot has been especially designed to speak as an expert on medical issues. You could imagine a doctor using a chatbot like this to have a more technical conversation than we would want to have.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2d216853e75_0_6\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In the last level, you used a brand new base model called BioMistral to interact with your chat. This is different from the standard model we’ve been using so far in this unit.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> The Mistral 7B model is like the generalist chatbot we’ve been using this whole time. It’s like the host of the show, able to talk to different audiences with all of the information it’s been trained on.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> BioMistral is a specialized chatbot - it’s like talking to the expert in the video, who can only speak with very complex, deep knowledge of the subject.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> That’s because we gave this model a specific set of additional data to look at: new text and articles from special biomedical journals. This is like giving the model a new set of experiences to rely on, and changing its core behavior with new data sources.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_320\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This happens with a process called Fine-Tuning. This is where you re-train a model with additional data to help it solve certain problems, like chatting with advanced medical students.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Behind the scenes, fine-tuning impacts the Processing layer of a large language model. This is where a model stores how it represents language and the relationships between certain topics. With fine-tuning, we’re able to adjust these relationships and tweak the underlying neural networks.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_340\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> With our models, you may have noticed they both have similar names\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> They both have “Mistral 7B” in the title.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> That’s because the original model is called Mistral, and is the one we’ve been using throughout this class.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In order to create BioMistral, this model was fine-tuned by providing lots and lots of additional data sources from biomedical journals and other sources.\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> And when it was done, the underlying model itself had changed into what we call BioMistral.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g28f631e6845_0_237\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 9 Level 5. Students can see how to navigate the new model selection dropdown to change their base model.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 9 Level 6. Students can choose a new fine-tuned base model to explore and experiment with.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Have students choose at least 2 models to experiment with. They should compare the tone and depth-of-knowledge between the different chatbots. Not all chatbots work as well as the default base chatbot, but students should notice distinct differences in tone. Students should also notice that questions that appeal to the specific topic of the chatbot are easier to answer than more general questions.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Teaching Tip: Real-World Connections** - Consider using this exploration of Hugging Face as an opportunity to make real-world connections to what students have been doing in this class. The base model used - Mistral - is a model they can find on this website and explore how to use it outside of the lab. They can also see the variety of models that people produce for different tasks, related to some of their own ideas they may have had in this class."
+            "markdown": "**Teaching Tip: Real-World Connections** - If students are curious or want to explore other types of models, consider having them explore the database of <a href=\"https://huggingface.co/models?pipeline_tag=text-generation&library=transformers&sort=trending\" target=\"_blank\">Hugging Face Models</a>. These are real large-language models hosted on the website Hugging Face, and can be used freely in different coding environments. As students explore, they may notice some high-profile models hosted here from Google or Meta or Microsoft. Consider using this exploration of Hugging Face as an opportunity to make real-world connections to what students have been doing in this class. The base model used - Mistral - is a model they can find on this website and explore how to use it outside of the lab. They can also see the variety of models that people produce for different tasks, related to some of their own ideas they may have had in this class."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "17f7368e-730e-46d0-9e9b-beb5b4158532",
+        "activity_section.key": "2cf94610-8fac-465d-848a-7848223ef25f",
         "lesson_activity.key": "e603b07a-e761-47a1-ab17-8688052d3ffb"
       }
     },
     {
-      "key": "5ad0c31b-5d16-4adb-a3a5-cf8c5c126bbe",
+      "key": "34575168-c211-4e71-b6e1-65ce267dada2",
       "position": 9,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g2deab977afa_0_375\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> This graphic is from a model on HuggingFace used to improve answers to law-related questions. How do you think fine-tuning was used to create this model?\n\t\t<br />\n\t\t<br />Have students discuss in pairs before sharing as a full group.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This is an opportunity for formative assessment, based on the class exploration of other models on Hugging Face. Based on those examples, students should say that additional data sources were required to make the model - probably legal and law-related data or articles. Students should also say there needed to be a base model to start with, and the data was used to adjust the model to act more like a finance chatbot than a typical chatbot.\n\t\t<br />\n\t\t<br />Once students have answered, you can visit the model to check: <a href=\"https://huggingface.co/AdaptLLM/law-LLM\" target=\"_blank\">https://huggingface.co/AdaptLLM/law-LLM</a>. This is one of three models fine-tuned to answer law-related questions.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g274c2e092af_0_9\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 9 Level 7. Students will complete a quick check-in question.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Assessment Opportunity: Formative Assessment** - This question prompts students to consider how the data involved in fine-tuning can be used to influence a model of their choice. Consider reviewing students responses during class to gauge how well they are making connections between the data involved in fine-tuning and the new models themselves. If you notice many responses are missing this data aspect, consider regrouping the class and explicitly pointing out how each of the previous base models were created with new data sources, and ask students to imagine what new data they would need for their ideal models."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "5ad0c31b-5d16-4adb-a3a5-cf8c5c126bbe",
+        "activity_section.key": "34575168-c211-4e71-b6e1-65ce267dada2",
         "lesson_activity.key": "e603b07a-e761-47a1-ab17-8688052d3ffb"
       }
     },
     {
-      "key": "f6a67a37-c09c-4888-b66e-cd6730d17847",
+      "key": "ed3c9f20-4900-4544-9885-98c9e13ec0fb",
       "position": 10,
       "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g274c2e092af_0_71\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 9 Level 8. Students can now access all of the new base models and use them to make their own chatbot.\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "ed3c9f20-4900-4544-9885-98c9e13ec0fb",
+        "lesson_activity.key": "e603b07a-e761-47a1-ab17-8688052d3ffb"
+      }
+    },
+    {
+      "key": "d5316543-e83d-4e7c-a76b-3832a48c98e0",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g1b0012b9552_0_972\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> This graphic is from a model used to improve answers to law-related questions. It shows that the model performs better than general chatbots on law-related tasks. How do you think fine-tuning was used to create this model?\n\t\t<br />\n\t\t<br />Have students discuss in pairs before sharing as a full group.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should say that additional data sources were required to make the model - probably legal and law-related data or articles. Students should also say there needed to be a base model to start with, and the data was used to adjust the model to act more like a law chatbot than a typical chatbot.\n\t\t<br />\n\t\t<br />Once students have answered, you can visit the model to check: <a href=\"https://huggingface.co/AdaptLLM/law-LLM\" target=\"_blank\">https://huggingface.co/AdaptLLM/law-LLM</a>. This is one of three models fine-tuned to answer content-specific questions.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2159,30 +2340,20 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "f6a67a37-c09c-4888-b66e-cd6730d17847",
-        "lesson_activity.key": "e603b07a-e761-47a1-ab17-8688052d3ffb"
-      }
-    },
-    {
-      "key": "d5316543-e83d-4e7c-a76b-3832a48c98e0",
-      "position": 1,
-      "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g1b0012b9552_0_972\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson 9 Level 6.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Complete the reflection question at the end of the lesson.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y/export/png?id=1inVBd75UwikQjezt3jdUYVpOwfcNxE2jVK82dPUcE_Y&pageid=g1b0012b9552_0_737\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong>\n\t\t<br />\n\t\t<br />Pilot Survey Feedback: Please encourage students to submit feedback to the Code.org Curriculum Writers via the QR code on the slide. Alternatively, you can provide students with the pre-filled link <a href=\"https://bit.ly/customizing-llms-student-survey-lesson-9\" target=\"_blank\">https://bit.ly/customizing-llms-student-survey-lesson-9</a>\n    </td>\n  </tr>\n\n</table>    \n    "
-      },
-      "seeding_key": {
         "activity_section.key": "d5316543-e83d-4e7c-a76b-3832a48c98e0",
         "lesson_activity.key": "6636ce45-a8ca-4665-b191-5b11f3c0fcd2"
       }
     },
     {
-      "key": "1cc2aa11-368c-4915-b48c-05ff23ecb517",
+      "key": "2e7028c5-4960-45ce-a3dc-2c16274bd9c0",
       "position": 1,
       "properties": {
-        "description": "Please let us know how this lesson went!\n- [Report a Typo / Bug / Unclear Directions](https://docs.google.com/forms/d/e/1FAIpQLScERCG76MbaK7SFjHgSAeaMKl5a3B8JaUTPkQlQIMKThKSglA/viewform)\n- [Submit Feedback on the Lesson](https://docs.google.com/forms/d/e/1FAIpQLSevew-9Arb6tEGRQfHxmPLTdUsL4mHNWoPIE9DRXJpf_d2C5g/viewform) (required for Amazon Gift Card!)\n- [Share Takeaways and Experiences in the Forum!](https://forum.code.org/c/generative-ai-pilot/460)\n"
+        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-8](https://bit.ly/create-pilot-lesson-8)",
+        "progression_name": "End-Of-Lesson Survey!"
       },
       "seeding_key": {
-        "activity_section.key": "1cc2aa11-368c-4915-b48c-05ff23ecb517",
-        "lesson_activity.key": "f9a30655-d798-4919-a16b-7f2ff984629a"
+        "activity_section.key": "2e7028c5-4960-45ce-a3dc-2c16274bd9c0",
+        "lesson_activity.key": "ac824227-25ff-42a7-98c4-d4ad49493c35"
       }
     },
     {
@@ -2307,7 +2478,8 @@
       "key": "8ebba53b-c057-4ba3-a2df-5844c6549430",
       "position": 1,
       "properties": {
-        "description": "Please let us know how this lesson went!\n- [Report a Typo / Bug / Unclear Directions](https://docs.google.com/forms/d/e/1FAIpQLScERCG76MbaK7SFjHgSAeaMKl5a3B8JaUTPkQlQIMKThKSglA/viewform)\n- [Submit Feedback on the Lesson](https://docs.google.com/forms/d/e/1FAIpQLSevew-9Arb6tEGRQfHxmPLTdUsL4mHNWoPIE9DRXJpf_d2C5g/viewform) (required for Amazon Gift Card!)\n- [Share Takeaways and Experiences in the Forum!](https://forum.code.org/c/generative-ai-pilot/460)\n"
+        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-9](https://bit.ly/create-pilot-lesson-9)",
+        "progression_name": "End-Of-Lesson Survey!"
       },
       "seeding_key": {
         "activity_section.key": "8ebba53b-c057-4ba3-a2df-5844c6549430",
@@ -2471,7 +2643,8 @@
       "key": "d4c0c838-8ee7-4e05-a65b-9f1e23cc4de3",
       "position": 1,
       "properties": {
-        "description": "Please let us know how this lesson went!\n- [Report a Typo / Bug / Unclear Directions](https://docs.google.com/forms/d/e/1FAIpQLScERCG76MbaK7SFjHgSAeaMKl5a3B8JaUTPkQlQIMKThKSglA/viewform)\n- [Submit Feedback on the Lesson](https://docs.google.com/forms/d/e/1FAIpQLSevew-9Arb6tEGRQfHxmPLTdUsL4mHNWoPIE9DRXJpf_d2C5g/viewform) (required for Amazon Gift Card!)\n- [Share Takeaways and Experiences in the Forum!](https://forum.code.org/c/generative-ai-pilot/460)\n"
+        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-10](https://bit.ly/create-pilot-lesson-10)",
+        "progression_name": "End-Of-Lesson Survey!"
       },
       "seeding_key": {
         "activity_section.key": "d4c0c838-8ee7-4e05-a65b-9f1e23cc4de3",
@@ -2544,6 +2717,325 @@
         "activity_section.key": "c90cf3ac-388d-41ef-baf6-552bb450b10d",
         "lesson_activity.key": "b2918152-1af6-4519-badc-65a86aec068d"
       }
+    },
+    {
+      "key": "9dcacacc-e152-47a5-96b7-a89067f938cb",
+      "position": 1,
+      "properties": {
+        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-11](https://bit.ly/create-pilot-lesson-11)",
+        "progression_name": "End-Of-Lesson Survey!"
+      },
+      "seeding_key": {
+        "activity_section.key": "9dcacacc-e152-47a5-96b7-a89067f938cb",
+        "lesson_activity.key": "ae831dad-220f-4441-800e-e529513a55a5"
+      }
+    },
+    {
+      "key": "11af51bd-60af-4d7c-9b77-e33034831573",
+      "position": 1,
+      "properties": {
+        "description": "**LEADERS Framework**: This lesson includes opportunities for students to discuss the impacts of generative AI on society, both the intended and unintended consequences. Navigating these conversations so they elevate and honor the experiences of your students, while also keeping the conversation grounded and connected to the lesson content, requires careful consideration and intentionality as the discussions are happening.\n\nTo help prepare for these moments, we recommend reviewing the [LEADERS Framework](https://docs.google.com/document/d/17h5Xm7RKRQm_bwGoNlvZ7I6n8mKTNxI8MJL8wrUJt4o/edit) for facilitating lessons and discussions involving the societal effects of AI, including bias and ethical considerations. Not all of the tenets are applicable to every lesson, but many of the teaching tips and discussion goals in this lesson follow the principles outlined in this framework.",
+        "name": "Preparing to Lead Discussions"
+      },
+      "seeding_key": {
+        "activity_section.key": "11af51bd-60af-4d7c-9b77-e33034831573",
+        "lesson_activity.key": "40002f08-0480-4706-b84d-d5833eb5ab2e"
+      }
+    },
+    {
+      "key": "a13326fd-4620-41a2-b020-d9b6e5d46690",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2b5b268c506_0_173\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> When you buy a new appliance or tool or new device or even a children’s toy, how do you think these products are tested?  What are other types of products that go through testing before being released to the public?\n\t\t<br />\n\t\t<br />Have students discuss in small groups before regrouping\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> There are a variety of possible answers here, but students may be most familiar with the kinds of testing done on electronic devices such as cell phones where they are tested for extreme weather, drop conditions, or being waterproof. Students might also consider how new items on restaurant menus are tested (for example, Taco Bell has its own Test Kitchen) or how new pharmaceutical products are tested and approved before being allowed in public use (which is also how we find out the side effects). Make sure the discussion generates a variety of responses, and consider using this as an opportunity to highlight voices that may not regularly speak up.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2d216853e75_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> User testing is an important part of the products we use everyday. Here’s another example of an industry that does user testing: when airbags were first created in cars, they were tested with crash-test dummies and found to work just fine. But when they were released to the public, they were discovered to be especially dangerous to women and young children. That’s because the “standard crash test dummy” was modeled after the average human male, which means airbags appeared to work just fine for men… but could seriously injure women or children. These failures happened because their perspectives weren’t involved in the user tests.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2b5b268c506_0_197\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today we’re going to focus on how we can test our chatbots with users to make sure they work how they’re expected to. Ideally we’d be able to test with a wide variety of users to avoid issues like the ones we saw with the airbags, but for today we may need to just imagine what it’s like to test these chatbots as different kinds of users.\n\t\t<br />\n\t\t<br /><strong>Question of the Day:</strong> How can we test our chatbots with a variety of users to verify they work as expected and avoid unintended harm?\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "a13326fd-4620-41a2-b020-d9b6e5d46690",
+        "lesson_activity.key": "97a4860f-8d6e-431c-9359-16ee0d368746"
+      }
+    },
+    {
+      "key": "aca751d8-a3b3-404a-af61-da3d448903e1",
+      "position": 1,
+      "properties": {
+        "description": "**Getting Familiar:** These are the levels students will complete throughout the lesson. We recommend briefly exploring the levels yourself before reading the rest of the lesson plan. Some levels are meant to be completed independently by students, but others are meant to motivate class discussion or lead to moments of direct instruction in the slides. Very rarely should students be working through levels completely self-paced.",
+        "name": "Student Levels",
+        "progression_name": "User Testing"
+      },
+      "seeding_key": {
+        "activity_section.key": "aca751d8-a3b3-404a-af61-da3d448903e1",
+        "lesson_activity.key": "15b3f3e3-a496-4492-8bd9-2ac80d5d27bf"
+      }
+    },
+    {
+      "key": "d9be2fc0-613c-4c7e-b10b-0f6de3fd2d97",
+      "position": 2,
+      "properties": {
+        "progression_name": "Making Decisions"
+      },
+      "seeding_key": {
+        "activity_section.key": "d9be2fc0-613c-4c7e-b10b-0f6de3fd2d97",
+        "lesson_activity.key": "15b3f3e3-a496-4492-8bd9-2ac80d5d27bf"
+      }
+    },
+    {
+      "key": "4c261f4c-dc5c-43c7-8e3d-494d89388274",
+      "position": 3,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e7055ed995_0_1\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the scenario out loud:\n\t\t<br />\n\t\t<br />Alice has noticed that it’s hard for people to manage their personal trash and waste. This is an issue because it impacts her community and the environment. She’s decided to make a chatbot to help people learn recycling strategies and get help changing their habits to be better recyclers. We’re going to help her test her chatbot!\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e7055ed995_0_11\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the <a href=\"https://docs.google.com/document/d/1n60D0JCk3KDSbJduD8AEXUPp2zhDJM9e6rHVj-Mc56Y/edit\" target=\"_blank\">Recycling Chatbot User Activity Guide</a>\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We’re going to use this guide to help test Alice’s chatbot. This guide is similar to the one we’ll use on your own projects when we do user testing.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2709497acde_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Have students navigate to Level 1 - User Testing\n\t\t<br />\n\t\t<br />Students will need to refer to interact with the chatbot on this level, and then fill out the activity guide based on the response. The next few slides walk through this process.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=gca418c6afa_0_1529\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Alice has provided 3 prompts to start with. Type in each of these into the chatbot to see the responses.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Give students a chance to type in each response. Due to the temperature settings of the chatbot, students should get slightly different responses from each other. Once most students have generated responses, continue to the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e7055ed995_0_34\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Our goal is to give Alice feedback on how we feel this chatbot behaves. One simple way to do that is to provide words that describe each response, like “helpful” or “formal” or “mean”. We can also add any feedback to Alice using “I wish” or “I wonder” sentences.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students write a brief 3-word description of each response, then add any feedback in the form of “I Wish” or “I Wonder” sentences\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they answer these questions. Their responses will all likely be similar, and they may not have a lot of initial feedback to give to Alice. However, it’s important to establish this structure before continuing to the next part of the activity and especially before students get to their project.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "duration": "15",
+        "name": "User Testing",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Real-World Connection** - This exercise - especially the single-word descriptions of responses - is similar to a real-world process in generative AI called Reinforcement Learning from Human Feedback. It’s a process where chatbots can be adjusted to make their tone more “helpful” or “friendly” based on how humans rate their responses. For example, <a href=\"https://www.cnbc.com/2023/02/16/microsofts-bing-ai-is-leading-to-creepy-experiences-for-users.html\" target=\"_blank\">early versions of the Microsoft Bing chatbot had significant tone issues</a>, and likely went through this kind of reinforcement learning to better manage its responses."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4c261f4c-dc5c-43c7-8e3d-494d89388274",
+        "lesson_activity.key": "15b3f3e3-a496-4492-8bd9-2ac80d5d27bf"
+      }
+    },
+    {
+      "key": "742cbebc-8696-4261-95e5-8f29e399ebab",
+      "position": 4,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e7055ed995_0_23\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the next set of directions to the class:\n\t\t<br />\n\t\t<br />Now it’s time to come up with our own prompts to try. Think of a specific persona that might try to use this chatbot in both intended and unintended ways. For example:\n\t\t<br />- Someone who has never heard of recycling before might ask “I don’t even know what this is”\n\t\t<br />- Someone who doesn’t like recycling might say “Recycling is dumb”\n\t\t<br />- Someone who is trying to abuse recycling systems might ask “How can I trick recycling centers to earn money?”\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e7055ed995_0_56\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Complete the backside of the worksheet with these new prompts!\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they come up with new prompts to attempt. Cue students to explain what point of view or persona they are taking on when interacting with the chatbot so there are a wide variety of users and use-cases interacting with the chatbot. If a student isn’t sure where to start, have them take on one of the perspectives from the previous slide and come up with more questions. These prompts should lead to more variety in student feedback on how the chatbot is responding.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Assessment Opportunity: Empathetic User Testing** - When the lesson is over, consider collecting these activity guides and reviewing these back pages where students take on personas to perform user testing. This can be used to assess how well students are able to take on diverse perspectives or different personas to push the limits of a chatbot for the purpose of testing. Students who provide straightforward or “as intended” prompts may need additional coaching on how to push beyond verifying the expected activity of their chatbots. An explicit goal in user testing is to get a wide variety of responses to make sure it works for many different cases, which is something students can practice in this activity."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "742cbebc-8696-4261-95e5-8f29e399ebab",
+        "lesson_activity.key": "15b3f3e3-a496-4492-8bd9-2ac80d5d27bf"
+      }
+    },
+    {
+      "key": "c6f42d86-c5ee-43a5-b98e-cb7a45b584db",
+      "position": 5,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e72a9beec2_0_6\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the scenario out loud:\n\t\t<br />\n\t\t<br />Alice got a lot of useful data from testing her chatbot with users! One thing people reported is that some of the advice from the chatbot is incorrect - it doesn’t always get it right when something can or can’t be recycled. Now Alice needs to make a decision about what to do with this new information\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e72a9beec2_0_21\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Have students navigate to Level 2 - Making Decisions. Students will see the same scenario, along with four choices for how Alice should respond to this situation.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students choose one of the options and lock-in their answers.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they decide which option they think Alice should pick. When students have made a decision, the background of the app will turn green. When most students have green screens, return to the front of the room and use the “View Student Responses” button to project the class responses to the room. This graph can be used for the discussion on the next slide.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "duration": "20",
+        "name": "Making Decisions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Viewing Student Summaries** - This level is designed to use the Student Summaries feature, which lets you view and display the responses from the class. This requires having this level opened on your computer and, in the teacher panel, selecting the current section of your classes. <a href=\"https://support.code.org/hc/en-us/articles/14544890300301-Can-I-see-a-summary-of-all-my-students-responses-for-question-based-levels\" target=\"_blank\">Click here to learn more about viewing student responses</a>. If you are unable to use the student summaries, you can also run this as an unplugged discussion where students vote in their seats or move to different corners of the room depending on their responses. Ultimately, students need a way to take a stand and be ready to discuss their opinions in the next slide."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c6f42d86-c5ee-43a5-b98e-cb7a45b584db",
+        "lesson_activity.key": "15b3f3e3-a496-4492-8bd9-2ac80d5d27bf"
+      }
+    },
+    {
+      "key": "e797b8b9-c2e7-44bb-9bfc-e9ff2e564449",
+      "position": 6,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e72a9beec2_0_13\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> What should Alice do with her chatbot?\n\t\t<br />\n\t\t<br />Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> There is no definitive right answer here, as long as students can explain and justify their thoughts. Students will likely gravitate towards options B or C - either fixing it after launch, or delaying in order to fix. Students may suggest that this can be improved with additional retrieval information, or they may say this is indicative of a larger core problem that must be fixed first. Regardless of what answer students pick, the more important goal is for students to recognize that there are still important decisions - made by humans - before their chatbots could be released to the public, and this exercise introduces students to some of the choices they could make.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e72a9beec2_0_61\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> It might seem pretty extreme to cancel an entire project based on user testing, but it turns out there are many examples of this. For example, Amazon cancelled a project that would have used AI to help screen resumes for job applications after they discovered it was biased towards women. Even though they had spent years developing it, once the flaw was uncovered, they scrapped the whole program.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e72a9beec2_0_69\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Have students navigate to Level 3 - Making Decisions. Here is another scenario where students can explore and discuss how to respond. The scenario is also provided on the next slide.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students choose one of the options and lock-in their answers.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they decide which option to pick. When students have made a decision, the background of the app will turn green. When most students have green screens, return to the front of the room and use the “View Student Responses” button to project the class responses to the room. This graph can be used for the discussion on the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e72a9beec2_0_90\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> An online tutoring website has launched a chatbot to help elementary school students with math and science problems. However, user testing shows that the chatbot tends to give answers that are too complex or in-depth for students to understand, like they're talking to an adult instead of a younger student. Sometimes the chatbot just solves the problem for them without actually tutoring. What should the company do based on this feedback?\n\t\t<br />\n\t\t<br />Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> There is no definitive right answer here, as long as students can explain and justify their thoughts. Students will likely gravitate towards options B or C again - either fixing it after launch, or delaying in order to fix. Students may suggest that this can be improved with additional system prompting info. Again, emphasize how that we can use this testing information to make decisions on how this chatbot gets used in public with actual users.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e72a9beec2_0_100\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Have students navigate to Level 4 - Making Decisions. Here is another scenario where students can explore and discuss how to respond. The scenario is also provided on the next slide.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students choose one of the options and lock-in their answers.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they decide which option to pick. When students have made a decision, the background of the app will turn green. When most students have green screens, return to the front of the room and use the “View Student Responses” button to project the class responses to the room. This graph can be used for the discussion on the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e72a9beec2_0_121\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> A health and wellness company runs an eating disorder helpline, where you can call in and get counseling to help with issues related to eating disorders. The company has decided to replace the call-in line with an online chatbot instead. Some users are reporting that the chatbot offers the wrong advice and can be cued into suggesting counterproductive strategies that can harm the health and well-being of the user if followed. Given this new information, how should the company respond?\n\t\t<br />\n\t\t<br />Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This answer tends to have a more moral or ethical component, since the advice from the chatbot can be harmful for those who use it. Students will likely gravitate towards options C or D, opting to cancel or pause implementation so the harm can be addressed before it is released. Students may comment that a more serious intervention, such as fine-tuning, may be necessary to restructure this chatbot.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Real-world connection** - This scenario is based on a real-world scenario where this exact situation unfolded - a company replaced an eating disorder support line with a chatbot, and discovered the chatbot gave harmful advice - <a href=\"https://www.npr.org/2023/06/08/1181131532/eating-disorder-helpline-takes-down-chatbot-after-it-gave-weight-loss-advice\" target=\"_blank\">you can read more about that story here</a>. The real-life version of this may be surprising to students - the company initially did not do enough user testing, so they went with option (A) and released the chatbot to the public first. It was only after these harmful effects were discovered that the chatbot was removed. You can decide if you want to highlight this scenario with students, highlighting both the R and S strategies from the <a href=\"https://docs.google.com/document/d/17h5Xm7RKRQm_bwGoNlvZ7I6n8mKTNxI8MJL8wrUJt4o/edit\" target=\"_blank\">LEADERS framework</a>."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e797b8b9-c2e7-44bb-9bfc-e9ff2e564449",
+        "lesson_activity.key": "15b3f3e3-a496-4492-8bd9-2ac80d5d27bf"
+      }
+    },
+    {
+      "key": "fed985cb-ddde-43ee-b851-6fbbeedd3e06",
+      "position": 7,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e72a9beec2_0_131\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Transition:</strong> Have students navigate to Level 5 - Making Decisions. Here is another scenario where students can explore and discuss how to respond. The scenario is also provided on the next slide.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students choose one of the options and lock-in their answers.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Monitor students as they decide which option to pick. When students have made a decision, the background of the app will turn green. When most students have green screens, return to the front of the room and use the “View Student Responses” button to project the class responses to the room. This graph can be used for the discussion on the next slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g2e72a9beec2_0_152\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Alexis is making a chatbot that lets people describe themselves and their friends, and then will write a fun fantasy story that puts them in the plot for them to go on an adventure. After user testing, Alexis discovered that the chatbot might have some gender bias - male characters are always knights or wizards or the brave heroes of the story, and female characters tend to be supportive side characters without much to do or are always in need of rescuing. What should Alexis do with this new information?\n\t\t<br />\n\t\t<br />Use the information from the student summary screen (or other class voting method) to guide the conversation. Invite a student from each area to share their rationale.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This discussion may be polarizing to students. Some students may comment that these gender disparities probably existed in the training data used (for example: many video games like Super Mario rescuing a princess, or the plots of traditional Disney movies), and use that to justify an answer that involves launching the chatbot. However, just because the training data is biased doesn’t mean the end result needs to be, and it can be helpful to push students past the intended design of the chatbot and instead consider the impact on whoever is using it. It can also be difficult to imagine what a “quick fix” for this issue would be, and it may be useful to mention how this is an area of active research in the AI community to help address when bias is discovered in AI models.\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "fed985cb-ddde-43ee-b851-6fbbeedd3e06",
+        "lesson_activity.key": "15b3f3e3-a496-4492-8bd9-2ac80d5d27bf"
+      }
+    },
+    {
+      "key": "81eb39ec-a480-4c9a-a2d8-2c3698eeda54",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g1b0012b9552_0_972\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Imagine a friend walked into class right now and asked “what did I miss?” How would you describe why user testing is important to your friend? What kinds of decisions can we still make after testing?\n\t\t<br />\n\t\t<br />Have students share in small groups first.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should summarize the core concepts of the lesson, emphasizing how it’s important to have a diversity of perspectives when user testing and how those tests can lead to important decisions for what to do next with a chatbot.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Assessment Opportunity: Summative Assessment** - Consider having students write their responses on an exit ticket and collecting it at the end of class, then reviewing their responses to gauge how well they understood the content of the lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "81eb39ec-a480-4c9a-a2d8-2c3698eeda54",
+        "lesson_activity.key": "e92b96ac-6147-405c-8fd5-90053233fcf6"
+      }
+    },
+    {
+      "key": "f5c9152d-fea2-4109-8ee2-a4a19d619cdf",
+      "position": 2,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/export/png?id=1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA&pageid=g1b0012b9552_0_737\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong> How can we test our chatbots with a variety of users to verify they work as expected and avoid unintended harm?\n\t\t<br />\n\t\t<br />Pilot Survey Feedback: Please encourage students to submit feedback to the Code.org Curriculum Writers via the QR code on the slide. Alternatively, you can provide students with the pre-filled link\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "f5c9152d-fea2-4109-8ee2-a4a19d619cdf",
+        "lesson_activity.key": "e92b96ac-6147-405c-8fd5-90053233fcf6"
+      }
+    },
+    {
+      "key": "9aa156cc-b9c0-4b98-b21b-07e917beefea",
+      "position": 1,
+      "properties": {
+        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-12](https://bit.ly/create-pilot-lesson-12)",
+        "progression_name": "End-Of-Lesson Survey!"
+      },
+      "seeding_key": {
+        "activity_section.key": "9aa156cc-b9c0-4b98-b21b-07e917beefea",
+        "lesson_activity.key": "5e75ad80-37b8-462c-9fa0-5310de236299"
+      }
+    },
+    {
+      "key": "88b3f251-a646-4cd4-845b-8964b71a8710",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2b5b268c506_0_173\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> We’ve seen a lot of chatbot examples in this unit that help solve problems. What’s one chatbot you could see yourself actually using to help with a personal problem or something a family member cares about?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This discussion is meant to prime students to think about how chatbots can address an issue in their community - in this case, they’re thinking of past chatbots and how they might be useful outside of this class. For example, students might think of tutoring chatbots or writing assistance chatbots that could be helpful to them personally. They might also think of chatbots that help brainstorm recipes or ideas as something a family member might find useful. As students name examples of chatbot, try to focus on the kind of problem this chatbot is solving and how it’s personally relevant to students or to members of their community.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2b5b268c506_0_197\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong> How can I make a chatbot to address an issue in my community?\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "88b3f251-a646-4cd4-845b-8964b71a8710",
+        "lesson_activity.key": "99d6df78-1c34-4f13-b66e-18cf688d8dc7"
+      }
+    },
+    {
+      "key": "b6ac7e0e-29f1-4e79-8ea9-e6cb92bf0658",
+      "position": 1,
+      "properties": {
+        "name": "Student Levels",
+        "progression_name": "Step 4: Create your Chatbot"
+      },
+      "seeding_key": {
+        "activity_section.key": "b6ac7e0e-29f1-4e79-8ea9-e6cb92bf0658",
+        "lesson_activity.key": "1067fbc1-2e98-4745-a076-eb09a1b6e56b"
+      }
+    },
+    {
+      "key": "bf7dbe6a-2c81-41eb-aeaf-2c33e52f9fc1",
+      "position": 2,
+      "properties": {
+        "progression_name": "Step 5: Make a Model Card"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf7dbe6a-2c81-41eb-aeaf-2c33e52f9fc1",
+        "lesson_activity.key": "1067fbc1-2e98-4745-a076-eb09a1b6e56b"
+      }
+    },
+    {
+      "key": "d55cd88c-f68c-4a79-9dfc-9ff6946608ba",
+      "position": 3,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g1413e1213c5_0_216\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the <a href=\"https://docs.google.com/document/d/1dM1g3ZPt1Q43I8iq-7oxxmm0acqGAiOubaeBdFHRofU/edit\" target=\"_blank\">Project Guide - Solving Community Problems</a>\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2dbaca4c0de_0_10\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read the overview of the project. Students can read individually, or you can read the overview as a class.\n\t\t<br />\n\t\t<br />Students will be creating a chatbot that can be used to solve a problem or accomplish a task relevant to their community.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2dbaca4c0de_0_27\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 1: Choose an Issue Statement\n\t\t<br />\n\t\t<br />Students will need to write an issue statement that describes an issue we’ve observed and how it is affecting people in our community. Students can use the <a href=\"https://docs.google.com/presentation/d/171c_MuqxMJZ2Px5DGbxl0Z0q3wNnS5VRkQSQmAK12ag/edit\" target=\"_blank\"><a href=\"https://docs.google.com/presentation/d/171c_MuqxMJZ2Px5DGbxl0Z0q3wNnS5VRkQSQmAK12ag/edit\" target=\"_blank\">5 Why’s Worksheet</a></a> to help develop an issue statement.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> (Optional) <strong>Distribute:</strong> Distribute copies of the 5 Why’s Worksheet to students to help develop their Issue Statement\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Give ample time for students to draft an issue statement. Having a broad but impactful issue statement can make the rest of the project easier to complete since it is anchored in this initial statement.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2e77da08d69_0_13\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 2: Planning a Solution\n\t\t<br />\n\t\t<br />Students will Brainstorm two different types of chatbot that could help with this issue. Each chatbot should have a specific purpose and an ideal user who the chatbot is designed for.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Help students come up with chatbot ideas to address their issue statement, similar to the examples in the Issue Statements lesson earlier in the unit. Encourage students to come up with at least 2 ideas so that if something happens with their first choice, they have a backup. Give students ample time to brainstorm and then make a decision and fill in the written responses on the project guide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2e77da08d69_0_34\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out the <a href=\"https://docs.google.com/document/d/1a2cGqEck2s97XZoPhUalPNUKWcg0IKQOcFAxLWWyMXc/edit\" target=\"_blank\">Resource - Chatbot Planning Guide</a>\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "name": "Teaching Guide",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Document the Planning Process** - Students may want to dive right-in to creating their chatbot, but we recommend providing some kind of opportunity for planning before students dive in. This provides an opportunity to check-n with students as they plan and ensure their ideas are on-track before they get too far in development. Depending on how long the first parts of this activity have gone, this planning guide can also act as an end-of-Day-1 activity that you can collect as an exit ticket and check before starting chatbot development on Day 2."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d55cd88c-f68c-4a79-9dfc-9ff6946608ba",
+        "lesson_activity.key": "1067fbc1-2e98-4745-a076-eb09a1b6e56b"
+      }
+    },
+    {
+      "key": "b4813875-d731-4945-a6dc-020edaecff27",
+      "position": 4,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2e77da08d69_0_24\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 2: Planning a Solution\n\t\t<br />\n\t\t<br />Students will Brainstorm two different types of chatbot that could help with this issue. Each chatbot should have a specific purpose and an ideal user who the chatbot is designed for.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> Help students come up with chatbot ideas to address their issue statement, similar to the examples in the Issue Statements lesson earlier in the unit. Encourage students to come up with at least 2 ideas so that if something happens with their first choice, they have a backup. Give students ample time to brainstorm and then make a decision and fill in the written responses on the project guide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g270fde699fd_0_0\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson X Level 1.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 4: Make your Chatbot. Students will be setting the system prompt, temperature, and retrieval. They should also test their chatbot and ensure it responds as expected.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g270fde699fd_0_200\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> <strong>Navigate:</strong> Go to Lesson X Level 2.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 5: Make the Model Card.  Students will be adding their model card information to their chatbot and then “publishing”.\n\t\t<br />\n\t\t<br />Optionally, students can complete a physical or digital model card using this <a href=\"https://docs.google.com/presentation/d/1KXIwPhbXIumnp4enyOcAvhGucqZmlm7_pDYkZPCQNeE/edit\" target=\"_blank\">Model Card Template</a>\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Displaying Student Work** - Creating a paper version of a model card can be redundant since students will do it in the chatbot as well, but having a physical or digital version of the model card also acts as an artifact that you or students can share with broader members of the community. For example, physical model cards can be hung on bulletin boards or digital model cards can be put on a website. These can be tangible ways for students to share their work outside of the chatbot levels themselves."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b4813875-d731-4945-a6dc-020edaecff27",
+        "lesson_activity.key": "1067fbc1-2e98-4745-a076-eb09a1b6e56b"
+      }
+    },
+    {
+      "key": "f0f4df30-a904-4bd6-96cd-7c9f10a926f3",
+      "position": 5,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2e77da08d69_0_48\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> <strong>Distribute:</strong> Pass out two copies of <a href=\"https://docs.google.com/document/d/1SqWCKewyia6WXiWacVnlD-TWj8AcEAP0apg9yE0X58c/edit\" target=\"_blank\">Activity Guide - Chatbot User Testing</a> to each student\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Ending Day 2, Starting Day 3** - Depending on how long classes are, consider ending the day with creating the chatbot in steps 4 and 5 and saving user testing for a new day. This makes it easier to focus what students are doing in each class period, and it also creates an opportunity for students to user-test with members of the community. Consider having students use one of the user testing handouts with a friend or family member at home and bringing in the results the next day."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f0f4df30-a904-4bd6-96cd-7c9f10a926f3",
+        "lesson_activity.key": "1067fbc1-2e98-4745-a076-eb09a1b6e56b"
+      }
+    },
+    {
+      "key": "9f7fa213-3c96-4157-b4f7-62975ac653ac",
+      "position": 6,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g2dbaca4c0de_0_43\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read through Step 6: User Testing\n\t\t<br />\n\t\t<br />Students will use the Chatbot User Testing Activity Guide to have other users test your chatbot. Try to have at least two other students test your chatbot. Once you’ve had at least two other people test your chatbot, complete the table in the project guide\n\t\t<br />\n\t\t<br />Students will need time to fill out the User Testing Activity guide with 3 prompts of their own, then trade their testing guides with other students to test each others chatbots. Once they’re done, students should review the feedback and decide on how to update their chatbots.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Teaching Tip: Lesson Timing** - Even though user testing is just one step in the project guide, it can take a lot of time. Consider taking an entire class period for user testing, ensuring students can test several different chatbots and have time to review the feedback to make adjustments to their chatbots. Emphasize how testing and responding to user feedback is an important aspect of responsible use of AI, similar to the lesson on User Testing."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9f7fa213-3c96-4157-b4f7-62975ac653ac",
+        "lesson_activity.key": "1067fbc1-2e98-4745-a076-eb09a1b6e56b"
+      }
+    },
+    {
+      "key": "8b938fbc-64a4-4b72-813e-a579eef0287d",
+      "position": 7,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g1413e1213c5_0_280\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> (Optional) Finalize and Present. Have students prepare a short presentation of their chatbot to share with their peers.\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "8b938fbc-64a4-4b72-813e-a579eef0287d",
+        "lesson_activity.key": "1067fbc1-2e98-4745-a076-eb09a1b6e56b"
+      }
+    },
+    {
+      "key": "7f3d4b3d-90cb-4f97-b072-1f1b24c32a8e",
+      "position": 1,
+      "properties": {
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/export/png?id=1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w&pageid=g1b0012b9552_0_972\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students complete Step 7: Reflect.\n\t\t<br />\n\t\t<br />Students will answer three reflection questions on the final page of the project guide\n    </td>\n  </tr>\n\n</table>    \n    "
+      },
+      "seeding_key": {
+        "activity_section.key": "7f3d4b3d-90cb-4f97-b072-1f1b24c32a8e",
+        "lesson_activity.key": "f0664d2b-154a-4210-aefe-2c1f3796dc03"
+      }
+    },
+    {
+      "key": "089e7753-4e77-4dc5-a928-54978e4d13a0",
+      "position": 1,
+      "properties": {
+        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-13](https://bit.ly/create-pilot-lesson-13)",
+        "progression_name": "End-Of-Lesson Survey!"
+      },
+      "seeding_key": {
+        "activity_section.key": "089e7753-4e77-4dc5-a928-54978e4d13a0",
+        "lesson_activity.key": "18fb4ae2-2885-47ff-b350-42899831760b"
+      }
     }
   ],
   "script_levels": [
@@ -2553,6 +3045,31 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "End-Of-Lesson Survey!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson1"
+        ],
+        "lesson.key": "Introduction to Generative AI",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "1b59cfff-33c1-45c2-bc4a-4402f765d571"
+      },
+      "level_keys": [
+        "gen-ai-customizing-pilotv2-survey-lesson1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L1"
+        ],
         "progression": "Explore a Chatbot"
       },
       "bonus": false,
@@ -2570,11 +3087,14 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L2"
+        ],
         "progression": "Explore a Chatbot"
       },
       "bonus": false,
@@ -2592,11 +3112,14 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L3"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -2614,11 +3137,14 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L4"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -2636,11 +3162,14 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L5"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -2658,11 +3187,14 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L6"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -2680,11 +3212,14 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L7"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -2702,11 +3237,14 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L8V2"
+        ],
         "progression": "Investigating Hallucinations"
       },
       "bonus": false,
@@ -2724,11 +3262,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L8"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2746,11 +3287,36 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End-Of-Lesson Survey!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson2"
+        ],
+        "lesson.key": "Interacting with Language Models",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "e9a4fcd9-1844-48d6-a50b-953988776c76"
+      },
+      "level_keys": [
+        "gen-ai-customizing-pilotv2-survey-lesson2"
+      ]
+    },
+    {
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L1"
+        ],
         "progression": "Using a System Prompt"
       },
       "bonus": false,
@@ -2768,11 +3334,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L2"
+        ],
         "progression": "Using a System Prompt"
       },
       "bonus": false,
@@ -2790,11 +3359,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L3"
+        ],
         "progression": "Using a System Prompt"
       },
       "bonus": false,
@@ -2812,11 +3384,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L4"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -2834,11 +3409,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 16,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L5"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -2856,11 +3434,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 17,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L6"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -2878,11 +3459,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 18,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L7"
+        ],
         "progression": "Audience & Delivery"
       },
       "bonus": false,
@@ -2900,11 +3484,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 19,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L8"
+        ],
         "progression": "Audience & Delivery"
       },
       "bonus": false,
@@ -2922,11 +3509,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 20,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L9"
+        ],
         "progression": "Audience & Delivery"
       },
       "bonus": false,
@@ -2944,11 +3534,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 21,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L10"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -2966,11 +3559,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 22,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L11"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2988,11 +3584,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 23,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L12"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -3010,11 +3609,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 24,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L13"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -3032,11 +3634,36 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 25,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End-Of-Lesson Survey!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson3"
+        ],
+        "lesson.key": "System Prompting - Practice",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "aa25c46c-dad1-4e85-8e3f-a66bb18aa85d"
+      },
+      "level_keys": [
+        "gen-ai-customizing-pilotv2-survey-lesson3"
+      ]
+    },
+    {
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L1"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -3054,11 +3681,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L2"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -3076,11 +3706,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L3"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -3098,11 +3731,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L4"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -3120,11 +3756,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 30,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L5"
+        ],
         "progression": "Giving Examples"
       },
       "bonus": false,
@@ -3142,11 +3781,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 31,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L6"
+        ],
         "progression": "Giving Examples"
       },
       "bonus": false,
@@ -3164,11 +3806,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 32,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L7"
+        ],
         "progression": "Giving Examples"
       },
       "bonus": false,
@@ -3186,11 +3831,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 33,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L9"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3208,11 +3856,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 34,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L8"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -3230,11 +3881,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 35,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-10V2"
+        ],
         "progression": "Show What You Know"
       },
       "bonus": false,
@@ -3252,11 +3906,36 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 36,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End-Of-Lesson Survey!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson4"
+        ],
+        "lesson.key": "System Prompting - Synthesis",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "a883e3e9-2515-429c-ba50-4506ebca7a1d"
+      },
+      "level_keys": [
+        "gen-ai-customizing-pilotv2-survey-lesson4"
+      ]
+    },
+    {
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L1"
+        ],
         "progression": "Explore"
       },
       "bonus": false,
@@ -3274,11 +3953,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L2V2"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -3296,11 +3978,14 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L3V2"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -3318,11 +4003,14 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L4"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -3340,11 +4028,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L5"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -3362,11 +4053,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 42,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L6"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -3384,11 +4078,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 43,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L7A"
+        ],
         "progression": "Modify"
       },
       "bonus": false,
@@ -3406,11 +4103,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 44,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L8"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -3428,11 +4128,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 45,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L9"
+        ],
         "progression": "Make"
       },
       "bonus": false,
@@ -3450,11 +4153,36 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 46,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End-Of-Lesson Survey!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson5"
+        ],
+        "lesson.key": "Retrieval - Exploration",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "590e1331-04cc-4493-b62e-0930cc2e99a2"
+      },
+      "level_keys": [
+        "gen-ai-customizing-pilotv2-survey-lesson5"
+      ]
+    },
+    {
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L1"
+        ],
         "progression": "Current Information"
       },
       "bonus": false,
@@ -3472,11 +4200,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L2"
+        ],
         "progression": "Current Information"
       },
       "bonus": false,
@@ -3494,11 +4225,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L3"
+        ],
         "progression": "Specialized Information"
       },
       "bonus": false,
@@ -3516,11 +4250,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L4"
+        ],
         "progression": "Specialized Information"
       },
       "bonus": false,
@@ -3538,11 +4275,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 51,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L5"
+        ],
         "progression": "Accurate Information"
       },
       "bonus": false,
@@ -3560,11 +4300,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 52,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L6"
+        ],
         "progression": "Accurate Information"
       },
       "bonus": false,
@@ -3582,11 +4325,14 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 53,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L7"
+        ],
         "progression": "Accurate Information"
       },
       "bonus": false,
@@ -3604,11 +4350,14 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 54,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L8"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -3626,11 +4375,14 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 55,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L9"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3648,11 +4400,14 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 56,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L10"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -3670,11 +4425,14 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 57,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L11"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -3692,11 +4450,36 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 58,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End-Of-Lesson Survey!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson6"
+        ],
+        "lesson.key": "Retrieval - Practice",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "23201d70-c554-44fb-bb15-746165b91f74"
+      },
+      "level_keys": [
+        "gen-ai-customizing-pilotv2-survey-lesson6"
+      ]
+    },
+    {
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L1"
+        ],
         "progression": "User Story #1: Sarah Thompson"
       },
       "bonus": false,
@@ -3714,11 +4497,14 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 60,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L1.1"
+        ],
         "progression": "User Story #1: Sarah Thompson"
       },
       "bonus": false,
@@ -3736,11 +4522,14 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 61,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L2"
+        ],
         "progression": "User Story #1: Sarah Thompson"
       },
       "bonus": false,
@@ -3758,11 +4547,14 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 62,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L4"
+        ],
         "progression": "User Story #2: Janet Lee"
       },
       "bonus": false,
@@ -3780,11 +4572,14 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 63,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L4.1"
+        ],
         "progression": "User Story #2: Janet Lee"
       },
       "bonus": false,
@@ -3802,11 +4597,14 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 64,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L5"
+        ],
         "progression": "User Story #2: Janet Lee"
       },
       "bonus": false,
@@ -3824,11 +4622,14 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 65,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L7"
+        ],
         "progression": "User Story #3: Alex Martinez"
       },
       "bonus": false,
@@ -3846,11 +4647,14 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 66,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L7.1"
+        ],
         "progression": "User Story #3: Alex Martinez"
       },
       "bonus": false,
@@ -3868,11 +4672,14 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 67,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L8"
+        ],
         "progression": "User Story #3: Alex Martinez"
       },
       "bonus": false,
@@ -3890,11 +4697,14 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 68,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L10"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -3912,11 +4722,14 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 69,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L11"
+        ],
         "progression": "Show What You Know"
       },
       "bonus": false,
@@ -3934,11 +4747,36 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 70,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End-Of-Lesson Survey!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson7"
+        ],
+        "lesson.key": "Retrieval - Synthesis",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "191fab96-0221-46de-8a9c-a489967b27c6"
+      },
+      "level_keys": [
+        "gen-ai-customizing-pilotv2-survey-lesson7"
+      ]
+    },
+    {
+      "chapter": 71,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L1"
+        ],
         "progression": "Explore"
       },
       "bonus": false,
@@ -3956,11 +4794,14 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 72,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L2V2"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -3978,11 +4819,14 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 73,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L3V2"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4000,11 +4844,14 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 74,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L4"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -4022,7 +4869,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 75,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4032,7 +4879,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "gen-ai-customizing-finetuning-explore-L5"
+          "gen-ai-panels-finetune-overview"
         ],
         "lesson.key": "Fine Tuning - Exploration",
         "lesson_group.key": "",
@@ -4040,15 +4887,40 @@
         "activity_section.key": "49d47bdc-c623-4d1d-b0ef-d71b093fe491"
       },
       "level_keys": [
-        "gen-ai-customizing-finetuning-explore-L5"
+        "gen-ai-panels-finetune-overview"
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 76,
       "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-choice"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "49d47bdc-c623-4d1d-b0ef-d71b093fe491"
+      },
+      "level_keys": [
+        "gen-ai-customizing-finetuning-explore-choice"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L6"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -4066,11 +4938,80 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 78,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Make"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L5"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "1f4965b8-8776-4dbf-8fdd-f6e3ad389e14"
+      },
+      "level_keys": [
+        "gen-ai-customizing-finetuning-explore-L5"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End-Of-Lesson Survey!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson8"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "2e7028c5-4960-45ce-a3dc-2c16274bd9c0"
+      },
+      "level_keys": [
+        "gen-ai-customizing-pilotv2-survey-lesson8"
+      ]
+    },
+    {
+      "chapter": 80,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "End-Of-Lesson Survey!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson9"
+        ],
+        "lesson.key": "Model Cards - Exploration",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "8ebba53b-c057-4ba3-a2df-5844c6549430"
+      },
+      "level_keys": [
+        "gen-ai-customizing-pilotv2-survey-lesson9"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-modelcards-practice-L1"
+        ],
         "progression": "Initial Scenario"
       },
       "bonus": false,
@@ -4088,11 +5029,14 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 82,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-modelcards-practice-L2"
+        ],
         "progression": "You Decide!"
       },
       "bonus": false,
@@ -4108,9 +5052,284 @@
       "level_keys": [
         "gen-ai-customizing-modelcards-practice-L2"
       ]
+    },
+    {
+      "chapter": 83,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End-Of-Lesson Survey!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson10"
+        ],
+        "lesson.key": "Model Cards - Practice",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "d4c0c838-8ee7-4e05-a65b-9f1e23cc4de3"
+      },
+      "level_keys": [
+        "gen-ai-customizing-pilotv2-survey-lesson10"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End-Of-Lesson Survey!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson11"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "9dcacacc-e152-47a5-96b7-a89067f938cb"
+      },
+      "level_keys": [
+        "gen-ai-customizing-pilotv2-survey-lesson11"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-L1"
+        ],
+        "progression": "User Testing"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-L1"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "aca751d8-a3b3-404a-af61-da3d448903e1"
+      },
+      "level_keys": [
+        "gen-ai-customizing-usertesting-L1"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L2"
+        ],
+        "progression": "Making Decisions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-predict-L2"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "d9be2fc0-613c-4c7e-b10b-0f6de3fd2d97"
+      },
+      "level_keys": [
+        "gen-ai-customizing-usertesting-predict-L2"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L3"
+        ],
+        "progression": "Making Decisions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-predict-L3"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "d9be2fc0-613c-4c7e-b10b-0f6de3fd2d97"
+      },
+      "level_keys": [
+        "gen-ai-customizing-usertesting-predict-L3"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L4"
+        ],
+        "progression": "Making Decisions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-predict-L4"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "d9be2fc0-613c-4c7e-b10b-0f6de3fd2d97"
+      },
+      "level_keys": [
+        "gen-ai-customizing-usertesting-predict-L4"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L5"
+        ],
+        "progression": "Making Decisions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-predict-L5"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "d9be2fc0-613c-4c7e-b10b-0f6de3fd2d97"
+      },
+      "level_keys": [
+        "gen-ai-customizing-usertesting-predict-L5"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End-Of-Lesson Survey!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson12"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "9aa156cc-b9c0-4b98-b21b-07e917beefea"
+      },
+      "level_keys": [
+        "gen-ai-customizing-pilotv2-survey-lesson12"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project2-L1"
+        ],
+        "progression": "Step 4: Create your Chatbot"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-project2-L1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "b6ac7e0e-29f1-4e79-8ea9-e6cb92bf0658"
+      },
+      "level_keys": [
+        "gen-ai-customizing-project2-L1"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project2-L2"
+        ],
+        "progression": "Step 5: Make a Model Card"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-project2-L2"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "bf7dbe6a-2c81-41eb-aeaf-2c33e52f9fc1"
+      },
+      "level_keys": [
+        "gen-ai-customizing-project2-L2"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End-Of-Lesson Survey!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson13"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "089e7753-4e77-4dc5-a928-54978e4d13a0"
+      },
+      "level_keys": [
+        "gen-ai-customizing-pilotv2-survey-lesson13"
+      ]
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-pilotv2-survey-lesson1",
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson1"
+        ],
+        "lesson.key": "Introduction to Generative AI",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "1b59cfff-33c1-45c2-bc4a-4402f765d571"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "gen-ai-customizing-intro-L1",
@@ -4217,6 +5436,18 @@
         "lesson_group.key": "",
         "script.name": "gen-ai-customizing-pilot-v2",
         "activity_section.key": "09a983d6-e0f9-48a6-9fc5-7b8ccc73836d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-pilotv2-survey-lesson2",
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson2"
+        ],
+        "lesson.key": "Interacting with Language Models",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "e9a4fcd9-1844-48d6-a50b-953988776c76"
       }
     },
     {
@@ -4377,6 +5608,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "gen-ai-customizing-pilotv2-survey-lesson3",
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson3"
+        ],
+        "lesson.key": "System Prompting - Practice",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "aa25c46c-dad1-4e85-8e3f-a66bb18aa85d"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "gen-ai-customizing-prompt-synthesis-L1",
         "script_level.level_keys": [
           "gen-ai-customizing-prompt-synthesis-L1"
@@ -4497,6 +5740,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "gen-ai-customizing-pilotv2-survey-lesson4",
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson4"
+        ],
+        "lesson.key": "System Prompting - Synthesis",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "a883e3e9-2515-429c-ba50-4506ebca7a1d"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "gen-ai-customizing-retrieval-explore-L1",
         "script_level.level_keys": [
           "gen-ai-customizing-retrieval-explore-L1"
@@ -4601,6 +5856,18 @@
         "lesson_group.key": "",
         "script.name": "gen-ai-customizing-pilot-v2",
         "activity_section.key": "fc3bf93c-2a37-4cc2-b663-647eeeb26347"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-pilotv2-survey-lesson5",
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson5"
+        ],
+        "lesson.key": "Retrieval - Exploration",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "590e1331-04cc-4493-b62e-0930cc2e99a2"
       }
     },
     {
@@ -4737,6 +6004,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "gen-ai-customizing-pilotv2-survey-lesson6",
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson6"
+        ],
+        "lesson.key": "Retrieval - Practice",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "23201d70-c554-44fb-bb15-746165b91f74"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "gen-ai-customizing-retrieval-synthesis-predict-L1",
         "script_level.level_keys": [
           "gen-ai-customizing-retrieval-synthesis-predict-L1"
@@ -4869,6 +6148,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "gen-ai-customizing-pilotv2-survey-lesson7",
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson7"
+        ],
+        "lesson.key": "Retrieval - Synthesis",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "191fab96-0221-46de-8a9c-a489967b27c6"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "gen-ai-customizing-finetuning-explore-L1",
         "script_level.level_keys": [
           "gen-ai-customizing-finetuning-explore-L1"
@@ -4917,9 +6208,21 @@
     },
     {
       "seeding_key": {
-        "level.key": "gen-ai-customizing-finetuning-explore-L5",
+        "level.key": "gen-ai-panels-finetune-overview",
         "script_level.level_keys": [
-          "gen-ai-customizing-finetuning-explore-L5"
+          "gen-ai-panels-finetune-overview"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "49d47bdc-c623-4d1d-b0ef-d71b093fe491"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-finetuning-explore-choice",
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-choice"
         ],
         "lesson.key": "Fine Tuning - Exploration",
         "lesson_group.key": "",
@@ -4937,6 +6240,42 @@
         "lesson_group.key": "",
         "script.name": "gen-ai-customizing-pilot-v2",
         "activity_section.key": "1f85102b-b3fd-447c-b480-0e0eaf631c69"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-finetuning-explore-L5",
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L5"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "1f4965b8-8776-4dbf-8fdd-f6e3ad389e14"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-pilotv2-survey-lesson8",
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson8"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "2e7028c5-4960-45ce-a3dc-2c16274bd9c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-pilotv2-survey-lesson9",
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson9"
+        ],
+        "lesson.key": "Model Cards - Exploration",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "8ebba53b-c057-4ba3-a2df-5844c6549430"
       }
     },
     {
@@ -4961,6 +6300,138 @@
         "lesson_group.key": "",
         "script.name": "gen-ai-customizing-pilot-v2",
         "activity_section.key": "375df491-dfe5-4aa4-92cd-6103bf01efd6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-pilotv2-survey-lesson10",
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson10"
+        ],
+        "lesson.key": "Model Cards - Practice",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "d4c0c838-8ee7-4e05-a65b-9f1e23cc4de3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-pilotv2-survey-lesson11",
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson11"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "9dcacacc-e152-47a5-96b7-a89067f938cb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-usertesting-L1",
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-L1"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "aca751d8-a3b3-404a-af61-da3d448903e1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-usertesting-predict-L2",
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-predict-L2"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "d9be2fc0-613c-4c7e-b10b-0f6de3fd2d97"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-usertesting-predict-L3",
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-predict-L3"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "d9be2fc0-613c-4c7e-b10b-0f6de3fd2d97"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-usertesting-predict-L4",
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-predict-L4"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "d9be2fc0-613c-4c7e-b10b-0f6de3fd2d97"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-usertesting-predict-L5",
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-predict-L5"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "d9be2fc0-613c-4c7e-b10b-0f6de3fd2d97"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-pilotv2-survey-lesson12",
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson12"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "9aa156cc-b9c0-4b98-b21b-07e917beefea"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-project2-L1",
+        "script_level.level_keys": [
+          "gen-ai-customizing-project2-L1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "b6ac7e0e-29f1-4e79-8ea9-e6cb92bf0658"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-project2-L2",
+        "script_level.level_keys": [
+          "gen-ai-customizing-project2-L2"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "bf7dbe6a-2c81-41eb-aeaf-2c33e52f9fc1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-pilotv2-survey-lesson13",
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson13"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "",
+        "script.name": "gen-ai-customizing-pilot-v2",
+        "activity_section.key": "089e7753-4e77-4dc5-a928-54978e4d13a0"
       }
     }
   ],
@@ -5037,6 +6508,30 @@
       }
     },
     {
+      "name": "[Template] 5 Why's",
+      "url": "https://docs.google.com/presentation/d/171c_MuqxMJZ2Px5DGbxl0Z0q3wNnS5VRkQSQmAK12ag/edit",
+      "key": "_template_5_why_s",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "_template_5_why_s"
+      }
+    },
+    {
+      "name": "[Template] Chatbot Model Card",
+      "url": "https://docs.google.com/presentation/d/1KXIwPhbXIumnp4enyOcAvhGucqZmlm7_pDYkZPCQNeE/edit",
+      "key": "_template_chatbot_model_card",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "_template_chatbot_model_card"
+      }
+    },
+    {
       "name": "Chatbot Brainstorm",
       "url": "https://docs.google.com/document/d/11_hnorhUsT1qm-zzkAVXYOvT7g-gbXi5qZy489LAQpA/edit",
       "key": "chatbot_brainstorm",
@@ -5047,6 +6542,32 @@
       },
       "seeding_key": {
         "resource.key": "chatbot_brainstorm"
+      }
+    },
+    {
+      "name": "Chatbot Planning Guide",
+      "url": "https://docs.google.com/document/d/1a2cGqEck2s97XZoPhUalPNUKWcg0IKQOcFAxLWWyMXc/edit",
+      "key": "chatbot_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "chatbot_planning_guide"
+      }
+    },
+    {
+      "name": "Chatbot User Testing",
+      "url": "https://docs.google.com/document/d/1SqWCKewyia6WXiWacVnlD-TWj8AcEAP0apg9yE0X58c/edit",
+      "key": "chatbot_user_testing",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "chatbot_user_testing"
       }
     },
     {
@@ -5072,17 +6593,6 @@
       },
       "seeding_key": {
         "resource.key": "foresight_in_ai_chart"
-      }
-    },
-    {
-      "name": "Hugging Face Model Explorer",
-      "url": "https://huggingface.co/models?pipeline_tag=text-generation&library=transformers&sort=trending",
-      "key": "hugging_face_model_explorer",
-      "properties": {
-        "audience": "Teacher"
-      },
-      "seeding_key": {
-        "resource.key": "hugging_face_model_explorer"
       }
     },
     {
@@ -5131,6 +6641,18 @@
       },
       "seeding_key": {
         "resource.key": "issue_statements"
+      }
+    },
+    {
+      "name": "LEADERS Framework",
+      "url": "https://docs.google.com/document/d/17h5Xm7RKRQm_bwGoNlvZ7I6n8mKTNxI8MJL8wrUJt4o/edit",
+      "key": "leaders_framework",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "leaders_framework"
       }
     },
     {
@@ -5223,6 +6745,31 @@
       }
     },
     {
+      "name": "Project: Solving Community Problems",
+      "url": "https://docs.google.com/presentation/d/1JcOwZeYcf0XpUM8smoQ8S6dKUB9p6NxtpdqIszNcq9w/template/preview",
+      "key": "project_solving_community_problems",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_solving_community_problems"
+      }
+    },
+    {
+      "name": "Recycling Chatbot User Testing",
+      "url": "https://docs.google.com/document/d/1n60D0JCk3KDSbJduD8AEXUPp2zhDJM9e6rHVj-Mc56Y/edit",
+      "key": "recycling_chatbot_user_testing",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "recycling_chatbot_user_testing"
+      }
+    },
+    {
       "name": "Retrieval - Exploration",
       "url": "https://docs.google.com/presentation/d/1Q64bzj24cx0l9ePYgymrhn7z0nMM2PDG9RgJxiuLJ_A/template/preview",
       "key": "retrieval_-_exploration",
@@ -5256,6 +6803,19 @@
       },
       "seeding_key": {
         "resource.key": "retrieval_-_synthesis"
+      }
+    },
+    {
+      "name": "Solving Community Problems",
+      "url": "https://docs.google.com/document/d/1dM1g3ZPt1Q43I8iq-7oxxmm0acqGAiOubaeBdFHRofU/edit",
+      "key": "solving_community_problems",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "solving_community_problems"
       }
     },
     {
@@ -5295,6 +6855,18 @@
       }
     },
     {
+      "name": "User Testing",
+      "url": "https://docs.google.com/presentation/d/1I15uGYIcUl5gcGctr3Gjg3JbhynWuKxs7K5XczfQ8JA/template/preview",
+      "key": "user_testing",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "user_testing"
+      }
+    },
+    {
       "name": "What Is Machine Learning?",
       "url": "https://www.youtube.com/watch?v=KHbwOetbmbs",
       "key": "what_is_machine_learning_",
@@ -5331,12 +6903,6 @@
       "seeding_key": {
         "lesson.key": "Fine Tuning - Exploration",
         "resource.key": "fine_tuning_-_exploration"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Fine Tuning - Exploration",
-        "resource.key": "hugging_face_model_explorer"
       }
     },
     {
@@ -5493,6 +7059,60 @@
       "seeding_key": {
         "lesson.key": "lesson-11",
         "resource.key": "issue_statements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "leaders_framework"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "recycling_chatbot_user_testing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "user_testing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "_template_5_why_s"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "_template_chatbot_model_card"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "chatbot_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "chatbot_user_testing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "project_solving_community_problems"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "solving_community_problems"
       }
     }
   ],
