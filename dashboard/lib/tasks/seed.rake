@@ -345,7 +345,6 @@ namespace :seed do
     Standard.seed_all
   end
 
-  #
   timed_task_with_logging code_docs: :environment do
     ProgrammingEnvironment.seed_all(root_dir: DASHBOARD_PATHNAME)
     ProgrammingExpression.seed_all(root_dir: DASHBOARD_PATHNAME)
