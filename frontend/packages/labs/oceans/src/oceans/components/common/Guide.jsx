@@ -1,6 +1,10 @@
 import React from 'react'
 import Radium from "radium";
 import Typist from "react-typist";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faArrowCircleDown} from "@fortawesome/free-solid-svg-icons";
+
+import "@ml/oceans/styles/bounce.css";
 
 import {getState, setState} from "@ml/oceans/state";
 import guide from "@ml/oceans/models/guide";
@@ -86,6 +90,11 @@ let UnwrappedGuide = class Guide extends React.Component {
                     >
                       {currentGuide.textFn(getState())}
                     </Typist>
+                    {!getState().guideTypingTimer && (
+                      <div style={{display: 'flex', flexDirection: 'row-reverse'}}>
+                        <FontAwesomeIcon icon={faArrowCircleDown} className="bounce" />
+                      </div>
+                    )}
                   </div>
                   <div
                     style={
@@ -96,6 +105,9 @@ let UnwrappedGuide = class Guide extends React.Component {
                   >
                     <div style={styles.guideFinalText}>
                       {currentGuide.textFn(getState())}
+                      <div style={{display: 'flex', flexDirection: 'row-reverse'}}>
+                        <FontAwesomeIcon icon={faArrowCircleDown} className="bounce" />
+                      </div>
                     </div>
                   </div>
                   {currentGuide.style === 'Info' && (
