@@ -90,8 +90,8 @@ let UnwrappedGuide = class Guide extends React.Component {
                     >
                       {currentGuide.textFn(getState())}
                     </Typist>
-                    {!getState().guideTypingTimer && (
-                      <div style={{display: 'flex', flexDirection: 'row-reverse'}}>
+                    {!getState().guideTypingTimer && currentGuide.style !== 'Info' && (
+                      <div style={{display: 'flex', justifyContent: 'flex-end', height: 30, alignItems: 'end'}}>
                         <FontAwesomeIcon icon={faArrowCircleDown} className="bounce" />
                       </div>
                     )}
@@ -105,9 +105,11 @@ let UnwrappedGuide = class Guide extends React.Component {
                   >
                     <div style={styles.guideFinalText}>
                       {currentGuide.textFn(getState())}
-                      <div style={{display: 'flex', flexDirection: 'row-reverse'}}>
-                        <FontAwesomeIcon icon={faArrowCircleDown} className="bounce" />
-                      </div>
+                      {currentGuide.style !== 'Info' && (
+                        <div style={{display: 'flex', justifyContent: 'flex-end', height: 30, alignItems: 'end'}}>
+                          <FontAwesomeIcon icon={faArrowCircleDown} className="bounce" />
+                        </div>
+                      )}
                     </div>
                   </div>
                   {currentGuide.style === 'Info' && (
