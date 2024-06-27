@@ -8,8 +8,14 @@ module Types
       argument :id, ID, required: true, description: 'ID of the section'
     end
 
+    field :sections, [Types::SectionType]
+
     def section(id:)
       Section.find(id)
+    end
+
+    def sections
+      context[:current_user].sections_instructed
     end
   end
 end
