@@ -1,12 +1,10 @@
 /** @file The Eve character from the cryptography widget */
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import color from '../util/color';
+
 import CharacterPanel from './CharacterPanel';
-import NumberedSteps, {Step, Heading} from './NumberedSteps';
-import IntegerField from './IntegerField';
-import IntegerTextbox from './IntegerTextbox';
-import ValidatorField from './ValidatorField';
 import {
   PrivateKeyDropdown,
   PublicModulusDropdown,
@@ -17,7 +15,11 @@ import {
   KeywordPublicNumber,
   KeywordSecretNumber,
 } from './cryptographyFields';
+import IntegerField from './IntegerField';
+import IntegerTextbox from './IntegerTextbox';
+import NumberedSteps, {Step, Heading} from './NumberedSteps';
 import {COLORS, LINE_HEIGHT} from './style';
+import ValidatorField from './ValidatorField';
 
 const INITIAL_STATE = {
   publicModulus: null,

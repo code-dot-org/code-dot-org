@@ -101,6 +101,13 @@ class ActiveSupport::TestCase
     set_env :test
   end
 
+  def after_teardown
+    super
+  ensure
+    # Ensures the time for the next tests is unfrozen.
+    Timecop.return if Timecop.frozen?
+  end
+
   def panda_panda
     # this is the panda face emoji which is a 4 byte utf8 character
     # (some of our db tables can't handle these)
