@@ -32,8 +32,8 @@ module Policies
 
     # Return a glob which can be used either to find the specified level file
     # by name if provided, or all level files if not.
-    def self.level_file_glob(level_name, root_dir)
-      "#{root_dir || '.'}/config/levels/**/#{level_name || '*'}.level"
+    def self.level_file_glob(level_name, root_dir = '.')
+      "#{root_dir}/config/levels/**/#{level_name || '*'}.level"
     end
   end
 end
