@@ -1,16 +1,11 @@
-import React from 'react';
-import sinon from 'sinon';
-import {Provider} from 'react-redux';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/deprecatedChai';
+import React from 'react';
+import {Provider} from 'react-redux';
+import sinon from 'sinon';
+
+import dom from '@cdo/apps/dom';
 import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
 import {actions, reducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
-import {
-  allowConsoleWarnings,
-  createMouseEvent,
-  sandboxDocumentBody,
-} from '../../../../util/testUtils.js';
-import * as utils from '@cdo/apps/utils';
 import {
   getStore,
   registerReducers,
@@ -19,7 +14,14 @@ import {
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
-import dom from '@cdo/apps/dom';
+import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../../../../util/deprecatedChai';
+import {
+  allowConsoleWarnings,
+  createMouseEvent,
+  sandboxDocumentBody,
+} from '../../../../util/testUtils.js';
 
 describe('The JSDebugger component', () => {
   // TODO: (madelynkasula) Silences componentWillUpdate deprecation warning due to React 16 upgrade.

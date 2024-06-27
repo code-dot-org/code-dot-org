@@ -4,6 +4,7 @@ module Services
       # def self.log_parent_email_submit(user)
       # def self.log_parent_email_update(user)
       # def self.log_permission_granting(user)
+      # def self.log_grace_period_start(user)
       # def self.log_account_locking(user)
       # def self.log_account_purging(user)
       CAP::UserEvent.names.each_key do |event_name|

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import logToCloud from '@cdo/apps/logToCloud';
 import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
@@ -86,12 +86,16 @@ class SectionProgress extends Component {
       !this.props.isLoadingProgress &&
       !this.props.isRefreshingProgress
     ) {
-      analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED_FIXED, {
-        sectionId: this.props.sectionId,
-        unitId: this.props.scriptId,
-        windowWidth: window.innerWidth,
-        windowHeight: window.innerHeight,
-      });
+      analyticsReporter.sendEvent(
+        EVENTS.PROGRESS_VIEWED_FIXED,
+        {
+          sectionId: this.props.sectionId,
+          unitId: this.props.scriptId,
+          windowWidth: window.innerWidth,
+          windowHeight: window.innerHeight,
+        },
+        PLATFORMS.BOTH
+      );
     }
   }
 
@@ -104,11 +108,15 @@ class SectionProgress extends Component {
       new_script_id: scriptId,
     });
 
-    analyticsReporter.sendEvent(EVENTS.PROGRESS_CHANGE_UNIT, {
-      sectionId: this.props.sectionId,
-      oldUnitId: this.props.scriptId,
-      unitId: scriptId,
-    });
+    analyticsReporter.sendEvent(
+      EVENTS.PROGRESS_CHANGE_UNIT,
+      {
+        sectionId: this.props.sectionId,
+        oldUnitId: this.props.scriptId,
+        unitId: scriptId,
+      },
+      PLATFORMS.BOTH
+    );
   };
 
   onChangeLevel = lessonOfInterest => {

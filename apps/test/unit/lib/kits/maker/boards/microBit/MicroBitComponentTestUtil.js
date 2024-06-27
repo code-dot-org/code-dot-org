@@ -2,13 +2,16 @@
  * @file Exports a set of tests that verify  that the micro:bit board
  * components and component constructors are available from the interpreter
  */
+import sinon from 'sinon';
+
 import {
   MB_COMPONENT_COUNT,
   MB_COMPONENTS,
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
-import {boardSetupAndStub} from './MicroBitTestHelperFunctions';
+
 import {expect} from '../../../../../../util/reconfiguredChai';
-import sinon from 'sinon';
+
+import {boardSetupAndStub} from './MicroBitTestHelperFunctions';
 
 export function itMakesMicroBitComponentsAvailable(
   Board,

@@ -19,7 +19,6 @@ class I18nScriptUtils
   PROGRESS_BAR_FORMAT = '%t: |%B| %p% %a'.freeze
   PARALLEL_PROCESSES = Parallel.processor_count.freeze
   SOURCE_LOCALE = I18n.default_locale.to_s.freeze
-  TTS_LOCALES = (::TextToSpeech::VOICES.keys - %I[#{SOURCE_LOCALE}]).freeze
   TESTING_BY_DEFAULT = false
 
   # @return [Hash] the Crowdin credentials.

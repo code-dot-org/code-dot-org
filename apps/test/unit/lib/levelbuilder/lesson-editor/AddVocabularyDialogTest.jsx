@@ -1,8 +1,10 @@
-import React from 'react';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
-import AddVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddVocabularyDialog';
+import React from 'react';
 import sinon from 'sinon';
+
+import AddVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddVocabularyDialog';
+
+import {expect} from '../../../../util/reconfiguredChai';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 describe('AddVocabularyDialog', () => {

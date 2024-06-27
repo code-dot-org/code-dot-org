@@ -1,6 +1,6 @@
 /** @file Top-level view for AI Chat Lab */
 
-import React, {useCallback, useEffect, useContext} from 'react';
+import React, {useCallback, useContext, useEffect} from 'react';
 
 import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
 import Button from '@cdo/apps/componentLibrary/button/Button';
@@ -20,27 +20,22 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import aichatI18n from '../locale';
 import {
-  addChatMessage,
+  addNotification,
   clearChatMessages,
-  resetToDefaultAiCustomizations,
-  setStartingAiCustomizations,
-  setViewMode,
-  selectAllFieldsHidden,
   onSaveComplete,
   onSaveFail,
-  endSave,
+  onSaveNoop,
+  resetToDefaultAiCustomizations,
+  selectAllFieldsHidden,
+  setStartingAiCustomizations,
+  setViewMode,
+  updateAiCustomization,
 } from '../redux/aichatRedux';
-import {getCurrentTime, getNewMessageId} from '../redux/utils';
-import {
-  AichatLevelProperties,
-  ChatCompletionMessage,
-  Role,
-  ViewMode,
-} from '../types';
+import {getNewMessageId} from '../redux/utils';
+import {AichatLevelProperties, Notification, ViewMode} from '../types';
 
 import ChatWorkspace from './ChatWorkspace';
 import CopyButton from './CopyButton';
@@ -50,14 +45,12 @@ import PresentationView from './presentation/PresentationView';
 
 import moduleStyles from './aichatView.module.scss';
 
-const RESET_MODEL_NOTIFICATION: ChatCompletionMessage = {
+const getResetModelNotification = (): Notification => ({
   id: getNewMessageId(),
-  role: Role.MODEL_UPDATE,
-  chatMessageText: 'Model customizations and model card information',
-  chatMessageSuffix: {text: ' have been reset to default settings.'},
-  status: Status.OK,
-  timestamp: getCurrentTime(),
-};
+  text: 'Model customizations and model card information have been reset to default settings.',
+  notificationType: 'success',
+  timestamp: Date.now(),
+});
 
 const AichatView: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -97,7 +90,7 @@ const AichatView: React.FunctionComponent = () => {
     }
     // No save occurred
     projectManager.addSaveNoopListener(() => {
-      dispatch(endSave());
+      dispatch(onSaveNoop());
     });
 
     projectManager.addSaveSuccessListener(() => {
@@ -171,8 +164,10 @@ const AichatView: React.FunctionComponent = () => {
 
   const resetProject = useCallback(() => {
     dispatch(resetToDefaultAiCustomizations(levelAichatSettings));
+    // Save the customizations to the user's project.
+    dispatch(updateAiCustomization());
     dispatch(clearChatMessages());
-    dispatch(addChatMessage(RESET_MODEL_NOTIFICATION));
+    dispatch(addNotification(getResetModelNotification()));
   }, [dispatch, levelAichatSettings]);
 
   const dialogControl = useContext(DialogContext);

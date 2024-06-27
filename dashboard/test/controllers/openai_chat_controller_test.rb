@@ -65,23 +65,21 @@ class OpenaiChatControllerTest < ActionController::TestCase
   params: {},
   response: :bad_request
 
-  # Post request with a profane messages param returns a failure
-  test 'returns failure when chat message contains profanity' do
+  test 'identifies when chat message contains profanity' do
     student = create(:student_with_ai_tutor_access)
     sign_in(student)
     ShareFiltering.stubs(:find_failure).returns(ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn'))
     post :chat_completion, params: {messages: [{role: "user", content: "damn you, robot!"}], locale: "en"}
-    assert_equal json_response["status"], ShareFiltering::FailureType::PROFANITY
+    assert_equal json_response["safety_status"], ShareFiltering::FailureType::PROFANITY
     assert_equal json_response["flagged_content"], "damn"
   end
 
-  # Post request with a messages param containing PII returns a failure
-  test 'returns failure when chat message contains PII' do
+  test 'identifies when chat message contains PII' do
     student = create(:student_with_ai_tutor_access)
     sign_in(student)
     ShareFiltering.stubs(:find_failure).returns(ShareFailure.new(ShareFiltering::FailureType::EMAIL, 'l.lovegood@hogwarts.edu'))
     post :chat_completion, params: {messages: [{role: "user", content: "my email is l.lovegood@hogwarts.edu"}], locale: "en"}
-    assert_equal json_response["status"], ShareFiltering::FailureType::EMAIL
+    assert_equal json_response["safety_status"], ShareFiltering::FailureType::EMAIL
     assert_equal json_response["flagged_content"], "l.lovegood@hogwarts.edu"
   end
 

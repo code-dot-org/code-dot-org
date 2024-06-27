@@ -1,6 +1,8 @@
 import sinon from 'sinon';
-import {assert, expect} from '../../util/reconfiguredChai';
+
 import CdoBramble from '@cdo/apps/weblab/CdoBramble';
+
+import {assert, expect} from '../../util/reconfiguredChai';
 
 const DISALLOWED_HTML_TAGS = ['script', 'a'];
 const VALID_HTML = `<!DOCTYPE html>

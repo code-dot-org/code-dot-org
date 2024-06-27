@@ -1,6 +1,8 @@
-import {assert, expect} from '../util/reconfiguredChai';
 import sinon from 'sinon';
+
 import AzureTextToSpeech from '@cdo/apps/AzureTextToSpeech';
+
+import {assert, expect} from '../util/reconfiguredChai';
 
 const assertSoundResponsesEqual = (expected, actual) => {
   assert.deepEqual(expected.bytes, actual.bytes);

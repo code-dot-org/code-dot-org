@@ -1,3 +1,9 @@
+<%
+/**
+ * This block destructures the local variables for use within this ejs template.
+ */
+var options = locals.options;
+%>
 <% var msg = require('@cdo/locale'); %>
 <% if (options.feedbackImage) { %>
   <img class="feedback-image" src="<%= options.feedbackImage %>"/>

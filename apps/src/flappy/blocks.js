@@ -4,11 +4,15 @@
  * Copyright 2013 Code.org
  *
  */
-var msg = require('./locale');
-var commonMsg = require('@cdo/locale');
-var utils = require('../utils');
+
 var _ = require('lodash');
+
+var commonMsg = require('@cdo/locale');
+
 var studioApp = require('../StudioApp').singleton;
+var utils = require('../utils');
+
+var msg = require('./locale');
 
 var FLAPPY_VALUE = '"flappy"';
 var RANDOM_VALUE = 'random';

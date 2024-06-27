@@ -11,6 +11,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # TODO: figure out how to avoid skipping CSRF verification for Powerschool
   skip_before_action :verify_authenticity_token, only: :powerschool
 
+  before_action :check_account_linking_lock, on: %i[connect_provider link_accounts]
+
   # Note: We can probably remove these once we've broken out all providers
   BROKEN_OUT_TYPES = [
     AuthenticationOption::CLEVER,
@@ -528,6 +530,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     I18n.t('auth.unable_to_connect_provider', provider: I18n.t("auth.#{auth_option.credential_type}"))
   end
 
+  private def check_account_linking_lock
+    user = current_user || find_user_by_credential
+    return unless user
+
+    lock_reason = account_linking_lock_reason(user)
+    return unless lock_reason
+
+    redirect_back fallback_location: new_user_session_path, alert: lock_reason
+  end
+
   # Determine whether to link a new LTI auth option to an existing account
   # Not to be confused with the connect_provider flow
   private def should_link_accounts?
@@ -537,6 +549,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # For linking new LTI auth options to existing accounts
   private def link_accounts(user)
     if user
+      if user.admin?
+        flash[:alert] = I18n.t('lti.account_linking.admin_not_allowed')
+        redirect_to user_session_path and return
+      end
       begin
         Services::Lti::AccountLinker.call(user: user, session: session)
       rescue => exception

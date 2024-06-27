@@ -149,7 +149,7 @@ export default function LtiSectionSyncDialog({
       url: '/lti/v1/sections/bulk_update_owners',
       type: 'PATCH',
       data: {
-        section_owners: sectionOwners,
+        section_owners: JSON.stringify(sectionOwners),
       },
       success: () => {
         handleClose();

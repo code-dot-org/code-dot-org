@@ -1,8 +1,10 @@
-import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import sinon from 'sinon';
+
 import PhotoSelectionView from '@cdo/apps/javalab/components/PhotoSelectionView';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('PhotoSelectionView', () => {
   const file = new File([], 'file');
