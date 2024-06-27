@@ -21,8 +21,10 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
 const scriptData = getScriptData('edit');
+console.log(scriptData);
 const {
   userAge,
+  userState,
   userType,
   isAdmin,
   isPasswordRequired,
@@ -33,6 +35,7 @@ const {
   dependentStudentsCount,
   personalAccountLinkingEnabled,
   lmsName,
+  studentInLockoutFlow,
 } = scriptData;
 
 $(document).ready(() => {
@@ -158,6 +161,13 @@ $(document).ready(() => {
       />,
       deleteAccountMountPoint
     );
+  }
+
+  if (userAge && userState && studentInLockoutFlow) {
+    const usStateDropdown = document.getElementById('us_state_dropdown');
+    const ageDropdown = document.getElementById('user_age');
+    usStateDropdown.disabled = true;
+    ageDropdown.disabled = true;
   }
 
   analyticsReporter.sendEvent(
