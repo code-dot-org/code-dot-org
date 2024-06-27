@@ -66,6 +66,7 @@ class ScriptLevelsController < ApplicationController
     authorize! :read, ScriptLevel
     @script = ScriptLevelsController.get_script(request)
     @script_level = ScriptLevelsController.get_script_level(@script, params)
+    set_current_unit_group
 
     # Check if the script or current level is deprecated
     level_is_deprecated = @script_level&.level_deprecated?
@@ -607,6 +608,16 @@ class ScriptLevelsController < ApplicationController
     script_id = request.params[:script_id]
     is_id = script_id.to_i.to_s == script_id.to_s
     raise ActiveRecord::RecordNotFound if is_id
+  end
+
+  private def set_current_unit_group
+    @current_unit_group = UnitGroup.find_by_name(params[:course_course_name])
+    if params[:course_course_name] && !@current_unit_group
+      raise ActiveRecord::RecordNotFound.new("Course #{params[:course_course_name]} not found")
+    end
+    if @current_unit_group && @script.unit_groups.exclude?(@current_unit_group)
+      raise ActiveRecord::RecordNotFound.new("Unit #{@script.name} does not belong to course #{@current_unit_group.name}")
+    end
   end
 
   private def redirect_script(script, locale)
