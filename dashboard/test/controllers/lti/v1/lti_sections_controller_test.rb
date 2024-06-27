@@ -42,6 +42,7 @@ class Lti::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'returns a 404 if a section is not found' do
+    Metrics::Events.expects(:log_event).never
     patch :bulk_update_owners, params: {section_owners: {'foo' => @user.id}.to_json}, format: :json
     assert_response :not_found
   end
