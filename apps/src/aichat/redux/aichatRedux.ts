@@ -239,11 +239,7 @@ export const onSaveComplete =
 // Thunk called when a save has failed.
 export const onSaveFail =
   (e: Error) => (dispatch: AppDispatch, getState: () => RootState) => {
-    const {savedAiCustomizations} = getState().aichat;
     const isProfanityError = e.message.includes('profanity');
-    if (isProfanityError) {
-      dispatch(setAllAiCustomizations(savedAiCustomizations));
-    }
     const errorMessage = isProfanityError
       ? 'Profanity detected in system prompt or retrieval context(s) and cannot be updated. Please try again.'
       : 'Error updating project. Please try again.';
@@ -456,12 +452,6 @@ const aichatSlice = createSlice({
     ) => {
       state.savedAiCustomizations = action.payload;
     },
-    setAllAiCustomizations: (
-      state,
-      action: PayloadAction<AiCustomizations>
-    ) => {
-      state.currentAiCustomizations = action.payload;
-    },
     setAiCustomizationProperty: (
       state,
       action: PayloadAction<{
@@ -581,7 +571,6 @@ export const {
   setViewMode,
   setStartingAiCustomizations,
   setAiCustomizationProperty,
-  setAllAiCustomizations,
   setModelCardProperty,
   endSave,
 } = aichatSlice.actions;

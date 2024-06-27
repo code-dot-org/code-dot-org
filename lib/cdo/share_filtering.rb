@@ -112,6 +112,16 @@ module ShareFiltering
     nil
   end
 
+  # Searches for profanity in text.
+  # Returns both the error type and the offending text snippet.
+  #
+  # If the check is successful and there were no offenses, the function
+  # will return `nil`.
+  #
+  # @param [String] text The text to search through.
+  # @param [String] locale a two-character ISO 639-1 language code
+  # @param [Hash] A set of text to replace before performing a profanity check.
+  # @return [ShareFailure, nil]
   def self.find_profanity_failure(text, locale, profanity_filter_replace_text_list = {}, exceptions: false)
     expletive = ProfanityFilter.find_potential_profanity(text, locale, profanity_filter_replace_text_list)
     share_failure = ShareFailure.new(FailureType::PROFANITY, expletive) if expletive
