@@ -424,9 +424,12 @@ const aichatSlice = createSlice({
       }
 
       // Make sure model ID is valid
-      reconciledAiCustomizations.selectedModelId = validateModelId(
-        reconciledAiCustomizations.selectedModelId
-      );
+      reconciledAiCustomizations = {
+        ...reconciledAiCustomizations,
+        selectedModelId: validateModelId(
+          reconciledAiCustomizations.selectedModelId
+        ),
+      };
 
       state.savedAiCustomizations = reconciledAiCustomizations;
       state.currentAiCustomizations = reconciledAiCustomizations;
@@ -439,13 +442,16 @@ const aichatSlice = createSlice({
     ) => {
       const levelAichatSettings = action.payload;
 
-      const defaultAiCustomizations: AiCustomizations =
+      let defaultAiCustomizations: AiCustomizations =
         levelAichatSettings?.initialCustomizations || EMPTY_AI_CUSTOMIZATIONS;
 
       // Make sure model ID is valid
-      defaultAiCustomizations.selectedModelId = validateModelId(
-        defaultAiCustomizations.selectedModelId
-      );
+      defaultAiCustomizations = {
+        ...defaultAiCustomizations,
+        selectedModelId: validateModelId(
+          defaultAiCustomizations.selectedModelId
+        ),
+      };
 
       state.savedAiCustomizations = defaultAiCustomizations;
       state.currentAiCustomizations = defaultAiCustomizations;
