@@ -1,3 +1,4 @@
+import {redirect} from 'next/navigation';
 import React from 'react';
 
 import {signIn} from '@cdo/app/auth';
@@ -7,7 +8,7 @@ export default async function Page() {
     <form
       action={async (formData: FormData) => {
         'use server';
-        const object = {redirectTo: '/'};
+        const object = {redirectTo: '/sections'};
         formData.forEach((value, key) => (object[key] = value));
 
         await signIn('credentials', object);

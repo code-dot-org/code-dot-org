@@ -1,6 +1,7 @@
 import React from 'react';
 
-import {auth} from '@cdo/app/auth';
+import {auth, signOut} from '@cdo/app/auth';
+import LoginLogout from '@cdo/app/LoginLogout';
 
 const Header = async () => {
   const session = await auth();
@@ -33,28 +34,28 @@ const Header = async () => {
               </a>
             </div>
           </div>
-          <div
-            className="header_button header_user user_menu"
-            id="header_user_menu"
-            role="button"
-          >
-            <span
-              className="display_name"
-              data-id="78"
-              data-shortname="Stephen"
-              id="header_display_name"
+          {session?.user != null && (
+            <div
+              className="header_button header_user user_menu"
+              id="header_user_menu"
+              role="button"
             >
-              {session?.user?.name}
-            </span>
-            &nbsp;
-            <i
-              className="user_menu_arrow_down fa fa-caret-down"
-              style={{display: 'inline-block'}}
-            />
-          </div>
-          <div>
-            <a href={`/logout`}>Logout</a>
-          </div>
+              <span
+                className="display_name"
+                data-id="78"
+                data-shortname="Stephen"
+                id="header_display_name"
+              >
+                {session?.user?.name}
+              </span>
+              &nbsp;
+              <i
+                className="user_menu_arrow_down fa fa-caret-down"
+                style={{display: 'inline-block'}}
+              />
+            </div>
+          )}
+          <LoginLogout />
         </div>
       </div>
     </div>
