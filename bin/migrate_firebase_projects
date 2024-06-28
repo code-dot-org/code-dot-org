@@ -31,8 +31,10 @@ FIND_SHARED_TABLES = true
 # this keeps us from migrating data from already deleted projects. Instead
 # log the channel_id to the .skipped file.
 #
-# Probably want `SKIP_MISSING_PROJECT_IDS = true` for the real production run!
-SKIP_MISSING_PROJECT_IDS = false
+# Probably want `SKIP_MISSING_PROJECT_IDS = true` for the real production run,
+# but when running locally, you'll probably want it set to false (since you don't
+# have a real Projects table locally).
+SKIP_MISSING_PROJECT_IDS = true
 
 # DEBUG FLAGS:
 DEBUG_SHARED_TABLES = false
@@ -49,7 +51,9 @@ end
 
 require 'firebase'
 require 'json'
-require 'hashdiff'
+
+# hashdiff gem is only importable in dev/test environemnts
+require 'hashdiff' if DEBUG_SHARED_TABLES
 
 require_relative '../config/environment'
 
