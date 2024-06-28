@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {AichatLevelProperties} from '@cdo/apps/aichat/types';
@@ -15,9 +15,6 @@ import {isVisible, isDisabled} from './modelCustomization/utils';
 import styles from './model-customization-workspace.module.scss';
 
 const ModelCustomizationWorkspace: React.FunctionComponent = () => {
-  const [setupTabName, setSetupTabName] = useState('Setup');
-  const [retrievalTabName, setRetrievalTabName] = useState('Retrieval');
-  const [publishTabName, setPublishTabName] = useState('Publish');
   const [selectedTab, setSelectedTab] = useState('setup');
   const {
     temperature,
@@ -44,52 +41,70 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
     isDisabled(systemPrompt) &&
     isDisabled(selectedModelId);
 
-  const iconValue: FontAwesomeV6IconProps = {
-    iconName: 'lock',
-    iconStyle: 'solid',
-  };
-  const setupCustomizationIcon =
-    isSetupCustomizationReadOnly || isReadOnly ? iconValue : undefined;
-  const retrievalIcon =
-    isDisabled(retrievalContexts) || isReadOnly ? iconValue : undefined;
-  const publishIcon =
-    isDisabled(modelCardInfo) || isReadOnly ? iconValue : undefined;
+  const visibleTabs = useMemo(() => {
+    const iconValue: FontAwesomeV6IconProps = {
+      iconName: 'lock',
+      iconStyle: 'solid',
+    };
+    const visibleTabs = [];
+    if (showSetupCustomization) {
+      visibleTabs.push({
+        value: 'setup',
+        text:
+          'Setup' +
+          ((isSetupCustomizationReadOnly || isReadOnly) &&
+          selectedTab === 'setup'
+            ? ' (view only)'
+            : ''),
+        tabContent: <SetupCustomization />,
+        iconLeft:
+          isSetupCustomizationReadOnly || isReadOnly ? iconValue : undefined,
+      });
+    }
+    if (isVisible(retrievalContexts)) {
+      visibleTabs.push({
+        value: 'retrieval',
+        text:
+          'Retrieval' +
+          ((isDisabled(retrievalContexts) || isReadOnly) &&
+          selectedTab === 'retrieval'
+            ? ' (view only)'
+            : ''),
+        tabContent: <RetrievalCustomization />,
+        iconLeft: isDisabled(retrievalContexts) || isReadOnly ? iconValue : undefined,
+      });
+    }
+    if (isVisible(modelCardInfo) && !hidePresentationPanel) {
+      visibleTabs.push({
+        value: 'modelCardInfo',
+        text:
+          'Publish' +
+          ((isDisabled(modelCardInfo) || isReadOnly) &&
+          selectedTab === 'modelCardInfo'
+            ? ' (view only)'
+            : ''),
+        tabContent: <PublishNotes />,
+        iconLeft:
+          isDisabled(modelCardInfo) || isReadOnly ? iconValue : undefined,
+      });
+    }
+    return visibleTabs;
+  }, [
+    hidePresentationPanel,
+    isReadOnly,
+    isSetupCustomizationReadOnly,
+    modelCardInfo,
+    retrievalContexts,
+    selectedTab,
+    showSetupCustomization,
+  ]);
 
-  const visibleTabs = [];
-  if (showSetupCustomization) {
-    visibleTabs.push({
-      value: 'setup',
-      text: setupTabName,
-      tabContent: <SetupCustomization />,
-      iconLeft: setupCustomizationIcon,
-    });
-  }
-  if (isVisible(retrievalContexts)) {
-    visibleTabs.push({
-      value: 'retrieval',
-      text: retrievalTabName,
-      tabContent: <RetrievalCustomization />,
-      iconLeft: retrievalIcon,
-    });
-  }
-  if (isVisible(modelCardInfo) && !hidePresentationPanel) {
-    visibleTabs.push({
-      value: 'modelCardInfo',
-      text: publishTabName,
-      tabContent: <PublishNotes />,
-      iconLeft: publishIcon,
-    });
-  }
-
-  const handleOnChange = (value: string) => {
-    setSelectedTab(value);
-  };
-
-  const resetTabNames = () => {
-    setSetupTabName('Setup');
-    setRetrievalTabName('Retrieval');
-    setPublishTabName('Publish');
-  };
+  const handleOnChange = useCallback(
+    (value: string) => {
+      setSelectedTab(value);
+    },
+    [setSelectedTab]
+  );
 
   const tabArgs: TabsProps = {
     name: 'modelCustomizationTabs',
@@ -101,32 +116,6 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
     tabPanelsContainerClassName: styles.tabPanels,
   };
 
-  useEffect(() => {
-    resetTabNames();
-    if (
-      selectedTab === 'setup' &&
-      (isSetupCustomizationReadOnly || isReadOnly)
-    ) {
-      setSetupTabName('Setup (view only)');
-    } else if (
-      selectedTab === 'retrieval' &&
-      (isDisabled(retrievalContexts) || isReadOnly)
-    ) {
-      setRetrievalTabName('Retrieval (view only)');
-    } else if (
-      selectedTab === 'modelCardInfo' &&
-      (isDisabled(modelCardInfo) || isReadOnly)
-    ) {
-      setPublishTabName('Publish (view only)');
-    }
-  }, [
-    setSelectedTab,
-    selectedTab,
-    isSetupCustomizationReadOnly,
-    isReadOnly,
-    retrievalContexts,
-    modelCardInfo,
-  ]);
   return (
     <div className={styles.modelCustomizationWorkspace}>
       <Tabs {...tabArgs} />
