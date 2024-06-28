@@ -136,7 +136,7 @@ Resources:
             Value: aurora-verify-backups-instance
           -
             Name: DB_SNAPSHOT_IDENTIFIER_PREFIX
-            Value: production
+            Value: autoscale-prod
           -
             Name: DB_SUBNET_GROUP_NAME
             Value: !ImportValue VPC-DBSubnetGroup
