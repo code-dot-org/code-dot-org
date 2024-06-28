@@ -251,52 +251,60 @@ export const onSaveNoop =
 // Thunk called when a save has failed.
 export const onSaveFail =
   (e: Error) => (dispatch: AppDispatch, getState: () => RootState) => {
+    // Default save error message.
     let errorMessage =
       'There was an error saving your project. Please try again.';
     if (e instanceof NetworkError) {
-      e.response.json().then(body => {
-        const changedProperties = findChangedProperties(
-          getState().aichat.savedAiCustomizations,
-          getState().aichat.currentAiCustomizations
-        );
-        let flaggedProperties;
-        if (
-          changedProperties.includes('systemPrompt') &&
-          changedProperties.includes('retrievalContexts')
-        ) {
-          flaggedProperties = 'system prompt and/or retrieval contexts';
-        } else if (changedProperties.includes('systemPrompt')) {
-          flaggedProperties = 'system prompt';
-        } else if (changedProperties.includes('retrievalContexts')) {
-          flaggedProperties = 'retrieval contexts';
-        }
-        if (body?.details?.profaneWords?.length > 0 && flaggedProperties) {
-          errorMessage = `Profanity detected in the ${flaggedProperties} and cannot be updated. Please try again.`;
-        }
-        dispatch(
-          addNotification({
-            id: getNewMessageId(),
-            text: errorMessage,
-            notificationType: 'error',
-            timestamp: Date.now(),
-          })
-        );
-        // Notify the UI that the save is complete.
-        dispatch(endSave());
-      });
-    } else {
-      dispatch(
-        addNotification({
-          id: getNewMessageId(),
-          text: errorMessage,
-          notificationType: 'error',
-          timestamp: Date.now(),
+      e.response
+        .json()
+        .then(body => {
+          const changedProperties = findChangedProperties(
+            getState().aichat.savedAiCustomizations,
+            getState().aichat.currentAiCustomizations
+          );
+          let flaggedProperties;
+          if (
+            changedProperties.includes('systemPrompt') &&
+            changedProperties.includes('retrievalContexts')
+          ) {
+            flaggedProperties = 'system prompt and/or retrieval contexts';
+          } else if (changedProperties.includes('systemPrompt')) {
+            flaggedProperties = 'system prompt';
+          } else if (changedProperties.includes('retrievalContexts')) {
+            flaggedProperties = 'retrieval contexts';
+          }
+          if (body?.details?.profaneWords?.length > 0 && flaggedProperties) {
+            errorMessage = `Profanity detected in the ${flaggedProperties} and cannot be updated. Please try again.`;
+          }
+          dispatchSaveFailNotification(dispatch, errorMessage);
         })
-      );
-      // Notify the UI that the save is complete.
-      dispatch(endSave());
+        // Catch any errors in parsing the response body or if there was no response body
+        // and fall back to the default error message.
+        .catch(() => {
+          dispatchSaveFailNotification(dispatch, errorMessage);
+        });
+    } else {
+      // If an Error was passed instead of a NetworkError, fall back to the default error message.
+      dispatchSaveFailNotification(dispatch, errorMessage);
     }
   };
+
+const dispatchSaveFailNotification = (
+  dispatch: AppDispatch,
+  errorMessage: string
+) => {
+  dispatch(
+    addNotification({
+      id: getNewMessageId(),
+      text: errorMessage,
+      notificationType: 'error',
+      timestamp: Date.now(),
+    })
+  );
+  // Notify the UI that the save is complete.
+  dispatch(endSave());
+};
+
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
 // the user messages.
