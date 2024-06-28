@@ -300,7 +300,7 @@ def stream_results_to_logs(log_filename_prefix, pool, results, count, failed_cou
       else
         metrics_tracker.failed
         failed_log.puts(channel_id)
-        exception_log.puts("Exception migrating #{channel_id}")
+        exception_log.puts("Exception migrating #{channel_id}, https://console.firebase.google.com/project/cdo-v3-prod/database/cdo-v3-prod/data/~2Fv3~2Fchannels~2F#{channel_id}")
         exception_log.puts("#{exception.class}: #{exception.message}")
         exception_log.puts(exception.backtrace)
         exception_log.puts
