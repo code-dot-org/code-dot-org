@@ -1,15 +1,26 @@
 #!/usr/bin/env ruby
 
-require 'firebase'
-require 'json'
-require 'hashdiff'
-
-require_relative '../config/environment'
+# If DRY_RUN: run SQL in a transaction but rollback before committing
+DRY_RUN = false
 
 FIND_SHARED_TABLES = true
 DEBUG_SHARED_TABLES = false
 # Limit number of items printed to N to avoid swamping output, use -1 to not limit
 DEBUG_SHARED_TABLES_LIMIT_PRINTS_TO = 2
+
+if DRY_RUN
+  puts "DRY RUN: no changes will be committed to the database"
+else
+  puts
+  puts "Not a dry run, DB WILL BE MODIFIED: press ctrl-c to abort"
+  sleep(2) # give 2 seconds to cancel if you meant to do a DRY_RUN
+end
+
+require 'firebase'
+require 'json'
+require 'hashdiff'
+
+require_relative '../config/environment'
 
 def set_active_record_connection_pool_size(pool_size)
   ActiveRecord::Base.connection_pool.disconnect!
@@ -201,6 +212,12 @@ def migrate(channel_id)
   ActiveRecord::Base.transaction do
     insert_datablock_tables(tables)
     insert_datablock_kvps(kvps)
+
+    # Now that its migrated, switch the project over to using DatablockStorage
+    ProjectUseDatablockStorage.create!(project_id: project_id, use_datablock_storage: true)
+
+    # Do not allow transaction to complete if DRY_RUN==true
+    raise ActiveRecord::Rollback if DRY_RUN
   end
 end
 
