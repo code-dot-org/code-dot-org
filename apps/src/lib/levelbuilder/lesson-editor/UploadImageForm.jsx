@@ -26,12 +26,23 @@ export default function UploadImageForm() {
 
     // assemble upload data
     const formData = new FormData();
+    // for (let i = 0; i < e.target.files.length; i++) {
+    //   formData.append(`file${i}`, e.target.files[i]); // check that this is accurate.
+    // }
+    // console.log('Getting form data: ');
+    // console.log(e.target.files);
+    // setFormDataForImage(formData);
+    // console.log(formData);
+    // setTempImageUrl(URL.createObjectURL(e.target.files[0]));
+
     formData.append('file', e.target.files[0]);
+    console.log('Getting form data: ');
+    console.log(e.target.files);
     setFormDataForImage(formData);
     setTempImageUrl(URL.createObjectURL(e.target.files[0]));
   };
 
-  const saveImageToS3 = () => {
+  const saveImagesToS3 = () => {
     setIsUploading(true);
     // POST
     const csrfContainer = document.querySelector('meta[name="csrf-token"]');
@@ -77,6 +88,7 @@ export default function UploadImageForm() {
           name="file"
           onChange={handleChange}
           disabled={isUploading}
+          multiple
         />
 
         {error && (
@@ -89,7 +101,7 @@ export default function UploadImageForm() {
       <div className={styles.contentContainer}>
         <Button
           text={i18n.saveAndViewUrl()}
-          onClick={saveImageToS3}
+          onClick={saveImagesToS3}
           color={Button.ButtonColor.brandSecondaryDefault}
           className={classnames(styles.saveButton, 'save-upload-image-button')}
           disabled={isUploading}
