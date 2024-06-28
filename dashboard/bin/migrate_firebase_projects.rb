@@ -2,9 +2,12 @@
 
 require 'firebase'
 require 'json'
+require 'hashdiff'
 
 require_relative '../config/environment'
+
 FIND_SHARED_TABLES = true
+DEBUG_SHARED_TABLES = true
 
 def set_active_record_connection_pool_size(pool_size)
   ActiveRecord::Base.connection_pool.disconnect!
@@ -28,15 +31,72 @@ SHARED_TABLES = SHARED_TABLE_NAMES.index_with do |table_name|
   Set.new DatablockStorageTable.find_shared_table(table_name).read_records
 end
 
-# notably doesn't return a bool, instead returns the value for is_shared_table in the datablock_table
-def is_shared_table(table_name, columns, records) # rubocop:disable Naming/PredicateName
-  return nil unless SHARED_TABLE_NAMES.include? table_name
+def print_diff(set1, set2)
+  truncate = lambda {|str, length = 120| str.length > length ? str[0, length - 3] + "..." : str}
+
+  hash1 = set1.index_by {|item| item["id"]}
+  hash2 = set2.index_by {|item| item["id"]}
+  all_ids = (hash1.keys + hash2.keys).uniq
+
+  only_in_set1 = []
+  only_in_set2 = []
+  in_both_but_different = []
+  all_ids.each do |id|
+    if hash1[id].nil?
+      only_in_set2 << hash2[id]
+    elsif hash2[id].nil?
+      only_in_set1 << hash1[id]
+    elsif hash1[id] != hash2[id]
+      in_both_but_different << [hash1[id], hash2[id]]
+    end
+  end
+
+  only_in_set1.each do |item|
+    puts "  ID only in shared_table  : #{truncate.call(item.to_s)}"
+  end
+
+  only_in_set2.each do |item|
+    puts "  ID only in table         : #{truncate.call(item.to_s)}"
+  end
+
+  in_both_but_different.each do |item1, item2|
+    diff = Hashdiff.diff(item1, item2)
+    puts "  ID in both, but different:"
+    diff.each do |change|
+      if change[0] == '~'
+        # ~ change means the value is in both sets, but its different
+        puts "    ~#{change[1]}:"
+        puts "      -#{change[2]}"
+        puts "      +#{change[2]}"
+      else
+        # Alternative is a +/- change, which means the key is only in one set
+        puts "    #{change}"
+      end
+    end
+  end
+end
+
+# notably doesn't return a bool, instead returns the shared table name or NOT_SHARED
+NOT_SHARED = nil
+def get_is_shared_table(table_name, records)
+  unless SHARED_TABLE_NAMES.include? table_name
+    puts "NOT SHARED table_name: #{table_name}" if DEBUG_SHARED_TABLES
+    return NOT_SHARED
+  end
 
   shared_table_records = SHARED_TABLES[table_name]
 
-  # check records
-  return nil unless shared_table_records.length == records.length
-  return nil unless shared_table_records == Set.new(records)
+  unless shared_table_records.length == records.length
+    puts "NOT SHARED length    : #{table_name}" if DEBUG_SHARED_TABLES
+    return NOT_SHARED
+  end
+
+  unless shared_table_records == Set.new(records)
+    puts "NOT SHARED records   : #{table_name}" if DEBUG_SHARED_TABLES
+    print_diff(shared_table_records, Set.new(records)) if DEBUG_SHARED_TABLES
+    return NOT_SHARED
+  end
+
   table_name
 end
 
@@ -164,12 +224,12 @@ class MetricsTracker
 
   def failed
     @failed_count += 1
-    print "❌"
+    print "❌" unless DEBUG_SHARED_TABLES
   end
 
   def succeeded
     @succeeded_count += 1
-    print "🟢"
+    print "🟢" unless DEBUG_SHARED_TABLES
   end
 
   def percent_complete
