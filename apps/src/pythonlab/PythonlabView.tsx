@@ -79,6 +79,7 @@ const PythonlabView: React.FunctionComponent = () => {
   const isPredictLevel = useAppSelector(
     state => state.lab.levelProperties?.predictSettings?.isPredictLevel
   );
+  const predictResponse = useAppSelector(state => state.lab.predictResponse);
 
   const onRun = (
     runTests: boolean,
@@ -88,7 +89,7 @@ const PythonlabView: React.FunctionComponent = () => {
   ) => {
     handleRunClick(runTests, dispatch, permissions, source);
     if (isPredictLevel) {
-      dispatch(sendPredictLevelReport('pythonlab'));
+      dispatch(sendPredictLevelReport('pythonlab', predictResponse));
     }
   };
 

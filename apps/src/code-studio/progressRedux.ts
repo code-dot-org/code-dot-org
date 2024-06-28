@@ -371,9 +371,11 @@ export function sendSuccessReport(appType: string): ProgressThunkAction {
   };
 }
 
-export function sendPredictLevelReport(appType: string): ProgressThunkAction {
+export function sendPredictLevelReport(
+  appType: string,
+  predictResponse: string
+): ProgressThunkAction {
   return (dispatch, getState) => {
-    const predictResponse = getState().lab.predictResponse;
     sendReportHelper(
       appType,
       TestResults.CONTAINED_LEVEL_RESULT,
