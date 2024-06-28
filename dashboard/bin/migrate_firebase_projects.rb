@@ -7,7 +7,7 @@ require 'hashdiff'
 require_relative '../config/environment'
 
 FIND_SHARED_TABLES = true
-DEBUG_SHARED_TABLES = true
+DEBUG_SHARED_TABLES = false
 # Limit number of items printed to N to avoid swamping output, use -1 to not limit
 DEBUG_SHARED_TABLES_LIMIT_PRINTS_TO = 2
 
