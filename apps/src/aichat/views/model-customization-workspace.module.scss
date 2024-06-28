@@ -1,5 +1,6 @@
 @import 'color';
 @import '../../mixins.scss';
+@import './aichat-common.module.scss';
 
 %full-width {
   width: 100%;
@@ -7,6 +8,7 @@
 }
 
 .modelCustomizationWorkspace {
+  @extend %panel-section;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -48,7 +50,7 @@
 
 .customizationContainer {
   overflow-y: auto;
-  height: 65vh;
+  height: 62vh;
 }
 
 .footerButtonContainer {

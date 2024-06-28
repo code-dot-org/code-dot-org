@@ -30,6 +30,8 @@ interface InstructionsProps {
    * A callback when the user clicks on clickable text.
    */
   handleInstructionsTextClick?: (id: string) => void;
+  /** Optional classname for the container */
+  className?: string;
 }
 
 /**
@@ -46,6 +48,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   layout,
   imagePopOutDirection,
   handleInstructionsTextClick,
+  className,
 }) => {
   const instructionsText = useSelector(
     (state: {lab: LabState}) => state.lab.levelProperties?.longInstructions
@@ -90,7 +93,10 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       beforeFinish={beforeNextLevel}
       onNextPanel={onNextPanel}
       theme={theme}
-      {...{baseUrl, layout, imagePopOutDirection, handleInstructionsTextClick}}
+      layout={layout}
+      imagePopOutDirection={imagePopOutDirection}
+      handleInstructionsTextClick={handleInstructionsTextClick}
+      className={className}
     />
   );
 };
@@ -125,6 +131,8 @@ interface InstructionsPanelProps {
    * A callback when the user clicks on clickable text.
    */
   handleInstructionsTextClick?: (id: string) => void;
+  /** Optional classname for the container */
+  className?: string;
 }
 
 /**
@@ -144,6 +152,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   imagePopOutDirection = 'right',
   theme = 'dark',
   handleInstructionsTextClick,
+  className,
 }) => {
   const [showBigImage, setShowBigImage] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
@@ -179,7 +188,8 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
       className={classNames(
         moduleStyles['instructions-' + theme],
         vertical && moduleStyles.vertical,
-        'instructions'
+        'instructions',
+        className
       )}
     >
       <div
