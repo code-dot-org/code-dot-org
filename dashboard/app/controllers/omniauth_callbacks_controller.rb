@@ -11,7 +11,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # TODO: figure out how to avoid skipping CSRF verification for Powerschool
   skip_before_action :verify_authenticity_token, only: :powerschool
 
-  before_action :check_account_linking_lock, only: %i[connect_provider link_accounts]
+  before_action :check_account_linking_lock
 
   # Note: We can probably remove these once we've broken out all providers
   BROKEN_OUT_TYPES = [
@@ -519,8 +519,14 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     return !!lookup_user
   end
 
+  # Are we trying to connect a new OAuth provider?
+  private def connecting_new_provider?
+    current_user && auth_params.fetch("action", nil) == "connect"
+  end
+
+  # Should we try to add a new OAuth provider?
   private def should_connect_provider?
-    return current_user && auth_params.fetch("action", nil) == "connect"
+    connecting_new_provider? && !account_linking_locked?
   end
 
   private def get_connect_provider_errors(auth_option)
@@ -530,20 +536,34 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     I18n.t('auth.unable_to_connect_provider', provider: I18n.t("auth.#{auth_option.credential_type}"))
   end
 
-  private def check_account_linking_lock
+  # Is this user able to link new providers?
+  private def account_linking_locked?
     user = current_user || find_user_by_credential
     return unless user
 
-    lock_reason = account_linking_lock_reason(user)
-    return unless lock_reason
+    account_linking_lock_reason(user)
+  end
 
+  # If we are trying to connect a new provider to an existing account and the
+  # user does not have permission to add new providers, then stop the linking
+  # and report an error.
+  private def check_account_linking_lock
+    # Only check for account link locking when trying to link a new provider.
+    return unless connecting_new_provider? || lti_registration?
+    lock_reason = account_linking_locked?
+    return unless lock_reason
     redirect_back fallback_location: new_user_session_path, alert: lock_reason
+  end
+
+  # Are we trying to link a new provider while registering an LTI account?
+  private def lti_registration?
+    DCDO.get('lti_account_linking_enabled', false) && Policies::Lti.lti_registration_in_progress?(session)
   end
 
   # Determine whether to link a new LTI auth option to an existing account
   # Not to be confused with the connect_provider flow
   private def should_link_accounts?
-    DCDO.get('lti_account_linking_enabled', false) && Policies::Lti.lti_registration_in_progress?(session)
+    lti_registration? && !account_linking_locked?
   end
 
   # For linking new LTI auth options to existing accounts

@@ -1,5 +1,8 @@
 name 'gen-ai-humanities-L1A'
 title 'Crafting Prompts'
+display_name 'Essay Introduction'
+bubble_choice_description 'Use your AI tool to write an introduction for an essay about the benefits of learning a second language.'
+thumbnail_url 'https://images.code.org/9894ac4657b0df1e65c9bfee528bc9a0-image-1719500447864.png'
 
 markdown <<MARKDOWN
 ## Essay Introduction
