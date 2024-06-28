@@ -20,9 +20,9 @@ import Sounds from '@cdo/apps/Sounds';
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
-import setBlocklyGlobal from '../../../util/setupBlocklyGlobal';
 
 import {expect} from '../../../util/reconfiguredChai';
+import setBlocklyGlobal from '../../../util/setupBlocklyGlobal';
 import {setExternalGlobals} from '../../../util/testUtils';
 
 const backgroundSprite = {

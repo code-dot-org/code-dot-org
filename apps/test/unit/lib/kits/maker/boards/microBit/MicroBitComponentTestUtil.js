@@ -9,7 +9,6 @@ import {
 
 import {expect} from '../../../../../../util/reconfiguredChai';
 
-
 import {boardSetupAndStub} from './MicroBitTestHelperFunctions';
 export function itMakesMicroBitComponentsAvailable(
   Board,

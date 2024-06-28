@@ -17,6 +17,7 @@ import {
   restoreStudioApp,
 } from '@cdo/apps/StudioApp';
 import {onSubmitComplete} from '@cdo/apps/submitHelper';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import * as utils from '@cdo/apps/utils';
 import {
   changeMaxProjectCapacity,
@@ -24,7 +25,6 @@ import {
 } from '@cdo/apps/weblab/actions';
 import reducers from '@cdo/apps/weblab/reducers';
 import WebLab from '@cdo/apps/weblab/WebLab';
-import currentUser from '@cdo/apps/templates/currentUserRedux';
 
 import {expect} from '../../util/reconfiguredChai';
 

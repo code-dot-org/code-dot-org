@@ -2,9 +2,10 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Checkbox} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon';
-import {expect} from '../../../../util/reconfiguredChai';
 
 import SingleCheckbox from '@cdo/apps/code-studio/pd/form_components/SingleCheckbox';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('SingleCheckbox', () => {
   it('renders a basic checkbox', () => {

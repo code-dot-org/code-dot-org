@@ -1,7 +1,6 @@
 import {expect} from 'chai';
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
-import sinon from 'sinon';
 
 import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
 

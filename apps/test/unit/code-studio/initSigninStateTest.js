@@ -6,7 +6,7 @@ import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 
 import {allowConsoleErrors, setExternalGlobals} from '../../util/testUtils';
 
-setExternalGlobals()
+setExternalGlobals();
 describe('initSigninStateTest', () => {
   describe('getUserSignedInFromCookieAndDom', () => {
     allowConsoleErrors();
