@@ -1,5 +1,8 @@
 name 'gen-ai-humanities-L1C'
 title 'Crafting Prompts'
+display_name 'Grammar and Style Correction'
+bubble_choice_description 'Improve the grammar and style of the following sentence: "Running fast the dog through the park chasing the frisbee."'
+thumbnail_url 'https://images.code.org/f57d871ed26469a8626b1fd1fd816726-image-1719501302687.png'
 
 markdown <<MARKDOWN
 ## Grammar and Style Correction

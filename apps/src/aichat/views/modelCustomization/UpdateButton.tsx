@@ -4,7 +4,7 @@ import {Button} from '@cdo/apps/componentLibrary/button';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {
-  selectHaveCustomizationsChanged,
+  selectHavePropertiesChanged,
   updateAiCustomization,
 } from '../../redux/aichatRedux';
 
@@ -24,16 +24,12 @@ const UpdateButton: React.FunctionComponent<UpdateButtonProps> = ({
   );
   const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
   const currentSaveType = useAppSelector(state => state.aichat.currentSaveType);
-  const haveCustomizationsChanged = useAppSelector(
-    selectHaveCustomizationsChanged
-  );
+  const havePropertiesChanged = useAppSelector(selectHavePropertiesChanged);
 
   return (
     <Button
       text="Update"
-      disabled={
-        isDisabledDefault || saveInProgress || !haveCustomizationsChanged
-      }
+      disabled={isDisabledDefault || saveInProgress || !havePropertiesChanged}
       iconLeft={
         saveInProgress && currentSaveType === 'updateChatbot'
           ? {iconName: 'spinner', animationType: 'spin'}

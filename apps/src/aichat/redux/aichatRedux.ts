@@ -236,6 +236,17 @@ export const onSaveComplete =
     }
   };
 
+// Thunk called when a save no-ops (there are no changes to save)
+export const onSaveNoop =
+  () => (dispatch: AppDispatch, getState: () => RootState) => {
+    // Even if no changes were saved, go to the presentation page if the user tried to publish
+    // a model card.
+    if (getState().aichat.currentSaveType === 'publishModelCard') {
+      dispatch(setViewMode(ViewMode.PRESENTATION));
+    }
+    dispatch(endSave());
+  };
+
 // Thunk called when a save has failed.
 export const onSaveFail = () => (dispatch: AppDispatch) => {
   dispatch(
@@ -413,9 +424,12 @@ const aichatSlice = createSlice({
       }
 
       // Make sure model ID is valid
-      reconciledAiCustomizations.selectedModelId = validateModelId(
-        reconciledAiCustomizations.selectedModelId
-      );
+      reconciledAiCustomizations = {
+        ...reconciledAiCustomizations,
+        selectedModelId: validateModelId(
+          reconciledAiCustomizations.selectedModelId
+        ),
+      };
 
       state.savedAiCustomizations = reconciledAiCustomizations;
       state.currentAiCustomizations = reconciledAiCustomizations;
@@ -428,13 +442,16 @@ const aichatSlice = createSlice({
     ) => {
       const levelAichatSettings = action.payload;
 
-      const defaultAiCustomizations: AiCustomizations =
+      let defaultAiCustomizations: AiCustomizations =
         levelAichatSettings?.initialCustomizations || EMPTY_AI_CUSTOMIZATIONS;
 
       // Make sure model ID is valid
-      defaultAiCustomizations.selectedModelId = validateModelId(
-        defaultAiCustomizations.selectedModelId
-      );
+      defaultAiCustomizations = {
+        ...defaultAiCustomizations,
+        selectedModelId: validateModelId(
+          defaultAiCustomizations.selectedModelId
+        ),
+      };
 
       state.savedAiCustomizations = defaultAiCustomizations;
       state.currentAiCustomizations = defaultAiCustomizations;
@@ -544,7 +561,7 @@ export const selectAllMessages = (state: {aichat: AichatState}) => {
   return messages;
 };
 
-export const selectHaveCustomizationsChanged = (state: RootState) =>
+export const selectHavePropertiesChanged = (state: RootState) =>
   findChangedProperties(
     state.aichat.savedAiCustomizations,
     state.aichat.currentAiCustomizations

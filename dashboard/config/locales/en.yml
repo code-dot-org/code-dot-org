@@ -43,6 +43,8 @@ en:
           attributes:
             reset_password_token:
               invalid: "is invalid. Note that each link can only be used once to reset your password, and only the most recently sent link will work."
+            unlock_token:
+              invalid: "is invalid or expired, possibly because your account has already been unlocked."
       messages:
         blank: "is required"
         blank_plural: "are required"
@@ -1428,6 +1430,7 @@ en:
   lti:
     account_linking:
       account_not_found: "Account not found"
+      admin_not_allowed: "Admins cannot link LTI accounts"
       connect_button: "Connect with %{provider}"
       connect_with: "Connect with..."
       connect_with_email: "Connect with personal login"

@@ -1751,7 +1751,7 @@ describe('teacherSectionsRedux', () => {
       const testSection = getState().teacherSections.sections[11];
       store.dispatch(assignToSection(testSection.id, 100, 101, 102, 103));
       expect(analyticsSpy).to.be.called.once;
-      assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
+      assert.deepEqual(analyticsSpy.getCall(0).args[1], {
         sectionName: testSection.name,
         sectionId: testSection.id,
         sectionLoginType: testSection.loginType,
@@ -1776,7 +1776,7 @@ describe('teacherSectionsRedux', () => {
         )
       );
       expect(analyticsSpy).to.be.called.once;
-      assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
+      assert.deepEqual(analyticsSpy.getCall(0).args[1], {
         sectionName: testSection.name,
         sectionId: testSection.id,
         sectionLoginType: testSection.loginType,

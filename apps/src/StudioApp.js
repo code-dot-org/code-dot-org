@@ -523,6 +523,14 @@ StudioApp.prototype.init = function (config) {
       }, this)
     );
 
+    if (Blockly.getHiddenDefinitionWorkspace()) {
+      this.hiddenWorkspaceChangeListener =
+        Blockly.getHiddenDefinitionWorkspace().addChangeListener(
+          _.bind(function () {
+            this.updateBlockCount();
+          }, this)
+        );
+    }
     if (config.level.openFunctionDefinition) {
       this.openFunctionDefinition_(config);
     }
@@ -3575,6 +3583,9 @@ if (IN_UNIT_TEST) {
     instance.libraries = {};
     if (instance.changeListener) {
       Blockly.removeChangeListener(instance.changeListener);
+    }
+    if (instance.hiddenWorkspaceChangeListener) {
+      Blockly.removeChangeListener(instance.hiddenWorkspaceChangeListener);
     }
     instance = __oldInstance;
     __oldInstance = null;
