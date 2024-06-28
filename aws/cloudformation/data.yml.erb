@@ -155,7 +155,7 @@ Resources:
     Properties:
       MigrationType: full-load
       ReplicationInstanceArn: !Ref DMSReplicationInstance
-      ReplicationTaskIdentifier: <%= task_name %>
+      ReplicationTaskIdentifier: task-<%= task_name %>
       SourceEndpointArn: !Ref MySQLDatabaseSourceEndpoint
       TargetEndpointArn: !Ref RedshiftEndpoint
       ReplicationTaskSettings: !Sub |
