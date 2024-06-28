@@ -8,6 +8,7 @@
 // The library data should definitely live elsewhere.
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
+import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 
 /// ------ PROJECTS ------ ///
 
@@ -157,6 +158,7 @@ export interface LevelProperties {
   exemplarSources?: MultiFileSource;
   // For Teachers Only value
   teacherMarkdown?: string;
+  predictSettings?: LevelPredictSettings;
 }
 
 // Level configuration data used by project-backed labs that don't require
