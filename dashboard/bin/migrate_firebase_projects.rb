@@ -150,12 +150,15 @@ end
 
 def fetch_datablock_kvps(channel, project_id)
   kvps = channel.dig("storage", "keys") || []
-  kvps.map do |key, value|
+  kvps.reject {|key, value| key.nil? || value.nil?}.map do |key, value|
     {
       project_id: project_id,
       key: key,
       value: JSON.parse(value)
     }
+  rescue => exception
+    exception.message << " (trying to parse: #{value.inspect})"
+    raise
   end
 end
 
