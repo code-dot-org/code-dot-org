@@ -1,10 +1,8 @@
 /** @file The Alice character panel from the crypto widget */
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import CharacterPanel from './CharacterPanel';
-import NumberedSteps, {Step} from './NumberedSteps';
-import IntegerField from './IntegerField';
-import IntegerTextbox from './IntegerTextbox';
 import {
   PrivateKeyDropdown,
   PublicModulusDropdown,
@@ -16,6 +14,9 @@ import {
   KeywordSecretNumber,
 } from './cryptographyFields';
 import {computePublicKey} from './cryptographyMath';
+import IntegerField from './IntegerField';
+import IntegerTextbox from './IntegerTextbox';
+import NumberedSteps, {Step} from './NumberedSteps';
 import {COLORS} from './style';
 
 const INITIAL_STATE = {

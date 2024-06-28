@@ -1,10 +1,13 @@
+import {setAssetPath} from '@code-dot-org/ml-activities/dist/assetPath';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import FishView from './FishView';
 import {Provider} from 'react-redux';
-import {getStore} from '../redux';
-import {setAssetPath} from '@code-dot-org/ml-activities/dist/assetPath';
+
 import {TestResults} from '@cdo/apps/constants';
+
+import {getStore} from '../redux';
+
+import FishView from './FishView';
 import fishMsg from './locale';
 
 /**
