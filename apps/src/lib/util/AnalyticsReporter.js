@@ -17,7 +17,7 @@ import {EVENT_GROUPS, PLATFORMS} from './AnalyticsConstants';
 import DCDO from '@cdo/apps/dcdo';
 
 // A flag that can be toggled to send events regardless of environment
-const ALWAYS_SEND = false;
+const ALWAYS_SEND = true;
 
 class AnalyticsReporter {
   constructor() {
