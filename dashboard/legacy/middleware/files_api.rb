@@ -425,7 +425,7 @@ class FilesApi < Sinatra::Base
       begin
         if profanity_project_type?(project_type)
           text_to_check = get_text_for_profanity_check(project_type, body)
-          share_failure = ShareFiltering.find_profanity_failure(text_to_check, request.locale)  
+          share_failure = ShareFiltering.find_profanity_failure(text_to_check, request.locale)
         else
           share_failure = ShareFiltering.find_failure(body, request.locale)
         end
