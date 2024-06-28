@@ -65,13 +65,13 @@ def print_diff(set1, set2)
 
   limit_prints.call(in_both_but_different).each do |item1, item2|
     diff = Hashdiff.diff(item1, item2)
-    puts "  ID in both, but different:"
+    puts "  different values for ID  :"
     limit_prints.call(diff).each do |change|
       if change[0] == '~'
         # ~ change means the value is in both sets, but its different
         puts "    ~#{change[1]}:"
         puts "      -#{change[2]}"
-        puts "      +#{change[2]}"
+        puts "      +#{change[3]}"
       else
         # Alternative is a +/- change, which means the key is only in one set
         puts "    #{change}"
@@ -101,6 +101,7 @@ def get_is_shared_table(table_name, records)
     return NOT_SHARED
   end
 
+  puts "SHARED               : #{table_name}" if DEBUG_SHARED_TABLES
   table_name
 end
 
