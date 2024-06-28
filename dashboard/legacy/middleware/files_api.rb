@@ -20,6 +20,9 @@ class FilesApi < Sinatra::Base
 
   SOURCES_PUBLIC_CACHE_DURATION = 20.seconds
 
+  # Can set this to an empty array if we do not want aichat checked for profanity.
+  LABS_TO_CHECK_FOR_PROFANITY = DCDO.get('labs_to_check_for_profanity', ['aichat'])
+
   def get_bucket_impl(endpoint)
     case endpoint
     when 'animations'
@@ -419,12 +422,12 @@ class FilesApi < Sinatra::Base
     # between their own projects -- skip this check for .java files, since in this use case
     # the files are only being used by a single user.
     if (endpoint == 'libraries' && file_type != '.java') || profanity_project_type?(project_type)
-      text_to_check = body
-      if project_type == 'aichat'
-        source = JSON.parse(body)['source']
-        source_json = JSON.parse(source)
-        text_to_check = source_json['systemPrompt'] + ' ' + source_json['retrievalContexts'].join(' ')
-      end
+      text_to_check =
+        if profanity_project_type?(project_type)
+          get_text_for_profanity_check(project_type, body)
+        else
+          body
+        end
       begin
         if profanity_project_type?(project_type)
           share_failure = ShareFiltering.find_profanity_failure(text_to_check, request.locale)
@@ -440,11 +443,7 @@ class FilesApi < Sinatra::Base
       # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
       # Additional context: https://codedotorg.atlassian.net/browse/STAR-1361
       if share_failure && share_failure[:type] != ShareFiltering::FailureType::ADDRESS
-        if share_failure[:type] == ShareFiltering::FailureType::PROFANITY
-          details_key = "profaneWords"
-        else
-          details_key = "pIIWords"
-        end
+        details_key = share_failure.type == ShareFiltering::FailureType::PROFANITY ? "profaneWords" : "pIIWords"
         details = {details_key => [share_failure.content]}
         return json_bad_request(details)
       end
@@ -1098,10 +1097,16 @@ class FilesApi < Sinatra::Base
     !project.content_moderation_disabled?(encrypted_channel_id)
   end
 
-  # Can set this to an empty array if we do not want aichat checked for profanity.
-  LABS_TO_CHECK_FOR_PROFANITY = DCDO.get('labs_to_check_for_profanity', ['aichat'])
-
   private def profanity_project_type?(project_type)
     LABS_TO_CHECK_FOR_PROFANITY.include?(project_type)
+  end
+
+  private def get_text_for_profanity_check(project_type, body)
+    if project_type == 'aichat'
+      source = JSON.parse(body)['source']
+      source_json = JSON.parse(source)
+      return source_json['systemPrompt'] + ' ' + source_json['retrievalContexts'].join(' ')
+    end
+    body
   end
 end
