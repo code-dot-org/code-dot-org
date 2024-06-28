@@ -401,6 +401,8 @@ export class WorkshopForm extends React.Component {
   renderWorkshopTypeOptions(validation) {
     const isCsf = this.state.course === 'CS Fundamentals';
     const isAdminCounselor = this.state.course === 'Admin/Counselor Workshop';
+    const isBuildYourOwnWorkshop =
+      this.state.course === 'Build Your Own Workshop';
     const showFeeInput =
       isCsf &&
       this.state.subject &&
@@ -414,7 +416,9 @@ export class WorkshopForm extends React.Component {
       this.state.subject &&
       HideFundedSubjects.includes(this.state.subject);
     const showFundedInput = !(
-      isAdminCounselor || isCsfSubjectWithHiddenFundedField
+      isAdminCounselor ||
+      isCsfSubjectWithHiddenFundedField ||
+      isBuildYourOwnWorkshop
     );
     const virtualWorkshopHelpTip = this.checkCannotChangeIfWorkshopVirtual() ? (
       <p>
@@ -789,6 +793,9 @@ export class WorkshopForm extends React.Component {
       module: null,
     });
     this.loadAvailableFacilitators(course);
+    if (course === 'Build Your Own Workshop') {
+      this.setState({funded: false});
+    }
   };
 
   handleSubjectChange = event => {
