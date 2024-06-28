@@ -65,20 +65,16 @@ class Pythonlab < Level
   end
 
   def clean_up_predict_settings
-    puts "in clean up predict settings"
     puts predict_settings
     return unless predict_settings
     if !predict_settings["isPredictLevel"]
-      puts "not predict level"
       # If this is not a predict level, remove any predict settings that may have been set.
       self.predict_settings = {isPredictLevel: false}
     elsif predict_settings["questionType"] == 'multipleChoice'
-      puts "is multiple choice"
       # Remove any free response settings if this is a multiple choice question.
       predict_settings.delete("placeholderText")
       predict_settings.delete("freeResponseHeight")
     else
-      puts "is free response"
       # Remove any multiple choice settings if this is a free response question.
       predict_settings.delete("multipleChoiceOptions")
       predict_settings.delete("multipleChoiceAnswers")
