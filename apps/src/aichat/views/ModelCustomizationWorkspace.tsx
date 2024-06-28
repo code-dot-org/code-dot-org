@@ -71,7 +71,8 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
             ? ' (view only)'
             : ''),
         tabContent: <RetrievalCustomization />,
-        iconLeft: isDisabled(retrievalContexts) || isReadOnly ? iconValue : undefined,
+        iconLeft:
+          isDisabled(retrievalContexts) || isReadOnly ? iconValue : undefined,
       });
     }
     if (isVisible(modelCardInfo) && !hidePresentationPanel) {
