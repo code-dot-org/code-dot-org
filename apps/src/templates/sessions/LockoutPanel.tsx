@@ -1,15 +1,20 @@
 import cookies from 'js-cookie';
-import React, {CSSProperties, useState} from 'react';
-import {useSelector} from 'react-redux';
+import React, {CSSProperties, useState, useEffect, useReducer} from 'react';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {RootState} from '@cdo/apps/types/redux';
+import parentalPermissionRequestReducer, {
+  REQUEST_PARENTAL_PERMISSION_SUCCESS,
+  requestParentalPermission,
+} from '@cdo/apps/redux/parentalPermissionRequestReducer';
 import {isEmail} from '@cdo/apps/util/formatValidation';
+import usePrevious from '@cdo/apps/util/usePrevious';
+import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 import headerThanksImage from '@cdo/static/common_images/penguin/dancing.png';
 import headerImage from '@cdo/static/common_images/penguin/yelling.png';
 
+import Spinner from '../../code-studio/pd/components/spinner';
 import {getStore} from '../../redux';
 import * as color from '../../util/color';
 import {hashString} from '../../utils';
@@ -22,15 +27,10 @@ import Button from '../Button';
  * pending request for) parental permission.
  */
 const LockoutPanel: React.FC<LockoutPanelProps> = props => {
-  const currentUser = useSelector((state: RootState) => state.currentUser);
   const reportEvent = (eventName: string, payload: object = {}) => {
     analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
   };
 
-  reportEvent(EVENTS.CAP_LOCKOUT_SHOWN, {
-    inSection: currentUser.inSection,
-    consentStatus: currentUser.childAccountComplianceState,
-  });
   // Determine if we think the given email matches the child email
   const isEmailDisallowed = (email: string) => {
     return props.disallowedEmail === hashString(email);
@@ -46,55 +46,108 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
 
   // Set the disabled state of the submit button based on the validity of the
   // email in the field.
-  const [disabled, setDisabled] = useState(
-    () => !validateEmail(props.pendingEmail)
-  );
+  const [disabled, setDisabled] = useState(() => !validateEmail(pendingEmail));
 
   // When the email field is updated, also update the disability state of the
   // submit button.
   const onEmailUpdate = (event: React.FormEvent<HTMLInputElement>) => {
-    setDisabled(!validateEmail((event.target as HTMLInputElement).value));
+    const parentEmailInput = (event.target as HTMLInputElement).value;
+    setDisabled(!validateEmail(parentEmailInput));
+    setParentEmail(parentEmailInput);
   };
+
+  // Date the last request email was sent
+  const [lastEmailDate, setLastEmailDate] = useState(props.requestDate);
+
+  // Track the state of the request as the user interacts with the form.
+  const [status, setConsentStatus] = useState(props.permissionStatus);
+
+  // State of the parent email entered by the user
+  const [pendingEmail, setPendingEmail] = useState(props.pendingEmail);
+  const prevPendingEmail = usePrevious(pendingEmail);
+
+  const [parentEmail, setParentEmail] = useState(props.pendingEmail);
+
+  const [
+    {action, error, parentalPermissionRequest, isLoading: loading},
+    parentalPermissionRequestDispatch,
+  ] = useReducer(parentalPermissionRequestReducer, {isLoading: false});
+
+  useEffect(() => {
+    if (parentalPermissionRequest) {
+      setPendingEmail(parentalPermissionRequest.parent_email);
+      setLastEmailDate(new Date(parentalPermissionRequest.requested_at));
+      setConsentStatus(parentalPermissionRequest.consent_status);
+    }
+  }, [parentalPermissionRequest]);
+
+  useEffect(() => {
+    reportEvent(EVENTS.CAP_LOCKOUT_SHOWN, {
+      inSection: props.inSection,
+      consentStatus: props.permissionStatus,
+      requestSent: !!props.pendingEmail,
+    });
+  }, [props.inSection, props.permissionStatus, props.pendingEmail]);
+
+  /**
+   * This useEffect hook is responsible for reporting successful parent permission request events:
+   *
+   * Submission event if a previous permission request does not exist.
+   * Resend event if a previous permission request exists and the parent email has not changed.
+   * Update event if a previous permission request exists and the parent email has changed.
+   */
+  useEffect(() => {
+    if (action !== REQUEST_PARENTAL_PERMISSION_SUCCESS) return;
+    if (!parentalPermissionRequest) return;
+
+    if (!prevPendingEmail) {
+      reportEvent(EVENTS.CAP_LOCKOUT_EMAIL_SUBMITTED, {
+        inSection: props.inSection,
+        consentStatus: parentalPermissionRequest.consent_status,
+      });
+    } else if (parentalPermissionRequest.parent_email === prevPendingEmail) {
+      reportEvent(EVENTS.CAP_LOCKOUT_EMAIL_RESEND, {
+        inSection: props.inSection,
+        consentStatus: parentalPermissionRequest.consent_status,
+      });
+    } else {
+      reportEvent(EVENTS.CAP_LOCKOUT_EMAIL_UPDATED, {
+        inSection: props.inSection,
+        consentStatus: parentalPermissionRequest.consent_status,
+      });
+    }
+  }, [action, prevPendingEmail, parentalPermissionRequest, props.inSection]);
 
   // This will set the email to the current pending email and fire off the
   // form as though they had typed in the same email again.
-  const handleResend = () => {
-    const field = document.getElementById('parent-email') as HTMLInputElement;
-    if (field && props.pendingEmail) {
-      field.value = props.pendingEmail;
-    }
+  const resendPermissionEmail = (
+    event: React.MouseEvent<HTMLButtonElement>
+  ) => {
+    event.preventDefault();
 
-    const form = document.getElementById(
-      'lockout-panel-form'
-    ) as HTMLFormElement;
-    if (form) {
-      reportEvent(EVENTS.CAP_PARENT_EMAIL_RESEND, {
-        inSection: currentUser.inSection,
-        consentStatus: currentUser.childAccountComplianceState,
-      });
-      form.submit();
+    if (pendingEmail) {
+      requestParentalPermission(
+        parentalPermissionRequestDispatch,
+        pendingEmail
+      );
     }
   };
 
-  const handleSubmit = () => {
-    reportEvent(EVENTS.CAP_PARENT_EMAIL_SUBMITTED, {
-      inSection: currentUser.inSection,
-      consentStatus: currentUser.childAccountComplianceState,
-    });
-  };
-
-  const handleUpdate = () => {
-    reportEvent(EVENTS.CAP_PARENT_EMAIL_UPDATED, {
-      inSection: currentUser.inSection,
-      consentStatus: currentUser.childAccountComplianceState,
-    });
+  // Custom form handler to submit the permission request. The default form
+  // submission does not include the Referer header, which is required for the
+  // policy_compliance_controller to redirect back to the correct page.
+  const submitPermissionRequest = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (parentEmail) {
+      requestParentalPermission(parentalPermissionRequestDispatch, parentEmail);
+    }
   };
 
   const signOut = (event: React.MouseEvent<HTMLButtonElement>) => {
     window.location.href = 'users/sign_out';
     reportEvent(EVENTS.CAP_LOCKOUT_SIGN_OUT, {
-      inSection: currentUser.inSection,
-      consentStatus: currentUser.childAccountComplianceState,
+      inSection: props.inSection,
+      consentStatus: status,
     });
   };
 
@@ -128,43 +181,62 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
     }
   }
 
-  const handleEmailSubmit = props.pendingEmail ? handleUpdate : handleSubmit;
+  // Child permission status from the user record
+  const permissionStatus: {message: string; style: CSSProperties} = {
+    message: i18n.sessionLockoutStatusNotSubmitted(),
+    style: styles.notSubmitted,
+  };
+  if (error) {
+    permissionStatus.message = error;
+    permissionStatus.style = styles.notSubmitted;
+  } else if (status === ChildAccountComplianceStates.PERMISSION_GRANTED) {
+    permissionStatus.message = i18n.sessionLockoutStatusGranted();
+    permissionStatus.style = styles.granted;
+  } else if (pendingEmail) {
+    permissionStatus.message = i18n.sessionLockoutStatusPending();
+    permissionStatus.style = styles.pending;
+  }
 
   return (
     <div style={styles.container} className="lockout-panel">
       {/* Header image: Depends of if permission request is sent. */}
       <img
         style={styles.image}
-        src={props.pendingEmail ? headerThanksImage : headerImage}
+        src={pendingEmail ? headerThanksImage : headerImage}
         alt={
-          props.pendingEmail
+          pendingEmail
             ? i18n.sessionLockoutHeaderThanksDescription()
             : i18n.sessionLockoutHeaderDescription()
         }
       />
 
       <h2>
-        {props.pendingEmail
+        {pendingEmail
           ? i18n.sessionLockoutPendingHeader()
-          : props.isPreLockoutUser
+          : status === ChildAccountComplianceStates.GRACE_PERIOD
           ? i18n.sessionLockoutNewPreLockoutAccountHeader()
           : i18n.sessionLockoutNewAccountHeader()}
       </h2>
 
       {/* This form will post a permission request for the student.*/}
-      <form id="lockout-panel-form" action={props.apiURL} method="post">
+      <form
+        id="lockout-panel-form"
+        action={props.apiURL}
+        method="post"
+        onSubmit={submitPermissionRequest}
+      >
         <input type="hidden" value={csrfToken} name="authenticity_token" />
         {/* The top prompt, which depends on whether or not a request is pending. */}
-        {props.pendingEmail && (
+        {pendingEmail && (
           <p>
             {pendingPromptParts[0]}
-            <strong>{props.pendingEmail}</strong>
+            <strong>{pendingEmail}</strong>
             {pendingPromptParts[1]}
           </p>
         )}
-        {!props.pendingEmail && (
+        {!pendingEmail && (
           <p>
-            {props.isPreLockoutUser
+            {status === ChildAccountComplianceStates.GRACE_PERIOD
               ? i18n.sessionLockoutPreLockoutAccountPrompt()
               : i18n.sessionLockoutPrompt()}
           </p>
@@ -190,116 +262,103 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
             >
               <strong>{i18n.sessionLockoutParentStatusField()}</strong>
             </label>
-            <span
-              id="permission-status"
-              style={props.pendingEmail ? styles.pending : styles.notSubmitted}
-            >
-              <strong>
-                {props.pendingEmail
-                  ? i18n.sessionLockoutStatusPending()
-                  : i18n.sessionLockoutStatusNotSubmitted()}
-              </strong>
+            <span id="permission-status" style={permissionStatus.style}>
+              <strong>{permissionStatus.message}</strong>
             </span>
           </div>
 
           {/* This is a floating 'link' that resends the pending email. */}
-          {props.pendingEmail && (
-            <Button
-              id="lockout-resend"
-              styleAsText={true}
-              style={styles.resendLink}
-              text={i18n.sessionLockoutResendEmail()}
-              type="button"
-              onClick={handleResend}
-            />
-          )}
+          {pendingEmail &&
+            status !== ChildAccountComplianceStates.PERMISSION_GRANTED && (
+              <Button
+                id="lockout-resend"
+                styleAsText={true}
+                style={styles.resendLink}
+                text={i18n.sessionLockoutResendEmail()}
+                type="button"
+                onClick={resendPermissionEmail}
+              />
+            )}
         </div>
 
         {/* This field allows the input of an email address. */}
         {/* Parent Email: [email] */}
-        <div style={styles.sections}>
-          <div style={styles.section}>
-            <label
-              style={isRTL ? styles.labelRTL : styles.label}
-              htmlFor="parent-email"
-            >
-              <strong>{i18n.sessionLockoutParentEmailField()}</strong>
-            </label>
+        {status !== ChildAccountComplianceStates.PERMISSION_GRANTED && (
+          <div style={styles.sections}>
+            <div style={styles.section}>
+              <label
+                style={isRTL ? styles.labelRTL : styles.label}
+                htmlFor="parent-email"
+              >
+                <strong>{i18n.sessionLockoutParentEmailField()}</strong>
+              </label>
 
-            {/* Slightly complicated layout allows for text underneath. */}
-            <div style={styles.fieldSection}>
-              <input
-                style={styles.field}
-                onChange={onEmailUpdate}
-                onInput={onEmailUpdate}
-                onBlur={onEmailUpdate}
-                defaultValue={props.pendingEmail}
-                name="parent-email"
-                id="parent-email"
-              />
+              {/* Slightly complicated layout allows for text underneath. */}
+              <div style={styles.fieldSection}>
+                <input
+                  style={styles.field}
+                  onChange={onEmailUpdate}
+                  onInput={onEmailUpdate}
+                  onBlur={onEmailUpdate}
+                  defaultValue={parentEmail}
+                  name="parent-email"
+                  id="parent-email"
+                />
 
-              {/* Show a 'Last email sent' prompt when available. */}
-              {props.pendingEmail && props.requestDate && (
-                <p style={styles.lastEmail}>
-                  <em id="lockout-last-email-date">
-                    {i18n.sessionLockoutLastEmailSent() + ' '}
-                    {props.requestDate.toLocaleDateString(locale, {
-                      ...dateOptions,
-                      hour: 'numeric',
-                      minute: 'numeric',
-                    })}
-                  </em>
-                </p>
-              )}
+                {/* Show a 'Last email sent' prompt when available. */}
+                {pendingEmail && lastEmailDate && (
+                  <p style={styles.lastEmail}>
+                    <em id="lockout-last-email-date">
+                      {i18n.sessionLockoutLastEmailSent() + ' '}
+                      {lastEmailDate.toLocaleDateString(locale, {
+                        ...dateOptions,
+                        hour: 'numeric',
+                        minute: 'numeric',
+                      })}
+                    </em>
+                  </p>
+                )}
+              </div>
             </div>
           </div>
-        </div>
+        )}
 
-        <div style={styles.buttons}>
-          {/* A sign-out button. */}
-          <Button
-            id="lockout-signout"
-            type="button"
-            style={styles.button}
-            text={i18n.signOutButton()}
-            color={Button.ButtonColor.gray}
-            onClick={signOut}
-          />
+        {status !== ChildAccountComplianceStates.PERMISSION_GRANTED && (
+          <div style={styles.buttons}>
+            {/* A sign-out button. */}
+            <Button
+              id="lockout-signout"
+              type="button"
+              style={styles.button}
+              text={i18n.signOutButton()}
+              color={Button.ButtonColor.gray}
+              onClick={signOut}
+            />
 
-          {/* The submit button. */}
-          {/* An empty onClick will still submit the form. */}
-          <Button
-            id="lockout-submit"
-            type="submit"
-            style={styles.button}
-            text={
-              props.pendingEmail
-                ? i18n.sessionLockoutUpdateSubmit()
-                : i18n.sessionLockoutSubmit()
-            }
-            disabled={disabled}
-            onClick={handleEmailSubmit}
-          />
-        </div>
+            {/* The submit button. */}
+            {/* An empty onClick will still submit the form. */}
+            {loading ? (
+              <Spinner />
+            ) : (
+              <Button
+                id="lockout-submit"
+                type="submit"
+                style={styles.button}
+                text={
+                  pendingEmail
+                    ? i18n.sessionLockoutUpdateSubmit()
+                    : i18n.sessionLockoutSubmit()
+                }
+                disabled={disabled}
+                onClick={() => {}}
+              />
+            )}
+          </div>
+        )}
       </form>
     </div>
   );
 };
-
-export interface LockoutPanelProps {
-  apiURL: string;
-  deleteDate: Date;
-  pendingEmail?: string;
-  requestDate?: Date;
-  disallowedEmail: string;
-  isPreLockoutUser?: boolean;
-}
-
-LockoutPanel.defaultProps = {
-  isPreLockoutUser: false,
-};
-
-export default LockoutPanel;
 
 const styles: {[key: string]: CSSProperties} = {
   container: {
@@ -332,6 +391,9 @@ const styles: {[key: string]: CSSProperties} = {
   },
   pending: {
     color: color.orange,
+  },
+  granted: {
+    color: color.realgreen,
   },
   statusLabel: {
     display: 'inline-block',
@@ -390,3 +452,15 @@ const styles: {[key: string]: CSSProperties} = {
     marginTop: 5,
   },
 };
+
+export interface LockoutPanelProps {
+  apiURL: string;
+  deleteDate: Date;
+  pendingEmail?: string;
+  requestDate?: Date;
+  disallowedEmail: string;
+  permissionStatus: string;
+  inSection: boolean;
+}
+
+export default LockoutPanel;

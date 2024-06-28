@@ -1,11 +1,7 @@
 import {StoryFn} from '@storybook/react';
 import React from 'react';
-import {Provider} from 'react-redux';
 
-import {getStore, registerReducers} from '@cdo/apps/redux';
-import currentUser, {
-  setInitialData,
-} from '@cdo/apps/templates/currentUserRedux';
+import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
 
 import LockoutPanel, {LockoutPanelProps} from './LockoutPanel';
 
@@ -16,37 +12,34 @@ export default {
 };
 
 const defaultArgs: LockoutPanelProps = {
+  inSection: false,
+  permissionStatus: 'l',
   apiURL: '/permissions',
   deleteDate: new Date(Date.now() + 6 * DAYS),
   disallowedEmail: 'student@test.com',
 };
 
-const store = getStore();
-registerReducers({currentUser});
-store.dispatch(
-  setInitialData({
-    id: 1,
-    child_account_compliance_state: 'l',
-    in_section: true,
-  })
-);
-
 const Template: StoryFn<typeof LockoutPanel> = args => (
-  <Provider store={store}>
-    <LockoutPanel {...defaultArgs} {...args} />
-  </Provider>
+  <LockoutPanel {...defaultArgs} {...args} />
 );
 
 export const NewAccount = Template.bind({});
 NewAccount.args = {};
 
-export const NewPreLockoutAccount = Template.bind({});
-NewPreLockoutAccount.args = {
-  isPreLockoutUser: true,
+export const GracePeriod = Template.bind({});
+GracePeriod.args = {
+  permissionStatus: ChildAccountComplianceStates.GRACE_PERIOD,
 };
 
 export const PendingRequest = Template.bind({});
 PendingRequest.args = {
   pendingEmail: 'blah@blarg.com',
   requestDate: new Date(Date.now() - 2 * DAYS),
+};
+
+export const PermissionGranted = Template.bind({});
+PermissionGranted.args = {
+  pendingEmail: 'blah@blarg.com',
+  requestDate: new Date(Date.now() - 2 * DAYS),
+  permissionStatus: ChildAccountComplianceStates.PERMISSION_GRANTED,
 };
