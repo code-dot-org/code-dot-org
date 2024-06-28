@@ -3,7 +3,18 @@
 # If DRY_RUN: run SQL in a transaction but rollback before committing
 DRY_RUN = false
 
+# De-duplicate tables: see if the records exactly match an existing shared
+# table and link it to that using is_shared_table instead of copying the records
 FIND_SHARED_TABLES = true
+
+# Don't import a project_id if it doesn't exist in the Projects table
+# this keeps us from migrating data from already deleted projects. Instead
+# log the channel_id to the .skipped file.
+#
+# Probably want `SKIP_MISSING_PROJECT_IDS = true` for the real production run!
+SKIP_MISSING_PROJECT_IDS = false
+
+# DEBUG FLAGS:
 DEBUG_SHARED_TABLES = false
 # Limit number of items printed to N to avoid swamping output, use -1 to not limit
 DEBUG_SHARED_TABLES_LIMIT_PRINTS_TO = 2
@@ -204,9 +215,19 @@ def firebase_get_channel(channel_id)
   firebase_get("/v3/channels/#{channel_id}")
 end
 
+class SkippedMissingProject < StandardError
+end
+
 def migrate(channel_id)
   channel = firebase_get_channel(channel_id)
   project_id = get_project_id(channel_id)
+
+  if SKIP_MISSING_PROJECT_IDS && !Project.exists?(project_id)
+    # Don't import project_ids that don't exist in the Projects table, they
+    # could have been deleted by the user, but never cleaned up from Firebase
+    raise SkippedMissingProject
+  end
+
   tables = fetch_datablock_tables(channel, project_id)
   kvps = fetch_datablock_kvps(channel, project_id)
   ActiveRecord::Base.transaction do
@@ -229,18 +250,24 @@ def fail_filename(log_filename_prefix)
   "#{log_filename_prefix}.fail"
 end
 
+def skipped_filename(log_filename_prefix)
+  "#{log_filename_prefix}.skipped"
+end
+
 METRICS_LOGGING_INTERVAL_S = 60
 class MetricsTracker
-  def initialize(total_count = 0, failed_count = 0, succeeded_count = 0)
+  def initialize(total_count = 0, failed_count = 0, succeeded_count = 0, skipped_count = 0)
     @start_time = Time.now
     @last_time = @start_time
 
     @succeeded_count = 0
     @failed_count = 0
+    @skipped_count = 0
 
     @total_count = total_count
     @total_failed_count = failed_count
     @total_succeeded_count = succeeded_count
+    @total_skipped_count = skipped_count
 
     # First logging interval is shorter than METRICS_LOGGING_INTERVAL_S
     # to give immediate feedback on rate
@@ -261,6 +288,11 @@ class MetricsTracker
     print "🟢" unless DEBUG_SHARED_TABLES
   end
 
+  def skipped
+    @skipped_count += 1
+    print "·" unless DEBUG_SHARED_TABLES
+  end
+
   def percent_complete
     total_processed = @total_succeeded_count + @total_failed_count
     percent = (total_processed.to_f / @total_count) * 100
@@ -268,7 +300,7 @@ class MetricsTracker
   end
 
   def win_lose_string
-    "#{@total_succeeded_count} succeeded, #{@total_failed_count} failed, #{percent_complete} complete"
+    "#{@total_succeeded_count} succeeded, #{@total_failed_count} failed, #{@total_skipped_count} skipped, #{percent_complete} complete"
   end
 
   def print_metrics
@@ -282,7 +314,9 @@ class MetricsTracker
 
       @total_succeeded_count += @succeeded_count
       @total_failed_count += @failed_count
-      total_processed = @total_succeeded_count + @total_failed_count
+      @total_skipped_count += @skipped_count
+
+      total_processed = @total_succeeded_count + @total_failed_count + @total_skipped_count
 
       seconds_remaining = (@total_count - total_processed) / processing_rate
       days_remaining = format('%.2f', seconds_remaining / 86400)
@@ -299,7 +333,7 @@ class MetricsTracker
   end
 end
 
-def stream_results_to_logs(log_filename_prefix, pool, results, count, failed_count, succeeded_count)
+def stream_results_to_logs(log_filename_prefix, pool, results, count, failed_count, succeeded_count, skipped_count)
   succeeded_log = File.open(success_filename(log_filename_prefix), 'a+')
   succeeded_log.sync = true
 
@@ -309,7 +343,10 @@ def stream_results_to_logs(log_filename_prefix, pool, results, count, failed_cou
   exception_log = File.open("#{log_filename_prefix}.exceptions", 'a+')
   exception_log.sync = true
 
-  metrics_tracker = MetricsTracker.new(count, failed_count, succeeded_count)
+  skipped_log = File.open(skipped_filename(log_filename_prefix), 'a+')
+  skipped_log.sync = true
+
+  metrics_tracker = MetricsTracker.new(count, failed_count, succeeded_count, skipped_count)
 
   log_results = -> do
     loop do
@@ -318,6 +355,9 @@ def stream_results_to_logs(log_filename_prefix, pool, results, count, failed_cou
       if success
         metrics_tracker.succeeded
         succeeded_log.puts(channel_id)
+      elsif exception.is_a? SkippedMissingProject
+        metrics_tracker.skipped
+        skipped_log.puts(channel_id)
       else
         metrics_tracker.failed
         failed_log.puts(channel_id)
@@ -344,7 +384,7 @@ ensure
   exception_log.close
 end
 
-def migrate_all(channel_ids, log_filename_prefix: "firebase-channel-ids.txt", count: 0, failed_count: 0, succeeded_count: 0)
+def migrate_all(channel_ids, log_filename_prefix: "firebase-channel-ids.txt", count: 0, failed_count: 0, succeeded_count: 0, skipped_count: 0)
   puts "Running with #{NUM_PARALLEL_WORKERS} parallel workers"
 
   pool = Concurrent::FixedThreadPool.new(NUM_PARALLEL_WORKERS)
@@ -364,7 +404,7 @@ def migrate_all(channel_ids, log_filename_prefix: "firebase-channel-ids.txt", co
   puts
 
   pool.shutdown
-  stream_results_to_logs(log_filename_prefix, pool, results, count, failed_count, succeeded_count)
+  stream_results_to_logs(log_filename_prefix, pool, results, count, failed_count, succeeded_count, skipped_count)
   pool.wait_for_termination
 ensure
   # This is particularly useful because ctrl-c from within irb
@@ -388,22 +428,28 @@ def migrate_from_file(filename)
   puts "Migrating channel_ids from #{filename}"
   channel_ids = load_channel_ids(filename)
   failed_channel_ids = load_channel_ids(fail_filename(filename))
+  skipped_channel_ids = load_channel_ids(skipped_filename(filename))
   succeeded_channel_ids = load_channel_ids(success_filename(filename))
 
   puts "Num Total channel_ids: #{channel_ids.length}"
   puts "Num Failed channel_ids: #{failed_channel_ids.length}"
+  puts "Num Skipped channel_ids: #{skipped_channel_ids.length}"
   puts "Num Succeeded channel_ids: #{succeeded_channel_ids.length}"
   puts
 
   count = channel_ids.length
   failed_count = failed_channel_ids.length
   succeeded_count = succeeded_channel_ids.length
+  skipped_count = skipped_channel_ids.length
 
+  # Don't re-process channel_ids that have already been processed
+  # no matter whether they failed, succeeded, or were skipped
   channel_ids -= failed_channel_ids
   channel_ids -= succeeded_channel_ids
+  channel_ids -= skipped_channel_ids
 
   puts "Num channel_ids left to process: #{channel_ids.length}"
-  migrate_all(channel_ids, log_filename_prefix: filename, count: count, failed_count: failed_count, succeeded_count: succeeded_count)
+  migrate_all(channel_ids, log_filename_prefix: filename, count: count, failed_count: failed_count, succeeded_count: succeeded_count, skipped_count: skipped_count)
 end
 
 if $PROGRAM_NAME == __FILE__
