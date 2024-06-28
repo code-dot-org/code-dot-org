@@ -7,6 +7,7 @@ import {
   saveModelCard,
   publishModel,
   selectHasFilledOutModelCard,
+  selectHavePropertiesChanged,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
@@ -38,6 +39,7 @@ const PublishNotes: React.FunctionComponent = () => {
   const isReadOnly = useSelector(isReadOnlyWorkspace) || isDisabled(visibility);
   const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
   const currentSaveType = useAppSelector(state => state.aichat.currentSaveType);
+  const havePropertiesChanged = useAppSelector(selectHavePropertiesChanged);
 
   const onSave = useCallback(() => {
     dispatch(saveModelCard());
@@ -109,7 +111,7 @@ const PublishNotes: React.FunctionComponent = () => {
           }
           type="secondary"
           color="black"
-          disabled={isReadOnly || saveInProgress}
+          disabled={isReadOnly || saveInProgress || !havePropertiesChanged}
           onClick={onSave}
           className={modelCustomizationStyles.updateButton}
         />

@@ -1,4 +1,10 @@
 <% var i18n = require('../../locale'); %>
+<%
+/**
+ * This block destructures the local variables for use within this ejs template.
+ */
+var image = locals.image;
+%>
 <h1 class="minecraft-big-yellow-header" id="getting-started-header"><%= i18n.houseSelectLetsBuild() %></h1>
 
 <h2 id="select-house-text"><%= i18n.houseSelectChooseFloorPlan() %></h2>

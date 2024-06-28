@@ -23,7 +23,7 @@ const CHAT_COMPLETION_URL = '/openai/chat_completion';
 // We want to expose enough information to help troubleshoot false positives
 const logViolationDetails = (response: OpenaiChatCompletionMessage) => {
   console.info('Violation detected in chat completion response', {
-    type: response.status,
+    type: response.safety_status,
     content: response.flagged_content,
   });
   MetricsReporter.logWarning({
@@ -50,7 +50,11 @@ export async function postOpenaiChatCompletion(
         type: tutorType,
         levelInstructions,
       }
-    : {messages: messagesToSend, type: tutorType, levelInstructions};
+    : {
+        messages: messagesToSend,
+        type: tutorType,
+        levelInstructions,
+      };
 
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
@@ -91,6 +95,7 @@ export async function getChatCompletionMessage(
     {role: Role.USER, content: formattedQuestion},
   ];
   let response;
+
   try {
     response = await postOpenaiChatCompletion(
       messagesToSend,
@@ -113,7 +118,7 @@ export async function getChatCompletionMessage(
         'There was an error processing your request. Please try again.',
     };
 
-  switch (response.status) {
+  switch (response.safety_status) {
     case ShareFilterStatus.Profanity:
       logViolationDetails(response);
       return {
@@ -124,11 +129,12 @@ export async function getChatCompletionMessage(
     case ShareFilterStatus.Email:
     case ShareFilterStatus.Phone:
     case ShareFilterStatus.Address:
+      // False positives with the PII filter (e.g. `for loops` flagged as addresses,
+      // and curriculum fake emails) were significantly impacting user experience.
+      // We're effectively turning PII filtering off for AI Tutor
+      // but still logging the violation for future analysis.
       logViolationDetails(response);
-      return {
-        status: Status.PII_VIOLATION,
-        assistantResponse: `To protect your privacy, please remove any personal details like your ${response.status} from your message and try again.`,
-      };
+      return {status: Status.OK, assistantResponse: response.content};
     default:
       return {status: Status.OK, assistantResponse: response.content};
   }
@@ -140,6 +146,7 @@ type OpenaiChatCompletionMessage = {
   content: string;
   // Only used in case of PII or profanity violation
   flagged_content?: string;
+  safety_status?: AITutorInteractionStatusValue;
 };
 
 type ChatCompletionResponse = {

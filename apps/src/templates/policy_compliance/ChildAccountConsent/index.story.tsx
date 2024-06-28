@@ -1,12 +1,15 @@
+import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
 
 import ChildAccountConsent from './index';
 
 export default {
   component: ChildAccountConsent,
-};
+} as Meta;
 
-const Template = args => <ChildAccountConsent {...args} />;
+const Template: StoryFn<typeof ChildAccountConsent> = args => (
+  <ChildAccountConsent {...args} />
+);
 
 export const ValidToken = Template.bind({});
 ValidToken.args = {

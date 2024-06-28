@@ -146,12 +146,9 @@
     data: {
       request_date: @request_date&.iso8601,
       pending_email: @pending_email,
-      api_url: url_for(
-        action: :child_account_consent,
-        controller: :policy_compliance
-      ),
       permission_status: @permission_status,
       user_email: current_user.hashed_email,
+      in_section: JSON.dump(current_user.student? ? current_user.sections_as_student.present? : nil),
     },
   }
 
