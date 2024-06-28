@@ -4,6 +4,7 @@ require 'firebase'
 require 'json'
 
 require_relative '../config/environment'
+FIND_SHARED_TABLES = true
 
 def set_active_record_connection_pool_size(pool_size)
   ActiveRecord::Base.connection_pool.disconnect!
@@ -53,24 +54,20 @@ def fetch_datablock_tables(channel, project_id)
     end
 
     records = json_records.compact.map {|record| JSON.parse(record)}
-    _is_shared_table = is_shared_table(table_name, columns, records) # rubocop:disable Lint/UnderscorePrefixedVariableName
-    if _is_shared_table
-      puts "SHARED: #{table_name} CHANNEL_ID: #{project_id}"
-    else
-      puts "NOT SHARED: #{table_name} CHANNEL_ID: #{project_id}"
-    end
+
+    is_shared_table = FIND_SHARED_TABLES ? get_is_shared_table(table_name, records) : nil
 
     datablock_table = {
       project_id: project_id,
       table_name: table_name,
       columns: columns,
-      is_shared_table: _is_shared_table,
+      is_shared_table: is_shared_table,
       created_at: Time.now,
       updated_at: Time.now
     }
 
     # if the table is a shared table, we don't need to store the records
-    datablock_records = datablock_table.is_shared_table ? [] :
+    datablock_records = is_shared_table ? [] :
       records.map do |record|
         {
           project_id: project_id,
