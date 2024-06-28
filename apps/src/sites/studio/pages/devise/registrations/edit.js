@@ -130,6 +130,9 @@ $(document).ready(() => {
         inSection={JSON.parse(
           lockoutLinkedAccountsMountPoint.getAttribute('data-in-section')
         )}
+        providers={JSON.parse(
+          lockoutLinkedAccountsMountPoint.getAttribute('data-providers')
+        )}
       />,
       lockoutLinkedAccountsMountPoint
     );
