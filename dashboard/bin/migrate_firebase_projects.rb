@@ -22,6 +22,23 @@ def get_project_id(channel_id)
   storage_decrypt_channel_id(channel_id)[1]
 end
 
+SHARED_TABLE_NAMES = Set.new DatablockStorageTable.get_shared_table_names
+SHARED_TABLES = SHARED_TABLE_NAMES.index_with do |table_name|
+  Set.new DatablockStorageTable.find_shared_table(table_name).read_records
+end
+
+# notably doesn't return a bool, instead returns the value for is_shared_table in the datablock_table
+def is_shared_table(table_name, columns, records) # rubocop:disable Naming/PredicateName
+  return nil unless SHARED_TABLE_NAMES.include? table_name
+
+  shared_table_records = SHARED_TABLES[table_name]
+
+  # check records
+  return nil unless shared_table_records.length == records.length
+  return nil unless shared_table_records == Set.new(records)
+  table_name
+end
+
 def fetch_datablock_tables(channel, project_id)
   datablock_tables = []
   tables = channel.dig("metadata", "tables") || {}
@@ -36,24 +53,32 @@ def fetch_datablock_tables(channel, project_id)
     end
 
     records = json_records.compact.map {|record| JSON.parse(record)}
+    _is_shared_table = is_shared_table(table_name, columns, records) # rubocop:disable Lint/UnderscorePrefixedVariableName
+    if _is_shared_table
+      puts "SHARED: #{table_name} CHANNEL_ID: #{project_id}"
+    else
+      puts "NOT SHARED: #{table_name} CHANNEL_ID: #{project_id}"
+    end
 
     datablock_table = {
       project_id: project_id,
       table_name: table_name,
       columns: columns,
-      is_shared_table: nil,
+      is_shared_table: _is_shared_table,
       created_at: Time.now,
       updated_at: Time.now
     }
 
-    datablock_records = records.map do |record|
-      {
-        project_id: project_id,
-        table_name: table_name,
-        record_id: record["id"],
-        record_json: record
-      }
-    end
+    # if the table is a shared table, we don't need to store the records
+    datablock_records = datablock_table.is_shared_table ? [] :
+      records.map do |record|
+        {
+          project_id: project_id,
+          table_name: table_name,
+          record_id: record["id"],
+          record_json: record
+        }
+      end
 
     datablock_tables << {table: datablock_table, records: datablock_records}
   end
