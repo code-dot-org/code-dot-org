@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
+
 import RelatedLessons from '@cdo/apps/lib/levelbuilder/lesson-editor/RelatedLessons';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('RelatedLessons', () => {
   let defaultProps;

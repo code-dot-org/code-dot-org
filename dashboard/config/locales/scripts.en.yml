@@ -14909,7 +14909,10 @@ en:
           title: Coding with AI
           description_audience: ''
           description_short: This unit uses AI to simplify concepts, solve problems, generate code, and instill ethical AI practices for confident learners in a rapidly changing world.
-          description: This unit empowers students to become confident, ethical coders. Students learn how to leverage generative AI tools to help explain code, tackle problems, and even generate code. More than just coding, this unit emphasizes ethical considerations and responsible use of AI, preparing students for the ever-evolving tech landscape.
+          description: |-
+            This unit empowers students to become confident, ethical coders. Students learn how to leverage generative AI tools to help explain code, tackle problems, and even generate code. More than just coding, this unit emphasizes ethical considerations and responsible use of AI, preparing students for the ever-evolving tech landscape.
+
+            Take a look at the [Getting Started with Coding with AI](https://docs.google.com/document/d/1hLR7WS8KmFxrjoM2Tr28rgfa0IZQ8otksw8ujYkdW3Y/edit?usp=sharing) guide for information on implementation options, what you and your students will need for this module, and helpful information to learn more about chatbots and large language models.
           student_description: |-
             In this unit, you'll learn how to use AI like help you:
 
@@ -14962,11 +14965,11 @@ en:
               name: Implementing with Code.org
           lesson_groups: {}
           name: self-paced-pl-microbit-2024-1
-          title: Introduction to Maker K-5 Units
+          title: Getting Started with Code.org [Optional]
           description_audience: ''
           description_short: ''
-          description: "#### This module is a short introduction to both Code.org and this professional learning course. \n\n#### **You will:**\n* #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n* #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** 30 minutes"
-          student_description: "#### This module is a short introduction to both Code.org and this professional learning course. \n\n#### **You will:**\n* #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n* #### add objective \n* #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** 30 minutes"
+          description: "#### This module is a short introduction to using the Code.org platform.\n\n#### **You will:**\n* #### Get an introduction to Code.org \n* #### Learn to navigate the teacher features on the Code.org platform\n\n#### **Suggested Time:** 30 minutes"
+          student_description: "#### This module is a short introduction to using the Code.org platform.\n\n#### **You will:**\n* #### Get an introduction to Code.org \n* #### Learn to navigate the teacher features on the Code.org platform\n\n#### **Suggested Time:** 30 minutes"
         self-paced-pl-microbit-2024-2:
           lessons:
             lesson-1:
@@ -16933,7 +16936,7 @@ en:
 
             **New to teaching AI?**
 
-            Get started with our [self-paced Professional Learning](studio.code.org/courses/elementaryai-2024).
+            Get started with our [self-paced Professional Learning](https://studio.code.org/courses/elementaryai-2024).
           student_description: ''
         music-tutorial-2024:
           lessons:
@@ -17007,7 +17010,9 @@ en:
           title: Game Design (2024)
           description_audience: ''
           description_short: ''
-          description: ''
+          description: |2-
+
+            The Game Design module provides an exciting introduction to creating and codng games using Sprite Lab, a block-based programming environment.  In the first lesson, students will learn the basics of creating and animating sprites and making them interactive. The second lesson introduces variables, teaching students how to use them for tracking and modifying game elements like scores. The third lesson dives into game mechanics, focusing on player movement, obstacles, and win/lose conditions. The fourth lesson is a Game Jam where students collaboratively design and code a game based on a randomly generated theme. The final lesson emphasizes user feedback and data-driven improvements, enabling students to refine their games and enhance the player experience.
           student_description: ''
         gettingstarted-k5:
           lessons:
@@ -17796,7 +17801,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-foundations-unit3
-          title: Foundations of CS Unit 3
+          title: Artificial Intelligence (AI) and Machine Learning
           description_audience: ''
           description_short: ''
           description: ''
@@ -17805,7 +17810,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-foundations-unit4
-          title: Foundations of CS Unit 4
+          title: Networks and the Internet
           description_audience: ''
           description_short: ''
           description: ''
@@ -17814,7 +17819,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-foundations-unit5
-          title: Foundations of CS Unit 5
+          title: Cybersecurity and Global Impacts
           description_audience: ''
           description_short: ''
           description: ''
@@ -17823,7 +17828,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-foundations-unit6
-          title: Foundations of CS Unit 6
+          title: Intro to Programming with Turtle
           description_audience: ''
           description_short: ''
           description: ''
@@ -17832,7 +17837,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-foundations-unit1
-          title: Foundations of CS Unit 1
+          title: Computer Systems and Devices
           description_audience: ''
           description_short: ''
           description: ''
@@ -17841,7 +17846,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-foundations-unit2
-          title: Foundations of CS Unit 2
+          title: Representing Information
           description_audience: ''
           description_short: ''
           description: ''
@@ -17883,7 +17888,10 @@ en:
           student_description: ''
         computer-vision:
           title: Computer Vision
-          description: This unit introduces students to the fundamentals, applications, and ethical implications of computer vision technologies. The unit starts with basic concepts and gradually builds up to complex topics, including data collection, model training, prototype development, and the integration of user feedback. Each lesson is designed to enhance students' understanding through hands-on activities and discussions culminating in the development of a prototype. The curriculum emphasizes critical thinking, problem-solving, and ethical considerations, equipping students with the skills to develop and evaluate technology that addresses real-world problems. Through iterative design and user-centered approaches, students not only learn the technical aspects of computer vision but also its impact on society, preparing them to be thoughtful innovators in a rapidly advancing technological landscape.
+          description: |-
+            This unit introduces students to the fundamentals, applications, and ethical implications of computer vision technologies. The unit starts with basic concepts and gradually builds up to complex topics, including data collection, model training, prototype development, and the integration of user feedback. Each lesson is designed to enhance students' understanding through hands-on activities and discussions culminating in the development of a prototype. The curriculum emphasizes critical thinking, problem-solving, and ethical considerations, equipping students with the skills to develop and evaluate technology that addresses real-world problems. Through iterative design and user-centered approaches, students not only learn the technical aspects of computer vision but also its impact on society, preparing them to be thoughtful innovators in a rapidly advancing technological landscape.
+
+            Take a look at the [**Getting Started with Computer Vision**](https://docs.google.com/document/d/1G5NztlmSlZ3pAN09mnze1eGzuLXQVvVjoqzTHqeEgk0/edit?usp=sharing) for information about what you and your students will need for this module.
           student_description: In this unit, you'll dive into how computers interpret and understand visual information from the world around us. You'll start with the basics of how images are captured and processed and move on to more complex topics like training data, model development, and the ethical implications of artificial intelligence. Through a series of interactive lessons, hands-on activities, and project-based learning, you'll get to design your own computer vision app. Along the way, you'll learn not only about the technology itself but also how it can be used responsibly to make a positive impact in various fields like healthcare, automotive, and public safety.
           description_short: ''
           description_audience: ''
@@ -17979,6 +17987,20 @@ en:
               name: Welcome to Maker with micro:bit
           lesson_groups: {}
           name: sandbox-welcome-to-maker
+          title: Introduction to Teaching Maker with micro:bit
+          description_audience: ''
+          description_short: ''
+          description: "#### This lesson gives an overview of this professional learning module.\n\n#### You will: \n- #### get an introduction to the Maker with micro:bit course\n- ####plan your path for this professional learning module\n\n####**Suggested Time:**  10 minutes"
+          student_description: "#### This lesson gives an overview of this professional learning module.\n\n#### You will: \n- #### get an introduction to the Maker with micro:bit course\n- ####plan your path for this professional learning module\n\n####**Suggested Time:**  10 minutes"
+        pl-maker-shallowcopy:
+          lessons: {}
+          lesson_groups: {}
+        maker-shallow:
+          lessons:
+            lesson-1:
+              name: DanceParty
+          lesson_groups: {}
+          name: maker-shallow
           title: ''
           description_audience: ''
           description_short: ''

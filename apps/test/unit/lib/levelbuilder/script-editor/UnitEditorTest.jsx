@@ -1,9 +1,21 @@
-import React from 'react';
+import {render, screen} from '@testing-library/react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import UnitEditor from '@cdo/apps/lib/levelbuilder/unit-editor/UnitEditor';
-import {assert, expect} from '../../../../util/reconfiguredChai';
+import $ from 'jquery';
+import React from 'react';
 import {Provider} from 'react-redux';
+import sinon from 'sinon';
+
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import {
+  PublishedState,
+  InstructionType,
+  InstructorAudience,
+  ParticipantAudience,
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import createResourcesReducer, {
+  initResources,
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+import UnitEditor from '@cdo/apps/lib/levelbuilder/unit-editor/UnitEditor';
 import reducers, {
   init,
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
@@ -13,19 +25,9 @@ import {
   getStore,
   registerReducers,
 } from '@cdo/apps/redux';
-import createResourcesReducer, {
-  initResources,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
-import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
-import $ from 'jquery';
-import {render, screen} from '@testing-library/react';
-import {
-  PublishedState,
-  InstructionType,
-  InstructorAudience,
-  ParticipantAudience,
-} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+
+import {assert, expect} from '../../../../util/reconfiguredChai';
 
 describe('UnitEditor', () => {
   let defaultProps, store;

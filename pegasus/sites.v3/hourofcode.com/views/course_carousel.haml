@@ -29,7 +29,7 @@
                   = tutorial[:platformtext]
                 %p.slide-longdescription= tutorial[:longdescription]
               .content-footer
-                %a.link-button{href: url, target: "_blank"}
+                %a.link-button{href: url, target: "_blank", aria: {label: hoc_s(:module_label_visit_site, markdown: :inline, locals: {site_name: tutorial[:name]})}}
                   =I18n.t(:go)
 
     %button.swiper-nav-prev{class: id}

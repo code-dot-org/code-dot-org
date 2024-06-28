@@ -1,0 +1,12 @@
+name 'k5_ai_sorting_food_question_pl'
+question 'AI Snack Picker was given training data from all the students in the class. The class wants a snack that is **sweet** and that students **like to eat**. AI Snack Picker chose **apples**. What is another snack that AI is likely to choose?'
+
+wrong 'Hamburger'
+wrong 'Broccoli'
+right 'Strawberries'
+wrong 'Cake'
+
+allow_multiple_attempts true
+markdown <<MARKDOWN
+
+MARKDOWN

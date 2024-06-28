@@ -1,8 +1,10 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
-import CreateNewLevelInputs from '@cdo/apps/lib/levelbuilder/lesson-editor/CreateNewLevelInputs';
+import React from 'react';
 import sinon from 'sinon';
+
+import CreateNewLevelInputs from '@cdo/apps/lib/levelbuilder/lesson-editor/CreateNewLevelInputs';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('CreateNewLevelInputs', () => {
   let defaultProps, addLevel;

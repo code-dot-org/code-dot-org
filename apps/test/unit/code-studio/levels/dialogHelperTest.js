@@ -1,8 +1,9 @@
 import {assert} from 'chai';
+import $ from 'jquery';
 import React from 'react';
 import 'jquery-ui/ui/effects/effect-drop';
-import $ from 'jquery';
 import sinon from 'sinon';
+
 import {
   showDialog,
   getSuccessDialog,

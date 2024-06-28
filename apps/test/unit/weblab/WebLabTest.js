@@ -1,31 +1,34 @@
-import sinon from 'sinon';
 import ReactDOM from 'react-dom';
-import {expect} from '../../util/reconfiguredChai';
+import sinon from 'sinon';
+
+import project from '@cdo/apps/code-studio/initApp/project';
+import {TestResults} from '@cdo/apps/constants';
+import dom from '@cdo/apps/dom';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import reducers from '@cdo/apps/weblab/reducers';
-import {
-  changeMaxProjectCapacity,
-  changeFullScreenPreviewOn,
-} from '@cdo/apps/weblab/actions';
+import commonReducers from '@cdo/apps/redux/commonReducers';
 import {
   singleton as studioApp,
   stubStudioApp,
   restoreStudioApp,
 } from '@cdo/apps/StudioApp';
-import commonReducers from '@cdo/apps/redux/commonReducers';
-import WebLab from '@cdo/apps/weblab/WebLab';
-import {TestResults} from '@cdo/apps/constants';
-import project from '@cdo/apps/code-studio/initApp/project';
 import {onSubmitComplete} from '@cdo/apps/submitHelper';
 import * as utils from '@cdo/apps/utils';
+import {
+  changeMaxProjectCapacity,
+  changeFullScreenPreviewOn,
+} from '@cdo/apps/weblab/actions';
+import reducers from '@cdo/apps/weblab/reducers';
+import WebLab from '@cdo/apps/weblab/WebLab';
+
+import {expect} from '../../util/reconfiguredChai';
+
 var filesApi = require('@cdo/apps/clientApi').files;
 var assetListStore = require('@cdo/apps/code-studio/assets/assetListStore');
-import dom from '@cdo/apps/dom';
 
 describe('WebLab', () => {
   let weblab;

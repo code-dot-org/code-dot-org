@@ -1,10 +1,12 @@
-import i18n from '@cdo/locale';
 import {render, screen} from '@testing-library/react';
-import LtiIframePage from '@cdo/apps/lib/ui/lti/iframe/LtiIframePage';
+import userEvent from '@testing-library/user-event';
 import React from 'react';
 import sinon, {SinonStub} from 'sinon';
+
+import LtiIframePage from '@cdo/apps/lib/ui/lti/iframe/LtiIframePage';
+import i18n from '@cdo/locale';
+
 import {expect} from '../../../../../util/reconfiguredChai';
-import userEvent from '@testing-library/user-event';
 
 const DEFAULT_PROPS = {
   logoUrl: 'https://code.org/assets/logo.svg',

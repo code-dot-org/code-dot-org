@@ -1,18 +1,19 @@
 /** @file Tests for toolkit.js - Maker's main export */
-import {expect} from '../../../../util/reconfiguredChai';
-import {
-  stubRedux,
-  restoreRedux,
-  registerReducers,
-  getStore,
-} from '@cdo/apps/redux';
-import * as maker from '@cdo/apps/lib/kits/maker/toolkit';
 import dropletConfig, {
   configMicrobit,
   configCircuitPlayground,
 } from '@cdo/apps/lib/kits/maker/dropletConfig';
 import MakerError from '@cdo/apps/lib/kits/maker/MakerError';
 import {reducer, isEnabled, isAvailable} from '@cdo/apps/lib/kits/maker/redux';
+import * as maker from '@cdo/apps/lib/kits/maker/toolkit';
+import {
+  stubRedux,
+  restoreRedux,
+  registerReducers,
+  getStore,
+} from '@cdo/apps/redux';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('maker/toolkit.js', () => {
   it('exports dropletConfig as-is', () => {
