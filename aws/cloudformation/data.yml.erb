@@ -15,10 +15,10 @@ Description: Data layer including RedShift cluster configuration and synchroniza
 Parameters:
   RDSIdentifier:
     Type: String
-  # MySQL user must have granted REPLICATION CLIENT and REPLICATION SLAVE permissions.
+  # MySQL user must have granted REPLICATION CLIENT and REPLICATION SLAVE
+  # permissions, and must have SELECT permissions on all tables and must have
+  # permissions to connect to the Production Reporting RDS Proxy.
   # Ref: http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Source.MySQL.html#CHAP_Source.MySQL.Security
-  # and must have SELECT permissions on all tables and must have permissions to connect to the Production Reporting
-  # RDS Proxy.
   RDSUsername:
     Type: String
   RDSPassword:
