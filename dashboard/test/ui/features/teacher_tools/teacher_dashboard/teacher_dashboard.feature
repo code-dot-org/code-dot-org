@@ -288,6 +288,7 @@ Feature: Using the teacher dashboard
 
     # Add new courses so new tiles are visible on the teacher dashboard
     And I create a new "Hour of Code" student section named "Section 1" assigned to "AI for Oceans"
+    And I press keys ":escape"
     And I create a new "High School" student section named "Section 2" assigned to "Computer Science Principles" version "'17-'18"
     And I create a new "Hour of Code" student section named "Section 3" assigned to "Artist"
     And I create a new "Hour of Code" student section named "Section 4" assigned to "Classic Maze"
@@ -301,6 +302,5 @@ Feature: Using the teacher dashboard
 
     And I click selector "button:contains(View more)"
     And I see no difference for "all tiles visible"
-
-    And I wait for 30 seconds
+    And I close my eyes
     
