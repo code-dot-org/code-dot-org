@@ -1006,9 +1006,9 @@ class Blockly < Level
 
   # Unescapes the backticks used to format codeblocks in the given text.
   # @param text [String] the text to unescape.
-  # @return [String] the text with unescaped backticks.
+  # @return [String] the text with unescaped backticks. If the text is nil or empty, it will be returned as is.
   private def unescape_codeblocks(text)
-    return text unless text
+    return text if text.blank?
     text.gsub('\\`', '`')
   end
 end

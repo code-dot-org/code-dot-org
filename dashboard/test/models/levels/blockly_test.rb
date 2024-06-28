@@ -1262,15 +1262,27 @@ class BlocklyTest < ActiveSupport::TestCase
     assert_equal 'translated long instructions', level.localized_long_instructions
   end
 
-  test 'returns empty strings when long_instruction is an empty string' do
+  test 'localizes long_instruction and removes escaped backticks when present' do
+    test_locale = 'te-ST'
+    level_name = 'test localize long_instruction'
     level = create(
       :level,
       :blockly,
-      name: 'test localize long_instruction',
-      long_instructions: ''
+      name: level_name,
+      long_instructions: 'original long instructions with [`block`](#bloc)'
     )
 
-    assert_equal '', level.localized_long_instructions
+    custom_i18n = {
+      'data' => {
+        'long_instructions' => {
+          level_name => 'translated long instructions with [\`block\`](#bloc)'
+        }
+      }
+    }
+    I18n.locale = test_locale
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    assert_equal 'translated long instructions with [`block`](#bloc)', level.localized_long_instructions
   end
 
   test 'localizes start_libraries when i18n_library is present' do
