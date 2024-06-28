@@ -1,5 +1,25 @@
 #!/usr/bin/env ruby
 
+# Script to migrate Firebase projects to DatablockStorage en-masse
+# takes a file with a channel_id per line, and migrates them.
+#
+# Usage:
+# bundle exec bin/migrate_firebase_projects firebase-channel-ids.txt
+#
+# This will create multiple files that log success/failure/skips:
+# - firebase-channel-ids.txt.success
+# - firebase-channel-ids.txt.fail
+# - firebase-channel-ids.txt.exceptions
+# - firebase-channel-ids.txt.skipped
+#
+# Using these files, if the script is interrupted, it can be restarted
+# and will not attempt to re-do any already processed channel_ids.
+# Multiple copies of the script should not be run at once.
+#
+# Once migration to DatablockStorage is complete, the script should be deleted.
+#
+# TODO: post-firebase-cleanup, remove this script #56994
+
 # If DRY_RUN: run SQL in a transaction but rollback before committing
 DRY_RUN = false
 
