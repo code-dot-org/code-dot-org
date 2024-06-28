@@ -198,7 +198,7 @@ describe('ProgrammingExpressionsTable', () => {
       .withArgs('/programming_expressions/get_filtered_results?page=1')
       .returns(Promise.resolve({ok: true, json: () => returnData}));
     const wrapper = mount(<ProgrammingExpressionsTable {...defaultProps} />);
-    return new Promise(resolve => setImmediate(resolve)).then(() => {
+    return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
       const fetchCount = fetchStub.callCount;
       expect(fetchCount).to.equal(1);
       wrapper.update();
