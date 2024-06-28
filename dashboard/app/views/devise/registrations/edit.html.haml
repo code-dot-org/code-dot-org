@@ -5,7 +5,7 @@
 - require 'queries/user'
 - @page_title = t('activerecord.attributes.user.edit_header')
 - no_email = current_user.no_personal_email? || params[:noEmail] == 'true'
-- studentInLockoutFlow = Policies::ChildAccount.underage?(current_user) && !Policies::ChildAccount::ComplianceState.permission_granted?(current_user)
+- studentInLockoutFlow = !!Policies::ChildAccount.lockout_date(user)
 
 = render_parental_permission_banner(current_user, request)
 
