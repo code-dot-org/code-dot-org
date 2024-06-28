@@ -83,7 +83,6 @@ module PDF
   def self.regenerate_pdf_with_ghostscript(new_path, path)
     gs_command = "gs -sDEVICE=pdfwrite -dNOPAUSE -dBATCH -dQUIET -sOutputFile=#{new_path} #{path}"
     system(gs_command)
-    puts "I regenerated #{path} to #{new_path} using Ghostscript."
     return new_path
   end
 
