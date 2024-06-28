@@ -8,6 +8,8 @@ require_relative '../config/environment'
 
 FIND_SHARED_TABLES = true
 DEBUG_SHARED_TABLES = true
+# Limit number of items printed to N to avoid swamping output, use -1 to not limit
+DEBUG_SHARED_TABLES_LIMIT_PRINTS_TO = 2
 
 def set_active_record_connection_pool_size(pool_size)
   ActiveRecord::Base.connection_pool.disconnect!
@@ -32,6 +34,8 @@ SHARED_TABLES = SHARED_TABLE_NAMES.index_with do |table_name|
 end
 
 def print_diff(set1, set2)
+  limit_prints = lambda {|arr| arr[0...DEBUG_SHARED_TABLES_LIMIT_PRINTS_TO]}
+
   truncate = lambda {|str, length = 120| str.length > length ? str[0, length - 3] + "..." : str}
 
   hash1 = set1.index_by {|item| item["id"]}
@@ -51,18 +55,18 @@ def print_diff(set1, set2)
     end
   end
 
-  only_in_set1.each do |item|
+  limit_prints.call(only_in_set1).each do |item|
     puts "  ID only in shared_table  : #{truncate.call(item.to_s)}"
   end
 
-  only_in_set2.each do |item|
+  limit_prints.call(only_in_set2).each do |item|
     puts "  ID only in table         : #{truncate.call(item.to_s)}"
   end
 
-  in_both_but_different.each do |item1, item2|
+  limit_prints.call(in_both_but_different).each do |item1, item2|
     diff = Hashdiff.diff(item1, item2)
     puts "  ID in both, but different:"
-    diff.each do |change|
+    limit_prints.call(diff).each do |change|
       if change[0] == '~'
         # ~ change means the value is in both sets, but its different
         puts "    ~#{change[1]}:"
