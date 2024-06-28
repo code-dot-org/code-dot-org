@@ -65,7 +65,6 @@ class Pythonlab < Level
   end
 
   def clean_up_predict_settings
-    puts predict_settings
     return unless predict_settings
     if !predict_settings["isPredictLevel"]
       # If this is not a predict level, remove any predict settings that may have been set.
