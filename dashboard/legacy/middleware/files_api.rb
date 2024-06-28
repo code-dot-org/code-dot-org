@@ -422,17 +422,12 @@ class FilesApi < Sinatra::Base
     # between their own projects -- skip this check for .java files, since in this use case
     # the files are only being used by a single user.
     if (endpoint == 'libraries' && file_type != '.java') || profanity_project_type?(project_type)
-      text_to_check =
-        if profanity_project_type?(project_type)
-          get_text_for_profanity_check(project_type, body)
-        else
-          body
-        end
       begin
         if profanity_project_type?(project_type)
-          share_failure = ShareFiltering.find_profanity_failure(text_to_check, request.locale)
+          text_to_check = get_text_for_profanity_check(project_type, body)
+          share_failure = ShareFiltering.find_profanity_failure(text_to_check, request.locale)  
         else
-          share_failure = ShareFiltering.find_failure(text_to_check request.locale)
+          share_failure = ShareFiltering.find_failure(body, request.locale)
         end
       rescue StandardError => exception
         return file_too_large(endpoint) if exception.instance_of?(WebPurify::TextTooLongError)
