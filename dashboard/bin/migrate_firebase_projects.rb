@@ -108,6 +108,10 @@ end
 def fetch_datablock_tables(channel, project_id)
   datablock_tables = []
   tables = channel.dig("metadata", "tables") || {}
+
+  # Some data in firebase is corrupted, e.g. has an array instead of a map for tables
+  return {} unless tables.is_a? Hash
+
   tables.each do |table_name, table_data|
     columns = table_data["columns"].values.map {|col| col["columnName"]}
     json_records = channel.dig("storage", "tables", table_name, "records") || []
