@@ -12,6 +12,12 @@ import {commonI18n} from '@cdo/apps/types/locale';
 const RENAME_THIS_ID = 'RENAME_THIS_ID';
 const RENAME_ALL_ID = 'RENAME_ALL_ID';
 
+interface VariableNamePromptOptions {
+  promptText: string; // Description text for window prompt
+  confirmButtonLabel: string; // Label of confirm button, e.g., "Rename"
+  defaultText: string; // Default input text for window prompt
+  callback: (newName: string) => void; // Callback with text of new variable name
+}
 export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
   /**
    * Handle the selection of an item in the variable dropdown menu.
@@ -118,18 +124,9 @@ export default class CdoFieldVariable extends GoogleBlockly.FieldVariable {
 
   /**
    * Prompt the user for a variable name and perform some whitespace cleanup
-   * @param {object} options The options object.
-   * @param {string} options.promptText Description text for window prompt.
-   * @param {string} options.confirmButtonLabel Label of confirm button, e.g., "Rename".
-   * @param {string} options.defaultText Default input text for window prompt.
-   * @param {function} options.callback Callback with parameter (text) of new name.
+   * @param {VariableNamePromptOptions} options The options object.
    */
-  static variableNamePrompt = function (options: {
-    promptText: string;
-    confirmButtonLabel: string;
-    defaultText: string;
-    callback: (newName: string) => void;
-  }) {
+  static variableNamePrompt = function (options: VariableNamePromptOptions) {
     Blockly.customSimpleDialog({
       bodyText: options.promptText,
       prompt: true,

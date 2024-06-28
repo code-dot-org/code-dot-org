@@ -20,6 +20,13 @@ import {ExtendedWorkspaceSvg, ProcedureBlock} from '../types';
 const RENAME_PARAMETER_ID = 'RENAME_VARIABLE_ID';
 const DELETE_PARAMETER_ID = 'DELETE_VARIABLE_ID';
 
+interface ParameterPromptOptions {
+  promptText: string; // Description text for window prompt
+  confirmButtonLabel: string; // Label of confirm button, e.g., "Rename"
+  callback: (newName: string) => void; // Callback with text of new parameter name
+  isDeleteDialog: boolean; // True for delete dialog; False for rename dialog
+  defaultText?: string; // Default input text for window prompt
+}
 export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
   /**
    * Handle the selection of an item in the parameter dropdown menu.
@@ -41,7 +48,7 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
             }),
             confirmButtonLabel: commonI18n.rename(),
             callback: this.renameSelectedParameter.bind(this),
-            prompt: true,
+            isDeleteDialog: false,
             defaultText: oldVar,
           });
           break;
@@ -53,7 +60,7 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
             }),
             confirmButtonLabel: commonI18n.delete(),
             callback: this.deleteSelectedParameter.bind(this),
-            prompt: false,
+            isDeleteDialog: true,
           });
           break;
         default:
@@ -242,30 +249,19 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
 
   /**
    * Prompt the user to name or delete a parameter.
-   * @param {object} options The options object.
-   * @param {string} options.promptText Description text for window prompt.
-   * @param {string} options.confirmButtonLabel Label of confirm button, e.g., "Rename".
-   * @param {function} options.callback Callback with parameter (text) of new name.
-   * @param {boolean} options.prompt Whether to prompt for a string value.
-   * @param {string} [options.defaultText] Default input text for window prompt.
+   * @param {ParameterPromptOptions} options The options object.
    */
-  static parameterPrompt = function (options: {
-    promptText: string;
-    confirmButtonLabel: string;
-    callback: (newName: string) => void;
-    prompt: boolean;
-    defaultText?: string;
-  }) {
+  static parameterPrompt = function (options: ParameterPromptOptions) {
     Blockly.customSimpleDialog({
       bodyText: options.promptText,
-      prompt: options.prompt,
+      prompt: !options.isDeleteDialog,
       promptPrefill: options.defaultText,
       cancelText: options.confirmButtonLabel,
-      isDangerCancel: !options.prompt,
+      isDangerCancel: !!options.isDeleteDialog,
       confirmText: commonI18n.cancel(),
       onConfirm: null,
       onCancel: options.callback,
-      disableSpaceClose: !!prompt,
+      disableSpaceClose: !options.isDeleteDialog,
     });
   };
 }
@@ -287,7 +283,7 @@ export const getAddParameterButtonWithCallback = (
         const newIndex = procedure.getParameters().length;
         procedure.insertParameter(newParameter, newIndex);
       },
-      prompt: true,
+      isDeleteDialog: false,
     });
   });
 
