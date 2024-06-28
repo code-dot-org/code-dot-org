@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "k5aisandbox",
-    "serialized_at": "2024-06-26 20:05:10 UTC",
+    "serialized_at": "2024-06-27 19:05:42 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -556,6 +556,28 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "which doesnt belong"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "f6e93717-b7e3-4a9b-9dbc-6ececbef6c36"
+      },
+      "level_keys": [
+        "which doesnt belong"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Making Predictions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "sorting_items_prediction_2_pl"
         ],
         "lesson.key": "lesson-5",
@@ -568,9 +590,9 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 16,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "progression": "Making Predictions"
@@ -590,9 +612,9 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 17,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "progression": "Making Predictions"
@@ -612,9 +634,9 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 18,
+      "position": 7,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "progression": "Making Predictions"
@@ -634,8 +656,8 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 7,
+      "chapter": 19,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -656,8 +678,8 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 8,
+      "chapter": 20,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -678,8 +700,8 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 9,
+      "chapter": 21,
+      "position": 10,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -700,8 +722,8 @@
       ]
     },
     {
-      "chapter": 21,
-      "position": 10,
+      "chapter": 22,
+      "position": 11,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -722,8 +744,8 @@
       ]
     },
     {
-      "chapter": 22,
-      "position": 11,
+      "chapter": 23,
+      "position": 12,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -744,8 +766,96 @@
       ]
     },
     {
-      "chapter": 23,
-      "position": 12,
+      "chapter": 24,
+      "position": 13,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Training AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "AI Fish Bias Outcome"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "068f3830-de6a-4234-a942-b823c89ea0da"
+      },
+      "level_keys": [
+        "AI Fish Bias Outcome"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 14,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Training AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLU2L4 Multiple Choice packets2022_2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "068f3830-de6a-4234-a942-b823c89ea0da"
+      },
+      "level_keys": [
+        "PLU2L4 Multiple Choice packets2022_2023"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 15,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Training AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "what is bias"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "068f3830-de6a-4234-a942-b823c89ea0da"
+      },
+      "level_keys": [
+        "what is bias"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 16,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "progression": "Training AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Why is bias important"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "068f3830-de6a-4234-a942-b823c89ea0da"
+      },
+      "level_keys": [
+        "Why is bias important"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 17,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -766,8 +876,8 @@
       ]
     },
     {
-      "chapter": 24,
-      "position": 13,
+      "chapter": 29,
+      "position": 18,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -788,8 +898,8 @@
       ]
     },
     {
-      "chapter": 25,
-      "position": 14,
+      "chapter": 30,
+      "position": 19,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -810,8 +920,8 @@
       ]
     },
     {
-      "chapter": 26,
-      "position": 15,
+      "chapter": 31,
+      "position": 20,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
@@ -832,8 +942,8 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 16,
+      "chapter": 32,
+      "position": 21,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
@@ -854,8 +964,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 17,
+      "chapter": 33,
+      "position": 22,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
@@ -876,8 +986,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 18,
+      "chapter": 34,
+      "position": 23,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -898,8 +1008,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 19,
+      "chapter": 35,
+      "position": 24,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -920,8 +1030,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 20,
+      "chapter": 36,
+      "position": 25,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -942,7 +1052,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -967,7 +1077,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -992,7 +1102,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1017,7 +1127,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1042,7 +1152,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -1067,7 +1177,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 42,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -1251,6 +1361,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "which doesnt belong",
+        "script_level.level_keys": [
+          "which doesnt belong"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "f6e93717-b7e3-4a9b-9dbc-6ececbef6c36"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "sorting_items_prediction_2_pl",
         "script_level.level_keys": [
           "sorting_items_prediction_2_pl"
@@ -1350,6 +1472,54 @@
         "level.key": "Oceans_Long_pl",
         "script_level.level_keys": [
           "Oceans_Long_pl"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "068f3830-de6a-4234-a942-b823c89ea0da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "AI Fish Bias Outcome",
+        "script_level.level_keys": [
+          "AI Fish Bias Outcome"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "068f3830-de6a-4234-a942-b823c89ea0da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLU2L4 Multiple Choice packets2022_2023",
+        "script_level.level_keys": [
+          "PLU2L4 Multiple Choice packets2022_2023"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "068f3830-de6a-4234-a942-b823c89ea0da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "what is bias",
+        "script_level.level_keys": [
+          "what is bias"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5aisandbox-2024",
+        "activity_section.key": "068f3830-de6a-4234-a942-b823c89ea0da"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Why is bias important",
+        "script_level.level_keys": [
+          "Why is bias important"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
