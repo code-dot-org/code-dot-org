@@ -41,10 +41,10 @@ Parameters:
   RedshiftAdminPassword:
     Type: String
     NoEcho: true
-  RedshiftUsername:
+  RedshiftEtlClientUsername:
     Type: String
     Description: Redshift SQL user to execute Extract Transform Load (ETL) processes.
-  RedshiftPassword:
+  RedshiftEtlClientPassword:
     Type: String
     Description: Redshift SQL user to execute Extract Transform Load (ETL) processes.
     NoEcho: true
@@ -128,8 +128,8 @@ Resources:
       EngineName: redshift
       ServerName: !GetAtt Tableau.Endpoint.Address
       Port: !GetAtt Tableau.Endpoint.Port
-      Username: !Ref RedshiftUsername
-      Password: !Ref RedshiftPassword
+      Username: !Ref RedshiftEtlClientUsername
+      Password: !Ref RedshiftEtlClientPassword
       DatabaseName: !Ref RedshiftDatabase
       # Extra Connection Attributes:
       # https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html#CHAP_Introduction.ConnectionAttributes.Redshift
