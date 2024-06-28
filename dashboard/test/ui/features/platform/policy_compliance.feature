@@ -264,3 +264,15 @@ Feature: Policy Compliance and Parental Permission
 
     # And it should tell me that the request was granted
     And element "#permission-status" contains text "Granted"
+  
+  Scenario: Users in the CPA flow cannot change their age or state
+    Given I create an authorized teacher-associated under-13 student in Colorado named "Tandy" after CPA exception
+
+    # Find the disabled region to provide a personal login
+    Given I am on "http://studio.code.org/users/edit?cpa-partial-lockout=1"
+
+    # Navigate the lockout process via the Account Settings page
+    Then I wait to see "#user_age"
+    Then I wait to see "#user_us_state"
+    Then element "#user_us_state" is disabled
+    Then element "#user_age" is disabled

@@ -5,6 +5,7 @@
 - require 'queries/user'
 - @page_title = t('activerecord.attributes.user.edit_header')
 - no_email = current_user.no_personal_email? || params[:noEmail] == 'true'
+- studentInLockoutFlow = Policies::ChildAccount.underage?(current_user) && !Policies::ChildAccount::ComplianceState.permission_granted?(current_user)
 
 = render_parental_permission_banner(current_user, request)
 
@@ -70,6 +71,9 @@
   - if !resource.teacher?
     .field
       = f.label t('signup_form.age'), class: "label-bold"
+      - if studentInLockoutFlow
+        %em= t('user.update_field_parent_permission_required')
+        %br/
       = f.select :age, User::AGE_DROPDOWN_OPTIONS
     - if experiment_value('gender', request)
       .field
@@ -79,6 +83,9 @@
       - location = Geocoder.search(request.ip).try(:first)
       - country_code = location&.country_code.to_s.upcase
       = f.label :us_state, t('activerecord.attributes.user.us_state'), class: 'label-bold'
+      - if studentInLockoutFlow
+        %em= t('user.update_field_parent_permission_required')
+        %br/
       = f.select :us_state, us_state_options, {include_blank: t('school_info.select_state')}, required: true
       = f.hidden_field :country_code, value: country_code
   - if resource.teacher?
@@ -290,6 +297,7 @@
   script_data = {
     edit: {
       userAge: current_user.age,
+      userState: current_user.us_state,
       userType: current_user.user_type,
       isAdmin: current_user.admin,
       isOauth: current_user.oauth?,
@@ -299,7 +307,8 @@
       isCleverStudent: current_user.clever_student?,
       dependentStudentsCount: Queries::User.dependent_students_count(current_user.id),
       personalAccountLinkingEnabled: @personal_account_linking_enabled,
-      lmsName: Queries::Lti.get_lms_name_from_user(current_user)
+      lmsName: Queries::Lti.get_lms_name_from_user(current_user),
+      studentInLockoutFlow: studentInLockoutFlow,
     }.to_json
   }
 %script{src: webpack_asset_path('js/devise/registrations/edit.js'), data: script_data}

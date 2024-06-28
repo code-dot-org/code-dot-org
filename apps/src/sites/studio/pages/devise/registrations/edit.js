@@ -23,6 +23,7 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 const scriptData = getScriptData('edit');
 const {
   userAge,
+  userState,
   userType,
   isAdmin,
   isPasswordRequired,
@@ -33,6 +34,7 @@ const {
   dependentStudentsCount,
   personalAccountLinkingEnabled,
   lmsName,
+  studentInLockoutFlow,
 } = scriptData;
 
 $(document).ready(() => {
@@ -160,6 +162,13 @@ $(document).ready(() => {
       />,
       deleteAccountMountPoint
     );
+  }
+
+  if (userAge && userState && studentInLockoutFlow) {
+    const usStateDropdown = document.getElementById('user_us_state');
+    const ageDropdown = document.getElementById('user_age');
+    usStateDropdown.disabled = true;
+    ageDropdown.disabled = true;
   }
 
   analyticsReporter.sendEvent(
