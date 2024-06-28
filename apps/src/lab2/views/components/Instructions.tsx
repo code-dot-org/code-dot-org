@@ -58,13 +58,14 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   );
 
   // If there are no validation conditions, we can show the continue button so long as
-  // there is another level. If validation is present, also check that conditions are satisfied.
+  // there is another level and manageNavigation is true.
+  // If validation is present, also check that conditions are satisfied.
   const showContinueButton =
     manageNavigation && (!hasConditions || satisfied) && hasNextLevel;
 
   // If there are no validation conditions, we can show the finish button so long as
-  // this is the last level in the progression. If validation is present, also
-  // check that conditions are satisfied.
+  // this is the last level in the progression and the instructions panel is managing navigation.
+  // If validation is present, also check that conditions are satisfied.
   const showFinishButton =
     manageNavigation && (!hasConditions || satisfied) && !hasNextLevel;
 
