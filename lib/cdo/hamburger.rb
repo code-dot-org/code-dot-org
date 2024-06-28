@@ -89,7 +89,8 @@ class Hamburger
   def self.get_hamburger_contents(options)
     loc_prefix = options[:loc_prefix]
     is_teacher_or_student = options[:user_type] == "teacher" || options[:user_type] == "student"
-    hide_small_desktop = is_teacher_or_student || options[:level]
+    is_level = options[:level]
+    hide_small_desktop = is_teacher_or_student || is_level
 
     # Teacher-specific hamburger dropdown links.
     teacher_entries = [
@@ -253,7 +254,7 @@ class Hamburger
 
     # Show help links at the bottom of the list for signed out users.
     unless is_teacher_or_student
-      entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]), id: "before-help"}
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]) + (is_level ? "  hide-large-desktop" : ""), id: "before-help"}
       entries.concat(help_contents.each {|e| e[:class] = visibility[:show_help_options]})
     end
 

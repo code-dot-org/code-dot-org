@@ -154,6 +154,12 @@ $arrow-size: 1.5rem;
       height: 1px;
       background: $light_primary_700;
       margin: 0.75rem 0;
+
+      @media (min-width: 1269px) {
+        &.hide-large-desktop {
+          display: none !important;
+        }
+      }
     }
   }
 
