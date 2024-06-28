@@ -159,6 +159,7 @@ module Cdo
       # the name, but I haven't been able to find one.
       return source_name if source_name.start_with?('default.')
 
+      rds_client = Aws::RDS::Client.new
       copied_parameter_group = rds_client.copy_db_parameter_group(
         source_db_parameter_group_identifier: source_name,
         target_db_parameter_group_identifier: target_name,
