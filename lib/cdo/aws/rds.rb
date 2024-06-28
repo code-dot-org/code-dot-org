@@ -51,7 +51,7 @@ module Cdo
           db_instances.
           first
 
-        copy_source_writer_instance_parameter_group_name = copy_or_default_parameter_group(
+        copy_source_writer_instance_parameter_group_name = copy_parameter_group_unless_default(
           source_writer_instance[:db_parameter_groups][0][:db_parameter_group_name],
           clone_instance_parameter_group
         )
@@ -147,17 +147,16 @@ module Cdo
       end
     end
 
-    # You can't copy a default parameter group, so we provide a simple helper
-    # method which if the specified parameter group is a default will simply
-    # return the name of that same default to be reused, and will otherwise
-    # create a copy and return the name of that copy.
+    # You can't copy a default parameter group, so we provide a helper method
+    # which if the specified parameter group is a default will return the name
+    # of that same default to be reused, and will otherwise create a copy and
+    # return the name of that copy.
     #
     # See https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithDBClusterParamGroups.html#USER_WorkingWithParamGroups.CopyingCluster
-    private_class_method def self.copy_or_default_parameter_group(source_name, target_name, target_description = nil)
-      # It really seems like there should be a more reliable
-      # way to determine whether a given parameter group is
-      # default or custom than inspecting the name, but I
-      # haven't been able to find one.
+    private_class_method def self.copy_parameter_group_unless_default(source_name, target_name, target_description = nil)
+      # It really seems like there should be a more reliable way to determine
+      # whether a given parameter group is default or custom than inspecting
+      # the name, but I haven't been able to find one.
       return source_name if source_name.start_with?('default.')
 
       copied_parameter_group = rds_client.copy_db_parameter_group(
