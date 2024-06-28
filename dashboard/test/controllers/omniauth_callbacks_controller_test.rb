@@ -655,6 +655,17 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal user.oauth_refresh_token, auth[:credentials][:refresh_token]
   end
 
+  test 'google_oauth2: user can still sign in even if account linking is locked' do
+    user = create(:student, :google_sso_provider, uid: 'fake-uid')
+    @controller.stubs(:account_linking_lock_reason).with(user).returns('reason')
+    auth = generate_auth_user_hash(provider: 'google_oauth2', uid: 'fake-uid')
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    get :google_oauth2
+    # The user should be able to login even in OAuth account linking is locked.
+    assert_redirected_to root_path
+  end
+
   test 'google_oauth2: updates tokens when migrated user is found by credentials' do
     # Given I have a Google-Code.org account
     user = create(:teacher,
@@ -1678,6 +1689,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     AuthenticationOption::OAUTH_CREDENTIAL_TYPES.excluding(
       AuthenticationOption::QWIKLABS,
       AuthenticationOption::TWITTER,
+      AuthenticationOption::POWERSCHOOL,
     ).each do |provider|
       context "when provider is #{provider}" do
         let(:auth_hash) {generate_auth_user_hash(provider: provider, uid: user_uid)}
@@ -1890,6 +1902,12 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         token: args[:token] || '12345',
         expires_at: args[:expires_at] || 'some-future-time',
         refresh_token: args[:refresh_token] || nil
+      },
+      extra: {
+        raw_info: {
+          userPrincipalName: "someone",
+          displayName: "someone",
+        }
       }
     )
   end
