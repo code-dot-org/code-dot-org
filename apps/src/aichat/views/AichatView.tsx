@@ -19,7 +19,6 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
 import {commonI18n} from '@cdo/apps/types/locale';
-import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import aichatI18n from '../locale';
@@ -98,9 +97,7 @@ const AichatView: React.FunctionComponent = () => {
       dispatch(onSaveComplete());
     });
     projectManager.addSaveFailListener((e: Error) => {
-      if (e instanceof NetworkError) {
-        dispatch(onSaveFail(e));
-      }
+      dispatch(onSaveFail(e));
     });
   }, [projectManager, dispatch]);
 

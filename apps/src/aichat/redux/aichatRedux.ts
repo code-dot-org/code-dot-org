@@ -250,27 +250,41 @@ export const onSaveNoop =
 
 // Thunk called when a save has failed.
 export const onSaveFail =
-  (e: NetworkError) => (dispatch: AppDispatch, getState: () => RootState) => {
-    e.response.json().then(body => {
-      const changedProperties = findChangedProperties(
-        getState().aichat.savedAiCustomizations,
-        getState().aichat.currentAiCustomizations
-      );
-      let flaggedProperties;
-      if (
-        changedProperties.includes('systemPrompt') &&
-        changedProperties.includes('retrievalContexts')
-      ) {
-        flaggedProperties = 'system prompt and/or retrieval contexts';
-      } else if (changedProperties.includes('systemPrompt')) {
-        flaggedProperties = 'system prompt';
-      } else if (changedProperties.includes('retrievalContexts')) {
-        flaggedProperties = 'retrieval contexts';
-      }
-      const errorMessage =
-        body?.details?.profaneWords?.length > 0 && flaggedProperties
-          ? `Profanity detected in the ${flaggedProperties} and cannot be updated. Please try again.`
-          : 'Error updating project. Please try again.';
+  (e: Error) => (dispatch: AppDispatch, getState: () => RootState) => {
+    let errorMessage =
+      'There was an error saving your project. Please try again.';
+    if (e instanceof NetworkError) {
+      e.response.json().then(body => {
+        const changedProperties = findChangedProperties(
+          getState().aichat.savedAiCustomizations,
+          getState().aichat.currentAiCustomizations
+        );
+        let flaggedProperties;
+        if (
+          changedProperties.includes('systemPrompt') &&
+          changedProperties.includes('retrievalContexts')
+        ) {
+          flaggedProperties = 'system prompt and/or retrieval contexts';
+        } else if (changedProperties.includes('systemPrompt')) {
+          flaggedProperties = 'system prompt';
+        } else if (changedProperties.includes('retrievalContexts')) {
+          flaggedProperties = 'retrieval contexts';
+        }
+        if (body?.details?.profaneWords?.length > 0 && flaggedProperties) {
+          errorMessage = `Profanity detected in the ${flaggedProperties} and cannot be updated. Please try again.`;
+        }
+        dispatch(
+          addNotification({
+            id: getNewMessageId(),
+            text: errorMessage,
+            notificationType: 'error',
+            timestamp: Date.now(),
+          })
+        );
+        // Notify the UI that the save is complete.
+        dispatch(endSave());
+      });
+    } else {
       dispatch(
         addNotification({
           id: getNewMessageId(),
@@ -281,9 +295,8 @@ export const onSaveFail =
       );
       // Notify the UI that the save is complete.
       dispatch(endSave());
-    });
+    }
   };
-
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
 // the user messages.
