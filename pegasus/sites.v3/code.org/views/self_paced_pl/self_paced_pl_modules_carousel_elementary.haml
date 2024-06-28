@@ -12,7 +12,19 @@
       aria_label_primary: hoc_s(:aria_label_call_to_action_ai_101),
       aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_ai_101),
       new: true
-    }
+    },
+    {
+      overline: hoc_s(:module_grade_k_5_teachers),
+      title: hoc_s(:module_label_teaching_k5_basics),
+      image: "/images/CSFimages/students_with_tablets.png",
+      curriculum: hoc_s(:curriculum_name_all_k5),
+      duration: hoc_s(:module_duration_2_hrs),
+      prerequisites: hoc_s(:module_prerequisites_none),
+      url_primary: CDO.studio_url("/courses/self-paced-pl-k5-2024"),
+      url_secondary: "/educate/curriculum/elementary-school",
+      aria_label_primary: hoc_s(:aria_label_call_to_action_explore_k5_self_paced_pl),
+      aria_label_secondary: hoc_s(:aria_label_call_to_action_explore_k_5_curriculum),
+    },
   ]
   if !!DCDO.get('curriculum-launch-2024', false)
     block_items +=[
@@ -21,7 +33,7 @@
         title: hoc_s(:module_label_teaching_how_ai_makes_decisions),
         image: '/images/self-paced-pl-tile-how-ai-makes-decisions.jpg',
         curriculum: hoc_s(:curriculum_name_how_ai_makes_decisions),
-        duration: hoc_s(:module_duration_1_hr),  
+        duration: hoc_s(:module_duration_1_hr),
         prerequisites: hoc_s(:module_prerequisites_none),
         url_primary: CDO.studio_url("/courses/elementaryai-2024"),
         url_secondary: CDO.studio_url('/s/k5-ai-data-2024'),
@@ -50,7 +62,7 @@
         duration: hoc_s(:module_duration_1_hr_30_minutes),
         prerequisites: hoc_s(:module_prerequisites_none),
         url_primary: CDO.studio_url("/courses/microbitmakermodule-2024"),
-        url_secondary: "/maker",
+        url_secondary: "/maker#curriculum-link-microbit",
         aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_microbit_maker_module),
         aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_microbit_maker_module),
         new: true
@@ -81,19 +93,7 @@
       url_secondary: "/educate/csc",
       aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_csc),
       aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_csc),
-    },
-    {
-      overline: hoc_s(:module_grade_k_5_teachers),
-      title: hoc_s(:module_label_teaching_k5_basics),
-      image: "/images/CSFimages/students_with_tablets.png",
-      curriculum: hoc_s(:curriculum_name_all_k5),
-      duration: hoc_s(:module_duration_2_hrs),
-      prerequisites: hoc_s(:module_prerequisites_none),
-      url_primary: CDO.studio_url("/courses/self-paced-pl-k5-2024"),
-      url_secondary: "/educate/curriculum/elementary-school",
-      aria_label_primary: hoc_s(:aria_label_call_to_action_explore_k5_self_paced_pl),
-      aria_label_secondary: hoc_s(:aria_label_call_to_action_explore_k_5_curriculum),
-    },
+    }
   ]
 
 .carousel-wrapper
