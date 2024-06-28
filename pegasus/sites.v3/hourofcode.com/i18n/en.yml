@@ -228,12 +228,12 @@
       self_paced:
         title: "Self-Paced Learning"
         desc: "These modules allow you to engage at your own pace and on your own time while focusing on areas most important to your needs and teaching context."
-        button: "Discover the district program"
+        button: "Explore professional learning"
       workshops:
         title_k_5: "K-5 Workshops"
         title_6_12: "6-12 Workshops"
         desc: "With our Regional Partners as hosts and our Code.org facilitators as guides, our workshops around the country focus on reflection, discussion, and growth-oriented learning."
-        button: "Explore professional learning"
+        button: "Explore workshops"
 
   facilitator_led_pl_heading: "Facilitator-Led Professional Learning Workshops"
   facilitator_led_pl_desc: "Learn about our professional learning workshops for elementary, middle, and high school teachers."
@@ -919,6 +919,7 @@
   subscribe_form_section_desc_csp: "Sign up to receive monthly emails about Code.org's Computer Science Principles and get helpful reminders, tips, and updates sent right to your inbox."
   subscribe_form_section_title_pl: "Get notified when Professional Learning registration opens"
   subscribe_form_section_desc_pl: "Be the first to know when registration begins! Sign up to receive an email notification when teachers can start applying for the Code.org Professional Learning Program."
+  subscribe_form_section_desc_maker: "Sign up for our monthly emails, which contain the latest news about tools, videos, and other important updates for Maker."
   subscribe_form_section_unsubscribe: "You can unsubscribe at any time."
 
   hoc_page_what_is_hoc_heading: "What is Hour of Code?"
@@ -2384,6 +2385,116 @@
         desc: "Prepare to teach Code.org's CSD Unit 3 - Interactive Animations and Games, allowing you to engage with the content at your own pace and in the order that best suits your needs."
         button: "Start professional learning"
         aria_label: "Start the Teaching Interactive Animations and Games professional learning course"
+    additional_resources:
+      heading: "Additional resources"
+      desc: "Beyond curriculum and professional learning, we have many materials to support your classroom."
+      catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
+        button: "Explore the catalog"
+      professional_learning:
+        title: "Professional Learning"
+        desc: "Help today's students become tomorrow's superheroes with professional learning that meets your needs."
+        button: "Explore professional learning"
+      hour_of_code:
+        title: "Hour of Code Activities"
+        desc: "One-hour tutorials in over 45 languages. No experience needed. Hour of Code activities are available for free year-round."
+        button: "Explore activities"
+
+  maker_page:
+    top:
+      heading: "Become a Maker"
+      desc: "Explore your creativity with physical computing."
+    what:
+      heading: "What is a Maker?"
+      desc_01: "Makers invent, explore, innovate, and create using technology like development boards, robotics, 3D printing, programming, and more."
+      desc_02: "Maker education takes STEM (Science, Technology, Engineering, Mathematics) a step further by inviting hands-on experience and collaboration into the classroom to help teach problem solving and critical thinking."
+    case_study:
+      overline: "Case study"
+      heading: "Bringing micro:bit to Alaskan classrooms"
+      desc: "We addressed this problem head-on by providing a complete package for successful implementation: curricula, professional development, facilitated workshops, a district support program, and classroom sets of devices."
+      button: "Read more"
+    get_started:
+      heading: "Getting started with physical computing"
+      desc: "We have curriculum options that support two different devices — see available options below."
+      button:
+        see_curriculum:
+          label: "See available curriculum"
+          aria_label: "See available %{device} curriculum"
+        learn_about: "Learn about %{device}"
+    why:
+      heading: "Why physical computing?"
+      real_world:
+        title: "Real-world applications"
+        desc: "Using a physical device can help students engage and connect the actions on a screen to their impact in the real world."
+      inclusion:
+        title: "Inclusion and engagement"
+        desc: "Surveys show female students described feeling more confident after exposure to physical computing."
+      social:
+        title: "Social + emotional learning"
+        desc: "Physical computing encourages students to work together, fostering collaboration, interpersonal skills, and active learning."
+    curricula_microbit:
+      heading: "Curriculum using the micro:bit"
+      desc: "Code.org has partnered with the Micro:bit Educational Foundation to offer teachers several resources on using the BBC micro:bit device."
+      creating_apps:
+        overline: "Grades 6-12"
+        title: "Creating Apps with Devices"
+        desc: "Explore the role of physical devices in computing. Using App Lab and the BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices."
+        duration: "25 hours"
+        button:
+          explore_unit:
+            label: "Explore the unit"
+            aria_label: "Explore the Creating Apps with Devices unit"
+          teach:
+            label: "Prepare to teach"
+            aria_label: "Prepare to teach the Creating Apps with Devices unit"
+      module_grade_2:
+        overline: "Grade 2"
+        title: "micro:bit Maker Module"
+        desc: "Learn events, sequencing, loops, data and variables while creating an emotion badge, calming LEDs, and a counter with the micro:bit."
+        duration: "9 hours"
+      module_grade_3:
+        overline: "Grade 3"
+        title: "micro:bit Maker Module"
+        desc: "Learn conditionals, events, and text inputs while saving sea turtles, creating a rock paper scissors game, and making an activity picker with the micro:bit."
+        duration: "7 hours"
+      module_grade_4:
+        overline: "Grade 4"
+        title: "micro:bit Maker Module"
+        desc: "Learn events, designing for accessibility, conditionals, and functions creating a sensory toy, simple door alarm, and tilt alarm with the micro:bit."
+        duration: "9 hours"
+      module_grade_5:
+        overline: "Grade 5"
+        title: "micro:bit Maker Module"
+        desc: "Learn events, variables, conditionals, and sounds while creating a step counter, pet, and thermometer with the micro:bit."
+        duration: "9 hours"
+      button:
+        explore_unit:
+          label: "Explore the unit"
+          aria_label: "Explore the micro:bit Maker Module unit for grade %{grade}"
+        teach:
+          label: "Prepare to teach"
+          aria_label: "Prepare to teach the micro:bit Maker Module unit for grade %{grade}"
+    curricula_circuit_playground:
+      heading: "Curriculum using the Circuit Playground"
+      creating_apps:
+        overline: "Grades 6-12"
+        title: "Creating Apps with Devices"
+        desc: "Explore the role of physical devices in computing. Using App Lab and Adafruit's Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices."
+        duration: "25 hours"
+        button: "Explore the unit"
+        aria_label: "Explore the Creating Apps with Devices unit"
+      teach_creating_apps:
+        overline: "6-12 Teachers"
+        title: "Teaching Creating Apps with Devices"
+        desc: "Self-paced online professional learning experience designed to prepare educators to get started teaching the Creating Apps with Devices unit."
+        note: "**Note:** A circuit playground device is required to engage with the activities in this professional learning experience."
+        button: "Prepare to teach"
+        aria_label: "Prepare to teach the Creating Apps with Devices unit"
+    careers:
+      heading: "Maker careers"
+      subhead: "Meet Jerome Morrison at Meow Wolf"
+      desc: "Jerome is a design technologist at Meow Wolf who works on amazing interactive art installations. With technology, he helps create portals to imaginative worlds at Meow Wolf's location in Santa Fe, New Mexico."
     additional_resources:
       heading: "Additional resources"
       desc: "Beyond curriculum and professional learning, we have many materials to support your classroom."

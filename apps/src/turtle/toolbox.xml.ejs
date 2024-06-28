@@ -1,6 +1,13 @@
 <%
 
 var msg = require('./locale');
+
+/**
+ * This block destructures the local variables for use within this ejs template.
+ */
+var level = locals.level;
+var page = locals.page;
+
 // An early hack introduced some levelbuilder levels as page 5, level 7. Long
 // term we can probably do something much cleaner, but for now I'm calling
 // out that this level is special (on page 5).

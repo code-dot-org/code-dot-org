@@ -9,8 +9,8 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import {LabState, setPredictResponse} from '../../lab2Redux';
 import {ThemeContext} from '../ThemeWrapper';
-import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 import PredictQuestion from './PredictQuestion';
+import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 const commonI18n = require('@cdo/locale');
 
 interface InstructionsProps {

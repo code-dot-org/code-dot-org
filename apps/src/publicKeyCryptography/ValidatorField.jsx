@@ -2,7 +2,9 @@
  *        value and communicates a correct match or a failure. */
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import color from '../util/color';
+
 import IntegerField from './IntegerField';
 
 const UNKNOWN = 0;
