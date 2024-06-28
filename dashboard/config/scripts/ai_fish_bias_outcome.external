@@ -1,0 +1,23 @@
+name 'AI Fish Bias Outcome'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# How AI Used Data
+
+##Fish Characteristics 
+![](https://images.code.org/3f052aa0cd94abab607278827fc16483-image-1719507512814.png)
+
+#### You may have noticed that if you clicked on the “i” on the results page, you can see what characteristics determined <b>how AI used your data input</b>. 
+
+
+## Consider This: 
+
+#### Would someone else’s results look exactly the same as yours? Why or why not?  
+
+
+
+<div style="clear:both"/>
+
+
+MARKDOWN
