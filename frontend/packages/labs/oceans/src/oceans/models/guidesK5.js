@@ -151,7 +151,7 @@ const guidesK5 = [
   },
   {
     id: "creaturesvtrashdemo-predicting-init1",
-    textFn: () => 'This is my test string.',
+    textFn: () => 'This is a test string.',
     when: {
       appMode: AppMode.CreaturesVTrashDemo,
       currentMode: Modes.Predicting,
