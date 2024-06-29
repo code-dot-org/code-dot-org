@@ -74,7 +74,7 @@
       - if studentInLockoutFlow
         %em= t('user.update_field_parent_permission_required')
         %br/
-      = f.select :age, User::AGE_DROPDOWN_OPTIONS
+      = f.select :age, User::AGE_DROPDOWN_OPTIONS, {}, disabled: studentInLockoutFlow
     - if experiment_value('gender', request)
       .field
         = f.label :gender_student_input, t('signup_form.gender'), class: "label-bold"
@@ -86,7 +86,7 @@
       - if studentInLockoutFlow
         %em= t('user.update_field_parent_permission_required')
         %br/
-      = f.select :us_state, us_state_options, {include_blank: t('school_info.select_state')}, required: true
+      = f.select :us_state, us_state_options, {include_blank: t('school_info.select_state')}, disabled: studentInLockoutFlow, required: true
       = f.hidden_field :country_code, value: country_code
   - if resource.teacher?
     .field
@@ -311,7 +311,6 @@
       dependentStudentsCount: Queries::User.dependent_students_count(current_user.id),
       personalAccountLinkingEnabled: @personal_account_linking_enabled,
       lmsName: Queries::Lti.get_lms_name_from_user(current_user),
-      studentInLockoutFlow: studentInLockoutFlow,
     }.to_json
   }
 %script{src: webpack_asset_path('js/devise/registrations/edit.js'), data: script_data}
