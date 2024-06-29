@@ -25,10 +25,10 @@
 #
 class Weblab2 < Level
   serialized_attrs %w(
-    start_sources
+    source
     hide_share_and_remix
     is_project_level
-    encrypted_examples
+    encrypted_exemplar_sources
     submittable
     validation_enabled
   )

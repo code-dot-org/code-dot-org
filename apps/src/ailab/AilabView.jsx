@@ -2,11 +2,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import StudioAppWrapper from '../templates/StudioAppWrapper';
-import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
-import CodeWorkspaceContainer from '../templates/CodeWorkspaceContainer';
-import Overlay from '../templates/Overlay';
+
 import fontConstants from '@cdo/apps/fontConstants';
+
+import CodeWorkspaceContainer from '../templates/CodeWorkspaceContainer';
+import InstructionsWithWorkspace from '../templates/instructions/InstructionsWithWorkspace';
+import Overlay from '../templates/Overlay';
+import StudioAppWrapper from '../templates/StudioAppWrapper';
 
 /**
  * Top-level React wrapper for Ailab

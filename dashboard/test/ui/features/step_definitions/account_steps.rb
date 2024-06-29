@@ -18,12 +18,7 @@ end
 
 Given(/^I sign in as "([^"]*)"( and go home)?$/) do |name, home|
   navigate_to replace_hostname('http://studio.code.org/reset_session')
-  user = @users[name]
-  email = user[:email]
-  password = user[:password]
-  url = "/users/sign_in"
-  browser_request(url: url, method: 'POST', body: {user: {login: email, password: password}})
-
+  sign_in name
   redirect = 'http://studio.code.org/home'
   navigate_to replace_hostname(redirect) if home
 end
@@ -62,6 +57,14 @@ def find_test_user_by_name(name)
   User.find_by(email: @users[name][:email])
 end
 
+def sign_in(name)
+  user = @users[name]
+  email = user[:email]
+  password = user[:password]
+  url = "/users/sign_in"
+  browser_request(url: url, method: 'POST', body: {user: {login: email, password: password}})
+end
+
 def sign_up(name)
   wait_proc = proc do
     opacity = @browser.execute_script <<~JS
@@ -83,7 +86,8 @@ rescue RSpec::Expectations::ExpectationNotMetError
   retry
 end
 
-def create_user(name, url: '/users.json', code: 201, **user_opts)
+# Creates the user and signs them in.
+def create_user(name, url: '/api/test/create_user', **user_opts)
   navigate_to replace_hostname('http://studio.code.org/reset_session')
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, tries: 3) do
     # Generate the user
@@ -92,35 +96,51 @@ def create_user(name, url: '/users.json', code: 201, **user_opts)
     # Set the parent email to the user email, if we see it
     # in the user options (we generate the email, here)
     if user_opts.key? :parent_email_preference_email
+      user_opts[:parent_email_preference_opt_in_required] = '1'
+      user_opts[:parent_email_preference_opt_in] = 'no'
       user_opts[:parent_email_preference_email] = email
+      user_opts[:parent_email_preference_request_ip] = '127.0.0.1'
+      user_opts[:parent_email_preference_source] = 'ACCOUNT_SIGN_UP'
     end
+
+    if user_opts[:email_preference_opt_in] == 'yes'
+      user_opts[:email_preference_form_kind] = email
+      user_opts[:email_preference_request_ip] = '127.0.0.1'
+      user_opts[:email_preference_source] = 'ACCOUNT_SIGN_UP'
+    end
+
+    user_params = {
+      user_type: 'student',
+      email: email,
+      password: password,
+      password_confirmation: password,
+      name: name,
+      age: '16',
+      terms_of_service_version: '1',
+      sign_in_count: 2
+    }.merge(user_opts)
+    user_params.delete(:email) if user_params[:email].blank?
+    user_params.delete(:password) if user_params[:password].blank?
+    user_params.delete(:password_confirmation) if user_params[:password_confirmation].blank?
 
     # Issue the update request for the user
     browser_request(
       url: url,
       method: 'POST',
       body: {
-        user: {
-          user_type: 'student',
-          email: email,
-          password: password,
-          password_confirmation: password,
-          name: name,
-          age: '16',
-          terms_of_service_version: '1',
-          sign_in_count: 2
-        }.merge(user_opts)
+        user: user_params
       },
-      code: code
+      code: 200
     )
   end
 end
 
-And(/^I create( as a parent)? a (young )?student( in Colorado)?( who has never signed in)? named "([^"]*)"( and go home)?$/) do |parent_created, young, locked, new_account, name, home|
+And(/^I create( as a parent)? a (young )?student( in Colorado)?( who has never signed in)? named "([^"]*)"( after CPA exception)?( before CPA exception)?( and go home)?$/) do |parent_created, young, locked, new_account, name, after_cpa_exception, before_cpa_exception, home|
   age = young ? '10' : '16'
   sign_in_count = new_account ? 0 : 2
 
   user_opts = {
+    user_type: 'student',
     age: age,
     sign_in_count: sign_in_count,
   }
@@ -131,14 +151,27 @@ And(/^I create( as a parent)? a (young )?student( in Colorado)?( who has never s
     user_opts[:user_provided_us_state] = true
   end
 
+  # See Cpa::CREATED_AT_EXCEPTION_DATE
+  cpa_exception_date = DateTime.parse('2024-05-26T00:00:00MDT')
+
+  if after_cpa_exception
+    user_opts[:created_at] = cpa_exception_date
+  end
+
+  if before_cpa_exception
+    user_opts[:created_at] = cpa_exception_date - 1.second
+  end
+
   if parent_created
-    user_opts[:parent_email_preference_opt_in_required] = "1"
-    user_opts[:parent_email_preference_opt_in] = "no"
     user_opts[:parent_email_preference_email] = "[user-email]"
   end
 
   create_user(name, **user_opts)
   navigate_to replace_hostname('http://studio.code.org') if home
+end
+
+Then /^My parent permits my parental request$/ do
+  browser_request(url: '/api/test/accept_parental_request', method: 'POST')
 end
 
 And(/^I type the email for "([^"]*)" into element "([^"]*)"$/) do |name, element|
@@ -155,15 +188,36 @@ end
 
 And(/^I create a student in the eu named "([^"]*)"$/) do |name|
   create_user(name,
-    data_transfer_agreement_required: '1',
-    data_transfer_agreement_accepted: '1'
+              data_transfer_agreement_accepted: true,
+              data_transfer_agreement_request_ip: '127.0.0.1',
+              data_transfer_agreement_kind: '0',
+              data_transfer_agreement_source: 'ACCOUNT_SIGN_UP',
+              data_transfer_agreement_at: DateTime.now,
   )
 end
 
-And(/^I create a teacher( who has never signed in)? named "([^"]*)"( and go home)?$/) do |new_account, name, home|
+And(/^I create a teacher( who has never signed in)? named "([^"]*)"( after CPA exception)?( before CPA exception)?( and go home)?$/) do |new_account, name, after_cpa_exception, before_cpa_exception, home|
   sign_in_count = new_account ? 0 : 2
 
-  create_user(name, age: '21+', user_type: 'teacher', email_preference_opt_in: 'yes', sign_in_count: sign_in_count)
+  user_opts = {
+    user_type: 'teacher',
+    age: '21+',
+    email_preference_opt_in: 'yes',
+    sign_in_count: sign_in_count,
+  }
+
+  # See Cpa::CREATED_AT_EXCEPTION_DATE
+  cpa_exception_date = DateTime.parse('2024-05-26T00:00:00MDT')
+
+  if after_cpa_exception
+    user_opts[:created_at] = cpa_exception_date
+  end
+
+  if before_cpa_exception
+    user_opts[:created_at] = cpa_exception_date - 1.second
+  end
+
+  create_user(name, **user_opts)
   navigate_to replace_hostname('http://studio.code.org') if home
 end
 

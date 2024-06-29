@@ -137,40 +137,6 @@ button.buttonStyle {
   padding: 0.5rem 2rem 0.5rem 1rem;
 }
 
-.aiTutorFooterContent {
-  flex: 1 1 100%;
-  padding: 0.25rem 0;
-
-  input[type='checkbox'] {
-    & + i::before {
-      background: $neutral_white;
-    }
-
-    & ~ span {
-      color: $neutral_white;
-    }
-  }
-}
-
-.aiTutorFooterInputArea {
-  display: flex;
-  flex-direction: row;
-}
-
-.submitButton {
-  margin-bottom: 10px;
-}
-
-.quickActionButton {
-  margin-right: 10px;
-}
-
-.textArea {
-  width: 80%;
-  box-sizing: border-box;
-  margin-right: 10px;
-}
-
 .waitingForResponse {
   width: 50px;
 }

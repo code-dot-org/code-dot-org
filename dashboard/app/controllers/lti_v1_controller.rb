@@ -4,10 +4,8 @@ require "services/lti"
 require "policies/lti"
 require "concerns/partial_registration"
 require "clients/lti_advantage_client"
-require 'clients/lti_dynamic_registration_client'
 require "cdo/honeybadger"
 require 'metrics/events'
-require 'securerandom'
 
 class LtiV1Controller < ApplicationController
   before_action -> {redirect_to lti_v1_integrations_path, alert: I18n.t('lti.integration.early_access.closed')},
@@ -170,9 +168,18 @@ class LtiV1Controller < ApplicationController
       }
 
       destination_url = "#{target_link_uri}?#{redirect_params.to_query}"
+      session[:user_return_to] = destination_url
 
       if user
         sign_in user
+
+        # If this is the user's first login, send them into the account linking flow
+        if DCDO.get('lti_account_linking_enabled', false) && !user.lms_landing_opted_out
+          Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'continue')
+          PartialRegistration.persist_attributes(session, user)
+          publish_linking_page_visit(user, integration[:platform_name])
+          render 'lti/v1/account_linking/landing', locals: {email: Services::Lti.get_claim(decoded_jwt, :email)} and return
+        end
 
         metadata = {
           'user_type' => user.user_type,
@@ -183,6 +190,7 @@ class LtiV1Controller < ApplicationController
           event_name: 'lti_user_signin',
           metadata: metadata,
         )
+
         # If on code.org, the user is a student and the LTI has the same user as a teacher, upgrade the student to a teacher.
         if lti_account_type == User::TYPE_TEACHER && user.user_type == User::TYPE_STUDENT
           @form_data = {
@@ -196,12 +204,24 @@ class LtiV1Controller < ApplicationController
         redirect_to destination_url
       else
         user = Services::Lti.initialize_lti_user(decoded_jwt)
+        # PartialRegistration removes the email address, so store it in a local variable first
+        email_address = Services::Lti.get_claim(decoded_jwt, :email)
         PartialRegistration.persist_attributes(session, user)
-        session[:user_return_to] = destination_url
         if DCDO.get('lti_account_linking_enabled', false)
-          redirect_to lti_v1_account_linking_landing_path lti_provider: integration[:platform_name] and return
+          Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'new')
+          publish_linking_page_visit(user, integration[:platform_name])
+          render 'lti/v1/account_linking/landing', locals: {email: email_address} and return
         end
-        redirect_to new_user_registration_url
+
+        if DCDO.get('student-email-post-enabled', false)
+          @form_data = {
+            email: email_address
+          }
+
+          render 'omniauth/redirect', {layout: false}
+        else
+          redirect_to new_user_registration_url
+        end
       end
     else
       jwt_error_message = jwt_verifier.errors.empty? ? 'Invalid JWT' : jwt_verifier.errors.join(', ')
@@ -397,6 +417,15 @@ class LtiV1Controller < ApplicationController
 
       @integration_status = :created
       LtiMailer.lti_integration_confirmation(admin_email).deliver_now
+
+      metadata = {
+        lms_name: platform_name,
+      }
+      Metrics::Events.log_event_with_session(
+        session: session,
+        event_name: 'lti_portal_registration_completed',
+        metadata: metadata,
+      )
     end
     render 'lti/v1/integration_status'
   end
@@ -461,5 +490,16 @@ class LtiV1Controller < ApplicationController
       context: context
     )
     unauthorized_status
+  end
+
+  private def publish_linking_page_visit(user, platform_name)
+    metadata = {
+      'lms_name' => platform_name,
+    }
+    Metrics::Events.log_event(
+      user: user,
+      event_name: 'lti_account_linking_page_visit',
+      metadata: metadata,
+    )
   end
 end

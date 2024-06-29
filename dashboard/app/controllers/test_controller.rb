@@ -361,4 +361,48 @@ class TestController < ApplicationController
     UserScript.create!(user: current_user, script: unit, completed_at: Time.now)
     head :ok
   end
+
+  # Creates the user and signs them in.
+  def create_user
+    user_opts = params.require(:user).permit(
+      :user_type,
+      :email,
+      :password,
+      :password_confirmation,
+      :name,
+      :age,
+      :username,
+      :terms_of_service_version,
+      :sign_in_count,
+      :parent_email_preference_opt_in_required,
+      :parent_email_preference_opt_in,
+      :parent_email_preference_email,
+      :parent_email_preference_request_ip,
+      :parent_email_preference_source,
+      :provider,
+      :email_preference_opt_in,
+      :email_preference_form_kind,
+      :email_preference_request_ip,
+      :email_preference_source,
+      :created_at,
+      :country_code,
+      :us_state,
+      :user_provided_us_state,
+      :data_transfer_agreement_accepted,
+      :data_transfer_agreement_request_ip,
+      :data_transfer_agreement_kind,
+      :data_transfer_agreement_source,
+      :data_transfer_agreement_at,
+    )
+    user = User.create!(**user_opts)
+    sign_in user
+    head :ok
+  end
+
+  # Accepts a parental request that was submitted by the current user
+  def accept_parental_request
+    permission_request = ParentalPermissionRequest.find_by(user: current_user)
+    Services::ChildAccount.grant_permission_request!(permission_request)
+    head :ok
+  end
 end

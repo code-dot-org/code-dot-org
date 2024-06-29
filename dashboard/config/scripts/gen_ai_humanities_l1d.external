@@ -1,0 +1,39 @@
+name 'gen-ai-humanities-L1D'
+title 'Crafting Prompts'
+display_name 'Argumentative Essay Points'
+bubble_choice_description 'List three strong arguments against the use of single-use plastics.'
+thumbnail_url 'https://images.code.org/ed96c290fb37533f671fd46e58b1c1fb-image-1719504469532.png'
+
+markdown <<MARKDOWN
+## Argumentative Essay Points
+
+**Task:** List three strong arguments against the use of single-use plastics.
+
+### Steps
+
+1. **Understanding the task:** You will be crafting a prompt that asks an AI tool to generate three strong arguments against the use of single-use plastics.
+
+   Think about the specific points you want the AI to address, such as environmental impact, health concerns, and economic implications.
+
+2. **Crafting your prompt:** Start by considering what makes a strong argument. Each argument should be clear, well-supported with facts, and relevant to the topic.
+
+   Think about how to ask the AI for detailed and specific arguments that include supporting evidence.
+
+3. **Writing your prompt:** Write a prompt that is clear and specific. Here is an example to get you started:
+
+> List three strong arguments against the use of single-use plastics. Each argument should include specific details and supporting evidence related to environmental impact, health concerns, and economic implications.
+
+4. **Using the AI tool:** Enter your prompt into the AI tool, and review the response. Assess whether it meets your expectations and includes detailed and well-supported arguments.
+
+5. **Evaluate the response:** Consider the following questions when evaluating the AI's response:
+
+   * Are the arguments clear and relevant to the topic?
+   
+   * Does each argument include specific details and supporting evidence?
+   
+   * Are the arguments well-supported with factual information?
+
+6. **Refining your prompt:** If the AI's response is not as expected, think about how you can improve your prompt. You might need to add more detail or be more specific about what you want.
+
+   Adjust your prompt and try again until you get a satisfactory response.
+MARKDOWN

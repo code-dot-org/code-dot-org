@@ -36,17 +36,24 @@ const EVENTS = {
   CAP_STATE_FORM_SHOW: 'CAP State Form Shown',
   CAP_STATE_FORM_PROVIDED: 'CAP State Form Submitted',
   CAP_STATE_FORM_DISMISSED: 'CAP State Form Sign Out Button Clicked',
-  CPA_PARENT_EMAIL_BANNER_SHOWN: 'cpa_parent_email_banner_shown',
-  CPA_PARENT_EMAIL_BANNER_CLICKED: 'cpa_parent_email_banner_clicked',
-  CPA_PARENT_EMAIL_BANNER_SUBMITTED: 'cpa_parent_email_banner_submitted',
-  CPA_PARENT_EMAIL_BANNER_UPDATED: 'cpa_parent_email_banner_updated',
-  CPA_PARENT_EMAIL_BANNER_RESEND: 'cpa_parent_email_banner_resend',
-  CPA_PARENT_EMAIL_BANNER_CLOSED: 'cpa_parent_email_banner_closed',
-  CPA_PARENT_EMAIL_MODAL_SHOWN: 'cpa_parent_email_modal_shown',
-  CPA_PARENT_EMAIL_MODAL_SUBMITTED: 'cpa_parent_email_modal_submitted',
-  CPA_PARENT_EMAIL_MODAL_UPDATED: 'cpa_parent_email_modal_updated',
-  CPA_PARENT_EMAIL_MODAL_RESEND: 'cpa_parent_email_modal_resend',
-  CPA_PARENT_EMAIL_MODAL_CLOSED: 'cpa_parent_email_modal_closed',
+  CAP_PARENT_CONSENT_EXPIRED: 'CAP Parent Consent Expired',
+  CAP_PARENT_CONSENT_GRANTED: 'CAP Parent Consent Granted',
+  CAP_PARENT_EMAIL_BANNER_SHOWN: 'CAP Parent Email Banner Shown',
+  CAP_PARENT_EMAIL_BANNER_CLICKED: 'CAP Parent Email Banner Clicked',
+  CAP_PARENT_EMAIL_MODAL_SHOWN: 'CAP Parent Email Modal Shown',
+  CAP_PARENT_EMAIL_MODAL_CLOSED: 'CAP Parent Email Modal Closed',
+  CAP_PARENT_EMAIL_SUBMITTED: 'CAP Parent Email Submitted',
+  CAP_PARENT_EMAIL_UPDATED: 'CAP Parent Email Updated',
+  CAP_PARENT_EMAIL_RESEND: 'CAP Parent Email Resend',
+  CAP_AGE_GATED_MODAL_SHOWN: 'CAP Teacher Students Warning Modal Shown',
+  CAP_AGE_GATED_MODAL_CLOSED: 'CAP Teacher Students Warning Modal Closed',
+  CAP_SETTINGS_SHOWN: 'CAP Settings Shown',
+  CAP_SETTINGS_EMAIL_SUBMITTED: 'CAP Settings Email Submitted',
+  CAP_SETTINGS_EMAIL_UPDATED: 'CAP Settings Email Updated',
+  CAP_SETTINGS_EMAIL_RESEND: 'CAP Settings Email Resend',
+  CAP_STUDENT_WARNING_LINK_CLICKED:
+    'CAP Teacher Students Warning Modal Documentation Clicked',
+  CAP_AGE_GATED_BANNER_SHOWN: 'CAP Teacher Students Banner Shown',
 
   // School Selection Component
   COUNTRY_SELECTED: 'User Selects Country',
@@ -157,6 +164,8 @@ const EVENTS = {
   // Rubrics
   TA_RUBRIC_OPENED_FROM_FAB_EVENT: 'TA Rubric Opened From FAB',
   TA_RUBRIC_CLOSED_FROM_FAB_EVENT: 'TA Rubric Closed From FAB',
+  TA_RUBRIC_OPEN_ON_PAGE_LOAD: 'TA Rubric Open on Page Load',
+  TA_RUBRIC_CLOSED_ON_PAGE_LOAD: 'TA Rubric Closed on Page Load',
   TA_RUBRIC_LEARNING_GOAL_EXPANDED_EVENT: 'TA Rubric Learning Goal Expanded',
   TA_RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT: 'TA Rubric Learning Goal Collapsed',
   TA_RUBRIC_ON_STUDENT_WORK_LOADED: 'TA Rubric On Student Work Loaded',
@@ -286,6 +295,7 @@ const EVENTS = {
   CHAT_ACTION: 'Student takes a chat action',
   SAVE_MODEL_CARD_INFO: 'Student saves their model card info',
   PUBLISH_MODEL_CARD_INFO: 'Student publishes their model card info',
+  AICHAT_START_OVER: 'Student starts over and resets to default model settings',
 };
 
 const EVENT_GROUP_NAMES = {

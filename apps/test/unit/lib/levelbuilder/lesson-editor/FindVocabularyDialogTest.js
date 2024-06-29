@@ -1,8 +1,10 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
-import FindVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindVocabularyDialog';
+import React from 'react';
 import sinon from 'sinon';
+
+import FindVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindVocabularyDialog';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('FindVocabularyDialog', () => {
   let defaultProps, handleConfirm;

@@ -1,5 +1,5 @@
 <%
-  PRODUCTION_DB_CLUSTER_ID = 'production-aurora-cluster'.freeze
+  PRODUCTION_DB_CLUSTER_ID = 'autoscale-prod-cluster'.freeze
   # If an adhoc environment is using MySQL server installed on the app server EC2 Instance instead of an AWS RDS Cluster
   # use default credentials and hostname.
   MYSQL_DAEMON_DEFAULT_CREDENTIALS = '{"username":"root", "password":""}'.freeze
@@ -262,7 +262,7 @@
         # Send reporting/analytics queries to the reader database instances, but use the database connection
         # initialization to configure reporting sessions so that queries do not negatively impact cluster performance
         # and to permit long running queries.
-        InitQuery: 'SET SESSION aurora_read_replica_read_committed=ON; SET SESSION tx_isolation="READ-COMMITTED"; SET SESSION max_execution_time = 0;'
+        InitQuery: 'SET SESSION aurora_read_replica_read_committed=ON; SET SESSION transaction_isolation="READ-COMMITTED"; SET SESSION max_execution_time = 0;'
         # Ensure that connections to the reader database instances that are carrying out "reporting" queries do not
         # exceed 5% of the total database connection capacity of a reader instance.
         MaxConnectionsPercent: 5
@@ -325,12 +325,12 @@
     Type: AWS::RDS::DBCluster
     Properties:
       DBClusterIdentifier: !Sub "${AWS::StackName}-cluster"
-      DBClusterParameterGroupName: !Ref AuroraClusterDBParameters
+      DBClusterParameterGroupName: !Ref Aurora3ClusterDBParameters
       Engine: aurora-mysql
       # Updating a Stack with a change to EngineVersion causes "Some Interruption".
       # Each Database Instance in the cluster is restarted.
       # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-engineversion
-      EngineVersion: 5.7.mysql_aurora.2.11.1
+      EngineVersion: 8.0.mysql_aurora.3.05.2
       MasterUsername: !Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:username}}"
       MasterUserPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:password}}"
       EnableIAMDatabaseAuthentication: true
@@ -353,7 +353,7 @@
       DBInstanceClass: !Ref DBInstanceType
       DBSubnetGroupName: !ImportValue VPC-DBSubnetGroup
       Engine: aurora-mysql
-      DBParameterGroupName: default.aurora-mysql5.7 #Explicitly stop setting a custom Instance ParameterGroup.
+      DBParameterGroupName: default.aurora-mysql8.0 #Explicitly stop setting a custom Instance ParameterGroup.
 <%      if rack_env?(:production) || rack_env?(:test) -%>
       EnablePerformanceInsights: true
       PerformanceInsightsRetentionPeriod: <%= rack_env?(:production) ? 465 : 7 %>

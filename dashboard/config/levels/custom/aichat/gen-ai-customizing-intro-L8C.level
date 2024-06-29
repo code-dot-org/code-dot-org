@@ -43,8 +43,11 @@
       "availableModelIds": [
 
       ]
-    }
+    },
+    "display_name": "Investigating History",
+    "bubble_choice_description": "This chatbot is designed to describe the historical chain-of-events that led to big events in world history. Let's investigate how accurate it can be.",
+    "thumbnail_url": "https://images.code.org/ec3da9759b9fe03ebd1579b89871a66b-Lesson 2 - Level 9C - Investigating History.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-06T18:06:28.497+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L6\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L6\"},{\"changed_at\":\"2024-05-06 18:26:14 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-09 21:36:00 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-09 21:45:50 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-09 21:51:23 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-09 22:22:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-06T18:06:28.497+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L6\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L6\"},{\"changed_at\":\"2024-05-06 18:26:14 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-09 21:36:00 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-09 21:45:50 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-09 21:51:23 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-09 22:22:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:01:57 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

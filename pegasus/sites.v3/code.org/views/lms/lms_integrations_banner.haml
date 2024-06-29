@@ -1,0 +1,14 @@
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/lms-integrations-banner.css", rel: "stylesheet"}
+
+%section.bg-neutral-light
+  .wrapper.centered
+    %h2=hoc_s(:admins_page_lms_heading)
+    %p=hoc_s(:admins_page_lms_desc)
+    .logos.flex-container.justify-center.align-items-start.wrap
+      %img{src: "/images/avatars/lms-logo-clever.png", alt: "Clever", style: "width: 115px"}
+      %img{src: "/images/avatars/lms-logo-google-classroom.png", alt: "Google Classroom", style: "width: 185px"}
+      %img{src: "/images/avatars/lms-logo-canvas.png", alt: "Canvas", style: "width: 150px"}
+      %img{src: "/images/avatars/lms-logo-schoology.png", alt: "Schoology", style: "width: 185px"}
+    %a.link-button{href: "/lms", target: "_blank", rel: "noopener noreferrer"}
+      =hoc_s(:admins_page_lms_call_to_action)

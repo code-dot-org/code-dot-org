@@ -1,8 +1,10 @@
-import React from 'react';
-import {expect} from '../../../../util/reconfiguredChai';
-import DataDocEditAll from '@cdo/apps/lib/levelbuilder/data-docs-editor/DataDocEditAll';
 import {isolateComponent} from 'isolate-react';
+import React from 'react';
 import sinon from 'sinon';
+
+import DataDocEditAll from '@cdo/apps/lib/levelbuilder/data-docs-editor/DataDocEditAll';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('DataDocEditAll', () => {
   const dataDoc1 = {

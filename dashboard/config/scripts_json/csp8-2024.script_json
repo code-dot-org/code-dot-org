@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-09 18:18:46 UTC",
+    "serialized_at": "2024-06-27 05:06:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1532,7 +1532,13 @@
       "position": 2,
       "properties": {
         "description": "**Group:** Divide students into groups of two. Evenly divide the three topics among the groups:\n\n1. Keylogging\n\n\n",
-        "progression_name": "Keylogging"
+        "progression_name": "Keylogging",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "<p>If the keylogging articles linked in the lesson are blocked, here are a couple of alternate articles you can reference. </p>\n<ul>\n<li><a href= \"https://www.sophos.com/en-us/cybersecurity-explained/keylogger\"> What is a Keylogger</a> </li>\n<li> <a href= \"https://www.microsoft.com/en-us/microsoft-365-life-hacks/privacy-and-safety/what-is-a-keylogger\"> How to Prevent Keylogging Threats </a> </li>\n</ul>"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "340d91c8-7cff-4e91-9808-5d941c85908e",

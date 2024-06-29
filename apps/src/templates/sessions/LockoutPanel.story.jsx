@@ -20,6 +20,11 @@ const Template = args => (
 export const NewAccount = Template.bind({});
 NewAccount.args = {};
 
+export const NewPreLockoutAccount = Template.bind({});
+NewPreLockoutAccount.args = {
+  isPreLockoutUser: true,
+};
+
 export const PendingRequest = Template.bind({});
 PendingRequest.args = {
   pendingEmail: 'blah@blarg.com',

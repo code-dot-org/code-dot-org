@@ -1,10 +1,12 @@
-import React from 'react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
+
 import CrossTabChart, {
   createPivotTable,
   getColorForValue,
 } from '@cdo/apps/storage/dataBrowser/dataVisualizer/CrossTabChart';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   records: [],

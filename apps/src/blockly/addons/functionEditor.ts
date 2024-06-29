@@ -1,4 +1,5 @@
 import {
+  ObservableParameterModel,
   ObservableProcedureModel,
   ProcedureBase,
 } from '@blockly/block-shareable-procedures';
@@ -491,8 +492,7 @@ export default class FunctionEditor {
       }
     });
 
-    // Mirror variable events from main workspace to editor workspace and the
-    // hidden procedure definition workspace.
+    // Mirror variable events from main workspace to the hidden workspace.
     // This is allows newly created/renamed/deleted variables to propogate
     // to the other workspaces.
     this.primaryWorkspace?.addChangeListener(e => {
@@ -500,13 +500,8 @@ export default class FunctionEditor {
         return;
       }
       if (e instanceof Blockly.Events.VarBase) {
-        let newEditorWorkspaceEvent;
         let newHiddenWorkspaceEvent;
         try {
-          newEditorWorkspaceEvent = Blockly.Events.fromJson(
-            e.toJson(),
-            this.editorWorkspace
-          );
           newHiddenWorkspaceEvent = Blockly.Events.fromJson(
             e.toJson(),
             Blockly.getHiddenDefinitionWorkspace()
@@ -517,7 +512,6 @@ export default class FunctionEditor {
           // cannot be deserialized into the original workspace.
           return;
         }
-        newEditorWorkspaceEvent.run(true);
         newHiddenWorkspaceEvent.run(true);
 
         // Update the toolbox in case this change is happening
@@ -592,11 +586,28 @@ export default class FunctionEditor {
     workspace: WorkspaceSvg,
     procedure: IProcedureModel
   ) {
-    return new ObservableProcedureModel(
+    const newProcedure = new ObservableProcedureModel(
       workspace,
       procedure.getName(),
       procedure.getId()
     );
+
+    // Copy parameters from the old procedure to the new one
+    procedure.getParameters().forEach((param, index) => {
+      // Type assertion to ensure we can get the variable model.
+      const observableParam = param as ObservableParameterModel;
+
+      const newParam = new ObservableParameterModel(
+        workspace,
+        observableParam.getName(),
+        observableParam.getId(),
+        observableParam.getVariableModel().getId()
+      );
+
+      newProcedure.insertParameter(newParam, index);
+    });
+
+    return newProcedure;
   }
 
   // Clear the editor workspace to prepare for a new function definition.

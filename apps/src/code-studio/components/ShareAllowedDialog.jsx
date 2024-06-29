@@ -19,7 +19,7 @@ import LibraryCreationDialog from './libraries/LibraryCreationDialog';
 import QRCode from 'qrcode.react';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Button from '../../templates/Button';
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import defaultThumbnail from '@cdo/static/projects/project_default.png';
 import fontConstants from '@cdo/apps/fontConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -372,14 +372,10 @@ class ShareAllowedDialog extends React.Component {
                   </div>
                   <div>
                     <Button
-                      color={Button.ButtonColor.brandSecondaryDefault}
+                      color={buttonColors.purple}
+                      type="primary"
                       id="sharing-dialog-copy-button"
-                      icon="clipboard"
-                      style={{
-                        ...styles.button,
-                        ...styles.copyButton,
-                        ...(this.state.hasBeenCopied && styles.copyButtonLight),
-                      }}
+                      iconLeft={{iconName: 'copy'}}
                       onClick={wrapShareClick(
                         this.copy,
                         'SHARING_LINK_COPY',
@@ -396,26 +392,25 @@ class ShareAllowedDialog extends React.Component {
                 </div>
                 <div className="social-buttons" style={{marginTop: 12}}>
                   <Button
-                    color={Button.ButtonColor.neutralDark}
                     id="sharing-phone"
-                    href=""
+                    color={buttonColors.black}
+                    type="secondary"
                     onClick={wrapShareClick(
                       this.showSendToPhone,
                       'SHARING_LINK_SEND_TO_PHONE',
                       this.props.appType
                     )}
-                    style={styles.sendToPhoneButton}
-                  >
-                    <FontAwesome icon="mobile-phone" style={{fontSize: 36}} />
-                    <span style={styles.sendToPhoneSpan}>
-                      {i18n.sendToPhone()}
-                    </span>
-                  </Button>
+                    text={i18n.sendToPhone()}
+                    iconLeft={{iconName: 'mobile-screen'}}
+                  />
                   {canPrint && hasThumbnail && (
-                    <a href="#" onClick={wrapShareClick(this.print, 'print')}>
-                      <FontAwesome icon="print" style={{fontSize: 26}} />
-                      <span>{i18n.print()}</span>
-                    </a>
+                    <Button
+                      color={buttonColors.purple}
+                      type="primary"
+                      onClick={wrapShareClick(this.print, 'print')}
+                      iconLeft={{iconName: 'print'}}
+                      text={i18n.print()}
+                    />
                   )}
                   {/* prevent buttons from overlapping when unpublish is pending */}
                   {this.isSocialShareAllowed() && !isUnpublishPending && (
@@ -551,18 +546,6 @@ const styles = {
     marginBottom: 0,
     marginLeft: 0,
     verticalAlign: 'top',
-  },
-  copyButton: {
-    paddingTop: 12.5,
-    paddingBottom: 12.5,
-    marginLeft: 0,
-    marginBottom: 0,
-    marginTop: 0,
-    marginRight: 16,
-    fontSize: 'large',
-  },
-  copyButtonLight: {
-    backgroundColor: color.light_purple,
   },
   thumbnail: {
     float: 'left',

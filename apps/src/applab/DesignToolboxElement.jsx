@@ -2,6 +2,7 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import library from './designElements/library';
 
 export default class DesignToolboxElement extends React.Component {

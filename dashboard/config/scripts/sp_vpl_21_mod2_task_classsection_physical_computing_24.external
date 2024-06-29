@@ -1,0 +1,19 @@
+name 'SP-VPL-21-mod2-Task-ClassSection_physical-computing_24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Task: Create a Classroom Section
+
+### Steps for creating a classroom section:
+
+#### **Step 1:** Open a new tab and log into your teacher account on Code.org.
+#### **Step 2:** Click on the "Create a section" button in the classroom sections area of your "My Dashboard" page. 
+#### **Step 3:** Follow the prompts to create a classroom section. 
+<br>
+
+<img src="https://images.code.org/8124e35038e13a7764d1abac6dc1579f-image-1713991634348.47.09 PM.png" alt="Screenshot showing the Add a new classroom section portion of the Teacher Dashboard. The descriptive text reads, Create a new classroom section to start assigning courses and seeing your student progress.">
+<br>
+
+#### <a href="https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section" target="blank" rel="noopener noreferrer" >Click here</a> for more detailed instructions.
+MARKDOWN

@@ -1,7 +1,6 @@
 {
   "key": "hello-world-food",
   "display_name": "Hello World: Food",
-  "category": "hoc",
   "is_featured": true,
   "assignable": true,
   "curriculum_type": null,

@@ -79,6 +79,7 @@ describe('TeacherHomepage', () => {
     expect(analyticsSpy.firstCall.args).to.deep.eq([
       'Teacher Login',
       {'user id': 42},
+      'Both',
     ]);
 
     // After setting the session value to true, we should not see sessionStorage.setItem or analyticsSpy called again.
@@ -187,12 +188,6 @@ describe('TeacherHomepage', () => {
       courses: courses,
       topCourse: topCourse,
     });
-  });
-
-  // TODO - This test can be removed when the corresponding section is removed
-  it('renders PL has moved section if plCourses exist', () => {
-    const wrapper = setUp();
-    wrapper.find('pl-courses-placeholder');
   });
 
   it('renders a TeacherResources component', () => {

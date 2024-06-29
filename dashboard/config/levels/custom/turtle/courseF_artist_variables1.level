@@ -19,7 +19,7 @@
     "disable_variable_editing": "false",
     "use_modal_function_editor": "false",
     "use_contract_editor": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseF_artist_variables1_1\",\r\n  \"callout_text\": \"Notice that blocks now have a new way to enter numbers. These `math` blocks can be pulled out and moved around!\",\r\n  \"element_id\": \"[block-id='4']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"courseF_artist_variables1_1\",\"callout_text\":\"Notice that blocks now have a new way to enter numbers. These `math` blocks can be pulled out and moved around!\",\"element_id\":\"[block-id='4']\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\"[data-id='4']\",\"localization_key\":\"courseF_artist_variables1_1\",\"callout_text\":\"Notice that blocks now have a new way to enter numbers. These `math` blocks can be pulled out and moved around!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "impressive": "false",
     "disable_sharing": "false",
     "contract_highlight": "false",
@@ -34,7 +34,7 @@
     "discard_background": "false",
     "instructions_important": "false",
     "short_instructions": "Let's draw an equilateral triangle that is exactly 50 pixels long on each side.",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
@@ -55,7 +55,7 @@
         <block type="draw_turn" inline="true">
           <title name="DIR">turnRight</title>
           <value name="VALUE">
-            <block type="math_number">
+            <block type="math_number" id="4">
               <title name="NUM">120</title>
             </block>
           </value>

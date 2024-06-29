@@ -32,7 +32,11 @@ import {
   ValidationState,
 } from './progress/ProgressManager';
 import {LevelPropertiesValidator} from './responseValidators';
-import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {
+  getAppOptionsEditBlocks,
+  getAppOptionsEditingExemplar,
+  getAppOptionsViewingExemplar,
+} from '@cdo/apps/lab2/projects/utils';
 import {START_SOURCES} from './constants';
 
 interface PageError {
@@ -90,6 +94,7 @@ export const setUpWithLevel = createAsyncThunk(
       levelPropertiesPath: string;
       channelId?: string;
       userId?: string;
+      scriptLevelId?: string;
     },
     thunkAPI
   ) => {
@@ -102,6 +107,8 @@ export const setUpWithLevel = createAsyncThunk(
       });
 
       await cleanUpProjectManager();
+      const isViewingExemplar = getAppOptionsViewingExemplar();
+      const isEditingExemplar = getAppOptionsEditingExemplar();
 
       // Load level properties if we have a levelPropertiesPath.
       const levelProperties = await loadLevelProperties(
@@ -126,10 +133,11 @@ export const setUpWithLevel = createAsyncThunk(
         return;
       }
 
-      // Start mode doesn't use channel ids so we can skip creating
-      // a project manager and just set the level data.
+      // If we are in start mode or are editing or viewing exemplars,
+      // we don't use a channel id.
+      // We can skip creating a project manager and just set the level data.
       const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-      if (isStartMode) {
+      if (isStartMode || isViewingExemplar || isEditingExemplar) {
         setProjectAndLevelData(
           {levelProperties},
           thunkAPI.signal.aborted,
@@ -150,7 +158,8 @@ export const setUpWithLevel = createAsyncThunk(
               ProjectManagerStorageType.REMOTE,
               payload.levelId,
               payload.userId,
-              payload.scriptId
+              payload.scriptId,
+              payload.scriptLevelId
             );
 
       // Only set the project manager and initiate load
@@ -248,7 +257,12 @@ export const isLabLoading = (state: {lab: LabState}) =>
 
 // This may depend on more factors, such as share.
 export const isReadOnlyWorkspace = (state: {lab: LabState}) => {
-  return !state.lab.channel?.isOwner;
+  const isOwner = state.lab.channel?.isOwner;
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const isFrozen = !!state.lab.channel?.frozen;
+  // We are in read-only mode if we are not the owner of the channel
+  // and we are not in start mode OR if the channel is frozen.
+  return (!isStartMode && !isOwner) || isFrozen;
 };
 
 // If there is an error present on the page.

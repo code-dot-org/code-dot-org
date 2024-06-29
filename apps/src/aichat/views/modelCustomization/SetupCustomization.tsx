@@ -1,25 +1,28 @@
-import React, {useCallback, useState, useMemo} from 'react';
 import classNames from 'classnames';
+import React, {useState, useMemo} from 'react';
+import {useSelector} from 'react-redux';
 
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
+import {AichatLevelProperties, ModelDescription} from '@cdo/apps/aichat/types';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown/SimpleDropdown';
-import {
-  setAiCustomizationProperty,
-  updateAiCustomization,
-} from '../../redux/aichatRedux';
-import styles from '../model-customization-workspace.module.scss';
+import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {modelDescriptions} from '../../constants';
+import {setAiCustomizationProperty} from '../../redux/aichatRedux';
+
+import CompareModelsDialog from './CompareModelsDialog';
 import {
   DEFAULT_VISIBILITIES,
   MAX_TEMPERATURE,
   MIN_TEMPERATURE,
   SET_TEMPERATURE_STEP,
 } from './constants';
+import UpdateButton from './UpdateButton';
 import {isVisible, isDisabled, isEditable} from './utils';
-import CompareModelsDialog from './CompareModelsDialog';
-import {modelDescriptions} from '../../constants';
-import {AichatLevelProperties, ModelDescription} from '@cdo/apps/aichat/types';
+
+import styles from '../model-customization-workspace.module.scss';
 
 const SetupCustomization: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -64,15 +67,13 @@ const SetupCustomization: React.FunctionComponent = () => {
     );
   }, [aiCustomizations.selectedModelId, availableModels]);
 
-  const allFieldsDisabled =
-    isDisabled(temperature) &&
-    isDisabled(systemPrompt) &&
-    isDisabled(selectedModelId);
+  const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
 
-  const onUpdate = useCallback(
-    () => dispatch(updateAiCustomization()),
-    [dispatch]
-  );
+  const allFieldsDisabled =
+    (isDisabled(temperature) &&
+      isDisabled(systemPrompt) &&
+      isDisabled(selectedModelId)) ||
+    readOnlyWorkspace;
 
   const renderChooseAndCompareModels = () => {
     return (
@@ -94,7 +95,7 @@ const SetupCustomization: React.FunctionComponent = () => {
           name="model"
           size="s"
           className={styles.selectedModelDropdown}
-          disabled={isDisabled(selectedModelId)}
+          disabled={isDisabled(selectedModelId) || readOnlyWorkspace}
         />
         {isEditable(selectedModelId) && (
           <Button
@@ -105,6 +106,7 @@ const SetupCustomization: React.FunctionComponent = () => {
               styles.updateButton,
               styles.compareModelsButton
             )}
+            disabled={readOnlyWorkspace}
           />
         )}
         {isShowingModelDialog && (
@@ -135,7 +137,7 @@ const SetupCustomization: React.FunctionComponent = () => {
               max={MAX_TEMPERATURE}
               step={SET_TEMPERATURE_STEP}
               value={aiCustomizations.temperature}
-              disabled={isDisabled(temperature)}
+              disabled={isDisabled(temperature) || readOnlyWorkspace}
               onChange={event =>
                 dispatch(
                   setAiCustomizationProperty({
@@ -155,7 +157,7 @@ const SetupCustomization: React.FunctionComponent = () => {
             <textarea
               id="system-prompt"
               value={aiCustomizations.systemPrompt}
-              disabled={isDisabled(systemPrompt)}
+              disabled={isDisabled(systemPrompt) || readOnlyWorkspace}
               onChange={event =>
                 dispatch(
                   setAiCustomizationProperty({
@@ -169,13 +171,7 @@ const SetupCustomization: React.FunctionComponent = () => {
         )}
       </div>
       <div className={styles.footerButtonContainer}>
-        <Button
-          text="Update"
-          disabled={allFieldsDisabled}
-          iconLeft={{iconName: 'edit'}}
-          onClick={onUpdate}
-          className={styles.updateButton}
-        />
+        <UpdateButton isDisabledDefault={allFieldsDisabled} />
       </div>
     </div>
   );

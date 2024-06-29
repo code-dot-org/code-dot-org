@@ -1,7 +1,9 @@
-import {expect} from '../../../util/reconfiguredChai';
+import {stub} from 'sinon';
+
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import * as utils from '@cdo/apps/utils';
-import {stub} from 'sinon';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('AnalyticsReporter', () => {
   describe('formatUserId', () => {

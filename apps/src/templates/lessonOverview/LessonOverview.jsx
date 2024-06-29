@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import styleConstants from '@cdo/apps/styleConstants';
@@ -48,14 +48,18 @@ class LessonOverview extends Component {
   constructor(props) {
     super(props);
 
-    analyticsReporter.sendEvent(EVENTS.LESSON_OVERVIEW_PAGE_VISITED_EVENT, {
-      lessonId: props.lesson.id,
-      lessonName: props.lesson.displayName,
-      lessonLink: document.location.pathname,
-      referrer: document.referrer,
-      unitName: props.lesson.unit.displayName,
-      unitLink: props.lesson.unit.link,
-    });
+    analyticsReporter.sendEvent(
+      EVENTS.LESSON_OVERVIEW_PAGE_VISITED_EVENT,
+      {
+        lessonId: props.lesson.id,
+        lessonName: props.lesson.displayName,
+        lessonLink: document.location.pathname,
+        referrer: document.referrer,
+        unitName: props.lesson.unit.displayName,
+        unitLink: props.lesson.unit.link,
+      },
+      PLATFORMS.BOTH
+    );
   }
 
   recordAndNavigateToPdf = (e, firehoseKey, url) => {

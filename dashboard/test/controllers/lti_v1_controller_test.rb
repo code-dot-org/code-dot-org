@@ -574,6 +574,46 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/users/sign_up'
   end
 
+  test 'auth - should render oauth redirector if student-email-post-enabled' do
+    DCDO.stubs(:get)
+    Cpa.stubs(:cpa_experience).with(any_parameters).returns(false)
+    SignUpTracking.stubs(:begin_sign_up_tracking).returns(false)
+    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
+    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(false)
+    DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
+    payload = {**get_valid_payload, Policies::Lti::LTI_ROLES_KEY => [Policies::Lti::CONTEXT_LEARNER_ROLE]}
+    jwt = create_jwt_and_stub(payload)
+
+    deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
+    assert deployment
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+
+    assert_template 'omniauth/redirect'
+  end
+
+  test 'auth - should render the landing page and store session state' do
+    DCDO.stubs(:get)
+    Cpa.stubs(:cpa_experience).with(any_parameters).returns(false)
+    SignUpTracking.stubs(:begin_sign_up_tracking).returns(false)
+    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
+    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
+    DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
+    payload = {**get_valid_payload, Policies::Lti::LTI_ROLES_KEY => [Policies::Lti::CONTEXT_LEARNER_ROLE]}
+    jwt = create_jwt_and_stub(payload)
+
+    deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
+    assert deployment
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+
+    expected = {
+      lti_provider_name: "platform_name",
+      new_cta_type: "new"
+    }
+
+    assert_equal expected, session[:lms_landing]
+    assert_template 'lti/v1/account_linking/landing'
+  end
+
   test 'sync - should redirect students to homepage without syncing' do
     user = create :student
     sign_in user
