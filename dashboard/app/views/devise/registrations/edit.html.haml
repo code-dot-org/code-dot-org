@@ -300,7 +300,6 @@
   script_data = {
     edit: {
       userAge: current_user.age,
-      userState: current_user.us_state,
       userType: current_user.user_type,
       isAdmin: current_user.admin,
       isOauth: current_user.oauth?,
@@ -310,7 +309,7 @@
       isCleverStudent: current_user.clever_student?,
       dependentStudentsCount: Queries::User.dependent_students_count(current_user.id),
       personalAccountLinkingEnabled: @personal_account_linking_enabled,
-      lmsName: Queries::Lti.get_lms_name_from_user(current_user),
+      lmsName: Queries::Lti.get_lms_name_from_user(current_user)
     }.to_json
   }
 %script{src: webpack_asset_path('js/devise/registrations/edit.js'), data: script_data}
