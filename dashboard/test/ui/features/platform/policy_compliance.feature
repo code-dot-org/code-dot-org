@@ -365,3 +365,23 @@ Feature: Policy Compliance and Parental Permission
     Then element "#user_us_state" is disabled
     Then element "#user_age" is disabled
   
+   Scenario: Student account under-13 not in Colorado created after CPA exception using clever cannot change their age and state
+    Given I create a young student using clever named "Tandy" after CPA exception
+
+    Given I am on "http://studio.code.org/users/edit"
+
+    Then I wait to see "#user_age"
+    Then I wait to see "#user_us_state"
+    Then element "#user_us_state" is enabled
+    Then element "#user_age" is enabled
+  
+  Scenario: Student account under-13 not in Colorado created before CPA exception using clever cannot change their age and state
+    Given I create a young student using clever named "Tandy" before CPA exception
+
+    Given I am on "http://studio.code.org/users/edit"
+
+    Then I wait to see "#user_age"
+    Then I wait to see "#user_us_state"
+    Then element "#user_us_state" is enabled
+    Then element "#user_age" is enabled
+  
