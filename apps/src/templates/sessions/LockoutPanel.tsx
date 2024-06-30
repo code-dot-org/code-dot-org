@@ -172,15 +172,6 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
   });
   const pendingPromptParts = pendingPrompt.split('{pendingEmail}');
 
-  const tokenElement = document.querySelector('meta[name="csrf-token"]');
-  let csrfToken = '';
-  if (tokenElement) {
-    const content = tokenElement.attributes.getNamedItem('content');
-    if (content) {
-      csrfToken = content.value;
-    }
-  }
-
   // Child permission status from the user record
   const permissionStatus: {message: string; style: CSSProperties} = {
     message: i18n.sessionLockoutStatusNotSubmitted(),
@@ -225,7 +216,6 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
         method="post"
         onSubmit={submitPermissionRequest}
       >
-        <input type="hidden" value={csrfToken} name="authenticity_token" />
         {/* The top prompt, which depends on whether or not a request is pending. */}
         {pendingEmail && (
           <p>
