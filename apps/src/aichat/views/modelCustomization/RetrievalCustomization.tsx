@@ -75,6 +75,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
           <Button
             text="Add"
             type="secondary"
+            size="s"
             onClick={onAdd}
             iconLeft={{iconName: 'plus'}}
             disabled={!newRetrievalContext || isReadOnly}
