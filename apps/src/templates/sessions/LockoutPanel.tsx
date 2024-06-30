@@ -1,5 +1,6 @@
 import cookies from 'js-cookie';
 import React, {CSSProperties, useState, useEffect, useReducer} from 'react';
+import {useSelector} from 'react-redux';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -7,6 +8,7 @@ import parentalPermissionRequestReducer, {
   REQUEST_PARENTAL_PERMISSION_SUCCESS,
   requestParentalPermission,
 } from '@cdo/apps/redux/parentalPermissionRequestReducer';
+import {RootState} from '@cdo/apps/types/redux';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import usePrevious from '@cdo/apps/util/usePrevious';
 import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
@@ -67,6 +69,7 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
   const prevPendingEmail = usePrevious(pendingEmail);
 
   const [parentEmail, setParentEmail] = useState(props.pendingEmail);
+  const currentUser = useSelector((state: RootState) => state.currentUser);
 
   const [
     {action, error, parentalPermissionRequest, isLoading: loading},
@@ -82,12 +85,19 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
   }, [parentalPermissionRequest]);
 
   useEffect(() => {
-    reportEvent(EVENTS.CAP_LOCKOUT_SHOWN, {
-      inSection: props.inSection,
-      consentStatus: props.permissionStatus,
-      requestSent: !!props.pendingEmail,
-    });
-  }, [props.inSection, props.permissionStatus, props.pendingEmail]);
+    if (currentUser?.userId) {
+      reportEvent(EVENTS.CAP_LOCKOUT_SHOWN, {
+        inSection: props.inSection,
+        consentStatus: props.permissionStatus,
+        requestSent: !!props.pendingEmail,
+      });
+    }
+  }, [
+    props.inSection,
+    props.permissionStatus,
+    props.pendingEmail,
+    currentUser.userId,
+  ]);
 
   /**
    * This useEffect hook is responsible for reporting successful parent permission request events:
