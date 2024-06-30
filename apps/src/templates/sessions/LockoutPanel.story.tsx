@@ -1,6 +1,11 @@
 import {StoryFn} from '@storybook/react';
 import React from 'react';
+import {Provider} from 'react-redux';
 
+import {getStore, registerReducers} from '@cdo/apps/redux';
+import currentUser, {
+  setInitialData,
+} from '@cdo/apps/templates/currentUserRedux';
 import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
 
 import LockoutPanel, {LockoutPanelProps} from './LockoutPanel';
@@ -19,8 +24,18 @@ const defaultArgs: LockoutPanelProps = {
   disallowedEmail: 'student@test.com',
 };
 
+const store = getStore();
+registerReducers({currentUser});
+store.dispatch(
+  setInitialData({
+    id: 1,
+  })
+);
+
 const Template: StoryFn<typeof LockoutPanel> = args => (
-  <LockoutPanel {...defaultArgs} {...args} />
+  <Provider store={store}>
+    <LockoutPanel {...defaultArgs} {...args} />
+  </Provider>
 );
 
 export const NewAccount = Template.bind({});
