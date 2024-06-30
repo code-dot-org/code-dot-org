@@ -12,6 +12,7 @@ import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {registerReducers} from '@cdo/apps/redux';
 import {RootState} from '@cdo/apps/types/redux';
+import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
@@ -248,11 +249,54 @@ export const onSaveNoop =
   };
 
 // Thunk called when a save has failed.
-export const onSaveFail = () => (dispatch: AppDispatch) => {
+export const onSaveFail =
+  (e: Error) => (dispatch: AppDispatch, getState: () => RootState) => {
+    // Default save error message.
+    let errorMessage =
+      'There was an error saving your project. Please try again.';
+    if (e instanceof NetworkError) {
+      e.response
+        .json()
+        .then(body => {
+          const changedProperties = findChangedProperties(
+            getState().aichat.savedAiCustomizations,
+            getState().aichat.currentAiCustomizations
+          );
+          let flaggedProperties;
+          if (
+            changedProperties.includes('systemPrompt') &&
+            changedProperties.includes('retrievalContexts')
+          ) {
+            flaggedProperties = 'system prompt and/or retrieval contexts';
+          } else if (changedProperties.includes('systemPrompt')) {
+            flaggedProperties = 'system prompt';
+          } else if (changedProperties.includes('retrievalContexts')) {
+            flaggedProperties = 'retrieval contexts';
+          }
+          if (body?.details?.profaneWords?.length > 0 && flaggedProperties) {
+            errorMessage = `Profanity detected in the ${flaggedProperties} and cannot be updated. Please try again.`;
+          }
+          dispatchSaveFailNotification(dispatch, errorMessage);
+        })
+        // Catch any errors in parsing the response body or if there was no response body
+        // and fall back to the default error message.
+        .catch(() => {
+          dispatchSaveFailNotification(dispatch, errorMessage);
+        });
+    } else {
+      // If an Error was passed instead of a NetworkError, fall back to the default error message.
+      dispatchSaveFailNotification(dispatch, errorMessage);
+    }
+  };
+
+const dispatchSaveFailNotification = (
+  dispatch: AppDispatch,
+  errorMessage: string
+) => {
   dispatch(
     addNotification({
       id: getNewMessageId(),
-      text: 'Error updating project. Please try again.',
+      text: errorMessage,
       notificationType: 'error',
       timestamp: Date.now(),
     })
