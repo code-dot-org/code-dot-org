@@ -284,75 +284,74 @@ const LockoutPanel: React.FC<LockoutPanelProps> = props => {
         {/* This field allows the input of an email address. */}
         {/* Parent Email: [email] */}
         {status !== ChildAccountComplianceStates.PERMISSION_GRANTED && (
-          <div style={styles.sections}>
-            <div style={styles.section}>
-              <label
-                style={isRTL ? styles.labelRTL : styles.label}
-                htmlFor="parent-email"
-              >
-                <strong>{i18n.sessionLockoutParentEmailField()}</strong>
-              </label>
+          <div>
+            <div style={styles.sections}>
+              <div style={styles.section}>
+                <label
+                  style={isRTL ? styles.labelRTL : styles.label}
+                  htmlFor="parent-email"
+                >
+                  <strong>{i18n.sessionLockoutParentEmailField()}</strong>
+                </label>
 
-              {/* Slightly complicated layout allows for text underneath. */}
-              <div style={styles.fieldSection}>
-                <input
-                  style={styles.field}
-                  onChange={onEmailUpdate}
-                  onInput={onEmailUpdate}
-                  onBlur={onEmailUpdate}
-                  defaultValue={parentEmail}
-                  name="parent-email"
-                  id="parent-email"
-                />
+                {/* Slightly complicated layout allows for text underneath. */}
+                <div style={styles.fieldSection}>
+                  <input
+                    style={styles.field}
+                    onChange={onEmailUpdate}
+                    onInput={onEmailUpdate}
+                    onBlur={onEmailUpdate}
+                    defaultValue={parentEmail}
+                    name="parent-email"
+                    id="parent-email"
+                  />
 
-                {/* Show a 'Last email sent' prompt when available. */}
-                {pendingEmail && lastEmailDate && (
-                  <p style={styles.lastEmail}>
-                    <em id="lockout-last-email-date">
-                      {i18n.sessionLockoutLastEmailSent() + ' '}
-                      {lastEmailDate.toLocaleDateString(locale, {
-                        ...dateOptions,
-                        hour: 'numeric',
-                        minute: 'numeric',
-                      })}
-                    </em>
-                  </p>
-                )}
+                  {/* Show a 'Last email sent' prompt when available. */}
+                  {pendingEmail && lastEmailDate && (
+                    <p style={styles.lastEmail}>
+                      <em id="lockout-last-email-date">
+                        {i18n.sessionLockoutLastEmailSent() + ' '}
+                        {lastEmailDate.toLocaleDateString(locale, {
+                          ...dateOptions,
+                          hour: 'numeric',
+                          minute: 'numeric',
+                        })}
+                      </em>
+                    </p>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        )}
-
-        {status !== ChildAccountComplianceStates.PERMISSION_GRANTED && (
-          <div style={styles.buttons}>
-            {/* A sign-out button. */}
-            <Button
-              id="lockout-signout"
-              type="button"
-              style={styles.button}
-              text={i18n.signOutButton()}
-              color={Button.ButtonColor.gray}
-              onClick={signOut}
-            />
-
-            {/* The submit button. */}
-            {/* An empty onClick will still submit the form. */}
-            {loading ? (
-              <Spinner />
-            ) : (
+            <div style={styles.buttons}>
+              {/* A sign-out button. */}
               <Button
-                id="lockout-submit"
-                type="submit"
+                id="lockout-signout"
+                type="button"
                 style={styles.button}
-                text={
-                  pendingEmail
-                    ? i18n.sessionLockoutUpdateSubmit()
-                    : i18n.sessionLockoutSubmit()
-                }
-                disabled={disabled}
-                onClick={() => {}}
+                text={i18n.signOutButton()}
+                color={Button.ButtonColor.gray}
+                onClick={signOut}
               />
-            )}
+
+              {/* The submit button. */}
+              {/* An empty onClick will still submit the form. */}
+              {loading ? (
+                <Spinner />
+              ) : (
+                <Button
+                  id="lockout-submit"
+                  type="submit"
+                  style={styles.button}
+                  text={
+                    pendingEmail
+                      ? i18n.sessionLockoutUpdateSubmit()
+                      : i18n.sessionLockoutSubmit()
+                  }
+                  disabled={disabled}
+                  onClick={() => {}}
+                />
+              )}
+            </div>
           </div>
         )}
       </form>
