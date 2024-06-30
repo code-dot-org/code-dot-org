@@ -15,7 +15,7 @@ registerReducers({currentUser});
 store.dispatch(
   setInitialData({
     id: 1,
-    childAccountComplianceState: 'l',
+    child_account_compliance_state: 'l',
   })
 );
 
