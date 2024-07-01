@@ -287,6 +287,9 @@ steps:
     image: node:20-bookworm
     name: playwright
   - name: update-cache
+    depends_on:
+      - playwright
+      - "ui-tests"
     image: plugins/s3-cache
     volumes:
       - name: rbenv
