@@ -150,6 +150,8 @@ steps:
   # We cache a clone of staging in the `cache-staging-clone` pipeline
   - name: get-cached-staging
     image: plugins/s3-cache
+    depends_on:
+      - info
     settings:
       filename: cache-staging-clone.tar
       endpoint: s3://cdo-drone
@@ -161,6 +163,8 @@ steps:
 
   - name: checkout
     image: bitnami/git
+    depends_on:
+      - "get-cached-staging"
     commands:
       - git lfs install --skip-repo
       # We should be in a cached git repo, but clone if the cache failed
@@ -180,6 +184,8 @@ steps:
 
   - name: restore-cache
     image: plugins/s3-cache
+    depends_on:
+      - checkout
     settings:
       endpoint: s3://cdo-drone
       debug: true
@@ -190,10 +196,7 @@ steps:
   - name: ui-tests-backend
     detach: true
     depends_on:
-      - "ui-tests-redis"
-      - "get-cached-staging"
       - checkout
-      - "restore-cache"
     # see: docker/dockerfiles/Dockerfile
     image: codedotorg/code-dot-org:1.9.4
     pull: always
