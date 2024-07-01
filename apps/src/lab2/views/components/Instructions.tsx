@@ -5,10 +5,12 @@ import moduleStyles from './instructions.module.scss';
 import {useSelector} from 'react-redux';
 import {navigateToNextLevel} from '@cdo/apps/code-studio/progressRedux';
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
-import {LabState} from '../../lab2Redux';
+import {LabState, setPredictResponse} from '../../lab2Redux';
 import {ThemeContext} from '../ThemeWrapper';
+import PredictQuestion from './PredictQuestion';
+import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 const commonI18n = require('@cdo/locale');
 
 interface InstructionsProps {
@@ -30,6 +32,7 @@ interface InstructionsProps {
    * A callback when the user clicks on clickable text.
    */
   handleInstructionsTextClick?: (id: string) => void;
+  manageNavigation?: boolean;
 }
 
 /**
@@ -46,6 +49,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   layout,
   imagePopOutDirection,
   handleInstructionsTextClick,
+  manageNavigation = true,
 }) => {
   const instructionsText = useSelector(
     (state: {lab: LabState}) => state.lab.levelProperties?.longInstructions
@@ -54,15 +58,22 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   const {hasConditions, message, satisfied, index} = useSelector(
     (state: {lab: LabState}) => state.lab.validationState
   );
+  const predictSettings = useAppSelector(
+    state => state.lab.levelProperties?.predictSettings
+  );
+  const predictResponse = useAppSelector(state => state.lab.predictResponse);
 
   // If there are no validation conditions, we can show the continue button so long as
-  // there is another level. If validation is present, also check that conditions are satisfied.
-  const showContinueButton = (!hasConditions || satisfied) && hasNextLevel;
+  // there is another level and manageNavigation is true.
+  // If validation is present, also check that conditions are satisfied.
+  const showContinueButton =
+    manageNavigation && (!hasConditions || satisfied) && hasNextLevel;
 
   // If there are no validation conditions, we can show the finish button so long as
-  // this is the last level in the progression. If validation is present, also
-  // check that conditions are satisfied.
-  const showFinishButton = (!hasConditions || satisfied) && !hasNextLevel;
+  // this is the last level in the progression and the instructions panel is managing navigation.
+  // If validation is present, also check that conditions are satisfied.
+  const showFinishButton =
+    manageNavigation && (!hasConditions || satisfied) && !hasNextLevel;
 
   const dispatch = useAppDispatch();
 
@@ -90,6 +101,9 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       beforeFinish={beforeNextLevel}
       onNextPanel={onNextPanel}
       theme={theme}
+      predictSettings={predictSettings}
+      predictResponse={predictResponse}
+      setPredictResponse={response => dispatch(setPredictResponse(response))}
       {...{baseUrl, layout, imagePopOutDirection, handleInstructionsTextClick}}
     />
   );
@@ -125,6 +139,9 @@ interface InstructionsPanelProps {
    * A callback when the user clicks on clickable text.
    */
   handleInstructionsTextClick?: (id: string) => void;
+  predictSettings?: LevelPredictSettings;
+  predictResponse?: string;
+  setPredictResponse: (response: string) => void;
 }
 
 /**
@@ -144,6 +161,9 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   imagePopOutDirection = 'right',
   theme = 'dark',
   handleInstructionsTextClick,
+  predictSettings,
+  predictResponse,
+  setPredictResponse,
 }) => {
   const [showBigImage, setShowBigImage] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
@@ -235,6 +255,11 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               markdown={text}
               className={moduleStyles.markdownText}
               handleInstructionsTextClick={handleInstructionsTextClick}
+            />
+            <PredictQuestion
+              predictSettings={predictSettings}
+              predictResponse={predictResponse}
+              setPredictResponse={setPredictResponse}
             />
           </div>
         )}

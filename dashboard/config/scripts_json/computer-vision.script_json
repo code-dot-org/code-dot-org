@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "computer-vision",
-    "serialized_at": "2024-06-26 19:31:59 UTC",
+    "serialized_at": "2024-06-30 22:45:29 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -132,8 +132,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**How can we put ourselves in the shoes of our users?**\n\nThis lesson delves into understanding user needs and problems through qualitative and quantitative data collection. Students are introduced to the Design Thinking Process, particularly the \"Empathize\" phase, using real-world examples like FarmWise's approach to understanding farmer needs. Students then practice developing empathy and tailored research questions for community-specific issues. The aim is for students to learn effective strategies for gathering user data that will inform the design of practical solutions.",
-        "preparation": "* Print copies of the Communities I Belong To activity guide (one for each student)\n* Print copies of the Problem Observations to Research Questions activity guide (one for each group of students)\n",
+        "overview": "**How can we put ourselves in the shoes of our users?**\n\nThis lesson introduces the unit project and has students review the rubric. Next, this lesson delves into understanding user needs and problems through qualitative and quantitative data collection. Students are introduced to the Design Thinking Process, particularly the \"Empathize\" phase, using real-world examples like FarmWise's approach to understanding farmer needs. Students then practice developing empathy and tailored research questions for community-specific issues. The aim is for students to learn effective strategies for gathering user data that will inform the design of practical solutions.",
+        "preparation": "* Print copies of the Project Rubric (one for each student)\n* Print copies of the Communities I Belong To activity guide (one for each student)\n* Print copies of the Problem Observations to Research Questions activity guide (one for each group of students)\n",
         "student_overview": "**How can we put ourselves in the shoes of our users?**\n\nToday's lesson focuses on empathizing with users, an essential step in creating technology that meets people's needs. You will look at how companies like Farmwise learn directly from their users by engaging with them in meaningful ways. You will also explore different communities you belong to, identify their unique challenges, and think about questions that can help you better understand these challenges."
       },
       "seeding_key": {
@@ -467,7 +467,7 @@
       "key": "5c0b2d51-69a6-436f-9b5a-5fda75fd2f8c",
       "position": 1,
       "properties": {
-        "duration": 10,
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -1316,8 +1316,37 @@
       }
     },
     {
-      "key": "426dc13f-91bf-4c41-ad33-80d05983adc2",
+      "key": "856537b1-9395-4620-a851-66bc18ce5478",
       "position": 1,
+      "properties": {
+        "description": "Throughout this unit, you will working to develop your own computer vision application prototype. These are some of the steps you will take along the way and when you are done, you will have something called a prototype that demonstrates what your application might look like, how it would work, and who it would help.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "856537b1-9395-4620-a851-66bc18ce5478",
+        "lesson_activity.key": "8d2c7be6-f2d9-44b5-8a95-a162c314c3af"
+      }
+    },
+    {
+      "key": "2c6fc09e-2b0e-4561-ad06-a1d4d14081d2",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Computer Vision Application Project Rubric.\n\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students read over the project rubric and respond to the questions: “What do you notice?” and “What do you wonder?”\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You may choose to have students share some of what they wrote out loud but since this is the first time students are seeing this, it can be more helpful to have students write down their noticings and wonderings and collect them to review later. This activity will most likely lead to students generating lots of questions. You don’t need to address all of these questions now and can instead collect them to see which things will be addressed throughout the unit and which things may need additional information to answer."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2c6fc09e-2b0e-4561-ad06-a1d4d14081d2",
+        "lesson_activity.key": "8d2c7be6-f2d9-44b5-8a95-a162c314c3af"
+      }
+    },
+    {
+      "key": "426dc13f-91bf-4c41-ad33-80d05983adc2",
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Design Thinking Process.\n",
         "tips": [
@@ -1333,20 +1362,10 @@
       }
     },
     {
-      "key": "2c6fc09e-2b0e-4561-ad06-a1d4d14081d2",
-      "position": 2,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "2c6fc09e-2b0e-4561-ad06-a1d4d14081d2",
-        "lesson_activity.key": "8d2c7be6-f2d9-44b5-8a95-a162c314c3af"
-      }
-    },
-    {
       "key": "4d4ad117-d4fe-4c21-b623-0ef95bfb48df",
-      "position": 3,
+      "position": 4,
       "properties": {
-        "description": "The Design Thinking Process involves five steps that teams use to understand users, challenge assumptions, redefine problems and create innovative solutions to prototype and test. This process and the stages involved are things you’ve all done at different points in your life. As we go through this one-by-one, think about times when you’ve done something similar and write those down on your activity guide.",
+        "description": "To develop the application you will be working on throughout this unit, we will follow the Design Thinking Process. The Design Thinking Process involves five steps that teams use to understand users, challenge assumptions, redefine problems and create innovative solutions to prototype and test. This process and the stages involved are things you’ve all done at different points in your life. As we go through this one-by-one, think about times when you’ve done something similar and write those down on your activity guide.",
         "remarks": true
       },
       "seeding_key": {
@@ -1356,7 +1375,7 @@
     },
     {
       "key": "5c2bcbad-d079-4a8a-afcb-5d11e1d1eb42",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "These steps work together in a cycle, without a specific start, end, or direction.\n\nToday, we'll focus on empathizing. This involves putting ourselves into the shoes of our users…\n\nHere’s an example of how a group of designers might empathize with their users involving the company we saw in the warm up video, Farmwise.",
         "remarks": true
@@ -1368,7 +1387,7 @@
     },
     {
       "key": "7f94729f-cfd1-4b4b-87d1-7a26525e7bb5",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Ask a student to read the quote out loud to the rest of the class.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What do you think the FarmWise employees learned from interviewing farmers about the difficulties they faced?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** You’ll return to some possible examples for this later in the lesson, so for this discussion, try to encourage as wide a range of possibilities as possible instead of going into depth on any one idea.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Communities I Belong To activity guide.",
         "tips": [
@@ -1385,7 +1404,7 @@
     },
     {
       "key": "21004d9c-1ce5-47dc-be49-0dd701418ff2",
-      "position": 6,
+      "position": 7,
       "properties": {
       },
       "seeding_key": {
@@ -1395,7 +1414,7 @@
     },
     {
       "key": "f931002a-cceb-4e2a-ae93-0dfb310e539a",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "Next, we are going to start the process of being designers ourselves. To start the process, we need to figure out who we are designing for, which involves finding a community with a need. To help with this, we are all going to brainstorm a list of communities that we belong to in our Unit Guides. Here is an example of how this brainstorm might look:\n\nThese can be general communities related to characteristics such as age, interests, location, pets, or any number of other characteristics. A community can be however you define it, so feel free to include any community you belong to.",
         "remarks": true
@@ -1407,7 +1426,7 @@
     },
     {
       "key": "90a72984-9ea7-4898-aad4-fca4dbe205ab",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students a few minutes to complete the Communities I Belong To activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to participate in a Give One, Get One. Use the musical cue on the slides to facilitate the timing of students walking around the room to share responses with each other."
       },
@@ -1418,7 +1437,7 @@
     },
     {
       "key": "5112c678-0a5b-4d55-a3ea-2191eb719f4f",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "Next, we are going to practice turning observations about problems facing a community, into questions that will allow us to gather more information about our users' needs. For this, let's return to the example of FarmWise employees volunteering on farms, and interviewing farmers.\n\nWe already discussed some things that the FarmWise employees might have learned from their interviews. Let's break down the process of gathering that information a little bit more, starting with some observations that the designers might have made while volunteering as part of the farming community: lack of access to enough water, trouble finding enough workers to hire, and challenges minimizing the loss of crops due to pests and disease.\n\nThese problems and the needs associated with them might be obvious to members of the community. But, as designers, our job is to find out more about what our users need instead of making assumptions. To do this, we need to dig a bit deeper by talking with users, just like the FarmWise employees interviewed farmers.\n\nTurning these observations into research questions will help you, as a designer, gather more data about your users and help you more clearly define the problem you are trying to solve.\n\nHere is an example of a question that the employees at FarmWise might have asked to learn more about the issue of water scarcity. Can you think of questions they might ask about labor shortages, or pest and disease management?",
         "remarks": true
@@ -1430,7 +1449,7 @@
     },
     {
       "key": "8fb30071-3167-484e-bb7c-aba1fc0319b3",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Give students a minute to process and brainstorm possible questions before asking a few students to share possible questions."
       },
@@ -1441,7 +1460,7 @@
     },
     {
       "key": "6e40962b-a495-46c2-83a7-a98e0732560d",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "Nice job coming up with questions of your own! Here are other examples of questions that might have been helpful. Notice that most of them are framed in an open-ended way, asking the user to describe experiences they’ve had.\n\nSoon, we will get into groups to work on developing research questions. Before we do, we will establish roles for when we collaborate. For today, you will work in groups of 3, with each person playing a different role.\n\nOne person will be the timekeeper. This person is in charge of making sure the group stays on time with each chunk of work.\n\nOne person will be the scribe. This person is in charge of recording key points from discussions and documenting the group’s work.\n\nOne person will be the Task Manager. This person is in charge of making sure the group understands the task at hand and keeps the group on task throughout the work.\n\nHaving specific roles in a group helps us work together smoothly, just like in real jobs where everyone has a special role to make big projects succeed. Think of working in a group like being on a movie set: everyone has a specific job to do. Just like a director guides a movie and a sound engineer captures the best audio, each role helps us tackle tasks more effectively, improving our collaboration skills.",
         "remarks": true
@@ -1453,12 +1472,22 @@
     },
     {
       "key": "71b45436-2959-4a4a-a182-468b928165f1",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "**Group:** Place students into groups of 3.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group a copy of Problem Observations → Research Questions activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Problem Observations → Research Question activity guide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As groups work together, walk around the room to observe and listen to how students are doing with group roles, noting anything you’d like to bring up as during the wrap up."
       },
       "seeding_key": {
         "activity_section.key": "71b45436-2959-4a4a-a182-468b928165f1",
+        "lesson_activity.key": "8d2c7be6-f2d9-44b5-8a95-a162c314c3af"
+      }
+    },
+    {
+      "key": "eb667f02-fb0b-47d8-819a-ebb9a115a2b0",
+      "position": 14,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "eb667f02-fb0b-47d8-819a-ebb9a115a2b0",
         "lesson_activity.key": "8d2c7be6-f2d9-44b5-8a95-a162c314c3af"
       }
     },
@@ -2788,7 +2817,13 @@
       "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How might an image dataset labeled with classes help a computer vision application?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Having a well-labeled dataset is crucial in being able to train computer vision models to accurately identify and classify the objects that it sees. However, as seen here with COCO, the classes that it is able to recognize are limited in scope. Oftentimes, there is a need to create and classify one’s own dataset for more niche computer vision applications and tasks.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 to access MediaPipe's Object Detection model demo. Have students play around with the model by uploading a sample image.",
-        "progression_name": "MediaPipe Object Detection"
+        "progression_name": "MediaPipe Object Detection",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**MediaPipe Alternative:** If your students are unable to access the MediaPipe Model Demo, you could use this tool as an alternative: https://justadudewhohacks.github.io/face-api.js/face_and_landmark_detection/ This tool involves facial recognition instead of object detection but a similar discussion can be had focusing on the datasets that the different models were trained on and the different results. Have students start the investigation with the SSD MobileNet v1 model, which was trained on the COCO dataset they just looked at. Then have students used the Tiny Face Detector model, which was trained on the [WIDER Face dataset](http://shuoyang1213.me/WIDERFACE/index.html)."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9bfa8d09-3497-4707-927e-f3b0675e5a32",
@@ -4203,6 +4238,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computervision-lesson1-juicemindquiz"
+        ],
         "progression": "JuiceMind Assessment"
       },
       "bonus": false,
@@ -4275,6 +4313,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computervision-lesson2-juicemindquiz"
+        ],
         "progression": "JuiceMind Assessment"
       },
       "bonus": false,
@@ -4322,6 +4363,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computervision-lesson3-juicemindquiz"
+        ],
         "progression": "JuiceMind Assessment"
       },
       "bonus": false,
@@ -4419,6 +4463,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computervision-lesson4-juicemindquiz"
+        ],
         "progression": "JuiceMind Assessment"
       },
       "bonus": false,
@@ -4516,6 +4563,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computervision-lesson5-juicemindquiz"
+        ],
         "progression": "JuiceMind Assessment"
       },
       "bonus": false,
@@ -4613,6 +4663,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computervision-lesson6-juicemindquiz"
+        ],
         "progression": "JuiceMind Assessment"
       },
       "bonus": false,
@@ -4685,6 +4738,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computervision-lesson7-juicemindquiz"
+        ],
         "progression": "JuiceMind Assessment"
       },
       "bonus": false,
@@ -4907,6 +4963,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computervision-lesson8-juicemindquiz"
+        ],
         "progression": "JuiceMind Assessment"
       },
       "bonus": false,
@@ -5004,6 +5063,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computervision-lesson9-juicemindquiz"
+        ],
         "progression": "JuiceMind Assessment"
       },
       "bonus": false,
@@ -5126,6 +5188,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computervision-lesson10-juicemindquiz"
+        ],
         "progression": "JuiceMind Assessment"
       },
       "bonus": false,
@@ -5248,6 +5313,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computervision-lesson11-juicemindquiz"
+        ],
         "progression": "JuiceMind Assessment"
       },
       "bonus": false,
@@ -5395,6 +5463,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computervision-lesson13-juicemindquiz"
+        ],
         "progression": "JuiceMind Assessment"
       },
       "bonus": false,
@@ -5492,6 +5563,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "computervision-lesson14-juicemindquiz"
+        ],
         "progression": "JuiceMind Assessment"
       },
       "bonus": false,
@@ -7042,6 +7116,12 @@
       "seeding_key": {
         "lesson.key": "Empathizing with Users",
         "resource.key": "problem_observations_to_research_questions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Empathizing with Users",
+        "resource.key": "project_rubric"
       }
     },
     {

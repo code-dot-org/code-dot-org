@@ -10,6 +10,16 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  background: $light_white;
+
+  .tabsContainer {
+    background-color: #EAEBEB
+  }
+
+  .tabPanels {
+    padding: 16px;
+    height: 100%;
+  }
 
   textarea {
     @extend %full-width;

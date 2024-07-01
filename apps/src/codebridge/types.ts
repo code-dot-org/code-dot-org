@@ -48,7 +48,7 @@ export type SetProjectFunction = (project: ProjectType) => void;
 export type SetConfigFunction = (project: ConfigType) => void;
 export type ResetProjectFunction = () => void;
 export type OnRunFunction = (
-  runTexts: boolean,
+  runTests: boolean,
   dispatch: Dispatch<AnyAction>,
   permissions: string[],
   source: MultiFileSource | undefined

@@ -490,7 +490,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   extendedWorkspaceSvg.addUnusedBlocksHelpListener = function () {};
 
   extendedWorkspaceSvg.getAllUsedBlocks = function () {
-    return this.getAllBlocks().filter(block => block.isEnabled());
+    return this.getAllBlocks().filter(
+      block => block.isEnabled() && block.getRootBlock().isEnabled()
+    );
   };
 
   extendedWorkspaceSvg.isReadOnly = function () {
@@ -827,14 +829,23 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
   // Google Blockly labs also need to clear separate workspaces for the function editor.
   blocklyWrapper.clearAllStudentWorkspaces = function () {
-    Blockly.getMainWorkspace().clear();
-    const functionEditorWorkspace = Blockly.getFunctionEditorWorkspace();
-    if (functionEditorWorkspace) {
-      functionEditorWorkspace.clear();
-    }
-    if (Blockly.getHiddenDefinitionWorkspace()) {
-      Blockly.getHiddenDefinitionWorkspace().clear();
-    }
+    // Disable Blockly events to prevent unnecessary event mirroring
+    Blockly.Events.disable();
+
+    const studentWorkspaces = [
+      Blockly.getMainWorkspace(),
+      Blockly.getFunctionEditorWorkspace(),
+      Blockly.getHiddenDefinitionWorkspace(),
+    ];
+
+    studentWorkspaces.forEach(workspace => {
+      if (workspace) {
+        workspace.clear();
+        workspace.getProcedureMap().clear();
+      }
+    });
+
+    Blockly.Events.enable();
   };
 
   blocklyWrapper.customBlocks = customBlocks;

@@ -47,13 +47,13 @@
     "block_moving_into_walls": "false",
     "instructions_important": "false",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"You will want to replace the words “What should I shout?” in the green block with “Goal!”\",\"hint_id\":\"courseF_playlab_variables1a_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dce5cbb6e2c78f1ffa5c6379c9054cf5/courseF_playlab_variables1a.mp3\"}]",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseF_playlab_variables1a_1\",\r\n  \"callout_text\": \"The toolbox has been organized into categories to make it easier to find the blocks you need.\",\r\n  \"element_id\": \"[id=':1.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": null,\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"courseF_playlab_variables1a_1\",\"callout_text\":\"The toolbox has been organized into categories to make it easier to find the blocks you need.\",\"element_id\":\"[id=':1.label']\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":null,\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\"[id='blockly-0.label']\",\"localization_key\":\"courseF_playlab_variables1a_1\",\"callout_text\":\"The toolbox has been organized into categories to make it easier to find the blocks you need.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":null,\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
     "background": "soccer",
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

@@ -1,0 +1,9 @@
+name 'Computer-Vision-Assessment-Q10'
+title 'Computer Vision Assessment'
+
+question 'Identify the scenario below that is least likely to be successful when training a model with Teachable Machine'
+wrong 'Training a model to distinguish between different species of birds using photos'
+right 'Predicting future weather patterns based on images of historical weather features'
+wrong 'Developing a model to identify various hand gestures using video input'
+wrong 'Creating a model to recognize different spoken commands using audio samples'
+allow_multiple_attempts false
