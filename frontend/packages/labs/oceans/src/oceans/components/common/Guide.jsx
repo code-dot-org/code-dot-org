@@ -56,8 +56,6 @@ let UnwrappedGuide = class Guide extends React.Component {
         guidePlayingTextToSpeech = currentGuide;
         textPlayedViaClick = true;
         textToSpeechStarted = true;
-      } else {
-        console.log('! no text this time');
       }
     }
 
