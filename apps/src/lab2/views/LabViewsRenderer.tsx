@@ -29,6 +29,7 @@ import ExtraLinks from './ExtraLinks';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {getAppOptionsViewingExemplar} from '../projects/utils';
 import NoExemplarPage from './components/NoExemplarPage';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 // Configuration for how a Lab should be rendered
 interface AppProperties {
@@ -105,6 +106,8 @@ const appsProperties: {[appName in AppName]?: AppProperties} = {
   },
 };
 
+const hideExtraLinks = queryParams('hide-extra-links') === 'true';
+
 const LabViewsRenderer: React.FunctionComponent = () => {
   const currentAppName = useAppSelector(
     state => state.lab.levelProperties?.appName
@@ -172,14 +175,14 @@ const LabViewsRenderer: React.FunctionComponent = () => {
                 visible={currentAppName === appName}
               >
                 {renderApp(properties)}
-                {levelId && <ExtraLinks levelId={levelId} />}
+                {!hideExtraLinks && levelId && <ExtraLinks levelId={levelId} />}
               </VisibilityContainer>
             )}
 
             {!properties.backgroundMode && currentAppName === appName && (
               <VisibilityContainer appName={appName} visible={true}>
                 {renderApp(properties)}
-                {levelId && <ExtraLinks levelId={levelId} />}
+                {!hideExtraLinks && levelId && <ExtraLinks levelId={levelId} />}
               </VisibilityContainer>
             )}
           </ProgressContainer>

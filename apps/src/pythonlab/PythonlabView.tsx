@@ -5,10 +5,12 @@ import {ConfigType} from '@codebridge/types';
 import {LanguageSupport} from '@codemirror/language';
 import {python} from '@codemirror/lang-python';
 import {Codebridge} from '@codebridge/Codebridge';
-import {ProjectSources} from '@cdo/apps/lab2/types';
+import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {useSource} from '@codebridge/hooks/useSource';
 import {handleRunClick} from './pyodideRunner';
+import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {sendPredictLevelReport} from '@cdo/apps/code-studio/progressRedux';
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
@@ -74,6 +76,22 @@ const defaultConfig: ConfigType = {
 const PythonlabView: React.FunctionComponent = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
   const {source, setSource, resetToStartSource} = useSource(defaultProject);
+  const isPredictLevel = useAppSelector(
+    state => state.lab.levelProperties?.predictSettings?.isPredictLevel
+  );
+  const predictResponse = useAppSelector(state => state.lab.predictResponse);
+
+  const onRun = (
+    runTests: boolean,
+    dispatch: AppDispatch,
+    permissions: string[],
+    source: MultiFileSource | undefined
+  ) => {
+    handleRunClick(runTests, dispatch, permissions, source);
+    if (isPredictLevel) {
+      dispatch(sendPredictLevelReport('pythonlab', predictResponse));
+    }
+  };
 
   return (
     <div className={moduleStyles.pythonlab}>
@@ -84,7 +102,7 @@ const PythonlabView: React.FunctionComponent = () => {
           setProject={setSource}
           setConfig={setConfig}
           resetProject={resetToStartSource}
-          onRun={handleRunClick}
+          onRun={onRun}
         />
       )}
     </div>

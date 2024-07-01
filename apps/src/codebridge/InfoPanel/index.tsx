@@ -22,6 +22,12 @@ const panelMap = {
   [Panels.ForTeachersOnly]: ForTeachersOnly,
 };
 
+const panelProps = {
+  [Panels.Instructions]: {manageNavigation: false},
+  [Panels.HelpAndTips]: {},
+  [Panels.ForTeachersOnly]: {},
+};
+
 export const InfoPanel = React.memo(() => {
   const mapReference = useAppSelector(
     state => state.lab.levelProperties?.mapReference
@@ -112,7 +118,7 @@ export const InfoPanel = React.memo(() => {
           </ul>
         </form>
       )}
-      <CurrentPanelView />
+      <CurrentPanelView {...panelProps[currentPanel]} />
     </PanelContainer>
   );
 });

@@ -1290,6 +1290,7 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function (
  * @param {string} options.isDangerCancel Should cancel button has a danger type
  * @param {string} options.confirmText Text for confirm button
  * @param {boolean} [options.hideIcon=false] Whether to hide the icon
+ * @param {boolean} [options.disableSpaceClose=false] Whether to disable closing the dialog with the spacebar
  * @param {onConfirmCallback} [options.onConfirm] Function to be called after clicking confirm
  * @param {onCancelCallback} [options.onCancel] Function to be called after clicking cancel
  */
@@ -1324,6 +1325,7 @@ FeedbackUtils.prototype.showSimpleDialog = function (options) {
     contentDiv: contentDiv,
     icon: options.hideIcon ? null : this.studioApp_.icon,
     defaultBtnSelector: '#again-button',
+    disableSpaceClose: !!options.disableSpaceClose,
   });
 
   var cancelButton = contentDiv.querySelector('#again-button');
@@ -1777,6 +1779,7 @@ function simulateClick(element) {
  * @param {string} options.id
  * @param {HTMLElement} options.header
  * @param {boolean} options.showXButton
+ * @param {boolean} [options.disableSpaceClose]
  */
 FeedbackUtils.prototype.createModalDialog = function (options) {
   var modalBody = document.createElement('div');
@@ -1799,7 +1802,12 @@ FeedbackUtils.prototype.createModalDialog = function (options) {
 
   var btn = options.contentDiv.querySelector(options.defaultBtnSelector);
   var keydownHandler = function (e) {
-    if (e.keyCode === KeyCodes.ENTER || e.keyCode === KeyCodes.SPACE) {
+    if (
+      e.keyCode === KeyCodes.ENTER ||
+      // This dialog is also used for renaming variables in Blockly labs.
+      // We disable this check for these instances so that spaces can be entered.
+      (!options.disableSpaceClose && e.keyCode === KeyCodes.SPACE)
+    ) {
       simulateClick(btn);
 
       e.stopPropagation();
