@@ -190,7 +190,7 @@ namespace :seed do
   # rake seed:single_script SCRIPT_NAME=express-2019
   # rake seed:single_script SCRIPT_NAME="csp*-2020"
   timed_task_with_logging single_script: :environment do
-    script_name = ENV['SCRIPT_NAME']
+    script_name = ENV.fetch('SCRIPT_NAME', nil)
     raise "must specify SCRIPT_NAME=" unless script_name
     script_files = Dir.glob("config/scripts_json/#{script_name}.script_json")
     raise "no matching scripts found" if script_files.blank?
@@ -252,7 +252,7 @@ namespace :seed do
   # rake seed:single_dsl DSL_FILENAME=csa_unit_6_assessment_2023.level_group
   timed_task_with_logging single_dsl: :environment do
     DSLDefined.transaction do
-      dsl_files = Dir.glob("config/scripts/**/#{ENV['DSL_FILENAME']}")
+      dsl_files = Dir.glob("config/scripts/**/#{ENV.fetch('DSL_FILENAME', nil)}")
 
       unless dsl_files.count > 0
         raise 'no matching dsl-defined level files found. please check filename for exact case and spelling.'
@@ -302,7 +302,7 @@ namespace :seed do
   # Generate the database entry from the custom levels json file.
   # Optionally limit to a single level via LEVEL_NAME= env variable.
   timed_task_with_logging custom_levels: :environment do
-    level_name = ENV['LEVEL_NAME']
+    level_name = ENV.fetch('LEVEL_NAME', nil)
     LevelLoader.load_custom_levels(level_name)
   end
 

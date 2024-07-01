@@ -104,7 +104,7 @@ module Cdo
     def site_host(domain)
       host = canonical_hostname(domain)
       if (rack_env?(:development) && !https_development) ||
-          (ENV['CI'] && host.include?('localhost'))
+          (ENV.fetch('CI', nil) && host.include?('localhost'))
         port = ['studio.code.org'].include?(domain) ? dashboard_port : pegasus_port
         host += ":#{port}"
       end
@@ -287,7 +287,7 @@ module Cdo
     # Is this code running in a webserver as part of our Continuous Integration
     # builds?
     def ci_webserver?
-      running_web_application? && ENV['CI']
+      running_web_application? && ENV.fetch('CI', nil)
     end
 
     def shared_image_url(path)
