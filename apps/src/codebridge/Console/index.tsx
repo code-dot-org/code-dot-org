@@ -1,5 +1,5 @@
 import {resetOutput} from '@codebridge/redux/consoleRedux';
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {useDispatch} from 'react-redux';
 
 import Button from '@cdo/apps/componentLibrary/button';
@@ -7,6 +7,7 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './console.module.scss';
+import GraphModal from './GraphModal';
 
 const Console: React.FunctionComponent = () => {
   const codeOutput = useAppSelector(state => state.codebridgeConsole.output);
@@ -14,6 +15,8 @@ const Console: React.FunctionComponent = () => {
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
   const previousLevelId = useRef(levelId);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+
+  const [graphModalOpen, setGraphModalOpen] = useState(true);
 
   // TODO: Update this with other apps that use the console as needed.
   const systemMessagePrefix = appName === 'pythonlab' ? '[PYTHON LAB] ' : '';
@@ -52,12 +55,12 @@ const Console: React.FunctionComponent = () => {
     >
       <div className={moduleStyles.console}>
         {codeOutput.map((outputLine, index) => {
-          if (outputLine.type === 'img') {
+          if (outputLine.type === 'img' && graphModalOpen) {
             return (
-              <img
+              <GraphModal 
                 key={index}
                 src={`data:image/png;base64,${outputLine.contents}`}
-                alt="matplotlib_image"
+                onClose={() => setGraphModalOpen(false)}
               />
             );
           } else if (
