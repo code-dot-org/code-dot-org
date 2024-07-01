@@ -85,7 +85,7 @@
           %em= t('user.update_field_parent_permission_required')
           %br/
         = f.select :us_state, us_state_options, {include_blank: t('school_info.select_state')}, disabled: @student_in_lockout_flow, required: true
-        = f.hidden_field :country_code, value: country_code
+        = f.hidden_field :country_code, value: @country_code
   - if resource.teacher?
     .field
       = f.label :school, class: "label-bold"
