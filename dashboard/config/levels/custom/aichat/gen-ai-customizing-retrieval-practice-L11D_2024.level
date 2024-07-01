@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2024-06-28T19:57:15.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Cultural Norms Chatbot\r\n\r\nMariah is preparing to go on a trip to China as part of a cultural exchange program - she will spend 3 months learning about educational practices in China while some Chinese students attend schools in the US to learn our customs.\r\n\r\nAs part of Mariah's preparation for the trip, she needs to learn the cultural communication norms to avoid any misunderstandings or miscommunications and make sure she represents herself professionally. For example, the 👋 and 👍 emojis can mean different things in different cultures - and sometimes they mean something offensive! <a href=\"https://pumble.com/blog/culture-emoji/\" target=\"_blank\">Learn more here</a>.\r\n\r\nMariah wants to use a chatbot to help make sure she has the right cultural norms and etiquette when visiting another country.\r\n\r\n### Do This\r\n\r\nSearch for information about the cultural do's and don'ts when visiting China to use as sources for the chatbot. For example: you may find details on international consulate websites or travel blogs. Then design a chatbot that offers advice on interacting with people while in China to not offend anyone or embarrass yourself.\r\n\r\n**A Note About Testing:** When testing the chatbot, don't ask questions like \"How do Chinese people do [X]\" - this is likely to generate biased stereotypes based on how language models are trained. Instead, ask questions like \"When in China, what is the proper way to [X]\" or \"What are things for tourists to avoid when doing [X] in China\".\r\n\r\n**Alternative Task:** Instead of making this chatbot specific to visiting China, you can substitute another country like Egypt, Ghana, India, or the US.",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.5",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "editable",
+        "systemPrompt": "editable",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
+    },
+    "display_name": "Cultural Norms Chatbot",
+    "bubble_choice_description": "Mariah wants to use a chatbot to help make sure she has the right cultural norms and etiquette when visiting another country.",
+    "thumbnail_url": "https://images.code.org/43950e17b8c5bf5b82118e70d8a8bc95-Lesson 7 - Level 11D- Cultural Norms Chatbot.png",
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:57:15.922+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L11D\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L11D\"}]"
+}]]></config>
+</Aichat>
