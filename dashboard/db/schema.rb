@@ -409,7 +409,6 @@ ActiveRecord::Schema.define(version: 2024_07_01_205906) do
     t.string "display_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "category", default: "other", null: false
     t.boolean "is_featured", default: false, null: false
     t.boolean "assignable", default: true, null: false
     t.string "curriculum_type"
