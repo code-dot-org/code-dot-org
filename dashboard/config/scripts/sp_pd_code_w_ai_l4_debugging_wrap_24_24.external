@@ -3,7 +3,7 @@ skip_dialog true
 markdown <<MARKDOWN
 # Wrapping Up Lesson Four
 
-#### After the debugging exercises, students shift gears and reflect on what they’ve learned through a Reflection Scavenger Hunt, where they’ll explore different perspectives about AI in debugging, focusing on ethical considerations and personal creativity. 
+#### After the debugging exercises, students shift gears and reflect on what they have learned through a <a href="https://docs.google.com/document/d/1Bs69wKdZxWqCMGRFN6-9PHOw1JZu8A2RXF9VTz7GJps/copy" target="blank" rel="noopener noreferrer">Reflection Scavenger Hunt</a>, where they will explore different perspectives about AI in debugging, focusing on ethical considerations and personal creativity. 
 
 #### Finally, students will wrap up the lesson by drafting a Value Statement about using AI to help debug their code.
 ---

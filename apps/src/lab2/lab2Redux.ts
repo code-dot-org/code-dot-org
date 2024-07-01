@@ -38,6 +38,7 @@ import {
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import {START_SOURCES} from './constants';
+import {getPredictResponse} from './projects/userLevelsApi';
 
 interface PageError {
   errorMessage: string;
@@ -65,6 +66,9 @@ export interface LabState {
   levelProperties: LevelProperties | undefined;
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
+  // User's response for the level, if the level is a predict level. It is an empty string if this
+  // is not a predict level or if the user has not yet submitted a response.
+  predictResponse: string;
 }
 
 const initialState: LabState = {
@@ -76,6 +80,7 @@ const initialState: LabState = {
   validationState: getInitialValidationState(),
   levelProperties: undefined,
   isShareView: undefined,
+  predictResponse: '',
 };
 
 // Thunks
@@ -145,6 +150,19 @@ export const setUpWithLevel = createAsyncThunk(
         );
         return;
       }
+
+      // If we have a predict level, we should try to load the existing response.
+      // We only can load predict responses if we have a script id.
+      if (levelProperties.predictSettings?.isPredictLevel && payload.scriptId) {
+        const predictResponse =
+          (await getPredictResponse(payload.levelId, payload.scriptId)) || '';
+        thunkAPI.dispatch(setPredictResponse(predictResponse));
+      } else {
+        // If this isn't a predict level, reset the response to an empty string
+        // to avoid potentially confusing behavior.
+        thunkAPI.dispatch(setPredictResponse(''));
+      }
+
       // Create a new project manager. If we have a channel id,
       // default to loading the project for that channel. Otherwise
       // create a project manager for the given level and script id.
@@ -259,10 +277,18 @@ export const isLabLoading = (state: {lab: LabState}) =>
 export const isReadOnlyWorkspace = (state: {lab: LabState}) => {
   const isOwner = state.lab.channel?.isOwner;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const isEditingExemplarMode = getAppOptionsEditingExemplar();
   const isFrozen = !!state.lab.channel?.frozen;
-  // We are in read-only mode if we are not the owner of the channel
-  // and we are not in start mode OR if the channel is frozen.
-  return (!isStartMode && !isOwner) || isFrozen;
+  const isPredictLevel =
+    state.lab.levelProperties?.predictSettings?.isPredictLevel || false;
+  // We are always in edit mode if we are in start or editing exemplar mode.
+  // Both of these modes have no channel.
+  if (isStartMode || isEditingExemplarMode) {
+    return false;
+  }
+  // Otherwise, we are in read only mode if we are not the owner of the channel,
+  // the level is frozen, or the level is a predict level.
+  return !isOwner || isFrozen || isPredictLevel;
 };
 
 // If there is an error present on the page.
@@ -322,6 +348,9 @@ const labSlice = createSlice({
     },
     setIsShareView(state, action: PayloadAction<boolean>) {
       state.isShareView = action.payload;
+    },
+    setPredictResponse(state, action: PayloadAction<string>) {
+      state.predictResponse = action.payload;
     },
   },
   extraReducers: builder => {
@@ -477,6 +506,7 @@ export const {
   clearPageError,
   setValidationState,
   setIsShareView,
+  setPredictResponse,
 } = labSlice.actions;
 
 // These should not be set outside of the lab slice.

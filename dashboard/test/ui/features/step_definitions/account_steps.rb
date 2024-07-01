@@ -48,9 +48,18 @@ def generate_user(name)
   @users ||= {}
   @users[name] = {
     password: password,
-    email: email
+    email: email,
+    uid: generate_oauth_uid,
   }
   return email, password
+end
+
+def generate_oauth_uid
+  "#{Time.now.to_i}_#{rand(1_000_000)}"
+end
+
+def oauth_uid_for_user_by_name(name)
+  @users[name][:uid]
 end
 
 def find_test_user_by_name(name)
@@ -92,6 +101,11 @@ def create_user(name, url: '/api/test/create_user', **user_opts)
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, tries: 3) do
     # Generate the user
     email, password = generate_user(name)
+
+    if user_opts[:sso]
+      user_opts[:uid] = oauth_uid_for_user_by_name(name)
+      user_opts[:sso] = 'google_oauth2' if user_opts[:sso] == 'google'
+    end
 
     # Set the parent email to the user email, if we see it
     # in the user options (we generate the email, here)
@@ -135,7 +149,7 @@ def create_user(name, url: '/api/test/create_user', **user_opts)
   end
 end
 
-And(/^I create( as a parent)? a (young )?student( in Colorado)?( who has never signed in)? named "([^"]*)"( after CPA exception)?( before CPA exception)?( and go home)?$/) do |parent_created, young, locked, new_account, name, after_cpa_exception, before_cpa_exception, home|
+And(/^I create( as a parent)? a (young )?student(?: using (clever|google))?( in Colorado)?( who has never signed in)? named "([^"]*)"( after CPA exception)?( before CPA exception)?( and go home)?$/) do |parent_created, young, using_sso, locked, new_account, name, after_cpa_exception, before_cpa_exception, home|
   age = young ? '10' : '16'
   sign_in_count = new_account ? 0 : 2
 
@@ -144,6 +158,10 @@ And(/^I create( as a parent)? a (young )?student( in Colorado)?( who has never s
     age: age,
     sign_in_count: sign_in_count,
   }
+
+  if using_sso
+    user_opts[:sso] = using_sso
+  end
 
   if locked
     user_opts[:country_code] = "US"

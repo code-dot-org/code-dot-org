@@ -55,14 +55,14 @@ export function flyoutCategory(workspace: WorkspaceSvg) {
 const getNewVariableButtonWithCallback = (workspace: WorkspaceSvg) => {
   const callbackKey = 'newVariableCallback';
   workspace.registerButtonCallback(callbackKey, () => {
-    Blockly.FieldVariable.modalPromptName(
-      commonI18n.renameThisPromptTitle(),
-      commonI18n.create(),
-      '',
-      newName => {
+    Blockly.FieldVariable.variableNamePrompt({
+      promptText: commonI18n.renameThisPromptTitle(),
+      confirmButtonLabel: commonI18n.create(),
+      defaultText: '',
+      callback: newName => {
         workspace.createVariable(newName);
-      }
-    );
+      },
+    });
   });
 
   return {

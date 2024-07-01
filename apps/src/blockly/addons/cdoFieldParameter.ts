@@ -20,6 +20,13 @@ import {ExtendedWorkspaceSvg, ProcedureBlock} from '../types';
 const RENAME_PARAMETER_ID = 'RENAME_VARIABLE_ID';
 const DELETE_PARAMETER_ID = 'DELETE_VARIABLE_ID';
 
+interface ParameterPromptOptions {
+  promptText: string; // Description text for window prompt
+  confirmButtonLabel: string; // Label of confirm button, e.g., "Rename"
+  callback: (newName: string) => void; // Callback with text of new parameter name
+  isDeleteDialog: boolean; // True for delete dialog; False for rename dialog
+  defaultText?: string; // Default input text for window prompt
+}
 export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
   /**
    * Handle the selection of an item in the parameter dropdown menu.
@@ -35,24 +42,26 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
       switch (id) {
         case RENAME_PARAMETER_ID:
           // Rename all instances of this variable.
-          CdoFieldParameter.modalDialogName(
-            commonI18n.renameParameterPromptTitle({parameterName: oldVar}),
-            commonI18n.rename(),
-            this.renameSelectedParameter.bind(this),
-            true,
-            false,
-            oldVar
-          );
+          CdoFieldParameter.parameterPrompt({
+            promptText: commonI18n.renameParameterPromptTitle({
+              parameterName: oldVar,
+            }),
+            confirmButtonLabel: commonI18n.rename(),
+            callback: this.renameSelectedParameter.bind(this),
+            isDeleteDialog: false,
+            defaultText: oldVar,
+          });
           break;
         case DELETE_PARAMETER_ID:
           // Delete this parameter and any of its parameter blocks.
-          CdoFieldParameter.modalDialogName(
-            commonI18n.deleteParameterTitle({parameterName: oldVar}),
-            commonI18n.delete(),
-            this.deleteSelectedParameter.bind(this),
-            false,
-            true
-          );
+          CdoFieldParameter.parameterPrompt({
+            promptText: commonI18n.deleteParameterTitle({
+              parameterName: oldVar,
+            }),
+            confirmButtonLabel: commonI18n.delete(),
+            callback: this.deleteSelectedParameter.bind(this),
+            isDeleteDialog: true,
+          });
           break;
         default:
           // If we have somehow have another option (we shouldn't), and
@@ -239,31 +248,20 @@ export default class CdoFieldParameter extends GoogleBlockly.FieldVariable {
   };
 
   /**
-   * Prompt the user for a variable name or delete a variable.
-   * @param promptText description text for window prompt
-   * @param confirmButtonLabel Label of confirm button, e.g. "Rename"
-   * @param callback with parameter (text) of new name
-   * @param prompt Whether to prompt for a string value
-   * @param isDangerCancel Should cancel button has a danger type
-   * @param defaultText default input text for window prompt
+   * Prompt the user to name or delete a parameter.
+   * @param {ParameterPromptOptions} options The options object.
    */
-  static modalDialogName = function (
-    promptText: string,
-    confirmButtonLabel: string,
-    callback: (newName: string) => void,
-    prompt: boolean,
-    isDangerCancel: boolean,
-    defaultText?: string
-  ) {
+  static parameterPrompt = function (options: ParameterPromptOptions) {
     Blockly.customSimpleDialog({
-      bodyText: promptText,
-      prompt,
-      promptPrefill: defaultText,
-      cancelText: confirmButtonLabel,
-      isDangerCancel,
+      bodyText: options.promptText,
+      prompt: !options.isDeleteDialog,
+      promptPrefill: options.defaultText,
+      cancelText: options.confirmButtonLabel,
+      isDangerCancel: !!options.isDeleteDialog,
       confirmText: commonI18n.cancel(),
       onConfirm: null,
-      onCancel: callback,
+      onCancel: options.callback,
+      disableSpaceClose: !options.isDeleteDialog,
     });
   };
 }
@@ -274,10 +272,10 @@ export const getAddParameterButtonWithCallback = (
 ) => {
   const addParameterCallbackKey = 'addParameterCallback';
   workspace.registerButtonCallback(addParameterCallbackKey, () => {
-    CdoFieldParameter.modalDialogName(
-      commonI18n.newParameterTitle(),
-      commonI18n.create(),
-      parameterName => {
+    CdoFieldParameter.parameterPrompt({
+      promptText: commonI18n.newParameterTitle(),
+      confirmButtonLabel: commonI18n.create(),
+      callback: parameterName => {
         const newParameter = new ObservableParameterModel(
           workspace,
           parameterName
@@ -285,9 +283,8 @@ export const getAddParameterButtonWithCallback = (
         const newIndex = procedure.getParameters().length;
         procedure.insertParameter(newParameter, newIndex);
       },
-      true,
-      false
-    );
+      isDeleteDialog: false,
+    });
   });
 
   return {
