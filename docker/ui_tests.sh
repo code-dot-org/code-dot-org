@@ -78,3 +78,4 @@ hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-h
 
 bundle exec rake circle:seed_ui_test
 #bundle exec rake circle:run_ui_tests
+cd dashboard && RAILS_ENV=test bundle exec puma -e test
