@@ -2,15 +2,18 @@
 
 .controlButtonsContainer {
   grid-area: control-buttons;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr repeat(2, auto) 1fr;
   padding: 8px 0;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
   background-color: $neutral_dark80;
+  column-gap: 8px;
 }
 
-.controlButton {
-  margin-left: 8px;
+.firstControlButton {
+  grid-column-start: 2;
+}
+
+.navigationButton {
+  margin-left: auto;
   margin-right: 8px;
 }

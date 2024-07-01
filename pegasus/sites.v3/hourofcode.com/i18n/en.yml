@@ -228,12 +228,12 @@
       self_paced:
         title: "Self-Paced Learning"
         desc: "These modules allow you to engage at your own pace and on your own time while focusing on areas most important to your needs and teaching context."
-        button: "Discover the district program"
+        button: "Explore professional learning"
       workshops:
         title_k_5: "K-5 Workshops"
         title_6_12: "6-12 Workshops"
         desc: "With our Regional Partners as hosts and our Code.org facilitators as guides, our workshops around the country focus on reflection, discussion, and growth-oriented learning."
-        button: "Explore professional learning"
+        button: "Explore workshops"
 
   facilitator_led_pl_heading: "Facilitator-Led Professional Learning Workshops"
   facilitator_led_pl_desc: "Learn about our professional learning workshops for elementary, middle, and high school teachers."
@@ -919,6 +919,7 @@
   subscribe_form_section_desc_csp: "Sign up to receive monthly emails about Code.org's Computer Science Principles and get helpful reminders, tips, and updates sent right to your inbox."
   subscribe_form_section_title_pl: "Get notified when Professional Learning registration opens"
   subscribe_form_section_desc_pl: "Be the first to know when registration begins! Sign up to receive an email notification when teachers can start applying for the Code.org Professional Learning Program."
+  subscribe_form_section_desc_maker: "Sign up for our monthly emails, which contain the latest news about tools, videos, and other important updates for Maker."
   subscribe_form_section_unsubscribe: "You can unsubscribe at any time."
 
   hoc_page_what_is_hoc_heading: "What is Hour of Code?"

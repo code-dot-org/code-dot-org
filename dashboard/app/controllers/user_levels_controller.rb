@@ -1,5 +1,5 @@
 class UserLevelsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:get_level_source]
   check_authorization
   load_and_authorize_resource
   protect_from_forgery except: [:update] # referer is the script level page which is publically cacheable
@@ -38,6 +38,15 @@ class UserLevelsController < ApplicationController
   def get_token
     headers['csrf-token'] = form_authenticity_token
     return head :ok
+  end
+
+  # GET /user_levels/level_source/:script_id/:level_id
+  # Get the level source data for the current user's most recent attempt at the given level in the given script.
+  # If there is no attempt, return null.
+  def get_level_source
+    user_levels = UserLevel.where(user_id: current_user.id, level_id: params[:level_id], script_id: params[:script_id])
+    most_recent_user_level = user_levels.order(updated_at: :desc).first
+    return render json: {data: most_recent_user_level&.level_source&.data}, status: :ok
   end
 
   private def set_user_level
