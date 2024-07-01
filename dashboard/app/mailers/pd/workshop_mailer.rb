@@ -43,8 +43,6 @@ class Pd::WorkshopMailer < ApplicationMailer
     @online_url = ONLINE_URL
     @is_enrollment_receipt = true
 
-    return if @workshop.course == 'Build Your Own Workshop'
-
     # Facilitator training workshops use different email addresses
     if @enrollment.workshop.course == Pd::Workshop::COURSE_FACILITATOR
       from = from_facilitators
@@ -65,8 +63,6 @@ class Pd::WorkshopMailer < ApplicationMailer
     @enrollment = enrollment
     @workshop = enrollment.workshop
 
-    return if @workshop.course == 'Build Your Own Workshop'
-
     mail content_type: 'text/html',
       from: from_no_reply,
       subject: 'Code.org workshop registration',
@@ -76,8 +72,6 @@ class Pd::WorkshopMailer < ApplicationMailer
   def teacher_cancel_receipt(enrollment)
     @enrollment = enrollment
     @workshop = enrollment.workshop
-
-    return if @workshop.course == 'Build Your Own Workshop'
 
     mail content_type: 'text/html',
       from: from_teacher,
@@ -90,8 +84,6 @@ class Pd::WorkshopMailer < ApplicationMailer
     @enrollment = enrollment
     @workshop = enrollment.workshop
 
-    return if @workshop.course == 'Build Your Own Workshop'
-
     mail content_type: 'text/html',
       from: from_no_reply,
       subject: 'Code.org workshop cancellation',
@@ -100,8 +92,6 @@ class Pd::WorkshopMailer < ApplicationMailer
 
   def organizer_should_close_reminder(workshop)
     @workshop = workshop
-
-    return if @workshop.course == 'Build Your Own Workshop'
 
     mail content_type: 'text/html',
       from: from_no_reply,
@@ -128,7 +118,7 @@ class Pd::WorkshopMailer < ApplicationMailer
       reply_to = email_address(@workshop.organizer.name, @workshop.organizer.email)
     end
 
-    return if @workshop.suppress_reminders? || @workshop.suppress_email? || @workshop.course == 'Build Your Own Workshop'
+    return if @workshop.suppress_reminders? || @workshop.suppress_email?
 
     mail content_type: 'text/html',
       from: from,
@@ -155,7 +145,7 @@ class Pd::WorkshopMailer < ApplicationMailer
     @cancel_url = '#'
     @is_reminder = true
 
-    return if @workshop.suppress_reminders? || @workshop.suppress_email? || @workshop.course == 'Build Your Own Workshop'
+    return if @workshop.suppress_reminders? || @workshop.suppress_email?
 
     mail content_type: 'text/html',
          from: from_teacher,
@@ -167,8 +157,6 @@ class Pd::WorkshopMailer < ApplicationMailer
   def facilitator_pre_workshop(user, workshop)
     @user = user
     @workshop = workshop
-
-    return if @workshop.course == 'Build Your Own Workshop'
 
     mail content_type: 'text/html',
          from: from_facilitators,
@@ -182,8 +170,6 @@ class Pd::WorkshopMailer < ApplicationMailer
     @workshop = workshop
     survey_params = "workshop_id=#{workshop.id}"
     @survey_url = CDO.studio_url "pd/workshop_survey/facilitator_post_foorm?#{survey_params}", CDO.default_scheme
-
-    return if @workshop.course == 'Build Your Own Workshop'
 
     @regional_partner_name = @workshop.regional_partner&.name
     @deadline = (Time.now + 10.days).strftime('%B %-d, %Y').strip
@@ -203,7 +189,7 @@ class Pd::WorkshopMailer < ApplicationMailer
     @cancel_url = '#'
     @is_reminder = true
 
-    return if @workshop.suppress_reminders? || @workshop.suppress_email? || @workshop.course == 'Build Your Own Workshop'
+    return if @workshop.suppress_reminders? || @workshop.suppress_email?
 
     mail content_type: 'text/html',
          from: from_teacher,
@@ -217,8 +203,6 @@ class Pd::WorkshopMailer < ApplicationMailer
     @workshop = enrollment.workshop
     @cancel_url = url_for controller: 'pd/workshop_enrollment', action: :cancel, code: enrollment.code
 
-    return if @workshop.course == 'Build Your Own Workshop'
-
     mail content_type: 'text/html',
       from: from_teacher,
       subject: detail_change_notification_subject(@workshop),
@@ -231,8 +215,6 @@ class Pd::WorkshopMailer < ApplicationMailer
     @workshop = workshop
     @cancel_url = '#'
 
-    return if @workshop.course == 'Build Your Own Workshop'
-
     mail content_type: 'text/html',
       from: from_teacher,
       subject: detail_change_notification_subject(@workshop),
@@ -244,8 +226,6 @@ class Pd::WorkshopMailer < ApplicationMailer
     @workshop = workshop
     @cancel_url = '#'
 
-    return if @workshop.course == 'Build Your Own Workshop'
-
     mail content_type: 'text/html',
          from: from_teacher,
          subject: detail_change_notification_subject(@workshop),
@@ -256,8 +236,6 @@ class Pd::WorkshopMailer < ApplicationMailer
   def teacher_survey_reminder(enrollment)
     @enrollment = enrollment
     @workshop = enrollment.workshop
-
-    return if @workshop.course == 'Build Your Own Workshop'
 
     # Pre-workshop survey reminder
     mail content_type: 'text/html',
@@ -274,8 +252,6 @@ class Pd::WorkshopMailer < ApplicationMailer
     @teacher = enrollment.user
     @enrollment = enrollment
     @survey_url = enrollment.exit_survey_url
-
-    return if @workshop.course == 'Build Your Own Workshop'
 
     content_type = 'text/html'
     if @workshop.course == Pd::Workshop::COURSE_CSF

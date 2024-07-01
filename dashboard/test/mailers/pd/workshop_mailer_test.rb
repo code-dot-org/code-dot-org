@@ -256,28 +256,4 @@ class WorkshopMailerTest < ActionMailer::TestCase
 
     assert_equal MailerConstants::PLC_EMAIL_LOG, mail.bcc.first
   end
-
-  test 'emails are skipped for Build Your Own workshops' do
-    facilitator = create :facilitator
-    workshop = create :workshop, course: Pd::Workshop::COURSE_BUILD_YOUR_OWN, facilitators: [facilitator]
-    enrollment = create :pd_enrollment, workshop: workshop
-
-    assert_emails 0 do
-      Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
-      Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment).deliver_now
-      Pd::WorkshopMailer.teacher_cancel_receipt(enrollment).deliver_now
-      Pd::WorkshopMailer.organizer_cancel_receipt(enrollment).deliver_now
-      Pd::WorkshopMailer.organizer_should_close_reminder(workshop).deliver_now
-      Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: 10}).deliver_now
-      Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
-      Pd::WorkshopMailer.facilitator_pre_workshop(facilitator, workshop).deliver_now
-      Pd::WorkshopMailer.facilitator_post_workshop(facilitator, workshop).deliver_now
-      Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
-      Pd::WorkshopMailer.detail_change_notification(enrollment).deliver_now
-      Pd::WorkshopMailer.facilitator_detail_change_notification(facilitator, workshop).deliver_now
-      Pd::WorkshopMailer.organizer_detail_change_notification(workshop).deliver_now
-      Pd::WorkshopMailer.teacher_survey_reminder(enrollment).deliver_now
-      Pd::WorkshopMailer.exit_survey(enrollment).deliver_now
-    end
-  end
 end
