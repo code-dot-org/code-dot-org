@@ -1,4 +1,5 @@
 import {assert} from '../util/reconfiguredChai';
+
 import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 
 describe('hasDuplicateVariablesInForLoops', function () {

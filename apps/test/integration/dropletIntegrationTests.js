@@ -1,10 +1,12 @@
-import {assert, expect} from '../util/reconfiguredChai';
 import * as dropletUtils from '@cdo/apps/dropletUtils';
 import {
   singleton as studioApp,
   stubStudioApp,
   restoreStudioApp,
 } from '@cdo/apps/StudioApp';
+
+import {assert, expect} from '../util/reconfiguredChai';
+
 import loadSource from './util/loadSource';
 
 describe('setParamAtIndex', () => {

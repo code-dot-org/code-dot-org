@@ -1,4 +1,5 @@
 var _ = require('lodash');
+
 const KARMA_CLI_FLAGS = require('../../util/KARMA_CLI_FLAGS');
 
 /**
