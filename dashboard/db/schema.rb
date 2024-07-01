@@ -1516,15 +1516,6 @@ ActiveRecord::Schema.define(version: 2024_07_01_205906) do
     t.index ["name"], name: "index_pilots_on_name", unique: true
   end
 
-  create_table "pl_workshop_topics", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
-    t.bigint "pd_workshop_id", null: false
-    t.bigint "course_offering_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["course_offering_id"], name: "index_pl_workshop_topics_on_course_offering_id"
-    t.index ["pd_workshop_id"], name: "index_pl_workshop_topics_on_pd_workshop_id"
-  end
-
   create_table "plc_course_units", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "plc_course_id"
     t.string "unit_name"
