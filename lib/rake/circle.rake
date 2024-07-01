@@ -97,9 +97,9 @@ namespace :circle do
     # Make sure the destination for our JUnit XML test reports exists
     RakeUtils.system_stream_output 'mkdir -p $CIRCLE_TEST_REPORTS/cucumber'
 
-    Dir.chdir('dashboard') do
-      RakeUtils.exec_in_background 'RAILS_ENV=test bundle exec puma -e test'
-    end
+    # Dir.chdir('dashboard') do
+    #   RakeUtils.exec_in_background 'RAILS_ENV=test bundle exec puma -e test'
+    # end
     ui_test_browsers = browsers_to_run
     use_saucelabs = !ui_test_browsers.empty?
     if use_saucelabs || test_eyes?
