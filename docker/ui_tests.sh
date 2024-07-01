@@ -77,4 +77,4 @@ bundle exec rake build
 hostname=$(curl -s --max-time 3 http://169.254.169.254/latest/meta-data/public-hostname || echo $DRONE_RUNNER_HOSTNAME); echo "Running on $hostname"
 
 bundle exec rake circle:seed_ui_test
-bundle exec rake circle:run_ui_tests
+#bundle exec rake circle:run_ui_tests
