@@ -49,9 +49,7 @@ $(document).ready(() => {
           projectCount={projectsData.projectCount}
         />
         <div className={'main container'}>
-          <ProjectsGallery
-            limitedGallery={projectsData.limitedGallery}
-          />
+          <ProjectsGallery limitedGallery={projectsData.limitedGallery} />
         </div>
       </div>
     </Provider>,
