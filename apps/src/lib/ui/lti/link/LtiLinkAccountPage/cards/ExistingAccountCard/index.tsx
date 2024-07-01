@@ -17,8 +17,13 @@ import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {navigateToHref} from '@cdo/apps/utils';
 
 const ExistingAccountCard = () => {
-  const {ltiProvider, ltiProviderName, existingAccountUrl, emailAddress} =
-    useContext(LtiProviderContext)!;
+  const {
+    ltiProvider,
+    ltiProviderName,
+    existingAccountUrl,
+    emailAddress,
+    userType,
+  } = useContext(LtiProviderContext)!;
   const urlParams = new URLSearchParams({
     lms_name: ltiProviderName,
     lti_provider: ltiProvider,
@@ -29,6 +34,7 @@ const ExistingAccountCard = () => {
   const handleExistingAccountSubmit = () => {
     const eventPayload = {
       lms_name: ltiProvider,
+      user_type: userType,
     };
     analyticsReporter.sendEvent(
       'lti_existing_account_click',
