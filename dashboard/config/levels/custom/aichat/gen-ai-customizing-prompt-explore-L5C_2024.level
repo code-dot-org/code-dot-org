@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2024-06-28T19:54:09.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Changing the Role\r\n\r\nSystem prompts can be used to focus how a chatbot responds. One way to do this is to give it an **explicit role or expertise**.\r\n\r\n### Do This\r\n\r\n1) Update the chatbot so it simulates interacting with a driving instructor, as though preparing to take a driving test.\r\n    - Don't erase the entire prompt; just modify the relevant parts of the prompt and see how it changes.\r\n\r\nTest the chatbot! Type in a message and press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* What are the requirements to get a driving permit?\r\n* What happens if you run a red light?\r\n:::\r\n\r\n&nbsp;",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.8",
+        "systemPrompt": "You are a chatbot built to help people understand how to drive in Arizona. \n\nUse metaphors or analogies to explain concepts as often as possible. \n\nUse a friendly, warm tone. \n\nDo not answer any questions that are not related to driving in Arizona. If asked a question that is not about driving in Arizona, just repeat your purpose.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "editable",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
+    },
+    "display_name": "Changing the Role",
+    "bubble_choice_description": "System prompts can be used to focus how a chatbot responds. One way to do this is to give it an **explicit role or expertise**.",
+    "thumbnail_url": "https://images.code.org/87e831415cc93fbfba8b3e7acdd21c83-Lesson 3 - Level 5C - Changing the Role.png",
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:54:09.166+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-L5C\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-L5C\"}]"
+}]]></config>
+</Aichat>
