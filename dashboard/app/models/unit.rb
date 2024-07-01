@@ -64,7 +64,7 @@ class Unit < ApplicationRecord
   belongs_to :wrapup_video, class_name: 'Video', optional: true
   belongs_to :user, optional: true
   has_many :unit_group_units, foreign_key: 'script_id'
-  has_many :unit_groups, through: :unit_group_units
+  has_many :unit_groups, through: :unit_group_units, dependent: :destroy
   has_one :course_version, as: :content_root, dependent: :destroy
 
   scope :with_associated_models, -> do
