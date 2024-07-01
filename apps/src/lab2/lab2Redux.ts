@@ -5,6 +5,7 @@
 
 import {
   AnyAction,
+  createAction,
   createAsyncThunk,
   createSlice,
   PayloadAction,
@@ -66,9 +67,6 @@ export interface LabState {
   levelProperties: LevelProperties | undefined;
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
-  // User's response for the level, if the level is a predict level. It is an empty string if this
-  // is not a predict level or if the user has not yet submitted a response.
-  predictResponse: string;
 }
 
 const initialState: LabState = {
@@ -80,7 +78,6 @@ const initialState: LabState = {
   validationState: getInitialValidationState(),
   levelProperties: undefined,
   isShareView: undefined,
-  predictResponse: '',
 };
 
 // Thunks
@@ -156,11 +153,11 @@ export const setUpWithLevel = createAsyncThunk(
       if (levelProperties.predictSettings?.isPredictLevel && payload.scriptId) {
         const predictResponse =
           (await getPredictResponse(payload.levelId, payload.scriptId)) || '';
-        thunkAPI.dispatch(setPredictResponse(predictResponse));
+        thunkAPI.dispatch(setLoadedPredictResponse(predictResponse));
       } else {
         // If this isn't a predict level, reset the response to an empty string
         // to avoid potentially confusing behavior.
-        thunkAPI.dispatch(setPredictResponse(''));
+        thunkAPI.dispatch(setLoadedPredictResponse(''));
       }
 
       // Create a new project manager. If we have a channel id,
@@ -349,9 +346,6 @@ const labSlice = createSlice({
     setIsShareView(state, action: PayloadAction<boolean>) {
       state.isShareView = action.payload;
     },
-    setPredictResponse(state, action: PayloadAction<string>) {
-      state.predictResponse = action.payload;
-    },
   },
   extraReducers: builder => {
     builder.addCase(setUpWithLevel.fulfilled, state => {
@@ -500,13 +494,16 @@ async function cleanUpProjectManager() {
   Lab2Registry.getInstance().clearProjectManager();
 }
 
+export const setLoadedPredictResponse = createAction<string>(
+  'lab/setLoadedPredictResponse'
+);
+
 export const {
   setIsLoading,
   setPageError,
   clearPageError,
   setValidationState,
   setIsShareView,
-  setPredictResponse,
 } = labSlice.actions;
 
 // These should not be set outside of the lab slice.

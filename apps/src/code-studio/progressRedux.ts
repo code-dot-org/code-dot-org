@@ -390,6 +390,7 @@ export const sendPredictLevelReport = createAsyncThunk<
     payload.predictResponse
   );
 });
+
 // Helpers
 
 function sendReportHelper(

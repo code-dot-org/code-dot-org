@@ -9,21 +9,23 @@ interface PredictQuestionProps {
   predictSettings: LevelPredictSettings | undefined;
   predictResponse: string | undefined;
   setPredictResponse: (response: string) => void;
+  hasSubmittedPredictResponse: boolean;
 }
 
 const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
   predictSettings,
   predictResponse,
   setPredictResponse,
+  hasSubmittedPredictResponse,
 }) => {
   if (!predictSettings?.isPredictLevel) {
     return null;
   }
 
-  // const lockAnswer =
-  //   !predictSettings.allowMultipleAttempts && !!predictResponse;
-  const lockAnswer = false;
-  console.log({lockAnswer});
+  // If the user has submitted a response and the level does not allow multiple attempts,
+  // lock the answer.
+  const lockAnswer =
+    hasSubmittedPredictResponse && !predictSettings.allowMultipleAttempts;
 
   const handleMultiSelectChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (predictSettings.isMultiSelect) {
