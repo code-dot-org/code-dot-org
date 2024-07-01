@@ -5,7 +5,19 @@
 - require 'queries/user'
 - @page_title = t('activerecord.attributes.user.edit_header')
 - no_email = current_user.no_personal_email? || params[:noEmail] == 'true'
-- studentInLockoutFlow = !!Policies::ChildAccount.lockout_date(current_user)
+
+-# We determine if the student is potentially locked by looking at their age
+-# If they are older (or there is no policy for them) they are unlocked
+-# This ignores them being explicitly unlocked by parental permission so we
+-# can show the 'Granted' status of that permission later.
+- potentially_locked = Policies::ChildAccount.underage?(current_user)
+-# The student is in a 'lockout' flow if they are potentially locked out and not unlocked
+- studentInLockoutFlow = potentially_locked && !Policies::ChildAccount::ComplianceState.permission_granted?(current_user)
+-# We need to also account for the case when the US State is not specified
+-# All students are locked out of account settings features until they specify these
+- locked = studentInLockoutFlow || current_user.country_code.nil? || current_user.us_state.nil?
+-# Put this behind an experiment flag for now
+- locked &&= !!experiment_value('cpa-partial-lockout', request)
 
 = render_parental_permission_banner(current_user, request)
 
@@ -143,12 +155,7 @@
   = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put, id: 'lti-sync-settings-form'}) do |f|
     = f.hidden_field :lti_roster_sync_enabled
 
--# The CPA checks for whether or not the account is a personal login... so we check everything except that
-- potentially_locked = experiment_value('cpa-partial-lockout', request) && Policies::ChildAccount.underage?(current_user)
--# We need to also account for the case when the US State is not specified
-- locked = (potentially_locked && !Policies::ChildAccount::ComplianceState.permission_granted?(current_user)) || current_user.country_code.nil? || current_user.us_state.nil?
-
-- if potentially_locked
+- if potentially_locked && experiment_value('cpa-partial-lockout', request)
   %div#lockout-linked-accounts{
     data: {
       request_date: @request_date&.iso8601,
