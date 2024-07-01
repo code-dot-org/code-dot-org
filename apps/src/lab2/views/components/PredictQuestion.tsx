@@ -20,6 +20,11 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
     return null;
   }
 
+  // const lockAnswer =
+  //   !predictSettings.allowMultipleAttempts && !!predictResponse;
+  const lockAnswer = false;
+  console.log({lockAnswer});
+
   const handleMultiSelectChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (predictSettings.isMultiSelect) {
       const newResponse = predictResponse ? predictResponse.split(',') : [];
@@ -43,6 +48,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
           onChange={e => setPredictResponse(e.target.value)}
           style={{height: predictSettings.freeResponseHeight || 20}}
           className={moduleStyles.freeResponse}
+          readOnly={lockAnswer}
         />
       ) : (
         predictSettings.multipleChoiceOptions?.map((option, index) => (
@@ -61,6 +67,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
               onChange={handleMultiSelectChanged}
               name={option}
               key={index}
+              disabled={lockAnswer}
             />
             <span className={moduleStyles.multipleChoiceLabel}>{option}</span>
           </label>

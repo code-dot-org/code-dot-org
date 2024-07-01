@@ -89,7 +89,12 @@ const PythonlabView: React.FunctionComponent = () => {
   ) => {
     handleRunClick(runTests, dispatch, permissions, source);
     if (isPredictLevel) {
-      dispatch(sendPredictLevelReport('pythonlab', predictResponse));
+      dispatch(
+        sendPredictLevelReport({
+          appType: 'pythonlab',
+          predictResponse: predictResponse,
+        })
+      );
     }
   };
 
