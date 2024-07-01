@@ -95,9 +95,9 @@ class LessonOverview extends Component {
 
     const options = [];
 
-    if (locale !== 'en-US') {
+    if (userLocale !== 'en-US') {
       options.push({
-        key: 'printSingleLessonPlan',
+        key: 'windowPrint',
         name: i18n.printLessonPlan(),
         url: 'javascript:window.print()',
       });
@@ -136,10 +136,6 @@ class LessonOverview extends Component {
       hasVerifiedResources;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
-
-    this.handlePrintLessonPlan = () => {
-      window.print();
-    };
 
     return (
       <div className="lesson-overview">
@@ -360,7 +356,7 @@ class LessonOverview extends Component {
 }
 
 // Get the current locale.
-const locale = cookies.get('language_') || 'en-US';
+const userLocale = cookies.get('language_') || 'en-US';
 
 const styles = {
   frontPage: {
