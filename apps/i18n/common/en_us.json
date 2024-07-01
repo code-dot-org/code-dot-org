@@ -422,7 +422,7 @@
   "childAccountPolicy_consentProcessReadMore": "Read more about this consent process and these changes here.",
   "childAccountPolicy_lockedOut": "Locked Out",
   "childAccountPolicy_studentParentalConsentStatus": "Student Parental Consent Status",
-  "childAccountPolicy_studentParentalConsentNotice": "The following students will require parental consent by 7/1/2024 to continue using Code.org with their personal account. Please ensure these students provide a parent or guardian email address to complete the parental consent process.",
+  "childAccountPolicy_studentParentalConsentNotice": "The following students will require parental consent after 7/1/2024 to continue using Code.org with their personal account. Please ensure these students provide a parent or guardian email address to complete the parental consent process.",
   "childAccountPolicy_notStarted": "Not Started",
   "childAccountPolicy_parentEmailed": "Parent/Guardian Emailed?",
   "childAccountPolicy_pendingLockout": "Pending Lockout",
