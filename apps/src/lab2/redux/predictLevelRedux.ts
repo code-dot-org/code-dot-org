@@ -12,12 +12,14 @@ const initialState: PredictLevelState = {
   // User's response for the level, if the level is a predict level. It is an empty string if this
   // is not a predict level or if the user has not yet submitted a response.
   response: '',
+  // If the user has submitted a predict response for the current level.
   hasSubmittedResponse: false,
 };
 
 // SELECTORS
-// The predict answer is locked if the level is a predict level that does not allow multiple attempts
-// and the user has not yet submitted a response.
+
+// The predict answer is locked if the level does not allow multiple predict attempts
+// and the user has already submitted a response.
 export const isPredictAnswerLocked = createSelector(
   [
     (state: RootState) =>

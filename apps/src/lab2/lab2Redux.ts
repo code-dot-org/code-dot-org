@@ -494,6 +494,7 @@ async function cleanUpProjectManager() {
   Lab2Registry.getInstance().clearProjectManager();
 }
 
+// This is an action that other reducers (specifically predictLevelRedux) can respond to.
 export const setLoadedPredictResponse = createAction<string>(
   'lab/setLoadedPredictResponse'
 );

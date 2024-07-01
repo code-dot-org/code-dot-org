@@ -33,7 +33,7 @@ const ControlButtons: React.FunctionComponent = () => {
   const isPredictLevel = useAppSelector(
     state => state.lab.levelProperties?.predictSettings?.isPredictLevel
   );
-  const disableRunOrTest = loading || (isPredictLevel && !hasPredictResponse);
+  const disableRunAndTest = loading || (isPredictLevel && !hasPredictResponse);
 
   const navigationButtonText = hasNextLevel
     ? commonI18n.continue()
@@ -60,7 +60,7 @@ const ControlButtons: React.FunctionComponent = () => {
       <Button
         text="Run"
         onClick={() => handleRun(false)}
-        disabled={disableRunOrTest}
+        disabled={disableRunAndTest}
         iconLeft={{iconStyle: 'solid', iconName: 'play'}}
         className={moduleStyles.firstControlButton}
         size={'s'}
@@ -69,7 +69,7 @@ const ControlButtons: React.FunctionComponent = () => {
       <Button
         text="Test"
         onClick={() => handleRun(true)}
-        disabled={disableRunOrTest}
+        disabled={disableRunAndTest}
         iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
         color={'black'}
         size={'s'}
