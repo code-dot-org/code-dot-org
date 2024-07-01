@@ -26,22 +26,24 @@ export default function UploadImageForm() {
 
     // assemble upload data
     const formData = new FormData();
-    // for (let i = 0; i < e.target.files.length; i++) {
-    //   formData.append(`file${i}`, e.target.files[i]); // check that this is accurate.
-    // }
-    // console.log('Getting form data: ');
-    // console.log(e.target.files);
-    // setFormDataForImage(formData);
-    // console.log(formData);
-    // setTempImageUrl(URL.createObjectURL(e.target.files[0]));
-
-    formData.append('file', e.target.files[0]);
+    for (let i = 0; i < e.target.files.length; i++) {
+      formData.append(`file${i}`, e.target.files[i]); // check that this is accurate.
+    }
     console.log('Getting form data: ');
     console.log(e.target.files);
     setFormDataForImage(formData);
+    console.log(formData);
     setTempImageUrl(URL.createObjectURL(e.target.files[0]));
+
+    // formData.append('file', e.target.files[0]);
+    // console.log('Getting form data: ');
+    // console.log(e.target.files);
+    // setFormDataForImage(formData);
+    // setTempImageUrl(URL.createObjectURL(e.target.files[0]));
   };
 
+  // NEXT STEP: Modify this so that you can save multiple images at a time.
+  // need to loop through imageData - maybe do an async / await to accomplish this.
   const saveImagesToS3 = () => {
     setIsUploading(true);
     // POST
