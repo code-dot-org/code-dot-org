@@ -152,6 +152,8 @@ def get_is_shared_table(table_name, records)
 end
 
 def fetch_datablock_tables(channel, project_id)
+  time_of_import = Time.now
+
   datablock_tables = []
   tables = channel.dig("metadata", "tables") || {}
 
@@ -177,8 +179,8 @@ def fetch_datablock_tables(channel, project_id)
       table_name: table_name,
       columns: columns,
       is_shared_table: is_shared_table,
-      created_at: Time.now,
-      updated_at: Time.now
+      created_at: time_of_import,
+      updated_at: time_of_import
     }
 
     # if the table is a shared table, we don't need to store the records
