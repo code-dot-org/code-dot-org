@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useMemo, useState} from 'react';
 
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
 import LibraryTable from '@cdo/apps/templates/projects/LibraryTable';
@@ -20,35 +20,41 @@ const ProjectsGallery: React.FunctionComponent<ProjectsGalleryProps> = ({
 }) => {
   const [selectedTab, setSelectedTab] = useState(Galleries.PRIVATE);
 
-  const galleryTabs = [
-    {
-      value: Galleries.PRIVATE,
-      label: i18n.myProjects(),
-      url: '/projects',
-      tabContent: <PersonalProjectsTable />,
-    },
-    {
-      value: Galleries.LIBRARIES,
-      label: i18n.myLibraries(),
-      url: '/projects/libraries',
-      tabContent: <LibraryTable />,
-    },
-    {
-      value: Galleries.PUBLIC,
-      label: i18n.featuredProjects(),
-      url: '/projects/public',
-      tabContent: <PublicGallery limitedGallery={limitedGallery} />,
-    },
-  ];
+  const galleryTabs = useMemo(() => {
+    const tabs = [
+      {
+        value: Galleries.PRIVATE,
+        label: i18n.myProjects(),
+        url: '/projects',
+        tabContent: <PersonalProjectsTable />,
+      },
+      {
+        value: Galleries.LIBRARIES,
+        label: i18n.myLibraries(),
+        url: '/projects/libraries',
+        tabContent: <LibraryTable />,
+      },
+      {
+        value: Galleries.PUBLIC,
+        label: i18n.featuredProjects(),
+        url: '/projects/public',
+        tabContent: <PublicGallery limitedGallery={limitedGallery} />,
+      },
+    ];
+    return tabs;
+  }, [limitedGallery]);
 
-  const handleOnChange = useCallback((value: string) => {
-    setSelectedTab(value);
-    selectGallery(value);
-    const galleryTab = galleryTabs.find(tab => tab.value === value);
-    if (galleryTab) {
-      window.history.pushState(null, 'null', galleryTab.url);
-    }
-  }, [galleryTabs]);
+  const handleOnChange = useCallback(
+    (value: string) => {
+      setSelectedTab(value);
+      selectGallery(value);
+      const galleryTab = galleryTabs.find(tab => tab.value === value);
+      if (galleryTab) {
+        window.history.pushState(null, 'null', galleryTab.url);
+      }
+    },
+    [galleryTabs]
+  );
 
   return (
     <div id="uitest-gallery-switcher">
