@@ -79,7 +79,7 @@ const PythonlabView: React.FunctionComponent = () => {
   const isPredictLevel = useAppSelector(
     state => state.lab.levelProperties?.predictSettings?.isPredictLevel
   );
-  const predictResponse = useAppSelector(state => state.lab.predictResponse);
+  const predictResponse = useAppSelector(state => state.predictLevel.response);
 
   const onRun = (
     runTests: boolean,

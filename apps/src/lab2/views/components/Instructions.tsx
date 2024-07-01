@@ -11,7 +11,10 @@ import {LabState} from '../../lab2Redux';
 import {ThemeContext} from '../ThemeWrapper';
 import PredictQuestion from './PredictQuestion';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
-import {setPredictResponse} from '@cdo/apps/lab2/redux/predictLevelRedux';
+import {
+  isPredictAnswerLocked,
+  setPredictResponse,
+} from '@cdo/apps/lab2/redux/predictLevelRedux';
 const commonI18n = require('@cdo/locale');
 
 interface InstructionsProps {
@@ -63,9 +66,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     state => state.lab.levelProperties?.predictSettings
   );
   const predictResponse = useAppSelector(state => state.predictLevel.response);
-  const hasSubmittedPredictResponse = useAppSelector(
-    state => state.predictLevel.hasSubmittedResponse
-  );
+  const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
 
   // If there are no validation conditions, we can show the continue button so long as
   // there is another level and manageNavigation is true.
@@ -108,7 +109,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       predictSettings={predictSettings}
       predictResponse={predictResponse}
       setPredictResponse={response => dispatch(setPredictResponse(response))}
-      hasSubmittedPredictResponse={hasSubmittedPredictResponse}
+      predictAnswerLocked={predictAnswerLocked}
       {...{baseUrl, layout, imagePopOutDirection, handleInstructionsTextClick}}
     />
   );
@@ -147,7 +148,7 @@ interface InstructionsPanelProps {
   predictSettings?: LevelPredictSettings;
   predictResponse?: string;
   setPredictResponse: (response: string) => void;
-  hasSubmittedPredictResponse: boolean;
+  predictAnswerLocked: boolean;
 }
 
 /**
@@ -170,7 +171,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   predictSettings,
   predictResponse,
   setPredictResponse,
-  hasSubmittedPredictResponse,
+  predictAnswerLocked,
 }) => {
   const [showBigImage, setShowBigImage] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
@@ -267,7 +268,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               predictSettings={predictSettings}
               predictResponse={predictResponse}
               setPredictResponse={setPredictResponse}
-              hasSubmittedPredictResponse={hasSubmittedPredictResponse}
+              predictAnswerLocked={predictAnswerLocked}
             />
           </div>
         )}

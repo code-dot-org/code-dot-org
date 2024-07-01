@@ -381,7 +381,6 @@ export const sendPredictLevelReport = createAsyncThunk<
     state: RootState;
   }
 >('progress/sendPredictLevelReport', async (payload, thunkAPI) => {
-  console.log({payload});
   sendReportHelper(
     payload.appType,
     TestResults.CONTAINED_LEVEL_RESULT,

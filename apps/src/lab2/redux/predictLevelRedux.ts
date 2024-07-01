@@ -1,6 +1,7 @@
 import {sendPredictLevelReport} from '@cdo/apps/code-studio/progressRedux';
-import {PayloadAction, createSlice} from '@reduxjs/toolkit';
+import {PayloadAction, createSelector, createSlice} from '@reduxjs/toolkit';
 import {setLoadedPredictResponse} from '@cdo/apps/lab2/lab2Redux';
+import {RootState} from '@cdo/apps/types/redux';
 
 export interface PredictLevelState {
   response: string;
@@ -13,6 +14,20 @@ const initialState: PredictLevelState = {
   response: '',
   hasSubmittedResponse: false,
 };
+
+// SELECTORS
+// The predict answer is locked if the level is a predict level that does not allow multiple attempts
+// and the user has not yet submitted a response.
+export const isPredictAnswerLocked = createSelector(
+  [
+    (state: RootState) =>
+      state.lab.levelProperties?.predictSettings?.allowMultipleAttempts,
+    (state: RootState) => state.predictLevel.hasSubmittedResponse,
+  ],
+  (allowMultipleAttempts, hasSubmittedResponse) => {
+    return !allowMultipleAttempts && hasSubmittedResponse;
+  }
+);
 
 // REDUCER
 const predictSlice = createSlice({

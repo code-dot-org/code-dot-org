@@ -9,23 +9,18 @@ interface PredictQuestionProps {
   predictSettings: LevelPredictSettings | undefined;
   predictResponse: string | undefined;
   setPredictResponse: (response: string) => void;
-  hasSubmittedPredictResponse: boolean;
+  predictAnswerLocked: boolean;
 }
 
 const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
   predictSettings,
   predictResponse,
   setPredictResponse,
-  hasSubmittedPredictResponse,
+  predictAnswerLocked,
 }) => {
   if (!predictSettings?.isPredictLevel) {
     return null;
   }
-
-  // If the user has submitted a response and the level does not allow multiple attempts,
-  // lock the answer.
-  const lockAnswer =
-    hasSubmittedPredictResponse && !predictSettings.allowMultipleAttempts;
 
   const handleMultiSelectChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (predictSettings.isMultiSelect) {
@@ -50,7 +45,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
           onChange={e => setPredictResponse(e.target.value)}
           style={{height: predictSettings.freeResponseHeight || 20}}
           className={moduleStyles.freeResponse}
-          readOnly={lockAnswer}
+          readOnly={predictAnswerLocked}
         />
       ) : (
         predictSettings.multipleChoiceOptions?.map((option, index) => (
@@ -69,7 +64,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
               onChange={handleMultiSelectChanged}
               name={option}
               key={index}
-              disabled={lockAnswer}
+              disabled={predictAnswerLocked}
             />
             <span className={moduleStyles.multipleChoiceLabel}>{option}</span>
           </label>

@@ -28,7 +28,7 @@ const ControlButtons: React.FunctionComponent = () => {
     state => nextLevelId(state) !== undefined
   );
   const hasPredictResponse = useAppSelector(
-    state => !!state.lab.predictResponse
+    state => !!state.predictLevel.response
   );
   const isPredictLevel = useAppSelector(
     state => state.lab.levelProperties?.predictSettings?.isPredictLevel
