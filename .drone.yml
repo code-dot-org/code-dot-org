@@ -258,10 +258,10 @@ steps:
         from_secret: SAUCE_USERNAME
       SAUCE_ACCESS_KEY:
         from_secret: SAUCE_ACCESS_KEY
+      HOST: "localhost-studio.code.org"
+      PORT: "3001"
     commands:
-      - sudo chown -R circleci:circleci .
-      # cache is restored to source directory, so we need to copy it into the right place
-      - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
+      - npx --yes wait-on@7.0.1 http://$HOST:$PORT
       # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
       - export CIRCLE_SHA1=$DRONE_COMMIT
       - EXIT_CODE=0
@@ -271,9 +271,6 @@ steps:
     depends_on:
       - ui-tests-backend
   - commands:
-      - sudo chown -R circleci:circleci .
-      # cache is restored to source directory, so we need to copy it into the right place
-      - cp -rn "$(pwd)/home/circleci/.rbenv" /home/circleci || true
       - npx --yes wait-on@7.0.1 http://$HOST:$PORT
       - cd apps
       - yarn install
