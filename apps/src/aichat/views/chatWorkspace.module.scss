@@ -1,8 +1,10 @@
 @import 'color.scss';
+@import './aichat-common.module.scss';
 
 $default-spacing: 16px;
 
 .chatWorkspace {
+  @extend %panel-section;
   height: 100%;
   display: flex;
   flex-direction: column;
