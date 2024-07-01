@@ -8,7 +8,6 @@ import {
 } from '../progress/progressTypes';
 import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
 
-import FloatingHeader from './floatingHeader/FloatingHeader';
 import LessonDataCell from './LessonDataCell';
 import LessonProgressColumnHeader from './LessonProgressColumnHeader';
 
@@ -21,12 +20,7 @@ function LessonProgressDataColumn({
   sortedStudents,
   addExpandedLesson,
   expandedMetadataStudentIds,
-  tableRef,
-  addScrollCallback,
-  removeScrollCallback,
 }) {
-  const columnRef = React.useRef();
-
   const lockedPerStudent = React.useMemo(
     () =>
       Object.fromEntries(
@@ -48,39 +42,29 @@ function LessonProgressDataColumn({
     [sortedStudents, lockedPerStudent]
   );
 
-  const header = (
-    <LessonProgressColumnHeader
-      lesson={lesson}
-      addExpandedLesson={addExpandedLesson}
-      allLocked={allLocked}
-    />
-  );
-
   return (
     <div className={styles.lessonColumn}>
-      <FloatingHeader
-        header={header}
-        id={lesson.id}
-        tableRef={tableRef}
-        addScrollCallback={addScrollCallback}
-        removeScrollCallback={removeScrollCallback}
-      >
-        <div className={styles.lessonDataColumn} ref={columnRef}>
-          {sortedStudents.map(student => (
-            <LessonDataCell
-              locked={lockedPerStudent[student.id]}
-              lesson={lesson}
-              studentLessonProgress={
-                lessonProgressByStudent[student.id][lesson.id]
-              }
-              key={student.id + '.' + lesson.id}
-              studentId={student.id}
-              addExpandedLesson={addExpandedLesson}
-              metadataExpanded={expandedMetadataStudentIds.includes(student.id)}
-            />
-          ))}
-        </div>
-      </FloatingHeader>
+      <LessonProgressColumnHeader
+        lesson={lesson}
+        addExpandedLesson={addExpandedLesson}
+        allLocked={allLocked}
+      />
+
+      <div className={styles.lessonDataColumn}>
+        {sortedStudents.map(student => (
+          <LessonDataCell
+            locked={lockedPerStudent[student.id]}
+            lesson={lesson}
+            studentLessonProgress={
+              lessonProgressByStudent[student.id][lesson.id]
+            }
+            key={student.id + '.' + lesson.id}
+            studentId={student.id}
+            addExpandedLesson={addExpandedLesson}
+            metadataExpanded={expandedMetadataStudentIds.includes(student.id)}
+          />
+        ))}
+      </div>
     </div>
   );
 }
@@ -98,9 +82,6 @@ LessonProgressDataColumn.propTypes = {
   lesson: PropTypes.object.isRequired,
   addExpandedLesson: PropTypes.func.isRequired,
   expandedMetadataStudentIds: PropTypes.array,
-  tableRef: PropTypes.object,
-  addScrollCallback: PropTypes.func,
-  removeScrollCallback: PropTypes.func,
 };
 
 export default connect(state => ({

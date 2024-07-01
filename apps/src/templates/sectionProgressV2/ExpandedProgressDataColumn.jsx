@@ -11,7 +11,6 @@ import {studentLevelProgressType} from '../progress/progressTypes';
 import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
 
 import ExpandedProgressColumnHeader from './ExpandedProgressColumnHeader.jsx';
-import FloatingHeader from './floatingHeader/FloatingHeader';
 import LevelDataCell, {getStudentRowHeaderId} from './LevelDataCell';
 
 import styles from './progress-table-v2.module.scss';
@@ -26,9 +25,6 @@ function ExpandedProgressDataColumn({
   removeExpandedLesson,
   sectionId,
   expandedMetadataStudentIds,
-  tableRef,
-  addScrollCallback,
-  removeScrollCallback,
 }) {
   const [expandedChoiceLevels, setExpandedChoiceLevels] = React.useState([]);
 
@@ -118,29 +114,18 @@ function ExpandedProgressDataColumn({
     ]
   );
 
-  const header = (
-    <ExpandedProgressColumnHeader
-      lesson={lesson}
-      removeExpandedLesson={removeExpandedLesson}
-      expandedChoiceLevels={expandedChoiceLevels}
-      toggleExpandedChoiceLevel={toggleExpandedChoiceLevel}
-    />
-  );
-
   return (
     <table key={lesson.id} className={styles.expandedColumn}>
       <caption hidden={true}>
         {i18n.progressForLesson({lessonName: lesson.title})}
       </caption>
-      <FloatingHeader
-        header={header}
-        id={lesson.id}
-        tableRef={tableRef}
-        addScrollCallback={addScrollCallback}
-        removeScrollCallback={removeScrollCallback}
-      >
-        {progress}
-      </FloatingHeader>
+      <ExpandedProgressColumnHeader
+        lesson={lesson}
+        removeExpandedLesson={removeExpandedLesson}
+        expandedChoiceLevels={expandedChoiceLevels}
+        toggleExpandedChoiceLevel={toggleExpandedChoiceLevel}
+      />
+      {progress}
     </table>
   );
 }
@@ -154,9 +139,6 @@ ExpandedProgressDataColumn.propTypes = {
   removeExpandedLesson: PropTypes.func.isRequired,
   sectionId: PropTypes.number,
   expandedMetadataStudentIds: PropTypes.array,
-  tableRef: PropTypes.object,
-  addScrollCallback: PropTypes.func,
-  removeScrollCallback: PropTypes.func,
 };
 
 export const UnconnectedExpandedProgressDataColumn = ExpandedProgressDataColumn;
