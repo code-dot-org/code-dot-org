@@ -16,9 +16,7 @@ export function startTextToSpeech(text, locale, onComplete) {
     return false;
   }
 
-  const filteredVoices = filterAvailableVoices(
-    recommendedVoices[locale]
-  );
+  const filteredVoices = filterAvailableVoices(recommendedVoices[locale]);
   if (filteredVoices.length === 0) {
     return false;
   }
@@ -50,7 +48,9 @@ export function stopTextToSpeech() {
 
 // From https://github.com/HadrienGardeur/web-speech-recommended-voices.
 function filterAvailableVoices(jsonData) {
-  if (!jsonData) return [];
+  if (!jsonData) {
+    return [];
+  }
 
   const availableVoices = [];
   const voices = speechSynthesis.getVoices();
