@@ -16,9 +16,16 @@ import {
   hasTextToSpeechVoices
 } from '@ml/utils/TextToSpeech';
 
-let textPlayedViaClick = false;
+// A timer used for playing typing sounds.
 let guideTypingTimer = undefined;
-let guidePlayingTextToSpeech = undefined;
+
+// Whether text to speech has ever been successfully
+// started via a user click.
+let textToSpeechStartedViaClick = false;
+
+// The current guide, if any, being played as text
+// to speech.
+let textToSpeechCurrentGuide = undefined;
 
 let UnwrappedGuide = class Guide extends React.Component {
   onTypingDone() {
@@ -29,7 +36,7 @@ let UnwrappedGuide = class Guide extends React.Component {
 
   onTextToSpeechDone() {
     setState({guideShowing: true});
-    guidePlayingTextToSpeech = false;
+    textToSpeechCurrentGuide = undefined;
   }
 
   onGuideClick = () => {
@@ -42,8 +49,8 @@ let UnwrappedGuide = class Guide extends React.Component {
     if (
       state.textToSpeechLocale &&
       hasTextToSpeechVoices() &&
-      !textPlayedViaClick &&
-      guidePlayingTextToSpeech !== currentGuide &&
+      !textToSpeechStartedViaClick &&
+      textToSpeechCurrentGuide !== currentGuide &&
       currentGuide
     ) {
       if (
@@ -53,8 +60,8 @@ let UnwrappedGuide = class Guide extends React.Component {
           this.onTextToSpeechDone
         )
       ) {
-        guidePlayingTextToSpeech = currentGuide;
-        textPlayedViaClick = true;
+        textToSpeechCurrentGuide = currentGuide;
+        textToSpeechStartedViaClick = true;
         textToSpeechStarted = true;
       }
     }
@@ -102,9 +109,9 @@ let UnwrappedGuide = class Guide extends React.Component {
     if (
       state.textToSpeechLocale &&
       hasTextToSpeechVoices() &&
-      textPlayedViaClick &&
+      textToSpeechStartedViaClick &&
       !state.guideShowing &&
-      guidePlayingTextToSpeech !== currentGuide &&
+      textToSpeechCurrentGuide !== currentGuide &&
       currentGuide
     ) {
       if (
@@ -114,7 +121,7 @@ let UnwrappedGuide = class Guide extends React.Component {
           this.onTextToSpeechDone
         )
       ) {
-        guidePlayingTextToSpeech = currentGuide;
+        textToSpeechCurrentGuide = currentGuide;
       }
     }
 
