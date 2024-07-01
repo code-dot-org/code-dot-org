@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2024-05-29 18:22:59 UTC",
+    "serialized_at": "2024-06-28 21:12:27 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -6598,6 +6598,19 @@
       }
     },
     {
+      "name": "CSF Change Log 23-24 to 24-25",
+      "url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/",
+      "key": "csf_change_log_23-24_to_24-25",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/export",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csf_change_log_23-24_to_24-25"
+      }
+    },
+    {
       "name": "CSF Course B Lesson Slides",
       "url": "https://docs.google.com/presentation/d/1-U2UT0fuOAyBtbRQTSwcrUQZbP7E-MQLWrlxjAx4fTk/template/preview",
       "key": "csf_course_b_lesson_slides",
@@ -6611,15 +6624,29 @@
       }
     },
     {
-      "name": "CSF Course Syllabus",
-      "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
-      "key": "csf_course_syllabus",
+      "name": "CSF Course Syllabus 2024-25",
+      "url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/",
+      "key": "csf_course_syllabus_2024-25",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/export",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "csf_course_syllabus"
+        "resource.key": "csf_course_syllabus_2024-25"
+      }
+    },
+    {
+      "name": "CSF State Standards Master Crosswalk List",
+      "url": "https://docs.google.com/document/d/1sw5P6ejdXTK5H-TWxFCtYeI77sxxJwlY5V0k6p96reQ/",
+      "key": "csf_state_standards_master_crosswalk_list",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1sw5P6ejdXTK5H-TWxFCtYeI77sxxJwlY5V0k6p96reQ/export",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csf_state_standards_master_crosswalk_list"
       }
     },
     {
@@ -7524,7 +7551,19 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csf_course_syllabus",
+        "resource.key": "csf_change_log_23-24_to_24-25",
+        "script.name": "courseb-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csf_course_syllabus_2024-25",
+        "script.name": "courseb-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csf_state_standards_master_crosswalk_list",
         "script.name": "courseb-2024"
       }
     },

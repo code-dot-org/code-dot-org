@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2024-05-29 18:23:20 UTC",
+    "serialized_at": "2024-06-28 21:56:34 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -9392,18 +9392,6 @@
       }
     },
     {
-      "name": "CSF Course Syllabus",
-      "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
-      "key": "csf_course_syllabus",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "csf_course_syllabus"
-      }
-    },
-    {
       "name": "Debugging Guide",
       "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA",
       "key": "debugging_guide",
@@ -10184,12 +10172,6 @@
     {
       "seeding_key": {
         "resource.key": "cross-curricular_extension_activities",
-        "script.name": "coursec-2024"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csf_course_syllabus",
         "script.name": "coursec-2024"
       }
     },

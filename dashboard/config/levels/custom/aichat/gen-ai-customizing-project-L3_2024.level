@@ -1,0 +1,53 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2024-06-28T20:00:35.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Model Card & Publish\r\n\r\nAdd your model card and publish your chatbot! Be sure to press the <code class=\"visual-block\" style=\"color:white; background-color:#7435b2\">Publish</code> button to view your chatbot!",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.8",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "editable",
+        "temperature": "editable",
+        "systemPrompt": "editable",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "editable"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-biomistral-7b",
+        "gen-ai-mistral-7b-inst-v01"
+      ]
+    },
+    "project_template_level_name": "gen-ai-customizing-project-template_2024",
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-28T20:00:35.268+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project-L3\\\"\"],\"cloned_from\":\"gen-ai-customizing-project-L3\"}]"
+}]]></config>
+</Aichat>

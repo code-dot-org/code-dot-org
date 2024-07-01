@@ -9,6 +9,7 @@ export interface LevelPredictSettings {
   // Multiple choice settings
   multipleChoiceOptions?: string[];
   multipleChoiceAnswers?: string[];
+  isMultiSelect?: boolean;
 }
 
 export enum PredictQuestionType {

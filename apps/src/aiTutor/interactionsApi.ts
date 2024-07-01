@@ -78,6 +78,7 @@ export const fetchAITutorInteractions = async (
 export interface FeedbackData {
   thumbsUp?: boolean | null;
   thumbsDown?: boolean | null;
+  details?: string | null;
 }
 
 export async function saveFeedback(

@@ -115,6 +115,18 @@ const MultipleChoiceFields: React.FunctionComponent<
           icon={{iconName: 'plus'}}
           ariaLabel={'Add Option'}
         />
+
+        <Checkbox
+          label="Mark as multiple select"
+          checked={predictSettings.isMultiSelect || false}
+          onChange={e =>
+            setPredictSettings({
+              ...predictSettings,
+              isMultiSelect: e.target.checked,
+            })
+          }
+          name={`mark_multiple_select`}
+        />
       </label>
     </div>
   );
