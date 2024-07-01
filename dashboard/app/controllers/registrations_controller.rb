@@ -392,8 +392,8 @@ class RegistrationsController < Devise::RegistrationsController
 
     # Get the request location
     location = Geocoder.search(request.ip).try(:first)
-    country_code = location&.country_code.to_s.upcase
-    @is_usa = ['US', 'RD'].include?(country_code)
+    @country_code = location&.country_code.to_s.upcase
+    @is_usa = ['US', 'RD'].include?(@country_code)
 
     # We determine if the student is potentially locked by looking at their age
     # If they are older (or there is no policy for them) they are unlocked
