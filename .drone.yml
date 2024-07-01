@@ -189,6 +189,7 @@ steps:
 
   - name: ui-tests-backend
     detach: true
+    depends_on: restore-cache
     # see: docker/dockerfiles/Dockerfile
     image: codedotorg/code-dot-org:1.9.4
     pull: always
