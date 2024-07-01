@@ -258,8 +258,8 @@ steps:
         from_secret: SAUCE_USERNAME
       SAUCE_ACCESS_KEY:
         from_secret: SAUCE_ACCESS_KEY
-      HOST: "localhost-studio.code.org"
-      PORT: "3001"
+      HOST: "ui-tests-backend"
+      PORT: "3000"
     commands:
       - npx --yes wait-on@7.0.1 http://$HOST:$PORT
       # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
@@ -279,8 +279,8 @@ steps:
     depends_on:
       - ui-tests-backend
     environment:
-      HOST: "localhost-studio.code.org"
-      PORT: "3001"
+      HOST: "ui-tests-backend"
+      PORT: "3000"
     volumes:
       - name: rbenv
         path: /home/circleci/.rbenv
