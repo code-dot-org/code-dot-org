@@ -507,9 +507,6 @@ const styles = {
     padding: 20,
     opacity: 0
   },
-  guideFinalTextVisible: {
-    padding: 20
-  },
   guideBackground: {
     backgroundColor: 'rgba(0,0,0,0.3)',
     position: 'absolute',

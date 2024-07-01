@@ -6,17 +6,11 @@ supportedVoiceLanguages.forEach(supportedVoiceLanguage => {
   ] = require(`./textToSpeech/${supportedVoiceLanguage}.json`);
 });
 
-export function setOnVoicesChangedCallback(voicesChangedCallback) {
-  if (speechSynthesis.onvoiceschanged !== undefined) {
-    speechSynthesis.onvoiceschanged = voicesChangedCallback;
-  }
-}
-
-export function hasVoices() {
+export function hasTextToSpeechVoices() {
   return speechSynthesis.getVoices().length !== 0;
 }
 
-export function sayText(text, locale, onComplete) {
+export function startTextToSpeech(text, locale, onComplete) {
   const voices = speechSynthesis.getVoices();
   if (voices.length === 0) {
     return false;
@@ -50,7 +44,7 @@ export function sayText(text, locale, onComplete) {
   return true;
 }
 
-export function stopTalking() {
+export function stopTextToSpeech() {
   speechSynthesis.cancel();
 }
 

@@ -10,19 +10,14 @@ import colors from '@ml/oceans/styles/colors';
 import I18n from '@ml/oceans/i18n';
 import {Button} from '@ml/oceans/components/common';
 import arrowDownImage from '@public/images/arrow-down.png';
-
-import {sayText, stopTalking, hasVoices} from '../../../utils/TextToSpeech';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
-  faVolumeUp,
-  faVolumeMute,
-  faVolumeOff
-} from '@fortawesome/free-solid-svg-icons';
+  startTextToSpeech,
+  stopTextToSpeech,
+  hasTextToSpeechVoices
+} from '@ml/utils/TextToSpeech';
 
 let textPlayedViaClick = false;
-
 let guideTypingTimer = undefined;
-
 let guidePlayingTextToSpeech = undefined;
 
 let UnwrappedGuide = class Guide extends React.Component {
@@ -33,7 +28,7 @@ let UnwrappedGuide = class Guide extends React.Component {
   }
 
   onTextToSpeechDone() {
-    setState({guideShowing: true /*guidePlayingTextToSpeech: false*/});
+    setState({guideShowing: true});
     guidePlayingTextToSpeech = false;
   }
 
@@ -46,20 +41,18 @@ let UnwrappedGuide = class Guide extends React.Component {
     // Start playing text to speech.
     if (
       state.textToSpeechLocale &&
-      hasVoices() &&
+      hasTextToSpeechVoices() &&
       !textPlayedViaClick &&
-      //!state.guideShowing &&
       guidePlayingTextToSpeech !== currentGuide &&
       currentGuide
     ) {
       if (
-        sayText(
+        startTextToSpeech(
           currentGuide.textFn(getState()),
           state.textToSpeechLocale,
           this.onTextToSpeechDone
         )
       ) {
-        //setState({guidePlayingTextToSpeech: currentGuide});
         guidePlayingTextToSpeech = currentGuide;
         textPlayedViaClick = true;
         textToSpeechStarted = true;
@@ -71,7 +64,7 @@ let UnwrappedGuide = class Guide extends React.Component {
     if (!textToSpeechStarted) {
       const dismissed = guide.dismissCurrentGuide();
       if (dismissed) {
-        stopTalking();
+        stopTextToSpeech();
         soundLibrary.playSound('other');
       }
     }
@@ -103,46 +96,24 @@ let UnwrappedGuide = class Guide extends React.Component {
       guideTypingTimer = setInterval(() => {
         soundLibrary.playSound('no', 0.5);
       }, 1000 / 10);
-      //setState({guideTypingTimer});
-    }
-
-    if (currentGuide) {
-      if (
-        !(
-          state.textToSpeechLocale &&
-          textPlayedViaClick &&
-          !state.guideShowing &&
-          guidePlayingTextToSpeech !== currentGuide &&
-          currentGuide
-        )
-      ) {
-        console.log(
-          "Didn't play text on render because",
-          state.textToSpeechLocale,
-          textPlayedViaClick,
-          !state.guideShowing,
-          guidePlayingTextToSpeech !== currentGuide
-        );
-      }
     }
 
     // Start playing text to speech.
     if (
       state.textToSpeechLocale &&
-      hasVoices() &&
+      hasTextToSpeechVoices() &&
       textPlayedViaClick &&
       !state.guideShowing &&
       guidePlayingTextToSpeech !== currentGuide &&
       currentGuide
     ) {
       if (
-        sayText(
+        startTextToSpeech(
           currentGuide.textFn(getState()),
           state.textToSpeechLocale,
           this.onTextToSpeechDone
         )
       ) {
-        //setState({guidePlayingTextToSpeech: currentGuide});
         guidePlayingTextToSpeech = currentGuide;
       }
     }
@@ -176,18 +147,18 @@ let UnwrappedGuide = class Guide extends React.Component {
                       {I18n.t('didYouKnow')}
                     </div>
                   )}
-                  {(true || !state.textToSpeechLocale) && (
-                    <div style={styles.guideTypingText}>
-                      <Typist
-                        avgTypingDelay={35}
-                        stdTypingDelay={15}
-                        cursor={{show: false}}
-                        onTypingDone={this.onTypingDone}
-                      >
-                        {currentGuide.textFn(getState())}
-                      </Typist>
-                    </div>
-                  )}
+
+                  <div style={styles.guideTypingText}>
+                    <Typist
+                      avgTypingDelay={35}
+                      stdTypingDelay={15}
+                      cursor={{show: false}}
+                      onTypingDone={this.onTypingDone}
+                    >
+                      {currentGuide.textFn(getState())}
+                    </Typist>
+                  </div>
+
                   <div
                     style={
                       currentGuide.style === 'Info'
@@ -195,13 +166,7 @@ let UnwrappedGuide = class Guide extends React.Component {
                         : styles.guideFinalTextContainer
                     }
                   >
-                    <div
-                      style={
-                        false && state.textToSpeechLocale
-                          ? styles.guideFinalTextVisible
-                          : styles.guideFinalText
-                      }
-                    >
+                    <div style={styles.guideFinalText}>
                       {currentGuide.textFn(getState())}
                     </div>
                   </div>
@@ -210,22 +175,6 @@ let UnwrappedGuide = class Guide extends React.Component {
                       {I18n.t('continue')}
                     </Button>
                   )}
-                  {/*
-                  {(state.textToSpeechVoicesAvailable || hasVoices) && (
-                    <div style={{padding: 20}}>
-                      <FontAwesomeIcon
-                        icon={textPlayedViaClick ? faVolumeUp : faVolumeOff}
-                        style={{
-                          border: 'solid 2px white',
-                          borderRadius: 15,
-                          padding: 10,
-                          width: 40
-                        }}
-                        onClick={() => {}}
-                      />
-                    </div>
-                  )}
-                  */}
                 </div>
               </div>
             </div>
