@@ -37,6 +37,8 @@ interface InstructionsProps {
    */
   handleInstructionsTextClick?: (id: string) => void;
   manageNavigation?: boolean;
+  /** Optional classname for the container */
+  className?: string;
 }
 
 /**
@@ -53,6 +55,7 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   layout,
   imagePopOutDirection,
   handleInstructionsTextClick,
+  className,
   manageNavigation = true,
 }) => {
   const instructionsText = useSelector(
@@ -110,7 +113,10 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       predictResponse={predictResponse}
       setPredictResponse={response => dispatch(setPredictResponse(response))}
       predictAnswerLocked={predictAnswerLocked}
-      {...{baseUrl, layout, imagePopOutDirection, handleInstructionsTextClick}}
+      layout={layout}
+      imagePopOutDirection={imagePopOutDirection}
+      handleInstructionsTextClick={handleInstructionsTextClick}
+      className={className}
     />
   );
 };
@@ -149,6 +155,8 @@ interface InstructionsPanelProps {
   predictResponse?: string;
   setPredictResponse: (response: string) => void;
   predictAnswerLocked: boolean;
+  /** Optional classname for the container */
+  className?: string;
 }
 
 /**
@@ -172,6 +180,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   predictResponse,
   setPredictResponse,
   predictAnswerLocked,
+  className,
 }) => {
   const [showBigImage, setShowBigImage] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
@@ -207,7 +216,8 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
       className={classNames(
         moduleStyles['instructions-' + theme],
         vertical && moduleStyles.vertical,
-        'instructions'
+        'instructions',
+        className
       )}
     >
       <div
