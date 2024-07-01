@@ -7,6 +7,7 @@ import Sounds from './Sounds';
 import {getState} from './state';
 
 let currentAppMode = queryStrFor('mode') || 'fishvtrash';
+const currentGuides = queryStrFor('guides');
 let canvas, backgroundCanvas;
 
 function onLevelChange(event) {
@@ -26,6 +27,7 @@ function initDemoPage() {
 
   initAll({
     appMode: currentAppMode,
+    guides: currentGuides,
     onContinue,
     canvas,
     backgroundCanvas,

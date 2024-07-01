@@ -10,7 +10,7 @@ const getCurrentGuide = () => {
 
   const state = getState();
 
-  const currentGuides = queryStrFor('guides') === 'K5' ? guidesK5 : guidesHoc;
+  const currentGuides = state.guides === 'K5' ? guidesK5 : guidesHoc;
 
   for (const guide of currentGuides) {
     // If the current state matches the guide's requirements...
