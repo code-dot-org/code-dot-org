@@ -2448,6 +2448,45 @@ class UnitTest < ActiveSupport::TestCase
     assert unit.finish_url.include?(unit.name)
   end
 
+  test 'deleting standalone unit deletes corresponding dependencies' do
+    standalone_unit = create :script, is_migrated: true, is_course: true, version_year: '2021', family_name: 'csf', name: 'standalone-2021'
+    course_version = create :course_version, content_root: standalone_unit
+    CourseOffering.add_course_offering(standalone_unit)
+    lesson = create :lesson, script: standalone_unit
+    lesson_gp = create :lesson_group, script: standalone_unit, lessons: [lesson]
+
+    # delete standalone unit
+    unit_id = standalone_unit.id
+    standalone_unit.destroy
+
+    assert Unit.find_by(id: unit_id).nil?
+    assert CourseVersion.find_by(id: course_version.id).nil?
+    assert Lesson.find_by(id: lesson.id).nil?
+    assert LessonGroup.find_by(id: lesson_gp.id).nil?
+  end
+
+  test 'deleting unit in unit group deletes corresponding dependencies' do
+    unit_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
+    unit_group = create(:unit_group)
+    unit_gp_unit = create :unit_group_unit, unit_group: @unit_group, script: unit_in_course, position: 1
+    CourseOffering.add_course_offering(unit_group)
+
+    unit_group.reload
+    unit_in_course.reload
+    course_version = unit_group.course_version
+    assert UnitGroupUnit.find_by(id: unit_gp_unit.id)
+
+    # delete unit in unit group
+    unit_id = unit_in_course.id
+    unit_in_course.destroy
+
+    assert Unit.find_by(id: unit_id).nil?
+
+    # Course version is associated to unit group and shouldn't be deleted
+    assert CourseVersion.find_by(id: course_version.id)
+    assert UnitGroupUnit.find_by(id: unit_gp_unit.id).nil?
+  end
+
   private def has_unlaunched_unit?(units)
     units.any? {|u| !u.launched?}
   end
