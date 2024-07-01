@@ -1,16 +1,19 @@
 // Pythonlab view
-import React, {useState} from 'react';
-import moduleStyles from './pythonlab-view.module.scss';
-import {ConfigType} from '@codebridge/types';
-import {LanguageSupport} from '@codemirror/language';
-import {python} from '@codemirror/lang-python';
 import {Codebridge} from '@codebridge/Codebridge';
-import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
-import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {useSource} from '@codebridge/hooks/useSource';
-import {handleRunClick} from './pyodideRunner';
-import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {ConfigType} from '@codebridge/types';
+import {python} from '@codemirror/lang-python';
+import {LanguageSupport} from '@codemirror/language';
+import React, {useState} from 'react';
+
 import {sendPredictLevelReport} from '@cdo/apps/code-studio/progressRedux';
+import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {handleRunClick} from './pyodideRunner';
+
+import moduleStyles from './pythonlab-view.module.scss';
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),

@@ -184,7 +184,6 @@ module.exports = {
       // To turn on the order rule for a folder, remove it from this list and run `yarn lint --fix`
       // Commit any changes made.
       files: [
-        'src/*',
         'src/code-studio/**',
         'src/dance/**',
         'src/generated/**',
@@ -193,8 +192,6 @@ module.exports = {
         'src/lib/**',
         'src/music/**',
         'src/p5lab/**',
-        'src/panels/*',
-        'src/pythonlab/*',
         'src/sites/**',
         // This one had some problems, see https://github.com/code-dot-org/code-dot-org/pull/58284
         'src/templates/curriculumCatalog/**',
