@@ -39,9 +39,6 @@ const predictSlice = createSlice({
     setPredictResponse(state, action: PayloadAction<string>) {
       state.response = action.payload;
     },
-    setHasSubmittedPredictResponse(state, action: PayloadAction<boolean>) {
-      state.hasSubmittedResponse = action.payload;
-    },
   },
   extraReducers: builder => {
     builder.addCase(sendPredictLevelReport.fulfilled, state => {
@@ -56,7 +53,6 @@ const predictSlice = createSlice({
   },
 });
 
-export const {setPredictResponse, setHasSubmittedPredictResponse} =
-  predictSlice.actions;
+export const {setPredictResponse} = predictSlice.actions;
 
 export default predictSlice.reducer;
