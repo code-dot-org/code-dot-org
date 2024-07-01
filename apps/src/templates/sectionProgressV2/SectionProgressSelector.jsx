@@ -25,14 +25,23 @@ function SectionProgressSelector({
   setShowProgressTableV2,
   progressTableV2ClosedBeta,
   sectionId,
+  hasSeenProgressTableInvite,
 }) {
   const [hasJustSwitchedToV2, setHasJustSwitchedToV2] = React.useState(false);
+  const [hasJustSwitchedToV1, setHasJustSwitchedToV1] = React.useState(false);
 
   const onShowProgressTableV2Change = useCallback(() => {
+    console.log('showProgressTableV2: ', showProgressTableV2);
+    if (showProgressTableV2) {
+      setHasJustSwitchedToV1(true);
+      console.log('should indicate a user switched to V1 from V2');
+      // do not show pop-up
+    }
     const shouldShowV2 = !showProgressTableV2;
     new UserPreferences().setShowProgressTableV2(shouldShowV2);
     setShowProgressTableV2(shouldShowV2);
     setHasJustSwitchedToV2(true);
+    console.log('should indicate a user switched to V2 from V1.... maybe');
 
     if (shouldShowV2) {
       analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_NEW_PROGRESS, {
@@ -100,7 +109,11 @@ function SectionProgressSelector({
 
   const includeModalIfAvailable = () => {
     const disableModal = DCDO.get('disable-try-new-progress-view-modal', false);
-    if (!disableModal) {
+    console.log(hasJustSwitchedToV1);
+    if (
+      !disableModal ||
+      (!hasJustSwitchedToV1 && !hasSeenProgressTableInvite && !disableModal)
+    ) {
       return (
         <InviteToV2ProgressModal
           sectionId={sectionId}
@@ -134,6 +147,7 @@ SectionProgressSelector.propTypes = {
   progressTableV2ClosedBeta: PropTypes.bool,
   setShowProgressTableV2: PropTypes.func.isRequired,
   sectionId: PropTypes.number,
+  hasSeenProgressTableInvite: PropTypes.bool,
 };
 
 export const UnconnectedSectionProgressSelector = SectionProgressSelector;
@@ -143,6 +157,7 @@ export default connect(
     showProgressTableV2: state.currentUser.showProgressTableV2,
     progressTableV2ClosedBeta: state.currentUser.progressTableV2ClosedBeta,
     sectionId: state.teacherSections.selectedSectionId,
+    hasSeenProgressTableInvite: state.currentUser.hasSeenProgressTableInvite,
   }),
   dispatch => ({
     setShowProgressTableV2: showProgressTableV2 =>
