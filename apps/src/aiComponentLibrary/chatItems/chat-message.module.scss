@@ -1,5 +1,5 @@
 @import 'color.scss';
-@import './chat-items-common.module.scss';
+@import '@cdo/apps/componentLibrary/typography/typography.module';
 
 $message-border-radius: 8px;
 
@@ -8,11 +8,40 @@ $user-color: $brand_primary_light;
 $assistant-color: $light_gray_100;
 
 %message {
-  padding: $internal-spacing;
+  @extend %markdown-styles;
+  padding: 12px;
   overflow: hidden;
   white-space: pre-line;
-  // Needed to override default p styling rendered by SafeMarkdown
+}
+
+%markdown-styles {
+  h1 {
+    @include heading-xxl;
+  }
+  h2 {
+    @include heading-xl;
+  }
+  h3 {
+    @include heading-lg;
+  }
+  h4 {
+    @include heading-md;
+  }
+  h5 {
+    @include heading-sm;
+  }
+  h6 {
+    @include heading-xs;
+  }
+
+  ul,
+  ol,
+  li {
+    font-size: 0.875rem;
+  }
+
   p {
+    @include body-three;
     margin: 0;
   }
 }
@@ -34,7 +63,6 @@ $assistant-color: $light_gray_100;
 
 %container {
   display: flex;
-  padding: $vertical-spacing $horizontal-spacing;
   gap: 8px;
 }
 

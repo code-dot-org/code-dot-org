@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatItems/ChatMessage';
-import ChatNotification from '@cdo/apps/aiComponentLibrary/chatItems/ChatNotification';
+import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {modelDescriptions} from '../constants';
@@ -36,12 +36,10 @@ function formatModelUpdateText(update: ModelUpdate): string {
   }
 
   const updatedText = updatedToText
-    ? ` has been updated to **${updatedToText}**.`
+    ? ` has been updated to ${updatedToText}.`
     : ' has been updated.';
 
-  return `**${fieldLabel}** ${updatedText} &nbsp; **${timestampToLocalTime(
-    timestamp
-  )}**`;
+  return `${fieldLabel} ${updatedText} [${timestampToLocalTime(timestamp)}]`;
 }
 
 /**
@@ -57,22 +55,22 @@ const ChatItemView: React.FunctionComponent<ChatItemViewProps> = ({item}) => {
   if (isNotification(item)) {
     const {id, text, notificationType, timestamp} = item;
     return (
-      <ChatNotification
-        text={`${text} &nbsp; **${timestampToLocalTime(timestamp)}**`}
-        dismissMethod={notificationType === 'error' ? 'auto' : 'manual'}
-        type={notificationType}
-        onDismiss={() => dispatch(removeUpdateMessage(id))}
+      <Alert
+        text={`${text} [${timestampToLocalTime(timestamp)}]`}
+        type={notificationType === 'error' ? 'danger' : 'success'}
+        onClose={() => dispatch(removeUpdateMessage(id))}
+        size="s"
       />
     );
   }
 
   if (isModelUpdate(item)) {
     return (
-      <ChatNotification
+      <Alert
         text={formatModelUpdateText(item)}
-        dismissMethod="manual"
         type="success"
-        onDismiss={() => dispatch(removeUpdateMessage(item.id))}
+        onClose={() => dispatch(removeUpdateMessage(item.id))}
+        size="s"
       />
     );
   }
