@@ -62,7 +62,9 @@ let UnwrappedGuide = class Guide extends React.Component {
     if (!textToSpeechStarted) {
       const dismissed = guide.dismissCurrentGuide();
       if (dismissed) {
-        stopTextToSpeech();
+        if (state.textToSpeechLocale) {
+          stopTextToSpeech();
+        }
         soundLibrary.playSound('other');
       }
     }
