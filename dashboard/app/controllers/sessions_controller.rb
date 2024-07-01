@@ -85,6 +85,9 @@ class SessionsController < Devise::SessionsController
       @pending_email = permission_request.parent_email
       @request_date = permission_request.updated_at
     end
+
+    @permission_status = current_user.child_account_compliance_state
+    @in_section = current_user.sections_as_student.present?
   end
 
   # Override default Devise sign_out path method

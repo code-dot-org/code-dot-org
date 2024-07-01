@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2024-05-29 18:22:37 UTC",
+    "serialized_at": "2024-06-28 21:56:31 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -6867,15 +6867,16 @@
       }
     },
     {
-      "name": "CSF Course Syllabus",
-      "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
-      "key": "csf_course_syllabus",
+      "name": "CSF Course Syllabus 2024-25",
+      "url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/",
+      "key": "csf_course_syllabus_1",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/export",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "csf_course_syllabus"
+        "resource.key": "csf_course_syllabus_1"
       }
     },
     {
@@ -7710,7 +7711,7 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csf_course_syllabus",
+        "resource.key": "csf_course_syllabus_1",
         "script.name": "coursea-2024"
       }
     },
