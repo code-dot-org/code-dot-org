@@ -45,14 +45,20 @@ let UnwrappedGuide = class Guide extends React.Component {
 
     // Start playing text to speech.
     if (
-      state.textToSpeechEnabled &&
+      state.textToSpeechLocale &&
       hasVoices() &&
       !textPlayedViaClick &&
       //!state.guideShowing &&
       guidePlayingTextToSpeech !== currentGuide &&
       currentGuide
     ) {
-      if (sayText(currentGuide.textFn(getState()), this.onTextToSpeechDone)) {
+      if (
+        sayText(
+          currentGuide.textFn(getState()),
+          state.textToSpeechLocale,
+          this.onTextToSpeechDone
+        )
+      ) {
         //setState({guidePlayingTextToSpeech: currentGuide});
         guidePlayingTextToSpeech = currentGuide;
         textPlayedViaClick = true;
@@ -89,7 +95,7 @@ let UnwrappedGuide = class Guide extends React.Component {
 
     // Start playing the typing sounds.
     if (
-      !state.textToSpeechEnabled &&
+      !state.textToSpeechLocale &&
       !state.guideShowing &&
       !guideTypingTimer &&
       currentGuide
@@ -103,7 +109,7 @@ let UnwrappedGuide = class Guide extends React.Component {
     if (currentGuide) {
       if (
         !(
-          state.textToSpeechEnabled &&
+          state.textToSpeechLocale &&
           textPlayedViaClick &&
           !state.guideShowing &&
           guidePlayingTextToSpeech !== currentGuide &&
@@ -112,7 +118,7 @@ let UnwrappedGuide = class Guide extends React.Component {
       ) {
         console.log(
           "Didn't play text on render because",
-          state.textToSpeechEnabled,
+          state.textToSpeechLocale,
           textPlayedViaClick,
           !state.guideShowing,
           guidePlayingTextToSpeech !== currentGuide
@@ -122,14 +128,20 @@ let UnwrappedGuide = class Guide extends React.Component {
 
     // Start playing text to speech.
     if (
-      state.textToSpeechEnabled &&
+      state.textToSpeechLocale &&
       hasVoices() &&
       textPlayedViaClick &&
       !state.guideShowing &&
       guidePlayingTextToSpeech !== currentGuide &&
       currentGuide
     ) {
-      if (sayText(currentGuide.textFn(getState()), this.onTextToSpeechDone)) {
+      if (
+        sayText(
+          currentGuide.textFn(getState()),
+          state.textToSpeechLocale,
+          this.onTextToSpeechDone
+        )
+      ) {
         //setState({guidePlayingTextToSpeech: currentGuide});
         guidePlayingTextToSpeech = currentGuide;
       }
@@ -164,7 +176,7 @@ let UnwrappedGuide = class Guide extends React.Component {
                       {I18n.t('didYouKnow')}
                     </div>
                   )}
-                  {(true || !state.textToSpeechEnabled) && (
+                  {(true || !state.textToSpeechLocale) && (
                     <div style={styles.guideTypingText}>
                       <Typist
                         avgTypingDelay={35}
@@ -185,7 +197,7 @@ let UnwrappedGuide = class Guide extends React.Component {
                   >
                     <div
                       style={
-                        false && state.textToSpeechEnabled
+                        false && state.textToSpeechLocale
                           ? styles.guideFinalTextVisible
                           : styles.guideFinalText
                       }

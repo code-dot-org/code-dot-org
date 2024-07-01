@@ -16,13 +16,15 @@ export function hasVoices() {
   return speechSynthesis.getVoices().length !== 0;
 }
 
-export function sayText(text, onComplete) {
+export function sayText(text, locale, onComplete) {
   const voices = speechSynthesis.getVoices();
   if (voices.length === 0) {
     return false;
   }
 
-  const filteredVoices = filterAvailableVoices(recommendedVoices['en']);
+  const filteredVoices = filterAvailableVoices(
+    recommendedVoices[locale]
+  );
   if (filteredVoices.length === 0) {
     return false;
   }
@@ -43,7 +45,7 @@ export function sayText(text, onComplete) {
 
   speechSynthesis.speak(utterance);
 
-  console.log("Saying:", text);
+  console.log('Saying:', text);
 
   return true;
 }

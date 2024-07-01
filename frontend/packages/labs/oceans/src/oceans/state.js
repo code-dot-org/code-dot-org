@@ -39,7 +39,7 @@ const initialState = {
   guideShowing: false,
   showConfirmationDialog: false,
   confirmationDialogOnYes: null,
-  textToSpeechVoicesAvailable: false
+  textToSpeechLocale: undefined
 };
 let state = {...initialState};
 
