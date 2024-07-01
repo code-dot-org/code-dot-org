@@ -406,6 +406,8 @@ class RegistrationsController < Devise::RegistrationsController
     # We need to also account for the case when the US State is not specified
     # All students are locked out of account settings features until they specify these
     @locked = @student_in_lockout_flow || current_user.country_code.nil? || current_user.us_state.nil?
+    # Only for students
+    @locked &&= current_user.student?
     # Only for US-based requests
     @locked &&= @is_usa
     # Put this behind an experiment flag for now
