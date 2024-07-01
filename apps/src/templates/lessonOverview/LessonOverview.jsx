@@ -1,3 +1,4 @@
+import cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -93,6 +94,15 @@ class LessonOverview extends Component {
       unit.publishedState !== PublishedState.in_development;
 
     const options = [];
+
+    if (locale !== 'en-US') {
+      options.push({
+        key: 'printSingleLessonPlan',
+        name: i18n.printLessonPlan(),
+        url: 'javascript:window.print()',
+      });
+      return options;
+    }
     if (lessonPlanPdfUrl && showOverviewPDFOption) {
       options.push({
         key: 'singleLessonPlan',
@@ -348,6 +358,9 @@ class LessonOverview extends Component {
     );
   }
 }
+
+// Get the current locale.
+const locale = cookies.get('language_') || 'en-US';
 
 const styles = {
   frontPage: {
