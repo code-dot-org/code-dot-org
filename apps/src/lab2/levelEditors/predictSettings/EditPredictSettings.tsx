@@ -22,7 +22,6 @@ const EditPredictSettings: React.FunctionComponent<
     allowMultipleAttempts: false,
     placeholderText: '',
     multipleChoiceOptions: [''],
-    multipleChoiceAnswers: [],
     freeResponseHeight: 20,
   };
 
