@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import React from 'react';
 import UI from './ui';
 import constants, {Modes} from './constants';
-import {setInitialState, setSetStateCallback} from './state';
+import {setInitialState, setSetStateCallback, setState} from './state';
 import {render as renderCanvas} from './renderer';
 import modeHelpers from './modeHelpers';
 import soundLibrary from './models/soundLibrary';
+import {setOnVoicesChangedCallback} from '../utils/TextToSpeech';
 import I18n from './i18n';
 
 //
@@ -33,6 +34,11 @@ export const initAll = function(options) {
   setInitialState({
     currentMode: Modes.Loading,
     ...options
+  });
+
+  setOnVoicesChangedCallback(() => {
+    setState({textToSpeechVoicesAvailable: true});
+    console.log("Voices changed");
   });
 
   // Initialize our first model.

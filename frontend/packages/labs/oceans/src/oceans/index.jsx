@@ -7,6 +7,7 @@ import Sounds from './Sounds';
 import {getState} from './state';
 
 let currentAppMode = queryStrFor('mode') || 'fishvtrash';
+let textToSpeechEnabled = queryStrFor('tts') === 'true';
 let canvas, backgroundCanvas;
 
 function onLevelChange(event) {
@@ -26,6 +27,7 @@ function initDemoPage() {
 
   initAll({
     appMode: currentAppMode,
+    textToSpeechEnabled,
     onContinue,
     canvas,
     backgroundCanvas,

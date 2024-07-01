@@ -38,7 +38,8 @@ const initialState = {
   guideDismissals: [],
   guideShowing: false,
   showConfirmationDialog: false,
-  confirmationDialogOnYes: null
+  confirmationDialogOnYes: null,
+  textToSpeechVoicesAvailable: false
 };
 let state = {...initialState};
 

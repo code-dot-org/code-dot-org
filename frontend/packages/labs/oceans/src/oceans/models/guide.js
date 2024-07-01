@@ -136,19 +136,37 @@ const guides = [
   {
     id: 'fishvtrash-pond-recall',
     textFn: () => I18n.t('fishvtrash-pond-recall'),
-    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Pond},
+    when: {
+      appMode: AppMode.FishVTrash,
+      currentMode: Modes.Pond,
+      fn: state => {
+        return state.fishData && state.totalPondFish !== null;
+      }
+    },
     arrow: 'UpperRight'
   },
   {
     id: 'fishvtrash-pond-init2',
     textFn: () => I18n.t('fishvtrash-pond-init2'),
-    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Pond},
+    when: {
+      appMode: AppMode.FishVTrash,
+      currentMode: Modes.Pond,
+      fn: state => {
+        return state.fishData && state.totalPondFish !== null;
+      }
+    },
     arrow: 'LowerLeft'
   },
   {
     id: 'fishvtrash-pond-init3',
     textFn: () => I18n.t('fishvtrash-pond-init3'),
-    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Pond},
+    when: {
+      appMode: AppMode.FishVTrash,
+      currentMode: Modes.Pond,
+      fn: state => {
+        return state.fishData && state.totalPondFish !== null;
+      }
+    },
     arrow: 'LowerRight'
   },
   {
@@ -359,7 +377,13 @@ const guides = [
   {
     id: 'fishshort-pond-init2',
     textFn: () => I18n.t('fishshort-pond-init2'),
-    when: {appMode: AppMode.FishShort, currentMode: Modes.Pond},
+    when: {
+      appMode: AppMode.FishShort,
+      currentMode: Modes.Pond,
+      fn: state => {
+        return state.fishData && state.totalPondFish !== null;
+      }
+    },
     arrow: 'UpperFarRight'
   },
   {
@@ -461,13 +485,25 @@ const guides = [
   {
     id: 'fishlong-pond-init2',
     textFn: () => I18n.t('fishlong-pond-init2'),
-    when: {appMode: AppMode.FishLong, currentMode: Modes.Pond},
+    when: {
+      appMode: AppMode.FishLong,
+      currentMode: Modes.Pond,
+      fn: state => {
+        return state.fishData && state.totalPondFish !== null;
+      }
+    },
     arrow: 'LowerLeft'
   },
   {
     id: 'fishlong-pond-init3',
     textFn: () => I18n.t('fishlong-pond-init3'),
-    when: {appMode: AppMode.FishLong, currentMode: Modes.Pond},
+    when: {
+      appMode: AppMode.FishLong,
+      currentMode: Modes.Pond,
+      fn: state => {
+        return state.fishData && state.totalPondFish !== null;
+      }
+    },
     arrow: 'LowishRight'
   }
 ];

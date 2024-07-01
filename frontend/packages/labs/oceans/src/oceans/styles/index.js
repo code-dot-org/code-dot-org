@@ -1,4 +1,4 @@
-import colors from "@ml/oceans/styles/colors";
+import colors from '@ml/oceans/styles/colors';
 
 const styles = {
   body: {
@@ -507,6 +507,9 @@ const styles = {
     padding: 20,
     opacity: 0
   },
+  guideFinalTextVisible: {
+    padding: 20
+  },
   guideBackground: {
     backgroundColor: 'rgba(0,0,0,0.3)',
     position: 'absolute',
@@ -589,4 +592,4 @@ const styles = {
   }
 };
 
-export default styles
+export default styles;
