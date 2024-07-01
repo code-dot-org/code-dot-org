@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2024-06-28T19:54:47.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Agreeable friend\r\n\r\nCreate a chatbot that acts as a \"Yes-man\" who just mindlessly agrees with everything you say. For example, if you say \"the world is ending\", the chatbot will say \"I agree - the world is ending\".\r\n\r\nUse examples to make sure your chatbot is responding in a clear agreeable pattern.\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* The world is ending\r\n* Cats are better than dogs\r\n* A hot dog is a sandwich\r\n:::\r\n\r\n&nbsp;",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.4",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "editable",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
+    },
+    "display_name": "Agreeable friend",
+    "bubble_choice_description": "Create a chatbot that acts as a \"Yes-man\" who just mindlessly agrees with everything you say. Use examples to set a specific pattern for how the chatbot should respond.",
+    "thumbnail_url": "https://images.code.org/179263662e5623e57bacf9e1308d7aca-Lesson 5 - Level 8D - Agreeable Friend.png",
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:54:47.178+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-synthesis-L9D\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-synthesis-L9D\"}]"
+}]]></config>
+</Aichat>
