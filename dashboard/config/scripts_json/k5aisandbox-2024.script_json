@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "k5aisandbox",
-    "serialized_at": "2024-06-28 17:08:47 UTC",
+    "serialized_at": "2024-07-01 16:20:27 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -904,6 +904,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "feature vector"
+        ],
         "progression": "Using AI Bot"
       },
       "bonus": false,
@@ -1077,31 +1080,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "k5_ai_data_survey_level_ai"
-        ],
-        "progression": "AI Tools in School"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "k5_ai_data_survey_level_ai"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "k5aisandbox-2024",
-        "activity_section.key": "edc25249-6b6b-47b1-949a-aa8991136ea3"
-      },
-      "level_keys": [
-        "k5_ai_data_survey_level_ai"
-      ]
-    },
-    {
-      "chapter": 36,
-      "position": 25,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "k5_ai_data_student_data_questions_level_ai"
         ],
         "progression": "AI Tools in School"
@@ -1121,8 +1099,8 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 26,
+      "chapter": 36,
+      "position": 25,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1146,7 +1124,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1171,7 +1149,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1196,7 +1174,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1221,7 +1199,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1246,7 +1224,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -1271,7 +1249,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 42,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -1703,18 +1681,6 @@
         "lesson_group.key": "",
         "script.name": "k5aisandbox-2024",
         "activity_section.key": "fb893d31-eda5-4c7d-86fe-0492f2c0b43d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "k5_ai_data_survey_level_ai",
-        "script_level.level_keys": [
-          "k5_ai_data_survey_level_ai"
-        ],
-        "lesson.key": "lesson-5",
-        "lesson_group.key": "",
-        "script.name": "k5aisandbox-2024",
-        "activity_section.key": "edc25249-6b6b-47b1-949a-aa8991136ea3"
       }
     },
     {

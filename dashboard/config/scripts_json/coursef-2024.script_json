@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2024-05-29 18:24:20 UTC",
+    "serialized_at": "2024-07-01 13:15:29 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -8013,15 +8013,29 @@
       }
     },
     {
-      "name": "CSF Course Syllabus",
-      "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
-      "key": "csf_course_syllabus",
+      "name": "CSF Change Log 2024-25",
+      "url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/template/preview",
+      "key": "csf_change_log_2024-25",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/template/export",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "csf_course_syllabus"
+        "resource.key": "csf_change_log_2024-25"
+      }
+    },
+    {
+      "name": "CSF Syllabus 2024-25",
+      "url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/edit#heading=h.d1b2pnqkkc57/template/preivew",
+      "key": "csf_syllabus_2024-25",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/edit#heading=h.d1b2pnqkkc57/export",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csf_syllabus_2024-25"
       }
     },
     {
@@ -8223,6 +8237,16 @@
       },
       "seeding_key": {
         "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "name": "CSF State Standards for CS - Master Crosswalk List",
+      "url": "https://docs.google.com/document/d/1sw5P6ejdXTK5H-TWxFCtYeI77sxxJwlY5V0k6p96reQ/edit#heading=h.73du1rws92dv/template/preview",
+      "key": "state_standards_for_computer_science_-_master_crosswalk_list",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "state_standards_for_computer_science_-_master_crosswalk_list"
       }
     },
     {
@@ -8655,7 +8679,13 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csf_course_syllabus",
+        "resource.key": "csf_change_log_2024-25",
+        "script.name": "coursef-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csf_syllabus_2024-25",
         "script.name": "coursef-2024"
       }
     },
@@ -8686,6 +8716,12 @@
     {
       "seeding_key": {
         "resource.key": "sprite_lab_documentation",
+        "script.name": "coursef-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "state_standards_for_computer_science_-_master_crosswalk_list",
         "script.name": "coursef-2024"
       }
     },

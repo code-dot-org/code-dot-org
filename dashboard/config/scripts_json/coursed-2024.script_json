@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2024-05-29 18:21:29 UTC",
+    "serialized_at": "2024-07-01 13:14:04 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -8248,6 +8248,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_lab_intro_panels_start2_course-d"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -8270,6 +8273,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_play_sound_course-d"
+        ],
         "progression": "Play a sound"
       },
       "bonus": false,
@@ -8292,6 +8298,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_change_sound_course-d"
+        ],
         "progression": "Play more sounds"
       },
       "bonus": false,
@@ -8314,6 +8323,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_repeat_course-d"
+        ],
         "progression": "Repeat"
       },
       "bonus": false,
@@ -8336,6 +8348,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_repeat_course-d"
+        ],
         "progression": "Repeat"
       },
       "bonus": false,
@@ -8358,6 +8373,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_playtogether_course-d"
+        ],
         "progression": "Play together"
       },
       "bonus": false,
@@ -8380,6 +8398,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_play_together_course-d"
+        ],
         "progression": "Play together"
       },
       "bonus": false,
@@ -8402,6 +8423,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_function_course-d"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -8424,6 +8448,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_function_course-d"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -8446,6 +8473,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_trigger_course-d"
+        ],
         "progression": "Triggers"
       },
       "bonus": false,
@@ -8468,6 +8498,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_trigger_course-d"
+        ],
         "progression": "Triggers"
       },
       "bonus": false,
@@ -8490,6 +8523,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_notes_course-d"
+        ],
         "progression": "Custom notes & beats"
       },
       "bonus": false,
@@ -8512,6 +8548,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_notes_course-d"
+        ],
         "progression": "Custom notes & beats"
       },
       "bonus": false,
@@ -8534,6 +8573,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_drums_course-d"
+        ],
         "progression": "Custom notes & beats"
       },
       "bonus": false,
@@ -8556,6 +8598,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "usiclab_tutorial_panels_end_course-d"
+        ],
         "progression": "Outro"
       },
       "bonus": false,
@@ -10871,6 +10916,19 @@
       }
     },
     {
+      "name": "CSF Change Log 2024-25",
+      "url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/template/preview",
+      "key": "csf_change_log_2024-25",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/template/export",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csf_change_log_2024-25"
+      }
+    },
+    {
       "name": "CSF Course D End of Course Project Planning Guide",
       "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing",
       "key": "csf_course_d_end_of_course_project_planning_guide",
@@ -10884,15 +10942,16 @@
       }
     },
     {
-      "name": "CSF Course Syllabus",
-      "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
-      "key": "csf_course_syllabus",
+      "name": "CSF Syllabus 2024-25",
+      "url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/edit#heading=h.d1b2pnqkkc57/template/preivew",
+      "key": "csf_syllabus_2024-25",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/edit#heading=h.d1b2pnqkkc57/export",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "csf_course_syllabus"
+        "resource.key": "csf_syllabus_2024-25"
       }
     },
     {
@@ -11265,6 +11324,16 @@
       },
       "seeding_key": {
         "resource.key": "spotify_playlist_all_ages_"
+      }
+    },
+    {
+      "name": "CSF State Standards for CS - Master Crosswalk List",
+      "url": "https://docs.google.com/document/d/1sw5P6ejdXTK5H-TWxFCtYeI77sxxJwlY5V0k6p96reQ/edit#heading=h.73du1rws92dv/template/preview",
+      "key": "state_standards_for_computer_science_-_master_crosswalk_list",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "state_standards_for_computer_science_-_master_crosswalk_list"
       }
     },
     {
@@ -11687,7 +11756,13 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csf_course_syllabus",
+        "resource.key": "csf_change_log_2024-25",
+        "script.name": "coursed-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csf_syllabus_2024-25",
         "script.name": "coursed-2024"
       }
     },
@@ -11712,6 +11787,12 @@
     {
       "seeding_key": {
         "resource.key": "lesson_type_guide",
+        "script.name": "coursed-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "state_standards_for_computer_science_-_master_crosswalk_list",
         "script.name": "coursed-2024"
       }
     },

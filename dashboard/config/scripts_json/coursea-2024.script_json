@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2024-06-28 21:56:31 UTC",
+    "serialized_at": "2024-07-01 13:05:04 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -6854,6 +6854,19 @@
       }
     },
     {
+      "name": "CSF Change Log 2024-25",
+      "url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/template/preview",
+      "key": "csf_change_log_2024-25",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/export",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csf_change_log_2024-25"
+      }
+    },
+    {
       "name": "CSF Course A Lesson Slides",
       "url": "https://docs.google.com/presentation/d/1Fi51StQ8W2frzFwSHBWi_YxvOQpN2JivlFJ6MEYh4ZQ/template/preview",
       "key": "csf_course_a_lesson_slides",
@@ -7165,6 +7178,16 @@
       },
       "seeding_key": {
         "resource.key": "safety_in_my_online_neighborhood_safety_it_rules_"
+      }
+    },
+    {
+      "name": "CSF State Standards for CS - Master Crosswalk List",
+      "url": "https://docs.google.com/document/d/1sw5P6ejdXTK5H-TWxFCtYeI77sxxJwlY5V0k6p96reQ/template/preview",
+      "key": "state_standards_for_cs_crosswalk",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "state_standards_for_cs_crosswalk"
       }
     },
     {
@@ -7711,6 +7734,12 @@
     },
     {
       "seeding_key": {
+        "resource.key": "csf_change_log_2024-25",
+        "script.name": "coursea-2024"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "csf_course_syllabus_1",
         "script.name": "coursea-2024"
       }
@@ -7730,6 +7759,12 @@
     {
       "seeding_key": {
         "resource.key": "lesson_type_guide",
+        "script.name": "coursea-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "state_standards_for_cs_crosswalk",
         "script.name": "coursea-2024"
       }
     },
