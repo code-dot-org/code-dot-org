@@ -83,6 +83,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
             }
           ),
           session_dates: session_dates,
+          school: most_recent_application_school,
           enrollment: @enrollment,
           facilitators: facilitators,
           workshop_enrollment_status: "unsubmitted",
@@ -215,10 +216,19 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     @workshop.require_application? && !has_application?
   end
 
-  private def has_application?
+  private def all_applications
     Pd::Application::TeacherApplication.where(
       user: current_user,
       status: 'accepted'
-      ).any?
+    )
+  end
+
+  private def has_application?
+    all_applications.any?
+  end
+
+  private def most_recent_application_school
+    app_data = all_applications&.order(application_year: :desc)&.first&.form_data_hash
+    app_data
   end
 end

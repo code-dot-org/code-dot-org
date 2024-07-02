@@ -141,7 +141,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   end
 
   private def school_info_params
-    {
+    params[:school_info] ? {
       school_type: params[:school_info][:school_type],
       school_state: params[:school_info][:school_state],
       school_zip: params[:school_info][:school_zip],
@@ -149,6 +149,15 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       school_district_other: params[:school_info][:school_district_other]&.strip_utf8mb4,
       school_id: params[:school_info][:school_id],
       school_name: params[:school_info][:school_name]&.strip_utf8mb4,
+      country: "US" # we currently only support enrollment in pd for US schools
+    } : {
+      school_type: 'other',
+      school_state: 'WA',
+      school_zip: '98122',
+      school_district_name: 'test',
+      school_district_other: 'test',
+      school_id: '10000200277',
+      school_name: 'test',
       country: "US" # we currently only support enrollment in pd for US schools
     }
   end
