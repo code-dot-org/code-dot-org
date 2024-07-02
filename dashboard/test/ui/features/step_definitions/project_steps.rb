@@ -72,13 +72,6 @@ Then(/^I report abuse on the project$/) do
   GHERKIN
 end
 
-Then /^I open the project share dialog$/ do
-  steps <<-GHERKIN
-    Then I click selector ".project_share"
-    And I wait to see a dialog titled "Share your project"
-  GHERKIN
-end
-
 Then /^I navigate to the public gallery via the gallery switcher$/ do
   steps <<-GHERKIN
     Then I click selector "#uitest-gallery-switcher div:contains(Featured Projects)"
@@ -138,7 +131,7 @@ Then /^I save the share URL$/ do
   last_shared_url = @browser.execute_script("return document.getElementById('sharing-dialog-copy-button').value")
 end
 
-When /^I open the share dialog$/ do
+When /^I open the project share dialog$/ do
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, sleep: 10, tries: 3) do
     steps <<-GHERKIN
       When I click selector ".project_share"
@@ -149,7 +142,7 @@ end
 
 When /^I navigate to the shared version of my project$/ do
   steps <<-GHERKIN
-    When I open the share dialog
+    When I open the project share dialog
     And I navigate to the share URL
   GHERKIN
 end
