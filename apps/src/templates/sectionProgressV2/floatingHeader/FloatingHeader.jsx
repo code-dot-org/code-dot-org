@@ -31,13 +31,33 @@ function FloatingHeader({
   removeScrollCallback,
   levelProgressByStudent,
   sortedStudents,
+  outsideTableRef,
 }) {
   const headerRef = React.useRef();
   const childContainerRef = React.useRef();
 
   const [floatHeader, setFloatHeader] = React.useState(false);
-  const [floatXPosition, setFloatXPosition] = React.useState(0);
-  // const [showHeader, setShowHeader] = React.useState(0);
+
+  const [headerWidth, setHeaderWidth] = React.useState(0);
+
+  const outsideTableResizeObserver = React.useMemo(
+    () =>
+      new ResizeObserver(([entry]) => {
+        if (entry.borderBoxSize) {
+          setHeaderWidth(entry.borderBoxSize[0].inlineSize);
+        }
+      }),
+    [setHeaderWidth]
+  );
+
+  React.useEffect(() => {
+    if (outsideTableResizeObserver && outsideTableRef?.current) {
+      outsideTableResizeObserver.observe(outsideTableRef.current);
+    }
+    return () => {
+      outsideTableResizeObserver.disconnect();
+    };
+  }, [outsideTableResizeObserver, outsideTableRef]);
 
   const handleScrollAndResize = React.useCallback(() => {
     const maxVisibleY =
@@ -53,34 +73,18 @@ function FloatingHeader({
     const shouldFloatHeader = !isTableTopVisible && !isTableOffScreen;
 
     if (shouldFloatHeader !== floatHeader) {
-      console.log('lfm', id, shouldFloatHeader);
       setFloatHeader(shouldFloatHeader);
-      // if (id === 5186) {
-      //   console.log({
-      //     label: 'lfm',
-      //     id: id,
-      //     columnLeft1: childContainerRef?.current.getBoundingClientRect().left,
-      //     tableLeft: tableRef?.current.getBoundingClientRect().left,
-      //     // headerLeft: headerRef?.current.getBoundingClientRect().left,
-      //   });
-      // }
     }
-
-    setFloatXPosition(childContainerRef?.current.getBoundingClientRect().left);
-    // For horizontal
-    // setShowHeader(
-    //   childContainerRef?.current.getBoundingClientRect().left >=
-    //     tableRef?.current.getBoundingClientRect().left &&
-    //     childContainerRef?.current.getBoundingClientRect().right <=
-    //       tableRef?.current.getBoundingClientRect().right
-    // );
-  }, [childContainerRef, floatHeader, setFloatHeader, id]);
+  }, [childContainerRef, floatHeader, setFloatHeader]);
 
   React.useEffect(() => {
     window.addEventListener('scroll', handleScrollAndResize);
     window.addEventListener('resize', handleScrollAndResize);
-    addScrollCallback(id, () => handleScrollAndResize());
-    // tableRef.addEventListener('scroll', handleScrollAndResize);
+    addScrollCallback(id, scroll => {
+      if (headerRef.current) {
+        headerRef.current.scrollLeft = scroll.target.scrollLeft;
+      }
+    });
     // Call it on initial render to set the initial state
     handleScrollAndResize();
 
@@ -96,6 +100,7 @@ function FloatingHeader({
     addScrollCallback,
     id,
     removeScrollCallback,
+    headerRef,
   ]);
 
   const lockedPerStudent = React.useCallback(
@@ -169,16 +174,18 @@ function FloatingHeader({
   return (
     <div className={styles.floatingHeader}>
       {floatHeader && (
-        <div
-          className={styles.floatHeader}
-          ref={headerRef}
-          style={{
-            left: floatXPosition + 'px',
-            display: 'flex',
-            flexDirection: 'row',
-          }}
-        >
-          {headers}
+        <div className={styles.floatHeader} style={{}}>
+          <div
+            style={{
+              width: headerWidth + 'px',
+              display: 'flex',
+              flexDirection: 'row',
+              overflowX: 'hidden',
+            }}
+            ref={headerRef}
+          >
+            {headers}
+          </div>
         </div>
       )}
       <div className={styles.childContainer} ref={childContainerRef}>
@@ -208,4 +215,5 @@ FloatingHeader.propTypes = {
   removeExpandedLesson: PropTypes.func,
   levelProgressByStudent: PropTypes.object,
   sortedStudents: PropTypes.array,
+  outsideTableRef: PropTypes.object,
 };

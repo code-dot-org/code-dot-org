@@ -72,11 +72,6 @@ function ProgressTableV2({
   const addScrollCallback = React.useCallback(
     (id, callback) => {
       setScrollCallbacks(prevCallbacks => {
-        if (prevCallbacks[id]) {
-          return prevCallbacks;
-        }
-        Object.values(prevCallbacks).forEach(cb => cb());
-        callback();
         return {...prevCallbacks, [id]: callback};
       });
     },
@@ -214,6 +209,7 @@ function ProgressTableV2({
               addScrollCallback={addScrollCallback}
               removeScrollCallback={removeScrollCallback}
               sortedStudents={sortedStudents}
+              outsideTableRef={outsideTableRef}
             >
               <div className={styles.tableInterior}>
                 {unitData.lessons.map(getRenderedColumn)}

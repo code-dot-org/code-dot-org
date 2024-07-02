@@ -116,7 +116,7 @@ export default function FloatingScrollbar({
         childContainerRef.current.scrollLeft = scroll.target.scrollLeft;
 
         if (Object.values(scrollCallback).length > 0) {
-          Object.values(scrollCallback).map(callback => callback());
+          Object.values(scrollCallback).map(callback => callback(scroll));
         }
       }
     },
