@@ -9,12 +9,14 @@ interface PredictQuestionProps {
   predictSettings: LevelPredictSettings | undefined;
   predictResponse: string | undefined;
   setPredictResponse: (response: string) => void;
+  predictAnswerLocked: boolean;
 }
 
 const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
   predictSettings,
   predictResponse,
   setPredictResponse,
+  predictAnswerLocked,
 }) => {
   if (!predictSettings?.isPredictLevel) {
     return null;
@@ -43,6 +45,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
           onChange={e => setPredictResponse(e.target.value)}
           style={{height: predictSettings.freeResponseHeight || 20}}
           className={moduleStyles.freeResponse}
+          readOnly={predictAnswerLocked}
         />
       ) : (
         predictSettings.multipleChoiceOptions?.map((option, index) => {
@@ -64,6 +67,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
                 onChange={handleMultiSelectChanged}
                 name={option}
                 key={index}
+                disabled={predictAnswerLocked}
               />
               <span className={moduleStyles.multipleChoiceLetter}>
                 {letterForOption}
