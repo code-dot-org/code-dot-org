@@ -230,7 +230,7 @@ steps:
       # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
       - export CIRCLE_SHA1=$DRONE_COMMIT
       - EXIT_CODE=0
-      - /entrypoint.sh docker/ui_tests.sh
+      - /entrypoint.sh bundle exec rake circle:run_ui_tests
 
   - name: ui-tests
     # see: docker/dockerfiles/Dockerfile
@@ -274,8 +274,8 @@ steps:
       - npx --yes wait-on@7.0.1 http://$HOST:$PORT
       - cd apps
       - yarn install
-      - npx --yes playwright install --with-deps
-      - npx --yes playwright test
+      - yarn playwright install --with-deps
+      - yarn playwright test
     depends_on:
       - ui-tests-backend
     environment:
@@ -286,7 +286,7 @@ steps:
         path: /home/circleci/.rbenv
       - name: mysql
         path: /var/lib/mysql
-    image: node:20-bookworm
+    image: mcr.microsoft.com/playwright:v1.45.0-jammy
     name: playwright
   - name: update-cache
     depends_on:
