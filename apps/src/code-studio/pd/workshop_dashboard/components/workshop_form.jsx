@@ -65,6 +65,7 @@ const placeholderSession = {
   endTime: '5:00pm',
 };
 
+// TODO pipe in PL topics via ACQ-2020
 const ALL_PL_TOPICS = [
   'Test Self Paced PL Topic',
   'Another Test Self Paced PL Topic',
@@ -735,9 +736,9 @@ export class WorkshopForm extends React.Component {
   };
 
   // Selects the given value in the topic dropdown
-  handleSelect = event => {
+  handleTopicSelect = event => {
     const value = Object.keys(event)[0];
-    const isChecked = event[Object.keys(event)[0]];
+    const isChecked = event[value];
 
     let updatedTopics;
     if (isChecked) {
@@ -1200,7 +1201,7 @@ export class WorkshopForm extends React.Component {
                               style={styles.check}
                               name={label}
                               label={label}
-                              onChange={e => this.handleSelect(e)}
+                              onChange={e => this.handleTopicSelect(e)}
                               value={this.state.plTopics.includes(label)}
                             />
                           </li>
