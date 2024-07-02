@@ -35,7 +35,6 @@ const galleryTabs = [
 class ProjectsGallery extends Component {
   static propTypes = {
     limitedGallery: PropTypes.bool,
-    canShare: PropTypes.bool.isRequired,
 
     // Provided by Redux
     selectedGallery: PropTypes.string.isRequired,
@@ -65,7 +64,7 @@ class ProjectsGallery extends Component {
           ))}
         </div>
         {this.props.selectedGallery === Galleries.PRIVATE && (
-          <PersonalProjectsTable canShare={this.props.canShare} />
+          <PersonalProjectsTable />
         )}
         {this.props.selectedGallery === Galleries.LIBRARIES && <LibraryTable />}
         {this.props.selectedGallery === Galleries.PUBLIC && (

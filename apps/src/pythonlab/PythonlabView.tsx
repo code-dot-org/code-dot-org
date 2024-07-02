@@ -8,6 +8,7 @@ import React, {useState} from 'react';
 
 import {sendPredictLevelReport} from '@cdo/apps/code-studio/progressRedux';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+import {isPredictAnswerLocked} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -82,7 +83,8 @@ const PythonlabView: React.FunctionComponent = () => {
   const isPredictLevel = useAppSelector(
     state => state.lab.levelProperties?.predictSettings?.isPredictLevel
   );
-  const predictResponse = useAppSelector(state => state.lab.predictResponse);
+  const predictResponse = useAppSelector(state => state.predictLevel.response);
+  const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
 
   const onRun = (
     runTests: boolean,
@@ -91,8 +93,15 @@ const PythonlabView: React.FunctionComponent = () => {
     source: MultiFileSource | undefined
   ) => {
     handleRunClick(runTests, dispatch, permissions, source);
-    if (isPredictLevel) {
-      dispatch(sendPredictLevelReport('pythonlab', predictResponse));
+    // Only send a predict level report if this is a predict level and the predict
+    // answer was not locked.
+    if (isPredictLevel && !predictAnswerLocked) {
+      dispatch(
+        sendPredictLevelReport({
+          appType: 'pythonlab',
+          predictResponse: predictResponse,
+        })
+      );
     }
   };
 
