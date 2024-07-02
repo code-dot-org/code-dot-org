@@ -18,6 +18,7 @@ import {
   PayloadAction,
   ThunkAction,
   ThunkDispatch,
+  createAsyncThunk,
   createSlice,
 } from '@reduxjs/toolkit';
 import {
@@ -43,6 +44,7 @@ import {
 import {getBubbleUrl} from '../templates/progress/BubbleFactory';
 import {navigateToHref} from '../utils';
 import {RootState} from '@cdo/apps/types/redux';
+import {AppDispatch} from '../util/reduxHooks';
 
 export interface ProgressState {
   currentLevelId: string | null;
@@ -371,20 +373,22 @@ export function sendSuccessReport(appType: string): ProgressThunkAction {
   };
 }
 
-export function sendPredictLevelReport(
-  appType: string,
-  predictResponse: string
-): ProgressThunkAction {
-  return (dispatch, getState) => {
-    sendReportHelper(
-      appType,
-      TestResults.CONTAINED_LEVEL_RESULT,
-      dispatch,
-      getState,
-      predictResponse
-    );
-  };
-}
+export const sendPredictLevelReport = createAsyncThunk<
+  void,
+  {appType: string; predictResponse: string},
+  {
+    dispatch: AppDispatch;
+    state: RootState;
+  }
+>('progress/sendPredictLevelReport', async (payload, thunkAPI) => {
+  sendReportHelper(
+    payload.appType,
+    TestResults.CONTAINED_LEVEL_RESULT,
+    thunkAPI.dispatch,
+    thunkAPI.getState,
+    payload.predictResponse
+  );
+});
 
 // Helpers
 
