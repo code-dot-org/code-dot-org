@@ -394,7 +394,12 @@ class TestController < ApplicationController
       :data_transfer_agreement_source,
       :data_transfer_agreement_at,
     )
-    user = User.create!(**user_opts)
+    if params[:sso]
+      user = User.new(**user_opts)
+      User.initialize_new_oauth_user(user, OmniAuth::AuthHash.new({provider: params[:sso], uid: params[:uid], info: {name: params[:name]}}))
+    else
+      user = User.create!(**user_opts)
+    end
     sign_in user
     head :ok
   end
