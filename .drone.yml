@@ -230,7 +230,7 @@ steps:
       # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
       - export CIRCLE_SHA1=$DRONE_COMMIT
       - EXIT_CODE=0
-      - /entrypoint.sh bundle exec rake circle:run_ui_tests
+      - /entrypoint.sh docker/ui_tests.sh
 
   - name: ui-tests
     # see: docker/dockerfiles/Dockerfile
@@ -265,7 +265,7 @@ steps:
       # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
       - export CIRCLE_SHA1=$DRONE_COMMIT
       - EXIT_CODE=0
-      - /entrypoint.sh docker/ui_tests.sh || EXIT_CODE=$?
+      - /entrypoint.sh bundle exec rake circle:run_ui_tests
       - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
       - exit $EXIT_CODE
     depends_on:
