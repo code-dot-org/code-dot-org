@@ -34,7 +34,7 @@ FIND_SHARED_TABLES = true
 # Probably want `SKIP_MISSING_PROJECT_IDS = true` for the real production run,
 # but when running locally, you'll probably want it set to false (since you don't
 # have a real Projects table locally).
-SKIP_MISSING_PROJECT_IDS = true
+SKIP_MISSING_PROJECT_IDS = false
 
 # DEBUG FLAGS:
 DEBUG_SHARED_TABLES = false
@@ -195,6 +195,21 @@ def fetch_datablock_tables(channel, project_id)
       end
 
     datablock_tables << {table: datablock_table, records: datablock_records}
+  end
+
+  current_tables = channel["current_tables"]
+  current_tables = {} unless current_tables.is_a? Hash
+  datablock_tables += current_tables.map do |table_name, _value|
+    {
+      table: {
+        project_id: project_id,
+        table_name: table_name,
+        is_shared_table: table_name,
+        created_at: time_of_import,
+        updated_at: time_of_import
+      },
+      records: []
+    }
   end
 
   datablock_tables
