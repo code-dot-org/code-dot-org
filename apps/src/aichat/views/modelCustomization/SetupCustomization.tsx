@@ -5,7 +5,7 @@ import {useSelector} from 'react-redux';
 import {AichatLevelProperties, ModelDescription} from '@cdo/apps/aichat/types';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown/SimpleDropdown';
-import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
+import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -19,6 +19,7 @@ import {
   MIN_TEMPERATURE,
   SET_TEMPERATURE_STEP,
 } from './constants';
+import FieldLabel from './FieldLabel';
 import UpdateButton from './UpdateButton';
 import {isVisible, isDisabled, isEditable} from './utils';
 
@@ -78,25 +79,38 @@ const SetupCustomization: React.FunctionComponent = () => {
   const renderChooseAndCompareModels = () => {
     return (
       <div className={styles.inputContainer}>
-        <SimpleDropdown
-          labelText="Selected model:"
-          onChange={event =>
-            dispatch(
-              setAiCustomizationProperty({
-                property: 'selectedModelId',
-                value: event.target.value,
-              })
-            )
-          }
-          items={availableModels.map(model => {
-            return {value: model.id, text: model.name};
-          })}
-          selectedValue={chosenModelId}
-          name="model"
-          size="s"
-          className={styles.selectedModelDropdown}
-          disabled={isDisabled(selectedModelId) || readOnlyWorkspace}
-        />
+        <WithTooltip
+          tooltipProps={{
+            text: 'This is the underlying language model being used by the chatbot. Use the dropdown to select from additional fine-tuned models.',
+            size: 's',
+            tooltipId: 'selected-model-tooltip',
+            direction: 'onLeft',
+            className: styles.tooltip,
+          }}
+          tooltipOverlayClassName={styles['full-width']}
+        >
+          <div className={styles['full-width']}>
+            <SimpleDropdown
+              labelText="Selected model:"
+              onChange={event =>
+                dispatch(
+                  setAiCustomizationProperty({
+                    property: 'selectedModelId',
+                    value: event.target.value,
+                  })
+                )
+              }
+              items={availableModels.map(model => {
+                return {value: model.id, text: model.name};
+              })}
+              selectedValue={chosenModelId}
+              name="model"
+              size="s"
+              className={styles.selectedModelDropdown}
+              disabled={isDisabled(selectedModelId) || readOnlyWorkspace}
+            />
+          </div>
+        </WithTooltip>
         {isEditable(selectedModelId) && (
           <Button
             text="Compare Models"
@@ -126,9 +140,11 @@ const SetupCustomization: React.FunctionComponent = () => {
         {isVisible(temperature) && (
           <div className={styles.inputContainer}>
             <div className={styles.horizontalFlexContainer}>
-              <label htmlFor="temperature">
-                <StrongText>Temperature</StrongText>
-              </label>
+              <FieldLabel
+                id="temperature"
+                label="Temperature"
+                tooltipText="Temperature affects which words are generated as a response. Use the slider to change the temperature."
+              />
               {aiCustomizations.temperature}
             </div>
             <input
@@ -151,9 +167,11 @@ const SetupCustomization: React.FunctionComponent = () => {
         )}
         {isVisible(systemPrompt) && (
           <div className={styles.inputContainer}>
-            <label htmlFor="system-prompt">
-              <StrongText>System prompt</StrongText>
-            </label>
+            <FieldLabel
+              id="system-prompt"
+              label="System Prompt"
+              tooltipText="The system prompt controls how the chatbot behaves. Type your instructions into the text box."
+            />
             <textarea
               id="system-prompt"
               value={aiCustomizations.systemPrompt}

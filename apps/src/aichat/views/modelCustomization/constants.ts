@@ -14,16 +14,48 @@ export const MAX_RETRIEVAL_CONTEXTS = 20;
 export const MAX_ASK_ABOUT_TOPICS = 10;
 
 export const MODEL_CARD_FIELDS_LABELS_ICONS: [
-  keyof ModelCardInfo,
-  string,
-  string
+  key: keyof ModelCardInfo,
+  label: string,
+  icon: string,
+  editTooltip: string,
+  displayTooltip: string
 ][] = [
-  ['botName', 'Chatbot Name', ''],
-  ['description', 'Description', 'memo'],
-  ['intendedUse', 'Intended Use', 'bullseye-pointer'],
-  ['limitationsAndWarnings', 'Limitations and Warnings', 'diamond-exclamation'],
-  ['testingAndEvaluation', 'Testing and Evaluation', 'vial-circle-check'],
-  ['exampleTopics', 'Example Prompts and Topics', 'message-lines'],
+  ['botName', 'Chatbot Name', '', 'Give your chatbot a unique name.', ''],
+  [
+    'description',
+    'Description',
+    'memo',
+    'Write a brief description of your chatbot, such as how it works and the problem it was created to solve.',
+    'A brief description of this chatbot.',
+  ],
+  [
+    'intendedUse',
+    'Intended Use',
+    'bullseye-pointer',
+    'Describe how the chatbot is intended to be used, such as what specific topics or questions it can answer.',
+    'How the chatbot was designed to be used. Similar to an instruction manual.',
+  ],
+  [
+    'limitationsAndWarnings',
+    'Limitations and Warnings',
+    'diamond-exclamation',
+    'Describe any limitations the chatbot has when responding. Describe any warnings or cautions for the user to consider.',
+    'Any limitations the chatbot has, or any warnings to consider when using the chatbot. Similar to safety information on a chatbot.',
+  ],
+  [
+    'testingAndEvaluation',
+    'Testing and Evaluation',
+    'vial-circle-check',
+    'Describe how you tested the chatbot to ensure it was ready for users and would perform as expected.',
+    'How the chatbot was tested before being published for general use.',
+  ],
+  [
+    'exampleTopics',
+    'Example Prompts and Topics',
+    'message-lines',
+    'Add example prompts the user could consider when using the chatbot',
+    'Try some of these example prompts to get started.',
+  ],
 ];
 
 export const TECHNICAL_INFO_FIELDS = [

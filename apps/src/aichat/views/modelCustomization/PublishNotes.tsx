@@ -19,6 +19,7 @@ import {ModelCardInfo} from '../../types';
 
 import {MODEL_CARD_FIELDS_LABELS_ICONS} from './constants';
 import ExampleTopicsInputs from './ExampleTopicsInputs';
+import FieldLabel from './FieldLabel';
 import PublishStatus from './PublishStatus';
 import {isDisabled} from './utils';
 
@@ -63,42 +64,47 @@ const PublishNotes: React.FunctionComponent = () => {
             : CompleteToPublishNotification
           : null}
         <div className={modelCustomizationStyles.customizationContainer}>
-          {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label, _]) => {
-            const InputTag = getInputTag(property);
+          {MODEL_CARD_FIELDS_LABELS_ICONS.map(
+            ([property, label, _, editTooltip]) => {
+              const InputTag = getInputTag(property);
 
-            return (
-              <div
-                className={modelCustomizationStyles.inputContainer}
-                key={property}
-              >
-                <label htmlFor={property}>
-                  <StrongText>{label}</StrongText>
-                </label>
-                {property === 'exampleTopics' && (
-                  <ExampleTopicsInputs
-                    topics={modelCardInfo.exampleTopics}
-                    readOnly={isReadOnly}
-                  />
-                )}
-                {property !== 'exampleTopics' && property !== 'isPublished' && (
-                  <InputTag
+              return (
+                <div
+                  className={modelCustomizationStyles.inputContainer}
+                  key={property}
+                >
+                  <FieldLabel
+                    label={label}
                     id={property}
-                    type="text"
-                    disabled={isReadOnly}
-                    value={modelCardInfo[property]}
-                    onChange={event =>
-                      dispatch(
-                        setModelCardProperty({
-                          property: property,
-                          value: event.target.value,
-                        })
-                      )
-                    }
+                    tooltipText={editTooltip}
                   />
-                )}
-              </div>
-            );
-          })}
+                  {property === 'exampleTopics' && (
+                    <ExampleTopicsInputs
+                      topics={modelCardInfo.exampleTopics}
+                      readOnly={isReadOnly}
+                    />
+                  )}
+                  {property !== 'exampleTopics' &&
+                    property !== 'isPublished' && (
+                      <InputTag
+                        id={property}
+                        type="text"
+                        disabled={isReadOnly}
+                        value={modelCardInfo[property]}
+                        onChange={event =>
+                          dispatch(
+                            setModelCardProperty({
+                              property: property,
+                              value: event.target.value,
+                            })
+                          )
+                        }
+                      />
+                    )}
+                </div>
+              );
+            }
+          )}
         </div>
       </div>
       <div className={modelCustomizationStyles.footerButtonContainer}>

@@ -2,7 +2,8 @@
 @import '../../mixins.scss';
 @import './aichat-common.module.scss';
 
-%full-width {
+%full-width,
+.full-width {
   width: 100%;
   box-sizing: border-box;
 }
@@ -15,7 +16,7 @@
   background: $light_white;
 
   .tabsContainer {
-    background-color: #EAEBEB
+    background-color: #eaebeb;
   }
 
   .tabPanels {
@@ -89,4 +90,21 @@
 .compareModelsButton {
   padding: 5px 16px;
   margin: 10px 0;
+}
+
+.fieldLabel {
+  margin: 0;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tooltip {
+  animation: fade-in 0.3s;
 }
