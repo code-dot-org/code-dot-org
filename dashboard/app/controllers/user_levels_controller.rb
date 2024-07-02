@@ -29,7 +29,11 @@ class UserLevelsController < ApplicationController
     return head :forbidden, text: 'User must be instructor of course' unless script.can_be_instructor?(current_user)
     level = Level.find(params[:level_id])
     return head :not_found, text: 'Level not found' unless level
-    return head :bad_request, text: "Clearing progress on level type #{level.type} is not supported" unless ['Multi', 'FreeResponse'].include?(level.type)
+    is_allowed_level_type = ['Multi', 'FreeResponse'].include?(level.type)
+    if level.uses_lab2? && level.predict_settings && level.predict_settings["isPredictLevel"]
+      is_allowed_level_type = true
+    end
+    return head :bad_request, text: "Clearing progress on level type #{level.type} is not supported" unless is_allowed_level_type
     UserLevel.where(user_id: current_user.id, script_id: script.id, level: level.id).destroy_all
     return head :ok
   end

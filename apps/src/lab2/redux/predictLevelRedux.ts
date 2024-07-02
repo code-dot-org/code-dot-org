@@ -1,7 +1,13 @@
 import {sendPredictLevelReport} from '@cdo/apps/code-studio/progressRedux';
-import {PayloadAction, createSelector, createSlice} from '@reduxjs/toolkit';
+import {
+  PayloadAction,
+  createAsyncThunk,
+  createSelector,
+  createSlice,
+} from '@reduxjs/toolkit';
 import {setLoadedPredictResponse} from '@cdo/apps/lab2/lab2Redux';
 import {RootState} from '@cdo/apps/types/redux';
+import {resetPredictLevelProgress} from '../projects/userLevelsApi';
 
 export interface PredictLevelState {
   response: string;
@@ -15,6 +21,21 @@ const initialState: PredictLevelState = {
   // If the user has submitted a predict response for the current level.
   hasSubmittedResponse: false,
 };
+
+// THUNKS
+export const resetPredictProgress = createAsyncThunk(
+  'predictLevel/resetPredictProgress',
+  async (
+    payload: {scriptId: number; currentLevelId: string; userId: string},
+    thunkAPI
+  ) => {
+    const response = await resetPredictLevelProgress(
+      payload.currentLevelId,
+      payload.scriptId
+    );
+    console.log({response});
+  }
+);
 
 // SELECTORS
 
