@@ -48,27 +48,34 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
           readOnly={predictAnswerLocked}
         />
       ) : (
-        predictSettings.multipleChoiceOptions?.map((option, index) => (
-          <label
-            key={`multiple-choice-${index}`}
-            className={moduleStyles.multipleChoiceContainer}
-          >
-            <input
-              type={predictSettings.isMultiSelect ? 'checkbox' : 'radio'}
-              value={option}
-              checked={
-                (predictResponse &&
-                  predictResponse.split(',').includes(option)) ||
-                false
-              }
-              onChange={handleMultiSelectChanged}
-              name={option}
-              key={index}
-              disabled={predictAnswerLocked}
-            />
-            <span className={moduleStyles.multipleChoiceLabel}>{option}</span>
-          </label>
-        ))
+        predictSettings.multipleChoiceOptions?.map((option, index) => {
+          // Add a capital letter to the beginning of each option, starting with A.
+          const letterForOption = String.fromCharCode(index + 65) + '.';
+          return (
+            <label
+              key={`multiple-choice-${index}`}
+              className={moduleStyles.multipleChoiceContainer}
+            >
+              <input
+                type={predictSettings.isMultiSelect ? 'checkbox' : 'radio'}
+                value={option}
+                checked={
+                  (predictResponse &&
+                    predictResponse.split(',').includes(option)) ||
+                  false
+                }
+                onChange={handleMultiSelectChanged}
+                name={option}
+                key={index}
+                disabled={predictAnswerLocked}
+              />
+              <span className={moduleStyles.multipleChoiceLetter}>
+                {letterForOption}
+              </span>
+              <span className={moduleStyles.multipleChoiceLabel}>{option}</span>
+            </label>
+          );
+        })
       )}
     </>
   );

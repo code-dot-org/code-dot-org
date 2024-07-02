@@ -291,8 +291,6 @@ class User < ApplicationRecord
 
   after_save :save_email_reg_partner_preference, if: -> {share_teacher_email_reg_partner_opt_in_radio_choice.present?}
 
-  after_save :log_cap_event, if: -> {properties_previous_change&.dig(1, 'child_account_compliance_state')}
-
   after_create if: -> {Policies::Lti.lti? self} do
     Services::Lti.create_lti_user_identity(self)
   end
@@ -2895,16 +2893,6 @@ class User < ApplicationRecord
     # Report an error if an invalid value was submitted (probably tampering).
     unless User.us_state_dropdown_options.include?(us_state)
       errors.add(:us_state, :invalid)
-    end
-  end
-
-  private def log_cap_event
-    if Policies::ChildAccount::ComplianceState.permission_granted?(self)
-      Services::ChildAccount::EventLogger.log_permission_granting(self)
-    elsif Policies::ChildAccount::ComplianceState.locked_out?(self)
-      Services::ChildAccount::EventLogger.log_account_locking(self)
-    elsif Policies::ChildAccount::ComplianceState.grace_period?(self)
-      Services::ChildAccount::EventLogger.log_grace_period_start(self)
     end
   end
 end
