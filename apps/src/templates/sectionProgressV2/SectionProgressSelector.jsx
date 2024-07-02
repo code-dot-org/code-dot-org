@@ -31,17 +31,13 @@ function SectionProgressSelector({
   const [hasJustSwitchedToV1, setHasJustSwitchedToV1] = React.useState(false);
 
   const onShowProgressTableV2Change = useCallback(() => {
-    console.log('showProgressTableV2: ', showProgressTableV2);
     if (showProgressTableV2) {
       setHasJustSwitchedToV1(true);
-      console.log('should indicate a user switched to V1 from V2');
-      // do not show pop-up
     }
     const shouldShowV2 = !showProgressTableV2;
     new UserPreferences().setShowProgressTableV2(shouldShowV2);
     setShowProgressTableV2(shouldShowV2);
     setHasJustSwitchedToV2(true);
-    console.log('should indicate a user switched to V2 from V1.... maybe');
 
     if (shouldShowV2) {
       analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_NEW_PROGRESS, {
