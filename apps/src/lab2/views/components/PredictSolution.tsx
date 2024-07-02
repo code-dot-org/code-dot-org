@@ -1,7 +1,7 @@
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import React from 'react';
 import {PredictQuestionType} from '@cdo/apps/lab2/levelEditors/types';
-import Typography from '@cdo/apps/componentLibrary/typography';
+import {BodyThreeText, Heading1} from '@cdo/apps/componentLibrary/typography';
 import moduleStyles from './predict.module.scss';
 import commonI18n from '@cdo/locale';
 
@@ -50,12 +50,8 @@ const PredictSolution: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.predictSolutionContainer}>
-      <Typography semanticTag="h1" visualAppearance="heading-sm">
-        {commonI18n.answer()}
-      </Typography>
-      <Typography semanticTag="p" visualAppearance="body-three">
-        {getFormattedSolution()}
-      </Typography>
+      <Heading1 visualAppearance="heading-sm">{commonI18n.answer()}</Heading1>
+      <BodyThreeText>{getFormattedSolution()}</BodyThreeText>
     </div>
   );
 };
