@@ -58,6 +58,7 @@ export default class SeeMoreCourses extends Component {
               icon="caret-down"
               text={i18n.viewMore()}
               style={styles.button}
+              className="ui-test-view-more-courses"
             />
           </div>
         )}
