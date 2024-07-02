@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2024-07-01 13:05:04 UTC",
+    "serialized_at": "2024-07-01 23:21:41 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1461,8 +1461,19 @@
       }
     },
     {
-      "key": "35e58f31-731b-418a-ba6a-505e72e8325a",
+      "key": "2dd5f677-ec13-4235-9b83-1cf4c5e8c83a",
       "position": 2,
+      "properties": {
+        "progression_name": "Happy Maps - Student Resources "
+      },
+      "seeding_key": {
+        "activity_section.key": "2dd5f677-ec13-4235-9b83-1cf4c5e8c83a",
+        "lesson_activity.key": "ba96f6af-5a2a-4b2b-8109-724bff9b2395"
+      }
+    },
+    {
+      "key": "35e58f31-731b-418a-ba6a-505e72e8325a",
+      "position": 3,
       "properties": {
         "description": "In this exercise, the class will get map cards that have a pre-defined start space (flurb) and end space (fruit).  Students will need to get the flurbs to the fruit on each card, using the arrows provided.\n\n**Model:**  Select one of the intermediate maps from the Happy Maps Cards worksheet (e.g., #3). Display it for the class and work through the puzzle together.\n\nHave students look at the puzzle, then think-pair-share their solution for how they would get the flurb to the fruit.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n\n**Think:**  This flurb needs to take two steps to get to the fruit. Work with your elbow partner to decide what you think those two steps are.\n\n**Pair:**  Have students discuss with neighbors for about 90 seconds.\n\n**Share:** Ask a few students to describe their algorithm to the class. Move your finger along the displayed map as the students read their steps. Once you have a solution, ask if anyone else came up with a different idea that also works. \n\n\nNow, share with the students that the magic step of changing an algorithm into a program happens when the code is written down using symbols.  Do the students see any symbols on the display?\n\n**Think:** Challenge students to encode the algorithm that they came up with before into symbols, and to write those symbols down in their journals (or on a piece of paper.)\n\n**Pair:** Once students have written down their symbols, ask them to swap with a partner to see if they can follow each others' instructions.\n\n**Share:** Ask for volunteers to come draw their arrows on the board. If the original code doesn't work, spend some time debugging as a class. Students should be familiar with the idea of \"debugging\" from previous lessons, so be sure to use the vocabulary to get them comfortable with it.\n\nOnce the code has been successfully written on the board, congratulate the class on writing their first program together!"
       },
@@ -1473,7 +1484,7 @@
     },
     {
       "key": "6e4c0ffa-2649-4fe1-9bc0-7630cf362a54",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "###Students' Turn\n\n**Group:** If your class is comfortable, place students into small groups of 2-3.  Otherwise, you can continue solving these problems as a class and having them think-pair-share to write programs. \n\n\n**Distribute:** Pass out one of the images from the ***Worksheet** to each group as needed.  \n*(Optional)* If you start noticing that students are ready for more, use the provided ***Manipulatives** and let students choose their own start and finish destinations on the blank map.\n\nEncourage the students to follow these steps:\n\n- Discuss an algorithm to get the flurb to the fruit.\n- Encode the algorithm into arrows in their journals.\n- Try their code to see if everything works as expected.\n- Debug any issues and fix their code until it works correctly.\n\n**Share:** When the lesson is done, offer to let groups share out the most difficult maps that they solved. If you have time, ask them to share their solutions as well."
       },
@@ -1937,8 +1948,19 @@
       }
     },
     {
-      "key": "235be31c-504f-48e2-8136-64d1b23a6ff2",
+      "key": "ceb9a7e0-14c1-4c3d-9616-feb823d18662",
       "position": 2,
+      "properties": {
+        "progression_name": "Happy Loops - Student Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "ceb9a7e0-14c1-4c3d-9616-feb823d18662",
+        "lesson_activity.key": "199d2720-19d0-42ff-a950-787e8de631bf"
+      }
+    },
+    {
+      "key": "235be31c-504f-48e2-8136-64d1b23a6ff2",
+      "position": 3,
       "properties": {
         "description": "This portion of the lesson should help students see that there is an easier way to handle repetitive code than to brute force a solution with dozens of the same symbols.\n\n**Display:**  \n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-22-18.05.24.png)\n\n**Model:** Once you are confident that your students remember Happy Maps, pull up one of the new -- and much longer -- _Happy Maps XL_. \n\nCan your students help you program these maps?  The resulting code might look something like this:\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-11.18.26.png)\n\n*It's a bit longer, isn't it?*"
       },
@@ -1949,7 +1971,7 @@
     },
     {
       "key": "d034807b-f41f-4222-ac8c-b1369f925489",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "**Discuss**\nThe point of this discussion is to get students to see that, sometimes, many symbols are repeated and they can lump all of those movements into a single icon. \n\nGive students the opportunity to brainstorm shorter ways to relay the code that they’re creating.  (This bit can be skipped over if your students start saying things like: “Move forward 6 times.” Since that will open the discussion about how to show “six times” with symbols.)\n\nIdeally, students will land on a method that looks like this one:  \n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-11.18.38.png)\n\nWhich can be reduced even further to this:  \n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-11.18.47.png)\n\nEventually, students can write programs like this on the fly:  \n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-11.19.06.png)\n\n**Define:** Once students have put together the idea of repeating code, give them the vocabulary around it.  Make sure to share with them that often the terms “repeat something” and “loop something” will be used interchangeably in Code Studio.\n\n---"
       },
@@ -1960,7 +1982,7 @@
     },
     {
       "key": "a97137e4-cf44-436f-83ec-3da9b19424b4",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "####Happy Loops\n\nNow that students are familiar with the ability to repeat lots of code using a single loop, select an XL map and let them help you write code for the situation.  Do this as many times together as a class as you need, then set students off in groups to solve some problems on their own. You may also need to add the ***Game Pieces Bonus Pack** to adapt this activity for loops.\n\n**Circulate:** Make sure to walk around and have students run through their code with you watching.  Are there any bugs?  Use the debugging questions to help them find a solution.\n\n - *What does it do?*\n - *What is it supposed to do?*\n - *What does that tell you?*\n - *Does it work at the first step?*\n - *Does it work at the second step?*\n - *Where does it stop working?*"
       },
@@ -2551,8 +2573,19 @@
       }
     },
     {
-      "key": "1f672f46-c9f0-4b64-8f86-ef6504033220",
+      "key": "9830b700-7b18-4951-89f3-f9bc0b2ce055",
       "position": 2,
+      "properties": {
+        "progression_name": "The Big Event Jr. - Student Resources "
+      },
+      "seeding_key": {
+        "activity_section.key": "9830b700-7b18-4951-89f3-f9bc0b2ce055",
+        "lesson_activity.key": "d789a73a-3934-41a4-b81b-df6af9e7832f"
+      }
+    },
+    {
+      "key": "1f672f46-c9f0-4b64-8f86-ef6504033220",
+      "position": 3,
       "properties": {
         "description": "- _Do you remember helping the flurbs find fruit?_\n\t- _In that exercise, you knew in advance exactly where you wanted your flurb to end up, so you could make a program that took them from start to finish without any interruptions._\n\t- _In most real programs, we can't do that because we want to have options, depending on what the user needs._\n\t\t- _Say that I only want my character to move when my finger is on the screen of my phone. I would need to program the character to only move when I put my finger on the screen of my phone._\n\t\t- _Putting my finger on the screen would then become an event that tells my character to move._\n",
         "name": "The Big Event",
@@ -2570,7 +2603,7 @@
     },
     {
       "key": "de412899-3618-4e89-a8c2-3d1a09c10fd7",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "\nIn earlier lessons, we created algorithms that allowed us to control a friend or flurb for several steps at a time. It was fun and useful, but what happens when you don’t know everything that you want your friend to do in advance? This is where events come in!\n\n\n**Directions:**\n\n- \n**Project** ***The Big Event (Courses A, B) - Controller Image** onto your classroom screen.\n\n![The Big Event](https://code.org/curriculum/docs/csf/c1_TheBigEvent1.png)\n\n- Decide with your class what each button does. We suggest:\n\t- Pink Button -> Say “Wooooo!”\n\t- Teal Button -> “Yeah!”\n\t- Purple Dial -> “Boom!”\n- Practice tapping the buttons on the screen and having your class react.\n- Add some button sequences into the mix and have the students try to keep up with their sounds.\n- Let your class know that every time you push a button, it is an event that lets them know what they are expected to do next.\n- Have students practice working backwards. Give them 3-4 sounds and ask what buttons they would need to press to get the sounds to play in that order. For example:\n\t- What buttons would you need to press to get \"Boom! Boom! Yeah!\"?\n- Get the class started on a planned task before interrupting them again with the buttons. We suggest:\n\t- Counting to 10\n\t- Singing “Old MacDonald”\n- Once their plan is underway, interject button presses sporadically.\n- Continue the blend until they understand the difference between actions that are guided by a plan and those that are event driven.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps."
       },
@@ -3242,6 +3275,28 @@
     },
     {
       "chapter": 15,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Happy Maps - Student Resources "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_happy maps_markdown"
+        ],
+        "lesson.key": "Happy Maps",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursea-2024",
+        "activity_section.key": "2dd5f677-ec13-4235-9b83-1cf4c5e8c83a"
+      },
+      "level_keys": [
+        "unplugged_happy maps_markdown"
+      ]
+    },
+    {
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3266,7 +3321,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3291,7 +3346,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3316,7 +3371,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3341,7 +3396,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -3366,7 +3421,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -3391,7 +3446,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -3416,7 +3471,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3441,7 +3496,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3466,7 +3521,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3491,7 +3546,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3516,7 +3571,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -3541,7 +3596,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -3566,7 +3621,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -3591,7 +3646,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -3616,7 +3671,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -3642,7 +3697,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -3667,7 +3722,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -3692,7 +3747,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -3717,7 +3772,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -3742,7 +3797,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -3767,7 +3822,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3792,7 +3847,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3817,7 +3872,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3842,7 +3897,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3867,7 +3922,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -3892,7 +3947,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -3917,7 +3972,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -3942,7 +3997,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -3967,7 +4022,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -3993,7 +4048,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -4018,7 +4073,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -4043,7 +4098,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -4068,7 +4123,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4093,7 +4148,29 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Happy Loops - Student Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_happy loops_markdown"
+        ],
+        "lesson.key": "Happy Loops",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursea-2024",
+        "activity_section.key": "ceb9a7e0-14c1-4c3d-9616-feb823d18662"
+      },
+      "level_keys": [
+        "unplugged_happy loops_markdown"
+      ]
+    },
+    {
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4118,7 +4195,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4143,7 +4220,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4168,7 +4245,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4193,7 +4270,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 55,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4218,7 +4295,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 56,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -4243,7 +4320,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 57,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -4268,7 +4345,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 58,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -4293,7 +4370,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 9,
       "activity_section_position": 6,
       "assessment": false,
@@ -4318,7 +4395,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 60,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -4344,7 +4421,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 61,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -4369,7 +4446,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -4394,7 +4471,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4419,7 +4496,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4444,7 +4521,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4469,7 +4546,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4494,7 +4571,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4519,7 +4596,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 68,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4544,7 +4621,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 69,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -4569,7 +4646,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 70,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -4594,7 +4671,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 71,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -4619,7 +4696,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 72,
       "position": 10,
       "activity_section_position": 6,
       "assessment": false,
@@ -4644,7 +4721,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 73,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -4670,7 +4747,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 74,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -4695,7 +4772,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 75,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -4720,7 +4797,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 76,
       "position": 14,
       "activity_section_position": 3,
       "assessment": false,
@@ -4745,7 +4822,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 77,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -4770,7 +4847,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 78,
       "position": 16,
       "activity_section_position": 2,
       "assessment": false,
@@ -4795,7 +4872,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 79,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4820,7 +4897,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 80,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4845,7 +4922,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 81,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4870,7 +4947,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 82,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4895,7 +4972,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 83,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4920,7 +4997,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 84,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -4945,7 +5022,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 85,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -4970,7 +5047,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 86,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -4995,7 +5072,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 87,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -5020,7 +5097,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 88,
       "position": 10,
       "activity_section_position": 5,
       "assessment": false,
@@ -5045,7 +5122,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 89,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -5071,7 +5148,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 90,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -5096,7 +5173,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 91,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -5121,7 +5198,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 92,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -5146,7 +5223,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 93,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -5171,7 +5248,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 94,
       "position": 16,
       "activity_section_position": 2,
       "assessment": false,
@@ -5196,7 +5273,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 95,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5221,7 +5298,29 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 96,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Big Event Jr. - Student Resources "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_the big event jr._markdown"
+        ],
+        "lesson.key": "The Big Event Jr",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursea-2024",
+        "activity_section.key": "9830b700-7b18-4951-89f3-f9bc0b2ce055"
+      },
+      "level_keys": [
+        "unplugged_the big event jr._markdown"
+      ]
+    },
+    {
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5246,7 +5345,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 98,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5271,7 +5370,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 99,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5296,7 +5395,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 100,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5321,7 +5420,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 101,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5346,7 +5445,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 102,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -5371,7 +5470,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 103,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -5396,7 +5495,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 104,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -5421,7 +5520,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 105,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5446,7 +5545,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 106,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -5471,7 +5570,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 107,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5663,6 +5762,18 @@
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursea-2024",
         "activity_section.key": "ecd39c0f-2703-4574-b708-c132207f311f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unplugged_happy maps_markdown",
+        "script_level.level_keys": [
+          "unplugged_happy maps_markdown"
+        ],
+        "lesson.key": "Happy Maps",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursea-2024",
+        "activity_section.key": "2dd5f677-ec13-4235-9b83-1cf4c5e8c83a"
       }
     },
     {
@@ -6071,6 +6182,18 @@
         "lesson_group.key": "csf_loops",
         "script.name": "coursea-2024",
         "activity_section.key": "e207d0c8-45bf-4b2a-8c3d-7be47b039a79"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unplugged_happy loops_markdown",
+        "script_level.level_keys": [
+          "unplugged_happy loops_markdown"
+        ],
+        "lesson.key": "Happy Loops",
+        "lesson_group.key": "csf_loops",
+        "script.name": "coursea-2024",
+        "activity_section.key": "ceb9a7e0-14c1-4c3d-9616-feb823d18662"
       }
     },
     {
@@ -6611,6 +6734,18 @@
         "lesson_group.key": "csf_events",
         "script.name": "coursea-2024",
         "activity_section.key": "bc175ebc-8fa8-4fe5-9497-6f8880909f8e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unplugged_the big event jr._markdown",
+        "script_level.level_keys": [
+          "unplugged_the big event jr._markdown"
+        ],
+        "lesson.key": "The Big Event Jr",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursea-2024",
+        "activity_section.key": "9830b700-7b18-4951-89f3-f9bc0b2ce055"
       }
     },
     {
