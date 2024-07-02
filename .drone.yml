@@ -246,7 +246,7 @@ steps:
         path: /home/circleci/.rbenv
       - name: mysql
         path: /var/lib/mysql
-    image: mcr.microsoft.com/playwright:v1.45.0-jammy
+    image: mcr.microsoft.com/playwright:v1.44.1-jammy
     name: playwright
   - name: update-cache
     depends_on:
