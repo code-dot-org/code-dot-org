@@ -1,9 +1,11 @@
-import React, {useCallback, useMemo, useState} from 'react';
+import React, {useCallback, useMemo} from 'react';
+import {useSelector} from 'react-redux';
 
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
 import LibraryTable from '@cdo/apps/templates/projects/LibraryTable';
 import PersonalProjectsTable from '@cdo/apps/templates/projects/PersonalProjectsTable';
 import PublicGallery from '@cdo/apps/templates/projects/PublicGallery';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 
 import {Galleries} from './projectConstants';
@@ -18,7 +20,12 @@ interface ProjectsGalleryProps {
 const ProjectsGallery: React.FunctionComponent<ProjectsGalleryProps> = ({
   limitedGallery,
 }) => {
-  const [selectedTab, setSelectedTab] = useState(Galleries.PRIVATE);
+  const dispatch = useAppDispatch();
+
+  const selectedGallery = useSelector(
+    (state: {projects: {selectedGallery: string}}) =>
+      state.projects.selectedGallery
+  );
 
   const galleryTabs = useMemo(() => {
     const tabs = [
@@ -46,28 +53,27 @@ const ProjectsGallery: React.FunctionComponent<ProjectsGalleryProps> = ({
 
   const handleOnChange = useCallback(
     (value: string) => {
-      setSelectedTab(value);
-      selectGallery(value);
+      dispatch(selectGallery(value));
       const galleryTab = galleryTabs.find(tab => tab.value === value);
       if (galleryTab) {
         window.history.pushState(null, 'null', galleryTab.url);
       }
     },
-    [galleryTabs]
+    [galleryTabs, dispatch]
   );
 
   return (
     <div id="uitest-gallery-switcher">
       <SegmentedButtons
-        selectedButtonValue={selectedTab}
+        selectedButtonValue={selectedGallery}
         size="l"
         buttons={galleryTabs}
         onChange={value => handleOnChange(value)}
       />
       <div className={moduleStyles.galleryContent}>
-        {selectedTab === Galleries.PRIVATE && <PersonalProjectsTable />}
-        {selectedTab === Galleries.LIBRARIES && <LibraryTable />}
-        {selectedTab === Galleries.PUBLIC && (
+        {selectedGallery === Galleries.PRIVATE && <PersonalProjectsTable />}
+        {selectedGallery === Galleries.LIBRARIES && <LibraryTable />}
+        {selectedGallery === Galleries.PUBLIC && (
           <PublicGallery limitedGallery={limitedGallery} />
         )}
       </div>
