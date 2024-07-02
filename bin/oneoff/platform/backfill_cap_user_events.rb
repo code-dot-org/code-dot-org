@@ -58,31 +58,33 @@ parental_permissions = DASHBOARD_DB_READER[:parental_permission_requests].where(
 # Add a CAP User Event for each of these
 parental_permissions.each do |ppr|
   # New parental email
-  records << {
-    created_at: ppr[:created_at].iso8601,
-    updated_at: ppr[:created_at].iso8601,
-    policy: POLICY,
-    name: PARENT_EMAIL_SUBMIT,
-    user_id: ppr[:user_id],
-    state_before: 'l',
-    state_after: 's',
-  }
-  records = records[...-1] if DASHBOARD_DB_READER[:cap_user_events].where(policy: records[-1][:policy], name: records[-1][:name], user_id: records[-1][:user_id]).count > 0
+  # We no longer track this event in the table
+  #records << {
+  #  created_at: ppr[:created_at].iso8601,
+  #  updated_at: ppr[:created_at].iso8601,
+  #  policy: POLICY,
+  #  name: PARENT_EMAIL_SUBMIT,
+  #  user_id: ppr[:user_id],
+  #  state_before: 'l',
+  #  state_after: 's',
+  #}
+  #records = records[...-1] if DASHBOARD_DB_READER[:cap_user_events].where(policy: records[-1][:policy], name: records[-1][:name], user_id: records[-1][:user_id]).count > 0
 
   # Check to see if it has recorded a number of resends
-  if ppr[:resends_sent] > 0
-    # Updated parental email at least once... we lose the interim ones
-    records << {
-      created_at: ppr[:updated_at].iso8601,
-      updated_at: ppr[:updated_at].iso8601,
-      policy: POLICY,
-      name: PARENT_EMAIL_UPDATE,
-      user_id: ppr[:user_id],
-      state_before: 's',
-      state_after: 's',
-    }
-    records = records[...-1] if DASHBOARD_DB_READER[:cap_user_events].where(policy: records[-1][:policy], name: records[-1][:name], user_id: records[-1][:user_id]).count > 0
-  end
+  # We no longer track this event in this table
+  #if ppr[:resends_sent] > 0
+  #  # Updated parental email at least once... we lose the interim ones
+  #  records << {
+  #    created_at: ppr[:updated_at].iso8601,
+  #    updated_at: ppr[:updated_at].iso8601,
+  #    policy: POLICY,
+  #    name: PARENT_EMAIL_UPDATE,
+  #    user_id: ppr[:user_id],
+  #    state_before: 's',
+  #    state_after: 's',
+  #  }
+  #  records = records[...-1] if DASHBOARD_DB_READER[:cap_user_events].where(policy: records[-1][:policy], name: records[-1][:name], user_id: records[-1][:user_id]).count > 0
+  #end
 
   # Now, look to see that they have the granted compliance state
   user = DASHBOARD_DB_READER[:users].where(id: ppr[:user_id]).first
@@ -94,7 +96,7 @@ parental_permissions.each do |ppr|
     policy: POLICY,
     name: PERMISSION_GRANTING,
     user_id: ppr[:user_id],
-    state_before: 's',
+    state_before: 'l',
     state_after: 'g',
   }
   records = records[...-1] if DASHBOARD_DB_READER[:cap_user_events].where(policy: records[-1][:policy], name: records[-1][:name], user_id: records[-1][:user_id]).count > 0
@@ -114,14 +116,14 @@ if File.exist?('lockout_dates.tsv')
     # Get the tuple
     user_id, lockout_date = line.split("\t").map {|value| JSON.parse(value)}
 
-    # Write out a record for it (state_before can't be nil, so it ends up being 'l')
+    # Write out a record for it
     records << {
       created_at: lockout_date,
       updated_at: lockout_date,
       policy: POLICY,
       name: ACCOUNT_LOCKING,
       user_id: user_id,
-      state_before: 'l',
+      state_before: nil,
       state_after: 'l',
     }
     records = records[...-1] if DASHBOARD_DB_READER[:cap_user_events].where(policy: records[-1][:policy], name: records[-1][:name], user_id: records[-1][:user_id]).count > 0
