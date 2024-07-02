@@ -26,9 +26,11 @@ export default class WorkshopEnroll extends React.Component {
     user_id: PropTypes.number.isRequired,
     workshop: WorkshopPropType,
     session_dates: PropTypes.arrayOf(PropTypes.string),
+    school: PropTypes.any,
     enrollment: PropTypes.shape({
       email: PropTypes.string,
       first_name: PropTypes.string,
+      last_name: PropTypes.string,
     }),
     facilitators: PropTypes.arrayOf(FacilitatorPropType),
     workshop_enrollment_status: PropTypes.string,
@@ -39,12 +41,35 @@ export default class WorkshopEnroll extends React.Component {
   constructor(props) {
     super(props);
 
+    if (this.props.workshop.course === 'Build Your Own Workshop') {
+      this.skipEnrollForm();
+    }
+
     this.state = {
       workshopEnrollmentStatus:
         this.props.workshop_enrollment_status ||
         SUBMISSION_STATUSES.UNSUBMITTED,
     };
   }
+
+  skipEnrollForm = () => {
+    const postParams = {
+      user_id: this.props.user_id,
+      first_name: this.props.enrollment.first_name,
+      last_name: this.props.enrollment.last_name,
+      email: this.props.enrollment.email,
+      previous_courses: this.props.previous_courses,
+    };
+    this.submitRequest = $.ajax({
+      method: 'POST',
+      url: `/api/v1/pd/workshops/${this.props.workshop.id}/enrollments`,
+      contentType: 'application/json',
+      data: JSON.stringify(postParams),
+      complete: result => {
+        this.onSubmissionComplete(result);
+      },
+    });
+  };
 
   onSubmissionComplete = result => {
     if (result.responseJSON) {
