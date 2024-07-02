@@ -39,6 +39,7 @@ function FloatingHeader({
   const [floatHeader, setFloatHeader] = React.useState(false);
 
   const [headerWidth, setHeaderWidth] = React.useState(0);
+  const [scrollLength, setScrollLength] = React.useState(0);
 
   const outsideTableResizeObserver = React.useMemo(
     () =>
@@ -74,16 +75,23 @@ function FloatingHeader({
 
     if (shouldFloatHeader !== floatHeader) {
       setFloatHeader(shouldFloatHeader);
+      if (shouldFloatHeader && headerRef.current) {
+        headerRef.current.scrollLeft = scrollLength;
+      }
     }
-  }, [childContainerRef, floatHeader, setFloatHeader]);
+  }, [childContainerRef, floatHeader, setFloatHeader, scrollLength]);
+
+  React.useEffect(() => {
+    if (headerRef.current) {
+      headerRef.current.scrollLeft = scrollLength;
+    }
+  }, [scrollLength, headerRef]);
 
   React.useEffect(() => {
     window.addEventListener('scroll', handleScrollAndResize);
     window.addEventListener('resize', handleScrollAndResize);
     addScrollCallback(id, scroll => {
-      if (headerRef.current) {
-        headerRef.current.scrollLeft = scroll.target.scrollLeft;
-      }
+      setScrollLength(scroll.target.scrollLeft);
     });
     // Call it on initial render to set the initial state
     handleScrollAndResize();
