@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2024-06-28 21:12:27 UTC",
+    "serialized_at": "2024-07-01 23:41:17 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1381,8 +1381,19 @@
       }
     },
     {
-      "key": "4681e4ae-ef1f-4790-98ec-439e2ea8075e",
+      "key": "604a3237-d46d-46a4-a2ab-7255313b95d6",
       "position": 2,
+      "properties": {
+        "progression_name": "Move It, Move It - Student Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "604a3237-d46d-46a4-a2ab-7255313b95d6",
+        "lesson_activity.key": "5fec09eb-2f85-482e-bd32-5576613af0d2"
+      }
+    },
+    {
+      "key": "4681e4ae-ef1f-4790-98ec-439e2ea8075e",
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Map Activity” slide\n\n**Distribute:** Hand each group of 2-3 students a ***Map Activity**, as well as the blank papers for the grid on the ground.  Allow students to either cut the halves of each map apart, or fold the sheets in half so that each map is clearly visible (without distraction.)\n\n**Set-Up:** In each group, each player will get a task.\n\n- Player 1: Choose/set-up the map to play\n- Player 2: Programmer\n- Player 3: Walking Machine\n\n**Directions for Class:**\n1) Decide who will take each job.\n\n2) Have player 1 set a grid on the floor made up of pieces of paper (as shown on one of the Move It Maps) except with the gem paper facing the ground.\n\n3) Player 3 will start by standing on the page with the compass rose.\n\n4) Player 2 will then guide player 3 step-by-step through the paper maze using the provided arm signals.\n\n5) When player 2 gives the signal to “STOP”, player 3 will flip over the page that they are on. If that page is a gem, then the maze was a success!\n\n6) If there is time, let everyone rotate positions and go again!\n\nNote that the rules are not the most important thing here. Feel free to clarify if the students have questions, but if the students are playing a bit differently than described, you don't need to hold them to the letter of the game. The crucial bit is that they are moving from immediate instructions to giving two or three instructions before the Walking Machine moves.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each puzzle down into smaller steps.\n",
         "name": "Move It, Move It"
@@ -1982,8 +1993,19 @@
       }
     },
     {
-      "key": "c49fb4d7-4b31-4a44-82b2-e4fb8dc7b69c",
+      "key": "6842cb77-3cdc-4f61-9738-e5285278abeb",
       "position": 2,
+      "properties": {
+        "progression_name": "Getting Loopy - Student Handout"
+      },
+      "seeding_key": {
+        "activity_section.key": "6842cb77-3cdc-4f61-9738-e5285278abeb",
+        "lesson_activity.key": "1b5105bc-40c7-46d1-86fa-2fa6300df427"
+      }
+    },
+    {
+      "key": "c49fb4d7-4b31-4a44-82b2-e4fb8dc7b69c",
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Decompose it!” slide\n\nRemind students to break each section down into smaller steps.",
         "name": "Getting Loopy"
@@ -1995,7 +2017,7 @@
     },
     {
       "key": "46d66661-4488-4fe4-83cf-aefc09a1056c",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Dance Party” slide\n\nIntroduce the main activity by letting the class know that we will be having a dance party. In order to have that party, we'll need to know what all of the steps in the dance are, and how many times we should do them.\n\n**Display:** Show the ***Worksheet** so that all students can see it. Talk through the different sections of the dance as a class. Point out the section that repeats, in particular.\n\n![](https://code.org/curriculum/course1/12/iteration.png)\n\n**Model:** Show the class what the entire dance looks like done at full-speed. Then run through the dance slowly, asking a different student to call out each line of instructions. Next, have the students perform the dance along with you, saying the instructions aloud as they get to each move.\n\n**Prompt:** Ask students to work with a neighbor to find all of the sections of the dance that repeat.\n\n**Share:** Ask a few students to share the repeating patterns that they found. As a class, talk through how you might rework the instructions to be even shorter by repeating those patterns.\n\nFinally, help them understand a symbology for capturing these loops on their picture program, since the assessment will utilize this same method.  Here is an example:\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-02-23-13.49.35_YU3IUIc.png)",
         "tips": [
@@ -2601,8 +2623,19 @@
       }
     },
     {
-      "key": "26b9b7fe-0212-4602-a162-55bcfbc3c6f2",
+      "key": "764b7076-bc54-4bf0-b9e8-b911430b4476",
       "position": 2,
+      "properties": {
+        "progression_name": "The Right App - Student Resource"
+      },
+      "seeding_key": {
+        "activity_section.key": "764b7076-bc54-4bf0-b9e8-b911430b4476",
+        "lesson_activity.key": "89ea6cf6-7b91-4853-afe6-a237e3d509ff"
+      }
+    },
+    {
+      "key": "26b9b7fe-0212-4602-a162-55bcfbc3c6f2",
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “What’s an app?” slide\n\n**Discuss:** Which apps do you recognize? What do people use these apps for?\n\n**Discussion Goal:** Students should be able to identify some of the following apps: Calendar, Weather, Maps, Photos, Clock, YouTube, Safari, Camera, Calculator, Messages, Music, FaceTime/video calls.\n\nHave students choose one app to explain how it works or when people might use it. For example, people would use a calendar app to keep track of important events, such as going on a trip or meeting up with a friend. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Different examples of apps” slide\n\n**Say:** Here are some more examples of apps that you might recognize. It will be important to know how these apps work for the first station. Are there any apps that you have a question about?\n\n**Do this:** Answer any questions students might have about apps before moving on.\n",
         "duration": "5",
@@ -2615,7 +2648,7 @@
     },
     {
       "key": "1c54fbc2-9d69-473f-a143-40494539141f",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Station 1: Matching” slide\n\n**Say:** At Station One, you’ll be playing a matching game. Look at the pictures on the left and figure out what they represent. Then look at the apps on the right and find the app that has replaced the activity on the left.\n\n**[Optional] Do This:** In the teacher resources section, there is a set of matching cards with words instead of images. If students are older and would like more practice reading, use the word matching cards instead.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Station 2: Sorting” slide\n\n**Say:** At Station Two, you’ll be sorting the images on the right into one of two categories: Computer or Not a computer. Make sure to look at the definition of computer at the bottom of the screen.\n\n**Do This:** Do an example as a class by asking students to classify one of the images on the right. Then drag it under the corresponding category on the left. \n\n**Discussion Goal:** Some items might be easily sorted, whereas others like the calculator might inspire some discussion among students.\n\n**Do This:** If students have extra time at this station, encourage them to play a game of charades where they have to act out one of the images and have their classmates guess what they’re acting out.\n",
         "duration": "10",
@@ -2628,7 +2661,7 @@
     },
     {
       "key": "fd21eec3-989f-4000-89eb-e4f8cad78446",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Choose a character and design their app” slide\n\n**Say:** The final activity will be done in your student guide. Choose one of the following characters and design an app for them. Here are the characters: \n- **Adventurous Hedgehog** wants a Travel App to keep track of all the countries they visit\n- **Peaceful Turtle** wants a Yoga App to learn new yoga poses\n- **Reader Rabbit** wants a Book App to choose a new book to read \n- **Daydreamer Fox** wants a Dream App with a place to write down dreams\n",
         "duration": "15",
@@ -2684,6 +2717,17 @@
       },
       "seeding_key": {
         "activity_section.key": "401edbc3-b3ce-4cd3-8cdb-c6c5602a1e55",
+        "lesson_activity.key": "be4cd9f3-46a8-4d35-bde3-0ae8ece5ad2d"
+      }
+    },
+    {
+      "key": "35e89e97-3e99-4a1f-b0cf-ac2166ccfed2",
+      "position": 2,
+      "properties": {
+        "progression_name": "The Big Event - Student Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "35e89e97-3e99-4a1f-b0cf-ac2166ccfed2",
         "lesson_activity.key": "be4cd9f3-46a8-4d35-bde3-0ae8ece5ad2d"
       }
     },
@@ -3079,6 +3123,28 @@
     },
     {
       "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Move It, Move It - Student Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_move it move it_markdown"
+        ],
+        "lesson.key": "Move It, Move It",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "courseb-2024",
+        "activity_section.key": "604a3237-d46d-46a4-a2ab-7255313b95d6"
+      },
+      "level_keys": [
+        "unplugged_move it move it_markdown"
+      ]
+    },
+    {
+      "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3103,7 +3169,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3128,7 +3194,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3153,7 +3219,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3178,7 +3244,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -3203,7 +3269,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -3228,7 +3294,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -3253,7 +3319,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3278,7 +3344,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3303,7 +3369,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3328,7 +3394,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3353,7 +3419,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -3378,7 +3444,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -3403,7 +3469,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -3429,7 +3495,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -3454,7 +3520,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -3479,7 +3545,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -3504,7 +3570,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -3529,7 +3595,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -3554,7 +3620,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3579,7 +3645,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -3604,7 +3670,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -3629,7 +3695,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -3654,7 +3720,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -3679,7 +3745,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -3704,7 +3770,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -3729,7 +3795,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -3754,7 +3820,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -3779,7 +3845,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 10,
       "activity_section_position": 5,
       "assessment": false,
@@ -3804,7 +3870,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 11,
       "activity_section_position": 6,
       "assessment": false,
@@ -3829,7 +3895,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -3855,7 +3921,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -3880,7 +3946,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -3905,7 +3971,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 15,
       "activity_section_position": 3,
       "assessment": false,
@@ -3930,7 +3996,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3955,7 +4021,29 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Getting Loopy - Student Handout"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_getting loopy_markdown"
+        ],
+        "lesson.key": "Getting Loopy",
+        "lesson_group.key": "csf_loops",
+        "script.name": "courseb-2024",
+        "activity_section.key": "6842cb77-3cdc-4f61-9738-e5285278abeb"
+      },
+      "level_keys": [
+        "unplugged_getting loopy_markdown"
+      ]
+    },
+    {
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -3980,7 +4068,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4005,7 +4093,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4030,7 +4118,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4055,7 +4143,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4080,7 +4168,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -4105,7 +4193,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -4130,7 +4218,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -4155,7 +4243,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 9,
       "activity_section_position": 6,
       "assessment": false,
@@ -4180,7 +4268,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 10,
       "activity_section_position": 7,
       "assessment": false,
@@ -4205,7 +4293,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -4231,7 +4319,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -4256,7 +4344,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -4281,7 +4369,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4306,7 +4394,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4331,7 +4419,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 55,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4356,7 +4444,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 56,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4381,7 +4469,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 57,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -4406,7 +4494,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 58,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -4431,7 +4519,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -4456,7 +4544,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 60,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -4481,7 +4569,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 61,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -4506,7 +4594,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -4532,7 +4620,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -4557,7 +4645,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -4582,7 +4670,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -4607,7 +4695,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -4632,7 +4720,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -4657,7 +4745,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4682,7 +4770,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 69,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4707,7 +4795,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 70,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4732,7 +4820,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 71,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4757,7 +4845,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 72,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -4782,7 +4870,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 73,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -4807,7 +4895,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 74,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -4832,7 +4920,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 75,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -4857,7 +4945,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 76,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -4883,7 +4971,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 77,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -4908,7 +4996,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 78,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -4933,7 +5021,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 79,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -4958,7 +5046,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 80,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -4983,7 +5071,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 81,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -5008,7 +5096,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5033,7 +5121,29 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 83,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Right App - Student Resource"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_the right app_markdown"
+        ],
+        "lesson.key": "The Right App",
+        "lesson_group.key": "csf_impacts",
+        "script.name": "courseb-2024",
+        "activity_section.key": "764b7076-bc54-4bf0-b9e8-b911430b4476"
+      },
+      "level_keys": [
+        "unplugged_the right app_markdown"
+      ]
+    },
+    {
+      "chapter": 84,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5058,7 +5168,29 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 85,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Big Event - Student Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_the big event jr._markdown"
+        ],
+        "lesson.key": "The Big Event Jr",
+        "lesson_group.key": "csf_events",
+        "script.name": "courseb-2024",
+        "activity_section.key": "35e89e97-3e99-4a1f-b0cf-ac2166ccfed2"
+      },
+      "level_keys": [
+        "unplugged_the big event jr._markdown"
+      ]
+    },
+    {
+      "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5083,7 +5215,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 87,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5108,7 +5240,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 88,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5133,7 +5265,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 89,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5158,7 +5290,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 90,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -5183,7 +5315,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 91,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -5208,7 +5340,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 92,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -5233,7 +5365,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 93,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
@@ -5258,7 +5390,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 94,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5283,7 +5415,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 95,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -5308,7 +5440,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 96,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -5333,7 +5465,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5381,6 +5513,18 @@
         "lesson_group.key": "csf_sequencing",
         "script.name": "courseb-2024",
         "activity_section.key": "e6ad3964-06a9-43da-8437-675ec64986ed"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unplugged_move it move it_markdown",
+        "script_level.level_keys": [
+          "unplugged_move it move it_markdown"
+        ],
+        "lesson.key": "Move It, Move It",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "courseb-2024",
+        "activity_section.key": "604a3237-d46d-46a4-a2ab-7255313b95d6"
       }
     },
     {
@@ -5801,6 +5945,18 @@
         "lesson_group.key": "csf_loops",
         "script.name": "courseb-2024",
         "activity_section.key": "5c23f0fb-81a9-4148-9562-06cf42cdda70"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unplugged_getting loopy_markdown",
+        "script_level.level_keys": [
+          "unplugged_getting loopy_markdown"
+        ],
+        "lesson.key": "Getting Loopy",
+        "lesson_group.key": "csf_loops",
+        "script.name": "courseb-2024",
+        "activity_section.key": "6842cb77-3cdc-4f61-9738-e5285278abeb"
       }
     },
     {
@@ -6321,6 +6477,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "unplugged_the right app_markdown",
+        "script_level.level_keys": [
+          "unplugged_the right app_markdown"
+        ],
+        "lesson.key": "The Right App",
+        "lesson_group.key": "csf_impacts",
+        "script.name": "courseb-2024",
+        "activity_section.key": "764b7076-bc54-4bf0-b9e8-b911430b4476"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "BigEvent-Unplugged2022_2024",
         "script_level.level_keys": [
           "BigEvent-Unplugged2022_2024"
@@ -6329,6 +6497,18 @@
         "lesson_group.key": "csf_events",
         "script.name": "courseb-2024",
         "activity_section.key": "401edbc3-b3ce-4cd3-8cdb-c6c5602a1e55"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unplugged_the big event jr._markdown",
+        "script_level.level_keys": [
+          "unplugged_the big event jr._markdown"
+        ],
+        "lesson.key": "The Big Event Jr",
+        "lesson_group.key": "csf_events",
+        "script.name": "courseb-2024",
+        "activity_section.key": "35e89e97-3e99-4a1f-b0cf-ac2166ccfed2"
       }
     },
     {
