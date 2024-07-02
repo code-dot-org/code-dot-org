@@ -22,44 +22,42 @@ const ProjectsGallery: React.FunctionComponent<ProjectsGalleryProps> = ({
 }) => {
   const dispatch = useAppDispatch();
 
+  // The projects redux store isn't typed yet. When it is, we can update to useAppSelector.
   const selectedGallery = useSelector(
     (state: {projects: {selectedGallery: string}}) =>
       state.projects.selectedGallery
   );
 
-  const galleryTabs = useMemo(() => {
-    const tabs = [
+  const galleries = useMemo(() => {
+    const galleries = [
       {
         value: Galleries.PRIVATE,
         label: i18n.myProjects(),
         url: '/projects',
-        tabContent: <PersonalProjectsTable />,
       },
       {
         value: Galleries.LIBRARIES,
         label: i18n.myLibraries(),
         url: '/projects/libraries',
-        tabContent: <LibraryTable />,
       },
       {
         value: Galleries.PUBLIC,
         label: i18n.featuredProjects(),
         url: '/projects/public',
-        tabContent: <PublicGallery limitedGallery={limitedGallery} />,
       },
     ];
-    return tabs;
-  }, [limitedGallery]);
+    return galleries;
+  }, []);
 
   const handleOnChange = useCallback(
     (value: string) => {
       dispatch(selectGallery(value));
-      const galleryTab = galleryTabs.find(tab => tab.value === value);
-      if (galleryTab) {
-        window.history.pushState(null, 'null', galleryTab.url);
+      const gallery = galleries.find(gallery => gallery.value === value);
+      if (gallery) {
+        window.history.pushState(null, 'null', gallery.url);
       }
     },
-    [galleryTabs, dispatch]
+    [galleries, dispatch]
   );
 
   return (
@@ -67,7 +65,7 @@ const ProjectsGallery: React.FunctionComponent<ProjectsGalleryProps> = ({
       <SegmentedButtons
         selectedButtonValue={selectedGallery}
         size="l"
-        buttons={galleryTabs}
+        buttons={galleries}
         onChange={value => handleOnChange(value)}
       />
       <div className={moduleStyles.galleryContent}>
