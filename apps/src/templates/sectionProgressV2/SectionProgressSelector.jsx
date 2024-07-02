@@ -27,17 +27,13 @@ function SectionProgressSelector({
   sectionId,
   hasSeenProgressTableInvite,
 }) {
-  const [hasJustSwitchedToV2, setHasJustSwitchedToV2] = React.useState(false);
-  const [hasJustSwitchedToV1, setHasJustSwitchedToV1] = React.useState(false);
+  const [hasJustToggledViews, setHasJustToggledViews] = React.useState(false);
 
   const onShowProgressTableV2Change = useCallback(() => {
-    if (showProgressTableV2) {
-      setHasJustSwitchedToV1(true);
-    }
     const shouldShowV2 = !showProgressTableV2;
     new UserPreferences().setShowProgressTableV2(shouldShowV2);
     setShowProgressTableV2(shouldShowV2);
-    setHasJustSwitchedToV2(true);
+    setHasJustToggledViews(true);
 
     if (shouldShowV2) {
       analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_NEW_PROGRESS, {
@@ -105,14 +101,14 @@ function SectionProgressSelector({
 
   const includeModalIfAvailable = () => {
     const disableModal = DCDO.get('disable-try-new-progress-view-modal', false);
-    if (disableModal || hasJustSwitchedToV1) {
+    if (disableModal || hasJustToggledViews) {
       return;
     }
     if (!hasSeenProgressTableInvite) {
       return (
         <InviteToV2ProgressModal
           sectionId={sectionId}
-          setHasJustSwitchedToV2={setHasJustSwitchedToV2}
+          setHasJustSwitchedToV2={setHasJustToggledViews}
         />
       );
     }
@@ -121,7 +117,7 @@ function SectionProgressSelector({
   return (
     <div className={styles.pageContent}>
       {displayV2 && (
-        <ProgressBanners hasJustSwitchedToV2={hasJustSwitchedToV2} />
+        <ProgressBanners hasJustSwitchedToV2={hasJustToggledViews} />
       )}
       {toggleV1OrV2Link()}
 
