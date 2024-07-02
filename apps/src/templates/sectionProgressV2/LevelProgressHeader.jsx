@@ -8,7 +8,7 @@ import {getLevelColumnHeaderId} from './LevelDataCell';
 
 import styles from './progress-table-v2.module.scss';
 
-export default function ExpandedProgressColumnHeader({
+export default function LevelProgressHeader({
   lesson,
   level,
   isLevelExpanded,
@@ -131,7 +131,7 @@ export default function ExpandedProgressColumnHeader({
     : unexpandedLevel();
 }
 
-ExpandedProgressColumnHeader.propTypes = {
+LevelProgressHeader.propTypes = {
   lesson: PropTypes.object.isRequired,
   level: PropTypes.object.isRequired,
   isLevelExpanded: PropTypes.bool,

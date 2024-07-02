@@ -1,7 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
+
+import {getCurrentUnitData} from '../../sectionProgress/sectionProgressRedux';
+import ExpandedProgressColumnHeader from '../ExpandedProgressColumnHeader';
+import LessonProgressColumnHeader from '../LessonProgressColumnHeader';
 
 import styles from './floating-header.module.scss';
+import progressStyles from '../progress-table-v2.module.scss';
 
 /** A component that displays prop {header} at the top of
  * {child}. This header will float at the top of the screen
@@ -13,20 +19,25 @@ import styles from './floating-header.module.scss';
  * {header} should have all content visible and not itself scrollable.
  */
 
-export default function FloatingHeader({
-  header,
+function FloatingHeader({
   children,
   tableRef,
   id,
+  lessons,
+  expandedLessonIds,
+  addExpandedLesson,
+  removeExpandedLesson,
   addScrollCallback,
   removeScrollCallback,
+  levelProgressByStudent,
+  sortedStudents,
 }) {
   const headerRef = React.useRef();
   const childContainerRef = React.useRef();
 
   const [floatHeader, setFloatHeader] = React.useState(false);
   const [floatXPosition, setFloatXPosition] = React.useState(0);
-  const [showHeader, setShowHeader] = React.useState(0);
+  // const [showHeader, setShowHeader] = React.useState(0);
 
   const handleScrollAndResize = React.useCallback(() => {
     const maxVisibleY =
@@ -42,6 +53,7 @@ export default function FloatingHeader({
     const shouldFloatHeader = !isTableTopVisible && !isTableOffScreen;
 
     if (shouldFloatHeader !== floatHeader) {
+      console.log('lfm', id, shouldFloatHeader);
       setFloatHeader(shouldFloatHeader);
       // if (id === 5186) {
       //   console.log({
@@ -55,13 +67,14 @@ export default function FloatingHeader({
     }
 
     setFloatXPosition(childContainerRef?.current.getBoundingClientRect().left);
-    setShowHeader(
-      childContainerRef?.current.getBoundingClientRect().left >=
-        tableRef?.current.getBoundingClientRect().left &&
-        childContainerRef?.current.getBoundingClientRect().right <=
-          tableRef?.current.getBoundingClientRect().right
-    );
-  }, [childContainerRef, floatHeader, setFloatHeader, tableRef, setShowHeader]);
+    // For horizontal
+    // setShowHeader(
+    //   childContainerRef?.current.getBoundingClientRect().left >=
+    //     tableRef?.current.getBoundingClientRect().left &&
+    //     childContainerRef?.current.getBoundingClientRect().right <=
+    //       tableRef?.current.getBoundingClientRect().right
+    // );
+  }, [childContainerRef, floatHeader, setFloatHeader, id]);
 
   React.useEffect(() => {
     window.addEventListener('scroll', handleScrollAndResize);
@@ -85,15 +98,87 @@ export default function FloatingHeader({
     removeScrollCallback,
   ]);
 
+  const lockedPerStudent = React.useCallback(
+    lesson =>
+      Object.fromEntries(
+        sortedStudents.map(student => [
+          student.id,
+          lesson.lockable &&
+            lesson.levels.every(
+              level => levelProgressByStudent[student.id][level.id]?.locked
+            ),
+        ])
+      ),
+    [levelProgressByStudent, sortedStudents]
+  );
+
+  // For lockable lessons, check whether each level is locked for each student.
+  // Used to control locked/unlocked icon in lesson header.
+  const allLocked = React.useMemo(
+    () => sortedStudents.every(student => lockedPerStudent[student.id]),
+    [sortedStudents, lockedPerStudent]
+  );
+
+  // Will need to implement this.
+  // Most likely by moving the state up to `ProgressTableV2`
+  const toggleExpandedChoiceLevel = () => {};
+  const expandedChoiceLevels = React.useMemo(() => [], []);
+
+  const headers = React.useMemo(
+    () =>
+      lessons.map(lesson => {
+        if (expandedLessonIds.includes(lesson.id)) {
+          return (
+            <table
+              className={progressStyles.expandedColumn}
+              key={lesson.id + 'header-cpy'}
+            >
+              <ExpandedProgressColumnHeader
+                lesson={lesson}
+                removeExpandedLesson={removeExpandedLesson}
+                expandedChoiceLevels={expandedChoiceLevels}
+                toggleExpandedChoiceLevel={toggleExpandedChoiceLevel}
+              />
+            </table>
+          );
+        }
+        return (
+          <div
+            className={progressStyles.lessonColumn}
+            key={lesson.id + 'header-cpy'}
+          >
+            <LessonProgressColumnHeader
+              lesson={lesson}
+              addExpandedLesson={addExpandedLesson}
+              allLocked={allLocked}
+              key={lesson.id + 'header-cpy'}
+            />
+          </div>
+        );
+      }),
+    [
+      lessons,
+      expandedLessonIds,
+      expandedChoiceLevels,
+      addExpandedLesson,
+      removeExpandedLesson,
+      allLocked,
+    ]
+  );
+
   return (
     <div className={styles.floatingHeader}>
-      {(!floatHeader || showHeader) && (
+      {floatHeader && (
         <div
-          className={floatHeader && styles.floatHeader}
+          className={styles.floatHeader}
           ref={headerRef}
-          style={{left: floatXPosition + 'px'}}
+          style={{
+            left: floatXPosition + 'px',
+            display: 'flex',
+            flexDirection: 'row',
+          }}
         >
-          {header}
+          {headers}
         </div>
       )}
       <div className={styles.childContainer} ref={childContainerRef}>
@@ -103,11 +188,24 @@ export default function FloatingHeader({
   );
 }
 
+export default connect(state => ({
+  lessons: getCurrentUnitData(state)?.lessons || [],
+  levelProgressByStudent:
+    state.sectionProgress.studentLevelProgressByUnit[
+      state.unitSelection.scriptId
+    ],
+}))(FloatingHeader);
+
 FloatingHeader.propTypes = {
-  header: PropTypes.node.isRequired,
   children: PropTypes.node.isRequired,
   tableRef: PropTypes.object,
   id: PropTypes.number,
   addScrollCallback: PropTypes.func,
   removeScrollCallback: PropTypes.func,
+  lessons: PropTypes.array,
+  expandedLessonIds: PropTypes.array,
+  addExpandedLesson: PropTypes.func,
+  removeExpandedLesson: PropTypes.func,
+  levelProgressByStudent: PropTypes.object,
+  sortedStudents: PropTypes.array,
 };

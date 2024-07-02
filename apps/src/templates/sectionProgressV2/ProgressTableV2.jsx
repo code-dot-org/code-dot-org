@@ -16,6 +16,7 @@ import {loadUnitProgress} from '../sectionProgress/sectionProgressLoader';
 import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 
 import ExpandedProgressDataColumn from './ExpandedProgressDataColumn';
+import FloatingHeader from './floatingHeader/FloatingHeader';
 import FloatingScrollbar from './floatingScrollbar/FloatingScrollbar';
 import LessonProgressDataColumn from './LessonProgressDataColumn';
 import SkeletonProgressDataColumn from './SkeletonProgressDataColumn';
@@ -205,14 +206,37 @@ function ProgressTableV2({
             )}
             ref={tableRef}
           >
-            <div className={styles.tableInterior}>
-              {unitData.lessons.map(getRenderedColumn)}
-            </div>
+            <FloatingHeader
+              id={1}
+              expandedLessonIds={expandedLessonIds}
+              addExpandedLesson={addExpandedLesson}
+              removeExpandedLesson={removeExpandedLesson}
+              addScrollCallback={addScrollCallback}
+              removeScrollCallback={removeScrollCallback}
+              sortedStudents={sortedStudents}
+            >
+              <div className={styles.tableInterior}>
+                {unitData.lessons.map(getRenderedColumn)}
+              </div>
+            </FloatingHeader>
           </div>
         </FloatingScrollbar>
       </div>
     );
-  }, [isSkeleton, getRenderedColumn, unitData, tableRef, scrollCallbacks]);
+  }, [
+    isSkeleton,
+    getRenderedColumn,
+    unitData,
+    tableRef,
+    scrollCallbacks,
+    expandedLessonIds,
+    addExpandedLesson,
+    removeExpandedLesson,
+    addScrollCallback,
+    removeScrollCallback,
+    sortedStudents,
+    outsideTableRef,
+  ]);
 
   return (
     <div className={styles.progressTableV2} id="ui-test-progress-table-v2">
