@@ -18,11 +18,9 @@ const ForTeachersOnly: React.FunctionComponent = () => {
 
   const showPredictSolution = () => {
     // We will only have a solution if the user has permission to see it.
-    // TODO: show letter in front of multiple choice answer
-    // better styling
     if (predictSettings?.solution) {
       let solutionToDisplay: JSX.Element = (
-        <span>predictSettings.solution</span>
+        <span>{predictSettings.solution}</span>
       );
       if (predictSettings.questionType === PredictQuestionType.MultipleChoice) {
         const solutions = predictSettings.solution.split(',');
