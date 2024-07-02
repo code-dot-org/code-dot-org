@@ -193,7 +193,7 @@ steps:
       restore: true
       filename: ui-tests-cache-ubuntu-20.tar
 
-  - name: ui-tests-backend
+  - name: ui-tests
     detach: true
     depends_on:
       - restore-cache
@@ -232,54 +232,14 @@ steps:
       - EXIT_CODE=0
       - /entrypoint.sh docker/ui_tests.sh
 
-  - name: ui-tests
-    # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:1.9.4
-    volumes:
-      - name: rbenv
-        path: /home/circleci/.rbenv
-      - name: mysql
-        path: /var/lib/mysql
-    environment:
-      # Each Drone secret below must be explicitly written to locals.yml in /docker/ui_tests.sh
-      CLOUDFRONT_KEY_PAIR_ID:
-        from_secret: CLOUDFRONT_KEY_PAIR_ID
-      CLOUDFRONT_PRIVATE_KEY:
-        from_secret: CLOUDFRONT_PRIVATE_KEY
-      PROPERTIES_ENCRYPTION_KEY:
-        from_secret: PROPERTIES_ENCRYPTION_KEY
-      FIREBASE_NAME:
-        from_secret: FIREBASE_NAME
-      FIREBASE_SECRET:
-        from_secret: FIREBASE_SECRET
-      FIREBASE_SHARED_SECRET:
-        from_secret: FIREBASE_SHARED_SECRET
-      SAUCE_USERNAME:
-        from_secret: SAUCE_USERNAME
-      SAUCE_ACCESS_KEY:
-        from_secret: SAUCE_ACCESS_KEY
-      HOST: "ui-tests-backend"
-      PORT: "3000"
-    commands:
-      - npx --yes wait-on@7.0.1 http://$HOST:$PORT
-      # Depended on by CircleUtils: https://github.com/code-dot-org/code-dot-org/blob/56c4061afb55432ba8ccecc72b5b960ebd9480aa/lib/cdo/circle_utils.rb#L19
-      - export CIRCLE_SHA1=$DRONE_COMMIT
-      - EXIT_CODE=0
-      - /entrypoint.sh bundle exec rake circle:run_ui_tests
-      - while pgrep bash >/dev/null; do echo "found bash process; keeping container alive"; sleep 20; done
-      - exit $EXIT_CODE
-    depends_on:
-      - ui-tests-backend
   - commands:
       - npx --yes wait-on@7.0.1 http://$HOST:$PORT
       - cd apps
-      - yarn install
-      - yarn playwright install --with-deps
       - yarn playwright test
     depends_on:
-      - ui-tests-backend
+      - ui-tests
     environment:
-      HOST: "ui-tests-backend"
+      HOST: "ui-tests"
       PORT: "3000"
     volumes:
       - name: rbenv
