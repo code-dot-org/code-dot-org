@@ -115,8 +115,8 @@ export default function FloatingScrollbar({
       if (childContainerRef?.current) {
         childContainerRef.current.scrollLeft = scroll.target.scrollLeft;
 
-        if (Object.values(scrollCallback).length > 0) {
-          Object.values(scrollCallback).map(callback => callback(scroll));
+        if (scrollCallback) {
+          scrollCallback(scroll);
         }
       }
     },
@@ -169,5 +169,5 @@ export default function FloatingScrollbar({
 FloatingScrollbar.propTypes = {
   children: PropTypes.element.isRequired,
   childRef: PropTypes.object.isRequired,
-  scrollCallback: PropTypes.object,
+  scrollCallback: PropTypes.func,
 };

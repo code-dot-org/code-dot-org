@@ -9,25 +9,22 @@ import LessonProgressColumnHeader from '../LessonProgressColumnHeader';
 import styles from './floating-header.module.scss';
 import progressStyles from '../progress-table-v2.module.scss';
 
-/** A component that displays prop {header} at the top of
- * {child}. This header will float at the top of the screen
- * when the top of {child} is not visible.
+/** A component that displays lesson headers in a floating header above a table.
  *
- * {child} must be a single element and not a list of elements.
- *  {child} should have all content visible and not itself scrollable.
- * header - the element to float at the top of the screen
- * {header} should have all content visible and not itself scrollable.
+ * Each column (e.g. LessonProgressDataColumn) displays a header.
+ * This component has a copy of each header,
+ * and only shows the copy when the original is not visible.
+ *
+ * {children}: the table to display below the floating header
  */
 
 function FloatingHeader({
   children,
-  tableRef,
-  id,
   lessons,
   expandedLessonIds,
   addExpandedLesson,
   removeExpandedLesson,
-  addScrollCallback,
+  setScrollCallback,
   removeScrollCallback,
   levelProgressByStudent,
   sortedStudents,
@@ -36,10 +33,10 @@ function FloatingHeader({
   const headerRef = React.useRef();
   const childContainerRef = React.useRef();
 
-  const [floatHeader, setFloatHeader] = React.useState(false);
+  const [shouldFloatHeader, setShouldFloatHeader] = React.useState(false);
 
   const [headerWidth, setHeaderWidth] = React.useState(0);
-  const [scrollLength, setScrollLength] = React.useState(0);
+  const [scrollPosition, setScrollPosition] = React.useState(0);
 
   const outsideTableResizeObserver = React.useMemo(
     () =>
@@ -71,42 +68,48 @@ function FloatingHeader({
       childContainerRef?.current.getBoundingClientRect().top > maxVisibleY ||
       childContainerRef?.current.getBoundingClientRect().bottom < 0;
 
-    const shouldFloatHeader = !isTableTopVisible && !isTableOffScreen;
+    const newShouldFloatHeader = !isTableTopVisible && !isTableOffScreen;
 
-    if (shouldFloatHeader !== floatHeader) {
-      setFloatHeader(shouldFloatHeader);
-      if (shouldFloatHeader && headerRef.current) {
-        headerRef.current.scrollLeft = scrollLength;
+    if (newShouldFloatHeader !== shouldFloatHeader) {
+      setShouldFloatHeader(newShouldFloatHeader);
+      if (newShouldFloatHeader && headerRef.current) {
+        headerRef.current.scrollLeft = scrollPosition;
       }
     }
-  }, [childContainerRef, floatHeader, setFloatHeader, scrollLength]);
+  }, [
+    childContainerRef,
+    shouldFloatHeader,
+    setShouldFloatHeader,
+    scrollPosition,
+  ]);
 
   React.useEffect(() => {
     if (headerRef.current) {
-      headerRef.current.scrollLeft = scrollLength;
+      headerRef.current.scrollLeft = scrollPosition;
     }
-  }, [scrollLength, headerRef]);
+  }, [scrollPosition, headerRef]);
 
   React.useEffect(() => {
     window.addEventListener('scroll', handleScrollAndResize);
     window.addEventListener('resize', handleScrollAndResize);
-    addScrollCallback(id, scroll => {
-      setScrollLength(scroll.target.scrollLeft);
+    setScrollCallback(() => scroll => {
+      if (scroll?.target) {
+        setScrollPosition(scroll.target.scrollLeft);
+      }
     });
-    // Call it on initial render to set the initial state
+
+    // Set sizing and scroll on initial render
     handleScrollAndResize();
 
     return () => {
       // return a cleanup function to unregister our function since it will run multiple times
       window.removeEventListener('scroll', handleScrollAndResize);
       window.removeEventListener('resize', handleScrollAndResize);
-      removeScrollCallback(id);
+      setScrollCallback(undefined);
     };
   }, [
     handleScrollAndResize,
-    tableRef,
-    addScrollCallback,
-    id,
+    setScrollCallback,
     removeScrollCallback,
     headerRef,
   ]);
@@ -181,7 +184,7 @@ function FloatingHeader({
 
   return (
     <div className={styles.floatingHeader}>
-      {floatHeader && (
+      {shouldFloatHeader && (
         <div className={styles.floatHeader} style={{}}>
           <div
             style={{
@@ -213,9 +216,7 @@ export default connect(state => ({
 
 FloatingHeader.propTypes = {
   children: PropTypes.node.isRequired,
-  tableRef: PropTypes.object,
-  id: PropTypes.number,
-  addScrollCallback: PropTypes.func,
+  setScrollCallback: PropTypes.func,
   removeScrollCallback: PropTypes.func,
   lessons: PropTypes.array,
   expandedLessonIds: PropTypes.array,

@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
@@ -67,28 +66,7 @@ function ProgressTableV2({
   const tableRef = React.useRef();
   const outsideTableRef = React.useRef();
 
-  const [scrollCallbacks, setScrollCallbacks] = React.useState({});
-
-  const addScrollCallback = React.useCallback(
-    (id, callback) => {
-      setScrollCallbacks(prevCallbacks => {
-        return {...prevCallbacks, [id]: callback};
-      });
-    },
-    [setScrollCallbacks]
-  );
-
-  const removeScrollCallback = React.useCallback(
-    id => {
-      setScrollCallbacks(prevCallbacks => {
-        const remed = _.omit(prevCallbacks, [id]);
-        console.log('lfm', prevCallbacks, [id], remed);
-        Object.values(remed).forEach(cb => cb());
-        return remed;
-      });
-    },
-    [setScrollCallbacks]
-  );
+  const [scrollCallback, setScrollCallback] = React.useState(undefined);
 
   const removeExpandedLesson = React.useCallback(
     lessonId => {
@@ -138,9 +116,6 @@ function ProgressTableV2({
             sortedStudents={sortedStudents}
             removeExpandedLesson={removeExpandedLesson}
             key={index}
-            tableRef={outsideTableRef}
-            addScrollCallback={addScrollCallback}
-            removeScrollCallback={removeScrollCallback}
           />
         );
       } else {
@@ -150,9 +125,6 @@ function ProgressTableV2({
             sortedStudents={sortedStudents}
             addExpandedLesson={addExpandedLesson}
             key={index}
-            tableRef={outsideTableRef}
-            addScrollCallback={addScrollCallback}
-            removeScrollCallback={removeScrollCallback}
           />
         );
       }
@@ -164,8 +136,6 @@ function ProgressTableV2({
       sectionId,
       removeExpandedLesson,
       addExpandedLesson,
-      addScrollCallback,
-      removeScrollCallback,
     ]
   );
 
@@ -193,7 +163,7 @@ function ProgressTableV2({
           height: '100%',
         }}
       >
-        <FloatingScrollbar childRef={tableRef} scrollCallback={scrollCallbacks}>
+        <FloatingScrollbar childRef={tableRef} scrollCallback={scrollCallback}>
           <div
             className={classNames(
               styles.table,
@@ -202,12 +172,10 @@ function ProgressTableV2({
             ref={tableRef}
           >
             <FloatingHeader
-              id={1}
               expandedLessonIds={expandedLessonIds}
               addExpandedLesson={addExpandedLesson}
               removeExpandedLesson={removeExpandedLesson}
-              addScrollCallback={addScrollCallback}
-              removeScrollCallback={removeScrollCallback}
+              setScrollCallback={setScrollCallback}
               sortedStudents={sortedStudents}
               outsideTableRef={outsideTableRef}
             >
@@ -224,12 +192,11 @@ function ProgressTableV2({
     getRenderedColumn,
     unitData,
     tableRef,
-    scrollCallbacks,
+    scrollCallback,
     expandedLessonIds,
     addExpandedLesson,
     removeExpandedLesson,
-    addScrollCallback,
-    removeScrollCallback,
+    setScrollCallback,
     sortedStudents,
     outsideTableRef,
   ]);
