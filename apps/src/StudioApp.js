@@ -5,43 +5,42 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-// Disabling import order due to a build error for circular dependencies errors.
-// Investigation is needed to determine where the circular dependency is coming from and whether
-// we can resolve it without the below specified order of imports.
-/* eslint-disable import/order */
-
-import trackEvent from './util/trackEvent';
-
 // Make sure polyfills are available in all code studio apps and level tests.
 import './polyfills';
-import * as aceMode from './acemode/mode-javascript_codeorg';
-import * as assetPrefix from './assetManagement/assetPrefix';
-import * as assets from './code-studio/assets';
-import * as blockUtils from './block_utils';
-var codegen = require('./lib/tools/jsinterpreter/codegen');
-import * as dom from './dom';
-import * as dropletUtils from './dropletUtils';
-import * as shareWarnings from './shareWarnings';
-import * as utils from './utils';
-import AbuseError from './code-studio/components/AbuseError';
-import Alert from './templates/alert';
-import AuthoredHints from './authoredHints';
-import ChallengeDialog from './templates/ChallengeDialog';
-import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
-import FeedbackUtils from './feedback';
+import {
+  Renderers,
+  stringIsXml,
+  stripUserCreated,
+} from '@cdo/apps/blockly/constants';
+import {addCallouts} from '@cdo/apps/code-studio/callouts';
+import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
+import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
+import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
+import {
+  setUserRoleInCourse,
+  CourseRoles,
+} from '@cdo/apps/templates/currentUserRedux';
 import InstructionsDialog from '@cdo/apps/templates/instructions/InstructionsDialog';
-import SmallFooter from './code-studio/components/SmallFooter';
-import Sounds from './Sounds';
-import VersionHistory from './templates/VersionHistory';
-import WireframeButtons from './lib/ui/WireframeButtons';
-import annotationList from './acemode/annotationList';
-import color from './util/color';
-import firehoseClient from './lib/util/firehose';
-import getAchievements from './achievements';
-import logToCloud from './logToCloud';
+import {workspace_running_background, white} from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
 import msg from '@cdo/locale';
+
+import annotationList from './acemode/annotationList';
+import * as aceMode from './acemode/mode-javascript_codeorg';
+import getAchievements from './achievements';
+import * as assetPrefix from './assetManagement/assetPrefix';
+import AuthoredHints from './authoredHints';
+import * as blockUtils from './block_utils';
+import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
+import {assets as assetsApi} from './clientApi';
+import * as assets from './code-studio/assets';
+import AbuseError from './code-studio/components/AbuseError';
+import SmallFooter from './code-studio/components/SmallFooter';
 import project from './code-studio/initApp/project';
-import puzzleRatingUtils from './puzzleRatingUtils';
+import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
+import {closeWorkspaceAlert} from './code-studio/projectRedux';
 import {
   KeyCodes,
   TestResults,
@@ -49,55 +48,51 @@ import {
   NOTIFICATION_ALERT_TYPE,
   START_BLOCKS,
 } from './constants';
-import {
-  Renderers,
-  stringIsXml,
-  stripUserCreated,
-} from '@cdo/apps/blockly/constants';
-import {assets as assetsApi} from './clientApi';
+import {getValidatedResult, initializeContainedLevel} from './containedLevels';
+import * as dom from './dom';
+import * as dropletUtils from './dropletUtils';
+import FeedbackUtils from './feedback';
 import {
   configCircuitPlayground,
   configMicrobit,
 } from './lib/kits/maker/dropletConfig';
-import {getStore} from './redux';
-import {getValidatedResult, initializeContainedLevel} from './containedLevels';
-import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
-import {parseElement as parseXmlElement} from './xml';
-import {setIsRunning, setIsEditWhileRun, setStepSpeed} from './redux/runState';
-import {
-  getIdleTimeSinceLastReport,
-  resetIdleTime,
-} from './redux/studioAppActivity';
 import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
-import {setPageConstants} from './redux/pageConstants';
-import {setVisualizationScale} from './redux/layout';
-import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
+import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
+import WireframeButtons from './lib/ui/WireframeButtons';
+import firehoseClient from './lib/util/firehose';
+import logToCloud from './logToCloud';
+import puzzleRatingUtils from './puzzleRatingUtils';
+import {getStore} from './redux';
 import {
   setAchievements,
   setBlockLimit,
   setFeedbackData,
   showFeedback,
 } from './redux/feedback';
-import experiments from '@cdo/apps/util/experiments';
 import {
   determineInstructionsConstants,
   setInstructionsConstants,
   setFeedback,
 } from './redux/instructions';
+import {setVisualizationScale} from './redux/layout';
+import {setPageConstants} from './redux/pageConstants';
+import {setIsRunning, setIsEditWhileRun, setStepSpeed} from './redux/runState';
 import {
-  setUserRoleInCourse,
-  CourseRoles,
-} from '@cdo/apps/templates/currentUserRedux';
-import {addCallouts} from '@cdo/apps/code-studio/callouts';
-import {queryParams} from '@cdo/apps/code-studio/utils';
-import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
-import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
-import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
-import {workspace_running_background, white} from '@cdo/apps/util/color';
-import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
-import {closeWorkspaceAlert} from './code-studio/projectRedux';
+  getIdleTimeSinceLastReport,
+  resetIdleTime,
+} from './redux/studioAppActivity';
+import * as shareWarnings from './shareWarnings';
+import Sounds from './Sounds';
+import Alert from './templates/alert';
+import ChallengeDialog from './templates/ChallengeDialog';
+import VersionHistory from './templates/VersionHistory';
+import color from './util/color';
 import KeyHandler from './util/KeyHandler';
-/* eslint-enable import/order */
+import trackEvent from './util/trackEvent';
+import * as utils from './utils';
+import {parseElement as parseXmlElement} from './xml';
+
+var codegen = require('./lib/tools/jsinterpreter/codegen');
 
 var copyrightStrings;
 

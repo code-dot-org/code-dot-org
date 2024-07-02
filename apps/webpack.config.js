@@ -109,7 +109,7 @@ const nodePolyfillConfig = {
         if (!circularDependenciesSet.has(pathString)) {
           compilation.errors.push(
             new Error(
-              `Circular Dependency Checker : New Circular Dependency found : ${pathString}`
+              `Circular Dependency Checker : A new Circular Dependency found.\nKnown circular dependencies can be found in 'apps/circular_dependencies.json'\n Circular dependency: ${pathString}.`
             )
           );
         }
