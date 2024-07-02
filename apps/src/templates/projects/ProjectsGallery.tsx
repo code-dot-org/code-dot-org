@@ -13,13 +13,7 @@ import {selectGallery} from './projectsRedux';
 
 import moduleStyles from './project-gallery.module.scss';
 
-interface ProjectsGalleryProps {
-  limitedGallery: boolean;
-}
-
-const ProjectsGallery: React.FunctionComponent<ProjectsGalleryProps> = ({
-  limitedGallery,
-}) => {
+const ProjectsGallery: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
 
   // The projects redux store isn't typed yet. When it is, we can update to useAppSelector.
@@ -71,9 +65,7 @@ const ProjectsGallery: React.FunctionComponent<ProjectsGalleryProps> = ({
       <div className={moduleStyles.galleryContent}>
         {selectedGallery === Galleries.PRIVATE && <PersonalProjectsTable />}
         {selectedGallery === Galleries.LIBRARIES && <LibraryTable />}
-        {selectedGallery === Galleries.PUBLIC && (
-          <PublicGallery limitedGallery={limitedGallery} />
-        )}
+        {selectedGallery === Galleries.PUBLIC && <PublicGallery />}
       </div>
     </div>
   );
