@@ -2481,6 +2481,7 @@ class UnitTest < ActiveSupport::TestCase
     unit_in_course.destroy
 
     assert Unit.find_by(id: unit_id).nil?
+    assert UnitGroup.find_by(id: unit_group.id)
 
     # Course version is associated to unit group and shouldn't be deleted
     assert CourseVersion.find_by(id: course_version.id)
