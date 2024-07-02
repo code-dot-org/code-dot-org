@@ -21,19 +21,29 @@ const ForTeachersOnly: React.FunctionComponent = () => {
     // TODO: show letter in front of multiple choice answer
     // better styling
     if (predictSettings?.solution) {
-      let solutionToDisplay = predictSettings.solution;
+      let solutionToDisplay: JSX.Element = (
+        <span>predictSettings.solution</span>
+      );
       if (predictSettings.questionType === PredictQuestionType.MultipleChoice) {
-        solutionToDisplay = '';
         const solutions = predictSettings.solution.split(',');
+        const formattedSolutions: JSX.Element[] = [];
         for (const solution of solutions) {
           const index =
             predictSettings.multipleChoiceOptions?.indexOf(solution);
           if (index !== undefined && index !== -1) {
-            solutionToDisplay += `${String.fromCharCode(
-              65 + index
-            )}. ${solution}\n`;
+            // Insert at index so the solutions show up in the same order as the options.
+            formattedSolutions[index] = (
+              <span key={index}>
+                <span className={moduleStyles.multipleChoiceLetter}>
+                  {String.fromCharCode(65 + index)}.
+                </span>{' '}
+                <span>{solution}</span>
+                <br />
+              </span>
+            );
           }
         }
+        solutionToDisplay = <>{formattedSolutions}</>;
       }
       return (
         <div className={moduleStyles.predictSolutionContainer}>
