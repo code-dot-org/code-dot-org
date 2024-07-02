@@ -52,6 +52,10 @@ import CourseSelect from './CourseSelect';
 import SubjectSelect from './SubjectSelect';
 import MapboxLocationSearchField from '../../../../templates/MapboxLocationSearchField';
 import ModuleSelect from './ModuleSelect';
+import SingleCheckbox from '@cdo/apps/code-studio/pd/form_components/SingleCheckbox';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import color from '@cdo/apps/util/color';
+import classnames from 'classnames';
 
 // Default to today, 9am-5pm.
 const placeholderSession = {
@@ -60,6 +64,15 @@ const placeholderSession = {
   startTime: '9:00am',
   endTime: '5:00pm',
 };
+
+const ALL_PL_TOPICS = [
+  'Test Self Paced PL Topic',
+  'Another Test Self Paced PL Topic',
+  'A Third Test Self Paced PL Topic',
+  'And a Final Very Long Test Self Paced PL Topic That Takes Up a Line',
+];
+
+const INPUT_HEIGHT = 34;
 
 // When selecting whether a workshop is virtual through the UI,
 // a user is really selecting two things:
@@ -139,6 +152,7 @@ export class WorkshopForm extends React.Component {
       virtual: false,
       suppress_email: false,
       third_party_provider: null,
+      plTopics: [],
     };
 
     if (props.workshop) {
@@ -720,6 +734,22 @@ export class WorkshopForm extends React.Component {
     return value;
   };
 
+  // Selects the given value in the topic dropdown
+  handleSelect = event => {
+    const value = Object.keys(event)[0];
+    const isChecked = event[Object.keys(event)[0]];
+
+    let updatedTopics;
+    if (isChecked) {
+      // Add checked item into applied filters
+      updatedTopics = [...this.state.plTopics, value];
+    } else {
+      // Remove unchecked item from applied filters
+      updatedTopics = this.state.plTopics.filter(item => item !== value);
+    }
+    this.setState({plTopics: updatedTopics});
+  };
+
   handleLocationChange = event => {
     const location = event && event.target && event.target.value;
     this.setState({location_address: location});
@@ -1118,6 +1148,71 @@ export class WorkshopForm extends React.Component {
             </Col>
           </Row>
           <Row>
+            {this.state.course === 'Build Your Own Workshop' && (
+              <div style={styles.container}>
+                <div style={styles.extraMargin}>
+                  <label>Select Workshop Topic(s)</label>
+                  <div
+                    className="dropdown show"
+                    id={'topics'}
+                    onKeyDown={this.onKeyDown}
+                  >
+                    <button
+                      style={{...styles.fullWidth, ...styles.topicsButton}}
+                      className="btn btn-secondary dropdown-toggle"
+                      id="dropdownMenuButton"
+                      type="button"
+                      data-toggle="dropdown"
+                      aria-haspopup={true}
+                      aria-label="topics dropdown"
+                    >
+                      {this.state.plTopics.length > 0 && (
+                        <FontAwesome
+                          style={styles.alignCenter}
+                          id={'check-icon'}
+                          icon="check-circle"
+                          title={'topics'}
+                        />
+                      )}
+                      <div
+                        style={{...styles.alignCenter, ...styles.buttonLabel}}
+                      >
+                        PL Topics
+                      </div>
+                      <FontAwesome
+                        style={styles.icon}
+                        id={'chevron-down-icon'}
+                        icon={'chevron-down'}
+                      />
+                    </button>
+                    <div
+                      className={classnames('dropdown-menu')}
+                      aria-labelledby="dropdownMenuButton"
+                    >
+                      <ul style={styles.listItems}>
+                        {ALL_PL_TOPICS.map(label => (
+                          <li
+                            className="dropdown-item"
+                            style={styles.singleItem}
+                            key={label}
+                          >
+                            <SingleCheckbox
+                              style={styles.check}
+                              name={label}
+                              label={label}
+                              onChange={e => this.handleSelect(e)}
+                              value={this.state.plTopics.includes(label)}
+                            />
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </Row>
+          <Row>
             <Col sm={5}>
               {this.shouldRenderModules() && (
                 <ModuleSelect
@@ -1199,6 +1294,56 @@ const styles = {
   },
   yesFeeRadio: {
     width: '100%',
+  },
+  topicsButton: {
+    border: `1px solid ${color.lighter_gray}`,
+    display: 'flex',
+    backgroundColor: 'white',
+    height: INPUT_HEIGHT,
+    fontWeight: 300,
+    padding: 5,
+    margin: '0 0 15px 0',
+  },
+  buttonLabel: {
+    marginLeft: 10,
+  },
+  alignCenter: {
+    alignSelf: 'center',
+  },
+  icon: {
+    color: color.neutral_dark,
+    fontSize: 'smaller',
+    position: 'absolute',
+    right: 5,
+    top: 10,
+    fontWeight: 100,
+  },
+  listItems: {
+    margin: '0 10px 0 0',
+  },
+  singleItem: {
+    display: 'flex',
+    padding: 5,
+    alignItems: 'start',
+    gap: 12,
+    margin: 0,
+  },
+  check: {
+    position: 'relative',
+    margin: '0',
+    paddingLeft: '10px',
+  },
+  fullWidth: {
+    width: '100%',
+  },
+  container: {
+    margin: 15,
+    backgroundColor: '#f7f7f7',
+    width: '50%',
+    display: 'inline-block',
+  },
+  extraMargin: {
+    margin: '15px 15px 0 15px',
   },
 };
 
