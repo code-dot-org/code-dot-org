@@ -109,11 +109,10 @@ function SectionProgressSelector({
 
   const includeModalIfAvailable = () => {
     const disableModal = DCDO.get('disable-try-new-progress-view-modal', false);
-    console.log(hasJustSwitchedToV1);
-    if (
-      !disableModal ||
-      (!hasJustSwitchedToV1 && !hasSeenProgressTableInvite)
-    ) {
+    if (disableModal || hasJustSwitchedToV1) {
+      return;
+    }
+    if (!hasSeenProgressTableInvite) {
       return (
         <InviteToV2ProgressModal
           sectionId={sectionId}
