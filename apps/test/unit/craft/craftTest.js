@@ -12,8 +12,8 @@ import pageConstants from '@cdo/apps/redux/pageConstants';
 import {assert} from '../../util/reconfiguredChai';
 
 describe('Craft', () => {
-  before(() => sinon.stub(Craft, 'render'));
-  after(() => Craft.render.restore());
+  beforeAll(() => sinon.stub(Craft, 'render'));
+  afterAll(() => Craft.render.restore());
 
   beforeEach(stubRedux);
   afterEach(restoreRedux);

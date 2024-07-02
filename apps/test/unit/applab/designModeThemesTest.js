@@ -317,6 +317,8 @@ describe('themes: ', () => {
     });
 
     it('copies element from a screen with one theme to a screen with a different theme', () => {
+      $.fn.disableSelection = jest.fn();
+
       setExistingHTML(`
         <div class="screen" id="design_screen1" data-theme="default" style="display:block; background-color: rgb(255, 255, 255);">
           <input id="design_text_input1" style="margin: 0px; width: 200px; height: 30px; border-style: solid; background-color: rgb(242, 242, 242); border-radius: 4px; border-width: 1px; border-color: rgb(77, 87, 95); color: rgb(77, 87, 95); font-family: Arial, Helvetica, sans-serif; font-size: 13px; padding: 5px 15px; position: static; left: 25px; top: 25px;">

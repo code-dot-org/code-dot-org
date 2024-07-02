@@ -7,7 +7,7 @@ import {assert} from '../../util/reconfiguredChai';
 describe('the export module', () => {
   describe('the getExportedGlobals function', () => {
     let globals;
-    before(() => {
+    beforeAll(() => {
       globals = Object.keys(getExportedGlobals());
     });
 
