@@ -55,7 +55,7 @@ require 'json'
 # hashdiff gem is only importable in dev/test environemnts
 require 'hashdiff' if DEBUG_SHARED_TABLES
 
-require_relative '../config/environment'
+require_relative '../dashboard/config/environment'
 
 def set_active_record_connection_pool_size(pool_size)
   ActiveRecord::Base.connection_pool.disconnect!
