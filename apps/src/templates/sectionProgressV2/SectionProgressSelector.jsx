@@ -112,7 +112,7 @@ function SectionProgressSelector({
     console.log(hasJustSwitchedToV1);
     if (
       !disableModal ||
-      (!hasJustSwitchedToV1 && !hasSeenProgressTableInvite && !disableModal)
+      (!hasJustSwitchedToV1 && !hasSeenProgressTableInvite)
     ) {
       return (
         <InviteToV2ProgressModal
