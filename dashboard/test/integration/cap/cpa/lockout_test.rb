@@ -93,8 +93,19 @@ module CAP
                 assert_student_in_grace_period
               end
 
+              assert_latest_student_cap_event(
+                CAP::UserEvent::GRACE_PERIOD_START,
+                nil,
+                Policies::ChildAccount::ComplianceState::GRACE_PERIOD
+              )
+
               # A new lockout job is not scheduled during the grace period.
               assert_no_enqueued_jobs only: CAP::LockoutJob do
+                assert_student_in_grace_period
+              end
+
+              # No new CAP user events have been logged
+              assert_no_difference -> {CAP::UserEvent.where(user: student).count} do
                 assert_student_in_grace_period
               end
 
@@ -142,6 +153,12 @@ module CAP
             it 'student should not be locked out' do
               assert_changes -> {Policies::ChildAccount::ComplianceState.grace_period?(student.reload)}, from: true, to: false do
                 assert_student_is_not_locked_out
+
+                assert_latest_student_cap_event(
+                  CAP::UserEvent::COMPLIANCE_REMOVING,
+                  Policies::ChildAccount::ComplianceState::GRACE_PERIOD,
+                  nil,
+                )
               end
             end
           end
@@ -178,6 +195,19 @@ module CAP
           refute Policies::ChildAccount::ComplianceState.locked_out?(student.reload)
         end
 
+        private def assert_latest_student_cap_event(event_name, state_before, state_after)
+          latest_cap_user_event = CAP::UserEvent.where(user: student).last
+
+          refute_nil latest_cap_user_event
+
+          assert_attributes latest_cap_user_event, {
+            policy: CAP::UserEvent.policies.key('CPA'),
+            name: event_name,
+            state_before: state_before,
+            state_after: state_after,
+          }
+        end
+
         private def assert_student_in_grace_period
           get home_path
 
@@ -192,6 +222,8 @@ module CAP
         end
 
         private def assert_student_is_locked_out_until_permission_granted
+          initial_cap_compliance_state = student.child_account_compliance_state
+
           get home_path
 
           follow_redirect!
@@ -203,6 +235,12 @@ module CAP
             child_account_compliance_state_last_updated: DateTime.now.iso8601(3),
             child_account_compliance_lock_out_date: DateTime.now.iso8601(3),
           }
+
+          assert_latest_student_cap_event(
+            CAP::UserEvent::ACCOUNT_LOCKING,
+            initial_cap_compliance_state,
+            Policies::ChildAccount::ComplianceState::LOCKED_OUT,
+          )
 
           student_parental_permission_request = create(:parental_permission_request, user: student)
           Services::ChildAccount.grant_permission_request!(student_parental_permission_request)
@@ -217,6 +255,12 @@ module CAP
             child_account_compliance_state_last_updated: DateTime.now.iso8601(3),
             child_account_compliance_lock_out_date: nil,
           }
+
+          assert_latest_student_cap_event(
+            CAP::UserEvent::PERMISSION_GRANTING,
+            Policies::ChildAccount::ComplianceState::LOCKED_OUT,
+            Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED,
+          )
         end
       end
     end
