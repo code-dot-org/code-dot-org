@@ -23,6 +23,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
   );
 
   const messages = useSelector(selectAllMessages);
+
   const isWaitingForChatResponse = useSelector(
     (state: {aichat: AichatState}) => state.aichat.isWaitingForChatResponse
   );
