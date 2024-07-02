@@ -9,7 +9,21 @@ class AddDeviseLockableToUsers < ActiveRecord::Migration[6.1]
       t.string :unlock_token
     end
 
-    add_index :users, :unlock_token, unique: true
+    # On MySQL 8.0, adding an index does not lock the table but it does still
+    # take quite a while to apply successfully; see
+    # https://dev.mysql.com/doc/refman/8.0/en/innodb-online-ddl-operations.html#online-ddl-column-syntax-notes
+    #
+    # When tested against a clone of our production database, this operation
+    # took approximately 35 minutes, much longer than the 30 seconds migrations
+    # will wait before erroring out. To avoid this migration failing in
+    # production, we plan to execute the index creation query manually after
+    # the rest of this migration has completed.
+    #
+    # Specifically, we should from a bash shell on production-console run:
+    #  nohup mysql-client-dashboard-writer "CREATE UNIQUE INDEX index_users_on_unlock_token ON users (unlock_token)" &
+    unless Rails.env.production?
+      add_index :users, :unlock_token, unique: true
+    end
   end
 
   def self.down
