@@ -72,43 +72,10 @@ Then(/^I report abuse on the project$/) do
   GHERKIN
 end
 
-Then(/^I publish the project$/) do
-  steps <<~GHERKIN
-    Given I open the project share dialog
-    And the project is unpublished
-    When I publish the project from the share dialog
-  GHERKIN
-end
-
 Then /^I open the project share dialog$/ do
   steps <<-GHERKIN
     Then I click selector ".project_share"
     And I wait to see a dialog titled "Share your project"
-  GHERKIN
-end
-
-Then /^I publish the project from the share dialog$/ do
-  steps <<-GHERKIN
-    And I click selector "#share-dialog-publish-button"
-    Then I publish the project from the publish to gallery dialog
-  GHERKIN
-end
-
-Then /^I publish the project from the personal projects table publish button$/ do
-  steps <<-GHERKIN
-    And I wait until element ".ui-personal-projects-publish-button" is visible
-    Then I click selector ".ui-personal-projects-publish-button"
-    Then I publish the project from the publish to gallery dialog
-    And I wait until element ".ui-personal-projects-unpublish-button" is visible
-  GHERKIN
-end
-
-Then /^I publish the project from the publish to gallery dialog$/ do
-  steps <<-GHERKIN
-    And I wait to see a publish dialog with title containing "Publish to Public Gallery"
-    And element "#publish-dialog-publish-button" is visible
-    And I click selector "#publish-dialog-publish-button"
-    And I wait for the dialog to close
   GHERKIN
 end
 
@@ -128,35 +95,6 @@ Then /^I navigate to the personal gallery via the gallery switcher$/ do
     And I wait until element "#uitest-personal-projects" is visible
     And element "#uitest-public-projects" is not visible
   GHERKIN
-end
-
-Then /^I wait to see a publish dialog with title containing "((?:[^"\\]|\\.)*)"$/ do |expected_text|
-  steps <<-GHERKIN
-    Then I wait to see ".publish-dialog-title"
-    And element ".publish-dialog-title" contains text "#{expected_text}"
-  GHERKIN
-end
-
-Then /^I unpublish the project from the share dialog$/ do
-  steps <<-GHERKIN
-    Then I click selector "#share-dialog-unpublish-button"
-    And I wait for the dialog to close
-  GHERKIN
-end
-
-Then /^the project is (un)?published/ do |negation|
-  published = negation.nil?
-  expect(element_visible?("#share-dialog-publish-button")).to eq(!published)
-  expect(element_visible?("#share-dialog-unpublish-button")).to eq(published)
-end
-
-Then /^the project cannot be published$/ do
-  expect(element_visible?("#share-dialog-publish-button")).to eq(false)
-  expect(element_visible?("#share-dialog-unpublish-button")).to eq(false)
-end
-
-Then /^the project can be published$/ do
-  expect(element_visible?("#share-dialog-publish-button")).to eq(true)
 end
 
 Then /^I reload the project page/ do
