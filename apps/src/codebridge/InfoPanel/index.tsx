@@ -45,7 +45,7 @@ export const InfoPanel = React.memo(() => {
     Panels.Instructions,
   ]);
   const hasPredictSolution = useAppSelector(
-    state => state.lab.levelProperties?.predictSettings?.solution
+    state => !!state.lab.levelProperties?.predictSettings?.solution
   );
 
   useEffect(() => {

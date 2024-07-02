@@ -860,7 +860,7 @@ class Level < ApplicationRecord
       # for these users.
       properties_camelized[:exemplarSources] = try(:exemplar_sources)
     else
-      # Users who are not verified teachers of levelbuilders should not be able to see predict level solutions
+      # Users who are not verified teachers or levelbuilders should not be able to see predict level solutions
       properties_camelized["predictSettings"]&.delete("solution")
       properties_camelized["predictSettings"]&.delete("multipleChoiceAnswers")
     end

@@ -44,6 +44,7 @@ const EditPredictSettings: React.FunctionComponent<
     setPredictSettings({
       ...predictSettings,
       questionType: e.target.value as PredictQuestionType,
+      solution: '', // Reset solution as it is used by both question types.
     });
   };
 
