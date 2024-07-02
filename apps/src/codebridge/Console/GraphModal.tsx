@@ -1,18 +1,11 @@
 import React from 'react';
 
-import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
-import {
-  BodyTwoText,
-  Heading3,
-  StrongText,
-} from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import i18n from '@cdo/locale';
 
 import moduleStyles from './console.module.scss';
 
 /**
- * Renders a modal that displays data visualization Python lab console output.
+ * Renders a modal that displays data visualizations from Python Lab console output.
  */
 
 export interface GraphModalProps {
@@ -26,7 +19,6 @@ const GraphModal: React.FunctionComponent<GraphModalProps> = ({
   key,
   src,
 }) => {
-
   return (
     <AccessibleDialog onClose={onClose}>
       <button
@@ -36,19 +28,9 @@ const GraphModal: React.FunctionComponent<GraphModalProps> = ({
       >
         <i id="x-close" className="fa-solid fa-xmark" />
       </button>
-      <img
-        key={key}
-        src={src}
-        alt="matplotlib_image"
-      />
+      <img key={key} src={src} alt="matplotlib_image" />
     </AccessibleDialog>
   );
+};
 
-  
-}
-  
-  
-  
-  
-  
 export default GraphModal;
