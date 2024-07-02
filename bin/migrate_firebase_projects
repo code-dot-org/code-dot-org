@@ -276,6 +276,7 @@ def migrate(channel_id)
     insert_datablock_kvps(kvps)
 
     # Now that its migrated, switch the project over to using DatablockStorage
+    ProjectUseDatablockStorage.where(project_id: project_id).delete_all
     ProjectUseDatablockStorage.create!(project_id: project_id, use_datablock_storage: true)
 
     # Do not allow transaction to complete if DRY_RUN==true
