@@ -59,6 +59,7 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
         tabContent: <SetupCustomization />,
         iconLeft:
           isSetupCustomizationReadOnly || isReadOnly ? iconValue : undefined,
+        className: styles.tabPanel,
       });
     }
     if (isVisible(retrievalContexts)) {
@@ -73,6 +74,7 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
         tabContent: <RetrievalCustomization />,
         iconLeft:
           isDisabled(retrievalContexts) || isReadOnly ? iconValue : undefined,
+        className: styles.tabPanel,
       });
     }
     if (isVisible(modelCardInfo) && !hidePresentationPanel) {
@@ -87,6 +89,7 @@ const ModelCustomizationWorkspace: React.FunctionComponent = () => {
         tabContent: <PublishNotes />,
         iconLeft:
           isDisabled(modelCardInfo) || isReadOnly ? iconValue : undefined,
+        className: styles.tabPanel,
       });
     }
     return visibleTabs;
