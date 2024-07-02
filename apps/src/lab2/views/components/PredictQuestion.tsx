@@ -36,21 +36,6 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
     }
   };
 
-  const showSolution = () => {
-    // We will only have a solution if the user has permission to see it.
-    // TODO: show letter in front of multiple choice answer
-    // better styling
-    // show/hide option??
-    if (predictSettings?.solution) {
-      return (
-        <div className={moduleStyles.solution}>
-          <span>Solution: </span>
-          <span>{predictSettings.solution}</span>
-        </div>
-      );
-    }
-  };
-
   return (
     <>
       {predictSettings.questionType === PredictQuestionType.FreeResponse ? (
@@ -85,7 +70,6 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
           </label>
         ))
       )}
-      {showSolution()}
     </>
   );
 };

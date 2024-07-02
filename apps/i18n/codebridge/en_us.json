@@ -1,6 +1,7 @@
 {
   "addFile": "Add file",
   "addSubFolder": "Add sub-folder",
+  "answer": "Answer",
   "deleteFile": "Delete file",
   "deleteFolder": "Delete folder",
   "duplicateFileError": "Filename {fileName} is already in use in this folder. Please choose a different name.",
