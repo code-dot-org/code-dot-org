@@ -11,7 +11,7 @@ import style from './ai-differentiation.module.scss';
  * toggling an AI element open and closed.
  */
 
-const AIFloatingActionButton: React.FunctionComponent = () => {
+const AIDiffFloatingActionButton: React.FunctionComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
     setIsOpen(!isOpen);
@@ -31,4 +31,4 @@ const AIFloatingActionButton: React.FunctionComponent = () => {
   );
 };
 
-export default AIFloatingActionButton;
+export default AIDiffFloatingActionButton;

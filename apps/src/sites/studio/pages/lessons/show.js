@@ -18,7 +18,7 @@ import {
   setVerifiedResources,
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import experiments from '@cdo/apps/util/experiments';
-import AIFloatingActionButton from '@cdo/apps/aiDifferentiation/AIFloatingActionButton';
+import AIDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AIDiffFloatingActionButton';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
 import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
@@ -146,7 +146,7 @@ function displayDifferentiationChat() {
     'differentiation-fab-mount-point'
   );
   if (differFabMountPoint && experiments.isEnabled('ai-differentiation')) {
-    ReactDOM.render(<AIFloatingActionButton />, differFabMountPoint);
+    ReactDOM.render(<AIDiffFloatingActionButton />, differFabMountPoint);
   }
 }
 
