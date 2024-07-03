@@ -4,10 +4,10 @@ class RemoveJSONEncodingFromDatablockStorageKvps < ActiveRecord::Migration[6.1]
       kvp.update!(value: JSON.parse(kvp.value))
     rescue => exception
       message = <<~LOG
-        Failed to do the thingy: #{exception.message}
-
-        Traceback:
-        #{exception.backtrace.join("\n")}
+        Failed to migrate KVP (project_id=#{kvp.project_id}, key=#{kvp.key.inspect})
+          Exception: #{exception.message}
+          Traceback:
+        #{exception.backtrace.join("\n\t\t")}
       LOG
       Rails.logger.warn message
       puts message
