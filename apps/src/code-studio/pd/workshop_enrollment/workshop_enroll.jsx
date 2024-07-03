@@ -26,6 +26,7 @@ export default class WorkshopEnroll extends React.Component {
     user_id: PropTypes.number.isRequired,
     workshop: WorkshopPropType,
     session_dates: PropTypes.arrayOf(PropTypes.string),
+    latest_app_school: PropTypes.object,
     enrollment: PropTypes.shape({
       email: PropTypes.string,
       first_name: PropTypes.string,
@@ -58,6 +59,14 @@ export default class WorkshopEnroll extends React.Component {
       last_name: this.props.enrollment.last_name,
       email: this.props.enrollment.email,
       previous_courses: this.props.previous_courses,
+      school_info: {
+        school_type: this.props.latest_app_school?.schoolType,
+        school_state: this.props.latest_app_school?.schoolState,
+        school_zip: this.props.latest_app_school?.schoolZipCode,
+        school_district_name: this.props.latest_app_school?.schoolDistrictName,
+        school_id: null,
+        school_name: this.props.latest_app_school?.schoolName,
+      },
     };
     this.submitRequest = $.ajax({
       method: 'POST',
