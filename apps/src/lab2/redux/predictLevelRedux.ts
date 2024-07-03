@@ -1,4 +1,7 @@
-import {sendPredictLevelReport} from '@cdo/apps/code-studio/progressRedux';
+import {
+  queryUserProgress,
+  sendPredictLevelReport,
+} from '@cdo/apps/code-studio/progressRedux';
 import {
   PayloadAction,
   createAsyncThunk,
@@ -8,10 +11,12 @@ import {
 import {setLoadedPredictResponse} from '@cdo/apps/lab2/lab2Redux';
 import {RootState} from '@cdo/apps/types/redux';
 import {resetPredictLevelProgress} from '../projects/userLevelsApi';
+import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 
 export interface PredictLevelState {
   response: string;
   hasSubmittedResponse: boolean;
+  errorResetting: boolean;
 }
 
 const initialState: PredictLevelState = {
@@ -20,22 +25,27 @@ const initialState: PredictLevelState = {
   response: '',
   // If the user has submitted a predict response for the current level.
   hasSubmittedResponse: false,
+  errorResetting: false,
 };
 
 // THUNKS
-export const resetPredictProgress = createAsyncThunk(
-  'predictLevel/resetPredictProgress',
-  async (
-    payload: {scriptId: number | null; currentLevelId: string | null},
-    thunkAPI
-  ) => {
+export const resetPredictProgress = createAsyncThunk<
+  void,
+  {scriptId: number | null; currentLevelId: string | null; userId: number},
+  {dispatch: AppDispatch; state: RootState}
+>('predictLevel/resetPredictProgress', async (payload, thunkAPI) => {
+  try {
     const response = await resetPredictLevelProgress(
       payload.currentLevelId,
       payload.scriptId
     );
-    console.log({response});
+    if (response.ok) {
+      thunkAPI.dispatch(queryUserProgress(payload.userId.toString()));
+    }
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error);
   }
-);
+});
 
 // SELECTORS
 
@@ -70,6 +80,17 @@ const predictSlice = createSlice({
       // If the response is not empty, we consider the user to have submitted a response.
       state.response = action.payload;
       state.hasSubmittedResponse = !!action.payload;
+    });
+    builder.addCase(resetPredictProgress.fulfilled, state => {
+      state.response = '';
+      state.hasSubmittedResponse = false;
+      state.errorResetting = false;
+    });
+    builder.addCase(resetPredictProgress.rejected, state => {
+      state.errorResetting = true;
+    });
+    builder.addCase(resetPredictProgress.pending, state => {
+      state.errorResetting = false;
     });
   },
 });

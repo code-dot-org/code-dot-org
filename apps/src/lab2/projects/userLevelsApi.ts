@@ -29,7 +29,7 @@ export async function resetPredictLevelProgress(
   currentLevelId: string | null,
   scriptId: number | null
 ) {
-  await HttpClient.post(
+  return await HttpClient.post(
     '/delete_predict_level_progress',
     JSON.stringify({
       script_id: scriptId,

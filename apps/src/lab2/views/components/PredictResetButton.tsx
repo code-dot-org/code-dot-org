@@ -14,6 +14,7 @@ const PredictResetButton: React.FunctionComponent = () => {
   );
   const scriptId = useAppSelector(state => state.progress.scriptId);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const userId = useAppSelector(state => state.currentUser.userId);
   const dispatch = useAppDispatch();
 
   if (
@@ -24,7 +25,7 @@ const PredictResetButton: React.FunctionComponent = () => {
   }
 
   function handleResetClick() {
-    dispatch(resetPredictProgress({scriptId, currentLevelId}));
+    dispatch(resetPredictProgress({scriptId, currentLevelId, userId}));
   }
 
   return (
