@@ -1,11 +1,12 @@
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+import {loadPyodide, version} from 'pyodide';
+
 import {
   getUpdatedSourceAndDeleteFiles,
   importPackagesFromFiles,
   resetGlobals,
   writeSource,
 } from './pythonHelpers/pythonScriptUtils';
-import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {loadPyodide, version} from 'pyodide';
 
 async function loadPyodideAndPackages() {
   self.pyodide = await loadPyodide({
