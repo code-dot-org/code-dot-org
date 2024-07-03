@@ -1,6 +1,6 @@
 export interface LevelPredictSettings {
   isPredictLevel: boolean;
-  solution?: string | string[];
+  solution?: string;
   questionType?: PredictQuestionType;
   allowMultipleAttempts?: boolean;
   // Free Response settings
@@ -8,7 +8,6 @@ export interface LevelPredictSettings {
   placeholderText?: string;
   // Multiple choice settings
   multipleChoiceOptions?: string[];
-  multipleChoiceAnswers?: string[];
   isMultiSelect?: boolean;
 }
 

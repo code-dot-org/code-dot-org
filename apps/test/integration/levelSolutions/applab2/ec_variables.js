@@ -1,6 +1,8 @@
-import {testApplabConsoleOutput} from '../../util/levelTestHelpers';
-var tickWrapper = require('../../util/tickWrapper');
 import {TestResults} from '@cdo/apps/constants';
+
+import {testApplabConsoleOutput} from '../../util/levelTestHelpers';
+
+var tickWrapper = require('../../util/tickWrapper');
 
 module.exports = {
   app: 'applab',

@@ -4,18 +4,21 @@
 // only used for levels that use Lab2.
 
 import React, {useCallback, useContext} from 'react';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
 import {
   sendSuccessReport,
   navigateToNextLevel,
 } from '@cdo/apps/code-studio/progressRedux';
-import {PanelsLevelProperties} from './types';
-import PanelsView from './PanelsView';
-import useWindowSize from '../util/hooks/useWindowSize';
 import {
   DialogContext,
   DialogType,
 } from '@cdo/apps/lab2/views/dialogs/DialogManager';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import useWindowSize from '../util/hooks/useWindowSize';
+
+import PanelsView from './PanelsView';
+import {PanelsLevelProperties} from './types';
 
 const appName = 'panels';
 

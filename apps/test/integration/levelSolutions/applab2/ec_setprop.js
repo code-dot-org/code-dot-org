@@ -1,8 +1,11 @@
 import $ from 'jquery';
+
+import {TestResults} from '@cdo/apps/constants';
+
+import {expect} from '../../../util/reconfiguredChai';
+
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
-import {TestResults} from '@cdo/apps/constants';
-import {expect} from '../../../util/reconfiguredChai';
 
 // take advantage of the fact that we expose the filesystem via
 // localhost

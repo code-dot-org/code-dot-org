@@ -10,7 +10,7 @@ describe('WorkshopEnrollmentPreSurvey', () => {
   describe('getSortableUnitLessonShortName()', () => {
     let getSortableUnitLessonShortName;
 
-    before(() => {
+    beforeAll(() => {
       getSortableUnitLessonShortName = shallow(
         <WorkshopEnrollmentPreSurvey
           enrollments={[]}
@@ -34,7 +34,7 @@ describe('WorkshopEnrollmentPreSurvey', () => {
     let fakeEnrollments;
     let workshopEnrollmentPreSurvey;
     let tableRows;
-    before(() => {
+    beforeAll(() => {
       const generateFakeEnrollment = survey => {
         userIndex++;
         return {
@@ -173,7 +173,7 @@ describe('WorkshopEnrollmentPreSurvey', () => {
 
     describe('Histogram chart', () => {
       let chart;
-      before(() => {
+      beforeAll(() => {
         chart = workshopEnrollmentPreSurvey.find('Chart');
       });
 

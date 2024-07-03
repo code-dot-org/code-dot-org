@@ -175,7 +175,7 @@ class LtiV1Controller < ApplicationController
 
         # If this is the user's first login, send them into the account linking flow
         if DCDO.get('lti_account_linking_enabled', false) && !user.lms_landing_opted_out
-          Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'continue')
+          Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'continue', user.user_type)
           PartialRegistration.persist_attributes(session, user)
           publish_linking_page_visit(user, integration[:platform_name])
           render 'lti/v1/account_linking/landing', locals: {email: Services::Lti.get_claim(decoded_jwt, :email)} and return
@@ -208,7 +208,7 @@ class LtiV1Controller < ApplicationController
         email_address = Services::Lti.get_claim(decoded_jwt, :email)
         PartialRegistration.persist_attributes(session, user)
         if DCDO.get('lti_account_linking_enabled', false)
-          Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'new')
+          Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'new', user.user_type)
           publish_linking_page_visit(user, integration[:platform_name])
           render 'lti/v1/account_linking/landing', locals: {email: email_address} and return
         end

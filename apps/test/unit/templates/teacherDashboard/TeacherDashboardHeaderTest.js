@@ -1,6 +1,10 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
+import {reducers} from '@cdo/apps/applab/redux/applab';
+import {registerReducers, restoreRedux, stubRedux} from '@cdo/apps/redux';
+import commonReducers from '@cdo/apps/redux/commonReducers';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {UnconnectedTeacherDashboardHeader as TeacherDashboardHeader} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardHeader';
@@ -56,6 +60,17 @@ const DEFAULT_PROPS = {
 };
 
 describe('TeacherDashboardHeader', () => {
+  beforeEach(() => {
+    stubRedux();
+    registerReducers(commonReducers);
+    registerReducers(reducers);
+    registerReducers({currentUser});
+  });
+
+  afterEach(() => {
+    restoreRedux();
+  });
+
   it('renders section name in header', () => {
     const wrapper = shallow(<TeacherDashboardHeader {...DEFAULT_PROPS} />);
     let h1Elements = wrapper.find('h1');

@@ -5,6 +5,9 @@ import {getCode, moveHiddenBlocks} from '@cdo/apps/blockly/addons/cdoUtils';
 import * as cdoXml from '@cdo/apps/blockly/addons/cdoXml';
 
 import {expect} from '../../../util/reconfiguredChai';
+import setBlocklyGlobal from '../../../util/setupBlocklyGlobal';
+
+setBlocklyGlobal();
 
 describe('CdoUtils', () => {
   describe('moveHiddenBlocks', () => {

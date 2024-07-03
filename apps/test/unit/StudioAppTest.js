@@ -18,6 +18,7 @@ import {
 import * as utils from '@cdo/apps/utils';
 
 import {expect} from '../util/reconfiguredChai';
+import setBlocklyGlobal from '../util/setupBlocklyGlobal';
 import {
   sandboxDocumentBody,
   replaceOnWindow,
@@ -28,6 +29,7 @@ import sampleLibrary from './code-studio/components/libraries/sampleLibrary.json
 
 describe('StudioApp', () => {
   sandboxDocumentBody();
+  setBlocklyGlobal();
 
   describe('StudioApp.singleton', () => {
     let containerDiv, codeWorkspaceDiv;
