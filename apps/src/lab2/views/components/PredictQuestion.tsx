@@ -4,15 +4,13 @@ import {
   PredictQuestionType,
 } from '@cdo/apps/lab2/levelEditors/types';
 import moduleStyles from './predict.module.scss';
+import PredictResetButton from './PredictResetButton';
 
 interface PredictQuestionProps {
   predictSettings: LevelPredictSettings | undefined;
   predictResponse: string | undefined;
   setPredictResponse: (response: string) => void;
   predictAnswerLocked: boolean;
-  teacherViewingStudentWork: boolean;
-  scriptId: number | null;
-  currentLevelId: string | null;
 }
 
 const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
@@ -20,9 +18,6 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
   predictResponse,
   setPredictResponse,
   predictAnswerLocked,
-  teacherViewingStudentWork,
-  scriptId,
-  currentLevelId,
 }) => {
   if (!predictSettings?.isPredictLevel) {
     return null;
@@ -83,6 +78,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
           );
         })
       )}
+      <PredictResetButton />
     </>
   );
 };

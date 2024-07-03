@@ -26,8 +26,8 @@ export async function getPredictResponse(
 }
 
 export async function resetPredictLevelProgress(
-  currentLevelId: string,
-  scriptId: number
+  currentLevelId: string | null,
+  scriptId: number | null
 ) {
   await HttpClient.post(
     '/delete_predict_level_progress',

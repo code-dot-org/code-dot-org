@@ -26,7 +26,7 @@ const initialState: PredictLevelState = {
 export const resetPredictProgress = createAsyncThunk(
   'predictLevel/resetPredictProgress',
   async (
-    payload: {scriptId: number; currentLevelId: string; userId: string},
+    payload: {scriptId: number | null; currentLevelId: string | null},
     thunkAPI
   ) => {
     const response = await resetPredictLevelProgress(

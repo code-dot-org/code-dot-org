@@ -70,11 +70,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   );
   const predictResponse = useAppSelector(state => state.predictLevel.response);
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
-  const teacherViewingStudentWork = useAppSelector(
-    state => state.progress.viewAsUserId !== null
-  );
-  const scriptId = useAppSelector(state => state.progress.scriptId);
-  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
 
   // If there are no validation conditions, we can show the continue button so long as
   // there is another level and manageNavigation is true.
@@ -122,9 +117,6 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
       imagePopOutDirection={imagePopOutDirection}
       handleInstructionsTextClick={handleInstructionsTextClick}
       className={className}
-      teacherViewingStudentWork={teacherViewingStudentWork}
-      scriptId={scriptId}
-      currentLevelId={currentLevelId}
     />
   );
 };
@@ -165,10 +157,6 @@ interface InstructionsPanelProps {
   predictAnswerLocked: boolean;
   /** Optional classname for the container */
   className?: string;
-  // Needed for resetting predict levels
-  teacherViewingStudentWork: boolean;
-  scriptId: number | null;
-  currentLevelId: string | null;
 }
 
 /**
@@ -193,9 +181,6 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   setPredictResponse,
   predictAnswerLocked,
   className,
-  teacherViewingStudentWork,
-  scriptId,
-  currentLevelId,
 }) => {
   const [showBigImage, setShowBigImage] = useState(false);
   const [isFinished, setIsFinished] = useState(false);
@@ -294,9 +279,6 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               predictResponse={predictResponse}
               setPredictResponse={setPredictResponse}
               predictAnswerLocked={predictAnswerLocked}
-              teacherViewingStudentWork={teacherViewingStudentWork}
-              scriptId={scriptId}
-              currentLevelId={currentLevelId}
             />
           </div>
         )}
