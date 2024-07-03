@@ -18,6 +18,7 @@ function AccessibleDialog({
   // If these styles are provided by the given stylesheet, use them
   const modalStyle = styles?.modal || defaultStyle.modal;
   const backdropStyle = styles?.modalBackdrop || defaultStyle.modalBackdrop;
+  const closeIconStyle = styles?.xCloseButton || defaultStyle.xCloseButton;
 
   return (
     <div>
@@ -35,6 +36,18 @@ function AccessibleDialog({
             className={classnames(modalStyle, className)}
             role="dialog"
           >
+            <button
+              type="button"
+              onClick={onClose}
+              className={closeIconStyle}
+            >
+              <i
+                id="x-close"
+                className="fa-solid fa-xmark"
+                aria-hidden={true}
+              />
+              <span className="sr-only">Close</span>
+             </button>
             {children}
           </div>
         </FocusTrap>
