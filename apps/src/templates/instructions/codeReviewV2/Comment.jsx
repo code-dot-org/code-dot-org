@@ -1,6 +1,6 @@
 import moment from 'moment';
 import PropTypes from 'prop-types';
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect} from 'react';
 import {connect} from 'react-redux';
 
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
@@ -25,7 +25,7 @@ function Comment({
   currentUserId,
   viewingAsOwner,
 }) {
-  const isMounted = useRef(false);
+  const isMounted = React.useRef(false);
   const [isCommentResolved, setIsCommentResolved] = useState(
     comment.isResolved
   );

@@ -74,12 +74,12 @@ describe('viewAs redux', () => {
   });
 
   describe('with stubs', () => {
-    before(() => {
+    beforeAll(() => {
       stub(appsUtils, 'reload');
       stub(codeStudioUtils, 'queryParams').callsFake(() => 'fake_user_id');
     });
 
-    after(() => {
+    afterAll(() => {
       appsUtils.reload.restore();
       codeStudioUtils.queryParams.restore();
     });

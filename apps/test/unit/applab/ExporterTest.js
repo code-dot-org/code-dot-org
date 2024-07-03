@@ -401,7 +401,7 @@ describe('Applab Exporter,', function () {
           );
           const innerTextLines = el
             .querySelector('#divApplab')
-            .innerText.trim()
+            .textContent.trim()
             .split('\n');
           assert.equal(
             innerTextLines[0].trim(),

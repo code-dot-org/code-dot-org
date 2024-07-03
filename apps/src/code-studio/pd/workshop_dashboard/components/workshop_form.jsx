@@ -490,28 +490,30 @@ export class WorkshopForm extends React.Component {
               <HelpBlock>{validation.help.virtual}</HelpBlock>
             </FormGroup>
           </Col>
-          <Col sm={5}>
-            <FormGroup validationState={validation.style.suppress_email}>
-              <ControlLabel>
-                Enable workshop reminders?
-                <HelpTip>
-                  <p>
-                    Choose if you'd like automated 10-day and 3-day pre-workshop
-                    reminders to be sent to your participants.
-                  </p>
-                </HelpTip>
-              </ControlLabel>
-              <SelectSuppressEmail
-                onChange={this.handleSuppressEmailChange}
-                value={this.state.suppress_email || false}
-                readOnly={
-                  this.props.readOnly ||
-                  MustSuppressEmailSubjects.includes(this.state.subject)
-                }
-              />
-              <HelpBlock>{validation.help.suppress_email}</HelpBlock>
-            </FormGroup>
-          </Col>
+          {!isBuildYourOwnWorkshop && (
+            <Col sm={5}>
+              <FormGroup validationState={validation.style.suppress_email}>
+                <ControlLabel>
+                  Enable workshop reminders?
+                  <HelpTip>
+                    <p>
+                      Choose if you'd like automated 10-day and 3-day
+                      pre-workshop reminders to be sent to your participants.
+                    </p>
+                  </HelpTip>
+                </ControlLabel>
+                <SelectSuppressEmail
+                  onChange={this.handleSuppressEmailChange}
+                  value={this.state.suppress_email || false}
+                  readOnly={
+                    this.props.readOnly ||
+                    MustSuppressEmailSubjects.includes(this.state.subject)
+                  }
+                />
+                <HelpBlock>{validation.help.suppress_email}</HelpBlock>
+              </FormGroup>
+            </Col>
+          )}
         </Row>
       </FormGroup>
     );
@@ -794,7 +796,7 @@ export class WorkshopForm extends React.Component {
     });
     this.loadAvailableFacilitators(course);
     if (course === 'Build Your Own Workshop') {
-      this.setState({funded: false});
+      this.setState({funded: false, suppress_email: true});
     }
   };
 

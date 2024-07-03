@@ -63,25 +63,27 @@ const PresentationView: React.FunctionComponent = () => {
         <Heading4 className={moduleStyles.modelCardTitle}>
           {modelCardInfo['botName']}
         </Heading4>
-        {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label, iconName]) => {
-          if (property === 'botName' || property === 'isPublished') {
-            return null;
-          }
-          return (
-            <ModelCardRow
-              title={label}
-              titleIcon={iconName}
-              expandedContent={modelCardInfo[property]}
-              key={property}
-            />
-          );
-        })}
-        <ModelCardRow
-          title="Technical Info"
-          titleIcon="screwdriver-wrench"
-          expandedContent={technicalInfo}
-          key="technicalInfo"
-        />
+        <div className={moduleStyles.modelCardFields}>
+          {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label, iconName]) => {
+            if (property === 'botName' || property === 'isPublished') {
+              return null;
+            }
+            return (
+              <ModelCardRow
+                title={label}
+                titleIcon={iconName}
+                expandedContent={modelCardInfo[property]}
+                key={property}
+              />
+            );
+          })}
+          <ModelCardRow
+            title="Technical Info"
+            titleIcon="screwdriver-wrench"
+            expandedContent={technicalInfo}
+            key="technicalInfo"
+          />
+        </div>
       </div>
     </div>
   );

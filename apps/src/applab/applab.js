@@ -692,7 +692,7 @@ Applab.init = function (config) {
     isCurriculumLevel: isCurriculumLevel(config.level.validationEnabled),
   });
 
-  config.dropletConfig = dropletConfig;
+  config.dropletConfig = {...dropletConfig};
 
   if (config.level.aiEnabled) {
     config.dropletConfig = utils.deepMergeConcatArrays(
