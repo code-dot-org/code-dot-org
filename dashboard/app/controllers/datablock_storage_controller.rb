@@ -69,7 +69,8 @@ class DatablockStorageController < ApplicationController
 
   def get_key_value
     kvp = DatablockStorageKvp.find_by(project_id: @project_id, key: params[:key])
-    render json: kvp ? JSON.parse(kvp.value).to_json : nil
+    # render json: assumes a string is already json encoded, so to_json is necessary.
+    render json: kvp&.value.to_json
   end
 
   def delete_key_value
