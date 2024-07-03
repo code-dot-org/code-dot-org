@@ -4,7 +4,7 @@ import {spy, stub} from 'sinon';
 
 import AddParentEmailController from '@cdo/apps/lib/ui/accounts/AddParentEmailController';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 export const ENCRYPTED_EMAIL_PLACEHOLDER = '***encrypted***';
 
@@ -59,37 +59,37 @@ describe('AddParentEmailController', () => {
     });
 
     it('shows on showAddParentEmailModal', () => {
-      expect(ReactDOM.render).not.to.have.been.called;
+      expect(ReactDOM.render).not.toHaveBeenCalled();
       controller.showAddParentEmailModal();
-      expect(ReactDOM.render).to.have.been.calledOnce;
+      expect(ReactDOM.render).toHaveBeenCalledTimes(1);
     });
 
     it('show is idempotent', () => {
-      expect(ReactDOM.render).not.to.have.been.called;
+      expect(ReactDOM.render).not.toHaveBeenCalled();
       controller.showAddParentEmailModal();
       controller.showAddParentEmailModal();
-      expect(ReactDOM.render).to.have.been.calledOnce;
+      expect(ReactDOM.render).toHaveBeenCalledTimes(1);
     });
 
     it('shows when the link is clicked', () => {
-      expect(ReactDOM.render).not.to.have.been.called;
+      expect(ReactDOM.render).not.toHaveBeenCalled();
       link.click();
-      expect(ReactDOM.render).to.have.been.calledOnce;
+      expect(ReactDOM.render).toHaveBeenCalledTimes(1);
     });
 
     it('hides on hideAddParentEmailModal', () => {
       controller.showAddParentEmailModal();
-      expect(ReactDOM.unmountComponentAtNode).not.to.have.been.called;
+      expect(ReactDOM.unmountComponentAtNode).not.toHaveBeenCalled();
       controller.hideAddParentEmailModal();
-      expect(ReactDOM.unmountComponentAtNode).to.have.been.calledOnce;
+      expect(ReactDOM.unmountComponentAtNode).toHaveBeenCalledTimes(1);
     });
 
     it('hide is idempotent', () => {
       controller.showAddParentEmailModal();
-      expect(ReactDOM.unmountComponentAtNode).not.to.have.been.called;
+      expect(ReactDOM.unmountComponentAtNode).not.toHaveBeenCalled();
       controller.hideAddParentEmailModal();
       controller.hideAddParentEmailModal();
-      expect(ReactDOM.unmountComponentAtNode).to.have.been.calledOnce;
+      expect(ReactDOM.unmountComponentAtNode).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -106,7 +106,7 @@ describe('AddParentEmailController', () => {
       });
       expect(
         form.find('#add-parent-email-modal_user_parent_email').val()
-      ).to.equal(TEST_EMAIL);
+      ).toBe(TEST_EMAIL);
     });
 
     it('sets email_preference_opt_in if "yes"', async () => {
@@ -118,7 +118,7 @@ describe('AddParentEmailController', () => {
         form
           .find('#add-parent-email-modal_user_parent_email_preference_opt_in')
           .val()
-      ).to.equal('yes');
+      ).toBe('yes');
     });
 
     it('sets email_preference_opt_in if "no"', async () => {
@@ -130,7 +130,7 @@ describe('AddParentEmailController', () => {
         form
           .find('#add-parent-email-modal_user_parent_email_preference_opt_in')
           .val()
-      ).to.equal('no');
+      ).toBe('no');
     });
 
     it('does not set email_preference_opt_in otherwise', async () => {
@@ -142,7 +142,7 @@ describe('AddParentEmailController', () => {
         form
           .find('#add-parent-email-modal_user_parent_email_preference_opt_in')
           .val()
-      ).to.equal('');
+      ).toBe('');
     });
 
     it('resolves to new email on success', async () => {
@@ -150,7 +150,7 @@ describe('AddParentEmailController', () => {
         parentEmail: TEST_EMAIL,
         parentEmailOptIn: 'yes',
       });
-      expect(parentEmail).to.equal(TEST_EMAIL);
+      expect(parentEmail).toBe(TEST_EMAIL);
     });
 
     it('rejects on failure', async () => {
@@ -192,7 +192,7 @@ describe('AddParentEmailController', () => {
     it('calls the onSuccessCallback on success', () => {
       controller = newController();
       controller.onParentEmailChanged(TEST_EMAIL);
-      expect(onSuccessCallback).to.have.been.calledOnce;
+      expect(onSuccessCallback).toHaveBeenCalledTimes(1);
     });
   });
 });

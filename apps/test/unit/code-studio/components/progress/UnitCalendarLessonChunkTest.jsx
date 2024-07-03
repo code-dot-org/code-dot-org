@@ -5,7 +5,7 @@ import ReactTooltip from 'react-tooltip';
 import UnitCalendarLessonChunk from '@cdo/apps/code-studio/components/progress/UnitCalendarLessonChunk';
 import color from '@cdo/apps/util/color';
 
-import {expect, assert} from '../../../../util/reconfiguredChai';
+import {assert} from '../../../../util/reconfiguredChai';
 
 const sampleLessonChunk = {
   id: 1,
@@ -170,7 +170,7 @@ describe('UnitCalendarLessonChunk', () => {
 
     expect(
       wrapper.containsMatchingElement(<div>{sampleLessonChunk.title}</div>)
-    ).to.be.false;
+    ).toBe(false);
   });
 
   it('shows lesson number with tooltip if small chunk', () => {
@@ -190,14 +190,14 @@ describe('UnitCalendarLessonChunk', () => {
       wrapper.containsMatchingElement(
         <div>{sampleLessonChunk.lessonNumber}</div>
       )
-    ).to.be.true;
+    ).toBe(true);
     expect(
       wrapper.containsMatchingElement(
         <ReactTooltip>
           <div>{sampleLessonChunk.title}</div>
         </ReactTooltip>
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('hides assessment icon if not assessment', () => {

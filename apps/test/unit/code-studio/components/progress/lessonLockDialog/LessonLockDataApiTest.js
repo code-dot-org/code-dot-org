@@ -10,7 +10,7 @@ import {
 } from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
 import * as useFetch from '@cdo/apps/util/useFetch';
 
-import {expect} from '../../../../../util/reconfiguredChai';
+
 
 window.fetch = jest.fn();
 
@@ -66,8 +66,8 @@ describe('LessonLockDataApi', () => {
         />
       );
       const {loading, serverLockState} = useGetLockStateReturnValue.current;
-      expect(loading).to.be.false;
-      expect(serverLockState).to.deep.equal([
+      expect(loading).toBe(false);
+      expect(serverLockState).toEqual([
         {
           name: 'Student1',
           lockStatus: 'Locked',
@@ -113,7 +113,7 @@ describe('LessonLockDataApi', () => {
 
       saveLockState(previousLockState, newLockState, 'fake-csrf');
 
-      expect(fetchSpy).to.have.been.calledWith('/api/lock_status', {
+      expect(fetchSpy).toHaveBeenCalledWith('/api/lock_status', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

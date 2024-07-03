@@ -4,7 +4,7 @@ import React from 'react';
 
 import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 describe('Design System - Tooltip', () => {
   it('Tooltip - renders with correct label', async () => {
@@ -20,14 +20,14 @@ describe('Design System - Tooltip', () => {
     let tooltip = screen.queryByText('tooltipText');
     let tooltipTrigger = screen.getByText('hover me');
 
-    expect(tooltip).not.to.exist;
-    expect(tooltipTrigger).to.exist;
+    expect(tooltip).toBeFalsy();
+    expect(tooltipTrigger).toBeDefined();
 
     await user.hover(tooltipTrigger);
 
     rerender(<WithTooltipToRender />);
 
     tooltip = screen.getByText('tooltipText');
-    expect(tooltip).to.exist;
+    expect(tooltip).toBeDefined();
   });
 });

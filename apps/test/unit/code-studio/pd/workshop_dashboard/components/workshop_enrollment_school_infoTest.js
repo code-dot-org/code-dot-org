@@ -1,5 +1,4 @@
-import {expect} from 'chai';
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import { shallow } from 'enzyme';
 import React from 'react';
 
 import {WorkshopEnrollmentSchoolInfo} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_enrollment_school_info';
@@ -35,7 +34,7 @@ describe('Workshop Enrollment School Info', () => {
       workshopEnrollmentSchoolInfo
         .find('th')
         .filterWhere(col => col.text().includes('Total Attendance'))
-    ).to.have.length(1);
+    ).toHaveLength(1);
   });
 
   it('does not show Total Attendance column for non-local-summer workshop', () => {
@@ -58,7 +57,7 @@ describe('Workshop Enrollment School Info', () => {
       workshopEnrollmentSchoolInfo
         .find('th')
         .filterWhere(col => col.text().includes('Total Attendance'))
-    ).to.have.length(0);
+    ).toHaveLength(0);
   });
 
   it('shows Scholarship Teacher? column for scholarship workshop', () => {
@@ -81,7 +80,7 @@ describe('Workshop Enrollment School Info', () => {
       workshopEnrollmentSchoolInfo
         .find('th')
         .filterWhere(col => col.text().includes('Scholarship Teacher?'))
-    ).to.have.length(1);
+    ).toHaveLength(1);
   });
 
   it('does not show Scholarship Teacher? column for non-scholarship workshop', () => {
@@ -104,7 +103,7 @@ describe('Workshop Enrollment School Info', () => {
       workshopEnrollmentSchoolInfo
         .find('th')
         .filterWhere(col => col.text().includes('Scholarship Teacher?'))
-    ).to.have.length(0);
+    ).toHaveLength(0);
   });
 
   it('shows questions for CSP returning teachers', () => {
@@ -129,7 +128,7 @@ describe('Workshop Enrollment School Info', () => {
           workshopEnrollmentSchoolInfo
             .find('th')
             .filterWhere(col => col.text().includes(question))
-        ).to.have.length(1);
+        ).toHaveLength(1);
       }
     );
   });
@@ -160,7 +159,7 @@ describe('Workshop Enrollment School Info', () => {
         workshopEnrollmentSchoolInfo
           .find('th')
           .filterWhere(col => col.text().includes(question))
-      ).to.have.length(0);
+      ).toHaveLength(0);
     });
   });
 });

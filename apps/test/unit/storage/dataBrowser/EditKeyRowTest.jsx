@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import EditKeyRow from '@cdo/apps/storage/dataBrowser/EditKeyRow';
 import commonI18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('EditKeyRow', () => {
   describe('localization', () => {
@@ -30,7 +30,7 @@ describe('EditKeyRow', () => {
       const wrapper = createEditKeyRow();
 
       let button = wrapper.find('button').at(0);
-      expect(button.text()).to.contain('i18n-edit');
+      expect(button.text()).toContain('i18n-edit');
     });
 
     it('should render a localized string for "Save"', () => {
@@ -42,7 +42,7 @@ describe('EditKeyRow', () => {
       wrapper.setState({isEditing: true});
 
       let saveButton = wrapper.find('PendingButton').at(0);
-      expect(saveButton.prop('text')).to.contain('i18n-save');
+      expect(saveButton.prop('text')).toContain('i18n-save');
     });
 
     it('should render a localized string while saving the row', () => {
@@ -54,7 +54,7 @@ describe('EditKeyRow', () => {
       wrapper.setState({isEditing: true});
 
       let saveButton = wrapper.find('PendingButton').at(0);
-      expect(saveButton.prop('pendingText')).to.contain('i18n-saving');
+      expect(saveButton.prop('pendingText')).toContain('i18n-saving');
     });
 
     it('should render a localized string for "Delete"', () => {
@@ -63,7 +63,7 @@ describe('EditKeyRow', () => {
       const wrapper = createEditKeyRow();
 
       let deleteButton = wrapper.find('PendingButton').at(0);
-      expect(deleteButton.prop('text')).to.contain('i18n-delete');
+      expect(deleteButton.prop('text')).toContain('i18n-delete');
     });
 
     it('should render a localized string while saving the row', () => {
@@ -72,7 +72,7 @@ describe('EditKeyRow', () => {
       const wrapper = createEditKeyRow();
 
       let deleteButton = wrapper.find('PendingButton').at(0);
-      expect(deleteButton.prop('pendingText')).to.contain('i18n-deleting');
+      expect(deleteButton.prop('pendingText')).toContain('i18n-deleting');
     });
   });
 });

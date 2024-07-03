@@ -3,7 +3,7 @@ import React from 'react';
 
 import LessonAgenda from '@cdo/apps/templates/lessonOverview/LessonAgenda';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('LessonAgenda', () => {
   let defaultProps;
@@ -67,9 +67,9 @@ describe('LessonAgenda', () => {
   it('Display correct information for agenda', () => {
     const wrapper = shallow(<LessonAgenda {...defaultProps} />);
 
-    expect(wrapper.text()).to.include('Main Activity (20 minutes)');
-    expect(wrapper.text()).to.include('Making programs');
-    expect(wrapper.text()).to.include('Non Programming Progression');
-    expect(wrapper.text()).to.include('2nd Activity (30 minutes)');
+    expect(wrapper.text()).toContain('Main Activity (20 minutes)');
+    expect(wrapper.text()).toContain('Making programs');
+    expect(wrapper.text()).toContain('Non Programming Progression');
+    expect(wrapper.text()).toContain('2nd Activity (30 minutes)');
   });
 });

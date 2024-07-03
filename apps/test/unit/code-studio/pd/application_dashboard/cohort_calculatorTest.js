@@ -1,5 +1,4 @@
-import {expect} from 'chai';
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import { shallow } from 'enzyme';
 import React from 'react';
 import sinon from 'sinon';
 
@@ -28,10 +27,10 @@ describe('Cohort Calculator', () => {
     });
 
     it('Is loading', () => {
-      expect(cohortCalculator.state('loadingEnrollmentCount')).to.be.true;
+      expect(cohortCalculator.state('loadingEnrollmentCount')).toBe(true);
     });
     it('Does not render a table', () => {
-      expect(cohortCalculator.find('table')).to.have.length(0);
+      expect(cohortCalculator.find('table')).toHaveLength(0);
     });
   });
 
@@ -64,14 +63,14 @@ describe('Cohort Calculator', () => {
     });
 
     it('Is no longer loading', () => {
-      expect(cohortCalculator.state('loadingEnrollmentCount')).to.be.false;
+      expect(cohortCalculator.state('loadingEnrollmentCount')).toBe(false);
     });
     it('Get correct enrollment count from server', () => {
-      expect(cohortCalculator.state('enrolled')).to.equal(data.enrolled);
+      expect(cohortCalculator.state('enrolled')).toBe(data.enrolled);
     });
     it('Renders a table', () => {
       cohortCalculator.update();
-      expect(cohortCalculator.find('thead')).to.have.length(1);
+      expect(cohortCalculator.find('thead')).toHaveLength(1);
     });
   });
 });

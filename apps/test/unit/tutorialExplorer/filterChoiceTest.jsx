@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import FilterChoice from '@cdo/apps/tutorialExplorer/filterChoice';
 
-import {expect} from '../../util/deprecatedChai';
+
 
 const TEST_GROUP_NAME = 'Mansfield Park';
 const TEST_NAME = 'Persuasion';
@@ -74,10 +74,6 @@ describe('FilterChoice', () => {
       },
     });
 
-    expect(callback).to.have.been.calledOnce.and.calledWith(
-      TEST_GROUP_NAME,
-      TEST_NAME,
-      testNewCheckedValue
-    );
+    expect(callback).toHaveBeenCalledWith(TEST_GROUP_NAME, TEST_NAME, testNewCheckedValue);
   });
 });

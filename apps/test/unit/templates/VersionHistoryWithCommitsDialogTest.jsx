@@ -8,7 +8,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
 import * as utils from '@cdo/apps/utils';
 
-import {assert, expect} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai';
 
 const FAKE_CURRENT_VERSION = 'current-version-id';
 const FAKE_PREVIOUS_VERSION = 'previous-version-id';
@@ -98,7 +98,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
     it('renders an error on failed version history load', () => {
       wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       failVersionHistoryLoad();
-      expect(wrapper.text()).to.include('An error occurred.');
+      expect(wrapper.text()).toContain('An error occurred.');
     });
 
     it('renders a version list on successful version history load', () => {
@@ -114,17 +114,17 @@ describe('VersionHistoryWithCommitsDialog', () => {
       );
 
       // Rendered two version rows
-      expect(wrapper.find('VersionWithCommit')).to.have.length(2);
-      expect(wrapper.text()).to.include('Commit comment');
+      expect(wrapper.find('VersionWithCommit')).toHaveLength(2);
+      expect(wrapper.text()).toContain('Commit comment');
     });
 
     it('attempts to restore a chosen version when clicking restore button', () => {
       wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       finishVersionHistoryLoad();
-      expect(restoreSpy()).not.to.have.been.called;
+      expect(restoreSpy()).not.toHaveBeenCalled();
 
       wrapper.find('Button').at(3).simulate('click');
-      expect(restoreSpy()).to.have.been.calledOnce;
+      expect(restoreSpy()).toHaveBeenCalledTimes(1);
     });
 
     it('renders an error on failed restore', () => {
@@ -133,17 +133,17 @@ describe('VersionHistoryWithCommitsDialog', () => {
       wrapper.find('Button').at(3).simulate('click');
 
       failRestoreVersion();
-      expect(wrapper.text()).to.include('An error occurred.');
+      expect(wrapper.text()).toContain('An error occurred.');
     });
 
     it('reloads the page on successful restore', () => {
       wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       finishVersionHistoryLoad();
       wrapper.find('Button').at(3).simulate('click');
-      expect(utils.reload).not.to.have.been.called;
+      expect(utils.reload).not.toHaveBeenCalled();
 
       finishRestoreVersion();
-      expect(utils.reload).to.have.been.calledOnce;
+      expect(utils.reload).toHaveBeenCalledTimes(1);
     });
 
     it('shows a confirmation after clicking Start Over', () => {
@@ -185,7 +185,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
       wrapper.find('Button').last().simulate('click');
 
       // Rendered two version rows
-      expect(wrapper.find('VersionWithCommit')).to.have.length(2);
+      expect(wrapper.find('VersionWithCommit')).toHaveLength(2);
     });
 
     it('shows a confirmation with template project warning', () => {
@@ -197,7 +197,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
       // Click "Start Over"
       wrapper.find('Button').last().simulate('click');
 
-      expect(wrapper.find('.template-level-warning')).to.exist;
+      expect(wrapper.find('.template-level-warning')).toBeDefined();
     });
 
     describe('confirming Start Over', () => {
@@ -244,36 +244,33 @@ describe('VersionHistoryWithCommitsDialog', () => {
       });
 
       it('logs to firehose', () => {
-        expect(firehoseClient.putRecord).to.have.been.calledOnce.and.calledWith(
-          {
-            study: 'project-data-integrity',
-            study_group: 'v4',
-            event: 'clear-puzzle',
-            project_id: 'fake-project-id',
-            data_json: JSON.stringify({
-              isOwner: true,
-              currentUrl: window.location.href,
-              shareUrl: 'fake-share-url',
-              isProjectTemplateLevel: false,
-              currentSourceVersionId: FAKE_CURRENT_VERSION,
-            }),
-          },
-          {includeUserId: true}
-        );
+        expect(firehoseClient.putRecord).toHaveBeenCalledWith({
+          study: 'project-data-integrity',
+          study_group: 'v4',
+          event: 'clear-puzzle',
+          project_id: 'fake-project-id',
+          data_json: JSON.stringify({
+            isOwner: true,
+            currentUrl: window.location.href,
+            shareUrl: 'fake-share-url',
+            isProjectTemplateLevel: false,
+            currentSourceVersionId: FAKE_CURRENT_VERSION,
+          }),
+        }, {includeUserId: true});
       });
 
       it('calls handleClearPuzzle prop', () => {
-        expect(handleClearPuzzle).to.have.been.calledOnce;
+        expect(handleClearPuzzle).toHaveBeenCalledTimes(1);
       });
 
       it('calls project.save(true)', async () => {
         await wasCalled(project.save);
-        expect(project.save).to.have.been.calledOnce.and.calledWith(true);
+        expect(project.save).toHaveBeenCalledWith(true);
       });
 
       it('reloads the page', async () => {
         await wasCalled(utils.reload);
-        expect(utils.reload).to.have.been.calledOnce;
+        expect(utils.reload).toHaveBeenCalledTimes(1);
       });
     });
   }

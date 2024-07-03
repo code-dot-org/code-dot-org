@@ -6,7 +6,7 @@ import AddParentEmailModal from '@cdo/apps/lib/ui/accounts/AddParentEmailModal';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../../util/deprecatedChai';
+
 
 describe('AddParentEmailModal', () => {
   let wrapper;
@@ -52,22 +52,20 @@ describe('AddParentEmailModal', () => {
       expect(parentEmailOptOutSelect(wrapper)).to.have.attr('disabled');
       expect(submitButton(wrapper)).to.have.attr('disabled');
       expect(cancelButton(wrapper)).to.have.attr('disabled');
-      expect(wrapper.text()).to.include(i18n.saving());
+      expect(wrapper.text()).toContain(i18n.saving());
     });
 
     it('shows unknown error text when an unknown error occurs', () => {
       wrapper.setState({saveState: 'unknown-error'});
-      expect(wrapper.text()).to.include(
-        i18n.changeEmailModal_unexpectedError()
-      );
+      expect(wrapper.text()).toContain(i18n.changeEmailModal_unexpectedError());
     });
 
     it('calls handleCancel when clicking the cancel button', () => {
       const handleCancel = sinon.spy();
       wrapper.setProps({handleCancel});
-      expect(handleCancel).not.to.have.been.called;
+      expect(handleCancel).not.toHaveBeenCalled();
       cancelButton(wrapper).simulate('click');
-      expect(handleCancel).to.have.been.calledOnce;
+      expect(handleCancel).toHaveBeenCalledTimes(1);
     });
 
     describe('validation', () => {
@@ -80,9 +78,7 @@ describe('AddParentEmailModal', () => {
           },
         });
 
-        expect(wrapper.text()).to.include(
-          i18n.addParentEmailModal_parentEmail_isRequired()
-        );
+        expect(wrapper.text()).toContain(i18n.addParentEmailModal_parentEmail_isRequired());
       });
 
       it('checks that email is valid', () => {
@@ -94,9 +90,7 @@ describe('AddParentEmailModal', () => {
           },
         });
 
-        expect(wrapper.text()).to.include(
-          i18n.addParentEmailModal_parentEmail_invalid()
-        );
+        expect(wrapper.text()).toContain(i18n.addParentEmailModal_parentEmail_invalid());
       });
 
       it('checks that email is different that current one', () => {
@@ -109,9 +103,7 @@ describe('AddParentEmailModal', () => {
           },
         });
 
-        expect(wrapper.text()).to.include(
-          i18n.addParentEmailModal_parentEmail_mustBeDifferent()
-        );
+        expect(wrapper.text()).toContain(i18n.addParentEmailModal_parentEmail_mustBeDifferent());
       });
 
       it('checks that confirmation email equals email', () => {
@@ -123,9 +115,7 @@ describe('AddParentEmailModal', () => {
           },
         });
 
-        expect(wrapper.text()).to.include(
-          i18n.addParentEmailModal_confirmedParentEmail_mustMatch()
-        );
+        expect(wrapper.text()).toContain(i18n.addParentEmailModal_confirmedParentEmail_mustMatch());
       });
 
       it('reports email server errors', () => {
@@ -141,7 +131,7 @@ describe('AddParentEmailModal', () => {
           },
         });
 
-        expect(wrapper.text()).to.include(serverError);
+        expect(wrapper.text()).toContain(serverError);
       });
 
       it('disables the submit button when validation errors are present', () => {
@@ -152,7 +142,7 @@ describe('AddParentEmailModal', () => {
           },
         });
 
-        expect(submitButton(wrapper)).to.have.prop('disabled', true);
+        expect(submitButton(wrapper).props()).toHaveProperty('disabled', true);
       });
 
       it('enables the submit button form passes validation', () => {
@@ -164,7 +154,7 @@ describe('AddParentEmailModal', () => {
           },
         });
 
-        expect(submitButton(wrapper)).to.have.prop('disabled', false);
+        expect(submitButton(wrapper).props()).toHaveProperty('disabled', false);
       });
     });
 
@@ -175,9 +165,7 @@ describe('AddParentEmailModal', () => {
             parentEmail: 'test-server-error',
           },
         });
-        expect(wrapper.state().errors.parentEmail).to.equal(
-          'test-server-error'
-        );
+        expect(wrapper.state().errors.parentEmail).toBe('test-server-error');
         emailInput(wrapper).simulate('change', {
           target: {value: 'me@example.com'},
         });
@@ -185,20 +173,20 @@ describe('AddParentEmailModal', () => {
           target: {value: 'me@example.com'},
         });
 
-        expect(wrapper.state().errors.parentEmail).to.equal('');
+        expect(wrapper.state().errors.parentEmail).toBe('');
       });
     });
 
     describe('onSubmitFailure', () => {
       it('puts the dialog in UNKNOWN ERROR state if response has no server errors', () => {
-        expect(wrapper.state().saveState).to.equal('initial');
+        expect(wrapper.state().saveState).toBe('initial');
         wrapper.instance().onSubmitFailure(null, {});
-        expect(wrapper.state().saveState).to.equal('unknown-error');
+        expect(wrapper.state().saveState).toBe('unknown-error');
       });
 
       it('loads returned validation errors into dialog state', () => {
-        expect(wrapper.state().saveState).to.equal('initial');
-        expect(wrapper.state().errors).to.deep.equal({
+        expect(wrapper.state().saveState).toBe('initial');
+        expect(wrapper.state().errors).toEqual({
           parentEmail: '',
           confirmedParentEmail: '',
         });
@@ -207,8 +195,8 @@ describe('AddParentEmailModal', () => {
             parentEmail: 'test-email-server-error',
           },
         });
-        expect(wrapper.state().saveState).to.equal('initial');
-        expect(wrapper.state().errors).to.deep.equal({
+        expect(wrapper.state().saveState).toBe('initial');
+        expect(wrapper.state().errors).toEqual({
           parentEmail: 'test-email-server-error',
         });
       });

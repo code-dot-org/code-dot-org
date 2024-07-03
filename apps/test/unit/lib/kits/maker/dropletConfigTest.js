@@ -6,7 +6,7 @@ import dropletConfig, {
   configMicrobit,
 } from '@cdo/apps/lib/kits/maker/dropletConfig';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 describe('maker/dropletConfig.js', () => {
   describe('getBoardEventDropdownForParam', () => {
@@ -16,7 +16,7 @@ describe('maker/dropletConfig.js', () => {
           'unknown',
           CP_COMPONENT_EVENTS
         )
-      ).to.deep.equal([
+      ).toEqual([
         '"change"',
         '"close"',
         '"data"',
@@ -33,7 +33,7 @@ describe('maker/dropletConfig.js', () => {
           'buttonL',
           CP_COMPONENT_EVENTS
         )
-      ).to.deep.equal(['"down"', '"up"']);
+      ).toEqual(['"down"', '"up"']);
     });
 
     it('buttonR dropdown', () => {
@@ -42,7 +42,7 @@ describe('maker/dropletConfig.js', () => {
           'buttonR',
           CP_COMPONENT_EVENTS
         )
-      ).to.deep.equal(['"down"', '"up"']);
+      ).toEqual(['"down"', '"up"']);
     });
 
     it('toggleSwitch dropdown', () => {
@@ -51,7 +51,7 @@ describe('maker/dropletConfig.js', () => {
           'toggleSwitch',
           CP_COMPONENT_EVENTS
         )
-      ).to.deep.equal(['"change"', '"close"', '"open"']);
+      ).toEqual(['"change"', '"close"', '"open"']);
     });
 
     it('accelerometer dropdown', () => {
@@ -60,7 +60,7 @@ describe('maker/dropletConfig.js', () => {
           'accelerometer',
           CP_COMPONENT_EVENTS
         )
-      ).to.deep.equal(['"change"', '"data"', '"shake"']);
+      ).toEqual(['"change"', '"data"', '"shake"']);
     });
 
     it('soundSensor dropdown', () => {
@@ -69,7 +69,7 @@ describe('maker/dropletConfig.js', () => {
           'soundSensor',
           CP_COMPONENT_EVENTS
         )
-      ).to.deep.equal(['"change"', '"data"']);
+      ).toEqual(['"change"', '"data"']);
     });
 
     it('lightSensor dropdown', () => {
@@ -78,7 +78,7 @@ describe('maker/dropletConfig.js', () => {
           'lightSensor',
           CP_COMPONENT_EVENTS
         )
-      ).to.deep.equal(['"change"', '"data"']);
+      ).toEqual(['"change"', '"data"']);
     });
 
     it('tempSensor dropdown', () => {
@@ -87,7 +87,7 @@ describe('maker/dropletConfig.js', () => {
           'tempSensor',
           CP_COMPONENT_EVENTS
         )
-      ).to.deep.equal(['"change"', '"data"']);
+      ).toEqual(['"change"', '"data"']);
     });
 
     // micro:bit specific components
@@ -97,7 +97,7 @@ describe('maker/dropletConfig.js', () => {
           'buttonA',
           MB_COMPONENT_EVENTS
         )
-      ).to.deep.equal(['"down"', '"up"']);
+      ).toEqual(['"down"', '"up"']);
     });
 
     it('buttonB dropdown', () => {
@@ -106,7 +106,7 @@ describe('maker/dropletConfig.js', () => {
           'buttonB',
           MB_COMPONENT_EVENTS
         )
-      ).to.deep.equal(['"down"', '"up"']);
+      ).toEqual(['"down"', '"up"']);
     });
   });
 
@@ -118,42 +118,42 @@ describe('maker/dropletConfig.js', () => {
           ['B2', 1 / 4],
           ['C3', 1 / 2],
         ])
-      ).to.equal('[' + '["A1",0.25], ' + '["B2",0.25], ' + '["C3",0.5]' + ']');
+      ).toBe('[' + '["A1",0.25], ' + '["B2",0.25], ' + '["C3",0.5]' + ']');
     });
   });
 
   describe(`pinMode(pin, mode)`, () => {
     it('has a matching export in commands.js', () => {
       expect(commands).to.haveOwnProperty('pinMode');
-      expect(commands.pinMode).to.be.a('function');
+      expect(commands.pinMode).toBeInstanceOf(Function);
     });
   });
 
   describe(`digitalWrite(pin, value)`, () => {
     it('has a matching export in commands.js', () => {
       expect(commands).to.haveOwnProperty('digitalWrite');
-      expect(commands.digitalWrite).to.be.a('function');
+      expect(commands.digitalWrite).toBeInstanceOf(Function);
     });
   });
 
   describe(`digitalRead(pin)`, () => {
     it('has a matching export in commands.js', () => {
       expect(commands).to.haveOwnProperty('digitalRead');
-      expect(commands.digitalRead).to.be.a('function');
+      expect(commands.digitalRead).toBeInstanceOf(Function);
     });
   });
 
   describe(`analogWrite(pin, value)`, () => {
     it('has a matching export in commands.js', () => {
       expect(commands).to.haveOwnProperty('analogWrite');
-      expect(commands.analogWrite).to.be.a('function');
+      expect(commands.analogWrite).toBeInstanceOf(Function);
     });
   });
 
   describe(`analogRead(pin)`, () => {
     it('has a matching export in commands.js', () => {
       expect(commands).to.haveOwnProperty('analogRead');
-      expect(commands.analogRead).to.be.a('function');
+      expect(commands.analogRead).toBeInstanceOf(Function);
     });
   });
 
@@ -165,27 +165,27 @@ describe('maker/dropletConfig.js', () => {
     });
 
     it('is an exported block', () => {
-      expect(block).not.to.be.undefined;
+      expect(block).toBeDefined();
     });
 
     it('is in the Maker category', () => {
-      expect(block).to.have.property('category', dropletConfig.MAKER_CATEGORY);
+      expect(block).toHaveProperty('category', dropletConfig.MAKER_CATEGORY);
     });
 
     it('has one argument', () => {
-      expect(block.paletteParams).to.have.length(1);
-      expect(block.params).to.have.length(1);
-      expect(block.paletteParams[0]).to.equal('pin');
-      expect(block.params[0]).to.equal('0');
+      expect(block.paletteParams).toHaveLength(1);
+      expect(block.params).toHaveLength(1);
+      expect(block.paletteParams[0]).toBe('pin');
+      expect(block.params[0]).toBe('0');
     });
 
     it('can be a value block or not', () => {
-      expect(block.type).to.equal('either');
+      expect(block.type).toBe('either');
     });
 
     it('has a matching export in commands.js', () => {
       expect(commands).to.haveOwnProperty('createLed');
-      expect(commands.createLed).to.be.a('function');
+      expect(commands.createLed).toBeInstanceOf(Function);
     });
   });
 
@@ -199,22 +199,22 @@ describe('maker/dropletConfig.js', () => {
     });
 
     it('is an exported block', () => {
-      expect(block).not.to.be.undefined;
+      expect(block).toBeDefined();
     });
 
     it('is in the Maker category', () => {
-      expect(block).to.have.property('category', dropletConfig.MAKER_CATEGORY);
+      expect(block).toHaveProperty('category', dropletConfig.MAKER_CATEGORY);
     });
 
     it('has one argument', () => {
-      expect(block.paletteParams).to.have.length(1);
-      expect(block.params).to.have.length(1);
-      expect(block.paletteParams[0]).to.equal('pin');
-      expect(block.params[0]).to.equal('0');
+      expect(block.paletteParams).toHaveLength(1);
+      expect(block.params).toHaveLength(1);
+      expect(block.paletteParams[0]).toBe('pin');
+      expect(block.params[0]).toBe('0');
     });
 
     it('does not autocomplete', () => {
-      expect(block.noAutocomplete).to.be.true;
+      expect(block.noAutocomplete).toBe(true);
     });
   });
 
@@ -226,27 +226,27 @@ describe('maker/dropletConfig.js', () => {
     });
 
     it('is an exported block', () => {
-      expect(block).not.to.be.undefined;
+      expect(block).toBeDefined();
     });
 
     it('is in the Maker category', () => {
-      expect(block).to.have.property('category', dropletConfig.MAKER_CATEGORY);
+      expect(block).toHaveProperty('category', dropletConfig.MAKER_CATEGORY);
     });
 
     it('has one argument', () => {
-      expect(block.paletteParams).to.have.length(1);
-      expect(block.params).to.have.length(1);
-      expect(block.paletteParams[0]).to.equal('pin');
-      expect(block.params[0]).to.equal('0');
+      expect(block.paletteParams).toHaveLength(1);
+      expect(block.params).toHaveLength(1);
+      expect(block.paletteParams[0]).toBe('pin');
+      expect(block.params[0]).toBe('0');
     });
 
     it('can be a value block or not', () => {
-      expect(block.type).to.equal('either');
+      expect(block.type).toBe('either');
     });
 
     it('has a matching export in commands.js', () => {
       expect(commands).to.haveOwnProperty('createButton');
-      expect(commands.createButton).to.be.a('function');
+      expect(commands.createButton).toBeInstanceOf(Function);
     });
   });
 
@@ -260,29 +260,29 @@ describe('maker/dropletConfig.js', () => {
     });
 
     it('is an exported block', () => {
-      expect(block).not.to.be.undefined;
+      expect(block).toBeDefined();
     });
 
     it('is in the Maker category', () => {
-      expect(block).to.have.property('category', dropletConfig.MAKER_CATEGORY);
+      expect(block).toHaveProperty('category', dropletConfig.MAKER_CATEGORY);
     });
 
     it('has one argument', () => {
-      expect(block.paletteParams).to.have.length(1);
-      expect(block.params).to.have.length(1);
-      expect(block.paletteParams[0]).to.equal('pin');
-      expect(block.params[0]).to.equal('0');
+      expect(block.paletteParams).toHaveLength(1);
+      expect(block.params).toHaveLength(1);
+      expect(block.paletteParams[0]).toBe('pin');
+      expect(block.params[0]).toBe('0');
     });
 
     it('does not autocomplete', () => {
-      expect(block.noAutocomplete).to.be.true;
+      expect(block.noAutocomplete).toBe(true);
     });
   });
 
   describe(`onBoardEvent(component, event, callback)`, () => {
     it('has a matching export in commands.js', () => {
       expect(commands).to.haveOwnProperty('onBoardEvent');
-      expect(commands.onBoardEvent).to.be.a('function');
+      expect(commands.onBoardEvent).toBeInstanceOf(Function);
     });
   });
 });

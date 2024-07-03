@@ -15,7 +15,7 @@ import color from '@cdo/apps/util/color';
 import * as utils from '@cdo/apps/utils';
 import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai';
 
 const defaultProps = {
   level: {
@@ -64,7 +64,7 @@ function styleForStatus(status, propOverrides = {}, levelOverrides = {}) {
 describe('ProgressBubble', () => {
   it('renders a link when we have a url', () => {
     const wrapper = shallow(<ProgressBubble {...defaultProps} />);
-    expect(wrapper.find(BubbleLink)).to.have.lengthOf(1);
+    expect(wrapper.find(BubbleLink)).toHaveLength(1);
   });
 
   it('does not render a link when we have no url', () => {
@@ -77,14 +77,14 @@ describe('ProgressBubble', () => {
         }}
       />
     );
-    expect(wrapper.find(BubbleLink)).to.be.empty;
+    expect(wrapper.find(BubbleLink)).toHaveLength(0);
   });
 
   it('does not render a link if we are disabled', () => {
     const wrapper = shallow(
       <ProgressBubble {...defaultProps} disabled={true} />
     );
-    expect(wrapper.find(BubbleLink)).to.be.empty;
+    expect(wrapper.find(BubbleLink)).toHaveLength(0);
   });
 
   it('shows letter in bubble when level has a letter', () => {
@@ -98,12 +98,12 @@ describe('ProgressBubble', () => {
       />
     );
 
-    expect(wrapper.find(BasicBubble).text()).to.equal('a');
+    expect(wrapper.find(BasicBubble).text()).toBe('a');
   });
 
   it('has a green background when we have perfect status and not assessment', () => {
     const style = styleForStatus(LevelStatus.perfect);
-    expect(style.backgroundColor).to.equal(color.level_perfect);
+    expect(style.backgroundColor).toBe(color.level_perfect);
   });
 
   it('has a purple background when level status is LevelStatus.completed_assessment, is an assessment level ', () => {
@@ -112,19 +112,19 @@ describe('ProgressBubble', () => {
       {},
       {kind: LevelKind.assessment}
     );
-    expect(style.backgroundColor).to.equal(color.level_submitted);
+    expect(style.backgroundColor).toBe(color.level_submitted);
   });
 
   it('has green border and white background for in progress level', () => {
     const style = styleForStatus(LevelStatus.attempted);
-    expect(style.backgroundColor).to.equal(color.level_not_tried);
-    expect(style.borderColor).to.equal(color.level_perfect);
+    expect(style.backgroundColor).toBe(color.level_not_tried);
+    expect(style.borderColor).toBe(color.level_perfect);
   });
 
   it('has a green border and light green background for too many blocks level', () => {
     const style = styleForStatus(LevelStatus.passed);
-    expect(style.backgroundColor).to.equal(color.level_passed);
-    expect(style.borderColor).to.equal(color.level_perfect);
+    expect(style.backgroundColor).toBe(color.level_passed);
+    expect(style.borderColor).toBe(color.level_perfect);
   });
 
   it('has a purple background for submitted level', () => {
@@ -133,9 +133,9 @@ describe('ProgressBubble', () => {
       {},
       {kind: LevelKind.assessment}
     );
-    expect(style.backgroundColor).to.equal(color.level_submitted);
-    expect(style.borderColor).to.equal(color.level_submitted);
-    expect(style.color).to.equal(color.white);
+    expect(style.backgroundColor).toBe(color.level_submitted);
+    expect(style.borderColor).toBe(color.level_submitted);
+    expect(style.color).toBe(color.white);
   });
 
   it('has a red background for review_rejected', () => {
@@ -144,9 +144,9 @@ describe('ProgressBubble', () => {
       {},
       {kind: LevelKind.peer_review}
     );
-    expect(style.backgroundColor).to.equal(color.level_review_rejected);
-    expect(style.borderColor).to.equal(color.level_review_rejected);
-    expect(style.color).to.equal(color.white);
+    expect(style.backgroundColor).toBe(color.level_review_rejected);
+    expect(style.borderColor).toBe(color.level_review_rejected);
+    expect(style.color).toBe(color.white);
   });
 
   it('has a green background for review_accepted', () => {
@@ -155,9 +155,9 @@ describe('ProgressBubble', () => {
       {},
       {kind: LevelKind.peer_review}
     );
-    expect(style.backgroundColor).to.equal(color.level_perfect);
-    expect(style.borderColor).to.equal(color.level_perfect);
-    expect(style.color).to.equal(color.white);
+    expect(style.backgroundColor).toBe(color.level_perfect);
+    expect(style.borderColor).toBe(color.level_perfect);
+    expect(style.color).toBe(color.white);
   });
 
   it('renders a diamond for concept levels', () => {
@@ -166,7 +166,7 @@ describe('ProgressBubble', () => {
       {},
       {isConceptLevel: true}
     );
-    expect(wrapper.props().shape).to.equal(BubbleShape.diamond);
+    expect(wrapper.props().shape).toBe(BubbleShape.diamond);
   });
 
   it('renders a small diamond for concept levels when smallBubble is true ', () => {
@@ -175,8 +175,8 @@ describe('ProgressBubble', () => {
       {smallBubble: true},
       {isConceptLevel: true}
     );
-    expect(wrapper.props().shape).to.equal(BubbleShape.diamond);
-    expect(wrapper.props().size).to.equal(BubbleSize.dot);
+    expect(wrapper.props().shape).toBe(BubbleShape.diamond);
+    expect(wrapper.props().size).toBe(BubbleSize.dot);
   });
 
   it('uses name when specified', () => {
@@ -220,7 +220,7 @@ describe('ProgressBubble', () => {
 
   it('renders a small bubble if smallBubble is true', () => {
     const wrapper = getBasicBubble(LevelStatus.not_tried, {smallBubble: true});
-    expect(wrapper.props().size).to.equal(BubbleSize.dot);
+    expect(wrapper.props().size).toBe(BubbleSize.dot);
   });
 
   it('shows KeepWorkingBadge if a level has teacher feedback keepWorking and not smallBubble', () => {
@@ -236,8 +236,8 @@ describe('ProgressBubble', () => {
     );
 
     const badge = wrapper.find(BubbleBadge);
-    expect(badge).to.have.lengthOf(1);
-    expect(badge.at(0).props().badgeType).to.equal(BadgeType.keepWorking);
+    expect(badge).toHaveLength(1);
+    expect(badge.at(0).props().badgeType).toBe(BadgeType.keepWorking);
   });
 
   it('hides KeepWorkingBadge if a level has teacher feedback keepWorking and is smallBubble', () => {
@@ -252,7 +252,7 @@ describe('ProgressBubble', () => {
       />
     );
 
-    expect(wrapper.find(BubbleBadge)).to.have.lengthOf(0);
+    expect(wrapper.find(BubbleBadge)).toHaveLength(0);
   });
 
   it('shows KeepWorkingBadge instead of AssessmentBadge on assessment level if feedback is keepWorking', () => {
@@ -268,8 +268,8 @@ describe('ProgressBubble', () => {
     );
 
     const badge = wrapper.find(BubbleBadge);
-    expect(badge).to.have.lengthOf(1);
-    expect(badge.at(0).props().badgeType).to.equal(BadgeType.keepWorking);
+    expect(badge).toHaveLength(1);
+    expect(badge.at(0).props().badgeType).toBe(BadgeType.keepWorking);
   });
 
   it('shows AssessmentBadge on assessment level', () => {
@@ -283,8 +283,8 @@ describe('ProgressBubble', () => {
       />
     );
     const badge = wrapper.find(BubbleBadge);
-    expect(badge).to.have.lengthOf(1);
-    expect(badge.at(0).props().badgeType).to.equal(BadgeType.assessment);
+    expect(badge).toHaveLength(1);
+    expect(badge.at(0).props().badgeType).toBe(BadgeType.assessment);
   });
 
   it('does not show AssessmentBadge on bubble on assessment level, if smallBubble is true', () => {
@@ -300,7 +300,7 @@ describe('ProgressBubble', () => {
     );
 
     const badge = wrapper.find(BubbleBadge);
-    expect(badge).to.have.lengthOf(0);
+    expect(badge).toHaveLength(0);
   });
 
   it('renders a pill shape for unplugged lessons', () => {
@@ -309,7 +309,7 @@ describe('ProgressBubble', () => {
       {},
       {isUnplugged: true}
     );
-    expect(wrapper.props().shape).to.equal(BubbleShape.pill);
+    expect(wrapper.props().shape).toBe(BubbleShape.pill);
   });
 
   it('renders a circle shape for unplugged when small', () => {
@@ -318,8 +318,8 @@ describe('ProgressBubble', () => {
       {smallBubble: true},
       {isUnplugged: true}
     );
-    expect(wrapper.props().shape).to.equal(BubbleShape.circle);
-    expect(wrapper.props().size).to.equal(BubbleSize.dot);
+    expect(wrapper.props().shape).toBe(BubbleShape.circle);
+    expect(wrapper.props().size).toBe(BubbleSize.dot);
   });
 
   describe('href', () => {
@@ -394,8 +394,6 @@ describe('ProgressBubble', () => {
 
     // The 'title' property on an <a> is read out screen readers, so it's important we include
     // contextual information to the user about where the link will lead them.
-    expect(wrapper.find('a').prop('title')).to.include(
-      defaultProps.level.levelNumber
-    );
+    expect(wrapper.find('a').prop('title')).toContain(defaultProps.level.levelNumber);
   });
 });

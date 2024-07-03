@@ -6,7 +6,7 @@ import {
   ENCRYPTED,
 } from '@cdo/apps/lib/ui/accounts/ManageLinkedAccounts';
 
-import {expect} from '../../../../util/deprecatedChai';
+
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 const DEFAULT_PROPS = {
@@ -22,7 +22,7 @@ const DEFAULT_PROPS = {
 describe('ManageLinkedAccounts', () => {
   it('renders a table with oauth provider rows', () => {
     const wrapper = mount(<ManageLinkedAccounts {...DEFAULT_PROPS} />);
-    expect(wrapper.find('table')).to.exist;
+    expect(wrapper.find('table')).toBeDefined();
     expect(wrapper.find('OauthConnection').at(0)).to.include.text(
       'Google Account'
     );
@@ -153,10 +153,8 @@ describe('ManageLinkedAccounts', () => {
   it('posts form data to connect endpoint if authentication option is not connected', () => {
     const wrapper = mount(<ManageLinkedAccounts {...DEFAULT_PROPS} />);
     const form = wrapper.find('form').at(0);
-    expect(form.prop('method')).to.equal('POST');
-    expect(form.prop('action')).to.equal(
-      '/users/auth/google_oauth2?action=connect'
-    );
+    expect(form.prop('method')).toBe('POST');
+    expect(form.prop('action')).toBe('/users/auth/google_oauth2?action=connect');
   });
 
   it('posts form data to disconnect endpoint if authentication option is connected', () => {
@@ -179,8 +177,8 @@ describe('ManageLinkedAccounts', () => {
       '/users/auth/2/disconnect',
     ];
     forms.forEach((form, i) => {
-      expect(form.prop('method')).to.equal('POST');
-      expect(form.prop('action')).to.equal(expected[i]);
+      expect(form.prop('method')).toBe('POST');
+      expect(form.prop('action')).toBe(expected[i]);
     });
   });
 

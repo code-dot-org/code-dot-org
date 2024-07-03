@@ -5,7 +5,7 @@ import sinon from 'sinon';
 
 import {UnconnectedSortByNameDropdown} from '@cdo/apps/templates/SortByNameDropdown';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 describe('SortByNameDropdown', () => {
   it('renders dropdown', () => {
@@ -15,8 +15,8 @@ describe('SortByNameDropdown', () => {
         setSortByFamilyName={() => {}}
       />
     );
-    expect(wrapper.find('select').length).to.equal(1);
-    expect(wrapper.find('select').props().value).to.equal('displayName');
+    expect(wrapper.find('select').length).toBe(1);
+    expect(wrapper.find('select').props().value).toBe('displayName');
   });
   it('renders dropdown with family name selected', () => {
     const wrapper = mount(
@@ -25,8 +25,8 @@ describe('SortByNameDropdown', () => {
         setSortByFamilyName={() => {}}
       />
     );
-    expect(wrapper.find('select').length).to.equal(1);
-    expect(wrapper.find('select').props().value).to.equal('familyName');
+    expect(wrapper.find('select').length).toBe(1);
+    expect(wrapper.find('select').props().value).toBe('familyName');
   });
 
   it("saves the sort mode setting to the user's preferences", () => {
@@ -48,7 +48,7 @@ describe('SortByNameDropdown', () => {
       />
     );
 
-    expect(wrapper.find('select').props().value).to.equal('displayName');
+    expect(wrapper.find('select').props().value).toBe('displayName');
 
     wrapper.find('select').simulate('change', {target: {value: 'familyName'}});
 

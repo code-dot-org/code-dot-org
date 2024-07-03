@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDialog';
 import commonI18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('ModelManagerDialog', () => {
   afterEach(() => {
@@ -37,8 +37,8 @@ describe('ModelManagerDialog', () => {
 
       let message = modal.find('select + div').first();
 
-      expect(modal.find('h1').text()).to.contain('i18n-header');
-      expect(message.text()).to.contain('i18n-nomodel');
+      expect(modal.find('h1').text()).toContain('i18n-header');
+      expect(message.text()).toContain('i18n-nomodel');
     });
 
     it('is used when there are models', () => {
@@ -87,11 +87,11 @@ describe('ModelManagerDialog', () => {
       let importButton = modal.find('Button').first();
       let deleteButton = modal.find('Button').at(1);
 
-      expect(modal.find('h1').text()).to.contain('i18n-header');
-      expect(modal.find('select + div').exists()).to.equal(false);
-      expect(importButton.prop('text')).to.contain('i18n-import');
-      expect(importButton.prop('pendingText')).to.contain('i18n-importing');
-      expect(deleteButton.prop('text')).to.contain('i18n-delete');
+      expect(modal.find('h1').text()).toContain('i18n-header');
+      expect(modal.find('select + div').exists()).toBe(false);
+      expect(importButton.prop('text')).toContain('i18n-import');
+      expect(importButton.prop('pendingText')).toContain('i18n-importing');
+      expect(deleteButton.prop('text')).toContain('i18n-delete');
     });
 
     it('is used within the delete confirmation modal', () => {
@@ -124,11 +124,11 @@ describe('ModelManagerDialog', () => {
       let deleteButton = modal.find('Button').at(1);
       let message = modal.find('p').first();
 
-      expect(modal.find('h1').text()).to.contain('i18n-delete-confirm');
-      expect(message.text()).to.contain('i18n-delete-message');
-      expect(noButton.prop('text')).to.contain('i18n-no');
-      expect(deleteButton.prop('text')).to.contain('i18n-delete');
-      expect(deleteButton.prop('pendingText')).to.contain('i18n-deleting');
+      expect(modal.find('h1').text()).toContain('i18n-delete-confirm');
+      expect(message.text()).toContain('i18n-delete-message');
+      expect(noButton.prop('text')).toContain('i18n-no');
+      expect(deleteButton.prop('text')).toContain('i18n-delete');
+      expect(deleteButton.prop('pendingText')).toContain('i18n-deleting');
     });
 
     it('is used within the delete confirmation modal to display the delete model failure message', () => {
@@ -197,11 +197,11 @@ describe('ModelManagerDialog', () => {
       // Ensure it is passed the id for the localization.
       expect(
         commonI18n.aiTrainedModelsDeleteModelFailed
-      ).to.have.been.calledWith(sinon.match.has('id', '0'));
+      ).toHaveBeenCalledWith(sinon.match.has('id', '0'));
 
       // Find and compare the status string.
       let deleteMessage = modal.find('p').at(1);
-      expect(deleteMessage.text()).to.contain('i18n-delete-fail');
+      expect(deleteMessage.text()).toContain('i18n-delete-fail');
     });
   });
 });

@@ -4,7 +4,6 @@ import {
   RATE_LIMIT,
   RATE_LIMIT_INTERVAL_MS,
 } from '../../../src/storage/rateLimit';
-import {expect} from '../../util/reconfiguredChai';
 
 const NO_OP = () => undefined;
 
@@ -34,9 +33,7 @@ describe('DatablockStorage', () => {
       }
 
       // This should be over the rate limit
-      await expect(rateLimit(NO_OP, now + RATE_LIMIT)).to.be.rejectedWith(
-        Error
-      );
+      await expect(rateLimit(NO_OP, now + RATE_LIMIT)).rejects.toEqual(Error);
     });
     it('it succeeds if called more than the rate limit, but after waiting rate limit interval', async () => {
       let now = Date.now();

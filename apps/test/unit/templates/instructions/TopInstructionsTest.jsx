@@ -11,7 +11,7 @@ import {
 import * as TopInstructionsDataApi from '@cdo/apps/templates/instructions/topInstructionsDataApi';
 import TopInstructionsHeader from '@cdo/apps/templates/instructions/TopInstructionsHeader';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 const DEFAULT_PROPS = {
   isEmbedView: false,
@@ -53,7 +53,7 @@ describe('TopInstructions', () => {
         initialSelectedTab={TabType.TEACHER_ONLY}
       />
     );
-    expect(wrapper.find('ContainedLevelAnswer')).to.have.lengthOf(1);
+    expect(wrapper.find('ContainedLevelAnswer')).toHaveLength(1);
   });
 
   it('shows ContainedLevelResetButton on instructions tab', () => {
@@ -67,7 +67,7 @@ describe('TopInstructions', () => {
     );
     expect(
       wrapper.find('Connect(UnconnectedContainedLevelResetButton)')
-    ).to.have.lengthOf(1);
+    ).toHaveLength(1);
   });
 
   it('does not shows ContainedLevelResetButton on teacher only tab', () => {
@@ -81,7 +81,7 @@ describe('TopInstructions', () => {
     );
     expect(
       wrapper.find('Connect(UnconnectedContainedLevelResetButton)')
-    ).to.have.lengthOf(0);
+    ).toHaveLength(0);
   });
 
   it('shows teacher only markdown in teacher only tab if instructor in training level', () => {
@@ -93,26 +93,26 @@ describe('TopInstructions', () => {
         initialSelectedTab={TabType.TEACHER_ONLY}
       />
     );
-    expect(wrapper.find('TeacherOnlyMarkdown')).to.have.lengthOf(1);
+    expect(wrapper.find('TeacherOnlyMarkdown')).toHaveLength(1);
   });
 
   it('uses the editor-column class if not in standalone mode', () => {
     const wrapper = shallow(<TopInstructions {...DEFAULT_PROPS} />);
-    expect(wrapper.hasClass('editor-column')).to.be.true;
+    expect(wrapper.hasClass('editor-column')).toBe(true);
   });
 
   it('does not use the editor-column class if in standalone mode', () => {
     const wrapper = shallow(
       <TopInstructions {...DEFAULT_PROPS} standalone={true} />
     );
-    expect(wrapper.hasClass('editor-column')).to.be.false;
+    expect(wrapper.hasClass('editor-column')).toBe(false);
   });
 
   it('is an empty div if passed the "hidden" property', () => {
     const wrapper = shallow(
       <TopInstructions {...DEFAULT_PROPS} hidden={true} />
     );
-    expect(wrapper.find('div')).to.have.lengthOf(1);
+    expect(wrapper.find('div')).toHaveLength(1);
   });
 
   it('is an empty div if there are no instructions to display', () => {
@@ -124,7 +124,7 @@ describe('TopInstructions', () => {
         hasContainedLevels={false}
       />
     );
-    expect(wrapper.find('div')).to.have.lengthOf(1);
+    expect(wrapper.find('div')).toHaveLength(1);
   });
 
   it('displays initial selected tab if supplied', () => {
@@ -132,7 +132,7 @@ describe('TopInstructions', () => {
       <TopInstructions {...DEFAULT_PROPS} initialSelectedTab={TabType.REVIEW} />
     );
 
-    expect(wrapper.state().tabSelected).to.equal(TabType.REVIEW);
+    expect(wrapper.state().tabSelected).toBe(TabType.REVIEW);
   });
 
   it('does not display any buttons when there are no example solutions', () => {
@@ -143,8 +143,8 @@ describe('TopInstructions', () => {
       />
     );
 
-    expect(wrapper.state().tabSelected).to.equal(TabType.TEACHER_ONLY);
-    expect(wrapper.find('Button')).to.have.lengthOf(0);
+    expect(wrapper.state().tabSelected).toBe(TabType.TEACHER_ONLY);
+    expect(wrapper.find('Button')).toHaveLength(0);
   });
 
   it('displays example solutions as buttons in teacher only tab when available', () => {
@@ -156,11 +156,9 @@ describe('TopInstructions', () => {
       />
     );
 
-    expect(wrapper.state().tabSelected).to.equal(TabType.TEACHER_ONLY);
-    expect(wrapper.find('Button')).to.have.lengthOf(2);
-    expect(wrapper.find('Button').at(0).props().text).to.equal(
-      'Example Solution 1'
-    );
+    expect(wrapper.state().tabSelected).toBe(TabType.TEACHER_ONLY);
+    expect(wrapper.find('Button')).toHaveLength(2);
+    expect(wrapper.find('Button').at(0).props().text).toBe('Example Solution 1');
   });
 
   it('does not display example solutions buttons in other tabs when available', () => {
@@ -172,8 +170,8 @@ describe('TopInstructions', () => {
       />
     );
 
-    expect(wrapper.state().tabSelected).to.equal(TabType.INSTRUCTIONS);
-    expect(wrapper.find('Button')).to.have.lengthOf(0);
+    expect(wrapper.state().tabSelected).toBe(TabType.INSTRUCTIONS);
+    expect(wrapper.find('Button')).toHaveLength(0);
   });
 
   it('displays StudentRubricView when rubrics tab is selected', () => {
@@ -186,8 +184,8 @@ describe('TopInstructions', () => {
     );
     // This is an anti-pattern but one we already use in this file.
     wrapper.setState({tabSelected: TabType.TA_RUBRIC});
-    expect(wrapper.state().tabSelected).to.equal(TabType.TA_RUBRIC);
-    expect(wrapper.find('StudentRubricView')).to.have.lengthOf(1);
+    expect(wrapper.state().tabSelected).toBe(TabType.TA_RUBRIC);
+    expect(wrapper.find('StudentRubricView')).toHaveLength(1);
   });
 
   it('passes displayTaRubricTab=true to TopInstructionsHeader if rubric is present', () => {
@@ -199,8 +197,7 @@ describe('TopInstructions', () => {
       />
     );
 
-    expect(wrapper.find(TopInstructionsHeader).props().displayTaRubricTab).to.be
-      .true;
+    expect(wrapper.find(TopInstructionsHeader).props().displayTaRubricTab).toBe(true);
   });
 
   describe('viewing the Feedback Tab', () => {
@@ -218,8 +215,7 @@ describe('TopInstructions', () => {
           token: null,
         });
 
-        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
-          .be.false;
+        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).toBe(false);
       });
 
       it('passes displayFeedback = true to TopInstructionsHeader on a level with a miniRubric where the instructor is not viewing student work', () => {
@@ -241,8 +237,7 @@ describe('TopInstructions', () => {
           token: null,
         });
 
-        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
-          .be.true;
+        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).toBe(true);
       });
 
       it('passes displayFeedback = false to TopInstructionsHeader on a level with a TA Rubric', () => {
@@ -266,8 +261,7 @@ describe('TopInstructions', () => {
           token: null,
         });
 
-        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
-          .be.false;
+        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).toBe(false);
       });
 
       it('passes displayFeedback = true to TopInstructionsHeader teacher is viewing student work and cannot leave feedback', () => {
@@ -279,8 +273,7 @@ describe('TopInstructions', () => {
           teacherCanLeaveFeedback: false,
         });
 
-        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
-          .be.false;
+        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).toBe(false);
       });
 
       it('passes displayFeedback = true to TopInstructionsHeader teacher is viewing student work and can leave feedback', () => {
@@ -292,8 +285,7 @@ describe('TopInstructions', () => {
           teacherCanLeaveFeedback: true,
         });
 
-        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
-          .be.true;
+        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).toBe(true);
       });
     });
 
@@ -328,8 +320,7 @@ describe('TopInstructions', () => {
           token: null,
         });
 
-        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
-          .be.true;
+        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).toBe(true);
       });
 
       it('passes displayFeedback = false to TopInstructionsHeader on a level where there is a TA Rubric', () => {
@@ -366,8 +357,7 @@ describe('TopInstructions', () => {
           token: null,
         });
 
-        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
-          .be.false;
+        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).toBe(false);
       });
 
       it('passes displayFeedback = false to TopInstructionsHeader on a level where the instructor has not given feedback and there is no miniRubric', () => {
@@ -385,8 +375,7 @@ describe('TopInstructions', () => {
           token: null,
         });
 
-        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).to
-          .be.false;
+        expect(wrapper.find(TopInstructionsHeader).props().displayFeedback).toBe(false);
       });
 
       it('passes displayReviewTab=true to TopInstructionsHeader if displayReviewTab is true', () => {
@@ -398,8 +387,7 @@ describe('TopInstructions', () => {
           />
         );
 
-        expect(wrapper.find(TopInstructionsHeader).props().displayReviewTab).to
-          .be.true;
+        expect(wrapper.find(TopInstructionsHeader).props().displayReviewTab).toBe(true);
       });
     });
   });
@@ -433,8 +421,8 @@ describe('TopInstructions', () => {
         await Promise.resolve();
       });
       wrapper.update();
-      expect(getTaRubricFeedbackForStudentStub).to.have.been.calledOnce;
-      expect(wrapper.find('StudentRubricView')).to.have.lengthOf(1);
+      expect(getTaRubricFeedbackForStudentStub).toHaveBeenCalledTimes(1);
+      expect(wrapper.find('StudentRubricView')).toHaveLength(1);
     });
 
     it('does not default to the rubrics tab if there is no feedback', async () => {
@@ -454,10 +442,9 @@ describe('TopInstructions', () => {
         await Promise.resolve();
       });
       wrapper.update();
-      expect(getTaRubricFeedbackForStudentStub).to.have.been.calledOnce;
-      expect(wrapper.find('StudentRubricView')).to.have.lengthOf(0);
-      expect(wrapper.find('TopInstructionsHeader').props().displayTaRubricTab)
-        .to.be.true;
+      expect(getTaRubricFeedbackForStudentStub).toHaveBeenCalledTimes(1);
+      expect(wrapper.find('StudentRubricView')).toHaveLength(0);
+      expect(wrapper.find('TopInstructionsHeader').props().displayTaRubricTab).toBe(true);
     });
 
     it('does not try to fetch TA rubric feedback if no rubric exists', () => {
@@ -468,9 +455,8 @@ describe('TopInstructions', () => {
           taRubric={null}
         />
       );
-      expect(getTaRubricFeedbackForStudentStub).to.not.have.been.called;
-      expect(wrapper.find('TopInstructionsHeader').props().displayTaRubricTab)
-        .to.be.false;
+      expect(getTaRubricFeedbackForStudentStub).not.toHaveBeenCalled();
+      expect(wrapper.find('TopInstructionsHeader').props().displayTaRubricTab).toBe(false);
     });
   });
 });

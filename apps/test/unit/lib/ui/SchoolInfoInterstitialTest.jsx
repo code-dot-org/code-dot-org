@@ -9,7 +9,7 @@ import Button from '@cdo/apps/templates/Button';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/deprecatedChai';
+
 
 describe('SchoolInfoInterstitial', () => {
   const MINIMUM_PROPS = {
@@ -91,8 +91,8 @@ describe('SchoolInfoInterstitial', () => {
      */
     wrapper.instance().forceUpdate();
     wrapper.find('Button[id="dismiss-button"]').simulate('click');
-    expect(wrapperInstance.dismissSchoolInfoForm).to.have.been.called;
-    expect(wrapper.state('isOpen')).to.be.false;
+    expect(wrapperInstance.dismissSchoolInfoForm).toHaveBeenCalled();
+    expect(wrapper.state('isOpen')).toBe(false);
   });
 
   it('closes the school info confirmation dialog when the dismiss button is clicked', () => {
@@ -111,9 +111,9 @@ describe('SchoolInfoInterstitial', () => {
     sinon.spy(wrapperInstance, 'dismissSchoolInfoForm');
     wrapper.instance().forceUpdate();
     wrapper.find('Button[id="dismiss-button"]').simulate('click');
-    expect(wrapperInstance.dismissSchoolInfoForm).to.have.been.called;
-    expect(wrapper.state('isOpen')).to.be.false;
-    expect(onClose).to.have.been.calledOnce;
+    expect(wrapperInstance.dismissSchoolInfoForm).toHaveBeenCalled();
+    expect(wrapper.state('isOpen')).toBe(false);
+    expect(onClose).toHaveBeenCalledTimes(1);
   });
 
   it('passes empty school info if created with no existing school info', () => {
@@ -190,11 +190,11 @@ describe('SchoolInfoInterstitial', () => {
         }}
       />
     );
-    expect(wrapper.state('country')).to.equal('United States');
-    expect(wrapper.state('ncesSchoolId')).to.equal('123');
+    expect(wrapper.state('country')).toBe('United States');
+    expect(wrapper.state('ncesSchoolId')).toBe('123');
     wrapper.instance().onCountryChange(undefined, {value: 'Sweden'});
-    expect(wrapper.state('country')).to.equal('Sweden');
-    expect(wrapper.state('ncesSchoolId')).to.equal('');
+    expect(wrapper.state('country')).toBe('Sweden');
+    expect(wrapper.state('ncesSchoolId')).toBe('');
   });
 
   it('clears the school ID when school_type is changed', () => {
@@ -213,11 +213,11 @@ describe('SchoolInfoInterstitial', () => {
         }}
       />
     );
-    expect(wrapper.state('schoolType')).to.equal('public');
-    expect(wrapper.state('ncesSchoolId')).to.equal('123');
+    expect(wrapper.state('schoolType')).toBe('public');
+    expect(wrapper.state('ncesSchoolId')).toBe('123');
     wrapper.instance().onSchoolTypeChange({target: {value: 'after school'}});
-    expect(wrapper.state('schoolType')).to.equal('after school');
-    expect(wrapper.state('ncesSchoolId')).to.equal('');
+    expect(wrapper.state('schoolType')).toBe('after school');
+    expect(wrapper.state('ncesSchoolId')).toBe('');
   });
 
   it('interprets initial country "US" as "United States"', () => {
@@ -232,10 +232,7 @@ describe('SchoolInfoInterstitial', () => {
         }}
       />
     );
-    expect(wrapper.find(SchoolInfoInputs)).to.have.prop(
-      'country',
-      'United States'
-    );
+    expect(wrapper.find(SchoolInfoInputs).props()).toHaveProperty('country', 'United States');
   });
 
   describe('initial NCES ID', () => {
@@ -258,10 +255,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      expect(wrapper.find(SchoolInfoInputs)).to.have.prop(
-        'ncesSchoolId',
-        '123'
-      );
+      expect(wrapper.find(SchoolInfoInputs).props()).toHaveProperty('ncesSchoolId', '123');
     });
 
     it('is blank if country is not US', () => {
@@ -278,7 +272,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      expect(wrapper.find(SchoolInfoInputs)).to.have.prop('ncesSchoolId', '');
+      expect(wrapper.find(SchoolInfoInputs).props()).toHaveProperty('ncesSchoolId', '');
     });
 
     it('is blank if school type is not public/private/charter', () => {
@@ -295,7 +289,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      expect(wrapper.find(SchoolInfoInputs)).to.have.prop('ncesSchoolId', '');
+      expect(wrapper.find(SchoolInfoInputs).props()).toHaveProperty('ncesSchoolId', '');
     });
 
     it('is blank if none of school name/address have been entered', () => {
@@ -313,7 +307,7 @@ describe('SchoolInfoInterstitial', () => {
           }}
         />
       );
-      expect(wrapper.find(SchoolInfoInputs)).to.have.prop('ncesSchoolId', '');
+      expect(wrapper.find(SchoolInfoInputs).props()).toHaveProperty('ncesSchoolId', '');
     });
 
     // Matrix of conditions where NCES ID initializes to "-1":
@@ -334,10 +328,7 @@ describe('SchoolInfoInterstitial', () => {
               }}
             />
           );
-          expect(wrapper.find(SchoolInfoInputs)).to.have.prop(
-            'ncesSchoolId',
-            '-1'
-          );
+          expect(wrapper.find(SchoolInfoInputs).props()).toHaveProperty('ncesSchoolId', '-1');
         });
       });
     });
@@ -365,8 +356,8 @@ describe('SchoolInfoInterstitial', () => {
         />
       );
       wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests.length).to.equal(0);
-      expect(wrapper.state('errors').country).to.equal(true);
+      expect(server.requests.length).toBe(0);
+      expect(wrapper.state('errors').country).toBe(true);
     });
 
     it('does not submit form with only country=US', () => {
@@ -382,9 +373,9 @@ describe('SchoolInfoInterstitial', () => {
         />
       );
       wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests.length).to.equal(0);
-      expect(wrapper.state('errors')).to.not.have.property('country');
-      expect(wrapper.state('errors').schoolType).to.equal(true);
+      expect(server.requests.length).toBe(0);
+      expect(wrapper.state('errors')).not.toHaveProperty('country');
+      expect(wrapper.state('errors').schoolType).toBe(true);
     });
 
     it('does not submit form with US and an NCES school type', () => {
@@ -401,9 +392,9 @@ describe('SchoolInfoInterstitial', () => {
         />
       );
       wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests.length).to.equal(0);
-      expect(wrapper.state('errors')).to.not.have.property('country');
-      expect(wrapper.state('errors')).to.not.have.property('school_type');
+      expect(server.requests.length).toBe(0);
+      expect(wrapper.state('errors')).not.toHaveProperty('country');
+      expect(wrapper.state('errors')).not.toHaveProperty('school_type');
     });
 
     it('submits with US, NCES school type, and school id from dropdown', () => {
@@ -423,13 +414,11 @@ describe('SchoolInfoInterstitial', () => {
       wrapper.find('Button[id="save-button"]').simulate('click');
       // No need to send anything but ID if it's available...
       // All other info will be backfilled from records on the server.
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bschool_id%5D=123',
-        ].join('&')
-      );
+      expect(server.requests[0].requestBody).toBe([
+        '_method=patch',
+        'auth_token=fake_auth_token',
+        'user%5Bschool_info_attributes%5D%5Bschool_id%5D=123',
+      ].join('&'));
     });
 
     it('submits with US, NCES school type, and school name', () => {
@@ -447,16 +436,14 @@ describe('SchoolInfoInterstitial', () => {
         />
       );
       wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
-          'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
-        ].join('&')
-      );
+      expect(server.requests[0].requestBody).toBe([
+        '_method=patch',
+        'auth_token=fake_auth_token',
+        'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
+        'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
+        'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
+        'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
+      ].join('&'));
     });
 
     it('submits with US, NCES school type, name, address', () => {
@@ -475,16 +462,14 @@ describe('SchoolInfoInterstitial', () => {
         />
       );
       wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
-          'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=12222+SE+Sunnyside+Ln',
-        ].join('&')
-      );
+      expect(server.requests[0].requestBody).toBe([
+        '_method=patch',
+        'auth_token=fake_auth_token',
+        'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
+        'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
+        'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
+        'user%5Bschool_info_attributes%5D%5Bfull_address%5D=12222+SE+Sunnyside+Ln',
+      ].join('&'));
     });
 
     it('submits with US and non-NCES school type', () => {
@@ -501,16 +486,14 @@ describe('SchoolInfoInterstitial', () => {
         />
       );
       wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=organization',
-          'user%5Bschool_info_attributes%5D%5Bschool_name%5D=',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
-        ].join('&')
-      );
+      expect(server.requests[0].requestBody).toBe([
+        '_method=patch',
+        'auth_token=fake_auth_token',
+        'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
+        'user%5Bschool_info_attributes%5D%5Bschool_type%5D=organization',
+        'user%5Bschool_info_attributes%5D%5Bschool_name%5D=',
+        'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
+      ].join('&'));
     });
 
     it('submits with US, non-NCES school type, school name', () => {
@@ -528,16 +511,14 @@ describe('SchoolInfoInterstitial', () => {
         />
       );
       wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=organization',
-          'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
-        ].join('&')
-      );
+      expect(server.requests[0].requestBody).toBe([
+        '_method=patch',
+        'auth_token=fake_auth_token',
+        'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
+        'user%5Bschool_info_attributes%5D%5Bschool_type%5D=organization',
+        'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
+        'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
+      ].join('&'));
     });
 
     it('does not send a name for "homeschool" school type', () => {
@@ -555,15 +536,13 @@ describe('SchoolInfoInterstitial', () => {
         />
       );
       wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=homeschool',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
-        ].join('&')
-      );
+      expect(server.requests[0].requestBody).toBe([
+        '_method=patch',
+        'auth_token=fake_auth_token',
+        'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
+        'user%5Bschool_info_attributes%5D%5Bschool_type%5D=homeschool',
+        'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
+      ].join('&'));
     });
 
     it('does not send a name for "other" school type', () => {
@@ -581,15 +560,13 @@ describe('SchoolInfoInterstitial', () => {
         />
       );
       wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=other',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
-        ].join('&')
-      );
+      expect(server.requests[0].requestBody).toBe([
+        '_method=patch',
+        'auth_token=fake_auth_token',
+        'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
+        'user%5Bschool_info_attributes%5D%5Bschool_type%5D=other',
+        'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
+      ].join('&'));
     });
 
     it('submits with US, non-NCES school type, school name, location', () => {
@@ -608,16 +585,14 @@ describe('SchoolInfoInterstitial', () => {
         />
       );
       wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=organization',
-          'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=Boring%2C+OR',
-        ].join('&')
-      );
+      expect(server.requests[0].requestBody).toBe([
+        '_method=patch',
+        'auth_token=fake_auth_token',
+        'user%5Bschool_info_attributes%5D%5Bcountry%5D=United+States',
+        'user%5Bschool_info_attributes%5D%5Bschool_type%5D=organization',
+        'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
+        'user%5Bschool_info_attributes%5D%5Bfull_address%5D=Boring%2C+OR',
+      ].join('&'));
     });
 
     it('submits with only non-US', () => {
@@ -634,14 +609,12 @@ describe('SchoolInfoInterstitial', () => {
         />
       );
       wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=Algeria',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=',
-        ].join('&')
-      );
+      expect(server.requests[0].requestBody).toBe([
+        '_method=patch',
+        'auth_token=fake_auth_token',
+        'user%5Bschool_info_attributes%5D%5Bcountry%5D=Algeria',
+        'user%5Bschool_info_attributes%5D%5Bschool_type%5D=',
+      ].join('&'));
     });
 
     it('submits with non-US, NCES school type', () => {
@@ -658,16 +631,14 @@ describe('SchoolInfoInterstitial', () => {
         />
       );
       wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=Tanzania',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
-          'user%5Bschool_info_attributes%5D%5Bschool_name%5D=',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
-        ].join('&')
-      );
+      expect(server.requests[0].requestBody).toBe([
+        '_method=patch',
+        'auth_token=fake_auth_token',
+        'user%5Bschool_info_attributes%5D%5Bcountry%5D=Tanzania',
+        'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
+        'user%5Bschool_info_attributes%5D%5Bschool_name%5D=',
+        'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
+      ].join('&'));
     });
 
     it('submits with non-US, NCES school type, school name', () => {
@@ -685,16 +656,14 @@ describe('SchoolInfoInterstitial', () => {
         />
       );
       wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=Tanzania',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
-          'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
-        ].join('&')
-      );
+      expect(server.requests[0].requestBody).toBe([
+        '_method=patch',
+        'auth_token=fake_auth_token',
+        'user%5Bschool_info_attributes%5D%5Bcountry%5D=Tanzania',
+        'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
+        'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
+        'user%5Bschool_info_attributes%5D%5Bfull_address%5D=',
+      ].join('&'));
     });
 
     it('submits with non-US, NCES school type, school name, location', () => {
@@ -714,16 +683,14 @@ describe('SchoolInfoInterstitial', () => {
         />
       );
       wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(server.requests[0].requestBody).to.equal(
-        [
-          '_method=patch',
-          'auth_token=fake_auth_token',
-          'user%5Bschool_info_attributes%5D%5Bcountry%5D=Tanzania',
-          'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
-          'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
-          'user%5Bschool_info_attributes%5D%5Bfull_address%5D=Tanzania+National+Stadium%2C+Taifa+Road%2C+Dar+es+Salaam%2C+Tanzania',
-        ].join('&')
-      );
+      expect(server.requests[0].requestBody).toBe([
+        '_method=patch',
+        'auth_token=fake_auth_token',
+        'user%5Bschool_info_attributes%5D%5Bcountry%5D=Tanzania',
+        'user%5Bschool_info_attributes%5D%5Bschool_type%5D=public',
+        'user%5Bschool_info_attributes%5D%5Bschool_name%5D=Test+School',
+        'user%5Bschool_info_attributes%5D%5Bfull_address%5D=Tanzania+National+Stadium%2C+Taifa+Road%2C+Dar+es+Salaam%2C+Tanzania',
+      ].join('&'));
     });
 
     it('closes the dialog on successful submission', () => {
@@ -744,10 +711,10 @@ describe('SchoolInfoInterstitial', () => {
         />
       );
       wrapper.find('Button[id="save-button"]').simulate('click');
-      expect(onClose).not.to.have.been.called;
+      expect(onClose).not.toHaveBeenCalled();
 
       server.requests[0].respond(204, {}, '');
-      expect(onClose).to.have.been.calledOnce;
+      expect(onClose).toHaveBeenCalledTimes(1);
     });
 
     it('shows an error message on first failed submission', () => {
@@ -769,7 +736,7 @@ describe('SchoolInfoInterstitial', () => {
       );
       wrapper.find('Button[id="save-button"]').simulate('click');
       server.requests[0].respond(404, {}, '');
-      expect(onClose).not.to.have.been.called;
+      expect(onClose).not.toHaveBeenCalled();
       expect(wrapper).to.containMatchingElement(
         <p>We encountered an error with your submission. Please try again.</p>
       );
@@ -794,11 +761,11 @@ describe('SchoolInfoInterstitial', () => {
       );
       wrapper.find('Button[id="save-button"]').simulate('click');
       server.requests[0].respond(404, {}, '');
-      expect(onClose).not.to.have.been.called;
+      expect(onClose).not.toHaveBeenCalled();
 
       wrapper.find('Button[id="save-button"]').simulate('click');
       server.requests[1].respond(404, {}, '');
-      expect(onClose).to.have.been.calledOnce;
+      expect(onClose).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -814,7 +781,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolLocation: 'Seattle, WA, USA',
           ncesSchoolId: '-1',
         })
-      ).to.be.true;
+      ).toBe(true);
     });
 
     it('is complete if all school info but location is provided', () => {
@@ -826,7 +793,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolLocation: '',
           ncesSchoolId: '-1',
         })
-      ).to.be.true;
+      ).toBe(true);
     });
 
     it('is complete if school is found by NCES id', () => {
@@ -838,7 +805,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolLocation: '',
           ncesSchoolId: '12345',
         })
-      ).to.be.true;
+      ).toBe(true);
     });
 
     it('is complete if school type is homeschool/after school/organization/other', () => {
@@ -850,7 +817,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolLocation: '',
           ncesSchoolId: '',
         })
-      ).to.be.true;
+      ).toBe(true);
 
       expect(
         SchoolInfoInterstitial.isSchoolInfoComplete({
@@ -860,7 +827,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolLocation: '',
           ncesSchoolId: '',
         })
-      ).to.be.true;
+      ).toBe(true);
 
       expect(
         SchoolInfoInterstitial.isSchoolInfoComplete({
@@ -870,7 +837,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolLocation: '',
           ncesSchoolId: '',
         })
-      ).to.be.true;
+      ).toBe(true);
 
       expect(
         SchoolInfoInterstitial.isSchoolInfoComplete({
@@ -880,7 +847,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolLocation: '',
           ncesSchoolId: '',
         })
-      ).to.be.true;
+      ).toBe(true);
     });
 
     it('is complete if country is not US', () => {
@@ -892,7 +859,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolLocation: '',
           ncesSchoolId: '',
         })
-      ).to.be.true;
+      ).toBe(true);
     });
 
     it('is not complete without country', () => {
@@ -904,7 +871,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolLocation: '',
           ncesSchoolId: '',
         })
-      ).to.be.false;
+      ).toBe(false);
     });
 
     it('is not complete if country is US but no school type is set', () => {
@@ -916,7 +883,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolLocation: '',
           ncesSchoolId: '',
         })
-      ).to.be.false;
+      ).toBe(false);
     });
 
     it('is not complete if country is US and school type is public/private/charter but other information is missing', () => {
@@ -928,7 +895,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolLocation: '',
           ncesSchoolId: '',
         })
-      ).to.be.false;
+      ).toBe(false);
 
       expect(
         SchoolInfoInterstitial.isSchoolInfoComplete({
@@ -938,7 +905,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolLocation: '',
           ncesSchoolId: '',
         })
-      ).to.be.false;
+      ).toBe(false);
 
       expect(
         SchoolInfoInterstitial.isSchoolInfoComplete({
@@ -948,7 +915,7 @@ describe('SchoolInfoInterstitial', () => {
           schoolLocation: '',
           ncesSchoolId: '',
         })
-      ).to.be.false;
+      ).toBe(false);
     });
   });
 });

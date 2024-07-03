@@ -2,7 +2,7 @@
 import {EventEmitter} from 'events'; // see node-libs-browser
 import sinon from 'sinon';
 
-import {expect} from '../../../../../util/reconfiguredChai';
+
 
 /**
  * Interface that our board controllers must implement to be usable with

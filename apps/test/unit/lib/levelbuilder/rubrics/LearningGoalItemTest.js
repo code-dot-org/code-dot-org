@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 describe('LearningGoalItem', () => {
   let defaultProps;
@@ -25,27 +25,27 @@ describe('LearningGoalItem', () => {
 
   it('renders correctly', () => {
     const wrapper = shallow(<LearningGoalItem {...defaultProps} />);
-    expect(wrapper.find('.uitest-learning-goal-card').length).to.equal(1);
-    expect(wrapper.find('.uitest-rubric-key-concept-input').length).to.equal(1);
+    expect(wrapper.find('.uitest-learning-goal-card').length).toBe(1);
+    expect(wrapper.find('.uitest-rubric-key-concept-input').length).toBe(1);
     expect(
       wrapper.find('.uitest-rubric-key-concept-input').props().value
-    ).to.equal('Testing Learning Goal');
-    expect(wrapper.find('input[type="checkbox"]').length).to.equal(1);
-    expect(wrapper.find('Button').length).to.equal(1);
-    expect(wrapper.find('EvidenceDescriptions').length).to.equal(1);
+    ).toBe('Testing Learning Goal');
+    expect(wrapper.find('input[type="checkbox"]').length).toBe(1);
+    expect(wrapper.find('Button').length).toBe(1);
+    expect(wrapper.find('EvidenceDescriptions').length).toBe(1);
     expect(
       wrapper.find('EvidenceDescriptions').prop('learningGoalData')
-    ).to.equal(defaultProps.exisitingLearningGoalData);
-    expect(wrapper.find('textarea').length).to.equal(1);
+    ).toBe(defaultProps.exisitingLearningGoalData);
+    expect(wrapper.find('textarea').length).toBe(1);
   });
 
   it('disables editing of AI textboxes when unchecked', () => {
     const wrapper = shallow(<LearningGoalItem {...defaultProps} />);
-    expect(wrapper.find('input[type="checkbox"]').prop('checked')).to.be.false;
+    expect(wrapper.find('input[type="checkbox"]').prop('checked')).toBe(false);
     expect(
       wrapper.find('EvidenceDescriptions').at(0).props().learningGoalData
         .aiEnabled
-    ).to.be.false;
+    ).toBe(false);
   });
 
   it('enables editing of AI textboxes when checked', () => {
@@ -61,17 +61,17 @@ describe('LearningGoalItem', () => {
         exisitingLearningGoalData={enabledAiData}
       />
     );
-    expect(wrapper.find('input[type="checkbox"]').prop('checked')).to.be.true;
+    expect(wrapper.find('input[type="checkbox"]').prop('checked')).toBe(true);
     expect(
       wrapper.find('EvidenceDescriptions').at(0).props().learningGoalData
         .aiEnabled
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('calls deleteLearningGoal when delete button is clicked', () => {
     const wrapper = shallow(<LearningGoalItem {...defaultProps} />);
     wrapper.find('Button').simulate('click');
-    expect(deleteLearningGoalSpy.calledOnce).to.be.true;
+    expect(deleteLearningGoalSpy.calledOnce).toBe(true);
   });
 
   it('calls updateLearningGoal when tips text is changed', () => {
@@ -91,7 +91,7 @@ describe('LearningGoalItem', () => {
         'tips',
         'Learning Goal Tip'
       ).calledOnce
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('displays confirmation dialog when learning goal name input receives focus and AI assessment is checked', () => {
@@ -111,7 +111,7 @@ describe('LearningGoalItem', () => {
     );
 
     wrapper.find('input').first().prop('onFocus')();
-    expect(dialogStub.calledOnce).to.be.true;
+    expect(dialogStub.calledOnce).toBe(true);
     dialogStub.restore();
   });
 });

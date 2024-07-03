@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import ProgrammingEnvironmentEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingEnvironmentEditor';
 import {getStore} from '@cdo/apps/redux';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 describe('ProgrammingEnvironmentEditor', () => {
   let defaultProps, fetchSpy;
@@ -38,41 +38,39 @@ describe('ProgrammingEnvironmentEditor', () => {
     const wrapper = shallow(<ProgrammingEnvironmentEditor {...defaultProps} />);
 
     const titleInput = wrapper.find('input').at(0);
-    expect(titleInput.props().value).to.equal('Spritelab');
+    expect(titleInput.props().value).toBe('Spritelab');
 
     const nameInput = wrapper.find('input').at(1);
-    expect(nameInput.props().value).to.equal('spritelab');
-    expect(nameInput.props().readOnly).to.be.true;
+    expect(nameInput.props().value).toBe('spritelab');
+    expect(nameInput.props().readOnly).toBe(true);
 
     const publishedCheckbox = wrapper.find('input').at(2);
-    expect(publishedCheckbox.props().checked).to.be.true;
+    expect(publishedCheckbox.props().checked).toBe(true);
 
     const editorLanguageSelect = wrapper.find('select').at(0);
-    expect(editorLanguageSelect.props().value).to.equal('blockly');
-    expect(editorLanguageSelect.find('option').length).to.equal(4);
+    expect(editorLanguageSelect.props().value).toBe('blockly');
+    expect(editorLanguageSelect.find('option').length).toBe(4);
 
     const blockPoolInput = wrapper.find('input').at(3);
-    expect(blockPoolInput.props().value).to.equal('GamelabJr');
+    expect(blockPoolInput.props().value).toBe('GamelabJr');
 
     const projectUrlInput = wrapper.find('input').at(4);
-    expect(projectUrlInput.props().value).to.equal('/p/spritelab');
+    expect(projectUrlInput.props().value).toBe('/p/spritelab');
 
     const descriptionMarkdownInput = wrapper
       .find('TextareaWithMarkdownPreview')
       .at(0);
-    expect(descriptionMarkdownInput.props().markdown).to.equal(
-      'A description of spritelab'
-    );
+    expect(descriptionMarkdownInput.props().markdown).toBe('A description of spritelab');
 
     const categoriesSection = wrapper.find('CollapsibleEditorSection');
     expect(
       categoriesSection.find('OrderableList').props().list.length
-    ).to.equal(1);
+    ).toBe(1);
   });
 
   it('shows ImageInput', () => {
     const wrapper = shallow(<ProgrammingEnvironmentEditor {...defaultProps} />);
-    expect(wrapper.find('ImageInput').length).to.equal(1);
+    expect(wrapper.find('ImageInput').length).toBe(1);
   });
 
   it('attempts to save when save is pressed', () => {
@@ -94,30 +92,28 @@ describe('ProgrammingEnvironmentEditor', () => {
     const saveBar = wrapper.find('SaveBar');
 
     const saveAndCloseButton = saveBar.find('button').at(2);
-    expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
+    expect(saveAndCloseButton.contains('Save and Close')).toBe(true);
     saveAndCloseButton.simulate('click');
 
-    expect(fetchSpy).to.be.called.once;
+    expect(fetchSpy).toHaveBeenCalled().once;
     const fetchCall = fetchSpy.getCall(0);
-    expect(fetchCall.args[0]).to.equal('/programming_environments/spritelab');
+    expect(fetchCall.args[0]).toBe('/programming_environments/spritelab');
     const fetchCallBody = JSON.parse(fetchCall.args[1].body);
-    expect(Object.keys(fetchCallBody).sort()).to.eql(
-      [
-        'title',
-        'published',
-        'description',
-        'editorLanguage',
-        'blockPoolName',
-        'projectUrl',
-        'imageUrl',
-        'categories',
-      ].sort()
-    );
-    expect(fetchCallBody.title).to.equal('Spritelab');
-    expect(fetchCallBody.published).to.be.true;
-    expect(fetchCallBody.description).to.equal('A description of spritelab');
-    expect(fetchCallBody.editorLanguage).to.equal('blockly');
-    expect(fetchCallBody.projectUrl).to.equal('/p/spritelab');
-    expect(fetchCallBody.imageUrl).to.equal('images.code.org/spritelab');
+    expect(Object.keys(fetchCallBody).sort()).toEqual([
+      'title',
+      'published',
+      'description',
+      'editorLanguage',
+      'blockPoolName',
+      'projectUrl',
+      'imageUrl',
+      'categories',
+    ].sort());
+    expect(fetchCallBody.title).toBe('Spritelab');
+    expect(fetchCallBody.published).toBe(true);
+    expect(fetchCallBody.description).toBe('A description of spritelab');
+    expect(fetchCallBody.editorLanguage).toBe('blockly');
+    expect(fetchCallBody.projectUrl).toBe('/p/spritelab');
+    expect(fetchCallBody.imageUrl).toBe('images.code.org/spritelab');
   });
 });

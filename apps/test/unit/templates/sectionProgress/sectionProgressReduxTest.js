@@ -16,7 +16,7 @@ import sectionProgress, {
   removeExpandedLesson,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai';
 
 const fakeUnitData789 = {
   unitDataByUnit: {
@@ -172,7 +172,7 @@ describe('sectionProgressRedux', () => {
           },
         },
       };
-      expect(getCurrentUnitData(stateWithUnit)).to.deep.equal({
+      expect(getCurrentUnitData(stateWithUnit)).toEqual({
         lessons: [
           {
             levels: [

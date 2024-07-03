@@ -26,7 +26,7 @@ import {
 import reducers from '@cdo/apps/weblab/reducers';
 import WebLab from '@cdo/apps/weblab/WebLab';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 var filesApi = require('@cdo/apps/clientApi').files;
 var assetListStore = require('@cdo/apps/code-studio/assets/assetListStore');
@@ -60,33 +60,31 @@ describe('WebLab', () => {
   describe('init', () => {
     it('throws an error if studio app doesnt exist', () => {
       weblab.studioApp_ = null;
-      expect(weblab.init).to.throw(Error);
+      expect(weblab.init).toThrow(Error);
     });
 
     it('dispatches changeMaxProjectCapacity', () => {
       weblab.init(config);
-      expect(getStore().dispatch).to.have.been.calledWith(
-        changeMaxProjectCapacity(20971520)
-      );
+      expect(getStore().dispatch).toHaveBeenCalledWith(changeMaxProjectCapacity(20971520));
     });
 
     it('does not set startSources if there are none', () => {
       config.level.startSources = '';
       weblab.init(config);
-      expect(weblab.startSources).to.be.undefined;
+      expect(weblab.startSources).toBeUndefined();
     });
 
     it('does not set startSources if it is given invalid JSON', () => {
       config.level.startSources = '{:';
       weblab.init(config);
-      expect(weblab.startSources).to.be.undefined;
+      expect(weblab.startSources).toBeUndefined();
     });
 
     it('sets startSources if given valid JSON', () => {
       const validJSON = {value: 'test'};
       config.level.startSources = JSON.stringify(validJSON);
       weblab.init(config);
-      expect(weblab.startSources).to.deep.equal({value: 'test'});
+      expect(weblab.startSources).toEqual({value: 'test'});
     });
   });
 
@@ -108,7 +106,7 @@ describe('WebLab', () => {
       expect(config.afterClearPuzzle()).to.eventually.be.rejectedWith(
         'deleteAll succeeded, weblab handling reload to avoid saving'
       );
-      expect(weblab.fileEntries).to.equal(null);
+      expect(weblab.fileEntries).toBeNull();
       filesApi.deleteAll.restore();
     });
 
@@ -122,7 +120,7 @@ describe('WebLab', () => {
       expect(console.warn).to.have.been.calledOnceWith(
         'WebLab: error deleteAll failed: status'
       );
-      expect(weblab.fileEntries).to.equal('entries');
+      expect(weblab.fileEntries).toBe('entries');
       filesApi.deleteAll.restore();
       console.warn.restore();
     });
@@ -141,14 +139,14 @@ describe('WebLab', () => {
     it('disables inspector if inspectorOn', () => {
       sinon.stub(getStore(), 'getState').returns({inspectorOn: true});
       weblab.onToggleInspector();
-      expect(brambleHost.disableInspector).to.have.been.calledOnce;
+      expect(brambleHost.disableInspector).toHaveBeenCalledTimes(1);
       getStore().getState.restore();
     });
 
     it('enables inspector if inspectorOn false', () => {
       sinon.stub(getStore(), 'getState').returns({inspectorOn: false});
       weblab.onToggleInspector();
-      expect(brambleHost.enableInspector).to.have.been.calledOnce;
+      expect(brambleHost.enableInspector).toHaveBeenCalledTimes(1);
       getStore().getState.restore();
     });
   });
@@ -177,7 +175,7 @@ describe('WebLab', () => {
       const finishButton = {className: 'test'};
       sinon.stub(document, 'getElementById').returns(finishButton);
       weblab.onMount(config);
-      expect(dom.addClickTouchEvent).to.have.been.calledWith(finishButton);
+      expect(dom.addClickTouchEvent).toHaveBeenCalledWith(finishButton);
       document.getElementById.restore();
     });
 
@@ -189,7 +187,7 @@ describe('WebLab', () => {
         .onCall(1)
         .returns(null);
       weblab.onMount(config);
-      expect(dom.addClickTouchEvent).to.not.have.been.called;
+      expect(dom.addClickTouchEvent).not.toHaveBeenCalled();
       document.getElementById.restore();
     });
   });
@@ -207,16 +205,14 @@ describe('WebLab', () => {
     it('disables inspector if inspectorOn', () => {
       sinon.stub(getStore(), 'getState').returns({inspectorOn: true});
       weblab.onStartFullScreenPreview();
-      expect(brambleHost.disableInspector).to.have.been.calledOnce;
+      expect(brambleHost.disableInspector).toHaveBeenCalledTimes(1);
       getStore().getState.restore();
     });
 
     it('dispatches the changeFullScreenPreviewOn action', () => {
       sinon.stub(getStore(), 'getState').returns({inspectorOn: true});
       weblab.onStartFullScreenPreview();
-      expect(getStore().dispatch).to.have.been.calledWith(
-        changeFullScreenPreviewOn(true)
-      );
+      expect(getStore().dispatch).toHaveBeenCalledWith(changeFullScreenPreviewOn(true));
       getStore().getState.restore();
     });
   });
@@ -241,9 +237,9 @@ describe('WebLab', () => {
 
       weblab.beforeUnload(eventStub);
 
-      expect(project.autosave).to.have.been.calledOnce;
-      expect(eventStub.preventDefault).to.have.been.calledOnce;
-      expect(eventStub.returnValue).to.equal('');
+      expect(project.autosave).toHaveBeenCalledTimes(1);
+      expect(eventStub.preventDefault).toHaveBeenCalledTimes(1);
+      expect(eventStub.returnValue).toBe('');
 
       project.hasOwnerChangedProject.restore();
     });
@@ -254,9 +250,9 @@ describe('WebLab', () => {
 
       weblab.beforeUnload(eventStub);
 
-      expect(project.autosave).to.not.have.been.called;
-      expect(eventStub.preventDefault).to.not.have.been.calledOnce;
-      expect(eventStub.returnValue).to.be.undefined;
+      expect(project.autosave).not.toHaveBeenCalled();
+      expect(eventStub.preventDefault).not.toHaveBeenCalledTimes(1);
+      expect(eventStub.returnValue).toBeUndefined();
 
       project.hasOwnerChangedProject.restore();
     });
@@ -276,7 +272,7 @@ describe('WebLab', () => {
     it('skips validation if validationEnabled is set to false', () => {
       weblab.level = {validationEnabled: false};
       weblab.onFinish(true);
-      expect(reportStub).to.have.been.calledWith(true, true);
+      expect(reportStub).toHaveBeenCalledWith(true, true);
     });
 
     it('reports the result from validateProjectChanged if validation is enabled', () => {
@@ -287,7 +283,7 @@ describe('WebLab', () => {
         },
       };
       weblab.onFinish(false);
-      expect(reportStub).to.have.been.calledWith(false, false);
+      expect(reportStub).toHaveBeenCalledWith(false, false);
     });
   });
 
@@ -314,7 +310,7 @@ describe('WebLab', () => {
 
     it('calls report with success conditions if validated is true', () => {
       weblab.reportResult(true, true);
-      expect(reportStub).to.have.been.calledWith({
+      expect(reportStub).toHaveBeenCalledWith({
         ...defaultValues,
         result: true,
         testResult: TestResults.FREE_PLAY,
@@ -324,7 +320,7 @@ describe('WebLab', () => {
     it('calls report with failure conditions if validated is false', () => {
       weblab.studioApp_.displayFeedback = sinon.stub();
       weblab.reportResult(true, false);
-      expect(reportStub).to.have.been.calledWith({
+      expect(reportStub).toHaveBeenCalledWith({
         ...defaultValues,
         ...{
           result: false,
@@ -338,7 +334,7 @@ describe('WebLab', () => {
     it('resolves with empty string if brambleHost is null', () => {
       weblab.brambleHost = null;
       return weblab.getCodeAsync().then(value => {
-        expect(value).to.equal('');
+        expect(value).toBe('');
       });
     });
 
@@ -347,7 +343,7 @@ describe('WebLab', () => {
         syncFiles: (files, projectVersion, callback) => callback('error'),
       };
       return weblab.getCodeAsync().catch(error => {
-        expect(error).to.equal('error');
+        expect(error).toBe('error');
       });
     });
 
@@ -357,7 +353,7 @@ describe('WebLab', () => {
       };
       weblab.initialFilesVersionId = 'version-id';
       return weblab.getCodeAsync().then(val => {
-        expect(val).to.equal('version-id');
+        expect(val).toBe('version-id');
       });
     });
   });
@@ -374,13 +370,13 @@ describe('WebLab', () => {
     it('does not call projectChanged if it is readonly', () => {
       weblab.readOnly = true;
       weblab.onProjectChanged();
-      expect(project.projectChanged).to.have.not.been.called;
+      expect(project.projectChanged).not.toHaveBeenCalled();
     });
 
     it('calls projectChanged if it is not readonly', () => {
       weblab.readOnly = false;
       weblab.onProjectChanged();
-      expect(project.projectChanged).to.have.been.calledOnce;
+      expect(project.projectChanged).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -418,7 +414,7 @@ describe('WebLab', () => {
       };
       weblab.onFilesReady(files, newFilesVersionId);
       expect(assetListStore.reset).to.have.been.calledOnceWith(files);
-      expect(weblab.fileEntries).to.deep.equal([
+      expect(weblab.fileEntries).toEqual([
         {
           name: 'file1.html',
           url: 'stubbedpath',
@@ -430,9 +426,9 @@ describe('WebLab', () => {
           versionId: '2',
         },
       ]);
-      expect(weblab.initialFilesVersionId).to.equal('1');
-      expect(project.filesVersionId).to.equal('2');
-      expect(weblab.brambleHost.syncFiles).to.have.been.calledOnce;
+      expect(weblab.initialFilesVersionId).toBe('1');
+      expect(project.filesVersionId).toBe('2');
+      expect(weblab.brambleHost.syncFiles).toHaveBeenCalledTimes(1);
     });
   });
 });

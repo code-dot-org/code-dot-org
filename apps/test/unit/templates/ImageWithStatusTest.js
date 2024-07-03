@@ -3,7 +3,7 @@ import React from 'react';
 
 import {ImageWithStatus} from '@cdo/apps/templates/ImageWithStatus';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 const CAT_IMAGE_URL = '/base/static/common_images/stickers/cat.png';
 const BOGUS_IMAGE_URL = '/nonexistent.png';
@@ -19,7 +19,7 @@ describe('ImageWithStatus', () => {
       />
     );
     const loading = container.querySelector('div[data-image-status="loading"]');
-    expect(loading).not.to.equal(null);
+    expect(loading).not.toBeNull();
   });
 
   it('shows status loaded after loading a valid image', async () => {
@@ -37,7 +37,7 @@ describe('ImageWithStatus', () => {
     const loaded = await waitFor(() =>
       container.querySelector('div[data-image-status="loaded"]')
     );
-    expect(loaded).not.to.equal(null);
+    expect(loaded).not.toBeNull();
   });
 
   it('shows status loading again if the src url is changed', async () => {
@@ -55,7 +55,7 @@ describe('ImageWithStatus', () => {
     let loaded = await waitFor(() =>
       container.querySelector('div[data-image-status="loaded"]')
     );
-    expect(loaded).not.to.equal(null);
+    expect(loaded).not.toBeNull();
 
     // Now change the image url
     rerender(
@@ -67,14 +67,14 @@ describe('ImageWithStatus', () => {
     );
 
     const loading = container.querySelector('div[data-image-status="loading"]');
-    expect(loading).not.to.equal(null);
+    expect(loading).not.toBeNull();
 
     image.dispatchEvent(new Event('load'));
 
     loaded = await waitFor(() =>
       container.querySelector('div[data-image-status="loaded"]')
     );
-    expect(loaded).not.to.equal(null);
+    expect(loaded).not.toBeNull();
   });
 
   it('shows status error after loading an invalid image', async () => {
@@ -92,6 +92,6 @@ describe('ImageWithStatus', () => {
     const error = await waitFor(() =>
       container.querySelector('div[data-image-status="error"]')
     );
-    expect(error).not.to.equal(null);
+    expect(error).not.toBeNull();
   });
 });

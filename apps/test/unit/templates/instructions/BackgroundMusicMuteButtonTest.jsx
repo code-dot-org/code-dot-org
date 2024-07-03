@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import {UnconnectedBackgroundMusicMuteButton as BackgroundMusicMuteButton} from '@cdo/apps/templates/instructions/BackgroundMusicMuteButton';
 import i18n from '@cdo/locale';
 
-import {expect, assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   teacherOnly: false,
@@ -49,9 +49,9 @@ describe('SignedInUser', () => {
     });
     wrapper.find('.uitest-mute-music-button').simulate('click');
     server.respond();
-    expect(onMuteSpy).to.have.been.calledOnce;
+    expect(onMuteSpy).toHaveBeenCalledTimes(1);
     wrapper.find('.uitest-mute-music-button').simulate('click');
-    expect(onUnmuteSpy).to.have.been.calledOnce;
+    expect(onUnmuteSpy).toHaveBeenCalledTimes(1);
   });
 
   describe('minecraft vs starwars styling', () => {
@@ -61,7 +61,7 @@ describe('SignedInUser', () => {
       });
       expect(
         wrapper.find('#uitest-mute-music-button').at(0).props().style.color
-      ).to.equal('rgb(118, 101, 160)');
+      ).toBe('rgb(118, 101, 160)');
     });
 
     it('uses minecraft styling if isMinecraft is true', () => {
@@ -70,7 +70,7 @@ describe('SignedInUser', () => {
       });
       expect(
         wrapper.find('#uitest-mute-music-button').at(0).props().isMinecraft
-      ).to.be.true;
+      ).toBe(true);
     });
   });
 });

@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('CloseOnEscape', () => {
   let wrapper, handleClose, className;
@@ -20,10 +20,10 @@ describe('CloseOnEscape', () => {
   it('calls handleClose() function when Escape pressed', () => {
     wrapper.find('div').first().props().onKeyDown({key: 'Escape'});
 
-    sinon.assert.calledOnce(handleClose);
+    sinon.toHaveBeenCalledTimes(1);
   });
 
   it('passes through provided class name', () => {
-    expect(wrapper.find('div').first().props().className).to.equal(className);
+    expect(wrapper.find('div').first().props().className).toBe(className);
   });
 });

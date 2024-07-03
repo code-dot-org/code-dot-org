@@ -6,7 +6,7 @@ import FilterGroupOrgNames from '@cdo/apps/tutorialExplorer/filterGroupOrgNames'
 import FilterSet from '@cdo/apps/tutorialExplorer/filterSet';
 import {TutorialsSortByOptions} from '@cdo/apps/tutorialExplorer/util';
 
-import {expect} from '../../util/deprecatedChai';
+
 
 const FAKE_ON_USER_INPUT = () => {};
 const FAKE_ORG_NAME = 'fake org name';
@@ -92,7 +92,7 @@ describe('FilterSet', () => {
         ]}
       />
     );
-    expect(wrapper.children()).to.have.length(2);
+    expect(wrapper.children()).toHaveLength(2);
   });
 
   it('shows all items when using mobile layout', () => {
@@ -111,7 +111,7 @@ describe('FilterSet', () => {
         ]}
       />
     );
-    expect(wrapper.children()).to.have.length(3);
+    expect(wrapper.children()).toHaveLength(3);
   });
 
   it('hides desktop items when using mobile layout', () => {
@@ -130,6 +130,6 @@ describe('FilterSet', () => {
         ]}
       />
     );
-    expect(wrapper.children()).to.have.length(2);
+    expect(wrapper.children()).toHaveLength(2);
   });
 });

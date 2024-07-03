@@ -4,7 +4,7 @@ import React from 'react';
 
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('ValidationStep', () => {
   describe('can render every status', () => {
@@ -16,7 +16,7 @@ describe('ValidationStep', () => {
             Some help content for a {status} step.
           </ValidationStep>
         );
-        expect(wrapper).not.to.be.null;
+        expect(wrapper).not.toBeNull();
       });
     });
   });
@@ -28,13 +28,13 @@ describe('ValidationStep', () => {
         {helpString}
       </ValidationStep>
     );
-    expect(wrapper.text()).to.include(helpString);
+    expect(wrapper.text()).toContain(helpString);
     wrapper = mount(
       <ValidationStep stepName="Alert step" stepStatus={Status.ALERT}>
         {helpString}
       </ValidationStep>
     );
-    expect(wrapper.text()).to.include(helpString);
+    expect(wrapper.text()).toContain(helpString);
   });
 
   it('does not render help text when step is not failed or alert', () => {
@@ -49,7 +49,7 @@ describe('ValidationStep', () => {
           {helpString}
         </ValidationStep>
       );
-      expect(wrapper.text()).not.to.include(helpString);
+      expect(wrapper.text()).not.toContain(helpString);
     });
   });
 });

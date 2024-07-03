@@ -6,7 +6,7 @@ import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/commands/spr
 import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
 
 import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('Behavior Commands', () => {
   let coreLibrary, animation;
@@ -39,7 +39,7 @@ describe('Behavior Commands', () => {
       mousePressedOverStub.returns(true);
       mouseWentDownStub.returns(true);
       behaviorCommands.draggableFunc.apply(coreLibrary)({name: 'sprite'});
-      expect(sprite.dragging).to.be.true;
+      expect(sprite.dragging).toBe(true);
     });
 
     it('dragging moves the sprite to the mouse position', () => {
@@ -51,7 +51,7 @@ describe('Behavior Commands', () => {
       mousePressedOverStub.returns(true);
       mouseWentDownStub.returns(true);
       behaviorCommands.draggableFunc.apply(coreLibrary)({name: 'sprite'});
-      expect(sprite.dragging).to.be.true;
+      expect(sprite.dragging).toBe(true);
 
       // Next tick, sprite moves to new mouse position.
       mouseWentDownStub.returns(false);
@@ -59,8 +59,8 @@ describe('Behavior Commands', () => {
       coreLibrary.p5.mouseY = 100;
       behaviorCommands.draggableFunc.apply(coreLibrary)({name: 'sprite'});
 
-      expect(sprite.x).to.equal(100);
-      expect(sprite.y).to.equal(100);
+      expect(sprite.x).toBe(100);
+      expect(sprite.y).toBe(100);
     });
 
     it('drag ends when mouse goes up', () => {
@@ -72,7 +72,7 @@ describe('Behavior Commands', () => {
       mousePressedOverStub.returns(true);
       mouseWentDownStub.returns(true);
       behaviorCommands.draggableFunc.apply(coreLibrary)({name: 'sprite'});
-      expect(sprite.dragging).to.be.true;
+      expect(sprite.dragging).toBe(true);
 
       // Next tick, mouse went up, so sprite moves to new mouse position
       // and drag ends.
@@ -81,9 +81,9 @@ describe('Behavior Commands', () => {
       coreLibrary.p5.mouseX = 100;
       coreLibrary.p5.mouseY = 100;
       behaviorCommands.draggableFunc.apply(coreLibrary)({name: 'sprite'});
-      expect(sprite.x).to.equal(100);
-      expect(sprite.y).to.equal(100);
-      expect(sprite.dragging).to.be.false;
+      expect(sprite.x).toBe(100);
+      expect(sprite.y).toBe(100);
+      expect(sprite.dragging).toBe(false);
     });
 
     it('only drags the top sprite', () => {
@@ -97,10 +97,10 @@ describe('Behavior Commands', () => {
       mouseWentDownStub.returns(true);
 
       behaviorCommands.draggableFunc.apply(coreLibrary)({name: 'top'});
-      expect(top.dragging).to.be.true;
+      expect(top.dragging).toBe(true);
 
       behaviorCommands.draggableFunc.apply(coreLibrary)({name: 'bottom'});
-      expect(!!bottom.dragging).to.be.false;
+      expect(!!bottom.dragging).toBe(false);
     });
   });
 
@@ -122,10 +122,10 @@ describe('Behavior Commands', () => {
       });
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: 'subject'}, 'x'])
-      ).to.equal(195);
+      ).toBe(195);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: 'subject'}, 'y'])
-      ).to.equal(200);
+      ).toBe(200);
     });
 
     it('does not move if there are no targets', () => {
@@ -136,10 +136,10 @@ describe('Behavior Commands', () => {
 
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: 'subject'}, 'x'])
-      ).to.equal(200);
+      ).toBe(200);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: 'subject'}, 'y'])
-      ).to.equal(200);
+      ).toBe(200);
     });
   });
 
@@ -161,10 +161,10 @@ describe('Behavior Commands', () => {
       });
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: 'subject'}, 'x'])
-      ).to.equal(205);
+      ).toBe(205);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: 'subject'}, 'y'])
-      ).to.equal(200);
+      ).toBe(200);
     });
 
     it('does not move if there are no targets', () => {
@@ -175,10 +175,10 @@ describe('Behavior Commands', () => {
 
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: 'subject'}, 'x'])
-      ).to.equal(200);
+      ).toBe(200);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: 'subject'}, 'y'])
-      ).to.equal(200);
+      ).toBe(200);
     });
 
     it('does not move if there are no targets in range', () => {
@@ -197,10 +197,10 @@ describe('Behavior Commands', () => {
       });
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: 'subject'}, 'x'])
-      ).to.equal(200);
+      ).toBe(200);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: 'subject'}, 'y'])
-      ).to.equal(200);
+      ).toBe(200);
     });
   });
 });

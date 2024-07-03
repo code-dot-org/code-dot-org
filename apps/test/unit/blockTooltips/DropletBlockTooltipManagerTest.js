@@ -3,7 +3,7 @@ import sinon from 'sinon';
 import DropletBlockTooltipManager from '@cdo/apps/blockTooltips/DropletBlockTooltipManager.js';
 import commonI18n from '@cdo/locale';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 import {DropletTooltipManagerStub} from './stubs';
 
@@ -34,7 +34,7 @@ describe('DropletBlockTooltipManager', () => {
       let el = document.createElement('div');
       el.innerHTML = html;
       let a = el.querySelector('.tooltip-code-link a');
-      expect(a.textContent).to.equal('i18n-show-code');
+      expect(a.textContent).toBe('i18n-show-code');
     });
 
     it('should render localized string for "Examples"', () => {
@@ -58,7 +58,7 @@ describe('DropletBlockTooltipManager', () => {
       let el = document.createElement('div');
       el.innerHTML = html;
       let a = el.querySelector('.tooltip-example-link a');
-      expect(a.textContent).to.equal('i18n-examples');
+      expect(a.textContent).toBe('i18n-examples');
     });
   });
 });

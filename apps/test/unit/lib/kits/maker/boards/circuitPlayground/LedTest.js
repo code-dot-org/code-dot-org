@@ -5,12 +5,12 @@ import sinon from 'sinon';
 import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
 import {makeCPBoardStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+
 
 describe('Led', function () {
   it('is a five.Led', () => {
     const led = newTestLed();
-    expect(led).to.be.an.instanceOf(five.Led);
+    expect(led).toBeInstanceOf(five.Led);
   });
 
   describe('on()', () => {
@@ -29,12 +29,12 @@ describe('Led', function () {
 
     it(`calls the parent on() implementation`, () => {
       led.on();
-      expect(five.Led.prototype.on).to.have.been.calledOnce;
+      expect(five.Led.prototype.on).toHaveBeenCalledTimes(1);
     });
 
     it(`calls stop() on the led to end any animations`, () => {
       led.on();
-      expect(five.Led.prototype.stop).to.have.been.calledOnce;
+      expect(five.Led.prototype.stop).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -54,12 +54,12 @@ describe('Led', function () {
 
     it(`calls stop() on the led to end any animations`, () => {
       led.off();
-      expect(five.Led.prototype.stop).to.have.been.calledOnce;
+      expect(five.Led.prototype.stop).toHaveBeenCalledTimes(1);
     });
 
     it(`calls the parent off() implementation`, () => {
       led.off();
-      expect(five.Led.prototype.off).to.have.been.called;
+      expect(five.Led.prototype.off).toHaveBeenCalled();
     });
   });
 
@@ -82,19 +82,19 @@ describe('Led', function () {
     it(`calls stop() only once when blink starts`, () => {
       led.stop.resetHistory();
       led.blink(100);
-      expect(led.stop).to.have.been.calledOnce;
+      expect(led.stop).toHaveBeenCalledTimes(1);
 
       // Pass some time and make sure it doesn't happen again
       led.stop.resetHistory();
       clock.tick(100);
-      expect(led.toggle).to.have.been.calledOnce;
-      expect(led.stop).not.to.have.been.called;
+      expect(led.toggle).toHaveBeenCalledTimes(1);
+      expect(led.stop).not.toHaveBeenCalled();
       clock.tick(100);
-      expect(led.toggle).to.have.been.calledTwice;
-      expect(led.stop).not.to.have.been.called;
+      expect(led.toggle).toHaveBeenCalledTimes(2);
+      expect(led.stop).not.toHaveBeenCalled();
       clock.tick(100);
-      expect(led.toggle).to.have.been.calledThrice;
-      expect(led.stop).not.to.have.been.called;
+      expect(led.toggle).toHaveBeenCalledTimes(3);
+      expect(led.stop).not.toHaveBeenCalled();
     });
   });
 });

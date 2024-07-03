@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import {UnconnectedResourcesEditor as ResourcesEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 import resourceTestData from './resourceTestData';
 
@@ -26,14 +26,14 @@ describe('ResourcesEditor', () => {
 
   it('renders default props', () => {
     const wrapper = mount(<ResourcesEditor {...defaultProps} />);
-    expect(wrapper.find('tr').length).to.equal(resourceTestData.length + 1);
-    expect(wrapper.find('SearchBox').length).to.equal(1);
+    expect(wrapper.find('tr').length).toBe(resourceTestData.length + 1);
+    expect(wrapper.find('SearchBox').length).toBe(1);
   });
 
   it('can remove a resource', () => {
     const wrapper = mount(<ResourcesEditor {...defaultProps} />);
     const numResources = wrapper.find('tr').length;
-    expect(numResources).at.least(2);
+    expect(numResources).toBeGreaterThanOrEqual(2);
     // Find one of the "remove" buttons and click it
     const removeResourceButton = wrapper
       .find('.unit-test-remove-resource')
@@ -42,13 +42,13 @@ describe('ResourcesEditor', () => {
     const removeDialog = wrapper.find('Dialog');
     const deleteButton = removeDialog.find('button').at(2);
     deleteButton.simulate('click');
-    expect(removeResource).to.have.been.calledOnce;
+    expect(removeResource).toHaveBeenCalledTimes(1);
   });
 
   it('can cancel removing a resource', () => {
     const wrapper = mount(<ResourcesEditor {...defaultProps} />);
     const numResources = wrapper.find('tr').length;
-    expect(numResources).at.least(2);
+    expect(numResources).toBeGreaterThanOrEqual(2);
     // Find one of the "remove" buttons and click it
     const removeResourceButton = wrapper
       .find('.unit-test-remove-resource')
@@ -57,7 +57,7 @@ describe('ResourcesEditor', () => {
     const removeDialog = wrapper.find('Dialog');
     const cancelButton = removeDialog.find('button').at(0);
     cancelButton.simulate('click');
-    expect(removeResource).not.to.have.been.called;
+    expect(removeResource).not.toHaveBeenCalled();
   });
 
   it('can add a resource', () => {
@@ -68,7 +68,7 @@ describe('ResourcesEditor', () => {
       url: 'fake.fake',
       properties: {},
     });
-    expect(addResource).to.have.been.calledOnce;
+    expect(addResource).toHaveBeenCalledTimes(1);
   });
 
   it('can add a resource', () => {
@@ -78,7 +78,7 @@ describe('ResourcesEditor', () => {
       name: 'edited resource',
       url: 'edited url',
     });
-    expect(editResource).to.have.been.calledOnce;
+    expect(editResource).toHaveBeenCalledTimes(1);
   });
 
   it('shows a button to add rollup resources if getRollupsUrl is passed as a prop', () => {
@@ -89,8 +89,8 @@ describe('ResourcesEditor', () => {
       />
     );
     const addRollupsButton = wrapper.find('button').at(1);
-    expect(addRollupsButton).to.not.be.null;
-    expect(addRollupsButton.contains('Add rollup pages')).to.be.true;
+    expect(addRollupsButton).not.toBeNull();
+    expect(addRollupsButton.contains('Add rollup pages')).toBe(true);
   });
 
   it('adds rollup pages from server', () => {
@@ -121,10 +121,8 @@ describe('ResourcesEditor', () => {
     ]);
     wrapper.instance().addRollupPages();
     server.respond();
-    expect(addResource.withArgs(defaultResourceContext, codeRollup)).to.be
-      .calledOnce;
-    expect(addResource.withArgs(defaultResourceContext, vocabRollup)).to.be
-      .calledOnce;
+    expect(addResource.withArgs(defaultResourceContext, codeRollup)).toHaveBeenCalledTimes(1);
+    expect(addResource.withArgs(defaultResourceContext, vocabRollup)).toHaveBeenCalledTimes(1);
     server.restore();
   });
 });

@@ -1,6 +1,6 @@
 import library from '@cdo/apps/applab/designElements/library';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 function getRect(photoSelectComponent) {
   return {
@@ -26,12 +26,12 @@ describe('Applab designElements/photoSelect component', function () {
   it('decreasing font size does not change size to fit', () => {
     const oldRect = getRect(photoSelectComponent);
     photoSelectComponent.style.fontSize = 5;
-    expect(getRect(photoSelectComponent)).to.deep.equal(oldRect);
+    expect(getRect(photoSelectComponent)).toEqual(oldRect);
   });
 
   it('increasing font size does not change size to fit', () => {
     const oldRect = getRect(photoSelectComponent);
     photoSelectComponent.style.fontSize = 100;
-    expect(getRect(photoSelectComponent)).to.deep.equal(oldRect);
+    expect(getRect(photoSelectComponent)).toEqual(oldRect);
   });
 });

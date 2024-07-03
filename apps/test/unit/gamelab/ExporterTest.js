@@ -12,7 +12,7 @@ import pageConstantsReducer, {
   setPageConstants,
 } from '@cdo/apps/redux/pageConstants';
 
-import {assert, expect} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai';
 
 var testUtils = require('../../util/testUtils');
 
@@ -265,7 +265,7 @@ describe('The Gamelab Exporter,', function () {
       });
 
       it('should rewrite urls in the code to point to the correct asset files', function () {
-        expect(zipFiles['my-app/code.js']).to.include(
+        expect(zipFiles['my-app/code.js']).toContain(
           'console.log("hello");\nplaySound("assets/zoo.mp3");\nplaySound("assets/default.mp3");'
         );
       });

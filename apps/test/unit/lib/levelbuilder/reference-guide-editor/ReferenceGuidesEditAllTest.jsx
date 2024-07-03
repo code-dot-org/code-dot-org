@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import ReferenceGuideEditAll from '@cdo/apps/lib/levelbuilder/reference-guide-editor/ReferenceGuideEditAll';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 const makeReferenceGuide = (key, parent = null, pos = 0) => ({
   display_name: key,
@@ -32,7 +32,7 @@ describe('ReferenceGuideEditAll', () => {
         baseUrl={'/courses/etc/guides'}
       />
     );
-    expect(wrapper.findOne('.guide-box').content()).to.equal('hello_world');
+    expect(wrapper.findOne('.guide-box').content()).toBe('hello_world');
   });
 
   it('sets up all the actions for a ref guide', () => {
@@ -43,11 +43,11 @@ describe('ReferenceGuideEditAll', () => {
         baseUrl={'/courses/etc/guides'}
       />
     );
-    expect(wrapper.findAll('MiniIconButton').length).to.equal(4);
-    expect(wrapper.findOne('.actions-box').toString()).to.contain('edit');
-    expect(wrapper.findOne('.actions-box').toString()).to.contain('delete');
-    expect(wrapper.findOne('.actions-box').toString()).to.contain('up');
-    expect(wrapper.findOne('.actions-box').toString()).to.contain('down');
+    expect(wrapper.findAll('MiniIconButton').length).toBe(4);
+    expect(wrapper.findOne('.actions-box').toString()).toContain('edit');
+    expect(wrapper.findOne('.actions-box').toString()).toContain('delete');
+    expect(wrapper.findOne('.actions-box').toString()).toContain('up');
+    expect(wrapper.findOne('.actions-box').toString()).toContain('down');
   });
 
   it('sorts reference guides by tree heirarchy', () => {
@@ -77,7 +77,7 @@ describe('ReferenceGuideEditAll', () => {
     );
     expect(
       wrapper.findAll('.guide-box').map(box => box.content())
-    ).to.deep.equal(['a', 'b', 'c', 'e', 'f', 'd']);
+    ).toEqual(['a', 'b', 'c', 'e', 'f', 'd']);
 
     // input order shouldn't matter
     referenceGuides = [
@@ -98,7 +98,7 @@ describe('ReferenceGuideEditAll', () => {
     );
     expect(
       wrapper.findAll('.guide-box').map(box => box.content())
-    ).to.deep.equal(['a', 'b', 'c', 'e', 'f', 'g', 'h', 'd']);
+    ).toEqual(['a', 'b', 'c', 'e', 'f', 'g', 'h', 'd']);
   });
 
   it('indents the reference guides by level depth', () => {
@@ -118,7 +118,7 @@ describe('ReferenceGuideEditAll', () => {
     );
     expect(
       wrapper.findAll('.guide-box').map(box => box.props.style.paddingLeft)
-    ).to.deep.equal(['4px', '24px', '24px', '44px', '44px', '24px']); // a b c e f d
+    ).toEqual(['4px', '24px', '24px', '44px', '44px', '24px']); // a b c e f d
   });
 
   it('allows guides to be moved', () => {
@@ -140,7 +140,7 @@ describe('ReferenceGuideEditAll', () => {
     );
     expect(
       wrapper.findAll('.guide-box').map(box => box.content())
-    ).to.deep.equal(['a', 'b', 'c']);
+    ).toEqual(['a', 'b', 'c']);
 
     // click down on b
     wrapper
@@ -149,8 +149,8 @@ describe('ReferenceGuideEditAll', () => {
       .props.func();
     expect(
       wrapper.findAll('.guide-box').map(box => box.content())
-    ).to.deep.equal(['a', 'c', 'b']);
-    expect(fetchSpy).to.have.callCount(2);
+    ).toEqual(['a', 'c', 'b']);
+    expect(fetchSpy).toHaveBeenCalledTimes(2);
 
     // click up on a
     wrapper
@@ -159,8 +159,8 @@ describe('ReferenceGuideEditAll', () => {
       .props.func();
     expect(
       wrapper.findAll('.guide-box').map(box => box.content())
-    ).to.deep.equal(['a', 'c', 'b']);
-    expect(fetchSpy).to.have.callCount(2);
+    ).toEqual(['a', 'c', 'b']);
+    expect(fetchSpy).toHaveBeenCalledTimes(2);
 
     // click down on b
     wrapper
@@ -169,8 +169,8 @@ describe('ReferenceGuideEditAll', () => {
       .props.func();
     expect(
       wrapper.findAll('.guide-box').map(box => box.content())
-    ).to.deep.equal(['a', 'c', 'b']);
-    expect(fetchSpy).to.have.callCount(2);
+    ).toEqual(['a', 'c', 'b']);
+    expect(fetchSpy).toHaveBeenCalledTimes(2);
 
     // click down on a
     wrapper
@@ -179,8 +179,8 @@ describe('ReferenceGuideEditAll', () => {
       .props.func();
     expect(
       wrapper.findAll('.guide-box').map(box => box.content())
-    ).to.deep.equal(['c', 'a', 'b']);
-    expect(fetchSpy).to.have.callCount(4);
+    ).toEqual(['c', 'a', 'b']);
+    expect(fetchSpy).toHaveBeenCalledTimes(4);
   });
 
   it('allows guides to be deleted', () => {
@@ -199,7 +199,7 @@ describe('ReferenceGuideEditAll', () => {
     );
     expect(
       wrapper.findAll('.guide-box').map(box => box.content())
-    ).to.deep.equal(['a', 'b', 'd', 'e', 'c']);
+    ).toEqual(['a', 'b', 'd', 'e', 'c']);
 
     // click delete on second
     wrapper
@@ -212,7 +212,7 @@ describe('ReferenceGuideEditAll', () => {
     wrapper.findOne('DeleteWarningDialog').props.deleteGuide();
     expect(
       wrapper.findAll('.guide-box').map(box => box.content())
-    ).to.deep.equal(['a', 'c']);
-    expect(wrapper.exists('DeleteWarningDialog')).to.not.be.true;
+    ).toEqual(['a', 'c']);
+    expect(wrapper.exists('DeleteWarningDialog')).not.toBe(true);
   });
 });

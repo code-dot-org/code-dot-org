@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import TextResponsesLessonSelector from '@cdo/apps/templates/textResponses/TextResponsesLessonSelector';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/deprecatedChai';
+
 
 describe('TextResponsesLessonSelector', () => {
   describe('with less than 2 lessons', () => {
@@ -19,7 +19,7 @@ describe('TextResponsesLessonSelector', () => {
         />
       );
 
-      expect(wrapper.isEmptyRender()).to.be.true;
+      expect(wrapper.isEmptyRender()).toBe(true);
     });
   });
 
@@ -35,10 +35,10 @@ describe('TextResponsesLessonSelector', () => {
       );
 
       const filterDropdown = wrapper.find('#uitest-lesson-filter');
-      expect(filterDropdown.exists()).to.be.true;
+      expect(filterDropdown.exists()).toBe(true);
 
       const filterOptions = filterDropdown.find('option');
-      expect(filterOptions).to.have.length(3);
+      expect(filterOptions).toHaveLength(3);
       expect(filterOptions.at(0)).to.have.text('All');
       expect(filterOptions.at(1)).to.have.text('Lesson 1');
       expect(filterOptions.at(2)).to.have.text('Lesson 2');
@@ -52,7 +52,7 @@ describe('TextResponsesLessonSelector', () => {
         />
       );
 
-      expect(wrapper.contains(i18n.filterByStage())).to.be.true;
+      expect(wrapper.contains(i18n.filterByStage())).toBe(true);
     });
 
     it('calls prop onChangeFilter when a lesson is selected', () => {
@@ -66,7 +66,7 @@ describe('TextResponsesLessonSelector', () => {
 
       const lesson1Option = wrapper.find('option').at(1);
       lesson1Option.simulate('change', {target: {value: 'Lesson 1'}});
-      expect(onChangeFilterStub).to.have.been.calledWith('Lesson 1');
+      expect(onChangeFilterStub).toHaveBeenCalledWith('Lesson 1');
     });
 
     it('calls prop onChangeFilter with null if all is selected', () => {
@@ -80,7 +80,7 @@ describe('TextResponsesLessonSelector', () => {
 
       const allLessonsOption = wrapper.find('option').at(0);
       allLessonsOption.simulate('change', {target: {value: i18n.all()}});
-      expect(onChangeFilterStub).to.have.been.calledWith(null);
+      expect(onChangeFilterStub).toHaveBeenCalledWith(null);
     });
   });
 });

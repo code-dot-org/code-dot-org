@@ -42,7 +42,7 @@ describe('RailsAuthenticityToken', () => {
 
     const wrapper = shallow(<RailsAuthenticityToken />);
     assert(wrapper.isEmptyRender(), 'rendered nothing');
-    assert(logToCloud.logError.calledOnce, 'logged an error to New Relic');
+    assert(logToCloud.toHaveBeenCalledTimes(1), 'logged an error to New Relic');
   });
 });
 

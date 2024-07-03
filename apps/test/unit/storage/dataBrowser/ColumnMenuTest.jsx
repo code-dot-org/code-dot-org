@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import ColumnMenu from '@cdo/apps/storage/dataBrowser/ColumnMenu';
 import commonI18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('ColumnMenu', () => {
   describe('localization', () => {
@@ -31,7 +31,7 @@ describe('ColumnMenu', () => {
 
       let menuItem = wrapper.find('li').at(0);
       let menuLink = menuItem.find('a');
-      expect(menuLink.text()).to.contain('i18n-rename');
+      expect(menuLink.text()).toContain('i18n-rename');
     });
 
     it('should render a localized string for "Delete"', () => {
@@ -41,7 +41,7 @@ describe('ColumnMenu', () => {
 
       let menuItem = wrapper.find('li').at(1);
       let menuLink = menuItem.find('a');
-      expect(menuLink.text()).to.contain('i18n-delete');
+      expect(menuLink.text()).toContain('i18n-delete');
     });
 
     it('should render a localized string for "Convert to string"', () => {
@@ -51,7 +51,7 @@ describe('ColumnMenu', () => {
 
       let menuItem = wrapper.find('li').at(2);
       let menuLink = menuItem.find('a');
-      expect(menuLink.text()).to.contain('i18n-ctos');
+      expect(menuLink.text()).toContain('i18n-ctos');
     });
 
     it('should render a localized number for "Convert to number"', () => {
@@ -61,7 +61,7 @@ describe('ColumnMenu', () => {
 
       let menuItem = wrapper.find('li').at(3);
       let menuLink = menuItem.find('a');
-      expect(menuLink.text()).to.contain('i18n-cton');
+      expect(menuLink.text()).toContain('i18n-cton');
     });
 
     it('should render a localized boolean for "Convert to boolean"', () => {
@@ -71,7 +71,7 @@ describe('ColumnMenu', () => {
 
       let menuItem = wrapper.find('li').at(4);
       let menuLink = menuItem.find('a');
-      expect(menuLink.text()).to.contain('i18n-ctob');
+      expect(menuLink.text()).toContain('i18n-ctob');
     });
   });
 });

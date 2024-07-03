@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import {UnconnectedJoinSection as JoinSection} from '@cdo/apps/templates/studioHomepages/JoinSection';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 const DEFAULT_PROPS = {
   enrolledInASection: false,
@@ -27,28 +27,28 @@ describe('JoinSection', () => {
     const wrapper = shallow(
       <JoinSection {...DEFAULT_PROPS} enrolledInASection={false} />
     );
-    expect(wrapper.prop('style')).to.include({borderStyle: 'dashed'});
+    expect(wrapper.prop('style')).toMatchObject({borderStyle: 'dashed'});
   });
 
   it('renders with a solid border when enrolled in a section', () => {
     const wrapper = shallow(
       <JoinSection {...DEFAULT_PROPS} enrolledInASection={true} />
     );
-    expect(wrapper.prop('style')).to.include({borderStyle: 'solid'});
+    expect(wrapper.prop('style')).toMatchObject({borderStyle: 'solid'});
   });
 
   it('renders with disabled button when input is empty', () => {
     const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
-    expect(wrapper.find('Button').prop('disabled')).to.be.true;
+    expect(wrapper.find('Button').prop('disabled')).toBe(true);
     wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
-    expect(wrapper.find('Button').prop('disabled')).to.be.false;
+    expect(wrapper.find('Button').prop('disabled')).toBe(false);
   });
 
   it('updates state when typing', () => {
     const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
     wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
-    expect(wrapper.state()).to.deep.equal({sectionCode: 'ABCDEF'});
-    expect(wrapper.find('input').prop('value')).to.equal('ABCDEF');
+    expect(wrapper.state()).toEqual({sectionCode: 'ABCDEF'});
+    expect(wrapper.find('input').prop('value')).toBe('ABCDEF');
   });
 
   it('button click sends join request', done => {
@@ -62,10 +62,10 @@ describe('JoinSection', () => {
     ]);
 
     const updateSections = sinon.spy(function () {
-      expect(wrapper.state()).to.deep.equal({sectionCode: ''});
-      expect(wrapper.find('input').prop('value')).to.equal('');
+      expect(wrapper.state()).toEqual({sectionCode: ''});
+      expect(wrapper.find('input').prop('value')).toBe('');
 
-      expect(updateSections).to.have.been.calledOnce;
+      expect(updateSections).toHaveBeenCalledTimes(1);
 
       done();
     });
@@ -89,10 +89,10 @@ describe('JoinSection', () => {
     ]);
 
     const updateSections = sinon.spy(function () {
-      expect(wrapper.state()).to.deep.equal({sectionCode: ''});
-      expect(wrapper.find('input').prop('value')).to.equal('');
+      expect(wrapper.state()).toEqual({sectionCode: ''});
+      expect(wrapper.find('input').prop('value')).toBe('');
 
-      expect(updateSections).to.have.been.calledOnce;
+      expect(updateSections).toHaveBeenCalledTimes(1);
 
       done();
     });
@@ -116,10 +116,10 @@ describe('JoinSection', () => {
     ]);
 
     const updateSections = sinon.spy(function () {
-      expect(wrapper.state()).to.deep.equal({sectionCode: ''});
-      expect(wrapper.find('input').prop('value')).to.equal('');
+      expect(wrapper.state()).toEqual({sectionCode: ''});
+      expect(wrapper.find('input').prop('value')).toBe('');
 
-      expect(updateSections).to.have.been.calledOnce;
+      expect(updateSections).toHaveBeenCalledTimes(1);
 
       done();
     });
@@ -137,8 +137,8 @@ describe('JoinSection', () => {
     wrapper.setState({sectionCode: 'ABCDEF'});
 
     wrapper.find('input').simulate('keyup', {key: 'Escape'});
-    expect(wrapper.state()).to.deep.equal({sectionCode: ''});
-    expect(wrapper.find('input').prop('value')).to.equal('');
+    expect(wrapper.state()).toEqual({sectionCode: ''});
+    expect(wrapper.find('input').prop('value')).toBe('');
   });
 
   it('ignores other keyup events gracefully', () => {
@@ -146,8 +146,8 @@ describe('JoinSection', () => {
     wrapper.setState({sectionCode: 'ABC'});
 
     wrapper.find('input').simulate('keyup', {key: 'Z'});
-    expect(wrapper.state()).to.deep.equal({sectionCode: 'ABC'});
-    expect(wrapper.find('input').prop('value')).to.equal('ABC');
+    expect(wrapper.state()).toEqual({sectionCode: 'ABC'});
+    expect(wrapper.find('input').prop('value')).toBe('ABC');
   });
 
   it('handles failed request with specific reason', done => {
@@ -161,10 +161,10 @@ describe('JoinSection', () => {
     ]);
 
     const updateSectionsResult = sinon.spy(function () {
-      expect(wrapper.state()).to.deep.equal({sectionCode: ''});
-      expect(wrapper.find('input').prop('value')).to.equal('');
+      expect(wrapper.state()).toEqual({sectionCode: ''});
+      expect(wrapper.find('input').prop('value')).toBe('');
 
-      expect(updateSectionsResult).to.have.been.calledOnce;
+      expect(updateSectionsResult).toHaveBeenCalledTimes(1);
 
       done();
     });
@@ -188,10 +188,10 @@ describe('JoinSection', () => {
     ]);
 
     const updateSectionsResult = sinon.spy(function () {
-      expect(wrapper.state()).to.deep.equal({sectionCode: ''});
-      expect(wrapper.find('input').prop('value')).to.equal('');
+      expect(wrapper.state()).toEqual({sectionCode: ''});
+      expect(wrapper.find('input').prop('value')).toBe('');
 
-      expect(updateSectionsResult).to.have.been.calledOnce;
+      expect(updateSectionsResult).toHaveBeenCalledTimes(1);
 
       done();
     });
@@ -212,6 +212,6 @@ describe('JoinSection', () => {
     const instance = wrapper.instance();
     const fetchCaptchaSpy = sinon.spy(instance, 'fetchCaptchaInfo');
     instance.componentDidMount();
-    expect(fetchCaptchaSpy).to.have.been.calledOnce;
+    expect(fetchCaptchaSpy).toHaveBeenCalledTimes(1);
   });
 });

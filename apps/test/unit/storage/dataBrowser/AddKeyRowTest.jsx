@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import AddKeyRow from '@cdo/apps/storage/dataBrowser/AddKeyRow';
 import commonI18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('AddKeyRow', () => {
   describe('localization', () => {
@@ -29,7 +29,7 @@ describe('AddKeyRow', () => {
       const wrapper = createAddKeyRow();
 
       let addButton = wrapper.find('PendingButton').at(0);
-      expect(addButton.prop('text')).to.contain('i18n-add-to-table');
+      expect(addButton.prop('text')).toContain('i18n-add-to-table');
     });
 
     it('should render a localized string while adding the row', () => {
@@ -38,7 +38,7 @@ describe('AddKeyRow', () => {
       const wrapper = createAddKeyRow();
 
       let addButton = wrapper.find('PendingButton').at(0);
-      expect(addButton.prop('pendingText')).to.contain('i18n-adding-to-table');
+      expect(addButton.prop('pendingText')).toContain('i18n-adding-to-table');
     });
 
     it('should render a localized string for the placeholder text', () => {
@@ -47,7 +47,7 @@ describe('AddKeyRow', () => {
       const wrapper = createAddKeyRow();
 
       let input = wrapper.find('tr#uitest-addKeyValuePairRow input').at(0);
-      expect(input.prop('placeholder')).to.contain('i18n-enter-text');
+      expect(input.prop('placeholder')).toContain('i18n-enter-text');
     });
   });
 });

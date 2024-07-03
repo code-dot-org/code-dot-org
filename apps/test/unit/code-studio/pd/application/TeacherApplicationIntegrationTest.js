@@ -1,5 +1,4 @@
-import {expect} from 'chai';
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import { mount } from 'enzyme';
 import $ from 'jquery';
 import React from 'react';
 import sinon from 'sinon';
@@ -45,31 +44,25 @@ describe('TeacherApplication', () => {
     const page = mount(
       <FindYourRegion {...defaultProps} data={{program: 'CSD'}} />
     );
-    expect(page.find('SchoolAutocompleteDropdown').prop('value')).to.equal(
-      undefined
-    );
+    expect(page.find('SchoolAutocompleteDropdown').prop('value')).toBeUndefined();
   });
 
   it('Sets the school dropdown value from props', () => {
     const page = mount(
       <FindYourRegion {...defaultProps} data={{program: 'CSD', school: '50'}} />
     );
-    expect(page.find('SchoolAutocompleteDropdown').prop('value')).to.equal(
-      '50'
-    );
+    expect(page.find('SchoolAutocompleteDropdown').prop('value')).toBe('50');
   });
 
   it('Sets the school dropdown value from storage', () => {
     const data = {program: 'CSD', school: '25'};
 
     const page = mount(<FindYourRegion {...defaultProps} data={data} />);
-    expect(page.find('SchoolAutocompleteDropdown').prop('value')).to.equal(
-      '25'
-    );
+    expect(page.find('SchoolAutocompleteDropdown').prop('value')).toBe('25');
   });
 
   it('Reports to google analytics', () => {
     mount(<TeacherApplication {...defaultProps} />);
-    sinon.assert.called(window.ga);
+    sinon.toHaveBeenCalled();
   });
 });

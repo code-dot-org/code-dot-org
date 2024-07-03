@@ -9,7 +9,7 @@ import {
 import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
 import * as utils from '@cdo/apps/utils';
 
-import {assert, expect} from '../../../../util/reconfiguredChai';
+import {assert} from '../../../../util/reconfiguredChai';
 
 const fakeSection = {
   name: 'My Section',
@@ -92,9 +92,8 @@ describe('SectionSelector', () => {
       wrapper
         .find('select')
         .simulate('change', {target: {value: testSectionId}});
-      expect(codeStudioUtils.updateQueryParam)
-        .to.have.been.calledTwice.and.calledWith('section_id', testSectionId)
-        .and.calledWith('user_id', undefined);
+      // testSectionId
+      expect(codeStudioUtils.updateQueryParam).toHaveBeenCalledTimes(2).and.calledWith('section_id').toHaveBeenCalledWith('user_id', undefined);
     });
 
     it('removes the query param if a section is unselected', () => {
@@ -110,9 +109,8 @@ describe('SectionSelector', () => {
       wrapper
         .find('select')
         .simulate('change', {target: {value: NO_SELECTED_SECTION_VALUE}});
-      expect(codeStudioUtils.updateQueryParam)
-        .to.have.been.calledTwice.and.calledWith('section_id', undefined)
-        .and.calledWith('user_id', undefined);
+      // undefined
+      expect(codeStudioUtils.updateQueryParam).toHaveBeenCalledTimes(2).and.calledWith('section_id').toHaveBeenCalledWith('user_id', undefined);
     });
 
     it('reloads on change if prop reloadOnChange is set', () => {
@@ -130,8 +128,8 @@ describe('SectionSelector', () => {
       wrapper
         .find('select')
         .simulate('change', {target: {value: testSectionId}});
-      expect(utils.reload).to.have.been.calledOnce;
-      expect(selectSection).not.to.have.been.called;
+      expect(utils.reload).toHaveBeenCalledTimes(1);
+      expect(selectSection).not.toHaveBeenCalled();
     });
 
     it('calls selectSection on change if prop reloadOnChange is not set', () => {
@@ -149,10 +147,8 @@ describe('SectionSelector', () => {
       wrapper
         .find('select')
         .simulate('change', {target: {value: testSectionId}});
-      expect(selectSection).to.have.been.calledOnce.and.calledWith(
-        testSectionId
-      );
-      expect(utils.reload).not.to.have.been.called;
+      expect(selectSection).toHaveBeenCalledWith(testSectionId);
+      expect(utils.reload).not.toHaveBeenCalled();
     });
   });
 });

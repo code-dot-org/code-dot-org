@@ -16,7 +16,7 @@ import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../../../util/reconfiguredChai';
+
 
 const students = [
   {id: 1, name: 'Student 1'},
@@ -97,40 +97,40 @@ describe('TeacherPanel', () => {
   describe('on unit page', () => {
     it('initial view as participant has teacher panel header and view toggle', () => {
       const wrapper = setUp({viewAs: ViewType.Participant});
-      expect(wrapper.contains(i18n.teacherPanel())).to.be.true;
-      expect(wrapper.find(ViewAsToggle)).to.have.length(1);
+      expect(wrapper.contains(i18n.teacherPanel())).toBe(true);
+      expect(wrapper.find(ViewAsToggle)).toHaveLength(1);
     });
 
     it('initial view as instructor has teacher panel header and view toggle', () => {
       const wrapper = setUp({viewAs: ViewType.Instructor});
-      expect(wrapper.contains(i18n.teacherPanel())).to.be.true;
-      expect(wrapper.find(ViewAsToggle)).to.have.length(1);
+      expect(wrapper.contains(i18n.teacherPanel())).toBe(true);
+      expect(wrapper.find(ViewAsToggle)).toHaveLength(1);
     });
   });
 
   it('shows loading message when sections are not loaded', () => {
     const wrapper = setUp({sectionsAreLoaded: false});
-    expect(wrapper.contains(i18n.loading())).to.be.true;
+    expect(wrapper.contains(i18n.loading())).toBe(true);
   });
 
   it('hides loading message when sections are loaded', () => {
     const wrapper = setUp({sectionsAreLoaded: true});
-    expect(wrapper.contains(i18n.loading())).to.be.false;
+    expect(wrapper.contains(i18n.loading())).toBe(false);
   });
 
   it('shows SectionSelector if hasSections and sectionsAreLoaded', () => {
     const wrapper = setUp({sectionsAreLoaded: true, hasSections: true});
-    expect(wrapper.find(SectionSelector)).to.have.length(1);
+    expect(wrapper.find(SectionSelector)).toHaveLength(1);
   });
 
   it('hides SectionSelector if hasSections is false', () => {
     const wrapper = setUp({hasSections: false});
-    expect(wrapper.find(SectionSelector)).to.have.length(0);
+    expect(wrapper.find(SectionSelector)).toHaveLength(0);
   });
 
   it('hides SectionSelector if sectionsAreLoaded is false', () => {
     const wrapper = setUp({sectionsAreLoaded: false});
-    expect(wrapper.find(SectionSelector)).to.have.length(0);
+    expect(wrapper.find(SectionSelector)).toHaveLength(0);
   });
 
   it('shows link to teacher dashboard for section if sections are loaded and there is a selected section', () => {
@@ -140,7 +140,7 @@ describe('TeacherPanel', () => {
       hasSections: true,
     });
 
-    expect(wrapper.contains(i18n.teacherDashboard())).to.be.true;
+    expect(wrapper.contains(i18n.teacherDashboard())).toBe(true);
   });
 
   it('shows section selection instructions if viewing as a instructor, and has sections and lockable lessons', () => {
@@ -149,7 +149,7 @@ describe('TeacherPanel', () => {
       unitHasLockableLessons: true,
       hasSections: true,
     });
-    expect(wrapper.contains(i18n.selectSectionInstructions())).to.be.true;
+    expect(wrapper.contains(i18n.selectSectionInstructions())).toBe(true);
   });
 
   it('adds a warning if there are also unlocked lessons', () => {
@@ -160,10 +160,10 @@ describe('TeacherPanel', () => {
       unlockedLessonNames: ['lesson1', 'lesson2'],
     });
 
-    expect(wrapper.contains(i18n.selectSectionInstructions())).to.be.true;
-    expect(wrapper.contains(i18n.dontForget())).to.be.true;
-    expect(wrapper.contains(i18n.lockFollowing())).to.be.true;
-    expect(wrapper.contains('lesson1')).to.be.true;
+    expect(wrapper.contains(i18n.selectSectionInstructions())).toBe(true);
+    expect(wrapper.contains(i18n.dontForget())).toBe(true);
+    expect(wrapper.contains(i18n.lockFollowing())).toBe(true);
+    expect(wrapper.contains('lesson1')).toBe(true);
   });
 
   it('loads initial data and calls get/set students for section', async () => {
@@ -183,7 +183,7 @@ describe('TeacherPanel', () => {
 
     await setUpWithMount(overrideProps);
 
-    expect(setStudentsForCurrentSectionStub).to.have.been.calledWith(55, []);
+    expect(setStudentsForCurrentSectionStub).toHaveBeenCalledWith(55, []);
 
     teacherPanelData.getStudentsForSection.restore();
   });
@@ -197,7 +197,7 @@ describe('TeacherPanel', () => {
 
     await setUpWithMount(overrideProps);
 
-    expect(setViewTypeStub).to.have.been.calledWith(ViewType.Instructor);
+    expect(setViewTypeStub).toHaveBeenCalledWith(ViewType.Instructor);
   });
 
   it('loads initial data and calls get/set lock status', async () => {
@@ -211,8 +211,8 @@ describe('TeacherPanel', () => {
     };
     await setUpWithMount(overrideProps);
 
-    expect(setSectionsStub).to.have.been.calledWith(teacherSections);
-    expect(setSectionLockStatusStub).to.have.been.calledWith(sectionLockStatus);
+    expect(setSectionsStub).toHaveBeenCalledWith(teacherSections);
+    expect(setSectionLockStatusStub).toHaveBeenCalledWith(sectionLockStatus);
 
     teacherPanelData.queryLockStatus.restore();
   });
@@ -223,7 +223,7 @@ describe('TeacherPanel', () => {
         viewAs: ViewType.Instructor,
         students: students,
       });
-      expect(wrapper.find(StudentTable)).to.have.length(1);
+      expect(wrapper.find(StudentTable)).toHaveLength(1);
     });
 
     it('does not display StudentTable for instructor with no students', () => {
@@ -231,7 +231,7 @@ describe('TeacherPanel', () => {
         viewAs: ViewType.Instructor,
         students: [],
       });
-      expect(wrapper.find(StudentTable)).to.have.length(0);
+      expect(wrapper.find(StudentTable)).toHaveLength(0);
     });
 
     it('does not display StudentTable for view page as participant', () => {
@@ -239,7 +239,7 @@ describe('TeacherPanel', () => {
         viewAs: ViewType.Participant,
         students: students,
       });
-      expect(wrapper.find(StudentTable)).to.have.length(0);
+      expect(wrapper.find(StudentTable)).toHaveLength(0);
     });
 
     it('calls selectUser when user is clicked with isAsync true when on overview page', () => {
@@ -265,7 +265,7 @@ describe('TeacherPanel', () => {
       const secondStudentInTable = wrapper.find('tr').at(1);
       secondStudentInTable.simulate('click');
 
-      expect(selectUserStub).to.have.been.calledWith(1, true);
+      expect(selectUserStub).toHaveBeenCalledWith(1, true);
     });
 
     it('calls selectUser when user is clicked with isAsync false when on level page', () => {
@@ -290,7 +290,7 @@ describe('TeacherPanel', () => {
       const secondStudentInTable = wrapper.find('tr').at(1);
       secondStudentInTable.simulate('click');
 
-      expect(selectUserStub).to.have.been.calledWith(1, false);
+      expect(selectUserStub).toHaveBeenCalledWith(1, false);
     });
   });
 
@@ -302,7 +302,7 @@ describe('TeacherPanel', () => {
         pageType: pageTypes.scriptOverview,
       });
 
-      expect(wrapper.find(SelectedStudentInfo)).to.have.length(0);
+      expect(wrapper.find(SelectedStudentInfo)).toHaveLength(0);
     });
 
     it('on level displays SelectedStudentInfo when students have loaded, passes expected props', () => {
@@ -315,9 +315,9 @@ describe('TeacherPanel', () => {
       });
 
       const selectedStudentComponent = wrapper.find(SelectedStudentInfo);
-      expect(selectedStudentComponent).to.have.length(1);
-      expect(selectedStudentComponent.props().teacherId).to.equal(5);
-      expect(selectedStudentComponent.props().selectedUserId).to.equal(1);
+      expect(selectedStudentComponent).toHaveLength(1);
+      expect(selectedStudentComponent.props().teacherId).toBe(5);
+      expect(selectedStudentComponent.props().selectedUserId).toBe(1);
 
       utils.queryParams.restore();
     });
@@ -331,7 +331,7 @@ describe('TeacherPanel', () => {
           'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view',
         ],
       });
-      expect(wrapper.find('Button')).to.have.length(0);
+      expect(wrapper.find('Button')).toHaveLength(0);
     });
 
     it('displays example solution for level with one example solution', () => {
@@ -343,7 +343,7 @@ describe('TeacherPanel', () => {
         ],
       });
 
-      expect(wrapper.find('Button')).to.have.length(1);
+      expect(wrapper.find('Button')).toHaveLength(1);
     });
 
     it('does not display example solution for level with no example solution', () => {
@@ -353,7 +353,7 @@ describe('TeacherPanel', () => {
         exampleSolutions: null,
       });
 
-      expect(wrapper.find('Button')).to.have.length(0);
+      expect(wrapper.find('Button')).toHaveLength(0);
     });
   });
 });

@@ -5,7 +5,7 @@ import sinon from 'sinon';
 
 import {useFetch} from '@cdo/apps/util/useFetch';
 
-import {expect} from '../../util/reconfiguredChai';
+
 import {allowConsoleErrors} from '../../util/testUtils';
 
 // Functional react component to host the useFetch hook
@@ -46,10 +46,10 @@ describe('useFetch', () => {
     mount(<UseFetchHarness url={'/'} options={{}} deps={[]} />);
     await processEventLoop();
 
-    expect(fetchSpy).to.be.calledOnce;
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
     const {data, error} = useFetchReturnValue.current;
-    expect(data).to.equal(expectedData);
-    expect(error).to.be.null;
+    expect(data).toBe(expectedData);
+    expect(error).toBeNull();
   });
 
   it('returns error on fetch error', async () => {
@@ -58,10 +58,10 @@ describe('useFetch', () => {
     mount(<UseFetchHarness url={'/'} options={{}} deps={[]} />);
     await processEventLoop();
 
-    expect(fetchSpy).to.be.calledOnce;
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
     const {data, error} = useFetchReturnValue.current;
-    expect(data).to.be.null;
-    expect(error).to.be.not.null;
+    expect(data).toBeNull();
+    expect(error).not.toBeNull();
   });
 
   it('returns error on HTTP error', async () => {
@@ -70,10 +70,10 @@ describe('useFetch', () => {
     mount(<UseFetchHarness url={'/'} options={{}} deps={[]} />);
     await processEventLoop();
 
-    expect(fetchSpy).to.be.calledOnce;
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
     const {data, error} = useFetchReturnValue.current;
-    expect(data).to.be.null;
-    expect(error).to.be.not.null;
+    expect(data).toBeNull();
+    expect(error).not.toBeNull();
   });
 
   it('returns correct values for loading', async () => {
@@ -86,12 +86,12 @@ describe('useFetch', () => {
     mount(<UseFetchHarness url={'/'} options={{}} deps={[]} />);
     await processEventLoop();
 
-    expect(useFetchReturnValue.current.loading).to.be.true;
+    expect(useFetchReturnValue.current.loading).toBe(true);
 
     const data = {};
     resolvePromise({ok: true, json: () => data});
     await processEventLoop();
 
-    expect(useFetchReturnValue.current.loading).to.be.false;
+    expect(useFetchReturnValue.current.loading).toBe(false);
   });
 });

@@ -7,7 +7,7 @@ import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
 import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
 import color from '@cdo/apps/util/color';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai';
 
 import {courses} from './homepagesTestData';
 
@@ -29,7 +29,7 @@ describe('SeeMoreCourses', () => {
     const wrapper = shallow(<SeeMoreCourses courses={courses} />);
     expect(wrapper.find('Button').exists());
     wrapper.find('Button').simulate('click');
-    expect(wrapper.find('Button').exists()).to.be.false;
+    expect(wrapper.find('Button').exists()).toBe(false);
     assert(
       wrapper.containsMatchingElement(
         <div>
@@ -69,7 +69,7 @@ describe('SeeMoreCourses', () => {
     );
     expect(wrapper.find('Button').exists());
     wrapper.find('Button').simulate('click');
-    expect(wrapper.find('Button').exists()).to.be.false;
+    expect(wrapper.find('Button').exists()).toBe(false);
     assert(
       wrapper.containsMatchingElement(
         <div>

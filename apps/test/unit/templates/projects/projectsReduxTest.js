@@ -329,7 +329,7 @@ describe('projectsRedux', () => {
       store.dispatch(action);
       server.respond();
 
-      assert(libraryApiStub.unpublish.calledOnce);
+      assert(libraryApiStub.toHaveBeenCalledTimes(1));
     });
 
     it('does not unpublish library if fetchProjectToUpdate fails', () => {
@@ -345,7 +345,7 @@ describe('projectsRedux', () => {
       server.respond();
 
       assert.equal(0, libraryApiStub.unpublish.callCount);
-      assert(onCompleteSpy.calledOnce);
+      assert(onCompleteSpy.toHaveBeenCalledTimes(1));
     });
   });
 });

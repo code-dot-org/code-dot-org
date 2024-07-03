@@ -5,7 +5,7 @@ import sinon from 'sinon';
 
 import RadioButton from '@cdo/apps/componentLibrary/radioButton';
 
-import {expect} from '../../util/reconfiguredChai';
+
 describe('Design System - Radio Button', () => {
   it('RadioButton - renders with correct label', () => {
     const radioButtonLabel = 'Radio Button label';
@@ -20,8 +20,8 @@ describe('Design System - Radio Button', () => {
 
     const radioButton = screen.getByDisplayValue('test-radioButton');
 
-    expect(radioButton).to.exist;
-    expect(screen.getByText(radioButtonLabel)).to.exist;
+    expect(radioButton).toBeDefined();
+    expect(screen.getByText(radioButtonLabel)).toBeDefined();
   });
 
   it('RadioButton - selects button when clicked, once selected - remains selected if clicked again', async () => {
@@ -47,9 +47,9 @@ describe('Design System - Radio Button', () => {
 
     let radioButton = screen.getByDisplayValue('test-radioButton');
 
-    expect(radioButton).to.exist;
-    expect(radioButton.checked).to.be.false;
-    expect(radioButton.disabled).to.be.false;
+    expect(radioButton).toBeDefined();
+    expect(radioButton.checked).toBe(false);
+    expect(radioButton.disabled).toBe(false);
 
     await user.click(radioButton);
 
@@ -66,10 +66,10 @@ describe('Design System - Radio Button', () => {
 
     radioButton = screen.getByDisplayValue('test-radioButton');
 
-    expect(spyOnChange).to.have.been.calledOnce;
-    expect(spyOnChange).to.have.been.calledWith(true);
-    expect(radioButton.checked).to.be.true;
-    expect(radioButton.disabled).to.be.false;
+    expect(spyOnChange).toHaveBeenCalledTimes(1);
+    expect(spyOnChange).toHaveBeenCalledWith(true);
+    expect(radioButton.checked).toBe(true);
+    expect(radioButton.disabled).toBe(false);
 
     await user.click(radioButton);
 
@@ -87,9 +87,9 @@ describe('Design System - Radio Button', () => {
     radioButton = screen.getByDisplayValue('test-radioButton');
 
     // RadioButton's onChange is only called when radioButton is not checked. Second click won't call onChange.
-    expect(spyOnChange).to.have.been.calledOnce;
-    expect(radioButton.checked).to.be.true;
-    expect(radioButton.disabled).to.be.false;
+    expect(spyOnChange).toHaveBeenCalledTimes(1);
+    expect(radioButton.checked).toBe(true);
+    expect(radioButton.disabled).toBe(false);
   });
 
   it("RadioButton - renders disabled radio button, doesn't change on click", async () => {
@@ -116,9 +116,9 @@ describe('Design System - Radio Button', () => {
 
     let radioButton = screen.getByDisplayValue('test-radioButton');
 
-    expect(radioButton).to.exist;
-    expect(radioButton.checked).to.be.false;
-    expect(radioButton.disabled).to.be.true;
+    expect(radioButton).toBeDefined();
+    expect(radioButton.checked).toBe(false);
+    expect(radioButton.disabled).toBe(true);
 
     await user.click(radioButton);
 
@@ -136,9 +136,9 @@ describe('Design System - Radio Button', () => {
 
     radioButton = screen.getByDisplayValue('test-radioButton');
 
-    expect(spyOnChange).to.not.have.been.called;
-    expect(radioButton.checked).to.be.false;
-    expect(radioButton.disabled).to.be.true;
+    expect(spyOnChange).not.toHaveBeenCalled();
+    expect(radioButton.checked).toBe(false);
+    expect(radioButton.disabled).toBe(true);
 
     await user.click(radioButton);
 
@@ -156,8 +156,8 @@ describe('Design System - Radio Button', () => {
 
     radioButton = screen.getByDisplayValue('test-radioButton');
 
-    expect(spyOnChange).to.not.have.been.called;
-    expect(radioButton.checked).to.be.false;
-    expect(radioButton.disabled).to.be.true;
+    expect(spyOnChange).not.toHaveBeenCalled();
+    expect(radioButton.checked).toBe(false);
+    expect(radioButton.disabled).toBe(true);
   });
 });

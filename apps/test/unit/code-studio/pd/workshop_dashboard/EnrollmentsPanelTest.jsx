@@ -107,7 +107,7 @@ describe('EnrollmentsPanel', () => {
     );
 
     wrapper.instance().handleEnrollmentRefresh();
-    assert(loadEnrollments.calledOnce);
+    assert(loadEnrollments.toHaveBeenCalledTimes(1));
   });
 
   it('open and close the move enrollments dialog', () => {
@@ -188,7 +188,7 @@ describe('EnrollmentsPanel', () => {
     );
     server.respond();
     wrapper.update();
-    assert(loadEnrollments.calledOnce);
+    assert(loadEnrollments.toHaveBeenCalledTimes(1));
   });
 
   it('edit an enrollment', () => {
@@ -240,7 +240,7 @@ describe('EnrollmentsPanel', () => {
     );
     server.respond();
     wrapper.update();
-    assert(loadEnrollments.calledOnce);
+    assert(loadEnrollments.toHaveBeenCalledTimes(1));
   });
 
   it('delete an enrollment', () => {
@@ -264,7 +264,7 @@ describe('EnrollmentsPanel', () => {
 
     wrapper.instance().handleDeleteEnrollment(enrollmentId);
     server.respond();
-    assert(loadEnrollments.calledOnce);
+    assert(loadEnrollments.toHaveBeenCalledTimes(1));
   });
 
   it('should show survey results button for CSF Intro past May 2020', () => {

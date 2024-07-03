@@ -1,5 +1,4 @@
-import {expect} from 'chai';
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import { shallow } from 'enzyme';
 import React from 'react';
 
 import QuestionAveragesTable from '@cdo/apps/code-studio/pd/workshop_dashboard/components/survey_results/question_averages_table';
@@ -19,7 +18,7 @@ describe('Question Averages Table', () => {
       elements.map(element => {
         return element.text();
       })
-    ).to.deep.equal(values);
+    ).toEqual(values);
   };
 
   it('Renders table for a single facilitator view', () => {
@@ -55,7 +54,7 @@ describe('Question Averages Table', () => {
       '4 / 5',
       '3.1 / 5',
     ]);
-    expect(questionAveragesTable.find('tbody tr').length).to.equal(2);
+    expect(questionAveragesTable.find('tbody tr').length).toBe(2);
   });
 
   it('Renders table for multiple facilitator view', () => {
@@ -103,6 +102,6 @@ describe('Question Averages Table', () => {
       '4 / 5',
       '3.1 / 5',
     ]);
-    expect(questionAveragesTable.find('tbody tr').length).to.equal(2);
+    expect(questionAveragesTable.find('tbody tr').length).toBe(2);
   });
 });

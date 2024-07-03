@@ -20,7 +20,7 @@ import {
   fakeState,
 } from '@cdo/apps/templates/sectionProgress/standards/standardsTestHelpers';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai';
 
 describe('sectionStandardsProgressRedux', () => {
   const initialState = sectionStandardsProgress(undefined, {});
@@ -29,7 +29,7 @@ describe('sectionStandardsProgressRedux', () => {
     it('returns true if lesson is in selected list', () => {
       expect(
         getLessonSelectionStatus(stateForTeacherMarkedCompletedLesson, lessonId)
-      ).to.equal(true);
+      ).toBe(true);
     });
     it('returns false if lesson is not in selected', () => {
       expect(
@@ -37,7 +37,7 @@ describe('sectionStandardsProgressRedux', () => {
           stateForTeacherMarkedIncompletedLesson,
           lessonId
         )
-      ).to.equal(false);
+      ).toBe(false);
     });
   });
 
@@ -304,7 +304,7 @@ describe('sectionStandardsProgressRedux', () => {
     it('incomplete when no teacher scores for lesson', () => {
       expect(
         getUnpluggedLessonCompletionStatus(fakeState, scriptId, lessonId)
-      ).to.deep.equal({
+      ).toEqual({
         completed: false,
         inProgress: false,
         numStudentsCompleted: 0,
@@ -318,7 +318,7 @@ describe('sectionStandardsProgressRedux', () => {
           scriptId,
           lessonId
         )
-      ).to.deep.equal({
+      ).toEqual({
         completed: false,
         inProgress: false,
         numStudentsCompleted: 0,
@@ -332,7 +332,7 @@ describe('sectionStandardsProgressRedux', () => {
           scriptId,
           lessonId
         )
-      ).to.deep.equal({
+      ).toEqual({
         completed: true,
         inProgress: false,
         numStudentsCompleted: 1,
@@ -344,7 +344,7 @@ describe('sectionStandardsProgressRedux', () => {
     it('accurately calculates no progress', () => {
       expect(
         getPluggedLessonCompletionStatus(fakeState, pluggedLesson)
-      ).to.deep.equal({
+      ).toEqual({
         completed: false,
         inProgress: false,
         numStudentsCompleted: 0,
@@ -357,7 +357,7 @@ describe('sectionStandardsProgressRedux', () => {
           stateForPartiallyCompletedLesson,
           pluggedLesson
         )
-      ).to.deep.equal({
+      ).toEqual({
         completed: false,
         inProgress: true,
         numStudentsCompleted: 2,
@@ -367,7 +367,7 @@ describe('sectionStandardsProgressRedux', () => {
     it('accurately calculates > 80% of students completed > 60% of levels', () => {
       expect(
         getPluggedLessonCompletionStatus(stateForCompletedLesson, pluggedLesson)
-      ).to.deep.equal({
+      ).toEqual({
         completed: true,
         inProgress: true,
         numStudentsCompleted: 4,
@@ -377,17 +377,17 @@ describe('sectionStandardsProgressRedux', () => {
 
   describe('getNumberLessonsCompleted', () => {
     it('accurately calculates number of lessons completed when there is no student progress', () => {
-      expect(getNumberLessonsCompleted(fakeState)).to.equal(0);
+      expect(getNumberLessonsCompleted(fakeState)).toBe(0);
     });
 
     it('accurately calculates the number of lessons completed when there is student progress', () => {
-      expect(getNumberLessonsCompleted(stateForCompletedLesson)).to.equal(1);
+      expect(getNumberLessonsCompleted(stateForCompletedLesson)).toBe(1);
     });
 
     it('accurately calculates the number of lessons completed when there is student progress and teacher marked', () => {
       expect(
         getNumberLessonsCompleted(stateForTeacherMarkedAndProgress)
-      ).to.equal(2);
+      ).toBe(2);
     });
   });
 });

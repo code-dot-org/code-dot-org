@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import Button from '@cdo/apps/templates/Button';
 import {UnconnectedEndOfLessonDialog as EndOfLessonDialog} from '@cdo/apps/templates/EndOfLessonDialog';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 const DEFAULT_PROPS = {
   lessonNumber: 2,
@@ -22,13 +22,13 @@ describe('EndOfLessonDialog', () => {
     const wrapper = setUp();
 
     it('displays expected header', () => {
-      expect(wrapper.contains('You finished Lesson 2!')).to.be.true;
+      expect(wrapper.contains('You finished Lesson 2!')).toBe(true);
     });
 
     it('displays expected message', () => {
       expect(
         wrapper.contains('Check in with your teacher for the next activity.')
-      ).to.be.true;
+      ).toBe(true);
     });
   });
 
@@ -42,7 +42,7 @@ describe('EndOfLessonDialog', () => {
 
     const wrapper = setUp({isSummaryView: true});
     wrapper.find(Button).simulate('click');
-    expect(scrollIntoViewSpy).to.have.been.called;
+    expect(scrollIntoViewSpy).toHaveBeenCalled();
 
     document.getElementById.restore();
   });
@@ -57,7 +57,7 @@ describe('EndOfLessonDialog', () => {
 
     const wrapper = setUp({isSummaryView: false});
     wrapper.find(Button).simulate('click');
-    expect(scrollIntoViewSpy).to.have.been.called;
+    expect(scrollIntoViewSpy).toHaveBeenCalled();
 
     document.getElementById.restore();
   });

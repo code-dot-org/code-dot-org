@@ -6,7 +6,7 @@ import * as utils from '@cdo/apps/code-studio/utils';
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
 import * as windowUtils from '@cdo/apps/utils';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('SectionsSetUpContainer', () => {
   afterEach(() => {
@@ -15,31 +15,29 @@ describe('SectionsSetUpContainer', () => {
   it('renders an initial set up section form', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
-    expect(wrapper.find('SingleSectionSetUp').length).to.equal(1);
+    expect(wrapper.find('SingleSectionSetUp').length).toBe(1);
   });
 
   it('renders headers and button', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
-    expect(wrapper.find('Heading1').length).to.equal(1);
-    expect(wrapper.find('Button').length).to.equal(4);
-    expect(wrapper.find('Button').last().props().text).to.equal(
-      'Finish creating sections'
-    );
+    expect(wrapper.find('Heading1').length).toBe(1);
+    expect(wrapper.find('Button').length).toBe(4);
+    expect(wrapper.find('Button').last().props().text).toBe('Finish creating sections');
   });
 
   it('renders edit header and save button', () => {
     const wrapper = shallow(<SectionsSetUpContainer sectionToBeEdited={{}} />);
 
-    expect(wrapper.find('Heading1').length).to.equal(1);
-    expect(wrapper.find('Button').length).to.equal(3);
-    expect(wrapper.find('Button').last().props().text).to.equal('Save');
+    expect(wrapper.find('Heading1').length).toBe(1);
+    expect(wrapper.find('Button').length).toBe(3);
+    expect(wrapper.find('Button').last().props().text).toBe('Save');
   });
 
   it('renders curriculum quick assign', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
-    expect(wrapper.find('CurriculumQuickAssign').length).to.equal(1);
+    expect(wrapper.find('CurriculumQuickAssign').length).toBe(1);
   });
 
   it('renders Child Account Policy Notice for US, student and email sections', () => {
@@ -51,7 +49,7 @@ describe('SectionsSetUpContainer', () => {
       .returns('student');
 
     const wrapper = shallow(<SectionsSetUpContainer userCountry={'US'} />);
-    expect(wrapper.find('Connect(Notification)').exists()).to.equal(true);
+    expect(wrapper.find('Connect(Notification)').exists()).toBe(true);
   });
 
   it('does not render Child Account Policy Notice when sections are not email', () => {
@@ -63,7 +61,7 @@ describe('SectionsSetUpContainer', () => {
       .returns('student');
 
     const wrapper = shallow(<SectionsSetUpContainer userCountry={'US'} />);
-    expect(wrapper.find('Connect(Notification)').exists()).to.equal(false);
+    expect(wrapper.find('Connect(Notification)').exists()).toBe(false);
   });
 
   it('does not render Child Account Policy Notice for country different that US', () => {
@@ -75,24 +73,24 @@ describe('SectionsSetUpContainer', () => {
       .returns('student');
 
     const wrapper = shallow(<SectionsSetUpContainer userCountry={'ES'} />);
-    expect(wrapper.find('Connect(Notification)').exists()).to.equal(false);
+    expect(wrapper.find('Connect(Notification)').exists()).toBe(false);
   });
 
   it('renders coteacher settings', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
-    expect(wrapper.find('InfoHelpTip').length).to.equal(1);
+    expect(wrapper.find('InfoHelpTip').length).toBe(1);
   });
 
   it('updates caret direction when Add Coteachers is clicked', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
-    expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-right');
+    expect(wrapper.find('Button').at(0).props().icon).toBe('caret-right');
     wrapper
       .find('Button')
       .at(0)
       .simulate('click', {preventDefault: () => {}});
-    expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-down');
+    expect(wrapper.find('Button').at(0).props().icon).toBe('caret-down');
   });
 
   it('renders advanced settings', () => {
@@ -103,18 +101,18 @@ describe('SectionsSetUpContainer', () => {
       .at(1)
       .simulate('click', {preventDefault: () => {}});
 
-    expect(wrapper.find('AdvancedSettingToggles').length).to.equal(1);
+    expect(wrapper.find('AdvancedSettingToggles').length).toBe(1);
   });
 
   it('updates caret direction when Advanced Settings is clicked', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
 
-    expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-right');
+    expect(wrapper.find('Button').at(0).props().icon).toBe('caret-right');
     wrapper
       .find('Button')
       .at(1)
       .simulate('click', {preventDefault: () => {}});
-    expect(wrapper.find('Button').at(1).props().icon).to.equal('caret-down');
+    expect(wrapper.find('Button').at(1).props().icon).toBe('caret-down');
   });
 
   it('validates the form when save is clicked', () => {
@@ -134,7 +132,7 @@ describe('SectionsSetUpContainer', () => {
       .last()
       .simulate('click', {preventDefault: () => {}});
 
-    expect(reportSpy).to.have.been.called.once;
+    expect(reportSpy).toHaveBeenCalled().once;
   });
 
   it('makes an ajax request when save is clicked', async () => {
@@ -159,11 +157,11 @@ describe('SectionsSetUpContainer', () => {
       .last()
       .simulate('click', {preventDefault: () => {}});
 
-    expect(fetchSpy).to.have.been.called.once;
+    expect(fetchSpy).toHaveBeenCalled().once;
 
     await new Promise(resolve => setTimeout(resolve, 0));
-    expect(navigateToHrefSpy).to.have.been.called.once;
-    expect(navigateToHrefSpy.getCall(0).args[0]).to.include('/home');
+    expect(navigateToHrefSpy).toHaveBeenCalled().once;
+    expect(navigateToHrefSpy.getCall(0).args[0]).toContain('/home');
   });
 
   it('appends showSectionCreationDialog to url if isUsersFirstSection is true', async () => {
@@ -188,13 +186,11 @@ describe('SectionsSetUpContainer', () => {
       .last()
       .simulate('click', {preventDefault: () => {}});
 
-    expect(fetchSpy).to.have.been.called.once;
+    expect(fetchSpy).toHaveBeenCalled().once;
 
     await new Promise(resolve => setTimeout(resolve, 0));
-    expect(navigateToHrefSpy).to.have.been.called.once;
-    expect(navigateToHrefSpy.getCall(0).args[0]).to.include(
-      '/home?showSectionCreationDialog=true'
-    );
+    expect(navigateToHrefSpy).toHaveBeenCalled().once;
+    expect(navigateToHrefSpy.getCall(0).args[0]).toContain('/home?showSectionCreationDialog=true');
   });
 
   it('passes participantType and loginType to ajax request when save is clicked', () => {
@@ -223,10 +219,10 @@ describe('SectionsSetUpContainer', () => {
       .last()
       .simulate('click', {preventDefault: () => {}});
 
-    expect(fetchSpy).to.have.been.called.once;
+    expect(fetchSpy).toHaveBeenCalled().once;
     const fetchBody = JSON.parse(fetchSpy.getCall(0).args[1].body);
-    expect(fetchBody.login_type).to.equal('word');
-    expect(fetchBody.participant_type).to.equal('student');
+    expect(fetchBody.login_type).toBe('word');
+    expect(fetchBody.participant_type).toBe('student');
   });
 
   it('passes url attribute to make a new section if save and create new is clicked', () => {
@@ -253,6 +249,6 @@ describe('SectionsSetUpContainer', () => {
       .at(buttons.length - 2)
       .simulate('click', {preventDefault: () => {}});
 
-    expect(fetchSpy).to.have.been.called.once;
+    expect(fetchSpy).toHaveBeenCalled().once;
   });
 });

@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import {UnconnectedKVPairs as KVPairs} from '@cdo/apps/storage/dataBrowser/KVPairs';
 import commonI18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('KVPairs', () => {
   describe('localization', () => {
@@ -39,9 +39,9 @@ describe('KVPairs', () => {
       let valueHeader = table.find('th').at(1);
       let actionsHeader = table.find('th').at(2);
 
-      expect(keyHeader.text()).to.contain('i18n-data-table-key');
-      expect(valueHeader.text()).to.contain('i18n-data-table-value');
-      expect(actionsHeader.text()).to.contain('i18n-actions');
+      expect(keyHeader.text()).toContain('i18n-data-table-key');
+      expect(valueHeader.text()).toContain('i18n-data-table-value');
+      expect(actionsHeader.text()).toContain('i18n-actions');
     });
   });
 });

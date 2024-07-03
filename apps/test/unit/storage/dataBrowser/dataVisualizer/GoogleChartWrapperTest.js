@@ -6,7 +6,7 @@ import GoogleChart from '@cdo/apps/applab/GoogleChart';
 import {ChartType} from '@cdo/apps/storage/dataBrowser/dataUtils';
 import GoogleChartWrapper from '@cdo/apps/storage/dataBrowser/dataVisualizer/GoogleChartWrapper';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 describe('GoogleChartWrapper', () => {
   describe('updateChart', () => {
@@ -53,8 +53,8 @@ describe('GoogleChartWrapper', () => {
         },
       };
 
-      expect(spy).to.have.been.calledOnce;
-      expect(spy.getCalls()[0].args).to.deep.equal([
+      expect(spy).toHaveBeenCalledTimes(1);
+      expect(spy.getCalls()[0].args).toEqual([
         expectedChartData,
         ['category1', 'count'],
         expectedChartOptions,
@@ -94,8 +94,8 @@ describe('GoogleChartWrapper', () => {
         />
       );
 
-      expect(spy).to.have.been.calledOnce;
-      expect(spy.getCalls()[0].args).to.deep.equal([
+      expect(spy).toHaveBeenCalledTimes(1);
+      expect(spy.getCalls()[0].args).toEqual([
         expectedChartData,
         ['category2'],
         {...expectedChartOptions, histogram: {bucketSize: '2'}},
@@ -132,8 +132,8 @@ describe('GoogleChartWrapper', () => {
           chartTitle="Title"
         />
       );
-      expect(spy).to.have.been.calledOnce;
-      expect(spy.getCalls()[0].args).to.deep.equal([
+      expect(spy).toHaveBeenCalledTimes(1);
+      expect(spy.getCalls()[0].args).toEqual([
         expectedChartData,
         ['category2', 'category3'],
         expectedChartOptions,

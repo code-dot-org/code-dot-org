@@ -8,7 +8,7 @@ import {CP_API} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Playgrou
 import * as utils from '@cdo/apps/utils';
 import msg from '@cdo/locale';
 
-import {expect, assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 describe('project.js', () => {
@@ -40,300 +40,262 @@ describe('project.js', () => {
   describe('getNewProjectName()', () => {
     it('for applab', () => {
       window.appOptions.app = 'applab';
-      expect(project.getNewProjectName()).to.equal(
-        msg.defaultProjectNameAppLab()
-      );
+      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameAppLab());
     });
 
     it('for gamelab', () => {
       window.appOptions.app = 'gamelab';
-      expect(project.getNewProjectName()).to.equal(
-        msg.defaultProjectNameGameLab()
-      );
+      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameGameLab());
     });
 
     it('for weblab', () => {
       window.appOptions.app = 'weblab';
-      expect(project.getNewProjectName()).to.equal(
-        msg.defaultProjectNameWebLab()
-      );
+      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameWebLab());
     });
 
     it('for artist', () => {
       window.appOptions.app = 'turtle';
       window.appOptions.skinId = 'artist';
-      expect(project.getNewProjectName()).to.equal(
-        msg.defaultProjectNameArtist()
-      );
+      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameArtist());
     });
 
     it('for artist_zombie', () => {
       window.appOptions.app = 'turtle';
       window.appOptions.skinId = 'artist_zombie';
-      expect(project.getNewProjectName()).to.equal(
-        msg.defaultProjectNameArtist()
-      );
+      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameArtist());
     });
 
     it('for anna', () => {
       window.appOptions.app = 'turtle';
       window.appOptions.skinId = 'anna';
-      expect(project.getNewProjectName()).to.equal(
-        msg.defaultProjectNameFrozen()
-      );
+      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameFrozen());
     });
 
     it('for elsa', () => {
       window.appOptions.app = 'turtle';
       window.appOptions.skinId = 'elsa';
-      expect(project.getNewProjectName()).to.equal(
-        msg.defaultProjectNameFrozen()
-      );
+      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameFrozen());
     });
 
     it('for Big Game', () => {
       window.appOptions.app = 'studio';
       window.appOptions.level = {useContractEditor: true};
-      expect(project.getNewProjectName()).to.equal(
-        msg.defaultProjectNameBigGame()
-      );
+      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameBigGame());
     });
 
     it('for Play Lab', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'studio';
-      expect(project.getNewProjectName()).to.equal(
-        msg.defaultProjectNamePlayLab()
-      );
+      expect(project.getNewProjectName()).toBe(msg.defaultProjectNamePlayLab());
     });
 
     it('for infinity', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'infinity';
-      expect(project.getNewProjectName()).to.equal(
-        msg.defaultProjectNameInfinity()
-      );
+      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameInfinity());
     });
 
     it('for gumball', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'gumball';
-      expect(project.getNewProjectName()).to.equal(
-        msg.defaultProjectNameGumball()
-      );
+      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameGumball());
     });
 
     it('for iceage', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'iceage';
-      expect(project.getNewProjectName()).to.equal(
-        msg.defaultProjectNameIceAge()
-      );
+      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameIceAge());
     });
 
     it('for Star Wars', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'hoc2015';
-      expect(project.getNewProjectName()).to.equal(
-        msg.defaultProjectNameStarWars()
-      );
+      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameStarWars());
     });
 
     it('for craft', () => {
       window.appOptions.app = 'craft';
-      expect(project.getNewProjectName()).to.equal(
-        msg.defaultProjectNameMinecraft()
-      );
+      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameMinecraft());
     });
 
     it('for flappy', () => {
       window.appOptions.app = 'flappy';
-      expect(project.getNewProjectName()).to.equal(
-        msg.defaultProjectNameFlappy()
-      );
+      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameFlappy());
     });
 
     it('for bounce', () => {
       window.appOptions.app = 'bounce';
-      expect(project.getNewProjectName()).to.equal(
-        msg.defaultProjectNameBounce()
-      );
+      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameBounce());
     });
 
     it('for sports', () => {
       window.appOptions.app = 'bounce';
       window.appOptions.skinId = 'sports';
-      expect(project.getNewProjectName()).to.equal(
-        msg.defaultProjectNameSports()
-      );
+      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameSports());
     });
 
     it('for basketball', () => {
       window.appOptions.app = 'bounce';
       window.appOptions.skinId = 'basketball';
-      expect(project.getNewProjectName()).to.equal(
-        msg.defaultProjectNameBasketball()
-      );
+      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameBasketball());
     });
 
     it('for dance', () => {
       window.appOptions.app = 'dance';
-      expect(project.getNewProjectName()).to.equal(
-        msg.defaultProjectNameDance()
-      );
+      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameDance());
     });
 
     it('default case', () => {
       window.appOptions.app = 'someOtherType';
-      expect(project.getNewProjectName()).to.equal(msg.defaultProjectName());
+      expect(project.getNewProjectName()).toBe(msg.defaultProjectName());
     });
   });
 
   describe('getStandaloneApp()', () => {
     it('for any level with a predefined project type', () => {
       window.appOptions.level = {projectType: 'foobar'};
-      expect(project.getStandaloneApp()).to.equal('foobar');
+      expect(project.getStandaloneApp()).toBe('foobar');
     });
 
     it('for applab', () => {
       window.appOptions.app = 'applab';
-      expect(project.getStandaloneApp()).to.equal('applab');
+      expect(project.getStandaloneApp()).toBe('applab');
     });
 
     it('for dance', () => {
       window.appOptions.app = 'dance';
-      expect(project.getStandaloneApp()).to.equal('dance');
+      expect(project.getStandaloneApp()).toBe('dance');
     });
 
     it('for flappy', () => {
       window.appOptions.app = 'flappy';
-      expect(project.getStandaloneApp()).to.equal('flappy');
+      expect(project.getStandaloneApp()).toBe('flappy');
     });
 
     it('for weblab', () => {
       window.appOptions.app = 'weblab';
-      expect(project.getStandaloneApp()).to.equal('weblab');
+      expect(project.getStandaloneApp()).toBe('weblab');
     });
 
     it('for gamelab', () => {
       window.appOptions.app = 'gamelab';
-      expect(project.getStandaloneApp()).to.equal('gamelab');
+      expect(project.getStandaloneApp()).toBe('gamelab');
     });
 
     it('for spritelab', () => {
       window.appOptions.app = 'spritelab';
-      expect(project.getStandaloneApp()).to.equal('spritelab');
+      expect(project.getStandaloneApp()).toBe('spritelab');
     });
 
     it('for artist', () => {
       window.appOptions.app = 'turtle';
-      expect(project.getStandaloneApp()).to.equal('artist');
+      expect(project.getStandaloneApp()).toBe('artist');
     });
 
     it('for artist_k1', () => {
       window.appOptions.app = 'turtle';
       window.appOptions.level = {isK1: true};
-      expect(project.getStandaloneApp()).to.equal('artist_k1');
+      expect(project.getStandaloneApp()).toBe('artist_k1');
     });
 
     it('for frozen', () => {
       window.appOptions.app = 'turtle';
       window.appOptions.skinId = _.sample(['anna', 'elsa']);
-      expect(project.getStandaloneApp()).to.equal('frozen');
+      expect(project.getStandaloneApp()).toBe('frozen');
     });
 
     it('for minecraft_adventurer', () => {
       window.appOptions.app = 'craft';
-      expect(project.getStandaloneApp()).to.equal('minecraft_adventurer');
+      expect(project.getStandaloneApp()).toBe('minecraft_adventurer');
     });
 
     it('for minecraft_hero', () => {
       window.appOptions.app = 'craft';
       window.appOptions.level = {isAgentLevel: true};
-      expect(project.getStandaloneApp()).to.equal('minecraft_hero');
+      expect(project.getStandaloneApp()).toBe('minecraft_hero');
     });
 
     it('for minecraft_designer', () => {
       window.appOptions.app = 'craft';
       window.appOptions.level = {isEventLevel: true};
-      expect(project.getStandaloneApp()).to.equal('minecraft_designer');
+      expect(project.getStandaloneApp()).toBe('minecraft_designer');
     });
 
     it('for minecraft_codebuilder', () => {
       window.appOptions.app = 'craft';
       window.appOptions.level = {isConnectionLevel: true};
-      expect(project.getStandaloneApp()).to.equal('minecraft_codebuilder');
+      expect(project.getStandaloneApp()).toBe('minecraft_codebuilder');
     });
 
     it('for playlab', () => {
       window.appOptions.app = 'studio';
-      expect(project.getStandaloneApp()).to.equal('playlab');
+      expect(project.getStandaloneApp()).toBe('playlab');
     });
 
     it('for playlab_k1', () => {
       window.appOptions.app = 'studio';
       window.appOptions.level = {isK1: true};
-      expect(project.getStandaloneApp()).to.equal('playlab_k1');
+      expect(project.getStandaloneApp()).toBe('playlab_k1');
     });
 
     it('for algebra_game', () => {
       window.appOptions.app = 'studio';
       window.appOptions.level = {useContractEditor: true};
-      expect(project.getStandaloneApp()).to.equal('algebra_game');
+      expect(project.getStandaloneApp()).toBe('algebra_game');
     });
 
     it('for starwars', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'hoc2015';
       window.appOptions.droplet = true;
-      expect(project.getStandaloneApp()).to.equal('starwars');
+      expect(project.getStandaloneApp()).toBe('starwars');
     });
 
     it('for starwarsblocks_hour', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'hoc2015';
       window.appOptions.droplet = false;
-      expect(project.getStandaloneApp()).to.equal('starwarsblocks_hour');
+      expect(project.getStandaloneApp()).toBe('starwarsblocks_hour');
     });
 
     it('for iceage', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'iceage';
-      expect(project.getStandaloneApp()).to.equal('iceage');
+      expect(project.getStandaloneApp()).toBe('iceage');
     });
 
     it('for infinity', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'infinity';
-      expect(project.getStandaloneApp()).to.equal('infinity');
+      expect(project.getStandaloneApp()).toBe('infinity');
     });
 
     it('for gumball', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'gumball';
-      expect(project.getStandaloneApp()).to.equal('gumball');
+      expect(project.getStandaloneApp()).toBe('gumball');
     });
 
     it('for bounce', () => {
       window.appOptions.app = 'bounce';
-      expect(project.getStandaloneApp()).to.equal('bounce');
+      expect(project.getStandaloneApp()).toBe('bounce');
     });
 
     it('for sports', () => {
       window.appOptions.app = 'bounce';
       window.appOptions.skinId = 'sports';
-      expect(project.getStandaloneApp()).to.equal('sports');
+      expect(project.getStandaloneApp()).toBe('sports');
     });
 
     it('for basketball', () => {
       window.appOptions.app = 'bounce';
       window.appOptions.skinId = 'basketball';
-      expect(project.getStandaloneApp()).to.equal('basketball');
+      expect(project.getStandaloneApp()).toBe('basketball');
     });
 
     it('default case', () => {
       window.appOptions.app = 'someothertype';
-      expect(project.getStandaloneApp()).to.be.null;
+      expect(project.getStandaloneApp()).toBeNull();
     });
   });
 
@@ -351,27 +313,27 @@ describe('project.js', () => {
 
     it('typical url', function () {
       url = 'http://url';
-      expect(project.getProjectUrl('/view')).to.equal('http://url/view');
+      expect(project.getProjectUrl('/view')).toBe('http://url/view');
     });
 
     it('with ending slashes', function () {
       url = 'http://url//';
-      expect(project.getProjectUrl('/view')).to.equal('http://url/view');
+      expect(project.getProjectUrl('/view')).toBe('http://url/view');
     });
 
     it('with query string', function () {
       url = 'http://url?query';
-      expect(project.getProjectUrl('/view')).to.equal('http://url/view?query');
+      expect(project.getProjectUrl('/view')).toBe('http://url/view?query');
     });
 
     it('with hash', function () {
       url = 'http://url#hash';
-      expect(project.getProjectUrl('/view')).to.equal('http://url/view');
+      expect(project.getProjectUrl('/view')).toBe('http://url/view');
     });
 
     it('with ending slashes, query, and hash', function () {
       url = 'http://url/?query#hash';
-      expect(project.getProjectUrl('/view')).to.equal('http://url/view?query');
+      expect(project.getProjectUrl('/view')).toBe('http://url/view?query');
     });
   });
 
@@ -430,12 +392,12 @@ describe('project.js', () => {
               setFakeLocation(
                 `${origin}/projects/${appType}/${fakeProjectId}/edit`
               );
-              expect(project.getShareUrl()).to.equal(expected);
+              expect(project.getShareUrl()).toBe(expected);
             });
 
             it(`from a script level`, () => {
               setFakeLocation(`${origin}/s/csp3-2019/lessons/10/levels/4`);
-              expect(project.getShareUrl()).to.equal(expected);
+              expect(project.getShareUrl()).toBe(expected);
             });
           });
         });
@@ -449,19 +411,19 @@ describe('project.js', () => {
               setFakeLocation(
                 `${origin}/projects/${appType}/${fakeProjectId}/edit`
               );
-              expect(project.getShareUrl()).to.equal(expected);
+              expect(project.getShareUrl()).toBe(expected);
             });
 
             it(`from project view page`, () => {
               setFakeLocation(
                 `${origin}/projects/${appType}/${fakeProjectId}/view`
               );
-              expect(project.getShareUrl()).to.equal(expected);
+              expect(project.getShareUrl()).toBe(expected);
             });
 
             it(`from a script level`, () => {
               setFakeLocation(`${origin}/s/csp3-2019/lessons/10/levels/4`);
-              expect(project.getShareUrl()).to.equal(expected);
+              expect(project.getShareUrl()).toBe(expected);
             });
           });
         });
@@ -476,9 +438,9 @@ describe('project.js', () => {
       setData({sharedWith: oldClassList});
       sinon.stub(project, 'updateChannels_');
 
-      expect(project.getCurrentLibrarySharedClasses()).to.equal(oldClassList);
+      expect(project.getCurrentLibrarySharedClasses()).toBe(oldClassList);
       project.setLibrarySharedClasses(newClassList);
-      expect(project.getCurrentLibrarySharedClasses()).to.equal(newClassList);
+      expect(project.getCurrentLibrarySharedClasses()).toBe(newClassList);
 
       setData({});
       project.updateChannels_.restore();
@@ -489,9 +451,9 @@ describe('project.js', () => {
       setData({sharedWith: oldClassList});
       sinon.stub(project, 'updateChannels_');
 
-      expect(project.getCurrentLibrarySharedClasses()).to.equal(oldClassList);
+      expect(project.getCurrentLibrarySharedClasses()).toBe(oldClassList);
       project.setLibrarySharedClasses(2);
-      expect(project.getCurrentLibrarySharedClasses()).to.equal(oldClassList);
+      expect(project.getCurrentLibrarySharedClasses()).toBe(oldClassList);
 
       setData({});
       project.updateChannels_.restore();
@@ -512,24 +474,24 @@ describe('project.js', () => {
       let oldName = 'initialLibrary';
       let newName = 'newLibraryName';
       setData({libraryName: oldName});
-      expect(project.getCurrentLibraryName()).to.equal(oldName);
+      expect(project.getCurrentLibraryName()).toBe(oldName);
 
       project.setLibraryDetails({libraryName: newName});
 
-      expect(project.getCurrentLibraryName()).to.equal(newName);
-      expect(project.updateChannels_).to.have.been.called;
+      expect(project.getCurrentLibraryName()).toBe(newName);
+      expect(project.updateChannels_).toHaveBeenCalled();
     });
 
     it('updates current library description if libraryDescription provided', () => {
       let oldDescription = 'initialDescription';
       let newDescription = 'newLibraryDescription';
       setData({libraryDescription: oldDescription});
-      expect(project.getCurrentLibraryDescription()).to.equal(oldDescription);
+      expect(project.getCurrentLibraryDescription()).toBe(oldDescription);
 
       project.setLibraryDetails({libraryDescription: newDescription});
 
-      expect(project.getCurrentLibraryDescription()).to.equal(newDescription);
-      expect(project.updateChannels_).to.have.been.called;
+      expect(project.getCurrentLibraryDescription()).toBe(newDescription);
+      expect(project.updateChannels_).toHaveBeenCalled();
     });
 
     it('updates current latestLibraryVersion if latestLibraryVersion provided', () => {
@@ -537,40 +499,40 @@ describe('project.js', () => {
       let newVersion = '654321';
       setData({latestLibraryVersion: oldVersion});
       let currentProject = project.__TestInterface.getCurrent();
-      expect(currentProject.latestLibraryVersion).to.equal(oldVersion);
+      expect(currentProject.latestLibraryVersion).toBe(oldVersion);
 
       project.setLibraryDetails({latestLibraryVersion: newVersion});
 
       currentProject = project.__TestInterface.getCurrent();
-      expect(currentProject.latestLibraryVersion).to.equal(newVersion);
+      expect(currentProject.latestLibraryVersion).toBe(newVersion);
 
       project.setLibraryDetails({latestLibraryVersion: -1});
 
       currentProject = project.__TestInterface.getCurrent();
-      expect(currentProject.latestLibraryVersion).to.be.null;
+      expect(currentProject.latestLibraryVersion).toBeNull();
     });
 
     it('updates current publishLibrary if publishing is true', () => {
       setData({publishLibrary: false});
       let currentProject = project.__TestInterface.getCurrent();
-      expect(currentProject.publishLibrary).to.be.false;
+      expect(currentProject.publishLibrary).toBe(false);
 
       project.setLibraryDetails({publishing: true});
 
       currentProject = project.__TestInterface.getCurrent();
-      expect(currentProject.publishLibrary).to.be.true;
+      expect(currentProject.publishLibrary).toBe(true);
     });
 
     it('nullifies current libraryPublishedAt if publishing is false', () => {
       const oldPublishedAt = new Date();
       setData({libraryPublishedAt: oldPublishedAt});
       let currentProject = project.__TestInterface.getCurrent();
-      expect(currentProject.libraryPublishedAt).to.equal(oldPublishedAt);
+      expect(currentProject.libraryPublishedAt).toBe(oldPublishedAt);
 
       project.setLibraryDetails({publishing: false});
 
       currentProject = project.__TestInterface.getCurrent();
-      expect(currentProject.libraryPublishedAt).to.be.null;
+      expect(currentProject.libraryPublishedAt).toBeNull();
     });
 
     it('does not overwrite current with undefined/missing config properties', () => {
@@ -590,14 +552,10 @@ describe('project.js', () => {
       });
 
       currentProject = project.__TestInterface.getCurrent();
-      expect(currentProject.libraryName).to.equal(lib.libraryName);
-      expect(currentProject.libraryDescription).to.equal('new description');
-      expect(currentProject.latestLibraryVersion).to.equal(
-        lib.latestLibraryVersion
-      );
-      expect(currentProject.libraryPublishedAt).to.equal(
-        lib.libraryPublishedAt
-      );
+      expect(currentProject.libraryName).toBe(lib.libraryName);
+      expect(currentProject.libraryDescription).toBe('new description');
+      expect(currentProject.latestLibraryVersion).toBe(lib.latestLibraryVersion);
+      expect(currentProject.libraryPublishedAt).toBe(lib.libraryPublishedAt);
     });
   });
 
@@ -619,10 +577,10 @@ describe('project.js', () => {
       sourceHandler.getLibrariesList.returns(undefined);
       project.init(sourceHandler);
       return project.setProjectLibraries(library).then(() => {
-        expect(project.saveSourceAndHtml_).to.have.been.called;
+        expect(project.saveSourceAndHtml_).toHaveBeenCalled();
         expect(
           project.saveSourceAndHtml_.getCall(0).args[0].libraries
-        ).to.equal(library);
+        ).toBe(library);
       });
     });
 
@@ -633,11 +591,11 @@ describe('project.js', () => {
       return project.setProjectLibraries(library).then(() => {
         expect(
           project.saveSourceAndHtml_.getCall(0).args[0].libraries
-        ).to.equal(library);
+        ).toBe(library);
         return project.setProjectLibraries(result).then(() => {
           expect(
             project.saveSourceAndHtml_.getCall(1).args[0].libraries
-          ).to.equal(result);
+          ).toBe(result);
         });
       });
     });
@@ -660,10 +618,10 @@ describe('project.js', () => {
       sourceHandler.getMakerAPIsEnabled.returns(false);
       project.init(sourceHandler);
       return project.setMakerEnabled(CP_API).then(() => {
-        expect(project.saveSourceAndHtml_).to.have.been.called;
+        expect(project.saveSourceAndHtml_).toHaveBeenCalled();
         expect(
           project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled
-        ).to.equal(CP_API);
+        ).toBe(CP_API);
       });
     });
 
@@ -671,17 +629,16 @@ describe('project.js', () => {
       sourceHandler.getMakerAPIsEnabled.returns(true);
       project.init(sourceHandler);
       return project.setMakerEnabled(null).then(() => {
-        expect(project.saveSourceAndHtml_).to.have.been.called;
-        expect(project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled)
-          .to.be.null;
+        expect(project.saveSourceAndHtml_).toHaveBeenCalled();
+        expect(project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled).toBeNull();
       });
     });
 
     it('always results in a page reload', () => {
       project.init(sourceHandler);
-      expect(utils.reload).not.to.have.been.called;
+      expect(utils.reload).not.toHaveBeenCalled();
       return project.setMakerEnabled(null).then(() => {
-        expect(utils.reload).to.have.been.called;
+        expect(utils.reload).toHaveBeenCalled();
       });
     });
   });
@@ -693,7 +650,7 @@ describe('project.js', () => {
 
     it('saves selected song', () => {
       return project.saveSelectedSong('peas').then(() => {
-        expect(sourceHandler.setSelectedSong).to.have.been.called;
+        expect(sourceHandler.setSelectedSong).toHaveBeenCalled();
       });
     });
   });
@@ -723,9 +680,9 @@ describe('project.js', () => {
       stubPutMainJson(server);
       project.__TestInterface.setCurrentSourceVersionId('fakeid');
       await project.copy('Remixed project');
-      expect(server.requests[1].url).to.match(/main.json/);
-      expect(server.requests[1].url).not.to.match(/currentVersion=/);
-      expect(server.requests[1].url).not.to.match(/replace=(true|false)/);
+      expect(server.requests[1].url).toMatch(/main.json/);
+      expect(server.requests[1].url).not.toMatch(/currentVersion=/);
+      expect(server.requests[1].url).not.toMatch(/replace=(true|false)/);
     });
   });
 
@@ -762,7 +719,7 @@ describe('project.js', () => {
         stubGetChannels(server);
         stubGetMainJson(server);
         project.load().then(() => {
-          expect(utils.navigateToHref).not.to.have.been.called;
+          expect(utils.navigateToHref).not.toHaveBeenCalled();
           done();
         });
       });
@@ -770,7 +727,7 @@ describe('project.js', () => {
       it('fails when channel not found', done => {
         stubGetChannelsWithNotFound(server);
         project.load().catch(() => {
-          expect(project.channelNotFound()).to.be.true;
+          expect(project.channelNotFound()).toBe(true);
           done();
         });
       });
@@ -796,8 +753,8 @@ describe('project.js', () => {
         stubGetChannels(server);
         stubGetSourcesWithNotFound(server);
         project.load().catch(() => {
-          expect(project.channelNotFound()).to.be.false;
-          expect(project.sourceNotFound()).to.be.true;
+          expect(project.channelNotFound()).toBe(false);
+          expect(project.sourceNotFound()).toBe(true);
           done();
         });
       });
@@ -860,10 +817,8 @@ describe('project.js', () => {
 
       await project.serverSideRemix();
 
-      expect(utils.navigateToHref).to.have.been.calledOnce;
-      expect(utils.navigateToHref.firstCall.args[0]).to.match(
-        /projects\/dance\/.*\/remix/
-      );
+      expect(utils.navigateToHref).toHaveBeenCalledTimes(1);
+      expect(utils.navigateToHref.firstCall.args[0]).toMatch(/projects\/dance\/.*\/remix/);
     });
 
     it('saves first if you are the project owner', async () => {
@@ -871,8 +826,8 @@ describe('project.js', () => {
 
       await project.serverSideRemix();
 
-      expect(project.save).to.have.been.calledOnce;
-      expect(project.save.firstCall.args).to.deep.equal([false, true]);
+      expect(project.save).toHaveBeenCalledTimes(1);
+      expect(project.save.firstCall.args).toEqual([false, true]);
     });
 
     it('does not save if you are not the project owner', async () => {
@@ -880,7 +835,7 @@ describe('project.js', () => {
 
       await project.serverSideRemix();
 
-      expect(project.save).not.to.have.been.called;
+      expect(project.save).not.toHaveBeenCalled();
     });
 
     it("sets a default project name if it doesn't have one", async () => {
@@ -888,7 +843,7 @@ describe('project.js', () => {
 
       await project.serverSideRemix();
 
-      expect(project.getCurrentName()).to.equal('My Project');
+      expect(project.getCurrentName()).toBe('My Project');
     });
 
     it('sets a special default project name for Big Game', async () => {
@@ -897,7 +852,7 @@ describe('project.js', () => {
 
       await project.serverSideRemix();
 
-      expect(project.getCurrentName()).to.equal('Big Game Template');
+      expect(project.getCurrentName()).toBe('Big Game Template');
     });
 
     it('does not change the name if the project already has one', async () => {
@@ -905,7 +860,7 @@ describe('project.js', () => {
 
       await project.serverSideRemix();
 
-      expect(project.getCurrentName()).to.equal('Existing name');
+      expect(project.getCurrentName()).toBe('Existing name');
     });
   });
 
@@ -932,10 +887,10 @@ describe('project.js', () => {
     it('calls filesApi.putFile with correct parameters', () => {
       project.saveThumbnail(STUB_BLOB);
 
-      expect(filesApi.putFile).to.have.been.calledOnce;
+      expect(filesApi.putFile).toHaveBeenCalledTimes(1);
       const call = filesApi.putFile.getCall(0);
-      expect(call.args[0]).to.equal('.metadata/thumbnail.png');
-      expect(call.args[1]).to.equal(STUB_BLOB);
+      expect(call.args[0]).toBe('.metadata/thumbnail.png');
+      expect(call.args[1]).toBe(STUB_BLOB);
     });
 
     it('succeeds if filesApi.putFile succeeds', done => {
@@ -949,8 +904,8 @@ describe('project.js', () => {
 
       const promise = project.saveThumbnail(undefined);
       promise.catch(e => {
-        expect(e).to.contain('PNG blob required.');
-        expect(filesApi.putFile).not.to.have.been.called;
+        expect(e).toContain('PNG blob required.');
+        expect(filesApi.putFile).not.toHaveBeenCalled();
         done();
       });
     });
@@ -960,8 +915,8 @@ describe('project.js', () => {
 
       const promise = project.saveThumbnail(STUB_BLOB);
       promise.catch(e => {
-        expect(e).to.contain('Project not initialized');
-        expect(filesApi.putFile).not.to.have.been.called;
+        expect(e).toContain('Project not initialized');
+        expect(filesApi.putFile).not.toHaveBeenCalled();
         done();
       });
     });
@@ -970,8 +925,8 @@ describe('project.js', () => {
       setData({});
 
       project.saveThumbnail(STUB_BLOB).catch(e => {
-        expect(e).to.contain('Project not owned by current user');
-        expect(filesApi.putFile).not.to.have.been.called;
+        expect(e).toContain('Project not owned by current user');
+        expect(filesApi.putFile).not.toHaveBeenCalled();
         done();
       });
     });
@@ -980,7 +935,7 @@ describe('project.js', () => {
       filesApi.putFile.callsFake((path, blob, success, error) => error('foo'));
 
       project.saveThumbnail(STUB_BLOB).catch(e => {
-        expect(e).to.contain('foo');
+        expect(e).toContain('foo');
         done();
       });
     });
@@ -993,38 +948,37 @@ describe('project.js', () => {
 
     it('compares unset sources as if they were an empty string', () => {
       setSources({});
-      expect(project.isCurrentCodeDifferent('')).to.be.false;
+      expect(project.isCurrentCodeDifferent('')).toBe(false);
     });
 
     it('compares null inputs as if they were an empty string', () => {
       setSources({source: ''});
-      expect(project.isCurrentCodeDifferent(null)).to.be.false;
+      expect(project.isCurrentCodeDifferent(null)).toBe(false);
     });
 
     it('compares unset input sources as if they were an empty string', () => {
       setSources({source: ''});
-      expect(project.isCurrentCodeDifferent()).to.be.false;
+      expect(project.isCurrentCodeDifferent()).toBe(false);
     });
 
     it('ignores differences in line endings', () => {
       setSources({source: 'foo\r\n\r\nbar'});
-      expect(project.isCurrentCodeDifferent('foo\n\nbar')).to.be.false;
+      expect(project.isCurrentCodeDifferent('foo\n\nbar')).toBe(false);
     });
 
     it('ignores differences in xml closing tags', () => {
       setSources({source: '<xml><test/></xml>'});
-      expect(project.isCurrentCodeDifferent('<xml><test></test></xml>')).to.be
-        .false;
+      expect(project.isCurrentCodeDifferent('<xml><test></test></xml>')).toBe(false);
     });
 
     it('notices differences in xml', () => {
       setSources({source: '<xml><test/></xml>'});
-      expect(project.isCurrentCodeDifferent('<xml><test2/></xml>')).to.be.true;
+      expect(project.isCurrentCodeDifferent('<xml><test2/></xml>')).toBe(true);
     });
 
     it('notices differences in text', () => {
       setSources({source: 'test'});
-      expect(project.isCurrentCodeDifferent('test2')).to.be.true;
+      expect(project.isCurrentCodeDifferent('test2')).toBe(true);
     });
   });
 
@@ -1067,7 +1021,7 @@ describe('project.js', () => {
         .saveIfSourcesChanged()
         .then(() => project.saveIfSourcesChanged())
         .then(() => {
-          expect(updateChannelSpy).to.have.been.calledTwice;
+          expect(updateChannelSpy).toHaveBeenCalledTimes(2);
           done();
         })
         .catch(err => done(err));
@@ -1090,7 +1044,7 @@ describe('project.js', () => {
         .saveIfSourcesChanged()
         .then(() => project.saveIfSourcesChanged())
         .then(() => {
-          expect(updateChannelSpy).to.have.been.calledOnce;
+          expect(updateChannelSpy).toHaveBeenCalledTimes(1);
           done();
         })
         .catch(err => done(err));

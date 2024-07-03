@@ -5,7 +5,7 @@ import sinon from 'sinon';
 
 import Tabs from '@cdo/apps/componentLibrary/tabs';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 const valuesMap = {};
 const onSelectedTabChange = (name, value) => (valuesMap[name] = value);
@@ -30,10 +30,10 @@ describe('Design System - Tabs', () => {
     const tab1 = screen.getByText('tab1');
     const tab2 = screen.getByText('tab2');
 
-    expect(tab1).to.exist;
-    expect(tab2).to.exist;
-    expect(valuesMap.test1).to.equal('tab1');
-    expect(screen.getByText('tab1 content')).to.exist;
+    expect(tab1).toBeDefined();
+    expect(tab2).toBeDefined();
+    expect(valuesMap.test1).toBe('tab1');
+    expect(screen.getByText('tab1 content')).toBeDefined();
   });
 
   it('Tabs - changes selected tab on click', async () => {
@@ -63,9 +63,9 @@ describe('Design System - Tabs', () => {
     let tab1 = screen.getByText('tab1');
     const tab2 = screen.getByText('tab2');
 
-    expect(tab1).to.exist;
-    expect(tab2).to.exist;
-    expect(valuesMap.test2).to.equal('tab1');
+    expect(tab1).toBeDefined();
+    expect(tab2).toBeDefined();
+    expect(valuesMap.test2).toBe('tab1');
 
     await user.click(tab2);
 
@@ -74,18 +74,18 @@ describe('Design System - Tabs', () => {
 
     tab1 = screen.getByText('tab1');
 
-    expect(spyOnChange).to.have.been.calledOnce;
-    expect(spyOnChange).to.have.been.calledWith('tab2');
-    expect(valuesMap.test2).to.equal('tab2');
+    expect(spyOnChange).toHaveBeenCalledTimes(1);
+    expect(spyOnChange).toHaveBeenCalledWith('tab2');
+    expect(valuesMap.test2).toBe('tab2');
 
     await user.click(tab1);
 
     // Re-render after user's second click
     rerender(<TabsToRender />);
 
-    expect(spyOnChange).to.have.been.calledTwice;
-    expect(spyOnChange).to.have.been.calledWith('tab1');
-    expect(valuesMap.test2).to.equal('tab1');
+    expect(spyOnChange).toHaveBeenCalledTimes(2);
+    expect(spyOnChange).toHaveBeenCalledWith('tab1');
+    expect(valuesMap.test2).toBe('tab1');
   });
 
   it("Tabs - renders disabled tab, doesn't change on click", async () => {
@@ -121,9 +121,9 @@ describe('Design System - Tabs', () => {
     let tab1 = screen.getByText('tab1');
     const tab2 = screen.getByText('tab2');
 
-    expect(tab1).to.exist;
-    expect(tab2).to.exist;
-    expect(valuesMap.test3).to.equal('tab1');
+    expect(tab1).toBeDefined();
+    expect(tab2).toBeDefined();
+    expect(valuesMap.test3).toBe('tab1');
 
     await user.click(tab2);
 
@@ -132,16 +132,16 @@ describe('Design System - Tabs', () => {
 
     tab1 = screen.getByText('tab1');
 
-    expect(spyOnChange).to.not.have.been.called;
-    expect(valuesMap.test3).to.equal('tab1');
+    expect(spyOnChange).not.toHaveBeenCalled();
+    expect(valuesMap.test3).toBe('tab1');
 
     await user.click(tab1);
 
     // Re-render after user's second click
     rerender(<TabsToRender />);
 
-    expect(spyOnChange).to.have.been.called.once;
-    expect(spyOnChange).to.have.been.calledWith('tab1');
+    expect(spyOnChange).toHaveBeenCalled().once;
+    expect(spyOnChange).toHaveBeenCalledWith('tab1');
   });
 
   it('Tabs - renders with tooltip and displays it on hover', async () => {
@@ -169,8 +169,8 @@ describe('Design System - Tabs', () => {
 
     let tab1 = screen.getByText('tab1');
     let tooltip = screen.queryByText('Tooltip for tab1');
-    expect(tab1).to.exist;
-    expect(tooltip).not.to.exist;
+    expect(tab1).toBeDefined();
+    expect(tooltip).toBeFalsy();
 
     await user.hover(tab1);
 
@@ -178,6 +178,6 @@ describe('Design System - Tabs', () => {
 
     tooltip = screen.queryByText('Tooltip for tab1');
 
-    expect(tooltip).to.exist;
+    expect(tooltip).toBeDefined();
   });
 });

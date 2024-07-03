@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import applabI18n from '@cdo/applab/locale';
 import SetupGuide from '@cdo/apps/lib/kits/maker/ui/SetupGuide';
 
-import {expect} from '../../../../../util/deprecatedChai';
+
 
 describe('MakerSetupGuide', () => {
   describe('General description displayed correctly', () => {
@@ -25,8 +25,8 @@ describe('MakerSetupGuide', () => {
         screen.getByRole('heading', {
           name: 'i18n-general-title',
         })
-      ).to.exist;
-      expect(screen.getByText('i18n-general-description')).to.exist;
+      ).toBeDefined();
+      expect(screen.getByText('i18n-general-description')).toBeDefined();
       sinon.restore();
     });
   });

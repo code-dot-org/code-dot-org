@@ -3,7 +3,7 @@ import React from 'react';
 
 import CheckboxDropdown from '@cdo/apps/templates/CheckboxDropdown';
 
-import {assert, expect} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai';
 
 describe('CheckboxDropdown', function () {
   const colorOptions = {
@@ -34,9 +34,7 @@ describe('CheckboxDropdown', function () {
     const wrapper = mount(<CheckboxDropdown {...defaultProps} />);
     const checkboxes = wrapper.find('input');
 
-    expect(checkboxes).to.have.lengthOf(
-      Object.keys(defaultProps.allOptions).length
-    );
+    expect(checkboxes).toHaveLength(Object.keys(defaultProps.allOptions).length);
     checkboxes.forEach(checkbox => assert(!checkbox.props().checked));
   });
 
@@ -44,13 +42,9 @@ describe('CheckboxDropdown', function () {
     const wrapper = mount(<CheckboxDropdown {...propsWithCheckedOptions} />);
     const checkboxes = wrapper.find('input');
 
-    expect(checkboxes).to.have.lengthOf(
-      Object.keys(defaultProps.allOptions).length
-    );
+    expect(checkboxes).toHaveLength(Object.keys(defaultProps.allOptions).length);
     checkboxes.forEach(checkbox => {
-      expect(checkbox.props().checked).to.equal(
-        propsWithCheckedOptions.checkedOptions.includes(checkbox.props().value)
-      );
+      expect(checkbox.props().checked).toBe(propsWithCheckedOptions.checkedOptions.includes(checkbox.props().value));
     });
   });
 
@@ -83,9 +77,9 @@ describe('CheckboxDropdown', function () {
     const selectAllButton = wrapper.find('button#select-all');
 
     assert(selectAllButton.exists());
-    expect(optionsSelected).to.have.lengthOf(0);
+    expect(optionsSelected).toHaveLength(0);
     selectAllButton.simulate('click');
-    expect(optionsSelected).to.have.lengthOf(Object.keys(colorOptions).length);
+    expect(optionsSelected).toHaveLength(Object.keys(colorOptions).length);
   });
 
   it('handleClearAll funtion is called when ClearAll button is clicked', function () {
@@ -103,8 +97,8 @@ describe('CheckboxDropdown', function () {
     const clearAllButton = wrapper.find('button#clear-all');
 
     assert(clearAllButton.exists());
-    expect(optionsSelected).to.have.lengthOf(Object.keys(colorOptions).length);
+    expect(optionsSelected).toHaveLength(Object.keys(colorOptions).length);
     clearAllButton.simulate('click');
-    expect(optionsSelected).to.have.lengthOf(0);
+    expect(optionsSelected).toHaveLength(0);
   });
 });

@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import Alert from '@cdo/apps/templates/alert';
 
-import {expect} from '../../util/deprecatedChai';
+
 
 describe('Alert', () => {
   it('renders any children', () => {
@@ -32,18 +32,14 @@ describe('Alert', () => {
         <span>This is an error.</span>
       </Alert>
     );
-    expect(error.find('div > div').props().style.backgroundColor).to.equal(
-      '#f2dede'
-    );
+    expect(error.find('div > div').props().style.backgroundColor).toBe('#f2dede');
 
     const warning = shallow(
       <Alert type="warning" onClose={() => {}}>
         <span>This is a warning.</span>
       </Alert>
     );
-    expect(warning.find('div > div').props().style.backgroundColor).to.equal(
-      '#fcf8e3'
-    );
+    expect(warning.find('div > div').props().style.backgroundColor).toBe('#fcf8e3');
   });
 
   it('calls onClose callback when close button is clicked', () => {
@@ -53,8 +49,8 @@ describe('Alert', () => {
         <span>This is an error.</span>
       </Alert>
     );
-    expect(callback).not.to.have.been.called;
+    expect(callback).not.toHaveBeenCalled();
     error.find('button').simulate('click');
-    expect(callback).to.have.been.calledOnce;
+    expect(callback).toHaveBeenCalledTimes(1);
   });
 });

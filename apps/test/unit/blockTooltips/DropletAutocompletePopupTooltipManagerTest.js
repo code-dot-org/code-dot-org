@@ -3,7 +3,7 @@ import sinon from 'sinon';
 import DropletAutocompletePopupTooltipManager from '@cdo/apps/blockTooltips/DropletAutocompletePopupTooltipManager.js';
 import commonI18n from '@cdo/locale';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 import {DropletTooltipManagerStub} from './stubs';
 
@@ -32,7 +32,7 @@ describe('DropletAutocompletePopupTooltipManager', () => {
       let el = document.createElement('div');
       el.innerHTML = html;
       let a = el.querySelector('.tooltip-example-link a');
-      expect(a.textContent).to.equal('i18n-examples');
+      expect(a.textContent).toBe('i18n-examples');
     });
   });
 });

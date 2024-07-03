@@ -13,7 +13,7 @@ import {
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 describe('The ScreenSelector component', () => {
   beforeEach(() => {
@@ -43,7 +43,7 @@ describe('The ScreenSelector component', () => {
         hasDesignMode: true,
       })
     );
-    expect(render().find('select')).to.have.length(1);
+    expect(render().find('select')).toHaveLength(1);
   });
 
   it('will be hidden on pages without design mode', () => {
@@ -52,7 +52,7 @@ describe('The ScreenSelector component', () => {
         hasDesignMode: false,
       })
     );
-    expect(render().find('select')).to.have.length(0);
+    expect(render().find('select')).toHaveLength(0);
   });
 
   it('will not be hidden on readonly pages', () => {
@@ -62,6 +62,6 @@ describe('The ScreenSelector component', () => {
         isReadOnlyWorkspace: true,
       })
     );
-    expect(render().find('select')).to.have.length(1);
+    expect(render().find('select')).toHaveLength(1);
   });
 });

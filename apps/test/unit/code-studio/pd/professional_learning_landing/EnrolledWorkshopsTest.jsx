@@ -1,4 +1,4 @@
-import {assert, expect} from 'chai';
+import {assert} from 'chai';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import moment from 'moment';
 import React from 'react';
@@ -40,12 +40,10 @@ describe('EnrolledWorkshops', () => {
     );
 
     // We expect there to be a table with 4 rows in the body, three of which have two buttons
-    expect(enrolledWorkshopsTable.find('tbody tr')).to.have.length(4);
-    expect(enrolledWorkshopsTable.find('tbody tr Button')).to.have.length(8);
-    expect(enrolledWorkshopsTable.state('showCancelModal')).to.be.false;
-    expect(enrolledWorkshopsTable.state('enrollmentCodeToCancel')).to.equal(
-      undefined
-    );
+    expect(enrolledWorkshopsTable.find('tbody tr')).toHaveLength(4);
+    expect(enrolledWorkshopsTable.find('tbody tr Button')).toHaveLength(8);
+    expect(enrolledWorkshopsTable.state('showCancelModal')).toBe(false);
+    expect(enrolledWorkshopsTable.state('enrollmentCodeToCancel')).toBeUndefined();
 
     // Pushing the button should bring up the modal
     enrolledWorkshopsTable
@@ -54,10 +52,8 @@ describe('EnrolledWorkshops', () => {
       .find('Button')
       .last()
       .simulate('click');
-    expect(enrolledWorkshopsTable.state('showCancelModal')).to.be.true;
-    expect(enrolledWorkshopsTable.state('enrollmentCodeToCancel')).to.equal(
-      'code1'
-    );
+    expect(enrolledWorkshopsTable.state('showCancelModal')).toBe(true);
+    expect(enrolledWorkshopsTable.state('enrollmentCodeToCancel')).toBe('code1');
   });
 
   it('Clicking "Print Certificate" opens the certificate in a new tab if user attended workshop', function () {
@@ -73,7 +69,7 @@ describe('EnrolledWorkshops', () => {
       .first()
       .simulate('click');
 
-    assert(utils.windowOpen.calledOnce);
+    assert(utils.toHaveBeenCalledTimes(1));
     assert(
       utils.windowOpen.calledWith(
         `/pd/generate_workshop_certificate/${workshops[2].enrollment_code}`
@@ -93,7 +89,7 @@ describe('EnrolledWorkshops', () => {
       .find('Button')
       .first();
 
-    expect(printCertificateButton.prop('disabled')).to.be.true;
+    expect(printCertificateButton.prop('disabled')).toBe(true);
   });
 
   it('Pre-survey link button shown in workshops that have not started', function () {
@@ -108,7 +104,7 @@ describe('EnrolledWorkshops', () => {
       .first()
       .simulate('click');
 
-    assert(utils.windowOpen.calledOnce);
+    assert(utils.toHaveBeenCalledTimes(1));
   });
 
   it('Pre-survey link button not shown in ended workshop', function () {
@@ -122,7 +118,7 @@ describe('EnrolledWorkshops', () => {
       .find('Button')
       .findWhere(n => n.text() === 'Complete pre-workshop survey');
 
-    expect(preWorkshopSurveyButton).to.have.lengthOf(0);
+    expect(preWorkshopSurveyButton).toHaveLength(0);
   });
 
   it('Pre-survey link button is disabled if more than 10 days before workshop', function () {
@@ -140,7 +136,7 @@ describe('EnrolledWorkshops', () => {
       .find('Button')
       .first();
 
-    expect(preWorkshopSurveyButton.props().disabled).to.be.true;
+    expect(preWorkshopSurveyButton.props().disabled).toBe(true);
   });
 
   it('shows Status column and only has Workshop Details button when forMyPlPage is true', function () {
@@ -148,7 +144,7 @@ describe('EnrolledWorkshops', () => {
       <WorkshopsTable workshops={workshops} forMyPlPage={true} />
     );
 
-    expect(enrolledWorkshopsTable.find('thead tr').text()).to.contain('Status');
+    expect(enrolledWorkshopsTable.find('thead tr').text()).toContain('Status');
 
     const numButtonsInTable = enrolledWorkshopsTable
       .find('tbody tr')
@@ -158,6 +154,6 @@ describe('EnrolledWorkshops', () => {
         .find('tbody tr')
         .find('Button')
         .findWhere(n => n.text() === 'Workshop Details').length
-    ).to.equal(numButtonsInTable);
+    ).toBe(numButtonsInTable);
   });
 });

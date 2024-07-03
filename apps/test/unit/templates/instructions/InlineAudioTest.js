@@ -9,7 +9,7 @@ import {
 } from '@cdo/apps/templates/instructions/AudioQueue';
 import {UnconnectedInlineAudio as InlineAudio} from '@cdo/apps/templates/instructions/InlineAudio';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai';
 import {setExternalGlobals} from '../../../util/testUtils';
 
 const DEFAULT_PROPS = {
@@ -116,23 +116,23 @@ describe('InlineAudio', function () {
     const wrapper = mount(
       <InlineAudio {...DEFAULT_PROPS} textToSpeechEnabled />
     );
-    expect(wrapper.find('.inline-audio').exists()).to.be.false;
+    expect(wrapper.find('.inline-audio').exists()).toBe(false);
     const component = wrapper.at(0);
     component.instance().setState({loaded: true});
     wrapper.setProps({});
-    expect(wrapper.find('.inline-audio').exists()).to.be.true;
+    expect(wrapper.find('.inline-audio').exists()).toBe(true);
   });
 
   it('can toggle audio', async function () {
     const component = getComponent(<InlineAudio {...DEFAULT_PROPS} />);
 
-    expect(component.state().playing).to.be.false;
+    expect(component.state().playing).toBe(false);
     component.instance().toggleAudio();
     await waitForPromises();
-    expect(component.state().playing).to.be.true;
+    expect(component.state().playing).toBe(true);
     component.instance().toggleAudio();
     await waitForPromises();
-    expect(component.state().playing).to.be.false;
+    expect(component.state().playing).toBe(false);
   });
 
   it('autoplays if autoplay of text-to-speech is enabled', async function () {
@@ -141,7 +141,7 @@ describe('InlineAudio', function () {
     );
 
     await waitForPromises();
-    expect(component.state().playing).to.be.true;
+    expect(component.state().playing).toBe(true);
   });
 
   it('when playAudio resolves, state.playing set to true', async () => {
@@ -149,22 +149,22 @@ describe('InlineAudio', function () {
       <InlineAudio assetUrl={function () {}} ttsAutoplayEnabled={false} />
     );
 
-    expect(component.state().playing).to.be.false;
+    expect(component.state().playing).toBe(false);
     await component.instance().playAudio();
-    expect(component.state().playing).to.be.true;
+    expect(component.state().playing).toBe(true);
   });
 
   it('only initializes Audio once', function () {
     sinon.spy(window, 'Audio');
     const component = getComponent(<InlineAudio {...DEFAULT_PROPS} />);
 
-    expect(window.Audio).to.have.been.calledOnce;
+    expect(window.Audio).toHaveBeenCalledTimes(1);
     component.instance().playAudio();
-    expect(window.Audio).to.have.been.calledOnce;
+    expect(window.Audio).toHaveBeenCalledTimes(1);
     component.instance().pauseAudio();
-    expect(window.Audio).to.have.been.calledOnce;
+    expect(window.Audio).toHaveBeenCalledTimes(1);
     component.instance().playAudio();
-    expect(window.Audio).to.have.been.calledOnce;
+    expect(window.Audio).toHaveBeenCalledTimes(1);
     sinon.restore();
   });
 
@@ -172,12 +172,12 @@ describe('InlineAudio', function () {
     const wrapper = mount(<InlineAudio {...DEFAULT_PROPS} />);
     const component = wrapper.at(0);
     await component.instance().playAudio();
-    expect(component.state().playing).to.be.true;
+    expect(component.state().playing).toBe(true);
 
     wrapper.setProps({src: 'state2'});
-    expect(component.state().audio).to.be.undefined;
-    expect(component.state().playing).to.be.false;
-    expect(component.state().error).to.be.false;
+    expect(component.state().audio).toBeUndefined();
+    expect(component.state().playing).toBe(false);
+    expect(component.state().error).toBe(false);
   });
 
   it('calls addToQueue for each InlineAudio rendered', () => {
@@ -195,7 +195,7 @@ describe('InlineAudio', function () {
         <InlineAudio {...DEFAULT_PROPS} ttsAutoplayEnabled={true} />
       </AudioQueueContext.Provider>
     );
-    expect(addToQueueSpy).to.have.been.calledTwice;
+    expect(addToQueueSpy).toHaveBeenCalledTimes(2);
   });
 
   it('does not add to queue if autoplay is off', () => {
@@ -212,7 +212,7 @@ describe('InlineAudio', function () {
         <InlineAudio {...DEFAULT_PROPS} />
       </AudioQueueContext.Provider>
     );
-    expect(addToQueueSpy).to.not.have.been.called;
+    expect(addToQueueSpy).not.toHaveBeenCalled();
   });
 });
 

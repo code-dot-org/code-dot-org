@@ -5,7 +5,7 @@ import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertifi
 import {UnconnectedSectionActionDropdown as SectionActionDropdown} from '@cdo/apps/templates/teacherDashboard/SectionActionDropdown';
 import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-import {expect} from '../../../util/deprecatedChai';
+
 
 const sections = [
   {
@@ -80,38 +80,38 @@ describe('SectionActionDropdown', () => {
     const wrapper = shallow(
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[0]} />
     );
-    expect(wrapper).to.contain('Delete Section');
+    expect(wrapper).toContain('Delete Section');
   });
 
   it('renders the delete option when a section is a third party (Google Classroom) and has zero students', () => {
     const wrapper = shallow(
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[1]} />
     );
-    expect(wrapper).to.contain('Delete Section');
+    expect(wrapper).toContain('Delete Section');
   });
 
   it('does not render the delete option for sections with students', () => {
     const wrapper = shallow(
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
     );
-    expect(wrapper.text()).to.not.include('Delete Section');
+    expect(wrapper.text()).not.toContain('Delete Section');
   });
 
   it('renders the sync option for third party (Google Classroom) sections', () => {
     const wrapper = shallow(
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[1]} />
     );
-    expect(wrapper).to.contain('Sync students from Google Classroom');
+    expect(wrapper).toContain('Sync students from Google Classroom');
   });
 
   it('renders the four standard options for a third party section (Google Classroom)', () => {
     const wrapper = shallow(
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[1]} />
     );
-    expect(wrapper).to.contain('View Progress');
-    expect(wrapper).to.contain('Manage Students');
-    expect(wrapper).to.not.contain('Print Login Cards');
-    expect(wrapper).to.contain('Edit Section Details');
+    expect(wrapper).toContain('View Progress');
+    expect(wrapper).toContain('Manage Students');
+    expect(wrapper).not.toContain('Print Login Cards');
+    expect(wrapper).toContain('Edit Section Details');
     expect(
       wrapper.find(<PrintCertificates sectionId={2} courseVersionName="cv" />)
         .length,
@@ -123,10 +123,10 @@ describe('SectionActionDropdown', () => {
     const wrapper = shallow(
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[0]} />
     );
-    expect(wrapper).to.contain('View Progress');
-    expect(wrapper).to.contain('Manage Students');
-    expect(wrapper).to.contain('Print Login Cards');
-    expect(wrapper).to.contain('Edit Section Details');
+    expect(wrapper).toContain('View Progress');
+    expect(wrapper).toContain('Manage Students');
+    expect(wrapper).toContain('Print Login Cards');
+    expect(wrapper).toContain('Edit Section Details');
     expect(
       wrapper.find(<PrintCertificates sectionId={1} courseVersionName="cv" />)
         .length,
@@ -138,14 +138,14 @@ describe('SectionActionDropdown', () => {
     const wrapper = shallow(
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[0]} />
     );
-    expect(wrapper).to.contain('Archive Section');
+    expect(wrapper).toContain('Archive Section');
   });
 
   it('renders the restore option for an archived section', () => {
     const wrapper = shallow(
       <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[3]} />
     );
-    expect(wrapper).to.contain('Restore Section');
+    expect(wrapper).toContain('Restore Section');
   });
 
   it('sends selected user to the new edit page', () => {
@@ -154,10 +154,8 @@ describe('SectionActionDropdown', () => {
     );
     const sectionId = wrapper.instance().props.sectionData.id;
     const expectedUrl = '/sections/' + sectionId + '/edit';
-    expect(wrapper).to.contain('Edit Section Details');
-    expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
-      expectedUrl
-    );
+    expect(wrapper).toContain('Edit Section Details');
+    expect(wrapper.find('.edit-section-details-link').props().href).toBe(expectedUrl);
   });
 
   it('sends selected user to the new edit page with redirect for pl section', () => {
@@ -169,9 +167,7 @@ describe('SectionActionDropdown', () => {
       '/sections/' +
       sectionId +
       '/edit?redirectToPage=my-professional-learning';
-    expect(wrapper).to.contain('Edit Section Details');
-    expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
-      expectedUrl
-    );
+    expect(wrapper).toContain('Edit Section Details');
+    expect(wrapper.find('.edit-section-details-link').props().href).toBe(expectedUrl);
   });
 });

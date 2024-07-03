@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import AddTableListRow from '@cdo/apps/storage/dataBrowser/AddTableListRow';
 import commonI18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('AddTableListRow', () => {
   describe('localization', () => {
@@ -23,7 +23,7 @@ describe('AddTableListRow', () => {
       const wrapper = createAddTableListRow();
 
       let input = wrapper.find('input').at(0);
-      expect(input.prop('placeholder')).to.contain('i18n-holder');
+      expect(input.prop('placeholder')).toContain('i18n-holder');
     });
 
     it('should render a localized string for "Add"', () => {
@@ -32,7 +32,7 @@ describe('AddTableListRow', () => {
       const wrapper = createAddTableListRow();
 
       let addButton = wrapper.find('button.uitest-add-table-btn').at(0);
-      expect(addButton.text()).to.contain('i18n-add');
+      expect(addButton.text()).toContain('i18n-add');
     });
   });
 });

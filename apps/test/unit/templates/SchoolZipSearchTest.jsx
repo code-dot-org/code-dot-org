@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import SchoolZipSearch from '@cdo/apps/templates/SchoolZipSearch';
 
-import {expect} from '../../util/deprecatedChai';
+
 
 const DEFAULT_PROPS = {
   fieldNames: {

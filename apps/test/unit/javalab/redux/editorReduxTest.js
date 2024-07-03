@@ -9,7 +9,7 @@ import {
   getStore,
 } from '@cdo/apps/redux';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('javalabRedux', () => {
   let store;
@@ -25,18 +25,12 @@ describe('javalabRedux', () => {
     const fileInitialSource = initialState.sources[fileName];
     const newText = 'some new text';
 
-    expect(getStore().getState().javalabEditor.sources[fileName]).is.equal(
-      fileInitialSource
-    );
+    expect(getStore().getState().javalabEditor.sources[fileName]).toBe(fileInitialSource);
     store.dispatch(sourceTextUpdated(fileName, newText));
 
     const updatedSources = getStore().getState().javalabEditor.sources;
-    expect(updatedSources[fileName].text).is.equal(newText);
-    expect(updatedSources[fileName].isVisible).is.equal(
-      fileInitialSource.isVisible
-    );
-    expect(updatedSources[fileName].isValidation).is.equal(
-      fileInitialSource.isValidation
-    );
+    expect(updatedSources[fileName].text).toBe(newText);
+    expect(updatedSources[fileName].isVisible).toBe(fileInitialSource.isVisible);
+    expect(updatedSources[fileName].isValidation).toBe(fileInitialSource.isValidation);
   });
 });

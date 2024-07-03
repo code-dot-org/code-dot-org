@@ -14,7 +14,7 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai';
 
 const sectionRowData = [
   {
@@ -193,7 +193,7 @@ describe('OwnedSectionsTable', () => {
         `/teacher_dashboard/sections/${sectionRowData[1].id}/login_info`
       )
     );
-    expect(screen.queryByText(sectionRowData[1].code)).to.be.null;
+    expect(screen.queryByText(sectionRowData[1].code)).toBeNull();
 
     // For sections with non-third-party login types, display section code
     const pictureSection = screen

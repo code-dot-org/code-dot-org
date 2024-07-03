@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import ChangeEmailForm from '@cdo/apps/lib/ui/accounts/ChangeEmailForm';
 
-import {expect} from '../../../../util/deprecatedChai';
+
 
 describe('ChangeEmailForm', () => {
   const EMAIL_SELECTOR = 'input[type="email"]';
@@ -26,16 +26,16 @@ describe('ChangeEmailForm', () => {
       const wrapper = mount(
         <ChangeEmailForm {...DEFAULT_PROPS} userType="teacher" />
       );
-      expect(wrapper.find(OPT_IN_SELECTOR)).to.exist;
-      expect(wrapper.find(OPT_OUT_SELECTOR)).to.exist;
+      expect(wrapper.find(OPT_IN_SELECTOR)).toBeDefined();
+      expect(wrapper.find(OPT_OUT_SELECTOR)).toBeDefined();
     });
 
     it('is not rendered for students', () => {
       const wrapper = mount(
         <ChangeEmailForm {...DEFAULT_PROPS} userType="student" />
       );
-      expect(wrapper.find(OPT_IN_SELECTOR)).not.to.exist;
-      expect(wrapper.find(OPT_OUT_SELECTOR)).not.to.exist;
+      expect(wrapper.find(OPT_IN_SELECTOR)).toBeFalsy();
+      expect(wrapper.find(OPT_OUT_SELECTOR)).toBeFalsy();
     });
   });
 
@@ -49,7 +49,7 @@ describe('ChangeEmailForm', () => {
             isPasswordRequired={true}
           />
         );
-        expect(wrapper.find(PASSWORD_SELECTOR)).to.exist;
+        expect(wrapper.find(PASSWORD_SELECTOR)).toBeDefined();
       });
 
       it('is rendered for students', () => {
@@ -60,7 +60,7 @@ describe('ChangeEmailForm', () => {
             isPasswordRequired={true}
           />
         );
-        expect(wrapper.find(PASSWORD_SELECTOR)).to.exist;
+        expect(wrapper.find(PASSWORD_SELECTOR)).toBeDefined();
       });
     });
 
@@ -73,7 +73,7 @@ describe('ChangeEmailForm', () => {
             isPasswordRequired={false}
           />
         );
-        expect(wrapper.find(PASSWORD_SELECTOR)).not.to.exist;
+        expect(wrapper.find(PASSWORD_SELECTOR)).toBeFalsy();
       });
 
       it('is not rendered for students', () => {
@@ -84,7 +84,7 @@ describe('ChangeEmailForm', () => {
             isPasswordRequired={false}
           />
         );
-        expect(wrapper.find(PASSWORD_SELECTOR)).not.to.exist;
+        expect(wrapper.find(PASSWORD_SELECTOR)).toBeFalsy();
       });
     });
   });
@@ -110,30 +110,30 @@ describe('ChangeEmailForm', () => {
     });
 
     it('when the email field changes', () => {
-      expect(onChange).not.to.have.been.called;
+      expect(onChange).not.toHaveBeenCalled();
 
       const changedEmail = 'newEmail@example.com';
       wrapper
         .find(EMAIL_SELECTOR)
         .simulate('change', {target: {value: changedEmail}});
 
-      expect(onChange).to.have.been.calledOnce;
-      expect(onChange.firstCall.args[0]).to.deep.equal({
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect(onChange.firstCall.args[0]).toEqual({
         ...initialValues,
         newEmail: changedEmail,
       });
     });
 
     it('when the password field changes', () => {
-      expect(onChange).not.to.have.been.called;
+      expect(onChange).not.toHaveBeenCalled();
 
       const changedPassword = 'differentPassword';
       wrapper
         .find(PASSWORD_SELECTOR)
         .simulate('change', {target: {value: changedPassword}});
 
-      expect(onChange).to.have.been.calledOnce;
-      expect(onChange.firstCall.args[0]).to.deep.equal({
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect(onChange.firstCall.args[0]).toEqual({
         ...initialValues,
         currentPassword: changedPassword,
       });
@@ -141,13 +141,13 @@ describe('ChangeEmailForm', () => {
 
     it('when the email opt-in field changes', () => {
       wrapper.setProps({userType: 'teacher'});
-      expect(onChange).not.to.have.been.called;
+      expect(onChange).not.toHaveBeenCalled();
 
       const changedOptIn = 'no';
       wrapper.find(OPT_OUT_SELECTOR).simulate('click');
 
-      expect(onChange).to.have.been.calledOnce;
-      expect(onChange.firstCall.args[0]).to.deep.equal({
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect(onChange.firstCall.args[0]).toEqual({
         ...initialValues,
         emailOptIn: changedOptIn,
       });
@@ -165,53 +165,53 @@ describe('ChangeEmailForm', () => {
     });
 
     it('when the enter key is pressed in the email field', () => {
-      expect(onSubmit).not.to.have.been.called;
+      expect(onSubmit).not.toHaveBeenCalled();
 
       wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Enter'});
 
-      expect(onSubmit).to.have.been.calledOnce;
-      expect(onSubmit.firstCall.args).to.be.empty;
+      expect(onSubmit).toHaveBeenCalledTimes(1);
+      expect(onSubmit.firstCall.args).toHaveLength(0);
     });
 
     it('when the enter key is pressed in the password field', () => {
-      expect(onSubmit).not.to.have.been.called;
+      expect(onSubmit).not.toHaveBeenCalled();
 
       wrapper.find(PASSWORD_SELECTOR).simulate('keydown', {key: 'Enter'});
 
-      expect(onSubmit).to.have.been.calledOnce;
-      expect(onSubmit.firstCall.args).to.be.empty;
+      expect(onSubmit).toHaveBeenCalledTimes(1);
+      expect(onSubmit.firstCall.args).toHaveLength(0);
     });
 
     it('when the enter key is pressed on the opt-in field', () => {
       wrapper.setProps({userType: 'teacher'});
-      expect(onSubmit).not.to.have.been.called;
+      expect(onSubmit).not.toHaveBeenCalled();
 
       wrapper.find(OPT_IN_SELECTOR).simulate('keydown', {key: 'Enter'});
 
-      expect(onSubmit).to.have.been.calledOnce;
-      expect(onSubmit.firstCall.args).to.be.empty;
+      expect(onSubmit).toHaveBeenCalledTimes(1);
+      expect(onSubmit.firstCall.args).toHaveLength(0);
     });
 
     it('but not when other keys are pressed', () => {
-      expect(onSubmit).not.to.have.been.called;
+      expect(onSubmit).not.toHaveBeenCalled();
 
       wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'a'});
       wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Backspace'});
       wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Escape'});
 
-      expect(onSubmit).not.to.have.been.called;
+      expect(onSubmit).not.toHaveBeenCalled();
     });
 
     it('and not when the form is disabled', () => {
       wrapper.setProps({userType: 'teacher'});
       wrapper.setProps({disabled: true});
-      expect(onSubmit).not.to.have.been.called;
+      expect(onSubmit).not.toHaveBeenCalled();
 
       wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Enter'});
       wrapper.find(PASSWORD_SELECTOR).simulate('keydown', {key: 'Enter'});
       wrapper.find(OPT_IN_SELECTOR).simulate('keydown', {key: 'Enter'});
 
-      expect(onSubmit).not.to.have.been.called;
+      expect(onSubmit).not.toHaveBeenCalled();
     });
   });
 
@@ -262,8 +262,8 @@ describe('ChangeEmailForm', () => {
       });
 
       wrapper.instance().focusOnAnError();
-      expect(emailSpy).not.to.have.been.called;
-      expect(passwordSpy).not.to.have.been.called;
+      expect(emailSpy).not.toHaveBeenCalled();
+      expect(passwordSpy).not.toHaveBeenCalled();
     });
 
     it('focuses on the email field if there is an email validation error', () => {
@@ -274,8 +274,8 @@ describe('ChangeEmailForm', () => {
       });
 
       wrapper.instance().focusOnAnError();
-      expect(emailSpy).to.have.been.calledOnce;
-      expect(passwordSpy).not.to.have.been.called;
+      expect(emailSpy).toHaveBeenCalledTimes(1);
+      expect(passwordSpy).not.toHaveBeenCalled();
     });
 
     it('focuses on the password field if there is a password validation error', () => {
@@ -286,8 +286,8 @@ describe('ChangeEmailForm', () => {
       });
 
       wrapper.instance().focusOnAnError();
-      expect(emailSpy).not.to.have.been.called;
-      expect(passwordSpy).to.have.been.calledOnce;
+      expect(emailSpy).not.toHaveBeenCalled();
+      expect(passwordSpy).toHaveBeenCalledTimes(1);
     });
 
     it('focuses on the email field if there are both email and password validation errors', () => {
@@ -299,8 +299,8 @@ describe('ChangeEmailForm', () => {
       });
 
       wrapper.instance().focusOnAnError();
-      expect(emailSpy).to.have.been.calledOnce;
-      expect(passwordSpy).not.to.have.been.called;
+      expect(emailSpy).toHaveBeenCalledTimes(1);
+      expect(passwordSpy).not.toHaveBeenCalled();
     });
   });
 });

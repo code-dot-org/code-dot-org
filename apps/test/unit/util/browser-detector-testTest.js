@@ -6,7 +6,7 @@ import {
   getBrowserName,
 } from '@cdo/apps/util/browser-detector';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 describe('Browser Detector', () => {
   let userAgentStub;

@@ -1,5 +1,4 @@
-import {expect} from 'chai';
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import { shallow } from 'enzyme';
 import React from 'react';
 import sinon from 'sinon';
 
@@ -29,26 +28,26 @@ describe('ToggleGroup', function () {
   });
 
   it('renders with correct button active', function () {
-    expect(wrapper.find(ToggleButton)).to.have.length(3);
-    expect(wrapper.find(ToggleButton).at(0).props().active).to.be.true;
-    expect(wrapper.find(ToggleButton).at(1).props().active).to.be.false;
-    expect(wrapper.find(ToggleButton).at(2).props().active).to.be.false;
+    expect(wrapper.find(ToggleButton)).toHaveLength(3);
+    expect(wrapper.find(ToggleButton).at(0).props().active).toBe(true);
+    expect(wrapper.find(ToggleButton).at(1).props().active).toBe(false);
+    expect(wrapper.find(ToggleButton).at(2).props().active).toBe(false);
   });
 
   it('calls the onChange handler with the new value when an inactive button is clicked', function () {
-    expect(onChange.callCount).to.equal(0);
+    expect(onChange.callCount).toBe(0);
 
     wrapper.find(ToggleButton).last().simulate('click');
 
-    expect(onChange.callCount).to.equal(1);
-    expect(onChange.firstCall.calledWith('three')).to.be.true;
+    expect(onChange.callCount).toBe(1);
+    expect(onChange.firstCall.calledWith('three')).toBe(true);
   });
 
   it('does not call the onChange handler when the active button is clicked', function () {
-    expect(onChange.callCount).to.equal(0);
+    expect(onChange.callCount).toBe(0);
 
     wrapper.find(ToggleButton).first().simulate('click');
 
-    expect(onChange.callCount).to.equal(0);
+    expect(onChange.callCount).toBe(0);
   });
 });

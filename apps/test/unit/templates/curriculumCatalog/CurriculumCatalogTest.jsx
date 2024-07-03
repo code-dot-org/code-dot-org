@@ -26,7 +26,7 @@ import {
   setWindowLocation,
   resetWindowLocation,
 } from '../../../../src/code-studio/utils';
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai';
 import {FULL_TEST_COURSES} from '../../util/curriculumRecommenderTestCurricula';
 import {sections} from '../studioHomepages/fakeSectionUtils';
 
@@ -110,7 +110,7 @@ describe('CurriculumCatalog', () => {
       </Provider>
     );
 
-    expect(screen.queryByText('sampleLanguageNativeName')).to.be.null;
+    expect(screen.queryByText('sampleLanguageNativeName')).toBeNull();
   });
 
   it('renders language filter row when not in English locale', () => {
@@ -118,7 +118,7 @@ describe('CurriculumCatalog', () => {
 
     expect(
       screen.getAllByText('sampleLanguageNativeName', {exact: false}).length
-    ).to.equal(2);
+    ).toBe(2);
   });
 
   it('renders name of each curriculum with grade levels and path', () => {
@@ -132,8 +132,8 @@ describe('CurriculumCatalog', () => {
   it('does not render any curriculum without grade levels and path', () => {
     renderDefault();
 
-    expect(screen.queryByText(noGradesCurriculum.display_name)).to.be.null;
-    expect(screen.queryByText(noPathCurriculum.display_name)).to.be.null;
+    expect(screen.queryByText(noGradesCurriculum.display_name)).toBeNull();
+    expect(screen.queryByText(noPathCurriculum.display_name)).toBeNull();
   });
 
   it('all curricula show an image, including curricula without a specific image', () => {
@@ -144,11 +144,9 @@ describe('CurriculumCatalog', () => {
 
     allShownCurricula.forEach(curriculum => {
       if (curriculum.image && curriculum.image !== null) {
-        expect(imagesStr).to.match(new RegExp(`src="${curriculum.image}"`));
+        expect(imagesStr).toMatch(new RegExp(`src="${curriculum.image}"`));
       } else {
-        expect(imagesStr).to.match(
-          new RegExp(`src="https:\\/\\/images\\.code\\.org\\/\\S*.png"`)
-        );
+        expect(imagesStr).toMatch(new RegExp(`src="https:\\/\\/images\\.code\\.org\\/\\S*.png"`));
       }
     });
   });
@@ -164,8 +162,8 @@ describe('CurriculumCatalog', () => {
     const numCardsWithAssign = screen.getAllByText('Assign', {
       exact: false,
     }).length;
-    expect(numCardsWithAssign).to.equal(allShownCurricula.length);
-    expect(screen.queryByText('Try Now')).to.be.null;
+    expect(numCardsWithAssign).toBe(allShownCurricula.length);
+    expect(screen.queryByText('Try Now')).toBeNull();
   });
 
   it('curriculum cards show Assign button for teachers', () => {
@@ -179,8 +177,8 @@ describe('CurriculumCatalog', () => {
     const numCardsWithAssign = screen.getAllByText('Assign', {
       exact: false,
     }).length;
-    expect(numCardsWithAssign).to.equal(allShownCurricula.length);
-    expect(screen.queryByText('Try Now')).to.be.null;
+    expect(numCardsWithAssign).toBe(allShownCurricula.length);
+    expect(screen.queryByText('Try Now')).toBeNull();
   });
 
   it('curriculum cards show Try Now button for students', () => {
@@ -194,8 +192,8 @@ describe('CurriculumCatalog', () => {
     const numCardsWithTryNow = screen.getAllByText('Try Now', {
       exact: false,
     }).length;
-    expect(numCardsWithTryNow).to.equal(allShownCurricula.length);
-    expect(screen.queryByText('Assign')).to.be.null;
+    expect(numCardsWithTryNow).toBe(allShownCurricula.length);
+    expect(screen.queryByText('Assign')).toBeNull();
   });
 
   it('filtering by grade level shows any shown course that supports one of the selected grades', () => {
@@ -204,7 +202,7 @@ describe('CurriculumCatalog', () => {
     const numTotalCurriculumCards = screen.getAllByText('Quick View', {
       exact: false,
     }).length;
-    expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
+    expect(numTotalCurriculumCards).toBe(allShownCurricula.length);
 
     // Select "Kindergarten" and "Grade 2" in grade level filter
     const kindergartenFilterCheckbox = screen.getByDisplayValue('kindergarten');
@@ -219,9 +217,9 @@ describe('CurriculumCatalog', () => {
       screen.getAllByText('Quick View', {
         exact: false,
       }).length
-    ).to.equal(gradesKAnd2ShownCurricula.length);
+    ).toBe(gradesKAnd2ShownCurricula.length);
     gradesKAnd2ShownCurricula.forEach(curriculum => {
-      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+      expect(screen.getAllByText(curriculum.display_name).length).toBe(1);
     });
   });
 
@@ -231,7 +229,7 @@ describe('CurriculumCatalog', () => {
     const numTotalCurriculumCards = screen.getAllByText('Quick View', {
       exact: false,
     }).length;
-    expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
+    expect(numTotalCurriculumCards).toBe(allShownCurricula.length);
 
     // Select "Week" in grade level filter
     const weekFilterCheckbox = screen.getByDisplayValue('week');
@@ -243,9 +241,9 @@ describe('CurriculumCatalog', () => {
       screen.getAllByText('Quick View', {
         exact: false,
       }).length
-    ).to.equal(weeklongShownCurricula.length);
+    ).toBe(weeklongShownCurricula.length);
     weeklongShownCurricula.forEach(curriculum => {
-      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+      expect(screen.getAllByText(curriculum.display_name).length).toBe(1);
     });
   });
 
@@ -255,7 +253,7 @@ describe('CurriculumCatalog', () => {
     const numTotalCurriculumCards = screen.getAllByText('Quick View', {
       exact: false,
     }).length;
-    expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
+    expect(numTotalCurriculumCards).toBe(allShownCurricula.length);
 
     // Select "Physical Computing" in topic filter
     const physicalCompFilterCheckbox =
@@ -268,9 +266,9 @@ describe('CurriculumCatalog', () => {
       screen.getAllByText('Quick View', {
         exact: false,
       }).length
-    ).to.equal(physicalCompShownCurricula.length);
+    ).toBe(physicalCompShownCurricula.length);
     physicalCompShownCurricula.forEach(curriculum => {
-      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+      expect(screen.getAllByText(curriculum.display_name).length).toBe(1);
     });
   });
 
@@ -280,7 +278,7 @@ describe('CurriculumCatalog', () => {
     const numTotalCurriculumCards = screen.getAllByText('Quick View', {
       exact: false,
     }).length;
-    expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
+    expect(numTotalCurriculumCards).toBe(allShownCurricula.length);
 
     // Select "Interdisciplinary" in topic filter
     const interdisciplinaryFilterCheckbox =
@@ -293,9 +291,9 @@ describe('CurriculumCatalog', () => {
       screen.getAllByText('Quick View', {
         exact: false,
       }).length
-    ).to.equal(nonNullSchoolSubjectShownCurricula.length);
+    ).toBe(nonNullSchoolSubjectShownCurricula.length);
     nonNullSchoolSubjectShownCurricula.forEach(curriculum => {
-      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+      expect(screen.getAllByText(curriculum.display_name).length).toBe(1);
     });
   });
 
@@ -305,7 +303,7 @@ describe('CurriculumCatalog', () => {
     const numTotalCurriculumCards = screen.getAllByText('Quick View', {
       exact: false,
     }).length;
-    expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
+    expect(numTotalCurriculumCards).toBe(allShownCurricula.length);
 
     // Select "Tablet" and "No Device" in device filter
     const tabletFilterCheckbox = screen.getByDisplayValue('tablet');
@@ -320,9 +318,9 @@ describe('CurriculumCatalog', () => {
       screen.getAllByText('Quick View', {
         exact: false,
       }).length
-    ).to.equal(tabletAndNoDeviceShownCurricula.length);
+    ).toBe(tabletAndNoDeviceShownCurricula.length);
     tabletAndNoDeviceShownCurricula.forEach(curriculum => {
-      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+      expect(screen.getAllByText(curriculum.display_name).length).toBe(1);
     });
   });
 
@@ -332,7 +330,7 @@ describe('CurriculumCatalog', () => {
     const numTotalCurriculumCards = screen.getAllByText('Quick View', {
       exact: false,
     }).length;
-    expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
+    expect(numTotalCurriculumCards).toBe(allShownCurricula.length);
 
     // Select "CSD" and "HOC" in marketing initiative filter
     const csdFilterCheckbox = screen.getByDisplayValue('csd');
@@ -347,9 +345,9 @@ describe('CurriculumCatalog', () => {
       screen.getAllByText('Quick View', {
         exact: false,
       }).length
-    ).to.equal(csdAndHocShownCurricula.length);
+    ).toBe(csdAndHocShownCurricula.length);
     csdAndHocShownCurricula.forEach(curriculum => {
-      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+      expect(screen.getAllByText(curriculum.display_name).length).toBe(1);
     });
   });
 
@@ -359,7 +357,7 @@ describe('CurriculumCatalog', () => {
     const numTotalCurriculumCards = screen.getAllByText('Quick View', {
       exact: false,
     }).length;
-    expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
+    expect(numTotalCurriculumCards).toBe(allShownCurricula.length);
 
     // Toggle translated filter
     const translatedToggle = screen.getByLabelText(
@@ -373,9 +371,9 @@ describe('CurriculumCatalog', () => {
       screen.getAllByText('Quick View', {
         exact: false,
       }).length
-    ).to.equal(translatedCurricula.length);
+    ).toBe(translatedCurricula.length);
     translatedCurricula.forEach(curriculum => {
-      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+      expect(screen.getAllByText(curriculum.display_name).length).toBe(1);
     });
   });
 
@@ -385,7 +383,7 @@ describe('CurriculumCatalog', () => {
     const numTotalCurriculumCards = screen.getAllByText('Quick View', {
       exact: false,
     }).length;
-    expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
+    expect(numTotalCurriculumCards).toBe(allShownCurricula.length);
 
     // Select "Grade 2" and "Grade 3" in grade level filter
     const grade2FilterCheckbox = screen.getByDisplayValue('grade_2');
@@ -421,9 +419,9 @@ describe('CurriculumCatalog', () => {
       screen.getAllByText('Quick View', {
         exact: false,
       }).length
-    ).to.equal(multipleFiltersAppliedShownCurricula.length);
+    ).toBe(multipleFiltersAppliedShownCurricula.length);
     multipleFiltersAppliedShownCurricula.forEach(curriculum => {
-      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+      expect(screen.getAllByText(curriculum.display_name).length).toBe(1);
     });
   });
 
@@ -433,7 +431,7 @@ describe('CurriculumCatalog', () => {
     const numTotalCurriculumCards = screen.getAllByText('Quick View', {
       exact: false,
     }).length;
-    expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
+    expect(numTotalCurriculumCards).toBe(allShownCurricula.length);
 
     // Select all curricula checkboxes
     screen.getAllByRole('checkbox').forEach(checkbox => {
@@ -449,9 +447,9 @@ describe('CurriculumCatalog', () => {
       screen.getAllByText('Quick View', {
         exact: false,
       }).length
-    ).to.equal(allFiltersAppliedShownCurricula.length);
+    ).toBe(allFiltersAppliedShownCurricula.length);
     allFiltersAppliedShownCurricula.forEach(curriculum => {
-      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+      expect(screen.getAllByText(curriculum.display_name).length).toBe(1);
     });
   });
 
@@ -463,7 +461,7 @@ describe('CurriculumCatalog', () => {
       screen.queryAllByText('No matching curricula', {
         exact: false,
       }).length
-    ).to.equal(0);
+    ).toBe(0);
 
     // Select "Kindergarten" and "No Device" in device filter (which should yield no results)
     const kindergartenFilterCheckbox = screen.getByDisplayValue('kindergarten');
@@ -474,16 +472,14 @@ describe('CurriculumCatalog', () => {
     assert(noDeviceFilterCheckbox.checked);
 
     // Does not show any Curriculum Catalog Cards
-    expect(screen.queryAllByText('Quick View', {exact: false}).length).to.equal(
-      0
-    );
+    expect(screen.queryAllByText('Quick View', {exact: false}).length).toBe(0);
 
     // Does show the no results message
     expect(
       screen.queryAllByText('No matching curricula', {
         exact: false,
       }).length
-    ).to.equal(1);
+    ).toBe(1);
   });
 
   describe('with url params', () => {
@@ -499,9 +495,9 @@ describe('CurriculumCatalog', () => {
         screen.getAllByText('Quick View', {
           exact: false,
         }).length
-      ).to.equal(allShownCurricula.length);
+      ).toBe(allShownCurricula.length);
       allShownCurricula.forEach(curriculum => {
-        expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+        expect(screen.getAllByText(curriculum.display_name).length).toBe(1);
       });
     });
 
@@ -512,9 +508,9 @@ describe('CurriculumCatalog', () => {
         screen.getAllByText('Quick View', {
           exact: false,
         }).length
-      ).to.equal(allShownCurricula.length);
+      ).toBe(allShownCurricula.length);
       allShownCurricula.forEach(curriculum => {
-        expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+        expect(screen.getAllByText(curriculum.display_name).length).toBe(1);
       });
     });
 
@@ -525,9 +521,9 @@ describe('CurriculumCatalog', () => {
         screen.getAllByText('Quick View', {
           exact: false,
         }).length
-      ).to.equal(allShownCurricula.length);
+      ).toBe(allShownCurricula.length);
       allShownCurricula.forEach(curriculum => {
-        expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+        expect(screen.getAllByText(curriculum.display_name).length).toBe(1);
       });
     });
 
@@ -538,9 +534,9 @@ describe('CurriculumCatalog', () => {
         screen.getAllByText('Quick View', {
           exact: false,
         }).length
-      ).to.equal(allShownCurricula.length);
+      ).toBe(allShownCurricula.length);
       allShownCurricula.forEach(curriculum => {
-        expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+        expect(screen.getAllByText(curriculum.display_name).length).toBe(1);
       });
     });
 
@@ -551,9 +547,9 @@ describe('CurriculumCatalog', () => {
         screen.getAllByText('Quick View', {
           exact: false,
         }).length
-      ).to.equal(weeklongShownCurricula.length);
+      ).toBe(weeklongShownCurricula.length);
       weeklongShownCurricula.forEach(curriculum => {
-        expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+        expect(screen.getAllByText(curriculum.display_name).length).toBe(1);
       });
     });
 
@@ -566,9 +562,9 @@ describe('CurriculumCatalog', () => {
         screen.getAllByText('Quick View', {
           exact: false,
         }).length
-      ).to.equal(gradesKAnd2ShownCurricula.length);
+      ).toBe(gradesKAnd2ShownCurricula.length);
       gradesKAnd2ShownCurricula.forEach(curriculum => {
-        expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+        expect(screen.getAllByText(curriculum.display_name).length).toBe(1);
       });
     });
 
@@ -581,9 +577,9 @@ describe('CurriculumCatalog', () => {
         screen.getAllByText('Quick View', {
           exact: false,
         }).length
-      ).to.equal(multipleFiltersAppliedShownCurricula.length);
+      ).toBe(multipleFiltersAppliedShownCurricula.length);
       multipleFiltersAppliedShownCurricula.forEach(curriculum => {
-        expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+        expect(screen.getAllByText(curriculum.display_name).length).toBe(1);
       });
     });
 
@@ -630,7 +626,7 @@ describe('CurriculumCatalog', () => {
       assert(!lessonFilterCheckbox.checked);
 
       // When no params are present, replacedLocation is set to undefined
-      expect(replacedLocation).to.be.undefined;
+      expect(replacedLocation).toBeUndefined();
     });
 
     it('params update when one of checked filter checkboxes is deselected', () => {
@@ -827,9 +823,7 @@ describe('CurriculumCatalog', () => {
       const storedRecommenderResults = JSON.parse(
         tryGetSessionStorage('similarRecommenderResults', '{}')
       );
-      expect(storedRecommenderResults[firstTestCurriculum.key].key).to.equal(
-        similarCurriculumRecommendations[0].key
-      );
+      expect(storedRecommenderResults[firstTestCurriculum.key].key).toBe(similarCurriculumRecommendations[0].key);
     });
 
     it('sets sessionStorage for Stretch Curriculum Recommender result', () => {
@@ -873,9 +867,7 @@ describe('CurriculumCatalog', () => {
         tryGetSessionStorage('stretchRecommenderResults', '{}')
       );
 
-      expect(storedRecommenderResults[firstTestCurriculum.key].key).to.equal(
-        recommendedStretchCurriculum.key
-      );
+      expect(storedRecommenderResults[firstTestCurriculum.key].key).toBe(recommendedStretchCurriculum.key);
     });
   });
 });

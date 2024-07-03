@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import ChangeUserTypeForm from '@cdo/apps/lib/ui/accounts/ChangeUserTypeForm';
 
-import {expect} from '../../../../util/deprecatedChai';
+
 
 describe('ChangeUserTypeForm', () => {
   const EMAIL_SELECTOR = 'input[type="email"]';
@@ -37,30 +37,30 @@ describe('ChangeUserTypeForm', () => {
     });
 
     it('when the email field changes', () => {
-      expect(onChange).not.to.have.been.called;
+      expect(onChange).not.toHaveBeenCalled();
 
       const changedEmail = 'currentEmail@example.com';
       wrapper
         .find(EMAIL_SELECTOR)
         .simulate('change', {target: {value: changedEmail}});
 
-      expect(onChange).to.have.been.calledOnce;
-      expect(onChange.firstCall.args[0]).to.deep.equal({
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect(onChange.firstCall.args[0]).toEqual({
         ...initialValues,
         email: changedEmail,
       });
     });
 
     it('when the email opt-in field changes', () => {
-      expect(onChange).not.to.have.been.called;
+      expect(onChange).not.toHaveBeenCalled();
 
       const newOptIn = 'yes';
       wrapper
         .find(OPT_IN_SELECTOR)
         .simulate('change', {target: {value: newOptIn}});
 
-      expect(onChange).to.have.been.calledOnce;
-      expect(onChange.firstCall.args[0]).to.deep.equal({
+      expect(onChange).toHaveBeenCalledTimes(1);
+      expect(onChange.firstCall.args[0]).toEqual({
         ...initialValues,
         emailOptIn: newOptIn,
       });
@@ -78,41 +78,41 @@ describe('ChangeUserTypeForm', () => {
     });
 
     it('when the enter key is pressed in the email field', () => {
-      expect(onSubmit).not.to.have.been.called;
+      expect(onSubmit).not.toHaveBeenCalled();
 
       wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Enter'});
 
-      expect(onSubmit).to.have.been.calledOnce;
-      expect(onSubmit.firstCall.args).to.be.empty;
+      expect(onSubmit).toHaveBeenCalledTimes(1);
+      expect(onSubmit.firstCall.args).toHaveLength(0);
     });
 
     it('when the enter key is pressed in email opt-in field', () => {
-      expect(onSubmit).not.to.have.been.called;
+      expect(onSubmit).not.toHaveBeenCalled();
 
       wrapper.find(OPT_IN_SELECTOR).simulate('keydown', {key: 'Enter'});
 
-      expect(onSubmit).to.have.been.calledOnce;
-      expect(onSubmit.firstCall.args).to.be.empty;
+      expect(onSubmit).toHaveBeenCalledTimes(1);
+      expect(onSubmit.firstCall.args).toHaveLength(0);
     });
 
     it('but not when other keys are pressed', () => {
-      expect(onSubmit).not.to.have.been.called;
+      expect(onSubmit).not.toHaveBeenCalled();
 
       wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'a'});
       wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Backspace'});
       wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Escape'});
 
-      expect(onSubmit).not.to.have.been.called;
+      expect(onSubmit).not.toHaveBeenCalled();
     });
 
     it('and not when the form is disabled', () => {
       wrapper.setProps({disabled: true});
-      expect(onSubmit).not.to.have.been.called;
+      expect(onSubmit).not.toHaveBeenCalled();
 
       wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Enter'});
       wrapper.find(OPT_IN_SELECTOR).simulate('keydown', {key: 'Enter'});
 
-      expect(onSubmit).not.to.have.been.called;
+      expect(onSubmit).not.toHaveBeenCalled();
     });
   });
 
@@ -150,7 +150,7 @@ describe('ChangeUserTypeForm', () => {
       });
 
       wrapper.instance().focusOnAnError();
-      expect(emailSpy).not.to.have.been.called;
+      expect(emailSpy).not.toHaveBeenCalled();
     });
 
     it('focuses on the email field if there is an email validation error', () => {
@@ -161,7 +161,7 @@ describe('ChangeUserTypeForm', () => {
       });
 
       wrapper.instance().focusOnAnError();
-      expect(emailSpy).to.have.been.calledOnce;
+      expect(emailSpy).toHaveBeenCalledTimes(1);
     });
   });
 });

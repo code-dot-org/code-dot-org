@@ -6,7 +6,7 @@ import Switch, {
   READ_WRITE_PROPERTIES,
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Switch';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+
 
 describe('Switch', () => {
   let fakeJohnnyFiveSwitch;
@@ -24,16 +24,14 @@ describe('Switch', () => {
 
   it('is an EventEmitter', () => {
     const testObj = new Switch({});
-    expect(testObj).to.be.an.instanceOf(EventEmitter);
+    expect(testObj).toBeInstanceOf(EventEmitter);
   });
 
   describe('read-only pass-through properties', () => {
     READ_ONLY_PROPERTIES.forEach(readOnlyProp => {
       it(`reads ${readOnlyProp} from the inner controller`, () => {
         const testObj = new Switch({});
-        expect(testObj[readOnlyProp]).to.equal(
-          fakeJohnnyFiveSwitch[readOnlyProp]
-        );
+        expect(testObj[readOnlyProp]).toBe(fakeJohnnyFiveSwitch[readOnlyProp]);
       });
 
       it(`cannot write ${readOnlyProp}`, () => {
@@ -49,15 +47,13 @@ describe('Switch', () => {
     READ_WRITE_PROPERTIES.forEach(readWriteProp => {
       it(`reads ${readWriteProp} from the inner controller`, () => {
         const testObj = new Switch({});
-        expect(testObj[readWriteProp]).to.equal(
-          fakeJohnnyFiveSwitch[readWriteProp]
-        );
+        expect(testObj[readWriteProp]).toBe(fakeJohnnyFiveSwitch[readWriteProp]);
       });
 
       it(`can write ${readWriteProp}`, () => {
         const testObj = new Switch({});
         testObj[readWriteProp] = 'new value';
-        expect(testObj[readWriteProp]).to.equal('new value');
+        expect(testObj[readWriteProp]).toBe('new value');
       });
     });
   });
@@ -80,22 +76,18 @@ describe('Switch', () => {
 
     it("emits 'open' and 'change' when the first event from the inner controller is 'open'", () => {
       fakeJohnnyFiveSwitch.emit('open');
-      expect(openSpy).to.have.been.calledOnce;
-      expect(closeSpy).not.to.have.been.called;
-      expect(changeSpy).to.have.been.calledOnce.and.calledWith(
-        testObj.openValue
-      );
+      expect(openSpy).toHaveBeenCalledTimes(1);
+      expect(closeSpy).not.toHaveBeenCalled();
+      expect(changeSpy).toHaveBeenCalledWith(testObj.openValue);
     });
 
     it("does not emit extra 'open' events", () => {
       fakeJohnnyFiveSwitch.emit('open');
       fakeJohnnyFiveSwitch.emit('open');
       fakeJohnnyFiveSwitch.emit('open');
-      expect(openSpy).to.have.been.calledOnce;
-      expect(closeSpy).not.to.have.been.called;
-      expect(changeSpy).to.have.been.calledOnce.and.calledWith(
-        testObj.openValue
-      );
+      expect(openSpy).toHaveBeenCalledTimes(1);
+      expect(closeSpy).not.toHaveBeenCalled();
+      expect(changeSpy).toHaveBeenCalledWith(testObj.openValue);
     });
 
     it("emits events when changing from 'open' to 'close' or back", () => {
@@ -103,9 +95,9 @@ describe('Switch', () => {
       fakeJohnnyFiveSwitch.emit('close');
       fakeJohnnyFiveSwitch.emit('open');
       fakeJohnnyFiveSwitch.emit('close');
-      expect(openSpy).to.have.been.calledTwice;
-      expect(closeSpy).to.have.been.calledTwice;
-      expect(changeSpy).to.have.callCount(4);
+      expect(openSpy).toHaveBeenCalledTimes(2);
+      expect(closeSpy).toHaveBeenCalledTimes(2);
+      expect(changeSpy).toHaveBeenCalledTimes(4);
     });
   });
 
@@ -125,22 +117,18 @@ describe('Switch', () => {
 
     it("emits 'close' and 'change' when the first event from the inner controller is 'close'", () => {
       fakeJohnnyFiveSwitch.emit('close');
-      expect(openSpy).not.to.have.been.called;
-      expect(closeSpy).to.have.been.calledOnce;
-      expect(changeSpy).to.have.been.calledOnce.and.calledWith(
-        testObj.closeValue
-      );
+      expect(openSpy).not.toHaveBeenCalled();
+      expect(closeSpy).toHaveBeenCalledTimes(1);
+      expect(changeSpy).toHaveBeenCalledWith(testObj.closeValue);
     });
 
     it("does not emit extra 'close' events", () => {
       fakeJohnnyFiveSwitch.emit('close');
       fakeJohnnyFiveSwitch.emit('close');
       fakeJohnnyFiveSwitch.emit('close');
-      expect(openSpy).not.to.have.been.called;
-      expect(closeSpy).to.have.been.calledOnce;
-      expect(changeSpy).to.have.been.calledOnce.and.calledWith(
-        testObj.closeValue
-      );
+      expect(openSpy).not.toHaveBeenCalled();
+      expect(closeSpy).toHaveBeenCalledTimes(1);
+      expect(changeSpy).toHaveBeenCalledWith(testObj.closeValue);
     });
   });
 });

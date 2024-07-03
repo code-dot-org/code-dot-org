@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {UnconnectedDocumentationTab} from '@cdo/apps/templates/instructions/DocumentationTab';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 const ENVIRONMENT = 'javalab';
 
@@ -93,7 +93,7 @@ describe('DocumentationTabTest', () => {
       <UnconnectedDocumentationTab programmingEnvironment={ENVIRONMENT} />
     );
     await processEventLoop();
-    expect(wrapper.find(Spinner).length).to.equal(1);
+    expect(wrapper.find(Spinner).length).toBe(1);
   });
 
   it('shows default class if it exists', async () => {
@@ -106,9 +106,9 @@ describe('DocumentationTabTest', () => {
     );
     await processEventLoop();
     wrapper.update();
-    expect(wrapper.find(Spinner).length).to.equal(0);
+    expect(wrapper.find(Spinner).length).toBe(0);
     const select = wrapper.find('select').at(0);
-    expect(select.prop('value')).to.equal(defaultClass);
+    expect(select.prop('value')).toBe(defaultClass);
   });
 
   it('shows first class if default does not exist', async () => {
@@ -121,8 +121,8 @@ describe('DocumentationTabTest', () => {
     );
     await processEventLoop();
     wrapper.update();
-    expect(wrapper.find(Spinner).length).to.equal(0);
+    expect(wrapper.find(Spinner).length).toBe(0);
     const select = wrapper.find('select').at(0);
-    expect(select.prop('value')).to.equal(fakeDocumentation[0].docs[0].key);
+    expect(select.prop('value')).toBe(fakeDocumentation[0].docs[0].key);
   });
 });

@@ -5,7 +5,7 @@ import {
   restoreStudioApp,
 } from '@cdo/apps/StudioApp';
 
-import {assert, expect} from '../util/reconfiguredChai';
+import {assert} from '../util/reconfiguredChai';
 
 import loadSource from './util/loadSource';
 

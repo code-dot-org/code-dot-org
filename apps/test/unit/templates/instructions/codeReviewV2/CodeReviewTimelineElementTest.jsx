@@ -10,7 +10,7 @@ import {
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 const DEFAULT_PROPS = {
   type: codeReviewTimelineElementType.CREATED,
@@ -34,8 +34,8 @@ describe('CodeReviewTimelineElement', () => {
         type: codeReviewTimelineElementType.CREATED,
       });
       const timelineDot = wrapper.find('TimelineDot');
-      expect(timelineDot).to.have.length(1);
-      expect(timelineDot.props().color).to.equal(color.purple);
+      expect(timelineDot).toHaveLength(1);
+      expect(timelineDot.props().color).toBe(color.purple);
     });
 
     it('displays a bottom line if it is not the last element', () => {
@@ -44,7 +44,7 @@ describe('CodeReviewTimelineElement', () => {
         isLast: false,
       });
       const timelineLine = wrapper.find('TimelineLine');
-      expect(timelineLine).to.have.length(1);
+      expect(timelineLine).toHaveLength(1);
     });
 
     it('hides bottom line if it is the last element', () => {
@@ -53,14 +53,14 @@ describe('CodeReviewTimelineElement', () => {
         isLast: true,
       });
       const timelineLine = wrapper.find('TimelineLine');
-      expect(timelineLine).to.have.length(0);
+      expect(timelineLine).toHaveLength(0);
     });
 
     it('has created text', () => {
       const wrapper = setUp({
         type: codeReviewTimelineElementType.CREATED,
       });
-      expect(wrapper.contains(javalabMsg.created())).to.be.true;
+      expect(wrapper.contains(javalabMsg.created())).toBe(true);
     });
   });
 
@@ -72,9 +72,8 @@ describe('CodeReviewTimelineElement', () => {
         viewAsCodeReviewer: false,
       });
       const eyeballLink = wrapper.find('EyeballLink');
-      expect(eyeballLink).to.have.length(1);
-      expect(eyeballLink.props().versionHref.includes('version=asdfjkl')).to.be
-        .true;
+      expect(eyeballLink).toHaveLength(1);
+      expect(eyeballLink.props().versionHref.includes('version=asdfjkl')).toBe(true);
     });
 
     it('has expected params in eyeball link', () => {
@@ -90,12 +89,9 @@ describe('CodeReviewTimelineElement', () => {
         viewAsCodeReviewer: false,
       });
       const eyeballLink = wrapper.find('EyeballLink');
-      expect(eyeballLink.props().versionHref.includes('version=asdfjkl')).to.be
-        .true;
-      expect(eyeballLink.props().versionHref.includes('user_id=123')).to.be
-        .true;
-      expect(eyeballLink.props().versionHref.includes('section_id=456')).to.be
-        .true;
+      expect(eyeballLink.props().versionHref.includes('version=asdfjkl')).toBe(true);
+      expect(eyeballLink.props().versionHref.includes('user_id=123')).toBe(true);
+      expect(eyeballLink.props().versionHref.includes('section_id=456')).toBe(true);
       utils.queryParams.restore();
     });
 
@@ -105,7 +101,7 @@ describe('CodeReviewTimelineElement', () => {
         projectVersionId: null,
         viewAsCodeReviewer: false,
       });
-      expect(wrapper.find('EyeballLink')).to.have.length(0);
+      expect(wrapper.find('EyeballLink')).toHaveLength(0);
     });
 
     it('hides eyeball link if viewAsCodeReviewer is true', () => {
@@ -114,7 +110,7 @@ describe('CodeReviewTimelineElement', () => {
         projectVersionId: 'asdfjkl',
         viewAsCodeReviewer: true,
       });
-      expect(wrapper.find('EyeballLink')).to.have.length(0);
+      expect(wrapper.find('EyeballLink')).toHaveLength(0);
     });
 
     it('displays a bottom line if it is not the last element', () => {
@@ -123,7 +119,7 @@ describe('CodeReviewTimelineElement', () => {
         isLast: false,
       });
       const timelineLine = wrapper.find('TimelineLine');
-      expect(timelineLine).to.have.length(1);
+      expect(timelineLine).toHaveLength(1);
     });
 
     it('does not display a bottom line if it is the last element', () => {
@@ -132,7 +128,7 @@ describe('CodeReviewTimelineElement', () => {
         isLast: true,
       });
       const timelineLine = wrapper.find('TimelineLine');
-      expect(timelineLine).to.have.length(0);
+      expect(timelineLine).toHaveLength(0);
     });
 
     it('displays gray timeline dot with a check', () => {
@@ -140,9 +136,9 @@ describe('CodeReviewTimelineElement', () => {
         type: codeReviewTimelineElementType.COMMIT,
       });
       const timelineDot = wrapper.find('TimelineDot');
-      expect(timelineDot).to.have.length(1);
-      expect(timelineDot.props().color).to.equal(color.dark_charcoal);
-      expect(timelineDot.props().hasCheck).to.be.true;
+      expect(timelineDot).toHaveLength(1);
+      expect(timelineDot.props().color).toBe(color.dark_charcoal);
+      expect(timelineDot.props().hasCheck).toBe(true);
     });
   });
 
@@ -152,7 +148,7 @@ describe('CodeReviewTimelineElement', () => {
         type: codeReviewTimelineElementType.CODE_REVIEW,
         projectVersionId: 'asdfjkl',
       });
-      expect(wrapper.find('EyeballLink')).to.have.length(1);
+      expect(wrapper.find('EyeballLink')).toHaveLength(1);
     });
 
     it('hides eyeball link if there is not a version', () => {
@@ -160,7 +156,7 @@ describe('CodeReviewTimelineElement', () => {
         type: codeReviewTimelineElementType.CODE_REVIEW,
         projectVersionId: null,
       });
-      expect(wrapper.find('EyeballLink')).to.have.length(0);
+      expect(wrapper.find('EyeballLink')).toHaveLength(0);
     });
 
     it('displays children', () => {
@@ -171,7 +167,7 @@ describe('CodeReviewTimelineElement', () => {
         },
         child
       );
-      expect(wrapper.find('.the-child')).to.have.length(1);
+      expect(wrapper.find('.the-child')).toHaveLength(1);
     });
 
     it('displays a bottom line if it is not the last', () => {
@@ -179,7 +175,7 @@ describe('CodeReviewTimelineElement', () => {
         type: codeReviewTimelineElementType.CODE_REVIEW,
         isLast: false,
       });
-      expect(wrapper.find('TimelineLine')).to.have.length(1);
+      expect(wrapper.find('TimelineLine')).toHaveLength(1);
     });
 
     it('displays no line if it is last', () => {
@@ -187,7 +183,7 @@ describe('CodeReviewTimelineElement', () => {
         type: codeReviewTimelineElementType.CODE_REVIEW,
         isLast: true,
       });
-      expect(wrapper.find('TimelineLine')).to.have.length(0);
+      expect(wrapper.find('TimelineLine')).toHaveLength(0);
     });
   });
 });

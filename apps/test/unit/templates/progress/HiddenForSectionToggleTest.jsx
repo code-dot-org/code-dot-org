@@ -6,7 +6,7 @@ import Button from '@cdo/apps/templates/Button';
 import {UnconnectedHiddenForSectionToggle as HiddenForSectionToggle} from '@cdo/apps/templates/progress/HiddenForSectionToggle';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/deprecatedChai';
+
 
 describe('HiddenForSectionToggle', () => {
   it('renders two buttons reflecting hidden state', () => {
@@ -48,13 +48,13 @@ describe('HiddenForSectionToggle', () => {
 
     // Click the first button
     wrapper.find(Button).at(0).props().onClick();
-    expect(callback).to.have.been.calledOnce.and.calledWith('visible');
+    expect(callback).toHaveBeenCalledWith('visible');
 
     callback.resetHistory();
 
     // Click the second button
     wrapper.find(Button).at(1).props().onClick();
-    expect(callback).to.have.been.calledOnce.and.calledWith('hidden');
+    expect(callback).toHaveBeenCalledWith('hidden');
   });
 
   it('does not call onChange when disabled', () => {
@@ -66,6 +66,6 @@ describe('HiddenForSectionToggle', () => {
     // Click both buttons
     wrapper.find(Button).at(0).props().onClick();
     wrapper.find(Button).at(1).props().onClick();
-    expect(callback).not.to.have.been.called;
+    expect(callback).not.toHaveBeenCalled();
   });
 });

@@ -6,7 +6,7 @@ import CollapserButton from '@cdo/apps/templates/instructions/CollapserButton';
 import {UnconnectedInstructionsCsfRightCol as InstructionsCsfRightCol} from '@cdo/apps/templates/instructions/InstructionsCsfRightCol';
 import ScrollButtons from '@cdo/apps/templates/instructions/ScrollButtons';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 const DEFAULT_PROPS = {
   shouldDisplayHintPrompt: () => {},
@@ -37,8 +37,8 @@ describe('InstructionsCsfRightCol', () => {
     setUp({setColHeight: setColHeightSpy, setColWidth: setColWidthSpy});
 
     // should be called after mount:
-    expect(setColWidthSpy.calledOnce).to.be.true;
-    expect(setColHeightSpy.calledOnce).to.be.true;
+    expect(setColWidthSpy.calledOnce).toBe(true);
+    expect(setColHeightSpy.calledOnce).toBe(true);
   });
 
   it('only recalculates col width and height if height or collapsed props change', () => {
@@ -53,28 +53,28 @@ describe('InstructionsCsfRightCol', () => {
     });
 
     // Should be called after mount
-    expect(setColWidthSpy).to.have.been.calledOnce;
-    expect(setColHeightSpy).to.have.been.calledOnce;
+    expect(setColWidthSpy).toHaveBeenCalledTimes(1);
+    expect(setColHeightSpy).toHaveBeenCalledTimes(1);
 
     // Should not be called when unrelated prop changes
     wrapper.setProps({isRtl: true});
-    expect(setColWidthSpy).to.have.been.calledOnce;
-    expect(setColHeightSpy).to.have.been.calledOnce;
+    expect(setColWidthSpy).toHaveBeenCalledTimes(1);
+    expect(setColHeightSpy).toHaveBeenCalledTimes(1);
 
     // Should be called when height changes
     wrapper.setProps({height: 100});
-    expect(setColWidthSpy).to.have.been.calledTwice;
-    expect(setColHeightSpy).to.have.been.calledTwice;
+    expect(setColWidthSpy).toHaveBeenCalledTimes(2);
+    expect(setColHeightSpy).toHaveBeenCalledTimes(2);
 
     // Should be called when collapsed changes
     wrapper.setProps({collapsed: true});
-    expect(setColWidthSpy).to.have.been.calledThrice;
-    expect(setColHeightSpy).to.have.been.calledThrice;
+    expect(setColWidthSpy).toHaveBeenCalledTimes(3);
+    expect(setColHeightSpy).toHaveBeenCalledTimes(3);
   });
 
   it('displays collapser button if there is feedback', () => {
     const wrapper = setUp({feedback: {message: 'feedback', isFailure: false}});
-    expect(wrapper.find(CollapserButton)).to.have.length(1);
+    expect(wrapper.find(CollapserButton)).toHaveLength(1);
   });
 
   it('displays collapser button if there are hints', () => {
@@ -83,28 +83,28 @@ describe('InstructionsCsfRightCol', () => {
       markdown: 'hint markdown',
     };
     const wrapper = setUp({hints: [hint]});
-    expect(wrapper.find(CollapserButton)).to.have.length(1);
+    expect(wrapper.find(CollapserButton)).toHaveLength(1);
   });
 
   it('displays collapser button if there are long and short instructions', () => {
     const wrapper = setUp({
       hasShortAndLongInstructions: true,
     });
-    expect(wrapper.find(CollapserButton)).to.have.length(1);
+    expect(wrapper.find(CollapserButton)).toHaveLength(1);
   });
 
   it('displays scroll buttons if displayScrollButtons prop is true', () => {
     const wrapper = setUp({
       displayScrollButtons: true,
     });
-    expect(wrapper.find(ScrollButtons)).to.have.length(1);
+    expect(wrapper.find(ScrollButtons)).toHaveLength(1);
   });
 
   it('hides scroll buttons if displayScrollButtons prop is false', () => {
     const wrapper = setUp({
       displayScrollButtons: false,
     });
-    expect(wrapper.find(ScrollButtons)).to.have.length(0);
+    expect(wrapper.find(ScrollButtons)).toHaveLength(0);
   });
 
   it('calls handleClickCollapser when CollapserButton is clicked', () => {
@@ -115,6 +115,6 @@ describe('InstructionsCsfRightCol', () => {
       handleClickCollapser: handleClickCollapserSpy,
     });
     wrapper.find(CollapserButton).simulate('click');
-    expect(handleClickCollapserSpy.calledOnce).to.be.true;
+    expect(handleClickCollapserSpy.calledOnce).toBe(true);
   });
 });

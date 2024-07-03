@@ -14,7 +14,7 @@ import {
   registerReducers,
 } from '@cdo/apps/redux';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 import {nonUserFacingGroup} from './LessonGroupCardTest';
 
@@ -111,11 +111,11 @@ describe('UnitCard', () => {
     const wrapper = createWrapper({});
     // There are 2 lesson groups, but they have forwardRefs which causes each component
     // to be counted twice.
-    expect(wrapper.find('Connect(LessonGroupCard)')).to.have.lengthOf(4);
-    expect(wrapper.find('LessonToken')).to.have.lengthOf(4);
-    expect(wrapper.find('textarea')).to.have.lengthOf(4);
+    expect(wrapper.find('Connect(LessonGroupCard)')).toHaveLength(4);
+    expect(wrapper.find('LessonToken')).toHaveLength(4);
+    expect(wrapper.find('textarea')).toHaveLength(4);
 
-    expect(wrapper.find('button').map(b => b.text())).to.eql([
+    expect(wrapper.find('button').map(b => b.text())).toEqual([
       'Lesson',
       'Lesson',
       'Add Lesson Group',
@@ -129,21 +129,19 @@ describe('UnitCard', () => {
         lessonGroups={[defaultProps.lessonGroups[0]]}
       />
     );
-    expect(wrapper.find('Connect(LessonGroupCard)')).to.have.lengthOf(1);
-    expect(wrapper.find('button')).to.have.lengthOf(2);
-    expect(wrapper.find('button').at(0).text()).to.include('Add Lesson Group');
-    expect(wrapper.find('button').at(1).text()).to.include(
-      'Disable Lesson Groups'
-    );
+    expect(wrapper.find('Connect(LessonGroupCard)')).toHaveLength(1);
+    expect(wrapper.find('button')).toHaveLength(2);
+    expect(wrapper.find('button').at(0).text()).toContain('Add Lesson Group');
+    expect(wrapper.find('button').at(1).text()).toContain('Disable Lesson Groups');
   });
 
   it('displays UnitCard correctly when non user facing lesson group', () => {
     let wrapper = shallow(
       <UnitCard {...defaultProps} lessonGroups={[nonUserFacingGroup]} />
     );
-    expect(wrapper.find('Connect(LessonGroupCard)')).to.have.lengthOf(1);
-    expect(wrapper.find('button')).to.have.lengthOf(1);
-    expect(wrapper.find('button').text()).to.include('Enable Lesson Groups');
+    expect(wrapper.find('Connect(LessonGroupCard)')).toHaveLength(1);
+    expect(wrapper.find('button')).toHaveLength(1);
+    expect(wrapper.find('button').text()).toContain('Enable Lesson Groups');
   });
 
   it('add new lesson group', () => {
@@ -153,10 +151,10 @@ describe('UnitCard', () => {
     let wrapper = shallow(<UnitCard {...defaultProps} />);
 
     const button = wrapper.find('button');
-    expect(button.text()).to.include('Add Lesson Group');
+    expect(button.text()).toContain('Add Lesson Group');
     button.simulate('mouseDown');
 
-    expect(addGroup).to.have.been.calledOnce;
+    expect(addGroup).toHaveBeenCalledTimes(1);
     window.prompt.restore();
   });
 
@@ -168,10 +166,10 @@ describe('UnitCard', () => {
       <UnitCard {...defaultProps} lessonGroups={[nonUserFacingGroup]} />
     );
     const button = wrapper.find('button');
-    expect(button.text()).to.include('Enable Lesson Groups');
+    expect(button.text()).toContain('Enable Lesson Groups');
     button.simulate('mouseDown');
 
-    expect(convertGroupToUserFacing).to.have.been.calledOnce;
+    expect(convertGroupToUserFacing).toHaveBeenCalledTimes(1);
     window.prompt.restore();
   });
 
@@ -183,9 +181,9 @@ describe('UnitCard', () => {
       />
     );
     const button = wrapper.find('button').at(1);
-    expect(button.text()).to.include('Disable Lesson Groups');
+    expect(button.text()).toContain('Disable Lesson Groups');
     button.simulate('mouseDown');
 
-    expect(convertGroupToNonUserFacing).to.have.been.calledOnce;
+    expect(convertGroupToNonUserFacing).toHaveBeenCalledTimes(1);
   });
 });

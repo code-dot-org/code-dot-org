@@ -3,7 +3,7 @@ import React from 'react';
 
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 describe('SafeMarkdown', () => {
   it('will render basic markdown', () => {
@@ -19,7 +19,7 @@ describe('SafeMarkdown', () => {
           </p>
         </div>
       )
-    ).to.equal(true);
+    ).toBe(true);
   });
 
   it('will render raw html', () => {
@@ -27,39 +27,35 @@ describe('SafeMarkdown', () => {
       <SafeMarkdown markdown='<strong>some</strong> <em>basic</em> <a href="markdown">inline</a>' />
     );
 
-    expect(
-      basicWrapper.equals(
-        <div>
-          <p>
-            <strong>some</strong> <em>basic</em> <a href="markdown">inline</a>
-          </p>
-        </div>
-      ),
-      'inline html is rendered directly'
-    ).to.equal(true);
+    // inline html is rendered directly
+    expect(basicWrapper.equals(
+      <div>
+        <p>
+          <strong>some</strong> <em>basic</em> <a href="markdown">inline</a>
+        </p>
+      </div>
+    )).toBe(true);
 
     const advancedWrapper = shallow(
       <SafeMarkdown markdown="<table><thead><th>Some advanced html</th><th><strong>not</strong> usually supported by markdown</th></thead></table>" />
     );
 
     // note the output has added <tr> tags as appropriate
-    expect(
-      advancedWrapper.equals(
-        <div>
-          <table>
-            <thead>
-              <tr>
-                <th>Some advanced html</th>
-                <th>
-                  <strong>not</strong> usually supported by markdown
-                </th>
-              </tr>
-            </thead>
-          </table>
-        </div>
-      ),
-      'inline html including non-markdown-supported constructs is rendered directly'
-    ).to.equal(true);
+    // inline html including non-markdown-supported constructs is rendered directly
+    expect(advancedWrapper.equals(
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>Some advanced html</th>
+              <th>
+                <strong>not</strong> usually supported by markdown
+              </th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    )).toBe(true);
   });
 
   it('implements expandableImages', () => {
@@ -67,16 +63,14 @@ describe('SafeMarkdown', () => {
       <SafeMarkdown markdown="![regular](http://example.com/img.jpg)" />
     );
 
-    expect(
-      regularImage.equals(
-        <div>
-          <p>
-            <img src="http://example.com/img.jpg" alt="regular" />
-          </p>
-        </div>
-      ),
-      'regular images are rendered normally'
-    ).to.equal(true);
+    // regular images are rendered normally
+    expect(regularImage.equals(
+      <div>
+        <p>
+          <img src="http://example.com/img.jpg" alt="regular" />
+        </p>
+      </div>
+    )).toBe(true);
 
     const expandableImage = shallow(
       <SafeMarkdown markdown="![expandable](http://example.com/img.jpg)" />
@@ -84,21 +78,17 @@ describe('SafeMarkdown', () => {
 
     // Enzyme doesn't like the data-url property when comparing equality
     // directly, so we use .html() as a proxy for this test
-    expect(
-      expandableImage.html(),
-      'expandable images are rendered as custom spans'
-    ).to.equal(
-      shallow(
-        <div>
-          <p>
-            <span
-              data-url="http://example.com/img.jpg"
-              className="expandable-image"
-            />
-          </p>
-        </div>
-      ).html()
-    );
+    // expandable images are rendered as custom spans
+    expect(expandableImage.html()).toBe(shallow(
+      <div>
+        <p>
+          <span
+            data-url="http://example.com/img.jpg"
+            className="expandable-image"
+          />
+        </p>
+      </div>
+    ).html());
   });
 
   it('implements visualCodeBlocks', () => {
@@ -106,35 +96,31 @@ describe('SafeMarkdown', () => {
       <SafeMarkdown markdown="some markdown with a `regular` code block" />
     );
 
-    expect(
-      regularCodeBlock.equals(
-        <div>
-          <p>
-            some markdown with a <code>regular</code> code block
-          </p>
-        </div>
-      ),
-      'regular code blocks are rendered normally'
-    ).to.equal(true);
+    // regular code blocks are rendered normally
+    expect(regularCodeBlock.equals(
+      <div>
+        <p>
+          some markdown with a <code>regular</code> code block
+        </p>
+      </div>
+    )).toBe(true);
 
     const visualCodeBlock = shallow(
       <SafeMarkdown markdown="some markdown with a `visual`(#c0ffee) code block" />
     );
 
-    expect(
-      visualCodeBlock.equals(
-        <div>
-          <p>
-            some markdown with a{' '}
-            <code className="visual-block" style={{backgroundColor: '#c0ffee'}}>
-              visual
-            </code>{' '}
-            code block
-          </p>
-        </div>
-      ),
-      'visual code blocks are rendered with expected properties'
-    ).to.equal(true);
+    // visual code blocks are rendered with expected properties
+    expect(visualCodeBlock.equals(
+      <div>
+        <p>
+          some markdown with a{' '}
+          <code className="visual-block" style={{backgroundColor: '#c0ffee'}}>
+            visual
+          </code>{' '}
+          code block
+        </p>
+      </div>
+    )).toBe(true);
   });
 
   it('renders XML as top level block when appropriate', () => {
@@ -142,10 +128,8 @@ describe('SafeMarkdown', () => {
       <SafeMarkdown markdown="Text with <xml><block type='xml'></block></xml> inline" />
     );
 
-    expect(
-      inlineXml.html(),
-      'inline xml blocks render within their containing paragraph'
-    ).to.equal(
+    // inline xml blocks render within their containing paragraph
+    expect(inlineXml.html()).toBe(
       '<div><p>Text with <xml is="xml"><block is="block" type="xml"></block></xml> inline</p></div>'
     );
 
@@ -161,10 +145,8 @@ describe('SafeMarkdown', () => {
 
     // Enzyme is particular about newlines when comparing raw elements, so we
     // still have to rely on rendered HTML comparison here
-    expect(
-      blockXml.html(),
-      'block xml blocks render as top-level elements (siblings to paragraphs)'
-    ).to.equal(
+    // block xml blocks render as top-level elements (siblings to paragraphs)
+    expect(blockXml.html()).toBe(
       '<div><p>Text with</p>\n<xml is="xml"><block is="block" type="xml"></block></xml>\n<p>in its own block</p></div>'
     );
   });
@@ -181,7 +163,7 @@ describe('SafeMarkdown', () => {
           </p>
         </div>
       )
-    ).to.equal(true);
+    ).toBe(true);
 
     const internalLink = shallow(
       <SafeMarkdown markdown="[internal link](code.org)" />
@@ -194,7 +176,7 @@ describe('SafeMarkdown', () => {
           </p>
         </div>
       )
-    ).to.equal(true);
+    ).toBe(true);
   });
 
   it('will open links in a new tab if specified', () => {
@@ -214,7 +196,7 @@ describe('SafeMarkdown', () => {
           </p>
         </div>
       )
-    ).to.equal(true);
+    ).toBe(true);
 
     const internalLink = shallow(
       <SafeMarkdown
@@ -232,42 +214,35 @@ describe('SafeMarkdown', () => {
           </p>
         </div>
       )
-    ).to.equal(true);
+    ).toBe(true);
   });
 
   it('is resistant to JS injection', () => {
     const scriptTagInjection = shallow(
       <SafeMarkdown markdown='<script type="text/javascript">alert(&#x22;hello!&#x22;)</script>' />
     );
-    expect(
-      scriptTagInjection.equals(<div />),
-      'script tags are ignored'
-    ).to.equal(true);
+    // script tags are ignored
+    expect(scriptTagInjection.equals(<div />)).toBe(true);
 
     const inlineEventInjection = shallow(
       <SafeMarkdown markdown='<div onMouseOver="alert("hello!")"></div>' />
     );
-    expect(
-      inlineEventInjection.equals(<div />),
-      'event attributes are ignored'
-    ).to.equal(true);
+    // event attributes are ignored
+    expect(inlineEventInjection.equals(<div />)).toBe(true);
 
     const iframeInjection = shallow(
       <SafeMarkdown
         markdown={`<iframe src="javascript:alert('hello')"></iframe>`}
       />
     );
-    expect(iframeInjection.equals(<div />), 'iframes are ignored').to.equal(
-      true
-    );
+    // iframes are ignored
+    expect(iframeInjection.equals(<div />)).toBe(true);
 
     const miscInjection = shallow(
       <SafeMarkdown markdown='<div><math><mi xlink:href="data:x,<script>alert(&#x22;foxtrot&#x22;)</script>"></mi></math></div>' />
     );
-    expect(
-      miscInjection.equals(<div>{'">'}</div>),
-      'arbitrary unsupported tags are ignored and/or escaped'
-    ).to.equal(true);
+    // arbitrary unsupported tags are ignored and/or escaped
+    expect(miscInjection.equals(<div>{'">'}</div>)).toBe(true);
   });
 
   it('is resistant to JS injection in XML', () => {
@@ -275,8 +250,7 @@ describe('SafeMarkdown', () => {
       <SafeMarkdown markdown='<xml onload="alert(&#x22;foxtrot&#x22;)"><block/></xml>' />
     );
 
-    expect(xmlJSInjection.html(), 'JS events in XML are ignored').to.equal(
-      '<div><xml is="xml"><block is="block"></block></xml></div>'
-    );
+    // JS events in XML are ignored
+    expect(xmlJSInjection.html()).toBe('<div><xml is="xml"><block is="block"></block></xml></div>');
   });
 });

@@ -409,11 +409,11 @@ describe('TeacherContentToggle', () => {
         assert.strictEqual(props.isHiddenLesson, false);
         assert.strictEqual(props.isLockedLesson, false);
         assert.strictEqual(
-          progressHelpers.lessonIsLockedForAllStudents.called,
+          progressHelpers.toHaveBeenCalled(),
           false
         );
         assert.strictEqual(
-          hiddenLessonRedux.isLessonHiddenForSection.called,
+          hiddenLessonRedux.toHaveBeenCalled(),
           false
         );
       });

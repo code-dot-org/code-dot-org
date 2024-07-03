@@ -5,7 +5,7 @@ var chai = require('chai');
 
 var state = require('@cdo/apps/code-studio/clientState');
 
-chai.should();
+expect(chai)();
 
 describe('clientState#sourceForLevel', function () {
   beforeEach(function () {
@@ -15,12 +15,12 @@ describe('clientState#sourceForLevel', function () {
   it('returns cached levelSource if timestamp is newer', function () {
     state.writeSourceForLevel('sample', 1, 200, 'abc');
     var source = state.sourceForLevel('sample', 1, 100);
-    source.should.equal('abc');
+    expect(source).toBe('abc');
   });
 
   it('returns cached levelSource if no timestamp given', function () {
     state.writeSourceForLevel('sample', 2, 300, 'zzz');
-    state.sourceForLevel('sample', 2, null).should.equal('zzz');
+    expect(state.sourceForLevel('sample', 2, null)).toBe('zzz');
   });
 
   it('returns `undefined` if timestamp is older', function () {
@@ -40,11 +40,11 @@ describe('clientState#queryParams', function () {
     window.history.replaceState('', '', '?foo=1&bar=2');
 
     var params = state.queryParams();
-    params.foo.should.equal('1');
-    params.bar.should.equal('2');
+    expect(params.foo).toBe('1');
+    expect(params.bar).toBe('2');
 
-    state.queryParams('foo').should.equal('1');
-    state.queryParams('bar').should.equal('2');
+    expect(state.queryParams('foo')).toBe('1');
+    expect(state.queryParams('bar')).toBe('2');
   });
 });
 
@@ -54,73 +54,73 @@ describe('clientState#hasSeenVideo/hasSeenCallout', function () {
   });
 
   it('records video progress', function () {
-    state.hasSeenVideo('video1').should.equal(false);
-    state.hasSeenVideo('video2').should.equal(false);
+    expect(state.hasSeenVideo('video1')).toBe(false);
+    expect(state.hasSeenVideo('video2')).toBe(false);
 
     state.recordVideoSeen('video1');
-    state.hasSeenVideo('video1').should.equal(true);
-    state.hasSeenVideo('video2').should.equal(false);
+    expect(state.hasSeenVideo('video1')).toBe(true);
+    expect(state.hasSeenVideo('video2')).toBe(false);
 
     state.recordVideoSeen('video2');
-    state.hasSeenVideo('video1').should.equal(true);
-    state.hasSeenVideo('video2').should.equal(true);
+    expect(state.hasSeenVideo('video1')).toBe(true);
+    expect(state.hasSeenVideo('video2')).toBe(true);
 
     //Check idempotency
     state.recordVideoSeen('video1');
-    state.hasSeenVideo('video1').should.equal(true);
-    state.hasSeenVideo('video2').should.equal(true);
+    expect(state.hasSeenVideo('video1')).toBe(true);
+    expect(state.hasSeenVideo('video2')).toBe(true);
   });
 
   it('handles malformed storage for video progress', function () {
     sessionStorage.setItem('video', null);
-    state.hasSeenVideo('someVideo').should.equal(false);
+    expect(state.hasSeenVideo('someVideo')).toBe(false);
     state.recordVideoSeen('someVideo');
-    state.hasSeenVideo('someVideo').should.equal(true);
+    expect(state.hasSeenVideo('someVideo')).toBe(true);
 
     sessionStorage.setItem('video', '');
-    state.hasSeenVideo('someVideo').should.equal(false);
+    expect(state.hasSeenVideo('someVideo')).toBe(false);
     state.recordVideoSeen('someVideo');
-    state.hasSeenVideo('someVideo').should.equal(true);
+    expect(state.hasSeenVideo('someVideo')).toBe(true);
 
     sessionStorage.setItem('video', "{'malformed_json': true");
-    state.hasSeenVideo('someVideo').should.equal(false);
+    expect(state.hasSeenVideo('someVideo')).toBe(false);
     state.recordVideoSeen('someVideo');
-    state.hasSeenVideo('someVideo').should.equal(true);
+    expect(state.hasSeenVideo('someVideo')).toBe(true);
   });
 
   it('records callouts seen', function () {
-    state.hasSeenCallout('callout1').should.equal(false);
-    state.hasSeenCallout('callout2').should.equal(false);
+    expect(state.hasSeenCallout('callout1')).toBe(false);
+    expect(state.hasSeenCallout('callout2')).toBe(false);
 
     state.recordCalloutSeen('callout1');
-    state.hasSeenCallout('callout1').should.equal(true);
-    state.hasSeenCallout('callout2').should.equal(false);
+    expect(state.hasSeenCallout('callout1')).toBe(true);
+    expect(state.hasSeenCallout('callout2')).toBe(false);
 
     state.recordCalloutSeen('callout2');
-    state.hasSeenCallout('callout1').should.equal(true);
-    state.hasSeenCallout('callout2').should.equal(true);
+    expect(state.hasSeenCallout('callout1')).toBe(true);
+    expect(state.hasSeenCallout('callout2')).toBe(true);
 
     //Check idempotency
     state.recordCalloutSeen('callout1');
-    state.hasSeenCallout('callout1').should.equal(true);
-    state.hasSeenCallout('callout2').should.equal(true);
+    expect(state.hasSeenCallout('callout1')).toBe(true);
+    expect(state.hasSeenCallout('callout2')).toBe(true);
   });
 
   it('handles malformed storage for callouts seen', function () {
     sessionStorage.setItem('callout', null);
-    state.hasSeenCallout('someCallout').should.equal(false);
+    expect(state.hasSeenCallout('someCallout')).toBe(false);
     state.recordCalloutSeen('someCallout');
-    state.hasSeenCallout('someCallout').should.equal(true);
+    expect(state.hasSeenCallout('someCallout')).toBe(true);
 
     sessionStorage.setItem('callout', '');
-    state.hasSeenCallout('someCallout').should.equal(false);
+    expect(state.hasSeenCallout('someCallout')).toBe(false);
     state.recordCalloutSeen('someCallout');
-    state.hasSeenCallout('someCallout').should.equal(true);
+    expect(state.hasSeenCallout('someCallout')).toBe(true);
 
     sessionStorage.setItem('callout', "{'malformed_json': true");
-    state.hasSeenCallout('someCallout').should.equal(false);
+    expect(state.hasSeenCallout('someCallout')).toBe(false);
     state.recordCalloutSeen('someCallout');
-    state.hasSeenCallout('someCallout').should.equal(true);
+    expect(state.hasSeenCallout('someCallout')).toBe(true);
   });
 });
 
@@ -133,12 +133,12 @@ describe('clientState#reset', function () {
     state.recordCalloutSeen('someCallout');
     state.recordVideoSeen('someVideo');
 
-    state.hasSeenCallout('someCallout').should.equal(true);
-    state.hasSeenVideo('someVideo').should.equal(true);
+    expect(state.hasSeenCallout('someCallout')).toBe(true);
+    expect(state.hasSeenVideo('someVideo')).toBe(true);
 
     state.reset();
 
-    state.hasSeenCallout('someCallout').should.equal(false);
-    state.hasSeenVideo('someVideo').should.equal(false);
+    expect(state.hasSeenCallout('someCallout')).toBe(false);
+    expect(state.hasSeenVideo('someVideo')).toBe(false);
   });
 });

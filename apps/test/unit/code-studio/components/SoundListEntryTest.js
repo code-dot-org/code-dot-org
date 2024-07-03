@@ -6,7 +6,7 @@ import SoundListEntry from '@cdo/apps/code-studio/components/SoundListEntry';
 import Sounds from '@cdo/apps/Sounds';
 import color from '@cdo/apps/util/color';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai';
 
 describe('SoundListEntry', () => {
   const sounds = new Sounds();
@@ -64,7 +64,7 @@ describe('SoundListEntry', () => {
     wrapper.setProps({isSelected: false});
 
     assert.equal(sounds.isPlaying(sourceURL), false);
-    expect(sounds.stopPlayingURL).to.have.been.calledOnce;
+    expect(sounds.stopPlayingURL).toHaveBeenCalledTimes(1);
 
     sounds.stopPlayingURL.restore();
   });

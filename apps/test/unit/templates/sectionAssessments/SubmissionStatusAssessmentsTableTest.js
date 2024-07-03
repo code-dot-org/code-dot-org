@@ -8,7 +8,7 @@ import {
 import SubmissionStatusAssessmentsTable from '@cdo/apps/templates/sectionAssessments/SubmissionStatusAssessmentsTable';
 import i18n from '@cdo/locale';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai';
 
 describe('SubmissionStatusAssessmentsTable', () => {
   it('renders a table', () => {
@@ -18,7 +18,7 @@ describe('SubmissionStatusAssessmentsTable', () => {
       />
     );
 
-    expect(wrapper.find('table')).to.exist;
+    expect(wrapper.find('table')).toBeDefined();
   });
 
   it('renders the correct number of rows and headers', () => {
@@ -29,10 +29,10 @@ describe('SubmissionStatusAssessmentsTable', () => {
     );
 
     const tableHeaders = wrapper.find('th');
-    expect(tableHeaders).to.have.length(6);
+    expect(tableHeaders).toHaveLength(6);
 
     const tableRows = wrapper.find('tr');
-    expect(tableRows).to.have.length(11);
+    expect(tableRows).toHaveLength(11);
   });
 
   it('renders with an icon if specified', () => {
@@ -167,16 +167,14 @@ describe('SubmissionStatusAssessmentsTable', () => {
     );
 
     // Renders a user-friendly formatted time string
-    expect(wrapper.find('.timestampCell').first().text()).to.equal(
-      '10/7/2018, 8:52:05 PM'
-    );
+    expect(wrapper.find('.timestampCell').first().text()).toBe('10/7/2018, 8:52:05 PM');
 
     // Also renders a machine/screen-reader-friendly (Date)Time Element
-    expect(wrapper.find('.timestampCell').first().find('time')).to.exist;
+    expect(wrapper.find('.timestampCell').first().find('time')).toBeDefined();
 
     expect(
       wrapper.find('.timestampCell').first().find('time').prop('dateTime')
-    ).to.equal('2018-10-07T20:52:05.000Z');
+    ).toBe('2018-10-07T20:52:05.000Z');
   });
 
   // This test is flaky based on the browser version.
@@ -191,7 +189,7 @@ describe('SubmissionStatusAssessmentsTable', () => {
     );
     expect(
       basicNonEnglishWrapper.find('.timestampCell').first().text()
-    ).to.equal('7/10/2018 20:52:05');
+    ).toBe('7/10/2018 20:52:05');
 
     // localeCode will undefined by default here, but it defaults to null in
     // redux; so, make sure we explicitly test that particular falsy value
@@ -201,8 +199,6 @@ describe('SubmissionStatusAssessmentsTable', () => {
         localeCode={null}
       />
     );
-    expect(nullLocaleWrapper.find('.timestampCell').first().text()).to.equal(
-      '10/7/2018, 8:52:05 PM'
-    );
+    expect(nullLocaleWrapper.find('.timestampCell').first().text()).toBe('10/7/2018, 8:52:05 PM');
   });
 });

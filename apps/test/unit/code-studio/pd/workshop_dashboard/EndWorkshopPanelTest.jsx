@@ -78,7 +78,7 @@ describe('EndWorkshopPanel', () => {
 
     // Ensure we closed the dialog and reloaded the workshop
     refuteDialogIsShowing(wrapper);
-    assert(loadWorkshop.calledOnce);
+    assert(loadWorkshop.toHaveBeenCalledTimes(1));
   });
 
   function assertDialogIsShowing(wrapper) {

@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import ConfirmDeleteButton from '@cdo/apps/storage/dataBrowser/ConfirmDeleteButton';
 import commonI18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('ConfirmDeleteButton', () => {
   describe('localization', () => {
@@ -32,7 +32,7 @@ describe('ConfirmDeleteButton', () => {
       const wrapper = createConfirmDeleteButton();
 
       let dialog = wrapper.find('Dialog').at(0);
-      expect(dialog.prop('cancelText')).to.contain('i18n-cancel');
+      expect(dialog.prop('cancelText')).toContain('i18n-cancel');
     });
 
     it('should render a default localized string for "Delete" as the confirmation text', () => {
@@ -41,7 +41,7 @@ describe('ConfirmDeleteButton', () => {
       const wrapper = createConfirmDeleteButton();
 
       let dialog = wrapper.find('Dialog').at(0);
-      expect(dialog.prop('confirmText')).to.contain('i18n-delete');
+      expect(dialog.prop('confirmText')).toContain('i18n-delete');
     });
   });
 });

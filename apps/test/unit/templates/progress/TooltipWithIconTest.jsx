@@ -3,7 +3,7 @@ import React from 'react';
 
 import TooltipWithIcon from '@cdo/apps/templates/progress/TooltipWithIcon';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 const DEFAULT_PROPS = {
   tooltipId: 'id',
@@ -17,15 +17,11 @@ describe('TooltipWithIcon', () => {
     const wrapper = shallow(
       <TooltipWithIcon {...DEFAULT_PROPS} includeAssessmentIcon={true} />
     );
-    expect(wrapper.find('FontAwesome').first().props().icon).to.equal(
-      'check-circle'
-    );
+    expect(wrapper.find('FontAwesome').first().props().icon).toBe('check-circle');
   });
 
   it('does not include the check-circle icon if level is not an assessment', () => {
     const wrapper = shallow(<TooltipWithIcon {...DEFAULT_PROPS} />);
-    expect(wrapper.find('FontAwesome').first().props().icon).not.to.equal(
-      'check-circle'
-    );
+    expect(wrapper.find('FontAwesome').first().props().icon).not.toBe('check-circle');
   });
 });

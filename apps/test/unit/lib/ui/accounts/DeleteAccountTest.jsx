@@ -8,7 +8,7 @@ import DeleteAccount, {
 import {getCheckboxes} from '@cdo/apps/lib/ui/accounts/DeleteAccountHelpers';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../../util/deprecatedChai';
+
 
 const DEFAULT_PROPS = {
   isPasswordRequired: true,
@@ -88,7 +88,7 @@ describe('DeleteAccount', () => {
         const deleteAccountButton = wrapper.find('BootstrapButton').at(0);
         deleteAccountButton.simulate('click');
         const personalLoginDialog = wrapper.find('PersonalLoginDialog');
-        expect(personalLoginDialog).to.exist;
+        expect(personalLoginDialog).toBeDefined();
       });
 
       it('is disabled if not all checkboxes are checked', () => {
@@ -199,9 +199,7 @@ describe('DeleteAccount', () => {
       it('navigates to root', () => {
         confirmButton.simulate('click');
         server.respond();
-        expect(utils.navigateToHref).to.have.been.calledOnce.and.calledWith(
-          '/'
-        );
+        expect(utils.navigateToHref).toHaveBeenCalledWith('/');
         utils.navigateToHref.restore();
       });
     });
@@ -241,11 +239,11 @@ describe('DeleteAccount', () => {
         const deleteAccountButton = wrapper.find('BootstrapButton').at(0);
         deleteAccountButton.simulate('click');
         const adminAccountDialog = wrapper.find('AdminAccountDialog');
-        expect(adminAccountDialog).to.exist;
+        expect(adminAccountDialog).toBeDefined();
         const confirmButton = wrapper.find('Button').at(0);
         confirmButton.simulate('click');
         const deleteAccountDialog = wrapper.find('DeleteAccountDialog');
-        expect(deleteAccountDialog).to.exist;
+        expect(deleteAccountDialog).toBeDefined();
       });
     });
   });

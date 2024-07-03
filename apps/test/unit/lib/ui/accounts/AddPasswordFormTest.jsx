@@ -10,7 +10,7 @@ import AddPasswordForm, {
 } from '@cdo/apps/lib/ui/accounts/AddPasswordForm';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../../util/deprecatedChai';
+
 
 describe('AddPasswordForm', () => {
   let wrapper, handleSubmit;
@@ -31,7 +31,7 @@ describe('AddPasswordForm', () => {
       passwordConfirmation: 'mypassword',
     });
     const submitButton = wrapper.find('button');
-    expect(submitButton).not.to.have.attr('disabled');
+    expect(submitButton).to.not.have.attr('disabled');
   });
 
   it('disables form submission if passwords are empty', () => {
@@ -64,7 +64,7 @@ describe('AddPasswordForm', () => {
       passwordConfirmation: 'short',
     });
     const fieldErrors = wrapper.find('FieldError');
-    expect(fieldErrors).to.have.length(2);
+    expect(fieldErrors).toHaveLength(2);
     expect(fieldErrors.at(0)).to.have.text(PASSWORD_TOO_SHORT);
     expect(fieldErrors.at(1)).to.have.text(PASSWORD_TOO_SHORT);
   });

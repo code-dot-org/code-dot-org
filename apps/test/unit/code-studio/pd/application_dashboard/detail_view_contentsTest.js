@@ -12,7 +12,7 @@ import {DetailViewContents} from '@cdo/apps/code-studio/pd/application_dashboard
 import {PrincipalApprovalState} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {getStore, restoreRedux, stubRedux} from '@cdo/apps/redux';
 
-import {assert, expect} from '../../../../util/reconfiguredChai';
+import {assert} from '../../../../util/reconfiguredChai';
 import {allowConsoleWarnings} from '../../../../util/testUtils';
 
 describe('DetailViewContents', () => {
@@ -105,7 +105,7 @@ describe('DetailViewContents', () => {
       };
       renderDefault(overrideProps);
 
-      expect(screen.getAllByDisplayValue('')[0].id).to.eql('notes');
+      expect(screen.getAllByDisplayValue('')[0].id).toEqual('notes');
     });
   });
 
@@ -132,8 +132,7 @@ describe('DetailViewContents', () => {
 
       const statusDropdowns = screen.getAllByDisplayValue('Accepted');
       statusDropdowns.forEach(statusDropdown => {
-        expect(within(statusDropdown).queryByText('Awaiting Admin Approval')).to
-          .be.null;
+        expect(within(statusDropdown).queryByText('Awaiting Admin Approval')).toBeNull();
       });
     });
 
@@ -142,7 +141,7 @@ describe('DetailViewContents', () => {
 
       const statusDropdowns = screen.getAllByDisplayValue('Accepted');
       statusDropdowns.forEach(statusDropdown => {
-        expect(within(statusDropdown).queryByText('Incomplete')).to.be.null;
+        expect(within(statusDropdown).queryByText('Incomplete')).toBeNull();
       });
     });
 
@@ -158,7 +157,7 @@ describe('DetailViewContents', () => {
       renderDefault(overrideProps);
 
       const statusDropdowns = screen.getAllByDisplayValue('Incomplete');
-      expect(statusDropdowns.length).to.equal(2);
+      expect(statusDropdowns.length).toBe(2);
       statusDropdowns.forEach(statusDropdown => {
         within(statusDropdown).queryByText('Incomplete');
       });
@@ -198,9 +197,9 @@ describe('DetailViewContents', () => {
       };
       renderDefault(overrideProps);
 
-      expect(screen.queryByLabelText('Edit')).to.be.null;
-      expect(screen.queryByText('(Admin) Edit Form Data')).to.be.null;
-      expect(screen.queryByText('Delete Application')).to.be.null;
+      expect(screen.queryByLabelText('Edit')).toBeNull();
+      expect(screen.queryByText('(Admin) Edit Form Data')).toBeNull();
+      expect(screen.queryByText('Delete Application')).toBeNull();
     });
 
     it('Is visible to admins', () => {
@@ -209,9 +208,9 @@ describe('DetailViewContents', () => {
       };
       renderDefault(overrideProps);
 
-      expect(screen.getAllByLabelText('Edit').length).to.equal(2);
-      expect(screen.getAllByText('(Admin) Edit Form Data').length).to.equal(2);
-      expect(screen.getAllByText('Delete Application').length).to.equal(2);
+      expect(screen.getAllByLabelText('Edit').length).toBe(2);
+      expect(screen.getAllByText('(Admin) Edit Form Data').length).toBe(2);
+      expect(screen.getAllByText('Delete Application').length).toBe(2);
     });
   });
 
@@ -329,7 +328,7 @@ describe('DetailViewContents', () => {
       };
       renderDefault(overrideProps);
 
-      expect(screen.queryByRole('button', {name: 'Resend request'})).to.be.null;
+      expect(screen.queryByRole('button', {name: 'Resend request'})).toBeNull();
     });
 
     it(`Does not show button to resend admin email if is allowed to be resent but status is pending`, () => {
@@ -343,7 +342,7 @@ describe('DetailViewContents', () => {
       };
       renderDefault(overrideProps);
 
-      expect(screen.queryByRole('button', {name: 'Resend request'})).to.be.null;
+      expect(screen.queryByRole('button', {name: 'Resend request'})).toBeNull();
     });
   });
 
@@ -354,7 +353,7 @@ describe('DetailViewContents', () => {
       };
       renderDefault(overrideProps);
 
-      expect(screen.getAllByText('Delete').length).to.equal(2);
+      expect(screen.getAllByText('Delete').length).toBe(2);
     });
   });
 
@@ -403,8 +402,8 @@ describe('DetailViewContents', () => {
       };
       renderDefault(overrideProps);
 
-      expect(screen.getAllByText('Accepted (auto-email)').length).to.equal(2);
-      expect(screen.getAllByText('Declined (auto-email)').length).to.equal(2);
+      expect(screen.getAllByText('Accepted (auto-email)').length).toBe(2);
+      expect(screen.getAllByText('Declined (auto-email)').length).toBe(2);
     });
 
     it('does not append auto email text if set to false', () => {
@@ -418,10 +417,10 @@ describe('DetailViewContents', () => {
       };
       renderDefault(overrideProps);
 
-      expect(screen.queryAllByText('Accepted (auto-email)').length).to.equal(0);
-      expect(screen.queryAllByText('Declined (auto-email)').length).to.equal(0);
-      expect(screen.getAllByText('Accepted').length).to.equal(2);
-      expect(screen.getAllByText('Declined').length).to.equal(2);
+      expect(screen.queryAllByText('Accepted (auto-email)').length).toBe(0);
+      expect(screen.queryAllByText('Declined (auto-email)').length).toBe(0);
+      expect(screen.getAllByText('Accepted').length).toBe(2);
+      expect(screen.getAllByText('Declined').length).toBe(2);
     });
 
     it(`is required in order to set application status to accepted`, () => {
@@ -438,7 +437,7 @@ describe('DetailViewContents', () => {
       // Ensure application status is 'Unreviewed' and scholarship status is null (showing default "Select..." value)
       assert(!isModalShowing());
       screen.getByText('Select...');
-      expect(screen.getAllByDisplayValue('Unreviewed').length).to.equal(2);
+      expect(screen.getAllByDisplayValue('Unreviewed').length).toBe(2);
 
       // Attempt to change application status without updating scholarship status, resulting in modal that instructs
       // the user to set the scholarship status first
@@ -465,7 +464,7 @@ describe('DetailViewContents', () => {
         // Ensure application status is 'Unreviewed' and scholarship status is null (showing default "Select..." value)
         assert(!isModalShowing());
         screen.getByText('Select...');
-        expect(screen.getAllByDisplayValue('Unreviewed').length).to.equal(2);
+        expect(screen.getAllByDisplayValue('Unreviewed').length).toBe(2);
 
         // Change application status without updating scholarship status, and ensure that no modal pops up
         clickEditButton();
@@ -474,9 +473,7 @@ describe('DetailViewContents', () => {
 
         // Check that status successfully updated
         const statusDisplayValue = getApplicationStatuses()[applicationStatus];
-        expect(screen.getAllByDisplayValue(statusDisplayValue).length).to.equal(
-          2
-        );
+        expect(screen.getAllByDisplayValue(statusDisplayValue).length).toBe(2);
       });
     }
 

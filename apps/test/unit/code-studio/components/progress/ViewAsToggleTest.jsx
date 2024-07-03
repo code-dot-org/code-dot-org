@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import {UnconnectedViewAsToggle as ViewAsToggle} from '@cdo/apps/code-studio/components/progress/ViewAsToggle';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 const DEFAULT_PROPS = {
   viewAs: ViewType.Participant,
@@ -23,10 +23,10 @@ describe('ViewAsToggle', () => {
   it('calls changeViewType when ToggleGroup changes', () => {
     const spy = sinon.spy();
     const wrapper = setUp({changeViewType: spy});
-    expect(spy).not.to.have.been.called;
+    expect(spy).not.toHaveBeenCalled();
 
     wrapper.find('Connect(ToggleGroup)').prop('onChange')(ViewType.Instructor);
-    expect(spy).to.have.been.calledOnce.and.calledWith(ViewType.Instructor);
+    expect(spy).toHaveBeenCalledWith(ViewType.Instructor);
   });
 
   describe('toggle hide-as-student', () => {
@@ -41,22 +41,22 @@ describe('ViewAsToggle', () => {
 
     it('calls toggle(true) if viewAs=Instructor', async () => {
       setUp({viewAs: ViewType.Instructor});
-      expect(toggleSpy).to.have.been.calledWith(true);
+      expect(toggleSpy).toHaveBeenCalledWith(true);
     });
 
     it('calls toggle(false) if viewAs=Participant', async () => {
       setUp({viewAs: ViewType.Participant});
-      expect(toggleSpy).to.have.been.calledWith(false);
+      expect(toggleSpy).toHaveBeenCalledWith(false);
     });
 
     it('calls toggle(true) if viewAs is updated to Instructor from Participant', async () => {
       const wrapper = setUp({viewAs: ViewType.Participant});
 
-      expect(toggleSpy).to.have.been.calledWith(false);
+      expect(toggleSpy).toHaveBeenCalledWith(false);
 
       wrapper.setProps({viewAs: ViewType.Instructor});
 
-      expect(toggleSpy).to.have.been.calledWith(true);
+      expect(toggleSpy).toHaveBeenCalledWith(true);
     });
   });
 });

@@ -3,7 +3,7 @@ import React from 'react';
 
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('VerifiedResourcesNotification', () => {
   const defaultProps = {
@@ -18,7 +18,7 @@ describe('VerifiedResourcesNotification', () => {
 
     expect(
       wrapper.find('Connect(Notification)').first().props().details
-    ).to.equal(
+    ).toBe(
       'This course provides extra resources which are only available to verified teachers.'
     );
   });
@@ -30,7 +30,7 @@ describe('VerifiedResourcesNotification', () => {
 
     expect(
       wrapper.find('Connect(Notification)').first().props().details
-    ).to.equal(
+    ).toBe(
       'This lesson contains extra resources or levels which are only available to verified teachers.'
     );
   });

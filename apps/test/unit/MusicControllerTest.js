@@ -3,7 +3,7 @@ import sinon from 'sinon';
 import MusicController from '@cdo/apps/MusicController';
 import Sounds from '@cdo/apps/Sounds';
 
-import {expect} from '../util/reconfiguredChai';
+
 
 import winMp3 from '!!file-loader!../audio/assets/win.mp3';
 

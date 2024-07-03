@@ -6,7 +6,7 @@ import FilterGroupContainer from '@cdo/apps/tutorialExplorer/filterGroupContaine
 import FilterGroupOrgNames from '@cdo/apps/tutorialExplorer/filterGroupOrgNames';
 import i18n from '@cdo/tutorialExplorer/locale';
 
-import {expect} from '../../util/deprecatedChai';
+
 
 const TEST_ORG_NAME = 'Code Studio';
 const ORG_1 = 'Hogwarts School';
@@ -81,6 +81,6 @@ describe('FilterGroupOrgNames', () => {
       <FilterGroupOrgNames {...DEFAULT_PROPS} onUserInput={spy} />
     );
     wrapper.find('select').simulate('change', {target: {value: ORG_1}});
-    expect(spy).to.have.been.calledOnce.and.calledWith(ORG_1);
+    expect(spy).toHaveBeenCalledWith(ORG_1);
   });
 });

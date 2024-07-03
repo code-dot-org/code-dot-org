@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import {UnconnectedAddSectionDialog as AddSectionDialog} from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('AddSectionDialog', () => {
   let defaultProps,
@@ -62,9 +62,9 @@ describe('AddSectionDialog', () => {
         asyncLoadComplete={false}
       />
     );
-    expect(wrapper.find('Spinner').length).to.equal(1);
-    expect(wrapper.find('LoginTypePicker').length).to.equal(0);
-    expect(wrapper.find('ParticipantTypePicker').length).to.equal(0);
+    expect(wrapper.find('Spinner').length).toBe(1);
+    expect(wrapper.find('LoginTypePicker').length).toBe(0);
+    expect(wrapper.find('ParticipantTypePicker').length).toBe(0);
   });
 
   it('if login type is set but audience has not shows audience picker', () => {
@@ -78,9 +78,9 @@ describe('AddSectionDialog', () => {
         availableParticipantTypes={['student', 'teacher', 'facilitator']}
       />
     );
-    expect(wrapper.find('Spinner').length).to.equal(0);
-    expect(wrapper.find('LoginTypePicker').length).to.equal(0);
-    expect(wrapper.find('ParticipantTypePicker').length).to.equal(1);
+    expect(wrapper.find('Spinner').length).toBe(0);
+    expect(wrapper.find('LoginTypePicker').length).toBe(0);
+    expect(wrapper.find('ParticipantTypePicker').length).toBe(1);
   });
 
   describe('sectionSetupRefresh', () => {
@@ -107,8 +107,8 @@ describe('AddSectionDialog', () => {
       wrapper.find('ParticipantTypePicker').invoke('setParticipantType')(
         'teacher'
       );
-      expect(navigateToHrefSpy).to.be.called.once;
-      expect(navigateToHrefSpy.getCall(0).args[0]).to.equal(
+      expect(navigateToHrefSpy).toHaveBeenCalled().once;
+      expect(navigateToHrefSpy.getCall(0).args[0]).toBe(
         '/sections/new?participantType=teacher&loginType=email&redirectToPage=my-professional-learning'
       );
     });
@@ -125,10 +125,8 @@ describe('AddSectionDialog', () => {
       );
 
       wrapper.find('Connect(LoginTypePicker)').invoke('setLoginType')('word');
-      expect(navigateToHrefSpy).to.be.called.once;
-      expect(navigateToHrefSpy.getCall(0).args[0]).to.equal(
-        '/sections/new?participantType=student&loginType=word'
-      );
+      expect(navigateToHrefSpy).toHaveBeenCalled().once;
+      expect(navigateToHrefSpy.getCall(0).args[0]).toBe('/sections/new?participantType=student&loginType=word');
     });
 
     it('does not redirect to new section setup when selection oauth login type', () => {
@@ -145,7 +143,7 @@ describe('AddSectionDialog', () => {
       wrapper.find('Connect(LoginTypePicker)').invoke('setLoginType')(
         'google_classroom'
       );
-      expect(navigateToHrefSpy).to.have.not.been.called;
+      expect(navigateToHrefSpy).not.toHaveBeenCalled();
     });
   });
 });

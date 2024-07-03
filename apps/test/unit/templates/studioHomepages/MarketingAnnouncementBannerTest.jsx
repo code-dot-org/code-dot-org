@@ -10,7 +10,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import MarketingAnnouncementBanner from '@cdo/apps/templates/studioHomepages/MarketingAnnouncementBanner';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 const DEFAULT_PROPS = {
   announcement: {
@@ -51,7 +51,7 @@ describe('MarketingAnnouncementBanner', () => {
     sinon.stub(utils, 'tryGetLocalStorage').returns(null);
 
     const wrapper = setUp();
-    expect(isBannerDisplayed(wrapper)).to.be.true;
+    expect(isBannerDisplayed(wrapper)).toBe(true);
     utils.tryGetLocalStorage.restore();
   });
 
@@ -59,7 +59,7 @@ describe('MarketingAnnouncementBanner', () => {
     sinon.stub(utils, 'tryGetLocalStorage').returns('false');
 
     const wrapper = setUp();
-    expect(isBannerDisplayed(wrapper)).to.be.false;
+    expect(isBannerDisplayed(wrapper)).toBe(false);
 
     utils.tryGetLocalStorage.restore();
   });
@@ -71,7 +71,7 @@ describe('MarketingAnnouncementBanner', () => {
     wrapper
       .find('button#marketing-announcement-banner--dismiss')
       .simulate('click');
-    expect(isBannerDisplayed(wrapper)).to.be.false;
+    expect(isBannerDisplayed(wrapper)).toBe(false);
 
     utils.tryGetLocalStorage.restore();
   });

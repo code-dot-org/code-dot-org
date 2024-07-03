@@ -22,7 +22,7 @@ import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import * as utils from '@cdo/apps/utils';
 import commonMsg from '@cdo/locale';
 
-import {assert, expect} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai';
 import setupBlocklyGlobal from '../../util/setupBlocklyGlobal';
 import * as testUtils from '../../util/testUtils';
 
@@ -618,13 +618,13 @@ describe('Applab', () => {
 
       describe('expandDebugger', () => {
         it('leaves debugger closed when false', () => {
-          expect(config.level.expandDebugger).not.to.be.true;
+          expect(config.level.expandDebugger).not.toBe(true);
           Applab.init(config);
-          expect(isDebuggerOpen(getStore().getState())).to.be.false;
+          expect(isDebuggerOpen(getStore().getState())).toBe(false);
         });
 
         it('opens debugger when true', () => {
-          expect(config.level.expandDebugger).not.to.be.true;
+          expect(config.level.expandDebugger).not.toBe(true);
           Applab.init({
             ...config,
             level: {
@@ -632,7 +632,7 @@ describe('Applab', () => {
               expandDebugger: true,
             },
           });
-          expect(isDebuggerOpen(getStore().getState())).to.be.true;
+          expect(isDebuggerOpen(getStore().getState())).toBe(true);
         });
       });
 
@@ -642,7 +642,7 @@ describe('Applab', () => {
           config.level.widgetMode = false;
           config.isStartMode = false;
           Applab.init(config);
-          expect(getStore().getState().pageConstants.hasDesignMode).to.be.true;
+          expect(getStore().getState().pageConstants.hasDesignMode).toBe(true);
         });
 
         it('is false if design mode is hidden for level', () => {
@@ -650,7 +650,7 @@ describe('Applab', () => {
           config.level.widgetMode = false;
           config.isStartMode = false;
           Applab.init(config);
-          expect(getStore().getState().pageConstants.hasDesignMode).to.be.false;
+          expect(getStore().getState().pageConstants.hasDesignMode).toBe(false);
         });
 
         it('is false in widget mode', () => {
@@ -658,7 +658,7 @@ describe('Applab', () => {
           config.level.widgetMode = true;
           config.isStartMode = false;
           Applab.init(config);
-          expect(getStore().getState().pageConstants.hasDesignMode).to.be.false;
+          expect(getStore().getState().pageConstants.hasDesignMode).toBe(false);
         });
 
         it('is true in levelbuilder widget mode', () => {
@@ -666,7 +666,7 @@ describe('Applab', () => {
           config.level.widgetMode = true;
           config.isStartMode = true;
           Applab.init(config);
-          expect(getStore().getState().pageConstants.hasDesignMode).to.be.true;
+          expect(getStore().getState().pageConstants.hasDesignMode).toBe(true);
         });
       });
 
@@ -675,21 +675,21 @@ describe('Applab', () => {
           config.level.hideViewDataButton = false;
           config.level.widgetMode = false;
           Applab.init(config);
-          expect(getStore().getState().pageConstants.hasDataMode).to.be.true;
+          expect(getStore().getState().pageConstants.hasDataMode).toBe(true);
         });
 
         it('is false if data button is hidden for level', () => {
           config.level.hideViewDataButton = true;
           config.level.widgetMode = false;
           Applab.init(config);
-          expect(getStore().getState().pageConstants.hasDataMode).to.be.false;
+          expect(getStore().getState().pageConstants.hasDataMode).toBe(false);
         });
 
         it('is false in widget mode', () => {
           config.level.hideViewDataButton = false;
           config.level.widgetMode = true;
           Applab.init(config);
-          expect(getStore().getState().pageConstants.hasDataMode).to.be.false;
+          expect(getStore().getState().pageConstants.hasDataMode).toBe(false);
         });
       });
     });
@@ -715,7 +715,7 @@ describe('Applab', () => {
       var reportAbuseIndex = footItems.findIndex(
         item => item.text === commonMsg.reportAbuse()
       );
-      expect(howItWorksIndex).to.be.below(reportAbuseIndex);
+      expect(howItWorksIndex).toBeLessThan(reportAbuseIndex);
     });
 
     it('returns How-It-Works item before Make-Own-App item', () => {
@@ -729,7 +729,7 @@ describe('Applab', () => {
       var makeOwnIndex = footItems.findIndex(
         item => item.text === applabMsg.makeMyOwnApp()
       );
-      expect(howItWorksIndex).to.be.below(makeOwnIndex);
+      expect(howItWorksIndex).toBeLessThan(makeOwnIndex);
     });
 
     it('returns How-It-Works item before Report-Abuse item in AppLab', () => {
@@ -743,7 +743,7 @@ describe('Applab', () => {
       var reportAbuseIndex = footItems.findIndex(
         item => item.text === commonMsg.reportAbuse()
       );
-      expect(howItWorksIndex).to.be.below(reportAbuseIndex);
+      expect(howItWorksIndex).toBeLessThan(reportAbuseIndex);
     });
   });
 });

@@ -1,4 +1,4 @@
-import {assert, expect} from 'chai';
+import {assert} from 'chai';
 
 import {writeSourceForLevel} from '@cdo/apps/code-studio/clientState';
 import Multi from '@cdo/apps/code-studio/levels/multi';

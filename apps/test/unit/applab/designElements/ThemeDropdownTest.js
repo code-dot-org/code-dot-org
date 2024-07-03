@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import ThemeDropdown from '@cdo/apps/applab/designElements/ThemeDropdown';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 const DEFAULT_PROPS = {
   initialValue: 'citrus',
@@ -20,12 +20,10 @@ describe('ThemeDropdown', () => {
         <ThemeDropdown {...DEFAULT_PROPS} handleChange={handleChangeSpy} />
       );
 
-      expect(wrapper.state('selectedValue')).to.equal(
-        DEFAULT_PROPS.initialValue
-      );
+      expect(wrapper.state('selectedValue')).toBe(DEFAULT_PROPS.initialValue);
       wrapper.find('Select').simulate('change', {value: 'bubblegum'});
-      expect(handleChangeSpy.callCount).to.equal(1);
-      expect(wrapper.state('selectedValue')).to.equal('bubblegum');
+      expect(handleChangeSpy.callCount).toBe(1);
+      expect(wrapper.state('selectedValue')).toBe('bubblegum');
     });
 
     it('sets the theme to default if the event is null', () => {
@@ -34,12 +32,10 @@ describe('ThemeDropdown', () => {
         <ThemeDropdown {...DEFAULT_PROPS} handleChange={handleChangeSpy} />
       );
 
-      expect(wrapper.state('selectedValue')).to.equal(
-        DEFAULT_PROPS.initialValue
-      );
+      expect(wrapper.state('selectedValue')).toBe(DEFAULT_PROPS.initialValue);
       wrapper.find('Select').simulate('change', null);
-      expect(handleChangeSpy.callCount).to.equal(1);
-      expect(wrapper.state('selectedValue')).to.equal('default');
+      expect(handleChangeSpy.callCount).toBe(1);
+      expect(wrapper.state('selectedValue')).toBe('default');
     });
   });
 });

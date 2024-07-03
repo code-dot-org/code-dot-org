@@ -6,7 +6,7 @@ import SendToPhone from '@cdo/apps/code-studio/components/SendToPhone';
 import WireframeButtons from '@cdo/apps/lib/ui/WireframeButtons';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/deprecatedChai';
+
 
 describe('WireframeButtons', () => {
   let wrapper;
@@ -33,10 +33,10 @@ describe('WireframeButtons', () => {
           isLegacyShare={false}
         />
       );
-      expect(wrapper.find(SendToPhone)).to.be.empty;
+      expect(wrapper.find(SendToPhone)).toHaveLength(0);
 
       wrapper.find('.fa-mobile').simulate('click');
-      expect(wrapper.find(SendToPhone)).not.to.be.empty;
+      expect(wrapper.find(SendToPhone)).not.toHaveLength(0);
     });
   });
 
@@ -99,7 +99,7 @@ describe('WireframeButtons', () => {
     ['artist', 'playlab', 'weblab'].forEach(appType => {
       it(`does not appear for ${appType}`, () => {
         wrapper = mountForAppType(appType);
-        expect(wrapper).not.to.containMatchingElement(
+        expect(wrapper).to.not.containMatchingElement(
           VIEW_CODE_BUTTON_TEMPLATE
         );
       });

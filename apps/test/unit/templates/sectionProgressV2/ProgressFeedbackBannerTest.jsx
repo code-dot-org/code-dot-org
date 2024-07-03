@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import {UnconnectedProgressFeedbackBanner} from '@cdo/apps/templates/sectionProgressV2/ProgressFeedbackBanner';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('ProgressFeedbackBanner', () => {
   const fakeFetch = sinon.spy();
@@ -33,15 +33,15 @@ describe('ProgressFeedbackBanner', () => {
         fetchProgressV2Feedback={fakeFetch}
       />
     );
-    expect(fakeFetch).to.have.been.calledOnce;
+    expect(fakeFetch).toHaveBeenCalledTimes(1);
     const questionText = screen.queryByText(
       i18n.progressV2_feedback_question()
     );
     const shareMoreText = screen.queryByText(
       i18n.progressV2_feedback_shareMore()
     );
-    expect(questionText).to.not.exist;
-    expect(shareMoreText).to.not.exist;
+    expect(questionText).toBeFalsy();
+    expect(shareMoreText).toBeFalsy();
   });
 
   it('renders empty if user already answered the feedback question', () => {
@@ -52,15 +52,15 @@ describe('ProgressFeedbackBanner', () => {
         fetchProgressV2Feedback={fakeFetch}
       />
     );
-    expect(fakeFetch).to.have.been.calledOnce;
+    expect(fakeFetch).toHaveBeenCalledTimes(1);
     const questionText = screen.queryByText(
       i18n.progressV2_feedback_question()
     );
     const shareMoreText = screen.queryByText(
       i18n.progressV2_feedback_shareMore()
     );
-    expect(questionText).to.not.exist;
-    expect(shareMoreText).to.not.exist;
+    expect(questionText).toBeFalsy();
+    expect(shareMoreText).toBeFalsy();
   });
 
   it('renders correctly when user has not answered survey question', () => {
@@ -82,8 +82,8 @@ describe('ProgressFeedbackBanner', () => {
     const shareMoreText = screen.queryByText(
       i18n.progressV2_feedback_shareMore()
     );
-    expect(questionText).to.not.exist;
-    expect(shareMoreText).to.not.exist;
+    expect(questionText).toBeFalsy();
+    expect(shareMoreText).toBeFalsy();
   });
 
   it('clicking thumbs up attempts to send feedback and asks for more detailed feedback', async () => {
@@ -100,7 +100,7 @@ describe('ProgressFeedbackBanner', () => {
     fireEvent.click(thumbsUpButton);
 
     await waitFor(() => {
-      expect(fakeCreate).to.have.been.calledOnce;
+      expect(fakeCreate).toHaveBeenCalledTimes(1);
     });
     const shareMoreText = screen.getByText(
       i18n.progressV2_feedback_shareMore()
@@ -125,7 +125,7 @@ describe('ProgressFeedbackBanner', () => {
     expect(thumbsDownButton).to.be.visible;
     fireEvent.click(thumbsDownButton);
     await waitFor(() => {
-      expect(fakeCreate).to.have.been.calledOnce;
+      expect(fakeCreate).toHaveBeenCalledTimes(1);
     });
 
     const shareMoreText = screen.getByText(
@@ -152,7 +152,7 @@ describe('ProgressFeedbackBanner', () => {
     );
     expect(thumbsUpButton).to.be.visible;
     fireEvent.click(thumbsUpButton);
-    expect(fakeCreate).to.have.been.calledOnce;
+    expect(fakeCreate).toHaveBeenCalledTimes(1);
 
     // Close the banner
     const closeButton = screen.getByText('×');
@@ -165,8 +165,8 @@ describe('ProgressFeedbackBanner', () => {
       const shareMoreText = screen.queryByText(
         i18n.progressV2_feedback_shareMore()
       );
-      expect(questionText).to.not.exist;
-      expect(shareMoreText).to.not.exist;
+      expect(questionText).toBeFalsy();
+      expect(shareMoreText).toBeFalsy();
     });
   });
 
@@ -195,7 +195,7 @@ describe('ProgressFeedbackBanner', () => {
     );
 
     await waitFor(() => {
-      expect(fakeFetch).to.have.been.calledTwice;
+      expect(fakeFetch).toHaveBeenCalledTimes(2);
     });
     expect(screen.getByText(i18n.progressV2_feedback_question())).to.be.visible;
   });

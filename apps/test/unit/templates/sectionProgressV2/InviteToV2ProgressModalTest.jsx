@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import {UnconnectedInviteToV2ProgressModal} from '@cdo/apps/templates/sectionProgressV2/InviteToV2ProgressModal';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 const DEFAULT_PROPS = {
   setShowProgressTableV2: () => {},
@@ -64,18 +64,15 @@ describe('InviteToV2ProgressModal', () => {
     const acceptButton = screen.getByText(i18n.tryItNow());
     fireEvent.click(acceptButton);
 
-    expect(setHasJustSwitchedToV2Stub).to.have.been.calledOnce;
-    expect(setHasSeenProgressTableInviteStub).to.have.been.calledOnce;
-    expect(setShowProgressTableV2Stub).to.have.been.calledOnce;
+    expect(setHasJustSwitchedToV2Stub).toHaveBeenCalledTimes(1);
+    expect(setHasSeenProgressTableInviteStub).toHaveBeenCalledTimes(1);
+    expect(setShowProgressTableV2Stub).toHaveBeenCalledTimes(1);
 
-    expect(postStub).to.have.been.calledOnce;
-    expect(postStub).calledWith(
-      '/api/v1/users/has_seen_progress_table_v2_invitation',
-      {
-        has_seen_progress_table_v2_invitation: true,
-        show_progress_table_v2: true,
-      }
-    );
+    expect(postStub).toHaveBeenCalledTimes(1);
+    expect(postStub).toHaveBeenCalledWith('/api/v1/users/has_seen_progress_table_v2_invitation', {
+      has_seen_progress_table_v2_invitation: true,
+      show_progress_table_v2: true,
+    });
   });
 
   it('allows user to decline the invitation', () => {
@@ -90,18 +87,15 @@ describe('InviteToV2ProgressModal', () => {
     const xButton = screen.getByLabelText(i18n.closeDialog());
     fireEvent.click(xButton);
 
-    expect(setHasSeenProgressTableInviteStub).to.have.been.calledOnce;
+    expect(setHasSeenProgressTableInviteStub).toHaveBeenCalledTimes(1);
 
-    expect(postStub).calledWith(
-      '/api/v1/users/has_seen_progress_table_v2_invitation',
-      {
-        has_seen_progress_table_v2_invitation: true,
-        show_progress_table_v2: false,
-      }
-    );
-    expect(screen.queryByText(i18n.tryItNow())).to.be.null;
-    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).to.be.null;
-    expect(screen.queryByText(i18n.remindMeLater())).to.be.null;
+    expect(postStub).toHaveBeenCalledWith('/api/v1/users/has_seen_progress_table_v2_invitation', {
+      has_seen_progress_table_v2_invitation: true,
+      show_progress_table_v2: false,
+    });
+    expect(screen.queryByText(i18n.tryItNow())).toBeNull();
+    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).toBeNull();
+    expect(screen.queryByText(i18n.remindMeLater())).toBeNull();
   });
 
   it('allows user to delay the invitation', () => {
@@ -113,23 +107,23 @@ describe('InviteToV2ProgressModal', () => {
     const delayButton = screen.getByText(i18n.remindMeLater());
     fireEvent.click(delayButton);
 
-    sinon.assert.calledOnce(postStub);
+    sinon.toHaveBeenCalledTimes(1);
     sinon.assert.calledWithMatch(
       postStub,
       '/api/v1/users/date_progress_table_invitation_last_delayed'
     );
 
-    expect(screen.queryByText(i18n.tryItNow())).to.be.null;
-    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).to.be.null;
-    expect(screen.queryByText(i18n.remindMeLater())).to.be.null;
+    expect(screen.queryByText(i18n.tryItNow())).toBeNull();
+    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).toBeNull();
+    expect(screen.queryByText(i18n.remindMeLater())).toBeNull();
   });
 
   it('does not show the dialog if they have already accepted or rejected the invitation', () => {
     renderDefault({hasSeenProgressTableInvite: true});
 
-    expect(screen.queryByText(i18n.tryItNow())).to.be.null;
-    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).to.be.null;
-    expect(screen.queryByText(i18n.remindMeLater())).to.be.null;
+    expect(screen.queryByText(i18n.tryItNow())).toBeNull();
+    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).toBeNull();
+    expect(screen.queryByText(i18n.remindMeLater())).toBeNull();
   });
 
   it('does not show the dialog if they have already accepted or rejected the invitation after delaying invitation', () => {
@@ -139,9 +133,9 @@ describe('InviteToV2ProgressModal', () => {
         'Wed May 01 2024 14:22:23 GMT-0500 (Central Daylight Time)',
     });
 
-    expect(screen.queryByText(i18n.tryItNow())).to.be.null;
-    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).to.be.null;
-    expect(screen.queryByText(i18n.remindMeLater())).to.be.null;
+    expect(screen.queryByText(i18n.tryItNow())).toBeNull();
+    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).toBeNull();
+    expect(screen.queryByText(i18n.remindMeLater())).toBeNull();
   });
 
   it('shows the dialog if it has been more than three days since they delayed the pop-up', () => {
@@ -167,8 +161,8 @@ describe('InviteToV2ProgressModal', () => {
       hasSeenProgressTableInvite: false,
     });
 
-    expect(screen.queryByText(i18n.tryItNow())).to.be.null;
-    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).to.be.null;
-    expect(screen.queryByText(i18n.remindMeLater())).to.be.null;
+    expect(screen.queryByText(i18n.tryItNow())).toBeNull();
+    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).toBeNull();
+    expect(screen.queryByText(i18n.remindMeLater())).toBeNull();
   });
 });

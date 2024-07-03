@@ -9,7 +9,7 @@ import VersionHistory from '@cdo/apps/templates/VersionHistory';
 import VersionRow from '@cdo/apps/templates/VersionRow';
 import * as utils from '@cdo/apps/utils';
 
-import {assert, expect} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai';
 
 const FAKE_CURRENT_VERSION = 'current-version-id';
 const FAKE_PREVIOUS_VERSION = 'previous-version-id';
@@ -137,7 +137,7 @@ describe('VersionHistory', () => {
     it('renders an error on failed version history load', () => {
       wrapper = mount(<VersionHistory {...props} />);
       failVersionHistoryLoad();
-      expect(wrapper.text()).to.include('An error occurred.');
+      expect(wrapper.text()).toContain('An error occurred.');
     });
 
     it('renders a version list on successful version history load', () => {
@@ -153,16 +153,16 @@ describe('VersionHistory', () => {
       );
 
       // Rendered two version rows
-      expect(wrapper.find(VersionRow)).to.have.length(2);
+      expect(wrapper.find(VersionRow)).toHaveLength(2);
     });
 
     it('attempts to restore a chosen version when clicking restore button', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
-      expect(restoreSpy()).not.to.have.been.called;
+      expect(restoreSpy()).not.toHaveBeenCalled();
 
       wrapper.find('.img-upload').first().simulate('click');
-      expect(restoreSpy()).to.have.been.calledOnce;
+      expect(restoreSpy()).toHaveBeenCalledTimes(1);
     });
 
     it('renders an error on failed restore', () => {
@@ -171,17 +171,17 @@ describe('VersionHistory', () => {
       wrapper.find('.img-upload').first().simulate('click');
 
       failRestoreVersion();
-      expect(wrapper.text()).to.include('An error occurred.');
+      expect(wrapper.text()).toContain('An error occurred.');
     });
 
     it('reloads the page on successful restore', () => {
       wrapper = mount(<VersionHistory {...props} />);
       finishVersionHistoryLoad();
       wrapper.find('.img-upload').first().simulate('click');
-      expect(utils.reload).not.to.have.been.called;
+      expect(utils.reload).not.toHaveBeenCalled();
 
       finishRestoreVersion();
-      expect(utils.reload).to.have.been.calledOnce;
+      expect(utils.reload).toHaveBeenCalledTimes(1);
     });
 
     it('shows a confirmation after clicking Start Over', () => {
@@ -239,7 +239,7 @@ describe('VersionHistory', () => {
       wrapper.find('#again-button').simulate('click');
 
       // Rendered two version rows
-      expect(wrapper.find(VersionRow)).to.have.length(2);
+      expect(wrapper.find(VersionRow)).toHaveLength(2);
     });
 
     it('shows a confirmation with template project warning', () => {
@@ -249,7 +249,7 @@ describe('VersionHistory', () => {
       // Click "Start Over"
       wrapper.find('.btn-danger').simulate('click');
 
-      expect(wrapper.find('.template-level-warning')).to.exist;
+      expect(wrapper.find('.template-level-warning')).toBeDefined();
     });
 
     describe('confirming Start Over', () => {
@@ -281,37 +281,34 @@ describe('VersionHistory', () => {
       });
 
       it('logs to firehose', () => {
-        expect(firehoseClient.putRecord).to.have.been.calledOnce.and.calledWith(
-          {
-            study: 'project-data-integrity',
-            study_group: 'v4',
-            event: 'clear-puzzle',
-            project_id: 'fake-project-id',
-            data_json: JSON.stringify({
-              isOwner: true,
-              currentUrl: window.location.href,
-              shareUrl: 'fake-share-url',
-              isProjectTemplateLevel: false,
-              currentSourceVersionId: FAKE_CURRENT_VERSION,
-            }),
-          },
-          {includeUserId: true}
-        );
+        expect(firehoseClient.putRecord).toHaveBeenCalledWith({
+          study: 'project-data-integrity',
+          study_group: 'v4',
+          event: 'clear-puzzle',
+          project_id: 'fake-project-id',
+          data_json: JSON.stringify({
+            isOwner: true,
+            currentUrl: window.location.href,
+            shareUrl: 'fake-share-url',
+            isProjectTemplateLevel: false,
+            currentSourceVersionId: FAKE_CURRENT_VERSION,
+          }),
+        }, {includeUserId: true});
       });
 
       it('calls handleClearPuzzle prop', () => {
-        expect(handleClearPuzzle).to.have.been.calledOnce;
+        expect(handleClearPuzzle).toHaveBeenCalledTimes(1);
       });
 
       it('calls project.save(true)', async () => {
         await wasCalled(project.save);
-        expect(project.save.mock.calls.length).to.equal(1);
-        expect(project.save.mock.calls[0][0]).to.equal(true);
+        expect(project.save.mock.calls.length).toBe(1);
+        expect(project.save.mock.calls[0][0]).toBe(true);
       });
 
       it('reloads the page', async () => {
         await wasCalled(utils.reload);
-        expect(utils.reload).to.have.been.calledOnce;
+        expect(utils.reload).toHaveBeenCalledTimes(1);
       });
     });
   }

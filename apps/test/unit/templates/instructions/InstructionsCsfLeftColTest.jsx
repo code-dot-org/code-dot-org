@@ -6,7 +6,7 @@ import HintDisplayLightbulb from '@cdo/apps/templates/HintDisplayLightbulb';
 import {UnconnectedInstructionsCsfLeftCol as InstructionsCsfLeftCol} from '@cdo/apps/templates/instructions/InstructionsCsfLeftCol';
 import PromptIcon from '@cdo/apps/templates/instructions/PromptIcon';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 const DEFAULT_PROPS = {
   requestHint: () => {},
@@ -31,8 +31,8 @@ describe('InstructionsCsfLeftCol', () => {
     setUp({setColHeight: setColHeightSpy, setColWidth: setColWidthSpy});
 
     // should be called after mount:
-    expect(setColWidthSpy.calledOnce).to.be.true;
-    expect(setColHeightSpy.calledOnce).to.be.true;
+    expect(setColWidthSpy.calledOnce).toBe(true);
+    expect(setColHeightSpy.calledOnce).toBe(true);
   });
 
   it('calls requestHint on clicking .prompt-icon-cell when hasAuthoredHints and hasUnseenHint', () => {
@@ -43,7 +43,7 @@ describe('InstructionsCsfLeftCol', () => {
       requestHint: requestHintSpy,
     });
     wrapper.find('.prompt-icon-cell').simulate('click');
-    expect(requestHintSpy.calledOnce).to.be.true;
+    expect(requestHintSpy.calledOnce).toBe(true);
   });
 
   it('does not call requestHint on clicking .prompt-icon-cell when not hasAuthoredHints', () => {
@@ -54,7 +54,7 @@ describe('InstructionsCsfLeftCol', () => {
       requestHint: requestHintSpy,
     });
     wrapper.find('.prompt-icon-cell').simulate('click');
-    expect(requestHintSpy.calledOnce).to.be.false;
+    expect(requestHintSpy.calledOnce).toBe(false);
   });
 
   it('displays failureAvatar when there is failure feedback', () => {
@@ -63,7 +63,7 @@ describe('InstructionsCsfLeftCol', () => {
       failureAvatar: failureAvatarSrc,
       feedback: {message: 'failure', isFailure: true},
     });
-    expect(wrapper.find(PromptIcon).props().src).to.equal(failureAvatarSrc);
+    expect(wrapper.find(PromptIcon).props().src).toBe(failureAvatarSrc);
   });
 
   it('displays smallStaticAvatar when feedback is not failure', () => {
@@ -72,13 +72,13 @@ describe('InstructionsCsfLeftCol', () => {
       smallStaticAvatar: smallAvatarSrc,
       feedback: {message: 'feedback', isFailure: false},
     });
-    expect(wrapper.find(PromptIcon).props().src).to.equal(smallAvatarSrc);
+    expect(wrapper.find(PromptIcon).props().src).toBe(smallAvatarSrc);
   });
 
   it('displays hint lightbulb when hasAuthoredHints', () => {
     const wrapper = setUp({
       hasAuthoredHints: true,
     });
-    expect(wrapper.find(HintDisplayLightbulb)).to.have.length(1);
+    expect(wrapper.find(HintDisplayLightbulb)).toHaveLength(1);
   });
 });

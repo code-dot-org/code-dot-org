@@ -6,7 +6,7 @@ import MethodWithOverloads, {
   SingleMethod,
 } from '@cdo/apps/templates/codeDocs/MethodWithOverloads';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('MethodWithOverloads', () => {
   it('shows MethodOverloadSection if method has overloads', () => {
@@ -23,8 +23,8 @@ describe('MethodWithOverloads', () => {
         programmingEnvironmentName="test-environment"
       />
     );
-    expect(wrapper.find('SingleMethod').length).to.equal(1);
-    expect(wrapper.find('MethodOverloadSection').length).to.equal(1);
+    expect(wrapper.find('SingleMethod').length).toBe(1);
+    expect(wrapper.find('MethodOverloadSection').length).toBe(1);
   });
 
   it('does not show MethodOverloadSection if method doesnt have overloads', () => {
@@ -34,8 +34,8 @@ describe('MethodWithOverloads', () => {
         programmingEnvironmentName="test-environment"
       />
     );
-    expect(wrapper.find('SingleMethod').length).to.equal(1);
-    expect(wrapper.find('MethodOverloadSection').length).to.equal(0);
+    expect(wrapper.find('SingleMethod').length).toBe(1);
+    expect(wrapper.find('MethodOverloadSection').length).toBe(0);
   });
 });
 
@@ -50,8 +50,8 @@ describe('MethodOverloadSection', () => {
         programmingEnvironmentName="test-environment"
       />
     );
-    expect(wrapper.text()).to.include('Overloads');
-    expect(wrapper.find('SingleMethod').length).to.equal(2);
+    expect(wrapper.text()).toContain('Overloads');
+    expect(wrapper.find('SingleMethod').length).toBe(2);
   });
 
   it('hides overloads when collapsed', () => {
@@ -64,19 +64,19 @@ describe('MethodOverloadSection', () => {
         programmingEnvironmentName="test-environment"
       />
     );
-    expect(wrapper.text()).to.include('Overloads');
+    expect(wrapper.text()).toContain('Overloads');
 
     // The section starts open
-    expect(wrapper.find('FontAwesome').props().icon).to.equal('caret-down');
-    expect(wrapper.find('SingleMethod').length).to.equal(2);
+    expect(wrapper.find('FontAwesome').props().icon).toBe('caret-down');
+    expect(wrapper.find('SingleMethod').length).toBe(2);
 
     // Click the header to hide the overloads
     wrapper.find('.unittest-overloads-header').simulate('click');
     wrapper.update();
 
     // The section should be collapsed
-    expect(wrapper.find('FontAwesome').props().icon).to.equal('caret-up');
-    expect(wrapper.find('SingleMethod').length).to.equal(0);
+    expect(wrapper.find('FontAwesome').props().icon).toBe('caret-up');
+    expect(wrapper.find('SingleMethod').length).toBe(0);
   });
 });
 
@@ -111,8 +111,8 @@ describe('SingleMethod', () => {
   it('shows all sections if all fields are present', () => {
     const wrapper = shallow(<SingleMethod method={defaultMethod} />);
 
-    expect(wrapper.find('h3').text()).to.contain(defaultMethod.name);
-    expect(wrapper.find('h4').map(h => h.text())).to.eql([
+    expect(wrapper.find('h3').text()).toContain(defaultMethod.name);
+    expect(wrapper.find('h4').map(h => h.text())).toEqual([
       'Returns',
       'Parameters',
       'Examples',
@@ -121,44 +121,38 @@ describe('SingleMethod', () => {
 
     expect(
       wrapper.find('EnhancedSafeMarkdown').at(0).props().markdown
-    ).to.equal(defaultMethod.syntax);
-    expect(
-      wrapper.find('EnhancedSafeMarkdown').at(1).props().markdown
-    ).to.contain(defaultMethod.content);
-    expect(wrapper.find('ParametersTable').length).to.equal(1);
-    expect(wrapper.find('Example').length).to.equal(1);
-    expect(
-      wrapper.find('EnhancedSafeMarkdown').at(2).props().markdown
-    ).to.contain(defaultMethod.externalDocumentation);
+    ).toBe(defaultMethod.syntax);
+    expect(wrapper.find('EnhancedSafeMarkdown').at(1).props().markdown).toEqual(expect.arrayContaining([defaultMethod.content]));
+    expect(wrapper.find('ParametersTable').length).toBe(1);
+    expect(wrapper.find('Example').length).toBe(1);
+    expect(wrapper.find('EnhancedSafeMarkdown').at(2).props().markdown).toEqual(expect.arrayContaining([defaultMethod.externalDocumentation]));
   });
 
   it('hides the returns header if no returnValue is provided', () => {
     delete defaultMethod.returnValue;
     const wrapper = shallow(<SingleMethod method={defaultMethod} />);
-    expect(wrapper.find('h4').length).to.be.greaterThan(0);
-    expect(wrapper.find('h4').map(h => h.text())).to.not.include('Returns');
+    expect(wrapper.find('h4').length).toBeGreaterThan(0);
+    expect(wrapper.find('h4').map(h => h.text())).not.toContain('Returns');
   });
 
   it('hides the examples header if no examples is provided', () => {
     delete defaultMethod.examples;
     const wrapper = shallow(<SingleMethod method={defaultMethod} />);
-    expect(wrapper.find('h4').length).to.be.greaterThan(0);
-    expect(wrapper.find('h4').map(h => h.text())).to.not.include('Examples');
+    expect(wrapper.find('h4').length).toBeGreaterThan(0);
+    expect(wrapper.find('h4').map(h => h.text())).not.toContain('Examples');
   });
 
   it('hides the syntax header if no syntax is provided', () => {
     delete defaultMethod.syntax;
     const wrapper = shallow(<SingleMethod method={defaultMethod} />);
-    expect(wrapper.find('h4').length).to.be.greaterThan(0);
-    expect(wrapper.find('h4').map(h => h.text())).to.not.include('Syntax');
+    expect(wrapper.find('h4').length).toBeGreaterThan(0);
+    expect(wrapper.find('h4').map(h => h.text())).not.toContain('Syntax');
   });
 
   it('hides the additional information header if no external documentation is provided', () => {
     delete defaultMethod.externalLink;
     const wrapper = shallow(<SingleMethod method={defaultMethod} />);
-    expect(wrapper.find('h4').length).to.be.greaterThan(0);
-    expect(wrapper.find('h4').map(h => h.text())).to.not.include(
-      'Additional Information'
-    );
+    expect(wrapper.find('h4').length).toBeGreaterThan(0);
+    expect(wrapper.find('h4').map(h => h.text())).not.toContain('Additional Information');
   });
 });

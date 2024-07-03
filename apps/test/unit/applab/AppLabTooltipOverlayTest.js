@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import {AppLabTooltipOverlay} from '@cdo/apps/applab/AppLabTooltipOverlay';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 // ES5-style require necessary to stub gridUtils.draggedElementDropPoint
 var gridUtils = require('@cdo/apps/applab/gridUtils');
@@ -42,27 +42,25 @@ describe('AppLabTooltipOverlay', () => {
 
     it('renders a TooltipOverlay', () => {
       var props = result.find('TooltipOverlay').props();
-      expect(props.width).to.equal(TEST_APP_WIDTH);
-      expect(props.height).to.equal(TEST_APP_HEIGHT);
+      expect(props.width).toBe(TEST_APP_WIDTH);
+      expect(props.height).toBe(TEST_APP_HEIGHT);
     });
 
     it('renders with unmodified position', () => {
       var props = result.find('TooltipOverlay').props();
-      expect(props.mouseX).to.equal(TEST_MOUSE_X);
-      expect(props.mouseY).to.equal(TEST_MOUSE_Y);
+      expect(props.mouseX).toBe(TEST_MOUSE_X);
+      expect(props.mouseY).toBe(TEST_MOUSE_Y);
     });
 
     it('renders tooltip below cursor', () => {
       var props = result.find('TooltipOverlay').props();
-      expect(props.tooltipAboveCursor).to.equal(false);
+      expect(props.tooltipAboveCursor).toBe(false);
     });
 
     it('always has a provider that returns current coordinate text', () => {
-      expect(result.props().providers.length).to.equal(1);
-      expect(result.props().providers[0]).to.be.a('function');
-      expect(result.props().providers[0](result.props())).to.equal(
-        `x: ${Math.round(TEST_MOUSE_X)}, y: ${Math.round(TEST_MOUSE_Y)}`
-      );
+      expect(result.props().providers.length).toBe(1);
+      expect(result.props().providers[0]).toBeInstanceOf(Function);
+      expect(result.props().providers[0](result.props())).toBe(`x: ${Math.round(TEST_MOUSE_X)}, y: ${Math.round(TEST_MOUSE_Y)}`);
     });
   });
 
@@ -80,20 +78,18 @@ describe('AppLabTooltipOverlay', () => {
 
     it('renders with overridden position', () => {
       var props = result.find('TooltipOverlay').props();
-      expect(props.mouseX).to.equal(DROP_POINT_X);
-      expect(props.mouseY).to.equal(DROP_POINT_Y);
+      expect(props.mouseX).toBe(DROP_POINT_X);
+      expect(props.mouseY).toBe(DROP_POINT_Y);
     });
 
     it('renders tooltip above cursor', () => {
       var props = result.find('TooltipOverlay').props();
-      expect(props.tooltipAboveCursor).to.be.true;
+      expect(props.tooltipAboveCursor).toBe(true);
     });
 
     it('gives modified position to coordinates provider', () => {
-      expect(result.props().providers[0]).to.be.a('function');
-      expect(result.props().providers[0](result.props())).to.equal(
-        `x: ${Math.floor(DROP_POINT_X)}, y: ${Math.floor(DROP_POINT_Y)}`
-      );
+      expect(result.props().providers[0]).toBeInstanceOf(Function);
+      expect(result.props().providers[0](result.props())).toBe(`x: ${Math.floor(DROP_POINT_X)}, y: ${Math.floor(DROP_POINT_Y)}`);
     });
   });
 
@@ -129,11 +125,9 @@ describe('AppLabTooltipOverlay', () => {
       });
 
       it('has a second provider that returns the element ID', () => {
-        expect(result.props().providers.length).to.equal(2);
-        expect(result.props().providers[1]).to.be.a('function');
-        expect(result.props().providers[1](result.props)).to.equal(
-          `id: ${CONTROL_ID}`
-        );
+        expect(result.props().providers.length).toBe(2);
+        expect(result.props().providers[1]).toBeInstanceOf(Function);
+        expect(result.props().providers[1](result.props)).toBe(`id: ${CONTROL_ID}`);
       });
     });
 
@@ -148,11 +142,9 @@ describe('AppLabTooltipOverlay', () => {
       });
 
       it('has a second provider that returns the screen ID', () => {
-        expect(result.props().providers.length).to.equal(2);
-        expect(result.props().providers[1]).to.be.a('function');
-        expect(result.props().providers[1](result.props)).to.equal(
-          `id: ${SCREEN_ID}`
-        );
+        expect(result.props().providers.length).toBe(2);
+        expect(result.props().providers[1]).toBeInstanceOf(Function);
+        expect(result.props().providers[1](result.props)).toBe(`id: ${SCREEN_ID}`);
       });
     });
   });

@@ -65,7 +65,7 @@ describe('Button', () => {
     assert.strictEqual(wrapper.props().href, undefined);
     assert.equal(wrapper.props().onClick, onClick);
     wrapper.simulate('click');
-    assert(onClick.calledOnce);
+    assert(onClick.toHaveBeenCalledTimes(1));
   });
 
   it('doesnt respond to clicks when disabled', () => {
@@ -81,7 +81,7 @@ describe('Button', () => {
     );
 
     wrapper.simulate('click');
-    assert(!onClick.calledOnce);
+    assert(!onClick.toHaveBeenCalledTimes(1));
   });
 
   it('renders bigger if we use a large size', () => {

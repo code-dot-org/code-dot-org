@@ -66,7 +66,7 @@ describe('LibraryClientApi', () => {
       server.respond();
 
       assert.equal(0, channelUpdateStub.callCount);
-      assert(unpublishCallback.calledOnce);
+      assert(unpublishCallback.toHaveBeenCalledTimes(1));
     });
   });
 });

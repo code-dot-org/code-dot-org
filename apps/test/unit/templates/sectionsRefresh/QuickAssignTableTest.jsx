@@ -6,7 +6,7 @@ import {MARKETING_AUDIENCE} from '@cdo/apps/templates/sectionsRefresh/Curriculum
 import QuickAssignTable from '@cdo/apps/templates/sectionsRefresh/QuickAssignTable';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 import {
   elementarySchoolCourseOffering,
@@ -39,15 +39,15 @@ describe('QuickAssignTable', () => {
       courseOfferings: elementarySchoolCourseOffering,
     });
 
-    expect(wrapper.find('table').length).to.equal(1);
-    expect(wrapper.contains(i18n.courses())).to.be.true;
+    expect(wrapper.find('table').length).toBe(1);
+    expect(wrapper.contains(i18n.courses())).toBe(true);
   });
 
   it('renders two tables with correct headers', () => {
     const wrapper = setUpShallow();
-    expect(wrapper.find('table').length).to.equal(2);
-    expect(wrapper.contains(i18n.courses())).to.be.true;
-    expect(wrapper.contains(i18n.standaloneUnits())).to.be.true;
+    expect(wrapper.find('table').length).toBe(2);
+    expect(wrapper.contains(i18n.courses())).toBe(true);
+    expect(wrapper.contains(i18n.standaloneUnits())).toBe(true);
   });
 
   it('calls updateSection when a radio button is pressed', () => {
@@ -55,11 +55,11 @@ describe('QuickAssignTable', () => {
     const wrapper = setUpMount({updateCourse: updateSpy});
 
     const radio = wrapper.find("input[value='Computer Science A']");
-    expect(updateSpy).not.to.have.been.called;
+    expect(updateSpy).not.toHaveBeenCalled();
     radio.simulate('change', {
       target: {value: 'Computer Science A', checked: true},
     });
-    expect(updateSpy).to.have.been.called;
+    expect(updateSpy).toHaveBeenCalled();
   });
 
   it('correctly falls back when a course has no recommended version', () => {
@@ -70,11 +70,11 @@ describe('QuickAssignTable', () => {
     });
 
     const radio = wrapper.find('input');
-    expect(updateSpy).not.to.have.been.called;
+    expect(updateSpy).not.toHaveBeenCalled();
     radio.simulate('change', {
       target: {value: 'Computer Science A', checked: true},
     });
-    expect(updateSpy).to.have.been.calledWith(sinon.match({versionId: 373}));
+    expect(updateSpy).toHaveBeenCalledWith(sinon.match({versionId: 373}));
   });
 
   it('automatically checks correct radio button if course is already assigned', () => {
@@ -87,6 +87,6 @@ describe('QuickAssignTable', () => {
     };
     const wrapper = mount(<QuickAssignTable {...props} />);
     const radio = wrapper.find("input[value='Computer Science A']");
-    expect(radio.props().checked).to.be.true;
+    expect(radio.props().checked).toBe(true);
   });
 });

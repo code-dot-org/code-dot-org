@@ -4,7 +4,7 @@ import {spy, stub} from 'sinon';
 
 import AddPasswordController from '@cdo/apps/lib/ui/accounts/AddPasswordController';
 
-import {expect, assert} from '../../../../util/reconfiguredChai';
+import {assert} from '../../../../util/reconfiguredChai';
 
 describe('AddPasswordController', () => {
   let controller, form, mockMountPoint;
@@ -30,9 +30,9 @@ describe('AddPasswordController', () => {
 
   describe('renderAddPasswordForm', () => {
     it('renders AddPasswordForm', () => {
-      expect(ReactDOM.render).not.to.have.been.called;
+      expect(ReactDOM.render).not.toHaveBeenCalled();
       controller.renderAddPasswordForm();
-      expect(ReactDOM.render).to.have.been.calledOnce;
+      expect(ReactDOM.render).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -45,7 +45,7 @@ describe('AddPasswordController', () => {
       it('sets password field', async () => {
         await controller.submitAddPassword('newpassword', 'newpassword');
         const passwordValue = form.find('#add-password_user_password').val();
-        expect(passwordValue).to.equal('newpassword');
+        expect(passwordValue).toBe('newpassword');
       });
 
       it('sets password confirmation field', async () => {
@@ -53,7 +53,7 @@ describe('AddPasswordController', () => {
         const passwordValue = form
           .find('#add-password_user_password_confirmation')
           .val();
-        expect(passwordValue).to.equal('otherpassword');
+        expect(passwordValue).toBe('otherpassword');
       });
 
       it('resolves to undefined', async () => {

@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import NeoPixel from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/NeoPixel';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+
 
 describe('NeoPixel', function () {
   beforeEach(() => {
@@ -21,7 +21,7 @@ describe('NeoPixel', function () {
     const led = new NeoPixel({
       controller: makeStubController(),
     });
-    expect(led).to.be.an.instanceOf(five.Led.RGB);
+    expect(led).toBeInstanceOf(five.Led.RGB);
   });
 
   describe('on()', () => {
@@ -43,13 +43,13 @@ describe('NeoPixel', function () {
     it(`calls the parent on() implementation`, () => {
       five.Led.RGB.prototype.on.resetHistory();
       led.on();
-      expect(five.Led.RGB.prototype.on).to.have.been.calledOnce;
+      expect(five.Led.RGB.prototype.on).toHaveBeenCalledTimes(1);
     });
 
     it(`calls stop() on the led to end any animations`, () => {
       five.Led.RGB.prototype.stop.resetHistory();
       led.on();
-      expect(five.Led.RGB.prototype.stop).to.have.been.calledOnce;
+      expect(five.Led.RGB.prototype.stop).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -72,13 +72,13 @@ describe('NeoPixel', function () {
     it(`calls the parent off() implementation`, () => {
       five.Led.RGB.prototype.off.resetHistory();
       led.off();
-      expect(five.Led.RGB.prototype.off).to.have.been.called;
+      expect(five.Led.RGB.prototype.off).toHaveBeenCalled();
     });
 
     it(`calls stop() on the led to end any animations`, () => {
       five.Led.RGB.prototype.stop.resetHistory();
       led.off();
-      expect(five.Led.RGB.prototype.stop).to.have.been.calledOnce;
+      expect(five.Led.RGB.prototype.stop).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -103,19 +103,19 @@ describe('NeoPixel', function () {
     it(`calls stop() only once when blink starts`, () => {
       led.stop.resetHistory();
       led.blink(100);
-      expect(led.stop).to.have.been.calledOnce;
+      expect(led.stop).toHaveBeenCalledTimes(1);
 
       // Pass some time and make sure it doesn't happen again
       led.stop.resetHistory();
       clock.tick(100);
-      expect(led.toggle).to.have.been.calledOnce;
-      expect(led.stop).not.to.have.been.called;
+      expect(led.toggle).toHaveBeenCalledTimes(1);
+      expect(led.stop).not.toHaveBeenCalled();
       clock.tick(100);
-      expect(led.toggle).to.have.been.calledTwice;
-      expect(led.stop).not.to.have.been.called;
+      expect(led.toggle).toHaveBeenCalledTimes(2);
+      expect(led.stop).not.toHaveBeenCalled();
       clock.tick(100);
-      expect(led.toggle).to.have.been.calledThrice;
-      expect(led.stop).not.to.have.been.called;
+      expect(led.toggle).toHaveBeenCalledTimes(3);
+      expect(led.stop).not.toHaveBeenCalled();
     });
   });
 
@@ -137,7 +137,7 @@ describe('NeoPixel', function () {
 
     it('hexadecimal color "#306090"', () => {
       led.color('#306090');
-      expect(led.color()).to.deep.equal({
+      expect(led.color()).toEqual({
         red: 0x30,
         green: 0x60,
         blue: 0x90,
@@ -146,7 +146,7 @@ describe('NeoPixel', function () {
 
     it('CSS1 color keywords "lime"', () => {
       led.color('lime');
-      expect(led.color()).to.deep.equal({
+      expect(led.color()).toEqual({
         red: 0x00,
         green: 0xff,
         blue: 0x00,
@@ -155,7 +155,7 @@ describe('NeoPixel', function () {
 
     it('CSS2 color keywords "orange"', () => {
       led.color('orange');
-      expect(led.color()).to.deep.equal({
+      expect(led.color()).toEqual({
         red: 0xff,
         green: 0xa5,
         blue: 0x00,
@@ -164,7 +164,7 @@ describe('NeoPixel', function () {
 
     it('CSS3 color keywords "chocolate"', () => {
       led.color('chocolate');
-      expect(led.color()).to.deep.equal({
+      expect(led.color()).toEqual({
         red: 0xd2,
         green: 0x69,
         blue: 0x1e,
@@ -174,7 +174,7 @@ describe('NeoPixel', function () {
     it('CSS4 color keywords "rebeccapurple"', () => {
       // See: https://codepen.io/trezy/post/honoring-a-great-man
       led.color('rebeccapurple');
-      expect(led.color()).to.deep.equal({
+      expect(led.color()).toEqual({
         red: 0x66,
         green: 0x33,
         blue: 0x99,
@@ -183,7 +183,7 @@ describe('NeoPixel', function () {
 
     it('CSS functional notation "rgb(30, 60, 90)"', () => {
       led.color('rgb(30, 60, 90)');
-      expect(led.color()).to.deep.equal({
+      expect(led.color()).toEqual({
         red: 30,
         green: 60,
         blue: 90,
@@ -192,7 +192,7 @@ describe('NeoPixel', function () {
 
     it('CSS functional notation "rgba(30, 60, 90, 0.5)"', () => {
       led.color('rgba(30, 60, 90, 0.5)');
-      expect(led.color()).to.deep.equal({
+      expect(led.color()).toEqual({
         red: 15,
         green: 30,
         blue: 45,
@@ -201,7 +201,7 @@ describe('NeoPixel', function () {
 
     it('CSS4 functional notation "rgb(30, 60, 90, 0.5)"', () => {
       led.color('rgb(30, 60, 90, 0.5)');
-      expect(led.color()).to.deep.equal({
+      expect(led.color()).toEqual({
         red: 15,
         green: 30,
         blue: 45,
@@ -210,7 +210,7 @@ describe('NeoPixel', function () {
 
     it('CSS4 functional notation "rgba(30, 60, 90)"', () => {
       led.color('rgba(30, 60, 90)');
-      expect(led.color()).to.deep.equal({
+      expect(led.color()).toEqual({
         red: 30,
         green: 60,
         blue: 90,
@@ -219,7 +219,7 @@ describe('NeoPixel', function () {
 
     it('Array of color values [30, 60, 90]', () => {
       led.color([30, 60, 90]);
-      expect(led.color()).to.deep.equal({
+      expect(led.color()).toEqual({
         red: 30,
         green: 60,
         blue: 90,
@@ -228,7 +228,7 @@ describe('NeoPixel', function () {
 
     it('Color object {red: 30, green: 60, blue: 90}', () => {
       led.color({red: 30, green: 60, blue: 90});
-      expect(led.color()).to.deep.equal({
+      expect(led.color()).toEqual({
         red: 30,
         green: 60,
         blue: 90,
@@ -237,7 +237,7 @@ describe('NeoPixel', function () {
 
     it('Separate color arguments (30, 60, 90)', () => {
       led.color(30, 60, 90);
-      expect(led.color()).to.deep.equal({
+      expect(led.color()).toEqual({
         red: 30,
         green: 60,
         blue: 90,

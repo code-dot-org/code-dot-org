@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import {UnconnectedVocabulariesEditor as VocabulariesEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/VocabulariesEditor';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 describe('VocabulariesEditor', () => {
   let defaultProps, addVocabulary, updateVocabulary, removeVocabulary;
@@ -37,13 +37,13 @@ describe('VocabulariesEditor', () => {
 
   it('renders default props', () => {
     const wrapper = mount(<VocabulariesEditor {...defaultProps} />);
-    expect(wrapper.find('tr').length).to.equal(3);
+    expect(wrapper.find('tr').length).toBe(3);
   });
 
   it('can remove a vocabulary', () => {
     const wrapper = mount(<VocabulariesEditor {...defaultProps} />);
     const numVocabularies = wrapper.find('tr').length;
-    expect(numVocabularies).at.least(2);
+    expect(numVocabularies).toBeGreaterThanOrEqual(2);
     // Find one of the "remove" buttons and click it
     const removeVocabularyButton = wrapper
       .find('.unit-test-remove-vocabulary')
@@ -52,13 +52,13 @@ describe('VocabulariesEditor', () => {
     const removeDialog = wrapper.find('Dialog');
     const deleteButton = removeDialog.find('button').at(2);
     deleteButton.simulate('click');
-    expect(removeVocabulary).to.have.been.calledOnce;
+    expect(removeVocabulary).toHaveBeenCalledTimes(1);
   });
 
   it('can cancel removing a vocabulary', () => {
     const wrapper = mount(<VocabulariesEditor {...defaultProps} />);
     const numVocabularies = wrapper.find('tr').length;
-    expect(numVocabularies).at.least(2);
+    expect(numVocabularies).toBeGreaterThanOrEqual(2);
     // Find one of the "remove" buttons and click it
     const removeVocabularyButton = wrapper
       .find('.unit-test-remove-vocabulary')
@@ -67,6 +67,6 @@ describe('VocabulariesEditor', () => {
     const removeDialog = wrapper.find('Dialog');
     const cancelButton = removeDialog.find('button').at(1);
     cancelButton.simulate('click');
-    expect(removeVocabulary).not.to.have.been.called;
+    expect(removeVocabulary).not.toHaveBeenCalled();
   });
 });

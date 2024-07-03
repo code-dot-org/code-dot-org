@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import FixZoomHelper from '@cdo/apps/templates/FixZoomHelper';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('FixZoomHelper', function () {
   it('shows nothing when not zoomed', function () {
@@ -16,7 +16,7 @@ describe('FixZoomHelper', function () {
     sinon.stub(instance, 'isZoomed').returns(false);
     instance.updateViewport();
 
-    expect(instance.state.mode).to.equal('none');
+    expect(instance.state.mode).toBe('none');
   });
 
   it('shows button when zoomed', function () {
@@ -28,7 +28,7 @@ describe('FixZoomHelper', function () {
     sinon.stub(instance, 'isZoomed').returns(true);
     instance.updateViewport();
 
-    expect(instance.state.mode).to.equal('button');
+    expect(instance.state.mode).toBe('button');
   });
 
   it('shows helper when zoomed and button pressed', function () {
@@ -42,7 +42,7 @@ describe('FixZoomHelper', function () {
 
     instance.onButtonClick();
 
-    expect(instance.state.mode).to.equal('helper');
+    expect(instance.state.mode).toBe('helper');
   });
 
   it('shows button again when zoomed and helper pressed', function () {
@@ -56,11 +56,11 @@ describe('FixZoomHelper', function () {
 
     instance.onButtonClick();
 
-    expect(instance.state.mode).to.equal('helper');
+    expect(instance.state.mode).toBe('helper');
 
     instance.onHelperClick();
 
-    expect(instance.state.mode).to.equal('button');
+    expect(instance.state.mode).toBe('button');
   });
 
   it('shows nothing when zoomed and button pressed and zoomed back out', function () {
@@ -75,11 +75,11 @@ describe('FixZoomHelper', function () {
 
     instance.onButtonClick();
 
-    expect(instance.state.mode).to.equal('helper');
+    expect(instance.state.mode).toBe('helper');
 
     isZoomedStub.returns(false);
     instance.updateViewport();
 
-    expect(instance.state.mode).to.equal('none');
+    expect(instance.state.mode).toBe('none');
   });
 });

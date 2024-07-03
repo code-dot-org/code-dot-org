@@ -8,7 +8,7 @@ import ChildAccountConsent, {
 } from '@cdo/apps/templates/policy_compliance/ChildAccountConsent';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('ChildAccountConsent', () => {
   let sendEventSpy: SinonStub;

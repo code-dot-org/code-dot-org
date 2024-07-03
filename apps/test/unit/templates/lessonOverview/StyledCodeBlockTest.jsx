@@ -5,7 +5,7 @@ import StyledCodeBlock, {
   buildProgrammingExpressionMarkdown,
 } from '@cdo/apps/templates/lessonOverview/StyledCodeBlock';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('StyledCodeBlock', () => {
   describe('buildProgrammingExpressionMarkdown', () => {
@@ -16,7 +16,7 @@ describe('StyledCodeBlock', () => {
         syntax: 'test_block(x,y)',
       };
       const expected = '[`test_block(x,y)`(#c0ffee)](https://example.com)';
-      expect(buildProgrammingExpressionMarkdown(input)).to.equal(expected);
+      expect(buildProgrammingExpressionMarkdown(input)).toBe(expected);
     });
 
     it('builds a regular code block when not given a color', () => {
@@ -25,7 +25,7 @@ describe('StyledCodeBlock', () => {
         syntax: 'test_block(x,y)',
       };
       const expected = '[`test_block(x,y)`](https://example.com)';
-      expect(buildProgrammingExpressionMarkdown(input)).to.equal(expected);
+      expect(buildProgrammingExpressionMarkdown(input)).toBe(expected);
     });
   });
 
@@ -40,9 +40,7 @@ describe('StyledCodeBlock', () => {
       />
     );
 
-    expect(wrapper.find('SafeMarkdown').props().markdown).to.equal(
-      '[`playSound`(#000000)](/docs/applab/playSound)'
-    );
+    expect(wrapper.find('SafeMarkdown').props().markdown).toBe('[`playSound`(#000000)](/docs/applab/playSound)');
   });
 
   it('build regular code markdown when no color supplied', () => {
@@ -56,9 +54,7 @@ describe('StyledCodeBlock', () => {
       />
     );
 
-    expect(wrapper.find('SafeMarkdown').props().markdown).to.equal(
-      '[`playSound`](/docs/applab/playSound)'
-    );
+    expect(wrapper.find('SafeMarkdown').props().markdown).toBe('[`playSound`](/docs/applab/playSound)');
   });
 
   it('embeds block if blockName is provided', () => {
@@ -74,7 +70,7 @@ describe('StyledCodeBlock', () => {
     );
 
     const blockLink = wrapper.find('EmbeddedBlock');
-    expect(blockLink.props().link).to.equal('/docs/spritelab/playSound');
-    expect(blockLink.props().blockName).to.equal('playSound');
+    expect(blockLink.props().link).toBe('/docs/spritelab/playSound');
+    expect(blockLink.props().blockName).toBe('playSound');
   });
 });

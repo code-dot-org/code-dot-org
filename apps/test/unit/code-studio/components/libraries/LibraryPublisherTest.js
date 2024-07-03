@@ -8,7 +8,7 @@ import LibraryPublisher, {
   PublishState,
 } from '@cdo/apps/code-studio/components/libraries/LibraryPublisher';
 
-import {assert, expect} from '../../../../util/reconfiguredChai';
+import {assert} from '../../../../util/reconfiguredChai';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('LibraryPublisher', () => {
@@ -85,8 +85,8 @@ describe('LibraryPublisher', () => {
         <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
       );
 
-      expect(wrapper.state().libraryName).to.equal(libraryName);
-      expect(wrapper.find('input').first().props().value).to.equal(libraryName);
+      expect(wrapper.state().libraryName).toBe(libraryName);
+      expect(wrapper.find('input').first().props().value).toBe(libraryName);
     });
 
     it('filters invalid functions from selectedFunctions', () => {
@@ -116,8 +116,8 @@ describe('LibraryPublisher', () => {
       );
 
       let checkboxes = wrapper.find(CHECKBOX_SELECTOR);
-      expect(checkboxes.at(1).prop('disabled')).to.be.false;
-      expect(checkboxes.at(2).prop('disabled')).to.be.true;
+      expect(checkboxes.at(1).prop('disabled')).toBe(false);
+      expect(checkboxes.at(2).prop('disabled')).toBe(true);
     });
 
     it('disables checkbox for functions with duplicate names', () => {
@@ -131,8 +131,8 @@ describe('LibraryPublisher', () => {
       );
 
       let checkboxes = wrapper.find(CHECKBOX_SELECTOR);
-      expect(checkboxes.at(1).prop('disabled')).to.be.false;
-      expect(checkboxes.at(2).prop('disabled')).to.be.true;
+      expect(checkboxes.at(1).prop('disabled')).toBe(false);
+      expect(checkboxes.at(2).prop('disabled')).toBe(true);
     });
 
     it('checks checkboxes of selected functions', () => {
@@ -150,12 +150,12 @@ describe('LibraryPublisher', () => {
       );
 
       let checkboxes = wrapper.find(CHECKBOX_SELECTOR);
-      expect(checkboxes.at(1).prop('disabled')).to.be.false;
-      expect(checkboxes.at(2).prop('disabled')).to.be.false;
-      expect(checkboxes.at(3).prop('disabled')).to.be.true;
-      expect(checkboxes.at(1).prop('checked')).to.be.false;
-      expect(checkboxes.at(2).prop('checked')).to.be.true;
-      expect(checkboxes.at(3).prop('checked')).to.be.false;
+      expect(checkboxes.at(1).prop('disabled')).toBe(false);
+      expect(checkboxes.at(2).prop('disabled')).toBe(false);
+      expect(checkboxes.at(3).prop('disabled')).toBe(true);
+      expect(checkboxes.at(1).prop('checked')).toBe(false);
+      expect(checkboxes.at(2).prop('checked')).toBe(true);
+      expect(checkboxes.at(3).prop('checked')).toBe(false);
     });
   });
 
@@ -189,7 +189,7 @@ describe('LibraryPublisher', () => {
 
       await wrapper.instance().validateAndPublish();
 
-      expect(wrapper.state().publishState).to.equal(PublishState.INVALID_INPUT);
+      expect(wrapper.state().publishState).toBe(PublishState.INVALID_INPUT);
     });
 
     it('is disabled when description is unset', async () => {
@@ -199,15 +199,15 @@ describe('LibraryPublisher', () => {
 
       await wrapper.instance().validateAndPublish();
 
-      expect(wrapper.state().publishState).to.equal(PublishState.INVALID_INPUT);
+      expect(wrapper.state().publishState).toBe(PublishState.INVALID_INPUT);
     });
 
     it('is enabled once description and functions are set', async () => {
       await wrapper.instance().validateAndPublish();
-      expect(wrapper.state().publishState).to.equal(PublishState.INVALID_INPUT);
+      expect(wrapper.state().publishState).toBe(PublishState.INVALID_INPUT);
 
       wrapper.instance().resetErrorMessage();
-      expect(wrapper.state().publishState).to.equal(PublishState.INVALID_INPUT);
+      expect(wrapper.state().publishState).toBe(PublishState.INVALID_INPUT);
 
       wrapper.setState({
         selectedFunctions: selectedFunctions,
@@ -215,7 +215,7 @@ describe('LibraryPublisher', () => {
       });
       wrapper.instance().resetErrorMessage();
 
-      expect(wrapper.state().publishState).to.equal(PublishState.DEFAULT);
+      expect(wrapper.state().publishState).toBe(PublishState.DEFAULT);
     });
 
     it('does not call publish if profanity is found', async () => {
@@ -228,8 +228,8 @@ describe('LibraryPublisher', () => {
 
       await wrapper.instance().validateAndPublish();
 
-      expect(wrapper.state().publishState).to.equal(PublishState.PROFANE_INPUT);
-      expect(publishSpy.callCount).to.equal(0);
+      expect(wrapper.state().publishState).toBe(PublishState.PROFANE_INPUT);
+      expect(publishSpy.callCount).toBe(0);
     });
 
     it('calls publish if no profanity is found', async () => {
@@ -242,7 +242,7 @@ describe('LibraryPublisher', () => {
 
       await wrapper.instance().validateAndPublish();
 
-      expect(publishSpy.callCount).to.equal(1);
+      expect(publishSpy.callCount).toBe(1);
     });
 
     it('calls publish if request to find profanity fails', async () => {
@@ -255,7 +255,7 @@ describe('LibraryPublisher', () => {
 
       await wrapper.instance().validateAndPublish();
 
-      expect(publishSpy.callCount).to.equal(1);
+      expect(publishSpy.callCount).toBe(1);
     });
 
     describe('with valid input', () => {
@@ -271,9 +271,7 @@ describe('LibraryPublisher', () => {
 
         await wrapper.instance().validateAndPublish();
 
-        expect(wrapper.state().publishState).to.equal(
-          PublishState.ERROR_PUBLISH
-        );
+        expect(wrapper.state().publishState).toBe(PublishState.ERROR_PUBLISH);
 
         console.warn.restore();
       });
@@ -290,7 +288,7 @@ describe('LibraryPublisher', () => {
 
         await wrapper.instance().validateAndPublish();
 
-        expect(wrapper.state().publishState).to.equal(PublishState.TOO_LONG);
+        expect(wrapper.state().publishState).toBe(PublishState.TOO_LONG);
 
         console.warn.restore();
       });
@@ -308,8 +306,8 @@ describe('LibraryPublisher', () => {
 
         await wrapper.instance().validateAndPublish();
 
-        expect(wrapper.state().publishState).to.equal(PublishState.PII_INPUT);
-        expect(wrapper.state().pIIWords).to.deep.equal(['123-456-7890']);
+        expect(wrapper.state().publishState).toBe(PublishState.PII_INPUT);
+        expect(wrapper.state().pIIWords).toEqual(['123-456-7890']);
 
         console.warn.restore();
       });
@@ -327,9 +325,7 @@ describe('LibraryPublisher', () => {
 
         await wrapper.instance().validateAndPublish();
 
-        expect(wrapper.state().publishState).to.equal(
-          PublishState.ERROR_PUBLISH
-        );
+        expect(wrapper.state().publishState).toBe(PublishState.ERROR_PUBLISH);
 
         console.warn.restore();
       });
@@ -347,9 +343,7 @@ describe('LibraryPublisher', () => {
 
         await wrapper.instance().validateAndPublish();
 
-        expect(wrapper.state().publishState).to.equal(
-          PublishState.ERROR_PUBLISH
-        );
+        expect(wrapper.state().publishState).toBe(PublishState.ERROR_PUBLISH);
 
         console.warn.restore();
       });
@@ -363,7 +357,7 @@ describe('LibraryPublisher', () => {
 
         await wrapper.instance().validateAndPublish();
 
-        expect(onPublishSuccess.called).to.be.true;
+        expect(onPublishSuccess.called).toBe(true);
       });
 
       it('publishes only the selected functions and description', async () => {
@@ -386,12 +380,7 @@ describe('LibraryPublisher', () => {
 
         await wrapper.instance().validateAndPublish();
 
-        expect(libraryJsonSpy).to.have.been.calledWith(
-          librarySource,
-          [newFunction],
-          libraryName,
-          description
-        );
+        expect(libraryJsonSpy).toHaveBeenCalledWith(librarySource, [newFunction], libraryName, description);
 
         libraryParser.createLibraryJson.restore();
       });
@@ -415,17 +404,15 @@ describe('LibraryPublisher', () => {
     it('calls onUnpublishSuccess when it succeeds', () => {
       deleteSpy.callsArg(0);
       wrapper.instance().unpublish();
-      expect(onUnpublishSuccess.called).to.be.true;
+      expect(onUnpublishSuccess.called).toBe(true);
     });
 
     it('sets ERROR_UNPUBLISH when it fails', () => {
       sinon.stub(console, 'warn');
       deleteSpy.callsArg(1);
       wrapper.instance().unpublish();
-      expect(wrapper.state().publishState).to.equal(
-        PublishState.ERROR_UNPUBLISH
-      );
-      expect(onUnpublishSuccess.called).to.be.false;
+      expect(wrapper.state().publishState).toBe(PublishState.ERROR_UNPUBLISH);
+      expect(onUnpublishSuccess.called).toBe(false);
       console.warn.restore();
     });
   });
@@ -436,7 +423,7 @@ describe('LibraryPublisher', () => {
       const isValid = wrapper
         .instance()
         .isFunctionValid({functionName: 'invalidFunc', comment: ''});
-      expect(isValid).to.be.false;
+      expect(isValid).toBe(false);
     });
 
     it('is false if the function is a duplicate', () => {
@@ -449,7 +436,7 @@ describe('LibraryPublisher', () => {
         <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
       );
       const isValid = wrapper.instance().isFunctionValid(duplicateFunction);
-      expect(isValid).to.be.false;
+      expect(isValid).toBe(false);
     });
 
     it('is true if the function has a comment and is not a duplicate', () => {
@@ -459,7 +446,7 @@ describe('LibraryPublisher', () => {
         <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
       );
       const isValid = wrapper.instance().isFunctionValid(validFunction);
-      expect(isValid).to.be.true;
+      expect(isValid).toBe(true);
     });
   });
 
@@ -477,7 +464,7 @@ describe('LibraryPublisher', () => {
       let wrapper = shallow(
         <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
       );
-      expect(wrapper.instance().allFunctionsSelected()).to.be.false;
+      expect(wrapper.instance().allFunctionsSelected()).toBe(false);
     });
 
     it('is true if all valid functions are selected', () => {
@@ -485,7 +472,7 @@ describe('LibraryPublisher', () => {
       let wrapper = shallow(
         <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
       );
-      expect(wrapper.instance().allFunctionsSelected()).to.be.true;
+      expect(wrapper.instance().allFunctionsSelected()).toBe(true);
     });
   });
 

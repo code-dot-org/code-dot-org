@@ -8,7 +8,7 @@ import {UnconnectedSectionProgress} from '@cdo/apps/templates/sectionProgress/Se
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import * as progressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 
-import {expect, assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai';
 
 const studentData = [
   {id: 1, name: 'studentb'},
@@ -66,35 +66,33 @@ describe('SectionProgress', () => {
 
   it('loading data shows loading icon', () => {
     const wrapper = setUp({isLoadingProgress: true});
-    expect(wrapper.find('#uitest-spinner').exists()).to.be.true;
+    expect(wrapper.find('#uitest-spinner').exists()).toBe(true);
   });
 
   it('done loading data does not show loading icon', () => {
     const wrapper = setUp();
-    expect(wrapper.find('#uitest-spinner').exists()).to.be.false;
+    expect(wrapper.find('#uitest-spinner').exists()).toBe(false);
   });
 
   it('renders ProgressTableView for detail and summary view only', () => {
     let wrapper = setUp({currentView: ViewType.DETAIL});
-    expect(wrapper.find(ProgressTableView)).to.have.length(1);
+    expect(wrapper.find(ProgressTableView)).toHaveLength(1);
 
     wrapper = setUp({currentView: ViewType.SUMMARY});
-    expect(wrapper.find(ProgressTableView)).to.have.length(1);
+    expect(wrapper.find(ProgressTableView)).toHaveLength(1);
 
     wrapper = setUp({currentView: ViewType.STANDARDS});
-    expect(wrapper.find(ProgressTableView)).to.have.length(0);
+    expect(wrapper.find(ProgressTableView)).toHaveLength(0);
   });
 
   it('passes currentView to ProgressTableView', () => {
     const wrapper = setUp({currentView: ViewType.DETAIL});
-    expect(wrapper.find(ProgressTableView).props().currentView).to.equal(
-      ViewType.DETAIL
-    );
+    expect(wrapper.find(ProgressTableView).props().currentView).toBe(ViewType.DETAIL);
   });
 
   it('shows standards view', () => {
     const wrapper = setUp({currentView: ViewType.STANDARDS});
-    expect(wrapper.find('#uitest-standards-view').exists()).to.be.true;
+    expect(wrapper.find('#uitest-standards-view').exists()).toBe(true);
   });
 
   it('sends Amplitude progress event when onChangeScript is called', () => {
@@ -102,7 +100,7 @@ describe('SectionProgress', () => {
     const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
     wrapper.instance().onChangeScript(123);
-    expect(analyticsSpy).to.be.calledOnce;
+    expect(analyticsSpy).toHaveBeenCalledTimes(1);
     assert.equal(
       analyticsSpy.getCall(0).firstArg,
       'Section Progress Unit Changed'

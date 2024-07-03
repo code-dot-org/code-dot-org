@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import * as utils from '@cdo/apps/utils';
 
-import {expect, assert} from '../../../../util/reconfiguredChai';
+import {assert} from '../../../../util/reconfiguredChai';
 
 const sampleAnnouncement = {
   key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',

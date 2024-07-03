@@ -8,7 +8,7 @@ import {
   generateLevelAnimationsManifest,
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 
-import {expect, assert} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai';
 
 import testAnimationLibrary from './testAnimationLibrary.json';
 
@@ -116,26 +116,23 @@ describe('animationLibraryApi', () => {
         .returns(Promise.resolve({ok: true}));
 
       return regenerateDefaultSpriteMetadata(defaultSprites).then(() => {
-        expect(fetchSpy).calledWith(
-          '/api/v1/animation-library/default-spritelab-metadata/levelbuilder'
-        );
+        expect(fetchSpy).toHaveBeenCalledWith('/api/v1/animation-library/default-spritelab-metadata/levelbuilder');
 
         let fetchBody = JSON.parse(fetchSpy.getCall(0).args[1].body);
-        expect(fetchBody).to.have.property('orderedKeys');
-        expect(fetchBody.orderedKeys).to.have.length(2);
+        expect(fetchBody).toHaveProperty('orderedKeys');
+        expect(fetchBody.orderedKeys).toHaveLength(2);
 
         //Check that keys are created in our UUID format
         const firstKey = fetchBody.orderedKeys[0];
-        expect(firstKey).to.match(/^........-....-4...-....-............$/);
+        expect(firstKey).toMatch(/^........-....-4...-....-............$/);
 
         //Check that propsByKey has an object that matches the first orderedKey and that the object the correct name,
         // a properly formatted sourceUrl, and the expected number of props.
         const firstSpriteProps = fetchBody.propsByKey[firstKey];
         expect(firstSpriteProps)
-          .to.have.property('sourceUrl')
-          .that.has.string('https://studio.code.org');
-        expect(firstSpriteProps).to.have.property('name').that.equals('bear');
-        expect(Object.keys(firstSpriteProps)).to.have.length(8);
+          .to.have.property('sourceUrl').toContain('https://studio.code.org');
+        expect(firstSpriteProps).to.have.property('name').toBe('bear');
+        expect(Object.keys(firstSpriteProps)).toHaveLength(8);
       });
     });
 
@@ -147,10 +144,8 @@ describe('animationLibraryApi', () => {
         .returns(Promise.resolve({ok: true}));
 
       return regenerateDefaultSpriteMetadata(defaultSprites).then(() => {
-        expect(fetchSpy).calledWith(
-          '/api/v1/animation-library/default-spritelab-metadata/levelbuilder'
-        );
-        expect(fetchSpy).calledWithMatch(sinon.match.any, {method: 'POST'});
+        expect(fetchSpy).toHaveBeenCalledWith('/api/v1/animation-library/default-spritelab-metadata/levelbuilder');
+        expect(fetchSpy).toHaveBeenCalledWith(sinon.match.any, expect.objectContaining({method: 'POST'}));
       });
     });
 
@@ -199,9 +194,9 @@ describe('animationLibraryApi', () => {
           'aliases',
           'categories',
         ];
-        expect(metadataKeys.length).to.equal(expectedKeys.length);
+        expect(metadataKeys.length).toBe(expectedKeys.length);
         expectedKeys.forEach(key => {
-          expect(metadataKeys).to.include(key);
+          expect(metadataKeys).toEqual(expect.arrayContaining([key]));
         });
       });
     });
@@ -210,14 +205,14 @@ describe('animationLibraryApi', () => {
       return buildAnimationMetadata(animationFiles).then(metadata => {
         const expectedKeys = Object.keys(animationFiles);
         const metadataKeys = Object.keys(metadata);
-        expect(metadataKeys.length).to.equal(expectedKeys.length);
+        expect(metadataKeys.length).toBe(expectedKeys.length);
         expectedKeys.forEach(key => {
-          expect(metadataKeys).to.include(key);
+          expect(metadataKeys).toEqual(expect.arrayContaining([key]));
         });
 
         return generateAnimationMetadataForFile(fileObject).then(
           animationData => {
-            expect(metadata['key1']).to.deep.equal(animationData);
+            expect(metadata['key1']).toEqual(animationData);
           }
         );
       });
@@ -245,14 +240,14 @@ describe('animationLibraryApi', () => {
 
     it('applies normalizing function if provided', () => {
       const keys = Object.keys(testMap);
-      expect(keys).to.contain('bpple');
-      expect(keys).to.contain('bbnana');
-      expect(keys).to.not.contain('apple');
-      expect(keys).to.not.contain('banana');
+      expect(keys).toContain('bpple');
+      expect(keys).toContain('bbnana');
+      expect(keys).not.toContain('apple');
+      expect(keys).not.toContain('banana');
     });
 
     it('values in returned object are sorted', () => {
-      expect(testMap.bpple).to.eql(['alpha', 'beta']);
+      expect(testMap.bpple).toEqual(['alpha', 'beta']);
     });
   });
 
@@ -262,14 +257,14 @@ describe('animationLibraryApi', () => {
         const manifestObj = JSON.parse(manifest);
         const manifestKeys = Object.keys(manifestObj);
         const expectedKeys = ['//', 'metadata', 'categories', 'aliases'];
-        expect(manifestKeys).to.eql(expectedKeys);
+        expect(manifestKeys).toEqual(expectedKeys);
       });
     });
 
     it('metadata in returned object does not contain aliases', () => {
       return generateLevelAnimationsManifest().then(manifest => {
         const manifestObj = JSON.parse(manifest);
-        expect(manifestObj.metadata.key1.aliases).to.be.undefined;
+        expect(manifestObj.metadata.key1.aliases).toBeUndefined();
       });
     });
   });

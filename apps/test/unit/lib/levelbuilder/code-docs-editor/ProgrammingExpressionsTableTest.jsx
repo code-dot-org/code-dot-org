@@ -5,7 +5,7 @@ import sinon from 'sinon';
 
 import ProgrammingExpressionsTable from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingExpressionsTable';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 describe('ProgrammingExpressionsTable', () => {
   let defaultProps, fetchStub, returnData;
@@ -104,23 +104,23 @@ describe('ProgrammingExpressionsTable', () => {
 
   it('renders dropdowns with resultType, environments and categories', () => {
     const wrapper = shallow(<ProgrammingExpressionsTable {...defaultProps} />);
-    expect(wrapper.find('select').length).to.equal(3);
+    expect(wrapper.find('select').length).toBe(3);
   });
 
   it('renders dropdowns with environments and categories', () => {
     const wrapper = shallow(<ProgrammingExpressionsTable {...defaultProps} />);
-    expect(wrapper.find('select').length).to.equal(3);
+    expect(wrapper.find('select').length).toBe(3);
 
     const resultTypeSelector = wrapper.find('select').first();
-    expect(resultTypeSelector.find('option').length).to.equal(2);
+    expect(resultTypeSelector.find('option').length).toBe(2);
 
     const environmentSelector = wrapper.find('select').at(1);
-    expect(environmentSelector.find('option').length).to.equal(4);
-    expect(environmentSelector.props().value).to.equal('all');
+    expect(environmentSelector.find('option').length).toBe(4);
+    expect(environmentSelector.props().value).toBe('all');
 
     const categorySelector = wrapper.find('select').at(2);
-    expect(categorySelector.find('option').length).to.equal(4);
-    expect(categorySelector.props().value).to.equal('all');
+    expect(categorySelector.find('option').length).toBe(4);
+    expect(categorySelector.props().value).toBe('all');
   });
 
   it('updates category dropdown when environment is selected', () => {
@@ -130,7 +130,7 @@ describe('ProgrammingExpressionsTable', () => {
     environmentSelector.simulate('change', {target: {value: 1}});
 
     const categorySelector = wrapper.find('select').at(2);
-    expect(categorySelector.find('option').length).to.equal(2);
+    expect(categorySelector.find('option').length).toBe(2);
   });
 
   it('updates resultType dropdown when resultType is selected', () => {
@@ -143,7 +143,7 @@ describe('ProgrammingExpressionsTable', () => {
     environmentSelector.simulate('change', {target: {value: 1}});
 
     const categorySelector = wrapper.find('select').at(2);
-    expect(categorySelector.find('option').length).to.equal(2);
+    expect(categorySelector.find('option').length).toBe(2);
   });
 
   it('shows table with programming expressions after load', () => {
@@ -154,11 +154,11 @@ describe('ProgrammingExpressionsTable', () => {
       <ProgrammingExpressionsTable {...defaultProps} />
     );
     return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
-      expect(fetchStub.callCount).to.equal(1);
+      expect(fetchStub.callCount).toBe(1);
       // A reactabular table has a Header and a Body
-      expect(wrapper.findAll('Header').length).to.equal(1);
-      expect(wrapper.findAll('Body').length).to.equal(1);
-      expect(wrapper.findOne('Body').props.rows).to.eql(returnData.results);
+      expect(wrapper.findAll('Header').length).toBe(1);
+      expect(wrapper.findAll('Body').length).toBe(1);
+      expect(wrapper.findOne('Body').props.rows).toEqual(returnData.results);
     });
   });
 
@@ -170,10 +170,10 @@ describe('ProgrammingExpressionsTable', () => {
       <ProgrammingExpressionsTable {...defaultProps} hidden />
     );
     return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
-      expect(fetchStub.callCount).to.equal(1);
+      expect(fetchStub.callCount).toBe(1);
       // A reactabular table has a Header and a Body
-      expect(wrapper.findAll('Header').length).to.equal(0);
-      expect(wrapper.findAll('Body').length).to.equal(0);
+      expect(wrapper.findAll('Header').length).toBe(0);
+      expect(wrapper.findAll('Body').length).toBe(0);
     });
   });
 
@@ -184,12 +184,12 @@ describe('ProgrammingExpressionsTable', () => {
     const wrapper = mount(<ProgrammingExpressionsTable {...defaultProps} />);
     return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
       const fetchCount = fetchStub.callCount;
-      expect(fetchCount).to.equal(1);
+      expect(fetchCount).toBe(1);
       wrapper.update();
       const destroyButton = wrapper.find('BodyRow').at(1).find('Button').at(2);
       destroyButton.simulate('click');
-      expect(wrapper.find('StylizedBaseDialog').length).to.equal(1);
-      expect(fetchStub.callCount).to.equal(fetchCount);
+      expect(wrapper.find('StylizedBaseDialog').length).toBe(1);
+      expect(fetchStub.callCount).toBe(fetchCount);
     });
   });
 
@@ -200,12 +200,12 @@ describe('ProgrammingExpressionsTable', () => {
     const wrapper = mount(<ProgrammingExpressionsTable {...defaultProps} />);
     return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
       const fetchCount = fetchStub.callCount;
-      expect(fetchCount).to.equal(1);
+      expect(fetchCount).toBe(1);
       wrapper.update();
       const destroyButton = wrapper.find('BodyRow').at(2).find('Button').at(2);
       destroyButton.simulate('click');
-      expect(wrapper.find('StylizedBaseDialog').length).to.equal(0);
-      expect(fetchStub.callCount).to.equal(fetchCount);
+      expect(wrapper.find('StylizedBaseDialog').length).toBe(0);
+      expect(fetchStub.callCount).toBe(fetchCount);
     });
   });
 
@@ -218,9 +218,7 @@ describe('ProgrammingExpressionsTable', () => {
       wrapper.update();
       const destroyButton = wrapper.find('BodyRow').at(2).find('Button').at(1);
       destroyButton.simulate('click');
-      expect(wrapper.find('CloneProgrammingExpressionDialog').length).to.equal(
-        1
-      );
+      expect(wrapper.find('CloneProgrammingExpressionDialog').length).toBe(1);
     });
   });
 });

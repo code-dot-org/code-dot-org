@@ -3,7 +3,7 @@ import React from 'react';
 
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 const TEST_UNIT_NAME = 'Test Unit';
 const TEST_COURSE_VIEW_PATH = 'http://example.com/course';
@@ -27,7 +27,7 @@ describe('PlcHeader', () => {
           <span>{TEST_UNIT_NAME}</span>
         </div>
       )
-    ).to.be.ok;
+    ).toBeTruthy();
   });
 
   it('renders an extra layer of breadcrumb with a page name', () => {
@@ -52,6 +52,6 @@ describe('PlcHeader', () => {
           </span>
         </div>
       )
-    ).to.be.ok;
+    ).toBeTruthy();
   });
 });

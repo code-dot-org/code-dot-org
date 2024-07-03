@@ -1,6 +1,6 @@
 import utils from '@cdo/apps/code-studio/pd/form_components/utils';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 describe('FormComponents Utils', () => {
   it('normalizes SimpleAnswer to Answer', () => {
@@ -10,7 +10,7 @@ describe('FormComponents Utils', () => {
       answerText: 'simple answer',
       answerValue: 'simple answer',
     };
-    expect(output).to.deep.equal(expected);
+    expect(output).toEqual(expected);
   });
 
   it('normalizes Answer to Answer', () => {
@@ -19,7 +19,7 @@ describe('FormComponents Utils', () => {
       answerValue: 'form value',
     };
     const output = utils.normalizeAnswer(input);
-    expect(output).to.deep.equal(input);
+    expect(output).toEqual(input);
   });
 
   it('explicitly defines optional answerValue if left undefined', () => {
@@ -31,6 +31,6 @@ describe('FormComponents Utils', () => {
       answerValue: 'display text',
     };
     const output = utils.normalizeAnswer(input);
-    expect(output).to.deep.equal(expected);
+    expect(output).toEqual(expected);
   });
 });

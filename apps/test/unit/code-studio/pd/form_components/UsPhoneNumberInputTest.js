@@ -1,5 +1,4 @@
-import {expect} from 'chai';
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import { shallow } from 'enzyme';
 import React from 'react';
 import sinon from 'sinon';
 
@@ -11,7 +10,7 @@ describe('UsPhoneNumberInput', () => {
       <UsPhoneNumberInput name="phone" label="label" value="1234567890" />
     );
 
-    expect(usPhoneNumberInput.state('value')).to.eql('(123) 456-7890');
+    expect(usPhoneNumberInput.state('value')).toEqual('(123) 456-7890');
   });
 
   describe('With phone number', () => {
@@ -23,7 +22,7 @@ describe('UsPhoneNumberInput', () => {
       );
 
       underlyingFieldGroup = usPhoneNumberInput.find('FieldGroup');
-      expect(underlyingFieldGroup).to.have.length(1);
+      expect(underlyingFieldGroup).toHaveLength(1);
     });
 
     const sendText = text => {
@@ -35,18 +34,18 @@ describe('UsPhoneNumberInput', () => {
 
     it('Displays the formatted phone number', () => {
       sendText('1234567890');
-      expect(usPhoneNumberInput.state('value')).to.eql('(123) 456-7890');
+      expect(usPhoneNumberInput.state('value')).toEqual('(123) 456-7890');
     });
 
     it('Ignores invalid characters', () => {
       sendText('xyz!!%$');
-      expect(usPhoneNumberInput.state('value')).to.eql('');
+      expect(usPhoneNumberInput.state('value')).toEqual('');
 
       sendText('(xxx12yyy)');
-      expect(usPhoneNumberInput.state('value')).to.eql('(12');
+      expect(usPhoneNumberInput.state('value')).toEqual('(12');
 
       sendText('3)xxx-4aaa5-()6');
-      expect(usPhoneNumberInput.state('value')).to.eql('(123) 456');
+      expect(usPhoneNumberInput.state('value')).toEqual('(123) 456');
     });
 
     it('Calls supplied onChange function with just the numbers', () => {
@@ -54,23 +53,23 @@ describe('UsPhoneNumberInput', () => {
       usPhoneNumberInput.setProps({onChange});
 
       sendText('xxx(123');
-      expect(onChange.calledWith({phone: '1'})).to.be.true;
-      expect(onChange.calledWith({phone: '12'})).to.be.true;
-      expect(onChange.calledWith({phone: '123'})).to.be.true;
+      expect(onChange.calledWith({phone: '1'})).toBe(true);
+      expect(onChange.calledWith({phone: '12'})).toBe(true);
+      expect(onChange.calledWith({phone: '123'})).toBe(true);
     });
   });
 
   describe('isValid()', () => {
     it('Returns true for 10 digit numbers', () => {
       const phoneNumber = '1234567890';
-      expect(UsPhoneNumberInput.isValid(phoneNumber)).to.be.true;
+      expect(UsPhoneNumberInput.isValid(phoneNumber)).toBe(true);
     });
 
     it('Returns false for strings that are not 10 digit numbers', () => {
       [null, '', 'x', '1234567890x', '123-456-7890'].forEach(nonPhoneNumber => {
         const failMessage = `Expected isValid to be false for: ${nonPhoneNumber}`;
-        expect(UsPhoneNumberInput.isValid(nonPhoneNumber), failMessage).to.be
-          .false;
+        // failMessage
+        expect(UsPhoneNumberInput.isValid(nonPhoneNumber)).toBe(false);
       });
     });
   });
@@ -88,9 +87,8 @@ describe('UsPhoneNumberInput', () => {
       ].forEach(testCase => {
         const [input, expectedResult] = testCase;
         const failMessage = `Expected toJustNumbers to return "${expectedResult}" for: "${input}"`;
-        expect(UsPhoneNumberInput.toJustNumbers(input), failMessage).to.eql(
-          expectedResult
-        );
+        // failMessage
+        expect(UsPhoneNumberInput.toJustNumbers(input)).toEqual(expectedResult);
       });
     });
   });
@@ -122,9 +120,8 @@ describe('UsPhoneNumberInput', () => {
       ].forEach(testCase => {
         const [input, expectedResult] = testCase;
         const failMessage = `Expected coercePhoneNubmer to return "${expectedResult}" for: "${input}"`;
-        expect(UsPhoneNumberInput.coercePhoneNumber(input), failMessage).to.eql(
-          expectedResult
-        );
+        // failMessage
+        expect(UsPhoneNumberInput.coercePhoneNumber(input)).toEqual(expectedResult);
       });
     });
   });

@@ -14,7 +14,7 @@ import {
 } from '@cdo/apps/redux';
 import * as appsUtils from '@cdo/apps/utils';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 describe('viewAs redux', () => {
   // Create a store so that we get the benefits of our thunk middleware
@@ -46,7 +46,7 @@ describe('viewAs redux', () => {
     assert.equal(nextState.viewAs, ViewType.Instructor);
     expect(
       codeStudioUtils.updateQueryParam
-    ).to.have.been.calledOnce.and.calledWith('viewAs', 'Instructor');
+    ).toHaveBeenCalledWith('viewAs', 'Instructor');
   });
 
   it('can set as participant', () => {
@@ -63,7 +63,7 @@ describe('viewAs redux', () => {
     assert.equal(nextState.viewAs, ViewType.Participant);
     expect(
       codeStudioUtils.updateQueryParam
-    ).to.have.been.calledOnce.and.calledWith('viewAs', 'Participant');
+    ).toHaveBeenCalledWith('viewAs', 'Participant');
   });
 
   it('does not allow for invalid view types', () => {
@@ -89,7 +89,7 @@ describe('viewAs redux', () => {
       store.dispatch(action);
       assert(codeStudioUtils.queryParams.calledWith('user_id'));
       assert(codeStudioUtils.updateQueryParam.calledWith('user_id', undefined));
-      assert(appsUtils.reload.called);
+      assert(appsUtils.toHaveBeenCalled());
     });
   });
 });

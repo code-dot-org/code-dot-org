@@ -1,6 +1,6 @@
 import VirtualMBBoard from '@cdo/apps/lib/kits/maker/boards/VirtualMBBoard';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardInterfaceTestUtil';
 
 import {itMakesMicroBitComponentsAvailable} from './MicroBitComponentTestUtil';
@@ -13,11 +13,11 @@ describe('VirtualMBBoard', () => {
   describe(`boardConnected()`, () => {
     it('always returns false', () => {
       const board = new VirtualMBBoard();
-      expect(board.boardConnected()).to.be.false;
+      expect(board.boardConnected()).toBe(false);
       return board.connect().then(() => {
-        expect(board.boardConnected()).to.be.false;
+        expect(board.boardConnected()).toBe(false);
         board.destroy();
-        expect(board.boardConnected()).to.be.false;
+        expect(board.boardConnected()).toBe(false);
       });
     });
   });

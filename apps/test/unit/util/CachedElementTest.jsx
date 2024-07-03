@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import CachedElement, {unitTestExports} from '@cdo/apps/util/CachedElement';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 const cache = unitTestExports.elementsHtmlCache;
 const defaultType = 'div';
@@ -57,20 +57,17 @@ describe('CachedElement', () => {
       />
     );
     expect(spy.calledOnce);
-    expect(getCacheSize()).to.equal(1);
-    expect(getCacheSize('CachedElement')).to.equal(1);
+    expect(getCacheSize()).toBe(1);
+    expect(getCacheSize('CachedElement')).toBe(1);
 
     // verify that the nested `CachedElement` isn't in the tree
-    expect(wrapper.find(CachedElement)).to.have.lengthOf(1);
-    expect(wrapper.find(CachedElement).childAt(0).find(CachedElement)).to.be
-      .empty;
+    expect(wrapper.find(CachedElement)).toHaveLength(1);
+    expect(wrapper.find(CachedElement).childAt(0).find(CachedElement)).toHaveLength(0);
 
-    expect(getCachedElement()).to.equal(defaultHtml);
-    expect(getCachedElement('CachedElement')).to.equal(nestedHtml);
-    expect(wrapper.html()).to.include(nestedHtml);
-    expect(wrapper.childAt(0).props().dangerouslySetInnerHTML.__html).to.equal(
-      nestedHtml
-    );
+    expect(getCachedElement()).toBe(defaultHtml);
+    expect(getCachedElement('CachedElement')).toBe(nestedHtml);
+    expect(wrapper.html()).toContain(nestedHtml);
+    expect(wrapper.childAt(0).props().dangerouslySetInnerHTML.__html).toBe(nestedHtml);
   });
 
   it('only caches one element when rendering multiple with same key', () => {
@@ -82,16 +79,14 @@ describe('CachedElement', () => {
       </div>
     );
     expect(spy.calledOnce);
-    expect(getCacheSize()).to.equal(1);
+    expect(getCacheSize()).toBe(1);
 
     const cached = wrapper.find(CachedElement);
-    expect(cached).to.have.lengthOf(3);
+    expect(cached).toHaveLength(3);
 
     const cachedHtml = getCachedElement();
     cached.forEach(node => {
-      expect(node.childAt(0).props().dangerouslySetInnerHTML.__html).to.equal(
-        cachedHtml
-      );
+      expect(node.childAt(0).props().dangerouslySetInnerHTML.__html).toBe(cachedHtml);
     });
   });
 
@@ -104,15 +99,13 @@ describe('CachedElement', () => {
       </div>
     );
     expect(spy.calledThrice);
-    expect(getCacheSize()).to.equal(3);
+    expect(getCacheSize()).toBe(3);
 
     const cached = wrapper.find(CachedElement);
-    expect(cached).to.have.lengthOf(3);
+    expect(cached).toHaveLength(3);
 
     cached.forEach(node => {
-      expect(node.childAt(0).props().dangerouslySetInnerHTML.__html).to.equal(
-        defaultHtml
-      );
+      expect(node.childAt(0).props().dangerouslySetInnerHTML.__html).toBe(defaultHtml);
     });
   });
 
@@ -125,10 +118,10 @@ describe('CachedElement', () => {
       </div>
     );
     expect(spy.calledOnce);
-    expect(getCacheSize()).to.equal(1);
-    expect(wrapper.text()).to.include('1');
-    expect(wrapper.text()).not.to.include('2');
-    expect(wrapper.text()).not.to.include('3');
+    expect(getCacheSize()).toBe(1);
+    expect(wrapper.text()).toContain('1');
+    expect(wrapper.text()).not.toContain('2');
+    expect(wrapper.text()).not.toContain('3');
   });
 
   it('partitions cache by type', () => {
@@ -140,8 +133,8 @@ describe('CachedElement', () => {
       </div>
     );
     expect(spy.calledThrice);
-    expect(getCacheSize()).to.equal(1);
-    expect(getCacheSize('a')).to.equal(1);
-    expect(getCacheSize('p')).to.equal(1);
+    expect(getCacheSize()).toBe(1);
+    expect(getCacheSize('a')).toBe(1);
+    expect(getCacheSize('p')).toBe(1);
   });
 });

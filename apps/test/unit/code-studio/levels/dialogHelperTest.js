@@ -57,21 +57,21 @@ describe('dialogHelper', () => {
       const callback = sinon.spy();
       showDialog(<MyComponent />, callback);
       $('#ok-button').click();
-      assert(callback.calledOnce);
+      assert(callback.toHaveBeenCalledTimes(1));
     });
 
     it('calls onHidden when ok button is clicked', () => {
       const onHidden = sinon.spy();
       showDialog(<MyComponent />, null, onHidden);
       $('#ok-button').click();
-      assert(onHidden.calledOnce);
+      assert(onHidden.toHaveBeenCalledTimes(1));
     });
 
     it('calls onHidden when cancel button is clicked', () => {
       const onHidden = sinon.spy();
       showDialog(<MyComponent />, null, onHidden);
       $('#cancel-button').click();
-      assert(onHidden.calledOnce);
+      assert(onHidden.toHaveBeenCalledTimes(1));
     });
   });
 

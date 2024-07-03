@@ -7,7 +7,7 @@ import Studio, {
   calculateBubblePosition,
 } from '@cdo/apps/studio/studio';
 
-import {expect} from '../../util/reconfiguredChai';
+
 import {
   replaceOnWindow,
   restoreOnWindow,

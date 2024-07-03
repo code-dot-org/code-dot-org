@@ -5,7 +5,7 @@ import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/Library
 import loadLibrary from '@cdo/apps/code-studio/components/libraries/libraryLoader';
 import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('libraryLoader.load', () => {
@@ -58,8 +58,8 @@ describe('libraryLoader.load', () => {
 
     await loadLibrary(libraryClientApi, onErrorStub, onSuccessStub);
 
-    expect(onErrorStub.called).to.be.true;
-    expect(onSuccessStub.called).to.be.false;
+    expect(onErrorStub.called).toBe(true);
+    expect(onSuccessStub.called).toBe(false);
   });
 
   it('calls onError when there are no functions', async () => {
@@ -70,8 +70,8 @@ describe('libraryLoader.load', () => {
 
     await loadLibrary(libraryClientApi, onErrorStub, onSuccessStub);
 
-    expect(onErrorStub.called).to.be.true;
-    expect(onSuccessStub.called).to.be.false;
+    expect(onErrorStub.called).toBe(true);
+    expect(onSuccessStub.called).toBe(false);
   });
 
   it('prepends imported libraries to the exported source', async () => {
@@ -85,8 +85,8 @@ describe('libraryLoader.load', () => {
 
     await loadLibrary(libraryClientApi, onErrorStub, onSuccessStub);
 
-    expect(onErrorStub.called).to.be.false;
-    expect(onSuccessStub).to.have.been.calledWith({
+    expect(onErrorStub.called).toBe(false);
+    expect(onSuccessStub).toHaveBeenCalledWith({
       alreadyPublished: false,
       libraryDescription: '',
       libraryName: libraryName,
@@ -115,8 +115,8 @@ describe('libraryLoader.load', () => {
 
     await loadLibrary(libraryClientApi, onErrorStub, onSuccessStub);
 
-    expect(onErrorStub.called).to.be.false;
-    expect(onSuccessStub).to.have.been.calledWith({
+    expect(onErrorStub.called).toBe(false);
+    expect(onSuccessStub).toHaveBeenCalledWith({
       alreadyPublished: true,
       libraryDescription: existingLibrary.description,
       libraryName: existingLibrary.name,

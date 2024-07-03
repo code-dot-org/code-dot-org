@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import ConfirmImportButton from '@cdo/apps/storage/dataBrowser/ConfirmImportButton';
 import commonI18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('ConfirmImportButton', () => {
   describe('localization', () => {
@@ -28,7 +28,7 @@ describe('ConfirmImportButton', () => {
       const wrapper = createConfirmImportButton();
 
       let dialog = wrapper.find('Dialog').at(0);
-      expect(dialog.prop('body')).to.contain('i18n-confirm');
+      expect(dialog.prop('body')).toContain('i18n-confirm');
     });
 
     it('should render a localized string for "Cancel"', () => {
@@ -37,7 +37,7 @@ describe('ConfirmImportButton', () => {
       const wrapper = createConfirmImportButton();
 
       let dialog = wrapper.find('Dialog').at(0);
-      expect(dialog.prop('cancelText')).to.contain('i18n-cancel');
+      expect(dialog.prop('cancelText')).toContain('i18n-cancel');
     });
 
     it('should render a localized string for "Yes"', () => {
@@ -46,7 +46,7 @@ describe('ConfirmImportButton', () => {
       const wrapper = createConfirmImportButton();
 
       let dialog = wrapper.find('Dialog').at(0);
-      expect(dialog.prop('confirmText')).to.contain('i18n-yes');
+      expect(dialog.prop('confirmText')).toContain('i18n-yes');
     });
 
     it('should render a localized string for the confirm title', () => {
@@ -55,7 +55,7 @@ describe('ConfirmImportButton', () => {
       const wrapper = createConfirmImportButton();
 
       let dialog = wrapper.find('Dialog').at(0);
-      expect(dialog.prop('title')).to.contain('i18n-ct');
+      expect(dialog.prop('title')).toContain('i18n-ct');
     });
 
     it('should render a localized string while importing', () => {
@@ -64,7 +64,7 @@ describe('ConfirmImportButton', () => {
       const wrapper = createConfirmImportButton();
 
       let button = wrapper.find('PendingButton').at(0);
-      expect(button.prop('pendingText')).to.contain('i18n-importing');
+      expect(button.prop('pendingText')).toContain('i18n-importing');
     });
 
     it('should render a localized string for the import button', () => {
@@ -73,7 +73,7 @@ describe('ConfirmImportButton', () => {
       const wrapper = createConfirmImportButton();
 
       let button = wrapper.find('PendingButton').at(0);
-      expect(button.prop('text')).to.contain('i18n-import');
+      expect(button.prop('text')).toContain('i18n-import');
     });
   });
 });

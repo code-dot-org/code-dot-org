@@ -19,7 +19,7 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
 const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};
@@ -86,7 +86,7 @@ describe('SkeletonProgressDataColumn', () => {
     screen.getByLabelText('Loading lesson');
     expect(
       screen.getAllByTestId('lesson-skeleton-cell', {exact: false})
-    ).to.have.length(2);
+    ).toHaveLength(2);
   });
 
   it('Shows real header', () => {
@@ -94,10 +94,10 @@ describe('SkeletonProgressDataColumn', () => {
 
     screen.getByTestId(getTestId(LESSON.id, STUDENT_1.id));
     screen.getByTestId(getTestId(LESSON.id, STUDENT_2.id));
-    expect(screen.queryByLabelText('Loading lesson')).to.not.exist;
+    expect(screen.queryByLabelText('Loading lesson')).toBeFalsy();
     expect(
       screen.getAllByTestId('lesson-skeleton-cell', {exact: false})
-    ).to.have.length(2);
+    ).toHaveLength(2);
   });
 
   it('Shows expanded metadata rows', () => {
@@ -110,6 +110,6 @@ describe('SkeletonProgressDataColumn', () => {
     screen.getByTestId(getTestId(LESSON.id, STUDENT_2.id));
     expect(
       screen.getAllByTestId('lesson-skeleton-cell', {exact: false})
-    ).to.have.length(4);
+    ).toHaveLength(4);
   });
 });

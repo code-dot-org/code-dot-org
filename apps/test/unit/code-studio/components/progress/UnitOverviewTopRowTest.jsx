@@ -12,7 +12,7 @@ import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailTog
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 import {testLessons} from './unitCalendarTestData';
 
@@ -70,7 +70,7 @@ describe('UnitOverviewTopRow', () => {
           </div>
         </div>
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('does not render "Try Now" if unit has no levels', () => {
@@ -87,7 +87,7 @@ describe('UnitOverviewTopRow', () => {
           size={Button.ButtonSize.large}
         />
       )
-    ).to.be.false;
+    ).toBe(false);
   });
 
   it('renders "Continue" for participant if has level results and not unitCompleted', () => {
@@ -109,7 +109,7 @@ describe('UnitOverviewTopRow', () => {
           size={Button.ButtonSize.large}
         />
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('renders "Print Certificate" for participant', () => {
@@ -130,7 +130,7 @@ describe('UnitOverviewTopRow', () => {
           size={Button.ButtonSize.large}
         />
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('renders SectionAssigner for instructor', () => {
@@ -147,7 +147,7 @@ describe('UnitOverviewTopRow', () => {
           showAssignButton={defaultProps.showAssignButton}
         />
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('renders BulkLessonVisibilityToggle for instructor', () => {
@@ -161,7 +161,7 @@ describe('UnitOverviewTopRow', () => {
           lessons={defaultProps.unitCalendarLessons}
         />
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   describe('instructor resources', () => {
@@ -206,7 +206,7 @@ describe('UnitOverviewTopRow', () => {
             ]}
           />
         )
-      ).to.be.true;
+      ).toBe(true);
     });
   });
 
@@ -228,7 +228,7 @@ describe('UnitOverviewTopRow', () => {
           scriptId={42}
         />
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('does not render the unit calendar when showCalendar false for instructor', () => {
@@ -248,7 +248,7 @@ describe('UnitOverviewTopRow', () => {
           scriptId={42}
         />
       )
-    ).to.be.false;
+    ).toBe(false);
   });
 
   it('does not render the unit calendar for participant', () => {
@@ -269,7 +269,7 @@ describe('UnitOverviewTopRow', () => {
           scriptId={42}
         />
       )
-    ).to.be.false;
+    ).toBe(false);
   });
 
   it('renders dropdown button with links to printing options when published state is not pilot or indevelopment', () => {
@@ -281,13 +281,13 @@ describe('UnitOverviewTopRow', () => {
         viewAs={ViewType.Instructor}
       />
     );
-    expect(wrapper.find(DropdownButton).length).to.equal(1);
+    expect(wrapper.find(DropdownButton).length).toBe(1);
     const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
-    expect(dropdownLinks.map(link => link.props.href)).to.eql([
+    expect(dropdownLinks.map(link => link.props.href)).toEqual([
       '/link/to/script_overview.pdf',
       '/link/to/script_resources.pdf',
     ]);
-    expect(dropdownLinks.map(link => link.props.children)).to.eql([
+    expect(dropdownLinks.map(link => link.props.children)).toEqual([
       'Print Lesson Plans',
       'Print Handouts',
     ]);
@@ -302,13 +302,13 @@ describe('UnitOverviewTopRow', () => {
         viewAs={ViewType.Participant}
       />
     );
-    expect(wrapper.find(DropdownButton).length).to.equal(0);
+    expect(wrapper.find(DropdownButton).length).toBe(0);
   });
 
   it('renders RTL without errors', () => {
     expect(() => {
       shallow(<UnitOverviewTopRow {...defaultProps} isRtl={true} />);
-    }).not.to.throw();
+    }).not.toThrow();
   });
 
   it('does not render the printing options drop down if the course is in pilot', () => {
@@ -321,7 +321,7 @@ describe('UnitOverviewTopRow', () => {
         viewAs={ViewType.Instructor}
       />
     );
-    expect(wrapper.find(DropdownButton).length).to.equal(0);
+    expect(wrapper.find(DropdownButton).length).toBe(0);
   });
 
   it('does not render the printing options drop down if the course is in development', () => {
@@ -334,6 +334,6 @@ describe('UnitOverviewTopRow', () => {
         viewAs={ViewType.Instructor}
       />
     );
-    expect(wrapper.find(DropdownButton).length).to.equal(0);
+    expect(wrapper.find(DropdownButton).length).toBe(0);
   });
 });

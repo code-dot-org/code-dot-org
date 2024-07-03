@@ -85,12 +85,12 @@ describe('JavalabSettings', () => {
     const decreaseButton = wrapper.find('#javalab-settings-decrease-font');
     assert.equal(decreaseButton.length, 1);
     decreaseButton.first().props().onClick();
-    sinon.assert.calledOnce(decreaseEditorFontSize);
+    sinon.toHaveBeenCalledTimes(1);
 
     const increaseButton = wrapper.find('#javalab-settings-increase-font');
     assert.equal(increaseButton.length, 1);
     increaseButton.first().props().onClick();
-    sinon.assert.calledOnce(increaseEditorFontSize);
+    sinon.toHaveBeenCalledTimes(1);
   });
 
   it('disables increase/decrease font buttons based on props', () => {

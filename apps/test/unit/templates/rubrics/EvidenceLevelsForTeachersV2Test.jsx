@@ -8,7 +8,7 @@ import {
   UNDERSTANDING_LEVEL_STRINGS,
 } from '@cdo/apps/templates/rubrics/rubricHelpers';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 const DEFAULT_PROPS = {
   isAiAssessed: false,
@@ -29,18 +29,12 @@ describe('EvidenceLevelsForTeachersV2', () => {
         canProvideFeedback={true}
       />
     );
-    expect(wrapper.find('BodyThreeText').length).to.equal(1);
-    expect(wrapper.find('BodyThreeText StrongText').first().text()).to.equal(
-      'Assign a Rubric Score'
-    );
-    expect(wrapper.find('button').length).to.equal(
-      DEFAULT_PROPS.evidenceLevels.length
-    );
-    expect(wrapper.find('BodyFourText').length).to.equal(1);
+    expect(wrapper.find('BodyThreeText').length).toBe(1);
+    expect(wrapper.find('BodyThreeText StrongText').first().text()).toBe('Assign a Rubric Score');
+    expect(wrapper.find('button').length).toBe(DEFAULT_PROPS.evidenceLevels.length);
+    expect(wrapper.find('BodyFourText').length).toBe(1);
     const firstEvidenceLevel = DEFAULT_PROPS.evidenceLevels[0];
-    expect(wrapper.find('button').first().text()).to.equal(
-      UNDERSTANDING_LEVEL_STRINGS_V2[firstEvidenceLevel.understanding]
-    );
+    expect(wrapper.find('button').first().text()).toBe(UNDERSTANDING_LEVEL_STRINGS_V2[firstEvidenceLevel.understanding]);
   });
 
   it('calls radioButtonCallback when understanding is selected', () => {
@@ -53,27 +47,19 @@ describe('EvidenceLevelsForTeachersV2', () => {
       />
     );
     wrapper.find('button').first().simulate('click');
-    sinon.assert.calledOnce(callback);
+    sinon.toHaveBeenCalledTimes(1);
     const firstEvidenceLevel = DEFAULT_PROPS.evidenceLevels[0];
-    expect(callback).to.have.been.calledWith(firstEvidenceLevel.understanding);
+    expect(callback).toHaveBeenCalledWith(firstEvidenceLevel.understanding);
     wrapper.unmount();
   });
 
   it('renders evidence levels without RadioButtons when the teacher cannot provide feedback', () => {
     const wrapper = mount(<EvidenceLevelsForTeachersV2 {...DEFAULT_PROPS} />);
-    expect(wrapper.find('BodyThreeText').first().text()).to.equal(
-      'Rubric Scores'
-    );
+    expect(wrapper.find('BodyThreeText').first().text()).toBe('Rubric Scores');
     // Two BodyThreeText per evidence level (plus the header)
-    expect(wrapper.find('BodyThreeText').length).to.equal(
-      DEFAULT_PROPS.evidenceLevels.length * 2 + 1
-    );
+    expect(wrapper.find('BodyThreeText').length).toBe(DEFAULT_PROPS.evidenceLevels.length * 2 + 1);
     const firstEvidenceLevel = DEFAULT_PROPS.evidenceLevels[0];
-    expect(wrapper.find('StrongText').at(1).text()).to.equal(
-      UNDERSTANDING_LEVEL_STRINGS[firstEvidenceLevel.understanding]
-    );
-    expect(wrapper.find('BodyThreeText').at(2).text()).to.equal(
-      firstEvidenceLevel.teacherDescription
-    );
+    expect(wrapper.find('StrongText').at(1).text()).toBe(UNDERSTANDING_LEVEL_STRINGS[firstEvidenceLevel.understanding]);
+    expect(wrapper.find('BodyThreeText').at(2).text()).toBe(firstEvidenceLevel.teacherDescription);
   });
 });

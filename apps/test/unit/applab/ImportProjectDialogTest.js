@@ -8,7 +8,7 @@ import {
   channels as channelsApi,
 } from '@cdo/apps/clientApi';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 describe('Applab ImportProjectDialog component', function () {
   var form, urlInput, nextButton;
@@ -35,22 +35,20 @@ describe('Applab ImportProjectDialog component', function () {
 
   it('renders a div with a text input and next button', () => {
     render(<ImportProjectDialog {...defaultProps} />);
-    expect(urlInput).to.have.length(1);
-    expect(nextButton).to.have.length(1);
+    expect(urlInput).toHaveLength(1);
+    expect(nextButton).toHaveLength(1);
   });
 
   it('renders a warning if there was an error', () => {
     render(<ImportProjectDialog {...defaultProps} error={true} />);
-    expect(form.find('p').last().text()).to.equal(
-      "We can't seem to find this project. " +
-        "Please make sure you've entered a valid App Lab project URL."
-    );
+    expect(form.find('p').last().text()).toBe("We can't seem to find this project. " +
+      "Please make sure you've entered a valid App Lab project URL.");
   });
 
   it('it disables the next button and shows a spinner while the url is fetched', () => {
     render(<ImportProjectDialog {...defaultProps} isFetching={true} />);
-    expect(nextButton.prop('disabled')).to.equal(true);
-    expect(nextButton.find('.fa-spin')).to.have.length(1);
+    expect(nextButton.prop('disabled')).toBe(true);
+    expect(nextButton.find('.fa-spin')).toHaveLength(1);
   });
 
   it('calls the onImport prop with the url when the next button is clicked', () => {
@@ -58,6 +56,6 @@ describe('Applab ImportProjectDialog component', function () {
     render(<ImportProjectDialog {...defaultProps} onImport={onImport} />);
     urlInput.simulate('change', {target: {value: 'some url'}});
     nextButton.simulate('click');
-    expect(onImport.calledWith('some url')).to.be.true;
+    expect(onImport.calledWith('some url')).toBe(true);
   });
 });

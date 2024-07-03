@@ -3,7 +3,7 @@ import {stub} from 'sinon';
 
 import * as utils from '@cdo/apps/utils';
 
-import {assert, expect} from '../util/reconfiguredChai';
+import {assert} from '../util/reconfiguredChai';
 
 const {
   isSubsequence,

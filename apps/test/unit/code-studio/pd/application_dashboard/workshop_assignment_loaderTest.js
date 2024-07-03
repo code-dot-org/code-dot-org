@@ -1,5 +1,4 @@
-import {expect} from 'chai';
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import { mount } from 'enzyme';
 import React from 'react';
 import sinon from 'sinon';
 
@@ -42,10 +41,10 @@ describe('WorkshopAssignmentLoader', () => {
 
   it('initially displays spinner', () => {
     workshopAssignmentLoader = mountWorkshopAssignmentLoader();
-    expect(workshopAssignmentLoader.find('Spinner')).to.have.length(1);
+    expect(workshopAssignmentLoader.find('Spinner')).toHaveLength(1);
     expect(
       workshopAssignmentLoader.find('WorkshopAssignmentSelect')
-    ).to.have.length(0);
+    ).toHaveLength(0);
   });
 
   describe('For summer workshops', () => {
@@ -54,13 +53,11 @@ describe('WorkshopAssignmentLoader', () => {
     });
 
     it('Queries local summer and teachercon', () => {
-      expect(sandbox.server.requests).to.have.length(2);
-      expect(sandbox.server.requests[0].url).to.include(
+      expect(sandbox.server.requests).toHaveLength(2);
+      expect(sandbox.server.requests[0].url).toContain(
         '/api/v1/pd/workshops/filter?state=Not+Started&course=CS+Discoveries&subject=5-day+Summer'
       );
-      expect(sandbox.server.requests[1].url).to.include(
-        '/api/v1/pd/workshops/upcoming_teachercons?course=CS+Discoveries'
-      );
+      expect(sandbox.server.requests[1].url).toContain('/api/v1/pd/workshops/upcoming_teachercons?course=CS+Discoveries');
     });
 
     it('Renders WorkshopAssignmentSelect with combined workshop list', async () => {
@@ -78,10 +75,10 @@ describe('WorkshopAssignmentLoader', () => {
       await defer();
       workshopAssignmentLoader.update();
 
-      expect(workshopAssignmentLoader.find('Spinner')).to.have.length(0);
+      expect(workshopAssignmentLoader.find('Spinner')).toHaveLength(0);
       const select = workshopAssignmentLoader.find('WorkshopAssignmentSelect');
-      expect(select).to.have.length(1);
-      expect(select.prop('workshops')).to.eql([
+      expect(select).toHaveLength(1);
+      expect(select.prop('workshops')).toEqual([
         {value: 1, label: 'Dec 10 - 15, 2018, Seattle WA'},
         {value: 2, label: 'Dec 15 - 20, 2018, Buffalo NY'},
         {value: 11, label: 'July 22 - 27, 2018, Phoenix AZ'},
@@ -95,8 +92,8 @@ describe('WorkshopAssignmentLoader', () => {
     });
 
     it('Queries only fit workshops', () => {
-      expect(sandbox.server.requests).to.have.length(1);
-      expect(sandbox.server.requests[0].url).to.include(
+      expect(sandbox.server.requests).toHaveLength(1);
+      expect(sandbox.server.requests[0].url).toContain(
         '/api/v1/pd/workshops/filter?state=Not+Started&course=CS+Discoveries&subject=Code.org+Facilitator+Weekend'
       );
     });
@@ -113,10 +110,10 @@ describe('WorkshopAssignmentLoader', () => {
       await defer();
       workshopAssignmentLoader.update();
 
-      expect(workshopAssignmentLoader.find('Spinner')).to.have.length(0);
+      expect(workshopAssignmentLoader.find('Spinner')).toHaveLength(0);
       const select = workshopAssignmentLoader.find('WorkshopAssignmentSelect');
-      expect(select).to.have.length(1);
-      expect(select.prop('workshops')).to.eql([
+      expect(select).toHaveLength(1);
+      expect(select.prop('workshops')).toEqual([
         {value: 1, label: 'Dec 10 - 15, 2018, Seattle WA'},
         {value: 2, label: 'Dec 15 - 20, 2018, Buffalo NY'},
       ]);
@@ -135,19 +132,17 @@ describe('WorkshopAssignmentLoader', () => {
 
     expect(
       workshopAssignmentLoader.find('div.workshop-load-error').text()
-    ).to.equal(
-      'Oops. Something went wrong and we are unable to load workshops.'
-    );
+    ).toBe('Oops. Something went wrong and we are unable to load workshops.');
   });
 
   it('Aborts pending ajax requests on unmount', () => {
     workshopAssignmentLoader = mountWorkshopAssignmentLoader('summer');
 
     const pendingRequests = workshopAssignmentLoader.instance().pendingRequests;
-    expect(pendingRequests).to.have.length(2);
-    expect(pendingRequests.every(r => r.statusText !== 'abort')).to.be.true;
+    expect(pendingRequests).toHaveLength(2);
+    expect(pendingRequests.every(r => r.statusText !== 'abort')).toBe(true);
 
     workshopAssignmentLoader.unmount();
-    expect(pendingRequests.every(r => r.statusText === 'abort')).to.be.true;
+    expect(pendingRequests.every(r => r.statusText === 'abort')).toBe(true);
   });
 });

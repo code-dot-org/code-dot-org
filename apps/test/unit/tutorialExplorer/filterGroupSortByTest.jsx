@@ -6,7 +6,7 @@ import FilterGroupSortBy from '@cdo/apps/tutorialExplorer/filterGroupSortBy';
 import {TutorialsSortByOptions} from '@cdo/apps/tutorialExplorer/util';
 import i18n from '@cdo/tutorialExplorer/locale';
 
-import {expect} from '../../util/deprecatedChai';
+
 
 const FAKE_ON_SORT_BY = () => {};
 const DEFAULT_PROPS = {
@@ -43,6 +43,6 @@ describe('FilterGroupSortBy', () => {
     wrapper
       .find('select')
       .simulate('change', {target: {value: 'displayweight'}});
-    expect(spy).to.have.been.calledOnce.and.calledWith('displayweight');
+    expect(spy).toHaveBeenCalledWith('displayweight');
   });
 });

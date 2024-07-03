@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import applabI18n from '@cdo/applab/locale';
 import {UnconnectedMakerStatusOverlay} from '@cdo/apps/lib/kits/maker/ui/MakerStatusOverlay';
 
-import {expect} from '../../../../../util/deprecatedChai';
+
 
 describe('MakerStatusOverlay', () => {
   beforeEach(() => {
@@ -43,7 +43,7 @@ describe('MakerStatusOverlay', () => {
 
   it('renders nothing by default', () => {
     const wrapper = mount(<UnconnectedMakerStatusOverlay {...testProps} />);
-    expect(wrapper.html()).to.be.null;
+    expect(wrapper.html()).toBeNull();
   });
 
   describe('size properties', () => {
@@ -92,9 +92,9 @@ describe('MakerStatusOverlay', () => {
       const wrapper = mount(
         <UnconnectedMakerStatusOverlay {...testProps} isConnecting />
       );
-      expect(wrapper).not.to.have.style('transform');
-      expect(wrapper).not.to.have.style('msTransform');
-      expect(wrapper).not.to.have.style('WebkitTransform');
+      expect(wrapper).to.not.have.style('transform');
+      expect(wrapper).to.not.have.style('msTransform');
+      expect(wrapper).to.not.have.style('WebkitTransform');
     });
   });
 
@@ -108,19 +108,19 @@ describe('MakerStatusOverlay', () => {
     });
 
     it('renders an overlay', () => {
-      expect(wrapper).to.have.descendants('div');
+      expect(wrapper.find('div').length).toBeGreaterThan(0);
     });
 
     it('with a spinning gear', () => {
-      expect(wrapper).to.have.descendants('i.fa-cog.fa-spin');
+      expect(wrapper.find('i.fa-cog.fa-spin').length).toBeGreaterThan(0);
     });
 
     it('and waiting text', () => {
-      expect(wrapper.text()).to.include('i18n-waiting-for-connect');
+      expect(wrapper.text()).toContain('i18n-waiting-for-connect');
     });
 
     it('and no button', () => {
-      expect(wrapper).not.to.have.descendants('button');
+      expect(wrapper.find('button')).toHaveLength(0);
     });
   });
 
@@ -134,16 +134,16 @@ describe('MakerStatusOverlay', () => {
     });
 
     it('renders an overlay', () => {
-      expect(wrapper).to.have.descendants('div');
+      expect(wrapper.find('div').length).toBeGreaterThan(0);
     });
 
     it('with a warning sign', () => {
-      expect(wrapper).to.have.descendants('i.fa-exclamation-triangle');
+      expect(wrapper.find('i.fa-exclamation-triangle').length).toBeGreaterThan(0);
     });
 
     it('and error text', () => {
-      expect(wrapper.text()).to.include('i18n-level-requires');
-      expect(wrapper.text()).to.include('i18n-supported-browsers');
+      expect(wrapper.text()).toContain('i18n-level-requires');
+      expect(wrapper.text()).toContain('i18n-supported-browsers');
     });
   });
 
@@ -166,60 +166,56 @@ describe('MakerStatusOverlay', () => {
     });
 
     it('renders an overlay', () => {
-      expect(wrapper).to.have.descendants('div');
+      expect(wrapper.find('div').length).toBeGreaterThan(0);
     });
 
     it('with a warning sign', () => {
-      expect(wrapper).to.have.descendants('i.fa-exclamation-triangle');
+      expect(wrapper.find('i.fa-exclamation-triangle').length).toBeGreaterThan(0);
     });
 
     it('and error text', () => {
-      expect(wrapper.text()).to.include('i18n-check-plugged-in');
+      expect(wrapper.text()).toContain('i18n-check-plugged-in');
     });
 
     it('and a "Try Again" button', () => {
       const selector = 'button.try-again';
-      expect(wrapper).to.have.descendants(selector);
-      expect(wrapper.find(selector).text()).to.include('i18n-try-again');
+      expect(wrapper.find(selector).length).toBeGreaterThan(0);
+      expect(wrapper.find(selector).text()).toContain('i18n-try-again');
     });
 
     it('that calls the provided try again handler', () => {
       const selector = 'button.try-again';
-      expect(handleTryAgain).not.to.have.been.called;
+      expect(handleTryAgain).not.toHaveBeenCalled();
       wrapper.find(selector).simulate('click');
-      expect(handleTryAgain).to.have.been.calledOnce;
+      expect(handleTryAgain).toHaveBeenCalledTimes(1);
     });
 
     it('and a "Run Without Board" button', () => {
       const selector = 'button.run-without-board';
-      expect(wrapper).to.have.descendants(selector);
-      expect(wrapper.find(selector).text()).to.include(
-        'i18n-run-without-board'
-      );
+      expect(wrapper.find(selector).length).toBeGreaterThan(0);
+      expect(wrapper.find(selector).text()).toContain('i18n-run-without-board');
     });
 
     it('that calls the try again handler and useVirtualBoardOnNextRun handler', () => {
       const selector = 'button.run-without-board';
-      expect(handleTryAgain).not.to.have.been.called;
-      expect(useVirtualBoardOnNextRun).not.to.have.been.called;
+      expect(handleTryAgain).not.toHaveBeenCalled();
+      expect(useVirtualBoardOnNextRun).not.toHaveBeenCalled();
       wrapper.find(selector).simulate('click');
-      expect(handleTryAgain).to.have.been.calledOnce;
-      expect(useVirtualBoardOnNextRun).to.have.been.calledOnce;
+      expect(handleTryAgain).toHaveBeenCalledTimes(1);
+      expect(useVirtualBoardOnNextRun).toHaveBeenCalledTimes(1);
     });
 
     it('and a "Setup Instructions" button', () => {
       const selector = 'button.setup-instructions';
-      expect(wrapper).to.have.descendants(selector);
-      expect(wrapper.find(selector).text()).to.include(
-        'i18n-setup-instructions'
-      );
+      expect(wrapper.find(selector).length).toBeGreaterThan(0);
+      expect(wrapper.find(selector).text()).toContain('i18n-setup-instructions');
     });
 
     it('that navigates to the Maker Setup page', () => {
       const selector = 'button.setup-instructions';
-      expect(handleOpenSetupPage).not.to.have.been.called;
+      expect(handleOpenSetupPage).not.toHaveBeenCalled();
       wrapper.find(selector).simulate('click');
-      expect(handleOpenSetupPage).to.have.been.calledOnce;
+      expect(handleOpenSetupPage).toHaveBeenCalledTimes(1);
     });
   });
 });

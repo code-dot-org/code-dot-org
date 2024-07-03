@@ -23,7 +23,7 @@ import reducers, {
   getSerializedActivities,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 
-import {expect, assert} from '../../../../util/reconfiguredChai';
+import {assert} from '../../../../util/reconfiguredChai';
 
 import {sampleActivities} from './activitiesTestData';
 
@@ -42,11 +42,11 @@ describe('activitiesEditorRedux reducer tests', () => {
 
     // Verify that the JSON contains serialized activities.
     const activities = JSON.parse(serializedActivities);
-    expect(activities.length).to.equal(1);
-    expect(activities[0].key).to.equal('activity-1');
+    expect(activities.length).toBe(1);
+    expect(activities[0].key).toBe('activity-1');
     const sections = activities[0].activitySections;
-    expect(sections.length).to.equal(3);
-    expect(sections[0].key).to.equal('section-3');
+    expect(sections.length).toBe(3);
+    expect(sections[0].key).toBe('section-3');
   });
 
   it('add tip', () => {

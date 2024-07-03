@@ -8,7 +8,7 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import Certificate from '@cdo/apps/templates/certificates/Certificate';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 const store = createStore(combineReducers({responsive, isRtl}));
 

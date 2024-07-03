@@ -10,7 +10,7 @@ import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedbac
 import {UnconnectedEditableTeacherFeedback as EditableTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/EditableTeacherFeedback';
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 
-import {expect, assert} from '../../../../util/reconfiguredChai';
+import {assert} from '../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   user: 5,
@@ -53,14 +53,14 @@ const setUp = (overrideProps = {}) => {
 describe('EditableTeacherFeedback', () => {
   it('does not display tab content if it is not currently visible', () => {
     const wrapper = setUp({visible: false});
-    expect(wrapper.isEmptyRender()).to.be.true;
+    expect(wrapper.isEmptyRender()).toBe(true);
   });
 
   it('logs Amplitude message when rubric level viewed', () => {
     const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
     setUp({rubric: RUBRIC});
 
-    expect(analyticsSpy).to.have.been.calledOnce;
+    expect(analyticsSpy).toHaveBeenCalledTimes(1);
     assert.equal(analyticsSpy.getCall(0).firstArg, 'Rubric Level Viewed');
     analyticsSpy.restore();
   });
@@ -69,48 +69,48 @@ describe('EditableTeacherFeedback', () => {
     const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
     setUp();
 
-    expect(analyticsSpy).not.to.have.been.called;
+    expect(analyticsSpy).not.toHaveBeenCalled();
     analyticsSpy.restore();
   });
 
   describe('without previous feedback', () => {
     it('does not display EditableFeedbackStatus', () => {
       const wrapper = setUp({rubric: null, latestFeedback: null});
-      expect(wrapper.find(EditableFeedbackStatus)).to.have.length(0);
+      expect(wrapper.find(EditableFeedbackStatus)).toHaveLength(0);
     });
 
     it('displays a rubric with expected props if there is a rubric', () => {
       const wrapper = setUp({rubric: RUBRIC});
       const rubric = wrapper.find(Rubric);
-      expect(rubric).to.have.length(1);
-      expect(rubric.props().rubric).to.equal(RUBRIC);
-      expect(rubric.props().isEditable).to.equal(true);
+      expect(rubric).toHaveLength(1);
+      expect(rubric.props().rubric).toBe(RUBRIC);
+      expect(rubric.props().isEditable).toBe(true);
     });
 
     it('does not display a rubric if there is no rubric', () => {
       const wrapper = setUp({rubric: null});
-      expect(wrapper.find(Rubric)).to.have.lengthOf(0);
+      expect(wrapper.find(Rubric)).toHaveLength(0);
     });
 
     it('displays the comment with expected props', () => {
       const wrapper = setUp();
       const confirmCommentArea = wrapper.find(Comment).first();
-      expect(confirmCommentArea.props().isEditable).to.equal(true);
-      expect(confirmCommentArea.props().comment).to.equal('');
+      expect(confirmCommentArea.props().isEditable).toBe(true);
+      expect(confirmCommentArea.props().comment).toBe('');
     });
 
     it('displays submit feedback button with expected text', () => {
       const wrapper = setUp();
       const confirmButton = wrapper.find('Button').first();
-      expect(confirmButton.props().disabled).to.equal(true);
-      expect(confirmButton.props().text).to.equal('Save and share');
+      expect(confirmButton.props().disabled).toBe(true);
+      expect(confirmButton.props().text).toBe('Save and share');
     });
 
     it('renders EditableReviewState with expected props', () => {
       const wrapper = setUp();
       const keepWorkingComponent = wrapper.find(EditableReviewState);
-      expect(keepWorkingComponent).to.have.length(1);
-      expect(keepWorkingComponent.props().latestReviewState).to.equal(null);
+      expect(keepWorkingComponent).toHaveLength(1);
+      expect(keepWorkingComponent.props().latestReviewState).toBeNull();
     });
 
     it('sends analytics event when feedback submitted', () => {
@@ -118,7 +118,7 @@ describe('EditableTeacherFeedback', () => {
       const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
       wrapper.find('Button[id="ui-test-submit-feedback"]').simulate('click');
-      assert(analyticsSpy.calledOnce);
+      assert(analyticsSpy.toHaveBeenCalledTimes(1));
       assert.equal(
         analyticsSpy.getCall(0).firstArg,
         'Level Feedback Submitted'
@@ -136,8 +136,8 @@ describe('EditableTeacherFeedback', () => {
 
       const wrapper = setUp({latestFeedback});
       const statusComponent = wrapper.find(EditableFeedbackStatus);
-      expect(statusComponent).to.have.length(1);
-      expect(statusComponent.props().latestFeedback).to.equal(latestFeedback);
+      expect(statusComponent).toHaveLength(1);
+      expect(statusComponent.props().latestFeedback).toBe(latestFeedback);
     });
 
     it('displays the rubric if there is a rubric', () => {
@@ -148,21 +148,21 @@ describe('EditableTeacherFeedback', () => {
 
       const wrapper = setUp({rubric: RUBRIC, latestFeedback: latestFeedback});
       const rubric = wrapper.find(Rubric);
-      expect(rubric).to.have.length(1);
+      expect(rubric).toHaveLength(1);
     });
 
     it('renders comment with expected props', () => {
       const wrapper = setUp({rubric: RUBRIC, latestFeedback: FEEDBACK});
       const confirmCommentArea = wrapper.find(Comment).first();
-      expect(confirmCommentArea.props().isEditable).to.equal(true);
-      expect(confirmCommentArea.props().comment).to.equal('Good work!');
+      expect(confirmCommentArea.props().isEditable).toBe(true);
+      expect(confirmCommentArea.props().comment).toBe('Good work!');
     });
 
     it('displays submit button with expected text', () => {
       const wrapper = setUp({rubric: RUBRIC, latestFeedback: FEEDBACK});
       const confirmButton = wrapper.find('Button').first();
-      expect(confirmButton.props().disabled).to.equal(true);
-      expect(confirmButton.props().text).to.equal('Update');
+      expect(confirmButton.props().disabled).toBe(true);
+      expect(confirmButton.props().text).toBe('Update');
     });
 
     it('does not render EditableReviewState if not canHaveFeedbackReviewState', () => {
@@ -176,7 +176,7 @@ describe('EditableTeacherFeedback', () => {
       });
 
       const keepWorkingComponent = wrapper.find(EditableReviewState);
-      expect(keepWorkingComponent).to.have.length(0);
+      expect(keepWorkingComponent).toHaveLength(0);
     });
 
     it('renders EditableReviewState with expected props (completed)', () => {
@@ -187,10 +187,8 @@ describe('EditableTeacherFeedback', () => {
       const wrapper = setUp({latestFeedback});
 
       const keepWorkingComponent = wrapper.find(EditableReviewState);
-      expect(keepWorkingComponent).to.have.length(1);
-      expect(keepWorkingComponent.props().latestReviewState).to.equal(
-        ReviewStates.completed
-      );
+      expect(keepWorkingComponent).toHaveLength(1);
+      expect(keepWorkingComponent.props().latestReviewState).toBe(ReviewStates.completed);
     });
 
     it('renders EditableReviewState with expected props (awaitingReview)', () => {
@@ -201,10 +199,8 @@ describe('EditableTeacherFeedback', () => {
       const wrapper = setUp({latestFeedback});
 
       const keepWorkingComponent = wrapper.find(EditableReviewState);
-      expect(keepWorkingComponent).to.have.length(1);
-      expect(keepWorkingComponent.props().latestReviewState).to.equal(
-        ReviewStates.awaitingReview
-      );
+      expect(keepWorkingComponent).toHaveLength(1);
+      expect(keepWorkingComponent.props().latestReviewState).toBe(ReviewStates.awaitingReview);
     });
   });
 });

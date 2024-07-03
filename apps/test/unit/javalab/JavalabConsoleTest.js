@@ -19,7 +19,7 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 describe('Java Lab Console Test', () => {
   let store;
@@ -51,10 +51,10 @@ describe('Java Lab Console Test', () => {
       const editor = createWrapper();
       expect(
         editor.find('input').first().instance().style.backgroundColor
-      ).to.equal('rgba(0, 0, 0, 0)');
+      ).toBe('rgba(0, 0, 0, 0)');
       expect(
         editor.find('.javalab-console').first().instance().style.backgroundColor
-      ).to.equal('rgb(255, 255, 255)');
+      ).toBe('rgb(255, 255, 255)');
     });
 
     it('Has dark mode', () => {
@@ -62,10 +62,10 @@ describe('Java Lab Console Test', () => {
       store.dispatch(setDisplayTheme(DisplayTheme.DARK));
       expect(
         editor.find('input').first().instance().style.backgroundColor
-      ).to.equal('rgba(0, 0, 0, 0)');
+      ).toBe('rgba(0, 0, 0, 0)');
       expect(
         editor.find('.javalab-console').first().instance().style.backgroundColor
-      ).to.equal('rgb(0, 0, 0)');
+      ).toBe('rgb(0, 0, 0)');
     });
   });
 
@@ -81,27 +81,27 @@ describe('Java Lab Console Test', () => {
     });
 
     it('shows and hides photo prompter based on isPhotoPrompterOpen', () => {
-      expect(wrapper.find(PhotoSelectionView)).to.be.empty;
+      expect(wrapper.find(PhotoSelectionView)).toHaveLength(0);
 
       store.dispatch(openPhotoPrompter(prompt));
       wrapper.update();
 
-      expect(wrapper.find(PhotoSelectionView).length).to.equal(1);
+      expect(wrapper.find(PhotoSelectionView).length).toBe(1);
       const photoSelectionView = wrapper.find(PhotoSelectionView).first();
-      expect(photoSelectionView.props().promptText).to.equal(prompt);
+      expect(photoSelectionView.props().promptText).toBe(prompt);
 
       store.dispatch(closePhotoPrompter());
       wrapper.update();
-      expect(wrapper.find(PhotoSelectionView)).to.be.empty;
+      expect(wrapper.find(PhotoSelectionView)).toHaveLength(0);
     });
 
     it('hides console logs if photo prompter is open', () => {
-      expect(wrapper.find('input').length).to.equal(1);
+      expect(wrapper.find('input').length).toBe(1);
 
       store.dispatch(openPhotoPrompter(prompt));
       wrapper.update();
 
-      expect(wrapper.find('input')).to.be.empty;
+      expect(wrapper.find('input')).toHaveLength(0);
     });
 
     it('calls onPhotoPrompterFileSelected callback and closes photo prompter after file is selected', () => {
@@ -110,14 +110,14 @@ describe('Java Lab Console Test', () => {
       store.dispatch(openPhotoPrompter(prompt));
       wrapper.update();
 
-      expect(wrapper.find(PhotoSelectionView).length).to.equal(1);
+      expect(wrapper.find(PhotoSelectionView).length).toBe(1);
       const photoSelectionView = wrapper.find(PhotoSelectionView).first();
 
       photoSelectionView.props().onPhotoSelected(file);
       wrapper.update();
 
       sinon.assert.calledWith(onPhotoPrompterFileSelected, file);
-      expect(wrapper.find(PhotoSelectionView)).to.be.empty;
+      expect(wrapper.find(PhotoSelectionView)).toHaveLength(0);
     });
   });
 });

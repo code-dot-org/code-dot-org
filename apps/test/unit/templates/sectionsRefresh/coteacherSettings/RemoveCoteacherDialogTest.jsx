@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import RemoveCoteacherDialog from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/RemoveCoteacherDialog';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 const createStubbedCoteacherDialog = coteacherToRemove => {
   const setCoteacherToRemove = sinon.spy();
@@ -42,7 +42,7 @@ describe('RemoveCoteacherDialog', () => {
   it('does not show dialog when coteacher to remove not supplied', () => {
     const {wrapper} = createStubbedCoteacherDialog(null);
 
-    expect(wrapper).to.be.empty;
+    expect(Object.keys(wrapper)).toHaveLength(0);
   });
 
   it('show dialog when coteacher to remove supplied', () => {
@@ -50,10 +50,8 @@ describe('RemoveCoteacherDialog', () => {
       instructorEmail: 'newsaurus@code.org',
     });
 
-    expect(wrapper.find('Button')).to.have.lengthOf(2);
-    expect(wrapper.find('StrongText').dive().text()).to.contain(
-      'Remove newsaurus@code.org'
-    );
+    expect(wrapper.find('Button')).toHaveLength(2);
+    expect(wrapper.find('StrongText').dive().text()).toContain('Remove newsaurus@code.org');
   });
   it('cancel remove does nothing', () => {
     const {
@@ -63,7 +61,7 @@ describe('RemoveCoteacherDialog', () => {
       setCoteachersToAdd,
     } = createStubbedCoteacherDialog({instructorEmail: 'newsaurus@code.org'});
 
-    expect(wrapper.find('AccessibleDialog').length).to.equal(1);
+    expect(wrapper.find('AccessibleDialog').length).toBe(1);
 
     wrapper
       .find('Button')
@@ -73,9 +71,9 @@ describe('RemoveCoteacherDialog', () => {
     wrapper.update();
 
     expect(setCoteacherToRemove).to.have.been.calledOnceWith(null);
-    expect(removeSavedCoteacher).to.have.not.been.called;
-    expect(setCoteachersToAdd).to.have.not.been.called;
-    expect(fetchSpy).to.have.not.been.called;
+    expect(removeSavedCoteacher).not.toHaveBeenCalled();
+    expect(setCoteachersToAdd).not.toHaveBeenCalled();
+    expect(fetchSpy).not.toHaveBeenCalled();
   });
   it('Remove unsubmitted', () => {
     const {
@@ -91,9 +89,9 @@ describe('RemoveCoteacherDialog', () => {
       .simulate('click', {preventDefault: () => {}});
 
     expect(setCoteacherToRemove).to.have.been.calledOnceWith(null);
-    expect(removeSavedCoteacher).to.have.not.been.called;
-    expect(setCoteachersToAdd).to.have.been.calledOnce;
-    expect(fetchSpy).to.have.not.been.called;
+    expect(removeSavedCoteacher).not.toHaveBeenCalled();
+    expect(setCoteachersToAdd).toHaveBeenCalledTimes(1);
+    expect(fetchSpy).not.toHaveBeenCalled();
   });
   it('Remove submitted', done => {
     fetchSpy.returns(Promise.resolve({ok: true}));
@@ -103,9 +101,9 @@ describe('RemoveCoteacherDialog', () => {
     const setCoteacherToRemove = sinon.spy(function (coteacherToRemove) {
       try {
         expect(removeSavedCoteacherSpy).to.have.been.calledOnceWith(1);
-        expect(coteacherToRemove).to.equal(null);
-        expect(setCoteachersToAdd).to.have.not.been.called;
-        expect(fetchSpy).to.have.been.calledOnce;
+        expect(coteacherToRemove).toBeNull();
+        expect(setCoteachersToAdd).not.toHaveBeenCalled();
+        expect(fetchSpy).toHaveBeenCalledTimes(1);
       } catch (e) {
         done(e);
       }
@@ -140,10 +138,10 @@ describe('RemoveCoteacherDialog', () => {
 
     const setCoteacherToRemove = sinon.spy(function (coteacherToRemove) {
       try {
-        expect(removeSavedCoteacherSpy).not.to.have.been.called;
-        expect(coteacherToRemove).to.equal(null);
-        expect(setCoteachersToAdd).to.have.not.been.called;
-        expect(fetchSpy).to.have.been.calledOnce;
+        expect(removeSavedCoteacherSpy).not.toHaveBeenCalled();
+        expect(coteacherToRemove).toBeNull();
+        expect(setCoteachersToAdd).not.toHaveBeenCalled();
+        expect(fetchSpy).toHaveBeenCalledTimes(1);
       } catch (e) {
         done(e);
       }

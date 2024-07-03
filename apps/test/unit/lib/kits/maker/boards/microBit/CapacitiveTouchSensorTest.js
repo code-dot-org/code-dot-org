@@ -3,7 +3,7 @@ import sinon from 'sinon';
 import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+
 
 describe('CapacitiveTouchSensor', function () {
   let boardClient, sensor;
@@ -22,8 +22,8 @@ describe('CapacitiveTouchSensor', function () {
       sensor,
       'isPressed'
     );
-    expect(isPressedDescriptor.set).to.be.undefined;
-    expect(isPressedDescriptor.get).to.not.be.undefined;
+    expect(isPressedDescriptor.set).toBeUndefined();
+    expect(isPressedDescriptor.get).toBeDefined();
   });
 
   describe(`start() and stop()`, () => {
@@ -31,14 +31,14 @@ describe('CapacitiveTouchSensor', function () {
       let startSpy = sinon.spy(boardClient, 'streamAnalogChannel');
       let stopSpy = sinon.spy(boardClient, 'stopStreamingAnalogChannel');
       sensor.start();
-      expect(startSpy).to.have.been.calledOnce;
-      expect(startSpy).to.have.been.calledWith(testPin);
-      expect(sensor.readSensorTimer).to.not.be.null;
+      expect(startSpy).toHaveBeenCalledTimes(1);
+      expect(startSpy).toHaveBeenCalledWith(testPin);
+      expect(sensor.readSensorTimer).not.toBeNull();
 
       sensor.stop();
-      expect(stopSpy).to.have.been.calledOnce;
-      expect(stopSpy).to.have.been.calledWith(testPin);
-      expect(sensor.readSensorTimer).to.be.null;
+      expect(stopSpy).toHaveBeenCalledTimes(1);
+      expect(stopSpy).toHaveBeenCalledWith(testPin);
+      expect(sensor.readSensorTimer).toBeNull();
     });
   });
 
@@ -66,8 +66,8 @@ describe('CapacitiveTouchSensor', function () {
       // Wait for readSensorTimer to finish
       await new Promise(resolve => setInterval(resolve, 50));
 
-      expect(emitSpy).to.have.been.calledOnce;
-      expect(emitSpy).to.have.been.calledWith('down');
+      expect(emitSpy).toHaveBeenCalledTimes(1);
+      expect(emitSpy).toHaveBeenCalledWith('down');
     });
 
     it('emits the up event when it receives a low enough reading', async () => {
@@ -84,8 +84,8 @@ describe('CapacitiveTouchSensor', function () {
       // Wait for readSensorTimer to finish
       await new Promise(resolve => setInterval(resolve, 50));
 
-      expect(emitSpy).to.have.been.calledOnce;
-      expect(emitSpy).to.have.been.calledWith('up');
+      expect(emitSpy).toHaveBeenCalledTimes(1);
+      expect(emitSpy).toHaveBeenCalledWith('up');
     });
   });
 });

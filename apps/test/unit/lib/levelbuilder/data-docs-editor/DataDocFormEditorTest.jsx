@@ -8,7 +8,7 @@ import DataDocFormEditor from '@cdo/apps/lib/levelbuilder/data-docs-editor/DataD
 import {getStore} from '@cdo/apps/redux';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 describe('DataDocFormEditor', () => {
   let defaultProps;
@@ -26,16 +26,16 @@ describe('DataDocFormEditor', () => {
 
   it('renders editor with props already loaded into entry fields', () => {
     const wrapper = isolateComponent(<DataDocFormEditor {...defaultProps} />);
-    expect(wrapper.findAll('input')[0].props.value).to.equal(docKey);
-    expect(wrapper.findAll('input')[1].props.value).to.equal(docName);
+    expect(wrapper.findAll('input')[0].props.value).toBe(docKey);
+    expect(wrapper.findAll('input')[1].props.value).toBe(docName);
     expect(
       wrapper.findOne('TextareaWithMarkdownPreview').props.markdown
-    ).to.equal(docContent);
+    ).toBe(docContent);
   });
 
   it('ensures key input is disabled in editor', () => {
     const wrapper = isolateComponent(<DataDocFormEditor {...defaultProps} />);
-    expect(wrapper.findAll('input')[0].props.disabled).to.be.true;
+    expect(wrapper.findAll('input')[0].props.disabled).toBe(true);
   });
 
   it('modifies doc name', () => {
@@ -43,11 +43,11 @@ describe('DataDocFormEditor', () => {
     const newDocName = 'New Name of Doc';
     wrapper.findAll('input')[1].props.onChange({target: {value: newDocName}});
 
-    expect(wrapper.findAll('input')[0].props.value).to.equal(docKey);
-    expect(wrapper.findAll('input')[1].props.value).to.equal(newDocName);
+    expect(wrapper.findAll('input')[0].props.value).toBe(docKey);
+    expect(wrapper.findAll('input')[1].props.value).toBe(newDocName);
     expect(
       wrapper.findOne('TextareaWithMarkdownPreview').props.markdown
-    ).to.equal(docContent);
+    ).toBe(docContent);
   });
 
   it('modifies doc content', () => {
@@ -57,11 +57,11 @@ describe('DataDocFormEditor', () => {
       .findOne('TextareaWithMarkdownPreview')
       .props.handleMarkdownChange({target: {value: newDocContent}});
 
-    expect(wrapper.findAll('input')[0].props.value).to.equal(docKey);
-    expect(wrapper.findAll('input')[1].props.value).to.equal(docName);
+    expect(wrapper.findAll('input')[0].props.value).toBe(docKey);
+    expect(wrapper.findAll('input')[1].props.value).toBe(docName);
     expect(
       wrapper.findOne('TextareaWithMarkdownPreview').props.markdown
-    ).to.equal(newDocContent);
+    ).toBe(newDocContent);
   });
 
   it('clicking Save And Keep Editing button sends PUT request and does not redirect', () => {
@@ -89,13 +89,13 @@ describe('DataDocFormEditor', () => {
 
     const saveBar = wrapper.find('SaveBar');
     const saveAndCloseButton = saveBar.find('button').at(0);
-    expect(saveAndCloseButton.contains('Save and Keep Editing')).to.be.true;
+    expect(saveAndCloseButton.contains('Save and Keep Editing')).toBe(true);
     saveAndCloseButton.simulate('click');
 
     server.respond();
     provider.update();
 
-    expect(utils.navigateToHref).to.not.have.been.called;
+    expect(utils.navigateToHref).not.toHaveBeenCalled();
 
     server.restore();
     utils.navigateToHref.restore();
@@ -126,15 +126,13 @@ describe('DataDocFormEditor', () => {
 
     const saveBar = wrapper.find('SaveBar');
     const saveAndCloseButton = saveBar.find('button').at(1);
-    expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
+    expect(saveAndCloseButton.contains('Save and Close')).toBe(true);
     saveAndCloseButton.simulate('click');
 
     server.respond();
     provider.update();
 
-    expect(utils.navigateToHref).to.have.been.calledWith(
-      `/data_docs/${docKey}`
-    );
+    expect(utils.navigateToHref).toHaveBeenCalledWith(`/data_docs/${docKey}`);
 
     server.restore();
     utils.navigateToHref.restore();

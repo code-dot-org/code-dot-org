@@ -3,7 +3,7 @@ import React from 'react';
 
 import TextResponsesTable from '@cdo/apps/templates/textResponses/TextResponsesTable';
 
-import {expect} from '../../../util/deprecatedChai';
+
 
 const responses = [
   {
@@ -42,7 +42,7 @@ describe('TextResponsesTable', () => {
       <TextResponsesTable responses={responses} sectionId={sectionId} />
     );
 
-    expect(wrapper.find('table')).to.exist;
+    expect(wrapper.find('table')).toBeDefined();
   });
 
   it('renders responses as table rows', () => {
@@ -51,7 +51,7 @@ describe('TextResponsesTable', () => {
     );
 
     const responseRows = wrapper.find('tbody').find('tr');
-    expect(responseRows).to.have.length(3);
+    expect(responseRows).toHaveLength(3);
   });
 
   it('sorts responses by student name upon clicking student name header cell', () => {
@@ -82,7 +82,7 @@ describe('TextResponsesTable', () => {
       />
     );
 
-    expect(wrapper.find('#uitest-spinner')).to.exist;
+    expect(wrapper.find('#uitest-spinner')).toBeDefined();
   });
 
   it('renders an empty message element if there are no responses', () => {
@@ -90,6 +90,6 @@ describe('TextResponsesTable', () => {
       <TextResponsesTable responses={[]} sectionId={sectionId} />
     );
 
-    expect(wrapper.find('#uitest-empty-responses')).to.exist;
+    expect(wrapper.find('#uitest-empty-responses')).toBeDefined();
   });
 });

@@ -8,7 +8,7 @@ import commonReducers from '@cdo/apps/redux/commonReducers';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {UnconnectedLoginTypePicker as LoginTypePicker} from '@cdo/apps/templates/teacherDashboard/LoginTypePicker';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('LoginTypePicker', () => {
   beforeEach(() => {
@@ -30,8 +30,8 @@ describe('LoginTypePicker', () => {
 
     wrapper.find('PictureLoginCard').simulate('click');
 
-    expect(sendEventSpy).to.be.calledOnce;
-    expect(sendEventSpy).calledWith('Login Type Selected');
+    expect(sendEventSpy).toHaveBeenCalledTimes(1);
+    expect(sendEventSpy).toHaveBeenCalledWith('Login Type Selected');
 
     analyticsReporter.sendEvent.restore();
   });

@@ -46,7 +46,7 @@ import reducer, {
   NO_SECTION,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai';
 
 const {
   EDIT_SECTION_SUCCESS,

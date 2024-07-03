@@ -9,7 +9,7 @@ import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
 import {UnconnectedProgressPill as ProgressPill} from '@cdo/apps/templates/progress/ProgressPill';
 import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai';
 
 const unpluggedLevel = {
   id: '1',
@@ -113,8 +113,8 @@ describe('ProgressPill', () => {
     );
 
     const badge = wrapper.find(BubbleBadge);
-    expect(badge).to.have.lengthOf(1);
-    expect(badge.at(0).props().badgeType).to.equal(BadgeType.keepWorking);
+    expect(badge).toHaveLength(1);
+    expect(badge.at(0).props().badgeType).toBe(BadgeType.keepWorking);
   });
 
   it('does not have an keep working icon when pill represents multiple levels', () => {
@@ -126,7 +126,7 @@ describe('ProgressPill', () => {
     );
 
     const badge = wrapper.find(BubbleBadge);
-    expect(badge).to.have.lengthOf(0);
+    expect(badge).toHaveLength(0);
   });
 
   it('has an keep working icon when single level is assessment and has keepWorking feedback', () => {
@@ -139,8 +139,8 @@ describe('ProgressPill', () => {
     );
 
     const badge = wrapper.find(BubbleBadge);
-    expect(badge).to.have.lengthOf(1);
-    expect(badge.at(0).props().badgeType).to.equal(BadgeType.keepWorking);
+    expect(badge).toHaveLength(1);
+    expect(badge.at(0).props().badgeType).toBe(BadgeType.keepWorking);
   });
 
   it('has an assessment icon when single level is assessment', () => {
@@ -149,8 +149,8 @@ describe('ProgressPill', () => {
     );
 
     const badge = wrapper.find(BubbleBadge);
-    expect(badge).to.have.lengthOf(1);
-    expect(badge.at(0).props().badgeType).to.equal(BadgeType.assessment);
+    expect(badge).toHaveLength(1);
+    expect(badge.at(0).props().badgeType).toBe(BadgeType.assessment);
   });
 
   it('does not have an assessment icon when single level is not assessment', () => {
@@ -159,7 +159,7 @@ describe('ProgressPill', () => {
     );
 
     const badge = wrapper.find(BubbleBadge);
-    expect(badge).to.have.lengthOf(0);
+    expect(badge).toHaveLength(0);
   });
 
   it('does not have an assessment icon when multiple assessment levels', () => {
@@ -171,6 +171,6 @@ describe('ProgressPill', () => {
     );
 
     const badge = wrapper.find(BubbleBadge);
-    expect(badge).to.have.lengthOf(0);
+    expect(badge).toHaveLength(0);
   });
 });

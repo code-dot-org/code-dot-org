@@ -1,6 +1,6 @@
 import WorkshopFilter from '@cdo/apps/code-studio/pd/workshop_dashboard/workshop_filter';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 describe('WorkshopFilter component', () => {
   it('can create and combine subject options', () => {
@@ -58,7 +58,7 @@ describe('WorkshopFilter component', () => {
     testCases.forEach(testCase => {
       expect(
         WorkshopFilter.combineSubjectOptions(testCase.current, testCase.legacy)
-      ).to.eql(testCase.expected);
+      ).toEqual(testCase.expected);
     });
   });
 });

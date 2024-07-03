@@ -3,7 +3,7 @@ import sinon from 'sinon';
 import * as achievements from '@cdo/apps/achievements';
 import authoredHintUtils from '@cdo/apps/authoredHintUtils';
 
-import {expect} from '../util/reconfiguredChai';
+
 
 describe('achievements', () => {
   describe('puzzleComplete', () => {

@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import ResourceLink from '@cdo/apps/templates/instructions/ResourceLink';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('ResourceLink', () => {
   it('opens reference in new tab if openReferenceInNewTab is set', () => {
@@ -18,7 +18,7 @@ describe('ResourceLink', () => {
     );
     const windowOpenStub = sinon.stub(window, 'open');
     wrapper.instance().selectResource({preventDefault: () => {}});
-    expect(windowOpenStub.callCount).to.equal(1);
+    expect(windowOpenStub.callCount).toBe(1);
     sinon.restore();
   });
 });

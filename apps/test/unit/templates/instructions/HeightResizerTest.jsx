@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('HeightResizer', () => {
   it('handles a drag event', () => {
@@ -26,10 +26,10 @@ describe('HeightResizer', () => {
     });
     wrapper.instance().onMouseDown(mouseDownEvent);
 
-    expect(resizeItemTopCallback).to.have.been.calledOnce;
-    expect(onResizeCallback).not.to.have.been.called;
-    expect(mouseDownEvent.stopPropagation).to.have.been.called;
-    expect(mouseDownEvent.preventDefault).to.have.been.called;
+    expect(resizeItemTopCallback).toHaveBeenCalledTimes(1);
+    expect(onResizeCallback).not.toHaveBeenCalled();
+    expect(mouseDownEvent.stopPropagation).toHaveBeenCalled();
+    expect(mouseDownEvent.preventDefault).toHaveBeenCalled();
 
     // Simulate mouseMove
     const mouseMoveEvent = mouseEvent({
@@ -38,10 +38,10 @@ describe('HeightResizer', () => {
     });
     wrapper.instance().onMouseMove(mouseMoveEvent);
 
-    expect(resizeItemTopCallback).to.have.been.calledTwice;
-    expect(onResizeCallback).to.have.been.calledOnce.and.calledWith(10);
-    expect(mouseMoveEvent.stopPropagation).to.have.been.called;
-    expect(mouseMoveEvent.preventDefault).to.have.been.called;
+    expect(resizeItemTopCallback).toHaveBeenCalledTimes(2);
+    expect(onResizeCallback).toHaveBeenCalledWith(10);
+    expect(mouseMoveEvent.stopPropagation).toHaveBeenCalled();
+    expect(mouseMoveEvent.preventDefault).toHaveBeenCalled();
 
     // Simulate mouseUp
     const mouseUpEvent = mouseEvent({
@@ -51,10 +51,10 @@ describe('HeightResizer', () => {
     });
     wrapper.instance().onMouseUp(mouseUpEvent);
 
-    expect(resizeItemTopCallback).to.have.been.calledTwice;
-    expect(onResizeCallback).to.have.been.calledOnce;
-    expect(mouseUpEvent.stopPropagation).to.have.been.called;
-    expect(mouseUpEvent.preventDefault).to.have.been.called;
+    expect(resizeItemTopCallback).toHaveBeenCalledTimes(2);
+    expect(onResizeCallback).toHaveBeenCalledTimes(1);
+    expect(mouseUpEvent.stopPropagation).toHaveBeenCalled();
+    expect(mouseUpEvent.preventDefault).toHaveBeenCalled();
   });
 
   it('ignores secondary mouse buttons', () => {
@@ -75,9 +75,9 @@ describe('HeightResizer', () => {
     });
     wrapper.instance().onMouseDown(mouseDownEvent);
 
-    expect(wrapper.instance().setState).not.to.have.been.called;
-    expect(mouseDownEvent.stopPropagation).not.to.have.been.called;
-    expect(mouseDownEvent.preventDefault).not.to.have.been.called;
+    expect(wrapper.instance().setState).not.toHaveBeenCalled();
+    expect(mouseDownEvent.stopPropagation).not.toHaveBeenCalled();
+    expect(mouseDownEvent.preventDefault).not.toHaveBeenCalled();
   });
 
   it('ignores mouseMove events if not dragging', () => {
@@ -98,11 +98,11 @@ describe('HeightResizer', () => {
     });
     wrapper.instance().onMouseMove(mouseMoveEvent);
 
-    expect(resizeItemTopCallback).not.to.have.been.called;
-    expect(onResizeCallback).not.to.have.been.called;
-    expect(wrapper.instance().setState).not.to.have.been.called;
-    expect(mouseMoveEvent.stopPropagation).to.have.been.called;
-    expect(mouseMoveEvent.preventDefault).to.have.been.called;
+    expect(resizeItemTopCallback).not.toHaveBeenCalled();
+    expect(onResizeCallback).not.toHaveBeenCalled();
+    expect(wrapper.instance().setState).not.toHaveBeenCalled();
+    expect(mouseMoveEvent.stopPropagation).toHaveBeenCalled();
+    expect(mouseMoveEvent.preventDefault).toHaveBeenCalled();
   });
 });
 

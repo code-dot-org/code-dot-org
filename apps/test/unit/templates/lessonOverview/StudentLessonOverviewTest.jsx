@@ -6,7 +6,7 @@ import Button from '@cdo/apps/templates/Button';
 import {UnconnectedStudentLessonOverview as StudentLessonOverview} from '@cdo/apps/templates/lessonOverview/StudentLessonOverview';
 import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai';
 import {
   fakeStudentAnnouncement,
   fakeTeacherAndStudentAnnouncement,
@@ -91,24 +91,21 @@ describe('StudentLessonOverview', () => {
   it('renders default props', () => {
     const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
     const navLink = wrapper.find('a').at(0);
-    expect(navLink.props().href).to.contain('/s/unit-1');
-    expect(navLink.contains('< Unit 1')).to.be.true;
+    expect(navLink.props().href).toContain('/s/unit-1');
+    expect(navLink.contains('< Unit 1')).toBe(true);
 
-    expect(wrapper.find('LessonNavigationDropdown').length).to.equal(1);
+    expect(wrapper.find('LessonNavigationDropdown').length).toBe(1);
 
-    expect(wrapper.contains('Lesson 1: Lesson 1'), 'Lesson Name').to.be.true;
+    // Lesson Name
+    expect(wrapper.contains('Lesson 1: Lesson 1')).toBe(true);
 
     const enhancedSafeMarkdowns = wrapper.find('EnhancedSafeMarkdown');
-    expect(enhancedSafeMarkdowns.at(0).props().markdown).to.contain(
-      'Lesson Overview'
-    );
+    expect(enhancedSafeMarkdowns.at(0).props().markdown).toContain('Lesson Overview');
 
     const inlineMarkdowns = wrapper.find('InlineMarkdown');
 
     // The first contains the vocabulary
-    expect(inlineMarkdowns.at(0).props().markdown).to.contain(
-      '**Algorithm** - A list of steps to finish a task.'
-    );
+    expect(inlineMarkdowns.at(0).props().markdown).toContain('**Algorithm** - A list of steps to finish a task.');
   });
 
   it('show print button if there is a pdf', () => {
@@ -123,7 +120,7 @@ describe('StudentLessonOverview', () => {
           text="Print"
         />
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('hide print button if there is no pdf', () => {
@@ -140,7 +137,7 @@ describe('StudentLessonOverview', () => {
           text="Print"
         />
       )
-    ).to.be.false;
+    ).toBe(false);
   });
 
   it('has no announcements if none provided', () => {
@@ -194,13 +191,13 @@ describe('StudentLessonOverview', () => {
       <StudentLessonOverview {...defaultProps} lessonLevels={lessonLevels} />
     );
     assert.equal(wrapper.find('#level-section').length, 1);
-    expect(wrapper.text()).to.contain('Lesson 1');
+    expect(wrapper.text()).toContain('Lesson 1');
   });
 
   it('Does not render levels if no levels present', () => {
     const wrapper = shallow(
       <StudentLessonOverview {...defaultProps} lessonLevels={[]} />
     );
-    expect(wrapper.find('#level-section')).to.eql({});
+    expect(wrapper.find('#level-section')).toEqual({});
   });
 });

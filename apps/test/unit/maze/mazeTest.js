@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import Maze from '@cdo/apps/maze/maze';
 import ResultsHandler from '@cdo/apps/maze/results/resultsHandler';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 describe('Maze', function () {
   let maze;
@@ -52,11 +52,11 @@ describe('Maze', function () {
 
     it('is initiated by scheduleAnimations', function () {
       maze.scheduleAnimations_(false);
-      expect(finishAnimationsSpy.called).to.be.false;
+      expect(finishAnimationsSpy.called).toBe(false);
       clock.tick(999);
-      expect(finishAnimationsSpy.called).to.be.false;
+      expect(finishAnimationsSpy.called).toBe(false);
       clock.tick(1);
-      expect(finishAnimationsSpy.called).to.be.true;
+      expect(finishAnimationsSpy.called).toBe(true);
     });
 
     it('can be rate-adjusted', function () {
@@ -65,31 +65,31 @@ describe('Maze', function () {
         'scheduleSingleAnimation_'
       );
 
-      expect(finishAnimationsSpy.called).to.be.false;
+      expect(finishAnimationsSpy.called).toBe(false);
 
-      expect(maze.stepSpeed).to.equal(100);
-      expect(maze.scale.stepSpeed).to.equal(5);
-      expect(maze.controller.skin.movePegmanAnimationSpeedScale).to.equal(1);
+      expect(maze.stepSpeed).toBe(100);
+      expect(maze.scale.stepSpeed).toBe(5);
+      expect(maze.controller.skin.movePegmanAnimationSpeedScale).toBe(1);
 
       maze.scheduleAnimations_(false);
       expect(
         scheduleSingleAnimationSpy.withArgs(0, new Array(2), false, 500)
           .calledOnce
-      ).to.be.true;
+      ).toBe(true);
 
       maze.stepSpeed = 200;
       maze.scheduleAnimations_(false);
       expect(
         scheduleSingleAnimationSpy.withArgs(0, new Array(2), false, 1000)
           .calledOnce
-      ).to.be.true;
+      ).toBe(true);
 
       maze.scale.stepSpeed = 1;
       maze.scheduleAnimations_(false);
       expect(
         scheduleSingleAnimationSpy.withArgs(0, new Array(2), false, 200)
           .calledOnce
-      ).to.be.true;
+      ).toBe(true);
 
       scheduleSingleAnimationSpy.restore();
     });
@@ -98,10 +98,10 @@ describe('Maze', function () {
       const controllerResetSpy = sinon.stub(maze.controller, 'reset');
 
       maze.scheduleAnimations_(false);
-      expect(finishAnimationsSpy.called).to.be.false;
+      expect(finishAnimationsSpy.called).toBe(false);
       maze.reset_();
       clock.tick(1000);
-      expect(finishAnimationsSpy.called).to.be.false;
+      expect(finishAnimationsSpy.called).toBe(false);
 
       controllerResetSpy.restore();
     });

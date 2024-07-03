@@ -10,7 +10,7 @@ import TextAlignmentPropertyRow, {
   TEXT_ALIGNMENT_JUSTIFY,
 } from '@cdo/apps/applab/designElements/TextAlignmentPropertyRow';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('TextAlignmentPropertyRow', () => {
   let initialValue;
@@ -31,21 +31,21 @@ describe('TextAlignmentPropertyRow', () => {
   it('renders EnumPropertyRow with correct props', () => {
     const enumPropertyRow = wrapper.find(EnumPropertyRow);
 
-    expect(enumPropertyRow.prop('desc')).to.equal('text alignment');
-    expect(enumPropertyRow.prop('initialValue')).to.equal(initialValue);
-    expect(enumPropertyRow.prop('options')).to.deep.equal([
+    expect(enumPropertyRow.prop('desc')).toBe('text alignment');
+    expect(enumPropertyRow.prop('initialValue')).toBe(initialValue);
+    expect(enumPropertyRow.prop('options')).toEqual([
       TEXT_ALIGNMENT_LEFT,
       TEXT_ALIGNMENT_RIGHT,
       TEXT_ALIGNMENT_CENTER,
       TEXT_ALIGNMENT_JUSTIFY,
     ]);
-    expect(enumPropertyRow.prop('displayOptions')).to.deep.equal([
+    expect(enumPropertyRow.prop('displayOptions')).toEqual([
       'left',
       'right',
       'center',
       'justify',
     ]);
-    expect(enumPropertyRow.prop('handleChange')).to.equal(handleChange);
+    expect(enumPropertyRow.prop('handleChange')).toBe(handleChange);
   });
 
   it('calls handleChange when the value changes', () => {

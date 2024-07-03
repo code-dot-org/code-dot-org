@@ -7,7 +7,7 @@ import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoar
 import {MB_COMPONENT_COUNT} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardInterfaceTestUtil';
 
 import {itMakesMicroBitComponentsAvailable} from './MicroBitComponentTestUtil';
@@ -40,17 +40,15 @@ describe('MicroBitBoard', () => {
   describe(`connect()`, () => {
     it('initializes a set of components', () => {
       return board.connect().then(() => {
-        expect(Object.keys(board.prewiredComponents_)).to.have.length(
-          MB_COMPONENT_COUNT
-        );
-        expect(board.prewiredComponents_.board).to.be.a('object');
-        expect(board.prewiredComponents_.ledScreen).to.be.a('object');
-        expect(board.prewiredComponents_.tempSensor).to.be.a('object');
-        expect(board.prewiredComponents_.accelerometer).to.be.a('object');
-        expect(board.prewiredComponents_.compass).to.be.a('object');
-        expect(board.prewiredComponents_.buttonA).to.be.a('object');
-        expect(board.prewiredComponents_.buttonB).to.be.a('object');
-        expect(board.prewiredComponents_.lightSensor).to.be.a('object');
+        expect(Object.keys(board.prewiredComponents_)).toHaveLength(MB_COMPONENT_COUNT);
+        expect(board.prewiredComponents_.board).toBeInstanceOf(Object);
+        expect(board.prewiredComponents_.ledScreen).toBeInstanceOf(Object);
+        expect(board.prewiredComponents_.tempSensor).toBeInstanceOf(Object);
+        expect(board.prewiredComponents_.accelerometer).toBeInstanceOf(Object);
+        expect(board.prewiredComponents_.compass).toBeInstanceOf(Object);
+        expect(board.prewiredComponents_.buttonA).toBeInstanceOf(Object);
+        expect(board.prewiredComponents_.buttonB).toBeInstanceOf(Object);
+        expect(board.prewiredComponents_.lightSensor).toBeInstanceOf(Object);
       });
     });
   });
@@ -65,19 +63,19 @@ describe('MicroBitBoard', () => {
           'start'
         );
         board.enableComponents();
-        expect(accelerometerSpy).to.have.been.calledOnce;
+        expect(accelerometerSpy).toHaveBeenCalledTimes(1);
       });
     });
   });
 
   describe(`boardConnected()`, () => {
     it('returns false at first', () => {
-      expect(board.boardConnected()).to.be.false;
+      expect(board.boardConnected()).toBe(false);
     });
 
     it('returns true after connecting', () => {
       return board.connect().then(() => {
-        expect(board.boardConnected()).to.be.true;
+        expect(board.boardConnected()).toBe(true);
       });
     });
   });
@@ -89,7 +87,7 @@ describe('MicroBitBoard', () => {
         const pin = 11;
         const arg2 = 1023;
         board.pinMode(pin, arg2);
-        expect(pinModeSpy).to.have.been.calledWith(pin, arg2);
+        expect(pinModeSpy).toHaveBeenCalledWith(pin, arg2);
       });
     });
   });
@@ -101,7 +99,7 @@ describe('MicroBitBoard', () => {
         const pin = 11;
         const arg2 = 1023;
         board.digitalWrite(pin, arg2);
-        expect(digitalWriteSpy).to.have.been.calledWith(pin, arg2);
+        expect(digitalWriteSpy).toHaveBeenCalledWith(pin, arg2);
       });
     });
   });
@@ -113,7 +111,7 @@ describe('MicroBitBoard', () => {
         const pin = 11;
         const arg2 = () => {};
         board.digitalRead(pin, arg2);
-        expect(digitalReadSpy).to.have.been.calledWith(pin, arg2);
+        expect(digitalReadSpy).toHaveBeenCalledWith(pin, arg2);
       });
     });
   });
@@ -125,7 +123,7 @@ describe('MicroBitBoard', () => {
         const pin = 11;
         const arg2 = 1023;
         board.analogWrite(pin, arg2);
-        expect(analogWriteSpy).to.have.been.calledWith(pin, arg2);
+        expect(analogWriteSpy).toHaveBeenCalledWith(pin, arg2);
       });
     });
   });
@@ -137,7 +135,7 @@ describe('MicroBitBoard', () => {
         const pin = 11;
         const arg2 = () => {};
         board.analogRead(pin, arg2);
-        expect(analogReadSpy).to.have.been.calledWith(pin, arg2);
+        expect(analogReadSpy).toHaveBeenCalledWith(pin, arg2);
       });
     });
   });
@@ -147,7 +145,7 @@ describe('MicroBitBoard', () => {
       return board.connect().then(() => {
         const pin = 13;
         const newLed = board.createLed(pin);
-        expect(newLed).to.be.an.instanceOf(ExternalLed);
+        expect(newLed).toBeInstanceOf(ExternalLed);
       });
     });
   });
@@ -157,7 +155,7 @@ describe('MicroBitBoard', () => {
       return board.connect().then(() => {
         const pin = 13;
         const newButton = board.createButton(pin);
-        expect(newButton).to.be.an.instanceOf(ExternalButton);
+        expect(newButton).toBeInstanceOf(ExternalButton);
       });
     });
   });
@@ -167,7 +165,7 @@ describe('MicroBitBoard', () => {
       return board.connect().then(() => {
         const pin = 1;
         const newSensor = board.createCapacitiveTouchSensor(pin);
-        expect(newSensor).to.be.an.instanceOf(CapacitiveTouchSensor);
+        expect(newSensor).toBeInstanceOf(CapacitiveTouchSensor);
       });
     });
   });
@@ -180,7 +178,7 @@ describe('MicroBitBoard', () => {
           'clear'
         );
         board.reset();
-        expect(ledScreenSpy).to.have.been.calledOnce;
+        expect(ledScreenSpy).toHaveBeenCalledTimes(1);
       });
     });
 
@@ -190,11 +188,11 @@ describe('MicroBitBoard', () => {
         const led2 = board.createLed(1);
         sinon.spy(led1, 'off');
         sinon.spy(led2, 'off');
-        expect(led1.off).not.to.have.been.called;
-        expect(led2.off).not.to.have.been.called;
+        expect(led1.off).not.toHaveBeenCalled();
+        expect(led2.off).not.toHaveBeenCalled();
         board.reset();
-        expect(led1.off).to.have.been.calledOnce;
-        expect(led2.off).to.have.been.calledOnce;
+        expect(led1.off).toHaveBeenCalledTimes(1);
+        expect(led2.off).toHaveBeenCalledTimes(1);
       });
     });
   });
@@ -206,7 +204,7 @@ describe('MicroBitBoard', () => {
         .connect()
         .then(() => board.destroy())
         .then(() => {
-          expect(resetSpy).to.have.been.calledOnce;
+          expect(resetSpy).toHaveBeenCalledTimes(1);
         });
     });
 
@@ -217,12 +215,12 @@ describe('MicroBitBoard', () => {
         sinon.spy(led1, 'off');
         sinon.spy(led2, 'off');
 
-        expect(led1.off).not.to.have.been.called;
-        expect(led2.off).not.to.have.been.called;
+        expect(led1.off).not.toHaveBeenCalled();
+        expect(led2.off).not.toHaveBeenCalled();
 
         return board.destroy().then(() => {
-          expect(led1.off).to.have.been.calledOnce;
-          expect(led2.off).to.have.been.calledOnce;
+          expect(led1.off).toHaveBeenCalledTimes(1);
+          expect(led2.off).toHaveBeenCalledTimes(1);
         });
       });
     });

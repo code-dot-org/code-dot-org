@@ -18,7 +18,7 @@ import RubricSubmitFooter from '@cdo/apps/templates/rubrics/RubricSubmitFooter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('RubricSubmitFooter', () => {
   let store;
@@ -243,9 +243,7 @@ describe('RubricSubmitFooter', () => {
     // Assert that 'feedback submitted' appears with the old timestamp
     const priorDate = new Date(priorTimestamp);
     const priorCheck = priorDate.toLocaleString();
-    expect(
-      container.querySelector('#ui-feedback-submitted-timestamp').textContent
-    ).to.contain(priorCheck);
+    expect(container.querySelector('#ui-feedback-submitted-timestamp').textContent).toEqual(expect.arrayContaining([priorCheck]));
 
     // Press submit, wait until things resolve, and see the crsf-token from the initial request
     await user.click(button);
@@ -256,14 +254,12 @@ describe('RubricSubmitFooter', () => {
     );
 
     // Assert that the post was also called
-    sinon.assert.called(postStub);
+    sinon.toHaveBeenCalled();
 
     // Assert that 'feedback submitted' appears
     const lastSubmittedDateObj = new Date(timestamp);
     const check = lastSubmittedDateObj.toLocaleString();
-    expect(
-      container.querySelector('#ui-feedback-submitted-timestamp').textContent
-    ).to.contain(check);
+    expect(container.querySelector('#ui-feedback-submitted-timestamp').textContent).toEqual(expect.arrayContaining([check]));
   });
 
   it('gracefully handles no prior teacher feedback and still sets csrf-token', async () => {
@@ -297,7 +293,7 @@ describe('RubricSubmitFooter', () => {
     // There's no prior timestamp
     expect(
       container.querySelector('#ui-feedback-submitted-timestamp').textContent
-    ).to.equal('');
+    ).toBe('');
 
     // Wait until feedback is retrieved successfully
     await wait();
@@ -313,7 +309,7 @@ describe('RubricSubmitFooter', () => {
       sinon.match.any,
       crsfToken
     );
-    sinon.assert.called(postStub);
+    sinon.toHaveBeenCalled();
   });
 
   it('sets keepWorking when previously set in teacher feedback', async () => {
@@ -371,7 +367,7 @@ describe('RubricSubmitFooter', () => {
     // There's no prior timestamp
     expect(
       container.querySelector('#ui-feedback-submitted-timestamp').textContent
-    ).to.equal('');
+    ).toBe('');
 
     // Wait until feedback is retrieved successfully
     await wait();
@@ -384,10 +380,10 @@ describe('RubricSubmitFooter', () => {
       sinon.match.any,
       crsfToken
     );
-    sinon.assert.called(postStub);
+    sinon.toHaveBeenCalled();
 
     // Assert that the feedback error is NOT there
-    expect(container.querySelector('#ui-feedback-submitted-error')).to.be.null;
+    expect(container.querySelector('#ui-feedback-submitted-error')).toBeNull();
   });
 
   it('handles error updating feedback on submit button click', async () => {
@@ -414,7 +410,7 @@ describe('RubricSubmitFooter', () => {
     // There's no prior timestamp
     expect(
       container.querySelector('#ui-feedback-submitted-timestamp').textContent
-    ).to.equal('');
+    ).toBe('');
 
     // Wait until feedback is retrieved successfully
     await wait();
@@ -426,7 +422,7 @@ describe('RubricSubmitFooter', () => {
     // Assert that the feedback error appears
     expect(
       container.querySelector('#ui-feedback-submitted-error').textContent
-    ).to.contain(i18n.errorSubmittingFeedback());
+    ).toContain(i18n.errorSubmittingFeedback());
   });
 
   it('handles error submitting evaluations on submit button click', async () => {
@@ -454,7 +450,7 @@ describe('RubricSubmitFooter', () => {
     // There's no prior timestamp
     expect(
       container.querySelector('#ui-feedback-submitted-timestamp').textContent
-    ).to.equal('');
+    ).toBe('');
 
     // Wait until feedback is retrieved successfully
     await wait();
@@ -466,7 +462,7 @@ describe('RubricSubmitFooter', () => {
     // Assert that the feedback error appears
     expect(
       container.querySelector('#ui-feedback-submitted-error').textContent
-    ).to.contain(i18n.errorSubmittingFeedback());
+    ).toContain(i18n.errorSubmittingFeedback());
   });
 
   it('handles error when submitting evaluations returns an invalid response on submit button click', async () => {
@@ -494,7 +490,7 @@ describe('RubricSubmitFooter', () => {
     // There's no prior timestamp
     expect(
       container.querySelector('#ui-feedback-submitted-timestamp').textContent
-    ).to.equal('');
+    ).toBe('');
 
     // Wait until feedback is retrieved successfully
     await wait();
@@ -506,6 +502,6 @@ describe('RubricSubmitFooter', () => {
     // Assert that the feedback error appears
     expect(
       container.querySelector('#ui-feedback-submitted-error').textContent
-    ).to.contain(i18n.errorSubmittingFeedback());
+    ).toContain(i18n.errorSubmittingFeedback());
   });
 });

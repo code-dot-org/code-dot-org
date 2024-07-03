@@ -6,7 +6,7 @@ import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import authoredHintsReducer from '@cdo/apps/redux/authoredHints';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../util/reconfiguredChai';
+
 
 describe('Authored Hints', () => {
   // stub (and restore) redux and a utils method

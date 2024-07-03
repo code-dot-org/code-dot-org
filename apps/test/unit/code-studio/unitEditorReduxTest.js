@@ -12,7 +12,7 @@ import reducers, {
   mapLessonGroupDataForEditor,
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 
-import {expect, assert} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai';
 
 const getInitialState = () => ({
   lessonGroups: [
@@ -113,8 +113,8 @@ describe('unitEditorRedux reducer tests', () => {
       initialState.lessonGroups
     );
 
-    expect(mappedLessonGroups.length).to.equal(2);
-    expect(mappedLessonGroups[0].lessons.length).to.equal(3);
+    expect(mappedLessonGroups.length).toBe(2);
+    expect(mappedLessonGroups[0].lessons.length).toBe(3);
   });
 
   it('add group', () => {

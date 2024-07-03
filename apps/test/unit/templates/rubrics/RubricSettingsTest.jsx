@@ -22,7 +22,7 @@ import RubricSettings from '@cdo/apps/templates/rubrics/RubricSettings';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('RubricSettings', () => {
   let clock;
@@ -158,7 +158,7 @@ describe('RubricSettings', () => {
       </Provider>
     );
 
-    expect(wrapper.find('SectionSelector').length).to.equal(1);
+    expect(wrapper.find('SectionSelector').length).toBe(1);
   });
 
   it('allows teacher to run AI assessment for all students when AI status is ready', async () => {
@@ -180,7 +180,7 @@ describe('RubricSettings', () => {
     await wait();
 
     wrapper.update();
-    expect(wrapper.find('Button').first().props().disabled).to.be.false;
+    expect(wrapper.find('Button').first().props().disabled).toBe(false);
   });
 
   it('disables run AI assessment for all button when no students have attempted', async () => {
@@ -202,7 +202,7 @@ describe('RubricSettings', () => {
     await wait();
     wrapper.update();
 
-    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+    expect(wrapper.find('Button').first().props().disabled).toBe(true);
   });
 
   it('disables run AI assessment for all button when all student work has been evaluated', async () => {
@@ -224,7 +224,7 @@ describe('RubricSettings', () => {
     await wait();
     wrapper.update();
 
-    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+    expect(wrapper.find('Button').first().props().disabled).toBe(true);
   });
 
   it('shows pending status when eval is pending', async () => {
@@ -249,10 +249,8 @@ describe('RubricSettings', () => {
     wrapper.update();
 
     let status = wrapper.find('BodyTwoText.uitest-eval-status-all-text');
-    expect(status.text()).to.include(
-      i18n.aiEvaluationStatusAll_ready({unevaluatedCount: 1})
-    );
-    expect(wrapper.find('Button').first().props().disabled).to.be.false;
+    expect(status.text()).toContain(i18n.aiEvaluationStatusAll_ready({unevaluatedCount: 1}));
+    expect(wrapper.find('Button').first().props().disabled).toBe(false);
 
     // show pending state after clicking run
 
@@ -261,9 +259,9 @@ describe('RubricSettings', () => {
     wrapper.find('button.uitest-run-ai-assessment-all').simulate('click');
 
     status = wrapper.find('BodyTwoText.uitest-eval-status-all-text');
-    expect(status.text()).to.include(i18n.aiEvaluationStatus_pending());
+    expect(status.text()).toContain(i18n.aiEvaluationStatus_pending());
 
-    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+    expect(wrapper.find('Button').first().props().disabled).toBe(true);
   });
 
   it('runs AI assessment for all unevaluated projects when requested by teacher', async () => {
@@ -294,20 +292,17 @@ describe('RubricSettings', () => {
     wrapper.find('Button').first().simulate('click');
 
     //sends event on click
-    expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.TA_RUBRIC_SECTION_AI_EVAL,
-      {
-        rubricId: defaultRubric.id,
-        sectionId: 1,
-      }
-    );
+    expect(sendEventSpy).toHaveBeenCalledWith(EVENTS.TA_RUBRIC_SECTION_AI_EVAL, {
+      rubricId: defaultRubric.id,
+      sectionId: 1,
+    });
 
     // Perform fetches and re-renders
     await wait();
     wrapper.update();
 
-    expect(wrapper.find('Button').first().props().disabled).to.be.true;
-    expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_pending());
+    expect(wrapper.find('Button').first().props().disabled).toBe(true);
+    expect(wrapper.text()).toContain(i18n.aiEvaluationStatus_pending());
 
     // Advance clock 5 seconds
     clock.tick(5000);
@@ -315,9 +310,9 @@ describe('RubricSettings', () => {
     // Perform fetches and re-renders
     await wait();
     wrapper.update();
-    expect(fetchStub).to.have.callCount(4);
-    expect(wrapper.find('Button').first().props().disabled).to.be.true;
-    expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_success());
+    expect(fetchStub).toHaveBeenCalledTimes(4);
+    expect(wrapper.find('Button').first().props().disabled).toBe(true);
+    expect(wrapper.text()).toContain(i18n.aiEvaluationStatus_success());
     sendEventSpy.restore();
   });
 
@@ -343,10 +338,8 @@ describe('RubricSettings', () => {
     //fetch for get_teacher_evaluations_all is the 2nd fetch
     await wait();
     wrapper.update();
-    expect(wrapper.text()).to.include(i18n.rubricNoStudentEvals());
-    expect(wrapper.find('Button').at(1).text()).to.include(
-      i18n.rubricTabStudent()
-    );
+    expect(wrapper.text()).toContain(i18n.rubricNoStudentEvals());
+    expect(wrapper.find('Button').at(1).text()).toContain(i18n.rubricTabStudent());
   });
 
   it('displays generate CSV button when there are evaluations to export', async () => {
@@ -371,12 +364,10 @@ describe('RubricSettings', () => {
     //fetch for get_teacher_evaluations_all is the 2nd fetch
     await wait();
     wrapper.update();
-    expect(wrapper.text()).to.include(
-      i18n.rubricNumberStudentEvals({
-        teacherEvalCount: 2,
-      })
-    );
-    expect(wrapper.find('Button').at(1).text()).to.include(i18n.downloadCSV());
+    expect(wrapper.text()).toContain(i18n.rubricNumberStudentEvals({
+      teacherEvalCount: 2,
+    }));
+    expect(wrapper.find('Button').at(1).text()).toContain(i18n.downloadCSV());
   });
 
   it('sends event when download CSV is clicked', async () => {
@@ -403,22 +394,17 @@ describe('RubricSettings', () => {
     //fetch for get_teacher_evaluations_all is the 2nd fetch
     await wait();
     wrapper.update();
-    expect(wrapper.text()).to.include(
-      i18n.rubricNumberStudentEvals({
-        teacherEvalCount: 2,
-      })
-    );
-    expect(wrapper.find('Button').at(1).text()).to.include(i18n.downloadCSV());
+    expect(wrapper.text()).toContain(i18n.rubricNumberStudentEvals({
+      teacherEvalCount: 2,
+    }));
+    expect(wrapper.find('Button').at(1).text()).toContain(i18n.downloadCSV());
     wrapper.find('Button').at(1).simulate('click');
-    expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.TA_RUBRIC_CSV_DOWNLOADED,
-      {
-        unitName: 'test-2023',
-        courseName: 'course-2023',
-        levelName: 'Test Blah Blah Blah',
-        sectionId: 1,
-      }
-    );
+    expect(sendEventSpy).toHaveBeenCalledWith(EVENTS.TA_RUBRIC_CSV_DOWNLOADED, {
+      unitName: 'test-2023',
+      courseName: 'course-2023',
+      levelName: 'Test Blah Blah Blah',
+      sectionId: 1,
+    });
     sendEventSpy.restore();
   });
 
@@ -438,7 +424,7 @@ describe('RubricSettings', () => {
     );
 
     const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
-    expect(input.checked).to.be.true;
+    expect(input.checked).toBe(true);
   });
 
   it('ensures the AI enable toggle represents the current value of the AI disabled user setting', () => {
@@ -460,7 +446,7 @@ describe('RubricSettings', () => {
     );
 
     const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
-    expect(input.checked).to.be.false;
+    expect(input.checked).toBe(false);
   });
 
   it('updates the AI disabled user setting when the toggle is used', async () => {
@@ -488,8 +474,8 @@ describe('RubricSettings', () => {
     fireEvent.click(input);
     fireEvent.change(input);
 
-    expect(input.checked).to.be.false;
-    expect(setStub).to.have.been.calledWith(true);
+    expect(input.checked).toBe(false);
+    expect(setStub).toHaveBeenCalledWith(true);
     setStub.restore();
   });
 });

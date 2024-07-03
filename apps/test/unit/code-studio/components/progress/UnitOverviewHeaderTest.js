@@ -5,7 +5,7 @@ import {UnconnectedUnitOverviewHeader as UnitOverviewHeader} from '@cdo/apps/cod
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
-import {assert, expect} from '../../../../util/reconfiguredChai';
+import {assert} from '../../../../util/reconfiguredChai';
 
 import {
   fakeStudentAnnouncement,
@@ -126,7 +126,7 @@ describe('UnitOverviewHeader', () => {
     const wrapper = shallow(<UnitOverviewHeader {...defaultProps} />, {
       disableLifecycleMethods: true,
     });
-    expect(wrapper.find('SafeMarkdown').prop('markdown')).to.equal(
+    expect(wrapper.find('SafeMarkdown').prop('markdown')).toBe(
       '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
     );
   });
@@ -138,7 +138,7 @@ describe('UnitOverviewHeader', () => {
         disableLifecycleMethods: true,
       }
     );
-    expect(wrapper.find('SafeMarkdown').prop('markdown')).to.equal(
+    expect(wrapper.find('SafeMarkdown').prop('markdown')).toBe(
       '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
     );
   });

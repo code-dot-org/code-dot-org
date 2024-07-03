@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import FormComponent from '@cdo/apps/code-studio/pd/form_components/FormComponent';
 import FormController from '@cdo/apps/code-studio/pd/form_components/FormController';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 class DummyPage1 extends FormComponent {
   static associatedFields = [];
@@ -38,18 +38,12 @@ class DummyForm extends FormController {
 describe('FormController', () => {
   it('Can not be instantiated directly', () => {
     const constructor = () => new FormController();
-    expect(constructor).to.throw(
-      TypeError,
-      'FormController is an abstract class; cannot construct instances directly'
-    );
+    expect(constructor).toThrow(TypeError);
   });
 
   it('Requires getPageComponents', () => {
     class EmptyForm extends FormController {}
-    expect(new EmptyForm().getPageComponents).to.throw(
-      TypeError,
-      'must override FormController.getPageComponents'
-    );
+    expect(new EmptyForm().getPageComponents).toThrow(TypeError);
   });
 
   describe('Standard usage', () => {
@@ -65,17 +59,17 @@ describe('FormController', () => {
     });
 
     it('Initially renders the first page', () => {
-      expect(form.state('currentPage')).to.equal(0);
-      expect(form.find(DummyPage1)).to.have.length(1);
-      expect(form.find(DummyPage2)).to.have.length(0);
-      expect(form.find(DummyPage3)).to.have.length(0);
+      expect(form.state('currentPage')).toBe(0);
+      expect(form.find(DummyPage1)).toHaveLength(1);
+      expect(form.find(DummyPage2)).toHaveLength(0);
+      expect(form.find(DummyPage3)).toHaveLength(0);
     });
 
     it('Displays page buttons on each page', () => {
       const validatePageButtons = () => {
         const pageButtons = form.find('Pagination PaginationButton');
-        expect(pageButtons).to.have.length(3);
-        expect(pageButtons.map(button => button.text())).to.eql([
+        expect(pageButtons).toHaveLength(3);
+        expect(pageButtons.map(button => button.text())).toEqual([
           '1',
           '2',
           '3',
@@ -90,22 +84,22 @@ describe('FormController', () => {
 
     it('Has a next button on the first page', () => {
       const nextButton = form.find('button');
-      expect(nextButton).to.have.length(1);
-      expect(nextButton.text()).to.eql('Next');
+      expect(nextButton).toHaveLength(1);
+      expect(nextButton.text()).toEqual('Next');
     });
 
     it('Has back and next buttons on middle pages', () => {
       form.setState({currentPage: 1});
       const buttons = form.find('button');
-      expect(buttons).to.have.length(2);
-      expect(buttons.map(button => button.text())).to.eql(['Back', 'Next']);
+      expect(buttons).toHaveLength(2);
+      expect(buttons.map(button => button.text())).toEqual(['Back', 'Next']);
     });
 
     it('Has a back and submit button on the last page', () => {
       form.setState({currentPage: 2});
       const buttons = form.find('button');
-      expect(buttons).to.have.length(2);
-      expect(buttons.map(button => button.text())).to.eql(['Back', 'Submit']);
+      expect(buttons).toHaveLength(2);
+      expect(buttons.map(button => button.text())).toEqual(['Back', 'Submit']);
     });
 
     describe('Page validation', () => {
@@ -125,8 +119,8 @@ describe('FormController', () => {
         const nextButton = form.find('button');
         nextButton.simulate('click');
 
-        expect(validateCurrentPageRequiredFields).to.have.been.calledOnce;
-        expect(form.state('currentPage')).to.equal(0);
+        expect(validateCurrentPageRequiredFields).toHaveBeenCalledTimes(1);
+        expect(form.state('currentPage')).toBe(0);
       });
 
       it('Navigates when the current page has no errors', () => {
@@ -134,8 +128,8 @@ describe('FormController', () => {
         const nextButton = form.find('button');
         nextButton.simulate('click');
 
-        expect(validateCurrentPageRequiredFields).to.have.been.calledOnce;
-        expect(form.state('currentPage')).to.equal(1);
+        expect(validateCurrentPageRequiredFields).toHaveBeenCalledTimes(1);
+        expect(form.state('currentPage')).toBe(1);
       });
 
       describe('Submitting', () => {
@@ -157,24 +151,24 @@ describe('FormController', () => {
           submitButton().simulate('submit');
 
           form.update();
-          expect(validateCurrentPageRequiredFields).to.have.been.calledOnce;
-          expect(server.requests).to.be.empty;
+          expect(validateCurrentPageRequiredFields).toHaveBeenCalledTimes(1);
+          expect(server.requests).toHaveLength(0);
         });
 
         it('Submits when the last page has no errors', () => {
           validateCurrentPageRequiredFields.returns(true);
           submitButton().simulate('submit');
 
-          expect(validateCurrentPageRequiredFields).to.have.been.calledOnce;
-          expect(server.requests).to.have.length(1);
-          expect(server.requests[0].url).to.eql('fake endpoint');
+          expect(validateCurrentPageRequiredFields).toHaveBeenCalledTimes(1);
+          expect(server.requests).toHaveLength(1);
+          expect(server.requests[0].url).toEqual('fake endpoint');
         });
 
         it('Disables the submit button during submit', () => {
           validateCurrentPageRequiredFields.returns(true);
           submitButton().simulate('submit');
-          expect(form.state('submitting')).to.be.true;
-          expect(submitButton().prop('disabled')).to.be.true;
+          expect(form.state('submitting')).toBe(true);
+          expect(submitButton().prop('disabled')).toBe(true);
         });
 
         it('Re-enables the submit button on error', () => {
@@ -189,8 +183,8 @@ describe('FormController', () => {
 
           submitButton().simulate('submit');
           server.respond();
-          expect(form.state('submitting')).to.be.false;
-          expect(form.state('errors')).to.eql(['an error']);
+          expect(form.state('submitting')).toBe(false);
+          expect(form.state('errors')).toEqual(['an error']);
         });
 
         it('Keeps the submit button disabled and calls onSuccessfulSubmit on success', () => {
@@ -208,9 +202,9 @@ describe('FormController', () => {
           submitButton().simulate('submit');
           server.respond();
 
-          expect(form.state('submitting')).to.be.true;
-          expect(submitButton().prop('disabled')).to.be.true;
-          expect(onSuccessfulSubmit).to.be.calledOnce;
+          expect(form.state('submitting')).toBe(true);
+          expect(submitButton().prop('disabled')).toBe(true);
+          expect(onSuccessfulSubmit).toHaveBeenCalledTimes(1);
         });
       });
     });
@@ -242,8 +236,8 @@ describe('FormController', () => {
         DummyPage1.associatedFields = ['included'];
 
         const validated = form.instance().validateCurrentPageRequiredFields();
-        expect(validated).to.be.false;
-        expect(form.state('errors')).to.eql(['included']);
+        expect(validated).toBe(false);
+        expect(form.state('errors')).toEqual(['included']);
       });
 
       it('Strips string values on current page and sets empty ones to null', () => {
@@ -266,7 +260,7 @@ describe('FormController', () => {
         ];
 
         form.instance().validateCurrentPageRequiredFields();
-        expect(form.state('data')).to.deep.eql({
+        expect(form.state('data')).toEqual({
           textFieldWithSpace: 'trim',
           textFieldWithNoSpace: 'nothing to trim',
           arrayField: ['  no trim in array  '],
@@ -303,8 +297,8 @@ describe('FormController', () => {
         });
 
         form.instance().validateCurrentPageRequiredFields();
-        expect(processPageData).to.be.calledOnce;
-        expect(form.state('data')).to.deep.eql({
+        expect(processPageData).toHaveBeenCalledTimes(1);
+        expect(form.state('data')).toEqual({
           page1Field1: 'value1',
           page1Field2: undefined,
           page1Field3: 'modified',
@@ -328,15 +322,13 @@ describe('FormController', () => {
           },
         });
         form.instance().handleChange({updatedField1: 'updated value 1'});
-        expect(sessionStorage['DummyForm']).to.eql(
-          JSON.stringify({
-            currentPage: 0,
-            data: {
-              existingField1: 'existing value 1',
-              updatedField1: 'updated value 1',
-            },
-          })
-        );
+        expect(sessionStorage['DummyForm']).toEqual(JSON.stringify({
+          currentPage: 0,
+          data: {
+            existingField1: 'existing value 1',
+            updatedField1: 'updated value 1',
+          },
+        }));
       });
 
       it('Saves current page to session storage', () => {
@@ -346,12 +338,10 @@ describe('FormController', () => {
           },
         });
         form.instance().nextPage();
-        expect(sessionStorage['DummyForm']).to.eql(
-          JSON.stringify({
-            currentPage: 1,
-            data: {existingField1: 'existing value 1'},
-          })
-        );
+        expect(sessionStorage['DummyForm']).toEqual(JSON.stringify({
+          currentPage: 1,
+          data: {existingField1: 'existing value 1'},
+        }));
       });
 
       it('Loads current page and form data from session storage on mount', () => {
@@ -366,8 +356,8 @@ describe('FormController', () => {
 
         form.unmount();
         form.mount();
-        expect(form.state('currentPage')).to.equal(2);
-        expect(form.state('data')).to.eql(testData);
+        expect(form.state('currentPage')).toBe(2);
+        expect(form.state('data')).toEqual(testData);
       });
     });
   });

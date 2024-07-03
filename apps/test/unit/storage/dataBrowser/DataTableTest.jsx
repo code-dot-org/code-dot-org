@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import {UnconnectedDataTable as DataTable} from '@cdo/apps/storage/dataBrowser/DataTable';
 import commonI18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 const DEFAULT_PROPS = {
   readOnly: false,
@@ -33,7 +33,7 @@ describe('DataTable', () => {
       const wrapper = createDataTable();
 
       let header = wrapper.find('th').last();
-      expect(header.text()).to.contain('i18n-actions');
+      expect(header.text()).toContain('i18n-actions');
     });
 
     it('should render a localized string for labeling the current page', () => {
@@ -45,7 +45,7 @@ describe('DataTable', () => {
       });
 
       let pagination = wrapper.find('PaginationWrapper').at(0);
-      expect(pagination.prop('label')).to.contain('i18n-page');
+      expect(pagination.prop('label')).toContain('i18n-page');
     });
   });
 });

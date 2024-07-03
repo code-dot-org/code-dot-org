@@ -3,7 +3,7 @@ import React from 'react';
 
 import EvidenceDescriptionsRow from '@cdo/apps/lib/levelbuilder/rubrics/EvidenceDescriptionsRow.jsx';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 describe('EvidenceDescriptionsRow', () => {
   const evidenceLevelData = {
@@ -20,9 +20,9 @@ describe('EvidenceDescriptionsRow', () => {
         evidenceLevelData={evidenceLevelData}
       />
     );
-    expect(wrapper.find('div').length).to.equal(1);
-    expect(wrapper.find('label').length).to.equal(1);
-    expect(wrapper.find('textarea').length).to.equal(2);
+    expect(wrapper.find('div').length).toBe(1);
+    expect(wrapper.find('label').length).toBe(1);
+    expect(wrapper.find('textarea').length).toBe(2);
   });
 
   it('enables the AI prompt textbox when isAiEnabled is true', () => {
@@ -34,8 +34,8 @@ describe('EvidenceDescriptionsRow', () => {
       />
     );
     const aiPromptTextbox = wrapper.find('.ui-test-ai-prompt-textbox');
-    expect(aiPromptTextbox.prop('disabled')).to.be.false;
-    expect(aiPromptTextbox.prop('required')).to.be.true;
+    expect(aiPromptTextbox.prop('disabled')).toBe(false);
+    expect(aiPromptTextbox.prop('required')).toBe(true);
   });
 
   it('disables the AI prompt textbox when isAiEnabled is false', () => {
@@ -47,7 +47,7 @@ describe('EvidenceDescriptionsRow', () => {
       />
     );
     const aiPromptTextbox = wrapper.find('.ui-test-ai-prompt-textbox');
-    expect(aiPromptTextbox.prop('disabled')).to.be.true;
-    expect(aiPromptTextbox.prop('required')).to.be.false;
+    expect(aiPromptTextbox.prop('disabled')).toBe(true);
+    expect(aiPromptTextbox.prop('required')).toBe(false);
   });
 });

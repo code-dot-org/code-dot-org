@@ -19,7 +19,7 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 import {sections} from '../studioHomepages/fakeSectionUtils';
 
 describe('CurriculumCatalogCard', () => {
@@ -119,7 +119,7 @@ describe('CurriculumCatalogCard', () => {
     const firstLabelNode = screen.getByText(firstLabelText);
 
     fireEvent.mouseOver(firstLabelNode);
-    expect(screen.getAllByText(firstLabelText)).to.have.lengthOf(2);
+    expect(screen.getAllByText(firstLabelText)).toHaveLength(2);
   });
 
   it('renders tooltip showing full text of first label when focused on it', () => {
@@ -128,7 +128,7 @@ describe('CurriculumCatalogCard', () => {
       translatedLabels[subjectsAndTopicsOrder[firstSubjectIndexUsed]];
     const firstLabelNode = screen.getByText(firstLabelText);
     firstLabelNode.closest('div').focus();
-    expect(screen.getAllByText(firstLabelText)).to.have.lengthOf(2);
+    expect(screen.getAllByText(firstLabelText)).toHaveLength(2);
   });
 
   it('renders tooltip showing remaining labels when hovering on plus sign', () => {
@@ -143,7 +143,7 @@ describe('CurriculumCatalogCard', () => {
 
     // does not show when not hovered
     remainingLabels.forEach(
-      label => expect(screen.queryByText(translatedLabels[label])).to.be.null
+      label => expect(screen.queryByText(translatedLabels[label])).toBeNull()
     );
 
     fireEvent.mouseOver(plusSignText);
@@ -183,21 +183,21 @@ describe('CurriculumCatalogCard', () => {
       topics: undefined,
     });
 
-    expect(screen.queryByText('+')).to.be.null;
+    expect(screen.queryByText('+')).toBeNull();
 
     renderCurriculumCard({
       ...defaultProps,
       topics: ['data'],
       subjects: undefined,
     });
-    expect(screen.queryByText('+')).to.be.null;
+    expect(screen.queryByText('+')).toBeNull();
   });
 
   it('does not render translation icon when in English locale', () => {
     const {container} = renderCurriculumCard();
 
-    expect(screen.queryByTitle(translationIconTitle)).to.be.null;
-    expect(container.querySelectorAll('i[class*=language]')).to.have.length(0);
+    expect(screen.queryByTitle(translationIconTitle)).toBeNull();
+    expect(container.querySelectorAll('i[class*=language]')).toHaveLength(0);
   });
 
   it('does not render translation icon if translation is not available', () => {
@@ -207,8 +207,8 @@ describe('CurriculumCatalogCard', () => {
       isTranslated: false,
     });
 
-    expect(screen.queryByTitle(translationIconTitle)).to.be.null;
-    expect(container.querySelectorAll('i[class*=language]')).to.have.length(0);
+    expect(screen.queryByTitle(translationIconTitle)).toBeNull();
+    expect(container.querySelectorAll('i[class*=language]')).toHaveLength(0);
   });
 
   it('renders translation icon when translation is available in non-English locale', () => {
@@ -219,7 +219,7 @@ describe('CurriculumCatalogCard', () => {
     });
 
     screen.getByTitle(translationIconTitle);
-    expect(container.querySelectorAll('i[class*=language]')).to.have.length(1);
+    expect(container.querySelectorAll('i[class*=language]')).toHaveLength(1);
   });
 
   it('renders grade range with icon', () => {
@@ -232,7 +232,7 @@ describe('CurriculumCatalogCard', () => {
         }`
       )
     );
-    expect(container.querySelectorAll('i[class*=user]')).to.have.length(1);
+    expect(container.querySelectorAll('i[class*=user]')).toHaveLength(1);
   });
 
   it('renders single grade with icon when one grade passed in', () => {
@@ -243,14 +243,14 @@ describe('CurriculumCatalogCard', () => {
     });
 
     screen.getByText(new RegExp(`Grade: ${grade}`));
-    expect(container.querySelectorAll('i[class*=user]')).to.have.length(1);
+    expect(container.querySelectorAll('i[class*=user]')).toHaveLength(1);
   });
 
   it('renders duration with icon', () => {
     const {container} = renderCurriculumCard();
 
     screen.getByText(defaultProps.duration, {exact: false});
-    expect(container.querySelectorAll('i[class*=clock]')).to.have.length(1);
+    expect(container.querySelectorAll('i[class*=clock]')).toHaveLength(1);
   });
 
   it('renders Quick View button with descriptive label', () => {
@@ -289,7 +289,7 @@ describe('CurriculumCatalogCard', () => {
     });
 
     sections.forEach(
-      section => expect(screen.queryByText(section.name)).to.be.null
+      section => expect(screen.queryByText(section.name)).toBeNull()
     );
     fireEvent.click(assignButton);
     sections.forEach(section => screen.getByText(section.name));

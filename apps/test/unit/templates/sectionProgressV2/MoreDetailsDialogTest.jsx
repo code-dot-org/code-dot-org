@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import MoreDetailsDialog from '@cdo/apps/templates/sectionProgressV2/MoreDetailsDialog';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('MoreDetailsDialog', () => {
   it('renders the dialog with required elements', () => {
@@ -24,6 +24,6 @@ describe('MoreDetailsDialog', () => {
     const closeButton = screen.getByRole('button');
     fireEvent.click(closeButton);
 
-    expect(onCloseMock).to.have.been.calledOnce;
+    expect(onCloseMock).toHaveBeenCalledTimes(1);
   });
 });

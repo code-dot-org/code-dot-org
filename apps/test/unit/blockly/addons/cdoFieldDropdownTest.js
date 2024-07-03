@@ -3,7 +3,7 @@ import {
   arrayToMap,
 } from '@cdo/apps/blockly/addons/cdoFieldDropdown';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('Testing function getUpdateOptionsFromConfig', () => {
   describe('Test config string with printer-style number range', () => {
@@ -11,7 +11,7 @@ describe('Testing function getUpdateOptionsFromConfig', () => {
       const config = '6-8';
       const options = getUpdatedOptionsFromConfig(config, {});
 
-      expect(options).to.deep.equal([
+      expect(options).toEqual([
         ['6', '6'],
         ['7', '7'],
         ['8', '8'],
@@ -22,7 +22,7 @@ describe('Testing function getUpdateOptionsFromConfig', () => {
       const config = '2, 5, 11';
       const options = getUpdatedOptionsFromConfig(config, {});
 
-      expect(options).to.deep.equal([
+      expect(options).toEqual([
         ['2', '2'],
         ['5', '5'],
         ['11', '11'],
@@ -33,7 +33,7 @@ describe('Testing function getUpdateOptionsFromConfig', () => {
       const config = '2, 4, 16-18';
       const options = getUpdatedOptionsFromConfig(config, {});
 
-      expect(options).to.deep.equal([
+      expect(options).toEqual([
         ['2', '2'],
         ['4', '4'],
         ['16', '16'],
@@ -55,7 +55,7 @@ describe('Testing function getUpdateOptionsFromConfig', () => {
       const existingOptionsMap = arrayToMap(menuGenerator);
       const options = getUpdatedOptionsFromConfig(config, existingOptionsMap);
 
-      expect(options).to.deep.equal([
+      expect(options).toEqual([
         ['cat', "'CAT'"],
         ['sloth', "'SLOTH'"],
       ]);
@@ -72,7 +72,7 @@ describe('Testing function getUpdateOptionsFromConfig', () => {
       const existingOptionsMap = arrayToMap(menuGenerator);
       const options = getUpdatedOptionsFromConfig(config, existingOptionsMap);
 
-      expect(options).to.deep.equal([
+      expect(options).toEqual([
         ['cat', "'CAT'"],
         ['sloth', "'SLOTH'"],
         ['giraffe', "'GIRAFFE'"],
@@ -88,7 +88,7 @@ describe('Testing function getUpdateOptionsFromConfig', () => {
       ];
       const existingOptionsMap = arrayToMap(menuGenerator);
       const options = getUpdatedOptionsFromConfig(config, existingOptionsMap);
-      expect(options).to.deep.equal([
+      expect(options).toEqual([
         ['size', "'scale'"],
         ['rotation', "'rotation'"],
       ]);

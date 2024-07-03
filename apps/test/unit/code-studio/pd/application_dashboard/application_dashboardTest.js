@@ -1,5 +1,4 @@
-import {expect} from 'chai';
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import { mount } from 'enzyme';
 import React from 'react';
 
 import ApplicationDashboard from '@cdo/apps/code-studio/pd/application_dashboard/application_dashboard';
@@ -30,9 +29,7 @@ describe('ApplicationDashboard', () => {
         regionalPartners: [{id: 1, name: 'A+ College Ready', group: 1}],
         isWorkshopAdmin: true,
       });
-      expect(state.regionalPartners.regionalPartnerFilter.label).to.eql(
-        UNMATCHED_PARTNER_LABEL
-      );
+      expect(state.regionalPartners.regionalPartnerFilter.label).toEqual(UNMATCHED_PARTNER_LABEL);
     });
 
     it("displays 'all' for non-admins with multiple partners", () => {
@@ -43,9 +40,7 @@ describe('ApplicationDashboard', () => {
         ],
         isWorkshopAdmin: false,
       });
-      expect(state.regionalPartners.regionalPartnerFilter.label).to.eql(
-        ALL_PARTNERS_LABEL
-      );
+      expect(state.regionalPartners.regionalPartnerFilter.label).toEqual(ALL_PARTNERS_LABEL);
     });
 
     it('displays partner name for non-admins with one partner', () => {
@@ -53,9 +48,7 @@ describe('ApplicationDashboard', () => {
         regionalPartners: [{id: 1, name: 'A+ College Ready', group: 1}],
         isWorkshopAdmin: false,
       });
-      expect(state.regionalPartners.regionalPartnerFilter.label).to.eql(
-        'A+ College Ready'
-      );
+      expect(state.regionalPartners.regionalPartnerFilter.label).toEqual('A+ College Ready');
     });
   });
 });

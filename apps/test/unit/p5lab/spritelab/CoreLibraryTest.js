@@ -14,7 +14,7 @@ import * as redux from '@cdo/apps/redux';
 import msg from '@cdo/locale';
 
 import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('SpriteLab Core Library', () => {
   let coreLibrary;
@@ -37,29 +37,29 @@ describe('SpriteLab Core Library', () => {
 
   describe('addSprite', () => {
     it('returns an id', () => {
-      expect(coreLibrary.addSprite()).to.equal(0);
-      expect(coreLibrary.addSprite()).to.equal(1);
-      expect(coreLibrary.addSprite()).to.equal(2);
+      expect(coreLibrary.addSprite()).toBe(0);
+      expect(coreLibrary.addSprite()).toBe(1);
+      expect(coreLibrary.addSprite()).toBe(2);
     });
 
     it('location defaults to (200,200)', () => {
       coreLibrary.addSprite({name: spriteName});
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'x'])
-      ).to.equal(200);
+      ).toBe(200);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'y'])
-      ).to.equal(200);
+      ).toBe(200);
     });
 
     it('location picker works', () => {
       coreLibrary.addSprite({name: spriteName, location: {x: 123, y: 321}});
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'x'])
-      ).to.equal(123);
+      ).toBe(123);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'y'])
-      ).to.equal(400 - 321);
+      ).toBe(400 - 321);
     });
 
     it('location function works', () => {
@@ -67,10 +67,10 @@ describe('SpriteLab Core Library', () => {
       coreLibrary.addSprite({name: spriteName, location: locationFunc});
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'x'])
-      ).to.equal(123);
+      ).toBe(123);
       expect(
         spriteCommands.getProp.apply(coreLibrary, [{name: spriteName}, 'y'])
-      ).to.equal(400 - 321);
+      ).toBe(400 - 321);
     });
 
     it('setting animation works', () => {
@@ -80,33 +80,33 @@ describe('SpriteLab Core Library', () => {
           {name: spriteName},
           'costume',
         ])
-      ).to.equal('costume_label');
+      ).toBe('costume_label');
     });
   });
 
   describe('Sprite Map', () => {
     it('sprite ids increase starting at 0', () => {
       let id1 = coreLibrary.addSprite();
-      expect(id1).to.equal(0);
+      expect(id1).toBe(0);
 
       let id2 = coreLibrary.addSprite();
-      expect(id2).to.equal(1);
+      expect(id2).toBe(1);
 
       let id3 = coreLibrary.addSprite();
-      expect(id3).to.equal(2);
+      expect(id3).toBe(2);
 
-      expect(coreLibrary.getSpriteIdsInUse()).to.have.members([0, 1, 2]);
+      expect(coreLibrary.getSpriteIdsInUse()).toEqual(expect.arrayContaining([0, 1, 2]));
     });
 
     it('deleting a sprite removes its id', () => {
       let id1 = coreLibrary.addSprite();
-      expect(coreLibrary.getSpriteIdsInUse()).to.have.members([0]);
+      expect(coreLibrary.getSpriteIdsInUse()).toEqual(expect.arrayContaining([0]));
 
       coreLibrary.deleteSprite(id1);
-      expect(coreLibrary.getSpriteIdsInUse()).to.have.members([]);
+      expect(coreLibrary.getSpriteIdsInUse()).toEqual(expect.arrayContaining([]));
 
       coreLibrary.addSprite();
-      expect(coreLibrary.getSpriteIdsInUse()).to.have.members([1]);
+      expect(coreLibrary.getSpriteIdsInUse()).toEqual(expect.arrayContaining([1]));
     });
 
     it('can get all animations in use', () => {
@@ -114,20 +114,20 @@ describe('SpriteLab Core Library', () => {
       coreLibrary.addSprite({animation: 'b'});
       coreLibrary.addSprite({animation: 'a'});
 
-      expect(coreLibrary.getAnimationsInUse()).to.have.members(['a', 'b']);
+      expect(coreLibrary.getAnimationsInUse()).toEqual(expect.arrayContaining(['a', 'b']));
     });
 
     it('sprite names are unique', () => {
       let id1 = coreLibrary.addSprite({name: spriteName});
       let sprite1 = coreLibrary.nativeSpriteMap[id1];
 
-      expect(sprite1.name).to.equal(spriteName);
+      expect(sprite1.name).toBe(spriteName);
 
       let id2 = coreLibrary.addSprite({name: spriteName});
       let sprite2 = coreLibrary.nativeSpriteMap[id2];
 
-      expect(sprite1.name).to.equal(undefined);
-      expect(sprite2.name).to.equal(spriteName);
+      expect(sprite1.name).toBeUndefined();
+      expect(sprite2.name).toBe(spriteName);
     });
   });
 
@@ -137,15 +137,15 @@ describe('SpriteLab Core Library', () => {
       let id2 = coreLibrary.addSprite();
       let id3 = coreLibrary.addSprite();
 
-      expect(coreLibrary.getSpriteArray({id: id1})).to.have.members([
+      expect(coreLibrary.getSpriteArray({id: id1})).toEqual(expect.arrayContaining([
         coreLibrary.nativeSpriteMap[id1],
-      ]);
-      expect(coreLibrary.getSpriteArray({id: id2})).to.have.members([
+      ]));
+      expect(coreLibrary.getSpriteArray({id: id2})).toEqual(expect.arrayContaining([
         coreLibrary.nativeSpriteMap[id2],
-      ]);
-      expect(coreLibrary.getSpriteArray({id: id3})).to.have.members([
+      ]));
+      expect(coreLibrary.getSpriteArray({id: id3})).toEqual(expect.arrayContaining([
         coreLibrary.nativeSpriteMap[id3],
-      ]);
+      ]));
     });
 
     it('works with animation groups', () => {
@@ -153,30 +153,30 @@ describe('SpriteLab Core Library', () => {
       let id2 = coreLibrary.addSprite({animation: 'b'});
       let id3 = coreLibrary.addSprite({animation: 'a'});
 
-      expect(coreLibrary.getSpriteArray({costume: 'a'})).to.have.members([
+      expect(coreLibrary.getSpriteArray({costume: 'a'})).toEqual(expect.arrayContaining([
         coreLibrary.nativeSpriteMap[id1],
         coreLibrary.nativeSpriteMap[id3],
-      ]);
-      expect(coreLibrary.getSpriteArray({costume: 'b'})).to.have.members([
+      ]));
+      expect(coreLibrary.getSpriteArray({costume: 'b'})).toEqual(expect.arrayContaining([
         coreLibrary.nativeSpriteMap[id2],
-      ]);
+      ]));
     });
 
     it('works with sprite names', () => {
       let id1 = coreLibrary.addSprite({name: spriteName});
       let id2 = coreLibrary.addSprite({name: 'name2'});
 
-      expect(coreLibrary.getSpriteArray({name: spriteName})).to.have.members([
+      expect(coreLibrary.getSpriteArray({name: spriteName})).toEqual(expect.arrayContaining([
         coreLibrary.nativeSpriteMap[id1],
-      ]);
-      expect(coreLibrary.getSpriteArray({name: 'name2'})).to.have.members([
+      ]));
+      expect(coreLibrary.getSpriteArray({name: 'name2'})).toEqual(expect.arrayContaining([
         coreLibrary.nativeSpriteMap[id2],
-      ]);
+      ]));
 
       let id3 = coreLibrary.addSprite({name: spriteName});
-      expect(coreLibrary.getSpriteArray({name: spriteName})).to.have.members([
+      expect(coreLibrary.getSpriteArray({name: spriteName})).toEqual(expect.arrayContaining([
         coreLibrary.nativeSpriteMap[id3],
-      ]);
+      ]));
     });
   });
 
@@ -185,7 +185,7 @@ describe('SpriteLab Core Library', () => {
       for (let i = 0; i < 50000; i++) {
         coreLibrary.addSprite();
       }
-      expect(coreLibrary.getNumberOfSprites()).to.equal(MAX_NUM_SPRITES);
+      expect(coreLibrary.getNumberOfSprites()).toBe(MAX_NUM_SPRITES);
     });
   });
 
@@ -211,13 +211,11 @@ describe('SpriteLab Core Library', () => {
       for (let i = 0; i < MAX_NUM_SPRITES - SPRITE_WARNING_BUFFER; i++) {
         coreLibrary.addSprite();
       }
-      expect(stubbedDispatch).to.not.have.been.calledWith(
-        displayWorkspaceAlert(
-          workspaceAlertTypes.warning,
-          msg.spriteLimitReached({limit: MAX_NUM_SPRITES}),
-          /* bottom */ true
-        )
-      );
+      expect(stubbedDispatch).not.toHaveBeenCalledWith(displayWorkspaceAlert(
+        workspaceAlertTypes.warning,
+        msg.spriteLimitReached({limit: MAX_NUM_SPRITES}),
+        /* bottom */ true
+      ));
     });
     // Once the total number of sprites created is equal to MAX_NUM_SPRITES, a
     // displayWorkspaceAlert has been dispatched
@@ -268,7 +266,7 @@ describe('SpriteLab Core Library', () => {
       coreLibrary.addBehavior(sprite, behavior2);
       coreLibrary.runBehaviors();
 
-      expect(behaviorLog).to.deep.equal(['behavior 1 ran', 'behavior 2 ran']);
+      expect(behaviorLog).toEqual(['behavior 1 ran', 'behavior 2 ran']);
     });
 
     it('can add behaviors with multiple sprites', () => {
@@ -287,7 +285,7 @@ describe('SpriteLab Core Library', () => {
       coreLibrary.addBehavior(sprite2, behavior);
       coreLibrary.runBehaviors();
 
-      expect(behaviorLog).to.deep.equal([
+      expect(behaviorLog).toEqual([
         'behavior ran for sprite 0',
         'behavior ran for sprite 1',
       ]);
@@ -319,7 +317,7 @@ describe('SpriteLab Core Library', () => {
       coreLibrary.removeBehavior(sprite1, behavior2);
       coreLibrary.runBehaviors();
 
-      expect(behaviorLog).to.deep.equal([
+      expect(behaviorLog).toEqual([
         // First tick:
         'behavior 1 ran for sprite 0',
         'behavior 1 ran for sprite 1',
@@ -356,7 +354,7 @@ describe('SpriteLab Core Library', () => {
       coreLibrary.removeAllBehaviors(sprite0);
       coreLibrary.runBehaviors();
 
-      expect(behaviorLog).to.deep.equal([
+      expect(behaviorLog).toEqual([
         // First tick:
         'behavior 1 ran for sprite 0',
         'behavior 1 ran for sprite 1',
@@ -383,7 +381,7 @@ describe('SpriteLab Core Library', () => {
 
       coreLibrary.runEvents();
 
-      expect(eventLog).to.deep.equal([
+      expect(eventLog).toEqual([
         'when up press ran',
         'while down press ran',
       ]);
@@ -418,7 +416,7 @@ describe('SpriteLab Core Library', () => {
         );
 
         coreLibrary.runEvents();
-        expect(eventLog).to.deep.equal(['when click ran', 'while click ran']);
+        expect(eventLog).toEqual(['when click ran', 'while click ran']);
       });
 
       it('works with animation groups', () => {
@@ -440,7 +438,7 @@ describe('SpriteLab Core Library', () => {
         );
 
         coreLibrary.runEvents();
-        expect(eventLog).to.deep.equal([id1 + ' was clicked']);
+        expect(eventLog).toEqual([id1 + ' was clicked']);
       });
 
       it('calls the callback twice if you click overlapping sprites', () => {
@@ -459,7 +457,7 @@ describe('SpriteLab Core Library', () => {
         );
 
         coreLibrary.runEvents();
-        expect(eventLog).to.deep.equal([
+        expect(eventLog).toEqual([
           id1 + ' was clicked',
           id2 + ' was clicked',
         ]);
@@ -503,7 +501,7 @@ describe('SpriteLab Core Library', () => {
         );
 
         coreLibrary.runEvents();
-        expect(eventLog).to.deep.equal(['when touch ran', 'while touch ran']);
+        expect(eventLog).toEqual(['when touch ran', 'while touch ran']);
       });
 
       it('while touching continues to call the callback', () => {
@@ -519,11 +517,11 @@ describe('SpriteLab Core Library', () => {
         );
         // First tick- expect the callback to be called
         coreLibrary.runEvents();
-        expect(eventLog).to.deep.equal(['while touch ran']);
+        expect(eventLog).toEqual(['while touch ran']);
 
         // Second tick- expect the callback to be called again
         coreLibrary.runEvents();
-        expect(eventLog).to.deep.equal(['while touch ran', 'while touch ran']);
+        expect(eventLog).toEqual(['while touch ran', 'while touch ran']);
       });
 
       it('when touching does not continue to call the callback for the same overlap', () => {
@@ -539,11 +537,11 @@ describe('SpriteLab Core Library', () => {
         );
         // First tick- expect the callback to be called
         coreLibrary.runEvents();
-        expect(eventLog).to.deep.equal(['when touch ran']);
+        expect(eventLog).toEqual(['when touch ran']);
 
         // Second tick- expect the callback not to be called again
         coreLibrary.runEvents();
-        expect(eventLog).to.deep.equal(['when touch ran']);
+        expect(eventLog).toEqual(['when touch ran']);
       });
 
       it('when touching calls the callback again if the sprites stop and start touching', () => {
@@ -560,15 +558,15 @@ describe('SpriteLab Core Library', () => {
         );
         // First tick- expect the callback to be called
         coreLibrary.runEvents();
-        expect(eventLog).to.deep.equal(['when touch ran']);
+        expect(eventLog).toEqual(['when touch ran']);
 
         // Second tick- expect the callback not to be called (overlap returns false)
         coreLibrary.runEvents();
-        expect(eventLog).to.deep.equal(['when touch ran']);
+        expect(eventLog).toEqual(['when touch ran']);
 
         // Third tick- expect the callback to be called again
         coreLibrary.runEvents();
-        expect(eventLog).to.deep.equal(['when touch ran', 'when touch ran']);
+        expect(eventLog).toEqual(['when touch ran', 'when touch ran']);
       });
     });
 
@@ -637,7 +635,7 @@ describe('SpriteLab Core Library', () => {
         );
 
         coreLibrary.runEvents();
-        expect(eventLog).to.deep.equal(['when: 0, 2', 'while: 0, 2']);
+        expect(eventLog).toEqual(['when: 0, 2', 'while: 0, 2']);
       });
 
       it('Calls the callback for each overlap - 1 sprite, 2 targets', () => {
@@ -657,7 +655,7 @@ describe('SpriteLab Core Library', () => {
         );
 
         coreLibrary.runEvents();
-        expect(eventLog).to.deep.equal(['when: 0, 2', 'when: 0, 3']);
+        expect(eventLog).toEqual(['when: 0, 2', 'when: 0, 3']);
       });
 
       it('Calls the callback for each overlap - 2 sprites, 1 target', () => {
@@ -677,7 +675,7 @@ describe('SpriteLab Core Library', () => {
         );
 
         coreLibrary.runEvents();
-        expect(eventLog).to.deep.equal(['when: 0, 2', 'when: 1, 3']);
+        expect(eventLog).toEqual(['when: 0, 2', 'when: 1, 3']);
       });
 
       it('Calls the callback for each overlap - 2 sprites, 2 targets', () => {
@@ -697,7 +695,7 @@ describe('SpriteLab Core Library', () => {
         );
 
         coreLibrary.runEvents();
-        expect(eventLog).to.deep.equal([
+        expect(eventLog).toEqual([
           'while: 0, 2',
           'while: 0, 3',
           'while: 1, 2',
@@ -717,7 +715,7 @@ describe('SpriteLab Core Library', () => {
             )
         );
         coreLibrary.runEvents();
-        expect(eventLog).to.deep.equal(['when: 0, 2']);
+        expect(eventLog).toEqual(['when: 0, 2']);
 
         // 'b' sprite changes to 'c' sprite
         spriteCommands.setAnimation.apply(coreLibrary, [
@@ -726,7 +724,7 @@ describe('SpriteLab Core Library', () => {
         ]);
         coreLibrary.runEvents();
         // Event does not fire
-        expect(eventLog).to.deep.equal(['when: 0, 2']);
+        expect(eventLog).toEqual(['when: 0, 2']);
 
         // 'c' sprite changes back to 'b' sprite
         spriteCommands.setAnimation.apply(coreLibrary, [
@@ -735,7 +733,7 @@ describe('SpriteLab Core Library', () => {
         ]);
         coreLibrary.runEvents();
         // Event does fire again
-        expect(eventLog).to.deep.equal(['when: 0, 2', 'when: 0, 2']);
+        expect(eventLog).toEqual(['when: 0, 2', 'when: 0, 2']);
       });
 
       it('Collision events with the same costume group work', () => {
@@ -755,7 +753,7 @@ describe('SpriteLab Core Library', () => {
         );
 
         coreLibrary.runEvents();
-        expect(eventLog).to.deep.equal(['while: 0, 1', 'while: 1, 0']);
+        expect(eventLog).toEqual(['while: 0, 1', 'while: 1, 0']);
       });
     });
   });

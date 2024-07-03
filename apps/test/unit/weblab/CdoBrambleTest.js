@@ -2,7 +2,7 @@ import sinon from 'sinon';
 
 import CdoBramble from '@cdo/apps/weblab/CdoBramble';
 
-import {assert, expect} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai';
 
 const DISALLOWED_HTML_TAGS = ['script', 'a'];
 const VALID_HTML = `<!DOCTYPE html>
@@ -97,8 +97,8 @@ describe('CdoBramble', () => {
           .callsFake(callback => callback());
         sinon.stub(cdoBramble, 'syncFiles');
         cdoBramble.initProject(() => {});
-        expect(cdoBramble.createProjectRootDir).to.have.been.calledOnce;
-        expect(cdoBramble.syncFiles).to.have.been.calledOnce;
+        expect(cdoBramble.createProjectRootDir).toHaveBeenCalledTimes(1);
+        expect(cdoBramble.syncFiles).toHaveBeenCalledTimes(1);
       });
 
       it('does not sync files if root directory creation fails', () => {
@@ -107,8 +107,8 @@ describe('CdoBramble', () => {
           .callsFake(callback => callback(new Error()));
         sinon.stub(cdoBramble, 'syncFiles');
         cdoBramble.initProject(() => {});
-        expect(cdoBramble.createProjectRootDir).to.have.been.calledOnce;
-        expect(cdoBramble.syncFiles).to.not.have.been.called;
+        expect(cdoBramble.createProjectRootDir).toHaveBeenCalledTimes(1);
+        expect(cdoBramble.syncFiles).not.toHaveBeenCalled();
       });
     });
   });
@@ -116,11 +116,9 @@ describe('CdoBramble', () => {
   describe('config', () => {
     it('sets dynamic values from state', () => {
       const actualConfig = cdoBramble.config();
-      expect(actualConfig.url).to.equal(brambleUrl);
-      expect(actualConfig.capacity).to.equal(storeState.maxProjectCapacity);
-      expect(actualConfig.initialUIState.readOnly).to.equal(
-        storeState.pageConstants.isReadOnlyWorkspace
-      );
+      expect(actualConfig.url).toBe(brambleUrl);
+      expect(actualConfig.capacity).toBe(storeState.maxProjectCapacity);
+      expect(actualConfig.initialUIState.readOnly).toBe(storeState.pageConstants.isReadOnlyWorkspace);
     });
   });
 
@@ -140,13 +138,12 @@ describe('CdoBramble', () => {
       });
 
       it('resets version and local changes', () => {
-        expect(cdoBramble.lastSyncedVersionId).to.equal(projectVersion);
-        expect(cdoBramble.recentChanges.length).to.equal(0);
+        expect(cdoBramble.lastSyncedVersionId).toBe(projectVersion);
+        expect(cdoBramble.recentChanges.length).toBe(0);
       });
 
       it('saves local changes to server', () => {
-        expect(cdoBramble.recursivelySaveChangesToServer).to.have.been
-          .calledOnce;
+        expect(cdoBramble.recursivelySaveChangesToServer).toHaveBeenCalledTimes(1);
       });
     });
 
@@ -169,8 +166,8 @@ describe('CdoBramble', () => {
 
       it('resets version and local changes', () => {
         cdoBramble.syncFiles([{name: 'index.html'}], projectVersion, () => {});
-        expect(cdoBramble.lastSyncedVersionId).to.equal(projectVersion);
-        expect(cdoBramble.recentChanges.length).to.equal(0);
+        expect(cdoBramble.lastSyncedVersionId).toBe(projectVersion);
+        expect(cdoBramble.recentChanges.length).toBe(0);
       });
 
       it('clears any registered beforeFirstWrite hook', () => {
@@ -206,15 +203,15 @@ describe('CdoBramble', () => {
     });
 
     it('adds a change operation for the file', () => {
-      expect(cdoBramble.recentChanges.length).to.equal(0);
+      expect(cdoBramble.recentChanges.length).toBe(0);
       cdoBramble.handleFileChange(projectPath + filename);
-      expect(cdoBramble.recentChanges).to.deep.equal([fileChange]);
+      expect(cdoBramble.recentChanges).toEqual([fileChange]);
     });
 
     it('does not add a change operation if one already exists for the file', () => {
       cdoBramble.recentChanges = [{...fileChange}];
       cdoBramble.handleFileChange(projectPath + filename);
-      expect(cdoBramble.recentChanges).to.deep.equal([fileChange]);
+      expect(cdoBramble.recentChanges).toEqual([fileChange]);
     });
 
     it('invokes onProjectChangedCallbacks', () => {
@@ -222,8 +219,8 @@ describe('CdoBramble', () => {
       const callbackSpy2 = sinon.stub();
       cdoBramble.onProjectChangedCallbacks = [callbackSpy1, callbackSpy2];
       cdoBramble.handleFileChange('index.html');
-      expect(callbackSpy1).to.have.been.calledOnce;
-      expect(callbackSpy2).to.have.been.calledOnce;
+      expect(callbackSpy1).toHaveBeenCalledTimes(1);
+      expect(callbackSpy2).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -246,7 +243,7 @@ describe('CdoBramble', () => {
       cdoBramble.detectDisallowedHtml('/index.html', callbackSpy);
 
       expect(callbackSpy).to.have.been.calledOnceWith(error);
-      expect(cdoBramble.domFromString).not.to.have.been.called;
+      expect(cdoBramble.domFromString).not.toHaveBeenCalled();
     });
 
     it('invokes callback with disallowed content', () => {
@@ -291,8 +288,8 @@ describe('CdoBramble', () => {
 
       cdoBramble.preprocessHtml('/index.html', callbackSpy);
 
-      expect(callbackSpy).to.have.been.calledOnce;
-      expect(cdoBramble.api.openDisallowedHtmlDialog).not.to.have.been.called;
+      expect(callbackSpy).toHaveBeenCalledTimes(1);
+      expect(cdoBramble.api.openDisallowedHtmlDialog).not.toHaveBeenCalled();
     });
 
     it('no-ops if no disallowed tags are detected', () => {
@@ -304,8 +301,8 @@ describe('CdoBramble', () => {
 
       cdoBramble.preprocessHtml('/index.html', callbackSpy);
 
-      expect(callbackSpy).to.have.been.calledOnce;
-      expect(cdoBramble.api.openDisallowedHtmlDialog).not.to.have.been.called;
+      expect(callbackSpy).toHaveBeenCalledTimes(1);
+      expect(cdoBramble.api.openDisallowedHtmlDialog).not.toHaveBeenCalled();
     });
 
     it('writes HTML file without disallowed content when dialog is closed', () => {
@@ -332,7 +329,7 @@ describe('CdoBramble', () => {
 
       cdoBramble.preprocessHtml(fullPath, callbackSpy);
 
-      expect(cdoBramble.brambleProxy.enableReadOnly).to.have.been.calledOnce;
+      expect(cdoBramble.brambleProxy.enableReadOnly).toHaveBeenCalledTimes(1);
       expect(
         cdoBramble.api.openDisallowedHtmlDialog
       ).to.have.been.calledOnceWith('index.html', disallowedTags);
@@ -340,16 +337,16 @@ describe('CdoBramble', () => {
         fullPath,
         newDom
       );
-      expect(cdoBramble.brambleProxy.disableReadOnly).to.have.been.calledOnce;
-      expect(callbackSpy).to.have.been.calledOnce;
+      expect(cdoBramble.brambleProxy.disableReadOnly).toHaveBeenCalledTimes(1);
+      expect(callbackSpy).toHaveBeenCalledTimes(1);
     });
   });
 
   describe('onFileDeleted', () => {
     it('adds a delete operation for the file', () => {
-      expect(cdoBramble.recentChanges.length).to.equal(0);
+      expect(cdoBramble.recentChanges.length).toBe(0);
       cdoBramble.onFileDeleted(projectPath + 'index.html');
-      expect(cdoBramble.recentChanges).to.deep.equal([
+      expect(cdoBramble.recentChanges).toEqual([
         {operation: 'delete', file: 'index.html'},
       ]);
     });
@@ -359,8 +356,8 @@ describe('CdoBramble', () => {
       const callbackSpy2 = sinon.stub();
       cdoBramble.onProjectChangedCallbacks = [callbackSpy1, callbackSpy2];
       cdoBramble.onFileDeleted('index.html');
-      expect(callbackSpy1).to.have.been.calledOnce;
-      expect(callbackSpy2).to.have.been.calledOnce;
+      expect(callbackSpy1).toHaveBeenCalledTimes(1);
+      expect(callbackSpy2).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -375,7 +372,7 @@ describe('CdoBramble', () => {
         {operation: 'delete', fileDataPath: 'style.css'},
       ];
       cdoBramble.onFileRenamed(oldPath, newPath);
-      expect(cdoBramble.recentChanges).to.deep.equal([
+      expect(cdoBramble.recentChanges).toEqual([
         {operation: 'change', fileDataPath: 'other.html'},
         {operation: 'change', fileDataPath: newPath},
         {operation: 'delete', fileDataPath: 'style.css'},
@@ -384,9 +381,9 @@ describe('CdoBramble', () => {
     });
 
     it('adds a rename operation for the file', () => {
-      expect(cdoBramble.recentChanges.length).to.equal(0);
+      expect(cdoBramble.recentChanges.length).toBe(0);
       cdoBramble.onFileRenamed(oldPath, newPath);
-      expect(cdoBramble.recentChanges).to.deep.equal([
+      expect(cdoBramble.recentChanges).toEqual([
         {operation: 'rename', file: 'old.html', newFile: 'new.html'},
       ]);
     });
@@ -396,8 +393,8 @@ describe('CdoBramble', () => {
       const callbackSpy2 = sinon.stub();
       cdoBramble.onProjectChangedCallbacks = [callbackSpy1, callbackSpy2];
       cdoBramble.onFileRenamed(oldPath, newPath);
-      expect(callbackSpy1).to.have.been.calledOnce;
-      expect(callbackSpy2).to.have.been.calledOnce;
+      expect(callbackSpy1).toHaveBeenCalledTimes(1);
+      expect(callbackSpy2).toHaveBeenCalledTimes(1);
     });
   });
 
@@ -421,11 +418,11 @@ describe('CdoBramble', () => {
 
     it('uploads all files in Bramble file system to server', done => {
       cdoBramble.uploadAllFilesToServer((error, wasSuccessful) => {
-        expect(error).to.equal(null);
-        expect(wasSuccessful).to.be.true;
-        expect(cdoBramble.getAllFileData).to.have.been.calledOnce;
-        expect(cdoBramble.api.changeProjectFile).to.have.been.calledTwice;
-        expect(cdoBramble.lastSyncedVersionId).to.equal('new-version-id');
+        expect(error).toBeNull();
+        expect(wasSuccessful).toBe(true);
+        expect(cdoBramble.getAllFileData).toHaveBeenCalledTimes(1);
+        expect(cdoBramble.api.changeProjectFile).toHaveBeenCalledTimes(2);
+        expect(cdoBramble.lastSyncedVersionId).toBe('new-version-id');
         done();
       });
     });
@@ -437,10 +434,10 @@ describe('CdoBramble', () => {
         .callsFake(callback => callback(new Error(), null));
 
       cdoBramble.uploadAllFilesToServer((error, wasSuccessful) => {
-        expect(error).not.to.equal(null);
-        expect(wasSuccessful).to.be.undefined;
-        expect(cdoBramble.getAllFileData).to.have.been.calledOnce;
-        expect(cdoBramble.api.changeProjectFile).not.to.have.been.called;
+        expect(error).not.toBeNull();
+        expect(wasSuccessful).toBeUndefined();
+        expect(cdoBramble.getAllFileData).toHaveBeenCalledTimes(1);
+        expect(cdoBramble.api.changeProjectFile).not.toHaveBeenCalled();
         done();
       });
     });
@@ -454,10 +451,10 @@ describe('CdoBramble', () => {
         );
 
       cdoBramble.uploadAllFilesToServer((error, wasSuccessful) => {
-        expect(error).not.to.equal(null);
-        expect(wasSuccessful).to.be.undefined;
-        expect(cdoBramble.getAllFileData).to.have.been.calledOnce;
-        expect(cdoBramble.api.changeProjectFile).to.have.been.calledOnce;
+        expect(error).not.toBeNull();
+        expect(wasSuccessful).toBeUndefined();
+        expect(cdoBramble.getAllFileData).toHaveBeenCalledTimes(1);
+        expect(cdoBramble.api.changeProjectFile).toHaveBeenCalledTimes(1);
         done();
       });
     });
@@ -493,34 +490,34 @@ describe('CdoBramble', () => {
           'old.html',
           'new.html'
         );
-        expect(cdoBramble.getFileData).to.have.been.calledOnce;
+        expect(cdoBramble.getFileData).toHaveBeenCalledTimes(1);
         expect(cdoBramble.api.changeProjectFile).to.have.been.calledOnceWith(
           'index.html',
           'my file data'
         );
-        expect(console.error).not.to.have.been.called;
+        expect(console.error).not.toHaveBeenCalled();
         done();
       });
     });
 
     it('invokes the callback if there are no changes', done => {
       cdoBramble.recursivelySaveChangesToServer([], 0, () => {
-        expect(cdoBramble.api.deleteProjectFile).not.to.have.been.called;
-        expect(cdoBramble.api.renameProjectFile).not.to.have.been.called;
-        expect(cdoBramble.getFileData).not.to.have.been.called;
-        expect(cdoBramble.api.changeProjectFile).not.to.have.been.called;
-        expect(console.error).not.to.have.been.called;
+        expect(cdoBramble.api.deleteProjectFile).not.toHaveBeenCalled();
+        expect(cdoBramble.api.renameProjectFile).not.toHaveBeenCalled();
+        expect(cdoBramble.getFileData).not.toHaveBeenCalled();
+        expect(cdoBramble.api.changeProjectFile).not.toHaveBeenCalled();
+        expect(console.error).not.toHaveBeenCalled();
         done();
       });
     });
 
     it('invokes the callback if currentIndex is invalid', done => {
       cdoBramble.recursivelySaveChangesToServer([{}], 1, () => {
-        expect(cdoBramble.api.deleteProjectFile).not.to.have.been.called;
-        expect(cdoBramble.api.renameProjectFile).not.to.have.been.called;
-        expect(cdoBramble.getFileData).not.to.have.been.called;
-        expect(cdoBramble.api.changeProjectFile).not.to.have.been.called;
-        expect(console.error).not.to.have.been.called;
+        expect(cdoBramble.api.deleteProjectFile).not.toHaveBeenCalled();
+        expect(cdoBramble.api.renameProjectFile).not.toHaveBeenCalled();
+        expect(cdoBramble.getFileData).not.toHaveBeenCalled();
+        expect(cdoBramble.api.changeProjectFile).not.toHaveBeenCalled();
+        expect(console.error).not.toHaveBeenCalled();
         done();
       });
     });
@@ -536,9 +533,9 @@ describe('CdoBramble', () => {
         {operation: 'change', file: 'index.html'},
       ];
       cdoBramble.recursivelySaveChangesToServer(changes, 0, () => {
-        expect(cdoBramble.api.deleteProjectFile).to.have.been.calledOnce;
-        expect(cdoBramble.getFileData).to.have.been.calledOnce;
-        expect(cdoBramble.api.changeProjectFile).to.have.been.calledOnce;
+        expect(cdoBramble.api.deleteProjectFile).toHaveBeenCalledTimes(1);
+        expect(cdoBramble.getFileData).toHaveBeenCalledTimes(1);
+        expect(cdoBramble.api.changeProjectFile).toHaveBeenCalledTimes(1);
         done();
       });
     });
@@ -556,12 +553,12 @@ describe('CdoBramble', () => {
         {operation: 'rename', file: 'old.css', newFile: 'new.css'},
       ];
       cdoBramble.recursivelySaveChangesToServer(changes, 0, () => {
-        expect(cdoBramble.lastSyncedVersionId).to.equal('new-version-id');
-        expect(cdoBramble.api.deleteProjectFile).not.to.have.been.called;
-        expect(cdoBramble.api.renameProjectFile).to.have.been.calledOnce;
-        expect(cdoBramble.getFileData).not.to.have.been.called;
-        expect(cdoBramble.api.changeProjectFile).not.to.have.been.called;
-        expect(console.error).not.to.have.been.called;
+        expect(cdoBramble.lastSyncedVersionId).toBe('new-version-id');
+        expect(cdoBramble.api.deleteProjectFile).not.toHaveBeenCalled();
+        expect(cdoBramble.api.renameProjectFile).toHaveBeenCalledTimes(1);
+        expect(cdoBramble.getFileData).not.toHaveBeenCalled();
+        expect(cdoBramble.api.changeProjectFile).not.toHaveBeenCalled();
+        expect(console.error).not.toHaveBeenCalled();
         done();
       });
     });
@@ -586,7 +583,7 @@ describe('CdoBramble', () => {
         {name: 'style.css', url: '/v3/files/a1b2c3/style.css'},
       ];
       cdoBramble.recursivelyWriteFiles(files, 0, () => {
-        expect(cdoBramble.downloadFile).to.have.been.calledTwice;
+        expect(cdoBramble.downloadFile).toHaveBeenCalledTimes(2);
         assert(
           cdoBramble.downloadFile
             .getCall(0)
@@ -597,7 +594,7 @@ describe('CdoBramble', () => {
             .getCall(1)
             .calledWith('/v3/files/a1b2c3/style.css')
         );
-        expect(cdoBramble.writeFileData).to.have.been.calledTwice;
+        expect(cdoBramble.writeFileData).toHaveBeenCalledTimes(2);
         assert(
           cdoBramble.writeFileData
             .getCall(0)
@@ -608,21 +605,21 @@ describe('CdoBramble', () => {
             .getCall(1)
             .calledWith(projectPath + 'style.css')
         );
-        expect(console.error).not.to.have.been.called;
+        expect(console.error).not.toHaveBeenCalled();
         done();
       });
     });
 
     it('invokes the callback if there are no files', done => {
       cdoBramble.recursivelyWriteFiles([], 0, () => {
-        expect(cdoBramble.downloadFile).not.to.have.been.called;
+        expect(cdoBramble.downloadFile).not.toHaveBeenCalled();
         done();
       });
     });
 
     it('invokes the callback if currentIndex is invalid', done => {
       cdoBramble.recursivelyWriteFiles([{}], 1, () => {
-        expect(cdoBramble.downloadFile).not.to.have.been.called;
+        expect(cdoBramble.downloadFile).not.toHaveBeenCalled();
         done();
       });
     });
@@ -642,8 +639,8 @@ describe('CdoBramble', () => {
         {name: 'other.html', url: '/v3/files/abc/other.html'},
       ];
       cdoBramble.recursivelyWriteFiles(files, 0, () => {
-        expect(cdoBramble.downloadFile).to.have.been.calledTwice;
-        expect(cdoBramble.writeFileData).to.have.been.calledOnce;
+        expect(cdoBramble.downloadFile).toHaveBeenCalledTimes(2);
+        expect(cdoBramble.writeFileData).toHaveBeenCalledTimes(1);
         done();
       });
     });
@@ -664,16 +661,16 @@ describe('CdoBramble', () => {
 
     it('invokes the callback if there are no source files', done => {
       cdoBramble.recursivelyWriteSourceFiles([], 0, () => {
-        expect(cdoBramble.downloadFile).not.to.have.been.called;
-        expect(cdoBramble.writeFileData).not.to.have.been.called;
+        expect(cdoBramble.downloadFile).not.toHaveBeenCalled();
+        expect(cdoBramble.writeFileData).not.toHaveBeenCalled();
         done();
       });
     });
 
     it('invokes the callback if currentIndex is invalid', done => {
       cdoBramble.recursivelyWriteSourceFiles([{}], 1, () => {
-        expect(cdoBramble.downloadFile).not.to.have.been.called;
-        expect(cdoBramble.writeFileData).not.to.have.been.called;
+        expect(cdoBramble.downloadFile).not.toHaveBeenCalled();
+        expect(cdoBramble.writeFileData).not.toHaveBeenCalled();
         done();
       });
     });
@@ -684,9 +681,9 @@ describe('CdoBramble', () => {
         {name: 'index.html'}, // no URL or data
       ];
       cdoBramble.recursivelyWriteSourceFiles(invalidFiles, 0, () => {
-        expect(console.error).to.have.been.calledTwice;
-        expect(cdoBramble.downloadFile).not.to.have.been.called;
-        expect(cdoBramble.writeFileData).not.to.have.been.called;
+        expect(console.error).toHaveBeenCalledTimes(2);
+        expect(cdoBramble.downloadFile).not.toHaveBeenCalled();
+        expect(cdoBramble.writeFileData).not.toHaveBeenCalled();
         done();
       });
     });
@@ -694,8 +691,8 @@ describe('CdoBramble', () => {
     it('downloads file before writing if it has a url', done => {
       const file = {name: 'index.html', url: '/v3/files/1234/index.html'};
       cdoBramble.recursivelyWriteSourceFiles([file], 0, () => {
-        expect(cdoBramble.downloadFile).to.have.been.calledOnce;
-        expect(cdoBramble.writeFileData).to.have.been.calledOnce;
+        expect(cdoBramble.downloadFile).toHaveBeenCalledTimes(1);
+        expect(cdoBramble.writeFileData).toHaveBeenCalledTimes(1);
         done();
       });
     });
@@ -703,8 +700,8 @@ describe('CdoBramble', () => {
     it('writes file if it has data', done => {
       const file = {name: 'index.html', data: '<div></div>'};
       cdoBramble.recursivelyWriteSourceFiles([file], 0, () => {
-        expect(cdoBramble.downloadFile).not.to.have.been.called;
-        expect(cdoBramble.writeFileData).to.have.been.calledOnce;
+        expect(cdoBramble.downloadFile).not.toHaveBeenCalled();
+        expect(cdoBramble.writeFileData).toHaveBeenCalledTimes(1);
         done();
       });
     });
@@ -721,9 +718,9 @@ describe('CdoBramble', () => {
         {name: 'other.html', data: '<div></div>'}, // will succeed
       ];
       cdoBramble.recursivelyWriteSourceFiles(files, 0, () => {
-        expect(cdoBramble.downloadFile).to.have.been.calledOnce;
-        expect(cdoBramble.writeFileData).to.have.been.calledOnce;
-        expect(console.error).to.have.been.calledOnce;
+        expect(cdoBramble.downloadFile).toHaveBeenCalledTimes(1);
+        expect(cdoBramble.writeFileData).toHaveBeenCalledTimes(1);
+        expect(console.error).toHaveBeenCalledTimes(1);
         done();
       });
     });
@@ -745,7 +742,7 @@ describe('CdoBramble', () => {
         .callsFake(callback => callback(null, userFiles));
 
       cdoBramble.validateProjectChanged(projectChanged => {
-        expect(projectChanged).to.be.true;
+        expect(projectChanged).toBe(true);
         done();
       });
     });
@@ -757,7 +754,7 @@ describe('CdoBramble', () => {
         .callsFake(callback => callback(null, userFiles));
 
       cdoBramble.validateProjectChanged(projectChanged => {
-        expect(projectChanged).to.be.true;
+        expect(projectChanged).toBe(true);
         done();
       });
     });
@@ -769,7 +766,7 @@ describe('CdoBramble', () => {
         .callsFake(callback => callback(null, userFiles));
 
       cdoBramble.validateProjectChanged(projectChanged => {
-        expect(projectChanged).to.be.true;
+        expect(projectChanged).toBe(true);
         done();
       });
     });
@@ -792,7 +789,7 @@ describe('CdoBramble', () => {
         .callsFake(callback => callback(null, userFiles));
 
       cdoBramble.validateProjectChanged(projectChanged => {
-        expect(projectChanged).to.be.true;
+        expect(projectChanged).toBe(true);
         done();
       });
     });
@@ -811,7 +808,7 @@ describe('CdoBramble', () => {
         .callsFake(callback => callback(null, [...files]));
 
       cdoBramble.validateProjectChanged(projectChanged => {
-        expect(projectChanged).to.be.false;
+        expect(projectChanged).toBe(false);
         done();
       });
     });
@@ -828,7 +825,7 @@ describe('CdoBramble', () => {
         .callsFake(callback => callback(null, userFiles));
 
       cdoBramble.validateProjectChanged(projectChanged => {
-        expect(projectChanged).to.be.false;
+        expect(projectChanged).toBe(false);
         done();
       });
     });

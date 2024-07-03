@@ -3,7 +3,7 @@ import React from 'react';
 
 import ProgrammingExpressionOverview from '@cdo/apps/templates/codeDocs/ProgrammingExpressionOverview';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('ProgrammingExpressionOverview', () => {
   let defaultProgrammingExpression;
@@ -43,10 +43,8 @@ describe('ProgrammingExpressionOverview', () => {
       />
     );
 
-    expect(wrapper.find('h1').text()).to.contain(
-      defaultProgrammingExpression.name
-    );
-    expect(wrapper.find('h2').map(h => h.text())).to.eql([
+    expect(wrapper.find('h1').text()).toContain(defaultProgrammingExpression.name);
+    expect(wrapper.find('h2').map(h => h.text())).toEqual([
       'Examples',
       'Syntax',
       'Parameters',
@@ -57,19 +55,17 @@ describe('ProgrammingExpressionOverview', () => {
 
     expect(
       wrapper.find('EnhancedSafeMarkdown').at(0).props().markdown
-    ).to.equal(defaultProgrammingExpression.content);
-    expect(
-      wrapper.find('EnhancedSafeMarkdown').at(1).props().markdown
-    ).to.contain(defaultProgrammingExpression.syntax);
+    ).toBe(defaultProgrammingExpression.content);
+    expect(wrapper.find('EnhancedSafeMarkdown').at(1).props().markdown).toEqual(expect.arrayContaining([defaultProgrammingExpression.syntax]));
     expect(
       wrapper.find('EnhancedSafeMarkdown').at(2).props().markdown
-    ).to.equal(defaultProgrammingExpression.tips);
-    expect(
-      wrapper.find('EnhancedSafeMarkdown').at(3).props().markdown
-    ).to.contain(defaultProgrammingExpression.externalDocumentation);
+    ).toBe(defaultProgrammingExpression.tips);
+    expect(wrapper.find('EnhancedSafeMarkdown').at(3).props().markdown).toEqual(
+      expect.arrayContaining([defaultProgrammingExpression.externalDocumentation])
+    );
 
-    expect(wrapper.text()).to.contain(defaultProgrammingExpression.category);
-    expect(wrapper.text()).to.contain(defaultProgrammingExpression.returnValue);
+    expect(wrapper.text()).toContain(defaultProgrammingExpression.category);
+    expect(wrapper.text()).toContain(defaultProgrammingExpression.returnValue);
   });
 
   it('hides the examples header if no syntax is provided', () => {
@@ -79,8 +75,8 @@ describe('ProgrammingExpressionOverview', () => {
         programmingExpression={defaultProgrammingExpression}
       />
     );
-    expect(wrapper.find('h2').length).to.be.greaterThan(0);
-    expect(wrapper.find('h2').map(h => h.text())).to.not.include('Examples');
+    expect(wrapper.find('h2').length).toBeGreaterThan(0);
+    expect(wrapper.find('h2').map(h => h.text())).not.toContain('Examples');
   });
 
   it('hides the syntax header if no syntax is provided', () => {
@@ -90,8 +86,8 @@ describe('ProgrammingExpressionOverview', () => {
         programmingExpression={defaultProgrammingExpression}
       />
     );
-    expect(wrapper.find('h2').length).to.be.greaterThan(0);
-    expect(wrapper.find('h2').map(h => h.text())).to.not.include('Syntax');
+    expect(wrapper.find('h2').length).toBeGreaterThan(0);
+    expect(wrapper.find('h2').map(h => h.text())).not.toContain('Syntax');
   });
 
   it('hides the parameters headers if no parameters are provided', () => {
@@ -101,8 +97,8 @@ describe('ProgrammingExpressionOverview', () => {
         programmingExpression={defaultProgrammingExpression}
       />
     );
-    expect(wrapper.find('h2').length).to.be.greaterThan(0);
-    expect(wrapper.find('h2').map(h => h.text())).to.not.include('Parameters');
+    expect(wrapper.find('h2').length).toBeGreaterThan(0);
+    expect(wrapper.find('h2').map(h => h.text())).not.toContain('Parameters');
   });
 
   it('hides the returns header if no returns is provided', () => {
@@ -112,8 +108,8 @@ describe('ProgrammingExpressionOverview', () => {
         programmingExpression={defaultProgrammingExpression}
       />
     );
-    expect(wrapper.find('h2').length).to.be.greaterThan(0);
-    expect(wrapper.find('h2').map(h => h.text())).to.not.include('Returns');
+    expect(wrapper.find('h2').length).toBeGreaterThan(0);
+    expect(wrapper.find('h2').map(h => h.text())).not.toContain('Returns');
   });
 
   it('hides the tips header if no tips is provided', () => {
@@ -123,8 +119,8 @@ describe('ProgrammingExpressionOverview', () => {
         programmingExpression={defaultProgrammingExpression}
       />
     );
-    expect(wrapper.find('h2').length).to.be.greaterThan(0);
-    expect(wrapper.find('h2').map(h => h.text())).to.not.include('Tips');
+    expect(wrapper.find('h2').length).toBeGreaterThan(0);
+    expect(wrapper.find('h2').map(h => h.text())).not.toContain('Tips');
   });
 
   it('hides the additional information header if no external documentation is provided', () => {
@@ -134,10 +130,8 @@ describe('ProgrammingExpressionOverview', () => {
         programmingExpression={defaultProgrammingExpression}
       />
     );
-    expect(wrapper.find('h2').length).to.be.greaterThan(0);
-    expect(wrapper.find('h2').map(h => h.text())).to.not.include(
-      'Additional Information'
-    );
+    expect(wrapper.find('h2').length).toBeGreaterThan(0);
+    expect(wrapper.find('h2').map(h => h.text())).not.toContain('Additional Information');
   });
 
   it('shows block in title if blockName is provided', () => {
@@ -150,11 +144,11 @@ describe('ProgrammingExpressionOverview', () => {
         }}
       />
     );
-    expect(wrapper.find('h3').length).to.equal(0);
-    expect(wrapper.find('img').length).to.equal(0);
+    expect(wrapper.find('h3').length).toBe(0);
+    expect(wrapper.find('img').length).toBe(0);
     expect(
       wrapper.find('div[title="gamelab_location_picker"]').length
-    ).to.equal(1);
+    ).toBe(1);
   });
 
   it('shows image instead of name if image is provided', () => {
@@ -166,9 +160,9 @@ describe('ProgrammingExpressionOverview', () => {
         }}
       />
     );
-    expect(wrapper.find('h3').length).to.equal(0);
-    expect(wrapper.find('img').length).to.equal(1);
-    expect(wrapper.find('img').props().src).to.equal('images.code.org/img');
+    expect(wrapper.find('h3').length).toBe(0);
+    expect(wrapper.find('img').length).toBe(1);
+    expect(wrapper.find('img').props().src).toBe('images.code.org/img');
   });
 
   it('shows video if one is provided', () => {
@@ -177,7 +171,7 @@ describe('ProgrammingExpressionOverview', () => {
         programmingExpression={{...defaultProgrammingExpression, video: {}}}
       />
     );
-    expect(wrapper.find('#programming-expression-video').length).to.equal(1);
+    expect(wrapper.find('#programming-expression-video').length).toBe(1);
   });
 
   it('uses hsl color if array is provided for color', () => {
@@ -189,9 +183,7 @@ describe('ProgrammingExpressionOverview', () => {
         }}
       />
     );
-    expect(wrapper.find('span').props().style.backgroundColor).to.equal(
-      'hsl(355,70%, 70%)'
-    );
+    expect(wrapper.find('span').props().style.backgroundColor).toBe('hsl(355,70%, 70%)');
   });
 
   it('uses hex color if string is provided for color', () => {
@@ -203,9 +195,7 @@ describe('ProgrammingExpressionOverview', () => {
         }}
       />
     );
-    expect(wrapper.find('span').props().style.backgroundColor).to.equal(
-      '#fff176'
-    );
+    expect(wrapper.find('span').props().style.backgroundColor).toBe('#fff176');
   });
 
   it('handles null color', () => {
@@ -217,6 +207,6 @@ describe('ProgrammingExpressionOverview', () => {
         }}
       />
     );
-    expect(wrapper.find('span').props().style.backgroundColor).to.be.null;
+    expect(wrapper.find('span').props().style.backgroundColor).toBeNull();
   });
 });

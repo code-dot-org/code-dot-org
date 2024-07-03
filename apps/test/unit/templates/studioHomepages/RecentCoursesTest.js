@@ -8,7 +8,7 @@ import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
 import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
 import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai';
 
 import {
   courses,
@@ -55,19 +55,19 @@ describe('RecentCourses', () => {
           </div>
         )
       );
-      expect(wrapper.find('TopCourse').exists()).to.be.false;
-      expect(wrapper.find('CourseCard').exists()).to.be.false;
-      expect(wrapper.find('SeeMoreCourses').exists()).to.be.false;
+      expect(wrapper.find('TopCourse').exists()).toBe(false);
+      expect(wrapper.find('CourseCard').exists()).toBe(false);
+      expect(wrapper.find('SeeMoreCourses').exists()).toBe(false);
     });
 
     it('SetUpCourses has no course when topCourse is null', () => {
       const wrapper = shallow(<RecentCourses topCourse={null} />);
-      expect(wrapper.find('SetUpCourses').prop('hasCourse')).to.be.false;
+      expect(wrapper.find('SetUpCourses').prop('hasCourse')).toBe(false);
     });
 
     it('SetUpCourses has no course when topCourse is undefined', () => {
       const wrapper = shallow(<RecentCourses topCourse={undefined} />);
-      expect(wrapper.find('SetUpCourses').prop('hasCourse')).to.be.false;
+      expect(wrapper.find('SetUpCourses').prop('hasCourse')).toBe(false);
     });
 
     it('shows a TopCourse if there is one course', () => {
@@ -89,8 +89,8 @@ describe('RecentCourses', () => {
           </div>
         )
       );
-      expect(wrapper.find('CourseCard').exists()).to.be.false;
-      expect(wrapper.find('SeeMoreCourses').exists()).to.be.false;
+      expect(wrapper.find('CourseCard').exists()).toBe(false);
+      expect(wrapper.find('SeeMoreCourses').exists()).toBe(false);
     });
 
     it('shows TopCourse and 2 CourseCards when there are 3 courses', () => {

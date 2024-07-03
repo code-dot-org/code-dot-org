@@ -3,7 +3,7 @@ import sinon from 'sinon';
 import DropletAutocompleteParameterTooltipManager from '@cdo/apps/blockTooltips/DropletAutocompleteParameterTooltipManager.js';
 import commonI18n from '@cdo/locale';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 import {DropletTooltipManagerStub} from './stubs';
 
@@ -52,7 +52,7 @@ describe('DropletAutocompleteParameterTooltipManager', () => {
       let el = document.createElement('div');
       el.innerHTML = html;
       let a = el.querySelector('.tooltip-choose-link a');
-      expect(a.textContent).to.equal('i18n-choose-prefix');
+      expect(a.textContent).toBe('i18n-choose-prefix');
     });
 
     it('should render localized string for "Examples"', () => {
@@ -69,7 +69,7 @@ describe('DropletAutocompleteParameterTooltipManager', () => {
       let el = document.createElement('div');
       el.innerHTML = html;
       let a = el.querySelector('.tooltip-example-link a');
-      expect(a.textContent).to.equal('i18n-examples');
+      expect(a.textContent).toBe('i18n-examples');
     });
   });
 });

@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import ReferenceGuideEditor from '@cdo/apps/lib/levelbuilder/reference-guide-editor/ReferenceGuideEditor';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 const makeReferenceGuide = (key, parent = null, pos = 0) => ({
   display_name: key,
@@ -45,7 +45,7 @@ describe('ReferenceGuideEditorTest', () => {
     expect(wrapper.exists('input[value=parent_key]'));
     expect(
       wrapper.findOne('TextareaWithMarkdownPreview').props.markdown
-    ).to.equal('##some markdown');
+    ).toBe('##some markdown');
   });
 
   it('saves the new data with save is pressed', () => {
@@ -66,10 +66,10 @@ describe('ReferenceGuideEditorTest', () => {
     );
 
     const options = wrapper.findAll('option').map(c => c.toString());
-    expect(options).to.include('<option value="null">No parent</option>');
-    expect(options).to.not.include('<option>hello_world</option>');
-    expect(options).to.include('<option>hello_world2</option>');
-    expect(options).to.include('<option>hello_world3</option>');
+    expect(options).toContain('<option value="null">No parent</option>');
+    expect(options).not.toContain('<option>hello_world</option>');
+    expect(options).toContain('<option>hello_world2</option>');
+    expect(options).toContain('<option>hello_world3</option>');
 
     // change the display name
     wrapper
@@ -79,13 +79,11 @@ describe('ReferenceGuideEditorTest', () => {
     // click save
     wrapper.findOne('SaveBar').props.handleSave();
 
-    expect(fetchSpy).to.have.been.calledOnce;
-    expect(fetchSpy.getCall(0).args[1].body).to.equal(
-      JSON.stringify({
-        ...referenceGuide,
-        display_name: 'new_display_name',
-      })
-    );
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
+    expect(fetchSpy.getCall(0).args[1].body).toBe(JSON.stringify({
+      ...referenceGuide,
+      display_name: 'new_display_name',
+    }));
   });
 
   it('submitting with no parent selected sends null', () => {
@@ -111,12 +109,10 @@ describe('ReferenceGuideEditorTest', () => {
     // click save
     wrapper.findOne('SaveBar').props.handleSave();
 
-    expect(fetchSpy).to.have.been.calledOnce;
-    expect(fetchSpy.getCall(0).args[1].body).to.equal(
-      JSON.stringify({
-        ...referenceGuide,
-        parent_reference_guide_key: null,
-      })
-    );
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
+    expect(fetchSpy.getCall(0).args[1].body).toBe(JSON.stringify({
+      ...referenceGuide,
+      parent_reference_guide_key: null,
+    }));
   });
 });

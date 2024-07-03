@@ -3,7 +3,7 @@ import React from 'react';
 
 import {RegionalPartnerMiniContact} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 describe('RegionalPartnerMiniContactTest', () => {
   const API_ENDPOINT = '/api/v1/pd/regional_partner_mini_contacts';
@@ -31,7 +31,7 @@ describe('RegionalPartnerMiniContactTest', () => {
         );
 
         const field = findField(wrapper, fieldName);
-        expect(field.prop('required')).to.equal(expectRequired);
+        expect(field.prop('required')).toBe(expectRequired);
       });
     });
   });

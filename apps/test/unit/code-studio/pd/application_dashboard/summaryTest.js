@@ -1,5 +1,4 @@
-import {expect} from 'chai';
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import { shallow } from 'enzyme';
 import React from 'react';
 import {Row} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import sinon from 'sinon';
@@ -53,7 +52,7 @@ describe('Summary', () => {
 
   it('Initially renders a spinner', () => {
     let summary = createSummary();
-    expect(summary.find('Spinner')).to.have.length(1);
+    expect(summary.find('Spinner')).toHaveLength(1);
   });
 
   it('Generates 3 tables in 1 rows after hearing from server', () => {
@@ -71,16 +70,16 @@ describe('Summary', () => {
     summary.update();
 
     const rows = summary.find(Row);
-    expect(rows).to.have.length(1);
-    expect(rows.at(0).children()).to.have.length(3);
+    expect(rows).toHaveLength(1);
+    expect(rows.at(0).children()).toHaveLength(3);
 
-    expect(summary.find('Spinner')).to.have.length(0);
+    expect(summary.find('Spinner')).toHaveLength(0);
 
     server.restore();
   });
 
   it('removeIncompleteApplications strips incomplete applications from data', () => {
-    expect(removeIncompleteApplications(data)).to.deep.equal({
+    expect(removeIncompleteApplications(data)).toEqual({
       csd_teachers: {
         ...dataWithoutIncompleteApps,
       },

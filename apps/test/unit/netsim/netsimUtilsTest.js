@@ -1,4 +1,4 @@
-import {assert, expect} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai';
 
 var NetSimUtils = require('@cdo/apps/netsim/NetSimUtils');
 

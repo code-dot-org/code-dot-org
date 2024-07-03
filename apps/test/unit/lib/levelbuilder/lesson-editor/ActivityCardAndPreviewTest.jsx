@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import ActivityCardAndPreview from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCardAndPreview';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 import {sampleActivities} from './activitiesTestData';
 
@@ -38,20 +38,20 @@ describe('ActivityCardAndPreview', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<ActivityCardAndPreview {...defaultProps} />);
-    expect(wrapper.find('Connect(ActivityCard)').length).to.equal(1);
-    expect(wrapper.find('Activity').length).to.equal(1);
+    expect(wrapper.find('Connect(ActivityCard)').length).toBe(1);
+    expect(wrapper.find('Activity').length).toBe(1);
   });
 
   it('hides preview when collapsed', () => {
     const wrapper = shallow(<ActivityCardAndPreview {...defaultProps} />);
     wrapper.setState({collapsed: true});
 
-    expect(wrapper.find('Connect(ActivityCard)').length).to.equal(1);
-    expect(wrapper.find('Activity').length).to.equal(0);
+    expect(wrapper.find('Connect(ActivityCard)').length).toBe(1);
+    expect(wrapper.find('Activity').length).toBe(0);
     expect(
       wrapper.contains(
         'This activity has been collapsed. Expand activity to see preview.'
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 });

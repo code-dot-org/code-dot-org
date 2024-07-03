@@ -2,7 +2,7 @@
 import {spy} from 'sinon';
 
 import {createStatefulP5Wrapper} from '../../util/gamelab/TestableP5Wrapper';
-import {expect} from '../../util/reconfiguredChai';
+
 import {sandboxDocumentBody} from '../../util/testUtils';
 
 describe('P5GroupWrapper', function () {
@@ -27,18 +27,16 @@ describe('P5GroupWrapper', function () {
       group.add(sprite2);
       spy(sprite1, 'setSpeedAndDirection');
       spy(sprite2, 'setSpeedAndDirection');
-      expect(sprite1.setSpeedAndDirection.calledOnce).to.be.false;
-      expect(sprite2.setSpeedAndDirection.calledOnce).to.be.false;
+      expect(sprite1.setSpeedAndDirection.calledOnce).toBe(false);
+      expect(sprite2.setSpeedAndDirection.calledOnce).toBe(false);
 
       const speed = 5;
       const direction = 180;
       group.setSpeedAndDirectionEach(speed, direction);
-      expect(sprite1.setSpeedAndDirection.calledOnce).to.be.true;
-      expect(sprite2.setSpeedAndDirection.calledOnce).to.be.true;
-      expect(sprite1.setSpeedAndDirection.calledWith(speed, direction)).to.be
-        .true;
-      expect(sprite2.setSpeedAndDirection.calledWith(speed, direction)).to.be
-        .true;
+      expect(sprite1.setSpeedAndDirection.calledOnce).toBe(true);
+      expect(sprite2.setSpeedAndDirection.calledOnce).toBe(true);
+      expect(sprite1.setSpeedAndDirection.calledWith(speed, direction)).toBe(true);
+      expect(sprite2.setSpeedAndDirection.calledWith(speed, direction)).toBe(true);
     });
 
     it('removes every element', function () {
@@ -48,7 +46,7 @@ describe('P5GroupWrapper', function () {
       }
       group.destroyEach();
 
-      expect(group).to.be.empty;
+      expect(Object.keys(group)).toHaveLength(0);
     });
   });
 
@@ -78,7 +76,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.isTouching(targetSprite);
         }
-        expect(result).to.equal(false);
+        expect(result).toBe(false);
       });
 
       it('returns false for collide', function () {
@@ -86,7 +84,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.collide(targetSprite);
         }
-        expect(result).to.equal(false);
+        expect(result).toBe(false);
       });
 
       it('returns false for bounce', function () {
@@ -94,7 +92,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.bounce(targetSprite);
         }
-        expect(result).to.equal(false);
+        expect(result).toBe(false);
       });
 
       it('returns false for bounceOff', function () {
@@ -102,7 +100,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.bounceOff(targetSprite);
         }
-        expect(result).to.equal(false);
+        expect(result).toBe(false);
       });
 
       it('returns false for overlap', function () {
@@ -110,7 +108,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.overlap(targetSprite);
         }
-        expect(result).to.equal(false);
+        expect(result).toBe(false);
       });
 
       it('returns false for displace', function () {
@@ -118,7 +116,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.displace(targetSprite);
         }
-        expect(result).to.equal(false);
+        expect(result).toBe(false);
       });
     });
 
@@ -134,7 +132,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.isTouching(targetSprite);
         }
-        expect(result).to.equal(true);
+        expect(result).toBe(true);
       });
 
       it('returns true for collide', function () {
@@ -142,7 +140,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.collide(targetSprite);
         }
-        expect(result).to.equal(true);
+        expect(result).toBe(true);
       });
 
       it('returns true for bounce', function () {
@@ -150,7 +148,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.bounce(targetSprite);
         }
-        expect(result).to.equal(true);
+        expect(result).toBe(true);
       });
 
       it('returns true for bounceOff', function () {
@@ -158,7 +156,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.bounceOff(targetSprite);
         }
-        expect(result).to.equal(true);
+        expect(result).toBe(true);
       });
 
       it('returns true for overlap', function () {
@@ -166,7 +164,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.overlap(targetSprite);
         }
-        expect(result).to.equal(true);
+        expect(result).toBe(true);
       });
 
       it('returns true for displace', function () {
@@ -174,7 +172,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.displace(targetSprite);
         }
-        expect(result).to.equal(true);
+        expect(result).toBe(true);
       });
     });
 
@@ -190,7 +188,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.isTouching(targetSprite);
         }
-        expect(result).to.equal(true);
+        expect(result).toBe(true);
       });
 
       it('returns true for collide', function () {
@@ -198,7 +196,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.collide(targetSprite);
         }
-        expect(result).to.equal(true);
+        expect(result).toBe(true);
       });
 
       it('returns true for bounce', function () {
@@ -206,7 +204,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.bounce(targetSprite);
         }
-        expect(result).to.equal(true);
+        expect(result).toBe(true);
       });
 
       it('returns true for bounceOff', function () {
@@ -214,7 +212,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.bounceOff(targetSprite);
         }
-        expect(result).to.equal(true);
+        expect(result).toBe(true);
       });
 
       it('returns true for overlap', function () {
@@ -222,7 +220,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.overlap(targetSprite);
         }
-        expect(result).to.equal(true);
+        expect(result).toBe(true);
       });
 
       it('returns true for displace', function () {
@@ -230,7 +228,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.displace(targetSprite);
         }
-        expect(result).to.equal(true);
+        expect(result).toBe(true);
       });
     });
 
@@ -248,7 +246,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.isTouching(targetSprite);
         }
-        expect(result).to.equal(true);
+        expect(result).toBe(true);
       });
 
       it('returns true for collide', function () {
@@ -256,7 +254,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.collide(targetSprite);
         }
-        expect(result).to.equal(true);
+        expect(result).toBe(true);
       });
 
       it('returns true for bounce', function () {
@@ -264,7 +262,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.bounce(targetSprite);
         }
-        expect(result).to.equal(true);
+        expect(result).toBe(true);
       });
 
       it('returns true for bounceOff', function () {
@@ -272,7 +270,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.bounceOff(targetSprite);
         }
-        expect(result).to.equal(true);
+        expect(result).toBe(true);
       });
 
       it('returns true for overlap', function () {
@@ -280,7 +278,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.overlap(targetSprite);
         }
-        expect(result).to.equal(true);
+        expect(result).toBe(true);
       });
 
       it('returns true for displace', function () {
@@ -288,7 +286,7 @@ describe('P5GroupWrapper', function () {
         for (let i = 0; i < group.length + 1; i++) {
           result = group.displace(targetSprite);
         }
-        expect(result).to.equal(true);
+        expect(result).toBe(true);
       });
     });
   });

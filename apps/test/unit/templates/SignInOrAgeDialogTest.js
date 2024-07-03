@@ -10,7 +10,7 @@ import * as utils from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import FakeStorage from '../../util/FakeStorage';
-import {expect} from '../../util/reconfiguredChai';
+
 import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
 
 const DEFAULT_PROPS = {
@@ -36,21 +36,21 @@ describe('SignInOrAgeDialog', () => {
 
   it('renders null if signed in', () => {
     renderDefault({signedIn: true});
-    expect(screen.queryByText(i18n.signinForProgress())).to.not.exist;
-    expect(screen.queryByText(i18n.provideAge())).to.not.exist;
+    expect(screen.queryByText(i18n.signinForProgress())).toBeFalsy();
+    expect(screen.queryByText(i18n.provideAge())).toBeFalsy();
   });
 
   it('renders null if script does not require 13+', () => {
     renderDefault({age13Required: false});
-    expect(screen.queryByText(i18n.provideAge())).to.not.exist;
+    expect(screen.queryByText(i18n.provideAge())).toBeFalsy();
   });
 
   it('renders null if seen before', () => {
     let getItem = sinon.stub(DEFAULT_PROPS.storage, 'getItem');
     getItem.withArgs('anon_over13').returns('true');
     renderDefault({signedIn: true});
-    expect(screen.queryByText(i18n.signinForProgress())).to.not.exist;
-    expect(screen.queryByText(i18n.provideAge())).to.not.exist;
+    expect(screen.queryByText(i18n.signinForProgress())).toBeFalsy();
+    expect(screen.queryByText(i18n.provideAge())).toBeFalsy();
     getItem.restore();
   });
 
@@ -60,9 +60,7 @@ describe('SignInOrAgeDialog', () => {
     const okay = screen.getByText('OK');
     fireEvent.click(okay);
     expect(screen.queryByText('Tutorial unavailable for younger students'));
-    expect(screen.getByRole('link').getAttribute('href')).to.equal(
-      '/hourofcode/overview'
-    );
+    expect(screen.getByRole('link').getAttribute('href')).toBe('/hourofcode/overview');
   });
 
   describe('redirect', () => {
@@ -87,9 +85,9 @@ describe('SignInOrAgeDialog', () => {
       fireEvent.change(screen.getByRole('combobox'), {target: {value: '13'}});
       const okay = screen.getByText('OK');
       fireEvent.click(okay);
-      assert(setItemSpy.calledOnce);
+      assert(setItemSpy.toHaveBeenCalledTimes(1));
       assert(setItemSpy.calledWith('anon_over13', true));
-      assert(utils.reload.called);
+      assert(utils.toHaveBeenCalled());
       assert(
         cookies.remove.calledWith(environmentSpecificCookieName('storage_id'), {
           path: '/',
@@ -104,8 +102,8 @@ describe('SignInOrAgeDialog', () => {
       fireEvent.change(screen.getByRole('combobox'), {target: {value: '13'}});
       const okay = screen.getByText('OK');
       fireEvent.click(okay);
-      assert.equal(utils.reload.called, false);
-      expect(screen.queryByText(i18n.signinForProgress())).to.not.exist;
+      assert.equal(utils.toHaveBeenCalled(), false);
+      expect(screen.queryByText(i18n.signinForProgress())).toBeFalsy();
     });
   });
 });

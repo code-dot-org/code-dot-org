@@ -11,7 +11,7 @@ import {
 import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
 
 import {UnconnectedCodeWorkspace as CodeWorkspace} from '../../../src/templates/CodeWorkspace';
-import {expect} from '../../util/deprecatedChai';
+
 
 describe('CodeWorkspace', () => {
   const MINIMUM_PROPS = {
@@ -69,7 +69,7 @@ describe('CodeWorkspace', () => {
       ...{displayOldVersionBanner: true},
     };
     const wrapper = shallow(<CodeWorkspace {...props} />);
-    expect(wrapper.find('div#oldVersionBanner')).to.have.lengthOf(1);
+    expect(wrapper.find('div#oldVersionBanner')).toHaveLength(1);
   });
 
   it('displays not started warning when displayNotStartedBanner is true', () => {
@@ -78,11 +78,11 @@ describe('CodeWorkspace', () => {
       ...{displayNotStartedBanner: true},
     };
     const wrapper = shallow(<CodeWorkspace {...props} />);
-    expect(wrapper.find('div#notStartedBanner')).to.have.lengthOf(1);
+    expect(wrapper.find('div#notStartedBanner')).toHaveLength(1);
   });
 
   it('displays a workspace alert when workspaceAlert exists', () => {
-    expect(workspace.find('WorkspaceAlert')).to.have.lengthOf(1);
+    expect(workspace.find('WorkspaceAlert')).toHaveLength(1);
   });
 
   it('does not display a workspace alert when workspaceAlert is assigned null ', () => {
@@ -93,7 +93,7 @@ describe('CodeWorkspace', () => {
       },
     };
     const wrapper = shallow(<CodeWorkspace {...props} />);
-    expect(wrapper.find('WorkspaceAlert')).to.have.lengthOf(0);
+    expect(wrapper.find('WorkspaceAlert')).toHaveLength(0);
   });
 
   it('displays a workspace alert at bottom of codeTextbox when editCode = true (implies Droplet)', () => {
@@ -104,10 +104,8 @@ describe('CodeWorkspace', () => {
       },
     };
     const wrapper = shallow(<CodeWorkspace {...props} />);
-    expect(wrapper.find('WorkspaceAlert')).to.have.lengthOf(1);
-    expect(wrapper.find('ProtectedStatefulDiv#codeTextbox')).to.have.lengthOf(
-      1
-    );
+    expect(wrapper.find('WorkspaceAlert')).toHaveLength(1);
+    expect(wrapper.find('ProtectedStatefulDiv#codeTextbox')).toHaveLength(1);
   });
 
   it('displays a workspace alert at bottom of CodeWorkspace when editCode = false (implies Blockly)', () => {
@@ -118,9 +116,7 @@ describe('CodeWorkspace', () => {
       },
     };
     const wrapper = shallow(<CodeWorkspace {...props} />);
-    expect(wrapper.find('WorkspaceAlert')).to.have.lengthOf(1);
-    expect(wrapper.find('ProtectedStatefulDiv#codeTextbox')).to.have.lengthOf(
-      0
-    );
+    expect(wrapper.find('WorkspaceAlert')).toHaveLength(1);
+    expect(wrapper.find('ProtectedStatefulDiv#codeTextbox')).toHaveLength(0);
   });
 });

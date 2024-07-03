@@ -5,7 +5,7 @@ import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import {NO_SCHOOL_SETTING} from '@cdo/apps/templates/SchoolZipSearch';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../util/deprecatedChai';
+
 
 describe('SchoolDataInputs', () => {
   function renderDefault(propOverrides = {}) {
@@ -19,12 +19,12 @@ describe('SchoolDataInputs', () => {
 
   it('does not display headers if includeHeaders prop is false', () => {
     renderDefault({includeHeaders: false});
-    expect(screen.queryByText(i18n.censusHeading())).to.not.exist;
+    expect(screen.queryByText(i18n.censusHeading())).toBeFalsy();
   });
 
   it('does not display zip input until United States is selected as country', () => {
     renderDefault({usIp: false});
-    expect(screen.queryByText(i18n.enterYourSchoolZip())).to.not.exist;
+    expect(screen.queryByText(i18n.enterYourSchoolZip())).toBeFalsy();
     fireEvent.change(screen.getByRole('combobox')[0], {target: {value: 'US'}});
     expect(screen.queryByText(i18n.enterYourSchoolZip()));
   });
@@ -34,7 +34,7 @@ describe('SchoolDataInputs', () => {
     fireEvent.change(screen.getAllByRole('combobox')[0], {
       target: {value: 'UK'},
     });
-    expect(screen.queryByText(i18n.enterYourSchoolZip())).to.not.exist;
+    expect(screen.queryByText(i18n.enterYourSchoolZip())).toBeFalsy();
     expect(screen.queryByText(i18n.schoolOrganizationQuestion()));
   });
 
@@ -54,7 +54,7 @@ describe('SchoolDataInputs', () => {
     fireEvent.change(screen.getAllByRole('combobox')[0], {
       target: {value: 'US'},
     });
-    expect(screen.queryByText('MySchoolAbroad')).to.not.exist;
+    expect(screen.queryByText('MySchoolAbroad')).toBeFalsy();
     fireEvent.change(screen.getAllByRole('combobox')[0], {
       target: {value: 'UK'},
     });
@@ -70,8 +70,8 @@ describe('SchoolDataInputs', () => {
     fireEvent.change(screen.getAllByRole('combobox')[0], {
       target: {value: 'UK'},
     });
-    expect(screen.queryByText('98112')).to.not.exist;
-    expect(screen.queryByText(NO_SCHOOL_SETTING)).to.not.exist;
+    expect(screen.queryByText('98112')).toBeFalsy();
+    expect(screen.queryByText(NO_SCHOOL_SETTING)).toBeFalsy();
     fireEvent.change(screen.getAllByRole('combobox')[0], {
       target: {value: 'US'},
     });

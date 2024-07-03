@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import LessonTipIconWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonTipIconWithTooltip';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 describe('LessonTipIconWithTooltip', () => {
   let defaultProps, onClick;
@@ -22,18 +22,18 @@ describe('LessonTipIconWithTooltip', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<LessonTipIconWithTooltip {...defaultProps} />);
-    expect(wrapper.find('FontAwesome').length).to.equal(1);
-    expect(wrapper.find('LessonTip').length).to.equal(1);
-    expect(wrapper.find('ReactTooltip').length).to.equal(1);
+    expect(wrapper.find('FontAwesome').length).toBe(1);
+    expect(wrapper.find('LessonTip').length).toBe(1);
+    expect(wrapper.find('ReactTooltip').length).toBe(1);
   });
 
   it('registers click', () => {
     const wrapper = shallow(<LessonTipIconWithTooltip {...defaultProps} />);
-    expect(wrapper.find('FontAwesome').length).to.equal(1);
+    expect(wrapper.find('FontAwesome').length).toBe(1);
 
     const icon = wrapper.find('FontAwesome');
     icon.simulate('click');
-    expect(onClick).to.have.been.calledWith({
+    expect(onClick).toHaveBeenCalledWith({
       key: 'tip-1',
       type: 'teachingTip',
       markdown: '',

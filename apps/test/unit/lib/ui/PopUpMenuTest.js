@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import PopUpMenu, {MenuBubble} from '@cdo/apps/lib/ui/PopUpMenu';
 import msg from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('PopUpMenu', () => {
   const targetPoint = {left: 0, top: 0};

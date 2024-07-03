@@ -9,7 +9,7 @@ import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashb
 import * as utils from '@cdo/apps/utils';
 
 import {VisibilityType} from '../../../../src/code-studio/announcementsRedux';
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai';
 
 const defaultProps = {
   name: 'csp',
@@ -71,7 +71,7 @@ const fakeTeacherAndStudentAnnouncement = {
 describe('CourseOverview', () => {
   it('has correct course description for instructor', () => {
     const wrapper = shallow(<CourseOverview {...defaultProps} />);
-    expect(wrapper.find('SafeMarkdown').prop('markdown')).to.equal(
+    expect(wrapper.find('SafeMarkdown').prop('markdown')).toBe(
       '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
     );
   });
@@ -84,7 +84,7 @@ describe('CourseOverview', () => {
         viewAs={ViewType.Participant}
       />
     );
-    expect(wrapper.find('SafeMarkdown').prop('markdown')).to.equal(
+    expect(wrapper.find('SafeMarkdown').prop('markdown')).toBe(
       '# Student description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
     );
   });
@@ -178,7 +178,7 @@ describe('CourseOverview', () => {
       );
 
       const versionSelector = wrapper.find('AssignmentVersionSelector');
-      expect(versionSelector.length).to.equal(1);
+      expect(versionSelector.length).toBe(1);
       const renderedVersions = versionSelector.props().courseVersions;
       assert.equal(2, Object.values(renderedVersions).length);
     });
@@ -191,14 +191,14 @@ describe('CourseOverview', () => {
           isInstructor={true}
         />
       );
-      expect(wrapper.find('AssignmentVersionSelector').length).to.equal(0);
+      expect(wrapper.find('AssignmentVersionSelector').length).toBe(0);
     });
 
     it('does not appear when no versions are present', () => {
       const wrapper = shallow(
         <CourseOverview {...defaultProps} isInstructor={true} />
       );
-      expect(wrapper.find('AssignmentVersionSelector').length).to.equal(0);
+      expect(wrapper.find('AssignmentVersionSelector').length).toBe(0);
     });
   });
 });

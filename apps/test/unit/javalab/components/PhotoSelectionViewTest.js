@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import PhotoSelectionView from '@cdo/apps/javalab/components/PhotoSelectionView';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('PhotoSelectionView', () => {
   const file = new File([], 'file');
@@ -23,7 +23,7 @@ describe('PhotoSelectionView', () => {
       />
     );
 
-    expect(wrapper.text()).to.equal(promptText);
+    expect(wrapper.text()).toBe(promptText);
   });
 
   it('invokes onPhotoSelected callback after photo is selected', () => {

@@ -19,7 +19,7 @@ import {
 } from '@cdo/apps/redux';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../../../util/reconfiguredChai';
+
 
 // Speed up the tests by reducing the artificial delay between steps
 const STEP_DELAY_MS = 1;
@@ -82,30 +82,30 @@ describe('SetupChecklist', () => {
     it('renders success', async () => {
       const {rerender} = renderDefault();
       expect(screen.getByRole('button', {name: 're-detect'})).to.be.disabled;
-      expect(screen.getByTitle('waiting')).to.exist;
+      expect(screen.getByTitle('waiting')).toBeDefined();
       await yieldUntilDoneDetecting(screen, rerender);
-      expect(screen.getAllByTitle('success')).to.have.length(4);
-      expect(window.console.error).not.to.have.been.called;
+      expect(screen.getAllByTitle('success')).toHaveLength(4);
+      expect(window.console.error).not.toHaveBeenCalled();
     });
 
     it('sends analytic event when a board is connected on /maker/setup page', async () => {
       const {rerender} = renderDefault();
       const sendEventSpy = sinon.stub(analyticsReporter, 'sendEvent');
       await yieldUntilDoneDetecting(screen, rerender);
-      expect(sendEventSpy).to.be.calledOnce;
-      expect(sendEventSpy).calledWith('Board Type On Maker Setup Page');
+      expect(sendEventSpy).toHaveBeenCalledTimes(1);
+      expect(sendEventSpy).toHaveBeenCalledWith('Board Type On Maker Setup Page');
       analyticsReporter.sendEvent.restore();
     });
 
     it('does reload the page on re-detect', async () => {
       const {rerender} = renderDefault();
       await yieldUntilDoneDetecting(screen, rerender);
-      expect(screen.getAllByTitle('success')).to.have.length(4);
+      expect(screen.getAllByTitle('success')).toHaveLength(4);
       const redetectButton = screen.getByRole('button', {name: 're-detect'});
       fireEvent.click(redetectButton);
       await yieldUntilDoneDetecting(screen, rerender);
-      expect(screen.getAllByTitle('success')).to.have.length(4);
-      expect(utils.reload).to.have.been.called;
+      expect(screen.getAllByTitle('success')).toHaveLength(4);
+      expect(utils.reload).toHaveBeenCalled();
     });
   });
 

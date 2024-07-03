@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('BorderedCallToAction', () => {
   const headingText = 'Do Something';
@@ -27,17 +27,17 @@ describe('BorderedCallToAction', () => {
     );
 
     it('renders a heading', () => {
-      expect(borderedCtA.content()).contains(descriptionText);
+      expect(borderedCtA.content()).toContain(descriptionText);
     });
 
     it('renders a description', () => {
-      expect(borderedCtA.content()).contains(descriptionText);
+      expect(borderedCtA.content()).toContain(descriptionText);
     });
 
     it('renders a purple button with text', () => {
       const button = borderedCtA.findOne(Button);
-      expect(button.props.text).to.equal(buttonText);
-      expect(button.props.color).to.equal(buttonColor);
+      expect(button.props.text).toBe(buttonText);
+      expect(button.props.color).toBe(buttonColor);
     });
 
     it('has a dashed border', () => {
@@ -46,7 +46,7 @@ describe('BorderedCallToAction', () => {
 
     it('button goes to url when clicked', () => {
       const button = borderedCtA.findOne(Button);
-      expect(button.props.href).contains(buttonUrl);
+      expect(button.props.href).toEqual(expect.arrayContaining([buttonUrl]));
     });
   });
 
@@ -56,7 +56,7 @@ describe('BorderedCallToAction', () => {
         isolateComponent(
           <BorderedCallToAction {...defaultProps} buttonUrl={undefined} />
         );
-      }).to.throw(Error);
+      }).toThrow(Error);
     });
 
     it('can have a solid border', () => {
@@ -71,8 +71,8 @@ describe('BorderedCallToAction', () => {
         <BorderedCallToAction {...defaultProps} buttonColor={'black'} />
       );
       const button = borderedCtA.findOne(Button);
-      expect(button.props.text).to.equal(buttonText);
-      expect(button.props.color).to.equal('black');
+      expect(button.props.text).toBe(buttonText);
+      expect(button.props.color).toBe('black');
     });
 
     it('can use a custom onClick', () => {
@@ -82,7 +82,7 @@ describe('BorderedCallToAction', () => {
       );
       const button = borderedCtA.findOne(Button);
       button.props.onClick();
-      expect(onClickSpy).to.have.been.calledOnce;
+      expect(onClickSpy).toHaveBeenCalledTimes(1);
     });
   });
 });

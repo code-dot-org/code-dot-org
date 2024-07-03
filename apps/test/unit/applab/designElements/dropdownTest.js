@@ -1,6 +1,6 @@
 import library from '@cdo/apps/applab/designElements/library';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 const {elements, ElementType} = library;
 const dropdown = elements[ElementType.DROPDOWN];
@@ -30,14 +30,14 @@ describe('Applab designElements/dropdown component', function () {
   });
 
   it('setting index changes value', () => {
-    expect(getValue(e)).is.equal('Option 1');
+    expect(getValue(e)).toBe('Option 1');
     setIndex(e, 1);
-    expect(getValue(e)).is.equal('Option 2');
+    expect(getValue(e)).toBe('Option 2');
   });
 
   it('setting index out of range sets index to -1', () => {
     setIndex(e, 2);
-    expect(getIndex(e)).is.equal(-1);
+    expect(getIndex(e)).toBe(-1);
     expect(getValue(e)).is.empty;
   });
 });

@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import VersionRow from '@cdo/apps/templates/VersionRow';
 import msg from '@cdo/locale';
 
-import {expect} from '../../util/deprecatedChai';
+
 
 describe('VersionRow', () => {
   const MINIMUM_PROPS = {
@@ -92,9 +92,9 @@ describe('VersionRow', () => {
         onChoose={onChoose}
       />
     );
-    expect(onChoose).not.to.have.been.called;
+    expect(onChoose).not.toHaveBeenCalled();
 
     wrapper.find('.img-upload').simulate('click');
-    expect(onChoose).to.have.been.calledOnce;
+    expect(onChoose).toHaveBeenCalledTimes(1);
   });
 });

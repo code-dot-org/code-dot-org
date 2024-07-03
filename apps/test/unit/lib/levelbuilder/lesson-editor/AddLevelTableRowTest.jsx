@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import AddLevelTableRow from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTableRow';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 describe('AddLevelTableRow', () => {
   let defaultProps, addLevel;
@@ -25,8 +25,8 @@ describe('AddLevelTableRow', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<AddLevelTableRow {...defaultProps} />);
-    expect(wrapper.find('button').length).to.equal(2);
-    expect(wrapper.find('tr').length).to.equal(1);
+    expect(wrapper.find('button').length).toBe(2);
+    expect(wrapper.find('tr').length).toBe(1);
   });
 
   it('add level', () => {
@@ -34,7 +34,7 @@ describe('AddLevelTableRow', () => {
 
     const addButton = wrapper.find('button').at(0);
     addButton.simulate('click');
-    expect(addLevel).to.have.been.calledWith(defaultProps.level);
+    expect(addLevel).toHaveBeenCalledWith(defaultProps.level);
   });
 
   it('add and clone level', () => {
@@ -55,7 +55,7 @@ describe('AddLevelTableRow', () => {
     addAndCloneButton.simulate('click');
 
     server.respond();
-    expect(addLevel).to.have.been.calledOnce;
+    expect(addLevel).toHaveBeenCalledTimes(1);
 
     window.prompt.restore();
     server.restore();

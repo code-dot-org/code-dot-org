@@ -3,7 +3,7 @@ import RGBColor from 'rgbcolor';
 import {themeOptions, fontFamilyOptions} from '@cdo/apps/applab/constants';
 import library from '@cdo/apps/applab/designElements/library';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('Applab designElements/elementThemes', () => {
   function expectValidFontFamilyThemeValue(element) {
@@ -12,10 +12,10 @@ describe('Applab designElements/elementThemes', () => {
     it(`${library.getElementType(
       element
     )} has proper fontFamily theme values`, () => {
-      expect(themeValue).to.exist;
+      expect(themeValue).toBeDefined();
       themeOptions.forEach(themeName => {
-        expect(themeValue[themeName]).to.exist;
-        expect(fontFamilyOptions.includes(themeValue[themeName])).to.be.true;
+        expect(themeValue[themeName]).toBeDefined();
+        expect(fontFamilyOptions.includes(themeValue[themeName])).toBe(true);
       });
     });
   }
@@ -26,10 +26,10 @@ describe('Applab designElements/elementThemes', () => {
     it(`${library.getElementType(
       element
     )} has proper padding theme values`, () => {
-      expect(themeValue).to.exist;
+      expect(themeValue).toBeDefined();
       themeOptions.forEach(themeName => {
-        expect(themeValue[themeName]).to.exist;
-        expect(typeof themeValue[themeName]).to.equal('string');
+        expect(themeValue[themeName]).toBeDefined();
+        expect(typeof themeValue[themeName]).toBe('string');
       });
     });
   }
@@ -40,12 +40,12 @@ describe('Applab designElements/elementThemes', () => {
     it(`${library.getElementType(
       element
     )} has proper ${propName} theme values`, () => {
-      expect(themeValue).to.exist;
-      expect(themeValue.type).to.equal('color');
+      expect(themeValue).toBeDefined();
+      expect(themeValue.type).toBe('color');
       themeOptions.forEach(themeName => {
-        expect(themeValue[themeName]).to.exist;
+        expect(themeValue[themeName]).toBeDefined();
         const color = new RGBColor(themeValue[themeName]);
-        expect(color.ok).to.be.true;
+        expect(color.ok).toBe(true);
       });
     });
   }
@@ -63,10 +63,10 @@ describe('Applab designElements/elementThemes', () => {
     it(`${library.getElementType(
       element
     )} has proper ${propName} theme values`, () => {
-      expect(themeValue).to.exist;
+      expect(themeValue).toBeDefined();
       themeOptions.forEach(themeName => {
-        expect(themeValue[themeName]).to.exist;
-        expect(typeof themeValue[themeName]).to.equal('number');
+        expect(themeValue[themeName]).toBeDefined();
+        expect(typeof themeValue[themeName]).toBe('number');
       });
     });
   }

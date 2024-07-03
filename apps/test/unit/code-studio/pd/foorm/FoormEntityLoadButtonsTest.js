@@ -121,6 +121,6 @@ describe('FoormEntityLoadButtons', () => {
   it('shows blank editor on new library click', () => {
     wrapper.find(Button).prop('onClick')();
 
-    sinon.assert.calledOnce(showCodeMirrorStub);
+    sinon.toHaveBeenCalledTimes(1);
   });
 });

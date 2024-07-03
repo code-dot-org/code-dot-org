@@ -1,5 +1,4 @@
-import {expect} from 'chai';
-import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import { shallow } from 'enzyme';
 import React from 'react';
 import sinon from 'sinon';
 
@@ -54,14 +53,12 @@ describe('WorkshopIndex', () => {
           context,
         });
 
-        expect(workshopIndex.find('ButtonToolbar Button').length).to.equal(
-          buttons.length
-        );
+        expect(workshopIndex.find('ButtonToolbar Button').length).toBe(buttons.length);
         expect(
           workshopIndex.find('ButtonToolbar Button').map(button => {
             return button.children().first().text();
           })
-        ).to.deep.equal(buttons);
+        ).toEqual(buttons);
       });
     });
   });

@@ -8,7 +8,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {UnconnectedStudentSelector as StudentSelector} from '@cdo/apps/templates/rubrics/StudentSelector';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 function setup(jsx) {
   return {
@@ -47,16 +47,13 @@ describe('StudentSelector', () => {
     const dropdown = screen.getByLabelText('Select a student');
     await user.click(dropdown);
     await user.click(screen.getByText('Student 2 FamNameA'));
-    expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.TA_RUBRIC_DROPDOWN_STUDENT_SELECTED,
-      {
-        unitName: 'test-2023',
-        courseName: 'course-2023',
-        levelName: 'test_level',
-        sectionId: defaultProps.sectionId,
-        studentId: STUDENT_2.id,
-      }
-    );
+    expect(sendEventSpy).toHaveBeenCalledWith(EVENTS.TA_RUBRIC_DROPDOWN_STUDENT_SELECTED, {
+      unitName: 'test-2023',
+      courseName: 'course-2023',
+      levelName: 'test_level',
+      sectionId: defaultProps.sectionId,
+      studentId: STUDENT_2.id,
+    });
     sendEventSpy.restore();
   });
 });

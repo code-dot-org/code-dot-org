@@ -41,7 +41,7 @@ describe('DropdownButton', () => {
     wrapper.find('Button').simulate('click');
     assert(wrapper.find('a').at(1).props().onClick);
     wrapper.find('a').at(1).simulate('click');
-    assert(clickSpy.calledOnce);
+    assert(clickSpy.toHaveBeenCalledTimes(1));
 
     // dropdown is closed
     assert.equal(wrapper.find('a').length, 0);

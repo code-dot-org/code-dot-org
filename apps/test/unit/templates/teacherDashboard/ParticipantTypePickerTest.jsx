@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import ParticipantTypePicker from '@cdo/apps/templates/teacherDashboard/ParticipantTypePicker';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai';
 
 describe('ParticipantTypePicker', () => {
   let defaultProps, setParticipantType, handleCancel;
@@ -39,6 +39,6 @@ describe('ParticipantTypePicker', () => {
     );
 
     wrapper.find('ParticipantTypeCard').at(0).simulate('click');
-    expect(setParticipantType).to.have.been.calledOnce;
+    expect(setParticipantType).toHaveBeenCalledTimes(1);
   });
 });

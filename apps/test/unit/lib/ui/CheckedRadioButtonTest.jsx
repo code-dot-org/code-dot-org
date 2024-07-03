@@ -3,7 +3,7 @@ import React from 'react';
 
 import {CheckedRadioButton} from '@cdo/apps/lib/ui/CheckedRadioButton';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 const DEFAULT_PROPS = {
   id: 'rubric-input-performanceLevel1',
@@ -18,6 +18,6 @@ describe('CheckedRadioButton', () => {
     const wrapper = shallow(
       <CheckedRadioButton {...DEFAULT_PROPS} checked={true} />
     );
-    expect(wrapper.find('input').props().checked).to.equal(true);
+    expect(wrapper.find('input').props().checked).toBe(true);
   });
 });

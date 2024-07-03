@@ -6,7 +6,7 @@ import * as CodeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels
 import {UnconnectedContainedLevelResetButton as ContainedLevelResetButton} from '@cdo/apps/templates/instructions/ContainedLevelResetButton';
 import experiments from '@cdo/apps/util/experiments';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('ContainedLevelResetButton', () => {
   let queryUserProgressSpy;
@@ -25,7 +25,7 @@ describe('ContainedLevelResetButton', () => {
         codeIsRunning={false}
       />
     );
-    expect(wrapper.isEmptyRender()).to.be.true;
+    expect(wrapper.isEmptyRender()).toBe(true);
   });
 
   it('display disabled button if level doesnt have results', () => {
@@ -39,7 +39,7 @@ describe('ContainedLevelResetButton', () => {
       />
     );
     const button = wrapper.find('Button');
-    expect(button.props().disabled).to.be.true;
+    expect(button.props().disabled).toBe(true);
   });
 
   it('display enabled button if level doesnt have results', () => {
@@ -53,7 +53,7 @@ describe('ContainedLevelResetButton', () => {
       />
     );
     const button = wrapper.find('Button');
-    expect(button.props().disabled).to.be.false;
+    expect(button.props().disabled).toBe(false);
   });
 
   it('displays nothing if teacher is viewing student work', () => {
@@ -67,7 +67,7 @@ describe('ContainedLevelResetButton', () => {
         codeIsRunning={false}
       />
     );
-    expect(wrapper.isEmptyRender()).to.be.true;
+    expect(wrapper.isEmptyRender()).toBe(true);
   });
 
   it('queries user progress after successfully resetting level', async () => {
@@ -89,7 +89,7 @@ describe('ContainedLevelResetButton', () => {
     button.simulate('click');
     await setTimeout(() => {}, 50);
 
-    expect(resetContainedLevelStub).to.have.been.called.once;
-    expect(queryUserProgressSpy).to.have.been.called.once;
+    expect(resetContainedLevelStub).toHaveBeenCalled().once;
+    expect(queryUserProgressSpy).toHaveBeenCalled().once;
   });
 });

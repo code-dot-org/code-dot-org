@@ -21,7 +21,7 @@ import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 import setBlocklyGlobal from '../../../util/setupBlocklyGlobal';
 import {setExternalGlobals} from '../../../util/testUtils';
 
@@ -71,7 +71,7 @@ describe('SpriteLab', () => {
     });
 
     it('Must have studioApp injected first', () => {
-      expect(() => instance.init({})).to.throw('P5Lab requires a StudioApp');
+      expect(() => instance.init({})).toThrow('P5Lab requires a StudioApp');
     });
 
     describe('After being injected with a studioApp instance', () => {
@@ -102,13 +102,13 @@ describe('SpriteLab', () => {
 
       it('preview mutes sounds', () => {
         instance.preview();
-        expect(muteSpy).to.have.been.calledOnce;
+        expect(muteSpy).toHaveBeenCalledTimes(1);
       });
 
       it('preview does not run if code is running', () => {
         getStore().dispatch(setIsRunning(true));
         instance.preview();
-        expect(muteSpy).to.not.have.been.called;
+        expect(muteSpy).not.toHaveBeenCalled();
       });
 
       it('includes backgrounds if there are none', () => {
@@ -126,7 +126,7 @@ describe('SpriteLab', () => {
           initialAnimationList,
           backgroundSprite
         );
-        expect(resultingAnimations.orderedKeys.length).to.be.above(1);
+        expect(resultingAnimations.orderedKeys.length).toBeGreaterThan(1);
       });
 
       it('does not modify the list if there is an animation in the backgrounds category', () => {
@@ -144,7 +144,7 @@ describe('SpriteLab', () => {
           initialAnimationList,
           backgroundSprite
         );
-        expect(resultingAnimations.orderedKeys.length).to.be.equal(1);
+        expect(resultingAnimations.orderedKeys.length).toBe(1);
       });
 
       it('does not modify the list if there is an animation that matches a background', () => {
@@ -161,7 +161,7 @@ describe('SpriteLab', () => {
           initialAnimationList,
           backgroundSprite
         );
-        expect(resultingAnimations.orderedKeys.length).to.be.equal(1);
+        expect(resultingAnimations.orderedKeys.length).toBe(1);
       });
 
       describe('reactToExecutionError', () => {
@@ -180,12 +180,12 @@ describe('SpriteLab', () => {
 
         it('displays a workspace alert if there is an executionError message', () => {
           instance.reactToExecutionError('test string');
-          expect(alertSpy).to.have.been.calledOnce;
+          expect(alertSpy).toHaveBeenCalledTimes(1);
         });
 
         it('does nothing if there is no executionError message', () => {
           instance.reactToExecutionError(undefined);
-          expect(alertSpy).to.not.have.been.called;
+          expect(alertSpy).not.toHaveBeenCalled();
         });
       });
 
@@ -245,7 +245,7 @@ describe('SpriteLab', () => {
           };
 
           store.dispatch(addAnimation('key2', newAnimation));
-          expect(eventSpy).to.have.been.called;
+          expect(eventSpy).toHaveBeenCalled();
         });
 
         it('dispatches event when animations change', () => {
@@ -264,13 +264,13 @@ describe('SpriteLab', () => {
             categories: ['animals'],
           };
           store.dispatch(editAnimation('key1', newProps));
-          expect(eventSpy).to.have.been.called;
+          expect(eventSpy).toHaveBeenCalled();
         });
 
         it('does not dispatch event when animations do not change', () => {
           // Dispatch an action so the subscriber gets called
           store.dispatch(setIsRunning(true));
-          expect(eventSpy).not.to.have.been.called;
+          expect(eventSpy).not.toHaveBeenCalled();
         });
       });
     });

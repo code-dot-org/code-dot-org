@@ -5,7 +5,7 @@ import sinon from 'sinon';
 
 import Chips from '@cdo/apps/componentLibrary/chips';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 const options = [
   {value: 'chip1', label: 'Chip1'},
@@ -27,8 +27,8 @@ describe('Design System - Chips', () => {
     );
 
     const chips = screen.getByTestId('chips-test-chips');
-    expect(chips).to.exist;
-    expect(screen.getByText('Chips label')).to.exist;
+    expect(chips).toBeDefined();
+    expect(screen.getByText('Chips label')).toBeDefined();
   });
 
   it('Chips - doesn`t render label if it`s not specidied', () => {
@@ -42,8 +42,8 @@ describe('Design System - Chips', () => {
     );
 
     const chips = screen.getByTestId('chips-test-chips');
-    expect(chips).to.exist;
-    expect(screen.queryByText('Chips label')).to.be.null;
+    expect(chips).toBeDefined();
+    expect(screen.queryByText('Chips label')).toBeNull();
   });
 
   it('Chips - checks chip on click', async () => {
@@ -67,15 +67,15 @@ describe('Design System - Chips', () => {
     );
 
     const chips = screen.getByTestId('chips-test-chips');
-    expect(chips).to.exist;
+    expect(chips).toBeDefined();
 
     let chip1 = screen.getByDisplayValue('chip1');
     let chip2 = screen.getByDisplayValue('chip2');
     let chip3 = screen.getByDisplayValue('chip3');
 
-    expect(chip1.checked).to.be.false;
-    expect(chip2.checked).to.be.false;
-    expect(chip3.checked).to.be.false;
+    expect(chip1.checked).toBe(false);
+    expect(chip2.checked).toBe(false);
+    expect(chip3.checked).toBe(false);
 
     await user.click(chip1);
 
@@ -93,10 +93,10 @@ describe('Design System - Chips', () => {
     chip2 = screen.getByDisplayValue('chip2');
     chip3 = screen.getByDisplayValue('chip3');
 
-    expect(chip1.checked).to.be.true;
-    expect(chip2.checked).to.be.false;
-    expect(chip3.checked).to.be.false;
-    expect(spyOnChange).to.have.been.calledOnce;
+    expect(chip1.checked).toBe(true);
+    expect(chip2.checked).toBe(false);
+    expect(chip3.checked).toBe(false);
+    expect(spyOnChange).toHaveBeenCalledTimes(1);
 
     await user.click(chip2);
 
@@ -114,10 +114,10 @@ describe('Design System - Chips', () => {
     chip2 = screen.getByDisplayValue('chip2');
     chip3 = screen.getByDisplayValue('chip3');
 
-    expect(chip1.checked).to.be.true;
-    expect(chip2.checked).to.be.true;
-    expect(chip3.checked).to.be.false;
-    expect(spyOnChange).to.have.been.calledTwice;
+    expect(chip1.checked).toBe(true);
+    expect(chip2.checked).toBe(true);
+    expect(chip3.checked).toBe(false);
+    expect(spyOnChange).toHaveBeenCalledTimes(2);
 
     await user.click(chip1);
 
@@ -135,10 +135,10 @@ describe('Design System - Chips', () => {
     chip2 = screen.getByDisplayValue('chip2');
     chip3 = screen.getByDisplayValue('chip3');
 
-    expect(chip1.checked).to.be.false;
-    expect(chip2.checked).to.be.true;
-    expect(chip3.checked).to.be.false;
-    expect(spyOnChange).to.have.been.calledThrice;
+    expect(chip1.checked).toBe(false);
+    expect(chip2.checked).toBe(true);
+    expect(chip3.checked).toBe(false);
+    expect(spyOnChange).toHaveBeenCalledTimes(3);
   });
 
   it('Chips - toggles required on click correctly', async () => {
@@ -163,18 +163,18 @@ describe('Design System - Chips', () => {
     );
 
     const chips = screen.getByTestId('chips-test-chips');
-    expect(chips).to.exist;
+    expect(chips).toBeDefined();
 
     let chip1 = screen.getByDisplayValue('chip1');
     let chip2 = screen.getByDisplayValue('chip2');
     let chip3 = screen.getByDisplayValue('chip3');
 
-    expect(chip1.checked).to.be.false;
-    expect(chip1.required).to.be.true;
-    expect(chip2.checked).to.be.false;
-    expect(chip2.required).to.be.true;
-    expect(chip3.checked).to.be.false;
-    expect(chip3.required).to.be.true;
+    expect(chip1.checked).toBe(false);
+    expect(chip1.required).toBe(true);
+    expect(chip2.checked).toBe(false);
+    expect(chip2.required).toBe(true);
+    expect(chip3.checked).toBe(false);
+    expect(chip3.required).toBe(true);
 
     await user.click(chip1);
 
@@ -193,14 +193,14 @@ describe('Design System - Chips', () => {
     chip2 = screen.getByDisplayValue('chip2');
     chip3 = screen.getByDisplayValue('chip3');
 
-    expect(chip1.checked).to.be.true;
-    expect(chip1.required).to.be.false;
-    expect(chip2.checked).to.be.false;
-    expect(chip2.required).to.be.false;
-    expect(chip3.checked).to.be.false;
-    expect(chip3.required).to.be.false;
+    expect(chip1.checked).toBe(true);
+    expect(chip1.required).toBe(false);
+    expect(chip2.checked).toBe(false);
+    expect(chip2.required).toBe(false);
+    expect(chip3.checked).toBe(false);
+    expect(chip3.required).toBe(false);
 
-    expect(spyOnChange).to.have.been.calledOnce;
+    expect(spyOnChange).toHaveBeenCalledTimes(1);
 
     await user.click(chip1);
 
@@ -219,13 +219,13 @@ describe('Design System - Chips', () => {
     chip2 = screen.getByDisplayValue('chip2');
     chip3 = screen.getByDisplayValue('chip3');
 
-    expect(chip1.checked).to.be.false;
-    expect(chip1.required).to.be.true;
-    expect(chip2.checked).to.be.false;
-    expect(chip2.required).to.be.true;
-    expect(chip3.checked).to.be.false;
-    expect(chip3.required).to.be.true;
-    expect(spyOnChange).to.have.been.calledTwice;
+    expect(chip1.checked).toBe(false);
+    expect(chip1.required).toBe(true);
+    expect(chip2.checked).toBe(false);
+    expect(chip2.required).toBe(true);
+    expect(chip3.checked).toBe(false);
+    expect(chip3.required).toBe(true);
+    expect(spyOnChange).toHaveBeenCalledTimes(2);
   });
 
   it('Chips - doesn`t check chip on click if disabled', async () => {
@@ -250,18 +250,18 @@ describe('Design System - Chips', () => {
     );
 
     const chips = screen.getByTestId('chips-test-chips');
-    expect(chips).to.exist;
+    expect(chips).toBeDefined();
 
     let chip1 = screen.getByDisplayValue('chip1');
     let chip2 = screen.getByDisplayValue('chip2');
     let chip3 = screen.getByDisplayValue('chip3');
 
-    expect(chip1.checked).to.be.false;
-    expect(chip1.disabled).to.be.true;
-    expect(chip2.checked).to.be.false;
-    expect(chip2.disabled).to.be.true;
-    expect(chip3.checked).to.be.false;
-    expect(chip3.disabled).to.be.true;
+    expect(chip1.checked).toBe(false);
+    expect(chip1.disabled).toBe(true);
+    expect(chip2.checked).toBe(false);
+    expect(chip2.disabled).toBe(true);
+    expect(chip3.checked).toBe(false);
+    expect(chip3.disabled).toBe(true);
 
     await user.click(chip1);
 
@@ -280,12 +280,12 @@ describe('Design System - Chips', () => {
     chip2 = screen.getByDisplayValue('chip2');
     chip3 = screen.getByDisplayValue('chip3');
 
-    expect(chip1.checked).to.be.false;
-    expect(chip1.disabled).to.be.true;
-    expect(chip2.checked).to.be.false;
-    expect(chip2.disabled).to.be.true;
-    expect(chip3.checked).to.be.false;
-    expect(spyOnChange).to.not.have.been.called;
+    expect(chip1.checked).toBe(false);
+    expect(chip1.disabled).toBe(true);
+    expect(chip2.checked).toBe(false);
+    expect(chip2.disabled).toBe(true);
+    expect(chip3.checked).toBe(false);
+    expect(spyOnChange).not.toHaveBeenCalled();
 
     await user.click(chip2);
 
@@ -304,12 +304,12 @@ describe('Design System - Chips', () => {
     chip2 = screen.getByDisplayValue('chip2');
     chip3 = screen.getByDisplayValue('chip3');
 
-    expect(chip1.checked).to.be.false;
-    expect(chip1.disabled).to.be.true;
-    expect(chip2.checked).to.be.false;
-    expect(chip2.disabled).to.be.true;
-    expect(chip3.checked).to.be.false;
-    expect(spyOnChange).to.not.have.been.called;
+    expect(chip1.checked).toBe(false);
+    expect(chip1.disabled).toBe(true);
+    expect(chip2.checked).toBe(false);
+    expect(chip2.disabled).toBe(true);
+    expect(chip3.checked).toBe(false);
+    expect(spyOnChange).not.toHaveBeenCalled();
 
     await user.click(chip1);
 
@@ -328,10 +328,10 @@ describe('Design System - Chips', () => {
     chip2 = screen.getByDisplayValue('chip2');
     chip3 = screen.getByDisplayValue('chip3');
 
-    expect(chip1.checked).to.be.false;
-    expect(chip2.checked).to.be.false;
-    expect(chip2.disabled).to.be.true;
-    expect(chip3.checked).to.be.false;
-    expect(spyOnChange).to.not.have.been.called;
+    expect(chip1.checked).toBe(false);
+    expect(chip2.checked).toBe(false);
+    expect(chip2.disabled).toBe(true);
+    expect(chip3.checked).toBe(false);
+    expect(spyOnChange).not.toHaveBeenCalled();
   });
 });

@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import CloneLessonDialog from '@cdo/apps/lib/levelbuilder/unit-editor/CloneLessonDialog';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 describe('CloneLessonDialog', () => {
   let defaultProps, handleCloseSpy, fetchSpy;
@@ -35,7 +35,7 @@ describe('CloneLessonDialog', () => {
 
     const wrapper = shallow(<CloneLessonDialog {...defaultProps} />);
     wrapper.find('Button').at(1).simulate('click');
-    expect(wrapper.find('Button').at(1).props().disabled).to.be.true;
+    expect(wrapper.find('Button').at(1).props().disabled).toBe(true);
   });
 
   it('can display success message on clone', () => {
@@ -52,13 +52,13 @@ describe('CloneLessonDialog', () => {
       .onCloneClick()
       .then(() => {
         const successMessage = wrapper.find('span');
-        expect(successMessage.text().includes('Clone succeeded!')).to.be.true;
+        expect(successMessage.text().includes('Clone succeeded!')).toBe(true);
         expect(
           successMessage
             .find('a')
             .map(a => a.props().href)
             .sort()
-        ).to.eql(['/lessons/1/edit', '/s/test-script/edit'].sort());
+        ).toEqual(['/lessons/1/edit', '/s/test-script/edit'].sort());
       });
   });
 
@@ -75,14 +75,14 @@ describe('CloneLessonDialog', () => {
       .onCloneClick()
       .then(() => {
         const errorMessage = wrapper.find('span');
-        expect(errorMessage.text().includes('Error message.')).to.be.true;
+        expect(errorMessage.text().includes('Error message.')).toBe(true);
       });
   });
 
   it('disables clone button initially', () => {
     const wrapper = shallow(<CloneLessonDialog {...defaultProps} />);
     const cloneButton = wrapper.find('Button[id="clone-lesson-button"]');
-    expect(cloneButton.prop('disabled')).to.be.true;
+    expect(cloneButton.prop('disabled')).toBe(true);
   });
 
   it('enables clone button with unit name and level name suffix', () => {
@@ -92,7 +92,7 @@ describe('CloneLessonDialog', () => {
     const suffixInput = wrapper.find('input').last();
     suffixInput.simulate('change', {target: {value: '2099'}});
     const cloneButton = wrapper.find('Button[id="clone-lesson-button"]');
-    expect(cloneButton.prop('disabled')).to.be.false;
+    expect(cloneButton.prop('disabled')).toBe(false);
   });
 
   it('enables clone button with unit name and shallow copy', () => {
@@ -102,7 +102,7 @@ describe('CloneLessonDialog', () => {
     const cloneTypeSelector = wrapper.find('select').first();
     cloneTypeSelector.simulate('change', {target: {value: 'shallowCopy'}});
     const cloneButton = wrapper.find('Button[id="clone-lesson-button"]');
-    expect(cloneButton.prop('disabled')).to.be.false;
+    expect(cloneButton.prop('disabled')).toBe(false);
   });
 
   it('disables clone button without unit name', () => {
@@ -110,7 +110,7 @@ describe('CloneLessonDialog', () => {
     const cloneTypeSelector = wrapper.find('select').first();
     cloneTypeSelector.simulate('change', {target: {value: 'shallowCopy'}});
     const cloneButton = wrapper.find('Button[id="clone-lesson-button"]');
-    expect(cloneButton.prop('disabled')).to.be.true;
+    expect(cloneButton.prop('disabled')).toBe(true);
   });
 
   it('disables clone button without level name suffix', () => {
@@ -118,7 +118,7 @@ describe('CloneLessonDialog', () => {
     const unitNameInput = wrapper.find('input').first();
     unitNameInput.simulate('change', {target: {value: 'my-script'}});
     const cloneButton = wrapper.find('Button[id="clone-lesson-button"]');
-    expect(cloneButton.prop('disabled')).to.be.true;
+    expect(cloneButton.prop('disabled')).toBe(true);
   });
 
   it('sends level name suffix on deep copy', () => {
@@ -140,8 +140,8 @@ describe('CloneLessonDialog', () => {
     cloneButton.simulate('click');
 
     const params = JSON.parse(fetchSpy.getCalls()[0].args[1].body);
-    expect(params.destinationUnitName).to.equal('my-script');
-    expect(params.newLevelSuffix).to.equal('2099');
+    expect(params.destinationUnitName).toBe('my-script');
+    expect(params.newLevelSuffix).toBe('2099');
   });
 
   it('does not send level name suffix on shallow copy', () => {
@@ -165,7 +165,7 @@ describe('CloneLessonDialog', () => {
     cloneButton.simulate('click');
 
     const params = JSON.parse(fetchSpy.getCalls()[0].args[1].body);
-    expect(params.destinationUnitName).to.equal('my-script');
-    expect(!!params.newLevelSuffix).to.be.false;
+    expect(params.destinationUnitName).toBe('my-script');
+    expect(!!params.newLevelSuffix).toBe(false);
   });
 });

@@ -18,7 +18,7 @@ import {currentLocation} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import {updateQueryParam} from '../../../../src/code-studio/utils';
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('BubbleFactory', () => {
   describe('BasicBubble', () => {
@@ -41,10 +41,10 @@ describe('BubbleFactory', () => {
         size: bubbleSize,
         shape: BubbleShape.diamond,
       });
-      expect(wrapper.find(unitTestExports.DiamondContainer)).to.have.length(1);
+      expect(wrapper.find(unitTestExports.DiamondContainer)).toHaveLength(1);
       expect(
         wrapper.find(unitTestExports.DiamondContainer).props().size
-      ).to.equal(bubbleSize);
+      ).toBe(bubbleSize);
     });
 
     it('renders children if it is a diamond', () => {
@@ -53,7 +53,7 @@ describe('BubbleFactory', () => {
         shape: BubbleShape.diamond,
         children: child,
       });
-      expect(wrapper.contains(child)).to.be.true;
+      expect(wrapper.contains(child)).toBe(true);
     });
 
     it('renders a div with children if it is a circle', () => {
@@ -62,7 +62,7 @@ describe('BubbleFactory', () => {
         shape: BubbleShape.circle,
         children: child,
       });
-      expect(wrapper.contains(child)).to.be.true;
+      expect(wrapper.contains(child)).toBe(true);
     });
   });
 
@@ -80,24 +80,20 @@ describe('BubbleFactory', () => {
     it('renders children', () => {
       const child = <div>some child</div>;
       const wrapper = setUp({children: child});
-      expect(wrapper.contains(child)).to.be.true;
+      expect(wrapper.contains(child)).toBe(true);
     });
 
     it('tooltipText includes unplugged activity text if the level is unplugged', () => {
       const unpluggedLevel = fakeLevel({isUnplugged: true});
       const wrapper = setUp({level: unpluggedLevel});
-      expect(wrapper.find('TooltipWithIcon').props().text).to.contain(
-        i18n.unpluggedActivity()
-      );
+      expect(wrapper.find('TooltipWithIcon').props().text).toContain(i18n.unpluggedActivity());
     });
 
     it('tooltipText includes name of level if level has a name and is not unplugged', () => {
       const levelName = 'Test name';
       const testLevel = fakeLevel({isUnplugged: false, name: levelName});
       const wrapper = setUp({level: testLevel});
-      expect(wrapper.find('TooltipWithIcon').props().text).to.contain(
-        levelName
-      );
+      expect(wrapper.find('TooltipWithIcon').props().text).toEqual(expect.arrayContaining([levelName]));
     });
 
     it('tooltipText includes progressionDisplayName if the level has progressionDisplayName and no name and is not unplugged', () => {
@@ -108,9 +104,7 @@ describe('BubbleFactory', () => {
         progressionDisplayName: progressionName,
       });
       const wrapper = setUp({level: testLevel});
-      expect(wrapper.find('TooltipWithIcon').props().text).to.contain(
-        progressionName
-      );
+      expect(wrapper.find('TooltipWithIcon').props().text).toEqual(expect.arrayContaining([progressionName]));
     });
 
     it('tooltipText includes a level number if the level has one', () => {
@@ -119,9 +113,7 @@ describe('BubbleFactory', () => {
         levelNumber,
       });
       const wrapper = setUp({level: testLevel});
-      expect(wrapper.find('TooltipWithIcon').props().text).to.contain(
-        levelNumber
-      );
+      expect(wrapper.find('TooltipWithIcon').props().text).toEqual(expect.arrayContaining([levelNumber]));
     });
 
     it('passes icon for the level to TooltipWithIcon', () => {
@@ -130,7 +122,7 @@ describe('BubbleFactory', () => {
       getIconStub.returns(icon);
 
       const wrapper = setUp();
-      expect(wrapper.find('TooltipWithIcon').props().icon).to.equal(icon);
+      expect(wrapper.find('TooltipWithIcon').props().icon).toBe(icon);
 
       getIconStub.restore();
     });
@@ -166,83 +158,81 @@ describe('BubbleFactory', () => {
         'title',
         BubbleSize.dot
       );
-      expect(bubbleContent).to.be.null;
+      expect(bubbleContent).toBeNull();
     });
 
     it('returns unplugged text in span if it is unplugged', () => {
       const bubbleContent = setUp({isUnplugged: true});
-      expect(bubbleContent.type()).to.equal('span');
-      expect(bubbleContent.text()).to.equal(i18n.unpluggedActivity());
+      expect(bubbleContent.type()).toBe('span');
+      expect(bubbleContent.text()).toBe(i18n.unpluggedActivity());
     });
 
     it('returns lock icon if locked', () => {
       const bubbleContent = setUp({isLocked: true});
-      expect(bubbleContent.find('FontAwesome').props().icon).to.equal('lock');
+      expect(bubbleContent.find('FontAwesome').props().icon).toBe('lock');
     });
 
     it('return users icon if paired', () => {
       const bubbleContent = setUp({isPaired: true});
-      expect(bubbleContent.find('FontAwesome').props().icon).to.equal('users');
+      expect(bubbleContent.find('FontAwesome').props().icon).toBe('users');
     });
 
     it('returns flag-checkered icon if is bonus', () => {
       const bubbleContent = setUp({isBonus: true});
-      expect(bubbleContent.find('FontAwesome').props().icon).to.equal(
-        'flag-checkered'
-      );
+      expect(bubbleContent.find('FontAwesome').props().icon).toBe('flag-checkered');
     });
 
     it('returns the title if it has a title and is not unplugged, locked, paired, or bonus', () => {
       const testTitle = 'A title';
       const bubbleContent = setUp({title: testTitle});
-      expect(bubbleContent.type()).to.equal('span');
-      expect(bubbleContent.text()).to.equal(testTitle);
+      expect(bubbleContent.type()).toBe('span');
+      expect(bubbleContent.text()).toBe(testTitle);
     });
   });
 
   describe('getBubbleShape', () => {
     it('returns pill if isUnplugged', () => {
-      expect(getBubbleShape(true, false)).to.equal(BubbleShape.pill);
+      expect(getBubbleShape(true, false)).toBe(BubbleShape.pill);
     });
 
     it('returns diamond for isConcept', () => {
-      expect(getBubbleShape(false, true)).to.equal(BubbleShape.diamond);
+      expect(getBubbleShape(false, true)).toBe(BubbleShape.diamond);
     });
 
     it('returns circle if not isUnplugged or isConcept', () => {
-      expect(getBubbleShape(false, false)).to.equal(BubbleShape.circle);
+      expect(getBubbleShape(false, false)).toBe(BubbleShape.circle);
     });
   });
 
   describe('getBubbleUrl', () => {
     it('returns null if there is no levelUrl', () => {
       const bubbleUrl = getBubbleUrl();
-      expect(bubbleUrl).to.equal(null);
+      expect(bubbleUrl).toBeNull();
     });
 
     it('returns levelUrl if there are no student or section id', () => {
       const testLevelUrl = 'a-url';
       const bubbleUrl = getBubbleUrl(testLevelUrl);
-      expect(bubbleUrl).to.equal(testLevelUrl);
+      expect(bubbleUrl).toBe(testLevelUrl);
     });
 
     it('if there is a studentId, append the user_id to url', () => {
       const bubbleUrl = getBubbleUrl('a-url', 1);
-      expect(bubbleUrl).to.equal('a-url?user_id=1');
+      expect(bubbleUrl).toBe('a-url?user_id=1');
     });
 
     it('if there is a sectionId append the section_id to the url', () => {
       const bubbleUrl = getBubbleUrl('a-url', 1, 2);
-      expect(bubbleUrl).to.equal('a-url?section_id=2&user_id=1');
+      expect(bubbleUrl).toBe('a-url?section_id=2&user_id=1');
     });
 
     it('removes version param if it exists even if other params are preserved', () => {
       const levelUrl = 'http://a-level-url.com';
       updateQueryParam('version', '456lmnop');
-      expect(currentLocation().search).to.include('version=456lmnop');
+      expect(currentLocation().search).toContain('version=456lmnop');
       const preserveQueryParams = true;
       const bubbleUrl = getBubbleUrl(levelUrl, null, null, preserveQueryParams);
-      expect(bubbleUrl).to.not.include('version=456lmnop');
+      expect(bubbleUrl).not.toContain('version=456lmnop');
     });
   });
 
@@ -254,7 +244,7 @@ describe('BubbleFactory', () => {
         {}
       );
 
-      expect(bubbleStyle).to.include(unitTestExports.bubbleStyles.pill);
+      expect(bubbleStyle).toEqual(expect.arrayContaining([unitTestExports.bubbleStyles.pill]));
     });
 
     it('when shape is a diamond style includes bubbleStyles.diamond', () => {
@@ -264,7 +254,7 @@ describe('BubbleFactory', () => {
         {}
       );
 
-      expect(bubbleStyle).to.include(unitTestExports.bubbleStyles.diamond);
+      expect(bubbleStyle).toEqual(expect.arrayContaining([unitTestExports.bubbleStyles.diamond]));
     });
 
     it('when shape is a diamond and size is dot has expected border radius, widths, and font size', () => {
@@ -274,9 +264,9 @@ describe('BubbleFactory', () => {
         {}
       );
 
-      expect(bubbleStyle.borderRadius).to.equal(2);
-      expect(bubbleStyle.width).to.equal(10);
-      expect(bubbleStyle.maxWidth).to.equal(10);
+      expect(bubbleStyle.borderRadius).toBe(2);
+      expect(bubbleStyle.width).toBe(10);
+      expect(bubbleStyle.maxWidth).toBe(10);
     });
 
     it('when shape is a diamond and size is full has expected border radius, widths, and font size', () => {
@@ -286,10 +276,10 @@ describe('BubbleFactory', () => {
         {}
       );
 
-      expect(bubbleStyle.borderRadius).to.equal(4);
-      expect(bubbleStyle.fontSize).to.equal(16);
-      expect(bubbleStyle.width).to.equal(26);
-      expect(bubbleStyle.maxWidth).to.equal(26);
+      expect(bubbleStyle.borderRadius).toBe(4);
+      expect(bubbleStyle.fontSize).toBe(16);
+      expect(bubbleStyle.width).toBe(26);
+      expect(bubbleStyle.maxWidth).toBe(26);
     });
 
     it('when shape is a circle and size is dot has expected border radius, widths, and font size', () => {
@@ -299,9 +289,9 @@ describe('BubbleFactory', () => {
         {}
       );
 
-      expect(bubbleStyle.borderRadius).to.equal(13);
-      expect(bubbleStyle.width).to.equal(13);
-      expect(bubbleStyle.maxWidth).to.equal(13);
+      expect(bubbleStyle.borderRadius).toBe(13);
+      expect(bubbleStyle.width).toBe(13);
+      expect(bubbleStyle.maxWidth).toBe(13);
     });
 
     it('when shape is a circle and size is letter has expected border radius, widths, and font size', () => {
@@ -311,10 +301,10 @@ describe('BubbleFactory', () => {
         {}
       );
 
-      expect(bubbleStyle.borderRadius).to.equal(20);
-      expect(bubbleStyle.fontSize).to.equal(12);
-      expect(bubbleStyle.width).to.equal(20);
-      expect(bubbleStyle.maxWidth).to.equal(20);
+      expect(bubbleStyle.borderRadius).toBe(20);
+      expect(bubbleStyle.fontSize).toBe(12);
+      expect(bubbleStyle.width).toBe(20);
+      expect(bubbleStyle.maxWidth).toBe(20);
     });
 
     it('when shape is a circle and size is full has expected border radius, widths, and font size', () => {
@@ -324,10 +314,10 @@ describe('BubbleFactory', () => {
         {}
       );
 
-      expect(bubbleStyle.borderRadius).to.equal(34);
-      expect(bubbleStyle.fontSize).to.equal(16);
-      expect(bubbleStyle.width).to.equal(34);
-      expect(bubbleStyle.maxWidth).to.equal(34);
+      expect(bubbleStyle.borderRadius).toBe(34);
+      expect(bubbleStyle.fontSize).toBe(16);
+      expect(bubbleStyle.width).toBe(34);
+      expect(bubbleStyle.maxWidth).toBe(34);
     });
 
     it('includes bubbleStyles.main and progressStyle', () => {
@@ -339,8 +329,8 @@ describe('BubbleFactory', () => {
         progressStyle
       );
 
-      expect(bubbleStyle).to.include(unitTestExports.bubbleStyles.main);
-      expect(bubbleStyle).to.include(progressStyle);
+      expect(bubbleStyle).toEqual(expect.arrayContaining([unitTestExports.bubbleStyles.main]));
+      expect(bubbleStyle).toEqual(expect.arrayContaining([progressStyle]));
     });
   });
 });

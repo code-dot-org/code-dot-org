@@ -5,7 +5,7 @@ import CodeReviewDataApi, {
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 const fakeCommitData = [
   {
@@ -102,29 +102,23 @@ describe('CodeReviewDataApi', () => {
 
     it('returns timelineData commits and closed code reviews sorted by createdAt', async () => {
       const {timelineData} = await dataApi.getInitialTimelineData();
-      expect(timelineData.length).to.equal(4); // 1 closed review + 3 commits
-      expect(timelineData[0].comment).to.equal('First commit');
-      expect(timelineData[1].comment).to.equal('Second commit');
-      expect(timelineData[2].projectVersion).to.equal('asdfjkl');
-      expect(timelineData[3].comment).to.equal('Third commit');
+      expect(timelineData.length).toBe(4); // 1 closed review + 3 commits
+      expect(timelineData[0].comment).toBe('First commit');
+      expect(timelineData[1].comment).toBe('Second commit');
+      expect(timelineData[2].projectVersion).toBe('asdfjkl');
+      expect(timelineData[3].comment).toBe('Third commit');
     });
 
     it('returns the open code review as openReview', async () => {
       const {openReview} = await dataApi.getInitialTimelineData();
-      expect(openReview.projectVersion).to.equal('qweruiop');
+      expect(openReview.projectVersion).toBe('qweruiop');
     });
 
     it('adds the timelineElementType to each element', async () => {
       const {timelineData, openReview} = await dataApi.getInitialTimelineData();
-      expect(timelineData[0].timelineElementType).to.equal(
-        timelineElementType.commit
-      );
-      expect(timelineData[2].timelineElementType).to.equal(
-        timelineElementType.review
-      );
-      expect(openReview.timelineElementType).to.equal(
-        timelineElementType.review
-      );
+      expect(timelineData[0].timelineElementType).toBe(timelineElementType.commit);
+      expect(timelineData[2].timelineElementType).toBe(timelineElementType.review);
+      expect(openReview.timelineElementType).toBe(timelineElementType.review);
     });
   });
 
@@ -154,7 +148,7 @@ describe('CodeReviewDataApi', () => {
 
     it('calls patch code review endpoint with isClosed true', async () => {
       await dataApi.closeReview(11);
-      expect(ajaxStub).to.have.been.calledWith({
+      expect(ajaxStub).toHaveBeenCalledWith({
         url: `/code_reviews/11`,
         type: 'PATCH',
         headers: {'X-CSRF-Token': undefined},
@@ -166,7 +160,7 @@ describe('CodeReviewDataApi', () => {
 
     it('appends timelineElementType of review onto response', async () => {
       const result = await dataApi.closeReview(11);
-      expect(result.timelineElementType).to.equal(timelineElementType.review);
+      expect(result.timelineElementType).toBe(timelineElementType.review);
     });
   });
 
@@ -197,7 +191,7 @@ describe('CodeReviewDataApi', () => {
 
     it('calls code reveiw POST endpoint with the expected data', async () => {
       await dataApi.openNewCodeReview(fakeVersion);
-      expect(ajaxStub).to.have.been.calledWith({
+      expect(ajaxStub).toHaveBeenCalledWith({
         url: `/code_reviews`,
         type: 'POST',
         headers: {'X-CSRF-Token': undefined},
@@ -213,7 +207,7 @@ describe('CodeReviewDataApi', () => {
 
     it('appends timelineElementType of review onto response', async () => {
       const result = await dataApi.openNewCodeReview(fakeVersion);
-      expect(result.timelineElementType).to.equal(timelineElementType.review);
+      expect(result.timelineElementType).toBe(timelineElementType.review);
     });
   });
 
@@ -253,7 +247,7 @@ describe('CodeReviewDataApi', () => {
         await dataApi.submitNewCodeReviewComment(fakeComment, fakeReviewId);
         new Error('Expected promise to reject');
       } catch (err) {
-        expect(err.profanityFoundError).to.equal(
+        expect(err.profanityFoundError).toBe(
           'Your comment contains inappropriate language, so it will not be saved. Please update your comment to remove the words "word1, word2".'
         );
       }
@@ -268,7 +262,7 @@ describe('CodeReviewDataApi', () => {
 
       await dataApi.submitNewCodeReviewComment(fakeComment, fakeReviewId);
 
-      expect(ajaxStub).to.have.been.calledWith({
+      expect(ajaxStub).toHaveBeenCalledWith({
         url: `/code_review_comments`,
         type: 'POST',
         headers: {'X-CSRF-Token': undefined},
@@ -307,7 +301,7 @@ describe('CodeReviewDataApi', () => {
 
     it('calls code_review_comments PATCH endpoint with the isResolved value to set', async () => {
       await dataApi.toggleResolveComment(11, true);
-      expect(ajaxStub).to.have.been.calledWith({
+      expect(ajaxStub).toHaveBeenCalledWith({
         url: `/code_review_comments/11`,
         type: 'PATCH',
         headers: {'X-CSRF-Token': undefined},

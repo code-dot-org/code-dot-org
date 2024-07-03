@@ -5,14 +5,14 @@ import sinon from 'sinon';
 
 import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 describe('Design System - CloseButton', () => {
   it('renders with default props', () => {
     render(<CloseButton onClick={() => {}} aria-label="default close" />);
 
     const button = screen.getByRole('button');
-    expect(button).to.exist;
+    expect(button).toBeDefined();
   });
 
   it('applies custom class name', () => {
@@ -26,7 +26,7 @@ describe('Design System - CloseButton', () => {
     );
 
     const button = screen.getByRole('button');
-    expect(button.classList.contains(className)).to.be.true;
+    expect(button.classList.contains(className)).toBe(true);
   });
 
   it('calls onClick when clicked', async () => {
@@ -40,6 +40,6 @@ describe('Design System - CloseButton', () => {
     const button = screen.getByRole('button');
     await user.click(button);
 
-    expect(handleClick).to.have.been.calledOnce;
+    expect(handleClick).toHaveBeenCalledTimes(1);
   });
 });

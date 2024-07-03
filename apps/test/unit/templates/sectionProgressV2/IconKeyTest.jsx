@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import IconKey from '@cdo/apps/templates/sectionProgressV2/IconKey';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('IconKey Component', () => {
   it('renders the open state initially', () => {
@@ -22,9 +22,9 @@ describe('IconKey Component', () => {
   it('renders the closed state when localStorage indicates the key is closed', () => {
     sinon.stub(utils, 'tryGetLocalStorage').returns('false');
     render(<IconKey />);
-    expect(screen.queryByText('Assignment Completion States')).to.be.null;
-    expect(screen.queryByText('Teacher Actions')).to.be.null;
-    expect(screen.queryByText('Level Types')).to.be.null;
+    expect(screen.queryByText('Assignment Completion States')).toBeNull();
+    expect(screen.queryByText('Teacher Actions')).toBeNull();
+    expect(screen.queryByText('Level Types')).toBeNull();
     utils.tryGetLocalStorage.restore();
   });
 
@@ -33,9 +33,9 @@ describe('IconKey Component', () => {
     render(<IconKey />);
     const containerDiv = screen.getByTestId('expandable-container');
     fireEvent.click(containerDiv);
-    expect(screen.queryByText('Assignment Completion States')).to.be.null;
-    expect(screen.queryByText('Teacher Actions')).to.be.null;
-    expect(screen.queryByText('Level Types')).to.be.null;
+    expect(screen.queryByText('Assignment Completion States')).toBeNull();
+    expect(screen.queryByText('Teacher Actions')).toBeNull();
+    expect(screen.queryByText('Level Types')).toBeNull();
     utils.tryGetLocalStorage.restore();
   });
 
@@ -52,7 +52,7 @@ describe('IconKey Component', () => {
     render(<IconKey />);
     const moreDetailsLink = screen.queryByText('More Details');
     expect(moreDetailsLink).be.visible;
-    expect(screen.queryByText('Progress Tracking Icon Key')).to.be.null;
+    expect(screen.queryByText('Progress Tracking Icon Key')).toBeNull();
     fireEvent.click(moreDetailsLink);
     screen.getByText('Progress Tracking Icon Key');
   });

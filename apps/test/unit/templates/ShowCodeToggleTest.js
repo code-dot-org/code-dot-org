@@ -15,7 +15,7 @@ import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 jest.mock('@cdo/apps/code-studio/initApp/project', () => ({
   ...jest.requireActual('@cdo/apps/code-studio/initApp/project'),
@@ -127,7 +127,7 @@ describe('The ShowCodeToggle component', () => {
             style={{display: 'inline-block'}}
           />
         )
-      ).to.be.true;
+      ).toBe(true);
     });
   });
 
@@ -148,7 +148,7 @@ describe('The ShowCodeToggle component', () => {
             style={{display: 'inline-block'}}
           />
         )
-      ).to.be.true;
+      ).toBe(true);
     });
 
     describe('after being clicked', () => {
@@ -166,22 +166,19 @@ describe('The ShowCodeToggle component', () => {
               style={{display: 'inline-block'}}
             />
           )
-        ).to.be.true;
+        ).toBe(true);
       });
 
       it('makes the editor stop using blocks', () => {
-        expect(studioApp().editor.session.currentlyUsingBlocks).to.be.false;
+        expect(studioApp().editor.session.currentlyUsingBlocks).toBe(false);
       });
 
       it("saves the text mode setting to the user's preferences", () => {
-        expect($.post).to.have.been.calledWith(
-          '/api/v1/users/me/using_text_mode',
-          {
-            project_id: 'some-project-id',
-            level_id: 'some-level-id',
-            using_text_mode: true,
-          }
-        );
+        expect($.post).toHaveBeenCalledWith('/api/v1/users/me/using_text_mode', {
+          project_id: 'some-project-id',
+          level_id: 'some-level-id',
+          using_text_mode: true,
+        });
       });
 
       describe('and after being clicked again', () => {
@@ -199,22 +196,19 @@ describe('The ShowCodeToggle component', () => {
                 style={{display: 'inline-block'}}
               />
             )
-          ).to.be.true;
+          ).toBe(true);
         });
 
         it('will make the editor start using blocks', () => {
-          expect(studioApp().editor.session.currentlyUsingBlocks).to.be.true;
+          expect(studioApp().editor.session.currentlyUsingBlocks).toBe(true);
         });
 
         it("save the text mode setting to the user's preferences again", () => {
-          expect($.post).to.have.been.calledWith(
-            '/api/v1/users/me/using_text_mode',
-            {
-              level_id: 'some-level-id',
-              project_id: 'some-project-id',
-              using_text_mode: false,
-            }
-          );
+          expect($.post).toHaveBeenCalledWith('/api/v1/users/me/using_text_mode', {
+            level_id: 'some-level-id',
+            project_id: 'some-project-id',
+            using_text_mode: false,
+          });
         });
       });
     });
@@ -229,11 +223,11 @@ describe('The ShowCodeToggle component', () => {
 
     it('will call onToggle with whether or not it is using blocks when it gets clicked', () => {
       toggle.simulate('click');
-      expect(onToggle).to.have.been.calledOnce;
-      expect(onToggle).to.have.been.calledWith(false);
+      expect(onToggle).toHaveBeenCalledTimes(1);
+      expect(onToggle).toHaveBeenCalledWith(false);
       toggle.simulate('click');
-      expect(onToggle).to.have.been.calledTwice;
-      expect(onToggle.secondCall).to.have.been.calledWith(true);
+      expect(onToggle).toHaveBeenCalledTimes(2);
+      expect(onToggle.secondCall).toHaveBeenCalledWith(true);
     });
   });
 
@@ -255,16 +249,16 @@ describe('The ShowCodeToggle component', () => {
             style={{display: 'inline-block'}}
           />
         )
-      ).to.be.true;
+      ).toBe(true);
     });
 
     describe('and the show code button is pressed', () => {
       beforeEach(() => toggle.simulate('click'));
       it('will not call onDropletToggle', () => {
-        expect(studioApp().onDropletToggle).not.to.have.been.called;
+        expect(studioApp().onDropletToggle).not.toHaveBeenCalled();
       });
       it('will instead show the generated code', () => {
-        expect(studioApp().showGeneratedCode).to.have.been.called;
+        expect(studioApp().showGeneratedCode).toHaveBeenCalled();
       });
     });
 
@@ -286,7 +280,7 @@ describe('The ShowCodeToggle component', () => {
               style={{display: 'none'}}
             />
           )
-        ).to.be.true;
+        ).toBe(true);
       });
     });
   });
@@ -309,7 +303,7 @@ describe('The ShowCodeToggle component', () => {
             style={{display: 'none'}}
           />
         )
-      ).to.be.true;
+      ).toBe(true);
     });
   });
 
@@ -333,7 +327,7 @@ describe('The ShowCodeToggle component', () => {
             style={{display: 'none'}}
           />
         )
-      ).to.be.true;
+      ).toBe(true);
     });
   });
 });

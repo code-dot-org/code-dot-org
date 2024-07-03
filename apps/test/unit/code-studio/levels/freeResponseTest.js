@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+
 
 import {writeSourceForLevel} from '@cdo/apps/code-studio/clientState';
 import FreeResponse from '@cdo/apps/code-studio/levels/freeResponse';

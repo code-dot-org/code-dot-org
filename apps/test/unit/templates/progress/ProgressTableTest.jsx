@@ -9,7 +9,7 @@ import {
 } from '@cdo/apps/templates/progress/ProgressTable';
 import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
 
-import {expect} from '../../../util/deprecatedChai';
+
 
 const FAKE_LESSONS = [];
 const FAKE_LEVELS = [];

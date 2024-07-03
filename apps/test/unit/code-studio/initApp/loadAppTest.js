@@ -10,7 +10,7 @@ import loadAppOptions, {
 import project from '@cdo/apps/code-studio/initApp/project';
 import * as imageUtils from '@cdo/apps/imageUtils';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 const SERVER_LEVEL_ID = 5;
 const SERVER_PROJECT_LEVEL_ID = 10;
@@ -111,8 +111,8 @@ describe('loadApp.js', () => {
 
       loadAppOptions()
         .then(() => {
-          expect(readLevelId).to.equal(SERVER_LEVEL_ID);
-          expect(window.appOptions.level.lastAttempt).to.equal(OLD_CODE);
+          expect(readLevelId).toBe(SERVER_LEVEL_ID);
+          expect(window.appOptions.level.lastAttempt).toBe(OLD_CODE);
 
           document.body.removeChild(appOptionsData);
           done();
@@ -131,8 +131,8 @@ describe('loadApp.js', () => {
 
       loadAppOptions()
         .then(() => {
-          expect(readLevelId).to.equal(SERVER_PROJECT_LEVEL_ID);
-          expect(window.appOptions.level.lastAttempt).to.equal(OLD_CODE);
+          expect(readLevelId).toBe(SERVER_PROJECT_LEVEL_ID);
+          expect(window.appOptions.level.lastAttempt).toBe(OLD_CODE);
 
           document.body.removeChild(appOptionsData);
           done();
@@ -151,8 +151,8 @@ describe('loadApp.js', () => {
 
       loadAppOptions()
         .then(() => {
-          expect(window.appOptions.level.lastAttempt).to.be.undefined;
-          expect(readLevelId).to.be.undefined;
+          expect(window.appOptions.level.lastAttempt).toBeUndefined();
+          expect(readLevelId).toBeUndefined();
 
           document.body.removeChild(appOptionsData);
           done();
@@ -181,7 +181,7 @@ describe('loadApp.js', () => {
 
       loadAppOptions()
         .then(() => {
-          expect(window.appOptions.channel).to.equal(responseChannel);
+          expect(window.appOptions.channel).toBe(responseChannel);
           document.body.removeChild(appOptionsData);
           done();
         })
@@ -212,7 +212,7 @@ describe('loadApp.js', () => {
 
       loadAppOptions()
         .then(() => {
-          expect(window.appOptions.exampleSolutions).to.equal(exampleSolutions);
+          expect(window.appOptions.exampleSolutions).toBe(exampleSolutions);
           document.body.removeChild(appOptionsData);
           done();
         })
@@ -242,8 +242,8 @@ describe('loadApp.js', () => {
       );
 
       files.putFile.callsFake((name, blob) => {
-        expect(writtenLevelId).to.be.undefined;
-        expect(name).to.equal('_share_image.png');
+        expect(writtenLevelId).toBeUndefined();
+        expect(name).toBe('_share_image.png');
         done();
       });
 
@@ -251,7 +251,7 @@ describe('loadApp.js', () => {
       appOptions.onAttempt({image: BLANK_PNG_PIXEL});
 
       // dataURIToFramedBlob gets called synchronously, eventually calls putFile.
-      expect(imageUtils.dataURIToFramedBlob).to.have.been.calledOnce;
+      expect(imageUtils.dataURIToFramedBlob).toHaveBeenCalledTimes(1);
     });
 
     // Make sure we can prevent sharing of certain level types
@@ -259,9 +259,9 @@ describe('loadApp.js', () => {
       appOptions.level.disableSharing = true;
       setupApp(appOptions);
       appOptions.onAttempt({image: BLANK_PNG_PIXEL});
-      expect(writtenLevelId).to.be.undefined;
-      expect(imageUtils.dataURIToFramedBlob).not.to.have.been.called;
-      expect(files.putFile).not.to.have.been.called;
+      expect(writtenLevelId).toBeUndefined();
+      expect(imageUtils.dataURIToFramedBlob).not.toHaveBeenCalled();
+      expect(files.putFile).not.toHaveBeenCalled();
     });
 
     // Catch the edge case with calc and eval projects, which don't generate
@@ -271,9 +271,9 @@ describe('loadApp.js', () => {
       appOptions.onAttempt({
         /* No image in report */
       });
-      expect(writtenLevelId).to.be.undefined;
-      expect(imageUtils.dataURIToFramedBlob).not.to.have.been.called;
-      expect(files.putFile).not.to.have.been.called;
+      expect(writtenLevelId).toBeUndefined();
+      expect(imageUtils.dataURIToFramedBlob).not.toHaveBeenCalled();
+      expect(files.putFile).not.toHaveBeenCalled();
     });
   });
 });

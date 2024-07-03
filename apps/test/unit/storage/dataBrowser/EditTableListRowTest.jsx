@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import EditTableListRow from '@cdo/apps/storage/dataBrowser/EditTableListRow';
 import commonI18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('EditTableListRow', () => {
   describe('localization', () => {
@@ -29,7 +29,7 @@ describe('EditTableListRow', () => {
       const wrapper = createEditTableListRow();
 
       let deleteButton = wrapper.find('ConfirmDeleteButton').at(0);
-      expect(deleteButton.prop('buttonText')).to.contain('i18n-delete');
+      expect(deleteButton.prop('buttonText')).toContain('i18n-delete');
     });
 
     it('should render a localized string for delete confirmation', () => {
@@ -38,7 +38,7 @@ describe('EditTableListRow', () => {
       const wrapper = createEditTableListRow();
 
       let deleteButton = wrapper.find('ConfirmDeleteButton').at(0);
-      expect(deleteButton.prop('body')).to.contain('i18n-delete-body');
+      expect(deleteButton.prop('body')).toContain('i18n-delete-body');
     });
 
     it('should render a localized string for delete confirmation title', () => {
@@ -47,7 +47,7 @@ describe('EditTableListRow', () => {
       const wrapper = createEditTableListRow();
 
       let deleteButton = wrapper.find('ConfirmDeleteButton').at(0);
-      expect(deleteButton.prop('title')).to.contain('i18n-delete-table');
+      expect(deleteButton.prop('title')).toContain('i18n-delete-table');
     });
   });
 });

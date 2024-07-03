@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import {TestableCodeWorkspaceContainer as CodeWorkspaceContainer} from '@cdo/apps/templates/CodeWorkspaceContainer';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../util/deprecatedChai';
+
 
 describe('CodeWorkspaceContainer', () => {
   let wrapper;
@@ -31,30 +31,30 @@ describe('CodeWorkspaceContainer', () => {
 
   it('fires a resize event on update if style.top changed', () => {
     wrapper = mount(<CodeWorkspaceContainer {...MINIMUM_PROPS} />);
-    expect(utils.fireResizeEvent).not.to.have.been.called;
+    expect(utils.fireResizeEvent).not.toHaveBeenCalled();
 
     wrapper.setProps({style: {top: 200}});
-    expect(utils.fireResizeEvent).to.have.been.calledOnce;
+    expect(utils.fireResizeEvent).toHaveBeenCalledTimes(1);
   });
 
   it('does not fire a resize event on update if style.top does not change', () => {
     wrapper = mount(
       <CodeWorkspaceContainer {...MINIMUM_PROPS} isRtl={false} />
     );
-    expect(utils.fireResizeEvent).not.to.have.been.called;
+    expect(utils.fireResizeEvent).not.toHaveBeenCalled();
 
     wrapper.setProps({isRtl: true});
-    expect(utils.fireResizeEvent).not.to.have.been.called;
+    expect(utils.fireResizeEvent).not.toHaveBeenCalled();
 
     wrapper.setProps({style: {left: 100}});
-    expect(utils.fireResizeEvent).not.to.have.been.called;
+    expect(utils.fireResizeEvent).not.toHaveBeenCalled();
   });
 
   it('hidden hides the outer div', () => {
     wrapper = mount(
       <CodeWorkspaceContainer {...MINIMUM_PROPS} hidden={false} />
     );
-    expect(wrapper).not.to.have.style('display', 'none');
+    expect(wrapper).to.not.have.style('display', 'none');
 
     wrapper.setProps({hidden: true});
     expect(wrapper).to.have.style('display', 'none');
@@ -64,14 +64,14 @@ describe('CodeWorkspaceContainer', () => {
     wrapper = mount(
       <CodeWorkspaceContainer {...MINIMUM_PROPS} isRtl={false} />
     );
-    expect(wrapper).not.to.have.style('left');
+    expect(wrapper).to.not.have.style('left');
     expect(wrapper).to.have.style('right', '0px');
     expect(wrapper).to.have.style('marginLeft', '15px');
-    expect(wrapper).not.to.have.style('marginRight');
+    expect(wrapper).to.not.have.style('marginRight');
 
     wrapper.setProps({isRtl: true});
     expect(wrapper).to.have.style('left', '0px');
-    expect(wrapper).not.to.have.style('right');
+    expect(wrapper).to.not.have.style('right');
     expect(wrapper).to.have.style('marginLeft', '0px');
     expect(wrapper).to.have.style('marginRight', '15px');
   });
@@ -80,7 +80,7 @@ describe('CodeWorkspaceContainer', () => {
     wrapper = mount(
       <CodeWorkspaceContainer {...MINIMUM_PROPS} noVisualization={false} />
     );
-    expect(wrapper).not.to.have.style('left');
+    expect(wrapper).to.not.have.style('left');
     expect(wrapper).to.have.style('marginLeft', '15px');
 
     wrapper.setProps({noVisualization: true});
@@ -97,7 +97,7 @@ describe('CodeWorkspaceContainer', () => {
       />
     );
     expect(wrapper).to.have.style('left', '0px');
-    expect(wrapper).not.to.have.style('right');
+    expect(wrapper).to.not.have.style('right');
     expect(wrapper).to.have.style('marginLeft', '0px');
 
     wrapper.setProps({
@@ -111,6 +111,6 @@ describe('CodeWorkspaceContainer', () => {
   it('getRenderedHeight gives height of DOM node', () => {
     wrapper = mount(<CodeWorkspaceContainer {...MINIMUM_PROPS} />);
     const height = wrapper.instance().getRenderedHeight();
-    expect(height).to.be.a('number');
+    expect(height).toBeInstanceOf(Number);
   });
 });

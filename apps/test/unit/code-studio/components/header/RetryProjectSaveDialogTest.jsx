@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import {UnconnectedRetryProjectSaveDialog as RetryProjectSaveDialog} from '@cdo/apps/code-studio/components/header/RetryProjectSaveDialog';
 import {projectUpdatedStatuses as statuses} from '@cdo/apps/code-studio/projectRedux';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 const errorTitle = 'Error saving your project';
 
@@ -17,7 +17,7 @@ describe('RetryProjectSaveDialog', () => {
         onTryAgain={sinon.spy()}
       />
     );
-    expect(wrapper.text()).not.to.include(errorTitle);
+    expect(wrapper.text()).not.toContain(errorTitle);
   });
 
   it('is visible and clickable when open', () => {
@@ -29,13 +29,13 @@ describe('RetryProjectSaveDialog', () => {
         onTryAgain={tryAgain}
       />
     );
-    expect(wrapper.text()).to.include(errorTitle);
+    expect(wrapper.text()).toContain(errorTitle);
     const button = wrapper.find('Button').at(0);
-    expect(button.text()).to.equal('Try again');
+    expect(button.text()).toBe('Try again');
 
-    expect(tryAgain).not.to.have.been.called;
+    expect(tryAgain).not.toHaveBeenCalled();
     button.simulate('click');
-    expect(tryAgain).to.have.been.called;
+    expect(tryAgain).toHaveBeenCalled();
   });
 
   it('is not clickable when save is pending', () => {
@@ -47,11 +47,11 @@ describe('RetryProjectSaveDialog', () => {
         onTryAgain={tryAgain}
       />
     );
-    expect(wrapper.text()).to.include(errorTitle);
+    expect(wrapper.text()).toContain(errorTitle);
     const button = wrapper.find('Button').at(0);
-    expect(button.text()).to.contain('saving');
+    expect(button.text()).toContain('saving');
 
     button.simulate('click');
-    expect(tryAgain).not.to.have.been.called;
+    expect(tryAgain).not.toHaveBeenCalled();
   });
 });

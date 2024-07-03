@@ -1,5 +1,4 @@
-import {expect} from 'chai';
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import { mount } from 'enzyme';
 import React from 'react';
 import sinon from 'sinon';
 
@@ -28,7 +27,7 @@ describe('UnassignSectionDialog', () => {
     const button = wrapper.find('Button').at(2);
 
     button.simulate('click');
-    expect(unassignSpy).to.have.been.calledOnce;
+    expect(unassignSpy).toHaveBeenCalledTimes(1);
   });
 
   it('calls cancel function when user clicks cancel', () => {
@@ -37,7 +36,7 @@ describe('UnassignSectionDialog', () => {
     const button = wrapper.find('Button').at(1);
 
     button.simulate('click');
-    expect(cancelSpy).to.have.been.calledOnce;
+    expect(cancelSpy).toHaveBeenCalledTimes(1);
   });
 
   it('displays the right section and unit text', () => {
@@ -49,8 +48,8 @@ describe('UnassignSectionDialog', () => {
         .contains(
           'Your students in mySection will no longer be taken to myCourse when they sign in.'
         )
-    ).to.be.true;
+    ).toBe(true);
 
-    expect(wrapper.text().includes('Unassign myCourse')).to.be.true;
+    expect(wrapper.text().includes('Unassign myCourse')).toBe(true);
   });
 });

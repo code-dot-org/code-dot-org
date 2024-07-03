@@ -17,7 +17,7 @@ import Dialog, {
   Cancel,
 } from '@cdo/apps/templates/Dialog';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 describe('AssetListItem', () => {
   var item;
@@ -35,7 +35,7 @@ describe('AssetListItem', () => {
           <div>bar.mp3</div>
         </div>
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('will show a warning when replacing an existing asset', () => {
@@ -44,9 +44,7 @@ describe('AssetListItem', () => {
         asset={{filename: 'bar.mp3', category: 'audio', willReplace: true}}
       />
     );
-    expect(item.text()).to.contain(
-      'Warning: Importing this will replace your existing "bar.mp3".'
-    );
+    expect(item.text()).toContain('Warning: Importing this will replace your existing "bar.mp3".');
   });
 
   it('uses the current project id when no other id is specified', () => {
@@ -55,9 +53,7 @@ describe('AssetListItem', () => {
         asset={{filename: 'bar.png', category: 'image', willReplace: false}}
       />
     );
-    expect(itemWithoutProjectId.find('img').prop('src')).to.contain(
-      '/v3/assets/undefined/bar.png'
-    );
+    expect(itemWithoutProjectId.find('img').prop('src')).toContain('/v3/assets/undefined/bar.png');
   });
 
   it("uses the specified project's id", () => {
@@ -67,9 +63,7 @@ describe('AssetListItem', () => {
         asset={{filename: 'bar.png', category: 'image', willReplace: false}}
       />
     );
-    expect(itemWithProjectId.find('img').prop('src')).to.contain(
-      '/v3/assets/1234/bar.png'
-    );
+    expect(itemWithProjectId.find('img').prop('src')).toContain('/v3/assets/1234/bar.png');
   });
 });
 
@@ -90,7 +84,7 @@ describe('ScreenListItem', () => {
         }}
       />
     );
-    expect(item.text()).to.contain('main_screen');
+    expect(item.text()).toContain('main_screen');
   });
 
   it('Will show a warning when replacing another screen', () => {
@@ -107,10 +101,8 @@ describe('ScreenListItem', () => {
         }}
       />
     );
-    expect(item.text()).to.contain('main_screen');
-    expect(item.text()).to.contain(
-      'Importing this will replace your existing screen: "main_screen".'
-    );
+    expect(item.text()).toContain('main_screen');
+    expect(item.text()).toContain('Importing this will replace your existing screen: "main_screen".');
   });
 
   it('Will show a warning when replacing another screen with assets', () => {
@@ -127,13 +119,9 @@ describe('ScreenListItem', () => {
         }}
       />
     );
-    expect(item.text()).to.contain('main_screen');
-    expect(item.text()).to.contain(
-      'Importing this will replace your existing screen: "main_screen".'
-    );
-    expect(item.text()).to.contain(
-      'Importing this will replace your existing assets: "foo.png", "bar.png".'
-    );
+    expect(item.text()).toContain('main_screen');
+    expect(item.text()).toContain('Importing this will replace your existing screen: "main_screen".');
+    expect(item.text()).toContain('Importing this will replace your existing assets: "foo.png", "bar.png".');
   });
 
   it('Will show the list of conflicting Ids if there are any', () => {
@@ -150,17 +138,11 @@ describe('ScreenListItem', () => {
         }}
       />
     );
-    expect(item.text()).to.contain('main_screen');
-    expect(item.text()).to.contain(
-      'Uses existing element or screen IDs: "input1", "input2".'
-    );
+    expect(item.text()).toContain('main_screen');
+    expect(item.text()).toContain('Uses existing element or screen IDs: "input1", "input2".');
     // we don't want to show other errors related to importing.
-    expect(item.text()).not.to.contain(
-      'Importing this will replace your existing assets'
-    );
-    expect(item.text()).not.to.contain(
-      'Importing this will replace your existing screen'
-    );
+    expect(item.text()).not.toContain('Importing this will replace your existing assets');
+    expect(item.text()).not.toContain('Importing this will replace your existing screen');
   });
 });
 
@@ -207,22 +189,22 @@ describe('ImportScreensDialog', () => {
     });
 
     it('renders a dialog with the list of screens', () => {
-      expect(dialog.type()).to.equal(Dialog);
-      expect(dialog.children().at(0).type()).to.equal(Body);
-      expect(dialog.children().at(1).type()).to.equal(Buttons);
-      expect(dialog.find('MultiCheckboxSelector').length).to.equal(1);
+      expect(dialog.type()).toBe(Dialog);
+      expect(dialog.children().at(0).type()).toBe(Body);
+      expect(dialog.children().at(1).type()).toBe(Buttons);
+      expect(dialog.find('MultiCheckboxSelector').length).toBe(1);
     });
 
     it('renders an Import button which calls onImport when clicked', () => {
       const button = getDialogButton();
-      expect(button.type()).to.equal(Confirm);
-      expect(button.matchesElement(<Confirm>Import</Confirm>)).to.be.true;
+      expect(button.type()).toBe(Confirm);
+      expect(button.matchesElement(<Confirm>Import</Confirm>)).toBe(true);
     });
 
     describe('the import button', () => {
       it('calls the onImport prop when clicked', () => {
         getDialogButton().simulate('click');
-        expect(onImport.calledWith('some-project', [], [])).to.be.true;
+        expect(onImport.calledWith('some-project', [], [])).toBe(true);
       });
 
       it('passes the selected screens to the onImport prop function', () => {
@@ -232,7 +214,7 @@ describe('ImportScreensDialog', () => {
         dialog.update();
 
         getDialogButton().simulate('click');
-        expect(onImport.calledWith('some-project', newSelected, [])).to.be.true;
+        expect(onImport.calledWith('some-project', newSelected, [])).toBe(true);
       });
     });
 
@@ -243,11 +225,11 @@ describe('ImportScreensDialog', () => {
       });
 
       it('should have a Screens header', () => {
-        expect(checkboxSelector.prop('header')).to.equal('Screens');
+        expect(checkboxSelector.prop('header')).toBe('Screens');
       });
 
       it('should have no selected screens initially', () => {
-        expect(checkboxSelector.prop('selected')).to.deep.equal([]);
+        expect(checkboxSelector.prop('selected')).toEqual([]);
       });
 
       it('should keep track of the selected screens when they are changed', () => {
@@ -255,7 +237,7 @@ describe('ImportScreensDialog', () => {
         checkboxSelector.prop('onChange')(newSelected);
         dialog.update();
         checkboxSelector = dialog.find('MultiCheckboxSelector');
-        expect(checkboxSelector.prop('selected')).to.deep.equal(newSelected);
+        expect(checkboxSelector.prop('selected')).toEqual(newSelected);
       });
     });
   });
@@ -288,16 +270,16 @@ describe('ImportScreensDialog', () => {
       dialog.update();
 
       getDialogButton().simulate('click');
-      expect(onImport.calledWith('some-project', [], newSelected)).to.be.true;
+      expect(onImport.calledWith('some-project', [], newSelected)).toBe(true);
     });
 
     describe('the asset list', () => {
       it('should have a Screens header', () => {
-        expect(checkboxSelector.prop('header')).to.equal('Other Assets');
+        expect(checkboxSelector.prop('header')).toBe('Other Assets');
       });
 
       it('should have no selected screens initially', () => {
-        expect(checkboxSelector.prop('selected')).to.deep.equal([]);
+        expect(checkboxSelector.prop('selected')).toEqual([]);
       });
 
       it('should keep track of the selected screens when they are changed', () => {
@@ -305,7 +287,7 @@ describe('ImportScreensDialog', () => {
         checkboxSelector.prop('onChange')(newSelected);
         dialog.update();
         checkboxSelector = dialog.find('MultiCheckboxSelector');
-        expect(checkboxSelector.prop('selected')).to.deep.equal(newSelected);
+        expect(checkboxSelector.prop('selected')).toEqual(newSelected);
       });
     });
   });
@@ -369,7 +351,7 @@ describe('ImportScreensDialog', () => {
             </Buttons>
           </Dialog>
         )
-      ).to.be.true;
+      ).toBe(true);
     });
   });
 
@@ -410,11 +392,11 @@ describe('ImportScreensDialog', () => {
     });
 
     it('should disable the confirmation button', () => {
-      expect(getDialogButton().prop('disabled')).to.be.true;
+      expect(getDialogButton().prop('disabled')).toBe(true);
     });
 
     it('should disable the multi checkbox widget', () => {
-      expect(dialog.find('MultiCheckboxSelector').prop('disabled')).to.be.true;
+      expect(dialog.find('MultiCheckboxSelector').prop('disabled')).toBe(true);
     });
   });
 });

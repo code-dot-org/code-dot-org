@@ -7,7 +7,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {UnconnectedLevelDetailsDialog as LevelDetailsDialog} from '@cdo/apps/templates/lessonOverview/activities/LevelDetailsDialog';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../../util/reconfiguredChai';
+
 
 describe('LevelDetailsDialogTest', () => {
   let handleCloseSpy, loadVideoSpy, defaultProps;
@@ -41,7 +41,7 @@ describe('LevelDetailsDialogTest', () => {
     );
     const dismissButton = wrapper.find('Button').at(0);
     dismissButton.simulate('click');
-    expect(handleCloseSpy.calledOnce).to.be.true;
+    expect(handleCloseSpy.calledOnce).toBe(true);
   });
 
   it('links to level url', () => {
@@ -62,9 +62,9 @@ describe('LevelDetailsDialogTest', () => {
     );
     const levelLink = wrapper.find('Button').at(1);
     levelLink.simulate('click', {preventDefault: () => {}});
-    expect(firehoseClient.putRecord).to.have.been.calledOnce;
+    expect(firehoseClient.putRecord).toHaveBeenCalledTimes(1);
     firehoseClient.putRecord.yieldTo('callback');
-    expect(utils.windowOpen).to.have.been.calledWith('level.url?no_redirect=1');
+    expect(utils.windowOpen).toHaveBeenCalledWith('level.url?no_redirect=1');
 
     utils.windowOpen.restore();
     firehoseClient.putRecord.restore();
@@ -81,8 +81,8 @@ describe('LevelDetailsDialogTest', () => {
         }}
       />
     );
-    expect(wrapper.contains('This is some text.')).to.be.true;
-    expect(wrapper.find('h1').contains('External Markdown Level')).to.be.true;
+    expect(wrapper.contains('This is some text.')).toBe(true);
+    expect(wrapper.find('h1').contains('External Markdown Level')).toBe(true);
   });
 
   it('can display the video and teacher markdown for an external markdown level', () => {
@@ -100,12 +100,12 @@ describe('LevelDetailsDialogTest', () => {
         }}
       />
     );
-    expect(loadVideoSpy.calledOnce).to.be.true;
-    expect(wrapper.contains('This is some text.')).to.be.true;
-    expect(wrapper.find('TeacherOnlyMarkdown').length).to.equal(1);
+    expect(loadVideoSpy.calledOnce).toBe(true);
+    expect(wrapper.contains('This is some text.')).toBe(true);
+    expect(wrapper.find('TeacherOnlyMarkdown').length).toBe(1);
     expect(
       wrapper.find('TeacherOnlyMarkdown').first().props().content
-    ).to.equal('This is some teacher only text.');
+    ).toBe('This is some teacher only text.');
   });
 
   it('can display a LevelGroup', () => {
@@ -119,7 +119,7 @@ describe('LevelDetailsDialogTest', () => {
       />
     );
     const safeMarkdown = wrapper.find('SafeMarkdown').first();
-    expect(safeMarkdown.props().markdown).to.equal(
+    expect(safeMarkdown.props().markdown).toBe(
       'This level is an assessment or survey with multiple questions. To view this level click "See Full Level".'
     );
   });
@@ -135,7 +135,7 @@ describe('LevelDetailsDialogTest', () => {
       />
     );
     const safeMarkdown = wrapper.find('SafeMarkdown').first();
-    expect(safeMarkdown.props().markdown).to.equal(
+    expect(safeMarkdown.props().markdown).toBe(
       'No preview is available for this level. To view this level click "See Full Level".'
     );
   });
@@ -153,8 +153,8 @@ describe('LevelDetailsDialogTest', () => {
         }}
       />
     );
-    expect(loadVideoSpy.calledOnce).to.be.true;
-    expect(wrapper.contains('Some things to think about.')).to.be.true;
+    expect(loadVideoSpy.calledOnce).toBe(true);
+    expect(wrapper.contains('Some things to think about.')).toBe(true);
   });
 
   it('can display teacher markdown on a standalone video level', () => {
@@ -171,12 +171,12 @@ describe('LevelDetailsDialogTest', () => {
         }}
       />
     );
-    expect(loadVideoSpy.calledOnce).to.be.true;
-    expect(wrapper.contains('Some things to think about.')).to.be.true;
-    expect(wrapper.find('TeacherOnlyMarkdown').length).to.equal(1);
+    expect(loadVideoSpy.calledOnce).toBe(true);
+    expect(wrapper.contains('Some things to think about.')).toBe(true);
+    expect(wrapper.find('TeacherOnlyMarkdown').length).toBe(1);
     expect(
       wrapper.find('TeacherOnlyMarkdown').first().props().content
-    ).to.equal('Some things to teach about.');
+    ).toBe('Some things to teach about.');
   });
 
   it('can display a bubble choice level', () => {
@@ -208,7 +208,7 @@ describe('LevelDetailsDialogTest', () => {
         }}
       />
     );
-    expect(wrapper.find('SublevelCard').length).to.equal(3);
+    expect(wrapper.find('SublevelCard').length).toBe(3);
   });
 
   it('can display a bubble choice sublevel on switch', () => {
@@ -242,11 +242,9 @@ describe('LevelDetailsDialogTest', () => {
     wrapper
       .instance()
       .handleBubbleChoiceBubbleClick(bubbleChoiceLevel.sublevels[0]);
-    expect(wrapper.find('SublevelCard').length).to.equal(0);
-    expect(wrapper.find('SafeMarkdown').first().props().markdown).to.equal(
-      'Markdown1'
-    );
-    expect(wrapper.find('h1').contains('Choice 1')).to.be.true;
+    expect(wrapper.find('SublevelCard').length).toBe(0);
+    expect(wrapper.find('SafeMarkdown').first().props().markdown).toBe('Markdown1');
+    expect(wrapper.find('h1').contains('Choice 1')).toBe(true);
   });
 
   it('can display a bubble choice sublevel with example solutions', () => {
@@ -281,12 +279,12 @@ describe('LevelDetailsDialogTest', () => {
     wrapper
       .instance()
       .handleBubbleChoiceBubbleClick(bubbleChoiceLevel.sublevels[0]);
-    expect(wrapper.find('SublevelCard').length).to.equal(0);
-    expect(wrapper.find('h1').contains('Choice 1')).to.be.true;
-    expect(wrapper.find('TopInstructions').length).to.equal(1);
+    expect(wrapper.find('SublevelCard').length).toBe(0);
+    expect(wrapper.find('h1').contains('Choice 1')).toBe(true);
+    expect(wrapper.find('TopInstructions').length).toBe(1);
     expect(
       wrapper.find('TopInstructions').props().exampleSolutions[0]
-    ).to.equal('link/1');
+    ).toBe('link/1');
   });
 
   it('can display a CSD/CSP puzzle level', () => {
@@ -306,10 +304,10 @@ describe('LevelDetailsDialogTest', () => {
         }}
       />
     );
-    expect(wrapper.find('TopInstructions').length).to.equal(1);
+    expect(wrapper.find('TopInstructions').length).toBe(1);
     expect(
       wrapper.find('TopInstructions').props().exampleSolutions[0]
-    ).to.equal('link/1');
+    ).toBe('link/1');
   });
 
   it('can display a contained level', () => {
@@ -334,7 +332,7 @@ describe('LevelDetailsDialogTest', () => {
         }}
       />
     );
-    expect(wrapper.find('TopInstructions').length).to.equal(1);
+    expect(wrapper.find('TopInstructions').length).toBe(1);
   });
 
   it('can display a multiple choice level', () => {
@@ -357,16 +355,12 @@ describe('LevelDetailsDialogTest', () => {
         }}
       />
     );
-    expect(wrapper.find('SafeMarkdown').length).to.equal(2);
-    expect(wrapper.find('SafeMarkdown').at(0).props().markdown).equal(
-      'Look at the code below and predict how the headings will be displayed.'
-    );
-    expect(wrapper.find('SafeMarkdown').at(1).props().markdown).equal(
-      'Eggs, Bacon, Waffles'
-    );
-    expect(wrapper.find('TeacherOnlyMarkdown').length).to.equal(1);
+    expect(wrapper.find('SafeMarkdown').length).toBe(2);
+    expect(wrapper.find('SafeMarkdown').at(0).props().markdown).toBe('Look at the code below and predict how the headings will be displayed.');
+    expect(wrapper.find('SafeMarkdown').at(1).props().markdown).toBe('Eggs, Bacon, Waffles');
+    expect(wrapper.find('TeacherOnlyMarkdown').length).toBe(1);
     expect(
       wrapper.find('TeacherOnlyMarkdown').first().props().content
-    ).to.equal('This is a multiple choice level.');
+    ).toBe('This is a multiple choice level.');
   });
 });

@@ -6,7 +6,7 @@ import sinon from 'sinon';
 
 import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('Petition on submit', () => {
   const minimumInputs = {
@@ -68,7 +68,7 @@ describe('Petition on submit', () => {
     const petition = mountPetition();
     submitForm(petition);
 
-    expect($.ajax).to.not.have.been.called;
+    expect($.ajax).not.toHaveBeenCalled();
   });
   it('sends request if all required fields are valid', () => {
     const petition = mountPetition();
@@ -76,9 +76,7 @@ describe('Petition on submit', () => {
     submitForm(petition);
 
     const serverCalledWith = $.ajax.getCall(0).args[0];
-    expect(JSON.parse(serverCalledWith.data)).to.deep.equal(
-      expectedDataFromInputs(minimumInputs)
-    );
+    expect(JSON.parse(serverCalledWith.data)).toEqual(expectedDataFromInputs(minimumInputs));
   });
   it('sends request with name and email anonymized if under 16', () => {
     const petition = mountPetition();
@@ -94,7 +92,7 @@ describe('Petition on submit', () => {
     submitForm(petition);
 
     const serverCalledWith = $.ajax.getCall(0).args[0];
-    expect(JSON.parse(serverCalledWith.data)).to.deep.equal({
+    expect(JSON.parse(serverCalledWith.data)).toEqual({
       ...expectedDataFromInputs(inputs),
       name_s: '',
       email_s: 'anonymous@code.org',
@@ -119,7 +117,7 @@ describe('Petition on submit', () => {
     submitForm(petition);
 
     const serverCalledWith = $.ajax.getCall(0).args[0];
-    expect(JSON.parse(serverCalledWith.data)).to.deep.equal({
+    expect(JSON.parse(serverCalledWith.data)).toEqual({
       ...expectedDataFromInputs(inputs),
       role_s: 'engineer', // The 'role' value has a consistent name regardless of language
     });
@@ -129,7 +127,7 @@ describe('Petition on submit', () => {
     addInputsToPetition(petition, minimumInputs);
     submitForm(petition);
 
-    sinon.assert.calledOnce(window.ga);
+    sinon.toHaveBeenCalledTimes(1);
   });
   it('does not report to google analytics if unsuccessful submit', () => {
     const petition = mountPetition();

@@ -6,7 +6,7 @@ import ChangeUserTypeModal from '@cdo/apps/lib/ui/accounts/ChangeUserTypeModal';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../../util/deprecatedChai';
+
 
 describe('ChangeUserTypeModal', () => {
   let wrapper;
@@ -45,22 +45,20 @@ describe('ChangeUserTypeModal', () => {
     expect(emailOptInSelect(wrapper)).to.have.attr('disabled');
     expect(submitButton(wrapper)).to.have.attr('disabled');
     expect(cancelButton(wrapper)).to.have.attr('disabled');
-    expect(wrapper.text()).to.include(i18n.saving());
+    expect(wrapper.text()).toContain(i18n.saving());
   });
 
   it('shows unknown error text when an unknown error occurs', () => {
     wrapper.setState({saveState: 'unknown-error'});
-    expect(wrapper.text()).to.include(
-      i18n.changeUserTypeModal_unexpectedError()
-    );
+    expect(wrapper.text()).toContain(i18n.changeUserTypeModal_unexpectedError());
   });
 
   it('calls handleCancel when clicking the cancel button', () => {
     const handleCancel = sinon.spy();
     wrapper.setProps({handleCancel});
-    expect(handleCancel).not.to.have.been.called;
+    expect(handleCancel).not.toHaveBeenCalled();
     cancelButton(wrapper).simulate('click');
-    expect(handleCancel).to.have.been.calledOnce;
+    expect(handleCancel).toHaveBeenCalledTimes(1);
   });
 
   describe('validation', () => {
@@ -72,9 +70,7 @@ describe('ChangeUserTypeModal', () => {
         },
       });
 
-      expect(wrapper.text()).to.include(
-        i18n.changeUserTypeModal_email_isRequired()
-      );
+      expect(wrapper.text()).toContain(i18n.changeUserTypeModal_email_isRequired());
     });
 
     it('checks that email is valid', () => {
@@ -85,9 +81,7 @@ describe('ChangeUserTypeModal', () => {
         },
       });
 
-      expect(wrapper.text()).to.include(
-        i18n.changeUserTypeModal_email_invalid()
-      );
+      expect(wrapper.text()).toContain(i18n.changeUserTypeModal_email_invalid());
     });
 
     it('reports email server errors', () => {
@@ -102,7 +96,7 @@ describe('ChangeUserTypeModal', () => {
         },
       });
 
-      expect(wrapper.text()).to.include(serverError);
+      expect(wrapper.text()).toContain(serverError);
     });
 
     it('checks that email opt-in is present', () => {
@@ -114,9 +108,7 @@ describe('ChangeUserTypeModal', () => {
         },
       });
 
-      expect(wrapper.text()).to.include(
-        i18n.changeUserTypeModal_emailOptIn_isRequired()
-      );
+      expect(wrapper.text()).toContain(i18n.changeUserTypeModal_emailOptIn_isRequired());
     });
 
     it('reports email opt-in server errors', () => {
@@ -132,7 +124,7 @@ describe('ChangeUserTypeModal', () => {
         },
       });
 
-      expect(wrapper.text()).to.include(serverError);
+      expect(wrapper.text()).toContain(serverError);
     });
 
     it('disables the submit button when validation errors are present', () => {
@@ -143,7 +135,7 @@ describe('ChangeUserTypeModal', () => {
         },
       });
 
-      expect(submitButton(wrapper)).to.have.prop('disabled', true);
+      expect(submitButton(wrapper).props()).toHaveProperty('disabled', true);
     });
 
     it('enables the submit button when form passes validation', () => {
@@ -154,7 +146,7 @@ describe('ChangeUserTypeModal', () => {
         },
       });
 
-      expect(submitButton(wrapper)).to.have.prop('disabled', false);
+      expect(submitButton(wrapper).props()).toHaveProperty('disabled', false);
     });
   });
 
@@ -165,11 +157,11 @@ describe('ChangeUserTypeModal', () => {
           email: 'test-server-error',
         },
       });
-      expect(wrapper.state().serverErrors.email).to.equal('test-server-error');
+      expect(wrapper.state().serverErrors.email).toBe('test-server-error');
       emailInput(wrapper).simulate('change', {
         target: {value: 'me@example.com'},
       });
-      expect(wrapper.state().serverErrors.email).to.be.undefined;
+      expect(wrapper.state().serverErrors.email).toBeUndefined();
     });
 
     it('on email opt-in', () => {
@@ -178,24 +170,22 @@ describe('ChangeUserTypeModal', () => {
           emailOptIn: 'test-server-error',
         },
       });
-      expect(wrapper.state().serverErrors.emailOptIn).to.equal(
-        'test-server-error'
-      );
+      expect(wrapper.state().serverErrors.emailOptIn).toBe('test-server-error');
       emailOptInSelect(wrapper).simulate('change', {target: {value: 'yes'}});
-      expect(wrapper.state().serverErrors.emailOptIn).to.be.undefined;
+      expect(wrapper.state().serverErrors.emailOptIn).toBeUndefined();
     });
   });
 
   describe('onSubmitFailure', () => {
     it('puts the dialog in UNKNOWN ERROR state if response has no server errors', () => {
-      expect(wrapper.state().saveState).to.equal('initial');
+      expect(wrapper.state().saveState).toBe('initial');
       wrapper.instance().onSubmitFailure(null, {});
-      expect(wrapper.state().saveState).to.equal('unknown-error');
+      expect(wrapper.state().saveState).toBe('unknown-error');
     });
 
     it('loads returned validation errors into dialog state', () => {
-      expect(wrapper.state().saveState).to.equal('initial');
-      expect(wrapper.state().serverErrors).to.deep.equal({
+      expect(wrapper.state().saveState).toBe('initial');
+      expect(wrapper.state().serverErrors).toEqual({
         email: undefined,
         emailOptIn: undefined,
       });
@@ -205,8 +195,8 @@ describe('ChangeUserTypeModal', () => {
           emailOptIn: 'test-opt-in-server-error',
         },
       });
-      expect(wrapper.state().saveState).to.equal('initial');
-      expect(wrapper.state().serverErrors).to.deep.equal({
+      expect(wrapper.state().saveState).toBe('initial');
+      expect(wrapper.state().serverErrors).toEqual({
         email: 'test-email-server-error',
         emailOptIn: 'test-opt-in-server-error',
       });

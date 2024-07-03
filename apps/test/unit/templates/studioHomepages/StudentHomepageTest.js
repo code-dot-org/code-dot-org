@@ -9,7 +9,7 @@ import Notification from '@cdo/apps/templates/Notification';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 import {courses, topCourse, joinedSections} from './homepagesTestData';
 
@@ -38,7 +38,7 @@ describe('StudentHomepage', () => {
   it('shows a Header Banner that says My Dashboard', () => {
     const wrapper = shallow(<StudentHomepage {...TEST_PROPS} />);
     const headerBanner = wrapper.find(HeaderBanner);
-    expect(headerBanner.props().headingText).to.equal('My Dashboard');
+    expect(headerBanner.props().headingText).toBe('My Dashboard');
   });
 
   it('references a ProtectedStatefulDiv for flashes', () => {
@@ -74,7 +74,7 @@ describe('StudentHomepage', () => {
     const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
     shallow(<StudentHomepage {...TEST_PROPS} />);
 
-    expect(analyticsSpy).not.to.have.been.called;
+    expect(analyticsSpy).not.toHaveBeenCalled();
     analyticsSpy.restore();
   });
 

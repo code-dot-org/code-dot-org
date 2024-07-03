@@ -8,7 +8,7 @@ import {singleton as studioAppSingleton} from '@cdo/apps/StudioApp';
 import Artist from '@cdo/apps/turtle/artist';
 import {parseElement} from '@cdo/apps/xml';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 const SHORT_DIAGONAL = 50 * Math.sqrt(2);
 const VERY_LONG_DIAGONAL = 150 * Math.sqrt(2);
@@ -40,38 +40,38 @@ describe('Artist', () => {
     it('draws 2 joints on a short segment', () => {
       artist.visualization.drawForwardWithJoints_(50, false);
 
-      expect(joints).to.equal(2);
-      expect(segments).to.eql([50]);
+      expect(joints).toBe(2);
+      expect(segments).toEqual([50]);
     });
     it('draws 3 joints on a long segment', () => {
       artist.visualization.drawForwardWithJoints_(100, false);
 
-      expect(joints).to.equal(3);
-      expect(segments).to.eql([50, 50]);
+      expect(joints).toBe(3);
+      expect(segments).toEqual([50, 50]);
     });
     it('draws no joints on a very short segment', () => {
       artist.visualization.drawForwardWithJoints_(10, false);
 
-      expect(joints).to.equal(0);
-      expect(segments).to.eql([10]);
+      expect(joints).toBe(0);
+      expect(segments).toEqual([10]);
     });
     it('draws 2 joints on a short diagonal segment', () => {
       artist.visualization.drawForwardWithJoints_(SHORT_DIAGONAL, true);
 
-      expect(joints).to.equal(2);
-      expect(segments).to.eql([SHORT_DIAGONAL]);
+      expect(joints).toBe(2);
+      expect(segments).toEqual([SHORT_DIAGONAL]);
     });
     it('draws 4 joints on a very long diagonal segment', () => {
       artist.visualization.drawForwardWithJoints_(VERY_LONG_DIAGONAL, true);
 
-      expect(joints).to.equal(4);
-      expect(segments).to.eql([SHORT_DIAGONAL, SHORT_DIAGONAL, SHORT_DIAGONAL]);
+      expect(joints).toBe(4);
+      expect(segments).toEqual([SHORT_DIAGONAL, SHORT_DIAGONAL, SHORT_DIAGONAL]);
     });
     it('draws no joints on a very short diagonal segment', () => {
       artist.visualization.drawForwardWithJoints_(SHORT_DIAGONAL - 1, true);
 
-      expect(joints).to.equal(0);
-      expect(segments).to.eql([SHORT_DIAGONAL - 1]);
+      expect(joints).toBe(0);
+      expect(segments).toEqual([SHORT_DIAGONAL - 1]);
     });
   });
 
@@ -90,17 +90,7 @@ describe('Artist', () => {
       );
       artist.visualization.drawForwardLineWithPattern_(-100);
 
-      expect(setDrawPatternBackwardSpy).to.be.have.been.calledWith(
-        img,
-        100,
-        0,
-        -100,
-        100,
-        -25,
-        -50,
-        -50,
-        100
-      );
+      expect(setDrawPatternBackwardSpy).toHaveBeenCalledWith(img, 100, 0, -100, 100, -25, -50, -50, 100);
 
       setDrawPatternBackwardSpy.restore();
     });
@@ -119,17 +109,7 @@ describe('Artist', () => {
       );
       artist.visualization.drawForwardLineWithPattern_(100);
 
-      expect(setDrawPatternForwardSpy).to.be.have.been.calledWith(
-        img,
-        0,
-        0,
-        100,
-        100,
-        -25,
-        -50,
-        150,
-        100
-      );
+      expect(setDrawPatternForwardSpy).toHaveBeenCalledWith(img, 0, 0, 100, 100, -25, -50, 150, 100);
 
       setDrawPatternForwardSpy.restore();
     });
@@ -151,17 +131,7 @@ describe('Artist', () => {
       artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
-      expect(setStickerSize).to.be.have.been.calledWith(
-        img,
-        0,
-        0,
-        100,
-        100,
-        -50,
-        -100,
-        100,
-        100
-      );
+      expect(setStickerSize).toHaveBeenCalledWith(img, 0, 0, 100, 100, -50, -100, 100, 100);
 
       setStickerSize.restore();
     });
@@ -180,17 +150,7 @@ describe('Artist', () => {
       artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
-      expect(setStickerSize).to.be.have.been.calledWith(
-        img,
-        0,
-        0,
-        100,
-        100,
-        -0,
-        -0,
-        0,
-        0
-      );
+      expect(setStickerSize).toHaveBeenCalledWith(img, 0, 0, 100, 100, -0, -0, 0, 0);
 
       setStickerSize.restore();
     });
@@ -209,17 +169,7 @@ describe('Artist', () => {
       artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
-      expect(setStickerSize).to.be.have.been.calledWith(
-        img,
-        0,
-        0,
-        100,
-        100,
-        -25,
-        -50,
-        50,
-        50
-      );
+      expect(setStickerSize).toHaveBeenCalledWith(img, 0, 0, 100, 100, -25, -50, 50, 50);
 
       setStickerSize.restore();
     });
@@ -239,17 +189,7 @@ describe('Artist', () => {
       artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
-      expect(setStickerSize).to.be.have.been.calledWith(
-        img,
-        0,
-        0,
-        100,
-        100,
-        -50,
-        -100,
-        100,
-        100
-      );
+      expect(setStickerSize).toHaveBeenCalledWith(img, 0, 0, 100, 100, -50, -100, 100, 100);
 
       setStickerSize.restore();
     });
@@ -269,17 +209,7 @@ describe('Artist', () => {
       artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
-      expect(setStickerSize).to.be.have.been.calledWith(
-        img,
-        0,
-        0,
-        100,
-        40,
-        -15,
-        -12,
-        30,
-        12
-      );
+      expect(setStickerSize).toHaveBeenCalledWith(img, 0, 0, 100, 40, -15, -12, 30, 12);
 
       setStickerSize.restore();
     });
@@ -299,7 +229,7 @@ describe('Artist', () => {
 
       absoluteDirection.forEach(angle => {
         artist.step('PT', [angle, blockId]);
-        expect(pointToSpy).to.be.have.been.calledWith(angle);
+        expect(pointToSpy).toHaveBeenCalledWith(angle);
       });
       pointToSpy.restore();
     });
@@ -311,7 +241,7 @@ describe('Artist', () => {
       artist.visualization.angle = 50;
       artist.step('PT', [angle, blockId]);
 
-      expect(artist.visualization.angle).to.equal(angle);
+      expect(artist.visualization.angle).toBe(angle);
     });
 
     it('should call setHeading', () => {
@@ -321,7 +251,7 @@ describe('Artist', () => {
       const setHeadingStub = sinon.stub(artist.visualization, 'setHeading');
       artist.step('PT', [angle, blockId]);
 
-      expect(setHeadingStub).to.be.have.been.calledOnce;
+      expect(setHeadingStub).toHaveBeenCalledTimes(1);
 
       setHeadingStub.restore();
     });
@@ -340,8 +270,8 @@ describe('Artist', () => {
       coords.forEach(x => {
         coords.forEach(y => {
           artist.step('JT', [[x, y]]);
-          expect(artist.visualization.x).to.equal(x);
-          expect(artist.visualization.y).to.equal(y);
+          expect(artist.visualization.x).toBe(x);
+          expect(artist.visualization.y).toBe(y);
         });
       });
     });
@@ -362,8 +292,8 @@ describe('Artist', () => {
       Object.keys(expectations).forEach(position => {
         const [x, y] = expectations[position];
         artist.step('JT', [Position[position]]);
-        expect(artist.visualization.x).to.equal(x);
-        expect(artist.visualization.y).to.equal(y);
+        expect(artist.visualization.x).toBe(x);
+        expect(artist.visualization.y).toBe(y);
       });
     });
   });
@@ -387,7 +317,7 @@ describe('Artist', () => {
 
       artist.resetButtonClick();
 
-      expect(execute).to.have.been.called;
+      expect(execute).toHaveBeenCalled();
       execute.restore();
     });
 
@@ -410,7 +340,7 @@ describe('Artist', () => {
         .catch(() => done());
       studioApp.runChangeHandlers();
 
-      expect(execute).to.have.been.called;
+      expect(execute).toHaveBeenCalled();
       execute.restore();
     });
   });
@@ -460,7 +390,7 @@ describe('Artist', () => {
       artist.prepareForRemix();
 
       // loadBlocksToWorkspace should not have been called
-      expect(newDom).to.be.undefined;
+      expect(newDom).toBeUndefined();
     });
 
     it('adds moveTo block if initialX is set', () => {
@@ -472,7 +402,7 @@ describe('Artist', () => {
       expect(
         newDom.querySelector('block[type="jump_to_xy"] title[name="XPOS"]')
           .firstChild.wholeText
-      ).to.equal('30');
+      ).toBe('30');
     });
 
     it('adds moveTo block if initialX and initialY are set', () => {
@@ -485,11 +415,11 @@ describe('Artist', () => {
       expect(
         newDom.querySelector('block[type="jump_to_xy"] title[name="XPOS"]')
           .firstChild.wholeText
-      ).to.equal('30');
+      ).toBe('30');
       expect(
         newDom.querySelector('block[type="jump_to_xy"] title[name="YPOS"]')
           .firstChild.wholeText
-      ).to.equal('50');
+      ).toBe('50');
     });
 
     it('adds a moveTo block with 200 for the y coordinate if initialY is not specified in the level', () => {
@@ -501,7 +431,7 @@ describe('Artist', () => {
       expect(
         newDom.querySelector('block[type="jump_to_xy"] title[name="YPOS"]')
           .firstChild.wholeText
-      ).to.equal('200');
+      ).toBe('200');
     });
 
     it('adds moveTo and turn blocks if initialX and startDirection are set', () => {
@@ -514,11 +444,11 @@ describe('Artist', () => {
       expect(
         newDom.querySelector('block[type="jump_to_xy"] title[name="XPOS"]')
           .firstChild.wholeText
-      ).to.equal('30');
+      ).toBe('30');
       expect(
         newDom.querySelector('block[type="draw_turn"] title[name="NUM"]')
           .firstChild.wholeText
-      ).to.equal('-45');
+      ).toBe('-45');
     });
 
     it('adds a whenRun block if none is present', () => {
@@ -529,8 +459,7 @@ describe('Artist', () => {
 
       artist.prepareForRemix();
 
-      expect(newDom.querySelector('block[type="when_run"]')).not.to.be
-        .undefined;
+      expect(newDom.querySelector('block[type="when_run"]')).toBeDefined();
     });
   });
 
@@ -543,7 +472,7 @@ describe('Artist', () => {
       ticks: 10, // Declare an infinite loop after 10 ticks
     });
 
-    expect(alertStub).to.not.have.been.called;
+    expect(alertStub).not.toHaveBeenCalled();
 
     alertStub.restore();
   });

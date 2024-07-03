@@ -4,7 +4,7 @@ import {StubFunction} from 'test/types/types';
 import {getFilteredSongKeys, getFilterStatus} from '@cdo/apps/dance/songs';
 import * as AgeDialog from '@cdo/apps/templates/AgeDialog';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 const testSongManifest = {
   allAgesSong: {

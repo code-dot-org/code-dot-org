@@ -9,7 +9,7 @@ import LibraryManagerDialog, {
 } from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
 import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
 
-import {expect, assert} from '../../../../util/reconfiguredChai';
+import {assert} from '../../../../util/reconfiguredChai';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('LibraryManagerDialog', () => {
@@ -23,18 +23,18 @@ describe('LibraryManagerDialog', () => {
         <LibraryManagerDialog onClose={() => {}} isOpen={false} />
       );
       let library = {foo: 'bar'};
-      expect(wrapper.state().displayLibrary).to.be.null;
-      expect(wrapper.state().displayLibraryMode).to.equal('none');
+      expect(wrapper.state().displayLibrary).toBeNull();
+      expect(wrapper.state().displayLibraryMode).toBe('none');
       wrapper.instance().viewCode(library);
-      expect(wrapper.state().displayLibraryMode).to.equal('view');
-      expect(wrapper.state().displayLibrary).to.deep.equal(library);
+      expect(wrapper.state().displayLibraryMode).toBe('view');
+      expect(wrapper.state().displayLibrary).toEqual(library);
       library = {new: 'library'};
       wrapper.instance().viewCode(library, 'update');
-      expect(wrapper.state().displayLibraryMode).to.equal('update');
-      expect(wrapper.state().displayLibrary).to.deep.equal(library);
+      expect(wrapper.state().displayLibraryMode).toBe('update');
+      expect(wrapper.state().displayLibrary).toEqual(library);
       wrapper.instance().viewCode(library, null);
-      expect(wrapper.state().displayLibraryMode).to.equal('view');
-      expect(wrapper.state().displayLibrary).to.deep.equal(library);
+      expect(wrapper.state().displayLibraryMode).toBe('view');
+      expect(wrapper.state().displayLibrary).toEqual(library);
     });
   });
 
@@ -45,9 +45,9 @@ describe('LibraryManagerDialog', () => {
       );
       let library = {channelId: ID};
       wrapper.setState({cachedClassLibraries: [library]});
-      expect(wrapper.state().cachedClassLibraries).to.deep.equal([library]);
+      expect(wrapper.state().cachedClassLibraries).toEqual([library]);
       wrapper.instance().closeLibraryManager();
-      expect(wrapper.state().cachedClassLibraries).to.be.empty;
+      expect(wrapper.state().cachedClassLibraries).toHaveLength(0);
     });
 
     it('are used by fetchLatestLibrary', () => {
@@ -58,8 +58,8 @@ describe('LibraryManagerDialog', () => {
       let library = {channelId: ID};
       wrapper.setState({cachedClassLibraries: [library]});
       wrapper.instance().fetchLatestLibrary(ID, callback);
-      expect(callback).to.have.been.calledOnce;
-      expect(callback).to.have.been.calledWith(library);
+      expect(callback).toHaveBeenCalledTimes(1);
+      expect(callback).toHaveBeenCalledWith(library);
     });
 
     it('are set by fetchLatestLibrary', () => {
@@ -77,9 +77,9 @@ describe('LibraryManagerDialog', () => {
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
       wrapper.instance().fetchLatestLibrary(ID, callback);
-      expect(wrapper.state().cachedClassLibraries).to.deep.equal([library]);
-      expect(callback).to.have.been.calledOnce;
-      expect(callback).to.have.been.calledWith(library);
+      expect(wrapper.state().cachedClassLibraries).toEqual([library]);
+      expect(callback).toHaveBeenCalledTimes(1);
+      expect(callback).toHaveBeenCalledWith(library);
 
       LibraryClientApi.prototype.fetchLatestVersionId.restore();
       LibraryClientApi.prototype.fetchByVersion.restore();
@@ -118,7 +118,7 @@ describe('LibraryManagerDialog', () => {
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
-      expect(wrapper.find(LibraryListItem)).to.be.empty;
+      expect(wrapper.find(LibraryListItem)).toHaveLength(0);
     });
 
     it('displays LibraryListItem when the project contains libraries', () => {
@@ -130,9 +130,9 @@ describe('LibraryManagerDialog', () => {
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
       wrapper.instance().onOpen();
-      expect(wrapper.find(LibraryListItem)).to.have.lengthOf(2);
-      expect(wrapper.state().classLibraries).to.have.lengthOf(0);
-      expect(wrapper.state().projectLibraries).to.have.lengthOf(2);
+      expect(wrapper.find(LibraryListItem)).toHaveLength(2);
+      expect(wrapper.state().classLibraries).toHaveLength(0);
+      expect(wrapper.state().projectLibraries).toHaveLength(2);
     });
 
     it('displays LibraryListItem when class libraries are available', () => {
@@ -147,9 +147,9 @@ describe('LibraryManagerDialog', () => {
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
       wrapper.instance().onOpen();
-      expect(wrapper.find(LibraryListItem)).to.have.lengthOf(2);
-      expect(wrapper.state().classLibraries).to.have.lengthOf(2);
-      expect(wrapper.state().projectLibraries).to.have.lengthOf(0);
+      expect(wrapper.find(LibraryListItem)).toHaveLength(2);
+      expect(wrapper.state().classLibraries).toHaveLength(2);
+      expect(wrapper.state().projectLibraries).toHaveLength(0);
     });
 
     it('displays all libraries from the project and the class', () => {
@@ -167,9 +167,9 @@ describe('LibraryManagerDialog', () => {
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
       wrapper.instance().onOpen();
-      expect(wrapper.find(LibraryListItem)).to.have.lengthOf(4);
-      expect(wrapper.state().classLibraries).to.have.lengthOf(2);
-      expect(wrapper.state().projectLibraries).to.have.lengthOf(2);
+      expect(wrapper.find(LibraryListItem)).toHaveLength(4);
+      expect(wrapper.state().classLibraries).toHaveLength(2);
+      expect(wrapper.state().projectLibraries).toHaveLength(2);
     });
 
     it('allows filtering class libraries by section', () => {
@@ -186,9 +186,9 @@ describe('LibraryManagerDialog', () => {
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
       wrapper.instance().onOpen();
-      expect(wrapper.find(LibraryListItem)).to.have.lengthOf(4);
+      expect(wrapper.find(LibraryListItem)).toHaveLength(4);
       wrapper.setState({sectionFilter: 'section1'});
-      expect(wrapper.find(LibraryListItem)).to.have.lengthOf(2);
+      expect(wrapper.find(LibraryListItem)).toHaveLength(2);
     });
 
     it('setLibraryToImport sets the import library', () => {
@@ -198,7 +198,7 @@ describe('LibraryManagerDialog', () => {
       );
       wrapper.instance().onOpen();
       wrapper.instance().setLibraryToImport({target: {value: 'id'}});
-      expect(wrapper.state().importLibraryId).to.equal('id');
+      expect(wrapper.state().importLibraryId).toBe('id');
     });
 
     it('setLibraryToImport resets the error in state to null', () => {
@@ -210,7 +210,7 @@ describe('LibraryManagerDialog', () => {
         .setState({errorMessages: {importFromId: IMPORT_ERROR_MSG}});
 
       wrapper.instance().setLibraryToImport({target: {value: 'id'}});
-      expect(wrapper.state().errorMessages.importFromId).to.be.undefined;
+      expect(wrapper.state().errorMessages.importFromId).toBeUndefined();
     });
 
     it('addLibraryById adds the library to the project if given libraryJson', () => {
@@ -224,7 +224,7 @@ describe('LibraryManagerDialog', () => {
       const library = {libraryName: 'my favorite library'};
 
       wrapper.instance().addLibraryById(library, null);
-      expect(setProjectLibrariesSpy).to.have.been.called;
+      expect(setProjectLibrariesSpy).toHaveBeenCalled();
       setProjectLibrariesSpy.restore();
     });
 
@@ -232,11 +232,9 @@ describe('LibraryManagerDialog', () => {
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
-      expect(wrapper.state().errorMessages.importFromId).to.be.undefined;
+      expect(wrapper.state().errorMessages.importFromId).toBeUndefined();
       wrapper.instance().addLibraryById(null, 'an error occurred!');
-      expect(wrapper.state().errorMessages.importFromId).to.equal(
-        IMPORT_ERROR_MSG
-      );
+      expect(wrapper.state().errorMessages.importFromId).toBe(IMPORT_ERROR_MSG);
     });
 
     it('removeLibrary calls setProjectLibrary without the given library', () => {
@@ -253,10 +251,9 @@ describe('LibraryManagerDialog', () => {
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
       wrapper.instance().onOpen();
-      expect(setProjectLibraries.notCalled).to.be.true;
+      expect(setProjectLibraries.notCalled).toBe(true);
       wrapper.instance().removeLibrary('abc123');
-      expect(setProjectLibraries.withArgs([projectLibraries[1]]).calledOnce).to
-        .be.true;
+      expect(setProjectLibraries.withArgs([projectLibraries[1]]).calledOnce).toBe(true);
       window.dashboard.project.setProjectLibraries.restore();
     });
   });
@@ -289,8 +286,8 @@ describe('LibraryManagerDialog', () => {
       wrapper.instance().fetchUpdates(libraries);
       server.respond();
 
-      expect(server.requests.length).to.equal(1);
-      expect(server.requests[0].url).to.equal(
+      expect(server.requests.length).toBe(1);
+      expect(server.requests[0].url).toBe(
         '/libraries/get_updates?libraries=[{"channel_id":"abc123","version":"1"},{"channel_id":"def456","version":"2"}]'
       );
       assert.deepEqual(wrapper.state('updatedLibraryChannels'), ['abc123']);
@@ -300,7 +297,7 @@ describe('LibraryManagerDialog', () => {
       wrapper.instance().fetchUpdates([]);
       server.respond();
 
-      expect(server.requests.length).to.equal(0);
+      expect(server.requests.length).toBe(0);
     });
   });
 
@@ -322,36 +319,34 @@ describe('LibraryManagerDialog', () => {
       wrapper.setState({displayLibrary: library, displayLibraryMode: 'view'});
 
       const libraryComponent = wrapper.instance().renderDisplayLibrary();
-      expect(libraryComponent.props.title).to.equal(library.name);
-      expect(libraryComponent.props.description).to.equal(library.description);
-      expect(libraryComponent.props.sourceCode).to.equal(library.source);
-      expect(libraryComponent.props.buttons).to.be.undefined;
+      expect(libraryComponent.props.title).toBe(library.name);
+      expect(libraryComponent.props.description).toBe(library.description);
+      expect(libraryComponent.props.sourceCode).toBe(library.source);
+      expect(libraryComponent.props.buttons).toBeUndefined();
     });
 
     it('returns the update mode component if displayLibraryMode is "update"', () => {
       wrapper.setState({displayLibrary: library, displayLibraryMode: 'update'});
 
       const libraryComponent = wrapper.instance().renderDisplayLibrary();
-      expect(libraryComponent.props.title).to.equal(
-        `Are you sure you want to update ${library.name}?`
-      );
-      expect(libraryComponent.props.description).to.equal(library.description);
-      expect(libraryComponent.props.sourceCode).to.equal(library.source);
-      expect(libraryComponent.props.buttons).to.not.be.undefined;
+      expect(libraryComponent.props.title).toBe(`Are you sure you want to update ${library.name}?`);
+      expect(libraryComponent.props.description).toBe(library.description);
+      expect(libraryComponent.props.sourceCode).toBe(library.source);
+      expect(libraryComponent.props.buttons).toBeDefined();
     });
 
     it('returns null if displayLibraryMode is not "update" or "view"', () => {
       wrapper.setState({displayLibrary: library, displayLibraryMode: 'hi'});
 
       const libraryComponent = wrapper.instance().renderDisplayLibrary();
-      expect(libraryComponent).to.be.null;
+      expect(libraryComponent).toBeNull();
     });
 
     it('returns null if displayLibrary is not set in state', () => {
       wrapper.setState({displayLibrary: null, displayLibraryMode: 'view'});
 
       const libraryComponent = wrapper.instance().renderDisplayLibrary();
-      expect(libraryComponent).to.be.null;
+      expect(libraryComponent).toBeNull();
     });
   });
 
@@ -365,8 +360,8 @@ describe('LibraryManagerDialog', () => {
         classLibraries
       );
 
-      expect(mappedProjectLibraries[0].userName).to.equal('Library Author');
-      expect(mappedProjectLibraries[1].userName).to.be.undefined;
+      expect(mappedProjectLibraries[0].userName).toBe('Library Author');
+      expect(mappedProjectLibraries[1].userName).toBeUndefined();
     });
   });
 });

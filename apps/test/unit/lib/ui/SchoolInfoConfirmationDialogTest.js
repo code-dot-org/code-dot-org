@@ -6,7 +6,7 @@ import SchoolInfoConfirmationDialog from '@cdo/apps/lib/ui/SchoolInfoConfirmatio
 import SchoolInfoInterstitial from '@cdo/apps/lib/ui/SchoolInfoInterstitial';
 import {Body} from '@cdo/apps/templates/Dialog';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('SchoolInfoConfirmationDialog', () => {
   const MINIMUM_PROPS = {
@@ -33,7 +33,7 @@ describe('SchoolInfoConfirmationDialog', () => {
     );
 
     wrapper.setState({showSchoolInterstitial: true});
-    expect(wrapper.find(SchoolInfoInterstitial)).to.have.lengthOf(1);
+    expect(wrapper.find(SchoolInfoInterstitial)).toHaveLength(1);
   });
 
   it('renders the school info confirmation dialog', () => {
@@ -49,7 +49,7 @@ describe('SchoolInfoConfirmationDialog', () => {
       />
     );
 
-    expect(wrapper.find(Body)).to.have.lengthOf(1);
+    expect(wrapper.find(Body)).toHaveLength(1);
   });
 
   it('confirms there are two buttons in the school information confirmation modal', () => {
@@ -71,7 +71,7 @@ describe('SchoolInfoConfirmationDialog', () => {
     handleClickUpdateStub.callsFake(() => {});
     wrapper.setState({showSchoolInterstitial: false});
     wrapper.find('Button');
-    expect(wrapper.find('Button').length).to.equal(3);
+    expect(wrapper.find('Button').length).toBe(3);
   });
 
   describe('fetch', () => {
@@ -107,9 +107,9 @@ describe('SchoolInfoConfirmationDialog', () => {
         wrapper.setState({showSchoolInterstitial: false});
         wrapper.find('button#update-button').simulate('click');
 
-        expect(wrapperInstance.handleClickUpdate).to.have.been.called;
+        expect(wrapperInstance.handleClickUpdate).toHaveBeenCalled();
         await setTimeout(() => {}, 50);
-        expect(wrapper.state('showSchoolInterstitial')).to.be.true;
+        expect(wrapper.state('showSchoolInterstitial')).toBe(true);
       });
 
       it('calls handleClickYes method when a user does not need to update school information', async () => {
@@ -119,11 +119,11 @@ describe('SchoolInfoConfirmationDialog', () => {
         wrapper.setState({showSchoolInterstitial: false});
         wrapper.find('button#yes-button').simulate('click');
 
-        expect(wrapperInstance.handleClickYes).to.have.been.called;
+        expect(wrapperInstance.handleClickYes).toHaveBeenCalled();
         await setTimeout(() => {}, 50);
-        expect(onClose).to.have.been.called;
+        expect(onClose).toHaveBeenCalled();
         await setTimeout(() => {}, 50);
-        expect(wrapper.state('showSchoolInterstitial')).to.be.false;
+        expect(wrapper.state('showSchoolInterstitial')).toBe(false);
         handleClickYesSpy.restore();
       });
     });
@@ -157,7 +157,7 @@ describe('SchoolInfoConfirmationDialog', () => {
       );
       wrapper.setState({showSchoolInterstitial: true});
 
-      expect(renderSchoolInformationForm).to.have.been.called;
+      expect(renderSchoolInformationForm).toHaveBeenCalled();
     });
 
     it('renders school info confirmation dialog when school info interstitial is set to false', () => {
@@ -168,7 +168,7 @@ describe('SchoolInfoConfirmationDialog', () => {
       );
       wrapper.setState({showSchoolInterstitial: false});
 
-      expect(renderSchoolInfoConfirmationDialog).to.have.been.called;
+      expect(renderSchoolInfoConfirmationDialog).toHaveBeenCalled();
     });
   });
 });

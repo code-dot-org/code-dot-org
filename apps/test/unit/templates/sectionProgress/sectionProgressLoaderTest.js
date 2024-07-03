@@ -6,7 +6,7 @@ import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import * as sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 const serverScriptResponse = {
   csf: true,
@@ -260,9 +260,9 @@ describe('sectionProgressLoader.loadScript', () => {
         };
       },
     });
-    expect(loadUnitProgress(0)).to.be.undefined;
-    expect(startLoadingProgressStub).to.have.not.been.called;
-    expect(startRefreshingProgressStub).to.have.not.been.called;
+    expect(loadUnitProgress(0)).toBeUndefined();
+    expect(startLoadingProgressStub).not.toHaveBeenCalled();
+    expect(startRefreshingProgressStub).not.toHaveBeenCalled();
   });
 
   describe('when loading data', () => {
@@ -316,11 +316,11 @@ describe('sectionProgressLoader.loadScript', () => {
       });
 
       loadUnitProgress(0, selectedSectionId);
-      expect(startLoadingProgressStub).to.have.not.been.called;
-      expect(startRefreshingProgressStub).to.have.been.calledOnce;
-      expect(addDataByUnitStub).to.have.been.calledOnce;
-      expect(finishLoadingProgressStub).to.have.been.calledOnce;
-      expect(finishRefreshingProgressStub).to.have.been.calledOnce;
+      expect(startLoadingProgressStub).not.toHaveBeenCalled();
+      expect(startRefreshingProgressStub).toHaveBeenCalledTimes(1);
+      expect(addDataByUnitStub).toHaveBeenCalledTimes(1);
+      expect(finishLoadingProgressStub).toHaveBeenCalledTimes(1);
+      expect(finishRefreshingProgressStub).toHaveBeenCalledTimes(1);
     });
 
     it('handles multiple pages of data', () => {
@@ -364,7 +364,7 @@ describe('sectionProgressLoader.loadScript', () => {
         }),
       });
       loadUnitProgress(123, selectedSectionId);
-      expect(addDataByUnitStub).to.have.been.calledWith(fullExpectedResult);
+      expect(addDataByUnitStub).toHaveBeenCalledWith(fullExpectedResult);
       progressHelpers.processedLevel.restore();
     });
 
@@ -404,11 +404,11 @@ describe('sectionProgressLoader.loadScript', () => {
         });
 
         loadUnitProgress(0, selectedSectionId);
-        expect(startLoadingProgressStub).to.have.been.calledOnce;
-        expect(startRefreshingProgressStub).to.have.not.been.called;
-        expect(addDataByUnitStub).to.have.been.calledOnce;
-        expect(finishLoadingProgressStub).to.have.been.calledOnce;
-        expect(finishRefreshingProgressStub).to.have.been.calledOnce;
+        expect(startLoadingProgressStub).toHaveBeenCalledTimes(1);
+        expect(startRefreshingProgressStub).not.toHaveBeenCalled();
+        expect(addDataByUnitStub).toHaveBeenCalledTimes(1);
+        expect(finishLoadingProgressStub).toHaveBeenCalledTimes(1);
+        expect(finishRefreshingProgressStub).toHaveBeenCalledTimes(1);
       });
 
       it('processes levels before updating the redux store', () => {
@@ -449,7 +449,7 @@ describe('sectionProgressLoader.loadScript', () => {
           }),
         });
         loadUnitProgress(0, selectedSectionId);
-        expect(addDataByUnitStub).to.have.been.calledWith(expectedResult);
+        expect(addDataByUnitStub).toHaveBeenCalledWith(expectedResult);
         progressHelpers.processedLevel.restore();
       });
 
@@ -467,7 +467,7 @@ describe('sectionProgressLoader.loadScript', () => {
           }),
         });
         loadUnitProgress(123, selectedSectionId);
-        expect(addDataByUnitStub).to.have.been.calledWith(fullExpectedResult);
+        expect(addDataByUnitStub).toHaveBeenCalledWith(fullExpectedResult);
         progressHelpers.processedLevel.restore();
       });
 
@@ -490,7 +490,7 @@ describe('sectionProgressLoader.loadScript', () => {
           }),
         });
         loadUnitProgress(123, selectedSectionId);
-        expect(addDataByUnitStub).to.have.been.calledWith(fullExpectedResult);
+        expect(addDataByUnitStub).toHaveBeenCalledWith(fullExpectedResult);
         progressHelpers.processedLevel.restore();
       });
 
@@ -518,7 +518,7 @@ describe('sectionProgressLoader.loadScript', () => {
           }),
         });
         loadUnitProgress(123, selectedSectionId);
-        expect(addDataByUnitStub).to.have.been.calledWith(expectedResult);
+        expect(addDataByUnitStub).toHaveBeenCalledWith(expectedResult);
         progressHelpers.processedLevel.restore();
       });
     });

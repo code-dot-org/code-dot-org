@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('SaveBar', () => {
   let handleSave;
@@ -15,8 +15,8 @@ describe('SaveBar', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<SaveBar handleSave={handleSave} />);
-    expect(wrapper.find('button').length).to.equal(2); // show button not rendered
-    expect(wrapper.find('FontAwesome').length).to.equal(0); //spinner isn't showing
+    expect(wrapper.find('button').length).toBe(2); // show button not rendered
+    expect(wrapper.find('FontAwesome').length).toBe(0); //spinner isn't showing
   });
 
   it('can save and keep editing', () => {
@@ -24,11 +24,10 @@ describe('SaveBar', () => {
     const wrapper = shallow(<SaveBar handleSave={handleSave} />);
 
     const saveAndKeepEditingButton = wrapper.find('button').at(0);
-    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-      .true;
+    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
     saveAndKeepEditingButton.simulate('click');
 
-    expect(handleSave).to.have.been.calledOnce;
+    expect(handleSave).toHaveBeenCalledTimes(1);
   });
 
   it('shows spinner when isSaving is true', () => {
@@ -37,7 +36,7 @@ describe('SaveBar', () => {
     );
 
     // check the the spinner is showing
-    expect(wrapper.find('FontAwesome').length).to.equal(1);
+    expect(wrapper.find('FontAwesome').length).toBe(1);
   });
 
   it('shows lastSaved when there is no error', () => {
@@ -45,19 +44,17 @@ describe('SaveBar', () => {
       <SaveBar handleSave={handleSave} lastSaved={Date.now()} />
     );
 
-    expect(wrapper.find('.lastSavedMessage').text()).to.include(
-      'Last saved at:'
-    );
+    expect(wrapper.find('.lastSavedMessage').text()).toContain('Last saved at:');
   });
 
   it('shows error when props error is set', () => {
     const wrapper = shallow(
       <SaveBar handleSave={handleSave} error={'There was an error'} />
     );
-    expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
+    expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(0);
     expect(
       wrapper.find('.saveBar').contains('Error Saving: There was an error')
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('can save and close', () => {
@@ -65,10 +62,10 @@ describe('SaveBar', () => {
     const wrapper = shallow(<SaveBar handleSave={handleSave} />);
 
     const saveAndCloseButton = wrapper.find('button').at(1);
-    expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
+    expect(saveAndCloseButton.contains('Save and Close')).toBe(true);
     saveAndCloseButton.simulate('click');
 
-    expect(handleSave).to.have.been.calledOnce;
+    expect(handleSave).toHaveBeenCalledTimes(1);
   });
 
   it('can show with custom handleView, even if path is given', () => {
@@ -83,11 +80,11 @@ describe('SaveBar', () => {
     );
 
     const showButton = wrapper.find('button').at(0);
-    expect(showButton.contains('Show')).to.be.true;
+    expect(showButton.contains('Show')).toBe(true);
     showButton.simulate('click');
 
-    expect(utils.navigateToHref).not.to.have.been.called;
-    expect(handleView).to.have.been.calledOnce;
+    expect(utils.navigateToHref).not.toHaveBeenCalled();
+    expect(handleView).toHaveBeenCalledTimes(1);
 
     utils.navigateToHref.restore();
   });
@@ -100,10 +97,10 @@ describe('SaveBar', () => {
     );
 
     const showButton = wrapper.find('button').at(0);
-    expect(showButton.contains('Show')).to.be.true;
+    expect(showButton.contains('Show')).toBe(true);
     showButton.simulate('click');
 
-    expect(utils.navigateToHref).to.have.been.calledWith(path);
+    expect(utils.navigateToHref).toHaveBeenCalledWith(path);
 
     utils.navigateToHref.restore();
   });

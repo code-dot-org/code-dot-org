@@ -3,7 +3,7 @@ import React from 'react';
 
 import SummaryTeacherInstructions from '@cdo/apps/templates/levelSummary/SummaryTeacherInstructions';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('SummaryTeacherInstructions', () => {
   it('renders teacher markdown if defined', () => {

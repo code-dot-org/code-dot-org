@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import LoadableComponent from '@cdo/apps/templates/LoadableComponent';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 describe('LoadableComponent', () => {
   let loadFunction, loadArgs, renderFunction, renderedText, errorMessage;
@@ -27,7 +27,7 @@ describe('LoadableComponent', () => {
       />
     );
 
-    expect(wrapper.find(Spinner).length).to.equal(1);
+    expect(wrapper.find(Spinner).length).toBe(1);
   });
 
   it('displays loaded component after load function completes', () => {
@@ -44,8 +44,8 @@ describe('LoadableComponent', () => {
       />
     );
 
-    expect(wrapper.find(Spinner).length).to.equal(0);
-    expect(wrapper.text()).to.equal(renderedText);
+    expect(wrapper.find(Spinner).length).toBe(0);
+    expect(wrapper.text()).toBe(renderedText);
     sinon.assert.calledWith(renderFunction, renderArgs[0], renderArgs[1]);
   });
 
@@ -63,8 +63,8 @@ describe('LoadableComponent', () => {
       />
     );
 
-    expect(wrapper.find(Spinner).length).to.equal(0);
-    expect(wrapper.text()).to.equal(errorMessage);
+    expect(wrapper.find(Spinner).length).toBe(0);
+    expect(wrapper.text()).toBe(errorMessage);
     sinon.assert.notCalled(renderFunction);
   });
 });

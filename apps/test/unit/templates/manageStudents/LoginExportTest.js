@@ -5,7 +5,7 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import LoginExport from '@cdo/apps/templates/manageStudents/LoginExport';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 const DEFAULT_PROPS = {
   sectionCode: 'ABCDEF',
@@ -30,8 +30,8 @@ describe('LoginExport', () => {
     );
 
     const logins = wrapper.instance().generateLogins();
-    expect(logins.length).to.equal(3);
-    expect(logins).to.deep.equal([
+    expect(logins.length).toBe(3);
+    expect(logins).toEqual([
       {
         ...DEFAULT_PROPS,
         sectionLoginType: 'word',
@@ -70,8 +70,8 @@ describe('LoginExport', () => {
     );
 
     const logins = wrapper.instance().generateLogins();
-    expect(logins.length).to.equal(3);
-    expect(logins).to.deep.equal([
+    expect(logins.length).toBe(3);
+    expect(logins).toEqual([
       {
         ...DEFAULT_PROPS,
         sectionLoginType: 'picture',

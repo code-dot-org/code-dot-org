@@ -1,4 +1,4 @@
-import {assert, expect} from 'chai';
+import {assert} from 'chai';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
@@ -52,7 +52,7 @@ describe('SchoolAutocompleteDropdown', () => {
     );
 
   it('renders VirtualizedSelect', () => {
-    expect(select).to.exist;
+    expect(select).toBeDefined();
   });
 
   it('Passes supplied value to the select control', () => {
@@ -66,7 +66,7 @@ describe('SchoolAutocompleteDropdown', () => {
   it('Calls props.onChange when the selection changes', () => {
     select.props().onChange({value: '1', label: 'selected school'});
     assert(
-      handleChange.calledOnce &&
+      handleChange.toHaveBeenCalledTimes(1) &&
         handleChange.calledWith({
           value: '1',
           label: 'selected school',
@@ -83,13 +83,13 @@ describe('SchoolAutocompleteDropdown', () => {
 
     it('Resolves to undefined for queries less than 4 characters', async () => {
       const result = await getOptions('abc');
-      expect(result).to.equal(undefined);
+      expect(result).toBeUndefined();
     });
 
     it('Returns a promise immediately, even when actual server request is debounced', () => {
       const promise = getOptions('abcd');
-      expect(promise).to.be.an.instanceOf(Promise);
-      assert(!fetchStub.called, 'fetch was not called');
+      expect(promise).toBeInstanceOf(Promise);
+      assert(!fetchStub.toHaveBeenCalled(), 'fetch was not called');
     });
 
     describe('(stubbing debounce)', () => {
@@ -123,8 +123,8 @@ describe('SchoolAutocompleteDropdown', () => {
         ]);
 
         const response = await getOptions('abcd');
-        assert(fetchStub.calledOnce, 'fetch was called once');
-        expect(response).to.deep.equal({
+        assert(fetchStub.toHaveBeenCalledTimes(1), 'fetch was called once');
+        expect(response).toEqual({
           options: [
             {
               value: '-1',
@@ -161,8 +161,8 @@ describe('SchoolAutocompleteDropdown', () => {
         setServerResponse('/dashboardapi/v1/schoolsearch/vwxyz/40', []);
 
         const response = await getOptions('vwxyz');
-        assert(fetchStub.calledOnce, 'fetch was called once');
-        expect(response).to.deep.equal({
+        assert(fetchStub.toHaveBeenCalledTimes(1), 'fetch was called once');
+        expect(response).toEqual({
           options: [
             {
               value: '-1',
@@ -176,8 +176,8 @@ describe('SchoolAutocompleteDropdown', () => {
       it('Returns not listed when there is no query and the value is -1', async () => {
         schoolAutocompleteDropdown.setProps({value: '-1'});
         const result = await getOptions('');
-        assert(!fetchStub.called);
-        expect(result).to.deep.equal({
+        assert(!fetchStub.toHaveBeenCalled());
+        expect(result).toEqual({
           options: [
             {
               value: '-1',
@@ -199,8 +199,8 @@ describe('SchoolAutocompleteDropdown', () => {
         });
 
         const response = await getOptions('');
-        assert(fetchStub.calledOnce, 'fetch was called once');
-        expect(response).to.deep.equal({
+        assert(fetchStub.toHaveBeenCalledTimes(1), 'fetch was called once');
+        expect(response).toEqual({
           options: [
             {
               value: '9999',

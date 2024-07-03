@@ -9,12 +9,12 @@ import EnhancedSafeMarkdown, {
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import * as expandableImages from '@cdo/apps/templates/utils/expandableImages';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 describe('EnhancedSafeMarkdown', () => {
   it('renders SafeMarkdown by default', () => {
     const wrapper = shallow(<EnhancedSafeMarkdown markdown="test" />);
-    expect(wrapper.equals(<SafeMarkdown markdown="test" />)).to.equal(true);
+    expect(wrapper.equals(<SafeMarkdown markdown="test" />)).toBe(true);
   });
 
   it('renders SafeMarkdown by default with class name', () => {
@@ -23,7 +23,7 @@ describe('EnhancedSafeMarkdown', () => {
     );
     expect(
       wrapper.equals(<SafeMarkdown markdown="test" className="class test" />)
-    ).to.equal(true);
+    ).toBe(true);
   });
 
   it('wraps output in enhancements as specified', () => {
@@ -36,7 +36,7 @@ describe('EnhancedSafeMarkdown', () => {
           <SafeMarkdown markdown="test" />
         </ExpandableImagesWrapper>
       )
-    ).to.equal(true);
+    ).toBe(true);
   });
 
   describe('ExpandableImagesWrapper', () => {
@@ -49,7 +49,7 @@ describe('EnhancedSafeMarkdown', () => {
           <span className="expandable-image" />
         </UnconnectedExpandableImagesWrapper>
       );
-      expect(renderSpy).to.have.been.calledOnce;
+      expect(renderSpy).toHaveBeenCalledTimes(1);
       renderSpy.restore();
     });
   });

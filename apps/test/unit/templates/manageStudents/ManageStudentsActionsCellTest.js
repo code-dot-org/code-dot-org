@@ -5,7 +5,7 @@ import sinon from 'sinon';
 
 import {UnconnectedManageStudentsActionsCell as ManageStudentsActionsCell} from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
 
-import {expect} from '../../../util/deprecatedChai';
+
 
 const DEFAULT_PROPS = {
   id: 2,
@@ -24,48 +24,48 @@ describe('ManageStudentsActionsCell', () => {
     const wrapper = shallow(
       <ManageStudentsActionsCell {...DEFAULT_PROPS} loginType={'picture'} />
     );
-    expect(wrapper).to.contain('Remove student');
-    expect(wrapper).to.contain('Edit');
-    expect(wrapper).to.contain('Print login card');
+    expect(wrapper).toContain('Remove student');
+    expect(wrapper).toContain('Edit');
+    expect(wrapper).toContain('Print login card');
   });
 
   it('renders the edit, remove and print login card option when a word login', () => {
     const wrapper = shallow(
       <ManageStudentsActionsCell {...DEFAULT_PROPS} loginType={'word'} />
     );
-    expect(wrapper).to.contain('Remove student');
-    expect(wrapper).to.contain('Edit');
-    expect(wrapper).to.contain('Print login card');
+    expect(wrapper).toContain('Remove student');
+    expect(wrapper).toContain('Edit');
+    expect(wrapper).toContain('Print login card');
   });
 
   it('renders the edit and remove option when a email login', () => {
     const wrapper = shallow(
       <ManageStudentsActionsCell {...DEFAULT_PROPS} loginType={'email'} />
     );
-    expect(wrapper).to.contain('Remove student');
-    expect(wrapper).to.contain('Edit');
-    expect(wrapper).not.to.contain('Print login card');
+    expect(wrapper).toContain('Remove student');
+    expect(wrapper).toContain('Edit');
+    expect(wrapper).not.toContain('Print login card');
   });
 
   it('renders the edit option when a clever login', () => {
     const wrapper = shallow(
       <ManageStudentsActionsCell {...DEFAULT_PROPS} loginType={'clever'} />
     );
-    expect(wrapper).to.contain('Edit');
+    expect(wrapper).toContain('Edit');
   });
 
   it('renders the edit option when a google login', () => {
     const wrapper = shallow(
       <ManageStudentsActionsCell {...DEFAULT_PROPS} loginType={'google'} />
     );
-    expect(wrapper).to.contain('Edit');
+    expect(wrapper).toContain('Edit');
   });
 
   it('does not render the edit option when canEdit is false', () => {
     const wrapper = shallow(
       <ManageStudentsActionsCell {...DEFAULT_PROPS} canEdit={false} />
     );
-    expect(wrapper).not.to.contain('Edit');
+    expect(wrapper).not.toContain('Edit');
   });
 
   describe('onDelete', () => {

@@ -4,7 +4,7 @@ import React from 'react';
 import AiAssessmentFeedback from '@cdo/apps/templates/rubrics/AiAssessmentFeedback';
 import AiAssessmentFeedbackContext from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('AiAssessmentFeedback', () => {
   const mockAiInfo = {
@@ -30,7 +30,7 @@ describe('AiAssessmentFeedback', () => {
         <AiAssessmentFeedback {...props} />
       </AiAssessmentFeedbackContext.Provider>
     );
-    expect(wrapper.find('Checkbox')).to.have.lengthOf(0);
+    expect(wrapper.find('Checkbox')).toHaveLength(0);
   });
 
   it('displays no checkboxes when thumbs up is selected', () => {
@@ -40,7 +40,7 @@ describe('AiAssessmentFeedback', () => {
         value: {aiFeedback: thumbsupval, setAiFeedback: mockSetAiFeedback},
       },
     });
-    expect(wrapper.find('Checkbox')).to.have.lengthOf(0);
+    expect(wrapper.find('Checkbox')).toHaveLength(0);
   });
 
   it('displays checkboxes when thumbs down is selected', () => {
@@ -50,7 +50,7 @@ describe('AiAssessmentFeedback', () => {
         value: {aiFeedback: thumbsdownval, setAiFeedback: mockSetAiFeedback},
       },
     });
-    expect(wrapper.find('Checkbox')).to.have.lengthOf(4);
+    expect(wrapper.find('Checkbox')).toHaveLength(4);
   });
 
   it('displays textbox when checkbox labelled "other" is selected', () => {
@@ -61,6 +61,6 @@ describe('AiAssessmentFeedback', () => {
       },
     });
     wrapper.find('Checkbox').at(3).find('input').first().simulate('change');
-    expect(wrapper.find('textarea')).to.have.lengthOf(1);
+    expect(wrapper.find('textarea')).toHaveLength(1);
   });
 });

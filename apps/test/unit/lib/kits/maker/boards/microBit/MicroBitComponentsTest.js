@@ -10,7 +10,7 @@ import {
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitComponents';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+
 
 const COMPONENTS = [
   'buttonA',
@@ -35,7 +35,7 @@ describe('MicroBit Components', () => {
       // don't cover it with new tests.  If that happens, make sure you
       // add matching tests below!
       return createMicroBitComponents(boardClient).then(components => {
-        expect(Object.keys(components)).to.deep.equal(COMPONENTS);
+        expect(Object.keys(components)).toEqual(COMPONENTS);
       });
     });
   });
@@ -50,15 +50,15 @@ describe('MicroBit Components', () => {
     });
 
     it('creates an EventEmitter', () => {
-      expect(buttonA).to.be.an.instanceOf(EventEmitter);
+      expect(buttonA).toBeInstanceOf(EventEmitter);
     });
 
     it('bound to the board controller', () => {
-      expect(buttonA.board.mb).to.equal(boardClient);
+      expect(buttonA.board.mb).toBe(boardClient);
     });
 
     it('on pin 1', () => {
-      expect(buttonA.board.pin).to.equal(1);
+      expect(buttonA.board.pin).toBe(1);
     });
   });
 
@@ -72,15 +72,15 @@ describe('MicroBit Components', () => {
     });
 
     it('creates an EventEmitter', () => {
-      expect(buttonB).to.be.an.instanceOf(EventEmitter);
+      expect(buttonB).toBeInstanceOf(EventEmitter);
     });
 
     it('bound to the board controller', () => {
-      expect(buttonB.board.mb).to.equal(boardClient);
+      expect(buttonB.board.mb).toBe(boardClient);
     });
 
     it('on pin 2', () => {
-      expect(buttonB.board.pin).to.equal(2);
+      expect(buttonB.board.pin).toBe(2);
     });
   });
 
@@ -94,7 +94,7 @@ describe('MicroBit Components', () => {
     });
 
     it('bound to the board controller', () => {
-      expect(ledScreen.board.mb).to.equal(boardClient);
+      expect(ledScreen.board.mb).toBe(boardClient);
     });
   });
 
@@ -108,16 +108,16 @@ describe('MicroBit Components', () => {
     });
 
     it('bound to the board controller', () => {
-      expect(tempSensor.board.mb).to.equal(boardClient);
+      expect(tempSensor.board.mb).toBe(boardClient);
     });
 
     it('with non-null values immediately after initialization', () => {
       // This test depends on the fake initial thermometer reading
       // set up in the beforeEach block at the top  of this file.
-      expect(tempSensor.F).not.to.be.null;
-      expect(tempSensor.F).to.equal(32);
-      expect(tempSensor.C).not.to.be.null;
-      expect(tempSensor.C).to.equal(0);
+      expect(tempSensor.F).not.toBeNull();
+      expect(tempSensor.F).toBe(32);
+      expect(tempSensor.C).not.toBeNull();
+      expect(tempSensor.C).toBe(0);
     });
   });
 
@@ -131,7 +131,7 @@ describe('MicroBit Components', () => {
     });
 
     it('bound to the board controller', () => {
-      expect(accelerometer.board.mb).to.equal(boardClient);
+      expect(accelerometer.board.mb).toBe(boardClient);
     });
   });
 
@@ -145,7 +145,7 @@ describe('MicroBit Components', () => {
     });
 
     it('bound to the board controller', () => {
-      expect(compass.board.mb).to.equal(boardClient);
+      expect(compass.board.mb).toBe(boardClient);
     });
   });
 
@@ -159,14 +159,14 @@ describe('MicroBit Components', () => {
     });
 
     it('bound to the board controller', () => {
-      expect(lightSensor.board.mb).to.equal(boardClient);
+      expect(lightSensor.board.mb).toBe(boardClient);
     });
 
     it('with non-null values immediately after initialization', () => {
       // This test depends on the fake initial thermometer reading
       // set up in the beforeEach block at the top  of this file.
-      expect(lightSensor.value).not.to.be.null;
-      expect(lightSensor.value).to.equal(0);
+      expect(lightSensor.value).not.toBeNull();
+      expect(lightSensor.value).toBe(0);
     });
   });
 
@@ -183,38 +183,38 @@ describe('MicroBit Components', () => {
     it('can be safely called on empty object', () => {
       expect(() => {
         cleanupMicroBitComponents({}, []);
-      }).not.to.throw;
+      }).to.not.throw;
     });
 
     it('destroys everything that createMicroBitComponents creates', () => {
-      expect(Object.keys(components)).to.have.length(COMPONENTS.length);
+      expect(Object.keys(components)).toHaveLength(COMPONENTS.length);
       cleanupMicroBitComponents(
         components,
         [],
         true /* shouldDestroyComponents */
       );
-      expect(Object.keys(components)).to.have.length(0);
+      expect(Object.keys(components)).toHaveLength(0);
     });
 
     it('does not destroy components if shouldDestroyComponents is false', () => {
-      expect(Object.keys(components)).to.have.length(COMPONENTS.length);
+      expect(Object.keys(components)).toHaveLength(COMPONENTS.length);
       cleanupMicroBitComponents(
         components,
         [],
         false /* shouldDestroyComponents */
       );
-      expect(Object.keys(components)).to.have.length(COMPONENTS.length);
+      expect(Object.keys(components)).toHaveLength(COMPONENTS.length);
     });
 
     it('does not destroy components not created by createMicroBitComponents', () => {
       components.someOtherComponent = {};
-      expect(Object.keys(components)).to.have.length(COMPONENTS.length + 1);
+      expect(Object.keys(components)).toHaveLength(COMPONENTS.length + 1);
       cleanupMicroBitComponents(
         components,
         [],
         true /* shouldDestroyComponents */
       );
-      expect(Object.keys(components)).to.have.length(1);
+      expect(Object.keys(components)).toHaveLength(1);
       expect(components).to.haveOwnProperty('someOtherComponent');
     });
 
@@ -225,7 +225,7 @@ describe('MicroBit Components', () => {
         [],
         true /* shouldDestroyComponents */
       );
-      expect(stopSpy).to.have.been.calledOnce;
+      expect(stopSpy).toHaveBeenCalledTimes(1);
     });
 
     it('calls disable on the tempSensor and resets the current temp to 0', () => {
@@ -235,8 +235,8 @@ describe('MicroBit Components', () => {
         [],
         false /* shouldDestroyComponents */
       );
-      expect(spy).to.have.been.calledOnce;
-      expect(components.tempSensor.currentTemp).to.equal(0);
+      expect(spy).toHaveBeenCalledTimes(1);
+      expect(components.tempSensor.currentTemp).toBe(0);
     });
 
     it('calls stop on the accelerometer and clears events', () => {
@@ -246,10 +246,10 @@ describe('MicroBit Components', () => {
         [],
         false /* shouldDestroyComponents */
       );
-      expect(spy).to.have.been.calledOnce;
-      expect(components.accelerometer.state.x).to.equal(0);
-      expect(components.accelerometer.state.y).to.equal(0);
-      expect(components.accelerometer.state.z).to.equal(0);
+      expect(spy).toHaveBeenCalledTimes(1);
+      expect(components.accelerometer.state.x).toBe(0);
+      expect(components.accelerometer.state.y).toBe(0);
+      expect(components.accelerometer.state.z).toBe(0);
     });
 
     it('calls stop on a capacitive touch sensor and clears events', () => {
@@ -261,8 +261,8 @@ describe('MicroBit Components', () => {
         [sensor],
         false /* shouldDestroyComponents */
       );
-      expect(spy).to.have.been.calledOnce;
-      expect(sensor.connected).to.be.false;
+      expect(spy).toHaveBeenCalledTimes(1);
+      expect(sensor.connected).toBe(false);
     });
   });
 
@@ -278,9 +278,9 @@ describe('MicroBit Components', () => {
       const accelSpy = sinon.spy(components.accelerometer, 'start');
       const compassSpy = sinon.spy(components.compass, 'start');
       enableMicroBitComponents(components);
-      expect(tempSpy).to.have.been.calledOnce;
-      expect(accelSpy).to.have.been.calledOnce;
-      expect(compassSpy).to.have.been.calledOnce;
+      expect(tempSpy).toHaveBeenCalledTimes(1);
+      expect(accelSpy).toHaveBeenCalledTimes(1);
+      expect(compassSpy).toHaveBeenCalledTimes(1);
     });
   });
 });

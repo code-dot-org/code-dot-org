@@ -17,7 +17,7 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 describe('AgeGatedStudentsTable', () => {
   const fakeStudent = {

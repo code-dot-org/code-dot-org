@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import BackToFrontConfetti from '@cdo/apps/templates/BackToFrontConfetti';
 
-import {expect} from '../../util/deprecatedChai';
+
 
 describe('BackToFrontConfetti', () => {
   let clock;

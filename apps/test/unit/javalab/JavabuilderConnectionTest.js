@@ -16,7 +16,7 @@ import {
   UserTestResultSignalType,
   TestStatus,
 } from '../../../src/javalab/constants';
-import {expect} from '../../util/reconfiguredChai';
+
 
 describe('JavabuilderConnection', () => {
   let onOutputMessage,
@@ -71,7 +71,7 @@ describe('JavabuilderConnection', () => {
         data: JSON.stringify(data),
       };
       connection.onMessage(event);
-      expect(handleException).to.have.been.calledWith(data, onOutputMessage);
+      expect(handleException).toHaveBeenCalledWith(data, onOutputMessage);
     });
 
     it('passes the data value for system out', () => {
@@ -83,7 +83,7 @@ describe('JavabuilderConnection', () => {
         data: JSON.stringify(data),
       };
       connection.onMessage(event);
-      expect(onOutputMessage).to.have.been.calledWith(data.value);
+      expect(onOutputMessage).toHaveBeenCalledWith(data.value);
     });
 
     it('passes the parsed event data to the test result handler for test results', () => {
@@ -104,7 +104,7 @@ describe('JavabuilderConnection', () => {
         isValidation: false,
       });
       connection.onMessage(event);
-      expect(handleTestResult).to.have.been.calledWith(data, onOutputMessage);
+      expect(handleTestResult).toHaveBeenCalledWith(data, onOutputMessage);
     });
 
     it('appends [JAVALAB] to status messages', () => {
@@ -116,9 +116,7 @@ describe('JavabuilderConnection', () => {
         data: JSON.stringify(data),
       };
       connection.onMessage(event);
-      expect(onOutputMessage).to.have.been.calledWith(
-        `${STATUS_MESSAGE_PREFIX} Compiling...`
-      );
+      expect(onOutputMessage).toHaveBeenCalledWith(`${STATUS_MESSAGE_PREFIX} Compiling...`);
     });
   });
 
@@ -139,10 +137,8 @@ describe('JavabuilderConnection', () => {
       javabuilderConnection.establishWebsocketConnection('fake-token');
       javabuilderConnection.closeConnection();
 
-      expect(closeStub).to.have.been.calledOnce;
-      expect(onOutputMessage).to.have.been.calledWith(
-        `${STATUS_MESSAGE_PREFIX} Program stopped.`
-      );
+      expect(closeStub).toHaveBeenCalledTimes(1);
+      expect(onOutputMessage).toHaveBeenCalledWith(`${STATUS_MESSAGE_PREFIX} Program stopped.`);
       window.WebSocket.restore();
     });
   });
@@ -186,7 +182,7 @@ describe('JavabuilderConnection', () => {
       // send a single passed validation message
       connection.onMessage(event);
       connection.handleExecutionFinished();
-      sinon.assert.called(onValidationPassed);
+      sinon.toHaveBeenCalled();
       sinon.assert.notCalled(onValidationFailed);
     });
 
@@ -215,7 +211,7 @@ describe('JavabuilderConnection', () => {
       connection.onMessage(event);
       connection.onMessage(event);
       connection.handleExecutionFinished();
-      sinon.assert.called(onValidationFailed);
+      sinon.toHaveBeenCalled();
       sinon.assert.notCalled(onValidationPassed);
     });
 

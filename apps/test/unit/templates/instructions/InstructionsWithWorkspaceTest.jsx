@@ -5,7 +5,7 @@ import sinon from 'sinon';
 
 import {UnwrappedInstructionsWithWorkspace as InstructionsWithWorkspace} from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('InstructionsWithWorkspace', () => {
   it('renders instructions and code workspace', () => {
@@ -16,8 +16,8 @@ describe('InstructionsWithWorkspace', () => {
       />
     );
 
-    expect(wrapper.find('Connect(TopInstructions)')).to.have.lengthOf(1);
-    expect(wrapper.find('Connect(CodeWorkspaceContainer)')).to.have.lengthOf(1);
+    expect(wrapper.find('Connect(TopInstructions)')).toHaveLength(1);
+    expect(wrapper.find('Connect(CodeWorkspaceContainer)')).toHaveLength(1);
   });
 
   it('initially does not know window width or height', () => {
@@ -27,7 +27,7 @@ describe('InstructionsWithWorkspace', () => {
         setInstructionsMaxHeightAvailable={() => {}}
       />
     );
-    expect(wrapper.state()).to.deep.equal({
+    expect(wrapper.state()).toEqual({
       windowWidth: undefined,
       windowHeight: undefined,
     });
@@ -79,8 +79,8 @@ describe('InstructionsWithWorkspace', () => {
       sinon.spy(wrapper.instance(), 'setState');
 
       wrapper.instance().onResize();
-      expect(setInstructionsMaxHeightAvailable).not.to.have.been.called;
-      expect(wrapper.instance().setState).not.to.have.been.called;
+      expect(setInstructionsMaxHeightAvailable).not.toHaveBeenCalled();
+      expect(wrapper.instance().setState).not.toHaveBeenCalled();
     });
 
     it('handles resize', () => {
@@ -88,7 +88,7 @@ describe('InstructionsWithWorkspace', () => {
       wrapper.instance().onResize();
       expect(
         setInstructionsMaxHeightAvailable
-      ).to.have.been.calledOnce.and.calledWith(230);
+      ).toHaveBeenCalledWith(230);
     });
 
     it('breakpoint in behavior at total height of 420 (meets all reserves)', () => {
@@ -99,7 +99,7 @@ describe('InstructionsWithWorkspace', () => {
         codeWorkspaceHeight: 400,
       });
       wrapper.instance().onResize();
-      expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(139);
+      expect(setInstructionsMaxHeightAvailable).toHaveBeenCalledWith(139);
 
       setInstructionsMaxHeightAvailable.resetHistory();
 
@@ -108,7 +108,7 @@ describe('InstructionsWithWorkspace', () => {
         codeWorkspaceHeight: 400,
       });
       wrapper.instance().onResize();
-      expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(140);
+      expect(setInstructionsMaxHeightAvailable).toHaveBeenCalledWith(140);
 
       setInstructionsMaxHeightAvailable.resetHistory();
 
@@ -117,7 +117,7 @@ describe('InstructionsWithWorkspace', () => {
         codeWorkspaceHeight: 400,
       });
       wrapper.instance().onResize();
-      expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(150);
+      expect(setInstructionsMaxHeightAvailable).toHaveBeenCalledWith(150);
 
       setInstructionsMaxHeightAvailable.resetHistory();
 
@@ -126,7 +126,7 @@ describe('InstructionsWithWorkspace', () => {
         codeWorkspaceHeight: 400,
       });
       wrapper.instance().onResize();
-      expect(setInstructionsMaxHeightAvailable).to.have.been.calledWith(151);
+      expect(setInstructionsMaxHeightAvailable).toHaveBeenCalledWith(151);
     });
   });
 });

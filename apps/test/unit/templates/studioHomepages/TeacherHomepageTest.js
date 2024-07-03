@@ -7,7 +7,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {UnconnectedTeacherHomepage as TeacherHomepage} from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 import {courses, topCourse, plCourses, topPlCourse} from './homepagesTestData';
 
@@ -53,7 +53,7 @@ describe('TeacherHomepage', () => {
   it('shows a Header Banner that says My Dashboard', () => {
     const wrapper = setUp();
     const headerBanner = wrapper.find('HeaderBanner');
-    expect(headerBanner.props().headingText).to.equal('My Dashboard');
+    expect(headerBanner.props().headingText).toBe('My Dashboard');
   });
 
   it('renders 2 ProtectedStatefulDivs', () => {
@@ -66,9 +66,9 @@ describe('TeacherHomepage', () => {
     sessionStorage.setItem('logged_teacher_session', 'false');
     setUp();
 
-    expect(sessionStorage.getItem('logged_teacher_session')).to.equal('true');
-    expect(analyticsSpy).to.have.been.calledOnce;
-    expect(analyticsSpy.firstCall.args).to.deep.eq([
+    expect(sessionStorage.getItem('logged_teacher_session')).toBe('true');
+    expect(analyticsSpy).toHaveBeenCalledTimes(1);
+    expect(analyticsSpy.firstCall.args).toEqual([
       'Teacher Login',
       {'user id': 42},
       'Both',
@@ -77,7 +77,7 @@ describe('TeacherHomepage', () => {
     // After setting the session value to true, we should not see sessionStorage.setItem or analyticsSpy called again.
     sessionStorage.setItem('logged_teacher_session', 'true');
     setUp();
-    expect(analyticsSpy).to.have.been.calledOnce;
+    expect(analyticsSpy).toHaveBeenCalledTimes(1);
 
     analyticsSpy.restore();
   });

@@ -2,7 +2,7 @@ import sinon from 'sinon';
 
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 
-import {assert, expect} from '../../../../util/reconfiguredChai';
+import {assert} from '../../../../util/reconfiguredChai';
 
 describe('BackpackClientApi', () => {
   const channelId = 'fake_channel_id';
@@ -57,7 +57,7 @@ describe('BackpackClientApi', () => {
       );
       server.respond();
       assert(fetchChannelIdStub.notCalled);
-      expect(successCallback).to.have.been.calledOnce;
+      expect(successCallback).toHaveBeenCalledTimes(1);
     });
 
     it('can save multiple files', () => {
@@ -70,7 +70,7 @@ describe('BackpackClientApi', () => {
         successCallback
       );
       server.respond();
-      expect(successCallback).to.have.been.calledOnce;
+      expect(successCallback).toHaveBeenCalledTimes(1);
     });
 
     it('save retries, then calls error on failure', () => {
@@ -84,10 +84,10 @@ describe('BackpackClientApi', () => {
       // need to respond twice because we retry failures
       server.respond();
       server.respond();
-      expect(errorCallback).to.have.been.calledOnce;
+      expect(errorCallback).toHaveBeenCalledTimes(1);
       assert(successCallback.notCalled);
       // expect 2 calls to attempt to save test2.java
-      expect(server.requests.length).to.equal(2);
+      expect(server.requests.length).toBe(2);
     });
 
     it('can delete multiple files', () => {
@@ -99,7 +99,7 @@ describe('BackpackClientApi', () => {
         successCallback
       );
       server.respond();
-      expect(successCallback).to.have.been.calledOnce;
+      expect(successCallback).toHaveBeenCalledTimes(1);
     });
 
     it('delete retries, then calls error on failure', () => {
@@ -112,10 +112,10 @@ describe('BackpackClientApi', () => {
       // need to respond twice because we retry failures
       server.respond();
       server.respond();
-      expect(errorCallback).to.have.been.calledOnce;
+      expect(errorCallback).toHaveBeenCalledTimes(1);
       assert(successCallback.notCalled);
       // expect 2 calls to attempt to save test2.java
-      expect(server.requests.length).to.equal(2);
+      expect(server.requests.length).toBe(2);
     });
   });
 
@@ -142,18 +142,18 @@ describe('BackpackClientApi', () => {
         successCallback
       );
       server.respond();
-      expect(fetchChannelIdStub).to.have.been.calledOnce;
+      expect(fetchChannelIdStub).toHaveBeenCalledTimes(1);
     });
 
     it('get files calls error callback', () => {
       backpackClientApi.getFileList(errorCallback, successCallback);
-      expect(errorCallback).to.have.been.calledOnce;
+      expect(errorCallback).toHaveBeenCalledTimes(1);
       assert(successCallback.notCalled);
     });
 
     it('fetch file calls error callback', () => {
       backpackClientApi.fetchFile('test.java', errorCallback, successCallback);
-      expect(errorCallback).to.have.been.calledOnce;
+      expect(errorCallback).toHaveBeenCalledTimes(1);
       assert(successCallback.notCalled);
     });
   });

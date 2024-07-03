@@ -7,7 +7,7 @@ import * as craftRedux from '@cdo/apps/craft/redux';
 import * as utils from '@cdo/apps/craft/utils';
 import commonI18n from '@cdo/locale'; // eslint-disable-line no-unused-vars
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 describe('craft utils', () => {
   describe('handlePlayerSelection', () => {
@@ -28,8 +28,8 @@ describe('craft utils', () => {
 
       utils.handlePlayerSelection(defaultPlayer, () => {});
 
-      expect(craftRedux.openPlayerSelectionDialog).to.have.been.calledOnce;
-      expect(craftRedux.closePlayerSelectionDialog).to.have.been.calledOnce;
+      expect(craftRedux.openPlayerSelectionDialog).toHaveBeenCalledTimes(1);
+      expect(craftRedux.closePlayerSelectionDialog).toHaveBeenCalledTimes(1);
     });
 
     it('invokes onComplete with selectedPlayer', () => {

@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import {UnconnectedDataTableView as DataTableView} from '@cdo/apps/storage/dataBrowser/DataTableView';
 import commonI18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 const DEFAULT_PROPS = {
   isRtl: false,
@@ -33,7 +33,7 @@ describe('DataTableView', () => {
 ]`;
     let wrapper = shallow(<DataTableView {...DEFAULT_PROPS} />);
     wrapper.setProps({tableRecords: records});
-    expect(wrapper.instance().getTableJson()).to.equal(expectedJSON);
+    expect(wrapper.instance().getTableJson()).toBe(expectedJSON);
   });
 
   describe('localization', () => {
@@ -47,7 +47,7 @@ describe('DataTableView', () => {
       const wrapper = shallow(<DataTableView {...DEFAULT_PROPS} />);
 
       let backLink = wrapper.find('#dataTable a#tableBackToOverview').at(0);
-      expect(backLink.text()).to.contain('i18n-back-to-data');
+      expect(backLink.text()).toContain('i18n-back-to-data');
     });
 
     it('should render a localized string for the "Debug view"', () => {
@@ -56,7 +56,7 @@ describe('DataTableView', () => {
       const wrapper = shallow(<DataTableView {...DEFAULT_PROPS} />);
 
       let viewLink = wrapper.find('#uitest-tableDebugLink').at(0);
-      expect(viewLink.text()).to.contain('i18n-debug-view');
+      expect(viewLink.text()).toContain('i18n-debug-view');
     });
 
     it('should render a localized string for the "Table view"', () => {
@@ -70,7 +70,7 @@ describe('DataTableView', () => {
       });
 
       let viewLink = wrapper.find('#uitest-tableDebugLink').at(0);
-      expect(viewLink.text()).to.contain('i18n-table-view');
+      expect(viewLink.text()).toContain('i18n-table-view');
     });
   });
 });

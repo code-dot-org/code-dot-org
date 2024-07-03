@@ -16,7 +16,7 @@ import {
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../../../util/reconfiguredChai';
+
 
 const fakeSectionId = 42;
 const fakeUnitId = 1;
@@ -47,13 +47,13 @@ describe('LessonLockDialog with stubbed section selector', () => {
 
   it('renders with minimal props', () => {
     const wrapper = shallow(<LessonLockDialog {...MINIMUM_PROPS} />);
-    expect(wrapper).not.to.be.null;
-    expect(wrapper.text()).not.to.be.empty;
+    expect(wrapper).not.toBeNull();
+    expect(wrapper.text()).not.toHaveLength(0);
   });
 
   it('does not display hidden warning if lesson not hidden', () => {
     const wrapper = shallow(<LessonLockDialog {...MINIMUM_PROPS} />);
-    expect(wrapper.text()).not.to.include(i18n.hiddenAssessmentWarning());
+    expect(wrapper.text()).not.toContain(i18n.hiddenAssessmentWarning());
   });
 
   it('displays hidden warning if lesson is hidden', () => {
@@ -75,10 +75,10 @@ describe('LessonLockDialog with stubbed section selector', () => {
       </Provider>
     );
 
-    expect(getStudentRows(wrapper)).to.have.length(1);
+    expect(getStudentRows(wrapper)).toHaveLength(1);
     const studentRow = getStudentRows(wrapper).at(0);
-    expect(studentRow.props().name).to.equal('fakeName');
-    expect(studentRow.props().lockStatus).to.equal(LockStatus.Locked);
+    expect(studentRow.props().name).toBe('fakeName');
+    expect(studentRow.props().lockStatus).toBe(LockStatus.Locked);
 
     lessonLockDataApi.useGetLockState.restore();
   });
@@ -99,7 +99,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
     );
 
     getStudentRows(wrapper).forEach(row => {
-      expect(row.props().lockStatus).to.equal(LockStatus.Locked);
+      expect(row.props().lockStatus).toBe(LockStatus.Locked);
     });
 
     const allowEditingButton = wrapper.find('button').at(1);
@@ -108,7 +108,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
     wrapper.update();
 
     getStudentRows(wrapper).forEach(row => {
-      expect(row.props().lockStatus).to.equal(LockStatus.Editable);
+      expect(row.props().lockStatus).toBe(LockStatus.Editable);
     });
 
     lessonLockDataApi.useGetLockState.restore();
@@ -130,7 +130,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
     );
 
     getStudentRows(wrapper).forEach(row => {
-      expect(row.props().lockStatus).to.equal(LockStatus.Editable);
+      expect(row.props().lockStatus).toBe(LockStatus.Editable);
     });
 
     const lockLessonButton = wrapper.find('button').at(2);
@@ -139,7 +139,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
     wrapper.update();
 
     getStudentRows(wrapper).forEach(row => {
-      expect(row.props().lockStatus).to.equal(LockStatus.Locked);
+      expect(row.props().lockStatus).toBe(LockStatus.Locked);
     });
 
     lessonLockDataApi.useGetLockState.restore();
@@ -161,7 +161,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
     );
 
     getStudentRows(wrapper).forEach(row => {
-      expect(row.props().lockStatus).to.equal(LockStatus.Editable);
+      expect(row.props().lockStatus).toBe(LockStatus.Editable);
     });
 
     const showAnswersButton = wrapper.find('button').at(3);
@@ -170,7 +170,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
     wrapper.update();
 
     getStudentRows(wrapper).forEach(row => {
-      expect(row.props().lockStatus).to.equal(LockStatus.ReadonlyAnswers);
+      expect(row.props().lockStatus).toBe(LockStatus.ReadonlyAnswers);
     });
 
     lessonLockDataApi.useGetLockState.restore();
@@ -192,9 +192,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
       viewSectionButton.simulate('click');
       wrapper.update();
 
-      expect(window.open).to.have.been.calledOnce.and.calledWith(
-        `/teacher_dashboard/sections/${fakeSectionId}/assessments`
-      );
+      expect(window.open).toHaveBeenCalledWith(`/teacher_dashboard/sections/${fakeSectionId}/assessments`);
     });
   });
 
@@ -234,11 +232,11 @@ describe('LessonLockDialog with stubbed section selector', () => {
     wrapper.update();
 
     await setTimeout(() => {}, 50);
-    expect(lessonLockSaveStub).to.have.been.called;
+    expect(lessonLockSaveStub).toHaveBeenCalled();
     await setTimeout(() => {}, 50);
-    expect(refetchStub).to.have.been.called;
+    expect(refetchStub).toHaveBeenCalled();
     await setTimeout(() => {}, 50);
-    expect(handleCloseSpy).to.have.been.called;
+    expect(handleCloseSpy).toHaveBeenCalled();
 
     lessonLockDataApi.useGetLockState.restore();
     lessonLockDataApi.saveLockState.restore();
@@ -280,11 +278,11 @@ describe('LessonLockDialog with stubbed section selector', () => {
     wrapper.update();
 
     await setTimeout(() => {}, 50);
-    expect(lessonLockSaveStub).to.have.been.called;
+    expect(lessonLockSaveStub).toHaveBeenCalled();
     await setTimeout(() => {}, 50);
 
-    expect(wrapper.text().includes(i18n.errorSavingLockStatus())).to.be.true;
-    expect(handleCloseSpy).to.not.be.called;
+    expect(wrapper.text().includes(i18n.errorSavingLockStatus())).toBe(true);
+    expect(handleCloseSpy).not.toHaveBeenCalled();
 
     lessonLockDataApi.useGetLockState.restore();
     lessonLockDataApi.saveLockState.restore();
@@ -331,11 +329,11 @@ describe('LessonLockDialog with stubbed section selector', () => {
     wrapper.update();
 
     await setTimeout(() => {}, 50);
-    expect(lessonLockSaveStub).to.have.been.called;
+    expect(lessonLockSaveStub).toHaveBeenCalled();
     await setTimeout(() => {}, 50);
 
-    expect(wrapper.text().includes('Error message from server')).to.be.true;
-    expect(handleCloseSpy).to.not.be.called;
+    expect(wrapper.text().includes('Error message from server')).toBe(true);
+    expect(handleCloseSpy).not.toHaveBeenCalled();
 
     lessonLockDataApi.useGetLockState.restore();
     lessonLockDataApi.saveLockState.restore();

@@ -31,7 +31,7 @@ import pageConstantsReducer, {
   setPageConstants,
 } from '@cdo/apps/redux/pageConstants';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 import {createStore} from '../../../util/redux';
 import {setExternalGlobals} from '../../../util/testUtils';
 
@@ -58,90 +58,64 @@ describe('animationList', function () {
 
     it(`returns the sourceUrl from props if it exists and is not an uploaded image`, function () {
       const props = {sourceUrl: 'bar'};
-      expect(animationSourceUrl(key, props, '123')).to.equal('bar');
+      expect(animationSourceUrl(key, props, '123')).toBe('bar');
     });
 
     it(`returns the sourceUrl from props if it exists and contains the version`, function () {
       const props = {sourceUrl: '/v3/animations/test?version=bar'};
-      expect(animationSourceUrl(key, props, '123')).to.equal(
-        '/v3/animations/test?version=bar'
-      );
+      expect(animationSourceUrl(key, props, '123')).toBe('/v3/animations/test?version=bar');
     });
 
     it(`returns the sourceUrl from props if it exists in a different channel`, function () {
       const props = {sourceUrl: '/v3/animations/456/789'};
-      expect(animationSourceUrl(key, props, '123')).to.equal(
-        '/v3/animations/456/789'
-      );
+      expect(animationSourceUrl(key, props, '123')).toBe('/v3/animations/456/789');
     });
 
     it(`returns the sourceUrl from a non-deleted, uploaded animation with the version`, function () {
       const props = {sourceUrl: '/v3/animations/123/foo', version: 'alpha'};
-      expect(animationSourceUrl(key, props, '123')).to.equal(
-        '/v3/animations/123/foo?version=alpha'
-      );
+      expect(animationSourceUrl(key, props, '123')).toBe('/v3/animations/123/foo?version=alpha');
     });
 
     it(`returns the sourceUrl from a deleted, uploaded animation with the version`, function () {
       const props = {sourceUrl: '/v3/animations/123/bar', version: 'beta'};
-      expect(animationSourceUrl(key, props, '123')).to.equal(
-        '/v3/animations/123/bar?version=beta'
-      );
+      expect(animationSourceUrl(key, props, '123')).toBe('/v3/animations/123/bar?version=beta');
     });
 
     it(`returns the sourceUrl from a non-deleted, uploaded animation with no version specified`, function () {
       const props = {sourceUrl: '/v3/animations/123/foo'};
-      expect(animationSourceUrl(key, props, '123')).to.equal(
-        '/v3/animations/123/foo?version=latestVersion'
-      );
+      expect(animationSourceUrl(key, props, '123')).toBe('/v3/animations/123/foo?version=latestVersion');
     });
 
     it(`returns the sourceUrl from a deleted, uploaded animation with no version specified`, function () {
       const props = {sourceUrl: '/v3/animations/123/bar'};
-      expect(animationSourceUrl(key, props, '123')).to.equal(
-        '/v3/animations/123/bar?version=latestVersion'
-      );
+      expect(animationSourceUrl(key, props, '123')).toBe('/v3/animations/123/bar?version=latestVersion');
     });
 
     it(`returns the sourceUrl passed through the media proxy if it's an absolute url`, function () {
       const insecureProps = {sourceUrl: 'http://bar'};
-      expect(animationSourceUrl(key, insecureProps, '123')).to.equal(
-        `//${document.location.host}/media?u=http%3A%2F%2Fbar`
-      );
+      expect(animationSourceUrl(key, insecureProps, '123')).toBe(`//${document.location.host}/media?u=http%3A%2F%2Fbar`);
 
       const secureProps = {sourceUrl: 'https://bar'};
-      expect(animationSourceUrl(key, secureProps, '123')).to.equal(
-        `//${document.location.host}/media?u=https%3A%2F%2Fbar`
-      );
+      expect(animationSourceUrl(key, secureProps, '123')).toBe(`//${document.location.host}/media?u=https%3A%2F%2Fbar`);
     });
 
     it(`constructs a sourceUrl from key, version, and project if one isn't provided`, function () {
       const props = {sourceUrl: null, version: 'test-version'};
-      expect(animationSourceUrl(key, props, '123')).to.equal(
-        '/v3/animations/fake_id/foo.png?version=test-version'
-      );
+      expect(animationSourceUrl(key, props, '123')).toBe('/v3/animations/fake_id/foo.png?version=test-version');
     });
 
     it(`has empty version queryParam when version is falsy`, function () {
       let nullProps = {sourceUrl: null, version: null};
-      expect(animationSourceUrl(key, nullProps, '123')).to.equal(
-        '/v3/animations/fake_id/foo.png?version='
-      );
+      expect(animationSourceUrl(key, nullProps, '123')).toBe('/v3/animations/fake_id/foo.png?version=');
 
       let undefinedProps = {sourceUrl: null, version: undefined};
-      expect(animationSourceUrl(key, undefinedProps, '123')).to.equal(
-        '/v3/animations/fake_id/foo.png?version='
-      );
+      expect(animationSourceUrl(key, undefinedProps, '123')).toBe('/v3/animations/fake_id/foo.png?version=');
 
       let falseProps = {sourceUrl: null, version: false};
-      expect(animationSourceUrl(key, falseProps, '123')).to.equal(
-        '/v3/animations/fake_id/foo.png?version='
-      );
+      expect(animationSourceUrl(key, falseProps, '123')).toBe('/v3/animations/fake_id/foo.png?version=');
 
       let zeroProps = {sourceUrl: null, version: 0};
-      expect(animationSourceUrl(key, zeroProps, '123')).to.equal(
-        '/v3/animations/fake_id/foo.png?version='
-      );
+      expect(animationSourceUrl(key, zeroProps, '123')).toBe('/v3/animations/fake_id/foo.png?version=');
     });
   });
 
@@ -170,65 +144,53 @@ describe('animationList', function () {
 
     it('sets the loadedFromSource flag', function () {
       // TODO run loadAnimationFromSource action here when we can stub the request
-      expect(store.getState().animationList.propsByKey[key].loadedFromSource).to
-        .be.undefined;
+      expect(store.getState().animationList.propsByKey[key].loadedFromSource).toBeUndefined();
       store.dispatch({type: START_LOADING_FROM_SOURCE, key});
-      expect(store.getState().animationList.propsByKey[key].loadedFromSource).to
-        .be.false;
+      expect(store.getState().animationList.propsByKey[key].loadedFromSource).toBe(false);
       store.dispatch({
         type: DONE_LOADING_FROM_SOURCE,
         key,
       });
-      expect(store.getState().animationList.propsByKey[key].loadedFromSource).to
-        .be.true;
+      expect(store.getState().animationList.propsByKey[key].loadedFromSource).toBe(true);
     });
 
     it('populates animation blob', function () {
       // TODO run loadAnimationFromSource action here when we can stub the request
-      expect(store.getState().animationList.propsByKey[key].blob).to.be
-        .undefined;
+      expect(store.getState().animationList.propsByKey[key].blob).toBeUndefined();
       store.dispatch({type: START_LOADING_FROM_SOURCE, key});
-      expect(store.getState().animationList.propsByKey[key].blob).to.be
-        .undefined;
+      expect(store.getState().animationList.propsByKey[key].blob).toBeUndefined();
       store.dispatch({
         type: DONE_LOADING_FROM_SOURCE,
         key,
         blob: new Blob([]),
       });
-      expect(store.getState().animationList.propsByKey[key].blob).not.to.be
-        .undefined;
+      expect(store.getState().animationList.propsByKey[key].blob).toBeDefined();
     });
 
     it('populates animation dataURI', function () {
       // TODO run loadAnimationFromSource action here when we can stub the request
-      expect(store.getState().animationList.propsByKey[key].dataURI).to.be
-        .undefined;
+      expect(store.getState().animationList.propsByKey[key].dataURI).toBeUndefined();
       store.dispatch({type: START_LOADING_FROM_SOURCE, key});
-      expect(store.getState().animationList.propsByKey[key].dataURI).to.be
-        .undefined;
+      expect(store.getState().animationList.propsByKey[key].dataURI).toBeUndefined();
       store.dispatch({
         type: DONE_LOADING_FROM_SOURCE,
         key,
         dataURI: EMPTY_IMAGE,
       });
-      expect(store.getState().animationList.propsByKey[key].dataURI).not.to.be
-        .undefined;
+      expect(store.getState().animationList.propsByKey[key].dataURI).toBeDefined();
     });
 
     it('populates animation sourceSize', function () {
       // TODO run loadAnimationFromSource action here when we can stub the request
-      expect(store.getState().animationList.propsByKey[key].sourceSize).to.be
-        .undefined;
+      expect(store.getState().animationList.propsByKey[key].sourceSize).toBeUndefined();
       store.dispatch({type: START_LOADING_FROM_SOURCE, key});
-      expect(store.getState().animationList.propsByKey[key].sourceSize).to.be
-        .undefined;
+      expect(store.getState().animationList.propsByKey[key].sourceSize).toBeUndefined();
       store.dispatch({
         type: DONE_LOADING_FROM_SOURCE,
         key,
         sourceSize: {x: 1, y: 1},
       });
-      expect(store.getState().animationList.propsByKey[key].sourceSize).not.to
-        .be.undefined;
+      expect(store.getState().animationList.propsByKey[key].sourceSize).toBeDefined();
     });
   });
 
@@ -276,7 +238,7 @@ describe('animationList', function () {
       store.dispatch(setInitialAnimationList(animationList));
       expect(
         store.getState().animationTab.currentAnimations.ANIMATION
-      ).to.equal(key0);
+      ).toBe(key0);
     });
 
     it('when animationList has multiple items, currentAnimations.ANIMATION should be the first animation', function () {
@@ -286,7 +248,7 @@ describe('animationList', function () {
       store.dispatch(setInitialAnimationList(animationList));
       expect(
         store.getState().animationTab.currentAnimations.ANIMATION
-      ).to.equal(key0);
+      ).toBe(key0);
     });
 
     it('when animationList has 0 items, currentAnimations.ANIMATION should be the empty string', function () {
@@ -297,7 +259,7 @@ describe('animationList', function () {
       store.dispatch(setInitialAnimationList(animationList));
       expect(
         store.getState().animationTab.currentAnimations.ANIMATION
-      ).to.equal('');
+      ).toBe('');
     });
 
     it('should not initialize with multiple animations of the same name', function () {
@@ -308,13 +270,13 @@ describe('animationList', function () {
 
       expect(
         store.getState().animationList.propsByKey['animation_1'].name
-      ).to.equal('cat');
+      ).toBe('cat');
       expect(
         store.getState().animationList.propsByKey['animation_2'].name
-      ).to.equal('animation_2');
+      ).toBe('animation_2');
       expect(
         store.getState().animationList.propsByKey['animation_3'].name
-      ).to.equal('cat_1');
+      ).toBe('cat_1');
     });
 
     it('should not initialize with multiple animations of the same name with non alpha characters', function () {
@@ -326,13 +288,13 @@ describe('animationList', function () {
 
       expect(
         store.getState().animationList.propsByKey['animation_1'].name
-      ).to.equal('images (1).jpg_1');
+      ).toBe('images (1).jpg_1');
       expect(
         store.getState().animationList.propsByKey['animation_2'].name
-      ).to.equal('images (1).jpg_1_1');
+      ).toBe('images (1).jpg_1_1');
       expect(
         store.getState().animationList.propsByKey['animation_3'].name
-      ).to.equal('images (1).jpg_1_2');
+      ).toBe('images (1).jpg_1_2');
     });
 
     it('when animationList has migratable animations, check that animation is substituted', function () {
@@ -345,7 +307,7 @@ describe('animationList', function () {
       );
       expect(
         store.getState().animationList.propsByKey['animation_1'].sourceUrl
-      ).to.equal('cat');
+      ).toBe('cat');
     });
   });
 
@@ -377,7 +339,7 @@ describe('animationList', function () {
       store.dispatch(deleteAnimation(key0));
       expect(
         store.getState().animationTab.currentAnimations.ANIMATION
-      ).to.equal(key1);
+      ).toBe(key1);
     });
 
     it('deleting an animation reselects the previous animation in the animationList', function () {
@@ -393,7 +355,7 @@ describe('animationList', function () {
       store.dispatch(deleteAnimation(key1));
       expect(
         store.getState().animationTab.currentAnimations.ANIMATION
-      ).to.equal(key0);
+      ).toBe(key0);
     });
 
     it('deleting an animation deselects when there are no other animations in the animationList', function () {
@@ -407,7 +369,7 @@ describe('animationList', function () {
       store.dispatch(deleteAnimation(key0));
       expect(
         store.getState().animationTab.currentAnimations.ANIMATION
-      ).to.equal('');
+      ).toBe('');
     });
 
     it('deleting an animation deselects when there are no other non-background animations in the spritelab animationList', function () {
@@ -423,7 +385,7 @@ describe('animationList', function () {
       store.dispatch(deleteAnimation(key0, true));
       expect(
         store.getState().animationTab.currentAnimations.ANIMATION
-      ).to.equal('');
+      ).toBe('');
     });
   });
 
@@ -453,20 +415,20 @@ describe('animationList', function () {
       store.dispatch(setInitialAnimationList(animationList));
       store.dispatch(cloneAnimation(key0));
 
-      expect(store.getState().animationList.orderedKeys.length).to.equal(2);
+      expect(store.getState().animationList.orderedKeys.length).toBe(2);
 
       const clonedAnimationKey = store.getState().animationList.orderedKeys[1];
       const clonedAnimation =
         store.getState().animationList.propsByKey[clonedAnimationKey];
       const originalAnimation = store.getState().animationList.propsByKey[key0];
 
-      expect(clonedAnimation.name).to.not.equal(originalAnimation.name);
-      expect(clonedAnimation.frameSize).to.equal(originalAnimation.frameSize);
-      expect(clonedAnimation.frameCount).to.equal(originalAnimation.frameCount);
-      expect(clonedAnimation.frameDelay).to.equal(originalAnimation.frameDelay);
-      expect(clonedAnimation.looping).to.equal(originalAnimation.looping);
-      expect(clonedAnimation.sourceUrl).to.equal(originalAnimation.sourceUrl);
-      expect(clonedAnimation.version).to.equal(originalAnimation.version);
+      expect(clonedAnimation.name).not.toBe(originalAnimation.name);
+      expect(clonedAnimation.frameSize).toBe(originalAnimation.frameSize);
+      expect(clonedAnimation.frameCount).toBe(originalAnimation.frameCount);
+      expect(clonedAnimation.frameDelay).toBe(originalAnimation.frameDelay);
+      expect(clonedAnimation.looping).toBe(originalAnimation.looping);
+      expect(clonedAnimation.sourceUrl).toBe(originalAnimation.sourceUrl);
+      expect(clonedAnimation.version).toBe(originalAnimation.version);
     });
 
     it('cloning an animation twice creates two animations with unique names', function () {
@@ -489,10 +451,10 @@ describe('animationList', function () {
       const clonedAnimation1 =
         store.getState().animationList.propsByKey[clonedAnimationKey1];
 
-      expect(store.getState().animationList.orderedKeys.length).to.equal(3);
-      expect(orignalAnimation.name).to.not.equal(clonedAnimation1.name);
-      expect(orignalAnimation.name).to.not.equal(clonedAnimation2.name);
-      expect(clonedAnimation1.name).to.not.equal(clonedAnimation2.name);
+      expect(store.getState().animationList.orderedKeys.length).toBe(3);
+      expect(orignalAnimation.name).not.toBe(clonedAnimation1.name);
+      expect(orignalAnimation.name).not.toBe(clonedAnimation2.name);
+      expect(clonedAnimation1.name).not.toBe(clonedAnimation2.name);
     });
   });
 
@@ -520,7 +482,7 @@ describe('animationList', function () {
       let blankAnimationKey = store.getState().animationList.orderedKeys[0];
       expect(
         store.getState().animationList.propsByKey[blankAnimationKey].name
-      ).to.equal('animation_1');
+      ).toBe('animation_1');
     });
 
     it('first new blank background animations get name blank_background_1', function () {
@@ -528,7 +490,7 @@ describe('animationList', function () {
       let blankAnimationKey = store.getState().animationList.orderedKeys[0];
       expect(
         store.getState().animationList.propsByKey[blankAnimationKey].name
-      ).to.equal('blank_background_1');
+      ).toBe('blank_background_1');
     });
 
     it('new blank animations get name next available number appended', function () {
@@ -539,7 +501,7 @@ describe('animationList', function () {
       let blankAnimationKey = store.getState().animationList.orderedKeys[2];
       expect(
         store.getState().animationList.propsByKey[blankAnimationKey].name
-      ).to.equal('animation_3');
+      ).toBe('animation_3');
     });
 
     it('new blank animations get name next available number appended when available number is in the middle of the list', function () {
@@ -547,13 +509,13 @@ describe('animationList', function () {
       let animationList = createAnimationList(3);
       store.dispatch(setInitialAnimationList(animationList));
       store.dispatch(deleteAnimation(key1));
-      expect(store.getState().animationList.orderedKeys.length).to.equal(2);
+      expect(store.getState().animationList.orderedKeys.length).toBe(2);
       store.dispatch(addBlankAnimation('ANIMATION'));
-      expect(store.getState().animationList.orderedKeys.length).to.equal(3);
+      expect(store.getState().animationList.orderedKeys.length).toBe(3);
       let blankAnimationKey = store.getState().animationList.orderedKeys[2];
       expect(
         store.getState().animationList.propsByKey[blankAnimationKey].name
-      ).to.equal('animation_2');
+      ).toBe('animation_2');
     });
   });
 
@@ -591,19 +553,19 @@ describe('animationList', function () {
       let blankAnimationKey1 = store.getState().animationList.orderedKeys[0];
       expect(
         store.getState().animationList.propsByKey[blankAnimationKey1].name
-      ).to.equal('library_animation_1');
+      ).toBe('library_animation_1');
 
       store.dispatch(addLibraryAnimation(libraryAnimProps));
       let blankAnimationKey2 = store.getState().animationList.orderedKeys[1];
       expect(
         store.getState().animationList.propsByKey[blankAnimationKey2].name
-      ).to.equal('library_animation_2');
+      ).toBe('library_animation_2');
 
       store.dispatch(addLibraryAnimation(libraryAnimProps));
       let blankAnimationKey3 = store.getState().animationList.orderedKeys[2];
       expect(
         store.getState().animationList.propsByKey[blankAnimationKey3].name
-      ).to.equal('library_animation_3');
+      ).toBe('library_animation_3');
 
       store.dispatch(deleteAnimation(blankAnimationKey2));
 
@@ -611,7 +573,7 @@ describe('animationList', function () {
       let blankAnimationKey4 = store.getState().animationList.orderedKeys[2];
       expect(
         store.getState().animationList.propsByKey[blankAnimationKey4].name
-      ).to.equal('library_animation_2');
+      ).toBe('library_animation_2');
     });
 
     it('adds animation at front of list in Game Lab', function () {
@@ -621,7 +583,7 @@ describe('animationList', function () {
       let firstAnimation = store.getState().animationList.orderedKeys[0];
       expect(
         store.getState().animationList.propsByKey[firstAnimation].name
-      ).to.equal('first_1');
+      ).toBe('first_1');
     });
 
     it('adds animation at front of list in Sprite Lab', function () {
@@ -637,23 +599,13 @@ describe('animationList', function () {
       let firstAnimation = store.getState().animationList.orderedKeys[0];
       expect(
         store.getState().animationList.propsByKey[firstAnimation].name
-      ).to.equal('third_1');
+      ).toBe('third_1');
     });
   });
 
   describe('withAbsoluteSourceUrls', function () {
     function expectDeepEqual(a, b) {
-      expect(a).to.deep.equal(
-        b,
-        'Expected to be deeply equal:\n' +
-          '<<<<<<<<\n' +
-          JSON.stringify(a, null, 2) +
-          '\n' +
-          '--------\n' +
-          JSON.stringify(b, null, 2) +
-          '\n' +
-          '>>>>>>>>\n'
-      );
+      expect(a).toEqual(b);
     }
 
     it('generates absolute source URLs for animations with no source URL', function () {
@@ -760,13 +712,11 @@ describe('animationList', function () {
       store.dispatch(appendBlankFrame());
       expect(
         store.getState().animationList.propsByKey[animationKey].frameCount
-      ).to.equal(1);
-      expect(store.getState().animationList.pendingFrames.key).to.equal(
-        animationKey
-      );
+      ).toBe(1);
+      expect(store.getState().animationList.pendingFrames.key).toBe(animationKey);
       expect(
         store.getState().animationList.pendingFrames.props.blankFrame
-      ).to.equal(true);
+      ).toBe(true);
     });
 
     it('new blank pending frame uses the currentAnimations.ANIMATION key', function () {
@@ -775,9 +725,7 @@ describe('animationList', function () {
       const selectedAnimation =
         store.getState().animationTab.currentAnimations.ANIMATION;
       store.dispatch(appendBlankFrame());
-      expect(store.getState().animationList.pendingFrames.key).to.equal(
-        selectedAnimation
-      );
+      expect(store.getState().animationList.pendingFrames.key).toBe(selectedAnimation);
     });
   });
 
@@ -814,22 +762,14 @@ describe('animationList', function () {
 
     it('append library frames adds props to pendingFrames for selectedAnimation', function () {
       store.dispatch(appendLibraryFrames(libraryAnimProps));
-      expect(store.getState().animationList.pendingFrames.key).to.equal(
-        selectedAnimation
-      );
-      expect(store.getState().animationList.pendingFrames.props).to.deep.equal(
-        libraryAnimProps
-      );
+      expect(store.getState().animationList.pendingFrames.key).toBe(selectedAnimation);
+      expect(store.getState().animationList.pendingFrames.props).toEqual(libraryAnimProps);
     });
 
     it('append custom frames adds props to pendingFrames for selected animation', function () {
       store.dispatch(appendCustomFrames(libraryAnimProps));
-      expect(store.getState().animationList.pendingFrames.key).to.equal(
-        selectedAnimation
-      );
-      expect(store.getState().animationList.pendingFrames.props).to.deep.equal(
-        libraryAnimProps
-      );
+      expect(store.getState().animationList.pendingFrames.key).toBe(selectedAnimation);
+      expect(store.getState().animationList.pendingFrames.props).toEqual(libraryAnimProps);
     });
   });
 
@@ -857,14 +797,10 @@ describe('animationList', function () {
       };
 
       saveAnimation('animation_1', libraryAnimProps);
-      expect(requests.length).to.equal(1);
-      expect(requests[0].method).to.equal('PUT');
-      expect(requests[0].url).to.equal(
-        '/v3/animations/fake_id/animation_1.png'
-      );
-      expect(requests[0].requestHeaders['Content-type']).to.equal(
-        'image/png;charset=utf-8'
-      );
+      expect(requests.length).toBe(1);
+      expect(requests[0].method).toBe('PUT');
+      expect(requests[0].url).toBe('/v3/animations/fake_id/animation_1.png');
+      expect(requests[0].requestHeaders['Content-type']).toBe('image/png;charset=utf-8');
     });
   });
 });

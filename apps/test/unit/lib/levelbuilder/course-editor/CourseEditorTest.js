@@ -21,7 +21,7 @@ import {
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import * as utils from '@cdo/apps/utils';
 
-import {assert, expect} from '../../../../util/reconfiguredChai';
+import {assert} from '../../../../util/reconfiguredChai';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 const defaultProps = {
@@ -89,7 +89,7 @@ describe('CourseEditor', () => {
           ]}
         />
       );
-      expect(wrapper.find('ResourcesEditor').first()).to.exist;
+      expect(wrapper.find('ResourcesEditor').first()).toBeDefined();
     });
   });
 
@@ -107,15 +107,15 @@ describe('CourseEditor', () => {
 
   it('has correct markdown for preview of course teacher and student description', () => {
     const wrapper = createWrapper({});
-    expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(2);
+    expect(wrapper.find('TextareaWithMarkdownPreview').length).toBe(2);
     expect(
       wrapper.find('TextareaWithMarkdownPreview').at(0).prop('markdown')
-    ).to.equal(
+    ).toBe(
       '# Student description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
     );
     expect(
       wrapper.find('TextareaWithMarkdownPreview').at(1).prop('markdown')
-    ).to.equal(
+    ).toBe(
       '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
     );
   });
@@ -151,13 +151,12 @@ describe('CourseEditor', () => {
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-        .true;
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
       saveAndKeepEditingButton.simulate('click');
 
       // check the the spinner is showing
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
-      expect(courseEditor.state().isSaving).to.equal(true);
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
+      expect(courseEditor.state().isSaving).toBe(true);
 
       clock = sinon.useFakeTimers(new Date('2020-12-01'));
       const expectedLastSaved = Date.now();
@@ -165,12 +164,12 @@ describe('CourseEditor', () => {
       clock.tick(50);
 
       courseEditor.update();
-      expect(utils.navigateToHref).to.not.have.been.called;
-      expect(courseEditor.state().isSaving).to.equal(false);
-      expect(courseEditor.state().lastSaved).to.equal(expectedLastSaved);
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
+      expect(utils.navigateToHref).not.toHaveBeenCalled();
+      expect(courseEditor.state().isSaving).toBe(false);
+      expect(courseEditor.state().lastSaved).toBe(expectedLastSaved);
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(0);
       //check that last saved message is showing
-      expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
+      expect(wrapper.find('.lastSavedMessage').length).toBe(1);
     });
 
     it('shows error when save and keep editing has error saving', () => {
@@ -187,23 +186,22 @@ describe('CourseEditor', () => {
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-        .true;
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
       saveAndKeepEditingButton.simulate('click');
 
       // check the the spinner is showing
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
-      expect(courseEditor.state().isSaving).to.equal(true);
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
+      expect(courseEditor.state().isSaving).toBe(true);
 
       server.respond();
       courseEditor.update();
-      expect(utils.navigateToHref).to.not.have.been.called;
-      expect(courseEditor.state().isSaving).to.equal(false);
-      expect(courseEditor.state().error).to.equal('There was an error');
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
+      expect(utils.navigateToHref).not.toHaveBeenCalled();
+      expect(courseEditor.state().isSaving).toBe(false);
+      expect(courseEditor.state().error).toBe('There was an error');
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(0);
       expect(
         wrapper.find('.saveBar').contains('Error Saving: There was an error')
-      ).to.be.true;
+      ).toBe(true);
 
       server.restore();
     });
@@ -224,18 +222,16 @@ describe('CourseEditor', () => {
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndCloseButton = saveBar.find('button').at(2);
-      expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
+      expect(saveAndCloseButton.contains('Save and Close')).toBe(true);
       saveAndCloseButton.simulate('click');
 
       // check the the spinner is showing
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
-      expect(courseEditor.state().isSaving).to.equal(true);
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
+      expect(courseEditor.state().isSaving).toBe(true);
 
       server.respond();
       courseEditor.update();
-      expect(utils.navigateToHref).to.have.been.calledWith(
-        `/courses/test-course${window.location.search}`
-      );
+      expect(utils.navigateToHref).toHaveBeenCalledWith(`/courses/test-course${window.location.search}`);
 
       server.restore();
     });
@@ -254,24 +250,24 @@ describe('CourseEditor', () => {
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndCloseButton = saveBar.find('button').at(2);
-      expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
+      expect(saveAndCloseButton.contains('Save and Close')).toBe(true);
       saveAndCloseButton.simulate('click');
 
       // check the the spinner is showing
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
-      expect(courseEditor.state().isSaving).to.equal(true);
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
+      expect(courseEditor.state().isSaving).toBe(true);
 
       server.respond();
 
       courseEditor.update();
-      expect(utils.navigateToHref).to.not.have.been.called;
+      expect(utils.navigateToHref).not.toHaveBeenCalled();
 
-      expect(courseEditor.state().isSaving).to.equal(false);
-      expect(courseEditor.state().error).to.equal('There was an error');
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
+      expect(courseEditor.state().isSaving).toBe(false);
+      expect(courseEditor.state().error).toBe('There was an error');
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(0);
       expect(
         wrapper.find('.saveBar').contains('Error Saving: There was an error')
-      ).to.be.true;
+      ).toBe(true);
 
       server.restore();
     });
@@ -289,14 +285,13 @@ describe('CourseEditor', () => {
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-        .true;
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
       saveAndKeepEditingButton.simulate('click');
 
-      expect($.ajax).to.not.have.been.called;
+      expect($.ajax).not.toHaveBeenCalled();
 
-      expect(courseEditor.state().isSaving).to.equal(false);
-      expect(courseEditor.state().error).to.equal(
+      expect(courseEditor.state().isSaving).toBe(false);
+      expect(courseEditor.state().error).toBe(
         'Please provide a pilot experiment in order to save with published state as pilot.'
       );
 
@@ -306,7 +301,7 @@ describe('CourseEditor', () => {
           .contains(
             'Error Saving: Please provide a pilot experiment in order to save with published state as pilot.'
           )
-      ).to.be.true;
+      ).toBe(true);
 
       $.ajax.restore();
     });
@@ -325,22 +320,19 @@ describe('CourseEditor', () => {
     const saveBar = wrapper.find('SaveBar');
 
     const saveAndKeepEditingButton = saveBar.find('button').at(1);
-    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-      .true;
+    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
     saveAndKeepEditingButton.simulate('click');
 
-    expect($.ajax).to.not.have.been.called;
+    expect($.ajax).not.toHaveBeenCalled();
 
-    expect(courseEditor.state().isSaving).to.equal(false);
-    expect(courseEditor.state().error).to.equal(
-      'Please set both version year and family name.'
-    );
+    expect(courseEditor.state().isSaving).toBe(false);
+    expect(courseEditor.state().error).toBe('Please set both version year and family name.');
 
     expect(
       wrapper
         .find('.saveBar')
         .contains('Error Saving: Please set both version year and family name.')
-    ).to.be.true;
+    ).toBe(true);
 
     $.ajax.restore();
   });
@@ -358,22 +350,19 @@ describe('CourseEditor', () => {
     const saveBar = wrapper.find('SaveBar');
 
     const saveAndKeepEditingButton = saveBar.find('button').at(1);
-    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-      .true;
+    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
     saveAndKeepEditingButton.simulate('click');
 
-    expect($.ajax).to.not.have.been.called;
+    expect($.ajax).not.toHaveBeenCalled();
 
-    expect(courseEditor.state().isSaving).to.equal(false);
-    expect(courseEditor.state().error).to.equal(
-      'Please set both version year and family name.'
-    );
+    expect(courseEditor.state().isSaving).toBe(false);
+    expect(courseEditor.state().error).toBe('Please set both version year and family name.');
 
     expect(
       wrapper
         .find('.saveBar')
         .contains('Error Saving: Please set both version year and family name.')
-    ).to.be.true;
+    ).toBe(true);
 
     $.ajax.restore();
   });
@@ -393,14 +382,13 @@ describe('CourseEditor', () => {
     const saveBar = wrapper.find('SaveBar');
 
     const saveAndKeepEditingButton = saveBar.find('button').at(1);
-    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-      .true;
+    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
     saveAndKeepEditingButton.simulate('click');
 
-    expect($.ajax).to.not.have.been.called;
+    expect($.ajax).not.toHaveBeenCalled();
 
-    expect(courseEditor.state().isSaving).to.equal(false);
-    expect(courseEditor.state().error).to.equal(
+    expect(courseEditor.state().isSaving).toBe(false);
+    expect(courseEditor.state().error).toBe(
       'Please set all device compatibilities in order to save with published state as preview or stable.'
     );
 
@@ -410,7 +398,7 @@ describe('CourseEditor', () => {
         .contains(
           'Error Saving: Please set all device compatibilities in order to save with published state as preview or stable.'
         )
-    ).to.be.true;
+    ).toBe(true);
 
     $.ajax.restore();
   });
@@ -431,14 +419,13 @@ describe('CourseEditor', () => {
     const saveBar = wrapper.find('SaveBar');
 
     const saveAndKeepEditingButton = saveBar.find('button').at(1);
-    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
-      .true;
+    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
     saveAndKeepEditingButton.simulate('click');
 
-    expect($.ajax).to.not.have.been.called;
+    expect($.ajax).not.toHaveBeenCalled();
 
-    expect(courseEditor.state().isSaving).to.equal(false);
-    expect(courseEditor.state().error).to.equal(
+    expect(courseEditor.state().isSaving).toBe(false);
+    expect(courseEditor.state().error).toBe(
       'Please set all device compatibilities in order to save with published state as preview or stable.'
     );
 
@@ -448,7 +435,7 @@ describe('CourseEditor', () => {
         .contains(
           'Error Saving: Please set all device compatibilities in order to save with published state as preview or stable.'
         )
-    ).to.be.true;
+    ).toBe(true);
 
     $.ajax.restore();
   });

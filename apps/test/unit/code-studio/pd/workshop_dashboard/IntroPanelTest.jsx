@@ -41,7 +41,7 @@ describe('IntroPanel', () => {
 
       // The dialog should be closed and we should have called for a workshop refresh
       assert.isFalse(wrapper.state('showStartWorkshopConfirmation'));
-      assert(loadWorkshop.calledOnce);
+      assert(loadWorkshop.toHaveBeenCalledTimes(1));
     });
 
     it('begin to start the workshop, then change your mind', () => {
@@ -110,7 +110,7 @@ describe('IntroPanel', () => {
       wrapper.update();
 
       // The dialog should be closed and we should have called for a workshop refresh
-      assert(loadWorkshop.calledOnce);
+      assert(loadWorkshop.toHaveBeenCalledTimes(1));
     });
 
     it('begin to unstart the workshop, then change your mind', () => {

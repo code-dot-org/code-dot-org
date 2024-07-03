@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import HideToolbarHelper from '@cdo/apps/templates/HideToolbarHelper';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('HideToolbarHelper', function () {
   it('shows the hide toolbar helper', function () {
@@ -19,7 +19,7 @@ describe('HideToolbarHelper', function () {
 
     instance.updateLayout();
 
-    expect(instance.state.showHelper).to.be.true;
+    expect(instance.state.showHelper).toBe(true);
   });
 
   it('does not show the hide toolbar helper', function () {
@@ -34,7 +34,7 @@ describe('HideToolbarHelper', function () {
 
     instance.updateLayout();
 
-    expect(instance.state.showHelper).to.be.false;
+    expect(instance.state.showHelper).toBe(false);
   });
 
   it('we set a cookie when the toolbar goes away', function () {
@@ -53,15 +53,15 @@ describe('HideToolbarHelper', function () {
 
     instance.updateLayout();
 
-    expect(instance.state.showHelper).to.be.true;
-    expect(setHideHelperCookie).not.to.have.been.called;
+    expect(instance.state.showHelper).toBe(true);
+    expect(setHideHelperCookie).not.toHaveBeenCalled();
 
     isToolbarShowing.restore();
     sinon.stub(instance, 'isToolbarShowing').returns(false);
 
     instance.updateLayout();
 
-    expect(instance.state.showHelper).to.be.false;
-    expect(setHideHelperCookie).to.have.been.called;
+    expect(instance.state.showHelper).toBe(false);
+    expect(setHideHelperCookie).toHaveBeenCalled();
   });
 });

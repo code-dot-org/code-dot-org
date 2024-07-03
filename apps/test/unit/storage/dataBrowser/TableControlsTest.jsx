@@ -21,7 +21,7 @@ import {changeView} from '@cdo/apps/storage/redux/data';
 import experiments from '@cdo/apps/util/experiments';
 import commonI18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 const DEFAULT_PROPS = {
   isRtl: false,
@@ -73,7 +73,7 @@ describe('TableControls', () => {
   }
 
   function assertModalState(wrapper, expectedState) {
-    expect(getModal(wrapper).state()).to.deep.equal(expectedState);
+    expect(getModal(wrapper).state()).toEqual(expectedState);
   }
 
   function setModalState(wrapper, newState) {
@@ -102,8 +102,8 @@ describe('TableControls', () => {
       );
 
       let clearButton = wrapper.find('ConfirmDeleteButton');
-      expect(clearButton.text()).to.contain('i18n-clear-table');
-      expect(clearButton.prop('title')).to.contain('i18n-clear-table');
+      expect(clearButton.text()).toContain('i18n-clear-table');
+      expect(clearButton.prop('title')).toContain('i18n-clear-table');
     });
   });
 });

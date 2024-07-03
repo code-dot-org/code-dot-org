@@ -9,7 +9,7 @@ import {
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import color from '@cdo/apps/util/color';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai';
 
 describe('ProgressLesson', () => {
   const lessonNumber = 3;
@@ -258,7 +258,7 @@ describe('ProgressLesson', () => {
         isLockedForUser={true}
       />
     );
-    expect(wrapper.text()).to.include(
+    expect(wrapper.text()).toContain(
       'This lesson is locked - you need to become a verified teacher to unlock it.'
     );
   });
@@ -273,7 +273,7 @@ describe('ProgressLesson', () => {
         lockableAuthorized={true}
       />
     );
-    expect(wrapper.text()).to.not.include(
+    expect(wrapper.text()).not.toContain(
       'This lesson is locked - you need to become a verified teacher to unlock it.'
     );
   });
@@ -288,7 +288,7 @@ describe('ProgressLesson', () => {
         lockableAuthorized={null}
       />
     );
-    expect(wrapper.text()).to.not.include(
+    expect(wrapper.text()).not.toContain(
       'This lesson is locked - you need to become a verified teacher to unlock it.'
     );
   });

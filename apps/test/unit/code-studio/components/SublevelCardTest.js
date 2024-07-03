@@ -5,7 +5,7 @@ import SublevelCard from '@cdo/apps/code-studio/components/SublevelCard';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai';
 
 const DEFAULT_SUBLEVEL = {
   id: '1',
@@ -79,8 +79,6 @@ describe('SublevelCard', () => {
   it('maps sublevel keys to camelcase before passing to ProgressBubble', () => {
     const wrapper = setUp();
     const progressBubbleLevel = wrapper.find(ProgressBubble).props().level;
-    expect(progressBubbleLevel.teacherFeedbackReviewState).to.equal(
-      ReviewStates.keepWorking
-    );
+    expect(progressBubbleLevel.teacherFeedbackReviewState).toBe(ReviewStates.keepWorking);
   });
 });

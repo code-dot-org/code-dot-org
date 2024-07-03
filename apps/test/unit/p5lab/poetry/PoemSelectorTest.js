@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import {PoemEditor} from '@cdo/apps/p5lab/poetry/PoemSelector';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 describe('PoemEditor', () => {
@@ -27,11 +27,9 @@ describe('PoemEditor', () => {
         />
       );
 
-      expect(wrapper.find('input').at(0).props().value).to.equal('My title');
-      expect(wrapper.find('input').at(1).props().value).to.be.empty;
-      expect(wrapper.find('textarea').at(0).props().value).to.equal(
-        'this is\na good poem'
-      );
+      expect(wrapper.find('input').at(0).props().value).toBe('My title');
+      expect(wrapper.find('input').at(1).props().value).toHaveLength(0);
+      expect(wrapper.find('textarea').at(0).props().value).toBe('this is\na good poem');
     });
   });
 
@@ -109,7 +107,7 @@ describe('PoemEditor', () => {
         mockAppOptions.locale,
         mockAppOptions.authenticityToken
       );
-      expect(handleCloseSpy).to.not.have.been.called;
+      expect(handleCloseSpy).not.toHaveBeenCalled();
     });
   });
 });

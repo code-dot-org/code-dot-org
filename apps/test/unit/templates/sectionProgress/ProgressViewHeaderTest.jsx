@@ -3,7 +3,7 @@ import React from 'react';
 
 import {UnconnectedProgressViewHeader as ProgressViewHeader} from '@cdo/apps/templates/sectionProgress/ProgressViewHeader';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('ProgressViewHeader', () => {
   let DEFAULT_PROPS = {
@@ -28,13 +28,13 @@ describe('ProgressViewHeader', () => {
     );
     expect(
       wrapper.find('Connect(StandardsViewHeaderButtons)')
-    ).to.have.lengthOf(1);
+    ).toHaveLength(1);
   });
 
   it('does not show buttons when in standards view', () => {
     const wrapper = shallow(<ProgressViewHeader {...DEFAULT_PROPS} />);
     expect(
       wrapper.find('Connect(StandardsViewHeaderButtons)')
-    ).to.have.lengthOf(0);
+    ).toHaveLength(0);
   });
 });

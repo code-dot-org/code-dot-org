@@ -8,7 +8,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import InitialSectionCreationInterstitial from '@cdo/apps/templates/sectionSetup/InitialSectionCreationInterstitial';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('InitialSectionCreationInterstitial', () => {
   it('logs an Amplitude event for when the dialog is abandoned', () => {
@@ -20,8 +20,8 @@ describe('InitialSectionCreationInterstitial', () => {
     );
     wrapper.find('button#uitest-abandon-section-creation').simulate('click');
 
-    expect(analyticsSpy).to.have.been.calledOnce;
-    expect(analyticsSpy.firstCall.args).to.deep.eq([
+    expect(analyticsSpy).toHaveBeenCalledTimes(1);
+    expect(analyticsSpy.firstCall.args).toEqual([
       EVENTS.ABANDON_SECTION_SETUP_SIGN_IN_EVENT,
     ]);
 
@@ -37,8 +37,8 @@ describe('InitialSectionCreationInterstitial', () => {
     );
     wrapper.find('button#uitest-accept-section-creation').simulate('click');
 
-    expect(analyticsSpy).to.have.been.calledOnce;
-    expect(analyticsSpy.firstCall.args).to.deep.eq([
+    expect(analyticsSpy).toHaveBeenCalledTimes(1);
+    expect(analyticsSpy.firstCall.args).toEqual([
       EVENTS.SECTION_SETUP_SIGN_IN_EVENT,
     ]);
 

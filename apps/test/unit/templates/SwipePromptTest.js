@@ -5,7 +5,7 @@ import sinon from 'sinon';
 
 import {UnconnectedSwipePrompt as SwipePrompt} from '@cdo/apps/templates/SwipePrompt';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 const visibleOverlayProps = {
   buttonsAreVisible: true,
@@ -28,7 +28,7 @@ describe('SwipePrompt', () => {
       sinon.stub(instance, 'hideOverlayCookieSet').returns(false);
       sinon.stub(instance, 'touchSupported').returns(true);
       wrapper.setProps({}); // force a re-render
-      expect(wrapper.find('svg').exists()).to.be.true;
+      expect(wrapper.find('svg').exists()).toBe(true);
     });
 
     it('when the override is set', () => {
@@ -36,7 +36,7 @@ describe('SwipePrompt', () => {
       sinon.stub(instance, 'touchSupported').returns(true);
       sinon.stub(instance, 'swipeOverlayOverrideSet').returns(true);
       wrapper.setProps({}); // force a re-render
-      expect(wrapper.find('svg').exists()).to.be.true;
+      expect(wrapper.find('svg').exists()).toBe(true);
       cookies.get.restore();
     });
 
@@ -44,9 +44,9 @@ describe('SwipePrompt', () => {
       sinon.stub(instance, 'hideOverlayCookieSet').returns(false);
       sinon.stub(instance, 'touchSupported').returns(true);
       wrapper.setProps({}); // force a re-render
-      expect(wrapper.find('svg').exists()).to.be.true;
+      expect(wrapper.find('svg').exists()).toBe(true);
       wrapper.setProps({hasBeenDismissed: true});
-      expect(wrapper.find('svg').exists()).to.be.false;
+      expect(wrapper.find('svg').exists()).toBe(false);
     });
   });
 
@@ -58,7 +58,7 @@ describe('SwipePrompt', () => {
       sinon.stub(instance, 'hideOverlayCookieSet').returns(false);
       sinon.stub(instance, 'touchSupported').returns(true);
       wrapper.setProps({}); // force a re-render
-      expect(wrapper.find('svg').exists()).to.be.false;
+      expect(wrapper.find('svg').exists()).toBe(false);
     });
 
     it('if buttons are disabled', () => {
@@ -68,7 +68,7 @@ describe('SwipePrompt', () => {
       sinon.stub(instance, 'hideOverlayCookieSet').returns(false);
       sinon.stub(instance, 'touchSupported').returns(true);
       wrapper.setProps({}); // force a re-render
-      expect(wrapper.find('svg').exists()).to.be.false;
+      expect(wrapper.find('svg').exists()).toBe(false);
     });
 
     describe('when buttons are usable', () => {
@@ -81,7 +81,7 @@ describe('SwipePrompt', () => {
         sinon.stub(instance, 'hideOverlayCookieSet').returns(true);
         sinon.stub(instance, 'touchSupported').returns(true);
         wrapper.setProps({}); // force a re-render
-        expect(wrapper.find('svg').exists()).to.be.false;
+        expect(wrapper.find('svg').exists()).toBe(false);
       });
 
       it('if touch is not supported', () => {
@@ -89,7 +89,7 @@ describe('SwipePrompt', () => {
         sinon.stub(instance, 'swipeOverlayOverrideSet').returns(false);
         sinon.stub(instance, 'touchSupported').returns(false);
         wrapper.setProps({}); // force a re-render
-        expect(wrapper.find('svg').exists()).to.be.false;
+        expect(wrapper.find('svg').exists()).toBe(false);
       });
     });
   });

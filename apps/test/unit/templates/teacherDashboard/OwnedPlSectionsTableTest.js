@@ -15,7 +15,7 @@ import teacherSections, {
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai';
 
 const plSectionRowData = [
   {
@@ -168,7 +168,7 @@ describe('OwnedPlSectionsTable', () => {
         `/teacher_dashboard/sections/${plSectionRowData[2].id}/login_info`
       )
     );
-    expect(screen.queryByText(plSectionRowData[2].code)).to.be.null;
+    expect(screen.queryByText(plSectionRowData[2].code)).toBeNull();
 
     // For sections with non-third-party login types, display section code
     const pictureSection = screen

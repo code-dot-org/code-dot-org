@@ -17,10 +17,9 @@ import {
   restoreStudioApp,
 } from '@cdo/apps/StudioApp';
 
-import {expect} from '../../util/reconfiguredChai';
 
-window.fetch = jest
-  .fn()
+
+window.fetch = jest.fn()
   .mockResolvedValue({json: jest.fn(), headers: {get: jest.fn()}});
 
 describe('Javalab', () => {
@@ -63,9 +62,9 @@ describe('Javalab', () => {
 
       javalab.beforeUnload(eventStub);
 
-      expect(project.autosave).to.have.been.calledOnce;
-      expect(eventStub.preventDefault).to.have.been.calledOnce;
-      expect(eventStub.returnValue).to.equal('');
+      expect(project.autosave).toHaveBeenCalledTimes(1);
+      expect(eventStub.preventDefault).toHaveBeenCalledTimes(1);
+      expect(eventStub.returnValue).toBe('');
 
       project.hasOwnerChangedProject.restore();
     });
@@ -84,9 +83,7 @@ describe('Javalab', () => {
 
       javalab.init(config);
 
-      expect(getStore().dispatch).to.have.been.calledWith(
-        setAllSourcesAndFileMetadata(config.level.startSources)
-      );
+      expect(getStore().dispatch).toHaveBeenCalledWith(setAllSourcesAndFileMetadata(config.level.startSources));
     });
 
     it('with lastAttempt if there is one', () => {
@@ -106,9 +103,7 @@ describe('Javalab', () => {
       };
       javalab.init(config);
 
-      expect(getStore().dispatch).to.have.been.calledWith(
-        setAllSourcesAndFileMetadata(config.level.lastAttempt)
-      );
+      expect(getStore().dispatch).toHaveBeenCalledWith(setAllSourcesAndFileMetadata(config.level.lastAttempt));
     });
 
     it('does not populate if start sources are empty', () => {
@@ -117,9 +112,7 @@ describe('Javalab', () => {
       };
       javalab.init(config);
 
-      expect(getStore().getState().javalab.sources).to.not.equal(
-        config.level.startSources
-      );
+      expect(getStore().getState().javalab.sources).not.toBe(config.level.startSources);
     });
 
     it('with exemplarSources if there are any', () => {
@@ -132,9 +125,7 @@ describe('Javalab', () => {
       };
       javalab.init(config);
 
-      expect(getStore().dispatch).to.have.been.calledWith(
-        setAllSourcesAndFileMetadata(config.level.exemplarSources)
-      );
+      expect(getStore().dispatch).toHaveBeenCalledWith(setAllSourcesAndFileMetadata(config.level.exemplarSources));
     });
   });
 });

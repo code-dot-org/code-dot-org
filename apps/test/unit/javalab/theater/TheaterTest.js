@@ -7,7 +7,7 @@ import {
 } from '@cdo/apps/javalab/constants';
 import Theater from '@cdo/apps/javalab/theater/Theater';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('Theater', () => {
   let theater,
@@ -56,9 +56,9 @@ describe('Theater', () => {
     const data = {value: TheaterSignalType.AUDIO_URL, detail: {url: url}};
     theater.startPlayback = sinon.spy();
     theater.handleSignal(data);
-    expect(audioElement.src).to.contain(url);
-    expect(typeof audioElement.oncanplaythrough).to.equal('function');
-    expect(theater.startPlayback).to.have.not.been.called;
+    expect(audioElement.src).toEqual(expect.arrayContaining([url]));
+    expect(typeof audioElement.oncanplaythrough).toBe('function');
+    expect(theater.startPlayback).not.toHaveBeenCalled();
   });
 
   it('sets visual detail when handleSignal with image is called', () => {
@@ -66,9 +66,9 @@ describe('Theater', () => {
     const data = {value: TheaterSignalType.VISUAL_URL, detail: {url: url}};
     theater.startPlayback = sinon.spy();
     theater.handleSignal(data);
-    expect(imageElement.src).to.contain(url);
-    expect(typeof imageElement.onload).to.equal('function');
-    expect(theater.startPlayback).to.have.not.been.called;
+    expect(imageElement.src).toEqual(expect.arrayContaining([url]));
+    expect(typeof imageElement.onload).toBe('function');
+    expect(theater.startPlayback).not.toHaveBeenCalled();
   });
 
   it('shows a/v once elements have loaded', () => {
@@ -86,8 +86,8 @@ describe('Theater', () => {
     theater.handleSignal(visualData);
     imageElement.onload();
     audioElement.oncanplaythrough();
-    expect(imageElement.style.visibility).to.equal('visible');
-    expect(playAudioSpy).to.have.been.called.once;
+    expect(imageElement.style.visibility).toBe('visible');
+    expect(playAudioSpy).toHaveBeenCalled().once;
   });
 
   it('opens photo prompter after receiving a GET_IMAGE signal', () => {
@@ -106,12 +106,12 @@ describe('Theater', () => {
 
   it('closes photo prompter on stop', () => {
     theater.onStop();
-    sinon.assert.calledOnce(closePhotoPrompter);
+    sinon.toHaveBeenCalledTimes(1);
   });
 
   it('closes photo prompter on close', () => {
     theater.onClose();
-    sinon.assert.calledOnce(closePhotoPrompter);
+    sinon.toHaveBeenCalledTimes(1);
   });
 
   it('uploads photo file when file selected if URL is available', () => {
@@ -151,7 +151,7 @@ describe('Theater', () => {
       },
     });
     theater.onPhotoPrompterFileSelected(new File([], 'file'));
-    sinon.assert.calledOnce(uploadFile);
+    sinon.toHaveBeenCalledTimes(1);
 
     // Get callbacks
     const onSuccess = uploadFile.getCall(0).args[2];

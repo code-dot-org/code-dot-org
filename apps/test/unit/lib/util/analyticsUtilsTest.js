@@ -4,7 +4,7 @@ import * as utils from '@cdo/apps/code-studio/utils';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 
-import {expect} from '../../../util/reconfiguredChai';
+
 
 describe('AnalyticsUtils', () => {
   it('reports teacher viewing student work on a dsl level when needed', () => {
@@ -17,7 +17,7 @@ describe('AnalyticsUtils', () => {
     const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
     reportTeacherReviewingStudentNonLabLevel();
-    expect(analyticsSpy).to.be.called.once;
+    expect(analyticsSpy).toHaveBeenCalled().once;
 
     utils.queryParams.restore();
     analyticsSpy.restore();

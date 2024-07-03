@@ -10,7 +10,7 @@ import responsive, {
 import styleConstants from '@cdo/apps/styleConstants';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 
-import {expect} from '../../util/reconfiguredChai';
+
 
 const store = createStore(combineReducers({responsive}));
 store.dispatch(setResponsiveSize(ResponsiveSize.lg));
