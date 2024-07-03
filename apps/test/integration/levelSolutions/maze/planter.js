@@ -1,4 +1,5 @@
 import {TestResults} from '@cdo/apps/constants';
+
 var PlanterHandler = require('@cdo/apps/maze/results/planter');
 
 var levelDef = {
