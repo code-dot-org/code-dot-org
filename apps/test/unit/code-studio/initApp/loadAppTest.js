@@ -16,6 +16,8 @@ const SERVER_LEVEL_ID = 5;
 const SERVER_PROJECT_LEVEL_ID = 10;
 const OLD_CODE = '<some><blocks with="stuff">in<them/></blocks></some>';
 
+jest.unmock('@cdo/apps/imageUtils');
+
 describe('loadApp.js', () => {
   let oldAppOptions, appOptions, writtenLevelId, readLevelId;
 
