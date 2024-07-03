@@ -21,9 +21,9 @@ import '../build/locales/en_us/flappy_locale.js';
 
 import enzyme from 'enzyme'; // eslint-disable-line no-restricted-imports
 import Adapter from 'enzyme-adapter-react-16';
+import mockFetch from 'jest-fetch-mock';
 import $ from 'jquery';
 import {TextEncoder, TextDecoder} from 'util';
-import mockFetch from 'jest-fetch-mock';
 
 enzyme.configure({adapter: new Adapter()});
 window.IN_UNIT_TEST = true;
