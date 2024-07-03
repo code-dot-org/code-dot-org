@@ -1,11 +1,11 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
-import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 
-import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+// eslint-disable-line no-restricted-imports
 
 describe('WorkspaceAlert', () => {
   let jQueryHeight;
@@ -31,9 +31,9 @@ describe('WorkspaceAlert', () => {
         <span>This is a top alert</span>
       </WorkspaceAlert>
     );
-    expect(jQueryHeight.callCount).to.equal(1);
-    expect(jQueryHeight.thisValues[0].selector).to.equal('#headers');
-    expect(top.find('div').first().props().style.top).to.equal(4);
+    expect(jQueryHeight.callCount).toBe(1);
+    expect(jQueryHeight.thisValues[0].selector).toBe('#headers');
+    expect(top.find('div').first().props().style.top).toBe(4);
   });
 
   it('can be at the bottom', () => {
@@ -47,7 +47,7 @@ describe('WorkspaceAlert', () => {
         <span>This is a bottom alert</span>
       </WorkspaceAlert>
     );
-    expect(bottom.find('div').first().props().style.bottom).to.equal(0);
+    expect(bottom.find('div').first().props().style.bottom).toBe(0);
   });
 
   it('isBlockly uses #toolbox-header for left', () => {
@@ -62,9 +62,9 @@ describe('WorkspaceAlert', () => {
         <span>This is a blockly alert</span>
       </WorkspaceAlert>
     );
-    expect(jQueryWidth.callCount).to.equal(1);
-    expect(jQueryWidth.thisValues[0].selector).to.equal('#toolbox-header');
-    expect(isBlockly.find('div').first().props().style.left).to.equal(1);
+    expect(jQueryWidth.callCount).toBe(1);
+    expect(jQueryWidth.thisValues[0].selector).toBe('#toolbox-header');
+    expect(isBlockly.find('div').first().props().style.left).toBe(1);
   });
 
   it('not isBlockly uses .droplet-gutter and .droplet-palette-element for left', () => {
@@ -79,11 +79,9 @@ describe('WorkspaceAlert', () => {
         <span>This is not a blockly alert</span>
       </WorkspaceAlert>
     );
-    expect(neither.find('div').first().props().style.left).to.equal(3);
-    expect(jQueryWidth.callCount).to.equal(2);
-    expect(jQueryWidth.thisValues[0].selector).to.equal(
-      '.droplet-palette-element'
-    );
-    expect(jQueryWidth.thisValues[1].selector).to.equal('.droplet-gutter');
+    expect(neither.find('div').first().props().style.left).toBe(3);
+    expect(jQueryWidth.callCount).toBe(2);
+    expect(jQueryWidth.thisValues[0].selector).toBe('.droplet-palette-element');
+    expect(jQueryWidth.thisValues[1].selector).toBe('.droplet-gutter');
   });
 });

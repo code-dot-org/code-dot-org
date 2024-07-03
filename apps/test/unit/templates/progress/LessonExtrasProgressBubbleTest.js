@@ -1,6 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {stub} from 'sinon'; //eslint-disable-line no-restricted-imports
+import {stub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagIcon';
 import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';

@@ -1,10 +1,10 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import BackToFrontConfetti from '@cdo/apps/templates/BackToFrontConfetti';
 
-import {expect} from '../../util/deprecatedChai'; //eslint-disable-line no-restricted-imports
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('BackToFrontConfetti', () => {
   let clock;

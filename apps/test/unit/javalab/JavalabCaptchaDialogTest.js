@@ -1,12 +1,12 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {UnconnectedJavalabCaptchaDialog as JavalabCaptchaDialog} from '@cdo/apps/javalab/JavalabCaptchaDialog';
 import ReCaptchaDialog from '@cdo/apps/templates/ReCaptchaDialog';
 import javalabMsg from '@cdo/javalab/locale';
 
-import {expect} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+// eslint-disable-line no-restricted-imports
 
 describe('JavalabCaptchaDialog', () => {
   let defaultProps,
@@ -57,12 +57,12 @@ describe('JavalabCaptchaDialog', () => {
       .props()
       .handleSubmit()
       .then(() => {
-        expect(onVerifySpy.calledOnce).to.be.true;
+        expect(onVerifySpy.calledOnce).toBe(true);
         expect(
           appendOutputLogSpy.calledOnceWith(javalabMsg.verificationSuccessful())
-        ).to.be.true;
-        expect(appendNewlineToConsoleLogSpy.calledOnce).to.be.true;
-        expect(setDialogOpenSpy.calledOnceWith(false)).to.be.true;
+        ).toBe(true);
+        expect(appendNewlineToConsoleLogSpy.calledOnce).toBe(true);
+        expect(setDialogOpenSpy.calledOnceWith(false)).toBe(true);
         done();
       });
   });

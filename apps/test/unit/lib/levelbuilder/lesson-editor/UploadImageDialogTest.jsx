@@ -1,10 +1,10 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
 
-import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+// eslint-disable-line no-restricted-imports
 
 describe('UploadImageDialog', () => {
   it('uploads selected image', () => {
@@ -22,11 +22,11 @@ describe('UploadImageDialog', () => {
       .first()
       .simulate('change', {target: {files: ['filedata']}});
 
-    expect(fetchStub.callCount).to.equal(1);
+    expect(fetchStub.callCount).toBe(1);
 
     const fetchCall = fetchStub.getCall(0);
-    expect(fetchCall.args[0]).to.equal('/level_assets/upload');
-    expect(fetchCall.args[1].body.get('file')).to.equal('filedata');
+    expect(fetchCall.args[0]).toBe('/level_assets/upload');
+    expect(fetchCall.args[1].body.get('file')).toBe('filedata');
 
     fetchStub.restore();
   });
@@ -50,18 +50,18 @@ describe('UploadImageDialog', () => {
       .find('input')
       .first()
       .simulate('change', {target: {files: ['filedata']}});
-    expect(wrapper.find('input').first().props().disabled).to.be.true;
-    expect(wrapper.find('Button').last().props().disabled).to.be.true;
-    expect(wrapper.find('FontAwesome').length).to.equal(1);
+    expect(wrapper.find('input').first().props().disabled).toBe(true);
+    expect(wrapper.find('Button').last().props().disabled).toBe(true);
+    expect(wrapper.find('FontAwesome').length).toBe(1);
 
-    expect(handleClose.callCount).to.equal(0);
-    expect(uploadImage.callCount).to.equal(0);
+    expect(handleClose.callCount).toBe(0);
+    expect(uploadImage.callCount).toBe(0);
 
     return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
       wrapper.find('Button').last().simulate('click');
-      expect(handleClose.callCount).to.equal(1);
-      expect(uploadImage.callCount).to.equal(1);
-      expect(uploadImage.calledWith('http://example.com/img.png')).to.be.true;
+      expect(handleClose.callCount).toBe(1);
+      expect(uploadImage.callCount).toBe(1);
+      expect(uploadImage.calledWith('http://example.com/img.png')).toBe(true);
       fetchStub.restore();
     });
   });
@@ -85,16 +85,16 @@ describe('UploadImageDialog', () => {
       .find('input')
       .first()
       .simulate('change', {target: {files: ['filedata']}});
-    expect(wrapper.find('input').first().props().disabled).to.be.true;
-    expect(wrapper.find('Button').last().props().disabled).to.be.true;
-    expect(wrapper.find('FontAwesome').length).to.equal(1);
+    expect(wrapper.find('input').first().props().disabled).toBe(true);
+    expect(wrapper.find('Button').last().props().disabled).toBe(true);
+    expect(wrapper.find('FontAwesome').length).toBe(1);
 
     return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
       wrapper
         .find('input')
         .first()
         .simulate('change', {target: {files: []}});
-      expect(fetchStub.callCount).equals(1);
+      expect(fetchStub.callCount).toBe(1);
       fetchStub.restore();
     });
   });

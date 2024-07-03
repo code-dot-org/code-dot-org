@@ -1,5 +1,6 @@
 /** @file Tests for clientState.js */
 
+var assert = require('assert');
 var chai = require('chai');
 
 var state = require('@cdo/apps/code-studio/clientState');
@@ -24,13 +25,13 @@ describe('clientState#sourceForLevel', function () {
 
   it('returns `undefined` if timestamp is older', function () {
     state.writeSourceForLevel('sample', 3, 100, 'abc');
-    expect(state.sourceForLevel('sample', 3, 200) === undefined).toBeTruthy();
+    assert(state.sourceForLevel('sample', 3, 200) === undefined);
   });
 
   it("returns `undefined` if cache can't be parsed", function () {
     state.writeSourceForLevel('sample', 4, 100, 'abc');
     sessionStorage.setItem('source_sample_4', 'bad data');
-    expect(state.sourceForLevel('sample', 4, null) === undefined).toBeTruthy();
+    assert(state.sourceForLevel('sample', 4, null) === undefined);
   });
 });
 

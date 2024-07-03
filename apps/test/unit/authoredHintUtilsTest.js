@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-import {assert} from '../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 var authoredHintUtils = require('@cdo/apps/authoredHintUtils');
 

@@ -1,4 +1,4 @@
-import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 /**
  * Creates a sinon fake server that can respond to API requests about

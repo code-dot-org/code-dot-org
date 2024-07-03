@@ -1,6 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 import {UnconnectedBackpack as Backpack} from '@cdo/apps/javalab/Backpack';
@@ -9,7 +9,6 @@ import javalab from '@cdo/apps/javalab/redux/javalabRedux';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 
 import {BackpackAPIContext} from '../../../src/javalab/BackpackAPIContext';
-import {expect, assert} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('Java Lab Backpack Test', () => {
   let defaultProps, backpackApiStub;
@@ -56,9 +55,9 @@ describe('Java Lab Backpack Test', () => {
       target: {name: 'Class1.java', checked: false},
     });
     const selectedFiles = wrapper.instance().state.selectedFiles;
-    expect(selectedFiles.length).to.equal(2);
-    expect(selectedFiles[0]).to.equal('Class2.java');
-    expect(selectedFiles[1]).to.equal('Class3.java');
+    expect(selectedFiles.length).toBe(2);
+    expect(selectedFiles[0]).toBe('Class2.java');
+    expect(selectedFiles[1]).toBe('Class3.java');
   });
 
   it('expand dropdown triggers getFileList', () => {
@@ -84,10 +83,10 @@ describe('Java Lab Backpack Test', () => {
 
     wrapper.instance().expandDropdown();
     const state = wrapper.instance().state;
-    assert(state.dropdownOpen);
-    assert.isFalse(state.backpackLoadError);
-    expect(state.selectedFiles.length).to.equal(0);
-    expect(state.backpackFilenames.length).to.equal(0);
+    expect(state.dropdownOpen).toBeTruthy();
+    expect(state.backpackLoadError).toBe(false);
+    expect(state.selectedFiles.length).toBe(0);
+    expect(state.backpackFilenames.length).toBe(0);
   });
 
   it('import shows warning before overwriting files', () => {
@@ -105,7 +104,7 @@ describe('Java Lab Backpack Test', () => {
     wrapper.instance().handleImport();
 
     const state = wrapper.instance().state;
-    expect(state.openDialog).to.equal('IMPORT_WARNING');
+    expect(state.openDialog).toBe('IMPORT_WARNING');
   });
 
   it('import shows error if hidden file name is used', () => {
@@ -123,7 +122,7 @@ describe('Java Lab Backpack Test', () => {
     wrapper.instance().handleImport();
 
     const state = wrapper.instance().state;
-    expect(state.openDialog).to.equal('IMPORT_ERROR');
+    expect(state.openDialog).toBe('IMPORT_ERROR');
   });
 
   it('no dialog shown if there are no duplicate file names', () => {
@@ -138,12 +137,12 @@ describe('Java Lab Backpack Test', () => {
     wrapper.instance().handleImport();
 
     const state = wrapper.instance().state;
-    expect(state.openDialog).to.equal(null);
+    expect(state.openDialog).toBeNull();
   });
 
   it('renders nothing if backpack is disabled', () => {
     const wrapper = renderWithProps({backpackEnabled: false});
-    expect(wrapper.isEmptyRender()).to.be.true;
+    expect(wrapper.isEmptyRender()).toBe(true);
   });
 
   it('delete shows warning before deleting files', () => {
@@ -160,7 +159,7 @@ describe('Java Lab Backpack Test', () => {
     wrapper.instance().confirmAndDeleteFiles();
 
     const state = wrapper.instance().state;
-    expect(state.openDialog).to.equal('DELETE_CONFIRM');
+    expect(state.openDialog).toBe('DELETE_CONFIRM');
   });
 
   it('dropdown and modal are closed if delete succeeds', () => {
@@ -182,7 +181,7 @@ describe('Java Lab Backpack Test', () => {
     wrapper.instance().handleDelete();
 
     const state = wrapper.instance().state;
-    expect(state.openDialog).to.equal(null);
+    expect(state.openDialog).toBeNull();
   });
 
   it('Delete error modal is shown if delete fails', () => {
@@ -204,7 +203,7 @@ describe('Java Lab Backpack Test', () => {
     wrapper.instance().handleDelete();
 
     const state = wrapper.instance().state;
-    expect(state.openDialog).to.equal('DELETE_ERROR');
+    expect(state.openDialog).toBe('DELETE_ERROR');
   });
 
   it('Deleted files are removed from dropdown on partial delete success', () => {
@@ -228,9 +227,9 @@ describe('Java Lab Backpack Test', () => {
     const state = wrapper.instance().state;
     const selectedFiles = state.selectedFiles;
     // selected files should only contain the file that failed to delete (file1).
-    expect(selectedFiles.length).to.equal(1);
-    expect(selectedFiles[0]).to.equal('file1');
+    expect(selectedFiles.length).toBe(1);
+    expect(selectedFiles[0]).toBe('file1');
     // backpackFilenames should have length 2 (file3 should be gone)
-    expect(state.backpackFilenames.length).to.equal(2);
+    expect(state.backpackFilenames.length).toBe(2);
   });
 });

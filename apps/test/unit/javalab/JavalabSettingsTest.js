@@ -1,9 +1,11 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import {UnconnectedJavalabSettings} from '@cdo/apps/javalab/JavalabSettings';
+
+import {assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('JavalabSettings', () => {
   let setDisplayTheme,
@@ -35,29 +37,29 @@ describe('JavalabSettings', () => {
 
   it('is initially just a button', () => {
     const wrapper = createWrapper();
-    expect(wrapper.children().length).toBe(1);
-    expect(wrapper.childAt(0).name()).toBe('JavalabButton');
+    assert.strictEqual(wrapper.children().length, 1);
+    assert.strictEqual(wrapper.childAt(0).name(), 'JavalabButton');
   });
 
   it('shows dropdown when clicked', () => {
     const wrapper = createWrapper();
     wrapper.instance().toggleDropdown();
     // 3 buttons: settings theme toggle, increase font, decrease font
-    expect(wrapper.find('button').length).toBe(3);
+    assert.strictEqual(wrapper.find('button').length, 3);
   });
 
   it('toggles theme and closes dropdown when switch theme button is clicked', () => {
     const wrapper = createWrapper();
     wrapper.instance().toggleDropdown();
     const switchThemeButton = wrapper.find('#javalab-settings-switch-theme');
-    expect(switchThemeButton.length).toEqual(1);
+    assert.equal(switchThemeButton.length, 1);
 
     switchThemeButton.first().props().onClick();
 
     sinon.assert.calledWith(setDisplayTheme, DisplayTheme.LIGHT);
 
     // Assert dropdown is closed
-    expect(wrapper.find('#javalab-settings-switch-theme').length).toEqual(0);
+    assert.equal(wrapper.find('#javalab-settings-switch-theme').length, 0);
   });
 
   it('displays current font size in font size selector', () => {
@@ -67,10 +69,10 @@ describe('JavalabSettings', () => {
     const fontSizeSelector = wrapper.find(
       '#javalab-settings-font-size-selector'
     );
-    expect(fontSizeSelector.length).toEqual(1);
-    expect(
+    assert.equal(fontSizeSelector.length, 1);
+    assert.isTrue(
       fontSizeSelector.first().text().includes(`${editorFontSize}px`)
-    ).toBe(true);
+    );
   });
 
   it('increases or decreases font when increase/decrease buttons are clicked', () => {
@@ -81,12 +83,12 @@ describe('JavalabSettings', () => {
     wrapper.instance().toggleDropdown();
 
     const decreaseButton = wrapper.find('#javalab-settings-decrease-font');
-    expect(decreaseButton.length).toEqual(1);
+    assert.equal(decreaseButton.length, 1);
     decreaseButton.first().props().onClick();
     sinon.assert.calledOnce(decreaseEditorFontSize);
 
     const increaseButton = wrapper.find('#javalab-settings-increase-font');
-    expect(increaseButton.length).toEqual(1);
+    assert.equal(increaseButton.length, 1);
     increaseButton.first().props().onClick();
     sinon.assert.calledOnce(increaseEditorFontSize);
   });
@@ -99,8 +101,8 @@ describe('JavalabSettings', () => {
     wrapper.instance().toggleDropdown();
     let decreaseButton = wrapper.find('#javalab-settings-decrease-font');
     let increaseButton = wrapper.find('#javalab-settings-increase-font');
-    expect(decreaseButton.first().props().disabled).toBe(false);
-    expect(increaseButton.first().props().disabled).toBe(true);
+    assert.isFalse(decreaseButton.first().props().disabled);
+    assert.isTrue(increaseButton.first().props().disabled);
 
     wrapper = createWrapper({
       canIncreaseFontSize: true,
@@ -109,7 +111,7 @@ describe('JavalabSettings', () => {
     wrapper.instance().toggleDropdown();
     decreaseButton = wrapper.find('#javalab-settings-decrease-font');
     increaseButton = wrapper.find('#javalab-settings-increase-font');
-    expect(decreaseButton.first().props().disabled).toBe(true);
-    expect(increaseButton.first().props().disabled).toBe(false);
+    assert.isTrue(decreaseButton.first().props().disabled);
+    assert.isFalse(increaseButton.first().props().disabled);
   });
 });

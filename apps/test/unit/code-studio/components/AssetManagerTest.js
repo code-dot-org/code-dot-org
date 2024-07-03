@@ -1,10 +1,10 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import AssetManager from '@cdo/apps/code-studio/components/AssetManager';
 
-import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+// eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   uploadsEnabled: true,
@@ -30,37 +30,37 @@ describe('AssetManager', () => {
       const levelName = 'my level name';
       shallow(<AssetManager {...DEFAULT_PROPS} levelName={levelName} />);
 
-      expect(requests).to.have.length(1);
-      expect(requests[0].method).to.equal('GET');
-      expect(requests[0].url).to.equal(`/level_starter_assets/${levelName}/`);
+      expect(requests).toHaveLength(1);
+      expect(requests[0].method).toBe('GET');
+      expect(requests[0].url).toBe(`/level_starter_assets/${levelName}/`);
     });
 
     it('does not get starter assets if no levelName', () => {
       shallow(<AssetManager {...DEFAULT_PROPS} levelName={undefined} />);
 
-      expect(requests).to.have.length(0);
+      expect(requests).toHaveLength(0);
     });
 
     it('gets files if projectId is present', () => {
       shallow(<AssetManager {...DEFAULT_PROPS} projectId={'1'} />);
 
-      expect(requests).to.have.length(1);
-      expect(requests[0].method).to.equal('GET');
-      expect(requests[0].url).to.equal('/v3/assets/1');
+      expect(requests).toHaveLength(1);
+      expect(requests[0].method).toBe('GET');
+      expect(requests[0].url).toBe('/v3/assets/1');
     });
 
     it('does not get files if no projectId', () => {
       shallow(<AssetManager {...DEFAULT_PROPS} projectId={undefined} />);
 
-      expect(requests).to.have.length(0);
+      expect(requests).toHaveLength(0);
     });
 
     it('gets files with useFilesApi', () => {
       shallow(<AssetManager {...DEFAULT_PROPS} projectId={'1'} useFilesApi />);
 
-      expect(requests).to.have.length(1);
-      expect(requests[0].method).to.equal('GET');
-      expect(requests[0].url).to.equal('/v3/files/1');
+      expect(requests).toHaveLength(1);
+      expect(requests[0].method).toBe('GET');
+      expect(requests[0].url).toBe('/v3/files/1');
     });
 
     it('renders spinner while waiting for files with useFilesApi', () => {
@@ -71,7 +71,7 @@ describe('AssetManager', () => {
       // There should be a spinner
       expect(
         wrapper.find('i').filterWhere(p => p.hasClass('fa-spinner'))
-      ).to.have.lengthOf(1);
+      ).toHaveLength(1);
     });
 
     it('stops rendering spinner after receiving a files list with useFilesApi', () => {
@@ -79,7 +79,7 @@ describe('AssetManager', () => {
         <AssetManager {...DEFAULT_PROPS} projectId={'1'} useFilesApi />
       );
 
-      expect(requests).to.have.length(1);
+      expect(requests).toHaveLength(1);
       requests[0].respond(
         200,
         {},
@@ -99,7 +99,7 @@ describe('AssetManager', () => {
       // There should be no spinner
       expect(
         wrapper.find('i').filterWhere(p => p.hasClass('fa-spinner'))
-      ).to.have.lengthOf(0);
+      ).toHaveLength(0);
     });
 
     it('stops rendering spinner after receiving an empty 404 with useFilesApi', () => {
@@ -107,13 +107,13 @@ describe('AssetManager', () => {
         <AssetManager {...DEFAULT_PROPS} projectId={'1'} useFilesApi />
       );
 
-      expect(requests).to.have.length(1);
+      expect(requests).toHaveLength(1);
       requests[0].respond(404, {}, 'Not Found');
 
       // There should be no spinner
       expect(
         wrapper.find('i').filterWhere(p => p.hasClass('fa-spinner'))
-      ).to.have.lengthOf(0);
+      ).toHaveLength(0);
     });
   });
 });

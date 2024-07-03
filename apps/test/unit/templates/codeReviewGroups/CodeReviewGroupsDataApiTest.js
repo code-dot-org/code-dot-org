@@ -1,9 +1,9 @@
 import $ from 'jquery';
-import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 
-import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+// eslint-disable-line no-restricted-imports
 
 describe('CodeReviewGroupsDataApi', () => {
   const sectionId = 101;
@@ -66,7 +66,7 @@ describe('CodeReviewGroupsDataApi', () => {
       `/api/v1/sections/${sectionId}/code_review_groups`
     );
 
-    expect(clientGroupsList).to.deep.equal(convertedResponse);
+    expect(clientGroupsList).toEqual(convertedResponse);
   });
 
   it('makes a POST request with converted group data when calling setCodeReviewGroups', () => {
@@ -78,7 +78,7 @@ describe('CodeReviewGroupsDataApi', () => {
     );
 
     const data = postJSON.getCall(0).args[1];
-    expect(serverGroupsResponse).to.deep.equal(data);
+    expect(serverGroupsResponse).toEqual(data);
   });
 
   it('makes a POST request with enabled value when calling setCodeReviewEnabled', () => {

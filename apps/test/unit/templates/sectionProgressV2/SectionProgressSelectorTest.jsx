@@ -241,7 +241,6 @@ describe('SectionProgressSelector', () => {
     screen.getByText(V1_PAGE_LINK_TEXT);
     screen.getByTestId(V1_TEST_ID);
 
-    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).to.not
-      .exist;
+    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).toBeFalsy();
   });
 });

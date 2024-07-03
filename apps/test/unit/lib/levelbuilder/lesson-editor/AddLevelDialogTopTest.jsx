@@ -1,10 +1,8 @@
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
-import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {UnconnectedAddLevelDialogTop as AddLevelDialogTop} from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialogTop';
-
-import {assert, expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 import {searchOptions} from './activitiesTestData';
 
@@ -68,6 +66,6 @@ describe('AddLevelDialogTop', () => {
     expect(!wrapper.exists('Connect(AddLevelFilters)'));
     expect(!wrapper.exists('AddLevelTable'));
     expect(wrapper.exists('FontAwesome'));
-    assert.equal(wrapper.findOne('FontAwesome').props.className, 'fa-spin');
+    expect(wrapper.findOne('FontAwesome').props.className).toEqual('fa-spin');
   });
 });

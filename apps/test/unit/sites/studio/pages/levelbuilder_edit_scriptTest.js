@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom';
-import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import initPage from '@cdo/apps/sites/studio/pages/scripts/edit';
 

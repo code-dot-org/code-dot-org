@@ -1,11 +1,11 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import * as utils from '@cdo/apps/utils';
 
-import {assert} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+import {assert} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const sampleAnnouncement = {
   key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',

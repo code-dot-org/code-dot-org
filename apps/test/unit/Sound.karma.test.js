@@ -1,8 +1,8 @@
-import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import Sound from '@cdo/apps/Sound';
 
-import {expect} from '../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+import {expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Sound', () => {
   let sound;

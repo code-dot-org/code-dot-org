@@ -1,6 +1,6 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {
   BasicBubble,
@@ -18,7 +18,7 @@ import {currentLocation} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import {updateQueryParam} from '../../../../src/code-studio/utils';
-import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('BubbleFactory', () => {
   describe('BasicBubble', () => {

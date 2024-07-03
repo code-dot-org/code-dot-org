@@ -1,7 +1,7 @@
 import reducer, {
   addAnnouncement,
   VisibilityType,
-} from '@cdo/apps/code-studio/announcementsRedux'; //eslint-disable-line no-restricted-imports
+} from '@cdo/apps/code-studio/announcementsRedux'; // eslint-disable-line no-restricted-imports
 import {NotificationType} from '@cdo/apps/templates/Notification';
 
 describe('announcementsRedux', () => {

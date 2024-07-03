@@ -1,12 +1,15 @@
-import {assert} from 'chai'; //eslint-disable-line no-restricted-imports
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 import Notification from '@cdo/apps/templates/Notification';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 import {courses, topCourse, joinedSections} from './homepagesTestData';
 
@@ -35,7 +38,7 @@ describe('StudentHomepage', () => {
   it('shows a Header Banner that says My Dashboard', () => {
     const wrapper = shallow(<StudentHomepage {...TEST_PROPS} />);
     const headerBanner = wrapper.find(HeaderBanner);
-    expect(headerBanner.props().headingText).toBe('My Dashboard');
+    expect(headerBanner.props().headingText).to.equal('My Dashboard');
   });
 
   it('references a ProtectedStatefulDiv for flashes', () => {
@@ -68,11 +71,11 @@ describe('StudentHomepage', () => {
   });
 
   it('does not log an Amplitude event for student signing-in', () => {
-    const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
     shallow(<StudentHomepage {...TEST_PROPS} />);
 
-    expect(analyticsSpy).not.toHaveBeenCalled();
-    analyticsSpy.mockRestore();
+    expect(analyticsSpy).not.to.have.been.called;
+    analyticsSpy.restore();
   });
 
   it('shows the special announcement for all languages', () => {

@@ -1,7 +1,7 @@
 /** @file Test of progress.js. */
 
 import queryString from 'query-string';
-import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {initViewAs} from '@cdo/apps/code-studio/progress';
 import {__testonly__} from '@cdo/apps/code-studio/progressReduxSelectors';

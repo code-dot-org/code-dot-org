@@ -1,4 +1,4 @@
-import {assert} from 'chai'; //eslint-disable-line no-restricted-imports
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
 
 import {writeSourceForLevel} from '@cdo/apps/code-studio/clientState';
 import Multi from '@cdo/apps/code-studio/levels/multi';

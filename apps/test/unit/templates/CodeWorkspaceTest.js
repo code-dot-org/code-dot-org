@@ -1,6 +1,6 @@
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {workspaceAlertTypes} from '@cdo/apps/code-studio/projectRedux';
 import {
@@ -11,7 +11,7 @@ import {
 import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
 
 import {UnconnectedCodeWorkspace as CodeWorkspace} from '../../../src/templates/CodeWorkspace';
-import {expect} from '../../util/deprecatedChai'; //eslint-disable-line no-restricted-imports
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('CodeWorkspace', () => {
   const MINIMUM_PROPS = {

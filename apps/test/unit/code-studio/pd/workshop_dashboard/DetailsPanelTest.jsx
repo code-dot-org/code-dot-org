@@ -1,7 +1,8 @@
-import {assert} from 'chai'; //eslint-disable-line no-restricted-imports
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Factory} from 'rosie';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import DetailsPanel from '@cdo/apps/code-studio/pd/workshop_dashboard/DetailsPanel';
 import {States} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
@@ -71,10 +72,10 @@ describe('DetailsPanel', () => {
     return shallow(
       <DetailsPanel
         workshop={Factory.build('workshop')}
-        onWorkshopSaved={jest.fn()}
+        onWorkshopSaved={sinon.spy()}
         {...props}
       />,
-      {context: {router: {push: jest.fn()}}}
+      {context: {router: {push: sinon.spy()}}}
     );
   }
 

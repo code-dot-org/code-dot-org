@@ -1,10 +1,10 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import AddVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddVocabularyDialog';
 
-import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+// eslint-disable-line no-restricted-imports
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 describe('AddVocabularyDialog', () => {
@@ -27,8 +27,8 @@ describe('AddVocabularyDialog', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<AddVocabularyDialog {...defaultProps} />);
-    expect(wrapper.contains('Add Vocabulary')).to.be.true;
-    expect(wrapper.find('input').first().props().disabled).to.be.false;
+    expect(wrapper.contains('Add Vocabulary')).toBe(true);
+    expect(wrapper.find('input').first().props().disabled).toBe(false);
   });
 
   it('closes if save is successful', () => {
@@ -55,13 +55,13 @@ describe('AddVocabularyDialog', () => {
     ]);
 
     wrapper.find('#submit-button').simulate('click');
-    expect(wrapper.find('AddVocabularyDialog').state().isSaving).to.be.true;
+    expect(wrapper.find('AddVocabularyDialog').state().isSaving).toBe(true);
 
     server.respond();
     wrapper.update();
 
-    expect(handleCloseSpy.calledOnce).to.be.true;
-    expect(afterSaveSpy.calledOnce).to.be.true;
+    expect(handleCloseSpy.calledOnce).toBe(true);
+    expect(afterSaveSpy.calledOnce).toBe(true);
     server.restore();
   });
 
@@ -79,11 +79,9 @@ describe('AddVocabularyDialog', () => {
         editingVocabulary={existingVocabulary}
       />
     );
-    expect(wrapper.find('[name="word"]').props().value).to.equal(
-      'existing vocab'
-    );
-    expect(wrapper.find('[name="word"]').props().disabled).to.be.true;
-    expect(wrapper.find('[name="definition"]').props().value).to.equal(
+    expect(wrapper.find('[name="word"]').props().value).toBe('existing vocab');
+    expect(wrapper.find('[name="word"]').props().disabled).toBe(true);
+    expect(wrapper.find('[name="definition"]').props().value).toBe(
       'existing definition'
     );
   });
@@ -123,7 +121,7 @@ describe('AddVocabularyDialog', () => {
         ]}
       />
     );
-    expect(wrapper.contains('Add Vocabulary')).to.be.true;
+    expect(wrapper.contains('Add Vocabulary')).toBe(true);
   });
 
   it('displays vocabulary lessons if lessons are selectable', () => {
@@ -146,8 +144,8 @@ describe('AddVocabularyDialog', () => {
       />
     );
 
-    expect(wrapper.find('Select').length).to.equal(1);
-    expect(wrapper.find('Select').props().value).to.deep.equal([
+    expect(wrapper.find('Select').length).toBe(1);
+    expect(wrapper.find('Select').props().value).toEqual([
       {id: 1, name: 'lesson1'},
     ]);
   });
@@ -167,6 +165,6 @@ describe('AddVocabularyDialog', () => {
       />
     );
 
-    expect(wrapper.find('input').at(1).props().disabled).to.be.true;
+    expect(wrapper.find('input').at(1).props().disabled).toBe(true);
   });
 });

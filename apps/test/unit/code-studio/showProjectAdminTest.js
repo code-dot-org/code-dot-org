@@ -1,3 +1,5 @@
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import showProjectAdmin from '@cdo/apps/code-studio/showProjectAdmin';
 
 import {assertVisible, assertHidden} from '../../util/assertions';
@@ -9,16 +11,16 @@ describe('showProjectAdmin', () => {
 
     beforeEach(() => {
       project = {
-        isPublished: jest.fn(),
-        isProjectLevel: jest.fn(),
-        shouldHideShareAndRemix: jest.fn(),
-        getAbuseScore: jest.fn(),
-        exceedsAbuseThreshold: jest.fn(),
-        getSharingDisabled: jest.fn(),
-        hasPrivacyProfanityViolation: jest.fn(),
-        privacyProfanityDetailsEnglish: jest.fn(),
-        privacyProfanityDetailsIntl: jest.fn(),
-        privacyProfanitySecondLanguage: jest.fn(),
+        isPublished: sinon.spy(),
+        isProjectLevel: sinon.stub(),
+        shouldHideShareAndRemix: sinon.stub(),
+        getAbuseScore: sinon.stub(),
+        exceedsAbuseThreshold: sinon.stub(),
+        getSharingDisabled: sinon.stub(),
+        hasPrivacyProfanityViolation: sinon.stub(),
+        privacyProfanityDetailsEnglish: sinon.stub(),
+        privacyProfanityDetailsIntl: sinon.stub(),
+        privacyProfanitySecondLanguage: sinon.stub(),
       };
 
       rootElement = document.createElement('div');
@@ -76,24 +78,24 @@ describe('showProjectAdmin', () => {
     describe('abuse controls', () => {
       describe('on a project level', () => {
         beforeEach(() => {
-          project.isProjectLevel.mockReturnValue(true);
-          project.shouldHideShareAndRemix.mockReturnValue(true);
+          project.isProjectLevel.returns(true);
+          project.shouldHideShareAndRemix.returns(true);
         });
         testAbuseControlBehaviors();
       });
 
       describe('on a level with a share button', () => {
         beforeEach(() => {
-          project.isProjectLevel.mockReturnValue(false);
-          project.shouldHideShareAndRemix.mockReturnValue(false);
+          project.isProjectLevel.returns(false);
+          project.shouldHideShareAndRemix.returns(false);
         });
         testAbuseControlBehaviors();
       });
 
       describe('on a non-project level with no share button', () => {
         beforeEach(() => {
-          project.isProjectLevel.mockReturnValue(false);
-          project.shouldHideShareAndRemix.mockReturnValue(true);
+          project.isProjectLevel.returns(false);
+          project.shouldHideShareAndRemix.returns(true);
         });
 
         it('does not show sharing and abuse information', () => {
@@ -111,10 +113,10 @@ describe('showProjectAdmin', () => {
       function testAbuseControlBehaviors() {
         describe('project is safe to share', () => {
           beforeEach(() => {
-            project.getAbuseScore.mockReturnValue(0);
-            project.exceedsAbuseThreshold.mockReturnValue(false);
-            project.hasPrivacyProfanityViolation.mockReturnValue(false);
-            project.getSharingDisabled.mockReturnValue(false);
+            project.getAbuseScore.returns(0);
+            project.exceedsAbuseThreshold.returns(false);
+            project.hasPrivacyProfanityViolation.returns(false);
+            project.getSharingDisabled.returns(false);
           });
 
           it('shows sharing unblocked message', () => {
@@ -148,10 +150,10 @@ describe('showProjectAdmin', () => {
 
         describe('sharing is disabled', () => {
           beforeEach(() => {
-            project.getAbuseScore.mockReturnValue(0);
-            project.exceedsAbuseThreshold.mockReturnValue(false);
-            project.hasPrivacyProfanityViolation.mockReturnValue(false);
-            project.getSharingDisabled.mockReturnValue(true);
+            project.getAbuseScore.returns(0);
+            project.exceedsAbuseThreshold.returns(false);
+            project.hasPrivacyProfanityViolation.returns(false);
+            project.getSharingDisabled.returns(true);
           });
 
           it('shows sharing blocked message', () => {
@@ -185,11 +187,11 @@ describe('showProjectAdmin', () => {
 
         describe('text moderation flagged project - English', () => {
           beforeEach(() => {
-            project.getAbuseScore.mockReturnValue(0);
-            project.exceedsAbuseThreshold.mockReturnValue(false);
-            project.hasPrivacyProfanityViolation.mockReturnValue(true);
-            project.getSharingDisabled.mockReturnValue(false);
-            project.privacyProfanityDetailsEnglish.mockReturnValue('fu');
+            project.getAbuseScore.returns(0);
+            project.exceedsAbuseThreshold.returns(false);
+            project.hasPrivacyProfanityViolation.returns(true);
+            project.getSharingDisabled.returns(false);
+            project.privacyProfanityDetailsEnglish.returns('fu');
           });
 
           it('shows sharing blocked message', () => {
@@ -224,12 +226,12 @@ describe('showProjectAdmin', () => {
 
         describe('text moderation flagged project - Intl', () => {
           beforeEach(() => {
-            project.getAbuseScore.mockReturnValue(0);
-            project.exceedsAbuseThreshold.mockReturnValue(false);
-            project.hasPrivacyProfanityViolation.mockReturnValue(true);
-            project.getSharingDisabled.mockReturnValue(false);
-            project.privacyProfanityDetailsIntl.mockReturnValue('fu');
-            project.privacyProfanitySecondLanguage.mockReturnValue('it');
+            project.getAbuseScore.returns(0);
+            project.exceedsAbuseThreshold.returns(false);
+            project.hasPrivacyProfanityViolation.returns(true);
+            project.getSharingDisabled.returns(false);
+            project.privacyProfanityDetailsIntl.returns('fu');
+            project.privacyProfanitySecondLanguage.returns('it');
           });
 
           it('shows sharing blocked message', () => {
@@ -264,10 +266,10 @@ describe('showProjectAdmin', () => {
 
         describe('image moderation flagged project', () => {
           beforeEach(() => {
-            project.getAbuseScore.mockReturnValue(15);
-            project.exceedsAbuseThreshold.mockReturnValue(true);
-            project.hasPrivacyProfanityViolation.mockReturnValue(false);
-            project.getSharingDisabled.mockReturnValue(false);
+            project.getAbuseScore.returns(15);
+            project.exceedsAbuseThreshold.returns(true);
+            project.hasPrivacyProfanityViolation.returns(false);
+            project.getSharingDisabled.returns(false);
           });
 
           it('shows sharing blocked message', () => {
@@ -301,10 +303,10 @@ describe('showProjectAdmin', () => {
 
         describe('with a manually reported positive abuse score above threshold', () => {
           beforeEach(() => {
-            project.getAbuseScore.mockReturnValue(20);
-            project.exceedsAbuseThreshold.mockReturnValue(true);
-            project.hasPrivacyProfanityViolation.mockReturnValue(false);
-            project.getSharingDisabled.mockReturnValue(false);
+            project.getAbuseScore.returns(20);
+            project.exceedsAbuseThreshold.returns(true);
+            project.hasPrivacyProfanityViolation.returns(false);
+            project.getSharingDisabled.returns(false);
           });
 
           it('shows sharing blocked message', () => {

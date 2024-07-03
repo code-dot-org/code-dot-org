@@ -2,6 +2,8 @@ import $ from 'jquery';
 
 import {TestResults} from '@cdo/apps/constants';
 
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 

@@ -1,4 +1,4 @@
-import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {SVG_NS} from '@cdo/apps/constants';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
@@ -7,7 +7,7 @@ import Studio, {
   calculateBubblePosition,
 } from '@cdo/apps/studio/studio';
 
-import {expect} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {
   replaceOnWindow,
   restoreOnWindow,

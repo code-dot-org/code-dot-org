@@ -1,6 +1,6 @@
-import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import {assert} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+import {assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
 var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
