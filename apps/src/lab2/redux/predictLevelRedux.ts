@@ -16,7 +16,7 @@ import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 export interface PredictLevelState {
   response: string;
   hasSubmittedResponse: boolean;
-  errorResetting: boolean;
+  resetFailed: boolean;
 }
 
 const initialState: PredictLevelState = {
@@ -25,7 +25,7 @@ const initialState: PredictLevelState = {
   response: '',
   // If the user has submitted a predict response for the current level.
   hasSubmittedResponse: false,
-  errorResetting: false,
+  resetFailed: false,
 };
 
 // THUNKS
@@ -84,13 +84,13 @@ const predictSlice = createSlice({
     builder.addCase(resetPredictProgress.fulfilled, state => {
       state.response = '';
       state.hasSubmittedResponse = false;
-      state.errorResetting = false;
+      state.resetFailed = false;
     });
     builder.addCase(resetPredictProgress.rejected, state => {
-      state.errorResetting = true;
+      state.resetFailed = true;
     });
     builder.addCase(resetPredictProgress.pending, state => {
-      state.errorResetting = false;
+      state.resetFailed = false;
     });
   },
 });
