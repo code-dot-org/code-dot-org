@@ -5,7 +5,7 @@ import Draggable, {DraggableEventHandler} from 'react-draggable';
 import Button from '@cdo/apps/componentLibrary/button';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
-import style from './ai-component.module.scss';
+import style from './ai-differentiation.module.scss';
 
 interface AIDiffContainerProps {
   closeTutor?: () => void;

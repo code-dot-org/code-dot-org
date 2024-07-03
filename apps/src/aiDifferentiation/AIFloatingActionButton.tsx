@@ -4,7 +4,7 @@ import aiFabIcon from '@cdo/static/ai-fab-background.png';
 
 import AIDiffContainer from './AIDiffContainer';
 
-import style from './ai-component.module.scss';
+import style from './ai-differentiation.module.scss';
 
 /**
  * Renders an AI Bot icon button in the bottom left corner over other UI elements that controls
