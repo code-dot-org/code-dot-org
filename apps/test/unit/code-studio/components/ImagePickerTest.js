@@ -5,6 +5,8 @@ import AssetManager from '@cdo/apps/code-studio/components/AssetManager';
 import IconLibrary from '@cdo/apps/code-studio/components/IconLibrary';
 import ImagePicker from '@cdo/apps/code-studio/components/ImagePicker';
 import ImageURLInput from '@cdo/apps/code-studio/components/ImageURLInput';
+import {stubRedux, registerReducers} from '@cdo/apps/redux';
+import * as commonReducers from '@cdo/apps/redux/commonReducers';
 
 import {assert} from '../../../util/reconfiguredChai';
 
@@ -16,6 +18,11 @@ describe('ImagePicker', () => {
     showUnderageWarning: false,
     useFilesApi: false,
   };
+
+  beforeAll(() => {
+    stubRedux();
+    registerReducers(commonReducers);
+  });
 
   it('shows mode switch', () => {
     const wrapper = shallow(<ImagePicker {...defaultProps} />);

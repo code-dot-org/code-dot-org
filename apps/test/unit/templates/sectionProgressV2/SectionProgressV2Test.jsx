@@ -23,6 +23,8 @@ const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};
 const STUDENTS = [STUDENT_1, STUDENT_2];
 const DEFAULT_PROPS = {};
 
+jest.mock('@cdo/apps/templates/sectionProgress/sectionProgressLoader');
+
 describe('SectionProgressV2', () => {
   let store;
 
