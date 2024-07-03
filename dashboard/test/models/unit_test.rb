@@ -1532,6 +1532,35 @@ class UnitTest < ActiveSupport::TestCase
     assert_empty unit.text_response_levels
   end
 
+  test 'predict free response level is listed in text_response_levels' do
+    unit = create :script
+    lesson_group = create :lesson_group, script: unit
+    lesson = create :lesson, script: unit, lesson_group: lesson_group
+    level = create :pythonlab, properties: {
+      predict_settings: {isPredictLevel: true, questionType: 'freeResponse'}
+    }
+    create :script_level, script: unit, lesson: lesson, levels: [level]
+
+    assert_equal level, unit.text_response_levels.first[:levels].first
+  end
+
+  test 'predict multiple choice level is listed in text_response_levels' do
+    unit = create :script
+    lesson_group = create :lesson_group, script: unit
+    lesson = create :lesson, script: unit, lesson_group: lesson_group
+    level = create :pythonlab, properties: {
+      predict_settings: {
+        isPredictLevel: true,
+        questionType: 'multipleChoice',
+        multipleChoiceOptions: ['a', 'b', 'c'],
+        solution: 'a'
+      }
+    }
+    create :script_level, script: unit, lesson: lesson, levels: [level]
+
+    assert_empty unit.text_response_levels
+  end
+
   test "course_link retuns nil if unit is in no courses" do
     unit = create :script
     create :unit_group, name: 'csp'
