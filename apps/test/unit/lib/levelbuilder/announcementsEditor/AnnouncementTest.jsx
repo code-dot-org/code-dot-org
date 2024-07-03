@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import Announcement from '@cdo/apps/lib/levelbuilder/announcementsEditor/Announcement';
 
@@ -29,8 +28,8 @@ const sampleAnnouncementWithDismissibleAndButtonText = {
 describe('Announcement', () => {
   let defaultProps, onChange, onRemove;
   beforeEach(() => {
-    onChange = sinon.spy();
-    onRemove = sinon.spy();
+    onChange = jest.fn();
+    onRemove = jest.fn();
     defaultProps = {
       announcement: sampleAnnouncement,
       inputStyle: {},

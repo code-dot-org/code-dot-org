@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {
   blankStudentTransfer,
@@ -31,9 +30,9 @@ describe('MoveStudents', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
-    updateStudentTransfer = sinon.spy();
-    transferStudents = sinon.spy();
-    cancelStudentTransfer = sinon.spy();
+    updateStudentTransfer = jest.fn();
+    transferStudents = jest.fn();
+    cancelStudentTransfer = jest.fn();
     DEFAULT_PROPS = {
       studentData,
       transferData: blankStudentTransfer,

@@ -1,6 +1,5 @@
 import { mount } from 'enzyme';
 import React from 'react';
-import sinon from 'sinon';
 
 import WorkshopAssignmentLoader from '@cdo/apps/code-studio/pd/application_dashboard/workshop_assignment_loader';
 
@@ -15,7 +14,7 @@ describe('WorkshopAssignmentLoader', () => {
     handleChange = sandbox.spy();
   });
   afterEach(() => {
-    sandbox.restore();
+    sandbox.mockRestore();
   });
 
   let workshopAssignmentLoader;

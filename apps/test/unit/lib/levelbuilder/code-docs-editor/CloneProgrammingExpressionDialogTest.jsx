@@ -1,6 +1,5 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import CloneProgrammingExpressionDialog, {
   CloneFormDialog,
@@ -12,7 +11,7 @@ describe('CloneFormDialog', () => {
   let defaultProps, onCloneSuccessSpy;
 
   beforeEach(() => {
-    onCloneSuccessSpy = sinon.spy();
+    onCloneSuccessSpy = jest.fn();
     defaultProps = {
       itemToClone: {
         id: 7,
@@ -109,14 +108,16 @@ describe('CloneFormDialog', () => {
       .simulate('change', {target: {value: 'uicontrols'}});
 
     const returnData = {editUrl: '/programming_expressions/100/edit'};
-    const fetchStub = sinon.stub(window, 'fetch');
-    fetchStub
-      .withArgs('/programming_expressions/7/clone')
-      .returns(Promise.resolve({ok: true, json: () => returnData}));
+    const fetchStub = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
+    fetchStub.mockImplementation((...args) => {
+      if (args[0] === '/programming_expressions/7/clone') {
+        return Promise.resolve({ok: true, json: () => returnData});
+      }
+    });
     wrapper.find('Button').last().simulate('click');
     return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
       expect(onCloneSuccessSpy).toHaveBeenCalledTimes(1);
-      fetchStub.restore();
+      fetchStub.mockRestore();
     });
   });
 });
@@ -172,16 +173,18 @@ describe('CloneProgrammingExpressionDialog integration test', () => {
       .at(0)
       .simulate('change', {target: {value: 'applab'}});
     const returnData = {editUrl: '/programming_expressions/100/edit'};
-    const fetchStub = sinon.stub(window, 'fetch');
-    fetchStub
-      .withArgs('/programming_expressions/7/clone')
-      .returns(Promise.resolve({ok: true, json: () => returnData}));
+    const fetchStub = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
+    fetchStub.mockImplementation((...args) => {
+      if (args[0] === '/programming_expressions/7/clone') {
+        return Promise.resolve({ok: true, json: () => returnData});
+      }
+    });
     wrapper.find('Button').last().simulate('click');
     return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
       wrapper.update();
       expect(wrapper.find('FooterButton').length).toBe(1);
       expect(wrapper.find('TextLink').props().href).toBe('/programming_expressions/100/edit');
-      fetchStub.restore();
+      fetchStub.mockRestore();
     });
   });
 });

@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import * as CodeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {UnconnectedContainedLevelResetButton as ContainedLevelResetButton} from '@cdo/apps/templates/instructions/ContainedLevelResetButton';
@@ -11,7 +10,7 @@ import experiments from '@cdo/apps/util/experiments';
 describe('ContainedLevelResetButton', () => {
   let queryUserProgressSpy;
   beforeEach(() => {
-    queryUserProgressSpy = sinon.spy();
+    queryUserProgressSpy = jest.fn();
     experiments.setEnabled('instructorPredictLevelReset', true);
   });
 
@@ -71,9 +70,8 @@ describe('ContainedLevelResetButton', () => {
   });
 
   it('queries user progress after successfully resetting level', async () => {
-    const resetContainedLevelStub = sinon
-      .stub(CodeStudioLevels, 'resetContainedLevel')
-      .returns(Promise.resolve());
+    const resetContainedLevelStub = jest.spyOn(CodeStudioLevels, 'resetContainedLevel').mockClear()
+      .mockReturnValue(Promise.resolve());
 
     const wrapper = shallow(
       <ContainedLevelResetButton

@@ -1,6 +1,5 @@
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import SearchBox from '@cdo/apps/lib/levelbuilder/lesson-editor/SearchBox';
 
@@ -10,8 +9,8 @@ describe('SearchBox', () => {
   let defaultProps, constructOptions, fetchSpy;
 
   beforeEach(() => {
-    constructOptions = sinon.spy();
-    fetchSpy = sinon.stub(window, 'fetch');
+    constructOptions = jest.fn();
+    fetchSpy = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
     defaultProps = {
       onSearchSelect: () => {},
       additionalQueryParams: {extraParam1: 1, extraParam2: 2},
@@ -21,7 +20,7 @@ describe('SearchBox', () => {
   });
 
   afterEach(() => {
-    fetchSpy.restore();
+    fetchSpy.mockRestore();
   });
 
   it('renders default props', () => {
@@ -32,7 +31,7 @@ describe('SearchBox', () => {
   it('searches when query is 3+ letters', () => {
     const wrapper = mount(<SearchBox {...defaultProps} />);
     let returnData = [{result: 'res1'}];
-    fetchSpy.returns(
+    fetchSpy.mockReturnValue(
       Promise.resolve({ok: true, json: () => JSON.stringify(returnData)})
     );
     return wrapper
@@ -47,7 +46,7 @@ describe('SearchBox', () => {
   it('doesnt when query is < 3 letters', () => {
     const wrapper = mount(<SearchBox {...defaultProps} />);
     let returnData = [{result: 'res1'}];
-    fetchSpy.returns(
+    fetchSpy.mockReturnValue(
       Promise.resolve({ok: true, json: () => JSON.stringify(returnData)})
     );
     return wrapper

@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import CollapserButton from '@cdo/apps/templates/instructions/CollapserButton';
 import {UnconnectedInstructionsCsfRightCol as InstructionsCsfRightCol} from '@cdo/apps/templates/instructions/InstructionsCsfRightCol';
@@ -32,18 +31,18 @@ const setUp = (overrideProps = {}) => {
 
 describe('InstructionsCsfRightCol', () => {
   it('sets col width and height on mount', () => {
-    const setColWidthSpy = sinon.spy();
-    const setColHeightSpy = sinon.spy();
+    const setColWidthSpy = jest.fn();
+    const setColHeightSpy = jest.fn();
     setUp({setColHeight: setColHeightSpy, setColWidth: setColWidthSpy});
 
     // should be called after mount:
-    expect(setColWidthSpy.calledOnce).toBe(true);
-    expect(setColHeightSpy.calledOnce).toBe(true);
+    expect(setColWidthSpy).toHaveBeenCalledTimes(1);
+    expect(setColHeightSpy).toHaveBeenCalledTimes(1);
   });
 
   it('only recalculates col width and height if height or collapsed props change', () => {
-    const setColWidthSpy = sinon.spy();
-    const setColHeightSpy = sinon.spy();
+    const setColWidthSpy = jest.fn();
+    const setColHeightSpy = jest.fn();
     const wrapper = setUp({
       setColHeight: setColHeightSpy,
       setColWidth: setColWidthSpy,
@@ -109,12 +108,12 @@ describe('InstructionsCsfRightCol', () => {
 
   it('calls handleClickCollapser when CollapserButton is clicked', () => {
     // set up with short and long instructions so collapser is displayed
-    const handleClickCollapserSpy = sinon.spy();
+    const handleClickCollapserSpy = jest.fn();
     const wrapper = setUp({
       hasShortAndLongInstructions: true,
       handleClickCollapser: handleClickCollapserSpy,
     });
     wrapper.find(CollapserButton).simulate('click');
-    expect(handleClickCollapserSpy.calledOnce).toBe(true);
+    expect(handleClickCollapserSpy).toHaveBeenCalledTimes(1);
   });
 });

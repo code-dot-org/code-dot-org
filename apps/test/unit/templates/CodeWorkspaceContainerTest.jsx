@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {TestableCodeWorkspaceContainer as CodeWorkspaceContainer} from '@cdo/apps/templates/CodeWorkspaceContainer';
 import * as utils from '@cdo/apps/utils';
@@ -17,7 +16,7 @@ describe('CodeWorkspaceContainer', () => {
   };
 
   beforeEach(() => {
-    sinon.stub(utils, 'fireResizeEvent');
+    jest.spyOn(utils, 'fireResizeEvent').mockClear().mockImplementation();
   });
 
   afterEach(() => {
@@ -26,7 +25,7 @@ describe('CodeWorkspaceContainer', () => {
       wrapper = undefined;
     }
 
-    utils.fireResizeEvent.restore();
+    utils.fireResizeEvent.mockRestore();
   });
 
   it('fires a resize event on update if style.top changed', () => {

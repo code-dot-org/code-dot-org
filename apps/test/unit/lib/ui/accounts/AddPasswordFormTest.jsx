@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import AddPasswordForm, {
   SAVING_STATE,
@@ -18,11 +17,11 @@ describe('AddPasswordForm', () => {
   beforeEach(() => {
     handleSubmit = () => {};
     wrapper = mount(<AddPasswordForm handleSubmit={handleSubmit} />);
-    sinon.stub(utils, 'reload');
+    jest.spyOn(utils, 'reload').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    utils.reload.restore();
+    utils.reload.mockRestore();
   });
 
   it('enables form submission if passwords have minimum length and match', () => {
@@ -88,7 +87,7 @@ describe('AddPasswordForm', () => {
 
   describe('on successful submission', () => {
     beforeEach(async () => {
-      handleSubmit = sinon.stub().resolves({});
+      handleSubmit = jest.fn().resolves({});
       wrapper = mount(<AddPasswordForm handleSubmit={handleSubmit} />);
       wrapper.setState({
         password: 'mypassword',
@@ -118,7 +117,7 @@ describe('AddPasswordForm', () => {
 
   describe('on failed submission', () => {
     beforeEach(async () => {
-      handleSubmit = sinon.stub().rejects(new Error('Oh no!'));
+      handleSubmit = jest.fn().rejects(new Error('Oh no!'));
       wrapper = mount(<AddPasswordForm handleSubmit={handleSubmit} />);
       wrapper.setState({
         password: 'mypassword',

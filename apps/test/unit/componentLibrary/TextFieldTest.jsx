@@ -2,7 +2,6 @@ import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
-import sinon from 'sinon';
 
 import TextField from '@cdo/apps/componentLibrary/textField';
 
@@ -35,7 +34,7 @@ describe('Design System - TextField', () => {
 
   it('changes value via keyboard input', async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     renderTextField({label: 'TextField label', onChange: spyOnChange});
 
@@ -49,7 +48,7 @@ describe('Design System - TextField', () => {
 
   it("doesn't change value when disabled", async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     renderTextField({
       label: 'TextField label',
@@ -68,7 +67,7 @@ describe('Design System - TextField', () => {
 
   it("doesn't change value when readOnly", async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     renderTextField({
       label: 'TextField label',

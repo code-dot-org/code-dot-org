@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import LibraryListItem from '@cdo/apps/code-studio/components/libraries/LibraryListItem';
@@ -65,13 +64,9 @@ describe('LibraryManagerDialog', () => {
     it('are set by fetchLatestLibrary', () => {
       let library = {channelId: ID};
       let callback = sinon.fake();
-      sinon.stub(libraryParser, 'prepareLibraryForImport').returns(library);
-      sinon
-        .stub(LibraryClientApi.prototype, 'fetchByVersion')
-        .callsArgWith(1, library);
-      sinon
-        .stub(LibraryClientApi.prototype, 'fetchLatestVersionId')
-        .callsArgWith(0, ID);
+      jest.spyOn(libraryParser, 'prepareLibraryForImport').mockClear().mockReturnValue(library);
+      jest.spyOn(LibraryClientApi.prototype, 'fetchByVersion').mockClear().mockImplementation().mockImplementation((...args) => args[1](library));
+      jest.spyOn(LibraryClientApi.prototype, 'fetchLatestVersionId').mockClear().mockImplementation().mockImplementation((...args) => args[0](ID));
 
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
@@ -81,9 +76,9 @@ describe('LibraryManagerDialog', () => {
       expect(callback).toHaveBeenCalledTimes(1);
       expect(callback).toHaveBeenCalledWith(library);
 
-      LibraryClientApi.prototype.fetchLatestVersionId.restore();
-      LibraryClientApi.prototype.fetchByVersion.restore();
-      libraryParser.prepareLibraryForImport.restore();
+      LibraryClientApi.prototype.fetchLatestVersionId.mockRestore();
+      LibraryClientApi.prototype.fetchByVersion.mockRestore();
+      libraryParser.prepareLibraryForImport.mockRestore();
     });
   });
 
@@ -96,25 +91,19 @@ describe('LibraryManagerDialog', () => {
           setProjectLibraries: () => {},
         },
       });
-      getProjectLibrariesStub = sinon.stub(
-        window.dashboard.project,
-        'getProjectLibraries'
-      );
-      getClassLibrariesStub = sinon.stub(
-        LibraryClientApi.prototype,
-        'getClassLibraries'
-      );
+      getProjectLibrariesStub = jest.spyOn(window.dashboard.project, 'getProjectLibraries').mockClear().mockImplementation();
+      getClassLibrariesStub = jest.spyOn(LibraryClientApi.prototype, 'getClassLibraries').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      window.dashboard.project.getProjectLibraries.restore();
-      LibraryClientApi.prototype.getClassLibraries.restore();
+      window.dashboard.project.getProjectLibraries.mockRestore();
+      LibraryClientApi.prototype.getClassLibraries.mockRestore();
       restoreOnWindow('dashboard');
     });
 
     it('displays no LibraryListItem when no libraries exist', () => {
-      getProjectLibrariesStub.returns(undefined);
-      getClassLibrariesStub.returns(undefined);
+      getProjectLibrariesStub.mockReturnValue(undefined);
+      getClassLibrariesStub.mockReturnValue(undefined);
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
@@ -122,7 +111,7 @@ describe('LibraryManagerDialog', () => {
     });
 
     it('displays LibraryListItem when the project contains libraries', () => {
-      getProjectLibrariesStub.returns([
+      getProjectLibrariesStub.mockReturnValue([
         {name: 'first', channelId: 'abc123', sectionName: 'section'},
         {name: 'second', channelId: 'def456', sectionName: 'section'},
       ]);
@@ -136,7 +125,7 @@ describe('LibraryManagerDialog', () => {
     });
 
     it('displays LibraryListItem when class libraries are available', () => {
-      getProjectLibrariesStub.returns(undefined);
+      getProjectLibrariesStub.mockReturnValue(undefined);
       getClassLibrariesStub.callsFake(callback =>
         callback([
           {channel: '1', sectionName: 'section'},
@@ -153,7 +142,7 @@ describe('LibraryManagerDialog', () => {
     });
 
     it('displays all libraries from the project and the class', () => {
-      getProjectLibrariesStub.returns([
+      getProjectLibrariesStub.mockReturnValue([
         {name: 'first', channelId: 'abc123', sectionName: 'section'},
         {name: 'second', channelId: 'def456', sectionName: 'section'},
       ]);
@@ -173,7 +162,7 @@ describe('LibraryManagerDialog', () => {
     });
 
     it('allows filtering class libraries by section', () => {
-      getProjectLibrariesStub.returns(undefined);
+      getProjectLibrariesStub.mockReturnValue(undefined);
       getClassLibrariesStub.callsFake(callback =>
         callback([
           {channel: 'abc123', sectionName: 'section1'},
@@ -192,7 +181,7 @@ describe('LibraryManagerDialog', () => {
     });
 
     it('setLibraryToImport sets the import library', () => {
-      getProjectLibrariesStub.returns(undefined);
+      getProjectLibrariesStub.mockReturnValue(undefined);
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
@@ -214,10 +203,7 @@ describe('LibraryManagerDialog', () => {
     });
 
     it('addLibraryById adds the library to the project if given libraryJson', () => {
-      let setProjectLibrariesSpy = sinon.spy(
-        window.dashboard.project,
-        'setProjectLibraries'
-      );
+      let setProjectLibrariesSpy = jest.spyOn(window.dashboard.project, 'setProjectLibraries').mockClear();
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
@@ -225,7 +211,7 @@ describe('LibraryManagerDialog', () => {
 
       wrapper.instance().addLibraryById(library, null);
       expect(setProjectLibrariesSpy).toHaveBeenCalled();
-      setProjectLibrariesSpy.restore();
+      setProjectLibrariesSpy.mockRestore();
     });
 
     it('addLibraryById sets an error in state if given an error', () => {
@@ -242,19 +228,16 @@ describe('LibraryManagerDialog', () => {
         {name: 'first', channelId: 'abc123', sectionName: 'section'},
         {name: 'second', channelId: 'def456', sectionName: 'section'},
       ];
-      getProjectLibrariesStub.returns(projectLibraries);
-      let setProjectLibraries = sinon.spy(
-        window.dashboard.project,
-        'setProjectLibraries'
-      );
+      getProjectLibrariesStub.mockReturnValue(projectLibraries);
+      let setProjectLibraries = jest.spyOn(window.dashboard.project, 'setProjectLibraries').mockClear();
       const wrapper = shallow(
         <LibraryManagerDialog onClose={() => {}} isOpen={true} />
       );
       wrapper.instance().onOpen();
-      expect(setProjectLibraries.notCalled).toBe(true);
+      expect(setProjectLibraries).not.toHaveBeenCalled();
       wrapper.instance().removeLibrary('abc123');
-      expect(setProjectLibraries.withArgs([projectLibraries[1]]).calledOnce).toBe(true);
-      window.dashboard.project.setProjectLibraries.restore();
+      expect(setProjectLibraries).toHaveBeenCalledWith([projectLibraries[1]]);
+      window.dashboard.project.setProjectLibraries.mockRestore();
     });
   });
 
@@ -269,7 +252,7 @@ describe('LibraryManagerDialog', () => {
     });
 
     afterEach(() => {
-      server.restore();
+      server.mockRestore();
     });
 
     it('sets updatedLibraryChannels in state', () => {

@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {
   UnconnectedSectionSelector as SectionSelector,
@@ -70,13 +69,13 @@ describe('SectionSelector', () => {
 
   describe('handleSelectChange', () => {
     beforeEach(() => {
-      sinon.stub(utils, 'reload');
-      sinon.stub(codeStudioUtils, 'updateQueryParam');
+      jest.spyOn(utils, 'reload').mockClear().mockImplementation();
+      jest.spyOn(codeStudioUtils, 'updateQueryParam').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      codeStudioUtils.updateQueryParam.restore();
-      utils.reload.restore();
+      codeStudioUtils.updateQueryParam.mockRestore();
+      utils.reload.mockRestore();
     });
 
     it('updates the query param if a section is selected', () => {
@@ -114,7 +113,7 @@ describe('SectionSelector', () => {
     });
 
     it('reloads on change if prop reloadOnChange is set', () => {
-      const selectSection = sinon.spy();
+      const selectSection = jest.fn();
       const wrapper = mount(
         <SectionSelector
           alwaysShow={true}
@@ -133,7 +132,7 @@ describe('SectionSelector', () => {
     });
 
     it('calls selectSection on change if prop reloadOnChange is not set', () => {
-      const selectSection = sinon.spy();
+      const selectSection = jest.fn();
       const wrapper = mount(
         <SectionSelector
           alwaysShow={true}

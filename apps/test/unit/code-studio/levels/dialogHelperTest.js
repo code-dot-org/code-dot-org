@@ -2,7 +2,6 @@ import {assert} from 'chai';
 import $ from 'jquery';
 import React from 'react';
 import 'jquery-ui/ui/effects/effect-drop';
-import sinon from 'sinon';
 
 import {
   showDialog,
@@ -54,21 +53,21 @@ describe('dialogHelper', () => {
     });
 
     it('calls callback when ok button is clicked', () => {
-      const callback = sinon.spy();
+      const callback = jest.fn();
       showDialog(<MyComponent />, callback);
       $('#ok-button').click();
       assert(callback.toHaveBeenCalledTimes(1));
     });
 
     it('calls onHidden when ok button is clicked', () => {
-      const onHidden = sinon.spy();
+      const onHidden = jest.fn();
       showDialog(<MyComponent />, null, onHidden);
       $('#ok-button').click();
       assert(onHidden.toHaveBeenCalledTimes(1));
     });
 
     it('calls onHidden when cancel button is clicked', () => {
-      const onHidden = sinon.spy();
+      const onHidden = jest.fn();
       showDialog(<MyComponent />, null, onHidden);
       $('#cancel-button').click();
       assert(onHidden.toHaveBeenCalledTimes(1));

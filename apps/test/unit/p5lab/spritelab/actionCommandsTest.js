@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import {commands} from '@cdo/apps/p5lab/spritelab/commands/actionCommands';
 import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
 import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
@@ -80,7 +78,7 @@ describe('Action Commands', () => {
     });
 
     it('console.warn on unknown target types', () => {
-      sinon.stub(console, 'warn');
+      jest.spyOn(console, 'warn').mockClear().mockImplementation();
       coreLibrary.addSprite({name: spriteName});
       const sprite = coreLibrary.getSpriteArray({name: spriteName})[0];
       expect(sprite.targetSet).toBeUndefined();
@@ -93,7 +91,7 @@ describe('Action Commands', () => {
         'unkknown targetType: other'
       );
       expect(sprite.targetSet).toBeUndefined();
-      console.warn.restore();
+      console.warn.mockRestore();
     });
   });
 

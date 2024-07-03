@@ -1,6 +1,5 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import sinon from 'sinon';
 
 import CohortCalculator from '@cdo/apps/code-studio/pd/application_dashboard/cohort_calculator';
 import {AllPartnersValue} from '@cdo/apps/code-studio/pd/application_dashboard/constants';
@@ -23,7 +22,7 @@ describe('Cohort Calculator', () => {
     });
 
     afterAll(() => {
-      xhr.restore();
+      xhr.mockRestore();
     });
 
     it('Is loading', () => {
@@ -59,7 +58,7 @@ describe('Cohort Calculator', () => {
       server.respond();
     });
     afterAll(() => {
-      server.restore();
+      server.mockRestore();
     });
 
     it('Is no longer loading', () => {

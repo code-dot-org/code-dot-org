@@ -1,5 +1,4 @@
 import Interpreter from '@code-dot-org/js-interpreter';
-import sinon from 'sinon';
 
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 import Observer from '@cdo/apps/Observer';
@@ -311,7 +310,7 @@ setCallback(function(message) {
         });
 
         it('will not work when enableEvents=false', () => {
-          let allDone = sinon.spy();
+          let allDone = jest.fn();
           jsInterpreter.parse({
             enableEvents: false,
             ...config(allDone),
@@ -323,7 +322,7 @@ setCallback(function(message) {
         describe('when enableEvents=true', () => {
           let allDone;
           beforeEach(() => {
-            allDone = sinon.spy();
+            allDone = jest.fn();
           });
 
           describe('a native callback function', () => {
@@ -332,11 +331,11 @@ setCallback(function(message) {
                 enableEvents: true,
                 ...config(allDone),
               });
-              sinon.spy(jsInterpreter, 'executeInterpreter');
+              jest.spyOn(jsInterpreter, 'executeInterpreter').mockClear();
               jsInterpreter.executeInterpreter(true);
             });
             afterEach(() => {
-              sinon.restore();
+              jest.restoreAllMocks();
             });
 
             it("will be created from the interpreter's callback function", () => {
@@ -388,7 +387,7 @@ setCallback(myCallback);
 myCallback("this message is coming from inside the interpreter");
 `,
               });
-              sinon.spy(jsInterpreter, 'executeInterpreter');
+              jest.spyOn(jsInterpreter, 'executeInterpreter').mockClear();
               jsInterpreter.executeInterpreter(true);
             });
 
@@ -405,9 +404,8 @@ myCallback("this message is coming from inside the interpreter");
   describe('basic usage when studioApp.hideSource = false', () => {
     let aceGetSessionStub;
     beforeEach(() => {
-      aceGetSessionStub = sinon
-        .stub()
-        .returns({getBreakpoints: () => [false, false, true, false, true]});
+      aceGetSessionStub = jest.fn()
+        .mockReturnValue({getBreakpoints: () => [false, false, true, false, true]});
       jsInterpreter = new JSInterpreter({
         studioApp: {
           editor: {
@@ -448,13 +446,13 @@ myCallback("this message is coming from inside the interpreter");
     beforeEach(() => {
       oldAce = window.ace;
       window.ace = {
-        require: sinon.stub().returns({Range}),
+        require: jest.fn().mockReturnValue({Range}),
       };
       const breakpoints = [];
       const aceSession = {
-        addMarker: sinon.spy(() => markerId++),
-        getBreakpoints: sinon.stub().returns(breakpoints),
-        removeMarker: sinon.spy(),
+        addMarker: jest.fn(() => markerId++),
+        getBreakpoints: jest.fn().mockReturnValue(breakpoints),
+        removeMarker: jest.fn(),
       };
       aceEditor = {
         isRowFullyVisible: () => true,
@@ -486,12 +484,12 @@ myCallback("this message is coming from inside the interpreter");
           editCode: true,
         },
       });
-      onPauseObserver = sinon.spy();
+      onPauseObserver = jest.fn();
       jsInterpreter.onPause.register(onPauseObserver);
-      sinon.spy(jsInterpreter, 'handleError');
+      jest.spyOn(jsInterpreter, 'handleError').mockClear();
     });
     afterEach(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     function getCurrentLine() {
@@ -563,7 +561,7 @@ myCallback("this message is coming from inside the interpreter");
         expect(getCurrentLine()).toBe(1);
       });
       it('will highlight the line after the breakpoint', () => {
-        expect(aceEditor.getSession().addMarker.lastCall.args[0]).toEqual({
+        expect(aceEditor.getSession().addMarker.mock.lastCall[0]).toEqual({
           start: {
             row: 2,
             column: 10,
@@ -589,7 +587,7 @@ myCallback("this message is coming from inside the interpreter");
         });
         it('will highlight the line after the breakpoint', () => {
           expect(
-            aceEditor.getSession().addMarker.lastCall.args[0]
+            aceEditor.getSession().addMarker.mock.lastCall[0]
           ).toEqual({
             start: {
               row: 4,
@@ -610,8 +608,8 @@ myCallback("this message is coming from inside the interpreter");
           });
           it('will remove the highlight marker for the most recent highlight', () => {
             expect(
-              aceEditor.getSession().removeMarker.lastCall.args[0]
-            ).toBe(aceEditor.getSession().addMarker.lastCall.returnValue);
+              aceEditor.getSession().removeMarker.mock.lastCall[0]
+            ).toBe(aceEditor.getSession().addMarker.mock.lastCall.returnValue);
           });
         });
       });
@@ -638,7 +636,7 @@ myCallback("this message is coming from inside the interpreter");
         expect(getCurrentLine()).toBe(2);
       });
       it('will highlight the line after the step over', () => {
-        expect(aceEditor.getSession().addMarker.lastCall.args[0]).toEqual({
+        expect(aceEditor.getSession().addMarker.mock.lastCall[0]).toEqual({
           start: {
             row: 3,
             column: 10,
@@ -681,7 +679,7 @@ myCallback("this message is coming from inside the interpreter");
         expect(getCurrentLine()).toBe(3);
       });
       it('will highlight the line after the function call', () => {
-        expect(aceEditor.getSession().addMarker.lastCall.args[0]).toEqual({
+        expect(aceEditor.getSession().addMarker.mock.lastCall[0]).toEqual({
           start: {
             row: 7,
             column: 10,
@@ -735,7 +733,7 @@ myCallback("this message is coming from inside the interpreter");
         ).toBe(true);
       });
       it('will highlight the line after the inner function call', () => {
-        expect(aceEditor.getSession().addMarker.lastCall.args[0]).toEqual({
+        expect(aceEditor.getSession().addMarker.mock.lastCall[0]).toEqual({
           start: {
             row: 8,
             column: 12,
@@ -757,7 +755,7 @@ myCallback("this message is coming from inside the interpreter");
         });
         it('will highlight the line after the inner function call', () => {
           expect(
-            aceEditor.getSession().addMarker.lastCall.args[0]
+            aceEditor.getSession().addMarker.mock.lastCall[0]
           ).toEqual({
             start: {
               row: 12,
@@ -810,7 +808,7 @@ myCallback("this message is coming from inside the interpreter");
         expect(getCurrentLine()).toBe(4);
       });
       it('will highlight the line at the inner breakpoint', () => {
-        expect(aceEditor.getSession().addMarker.lastCall.args[0]).toEqual({
+        expect(aceEditor.getSession().addMarker.mock.lastCall[0]).toEqual({
           start: {
             row: 4,
             column: 12,
@@ -845,7 +843,7 @@ myCallback("this message is coming from inside the interpreter");
         expect(getCurrentLine()).toBeUndefined();
       });
       it('will highlight the first line', () => {
-        expect(aceEditor.getSession().addMarker.lastCall.args[0]).toEqual({
+        expect(aceEditor.getSession().addMarker.mock.lastCall[0]).toEqual({
           start: {
             row: 1,
             column: 10,
@@ -867,7 +865,7 @@ myCallback("this message is coming from inside the interpreter");
         });
         it('will highlight the line after the step over', () => {
           expect(
-            aceEditor.getSession().addMarker.lastCall.args[0]
+            aceEditor.getSession().addMarker.mock.lastCall[0]
           ).toEqual({
             start: {
               row: 2,
@@ -893,8 +891,8 @@ myCallback("this message is coming from inside the interpreter");
           });
           it('will remove the highlight marker for the most recent highlight', () => {
             expect(
-              aceEditor.getSession().removeMarker.lastCall.args[0]
-            ).toBe(aceEditor.getSession().addMarker.lastCall.returnValue);
+              aceEditor.getSession().removeMarker.mock.lastCall[0]
+            ).toBe(aceEditor.getSession().addMarker.mock.lastCall.returnValue);
           });
           it('will make the interpreter no longer paused', () => {
             expect(jsInterpreter.paused).toBe(false);
@@ -922,7 +920,7 @@ myCallback("this message is coming from inside the interpreter");
         });
         it("will highlight as an error the first character of the program since the exception wasn't handled", () => {
           expect(
-            aceEditor.getSession().addMarker.lastCall.args[0]
+            aceEditor.getSession().addMarker.mock.lastCall[0]
           ).toEqual({
             start: {
               row: 0,
@@ -933,7 +931,7 @@ myCallback("this message is coming from inside the interpreter");
               column: 0,
             },
           });
-          expect(aceEditor.getSession().addMarker.lastCall.args[1]).toBe('ace_error');
+          expect(aceEditor.getSession().addMarker.mock.lastCall[1]).toBe('ace_error');
         });
       });
       describe('with hideSource=true', () => {

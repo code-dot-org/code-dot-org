@@ -1,6 +1,5 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import AddResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddResourceDialog';
 
@@ -9,8 +8,8 @@ import AddResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddResou
 describe('AddResourceDialog', () => {
   let defaultProps, onSaveSpy, handleCloseSpy;
   beforeEach(() => {
-    onSaveSpy = sinon.spy();
-    handleCloseSpy = sinon.spy();
+    onSaveSpy = jest.fn();
+    handleCloseSpy = jest.fn();
     defaultProps = {
       isOpen: true,
       onSave: onSaveSpy,
@@ -40,8 +39,8 @@ describe('AddResourceDialog', () => {
     const wrapper = mount(<AddResourceDialog {...defaultProps} />);
     wrapper.find('#submit-button').simulate('submit');
     expect(wrapper.contains('Name is required. URL is required.')).toBe(true);
-    expect(onSaveSpy.notCalled).toBe(true);
-    expect(handleCloseSpy.notCalled).toBe(true);
+    expect(onSaveSpy).not.toHaveBeenCalled();
+    expect(handleCloseSpy).not.toHaveBeenCalled();
   });
 
   it('saves if input is valid', () => {
@@ -51,11 +50,11 @@ describe('AddResourceDialog', () => {
       name: 'my resource name',
       url: 'code.org',
     });
-    const saveResourceSpy = sinon.stub(instance, 'saveResource');
+    const saveResourceSpy = jest.spyOn(instance, 'saveResource').mockClear().mockImplementation();
     instance.forceUpdate();
     wrapper.update();
     wrapper.find('#submit-button').simulate('submit');
-    expect(saveResourceSpy.calledOnce).toBe(true);
+    expect(saveResourceSpy).toHaveBeenCalledTimes(1);
   });
 
   it('renders an existing resource for edit', () => {

@@ -1,6 +1,5 @@
 /** @file MicroBit Component setup tests */
 import {EventEmitter} from 'events';
-import sinon from 'sinon';
 
 import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';
 import {
@@ -177,7 +176,7 @@ describe('MicroBit Components', () => {
       return createMicroBitComponents(boardClient).then(c => (components = c));
     });
     afterEach(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('can be safely called on empty object', () => {
@@ -219,7 +218,7 @@ describe('MicroBit Components', () => {
     });
 
     it('calls clear for the ledScreen', () => {
-      const stopSpy = sinon.spy(components.ledScreen, 'clear');
+      const stopSpy = jest.spyOn(components.ledScreen, 'clear').mockClear();
       cleanupMicroBitComponents(
         components,
         [],
@@ -229,7 +228,7 @@ describe('MicroBit Components', () => {
     });
 
     it('calls disable on the tempSensor and resets the current temp to 0', () => {
-      const spy = sinon.spy(components.tempSensor, 'stop');
+      const spy = jest.spyOn(components.tempSensor, 'stop').mockClear();
       cleanupMicroBitComponents(
         components,
         [],
@@ -240,7 +239,7 @@ describe('MicroBit Components', () => {
     });
 
     it('calls stop on the accelerometer and clears events', () => {
-      const spy = sinon.spy(components.accelerometer, 'stop');
+      const spy = jest.spyOn(components.accelerometer, 'stop').mockClear();
       cleanupMicroBitComponents(
         components,
         [],
@@ -255,7 +254,7 @@ describe('MicroBit Components', () => {
     it('calls stop on a capacitive touch sensor and clears events', () => {
       let boardClient = new MBFirmataClientStub();
       let sensor = new CapacitiveTouchSensor({mb: boardClient, pin: 0});
-      const spy = sinon.spy(sensor, 'stop');
+      const spy = jest.spyOn(sensor, 'stop').mockClear();
       cleanupMicroBitComponents(
         components,
         [sensor],
@@ -274,9 +273,9 @@ describe('MicroBit Components', () => {
     });
 
     it('starts components with sensors', () => {
-      const tempSpy = sinon.spy(components.tempSensor, 'start');
-      const accelSpy = sinon.spy(components.accelerometer, 'start');
-      const compassSpy = sinon.spy(components.compass, 'start');
+      const tempSpy = jest.spyOn(components.tempSensor, 'start').mockClear();
+      const accelSpy = jest.spyOn(components.accelerometer, 'start').mockClear();
+      const compassSpy = jest.spyOn(components.compass, 'start').mockClear();
       enableMicroBitComponents(components);
       expect(tempSpy).toHaveBeenCalledTimes(1);
       expect(accelSpy).toHaveBeenCalledTimes(1);

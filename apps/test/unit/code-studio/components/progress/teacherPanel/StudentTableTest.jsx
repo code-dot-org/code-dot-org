@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedStudentTable as StudentTable} from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
@@ -74,7 +73,7 @@ describe('StudentTable', () => {
   });
 
   it('calls onSelectUser when row is clicked', () => {
-    const onSelectUserStub = sinon.stub();
+    const onSelectUserStub = jest.fn();
     const wrapper = setUp({levelsWithProgress, onSelectUser: onSelectUserStub});
 
     const firstStudentRow = wrapper.find('tr').at(1);

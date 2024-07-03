@@ -1,7 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
-import sinon from 'sinon';
 
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ProgressTableLessonNumber, {
@@ -47,7 +46,7 @@ describe('ProgressTableLessonNumber', () => {
   });
 
   it('calls onClick when clicked', () => {
-    const onClickSpy = sinon.spy();
+    const onClickSpy = jest.fn();
     const wrapper = setUp({onClick: onClickSpy});
     wrapper.simulate('click');
     expect(onClickSpy).toHaveBeenCalled();

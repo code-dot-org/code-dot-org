@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import * as utils from '@cdo/apps/code-studio/utils';
 import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
@@ -96,8 +95,7 @@ describe('CodeReviewTimelineReview', () => {
   });
 
   it('calls prop closeReview when close is clicked does not display codeReviewError if successful', () => {
-    const closeReviewStub = sinon
-      .stub()
+    const closeReviewStub = jest.fn()
       .callsFake((successCallback, failureCallback) => {
         successCallback();
       });
@@ -116,8 +114,7 @@ describe('CodeReviewTimelineReview', () => {
   });
 
   it('calls prop closeReview when close is clicked displays codeReviewError if fails', () => {
-    const closeReviewStub = sinon
-      .stub()
+    const closeReviewStub = jest.fn()
       .callsFake((successCallback, failureCallback) => {
         failureCallback();
       });
@@ -148,12 +145,12 @@ describe('CodeReviewTimelineReview', () => {
   });
 
   it('hides the close button if viewing an older version of the project', () => {
-    sinon.stub(utils, 'queryParams').returns('versionParam');
+    jest.spyOn(utils, 'queryParams').mockClear().mockReturnValue('versionParam');
     // Viewing own project with open code review
     const review = {...DEFAULT_REVIEW, isOpen: true, ownerId: 1};
     const wrapper = setUp({review: review, currentUserId: 1});
     expect(wrapper.find('Button')).toHaveLength(0);
-    utils.queryParams.restore();
+    utils.queryParams.mockRestore();
   });
 
   it('displays Comments for each comment', () => {
@@ -211,10 +208,10 @@ describe('CodeReviewTimelineReview', () => {
 
   // Note: teachers can view older version of student projects
   it('hides the CodeReviewCommentEditor if viewing an older version of the project', () => {
-    sinon.stub(utils, 'queryParams').returns('versionParam');
+    jest.spyOn(utils, 'queryParams').mockClear().mockReturnValue('versionParam');
     const review = {...DEFAULT_REVIEW, isOpen: true, ownerId: 1};
     const wrapper = setUp({review: review, currentUserId: 2});
     expect(wrapper.find(CodeReviewCommentEditor)).toHaveLength(0);
-    utils.queryParams.restore();
+    utils.queryParams.mockRestore();
   });
 });

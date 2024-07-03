@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedRemoveLessonDialog as RemoveLessonDialog} from '@cdo/apps/lib/levelbuilder/unit-editor/RemoveLessonDialog';
 
@@ -9,8 +8,8 @@ import {UnconnectedRemoveLessonDialog as RemoveLessonDialog} from '@cdo/apps/lib
 describe('RemoveLessonDialog', () => {
   let handleClose, removeLesson, props;
   beforeEach(() => {
-    handleClose = sinon.spy();
-    removeLesson = sinon.spy();
+    handleClose = jest.fn();
+    removeLesson = jest.fn();
     props = {
       lessonGroupPosition: 1,
       lessonPosToRemove: 2,

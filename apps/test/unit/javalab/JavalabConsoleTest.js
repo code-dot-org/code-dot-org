@@ -1,7 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import PhotoSelectionView from '@cdo/apps/javalab/components/PhotoSelectionView';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
@@ -74,7 +73,7 @@ describe('Java Lab Console Test', () => {
     let onPhotoPrompterFileSelected, wrapper;
 
     beforeEach(() => {
-      onPhotoPrompterFileSelected = sinon.stub();
+      onPhotoPrompterFileSelected = jest.fn();
       wrapper = createWrapper({
         onPhotoPrompterFileSelected: onPhotoPrompterFileSelected,
       });
@@ -116,7 +115,7 @@ describe('Java Lab Console Test', () => {
       photoSelectionView.props().onPhotoSelected(file);
       wrapper.update();
 
-      sinon.assert.calledWith(onPhotoPrompterFileSelected, file);
+      expect(onPhotoPrompterFileSelected).toHaveBeenCalledWith(file);
       expect(wrapper.find(PhotoSelectionView)).toHaveLength(0);
     });
   });

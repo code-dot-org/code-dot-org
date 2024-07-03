@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedRetryProjectSaveDialog as RetryProjectSaveDialog} from '@cdo/apps/code-studio/components/header/RetryProjectSaveDialog';
 import {projectUpdatedStatuses as statuses} from '@cdo/apps/code-studio/projectRedux';
@@ -14,14 +13,14 @@ describe('RetryProjectSaveDialog', () => {
     const wrapper = mount(
       <RetryProjectSaveDialog
         projectUpdatedStatus={statuses.saved}
-        onTryAgain={sinon.spy()}
+        onTryAgain={jest.fn()}
       />
     );
     expect(wrapper.text()).not.toContain(errorTitle);
   });
 
   it('is visible and clickable when open', () => {
-    const tryAgain = sinon.spy();
+    const tryAgain = jest.fn();
     const wrapper = mount(
       <RetryProjectSaveDialog
         projectUpdatedStatus={statuses.error}
@@ -39,7 +38,7 @@ describe('RetryProjectSaveDialog', () => {
   });
 
   it('is not clickable when save is pending', () => {
-    const tryAgain = sinon.spy();
+    const tryAgain = jest.fn();
     const wrapper = mount(
       <RetryProjectSaveDialog
         projectUpdatedStatus={statuses.saving}

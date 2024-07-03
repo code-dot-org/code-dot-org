@@ -1,7 +1,6 @@
 import five from '@code-dot-org/johnny-five';
 import _ from 'lodash';
 import Playground from 'playground-io';
-import sinon from 'sinon';
 
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
 import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
@@ -33,24 +32,23 @@ describe('CircuitPlaygroundBoard', () => {
   beforeEach(() => {
     // We use real playground-io, but our test configuration swaps in mock-firmata
     // for real firmata (see webpack.js) changing Playground's parent class.
-    sinon
-      .stub(CircuitPlaygroundBoard, 'makePlaygroundTransport')
-      .callsFake(() => {
+    jest.spyOn(CircuitPlaygroundBoard, 'makePlaygroundTransport').mockClear()
+      .mockImplementation(() => {
         playground = new Playground({});
         playground.SERIAL_PORT_IDs.DEFAULT = 0x08;
 
         // mock-firmata doesn't implement these (yet) - and we want to monitor how
         // they are called.
-        playground.sysexCommand = sinon.spy();
-        playground.sysexResponse = sinon.spy();
+        playground.sysexCommand = jest.fn();
+        playground.sysexResponse = jest.fn();
 
         // Also spy on these
-        sinon.spy(playground, 'reset');
-        sinon.spy(playground, 'pinMode');
-        sinon.spy(playground, 'digitalWrite');
-        sinon.stub(playground, 'digitalRead').callsArgWith(1, 0);
-        sinon.spy(playground, 'analogWrite');
-        sinon.stub(playground, 'analogRead').callsArgWith(1, 0);
+        jest.spyOn(playground, 'reset').mockClear();
+        jest.spyOn(playground, 'pinMode').mockClear();
+        jest.spyOn(playground, 'digitalWrite').mockClear();
+        jest.spyOn(playground, 'digitalRead').mockClear().mockImplementation().mockImplementation((...args) => args[1](0));
+        jest.spyOn(playground, 'analogWrite').mockClear();
+        jest.spyOn(playground, 'analogRead').mockClear().mockImplementation().mockImplementation((...args) => args[1](0));
 
         // Pretend to be totally ready
         playground.emit('connect');
@@ -62,7 +60,7 @@ describe('CircuitPlaygroundBoard', () => {
     // Construct a board to test on
     board = new CircuitPlaygroundBoard();
     circuitPlaygroundBoardSetup();
-    sinon.stub(CircuitPlaygroundBoard, 'openWebSerial').callsFake(() => {
+    jest.spyOn(CircuitPlaygroundBoard, 'openWebSerial').mockClear().mockImplementation(() => {
       return Promise.resolve();
     });
   });
@@ -70,18 +68,18 @@ describe('CircuitPlaygroundBoard', () => {
   afterEach(() => {
     playground = undefined;
     board = undefined;
-    CircuitPlaygroundBoard.makePlaygroundTransport.restore();
+    CircuitPlaygroundBoard.makePlaygroundTransport.mockRestore();
     circuitPlaygroundBoardTeardown();
-    sinon.restore();
+    jest.restoreAllMocks();
   });
 
   function circuitPlaygroundBoardSetup() {
     // 'CrOS' represents ChromeOS
-    userAgentSpy = sinon.stub(navigator, 'userAgent').value('CrOS');
+    userAgentSpy = jest.spyOn(navigator, 'userAgent').mockClear().mockImplementation().value('CrOS');
   }
 
   function circuitPlaygroundBoardTeardown() {
-    userAgentSpy.restore();
+    userAgentSpy.mockRestore();
   }
 
   // Test coverage for Maker Board Interface
@@ -129,7 +127,7 @@ describe('CircuitPlaygroundBoard', () => {
 
     it(`establishes forwarding for the 'disconnect' event`, () => {
       return board.connect().then(() => {
-        const spy = sinon.spy();
+        const spy = jest.fn();
         board.on('disconnect', spy);
         expect(spy).not.toHaveBeenCalled();
         playground.emit('disconnect');
@@ -171,9 +169,8 @@ describe('CircuitPlaygroundBoard', () => {
     let wrappedPort;
     beforeEach(() => {
       wrappedPort = new WebSerialPortWrapper();
-      sinon
-        .stub(wrappedPort, 'openCPPort')
-        .returns(new Promise(resolve => resolve(wrappedPort)));
+      jest.spyOn(wrappedPort, 'openCPPort').mockClear()
+        .mockReturnValue(new Promise(resolve => resolve(wrappedPort)));
       board = new CircuitPlaygroundBoard(wrappedPort);
       board.port_.vendorId = '0x239A';
     });
@@ -213,15 +210,15 @@ describe('CircuitPlaygroundBoard', () => {
       return board.connect().then(() => {
         const led1 = board.createLed(0);
         const led2 = board.createLed(1);
-        sinon.spy(led1, 'stop');
-        sinon.spy(led2, 'stop');
+        jest.spyOn(led1, 'stop').mockClear();
+        jest.spyOn(led2, 'stop').mockClear();
 
         // reset() will call resetDynamicComponents() which, for each LED, will call off()
         // which internally calls stop().
         expect(led1.stop).not.toHaveBeenCalled();
         expect(led2.stop).not.toHaveBeenCalled();
 
-        board.reset();
+        board.mockReset();
         expect(led1.stop).toHaveBeenCalledTimes(1);
         expect(led2.stop).toHaveBeenCalledTimes(1);
       });
@@ -267,8 +264,8 @@ describe('CircuitPlaygroundBoard', () => {
       return board.connect().then(() => {
         const led1 = board.createLed(0);
         const led2 = board.createLed(1);
-        sinon.spy(led1, 'stop');
-        sinon.spy(led2, 'stop');
+        jest.spyOn(led1, 'stop').mockClear();
+        jest.spyOn(led2, 'stop').mockClear();
 
         expect(led1.stop).not.toHaveBeenCalled();
         expect(led2.stop).not.toHaveBeenCalled();
@@ -290,8 +287,6 @@ describe('CircuitPlaygroundBoard', () => {
   });
 
   describe(`celebrateSuccessfulConnection()`, () => {
-    let clock, yieldToPromiseChain;
-
     beforeEach(() => {
       // Promise chains and fake timers don't work together so well, so we
       // give ourselves a real `setTimeout(cb, 0)` function that will let any
@@ -308,11 +303,11 @@ describe('CircuitPlaygroundBoard', () => {
 
       // Now use fake timers so we can test exactly when the different commands
       // are sent to the board
-      clock = sinon.useFakeTimers();
+      jest.useFakeTimers();
     });
 
     afterEach(() => {
-      clock.restore();
+      jest.useRealTimers();
       restoreComponentInitialization(five.Sensor);
       restoreComponentInitialization(five.Thermometer);
     });
@@ -344,7 +339,7 @@ describe('CircuitPlaygroundBoard', () => {
             // The initial invocation set up timers to enable each LED in sequence
             for (let i = 0; i < leds.length; i++) {
               leds[i].expects('color').once().calledWith('blue');
-              clock.tick(80);
+              jest.advanceTimersByTime(80);
               leds[i].verify();
             }
             // No new buzzer commands
@@ -356,7 +351,7 @@ describe('CircuitPlaygroundBoard', () => {
               // The next 'from' set up timers to disable each LED in sequence
               for (let i = 0; i < leds.length; i++) {
                 leds[i].expects('off').once();
-                clock.tick(80);
+                jest.advanceTimersByTime(80);
                 leds[i].verify();
               }
               // No new buzzer commands

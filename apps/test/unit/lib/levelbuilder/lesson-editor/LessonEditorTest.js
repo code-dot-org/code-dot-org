@@ -2,7 +2,6 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import reducers, {
   initActivities,
@@ -40,9 +39,8 @@ describe('LessonEditor', () => {
   // lifecycle method.
   allowConsoleWarnings();
 
-  let defaultProps, store, clock;
   beforeEach(() => {
-    sinon.stub(utils, 'navigateToHref');
+    jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
     stubRedux();
     registerReducers({
       ...reducers,
@@ -96,9 +94,9 @@ describe('LessonEditor', () => {
 
   afterEach(() => {
     restoreRedux();
-    utils.navigateToHref.restore();
+    utils.navigateToHref.mockRestore();
     if (clock) {
-      clock.restore();
+      jest.useRealTimers();
       clock = undefined;
     }
   });
@@ -229,10 +227,10 @@ describe('LessonEditor', () => {
     expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
     expect(lessonEditor.state().isSaving).toBe(true);
 
-    clock = sinon.useFakeTimers(new Date('2020-12-01'));
+    jest.useFakeTimers().setSystemTime(new Date('2020-12-01'));
     const expectedLastSaved = Date.now();
     server.respond();
-    clock.tick(50);
+    jest.advanceTimersByTime(50);
 
     lessonEditor.update();
     expect(utils.navigateToHref).not.toHaveBeenCalled();
@@ -241,7 +239,7 @@ describe('LessonEditor', () => {
     expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(0);
     //check that last saved message is showing
     expect(wrapper.find('.lastSavedMessage').length).toBe(1);
-    server.restore();
+    server.mockRestore();
   });
 
   it('shows error when save and keep editing has error saving', () => {
@@ -276,7 +274,7 @@ describe('LessonEditor', () => {
       wrapper.find('.saveBar').contains('Error Saving: There was an error')
     ).toBe(true);
 
-    server.restore();
+    server.mockRestore();
   });
 
   it('can save and close lesson with lesson plan', () => {
@@ -305,7 +303,7 @@ describe('LessonEditor', () => {
     lessonEditor.update();
     expect(utils.navigateToHref).toHaveBeenCalledWith(`/lessons/1${window.location.search}`);
 
-    server.restore();
+    server.mockRestore();
   });
 
   it('can save and close lesson without lesson plan', () => {
@@ -335,7 +333,7 @@ describe('LessonEditor', () => {
     // navigates to the script overview page
     expect(utils.navigateToHref).toHaveBeenCalledWith(`/s/my-script/${window.location.search}`);
 
-    server.restore();
+    server.mockRestore();
   });
 
   it('shows error when save and keep editing has error saving', () => {
@@ -372,7 +370,7 @@ describe('LessonEditor', () => {
       wrapper.find('.saveBar').contains('Error Saving: There was an error')
     ).toBe(true);
 
-    server.restore();
+    server.mockRestore();
   });
 
   it('should render "Add Rubric" button when hasRubric prop is false', () => {

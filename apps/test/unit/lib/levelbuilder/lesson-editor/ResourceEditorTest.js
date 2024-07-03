@@ -1,6 +1,5 @@
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedResourcesEditor as ResourcesEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 
@@ -12,9 +11,9 @@ describe('ResourcesEditor', () => {
   const defaultResourceContext = 'testResource';
   let defaultProps, addResource, editResource, removeResource;
   beforeEach(() => {
-    addResource = sinon.spy();
-    editResource = sinon.spy();
-    removeResource = sinon.spy();
+    addResource = jest.fn();
+    editResource = jest.fn();
+    removeResource = jest.fn();
     defaultProps = {
       resources: resourceTestData,
       resourceContext: defaultResourceContext,
@@ -123,6 +122,6 @@ describe('ResourcesEditor', () => {
     server.respond();
     expect(addResource.withArgs(defaultResourceContext, codeRollup)).toHaveBeenCalledTimes(1);
     expect(addResource.withArgs(defaultResourceContext, vocabRollup)).toHaveBeenCalledTimes(1);
-    server.restore();
+    server.mockRestore();
   });
 });

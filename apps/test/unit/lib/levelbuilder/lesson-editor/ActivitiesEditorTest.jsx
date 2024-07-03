@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedActivitiesEditor as ActivitiesEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
 
@@ -11,7 +10,7 @@ import {sampleActivities} from './activitiesTestData';
 describe('ActivitiesEditor', () => {
   let defaultProps, addActivity;
   beforeEach(() => {
-    addActivity = sinon.spy();
+    addActivity = jest.fn();
     defaultProps = {
       activities: sampleActivities,
       hasLessonPlan: true,

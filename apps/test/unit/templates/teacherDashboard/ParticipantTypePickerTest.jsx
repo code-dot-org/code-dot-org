@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import ParticipantTypePicker from '@cdo/apps/templates/teacherDashboard/ParticipantTypePicker';
 
@@ -10,8 +9,8 @@ describe('ParticipantTypePicker', () => {
   let defaultProps, setParticipantType, handleCancel;
 
   beforeEach(() => {
-    setParticipantType = sinon.spy();
-    handleCancel = sinon.spy();
+    setParticipantType = jest.fn();
+    handleCancel = jest.fn();
     defaultProps = {
       title: 'Create a new section',
       setParticipantType,

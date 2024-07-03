@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedActivityCard as ActivityCard} from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCard';
 
@@ -24,16 +23,16 @@ describe('ActivityCard', () => {
     generateActivitySectionKey,
     updateActivitySectionMetrics;
   beforeEach(() => {
-    addActivitySection = sinon.spy();
-    removeActivity = sinon.spy();
-    moveActivity = sinon.spy();
-    updateActivityField = sinon.spy();
-    setActivitySectionRef = sinon.spy();
-    updateTargetActivitySection = sinon.spy();
-    clearTargetActivitySection = sinon.spy();
-    updateActivitySectionMetrics = sinon.spy();
-    handleCollapse = sinon.spy();
-    generateActivitySectionKey = sinon.spy();
+    addActivitySection = jest.fn();
+    removeActivity = jest.fn();
+    moveActivity = jest.fn();
+    updateActivityField = jest.fn();
+    setActivitySectionRef = jest.fn();
+    updateTargetActivitySection = jest.fn();
+    clearTargetActivitySection = jest.fn();
+    updateActivitySectionMetrics = jest.fn();
+    handleCollapse = jest.fn();
+    generateActivitySectionKey = jest.fn();
     defaultProps = {
       activity: sampleActivities[0],
       activitiesCount: 1,

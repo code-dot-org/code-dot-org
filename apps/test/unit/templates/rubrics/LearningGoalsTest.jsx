@@ -3,7 +3,6 @@ import userEvent from '@testing-library/user-event';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {act} from 'react-dom/test-utils';
-import sinon from 'sinon';
 
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -120,27 +119,23 @@ describe('LearningGoals - React Testing Library', () => {
 
   // Stub out our references to the singleton and editor
   beforeEach(() => {
-    let annotatorInstanceStub = sinon.stub();
-    annotatorInstanceStub.getCode = sinon.stub().returns(code);
-    annotatorStub = sinon
-      .stub(EditorAnnotator, 'annotator')
-      .returns(annotatorInstanceStub);
-    annotateLineStub = sinon.stub(EditorAnnotator, 'annotateLine');
-    scrollToLineStub = sinon.stub(EditorAnnotator, 'scrollToLine');
-    clearAnnotationsStub = sinon.stub(EditorAnnotator, 'clearAnnotations');
-    highlightLineStub = sinon.stub(EditorAnnotator, 'highlightLine');
-    clearHighlightedLinesStub = sinon.stub(
-      EditorAnnotator,
-      'clearHighlightedLines'
-    );
+    let annotatorInstanceStub = jest.fn();
+    annotatorInstanceStub.getCode = jest.fn().mockReturnValue(code);
+    annotatorStub = jest.spyOn(EditorAnnotator, 'annotator').mockClear()
+      .mockReturnValue(annotatorInstanceStub);
+    annotateLineStub = jest.spyOn(EditorAnnotator, 'annotateLine').mockClear().mockImplementation();
+    scrollToLineStub = jest.spyOn(EditorAnnotator, 'scrollToLine').mockClear().mockImplementation();
+    clearAnnotationsStub = jest.spyOn(EditorAnnotator, 'clearAnnotations').mockClear().mockImplementation();
+    highlightLineStub = jest.spyOn(EditorAnnotator, 'highlightLine').mockClear().mockImplementation();
+    clearHighlightedLinesStub = jest.spyOn(EditorAnnotator, 'clearHighlightedLines').mockClear().mockImplementation();
   });
   afterEach(() => {
-    annotatorStub.restore();
-    scrollToLineStub.restore();
-    annotateLineStub.restore();
-    clearAnnotationsStub.restore();
-    highlightLineStub.restore();
-    clearHighlightedLinesStub.restore();
+    annotatorStub.mockRestore();
+    scrollToLineStub.mockRestore();
+    annotateLineStub.mockRestore();
+    clearAnnotationsStub.mockRestore();
+    highlightLineStub.mockRestore();
+    clearHighlightedLinesStub.mockRestore();
   });
 
   it('renders EvidenceLevels without canProvideFeedback', () => {
@@ -170,14 +165,14 @@ describe('LearningGoals - React Testing Library', () => {
 
     const user = userEvent.setup();
 
-    sinon.assert.calledWith(scrollToLineStub, 3);
+    expect(scrollToLineStub).toHaveBeenCalledWith(3);
 
     const button = screen.getByRole('button', {
       name: i18n.rubricNextLearningGoal(),
     });
     await user.click(button);
 
-    sinon.assert.calledWith(scrollToLineStub, 7);
+    expect(scrollToLineStub).toHaveBeenCalledWith(7);
   });
 
   it('does not scroll anywhere when the evidence is blank', async () => {
@@ -208,7 +203,7 @@ describe('LearningGoals - React Testing Library', () => {
     });
     await user.click(button);
 
-    sinon.assert.notCalled(scrollToLineStub);
+    expect(scrollToLineStub).not.toHaveBeenCalled();
   });
 
   describe('when aiConfidenceExactMatch is high', () => {
@@ -300,7 +295,7 @@ describe('LearningGoals - React Testing Library', () => {
   });
 
   it('should send an event if the annotation tooltip is hovered', () => {
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
 
     // We need to check that the callback we give to the annotator would create
     // the event report.
@@ -339,7 +334,7 @@ describe('LearningGoals - React Testing Library', () => {
     });
 
     // Restore stubs
-    sendEventSpy.restore();
+    sendEventSpy.mockRestore();
   });
 });
 
@@ -362,28 +357,24 @@ describe('LearningGoals - Enzyme', () => {
 
   function stubAnnotator() {
     // Stub out our references to the singleton and editor
-    let annotatorInstanceStub = sinon.stub();
-    annotatorInstanceStub.getCode = sinon.stub().returns(code);
-    annotatorStub = sinon
-      .stub(EditorAnnotator, 'annotator')
-      .returns(annotatorInstanceStub);
-    annotateLineStub = sinon.stub(EditorAnnotator, 'annotateLine');
-    scrollToLineStub = sinon.stub(EditorAnnotator, 'scrollToLine');
-    clearAnnotationsStub = sinon.stub(EditorAnnotator, 'clearAnnotations');
-    highlightLineStub = sinon.stub(EditorAnnotator, 'highlightLine');
-    clearHighlightedLinesStub = sinon.stub(
-      EditorAnnotator,
-      'clearHighlightedLines'
-    );
+    let annotatorInstanceStub = jest.fn();
+    annotatorInstanceStub.getCode = jest.fn().mockReturnValue(code);
+    annotatorStub = jest.spyOn(EditorAnnotator, 'annotator').mockClear()
+      .mockReturnValue(annotatorInstanceStub);
+    annotateLineStub = jest.spyOn(EditorAnnotator, 'annotateLine').mockClear().mockImplementation();
+    scrollToLineStub = jest.spyOn(EditorAnnotator, 'scrollToLine').mockClear().mockImplementation();
+    clearAnnotationsStub = jest.spyOn(EditorAnnotator, 'clearAnnotations').mockClear().mockImplementation();
+    highlightLineStub = jest.spyOn(EditorAnnotator, 'highlightLine').mockClear().mockImplementation();
+    clearHighlightedLinesStub = jest.spyOn(EditorAnnotator, 'clearHighlightedLines').mockClear().mockImplementation();
   }
 
   function restoreAnnotator() {
-    annotatorStub.restore();
-    scrollToLineStub.restore();
-    annotateLineStub.restore();
-    clearAnnotationsStub.restore();
-    highlightLineStub.restore();
-    clearHighlightedLinesStub.restore();
+    annotatorStub.mockRestore();
+    scrollToLineStub.mockRestore();
+    annotateLineStub.mockRestore();
+    clearAnnotationsStub.mockRestore();
+    highlightLineStub.mockRestore();
+    clearHighlightedLinesStub.mockRestore();
   }
 
   describe('annotateLines', () => {
@@ -397,7 +388,7 @@ describe('LearningGoals - Enzyme', () => {
     it('should do nothing if the AI observation does not reference any lines', () => {
       // The AI tends to misreport the line number, so we shouldn't rely on it
       annotateLines('This is just a basic observation.', observations);
-      expect(annotateLineStub.notCalled).toBe(true);
+      expect(annotateLineStub).not.toHaveBeenCalled();
     });
 
     it('should annotate a single line of code referenced by the AI', () => {
@@ -406,7 +397,7 @@ describe('LearningGoals - Enzyme', () => {
         'Line 1: This is a line of code `var x = 5;`',
         observations
       );
-      sinon.assert.calledWith(annotateLineStub, 2, 'This is a line of code');
+      expect(annotateLineStub).toHaveBeenCalledWith(2, 'This is a line of code');
     });
 
     it('should annotate a truncated line of code referenced by the AI', () => {
@@ -415,7 +406,7 @@ describe('LearningGoals - Enzyme', () => {
         'Line 1: This is a line of code `if (something) { ... }`',
         observations
       );
-      sinon.assert.calledWith(annotateLineStub, 10, 'This is a line of code');
+      expect(annotateLineStub).toHaveBeenCalledWith(10, 'This is a line of code');
     });
 
     it('should annotate the first line of code referenced by the AI', () => {
@@ -423,7 +414,7 @@ describe('LearningGoals - Enzyme', () => {
         'Line 1: This is a line of code `var x = 5; var y = 6;`',
         observations
       );
-      sinon.assert.calledWith(annotateLineStub, 2, 'This is a line of code');
+      expect(annotateLineStub).toHaveBeenCalledWith(2, 'This is a line of code');
     });
 
     it('should highlight a single line of code referenced by the AI', () => {
@@ -432,7 +423,7 @@ describe('LearningGoals - Enzyme', () => {
         'Line 1: This is a line of code `var x = 5; var y = 6;`',
         observations
       );
-      sinon.assert.calledWith(highlightLineStub, 2);
+      expect(highlightLineStub).toHaveBeenCalledWith(2);
     });
 
     it('should highlight a truncated line of code referenced by the AI', () => {
@@ -441,7 +432,7 @@ describe('LearningGoals - Enzyme', () => {
         'Line 1: This is a line of code `if (something) { ... }`',
         observations
       );
-      sinon.assert.calledWith(highlightLineStub, 10);
+      expect(highlightLineStub).toHaveBeenCalledWith(10);
     });
 
     it('should highlight all lines of code referenced by the AI', () => {
@@ -449,8 +440,8 @@ describe('LearningGoals - Enzyme', () => {
         'Line 1: This is a line of code `var x = 5; var y = 6;`',
         observations
       );
-      sinon.assert.calledWith(highlightLineStub, 2);
-      sinon.assert.calledWith(highlightLineStub, 3);
+      expect(highlightLineStub).toHaveBeenCalledWith(2);
+      expect(highlightLineStub).toHaveBeenCalledWith(3);
     });
 
     it('should just highlight the lines the AI thinks if the referenced code does not exist', () => {
@@ -458,8 +449,8 @@ describe('LearningGoals - Enzyme', () => {
         'Line 45: This is a line of code `var z = 0`',
         observations
       );
-      sinon.assert.calledWith(annotateLineStub, 45, 'This is a line of code');
-      sinon.assert.calledWith(highlightLineStub, 45);
+      expect(annotateLineStub).toHaveBeenCalledWith(45, 'This is a line of code');
+      expect(highlightLineStub).toHaveBeenCalledWith(45);
     });
 
     it('should just highlight all of the lines the AI thinks if the referenced code does not exist', () => {
@@ -467,47 +458,40 @@ describe('LearningGoals - Enzyme', () => {
         'Line 42-44: This is a line of code `var z = 0`',
         observations
       );
-      sinon.assert.calledWith(annotateLineStub, 42, 'This is a line of code');
-      sinon.assert.calledWith(highlightLineStub, 42);
-      sinon.assert.calledWith(highlightLineStub, 43);
-      sinon.assert.calledWith(highlightLineStub, 44);
+      expect(annotateLineStub).toHaveBeenCalledWith(42, 'This is a line of code');
+      expect(highlightLineStub).toHaveBeenCalledWith(42);
+      expect(highlightLineStub).toHaveBeenCalledWith(43);
+      expect(highlightLineStub).toHaveBeenCalledWith(44);
     });
 
     it('should annotate the last line of code when referenced by the AI', () => {
       annotateLines('Line 55: This is a line of code `draw();`', observations);
-      sinon.assert.calledWith(annotateLineStub, 8, 'This is a line of code');
+      expect(annotateLineStub).toHaveBeenCalledWith(8, 'This is a line of code');
     });
 
     it('should pass along the correct info type for the annotation', () => {
       annotateLines('Line 55: This is a line of code `draw();`', observations);
-      sinon.assert.calledWith(
-        annotateLineStub,
-        sinon.match.any,
-        sinon.match.any,
-        'INFO'
-      );
+      expect(annotateLineStub).toHaveBeenCalledWith(expect.anything(), expect.anything(), 'INFO');
     });
 
     it('should pass along a hex color', () => {
       annotateLines('Line 55: This is a line of code `draw();`', observations);
-      sinon.assert.calledWith(
-        annotateLineStub,
-        sinon.match.any,
-        sinon.match.any,
-        sinon.match.any,
-        sinon.match('#')
+      expect(annotateLineStub).toHaveBeenCalledWith(
+        expect.anything(),
+        expect.anything(),
+        expect.anything(),
+        expect.objectContaining('#')
       );
     });
 
     it('should pass along the appropriate image as an icon', () => {
       annotateLines('Line 55: This is a line of code `draw();`', observations);
 
-      sinon.assert.calledWith(
-        annotateLineStub,
-        sinon.match.any,
-        sinon.match.any,
-        sinon.match.any,
-        sinon.match('#'),
+      expect(annotateLineStub).toHaveBeenCalledWith(
+        expect.anything(),
+        expect.anything(),
+        expect.anything(),
+        expect.objectContaining('#'),
         infoIconImage
       );
     });
@@ -515,30 +499,29 @@ describe('LearningGoals - Enzyme', () => {
     it('should pass along the appropriate image as an icon for the tooltip', () => {
       annotateLines('Line 55: This is a line of code `draw();`', observations);
 
-      sinon.assert.calledWith(
-        annotateLineStub,
-        sinon.match.any,
-        sinon.match.any,
-        sinon.match.any,
-        sinon.match.any,
-        sinon.match.any,
-        sinon.match({backgroundImage: sinon.match(`${tipIconImage}`)})
+      expect(annotateLineStub).toHaveBeenCalledWith(
+        expect.anything(),
+        expect.anything(),
+        expect.anything(),
+        expect.anything(),
+        expect.anything(),
+        expect.objectContaining({backgroundImage: expect.objectContaining(`${tipIconImage}`)})
       );
     });
 
     it('should highlight the last line of code when referenced by the AI', () => {
       annotateLines('Line 55: This is a line of code `draw();`', observations);
-      sinon.assert.calledWith(highlightLineStub, 8);
+      expect(highlightLineStub).toHaveBeenCalledWith(8);
     });
 
     it('should highlight the line with a hex color', () => {
       annotateLines('Line 55: This is a line of code `draw();`', observations);
-      sinon.assert.calledWith(highlightLineStub, 8, sinon.match('#'));
+      expect(highlightLineStub).toHaveBeenCalledWith(8, expect.objectContaining('#'));
     });
 
     it('should use the provided line numbers if the code snippet is empty', () => {
       annotateLines('Line 42: This is totally a thing ` `', observations);
-      sinon.assert.calledWith(annotateLineStub, 42, 'This is totally a thing');
+      expect(annotateLineStub).toHaveBeenCalledWith(42, 'This is totally a thing');
     });
 
     it('should use the provided line numbers if the code snippet is missing', () => {
@@ -546,12 +529,12 @@ describe('LearningGoals - Enzyme', () => {
         'Line 42: This is totally a thing Lines 45-56: This is also a thing `some code`',
         observations
       );
-      sinon.assert.calledWith(annotateLineStub, 42, 'This is totally a thing');
+      expect(annotateLineStub).toHaveBeenCalledWith(42, 'This is totally a thing');
     });
 
     it('should annotate with the observations if the evidence has no message.', () => {
       annotateLines('Line 42: `draw()`', observations);
-      sinon.assert.calledWith(annotateLineStub, 8, observations);
+      expect(annotateLineStub).toHaveBeenCalledWith(8, observations);
     });
 
     it('should return the parsed observations when the evidence is blank.', () => {
@@ -732,7 +715,7 @@ describe('LearningGoals - Enzyme', () => {
   });
 
   it('sends event when new learning goal is selected', () => {
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
 
     const wrapper = shallow(
       <LearningGoals
@@ -757,7 +740,7 @@ describe('LearningGoals - Enzyme', () => {
       learningGoal: 'Learning Goal 1',
       studentId: 1,
     });
-    sendEventSpy.restore();
+    sendEventSpy.mockRestore();
   });
 
   it('shows feedback in disabled textbox when available', () => {
@@ -775,7 +758,7 @@ describe('LearningGoals - Enzyme', () => {
   });
 
   it('shows editable textbox for feedback when the teacher can provide feedback', async () => {
-    const postStub = sinon.stub(HttpClient, 'post').returns(
+    const postStub = jest.spyOn(HttpClient, 'post').mockClear().mockReturnValue(
       Promise.resolve({
         json: () => {
           return {
@@ -799,11 +782,11 @@ describe('LearningGoals - Enzyme', () => {
     });
 
     expect(wrapper.find('textarea').getDOMNode().disabled).toBe(false);
-    postStub.restore();
+    postStub.mockRestore();
   });
 
   it('summary shows submitted scores', async () => {
-    const postStub = sinon.stub(HttpClient, 'post').returns(
+    const postStub = jest.spyOn(HttpClient, 'post').mockClear().mockReturnValue(
       Promise.resolve({
         json: () => {
           return {
@@ -832,7 +815,7 @@ describe('LearningGoals - Enzyme', () => {
     expect(wrapper.find('Heading5 span').first().text()).toBe(i18n.rubricLearningGoalSummary());
     expect(wrapper.find('BodyThreeText StrongText').at(0).text()).toBe('Learning Goal 1');
     expect(wrapper.find('BodyThreeText').at(2).text()).toBe('Limited Evidence');
-    postStub.restore();
+    postStub.mockRestore();
   });
 
   it('passes isStudent down to EvidenceLevels', () => {

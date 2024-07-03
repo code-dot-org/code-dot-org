@@ -1,6 +1,5 @@
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedAddLevelDialogTop as AddLevelDialogTop} from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialogTop';
 
@@ -11,7 +10,7 @@ import {searchOptions} from './activitiesTestData';
 describe('AddLevelDialogTop', () => {
   let defaultProps, addLevel;
   beforeEach(() => {
-    addLevel = sinon.spy();
+    addLevel = jest.fn();
     defaultProps = {
       addLevel,
       searchOptions: searchOptions,
@@ -56,7 +55,7 @@ describe('AddLevelDialogTop', () => {
     expect(wrapper.findOne('AddLevelTable'));
     expect(!wrapper.exists('FontAwesome')); // no spinner
 
-    server.restore();
+    server.mockRestore();
   });
 
   it('getting level data show spinner', () => {

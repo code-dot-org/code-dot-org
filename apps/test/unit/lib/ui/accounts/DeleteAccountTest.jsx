@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import DeleteAccount, {
   DELETE_VERIFICATION_STRING,
@@ -184,11 +183,11 @@ describe('DeleteAccount', () => {
       server = sinon.fakeServer.create();
     });
 
-    afterEach(() => server.restore());
+    afterEach(() => server.mockRestore());
 
     describe('on success', () => {
       beforeEach(() => {
-        sinon.stub(utils, 'navigateToHref');
+        jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
         server.respondWith('DELETE', `/users`, [
           204,
           {'Content-Type': 'application/json'},
@@ -200,7 +199,7 @@ describe('DeleteAccount', () => {
         confirmButton.simulate('click');
         server.respond();
         expect(utils.navigateToHref).toHaveBeenCalledWith('/');
-        utils.navigateToHref.restore();
+        utils.navigateToHref.mockRestore();
       });
     });
 

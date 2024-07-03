@@ -2,7 +2,6 @@ import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-impo
 import $ from 'jquery';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import {
   PublishedState,
@@ -56,7 +55,7 @@ describe('CourseEditor', () => {
   allowConsoleWarnings();
 
   beforeEach(() => {
-    sinon.stub(utils, 'navigateToHref');
+    jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
     stubRedux();
     registerReducers({
       teacherSections,
@@ -67,7 +66,7 @@ describe('CourseEditor', () => {
 
   afterEach(() => {
     restoreRedux();
-    utils.navigateToHref.restore();
+    utils.navigateToHref.mockRestore();
   });
 
   const createWrapper = overrideProps => {
@@ -121,18 +120,16 @@ describe('CourseEditor', () => {
   });
 
   describe('Saving Course Editor', () => {
-    let clock, server;
-
     beforeEach(() => {
       server = sinon.fakeServer.create();
     });
 
     afterEach(() => {
       if (clock) {
-        clock.restore();
+        jest.useRealTimers();
         clock = undefined;
       }
-      server.restore();
+      server.mockRestore();
     });
 
     it('can save and keep editing', () => {
@@ -158,10 +155,10 @@ describe('CourseEditor', () => {
       expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
       expect(courseEditor.state().isSaving).toBe(true);
 
-      clock = sinon.useFakeTimers(new Date('2020-12-01'));
+      jest.useFakeTimers().setSystemTime(new Date('2020-12-01'));
       const expectedLastSaved = Date.now();
       server.respond();
-      clock.tick(50);
+      jest.advanceTimersByTime(50);
 
       courseEditor.update();
       expect(utils.navigateToHref).not.toHaveBeenCalled();
@@ -203,7 +200,7 @@ describe('CourseEditor', () => {
         wrapper.find('.saveBar').contains('Error Saving: There was an error')
       ).toBe(true);
 
-      server.restore();
+      server.mockRestore();
     });
 
     it('can save and close', () => {
@@ -233,7 +230,7 @@ describe('CourseEditor', () => {
       courseEditor.update();
       expect(utils.navigateToHref).toHaveBeenCalledWith(`/courses/test-course${window.location.search}`);
 
-      server.restore();
+      server.mockRestore();
     });
 
     it('shows error when save and keep editing has error saving', () => {
@@ -269,11 +266,11 @@ describe('CourseEditor', () => {
         wrapper.find('.saveBar').contains('Error Saving: There was an error')
       ).toBe(true);
 
-      server.restore();
+      server.mockRestore();
     });
 
     it('shows error when published state is pilot but no pilot experiment given', () => {
-      sinon.stub($, 'ajax');
+      jest.spyOn($, 'ajax').mockClear().mockImplementation();
       const wrapper = createWrapper({});
 
       const courseEditor = wrapper.find('CourseEditor');
@@ -303,12 +300,12 @@ describe('CourseEditor', () => {
           )
       ).toBe(true);
 
-      $.ajax.restore();
+      $.ajax.mockRestore();
     });
   });
 
   it('shows error when version year is set but family name is not', () => {
-    sinon.stub($, 'ajax');
+    jest.spyOn($, 'ajax').mockClear().mockImplementation();
     const wrapper = createWrapper({});
 
     const courseEditor = wrapper.find('CourseEditor');
@@ -334,11 +331,11 @@ describe('CourseEditor', () => {
         .contains('Error Saving: Please set both version year and family name.')
     ).toBe(true);
 
-    $.ajax.restore();
+    $.ajax.mockRestore();
   });
 
   it('shows error when family name is set but version year is not', () => {
-    sinon.stub($, 'ajax');
+    jest.spyOn($, 'ajax').mockClear().mockImplementation();
     const wrapper = createWrapper({});
 
     const courseEditor = wrapper.find('CourseEditor');
@@ -364,11 +361,11 @@ describe('CourseEditor', () => {
         .contains('Error Saving: Please set both version year and family name.')
     ).toBe(true);
 
-    $.ajax.restore();
+    $.ajax.mockRestore();
   });
 
   it('shows error when published state is preview or stable and device compatibility JSON is null', () => {
-    sinon.stub($, 'ajax');
+    jest.spyOn($, 'ajax').mockClear().mockImplementation();
     const wrapper = createWrapper({
       isMissingRequiredDeviceCompatibilities: true,
     });
@@ -400,11 +397,11 @@ describe('CourseEditor', () => {
         )
     ).toBe(true);
 
-    $.ajax.restore();
+    $.ajax.mockRestore();
   });
 
   it('shows error when published state is preview or stable and at least one device compatibility is not set', () => {
-    sinon.stub($, 'ajax');
+    jest.spyOn($, 'ajax').mockClear().mockImplementation();
     const wrapper = createWrapper({
       isMissingRequiredDeviceCompatibilities: true,
     });
@@ -437,6 +434,6 @@ describe('CourseEditor', () => {
         )
     ).toBe(true);
 
-    $.ajax.restore();
+    $.ajax.mockRestore();
   });
 });

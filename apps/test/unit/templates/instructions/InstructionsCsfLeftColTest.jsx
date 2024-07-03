@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import HintDisplayLightbulb from '@cdo/apps/templates/HintDisplayLightbulb';
 import {UnconnectedInstructionsCsfLeftCol as InstructionsCsfLeftCol} from '@cdo/apps/templates/instructions/InstructionsCsfLeftCol';
@@ -26,35 +25,35 @@ const setUp = (overrideProps = {}) => {
 
 describe('InstructionsCsfLeftCol', () => {
   it('sets col width and height on mount', () => {
-    const setColWidthSpy = sinon.spy();
-    const setColHeightSpy = sinon.spy();
+    const setColWidthSpy = jest.fn();
+    const setColHeightSpy = jest.fn();
     setUp({setColHeight: setColHeightSpy, setColWidth: setColWidthSpy});
 
     // should be called after mount:
-    expect(setColWidthSpy.calledOnce).toBe(true);
-    expect(setColHeightSpy.calledOnce).toBe(true);
+    expect(setColWidthSpy).toHaveBeenCalledTimes(1);
+    expect(setColHeightSpy).toHaveBeenCalledTimes(1);
   });
 
   it('calls requestHint on clicking .prompt-icon-cell when hasAuthoredHints and hasUnseenHint', () => {
-    const requestHintSpy = sinon.spy();
+    const requestHintSpy = jest.fn();
     const wrapper = setUp({
       hasAuthoredHints: true,
       hasUnseenHint: true,
       requestHint: requestHintSpy,
     });
     wrapper.find('.prompt-icon-cell').simulate('click');
-    expect(requestHintSpy.calledOnce).toBe(true);
+    expect(requestHintSpy).toHaveBeenCalledTimes(1);
   });
 
   it('does not call requestHint on clicking .prompt-icon-cell when not hasAuthoredHints', () => {
-    const requestHintSpy = sinon.spy();
+    const requestHintSpy = jest.fn();
     const wrapper = setUp({
       hasAuthoredHints: false,
       hasUnseenHint: true,
       requestHint: requestHintSpy,
     });
     wrapper.find('.prompt-icon-cell').simulate('click');
-    expect(requestHintSpy.calledOnce).toBe(false);
+    expect(requestHintSpy).not.toHaveBeenCalledTimes(1);
   });
 
   it('displays failureAvatar when there is failure feedback', () => {

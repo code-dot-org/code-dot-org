@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import ActivityCardAndPreview from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCardAndPreview';
 
@@ -16,11 +15,11 @@ describe('ActivityCardAndPreview', () => {
     generateActivitySectionKey,
     updateActivitySectionMetrics;
   beforeEach(() => {
-    setActivitySectionRef = sinon.spy();
-    updateTargetActivitySection = sinon.spy();
-    clearTargetActivitySection = sinon.spy();
-    updateActivitySectionMetrics = sinon.spy();
-    generateActivitySectionKey = sinon.spy();
+    setActivitySectionRef = jest.fn();
+    updateTargetActivitySection = jest.fn();
+    clearTargetActivitySection = jest.fn();
+    updateActivitySectionMetrics = jest.fn();
+    generateActivitySectionKey = jest.fn();
     defaultProps = {
       activity: sampleActivities[0],
       activitiesCount: 1,

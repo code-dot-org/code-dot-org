@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import FilterGroupHeaderSelection from '@cdo/apps/tutorialExplorer/filterGroupHeaderSelection';
 
@@ -30,7 +29,7 @@ function getItemBorderLeft(wrapper, itemIndex) {
 
 describe('FilterGroupHeaderSelection', () => {
   it('hits a callback when option clicked', () => {
-    const spy = sinon.spy();
+    const spy = jest.fn();
     const wrapper = shallow(
       <FilterGroupHeaderSelection {...DEFAULT_PROPS} onUserInput={spy} />
     );

@@ -4,7 +4,6 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import * as Sticky from 'reactabular-sticky';
 import {createStore, combineReducers} from 'redux';
-import sinon from 'sinon';
 
 import progress from '@cdo/apps/code-studio/progressRedux';
 import locales from '@cdo/apps/redux/localesRedux';
@@ -144,14 +143,11 @@ describe('ProgressTableView', () => {
     });
 
     it('calls getSummaryCellFormatters formatters when a row is expanded', () => {
-      const timeSpentFormatterStub = sinon.spy();
-      const lastUpdatedFormatterStub = sinon.spy();
+      const timeSpentFormatterStub = jest.fn();
+      const lastUpdatedFormatterStub = jest.fn();
 
-      const getSummaryCellFormattersStub = sinon.stub(
-        progressTableHelpers,
-        'getSummaryCellFormatters'
-      );
-      getSummaryCellFormattersStub.returns([
+      const getSummaryCellFormattersStub = jest.spyOn(progressTableHelpers, 'getSummaryCellFormatters').mockClear().mockImplementation();
+      getSummaryCellFormattersStub.mockReturnValue([
         () => <div />, // main cell formatter
         timeSpentFormatterStub,
         lastUpdatedFormatterStub,
@@ -164,8 +160,8 @@ describe('ProgressTableView', () => {
       container.onToggleRow(rowData.student.id);
 
       // one call for each of the two lessons
-      expect(timeSpentFormatterStub.callCount).toBe(2);
-      expect(lastUpdatedFormatterStub.callCount).toBe(2);
+      expect(timeSpentFormatterStub).toHaveBeenCalledTimes(2);
+      expect(lastUpdatedFormatterStub).toHaveBeenCalledTimes(2);
     });
   });
 
@@ -211,14 +207,11 @@ describe('ProgressTableView', () => {
     });
 
     it('calls timeSpent/lastUpdated formatters when a row is expanded', () => {
-      const timeSpentFormatterStub = sinon.spy();
-      const lastUpdatedFormatterStub = sinon.spy();
+      const timeSpentFormatterStub = jest.fn();
+      const lastUpdatedFormatterStub = jest.fn();
 
-      const getDetailCellFormattersStub = sinon.stub(
-        progressTableHelpers,
-        'getDetailCellFormatters'
-      );
-      getDetailCellFormattersStub.returns([
+      const getDetailCellFormattersStub = jest.spyOn(progressTableHelpers, 'getDetailCellFormatters').mockClear().mockImplementation();
+      getDetailCellFormattersStub.mockReturnValue([
         () => <div />, // main cell formatter
         timeSpentFormatterStub,
         lastUpdatedFormatterStub,
@@ -231,8 +224,8 @@ describe('ProgressTableView', () => {
       container.onToggleRow(rowData.student.id);
 
       // one call for each of the two lessons
-      expect(timeSpentFormatterStub.callCount).toBe(2);
-      expect(lastUpdatedFormatterStub.callCount).toBe(2);
+      expect(timeSpentFormatterStub).toHaveBeenCalledTimes(2);
+      expect(lastUpdatedFormatterStub).toHaveBeenCalledTimes(2);
     });
   });
 

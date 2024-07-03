@@ -1,6 +1,5 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import sinon from 'sinon';
 
 import ToggleButton from '@cdo/apps/templates/ToggleButton';
 import {UnconnectedToggleGroup as ToggleGroup} from '@cdo/apps/templates/ToggleGroup';
@@ -9,7 +8,7 @@ describe('ToggleGroup', function () {
   let wrapper, onChange;
 
   beforeEach(function () {
-    onChange = sinon.spy();
+    onChange = jest.fn();
     const group = (
       <ToggleGroup selected="one" onChange={onChange}>
         <button type="button" value="one">
@@ -35,19 +34,19 @@ describe('ToggleGroup', function () {
   });
 
   it('calls the onChange handler with the new value when an inactive button is clicked', function () {
-    expect(onChange.callCount).toBe(0);
+    expect(onChange).toHaveBeenCalledTimes(0);
 
     wrapper.find(ToggleButton).last().simulate('click');
 
-    expect(onChange.callCount).toBe(1);
-    expect(onChange.firstCall.calledWith('three')).toBe(true);
+    expect(onChange).toHaveBeenCalledTimes(1);
+    expect(onChange.mock.calls[0]).toHaveBeenCalledWith('three');
   });
 
   it('does not call the onChange handler when the active button is clicked', function () {
-    expect(onChange.callCount).toBe(0);
+    expect(onChange).toHaveBeenCalledTimes(0);
 
     wrapper.find(ToggleButton).first().simulate('click');
 
-    expect(onChange.callCount).toBe(0);
+    expect(onChange).toHaveBeenCalledTimes(0);
   });
 });

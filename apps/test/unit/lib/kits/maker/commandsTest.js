@@ -1,6 +1,4 @@
 /** @file Test maker command behavior for Circuit Playground and Micro:Bit*/
-import sinon from 'sinon';
-
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
 import VirtualCPBoard from '@cdo/apps/lib/kits/maker/boards/VirtualCPBoard';
 import {
@@ -27,8 +25,8 @@ describe('maker/commands.js - CircuitPlayground', () => {
     stubBoardController = sinon.createStubInstance(VirtualCPBoard);
     injectBoardController(stubBoardController);
     errorHandler = {
-      outputWarning: sinon.spy(),
-      outputError: sinon.stub(),
+      outputWarning: jest.fn(),
+      outputError: jest.fn(),
     };
     injectErrorHandler(errorHandler);
   });
@@ -119,9 +117,9 @@ describe('maker/commands.js - CircuitPlayground', () => {
     });
 
     it('returns whatever makerBoard returns', () => {
-      stubBoardController.boardConnected.returns(true);
+      stubBoardController.boardConnected.mockReturnValue(true);
       expect(boardConnected()).toBe(true);
-      stubBoardController.boardConnected.returns(false);
+      stubBoardController.boardConnected.mockReturnValue(false);
       expect(boardConnected()).toBe(false);
     });
   });
@@ -142,7 +140,7 @@ describe('maker/commands.js - CircuitPlayground', () => {
 
   describe('onBoardEvent(pin)', () => {
     it('forwards the call to the component', () => {
-      const component = {on: sinon.spy()};
+      const component = {on: jest.fn()};
       const event = 'data';
       const callback = () => {};
       onBoardEvent({component, event, callback});
@@ -153,7 +151,7 @@ describe('maker/commands.js - CircuitPlayground', () => {
       let component, callback;
 
       beforeEach(function () {
-        component = {on: sinon.spy()};
+        component = {on: jest.fn()};
         callback = () => {};
       });
 
@@ -178,8 +176,8 @@ describe('maker/commands.js - MicroBit', () => {
     stubBoardController.boardClient_ = new MBFirmataClientStub();
     injectBoardController(stubBoardController);
     errorHandler = {
-      outputWarning: sinon.spy(),
-      outputError: sinon.stub(),
+      outputWarning: jest.fn(),
+      outputError: jest.fn(),
     };
     injectErrorHandler(errorHandler);
   });

@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import FilterGroupContainer from '@cdo/apps/tutorialExplorer/filterGroupContainer';
 import FilterGroupOrgNames from '@cdo/apps/tutorialExplorer/filterGroupOrgNames';
@@ -76,7 +75,7 @@ describe('FilterGroupOrgNames', () => {
   });
 
   it('reports to callback on change', () => {
-    const spy = sinon.spy();
+    const spy = jest.fn();
     const wrapper = shallow(
       <FilterGroupOrgNames {...DEFAULT_PROPS} onUserInput={spy} />
     );

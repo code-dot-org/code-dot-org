@@ -1,7 +1,6 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import * as assets from '@cdo/apps/code-studio/assets';
 import JavalabDropdown from '@cdo/apps/javalab/components/JavalabDropdown';
@@ -63,11 +62,11 @@ describe('SettingsCog', () => {
 
     describe('manage assets', () => {
       beforeEach(() => {
-        sinon.stub(assets, 'showAssetManager');
+        jest.spyOn(assets, 'showAssetManager').mockClear().mockImplementation();
       });
 
       afterEach(() => {
-        assets.showAssetManager.restore();
+        assets.showAssetManager.mockRestore();
       });
 
       it('calls showAssetManager when clicked', () => {
@@ -86,37 +85,37 @@ describe('SettingsCog', () => {
 
     describe('maker toggle', () => {
       beforeEach(() => {
-        sinon.stub(makerRedux, 'isAvailable');
-        sinon.stub(makerRedux, 'isEnabled');
+        jest.spyOn(makerRedux, 'isAvailable').mockClear().mockImplementation();
+        jest.spyOn(makerRedux, 'isEnabled').mockClear().mockImplementation();
       });
 
       afterEach(() => {
-        makerRedux.isEnabled.restore();
-        makerRedux.isAvailable.restore();
+        makerRedux.isEnabled.mockRestore();
+        makerRedux.isAvailable.mockRestore();
       });
 
       it('renders with enable maker option if maker is available and disabled', () => {
-        makerRedux.isAvailable.returns(true);
-        makerRedux.isEnabled.returns(false);
+        makerRedux.isAvailable.mockReturnValue(true);
+        makerRedux.isEnabled.mockReturnValue(false);
         const wrapper = shallow(renderMakerButton(() => {}));
         expect(wrapper.text()).toContain(msg.enableMaker());
       });
 
       it('renders with disable maker option if maker is available and enabled', () => {
-        makerRedux.isAvailable.returns(true);
-        makerRedux.isEnabled.returns(true);
+        makerRedux.isAvailable.mockReturnValue(true);
+        makerRedux.isEnabled.mockReturnValue(true);
         const wrapper = shallow(renderMakerButton(() => {}));
         expect(wrapper.text()).toContain(msg.disableMaker());
       });
 
       it('hides maker toggle if maker is not available', () => {
-        makerRedux.isAvailable.returns(false);
+        makerRedux.isAvailable.mockReturnValue(false);
         expect(renderMakerButton(() => {})).toBeNull();
       });
 
       it('asks for confirmation when clicked', () => {
-        makerRedux.isAvailable.returns(true);
-        makerRedux.isEnabled.returns(false);
+        makerRedux.isAvailable.mockReturnValue(true);
+        makerRedux.isEnabled.mockReturnValue(false);
         let settings = shallow(<SettingsCog showMakerToggle={true} />);
         expect(settings.state().confirmingEnableMaker).toBe(false);
         settings.instance().toggleMakerToolkit();
@@ -127,17 +126,17 @@ describe('SettingsCog', () => {
 
     describe('curriculum level vs standalone project - maker toolkit enabled', () => {
       beforeEach(() => {
-        sinon.stub(makerRedux, 'isAvailable');
-        sinon.stub(makerRedux, 'isEnabled');
+        jest.spyOn(makerRedux, 'isAvailable').mockClear().mockImplementation();
+        jest.spyOn(makerRedux, 'isEnabled').mockClear().mockImplementation();
         stubRedux();
         registerReducers({pageConstants: pageConstantsReducer});
-        makerRedux.isAvailable.returns(true);
-        makerRedux.isEnabled.returns(true);
+        makerRedux.isAvailable.mockReturnValue(true);
+        makerRedux.isEnabled.mockReturnValue(true);
       });
 
       afterEach(() => {
-        makerRedux.isEnabled.restore();
-        makerRedux.isAvailable.restore();
+        makerRedux.isEnabled.mockRestore();
+        makerRedux.isAvailable.mockRestore();
         restoreRedux();
       });
 

@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import {
   regenerateDefaultSpriteMetadata,
   buildAnimationMetadata,
@@ -72,53 +70,55 @@ describe('animationLibraryApi', () => {
   const animationFiles = {key1: fileObject, key2: fileObject};
 
   beforeEach(() => {
-    fetchSpy = sinon.stub(window, 'fetch');
+    fetchSpy = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
 
     // Stubs getManifest
-    fetchSpy
-      .withArgs('/api/v1/animation-library/manifest/spritelab/en_us')
-      .returns(
-        Promise.resolve({
+    fetchSpy.mockImplementation((...args) => {
+      if (args[0] === '/api/v1/animation-library/manifest/spritelab/en_us') {
+        return Promise.resolve({
           ok: true,
           json: () => JSON.stringify(animationLibrary),
-        })
-      );
+        });
+      }
+    });
 
     // Stubs getLevelAnimationFiles
-    fetchSpy
-      .withArgs('/api/v1/animation-library/level-animations-files')
-      .returns(
-        Promise.resolve({
+    fetchSpy.mockImplementation((...args) => {
+      if (args[0] === '/api/v1/animation-library/level-animations-files') {
+        return Promise.resolve({
           ok: true,
           json: () => animationFiles,
-        })
-      );
+        });
+      }
+    });
 
     // Stubs getAnimationLibraryFile
-    fetchSpy.withArgs('/api/v1/animation-library/testAlpha.json').returns(
-      Promise.resolve({
-        ok: true,
-        json: () => testAlphaMetadata,
-      })
-    );
+    fetchSpy.mockImplementation((...args) => {
+      if (args[0] === '/api/v1/animation-library/testAlpha.json') {
+        return Promise.resolve({
+          ok: true,
+          json: () => testAlphaMetadata,
+        });
+      }
+    });
   });
 
   afterEach(() => {
-    fetchSpy.restore();
+    fetchSpy.mockRestore();
   });
 
   describe('regenerateDefaultSpriteMetadata', () => {
     it('generates sprite metadata from animation library', () => {
-      fetchSpy
-        .withArgs(
-          '/api/v1/animation-library/default-spritelab-metadata/levelbuilder'
-        )
-        .returns(Promise.resolve({ok: true}));
+      fetchSpy.mockImplementation((...args) => {
+        if (args[0] === '/api/v1/animation-library/default-spritelab-metadata/levelbuilder') {
+          return Promise.resolve({ok: true});
+        }
+      });
 
       return regenerateDefaultSpriteMetadata(defaultSprites).then(() => {
         expect(fetchSpy).toHaveBeenCalledWith('/api/v1/animation-library/default-spritelab-metadata/levelbuilder');
 
-        let fetchBody = JSON.parse(fetchSpy.getCall(0).args[1].body);
+        let fetchBody = JSON.parse(fetchSpy.mock.calls[0][1].body);
         expect(fetchBody).toHaveProperty('orderedKeys');
         expect(fetchBody.orderedKeys).toHaveLength(2);
 
@@ -137,30 +137,28 @@ describe('animationLibraryApi', () => {
     });
 
     it('sends data to middleware in POST', () => {
-      fetchSpy
-        .withArgs(
-          '/api/v1/animation-library/default-spritelab-metadata/levelbuilder'
-        )
-        .returns(Promise.resolve({ok: true}));
+      fetchSpy.mockImplementation((...args) => {
+        if (args[0] === '/api/v1/animation-library/default-spritelab-metadata/levelbuilder') {
+          return Promise.resolve({ok: true});
+        }
+      });
 
       return regenerateDefaultSpriteMetadata(defaultSprites).then(() => {
         expect(fetchSpy).toHaveBeenCalledWith('/api/v1/animation-library/default-spritelab-metadata/levelbuilder');
-        expect(fetchSpy).toHaveBeenCalledWith(sinon.match.any, expect.objectContaining({method: 'POST'}));
+        expect(fetchSpy).toHaveBeenCalledWith(expect.anything(), expect.objectContaining({method: 'POST'}));
       });
     });
 
     it('throws error when bad response', () => {
-      fetchSpy
-        .withArgs(
-          '/api/v1/animation-library/default-spritelab-metadata/levelbuilder'
-        )
-        .returns(
-          Promise.resolve({
+      fetchSpy.mockImplementation((...args) => {
+        if (args[0] === '/api/v1/animation-library/default-spritelab-metadata/levelbuilder') {
+          return Promise.resolve({
             ok: false,
             status: '000',
             statusText: 'Test error message',
-          })
-        );
+          });
+        }
+      });
 
       return regenerateDefaultSpriteMetadata(defaultSprites).then(
         () => {

@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 import {UnconnectedCommitDialog as CommitDialog} from '@cdo/apps/javalab/CommitDialog';
@@ -15,12 +14,12 @@ describe('CommitDialog test', () => {
   let defaultProps, handleCommitSpy, setCommitSaveStatusSpy, backpackApiStub;
 
   beforeEach(() => {
-    handleCommitSpy = sinon.spy();
+    handleCommitSpy = jest.fn();
 
     backpackApiStub = sinon.createStubInstance(BackpackClientApi);
-    backpackApiStub.getFileList.callsArgWith(1, ['backpackFile.java']);
-    backpackApiStub.hasBackpack.returns(true);
-    setCommitSaveStatusSpy = sinon.spy();
+    backpackApiStub.getFileList.mockImplementation((...args) => args[1](['backpackFile.java']));
+    backpackApiStub.hasBackpack.mockReturnValue(true);
+    setCommitSaveStatusSpy = jest.fn();
 
     defaultProps = {
       isOpen: true,
@@ -88,7 +87,7 @@ describe('CommitDialog test', () => {
   });
 
   it('dialog closes after save then commit succeeds', () => {
-    const handleCloseSpy = sinon.spy();
+    const handleCloseSpy = jest.fn();
     const wrapper = renderWithProps({
       handleClose: handleCloseSpy,
       isCommitSaveInProgress: true,
@@ -105,18 +104,18 @@ describe('CommitDialog test', () => {
     });
 
     expect(wrapper.instance().state.backpackSaveInProgress).toBe(true);
-    expect(handleCloseSpy.callCount).toBe(0);
+    expect(handleCloseSpy).toHaveBeenCalledTimes(0);
 
     wrapper.instance().handleBackpackSaveSuccess();
-    expect(handleCloseSpy.callCount).toBe(0);
+    expect(handleCloseSpy).toHaveBeenCalledTimes(0);
 
     // Close dialog once both backpack save and commit save have finished
     wrapper.instance().handleCommitSaveSuccess();
-    expect(handleCloseSpy.callCount).toBe(1);
+    expect(handleCloseSpy).toHaveBeenCalledTimes(1);
   });
 
   it('dialog closes after commit then save succeeds', () => {
-    const handleCloseSpy = sinon.spy();
+    const handleCloseSpy = jest.fn();
     const wrapper = renderWithProps({handleClose: handleCloseSpy});
     wrapper.instance().updateNotes('commit notes');
     wrapper.update();
@@ -129,13 +128,13 @@ describe('CommitDialog test', () => {
     });
 
     expect(wrapper.instance().state.backpackSaveInProgress).toBe(true);
-    expect(handleCloseSpy.callCount).toBe(0);
+    expect(handleCloseSpy).toHaveBeenCalledTimes(0);
 
     wrapper.instance().handleCommitSaveSuccess();
-    expect(handleCloseSpy.callCount).toBe(0);
+    expect(handleCloseSpy).toHaveBeenCalledTimes(0);
 
     wrapper.instance().handleBackpackSaveSuccess();
-    expect(handleCloseSpy.callCount).toBe(1);
+    expect(handleCloseSpy).toHaveBeenCalledTimes(1);
   });
 
   it('hides the backpack sesion in the dialog body if backpack disabled', () => {

@@ -1,6 +1,5 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import SingleSectionSetUp from '@cdo/apps/templates/sectionsRefresh/SingleSectionSetUp';
@@ -9,7 +8,7 @@ import SingleSectionSetUp from '@cdo/apps/templates/sectionsRefresh/SingleSectio
 
 describe('SingleSectionSetUp', () => {
   it('calls updateSection when name is updated', () => {
-    const updateSectionSpy = sinon.spy();
+    const updateSectionSpy = jest.fn();
     const wrapper = shallow(
       <SingleSectionSetUp
         sectionNum={1}
@@ -58,7 +57,7 @@ describe('SingleSectionSetUp', () => {
   });
 
   it('calls updateSection when grade selection is updated', () => {
-    const updateSectionSpy = sinon.spy();
+    const updateSectionSpy = jest.fn();
     const wrapper = mount(
       <SingleSectionSetUp
         sectionNum={1}

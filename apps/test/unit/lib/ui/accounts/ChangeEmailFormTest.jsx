@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import ChangeEmailForm from '@cdo/apps/lib/ui/accounts/ChangeEmailForm';
 
@@ -99,7 +98,7 @@ describe('ChangeEmailForm', () => {
     };
 
     beforeEach(() => {
-      onChange = sinon.spy();
+      onChange = jest.fn();
       wrapper = mount(
         <ChangeEmailForm
           {...DEFAULT_PROPS}
@@ -118,7 +117,7 @@ describe('ChangeEmailForm', () => {
         .simulate('change', {target: {value: changedEmail}});
 
       expect(onChange).toHaveBeenCalledTimes(1);
-      expect(onChange.firstCall.args[0]).toEqual({
+      expect(onChange.mock.calls[0][0]).toEqual({
         ...initialValues,
         newEmail: changedEmail,
       });
@@ -133,7 +132,7 @@ describe('ChangeEmailForm', () => {
         .simulate('change', {target: {value: changedPassword}});
 
       expect(onChange).toHaveBeenCalledTimes(1);
-      expect(onChange.firstCall.args[0]).toEqual({
+      expect(onChange.mock.calls[0][0]).toEqual({
         ...initialValues,
         currentPassword: changedPassword,
       });
@@ -147,7 +146,7 @@ describe('ChangeEmailForm', () => {
       wrapper.find(OPT_OUT_SELECTOR).simulate('click');
 
       expect(onChange).toHaveBeenCalledTimes(1);
-      expect(onChange.firstCall.args[0]).toEqual({
+      expect(onChange.mock.calls[0][0]).toEqual({
         ...initialValues,
         emailOptIn: changedOptIn,
       });
@@ -158,7 +157,7 @@ describe('ChangeEmailForm', () => {
     let onSubmit, wrapper;
 
     beforeEach(() => {
-      onSubmit = sinon.spy();
+      onSubmit = jest.fn();
       wrapper = mount(
         <ChangeEmailForm {...DEFAULT_PROPS} onSubmit={onSubmit} />
       );
@@ -170,7 +169,7 @@ describe('ChangeEmailForm', () => {
       wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Enter'});
 
       expect(onSubmit).toHaveBeenCalledTimes(1);
-      expect(onSubmit.firstCall.args).toHaveLength(0);
+      expect(onSubmit.mock.calls[0]).toHaveLength(0);
     });
 
     it('when the enter key is pressed in the password field', () => {
@@ -179,7 +178,7 @@ describe('ChangeEmailForm', () => {
       wrapper.find(PASSWORD_SELECTOR).simulate('keydown', {key: 'Enter'});
 
       expect(onSubmit).toHaveBeenCalledTimes(1);
-      expect(onSubmit.firstCall.args).toHaveLength(0);
+      expect(onSubmit.mock.calls[0]).toHaveLength(0);
     });
 
     it('when the enter key is pressed on the opt-in field', () => {
@@ -189,7 +188,7 @@ describe('ChangeEmailForm', () => {
       wrapper.find(OPT_IN_SELECTOR).simulate('keydown', {key: 'Enter'});
 
       expect(onSubmit).toHaveBeenCalledTimes(1);
-      expect(onSubmit.firstCall.args).toHaveLength(0);
+      expect(onSubmit.mock.calls[0]).toHaveLength(0);
     });
 
     it('but not when other keys are pressed', () => {
@@ -244,16 +243,13 @@ describe('ChangeEmailForm', () => {
       wrapper = mount(
         <ChangeEmailForm {...DEFAULT_PROPS} userType="teacher" />
       );
-      emailSpy = sinon.stub(wrapper.find(EMAIL_SELECTOR).getDOMNode(), 'focus');
-      passwordSpy = sinon.stub(
-        wrapper.find(PASSWORD_SELECTOR).getDOMNode(),
-        'focus'
-      );
+      emailSpy = jest.spyOn(wrapper.find(EMAIL_SELECTOR).getDOMNode(), 'focus').mockClear().mockImplementation();
+      passwordSpy = jest.spyOn(wrapper.find(PASSWORD_SELECTOR).getDOMNode(), 'focus').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      emailSpy.restore();
-      passwordSpy.restore();
+      emailSpy.mockRestore();
+      passwordSpy.mockRestore();
     });
 
     it('does nothing if there are no validation errors', () => {

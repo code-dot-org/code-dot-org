@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedDataTableView as DataTableView} from '@cdo/apps/storage/dataBrowser/DataTableView';
 import commonI18n from '@cdo/locale';
@@ -38,11 +37,11 @@ describe('DataTableView', () => {
 
   describe('localization', () => {
     afterEach(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('should render a localized string for "Back to data"', () => {
-      sinon.stub(commonI18n, 'backToData').returns('i18n-back-to-data');
+      jest.spyOn(commonI18n, 'backToData').mockClear().mockReturnValue('i18n-back-to-data');
 
       const wrapper = shallow(<DataTableView {...DEFAULT_PROPS} />);
 
@@ -51,7 +50,7 @@ describe('DataTableView', () => {
     });
 
     it('should render a localized string for the "Debug view"', () => {
-      sinon.stub(commonI18n, 'dataTableDebugView').returns('i18n-debug-view');
+      jest.spyOn(commonI18n, 'dataTableDebugView').mockClear().mockReturnValue('i18n-debug-view');
 
       const wrapper = shallow(<DataTableView {...DEFAULT_PROPS} />);
 
@@ -60,7 +59,7 @@ describe('DataTableView', () => {
     });
 
     it('should render a localized string for the "Table view"', () => {
-      sinon.stub(commonI18n, 'dataTableTableView').returns('i18n-table-view');
+      jest.spyOn(commonI18n, 'dataTableTableView').mockClear().mockReturnValue('i18n-table-view');
 
       const wrapper = shallow(<DataTableView {...DEFAULT_PROPS} />);
 

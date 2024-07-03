@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import LessonToken, {
   LessonTokenContents,
@@ -26,9 +25,9 @@ describe('LessonToken', () => {
 
   describe('LessonToken', () => {
     beforeEach(() => {
-      handleDragStart = sinon.spy();
-      cloneLesson = sinon.spy();
-      removeLesson = sinon.spy();
+      handleDragStart = jest.fn();
+      cloneLesson = jest.fn();
+      removeLesson = jest.fn();
       defaultProps = {
         dragging: false,
         draggedLessonPos: false,
@@ -49,9 +48,9 @@ describe('LessonToken', () => {
 
   describe('LessonTokenContents', () => {
     beforeEach(() => {
-      handleDragStart = sinon.spy();
-      cloneLesson = sinon.spy();
-      removeLesson = sinon.spy();
+      handleDragStart = jest.fn();
+      cloneLesson = jest.fn();
+      removeLesson = jest.fn();
       defaultProps = {
         y: 0,
         scale: 0,

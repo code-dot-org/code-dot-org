@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import sinon from 'sinon';
 
 import applabMsg from '@cdo/applab/locale';
 import Applab from '@cdo/apps/applab/applab';
@@ -62,11 +61,11 @@ describe('Applab', () => {
   testUtils.setExternalGlobals();
 
   beforeEach(() => {
-    sinon.stub(utils, 'fireResizeEvent');
+    jest.spyOn(utils, 'fireResizeEvent').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    utils.fireResizeEvent.restore();
+    utils.fireResizeEvent.mockRestore();
   });
 
   describe('designMode.addScreenIfNecessary', function () {
@@ -559,8 +558,8 @@ describe('Applab', () => {
   });
 
   describe('Applab.init()', () => {
-    beforeAll(() => sinon.stub(Applab, 'render'));
-    afterAll(() => Applab.render.restore());
+    beforeAll(() => jest.spyOn(Applab, 'render').mockClear().mockImplementation());
+    afterAll(() => Applab.render.mockRestore());
     let containerDiv, codeWorkspaceDiv;
 
     beforeEach(() => {
@@ -697,15 +696,15 @@ describe('Applab', () => {
 
   describe('makeFooterMenuItems ', () => {
     beforeEach(() => {
-      sinon.stub(project, 'getUrl');
+      jest.spyOn(project, 'getUrl').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      project.getUrl.restore();
+      project.getUrl.mockRestore();
     });
 
     it('returns How-It-Works item before Report-Abuse item', () => {
-      project.getUrl.returns(
+      project.getUrl.mockReturnValue(
         'http://studio.code.org/projects/applab/l1RTgTXtyo9aUeJF2ZUGmQ/embed'
       );
       var footItems = Applab.makeFooterMenuItems(true);
@@ -719,7 +718,7 @@ describe('Applab', () => {
     });
 
     it('returns How-It-Works item before Make-Own-App item', () => {
-      project.getUrl.returns(
+      project.getUrl.mockReturnValue(
         'http://studio.code.org/projects/applab/l1RTgTXtyo9aUeJF2ZUGmQ/embed'
       );
       var footItems = Applab.makeFooterMenuItems(true);
@@ -733,7 +732,7 @@ describe('Applab', () => {
     });
 
     it('returns How-It-Works item before Report-Abuse item in AppLab', () => {
-      project.getUrl.returns(
+      project.getUrl.mockReturnValue(
         'https://studio.code.org/projects/applab/l1RTgTXtyo9aUeJF2ZUGmQ'
       );
       var footItems = Applab.makeFooterMenuItems(true);

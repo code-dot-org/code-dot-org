@@ -1,6 +1,5 @@
 /** @file Tests for our johnny-five Led.RGB wrapper */
 import five from '@code-dot-org/johnny-five';
-import sinon from 'sinon';
 
 import NeoPixel from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/NeoPixel';
 
@@ -10,11 +9,11 @@ describe('NeoPixel', function () {
   beforeEach(() => {
     // We stub five.Led.RGB's superclass to avoid calling any johnny-five
     // logic that requires a board.
-    sinon.stub(five.Board, 'Component');
+    jest.spyOn(five.Board, 'Component').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    five.Board.Component.restore();
+    five.Board.Component.mockRestore();
   });
 
   it('is a five.Led.RGB', () => {
@@ -28,26 +27,26 @@ describe('NeoPixel', function () {
     let led;
 
     beforeEach(() => {
-      sinon.spy(five.Led.RGB.prototype, 'on');
-      sinon.spy(five.Led.RGB.prototype, 'stop');
+      jest.spyOn(five.Led.RGB.prototype, 'on').mockClear();
+      jest.spyOn(five.Led.RGB.prototype, 'stop').mockClear();
       led = new NeoPixel({
         controller: makeStubController(),
       });
     });
 
     afterEach(() => {
-      five.Led.RGB.prototype.stop.restore();
-      five.Led.RGB.prototype.on.restore();
+      five.Led.RGB.prototype.stop.mockRestore();
+      five.Led.RGB.prototype.on.mockRestore();
     });
 
     it(`calls the parent on() implementation`, () => {
-      five.Led.RGB.prototype.on.resetHistory();
+      five.Led.RGB.prototype.on.mockReset();
       led.on();
       expect(five.Led.RGB.prototype.on).toHaveBeenCalledTimes(1);
     });
 
     it(`calls stop() on the led to end any animations`, () => {
-      five.Led.RGB.prototype.stop.resetHistory();
+      five.Led.RGB.prototype.stop.mockReset();
       led.on();
       expect(five.Led.RGB.prototype.stop).toHaveBeenCalledTimes(1);
     });
@@ -57,63 +56,61 @@ describe('NeoPixel', function () {
     let led;
 
     beforeEach(() => {
-      sinon.spy(five.Led.RGB.prototype, 'off');
-      sinon.spy(five.Led.RGB.prototype, 'stop');
+      jest.spyOn(five.Led.RGB.prototype, 'off').mockClear();
+      jest.spyOn(five.Led.RGB.prototype, 'stop').mockClear();
       led = new NeoPixel({
         controller: makeStubController(),
       });
     });
 
     afterEach(() => {
-      five.Led.RGB.prototype.stop.restore();
-      five.Led.RGB.prototype.off.restore();
+      five.Led.RGB.prototype.stop.mockRestore();
+      five.Led.RGB.prototype.off.mockRestore();
     });
 
     it(`calls the parent off() implementation`, () => {
-      five.Led.RGB.prototype.off.resetHistory();
+      five.Led.RGB.prototype.off.mockReset();
       led.off();
       expect(five.Led.RGB.prototype.off).toHaveBeenCalled();
     });
 
     it(`calls stop() on the led to end any animations`, () => {
-      five.Led.RGB.prototype.stop.resetHistory();
+      five.Led.RGB.prototype.stop.mockReset();
       led.off();
       expect(five.Led.RGB.prototype.stop).toHaveBeenCalledTimes(1);
     });
   });
 
   describe('blink()', () => {
-    let led, clock;
-
     beforeEach(() => {
-      clock = sinon.useFakeTimers();
+      jest.useFakeTimers();
       led = new NeoPixel({
         controller: makeStubController(),
       });
-      sinon.spy(led, 'stop');
-      sinon.spy(led, 'toggle');
+      jest.spyOn(led, 'stop').mockClear();
+      jest.spyOn(led, 'toggle').mockClear();
     });
 
     afterEach(() => {
-      led.toggle.restore();
-      led.stop.restore();
-      clock.restore();
+      led.toggle.mockRestore();
+      led.stop.mockRestore();
+      jest.useRealTimers();
     });
 
     it(`calls stop() only once when blink starts`, () => {
-      led.stop.resetHistory();
+      led.stop.mockReset();
       led.blink(100);
       expect(led.stop).toHaveBeenCalledTimes(1);
 
       // Pass some time and make sure it doesn't happen again
-      led.stop.resetHistory();
-      clock.tick(100);
+      led.stop.mockReset();
+      jest.advanceTimersByTime(100);
       expect(led.toggle).toHaveBeenCalledTimes(1);
       expect(led.stop).not.toHaveBeenCalled();
-      clock.tick(100);
+      jest.advanceTimersByTime(100);
       expect(led.toggle).toHaveBeenCalledTimes(2);
       expect(led.stop).not.toHaveBeenCalled();
-      clock.tick(100);
+      jest.advanceTimersByTime(100);
       expect(led.toggle).toHaveBeenCalledTimes(3);
       expect(led.stop).not.toHaveBeenCalled();
     });

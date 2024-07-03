@@ -3,7 +3,6 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import DCDO from '@cdo/apps/dcdo';
 import {
@@ -59,17 +58,17 @@ describe('SectionProgressSelector', () => {
     DCDO.set('progress-table-v2-default-v2', false);
     DCDO.set('progress-table-v2-closed-beta-enabled', false);
 
-    postStub = sinon.stub($, 'post');
-    postStub.returns(Promise.resolve());
+    postStub = jest.spyOn($, 'post').mockClear().mockImplementation();
+    postStub.mockReturnValue(Promise.resolve());
 
-    sinon.stub(_, 'debounce').callsFake(fn => fn);
+    jest.spyOn(_, 'debounce').mockClear().mockImplementation(fn => fn);
   });
 
   afterEach(() => {
     restoreRedux();
 
-    postStub.restore();
-    sinon.restore();
+    postStub.mockRestore();
+    jest.restoreAllMocks();
   });
 
   function renderDefault(propOverrides = {}) {

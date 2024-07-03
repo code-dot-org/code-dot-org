@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import CourseOfferingEditor from '@cdo/apps/lib/levelbuilder/CourseOfferingEditor';
 import * as utils from '@cdo/apps/utils';
@@ -72,20 +71,18 @@ describe('CourseOfferingEditor', () => {
   });
 
   describe('Saving Course Offering Editor', () => {
-    let clock, server;
-
     beforeEach(() => {
       server = sinon.fakeServer.create();
-      sinon.stub(utils, 'navigateToHref');
+      jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
     });
 
     afterEach(() => {
       if (clock) {
-        clock.restore();
+        jest.useRealTimers();
         clock = undefined;
       }
-      server.restore();
-      utils.navigateToHref.restore();
+      server.mockRestore();
+      utils.navigateToHref.mockRestore();
     });
 
     it('can save and keep editing', () => {
@@ -124,9 +121,9 @@ describe('CourseOfferingEditor', () => {
       // check the the spinner is showing
       expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
 
-      clock = sinon.useFakeTimers(new Date('2020-12-01'));
+      jest.useFakeTimers().setSystemTime(new Date('2020-12-01'));
       server.respond();
-      clock.tick(50);
+      jest.advanceTimersByTime(50);
 
       wrapper.update();
       expect(utils.navigateToHref).not.toHaveBeenCalled();

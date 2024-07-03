@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import AddLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialog';
 
@@ -11,8 +10,8 @@ import {sampleActivities} from './activitiesTestData';
 describe('AddLevelDialog', () => {
   let defaultProps, handleConfirm, addLevel;
   beforeEach(() => {
-    handleConfirm = sinon.spy();
-    addLevel = sinon.spy();
+    handleConfirm = jest.fn();
+    addLevel = jest.fn();
     defaultProps = {
       isOpen: true,
       handleConfirm,

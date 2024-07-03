@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import ExampleEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ExampleEditor';
 
@@ -10,7 +9,7 @@ describe('ExampleEditor', () => {
   let defaultProps, updateSpy;
 
   beforeEach(() => {
-    updateSpy = sinon.spy();
+    updateSpy = jest.fn();
     defaultProps = {
       example: {
         name: 'example 1',

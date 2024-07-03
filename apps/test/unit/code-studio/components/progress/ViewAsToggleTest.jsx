@@ -1,7 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedViewAsToggle as ViewAsToggle} from '@cdo/apps/code-studio/components/progress/ViewAsToggle';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -21,7 +20,7 @@ const setUp = (overrideProps = {}) => {
 
 describe('ViewAsToggle', () => {
   it('calls changeViewType when ToggleGroup changes', () => {
-    const spy = sinon.spy();
+    const spy = jest.fn();
     const wrapper = setUp({changeViewType: spy});
     expect(spy).not.toHaveBeenCalled();
 
@@ -32,11 +31,11 @@ describe('ViewAsToggle', () => {
   describe('toggle hide-as-student', () => {
     let toggleSpy;
     beforeEach(() => {
-      toggleSpy = sinon.spy($.fn, 'toggle');
+      toggleSpy = jest.spyOn($.fn, 'toggle').mockClear();
     });
 
     afterEach(() => {
-      $.fn.toggle.restore();
+      $.fn.toggle.mockRestore();
     });
 
     it('calls toggle(true) if viewAs=Instructor', async () => {

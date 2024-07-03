@@ -2,7 +2,6 @@ import {assert} from 'chai';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import moment from 'moment';
 import React from 'react';
-import sinon from 'sinon';
 
 import {WorkshopsTable} from '@cdo/apps/code-studio/pd/professional_learning_landing/EnrolledWorkshops';
 import * as utils from '@cdo/apps/utils';
@@ -20,18 +19,16 @@ describe('EnrolledWorkshops', () => {
     serializedWorkshopFactory.build({state: 'Ended'}),
   ];
 
-  let clock;
-
   beforeEach(() => {
-    sinon.stub(utils, 'windowOpen');
+    jest.spyOn(utils, 'windowOpen').mockClear().mockImplementation();
   });
 
   afterEach(() => {
     if (clock) {
-      clock.restore();
+      jest.useRealTimers();
       clock = undefined;
     }
-    utils.windowOpen.restore();
+    utils.windowOpen.mockRestore();
   });
 
   it('Clicking cancel enrollment cancels the enrollment', () => {
@@ -122,9 +119,7 @@ describe('EnrolledWorkshops', () => {
   });
 
   it('Pre-survey link button is disabled if more than 10 days before workshop', function () {
-    clock = sinon.useFakeTimers(
-      moment(workshops[0].workshop_starting_date).subtract(14, 'days').toDate()
-    );
+    jest.useFakeTimers().setSystemTime(moment(workshops[0].workshop_starting_date).subtract(14, 'days').toDate());
 
     const enrolledWorkshopsTable = shallow(
       <WorkshopsTable workshops={workshops} />

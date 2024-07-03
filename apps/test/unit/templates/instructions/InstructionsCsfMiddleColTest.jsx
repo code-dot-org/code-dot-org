@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import HintPrompt from '@cdo/apps/templates/instructions/HintPrompt';
 import InlineFeedback from '@cdo/apps/templates/instructions/InlineFeedback';
@@ -102,10 +101,10 @@ describe('InstructionsCsfMiddleCol', () => {
   });
 
   it('calls hideOverlay when overlayVisible and LegacyButton is clicked', () => {
-    const hideOverlaySpy = sinon.spy();
+    const hideOverlaySpy = jest.fn();
     const wrapper = setUp({overlayVisible: true, hideOverlay: hideOverlaySpy});
     wrapper.find(LegacyButton).simulate('click');
-    expect(hideOverlaySpy.calledOnce).toBe(true);
+    expect(hideOverlaySpy).toHaveBeenCalledTimes(1);
   });
 
   it('display InlineHint when hints and not collapsed', () => {

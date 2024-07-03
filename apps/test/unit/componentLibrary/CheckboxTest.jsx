@@ -1,7 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon';
 
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 
@@ -23,7 +22,7 @@ describe('Design System - Checkbox', () => {
 
   it('Checkbox - changes checked state on click', async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     let checked = false;
     const onChange = () => {
@@ -94,7 +93,7 @@ describe('Design System - Checkbox', () => {
 
   it('Checkbox - renders indeterminate checkbox, changes on click', async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     let checked = false;
     let indeterminate = true;
@@ -175,7 +174,7 @@ describe('Design System - Checkbox', () => {
 
   it("Checkbox - renders disabled checkbox, doesn't change on click", async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     let checked = false;
     const onChange = () => {

@@ -1,7 +1,6 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
-import sinon from 'sinon';
 
 import ProgrammingExpressionsTable from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingExpressionsTable';
 
@@ -11,7 +10,7 @@ describe('ProgrammingExpressionsTable', () => {
   let defaultProps, fetchStub, returnData;
 
   beforeEach(() => {
-    fetchStub = sinon.stub(window, 'fetch');
+    fetchStub = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
     returnData = {
       numPages: 2,
       results: [
@@ -99,7 +98,7 @@ describe('ProgrammingExpressionsTable', () => {
   });
 
   afterEach(() => {
-    fetchStub.restore();
+    fetchStub.mockRestore();
   });
 
   it('renders dropdowns with resultType, environments and categories', () => {
@@ -147,14 +146,16 @@ describe('ProgrammingExpressionsTable', () => {
   });
 
   it('shows table with programming expressions after load', () => {
-    fetchStub
-      .withArgs('/programming_expressions/get_filtered_results?page=1')
-      .returns(Promise.resolve({ok: true, json: () => returnData}));
+    fetchStub.mockImplementation((...args) => {
+      if (args[0] === '/programming_expressions/get_filtered_results?page=1') {
+        return Promise.resolve({ok: true, json: () => returnData});
+      }
+    });
     const wrapper = isolateComponent(
       <ProgrammingExpressionsTable {...defaultProps} />
     );
     return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
-      expect(fetchStub.callCount).toBe(1);
+      expect(fetchStub).toHaveBeenCalledTimes(1);
       // A reactabular table has a Header and a Body
       expect(wrapper.findAll('Header').length).toBe(1);
       expect(wrapper.findAll('Body').length).toBe(1);
@@ -163,14 +164,16 @@ describe('ProgrammingExpressionsTable', () => {
   });
 
   it('loads data but doesnt show expressions if hidden is true', () => {
-    fetchStub
-      .withArgs('/programming_expressions/get_filtered_results?page=1')
-      .returns(Promise.resolve({ok: true, json: () => returnData}));
+    fetchStub.mockImplementation((...args) => {
+      if (args[0] === '/programming_expressions/get_filtered_results?page=1') {
+        return Promise.resolve({ok: true, json: () => returnData});
+      }
+    });
     const wrapper = isolateComponent(
       <ProgrammingExpressionsTable {...defaultProps} hidden />
     );
     return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
-      expect(fetchStub.callCount).toBe(1);
+      expect(fetchStub).toHaveBeenCalledTimes(1);
       // A reactabular table has a Header and a Body
       expect(wrapper.findAll('Header').length).toBe(0);
       expect(wrapper.findAll('Body').length).toBe(0);
@@ -178,9 +181,11 @@ describe('ProgrammingExpressionsTable', () => {
   });
 
   it('shows confirmation dialog before destroying expression', () => {
-    fetchStub
-      .withArgs('/programming_expressions/get_filtered_results?page=1')
-      .returns(Promise.resolve({ok: true, json: () => returnData}));
+    fetchStub.mockImplementation((...args) => {
+      if (args[0] === '/programming_expressions/get_filtered_results?page=1') {
+        return Promise.resolve({ok: true, json: () => returnData});
+      }
+    });
     const wrapper = mount(<ProgrammingExpressionsTable {...defaultProps} />);
     return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
       const fetchCount = fetchStub.callCount;
@@ -189,14 +194,16 @@ describe('ProgrammingExpressionsTable', () => {
       const destroyButton = wrapper.find('BodyRow').at(1).find('Button').at(2);
       destroyButton.simulate('click');
       expect(wrapper.find('StylizedBaseDialog').length).toBe(1);
-      expect(fetchStub.callCount).toBe(fetchCount);
+      expect(fetchStub).toHaveBeenCalledTimes(fetchCount);
     });
   });
 
   it('does not show confirmation dialog for disabled destroy button', () => {
-    fetchStub
-      .withArgs('/programming_expressions/get_filtered_results?page=1')
-      .returns(Promise.resolve({ok: true, json: () => returnData}));
+    fetchStub.mockImplementation((...args) => {
+      if (args[0] === '/programming_expressions/get_filtered_results?page=1') {
+        return Promise.resolve({ok: true, json: () => returnData});
+      }
+    });
     const wrapper = mount(<ProgrammingExpressionsTable {...defaultProps} />);
     return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
       const fetchCount = fetchStub.callCount;
@@ -205,14 +212,16 @@ describe('ProgrammingExpressionsTable', () => {
       const destroyButton = wrapper.find('BodyRow').at(2).find('Button').at(2);
       destroyButton.simulate('click');
       expect(wrapper.find('StylizedBaseDialog').length).toBe(0);
-      expect(fetchStub.callCount).toBe(fetchCount);
+      expect(fetchStub).toHaveBeenCalledTimes(fetchCount);
     });
   });
 
   it('shows clone dialog to clone expression', () => {
-    fetchStub
-      .withArgs('/programming_expressions/get_filtered_results?page=1')
-      .returns(Promise.resolve({ok: true, json: () => returnData}));
+    fetchStub.mockImplementation((...args) => {
+      if (args[0] === '/programming_expressions/get_filtered_results?page=1') {
+        return Promise.resolve({ok: true, json: () => returnData});
+      }
+    });
     const wrapper = mount(<ProgrammingExpressionsTable {...defaultProps} />);
     return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
       wrapper.update();

@@ -1,5 +1,3 @@
-import {stub} from 'sinon';
-
 import {
   workspaceAlertTypes,
   displayWorkspaceAlert,
@@ -193,13 +191,13 @@ describe('SpriteLab Core Library', () => {
     let stubbedDispatch;
     beforeEach(function () {
       stubbedDispatch = stub();
-      stub(redux, 'getStore').returns({
+      stub(redux, 'getStore').mockReturnValue({
         dispatch: stubbedDispatch,
       });
     });
 
     afterEach(function () {
-      redux.getStore.restore();
+      redux.getStore.mockRestore();
     });
 
     // If the total number of sprites created is equal to or less than
@@ -369,8 +367,8 @@ describe('SpriteLab Core Library', () => {
 
   describe('Events', () => {
     it('Can run key events', () => {
-      const keyWentDownStub = stub(coreLibrary.p5, 'keyWentDown').returns(true);
-      const keyDownStub = stub(coreLibrary.p5, 'keyDown').returns(true);
+      const keyWentDownStub = stub(coreLibrary.p5, 'keyWentDown').mockReturnValue(true);
+      const keyDownStub = stub(coreLibrary.p5, 'keyDown').mockReturnValue(true);
       const eventLog = [];
       coreLibrary.addEvent('whenpress', {key: 'up'}, () =>
         eventLog.push('when up press ran')
@@ -386,8 +384,8 @@ describe('SpriteLab Core Library', () => {
         'while down press ran',
       ]);
 
-      keyWentDownStub.restore();
-      keyDownStub.restore();
+      keyWentDownStub.mockRestore();
+      keyDownStub.mockRestore();
     });
 
     describe('Click events', () => {
@@ -399,14 +397,14 @@ describe('SpriteLab Core Library', () => {
         mousePressedOverStub = stub(coreLibrary.p5, 'mousePressedOver');
       });
       afterEach(function () {
-        mouseWentDownStub.restore();
-        mouseIsOverStub.restore();
-        mousePressedOverStub.restore();
+        mouseWentDownStub.mockRestore();
+        mouseIsOverStub.mockRestore();
+        mousePressedOverStub.mockRestore();
       });
       it('works with individual sprites', () => {
-        mouseWentDownStub.returns(true);
-        mouseIsOverStub.returns(true);
-        mousePressedOverStub.returns(true);
+        mouseWentDownStub.mockReturnValue(true);
+        mouseIsOverStub.mockReturnValue(true);
+        mousePressedOverStub.mockReturnValue(true);
         coreLibrary.addSprite({name: spriteName});
         coreLibrary.addEvent('whenclick', {sprite: {name: spriteName}}, () =>
           eventLog.push('when click ran')
@@ -420,7 +418,7 @@ describe('SpriteLab Core Library', () => {
       });
 
       it('works with animation groups', () => {
-        mouseWentDownStub.returns(true);
+        mouseWentDownStub.mockReturnValue(true);
 
         let id1 = coreLibrary.addSprite({animation: 'a'});
         let sprite1 = coreLibrary.nativeSpriteMap[id1];
@@ -429,9 +427,21 @@ describe('SpriteLab Core Library', () => {
         let id3 = coreLibrary.addSprite({animation: 'a'});
         let sprite3 = coreLibrary.nativeSpriteMap[id3];
 
-        mouseIsOverStub.withArgs(sprite1).returns(true);
-        mouseIsOverStub.withArgs(sprite2).returns(true);
-        mouseIsOverStub.withArgs(sprite3).returns(false);
+        mouseIsOverStub.mockImplementation((...args) => {
+          if (args[0] === sprite1) {
+            return true;
+          }
+        });
+        mouseIsOverStub.mockImplementation((...args) => {
+          if (args[0] === sprite2) {
+            return true;
+          }
+        });
+        mouseIsOverStub.mockImplementation((...args) => {
+          if (args[0] === sprite3) {
+            return false;
+          }
+        });
 
         coreLibrary.addEvent('whenclick', {sprite: {costume: 'a'}}, extraArgs =>
           eventLog.push(extraArgs.clickedSprite + ' was clicked')
@@ -442,15 +452,23 @@ describe('SpriteLab Core Library', () => {
       });
 
       it('calls the callback twice if you click overlapping sprites', () => {
-        mouseWentDownStub.returns(true);
+        mouseWentDownStub.mockReturnValue(true);
 
         let id1 = coreLibrary.addSprite({animation: 'a'});
         let sprite1 = coreLibrary.nativeSpriteMap[id1];
         let id2 = coreLibrary.addSprite({animation: 'a'});
         let sprite2 = coreLibrary.nativeSpriteMap[id2];
 
-        mouseIsOverStub.withArgs(sprite1).returns(true);
-        mouseIsOverStub.withArgs(sprite2).returns(true);
+        mouseIsOverStub.mockImplementation((...args) => {
+          if (args[0] === sprite1) {
+            return true;
+          }
+        });
+        mouseIsOverStub.mockImplementation((...args) => {
+          if (args[0] === sprite2) {
+            return true;
+          }
+        });
 
         coreLibrary.addEvent('whenclick', {sprite: {costume: 'a'}}, extraArgs =>
           eventLog.push(extraArgs.clickedSprite + ' was clicked')
@@ -476,12 +494,20 @@ describe('SpriteLab Core Library', () => {
       });
 
       afterEach(function () {
-        overlapStub.restore();
+        overlapStub.mockRestore();
       });
 
       it('Can run collision events', () => {
-        overlapStub.onCall(0).returns(true);
-        overlapStub.onCall(1).returns(true);
+        overlapStub.mockImplementation(() => {
+          if (overlapStub.mock.calls.length === 0) {
+            return true;
+          }
+        });
+        overlapStub.mockImplementation(() => {
+          if (overlapStub.mock.calls.length === 1) {
+            return true;
+          }
+        });
         coreLibrary.addEvent(
           'whentouch',
           {
@@ -505,8 +531,16 @@ describe('SpriteLab Core Library', () => {
       });
 
       it('while touching continues to call the callback', () => {
-        overlapStub.onCall(0).returns(true);
-        overlapStub.onCall(1).returns(true);
+        overlapStub.mockImplementation(() => {
+          if (overlapStub.mock.calls.length === 0) {
+            return true;
+          }
+        });
+        overlapStub.mockImplementation(() => {
+          if (overlapStub.mock.calls.length === 1) {
+            return true;
+          }
+        });
         coreLibrary.addEvent(
           'whiletouch',
           {
@@ -525,8 +559,16 @@ describe('SpriteLab Core Library', () => {
       });
 
       it('when touching does not continue to call the callback for the same overlap', () => {
-        overlapStub.onCall(0).returns(true);
-        overlapStub.onCall(1).returns(true);
+        overlapStub.mockImplementation(() => {
+          if (overlapStub.mock.calls.length === 0) {
+            return true;
+          }
+        });
+        overlapStub.mockImplementation(() => {
+          if (overlapStub.mock.calls.length === 1) {
+            return true;
+          }
+        });
         coreLibrary.addEvent(
           'whentouch',
           {
@@ -545,9 +587,21 @@ describe('SpriteLab Core Library', () => {
       });
 
       it('when touching calls the callback again if the sprites stop and start touching', () => {
-        overlapStub.onCall(0).returns(true);
-        overlapStub.onCall(1).returns(false);
-        overlapStub.onCall(2).returns(true);
+        overlapStub.mockImplementation(() => {
+          if (overlapStub.mock.calls.length === 0) {
+            return true;
+          }
+        });
+        overlapStub.mockImplementation(() => {
+          if (overlapStub.mock.calls.length === 1) {
+            return false;
+          }
+        });
+        overlapStub.mockImplementation(() => {
+          if (overlapStub.mock.calls.length === 2) {
+            return true;
+          }
+        });
         coreLibrary.addEvent(
           'whentouch',
           {
@@ -606,15 +660,31 @@ describe('SpriteLab Core Library', () => {
         overlapStub2 = stub(sprite2, 'overlap');
       });
       afterEach(function () {
-        overlapStub1.restore();
-        overlapStub2.restore();
+        overlapStub1.mockRestore();
+        overlapStub2.mockRestore();
       });
       it('Calls the callback for each overlap - 1 sprite, 1 target', () => {
         // Only one sprite is touching one target
-        overlapStub1.withArgs(target1).returns(true);
-        overlapStub1.withArgs(target2).returns(false);
-        overlapStub2.withArgs(target1).returns(false);
-        overlapStub2.withArgs(target2).returns(false);
+        overlapStub1.mockImplementation((...args) => {
+          if (args[0] === target1) {
+            return true;
+          }
+        });
+        overlapStub1.mockImplementation((...args) => {
+          if (args[0] === target2) {
+            return false;
+          }
+        });
+        overlapStub2.mockImplementation((...args) => {
+          if (args[0] === target1) {
+            return false;
+          }
+        });
+        overlapStub2.mockImplementation((...args) => {
+          if (args[0] === target2) {
+            return false;
+          }
+        });
 
         coreLibrary.addEvent(
           'whentouch',
@@ -640,10 +710,26 @@ describe('SpriteLab Core Library', () => {
 
       it('Calls the callback for each overlap - 1 sprite, 2 targets', () => {
         // One 'a' sprite is touching two 'b' sprites
-        overlapStub1.withArgs(target1).returns(true);
-        overlapStub1.withArgs(target2).returns(true);
-        overlapStub2.withArgs(target1).returns(false);
-        overlapStub2.withArgs(target2).returns(false);
+        overlapStub1.mockImplementation((...args) => {
+          if (args[0] === target1) {
+            return true;
+          }
+        });
+        overlapStub1.mockImplementation((...args) => {
+          if (args[0] === target2) {
+            return true;
+          }
+        });
+        overlapStub2.mockImplementation((...args) => {
+          if (args[0] === target1) {
+            return false;
+          }
+        });
+        overlapStub2.mockImplementation((...args) => {
+          if (args[0] === target2) {
+            return false;
+          }
+        });
 
         coreLibrary.addEvent(
           'whentouch',
@@ -660,10 +746,26 @@ describe('SpriteLab Core Library', () => {
 
       it('Calls the callback for each overlap - 2 sprites, 1 target', () => {
         // Two 'a' sprites, each touching one 'b' sprite
-        overlapStub1.withArgs(target1).returns(true);
-        overlapStub1.withArgs(target2).returns(false);
-        overlapStub2.withArgs(target1).returns(false);
-        overlapStub2.withArgs(target2).returns(true);
+        overlapStub1.mockImplementation((...args) => {
+          if (args[0] === target1) {
+            return true;
+          }
+        });
+        overlapStub1.mockImplementation((...args) => {
+          if (args[0] === target2) {
+            return false;
+          }
+        });
+        overlapStub2.mockImplementation((...args) => {
+          if (args[0] === target1) {
+            return false;
+          }
+        });
+        overlapStub2.mockImplementation((...args) => {
+          if (args[0] === target2) {
+            return true;
+          }
+        });
 
         coreLibrary.addEvent(
           'whentouch',
@@ -680,10 +782,26 @@ describe('SpriteLab Core Library', () => {
 
       it('Calls the callback for each overlap - 2 sprites, 2 targets', () => {
         // Two 'a' sprites, each touching two 'b' sprites
-        overlapStub1.withArgs(target1).returns(true);
-        overlapStub1.withArgs(target2).returns(true);
-        overlapStub2.withArgs(target1).returns(true);
-        overlapStub2.withArgs(target2).returns(true);
+        overlapStub1.mockImplementation((...args) => {
+          if (args[0] === target1) {
+            return true;
+          }
+        });
+        overlapStub1.mockImplementation((...args) => {
+          if (args[0] === target2) {
+            return true;
+          }
+        });
+        overlapStub2.mockImplementation((...args) => {
+          if (args[0] === target1) {
+            return true;
+          }
+        });
+        overlapStub2.mockImplementation((...args) => {
+          if (args[0] === target2) {
+            return true;
+          }
+        });
 
         coreLibrary.addEvent(
           'whiletouch',
@@ -705,7 +823,11 @@ describe('SpriteLab Core Library', () => {
 
       it('Calls the callback if costume group changes', () => {
         // 'a' sprite overlapping 'b' sprite
-        overlapStub1.withArgs(target1).returns(true);
+        overlapStub1.mockImplementation((...args) => {
+          if (args[0] === target1) {
+            return true;
+          }
+        });
         coreLibrary.addEvent(
           'whentouch',
           {sprite1: {costume: 'a'}, sprite2: {costume: 'b'}},
@@ -738,10 +860,26 @@ describe('SpriteLab Core Library', () => {
 
       it('Collision events with the same costume group work', () => {
         // Two 'a' sprites, overlapping each other
-        overlapStub1.withArgs(sprite1).returns(false);
-        overlapStub1.withArgs(sprite2).returns(true);
-        overlapStub2.withArgs(sprite1).returns(true);
-        overlapStub2.withArgs(sprite2).returns(false);
+        overlapStub1.mockImplementation((...args) => {
+          if (args[0] === sprite1) {
+            return false;
+          }
+        });
+        overlapStub1.mockImplementation((...args) => {
+          if (args[0] === sprite2) {
+            return true;
+          }
+        });
+        overlapStub2.mockImplementation((...args) => {
+          if (args[0] === sprite1) {
+            return true;
+          }
+        });
+        overlapStub2.mockImplementation((...args) => {
+          if (args[0] === sprite2) {
+            return false;
+          }
+        });
 
         coreLibrary.addEvent(
           'whiletouch',

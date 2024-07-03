@@ -1,6 +1,5 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import sinon from 'sinon';
 
 import UsPhoneNumberInput from '@cdo/apps/code-studio/pd/form_components/UsPhoneNumberInput';
 
@@ -49,13 +48,13 @@ describe('UsPhoneNumberInput', () => {
     });
 
     it('Calls supplied onChange function with just the numbers', () => {
-      const onChange = sinon.spy();
+      const onChange = jest.fn();
       usPhoneNumberInput.setProps({onChange});
 
       sendText('xxx(123');
-      expect(onChange.calledWith({phone: '1'})).toBe(true);
-      expect(onChange.calledWith({phone: '12'})).toBe(true);
-      expect(onChange.calledWith({phone: '123'})).toBe(true);
+      expect(onChange).toHaveBeenCalledWith({phone: '1'});
+      expect(onChange).toHaveBeenCalledWith({phone: '12'});
+      expect(onChange).toHaveBeenCalledWith({phone: '123'});
     });
   });
 

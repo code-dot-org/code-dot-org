@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import * as progressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import {UnconnectedStandardsReport as StandardsReport} from '@cdo/apps/templates/sectionProgress/standards/StandardsReport';
@@ -12,7 +11,7 @@ describe('StandardsReport', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
-    sinon.stub(progressLoader, 'loadUnitProgress');
+    jest.spyOn(progressLoader, 'loadUnitProgress').mockClear().mockImplementation();
     DEFAULT_PROPS = {
       scriptId: 2,
       teacherName: 'Awesome Teacher',
@@ -42,7 +41,7 @@ describe('StandardsReport', () => {
 
   afterEach(() => {
     restoreOnWindow('opener');
-    progressLoader.loadUnitProgress.restore();
+    progressLoader.loadUnitProgress.mockRestore();
   });
 
   it('report shows print buttons', () => {

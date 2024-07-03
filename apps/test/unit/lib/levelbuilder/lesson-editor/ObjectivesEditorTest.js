@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import ObjectivesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ObjectivesEditor';
 
@@ -14,7 +13,7 @@ describe('ObjectivesEditor', () => {
 
   let defaultProps, updateObjectives;
   beforeEach(() => {
-    updateObjectives = sinon.spy();
+    updateObjectives = jest.fn();
     defaultProps = {
       objectives: [{key: '1', description: 'description'}],
       updateObjectives,
@@ -51,7 +50,7 @@ describe('ObjectivesEditor', () => {
       ],
     });
 
-    updateObjectives.resetHistory();
+    updateObjectives.mockReset();
     const objectiveInput = wrapper
       .find('ObjectiveLine')
       .at(1)
@@ -80,7 +79,7 @@ describe('ObjectivesEditor', () => {
       ],
     });
 
-    updateObjectives.resetHistory();
+    updateObjectives.mockReset();
     const cancelEditButton = wrapper
       .find('ObjectiveLine')
       .last()

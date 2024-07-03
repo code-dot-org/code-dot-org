@@ -1,6 +1,5 @@
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
-import sinon from 'sinon';
 
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import Button from '@cdo/apps/templates/Button';
@@ -24,7 +23,7 @@ describe('CodeReviewGroupsDialog', () => {
           },
         };
       },
-      setCodeReviewGroups: sinon.stub().returns({
+      setCodeReviewGroups: jest.fn().mockReturnValue({
         done: callback => {
           callback();
           return {fail: () => {}};

@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {sources as sourcesApi, files as filesApi} from '@cdo/apps/clientApi';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -40,11 +39,11 @@ describe('VersionHistory', () => {
   let wrapper;
 
   beforeEach(() => {
-    sinon.stub(utils, 'reload');
+    jest.spyOn(utils, 'reload').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    utils.reload.restore();
+    utils.reload.mockRestore();
 
     if (wrapper) {
       wrapper.unmount();
@@ -54,13 +53,13 @@ describe('VersionHistory', () => {
 
   describe('using the sources api', () => {
     beforeEach(() => {
-      sinon.stub(sourcesApi, 'ajax');
-      sinon.stub(sourcesApi, 'restorePreviousFileVersion');
+      jest.spyOn(sourcesApi, 'ajax').mockClear().mockImplementation();
+      jest.spyOn(sourcesApi, 'restorePreviousFileVersion').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      sourcesApi.restorePreviousFileVersion.restore();
-      sourcesApi.ajax.restore();
+      sourcesApi.restorePreviousFileVersion.mockRestore();
+      sourcesApi.ajax.mockRestore();
     });
 
     testVersionHistory({
@@ -71,27 +70,27 @@ describe('VersionHistory', () => {
         isReadOnly: false,
       },
       finishVersionHistoryLoad: () => {
-        sourcesApi.ajax.firstCall.args[2](FAKE_VERSION_LIST_RESPONSE);
+        sourcesApi.ajax.mock.calls[0][2](FAKE_VERSION_LIST_RESPONSE);
         wrapper.update();
       },
-      failVersionHistoryLoad: () => sourcesApi.ajax.firstCall.args[3](),
+      failVersionHistoryLoad: () => sourcesApi.ajax.mock.calls[0][3](),
       restoreSpy: () => sourcesApi.restorePreviousFileVersion,
       finishRestoreVersion: () =>
-        sourcesApi.restorePreviousFileVersion.firstCall.args[2](),
+        sourcesApi.restorePreviousFileVersion.mock.calls[0][2](),
       failRestoreVersion: () =>
-        sourcesApi.restorePreviousFileVersion.firstCall.args[3](),
+        sourcesApi.restorePreviousFileVersion.mock.calls[0][3](),
     });
   });
 
   describe('using the files api', () => {
     beforeEach(() => {
-      sinon.stub(filesApi, 'getVersionHistory');
-      sinon.stub(filesApi, 'restorePreviousVersion');
+      jest.spyOn(filesApi, 'getVersionHistory').mockClear().mockImplementation();
+      jest.spyOn(filesApi, 'restorePreviousVersion').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      filesApi.restorePreviousVersion.restore();
-      filesApi.getVersionHistory.restore();
+      filesApi.restorePreviousVersion.mockRestore();
+      filesApi.getVersionHistory.mockRestore();
     });
 
     testVersionHistory({
@@ -102,18 +101,18 @@ describe('VersionHistory', () => {
         isReadOnly: false,
       },
       finishVersionHistoryLoad: () => {
-        filesApi.getVersionHistory.firstCall.args[0](
+        filesApi.getVersionHistory.mock.calls[0][0](
           FAKE_VERSION_LIST_RESPONSE
         );
         wrapper.update();
       },
       failVersionHistoryLoad: () =>
-        filesApi.getVersionHistory.firstCall.args[1](),
+        filesApi.getVersionHistory.mock.calls[0][1](),
       restoreSpy: () => filesApi.restorePreviousVersion,
       finishRestoreVersion: () =>
-        filesApi.restorePreviousVersion.firstCall.args[1](),
+        filesApi.restorePreviousVersion.mock.calls[0][1](),
       failRestoreVersion: () =>
-        filesApi.restorePreviousVersion.firstCall.args[2](),
+        filesApi.restorePreviousVersion.mock.calls[0][2](),
     });
   });
 
@@ -256,9 +255,9 @@ describe('VersionHistory', () => {
       let handleClearPuzzle;
 
       beforeEach(() => {
-        sinon.stub(firehoseClient, 'putRecord');
+        jest.spyOn(firehoseClient, 'putRecord').mockClear().mockImplementation();
 
-        handleClearPuzzle = sinon.stub().returns(Promise.resolve());
+        handleClearPuzzle = jest.fn().mockReturnValue(Promise.resolve());
         wrapper = mount(
           <VersionHistory {...props} handleClearPuzzle={handleClearPuzzle} />
         );
@@ -269,7 +268,7 @@ describe('VersionHistory', () => {
 
       afterEach(async () => {
         await wasCalled(utils.reload);
-        firehoseClient.putRecord.restore();
+        firehoseClient.putRecord.mockRestore();
       });
 
       it('immediately renders spinner', () => {

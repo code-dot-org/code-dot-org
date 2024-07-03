@@ -1,7 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 
@@ -43,7 +42,7 @@ describe('Design System - Dropdown Select Component', () => {
 
   it('SimpleDropdown - renders with correct text and options, changes selected value on when one is selected', async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
     const onChange = e => {
       onDropdownChange(e.target.value);
       spyOnChange(e.target.value);
@@ -94,7 +93,7 @@ describe('Design System - Dropdown Select Component', () => {
 
   it("SimpleDropdown - renders disabled dropdown, doesn't change on click", async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
     const onChange = e => {
       onDropdownChange(e.target.value);
       spyOnChange(e.target.value);

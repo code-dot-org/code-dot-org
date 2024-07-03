@@ -3,7 +3,6 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {
@@ -32,7 +31,7 @@ import {assert} from '../../../../util/reconfiguredChai';
 describe('UnitEditor', () => {
   let defaultProps, store;
   beforeEach(() => {
-    sinon.stub(utils, 'navigateToHref');
+    jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
     stubRedux();
 
     registerReducers({
@@ -96,7 +95,7 @@ describe('UnitEditor', () => {
 
   afterEach(() => {
     restoreRedux();
-    utils.navigateToHref.restore();
+    utils.navigateToHref.mockRestore();
   });
 
   const createWrapper = overrideProps => {
@@ -313,11 +312,9 @@ describe('UnitEditor', () => {
   });
 
   describe('Saving Script Editor', () => {
-    let clock;
-
     afterEach(() => {
       if (clock) {
-        clock.restore();
+        jest.useRealTimers();
         clock = undefined;
       }
     });
@@ -346,10 +343,10 @@ describe('UnitEditor', () => {
       expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
       expect(unitEditor.state().isSaving).toBe(true);
 
-      clock = sinon.useFakeTimers(new Date('2020-12-01'));
+      jest.useFakeTimers().setSystemTime(new Date('2020-12-01'));
       const expectedLastSaved = Date.now();
       server.respond();
-      clock.tick(50);
+      jest.advanceTimersByTime(50);
 
       unitEditor.update();
       expect(utils.navigateToHref).not.toHaveBeenCalled();
@@ -358,7 +355,7 @@ describe('UnitEditor', () => {
       expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(0);
       //check that last saved message is showing
       expect(wrapper.find('.lastSavedMessage').length).toBe(1);
-      server.restore();
+      server.mockRestore();
     });
 
     it('shows error when save and keep editing has error saving', () => {
@@ -393,7 +390,7 @@ describe('UnitEditor', () => {
         wrapper.find('.saveBar').contains('Error Saving: There was an error')
       ).toBe(true);
 
-      server.restore();
+      server.mockRestore();
     });
 
     it('Timeout error shows custom error message to refresh and check it saved', () => {
@@ -438,7 +435,7 @@ describe('UnitEditor', () => {
     });
 
     it('shows error when showCalendar is true and weeklyInstructionalMinutes not provided', () => {
-      sinon.stub($, 'ajax');
+      jest.spyOn($, 'ajax').mockClear().mockImplementation();
       const wrapper = createWrapper({initialShowCalendar: true});
       const unitEditor = wrapper.find('UnitEditor');
 
@@ -460,11 +457,11 @@ describe('UnitEditor', () => {
             'Error Saving: Please provide instructional minutes per week in Unit Calendar Settings.'
           )
       ).toBe(true);
-      $.ajax.restore();
+      $.ajax.mockRestore();
     });
 
     it('shows error when showCalendar is true and weeklyInstructionalMinutes is invalid', () => {
-      sinon.stub($, 'ajax');
+      jest.spyOn($, 'ajax').mockClear().mockImplementation();
       const wrapper = createWrapper({
         initialShowCalendar: true,
         initialWeeklyInstructionalMinutes: -100,
@@ -491,11 +488,11 @@ describe('UnitEditor', () => {
             'Error Saving: Please provide a positive number of instructional minutes per week in Unit Calendar Settings.'
           )
       ).toBe(true);
-      $.ajax.restore();
+      $.ajax.mockRestore();
     });
 
     it('shows error when published state is pilot but no pilot experiment given', () => {
-      sinon.stub($, 'ajax');
+      jest.spyOn($, 'ajax').mockClear().mockImplementation();
       const wrapper = createWrapper({});
 
       const unitEditor = wrapper.find('UnitEditor');
@@ -525,11 +522,11 @@ describe('UnitEditor', () => {
           )
       ).toBe(true);
 
-      $.ajax.restore();
+      $.ajax.mockRestore();
     });
 
     it('shows error when published state is preview or stable and device compatibility JSON is null', () => {
-      sinon.stub($, 'ajax');
+      jest.spyOn($, 'ajax').mockClear().mockImplementation();
       const wrapper = createWrapper({
         isMissingRequiredDeviceCompatibilities: true,
         hasCourse: true,
@@ -562,11 +559,11 @@ describe('UnitEditor', () => {
           )
       ).toBe(true);
 
-      $.ajax.restore();
+      $.ajax.mockRestore();
     });
 
     it('shows error when published state is preview or stable and at least one device compatibility is not set', () => {
-      sinon.stub($, 'ajax');
+      jest.spyOn($, 'ajax').mockClear().mockImplementation();
       const wrapper = createWrapper({
         isMissingRequiredDeviceCompatibilities: true,
         hasCourse: true,
@@ -600,7 +597,7 @@ describe('UnitEditor', () => {
           )
       ).toBe(true);
 
-      $.ajax.restore();
+      $.ajax.mockRestore();
     });
 
     it('saves successfully if unit is not a course and only version year is set', () => {
@@ -632,10 +629,10 @@ describe('UnitEditor', () => {
       expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
       expect(unitEditor.state().isSaving).toBe(true);
 
-      clock = sinon.useFakeTimers(new Date('2020-12-01'));
+      jest.useFakeTimers().setSystemTime(new Date('2020-12-01'));
       const expectedLastSaved = Date.now();
       server.respond();
-      clock.tick(50);
+      jest.advanceTimersByTime(50);
 
       unitEditor.update();
       expect(utils.navigateToHref).not.toHaveBeenCalled();
@@ -644,11 +641,11 @@ describe('UnitEditor', () => {
       expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(0);
       //check that last saved message is showing
       expect(wrapper.find('.lastSavedMessage').length).toBe(1);
-      server.restore();
+      server.mockRestore();
     });
 
     it('shows error when version year is set but family name is not', () => {
-      sinon.stub($, 'ajax');
+      jest.spyOn($, 'ajax').mockClear().mockImplementation();
       const wrapper = createWrapper({initialIsCourse: true});
 
       const unitEditor = wrapper.find('UnitEditor');
@@ -676,11 +673,11 @@ describe('UnitEditor', () => {
           )
       ).toBe(true);
 
-      $.ajax.restore();
+      $.ajax.mockRestore();
     });
 
     it('shows error when moving standalone unit out of in development if not supplied all standalone unit information', () => {
-      sinon.stub($, 'ajax');
+      jest.spyOn($, 'ajax').mockClear().mockImplementation();
       const wrapper = createWrapper({initialIsCourse: false, hasCourse: false});
 
       const unitEditor = wrapper.find('UnitEditor');
@@ -707,11 +704,11 @@ describe('UnitEditor', () => {
           )
       ).toBe(true);
 
-      $.ajax.restore();
+      $.ajax.mockRestore();
     });
 
     it('saves successfully when moving standalone unit out of in development if professional learning course', () => {
-      sinon.stub(window, 'confirm').callsFake(() => true);
+      jest.spyOn(window, 'confirm').mockClear().mockImplementation(() => true);
       const wrapper = createWrapper({initialIsCourse: false, hasCourse: false});
 
       const unitEditor = wrapper.find('UnitEditor');
@@ -738,10 +735,10 @@ describe('UnitEditor', () => {
       expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
       expect(unitEditor.state().isSaving).toBe(true);
 
-      clock = sinon.useFakeTimers(new Date('2020-12-01'));
+      jest.useFakeTimers().setSystemTime(new Date('2020-12-01'));
       const expectedLastSaved = Date.now();
       server.respond();
-      clock.tick(50);
+      jest.advanceTimersByTime(50);
 
       unitEditor.update();
       expect(utils.navigateToHref).not.toHaveBeenCalled();
@@ -750,12 +747,12 @@ describe('UnitEditor', () => {
       expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(0);
       //check that last saved message is showing
       expect(wrapper.find('.lastSavedMessage').length).toBe(1);
-      server.restore();
-      window.confirm.restore();
+      server.mockRestore();
+      window.confirm.mockRestore();
     });
 
     it('shows error when family name is set but version year is not', () => {
-      sinon.stub($, 'ajax');
+      jest.spyOn($, 'ajax').mockClear().mockImplementation();
       const wrapper = createWrapper({initialIsCourse: true});
 
       const unitEditor = wrapper.find('UnitEditor');
@@ -783,7 +780,7 @@ describe('UnitEditor', () => {
           )
       ).toBe(true);
 
-      $.ajax.restore();
+      $.ajax.mockRestore();
     });
 
     it('can save and close', () => {
@@ -814,7 +811,7 @@ describe('UnitEditor', () => {
       unitEditor.update();
       expect(utils.navigateToHref).toHaveBeenCalledWith(`/s/test-unit${window.location.search}`);
 
-      server.restore();
+      server.mockRestore();
     });
 
     it('shows error when save and keep editing has error saving', () => {
@@ -851,7 +848,7 @@ describe('UnitEditor', () => {
         wrapper.find('.saveBar').contains('Error Saving: There was an error')
       ).toBe(true);
 
-      server.restore();
+      server.mockRestore();
     });
   });
 });

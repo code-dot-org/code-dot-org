@@ -1,6 +1,4 @@
 /** @file Test of our p5.play wrapper object */
-import {spy} from 'sinon';
-
 import createP5Wrapper from '../../util/gamelab/TestableP5Wrapper';
 import {assert} from '../../util/reconfiguredChai';
 import {sandboxDocumentBody} from '../../util/testUtils';
@@ -177,28 +175,28 @@ describe('GameLabP5', function () {
     });
 
     afterEach(function () {
-      spyEllipse.restore();
+      spyEllipse.mockRestore();
     });
 
     it('draws the same ellipse when called with all arguments', function () {
       p5Wrapper.p5.ellipse(100, 100, 50, 50);
       p5Wrapper.p5.originalEllipse_(100, 100, 50, 50);
-      expect(p5Wrapper.p5.originalEllipse_.calledTwice).toBe(true);
-      expect(p5Wrapper.p5.originalEllipse_.args[0]).toEqual(p5Wrapper.p5.originalEllipse_.args[1]);
+      expect(p5Wrapper.p5.originalEllipse_).toHaveBeenCalledTimes(2);
+      expect(p5Wrapper.p5.originalEllipse_.mock.calls[0]).toEqual(p5Wrapper.p5.originalEllipse_.mock.calls[1]);
     });
 
     it('draws a circle with radius equal to half of width, when no height given', function () {
       p5Wrapper.p5.ellipse(100, 100, 60);
       p5Wrapper.p5.originalEllipse_(100, 100, 60, 60);
-      expect(p5Wrapper.p5.originalEllipse_.calledTwice).toBe(true);
-      expect(p5Wrapper.p5.originalEllipse_.args[0]).toEqual(p5Wrapper.p5.originalEllipse_.args[1]);
+      expect(p5Wrapper.p5.originalEllipse_).toHaveBeenCalledTimes(2);
+      expect(p5Wrapper.p5.originalEllipse_.mock.calls[0]).toEqual(p5Wrapper.p5.originalEllipse_.mock.calls[1]);
     });
 
     it('draws a circle with diameter 50 if no width or height given', function () {
       p5Wrapper.p5.ellipse(100, 100);
       p5Wrapper.p5.originalEllipse_(100, 100, 50, 50);
-      expect(p5Wrapper.p5.originalEllipse_.calledTwice).toBe(true);
-      expect(p5Wrapper.p5.originalEllipse_.args[0]).toEqual(p5Wrapper.p5.originalEllipse_.args[1]);
+      expect(p5Wrapper.p5.originalEllipse_).toHaveBeenCalledTimes(2);
+      expect(p5Wrapper.p5.originalEllipse_.mock.calls[0]).toEqual(p5Wrapper.p5.originalEllipse_.mock.calls[1]);
     });
   });
 
@@ -209,14 +207,14 @@ describe('GameLabP5', function () {
     });
 
     afterEach(function () {
-      spyRect.restore();
+      spyRect.mockRestore();
     });
 
     it('draws the same rect when called with all arguments', function () {
       p5Wrapper.p5.rect(100, 100, 75, 75, 50, 50, 25, 25);
       p5Wrapper.p5.originalRect_(100, 100, 75, 75, 50, 50, 25, 25);
-      expect(p5Wrapper.p5.originalRect_.calledTwice).toBe(true);
-      expect(p5Wrapper.p5.originalRect_.args[0]).toEqual(p5Wrapper.p5.originalRect_.args[1]);
+      expect(p5Wrapper.p5.originalRect_).toHaveBeenCalledTimes(2);
+      expect(p5Wrapper.p5.originalRect_.mock.calls[0]).toEqual(p5Wrapper.p5.originalRect_.mock.calls[1]);
     });
 
     it('draws a rect with no border radiuses when none given', function () {
@@ -231,8 +229,8 @@ describe('GameLabP5', function () {
         undefined,
         undefined
       );
-      expect(p5Wrapper.p5.originalRect_.calledTwice).toBe(true);
-      expect(p5Wrapper.p5.originalRect_.args[0]).toEqual(p5Wrapper.p5.originalRect_.args[1]);
+      expect(p5Wrapper.p5.originalRect_).toHaveBeenCalledTimes(2);
+      expect(p5Wrapper.p5.originalRect_.mock.calls[0]).toEqual(p5Wrapper.p5.originalRect_.mock.calls[1]);
     });
 
     it('draws a square with height equal to width, when no height given', function () {
@@ -247,8 +245,8 @@ describe('GameLabP5', function () {
         undefined,
         undefined
       );
-      expect(p5Wrapper.p5.originalRect_.calledTwice).toBe(true);
-      expect(p5Wrapper.p5.originalRect_.args[0]).toEqual(p5Wrapper.p5.originalRect_.args[1]);
+      expect(p5Wrapper.p5.originalRect_).toHaveBeenCalledTimes(2);
+      expect(p5Wrapper.p5.originalRect_.mock.calls[0]).toEqual(p5Wrapper.p5.originalRect_.mock.calls[1]);
     });
 
     it('draws a size 50 square if no width or height given', function () {
@@ -263,8 +261,8 @@ describe('GameLabP5', function () {
         undefined,
         undefined
       );
-      expect(p5Wrapper.p5.originalRect_.calledTwice).toBe(true);
-      expect(p5Wrapper.p5.originalRect_.args[0]).toEqual(p5Wrapper.p5.originalRect_.args[1]);
+      expect(p5Wrapper.p5.originalRect_).toHaveBeenCalledTimes(2);
+      expect(p5Wrapper.p5.originalRect_.mock.calls[0]).toEqual(p5Wrapper.p5.originalRect_.mock.calls[1]);
     });
   });
 });

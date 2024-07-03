@@ -8,8 +8,6 @@ import {
   FormGroup,
   HelpBlock,
 } from 'react-bootstrap';
-/* eslint-enable no-restricted-imports */
-import sinon from 'sinon';
 
 import ButtonList from '@cdo/apps/code-studio/pd/form_components/ButtonList';
 
@@ -21,7 +19,7 @@ describe('ButtonList', () => {
     let onChangeCallback;
 
     beforeAll(() => {
-      onChangeCallback = sinon.spy();
+      onChangeCallback = jest.fn();
 
       radioList = shallow(
         <ButtonList
@@ -67,7 +65,7 @@ describe('ButtonList', () => {
     let onChangeCallback;
 
     beforeEach(() => {
-      onChangeCallback = sinon.spy();
+      onChangeCallback = jest.fn();
 
       checkboxList = shallow(
         <ButtonList
@@ -178,7 +176,7 @@ describe('ButtonList', () => {
     let dogBreedInput;
 
     beforeAll(() => {
-      onDogBreedInputChange = sinon.spy();
+      onDogBreedInputChange = jest.fn();
 
       buttonList = shallow(
         <ButtonList

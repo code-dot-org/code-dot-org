@@ -1,6 +1,5 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -80,11 +79,11 @@ function getFirstRenderedBasicBubble(propOverrides = {}) {
   mount(<ProgressTableLevelBubble {...defaultProps} {...propOverrides} />);
 
   // next we get the args passed to `renderBasicBubble` to render the bubble
-  const shape = renderPropsSpy.args[0][0];
-  const size = renderPropsSpy.args[0][1];
-  const progressStyle = renderPropsSpy.args[0][2];
-  const content = renderPropsSpy.args[0][3];
-  const showKeepWorkingBadge = renderPropsSpy.args[0][4];
+  const shape = renderPropsSpy.mock.calls[0][0];
+  const size = renderPropsSpy.mock.calls[0][1];
+  const progressStyle = renderPropsSpy.mock.calls[0][2];
+  const content = renderPropsSpy.mock.calls[0][3];
+  const showKeepWorkingBadge = renderPropsSpy.mock.calls[0][4];
 
   // finally we render the `BasicBubble` itself so we can verifty its props
   // (since the underlying `CachedElement` rendered it as raw HTML when
@@ -121,12 +120,12 @@ function getCacheSize() {
 
 describe('ProgressTableLevelBubble', () => {
   beforeEach(() => {
-    renderPropsSpy.resetHistory();
+    renderPropsSpy.mockReset();
     cacheExports.clearElementsCache('BasicBubble');
   });
 
   afterAll(() => {
-    renderPropsSpy.resetHistory();
+    renderPropsSpy.mockReset();
     cacheExports.clearElementsCache('BasicBubble');
   });
 
@@ -281,14 +280,14 @@ describe('ProgressTableLevelBubble', () => {
     it('only caches one element when rendering two identical bubbles', () => {
       mount(<ProgressTableLevelBubble {...defaultProps} />);
       mount(<ProgressTableLevelBubble {...defaultProps} />);
-      expect(renderPropsSpy.calledOnce).toBe(true);
+      expect(renderPropsSpy).toHaveBeenCalledTimes(1);
       expect(getCacheSize()).toBe(1);
     });
 
     it('caches two elements when rendering two different bubbles', () => {
       mount(<ProgressTableLevelBubble {...defaultProps} />);
       mount(<ProgressTableLevelBubble {...defaultProps} isUnplugged={true} />);
-      expect(renderPropsSpy.calledTwice).toBe(true);
+      expect(renderPropsSpy).toHaveBeenCalledTimes(2);
       expect(getCacheSize()).toBe(2);
     });
 
@@ -300,7 +299,7 @@ describe('ProgressTableLevelBubble', () => {
       const wrapperB = mount(
         <ProgressTableLevelBubble {...defaultProps} title="2" isPaired={true} />
       );
-      expect(renderPropsSpy.calledOnce).toBe(true);
+      expect(renderPropsSpy).toHaveBeenCalledTimes(1);
       expect(getCacheSize()).toBe(1);
       expect(
         wrapperA.find('div').props().dangerouslySetInnerHTML.__html
@@ -312,7 +311,7 @@ describe('ProgressTableLevelBubble', () => {
       mount(
         <ProgressTableLevelBubble {...defaultProps} url={'/foo/bar/baz'} />
       );
-      expect(renderPropsSpy.calledOnce).toBe(true);
+      expect(renderPropsSpy).toHaveBeenCalledTimes(1);
       expect(getCacheSize()).toBe(1);
     });
   });

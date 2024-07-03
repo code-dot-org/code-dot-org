@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import * as utils from '@cdo/apps/code-studio/utils';
 import {
@@ -78,7 +77,7 @@ describe('CodeReviewTimelineElement', () => {
 
     it('has expected params in eyeball link', () => {
       // Params existing in the url should be included and version param is overridden if one already exists in the url
-      sinon.stub(utils, 'queryParams').returns({
+      jest.spyOn(utils, 'queryParams').mockClear().mockReturnValue({
         user_id: 123,
         section_id: 456,
         version: 'viewingOldVersion',
@@ -92,7 +91,7 @@ describe('CodeReviewTimelineElement', () => {
       expect(eyeballLink.props().versionHref.includes('version=asdfjkl')).toBe(true);
       expect(eyeballLink.props().versionHref.includes('user_id=123')).toBe(true);
       expect(eyeballLink.props().versionHref.includes('section_id=456')).toBe(true);
-      utils.queryParams.restore();
+      utils.queryParams.mockRestore();
     });
 
     it('hides eyeball link if there is not a version', () => {

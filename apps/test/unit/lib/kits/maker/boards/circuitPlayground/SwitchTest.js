@@ -1,5 +1,4 @@
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
-import sinon from 'sinon';
 
 import Switch, {
   READ_ONLY_PROPERTIES,
@@ -12,15 +11,14 @@ describe('Switch', () => {
   let fakeJohnnyFiveSwitch;
 
   beforeAll(() =>
-    sinon
-      .stub(Switch, '_constructFiveSwitchController')
-      .callsFake((board, pin) => {
+    jest.spyOn(Switch, '_constructFiveSwitchController').mockClear()
+      .mockImplementation((board, pin) => {
         fakeJohnnyFiveSwitch = new FakeJohnnyFiveSwitch({board, pin});
         return fakeJohnnyFiveSwitch;
       })
   );
   afterEach(() => (fakeJohnnyFiveSwitch = null));
-  afterAll(() => Switch._constructFiveSwitchController.restore());
+  afterAll(() => Switch._constructFiveSwitchController.mockRestore());
 
   it('is an EventEmitter', () => {
     const testObj = new Switch({});
@@ -66,9 +64,9 @@ describe('Switch', () => {
       // When the johnny five switch is initialized,
       // it emits an event to represent the initial state
       fakeJohnnyFiveSwitch.emit('close');
-      openSpy = sinon.spy();
-      closeSpy = sinon.spy();
-      changeSpy = sinon.spy();
+      openSpy = jest.fn();
+      closeSpy = jest.fn();
+      changeSpy = jest.fn();
       testObj.on('open', openSpy);
       testObj.on('close', closeSpy);
       testObj.on('change', changeSpy);
@@ -107,9 +105,9 @@ describe('Switch', () => {
     beforeEach(() => {
       testObj = new Switch({});
       fakeJohnnyFiveSwitch.emit('open');
-      openSpy = sinon.spy();
-      closeSpy = sinon.spy();
-      changeSpy = sinon.spy();
+      openSpy = jest.fn();
+      closeSpy = jest.fn();
+      changeSpy = jest.fn();
       testObj.on('open', openSpy);
       testObj.on('close', closeSpy);
       testObj.on('change', changeSpy);

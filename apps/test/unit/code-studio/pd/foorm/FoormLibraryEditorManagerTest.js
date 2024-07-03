@@ -1,7 +1,6 @@
 import {assert} from 'chai';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import FoormEntityEditor from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityEditor';
 import FoormEntityLoadButtons from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityLoadButtons';
@@ -42,7 +41,7 @@ describe('FoormLibraryEditorManager', () => {
   });
 
   afterEach(() => {
-    server.restore();
+    server.mockRestore();
   });
 
   const sampleExistingLibraryQuestionData = {

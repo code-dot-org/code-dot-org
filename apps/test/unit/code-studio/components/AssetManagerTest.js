@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import AssetManager from '@cdo/apps/code-studio/components/AssetManager';
 
@@ -22,7 +21,7 @@ describe('AssetManager', () => {
   });
 
   afterEach(() => {
-    xhr.restore();
+    xhr.mockRestore();
   });
 
   describe('componentDidMount', () => {

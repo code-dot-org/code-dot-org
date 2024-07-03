@@ -1,6 +1,5 @@
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
-import sinon from 'sinon';
 
 import DataDocEditAll from '@cdo/apps/lib/levelbuilder/data-docs-editor/DataDocEditAll';
 
@@ -97,6 +96,6 @@ describe('DataDocEditAll', () => {
     // ensure doc was successfully deleted
     expect(testDeleteWrapper.findAll('.guide-box').toString()).not.toContain(docToDelete.key);
     expect(testDeleteWrapper.exists('Dialog')).not.toBe(true);
-    server.restore();
+    server.mockRestore();
   });
 });

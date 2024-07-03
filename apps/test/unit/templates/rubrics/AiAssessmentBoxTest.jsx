@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -190,7 +189,7 @@ describe('AiAssessmentBox', () => {
   });
 
   it('navigates to the line when the evidence link for a line number is activated', () => {
-    const scrollToLineStub = sinon.stub(EditorAnnotator, 'scrollToLine');
+    const scrollToLineStub = jest.spyOn(EditorAnnotator, 'scrollToLine').mockClear().mockImplementation();
 
     const wrapper = mount(
       <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
@@ -208,16 +207,16 @@ describe('AiAssessmentBox', () => {
     link.simulate('click');
 
     // Check that we called the editor annotator to scroll to the line we want.
-    sinon.assert.calledWith(scrollToLineStub, lineNumber);
+    expect(scrollToLineStub).toHaveBeenCalledWith(lineNumber);
 
     // Restore stubs
-    scrollToLineStub.restore();
+    scrollToLineStub.mockRestore();
   });
 
   it('should send an event when the evidence link is clicked', () => {
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
     const eventName = EVENTS.TA_RUBRIC_EVIDENCE_GOTO_CLICKED;
-    const scrollToLineStub = sinon.stub(EditorAnnotator, 'scrollToLine');
+    const scrollToLineStub = jest.spyOn(EditorAnnotator, 'scrollToLine').mockClear().mockImplementation();
 
     const wrapper = mount(
       <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
@@ -240,7 +239,7 @@ describe('AiAssessmentBox', () => {
     });
 
     // Restore stubs
-    scrollToLineStub.restore();
-    sendEventSpy.restore();
+    scrollToLineStub.mockRestore();
+    sendEventSpy.mockRestore();
   });
 });

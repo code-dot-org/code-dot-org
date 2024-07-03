@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import LoadableComponent from '@cdo/apps/templates/LoadableComponent';
@@ -13,9 +12,9 @@ describe('LoadableComponent', () => {
   beforeEach(() => {
     renderedText = 'component';
     errorMessage = 'error';
-    loadFunction = sinon.stub();
+    loadFunction = jest.fn();
     loadArgs = ['arg1', 'arg2'];
-    renderFunction = sinon.stub().returns(<div>{renderedText}</div>);
+    renderFunction = jest.fn().mockReturnValue(<div>{renderedText}</div>);
   });
 
   it('displays a loading spinner before component loads', () => {
@@ -46,7 +45,7 @@ describe('LoadableComponent', () => {
 
     expect(wrapper.find(Spinner).length).toBe(0);
     expect(wrapper.text()).toBe(renderedText);
-    sinon.assert.calledWith(renderFunction, renderArgs[0], renderArgs[1]);
+    expect(renderFunction).toHaveBeenCalledWith(renderArgs[0], renderArgs[1]);
   });
 
   it('displays error message if load function produces an error', () => {
@@ -65,6 +64,6 @@ describe('LoadableComponent', () => {
 
     expect(wrapper.find(Spinner).length).toBe(0);
     expect(wrapper.text()).toBe(errorMessage);
-    sinon.assert.notCalled(renderFunction);
+    expect(renderFunction).not.toHaveBeenCalled();
   });
 });

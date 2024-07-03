@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedBackgroundMusicMuteButton as BackgroundMusicMuteButton} from '@cdo/apps/templates/instructions/BackgroundMusicMuteButton';
 import i18n from '@cdo/locale';
@@ -31,7 +30,7 @@ describe('SignedInUser', () => {
     server.respondWith('POST', '/api/v1/users/me/mute_music', 'ok');
   });
 
-  afterEach(() => server.restore());
+  afterEach(() => server.mockRestore());
 
   it('switches label and icon when button is pressed', () => {
     const wrapper = setUp();
@@ -41,8 +40,8 @@ describe('SignedInUser', () => {
   });
 
   it('calls mute and unmute functions accordingly', () => {
-    let onMuteSpy = sinon.spy();
-    let onUnmuteSpy = sinon.spy();
+    let onMuteSpy = jest.fn();
+    let onUnmuteSpy = jest.fn();
     const wrapper = setUp({
       muteBackgroundMusic: onMuteSpy,
       unmuteBackgroundMusic: onUnmuteSpy,

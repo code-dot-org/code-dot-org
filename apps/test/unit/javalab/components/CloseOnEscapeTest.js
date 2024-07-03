@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
 
@@ -11,7 +10,7 @@ describe('CloseOnEscape', () => {
 
   beforeEach(() => {
     className = '.class-name';
-    handleClose = sinon.spy();
+    handleClose = jest.fn();
     wrapper = shallow(
       <CloseOnEscape handleClose={handleClose} className={className} />
     );

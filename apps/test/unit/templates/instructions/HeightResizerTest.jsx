@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 
@@ -8,8 +7,8 @@ import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 
 describe('HeightResizer', () => {
   it('handles a drag event', () => {
-    const resizeItemTopCallback = sinon.stub().returns(5);
-    const onResizeCallback = sinon.stub();
+    const resizeItemTopCallback = jest.fn().mockReturnValue(5);
+    const onResizeCallback = jest.fn();
     const wrapper = mount(
       <HeightResizer
         resizeItemTop={resizeItemTopCallback}
@@ -65,7 +64,7 @@ describe('HeightResizer', () => {
         onResize={() => {}}
       />
     );
-    sinon.spy(wrapper.instance(), 'setState');
+    jest.spyOn(wrapper.instance(), 'setState').mockClear();
 
     // Simulate mouseDown with non-primary mouse button
     const mouseDownEvent = mouseEvent({
@@ -81,8 +80,8 @@ describe('HeightResizer', () => {
   });
 
   it('ignores mouseMove events if not dragging', () => {
-    const resizeItemTopCallback = sinon.stub().returns(10);
-    const onResizeCallback = sinon.stub();
+    const resizeItemTopCallback = jest.fn().mockReturnValue(10);
+    const onResizeCallback = jest.fn();
     const wrapper = mount(
       <HeightResizer
         resizeItemTop={resizeItemTopCallback}
@@ -90,7 +89,7 @@ describe('HeightResizer', () => {
         onResize={onResizeCallback}
       />
     );
-    sinon.spy(wrapper.instance(), 'setState');
+    jest.spyOn(wrapper.instance(), 'setState').mockClear();
 
     const mouseMoveEvent = mouseEvent({
       pageY: 30,
@@ -108,8 +107,8 @@ describe('HeightResizer', () => {
 
 function mouseEvent(props) {
   return {
-    stopPropagation: sinon.spy(),
-    preventDefault: sinon.spy(),
+    stopPropagation: jest.fn(),
+    preventDefault: jest.fn(),
     ...props,
   };
 }

@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import ConfirmImportButton from '@cdo/apps/storage/dataBrowser/ConfirmImportButton';
 import commonI18n from '@cdo/locale';
@@ -19,11 +18,11 @@ describe('ConfirmImportButton', () => {
     }
 
     afterEach(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('should render a localized string for the confirmation message', () => {
-      sinon.stub(commonI18n, 'confirmImportOverwrite').returns('i18n-confirm');
+      jest.spyOn(commonI18n, 'confirmImportOverwrite').mockClear().mockReturnValue('i18n-confirm');
 
       const wrapper = createConfirmImportButton();
 
@@ -32,7 +31,7 @@ describe('ConfirmImportButton', () => {
     });
 
     it('should render a localized string for "Cancel"', () => {
-      sinon.stub(commonI18n, 'cancel').returns('i18n-cancel');
+      jest.spyOn(commonI18n, 'cancel').mockClear().mockReturnValue('i18n-cancel');
 
       const wrapper = createConfirmImportButton();
 
@@ -41,7 +40,7 @@ describe('ConfirmImportButton', () => {
     });
 
     it('should render a localized string for "Yes"', () => {
-      sinon.stub(commonI18n, 'yes').returns('i18n-yes');
+      jest.spyOn(commonI18n, 'yes').mockClear().mockReturnValue('i18n-yes');
 
       const wrapper = createConfirmImportButton();
 
@@ -50,7 +49,7 @@ describe('ConfirmImportButton', () => {
     });
 
     it('should render a localized string for the confirm title', () => {
-      sinon.stub(commonI18n, 'confirmImportOverwriteTitle').returns('i18n-ct');
+      jest.spyOn(commonI18n, 'confirmImportOverwriteTitle').mockClear().mockReturnValue('i18n-ct');
 
       const wrapper = createConfirmImportButton();
 
@@ -59,7 +58,7 @@ describe('ConfirmImportButton', () => {
     });
 
     it('should render a localized string while importing', () => {
-      sinon.stub(commonI18n, 'importingWithEllipsis').returns('i18n-importing');
+      jest.spyOn(commonI18n, 'importingWithEllipsis').mockClear().mockReturnValue('i18n-importing');
 
       const wrapper = createConfirmImportButton();
 
@@ -68,7 +67,7 @@ describe('ConfirmImportButton', () => {
     });
 
     it('should render a localized string for the import button', () => {
-      sinon.stub(commonI18n, 'importCSV').returns('i18n-import');
+      jest.spyOn(commonI18n, 'importCSV').mockClear().mockReturnValue('i18n-import');
 
       const wrapper = createConfirmImportButton();
 

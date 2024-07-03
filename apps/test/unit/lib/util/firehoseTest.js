@@ -1,5 +1,3 @@
-import {stub} from 'sinon';
-
 import {validateFirehoseDataSize} from '@cdo/apps/lib/util/firehose';
 import logToCloud from '@cdo/apps/logToCloud';
 
@@ -16,7 +14,7 @@ describe('firehoseDataSize', () => {
   });
 
   afterEach(() => {
-    logToCloud.logError.restore();
+    logToCloud.logError.mockRestore();
   });
 
   it('checks json size to send newrelic error', () => {

@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import {
   pegasus,
   studio,
@@ -81,7 +79,7 @@ describe('metaTagDescription() for valid urls', () => {
   });
 
   afterEach(() => {
-    sandbox.restore();
+    sandbox.mockRestore();
   });
 
   it('retrieves the content from the description meta tag', () => {
@@ -91,7 +89,7 @@ describe('metaTagDescription() for valid urls', () => {
         'Content-type': 'text/html',
       },
     });
-    sandbox.stub(window, 'fetch').returns(Promise.resolve(res));
+    sandbox.stub(window, 'fetch').mockReturnValue(Promise.resolve(res));
 
     const promise = metaTagDescription('/valid/url/');
     return expect(promise).toBe('Valid Description Here');
@@ -104,7 +102,7 @@ describe('metaTagDescription() for valid urls', () => {
         'Content-type': 'text/html',
       },
     });
-    sandbox.stub(window, 'fetch').returns(Promise.resolve(res));
+    sandbox.stub(window, 'fetch').mockReturnValue(Promise.resolve(res));
 
     const promise = metaTagDescription('/valid/url/wo/tag');
     return expect(promise).toBe('/valid/url/wo/tag');

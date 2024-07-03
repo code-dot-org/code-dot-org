@@ -2,7 +2,6 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import DataDocFormEditor from '@cdo/apps/lib/levelbuilder/data-docs-editor/DataDocFormEditor';
 import {getStore} from '@cdo/apps/redux';
@@ -66,7 +65,7 @@ describe('DataDocFormEditor', () => {
 
   it('clicking Save And Keep Editing button sends PUT request and does not redirect', () => {
     let server = sinon.fakeServer.create();
-    sinon.stub(utils, 'navigateToHref');
+    jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
 
     let store = getStore();
     const provider = mount(
@@ -97,13 +96,13 @@ describe('DataDocFormEditor', () => {
 
     expect(utils.navigateToHref).not.toHaveBeenCalled();
 
-    server.restore();
-    utils.navigateToHref.restore();
+    server.mockRestore();
+    utils.navigateToHref.mockRestore();
   });
 
   it('clicking Save And Close button sends PUT request and redirects', () => {
     let server = sinon.fakeServer.create();
-    sinon.stub(utils, 'navigateToHref');
+    jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
 
     let store = getStore();
     const provider = mount(
@@ -134,7 +133,7 @@ describe('DataDocFormEditor', () => {
 
     expect(utils.navigateToHref).toHaveBeenCalledWith(`/data_docs/${docKey}`);
 
-    server.restore();
-    utils.navigateToHref.restore();
+    server.mockRestore();
+    utils.navigateToHref.mockRestore();
   });
 });

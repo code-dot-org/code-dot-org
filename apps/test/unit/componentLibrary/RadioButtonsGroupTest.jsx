@@ -1,7 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon';
 
 import {RadioButtonsGroup} from '@cdo/apps/componentLibrary/radioButton';
 
@@ -51,7 +50,7 @@ describe('Design System - Radio Buttons Group', () => {
 
   it('RadioButtonsGroup - selects radio on click, can change selected button by clicking on other radio button ', async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     const onChange = e => {
       spyOnChange(e.target.value);
@@ -144,7 +143,7 @@ describe('Design System - Radio Buttons Group', () => {
 
   it("RadioButtonsGroup - renders disabled radioButton, can't click on disabled radio", async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     const modifiedradioButtonsData = [...radioButtonsData];
     modifiedradioButtonsData[0] = {

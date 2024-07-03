@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import AddLevelTable from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTable';
 
@@ -9,8 +8,8 @@ import AddLevelTable from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTabl
 describe('AddLevelTable', () => {
   let defaultProps, addLevel, setCurrentPage;
   beforeEach(() => {
-    addLevel = sinon.spy();
-    setCurrentPage = sinon.spy();
+    addLevel = jest.fn();
+    setCurrentPage = jest.fn();
     defaultProps = {
       addLevel,
       currentPage: 1,

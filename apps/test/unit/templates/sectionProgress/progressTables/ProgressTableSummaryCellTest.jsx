@@ -1,7 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
-import sinon from 'sinon';
 
 import ProgressTableSummaryCell, {
   unitTestExports,
@@ -41,7 +40,7 @@ describe('ProgressTableSummaryCell', () => {
   });
 
   it('calls onSelectDetailView when clicked', () => {
-    const onClickSpy = sinon.spy();
+    const onClickSpy = jest.fn();
     const wrapper = setUp({onSelectDetailView: onClickSpy});
     wrapper.simulate('click');
     expect(onClickSpy).toHaveBeenCalled();

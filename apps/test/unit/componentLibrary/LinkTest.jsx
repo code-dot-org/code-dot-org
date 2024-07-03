@@ -1,7 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon';
 
 import Link from '@cdo/apps/componentLibrary/link';
 
@@ -52,7 +51,7 @@ describe('Design System - Link', () => {
 
   it('Link - onClick is correctly called when clicked', async () => {
     const user = userEvent.setup();
-    const spyOnClick = sinon.spy();
+    const spyOnClick = jest.fn();
 
     const linkToRender = <Link onClick={spyOnClick}>Home</Link>;
 
@@ -67,7 +66,7 @@ describe('Design System - Link', () => {
 
   it('Link - doesn`t call onClick when disabled', async () => {
     const user = userEvent.setup();
-    const spyOnClick = sinon.spy();
+    const spyOnClick = jest.fn();
     const linkToRender = (
       <Link disabled onClick={spyOnClick}>
         Home

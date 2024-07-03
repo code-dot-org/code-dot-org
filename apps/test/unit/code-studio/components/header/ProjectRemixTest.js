@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedProjectRemix as ProjectRemix} from '@cdo/apps/code-studio/components/header/ProjectRemix';
 import * as utils from '@cdo/apps/utils';
@@ -41,38 +40,38 @@ describe('ProjectRemix', () => {
   });
 
   it('will attempt serverside remix when possible', () => {
-    sinon.stub(window.dashboard.project, 'getCurrentId').returns(true);
-    sinon.stub(window.dashboard.project, 'canServerSideRemix').returns(true);
-    sinon.spy(window.dashboard.project, 'serverSideRemix');
+    jest.spyOn(window.dashboard.project, 'getCurrentId').mockClear().mockReturnValue(true);
+    jest.spyOn(window.dashboard.project, 'canServerSideRemix').mockClear().mockReturnValue(true);
+    jest.spyOn(window.dashboard.project, 'serverSideRemix').mockClear();
 
     const wrapper = shallow(<ProjectRemix {...defaultProps} />);
     wrapper.simulate('click');
-    expect(window.dashboard.project.serverSideRemix.calledOnce).toBe(true);
+    expect(window.dashboard.project.serverSideRemix).toHaveBeenCalledTimes(1);
 
-    window.dashboard.project.getCurrentId.restore();
-    window.dashboard.project.canServerSideRemix.restore();
-    window.dashboard.project.serverSideRemix.restore();
+    window.dashboard.project.getCurrentId.mockRestore();
+    window.dashboard.project.canServerSideRemix.mockRestore();
+    window.dashboard.project.serverSideRemix.mockRestore();
   });
 
   it('will redirect to sign in if necessary', () => {
-    sinon.stub(utils, 'navigateToHref');
+    jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
 
     const wrapper = shallow(<ProjectRemix {...defaultProps} />);
     wrapper.simulate('click');
-    expect(utils.navigateToHref.calledOnce).toBe(true);
-    expect(utils.navigateToHref.calledWith('/users/sign_in?user_return_to=/')).toBe(true);
+    expect(utils.navigateToHref).toHaveBeenCalledTimes(1);
+    expect(utils.navigateToHref).toHaveBeenCalledWith('/users/sign_in?user_return_to=/');
 
-    utils.navigateToHref.restore();
+    utils.navigateToHref.mockRestore();
   });
 
   it('will copy the project', () => {
-    sinon.stub(window.dashboard.project, 'copy').resolves();
+    jest.spyOn(window.dashboard.project, 'copy').mockClear().mockImplementation().resolves();
 
     const wrapper = shallow(<ProjectRemix {...defaultProps} isSignedIn />);
     wrapper.simulate('click');
-    expect(window.dashboard.project.copy.calledOnce).toBe(true);
-    expect(window.dashboard.project.copy.calledWith('Remix: Test Project')).toBe(true);
+    expect(window.dashboard.project.copy).toHaveBeenCalledTimes(1);
+    expect(window.dashboard.project.copy).toHaveBeenCalledWith('Remix: Test Project');
 
-    window.dashboard.project.copy.restore();
+    window.dashboard.project.copy.mockRestore();
   });
 });

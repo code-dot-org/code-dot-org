@@ -3,7 +3,6 @@ import {render, fireEvent, act} from '@testing-library/react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import * as utils from '@cdo/apps/code-studio/utils';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -25,7 +24,6 @@ import i18n from '@cdo/locale';
 
 
 describe('RubricSettings', () => {
-  let clock;
   let fetchStub;
   let store;
   let refreshAiEvaluationsSpy;
@@ -39,22 +37,30 @@ describe('RubricSettings', () => {
   }
 
   function stubFetchEvalStatusForAll(data) {
-    fetchStub
-      .withArgs(sinon.match(/rubrics\/\d+\/ai_evaluation_status_for_all.*/))
-      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+    fetchStub.mockImplementation((...args) => {
+      if (args[0] === expect.objectContaining(/rubrics\/\d+\/ai_evaluation_status_for_all.*/)) {
+        return Promise.resolve(new Response(JSON.stringify(data)));
+      }
+    });
   }
 
   function stubFetchTeacherEvaluations(data) {
-    return fetchStub
-      .withArgs(sinon.match(/rubrics\/\d+\/get_teacher_evaluations_for_all.*/))
-      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+    return fetchStub.mockImplementation((...args) => {
+      if (args[0] === expect.objectContaining(/rubrics\/\d+\/get_teacher_evaluations_for_all.*/)) {
+        return Promise.resolve(new Response(JSON.stringify(data)));
+      }
+    });
   }
 
   beforeEach(() => {
-    fetchStub = sinon.stub(window, 'fetch');
-    fetchStub.returns(Promise.resolve(new Response(JSON.stringify(''))));
-    refreshAiEvaluationsSpy = sinon.spy();
-    sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
+    fetchStub = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
+    fetchStub.mockReturnValue(Promise.resolve(new Response(JSON.stringify(''))));
+    refreshAiEvaluationsSpy = jest.fn();
+    jest.spyOn(utils, 'queryParams').mockClear().mockImplementation((...args) => {
+      if (args[0] === 'section_id') {
+        return '1';
+      }
+    });
     stubRedux();
     registerReducers({teacherSections, currentUser});
     store = getStore();
@@ -62,11 +68,11 @@ describe('RubricSettings', () => {
 
   afterEach(() => {
     if (clock) {
-      clock.restore();
+      jest.useRealTimers();
     }
     restoreRedux();
-    utils.queryParams.restore();
-    fetchStub.restore();
+    utils.queryParams.mockRestore();
+    fetchStub.mockRestore();
   });
 
   const defaultRubric = {
@@ -267,9 +273,9 @@ describe('RubricSettings', () => {
   it('runs AI assessment for all unevaluated projects when requested by teacher', async () => {
     stubFetchEvalStatusForAll(ready);
     stubFetchTeacherEvaluations(evals);
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
 
-    clock = sinon.useFakeTimers();
+    jest.useFakeTimers();
 
     const wrapper = mount(
       <Provider store={store}>
@@ -305,7 +311,7 @@ describe('RubricSettings', () => {
     expect(wrapper.text()).toContain(i18n.aiEvaluationStatus_pending());
 
     // Advance clock 5 seconds
-    clock.tick(5000);
+    jest.advanceTimersByTime(5000);
 
     // Perform fetches and re-renders
     await wait();
@@ -313,16 +319,20 @@ describe('RubricSettings', () => {
     expect(fetchStub).toHaveBeenCalledTimes(4);
     expect(wrapper.find('Button').first().props().disabled).toBe(true);
     expect(wrapper.text()).toContain(i18n.aiEvaluationStatus_success());
-    sendEventSpy.restore();
+    sendEventSpy.mockRestore();
   });
 
   it('displays switch tab text and button when there are no evaluations', async () => {
-    fetchStub
-      .onCall(0)
-      .returns(Promise.resolve(new Response(JSON.stringify(noEvals))));
-    fetchStub
-      .onCall(1)
-      .returns(Promise.resolve(new Response(JSON.stringify(noEvals))));
+    fetchStub.mockImplementation(() => {
+      if (fetchStub.mock.calls.length === 0) {
+        return Promise.resolve(new Response(JSON.stringify(noEvals)));
+      }
+    });
+    fetchStub.mockImplementation(() => {
+      if (fetchStub.mock.calls.length === 1) {
+        return Promise.resolve(new Response(JSON.stringify(noEvals)));
+      }
+    });
     const wrapper = mount(
       <Provider store={store}>
         <RubricSettings
@@ -343,12 +353,16 @@ describe('RubricSettings', () => {
   });
 
   it('displays generate CSV button when there are evaluations to export', async () => {
-    fetchStub
-      .onCall(0)
-      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
-    fetchStub
-      .onCall(1)
-      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
+    fetchStub.mockImplementation(() => {
+      if (fetchStub.mock.calls.length === 0) {
+        return Promise.resolve(new Response(JSON.stringify(evals)));
+      }
+    });
+    fetchStub.mockImplementation(() => {
+      if (fetchStub.mock.calls.length === 1) {
+        return Promise.resolve(new Response(JSON.stringify(evals)));
+      }
+    });
     const wrapper = mount(
       <Provider store={store}>
         <RubricSettings
@@ -371,13 +385,17 @@ describe('RubricSettings', () => {
   });
 
   it('sends event when download CSV is clicked', async () => {
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
-    fetchStub
-      .onCall(0)
-      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
-    fetchStub
-      .onCall(1)
-      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
+    const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
+    fetchStub.mockImplementation(() => {
+      if (fetchStub.mock.calls.length === 0) {
+        return Promise.resolve(new Response(JSON.stringify(evals)));
+      }
+    });
+    fetchStub.mockImplementation(() => {
+      if (fetchStub.mock.calls.length === 1) {
+        return Promise.resolve(new Response(JSON.stringify(evals)));
+      }
+    });
     const wrapper = mount(
       <Provider store={store}>
         <RubricSettings
@@ -405,7 +423,7 @@ describe('RubricSettings', () => {
       levelName: 'Test Blah Blah Blah',
       sectionId: 1,
     });
-    sendEventSpy.restore();
+    sendEventSpy.mockRestore();
   });
 
   it('displays the AI enable toggle', () => {
@@ -465,10 +483,7 @@ describe('RubricSettings', () => {
     );
 
     // Let's stub out setting the field via UserPreferences
-    const setStub = sinon.stub(
-      UserPreferences.prototype,
-      'setAiRubricsDisabled'
-    );
+    const setStub = jest.spyOn(UserPreferences.prototype, 'setAiRubricsDisabled').mockClear().mockImplementation();
 
     const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
     fireEvent.click(input);
@@ -476,6 +491,6 @@ describe('RubricSettings', () => {
 
     expect(input.checked).toBe(false);
     expect(setStub).toHaveBeenCalledWith(true);
-    setStub.restore();
+    setStub.mockRestore();
   });
 });

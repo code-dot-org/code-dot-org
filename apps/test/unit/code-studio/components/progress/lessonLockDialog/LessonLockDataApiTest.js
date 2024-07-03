@@ -1,7 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import PropTypes from 'prop-types';
 import React from 'react';
-import sinon from 'sinon';
 
 import {
   LockStatus,
@@ -54,7 +53,7 @@ describe('LessonLockDataApi', () => {
           },
         },
       };
-      sinon.stub(useFetch, 'useFetch').returns({
+      jest.spyOn(useFetch, 'useFetch').mockClear().mockReturnValue({
         loading: false,
         data: fakeLockStatusData,
       });
@@ -79,13 +78,13 @@ describe('LessonLockDataApi', () => {
           userLevelData: {},
         },
       ]);
-      useFetch.useFetch.restore();
+      useFetch.useFetch.mockRestore();
     });
   });
 
   describe('saveLockState', () => {
     it('calls lock_status api with changes in the lock state', () => {
-      const fetchSpy = sinon.spy(window, 'fetch');
+      const fetchSpy = jest.spyOn(window, 'fetch').mockClear();
       const previousLockState = [
         {
           name: 'Student1',
@@ -131,7 +130,7 @@ describe('LessonLockDataApi', () => {
         }),
       });
 
-      window.fetch.restore();
+      window.fetch.mockRestore();
     });
   });
 

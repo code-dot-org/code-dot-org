@@ -2,7 +2,6 @@ import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-impo
 import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
-import sinon from 'sinon';
 
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
@@ -80,9 +79,8 @@ describe('TeacherPanel', () => {
   let teacherPanelDataStub;
 
   beforeEach(() => {
-    teacherPanelDataStub = sinon
-      .stub(teacherPanelData, 'queryLockStatus')
-      .returns(
+    teacherPanelDataStub = jest.spyOn(teacherPanelData, 'queryLockStatus').mockClear()
+      .mockReturnValue(
         Promise.resolve({
           teacherSections,
           sectionLockStatus,
@@ -91,7 +89,7 @@ describe('TeacherPanel', () => {
   });
 
   afterEach(() => {
-    teacherPanelDataStub.restore();
+    teacherPanelDataStub.mockRestore();
   });
 
   describe('on unit page', () => {
@@ -167,14 +165,14 @@ describe('TeacherPanel', () => {
   });
 
   it('loads initial data and calls get/set students for section', async () => {
-    sinon.stub(teacherPanelData, 'getStudentsForSection').returns(
+    jest.spyOn(teacherPanelData, 'getStudentsForSection').mockClear().mockReturnValue(
       Promise.resolve({
         id: 55,
         students: [],
       })
     );
 
-    const setStudentsForCurrentSectionStub = sinon.stub();
+    const setStudentsForCurrentSectionStub = jest.fn();
     const overrideProps = {
       viewAs: ViewType.Instructor,
       pageType: pageTypes.scriptOverview,
@@ -185,11 +183,11 @@ describe('TeacherPanel', () => {
 
     expect(setStudentsForCurrentSectionStub).toHaveBeenCalledWith(55, []);
 
-    teacherPanelData.getStudentsForSection.restore();
+    teacherPanelData.getStudentsForSection.mockRestore();
   });
 
   it('calls setViewType default to Instructor', async () => {
-    const setViewTypeStub = sinon.stub();
+    const setViewTypeStub = jest.fn();
     const overrideProps = {
       pageType: pageTypes.scriptOverview,
       setViewType: setViewTypeStub,
@@ -201,8 +199,8 @@ describe('TeacherPanel', () => {
   });
 
   it('loads initial data and calls get/set lock status', async () => {
-    const setSectionsStub = sinon.stub();
-    const setSectionLockStatusStub = sinon.stub();
+    const setSectionsStub = jest.fn();
+    const setSectionLockStatusStub = jest.fn();
     const overrideProps = {
       viewAs: ViewType.Instructor,
       pageType: pageTypes.level,
@@ -214,7 +212,7 @@ describe('TeacherPanel', () => {
     expect(setSectionsStub).toHaveBeenCalledWith(teacherSections);
     expect(setSectionLockStatusStub).toHaveBeenCalledWith(sectionLockStatus);
 
-    teacherPanelData.queryLockStatus.restore();
+    teacherPanelData.queryLockStatus.mockRestore();
   });
 
   describe('StudentTable', () => {
@@ -247,7 +245,7 @@ describe('TeacherPanel', () => {
         viewAs: ViewType.Instructor,
       });
 
-      const selectUserStub = sinon.stub();
+      const selectUserStub = jest.fn();
       const overrideProps = {
         selectUser: selectUserStub,
         viewAs: ViewType.Instructor,
@@ -273,7 +271,7 @@ describe('TeacherPanel', () => {
         viewAs: ViewType.Instructor,
       });
 
-      const selectUserStub = sinon.stub();
+      const selectUserStub = jest.fn();
       const overrideProps = {
         selectUser: selectUserStub,
         viewAs: ViewType.Instructor,
@@ -306,7 +304,11 @@ describe('TeacherPanel', () => {
     });
 
     it('on level displays SelectedStudentInfo when students have loaded, passes expected props', () => {
-      sinon.stub(utils, 'queryParams').withArgs('user_id').returns('1');
+      jest.spyOn(utils, 'queryParams').mockClear().mockImplementation((...args) => {
+        if (args[0] === 'user_id') {
+          return '1';
+        }
+      });
 
       const wrapper = setUp({
         viewAs: ViewType.Instructor,
@@ -319,7 +321,7 @@ describe('TeacherPanel', () => {
       expect(selectedStudentComponent.props().teacherId).toBe(5);
       expect(selectedStudentComponent.props().selectedUserId).toBe(1);
 
-      utils.queryParams.restore();
+      utils.queryParams.mockRestore();
     });
   });
 

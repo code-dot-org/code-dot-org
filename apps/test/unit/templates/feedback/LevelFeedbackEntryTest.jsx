@@ -1,7 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import ReactDOM from 'react-dom';
-import sinon from 'sinon';
 
 import LevelFeedbackEntry from '@cdo/apps/templates/feedback/LevelFeedbackEntry';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
@@ -93,23 +92,23 @@ describe('LevelFeedbackEntry', () => {
   });
 
   it('hides the comment expander if the comment is not long', () => {
-    sinon.stub(ReactDOM, 'findDOMNode').returns({offsetHeight: 20});
+    jest.spyOn(ReactDOM, 'findDOMNode').mockClear().mockReturnValue({offsetHeight: 20});
     const wrapper = setUp({});
     expect(wrapper.find({icon: 'caret-right'})).toHaveLength(0);
-    ReactDOM.findDOMNode.restore();
+    ReactDOM.findDOMNode.mockRestore();
   });
 
   it('displays the comment expander if the comment is long', () => {
-    sinon.stub(ReactDOM, 'findDOMNode').returns({offsetHeight: 60});
+    jest.spyOn(ReactDOM, 'findDOMNode').mockClear().mockReturnValue({offsetHeight: 60});
     const wrapper = setUp({});
     expect(wrapper.find({icon: 'caret-right'})).toHaveLength(1);
-    ReactDOM.findDOMNode.restore();
+    ReactDOM.findDOMNode.mockRestore();
   });
 
   it('displays the fade if the comment is long (and collapsed)', () => {
-    sinon.stub(ReactDOM, 'findDOMNode').returns({offsetHeight: 60});
+    jest.spyOn(ReactDOM, 'findDOMNode').mockClear().mockReturnValue({offsetHeight: 60});
     const wrapper = setUp({});
     expect(wrapper.find('#comment-fade')).toHaveLength(1);
-    ReactDOM.findDOMNode.restore();
+    ReactDOM.findDOMNode.mockRestore();
   });
 });

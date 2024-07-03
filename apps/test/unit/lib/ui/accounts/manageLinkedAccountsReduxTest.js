@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import manageLinkedAccounts, {
   initializeState,
   convertServerAuthOptions,
@@ -14,7 +12,7 @@ describe('manageLinkedAccountsRedux', () => {
     server = sinon.fakeServer.create();
   });
 
-  afterEach(() => server.restore());
+  afterEach(() => server.mockRestore());
 
   describe('initializeState', () => {
     it('sets state from action state', () => {

@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import FieldEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/FieldEditor';
 
@@ -10,7 +9,7 @@ describe('FieldEditor', () => {
   let defaultProps, updateSpy;
 
   beforeEach(() => {
-    updateSpy = sinon.spy();
+    updateSpy = jest.fn();
     defaultProps = {
       field: {
         name: 'field 1',

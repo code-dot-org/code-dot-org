@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import ReactDOM from 'react-dom';
-import {spy, stub} from 'sinon';
 
 import AddPasswordController from '@cdo/apps/lib/ui/accounts/AddPasswordController';
 
@@ -24,7 +23,7 @@ describe('AddPasswordController', () => {
   });
 
   afterEach(() => {
-    ReactDOM.render.restore();
+    ReactDOM.render.mockRestore();
     document.body.removeChild(mockMountPoint);
   });
 

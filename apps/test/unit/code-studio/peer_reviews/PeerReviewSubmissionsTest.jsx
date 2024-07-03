@@ -1,7 +1,6 @@
 import { mount } from 'enzyme';
 import _ from 'lodash';
 import React from 'react';
-import sinon from 'sinon';
 
 import PeerReviewSubmissions from '@cdo/apps/code-studio/peer_reviews/PeerReviewSubmissions';
 
@@ -40,7 +39,7 @@ describe('PeerReviewSubmissions', () => {
 
   beforeAll(() => {
     // stub out debounce to return the original function, so it's called immediately
-    debounceStub = sinon.stub(_, 'debounce').callsFake(f => f);
+    debounceStub = jest.spyOn(_, 'debounce').mockClear().mockImplementation(f => f);
 
     server = sinon.fakeServer.create();
     server.respondWith(
@@ -74,8 +73,8 @@ describe('PeerReviewSubmissions', () => {
   });
 
   afterAll(() => {
-    debounceStub.restore();
-    server.restore();
+    debounceStub.mockRestore();
+    server.mockRestore();
   });
 
   it('Initially renders course options and calls API for submissions', () => {
@@ -115,7 +114,7 @@ describe('PeerReviewSubmissions', () => {
   });
 
   it('Changing the course makes a new call and enables the button when a course is selected', () => {
-    server.reset();
+    server.mockReset();
 
     peerReviewSubmissions
       .find('select#PlcCourseSelect')
@@ -171,7 +170,7 @@ describe('PeerReviewSubmissions', () => {
   });
 
   it('Changing the email filter triggers a new call with email filter applied', () => {
-    server.reset();
+    server.mockReset();
 
     peerReviewSubmissions
       .find('input#NameEmailFilter')

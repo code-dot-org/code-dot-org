@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import ParameterEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ParameterEditor';
 
@@ -10,7 +9,7 @@ describe('ParameterEditor', () => {
   let defaultProps, updateSpy;
 
   beforeEach(() => {
-    updateSpy = sinon.spy();
+    updateSpy = jest.fn();
     defaultProps = {
       parameter: {
         name: 'param1',

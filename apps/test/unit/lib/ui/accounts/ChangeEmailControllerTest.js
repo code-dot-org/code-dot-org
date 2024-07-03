@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import ReactDOM from 'react-dom';
-import {spy, stub} from 'sinon';
 
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
 import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
@@ -55,8 +54,8 @@ describe('ChangeEmailController', () => {
 
     afterEach(() => {
       controller.hideChangeEmailModal();
-      ReactDOM.render.restore();
-      ReactDOM.unmountComponentAtNode.restore();
+      ReactDOM.render.mockRestore();
+      ReactDOM.unmountComponentAtNode.mockRestore();
     });
 
     it('shows on showChangeEmailModal', () => {

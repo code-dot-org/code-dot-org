@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
 
@@ -9,8 +8,8 @@ import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
 describe('OrderControls', () => {
   let move, remove, defaultProps;
   beforeEach(() => {
-    move = sinon.spy();
-    remove = sinon.spy();
+    move = jest.fn();
+    remove = jest.fn();
     defaultProps = {
       move,
       remove,

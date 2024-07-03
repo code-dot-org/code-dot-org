@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDialog';
 import commonI18n from '@cdo/locale';
@@ -9,13 +8,13 @@ import commonI18n from '@cdo/locale';
 
 describe('ModelManagerDialog', () => {
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
   });
 
   describe('localization', () => {
     it('is used when there are no models', () => {
-      sinon.stub(commonI18n, 'aiTrainedModels').returns('i18n-header');
-      sinon.stub(commonI18n, 'aiTrainedModelsNoModels').returns('i18n-nomodel');
+      jest.spyOn(commonI18n, 'aiTrainedModels').mockClear().mockReturnValue('i18n-header');
+      jest.spyOn(commonI18n, 'aiTrainedModelsNoModels').mockClear().mockReturnValue('i18n-nomodel');
 
       const wrapper = shallow(
         <ModelManagerDialog
@@ -50,7 +49,7 @@ describe('ModelManagerDialog', () => {
       };
 
       for (const key in i18n) {
-        sinon.stub(commonI18n, key).returns(i18n[key]);
+        jest.spyOn(commonI18n, key).mockClear().mockReturnValue(i18n[key]);
       }
 
       const wrapper = shallow(
@@ -104,7 +103,7 @@ describe('ModelManagerDialog', () => {
       };
 
       for (const key in i18n) {
-        sinon.stub(commonI18n, key).returns(i18n[key]);
+        jest.spyOn(commonI18n, key).mockClear().mockReturnValue(i18n[key]);
       }
 
       const wrapper = shallow(
@@ -137,7 +136,7 @@ describe('ModelManagerDialog', () => {
       };
 
       for (const key in i18n) {
-        sinon.stub(commonI18n, key).returns(i18n[key]);
+        jest.spyOn(commonI18n, key).mockClear().mockReturnValue(i18n[key]);
       }
 
       // Stub the request for deletion.
@@ -197,7 +196,7 @@ describe('ModelManagerDialog', () => {
       // Ensure it is passed the id for the localization.
       expect(
         commonI18n.aiTrainedModelsDeleteModelFailed
-      ).toHaveBeenCalledWith(sinon.match.has('id', '0'));
+      ).toHaveBeenCalledWith(expect.anything()('id', '0'));
 
       // Find and compare the status string.
       let deleteMessage = modal.find('p').at(1);

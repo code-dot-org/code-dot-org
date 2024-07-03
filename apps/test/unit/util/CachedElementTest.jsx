@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import CachedElement, {unitTestExports} from '@cdo/apps/util/CachedElement';
 
@@ -35,16 +34,16 @@ const defaultProps = {
   createElement: createDiv,
 };
 
-const spy = sinon.spy(createDiv);
+const spy = jest.fn(createDiv);
 
 describe('CachedElement', () => {
   beforeEach(() => {
-    spy.resetHistory();
+    spy.mockReset();
     unitTestExports.clearElementsCache(defaultType);
   });
 
   afterAll(() => {
-    spy.resetHistory();
+    spy.mockReset();
     unitTestExports.clearElementsCache(defaultType);
   });
 

@@ -1,7 +1,6 @@
 import {render} from '@testing-library/react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {
   AudioQueue,
@@ -155,7 +154,7 @@ describe('InlineAudio', function () {
   });
 
   it('only initializes Audio once', function () {
-    sinon.spy(window, 'Audio');
+    jest.spyOn(window, 'Audio').mockClear();
     const component = getComponent(<InlineAudio {...DEFAULT_PROPS} />);
 
     expect(window.Audio).toHaveBeenCalledTimes(1);
@@ -165,7 +164,7 @@ describe('InlineAudio', function () {
     expect(window.Audio).toHaveBeenCalledTimes(1);
     component.instance().playAudio();
     expect(window.Audio).toHaveBeenCalledTimes(1);
-    sinon.restore();
+    jest.restoreAllMocks();
   });
 
   it('handles source update gracefully, stopping audio', async function () {
@@ -181,7 +180,7 @@ describe('InlineAudio', function () {
   });
 
   it('calls addToQueue for each InlineAudio rendered', () => {
-    const addToQueueSpy = sinon.spy();
+    const addToQueueSpy = jest.fn();
     render(
       <AudioQueueContext.Provider
         value={{
@@ -199,7 +198,7 @@ describe('InlineAudio', function () {
   });
 
   it('does not add to queue if autoplay is off', () => {
-    const addToQueueSpy = sinon.spy();
+    const addToQueueSpy = jest.fn();
     render(
       <AudioQueueContext.Provider
         value={{

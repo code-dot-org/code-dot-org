@@ -1,6 +1,5 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
-import sinon from 'sinon';
 
 import MoreDetailsDialog from '@cdo/apps/templates/sectionProgressV2/MoreDetailsDialog';
 
@@ -18,7 +17,7 @@ describe('MoreDetailsDialog', () => {
   });
 
   it('calls onClose when the close button is clicked', () => {
-    const onCloseMock = sinon.spy();
+    const onCloseMock = jest.fn();
     render(<MoreDetailsDialog onClose={onCloseMock} />);
 
     const closeButton = screen.getByRole('button');

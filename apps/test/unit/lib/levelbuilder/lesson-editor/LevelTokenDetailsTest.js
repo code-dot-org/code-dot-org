@@ -1,7 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedLevelTokenDetails as LevelTokenDetails} from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
 
@@ -46,7 +45,7 @@ describe('LevelTokenDetails', () => {
   let setScriptLevelField;
   let defaultProps;
   beforeEach(() => {
-    setScriptLevelField = sinon.spy();
+    setScriptLevelField = jest.fn();
     defaultProps = {
       setScriptLevelField,
       scriptLevel: defaultScriptLevel,

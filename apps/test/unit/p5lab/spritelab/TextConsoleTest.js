@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import TextConsole, {
   AUTO_CLOSE_TIME,
@@ -27,14 +26,13 @@ describe('Sprite Lab Text Console', () => {
   });
 
   describe('after a line is added', () => {
-    let clock;
     beforeEach(() => {
-      clock = sinon.useFakeTimers();
+      jest.useFakeTimers();
       wrapper.setProps({consoleMessages: ['hello world2']});
     });
 
     afterEach(() => {
-      clock.restore();
+      jest.useRealTimers();
     });
 
     it('opens', () => {
@@ -49,7 +47,7 @@ describe('Sprite Lab Text Console', () => {
     });
 
     it('closes after AUTO_CLOSE_TIME ms', () => {
-      clock.tick(AUTO_CLOSE_TIME);
+      jest.advanceTimersByTime(AUTO_CLOSE_TIME);
       expect(wrapper.state().open).toBe(false);
 
       const button = wrapper.findWhere(node => {
@@ -79,7 +77,7 @@ describe('Sprite Lab Text Console', () => {
       it('opens and stays open when the button is clicked', () => {
         wrapper.instance().toggleConsole();
         expect(wrapper.state().open).toBe(true);
-        clock.tick(AUTO_CLOSE_TIME * 2);
+        jest.advanceTimersByTime(AUTO_CLOSE_TIME * 2);
         expect(wrapper.state().open).toBe(true);
       });
     });

@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import CloneLessonDialog from '@cdo/apps/lib/levelbuilder/unit-editor/CloneLessonDialog';
 
@@ -10,8 +9,8 @@ describe('CloneLessonDialog', () => {
   let defaultProps, handleCloseSpy, fetchSpy;
 
   beforeEach(() => {
-    handleCloseSpy = sinon.spy();
-    fetchSpy = sinon.stub(window, 'fetch');
+    handleCloseSpy = jest.fn();
+    fetchSpy = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
     defaultProps = {
       lessonId: 1,
       lessonName: 'lesson-1',
@@ -20,7 +19,7 @@ describe('CloneLessonDialog', () => {
   });
 
   afterEach(() => {
-    fetchSpy.restore();
+    fetchSpy.mockRestore();
   });
 
   it('disables clone button while saving', () => {
@@ -29,9 +28,11 @@ describe('CloneLessonDialog', () => {
       editScriptUrl: '/s/test-script/edit',
     };
 
-    fetchSpy
-      .withArgs('/lessons/1/clone')
-      .returns(Promise.resolve({ok: true, json: () => returnData}));
+    fetchSpy.mockImplementation((...args) => {
+      if (args[0] === '/lessons/1/clone') {
+        return Promise.resolve({ok: true, json: () => returnData});
+      }
+    });
 
     const wrapper = shallow(<CloneLessonDialog {...defaultProps} />);
     wrapper.find('Button').at(1).simulate('click');
@@ -44,9 +45,11 @@ describe('CloneLessonDialog', () => {
       editLessonUrl: '/lessons/1/edit',
       editScriptUrl: '/s/test-script/edit',
     };
-    fetchSpy
-      .withArgs('/lessons/1/clone')
-      .returns(Promise.resolve({ok: true, json: () => returnData}));
+    fetchSpy.mockImplementation((...args) => {
+      if (args[0] === '/lessons/1/clone') {
+        return Promise.resolve({ok: true, json: () => returnData});
+      }
+    });
     return wrapper
       .instance()
       .onCloneClick()
@@ -67,9 +70,11 @@ describe('CloneLessonDialog', () => {
     let returnData = {
       error: 'Error message.',
     };
-    fetchSpy
-      .withArgs('/lessons/1/clone')
-      .returns(Promise.resolve({ok: false, json: () => returnData}));
+    fetchSpy.mockImplementation((...args) => {
+      if (args[0] === '/lessons/1/clone') {
+        return Promise.resolve({ok: false, json: () => returnData});
+      }
+    });
     return wrapper
       .instance()
       .onCloneClick()
@@ -132,14 +137,16 @@ describe('CloneLessonDialog', () => {
       editLessonUrl: '/lessons/1/edit',
       editScriptUrl: '/s/test-script/edit',
     };
-    fetchSpy
-      .withArgs('/lessons/1/clone')
-      .returns(Promise.resolve({ok: false, json: () => returnData}));
+    fetchSpy.mockImplementation((...args) => {
+      if (args[0] === '/lessons/1/clone') {
+        return Promise.resolve({ok: false, json: () => returnData});
+      }
+    });
 
     const cloneButton = wrapper.find('Button[id="clone-lesson-button"]');
     cloneButton.simulate('click');
 
-    const params = JSON.parse(fetchSpy.getCalls()[0].args[1].body);
+    const params = JSON.parse(fetchSpy.mock.calls[0][1].body);
     expect(params.destinationUnitName).toBe('my-script');
     expect(params.newLevelSuffix).toBe('2099');
   });
@@ -157,14 +164,16 @@ describe('CloneLessonDialog', () => {
       editLessonUrl: '/lessons/1/edit',
       editScriptUrl: '/s/test-script/edit',
     };
-    fetchSpy
-      .withArgs('/lessons/1/clone')
-      .returns(Promise.resolve({ok: false, json: () => returnData}));
+    fetchSpy.mockImplementation((...args) => {
+      if (args[0] === '/lessons/1/clone') {
+        return Promise.resolve({ok: false, json: () => returnData});
+      }
+    });
 
     const cloneButton = wrapper.find('Button[id="clone-lesson-button"]');
     cloneButton.simulate('click');
 
-    const params = JSON.parse(fetchSpy.getCalls()[0].args[1].body);
+    const params = JSON.parse(fetchSpy.mock.calls[0][1].body);
     expect(params.destinationUnitName).toBe('my-script');
     expect(!!params.newLevelSuffix).toBe(false);
   });

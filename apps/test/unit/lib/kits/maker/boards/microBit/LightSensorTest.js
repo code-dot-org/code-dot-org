@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import LightSensor from '@cdo/apps/lib/kits/maker/boards/microBit/LightSensor';
 import {
   SENSOR_CHANNELS,
@@ -17,7 +15,7 @@ describe('LightSensor', function () {
     lightSensor = new LightSensor({mb: boardClient});
   });
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
   });
 
   it(`value attribute is readonly`, () => {
@@ -66,8 +64,8 @@ describe('LightSensor', function () {
 
   describe(`start() and stop()`, () => {
     it(`trigger the parent call`, () => {
-      let startSpy = sinon.spy(boardClient, 'streamAnalogChannel');
-      let stopSpy = sinon.spy(boardClient, 'stopStreamingAnalogChannel');
+      let startSpy = jest.spyOn(boardClient, 'streamAnalogChannel').mockClear();
+      let stopSpy = jest.spyOn(boardClient, 'stopStreamingAnalogChannel').mockClear();
       lightSensor.start();
       expect(startSpy).toHaveBeenCalledTimes(1);
       expect(startSpy).toHaveBeenCalledWith(SENSOR_CHANNELS.lightSensor);
@@ -81,7 +79,7 @@ describe('LightSensor', function () {
   describe('emitsEvent', () => {
     let emitSpy;
     beforeEach(() => {
-      emitSpy = sinon.spy(lightSensor, 'emit');
+      emitSpy = jest.spyOn(lightSensor, 'emit').mockClear();
     });
 
     describe('emits the data event', () => {

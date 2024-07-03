@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import HideToolbarHelper from '@cdo/apps/templates/HideToolbarHelper';
 
@@ -12,10 +11,10 @@ describe('HideToolbarHelper', function () {
 
     const instance = component.instance();
 
-    sinon.stub(instance, 'isCompatibleiOS').returns(true);
-    sinon.stub(instance, 'isHideCookieSet').returns(false);
-    sinon.stub(instance, 'isLandscape').returns(true);
-    sinon.stub(instance, 'isToolbarShowing').returns(true);
+    jest.spyOn(instance, 'isCompatibleiOS').mockClear().mockReturnValue(true);
+    jest.spyOn(instance, 'isHideCookieSet').mockClear().mockReturnValue(false);
+    jest.spyOn(instance, 'isLandscape').mockClear().mockReturnValue(true);
+    jest.spyOn(instance, 'isToolbarShowing').mockClear().mockReturnValue(true);
 
     instance.updateLayout();
 
@@ -27,10 +26,10 @@ describe('HideToolbarHelper', function () {
 
     const instance = component.instance();
 
-    sinon.stub(instance, 'isCompatibleiOS').returns(true);
-    sinon.stub(instance, 'isHideCookieSet').returns(false);
-    sinon.stub(instance, 'isLandscape').returns(true);
-    sinon.stub(instance, 'isToolbarShowing').returns(false);
+    jest.spyOn(instance, 'isCompatibleiOS').mockClear().mockReturnValue(true);
+    jest.spyOn(instance, 'isHideCookieSet').mockClear().mockReturnValue(false);
+    jest.spyOn(instance, 'isLandscape').mockClear().mockReturnValue(true);
+    jest.spyOn(instance, 'isToolbarShowing').mockClear().mockReturnValue(false);
 
     instance.updateLayout();
 
@@ -42,22 +41,21 @@ describe('HideToolbarHelper', function () {
 
     const instance = component.instance();
 
-    const setHideHelperCookie = sinon.stub(instance, 'setHideHelperCookie');
+    const setHideHelperCookie = jest.spyOn(instance, 'setHideHelperCookie').mockClear().mockImplementation();
 
-    sinon.stub(instance, 'isCompatibleiOS').returns(true);
-    sinon.stub(instance, 'isHideCookieSet').returns(false);
-    sinon.stub(instance, 'isLandscape').returns(true);
-    const isToolbarShowing = sinon
-      .stub(instance, 'isToolbarShowing')
-      .returns(true);
+    jest.spyOn(instance, 'isCompatibleiOS').mockClear().mockReturnValue(true);
+    jest.spyOn(instance, 'isHideCookieSet').mockClear().mockReturnValue(false);
+    jest.spyOn(instance, 'isLandscape').mockClear().mockReturnValue(true);
+    const isToolbarShowing = jest.spyOn(instance, 'isToolbarShowing').mockClear()
+      .mockReturnValue(true);
 
     instance.updateLayout();
 
     expect(instance.state.showHelper).toBe(true);
     expect(setHideHelperCookie).not.toHaveBeenCalled();
 
-    isToolbarShowing.restore();
-    sinon.stub(instance, 'isToolbarShowing').returns(false);
+    isToolbarShowing.mockRestore();
+    jest.spyOn(instance, 'isToolbarShowing').mockClear().mockReturnValue(false);
 
     instance.updateLayout();
 

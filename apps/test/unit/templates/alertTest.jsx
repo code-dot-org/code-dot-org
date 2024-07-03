@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import Alert from '@cdo/apps/templates/alert';
 
@@ -43,7 +42,7 @@ describe('Alert', () => {
   });
 
   it('calls onClose callback when close button is clicked', () => {
-    const callback = sinon.spy();
+    const callback = jest.fn();
     const error = shallow(
       <Alert type="error" onClose={callback}>
         <span>This is an error.</span>

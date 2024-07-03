@@ -1,6 +1,5 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {MARKETING_AUDIENCE} from '@cdo/apps/templates/sectionsRefresh/CurriculumQuickAssign';
 import QuickAssignTable from '@cdo/apps/templates/sectionsRefresh/QuickAssignTable';
@@ -51,7 +50,7 @@ describe('QuickAssignTable', () => {
   });
 
   it('calls updateSection when a radio button is pressed', () => {
-    const updateSpy = sinon.spy();
+    const updateSpy = jest.fn();
     const wrapper = setUpMount({updateCourse: updateSpy});
 
     const radio = wrapper.find("input[value='Computer Science A']");
@@ -63,7 +62,7 @@ describe('QuickAssignTable', () => {
   });
 
   it('correctly falls back when a course has no recommended version', () => {
-    const updateSpy = sinon.spy();
+    const updateSpy = jest.fn();
     const wrapper = setUpMount({
       updateCourse: updateSpy,
       courseOfferings: noRecommendedVersionsOfferings,
@@ -74,7 +73,7 @@ describe('QuickAssignTable', () => {
     radio.simulate('change', {
       target: {value: 'Computer Science A', checked: true},
     });
-    expect(updateSpy).toHaveBeenCalledWith(sinon.match({versionId: 373}));
+    expect(updateSpy).toHaveBeenCalledWith(expect.objectContaining({versionId: 373}));
   });
 
   it('automatically checks correct radio button if course is already assigned', () => {

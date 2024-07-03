@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import {
   getResponsiveBreakpoint,
   ResponsiveSize,
@@ -21,7 +19,7 @@ describe('responsiveRedux', () => {
     expect(getResponsiveBreakpoint(500)).toBe(ResponsiveSize.xs);
   });
   it('getResponsiveBreakpoint returns xs if 0', () => {
-    sinon.stub(console, 'error');
+    jest.spyOn(console, 'error').mockClear().mockImplementation();
     expect(getResponsiveBreakpoint(0)).toBe(ResponsiveSize.xs);
     expect(console.error).toHaveBeenCalledTimes(1);
   });

@@ -1,7 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import DebugButtons from '@cdo/apps/lib/tools/jsdebugger/DebugButtons';
 import {reducers, actions} from '@cdo/apps/lib/tools/jsdebugger/redux';
@@ -34,10 +33,10 @@ describe('The DebugConsole component', () => {
         hideSource: true,
       },
     });
-    sinon.spy(interpreter, 'handleStepOver');
-    sinon.spy(interpreter, 'handlePauseContinue');
-    sinon.spy(interpreter, 'handleStepIn');
-    sinon.spy(interpreter, 'handleStepOut');
+    jest.spyOn(interpreter, 'handleStepOver').mockClear();
+    jest.spyOn(interpreter, 'handlePauseContinue').mockClear();
+    jest.spyOn(interpreter, 'handleStepIn').mockClear();
+    jest.spyOn(interpreter, 'handleStepOut').mockClear();
     getStore().dispatch(actions.attach(interpreter));
     interpreter.parse({code: EXAMPLE_CODE});
     interpreter.executeInterpreter(true);

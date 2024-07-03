@@ -1,7 +1,6 @@
 /* eslint no-unused-vars: "error" */
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {
   ImportScreensDialog,
@@ -163,7 +162,7 @@ describe('ImportScreensDialog', () => {
                  id="img2">
           </div>
         </div>`;
-      onImport = sinon.spy();
+      onImport = jest.fn();
       dialog = shallow(
         <ImportScreensDialog
           hideBackdrop
@@ -204,7 +203,7 @@ describe('ImportScreensDialog', () => {
     describe('the import button', () => {
       it('calls the onImport prop when clicked', () => {
         getDialogButton().simulate('click');
-        expect(onImport.calledWith('some-project', [], [])).toBe(true);
+        expect(onImport).toHaveBeenCalledWith('some-project', [], []);
       });
 
       it('passes the selected screens to the onImport prop function', () => {
@@ -214,7 +213,7 @@ describe('ImportScreensDialog', () => {
         dialog.update();
 
         getDialogButton().simulate('click');
-        expect(onImport.calledWith('some-project', newSelected, [])).toBe(true);
+        expect(onImport).toHaveBeenCalledWith('some-project', newSelected, []);
       });
     });
 
@@ -245,7 +244,7 @@ describe('ImportScreensDialog', () => {
   describe('When given other assets that can be imported', () => {
     let checkboxSelector;
     beforeEach(() => {
-      onImport = sinon.spy();
+      onImport = jest.fn();
       dialog = shallow(
         <ImportScreensDialog
           hideBackdrop
@@ -270,7 +269,7 @@ describe('ImportScreensDialog', () => {
       dialog.update();
 
       getDialogButton().simulate('click');
-      expect(onImport.calledWith('some-project', [], newSelected)).toBe(true);
+      expect(onImport).toHaveBeenCalledWith('some-project', [], newSelected);
     });
 
     describe('the asset list', () => {
@@ -302,7 +301,7 @@ describe('ImportScreensDialog', () => {
                  id="img2">
           </div>
         </div>`;
-      onImport = sinon.spy();
+      onImport = jest.fn();
       dialog = shallow(
         <ImportScreensDialog
           hideBackdrop
@@ -365,7 +364,7 @@ describe('ImportScreensDialog', () => {
                  id="img2">
           </div>
         </div>`;
-      onImport = sinon.spy();
+      onImport = jest.fn();
       dialog = shallow(
         <ImportScreensDialog
           hideBackdrop

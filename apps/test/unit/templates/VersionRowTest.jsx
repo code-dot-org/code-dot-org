@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import VersionRow from '@cdo/apps/templates/VersionRow';
 import msg from '@cdo/locale';
@@ -32,7 +31,7 @@ describe('VersionRow', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <button type="button" className="img-upload">
-        {msg.restore()}
+        {msg.mockRestore()}
       </button>
     );
   });
@@ -54,7 +53,7 @@ describe('VersionRow', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <button type="button" className="btn-info">
-        {msg.restore()}
+        {msg.mockRestore()}
       </button>
     );
   });
@@ -82,7 +81,7 @@ describe('VersionRow', () => {
   });
 
   it('calls onChoose when restore button is clicked', () => {
-    const onChoose = sinon.spy();
+    const onChoose = jest.fn();
     const wrapper = shallow(
       <VersionRow
         {...MINIMUM_PROPS}

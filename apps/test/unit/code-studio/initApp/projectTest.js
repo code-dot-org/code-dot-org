@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import sinon from 'sinon';
 
 import {files as filesApi} from '@cdo/apps/clientApi';
 import header from '@cdo/apps/code-studio/header';
@@ -23,17 +22,17 @@ describe('project.js', () => {
   beforeEach(() => {
     sourceHandler = createStubSourceHandler();
     replaceAppOptions();
-    sinon.stub(utils, 'reload');
-    sinon.stub(header, 'showProjectHeader');
-    sinon.stub(header, 'showMinimalProjectHeader');
-    sinon.stub(header, 'updateTimestamp');
+    jest.spyOn(utils, 'reload').mockClear().mockImplementation();
+    jest.spyOn(header, 'showProjectHeader').mockClear().mockImplementation();
+    jest.spyOn(header, 'showMinimalProjectHeader').mockClear().mockImplementation();
+    jest.spyOn(header, 'updateTimestamp').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    utils.reload.restore();
-    header.showProjectHeader.restore();
-    header.showMinimalProjectHeader.restore();
-    header.updateTimestamp.restore();
+    utils.reload.mockRestore();
+    header.showProjectHeader.mockRestore();
+    header.showMinimalProjectHeader.mockRestore();
+    header.updateTimestamp.mockRestore();
     restoreAppOptions();
   });
 
@@ -304,11 +303,11 @@ describe('project.js', () => {
     let url;
 
     beforeEach(function () {
-      stubUrl = sinon.stub(project, 'getUrl').callsFake(() => url);
+      stubUrl = jest.spyOn(project, 'getUrl').mockClear().mockImplementation(() => url);
     });
 
     afterEach(function () {
-      stubUrl.restore();
+      stubUrl.mockRestore();
     });
 
     it('typical url', function () {
@@ -365,15 +364,15 @@ describe('project.js', () => {
     const CODEPROJECTS_APP_TYPES = ['weblab'];
 
     beforeEach(() => {
-      sinon.stub(project, 'getLocation').callsFake(() => fakeLocation);
-      sinon.stub(project, 'getCurrentId').returns(fakeProjectId);
-      sinon.stub(project, 'getStandaloneApp');
+      jest.spyOn(project, 'getLocation').mockClear().mockImplementation(() => fakeLocation);
+      jest.spyOn(project, 'getCurrentId').mockClear().mockReturnValue(fakeProjectId);
+      jest.spyOn(project, 'getStandaloneApp').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      project.getStandaloneApp.restore();
-      project.getCurrentId.restore();
-      project.getLocation.restore();
+      project.getStandaloneApp.mockRestore();
+      project.getCurrentId.mockRestore();
+      project.getLocation.mockRestore();
     });
 
     function setFakeLocation(url) {
@@ -386,7 +385,7 @@ describe('project.js', () => {
         NORMAL_APP_TYPES.forEach(appType => {
           const expected = `${origin}/projects/${appType}/${fakeProjectId}`;
           describe(`${appType} projects share to ${expected}`, () => {
-            beforeEach(() => project.getStandaloneApp.returns(appType));
+            beforeEach(() => project.getStandaloneApp.mockReturnValue(appType));
 
             it(`from project edit page`, () => {
               setFakeLocation(
@@ -405,7 +404,7 @@ describe('project.js', () => {
         CODEPROJECTS_APP_TYPES.forEach(appType => {
           const expected = `${codeProjectsOrigin}/projects/weblab/${fakeProjectId}`;
           describe(`${appType} projects share to ${expected}`, () => {
-            beforeEach(() => project.getStandaloneApp.returns(appType));
+            beforeEach(() => project.getStandaloneApp.mockReturnValue(appType));
 
             it(`from project edit page`, () => {
               setFakeLocation(
@@ -436,37 +435,37 @@ describe('project.js', () => {
       let oldClassList = [1];
       let newClassList = [2];
       setData({sharedWith: oldClassList});
-      sinon.stub(project, 'updateChannels_');
+      jest.spyOn(project, 'updateChannels_').mockClear().mockImplementation();
 
       expect(project.getCurrentLibrarySharedClasses()).toBe(oldClassList);
       project.setLibrarySharedClasses(newClassList);
       expect(project.getCurrentLibrarySharedClasses()).toBe(newClassList);
 
       setData({});
-      project.updateChannels_.restore();
+      project.updateChannels_.mockRestore();
     });
 
     it('does nothing if the classes passed are not in an array', () => {
       let oldClassList = [1];
       setData({sharedWith: oldClassList});
-      sinon.stub(project, 'updateChannels_');
+      jest.spyOn(project, 'updateChannels_').mockClear().mockImplementation();
 
       expect(project.getCurrentLibrarySharedClasses()).toBe(oldClassList);
       project.setLibrarySharedClasses(2);
       expect(project.getCurrentLibrarySharedClasses()).toBe(oldClassList);
 
       setData({});
-      project.updateChannels_.restore();
+      project.updateChannels_.mockRestore();
     });
   });
 
   describe('setLibraryDetails()', () => {
     beforeEach(() => {
-      sinon.stub(project, 'updateChannels_');
+      jest.spyOn(project, 'updateChannels_').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      project.updateChannels_.restore();
+      project.updateChannels_.mockRestore();
       setData({});
     });
 
@@ -561,25 +560,24 @@ describe('project.js', () => {
 
   describe('setProjectLibraries()', () => {
     beforeEach(() => {
-      sinon
-        .stub(project, 'saveSourceAndHtml_')
-        .callsFake((source, callback) => {
+      jest.spyOn(project, 'saveSourceAndHtml_').mockClear()
+        .mockImplementation((source, callback) => {
           callback();
         });
     });
 
     afterEach(() => {
-      project.saveSourceAndHtml_.restore();
+      project.saveSourceAndHtml_.mockRestore();
     });
 
     it('performs a save with the new library list', () => {
       let library = ['test'];
-      sourceHandler.getLibrariesList.returns(undefined);
+      sourceHandler.getLibrariesList.mockReturnValue(undefined);
       project.init(sourceHandler);
       return project.setProjectLibraries(library).then(() => {
         expect(project.saveSourceAndHtml_).toHaveBeenCalled();
         expect(
-          project.saveSourceAndHtml_.getCall(0).args[0].libraries
+          project.saveSourceAndHtml_.mock.calls[0][0].libraries
         ).toBe(library);
       });
     });
@@ -590,11 +588,11 @@ describe('project.js', () => {
       project.init(sourceHandler);
       return project.setProjectLibraries(library).then(() => {
         expect(
-          project.saveSourceAndHtml_.getCall(0).args[0].libraries
+          project.saveSourceAndHtml_.mock.calls[0][0].libraries
         ).toBe(library);
         return project.setProjectLibraries(result).then(() => {
           expect(
-            project.saveSourceAndHtml_.getCall(1).args[0].libraries
+            project.saveSourceAndHtml_.mock.calls[1][0].libraries
           ).toBe(result);
         });
       });
@@ -603,34 +601,33 @@ describe('project.js', () => {
 
   describe('setMakerEnabled()', () => {
     beforeEach(() => {
-      sinon
-        .stub(project, 'saveSourceAndHtml_')
-        .callsFake((source, callback) => {
+      jest.spyOn(project, 'saveSourceAndHtml_').mockClear()
+        .mockImplementation((source, callback) => {
           callback();
         });
     });
 
     afterEach(() => {
-      project.saveSourceAndHtml_.restore();
+      project.saveSourceAndHtml_.mockRestore();
     });
 
     it('performs a save with maker set to circuitPlayground enabled if it was disabled', () => {
-      sourceHandler.getMakerAPIsEnabled.returns(false);
+      sourceHandler.getMakerAPIsEnabled.mockReturnValue(false);
       project.init(sourceHandler);
       return project.setMakerEnabled(CP_API).then(() => {
         expect(project.saveSourceAndHtml_).toHaveBeenCalled();
         expect(
-          project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled
+          project.saveSourceAndHtml_.mock.calls[0][0].makerAPIsEnabled
         ).toBe(CP_API);
       });
     });
 
     it('performs a save with maker disabled if it was enabled', () => {
-      sourceHandler.getMakerAPIsEnabled.returns(true);
+      sourceHandler.getMakerAPIsEnabled.mockReturnValue(true);
       project.init(sourceHandler);
       return project.setMakerEnabled(null).then(() => {
         expect(project.saveSourceAndHtml_).toHaveBeenCalled();
-        expect(project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled).toBeNull();
+        expect(project.saveSourceAndHtml_.mock.calls[0][0].makerAPIsEnabled).toBeNull();
       });
     });
 
@@ -659,14 +656,14 @@ describe('project.js', () => {
     let server;
 
     beforeEach(() => {
-      sinon.stub(project, 'getStandaloneApp').returns('artist');
+      jest.spyOn(project, 'getStandaloneApp').mockClear().mockReturnValue('artist');
       server = sinon.createFakeServer({autoRespond: true});
       project.init(sourceHandler);
     });
 
     afterEach(() => {
-      server.restore();
-      project.getStandaloneApp.restore();
+      server.mockRestore();
+      project.getStandaloneApp.mockRestore();
     });
 
     it('performs a client-side remix', async () => {
@@ -691,28 +688,28 @@ describe('project.js', () => {
 
     beforeEach(() => {
       window.appOptions.channel = 'mychannel';
-      sinon.stub(utils, 'currentLocation').returns({
+      jest.spyOn(utils, 'currentLocation').mockClear().mockReturnValue({
         pathname: '/projects/artist/mychannel',
         search: '',
       });
-      sinon.stub(project, 'getStandaloneApp').returns('artist');
+      jest.spyOn(project, 'getStandaloneApp').mockClear().mockReturnValue('artist');
       server = sinon.createFakeServer({autoRespond: true});
       project.init(sourceHandler);
     });
 
     afterEach(() => {
-      server.restore();
-      project.getStandaloneApp.restore();
-      utils.currentLocation.restore();
+      server.mockRestore();
+      project.getStandaloneApp.mockRestore();
+      utils.currentLocation.mockRestore();
     });
 
     describe('standalone project', () => {
       beforeEach(() => {
-        sinon.stub(utils, 'navigateToHref');
+        jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
       });
 
       afterEach(() => {
-        utils.navigateToHref.restore();
+        utils.navigateToHref.mockRestore();
       });
 
       it('succeeds when ajax requests succeed', done => {
@@ -797,28 +794,28 @@ describe('project.js', () => {
     let server;
 
     beforeEach(() => {
-      sinon.stub(project, 'getStandaloneApp').returns('dance');
-      sinon.stub(project, 'save').returns(Promise.resolve());
-      sinon.stub(utils, 'navigateToHref');
+      jest.spyOn(project, 'getStandaloneApp').mockClear().mockReturnValue('dance');
+      jest.spyOn(project, 'save').mockClear().mockReturnValue(Promise.resolve());
+      jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
       server = sinon.createFakeServer({autoRespond: true});
       project.init(sourceHandler);
     });
 
     afterEach(() => {
-      server.restore();
-      utils.navigateToHref.restore();
-      project.save.restore();
-      project.getStandaloneApp.restore();
+      server.mockRestore();
+      utils.navigateToHref.mockRestore();
+      project.save.mockRestore();
+      project.getStandaloneApp.mockRestore();
     });
 
     it('navigates to server-side remix', async () => {
-      project.getStandaloneApp.returns('dance');
+      project.getStandaloneApp.mockReturnValue('dance');
       setData({});
 
       await project.serverSideRemix();
 
       expect(utils.navigateToHref).toHaveBeenCalledTimes(1);
-      expect(utils.navigateToHref.firstCall.args[0]).toMatch(/projects\/dance\/.*\/remix/);
+      expect(utils.navigateToHref.mock.calls[0][0]).toMatch(/projects\/dance\/.*\/remix/);
     });
 
     it('saves first if you are the project owner', async () => {
@@ -827,7 +824,7 @@ describe('project.js', () => {
       await project.serverSideRemix();
 
       expect(project.save).toHaveBeenCalledTimes(1);
-      expect(project.save.firstCall.args).toEqual([false, true]);
+      expect(project.save.mock.calls[0]).toEqual([false, true]);
     });
 
     it('does not save if you are not the project owner', async () => {
@@ -847,7 +844,7 @@ describe('project.js', () => {
     });
 
     it('sets a special default project name for Big Game', async () => {
-      project.getStandaloneApp.returns('algebra_game');
+      project.getStandaloneApp.mockReturnValue('algebra_game');
       setData({name: undefined});
 
       await project.serverSideRemix();
@@ -869,7 +866,7 @@ describe('project.js', () => {
     const STUB_BLOB = 'stub-binary-data';
 
     beforeEach(() => {
-      sinon.stub(filesApi, 'putFile');
+      jest.spyOn(filesApi, 'putFile').mockClear().mockImplementation();
 
       const projectData = {
         id: STUB_CHANNEL_ID,
@@ -881,16 +878,16 @@ describe('project.js', () => {
     afterEach(() => {
       project.updateCurrentData_(null, undefined);
 
-      filesApi.putFile.restore();
+      filesApi.putFile.mockRestore();
     });
 
     it('calls filesApi.putFile with correct parameters', () => {
       project.saveThumbnail(STUB_BLOB);
 
       expect(filesApi.putFile).toHaveBeenCalledTimes(1);
-      const call = filesApi.putFile.getCall(0);
-      expect(call.args[0]).toBe('.metadata/thumbnail.png');
-      expect(call.args[1]).toBe(STUB_BLOB);
+      const call = filesApi.putFile.mock.calls[0];
+      expect(call.mock.calls[0]).toBe('.metadata/thumbnail.png');
+      expect(call.mock.calls[1]).toBe(STUB_BLOB);
     });
 
     it('succeeds if filesApi.putFile succeeds', done => {
@@ -998,19 +995,19 @@ describe('project.js', () => {
 
       // spy on updateChannels_ to determine if a request to save channel
       // metadata was sent
-      updateChannelSpy = sinon.spy(project, 'updateChannels_');
+      updateChannelSpy = jest.spyOn(project, 'updateChannels_').mockClear();
     });
 
     afterEach(() => {
-      server.restore();
-      project.updateChannels_.restore();
+      server.mockRestore();
+      project.updateChannels_.mockRestore();
     });
 
     it('calls updateChannels_ if source code changes', done => {
       setData({isOwner: true});
 
       // change getLevelSource stub to simulate changing source code
-      const getLevelSourceStub = sinon.stub();
+      const getLevelSourceStub = jest.fn();
       getLevelSourceStub.resolves();
       getLevelSourceStub.onCall(0).resolves('source code v0');
       getLevelSourceStub.onCall(1).resolves('source code v1');
@@ -1032,7 +1029,7 @@ describe('project.js', () => {
       setData({isOwner: true});
 
       // change getLevelSource stub to simulate changing source code
-      const getLevelSourceStub = sinon.stub();
+      const getLevelSourceStub = jest.fn();
       getLevelSourceStub.resolves();
       getLevelSourceStub.onCall(0).resolves('source code v0');
       getLevelSourceStub.onCall(1).resolves('source code v1');
@@ -1182,24 +1179,24 @@ function stubPutMainJson(server) {
 
 function createStubSourceHandler() {
   return {
-    setInitialLevelHtml: sinon.stub(),
-    getLevelHtml: sinon.stub(),
-    setInitialLevelSource: sinon.stub(),
-    getLevelSource: sinon.stub().resolves(),
-    setInitialAnimationList: sinon.stub(),
-    getAnimationList: sinon.stub().callsFake(cb => cb({})),
-    setMakerAPIsEnabled: sinon.stub(),
-    getMakerAPIsEnabled: sinon.stub(),
-    setSelectedSong: sinon.stub(),
-    getSelectedSong: sinon.stub(),
-    setSelectedPoem: sinon.stub(),
-    getSelectedPoem: sinon.stub(),
-    prepareForRemix: sinon.stub().resolves(),
-    setInitialLibrariesList: sinon.stub(),
-    getLibrariesList: sinon.stub(),
-    setInRestrictedShareMode: sinon.stub(),
-    inRestrictedShareMode: sinon.stub(),
-    setTeacherHasConfirmedUploadWarning: sinon.stub(),
-    teacherHasConfirmedUploadWarning: sinon.stub(),
+    setInitialLevelHtml: jest.fn(),
+    getLevelHtml: jest.fn(),
+    setInitialLevelSource: jest.fn(),
+    getLevelSource: jest.fn().resolves(),
+    setInitialAnimationList: jest.fn(),
+    getAnimationList: jest.fn().callsFake(cb => cb({})),
+    setMakerAPIsEnabled: jest.fn(),
+    getMakerAPIsEnabled: jest.fn(),
+    setSelectedSong: jest.fn(),
+    getSelectedSong: jest.fn(),
+    setSelectedPoem: jest.fn(),
+    getSelectedPoem: jest.fn(),
+    prepareForRemix: jest.fn().resolves(),
+    setInitialLibrariesList: jest.fn(),
+    getLibrariesList: jest.fn(),
+    setInRestrictedShareMode: jest.fn(),
+    inRestrictedShareMode: jest.fn(),
+    setTeacherHasConfirmedUploadWarning: jest.fn(),
+    teacherHasConfirmedUploadWarning: jest.fn(),
   };
 }

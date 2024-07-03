@@ -1,7 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon';
 
 import Toggle from '@cdo/apps/componentLibrary/toggle';
 
@@ -21,7 +20,7 @@ describe('Design System - Toggle', () => {
 
   it('Toggle - changes checked state on click', async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     let checked = false;
     const onChange = () => {
@@ -88,7 +87,7 @@ describe('Design System - Toggle', () => {
 
   it("Toggle - renders disabled toggle, doesn't change on click", async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     let checked = false;
     const onChange = () => {

@@ -1,6 +1,5 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -13,17 +12,17 @@ describe('LevelDetailsDialogTest', () => {
   let handleCloseSpy, loadVideoSpy, defaultProps;
 
   beforeEach(() => {
-    handleCloseSpy = sinon.spy();
+    handleCloseSpy = jest.fn();
     defaultProps = {
       handleClose: handleCloseSpy,
       viewAs: ViewType.Instructor,
       isRtl: false,
     };
-    loadVideoSpy = sinon.stub(LevelDetailsDialog.prototype, 'loadVideo');
+    loadVideoSpy = jest.spyOn(LevelDetailsDialog.prototype, 'loadVideo').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    loadVideoSpy.restore();
+    loadVideoSpy.mockRestore();
   });
 
   it('calls handleClose when dismiss is clicked', () => {
@@ -41,12 +40,12 @@ describe('LevelDetailsDialogTest', () => {
     );
     const dismissButton = wrapper.find('Button').at(0);
     dismissButton.simulate('click');
-    expect(handleCloseSpy.calledOnce).toBe(true);
+    expect(handleCloseSpy).toHaveBeenCalledTimes(1);
   });
 
   it('links to level url', () => {
-    sinon.stub(firehoseClient, 'putRecord');
-    sinon.stub(utils, 'windowOpen');
+    jest.spyOn(firehoseClient, 'putRecord').mockClear().mockImplementation();
+    jest.spyOn(utils, 'windowOpen').mockClear().mockImplementation();
 
     const wrapper = shallow(
       <LevelDetailsDialog
@@ -66,8 +65,8 @@ describe('LevelDetailsDialogTest', () => {
     firehoseClient.putRecord.yieldTo('callback');
     expect(utils.windowOpen).toHaveBeenCalledWith('level.url?no_redirect=1');
 
-    utils.windowOpen.restore();
-    firehoseClient.putRecord.restore();
+    utils.windowOpen.mockRestore();
+    firehoseClient.putRecord.mockRestore();
   });
 
   it('can display an external markdown level', () => {
@@ -100,7 +99,7 @@ describe('LevelDetailsDialogTest', () => {
         }}
       />
     );
-    expect(loadVideoSpy.calledOnce).toBe(true);
+    expect(loadVideoSpy).toHaveBeenCalledTimes(1);
     expect(wrapper.contains('This is some text.')).toBe(true);
     expect(wrapper.find('TeacherOnlyMarkdown').length).toBe(1);
     expect(
@@ -153,7 +152,7 @@ describe('LevelDetailsDialogTest', () => {
         }}
       />
     );
-    expect(loadVideoSpy.calledOnce).toBe(true);
+    expect(loadVideoSpy).toHaveBeenCalledTimes(1);
     expect(wrapper.contains('Some things to think about.')).toBe(true);
   });
 
@@ -171,7 +170,7 @@ describe('LevelDetailsDialogTest', () => {
         }}
       />
     );
-    expect(loadVideoSpy.calledOnce).toBe(true);
+    expect(loadVideoSpy).toHaveBeenCalledTimes(1);
     expect(wrapper.contains('Some things to think about.')).toBe(true);
     expect(wrapper.find('TeacherOnlyMarkdown').length).toBe(1);
     expect(

@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import FilterChoice from '@cdo/apps/tutorialExplorer/filterChoice';
 
@@ -62,7 +61,7 @@ describe('FilterChoice', () => {
   });
 
   it('Calls provided handler on change', () => {
-    const callback = sinon.spy();
+    const callback = jest.fn();
     const testNewCheckedValue = Math.random() < 0.5;
     const wrapper = shallow(
       <FilterChoice {...DEFAULT_PROPS} onUserInput={callback} />

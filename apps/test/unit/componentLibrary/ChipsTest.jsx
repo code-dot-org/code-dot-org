@@ -1,7 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon';
 
 import Chips from '@cdo/apps/componentLibrary/chips';
 
@@ -48,7 +47,7 @@ describe('Design System - Chips', () => {
 
   it('Chips - checks chip on click', async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     let values = [];
     const setValues = newValues => {
@@ -143,7 +142,7 @@ describe('Design System - Chips', () => {
 
   it('Chips - toggles required on click correctly', async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     let values = [];
     const setValues = newValues => {
@@ -230,7 +229,7 @@ describe('Design System - Chips', () => {
 
   it('Chips - doesn`t check chip on click if disabled', async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     let values = [];
     const setValues = newValues => {

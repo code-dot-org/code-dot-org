@@ -1,6 +1,5 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedMoreOptionsDropdown as MoreOptionsDropdown} from '@cdo/apps/templates/sectionProgressV2/MoreOptionsDropdown';
 import i18n from '@cdo/locale';
@@ -12,8 +11,8 @@ describe('MoreOptionsDropdown', () => {
     {id: 1, name: 'Student1'},
     {id: 2, name: 'Student2'},
   ];
-  const expandMetadataForStudents = sinon.spy();
-  const collapseMetadataForStudents = sinon.spy();
+  const expandMetadataForStudents = jest.fn();
+  const collapseMetadataForStudents = jest.fn();
 
   const renderComponent = () =>
     render(

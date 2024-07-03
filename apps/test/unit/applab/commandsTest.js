@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import sinon from 'sinon';
 
 import {rgb, setSelectionRange, openUrl} from '@cdo/apps/applab/commands';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
@@ -33,7 +32,7 @@ describe('setSelectionRange', () => {
 
   beforeEach(() => {
     errorHandler = {
-      outputWarning: sinon.spy(),
+      outputWarning: jest.fn(),
     };
     injectErrorHandler(errorHandler);
 
@@ -124,11 +123,11 @@ describe('openUrl', () => {
 
   beforeEach(() => {
     errorHandler = {
-      outputWarning: sinon.spy(),
+      outputWarning: jest.fn(),
     };
     injectErrorHandler(errorHandler);
-    sinon.spy(window, 'open');
-    sinon.stub($, 'ajax').callsFake(() => {
+    jest.spyOn(window, 'open').mockClear();
+    jest.spyOn($, 'ajax').mockClear().mockImplementation(() => {
       return {
         success() {
           return {
@@ -141,8 +140,8 @@ describe('openUrl', () => {
 
   afterEach(() => {
     injectErrorHandler(null);
-    $.ajax.restore();
-    window.open.restore();
+    $.ajax.mockRestore();
+    window.open.mockRestore();
   });
 
   it('fails if given a non-string url', () => {

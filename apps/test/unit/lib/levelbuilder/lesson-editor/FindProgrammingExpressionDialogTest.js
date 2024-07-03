@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {
   FindProgrammingExpressionDialog,
@@ -85,7 +84,7 @@ describe('FindProgrammingExpressionDialog', () => {
         programmingEnvironments={[]}
       />
     );
-    const searchStub = sinon.stub(wrapper.instance(), 'doSearch');
+    const searchStub = jest.spyOn(wrapper.instance(), 'doSearch').mockClear().mockImplementation();
 
     // searches on a new query
     wrapper.instance().handleSearch({
@@ -93,7 +92,7 @@ describe('FindProgrammingExpressionDialog', () => {
         value: 'foo',
       },
     });
-    expect(searchStub.callCount).toBe(1);
+    expect(searchStub).toHaveBeenCalledTimes(1);
 
     // does not search again on the same query
     wrapper.instance().handleSearch({
@@ -101,13 +100,13 @@ describe('FindProgrammingExpressionDialog', () => {
         value: 'foo',
       },
     });
-    expect(searchStub.callCount).toBe(1);
+    expect(searchStub).toHaveBeenCalledTimes(1);
 
     // does not search on unrelated changes
     wrapper.setState({
       foo: 'bar',
     });
-    expect(searchStub.callCount).toBe(1);
+    expect(searchStub).toHaveBeenCalledTimes(1);
 
     // does search on filter or page change
     wrapper.instance().handleFilter({
@@ -115,14 +114,14 @@ describe('FindProgrammingExpressionDialog', () => {
         value: 'foo',
       },
     });
-    expect(searchStub.callCount).toBe(2);
+    expect(searchStub).toHaveBeenCalledTimes(2);
     wrapper.instance().setCurrentPage(2);
-    expect(searchStub.callCount).toBe(3);
-    searchStub.restore();
+    expect(searchStub).toHaveBeenCalledTimes(3);
+    searchStub.mockRestore();
   });
 
   it('searches the programming_expressions endpoint', () => {
-    const fetchStub = sinon.stub(window, 'fetch').resolves({
+    const fetchStub = jest.spyOn(window, 'fetch').mockClear().mockImplementation().resolves({
       json: () => {
         return {
           programmingExpressions: [],
@@ -145,7 +144,7 @@ describe('FindProgrammingExpressionDialog', () => {
         value: false,
       },
     });
-    expect(fetchStub.callCount).toBe(0);
+    expect(fetchStub).toHaveBeenCalledTimes(0);
 
     // searches with a query and page
     wrapper.instance().handleSearch({
@@ -153,8 +152,8 @@ describe('FindProgrammingExpressionDialog', () => {
         value: 'foo',
       },
     });
-    expect(fetchStub.callCount).toBe(1);
-    expect(fetchStub.lastCall.args).toEqual([
+    expect(fetchStub).toHaveBeenCalledTimes(1);
+    expect(fetchStub.mock.lastCall).toEqual([
       '/programming_expressions/search?page=1&query=foo',
     ]);
 
@@ -164,11 +163,11 @@ describe('FindProgrammingExpressionDialog', () => {
         value: 'bar',
       },
     });
-    expect(fetchStub.callCount).toBe(2);
-    expect(fetchStub.lastCall.args).toEqual([
+    expect(fetchStub).toHaveBeenCalledTimes(2);
+    expect(fetchStub.mock.lastCall).toEqual([
       '/programming_expressions/search?page=1&programmingEnvironmentName=bar&query=foo',
     ]);
 
-    fetchStub.restore();
+    fetchStub.mockRestore();
   });
 });

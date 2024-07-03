@@ -1,7 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedSortByNameDropdown} from '@cdo/apps/templates/SortByNameDropdown';
 
@@ -34,9 +33,9 @@ describe('SortByNameDropdown', () => {
     const unitName = 'course1';
     const source = 'TeacherPanel';
 
-    sinon.spy($, 'post');
+    jest.spyOn($, 'post').mockClear();
 
-    const setSortSpy = sinon.spy();
+    const setSortSpy = jest.fn();
 
     const wrapper = mount(
       <UnconnectedSortByNameDropdown
@@ -64,6 +63,6 @@ describe('SortByNameDropdown', () => {
       unitName,
       source
     );
-    $.post.restore();
+    $.post.mockRestore();
   });
 });

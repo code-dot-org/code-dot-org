@@ -1,6 +1,5 @@
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 import i18n from '@cdo/locale';
@@ -213,10 +212,10 @@ describe('CoteacherSettings', () => {
     expect(wrapper.find('RemoveCoteacherDialog').dive()).toHaveLength(0);
   });
   it('Remove submitted', done => {
-    const setCoteachersToAddSpy = sinon.spy();
+    const setCoteachersToAddSpy = jest.fn();
 
-    const fetchSpy = sinon.stub(window, 'fetch');
-    fetchSpy.returns(Promise.resolve({ok: true}));
+    const fetchSpy = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
+    fetchSpy.mockReturnValue(Promise.resolve({ok: true}));
 
     const wrapper = shallow(
       <CoteacherSettings
@@ -254,7 +253,7 @@ describe('CoteacherSettings', () => {
       expect(table.find('tr')).toHaveLength(2);
       expect(setCoteachersToAddSpy).not.toHaveBeenCalled();
       expect(fetchSpy).toHaveBeenCalledTimes(1);
-      fetchSpy.restore();
+      fetchSpy.mockRestore();
       done();
     }, 50);
   });

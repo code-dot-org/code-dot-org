@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import EvidenceDescriptions from '@cdo/apps/lib/levelbuilder/rubrics/EvidenceDescriptions';
 import {UNDERSTANDING_LEVEL_STRINGS} from '@cdo/apps/templates/rubrics/rubricHelpers';
@@ -10,7 +9,7 @@ import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants'
 
 describe('EvidenceDescriptions', () => {
   let defaultProps;
-  const updateLearningGoal = sinon.spy();
+  const updateLearningGoal = jest.fn();
   const learningGoalData = {
     key: 'learningGoal-1',
     id: '1',

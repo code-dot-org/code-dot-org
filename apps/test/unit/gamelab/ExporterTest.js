@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import Exporter from '@cdo/apps/p5lab/gamelab/Exporter';
 import {
@@ -89,9 +87,9 @@ describe('The Gamelab Exporter,', function () {
     });
 
     if (!window.dashboard.assets.listStore.list.returns) {
-      sinon.stub(window.dashboard.assets.listStore, 'list');
+      jest.spyOn(window.dashboard.assets.listStore, 'list').mockClear().mockImplementation();
     }
-    window.dashboard.assets.listStore.list.returns([
+    window.dashboard.assets.listStore.list.mockReturnValue([
       {filename: 'foo.png'},
       {filename: 'bar.png'},
       {filename: 'zoo.mp3'},
@@ -116,7 +114,7 @@ describe('The Gamelab Exporter,', function () {
   });
 
   afterEach(function () {
-    server.restore();
+    server.mockRestore();
     assetPrefix.init({});
     window.userNameCookieKey = stashedCookieKey;
     restoreRedux();

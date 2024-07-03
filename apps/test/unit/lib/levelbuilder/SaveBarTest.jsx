@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import * as utils from '@cdo/apps/utils';
@@ -10,7 +9,7 @@ import * as utils from '@cdo/apps/utils';
 describe('SaveBar', () => {
   let handleSave;
   beforeEach(() => {
-    handleSave = sinon.spy();
+    handleSave = jest.fn();
   });
 
   it('renders default props', () => {
@@ -20,7 +19,7 @@ describe('SaveBar', () => {
   });
 
   it('can save and keep editing', () => {
-    const handleSave = sinon.spy();
+    const handleSave = jest.fn();
     const wrapper = shallow(<SaveBar handleSave={handleSave} />);
 
     const saveAndKeepEditingButton = wrapper.find('button').at(0);
@@ -58,7 +57,7 @@ describe('SaveBar', () => {
   });
 
   it('can save and close', () => {
-    const handleSave = sinon.spy();
+    const handleSave = jest.fn();
     const wrapper = shallow(<SaveBar handleSave={handleSave} />);
 
     const saveAndCloseButton = wrapper.find('button').at(1);
@@ -69,8 +68,8 @@ describe('SaveBar', () => {
   });
 
   it('can show with custom handleView, even if path is given', () => {
-    const handleView = sinon.spy();
-    sinon.stub(utils, 'navigateToHref');
+    const handleView = jest.fn();
+    jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
     const wrapper = shallow(
       <SaveBar
         handleSave={handleSave}
@@ -86,12 +85,12 @@ describe('SaveBar', () => {
     expect(utils.navigateToHref).not.toHaveBeenCalled();
     expect(handleView).toHaveBeenCalledTimes(1);
 
-    utils.navigateToHref.restore();
+    utils.navigateToHref.mockRestore();
   });
 
   it('can show with custom path', () => {
     const path = '/my/path';
-    sinon.stub(utils, 'navigateToHref');
+    jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
     const wrapper = shallow(
       <SaveBar handleSave={handleSave} pathForShowButton={path} />
     );
@@ -102,6 +101,6 @@ describe('SaveBar', () => {
 
     expect(utils.navigateToHref).toHaveBeenCalledWith(path);
 
-    utils.navigateToHref.restore();
+    utils.navigateToHref.mockRestore();
   });
 });

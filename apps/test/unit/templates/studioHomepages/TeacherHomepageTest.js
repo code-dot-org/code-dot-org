@@ -1,7 +1,6 @@
 import {assert} from 'chai';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {UnconnectedTeacherHomepage as TeacherHomepage} from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
@@ -47,7 +46,7 @@ describe('TeacherHomepage', () => {
     server.respondWith('POST', '/dashboardapi/sections', successResponse());
   });
   afterEach(() => {
-    server.restore();
+    server.mockRestore();
   });
 
   it('shows a Header Banner that says My Dashboard', () => {
@@ -62,13 +61,13 @@ describe('TeacherHomepage', () => {
   });
 
   it('logs an Amplitude event only on first render', () => {
-    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
     sessionStorage.setItem('logged_teacher_session', 'false');
     setUp();
 
     expect(sessionStorage.getItem('logged_teacher_session')).toBe('true');
     expect(analyticsSpy).toHaveBeenCalledTimes(1);
-    expect(analyticsSpy.firstCall.args).toEqual([
+    expect(analyticsSpy.mock.calls[0]).toEqual([
       'Teacher Login',
       {'user id': 42},
       'Both',
@@ -79,7 +78,7 @@ describe('TeacherHomepage', () => {
     setUp();
     expect(analyticsSpy).toHaveBeenCalledTimes(1);
 
-    analyticsSpy.restore();
+    analyticsSpy.mockRestore();
   });
 
   it('renders a NpsSurveyBlock if showNpsSurvey is true', () => {

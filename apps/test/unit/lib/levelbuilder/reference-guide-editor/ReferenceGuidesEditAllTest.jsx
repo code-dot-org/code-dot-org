@@ -1,6 +1,5 @@
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
-import sinon from 'sinon';
 
 import ReferenceGuideEditAll from '@cdo/apps/lib/levelbuilder/reference-guide-editor/ReferenceGuideEditAll';
 
@@ -17,11 +16,11 @@ describe('ReferenceGuideEditAll', () => {
   let fetchSpy;
 
   beforeEach(() => {
-    fetchSpy = sinon.stub(window, 'fetch');
+    fetchSpy = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    fetchSpy.restore();
+    fetchSpy.mockRestore();
   });
 
   it('displays the name of the reference guide', () => {
@@ -122,7 +121,7 @@ describe('ReferenceGuideEditAll', () => {
   });
 
   it('allows guides to be moved', () => {
-    fetchSpy.returns(
+    fetchSpy.mockReturnValue(
       Promise.resolve({
         ok: true,
       })

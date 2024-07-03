@@ -1,7 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedManageStudentsActionsCell as ManageStudentsActionsCell} from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
 
@@ -70,20 +69,18 @@ describe('ManageStudentsActionsCell', () => {
 
   describe('onDelete', () => {
     beforeEach(() => {
-      sinon.stub($, 'ajax').returns({
-        done: sinon
-          .stub()
-          .callsArg(0)
-          .returns({fail: () => {}}),
+      jest.spyOn($, 'ajax').mockClear().mockReturnValue({
+        done: jest.fn().mockImplementation((...args) => args[0]())
+          .mockReturnValue({fail: () => {}}),
       });
     });
 
     afterEach(() => {
-      $.ajax.restore();
+      $.ajax.mockRestore();
     });
 
     it('Updates the section information', () => {
-      const loadSectionSpy = sinon.spy();
+      const loadSectionSpy = jest.fn();
       const props = {
         ...DEFAULT_PROPS,
         ...{loadSectionData: loadSectionSpy},

@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import Button from '@cdo/apps/templates/Button';
 
@@ -51,7 +50,7 @@ describe('Button', () => {
   });
 
   it('renders a div when button has an onClick', () => {
-    const onClick = sinon.spy();
+    const onClick = jest.fn();
     const wrapper = shallow(
       <Button
         __useDeprecatedTag

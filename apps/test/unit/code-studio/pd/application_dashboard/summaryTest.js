@@ -1,7 +1,6 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 import {Row} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import sinon from 'sinon';
 
 import {
   Summary,
@@ -75,7 +74,7 @@ describe('Summary', () => {
 
     expect(summary.find('Spinner')).toHaveLength(0);
 
-    server.restore();
+    server.mockRestore();
   });
 
   it('removeIncompleteApplications strips incomplete applications from data', () => {

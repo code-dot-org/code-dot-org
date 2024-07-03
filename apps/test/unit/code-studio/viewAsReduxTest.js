@@ -1,5 +1,4 @@
 import {assert} from 'chai';
-import sinon, {stub} from 'sinon';
 
 import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
 import reducer, {
@@ -24,11 +23,11 @@ describe('viewAs redux', () => {
     registerReducers({viewAs: reducer});
     store = getStore();
 
-    sinon.stub(codeStudioUtils, 'updateQueryParam');
+    jest.spyOn(codeStudioUtils, 'updateQueryParam').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    codeStudioUtils.updateQueryParam.restore();
+    codeStudioUtils.updateQueryParam.mockRestore();
     restoreRedux();
   });
 
@@ -80,8 +79,8 @@ describe('viewAs redux', () => {
     });
 
     afterAll(() => {
-      appsUtils.reload.restore();
-      codeStudioUtils.queryParams.restore();
+      appsUtils.reload.mockRestore();
+      codeStudioUtils.queryParams.mockRestore();
     });
 
     it('changes the window location when changing to particpant with user_id', () => {

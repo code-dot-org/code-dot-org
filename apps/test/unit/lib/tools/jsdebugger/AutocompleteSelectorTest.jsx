@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import AutocompleteSelector from '@cdo/apps/lib/tools/jsdebugger/AutocompleteSelector';
 
@@ -19,9 +18,9 @@ describe('AutocompleteSelector', () => {
   const SELECTED_OPTION_INDEX = 0;
 
   beforeEach(() => {
-    clicked = sinon.spy();
-    mousedOver = sinon.spy();
-    clickOutside = sinon.spy();
+    clicked = jest.fn();
+    mousedOver = jest.fn();
+    clickOutside = jest.fn();
 
     component = (
       <AutocompleteSelector
@@ -49,7 +48,7 @@ describe('AutocompleteSelector', () => {
       options.first().simulate('click');
       expect(clicked).toHaveBeenCalledTimes(1);
       expect(clicked).toHaveBeenCalledWith(FIRST_OPTION_TEXT);
-      clicked.resetHistory();
+      clicked.mockReset();
       options.last().simulate('click');
       expect(clicked).toHaveBeenCalledTimes(1);
       expect(clicked).toHaveBeenCalledWith(SECOND_OPTION_TEXT);
@@ -59,7 +58,7 @@ describe('AutocompleteSelector', () => {
       options.first().simulate('mouseOver');
       expect(mousedOver).toHaveBeenCalledTimes(1);
       expect(mousedOver).toHaveBeenCalledWith(0);
-      mousedOver.resetHistory();
+      mousedOver.mockReset();
       options.last().simulate('mouseOver');
       expect(mousedOver).toHaveBeenCalledTimes(1);
       expect(mousedOver).toHaveBeenCalledWith(1);

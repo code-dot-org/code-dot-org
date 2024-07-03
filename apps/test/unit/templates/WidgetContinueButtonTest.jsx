@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import * as dialogHelper from '@cdo/apps/code-studio/levels/dialogHelper';
 import WidgetContinueButton from '@cdo/apps/templates/WidgetContinueButton';
@@ -9,11 +8,11 @@ import WidgetContinueButton from '@cdo/apps/templates/WidgetContinueButton';
 
 describe('WidgetContinueButton', () => {
   beforeEach(() => {
-    sinon.stub(dialogHelper, 'processResults');
+    jest.spyOn(dialogHelper, 'processResults').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    dialogHelper.processResults.restore();
+    dialogHelper.processResults.mockRestore();
   });
 
   it('calls processResults when clicked', () => {
@@ -26,7 +25,7 @@ describe('WidgetContinueButton', () => {
     expect(wrapper.state()).toHaveProperty('submitting', true);
 
     // Assume success + redirect, processResults calling callback
-    dialogHelper.processResults.firstCall.args[0](true);
+    dialogHelper.processResults.mock.calls[0][0](true);
   });
 
   it('resets state if processResults will not redirect', () => {
@@ -37,7 +36,7 @@ describe('WidgetContinueButton', () => {
     expect(wrapper.state()).toHaveProperty('submitting', true);
 
     // Assume success + redirect, processResults calling callback
-    dialogHelper.processResults.firstCall.args[0](false);
+    dialogHelper.processResults.mock.calls[0][0](false);
     expect(wrapper.state()).toHaveProperty('submitting', false);
   });
 });

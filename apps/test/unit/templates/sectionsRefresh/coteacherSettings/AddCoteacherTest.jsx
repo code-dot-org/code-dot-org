@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import AddCoteacher from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/AddCoteacher';
 
@@ -16,7 +15,7 @@ const DEFAULT_PROPS = {
 };
 
 const makeSpyWithAssertions = (assertions, done) =>
-  sinon.spy(function (params) {
+  jest.fn(function (params) {
     // this is necessary to get an actual error message.
     // Otherwise it gets swallowed by the spy after the test is done.
     try {
@@ -38,11 +37,11 @@ describe('AddCoteacher', () => {
   let fetchSpy;
 
   beforeEach(() => {
-    fetchSpy = sinon.stub(window, 'fetch');
+    fetchSpy = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    fetchSpy.restore();
+    fetchSpy.mockRestore();
   });
 
   it('shows input, button and count', () => {
@@ -77,9 +76,9 @@ describe('AddCoteacher', () => {
   });
 
   it('adds coteacher when valid email is added', done => {
-    fetchSpy.returns(Promise.resolve({ok: true}));
-    const setCoteachersToAddSpy = sinon.spy();
-    const addSavedCoteacherSpy = sinon.spy();
+    fetchSpy.mockReturnValue(Promise.resolve({ok: true}));
+    const setCoteachersToAddSpy = jest.fn();
+    const addSavedCoteacherSpy = jest.fn();
 
     const setAddErrorSpy = makeSpyWithAssertions(error => {
       expect(fetchSpy).to.be.calledOnceWith(
@@ -87,8 +86,8 @@ describe('AddCoteacher', () => {
       );
 
       expect(setCoteachersToAddSpy).toHaveBeenCalledTimes(1);
-      const spyCall = setCoteachersToAddSpy.getCall(0);
-      expect(spyCall.args[0]([])).toEqual(['new-email@code.org']);
+      const spyCall = setCoteachersToAddSpy.mock.calls[0];
+      expect(spyCall.mock.calls[0]([])).toEqual(['new-email@code.org']);
       expect(error).toBe('');
       expect(addSavedCoteacherSpy).not.toHaveBeenCalled();
     }, done);
@@ -106,7 +105,7 @@ describe('AddCoteacher', () => {
   });
 
   it('calls add api when email is added and editing section', done => {
-    fetchSpy.returns(
+    fetchSpy.mockReturnValue(
       Promise.resolve({
         ok: true,
         json: () =>
@@ -117,14 +116,14 @@ describe('AddCoteacher', () => {
           }),
       })
     );
-    const setCoteachersToAddSpy = sinon.spy();
-    const addSavedCoteacherSpy = sinon.spy();
+    const setCoteachersToAddSpy = jest.fn();
+    const addSavedCoteacherSpy = jest.fn();
 
     const setAddErrorSpy = makeSpyWithAssertions(error => {
       expect(fetchSpy).toHaveBeenCalledTimes(1);
-      const fetchCall = fetchSpy.getCall(0);
-      expect(fetchCall.args[0]).toBe(`/api/v1/section_instructors`);
-      const fetchCallBody = JSON.parse(fetchCall.args[1].body);
+      const fetchCall = fetchSpy.mock.calls[0];
+      expect(fetchCall.mock.calls[0]).toBe(`/api/v1/section_instructors`);
+      const fetchCallBody = JSON.parse(fetchCall.mock.calls[1].body);
       expect(fetchCallBody.section_id).toBe(1);
       expect(fetchCallBody.email).toBe('new-email@code.org');
 
@@ -153,11 +152,11 @@ describe('AddCoteacher', () => {
   });
 
   it('shows error if add call fails', done => {
-    fetchSpy.returns(
+    fetchSpy.mockReturnValue(
       Promise.resolve({ok: false, statusText: 'Not Found', status: 404})
     );
 
-    const addSavedCoteacherSpy = sinon.spy();
+    const addSavedCoteacherSpy = jest.fn();
 
     const setAddErrorSpy = makeSpyWithAssertions(error => {
       expect(error).toBe(
@@ -170,7 +169,7 @@ describe('AddCoteacher', () => {
       expect(addSavedCoteacherSpy).not.toHaveBeenCalled();
     }, done);
 
-    const setCoteachersToAddSpy = sinon.spy();
+    const setCoteachersToAddSpy = jest.fn();
 
     const wrapper = shallow(
       <AddCoteacher
@@ -186,12 +185,12 @@ describe('AddCoteacher', () => {
   });
 
   it('trims email for validation', done => {
-    fetchSpy.returns(Promise.resolve({ok: true}));
-    const setCoteachersToAddSpy = sinon.spy();
+    fetchSpy.mockReturnValue(Promise.resolve({ok: true}));
+    const setCoteachersToAddSpy = jest.fn();
     const setAddErrorSpy = makeSpyWithAssertions(error => {
       expect(setCoteachersToAddSpy).toHaveBeenCalledTimes(1);
-      const spyCall = setCoteachersToAddSpy.getCall(0);
-      expect(spyCall.args[0]([])).toEqual(['new-email@code.org']);
+      const spyCall = setCoteachersToAddSpy.mock.calls[0];
+      expect(spyCall.mock.calls[0]([])).toEqual(['new-email@code.org']);
       expect(error).toBe('');
     }, done);
 
@@ -207,7 +206,7 @@ describe('AddCoteacher', () => {
   });
 
   it('shows error when adding email that was added but not saved', done => {
-    const setCoteachersToAddSpy = sinon.spy();
+    const setCoteachersToAddSpy = jest.fn();
 
     const setAddErrorSpy = makeSpyWithAssertions(error => {
       expect(error).toBe('Oops! You already invited same@code.org.');
@@ -227,7 +226,7 @@ describe('AddCoteacher', () => {
   });
 
   it('shows error if not an email', done => {
-    const setCoteachersToAddSpy = sinon.spy();
+    const setCoteachersToAddSpy = jest.fn();
 
     const setAddErrorSpy = makeSpyWithAssertions(error => {
       expect(error).toBe('not-an-eamil is not a valid email address.');
@@ -246,10 +245,10 @@ describe('AddCoteacher', () => {
   });
 
   it('calls check method and shows returned error', done => {
-    fetchSpy.returns(
+    fetchSpy.mockReturnValue(
       Promise.resolve({ok: false, statusText: 'Not Found', status: 404})
     );
-    const setCoteachersToAddSpy = sinon.spy();
+    const setCoteachersToAddSpy = jest.fn();
 
     const setAddErrorSpy = makeSpyWithAssertions(error => {
       expect(error).toBe(

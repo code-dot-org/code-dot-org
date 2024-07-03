@@ -1,7 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon';
 
 import RadioButton from '@cdo/apps/componentLibrary/radioButton';
 
@@ -26,7 +25,7 @@ describe('Design System - Radio Button', () => {
 
   it('RadioButton - selects button when clicked, once selected - remains selected if clicked again', async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     let checked = false;
     const onChange = () => {
@@ -94,7 +93,7 @@ describe('Design System - Radio Button', () => {
 
   it("RadioButton - renders disabled radio button, doesn't change on click", async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     let checked = false;
     const onChange = () => {

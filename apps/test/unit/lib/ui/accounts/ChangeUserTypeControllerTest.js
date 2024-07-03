@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import ReactDOM from 'react-dom';
-import {spy, stub} from 'sinon';
 
 import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeController';
 import * as utils from '@cdo/apps/utils';
@@ -19,9 +18,9 @@ describe('ChangeUserTypeController', () => {
 
   afterEach(() => {
     controller && controller.hideChangeUserTypeModal();
-    utils.reload.restore();
-    ReactDOM.render.restore();
-    ReactDOM.unmountComponentAtNode.restore();
+    utils.reload.mockRestore();
+    ReactDOM.render.mockRestore();
+    ReactDOM.unmountComponentAtNode.mockRestore();
   });
 
   describe('when initialUserType = "student"', () => {

@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
@@ -33,18 +32,17 @@ describe('LibraryPublisher', () => {
         setLibraryDetails: () => {},
       },
     });
-    sinon
-      .stub(window.dashboard.project, 'setLibraryDetails')
-      .returns(undefined);
-    sinon.stub(libraryParser, 'suggestName').returns(libraryName);
-    sinon.stub(libraryParser, 'sanitizeName').returns(libraryName);
+    jest.spyOn(window.dashboard.project, 'setLibraryDetails').mockClear()
+      .mockReturnValue(undefined);
+    jest.spyOn(libraryParser, 'suggestName').mockClear().mockReturnValue(libraryName);
+    jest.spyOn(libraryParser, 'sanitizeName').mockClear().mockReturnValue(libraryName);
     libraryClientApi = new LibraryClientApi('123');
-    publishSpy = sinon.stub(libraryClientApi, 'publish');
+    publishSpy = jest.spyOn(libraryClientApi, 'publish').mockClear().mockImplementation();
   });
 
   afterAll(() => {
-    libraryParser.suggestName.restore();
-    libraryParser.sanitizeName.restore();
+    libraryParser.suggestName.mockRestore();
+    libraryParser.sanitizeName.mockRestore();
     restoreOnWindow('dashboard');
   });
 
@@ -58,10 +56,10 @@ describe('LibraryPublisher', () => {
       sourceFunctionList: sourceFunctionList,
       librarySource: librarySource,
     };
-    onPublishSuccess = sinon.stub();
-    onUnpublishSuccess = sinon.stub();
-    unpublishProjectLibrary = sinon.stub();
-    findProfanity = sinon.stub().resolves(null);
+    onPublishSuccess = jest.fn();
+    onUnpublishSuccess = jest.fn();
+    unpublishProjectLibrary = jest.fn();
+    findProfanity = jest.fn().resolves(null);
 
     DEFAULT_PROPS = {
       onPublishSuccess,
@@ -74,8 +72,8 @@ describe('LibraryPublisher', () => {
   });
 
   afterEach(() => {
-    onPublishSuccess.resetHistory();
-    onUnpublishSuccess.resetHistory();
+    onPublishSuccess.mockReset();
+    onUnpublishSuccess.mockReset();
   });
 
   describe('On Load', () => {
@@ -171,7 +169,7 @@ describe('LibraryPublisher', () => {
     });
 
     afterEach(() => {
-      server.restore();
+      server.mockRestore();
     });
 
     const stubFindProfanityRequest = (status, serverData) => {
@@ -224,12 +222,12 @@ describe('LibraryPublisher', () => {
         libraryDescription: description,
         selectedFunctions: selectedFunctions,
       });
-      const publishSpy = sinon.spy(wrapper.instance(), 'publish');
+      const publishSpy = jest.spyOn(wrapper.instance(), 'publish').mockClear();
 
       await wrapper.instance().validateAndPublish();
 
       expect(wrapper.state().publishState).toBe(PublishState.PROFANE_INPUT);
-      expect(publishSpy.callCount).toBe(0);
+      expect(publishSpy).toHaveBeenCalledTimes(0);
     });
 
     it('calls publish if no profanity is found', async () => {
@@ -238,11 +236,11 @@ describe('LibraryPublisher', () => {
         libraryDescription: description,
         selectedFunctions: selectedFunctions,
       });
-      const publishSpy = sinon.spy(wrapper.instance(), 'publish');
+      const publishSpy = jest.spyOn(wrapper.instance(), 'publish').mockClear();
 
       await wrapper.instance().validateAndPublish();
 
-      expect(publishSpy.callCount).toBe(1);
+      expect(publishSpy).toHaveBeenCalledTimes(1);
     });
 
     it('calls publish if request to find profanity fails', async () => {
@@ -251,19 +249,19 @@ describe('LibraryPublisher', () => {
         libraryDescription: description,
         selectedFunctions: selectedFunctions,
       });
-      const publishSpy = sinon.spy(wrapper.instance(), 'publish');
+      const publishSpy = jest.spyOn(wrapper.instance(), 'publish').mockClear();
 
       await wrapper.instance().validateAndPublish();
 
-      expect(publishSpy.callCount).toBe(1);
+      expect(publishSpy).toHaveBeenCalledTimes(1);
     });
 
     describe('with valid input', () => {
       it('sets error state when publish fails', async () => {
-        publishSpy.callsArgWith(1, {
+        publishSpy.mockImplementation((...args) => args[1]({
           message: '',
-        });
-        sinon.stub(console, 'warn');
+        }));
+        jest.spyOn(console, 'warn').mockClear().mockImplementation();
         wrapper.setState({
           libraryDescription: description,
           selectedFunctions: selectedFunctions,
@@ -273,14 +271,14 @@ describe('LibraryPublisher', () => {
 
         expect(wrapper.state().publishState).toBe(PublishState.ERROR_PUBLISH);
 
-        console.warn.restore();
+        console.warn.mockRestore();
       });
 
       it('sets error state if library is too long', async () => {
-        publishSpy.callsArgWith(1, {
+        publishSpy.mockImplementation((...args) => args[1]({
           message: 'httpStatusCode: 413; status: error; error: ',
-        });
-        sinon.stub(console, 'warn');
+        }));
+        jest.spyOn(console, 'warn').mockClear().mockImplementation();
         wrapper.setState({
           libraryDescription: description,
           selectedFunctions: selectedFunctions,
@@ -290,15 +288,15 @@ describe('LibraryPublisher', () => {
 
         expect(wrapper.state().publishState).toBe(PublishState.TOO_LONG);
 
-        console.warn.restore();
+        console.warn.mockRestore();
       });
 
       it('sets error state if library contains PII', async () => {
-        publishSpy.callsArgWith(1, {
+        publishSpy.mockImplementation((...args) => args[1]({
           message: 'httpStatusCode: 400; status: error; error: Bad request',
           cause: {pIIWords: ['123-456-7890']},
-        });
-        sinon.stub(console, 'warn');
+        }));
+        jest.spyOn(console, 'warn').mockClear().mockImplementation();
         wrapper.setState({
           libraryDescription: description,
           selectedFunctions: selectedFunctions,
@@ -309,15 +307,15 @@ describe('LibraryPublisher', () => {
         expect(wrapper.state().publishState).toBe(PublishState.PII_INPUT);
         expect(wrapper.state().pIIWords).toEqual(['123-456-7890']);
 
-        console.warn.restore();
+        console.warn.mockRestore();
       });
 
       it('sets generic error state if error has null cause', async () => {
-        publishSpy.callsArgWith(1, {
+        publishSpy.mockImplementation((...args) => args[1]({
           message: 'httpStatusCode: 400; status: error; error: Bad request',
           cause: null,
-        });
-        sinon.stub(console, 'warn');
+        }));
+        jest.spyOn(console, 'warn').mockClear().mockImplementation();
         wrapper.setState({
           libraryDescription: description,
           selectedFunctions: selectedFunctions,
@@ -327,15 +325,15 @@ describe('LibraryPublisher', () => {
 
         expect(wrapper.state().publishState).toBe(PublishState.ERROR_PUBLISH);
 
-        console.warn.restore();
+        console.warn.mockRestore();
       });
 
       it('sets generic error state if error has another cause', async () => {
-        publishSpy.callsArgWith(1, {
+        publishSpy.mockImplementation((...args) => args[1]({
           message: 'httpStatusCode: 400; status: error; error: Bad request',
           cause: {profaneWords: ['fart']},
-        });
-        sinon.stub(console, 'warn');
+        }));
+        jest.spyOn(console, 'warn').mockClear().mockImplementation();
         wrapper.setState({
           libraryDescription: description,
           selectedFunctions: selectedFunctions,
@@ -345,11 +343,11 @@ describe('LibraryPublisher', () => {
 
         expect(wrapper.state().publishState).toBe(PublishState.ERROR_PUBLISH);
 
-        console.warn.restore();
+        console.warn.mockRestore();
       });
 
       it('calls onPublishSuccess when it succeeds', async () => {
-        publishSpy.callsArg(2);
+        publishSpy.mockImplementation((...args) => args[2]());
         wrapper.setState({
           libraryDescription: description,
           selectedFunctions: selectedFunctions,
@@ -357,11 +355,11 @@ describe('LibraryPublisher', () => {
 
         await wrapper.instance().validateAndPublish();
 
-        expect(onPublishSuccess.called).toBe(true);
+        expect(onPublishSuccess).toHaveBeenCalled();
       });
 
       it('publishes only the selected functions and description', async () => {
-        let libraryJsonSpy = sinon.stub(libraryParser, 'createLibraryJson');
+        let libraryJsonSpy = jest.spyOn(libraryParser, 'createLibraryJson').mockClear().mockImplementation();
         let description = 'description';
         let selectedFunctions = {bar: true};
         let newFunction = {functionName: 'bar', comment: 'comment'};
@@ -382,7 +380,7 @@ describe('LibraryPublisher', () => {
 
         expect(libraryJsonSpy).toHaveBeenCalledWith(librarySource, [newFunction], libraryName, description);
 
-        libraryParser.createLibraryJson.restore();
+        libraryParser.createLibraryJson.mockRestore();
       });
     });
   });
@@ -390,7 +388,7 @@ describe('LibraryPublisher', () => {
   describe('unpublish', () => {
     let wrapper, deleteSpy;
     beforeEach(() => {
-      deleteSpy = sinon.stub(libraryClientApi, 'delete');
+      deleteSpy = jest.spyOn(libraryClientApi, 'delete').mockClear().mockImplementation();
       libraryDetails.alreadyPublished = true;
       wrapper = shallow(
         <LibraryPublisher {...DEFAULT_PROPS} libraryDetails={libraryDetails} />
@@ -398,22 +396,22 @@ describe('LibraryPublisher', () => {
     });
 
     afterEach(() => {
-      libraryClientApi.delete.restore();
+      libraryClientApi.delete.mockRestore();
     });
 
     it('calls onUnpublishSuccess when it succeeds', () => {
-      deleteSpy.callsArg(0);
+      deleteSpy.mockImplementation((...args) => args[0]());
       wrapper.instance().unpublish();
-      expect(onUnpublishSuccess.called).toBe(true);
+      expect(onUnpublishSuccess).toHaveBeenCalled();
     });
 
     it('sets ERROR_UNPUBLISH when it fails', () => {
-      sinon.stub(console, 'warn');
-      deleteSpy.callsArg(1);
+      jest.spyOn(console, 'warn').mockClear().mockImplementation();
+      deleteSpy.mockImplementation((...args) => args[1]());
       wrapper.instance().unpublish();
       expect(wrapper.state().publishState).toBe(PublishState.ERROR_UNPUBLISH);
-      expect(onUnpublishSuccess.called).toBe(false);
-      console.warn.restore();
+      expect(onUnpublishSuccess).not.toHaveBeenCalled();
+      console.warn.mockRestore();
     });
   });
 

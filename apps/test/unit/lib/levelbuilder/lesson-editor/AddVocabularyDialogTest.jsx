@@ -1,6 +1,5 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import AddVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddVocabularyDialog';
 
@@ -14,8 +13,8 @@ describe('AddVocabularyDialog', () => {
 
   let defaultProps, afterSaveSpy, handleCloseSpy;
   beforeEach(() => {
-    afterSaveSpy = sinon.spy();
-    handleCloseSpy = sinon.spy();
+    afterSaveSpy = jest.fn();
+    handleCloseSpy = jest.fn();
     defaultProps = {
       isOpen: true,
       afterSave: afterSaveSpy,
@@ -60,9 +59,9 @@ describe('AddVocabularyDialog', () => {
     server.respond();
     wrapper.update();
 
-    expect(handleCloseSpy.calledOnce).toBe(true);
-    expect(afterSaveSpy.calledOnce).toBe(true);
-    server.restore();
+    expect(handleCloseSpy).toHaveBeenCalledTimes(1);
+    expect(afterSaveSpy).toHaveBeenCalledTimes(1);
+    server.mockRestore();
   });
 
   it('renders an existing vocabulary for edit', () => {
@@ -106,7 +105,7 @@ describe('AddVocabularyDialog', () => {
     server.respond();
     wrapper.update();
     expect(wrapper.find('h3').contains('There was an error'));
-    server.restore();
+    server.mockRestore();
   });
 
   it('renders default props', () => {

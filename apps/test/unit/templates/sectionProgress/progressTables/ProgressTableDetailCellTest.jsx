@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
@@ -40,11 +39,11 @@ const setUp = (overrideProps = {}) => {
 
 describe('ProgressTableDetailCell', () => {
   beforeEach(() => {
-    sinon.stub(firehoseClient, 'putRecord');
+    jest.spyOn(firehoseClient, 'putRecord').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    firehoseClient.putRecord.restore();
+    firehoseClient.putRecord.mockRestore();
   });
 
   it('renders nothing if levels array is empty', () => {

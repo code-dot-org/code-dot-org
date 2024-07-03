@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedJoinSection as JoinSection} from '@cdo/apps/templates/studioHomepages/JoinSection';
 
@@ -20,7 +19,7 @@ describe('JoinSection', () => {
   });
 
   afterEach(() => {
-    server.restore();
+    server.mockRestore();
   });
 
   it('renders with a dashed border when not enrolled in a section', () => {
@@ -61,7 +60,7 @@ describe('JoinSection', () => {
       }),
     ]);
 
-    const updateSections = sinon.spy(function () {
+    const updateSections = jest.fn(function () {
       expect(wrapper.state()).toEqual({sectionCode: ''});
       expect(wrapper.find('input').prop('value')).toBe('');
 
@@ -88,7 +87,7 @@ describe('JoinSection', () => {
       }),
     ]);
 
-    const updateSections = sinon.spy(function () {
+    const updateSections = jest.fn(function () {
       expect(wrapper.state()).toEqual({sectionCode: ''});
       expect(wrapper.find('input').prop('value')).toBe('');
 
@@ -115,7 +114,7 @@ describe('JoinSection', () => {
       }),
     ]);
 
-    const updateSections = sinon.spy(function () {
+    const updateSections = jest.fn(function () {
       expect(wrapper.state()).toEqual({sectionCode: ''});
       expect(wrapper.find('input').prop('value')).toBe('');
 
@@ -160,7 +159,7 @@ describe('JoinSection', () => {
       }),
     ]);
 
-    const updateSectionsResult = sinon.spy(function () {
+    const updateSectionsResult = jest.fn(function () {
       expect(wrapper.state()).toEqual({sectionCode: ''});
       expect(wrapper.find('input').prop('value')).toBe('');
 
@@ -187,7 +186,7 @@ describe('JoinSection', () => {
       '',
     ]);
 
-    const updateSectionsResult = sinon.spy(function () {
+    const updateSectionsResult = jest.fn(function () {
       expect(wrapper.state()).toEqual({sectionCode: ''});
       expect(wrapper.find('input').prop('value')).toBe('');
 
@@ -210,7 +209,7 @@ describe('JoinSection', () => {
   it('makes get request to server for captcha info in componentDidMount', () => {
     const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
     const instance = wrapper.instance();
-    const fetchCaptchaSpy = sinon.spy(instance, 'fetchCaptchaInfo');
+    const fetchCaptchaSpy = jest.spyOn(instance, 'fetchCaptchaInfo').mockClear();
     instance.componentDidMount();
     expect(fetchCaptchaSpy).toHaveBeenCalledTimes(1);
   });

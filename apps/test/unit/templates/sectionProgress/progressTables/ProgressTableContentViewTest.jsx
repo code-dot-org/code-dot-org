@@ -1,7 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import * as Virtualized from 'reactabular-virtualized';
-import sinon from 'sinon';
 
 import {
   fakeLevel,
@@ -33,7 +32,7 @@ const LESSONS = [LESSON_1, LESSON_2, LESSON_3, LESSON_4];
 
 const STUDENT_ROWS = fakeRowsForStudents(STUDENTS);
 
-const FORMATTERS = [sinon.stub(), sinon.stub(), sinon.stub()];
+const FORMATTERS = [jest.fn(), jest.fn(), jest.fn()];
 
 const DEFAULT_PROPS = {
   rows: STUDENT_ROWS,
@@ -65,7 +64,7 @@ describe('ProgressTableContentView', () => {
 
   afterEach(() => {
     FORMATTERS.forEach(formatter => {
-      formatter.resetHistory();
+      formatter.mockReset();
     });
   });
 
@@ -101,14 +100,14 @@ describe('ProgressTableContentView', () => {
   });
 
   it('calls onClickLesson with lesson position when a lesson number is clicked', () => {
-    const onClickSpy = sinon.spy();
+    const onClickSpy = jest.fn();
     const wrapper = setUp({onClickLesson: onClickSpy});
     wrapper.find(ProgressTableLessonNumber).at(0).simulate('click');
     expect(onClickSpy).toHaveBeenCalled();
   });
 
   it('calls onScroll when the body is scrolled', () => {
-    const onScrollSpy = sinon.spy();
+    const onScrollSpy = jest.fn();
     const wrapper = setUp({onScroll: onScrollSpy});
     wrapper.find(Virtualized.Body).simulate('scroll');
     expect(onScrollSpy).toHaveBeenCalled();
@@ -117,7 +116,7 @@ describe('ProgressTableContentView', () => {
   it('calls primary lessonCellFormatter for each cell in the body', () => {
     setUp();
     const expectedCallCount = STUDENTS.length * LESSONS.length;
-    expect(FORMATTERS[0].callCount).toBe(expectedCallCount);
+    expect(FORMATTERS[0]).toHaveBeenCalledTimes(expectedCallCount);
   });
 
   it('calls each lessonCellFormatter when detail rows are passed in', () => {
@@ -126,9 +125,9 @@ describe('ProgressTableContentView', () => {
     const detailRows = fakeDetailRowsForStudent(STUDENTS[0]);
     setUp({rows: [STUDENT_ROWS[0], ...detailRows]});
     const expectedCallCount = LESSONS.length;
-    expect(FORMATTERS[0].callCount).toBe(expectedCallCount);
-    expect(FORMATTERS[1].callCount).toBe(expectedCallCount);
-    expect(FORMATTERS[2].callCount).toBe(expectedCallCount);
+    expect(FORMATTERS[0]).toHaveBeenCalledTimes(expectedCallCount);
+    expect(FORMATTERS[1]).toHaveBeenCalledTimes(expectedCallCount);
+    expect(FORMATTERS[2]).toHaveBeenCalledTimes(expectedCallCount);
   });
 
   it('uses a fixed column width for empty lessons', () => {

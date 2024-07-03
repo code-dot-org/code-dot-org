@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
 
@@ -8,7 +7,7 @@ import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalIte
 
 describe('LearningGoalItem', () => {
   let defaultProps;
-  const deleteLearningGoalSpy = sinon.spy();
+  const deleteLearningGoalSpy = jest.fn();
   const exisitingLearningGoalData = {
     key: 'learningGoal-1',
     id: 'learningGoal-1',
@@ -71,11 +70,11 @@ describe('LearningGoalItem', () => {
   it('calls deleteLearningGoal when delete button is clicked', () => {
     const wrapper = shallow(<LearningGoalItem {...defaultProps} />);
     wrapper.find('Button').simulate('click');
-    expect(deleteLearningGoalSpy.calledOnce).toBe(true);
+    expect(deleteLearningGoalSpy).toHaveBeenCalledTimes(1);
   });
 
   it('calls updateLearningGoal when tips text is changed', () => {
-    const updateLearningGoalSpy = sinon.spy();
+    const updateLearningGoalSpy = jest.fn();
     const wrapper = shallow(
       <LearningGoalItem
         {...defaultProps}
@@ -86,16 +85,12 @@ describe('LearningGoalItem', () => {
       .find('textarea')
       .simulate('change', {target: {value: 'Learning Goal Tip'}});
     expect(
-      updateLearningGoalSpy.withArgs(
-        exisitingLearningGoalData.id,
-        'tips',
-        'Learning Goal Tip'
-      ).calledOnce
-    ).toBe(true);
+      updateLearningGoalSpy
+    ).toHaveBeenCalledWith(exisitingLearningGoalData.id, 'tips', 'Learning Goal Tip');
   });
 
   it('displays confirmation dialog when learning goal name input receives focus and AI assessment is checked', () => {
-    const dialogStub = sinon.stub(window, 'confirm').returns(true);
+    const dialogStub = jest.spyOn(window, 'confirm').mockClear().mockReturnValue(true);
 
     const enabledAiData = {
       key: 'learningGoal-1',
@@ -111,7 +106,7 @@ describe('LearningGoalItem', () => {
     );
 
     wrapper.find('input').first().prop('onFocus')();
-    expect(dialogStub.calledOnce).toBe(true);
-    dialogStub.restore();
+    expect(dialogStub).toHaveBeenCalledTimes(1);
+    dialogStub.mockRestore();
   });
 });

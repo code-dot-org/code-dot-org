@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import AddLevelTableRow from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTableRow';
 
@@ -9,7 +8,7 @@ import AddLevelTableRow from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelT
 describe('AddLevelTableRow', () => {
   let defaultProps, addLevel;
   beforeEach(() => {
-    addLevel = sinon.spy();
+    addLevel = jest.fn();
     defaultProps = {
       addLevel,
       isInLesson: false,
@@ -38,8 +37,8 @@ describe('AddLevelTableRow', () => {
   });
 
   it('add and clone level', () => {
-    const prompt = sinon.stub(window, 'prompt');
-    prompt.returns('NewLevelName');
+    const prompt = jest.spyOn(window, 'prompt').mockClear().mockImplementation();
+    prompt.mockReturnValue('NewLevelName');
 
     let returnData = {id: 11, name: 'NewLevelName'};
     let server = sinon.fakeServer.create();
@@ -57,7 +56,7 @@ describe('AddLevelTableRow', () => {
     server.respond();
     expect(addLevel).toHaveBeenCalledTimes(1);
 
-    window.prompt.restore();
-    server.restore();
+    window.prompt.mockRestore();
+    server.mockRestore();
   });
 });

@@ -1,7 +1,6 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import reducers, {
   initActivities,
@@ -63,16 +62,16 @@ describe('ActivitySectionCard', () => {
     store.dispatch(initResources('lessonResource', resourceTestData));
     store.dispatch(initVocabularies([]));
 
-    setTargetActivitySection = sinon.spy();
-    updateTargetActivitySection = sinon.spy();
-    clearTargetActivitySection = sinon.spy();
-    updateActivitySectionMetrics = sinon.spy();
-    moveActivitySection = sinon.spy();
-    removeActivitySection = sinon.spy();
-    updateActivitySectionField = sinon.spy();
-    reorderLevel = sinon.spy();
-    moveLevelToActivitySection = sinon.spy();
-    addLevel = sinon.spy();
+    setTargetActivitySection = jest.fn();
+    updateTargetActivitySection = jest.fn();
+    clearTargetActivitySection = jest.fn();
+    updateActivitySectionMetrics = jest.fn();
+    moveActivitySection = jest.fn();
+    removeActivitySection = jest.fn();
+    updateActivitySectionField = jest.fn();
+    reorderLevel = jest.fn();
+    moveLevelToActivitySection = jest.fn();
+    addLevel = jest.fn();
     defaultProps = {
       activitySection: sampleActivities[0].activitySections[0],
       activityPosition: 1,
@@ -299,12 +298,12 @@ describe('ActivitySectionCard', () => {
 
     // inserting without a cursor position will insert at the beginning
     instance.insertMarkdownSyntaxAtSelection('new syntax ');
-    expect(updateActivitySectionField.lastCall.args[3]).toBe('new syntax Simple text');
+    expect(updateActivitySectionField.mock.lastCall[3]).toBe('new syntax Simple text');
 
     // inserting with a cursor position will insert at that position
     instance.editorTextAreaRef.selectionStart = 6;
     instance.insertMarkdownSyntaxAtSelection(' new syntax');
-    expect(updateActivitySectionField.lastCall.args[3]).toBe('Simple new syntax text');
+    expect(updateActivitySectionField.mock.lastCall[3]).toBe('Simple new syntax text');
   });
 
   it('can replace selected text with insertMarkdownSyntaxAtSelection', () => {
@@ -317,11 +316,11 @@ describe('ActivitySectionCard', () => {
     instance.editorTextAreaRef.selectionStart = 0;
     instance.editorTextAreaRef.selectionEnd = 6;
     instance.insertMarkdownSyntaxAtSelection('Basic insertion');
-    expect(updateActivitySectionField.lastCall.args[3]).toBe('Basic insertion text');
+    expect(updateActivitySectionField.mock.lastCall[3]).toBe('Basic insertion text');
 
     instance.editorTextAreaRef.selectionStart = 7;
     instance.editorTextAreaRef.selectionEnd = 11;
     instance.insertMarkdownSyntaxAtSelection('example');
-    expect(updateActivitySectionField.lastCall.args[3]).toBe('Simple example');
+    expect(updateActivitySectionField.mock.lastCall[3]).toBe('Simple example');
   });
 });

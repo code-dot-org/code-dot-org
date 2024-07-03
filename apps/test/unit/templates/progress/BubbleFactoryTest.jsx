@@ -1,6 +1,5 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {
   BasicBubble,
@@ -117,14 +116,14 @@ describe('BubbleFactory', () => {
     });
 
     it('passes icon for the level to TooltipWithIcon', () => {
-      const getIconStub = sinon.stub(progressHelpers, 'getIconForLevel');
+      const getIconStub = jest.spyOn(progressHelpers, 'getIconForLevel').mockClear().mockImplementation();
       const icon = 'test-icon';
-      getIconStub.returns(icon);
+      getIconStub.mockReturnValue(icon);
 
       const wrapper = setUp();
       expect(wrapper.find('TooltipWithIcon').props().icon).toBe(icon);
 
-      getIconStub.restore();
+      getIconStub.mockRestore();
     });
   });
 

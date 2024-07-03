@@ -1,15 +1,14 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import RemoveCoteacherDialog from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/RemoveCoteacherDialog';
 
 
 
 const createStubbedCoteacherDialog = coteacherToRemove => {
-  const setCoteacherToRemove = sinon.spy();
-  const removeSavedCoteacher = sinon.spy();
-  const setCoteachersToAdd = sinon.spy();
+  const setCoteacherToRemove = jest.fn();
+  const removeSavedCoteacher = jest.fn();
+  const setCoteachersToAdd = jest.fn();
 
   const wrapper = shallow(
     <RemoveCoteacherDialog
@@ -32,11 +31,11 @@ describe('RemoveCoteacherDialog', () => {
   let fetchSpy;
 
   beforeEach(() => {
-    fetchSpy = sinon.stub(window, 'fetch');
+    fetchSpy = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    fetchSpy.restore();
+    fetchSpy.mockRestore();
   });
 
   it('does not show dialog when coteacher to remove not supplied', () => {
@@ -94,11 +93,11 @@ describe('RemoveCoteacherDialog', () => {
     expect(fetchSpy).not.toHaveBeenCalled();
   });
   it('Remove submitted', done => {
-    fetchSpy.returns(Promise.resolve({ok: true}));
-    const setCoteachersToAdd = sinon.spy();
-    const removeSavedCoteacherSpy = sinon.spy();
+    fetchSpy.mockReturnValue(Promise.resolve({ok: true}));
+    const setCoteachersToAdd = jest.fn();
+    const removeSavedCoteacherSpy = jest.fn();
 
-    const setCoteacherToRemove = sinon.spy(function (coteacherToRemove) {
+    const setCoteacherToRemove = jest.fn(function (coteacherToRemove) {
       try {
         expect(removeSavedCoteacherSpy).to.have.been.calledOnceWith(1);
         expect(coteacherToRemove).toBeNull();
@@ -131,12 +130,12 @@ describe('RemoveCoteacherDialog', () => {
       .simulate('click', {preventDefault: () => {}});
   });
   it('Failed request closes dialog, but does not remove', done => {
-    fetchSpy.returns(Promise.resolve({ok: false}));
+    fetchSpy.mockReturnValue(Promise.resolve({ok: false}));
 
-    const setCoteachersToAdd = sinon.spy();
-    const removeSavedCoteacherSpy = sinon.spy();
+    const setCoteachersToAdd = jest.fn();
+    const removeSavedCoteacherSpy = jest.fn();
 
-    const setCoteacherToRemove = sinon.spy(function (coteacherToRemove) {
+    const setCoteacherToRemove = jest.fn(function (coteacherToRemove) {
       try {
         expect(removeSavedCoteacherSpy).not.toHaveBeenCalled();
         expect(coteacherToRemove).toBeNull();

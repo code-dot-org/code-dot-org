@@ -1,7 +1,6 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import {
   getStore,
@@ -239,7 +238,7 @@ describe('CurriculumCatalogExpandedCard', () => {
   });
 
   it('clicking assign button triggers onAssign function', () => {
-    const onAssign = sinon.spy();
+    const onAssign = jest.fn();
     renderCurriculumExpandedCard({
       ...defaultProps,
       assignButtonOnClick: onAssign,
@@ -260,7 +259,7 @@ describe('CurriculumCatalogExpandedCard', () => {
   });
 
   it('clicking close button triggers onClose function', () => {
-    const onClose = sinon.spy();
+    const onClose = jest.fn();
     renderCurriculumExpandedCard({
       ...defaultProps,
       onClose: onClose,

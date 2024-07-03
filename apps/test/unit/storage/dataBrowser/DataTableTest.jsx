@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedDataTable as DataTable} from '@cdo/apps/storage/dataBrowser/DataTable';
 import commonI18n from '@cdo/locale';
@@ -18,7 +17,7 @@ const DEFAULT_PROPS = {
 
 describe('DataTable', () => {
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
   });
 
   describe('localization', () => {
@@ -28,7 +27,7 @@ describe('DataTable', () => {
     }
 
     it('should render a localized string for "Actions" column', () => {
-      sinon.stub(commonI18n, 'actions').returns('i18n-actions');
+      jest.spyOn(commonI18n, 'actions').mockClear().mockReturnValue('i18n-actions');
 
       const wrapper = createDataTable();
 
@@ -37,7 +36,7 @@ describe('DataTable', () => {
     });
 
     it('should render a localized string for labeling the current page', () => {
-      sinon.stub(commonI18n, 'paginationLabel').returns('i18n-page');
+      jest.spyOn(commonI18n, 'paginationLabel').mockClear().mockReturnValue('i18n-page');
 
       const wrapper = createDataTable({
         rowsPerPage: 1,

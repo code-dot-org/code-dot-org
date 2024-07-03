@@ -1,7 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
-import sinon from 'sinon';
 
 import ProjectImport from '@cdo/apps/code-studio/components/header/ProjectImport';
 
@@ -22,15 +21,12 @@ describe('ProjectImport', () => {
       },
     });
 
-    showImportPopupStub = sinon.stub(
-      window.Craft,
-      'showImportFromShareLinkPopup'
-    );
+    showImportPopupStub = jest.spyOn(window.Craft, 'showImportFromShareLinkPopup').mockClear().mockImplementation();
     wrapper = shallow(<ProjectImport />);
   });
 
   afterEach(() => {
-    showImportPopupStub.restore();
+    showImportPopupStub.mockRestore();
 
     restoreOnWindow('Craft');
     restoreOnWindow('dashboard');
@@ -38,40 +34,37 @@ describe('ProjectImport', () => {
 
   it('creates an "import from share link" popup', () => {
     wrapper.simulate('click');
-    expect(showImportPopupStub.calledOnce).toBe(true);
+    expect(showImportPopupStub).toHaveBeenCalledTimes(1);
   });
 
   it('can import from level sources', () => {
-    showImportPopupStub.callsArgWith(0, '/c/123abc');
-    const ajaxStub = sinon.stub($, 'ajax');
+    showImportPopupStub.mockImplementation((...args) => args[0]('/c/123abc'));
+    const ajaxStub = jest.spyOn($, 'ajax').mockClear().mockImplementation();
     // stub a fake, nonresolving promise
-    ajaxStub.returns({
+    ajaxStub.mockReturnValue({
       done: () => ({
         error: () => {},
       }),
     });
     wrapper.simulate('click');
-    expect(ajaxStub.calledOnce).toBe(true);
-    ajaxStub.restore();
+    expect(ajaxStub).toHaveBeenCalledTimes(1);
+    ajaxStub.mockRestore();
   });
 
   it('can import from channel-backed sources', () => {
-    showImportPopupStub.callsArgWith(0, '/projects/minecraft_hero/123abc');
-    const getSourceSpy = sinon.spy(
-      window.dashboard.project,
-      'getSourceForChannel'
-    );
+    showImportPopupStub.mockImplementation((...args) => args[0]('/projects/minecraft_hero/123abc'));
+    const getSourceSpy = jest.spyOn(window.dashboard.project, 'getSourceForChannel').mockClear();
     wrapper.simulate('click');
-    expect(getSourceSpy.calledOnce).toBe(true);
-    expect(getSourceSpy.calledWith('123abc')).toBe(true);
-    getSourceSpy.restore();
+    expect(getSourceSpy).toHaveBeenCalledTimes(1);
+    expect(getSourceSpy).toHaveBeenCalledWith('123abc');
+    getSourceSpy.mockRestore();
   });
 
   it('displays an error if given an invalid link', () => {
-    showImportPopupStub.callsArgWith(0, 'some invalid link');
-    const errorMessageSpy = sinon.spy(window.Craft, 'showErrorMessagePopup');
+    showImportPopupStub.mockImplementation((...args) => args[0]('some invalid link'));
+    const errorMessageSpy = jest.spyOn(window.Craft, 'showErrorMessagePopup').mockClear();
     wrapper.simulate('click');
-    expect(errorMessageSpy.calledOnce).toBe(true);
-    errorMessageSpy.restore();
+    expect(errorMessageSpy).toHaveBeenCalledTimes(1);
+    errorMessageSpy.mockRestore();
   });
 });

@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
@@ -31,13 +30,13 @@ describe('SectionProgressToggle', () => {
     const wrapper = shallow(
       <UnconnectedSectionProgressToggle {...DEFAULT_PROPS} />
     );
-    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
 
     wrapper.instance().onChange();
     expect(analyticsSpy).toHaveBeenCalledTimes(1);
-    assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Progress Toggled');
+    assert.equal(analyticsSpy.mock.calls[0].firstArg, 'Section Progress Toggled');
 
-    analyticsSpy.restore();
+    analyticsSpy.mockRestore();
   });
 
   it('standards toggle does not shows for non-CSF', () => {

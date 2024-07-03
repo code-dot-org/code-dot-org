@@ -1,7 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon';
 
 import Tabs from '@cdo/apps/componentLibrary/tabs';
 
@@ -38,7 +37,7 @@ describe('Design System - Tabs', () => {
 
   it('Tabs - changes selected tab on click', async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
     // set tab default value
     onSelectedTabChange('test2', 'tab1');
     const onChange = value => {
@@ -90,7 +89,7 @@ describe('Design System - Tabs', () => {
 
   it("Tabs - renders disabled tab, doesn't change on click", async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
     // set segmentedButton default value
     onSelectedTabChange('test3', 'tab1');
     const onChange = value => {

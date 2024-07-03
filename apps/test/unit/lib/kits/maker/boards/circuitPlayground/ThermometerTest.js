@@ -1,6 +1,5 @@
 /** @file Test the Thermometer controller wrapping playground-io Thermometer */
 import Playground from 'playground-io';
-import sinon from 'sinon';
 
 import Thermometer from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Thermometer';
 
@@ -10,12 +9,12 @@ describe('Thermometer', function () {
   let testObj;
 
   beforeEach(() => {
-    sinon.stub(Playground.Thermometer.initialize, 'value');
+    jest.spyOn(Playground.Thermometer.initialize, 'value').mockClear().mockImplementation();
     testObj = {};
   });
 
   afterEach(() => {
-    Playground.Thermometer.initialize.value.restore();
+    Playground.Thermometer.initialize.value.mockRestore();
   });
 
   it(`adds 'raw' and 'value' attributes in the initialize() method`, () => {

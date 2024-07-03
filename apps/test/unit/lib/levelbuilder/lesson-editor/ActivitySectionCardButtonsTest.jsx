@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedActivitySectionCardButtons as ActivitySectionCardButtons} from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitySectionCardButtons';
 
@@ -20,15 +19,15 @@ describe('ActivitySectionCardButtons', () => {
     appendVocabularyLink,
     appendSlide;
   beforeEach(() => {
-    addTip = sinon.spy();
-    updateTip = sinon.spy();
-    addLevel = sinon.spy();
-    uploadImage = sinon.spy();
-    removeTip = sinon.spy();
-    appendProgrammingExpressionLink = sinon.spy();
-    appendResourceLink = sinon.spy();
-    appendVocabularyLink = sinon.spy();
-    appendSlide = sinon.spy();
+    addTip = jest.fn();
+    updateTip = jest.fn();
+    addLevel = jest.fn();
+    uploadImage = jest.fn();
+    removeTip = jest.fn();
+    appendProgrammingExpressionLink = jest.fn();
+    appendResourceLink = jest.fn();
+    appendVocabularyLink = jest.fn();
+    appendSlide = jest.fn();
     defaultProps = {
       activitySection: sampleActivities[0].activitySections[1],
       activityPosition: 1,

@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import LessonTipIconWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonTipIconWithTooltip';
 
@@ -9,7 +8,7 @@ import LessonTipIconWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/L
 describe('LessonTipIconWithTooltip', () => {
   let defaultProps, onClick;
   beforeEach(() => {
-    onClick = sinon.spy();
+    onClick = jest.fn();
     defaultProps = {
       tip: {
         key: 'tip-1',

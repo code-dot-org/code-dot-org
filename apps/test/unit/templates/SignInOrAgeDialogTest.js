@@ -2,7 +2,6 @@ import {render, screen, fireEvent} from '@testing-library/react';
 import {assert} from 'chai';
 import cookies from 'js-cookie';
 import React from 'react';
-import sinon from 'sinon';
 
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 import {UnconnectedSignInOrAgeDialog as SignInOrAgeDialog} from '@cdo/apps/templates/SignInOrAgeDialog';
@@ -46,12 +45,16 @@ describe('SignInOrAgeDialog', () => {
   });
 
   it('renders null if seen before', () => {
-    let getItem = sinon.stub(DEFAULT_PROPS.storage, 'getItem');
-    getItem.withArgs('anon_over13').returns('true');
+    let getItem = jest.spyOn(DEFAULT_PROPS.storage, 'getItem').mockClear().mockImplementation();
+    getItem.mockImplementation((...args) => {
+      if (args[0] === 'anon_over13') {
+        return 'true';
+      }
+    });
     renderDefault({signedIn: true});
     expect(screen.queryByText(i18n.signinForProgress())).toBeFalsy();
     expect(screen.queryByText(i18n.provideAge())).toBeFalsy();
-    getItem.restore();
+    getItem.mockRestore();
   });
 
   it('renders an explanation and button if under 13', () => {
@@ -65,21 +68,21 @@ describe('SignInOrAgeDialog', () => {
 
   describe('redirect', () => {
     beforeEach(() => {
-      sinon.stub(utils, 'reload');
-      sinon.stub(cookies, 'remove');
+      jest.spyOn(utils, 'reload').mockClear().mockImplementation();
+      jest.spyOn(cookies, 'remove').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      utils.reload.restore();
-      cookies.get.restore && cookies.get.restore();
-      cookies.remove.restore();
+      utils.reload.mockRestore();
+      cookies.get.restore && cookies.get.mockRestore();
+      cookies.remove.mockRestore();
     });
 
     it('sets sessionStorage, clears cookie, and reloads if you provide an age >= 13', () => {
-      const setItemSpy = sinon.spy(DEFAULT_PROPS.storage, 'setItem');
+      const setItemSpy = jest.spyOn(DEFAULT_PROPS.storage, 'setItem').mockClear();
       // We stub cookies, as the domain portion of our cookies.remove in SignInOrAgeDialog
       // does not work in unit tests
-      sinon.stub(cookies, 'get').returns('something');
+      jest.spyOn(cookies, 'get').mockClear().mockReturnValue('something');
 
       renderDefault();
       fireEvent.change(screen.getByRole('combobox'), {target: {value: '13'}});
@@ -94,7 +97,7 @@ describe('SignInOrAgeDialog', () => {
           domain: '.code.org',
         })
       );
-      setItemSpy.restore();
+      setItemSpy.mockRestore();
     });
 
     it('does not reload when providing an age >= 13 if you did not have a cookie', () => {

@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import sinon from 'sinon';
 
 import {files} from '@cdo/apps/clientApi';
 import clientState from '@cdo/apps/code-studio/clientState';
@@ -23,27 +22,25 @@ describe('loadApp.js', () => {
 
   beforeAll(() => {
     oldAppOptions = window.appOptions;
-    sinon
-      .stub(clientState, 'writeSourceForLevel')
-      .callsFake((scriptName, levelId, date, program) => {
+    jest.spyOn(clientState, 'writeSourceForLevel').mockClear()
+      .mockImplementation((scriptName, levelId, date, program) => {
         writtenLevelId = levelId;
       });
-    sinon
-      .stub(clientState, 'sourceForLevel')
-      .callsFake((scriptName, levelId, timestamp) => {
+    jest.spyOn(clientState, 'sourceForLevel').mockClear()
+      .mockImplementation((scriptName, levelId, timestamp) => {
         readLevelId = levelId;
         return OLD_CODE;
       });
-    sinon.stub(project, 'load').callsFake(() => ({
+    jest.spyOn(project, 'load').mockClear().mockImplementation(() => ({
       then: successCallback => successCallback(),
     }));
-    sinon.stub(project, 'hideBecauseAbusive').returns(false);
-    sinon.stub(project, 'hideBecausePrivacyViolationOrProfane').returns(false);
-    sinon.stub(project, 'getSharingDisabled').returns(false);
+    jest.spyOn(project, 'hideBecauseAbusive').mockClear().mockReturnValue(false);
+    jest.spyOn(project, 'hideBecausePrivacyViolationOrProfane').mockClear().mockReturnValue(false);
+    jest.spyOn(project, 'getSharingDisabled').mockClear().mockReturnValue(false);
   });
   beforeEach(() => {
-    sinon.stub(clientState, 'queryParams').returns(undefined);
-    sinon.stub($, 'ajax').callsFake(() => ({
+    jest.spyOn(clientState, 'queryParams').mockClear().mockReturnValue(undefined);
+    jest.spyOn($, 'ajax').mockClear().mockImplementation(() => ({
       done: successCallback => ({
         fail: failureCallback => {
           successCallback({signedIn: false});
@@ -58,24 +55,23 @@ describe('loadApp.js', () => {
     setAppOptions(appOptions);
   });
   afterAll(() => {
-    clientState.writeSourceForLevel.restore();
-    clientState.sourceForLevel.restore();
-    project.load.restore();
-    project.hideBecauseAbusive.restore();
-    project.hideBecausePrivacyViolationOrProfane.restore();
-    project.getSharingDisabled.restore();
+    clientState.writeSourceForLevel.mockRestore();
+    clientState.sourceForLevel.mockRestore();
+    project.load.mockRestore();
+    project.hideBecauseAbusive.mockRestore();
+    project.hideBecausePrivacyViolationOrProfane.mockRestore();
+    project.getSharingDisabled.mockRestore();
     window.appOptions = oldAppOptions;
   });
   afterEach(() => {
-    clientState.queryParams.restore();
-    $.ajax.restore();
+    clientState.queryParams.mockRestore();
+    $.ajax.mockRestore();
   });
 
   const stubQueryParams = (paramName, paramValue) => {
-    clientState.queryParams.restore(); // restore the default stub
-    sinon
-      .stub(clientState, 'queryParams')
-      .callsFake(param => (param === paramName ? paramValue : undefined));
+    clientState.queryParams.mockRestore(); // restore the default stub
+    jest.spyOn(clientState, 'queryParams').mockClear()
+      .mockImplementation(param => (param === paramName ? paramValue : undefined));
   };
 
   const stubAppOptionsRequests = (
@@ -83,10 +79,18 @@ describe('loadApp.js', () => {
     userAppOptionsResponse = {signedIn: false},
     exampleSolutionsResponse = []
   ) => {
-    $.ajax.restore();
-    const ajaxStub = sinon.stub($, 'ajax');
-    ajaxStub.onCall(0).returns(exampleSolutionsResponse);
-    ajaxStub.onCall(1).returns(userAppOptionsResponse);
+    $.ajax.mockRestore();
+    const ajaxStub = jest.spyOn($, 'ajax').mockClear().mockImplementation();
+    ajaxStub.mockImplementation(() => {
+      if (ajaxStub.mock.calls.length === 0) {
+        return exampleSolutionsResponse;
+      }
+    });
+    ajaxStub.mockImplementation(() => {
+      if (ajaxStub.mock.calls.length === 1) {
+        return userAppOptionsResponse;
+      }
+    });
   };
 
   describe('loadAppAsync for cached levels', () => {
@@ -225,15 +229,15 @@ describe('loadApp.js', () => {
       'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
 
     beforeEach(() => {
-      sinon.stub(imageUtils, 'dataURIToFramedBlob');
-      sinon.stub(files, 'putFile');
+      jest.spyOn(imageUtils, 'dataURIToFramedBlob').mockClear().mockImplementation();
+      jest.spyOn(files, 'putFile').mockClear().mockImplementation();
       appOptions.level.isProjectLevel = true;
       appOptions.level.edit_blocks = false;
     });
 
     afterEach(() => {
-      files.putFile.restore();
-      imageUtils.dataURIToFramedBlob.restore();
+      files.putFile.mockRestore();
+      imageUtils.dataURIToFramedBlob.mockRestore();
     });
 
     it('uploads a share image for a non-droplet project (instead of writing the level)', done => {

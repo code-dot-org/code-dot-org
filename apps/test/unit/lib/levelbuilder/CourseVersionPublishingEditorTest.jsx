@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
@@ -16,11 +15,11 @@ describe('CourseVersionPublishingEditor', () => {
     updateIsCourse;
 
   beforeEach(() => {
-    updatePilotExperiment = sinon.spy();
-    updateFamilyName = sinon.spy();
-    updateVersionYear = sinon.spy();
-    updateIsCourse = sinon.spy();
-    updatePublishedState = sinon.spy();
+    updatePilotExperiment = jest.fn();
+    updateFamilyName = jest.fn();
+    updateVersionYear = jest.fn();
+    updateIsCourse = jest.fn();
+    updatePublishedState = jest.fn();
     defaultProps = {
       pilotExperiment: null,
       versionYear: null,

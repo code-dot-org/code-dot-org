@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 import {UnconnectedBackpack as Backpack} from '@cdo/apps/javalab/Backpack';
@@ -18,7 +17,7 @@ describe('Java Lab Backpack Test', () => {
     stubRedux();
     registerReducers({javalab});
     backpackApiStub = sinon.createStubInstance(BackpackClientApi);
-    backpackApiStub.hasBackpack.returns(true);
+    backpackApiStub.hasBackpack.mockReturnValue(true);
     defaultProps = {
       displayTheme: DisplayTheme.DARK,
       isButtonDisabled: false,
@@ -63,13 +62,10 @@ describe('Java Lab Backpack Test', () => {
 
   it('expand dropdown triggers getFileList', () => {
     const wrapper = renderWithProps({});
-    const getFileListStub = sinon.stub(
-      BackpackClientApi.prototype,
-      'getFileList'
-    );
+    const getFileListStub = jest.spyOn(BackpackClientApi.prototype, 'getFileList').mockClear().mockImplementation();
     wrapper.instance().expandDropdown();
     expect(getFileListStub.calledOnce);
-    getFileListStub.restore();
+    getFileListStub.mockRestore();
   });
 
   it('expand dropdown resets state correctly', () => {
@@ -174,7 +170,7 @@ describe('Java Lab Backpack Test', () => {
       selectedFiles: ['file1', 'file3'],
     });
     // set up delete files to call success callback
-    backpackApiStub.deleteFiles.callsArg(2);
+    backpackApiStub.deleteFiles.mockImplementation((...args) => args[2]());
 
     // open modal
     wrapper.instance().confirmAndDeleteFiles();
@@ -196,7 +192,7 @@ describe('Java Lab Backpack Test', () => {
       selectedFiles: ['file1', 'file3'],
     });
     // set up delete files to call failure callback
-    backpackApiStub.deleteFiles.callsArgWith(1, null, ['file1', 'file3']);
+    backpackApiStub.deleteFiles.mockImplementation((...args) => args[1](null, ['file1', 'file3']));
 
     // open modal
     wrapper.instance().confirmAndDeleteFiles();
@@ -218,7 +214,7 @@ describe('Java Lab Backpack Test', () => {
       selectedFiles: ['file1', 'file3'],
     });
     // set up delete files to call failure callback where only file 1 failed to delete
-    backpackApiStub.deleteFiles.callsArgWith(1, null, ['file1']);
+    backpackApiStub.deleteFiles.mockImplementation((...args) => args[1](null, ['file1']));
 
     // open modal
     wrapper.instance().confirmAndDeleteFiles();

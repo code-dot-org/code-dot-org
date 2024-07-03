@@ -1,7 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon';
 
 import {CheckboxDropdown} from '@cdo/apps/componentLibrary/dropdown';
 
@@ -58,7 +57,7 @@ describe('Design System - Checkbox Dropdown Component', () => {
 
   it('Checkbox Dropdown - renders with correct text and options, changes selected value on when one is selected', async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
     const onChange = e => {
       onCheckboxDropdownChange(e.target.value, e.target.checked);
       spyOnChange(e.target.value, e.target.checked);
@@ -105,7 +104,7 @@ describe('Design System - Checkbox Dropdown Component', () => {
 
   it("Checkbox Dropdown - renders disabled dropdown, doesn't change on click", async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
     const onChange = e => {
       onCheckboxDropdownChange(e.target.value, e.target.checked);
       spyOnChange(e.target.value, e.target.checked);
@@ -154,7 +153,7 @@ describe('Design System - Checkbox Dropdown Component', () => {
 
   it('Checkbox Dropdown - handles Select all and Clear all clicks', async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
     const onChange = e => {
       onCheckboxDropdownChange(e.target.value, e.target.checked);
       spyOnChange(e.target.value, e.target.checked);

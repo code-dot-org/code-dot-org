@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
 
@@ -16,19 +15,19 @@ describe('UploadImageDialog', () => {
       />
     );
 
-    const fetchStub = sinon.stub(window, 'fetch').resolves();
+    const fetchStub = jest.spyOn(window, 'fetch').mockClear().mockImplementation().resolves();
     wrapper
       .find('input')
       .first()
       .simulate('change', {target: {files: ['filedata']}});
 
-    expect(fetchStub.callCount).toBe(1);
+    expect(fetchStub).toHaveBeenCalledTimes(1);
 
-    const fetchCall = fetchStub.getCall(0);
-    expect(fetchCall.args[0]).toBe('/level_assets/upload');
-    expect(fetchCall.args[1].body.get('file')).toBe('filedata');
+    const fetchCall = fetchStub.mock.calls[0];
+    expect(fetchCall.mock.calls[0]).toBe('/level_assets/upload');
+    expect(fetchCall.mock.calls[1].body.get('file')).toBe('filedata');
 
-    fetchStub.restore();
+    fetchStub.mockRestore();
   });
 
   it('returns the uploaded image url', () => {
@@ -42,9 +41,8 @@ describe('UploadImageDialog', () => {
       />
     );
     const returnData = {newAssetUrl: 'http://example.com/img.png'};
-    const fetchStub = sinon
-      .stub(window, 'fetch')
-      .returns(Promise.resolve({ok: true, json: () => returnData}));
+    const fetchStub = jest.spyOn(window, 'fetch').mockClear()
+      .mockReturnValue(Promise.resolve({ok: true, json: () => returnData}));
 
     wrapper
       .find('input')
@@ -54,15 +52,15 @@ describe('UploadImageDialog', () => {
     expect(wrapper.find('Button').last().props().disabled).toBe(true);
     expect(wrapper.find('FontAwesome').length).toBe(1);
 
-    expect(handleClose.callCount).toBe(0);
-    expect(uploadImage.callCount).toBe(0);
+    expect(handleClose).toHaveBeenCalledTimes(0);
+    expect(uploadImage).toHaveBeenCalledTimes(0);
 
     return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
       wrapper.find('Button').last().simulate('click');
-      expect(handleClose.callCount).toBe(1);
-      expect(uploadImage.callCount).toBe(1);
-      expect(uploadImage.calledWith('http://example.com/img.png')).toBe(true);
-      fetchStub.restore();
+      expect(handleClose).toHaveBeenCalledTimes(1);
+      expect(uploadImage).toHaveBeenCalledTimes(1);
+      expect(uploadImage).toHaveBeenCalledWith('http://example.com/img.png');
+      fetchStub.mockRestore();
     });
   });
 
@@ -77,9 +75,8 @@ describe('UploadImageDialog', () => {
       />
     );
     const returnData = {newAssetUrl: 'http://example.com/img.png'};
-    const fetchStub = sinon
-      .stub(window, 'fetch')
-      .returns(Promise.resolve({ok: true, json: () => returnData}));
+    const fetchStub = jest.spyOn(window, 'fetch').mockClear()
+      .mockReturnValue(Promise.resolve({ok: true, json: () => returnData}));
 
     wrapper
       .find('input')
@@ -94,8 +91,8 @@ describe('UploadImageDialog', () => {
         .find('input')
         .first()
         .simulate('change', {target: {files: []}});
-      expect(fetchStub.callCount).toBe(1);
-      fetchStub.restore();
+      expect(fetchStub).toHaveBeenCalledTimes(1);
+      fetchStub.mockRestore();
     });
   });
 });

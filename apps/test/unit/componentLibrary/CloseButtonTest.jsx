@@ -1,7 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon';
 
 import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 
@@ -31,7 +30,7 @@ describe('Design System - CloseButton', () => {
 
   it('calls onClick when clicked', async () => {
     const user = userEvent.setup();
-    const handleClick = sinon.spy();
+    const handleClick = jest.fn();
 
     render(
       <CloseButton aria-label="Close to test onClick" onClick={handleClick} />

@@ -2,7 +2,6 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
 import {Provider, connect} from 'react-redux';
-import sinon from 'sinon';
 
 import {
   getStore,
@@ -64,13 +63,13 @@ describe('ProjectAppTypeArea', () => {
     stubRedux();
     registerReducers({projects: projectsReducer});
     ajaxDeferred = new $.Deferred();
-    stubAjax = sinon.stub($, 'ajax');
-    stubAjax.returns(ajaxDeferred);
-    stubNavigate = sinon.spy();
+    stubAjax = jest.spyOn($, 'ajax').mockClear().mockImplementation();
+    stubAjax.mockReturnValue(ajaxDeferred);
+    stubNavigate = jest.fn();
   });
 
   afterEach(() => {
-    stubAjax.restore();
+    stubAjax.mockRestore();
     restoreRedux();
   });
 

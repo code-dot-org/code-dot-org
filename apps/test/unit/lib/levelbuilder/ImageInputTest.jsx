@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import ImageInput from '@cdo/apps/lib/levelbuilder/ImageInput';
 
@@ -26,7 +25,7 @@ describe('ImageInput', () => {
   });
 
   it('calls callback after image is updated', () => {
-    const updateImageUrlSpy = sinon.spy();
+    const updateImageUrlSpy = jest.fn();
     const wrapper = shallow(
       <ImageInput
         updateImageUrl={updateImageUrlSpy}

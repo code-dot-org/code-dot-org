@@ -3,7 +3,6 @@ import {render, screen, act} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import {
   getStore,
@@ -38,7 +37,7 @@ describe('RubricSubmitFooter', () => {
 
   // Stubs updateTeacherFeedback() to call the fail callback only.
   function stubFailedUpdateTeacherFeedback() {
-    updateTeacherFeedbackStub.returns({
+    updateTeacherFeedbackStub.mockReturnValue({
       done: _ => {
         return {fail: cb => cb()};
       },
@@ -47,7 +46,7 @@ describe('RubricSubmitFooter', () => {
 
   // Stubs updateTeacherFeedback() to call the done callback only.
   function stubSuccessfulUpdateTeacherFeedback() {
-    updateTeacherFeedbackStub.returns({
+    updateTeacherFeedbackStub.mockReturnValue({
       done: cb => {
         cb();
         return {fail: _ => {}};
@@ -59,54 +58,44 @@ describe('RubricSubmitFooter', () => {
   function stubFailedSubmitEvaluations() {
     postStub
       .withArgs(
-        sinon.match(/\/rubrics\/\d+\/submit_evaluations$/),
-        sinon.match.any,
+        expect.objectContaining(/\/rubrics\/\d+\/submit_evaluations$/),
+        expect.anything(),
         true,
-        sinon.match.any
+        expect.anything()
       )
       .rejects();
   }
 
   // Stubs HttpClient.post() to respond with some incorrect response body
   function stubInvalidResponseFromSubmitEvaluations() {
-    postStub
-      .withArgs(
-        sinon.match(/\/rubrics\/\d+\/submit_evaluations$/),
-        sinon.match.any,
-        true,
-        sinon.match.any
-      )
-      .returns(
-        new Promise(resolve => {
+    postStub.mockImplementation((...args) => {
+      if (args[0] === expect.objectContaining(/\/rubrics\/\d+\/submit_evaluations$/) && args.length >= 4 && args[2] === true && args.length >= 4) {
+        return new Promise(resolve => {
           resolve({
             json: () =>
               Promise.resolve({
                 someOtherStuff: 42,
               }),
           });
-        })
-      );
+        });
+      }
+    });
   }
 
   // Stubs HttpClient.post() to respond with the expected response body
   function stubSuccessfulSubmitEvaluations() {
-    postStub
-      .withArgs(
-        sinon.match(/\/rubrics\/\d+\/submit_evaluations$/),
-        sinon.match.any,
-        true,
-        sinon.match.any
-      )
-      .returns(
-        new Promise(resolve => {
+    postStub.mockImplementation((...args) => {
+      if (args[0] === expect.objectContaining(/\/rubrics\/\d+\/submit_evaluations$/) && args.length >= 4 && args[2] === true && args.length >= 4) {
+        return new Promise(resolve => {
           resolve({
             json: () =>
               Promise.resolve({
                 submittedAt: timestamp,
               }),
           });
-        })
-      );
+        });
+      }
+    });
   }
 
   // Stubs getTeacherFeedbackForStudent to respond successfully as expected
@@ -116,44 +105,41 @@ describe('RubricSubmitFooter', () => {
     scriptId,
     data
   ) {
-    const request = sinon.stub();
-    request.getResponseHeader = sinon
-      .stub()
-      .withArgs('crsf-token')
-      .returns(crsfToken);
-    getTeacherFeedbackForStudentStub
-      .withArgs(studentId, levelId, scriptId)
-      .returns({
-        done: cb => {
-          new Promise(resolve => {
-            resolve([data, null, request]);
-          }).then(([a, b, c]) => {
-            cb(a, b, c);
-          });
-        },
-      });
+    const request = jest.fn();
+    request.getResponseHeader = jest.fn().mockImplementation((...args) => {
+      if (args[0] === 'crsf-token') {
+        return crsfToken;
+      }
+    });
+    getTeacherFeedbackForStudentStub.mockImplementation((...args) => {
+      if (args[0] === studentId && args[1] === levelId && args[2] === scriptId) {
+        return {
+            done: cb => {
+              new Promise(resolve => {
+                resolve([data, null, request]);
+              }).then(([a, b, c]) => {
+                cb(a, b, c);
+              });
+            },
+          };
+      }
+    });
   }
 
   beforeEach(() => {
     // Stub out the updateTeacherFeedback function
-    updateTeacherFeedbackStub = sinon.stub(
-      teacherFeedbackDataApi,
-      'updateTeacherFeedback'
-    );
-    updateTeacherFeedbackStub.returns({});
+    updateTeacherFeedbackStub = jest.spyOn(teacherFeedbackDataApi, 'updateTeacherFeedback').mockClear().mockImplementation();
+    updateTeacherFeedbackStub.mockReturnValue({});
 
     // Stub out the getTeacherFeedbackForStudent and return a crsf token
     crsfToken = 'some-crsf-token';
-    getTeacherFeedbackForStudentStub = sinon.stub(
-      topInstructionDataApi,
-      'getTeacherFeedbackForStudent'
-    );
-    getTeacherFeedbackForStudentStub.returns({});
+    getTeacherFeedbackForStudentStub = jest.spyOn(topInstructionDataApi, 'getTeacherFeedbackForStudent').mockClear().mockImplementation();
+    getTeacherFeedbackForStudentStub.mockReturnValue({});
 
     // Stub out the submit with timestamp
     timestamp = '2024-03-10';
-    postStub = sinon.stub(HttpClient, 'post');
-    postStub.returns({});
+    postStub = jest.spyOn(HttpClient, 'post').mockClear().mockImplementation();
+    postStub.mockReturnValue({});
 
     // Stub redux
     stubRedux();
@@ -164,9 +150,9 @@ describe('RubricSubmitFooter', () => {
   afterEach(() => {
     // Restore all stubs
     restoreRedux();
-    postStub.restore();
-    getTeacherFeedbackForStudentStub.restore();
-    updateTeacherFeedbackStub.restore();
+    postStub.mockRestore();
+    getTeacherFeedbackForStudentStub.mockRestore();
+    updateTeacherFeedbackStub.mockRestore();
   });
 
   const defaultRubric = {
@@ -247,11 +233,7 @@ describe('RubricSubmitFooter', () => {
 
     // Press submit, wait until things resolve, and see the crsf-token from the initial request
     await user.click(button);
-    sinon.assert.calledWith(
-      updateTeacherFeedbackStub,
-      sinon.match.any,
-      crsfToken
-    );
+    expect(updateTeacherFeedbackStub).toHaveBeenCalledWith(expect.anything(), crsfToken);
 
     // Assert that the post was also called
     sinon.toHaveBeenCalled();
@@ -304,11 +286,7 @@ describe('RubricSubmitFooter', () => {
 
     // Press submit, wait until things resolve, and see the crsf-token from the initial request
     await user.click(button);
-    sinon.assert.calledWith(
-      updateTeacherFeedbackStub,
-      sinon.match.any,
-      crsfToken
-    );
+    expect(updateTeacherFeedbackStub).toHaveBeenCalledWith(expect.anything(), crsfToken);
     sinon.toHaveBeenCalled();
   });
 
@@ -375,11 +353,7 @@ describe('RubricSubmitFooter', () => {
     // Press submit, wait until things resolve, and see the crsf-token from the initial request
     const button = screen.getByRole('button', {name: i18n.submitToStudent()});
     await user.click(button);
-    sinon.assert.calledWith(
-      updateTeacherFeedbackStub,
-      sinon.match.any,
-      crsfToken
-    );
+    expect(updateTeacherFeedbackStub).toHaveBeenCalledWith(expect.anything(), crsfToken);
     sinon.toHaveBeenCalled();
 
     // Assert that the feedback error is NOT there

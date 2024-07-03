@@ -1,7 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import PropTypes from 'prop-types';
 import React from 'react';
-import sinon from 'sinon';
 
 import MultiCheckboxSelector from '@cdo/apps/templates/MultiCheckboxSelector';
 
@@ -16,7 +15,7 @@ describe('MultiCheckboxSelector', () => {
   var wrapper, allSelectedCheckbox, header, itemList, checkboxes, onChange;
 
   beforeEach(() => {
-    onChange = sinon.spy();
+    onChange = jest.fn();
   });
 
   function render(component) {
@@ -75,13 +74,13 @@ describe('MultiCheckboxSelector', () => {
 
     it('should call onChange with the new selection when checkboxes are clicked', () => {
       checkboxes.first().simulate('change');
-      expect(onChange.lastCall.args[0]).toEqual(['two', 'one']);
+      expect(onChange.mock.lastCall[0]).toEqual(['two', 'one']);
 
       checkboxes.at(1).simulate('change');
-      expect(onChange.lastCall.args[0]).toEqual([]);
+      expect(onChange.mock.lastCall[0]).toEqual([]);
 
       allSelectedCheckbox.simulate('change');
-      expect(onChange.lastCall.args[0]).toEqual(['one', 'two', 'three']);
+      expect(onChange.mock.lastCall[0]).toEqual(['one', 'two', 'three']);
     });
   });
 
@@ -105,7 +104,7 @@ describe('MultiCheckboxSelector', () => {
 
     it('should call onChange with an empty selection when the header checkbox is clicked', () => {
       allSelectedCheckbox.simulate('change');
-      expect(onChange.lastCall.args[0]).toEqual([]);
+      expect(onChange.mock.lastCall[0]).toEqual([]);
     });
   });
   describe('no header', () => {

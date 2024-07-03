@@ -1,7 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
-import sinon from 'sinon';
 
 import {
   WorkshopApplicationStates,
@@ -62,13 +61,13 @@ const createServerResponses = (
 describe('RegionalPartnerSearch', () => {
   let server;
   beforeEach(() => {
-    sinon.stub(utils, 'currentLocation').returns({search: '?zip=11111'});
+    jest.spyOn(utils, 'currentLocation').mockClear().mockReturnValue({search: '?zip=11111'});
     server = sinon.fakeServer.create();
   });
 
   afterEach(() => {
-    utils.currentLocation.restore();
-    server.restore();
+    utils.currentLocation.mockRestore();
+    server.mockRestore();
   });
 
   it('renders form for zip code', () => {

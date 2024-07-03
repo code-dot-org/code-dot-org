@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -70,7 +69,7 @@ describe('ResourceList', () => {
   });
 
   it('sends amplitude event when resource is clicked', () => {
-    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
     const wrapper = shallow(
       <ResourceList
         resources={[
@@ -91,8 +90,8 @@ describe('ResourceList', () => {
     wrapper.find('a').forEach(link => {
       link.simulate('click', {preventDefault() {}});
     });
-    expect(analyticsSpy.callCount).toBe(num_links);
-    expect(analyticsSpy.getCall(0).firstArg).toBe(EVENTS.LESSON_RESOURCE_LINK_VISITED_EVENT);
-    analyticsSpy.restore();
+    expect(analyticsSpy).toHaveBeenCalledTimes(num_links);
+    expect(analyticsSpy.mock.calls[0].firstArg).toBe(EVENTS.LESSON_RESOURCE_LINK_VISITED_EVENT);
+    analyticsSpy.mockRestore();
   });
 });

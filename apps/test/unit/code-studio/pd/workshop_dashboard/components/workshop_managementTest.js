@@ -1,7 +1,6 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import sinon from 'sinon';
 
 import ConfirmationDialog from '@cdo/apps/code-studio/pd/components/confirmation_dialog';
 import {WorkshopManagement} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_management';
@@ -143,16 +142,16 @@ describe('WorkshopManagement', () => {
     let deleteStub;
 
     beforeEach(() => {
-      deleteStub = sinon.spy();
+      deleteStub = jest.fn();
       mockRouter
         .expects('createHref')
         .withExactArgs('viewUrl')
-        .returns('viewHref')
+        .mockReturnValue('viewHref')
         .atLeast(1);
       mockRouter
         .expects('createHref')
         .withExactArgs('editUrl')
-        .returns('editHref')
+        .mockReturnValue('editHref')
         .atLeast(1);
 
       workshopManagement = shallow(
@@ -166,7 +165,7 @@ describe('WorkshopManagement', () => {
     });
 
     afterEach(() => {
-      expect(deleteStub.notCalled).toBe(true);
+      expect(deleteStub).not.toHaveBeenCalled();
     });
 
     it('Has 3 buttons', () => {
@@ -212,8 +211,8 @@ describe('WorkshopManagement', () => {
 
       it('Calls the supplied onDelete func when confirmed', () => {
         deleteConfirmationDialog.props().onOk();
-        expect(deleteStub.withArgs(123).calledOnce).toBe(true);
-        deleteStub.resetHistory();
+        expect(deleteStub).toHaveBeenCalledWith(123);
+        deleteStub.mockReset();
       });
     });
   });
@@ -223,7 +222,7 @@ describe('WorkshopManagement', () => {
       mockRouter
         .expects('createHref')
         .withExactArgs('viewUrl')
-        .returns('viewHref')
+        .mockReturnValue('viewHref')
         .atLeast(1);
 
       workshopManagement = shallow(<WorkshopManagement {...defaultProps} />, {
@@ -242,7 +241,7 @@ describe('WorkshopManagement', () => {
       mockRouter
         .expects('createHref')
         .withExactArgs('viewUrl')
-        .returns('viewHref');
+        .mockReturnValue('viewHref');
 
       workshopManagement = shallow(
         <WorkshopManagement
@@ -268,7 +267,7 @@ describe('WorkshopManagement', () => {
       mockRouter
         .expects('createHref')
         .withExactArgs('viewUrl')
-        .returns('viewHref');
+        .mockReturnValue('viewHref');
 
       workshopManagement = shallow(
         <WorkshopManagement
@@ -294,7 +293,7 @@ describe('WorkshopManagement', () => {
       mockRouter
         .expects('createHref')
         .withExactArgs('viewUrl')
-        .returns('viewHref');
+        .mockReturnValue('viewHref');
 
       workshopManagement = shallow(
         <WorkshopManagement
@@ -320,11 +319,11 @@ describe('WorkshopManagement', () => {
       mockRouter
         .expects('createHref')
         .withExactArgs('viewUrl')
-        .returns('viewHref');
+        .mockReturnValue('viewHref');
       mockRouter
         .expects('createHref')
         .withExactArgs('/daily_survey_results/123')
-        .returns('surveyResultsHref');
+        .mockReturnValue('surveyResultsHref');
 
       workshopManagement = shallow(
         <WorkshopManagement
@@ -343,11 +342,11 @@ describe('WorkshopManagement', () => {
       mockRouter
         .expects('createHref')
         .withExactArgs('viewUrl')
-        .returns('viewHref');
+        .mockReturnValue('viewHref');
       mockRouter
         .expects('createHref')
         .withExactArgs('/workshop_daily_survey_results/123')
-        .returns('surveyResultsHref');
+        .mockReturnValue('surveyResultsHref');
 
       workshopManagement = shallow(
         <WorkshopManagement

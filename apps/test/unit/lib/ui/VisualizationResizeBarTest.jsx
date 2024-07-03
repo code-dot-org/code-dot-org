@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {
   UnconnectedVisualizationResizeBar as VisualizationResizeBar,
@@ -33,7 +32,7 @@ describe('VisualizationResizeBar', function () {
 
   it('responds to and reports drag events', () => {
     // Spy on resize events that this component generates.
-    const spy = sinon.spy();
+    const spy = jest.fn();
     window.addEventListener(RESIZE_VISUALIZATION_EVENT, spy);
 
     // Mouse move before mousedown doesn't create an event

@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import DropletBlockTooltipManager from '@cdo/apps/blockTooltips/DropletBlockTooltipManager.js';
 import commonI18n from '@cdo/locale';
 
@@ -9,13 +7,13 @@ import {DropletTooltipManagerStub} from './stubs';
 
 describe('DropletBlockTooltipManager', () => {
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
   });
 
   describe('getTooltipHTML', () => {
     it('should render localized string for "Show Code"', () => {
       // Stub the i18n calls.
-      sinon.stub(commonI18n, 'showGeneratedCode').returns('i18n-show-code');
+      jest.spyOn(commonI18n, 'showGeneratedCode').mockClear().mockReturnValue('i18n-show-code');
 
       // Mock a DropletTooltipManager.
       let dropletConfig = {};
@@ -39,7 +37,7 @@ describe('DropletBlockTooltipManager', () => {
 
     it('should render localized string for "Examples"', () => {
       // Stub the i18n calls.
-      sinon.stub(commonI18n, 'examples').returns('i18n-examples');
+      jest.spyOn(commonI18n, 'examples').mockClear().mockReturnValue('i18n-examples');
 
       // Mock a DropletTooltipManager.
       let dropletConfig = {};

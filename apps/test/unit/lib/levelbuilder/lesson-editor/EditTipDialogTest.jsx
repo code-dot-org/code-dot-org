@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialog';
 
@@ -9,8 +8,8 @@ import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialo
 describe('EditTipDialog', () => {
   let defaultProps, handleConfirm, handleDelete;
   beforeEach(() => {
-    handleConfirm = sinon.spy();
-    handleDelete = sinon.spy();
+    handleConfirm = jest.fn();
+    handleDelete = jest.fn();
     defaultProps = {
       isOpen: true,
       handleConfirm,

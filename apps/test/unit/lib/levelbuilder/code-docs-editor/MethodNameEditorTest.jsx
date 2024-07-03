@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import MethodNameEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/MethodNameEditor';
 
@@ -10,7 +9,7 @@ describe('MethodNameEditor', () => {
   let defaultProps, updateSpy;
 
   beforeEach(() => {
-    updateSpy = sinon.spy();
+    updateSpy = jest.fn();
     defaultProps = {
       method: {
         name: 'method 1',

@@ -1,5 +1,4 @@
 import {EventEmitter} from 'events';
-import sinon from 'sinon';
 
 import MicroBitButton from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitButton';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
@@ -53,7 +52,7 @@ describe('MicroBitButton', function () {
       });
     });
     afterAll(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('is a readonly property', () => {
@@ -78,7 +77,7 @@ describe('MicroBitButton', function () {
         pin: 0,
       });
 
-      let emitSpy = sinon.spy(button, 'emit');
+      let emitSpy = jest.spyOn(button, 'emit').mockClear();
 
       boardClient.receivedEvent(0, 1);
       expect(button.isPressed).toBe(true);

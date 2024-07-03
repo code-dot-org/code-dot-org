@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedVocabulariesEditor as VocabulariesEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/VocabulariesEditor';
 
@@ -9,9 +8,9 @@ import {UnconnectedVocabulariesEditor as VocabulariesEditor} from '@cdo/apps/lib
 describe('VocabulariesEditor', () => {
   let defaultProps, addVocabulary, updateVocabulary, removeVocabulary;
   beforeEach(() => {
-    addVocabulary = sinon.spy();
-    updateVocabulary = sinon.spy();
-    removeVocabulary = sinon.spy();
+    addVocabulary = jest.fn();
+    updateVocabulary = jest.fn();
+    removeVocabulary = jest.fn();
     defaultProps = {
       vocabularies: [
         {

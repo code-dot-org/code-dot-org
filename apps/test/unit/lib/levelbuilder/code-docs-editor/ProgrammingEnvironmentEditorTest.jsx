@@ -1,7 +1,6 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import ProgrammingEnvironmentEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingEnvironmentEditor';
 import {getStore} from '@cdo/apps/redux';
@@ -27,11 +26,11 @@ describe('ProgrammingEnvironmentEditor', () => {
         ],
       },
     };
-    fetchSpy = sinon.stub(window, 'fetch');
+    fetchSpy = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    fetchSpy.restore();
+    fetchSpy.mockRestore();
   });
 
   it('uses initial values in fields', () => {
@@ -81,7 +80,7 @@ describe('ProgrammingEnvironmentEditor', () => {
       </Provider>
     );
 
-    fetchSpy.returns(
+    fetchSpy.mockReturnValue(
       Promise.resolve({
         ok: true,
         json: () => {
@@ -96,9 +95,9 @@ describe('ProgrammingEnvironmentEditor', () => {
     saveAndCloseButton.simulate('click');
 
     expect(fetchSpy).toHaveBeenCalled().once;
-    const fetchCall = fetchSpy.getCall(0);
-    expect(fetchCall.args[0]).toBe('/programming_environments/spritelab');
-    const fetchCallBody = JSON.parse(fetchCall.args[1].body);
+    const fetchCall = fetchSpy.mock.calls[0];
+    expect(fetchCall.mock.calls[0]).toBe('/programming_environments/spritelab');
+    const fetchCallBody = JSON.parse(fetchCall.mock.calls[1].body);
     expect(Object.keys(fetchCallBody).sort()).toEqual([
       'title',
       'published',

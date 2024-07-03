@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import EvidenceLevelsForTeachersV2 from '@cdo/apps/templates/rubrics/EvidenceLevelsForTeachersV2';
 import {
@@ -38,7 +37,7 @@ describe('EvidenceLevelsForTeachersV2', () => {
   });
 
   it('calls radioButtonCallback when understanding is selected', () => {
-    const callback = sinon.spy();
+    const callback = jest.fn();
     const wrapper = mount(
       <EvidenceLevelsForTeachersV2
         {...DEFAULT_PROPS}

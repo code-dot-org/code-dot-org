@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import OrderableList from '@cdo/apps/lib/levelbuilder/code-docs-editor/OrderableList';
 
@@ -10,8 +9,8 @@ describe('OrderableList', () => {
   let defaultProps, setListSpy, renderItemSpy;
 
   beforeEach(() => {
-    setListSpy = sinon.spy();
-    renderItemSpy = sinon.spy();
+    setListSpy = jest.fn();
+    renderItemSpy = jest.fn();
     defaultProps = {
       list: [{key: '1'}, {key: '2'}, {key: '3'}],
       setList: setListSpy,
@@ -22,8 +21,8 @@ describe('OrderableList', () => {
 
   it('calls renderItem for each item in the list', () => {
     shallow(<OrderableList {...defaultProps} />);
-    expect(renderItemSpy.callCount).toBe(3);
-    expect(renderItemSpy.getCalls().map(c => c.args[0])).toEqual([
+    expect(renderItemSpy).toHaveBeenCalledTimes(3);
+    expect(renderItemSpy.mock.calls.map(c => c.mock.calls[0])).toEqual([
       {key: '1'},
       {key: '2'},
       {key: '3'},
@@ -34,7 +33,7 @@ describe('OrderableList', () => {
     const wrapper = shallow(<OrderableList {...defaultProps} />);
     wrapper.find('Button').simulate('click');
     expect(setListSpy).toHaveBeenCalled().once;
-    expect(setListSpy.getCall(0).args[0].length).toBe(4);
+    expect(setListSpy.mock.calls[0][0].length).toBe(4);
   });
 
   it('can remove item from list', () => {

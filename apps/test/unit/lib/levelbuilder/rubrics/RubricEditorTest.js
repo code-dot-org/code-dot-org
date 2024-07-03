@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
 import RubricEditor from '@cdo/apps/lib/levelbuilder/rubrics/RubricEditor';
@@ -10,7 +9,7 @@ import Button from '@cdo/apps/templates/Button';
 
 describe('RubricEditorTest ', () => {
   let wrapper;
-  const addNewConceptSpy = sinon.spy();
+  const addNewConceptSpy = jest.fn();
   const sampleLearningGoalList = [
     {id: 1, learningGoal: 'Goal 1', aiEnabled: true},
     {id: 2, learningGoal: 'Goal 2', aiEnabled: false},

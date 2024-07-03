@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {ChartType} from '@cdo/apps/storage/dataBrowser/dataUtils';
 import DropDownField from '@cdo/apps/storage/dataBrowser/dataVisualizer/DropdownField';
@@ -89,7 +88,7 @@ describe('VisualizerModal', () => {
     let wrapper;
     beforeEach(() => {
       wrapper = shallow(<VisualizerModal {...DEFAULT_PROPS} />);
-      sinon.spy(wrapper.instance(), 'parseRecords');
+      jest.spyOn(wrapper.instance(), 'parseRecords').mockClear();
     });
 
     it('ignores empty records', () => {

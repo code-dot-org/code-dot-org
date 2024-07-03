@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import LedScreen from '@cdo/apps/lib/kits/maker/boards/microBit/LedScreen';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 
@@ -16,11 +14,11 @@ describe('LedScreen', function () {
       led = new LedScreen({
         mb: boardClient,
       });
-      displaySpy = sinon.spy(boardClient, 'displayPlot');
-      displayClearSpy = sinon.spy(boardClient, 'displayClear');
+      displaySpy = jest.spyOn(boardClient, 'displayPlot').mockClear();
+      displayClearSpy = jest.spyOn(boardClient, 'displayClear').mockClear();
     });
     afterAll(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it(`calls the parent on() implementation`, () => {
@@ -50,10 +48,10 @@ describe('LedScreen', function () {
       led = new LedScreen({
         mb: boardClient,
       });
-      displaySpy = sinon.spy(boardClient, 'displayPlot');
+      displaySpy = jest.spyOn(boardClient, 'displayPlot').mockClear();
     });
     afterAll(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it(`if LED is off, toggle triggers the parent on`, () => {
@@ -88,10 +86,10 @@ describe('LedScreen', function () {
       led = new LedScreen({
         mb: boardClient,
       });
-      displaySpy = sinon.spy(boardClient, 'displayShow');
+      displaySpy = jest.spyOn(boardClient, 'displayShow').mockClear();
     });
     afterAll(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('calls the parent displayShow', () => {
@@ -118,11 +116,11 @@ describe('LedScreen', function () {
       led = new LedScreen({
         mb: boardClient,
       });
-      scrollStringSpy = sinon.spy(boardClient, 'scrollString');
-      scrollNumSpy = sinon.spy(boardClient, 'scrollInteger');
+      scrollStringSpy = jest.spyOn(boardClient, 'scrollString').mockClear();
+      scrollNumSpy = jest.spyOn(boardClient, 'scrollInteger').mockClear();
     });
     afterAll(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it(`calls the parent scrollString`, () => {

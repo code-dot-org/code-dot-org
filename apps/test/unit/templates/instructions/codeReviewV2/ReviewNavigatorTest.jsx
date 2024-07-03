@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
@@ -45,7 +44,7 @@ describe('ReviewNavigator', () => {
           ownerName: 'Elaine',
         },
       ];
-      const loadPeersStub = sinon.stub();
+      const loadPeersStub = jest.fn();
       const wrapper = setUp({viewPeerList: true, loadPeers: loadPeersStub});
 
       const dropdown = wrapper.find(DropdownButton);
@@ -59,7 +58,7 @@ describe('ReviewNavigator', () => {
     });
 
     it('displays error if peers do not load', () => {
-      const loadPeersStub = sinon.stub();
+      const loadPeersStub = jest.fn();
       const wrapper = setUp({
         viewPeerList: true,
         loadPeers: loadPeersStub,
@@ -75,7 +74,7 @@ describe('ReviewNavigator', () => {
 
     it('displays no reviews if no peers are loaded', () => {
       const fakePeerList = [];
-      const loadPeersStub = sinon.stub();
+      const loadPeersStub = jest.fn();
       const wrapper = setUp({
         viewPeerList: true,
         loadPeers: loadPeersStub,
@@ -91,13 +90,13 @@ describe('ReviewNavigator', () => {
   });
 
   it('on selecting peer calls navigateToHref with expected arg', () => {
-    const navigateToHrefSpy = sinon.spy(utils, 'navigateToHref');
-    sinon.stub(utils, 'currentLocation').returns({
+    const navigateToHrefSpy = jest.spyOn(utils, 'navigateToHref').mockClear();
+    jest.spyOn(utils, 'currentLocation').mockClear().mockReturnValue({
       origin: 'fakeOrigin',
       pathname: '/fakePath',
     });
     const fakePeerList = [{ownerId: 1, ownerName: 'Jerry'}];
-    const loadPeersStub = sinon.stub();
+    const loadPeersStub = jest.fn();
     const wrapper = setUp({viewPeerList: true, loadPeers: loadPeersStub});
 
     const dropdown = wrapper.find(DropdownButton);
@@ -109,13 +108,13 @@ describe('ReviewNavigator', () => {
     wrapper.find('a').simulate('click');
     expect(navigateToHrefSpy).toHaveBeenCalledWith('fakeOrigin/fakePath?viewingCodeReview=true&user_id=1');
 
-    utils.currentLocation.restore();
-    utils.navigateToHref.restore();
+    utils.currentLocation.mockRestore();
+    utils.navigateToHref.mockRestore();
   });
 
   it('on returning to project navigates to expected url', () => {
-    const navigateToHrefSpy = sinon.spy(utils, 'navigateToHref');
-    sinon.stub(utils, 'currentLocation').returns({
+    const navigateToHrefSpy = jest.spyOn(utils, 'navigateToHref').mockClear();
+    jest.spyOn(utils, 'currentLocation').mockClear().mockReturnValue({
       origin: 'fakeOrigin',
       pathname: '/fakePath',
     });
@@ -124,7 +123,7 @@ describe('ReviewNavigator', () => {
     wrapper.find(Button).simulate('click');
     expect(navigateToHrefSpy).toHaveBeenCalledWith('fakeOrigin/fakePath?viewingCodeReview=true');
 
-    utils.currentLocation.restore();
-    utils.navigateToHref.restore();
+    utils.currentLocation.mockRestore();
+    utils.navigateToHref.mockRestore();
   });
 });

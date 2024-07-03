@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import FormComponent from '@cdo/apps/code-studio/pd/form_components/FormComponent';
 import FormController from '@cdo/apps/code-studio/pd/form_components/FormController';
@@ -105,17 +104,14 @@ describe('FormController', () => {
     describe('Page validation', () => {
       let validateCurrentPageRequiredFields;
       beforeEach(() => {
-        validateCurrentPageRequiredFields = sinon.stub(
-          DummyForm.prototype,
-          'validateCurrentPageRequiredFields'
-        );
+        validateCurrentPageRequiredFields = jest.spyOn(DummyForm.prototype, 'validateCurrentPageRequiredFields').mockClear().mockImplementation();
       });
       afterEach(() => {
-        validateCurrentPageRequiredFields.restore();
+        validateCurrentPageRequiredFields.mockRestore();
       });
 
       it('Does not navigate when the current page has errors', () => {
-        validateCurrentPageRequiredFields.returns(false);
+        validateCurrentPageRequiredFields.mockReturnValue(false);
         const nextButton = form.find('button');
         nextButton.simulate('click');
 
@@ -124,7 +120,7 @@ describe('FormController', () => {
       });
 
       it('Navigates when the current page has no errors', () => {
-        validateCurrentPageRequiredFields.returns(true);
+        validateCurrentPageRequiredFields.mockReturnValue(true);
         const nextButton = form.find('button');
         nextButton.simulate('click');
 
@@ -143,11 +139,11 @@ describe('FormController', () => {
           form.setState({currentPage: 2});
         });
         afterEach(() => {
-          server.restore();
+          server.mockRestore();
         });
 
         it('Does not submit when the last page has errors', () => {
-          validateCurrentPageRequiredFields.returns(false);
+          validateCurrentPageRequiredFields.mockReturnValue(false);
           submitButton().simulate('submit');
 
           form.update();
@@ -156,7 +152,7 @@ describe('FormController', () => {
         });
 
         it('Submits when the last page has no errors', () => {
-          validateCurrentPageRequiredFields.returns(true);
+          validateCurrentPageRequiredFields.mockReturnValue(true);
           submitButton().simulate('submit');
 
           expect(validateCurrentPageRequiredFields).toHaveBeenCalledTimes(1);
@@ -165,14 +161,14 @@ describe('FormController', () => {
         });
 
         it('Disables the submit button during submit', () => {
-          validateCurrentPageRequiredFields.returns(true);
+          validateCurrentPageRequiredFields.mockReturnValue(true);
           submitButton().simulate('submit');
           expect(form.state('submitting')).toBe(true);
           expect(submitButton().prop('disabled')).toBe(true);
         });
 
         it('Re-enables the submit button on error', () => {
-          validateCurrentPageRequiredFields.returns(true);
+          validateCurrentPageRequiredFields.mockReturnValue(true);
           server.respondWith([
             400,
             {'Content-Type': 'application/json'},
@@ -188,16 +184,13 @@ describe('FormController', () => {
         });
 
         it('Keeps the submit button disabled and calls onSuccessfulSubmit on success', () => {
-          validateCurrentPageRequiredFields.returns(true);
+          validateCurrentPageRequiredFields.mockReturnValue(true);
           server.respondWith([
             200,
             {'Content-Type': 'application/json'},
             JSON.stringify({}),
           ]);
-          const onSuccessfulSubmit = sinon.stub(
-            DummyForm.prototype,
-            'onSuccessfulSubmit'
-          );
+          const onSuccessfulSubmit = jest.spyOn(DummyForm.prototype, 'onSuccessfulSubmit').mockClear().mockImplementation();
 
           submitButton().simulate('submit');
           server.respond();
@@ -211,23 +204,20 @@ describe('FormController', () => {
 
     describe('validateCurrentPageRequiredFields()', () => {
       afterEach(() => {
-        sinon.restore();
+        jest.restoreAllMocks();
       });
 
       let render;
       beforeAll(() => {
         // Skip rendering
-        render = sinon.stub(DummyForm.prototype, 'render');
-        render.returns(null);
+        render = jest.spyOn(DummyForm.prototype, 'render').mockClear().mockImplementation();
+        render.mockReturnValue(null);
       });
 
       let getRequiredFields;
       const stubRequiedFields = requriredFields => {
-        getRequiredFields = sinon.stub(
-          DummyForm.prototype,
-          'getRequiredFields'
-        );
-        getRequiredFields.returns(requriredFields);
+        getRequiredFields = jest.spyOn(DummyForm.prototype, 'getRequiredFields').mockClear();
+        getRequiredFields.mockReturnValue(requriredFields);
       };
 
       it('Generates errors for missing required fields on the current page', () => {
@@ -277,10 +267,14 @@ describe('FormController', () => {
           page1Field3: 'will be modified',
         };
 
-        const processPageData = sinon.stub(DummyPage1, 'processPageData');
-        processPageData.withArgs(pageData).returns({
-          page1Field2: undefined,
-          page1Field3: 'modified',
+        const processPageData = jest.spyOn(DummyPage1, 'processPageData').mockClear().mockImplementation();
+        processPageData.mockImplementation((...args) => {
+          if (args[0] === pageData) {
+            return {
+              page1Field2: undefined,
+              page1Field3: 'modified',
+            };
+          }
         });
 
         DummyPage1.associatedFields = [

@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import {themeOptions, DEFAULT_THEME_INDEX} from '@cdo/apps/applab/constants';
 import {getPrefixedElementById} from '@cdo/apps/applab/designElements/elementUtils';
 import elementLibrary from '@cdo/apps/applab/designElements/library';
@@ -15,12 +13,12 @@ describe('themes: ', () => {
     designModeViz = document.createElement('div');
     designModeViz.id = 'designModeViz';
     document.body.appendChild(designModeViz);
-    sinon.stub(designMode, 'renderDesignWorkspace');
+    jest.spyOn(designMode, 'renderDesignWorkspace').mockClear().mockImplementation();
   });
 
   afterEach(() => {
     designModeViz.parentNode.removeChild(designModeViz);
-    designMode.renderDesignWorkspace.restore();
+    designMode.renderDesignWorkspace.mockRestore();
   });
 
   function setExistingHTML(existingHTML) {
@@ -293,17 +291,17 @@ describe('themes: ', () => {
 
   describe('onCopyElementToScreen', () => {
     beforeEach(() => {
-      sinon.stub(designMode, 'changeScreen').callsFake(screenId => {
+      jest.spyOn(designMode, 'changeScreen').mockClear().mockImplementation(screenId => {
         // Manually change the screen with a fake to avoid pulling in redux, Applab, etc.
         designMode.activeScreen().style.display = 'none';
         getPrefixedElementById(screenId).style.display = 'block';
       });
-      sinon.stub(studioApp(), 'displayPlayspaceAlert');
+      jest.spyOn(studioApp(), 'displayPlayspaceAlert').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      designMode.changeScreen.restore();
-      studioApp().displayPlayspaceAlert.restore();
+      designMode.changeScreen.mockRestore();
+      studioApp().displayPlayspaceAlert.mockRestore();
     });
 
     it('copies element from a screen with one theme to a screen with a different theme', () => {
@@ -336,11 +334,11 @@ describe('themes: ', () => {
   describe('onRestoreThemeDefaults', () => {
     let updatePropertySpy;
     beforeEach(() => {
-      updatePropertySpy = sinon.spy(designMode, 'updateProperty');
+      updatePropertySpy = jest.spyOn(designMode, 'updateProperty').mockClear();
     });
 
     afterEach(() => {
-      updatePropertySpy.restore();
+      updatePropertySpy.mockRestore();
     });
 
     it('onRestoreThemeDefaults will not call updateProperty if properties already match theme defaults', () => {

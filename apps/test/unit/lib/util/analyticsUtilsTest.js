@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import * as utils from '@cdo/apps/code-studio/utils';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
@@ -12,14 +10,18 @@ describe('AnalyticsUtils', () => {
       readonlyWorkspace: true,
       submitted: false,
     };
-    const queryParamsSpy = sinon.stub(utils, 'queryParams');
-    queryParamsSpy.withArgs('user_id').returns('123');
-    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const queryParamsSpy = jest.spyOn(utils, 'queryParams').mockClear().mockImplementation();
+    queryParamsSpy.mockImplementation((...args) => {
+      if (args[0] === 'user_id') {
+        return '123';
+      }
+    });
+    const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
 
     reportTeacherReviewingStudentNonLabLevel();
     expect(analyticsSpy).toHaveBeenCalled().once;
 
-    utils.queryParams.restore();
-    analyticsSpy.restore();
+    utils.queryParams.mockRestore();
+    analyticsSpy.mockRestore();
   });
 });

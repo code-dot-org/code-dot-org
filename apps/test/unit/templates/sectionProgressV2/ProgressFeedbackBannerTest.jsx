@@ -1,6 +1,5 @@
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedProgressFeedbackBanner} from '@cdo/apps/templates/sectionProgressV2/ProgressFeedbackBanner';
 import i18n from '@cdo/locale';
@@ -8,8 +7,8 @@ import i18n from '@cdo/locale';
 
 
 describe('ProgressFeedbackBanner', () => {
-  const fakeFetch = sinon.spy();
-  const fakeCreate = sinon.spy();
+  const fakeFetch = jest.fn();
+  const fakeCreate = jest.fn();
   const defaultProps = {
     currentUser: {isAdmin: false},
     canShow: true,
@@ -21,8 +20,8 @@ describe('ProgressFeedbackBanner', () => {
   };
 
   afterEach(() => {
-    fakeCreate.resetHistory();
-    fakeFetch.resetHistory();
+    fakeCreate.mockReset();
+    fakeFetch.mockReset();
   });
 
   it('renders empty if it can not show', () => {

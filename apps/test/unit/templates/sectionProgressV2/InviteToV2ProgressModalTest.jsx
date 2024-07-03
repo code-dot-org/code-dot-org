@@ -1,7 +1,6 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import $ from 'jquery';
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedInviteToV2ProgressModal} from '@cdo/apps/templates/sectionProgressV2/InviteToV2ProgressModal';
 import i18n from '@cdo/locale';
@@ -19,11 +18,11 @@ describe('InviteToV2ProgressModal', () => {
   let postStub;
 
   beforeEach(() => {
-    postStub = sinon.stub($, 'post').returns(Promise.resolve({}));
+    postStub = jest.spyOn($, 'post').mockClear().mockReturnValue(Promise.resolve({}));
   });
 
   afterEach(() => {
-    postStub.restore();
+    postStub.mockRestore();
   });
 
   function renderDefault(propOverrides = {}) {
@@ -48,9 +47,9 @@ describe('InviteToV2ProgressModal', () => {
   });
 
   it('allows user to accept the invitation', () => {
-    const setShowProgressTableV2Stub = sinon.stub();
-    const setHasSeenProgressTableInviteStub = sinon.stub();
-    const setHasJustSwitchedToV2Stub = sinon.stub();
+    const setShowProgressTableV2Stub = jest.fn();
+    const setHasSeenProgressTableInviteStub = jest.fn();
+    const setHasJustSwitchedToV2Stub = jest.fn();
 
     renderDefault({
       setShowProgressTableV2: setShowProgressTableV2Stub,
@@ -76,7 +75,7 @@ describe('InviteToV2ProgressModal', () => {
   });
 
   it('allows user to decline the invitation', () => {
-    const setHasSeenProgressTableInviteStub = sinon.stub();
+    const setHasSeenProgressTableInviteStub = jest.fn();
 
     renderDefault({
       setHasSeenProgressTableInvite: setHasSeenProgressTableInviteStub,

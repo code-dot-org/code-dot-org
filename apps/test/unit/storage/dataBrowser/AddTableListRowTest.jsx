@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import AddTableListRow from '@cdo/apps/storage/dataBrowser/AddTableListRow';
 import commonI18n from '@cdo/locale';
@@ -14,11 +13,11 @@ describe('AddTableListRow', () => {
     }
 
     afterEach(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('should render a localized string for placeholder text', () => {
-      sinon.stub(commonI18n, 'dataTableNamePlaceholder').returns('i18n-holder');
+      jest.spyOn(commonI18n, 'dataTableNamePlaceholder').mockClear().mockReturnValue('i18n-holder');
 
       const wrapper = createAddTableListRow();
 
@@ -27,7 +26,7 @@ describe('AddTableListRow', () => {
     });
 
     it('should render a localized string for "Add"', () => {
-      sinon.stub(commonI18n, 'add').returns('i18n-add');
+      jest.spyOn(commonI18n, 'add').mockClear().mockReturnValue('i18n-add');
 
       const wrapper = createAddTableListRow();
 

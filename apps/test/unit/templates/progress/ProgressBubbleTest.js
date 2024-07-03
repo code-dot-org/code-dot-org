@@ -1,6 +1,5 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
@@ -324,7 +323,7 @@ describe('ProgressBubble', () => {
 
   describe('href', () => {
     it('links to the level url', () => {
-      sinon.stub(utils, 'currentLocation').returns({search: ''});
+      jest.spyOn(utils, 'currentLocation').mockClear().mockReturnValue({search: ''});
       const wrapper = mount(
         <ProgressBubble
           {...defaultProps}
@@ -335,7 +334,7 @@ describe('ProgressBubble', () => {
         />
       );
       assert.equal(wrapper.find('a').prop('href'), '/my/test/url');
-      utils.currentLocation.restore();
+      utils.currentLocation.mockRestore();
     });
 
     it('includes the section_id in the queryparams if selectedSectionId is present', () => {
@@ -364,20 +363,18 @@ describe('ProgressBubble', () => {
     });
 
     it('preserves the queryparams of the current location', () => {
-      sinon
-        .stub(utils, 'currentLocation')
-        .returns({search: `section_id=${fakeSectionId}&user_id=559`});
+      jest.spyOn(utils, 'currentLocation').mockClear()
+        .mockReturnValue({search: `section_id=${fakeSectionId}&user_id=559`});
       const wrapper = mount(<ProgressBubble {...defaultProps} />);
       const href = wrapper.find('a').prop('href');
       assert.include(href, `section_id=${fakeSectionId}`);
       assert.include(href, 'user_id=559');
-      utils.currentLocation.restore();
+      utils.currentLocation.mockRestore();
     });
 
     it('if queryParam section_id and selectedSectionId are present, selectedSectionId wins', () => {
-      sinon
-        .stub(utils, 'currentLocation')
-        .returns({search: 'section_id=212&user_id=559'});
+      jest.spyOn(utils, 'currentLocation').mockClear()
+        .mockReturnValue({search: 'section_id=212&user_id=559'});
       const wrapper = mount(
         <ProgressBubble {...defaultProps} selectedSectionId={fakeSectionId} />
       );
@@ -385,7 +382,7 @@ describe('ProgressBubble', () => {
       assert.notInclude(href, 'section_id=212');
       assert.include(href, `section_id=${fakeSectionId}`);
       assert.include(href, 'user_id=559');
-      utils.currentLocation.restore();
+      utils.currentLocation.mockRestore();
     });
   });
 

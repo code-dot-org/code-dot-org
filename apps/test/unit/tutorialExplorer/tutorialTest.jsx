@@ -1,7 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import LazyLoad from 'react-lazy-load';
-import sinon from 'sinon';
 
 import Image from '@cdo/apps/tutorialExplorer/image';
 import Tutorial from '@cdo/apps/tutorialExplorer/tutorial';
@@ -43,7 +42,7 @@ describe('Tutorial', () => {
   });
 
   it('[accessibility] can be selected via keyboard', () => {
-    var clickedSpy = sinon.spy();
+    var clickedSpy = jest.fn();
     const wrapper = shallow(
       <Tutorial item={FAKE_TUTORIAL} tutorialClicked={clickedSpy} />
     );

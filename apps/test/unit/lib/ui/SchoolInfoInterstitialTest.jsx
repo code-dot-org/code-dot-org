@@ -1,6 +1,5 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import SchoolInfoInterstitial from '@cdo/apps/lib/ui/SchoolInfoInterstitial';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -22,8 +21,8 @@ describe('SchoolInfoInterstitial', () => {
     onClose: function () {},
   };
 
-  beforeEach(() => sinon.stub(firehoseClient, 'putRecord'));
-  afterEach(() => firehoseClient.putRecord.restore());
+  beforeEach(() => jest.spyOn(firehoseClient, 'putRecord').mockClear().mockImplementation());
+  afterEach(() => firehoseClient.putRecord.mockRestore());
 
   it('renders an uncloseable dialog with school info inputs, a dismiss button and a save button', () => {
     const wrapper = shallow(<SchoolInfoInterstitial {...MINIMUM_PROPS} />);
@@ -74,7 +73,7 @@ describe('SchoolInfoInterstitial', () => {
       />
     );
     const wrapperInstance = wrapper.instance();
-    sinon.spy(wrapperInstance, 'dismissSchoolInfoForm');
+    jest.spyOn(wrapperInstance, 'dismissSchoolInfoForm').mockClear();
     /**
      * When you shallow render a component, the render method of that component is called.
      * The onClick is already bound to the original, so if you do not re-render the component, spying on the
@@ -96,7 +95,7 @@ describe('SchoolInfoInterstitial', () => {
   });
 
   it('closes the school info confirmation dialog when the dismiss button is clicked', () => {
-    const onClose = sinon.spy();
+    const onClose = jest.fn();
     const wrapper = mount(
       <SchoolInfoInterstitial
         {...MINIMUM_PROPS}
@@ -108,7 +107,7 @@ describe('SchoolInfoInterstitial', () => {
       />
     );
     const wrapperInstance = wrapper.instance();
-    sinon.spy(wrapperInstance, 'dismissSchoolInfoForm');
+    jest.spyOn(wrapperInstance, 'dismissSchoolInfoForm').mockClear();
     wrapper.instance().forceUpdate();
     wrapper.find('Button[id="dismiss-button"]').simulate('click');
     expect(wrapperInstance.dismissSchoolInfoForm).toHaveBeenCalled();
@@ -342,7 +341,7 @@ describe('SchoolInfoInterstitial', () => {
     });
 
     afterEach(() => {
-      server.restore();
+      server.mockRestore();
     });
 
     it('does not submit form with no info', () => {
@@ -694,7 +693,7 @@ describe('SchoolInfoInterstitial', () => {
     });
 
     it('closes the dialog on successful submission', () => {
-      const onClose = sinon.spy();
+      const onClose = jest.fn();
       const wrapper = shallow(
         <SchoolInfoInterstitial
           {...MINIMUM_PROPS}
@@ -718,7 +717,7 @@ describe('SchoolInfoInterstitial', () => {
     });
 
     it('shows an error message on first failed submission', () => {
-      const onClose = sinon.spy();
+      const onClose = jest.fn();
       const wrapper = shallow(
         <SchoolInfoInterstitial
           {...MINIMUM_PROPS}
@@ -743,7 +742,7 @@ describe('SchoolInfoInterstitial', () => {
     });
 
     it('closes the dialog on a second failed submission', () => {
-      const onClose = sinon.spy();
+      const onClose = jest.fn();
       const wrapper = shallow(
         <SchoolInfoInterstitial
           {...MINIMUM_PROPS}

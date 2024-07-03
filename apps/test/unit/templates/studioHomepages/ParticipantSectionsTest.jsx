@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import ParticipantSections from '@cdo/apps/templates/studioHomepages/ParticipantSections';
 import SectionsAsStudentTable from '@cdo/apps/templates/studioHomepages/SectionsAsStudentTable';
@@ -12,8 +11,8 @@ import {sections} from './fakeSectionUtils';
 describe('ParticipantSections', () => {
   let defaultProps, updateSections, updateSectionsResult;
   beforeEach(() => {
-    updateSectionsResult = sinon.spy();
-    updateSections = sinon.spy();
+    updateSectionsResult = jest.fn();
+    updateSections = jest.fn();
     defaultProps = {
       sections: [],
       isTeacher: false,

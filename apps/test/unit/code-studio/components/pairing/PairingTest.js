@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import Pairing from '@cdo/apps/code-studio/components/pairing/Pairing.jsx';
 
@@ -22,7 +21,7 @@ describe('Pairing component', function () {
   }
 
   function teardownFakeAjax(server) {
-    server.restore();
+    server.mockRestore();
   }
 
   function verifyStartingValues(component, student = 0, select = 0, stop = 0) {

@@ -1,6 +1,5 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -169,7 +168,7 @@ describe('LearningGoal', () => {
   });
 
   it('sends event when closed and opened', () => {
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
 
     const wrapper = shallow(
       <LearningGoal
@@ -195,7 +194,7 @@ describe('LearningGoal', () => {
       learningGoalKey: 'key',
       learningGoal: 'Testing',
     });
-    sendEventSpy.restore();
+    sendEventSpy.mockRestore();
   });
 
   it('displays Evaluate when AI is disabled and no understanding has been selected', () => {

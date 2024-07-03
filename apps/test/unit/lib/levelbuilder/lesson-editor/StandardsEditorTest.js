@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedStandardsEditor as StandardsEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/StandardsEditor';
 
@@ -28,8 +27,8 @@ const fakeStandards = [
 describe('StandardsEditor', () => {
   let defaultProps, addStandard, removeStandard;
   beforeEach(() => {
-    addStandard = sinon.spy();
-    removeStandard = sinon.spy();
+    addStandard = jest.fn();
+    removeStandard = jest.fn();
     defaultProps = {
       standardType: 'standard',
       standards: fakeStandards,

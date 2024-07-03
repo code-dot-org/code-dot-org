@@ -1,13 +1,12 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {KeyCodes} from '@cdo/apps/constants';
 import {InlineDropdownMenu} from '@cdo/apps/templates/InlineDropdownMenu';
 
 
 
-const clickSpy = sinon.spy();
+const clickSpy = jest.fn();
 
 const defaultProps = {
   icon: 'icon',
@@ -15,7 +14,7 @@ const defaultProps = {
 };
 
 describe('InlineDropdownMenu', () => {
-  beforeEach(() => clickSpy.resetHistory());
+  beforeEach(() => clickSpy.mockReset());
 
   it('is initially just a button', () => {
     const wrapper = shallow(<InlineDropdownMenu {...defaultProps} />);
@@ -45,7 +44,7 @@ describe('InlineDropdownMenu', () => {
     const wrapper = shallow(<InlineDropdownMenu {...defaultProps} />);
     wrapper.find('button').invoke('onClick')();
     wrapper.find('a').at(1).invoke('onClick')();
-    expect(clickSpy.calledOnce).toBe(true);
+    expect(clickSpy).toHaveBeenCalledTimes(1);
 
     // dropdown is closed
     expect(wrapper.find('a').length).toBe(0);
@@ -55,7 +54,7 @@ describe('InlineDropdownMenu', () => {
     const wrapper = shallow(<InlineDropdownMenu {...defaultProps} />);
     wrapper.find('button').invoke('onClick')();
     wrapper.find('a').at(1).invoke('onKeyDown')({which: KeyCodes.ENTER});
-    expect(clickSpy.calledOnce).toBe(true);
+    expect(clickSpy).toHaveBeenCalledTimes(1);
 
     // dropdown is closed
     expect(wrapper.find('a').length).toBe(0);

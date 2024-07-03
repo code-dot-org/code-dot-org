@@ -1,7 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon';
 
 import Button from '@cdo/apps/componentLibrary/button/_baseButton/_BaseButton';
 
@@ -17,7 +16,7 @@ describe('Design System - Button', () => {
 
   it('Button - can be clicked', async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     const onClick = () => {
       spyOnChange();
@@ -58,7 +57,7 @@ describe('Design System - Button', () => {
 
   it("Button - renders disabled button, can't click it", async () => {
     const user = userEvent.setup();
-    const spyOnClick = sinon.spy();
+    const spyOnClick = jest.fn();
 
     const onClick = () => {
       spyOnClick();

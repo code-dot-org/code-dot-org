@@ -1,7 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon';
 
 import {IconDropdown} from '@cdo/apps/componentLibrary/dropdown';
 
@@ -58,7 +57,7 @@ describe('Design System - Icon Dropdown Component', () => {
 
   it('Icon Dropdown - renders with correct text and options, changes selected value on when one is selected', async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
     const onChange = option => {
       onIconDropdownChange(option);
       spyOnChange(option);
@@ -101,7 +100,7 @@ describe('Design System - Icon Dropdown Component', () => {
 
   it("Icon Dropdown - renders disabled dropdown, doesn't change on click", async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
     const onChange = option => {
       onIconDropdownChange(option);
       spyOnChange(option);

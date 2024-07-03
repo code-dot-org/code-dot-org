@@ -1,6 +1,5 @@
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
-import sinon from 'sinon';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
@@ -76,7 +75,7 @@ describe('BorderedCallToAction', () => {
     });
 
     it('can use a custom onClick', () => {
-      const onClickSpy = sinon.spy();
+      const onClickSpy = jest.fn();
       const borderedCtA = isolateComponent(
         <BorderedCallToAction {...defaultProps} onClick={onClickSpy} />
       );

@@ -3,7 +3,6 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import jQuery from 'jquery';
 import {pick, omit} from 'lodash';
 import React from 'react';
-import sinon from 'sinon';
 
 import EnrollForm from '@cdo/apps/code-studio/pd/workshop_enrollment/enroll_form';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
@@ -16,11 +15,11 @@ describe('Enroll Form', () => {
   let enrollForm;
   beforeEach(() => {
     server = sinon.fakeServer.create();
-    sinon.spy(jQuery, 'ajax');
+    jest.spyOn(jQuery, 'ajax').mockClear();
   });
   afterEach(() => {
-    server.restore();
-    jQuery.ajax.restore();
+    server.mockRestore();
+    jQuery.ajax.mockRestore();
   });
 
   const props = {
@@ -64,14 +63,14 @@ describe('Enroll Form', () => {
     form.setState(params);
     form.find('#submit').simulate('click');
     expect(form.state('errors')).toHaveProperty(errorProperty);
-    expect(jQuery.ajax.called).toBe(false);
+    expect(jQuery.ajax).not.toHaveBeenCalled();
   };
 
   const testSuccessfulSubmit = (form, params) => {
     form.setState(params);
     form.find('#submit').simulate('click');
     expect(form.state('errors')).toHaveLength(0);
-    expect(jQuery.ajax.called).toBe(true);
+    expect(jQuery.ajax).toHaveBeenCalled();
   };
 
   describe('CSF Enroll Form', () => {
@@ -470,16 +469,16 @@ describe('Enroll Form', () => {
 
       enrollForm.find('#submit').simulate('click');
 
-      expect(jQuery.ajax.calledOnce).toBe(true);
-      expect(JSON.parse(jQuery.ajax.getCall(0).args[0].data)).toEqual(expectedData);
+      expect(jQuery.ajax).toHaveBeenCalledTimes(1);
+      expect(JSON.parse(jQuery.ajax.mock.calls[0][0].data)).toEqual(expectedData);
     });
 
     it('do not submit other school_info fields when school_id is selected', () => {
       enrollForm.setState(requiredParams);
       enrollForm.find('#submit').simulate('click');
 
-      expect(jQuery.ajax.calledOnce).toBe(true);
-      expect(JSON.parse(jQuery.ajax.getCall(0).args[0].data)).toEqual({
+      expect(jQuery.ajax).toHaveBeenCalledTimes(1);
+      expect(JSON.parse(jQuery.ajax.mock.calls[0][0].data)).toEqual({
         ...requiredParams,
         school_info: {school_id: school_id},
       });
@@ -522,7 +521,7 @@ describe('Enroll Form', () => {
       // If I submit in this state, first name should not be one
       // of the validation errors.
       enrollForm.find('#submit').simulate('click');
-      expect(jQuery.ajax.called).toBe(false);
+      expect(jQuery.ajax).not.toHaveBeenCalled();
       expect(enrollForm.state('errors')).toHaveProperty('email');
       expect(enrollForm.state('errors')).not.toHaveProperty('first_name');
     });

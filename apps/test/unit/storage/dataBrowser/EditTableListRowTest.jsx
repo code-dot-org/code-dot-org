@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import EditTableListRow from '@cdo/apps/storage/dataBrowser/EditTableListRow';
 import commonI18n from '@cdo/locale';
@@ -20,11 +19,11 @@ describe('EditTableListRow', () => {
     }
 
     afterEach(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('should render a localized string for delete button text', () => {
-      sinon.stub(commonI18n, 'delete').returns('i18n-delete');
+      jest.spyOn(commonI18n, 'delete').mockClear().mockReturnValue('i18n-delete');
 
       const wrapper = createEditTableListRow();
 
@@ -33,7 +32,7 @@ describe('EditTableListRow', () => {
     });
 
     it('should render a localized string for delete confirmation', () => {
-      sinon.stub(commonI18n, 'deleteTableConfirm').returns('i18n-delete-body');
+      jest.spyOn(commonI18n, 'deleteTableConfirm').mockClear().mockReturnValue('i18n-delete-body');
 
       const wrapper = createEditTableListRow();
 
@@ -42,7 +41,7 @@ describe('EditTableListRow', () => {
     });
 
     it('should render a localized string for delete confirmation title', () => {
-      sinon.stub(commonI18n, 'deleteTable').returns('i18n-delete-table');
+      jest.spyOn(commonI18n, 'deleteTable').mockClear().mockReturnValue('i18n-delete-table');
 
       const wrapper = createEditTableListRow();
 

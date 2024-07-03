@@ -1,6 +1,5 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedManageStudentAgeCell as ManageStudentAgeCell} from '@cdo/apps/templates/manageStudents/ManageStudentsAgeCell';
 
@@ -16,8 +15,8 @@ describe('ManageStudentAgeCell', () => {
   let editStudent, setSharingDefault;
 
   beforeEach(() => {
-    editStudent = sinon.spy();
-    setSharingDefault = sinon.spy();
+    editStudent = jest.fn();
+    setSharingDefault = jest.fn();
   });
 
   it('renders the age set for the student, when not editing', () => {
@@ -57,13 +56,13 @@ describe('ManageStudentAgeCell', () => {
         setSharingDefault={setSharingDefault}
       />
     );
-    expect(editStudent.callCount).toBe(0);
-    expect(setSharingDefault.callCount).toBe(0);
+    expect(editStudent).toHaveBeenCalledTimes(0);
+    expect(setSharingDefault).toHaveBeenCalledTimes(0);
     wrapper.find('select').simulate('change', {target: {value: '21+'}});
-    expect(editStudent.callCount).toBe(1);
+    expect(editStudent).toHaveBeenCalledTimes(1);
     // setSharing default should not be called because the age was changed from
     // 10 to  21+ and we only call setSharingDefault if initial age is ''.
-    expect(setSharingDefault.callCount).toBe(0);
+    expect(setSharingDefault).toHaveBeenCalledTimes(0);
   });
 
   it('selecting an initial age from the dropdown calls editStudent and setSharingDefault', () => {
@@ -76,11 +75,11 @@ describe('ManageStudentAgeCell', () => {
         setSharingDefault={setSharingDefault}
       />
     );
-    expect(editStudent.callCount).toBe(0);
-    expect(setSharingDefault.callCount).toBe(0);
+    expect(editStudent).toHaveBeenCalledTimes(0);
+    expect(setSharingDefault).toHaveBeenCalledTimes(0);
     wrapper.find('select').simulate('change', {target: {value: 13}});
-    expect(editStudent.callCount).toBe(1);
+    expect(editStudent).toHaveBeenCalledTimes(1);
     // setSharing default should be called because initial age was ''.
-    expect(setSharingDefault.callCount).toBe(1);
+    expect(setSharingDefault).toHaveBeenCalledTimes(1);
   });
 });

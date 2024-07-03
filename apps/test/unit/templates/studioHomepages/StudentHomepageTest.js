@@ -1,7 +1,6 @@
 import {assert} from 'chai';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
@@ -71,11 +70,11 @@ describe('StudentHomepage', () => {
   });
 
   it('does not log an Amplitude event for student signing-in', () => {
-    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
     shallow(<StudentHomepage {...TEST_PROPS} />);
 
     expect(analyticsSpy).not.toHaveBeenCalled();
-    analyticsSpy.restore();
+    analyticsSpy.mockRestore();
   });
 
   it('shows the special announcement for all languages', () => {

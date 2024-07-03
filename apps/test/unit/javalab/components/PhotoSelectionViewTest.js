@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import PhotoSelectionView from '@cdo/apps/javalab/components/PhotoSelectionView';
 
@@ -11,7 +10,7 @@ describe('PhotoSelectionView', () => {
   let onPhotoSelected, promptText;
 
   beforeEach(() => {
-    onPhotoSelected = sinon.stub();
+    onPhotoSelected = jest.fn();
     promptText = 'prompt';
   });
 
@@ -33,6 +32,6 @@ describe('PhotoSelectionView', () => {
 
     wrapper.find('input').invoke('onChange')({target: {files: [file]}});
 
-    sinon.assert.calledWith(onPhotoSelected, file);
+    expect(onPhotoSelected).toHaveBeenCalledWith(file);
   });
 });

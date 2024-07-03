@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {
   UnconnectedLibraryCreationDialog as LibraryCreationDialog,
@@ -72,7 +71,7 @@ describe('LibraryCreationDialog', () => {
     });
 
     afterEach(() => {
-      server.restore();
+      server.mockRestore();
     });
 
     const stubFindProfanityRequest = (status, serverData) => {

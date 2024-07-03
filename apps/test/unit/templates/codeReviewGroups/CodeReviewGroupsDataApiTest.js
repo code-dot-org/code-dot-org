@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import sinon from 'sinon';
 
 import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 
@@ -41,30 +40,27 @@ describe('CodeReviewGroupsDataApi', () => {
       },
     ];
 
-    postJSON = sinon.stub();
-    getJSON = sinon.stub($, 'getJSON');
+    postJSON = jest.fn();
+    getJSON = jest.spyOn($, 'getJSON').mockClear().mockImplementation();
     api = new CodeReviewGroupsDataApi(sectionId);
     api.postJSON = postJSON;
   });
 
   afterEach(() => {
-    getJSON.restore();
+    getJSON.mockRestore();
   });
 
   it('makes a GET request and converts group data when calling getCodeReviewGroups', () => {
     let convertedResponse;
 
-    getJSON.returns({
+    getJSON.mockReturnValue({
       then: callback => {
         convertedResponse = callback(serverGroupsResponse);
       },
     });
     api.getCodeReviewGroups();
 
-    sinon.assert.calledWith(
-      getJSON,
-      `/api/v1/sections/${sectionId}/code_review_groups`
-    );
+    expect(getJSON).toHaveBeenCalledWith(`/api/v1/sections/${sectionId}/code_review_groups`);
 
     expect(clientGroupsList).toEqual(convertedResponse);
   });
@@ -72,22 +68,15 @@ describe('CodeReviewGroupsDataApi', () => {
   it('makes a POST request with converted group data when calling setCodeReviewGroups', () => {
     api.setCodeReviewGroups(clientGroupsList);
 
-    sinon.assert.calledWith(
-      postJSON,
-      `/api/v1/sections/${sectionId}/code_review_groups`
-    );
+    expect(postJSON).toHaveBeenCalledWith(`/api/v1/sections/${sectionId}/code_review_groups`);
 
-    const data = postJSON.getCall(0).args[1];
+    const data = postJSON.mock.calls[0][1];
     expect(serverGroupsResponse).toEqual(data);
   });
 
   it('makes a POST request with enabled value when calling setCodeReviewEnabled', () => {
     api.setCodeReviewEnabled(true);
 
-    sinon.assert.calledWith(
-      postJSON,
-      `/api/v1/sections/${sectionId}/code_review_enabled`,
-      {enabled: true}
-    );
+    expect(postJSON).toHaveBeenCalledWith(`/api/v1/sections/${sectionId}/code_review_enabled`, {enabled: true});
   });
 });

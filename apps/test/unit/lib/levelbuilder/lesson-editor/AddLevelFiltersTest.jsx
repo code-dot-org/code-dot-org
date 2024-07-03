@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedAddLevelFilters as AddLevelFilters} from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelFilters';
 
@@ -16,11 +15,11 @@ describe('AddLevelFilters', () => {
     handleChangeUnit,
     handleChangeOwner;
   beforeEach(() => {
-    handleSearch = sinon.spy();
-    handleChangeLevelName = sinon.spy();
-    handleChangeLevelType = sinon.spy();
-    handleChangeUnit = sinon.spy();
-    handleChangeOwner = sinon.spy();
+    handleSearch = jest.fn();
+    handleChangeLevelName = jest.fn();
+    handleChangeLevelType = jest.fn();
+    handleChangeUnit = jest.fn();
+    handleChangeOwner = jest.fn();
     defaultProps = {
       searchOptions: searchOptions,
       handleSearch,

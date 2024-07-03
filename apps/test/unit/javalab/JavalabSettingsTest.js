@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import {UnconnectedJavalabSettings} from '@cdo/apps/javalab/JavalabSettings';
@@ -14,9 +13,9 @@ describe('JavalabSettings', () => {
     defaultProps;
 
   beforeEach(() => {
-    setDisplayTheme = sinon.stub();
-    increaseEditorFontSize = sinon.stub();
-    decreaseEditorFontSize = sinon.stub();
+    setDisplayTheme = jest.fn();
+    increaseEditorFontSize = jest.fn();
+    decreaseEditorFontSize = jest.fn();
 
     defaultProps = {
       displayTheme: DisplayTheme.DARK,
@@ -56,7 +55,7 @@ describe('JavalabSettings', () => {
 
     switchThemeButton.first().props().onClick();
 
-    sinon.assert.calledWith(setDisplayTheme, DisplayTheme.LIGHT);
+    expect(setDisplayTheme).toHaveBeenCalledWith(DisplayTheme.LIGHT);
 
     // Assert dropdown is closed
     assert.equal(wrapper.find('#javalab-settings-switch-theme').length, 0);

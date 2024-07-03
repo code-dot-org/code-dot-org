@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import sinon from 'sinon';
 
 import * as redux from '@cdo/apps/redux';
 import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
@@ -225,27 +224,21 @@ describe('sectionProgressLoader.loadScript', () => {
   let startRefreshingProgressStub;
 
   beforeEach(() => {
-    fetchStub = sinon.stub(window, 'fetch');
-    reduxStub = sinon.stub(redux, 'getStore');
-    startLoadingProgressStub = sinon.stub(
-      sectionProgress,
-      'startLoadingProgress'
-    );
-    startRefreshingProgressStub = sinon.stub(
-      sectionProgress,
-      'startRefreshingProgress'
-    );
+    fetchStub = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
+    reduxStub = jest.spyOn(redux, 'getStore').mockClear().mockImplementation();
+    startLoadingProgressStub = jest.spyOn(sectionProgress, 'startLoadingProgress').mockClear().mockImplementation();
+    startRefreshingProgressStub = jest.spyOn(sectionProgress, 'startRefreshingProgress').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    redux.getStore.restore();
-    fetchStub.restore();
-    sectionProgress.startLoadingProgress.restore();
-    sectionProgress.startRefreshingProgress.restore();
+    redux.getStore.mockRestore();
+    fetchStub.mockRestore();
+    sectionProgress.startLoadingProgress.mockRestore();
+    sectionProgress.startRefreshingProgress.mockRestore();
   });
 
   it('returns early if it is already refreshing', () => {
-    reduxStub.returns({
+    reduxStub.mockReturnValue({
       getState: () => {
         return {
           sectionProgress: {
@@ -269,28 +262,22 @@ describe('sectionProgressLoader.loadScript', () => {
     let addDataByUnitStub, finishLoadingProgressStub;
     let finishRefreshingProgressStub;
     beforeEach(() => {
-      sinon.stub(Promise, 'all').returns({then: sinon.stub().callsArg(0)});
-      finishLoadingProgressStub = sinon.stub(
-        sectionProgress,
-        'finishLoadingProgress'
-      );
-      finishRefreshingProgressStub = sinon.stub(
-        sectionProgress,
-        'finishRefreshingProgress'
-      );
+      jest.spyOn(Promise, 'all').mockClear().mockReturnValue({then: jest.fn().mockImplementation((...args) => args[0]())});
+      finishLoadingProgressStub = jest.spyOn(sectionProgress, 'finishLoadingProgress').mockClear().mockImplementation();
+      finishRefreshingProgressStub = jest.spyOn(sectionProgress, 'finishRefreshingProgress').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      sectionProgress.finishLoadingProgress.restore();
-      sectionProgress.finishRefreshingProgress.restore();
-      addDataByUnitStub.restore();
-      Promise.all.restore();
+      sectionProgress.finishLoadingProgress.mockRestore();
+      sectionProgress.finishRefreshingProgress.mockRestore();
+      addDataByUnitStub.mockRestore();
+      Promise.all.mockRestore();
     });
 
     it('refreshes the data if data already exists', () => {
       const selectedSectionId = 5;
-      addDataByUnitStub = sinon.stub(sectionProgress, 'addDataByUnit');
-      reduxStub.returns({
+      addDataByUnitStub = jest.spyOn(sectionProgress, 'addDataByUnit').mockClear().mockImplementation();
+      reduxStub.mockReturnValue({
         getState: () => {
           return {
             sectionProgress: {
@@ -309,9 +296,9 @@ describe('sectionProgressLoader.loadScript', () => {
         },
         dispatch: () => {},
       });
-      fetchStub.returns({
-        then: sinon.stub().returns({
-          then: sinon.stub().callsArgWith(0, {}),
+      fetchStub.mockReturnValue({
+        then: jest.fn().mockReturnValue({
+          then: jest.fn().mockImplementation((...args) => args[0]({})),
         }),
       });
 
@@ -325,7 +312,7 @@ describe('sectionProgressLoader.loadScript', () => {
 
     it('handles multiple pages of data', () => {
       const selectedSectionId = 5;
-      reduxStub.returns({
+      reduxStub.mockReturnValue({
         getState: () => {
           return {
             sectionProgress: {
@@ -346,33 +333,45 @@ describe('sectionProgressLoader.loadScript', () => {
         dispatch: () => {},
       });
 
-      sinon.stub(progressHelpers, 'processedLevel').returnsArg(0);
-      addDataByUnitStub = sinon.spy(sectionProgress, 'addDataByUnit');
-      fetchStub.onCall(0).returns({
-        then: sinon.stub().returns({
-          then: sinon.stub().callsArgWith(0, serverScriptResponse),
-        }),
+      jest.spyOn(progressHelpers, 'processedLevel').mockClear().mockImplementation((...args) => args[0]);
+      addDataByUnitStub = jest.spyOn(sectionProgress, 'addDataByUnit').mockClear();
+      fetchStub.mockImplementation(() => {
+        if (fetchStub.mock.calls.length === 0) {
+          return {
+            then: jest.fn().mockReturnValue({
+              then: jest.fn().mockImplementation((...args) => args[0](serverScriptResponse)),
+            }),
+          };
+        }
       });
-      fetchStub.onCall(1).returns({
-        then: sinon.stub().returns({
-          then: sinon.stub().callsArgWith(0, firstServerProgressResponse),
-        }),
+      fetchStub.mockImplementation(() => {
+        if (fetchStub.mock.calls.length === 1) {
+          return {
+            then: jest.fn().mockReturnValue({
+              then: jest.fn().mockImplementation((...args) => args[0](firstServerProgressResponse)),
+            }),
+          };
+        }
       });
-      fetchStub.onCall(2).returns({
-        then: sinon.stub().returns({
-          then: sinon.stub().callsArgWith(0, secondServerProgressResponse),
-        }),
+      fetchStub.mockImplementation(() => {
+        if (fetchStub.mock.calls.length === 2) {
+          return {
+            then: jest.fn().mockReturnValue({
+              then: jest.fn().mockImplementation((...args) => args[0](secondServerProgressResponse)),
+            }),
+          };
+        }
       });
       loadUnitProgress(123, selectedSectionId);
       expect(addDataByUnitStub).toHaveBeenCalledWith(fullExpectedResult);
-      progressHelpers.processedLevel.restore();
+      progressHelpers.processedLevel.mockRestore();
     });
 
     describe('the first time', () => {
       const selectedSectionId = 5;
       let lessonExtras = true;
       beforeEach(() => {
-        reduxStub.returns({
+        reduxStub.mockReturnValue({
           getState: () => {
             return {
               sectionProgress: {
@@ -396,10 +395,10 @@ describe('sectionProgressLoader.loadScript', () => {
       });
 
       it('starts and finishes loading progress', () => {
-        addDataByUnitStub = sinon.stub(sectionProgress, 'addDataByUnit');
-        fetchStub.returns({
-          then: sinon.stub().returns({
-            then: sinon.stub().callsArgWith(0, {}),
+        addDataByUnitStub = jest.spyOn(sectionProgress, 'addDataByUnit').mockClear().mockImplementation();
+        fetchStub.mockReturnValue({
+          then: jest.fn().mockReturnValue({
+            then: jest.fn().mockImplementation((...args) => args[0]({})),
           }),
         });
 
@@ -412,8 +411,8 @@ describe('sectionProgressLoader.loadScript', () => {
       });
 
       it('processes levels before updating the redux store', () => {
-        sinon.stub(progressHelpers, 'processedLevel').returns('success');
-        addDataByUnitStub = sinon.spy(sectionProgress, 'addDataByUnit');
+        jest.spyOn(progressHelpers, 'processedLevel').mockClear().mockReturnValue('success');
+        addDataByUnitStub = jest.spyOn(sectionProgress, 'addDataByUnit').mockClear();
         const serverResponse = {
           lessons: [{levels: ['fail']}],
         };
@@ -438,37 +437,53 @@ describe('sectionProgressLoader.loadScript', () => {
           studentLastUpdateByUnit: {0: {}},
         };
 
-        fetchStub.onCall(0).returns({
-          then: sinon.stub().returns({
-            then: sinon.stub().callsArgWith(0, serverResponse),
-          }),
+        fetchStub.mockImplementation(() => {
+          if (fetchStub.mock.calls.length === 0) {
+            return {
+              then: jest.fn().mockReturnValue({
+                then: jest.fn().mockImplementation((...args) => args[0](serverResponse)),
+              }),
+            };
+          }
         });
-        fetchStub.onCall(1).returns({
-          then: sinon.stub().returns({
-            then: sinon.stub().callsArgWith(0, {}),
-          }),
+        fetchStub.mockImplementation(() => {
+          if (fetchStub.mock.calls.length === 1) {
+            return {
+              then: jest.fn().mockReturnValue({
+                then: jest.fn().mockImplementation((...args) => args[0]({})),
+              }),
+            };
+          }
         });
         loadUnitProgress(0, selectedSectionId);
         expect(addDataByUnitStub).toHaveBeenCalledWith(expectedResult);
-        progressHelpers.processedLevel.restore();
+        progressHelpers.processedLevel.mockRestore();
       });
 
       it('transforms the data provided by the server', () => {
-        sinon.stub(progressHelpers, 'processedLevel').returnsArg(0);
-        addDataByUnitStub = sinon.spy(sectionProgress, 'addDataByUnit');
-        fetchStub.onCall(0).returns({
-          then: sinon.stub().returns({
-            then: sinon.stub().callsArgWith(0, serverScriptResponse),
-          }),
+        jest.spyOn(progressHelpers, 'processedLevel').mockClear().mockImplementation((...args) => args[0]);
+        addDataByUnitStub = jest.spyOn(sectionProgress, 'addDataByUnit').mockClear();
+        fetchStub.mockImplementation(() => {
+          if (fetchStub.mock.calls.length === 0) {
+            return {
+              then: jest.fn().mockReturnValue({
+                then: jest.fn().mockImplementation((...args) => args[0](serverScriptResponse)),
+              }),
+            };
+          }
         });
-        fetchStub.onCall(1).returns({
-          then: sinon.stub().returns({
-            then: sinon.stub().callsArgWith(0, serverProgressResponse),
-          }),
+        fetchStub.mockImplementation(() => {
+          if (fetchStub.mock.calls.length === 1) {
+            return {
+              then: jest.fn().mockReturnValue({
+                then: jest.fn().mockImplementation((...args) => args[0](serverProgressResponse)),
+              }),
+            };
+          }
         });
         loadUnitProgress(123, selectedSectionId);
         expect(addDataByUnitStub).toHaveBeenCalledWith(fullExpectedResult);
-        progressHelpers.processedLevel.restore();
+        progressHelpers.processedLevel.mockRestore();
       });
 
       it('filters out bonus levels when section.lessonExtras is false', () => {
@@ -476,22 +491,30 @@ describe('sectionProgressLoader.loadScript', () => {
         const scriptResponse = _.cloneDeep(serverScriptResponse);
         scriptResponse.lessons[0].levels.push({bonus: true});
 
-        sinon.stub(progressHelpers, 'processedLevel').returnsArg(0);
-        addDataByUnitStub = sinon.spy(sectionProgress, 'addDataByUnit');
+        jest.spyOn(progressHelpers, 'processedLevel').mockClear().mockImplementation((...args) => args[0]);
+        addDataByUnitStub = jest.spyOn(sectionProgress, 'addDataByUnit').mockClear();
 
-        fetchStub.onCall(0).returns({
-          then: sinon.stub().returns({
-            then: sinon.stub().callsArgWith(0, scriptResponse),
-          }),
+        fetchStub.mockImplementation(() => {
+          if (fetchStub.mock.calls.length === 0) {
+            return {
+              then: jest.fn().mockReturnValue({
+                then: jest.fn().mockImplementation((...args) => args[0](scriptResponse)),
+              }),
+            };
+          }
         });
-        fetchStub.onCall(1).returns({
-          then: sinon.stub().returns({
-            then: sinon.stub().callsArgWith(0, serverProgressResponse),
-          }),
+        fetchStub.mockImplementation(() => {
+          if (fetchStub.mock.calls.length === 1) {
+            return {
+              then: jest.fn().mockReturnValue({
+                then: jest.fn().mockImplementation((...args) => args[0](serverProgressResponse)),
+              }),
+            };
+          }
         });
         loadUnitProgress(123, selectedSectionId);
         expect(addDataByUnitStub).toHaveBeenCalledWith(fullExpectedResult);
-        progressHelpers.processedLevel.restore();
+        progressHelpers.processedLevel.mockRestore();
       });
 
       it('does not filter bonus levels when section.lessonExtras is true', () => {
@@ -504,22 +527,30 @@ describe('sectionProgressLoader.loadScript', () => {
         const expectedResult = _.cloneDeep(fullExpectedResult);
         expectedResult.unitDataByUnit[123].lessons[0].levels.push(bonusLevel);
 
-        sinon.stub(progressHelpers, 'processedLevel').returnsArg(0);
-        addDataByUnitStub = sinon.spy(sectionProgress, 'addDataByUnit');
+        jest.spyOn(progressHelpers, 'processedLevel').mockClear().mockImplementation((...args) => args[0]);
+        addDataByUnitStub = jest.spyOn(sectionProgress, 'addDataByUnit').mockClear();
 
-        fetchStub.onCall(0).returns({
-          then: sinon.stub().returns({
-            then: sinon.stub().callsArgWith(0, scriptResponse),
-          }),
+        fetchStub.mockImplementation(() => {
+          if (fetchStub.mock.calls.length === 0) {
+            return {
+              then: jest.fn().mockReturnValue({
+                then: jest.fn().mockImplementation((...args) => args[0](scriptResponse)),
+              }),
+            };
+          }
         });
-        fetchStub.onCall(1).returns({
-          then: sinon.stub().returns({
-            then: sinon.stub().callsArgWith(0, serverProgressResponse),
-          }),
+        fetchStub.mockImplementation(() => {
+          if (fetchStub.mock.calls.length === 1) {
+            return {
+              then: jest.fn().mockReturnValue({
+                then: jest.fn().mockImplementation((...args) => args[0](serverProgressResponse)),
+              }),
+            };
+          }
         });
         loadUnitProgress(123, selectedSectionId);
         expect(addDataByUnitStub).toHaveBeenCalledWith(expectedResult);
-        progressHelpers.processedLevel.restore();
+        progressHelpers.processedLevel.mockRestore();
       });
     });
   });

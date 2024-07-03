@@ -2,7 +2,6 @@ import {assert} from 'chai';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import FoormEntityEditor from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityEditor';
 import FoormFormSaveBar, {
@@ -65,7 +64,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
 
   afterEach(() => {
     restoreRedux();
-    server.restore();
+    server.mockRestore();
   });
 
   const createWrapper = overrideProps => {

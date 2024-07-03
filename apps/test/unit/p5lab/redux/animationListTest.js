@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import {combineReducers} from 'redux';
-import sinon from 'sinon';
 
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {EMPTY_IMAGE} from '@cdo/apps/p5lab/constants';
@@ -218,7 +217,7 @@ describe('animationList', function () {
   describe('action: set initial animationList', function () {
     let server, store;
     beforeEach(function () {
-      project.getCurrentId.returns('123');
+      project.getCurrentId.mockReturnValue('123');
       server = sinon.fakeServer.create();
       server.respondWith('imageBody');
       store = createStore(
@@ -228,7 +227,7 @@ describe('animationList', function () {
     });
 
     afterEach(function () {
-      server.restore();
+      server.mockRestore();
     });
 
     it('when animationList has 1 item, currentAnimations.ANIMATION should be the animation', function () {
@@ -314,16 +313,16 @@ describe('animationList', function () {
   describe('action: delete animation', function () {
     let server;
     beforeEach(function () {
-      project.getCurrentId.returns('');
-      sinon.stub(project, 'projectChanged').returns('');
+      project.getCurrentId.mockReturnValue('');
+      jest.spyOn(project, 'projectChanged').mockClear().mockReturnValue('');
 
       server = sinon.fakeServer.create();
       server.respondWith('imageBody');
     });
 
     afterEach(function () {
-      server.restore();
-      project.projectChanged.restore();
+      server.mockRestore();
+      project.projectChanged.mockRestore();
     });
 
     it('deleting the first animation reselects the next animation in the animationList', function () {
@@ -392,16 +391,16 @@ describe('animationList', function () {
   describe('action: clone animation', function () {
     let server;
     beforeEach(function () {
-      project.getCurrentId.returns('');
-      sinon.stub(project, 'projectChanged').returns('');
+      project.getCurrentId.mockReturnValue('');
+      jest.spyOn(project, 'projectChanged').mockClear().mockReturnValue('');
 
       server = sinon.fakeServer.create();
       server.respondWith('imageBody');
     });
 
     afterEach(function () {
-      server.restore();
-      project.projectChanged.restore();
+      server.mockRestore();
+      project.projectChanged.mockRestore();
     });
 
     it('cloning animation creates an animation with the same props, and unique name', function () {
@@ -461,8 +460,8 @@ describe('animationList', function () {
   describe('action: add blank animation', function () {
     let server, store;
     beforeEach(function () {
-      project.getCurrentId.returns('');
-      sinon.stub(project, 'projectChanged').returns('');
+      project.getCurrentId.mockReturnValue('');
+      jest.spyOn(project, 'projectChanged').mockClear().mockReturnValue('');
 
       server = sinon.fakeServer.create();
       server.respondWith('imageBody');
@@ -473,8 +472,8 @@ describe('animationList', function () {
     });
 
     afterEach(function () {
-      server.restore();
-      project.projectChanged.restore();
+      server.mockRestore();
+      project.projectChanged.mockRestore();
     });
 
     it('new blank animations get name animation_1 when it is the first blank animation', function () {
@@ -522,8 +521,8 @@ describe('animationList', function () {
   describe('action: add library animation', function () {
     let server, store;
     beforeEach(function () {
-      project.getCurrentId.returns('');
-      sinon.stub(project, 'projectChanged').returns('');
+      project.getCurrentId.mockReturnValue('');
+      jest.spyOn(project, 'projectChanged').mockClear().mockReturnValue('');
       server = sinon.fakeServer.create();
       server.respondWith('imageBody');
       store = createStore(
@@ -535,8 +534,8 @@ describe('animationList', function () {
     });
 
     afterEach(function () {
-      server.restore();
-      project.projectChanged.restore();
+      server.mockRestore();
+      project.projectChanged.mockRestore();
     });
 
     it('new animations get name _# appended to the name in order of numbers available', function () {
@@ -690,8 +689,8 @@ describe('animationList', function () {
   describe('action: add blank frame', function () {
     let server, store;
     beforeEach(function () {
-      project.getCurrentId.returns('');
-      sinon.stub(project, 'projectChanged').returns('');
+      project.getCurrentId.mockReturnValue('');
+      jest.spyOn(project, 'projectChanged').mockClear().mockReturnValue('');
       server = sinon.fakeServer.create();
       server.respondWith('imageBody');
       store = createStore(
@@ -701,8 +700,8 @@ describe('animationList', function () {
     });
 
     afterEach(function () {
-      server.restore();
-      project.projectChanged.restore();
+      server.mockRestore();
+      project.projectChanged.mockRestore();
     });
 
     it('new blank frame gets added to pendingFrames and original animation is unchanged', function () {
@@ -732,8 +731,8 @@ describe('animationList', function () {
   describe('action: append non blank frames', function () {
     let server, store, selectedAnimation, libraryAnimProps;
     beforeEach(function () {
-      project.getCurrentId.returns('');
-      sinon.stub(project, 'projectChanged').returns('');
+      project.getCurrentId.mockReturnValue('');
+      jest.spyOn(project, 'projectChanged').mockClear().mockReturnValue('');
       server = sinon.fakeServer.create();
       server.respondWith('imageBody');
       store = createStore(
@@ -756,8 +755,8 @@ describe('animationList', function () {
     });
 
     afterEach(function () {
-      server.restore();
-      project.projectChanged.restore();
+      server.mockRestore();
+      project.projectChanged.mockRestore();
     });
 
     it('append library frames adds props to pendingFrames for selectedAnimation', function () {
@@ -782,7 +781,7 @@ describe('animationList', function () {
     });
 
     afterEach(function () {
-      xhr.restore();
+      xhr.mockRestore();
     });
 
     it('sends a save request', function () {

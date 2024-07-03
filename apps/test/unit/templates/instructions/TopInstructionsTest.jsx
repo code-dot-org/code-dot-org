@@ -1,7 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {act} from 'react-dom/test-utils';
-import sinon from 'sinon';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
@@ -395,17 +394,14 @@ describe('TopInstructions', () => {
   describe('viewing the TA Rubric Tab', () => {
     let getTaRubricFeedbackForStudentStub;
     beforeEach(() => {
-      getTaRubricFeedbackForStudentStub = sinon.stub(
-        TopInstructionsDataApi,
-        'getTaRubricFeedbackForStudent'
-      );
+      getTaRubricFeedbackForStudentStub = jest.spyOn(TopInstructionsDataApi, 'getTaRubricFeedbackForStudent').mockClear().mockImplementation();
     });
     afterEach(() => {
-      getTaRubricFeedbackForStudentStub.restore();
+      getTaRubricFeedbackForStudentStub.mockRestore();
     });
 
     it('defaults to the rubrics tab if there is feedback', async () => {
-      getTaRubricFeedbackForStudentStub.returns(
+      getTaRubricFeedbackForStudentStub.mockReturnValue(
         Promise.resolve({
           value: [{feedback: 'feedback', understanding: 3}],
         })
@@ -426,7 +422,7 @@ describe('TopInstructions', () => {
     });
 
     it('does not default to the rubrics tab if there is no feedback', async () => {
-      getTaRubricFeedbackForStudentStub.returns(
+      getTaRubricFeedbackForStudentStub.mockReturnValue(
         Promise.resolve({
           value: [],
         })

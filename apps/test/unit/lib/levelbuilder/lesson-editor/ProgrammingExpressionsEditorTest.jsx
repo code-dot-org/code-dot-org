@@ -1,7 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import reducers, {
   initActivities,
@@ -34,8 +33,8 @@ describe('ProgrammingExpressionsEditor', () => {
       initLevelSearching({searchOptions: {}, programmingEnvironments: []})
     );
 
-    addProgrammingExpression = sinon.spy();
-    removeProgrammingExpression = sinon.spy();
+    addProgrammingExpression = jest.fn();
+    removeProgrammingExpression = jest.fn();
     defaultProps = {
       programmingExpressions: [
         {

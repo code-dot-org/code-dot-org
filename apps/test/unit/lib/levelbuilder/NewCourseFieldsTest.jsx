@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import NewCourseFields from '@cdo/apps/lib/levelbuilder/NewCourseFields';
 
@@ -9,9 +8,9 @@ import NewCourseFields from '@cdo/apps/lib/levelbuilder/NewCourseFields';
 describe('NewCourseFieldsTest', () => {
   let defaultProps, setFamilyName, setVersionYear, setFamilyAndCourseType;
   beforeEach(() => {
-    setFamilyName = sinon.spy();
-    setVersionYear = sinon.spy();
-    setFamilyAndCourseType = sinon.spy();
+    setFamilyName = jest.fn();
+    setVersionYear = jest.fn();
+    setFamilyAndCourseType = jest.fn();
     defaultProps = {
       families: ['family-1', 'family-2'],
       versionYearOptions: ['1991', '1992', 'unversioned'],

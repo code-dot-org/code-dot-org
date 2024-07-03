@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import CreateNewLevelInputs from '@cdo/apps/lib/levelbuilder/lesson-editor/CreateNewLevelInputs';
 
@@ -9,7 +8,7 @@ import CreateNewLevelInputs from '@cdo/apps/lib/levelbuilder/lesson-editor/Creat
 describe('CreateNewLevelInputs', () => {
   let defaultProps, addLevel;
   beforeEach(() => {
-    addLevel = sinon.spy();
+    addLevel = jest.fn();
     defaultProps = {
       levelOptions: [
         ['All Type', ''],
@@ -69,7 +68,7 @@ describe('CreateNewLevelInputs', () => {
     server.respond();
     expect(addLevel).not.toHaveBeenCalled();
 
-    server.restore();
+    server.mockRestore();
   });
 
   it('click create level without name input', () => {
@@ -95,7 +94,7 @@ describe('CreateNewLevelInputs', () => {
     server.respond();
     expect(addLevel).not.toHaveBeenCalled();
 
-    server.restore();
+    server.mockRestore();
   });
 
   it('click create level with needed information', () => {
@@ -122,6 +121,6 @@ describe('CreateNewLevelInputs', () => {
     server.respond();
     expect(addLevel).toHaveBeenCalledTimes(1);
 
-    server.restore();
+    server.mockRestore();
   });
 });

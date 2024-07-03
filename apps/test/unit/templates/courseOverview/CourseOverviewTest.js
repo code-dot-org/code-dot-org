@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {UnconnectedCourseOverview as CourseOverview} from '@cdo/apps/templates/courseOverview/CourseOverview';
@@ -161,11 +160,11 @@ describe('CourseOverview', () => {
 
   describe('versions dropdown', () => {
     beforeEach(() => {
-      sinon.stub(utils, 'navigateToHref');
+      jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      utils.navigateToHref.restore();
+      utils.navigateToHref.mockRestore();
     });
 
     it('appears when two versions are present and viewable', () => {

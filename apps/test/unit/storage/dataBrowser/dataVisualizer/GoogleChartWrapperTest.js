@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import GoogleChart from '@cdo/apps/applab/GoogleChart';
 import {ChartType} from '@cdo/apps/storage/dataBrowser/dataUtils';
@@ -13,10 +12,10 @@ describe('GoogleChartWrapper', () => {
     let spy;
     beforeEach(() => {
       GoogleChart.lib = {};
-      spy = sinon.stub(GoogleChart.prototype, 'drawChart');
+      spy = jest.spyOn(GoogleChart.prototype, 'drawChart').mockClear().mockImplementation();
     });
     afterEach(() => {
-      spy.restore();
+      spy.mockRestore();
     });
 
     it('can show a bar chart', () => {
@@ -54,7 +53,7 @@ describe('GoogleChartWrapper', () => {
       };
 
       expect(spy).toHaveBeenCalledTimes(1);
-      expect(spy.getCalls()[0].args).toEqual([
+      expect(spy.mock.calls[0]).toEqual([
         expectedChartData,
         ['category1', 'count'],
         expectedChartOptions,
@@ -95,7 +94,7 @@ describe('GoogleChartWrapper', () => {
       );
 
       expect(spy).toHaveBeenCalledTimes(1);
-      expect(spy.getCalls()[0].args).toEqual([
+      expect(spy.mock.calls[0]).toEqual([
         expectedChartData,
         ['category2'],
         {...expectedChartOptions, histogram: {bucketSize: '2'}},
@@ -133,7 +132,7 @@ describe('GoogleChartWrapper', () => {
         />
       );
       expect(spy).toHaveBeenCalledTimes(1);
-      expect(spy.getCalls()[0].args).toEqual([
+      expect(spy.mock.calls[0]).toEqual([
         expectedChartData,
         ['category2', 'category3'],
         expectedChartOptions,

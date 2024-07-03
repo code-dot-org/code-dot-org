@@ -7,7 +7,6 @@ import {Provider} from 'react-redux';
 import {MemoryRouter} from 'react-router-dom';
 import {createStore, combineReducers} from 'redux';
 import {Factory} from 'rosie';
-import sinon from 'sinon';
 
 import {WorkshopForm} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_form';
 import Permission, {
@@ -83,7 +82,7 @@ describe('WorkshopForm test', () => {
       {'Content-Type': 'application/json'},
       JSON.stringify({}),
     ]);
-    const onPublish = sinon.spy();
+    const onPublish = jest.fn();
 
     const wrapper = mount(
       <Provider store={store}>
@@ -130,7 +129,7 @@ describe('WorkshopForm test', () => {
 
     expect(onPublish).toHaveBeenCalledTimes(1);
 
-    server.restore();
+    server.mockRestore();
   });
 
   it('edits form and can save', () => {
@@ -141,7 +140,7 @@ describe('WorkshopForm test', () => {
       {'Content-Type': 'application/json'},
       JSON.stringify({}),
     ]);
-    const onSave = sinon.spy();
+    const onSave = jest.fn();
 
     const wrapper = mount(
       <Provider store={store}>
@@ -174,7 +173,7 @@ describe('WorkshopForm test', () => {
     expect(onSave).toHaveBeenCalledTimes(1);
     expect(wrapper.find('WorkshopForm').first().state().capacity).toBe(newCapacity);
 
-    server.restore();
+    server.mockRestore();
   });
 
   it('inputs disabled in readonly', () => {

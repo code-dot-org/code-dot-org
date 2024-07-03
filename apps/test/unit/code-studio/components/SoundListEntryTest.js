@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import SoundListEntry from '@cdo/apps/code-studio/components/SoundListEntry';
 import Sounds from '@cdo/apps/Sounds';
@@ -60,12 +59,12 @@ describe('SoundListEntry', () => {
 
   it('stops playing the sound when deselected', () => {
     const wrapper = shallow(<SoundListEntry {...defaultProps} />);
-    sinon.stub(sounds, 'stopPlayingURL');
+    jest.spyOn(sounds, 'stopPlayingURL').mockClear().mockImplementation();
     wrapper.setProps({isSelected: false});
 
     assert.equal(sounds.isPlaying(sourceURL), false);
     expect(sounds.stopPlayingURL).toHaveBeenCalledTimes(1);
 
-    sounds.stopPlayingURL.restore();
+    sounds.stopPlayingURL.mockRestore();
   });
 });

@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {LockStatus} from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
 import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
@@ -59,7 +58,7 @@ describe('StudentRow', () => {
   });
 
   it('handleRadioChange is called with expected value when radio is selected', () => {
-    const handleChangeSpy = sinon.spy();
+    const handleChangeSpy = jest.fn();
     const wrapper = setUp({handleRadioChange: handleChangeSpy});
     const lockLessonInput = wrapper.find('input').at(0);
     lockLessonInput.simulate('change', {

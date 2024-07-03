@@ -1,6 +1,5 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-import sinon from 'sinon';
 
 import {QuickView} from '@cdo/apps/code-studio/pd/application_dashboard/quick_view';
 import QuickViewTable from '@cdo/apps/code-studio/pd/application_dashboard/quick_view_table';
@@ -87,7 +86,7 @@ describe('Quick View', () => {
       quickView.update();
     });
     afterAll(() => {
-      server.restore();
+      server.mockRestore();
     });
 
     it('Is no longer loading', () => {

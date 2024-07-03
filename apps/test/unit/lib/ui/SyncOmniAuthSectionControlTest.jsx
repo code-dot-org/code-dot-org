@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {stub} from 'sinon';
 
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {
@@ -41,7 +40,7 @@ describe('SyncOmniAuthSectionControl', () => {
         return promise;
       };
     });
-    updateRoster = stub().returns(promise);
+    updateRoster = stub().mockReturnValue(promise);
 
     defaultProps = {
       sectionId: 1111,
@@ -55,7 +54,7 @@ describe('SyncOmniAuthSectionControl', () => {
 
   afterEach(() => {
     return (testSyncSucceeds ? testSyncSucceeds() : Promise.resolve()).then(
-      () => utils.reload.restore()
+      () => utils.reload.mockRestore()
     );
   });
 

@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import {commands as actionCommands} from '@cdo/apps/p5lab/spritelab/commands/actionCommands';
 import {commands as behaviorCommands} from '@cdo/apps/p5lab/spritelab/commands/behaviorCommands';
 import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
@@ -22,22 +20,22 @@ describe('Behavior Commands', () => {
   describe('draggableFunc', () => {
     let mousePressedOverStub, mouseWentDownStub, mouseWentUpStub;
     beforeEach(() => {
-      mousePressedOverStub = sinon.stub(coreLibrary.p5, 'mousePressedOver');
-      mouseWentDownStub = sinon.stub(coreLibrary.p5, 'mouseWentDown');
-      mouseWentUpStub = sinon.stub(coreLibrary.p5, 'mouseWentUp');
+      mousePressedOverStub = jest.spyOn(coreLibrary.p5, 'mousePressedOver').mockClear().mockImplementation();
+      mouseWentDownStub = jest.spyOn(coreLibrary.p5, 'mouseWentDown').mockClear().mockImplementation();
+      mouseWentUpStub = jest.spyOn(coreLibrary.p5, 'mouseWentUp').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      mousePressedOverStub.restore();
-      mouseWentDownStub.restore();
-      mouseWentUpStub.restore();
+      mousePressedOverStub.mockRestore();
+      mouseWentDownStub.mockRestore();
+      mouseWentUpStub.mockRestore();
     });
 
     it('can drag a sprite', () => {
       coreLibrary.addSprite({name: 'sprite', location: {x: 200, y: 200}});
       const sprite = coreLibrary.getSpriteArray({name: 'sprite'})[0];
-      mousePressedOverStub.returns(true);
-      mouseWentDownStub.returns(true);
+      mousePressedOverStub.mockReturnValue(true);
+      mouseWentDownStub.mockReturnValue(true);
       behaviorCommands.draggableFunc.apply(coreLibrary)({name: 'sprite'});
       expect(sprite.dragging).toBe(true);
     });
@@ -48,13 +46,13 @@ describe('Behavior Commands', () => {
       coreLibrary.p5.mouseX = 200;
       coreLibrary.p5.mouseY = 200;
       // First tick, press down on the sprite to start the drag.
-      mousePressedOverStub.returns(true);
-      mouseWentDownStub.returns(true);
+      mousePressedOverStub.mockReturnValue(true);
+      mouseWentDownStub.mockReturnValue(true);
       behaviorCommands.draggableFunc.apply(coreLibrary)({name: 'sprite'});
       expect(sprite.dragging).toBe(true);
 
       // Next tick, sprite moves to new mouse position.
-      mouseWentDownStub.returns(false);
+      mouseWentDownStub.mockReturnValue(false);
       coreLibrary.p5.mouseX = 100;
       coreLibrary.p5.mouseY = 100;
       behaviorCommands.draggableFunc.apply(coreLibrary)({name: 'sprite'});
@@ -69,15 +67,15 @@ describe('Behavior Commands', () => {
       coreLibrary.p5.mouseX = 200;
       coreLibrary.p5.mouseY = 200;
       // First tick, press down on the sprite to start the drag.
-      mousePressedOverStub.returns(true);
-      mouseWentDownStub.returns(true);
+      mousePressedOverStub.mockReturnValue(true);
+      mouseWentDownStub.mockReturnValue(true);
       behaviorCommands.draggableFunc.apply(coreLibrary)({name: 'sprite'});
       expect(sprite.dragging).toBe(true);
 
       // Next tick, mouse went up, so sprite moves to new mouse position
       // and drag ends.
-      mouseWentDownStub.returns(false);
-      mouseWentUpStub.returns(true);
+      mouseWentDownStub.mockReturnValue(false);
+      mouseWentUpStub.mockReturnValue(true);
       coreLibrary.p5.mouseX = 100;
       coreLibrary.p5.mouseY = 100;
       behaviorCommands.draggableFunc.apply(coreLibrary)({name: 'sprite'});
@@ -93,8 +91,8 @@ describe('Behavior Commands', () => {
       coreLibrary.addSprite({name: 'top', location: {x: 200, y: 200}});
       const top = coreLibrary.getSpriteArray({name: 'top'})[0];
 
-      mousePressedOverStub.returns(true);
-      mouseWentDownStub.returns(true);
+      mousePressedOverStub.mockReturnValue(true);
+      mouseWentDownStub.mockReturnValue(true);
 
       behaviorCommands.draggableFunc.apply(coreLibrary)({name: 'top'});
       expect(top.dragging).toBe(true);

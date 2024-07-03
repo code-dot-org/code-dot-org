@@ -1,7 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Checkbox} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import sinon from 'sinon';
 
 import SingleCheckbox from '@cdo/apps/code-studio/pd/form_components/SingleCheckbox';
 
@@ -35,7 +34,7 @@ describe('SingleCheckbox', () => {
   });
 
   it('Calls supplied onChange function with the updated value', () => {
-    const onChangeCallback = sinon.spy();
+    const onChangeCallback = jest.fn();
     const singleCheckbox = shallow(
       <SingleCheckbox
         name="testCheckbox"
@@ -50,7 +49,7 @@ describe('SingleCheckbox', () => {
     expect(onChangeCallback).toHaveBeenCalledTimes(1);
     expect(onChangeCallback).toHaveBeenCalledWith({testCheckbox: true});
 
-    onChangeCallback.resetHistory();
+    onChangeCallback.mockReset();
     singleCheckbox
       .find('Checkbox')
       .simulate('change', {target: {checked: false}});

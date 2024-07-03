@@ -3,7 +3,6 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import FoormEntityEditor from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityEditor';
 import FoormLibrarySaveBar, {
@@ -67,7 +66,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
 
   afterEach(() => {
     restoreRedux();
-    server.restore();
+    server.mockRestore();
   });
 
   const sampleExistingLibraryQuestionData = {

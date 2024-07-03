@@ -1,7 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import {reducers} from '@cdo/apps/applab/redux/applab';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
@@ -88,11 +87,11 @@ describe('TableControls', () => {
 
   describe('localization', () => {
     afterEach(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('should render a localized string for "Clear Table"', () => {
-      sinon.stub(commonI18n, 'clearTable').returns('i18n-clear-table');
+      jest.spyOn(commonI18n, 'clearTable').mockClear().mockReturnValue('i18n-clear-table');
 
       const store = getStore();
       const wrapper = mount(

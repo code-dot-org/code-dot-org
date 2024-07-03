@@ -2,7 +2,6 @@ import {assert} from 'chai';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
-import sinon from 'sinon';
 
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 
@@ -20,10 +19,10 @@ describe('SchoolAutocompleteDropdown', () => {
     // This component uses Fetch to send search queries to the server
     // Stub in a default server response here, and we'll add specific
     // responses in test cases later.
-    fetchStub = sinon.stub(window, 'fetch');
-    fetchStub.returns(Promise.resolve({ok: true, json: () => []}));
+    fetchStub = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
+    fetchStub.mockReturnValue(Promise.resolve({ok: true, json: () => []}));
 
-    handleChange = sinon.spy();
+    handleChange = jest.fn();
     schoolAutocompleteDropdown = mount(
       <SchoolAutocompleteDropdown value="12345" onChange={handleChange} />
     );
@@ -35,21 +34,23 @@ describe('SchoolAutocompleteDropdown', () => {
     select = schoolAutocompleteDropdown.find('VirtualizedSelect');
 
     // Reset Fetch call counts so we can assert them in specific cases later.
-    fetchStub.resetHistory();
+    fetchStub.mockReset();
   });
 
   afterEach(() => {
-    fetchStub.restore();
+    fetchStub.mockRestore();
   });
 
   /** Seed a successful response to a particular url. */
   const setServerResponse = (url, responseJson) =>
-    fetchStub.withArgs(url).returns(
-      Promise.resolve({
-        ok: true,
-        json: () => responseJson,
-      })
-    );
+    fetchStub.mockImplementation((...args) => {
+      if (args[0] === url) {
+        return Promise.resolve({
+          ok: true,
+          json: () => responseJson,
+        });
+      }
+    });
 
   it('renders VirtualizedSelect', () => {
     expect(select).toBeDefined();
@@ -97,11 +98,11 @@ describe('SchoolAutocompleteDropdown', () => {
 
       beforeAll(() => {
         // stub out debounce to return the original function, so it's called immediately
-        debounceStub = sinon.stub(_, 'debounce').callsFake(f => f);
+        debounceStub = jest.spyOn(_, 'debounce').mockClear().mockImplementation(f => f);
       });
 
       afterAll(() => {
-        debounceStub.restore();
+        debounceStub.mockRestore();
       });
 
       it('Fetches schools from the schoolsearch API for queries >= 4 characters', async () => {

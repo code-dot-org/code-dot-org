@@ -1,7 +1,6 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import ProgrammingClassEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingClassEditor';
 import {getStore} from '@cdo/apps/redux';
@@ -44,11 +43,11 @@ describe('ProgrammingClassEditor', () => {
         },
       ],
     };
-    fetchSpy = sinon.stub(window, 'fetch');
+    fetchSpy = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    fetchSpy.restore();
+    fetchSpy.mockRestore();
   });
 
   it('displays initial values in input fields in top section', () => {
@@ -140,7 +139,7 @@ describe('ProgrammingClassEditor', () => {
       </Provider>
     );
 
-    fetchSpy.returns(Promise.resolve({ok: true}));
+    fetchSpy.mockReturnValue(Promise.resolve({ok: true}));
     const saveBar = wrapper.find('SaveBar');
 
     const saveAndCloseButton = saveBar.find('button').at(2);
@@ -148,9 +147,9 @@ describe('ProgrammingClassEditor', () => {
     saveAndCloseButton.simulate('click');
 
     expect(fetchSpy).toHaveBeenCalled().once;
-    const fetchCall = fetchSpy.getCall(0);
-    expect(fetchCall.args[0]).toBe('/programming_classes/1');
-    const fetchCallBody = JSON.parse(fetchCall.args[1].body);
+    const fetchCall = fetchSpy.mock.calls[0];
+    expect(fetchCall.mock.calls[0]).toBe('/programming_classes/1');
+    const fetchCallBody = JSON.parse(fetchCall.mock.calls[1].body);
     expect(Object.keys(fetchCallBody).sort()).toEqual([
       'name',
       'shortDescription',

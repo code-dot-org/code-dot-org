@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedKVPairs as KVPairs} from '@cdo/apps/storage/dataBrowser/KVPairs';
 import commonI18n from '@cdo/locale';
@@ -21,13 +20,13 @@ describe('KVPairs', () => {
     }
 
     afterEach(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('should render a localized strings for every column header', () => {
-      sinon.stub(commonI18n, 'actions').returns('i18n-actions');
-      sinon.stub(commonI18n, 'dataTableKey').returns('i18n-data-table-key');
-      sinon.stub(commonI18n, 'dataTableValue').returns('i18n-data-table-value');
+      jest.spyOn(commonI18n, 'actions').mockClear().mockReturnValue('i18n-actions');
+      jest.spyOn(commonI18n, 'dataTableKey').mockClear().mockReturnValue('i18n-data-table-key');
+      jest.spyOn(commonI18n, 'dataTableValue').mockClear().mockReturnValue('i18n-data-table-value');
 
       const wrapper = createKVPairs();
 

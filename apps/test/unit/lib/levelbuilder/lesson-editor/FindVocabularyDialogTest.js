@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import FindVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindVocabularyDialog';
 
@@ -9,11 +8,11 @@ import FindVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindV
 describe('FindVocabularyDialog', () => {
   let defaultProps, handleConfirm;
   beforeEach(() => {
-    handleConfirm = sinon.spy();
+    handleConfirm = jest.fn();
     defaultProps = {
       isOpen: true,
       handleConfirm,
-      handleClose: sinon.spy(),
+      handleClose: jest.fn(),
       vocabularies: [
         {
           id: 1,

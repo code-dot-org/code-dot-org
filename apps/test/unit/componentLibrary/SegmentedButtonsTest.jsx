@@ -1,7 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon';
 
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
 
@@ -36,7 +35,7 @@ describe('Design System - Segmented Buttons', () => {
 
   it('SegmentedButtons - changes selected button on click', async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
     // set segmentedButton default value
     onSegmentedButtonsChange('test2', 'label');
     const onChange = value => {
@@ -103,7 +102,7 @@ describe('Design System - Segmented Buttons', () => {
 
   it("SegmentedButtons - renders disabled button, doesn't change on click", async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
     // set segmentedButton default value
     onSegmentedButtonsChange('test3', 'label');
     const onChange = value => {

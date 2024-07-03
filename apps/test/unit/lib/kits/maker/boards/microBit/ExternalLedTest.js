@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import ExternalLed from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalLed';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 
@@ -17,11 +15,11 @@ describe('ExternalLed', function () {
         pin: 0,
         isOn: false,
       });
-      setDigitalOutputSpy = sinon.spy(boardClient, 'setDigitalOutput');
+      setDigitalOutputSpy = jest.spyOn(boardClient, 'setDigitalOutput').mockClear();
     });
 
     afterAll(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it(`calls the on() implementation`, () => {
@@ -48,12 +46,12 @@ describe('ExternalLed', function () {
         pin: 0,
         isOn: false,
       });
-      setDigitalOutputSpy = sinon.spy(boardClient, 'setDigitalOutput');
-      onSpy = sinon.spy(led, 'on');
-      offSpy = sinon.spy(led, 'off');
+      setDigitalOutputSpy = jest.spyOn(boardClient, 'setDigitalOutput').mockClear();
+      onSpy = jest.spyOn(led, 'on').mockClear();
+      offSpy = jest.spyOn(led, 'off').mockClear();
     });
     afterAll(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it(`if LED is off, toggle triggers the led on`, () => {
@@ -74,7 +72,6 @@ describe('ExternalLed', function () {
   });
 
   describe('blink()', () => {
-    let led, clock;
     let boardClient = new MBFirmataClientStub();
 
     beforeAll(() => {
@@ -83,24 +80,24 @@ describe('ExternalLed', function () {
         pin: 0,
         isOn: false,
       });
-      clock = sinon.useFakeTimers();
-      sinon.spy(led, 'setDigitalOutputOn');
-      sinon.spy(led, 'setDigitalOutputOff');
+      jest.useFakeTimers();
+      jest.spyOn(led, 'setDigitalOutputOn').mockClear();
+      jest.spyOn(led, 'setDigitalOutputOff').mockClear();
     });
 
     afterAll(() => {
-      clock.restore();
-      sinon.restore();
+      jest.useRealTimers();
+      jest.restoreAllMocks();
     });
 
     it(`calls toggle_ every set interval`, () => {
       led.blink(100);
       expect(led.setDigitalOutputOff).toHaveBeenCalledTimes(1);
-      clock.tick(100);
+      jest.advanceTimersByTime(100);
       expect(led.setDigitalOutputOn).toHaveBeenCalledTimes(1);
-      clock.tick(100);
+      jest.advanceTimersByTime(100);
       expect(led.setDigitalOutputOff).toHaveBeenCalledTimes(2);
-      clock.tick(100);
+      jest.advanceTimersByTime(100);
       expect(led.setDigitalOutputOn).toHaveBeenCalledTimes(2);
     });
   });

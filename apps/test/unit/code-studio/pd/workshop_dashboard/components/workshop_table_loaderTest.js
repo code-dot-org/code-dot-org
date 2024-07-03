@@ -1,7 +1,6 @@
 import { mount, shallow } from 'enzyme';
 import _ from 'lodash';
 import React from 'react';
-import sinon from 'sinon';
 
 import WorkshopTableLoader from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_table_loader';
 
@@ -11,11 +10,11 @@ describe('WorkshopTableLoader', () => {
 
   beforeAll(() => {
     // stub out debounce to return the original function, so it's called immediately
-    debounceStub = sinon.stub(_, 'debounce').callsFake(f => f);
+    debounceStub = jest.spyOn(_, 'debounce').mockClear().mockImplementation(f => f);
   });
 
   afterAll(() => {
-    debounceStub.restore();
+    debounceStub.mockRestore();
   });
 
   beforeEach(() => {
@@ -23,7 +22,7 @@ describe('WorkshopTableLoader', () => {
   });
 
   afterEach(() => {
-    server.restore();
+    server.mockRestore();
   });
 
   const getFakeWorkshopsData = () => {
@@ -31,7 +30,7 @@ describe('WorkshopTableLoader', () => {
   };
 
   it('Initially displays a spinner', () => {
-    const Child = sinon.stub().returns(null);
+    const Child = jest.fn().mockReturnValue(null);
     const loader = shallow(
       <WorkshopTableLoader queryUrl="fake-query-url">
         <Child />
@@ -51,7 +50,7 @@ describe('WorkshopTableLoader', () => {
       responseJson,
     ]);
 
-    const Child = sinon.stub().returns(null);
+    const Child = jest.fn().mockReturnValue(null);
     mount(
       <WorkshopTableLoader queryUrl="fake-query-url">
         <Child />
@@ -62,15 +61,15 @@ describe('WorkshopTableLoader', () => {
     expect(server.requests.length).toBe(1);
     expect(server.requests[0].url).toBe('fake-query-url');
 
-    expect(Child.calledOnce).toBe(true);
-    expect(Child.getCall(0).args[0]).toEqual({
+    expect(Child).toHaveBeenCalledTimes(1);
+    expect(Child.mock.calls[0][0]).toEqual({
       workshops: fakeWorkshopsData,
       onDelete: null,
     });
   });
 
   it('Applies queryParams to the queryURL', () => {
-    const Child = sinon.stub().returns(null);
+    const Child = jest.fn().mockReturnValue(null);
     mount(
       <WorkshopTableLoader
         queryUrl="https://studio.code.org/api/v1/pd/workshops/filter"
@@ -92,7 +91,7 @@ describe('WorkshopTableLoader', () => {
 
   it('Passes delete function to child when canDelete is true', () => {
     const fakeWorkshopsData = getFakeWorkshopsData();
-    const Child = sinon.stub().returns(null);
+    const Child = jest.fn().mockReturnValue(null);
     const loader = mount(
       <WorkshopTableLoader queryUrl="fake-query-url" canDelete>
         <Child />
@@ -104,15 +103,15 @@ describe('WorkshopTableLoader', () => {
       workshops: fakeWorkshopsData,
     });
 
-    expect(Child.calledOnce).toBe(true);
-    expect(Child.getCall(0).args[0]).toEqual({
+    expect(Child).toHaveBeenCalledTimes(1);
+    expect(Child.mock.calls[0][0]).toEqual({
       workshops: fakeWorkshopsData,
       onDelete: loader.instance().handleDelete,
     });
   });
 
   it('Displays no workshops found message when no workshops are found', () => {
-    const Child = sinon.stub().returns(null);
+    const Child = jest.fn().mockReturnValue(null);
     const loader = mount(
       <WorkshopTableLoader queryUrl="fake-query-url">
         <Child />
@@ -124,13 +123,13 @@ describe('WorkshopTableLoader', () => {
       workshops: [],
     });
 
-    expect(Child.called).toBe(false);
+    expect(Child).not.toHaveBeenCalled();
     expect(loader.find('p')).toHaveLength(1);
     expect(loader.find('p').text()).toEqual('No workshops found');
   });
 
   it('Renders null when hideNoWorkshopsMessage is specified and no workshops are found', () => {
-    const Child = sinon.stub().returns(null);
+    const Child = jest.fn().mockReturnValue(null);
     const loader = mount(
       <WorkshopTableLoader queryUrl="fake-query-url" hideNoWorkshopsMessage>
         <Child />
@@ -142,7 +141,7 @@ describe('WorkshopTableLoader', () => {
       workshops: [],
     });
 
-    expect(Child.called).toBe(false);
+    expect(Child).not.toHaveBeenCalled();
     expect(loader.html()).toBeNull();
   });
 });

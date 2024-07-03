@@ -1,6 +1,5 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -28,27 +27,27 @@ describe('SetUpSections', () => {
   });
 
   it('calls beginEditingSection with no arguments when button is clicked', () => {
-    const spy = sinon.spy();
+    const spy = jest.fn();
     const wrapper = mount(<SetUpSections beginEditingSection={spy} />);
     expect(spy).not.toHaveBeenCalled();
 
     wrapper.find('button').simulate('click', {fake: 'event'});
     expect(spy).toHaveBeenCalledTimes(1);
-    expect(spy.firstCall.args).toHaveLength(0);
+    expect(spy.mock.calls[0]).toHaveLength(0);
   });
 
   it('sends start event when button is clicked', () => {
     const wrapper = mount(<SetUpSections beginEditingSection={() => {}} />);
-    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
 
     wrapper.find('button').simulate('click', {fake: 'event'});
     expect(analyticsSpy).toHaveBeenCalledTimes(1);
-    expect(analyticsSpy.firstCall.args).toEqual([
+    expect(analyticsSpy.mock.calls[0]).toEqual([
       'Section Setup Started',
       {},
       PLATFORMS.BOTH,
     ]);
 
-    analyticsSpy.restore();
+    analyticsSpy.mockRestore();
   });
 });

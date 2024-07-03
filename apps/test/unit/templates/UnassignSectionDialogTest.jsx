@@ -1,6 +1,5 @@
 import { mount } from 'enzyme';
 import React from 'react';
-import sinon from 'sinon';
 
 import UnassignSectionDialog from '@cdo/apps/templates/UnassignSectionDialog';
 
@@ -21,7 +20,7 @@ const setUp = overrideProps => {
 
 describe('UnassignSectionDialog', () => {
   it('calls unassign function when unassign button clicked', () => {
-    const unassignSpy = sinon.spy();
+    const unassignSpy = jest.fn();
     const wrapper = setUp({unassignSection: unassignSpy});
 
     const button = wrapper.find('Button').at(2);
@@ -31,7 +30,7 @@ describe('UnassignSectionDialog', () => {
   });
 
   it('calls cancel function when user clicks cancel', () => {
-    const cancelSpy = sinon.spy();
+    const cancelSpy = jest.fn();
     const wrapper = setUp({cancelUnassign: cancelSpy});
     const button = wrapper.find('Button').at(1);
 

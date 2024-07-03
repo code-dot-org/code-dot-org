@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import VersionUnitDropdowns from '@cdo/apps/templates/sectionsRefresh/VersionUnitDropdowns';
 
@@ -39,7 +38,7 @@ describe('VersionUnitDropdowns', () => {
   });
 
   it('assigns correct tts and lesson extras when unit selected', () => {
-    const updateSpy = sinon.spy();
+    const updateSpy = jest.fn();
     const wrapper = setUpMount({updateCourse: updateSpy});
 
     expect(updateSpy).not.toHaveBeenCalled();

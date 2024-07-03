@@ -1,7 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedAddSectionDialog as AddSectionDialog} from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
 import * as utils from '@cdo/apps/utils';
@@ -17,11 +16,11 @@ describe('AddSectionDialog', () => {
     handleCancel;
 
   beforeEach(() => {
-    beginImportRosterFlow = sinon.spy();
-    setRosterProvider = sinon.spy();
-    setLoginType = sinon.spy();
-    setParticipantType = sinon.spy();
-    handleCancel = sinon.spy();
+    beginImportRosterFlow = jest.fn();
+    setRosterProvider = jest.fn();
+    setLoginType = jest.fn();
+    setParticipantType = jest.fn();
+    handleCancel = jest.fn();
     defaultProps = {
       isOpen: false,
       section: {
@@ -87,11 +86,11 @@ describe('AddSectionDialog', () => {
     let navigateToHrefSpy;
 
     beforeEach(() => {
-      navigateToHrefSpy = sinon.spy(utils, 'navigateToHref');
+      navigateToHrefSpy = jest.spyOn(utils, 'navigateToHref').mockClear();
     });
 
     afterEach(() => {
-      navigateToHrefSpy.restore();
+      navigateToHrefSpy.mockRestore();
     });
 
     it('redirects to new section setup with redirect to MyPL page when selecting non-student participant type', () => {
@@ -108,7 +107,7 @@ describe('AddSectionDialog', () => {
         'teacher'
       );
       expect(navigateToHrefSpy).toHaveBeenCalled().once;
-      expect(navigateToHrefSpy.getCall(0).args[0]).toBe(
+      expect(navigateToHrefSpy.mock.calls[0][0]).toBe(
         '/sections/new?participantType=teacher&loginType=email&redirectToPage=my-professional-learning'
       );
     });
@@ -126,7 +125,7 @@ describe('AddSectionDialog', () => {
 
       wrapper.find('Connect(LoginTypePicker)').invoke('setLoginType')('word');
       expect(navigateToHrefSpy).toHaveBeenCalled().once;
-      expect(navigateToHrefSpy.getCall(0).args[0]).toBe('/sections/new?participantType=student&loginType=word');
+      expect(navigateToHrefSpy.mock.calls[0][0]).toBe('/sections/new?participantType=student&loginType=word');
     });
 
     it('does not redirect to new section setup when selection oauth login type', () => {

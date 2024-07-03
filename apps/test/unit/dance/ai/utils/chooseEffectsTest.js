@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import {EffectsQuality} from '@cdo/apps/dance/ai/types';
 import * as calculateOutputSummedWeights from '@cdo/apps/dance/ai/utils/calculateOutputSummedWeights';
 import {chooseEffects} from '@cdo/apps/dance/ai/utils/chooseEffects';
@@ -8,10 +6,9 @@ import {chooseEffects} from '@cdo/apps/dance/ai/utils/chooseEffects';
 
 describe('chooseEffects', () => {
   beforeEach(() => {
-    sinon.stub(Math, 'random').returns(0.99);
-    sinon
-      .stub(calculateOutputSummedWeights, 'calculateOutputSummedWeights')
-      .returns([
+    jest.spyOn(Math, 'random').mockClear().mockReturnValue(0.99);
+    jest.spyOn(calculateOutputSummedWeights, 'calculateOutputSummedWeights').mockClear()
+      .mockReturnValue([
         [2.9, 'blooming_petals (1st)'],
         [1.2, 'quads (3rd)'],
         [0.3, 'circles (4th)'],
@@ -21,7 +18,7 @@ describe('chooseEffects', () => {
   });
 
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
   });
 
   it('chooses a good effect', () => {

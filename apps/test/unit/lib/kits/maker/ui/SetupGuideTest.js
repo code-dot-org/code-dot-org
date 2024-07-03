@@ -1,7 +1,6 @@
 /** @file Test SetupGuide component */
 import {render, screen} from '@testing-library/react';
 import React from 'react';
-import sinon from 'sinon';
 
 import applabI18n from '@cdo/applab/locale';
 import SetupGuide from '@cdo/apps/lib/kits/maker/ui/SetupGuide';
@@ -17,7 +16,7 @@ describe('MakerSetupGuide', () => {
         makerSetupGeneralDescription: 'i18n-general-description',
       };
       for (const key in i18n) {
-        sinon.stub(applabI18n, key).returns(i18n[key]);
+        jest.spyOn(applabI18n, key).mockClear().mockReturnValue(i18n[key]);
       }
 
       render(<SetupGuide />);
@@ -27,7 +26,7 @@ describe('MakerSetupGuide', () => {
         })
       ).toBeDefined();
       expect(screen.getByText('i18n-general-description')).toBeDefined();
-      sinon.restore();
+      jest.restoreAllMocks();
     });
   });
 });

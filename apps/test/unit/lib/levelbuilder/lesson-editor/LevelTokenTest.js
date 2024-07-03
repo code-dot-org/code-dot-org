@@ -1,7 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
-import sinon from 'sinon';
 
 import {
   UnconnectedLevelToken as LevelToken,
@@ -34,9 +33,9 @@ describe('LevelToken', () => {
   let handleDragStart, removeLevel, toggleExpand, defaultProps;
 
   beforeEach(() => {
-    handleDragStart = sinon.spy();
-    removeLevel = sinon.spy();
-    toggleExpand = sinon.spy();
+    handleDragStart = jest.fn();
+    removeLevel = jest.fn();
+    toggleExpand = jest.fn();
     defaultProps = {
       activitySectionPosition: 1,
       activityPosition: 1,
@@ -60,9 +59,9 @@ describe('LevelTokenContents', () => {
   let handleDragStart, removeLevel, toggleExpand, defaultProps;
 
   beforeEach(() => {
-    handleDragStart = sinon.spy();
-    removeLevel = sinon.spy();
-    toggleExpand = sinon.spy();
+    handleDragStart = jest.fn();
+    removeLevel = jest.fn();
+    toggleExpand = jest.fn();
     defaultProps = {
       y: 0,
       scale: 0,

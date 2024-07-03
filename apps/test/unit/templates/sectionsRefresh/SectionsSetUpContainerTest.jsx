@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import * as utils from '@cdo/apps/code-studio/utils';
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
@@ -10,7 +9,7 @@ import * as windowUtils from '@cdo/apps/utils';
 
 describe('SectionsSetUpContainer', () => {
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
   });
   it('renders an initial set up section form', () => {
     const wrapper = shallow(<SectionsSetUpContainer />);
@@ -41,36 +40,39 @@ describe('SectionsSetUpContainer', () => {
   });
 
   it('renders Child Account Policy Notice for US, student and email sections', () => {
-    sinon
-      .stub(utils, 'queryParams')
+    jest.spyOn(utils, 'queryParams').mockClear()
       .withArgs('loginType')
-      .returns('email')
-      .withArgs('participantType')
-      .returns('student');
+      .mockReturnValue('email').mockImplementation((...args) => {
+      if (args[0] === 'participantType') {
+        return 'student';
+      }
+    });
 
     const wrapper = shallow(<SectionsSetUpContainer userCountry={'US'} />);
     expect(wrapper.find('Connect(Notification)').exists()).toBe(true);
   });
 
   it('does not render Child Account Policy Notice when sections are not email', () => {
-    sinon
-      .stub(utils, 'queryParams')
+    jest.spyOn(utils, 'queryParams').mockClear()
       .withArgs('loginType')
-      .returns('word')
-      .withArgs('participantType')
-      .returns('student');
+      .mockReturnValue('word').mockImplementation((...args) => {
+      if (args[0] === 'participantType') {
+        return 'student';
+      }
+    });
 
     const wrapper = shallow(<SectionsSetUpContainer userCountry={'US'} />);
     expect(wrapper.find('Connect(Notification)').exists()).toBe(false);
   });
 
   it('does not render Child Account Policy Notice for country different that US', () => {
-    sinon
-      .stub(utils, 'queryParams')
+    jest.spyOn(utils, 'queryParams').mockClear()
       .withArgs('loginType')
-      .returns('email')
-      .withArgs('participantType')
-      .returns('student');
+      .mockReturnValue('email').mockImplementation((...args) => {
+      if (args[0] === 'participantType') {
+        return 'student';
+      }
+    });
 
     const wrapper = shallow(<SectionsSetUpContainer userCountry={'ES'} />);
     expect(wrapper.find('Connect(Notification)').exists()).toBe(false);
@@ -116,14 +118,15 @@ describe('SectionsSetUpContainer', () => {
   });
 
   it('validates the form when save is clicked', () => {
-    const reportSpy = sinon.spy();
-    sinon
-      .stub(document, 'querySelector')
-      .withArgs('#sections-set-up-container')
-      .returns({
-        checkValidity: () => {},
-        reportValidity: reportSpy,
-      });
+    const reportSpy = jest.fn();
+    jest.spyOn(document, 'querySelector').mockClear().mockImplementation((...args) => {
+      if (args[0] === '#sections-set-up-container') {
+        return {
+            checkValidity: () => {},
+            reportValidity: reportSpy,
+          };
+      }
+    });
 
     const wrapper = shallow(<SectionsSetUpContainer />);
 
@@ -136,19 +139,20 @@ describe('SectionsSetUpContainer', () => {
   });
 
   it('makes an ajax request when save is clicked', async () => {
-    sinon
-      .stub(document, 'querySelector')
+    jest.spyOn(document, 'querySelector').mockClear()
       .withArgs('#sections-set-up-container')
-      .returns({
+      .mockReturnValue({
         checkValidity: () => true,
-      })
-      .withArgs('meta[name="csrf-token"]')
-      .returns({
-        attributes: {content: {value: null}},
-      });
-    const fetchSpy = sinon.stub(window, 'fetch');
-    fetchSpy.returns(Promise.resolve({ok: true, json: () => {}}));
-    const navigateToHrefSpy = sinon.spy(windowUtils, 'navigateToHref');
+      }).mockImplementation((...args) => {
+      if (args[0] === 'meta[name="csrf-token"]') {
+        return {
+            attributes: {content: {value: null}},
+          };
+      }
+    });
+    const fetchSpy = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
+    fetchSpy.mockReturnValue(Promise.resolve({ok: true, json: () => {}}));
+    const navigateToHrefSpy = jest.spyOn(windowUtils, 'navigateToHref').mockClear();
 
     const wrapper = shallow(<SectionsSetUpContainer />);
 
@@ -161,23 +165,24 @@ describe('SectionsSetUpContainer', () => {
 
     await new Promise(resolve => setTimeout(resolve, 0));
     expect(navigateToHrefSpy).toHaveBeenCalled().once;
-    expect(navigateToHrefSpy.getCall(0).args[0]).toContain('/home');
+    expect(navigateToHrefSpy.mock.calls[0][0]).toContain('/home');
   });
 
   it('appends showSectionCreationDialog to url if isUsersFirstSection is true', async () => {
-    sinon
-      .stub(document, 'querySelector')
+    jest.spyOn(document, 'querySelector').mockClear()
       .withArgs('#sections-set-up-container')
-      .returns({
+      .mockReturnValue({
         checkValidity: () => true,
-      })
-      .withArgs('meta[name="csrf-token"]')
-      .returns({
-        attributes: {content: {value: null}},
-      });
-    const fetchSpy = sinon.stub(window, 'fetch');
-    fetchSpy.returns(Promise.resolve({ok: true, json: () => {}}));
-    const navigateToHrefSpy = sinon.spy(windowUtils, 'navigateToHref');
+      }).mockImplementation((...args) => {
+      if (args[0] === 'meta[name="csrf-token"]') {
+        return {
+            attributes: {content: {value: null}},
+          };
+      }
+    });
+    const fetchSpy = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
+    fetchSpy.mockReturnValue(Promise.resolve({ok: true, json: () => {}}));
+    const navigateToHrefSpy = jest.spyOn(windowUtils, 'navigateToHref').mockClear();
 
     const wrapper = shallow(<SectionsSetUpContainer isUsersFirstSection />);
 
@@ -190,27 +195,29 @@ describe('SectionsSetUpContainer', () => {
 
     await new Promise(resolve => setTimeout(resolve, 0));
     expect(navigateToHrefSpy).toHaveBeenCalled().once;
-    expect(navigateToHrefSpy.getCall(0).args[0]).toContain('/home?showSectionCreationDialog=true');
+    expect(navigateToHrefSpy.mock.calls[0][0]).toContain('/home?showSectionCreationDialog=true');
   });
 
   it('passes participantType and loginType to ajax request when save is clicked', () => {
-    sinon
-      .stub(document, 'querySelector')
+    jest.spyOn(document, 'querySelector').mockClear()
       .withArgs('#sections-set-up-container')
-      .returns({
+      .mockReturnValue({
         checkValidity: () => true,
-      })
-      .withArgs('meta[name="csrf-token"]')
-      .returns({
-        attributes: {content: {value: null}},
-      });
-    sinon
-      .stub(utils, 'queryParams')
+      }).mockImplementation((...args) => {
+      if (args[0] === 'meta[name="csrf-token"]') {
+        return {
+            attributes: {content: {value: null}},
+          };
+      }
+    });
+    jest.spyOn(utils, 'queryParams').mockClear()
       .withArgs('loginType')
-      .returns('word')
-      .withArgs('participantType')
-      .returns('student');
-    const fetchSpy = sinon.spy(window, 'fetch');
+      .mockReturnValue('word').mockImplementation((...args) => {
+      if (args[0] === 'participantType') {
+        return 'student';
+      }
+    });
+    const fetchSpy = jest.spyOn(window, 'fetch').mockClear();
 
     const wrapper = shallow(<SectionsSetUpContainer />);
 
@@ -220,27 +227,29 @@ describe('SectionsSetUpContainer', () => {
       .simulate('click', {preventDefault: () => {}});
 
     expect(fetchSpy).toHaveBeenCalled().once;
-    const fetchBody = JSON.parse(fetchSpy.getCall(0).args[1].body);
+    const fetchBody = JSON.parse(fetchSpy.mock.calls[0][1].body);
     expect(fetchBody.login_type).toBe('word');
     expect(fetchBody.participant_type).toBe('student');
   });
 
   it('passes url attribute to make a new section if save and create new is clicked', () => {
-    sinon
-      .stub(document, 'querySelector')
+    jest.spyOn(document, 'querySelector').mockClear()
       .withArgs('#sections-set-up-container')
-      .returns({
+      .mockReturnValue({
         checkValidity: () => true,
-      })
-      .withArgs('meta[name="csrf-token"]')
-      .returns({
-        attributes: {content: {value: null}},
-      });
-    sinon
-      .stub(utils, 'queryParams')
-      .withArgs('showSectionCreationDialog')
-      .returns('true');
-    const fetchSpy = sinon.spy(window, 'fetch');
+      }).mockImplementation((...args) => {
+      if (args[0] === 'meta[name="csrf-token"]') {
+        return {
+            attributes: {content: {value: null}},
+          };
+      }
+    });
+    jest.spyOn(utils, 'queryParams').mockClear().mockImplementation((...args) => {
+      if (args[0] === 'showSectionCreationDialog') {
+        return 'true';
+      }
+    });
+    const fetchSpy = jest.spyOn(window, 'fetch').mockClear();
 
     const wrapper = shallow(<SectionsSetUpContainer />);
 

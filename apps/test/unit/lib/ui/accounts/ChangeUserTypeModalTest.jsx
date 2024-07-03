@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import ChangeUserTypeModal from '@cdo/apps/lib/ui/accounts/ChangeUserTypeModal';
 import Button from '@cdo/apps/templates/Button';
@@ -54,7 +53,7 @@ describe('ChangeUserTypeModal', () => {
   });
 
   it('calls handleCancel when clicking the cancel button', () => {
-    const handleCancel = sinon.spy();
+    const handleCancel = jest.fn();
     wrapper.setProps({handleCancel});
     expect(handleCancel).not.toHaveBeenCalled();
     cancelButton(wrapper).simulate('click');

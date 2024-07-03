@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
 
@@ -29,7 +28,7 @@ describe('Comment', () => {
   });
 
   it('updates the text in the comment area', () => {
-    const spy = sinon.spy();
+    const spy = jest.fn();
     const wrapper = shallow(
       <Comment {...DEFAULT_PROPS} comment={''} onCommentChange={spy} />
     );

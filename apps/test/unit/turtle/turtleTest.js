@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import {Position} from '@cdo/apps/constants';
 import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
@@ -84,15 +82,12 @@ describe('Artist', () => {
 
       artist.visualization = new Artist.Visualization();
       artist.visualization.currentPathPattern = img;
-      const setDrawPatternBackwardSpy = sinon.spy(
-        artist.visualization.ctxScratch,
-        'drawImage'
-      );
+      const setDrawPatternBackwardSpy = jest.spyOn(artist.visualization.ctxScratch, 'drawImage').mockClear();
       artist.visualization.drawForwardLineWithPattern_(-100);
 
       expect(setDrawPatternBackwardSpy).toHaveBeenCalledWith(img, 100, 0, -100, 100, -25, -50, -50, 100);
 
-      setDrawPatternBackwardSpy.restore();
+      setDrawPatternBackwardSpy.mockRestore();
     });
 
     it('draws a pattern forward', () => {
@@ -103,15 +98,12 @@ describe('Artist', () => {
 
       artist.visualization = new Artist.Visualization();
       artist.visualization.currentPathPattern = img;
-      const setDrawPatternForwardSpy = sinon.spy(
-        artist.visualization.ctxScratch,
-        'drawImage'
-      );
+      const setDrawPatternForwardSpy = jest.spyOn(artist.visualization.ctxScratch, 'drawImage').mockClear();
       artist.visualization.drawForwardLineWithPattern_(100);
 
       expect(setDrawPatternForwardSpy).toHaveBeenCalledWith(img, 0, 0, 100, 100, -25, -50, 150, 100);
 
-      setDrawPatternForwardSpy.restore();
+      setDrawPatternForwardSpy.mockRestore();
     });
   });
 
@@ -124,16 +116,13 @@ describe('Artist', () => {
       let options = {smoothAnimate: false};
 
       artist.visualization = new Artist.Visualization();
-      const setStickerSize = sinon.spy(
-        artist.visualization.ctxScratch,
-        'drawImage'
-      );
+      const setStickerSize = jest.spyOn(artist.visualization.ctxScratch, 'drawImage').mockClear();
       artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
       expect(setStickerSize).toHaveBeenCalledWith(img, 0, 0, 100, 100, -50, -100, 100, 100);
 
-      setStickerSize.restore();
+      setStickerSize.mockRestore();
     });
     it('draws a sticker when size is 0', () => {
       let artist = new Artist();
@@ -143,16 +132,13 @@ describe('Artist', () => {
       let options = {smoothAnimate: false};
 
       artist.visualization = new Artist.Visualization();
-      const setStickerSize = sinon.spy(
-        artist.visualization.ctxScratch,
-        'drawImage'
-      );
+      const setStickerSize = jest.spyOn(artist.visualization.ctxScratch, 'drawImage').mockClear();
       artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
       expect(setStickerSize).toHaveBeenCalledWith(img, 0, 0, 100, 100, -0, -0, 0, 0);
 
-      setStickerSize.restore();
+      setStickerSize.mockRestore();
     });
     it('draws a sticker when size is 50 px', () => {
       let artist = new Artist();
@@ -162,16 +148,13 @@ describe('Artist', () => {
       let options = {smoothAnimate: false};
 
       artist.visualization = new Artist.Visualization();
-      const setStickerSize = sinon.spy(
-        artist.visualization.ctxScratch,
-        'drawImage'
-      );
+      const setStickerSize = jest.spyOn(artist.visualization.ctxScratch, 'drawImage').mockClear();
       artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
       expect(setStickerSize).toHaveBeenCalledWith(img, 0, 0, 100, 100, -25, -50, 50, 50);
 
-      setStickerSize.restore();
+      setStickerSize.mockRestore();
     });
     it('draws a sticker when size is 200 px', () => {
       // Test condition when width < size && height < size
@@ -182,16 +165,13 @@ describe('Artist', () => {
       let options = {smoothAnimate: false};
 
       artist.visualization = new Artist.Visualization();
-      const setStickerSize = sinon.spy(
-        artist.visualization.ctxScratch,
-        'drawImage'
-      );
+      const setStickerSize = jest.spyOn(artist.visualization.ctxScratch, 'drawImage').mockClear();
       artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
       expect(setStickerSize).toHaveBeenCalledWith(img, 0, 0, 100, 100, -50, -100, 100, 100);
 
-      setStickerSize.restore();
+      setStickerSize.mockRestore();
     });
     it('draws a sticker when size is 30 px', () => {
       let artist = new Artist();
@@ -202,16 +182,13 @@ describe('Artist', () => {
       let options = {smoothAnimate: false};
 
       artist.visualization = new Artist.Visualization();
-      const setStickerSize = sinon.spy(
-        artist.visualization.ctxScratch,
-        'drawImage'
-      );
+      const setStickerSize = jest.spyOn(artist.visualization.ctxScratch, 'drawImage').mockClear();
       artist.stickers = {Alien: img};
       artist.step('sticker', ['Alien', size, blockId], options);
 
       expect(setStickerSize).toHaveBeenCalledWith(img, 0, 0, 100, 40, -15, -12, 30, 12);
 
-      setStickerSize.restore();
+      setStickerSize.mockRestore();
     });
   });
 
@@ -225,13 +202,13 @@ describe('Artist', () => {
     it('can point to a specific direction', () => {
       const absoluteDirection = [0, 30, 45, 60, 180, 270];
       const blockId = 'block_id_4';
-      const pointToSpy = sinon.spy(artist.visualization, 'pointTo');
+      const pointToSpy = jest.spyOn(artist.visualization, 'pointTo').mockClear();
 
       absoluteDirection.forEach(angle => {
         artist.step('PT', [angle, blockId]);
         expect(pointToSpy).toHaveBeenCalledWith(angle);
       });
-      pointToSpy.restore();
+      pointToSpy.mockRestore();
     });
 
     it('can point to a 50 degrees', () => {
@@ -248,12 +225,12 @@ describe('Artist', () => {
       let angle = 60;
       let blockId = 'block_id_8';
 
-      const setHeadingStub = sinon.stub(artist.visualization, 'setHeading');
+      const setHeadingStub = jest.spyOn(artist.visualization, 'setHeading').mockClear().mockImplementation();
       artist.step('PT', [angle, blockId]);
 
       expect(setHeadingStub).toHaveBeenCalledTimes(1);
 
-      setHeadingStub.restore();
+      setHeadingStub.mockRestore();
     });
   });
 
@@ -303,7 +280,7 @@ describe('Artist', () => {
 
     it('executes upon reset', done => {
       const artist = new Artist();
-      const execute = sinon.stub(artist, 'execute');
+      const execute = jest.spyOn(artist, 'execute').mockClear().mockImplementation();
       artist.injectStudioApp(studioApp);
       artist
         .init({
@@ -318,12 +295,12 @@ describe('Artist', () => {
       artist.resetButtonClick();
 
       expect(execute).toHaveBeenCalled();
-      execute.restore();
+      execute.mockRestore();
     });
 
     it('executes upon code changes', done => {
       const artist = new Artist();
-      const execute = sinon.stub(Artist.prototype, 'execute');
+      const execute = jest.spyOn(Artist.prototype, 'execute').mockClear().mockImplementation();
       const container = document.createElement('div');
       container.id = 'artistContainer';
       document.body.appendChild(container);
@@ -341,7 +318,7 @@ describe('Artist', () => {
       studioApp.runChangeHandlers();
 
       expect(execute).toHaveBeenCalled();
-      execute.restore();
+      execute.mockRestore();
     });
   });
 
@@ -465,7 +442,7 @@ describe('Artist', () => {
 
   it('Does not alert for infinite loops', () => {
     const artist = new Artist();
-    const alertStub = sinon.stub(window, 'alert');
+    const alertStub = jest.spyOn(window, 'alert').mockClear().mockImplementation();
 
     artist.evalCode('while(true) executionInfo.checkTimeout();', {
       ...DEFAULT_EXECUTION_INFO,
@@ -474,6 +451,6 @@ describe('Artist', () => {
 
     expect(alertStub).not.toHaveBeenCalled();
 
-    alertStub.restore();
+    alertStub.mockRestore();
   });
 });

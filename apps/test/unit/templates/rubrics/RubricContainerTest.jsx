@@ -4,7 +4,6 @@ import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-impo
 import $ from 'jquery';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
 import * as utils from '@cdo/apps/code-studio/utils';
@@ -33,7 +32,6 @@ jest.mock('@cdo/apps/util/HttpClient', () => ({
 fetch.mockIf(/\/rubrics\/.*/, JSON.stringify(''));
 
 describe('RubricContainer', () => {
-  let clock;
   let store;
   let fetchStub;
   let ajaxStub;
@@ -49,61 +47,77 @@ describe('RubricContainer', () => {
 
   // Stubs out getting the AI status for a particular user
   function stubFetchEvalStatusForUser(data) {
-    return fetchStub
-      .withArgs(sinon.match(/rubrics\/\d+\/ai_evaluation_status_for_user.*/))
-      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+    return fetchStub.mockImplementation((...args) => {
+      if (args[0] === expect.objectContaining(/rubrics\/\d+\/ai_evaluation_status_for_user.*/)) {
+        return Promise.resolve(new Response(JSON.stringify(data)));
+      }
+    });
   }
 
   // Stubs out getting the overall AI status, which is part of RubricSettings but
   // useful to track alongside the user status, here
   function stubFetchEvalStatusForAll(data) {
-    return fetchStub
-      .withArgs(sinon.match(/rubrics\/\d+\/ai_evaluation_status_for_all.*/))
-      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+    return fetchStub.mockImplementation((...args) => {
+      if (args[0] === expect.objectContaining(/rubrics\/\d+\/ai_evaluation_status_for_all.*/)) {
+        return Promise.resolve(new Response(JSON.stringify(data)));
+      }
+    });
   }
 
   // This stubs out polling the AI evaluation list which can be provided by 'data'
   function stubFetchAiEvaluations(data) {
-    return fetchStub
-      .withArgs(sinon.match(/rubrics\/\d+\/get_ai_evaluations.*/))
-      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+    return fetchStub.mockImplementation((...args) => {
+      if (args[0] === expect.objectContaining(/rubrics\/\d+\/get_ai_evaluations.*/)) {
+        return Promise.resolve(new Response(JSON.stringify(data)));
+      }
+    });
   }
 
   function stubFetchTeacherEvaluations(data) {
-    return fetchStub
-      .withArgs(sinon.match(/rubrics\/\d+\/get_teacher_evaluations_for_all.*/))
-      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+    return fetchStub.mockImplementation((...args) => {
+      if (args[0] === expect.objectContaining(/rubrics\/\d+\/get_teacher_evaluations_for_all.*/)) {
+        return Promise.resolve(new Response(JSON.stringify(data)));
+      }
+    });
   }
 
   function stubFetchTourStatus(data) {
-    return fetchStub
-      .withArgs(sinon.match(/rubrics\/\w+\/get_ai_rubrics_tour_seen/))
-      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+    return fetchStub.mockImplementation((...args) => {
+      if (args[0] === expect.objectContaining(/rubrics\/\w+\/get_ai_rubrics_tour_seen/)) {
+        return Promise.resolve(new Response(JSON.stringify(data)));
+      }
+    });
   }
 
   function stubUpdateTourStatus(data) {
-    return fetchStub
-      .withArgs(sinon.match(/rubrics\/\w+\/update_ai_rubrics_tour_seen/))
-      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+    return fetchStub.mockImplementation((...args) => {
+      if (args[0] === expect.objectContaining(/rubrics\/\w+\/update_ai_rubrics_tour_seen/)) {
+        return Promise.resolve(new Response(JSON.stringify(data)));
+      }
+    });
   }
 
   beforeEach(() => {
-    ajaxStub = sinon.stub($, 'ajax');
-    const request = sinon.stub();
-    request.getResponseHeader = sinon.stub().returns('some-crsf-token');
-    ajaxStub.returns({
+    ajaxStub = jest.spyOn($, 'ajax').mockClear().mockImplementation();
+    const request = jest.fn();
+    request.getResponseHeader = jest.fn().mockReturnValue('some-crsf-token');
+    ajaxStub.mockReturnValue({
       done: cb => {
         cb([], null, request);
       },
     });
-    fetchStub = sinon.stub(window, 'fetch');
-    fetchStub.returns(
+    fetchStub = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
+    fetchStub.mockReturnValue(
       Promise.resolve(
         new Response(JSON.stringify({}), {status: 200, statusText: 'OK'})
       )
     );
-    sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
-    sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
+    sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
+    jest.spyOn(utils, 'queryParams').mockClear().mockImplementation((...args) => {
+      if (args[0] === 'section_id') {
+        return '1';
+      }
+    });
     stubRedux();
     registerReducers({teacherSections, teacherPanel, currentUser});
     store = getStore();
@@ -111,13 +125,13 @@ describe('RubricContainer', () => {
 
   afterEach(() => {
     if (clock) {
-      clock.restore();
+      jest.useRealTimers();
     }
     restoreRedux();
-    utils.queryParams.restore();
-    fetchStub.restore();
-    ajaxStub.restore();
-    sendEventSpy.restore();
+    utils.queryParams.mockRestore();
+    fetchStub.mockRestore();
+    ajaxStub.mockRestore();
+    sendEventSpy.mockRestore();
   });
 
   const notAttemptedJson = {
@@ -456,7 +470,7 @@ describe('RubricContainer', () => {
       7. Fetch returns a json object with puts AI Status into SUCCESS state
       8. Calls refreshAiEvaluations
     */
-    clock = sinon.useFakeTimers();
+    jest.useFakeTimers();
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchTeacherEvaluations(noEvals);
@@ -486,9 +500,11 @@ describe('RubricContainer', () => {
     // 2. User clicks button to run analysis
 
     // Stub out running the assessment and have it return pending status when asked next
-    const stubRunAiEvaluationsForUser = fetchStub
-      .withArgs(sinon.match(/rubrics\/\d+\/run_ai_evaluations_for_user$/))
-      .returns(Promise.resolve(new Response(JSON.stringify({}))));
+    const stubRunAiEvaluationsForUser = fetchStub.mockImplementation((...args) => {
+      if (args[0] === expect.objectContaining(/rubrics\/\d+\/run_ai_evaluations_for_user$/)) {
+        return Promise.resolve(new Response(JSON.stringify({})));
+      }
+    });
     stubFetchEvalStatusForUser(pendingJson);
     wrapper.find('Button').at(0).simulate('click');
 
@@ -499,7 +515,7 @@ describe('RubricContainer', () => {
     });
 
     // Wait for fetches and re-render
-    clock.tick(5000);
+    jest.advanceTimersByTime(5000);
     await wait();
     wrapper.update();
 
@@ -511,7 +527,7 @@ describe('RubricContainer', () => {
     stubFetchEvalStatusForUser(runningJson);
 
     // 4. Move clock forward 5 seconds and re-render
-    clock.tick(5000);
+    jest.advanceTimersByTime(5000);
     await wait();
     wrapper.update();
 
@@ -523,7 +539,7 @@ describe('RubricContainer', () => {
     stubFetchAiEvaluations(mockAiEvaluations);
 
     // 6. Move clock forward 5 seconds and re-render
-    clock.tick(5000);
+    jest.advanceTimersByTime(5000);
     await wait();
     wrapper.update();
 

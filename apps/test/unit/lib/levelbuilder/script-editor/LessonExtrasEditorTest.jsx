@@ -1,6 +1,5 @@
 import { mount } from 'enzyme';
 import React from 'react';
-import sinon from 'sinon';
 
 import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/unit-editor/LessonExtrasEditor';
 
@@ -11,9 +10,9 @@ describe('LessonExtrasEditor', () => {
     updateProjectWidgetTypes;
 
   beforeEach(() => {
-    updateLessonExtrasAvailable = sinon.spy();
-    updateProjectWidgetVisible = sinon.spy();
-    updateProjectWidgetTypes = sinon.spy();
+    updateLessonExtrasAvailable = jest.fn();
+    updateProjectWidgetVisible = jest.fn();
+    updateProjectWidgetTypes = jest.fn();
     defaultProps = {
       projectWidgetVisible: false,
       projectWidgetTypes: [],

@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import EditKeyRow from '@cdo/apps/storage/dataBrowser/EditKeyRow';
 import commonI18n from '@cdo/locale';
@@ -21,11 +20,11 @@ describe('EditKeyRow', () => {
     }
 
     afterEach(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('should render a localized string for the "Edit" button', () => {
-      sinon.stub(commonI18n, 'edit').returns('i18n-edit');
+      jest.spyOn(commonI18n, 'edit').mockClear().mockReturnValue('i18n-edit');
 
       const wrapper = createEditKeyRow();
 
@@ -34,7 +33,7 @@ describe('EditKeyRow', () => {
     });
 
     it('should render a localized string for "Save"', () => {
-      sinon.stub(commonI18n, 'save').returns('i18n-save');
+      jest.spyOn(commonI18n, 'save').mockClear().mockReturnValue('i18n-save');
 
       const wrapper = createEditKeyRow();
 
@@ -46,7 +45,7 @@ describe('EditKeyRow', () => {
     });
 
     it('should render a localized string while saving the row', () => {
-      sinon.stub(commonI18n, 'saving').returns('i18n-saving');
+      jest.spyOn(commonI18n, 'saving').mockClear().mockReturnValue('i18n-saving');
 
       const wrapper = createEditKeyRow();
 
@@ -58,7 +57,7 @@ describe('EditKeyRow', () => {
     });
 
     it('should render a localized string for "Delete"', () => {
-      sinon.stub(commonI18n, 'delete').returns('i18n-delete');
+      jest.spyOn(commonI18n, 'delete').mockClear().mockReturnValue('i18n-delete');
 
       const wrapper = createEditKeyRow();
 
@@ -67,7 +66,7 @@ describe('EditKeyRow', () => {
     });
 
     it('should render a localized string while saving the row', () => {
-      sinon.stub(commonI18n, 'deletingWithEllipsis').returns('i18n-deleting');
+      jest.spyOn(commonI18n, 'deletingWithEllipsis').mockClear().mockReturnValue('i18n-deleting');
 
       const wrapper = createEditKeyRow();
 

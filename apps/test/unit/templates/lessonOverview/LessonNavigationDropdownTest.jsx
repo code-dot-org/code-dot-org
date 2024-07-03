@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
@@ -190,8 +189,8 @@ describe('LessonNavigationDropdown', () => {
   });
 
   it('navigates when click lesson', () => {
-    sinon.stub(firehoseClient, 'putRecord');
-    sinon.stub(utils, 'navigateToHref');
+    jest.spyOn(firehoseClient, 'putRecord').mockClear().mockImplementation();
+    jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
 
     lesson.unit.lessonGroups = twoLessonGroups;
     const wrapper = shallow(<LessonNavigationDropdown lesson={lesson} />);
@@ -203,7 +202,7 @@ describe('LessonNavigationDropdown', () => {
     expect(firehoseClient.putRecord).toHaveBeenCalledTimes(1);
     firehoseClient.putRecord.yieldTo('callback');
     expect(utils.navigateToHref).toHaveBeenCalledTimes(1);
-    utils.navigateToHref.restore();
-    firehoseClient.putRecord.restore();
+    utils.navigateToHref.mockRestore();
+    firehoseClient.putRecord.mockRestore();
   });
 });

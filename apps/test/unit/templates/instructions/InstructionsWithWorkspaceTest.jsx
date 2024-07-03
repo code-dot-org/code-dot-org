@@ -1,7 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnwrappedInstructionsWithWorkspace as InstructionsWithWorkspace} from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
 
@@ -37,15 +36,15 @@ describe('InstructionsWithWorkspace', () => {
     let setInstructionsMaxHeightAvailable;
 
     beforeEach(() => {
-      setInstructionsMaxHeightAvailable = sinon.spy();
+      setInstructionsMaxHeightAvailable = jest.fn();
 
-      sinon.stub($.fn, 'width').returns(1024);
-      sinon.stub($.fn, 'height').returns(768);
+      jest.spyOn($.fn, 'width').mockClear().mockReturnValue(1024);
+      jest.spyOn($.fn, 'height').mockClear().mockReturnValue(768);
     });
 
     afterEach(() => {
-      $.fn.width.restore();
-      $.fn.height.restore();
+      $.fn.width.mockRestore();
+      $.fn.height.mockRestore();
     });
 
     function setupComponent({
@@ -74,9 +73,9 @@ describe('InstructionsWithWorkspace', () => {
         windowWidth: 640,
         windowHeight: 480,
       });
-      $.fn.width.returns(640);
-      $.fn.height.returns(480);
-      sinon.spy(wrapper.instance(), 'setState');
+      $.fn.width.mockReturnValue(640);
+      $.fn.height.mockReturnValue(480);
+      jest.spyOn(wrapper.instance(), 'setState').mockClear();
 
       wrapper.instance().onResize();
       expect(setInstructionsMaxHeightAvailable).not.toHaveBeenCalled();
@@ -101,7 +100,7 @@ describe('InstructionsWithWorkspace', () => {
       wrapper.instance().onResize();
       expect(setInstructionsMaxHeightAvailable).toHaveBeenCalledWith(139);
 
-      setInstructionsMaxHeightAvailable.resetHistory();
+      setInstructionsMaxHeightAvailable.mockReset();
 
       wrapper = setupComponent({
         instructionsHeight: 19,
@@ -110,7 +109,7 @@ describe('InstructionsWithWorkspace', () => {
       wrapper.instance().onResize();
       expect(setInstructionsMaxHeightAvailable).toHaveBeenCalledWith(140);
 
-      setInstructionsMaxHeightAvailable.resetHistory();
+      setInstructionsMaxHeightAvailable.mockReset();
 
       wrapper = setupComponent({
         instructionsHeight: 20,
@@ -119,7 +118,7 @@ describe('InstructionsWithWorkspace', () => {
       wrapper.instance().onResize();
       expect(setInstructionsMaxHeightAvailable).toHaveBeenCalledWith(150);
 
-      setInstructionsMaxHeightAvailable.resetHistory();
+      setInstructionsMaxHeightAvailable.mockReset();
 
       wrapper = setupComponent({
         instructionsHeight: 21,

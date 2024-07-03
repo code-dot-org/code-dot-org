@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {registerReducers, stubRedux} from '@cdo/apps/redux';
@@ -26,13 +25,13 @@ describe('LoginTypePicker', () => {
         providers={['picture', 'word', 'email']}
       />
     );
-    const sendEventSpy = sinon.stub(analyticsReporter, 'sendEvent');
+    const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear().mockImplementation();
 
     wrapper.find('PictureLoginCard').simulate('click');
 
     expect(sendEventSpy).toHaveBeenCalledTimes(1);
     expect(sendEventSpy).toHaveBeenCalledWith('Login Type Selected');
 
-    analyticsReporter.sendEvent.restore();
+    analyticsReporter.sendEvent.mockRestore();
   });
 });

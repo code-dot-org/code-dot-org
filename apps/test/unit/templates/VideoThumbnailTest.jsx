@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import VideoThumbnail from '@cdo/apps/templates/VideoThumbnail';
 
@@ -35,9 +34,9 @@ describe('VideoThumbnail', () => {
         openInNewTab
       />
     );
-    const windowOpenStub = sinon.stub(window, 'open');
+    const windowOpenStub = jest.spyOn(window, 'open').mockClear().mockImplementation();
     wrapper.instance().onThumbnailClick();
-    expect(windowOpenStub.callCount).toBe(1);
-    windowOpenStub.restore();
+    expect(windowOpenStub).toHaveBeenCalledTimes(1);
+    windowOpenStub.mockRestore();
   });
 });

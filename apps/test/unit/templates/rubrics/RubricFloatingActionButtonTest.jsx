@@ -2,7 +2,6 @@ import {render, screen, fireEvent} from '@testing-library/react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -60,7 +59,7 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
 
   describe('pulse animation', () => {
     beforeEach(() => {
-      sinon.stub(sessionStorage, 'getItem');
+      jest.spyOn(sessionStorage, 'getItem').mockClear().mockImplementation();
     });
 
     afterEach(() => {
@@ -68,7 +67,7 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
     });
 
     it('renders pulse animation when session storage is empty', () => {
-      const sendEventSpy = sinon.stub(analyticsReporter, 'sendEvent');
+      const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear().mockImplementation();
       render(
         <Provider store={getStore()}>
           <RubricFloatingActionButton {...defaultProps} />
@@ -88,11 +87,11 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
       const taImage = screen.getByRole('img', {name: 'TA overlay'});
       fireEvent.load(taImage);
       expect(fab.classList.contains('unittest-fab-pulse')).toBe(true);
-      sendEventSpy.restore();
+      sendEventSpy.mockRestore();
     });
 
     it('sends open on page load event when open state is true in session storage', () => {
-      const sendEventSpy = sinon.stub(analyticsReporter, 'sendEvent');
+      const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear().mockImplementation();
       sessionStorage.setItem('RubricFabOpenStateKey', 'true');
       render(
         <Provider store={getStore()}>
@@ -107,11 +106,11 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
       fireEvent.load(image);
       const fab = screen.getByRole('button', {name: 'AI bot'});
       expect(fab.classList.contains('unittest-fab-pulse')).toBe(false);
-      sendEventSpy.restore();
+      sendEventSpy.mockRestore();
     });
 
     it('does not render pulse animation when open state is present in session storage', () => {
-      const sendEventSpy = sinon.stub(analyticsReporter, 'sendEvent');
+      const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear().mockImplementation();
       sessionStorage.setItem('RubricFabOpenStateKey', 'false');
       render(
         <Provider store={getStore()}>
@@ -126,7 +125,7 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
       fireEvent.load(image);
       const fab = screen.getByRole('button', {name: 'AI bot'});
       expect(fab.classList.contains('unittest-fab-pulse')).toBe(false);
-      sendEventSpy.restore();
+      sendEventSpy.mockRestore();
     });
   });
 });
@@ -158,7 +157,7 @@ describe('RubricFloatingActionButton - Enzyme', () => {
   });
 
   it('sends events when opened and closed', () => {
-    const sendEventSpy = sinon.stub(analyticsReporter, 'sendEvent');
+    const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear().mockImplementation();
     const reportingData = {unitName: 'test-2023', levelName: 'test-level'};
     const wrapper = shallow(
       <RubricFloatingActionButton
@@ -178,6 +177,6 @@ describe('RubricFloatingActionButton - Enzyme', () => {
       viewingStudentWork: false,
       viewingEvaluationLevel: true,
     });
-    sendEventSpy.restore();
+    sendEventSpy.mockRestore();
   });
 });

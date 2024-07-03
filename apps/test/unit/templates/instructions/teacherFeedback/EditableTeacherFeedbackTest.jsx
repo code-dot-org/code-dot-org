@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
@@ -57,20 +56,20 @@ describe('EditableTeacherFeedback', () => {
   });
 
   it('logs Amplitude message when rubric level viewed', () => {
-    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
     setUp({rubric: RUBRIC});
 
     expect(analyticsSpy).toHaveBeenCalledTimes(1);
-    assert.equal(analyticsSpy.getCall(0).firstArg, 'Rubric Level Viewed');
-    analyticsSpy.restore();
+    assert.equal(analyticsSpy.mock.calls[0].firstArg, 'Rubric Level Viewed');
+    analyticsSpy.mockRestore();
   });
 
   it('does not log Amplitude message when non-rubric level viewed', () => {
-    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
     setUp();
 
     expect(analyticsSpy).not.toHaveBeenCalled();
-    analyticsSpy.restore();
+    analyticsSpy.mockRestore();
   });
 
   describe('without previous feedback', () => {
@@ -115,16 +114,16 @@ describe('EditableTeacherFeedback', () => {
 
     it('sends analytics event when feedback submitted', () => {
       const wrapper = setUp();
-      const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+      const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
 
       wrapper.find('Button[id="ui-test-submit-feedback"]').simulate('click');
       assert(analyticsSpy.toHaveBeenCalledTimes(1));
       assert.equal(
-        analyticsSpy.getCall(0).firstArg,
+        analyticsSpy.mock.calls[0].firstArg,
         'Level Feedback Submitted'
       );
 
-      analyticsSpy.restore();
+      analyticsSpy.mockRestore();
     });
   });
 

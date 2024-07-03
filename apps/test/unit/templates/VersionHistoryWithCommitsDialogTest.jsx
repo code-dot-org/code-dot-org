@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {sources as sourcesApi} from '@cdo/apps/clientApi';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -32,11 +31,11 @@ describe('VersionHistoryWithCommitsDialog', () => {
   let wrapper;
 
   beforeEach(() => {
-    sinon.stub(utils, 'reload');
+    jest.spyOn(utils, 'reload').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    utils.reload.restore();
+    utils.reload.mockRestore();
 
     if (wrapper) {
       wrapper.unmount();
@@ -46,13 +45,13 @@ describe('VersionHistoryWithCommitsDialog', () => {
 
   describe('using the sources api', () => {
     beforeEach(() => {
-      sinon.stub(sourcesApi, 'ajax');
-      sinon.stub(sourcesApi, 'restorePreviousFileVersion');
+      jest.spyOn(sourcesApi, 'ajax').mockClear().mockImplementation();
+      jest.spyOn(sourcesApi, 'restorePreviousFileVersion').mockClear().mockImplementation();
     });
 
     afterEach(() => {
-      sourcesApi.restorePreviousFileVersion.restore();
-      sourcesApi.ajax.restore();
+      sourcesApi.restorePreviousFileVersion.mockRestore();
+      sourcesApi.ajax.mockRestore();
     });
 
     testVersionHistoryWithCommitsDialog({
@@ -63,18 +62,18 @@ describe('VersionHistoryWithCommitsDialog', () => {
         isOpen: true,
       },
       finishVersionHistoryLoad: () => {
-        sourcesApi.ajax.firstCall.args[2](FAKE_VERSION_LIST_RESPONSE);
+        sourcesApi.ajax.mock.calls[0][2](FAKE_VERSION_LIST_RESPONSE);
         wrapper.update();
       },
       failVersionHistoryLoad: () => {
-        sourcesApi.ajax.firstCall.args[3]();
+        sourcesApi.ajax.mock.calls[0][3]();
         wrapper.update();
       },
       restoreSpy: () => sourcesApi.restorePreviousFileVersion,
       finishRestoreVersion: () =>
-        sourcesApi.restorePreviousFileVersion.firstCall.args[2](),
+        sourcesApi.restorePreviousFileVersion.mock.calls[0][2](),
       failRestoreVersion: () =>
-        sourcesApi.restorePreviousFileVersion.firstCall.args[3](),
+        sourcesApi.restorePreviousFileVersion.mock.calls[0][3](),
     });
   });
 
@@ -204,16 +203,15 @@ describe('VersionHistoryWithCommitsDialog', () => {
       let handleClearPuzzle;
 
       beforeEach(() => {
-        sinon.stub(firehoseClient, 'putRecord');
-        sinon.stub(project, 'getCurrentId').returns('fake-project-id');
-        sinon
-          .stub(project, 'getCurrentSourceVersionId')
-          .returns(FAKE_CURRENT_VERSION);
-        sinon.stub(project, 'getShareUrl').returns('fake-share-url');
-        sinon.stub(project, 'isOwner').returns(true);
-        sinon.stub(project, 'save');
+        jest.spyOn(firehoseClient, 'putRecord').mockClear().mockImplementation();
+        jest.spyOn(project, 'getCurrentId').mockClear().mockReturnValue('fake-project-id');
+        jest.spyOn(project, 'getCurrentSourceVersionId').mockClear()
+          .mockReturnValue(FAKE_CURRENT_VERSION);
+        jest.spyOn(project, 'getShareUrl').mockClear().mockReturnValue('fake-share-url');
+        jest.spyOn(project, 'isOwner').mockClear().mockReturnValue(true);
+        jest.spyOn(project, 'save').mockClear().mockImplementation();
 
-        handleClearPuzzle = sinon.stub().returns(Promise.resolve());
+        handleClearPuzzle = jest.fn().mockReturnValue(Promise.resolve());
         wrapper = mount(
           <VersionHistoryWithCommitsDialog
             {...props}
@@ -227,12 +225,12 @@ describe('VersionHistoryWithCommitsDialog', () => {
 
       afterEach(async () => {
         await wasCalled(utils.reload);
-        firehoseClient.putRecord.restore();
-        project.getCurrentId.restore();
-        project.getCurrentSourceVersionId.restore();
-        project.getShareUrl.restore();
-        project.isOwner.restore();
-        project.save.restore();
+        firehoseClient.putRecord.mockRestore();
+        project.getCurrentId.mockRestore();
+        project.getCurrentSourceVersionId.mockRestore();
+        project.getShareUrl.mockRestore();
+        project.isOwner.mockRestore();
+        project.save.mockRestore();
       });
 
       it('immediately renders spinner', () => {

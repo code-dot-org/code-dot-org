@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import Accelerometer from '@cdo/apps/lib/kits/maker/boards/microBit/Accelerometer';
 import {ACCEL_EVENT_ID} from '@cdo/apps/lib/kits/maker/boards/microBit/MBFirmataWrapper';
 import {SENSOR_CHANNELS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
@@ -17,7 +15,7 @@ describe('MicroBitAccelerometer', function () {
   });
 
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
   });
 
   it(`attributes are readonly`, () => {
@@ -72,8 +70,8 @@ describe('MicroBitAccelerometer', function () {
 
   describe(`start() and stop()`, () => {
     it(`trigger the parent call`, () => {
-      let startSpy = sinon.spy(boardClient, 'streamAnalogChannel');
-      let stopSpy = sinon.spy(boardClient, 'stopStreamingAnalogChannel');
+      let startSpy = jest.spyOn(boardClient, 'streamAnalogChannel').mockClear();
+      let stopSpy = jest.spyOn(boardClient, 'stopStreamingAnalogChannel').mockClear();
       accelerometer.start();
       expect(startSpy).toHaveBeenCalledTimes(3);
       expect(startSpy).toHaveBeenCalledWith(SENSOR_CHANNELS.accelX);
@@ -127,7 +125,7 @@ describe('MicroBitAccelerometer', function () {
   describe('emitsEvent', () => {
     let emitSpy;
     beforeEach(() => {
-      emitSpy = sinon.spy(accelerometer, 'emit');
+      emitSpy = jest.spyOn(accelerometer, 'emit').mockClear();
     });
 
     it('emits the data event when it receives data', () => {

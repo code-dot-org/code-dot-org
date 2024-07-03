@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedLessonGroupCard as LessonGroupCard} from '@cdo/apps/lib/levelbuilder/unit-editor/LessonGroupCard';
 
@@ -44,15 +43,15 @@ describe('LessonGroupCard', () => {
     setTargetLessonGroup;
 
   beforeEach(() => {
-    addLesson = sinon.spy();
-    moveGroup = sinon.spy();
-    removeGroup = sinon.spy();
-    moveLesson = sinon.spy();
-    removeLesson = sinon.spy();
-    setLessonGroup = sinon.spy();
-    reorderLesson = sinon.spy();
-    updateLessonGroupField = sinon.spy();
-    setTargetLessonGroup = sinon.spy();
+    addLesson = jest.fn();
+    moveGroup = jest.fn();
+    removeGroup = jest.fn();
+    moveLesson = jest.fn();
+    removeLesson = jest.fn();
+    setLessonGroup = jest.fn();
+    reorderLesson = jest.fn();
+    updateLessonGroupField = jest.fn();
+    setTargetLessonGroup = jest.fn();
     defaultProps = {
       addLesson,
       moveGroup,
@@ -163,8 +162,8 @@ describe('LessonGroupCard', () => {
   });
 
   it('adds lesson when button pressed', () => {
-    const prompt = sinon.stub(window, 'prompt');
-    prompt.returns('Lesson Name');
+    const prompt = jest.spyOn(window, 'prompt').mockClear().mockImplementation();
+    prompt.mockReturnValue('Lesson Name');
 
     const wrapper = shallow(<LessonGroupCard {...defaultProps} />);
 
@@ -173,7 +172,7 @@ describe('LessonGroupCard', () => {
     button.simulate('mouseDown');
 
     expect(addLesson).toHaveBeenCalledTimes(1);
-    window.prompt.restore();
+    window.prompt.mockRestore();
   });
 
   it('displays clone lesson dialog when cloning a lesson', () => {

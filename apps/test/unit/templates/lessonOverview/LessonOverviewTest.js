@@ -1,7 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
-import sinon from 'sinon';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
@@ -409,14 +408,14 @@ describe('LessonOverview', () => {
   });
 
   it('logs Amplitude event when rendered', () => {
-    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
     shallow(<LessonOverview {...defaultProps} />);
 
     expect(analyticsSpy).toHaveBeenCalledTimes(1);
     assert.equal(
-      analyticsSpy.getCall(0).firstArg,
+      analyticsSpy.mock.calls[0].firstArg,
       EVENTS.LESSON_OVERVIEW_PAGE_VISITED_EVENT
     );
-    analyticsSpy.restore();
+    analyticsSpy.mockRestore();
   });
 });

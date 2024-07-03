@@ -1,7 +1,6 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import {UnconnectedUnitCard as UnitCard} from '@cdo/apps/lib/levelbuilder/unit-editor/UnitCard';
 import reducers, {
@@ -82,9 +81,9 @@ describe('UnitCard', () => {
     store = getStore();
     store.dispatch(init(lessonGroups, {}));
 
-    addGroup = sinon.spy();
-    convertGroupToUserFacing = sinon.spy();
-    convertGroupToNonUserFacing = sinon.spy();
+    addGroup = jest.fn();
+    convertGroupToUserFacing = jest.fn();
+    convertGroupToNonUserFacing = jest.fn();
     defaultProps = {
       addGroup,
       convertGroupToUserFacing,
@@ -145,8 +144,8 @@ describe('UnitCard', () => {
   });
 
   it('add new lesson group', () => {
-    const prompt = sinon.stub(window, 'prompt');
-    prompt.returns('Lesson Group Name');
+    const prompt = jest.spyOn(window, 'prompt').mockClear().mockImplementation();
+    prompt.mockReturnValue('Lesson Group Name');
 
     let wrapper = shallow(<UnitCard {...defaultProps} />);
 
@@ -155,12 +154,12 @@ describe('UnitCard', () => {
     button.simulate('mouseDown');
 
     expect(addGroup).toHaveBeenCalledTimes(1);
-    window.prompt.restore();
+    window.prompt.mockRestore();
   });
 
   it('enable lesson groups', () => {
-    const prompt = sinon.stub(window, 'prompt');
-    prompt.returns('Lesson Group Name');
+    const prompt = jest.spyOn(window, 'prompt').mockClear().mockImplementation();
+    prompt.mockReturnValue('Lesson Group Name');
 
     let wrapper = shallow(
       <UnitCard {...defaultProps} lessonGroups={[nonUserFacingGroup]} />
@@ -170,7 +169,7 @@ describe('UnitCard', () => {
     button.simulate('mouseDown');
 
     expect(convertGroupToUserFacing).toHaveBeenCalledTimes(1);
-    window.prompt.restore();
+    window.prompt.mockRestore();
   });
 
   it('disable lesson groups', () => {

@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import FilterGroupSortBy from '@cdo/apps/tutorialExplorer/filterGroupSortBy';
 import {TutorialsSortByOptions} from '@cdo/apps/tutorialExplorer/util';
@@ -36,7 +35,7 @@ describe('FilterGroupSortBy', () => {
   });
 
   it('hits a callback when sort settings change', () => {
-    const spy = sinon.spy();
+    const spy = jest.fn();
     const wrapper = shallow(
       <FilterGroupSortBy {...DEFAULT_PROPS} onUserInput={spy} />
     );

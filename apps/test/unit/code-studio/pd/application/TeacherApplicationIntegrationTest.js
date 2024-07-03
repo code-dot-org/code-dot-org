@@ -1,7 +1,6 @@
 import { mount } from 'enzyme';
 import $ from 'jquery';
 import React from 'react';
-import sinon from 'sinon';
 
 import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
 import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
@@ -28,15 +27,15 @@ describe('TeacherApplication', () => {
   };
 
   beforeEach(() => {
-    sinon.stub($, 'ajax').returns(new $.Deferred());
-    sinon.stub($, 'param').returns(new $.Deferred());
-    sinon.stub(window, 'fetch').returns(Promise.resolve({ok: true}));
-    sinon.stub(utils, 'reload');
+    jest.spyOn($, 'ajax').mockClear().mockReturnValue(new $.Deferred());
+    jest.spyOn($, 'param').mockClear().mockReturnValue(new $.Deferred());
+    jest.spyOn(window, 'fetch').mockClear().mockReturnValue(Promise.resolve({ok: true}));
+    jest.spyOn(utils, 'reload').mockClear().mockImplementation();
     window.ga = sinon.fake();
   });
 
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
     window.ga = undefined;
   });
 

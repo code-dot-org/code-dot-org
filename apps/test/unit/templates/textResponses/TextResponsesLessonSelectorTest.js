@@ -1,6 +1,5 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import TextResponsesLessonSelector from '@cdo/apps/templates/textResponses/TextResponsesLessonSelector';
 import i18n from '@cdo/locale';
@@ -56,7 +55,7 @@ describe('TextResponsesLessonSelector', () => {
     });
 
     it('calls prop onChangeFilter when a lesson is selected', () => {
-      const onChangeFilterStub = sinon.stub();
+      const onChangeFilterStub = jest.fn();
       const wrapper = mount(
         <TextResponsesLessonSelector
           lessons={lessons}
@@ -70,7 +69,7 @@ describe('TextResponsesLessonSelector', () => {
     });
 
     it('calls prop onChangeFilter with null if all is selected', () => {
-      const onChangeFilterStub = sinon.stub();
+      const onChangeFilterStub = jest.fn();
       const wrapper = mount(
         <TextResponsesLessonSelector
           lessons={lessons}

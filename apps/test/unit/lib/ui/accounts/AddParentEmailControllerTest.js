@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import ReactDOM from 'react-dom';
-import {spy, stub} from 'sinon';
 
 import AddParentEmailController from '@cdo/apps/lib/ui/accounts/AddParentEmailController';
 
@@ -54,8 +53,8 @@ describe('AddParentEmailController', () => {
 
     afterEach(() => {
       controller.hideAddParentEmailModal();
-      ReactDOM.render.restore();
-      ReactDOM.unmountComponentAtNode.restore();
+      ReactDOM.render.mockRestore();
+      ReactDOM.unmountComponentAtNode.mockRestore();
     });
 
     it('shows on showAddParentEmailModal', () => {

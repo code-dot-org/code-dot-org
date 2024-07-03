@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import EnumPropertyRow from '@cdo/apps/applab/designElements/EnumPropertyRow';
 import TextAlignmentPropertyRow, {
@@ -19,7 +18,7 @@ describe('TextAlignmentPropertyRow', () => {
 
   beforeEach(() => {
     initialValue = TEXT_ALIGNMENT_LEFT;
-    handleChange = sinon.stub();
+    handleChange = jest.fn();
     wrapper = shallow(
       <TextAlignmentPropertyRow
         initialValue={initialValue}

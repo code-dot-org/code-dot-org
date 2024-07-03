@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import PasswordReset from '@cdo/apps/templates/manageStudents/PasswordReset';
 
@@ -16,7 +15,7 @@ describe('PasswordReset', () => {
   });
 
   it('calls props.setPasswordLengthFailure with true if setting password fails with too short error', async () => {
-    const setPasswordLengthFailureSpy = sinon.spy();
+    const setPasswordLengthFailureSpy = jest.fn();
 
     const wrapper = mount(
       <PasswordReset setPasswordLengthFailure={setPasswordLengthFailureSpy} />

@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import {
   reducers,
@@ -29,16 +27,14 @@ describe('The JSDebugger redux duck', () => {
       shouldRunAtMaxSpeed: () => false,
       studioApp,
     });
-    sinon.spy(interpreter, 'handlePauseContinue');
-    sinon.spy(interpreter, 'handleStepIn');
-    sinon.spy(interpreter, 'handleStepOut');
-    sinon.spy(interpreter, 'handleStepOver');
+    jest.spyOn(interpreter, 'handlePauseContinue').mockClear();
+    jest.spyOn(interpreter, 'handleStepIn').mockClear();
+    jest.spyOn(interpreter, 'handleStepOut').mockClear();
+    jest.spyOn(interpreter, 'handleStepOver').mockClear();
 
     // override evalInCurrentScope so we don't have to set up the full interpreter.
-    sinon
-      .stub(interpreter, 'evalInCurrentScope')
-      // eslint-disable-next-line no-eval
-      .callsFake(input => eval(input));
+    jest.spyOn(interpreter, 'evalInCurrentScope').mockClear()
+      .mockImplementation(input => eval(input));
   });
   afterEach(() => {
     restoreRedux();
@@ -168,7 +164,7 @@ describe('The JSDebugger redux duck', () => {
   describe('after being initialized with a bad runApp implementation', () => {
     let runApp;
     beforeEach(() => {
-      runApp = sinon.spy();
+      runApp = jest.fn();
       store.dispatch(actions.initialize({runApp}));
       state = store.getState();
     });
@@ -182,7 +178,7 @@ describe('The JSDebugger redux duck', () => {
   describe('after being initialized', () => {
     let runApp;
     beforeEach(() => {
-      runApp = sinon.spy(() => {
+      runApp = jest.fn(() => {
         store.dispatch(actions.attach(interpreter));
       });
       store.dispatch(actions.initialize({runApp}));

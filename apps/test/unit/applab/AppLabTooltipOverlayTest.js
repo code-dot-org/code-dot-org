@@ -1,6 +1,5 @@
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {AppLabTooltipOverlay} from '@cdo/apps/applab/AppLabTooltipOverlay';
 
@@ -24,19 +23,16 @@ describe('AppLabTooltipOverlay', () => {
   var result, stubDraggedElementDropPoint;
 
   beforeEach(() => {
-    stubDraggedElementDropPoint = sinon.stub(
-      gridUtils,
-      'draggedElementDropPoint'
-    );
+    stubDraggedElementDropPoint = jest.spyOn(gridUtils, 'draggedElementDropPoint').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    stubDraggedElementDropPoint.restore();
+    stubDraggedElementDropPoint.mockRestore();
   });
 
   describe('when not dragging', () => {
     beforeEach(() => {
-      stubDraggedElementDropPoint.returns(null);
+      stubDraggedElementDropPoint.mockReturnValue(null);
       result = shallow(<AppLabTooltipOverlay {...TEST_PROPS} />);
     });
 
@@ -69,7 +65,7 @@ describe('AppLabTooltipOverlay', () => {
       DROP_POINT_Y = 43;
 
     beforeEach(() => {
-      stubDraggedElementDropPoint.returns({
+      stubDraggedElementDropPoint.mockReturnValue({
         left: DROP_POINT_X,
         top: DROP_POINT_Y,
       });

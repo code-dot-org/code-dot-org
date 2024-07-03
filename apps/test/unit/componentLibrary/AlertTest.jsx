@@ -1,7 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon';
 
 import Alert from '@cdo/apps/componentLibrary/alert';
 
@@ -48,7 +47,7 @@ describe('Design System - Alert', () => {
 
   it('Alert - calls onClose', async () => {
     const user = userEvent.setup();
-    const spyOnClose = sinon.spy();
+    const spyOnClose = jest.fn();
 
     render(<Alert text="Closable Alert" onClose={spyOnClose} />);
 
@@ -60,7 +59,7 @@ describe('Design System - Alert', () => {
 
   it('Alert - renders icon, text, link, and onClose at the same time', async () => {
     const user = userEvent.setup();
-    const spyOnClose = sinon.spy();
+    const spyOnClose = jest.fn();
     const link = {href: 'https://google.com/', children: 'Click here'};
     const icon = {iconName: 'check-circle'};
 

@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import AddParentEmailModal from '@cdo/apps/lib/ui/accounts/AddParentEmailModal';
 import Button from '@cdo/apps/templates/Button';
@@ -61,7 +60,7 @@ describe('AddParentEmailModal', () => {
     });
 
     it('calls handleCancel when clicking the cancel button', () => {
-      const handleCancel = sinon.spy();
+      const handleCancel = jest.fn();
       wrapper.setProps({handleCancel});
       expect(handleCancel).not.toHaveBeenCalled();
       cancelButton(wrapper).simulate('click');

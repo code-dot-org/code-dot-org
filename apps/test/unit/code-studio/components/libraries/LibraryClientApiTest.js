@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 
 import {assert} from '../../../../util/reconfiguredChai';
@@ -15,19 +13,19 @@ describe('LibraryClientApi', () => {
     beforeEach(() => {
       libraryApi = new LibraryClientApi(channelId);
       server = sinon.fakeServer.create();
-      channelUpdateStub = sinon.stub(libraryApi.channelApi, 'update');
+      channelUpdateStub = jest.spyOn(libraryApi.channelApi, 'update').mockClear().mockImplementation();
       project = {
         name: 'My Project',
         libraryName: 'My Library',
         libraryDescription: 'A very cool library!',
         libraryPublishedAt: new Date(),
       };
-      unpublishCallback = sinon.stub();
+      unpublishCallback = jest.fn();
     });
 
     afterEach(() => {
-      server.restore();
-      channelUpdateStub.restore();
+      server.mockRestore();
+      channelUpdateStub.mockRestore();
     });
 
     const setDeleteLibraryResponse = status => {

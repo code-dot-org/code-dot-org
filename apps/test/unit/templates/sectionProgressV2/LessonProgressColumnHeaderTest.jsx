@@ -1,6 +1,5 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
-import sinon from 'sinon';
 
 import {
   fakeLessonWithLevels,
@@ -51,7 +50,7 @@ describe('LessonProgressColumnHeader', () => {
   });
 
   it('Shows lesson header and expands on click', () => {
-    const addExpandedLesson = sinon.spy();
+    const addExpandedLesson = jest.fn();
     renderDefault({addExpandedLesson: addExpandedLesson});
 
     screen.getByText(LESSON.relative_position);

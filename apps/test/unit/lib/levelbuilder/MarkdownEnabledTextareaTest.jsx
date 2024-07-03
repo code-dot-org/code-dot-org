@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledTextarea';
 
@@ -9,7 +8,7 @@ import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledT
 describe('MarkdownEnabledTextarea', () => {
   let defaultProps, handleMarkdownChange;
   beforeEach(() => {
-    handleMarkdownChange = sinon.spy();
+    handleMarkdownChange = jest.fn();
     defaultProps = {
       markdown:
         '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',

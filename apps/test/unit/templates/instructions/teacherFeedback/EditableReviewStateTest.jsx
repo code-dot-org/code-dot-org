@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
@@ -58,7 +57,7 @@ describe('EditableReviewState', () => {
 
   describe('starting with an unchecked box', () => {
     it('when checkbox is clicked, it calls onReviewStateChange with value keepWorking', () => {
-      const onReviewStateChangeStub = sinon.stub();
+      const onReviewStateChangeStub = jest.fn();
 
       const wrapper = setUp({
         onReviewStateChange: onReviewStateChangeStub,
@@ -72,7 +71,7 @@ describe('EditableReviewState', () => {
     });
 
     it('when checkbox is clicked twice, it calls onReviewStateChange with value null', () => {
-      const onReviewStateChangeStub = sinon.stub();
+      const onReviewStateChangeStub = jest.fn();
 
       const wrapper = setUp({
         onReviewStateChange: onReviewStateChangeStub,
@@ -88,7 +87,7 @@ describe('EditableReviewState', () => {
 
   describe('starting with a checked box', () => {
     it('when checkbox is clicked, it calls onReviewStateChange with value completed', () => {
-      const onReviewStateChangeStub = sinon.stub();
+      const onReviewStateChangeStub = jest.fn();
 
       const wrapper = setUp({
         onReviewStateChange: onReviewStateChangeStub,
@@ -120,7 +119,7 @@ describe('EditableReviewState', () => {
     });
 
     it('when checkbox is click, it calls onReviewStateChange with value completed', () => {
-      const onReviewStateChangeStub = sinon.stub();
+      const onReviewStateChangeStub = jest.fn();
 
       const wrapper = setUp({
         latestReviewState: ReviewStates.awaitingReview,
@@ -133,7 +132,7 @@ describe('EditableReviewState', () => {
     });
 
     it('when checkbox is clicked twice, it calls onReviewStateChange with value keepWorking', () => {
-      const onReviewStateChangeStub = sinon.stub();
+      const onReviewStateChangeStub = jest.fn();
 
       const wrapper = setUp({
         latestReviewState: ReviewStates.awaitingReview,

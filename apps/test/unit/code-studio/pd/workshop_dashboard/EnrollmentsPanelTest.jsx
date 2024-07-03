@@ -3,7 +3,6 @@ import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-impo
 import _ from 'lodash';
 import React from 'react';
 import {Factory} from 'rosie';
-import sinon from 'sinon';
 
 import EnrollmentsPanel, {
   MOVE_ENROLLMENT_BUTTON_NAME,
@@ -26,11 +25,11 @@ describe('EnrollmentsPanel', () => {
 
   beforeEach(() => {
     server = sinon.createFakeServer();
-    loadEnrollments = sinon.spy();
+    loadEnrollments = jest.fn();
   });
 
   afterEach(() => {
-    server.restore();
+    server.mockRestore();
     server = null;
   });
 

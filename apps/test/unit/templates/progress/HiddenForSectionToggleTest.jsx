@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import Button from '@cdo/apps/templates/Button';
 import {UnconnectedHiddenForSectionToggle as HiddenForSectionToggle} from '@cdo/apps/templates/progress/HiddenForSectionToggle';
@@ -41,7 +40,7 @@ describe('HiddenForSectionToggle', () => {
   });
 
   it('calls onChange handler when buttons are clicked', () => {
-    const callback = sinon.spy();
+    const callback = jest.fn();
     const wrapper = shallow(
       <HiddenForSectionToggle hidden={false} onChange={callback} />
     );
@@ -50,7 +49,7 @@ describe('HiddenForSectionToggle', () => {
     wrapper.find(Button).at(0).props().onClick();
     expect(callback).toHaveBeenCalledWith('visible');
 
-    callback.resetHistory();
+    callback.mockReset();
 
     // Click the second button
     wrapper.find(Button).at(1).props().onClick();
@@ -58,7 +57,7 @@ describe('HiddenForSectionToggle', () => {
   });
 
   it('does not call onChange when disabled', () => {
-    const callback = sinon.spy();
+    const callback = jest.fn();
     const wrapper = shallow(
       <HiddenForSectionToggle hidden={false} onChange={callback} disabled />
     );

@@ -2,7 +2,6 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
-import sinon from 'sinon';
 
 import EditableProjectName from '@cdo/apps/code-studio/components/header/EditableProjectName';
 import projectReducer, {
@@ -62,11 +61,11 @@ describe('EditableProjectName', () => {
     expect(wrapper.find('.project_save')).toHaveLength(1);
 
     // Modifying the input and clicking save will update the name
-    const renameSpy = sinon.spy(window.dashboard.project, 'rename');
+    const renameSpy = jest.spyOn(window.dashboard.project, 'rename').mockClear();
     wrapper.find('.project_name').getDOMNode().value = 'New Name';
     wrapper.find('.project_save').simulate('click');
-    expect(renameSpy.calledOnce).toBe(true);
-    expect(renameSpy.calledWith('New Name')).toBe(true);
+    expect(renameSpy).toHaveBeenCalledTimes(1);
+    expect(renameSpy).toHaveBeenCalledWith('New Name');
 
     // This manual wait-and-update is needed because a rename is an async operation,
     // which we're faking in our test, and enzyme doesn't always re-render when needed
@@ -77,18 +76,17 @@ describe('EditableProjectName', () => {
     expect(wrapper.find('.project_name').type()).toBe('div');
     expect(wrapper.find('.project_edit')).toHaveLength(1);
     expect(wrapper.find('.project_save')).toHaveLength(0);
-    renameSpy.restore();
+    renameSpy.mockRestore();
   });
 
   it('calls lab2 rename if lab2 projects are enabled', () => {
-    const renameStub = sinon.stub().returns(Promise.resolve());
+    const renameStub = jest.fn().mockReturnValue(Promise.resolve());
     const projectManagerStub = sinon.createStubInstance(ProjectManager, {
       rename: renameStub,
     });
-    sinon
-      .stub(Lab2Registry, 'getInstance')
-      .returns({getProjectManager: () => projectManagerStub});
-    sinon.stub(Lab2Registry, 'hasEnabledProjects').returns(true);
+    jest.spyOn(Lab2Registry, 'getInstance').mockClear()
+      .mockReturnValue({getProjectManager: () => projectManagerStub});
+    jest.spyOn(Lab2Registry, 'hasEnabledProjects').mockClear().mockReturnValue(true);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -101,10 +99,10 @@ describe('EditableProjectName', () => {
 
     wrapper.find('.project_name').getDOMNode().value = 'New Name';
     wrapper.find('.project_save').simulate('click');
-    expect(renameStub.calledOnce).toBe(true);
-    expect(renameStub.calledWith('New Name')).toBe(true);
+    expect(renameStub).toHaveBeenCalledTimes(1);
+    expect(renameStub).toHaveBeenCalledWith('New Name');
 
-    Lab2Registry.getInstance.restore();
-    Lab2Registry.hasEnabledProjects.restore();
+    Lab2Registry.getInstance.mockRestore();
+    Lab2Registry.hasEnabledProjects.mockRestore();
   });
 });

@@ -1,6 +1,5 @@
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
 import RubricEditor from '@cdo/apps/lib/levelbuilder/rubrics/RubricEditor';
@@ -143,8 +142,8 @@ describe('RubricsContainerTest', () => {
   });
 
   it('changes the saveNotificationText and disables the save Button when saving rubric', async () => {
-    const mockFetch = sinon.stub(global, 'fetch');
-    mockFetch.returns(
+    const mockFetch = jest.spyOn(global, 'fetch').mockClear().mockImplementation();
+    mockFetch.mockReturnValue(
       Promise.resolve(new Response(JSON.stringify({redirectUrl: 'test_url'})))
     );
 
@@ -172,12 +171,12 @@ describe('RubricsContainerTest', () => {
     expect(notification.text()).toContain('Save complete!');
     saveButton = wrapper.find('Button.ui-test-save-button');
     expect(saveButton.props().disabled).toBe(false);
-    sinon.restore();
+    jest.restoreAllMocks();
   });
 
   it('calls the save helper on save click', () => {
-    const mockSave = sinon.stub(rubricHelper, 'saveRubricToTable');
-    mockSave.returns(
+    const mockSave = jest.spyOn(rubricHelper, 'saveRubricToTable').mockClear().mockImplementation();
+    mockSave.mockReturnValue(
       Promise.resolve(new Response(JSON.stringify({redirectUrl: 'test_url'})))
     );
 
@@ -193,7 +192,7 @@ describe('RubricsContainerTest', () => {
     let saveButton = wrapper.find('Button.ui-test-save-button');
     expect(saveButton.props().disabled).toBe(false);
     saveButton.simulate('click');
-    sinon.assert.calledWith(mockSave);
-    sinon.restore();
+    expect(mockSave).toHaveBeenCalledWith();
+    jest.restoreAllMocks();
   });
 });
