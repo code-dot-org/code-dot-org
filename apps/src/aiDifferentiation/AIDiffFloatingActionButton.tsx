@@ -22,10 +22,12 @@ const AIDiffFloatingActionButton: React.FunctionComponent = () => {
       <button
         id="ui-floatingActionButton"
         className={style.floatingActionButton}
-        style={{backgroundImage: `url(${aiFabIcon})`}}
+        // style={{backgroundImage: `url(${aiFabIcon})`}}
         onClick={handleClick}
         type="button"
-      />
+      >
+        <img alt="AI bot" src={aiFabIcon} />
+      </button>
       <AIDiffContainer open={isOpen} closeTutor={handleClick} />
     </div>
   );
