@@ -58,9 +58,8 @@ const Console: React.FunctionComponent = () => {
         {codeOutput.map((outputLine, index) => {
           if (outputLine.type === 'img') {
             return (
-              <>
+              <div key={index}>
                 <img
-                  key={index}
                   src={`data:image/png;base64,${outputLine.contents}`}
                   alt="matplotlib_image"
                 />
@@ -75,12 +74,11 @@ const Console: React.FunctionComponent = () => {
                 />
                 {graphModalOpen && (
                   <GraphModal
-                    key={index}
                     src={`data:image/png;base64,${outputLine.contents}`}
                     onClose={() => setGraphModalOpen(false)}
                   />
                 )}
-              </>
+              </div>
             );
           } else if (
             outputLine.type === 'system_out' ||
