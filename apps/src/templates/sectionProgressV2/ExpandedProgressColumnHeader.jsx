@@ -18,8 +18,7 @@ function ExpandedProgressColumnHeader({
   sectionId,
   lesson,
   removeExpandedLesson,
-  expandedChoiceLevels,
-  toggleExpandedChoiceLevel,
+  expandedChoiceLevelIds,
 }) {
   const expandedLevelHeaderRef = React.useRef();
 
@@ -41,7 +40,7 @@ function ExpandedProgressColumnHeader({
 
   // If there are 2 or less levels, we only show the number so that the text fits the cell.
   const headerText =
-    lesson.levels.length < 3 && expandedChoiceLevels.length === 0
+    lesson.levels.length < 3 && expandedChoiceLevelIds.length === 0
       ? lesson.relative_position
       : lesson.title;
 
@@ -91,8 +90,7 @@ function ExpandedProgressColumnHeader({
             key={level.id}
             lesson={lesson}
             level={level}
-            isLevelExpanded={expandedChoiceLevels.includes(level.id)}
-            toggleExpandedChoiceLevel={toggleExpandedChoiceLevel}
+            isLevelExpanded={expandedChoiceLevelIds.includes(level.id)}
           />
         ))}
       </tr>
@@ -104,6 +102,7 @@ export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId,
     scriptId: state.unitSelection.scriptId,
+    expandedChoiceLevelIds: state.sectionProgress.expandedChoiceLevelIds,
   }),
   dispatch => ({
     removeExpandedLesson(scriptId, sectionId, lessonId) {
@@ -117,6 +116,5 @@ ExpandedProgressColumnHeader.propTypes = {
   sectionId: PropTypes.number.isRequired,
   lesson: PropTypes.object.isRequired,
   removeExpandedLesson: PropTypes.func.isRequired,
-  expandedChoiceLevels: PropTypes.arrayOf(PropTypes.string).isRequired,
-  toggleExpandedChoiceLevel: PropTypes.func.isRequired,
+  expandedChoiceLevelIds: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

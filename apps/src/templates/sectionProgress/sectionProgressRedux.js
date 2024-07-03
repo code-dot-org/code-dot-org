@@ -70,10 +70,10 @@ export const removeExpandedLesson = (scriptId, sectionId, lessonId) => ({
   lessonId,
 });
 
-export const toggleExpandedChoiceLevel = (sectionId, levelId) => ({
+export const toggleExpandedChoiceLevel = (sectionId, level) => ({
   type: TOGGLE_EXPANDED_CHOICE_LEVEL,
   sectionId,
-  levelId,
+  level,
 });
 
 export const expandMetadataForStudents = studentIds => ({
@@ -98,7 +98,7 @@ const initialState = {
   isLoadingProgress: false,
   isRefreshingProgress: false,
   expandedLessonIds: {},
-  expandedChoiceLevelIds: {},
+  expandedChoiceLevelIds: [],
   expandedMetadataStudentIds: [],
 };
 
@@ -229,19 +229,31 @@ export default function sectionProgress(state = initialState, action) {
     };
   }
   if (action.type === TOGGLE_EXPANDED_CHOICE_LEVEL) {
-    const newSectionExpandedChoiceLevelIds = state.expandedChoiceLevelIds[
-      action.sectionId
-    ].includes(action.levelId)
-      ? state.expandedChoiceLevelIds.filter(id => id !== action.levelId)
-      : [...state.expandedChoiceLevelIds, action.levelId];
+    if (state.expandedChoiceLevelIds.includes(action.level.id)) {
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_COLLAPSE_CHOICE_LEVEL, {
+        sectionId: action.sectionId,
+        levelId: action.level.id,
+      });
 
-    return {
-      ...state,
-      expandedChoiceLevelIds: {
-        ...state.expandedChoiceLevelIds,
-        [action.sectionId]: newSectionExpandedChoiceLevelIds,
-      },
-    };
+      return {
+        ...state,
+        expandedChoiceLevelIds: state.expandedChoiceLevelIds.filter(
+          l => l !== action.level.id
+        ),
+      };
+    } else if (action.level?.sublevels?.length > 0) {
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_EXPAND_CHOICE_LEVEL, {
+        sectionId: action.sectionId,
+        levelId: action.level.id,
+      });
+      return {
+        ...state,
+        expandedChoiceLevelIds: [
+          ...state.expandedChoiceLevelIds,
+          action.level.id,
+        ],
+      };
+    }
   }
   if (action.type === EXPAND_METADATA_FOR_STUDENTS) {
     return {
