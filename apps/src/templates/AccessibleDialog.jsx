@@ -48,7 +48,7 @@ function AccessibleDialog({
                 aria-hidden={true}
               />
               <span className="sr-only">Close</span>
-             </button>
+            </button>
             {children}
           </div>
         </FocusTrap>

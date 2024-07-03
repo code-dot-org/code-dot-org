@@ -633,8 +633,8 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       onClose={handleOnClose}
       initialFocus={false}
       styles={{
-        modalBackdrop: moduleStyles.modalBackdrop, 
-        xCloseButton: moduleStyles.xCloseButton 
+        modalBackdrop: moduleStyles.modalBackdrop,
+        xCloseButton: moduleStyles.xCloseButton,
       }}
     >
       <DanceAiModalHeader
