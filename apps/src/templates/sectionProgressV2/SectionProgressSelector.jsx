@@ -30,6 +30,21 @@ function SectionProgressSelector({
   const [hasJustSwitchedToV2, setHasJustSwitchedToV2] = React.useState(false);
   const params = queryParams('view');
 
+  // const [params, setParams] = React.useState(null);
+
+  // useEffect(() => {
+  //   setParams(queryParams('view'));
+  // }, []);
+
+  const removeQueryParams = () => {
+    const url =
+      window.location.protocol +
+      '//' +
+      window.location.host +
+      window.location.pathname;
+    window.history.pushState({path: url}, '', url);
+  };
+
   const onShowProgressTableV2Change = useCallback(() => {
     const shouldShowV2 = !showProgressTableV2;
     new UserPreferences().setShowProgressTableV2(shouldShowV2);
@@ -44,6 +59,7 @@ function SectionProgressSelector({
       analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW_OLD_PROGRESS, {
         sectionId: sectionId,
       });
+      removeQueryParams();
     }
   }, [showProgressTableV2, setShowProgressTableV2, sectionId]);
 
@@ -85,10 +101,10 @@ function SectionProgressSelector({
   // If there is a url pram, use that param to determine to show V2.
   const displayV2FromUrl = params === 'v2';
 
-  const displayV2 = isPreferenceSet
-    ? showProgressTableV2
-    : displayV2FromUrl
+  const displayV2 = displayV2FromUrl
     ? true
+    : isPreferenceSet
+    ? showProgressTableV2
     : DCDO.get('progress-table-v2-default-v2', false);
 
   // const displayV2 = isPreferenceSet
