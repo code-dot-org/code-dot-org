@@ -2,7 +2,6 @@ import {
   shouldUseFoormSurvey,
   shouldShowSurveyResults,
 } from '../../../../../src/code-studio/pd/workshop_dashboard/workshop_summary_utils';
-import {assert} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('Workshop Summary Utils', () => {
   it('shouldUseFoormSurvey returns correct result', () => {

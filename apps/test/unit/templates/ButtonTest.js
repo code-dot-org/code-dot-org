@@ -4,8 +4,6 @@ import sinon from 'sinon';
 
 import Button from '@cdo/apps/templates/Button';
 
-import {assert} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 import style from '@cdo/apps/templates/button.module.scss';
 
 describe('Button', () => {

@@ -21,7 +21,6 @@ import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import * as utils from '@cdo/apps/utils';
 import commonMsg from '@cdo/locale';
 
-import {assert} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 import setupBlocklyGlobal from '../../util/setupBlocklyGlobal';
 import * as testUtils from '../../util/testUtils';
 

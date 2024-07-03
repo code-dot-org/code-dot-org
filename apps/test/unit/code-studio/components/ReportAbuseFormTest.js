@@ -4,8 +4,6 @@ import React from 'react';
 import ReportAbuseForm from '@cdo/apps/code-studio/components/ReportAbuseForm';
 import {getChannelIdFromUrl} from '@cdo/apps/reportAbuse';
 
-import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 describe('ReportAbuseForm', () => {
   it('getChannelIdFromUrl returns the channel id for codeprojects', () => {
     expect(getChannelIdFromUrl('https://codeprojects.org/123abc/')).toEqual(

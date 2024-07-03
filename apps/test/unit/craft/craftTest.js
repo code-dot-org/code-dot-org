@@ -9,8 +9,6 @@ import {
 } from '@cdo/apps/redux';
 import pageConstants from '@cdo/apps/redux/pageConstants';
 
-import {assert} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 describe('Craft', () => {
   beforeAll(() => sinon.stub(Craft, 'render'));
   afterAll(() => Craft.render.restore());

@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedMiniView as MiniView} from '@cdo/apps/code-studio/components/progress/MiniView';
 
-import {assert} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 describe('MiniView', () => {
   const defaultProps = {
     isSummaryView: false,

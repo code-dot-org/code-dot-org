@@ -9,8 +9,6 @@ import currentUser, {
   CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
 
-import {assert} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 describe('currentUserRedux', () => {
   const initialState = currentUser(undefined, {});
 

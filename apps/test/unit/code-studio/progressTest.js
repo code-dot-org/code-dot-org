@@ -1,6 +1,5 @@
 /** @file Test of progress.js. */
 
-import assert from 'assert';
 import queryString from 'query-string';
 import sinon from 'sinon';
 

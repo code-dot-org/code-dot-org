@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedSendLessonDialog as SendLessonDialog} from '@cdo/apps/templates/progress/SendLessonDialog';
 
-import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 const lessonUrl = 'https://studio.code.org/s/coursee-2020/lessons/2/levels/1';
 
 describe('SendLessonDialog', () => {

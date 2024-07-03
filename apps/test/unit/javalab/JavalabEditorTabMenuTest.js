@@ -4,8 +4,6 @@ import React from 'react';
 import {JavalabEditorTabMenu} from '@cdo/apps/javalab/JavalabEditorTabMenu';
 import javalabMsg from '@cdo/javalab/locale';
 
-import {assert} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 describe('JavalabEditorTabMenu', () => {
   let cancelTabMenu,
     renameFromTabMenu,

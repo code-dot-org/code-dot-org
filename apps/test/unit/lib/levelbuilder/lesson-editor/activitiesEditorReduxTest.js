@@ -23,8 +23,6 @@ import reducers, {
   getSerializedActivities,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 
-import {assert} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 import {sampleActivities} from './activitiesTestData';
 
 const getInitialState = () => ({

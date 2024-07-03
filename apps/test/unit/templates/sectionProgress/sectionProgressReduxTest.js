@@ -16,8 +16,6 @@ import sectionProgress, {
   removeExpandedLesson,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
-import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 const fakeUnitData789 = {
   unitDataByUnit: {
     [789]: {

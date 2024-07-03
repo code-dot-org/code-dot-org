@@ -8,7 +8,6 @@ import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashb
 import * as utils from '@cdo/apps/utils';
 
 import {VisibilityType} from '../../../../src/code-studio/announcementsRedux';
-import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const defaultProps = {
   name: 'csp',

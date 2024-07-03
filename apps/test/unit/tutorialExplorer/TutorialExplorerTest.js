@@ -6,8 +6,6 @@ import {
   orgNameMinecraft,
 } from '@cdo/apps/tutorialExplorer/util';
 
-var assert = require('assert');
-
 describe('TutorialExplorer filterTutorials tests', function () {
   const longOrgName = 'them-012345678901234567890123456789';
   const tutorials = [

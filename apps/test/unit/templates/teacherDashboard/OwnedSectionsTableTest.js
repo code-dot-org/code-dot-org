@@ -14,8 +14,6 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 const sectionRowData = [
   {
     id: 1,

@@ -4,8 +4,6 @@ import React from 'react';
 import {UnconnectedShareDialog as ShareDialog} from '@cdo/apps/code-studio/components/ShareDialog';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
-import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 describe('ShareDialog', () => {
   it('renders our signed in version when signed in', () => {
     const wrapper = shallow(

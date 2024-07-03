@@ -20,8 +20,6 @@ import {
   fakeState,
 } from '@cdo/apps/templates/sectionProgress/standards/standardsTestHelpers';
 
-import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 describe('sectionStandardsProgressRedux', () => {
   const initialState = sectionStandardsProgress(undefined, {});
 

@@ -16,8 +16,6 @@ import ConfirmRemoveStudentDialog, {
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
-import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 const studentName = MINIMUM_TEST_PROPS.studentName;
 
 describe('ConfirmRemoveStudentDialog', () => {

@@ -5,8 +5,6 @@ import SoundListEntry from '@cdo/apps/code-studio/components/SoundListEntry';
 import Sounds from '@cdo/apps/Sounds';
 import color from '@cdo/apps/util/color';
 
-import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 describe('SoundListEntry', () => {
   const sounds = new Sounds();
   const sourceURL =

@@ -4,8 +4,6 @@ import React from 'react';
 import {UnconnectedProgressBubbleSet as ProgressBubbleSet} from '@cdo/apps/templates/progress/ProgressBubbleSet';
 import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
 
-import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 const defaultProps = {
   levels: fakeLevels(5),
   disabled: false,

@@ -3,8 +3,6 @@ import React from 'react';
 
 import CheckboxDropdown from '@cdo/apps/templates/CheckboxDropdown';
 
-import {assert} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 describe('CheckboxDropdown', function () {
   const colorOptions = {
     red: 'Red',

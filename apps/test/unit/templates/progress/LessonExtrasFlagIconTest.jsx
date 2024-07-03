@@ -4,8 +4,6 @@ import React from 'react';
 import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagIcon';
 import color from '@cdo/apps/util/color';
 
-import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 describe('LessonExtrasFlagIcon', () => {
   it('has a grey flag icon when not selected, not perfect', () => {
     const wrapper = shallow(<LessonExtrasFlagIcon />);

@@ -12,7 +12,7 @@ import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import {UnconnectedLessonOverview as LessonOverview} from '@cdo/apps/templates/lessonOverview/LessonOverview';
 import * as currentLocaleModule from '@cdo/apps/util/currentLocale';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert, expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 import {
   fakeStudentAnnouncement,
   fakeTeacherAndStudentAnnouncement,

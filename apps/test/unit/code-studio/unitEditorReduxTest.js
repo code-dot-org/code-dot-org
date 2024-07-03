@@ -12,8 +12,6 @@ import reducers, {
   mapLessonGroupDataForEditor,
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 
-import {assert} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 const getInitialState = () => ({
   lessonGroups: [
     {

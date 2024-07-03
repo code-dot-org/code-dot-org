@@ -8,8 +8,6 @@ import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
 import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
 import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';
 
-import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 import {
   courses,
   moreCourses,

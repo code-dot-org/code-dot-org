@@ -8,8 +8,6 @@ import {
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import {UnconnectedSummaryProgressTable as SummaryProgressTable} from '@cdo/apps/templates/progress/SummaryProgressTable';
 
-import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 describe('SummaryProgressTable', () => {
   const lessons = [
     fakeLesson('lesson1', 1),

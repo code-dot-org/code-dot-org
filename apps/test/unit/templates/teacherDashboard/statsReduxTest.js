@@ -2,8 +2,6 @@ import stats, {
   setCompletedLevelCount,
 } from '@cdo/apps/templates/teacherDashboard/statsRedux';
 
-import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 // Key-value pairs where the key is the student id and value is
 // the count of completed levels for that student.
 const completedLevelCountByStudentId = {

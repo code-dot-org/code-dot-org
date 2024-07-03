@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from 'chai'; //eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import sinon from 'sinon';
 

@@ -4,8 +4,6 @@ import React from 'react';
 import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
-import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 const defaultProps = {
   onChangeVersion: () => {},
   selectedCourseVersionId: 1,

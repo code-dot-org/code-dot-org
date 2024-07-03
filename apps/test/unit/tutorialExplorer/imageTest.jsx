@@ -3,8 +3,6 @@ import React from 'react';
 
 import Image from '@cdo/apps/tutorialExplorer/image';
 
-import {assert} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 describe('Image', () => {
   it('renders with minimum opacity at first', () => {
     const wrapper = shallow(<Image style={{}} />, {

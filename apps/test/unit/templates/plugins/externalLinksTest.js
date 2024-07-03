@@ -1,7 +1,5 @@
 import {isExternalLink} from '@cdo/apps/templates/plugins/externalLinks';
 
-import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 describe('external links remark plugin', () => {
   it('treats relative links as internal', () => {
     expect(isExternalLink('/educate')).toEqual(false);

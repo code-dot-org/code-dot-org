@@ -9,8 +9,6 @@ import {
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import color from '@cdo/apps/util/color';
 
-import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 describe('ProgressLesson', () => {
   const lessonNumber = 3;
   const defaultProps = {

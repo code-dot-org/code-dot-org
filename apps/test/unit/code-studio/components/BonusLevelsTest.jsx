@@ -3,8 +3,6 @@ import React from 'react';
 
 import BonusLevels from '@cdo/apps/code-studio/components/lessonExtras/BonusLevels';
 
-import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 import {bonusLevels} from './lessonExtrasTestHelpers';
 
 const DEFAULT_PROPS = {

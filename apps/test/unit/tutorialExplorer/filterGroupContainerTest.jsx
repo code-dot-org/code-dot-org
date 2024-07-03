@@ -3,8 +3,6 @@ import React from 'react';
 
 import FilterGroupContainer from '@cdo/apps/tutorialExplorer/filterGroupContainer';
 
-import {assert} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 describe('FilterGroupContainer', () => {
   it('renders', () => {
     const title = 'Three Types of Tetris';

@@ -2,10 +2,10 @@
 // scope for HeadlessChrome to run properly.
 import sinon from 'sinon';
 
-import craftI18n from '@cdo/apps/craft/locale'; // eslint-disable-line no-unused-vars
+// eslint-disable-line no-unused-vars
 import * as craftRedux from '@cdo/apps/craft/redux';
 import * as utils from '@cdo/apps/craft/utils';
-import commonI18n from '@cdo/locale'; // eslint-disable-line no-unused-vars
+// eslint-disable-line no-unused-vars
 
 import {expect} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 

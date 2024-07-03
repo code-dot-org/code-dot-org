@@ -5,8 +5,6 @@ import {UnconnectedUnitOverviewHeader as UnitOverviewHeader} from '@cdo/apps/cod
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
-import {assert} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 import {
   fakeStudentAnnouncement,
   fakeTeacherAndStudentAnnouncement,

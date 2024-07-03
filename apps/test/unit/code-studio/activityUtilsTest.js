@@ -4,8 +4,6 @@ import {
 } from '@cdo/apps/code-studio/activityUtils';
 import {TestResults} from '@cdo/apps/constants';
 
-var assert = require('assert');
-
 describe('mergeActivityResult', function () {
   it('returns the result with highest priority', function () {
     expect(mergeActivityResult(100, 200)).toBe(200);

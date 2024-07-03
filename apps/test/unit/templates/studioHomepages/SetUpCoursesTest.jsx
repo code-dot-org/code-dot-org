@@ -4,8 +4,6 @@ import React from 'react';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
 
-import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 describe('SetUpCourses', () => {
   it('renders as expected for a teacher', () => {
     const wrapper = shallow(<SetUpCourses isTeacher={true} />);

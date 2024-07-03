@@ -1,5 +1,3 @@
-import {assert} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 describe('CommandHistory', function () {
   var CommandHistory = require('@cdo/apps/lib/tools/jsdebugger/CommandHistory');
   var history, inputText;

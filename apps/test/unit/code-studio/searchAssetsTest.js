@@ -1,7 +1,5 @@
 /** @file Test of searchAssetsTest.js. */
 
-import assert from 'assert';
-
 import {searchAssets} from '@cdo/apps/code-studio/assets/searchAssets';
 import soundLibrary from '@cdo/apps/code-studio/soundLibrary.json';
 

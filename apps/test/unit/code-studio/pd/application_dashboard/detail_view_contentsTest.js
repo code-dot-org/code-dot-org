@@ -12,7 +12,6 @@ import {DetailViewContents} from '@cdo/apps/code-studio/pd/application_dashboard
 import {PrincipalApprovalState} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {getStore, restoreRedux, stubRedux} from '@cdo/apps/redux';
 
-import {assert} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 import {allowConsoleWarnings} from '../../../../util/testUtils';
 
 describe('DetailViewContents', () => {

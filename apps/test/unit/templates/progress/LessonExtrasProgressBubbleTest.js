@@ -6,8 +6,6 @@ import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagI
 import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
 import * as utils from '@cdo/apps/utils';
 
-import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
-
 const defaultProps = {
   lessonExtrasUrl: '/extras',
   isPerfect: false,
