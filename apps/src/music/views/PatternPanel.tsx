@@ -12,6 +12,8 @@ import MusicLibrary, {SoundData} from '../player/MusicLibrary';
 import {PatternEventValue} from '../player/interfaces/PatternEvent';
 import LoadingOverlay from './LoadingOverlay';
 import MusicPlayer from '../player/MusicPlayer';
+import aiBot from '@cdo/static/ai-bot.png';
+import {generatePattern} from '../ai/patternAi';
 
 // Generate an array containing tick numbers from 1..16.
 const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
@@ -146,6 +148,18 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
     registerInstrumentLoadCallback,
   ]);
 
+  const handleAiClick = useCallback(async () => {
+    const seedEvents = currentValue.events.filter(event => event.tick < 4);
+    const newEvents = await generatePattern(seedEvents, 28 - 16 /* 16 - 4*/);
+
+    const newValue: PatternEventValue = {
+      kit: currentValue.kit,
+      events: newEvents,
+    };
+
+    onChange(newValue);
+  }, [currentValue, onChange]);
+
   return (
     <div className={styles.patternPanel}>
       <select value={currentValue.kit} onChange={handleFolderChange}>
@@ -155,6 +169,12 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
           </option>
         ))}
       </select>
+      <img
+        src={aiBot}
+        alt=""
+        style={{width: 20, float: 'right'}}
+        onClick={handleAiClick}
+      />
       <LoadingOverlay show={isLoading} />
       {currentFolder.sounds.map((sound, index) => {
         return (
