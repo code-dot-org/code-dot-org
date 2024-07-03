@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "k5-ai-data",
-    "serialized_at": "2024-07-01 20:33:50 UTC",
+    "serialized_at": "2024-07-02 21:41:43 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1380,15 +1380,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Oceans_Video_Machine_Learning_2024"
-        ],
         "progression": "Machine Learning Video"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Oceans_Video_Machine_Learning_2024"
+          "Oceans_Video_Elementary_Machine_Learning_2024"
         ],
         "lesson.key": "Training AI",
         "lesson_group.key": "",
@@ -1396,7 +1393,7 @@
         "activity_section.key": "6da31799-aded-4ea1-b1e3-68e320db0613"
       },
       "level_keys": [
-        "Oceans_Video_Machine_Learning_2024"
+        "Oceans_Video_Elementary_Machine_Learning_2024"
       ]
     },
     {
@@ -1812,9 +1809,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Oceans_Video_Machine_Learning_2024",
+        "level.key": "Oceans_Video_Elementary_Machine_Learning_2024",
         "script_level.level_keys": [
-          "Oceans_Video_Machine_Learning_2024"
+          "Oceans_Video_Elementary_Machine_Learning_2024"
         ],
         "lesson.key": "Training AI",
         "lesson_group.key": "",
