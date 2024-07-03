@@ -18,13 +18,13 @@ describe('FilterGroupContainer', () => {
     const wrapper = shallow(
       <FilterGroupContainer text={title}>{content}</FilterGroupContainer>
     );
-    assert(
+    expect(
       wrapper.containsMatchingElement(
         <div>
           <div>{title}</div>
           {content}
         </div>
       )
-    );
+    ).toBeTruthy();
   });
 });

@@ -12,8 +12,7 @@ describe('ProjectHeader', () => {
       <ProjectHeader canViewAdvancedTools={true} projectCount={200} />
     );
 
-    assert.equal(
-      wrapper.find(HeaderBanner).props().subHeadingText,
+    expect(wrapper.find(HeaderBanner).props().subHeadingText).toEqual(
       'Over 200 million projects created'
     );
   });

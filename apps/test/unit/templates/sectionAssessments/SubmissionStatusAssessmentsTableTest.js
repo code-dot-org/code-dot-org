@@ -44,7 +44,7 @@ describe('SubmissionStatusAssessmentsTable', () => {
     );
 
     const icon = wrapper.find('FontAwesome');
-    assert(icon);
+    expect(icon).toBeTruthy();
   });
 
   it('renders a checkmark when an assessment is submitted', () => {
@@ -55,7 +55,7 @@ describe('SubmissionStatusAssessmentsTable', () => {
     );
 
     const checkMarkIcons = wrapper.find('.fa-check-circle');
-    assert.equal(checkMarkIcons.length, 6);
+    expect(checkMarkIcons.length).toEqual(6);
   });
 
   it('sorts submissions by date accurately', () => {
@@ -66,95 +66,75 @@ describe('SubmissionStatusAssessmentsTable', () => {
     );
 
     const timeStampCells = wrapper.find('.timestampCell');
-    assert.equal(timeStampCells.length, 10);
+    expect(timeStampCells.length).toEqual(10);
 
     const timestampHeaderCell = wrapper.find('#timestampHeaderCell');
 
     // Sort with oldest first
     timestampHeaderCell.simulate('click');
 
-    assert.equal(
-      wrapper.find('.timestampCell').at(0).text(),
+    expect(wrapper.find('.timestampCell').at(0).text()).toEqual(
       i18n.notStarted()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(1).text(),
+    expect(wrapper.find('.timestampCell').at(1).text()).toEqual(
       i18n.notStarted()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(2).text(),
+    expect(wrapper.find('.timestampCell').at(2).text()).toEqual(
       i18n.inProgress()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(3).text(),
+    expect(wrapper.find('.timestampCell').at(3).text()).toEqual(
       i18n.inProgress()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(4).text(),
+    expect(wrapper.find('.timestampCell').at(4).text()).toEqual(
       testDataTimestamps.oldest.toLocaleString()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(5).text(),
+    expect(wrapper.find('.timestampCell').at(5).text()).toEqual(
       testDataTimestamps.older.toLocaleString()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(6).text(),
+    expect(wrapper.find('.timestampCell').at(6).text()).toEqual(
       testDataTimestamps.old.toLocaleString()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(7).text(),
+    expect(wrapper.find('.timestampCell').at(7).text()).toEqual(
       testDataTimestamps.new.toLocaleString()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(8).text(),
+    expect(wrapper.find('.timestampCell').at(8).text()).toEqual(
       testDataTimestamps.newer.toLocaleString()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(9).text(),
+    expect(wrapper.find('.timestampCell').at(9).text()).toEqual(
       testDataTimestamps.newest.toLocaleString()
     );
 
     //Sort with newest first
     timestampHeaderCell.simulate('click');
 
-    assert.equal(
-      wrapper.find('.timestampCell').at(9).text(),
+    expect(wrapper.find('.timestampCell').at(9).text()).toEqual(
       i18n.notStarted()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(8).text(),
+    expect(wrapper.find('.timestampCell').at(8).text()).toEqual(
       i18n.notStarted()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(7).text(),
+    expect(wrapper.find('.timestampCell').at(7).text()).toEqual(
       i18n.inProgress()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(6).text(),
+    expect(wrapper.find('.timestampCell').at(6).text()).toEqual(
       i18n.inProgress()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(5).text(),
+    expect(wrapper.find('.timestampCell').at(5).text()).toEqual(
       testDataTimestamps.oldest.toLocaleString()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(4).text(),
+    expect(wrapper.find('.timestampCell').at(4).text()).toEqual(
       testDataTimestamps.older.toLocaleString()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(3).text(),
+    expect(wrapper.find('.timestampCell').at(3).text()).toEqual(
       testDataTimestamps.old.toLocaleString()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(2).text(),
+    expect(wrapper.find('.timestampCell').at(2).text()).toEqual(
       testDataTimestamps.new.toLocaleString()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(1).text(),
+    expect(wrapper.find('.timestampCell').at(1).text()).toEqual(
       testDataTimestamps.newer.toLocaleString()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(0).text(),
+    expect(wrapper.find('.timestampCell').at(0).text()).toEqual(
       testDataTimestamps.newest.toLocaleString()
     );
   });

@@ -123,7 +123,7 @@ describe('DetailViewContents', () => {
         'Awaiting Admin Approval'
       );
       statusDropdowns.forEach(statusDropdown => {
-        assert(statusDropdown.disabled);
+        expect(statusDropdown.disabled).toBeTruthy();
       });
     });
 
@@ -222,23 +222,23 @@ describe('DetailViewContents', () => {
 
       // Dropdowns and notes are disabled before Edit button is clicked
       screen.getAllByDisplayValue('Accepted').forEach(dropdown => {
-        assert(dropdown.disabled);
+        expect(dropdown.disabled).toBeTruthy();
       });
-      assert(screen.getByDisplayValue('notes').disabled);
+      expect(screen.getByDisplayValue('notes').disabled).toBeTruthy();
 
       // Dropdowns and notes are enabled after Edit button is clicked
       fireEvent.click(screen.getAllByText('Edit')[0]);
       screen.getAllByDisplayValue('Accepted').forEach(dropdown => {
-        assert(!dropdown.disabled);
+        expect(!dropdown.disabled).toBeTruthy();
       });
-      assert(!screen.getByDisplayValue('notes').disabled);
+      expect(!screen.getByDisplayValue('notes').disabled).toBeTruthy();
 
       // Dropdowns and notes are disabled after Cancel or Save button is clicked
       fireEvent.click(screen.getAllByText('Cancel')[0]);
       screen.getAllByDisplayValue('Accepted').forEach(dropdown => {
-        assert(dropdown.disabled);
+        expect(dropdown.disabled).toBeTruthy();
       });
-      assert(screen.getByDisplayValue('notes').disabled);
+      expect(screen.getByDisplayValue('notes').disabled).toBeTruthy();
     });
   });
 
@@ -260,11 +260,11 @@ describe('DetailViewContents', () => {
       };
       renderDefault(overrideProps);
 
-      assert(
+      expect(
         screen
           .getAllByRole('link')[1]
           .href.includes(`/pd/application/principal_approval/${guid}`)
-      );
+      ).toBeTruthy();
     });
 
     it(`Shows complete text for principal approval if complete`, () => {
@@ -376,19 +376,19 @@ describe('DetailViewContents', () => {
           .parentElement.parentElement;
 
       // Dropdown is disabled
-      assert(selectDropdown.classList.contains('is-disabled'));
+      expect(selectDropdown.classList.contains('is-disabled')).toBeTruthy();
 
       // Click "Edit"
       fireEvent.click(screen.getAllByText('Edit')[0]);
 
       // Dropdown is no longer disabled
-      assert(!selectDropdown.classList.contains('is-disabled'));
+      expect(!selectDropdown.classList.contains('is-disabled')).toBeTruthy();
 
       // Click "Cancel"
       fireEvent.click(screen.getAllByText('Cancel')[0]);
 
       // Dropdown is disabled
-      assert(selectDropdown.classList.contains('is-disabled'));
+      expect(selectDropdown.classList.contains('is-disabled')).toBeTruthy();
     });
   });
 
@@ -437,7 +437,7 @@ describe('DetailViewContents', () => {
       renderDefault(overrideProps);
 
       // Ensure application status is 'Unreviewed' and scholarship status is null (showing default "Select..." value)
-      assert(!isModalShowing());
+      expect(!isModalShowing()).toBeTruthy();
       screen.getByText('Select...');
       expect(screen.getAllByDisplayValue('Unreviewed').length).toBe(2);
 
@@ -445,7 +445,7 @@ describe('DetailViewContents', () => {
       // the user to set the scholarship status first
       clickEditButton();
       setApplicationStatusTo('Unreviewed', 'accepted');
-      assert(isModalShowing());
+      expect(isModalShowing()).toBeTruthy();
     });
 
     for (const applicationStatus of _.difference(
@@ -464,14 +464,14 @@ describe('DetailViewContents', () => {
         renderDefault(overrideProps);
 
         // Ensure application status is 'Unreviewed' and scholarship status is null (showing default "Select..." value)
-        assert(!isModalShowing());
+        expect(!isModalShowing()).toBeTruthy();
         screen.getByText('Select...');
         expect(screen.getAllByDisplayValue('Unreviewed').length).toBe(2);
 
         // Change application status without updating scholarship status, and ensure that no modal pops up
         clickEditButton();
         setApplicationStatusTo('Unreviewed', applicationStatus);
-        assert(!isModalShowing());
+        expect(!isModalShowing()).toBeTruthy();
 
         // Check that status successfully updated
         const statusDisplayValue = getApplicationStatuses()[applicationStatus];

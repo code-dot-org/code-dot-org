@@ -8,7 +8,7 @@ import {
   generateLevelAnimationsManifest,
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 
-import {expect, assert} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+import {expect, assert} from '../../util/reconfiguredChai';
 
 import testAnimationLibrary from './testAnimationLibrary.json';
 

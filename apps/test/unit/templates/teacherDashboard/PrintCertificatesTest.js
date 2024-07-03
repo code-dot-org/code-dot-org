@@ -19,19 +19,21 @@ describe('PrintCertificates', () => {
   );
 
   it('renders a form', () => {
-    assert(wrapper.is('form'));
-    assert(wrapper.props().action, pegasus('/certificates'));
+    expect(wrapper.is('form')).toBeTruthy();
+    expect(wrapper.props().action).toBeTruthy();
   });
 
   it('has a hidden input for the course name', () => {
-    assert(wrapper.childAt(1).is('input'));
-    assert.equal(wrapper.childAt(1).props().type, 'hidden');
-    assert.equal(atob(wrapper.childAt(1).props().value), 'playlab');
+    expect(wrapper.childAt(1).is('input')).toBeTruthy();
+    expect(wrapper.childAt(1).props().type).toEqual('hidden');
+    expect(atob(wrapper.childAt(1).props().value)).toEqual('playlab');
   });
 
   it('has trigger to open /certificates', () => {
-    assert.equal(wrapper.find('div').length, 2);
-    assert(wrapper.find('div').last().contains('Print Certificates'));
+    expect(wrapper.find('div').length).toEqual(2);
+    expect(
+      wrapper.find('div').last().contains('Print Certificates')
+    ).toBeTruthy();
   });
 
   it('loads student names', finish => {
@@ -52,7 +54,7 @@ describe('PrintCertificates', () => {
     };
 
     wrapper.instance().submitForm = () => {
-      assert.deepEqual(wrapper.state('names'), [
+      expect(wrapper.state('names')).toEqual([
         'Student A',
         'Student B',
         'Student C',
@@ -60,7 +62,7 @@ describe('PrintCertificates', () => {
       finish();
     };
 
-    assert.deepEqual(wrapper.state('names'), []);
+    expect(wrapper.state('names')).toEqual([]);
     wrapper.find('div').last().simulate('click');
     sinon.restore();
   });

@@ -41,6 +41,6 @@ describe('LessonExtras', () => {
 
   it('renders BonusLevels area', () => {
     const wrapper = shallow(<LessonExtras {...DEFAULT_PROPS} />);
-    assert.equal(1, wrapper.find('BonusLevels').length);
+    expect(1).toEqual(wrapper.find('BonusLevels').length);
   });
 });

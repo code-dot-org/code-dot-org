@@ -50,13 +50,13 @@ describe('LibraryClientApi', () => {
       libraryApi.unpublish(project, unpublishCallback);
       server.respond();
 
-      assert(
+      expect(
         channelUpdateStub.calledOnceWith(
           channelId,
           updatedProject,
           unpublishCallback
         )
-      );
+      ).toBeTruthy();
     });
 
     it('invokes callback on failure', () => {
@@ -65,8 +65,8 @@ describe('LibraryClientApi', () => {
       libraryApi.unpublish(project, unpublishCallback);
       server.respond();
 
-      assert.equal(0, channelUpdateStub.callCount);
-      assert(unpublishCallback.calledOnce);
+      expect(0).toEqual(channelUpdateStub.callCount);
+      expect(unpublishCallback.calledOnce).toBeTruthy();
     });
   });
 });

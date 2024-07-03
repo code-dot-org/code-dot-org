@@ -28,7 +28,7 @@ describe('RecentCourses', () => {
           isProfessionalLearningCourse={false}
         />
       );
-      assert.equal(wrapper.find('ViewFeedback').length, 1);
+      expect(wrapper.find('ViewFeedback').length).toEqual(1);
     });
 
     it('shows ViewFeedback when hasFeedback is false', () => {
@@ -40,7 +40,7 @@ describe('RecentCourses', () => {
           isProfessionalLearningCourse={false}
         />
       );
-      assert.equal(wrapper.find('ViewFeedback').length, 0);
+      expect(wrapper.find('ViewFeedback').length).toEqual(0);
     });
     it('shows SetUpCourses when there are no courses', () => {
       const wrapper = shallow(
@@ -192,7 +192,7 @@ describe('RecentCourses', () => {
           isProfessionalLearningCourse={true}
         />
       );
-      assert.equal(wrapper.find('SetUpCourses').length, 0);
+      expect(wrapper.find('SetUpCourses').length).toEqual(0);
     });
 
     it('shows ViewFeedback when hasFeedback is true', () => {
@@ -204,7 +204,7 @@ describe('RecentCourses', () => {
           isProfessionalLearningCourse={true}
         />
       );
-      assert.equal(wrapper.find('ViewFeedback').length, 1);
+      expect(wrapper.find('ViewFeedback').length).toEqual(1);
     });
 
     it('shows ViewFeedback when hasFeedback is false', () => {
@@ -216,7 +216,7 @@ describe('RecentCourses', () => {
           isProfessionalLearningCourse={true}
         />
       );
-      assert.equal(wrapper.find('ViewFeedback').length, 0);
+      expect(wrapper.find('ViewFeedback').length).toEqual(0);
     });
 
     it('sets header to professional learning header', () => {
@@ -227,8 +227,7 @@ describe('RecentCourses', () => {
           isProfessionalLearningCourse={true}
         />
       );
-      assert.equal(
-        wrapper.find('Connect(ContentContainer)').props().heading,
+      expect(wrapper.find('Connect(ContentContainer)').props().heading).toEqual(
         'My Professional Learning Courses'
       );
     });

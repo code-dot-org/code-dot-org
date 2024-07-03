@@ -9,21 +9,19 @@ import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-
 describe('LessonExtrasFlagIcon', () => {
   it('has a grey flag icon when not selected, not perfect', () => {
     const wrapper = shallow(<LessonExtrasFlagIcon />);
-    assert.equal(
-      wrapper.find('i').at(1).props().style.color,
+    expect(wrapper.find('i').at(1).props().style.color).toEqual(
       color.lighter_gray
     );
   });
 
   it('has a charcoal flag icon when selected, not perfect', () => {
     const wrapper = shallow(<LessonExtrasFlagIcon isSelected={true} />);
-    assert.equal(wrapper.find('i').at(1).props().style.color, color.charcoal);
+    expect(wrapper.find('i').at(1).props().style.color).toEqual(color.charcoal);
   });
 
   it('has a green flag icon when level result is perfect', () => {
     const wrapper = shallow(<LessonExtrasFlagIcon isPerfect={true} />);
-    assert.equal(
-      wrapper.find('i').at(1).props().style.color,
+    expect(wrapper.find('i').at(1).props().style.color).toEqual(
       color.level_perfect
     );
   });

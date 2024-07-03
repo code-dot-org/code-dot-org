@@ -209,10 +209,10 @@ describe('CurriculumCatalog', () => {
     // Select "Kindergarten" and "Grade 2" in grade level filter
     const kindergartenFilterCheckbox = screen.getByDisplayValue('kindergarten');
     fireEvent.click(kindergartenFilterCheckbox);
-    assert(kindergartenFilterCheckbox.checked);
+    expect(kindergartenFilterCheckbox.checked).toBeTruthy();
     const grade2FilterCheckbox = screen.getByDisplayValue('grade_2');
     fireEvent.click(grade2FilterCheckbox);
-    assert(grade2FilterCheckbox.checked);
+    expect(grade2FilterCheckbox.checked).toBeTruthy();
 
     // Filters for all courses for kindergarten and/or grade 2
     expect(
@@ -236,7 +236,7 @@ describe('CurriculumCatalog', () => {
     // Select "Week" in grade level filter
     const weekFilterCheckbox = screen.getByDisplayValue('week');
     fireEvent.click(weekFilterCheckbox);
-    assert(weekFilterCheckbox.checked);
+    expect(weekFilterCheckbox.checked).toBeTruthy();
 
     // Filters for all week-long courses
     expect(
@@ -261,7 +261,7 @@ describe('CurriculumCatalog', () => {
     const physicalCompFilterCheckbox =
       screen.getByDisplayValue('physical_computing');
     fireEvent.click(physicalCompFilterCheckbox);
-    assert(physicalCompFilterCheckbox.checked);
+    expect(physicalCompFilterCheckbox.checked).toBeTruthy();
 
     // Filters for all courses with the physical_computing topic
     expect(
@@ -286,7 +286,7 @@ describe('CurriculumCatalog', () => {
     const interdisciplinaryFilterCheckbox =
       screen.getByDisplayValue('interdisciplinary');
     fireEvent.click(interdisciplinaryFilterCheckbox);
-    assert(interdisciplinaryFilterCheckbox.checked);
+    expect(interdisciplinaryFilterCheckbox.checked).toBeTruthy();
 
     // Filters for all courses with school subjects
     expect(
@@ -310,10 +310,10 @@ describe('CurriculumCatalog', () => {
     // Select "Tablet" and "No Device" in device filter
     const tabletFilterCheckbox = screen.getByDisplayValue('tablet');
     fireEvent.click(tabletFilterCheckbox);
-    assert(tabletFilterCheckbox.checked);
+    expect(tabletFilterCheckbox.checked).toBeTruthy();
     const noDeviceFilterCheckbox = screen.getByDisplayValue('no_device');
     fireEvent.click(noDeviceFilterCheckbox);
-    assert(noDeviceFilterCheckbox.checked);
+    expect(noDeviceFilterCheckbox.checked).toBeTruthy();
 
     // Filters for all courses compatible with chromebooks and tablets
     expect(
@@ -337,10 +337,10 @@ describe('CurriculumCatalog', () => {
     // Select "CSD" and "HOC" in marketing initiative filter
     const csdFilterCheckbox = screen.getByDisplayValue('csd');
     fireEvent.click(csdFilterCheckbox);
-    assert(csdFilterCheckbox.checked);
+    expect(csdFilterCheckbox.checked).toBeTruthy();
     const hocFilterCheckbox = screen.getByDisplayValue('hoc');
     fireEvent.click(hocFilterCheckbox);
-    assert(hocFilterCheckbox.checked);
+    expect(hocFilterCheckbox.checked).toBeTruthy();
 
     // Filters for all courses from CSD and HOC.
     expect(
@@ -366,7 +366,7 @@ describe('CurriculumCatalog', () => {
       'Only show curricula available in sampleLanguageNativeName'
     );
     fireEvent.click(translatedToggle);
-    assert(translatedToggle.checked);
+    expect(translatedToggle.checked).toBeTruthy();
 
     // Filters for all courses translated in the users locale
     expect(
@@ -390,28 +390,28 @@ describe('CurriculumCatalog', () => {
     // Select "Grade 2" and "Grade 3" in grade level filter
     const grade2FilterCheckbox = screen.getByDisplayValue('grade_2');
     fireEvent.click(grade2FilterCheckbox);
-    assert(grade2FilterCheckbox.checked);
+    expect(grade2FilterCheckbox.checked).toBeTruthy();
     const grade3FilterCheckbox = screen.getByDisplayValue('grade_3');
     fireEvent.click(grade3FilterCheckbox);
-    assert(grade3FilterCheckbox.checked);
+    expect(grade3FilterCheckbox.checked).toBeTruthy();
 
     // Select "Physical Computing" and "Interdisciplinary" in topic filter
     const physicalCompFilterCheckbox =
       screen.getByDisplayValue('physical_computing');
     fireEvent.click(physicalCompFilterCheckbox);
-    assert(physicalCompFilterCheckbox.checked);
+    expect(physicalCompFilterCheckbox.checked).toBeTruthy();
     const interdisciplinaryFilterCheckbox =
       screen.getByDisplayValue('interdisciplinary');
     fireEvent.click(interdisciplinaryFilterCheckbox);
-    assert(interdisciplinaryFilterCheckbox.checked);
+    expect(interdisciplinaryFilterCheckbox.checked).toBeTruthy();
 
     // Select "Tablet" and "No Device" in device filter
     const tabletFilterCheckbox = screen.getByDisplayValue('tablet');
     fireEvent.click(tabletFilterCheckbox);
-    assert(tabletFilterCheckbox.checked);
+    expect(tabletFilterCheckbox.checked).toBeTruthy();
     const noDeviceFilterCheckbox = screen.getByDisplayValue('no_device');
     fireEvent.click(noDeviceFilterCheckbox);
-    assert(noDeviceFilterCheckbox.checked);
+    expect(noDeviceFilterCheckbox.checked).toBeTruthy();
 
     // Filters for all courses that support:
     // - Grades 2 or 3
@@ -440,7 +440,7 @@ describe('CurriculumCatalog', () => {
       // Ignore filter for translation checkbox
       if (checkbox.name !== 'filterTranslatedToggle') {
         fireEvent.click(checkbox);
-        assert(checkbox.checked);
+        expect(checkbox.checked).toBeTruthy();
       }
     });
 
@@ -468,10 +468,10 @@ describe('CurriculumCatalog', () => {
     // Select "Kindergarten" and "No Device" in device filter (which should yield no results)
     const kindergartenFilterCheckbox = screen.getByDisplayValue('kindergarten');
     fireEvent.click(kindergartenFilterCheckbox);
-    assert(kindergartenFilterCheckbox.checked);
+    expect(kindergartenFilterCheckbox.checked).toBeTruthy();
     const noDeviceFilterCheckbox = screen.getByDisplayValue('no_device');
     fireEvent.click(noDeviceFilterCheckbox);
-    assert(noDeviceFilterCheckbox.checked);
+    expect(noDeviceFilterCheckbox.checked).toBeTruthy();
 
     // Does not show any Curriculum Catalog Cards
     expect(screen.queryAllByText('Quick View', {exact: false}).length).toBe(0);
@@ -591,9 +591,9 @@ describe('CurriculumCatalog', () => {
       // Select "Week" in grade level filter
       const weekFilterCheckbox = screen.getByDisplayValue('week');
       fireEvent.click(weekFilterCheckbox);
-      assert(weekFilterCheckbox.checked);
+      expect(weekFilterCheckbox.checked).toBeTruthy();
 
-      assert(replacedLocation.includes('duration=week'));
+      expect(replacedLocation.includes('duration=week')).toBeTruthy();
     });
 
     it('params update when filter checkbox is selected with others in same filter already selected', () => {
@@ -602,9 +602,11 @@ describe('CurriculumCatalog', () => {
       // Select "Week" in grade level filter
       const weekFilterCheckbox = screen.getByDisplayValue('week');
       fireEvent.click(weekFilterCheckbox);
-      assert(weekFilterCheckbox.checked);
+      expect(weekFilterCheckbox.checked).toBeTruthy();
 
-      assert(replacedLocation.includes('duration=lesson&duration=week'));
+      expect(
+        replacedLocation.includes('duration=lesson&duration=week')
+      ).toBeTruthy();
     });
 
     it('params update when filter checkbox is selected with others in different filter already selected', () => {
@@ -613,10 +615,12 @@ describe('CurriculumCatalog', () => {
       // Select "Week" in grade level filter
       const weekFilterCheckbox = screen.getByDisplayValue('week');
       fireEvent.click(weekFilterCheckbox);
-      assert(weekFilterCheckbox.checked);
+      expect(weekFilterCheckbox.checked).toBeTruthy();
 
-      assert(replacedLocation.includes('grade=grade_2&grade=grade_3'));
-      assert(replacedLocation.includes('duration=week'));
+      expect(
+        replacedLocation.includes('grade=grade_2&grade=grade_3')
+      ).toBeTruthy();
+      expect(replacedLocation.includes('duration=week')).toBeTruthy();
     });
 
     it('params update when only checked filter checkbox is deselected', () => {
@@ -625,7 +629,7 @@ describe('CurriculumCatalog', () => {
       // Deselect "Lesson" in grade level filter
       const lessonFilterCheckbox = screen.getByDisplayValue('lesson');
       fireEvent.click(lessonFilterCheckbox);
-      assert(!lessonFilterCheckbox.checked);
+      expect(!lessonFilterCheckbox.checked).toBeTruthy();
 
       // When no params are present, replacedLocation is set to undefined
       expect(replacedLocation).toBeUndefined();
@@ -637,10 +641,10 @@ describe('CurriculumCatalog', () => {
       // Deselect "Lesson" in grade level filter
       const lessonFilterCheckbox = screen.getByDisplayValue('lesson');
       fireEvent.click(lessonFilterCheckbox);
-      assert(!lessonFilterCheckbox.checked);
+      expect(!lessonFilterCheckbox.checked).toBeTruthy();
 
-      assert(!replacedLocation.includes('lesson'));
-      assert(replacedLocation.includes('duration=week'));
+      expect(!replacedLocation.includes('lesson')).toBeTruthy();
+      expect(replacedLocation.includes('duration=week')).toBeTruthy();
     });
 
     it('params update when translated toggle is flipped', () => {
@@ -651,13 +655,13 @@ describe('CurriculumCatalog', () => {
 
       // Toggle "translated" on
       fireEvent.click(translatedToggle);
-      assert(translatedToggle.checked);
-      assert(replacedLocation.includes('translated=true'));
+      expect(translatedToggle.checked).toBeTruthy();
+      expect(replacedLocation.includes('translated=true')).toBeTruthy();
 
       // Toggle "translated" off
       fireEvent.click(translatedToggle);
-      assert(!translatedToggle.checked);
-      assert(replacedLocation.includes('translated=false'));
+      expect(!translatedToggle.checked).toBeTruthy();
+      expect(replacedLocation.includes('translated=false')).toBeTruthy();
     });
   });
 
@@ -710,25 +714,25 @@ describe('CurriculumCatalog', () => {
         // Check that the recommended similar curriculum's image and link are present on the current test curriculum's expanded card.
         // Image's alt text is the curriculum's display name.
         screen.getByAltText(recommendedSimilarCurriculum.display_name);
-        assert(
+        expect(
           document
             .querySelector('#similarCurriculumButton')
             .innerHTML.includes(recommendedSimilarCurriculum.display_name)
-        );
+        ).toBeTruthy();
 
         // Check that the recommended stretch curriculum's image and link are present on the current test curriculum's expanded card.
         // Image's alt text is the curriculum's display name.
         screen.getByAltText(recommendedStretchCurriculum.display_name);
-        assert(
+        expect(
           document
             .querySelector('#stretchCurriculumButton')
             .innerHTML.includes(recommendedStretchCurriculum.display_name)
-        );
+        ).toBeTruthy();
       }
 
       // Ensure that there were instances of the Similar and Stretch recommenders outputting the same result, meaning the Stretch
       // recommender had to suggest its next top result.
-      assert(numOverlapTopResults === 1);
+      expect(numOverlapTopResults === 1).toBeTruthy();
     });
 
     it('does not recommend similar or stretch curricula the user has already taught', () => {
@@ -776,25 +780,25 @@ describe('CurriculumCatalog', () => {
         screen.getByText(currCurriculum.description);
 
         // Ensure none of the recommendations are ones the user has taught before
-        assert(
+        expect(
           !curriculaTaughtBefore.includes(recommendedSimilarCurriculum.key) &&
             !curriculaTaughtBefore.includes(recommendedStretchCurriculum.key)
-        );
+        ).toBeTruthy();
 
         // Image's alt text is the curriculum's display name.
         screen.getByAltText(recommendedSimilarCurriculum.display_name);
-        assert(
+        expect(
           document
             .querySelector('#similarCurriculumButton')
             .innerHTML.includes(recommendedSimilarCurriculum.display_name)
-        );
+        ).toBeTruthy();
 
         screen.getByAltText(recommendedStretchCurriculum.display_name);
-        assert(
+        expect(
           document
             .querySelector('#stretchCurriculumButton')
             .innerHTML.includes(recommendedStretchCurriculum.display_name)
-        );
+        ).toBeTruthy();
       }
     });
 

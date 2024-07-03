@@ -35,12 +35,9 @@ describe('SummaryProgressTable', () => {
       />
     );
     const rows = wrapper.find('tbody').props().children;
-    assert.equal(rows.length, 4);
+    expect(rows.length).toEqual(4);
 
-    assert.deepEqual(
-      rows.map(row => row.props.dark),
-      [false, true, false, true]
-    );
+    expect(rows.map(row => row.props.dark)).toEqual([false, true, false, true]);
   });
 
   it('does not show hidden rows when viewing as participant', () => {
@@ -54,16 +51,10 @@ describe('SummaryProgressTable', () => {
     );
 
     const rows = wrapper.find('tbody').props().children;
-    assert.equal(rows.length, 3);
+    expect(rows.length).toEqual(3);
     // dark is still every other for non-hidden rows
-    assert.deepEqual(
-      rows.map(row => row.props.dark),
-      [false, true, false]
-    );
-    assert.deepEqual(
-      rows.map(row => row.props.lesson.id),
-      [1, 3, 4]
-    );
+    expect(rows.map(row => row.props.dark)).toEqual([false, true, false]);
+    expect(rows.map(row => row.props.lesson.id)).toEqual([1, 3, 4]);
   });
 
   it('marks hidden rows as hidden when viewing as instructor', () => {
@@ -77,16 +68,10 @@ describe('SummaryProgressTable', () => {
     );
 
     const rows = wrapper.find('tbody').props().children;
-    assert.equal(rows.length, 4);
+    expect(rows.length).toEqual(4);
     // dark is still every other, though the "hiddenness" of the second row
     // will end up taking priority in determining the background color
-    assert.deepEqual(
-      rows.map(row => row.props.dark),
-      [false, true, false, true]
-    );
-    assert.deepEqual(
-      rows.map(row => row.props.lesson.id),
-      [1, 2, 3, 4]
-    );
+    expect(rows.map(row => row.props.dark)).toEqual([false, true, false, true]);
+    expect(rows.map(row => row.props.lesson.id)).toEqual([1, 2, 3, 4]);
   });
 });

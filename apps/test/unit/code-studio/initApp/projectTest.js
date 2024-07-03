@@ -8,7 +8,7 @@ import {CP_API} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Playgrou
 import * as utils from '@cdo/apps/utils';
 import msg from '@cdo/locale';
 
-import {expect, assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+import {expect, assert} from '../../../util/reconfiguredChai';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 describe('project.js', () => {

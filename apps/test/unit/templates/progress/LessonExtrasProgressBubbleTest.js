@@ -26,7 +26,7 @@ describe('LessonExtrasProgressBubble', () => {
   it('renders a link to given url', () => {
     const wrapper = shallow(<LessonExtrasProgressBubble {...defaultProps} />);
 
-    assert.equal(wrapper.props().href, '/extras');
+    expect(wrapper.props().href).toEqual('/extras');
   });
 
   it('preserves query params', () => {
@@ -35,7 +35,7 @@ describe('LessonExtrasProgressBubble', () => {
 
     const wrapper = shallow(<LessonExtrasProgressBubble {...defaultProps} />);
 
-    assert.equal(wrapper.props().href, '/extras?foo=1');
+    expect(wrapper.props().href).toEqual('/extras?foo=1');
   });
 
   it('removes id from query params', () => {
@@ -44,18 +44,18 @@ describe('LessonExtrasProgressBubble', () => {
 
     const wrapper = shallow(<LessonExtrasProgressBubble {...defaultProps} />);
 
-    assert.equal(wrapper.props().href, '/extras?foo=1');
+    expect(wrapper.props().href).toEqual('/extras?foo=1');
   });
 
   it('renders a small flag icon when not selected', () => {
     const wrapper = shallow(<LessonExtrasProgressBubble {...defaultProps} />);
-    assert.equal(16, wrapper.find(LessonExtrasFlagIcon).props().size);
+    expect(16).toEqual(wrapper.find(LessonExtrasFlagIcon).props().size);
   });
 
   it('renders a large flag icon when selected', () => {
     const wrapper = shallow(
       <LessonExtrasProgressBubble {...defaultProps} isSelected={true} />
     );
-    assert.equal(24, wrapper.find(LessonExtrasFlagIcon).props().size);
+    expect(24).toEqual(wrapper.find(LessonExtrasFlagIcon).props().size);
   });
 });

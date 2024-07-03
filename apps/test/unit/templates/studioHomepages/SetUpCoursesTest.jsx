@@ -9,7 +9,7 @@ import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-
 describe('SetUpCourses', () => {
   it('renders as expected for a teacher', () => {
     const wrapper = shallow(<SetUpCourses isTeacher={true} />);
-    assert(
+    expect(
       wrapper.containsMatchingElement(
         <BorderedCallToAction
           type="courses"
@@ -19,12 +19,12 @@ describe('SetUpCourses', () => {
           buttonUrl="/catalog"
         />
       )
-    );
+    ).toBeTruthy();
   });
 
   it('renders as expected for a student', () => {
     const wrapper = shallow(<SetUpCourses isTeacher={false} />);
-    assert(
+    expect(
       wrapper.containsMatchingElement(
         <BorderedCallToAction
           type="courses"
@@ -34,6 +34,6 @@ describe('SetUpCourses', () => {
           buttonUrl="/courses"
         />
       )
-    );
+    ).toBeTruthy();
   });
 });

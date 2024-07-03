@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 import Observer from '@cdo/apps/Observer';
 
-import {expect, assert} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+import {expect, assert} from '../../../../util/reconfiguredChai';
 
 describe('The JSInterpreter class', function () {
   var jsInterpreter;

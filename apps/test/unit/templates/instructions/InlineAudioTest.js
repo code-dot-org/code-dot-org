@@ -9,7 +9,7 @@ import {
 } from '@cdo/apps/templates/instructions/AudioQueue';
 import {UnconnectedInlineAudio as InlineAudio} from '@cdo/apps/templates/instructions/InlineAudio';
 
-import {assert, expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+import {assert, expect} from '../../../util/reconfiguredChai';
 import {setExternalGlobals} from '../../../util/testUtils';
 
 const DEFAULT_PROPS = {

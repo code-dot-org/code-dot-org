@@ -47,25 +47,33 @@ describe('JavalabEditorTabMenu', () => {
   describe('When there are 3 or more tabs in Java Lab editor', () => {
     it('displays moveRight option and not moveLeft if active tab is leftmost tab', () => {
       const wrapper = createWrapper();
-      assert.strictEqual(wrapper.children().length, 3);
-      assert.isTrue(wrapper.childAt(1).text().includes(javalabMsg.moveRight()));
+      expect(wrapper.children().length).toBe(3);
+      expect(wrapper.childAt(1).text().includes(javalabMsg.moveRight())).toBe(
+        true
+      );
     });
 
     it('displays moveLeft option and not moveRight if active tab is rightmost tab', () => {
       const wrapper = createWrapper({
         activeTabKey: 'file-2',
       });
-      assert.strictEqual(wrapper.children().length, 3);
-      assert.isTrue(wrapper.childAt(1).text().includes(javalabMsg.moveLeft()));
+      expect(wrapper.children().length).toBe(3);
+      expect(wrapper.childAt(1).text().includes(javalabMsg.moveLeft())).toBe(
+        true
+      );
     });
 
     it('displays both moveRight and moveLeft if active tab is one of middle tabs', () => {
       const wrapper = createWrapper({
         activeTabKey: 'file-1',
       });
-      assert.strictEqual(wrapper.children().length, 4);
-      assert.isTrue(wrapper.childAt(1).text().includes(javalabMsg.moveLeft()));
-      assert.isTrue(wrapper.childAt(2).text().includes(javalabMsg.moveRight()));
+      expect(wrapper.children().length).toBe(4);
+      expect(wrapper.childAt(1).text().includes(javalabMsg.moveLeft())).toBe(
+        true
+      );
+      expect(wrapper.childAt(2).text().includes(javalabMsg.moveRight())).toBe(
+        true
+      );
     });
   });
 
@@ -74,9 +82,13 @@ describe('JavalabEditorTabMenu', () => {
       const wrapper = createWrapper({
         orderedTabKeys: ['file-0'],
       });
-      assert.strictEqual(wrapper.children().length, 2);
-      assert.isTrue(wrapper.childAt(0).text().includes(javalabMsg.rename()));
-      assert.isTrue(wrapper.childAt(1).text().includes(javalabMsg.delete()));
+      expect(wrapper.children().length).toBe(2);
+      expect(wrapper.childAt(0).text().includes(javalabMsg.rename())).toBe(
+        true
+      );
+      expect(wrapper.childAt(1).text().includes(javalabMsg.delete())).toBe(
+        true
+      );
     });
   });
 });

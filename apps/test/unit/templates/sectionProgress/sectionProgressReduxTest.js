@@ -67,14 +67,14 @@ describe('sectionProgressRedux', () => {
       // This action is from unitSelectionRedux but affects sectionProgress
       const action2 = setScriptId(130);
       const nextState2 = sectionProgress(nextState, action2);
-      assert.deepEqual(nextState2.lessonOfInterest, 1);
+      expect(nextState2.lessonOfInterest).toEqual(1);
     });
   });
 
   describe('isLoadingProgress', () => {
     it('startLoadingProgress sets isLoadingProgress to true', () => {
       const nextState = sectionProgress(initialState, startLoadingProgress());
-      assert.deepEqual(nextState.isLoadingProgress, true);
+      expect(nextState.isLoadingProgress).toEqual(true);
     });
 
     it('finishLoadingProgress sets isLoadingProgress to false', () => {
@@ -82,7 +82,7 @@ describe('sectionProgressRedux', () => {
         {isLoadingProgress: true},
         finishLoadingProgress()
       );
-      assert.deepEqual(nextState.isLoadingProgress, false);
+      expect(nextState.isLoadingProgress).toEqual(false);
     });
   });
 
@@ -92,7 +92,7 @@ describe('sectionProgressRedux', () => {
         initialState,
         startRefreshingProgress()
       );
-      assert.deepEqual(nextState.isRefreshingProgress, true);
+      expect(nextState.isRefreshingProgress).toEqual(true);
     });
 
     it('finishRefreshingProgress sets isRefreshingProgress to false', () => {
@@ -100,7 +100,7 @@ describe('sectionProgressRedux', () => {
         {isLoadingProgress: true},
         finishRefreshingProgress()
       );
-      assert.deepEqual(nextState.isRefreshingProgress, false);
+      expect(nextState.isRefreshingProgress).toEqual(false);
     });
   });
 
@@ -108,13 +108,13 @@ describe('sectionProgressRedux', () => {
     it('sets the current view to summary', () => {
       const action = setCurrentView(ViewType.SUMMARY);
       const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.currentView, ViewType.SUMMARY);
+      expect(nextState.currentView).toEqual(ViewType.SUMMARY);
     });
 
     it('sets the current view to detail', () => {
       const action = setCurrentView(ViewType.DETAIL);
       const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.currentView, ViewType.DETAIL);
+      expect(nextState.currentView).toEqual(ViewType.DETAIL);
     });
   });
 
@@ -123,13 +123,13 @@ describe('sectionProgressRedux', () => {
       const action = addDataByUnit(fakeUnitData456);
       const nextState = sectionProgress(initialState, action);
       const expected456 = fakeUnitData456.unitDataByUnit[456];
-      assert.deepEqual(nextState.unitDataByUnit[456], expected456);
+      expect(nextState.unitDataByUnit[456]).toEqual(expected456);
 
       const action2 = addDataByUnit(fakeUnitData789);
       const nextState2 = sectionProgress(nextState, action2);
       const expected789 = fakeUnitData789.unitDataByUnit[789];
-      assert.deepEqual(nextState2.unitDataByUnit[456], expected456);
-      assert.deepEqual(nextState2.unitDataByUnit[789], expected789);
+      expect(nextState2.unitDataByUnit[456]).toEqual(expected456);
+      expect(nextState2.unitDataByUnit[789]).toEqual(expected789);
     });
   });
 
@@ -137,7 +137,7 @@ describe('sectionProgressRedux', () => {
     it('sets the lesson of interest', () => {
       const action = setLessonOfInterest(lessonOfInterest);
       const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.lessonOfInterest, lessonOfInterest);
+      expect(nextState.lessonOfInterest).toEqual(lessonOfInterest);
     });
   });
 
@@ -200,14 +200,14 @@ describe('sectionProgressRedux', () => {
     it('Adds student ids', () => {
       const action = expandMetadataForStudents([1, 2]);
       const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.expandedMetadataStudentIds, [1, 2]);
+      expect(nextState.expandedMetadataStudentIds).toEqual([1, 2]);
     });
     it('No duplicates', () => {
       const action = expandMetadataForStudents([1, 2]);
       const intermediateState = sectionProgress(initialState, action);
 
       const nextState = sectionProgress(intermediateState, action);
-      assert.deepEqual(nextState.expandedMetadataStudentIds, [1, 2]);
+      expect(nextState.expandedMetadataStudentIds).toEqual([1, 2]);
     });
     it('Removes ids', () => {
       const addAction = expandMetadataForStudents([1, 2]);
@@ -215,7 +215,7 @@ describe('sectionProgressRedux', () => {
 
       const collapseAction = collapseMetadataForStudents([1, 2]);
       const nextState = sectionProgress(intermediateState, collapseAction);
-      assert.deepEqual(nextState.expandedMetadataStudentIds, []);
+      expect(nextState.expandedMetadataStudentIds).toEqual([]);
     });
   });
 

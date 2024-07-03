@@ -29,7 +29,7 @@ const firehoseAnalyticsData = {
 describe('Announcements', () => {
   it('does not show Notifications if no announcements', () => {
     const wrapper = shallow(<Announcements {...defaultProps} />);
-    assert.equal(wrapper.find(Notification).length, 0);
+    expect(wrapper.find(Notification).length).toEqual(0);
   });
 
   it('displays old teacher announcement for instructor', () => {
@@ -39,7 +39,7 @@ describe('Announcements', () => {
         announcements={[fakeOldTeacherAnnouncement]}
       />
     );
-    assert.equal(wrapper.find(Notification).length, 1);
+    expect(wrapper.find(Notification).length).toEqual(1);
   });
 
   it('does not display old teacher announcement for participant', () => {
@@ -50,7 +50,7 @@ describe('Announcements', () => {
         viewAs={ViewType.Participant}
       />
     );
-    assert.equal(wrapper.find(Notification).length, 0);
+    expect(wrapper.find(Notification).length).toEqual(0);
   });
 
   it('displays new teacher announcement for instructor', () => {
@@ -60,7 +60,7 @@ describe('Announcements', () => {
         announcements={[fakeTeacherAnnouncement]}
       />
     );
-    assert.equal(wrapper.find(Notification).length, 1);
+    expect(wrapper.find(Notification).length).toEqual(1);
   });
 
   it('defaults to dismissible and no button text for teacher announcement without dismissible and button text', () => {
@@ -70,9 +70,9 @@ describe('Announcements', () => {
         announcements={[fakeTeacherAnnouncement]}
       />
     );
-    assert.equal(wrapper.find(Notification).length, 1);
-    assert.equal(wrapper.find(Notification).props().dismissible, true);
-    assert.equal(wrapper.find(Notification).props().buttonText, 'Learn more');
+    expect(wrapper.find(Notification).length).toEqual(1);
+    expect(wrapper.find(Notification).props().dismissible).toEqual(true);
+    expect(wrapper.find(Notification).props().buttonText).toEqual('Learn more');
   });
 
   it('displays new teacher announcement with dismissible and button text for instructor', () => {
@@ -82,10 +82,9 @@ describe('Announcements', () => {
         announcements={[fakeTeacherAnnouncementWithDismissibleAndButtonText]}
       />
     );
-    assert.equal(wrapper.find(Notification).length, 1);
-    assert.equal(wrapper.find(Notification).props().dismissible, false);
-    assert.equal(
-      wrapper.find(Notification).props().buttonText,
+    expect(wrapper.find(Notification).length).toEqual(1);
+    expect(wrapper.find(Notification).props().dismissible).toEqual(false);
+    expect(wrapper.find(Notification).props().buttonText).toEqual(
       'Push the button'
     );
   });
@@ -101,7 +100,7 @@ describe('Announcements', () => {
         ]}
       />
     );
-    assert.equal(wrapper.find(Notification).length, 2);
+    expect(wrapper.find(Notification).length).toEqual(2);
   });
 
   it('has participant announcement if necessary', () => {
@@ -112,7 +111,7 @@ describe('Announcements', () => {
         announcements={[fakeStudentAnnouncement]}
       />
     );
-    assert.equal(wrapper.find(Notification).length, 1);
+    expect(wrapper.find(Notification).length).toEqual(1);
   });
 
   it('has all participant announcements but no instructor announcements if necessary', () => {
@@ -128,7 +127,7 @@ describe('Announcements', () => {
       />,
       {disableLifecycleMethods: true}
     );
-    assert.equal(wrapper.find(Notification).length, 2);
+    expect(wrapper.find(Notification).length).toEqual(2);
   });
 
   it('displays instructor announcement with analytics data', () => {
@@ -139,6 +138,6 @@ describe('Announcements', () => {
         announcements={[fakeTeacherAnnouncement]}
       />
     );
-    assert.equal(wrapper.find(Notification).length, 1);
+    expect(wrapper.find(Notification).length).toEqual(1);
   });
 });

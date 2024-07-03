@@ -2,7 +2,7 @@ import sinon from 'sinon';
 
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 
-import {assert, expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+import {assert, expect} from '../../../../util/reconfiguredChai';
 
 describe('BackpackClientApi', () => {
   const channelId = 'fake_channel_id';

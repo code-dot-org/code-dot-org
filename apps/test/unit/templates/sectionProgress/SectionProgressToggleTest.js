@@ -6,7 +6,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import {UnconnectedSectionProgressToggle} from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 
-import {expect, assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+import {expect, assert} from '../../../util/reconfiguredChai';
 
 describe('SectionProgressToggle', () => {
   let DEFAULT_PROPS;

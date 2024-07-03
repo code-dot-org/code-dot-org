@@ -47,8 +47,7 @@ describe('sectionStandardsProgressRedux', () => {
         'A lovely comment about my class'
       );
       const nextState = sectionStandardsProgress(initialState, action);
-      assert.deepEqual(
-        nextState.teacherComment,
+      expect(nextState.teacherComment).toEqual(
         'A lovely comment about my class'
       );
     });
@@ -56,13 +55,13 @@ describe('sectionStandardsProgressRedux', () => {
 
   describe('getNumberLessonsInScript', () => {
     it('gets the correct number of lessons in the script', () => {
-      assert.deepEqual(getNumberLessonsInScript(fakeState), 3);
+      expect(getNumberLessonsInScript(fakeState)).toEqual(3);
     });
   });
 
   describe('lessonsByStandard', () => {
     it('gets the correct lessons and completion by standard, no progress, no scores', () => {
-      assert.deepEqual(lessonsByStandard(fakeState), {
+      expect(lessonsByStandard(fakeState)).toEqual({
         4: [
           {
             completed: false,
@@ -135,7 +134,7 @@ describe('sectionStandardsProgressRedux', () => {
     // Plugged lessons calculate completion based on progress.
     // Unplugged lessons calculate completion based on teacher score.
     it('gets the correct lessons and completion by standard, completed lesson based only on progress', () => {
-      assert.deepEqual(lessonsByStandard(stateForCompletedLesson), {
+      expect(lessonsByStandard(stateForCompletedLesson)).toEqual({
         4: [
           {
             completed: true,
@@ -206,7 +205,7 @@ describe('sectionStandardsProgressRedux', () => {
     });
 
     it('gets the correct lessons and completion by standard, plugged lesson completion based on progress, unplugged based on teacher score', () => {
-      assert.deepEqual(lessonsByStandard(stateForTeacherMarkedAndProgress), {
+      expect(lessonsByStandard(stateForTeacherMarkedAndProgress)).toEqual({
         4: [
           {
             completed: true,
@@ -279,7 +278,7 @@ describe('sectionStandardsProgressRedux', () => {
 
   describe('getUnpluggedLessonsForScript', () => {
     it('gets the unplugged lessons for script', () => {
-      assert.deepEqual(getUnpluggedLessonsForScript(fakeState), [
+      expect(getUnpluggedLessonsForScript(fakeState)).toEqual([
         {
           id: 662,
           name: 'Going Places Safely',

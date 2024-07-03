@@ -25,7 +25,7 @@ describe('ConfirmRemoveStudentDialog', () => {
     const wrapper = mount(
       <ConfirmRemoveStudentDialog {...MINIMUM_TEST_PROPS} isOpen={false} />
     );
-    assert.equal('<div></div>', wrapper.html());
+    expect('<div></div>').toEqual(wrapper.html());
   });
 
   it('renders minimal content if student has never signed in', () => {
@@ -35,7 +35,7 @@ describe('ConfirmRemoveStudentDialog', () => {
         hasEverSignedIn={false}
       />
     );
-    assert(
+    expect(
       wrapper.containsMatchingElement(
         <div>
           <Header text={i18n.removeUnusedStudentHeader({studentName})} />
@@ -50,7 +50,7 @@ describe('ConfirmRemoveStudentDialog', () => {
           />
         </div>
       )
-    );
+    ).toBeTruthy();
   });
 
   it('renders warning text if student has ever signed in', () => {
@@ -60,7 +60,7 @@ describe('ConfirmRemoveStudentDialog', () => {
         hasEverSignedIn={true}
       />
     );
-    assert(
+    expect(
       wrapper.containsMatchingElement(
         <div>
           <Header text={i18n.removeStudentAndRecordsHeader({studentName})} />
@@ -87,7 +87,7 @@ describe('ConfirmRemoveStudentDialog', () => {
           />
         </div>
       )
-    );
+    ).toBeTruthy();
   });
 
   it('renders personal login help if student depends on this section for login', () => {
@@ -98,7 +98,7 @@ describe('ConfirmRemoveStudentDialog', () => {
         dependsOnThisSectionForLogin={true}
       />
     );
-    assert(
+    expect(
       wrapper.containsMatchingElement(
         <div>
           <Header text={i18n.removeStudentAndRecordsHeader({studentName})} />
@@ -138,6 +138,6 @@ describe('ConfirmRemoveStudentDialog', () => {
           />
         </div>
       )
-    );
+    ).toBeTruthy();
   });
 });

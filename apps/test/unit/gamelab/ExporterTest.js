@@ -12,7 +12,7 @@ import pageConstantsReducer, {
   setPageConstants,
 } from '@cdo/apps/redux/pageConstants';
 
-import {assert, expect} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+import {assert, expect} from '../../util/reconfiguredChai';
 
 var testUtils = require('../../util/testUtils');
 

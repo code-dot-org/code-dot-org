@@ -46,7 +46,7 @@ import reducer, {
   NO_SECTION,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-import {assert, expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+import {assert, expect} from '../../../util/reconfiguredChai';
 
 const {
   EDIT_SECTION_SUCCESS,

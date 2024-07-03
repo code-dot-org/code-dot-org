@@ -1,4 +1,4 @@
-import {assert} from 'chai'; //eslint-disable-line no-restricted-imports
+import {assert} from 'chai';
 import sinon, {stub} from 'sinon';
 
 import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
@@ -14,7 +14,7 @@ import {
 } from '@cdo/apps/redux';
 import * as appsUtils from '@cdo/apps/utils';
 
-import {expect} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+import {expect} from '../../util/reconfiguredChai';
 
 describe('viewAs redux', () => {
   // Create a store so that we get the benefits of our thunk middleware

@@ -32,11 +32,11 @@ describe('DetailProgressTable', () => {
     );
 
     const rows = wrapper.props().children;
-    assert.equal(rows.length, 4);
+    expect(rows.length).toEqual(4);
   });
 
   it('throws if passed mismatched props', () => {
-    assert.throws(() =>
+    expect(() =>
       shallow(
         <DetailProgressTable
           groupedLesson={{
@@ -45,6 +45,6 @@ describe('DetailProgressTable', () => {
           }}
         />
       )
-    );
+    ).toThrow();
   });
 });

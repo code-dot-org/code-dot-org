@@ -15,8 +15,7 @@ const defaultProps = {
 describe('ProgressBubbleSet', () => {
   it('we have a bubble for each level', () => {
     const wrapper = shallow(<ProgressBubbleSet {...defaultProps} />);
-    assert.equal(
-      wrapper.find('ProgressBubble').length,
+    expect(wrapper.find('ProgressBubble').length).toEqual(
       defaultProps.levels.length
     );
   });
@@ -29,9 +28,9 @@ describe('ProgressBubbleSet', () => {
     const wrapper = shallow(
       <ProgressBubbleSet {...defaultProps} {...additionalProps} />
     );
-    assert.equal(wrapper.find('ProgressBubble').length, 1);
+    expect(wrapper.find('ProgressBubble').length).toEqual(1);
     const progressBubble = wrapper.find('ProgressBubble').at(0);
-    assert.equal(progressBubble.prop('disabled'), true);
+    expect(progressBubble.prop('disabled')).toEqual(true);
   });
 
   it('renders an enabled ProgressBubble if this.props.lessonExtrasEnabled is true and level is bonus', () => {
@@ -40,8 +39,8 @@ describe('ProgressBubbleSet', () => {
     const wrapper = shallow(
       <ProgressBubbleSet {...defaultProps} levels={[bonusLevel]} />
     );
-    assert.equal(wrapper.find('ProgressBubble').length, 1);
+    expect(wrapper.find('ProgressBubble').length).toEqual(1);
     const progressBubble = wrapper.find('ProgressBubble').at(0);
-    assert.equal(progressBubble.prop('disabled'), false);
+    expect(progressBubble.prop('disabled')).toEqual(false);
   });
 });

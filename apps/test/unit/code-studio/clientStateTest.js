@@ -25,13 +25,13 @@ describe('clientState#sourceForLevel', function () {
 
   it('returns `undefined` if timestamp is older', function () {
     state.writeSourceForLevel('sample', 3, 100, 'abc');
-    assert(state.sourceForLevel('sample', 3, 200) === undefined);
+    expect(state.sourceForLevel('sample', 3, 200) === undefined).toBeTruthy();
   });
 
   it("returns `undefined` if cache can't be parsed", function () {
     state.writeSourceForLevel('sample', 4, 100, 'abc');
     sessionStorage.setItem('source_sample_4', 'bad data');
-    assert(state.sourceForLevel('sample', 4, null) === undefined);
+    expect(state.sourceForLevel('sample', 4, null) === undefined).toBeTruthy();
   });
 });
 

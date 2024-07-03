@@ -25,10 +25,7 @@ describe('the export module', () => {
           if (globals.indexOf(block.func) < 0) {
             // eslint-disable-next-line no-eval
             if (!eval(`window.${block.func}`)) {
-              assert(
-                false,
-                `expected exported globals to include ${block.func}`
-              );
+              expect(false).toBeTruthy();
             }
           }
         });

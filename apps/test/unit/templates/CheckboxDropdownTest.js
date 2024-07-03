@@ -37,7 +37,9 @@ describe('CheckboxDropdown', function () {
     expect(checkboxes).toHaveLength(
       Object.keys(defaultProps.allOptions).length
     );
-    checkboxes.forEach(checkbox => assert(!checkbox.props().checked));
+    checkboxes.forEach(checkbox =>
+      expect(!checkbox.props().checked).toBeTruthy()
+    );
   });
 
   it('renders all checkboxes with checkedOptions already checked', function () {
@@ -58,14 +60,14 @@ describe('CheckboxDropdown', function () {
     const wrapper = mount(<CheckboxDropdown {...defaultProps} />);
     const checkIcon = wrapper.find('#check-icon');
 
-    assert(!checkIcon.exists());
+    expect(!checkIcon.exists()).toBeTruthy();
   });
 
   it('renders checkmark icon if at least 1 option is selected', function () {
     const wrapper = mount(<CheckboxDropdown {...propsWithCheckedOptions} />);
     const checkIcon = wrapper.find('#check-icon');
 
-    assert(checkIcon.exists());
+    expect(checkIcon.exists()).toBeTruthy();
   });
 
   it('handleSelectAll funtion is called when SelectAll button is clicked', function () {
@@ -82,7 +84,7 @@ describe('CheckboxDropdown', function () {
     const wrapper = mount(<CheckboxDropdown {...propsWithSelectFunction} />);
     const selectAllButton = wrapper.find('button#select-all');
 
-    assert(selectAllButton.exists());
+    expect(selectAllButton.exists()).toBeTruthy();
     expect(optionsSelected).toHaveLength(0);
     selectAllButton.simulate('click');
     expect(optionsSelected).toHaveLength(Object.keys(colorOptions).length);
@@ -102,7 +104,7 @@ describe('CheckboxDropdown', function () {
     const wrapper = mount(<CheckboxDropdown {...propsWithClearFunction} />);
     const clearAllButton = wrapper.find('button#clear-all');
 
-    assert(clearAllButton.exists());
+    expect(clearAllButton.exists()).toBeTruthy();
     expect(optionsSelected).toHaveLength(Object.keys(colorOptions).length);
     clearAllButton.simulate('click');
     expect(optionsSelected).toHaveLength(0);

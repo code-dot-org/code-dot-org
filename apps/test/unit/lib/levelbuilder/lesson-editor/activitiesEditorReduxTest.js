@@ -58,10 +58,11 @@ describe('activitiesEditorRedux reducer tests', () => {
         markdown: 'Programming is about solving puzzles.',
       })
     ).activities;
-    assert.deepEqual(
-      nextState[0].activitySections[1].tips.map(s => s.type),
-      ['teachingTip', 'discussionGoal', 'contentCorner']
-    );
+    expect(nextState[0].activitySections[1].tips.map(s => s.type)).toEqual([
+      'teachingTip',
+      'discussionGoal',
+      'contentCorner',
+    ]);
   });
 
   it('update tip', () => {
@@ -73,7 +74,7 @@ describe('activitiesEditorRedux reducer tests', () => {
         markdown: 'Programming is about solving puzzles.',
       })
     ).activities;
-    assert.deepEqual(nextState[0].activitySections[1].tips, [
+    expect(nextState[0].activitySections[1].tips).toEqual([
       {
         key: 'tip-1',
         type: 'contentCorner',
@@ -92,10 +93,9 @@ describe('activitiesEditorRedux reducer tests', () => {
       initialState,
       removeTip(1, 2, 'tip-1')
     ).activities;
-    assert.deepEqual(
-      nextState[0].activitySections[1].tips.map(s => s.type),
-      ['discussionGoal']
-    );
+    expect(nextState[0].activitySections[1].tips.map(s => s.type)).toEqual([
+      'discussionGoal',
+    ]);
   });
 
   describe('levels', () => {
@@ -104,10 +104,9 @@ describe('activitiesEditorRedux reducer tests', () => {
         initialState,
         reorderLevel(1, 3, 2, 1)
       ).activities;
-      assert.deepEqual(
-        nextState[0].activitySections[2].scriptLevels.map(l => l.id),
-        ['11', '10']
-      );
+      expect(
+        nextState[0].activitySections[2].scriptLevels.map(l => l.id)
+      ).toEqual(['11', '10']);
     });
 
     describe('moveLevelToActivitySection', () => {
@@ -142,8 +141,7 @@ describe('activitiesEditorRedux reducer tests', () => {
 
       it('moves level to activitySection within the same activity', () => {
         const oldActivities = initialState.activities;
-        assert.deepEqual(
-          [[], [], ['1', '2']],
+        expect([[], [], ['1', '2']]).toEqual(
           activeLevelIdMap(oldActivities[0])
         );
 
@@ -161,19 +159,15 @@ describe('activitiesEditorRedux reducer tests', () => {
             newSectionPos
           )
         ).activities;
-        assert.deepEqual(
-          [[], ['2'], ['1']],
-          activeLevelIdMap(newActivities[0])
-        );
+        expect([[], ['2'], ['1']]).toEqual(activeLevelIdMap(newActivities[0]));
       });
 
       it('moves level to activitySection in a different activity', () => {
         const oldActivities = initialState.activities;
-        assert.deepEqual(
-          [[], [], ['1', '2']],
+        expect([[], [], ['1', '2']]).toEqual(
           activeLevelIdMap(oldActivities[0])
         );
-        assert.deepEqual([[]], activeLevelIdMap(oldActivities[1]));
+        expect([[]]).toEqual(activeLevelIdMap(oldActivities[1]));
 
         const activityPos = 1;
         const sectionPos = 3;
@@ -190,8 +184,8 @@ describe('activitiesEditorRedux reducer tests', () => {
             newSectionPos
           )
         ).activities;
-        assert.deepEqual([[], [], ['1']], activeLevelIdMap(newActivities[0]));
-        assert.deepEqual([['2']], activeLevelIdMap(newActivities[1]));
+        expect([[], [], ['1']]).toEqual(activeLevelIdMap(newActivities[0]));
+        expect([['2']]).toEqual(activeLevelIdMap(newActivities[1]));
       });
     });
 
@@ -223,18 +217,16 @@ describe('activitiesEditorRedux reducer tests', () => {
           expand: false,
         })
       ).activities;
-      assert.deepEqual(
-        nextState[0].activitySections[2].scriptLevels.map(s => s.id),
-        ['10', '11', '12']
-      );
+      expect(
+        nextState[0].activitySections[2].scriptLevels.map(s => s.id)
+      ).toEqual(['10', '11', '12']);
     });
 
     it('remove level', () => {
       const nextState = reducer(initialState, removeLevel(1, 3, 1)).activities;
-      assert.deepEqual(
-        nextState[0].activitySections[2].scriptLevels.map(s => s.id),
-        ['11']
-      );
+      expect(
+        nextState[0].activitySections[2].scriptLevels.map(s => s.id)
+      ).toEqual(['11']);
     });
 
     it('set script level field', () => {
@@ -242,10 +234,9 @@ describe('activitiesEditorRedux reducer tests', () => {
         initialState,
         setScriptLevelField(1, 3, 1, {bonus: true})
       );
-      assert.equal(
-        nextState.activities[0].activitySections[2].scriptLevels[0].bonus,
-        true
-      );
+      expect(
+        nextState.activities[0].activitySections[2].scriptLevels[0].bonus
+      ).toEqual(true);
     });
   });
 
@@ -281,10 +272,9 @@ describe('activitiesEditorRedux reducer tests', () => {
         initialState,
         addActivity(3, 'activity-key', 'section-key-1')
       ).activities;
-      assert.equal(nextState[nextState.length - 1].displayName, '');
-      assert.equal(nextState[nextState.length - 1].key, 'activity-key');
-      assert.equal(
-        nextState[nextState.length - 1].activitySections[0].key,
+      expect(nextState[nextState.length - 1].displayName).toEqual('');
+      expect(nextState[nextState.length - 1].key).toEqual('activity-key');
+      expect(nextState[nextState.length - 1].activitySections[0].key).toEqual(
         'section-key-1'
       );
     });
@@ -298,7 +288,7 @@ describe('activitiesEditorRedux reducer tests', () => {
       let expectedState = _.cloneDeep(initialActivities);
       expectedState[0].duration = 100;
 
-      assert.deepEqual(expectedState, state.activities);
+      expect(expectedState).toEqual(state.activities);
     });
 
     it('removes activity', () => {
@@ -307,16 +297,16 @@ describe('activitiesEditorRedux reducer tests', () => {
       let expectedState = _.cloneDeep(initialActivities).slice(1);
       expectedState[0].position = 1;
 
-      assert.deepEqual(expectedState, state.activities);
+      expect(expectedState).toEqual(state.activities);
     });
 
     it('removes last activity', () => {
       let state = reducer(initialState, removeActivity(1));
-      assert.deepEqual(1, state.activities.length);
+      expect(1).toEqual(state.activities.length);
 
       state = reducer(state, removeActivity(1));
-      assert.deepEqual(1, state.activities.length);
-      assert.deepEqual([emptyActivity], state.activities);
+      expect(1).toEqual(state.activities.length);
+      expect([emptyActivity]).toEqual(state.activities);
     });
 
     it('moves activity', () => {
@@ -326,11 +316,11 @@ describe('activitiesEditorRedux reducer tests', () => {
       expectedState[0].position = 1;
       expectedState[1].position = 2;
 
-      assert.deepEqual(expectedState, state.activities);
+      expect(expectedState).toEqual(state.activities);
 
       state = reducer(state, moveActivity(1, 'down'));
 
-      assert.deepEqual(initialActivities, state.activities);
+      expect(initialActivities).toEqual(state.activities);
     });
 
     describe('activity section', () => {
@@ -353,7 +343,7 @@ describe('activitiesEditorRedux reducer tests', () => {
         expectedState[1].activitySections[0].position = 1;
         expectedState[1].activitySections[1].position = 2;
 
-        assert.deepEqual(expectedState, state.activities);
+        expect(expectedState).toEqual(state.activities);
       });
 
       it('moves a activitySection up and changes activity but not position', () => {
@@ -378,7 +368,7 @@ describe('activitiesEditorRedux reducer tests', () => {
           expectedState[1].activitySections.slice(1);
         expectedState[1].activitySections[0].position = 1;
 
-        assert.deepEqual(expectedState, state.activities);
+        expect(expectedState).toEqual(state.activities);
       });
 
       it('remove activity section', () => {
@@ -389,20 +379,20 @@ describe('activitiesEditorRedux reducer tests', () => {
           expectedState[0].activitySections.slice(1);
         expectedState[0].activitySections[0].position = 1;
 
-        assert.deepEqual(expectedState, state.activities);
+        expect(expectedState).toEqual(state.activities);
       });
 
       it('remove last activity section in activity', () => {
         let state = reducer(initialState, removeActivitySection(1, 1));
-        assert.deepEqual(1, state.activities[0].activitySections.length);
+        expect(1).toEqual(state.activities[0].activitySections.length);
 
         state = reducer(state, removeActivitySection(1, 1));
 
         let expectedState = _.cloneDeep(initialActivities);
         expectedState[0].activitySections = [emptyActivitySection];
 
-        assert.deepEqual(1, state.activities[0].activitySections.length);
-        assert.deepEqual(expectedState, state.activities);
+        expect(1).toEqual(state.activities[0].activitySections.length);
+        expect(expectedState).toEqual(state.activities);
       });
 
       it('update activity section field', () => {
@@ -414,7 +404,7 @@ describe('activitiesEditorRedux reducer tests', () => {
         let expectedState = _.cloneDeep(initialActivities);
         expectedState[0].activitySections[1].displayName = 'My Display Name';
 
-        assert.deepEqual(expectedState, state.activities);
+        expect(expectedState).toEqual(state.activities);
       });
 
       it('add activitySection', () => {
@@ -422,10 +412,11 @@ describe('activitiesEditorRedux reducer tests', () => {
           initialState,
           addActivitySection(1, 'activitySection-key')
         ).activities;
-        assert.deepEqual(
-          nextState[0].activitySections.map(s => s.key),
-          ['a', 'b', 'activitySection-key']
-        );
+        expect(nextState[0].activitySections.map(s => s.key)).toEqual([
+          'a',
+          'b',
+          'activitySection-key',
+        ]);
       });
     });
   });

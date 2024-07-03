@@ -38,7 +38,7 @@ describe('Craft', () => {
 
     Craft.init(config);
     server.respond();
-    assert(getStore().getState().pageConstants.isMinecraft);
+    expect(getStore().getState().pageConstants.isMinecraft).toBeTruthy();
     server.restore();
   });
 });

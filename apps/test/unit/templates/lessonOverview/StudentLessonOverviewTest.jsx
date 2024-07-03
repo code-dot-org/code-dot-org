@@ -146,7 +146,9 @@ describe('StudentLessonOverview', () => {
 
   it('has no announcements if none provided', () => {
     const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
-    assert.equal(wrapper.find('Announcements').props().announcements.length, 0);
+    expect(wrapper.find('Announcements').props().announcements.length).toEqual(
+      0
+    );
   });
 
   it('has student announcements', () => {
@@ -159,26 +161,28 @@ describe('StudentLessonOverview', () => {
         ]}
       />
     );
-    assert.equal(wrapper.find('Announcements').props().announcements.length, 2);
+    expect(wrapper.find('Announcements').props().announcements.length).toEqual(
+      2
+    );
   });
 
   it('displays the student resources', () => {
     const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
     const resourceSection = wrapper.find('#resource-section');
-    assert.equal(resourceSection.find('ResourceList').length, 1);
+    expect(resourceSection.find('ResourceList').length).toEqual(1);
   });
 
   it('does not display the resources section if there are no student resources', () => {
     let myProps = defaultProps;
     myProps.lesson.resources = [];
     const wrapper = shallow(<StudentLessonOverview {...myProps} />);
-    assert.equal(wrapper.find('#resource-section').length, 0);
+    expect(wrapper.find('#resource-section').length).toEqual(0);
   });
 
   it('displays the introduced code', () => {
     const wrapper = shallow(<StudentLessonOverview {...defaultProps} />);
     const codeSection = wrapper.find('#unit-test-introduced-code');
-    assert.equal(codeSection.find('StyledCodeBlock').length, 1);
+    expect(codeSection.find('StyledCodeBlock').length).toEqual(1);
   });
 
   it('does not display the introduced code if no code', () => {
@@ -186,7 +190,7 @@ describe('StudentLessonOverview', () => {
     newDefaultProps.lesson.programmingExpressions = [];
 
     const wrapper = shallow(<StudentLessonOverview {...newDefaultProps} />);
-    assert.equal(wrapper.find('#unit-test-introduced-code').length, 0);
+    expect(wrapper.find('#unit-test-introduced-code').length).toEqual(0);
   });
 
   it('displays levels with progress if levels present', () => {
@@ -194,7 +198,7 @@ describe('StudentLessonOverview', () => {
     const wrapper = shallow(
       <StudentLessonOverview {...defaultProps} lessonLevels={lessonLevels} />
     );
-    assert.equal(wrapper.find('#level-section').length, 1);
+    expect(wrapper.find('#level-section').length).toEqual(1);
     expect(wrapper.text()).toContain('Lesson 1');
   });
 

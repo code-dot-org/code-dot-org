@@ -26,7 +26,7 @@ describe('ParticipantTypePicker', () => {
         availableParticipantTypes={['student', 'teacher', 'facilitator']}
       />
     );
-    assert.equal(wrapper.find('ParticipantTypeCard').length, 3);
+    expect(wrapper.find('ParticipantTypeCard').length).toEqual(3);
   });
 
   it('clicking on a card calls setParticipantType', () => {

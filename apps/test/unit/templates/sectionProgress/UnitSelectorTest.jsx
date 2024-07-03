@@ -16,10 +16,11 @@ describe('UnitSelector', () => {
   it('loads the correct number of course versions', () => {
     const wrapper = shallow(<UnitSelector {...defaultProps} />);
     expect(wrapper.find('optgroup').length).toBe(3);
-    assert.deepEqual(
-      wrapper.find('optgroup').map(o => o.props().label),
-      ['Course A', 'CS Discoveries 2018', 'Flappy']
-    );
+    expect(wrapper.find('optgroup').map(o => o.props().label)).toEqual([
+      'Course A',
+      'CS Discoveries 2018',
+      'Flappy',
+    ]);
     expect(wrapper.find('option').length).toBe(5);
   });
 });

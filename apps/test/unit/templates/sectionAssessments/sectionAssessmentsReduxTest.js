@@ -48,9 +48,8 @@ describe('sectionAssessmentsRedux', () => {
       };
       const action = setScriptId(2);
       const nextState = sectionAssessments(currentState, action);
-      assert.deepEqual(nextState.studentId, 0);
-      assert.deepEqual(
-        nextState.assessmentResponsesByScript,
+      expect(nextState.studentId).toEqual(0);
+      expect(nextState.assessmentResponsesByScript).toEqual(
         currentState.assessmentResponsesByScript
       );
     });
@@ -64,7 +63,7 @@ describe('sectionAssessmentsRedux', () => {
       const nextState = sectionAssessments(initialState, action);
       const actualAssessmentData =
         nextState.assessmentResponsesByScript[scriptId];
-      assert.deepEqual(actualAssessmentData, assessmentData);
+      expect(actualAssessmentData).toEqual(assessmentData);
     });
   });
 
@@ -75,7 +74,7 @@ describe('sectionAssessmentsRedux', () => {
       const action = setSurveys(scriptId, surveyData);
       const nextState = sectionAssessments(initialState, action);
       const actualSurveyData = nextState.surveysByScript[scriptId];
-      assert.deepEqual(actualSurveyData, surveyData);
+      expect(actualSurveyData).toEqual(surveyData);
     });
   });
 
@@ -99,8 +98,8 @@ describe('sectionAssessmentsRedux', () => {
       const nextState = sectionAssessments(initialState, action);
       const actualAssessmentData =
         nextState.assessmentQuestionsByScript[scriptId];
-      assert.deepEqual(actualAssessmentData, assessmentData);
-      assert.deepEqual(nextState.assessmentId, 139);
+      expect(actualAssessmentData).toEqual(assessmentData);
+      expect(nextState.assessmentId).toEqual(139);
     });
   });
 
@@ -137,7 +136,7 @@ describe('sectionAssessmentsRedux', () => {
       const action = setFeedback(scriptId, feedbackData);
       const nextState = sectionAssessments(initialState, action);
       const actualFeedbackData = nextState.feedbackByScript[scriptId];
-      assert.deepEqual(actualFeedbackData, feedbackData);
+      expect(actualFeedbackData).toEqual(feedbackData);
     });
   });
 
@@ -145,7 +144,7 @@ describe('sectionAssessmentsRedux', () => {
     it('sets the id of the current assessment in view', () => {
       const action = setAssessmentId(456);
       const nextState = sectionAssessments(initialState, action);
-      assert.deepEqual(nextState.assessmentId, 456);
+      expect(nextState.assessmentId).toEqual(456);
     });
   });
 
@@ -153,7 +152,7 @@ describe('sectionAssessmentsRedux', () => {
     it('sets the id of the current student in view', () => {
       const action = setStudentId(777);
       const nextState = sectionAssessments(initialState, action);
-      assert.deepEqual(nextState.studentId, 777);
+      expect(nextState.studentId).toEqual(777);
     });
   });
 
@@ -161,7 +160,7 @@ describe('sectionAssessmentsRedux', () => {
     it('sets the index of the current question in view', () => {
       const action = setQuestionIndex(2);
       const nextState = sectionAssessments(initialState, action);
-      assert.deepEqual(nextState.questionIndex, 2);
+      expect(nextState.questionIndex).toEqual(2);
     });
   });
 
@@ -169,7 +168,7 @@ describe('sectionAssessmentsRedux', () => {
     it('sets isLoading to true', () => {
       const action = startLoadingAssessments();
       const nextState = sectionAssessments(initialState, action);
-      assert.isTrue(nextState.isLoading);
+      expect(nextState.isLoading).toBe(true);
     });
   });
 
@@ -177,7 +176,7 @@ describe('sectionAssessmentsRedux', () => {
     it('sets isLoading to false', () => {
       const action = finishLoadingAssessments();
       const nextState = sectionAssessments(initialState, action);
-      assert.isFalse(nextState.isLoading);
+      expect(nextState.isLoading).toBe(false);
     });
   });
 
@@ -214,10 +213,10 @@ describe('sectionAssessmentsRedux', () => {
         },
       };
       const result = getCurrentScriptAssessmentList(rootState);
-      assert.deepEqual(result.length, 3);
-      assert.deepEqual(result[0], {id: 7, name: 'Assessment 7'});
-      assert.deepEqual(result[1], {id: 8, name: 'Assessment 8'});
-      assert.deepEqual(result[2], {id: 9, name: 'Survey 9'});
+      expect(result.length).toEqual(3);
+      expect(result[0]).toEqual({id: 7, name: 'Assessment 7'});
+      expect(result[1]).toEqual({id: 8, name: 'Assessment 8'});
+      expect(result[2]).toEqual({id: 9, name: 'Survey 9'});
     });
 
     it('gets a list of assessments - teacher feedback enabled', () => {
@@ -252,11 +251,11 @@ describe('sectionAssessmentsRedux', () => {
         },
       };
       const result = getCurrentScriptAssessmentList(rootState);
-      assert.deepEqual(result.length, 4);
-      assert.deepEqual(result[0], {id: 7, name: 'Assessment 7'});
-      assert.deepEqual(result[1], {id: 8, name: 'Assessment 8'});
-      assert.deepEqual(result[2], {id: 9, name: 'Survey 9'});
-      assert.deepEqual(result[3], {
+      expect(result.length).toEqual(4);
+      expect(result[0]).toEqual({id: 7, name: 'Assessment 7'});
+      expect(result[1]).toEqual({id: 8, name: 'Assessment 8'});
+      expect(result[2]).toEqual({id: 9, name: 'Survey 9'});
+      expect(result[3]).toEqual({
         id: 0,
         name: 'All teacher feedback in this unit',
       });
@@ -270,14 +269,14 @@ describe('sectionAssessmentsRedux', () => {
           {text: 'answer1', correct: false},
           {text: 'answer2', correct: true},
         ];
-        assert.deepEqual(getCorrectAnswer(answerArray), 'B');
+        expect(getCorrectAnswer(answerArray)).toEqual('B');
       });
     });
 
     describe('indexesToAnswerString', () => {
       it('returns a string of letters', () => {
-        assert.deepEqual(indexesToAnswerString([0, 2]), 'A, C');
-        assert.deepEqual(indexesToAnswerString([1]), 'B');
+        expect(indexesToAnswerString([0, 2])).toEqual('A, C');
+        expect(indexesToAnswerString([1])).toEqual('B');
       });
     });
   });
@@ -301,7 +300,7 @@ describe('sectionAssessmentsRedux', () => {
       it('returns an empty array when no assessments in redux', () => {
         const result =
           getMultipleChoiceStructureForCurrentAssessment(rootState);
-        assert.deepEqual(result, []);
+        expect(result).toEqual([]);
       });
 
       it('returns an array of objects of questionStructurePropType', () => {
@@ -334,7 +333,7 @@ describe('sectionAssessmentsRedux', () => {
         };
         const result =
           getMultipleChoiceStructureForCurrentAssessment(stateWithAssessment);
-        assert.deepEqual(result, [
+        expect(result).toEqual([
           {
             correctAnswer: 'B',
             id: 456,
@@ -348,7 +347,7 @@ describe('sectionAssessmentsRedux', () => {
     describe('getMatchStructureForCurrentAssessment', () => {
       it('returns an empty array when no assessments in redux', () => {
         const result = getMatchStructureForCurrentAssessment(rootState);
-        assert.deepEqual(result, []);
+        expect(result).toEqual([]);
       });
 
       it('returns an array of objects of matchQuestionPropType', () => {
@@ -379,7 +378,7 @@ describe('sectionAssessmentsRedux', () => {
         };
         const result =
           getMatchStructureForCurrentAssessment(stateWithAssessment);
-        assert.deepEqual(result, [
+        expect(result).toEqual([
           {
             id: 456,
             questionNumber: 1,
@@ -394,7 +393,7 @@ describe('sectionAssessmentsRedux', () => {
     describe('getStudentMCResponsesForCurrentAssessment', () => {
       it('returns an empty array when no assessments in redux', () => {
         const result = getStudentMCResponsesForCurrentAssessment(rootState);
-        assert.deepEqual(result, {});
+        expect(result).toEqual({});
       });
 
       it('returns an array of objects of studentWithMCResponsesPropType', () => {
@@ -431,7 +430,7 @@ describe('sectionAssessmentsRedux', () => {
         };
         const result =
           getStudentMCResponsesForCurrentAssessment(stateWithAssessment);
-        assert.deepEqual(result, {
+        expect(result).toEqual({
           id: 1,
           name: 'Saira',
           studentResponses: [{responses: 'D', isCorrect: false}],
@@ -442,7 +441,7 @@ describe('sectionAssessmentsRedux', () => {
     describe('getStudentMatchResponsesForCurrentAssessment', () => {
       it('returns an empty array when no assessments in redux', () => {
         const result = getStudentMatchResponsesForCurrentAssessment(rootState);
-        assert.deepEqual(result, {});
+        expect(result).toEqual({});
       });
 
       it('returns an array of objects of studentWithMatchResponsesPropType', () => {
@@ -484,7 +483,7 @@ describe('sectionAssessmentsRedux', () => {
         };
         const result =
           getStudentMatchResponsesForCurrentAssessment(stateWithAssessment);
-        assert.deepEqual(result, {
+        expect(result).toEqual({
           id: 1,
           name: 'Saira',
           studentResponses: [{responses: [0, 1]}],
@@ -495,7 +494,7 @@ describe('sectionAssessmentsRedux', () => {
     describe('getAssessmentsFreeResponseResults', () => {
       it('returns an empty array when no assessments in redux', () => {
         const result = getAssessmentsFreeResponseResults(rootState);
-        assert.deepEqual(result, []);
+        expect(result).toEqual([]);
       });
 
       it('returns an array of objects representing free response questions', () => {
@@ -538,7 +537,7 @@ describe('sectionAssessmentsRedux', () => {
           },
         };
         const result = getAssessmentsFreeResponseResults(stateWithAssessment);
-        assert.deepEqual(result, [
+        expect(result).toEqual([
           {
             questionText: 'Can you say hello?',
             questionNumber: 1,
@@ -602,7 +601,7 @@ describe('sectionAssessmentsRedux', () => {
           },
         };
         const result = getAssessmentsFreeResponseResults(stateWithAssessment);
-        assert.deepEqual(result, [
+        expect(result).toEqual([
           {
             questionText: 'Can you say hello?',
             questionNumber: 1,
@@ -615,7 +614,7 @@ describe('sectionAssessmentsRedux', () => {
     describe('getSurveyFreeResponseQuestions', () => {
       it('returns an empty array when no surveys in redux', () => {
         const result = getSurveyFreeResponseQuestions(rootState);
-        assert.deepEqual(result, []);
+        expect(result).toEqual([]);
       });
 
       it('returns an array of objects representing free response questions', () => {
@@ -648,7 +647,7 @@ describe('sectionAssessmentsRedux', () => {
           },
         };
         const result = getSurveyFreeResponseQuestions(stateWithSurvey);
-        assert.deepEqual(result, [
+        expect(result).toEqual([
           {
             questionText: 'question1',
             questionNumber: 1,
@@ -666,7 +665,7 @@ describe('sectionAssessmentsRedux', () => {
     describe('getMultipleChoiceSurveyResults', () => {
       it('returns an empty array when no surveys in redux', () => {
         const result = getMultipleChoiceSurveyResults(rootState);
-        assert.deepEqual(result, []);
+        expect(result).toEqual([]);
       });
 
       it('returns an array of objects representing free response questions', () => {
@@ -701,7 +700,7 @@ describe('sectionAssessmentsRedux', () => {
           },
         };
         const result = getMultipleChoiceSurveyResults(stateWithSurvey);
-        assert.deepEqual(result, [
+        expect(result).toEqual([
           {
             id: 0,
             questionNumber: 1,
@@ -744,7 +743,7 @@ describe('sectionAssessmentsRedux', () => {
           },
         };
         const result = isCurrentScriptCSD(state);
-        assert.deepEqual(result, true);
+        expect(result).toEqual(true);
       });
 
       it('returns false when the current script is not CSD', () => {
@@ -758,7 +757,7 @@ describe('sectionAssessmentsRedux', () => {
           },
         };
         const result = isCurrentScriptCSD(state);
-        assert.deepEqual(result, false);
+        expect(result).toEqual(false);
       });
     });
 
@@ -777,7 +776,7 @@ describe('sectionAssessmentsRedux', () => {
           },
         };
         const result = isCurrentAssessmentSurvey(stateWithSurvey);
-        assert.deepEqual(result, true);
+        expect(result).toEqual(true);
       });
 
       it('returns false when the current assessment is not a survey', () => {
@@ -794,14 +793,14 @@ describe('sectionAssessmentsRedux', () => {
           },
         };
         const result = isCurrentAssessmentSurvey(stateWithSurvey);
-        assert.deepEqual(result, false);
+        expect(result).toEqual(false);
       });
     });
 
     describe('getMultipleChoiceSectionSummary', () => {
       it('returns an empty array when no assessments in redux', () => {
         const result = getMultipleChoiceSectionSummary(rootState);
-        assert.deepEqual(result, []);
+        expect(result).toEqual([]);
       });
 
       it('returns an array of objects of multipleChoiceDataPropType', () => {
@@ -889,7 +888,7 @@ describe('sectionAssessmentsRedux', () => {
           },
         };
         const result = getMultipleChoiceSectionSummary(stateWithAssessment);
-        assert.deepEqual(result, [
+        expect(result).toEqual([
           {
             answers: [
               {
@@ -954,7 +953,7 @@ describe('sectionAssessmentsRedux', () => {
     describe('getMatchSectionSummary', () => {
       it('returns an empty array when no assessments in redux', () => {
         const result = getMatchSectionSummary(rootState);
-        assert.deepEqual(result, []);
+        expect(result).toEqual([]);
       });
 
       it('returns an array of objects of matchDataPropType', () => {
@@ -1052,7 +1051,7 @@ describe('sectionAssessmentsRedux', () => {
           },
         };
         const result = getMatchSectionSummary(stateWithAssessment);
-        assert.deepEqual(result, [
+        expect(result).toEqual([
           {
             id: 456,
             question: 'Can you match these things?',
@@ -1193,7 +1192,7 @@ describe('sectionAssessmentsRedux', () => {
         };
 
         const totalSubmissions = countSubmissionsForCurrentAssessment(state);
-        assert.deepEqual(totalSubmissions, 0);
+        expect(totalSubmissions).toEqual(0);
       });
 
       it('returns totals for an assessment', () => {
@@ -1236,7 +1235,7 @@ describe('sectionAssessmentsRedux', () => {
 
         const totalSubmissions =
           countSubmissionsForCurrentAssessment(stateWithAssessment);
-        assert.deepEqual(totalSubmissions, 2);
+        expect(totalSubmissions).toEqual(2);
       });
 
       it('returns totals for a survey', () => {
@@ -1273,7 +1272,7 @@ describe('sectionAssessmentsRedux', () => {
 
         const totalSubmissions =
           countSubmissionsForCurrentAssessment(stateWithSurvey);
-        assert.deepEqual(totalSubmissions, 1);
+        expect(totalSubmissions).toEqual(1);
       });
 
       it('returns 0 for 0 survey submissions', () => {
@@ -1295,7 +1294,7 @@ describe('sectionAssessmentsRedux', () => {
 
         const totalSubmissions =
           countSubmissionsForCurrentAssessment(stateWithSurvey);
-        assert.deepEqual(totalSubmissions, 0);
+        expect(totalSubmissions).toEqual(0);
       });
     });
 
@@ -1333,7 +1332,7 @@ describe('sectionAssessmentsRedux', () => {
         };
 
         const csvData = getExportableSurveyData(stateWithSurvey);
-        assert.deepEqual(csvData, [
+        expect(csvData).toEqual([
           {
             answer: 'agree',
             numberAnswered: 1,
@@ -1426,7 +1425,7 @@ describe('sectionAssessmentsRedux', () => {
         };
 
         const csvData = getExportableAssessmentData(stateWithAssessment);
-        assert.deepEqual(csvData, [
+        expect(csvData).toEqual([
           {
             correct: 'correct',
             question: 1,
@@ -1542,7 +1541,7 @@ describe('sectionAssessmentsRedux', () => {
         };
 
         const csvData = getExportableFeedbackData(stateWithFeedback);
-        assert.deepEqual(csvData, [
+        expect(csvData).toEqual([
           {
             studentName: 'Mike',
             lessonNum: '4',
@@ -1600,7 +1599,7 @@ describe('sectionAssessmentsRedux', () => {
             selectedStudents: [],
           },
         });
-        assert.deepEqual(result, []);
+        expect(result).toEqual([]);
       });
 
       it('returns an array of objects of studentOverviewDataPropType', () => {
@@ -1640,7 +1639,7 @@ describe('sectionAssessmentsRedux', () => {
         };
         const result =
           getStudentsMCandMatchSummaryForCurrentAssessment(stateWithAssessment);
-        assert.deepEqual(result, [
+        expect(result).toEqual([
           {
             id: 2,
             name: 'Ilulia',
@@ -1701,7 +1700,7 @@ describe('sectionAssessmentsRedux', () => {
       };
       const result =
         getStudentsMCandMatchSummaryForCurrentAssessment(stateWithAssessment);
-      assert.deepEqual(result, [
+      expect(result).toEqual([
         {
           id: 99,
           name: 'Issac',
@@ -1738,9 +1737,8 @@ describe('sectionAssessmentsRedux', () => {
         };
 
         const question = getCurrentQuestion(stateWithSurvey);
-        assert.deepEqual('What is a variable?', question.question);
-        assert.deepEqual(
-          [{text: 'a', correct: false, letter: 'A'}],
+        expect('What is a variable?').toEqual(question.question);
+        expect([{text: 'a', correct: false, letter: 'A'}]).toEqual(
           question.answers
         );
       });
@@ -1781,8 +1779,8 @@ describe('sectionAssessmentsRedux', () => {
         };
 
         const question = getCurrentQuestion(stateWithAssessment);
-        assert.deepEqual(question.question, 'What is a function?');
-        assert.deepEqual(question.answers, [
+        expect(question.question).toEqual('What is a function?');
+        expect(question.answers).toEqual([
           {text: 'a', correct: true, letter: 'A'},
         ]);
       });
@@ -1823,8 +1821,8 @@ describe('sectionAssessmentsRedux', () => {
         };
 
         const question = getCurrentQuestion(stateWithAssessment);
-        assert.deepEqual(question.question, 'Can you match these things?');
-        assert.deepEqual(question.answers, ['answer 1', 'answer 2']);
+        expect(question.question).toEqual('Can you match these things?');
+        expect(question.answers).toEqual(['answer 1', 'answer 2']);
       });
 
       it('returns an empty answers array if answers is undefined', () => {
@@ -1852,8 +1850,8 @@ describe('sectionAssessmentsRedux', () => {
         };
 
         const question = getCurrentQuestion(stateWithAssessment);
-        assert.deepEqual(question.question, 'What is a variable?');
-        assert.deepEqual(question.answers, []);
+        expect(question.question).toEqual('What is a variable?');
+        expect(question.answers).toEqual([]);
       });
     });
 
@@ -1876,7 +1874,7 @@ describe('sectionAssessmentsRedux', () => {
         };
 
         const answers = getStudentAnswersForCurrentQuestion(stateWithSurvey);
-        assert.deepEqual(answers, []);
+        expect(answers).toEqual([]);
       });
 
       it('returns an array of answers for an assessment', () => {
@@ -1914,7 +1912,7 @@ describe('sectionAssessmentsRedux', () => {
 
         const answers =
           getStudentAnswersForCurrentQuestion(stateWithAssessment);
-        assert.deepEqual(answers, [
+        expect(answers).toEqual([
           {id: 1, name: 'Saira', answer: 'D', correct: false},
         ]);
       });

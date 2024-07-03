@@ -9,7 +9,7 @@ import {
 import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
 import * as utils from '@cdo/apps/utils';
 
-import {assert, expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+import {assert, expect} from '../../../../util/reconfiguredChai';
 
 const fakeSection = {
   name: 'My Section',

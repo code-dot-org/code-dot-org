@@ -98,7 +98,9 @@ describe('CourseOverview', () => {
         ]}
       />
     );
-    assert.equal(wrapper.find('Announcements').props().announcements.length, 2);
+    expect(wrapper.find('Announcements').props().announcements.length).toEqual(
+      2
+    );
   });
 
   it('has participant announcement if viewing as participant', () => {
@@ -109,19 +111,21 @@ describe('CourseOverview', () => {
         announcements={[fakeStudentAnnouncement]}
       />
     );
-    assert.equal(wrapper.find('Announcements').props().announcements.length, 1);
+    expect(wrapper.find('Announcements').props().announcements.length).toEqual(
+      1
+    );
   });
 
   it('renders a top row for instructors', () => {
     const wrapper = shallow(
       <CourseOverview {...defaultProps} isInstructor={true} />
     );
-    assert.equal(wrapper.find('CourseOverviewTopRow').length, 1);
+    expect(wrapper.find('CourseOverviewTopRow').length).toEqual(1);
   });
 
   it('renders a CourseScript for each script', () => {
     const wrapper = shallow(<CourseOverview {...defaultProps} />);
-    assert.equal(wrapper.find('Connect(CourseScript)').length, 2);
+    expect(wrapper.find('Connect(CourseScript)').length).toEqual(2);
   });
 
   describe('VerifiedResourcesNotification', () => {
@@ -133,28 +137,28 @@ describe('CourseOverview', () => {
 
     it('is shown to unverified instructors if course has verified resources', () => {
       const wrapper = shallow(<CourseOverview {...propsToShow} />);
-      assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
+      expect(wrapper.find('VerifiedResourcesNotification').length).toEqual(1);
     });
 
     it('is not shown if instructor is verified', () => {
       const wrapper = shallow(
         <CourseOverview {...propsToShow} isVerifiedInstructor={true} />
       );
-      assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
+      expect(wrapper.find('VerifiedResourcesNotification').length).toEqual(0);
     });
 
     it('is not shown if course does not have verified resources', () => {
       const wrapper = shallow(
         <CourseOverview {...propsToShow} hasVerifiedResources={false} />
       );
-      assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
+      expect(wrapper.find('VerifiedResourcesNotification').length).toEqual(0);
     });
 
     it('is not shown while viewing as participant', () => {
       const wrapper = shallow(
         <CourseOverview {...propsToShow} viewAs={ViewType.Participant} />
       );
-      assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
+      expect(wrapper.find('VerifiedResourcesNotification').length).toEqual(0);
     });
   });
 
@@ -179,7 +183,7 @@ describe('CourseOverview', () => {
       const versionSelector = wrapper.find('AssignmentVersionSelector');
       expect(versionSelector.length).toBe(1);
       const renderedVersions = versionSelector.props().courseVersions;
-      assert.equal(2, Object.values(renderedVersions).length);
+      expect(2).toEqual(Object.values(renderedVersions).length);
     });
 
     it('does not appear when only one version is viewable', () => {

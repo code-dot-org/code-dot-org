@@ -129,11 +129,11 @@ describe('App Lab redux module', () => {
       it('sets given data on the level', () => {
         let data = {name: 'Favorite Level!', isStartMode: true};
         store.dispatch(actions.setLevelData(data));
-        assert.deepEqual(data, store.getState().level);
+        expect(data).toEqual(store.getState().level);
         // Only update level name, make sure other data is unaffected.
         data.name = 'New Name!';
         store.dispatch(actions.setLevelData({name: data.name}));
-        assert.deepEqual(data, store.getState().level);
+        expect(data).toEqual(store.getState().level);
       });
     });
   });

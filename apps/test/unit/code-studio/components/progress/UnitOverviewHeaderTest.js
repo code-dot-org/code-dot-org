@@ -49,21 +49,23 @@ describe('UnitOverviewHeader', () => {
       />,
       {disableLifecycleMethods: true}
     );
-    assert.equal(wrapper.find('PlcHeader').length, 1);
+    expect(wrapper.find('PlcHeader').length).toEqual(1);
   });
 
   it('does not have a PlcHeader if we have no plcHeaderProps', () => {
     const wrapper = shallow(<UnitOverviewHeader {...defaultProps} />, {
       disableLifecycleMethods: true,
     });
-    assert.equal(wrapper.find('PlcHeader').length, 0);
+    expect(wrapper.find('PlcHeader').length).toEqual(0);
   });
 
   it('has no notifications by default', () => {
     const wrapper = shallow(<UnitOverviewHeader {...defaultProps} />, {
       disableLifecycleMethods: true,
     });
-    assert.equal(wrapper.find('Announcements').props().announcements.length, 0);
+    expect(wrapper.find('Announcements').props().announcements.length).toEqual(
+      0
+    );
   });
 
   it('includes a single notification default for non-verified instructors', () => {
@@ -76,7 +78,7 @@ describe('UnitOverviewHeader', () => {
       />,
       {disableLifecycleMethods: true}
     );
-    assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
+    expect(wrapper.find('VerifiedResourcesNotification').length).toEqual(1);
   });
 
   it('has non-verified and provided instructor announcements if necessary', () => {
@@ -93,8 +95,10 @@ describe('UnitOverviewHeader', () => {
       />,
       {disableLifecycleMethods: true}
     );
-    assert.equal(wrapper.find('Announcements').props().announcements.length, 2);
-    assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
+    expect(wrapper.find('Announcements').props().announcements.length).toEqual(
+      2
+    );
+    expect(wrapper.find('VerifiedResourcesNotification').length).toEqual(1);
   });
 
   it('has participant announcement if viewing as participant', () => {
@@ -108,7 +112,9 @@ describe('UnitOverviewHeader', () => {
       />,
       {disableLifecycleMethods: true}
     );
-    assert.equal(wrapper.find('Announcements').props().announcements.length, 1);
+    expect(wrapper.find('Announcements').props().announcements.length).toEqual(
+      1
+    );
   });
 
   it('passes versions to AssignmentVersionSelector', () => {
@@ -117,9 +123,9 @@ describe('UnitOverviewHeader', () => {
     });
 
     const versionSelector = wrapper.find('AssignmentVersionSelector');
-    assert.equal(1, versionSelector.length);
+    expect(1).toEqual(versionSelector.length);
     const renderedVersions = versionSelector.props().courseVersions;
-    assert.equal(2, Object.values(renderedVersions).length);
+    expect(2).toEqual(Object.values(renderedVersions).length);
   });
 
   it('has correct unit description for instructor', () => {

@@ -133,11 +133,11 @@ describe('VersionHistory', () => {
   }) {
     it('renders loading spinner at first', () => {
       wrapper = mount(<VersionHistory {...props} />);
-      assert(
+      expect(
         wrapper.containsMatchingElement(
           <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
         )
-      );
+      ).toBeTruthy();
     });
 
     it('renders an error on failed version history load', () => {
@@ -152,11 +152,11 @@ describe('VersionHistory', () => {
       finishVersionHistoryLoad();
 
       // Spinner goes away
-      assert(
+      expect(
         !wrapper.containsMatchingElement(
           <i className="fa fa-spinner fa-spin" style={{fontSize: '32px'}} />
         )
-      );
+      ).toBeTruthy();
 
       // Rendered two version rows
       expect(wrapper.find(VersionRow)).toHaveLength(2);
@@ -198,7 +198,7 @@ describe('VersionHistory', () => {
       wrapper.find('.btn-danger').simulate('click');
 
       // Expect confirmation to show
-      assert(
+      expect(
         wrapper.containsMatchingElement(
           <div>
             <p>
@@ -213,7 +213,7 @@ describe('VersionHistory', () => {
             </button>
           </div>
         )
-      );
+      ).toBeTruthy();
     });
 
     it('goes back to version list after cancelling Start Over', () => {
@@ -224,7 +224,7 @@ describe('VersionHistory', () => {
       wrapper.find('.btn-danger').simulate('click');
 
       // Expect confirmation to show
-      assert(
+      expect(
         wrapper.containsMatchingElement(
           <div>
             <p>
@@ -239,7 +239,7 @@ describe('VersionHistory', () => {
             </button>
           </div>
         )
-      );
+      ).toBeTruthy();
 
       // Click "Cancel"
       wrapper.find('#again-button').simulate('click');

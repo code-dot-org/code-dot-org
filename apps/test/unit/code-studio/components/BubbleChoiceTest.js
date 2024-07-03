@@ -47,7 +47,7 @@ const DEFAULT_PROPS = {
 describe('BubbleChoice', () => {
   it('renders correct number of sublevels', () => {
     const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} />);
-    assert.equal(2, wrapper.find('SublevelCard').length);
+    expect(2).toEqual(wrapper.find('SublevelCard').length);
   });
 
   describe('back and finish buttons', () => {
@@ -63,7 +63,7 @@ describe('BubbleChoice', () => {
       const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} />);
 
       // 4 buttons - 2 "back" and 2 "continue/finish"
-      assert.equal(4, wrapper.find('button').length);
+      expect(4).toEqual(wrapper.find('button').length);
 
       const backButton = wrapper.find('button').at(0);
       backButton.simulate('click');
@@ -72,7 +72,7 @@ describe('BubbleChoice', () => {
       );
 
       const finishButton = wrapper.find('button').at(1);
-      assert.equal('Finish', finishButton.text());
+      expect('Finish').toEqual(finishButton.text());
       finishButton.simulate('click');
       expect(utils.navigateToHref).toHaveBeenCalledWith(
         DEFAULT_PROPS.level.redirect_url + window.location.search
@@ -88,7 +88,7 @@ describe('BubbleChoice', () => {
       const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} level={level} />);
 
       // 4 buttons - 2 "back" and 2 "continue/finish"
-      assert.equal(4, wrapper.find('button').length);
+      expect(4).toEqual(wrapper.find('button').length);
 
       const backButton = wrapper.find('button').at(0);
       backButton.simulate('click');
@@ -97,7 +97,7 @@ describe('BubbleChoice', () => {
       );
 
       const finishButton = wrapper.find('button').at(1);
-      assert.equal('Finish', finishButton.text());
+      expect('Finish').toEqual(finishButton.text());
       finishButton.simulate('click');
       expect(utils.navigateToHref).toHaveBeenCalledWith(
         DEFAULT_PROPS.level.script_url + window.location.search
@@ -113,9 +113,9 @@ describe('BubbleChoice', () => {
       const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} level={level} />);
       const buttons = wrapper.find('button');
 
-      assert.equal(2, buttons.length);
-      assert.notEqual('Back', buttons.at(0).text());
-      assert.notEqual('Back', buttons.at(1).text());
+      expect(2).toEqual(buttons.length);
+      expect('Back').not.toEqual(buttons.at(0).text());
+      expect('Back').not.toEqual(buttons.at(1).text());
     });
 
     it('hides finish button if no redirect or script url', () => {
@@ -127,9 +127,9 @@ describe('BubbleChoice', () => {
       const wrapper = mount(<BubbleChoice {...DEFAULT_PROPS} level={level} />);
       const buttons = wrapper.find('button');
 
-      assert.equal(2, buttons.length);
-      assert.notEqual('Finish', buttons.at(0).text());
-      assert.notEqual('Finish', buttons.at(1).text());
+      expect(2).toEqual(buttons.length);
+      expect('Finish').not.toEqual(buttons.at(0).text());
+      expect('Finish').not.toEqual(buttons.at(1).text());
     });
   });
 });

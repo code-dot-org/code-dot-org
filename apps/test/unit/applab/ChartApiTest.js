@@ -74,10 +74,7 @@ describe('ChartApi', function () {
     it('only contains supported types', function () {
       Object.getOwnPropertyNames(ChartType).forEach(function (key) {
         var typeName = ChartType[key];
-        assert.isTrue(
-          ChartApi.supportsType(typeName),
-          "Supports type '" + typeName + "'."
-        );
+        expect(ChartApi.supportsType(typeName)).toBe(true);
       });
     });
 
@@ -90,46 +87,45 @@ describe('ChartApi', function () {
       });
 
       supportedTypes.forEach(function (typeName) {
-        assert.isTrue(
+        expect(
           enumTypeNames.some(function (enumName) {
             return enumName === typeName;
-          }),
-          "Found supported type '" + typeName + "' in enum."
-        );
+          })
+        ).toBe(true);
       });
     });
   });
 
   it('supports type BAR', function () {
-    assert.isTrue(ChartApi.supportsType(ChartApi.ChartType.BAR));
-    assert.isTrue(ChartApi.supportsType('BAR'));
-    assert.isTrue(ChartApi.supportsType('Bar'));
-    assert.isTrue(ChartApi.supportsType('bar'));
+    expect(ChartApi.supportsType(ChartApi.ChartType.BAR)).toBe(true);
+    expect(ChartApi.supportsType('BAR')).toBe(true);
+    expect(ChartApi.supportsType('Bar')).toBe(true);
+    expect(ChartApi.supportsType('bar')).toBe(true);
   });
 
   it('supports type PIE', function () {
-    assert.isTrue(ChartApi.supportsType(ChartApi.ChartType.PIE));
-    assert.isTrue(ChartApi.supportsType('PIE'));
-    assert.isTrue(ChartApi.supportsType('Pie'));
-    assert.isTrue(ChartApi.supportsType('pie'));
+    expect(ChartApi.supportsType(ChartApi.ChartType.PIE)).toBe(true);
+    expect(ChartApi.supportsType('PIE')).toBe(true);
+    expect(ChartApi.supportsType('Pie')).toBe(true);
+    expect(ChartApi.supportsType('pie')).toBe(true);
   });
 
   it('supports type LINE', function () {
-    assert.isTrue(ChartApi.supportsType(ChartApi.ChartType.LINE));
-    assert.isTrue(ChartApi.supportsType('LINE'));
-    assert.isTrue(ChartApi.supportsType('Line'));
-    assert.isTrue(ChartApi.supportsType('line'));
+    expect(ChartApi.supportsType(ChartApi.ChartType.LINE)).toBe(true);
+    expect(ChartApi.supportsType('LINE')).toBe(true);
+    expect(ChartApi.supportsType('Line')).toBe(true);
+    expect(ChartApi.supportsType('line')).toBe(true);
   });
 
   it('supports type SCATTER', function () {
-    assert.isTrue(ChartApi.supportsType(ChartApi.ChartType.SCATTER));
-    assert.isTrue(ChartApi.supportsType('SCATTER'));
-    assert.isTrue(ChartApi.supportsType('Scatter'));
-    assert.isTrue(ChartApi.supportsType('scatter'));
+    expect(ChartApi.supportsType(ChartApi.ChartType.SCATTER)).toBe(true);
+    expect(ChartApi.supportsType('SCATTER')).toBe(true);
+    expect(ChartApi.supportsType('Scatter')).toBe(true);
+    expect(ChartApi.supportsType('scatter')).toBe(true);
   });
 
   it('quotes and alphabetizes types for dropdown', function () {
-    assert.deepEqual(ChartApi.getChartTypeDropdown(), [
+    expect(ChartApi.getChartTypeDropdown()).toEqual([
       '"bar"',
       '"line"',
       '"pie"',
@@ -165,53 +161,27 @@ describe('ChartApi', function () {
       var receivedRejection = rejection
         ? 'Got ' + rejection.message
         : 'Did not reject.';
-      assert(
-        rejectionFound,
-        'Expected rejection ' +
-          rejectionRegexp.toString() +
-          '\n' +
-          receivedRejection
-      );
+      expect(rejectionFound).toBeTruthy();
     };
 
     var assertWarns = function (chartApi, warningRegexp) {
-      assert.isNull(rejection);
+      expect(rejection).toBeNull();
       var warningFound = chartApi.warnings.some(function (e) {
         return warningRegexp.test(e.message);
       });
-      assert(
-        warningFound,
-        'Expected warning ' +
-          warningRegexp.toString() +
-          '\nGot warnings:\n' +
-          chartApi.warnings
-            .map(function (e) {
-              return e.message;
-            })
-            .join('\n')
-      );
+      expect(warningFound).toBeTruthy();
     };
 
     var assertNotWarns = function (chartApi, warningRegexp) {
-      assert.isNull(rejection);
+      expect(rejection).toBeNull();
       var warningFound = chartApi.warnings.some(function (e) {
         return warningRegexp.test(e.message);
       });
-      assert(
-        !warningFound,
-        'Expected no warning ' +
-          warningRegexp.toString() +
-          '\nGot warnings:\n' +
-          chartApi.warnings
-            .map(function (e) {
-              return e.message;
-            })
-            .join('\n')
-      );
+      expect(!warningFound).toBeTruthy();
     };
 
     it('returns a Promise', function () {
-      assert.instanceOf(testMethod(), Promise);
+      expect(testMethod()).toBeInstanceOf(Promise);
     });
 
     it('rejects if element is not found', function (testDone) {
@@ -437,12 +407,12 @@ describe('ChartApi', function () {
 
     it('extracts all columns from data', function () {
       var rawData = [{x: 12}, {x: 10, y: 14}, {z: 144}];
-      assert.deepEqual(inferColumnsFromRawData(rawData), ['x', 'y', 'z']);
+      expect(inferColumnsFromRawData(rawData)).toEqual(['x', 'y', 'z']);
     });
 
     it('adds columns in the order they are encountered', function () {
       var rawData = [{z: 144}, {y: 10, x: 14}, {x: 12, z: 1492}];
-      assert.deepEqual(inferColumnsFromRawData(rawData), ['z', 'y', 'x']);
+      expect(inferColumnsFromRawData(rawData)).toEqual(['z', 'y', 'x']);
     });
   });
 

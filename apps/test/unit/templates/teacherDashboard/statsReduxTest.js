@@ -25,7 +25,7 @@ describe('statsRedux', () => {
         123: completedLevelCountByStudentId,
       };
 
-      assert.deepEqual(nextState.completedLevelCountBySectionId, expectedState);
+      expect(nextState.completedLevelCountBySectionId).toEqual(expectedState);
     });
 
     it('sets completedLevelCountBySectionId for multiple sections', () => {
@@ -48,10 +48,7 @@ describe('statsRedux', () => {
         321: moreCompletedLevelCountByStudentId,
       };
 
-      assert.deepEqual(
-        secondState.completedLevelCountBySectionId,
-        expectedState
-      );
+      expect(secondState.completedLevelCountBySectionId).toEqual(expectedState);
     });
   });
 });
