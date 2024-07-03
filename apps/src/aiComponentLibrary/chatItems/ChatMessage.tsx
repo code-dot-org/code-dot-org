@@ -53,7 +53,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
         <div className={moduleStyles.botIconContainer}>
           <img
             src={aiBotIcon}
-            alt="An icon depicting a robot"
+            alt={commonI18n.aiChatBotIconAlt()}
             className={moduleStyles.botIcon}
           />
         </div>

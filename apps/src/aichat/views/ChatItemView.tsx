@@ -39,7 +39,7 @@ function formatModelUpdateText(update: ModelUpdate): string {
     ? ` has been updated to ${updatedToText}.`
     : ' has been updated.';
 
-  return `${fieldLabel} ${updatedText} [${timestampToLocalTime(timestamp)}]`;
+  return `${fieldLabel} ${updatedText} ${timestampToLocalTime(timestamp)}`;
 }
 
 /**
@@ -56,7 +56,7 @@ const ChatItemView: React.FunctionComponent<ChatItemViewProps> = ({item}) => {
     const {id, text, notificationType, timestamp} = item;
     return (
       <Alert
-        text={`${text} [${timestampToLocalTime(timestamp)}]`}
+        text={`${text} ${timestampToLocalTime(timestamp)}`}
         type={notificationType === 'error' ? 'danger' : 'success'}
         onClose={() => dispatch(removeUpdateMessage(id))}
         size="s"
