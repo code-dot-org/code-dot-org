@@ -30,6 +30,8 @@ class UserLevelsController < ApplicationController
     level = Level.find(params[:level_id])
     return head :not_found, text: 'Level not found' unless level
     is_allowed_level_type = ['Multi', 'FreeResponse'].include?(level.type)
+    # Some lab2 levels have a predict_settings field that indicates they are predict levels,
+    # rather than being a separate multi or free response level. We allow clearing progress on these levels.
     if level.uses_lab2? && level.predict_settings && level.predict_settings["isPredictLevel"]
       is_allowed_level_type = true
     end

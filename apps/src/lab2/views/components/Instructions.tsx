@@ -160,8 +160,13 @@ interface InstructionsPanelProps {
 }
 
 /**
- * Renders the instructions panel view. This is a separate component so that it can be
- * used without the Lab2 redux integration if necessary.
+ * Renders the instructions panel view. This was initially set up as a separate component
+ * so that it could be used without the Lab2 redux integration if necessary.
+ * If the level is a predict level, the predict reset button now uses redux, as it needs
+ * multiple unique redux values and there isn't a clear use case for having no redux integration
+ * anymore.
+ * TODO: Determine if we need this separate component anymore, or if we can merge this into Instructions.
+ * https://codedotorg.atlassian.net/browse/CT-671
  */
 const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   text,
