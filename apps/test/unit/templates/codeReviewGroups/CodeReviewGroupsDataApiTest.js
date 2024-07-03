@@ -1,8 +1,9 @@
 import $ from 'jquery';
+import sinon from 'sinon';
 
 import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 
-
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('CodeReviewGroupsDataApi', () => {
   const sectionId = 101;
@@ -40,43 +41,53 @@ describe('CodeReviewGroupsDataApi', () => {
       },
     ];
 
-    postJSON = jest.fn();
-    getJSON = jest.spyOn($, 'getJSON').mockClear().mockImplementation();
+    postJSON = sinon.stub();
+    getJSON = sinon.stub($, 'getJSON');
     api = new CodeReviewGroupsDataApi(sectionId);
     api.postJSON = postJSON;
   });
 
   afterEach(() => {
-    getJSON.mockRestore();
+    getJSON.restore();
   });
 
   it('makes a GET request and converts group data when calling getCodeReviewGroups', () => {
     let convertedResponse;
 
-    getJSON.mockReturnValue({
+    getJSON.returns({
       then: callback => {
         convertedResponse = callback(serverGroupsResponse);
       },
     });
     api.getCodeReviewGroups();
 
-    expect(getJSON).toHaveBeenCalledWith(`/api/v1/sections/${sectionId}/code_review_groups`);
+    sinon.assert.calledWith(
+      getJSON,
+      `/api/v1/sections/${sectionId}/code_review_groups`
+    );
 
-    expect(clientGroupsList).toEqual(convertedResponse);
+    expect(clientGroupsList).to.deep.equal(convertedResponse);
   });
 
   it('makes a POST request with converted group data when calling setCodeReviewGroups', () => {
     api.setCodeReviewGroups(clientGroupsList);
 
-    expect(postJSON).toHaveBeenCalledWith(`/api/v1/sections/${sectionId}/code_review_groups`);
+    sinon.assert.calledWith(
+      postJSON,
+      `/api/v1/sections/${sectionId}/code_review_groups`
+    );
 
-    const data = postJSON.mock.calls[0][1];
-    expect(serverGroupsResponse).toEqual(data);
+    const data = postJSON.getCall(0).args[1];
+    expect(serverGroupsResponse).to.deep.equal(data);
   });
 
   it('makes a POST request with enabled value when calling setCodeReviewEnabled', () => {
     api.setCodeReviewEnabled(true);
 
-    expect(postJSON).toHaveBeenCalledWith(`/api/v1/sections/${sectionId}/code_review_enabled`, {enabled: true});
+    sinon.assert.calledWith(
+      postJSON,
+      `/api/v1/sections/${sectionId}/code_review_enabled`,
+      {enabled: true}
+    );
   });
 });

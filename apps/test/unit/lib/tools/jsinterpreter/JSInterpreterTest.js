@@ -1,9 +1,10 @@
 import Interpreter from '@code-dot-org/js-interpreter';
+import sinon from 'sinon';
 
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 import Observer from '@cdo/apps/Observer';
 
-import {assert} from '../../../../util/reconfiguredChai';
+import {expect, assert} from '../../../../util/reconfiguredChai';
 
 describe('The JSInterpreter class', function () {
   var jsInterpreter;
@@ -12,7 +13,7 @@ describe('The JSInterpreter class', function () {
     it('returns no comment when no comment is passed', () => {
       let code = 'function testFunction() {}';
       let functions = JSInterpreter.getFunctionsAndMetadata(code);
-      expect(functions[0].comment).toBe('');
+      expect(functions[0].comment).to.equal('');
     });
 
     let comment = 'comment';
@@ -20,49 +21,49 @@ describe('The JSInterpreter class', function () {
       let multiLineComment = 'comment\nanother comment';
       let code = `/*\n${multiLineComment}\n*/\nfunction testFunction() {}`;
       let functions = JSInterpreter.getFunctionsAndMetadata(code);
-      expect(functions[0].comment).toBe(multiLineComment);
+      expect(functions[0].comment).to.equal(multiLineComment);
     });
 
     it('returns no comment when an empty block comment is passed', () => {
       let code = '/**/\nfunction testFunction() {}';
       let functions = JSInterpreter.getFunctionsAndMetadata(code);
-      expect(functions[0].comment).toBe('');
+      expect(functions[0].comment).to.equal('');
     });
 
     it('detects block comments with trailing spaces', () => {
       let code = `/*${comment}*/    \nfunction testFunction() {}`;
       let functions = JSInterpreter.getFunctionsAndMetadata(code);
-      expect(functions[0].comment).toBe(`${comment}`);
+      expect(functions[0].comment).to.equal(`${comment}`);
     });
 
     it('strips stars from JSDocComments', () => {
       let code = `/**\n * ${comment}\n * ${comment}\n */\nfunction testFunction() {}`;
       let functions = JSInterpreter.getFunctionsAndMetadata(code);
-      expect(functions[0].comment).toBe(`${comment}\n${comment}`);
+      expect(functions[0].comment).to.equal(`${comment}\n${comment}`);
     });
 
     it('returns multiple single-line comments', () => {
       let code = `//${comment}\n//${comment}\nfunction testFunction() {}`;
       let functions = JSInterpreter.getFunctionsAndMetadata(code);
-      expect(functions[0].comment).toBe(`${comment}\n${comment}`);
+      expect(functions[0].comment).to.equal(`${comment}\n${comment}`);
     });
 
     it('returns no comment when an empty comment is passed', () => {
       let code = '//\nfunction testFunction() {}';
       let functions = JSInterpreter.getFunctionsAndMetadata(code);
-      expect(functions[0].comment).toBe('');
+      expect(functions[0].comment).to.equal('');
     });
 
     it('returns no comment when a comment is more than one line away', () => {
       let code = '//comment\n\nfunction testFunction() {}';
       let functions = JSInterpreter.getFunctionsAndMetadata(code);
-      expect(functions[0].comment).toBe('');
+      expect(functions[0].comment).to.equal('');
     });
 
     it('returns no parameters when no parameter is passed', () => {
       let code = 'function testFunction() {}';
       let functions = JSInterpreter.getFunctionsAndMetadata(code);
-      expect(functions[0].parameters).toEqual([]);
+      expect(functions[0].parameters).to.be.an('array').that.is.empty;
     });
 
     it('returns all parameters passed', () => {
@@ -70,14 +71,14 @@ describe('The JSInterpreter class', function () {
       let param2 = 'param2';
       let code = `function testFunction(${param1}, ${param2}) {}`;
       let functions = JSInterpreter.getFunctionsAndMetadata(code);
-      expect(functions[0].parameters).toEqual(expect.arrayContaining([param1, param2]));
+      expect(functions[0].parameters).to.include.members([param1, param2]);
     });
 
     it('returns the name of the function', () => {
       let functionName = 'testFunction';
       let code = `function ${functionName}() {}`;
       let functions = JSInterpreter.getFunctionsAndMetadata(code);
-      expect(functions[0].functionName).toBe(functionName);
+      expect(functions[0].functionName).to.equal(functionName);
     });
   });
 
@@ -124,18 +125,18 @@ describe('The JSInterpreter class', function () {
     });
 
     it('sets some default values', () => {
-      expect(jsInterpreter.shouldRunAtMaxSpeed()).toBe(true);
-      expect(jsInterpreter.maxInterpreterStepsPerTick).toBe(10000);
+      expect(jsInterpreter.shouldRunAtMaxSpeed()).to.be.true;
+      expect(jsInterpreter.maxInterpreterStepsPerTick).to.equal(10000);
     });
 
     it('sets some initial state', () => {
-      expect(jsInterpreter.paused).toBe(false);
-      expect(jsInterpreter.isExecuting).toBe(false);
+      expect(jsInterpreter.paused).to.be.false;
+      expect(jsInterpreter.isExecuting).to.be.false;
     });
 
     it('does not initialize other things which get initialized later', () => {
-      expect(jsInterpreter.interpreter).toBeUndefined();
-      expect(jsInterpreter.globalScope).toBeUndefined();
+      expect(jsInterpreter.interpreter).to.be.undefined;
+      expect(jsInterpreter.globalScope).to.be.undefined;
     });
   });
 
@@ -151,15 +152,15 @@ describe('The JSInterpreter class', function () {
         });
 
         it('Initializes the interpreter', () => {
-          expect(jsInterpreter.interpreter).toBeInstanceOf(Interpreter);
+          expect(jsInterpreter.interpreter).to.be.an.instanceOf(Interpreter);
         });
 
         it('Initializes the isBreakpointRow function to always return false', () => {
-          expect(jsInterpreter.isBreakpointRow()).toBe(false);
+          expect(jsInterpreter.isBreakpointRow()).to.be.false;
         });
 
         it('initializes the globalScope property', () => {
-          expect(jsInterpreter.globalScope).not.toBeNull();
+          expect(jsInterpreter.globalScope).not.to.be.null;
         });
 
         it('adds String.prototype.includes to the interpreter', () => {
@@ -167,12 +168,12 @@ describe('The JSInterpreter class', function () {
             jsInterpreter
               .evalInCurrentScope('"the quick brown fox".includes("brown")')
               .valueOf()
-          ).toBe(true);
+          ).to.be.true;
           expect(
             jsInterpreter
               .evalInCurrentScope('"the quick brown fox".includes("yellow")')
               .valueOf()
-          ).toBe(false);
+          ).to.be.false;
         });
       });
 
@@ -195,13 +196,13 @@ describe('The JSInterpreter class', function () {
         it('will make those global functions available to the code being interpreted', () => {
           expect(
             jsInterpreter.evalInCurrentScope('derp.add(3, 4)').valueOf()
-          ).toBe(7);
+          ).to.equal(7);
           expect(
             jsInterpreter.evalInCurrentScope('derp.mul(3, 4)').valueOf()
-          ).toBe(12);
+          ).to.equal(12);
           expect(
             jsInterpreter.evalInCurrentScope('slerp.sub(3, 4)').valueOf()
-          ).toBe(-1);
+          ).to.equal(-1);
         });
       });
 
@@ -210,7 +211,7 @@ describe('The JSInterpreter class', function () {
           jsInterpreter.parse({
             code: '',
             initGlobals: () => {
-              expect(jsInterpreter.interpreter).not.toBeNull();
+              expect(jsInterpreter.interpreter).not.to.be.null;
               jsInterpreter.createGlobalProperty(
                 'hello',
                 name => 'hello, ' + name
@@ -220,7 +221,7 @@ describe('The JSInterpreter class', function () {
           });
           expect(
             jsInterpreter.evalInCurrentScope('hello(NAME)').valueOf()
-          ).toBe('hello, world');
+          ).to.equal('hello, world');
         });
       });
 
@@ -229,7 +230,7 @@ describe('The JSInterpreter class', function () {
           jsInterpreter.parse({
             code: '',
             initGlobals: () => {
-              expect(jsInterpreter.interpreter).not.toBeNull();
+              expect(jsInterpreter.interpreter).not.to.be.null;
               const nativeCallsBackInterpreterFunc =
                 jsInterpreter.interpreter.makeNativeMemberFunction({
                   nativeFunc: () => {
@@ -264,7 +265,7 @@ describe('The JSInterpreter class', function () {
             jsInterpreter
               .evalInCurrentScope('nativeCallsBackInterpreterFunc()')
               .valueOf()
-          ).toBe(3);
+          ).to.equal(3);
         });
       });
 
@@ -282,7 +283,7 @@ describe('The JSInterpreter class', function () {
             jsInterpreterWithGlobalProps
               .evalInCurrentScope('testProp')
               .valueOf()
-          ).toBe(7);
+          ).to.equal(7);
         });
       });
 
@@ -310,19 +311,19 @@ setCallback(function(message) {
         });
 
         it('will not work when enableEvents=false', () => {
-          let allDone = jest.fn();
+          let allDone = sinon.spy();
           jsInterpreter.parse({
             enableEvents: false,
             ...config(allDone),
           });
-          expect(lastCallback).toBeNull();
-          expect(allDone).not.toHaveBeenCalled();
+          expect(lastCallback).to.be.null;
+          expect(allDone).not.to.have.been.called;
         });
 
         describe('when enableEvents=true', () => {
           let allDone;
           beforeEach(() => {
-            allDone = jest.fn();
+            allDone = sinon.spy();
           });
 
           describe('a native callback function', () => {
@@ -331,45 +332,45 @@ setCallback(function(message) {
                 enableEvents: true,
                 ...config(allDone),
               });
-              jest.spyOn(jsInterpreter, 'executeInterpreter').mockClear();
+              sinon.spy(jsInterpreter, 'executeInterpreter');
               jsInterpreter.executeInterpreter(true);
             });
             afterEach(() => {
-              jest.restoreAllMocks();
+              sinon.restore();
             });
 
             it("will be created from the interpreter's callback function", () => {
-              expect(lastCallback).toBeInstanceOf(Function);
+              expect(lastCallback).to.be.a('function');
             });
 
             it("will call back into the interpreter's callback function", () => {
-              expect(allDone).not.toHaveBeenCalled();
+              expect(allDone).not.to.have.been.called;
               lastCallback();
-              expect(allDone).toHaveBeenCalledTimes(1);
+              expect(allDone).to.have.been.calledOnce;
             });
 
             it("will pass arguments through to the interpreter's callback function", () => {
               lastCallback('some argument');
-              expect(allDone).toHaveBeenCalledWith('some argument');
+              expect(allDone).to.have.been.calledWith('some argument');
             });
 
             it("will return the value returned by the interpreter's callback function", () => {
               const returnValue = lastCallback();
               expect(returnValue).to.respondTo('valueOf');
-              expect(returnValue.valueOf()).toBe('return value');
+              expect(returnValue.valueOf()).to.equal('return value');
             });
 
             it('will work even when the interpreter is not executing by executing it again', () => {
-              expect(jsInterpreter.isExecuting).toBe(false);
+              expect(jsInterpreter.isExecuting).to.be.false;
               lastCallback();
-              expect(jsInterpreter.executeInterpreter).toHaveBeenCalledTimes(2);
-              expect(allDone).toHaveBeenCalledTimes(1);
+              expect(jsInterpreter.executeInterpreter).to.have.been.calledTwice;
+              expect(allDone).to.have.been.calledOnce;
             });
 
             it('will not execute after the interpreter has been deinitialized', () => {
               jsInterpreter.deinitialize();
               lastCallback();
-              expect(allDone).not.toHaveBeenCalled();
+              expect(allDone).not.to.have.been.called;
             });
           });
 
@@ -387,13 +388,15 @@ setCallback(myCallback);
 myCallback("this message is coming from inside the interpreter");
 `,
               });
-              jest.spyOn(jsInterpreter, 'executeInterpreter').mockClear();
+              sinon.spy(jsInterpreter, 'executeInterpreter');
               jsInterpreter.executeInterpreter(true);
             });
 
             it('will not execute the interpreter again', () => {
-              expect(jsInterpreter.executeInterpreter).toHaveBeenCalledTimes(1);
-              expect(allDone).toHaveBeenCalledWith('this message is coming from inside the interpreter');
+              expect(jsInterpreter.executeInterpreter).to.have.been.calledOnce;
+              expect(allDone).to.have.been.calledWith(
+                'this message is coming from inside the interpreter'
+              );
             });
           });
         });
@@ -404,8 +407,9 @@ myCallback("this message is coming from inside the interpreter");
   describe('basic usage when studioApp.hideSource = false', () => {
     let aceGetSessionStub;
     beforeEach(() => {
-      aceGetSessionStub = jest.fn()
-        .mockReturnValue({getBreakpoints: () => [false, false, true, false, true]});
+      aceGetSessionStub = sinon
+        .stub()
+        .returns({getBreakpoints: () => [false, false, true, false, true]});
       jsInterpreter = new JSInterpreter({
         studioApp: {
           editor: {
@@ -421,8 +425,8 @@ myCallback("this message is coming from inside the interpreter");
       beforeEach(() => jsInterpreter.parse({code: ''}));
 
       it('Initializes the isBreakpointRow() method to query the ace editor', () => {
-        expect(jsInterpreter.isBreakpointRow(0)).toBe(false);
-        expect(jsInterpreter.isBreakpointRow(2)).toBe(true);
+        expect(jsInterpreter.isBreakpointRow(0)).to.be.false;
+        expect(jsInterpreter.isBreakpointRow(2)).to.be.true;
       });
     });
   });
@@ -446,13 +450,13 @@ myCallback("this message is coming from inside the interpreter");
     beforeEach(() => {
       oldAce = window.ace;
       window.ace = {
-        require: jest.fn().mockReturnValue({Range}),
+        require: sinon.stub().returns({Range}),
       };
       const breakpoints = [];
       const aceSession = {
-        addMarker: jest.fn(() => markerId++),
-        getBreakpoints: jest.fn().mockReturnValue(breakpoints),
-        removeMarker: jest.fn(),
+        addMarker: sinon.spy(() => markerId++),
+        getBreakpoints: sinon.stub().returns(breakpoints),
+        removeMarker: sinon.spy(),
       };
       aceEditor = {
         isRowFullyVisible: () => true,
@@ -484,12 +488,12 @@ myCallback("this message is coming from inside the interpreter");
           editCode: true,
         },
       });
-      onPauseObserver = jest.fn();
+      onPauseObserver = sinon.spy();
       jsInterpreter.onPause.register(onPauseObserver);
-      jest.spyOn(jsInterpreter, 'handleError').mockClear();
+      sinon.spy(jsInterpreter, 'handleError');
     });
     afterEach(() => {
-      jest.restoreAllMocks();
+      sinon.restore();
     });
 
     function getCurrentLine() {
@@ -498,7 +502,7 @@ myCallback("this message is coming from inside the interpreter");
         interpreter.global,
         'currentLine'
       );
-      if (interpreterValue === interpreter.toBeUndefined()) {
+      if (interpreterValue === interpreter.UNDEFINED) {
         return undefined;
       }
       return interpreterValue.toNumber();
@@ -525,7 +529,7 @@ myCallback("this message is coming from inside the interpreter");
       });
 
       it('will populate the execution log with function calls and for loops', () => {
-        expect(jsInterpreter.executionLog).toEqual([
+        expect(jsInterpreter.executionLog).to.deep.equal([
           'add:1',
           '[forInit]',
           '[forTest]',
@@ -558,37 +562,39 @@ myCallback("this message is coming from inside the interpreter");
         jsInterpreter.executeInterpreter(true);
       });
       it('will stop executing at the breakpoint', () => {
-        expect(getCurrentLine()).toBe(1);
+        expect(getCurrentLine()).to.equal(1);
       });
       it('will highlight the line after the breakpoint', () => {
-        expect(aceEditor.getSession().addMarker.mock.lastCall[0]).toEqual({
-          start: {
-            row: 2,
-            column: 10,
-          },
-          end: {
-            row: 2,
-            column: 26,
-          },
-        });
+        expect(aceEditor.getSession().addMarker.lastCall.args[0]).to.deep.equal(
+          {
+            start: {
+              row: 2,
+              column: 10,
+            },
+            end: {
+              row: 2,
+              column: 26,
+            },
+          }
+        );
       });
       it('will notify the onPause observer', () => {
-        expect(onPauseObserver).toHaveBeenCalled();
+        expect(onPauseObserver).to.have.been.called;
       });
       it('will set the next step to run', () => {
-        expect(jsInterpreter.nextStep).toBe(JSInterpreter.StepType.RUN);
+        expect(jsInterpreter.nextStep).to.equal(JSInterpreter.StepType.RUN);
       });
       describe('and executed again after the breakpoint was reached', () => {
         beforeEach(() => {
           jsInterpreter.executeInterpreter(false);
         });
         it('will stop at the next breakpoint', () => {
-          expect(getCurrentLine()).toBe(3);
+          expect(getCurrentLine()).to.equal(3);
         });
         it('will highlight the line after the breakpoint', () => {
           expect(
-            aceEditor.getSession().addMarker.mock.lastCall[0]
-          ).toEqual({
+            aceEditor.getSession().addMarker.lastCall.args[0]
+          ).to.deep.equal({
             start: {
               row: 4,
               column: 10,
@@ -604,12 +610,12 @@ myCallback("this message is coming from inside the interpreter");
             jsInterpreter.executeInterpreter(false);
           });
           it('will execute the rest of the code', () => {
-            expect(getCurrentLine()).toBe(5);
+            expect(getCurrentLine()).to.equal(5);
           });
           it('will remove the highlight marker for the most recent highlight', () => {
             expect(
-              aceEditor.getSession().removeMarker.mock.lastCall[0]
-            ).toBe(aceEditor.getSession().addMarker.mock.lastCall.returnValue);
+              aceEditor.getSession().removeMarker.lastCall.args[0]
+            ).to.equal(aceEditor.getSession().addMarker.lastCall.returnValue);
           });
         });
       });
@@ -633,19 +639,21 @@ myCallback("this message is coming from inside the interpreter");
       });
 
       it('will execute the line that the breakpoint is on and move to the next one', () => {
-        expect(getCurrentLine()).toBe(2);
+        expect(getCurrentLine()).to.equal(2);
       });
       it('will highlight the line after the step over', () => {
-        expect(aceEditor.getSession().addMarker.mock.lastCall[0]).toEqual({
-          start: {
-            row: 3,
-            column: 10,
-          },
-          end: {
-            row: 3,
-            column: 26,
-          },
-        });
+        expect(aceEditor.getSession().addMarker.lastCall.args[0]).to.deep.equal(
+          {
+            start: {
+              row: 3,
+              column: 10,
+            },
+            end: {
+              row: 3,
+              column: 26,
+            },
+          }
+        );
       });
     });
 
@@ -675,20 +683,22 @@ myCallback("this message is coming from inside the interpreter");
             jsInterpreter.interpreter.getScope(),
             'innerFunctionScope'
           )
-        ).toBe(false);
-        expect(getCurrentLine()).toBe(3);
+        ).to.be.false;
+        expect(getCurrentLine()).to.equal(3);
       });
       it('will highlight the line after the function call', () => {
-        expect(aceEditor.getSession().addMarker.mock.lastCall[0]).toEqual({
-          start: {
-            row: 7,
-            column: 10,
-          },
-          end: {
-            row: 7,
-            column: 26,
-          },
-        });
+        expect(aceEditor.getSession().addMarker.lastCall.args[0]).to.deep.equal(
+          {
+            start: {
+              row: 7,
+              column: 10,
+            },
+            end: {
+              row: 7,
+              column: 26,
+            },
+          }
+        );
       });
     });
 
@@ -723,26 +733,28 @@ myCallback("this message is coming from inside the interpreter");
             jsInterpreter.interpreter.getScope(),
             'innerFunctionScope'
           )
-        ).toBe(false);
-        expect(getCurrentLine()).toBe(3);
+        ).to.be.false;
+        expect(getCurrentLine()).to.equal(3);
         expect(
           jsInterpreter.interpreter.hasProperty(
             jsInterpreter.interpreter.getScope(),
             'middleFunctionScope'
           )
-        ).toBe(true);
+        ).to.be.true;
       });
       it('will highlight the line after the inner function call', () => {
-        expect(aceEditor.getSession().addMarker.mock.lastCall[0]).toEqual({
-          start: {
-            row: 8,
-            column: 12,
-          },
-          end: {
-            row: 8,
-            column: 28,
-          },
-        });
+        expect(aceEditor.getSession().addMarker.lastCall.args[0]).to.deep.equal(
+          {
+            start: {
+              row: 8,
+              column: 12,
+            },
+            end: {
+              row: 8,
+              column: 28,
+            },
+          }
+        );
       });
 
       describe('and we step out again', () => {
@@ -751,12 +763,12 @@ myCallback("this message is coming from inside the interpreter");
           jsInterpreter.executeInterpreter(false);
         });
         it('will step out again', () => {
-          expect(getCurrentLine()).toBe(8);
+          expect(getCurrentLine()).to.equal(8);
         });
         it('will highlight the line after the inner function call', () => {
           expect(
-            aceEditor.getSession().addMarker.mock.lastCall[0]
-          ).toEqual({
+            aceEditor.getSession().addMarker.lastCall.args[0]
+          ).to.deep.equal({
             start: {
               row: 12,
               column: 10,
@@ -796,28 +808,30 @@ myCallback("this message is coming from inside the interpreter");
         jsInterpreter.executeInterpreter(false);
       });
       it('will stop stepping over the line and pause at the breakpoint instead', () => {
-        expect(getCurrentLine()).toBe(6);
+        expect(getCurrentLine()).to.equal(6);
         expect(
           jsInterpreter.interpreter.hasProperty(
             jsInterpreter.interpreter.getScope(),
             'innerFunctionScope'
           )
-        ).toBe(true);
+        ).to.be.true;
         jsInterpreter.handleStepOver();
         jsInterpreter.executeInterpreter(false);
-        expect(getCurrentLine()).toBe(4);
+        expect(getCurrentLine()).to.equal(4);
       });
       it('will highlight the line at the inner breakpoint', () => {
-        expect(aceEditor.getSession().addMarker.mock.lastCall[0]).toEqual({
-          start: {
-            row: 4,
-            column: 12,
-          },
-          end: {
-            row: 4,
-            column: 28,
-          },
-        });
+        expect(aceEditor.getSession().addMarker.lastCall.args[0]).to.deep.equal(
+          {
+            start: {
+              row: 4,
+              column: 12,
+            },
+            end: {
+              row: 4,
+              column: 28,
+            },
+          }
+        );
       });
     });
 
@@ -834,25 +848,27 @@ myCallback("this message is coming from inside the interpreter");
         jsInterpreter.executeInterpreter(true);
       });
       it('will set the next step type to RUN', () => {
-        expect(jsInterpreter.nextStep).toBe(JSInterpreter.StepType.RUN);
+        expect(jsInterpreter.nextStep).to.equal(JSInterpreter.StepType.RUN);
       });
       it('will put the interpreter into the paused state', () => {
-        expect(jsInterpreter.paused).toBe(true);
+        expect(jsInterpreter.paused).to.be.true;
       });
       it('will not execute the line it steps onto', () => {
-        expect(getCurrentLine()).toBeUndefined();
+        expect(getCurrentLine()).to.be.undefined;
       });
       it('will highlight the first line', () => {
-        expect(aceEditor.getSession().addMarker.mock.lastCall[0]).toEqual({
-          start: {
-            row: 1,
-            column: 10,
-          },
-          end: {
-            row: 1,
-            column: 30,
-          },
-        });
+        expect(aceEditor.getSession().addMarker.lastCall.args[0]).to.deep.equal(
+          {
+            start: {
+              row: 1,
+              column: 10,
+            },
+            end: {
+              row: 1,
+              column: 30,
+            },
+          }
+        );
       });
 
       describe('And after handleStepOver is subsequently called', () => {
@@ -861,12 +877,12 @@ myCallback("this message is coming from inside the interpreter");
           jsInterpreter.executeInterpreter(false);
         });
         it('will execute the line it is currently on', () => {
-          expect(getCurrentLine()).toBe(1);
+          expect(getCurrentLine()).to.equal(1);
         });
         it('will highlight the line after the step over', () => {
           expect(
-            aceEditor.getSession().addMarker.mock.lastCall[0]
-          ).toEqual({
+            aceEditor.getSession().addMarker.lastCall.args[0]
+          ).to.deep.equal({
             start: {
               row: 2,
               column: 10,
@@ -878,7 +894,7 @@ myCallback("this message is coming from inside the interpreter");
           });
         });
         it('will keep the interpreter in the paused state', () => {
-          expect(jsInterpreter.paused).toBe(true);
+          expect(jsInterpreter.paused).to.be.true;
         });
 
         describe('And after handlePauseContinue is subsequently called', () => {
@@ -887,15 +903,15 @@ myCallback("this message is coming from inside the interpreter");
             jsInterpreter.executeInterpreter(false);
           });
           it('will execute the rest of the code', () => {
-            expect(getCurrentLine()).toBe(3);
+            expect(getCurrentLine()).to.equal(3);
           });
           it('will remove the highlight marker for the most recent highlight', () => {
             expect(
-              aceEditor.getSession().removeMarker.mock.lastCall[0]
-            ).toBe(aceEditor.getSession().addMarker.mock.lastCall.returnValue);
+              aceEditor.getSession().removeMarker.lastCall.args[0]
+            ).to.equal(aceEditor.getSession().addMarker.lastCall.returnValue);
           });
           it('will make the interpreter no longer paused', () => {
-            expect(jsInterpreter.paused).toBe(false);
+            expect(jsInterpreter.paused).to.be.false;
           });
         });
       });
@@ -915,13 +931,13 @@ myCallback("this message is coming from inside the interpreter");
           jsInterpreter.executeInterpreter(true);
         });
         it('will call the handleError method with the line number the error occurred on.', () => {
-          expect(jsInterpreter.handleError).toHaveBeenCalled();
-          expect(jsInterpreter.handleError).toHaveBeenCalledWith(2);
+          expect(jsInterpreter.handleError).to.have.been.called;
+          expect(jsInterpreter.handleError).to.have.been.calledWith(2);
         });
         it("will highlight as an error the first character of the program since the exception wasn't handled", () => {
           expect(
-            aceEditor.getSession().addMarker.mock.lastCall[0]
-          ).toEqual({
+            aceEditor.getSession().addMarker.lastCall.args[0]
+          ).to.deep.equal({
             start: {
               row: 0,
               column: 0,
@@ -931,7 +947,9 @@ myCallback("this message is coming from inside the interpreter");
               column: 0,
             },
           });
-          expect(aceEditor.getSession().addMarker.mock.lastCall[1]).toBe('ace_error');
+          expect(aceEditor.getSession().addMarker.lastCall.args[1]).to.equal(
+            'ace_error'
+          );
         });
       });
       describe('with hideSource=true', () => {
@@ -940,14 +958,14 @@ myCallback("this message is coming from inside the interpreter");
           jsInterpreter.executeInterpreter(true);
         });
         it('will populate the executionError property of the interpreter', () => {
-          expect(jsInterpreter.executionError).toBeDefined();
-          expect(jsInterpreter.executionError).toBe('gotcha');
+          expect(jsInterpreter.executionError).to.not.be.undefined;
+          expect(jsInterpreter.executionError).to.equal('gotcha');
         });
         it('will call the handleError method.', () => {
-          expect(jsInterpreter.handleError).toHaveBeenCalled();
+          expect(jsInterpreter.handleError).to.have.been.called;
         });
         it('will set the isExecuting flag to false', () => {
-          expect(jsInterpreter.isExecuting).toBe(false);
+          expect(jsInterpreter.isExecuting).to.be.false;
         });
       });
     });

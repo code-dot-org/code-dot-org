@@ -1,6 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
+import sinon from 'sinon';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
@@ -11,7 +12,7 @@ import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import {UnconnectedLessonOverview as LessonOverview} from '@cdo/apps/templates/lessonOverview/LessonOverview';
 import * as currentLocaleModule from '@cdo/apps/util/currentLocale';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import {
   fakeStudentAnnouncement,
   fakeTeacherAndStudentAnnouncement,
@@ -118,39 +119,47 @@ describe('LessonOverview', () => {
   it('renders default props', () => {
     const wrapper = shallow(<LessonOverview {...defaultProps} />);
     const navLink = wrapper.find('a').at(0);
-    expect(navLink.props().href).toContain('/s/unit-1');
-    expect(navLink.contains('< Unit 1')).toBe(true);
+    expect(navLink.props().href).to.contain('/s/unit-1');
+    expect(navLink.contains('< Unit 1')).to.be.true;
 
-    expect(wrapper.find('LessonNavigationDropdown').length).toBe(1);
+    expect(wrapper.find('LessonNavigationDropdown').length).to.equal(1);
 
-    // Lesson Name
-    expect(wrapper.contains('Lesson 1: Lesson 1')).toBe(true);
-    // Lesson Duration
-    expect(wrapper.contains('45 minutes')).toBe(true);
+    expect(wrapper.contains('Lesson 1: Lesson 1'), 'Lesson Name').to.be.true;
+    expect(wrapper.contains('45 minutes'), 'Lesson Duration').to.be.true;
 
     const enhancedSafeMarkdowns = wrapper.find('EnhancedSafeMarkdown');
-    expect(enhancedSafeMarkdowns.at(0).props().markdown).toContain('Lesson Overview');
-    expect(enhancedSafeMarkdowns.at(1).props().markdown).toContain('The purpose of the lesson is for people to learn');
-    expect(enhancedSafeMarkdowns.at(2).props().markdown).toContain('Assessment Opportunities Details');
-    expect(enhancedSafeMarkdowns.at(3).props().markdown).toContain('- One');
+    expect(enhancedSafeMarkdowns.at(0).props().markdown).to.contain(
+      'Lesson Overview'
+    );
+    expect(enhancedSafeMarkdowns.at(1).props().markdown).to.contain(
+      'The purpose of the lesson is for people to learn'
+    );
+    expect(enhancedSafeMarkdowns.at(2).props().markdown).to.contain(
+      'Assessment Opportunities Details'
+    );
+    expect(enhancedSafeMarkdowns.at(3).props().markdown).to.contain('- One');
 
     const inlineMarkdowns = wrapper.find('InlineMarkdown');
 
     // The first contains the objective
-    expect(inlineMarkdowns.at(0).props().markdown).toContain('what students will learn');
+    expect(inlineMarkdowns.at(0).props().markdown).to.contain(
+      'what students will learn'
+    );
     // The second contains the vocabulary
-    expect(inlineMarkdowns.at(1).props().markdown).toContain('**Algorithm** - A list of steps to finish a task.');
+    expect(inlineMarkdowns.at(1).props().markdown).to.contain(
+      '**Algorithm** - A list of steps to finish a task.'
+    );
 
-    expect(wrapper.find('LessonAgenda').length).toBe(1);
+    expect(wrapper.find('LessonAgenda').length).to.equal(1);
 
-    expect(wrapper.containsMatchingElement(<h2>Standards</h2>)).toBe(false);
+    expect(wrapper.containsMatchingElement(<h2>Standards</h2>)).to.be.false;
   });
 
   it('renders correct number of activities', () => {
     const wrapper = shallow(
       <LessonOverview {...defaultProps} activities={sampleActivities} />
     );
-    expect(wrapper.find('Activity').length).toBe(1);
+    expect(wrapper.find('Activity').length).to.equal(1);
   });
 
   it('has no announcements if none provided', () => {
@@ -256,7 +265,7 @@ describe('LessonOverview', () => {
       <LessonOverview {...defaultProps} lesson={lesson} />
     );
 
-    expect(wrapper.containsMatchingElement(<h2>Standards</h2>)).toBe(true);
+    expect(wrapper.containsMatchingElement(<h2>Standards</h2>)).to.be.true;
     expect(
       wrapper.containsMatchingElement(
         <Button
@@ -264,10 +273,10 @@ describe('LessonOverview', () => {
           text="Full Course Alignment"
         />
       )
-    ).toBe(true);
+    ).to.be.true;
     expect(
       wrapper.containsMatchingElement(<h2>Cross-Curricular Opportunities</h2>)
-    ).toBe(false);
+    ).to.be.false;
   });
 
   it('renders opportunities header when opportunity standards are present', () => {
@@ -291,10 +300,10 @@ describe('LessonOverview', () => {
       <LessonOverview {...defaultProps} lesson={lesson} />
     );
 
-    expect(wrapper.containsMatchingElement(<h2>Standards</h2>)).toBe(false);
+    expect(wrapper.containsMatchingElement(<h2>Standards</h2>)).to.be.false;
     expect(
       wrapper.containsMatchingElement(<h2>Cross-Curricular Opportunities</h2>)
-    ).toBe(true);
+    ).to.be.true;
   });
 
   it('renders dropdown button with links to printing options if not pilot or in development', () => {
@@ -307,13 +316,13 @@ describe('LessonOverview', () => {
     const wrapper = shallow(
       <LessonOverview {...defaultProps} lesson={lesson} />
     );
-    expect(wrapper.find(DropdownButton).length).toBe(1);
+    expect(wrapper.find(DropdownButton).length).to.equal(1);
     const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
-    expect(dropdownLinks.map(link => link.props.href)).toEqual([
+    expect(dropdownLinks.map(link => link.props.href)).to.eql([
       '/link/to/lesson_plan.pdf',
       '/link/to/script_resources.pdf',
     ]);
-    expect(dropdownLinks.map(link => link.props.children)).toEqual([
+    expect(dropdownLinks.map(link => link.props.children)).to.eql([
       'Print Lesson Plan',
       'Print Handouts',
     ]);
@@ -329,12 +338,12 @@ describe('LessonOverview', () => {
     const wrapper = shallow(
       <LessonOverview {...defaultProps} lesson={lesson} />
     );
-    expect(wrapper.find(DropdownButton).length).toBe(1);
+    expect(wrapper.find(DropdownButton).length).to.equal(1);
     const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
-    expect(dropdownLinks.map(link => link.props.href)).toEqual([
+    expect(dropdownLinks.map(link => link.props.href)).to.eql([
       '/link/to/lesson_plan.pdf',
     ]);
-    expect(dropdownLinks.map(link => link.props.children)).toEqual([
+    expect(dropdownLinks.map(link => link.props.children)).to.eql([
       'Print Lesson Plan',
     ]);
   });
@@ -372,12 +381,12 @@ describe('LessonOverview', () => {
     const wrapper = shallow(
       <LessonOverview {...defaultProps} lesson={lesson} />
     );
-    expect(wrapper.find(DropdownButton).length).toBe(1);
+    expect(wrapper.find(DropdownButton).length).to.equal(1);
     const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
-    expect(dropdownLinks.map(link => link.props.href)).toEqual([
+    expect(dropdownLinks.map(link => link.props.href)).to.eql([
       '/link/to/script_resources.pdf',
     ]);
-    expect(dropdownLinks.map(link => link.props.children)).toEqual([
+    expect(dropdownLinks.map(link => link.props.children)).to.eql([
       'Print Handouts',
     ]);
   });
@@ -397,25 +406,25 @@ describe('LessonOverview', () => {
     const wrapper = shallow(
       <LessonOverview {...defaultProps} lesson={lesson} />
     );
-    expect(wrapper.find(DropdownButton).length).toBe(1);
+    expect(wrapper.find(DropdownButton).length).to.equal(1);
     const dropdownLinks = wrapper.find(DropdownButton).first().props().children;
-    expect(dropdownLinks.map(link => link.props.href)).toEqual([
+    expect(dropdownLinks.map(link => link.props.href)).to.eql([
       '/link/to/script_resources.pdf',
     ]);
-    expect(dropdownLinks.map(link => link.props.children)).toEqual([
+    expect(dropdownLinks.map(link => link.props.children)).to.eql([
       'Print Handouts',
     ]);
   });
 
   it('logs Amplitude event when rendered', () => {
-    const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
     shallow(<LessonOverview {...defaultProps} />);
 
-    expect(analyticsSpy).toHaveBeenCalledTimes(1);
+    expect(analyticsSpy).to.have.been.calledOnce;
     assert.equal(
-      analyticsSpy.mock.calls[0].firstArg,
+      analyticsSpy.getCall(0).firstArg,
       EVENTS.LESSON_OVERVIEW_PAGE_VISITED_EVENT
     );
-    analyticsSpy.mockRestore();
+    analyticsSpy.restore();
   });
 });

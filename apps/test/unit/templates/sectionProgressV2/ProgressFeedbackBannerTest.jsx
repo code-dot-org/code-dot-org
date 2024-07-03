@@ -1,14 +1,15 @@
 import {fireEvent, render, screen, waitFor} from '@testing-library/react';
 import React from 'react';
+import sinon from 'sinon';
 
 import {UnconnectedProgressFeedbackBanner} from '@cdo/apps/templates/sectionProgressV2/ProgressFeedbackBanner';
 import i18n from '@cdo/locale';
 
-
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('ProgressFeedbackBanner', () => {
-  const fakeFetch = jest.fn();
-  const fakeCreate = jest.fn();
+  const fakeFetch = sinon.spy();
+  const fakeCreate = sinon.spy();
   const defaultProps = {
     currentUser: {isAdmin: false},
     canShow: true,
@@ -20,8 +21,8 @@ describe('ProgressFeedbackBanner', () => {
   };
 
   afterEach(() => {
-    fakeCreate.mockReset();
-    fakeFetch.mockReset();
+    fakeCreate.resetHistory();
+    fakeFetch.resetHistory();
   });
 
   it('renders empty if it can not show', () => {
@@ -32,15 +33,15 @@ describe('ProgressFeedbackBanner', () => {
         fetchProgressV2Feedback={fakeFetch}
       />
     );
-    expect(fakeFetch).toHaveBeenCalledTimes(1);
+    expect(fakeFetch).to.have.been.calledOnce;
     const questionText = screen.queryByText(
       i18n.progressV2_feedback_question()
     );
     const shareMoreText = screen.queryByText(
       i18n.progressV2_feedback_shareMore()
     );
-    expect(questionText).toBeFalsy();
-    expect(shareMoreText).toBeFalsy();
+    expect(questionText).to.not.exist;
+    expect(shareMoreText).to.not.exist;
   });
 
   it('renders empty if user already answered the feedback question', () => {
@@ -51,15 +52,15 @@ describe('ProgressFeedbackBanner', () => {
         fetchProgressV2Feedback={fakeFetch}
       />
     );
-    expect(fakeFetch).toHaveBeenCalledTimes(1);
+    expect(fakeFetch).to.have.been.calledOnce;
     const questionText = screen.queryByText(
       i18n.progressV2_feedback_question()
     );
     const shareMoreText = screen.queryByText(
       i18n.progressV2_feedback_shareMore()
     );
-    expect(questionText).toBeFalsy();
-    expect(shareMoreText).toBeFalsy();
+    expect(questionText).to.not.exist;
+    expect(shareMoreText).to.not.exist;
   });
 
   it('renders correctly when user has not answered survey question', () => {
@@ -81,8 +82,8 @@ describe('ProgressFeedbackBanner', () => {
     const shareMoreText = screen.queryByText(
       i18n.progressV2_feedback_shareMore()
     );
-    expect(questionText).toBeFalsy();
-    expect(shareMoreText).toBeFalsy();
+    expect(questionText).to.not.exist;
+    expect(shareMoreText).to.not.exist;
   });
 
   it('clicking thumbs up attempts to send feedback and asks for more detailed feedback', async () => {
@@ -99,7 +100,7 @@ describe('ProgressFeedbackBanner', () => {
     fireEvent.click(thumbsUpButton);
 
     await waitFor(() => {
-      expect(fakeCreate).toHaveBeenCalledTimes(1);
+      expect(fakeCreate).to.have.been.calledOnce;
     });
     const shareMoreText = screen.getByText(
       i18n.progressV2_feedback_shareMore()
@@ -124,7 +125,7 @@ describe('ProgressFeedbackBanner', () => {
     expect(thumbsDownButton).to.be.visible;
     fireEvent.click(thumbsDownButton);
     await waitFor(() => {
-      expect(fakeCreate).toHaveBeenCalledTimes(1);
+      expect(fakeCreate).to.have.been.calledOnce;
     });
 
     const shareMoreText = screen.getByText(
@@ -151,7 +152,7 @@ describe('ProgressFeedbackBanner', () => {
     );
     expect(thumbsUpButton).to.be.visible;
     fireEvent.click(thumbsUpButton);
-    expect(fakeCreate).toHaveBeenCalledTimes(1);
+    expect(fakeCreate).to.have.been.calledOnce;
 
     // Close the banner
     const closeButton = screen.getByText('×');
@@ -164,8 +165,8 @@ describe('ProgressFeedbackBanner', () => {
       const shareMoreText = screen.queryByText(
         i18n.progressV2_feedback_shareMore()
       );
-      expect(questionText).toBeFalsy();
-      expect(shareMoreText).toBeFalsy();
+      expect(questionText).to.not.exist;
+      expect(shareMoreText).to.not.exist;
     });
   });
 
@@ -194,7 +195,7 @@ describe('ProgressFeedbackBanner', () => {
     );
 
     await waitFor(() => {
-      expect(fakeFetch).toHaveBeenCalledTimes(2);
+      expect(fakeFetch).to.have.been.calledTwice;
     });
     expect(screen.getByText(i18n.progressV2_feedback_question())).to.be.visible;
   });

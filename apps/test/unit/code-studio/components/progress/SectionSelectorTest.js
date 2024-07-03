@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import {
   UnconnectedSectionSelector as SectionSelector,
@@ -8,7 +9,7 @@ import {
 import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
 import * as utils from '@cdo/apps/utils';
 
-import {assert} from '../../../../util/reconfiguredChai';
+import {assert, expect} from '../../../../util/reconfiguredChai';
 
 const fakeSection = {
   name: 'My Section',
@@ -69,13 +70,13 @@ describe('SectionSelector', () => {
 
   describe('handleSelectChange', () => {
     beforeEach(() => {
-      jest.spyOn(utils, 'reload').mockClear().mockImplementation();
-      jest.spyOn(codeStudioUtils, 'updateQueryParam').mockClear().mockImplementation();
+      sinon.stub(utils, 'reload');
+      sinon.stub(codeStudioUtils, 'updateQueryParam');
     });
 
     afterEach(() => {
-      codeStudioUtils.updateQueryParam.mockRestore();
-      utils.reload.mockRestore();
+      codeStudioUtils.updateQueryParam.restore();
+      utils.reload.restore();
     });
 
     it('updates the query param if a section is selected', () => {
@@ -91,8 +92,9 @@ describe('SectionSelector', () => {
       wrapper
         .find('select')
         .simulate('change', {target: {value: testSectionId}});
-      // testSectionId
-      expect(codeStudioUtils.updateQueryParam).toHaveBeenCalledTimes(2).and.calledWith('section_id').toHaveBeenCalledWith('user_id', undefined);
+      expect(codeStudioUtils.updateQueryParam)
+        .to.have.been.calledTwice.and.calledWith('section_id', testSectionId)
+        .and.calledWith('user_id', undefined);
     });
 
     it('removes the query param if a section is unselected', () => {
@@ -108,12 +110,13 @@ describe('SectionSelector', () => {
       wrapper
         .find('select')
         .simulate('change', {target: {value: NO_SELECTED_SECTION_VALUE}});
-      // undefined
-      expect(codeStudioUtils.updateQueryParam).toHaveBeenCalledTimes(2).and.calledWith('section_id').toHaveBeenCalledWith('user_id', undefined);
+      expect(codeStudioUtils.updateQueryParam)
+        .to.have.been.calledTwice.and.calledWith('section_id', undefined)
+        .and.calledWith('user_id', undefined);
     });
 
     it('reloads on change if prop reloadOnChange is set', () => {
-      const selectSection = jest.fn();
+      const selectSection = sinon.spy();
       const wrapper = mount(
         <SectionSelector
           alwaysShow={true}
@@ -127,12 +130,12 @@ describe('SectionSelector', () => {
       wrapper
         .find('select')
         .simulate('change', {target: {value: testSectionId}});
-      expect(utils.reload).toHaveBeenCalledTimes(1);
-      expect(selectSection).not.toHaveBeenCalled();
+      expect(utils.reload).to.have.been.calledOnce;
+      expect(selectSection).not.to.have.been.called;
     });
 
     it('calls selectSection on change if prop reloadOnChange is not set', () => {
-      const selectSection = jest.fn();
+      const selectSection = sinon.spy();
       const wrapper = mount(
         <SectionSelector
           alwaysShow={true}
@@ -146,8 +149,10 @@ describe('SectionSelector', () => {
       wrapper
         .find('select')
         .simulate('change', {target: {value: testSectionId}});
-      expect(selectSection).toHaveBeenCalledWith(testSectionId);
-      expect(utils.reload).not.toHaveBeenCalled();
+      expect(selectSection).to.have.been.calledOnce.and.calledWith(
+        testSectionId
+      );
+      expect(utils.reload).not.to.have.been.called;
     });
   });
 });

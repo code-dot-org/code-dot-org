@@ -1,12 +1,13 @@
 import {assert} from 'chai';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {UnconnectedTeacherHomepage as TeacherHomepage} from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
 
-
+import {expect} from '../../../util/reconfiguredChai';
 
 import {courses, topCourse, plCourses, topPlCourse} from './homepagesTestData';
 
@@ -46,13 +47,13 @@ describe('TeacherHomepage', () => {
     server.respondWith('POST', '/dashboardapi/sections', successResponse());
   });
   afterEach(() => {
-    server.mockRestore();
+    server.restore();
   });
 
   it('shows a Header Banner that says My Dashboard', () => {
     const wrapper = setUp();
     const headerBanner = wrapper.find('HeaderBanner');
-    expect(headerBanner.props().headingText).toBe('My Dashboard');
+    expect(headerBanner.props().headingText).to.equal('My Dashboard');
   });
 
   it('renders 2 ProtectedStatefulDivs', () => {
@@ -61,13 +62,13 @@ describe('TeacherHomepage', () => {
   });
 
   it('logs an Amplitude event only on first render', () => {
-    const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
     sessionStorage.setItem('logged_teacher_session', 'false');
     setUp();
 
-    expect(sessionStorage.getItem('logged_teacher_session')).toBe('true');
-    expect(analyticsSpy).toHaveBeenCalledTimes(1);
-    expect(analyticsSpy.mock.calls[0]).toEqual([
+    expect(sessionStorage.getItem('logged_teacher_session')).to.equal('true');
+    expect(analyticsSpy).to.have.been.calledOnce;
+    expect(analyticsSpy.firstCall.args).to.deep.eq([
       'Teacher Login',
       {'user id': 42},
       'Both',
@@ -76,9 +77,9 @@ describe('TeacherHomepage', () => {
     // After setting the session value to true, we should not see sessionStorage.setItem or analyticsSpy called again.
     sessionStorage.setItem('logged_teacher_session', 'true');
     setUp();
-    expect(analyticsSpy).toHaveBeenCalledTimes(1);
+    expect(analyticsSpy).to.have.been.calledOnce;
 
-    analyticsSpy.mockRestore();
+    analyticsSpy.restore();
   });
 
   it('renders a NpsSurveyBlock if showNpsSurvey is true', () => {

@@ -1,5 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {registerReducers, stubRedux} from '@cdo/apps/redux';
@@ -7,7 +8,7 @@ import commonReducers from '@cdo/apps/redux/commonReducers';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {UnconnectedLoginTypePicker as LoginTypePicker} from '@cdo/apps/templates/teacherDashboard/LoginTypePicker';
 
-
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('LoginTypePicker', () => {
   beforeEach(() => {
@@ -25,13 +26,13 @@ describe('LoginTypePicker', () => {
         providers={['picture', 'word', 'email']}
       />
     );
-    const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear().mockImplementation();
+    const sendEventSpy = sinon.stub(analyticsReporter, 'sendEvent');
 
     wrapper.find('PictureLoginCard').simulate('click');
 
-    expect(sendEventSpy).toHaveBeenCalledTimes(1);
-    expect(sendEventSpy).toHaveBeenCalledWith('Login Type Selected');
+    expect(sendEventSpy).to.be.calledOnce;
+    expect(sendEventSpy).calledWith('Login Type Selected');
 
-    analyticsReporter.sendEvent.mockRestore();
+    analyticsReporter.sendEvent.restore();
   });
 });

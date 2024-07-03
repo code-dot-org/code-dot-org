@@ -1,6 +1,8 @@
-import { mount } from 'enzyme';
+import {expect} from 'chai';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
+import sinon from 'sinon';
 
 import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
 import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
@@ -27,15 +29,15 @@ describe('TeacherApplication', () => {
   };
 
   beforeEach(() => {
-    jest.spyOn($, 'ajax').mockClear().mockReturnValue(new $.Deferred());
-    jest.spyOn($, 'param').mockClear().mockReturnValue(new $.Deferred());
-    jest.spyOn(window, 'fetch').mockClear().mockReturnValue(Promise.resolve({ok: true}));
-    jest.spyOn(utils, 'reload').mockClear().mockImplementation();
+    sinon.stub($, 'ajax').returns(new $.Deferred());
+    sinon.stub($, 'param').returns(new $.Deferred());
+    sinon.stub(window, 'fetch').returns(Promise.resolve({ok: true}));
+    sinon.stub(utils, 'reload');
     window.ga = sinon.fake();
   });
 
   afterEach(() => {
-    jest.restoreAllMocks();
+    sinon.restore();
     window.ga = undefined;
   });
 
@@ -43,25 +45,31 @@ describe('TeacherApplication', () => {
     const page = mount(
       <FindYourRegion {...defaultProps} data={{program: 'CSD'}} />
     );
-    expect(page.find('SchoolAutocompleteDropdown').prop('value')).toBeUndefined();
+    expect(page.find('SchoolAutocompleteDropdown').prop('value')).to.equal(
+      undefined
+    );
   });
 
   it('Sets the school dropdown value from props', () => {
     const page = mount(
       <FindYourRegion {...defaultProps} data={{program: 'CSD', school: '50'}} />
     );
-    expect(page.find('SchoolAutocompleteDropdown').prop('value')).toBe('50');
+    expect(page.find('SchoolAutocompleteDropdown').prop('value')).to.equal(
+      '50'
+    );
   });
 
   it('Sets the school dropdown value from storage', () => {
     const data = {program: 'CSD', school: '25'};
 
     const page = mount(<FindYourRegion {...defaultProps} data={data} />);
-    expect(page.find('SchoolAutocompleteDropdown').prop('value')).toBe('25');
+    expect(page.find('SchoolAutocompleteDropdown').prop('value')).to.equal(
+      '25'
+    );
   });
 
   it('Reports to google analytics', () => {
     mount(<TeacherApplication {...defaultProps} />);
-    sinon.toHaveBeenCalled();
+    sinon.assert.called(window.ga);
   });
 });

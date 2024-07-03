@@ -1,5 +1,6 @@
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
 import RubricEditor from '@cdo/apps/lib/levelbuilder/rubrics/RubricEditor';
@@ -8,7 +9,7 @@ import RubricsContainer from '@cdo/apps/lib/levelbuilder/rubrics/RubricsContaine
 import Button from '@cdo/apps/templates/Button';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 
-
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('RubricsContainerTest', () => {
   const defaultProps = {
@@ -86,22 +87,30 @@ describe('RubricsContainerTest', () => {
 
   it('renders the components on the page correctly for a new rubric', () => {
     const wrapper = mount(<RubricsContainer {...defaultProps} />);
-    expect(wrapper.find('Heading1').text()).toBe('Create your rubric');
-    expect(wrapper.find('select#rubric_level_id option')).toHaveLength(defaultProps.submittableLevels.length);
-    expect(wrapper.find(RubricEditor)).toHaveLength(1);
-    expect(wrapper.find('Button[text="Delete key concept"]')).toHaveLength(1);
-    expect(wrapper.find(LearningGoalItem)).toHaveLength(1);
-    expect(wrapper.find('Button[text="Save your rubric"]')).toHaveLength(1);
+    expect(wrapper.find('Heading1').text()).to.equal('Create your rubric');
+    expect(wrapper.find('select#rubric_level_id option')).to.have.length(
+      defaultProps.submittableLevels.length
+    );
+    expect(wrapper.find(RubricEditor)).to.have.length(1);
+    expect(wrapper.find('Button[text="Delete key concept"]')).to.have.length(1);
+    expect(wrapper.find(LearningGoalItem)).to.have.length(1);
+    expect(wrapper.find('Button[text="Save your rubric"]')).to.have.length(1);
   });
 
   it('renders "the components on the page correctly for an exisiting rubric"', () => {
     const props = {...defaultProps, rubric: rubricInfo};
     const wrapper = mount(<RubricsContainer {...props} />);
-    expect(wrapper.find('Heading1').text()).toBe('Modify your rubric');
-    expect(wrapper.find('select#rubric_level_id option')).toHaveLength(defaultProps.submittableLevels.length);
-    expect(wrapper.find(RubricEditor).prop('learningGoalList')).toBe(rubricInfo.learningGoals);
-    expect(wrapper.find(LearningGoalItem)).toHaveLength(rubricInfo.learningGoals.length);
-    expect(wrapper.find('Button[text="Save your rubric"]')).toHaveLength(1);
+    expect(wrapper.find('Heading1').text()).to.equal('Modify your rubric');
+    expect(wrapper.find('select#rubric_level_id option')).to.have.length(
+      defaultProps.submittableLevels.length
+    );
+    expect(wrapper.find(RubricEditor).prop('learningGoalList')).to.equal(
+      rubricInfo.learningGoals
+    );
+    expect(wrapper.find(LearningGoalItem)).to.have.length(
+      rubricInfo.learningGoals.length
+    );
+    expect(wrapper.find('Button[text="Save your rubric"]')).to.have.length(1);
   });
 
   it('adds a new learning goal on "Add new Key Concept" button click', () => {
@@ -110,10 +119,10 @@ describe('RubricsContainerTest', () => {
     const addButton = wrapper
       .find(Button)
       .findWhere(n => n.props().text === 'Add new Key Concept');
-    expect(addButton).toHaveLength(1);
+    expect(addButton).to.have.length(1);
     addButton.simulate('click');
     const afterAddLearningGoalItems = wrapper.find('LearningGoalItem').length;
-    expect(afterAddLearningGoalItems).toBe(initialLearningGoalItems + 1);
+    expect(afterAddLearningGoalItems).to.equal(initialLearningGoalItems + 1);
   });
 
   it('adds a deletes learning goal on "Delete Key Concept" button click', () => {
@@ -122,28 +131,30 @@ describe('RubricsContainerTest', () => {
     const deleteButton = wrapper
       .find(Button)
       .findWhere(n => n.props().text === 'Delete key concept');
-    expect(deleteButton).toHaveLength(1);
+    expect(deleteButton).to.have.length(1);
     deleteButton.simulate('click');
     const afterAddDeletingGoalItems = wrapper.find('LearningGoalItem').length;
-    expect(afterAddDeletingGoalItems).toBe(initialLearningGoalItems - 1);
+    expect(afterAddDeletingGoalItems).to.equal(initialLearningGoalItems - 1);
   });
 
   it('changes the selected level for assessment when the dropdown is changed', () => {
     const wrapper = shallow(<RubricsContainer {...defaultProps} />);
     let dropdown = wrapper.find('select#rubric_level_id');
     const dropdownValue = dropdown.prop('value');
-    expect(dropdownValue).toBe(defaultProps.submittableLevels[0].id);
+    expect(dropdownValue).to.equal(defaultProps.submittableLevels[0].id);
 
     dropdown.simulate('change', {
       target: {value: defaultProps.submittableLevels[1].id},
     });
     dropdown = wrapper.find('select#rubric_level_id');
-    expect(dropdown.prop('value')).toBe(defaultProps.submittableLevels[1].id);
+    expect(dropdown.prop('value')).to.equal(
+      defaultProps.submittableLevels[1].id
+    );
   });
 
   it('changes the saveNotificationText and disables the save Button when saving rubric', async () => {
-    const mockFetch = jest.spyOn(global, 'fetch').mockClear().mockImplementation();
-    mockFetch.mockReturnValue(
+    const mockFetch = sinon.stub(global, 'fetch');
+    mockFetch.returns(
       Promise.resolve(new Response(JSON.stringify({redirectUrl: 'test_url'})))
     );
 
@@ -152,31 +163,31 @@ describe('RubricsContainerTest', () => {
     const wrapper = mount(<RubricsContainer {...props} />);
     const notification = wrapper.find('BodyThreeText');
 
-    expect(notification.text()).not.toContain('Saving...');
-    expect(notification.text()).not.toContain('Save complete!');
+    expect(notification.text()).not.to.contain('Saving...');
+    expect(notification.text()).not.to.contain('Save complete!');
 
     // Simulate the save button click
     let saveButton = wrapper.find('Button.ui-test-save-button');
-    expect(saveButton.props().disabled).toBe(false);
+    expect(saveButton.props().disabled).to.be.false;
     saveButton.simulate('click');
-    expect(notification.text()).toContain('Saving...');
+    expect(notification.text()).to.contain('Saving...');
     saveButton = wrapper.find('Button.ui-test-save-button');
-    expect(saveButton.props().disabled).toBe(true);
+    expect(saveButton.props().disabled).to.be.true;
 
     // Allow state to change from the fetch request and the re-render of components
     await new Promise(resolve => setTimeout(resolve, 0));
     await new Promise(resolve => setTimeout(resolve, 0));
     wrapper.update();
 
-    expect(notification.text()).toContain('Save complete!');
+    expect(notification.text()).to.contain('Save complete!');
     saveButton = wrapper.find('Button.ui-test-save-button');
-    expect(saveButton.props().disabled).toBe(false);
-    jest.restoreAllMocks();
+    expect(saveButton.props().disabled).to.be.false;
+    sinon.restore();
   });
 
   it('calls the save helper on save click', () => {
-    const mockSave = jest.spyOn(rubricHelper, 'saveRubricToTable').mockClear().mockImplementation();
-    mockSave.mockReturnValue(
+    const mockSave = sinon.stub(rubricHelper, 'saveRubricToTable');
+    mockSave.returns(
       Promise.resolve(new Response(JSON.stringify({redirectUrl: 'test_url'})))
     );
 
@@ -185,14 +196,14 @@ describe('RubricsContainerTest', () => {
     const wrapper = mount(<RubricsContainer {...props} />);
     const notification = wrapper.find('BodyThreeText');
 
-    expect(notification.text()).not.toContain('Saving...');
-    expect(notification.text()).not.toContain('Save complete!');
+    expect(notification.text()).not.to.contain('Saving...');
+    expect(notification.text()).not.to.contain('Save complete!');
 
     // Simulate the save button click
     let saveButton = wrapper.find('Button.ui-test-save-button');
-    expect(saveButton.props().disabled).toBe(false);
+    expect(saveButton.props().disabled).to.be.false;
     saveButton.simulate('click');
-    expect(mockSave).toHaveBeenCalledWith();
-    jest.restoreAllMocks();
+    sinon.assert.calledWith(mockSave);
+    sinon.restore();
   });
 });

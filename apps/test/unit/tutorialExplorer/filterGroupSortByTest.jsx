@@ -1,11 +1,12 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import FilterGroupSortBy from '@cdo/apps/tutorialExplorer/filterGroupSortBy';
 import {TutorialsSortByOptions} from '@cdo/apps/tutorialExplorer/util';
 import i18n from '@cdo/tutorialExplorer/locale';
 
-
+import {expect} from '../../util/deprecatedChai';
 
 const FAKE_ON_SORT_BY = () => {};
 const DEFAULT_PROPS = {
@@ -35,13 +36,13 @@ describe('FilterGroupSortBy', () => {
   });
 
   it('hits a callback when sort settings change', () => {
-    const spy = jest.fn();
+    const spy = sinon.spy();
     const wrapper = shallow(
       <FilterGroupSortBy {...DEFAULT_PROPS} onUserInput={spy} />
     );
     wrapper
       .find('select')
       .simulate('change', {target: {value: 'displayweight'}});
-    expect(spy).toHaveBeenCalledWith('displayweight');
+    expect(spy).to.have.been.calledOnce.and.calledWith('displayweight');
   });
 });

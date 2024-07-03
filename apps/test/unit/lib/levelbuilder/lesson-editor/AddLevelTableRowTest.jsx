@@ -1,14 +1,15 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import AddLevelTableRow from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTableRow';
 
-
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('AddLevelTableRow', () => {
   let defaultProps, addLevel;
   beforeEach(() => {
-    addLevel = jest.fn();
+    addLevel = sinon.spy();
     defaultProps = {
       addLevel,
       isInLesson: false,
@@ -24,8 +25,8 @@ describe('AddLevelTableRow', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<AddLevelTableRow {...defaultProps} />);
-    expect(wrapper.find('button').length).toBe(2);
-    expect(wrapper.find('tr').length).toBe(1);
+    expect(wrapper.find('button').length).to.equal(2);
+    expect(wrapper.find('tr').length).to.equal(1);
   });
 
   it('add level', () => {
@@ -33,12 +34,12 @@ describe('AddLevelTableRow', () => {
 
     const addButton = wrapper.find('button').at(0);
     addButton.simulate('click');
-    expect(addLevel).toHaveBeenCalledWith(defaultProps.level);
+    expect(addLevel).to.have.been.calledWith(defaultProps.level);
   });
 
   it('add and clone level', () => {
-    const prompt = jest.spyOn(window, 'prompt').mockClear().mockImplementation();
-    prompt.mockReturnValue('NewLevelName');
+    const prompt = sinon.stub(window, 'prompt');
+    prompt.returns('NewLevelName');
 
     let returnData = {id: 11, name: 'NewLevelName'};
     let server = sinon.fakeServer.create();
@@ -54,9 +55,9 @@ describe('AddLevelTableRow', () => {
     addAndCloneButton.simulate('click');
 
     server.respond();
-    expect(addLevel).toHaveBeenCalledTimes(1);
+    expect(addLevel).to.have.been.calledOnce;
 
-    window.prompt.mockRestore();
-    server.mockRestore();
+    window.prompt.restore();
+    server.restore();
   });
 });

@@ -1,4 +1,5 @@
 import {assert} from 'chai';
+import sinon, {stub} from 'sinon';
 
 import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
 import reducer, {
@@ -13,7 +14,7 @@ import {
 } from '@cdo/apps/redux';
 import * as appsUtils from '@cdo/apps/utils';
 
-
+import {expect} from '../../util/reconfiguredChai';
 
 describe('viewAs redux', () => {
   // Create a store so that we get the benefits of our thunk middleware
@@ -23,11 +24,11 @@ describe('viewAs redux', () => {
     registerReducers({viewAs: reducer});
     store = getStore();
 
-    jest.spyOn(codeStudioUtils, 'updateQueryParam').mockClear().mockImplementation();
+    sinon.stub(codeStudioUtils, 'updateQueryParam');
   });
 
   afterEach(() => {
-    codeStudioUtils.updateQueryParam.mockRestore();
+    codeStudioUtils.updateQueryParam.restore();
     restoreRedux();
   });
 
@@ -45,7 +46,7 @@ describe('viewAs redux', () => {
     assert.equal(nextState.viewAs, ViewType.Instructor);
     expect(
       codeStudioUtils.updateQueryParam
-    ).toHaveBeenCalledWith('viewAs', 'Instructor');
+    ).to.have.been.calledOnce.and.calledWith('viewAs', 'Instructor');
   });
 
   it('can set as participant', () => {
@@ -62,7 +63,7 @@ describe('viewAs redux', () => {
     assert.equal(nextState.viewAs, ViewType.Participant);
     expect(
       codeStudioUtils.updateQueryParam
-    ).toHaveBeenCalledWith('viewAs', 'Participant');
+    ).to.have.been.calledOnce.and.calledWith('viewAs', 'Participant');
   });
 
   it('does not allow for invalid view types', () => {
@@ -79,8 +80,8 @@ describe('viewAs redux', () => {
     });
 
     afterAll(() => {
-      appsUtils.reload.mockRestore();
-      codeStudioUtils.queryParams.mockRestore();
+      appsUtils.reload.restore();
+      codeStudioUtils.queryParams.restore();
     });
 
     it('changes the window location when changing to particpant with user_id', () => {
@@ -88,7 +89,7 @@ describe('viewAs redux', () => {
       store.dispatch(action);
       assert(codeStudioUtils.queryParams.calledWith('user_id'));
       assert(codeStudioUtils.updateQueryParam.calledWith('user_id', undefined));
-      assert(appsUtils.toHaveBeenCalled());
+      assert(appsUtils.reload.called);
     });
   });
 });

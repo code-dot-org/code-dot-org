@@ -1,10 +1,11 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import {TestableCodeWorkspaceContainer as CodeWorkspaceContainer} from '@cdo/apps/templates/CodeWorkspaceContainer';
 import * as utils from '@cdo/apps/utils';
 
-
+import {expect} from '../../util/deprecatedChai';
 
 describe('CodeWorkspaceContainer', () => {
   let wrapper;
@@ -16,7 +17,7 @@ describe('CodeWorkspaceContainer', () => {
   };
 
   beforeEach(() => {
-    jest.spyOn(utils, 'fireResizeEvent').mockClear().mockImplementation();
+    sinon.stub(utils, 'fireResizeEvent');
   });
 
   afterEach(() => {
@@ -25,35 +26,35 @@ describe('CodeWorkspaceContainer', () => {
       wrapper = undefined;
     }
 
-    utils.fireResizeEvent.mockRestore();
+    utils.fireResizeEvent.restore();
   });
 
   it('fires a resize event on update if style.top changed', () => {
     wrapper = mount(<CodeWorkspaceContainer {...MINIMUM_PROPS} />);
-    expect(utils.fireResizeEvent).not.toHaveBeenCalled();
+    expect(utils.fireResizeEvent).not.to.have.been.called;
 
     wrapper.setProps({style: {top: 200}});
-    expect(utils.fireResizeEvent).toHaveBeenCalledTimes(1);
+    expect(utils.fireResizeEvent).to.have.been.calledOnce;
   });
 
   it('does not fire a resize event on update if style.top does not change', () => {
     wrapper = mount(
       <CodeWorkspaceContainer {...MINIMUM_PROPS} isRtl={false} />
     );
-    expect(utils.fireResizeEvent).not.toHaveBeenCalled();
+    expect(utils.fireResizeEvent).not.to.have.been.called;
 
     wrapper.setProps({isRtl: true});
-    expect(utils.fireResizeEvent).not.toHaveBeenCalled();
+    expect(utils.fireResizeEvent).not.to.have.been.called;
 
     wrapper.setProps({style: {left: 100}});
-    expect(utils.fireResizeEvent).not.toHaveBeenCalled();
+    expect(utils.fireResizeEvent).not.to.have.been.called;
   });
 
   it('hidden hides the outer div', () => {
     wrapper = mount(
       <CodeWorkspaceContainer {...MINIMUM_PROPS} hidden={false} />
     );
-    expect(wrapper).to.not.have.style('display', 'none');
+    expect(wrapper).not.to.have.style('display', 'none');
 
     wrapper.setProps({hidden: true});
     expect(wrapper).to.have.style('display', 'none');
@@ -63,14 +64,14 @@ describe('CodeWorkspaceContainer', () => {
     wrapper = mount(
       <CodeWorkspaceContainer {...MINIMUM_PROPS} isRtl={false} />
     );
-    expect(wrapper).to.not.have.style('left');
+    expect(wrapper).not.to.have.style('left');
     expect(wrapper).to.have.style('right', '0px');
     expect(wrapper).to.have.style('marginLeft', '15px');
-    expect(wrapper).to.not.have.style('marginRight');
+    expect(wrapper).not.to.have.style('marginRight');
 
     wrapper.setProps({isRtl: true});
     expect(wrapper).to.have.style('left', '0px');
-    expect(wrapper).to.not.have.style('right');
+    expect(wrapper).not.to.have.style('right');
     expect(wrapper).to.have.style('marginLeft', '0px');
     expect(wrapper).to.have.style('marginRight', '15px');
   });
@@ -79,7 +80,7 @@ describe('CodeWorkspaceContainer', () => {
     wrapper = mount(
       <CodeWorkspaceContainer {...MINIMUM_PROPS} noVisualization={false} />
     );
-    expect(wrapper).to.not.have.style('left');
+    expect(wrapper).not.to.have.style('left');
     expect(wrapper).to.have.style('marginLeft', '15px');
 
     wrapper.setProps({noVisualization: true});
@@ -96,7 +97,7 @@ describe('CodeWorkspaceContainer', () => {
       />
     );
     expect(wrapper).to.have.style('left', '0px');
-    expect(wrapper).to.not.have.style('right');
+    expect(wrapper).not.to.have.style('right');
     expect(wrapper).to.have.style('marginLeft', '0px');
 
     wrapper.setProps({
@@ -110,6 +111,6 @@ describe('CodeWorkspaceContainer', () => {
   it('getRenderedHeight gives height of DOM node', () => {
     wrapper = mount(<CodeWorkspaceContainer {...MINIMUM_PROPS} />);
     const height = wrapper.instance().getRenderedHeight();
-    expect(height).toBeInstanceOf(Number);
+    expect(height).to.be.a('number');
   });
 });

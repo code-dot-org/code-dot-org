@@ -1,6 +1,6 @@
 import VirtualCPBoard from '@cdo/apps/lib/kits/maker/boards/VirtualCPBoard';
 
-
+import {expect} from '../../../../../../util/reconfiguredChai';
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardInterfaceTestUtil';
 
 import {itMakesCircuitPlaygroundComponentsAvailable} from './CircuitPlaygroundComponentTestUtil';
@@ -13,11 +13,11 @@ describe('VirtualCPBoard', () => {
   describe(`boardConnected()`, () => {
     it('always returns false', () => {
       const board = new VirtualCPBoard();
-      expect(board.boardConnected()).toBe(false);
+      expect(board.boardConnected()).to.be.false;
       return board.connect().then(() => {
-        expect(board.boardConnected()).toBe(false);
+        expect(board.boardConnected()).to.be.false;
         board.destroy();
-        expect(board.boardConnected()).toBe(false);
+        expect(board.boardConnected()).to.be.false;
       });
     });
   });

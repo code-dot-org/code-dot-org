@@ -1,11 +1,12 @@
 /** @file Test PopUpMenu component */
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import PopUpMenu, {MenuBubble} from '@cdo/apps/lib/ui/PopUpMenu';
 import msg from '@cdo/locale';
 
-
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('PopUpMenu', () => {
   const targetPoint = {left: 0, top: 0};
@@ -30,8 +31,8 @@ describe('PopUpMenu', () => {
   });
 
   it('has working click handlers for menu items', () => {
-    const spy1 = jest.fn();
-    const spy2 = jest.fn();
+    const spy1 = sinon.spy();
+    const spy2 = sinon.spy();
     const wrapper = mount(
       <MenuBubble targetPoint={targetPoint}>
         <PopUpMenu.Item onClick={spy1}>Item one</PopUpMenu.Item>

@@ -7,7 +7,7 @@ import {
   AudioQueueContext,
 } from '@cdo/apps/templates/instructions/AudioQueue';
 
-
+import {expect} from '../../../util/reconfiguredChai';
 import {setExternalGlobals} from '../../../util/testUtils';
 
 interface QueueContext {

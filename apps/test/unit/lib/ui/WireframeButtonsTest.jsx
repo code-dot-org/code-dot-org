@@ -1,17 +1,18 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import SendToPhone from '@cdo/apps/code-studio/components/SendToPhone';
 import WireframeButtons from '@cdo/apps/lib/ui/WireframeButtons';
 import i18n from '@cdo/locale';
 
-
+import {expect} from '../../../util/deprecatedChai';
 
 describe('WireframeButtons', () => {
   let wrapper;
 
   beforeEach(() => {
-    jest.spyOn(SendToPhone.prototype, 'maskPhoneInput').mockClear().mockImplementation();
+    sinon.stub(SendToPhone.prototype, 'maskPhoneInput');
   });
 
   afterEach(() => {
@@ -20,7 +21,7 @@ describe('WireframeButtons', () => {
       wrapper = undefined;
     }
 
-    SendToPhone.prototype.maskPhoneInput.mockRestore();
+    SendToPhone.prototype.maskPhoneInput.restore();
   });
 
   describe('Send To Phone button', () => {
@@ -32,10 +33,10 @@ describe('WireframeButtons', () => {
           isLegacyShare={false}
         />
       );
-      expect(wrapper.find(SendToPhone)).toHaveLength(0);
+      expect(wrapper.find(SendToPhone)).to.be.empty;
 
       wrapper.find('.fa-mobile').simulate('click');
-      expect(wrapper.find(SendToPhone)).not.toHaveLength(0);
+      expect(wrapper.find(SendToPhone)).not.to.be.empty;
     });
   });
 
@@ -98,7 +99,7 @@ describe('WireframeButtons', () => {
     ['artist', 'playlab', 'weblab'].forEach(appType => {
       it(`does not appear for ${appType}`, () => {
         wrapper = mountForAppType(appType);
-        expect(wrapper).to.not.containMatchingElement(
+        expect(wrapper).not.to.containMatchingElement(
           VIEW_CODE_BUTTON_TEMPLATE
         );
       });

@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert, expect} from 'chai';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {FormControl} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
@@ -7,6 +7,7 @@ import {Provider} from 'react-redux';
 import {MemoryRouter} from 'react-router-dom';
 import {createStore, combineReducers} from 'redux';
 import {Factory} from 'rosie';
+import sinon from 'sinon';
 
 import {WorkshopForm} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_form';
 import Permission, {
@@ -82,7 +83,7 @@ describe('WorkshopForm test', () => {
       {'Content-Type': 'application/json'},
       JSON.stringify({}),
     ]);
-    const onPublish = jest.fn();
+    const onPublish = sinon.spy();
 
     const wrapper = mount(
       <Provider store={store}>
@@ -119,7 +120,7 @@ describe('WorkshopForm test', () => {
       target: {name: 'subject', value: 'SLP Intro'},
     });
 
-    expect(onPublish).not.toHaveBeenCalled();
+    expect(onPublish).not.to.have.been.called;
 
     // Publish workshop
     const publishButton = wrapper.find('#workshop-form-save-btn').first();
@@ -127,9 +128,9 @@ describe('WorkshopForm test', () => {
 
     server.respond();
 
-    expect(onPublish).toHaveBeenCalledTimes(1);
+    expect(onPublish).to.have.been.calledOnce;
 
-    server.mockRestore();
+    server.restore();
   });
 
   it('edits form and can save', () => {
@@ -140,7 +141,7 @@ describe('WorkshopForm test', () => {
       {'Content-Type': 'application/json'},
       JSON.stringify({}),
     ]);
-    const onSave = jest.fn();
+    const onSave = sinon.spy();
 
     const wrapper = mount(
       <Provider store={store}>
@@ -162,7 +163,7 @@ describe('WorkshopForm test', () => {
       target: {name: 'capacity', value: newCapacity},
     });
 
-    expect(onSave).not.toHaveBeenCalled();
+    expect(onSave).not.to.have.been.called;
 
     // Save workshop
     const saveButton = wrapper.find('#workshop-form-save-btn').first();
@@ -170,10 +171,12 @@ describe('WorkshopForm test', () => {
 
     server.respond();
 
-    expect(onSave).toHaveBeenCalledTimes(1);
-    expect(wrapper.find('WorkshopForm').first().state().capacity).toBe(newCapacity);
+    expect(onSave).to.have.been.calledOnce;
+    expect(wrapper.find('WorkshopForm').first().state().capacity).to.equal(
+      newCapacity
+    );
 
-    server.mockRestore();
+    server.restore();
   });
 
   it('inputs disabled in readonly', () => {
@@ -217,7 +220,7 @@ describe('WorkshopForm test', () => {
       .find('SessionFormPart')
       .find('i')
       .slice(-1);
-    expect(addIcon.props().className.trim()).toBe('fa fa-plus');
+    expect(addIcon.props().className.trim()).to.equal('fa fa-plus');
   });
 
   it('workshop with 2+ sessions shows remove session button in each row and add session in last row', () => {
@@ -250,9 +253,9 @@ describe('WorkshopForm test', () => {
     ];
 
     removeIcons.forEach(ri => {
-      expect(ri).toBe('fa fa-minus');
+      expect(ri).to.equal('fa fa-minus');
     });
-    expect(addIcon).toBe('fa fa-plus');
+    expect(addIcon).to.equal('fa fa-plus');
   });
 
   it('CSF, CSD, CSP, CSA, and Facilitator courses show standard workshop type options', () => {
@@ -343,7 +346,7 @@ describe('WorkshopForm test', () => {
           .map(option => option.props().value)
           .slice(1);
 
-        expect(subjectOptions).toEqual(Subjects[courseName]);
+        expect(subjectOptions).to.deep.equal(Subjects[courseName]);
       }
     );
   });
@@ -437,7 +440,9 @@ describe('WorkshopForm test', () => {
         subjectField.simulate('change', {
           target: {name: 'subject', value: 'Virtual Workshop Kickoff'},
         });
-        expect(wrapper.find('#virtual').first().props().value).toBe('regional');
+        expect(wrapper.find('#virtual').first().props().value).to.equal(
+          'regional'
+        );
         assert(wrapper.find('#virtual').first().props().disabled);
 
         // Changing subject from 'Virtual Workshop Kickoff' should make virtual field enabled again.
@@ -523,7 +528,9 @@ describe('WorkshopForm test', () => {
     });
 
     assert(wrapper.find('#virtual').exists());
-    expect(wrapper.find('#virtual').first().props().value).toBe('in_person');
+    expect(wrapper.find('#virtual').first().props().value).to.equal(
+      'in_person'
+    );
 
     assert(wrapper.find('#suppress_email').exists());
     assert(wrapper.find('#suppress_email').first().props().value);
@@ -549,9 +556,9 @@ describe('WorkshopForm test', () => {
       target: {name: 'course', value: COURSE_BUILD_YOUR_OWN},
     });
 
-    expect(wrapper.find('#subject')).toHaveLength(0);
-    expect(wrapper.find('#funded')).toHaveLength(0);
-    expect(wrapper.find('#suppress_email')).toHaveLength(0);
+    expect(wrapper.find('#subject')).to.have.lengthOf(0);
+    expect(wrapper.find('#funded')).to.have.lengthOf(0);
+    expect(wrapper.find('#suppress_email')).to.have.lengthOf(0);
   });
 
   it('selecting Build Your Own Workshop shows pl topics', () => {
@@ -607,7 +614,7 @@ describe('WorkshopForm test', () => {
       </Provider>
     );
 
-    expect(wrapper.find('OrganizerFormPart')).toHaveLength(0);
+    expect(wrapper.find('OrganizerFormPart')).to.have.lengthOf(0);
   });
 
   it('virtual field disabled for non-ws-admin for CSP/CSA summer workshop within a month of starting', () => {

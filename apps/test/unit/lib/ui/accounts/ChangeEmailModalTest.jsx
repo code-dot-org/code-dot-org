@@ -1,12 +1,13 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
 import ChangeEmailModal from '@cdo/apps/lib/ui/accounts/ChangeEmailModal';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 
-
+import {expect} from '../../../../util/deprecatedChai';
 
 describe('ChangeEmailModal', () => {
   let wrapper;
@@ -57,20 +58,22 @@ describe('ChangeEmailModal', () => {
         }
         expect(submitButton(wrapper)).to.have.attr('disabled');
         expect(cancelButton(wrapper)).to.have.attr('disabled');
-        expect(wrapper.text()).toContain(i18n.saving());
+        expect(wrapper.text()).to.include(i18n.saving());
       });
 
       it('shows unknown error text when an unknown error occurs', () => {
         wrapper.setState({saveState: 'unknown-error'});
-        expect(wrapper.text()).toContain(i18n.changeEmailModal_unexpectedError());
+        expect(wrapper.text()).to.include(
+          i18n.changeEmailModal_unexpectedError()
+        );
       });
 
       it('calls handleCancel when clicking the cancel button', () => {
-        const handleCancel = jest.fn();
+        const handleCancel = sinon.spy();
         wrapper.setProps({handleCancel});
-        expect(handleCancel).not.toHaveBeenCalled();
+        expect(handleCancel).not.to.have.been.called;
         cancelButton(wrapper).simulate('click');
-        expect(handleCancel).toHaveBeenCalledTimes(1);
+        expect(handleCancel).to.have.been.calledOnce;
       });
 
       describe('validation', () => {
@@ -83,7 +86,9 @@ describe('ChangeEmailModal', () => {
             },
           });
 
-          expect(wrapper.text()).toContain(i18n.changeEmailModal_newEmail_isRequired());
+          expect(wrapper.text()).to.include(
+            i18n.changeEmailModal_newEmail_isRequired()
+          );
         });
 
         it('checks that email is valid', () => {
@@ -95,7 +100,9 @@ describe('ChangeEmailModal', () => {
             },
           });
 
-          expect(wrapper.text()).toContain(i18n.changeEmailModal_newEmail_invalid());
+          expect(wrapper.text()).to.include(
+            i18n.changeEmailModal_newEmail_invalid()
+          );
         });
 
         it('checks that email is not the same as the current email', () => {
@@ -110,7 +117,9 @@ describe('ChangeEmailModal', () => {
             },
           });
 
-          expect(wrapper.text()).toContain(i18n.changeEmailModal_newEmail_mustBeDifferent());
+          expect(wrapper.text()).to.include(
+            i18n.changeEmailModal_newEmail_mustBeDifferent()
+          );
         });
 
         it('reports email server errors', () => {
@@ -126,7 +135,7 @@ describe('ChangeEmailModal', () => {
             },
           });
 
-          expect(wrapper.text()).toContain(serverError);
+          expect(wrapper.text()).to.include(serverError);
         });
 
         it('checks that password is present if user has a password', () => {
@@ -138,7 +147,9 @@ describe('ChangeEmailModal', () => {
             },
           });
 
-          expect(wrapper.text()).toContain(i18n.changeEmailModal_currentPassword_isRequired());
+          expect(wrapper.text()).to.include(
+            i18n.changeEmailModal_currentPassword_isRequired()
+          );
         });
 
         it('does not check that password is present if user does not have a password', () => {
@@ -153,7 +164,9 @@ describe('ChangeEmailModal', () => {
             },
           });
 
-          expect(wrapper.text()).not.toContain(i18n.changeEmailModal_currentPassword_isRequired());
+          expect(wrapper.text()).not.to.include(
+            i18n.changeEmailModal_currentPassword_isRequired()
+          );
         });
 
         it('reports password server errors', () => {
@@ -169,7 +182,7 @@ describe('ChangeEmailModal', () => {
             },
           });
 
-          expect(wrapper.text()).toContain(serverError);
+          expect(wrapper.text()).to.include(serverError);
         });
 
         if ('teacher' === userType) {
@@ -182,7 +195,9 @@ describe('ChangeEmailModal', () => {
               },
             });
 
-            expect(wrapper.text()).toContain(i18n.changeEmailModal_emailOptIn_isRequired());
+            expect(wrapper.text()).to.include(
+              i18n.changeEmailModal_emailOptIn_isRequired()
+            );
           });
 
           it('reports emailOptIn server errors', () => {
@@ -198,7 +213,7 @@ describe('ChangeEmailModal', () => {
               },
             });
 
-            expect(wrapper.text()).toContain(serverError);
+            expect(wrapper.text()).to.include(serverError);
           });
         }
 
@@ -211,7 +226,7 @@ describe('ChangeEmailModal', () => {
             },
           });
 
-          expect(submitButton(wrapper).props()).toHaveProperty('disabled', true);
+          expect(submitButton(wrapper)).to.have.prop('disabled', true);
         });
 
         it('enables the submit button form passes validation', () => {
@@ -223,7 +238,7 @@ describe('ChangeEmailModal', () => {
             },
           });
 
-          expect(submitButton(wrapper).props()).toHaveProperty('disabled', false);
+          expect(submitButton(wrapper)).to.have.prop('disabled', false);
         });
       });
 
@@ -234,11 +249,13 @@ describe('ChangeEmailModal', () => {
               newEmail: 'test-server-error',
             },
           });
-          expect(wrapper.state().serverErrors.newEmail).toBe('test-server-error');
+          expect(wrapper.state().serverErrors.newEmail).to.equal(
+            'test-server-error'
+          );
           emailInput(wrapper).simulate('change', {
             target: {value: 'me@example.com'},
           });
-          expect(wrapper.state().serverErrors.newEmail).toBeUndefined();
+          expect(wrapper.state().serverErrors.newEmail).to.be.undefined;
         });
 
         it('on password', () => {
@@ -247,11 +264,13 @@ describe('ChangeEmailModal', () => {
               currentPassword: 'test-server-error',
             },
           });
-          expect(wrapper.state().serverErrors.currentPassword).toBe('test-server-error');
+          expect(wrapper.state().serverErrors.currentPassword).to.equal(
+            'test-server-error'
+          );
           passwordInput(wrapper).simulate('change', {
             target: {value: 'fakepassword'},
           });
-          expect(wrapper.state().serverErrors.currentPassword).toBeUndefined();
+          expect(wrapper.state().serverErrors.currentPassword).to.be.undefined;
         });
 
         if (userType === 'teacher') {
@@ -261,23 +280,25 @@ describe('ChangeEmailModal', () => {
                 emailOptIn: 'test-server-error',
               },
             });
-            expect(wrapper.state().serverErrors.emailOptIn).toBe('test-server-error');
+            expect(wrapper.state().serverErrors.emailOptIn).to.equal(
+              'test-server-error'
+            );
             emailOptOutButton(wrapper).simulate('click');
-            expect(wrapper.state().serverErrors.emailOptIn).toBeUndefined();
+            expect(wrapper.state().serverErrors.emailOptIn).to.be.undefined;
           });
         }
       });
 
       describe('onSubmitFailure', () => {
         it('puts the dialog in UNKNOWN ERROR state if response has no server errors', () => {
-          expect(wrapper.state().saveState).toBe('initial');
+          expect(wrapper.state().saveState).to.equal('initial');
           wrapper.instance().onSubmitFailure(null, {});
-          expect(wrapper.state().saveState).toBe('unknown-error');
+          expect(wrapper.state().saveState).to.equal('unknown-error');
         });
 
         it('loads returned validation errors into dialog state', () => {
-          expect(wrapper.state().saveState).toBe('initial');
-          expect(wrapper.state().serverErrors).toEqual({
+          expect(wrapper.state().saveState).to.equal('initial');
+          expect(wrapper.state().serverErrors).to.deep.equal({
             newEmail: '',
             currentPassword: '',
             emailOptIn: '',
@@ -289,8 +310,8 @@ describe('ChangeEmailModal', () => {
               emailOptIn: 'test-email-opt-in-server-error',
             },
           });
-          expect(wrapper.state().saveState).toBe('initial');
-          expect(wrapper.state().serverErrors).toEqual({
+          expect(wrapper.state().saveState).to.equal('initial');
+          expect(wrapper.state().serverErrors).to.deep.equal({
             newEmail: 'test-email-server-error',
             currentPassword: 'test-password-server-error',
             emailOptIn: 'test-email-opt-in-server-error',

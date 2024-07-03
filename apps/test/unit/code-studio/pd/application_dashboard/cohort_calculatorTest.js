@@ -1,5 +1,7 @@
-import { shallow } from 'enzyme';
+import {expect} from 'chai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import CohortCalculator from '@cdo/apps/code-studio/pd/application_dashboard/cohort_calculator';
 import {AllPartnersValue} from '@cdo/apps/code-studio/pd/application_dashboard/constants';
@@ -22,14 +24,14 @@ describe('Cohort Calculator', () => {
     });
 
     afterAll(() => {
-      xhr.mockRestore();
+      xhr.restore();
     });
 
     it('Is loading', () => {
-      expect(cohortCalculator.state('loadingEnrollmentCount')).toBe(true);
+      expect(cohortCalculator.state('loadingEnrollmentCount')).to.be.true;
     });
     it('Does not render a table', () => {
-      expect(cohortCalculator.find('table')).toHaveLength(0);
+      expect(cohortCalculator.find('table')).to.have.length(0);
     });
   });
 
@@ -58,18 +60,18 @@ describe('Cohort Calculator', () => {
       server.respond();
     });
     afterAll(() => {
-      server.mockRestore();
+      server.restore();
     });
 
     it('Is no longer loading', () => {
-      expect(cohortCalculator.state('loadingEnrollmentCount')).toBe(false);
+      expect(cohortCalculator.state('loadingEnrollmentCount')).to.be.false;
     });
     it('Get correct enrollment count from server', () => {
-      expect(cohortCalculator.state('enrolled')).toBe(data.enrolled);
+      expect(cohortCalculator.state('enrolled')).to.equal(data.enrolled);
     });
     it('Renders a table', () => {
       cohortCalculator.update();
-      expect(cohortCalculator.find('thead')).toHaveLength(1);
+      expect(cohortCalculator.find('thead')).to.have.length(1);
     });
   });
 });

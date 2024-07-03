@@ -4,15 +4,16 @@ import MakerError, {
   wrapKnownMakerErrors,
 } from '@cdo/apps/lib/kits/maker/MakerError';
 
-
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('MakerError', () => {
   describe('wrapKnownMakerErrors(originalError)', () => {
     it(`returns the original error if it's not a known common maker error`, () => {
       const testError = new Error('Some test error.');
       const returnedError = wrapKnownMakerErrors(testError);
-      expect(returnedError).toBe(testError)
-        .and.not.toBeInstanceOf(MakerError);
+      expect(returnedError)
+        .to.equal(testError)
+        .and.not.to.be.an.instanceOf(MakerError);
     });
 
     it(`returns a ConnectionFailedError on a johnny-five timeout error`, () => {
@@ -21,10 +22,11 @@ describe('MakerError', () => {
         '\n\nSomething something error stuff.';
       const testError = new Error(j5TimeoutMessage);
       const returnedError = wrapKnownMakerErrors(testError);
-      expect(returnedError).toBeInstanceOf(MakerError)
-        .and.toBeInstanceOf(ConnectionFailedError)
-        .and.toHaveProperty('reason', j5TimeoutMessage)
-        .and.not.toBe(testError);
+      expect(returnedError)
+        .to.be.an.instanceOf(MakerError)
+        .and.to.be.an.instanceOf(ConnectionFailedError)
+        .and.to.have.property('reason', j5TimeoutMessage)
+        .and.not.to.equal(testError);
     });
   });
 });

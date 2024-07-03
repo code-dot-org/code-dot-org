@@ -1,9 +1,10 @@
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
+import sinon from 'sinon';
 
 import DataDocEditAll from '@cdo/apps/lib/levelbuilder/data-docs-editor/DataDocEditAll';
 
-
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('DataDocEditAll', () => {
   const dataDoc1 = {
@@ -22,8 +23,8 @@ describe('DataDocEditAll', () => {
   it('shows names of Data Docs and links to their pages', () => {
     const links = wrapper.findAll('Link').map(link => link.toString());
     allDocs.forEach((doc, index) => {
-      expect(links[index]).toEqual(expect.arrayContaining([doc.name]));
-      expect(links[index]).toEqual(expect.arrayContaining([`/data_docs/${doc.key}`]));
+      expect(links[index]).to.contain(doc.name);
+      expect(links[index]).to.contain(`/data_docs/${doc.key}`);
     });
   });
 
@@ -37,28 +38,30 @@ describe('DataDocEditAll', () => {
     const links = editAllWithEmptyDocWrapper
       .findAll('Link')
       .map(link => link.toString());
-    expect(links).toHaveLength(1);
+    expect(links).to.have.length(1);
   });
 
   it('sets up all the actions for a data doc', () => {
     // check create button (TextLink) navigates user to new data doc page
     const createButton = wrapper.findAll('TextLink')[0];
-    expect(createButton.props.text).toBe('Create New Data Doc');
-    expect(createButton.props.href).toBe('/data_docs/new');
+    expect(createButton.props.text).to.equal('Create New Data Doc');
+    expect(createButton.props.href).to.equal('/data_docs/new');
 
     // check there's an edit and delete button (TextLink) for each doc in the table
     const editAllTable = wrapper.findOne('.guides-table');
-    expect(editAllTable.findAll('TextLink').length).toBe(2 * allDocs.length);
+    expect(editAllTable.findAll('TextLink').length).to.equal(
+      2 * allDocs.length
+    );
 
     // check edit button (TextLink) navigates user to the edit page for that doc
     expect(
       editAllTable.findAll('.actions-box')[0].findAll('TextLink')[0].props.href
-    ).toBe(`/data_docs/${dataDoc1.key}/edit`);
+    ).to.equal(`/data_docs/${dataDoc1.key}/edit`);
 
     // check delete button (TextLink) calls initiate delete doc function
     expect(
       editAllTable.findAll('.actions-box')[0].findAll('TextLink')[1].toString()
-    ).toContain('initiateDeleteDataDoc');
+    ).to.contain('initiateDeleteDataDoc');
   });
 
   it('allows data doc to be deleted', () => {
@@ -81,21 +84,27 @@ describe('DataDocEditAll', () => {
     const testDeleteWrapper = isolateComponent(
       <DataDocEditAll dataDocs={currDocs} />
     );
-    expect(testDeleteWrapper.findAll('.guide-box').length).toBe(currDocs.length);
-    expect(testDeleteWrapper.findAll('.guide-box').toString()).toContain(docToDelete.key);
+    expect(testDeleteWrapper.findAll('.guide-box').length).to.equal(
+      currDocs.length
+    );
+    expect(testDeleteWrapper.findAll('.guide-box').toString()).to.contain(
+      docToDelete.key
+    );
 
     // click delete for data doc with key 'docToDelete' and confirm in dialog
     const docToDeleteActions = testDeleteWrapper
       .findAll('.actions-box')
       .filter(dataDoc => dataDoc.toString().includes(docToDelete.key))[0];
     docToDeleteActions.findAll('TextLink')[1].props.onClick();
-    expect(testDeleteWrapper.exists('Dialog')).toBe(true);
+    expect(testDeleteWrapper.exists('Dialog')).to.be.true;
     testDeleteWrapper.findOne('Dialog').props.onConfirm();
     server.respond();
 
     // ensure doc was successfully deleted
-    expect(testDeleteWrapper.findAll('.guide-box').toString()).not.toContain(docToDelete.key);
-    expect(testDeleteWrapper.exists('Dialog')).not.toBe(true);
-    server.mockRestore();
+    expect(testDeleteWrapper.findAll('.guide-box').toString()).to.not.contain(
+      docToDelete.key
+    );
+    expect(testDeleteWrapper.exists('Dialog')).to.not.be.true;
+    server.restore();
   });
 });

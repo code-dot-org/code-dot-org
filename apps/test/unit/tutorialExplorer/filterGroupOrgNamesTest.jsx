@@ -1,11 +1,12 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import FilterGroupContainer from '@cdo/apps/tutorialExplorer/filterGroupContainer';
 import FilterGroupOrgNames from '@cdo/apps/tutorialExplorer/filterGroupOrgNames';
 import i18n from '@cdo/tutorialExplorer/locale';
 
-
+import {expect} from '../../util/deprecatedChai';
 
 const TEST_ORG_NAME = 'Code Studio';
 const ORG_1 = 'Hogwarts School';
@@ -75,11 +76,11 @@ describe('FilterGroupOrgNames', () => {
   });
 
   it('reports to callback on change', () => {
-    const spy = jest.fn();
+    const spy = sinon.spy();
     const wrapper = shallow(
       <FilterGroupOrgNames {...DEFAULT_PROPS} onUserInput={spy} />
     );
     wrapper.find('select').simulate('change', {target: {value: ORG_1}});
-    expect(spy).toHaveBeenCalledWith(ORG_1);
+    expect(spy).to.have.been.calledOnce.and.calledWith(ORG_1);
   });
 });

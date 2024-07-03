@@ -1,6 +1,7 @@
 import {assert} from 'chai';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import logToCloud from '@cdo/apps/logToCloud';
@@ -10,12 +11,12 @@ const TEST_CSRF_PARAM_VALUE = 'fake-csrf-token';
 
 describe('RailsAuthenticityToken', () => {
   beforeEach(() => {
-    jest.spyOn(logToCloud, 'logError').mockClear().mockImplementation();
+    sinon.stub(logToCloud, 'logError');
     destroyCsrfMetaTags();
   });
 
   afterEach(() => {
-    logToCloud.logError.mockRestore();
+    logToCloud.logError.restore();
     destroyCsrfMetaTags();
   });
 
@@ -41,7 +42,7 @@ describe('RailsAuthenticityToken', () => {
 
     const wrapper = shallow(<RailsAuthenticityToken />);
     assert(wrapper.isEmptyRender(), 'rendered nothing');
-    assert(logToCloud.toHaveBeenCalledTimes(1), 'logged an error to New Relic');
+    assert(logToCloud.logError.calledOnce, 'logged an error to New Relic');
   });
 });
 

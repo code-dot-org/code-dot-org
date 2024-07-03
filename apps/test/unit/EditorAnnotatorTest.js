@@ -8,7 +8,7 @@ import {
   restoreStudioApp,
 } from '@cdo/apps/StudioApp';
 
-
+import {expect} from '../util/reconfiguredChai';
 
 describe('EditorAnnotator', () => {
   let patchStub;

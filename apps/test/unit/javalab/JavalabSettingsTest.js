@@ -1,5 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import {UnconnectedJavalabSettings} from '@cdo/apps/javalab/JavalabSettings';
@@ -13,9 +14,9 @@ describe('JavalabSettings', () => {
     defaultProps;
 
   beforeEach(() => {
-    setDisplayTheme = jest.fn();
-    increaseEditorFontSize = jest.fn();
-    decreaseEditorFontSize = jest.fn();
+    setDisplayTheme = sinon.stub();
+    increaseEditorFontSize = sinon.stub();
+    decreaseEditorFontSize = sinon.stub();
 
     defaultProps = {
       displayTheme: DisplayTheme.DARK,
@@ -55,7 +56,7 @@ describe('JavalabSettings', () => {
 
     switchThemeButton.first().props().onClick();
 
-    expect(setDisplayTheme).toHaveBeenCalledWith(DisplayTheme.LIGHT);
+    sinon.assert.calledWith(setDisplayTheme, DisplayTheme.LIGHT);
 
     // Assert dropdown is closed
     assert.equal(wrapper.find('#javalab-settings-switch-theme').length, 0);
@@ -84,12 +85,12 @@ describe('JavalabSettings', () => {
     const decreaseButton = wrapper.find('#javalab-settings-decrease-font');
     assert.equal(decreaseButton.length, 1);
     decreaseButton.first().props().onClick();
-    sinon.toHaveBeenCalledTimes(1);
+    sinon.assert.calledOnce(decreaseEditorFontSize);
 
     const increaseButton = wrapper.find('#javalab-settings-increase-font');
     assert.equal(increaseButton.length, 1);
     increaseButton.first().props().onClick();
-    sinon.toHaveBeenCalledTimes(1);
+    sinon.assert.calledOnce(increaseEditorFontSize);
   });
 
   it('disables increase/decrease font buttons based on props', () => {

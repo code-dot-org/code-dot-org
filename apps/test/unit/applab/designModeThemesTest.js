@@ -1,10 +1,12 @@
+import sinon from 'sinon';
+
 import {themeOptions, DEFAULT_THEME_INDEX} from '@cdo/apps/applab/constants';
 import {getPrefixedElementById} from '@cdo/apps/applab/designElements/elementUtils';
 import elementLibrary from '@cdo/apps/applab/designElements/library';
 import designMode from '@cdo/apps/applab/designMode';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
-
+import {expect} from '../../util/reconfiguredChai';
 
 describe('themes: ', () => {
   let designModeViz;
@@ -13,12 +15,12 @@ describe('themes: ', () => {
     designModeViz = document.createElement('div');
     designModeViz.id = 'designModeViz';
     document.body.appendChild(designModeViz);
-    jest.spyOn(designMode, 'renderDesignWorkspace').mockClear().mockImplementation();
+    sinon.stub(designMode, 'renderDesignWorkspace');
   });
 
   afterEach(() => {
     designModeViz.parentNode.removeChild(designModeViz);
-    designMode.renderDesignWorkspace.mockRestore();
+    designMode.renderDesignWorkspace.restore();
   });
 
   function setExistingHTML(existingHTML) {
@@ -34,7 +36,7 @@ describe('themes: ', () => {
 
       expect(
         elementLibrary.getCurrentTheme(getPrefixedElementById('screen1'))
-      ).toBe('default');
+      ).to.equal('default');
     });
   });
 
@@ -65,11 +67,13 @@ describe('themes: ', () => {
         getPrefixedElementById('screen1'),
         'watermelon'
       );
-      expect(getPrefixedElementById('screen1')).not.toBeNull();
+      expect(getPrefixedElementById('screen1')).not.to.be.null;
       expect(
         getPrefixedElementById('screen1').getAttribute('data-theme')
-      ).toBe('watermelon');
-      expect(getPrefixedElementById('screen1').style.backgroundColor).toBe('rgb(197, 226, 85)');
+      ).to.equal('watermelon');
+      expect(getPrefixedElementById('screen1').style.backgroundColor).to.equal(
+        'rgb(197, 226, 85)'
+      );
     });
 
     it('will change a default theme screen', () => {
@@ -84,11 +88,13 @@ describe('themes: ', () => {
         getPrefixedElementById('screen1'),
         'watermelon'
       );
-      expect(getPrefixedElementById('screen1')).not.toBeNull();
+      expect(getPrefixedElementById('screen1')).not.to.be.null;
       expect(
         getPrefixedElementById('screen1').getAttribute('data-theme')
-      ).toBe('watermelon');
-      expect(getPrefixedElementById('screen1').style.backgroundColor).toBe('rgb(197, 226, 85)');
+      ).to.equal('watermelon');
+      expect(getPrefixedElementById('screen1').style.backgroundColor).to.equal(
+        'rgb(197, 226, 85)'
+      );
     });
 
     it("will call renderDesignWorkspace after changing a screen's theme", () => {
@@ -102,7 +108,7 @@ describe('themes: ', () => {
         getPrefixedElementById('screen1'),
         'watermelon'
       );
-      expect(designMode.renderDesignWorkspace).toHaveBeenCalled();
+      expect(designMode.renderDesignWorkspace).to.have.been.called;
     });
 
     it("will not call renderDesignWorkspace after changing a screen's theme if no theme props should be applied", () => {
@@ -117,7 +123,7 @@ describe('themes: ', () => {
         getPrefixedElementById('screen1'),
         'default'
       );
-      expect(designMode.renderDesignWorkspace).not.toHaveBeenCalled();
+      expect(designMode.renderDesignWorkspace).to.not.have.been.called;
     });
 
     it('will change a child of a legacy screen without the data-theme attribute', () => {
@@ -133,15 +139,17 @@ describe('themes: ', () => {
         getPrefixedElementById('screen1'),
         themeOptions[DEFAULT_THEME_INDEX]
       );
-      expect(getPrefixedElementById('screen1')).not.toBeNull();
+      expect(getPrefixedElementById('screen1')).not.to.be.null;
       expect(
         getPrefixedElementById('screen1').getAttribute('data-theme')
-      ).toBe(themeOptions[DEFAULT_THEME_INDEX]);
-      expect(getPrefixedElementById('text_input1')).not.toBeNull();
-      expect(getPrefixedElementById('text_input1').style.padding).toBe('5px 15px');
+      ).to.equal(themeOptions[DEFAULT_THEME_INDEX]);
+      expect(getPrefixedElementById('text_input1')).not.to.be.null;
+      expect(getPrefixedElementById('text_input1').style.padding).to.equal(
+        '5px 15px'
+      );
       expect(
         getPrefixedElementById('text_input1').style.backgroundColor
-      ).toBe('rgb(242, 242, 242)');
+      ).to.equal('rgb(242, 242, 242)');
     });
 
     it('will change from an invalid theme name screen into a valid theme', () => {
@@ -159,15 +167,17 @@ describe('themes: ', () => {
         getPrefixedElementById('screen1'),
         'watermelon'
       );
-      expect(getPrefixedElementById('screen1')).not.toBeNull();
+      expect(getPrefixedElementById('screen1')).not.to.be.null;
       expect(
         getPrefixedElementById('screen1').getAttribute('data-theme')
-      ).toBe('watermelon');
-      expect(getPrefixedElementById('text_input1')).not.toBeNull();
-      expect(getPrefixedElementById('text_input1').style.padding).toBe('5px 15px');
+      ).to.equal('watermelon');
+      expect(getPrefixedElementById('text_input1')).not.to.be.null;
+      expect(getPrefixedElementById('text_input1').style.padding).to.equal(
+        '5px 15px'
+      );
       expect(
         getPrefixedElementById('text_input1').style.backgroundColor
-      ).toBe('rgb(226, 240, 170)');
+      ).to.equal('rgb(226, 240, 170)');
     });
 
     it('will change a child of a default theme screen', () => {
@@ -183,15 +193,17 @@ describe('themes: ', () => {
         getPrefixedElementById('screen1'),
         'watermelon'
       );
-      expect(getPrefixedElementById('screen1')).not.toBeNull();
+      expect(getPrefixedElementById('screen1')).not.to.be.null;
       expect(
         getPrefixedElementById('screen1').getAttribute('data-theme')
-      ).toBe('watermelon');
-      expect(getPrefixedElementById('text_input1')).not.toBeNull();
-      expect(getPrefixedElementById('text_input1').style.padding).toBe('5px 15px');
+      ).to.equal('watermelon');
+      expect(getPrefixedElementById('text_input1')).not.to.be.null;
+      expect(getPrefixedElementById('text_input1').style.padding).to.equal(
+        '5px 15px'
+      );
       expect(
         getPrefixedElementById('text_input1').style.backgroundColor
-      ).toBe('rgb(226, 240, 170)');
+      ).to.equal('rgb(226, 240, 170)');
     });
 
     it('will not change a customized, non-default property', () => {
@@ -203,14 +215,14 @@ describe('themes: ', () => {
       const inputElement = getPrefixedElementById('text_input1');
 
       designMode.updateProperty(inputElement, 'backgroundColor', 'rgb(1,2,3)');
-      expect(inputElement.style.backgroundColor).toBe('rgb(1, 2, 3)');
+      expect(inputElement.style.backgroundColor).to.equal('rgb(1, 2, 3)');
 
       // Change theme to default
       designMode.changeThemeForScreen(
         getPrefixedElementById('screen1'),
         themeOptions[DEFAULT_THEME_INDEX]
       );
-      expect(inputElement.style.backgroundColor).toBe('rgb(1, 2, 3)');
+      expect(inputElement.style.backgroundColor).to.equal('rgb(1, 2, 3)');
     });
 
     it('will change an empty string property', () => {
@@ -223,7 +235,7 @@ describe('themes: ', () => {
 
       // Update the input background color to an empty string:
       designMode.updateProperty(inputElement, 'backgroundColor', '');
-      expect(inputElement.style.backgroundColor).toBe('');
+      expect(inputElement.style.backgroundColor).to.equal('');
 
       // Change theme to default
       designMode.changeThemeForScreen(
@@ -231,7 +243,7 @@ describe('themes: ', () => {
         themeOptions[DEFAULT_THEME_INDEX]
       );
       // Input background color should now be the default value:
-      expect(inputElement.style.backgroundColor).toBe('rgb(242, 242, 242)');
+      expect(inputElement.style.backgroundColor).to.equal('rgb(242, 242, 242)');
     });
 
     it('will change an alternate syntax background color property that matches the default', () => {
@@ -244,7 +256,7 @@ describe('themes: ', () => {
       // Change theme to watermelon
       designMode.changeThemeForScreen(screen, 'watermelon');
       // Screen background color should now be the default value:
-      expect(screen.style.backgroundColor).toBe('rgb(242, 242, 242)');
+      expect(screen.style.backgroundColor).to.equal('rgb(242, 242, 242)');
     });
 
     it('will not change an alternate syntax background color property that does not match the default', () => {
@@ -254,12 +266,12 @@ describe('themes: ', () => {
       `);
       const screen = getPrefixedElementById('screen1');
       // Screen background color should be the rgb() equivalent of the hex color:
-      expect(screen.style.backgroundColor).toBe('rgb(171, 205, 239)');
+      expect(screen.style.backgroundColor).to.equal('rgb(171, 205, 239)');
 
       // Change theme to watermelon
       designMode.changeThemeForScreen(screen, 'watermelon');
       // Screen background color should be unchanged:
-      expect(screen.style.backgroundColor).toBe('rgb(171, 205, 239)');
+      expect(screen.style.backgroundColor).to.equal('rgb(171, 205, 239)');
     });
 
     it("will not change a customization, and will not change it later if the value matches an intermediate theme's default", () => {
@@ -272,36 +284,36 @@ describe('themes: ', () => {
 
       // Customize the background color to match the watermelon background color
       designMode.updateProperty(screen, 'backgroundColor', 'rgb(197,226,85)');
-      expect(screen.style.backgroundColor).toBe('rgb(197, 226, 85)');
+      expect(screen.style.backgroundColor).to.equal('rgb(197, 226, 85)');
 
       // Change theme to watermelon, verify that the screen now has an updated data-theme attribute
       // and the background color is unchanged:
       designMode.changeThemeForScreen(screen, 'watermelon');
-      expect(screen.getAttribute('data-theme')).toBe('watermelon');
-      expect(screen.style.backgroundColor).toBe('rgb(197, 226, 85)');
+      expect(screen.getAttribute('data-theme')).to.equal('watermelon');
+      expect(screen.style.backgroundColor).to.equal('rgb(197, 226, 85)');
 
       // Change theme to area51, verify that the screen now has an updated data-theme attribute
       // and the background color is still unchanged (even though it had matched the watermelon
       // theme's default background color):
       designMode.changeThemeForScreen(screen, 'area51');
-      expect(screen.getAttribute('data-theme')).toBe('area51');
-      expect(screen.style.backgroundColor).toBe('rgb(197, 226, 85)');
+      expect(screen.getAttribute('data-theme')).to.equal('area51');
+      expect(screen.style.backgroundColor).to.equal('rgb(197, 226, 85)');
     });
   });
 
   describe('onCopyElementToScreen', () => {
     beforeEach(() => {
-      jest.spyOn(designMode, 'changeScreen').mockClear().mockImplementation(screenId => {
+      sinon.stub(designMode, 'changeScreen').callsFake(screenId => {
         // Manually change the screen with a fake to avoid pulling in redux, Applab, etc.
         designMode.activeScreen().style.display = 'none';
         getPrefixedElementById(screenId).style.display = 'block';
       });
-      jest.spyOn(studioApp(), 'displayPlayspaceAlert').mockClear().mockImplementation();
+      sinon.stub(studioApp(), 'displayPlayspaceAlert');
     });
 
     afterEach(() => {
-      designMode.changeScreen.mockRestore();
-      studioApp().displayPlayspaceAlert.mockRestore();
+      designMode.changeScreen.restore();
+      studioApp().displayPlayspaceAlert.restore();
     });
 
     it('copies element from a screen with one theme to a screen with a different theme', () => {
@@ -320,25 +332,25 @@ describe('themes: ', () => {
         'screen2'
       );
 
-      expect(designMode.changeScreen).toHaveBeenCalled();
-      expect(studioApp().displayPlayspaceAlert).toHaveBeenCalled();
+      expect(designMode.changeScreen).to.be.called;
+      expect(studioApp().displayPlayspaceAlert).to.be.called;
 
-      expect(getPrefixedElementById('text_input2')).not.toBeNull();
+      expect(getPrefixedElementById('text_input2')).not.to.be.null;
       // Should have the background color appropriate for the theme of screen2 (watermelon)
       expect(
         getPrefixedElementById('text_input2').style.backgroundColor
-      ).toBe('rgb(226, 240, 170)');
+      ).to.equal('rgb(226, 240, 170)');
     });
   });
 
   describe('onRestoreThemeDefaults', () => {
     let updatePropertySpy;
     beforeEach(() => {
-      updatePropertySpy = jest.spyOn(designMode, 'updateProperty').mockClear();
+      updatePropertySpy = sinon.spy(designMode, 'updateProperty');
     });
 
     afterEach(() => {
-      updatePropertySpy.mockRestore();
+      updatePropertySpy.restore();
     });
 
     it('onRestoreThemeDefaults will not call updateProperty if properties already match theme defaults', () => {
@@ -349,7 +361,7 @@ describe('themes: ', () => {
 
       designMode.onRestoreThemeDefaults(getPrefixedElementById('screen1'));
 
-      expect(updatePropertySpy).not.toHaveBeenCalled();
+      expect(updatePropertySpy).to.not.have.been.called;
     });
 
     it('onRestoreThemeDefaults will restore background color to theme default if it does match', () => {
@@ -362,8 +374,8 @@ describe('themes: ', () => {
 
       designMode.onRestoreThemeDefaults(screen);
 
-      expect(updatePropertySpy).toHaveBeenCalled();
-      expect(screen.style.backgroundColor).toBe('rgb(255, 255, 255)');
+      expect(updatePropertySpy).to.have.been.called;
+      expect(screen.style.backgroundColor).to.equal('rgb(255, 255, 255)');
     });
 
     it('onRestoreThemeDefaults will remove data-mod attribute when properties are restored', () => {
@@ -374,12 +386,12 @@ describe('themes: ', () => {
 
       const screen = getPrefixedElementById('screen1');
 
-      expect(screen.getAttribute('data-mod-backgroundcolor')).toBe('1');
+      expect(screen.getAttribute('data-mod-backgroundcolor')).to.equal('1');
 
       designMode.onRestoreThemeDefaults(screen);
 
-      expect(updatePropertySpy).toHaveBeenCalled();
-      expect(screen.getAttribute('data-mod-backgroundcolor')).toBeNull();
+      expect(updatePropertySpy).to.have.been.called;
+      expect(screen.getAttribute('data-mod-backgroundcolor')).to.be.null;
     });
 
     it('onRestoreThemeDefaults will remove data-mod attribute even when properties do not need to be changed', () => {
@@ -390,12 +402,12 @@ describe('themes: ', () => {
 
       const screen = getPrefixedElementById('screen1');
 
-      expect(screen.getAttribute('data-mod-backgroundcolor')).toBe('1');
+      expect(screen.getAttribute('data-mod-backgroundcolor')).to.equal('1');
 
       designMode.onRestoreThemeDefaults(screen);
 
-      expect(updatePropertySpy).not.toHaveBeenCalled();
-      expect(screen.getAttribute('data-mod-backgroundcolor')).toBeNull();
+      expect(updatePropertySpy).to.not.have.been.called;
+      expect(screen.getAttribute('data-mod-backgroundcolor')).to.be.null;
     });
   });
 });

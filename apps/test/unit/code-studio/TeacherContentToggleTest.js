@@ -2,6 +2,7 @@ import {assert} from 'chai';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
+import sinon from 'sinon';
 
 import {
   UnconnectedTeacherContentToggle as TeacherContentToggle,
@@ -330,9 +331,9 @@ describe('TeacherContentToggle', () => {
   describe('mapStateToProps', () => {
     afterEach(() => {
       progressHelpers.lessonIsLockedForAllStudents.restore &&
-        progressHelpers.lessonIsLockedForAllStudents.mockRestore();
+        progressHelpers.lessonIsLockedForAllStudents.restore();
       hiddenLessonRedux.isLessonHiddenForSection.restore &&
-        hiddenLessonRedux.isLessonHiddenForSection.mockRestore();
+        hiddenLessonRedux.isLessonHiddenForSection.restore();
     });
 
     describe('when viewing as participant', () => {
@@ -346,9 +347,10 @@ describe('TeacherContentToggle', () => {
       };
 
       it('sets locked hidden to true when locked and hidden', () => {
-        jest.spyOn(progressHelpers, 'lessonIsLockedForAllStudents').mockClear()
-          .mockReturnValue(true);
-        jest.spyOn(hiddenLessonRedux, 'isLessonHiddenForSection').mockClear().mockReturnValue(true);
+        sinon
+          .stub(progressHelpers, 'lessonIsLockedForAllStudents')
+          .returns(true);
+        sinon.stub(hiddenLessonRedux, 'isLessonHiddenForSection').returns(true);
 
         const props = mapStateToProps(state);
 
@@ -357,10 +359,12 @@ describe('TeacherContentToggle', () => {
       });
 
       it('sets locked hidden to false when not locked or hidden', () => {
-        jest.spyOn(progressHelpers, 'lessonIsLockedForAllStudents').mockClear()
-          .mockReturnValue(false);
-        jest.spyOn(hiddenLessonRedux, 'isLessonHiddenForSection').mockClear()
-          .mockReturnValue(false);
+        sinon
+          .stub(progressHelpers, 'lessonIsLockedForAllStudents')
+          .returns(false);
+        sinon
+          .stub(hiddenLessonRedux, 'isLessonHiddenForSection')
+          .returns(false);
 
         const props = mapStateToProps(state);
 
@@ -397,19 +401,19 @@ describe('TeacherContentToggle', () => {
       };
 
       it('sets locked/hidden to false', () => {
-        jest.spyOn(progressHelpers, 'lessonIsLockedForAllStudents').mockClear();
-        jest.spyOn(hiddenLessonRedux, 'isLessonHiddenForSection').mockClear();
+        sinon.spy(progressHelpers, 'lessonIsLockedForAllStudents');
+        sinon.spy(hiddenLessonRedux, 'isLessonHiddenForSection');
 
         const props = mapStateToProps(state);
 
         assert.strictEqual(props.isHiddenLesson, false);
         assert.strictEqual(props.isLockedLesson, false);
         assert.strictEqual(
-          progressHelpers.toHaveBeenCalled(),
+          progressHelpers.lessonIsLockedForAllStudents.called,
           false
         );
         assert.strictEqual(
-          hiddenLessonRedux.toHaveBeenCalled(),
+          hiddenLessonRedux.isLessonHiddenForSection.called,
           false
         );
       });

@@ -1,54 +1,55 @@
 /** @file Tests for our johnny-five Led.RGB wrapper */
 import five from '@code-dot-org/johnny-five';
+import sinon from 'sinon';
 
 import NeoPixel from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/NeoPixel';
 
-
+import {expect} from '../../../../../../util/reconfiguredChai';
 
 describe('NeoPixel', function () {
   beforeEach(() => {
     // We stub five.Led.RGB's superclass to avoid calling any johnny-five
     // logic that requires a board.
-    jest.spyOn(five.Board, 'Component').mockClear().mockImplementation();
+    sinon.stub(five.Board, 'Component');
   });
 
   afterEach(() => {
-    five.Board.Component.mockRestore();
+    five.Board.Component.restore();
   });
 
   it('is a five.Led.RGB', () => {
     const led = new NeoPixel({
       controller: makeStubController(),
     });
-    expect(led).toBeInstanceOf(five.Led.RGB);
+    expect(led).to.be.an.instanceOf(five.Led.RGB);
   });
 
   describe('on()', () => {
     let led;
 
     beforeEach(() => {
-      jest.spyOn(five.Led.RGB.prototype, 'on').mockClear();
-      jest.spyOn(five.Led.RGB.prototype, 'stop').mockClear();
+      sinon.spy(five.Led.RGB.prototype, 'on');
+      sinon.spy(five.Led.RGB.prototype, 'stop');
       led = new NeoPixel({
         controller: makeStubController(),
       });
     });
 
     afterEach(() => {
-      five.Led.RGB.prototype.stop.mockRestore();
-      five.Led.RGB.prototype.on.mockRestore();
+      five.Led.RGB.prototype.stop.restore();
+      five.Led.RGB.prototype.on.restore();
     });
 
     it(`calls the parent on() implementation`, () => {
-      five.Led.RGB.prototype.on.mockReset();
+      five.Led.RGB.prototype.on.resetHistory();
       led.on();
-      expect(five.Led.RGB.prototype.on).toHaveBeenCalledTimes(1);
+      expect(five.Led.RGB.prototype.on).to.have.been.calledOnce;
     });
 
     it(`calls stop() on the led to end any animations`, () => {
-      five.Led.RGB.prototype.stop.mockReset();
+      five.Led.RGB.prototype.stop.resetHistory();
       led.on();
-      expect(five.Led.RGB.prototype.stop).toHaveBeenCalledTimes(1);
+      expect(five.Led.RGB.prototype.stop).to.have.been.calledOnce;
     });
   });
 
@@ -56,63 +57,65 @@ describe('NeoPixel', function () {
     let led;
 
     beforeEach(() => {
-      jest.spyOn(five.Led.RGB.prototype, 'off').mockClear();
-      jest.spyOn(five.Led.RGB.prototype, 'stop').mockClear();
+      sinon.spy(five.Led.RGB.prototype, 'off');
+      sinon.spy(five.Led.RGB.prototype, 'stop');
       led = new NeoPixel({
         controller: makeStubController(),
       });
     });
 
     afterEach(() => {
-      five.Led.RGB.prototype.stop.mockRestore();
-      five.Led.RGB.prototype.off.mockRestore();
+      five.Led.RGB.prototype.stop.restore();
+      five.Led.RGB.prototype.off.restore();
     });
 
     it(`calls the parent off() implementation`, () => {
-      five.Led.RGB.prototype.off.mockReset();
+      five.Led.RGB.prototype.off.resetHistory();
       led.off();
-      expect(five.Led.RGB.prototype.off).toHaveBeenCalled();
+      expect(five.Led.RGB.prototype.off).to.have.been.called;
     });
 
     it(`calls stop() on the led to end any animations`, () => {
-      five.Led.RGB.prototype.stop.mockReset();
+      five.Led.RGB.prototype.stop.resetHistory();
       led.off();
-      expect(five.Led.RGB.prototype.stop).toHaveBeenCalledTimes(1);
+      expect(five.Led.RGB.prototype.stop).to.have.been.calledOnce;
     });
   });
 
   describe('blink()', () => {
+    let led, clock;
+
     beforeEach(() => {
-      jest.useFakeTimers();
+      clock = sinon.useFakeTimers();
       led = new NeoPixel({
         controller: makeStubController(),
       });
-      jest.spyOn(led, 'stop').mockClear();
-      jest.spyOn(led, 'toggle').mockClear();
+      sinon.spy(led, 'stop');
+      sinon.spy(led, 'toggle');
     });
 
     afterEach(() => {
-      led.toggle.mockRestore();
-      led.stop.mockRestore();
-      jest.useRealTimers();
+      led.toggle.restore();
+      led.stop.restore();
+      clock.restore();
     });
 
     it(`calls stop() only once when blink starts`, () => {
-      led.stop.mockReset();
+      led.stop.resetHistory();
       led.blink(100);
-      expect(led.stop).toHaveBeenCalledTimes(1);
+      expect(led.stop).to.have.been.calledOnce;
 
       // Pass some time and make sure it doesn't happen again
-      led.stop.mockReset();
-      jest.advanceTimersByTime(100);
-      expect(led.toggle).toHaveBeenCalledTimes(1);
-      expect(led.stop).not.toHaveBeenCalled();
-      jest.advanceTimersByTime(100);
-      expect(led.toggle).toHaveBeenCalledTimes(2);
-      expect(led.stop).not.toHaveBeenCalled();
-      jest.advanceTimersByTime(100);
-      expect(led.toggle).toHaveBeenCalledTimes(3);
-      expect(led.stop).not.toHaveBeenCalled();
+      led.stop.resetHistory();
+      clock.tick(100);
+      expect(led.toggle).to.have.been.calledOnce;
+      expect(led.stop).not.to.have.been.called;
+      clock.tick(100);
+      expect(led.toggle).to.have.been.calledTwice;
+      expect(led.stop).not.to.have.been.called;
+      clock.tick(100);
+      expect(led.toggle).to.have.been.calledThrice;
+      expect(led.stop).not.to.have.been.called;
     });
   });
 
@@ -134,7 +137,7 @@ describe('NeoPixel', function () {
 
     it('hexadecimal color "#306090"', () => {
       led.color('#306090');
-      expect(led.color()).toEqual({
+      expect(led.color()).to.deep.equal({
         red: 0x30,
         green: 0x60,
         blue: 0x90,
@@ -143,7 +146,7 @@ describe('NeoPixel', function () {
 
     it('CSS1 color keywords "lime"', () => {
       led.color('lime');
-      expect(led.color()).toEqual({
+      expect(led.color()).to.deep.equal({
         red: 0x00,
         green: 0xff,
         blue: 0x00,
@@ -152,7 +155,7 @@ describe('NeoPixel', function () {
 
     it('CSS2 color keywords "orange"', () => {
       led.color('orange');
-      expect(led.color()).toEqual({
+      expect(led.color()).to.deep.equal({
         red: 0xff,
         green: 0xa5,
         blue: 0x00,
@@ -161,7 +164,7 @@ describe('NeoPixel', function () {
 
     it('CSS3 color keywords "chocolate"', () => {
       led.color('chocolate');
-      expect(led.color()).toEqual({
+      expect(led.color()).to.deep.equal({
         red: 0xd2,
         green: 0x69,
         blue: 0x1e,
@@ -171,7 +174,7 @@ describe('NeoPixel', function () {
     it('CSS4 color keywords "rebeccapurple"', () => {
       // See: https://codepen.io/trezy/post/honoring-a-great-man
       led.color('rebeccapurple');
-      expect(led.color()).toEqual({
+      expect(led.color()).to.deep.equal({
         red: 0x66,
         green: 0x33,
         blue: 0x99,
@@ -180,7 +183,7 @@ describe('NeoPixel', function () {
 
     it('CSS functional notation "rgb(30, 60, 90)"', () => {
       led.color('rgb(30, 60, 90)');
-      expect(led.color()).toEqual({
+      expect(led.color()).to.deep.equal({
         red: 30,
         green: 60,
         blue: 90,
@@ -189,7 +192,7 @@ describe('NeoPixel', function () {
 
     it('CSS functional notation "rgba(30, 60, 90, 0.5)"', () => {
       led.color('rgba(30, 60, 90, 0.5)');
-      expect(led.color()).toEqual({
+      expect(led.color()).to.deep.equal({
         red: 15,
         green: 30,
         blue: 45,
@@ -198,7 +201,7 @@ describe('NeoPixel', function () {
 
     it('CSS4 functional notation "rgb(30, 60, 90, 0.5)"', () => {
       led.color('rgb(30, 60, 90, 0.5)');
-      expect(led.color()).toEqual({
+      expect(led.color()).to.deep.equal({
         red: 15,
         green: 30,
         blue: 45,
@@ -207,7 +210,7 @@ describe('NeoPixel', function () {
 
     it('CSS4 functional notation "rgba(30, 60, 90)"', () => {
       led.color('rgba(30, 60, 90)');
-      expect(led.color()).toEqual({
+      expect(led.color()).to.deep.equal({
         red: 30,
         green: 60,
         blue: 90,
@@ -216,7 +219,7 @@ describe('NeoPixel', function () {
 
     it('Array of color values [30, 60, 90]', () => {
       led.color([30, 60, 90]);
-      expect(led.color()).toEqual({
+      expect(led.color()).to.deep.equal({
         red: 30,
         green: 60,
         blue: 90,
@@ -225,7 +228,7 @@ describe('NeoPixel', function () {
 
     it('Color object {red: 30, green: 60, blue: 90}', () => {
       led.color({red: 30, green: 60, blue: 90});
-      expect(led.color()).toEqual({
+      expect(led.color()).to.deep.equal({
         red: 30,
         green: 60,
         blue: 90,
@@ -234,7 +237,7 @@ describe('NeoPixel', function () {
 
     it('Separate color arguments (30, 60, 90)', () => {
       led.color(30, 60, 90);
-      expect(led.color()).toEqual({
+      expect(led.color()).to.deep.equal({
         red: 30,
         green: 60,
         blue: 90,

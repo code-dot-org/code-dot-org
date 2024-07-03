@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {expect, assert} from 'chai';
 import sinon, {stubObject, StubbedInstance} from 'ts-sinon';
 
 import {RemoteChannelsStore} from '@cdo/apps/lab2/projects/ChannelsStore';

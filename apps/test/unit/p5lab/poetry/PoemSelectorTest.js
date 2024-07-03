@@ -1,11 +1,12 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
+import sinon from 'sinon';
 
 import {PoemEditor} from '@cdo/apps/p5lab/poetry/PoemSelector';
 import * as utils from '@cdo/apps/utils';
 
-
+import {expect} from '../../../util/reconfiguredChai';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 describe('PoemEditor', () => {
@@ -26,9 +27,11 @@ describe('PoemEditor', () => {
         />
       );
 
-      expect(wrapper.find('input').at(0).props().value).toBe('My title');
-      expect(wrapper.find('input').at(1).props().value).toHaveLength(0);
-      expect(wrapper.find('textarea').at(0).props().value).toBe('this is\na good poem');
+      expect(wrapper.find('input').at(0).props().value).to.equal('My title');
+      expect(wrapper.find('input').at(1).props().value).to.be.empty;
+      expect(wrapper.find('textarea').at(0).props().value).to.equal(
+        'this is\na good poem'
+      );
     });
   });
 
@@ -41,16 +44,16 @@ describe('PoemEditor', () => {
         authenticityToken: '123',
       };
       replaceOnWindow('appOptions', mockAppOptions);
-      handleCloseSpy = jest.fn();
+      handleCloseSpy = sinon.spy();
     });
 
     afterEach(() => {
       restoreOnWindow('appOptions');
-      jest.restoreAllMocks();
+      sinon.restore();
     });
 
     it('is successful if no profanity', () => {
-      jest.spyOn(utils, 'findProfanity').mockClear().mockReturnValue($.Deferred().resolve(null));
+      sinon.stub(utils, 'findProfanity').returns($.Deferred().resolve(null));
       const wrapper = mount(<PoemEditor isOpen handleClose={handleCloseSpy} />);
 
       // Update title, author, and poem and save.
@@ -71,7 +74,7 @@ describe('PoemEditor', () => {
     });
 
     it('is successful on server failure', () => {
-      jest.spyOn(utils, 'findProfanity').mockClear().mockReturnValue($.Deferred().reject());
+      sinon.stub(utils, 'findProfanity').returns($.Deferred().reject());
       const wrapper = mount(<PoemEditor isOpen handleClose={handleCloseSpy} />);
 
       // Update title, author, and poem and save.
@@ -92,8 +95,9 @@ describe('PoemEditor', () => {
     });
 
     it('is unsuccessful if profanity', () => {
-      jest.spyOn(utils, 'findProfanity').mockClear()
-        .mockReturnValue($.Deferred().resolve(['swear']));
+      sinon
+        .stub(utils, 'findProfanity')
+        .returns($.Deferred().resolve(['swear']));
       const wrapper = mount(<PoemEditor isOpen handleClose={handleCloseSpy} />);
 
       // Update title and attempt a save.
@@ -105,7 +109,7 @@ describe('PoemEditor', () => {
         mockAppOptions.locale,
         mockAppOptions.authenticityToken
       );
-      expect(handleCloseSpy).not.toHaveBeenCalled();
+      expect(handleCloseSpy).to.not.have.been.called;
     });
   });
 });

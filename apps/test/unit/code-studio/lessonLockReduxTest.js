@@ -1,6 +1,7 @@
 import {assert} from 'chai';
 import $ from 'jquery';
 import _ from 'lodash';
+import sinon from 'sinon';
 
 import reducer, {
   LockStatus,
@@ -214,7 +215,7 @@ describe('saveLockDialog', () => {
     xhr.onCreate = req => {
       lastRequest = req;
     };
-    reducerSpy = jest.fn(reducer);
+    reducerSpy = sinon.spy(reducer);
     stubRedux();
     registerReducers({lessonLock: reducerSpy});
     store = getStore();
@@ -223,7 +224,7 @@ describe('saveLockDialog', () => {
   afterEach(() => {
     restoreRedux();
     lastRequest = null;
-    xhr.mockRestore();
+    xhr.restore();
   });
 
   it('successfully saves via dialog', () => {
@@ -235,7 +236,7 @@ describe('saveLockDialog', () => {
     newLockStatus[1].lockStatus = LockStatus.ReadonlyAnswers;
     newLockStatus[2].lockStatus = LockStatus.Editable;
 
-    reducerSpy.mockReset();
+    reducerSpy.resetHistory();
 
     store.dispatch(saveLockDialog(section1Id, newLockStatus));
 
@@ -267,9 +268,9 @@ describe('saveLockDialog', () => {
 
     assert.equal(reducerSpy.callCount, 3);
 
-    const firstAction = reducerSpy.mock.calls[0][1];
-    const secondAction = reducerSpy.mock.calls[1][1];
-    const thirdAction = reducerSpy.mock.calls[2][1];
+    const firstAction = reducerSpy.getCall(0).args[1];
+    const secondAction = reducerSpy.getCall(1).args[1];
+    const thirdAction = reducerSpy.getCall(2).args[1];
 
     assert.equal(firstAction.type, BEGIN_SAVE);
     assert.equal(secondAction.type, FINISH_SAVE);
@@ -279,7 +280,7 @@ describe('saveLockDialog', () => {
   it('successfully lockLesson without dialog', () => {
     store.dispatch(setSectionLockStatus(fakeSectionData));
 
-    reducerSpy.mockReset();
+    reducerSpy.resetHistory();
 
     store.dispatch(lockLesson(section1Id, lesson1Id));
 
@@ -315,8 +316,8 @@ describe('saveLockDialog', () => {
 
     assert.equal(reducerSpy.callCount, 2);
 
-    const firstAction = reducerSpy.mock.calls[0][1];
-    const secondAction = reducerSpy.mock.calls[1][1];
+    const firstAction = reducerSpy.getCall(0).args[1];
+    const secondAction = reducerSpy.getCall(1).args[1];
 
     assert.equal(firstAction.type, BEGIN_SAVE);
     assert.equal(secondAction.type, FINISH_SAVE);
@@ -438,7 +439,7 @@ describe('refetchSectionLockStatus', () => {
     registerReducers({lessonLock: reducer});
     store = getStore();
 
-    jest.spyOn($, 'ajax').mockClear().mockReturnValue({
+    sinon.stub($, 'ajax').returns({
       done: successCallback => {
         successCallback(lockStatusResponse);
         return {fail: () => {}};
@@ -448,7 +449,7 @@ describe('refetchSectionLockStatus', () => {
 
   afterEach(() => {
     restoreRedux();
-    $.ajax.mockRestore();
+    $.ajax.restore();
   });
 
   it('updates lessonsBySectionId', async () => {

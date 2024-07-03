@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 import {UnconnectedCommitDialog as CommitDialog} from '@cdo/apps/javalab/CommitDialog';
@@ -8,18 +9,18 @@ import CommitDialogFileRow from '@cdo/apps/javalab/CommitDialogFileRow';
 import i18n from '@cdo/javalab/locale';
 
 import {BackpackAPIContext} from '../../../src/javalab/BackpackAPIContext';
-
+import {expect} from '../../util/reconfiguredChai';
 
 describe('CommitDialog test', () => {
   let defaultProps, handleCommitSpy, setCommitSaveStatusSpy, backpackApiStub;
 
   beforeEach(() => {
-    handleCommitSpy = jest.fn();
+    handleCommitSpy = sinon.spy();
 
     backpackApiStub = sinon.createStubInstance(BackpackClientApi);
-    backpackApiStub.getFileList.mockImplementation((...args) => args[1](['backpackFile.java']));
-    backpackApiStub.hasBackpack.mockReturnValue(true);
-    setCommitSaveStatusSpy = jest.fn();
+    backpackApiStub.getFileList.callsArgWith(1, ['backpackFile.java']);
+    backpackApiStub.hasBackpack.returns(true);
+    setCommitSaveStatusSpy = sinon.spy();
 
     defaultProps = {
       isOpen: true,
@@ -46,21 +47,21 @@ describe('CommitDialog test', () => {
     const wrapper = renderWithProps({});
     expect(
       wrapper.find('#confirmationButton').find('FooterButton').props().disabled
-    ).toBe(true);
+    ).to.be.true;
     wrapper.instance().updateNotes('commit notes');
     wrapper.update();
     expect(
       wrapper.find('#confirmationButton').find('FooterButton').props().disabled
-    ).toBe(false);
+    ).to.be.false;
   });
 
   it('shows warning when file already in backpack included in commit', () => {
     const wrapper = renderWithProps({files: ['backpackFile.java']});
     const file = wrapper.find(CommitDialogFileRow).first();
 
-    expect(file.text()).not.toContain(i18n.backpackFileNameConflictWarning());
+    expect(file.text()).to.not.contain(i18n.backpackFileNameConflictWarning());
     file.find('input[type="checkbox"]').first().simulate('change');
-    expect(file.text()).toContain(i18n.backpackFileNameConflictWarning());
+    expect(file.text()).to.contain(i18n.backpackFileNameConflictWarning());
   });
 
   it('does not show warning when file not already in backpack included in commit', () => {
@@ -68,7 +69,7 @@ describe('CommitDialog test', () => {
     const file = wrapper.find(CommitDialogFileRow).first();
 
     file.find('input[type="checkbox"]').first().simulate('change');
-    expect(file.text()).not.toContain(i18n.backpackFileNameConflictWarning());
+    expect(file.text()).to.not.contain(i18n.backpackFileNameConflictWarning());
   });
 
   it('can commit and save', () => {
@@ -76,18 +77,18 @@ describe('CommitDialog test', () => {
     wrapper.instance().updateNotes('commit notes');
     wrapper.update();
     wrapper.instance().commitAndSaveToBackpack();
-    expect(handleCommitSpy).toHaveBeenCalled().once;
-    expect(backpackApiStub.saveFiles).toHaveBeenCalled().once;
-    expect(setCommitSaveStatusSpy).toHaveBeenCalledWith({
+    expect(handleCommitSpy).to.be.called.once;
+    expect(backpackApiStub.saveFiles).to.be.called.once;
+    expect(setCommitSaveStatusSpy).to.be.calledWith({
       isCommitSaveInProgress: true,
       hasCommitSaveError: false,
     });
 
-    expect(wrapper.instance().state.backpackSaveInProgress).toBe(true);
+    expect(wrapper.instance().state.backpackSaveInProgress).to.be.true;
   });
 
   it('dialog closes after save then commit succeeds', () => {
-    const handleCloseSpy = jest.fn();
+    const handleCloseSpy = sinon.spy();
     const wrapper = renderWithProps({
       handleClose: handleCloseSpy,
       isCommitSaveInProgress: true,
@@ -96,51 +97,51 @@ describe('CommitDialog test', () => {
     wrapper.instance().updateNotes('commit notes');
     wrapper.update();
     wrapper.instance().commitAndSaveToBackpack();
-    expect(handleCommitSpy).toHaveBeenCalled().once;
-    expect(backpackApiStub.saveFiles).toHaveBeenCalled().once;
-    expect(setCommitSaveStatusSpy).toHaveBeenCalledWith({
+    expect(handleCommitSpy).to.be.called.once;
+    expect(backpackApiStub.saveFiles).to.be.called.once;
+    expect(setCommitSaveStatusSpy).to.be.calledWith({
       isCommitSaveInProgress: true,
       hasCommitSaveError: false,
     });
 
-    expect(wrapper.instance().state.backpackSaveInProgress).toBe(true);
-    expect(handleCloseSpy).toHaveBeenCalledTimes(0);
+    expect(wrapper.instance().state.backpackSaveInProgress).to.be.true;
+    expect(handleCloseSpy.callCount).to.equal(0);
 
     wrapper.instance().handleBackpackSaveSuccess();
-    expect(handleCloseSpy).toHaveBeenCalledTimes(0);
+    expect(handleCloseSpy.callCount).to.equal(0);
 
     // Close dialog once both backpack save and commit save have finished
     wrapper.instance().handleCommitSaveSuccess();
-    expect(handleCloseSpy).toHaveBeenCalledTimes(1);
+    expect(handleCloseSpy.callCount).to.equal(1);
   });
 
   it('dialog closes after commit then save succeeds', () => {
-    const handleCloseSpy = jest.fn();
+    const handleCloseSpy = sinon.spy();
     const wrapper = renderWithProps({handleClose: handleCloseSpy});
     wrapper.instance().updateNotes('commit notes');
     wrapper.update();
     wrapper.instance().commitAndSaveToBackpack();
-    expect(handleCommitSpy).toHaveBeenCalled().once;
-    expect(backpackApiStub.saveFiles).toHaveBeenCalled().once;
-    expect(setCommitSaveStatusSpy).toHaveBeenCalledWith({
+    expect(handleCommitSpy).to.be.called.once;
+    expect(backpackApiStub.saveFiles).to.be.called.once;
+    expect(setCommitSaveStatusSpy).to.be.calledWith({
       isCommitSaveInProgress: true,
       hasCommitSaveError: false,
     });
 
-    expect(wrapper.instance().state.backpackSaveInProgress).toBe(true);
-    expect(handleCloseSpy).toHaveBeenCalledTimes(0);
+    expect(wrapper.instance().state.backpackSaveInProgress).to.be.true;
+    expect(handleCloseSpy.callCount).to.equal(0);
 
     wrapper.instance().handleCommitSaveSuccess();
-    expect(handleCloseSpy).toHaveBeenCalledTimes(0);
+    expect(handleCloseSpy.callCount).to.equal(0);
 
     wrapper.instance().handleBackpackSaveSuccess();
-    expect(handleCloseSpy).toHaveBeenCalledTimes(1);
+    expect(handleCloseSpy.callCount).to.equal(1);
   });
 
   it('hides the backpack sesion in the dialog body if backpack disabled', () => {
     const wrapper = renderWithProps({backpackEnabled: false});
     expect(
       wrapper.find(CommitDialogBody).first().props().showSaveToBackpackSection
-    ).toBe(false);
+    ).to.be.false;
   });
 });

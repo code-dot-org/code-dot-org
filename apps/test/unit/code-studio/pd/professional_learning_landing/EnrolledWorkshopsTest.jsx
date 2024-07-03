@@ -1,7 +1,8 @@
-import {assert} from 'chai';
+import {assert, expect} from 'chai';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import moment from 'moment';
 import React from 'react';
+import sinon from 'sinon';
 
 import {WorkshopsTable} from '@cdo/apps/code-studio/pd/professional_learning_landing/EnrolledWorkshops';
 import * as utils from '@cdo/apps/utils';
@@ -19,16 +20,18 @@ describe('EnrolledWorkshops', () => {
     serializedWorkshopFactory.build({state: 'Ended'}),
   ];
 
+  let clock;
+
   beforeEach(() => {
-    jest.spyOn(utils, 'windowOpen').mockClear().mockImplementation();
+    sinon.stub(utils, 'windowOpen');
   });
 
   afterEach(() => {
     if (clock) {
-      jest.useRealTimers();
+      clock.restore();
       clock = undefined;
     }
-    utils.windowOpen.mockRestore();
+    utils.windowOpen.restore();
   });
 
   it('Clicking cancel enrollment cancels the enrollment', () => {
@@ -37,10 +40,12 @@ describe('EnrolledWorkshops', () => {
     );
 
     // We expect there to be a table with 4 rows in the body, three of which have two buttons
-    expect(enrolledWorkshopsTable.find('tbody tr')).toHaveLength(4);
-    expect(enrolledWorkshopsTable.find('tbody tr Button')).toHaveLength(8);
-    expect(enrolledWorkshopsTable.state('showCancelModal')).toBe(false);
-    expect(enrolledWorkshopsTable.state('enrollmentCodeToCancel')).toBeUndefined();
+    expect(enrolledWorkshopsTable.find('tbody tr')).to.have.length(4);
+    expect(enrolledWorkshopsTable.find('tbody tr Button')).to.have.length(8);
+    expect(enrolledWorkshopsTable.state('showCancelModal')).to.be.false;
+    expect(enrolledWorkshopsTable.state('enrollmentCodeToCancel')).to.equal(
+      undefined
+    );
 
     // Pushing the button should bring up the modal
     enrolledWorkshopsTable
@@ -49,8 +54,10 @@ describe('EnrolledWorkshops', () => {
       .find('Button')
       .last()
       .simulate('click');
-    expect(enrolledWorkshopsTable.state('showCancelModal')).toBe(true);
-    expect(enrolledWorkshopsTable.state('enrollmentCodeToCancel')).toBe('code1');
+    expect(enrolledWorkshopsTable.state('showCancelModal')).to.be.true;
+    expect(enrolledWorkshopsTable.state('enrollmentCodeToCancel')).to.equal(
+      'code1'
+    );
   });
 
   it('Clicking "Print Certificate" opens the certificate in a new tab if user attended workshop', function () {
@@ -66,7 +73,7 @@ describe('EnrolledWorkshops', () => {
       .first()
       .simulate('click');
 
-    assert(utils.toHaveBeenCalledTimes(1));
+    assert(utils.windowOpen.calledOnce);
     assert(
       utils.windowOpen.calledWith(
         `/pd/generate_workshop_certificate/${workshops[2].enrollment_code}`
@@ -86,7 +93,7 @@ describe('EnrolledWorkshops', () => {
       .find('Button')
       .first();
 
-    expect(printCertificateButton.prop('disabled')).toBe(true);
+    expect(printCertificateButton.prop('disabled')).to.be.true;
   });
 
   it('Pre-survey link button shown in workshops that have not started', function () {
@@ -101,7 +108,7 @@ describe('EnrolledWorkshops', () => {
       .first()
       .simulate('click');
 
-    assert(utils.toHaveBeenCalledTimes(1));
+    assert(utils.windowOpen.calledOnce);
   });
 
   it('Pre-survey link button not shown in ended workshop', function () {
@@ -115,11 +122,13 @@ describe('EnrolledWorkshops', () => {
       .find('Button')
       .findWhere(n => n.text() === 'Complete pre-workshop survey');
 
-    expect(preWorkshopSurveyButton).toHaveLength(0);
+    expect(preWorkshopSurveyButton).to.have.lengthOf(0);
   });
 
   it('Pre-survey link button is disabled if more than 10 days before workshop', function () {
-    jest.useFakeTimers().setSystemTime(moment(workshops[0].workshop_starting_date).subtract(14, 'days').toDate());
+    clock = sinon.useFakeTimers(
+      moment(workshops[0].workshop_starting_date).subtract(14, 'days').toDate()
+    );
 
     const enrolledWorkshopsTable = shallow(
       <WorkshopsTable workshops={workshops} />
@@ -131,7 +140,7 @@ describe('EnrolledWorkshops', () => {
       .find('Button')
       .first();
 
-    expect(preWorkshopSurveyButton.props().disabled).toBe(true);
+    expect(preWorkshopSurveyButton.props().disabled).to.be.true;
   });
 
   it('shows Status column and only has Workshop Details button when forMyPlPage is true', function () {
@@ -139,7 +148,7 @@ describe('EnrolledWorkshops', () => {
       <WorkshopsTable workshops={workshops} forMyPlPage={true} />
     );
 
-    expect(enrolledWorkshopsTable.find('thead tr').text()).toContain('Status');
+    expect(enrolledWorkshopsTable.find('thead tr').text()).to.contain('Status');
 
     const numButtonsInTable = enrolledWorkshopsTable
       .find('tbody tr')
@@ -149,6 +158,6 @@ describe('EnrolledWorkshops', () => {
         .find('tbody tr')
         .find('Button')
         .findWhere(n => n.text() === 'Workshop Details').length
-    ).toBe(numButtonsInTable);
+    ).to.equal(numButtonsInTable);
   });
 });

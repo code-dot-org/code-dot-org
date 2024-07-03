@@ -13,7 +13,7 @@ import {
   ActiveCourses,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
-
+import {expect} from '../../../../../util/reconfiguredChai';
 
 describe('CourseSelect', () => {
   it('only renders blank if course is empty', () => {
@@ -28,7 +28,7 @@ describe('CourseSelect', () => {
       />
     );
 
-    expect(wrapper.containsMatchingElement(<option />)).toBe(true);
+    expect(wrapper.containsMatchingElement(<option />)).to.be.true;
   });
 
   describe('getAllowedCourses', () => {

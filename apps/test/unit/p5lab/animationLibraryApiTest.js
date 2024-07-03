@@ -1,3 +1,5 @@
+import sinon from 'sinon';
+
 import {
   regenerateDefaultSpriteMetadata,
   buildAnimationMetadata,
@@ -6,7 +8,7 @@ import {
   generateLevelAnimationsManifest,
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 
-import {assert} from '../../util/reconfiguredChai';
+import {expect, assert} from '../../util/reconfiguredChai';
 
 import testAnimationLibrary from './testAnimationLibrary.json';
 
@@ -70,95 +72,100 @@ describe('animationLibraryApi', () => {
   const animationFiles = {key1: fileObject, key2: fileObject};
 
   beforeEach(() => {
-    fetchSpy = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
+    fetchSpy = sinon.stub(window, 'fetch');
 
     // Stubs getManifest
-    fetchSpy.mockImplementation((...args) => {
-      if (args[0] === '/api/v1/animation-library/manifest/spritelab/en_us') {
-        return Promise.resolve({
+    fetchSpy
+      .withArgs('/api/v1/animation-library/manifest/spritelab/en_us')
+      .returns(
+        Promise.resolve({
           ok: true,
           json: () => JSON.stringify(animationLibrary),
-        });
-      }
-    });
+        })
+      );
 
     // Stubs getLevelAnimationFiles
-    fetchSpy.mockImplementation((...args) => {
-      if (args[0] === '/api/v1/animation-library/level-animations-files') {
-        return Promise.resolve({
+    fetchSpy
+      .withArgs('/api/v1/animation-library/level-animations-files')
+      .returns(
+        Promise.resolve({
           ok: true,
           json: () => animationFiles,
-        });
-      }
-    });
+        })
+      );
 
     // Stubs getAnimationLibraryFile
-    fetchSpy.mockImplementation((...args) => {
-      if (args[0] === '/api/v1/animation-library/testAlpha.json') {
-        return Promise.resolve({
-          ok: true,
-          json: () => testAlphaMetadata,
-        });
-      }
-    });
+    fetchSpy.withArgs('/api/v1/animation-library/testAlpha.json').returns(
+      Promise.resolve({
+        ok: true,
+        json: () => testAlphaMetadata,
+      })
+    );
   });
 
   afterEach(() => {
-    fetchSpy.mockRestore();
+    fetchSpy.restore();
   });
 
   describe('regenerateDefaultSpriteMetadata', () => {
     it('generates sprite metadata from animation library', () => {
-      fetchSpy.mockImplementation((...args) => {
-        if (args[0] === '/api/v1/animation-library/default-spritelab-metadata/levelbuilder') {
-          return Promise.resolve({ok: true});
-        }
-      });
+      fetchSpy
+        .withArgs(
+          '/api/v1/animation-library/default-spritelab-metadata/levelbuilder'
+        )
+        .returns(Promise.resolve({ok: true}));
 
       return regenerateDefaultSpriteMetadata(defaultSprites).then(() => {
-        expect(fetchSpy).toHaveBeenCalledWith('/api/v1/animation-library/default-spritelab-metadata/levelbuilder');
+        expect(fetchSpy).calledWith(
+          '/api/v1/animation-library/default-spritelab-metadata/levelbuilder'
+        );
 
-        let fetchBody = JSON.parse(fetchSpy.mock.calls[0][1].body);
-        expect(fetchBody).toHaveProperty('orderedKeys');
-        expect(fetchBody.orderedKeys).toHaveLength(2);
+        let fetchBody = JSON.parse(fetchSpy.getCall(0).args[1].body);
+        expect(fetchBody).to.have.property('orderedKeys');
+        expect(fetchBody.orderedKeys).to.have.length(2);
 
         //Check that keys are created in our UUID format
         const firstKey = fetchBody.orderedKeys[0];
-        expect(firstKey).toMatch(/^........-....-4...-....-............$/);
+        expect(firstKey).to.match(/^........-....-4...-....-............$/);
 
         //Check that propsByKey has an object that matches the first orderedKey and that the object the correct name,
         // a properly formatted sourceUrl, and the expected number of props.
         const firstSpriteProps = fetchBody.propsByKey[firstKey];
         expect(firstSpriteProps)
-          .to.have.property('sourceUrl').toContain('https://studio.code.org');
-        expect(firstSpriteProps).to.have.property('name').toBe('bear');
-        expect(Object.keys(firstSpriteProps)).toHaveLength(8);
+          .to.have.property('sourceUrl')
+          .that.has.string('https://studio.code.org');
+        expect(firstSpriteProps).to.have.property('name').that.equals('bear');
+        expect(Object.keys(firstSpriteProps)).to.have.length(8);
       });
     });
 
     it('sends data to middleware in POST', () => {
-      fetchSpy.mockImplementation((...args) => {
-        if (args[0] === '/api/v1/animation-library/default-spritelab-metadata/levelbuilder') {
-          return Promise.resolve({ok: true});
-        }
-      });
+      fetchSpy
+        .withArgs(
+          '/api/v1/animation-library/default-spritelab-metadata/levelbuilder'
+        )
+        .returns(Promise.resolve({ok: true}));
 
       return regenerateDefaultSpriteMetadata(defaultSprites).then(() => {
-        expect(fetchSpy).toHaveBeenCalledWith('/api/v1/animation-library/default-spritelab-metadata/levelbuilder');
-        expect(fetchSpy).toHaveBeenCalledWith(expect.anything(), expect.objectContaining({method: 'POST'}));
+        expect(fetchSpy).calledWith(
+          '/api/v1/animation-library/default-spritelab-metadata/levelbuilder'
+        );
+        expect(fetchSpy).calledWithMatch(sinon.match.any, {method: 'POST'});
       });
     });
 
     it('throws error when bad response', () => {
-      fetchSpy.mockImplementation((...args) => {
-        if (args[0] === '/api/v1/animation-library/default-spritelab-metadata/levelbuilder') {
-          return Promise.resolve({
+      fetchSpy
+        .withArgs(
+          '/api/v1/animation-library/default-spritelab-metadata/levelbuilder'
+        )
+        .returns(
+          Promise.resolve({
             ok: false,
             status: '000',
             statusText: 'Test error message',
-          });
-        }
-      });
+          })
+        );
 
       return regenerateDefaultSpriteMetadata(defaultSprites).then(
         () => {
@@ -192,9 +199,9 @@ describe('animationLibraryApi', () => {
           'aliases',
           'categories',
         ];
-        expect(metadataKeys.length).toBe(expectedKeys.length);
+        expect(metadataKeys.length).to.equal(expectedKeys.length);
         expectedKeys.forEach(key => {
-          expect(metadataKeys).toEqual(expect.arrayContaining([key]));
+          expect(metadataKeys).to.include(key);
         });
       });
     });
@@ -203,14 +210,14 @@ describe('animationLibraryApi', () => {
       return buildAnimationMetadata(animationFiles).then(metadata => {
         const expectedKeys = Object.keys(animationFiles);
         const metadataKeys = Object.keys(metadata);
-        expect(metadataKeys.length).toBe(expectedKeys.length);
+        expect(metadataKeys.length).to.equal(expectedKeys.length);
         expectedKeys.forEach(key => {
-          expect(metadataKeys).toEqual(expect.arrayContaining([key]));
+          expect(metadataKeys).to.include(key);
         });
 
         return generateAnimationMetadataForFile(fileObject).then(
           animationData => {
-            expect(metadata['key1']).toEqual(animationData);
+            expect(metadata['key1']).to.deep.equal(animationData);
           }
         );
       });
@@ -238,14 +245,14 @@ describe('animationLibraryApi', () => {
 
     it('applies normalizing function if provided', () => {
       const keys = Object.keys(testMap);
-      expect(keys).toContain('bpple');
-      expect(keys).toContain('bbnana');
-      expect(keys).not.toContain('apple');
-      expect(keys).not.toContain('banana');
+      expect(keys).to.contain('bpple');
+      expect(keys).to.contain('bbnana');
+      expect(keys).to.not.contain('apple');
+      expect(keys).to.not.contain('banana');
     });
 
     it('values in returned object are sorted', () => {
-      expect(testMap.bpple).toEqual(['alpha', 'beta']);
+      expect(testMap.bpple).to.eql(['alpha', 'beta']);
     });
   });
 
@@ -255,14 +262,14 @@ describe('animationLibraryApi', () => {
         const manifestObj = JSON.parse(manifest);
         const manifestKeys = Object.keys(manifestObj);
         const expectedKeys = ['//', 'metadata', 'categories', 'aliases'];
-        expect(manifestKeys).toEqual(expectedKeys);
+        expect(manifestKeys).to.eql(expectedKeys);
       });
     });
 
     it('metadata in returned object does not contain aliases', () => {
       return generateLevelAnimationsManifest().then(manifest => {
         const manifestObj = JSON.parse(manifest);
-        expect(manifestObj.metadata.key1.aliases).toBeUndefined();
+        expect(manifestObj.metadata.key1.aliases).to.be.undefined;
       });
     });
   });

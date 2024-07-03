@@ -3,6 +3,7 @@ import {render, fireEvent, act} from '@testing-library/react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
+import sinon from 'sinon';
 
 import * as utils from '@cdo/apps/code-studio/utils';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -21,9 +22,10 @@ import RubricSettings from '@cdo/apps/templates/rubrics/RubricSettings';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('RubricSettings', () => {
+  let clock;
   let fetchStub;
   let store;
   let refreshAiEvaluationsSpy;
@@ -37,30 +39,22 @@ describe('RubricSettings', () => {
   }
 
   function stubFetchEvalStatusForAll(data) {
-    fetchStub.mockImplementation((...args) => {
-      if (args[0] === expect.objectContaining(/rubrics\/\d+\/ai_evaluation_status_for_all.*/)) {
-        return Promise.resolve(new Response(JSON.stringify(data)));
-      }
-    });
+    fetchStub
+      .withArgs(sinon.match(/rubrics\/\d+\/ai_evaluation_status_for_all.*/))
+      .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
   function stubFetchTeacherEvaluations(data) {
-    return fetchStub.mockImplementation((...args) => {
-      if (args[0] === expect.objectContaining(/rubrics\/\d+\/get_teacher_evaluations_for_all.*/)) {
-        return Promise.resolve(new Response(JSON.stringify(data)));
-      }
-    });
+    return fetchStub
+      .withArgs(sinon.match(/rubrics\/\d+\/get_teacher_evaluations_for_all.*/))
+      .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
   beforeEach(() => {
-    fetchStub = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
-    fetchStub.mockReturnValue(Promise.resolve(new Response(JSON.stringify(''))));
-    refreshAiEvaluationsSpy = jest.fn();
-    jest.spyOn(utils, 'queryParams').mockClear().mockImplementation((...args) => {
-      if (args[0] === 'section_id') {
-        return '1';
-      }
-    });
+    fetchStub = sinon.stub(window, 'fetch');
+    fetchStub.returns(Promise.resolve(new Response(JSON.stringify(''))));
+    refreshAiEvaluationsSpy = sinon.spy();
+    sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
     stubRedux();
     registerReducers({teacherSections, currentUser});
     store = getStore();
@@ -68,11 +62,11 @@ describe('RubricSettings', () => {
 
   afterEach(() => {
     if (clock) {
-      jest.useRealTimers();
+      clock.restore();
     }
     restoreRedux();
-    utils.queryParams.mockRestore();
-    fetchStub.mockRestore();
+    utils.queryParams.restore();
+    fetchStub.restore();
   });
 
   const defaultRubric = {
@@ -164,7 +158,7 @@ describe('RubricSettings', () => {
       </Provider>
     );
 
-    expect(wrapper.find('SectionSelector').length).toBe(1);
+    expect(wrapper.find('SectionSelector').length).to.equal(1);
   });
 
   it('allows teacher to run AI assessment for all students when AI status is ready', async () => {
@@ -186,7 +180,7 @@ describe('RubricSettings', () => {
     await wait();
 
     wrapper.update();
-    expect(wrapper.find('Button').first().props().disabled).toBe(false);
+    expect(wrapper.find('Button').first().props().disabled).to.be.false;
   });
 
   it('disables run AI assessment for all button when no students have attempted', async () => {
@@ -208,7 +202,7 @@ describe('RubricSettings', () => {
     await wait();
     wrapper.update();
 
-    expect(wrapper.find('Button').first().props().disabled).toBe(true);
+    expect(wrapper.find('Button').first().props().disabled).to.be.true;
   });
 
   it('disables run AI assessment for all button when all student work has been evaluated', async () => {
@@ -230,7 +224,7 @@ describe('RubricSettings', () => {
     await wait();
     wrapper.update();
 
-    expect(wrapper.find('Button').first().props().disabled).toBe(true);
+    expect(wrapper.find('Button').first().props().disabled).to.be.true;
   });
 
   it('shows pending status when eval is pending', async () => {
@@ -255,8 +249,10 @@ describe('RubricSettings', () => {
     wrapper.update();
 
     let status = wrapper.find('BodyTwoText.uitest-eval-status-all-text');
-    expect(status.text()).toContain(i18n.aiEvaluationStatusAll_ready({unevaluatedCount: 1}));
-    expect(wrapper.find('Button').first().props().disabled).toBe(false);
+    expect(status.text()).to.include(
+      i18n.aiEvaluationStatusAll_ready({unevaluatedCount: 1})
+    );
+    expect(wrapper.find('Button').first().props().disabled).to.be.false;
 
     // show pending state after clicking run
 
@@ -265,17 +261,17 @@ describe('RubricSettings', () => {
     wrapper.find('button.uitest-run-ai-assessment-all').simulate('click');
 
     status = wrapper.find('BodyTwoText.uitest-eval-status-all-text');
-    expect(status.text()).toContain(i18n.aiEvaluationStatus_pending());
+    expect(status.text()).to.include(i18n.aiEvaluationStatus_pending());
 
-    expect(wrapper.find('Button').first().props().disabled).toBe(true);
+    expect(wrapper.find('Button').first().props().disabled).to.be.true;
   });
 
   it('runs AI assessment for all unevaluated projects when requested by teacher', async () => {
     stubFetchEvalStatusForAll(ready);
     stubFetchTeacherEvaluations(evals);
-    const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
-    jest.useFakeTimers();
+    clock = sinon.useFakeTimers();
 
     const wrapper = mount(
       <Provider store={store}>
@@ -298,41 +294,40 @@ describe('RubricSettings', () => {
     wrapper.find('Button').first().simulate('click');
 
     //sends event on click
-    expect(sendEventSpy).toHaveBeenCalledWith(EVENTS.TA_RUBRIC_SECTION_AI_EVAL, {
-      rubricId: defaultRubric.id,
-      sectionId: 1,
-    });
+    expect(sendEventSpy).to.have.been.calledWith(
+      EVENTS.TA_RUBRIC_SECTION_AI_EVAL,
+      {
+        rubricId: defaultRubric.id,
+        sectionId: 1,
+      }
+    );
 
     // Perform fetches and re-renders
     await wait();
     wrapper.update();
 
-    expect(wrapper.find('Button').first().props().disabled).toBe(true);
-    expect(wrapper.text()).toContain(i18n.aiEvaluationStatus_pending());
+    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+    expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_pending());
 
     // Advance clock 5 seconds
-    jest.advanceTimersByTime(5000);
+    clock.tick(5000);
 
     // Perform fetches and re-renders
     await wait();
     wrapper.update();
-    expect(fetchStub).toHaveBeenCalledTimes(4);
-    expect(wrapper.find('Button').first().props().disabled).toBe(true);
-    expect(wrapper.text()).toContain(i18n.aiEvaluationStatus_success());
-    sendEventSpy.mockRestore();
+    expect(fetchStub).to.have.callCount(4);
+    expect(wrapper.find('Button').first().props().disabled).to.be.true;
+    expect(wrapper.text()).to.include(i18n.aiEvaluationStatus_success());
+    sendEventSpy.restore();
   });
 
   it('displays switch tab text and button when there are no evaluations', async () => {
-    fetchStub.mockImplementation(() => {
-      if (fetchStub.mock.calls.length === 0) {
-        return Promise.resolve(new Response(JSON.stringify(noEvals)));
-      }
-    });
-    fetchStub.mockImplementation(() => {
-      if (fetchStub.mock.calls.length === 1) {
-        return Promise.resolve(new Response(JSON.stringify(noEvals)));
-      }
-    });
+    fetchStub
+      .onCall(0)
+      .returns(Promise.resolve(new Response(JSON.stringify(noEvals))));
+    fetchStub
+      .onCall(1)
+      .returns(Promise.resolve(new Response(JSON.stringify(noEvals))));
     const wrapper = mount(
       <Provider store={store}>
         <RubricSettings
@@ -348,21 +343,19 @@ describe('RubricSettings', () => {
     //fetch for get_teacher_evaluations_all is the 2nd fetch
     await wait();
     wrapper.update();
-    expect(wrapper.text()).toContain(i18n.rubricNoStudentEvals());
-    expect(wrapper.find('Button').at(1).text()).toContain(i18n.rubricTabStudent());
+    expect(wrapper.text()).to.include(i18n.rubricNoStudentEvals());
+    expect(wrapper.find('Button').at(1).text()).to.include(
+      i18n.rubricTabStudent()
+    );
   });
 
   it('displays generate CSV button when there are evaluations to export', async () => {
-    fetchStub.mockImplementation(() => {
-      if (fetchStub.mock.calls.length === 0) {
-        return Promise.resolve(new Response(JSON.stringify(evals)));
-      }
-    });
-    fetchStub.mockImplementation(() => {
-      if (fetchStub.mock.calls.length === 1) {
-        return Promise.resolve(new Response(JSON.stringify(evals)));
-      }
-    });
+    fetchStub
+      .onCall(0)
+      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
+    fetchStub
+      .onCall(1)
+      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
     const wrapper = mount(
       <Provider store={store}>
         <RubricSettings
@@ -378,24 +371,22 @@ describe('RubricSettings', () => {
     //fetch for get_teacher_evaluations_all is the 2nd fetch
     await wait();
     wrapper.update();
-    expect(wrapper.text()).toContain(i18n.rubricNumberStudentEvals({
-      teacherEvalCount: 2,
-    }));
-    expect(wrapper.find('Button').at(1).text()).toContain(i18n.downloadCSV());
+    expect(wrapper.text()).to.include(
+      i18n.rubricNumberStudentEvals({
+        teacherEvalCount: 2,
+      })
+    );
+    expect(wrapper.find('Button').at(1).text()).to.include(i18n.downloadCSV());
   });
 
   it('sends event when download CSV is clicked', async () => {
-    const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
-    fetchStub.mockImplementation(() => {
-      if (fetchStub.mock.calls.length === 0) {
-        return Promise.resolve(new Response(JSON.stringify(evals)));
-      }
-    });
-    fetchStub.mockImplementation(() => {
-      if (fetchStub.mock.calls.length === 1) {
-        return Promise.resolve(new Response(JSON.stringify(evals)));
-      }
-    });
+    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    fetchStub
+      .onCall(0)
+      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
+    fetchStub
+      .onCall(1)
+      .returns(Promise.resolve(new Response(JSON.stringify(evals))));
     const wrapper = mount(
       <Provider store={store}>
         <RubricSettings
@@ -412,18 +403,23 @@ describe('RubricSettings', () => {
     //fetch for get_teacher_evaluations_all is the 2nd fetch
     await wait();
     wrapper.update();
-    expect(wrapper.text()).toContain(i18n.rubricNumberStudentEvals({
-      teacherEvalCount: 2,
-    }));
-    expect(wrapper.find('Button').at(1).text()).toContain(i18n.downloadCSV());
+    expect(wrapper.text()).to.include(
+      i18n.rubricNumberStudentEvals({
+        teacherEvalCount: 2,
+      })
+    );
+    expect(wrapper.find('Button').at(1).text()).to.include(i18n.downloadCSV());
     wrapper.find('Button').at(1).simulate('click');
-    expect(sendEventSpy).toHaveBeenCalledWith(EVENTS.TA_RUBRIC_CSV_DOWNLOADED, {
-      unitName: 'test-2023',
-      courseName: 'course-2023',
-      levelName: 'Test Blah Blah Blah',
-      sectionId: 1,
-    });
-    sendEventSpy.mockRestore();
+    expect(sendEventSpy).to.have.been.calledWith(
+      EVENTS.TA_RUBRIC_CSV_DOWNLOADED,
+      {
+        unitName: 'test-2023',
+        courseName: 'course-2023',
+        levelName: 'Test Blah Blah Blah',
+        sectionId: 1,
+      }
+    );
+    sendEventSpy.restore();
   });
 
   it('displays the AI enable toggle', () => {
@@ -442,7 +438,7 @@ describe('RubricSettings', () => {
     );
 
     const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
-    expect(input.checked).toBe(true);
+    expect(input.checked).to.be.true;
   });
 
   it('ensures the AI enable toggle represents the current value of the AI disabled user setting', () => {
@@ -464,7 +460,7 @@ describe('RubricSettings', () => {
     );
 
     const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
-    expect(input.checked).toBe(false);
+    expect(input.checked).to.be.false;
   });
 
   it('updates the AI disabled user setting when the toggle is used', async () => {
@@ -483,14 +479,17 @@ describe('RubricSettings', () => {
     );
 
     // Let's stub out setting the field via UserPreferences
-    const setStub = jest.spyOn(UserPreferences.prototype, 'setAiRubricsDisabled').mockClear().mockImplementation();
+    const setStub = sinon.stub(
+      UserPreferences.prototype,
+      'setAiRubricsDisabled'
+    );
 
     const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
     fireEvent.click(input);
     fireEvent.change(input);
 
-    expect(input.checked).toBe(false);
-    expect(setStub).toHaveBeenCalledWith(true);
-    setStub.mockRestore();
+    expect(input.checked).to.be.false;
+    expect(setStub).to.have.been.calledWith(true);
+    setStub.restore();
   });
 });

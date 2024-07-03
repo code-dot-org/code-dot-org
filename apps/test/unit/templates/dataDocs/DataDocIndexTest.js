@@ -3,7 +3,7 @@ import React from 'react';
 
 import DataDocIndex from '@cdo/apps/templates/dataDocs/DataDocIndex';
 
-
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('DataDocIndex', () => {
   const dataDoc1 = {
@@ -26,8 +26,8 @@ describe('DataDocIndex', () => {
   it('shows names of Data Docs and links to their pages', () => {
     const links = getLinksOnIndexPage(allDocs);
     allDocs.forEach((doc, index) => {
-      expect(links[index]).toEqual(expect.arrayContaining([doc.name]));
-      expect(links[index]).toEqual(expect.arrayContaining([`/data_docs/${doc.key}`]));
+      expect(links[index]).to.contain(doc.name);
+      expect(links[index]).to.contain(`/data_docs/${doc.key}`);
     });
   });
 
@@ -37,7 +37,7 @@ describe('DataDocIndex', () => {
       content: 'Content',
     };
     const links = getLinksOnIndexPage([docNoName]);
-    expect(links).toHaveLength(0);
+    expect(links).to.have.length(0);
   });
 
   it('does not show Doc without content', () => {
@@ -46,6 +46,6 @@ describe('DataDocIndex', () => {
       name: 'Name',
     };
     const links = getLinksOnIndexPage([docNoContent]);
-    expect(links).toHaveLength(0);
+    expect(links).to.have.length(0);
   });
 });

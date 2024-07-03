@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import DeleteAccount, {
   DELETE_VERIFICATION_STRING,
@@ -7,7 +8,7 @@ import DeleteAccount, {
 import {getCheckboxes} from '@cdo/apps/lib/ui/accounts/DeleteAccountHelpers';
 import * as utils from '@cdo/apps/utils';
 
-
+import {expect} from '../../../../util/deprecatedChai';
 
 const DEFAULT_PROPS = {
   isPasswordRequired: true,
@@ -87,7 +88,7 @@ describe('DeleteAccount', () => {
         const deleteAccountButton = wrapper.find('BootstrapButton').at(0);
         deleteAccountButton.simulate('click');
         const personalLoginDialog = wrapper.find('PersonalLoginDialog');
-        expect(personalLoginDialog).toBeDefined();
+        expect(personalLoginDialog).to.exist;
       });
 
       it('is disabled if not all checkboxes are checked', () => {
@@ -183,11 +184,11 @@ describe('DeleteAccount', () => {
       server = sinon.fakeServer.create();
     });
 
-    afterEach(() => server.mockRestore());
+    afterEach(() => server.restore());
 
     describe('on success', () => {
       beforeEach(() => {
-        jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
+        sinon.stub(utils, 'navigateToHref');
         server.respondWith('DELETE', `/users`, [
           204,
           {'Content-Type': 'application/json'},
@@ -198,8 +199,10 @@ describe('DeleteAccount', () => {
       it('navigates to root', () => {
         confirmButton.simulate('click');
         server.respond();
-        expect(utils.navigateToHref).toHaveBeenCalledWith('/');
-        utils.navigateToHref.mockRestore();
+        expect(utils.navigateToHref).to.have.been.calledOnce.and.calledWith(
+          '/'
+        );
+        utils.navigateToHref.restore();
       });
     });
 
@@ -238,11 +241,11 @@ describe('DeleteAccount', () => {
         const deleteAccountButton = wrapper.find('BootstrapButton').at(0);
         deleteAccountButton.simulate('click');
         const adminAccountDialog = wrapper.find('AdminAccountDialog');
-        expect(adminAccountDialog).toBeDefined();
+        expect(adminAccountDialog).to.exist;
         const confirmButton = wrapper.find('Button').at(0);
         confirmButton.simulate('click');
         const deleteAccountDialog = wrapper.find('DeleteAccountDialog');
-        expect(deleteAccountDialog).toBeDefined();
+        expect(deleteAccountDialog).to.exist;
       });
     });
   });

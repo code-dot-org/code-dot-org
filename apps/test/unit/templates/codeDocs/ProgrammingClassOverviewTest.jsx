@@ -3,7 +3,7 @@ import React from 'react';
 
 import ProgrammingClassOverview from '@cdo/apps/templates/codeDocs/ProgrammingClassOverview';
 
-
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('ProgrammingClassOverview', () => {
   let defaultProgrammingClass;
@@ -50,8 +50,8 @@ describe('ProgrammingClassOverview', () => {
       <ProgrammingClassOverview programmingClass={defaultProgrammingClass} />
     );
 
-    expect(wrapper.find('h1').text()).toContain(defaultProgrammingClass.name);
-    expect(wrapper.find('h2').map(h => h.text())).toEqual([
+    expect(wrapper.find('h1').text()).to.contain(defaultProgrammingClass.name);
+    expect(wrapper.find('h2').map(h => h.text())).to.eql([
       'Examples',
       'Syntax',
       'Tips',
@@ -62,16 +62,20 @@ describe('ProgrammingClassOverview', () => {
 
     expect(
       wrapper.find('EnhancedSafeMarkdown').at(0).props().markdown
-    ).toBe(defaultProgrammingClass.content);
-    expect(wrapper.find('EnhancedSafeMarkdown').at(1).props().markdown).toEqual(expect.arrayContaining([defaultProgrammingClass.syntax]));
+    ).to.equal(defaultProgrammingClass.content);
+    expect(
+      wrapper.find('EnhancedSafeMarkdown').at(1).props().markdown
+    ).to.contain(defaultProgrammingClass.syntax);
     expect(
       wrapper.find('EnhancedSafeMarkdown').at(2).props().markdown
-    ).toBe(defaultProgrammingClass.tips);
-    expect(wrapper.find('EnhancedSafeMarkdown').at(3).props().markdown).toEqual(expect.arrayContaining([defaultProgrammingClass.externalDocumentation]));
+    ).to.equal(defaultProgrammingClass.tips);
+    expect(
+      wrapper.find('EnhancedSafeMarkdown').at(3).props().markdown
+    ).to.contain(defaultProgrammingClass.externalDocumentation);
 
-    expect(wrapper.text()).toContain(defaultProgrammingClass.category);
+    expect(wrapper.text()).to.contain(defaultProgrammingClass.category);
 
-    expect(wrapper.find('MethodWithOverloads').length).toBe(2);
+    expect(wrapper.find('MethodWithOverloads').length).to.equal(2);
   });
 
   it('hides the examples header if no examples are provided', () => {
@@ -79,8 +83,8 @@ describe('ProgrammingClassOverview', () => {
     const wrapper = shallow(
       <ProgrammingClassOverview programmingClass={defaultProgrammingClass} />
     );
-    expect(wrapper.find('h2').length).toBeGreaterThan(0);
-    expect(wrapper.find('h2').map(h => h.text())).not.toContain('Examples');
+    expect(wrapper.find('h2').length).to.be.greaterThan(0);
+    expect(wrapper.find('h2').map(h => h.text())).to.not.include('Examples');
   });
 
   it('hides the syntax header if no syntax is provided', () => {
@@ -88,8 +92,8 @@ describe('ProgrammingClassOverview', () => {
     const wrapper = shallow(
       <ProgrammingClassOverview programmingClass={defaultProgrammingClass} />
     );
-    expect(wrapper.find('h2').length).toBeGreaterThan(0);
-    expect(wrapper.find('h2').map(h => h.text())).not.toContain('Syntax');
+    expect(wrapper.find('h2').length).to.be.greaterThan(0);
+    expect(wrapper.find('h2').map(h => h.text())).to.not.include('Syntax');
   });
 
   it('hides the fields headers if no fields are provided', () => {
@@ -97,8 +101,8 @@ describe('ProgrammingClassOverview', () => {
     const wrapper = shallow(
       <ProgrammingClassOverview programmingClass={defaultProgrammingClass} />
     );
-    expect(wrapper.find('h2').length).toBeGreaterThan(0);
-    expect(wrapper.find('h2').map(h => h.text())).not.toContain('Fields');
+    expect(wrapper.find('h2').length).to.be.greaterThan(0);
+    expect(wrapper.find('h2').map(h => h.text())).to.not.include('Fields');
   });
 
   it('hides the tips header if no tips is provided', () => {
@@ -106,8 +110,8 @@ describe('ProgrammingClassOverview', () => {
     const wrapper = shallow(
       <ProgrammingClassOverview programmingClass={defaultProgrammingClass} />
     );
-    expect(wrapper.find('h2').length).toBeGreaterThan(0);
-    expect(wrapper.find('h2').map(h => h.text())).not.toContain('Tips');
+    expect(wrapper.find('h2').length).to.be.greaterThan(0);
+    expect(wrapper.find('h2').map(h => h.text())).to.not.include('Tips');
   });
 
   it('hides the additional information header if no external documentation is provided', () => {
@@ -115,8 +119,10 @@ describe('ProgrammingClassOverview', () => {
     const wrapper = shallow(
       <ProgrammingClassOverview programmingClass={defaultProgrammingClass} />
     );
-    expect(wrapper.find('h2').length).toBeGreaterThan(0);
-    expect(wrapper.find('h2').map(h => h.text())).not.toContain('Additional Information');
+    expect(wrapper.find('h2').length).to.be.greaterThan(0);
+    expect(wrapper.find('h2').map(h => h.text())).to.not.include(
+      'Additional Information'
+    );
   });
 
   it('hides the methods headers if no fields are provided', () => {
@@ -124,8 +130,10 @@ describe('ProgrammingClassOverview', () => {
     const wrapper = shallow(
       <ProgrammingClassOverview programmingClass={defaultProgrammingClass} />
     );
-    expect(wrapper.find('h2').length).toBeGreaterThan(0);
-    expect(wrapper.find('h2').map(h => h.text())).not.toContain('Method Details');
+    expect(wrapper.find('h2').length).to.be.greaterThan(0);
+    expect(wrapper.find('h2').map(h => h.text())).to.not.include(
+      'Method Details'
+    );
   });
 
   it('uses color if color is provided', () => {
@@ -137,7 +145,9 @@ describe('ProgrammingClassOverview', () => {
         }}
       />
     );
-    expect(wrapper.find('span').props().style.backgroundColor).toBe('#fff176');
+    expect(wrapper.find('span').props().style.backgroundColor).to.equal(
+      '#fff176'
+    );
   });
 
   it('handles null color', () => {
@@ -149,6 +159,6 @@ describe('ProgrammingClassOverview', () => {
         }}
       />
     );
-    expect(wrapper.find('span').props().style.backgroundColor).toBeNull();
+    expect(wrapper.find('span').props().style.backgroundColor).to.be.null;
   });
 });

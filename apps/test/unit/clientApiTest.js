@@ -1,6 +1,6 @@
 import sinon from 'sinon';
 
-import {assert} from '../util/reconfiguredChai';
+import {expect, assert} from '../util/reconfiguredChai';
 
 var clientApi = require('@cdo/apps/clientApi');
 const project = require('@cdo/apps/code-studio/initApp/project');

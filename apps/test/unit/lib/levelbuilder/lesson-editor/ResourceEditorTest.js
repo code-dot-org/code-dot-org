@@ -1,9 +1,10 @@
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import {UnconnectedResourcesEditor as ResourcesEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
 
-
+import {expect} from '../../../../util/reconfiguredChai';
 
 import resourceTestData from './resourceTestData';
 
@@ -11,9 +12,9 @@ describe('ResourcesEditor', () => {
   const defaultResourceContext = 'testResource';
   let defaultProps, addResource, editResource, removeResource;
   beforeEach(() => {
-    addResource = jest.fn();
-    editResource = jest.fn();
-    removeResource = jest.fn();
+    addResource = sinon.spy();
+    editResource = sinon.spy();
+    removeResource = sinon.spy();
     defaultProps = {
       resources: resourceTestData,
       resourceContext: defaultResourceContext,
@@ -25,14 +26,14 @@ describe('ResourcesEditor', () => {
 
   it('renders default props', () => {
     const wrapper = mount(<ResourcesEditor {...defaultProps} />);
-    expect(wrapper.find('tr').length).toBe(resourceTestData.length + 1);
-    expect(wrapper.find('SearchBox').length).toBe(1);
+    expect(wrapper.find('tr').length).to.equal(resourceTestData.length + 1);
+    expect(wrapper.find('SearchBox').length).to.equal(1);
   });
 
   it('can remove a resource', () => {
     const wrapper = mount(<ResourcesEditor {...defaultProps} />);
     const numResources = wrapper.find('tr').length;
-    expect(numResources).toBeGreaterThanOrEqual(2);
+    expect(numResources).at.least(2);
     // Find one of the "remove" buttons and click it
     const removeResourceButton = wrapper
       .find('.unit-test-remove-resource')
@@ -41,13 +42,13 @@ describe('ResourcesEditor', () => {
     const removeDialog = wrapper.find('Dialog');
     const deleteButton = removeDialog.find('button').at(2);
     deleteButton.simulate('click');
-    expect(removeResource).toHaveBeenCalledTimes(1);
+    expect(removeResource).to.have.been.calledOnce;
   });
 
   it('can cancel removing a resource', () => {
     const wrapper = mount(<ResourcesEditor {...defaultProps} />);
     const numResources = wrapper.find('tr').length;
-    expect(numResources).toBeGreaterThanOrEqual(2);
+    expect(numResources).at.least(2);
     // Find one of the "remove" buttons and click it
     const removeResourceButton = wrapper
       .find('.unit-test-remove-resource')
@@ -56,7 +57,7 @@ describe('ResourcesEditor', () => {
     const removeDialog = wrapper.find('Dialog');
     const cancelButton = removeDialog.find('button').at(0);
     cancelButton.simulate('click');
-    expect(removeResource).not.toHaveBeenCalled();
+    expect(removeResource).not.to.have.been.called;
   });
 
   it('can add a resource', () => {
@@ -67,7 +68,7 @@ describe('ResourcesEditor', () => {
       url: 'fake.fake',
       properties: {},
     });
-    expect(addResource).toHaveBeenCalledTimes(1);
+    expect(addResource).to.have.been.calledOnce;
   });
 
   it('can add a resource', () => {
@@ -77,7 +78,7 @@ describe('ResourcesEditor', () => {
       name: 'edited resource',
       url: 'edited url',
     });
-    expect(editResource).toHaveBeenCalledTimes(1);
+    expect(editResource).to.have.been.calledOnce;
   });
 
   it('shows a button to add rollup resources if getRollupsUrl is passed as a prop', () => {
@@ -88,8 +89,8 @@ describe('ResourcesEditor', () => {
       />
     );
     const addRollupsButton = wrapper.find('button').at(1);
-    expect(addRollupsButton).not.toBeNull();
-    expect(addRollupsButton.contains('Add rollup pages')).toBe(true);
+    expect(addRollupsButton).to.not.be.null;
+    expect(addRollupsButton.contains('Add rollup pages')).to.be.true;
   });
 
   it('adds rollup pages from server', () => {
@@ -120,8 +121,10 @@ describe('ResourcesEditor', () => {
     ]);
     wrapper.instance().addRollupPages();
     server.respond();
-    expect(addResource.withArgs(defaultResourceContext, codeRollup)).toHaveBeenCalledTimes(1);
-    expect(addResource.withArgs(defaultResourceContext, vocabRollup)).toHaveBeenCalledTimes(1);
-    server.mockRestore();
+    expect(addResource.withArgs(defaultResourceContext, codeRollup)).to.be
+      .calledOnce;
+    expect(addResource.withArgs(defaultResourceContext, vocabRollup)).to.be
+      .calledOnce;
+    server.restore();
   });
 });

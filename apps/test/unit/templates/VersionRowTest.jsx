@@ -1,10 +1,11 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import VersionRow from '@cdo/apps/templates/VersionRow';
 import msg from '@cdo/locale';
 
-
+import {expect} from '../../util/deprecatedChai';
 
 describe('VersionRow', () => {
   const MINIMUM_PROPS = {
@@ -31,7 +32,7 @@ describe('VersionRow', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <button type="button" className="img-upload">
-        {msg.mockRestore()}
+        {msg.restore()}
       </button>
     );
   });
@@ -53,7 +54,7 @@ describe('VersionRow', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <button type="button" className="btn-info">
-        {msg.mockRestore()}
+        {msg.restore()}
       </button>
     );
   });
@@ -81,7 +82,7 @@ describe('VersionRow', () => {
   });
 
   it('calls onChoose when restore button is clicked', () => {
-    const onChoose = jest.fn();
+    const onChoose = sinon.spy();
     const wrapper = shallow(
       <VersionRow
         {...MINIMUM_PROPS}
@@ -91,9 +92,9 @@ describe('VersionRow', () => {
         onChoose={onChoose}
       />
     );
-    expect(onChoose).not.toHaveBeenCalled();
+    expect(onChoose).not.to.have.been.called;
 
     wrapper.find('.img-upload').simulate('click');
-    expect(onChoose).toHaveBeenCalledTimes(1);
+    expect(onChoose).to.have.been.calledOnce;
   });
 });

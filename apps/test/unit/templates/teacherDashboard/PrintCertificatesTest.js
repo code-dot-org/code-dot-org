@@ -1,5 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
@@ -61,6 +62,6 @@ describe('PrintCertificates', () => {
 
     assert.deepEqual(wrapper.state('names'), []);
     wrapper.find('div').last().simulate('click');
-    jest.restoreAllMocks();
+    sinon.restore();
   });
 });

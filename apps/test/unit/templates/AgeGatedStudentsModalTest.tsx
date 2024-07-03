@@ -18,7 +18,7 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-
+import {expect} from '../../util/reconfiguredChai';
 
 describe('AgeGatedStudentsModal', () => {
   const fakeStudent = {

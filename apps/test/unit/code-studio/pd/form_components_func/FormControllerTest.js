@@ -1,11 +1,12 @@
 import {isolateComponent} from 'isolate-react';
 import $ from 'jquery';
 import React from 'react';
+import sinon from 'sinon';
 
 import {PROGRAM_CSD} from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplicationConstants';
 import FormController from '@cdo/apps/code-studio/pd/form_components_func/FormController';
 
-
+import {expect} from '../../../../util/reconfiguredChai';
 
 let DummyPage1 = () => {
   return <div>Page 1</div>;
@@ -24,7 +25,7 @@ DummyPage3.associatedFields = [];
 
 describe('FormController', () => {
   let form;
-  let onSuccessfulSubmit = jest.fn();
+  let onSuccessfulSubmit = sinon.stub();
   const fakeEndpoint = '/fake/endpoint';
   let defaultProps = {
     apiEndpoint: fakeEndpoint,
@@ -35,7 +36,7 @@ describe('FormController', () => {
     allowPartialSaving: true,
   };
   afterEach(() => {
-    jest.restoreAllMocks();
+    sinon.restore();
 
     DummyPage1 = () => {
       return <div>Page 1</div>;
@@ -81,7 +82,7 @@ describe('FormController', () => {
 
   it('Initially renders the first page', () => {
     form = isolateComponent(<FormController {...defaultProps} />);
-    expect(getCurrentPage()).toBe(1);
+    expect(getCurrentPage()).to.equal(1);
     expect(form.exists(DummyPage1));
     expect(!form.exists(DummyPage2));
     expect(!form.exists(DummyPage3));
@@ -90,14 +91,14 @@ describe('FormController', () => {
   it('Displays correct number of page buttons on each page', () => {
     form = isolateComponent(<FormController {...defaultProps} />);
     const pagination = form.findOne('Pagination');
-    expect(pagination.props.items).toBe(3);
+    expect(pagination.props.items).to.equal(3);
   });
 
   it('Has a next button and a save button on the first page', () => {
     form = isolateComponent(<FormController {...defaultProps} />);
     const buttons = form.findAll('Button');
-    expect(buttons).toHaveLength(2);
-    expect(buttons.map(button => button.content())).toEqual([
+    expect(buttons).to.have.length(2);
+    expect(buttons.map(button => button.content())).to.eql([
       'Next',
       saveButtonText,
     ]);
@@ -109,8 +110,8 @@ describe('FormController', () => {
     );
     setPage(1);
     const buttons = form.findAll('Button');
-    expect(buttons).toHaveLength(3);
-    expect(buttons.map(button => button.content())).toEqual([
+    expect(buttons).to.have.length(3);
+    expect(buttons.map(button => button.content())).to.eql([
       'Back',
       'Next',
       saveButtonText,
@@ -123,8 +124,8 @@ describe('FormController', () => {
     );
     setPage(2);
     const buttons = form.findAll('Button');
-    expect(buttons).toHaveLength(3);
-    expect(buttons.map(button => button.content())).toEqual([
+    expect(buttons).to.have.length(3);
+    expect(buttons.map(button => button.content())).to.eql([
       'Back',
       'Submit',
       saveButtonText,
@@ -143,7 +144,7 @@ describe('FormController', () => {
       setPage(page);
       const buttons = form.findAll('Button');
       buttons.forEach(button =>
-        expect(button.content()).not.toEqual(saveButtonText)
+        expect(button.content()).not.to.eql(saveButtonText)
       );
     });
   });
@@ -161,7 +162,7 @@ describe('FormController', () => {
       setPage(page);
       const buttons = form.findAll('Button');
       buttons.forEach(button =>
-        expect(button.content()).not.toEqual(saveButtonText)
+        expect(button.content()).not.to.eql(saveButtonText)
       );
     });
   });
@@ -176,12 +177,12 @@ describe('FormController', () => {
       />
     );
     const alert = form.findOne('Alert');
-    expect(alert.content()).toContain(
+    expect(alert.content()).to.contain(
       'We found an application you started! Your saved responses have been loaded.'
     );
 
     alert.props.onDismiss();
-    expect(form.findAll('Alert')).toHaveLength(0);
+    expect(form.findAll('Alert')).to.have.length(0);
   });
 
   it('Removes data was loaded message after first page', () => {
@@ -193,9 +194,9 @@ describe('FormController', () => {
         validateOnSubmitOnly={true}
       />
     );
-    expect(form.findOne('Alert')).toBeDefined();
+    expect(form.findOne('Alert')).to.exist;
     setPage(1);
-    expect(form.findAll('Alert')).toHaveLength(0);
+    expect(form.findAll('Alert')).to.have.length(0);
   });
 
   it('Shows reopened message if status is reopened, and user can close message', () => {
@@ -209,12 +210,12 @@ describe('FormController', () => {
       />
     );
     const alert = form.findOne('Alert');
-    expect(alert.content()).toContain(
+    expect(alert.content()).to.contain(
       'Your Regional Partner has requested more information. Please update and resubmit.'
     );
 
     alert.props.onDismiss();
-    expect(form.findAll('Alert')).toHaveLength(0);
+    expect(form.findAll('Alert')).to.have.length(0);
   });
 
   it('Removes reopened message after first page', () => {
@@ -227,9 +228,9 @@ describe('FormController', () => {
         validateOnSubmitOnly={true}
       />
     );
-    expect(form.findOne('Alert')).toBeDefined();
+    expect(form.findOne('Alert')).to.exist;
     setPage(1);
-    expect(form.findAll('Alert')).toHaveLength(0);
+    expect(form.findAll('Alert')).to.have.length(0);
   });
 
   it('Does not show data was loaded message if there is no application id', () => {
@@ -240,23 +241,23 @@ describe('FormController', () => {
         validateOnSubmitOnly={true}
       />
     );
-    expect(form.findAll('Alert')).toHaveLength(0);
+    expect(form.findAll('Alert')).to.have.length(0);
   });
 
   describe('Saving', () => {
     it('Sends isSaving on save', () => {
-      jest.spyOn($, 'ajax').mockClear();
+      sinon.spy($, 'ajax');
       form = isolateComponent(<FormController {...defaultProps} />);
       clickSaveButton();
-      const serverCalledWith = $.ajax.mock.calls[0][0];
-      expect(JSON.parse(serverCalledWith.data).isSaving).toBe(true);
+      const serverCalledWith = $.ajax.getCall(0).args[0];
+      expect(JSON.parse(serverCalledWith.data).isSaving).to.equal(true);
     });
 
     it('Disables the save button during save and renders spinner', () => {
       form = isolateComponent(<FormController {...defaultProps} />);
       clickSaveButton();
       expect(form.findAll('Button')[1].props).to.be.disabled;
-      expect(form.findAll('Spinner')).toHaveLength(1);
+      expect(form.findAll('Spinner')).to.have.length(1);
     });
 
     it('Re-enables the save button after successful save and removes spinner', () => {
@@ -269,13 +270,13 @@ describe('FormController', () => {
       server.respond();
 
       expect(form.findAll('Button')[1].props).to.be.disabled;
-      expect(form.findAll('Spinner')).toHaveLength(0);
+      expect(form.findAll('Spinner')).to.have.length(0);
 
-      server.mockRestore();
+      server.restore();
     });
 
     it('Shows apps closed message if RP has closed applications', async () => {
-      jest.spyOn(window, 'fetch').mockClear().mockReturnValue(
+      sinon.stub(window, 'fetch').returns(
         Promise.resolve({
           ok: true,
           json: () => {
@@ -288,66 +289,66 @@ describe('FormController', () => {
         school: 'New School',
         program: PROGRAM_CSD,
       };
-      jest.useFakeTimers();
+      const clock = sinon.useFakeTimers();
       form = isolateComponent(
         <FormController {...defaultProps} getInitialData={() => initialData} />
       );
       await clock.runAllAsync();
 
       const alerts = form.findAll('Alert');
-      expect(alerts).toHaveLength(1);
-      expect(alerts[0].content()).toContain('Applications are closed for this region');
-      jest.useRealTimers();
+      expect(alerts).to.have.length(1);
+      expect(alerts[0].content()).to.contain(
+        'Applications are closed for this region'
+      );
+      clock.restore();
     });
 
     it('hides apps closed message if selecting a different RP with applications open', async () => {
-      const stub = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
-      stub.mockImplementation(() => {
-        if (stub.mock.calls.length === 0) {
-          return Promise.resolve({
-            ok: true,
-            json: () => {
-              return {id: 1, pl_programs_offered: ['CSD'], are_apps_closed: true};
-            },
-          });
-        }
-      });
-      stub.mockImplementation(() => {
-        if (stub.mock.calls.length === 1) {
-          return Promise.resolve({
-            ok: true,
-            json: () => {
-              return {
-                id: 2,
-                pl_programs_offered: ['CSD'],
-                are_apps_closed: false,
-              };
-            },
-          });
-        }
-      });
+      const stub = sinon.stub(window, 'fetch');
+      stub.onCall(0).returns(
+        Promise.resolve({
+          ok: true,
+          json: () => {
+            return {id: 1, pl_programs_offered: ['CSD'], are_apps_closed: true};
+          },
+        })
+      );
+      stub.onCall(1).returns(
+        Promise.resolve({
+          ok: true,
+          json: () => {
+            return {
+              id: 2,
+              pl_programs_offered: ['CSD'],
+              are_apps_closed: false,
+            };
+          },
+        })
+      );
 
       const initialData = {
         school: 'New School',
         program: PROGRAM_CSD,
       };
-      jest.useFakeTimers();
+      const clock = sinon.useFakeTimers();
       form = isolateComponent(
         <FormController {...defaultProps} getInitialData={() => initialData} />
       );
       await clock.runAllAsync();
 
       const alerts = form.findAll('Alert');
-      expect(alerts).toHaveLength(1);
-      expect(alerts[0].content()).toContain('Applications are closed for this region');
+      expect(alerts).to.have.length(1);
+      expect(alerts[0].content()).to.contain(
+        'Applications are closed for this region'
+      );
 
       const page = form.findOne('DummyPage1');
       page.props.onChange({school: 'Updated school'});
       await clock.runAllAsync();
 
-      expect(form.findAll('Alert')).toHaveLength(0);
+      expect(form.findAll('Alert')).to.have.length(0);
 
-      jest.useRealTimers();
+      clock.restore();
     });
 
     it('Shows error message if user tries to save an application that already exists', () => {
@@ -360,10 +361,10 @@ describe('FormController', () => {
       server.respond();
 
       const alerts = form.findAll('Alert');
-      expect(alerts).toHaveLength(2);
-      expect(alerts[0].content()).toContain(appAlreadyExistsErrorText);
+      expect(alerts).to.have.length(2);
+      expect(alerts[0].content()).to.contain(appAlreadyExistsErrorText);
 
-      server.mockRestore();
+      server.restore();
     });
 
     [
@@ -389,7 +390,7 @@ describe('FormController', () => {
 
         expect(form.findAll('Button')[1].props).to.be.disabled;
 
-        server.mockRestore();
+        server.restore();
       });
     });
 
@@ -408,16 +409,16 @@ describe('FormController', () => {
       server.respond();
 
       const alert = form.findOne('Alert');
-      expect(alert.content()).toContain(
+      expect(alert.content()).to.contain(
         'Your progress has been saved. Return to this page at any time to continue working on your application.'
       );
 
       alert.props.onDismiss();
-      expect(form.findAll('Alert')).toHaveLength(0);
+      expect(form.findAll('Alert')).to.have.length(0);
 
       expect(form.findAll('Button')[1].props).to.be.disabled;
 
-      server.mockRestore();
+      server.restore();
     });
 
     it('Saved message alert disappears after changing pages', () => {
@@ -435,11 +436,11 @@ describe('FormController', () => {
       clickSaveButton(form);
       server.respond();
 
-      expect(form.findOne('Alert')).toBeDefined();
+      expect(form.findOne('Alert')).to.exist;
       setPage(1);
-      expect(form.findAll('Alert')).toHaveLength(0);
+      expect(form.findAll('Alert')).to.have.length(0);
 
-      server.mockRestore();
+      server.restore();
     });
   });
 
@@ -452,8 +453,8 @@ describe('FormController', () => {
       DummyPage1.associatedFields = ['field1'];
       setPage(1);
 
-      expect(getErrors(DummyPage1)).not.toHaveLength(0);
-      expect(getCurrentPage()).toBe(1);
+      expect(getErrors(DummyPage1)).to.not.be.empty;
+      expect(getCurrentPage()).to.equal(1);
     });
 
     it('Navigates when the current page has no errors', () => {
@@ -461,13 +462,13 @@ describe('FormController', () => {
       form = isolateComponent(<FormController {...defaultProps} />);
       setPage(1);
 
-      expect(getErrors(DummyPage2)).toHaveLength(0);
-      expect(getCurrentPage()).toBe(2);
+      expect(getErrors(DummyPage2)).to.be.empty;
+      expect(getCurrentPage()).to.equal(2);
     });
 
     describe('Submitting', () => {
       const triggerSubmit = () =>
-        form.findOne('form').props.onSubmit({preventDefault: jest.fn()});
+        form.findOne('form').props.onSubmit({preventDefault: sinon.stub()});
 
       const setupValid = (applicationId = undefined) => {
         form = isolateComponent(
@@ -492,7 +493,7 @@ describe('FormController', () => {
         server = sinon.fakeServer.create();
       });
       afterEach(() => {
-        server.mockRestore();
+        server.restore();
       });
 
       it('Does not submit when the last page has errors', () => {
@@ -500,8 +501,8 @@ describe('FormController', () => {
 
         triggerSubmit();
 
-        expect(getErrors(DummyPage3)).not.toHaveLength(0);
-        expect(server.requests).toHaveLength(0);
+        expect(getErrors(DummyPage3)).to.not.be.empty;
+        expect(server.requests).to.be.empty;
       });
 
       [
@@ -515,10 +516,14 @@ describe('FormController', () => {
 
           triggerSubmit();
 
-          expect(getErrors(DummyPage3)).toHaveLength(0);
-          expect(server.requests).toHaveLength(1);
-          expect(server.requests[0].method).toEqual(previouslySaved ? 'PUT' : 'POST');
-          expect(server.requests[0].url).toEqual(previouslySaved ? `${fakeEndpoint}/${applicationId}` : fakeEndpoint);
+          expect(getErrors(DummyPage3)).to.be.empty;
+          expect(server.requests).to.have.length(1);
+          expect(server.requests[0].method).to.eql(
+            previouslySaved ? 'PUT' : 'POST'
+          );
+          expect(server.requests[0].url).to.eql(
+            previouslySaved ? `${fakeEndpoint}/${applicationId}` : fakeEndpoint
+          );
         });
       });
 
@@ -526,7 +531,7 @@ describe('FormController', () => {
         setupValid();
         triggerSubmit();
         expect(form.findOne('#submit').props).to.be.disabled;
-        expect(form.findAll('Spinner')).toHaveLength(1);
+        expect(form.findAll('Spinner')).to.have.length(1);
       });
 
       it('Shows error message if user tries to submit an application that already exists', () => {
@@ -537,8 +542,8 @@ describe('FormController', () => {
         server.respond();
 
         const alerts = form.findAll('Alert');
-        expect(alerts).toHaveLength(2);
-        expect(alerts[0].content()).toContain(appAlreadyExistsErrorText);
+        expect(alerts).to.have.length(2);
+        expect(alerts[0].content()).to.contain(appAlreadyExistsErrorText);
       });
 
       [
@@ -557,19 +562,19 @@ describe('FormController', () => {
           server.respond();
 
           statusNumber === 400 &&
-            expect(getErrors(DummyPage3)).toEqual(['an error']);
+            expect(getErrors(DummyPage3)).to.eql(['an error']);
           expect(form.findOne('#submit').props).to.be.disabled;
-          expect(form.findAll('Spinner')).toHaveLength(0);
+          expect(form.findAll('Spinner')).to.have.length(0);
         });
       });
 
       it('Sends isSaving as false on submit', () => {
-        jest.spyOn($, 'ajax').mockClear();
+        sinon.spy($, 'ajax');
         form = isolateComponent(<FormController {...defaultProps} />);
         setPage(2);
         triggerSubmit();
-        const serverCalledWith = $.ajax.mock.calls[0][0];
-        expect(JSON.parse(serverCalledWith.data).isSaving).toBe(false);
+        const serverCalledWith = $.ajax.getCall(0).args[0];
+        expect(JSON.parse(serverCalledWith.data).isSaving).to.equal(false);
       });
 
       it('Keeps the submit button disabled and calls onSuccessfulSubmit on success', () => {
@@ -580,7 +585,7 @@ describe('FormController', () => {
         server.respond();
 
         expect(form.findOne('#submit').props).to.be.disabled;
-        expect(onSuccessfulSubmit).toHaveBeenCalledTimes(1);
+        expect(onSuccessfulSubmit).to.be.calledOnce;
       });
     });
   });
@@ -598,7 +603,7 @@ describe('FormController', () => {
 
       setPage(1);
 
-      expect(getErrors(DummyPage1)).toEqual(['included']);
+      expect(getErrors(DummyPage1)).to.eql(['included']);
     });
 
     it('Strips string values on current page and sets empty ones to null', () => {
@@ -622,7 +627,7 @@ describe('FormController', () => {
 
       setPage(1);
 
-      expect(getData(DummyPage2)).toEqual({
+      expect(getData(DummyPage2)).to.deep.eql({
         textFieldWithSpace: 'trim',
         textFieldWithNoSpace: 'nothing to trim',
         arrayField: ['  no trim in array  '],
@@ -639,13 +644,9 @@ describe('FormController', () => {
         page1Field3: 'will be modified',
       };
 
-      DummyPage1.processPageData = jest.fn().mockImplementation((...args) => {
-        if (args[0] === pageData) {
-          return {
-            page1Field2: undefined,
-            page1Field3: 'modified',
-          };
-        }
+      DummyPage1.processPageData = sinon.stub().withArgs(pageData).returns({
+        page1Field2: undefined,
+        page1Field3: 'modified',
       });
 
       DummyPage1.associatedFields = [
@@ -664,8 +665,8 @@ describe('FormController', () => {
 
       setPage(1);
 
-      expect(DummyPage1.processPageData).toHaveBeenCalledTimes(1);
-      expect(getData(DummyPage2)).toEqual({
+      expect(DummyPage1.processPageData).to.be.calledOnce;
+      expect(getData(DummyPage2)).to.deep.eql({
         page1Field1: 'value1',
         page1Field2: undefined,
         page1Field3: 'modified',
@@ -694,13 +695,15 @@ describe('FormController', () => {
       form.findOne(DummyPage1).props.onChange({
         updatedField1: 'updated value 1',
       });
-      expect(sessionStorage[sessionStorageKey]).toEqual(JSON.stringify({
-        currentPage: 0,
-        data: {
-          existingField1: 'existing value 1',
-          updatedField1: 'updated value 1',
-        },
-      }));
+      expect(sessionStorage[sessionStorageKey]).to.eql(
+        JSON.stringify({
+          currentPage: 0,
+          data: {
+            existingField1: 'existing value 1',
+            updatedField1: 'updated value 1',
+          },
+        })
+      );
     });
 
     it('Saves current page to session storage', () => {
@@ -715,10 +718,12 @@ describe('FormController', () => {
         />
       );
       setPage(1);
-      expect(sessionStorage['DummyForm']).toEqual(JSON.stringify({
-        currentPage: 1,
-        data: {existingField1: 'existing value 1'},
-      }));
+      expect(sessionStorage['DummyForm']).to.eql(
+        JSON.stringify({
+          currentPage: 1,
+          data: {existingField1: 'existing value 1'},
+        })
+      );
     });
 
     it('Loads current page and form data from session storage on mount', () => {
@@ -738,8 +743,8 @@ describe('FormController', () => {
           onSuccessfulSubmit={onSuccessfulSubmit}
         />
       );
-      expect(getCurrentPage()).toBe(3);
-      expect(getData(DummyPage3)).toEqual(testData);
+      expect(getCurrentPage()).to.equal(3);
+      expect(getData(DummyPage3)).to.eql(testData);
     });
   });
 });

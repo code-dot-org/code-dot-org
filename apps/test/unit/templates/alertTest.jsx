@@ -1,9 +1,10 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import Alert from '@cdo/apps/templates/alert';
 
-
+import {expect} from '../../util/deprecatedChai';
 
 describe('Alert', () => {
   it('renders any children', () => {
@@ -31,25 +32,29 @@ describe('Alert', () => {
         <span>This is an error.</span>
       </Alert>
     );
-    expect(error.find('div > div').props().style.backgroundColor).toBe('#f2dede');
+    expect(error.find('div > div').props().style.backgroundColor).to.equal(
+      '#f2dede'
+    );
 
     const warning = shallow(
       <Alert type="warning" onClose={() => {}}>
         <span>This is a warning.</span>
       </Alert>
     );
-    expect(warning.find('div > div').props().style.backgroundColor).toBe('#fcf8e3');
+    expect(warning.find('div > div').props().style.backgroundColor).to.equal(
+      '#fcf8e3'
+    );
   });
 
   it('calls onClose callback when close button is clicked', () => {
-    const callback = jest.fn();
+    const callback = sinon.spy();
     const error = shallow(
       <Alert type="error" onClose={callback}>
         <span>This is an error.</span>
       </Alert>
     );
-    expect(callback).not.toHaveBeenCalled();
+    expect(callback).not.to.have.been.called;
     error.find('button').simulate('click');
-    expect(callback).toHaveBeenCalledTimes(1);
+    expect(callback).to.have.been.calledOnce;
   });
 });

@@ -1,3 +1,5 @@
+import sinon from 'sinon';
+
 import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';
 import ExternalButton from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalButton';
 import ExternalLed from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalLed';
@@ -5,7 +7,7 @@ import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoar
 import {MB_COMPONENT_COUNT} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 
-
+import {expect} from '../../../../../../util/reconfiguredChai';
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardInterfaceTestUtil';
 
 import {itMakesMicroBitComponentsAvailable} from './MicroBitComponentTestUtil';
@@ -23,14 +25,14 @@ describe('MicroBitBoard', () => {
 
   afterEach(() => {
     board = undefined;
-    jest.restoreAllMocks();
+    sinon.restore();
   });
 
   describe('Maker Board Interface', () => {
     itImplementsTheMakerBoardInterface(MicroBitBoard, board => {
       boardSetupAndStub(board);
-      jest.spyOn(board.boardClient_, 'analogRead').mockClear().mockImplementation().mockImplementation((...args) => args[1](0));
-      jest.spyOn(board.boardClient_, 'digitalRead').mockClear().mockImplementation().mockImplementation((...args) => args[1](0));
+      sinon.stub(board.boardClient_, 'analogRead').callsArgWith(1, 0);
+      sinon.stub(board.boardClient_, 'digitalRead').callsArgWith(1, 0);
     });
     itMakesMicroBitComponentsAvailable(MicroBitBoard);
   });
@@ -38,15 +40,17 @@ describe('MicroBitBoard', () => {
   describe(`connect()`, () => {
     it('initializes a set of components', () => {
       return board.connect().then(() => {
-        expect(Object.keys(board.prewiredComponents_)).toHaveLength(MB_COMPONENT_COUNT);
-        expect(board.prewiredComponents_.board).toBeInstanceOf(Object);
-        expect(board.prewiredComponents_.ledScreen).toBeInstanceOf(Object);
-        expect(board.prewiredComponents_.tempSensor).toBeInstanceOf(Object);
-        expect(board.prewiredComponents_.accelerometer).toBeInstanceOf(Object);
-        expect(board.prewiredComponents_.compass).toBeInstanceOf(Object);
-        expect(board.prewiredComponents_.buttonA).toBeInstanceOf(Object);
-        expect(board.prewiredComponents_.buttonB).toBeInstanceOf(Object);
-        expect(board.prewiredComponents_.lightSensor).toBeInstanceOf(Object);
+        expect(Object.keys(board.prewiredComponents_)).to.have.length(
+          MB_COMPONENT_COUNT
+        );
+        expect(board.prewiredComponents_.board).to.be.a('object');
+        expect(board.prewiredComponents_.ledScreen).to.be.a('object');
+        expect(board.prewiredComponents_.tempSensor).to.be.a('object');
+        expect(board.prewiredComponents_.accelerometer).to.be.a('object');
+        expect(board.prewiredComponents_.compass).to.be.a('object');
+        expect(board.prewiredComponents_.buttonA).to.be.a('object');
+        expect(board.prewiredComponents_.buttonB).to.be.a('object');
+        expect(board.prewiredComponents_.lightSensor).to.be.a('object');
       });
     });
   });
@@ -56,21 +60,24 @@ describe('MicroBitBoard', () => {
       return board.connect().then(() => {
         // Spy on the accelerometer to see if enableComponents called
         // enableMicroBitComponents which then starts the accelerometer.
-        let accelerometerSpy = jest.spyOn(board.prewiredComponents_.accelerometer, 'start').mockClear();
+        let accelerometerSpy = sinon.spy(
+          board.prewiredComponents_.accelerometer,
+          'start'
+        );
         board.enableComponents();
-        expect(accelerometerSpy).toHaveBeenCalledTimes(1);
+        expect(accelerometerSpy).to.have.been.calledOnce;
       });
     });
   });
 
   describe(`boardConnected()`, () => {
     it('returns false at first', () => {
-      expect(board.boardConnected()).toBe(false);
+      expect(board.boardConnected()).to.be.false;
     });
 
     it('returns true after connecting', () => {
       return board.connect().then(() => {
-        expect(board.boardConnected()).toBe(true);
+        expect(board.boardConnected()).to.be.true;
       });
     });
   });
@@ -78,11 +85,11 @@ describe('MicroBitBoard', () => {
   describe(`pinMode(pin, modeConstant)`, () => {
     it('forwards the call to board', () => {
       return board.connect().then(() => {
-        let pinModeSpy = jest.spyOn(board.boardClient_, 'setPinMode').mockClear();
+        let pinModeSpy = sinon.spy(board.boardClient_, 'setPinMode');
         const pin = 11;
         const arg2 = 1023;
         board.pinMode(pin, arg2);
-        expect(pinModeSpy).toHaveBeenCalledWith(pin, arg2);
+        expect(pinModeSpy).to.have.been.calledWith(pin, arg2);
       });
     });
   });
@@ -90,11 +97,11 @@ describe('MicroBitBoard', () => {
   describe(`digitalWrite(pin, value)`, () => {
     it('forwards the call to firmata', () => {
       return board.connect().then(() => {
-        let digitalWriteSpy = jest.spyOn(board.boardClient_, 'digitalWrite').mockClear();
+        let digitalWriteSpy = sinon.spy(board.boardClient_, 'digitalWrite');
         const pin = 11;
         const arg2 = 1023;
         board.digitalWrite(pin, arg2);
-        expect(digitalWriteSpy).toHaveBeenCalledWith(pin, arg2);
+        expect(digitalWriteSpy).to.have.been.calledWith(pin, arg2);
       });
     });
   });
@@ -102,11 +109,11 @@ describe('MicroBitBoard', () => {
   describe(`digitalRead(pin, callback)`, () => {
     it('forwards the call to firmata', () => {
       return board.connect().then(() => {
-        let digitalReadSpy = jest.spyOn(board.boardClient_, 'digitalRead').mockClear();
+        let digitalReadSpy = sinon.spy(board.boardClient_, 'digitalRead');
         const pin = 11;
         const arg2 = () => {};
         board.digitalRead(pin, arg2);
-        expect(digitalReadSpy).toHaveBeenCalledWith(pin, arg2);
+        expect(digitalReadSpy).to.have.been.calledWith(pin, arg2);
       });
     });
   });
@@ -114,11 +121,11 @@ describe('MicroBitBoard', () => {
   describe(`analogWrite(pin, value)`, () => {
     it('forwards the call to firmata', () => {
       return board.connect().then(() => {
-        let analogWriteSpy = jest.spyOn(board.boardClient_, 'analogWrite').mockClear();
+        let analogWriteSpy = sinon.spy(board.boardClient_, 'analogWrite');
         const pin = 11;
         const arg2 = 1023;
         board.analogWrite(pin, arg2);
-        expect(analogWriteSpy).toHaveBeenCalledWith(pin, arg2);
+        expect(analogWriteSpy).to.have.been.calledWith(pin, arg2);
       });
     });
   });
@@ -126,11 +133,11 @@ describe('MicroBitBoard', () => {
   describe(`analogRead(pin, callback)`, () => {
     it('forwards the call to firmata', () => {
       return board.connect().then(() => {
-        let analogReadSpy = jest.spyOn(board.boardClient_, 'analogRead').mockClear();
+        let analogReadSpy = sinon.spy(board.boardClient_, 'analogRead');
         const pin = 11;
         const arg2 = () => {};
         board.analogRead(pin, arg2);
-        expect(analogReadSpy).toHaveBeenCalledWith(pin, arg2);
+        expect(analogReadSpy).to.have.been.calledWith(pin, arg2);
       });
     });
   });
@@ -140,7 +147,7 @@ describe('MicroBitBoard', () => {
       return board.connect().then(() => {
         const pin = 13;
         const newLed = board.createLed(pin);
-        expect(newLed).toBeInstanceOf(ExternalLed);
+        expect(newLed).to.be.an.instanceOf(ExternalLed);
       });
     });
   });
@@ -150,7 +157,7 @@ describe('MicroBitBoard', () => {
       return board.connect().then(() => {
         const pin = 13;
         const newButton = board.createButton(pin);
-        expect(newButton).toBeInstanceOf(ExternalButton);
+        expect(newButton).to.be.an.instanceOf(ExternalButton);
       });
     });
   });
@@ -160,7 +167,7 @@ describe('MicroBitBoard', () => {
       return board.connect().then(() => {
         const pin = 1;
         const newSensor = board.createCapacitiveTouchSensor(pin);
-        expect(newSensor).toBeInstanceOf(CapacitiveTouchSensor);
+        expect(newSensor).to.be.an.instanceOf(CapacitiveTouchSensor);
       });
     });
   });
@@ -168,9 +175,12 @@ describe('MicroBitBoard', () => {
   describe(`reset()`, () => {
     it('triggers a component cleanup', () => {
       return board.connect().then(() => {
-        let ledScreenSpy = jest.spyOn(board.prewiredComponents_.ledScreen, 'clear').mockClear();
-        board.mockReset();
-        expect(ledScreenSpy).toHaveBeenCalledTimes(1);
+        let ledScreenSpy = sinon.spy(
+          board.prewiredComponents_.ledScreen,
+          'clear'
+        );
+        board.reset();
+        expect(ledScreenSpy).to.have.been.calledOnce;
       });
     });
 
@@ -178,25 +188,25 @@ describe('MicroBitBoard', () => {
       return board.connect().then(() => {
         const led1 = board.createLed(0);
         const led2 = board.createLed(1);
-        jest.spyOn(led1, 'off').mockClear();
-        jest.spyOn(led2, 'off').mockClear();
-        expect(led1.off).not.toHaveBeenCalled();
-        expect(led2.off).not.toHaveBeenCalled();
-        board.mockReset();
-        expect(led1.off).toHaveBeenCalledTimes(1);
-        expect(led2.off).toHaveBeenCalledTimes(1);
+        sinon.spy(led1, 'off');
+        sinon.spy(led2, 'off');
+        expect(led1.off).not.to.have.been.called;
+        expect(led2.off).not.to.have.been.called;
+        board.reset();
+        expect(led1.off).to.have.been.calledOnce;
+        expect(led2.off).to.have.been.calledOnce;
       });
     });
   });
 
   describe(`destroy()`, () => {
     it('sends the board reset signal', () => {
-      let resetSpy = jest.spyOn(board.boardClient_, 'reset').mockClear();
+      let resetSpy = sinon.spy(board.boardClient_, 'reset');
       return board
         .connect()
         .then(() => board.destroy())
         .then(() => {
-          expect(resetSpy).toHaveBeenCalledTimes(1);
+          expect(resetSpy).to.have.been.calledOnce;
         });
     });
 
@@ -204,15 +214,15 @@ describe('MicroBitBoard', () => {
       return board.connect().then(() => {
         const led1 = board.createLed(0);
         const led2 = board.createLed(1);
-        jest.spyOn(led1, 'off').mockClear();
-        jest.spyOn(led2, 'off').mockClear();
+        sinon.spy(led1, 'off');
+        sinon.spy(led2, 'off');
 
-        expect(led1.off).not.toHaveBeenCalled();
-        expect(led2.off).not.toHaveBeenCalled();
+        expect(led1.off).not.to.have.been.called;
+        expect(led2.off).not.to.have.been.called;
 
         return board.destroy().then(() => {
-          expect(led1.off).toHaveBeenCalledTimes(1);
-          expect(led2.off).toHaveBeenCalledTimes(1);
+          expect(led1.off).to.have.been.calledOnce;
+          expect(led2.off).to.have.been.calledOnce;
         });
       });
     });

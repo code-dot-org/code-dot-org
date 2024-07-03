@@ -1,10 +1,11 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import {UnconnectedBackgroundMusicMuteButton as BackgroundMusicMuteButton} from '@cdo/apps/templates/instructions/BackgroundMusicMuteButton';
 import i18n from '@cdo/locale';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {expect, assert} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   teacherOnly: false,
@@ -30,7 +31,7 @@ describe('SignedInUser', () => {
     server.respondWith('POST', '/api/v1/users/me/mute_music', 'ok');
   });
 
-  afterEach(() => server.mockRestore());
+  afterEach(() => server.restore());
 
   it('switches label and icon when button is pressed', () => {
     const wrapper = setUp();
@@ -40,17 +41,17 @@ describe('SignedInUser', () => {
   });
 
   it('calls mute and unmute functions accordingly', () => {
-    let onMuteSpy = jest.fn();
-    let onUnmuteSpy = jest.fn();
+    let onMuteSpy = sinon.spy();
+    let onUnmuteSpy = sinon.spy();
     const wrapper = setUp({
       muteBackgroundMusic: onMuteSpy,
       unmuteBackgroundMusic: onUnmuteSpy,
     });
     wrapper.find('.uitest-mute-music-button').simulate('click');
     server.respond();
-    expect(onMuteSpy).toHaveBeenCalledTimes(1);
+    expect(onMuteSpy).to.have.been.calledOnce;
     wrapper.find('.uitest-mute-music-button').simulate('click');
-    expect(onUnmuteSpy).toHaveBeenCalledTimes(1);
+    expect(onUnmuteSpy).to.have.been.calledOnce;
   });
 
   describe('minecraft vs starwars styling', () => {
@@ -60,7 +61,7 @@ describe('SignedInUser', () => {
       });
       expect(
         wrapper.find('#uitest-mute-music-button').at(0).props().style.color
-      ).toBe('rgb(118, 101, 160)');
+      ).to.equal('rgb(118, 101, 160)');
     });
 
     it('uses minecraft styling if isMinecraft is true', () => {
@@ -69,7 +70,7 @@ describe('SignedInUser', () => {
       });
       expect(
         wrapper.find('#uitest-mute-music-button').at(0).props().isMinecraft
-      ).toBe(true);
+      ).to.be.true;
     });
   });
 });

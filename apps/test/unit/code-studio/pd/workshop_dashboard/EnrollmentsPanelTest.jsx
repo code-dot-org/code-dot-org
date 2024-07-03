@@ -3,6 +3,7 @@ import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-impo
 import _ from 'lodash';
 import React from 'react';
 import {Factory} from 'rosie';
+import sinon from 'sinon';
 
 import EnrollmentsPanel, {
   MOVE_ENROLLMENT_BUTTON_NAME,
@@ -25,11 +26,11 @@ describe('EnrollmentsPanel', () => {
 
   beforeEach(() => {
     server = sinon.createFakeServer();
-    loadEnrollments = jest.fn();
+    loadEnrollments = sinon.spy();
   });
 
   afterEach(() => {
-    server.mockRestore();
+    server.restore();
     server = null;
   });
 
@@ -106,7 +107,7 @@ describe('EnrollmentsPanel', () => {
     );
 
     wrapper.instance().handleEnrollmentRefresh();
-    assert(loadEnrollments.toHaveBeenCalledTimes(1));
+    assert(loadEnrollments.calledOnce);
   });
 
   it('open and close the move enrollments dialog', () => {
@@ -187,7 +188,7 @@ describe('EnrollmentsPanel', () => {
     );
     server.respond();
     wrapper.update();
-    assert(loadEnrollments.toHaveBeenCalledTimes(1));
+    assert(loadEnrollments.calledOnce);
   });
 
   it('edit an enrollment', () => {
@@ -239,7 +240,7 @@ describe('EnrollmentsPanel', () => {
     );
     server.respond();
     wrapper.update();
-    assert(loadEnrollments.toHaveBeenCalledTimes(1));
+    assert(loadEnrollments.calledOnce);
   });
 
   it('delete an enrollment', () => {
@@ -263,7 +264,7 @@ describe('EnrollmentsPanel', () => {
 
     wrapper.instance().handleDeleteEnrollment(enrollmentId);
     server.respond();
-    assert(loadEnrollments.toHaveBeenCalledTimes(1));
+    assert(loadEnrollments.calledOnce);
   });
 
   it('should show survey results button for CSF Intro past May 2020', () => {

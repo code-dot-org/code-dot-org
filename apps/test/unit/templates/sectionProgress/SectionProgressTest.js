@@ -1,5 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
@@ -7,7 +8,7 @@ import {UnconnectedSectionProgress} from '@cdo/apps/templates/sectionProgress/Se
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import * as progressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {expect, assert} from '../../../util/reconfiguredChai';
 
 const studentData = [
   {id: 1, name: 'studentb'},
@@ -19,7 +20,7 @@ describe('SectionProgress', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
-    jest.spyOn(progressLoader, 'loadUnitProgress').mockClear().mockImplementation();
+    sinon.stub(progressLoader, 'loadUnitProgress');
     DEFAULT_PROPS = {
       setLessonOfInterest: () => {},
       setCurrentView: () => {},
@@ -54,7 +55,7 @@ describe('SectionProgress', () => {
   });
 
   afterEach(() => {
-    progressLoader.loadUnitProgress.mockRestore();
+    progressLoader.loadUnitProgress.restore();
   });
 
   const setUp = (overrideProps = {}) => {
@@ -65,46 +66,48 @@ describe('SectionProgress', () => {
 
   it('loading data shows loading icon', () => {
     const wrapper = setUp({isLoadingProgress: true});
-    expect(wrapper.find('#uitest-spinner').exists()).toBe(true);
+    expect(wrapper.find('#uitest-spinner').exists()).to.be.true;
   });
 
   it('done loading data does not show loading icon', () => {
     const wrapper = setUp();
-    expect(wrapper.find('#uitest-spinner').exists()).toBe(false);
+    expect(wrapper.find('#uitest-spinner').exists()).to.be.false;
   });
 
   it('renders ProgressTableView for detail and summary view only', () => {
     let wrapper = setUp({currentView: ViewType.DETAIL});
-    expect(wrapper.find(ProgressTableView)).toHaveLength(1);
+    expect(wrapper.find(ProgressTableView)).to.have.length(1);
 
     wrapper = setUp({currentView: ViewType.SUMMARY});
-    expect(wrapper.find(ProgressTableView)).toHaveLength(1);
+    expect(wrapper.find(ProgressTableView)).to.have.length(1);
 
     wrapper = setUp({currentView: ViewType.STANDARDS});
-    expect(wrapper.find(ProgressTableView)).toHaveLength(0);
+    expect(wrapper.find(ProgressTableView)).to.have.length(0);
   });
 
   it('passes currentView to ProgressTableView', () => {
     const wrapper = setUp({currentView: ViewType.DETAIL});
-    expect(wrapper.find(ProgressTableView).props().currentView).toBe(ViewType.DETAIL);
+    expect(wrapper.find(ProgressTableView).props().currentView).to.equal(
+      ViewType.DETAIL
+    );
   });
 
   it('shows standards view', () => {
     const wrapper = setUp({currentView: ViewType.STANDARDS});
-    expect(wrapper.find('#uitest-standards-view').exists()).toBe(true);
+    expect(wrapper.find('#uitest-standards-view').exists()).to.be.true;
   });
 
   it('sends Amplitude progress event when onChangeScript is called', () => {
     const wrapper = setUp({currentView: ViewType.DETAIL});
-    const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
     wrapper.instance().onChangeScript(123);
-    expect(analyticsSpy).toHaveBeenCalledTimes(1);
+    expect(analyticsSpy).to.be.calledOnce;
     assert.equal(
-      analyticsSpy.mock.calls[0].firstArg,
+      analyticsSpy.getCall(0).firstArg,
       'Section Progress Unit Changed'
     );
 
-    analyticsSpy.mockRestore();
+    analyticsSpy.restore();
   });
 });

@@ -1,16 +1,17 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import OrderableList from '@cdo/apps/lib/levelbuilder/code-docs-editor/OrderableList';
 
-
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('OrderableList', () => {
   let defaultProps, setListSpy, renderItemSpy;
 
   beforeEach(() => {
-    setListSpy = jest.fn();
-    renderItemSpy = jest.fn();
+    setListSpy = sinon.spy();
+    renderItemSpy = sinon.spy();
     defaultProps = {
       list: [{key: '1'}, {key: '2'}, {key: '3'}],
       setList: setListSpy,
@@ -21,8 +22,8 @@ describe('OrderableList', () => {
 
   it('calls renderItem for each item in the list', () => {
     shallow(<OrderableList {...defaultProps} />);
-    expect(renderItemSpy).toHaveBeenCalledTimes(3);
-    expect(renderItemSpy.mock.calls.map(c => c.mock.calls[0])).toEqual([
+    expect(renderItemSpy.callCount).to.equal(3);
+    expect(renderItemSpy.getCalls().map(c => c.args[0])).to.eql([
       {key: '1'},
       {key: '2'},
       {key: '3'},
@@ -32,14 +33,14 @@ describe('OrderableList', () => {
   it('can add new item to list', () => {
     const wrapper = shallow(<OrderableList {...defaultProps} />);
     wrapper.find('Button').simulate('click');
-    expect(setListSpy).toHaveBeenCalled().once;
-    expect(setListSpy.mock.calls[0][0].length).toBe(4);
+    expect(setListSpy).to.be.called.once;
+    expect(setListSpy.getCall(0).args[0].length).to.equal(4);
   });
 
   it('can remove item from list', () => {
     const wrapper = shallow(<OrderableList {...defaultProps} />);
     wrapper.find('.fa-trash').at(1).simulate('click');
-    expect(setListSpy).toHaveBeenCalledWith([
+    expect(setListSpy).to.be.calledOnce.and.calledWith([
       {key: '1'},
       {key: '3'},
     ]);
@@ -49,7 +50,7 @@ describe('OrderableList', () => {
     const wrapper = shallow(<OrderableList {...defaultProps} />);
     // The first item does not have a caret up, so we are moving the second item up here
     wrapper.find('.fa-caret-up').at(0).simulate('click');
-    expect(setListSpy).toHaveBeenCalledWith([
+    expect(setListSpy).to.be.calledOnce.and.calledWith([
       {key: '2'},
       {key: '1'},
       {key: '3'},
@@ -59,7 +60,7 @@ describe('OrderableList', () => {
   it('can move down up in list', () => {
     const wrapper = shallow(<OrderableList {...defaultProps} />);
     wrapper.find('.fa-caret-down').at(0).simulate('click');
-    expect(setListSpy).toHaveBeenCalledWith([
+    expect(setListSpy).to.be.calledOnce.and.calledWith([
       {key: '2'},
       {key: '1'},
       {key: '3'},
@@ -73,6 +74,6 @@ describe('OrderableList', () => {
         checkItemDeletionAllowed={item => item.key === '3'}
       />
     );
-    expect(wrapper.find('.fa-trash').length).toBe(1);
+    expect(wrapper.find('.fa-trash').length).to.equal(1);
   });
 });

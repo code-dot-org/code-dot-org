@@ -1,6 +1,8 @@
-import { mount } from 'enzyme';
+import {expect} from 'chai';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
+import sinon from 'sinon';
 
 import PeerReviewSubmissions from '@cdo/apps/code-studio/peer_reviews/PeerReviewSubmissions';
 
@@ -39,7 +41,7 @@ describe('PeerReviewSubmissions', () => {
 
   beforeAll(() => {
     // stub out debounce to return the original function, so it's called immediately
-    debounceStub = jest.spyOn(_, 'debounce').mockClear().mockImplementation(f => f);
+    debounceStub = sinon.stub(_, 'debounce').callsFake(f => f);
 
     server = sinon.fakeServer.create();
     server.respondWith(
@@ -73,19 +75,19 @@ describe('PeerReviewSubmissions', () => {
   });
 
   afterAll(() => {
-    debounceStub.mockRestore();
-    server.mockRestore();
+    debounceStub.restore();
+    server.restore();
   });
 
   it('Initially renders course options and calls API for submissions', () => {
-    expect(server.requests.length).toBe(1);
-    expect(server.requests[0].url).toBe(
+    expect(server.requests.length).to.equal(1);
+    expect(server.requests[0].url).to.equal(
       '/api/v1/peer_review_submissions/index?user_q=&plc_course_id=&plc_course_unit_id=&page=1&per=30'
     );
 
     server.respond();
 
-    expect(peerReviewSubmissions.state()).toEqual({
+    expect(peerReviewSubmissions.state()).to.deep.equal({
       loading: false,
       userFilter: '',
       plcCourseId: '',
@@ -95,7 +97,7 @@ describe('PeerReviewSubmissions', () => {
     });
     expect(
       peerReviewSubmissions.find('button#DownloadCsvReport').prop('disabled')
-    ).toBe(true);
+    ).to.be.true;
 
     let courseOptions = peerReviewSubmissions
       .find('#PlcCourseSelect option')
@@ -103,39 +105,39 @@ describe('PeerReviewSubmissions', () => {
         return [option.text(), option.prop('value')];
       });
 
-    expect(courseOptions).toEqual([
+    expect(courseOptions).to.deep.equal([
       ['All Courses', ''],
       ['course_1', 1],
       ['course_2', 2],
     ]);
     expect(
       peerReviewSubmissions.find('select#PlcCourseUnitSelect').prop('disabled')
-    ).toBe(true);
+    ).to.be.true;
   });
 
   it('Changing the course makes a new call and enables the button when a course is selected', () => {
-    server.mockReset();
+    server.reset();
 
     peerReviewSubmissions
       .find('select#PlcCourseSelect')
       .simulate('change', {target: {value: '1'}});
-    expect(server.requests[0].url).toBe(
+    expect(server.requests[0].url).to.equal(
       '/api/v1/peer_review_submissions/index?user_q=&plc_course_id=1&plc_course_unit_id=&page=1&per=30'
     );
-    expect(peerReviewSubmissions.state().plcCourseId).toBe('1');
-    expect(peerReviewSubmissions.state().plcCourseUnitId).toBe('');
+    expect(peerReviewSubmissions.state().plcCourseId).to.equal('1');
+    expect(peerReviewSubmissions.state().plcCourseUnitId).to.equal('');
     expect(
       peerReviewSubmissions.find('button#DownloadCsvReport').prop('disabled')
-    ).toBe(true);
+    ).to.be.true;
     expect(
       peerReviewSubmissions.find('select#PlcCourseUnitSelect').prop('disabled')
-    ).toBe(false);
+    ).to.be.false;
     let courseUnitOptions = peerReviewSubmissions
       .find('#PlcCourseUnitSelect option')
       .map(option => {
         return [option.text(), option.prop('value')];
       });
-    expect(courseUnitOptions).toEqual([
+    expect(courseUnitOptions).to.deep.equal([
       ['All Course Units', ''],
       ['course_1_unit_1', 10],
       ['course_1_unit_2', 11],
@@ -144,42 +146,42 @@ describe('PeerReviewSubmissions', () => {
     peerReviewSubmissions
       .find('select#PlcCourseUnitSelect')
       .simulate('change', {target: {value: '10'}});
-    expect(server.requests[1].url).toBe(
+    expect(server.requests[1].url).to.equal(
       '/api/v1/peer_review_submissions/index?user_q=&plc_course_id=1&plc_course_unit_id=10&page=1&per=30'
     );
-    expect(peerReviewSubmissions.state().plcCourseId).toBe('1');
-    expect(peerReviewSubmissions.state().plcCourseUnitId).toBe('10');
+    expect(peerReviewSubmissions.state().plcCourseId).to.equal('1');
+    expect(peerReviewSubmissions.state().plcCourseUnitId).to.equal('10');
     expect(
       peerReviewSubmissions.find('button#DownloadCsvReport').prop('disabled')
-    ).toBe(false);
+    ).to.be.false;
 
     peerReviewSubmissions
       .find('select#PlcCourseSelect')
       .simulate('change', {target: {value: ''}});
-    expect(server.requests[2].url).toBe(
+    expect(server.requests[2].url).to.equal(
       '/api/v1/peer_review_submissions/index?user_q=&plc_course_id=&plc_course_unit_id=&page=1&per=30'
     );
-    expect(peerReviewSubmissions.state().plcCourseId).toBe('');
-    expect(peerReviewSubmissions.state().plcCourseUnitId).toBe('');
+    expect(peerReviewSubmissions.state().plcCourseId).to.equal('');
+    expect(peerReviewSubmissions.state().plcCourseUnitId).to.equal('');
     expect(
       peerReviewSubmissions.find('button#DownloadCsvReport').prop('disabled')
-    ).toBe(true);
+    ).to.be.true;
     expect(
       peerReviewSubmissions.find('select#PlcCourseUnitSelect').prop('disabled')
-    ).toBe(true);
+    ).to.be.true;
   });
 
   it('Changing the email filter triggers a new call with email filter applied', () => {
-    server.mockReset();
+    server.reset();
 
     peerReviewSubmissions
       .find('input#NameEmailFilter')
       .simulate('change', {target: {value: 'someone@example.com'}});
-    expect(server.requests[0].url).toBe(
+    expect(server.requests[0].url).to.equal(
       '/api/v1/peer_review_submissions/index?user_q=someone@example.com&plc_course_id=&plc_course_unit_id=&page=1&per=30'
     );
     expect(
       peerReviewSubmissions.find('button#DownloadCsvReport').prop('disabled')
-    ).toBe(true);
+    ).to.be.true;
   });
 });

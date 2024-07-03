@@ -2,12 +2,13 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
 import {Provider} from 'react-redux';
+import sinon from 'sinon';
 
 import DataDocFormEditor from '@cdo/apps/lib/levelbuilder/data-docs-editor/DataDocFormEditor';
 import {getStore} from '@cdo/apps/redux';
 import * as utils from '@cdo/apps/utils';
 
-
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('DataDocFormEditor', () => {
   let defaultProps;
@@ -25,16 +26,16 @@ describe('DataDocFormEditor', () => {
 
   it('renders editor with props already loaded into entry fields', () => {
     const wrapper = isolateComponent(<DataDocFormEditor {...defaultProps} />);
-    expect(wrapper.findAll('input')[0].props.value).toBe(docKey);
-    expect(wrapper.findAll('input')[1].props.value).toBe(docName);
+    expect(wrapper.findAll('input')[0].props.value).to.equal(docKey);
+    expect(wrapper.findAll('input')[1].props.value).to.equal(docName);
     expect(
       wrapper.findOne('TextareaWithMarkdownPreview').props.markdown
-    ).toBe(docContent);
+    ).to.equal(docContent);
   });
 
   it('ensures key input is disabled in editor', () => {
     const wrapper = isolateComponent(<DataDocFormEditor {...defaultProps} />);
-    expect(wrapper.findAll('input')[0].props.disabled).toBe(true);
+    expect(wrapper.findAll('input')[0].props.disabled).to.be.true;
   });
 
   it('modifies doc name', () => {
@@ -42,11 +43,11 @@ describe('DataDocFormEditor', () => {
     const newDocName = 'New Name of Doc';
     wrapper.findAll('input')[1].props.onChange({target: {value: newDocName}});
 
-    expect(wrapper.findAll('input')[0].props.value).toBe(docKey);
-    expect(wrapper.findAll('input')[1].props.value).toBe(newDocName);
+    expect(wrapper.findAll('input')[0].props.value).to.equal(docKey);
+    expect(wrapper.findAll('input')[1].props.value).to.equal(newDocName);
     expect(
       wrapper.findOne('TextareaWithMarkdownPreview').props.markdown
-    ).toBe(docContent);
+    ).to.equal(docContent);
   });
 
   it('modifies doc content', () => {
@@ -56,16 +57,16 @@ describe('DataDocFormEditor', () => {
       .findOne('TextareaWithMarkdownPreview')
       .props.handleMarkdownChange({target: {value: newDocContent}});
 
-    expect(wrapper.findAll('input')[0].props.value).toBe(docKey);
-    expect(wrapper.findAll('input')[1].props.value).toBe(docName);
+    expect(wrapper.findAll('input')[0].props.value).to.equal(docKey);
+    expect(wrapper.findAll('input')[1].props.value).to.equal(docName);
     expect(
       wrapper.findOne('TextareaWithMarkdownPreview').props.markdown
-    ).toBe(newDocContent);
+    ).to.equal(newDocContent);
   });
 
   it('clicking Save And Keep Editing button sends PUT request and does not redirect', () => {
     let server = sinon.fakeServer.create();
-    jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
+    sinon.stub(utils, 'navigateToHref');
 
     let store = getStore();
     const provider = mount(
@@ -88,21 +89,21 @@ describe('DataDocFormEditor', () => {
 
     const saveBar = wrapper.find('SaveBar');
     const saveAndCloseButton = saveBar.find('button').at(0);
-    expect(saveAndCloseButton.contains('Save and Keep Editing')).toBe(true);
+    expect(saveAndCloseButton.contains('Save and Keep Editing')).to.be.true;
     saveAndCloseButton.simulate('click');
 
     server.respond();
     provider.update();
 
-    expect(utils.navigateToHref).not.toHaveBeenCalled();
+    expect(utils.navigateToHref).to.not.have.been.called;
 
-    server.mockRestore();
-    utils.navigateToHref.mockRestore();
+    server.restore();
+    utils.navigateToHref.restore();
   });
 
   it('clicking Save And Close button sends PUT request and redirects', () => {
     let server = sinon.fakeServer.create();
-    jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
+    sinon.stub(utils, 'navigateToHref');
 
     let store = getStore();
     const provider = mount(
@@ -125,15 +126,17 @@ describe('DataDocFormEditor', () => {
 
     const saveBar = wrapper.find('SaveBar');
     const saveAndCloseButton = saveBar.find('button').at(1);
-    expect(saveAndCloseButton.contains('Save and Close')).toBe(true);
+    expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
     saveAndCloseButton.simulate('click');
 
     server.respond();
     provider.update();
 
-    expect(utils.navigateToHref).toHaveBeenCalledWith(`/data_docs/${docKey}`);
+    expect(utils.navigateToHref).to.have.been.calledWith(
+      `/data_docs/${docKey}`
+    );
 
-    server.mockRestore();
-    utils.navigateToHref.mockRestore();
+    server.restore();
+    utils.navigateToHref.restore();
   });
 });

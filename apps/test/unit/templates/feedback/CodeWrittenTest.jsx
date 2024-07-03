@@ -3,7 +3,7 @@ import React from 'react';
 
 import CodeWritten from '@cdo/apps/templates/feedback/CodeWritten';
 
-
+import {expect} from '../../../util/deprecatedChai';
 
 const DEFAULT_PROPS = {
   numLinesWritten: 0,
@@ -48,7 +48,7 @@ describe('CodeWritten', () => {
 
     expect(() => {
       wrapper.find('summary').simulate('click');
-    }).not.toThrow();
+    }).not.to.throw();
 
     // Note: This click calls trackEvent but it's already a no-op in unit
     // tests and not currently spyable.

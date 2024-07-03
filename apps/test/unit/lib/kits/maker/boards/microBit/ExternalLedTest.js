@@ -1,7 +1,9 @@
+import sinon from 'sinon';
+
 import ExternalLed from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalLed';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 
-
+import {expect} from '../../../../../../util/reconfiguredChai';
 
 describe('ExternalLed', function () {
   describe('on() and off()', () => {
@@ -15,23 +17,23 @@ describe('ExternalLed', function () {
         pin: 0,
         isOn: false,
       });
-      setDigitalOutputSpy = jest.spyOn(boardClient, 'setDigitalOutput').mockClear();
+      setDigitalOutputSpy = sinon.spy(boardClient, 'setDigitalOutput');
     });
 
     afterAll(() => {
-      jest.restoreAllMocks();
+      sinon.restore();
     });
 
     it(`calls the on() implementation`, () => {
       led.on();
-      expect(setDigitalOutputSpy).toHaveBeenCalledTimes(1);
-      expect(setDigitalOutputSpy).toHaveBeenCalledWith(0, 1);
+      expect(setDigitalOutputSpy).to.have.been.calledOnce;
+      expect(setDigitalOutputSpy).to.have.been.calledWith(0, 1);
     });
 
     it(`calls the off() implementation`, () => {
       led.off();
-      expect(setDigitalOutputSpy).toHaveBeenCalledTimes(2);
-      expect(setDigitalOutputSpy).toHaveBeenCalledWith(0, 0);
+      expect(setDigitalOutputSpy).to.have.been.calledTwice;
+      expect(setDigitalOutputSpy).to.have.been.calledWith(0, 0);
     });
   });
 
@@ -46,32 +48,33 @@ describe('ExternalLed', function () {
         pin: 0,
         isOn: false,
       });
-      setDigitalOutputSpy = jest.spyOn(boardClient, 'setDigitalOutput').mockClear();
-      onSpy = jest.spyOn(led, 'on').mockClear();
-      offSpy = jest.spyOn(led, 'off').mockClear();
+      setDigitalOutputSpy = sinon.spy(boardClient, 'setDigitalOutput');
+      onSpy = sinon.spy(led, 'on');
+      offSpy = sinon.spy(led, 'off');
     });
     afterAll(() => {
-      jest.restoreAllMocks();
+      sinon.restore();
     });
 
     it(`if LED is off, toggle triggers the led on`, () => {
       led.off();
-      expect(setDigitalOutputSpy).not.toHaveBeenCalledWith(0, 1);
+      expect(setDigitalOutputSpy).to.not.have.been.calledWith(0, 1);
       led.toggle();
-      expect(setDigitalOutputSpy).toHaveBeenCalledWith(0, 1);
-      expect(onSpy).toHaveBeenCalledTimes(1);
+      expect(setDigitalOutputSpy).to.have.been.calledWith(0, 1);
+      expect(onSpy).to.have.been.calledOnce;
     });
 
     it(`if LED is on, toggle triggers the led off`, () => {
-      expect(setDigitalOutputSpy).toHaveBeenCalledWith(0, 0);
+      expect(setDigitalOutputSpy).to.have.been.calledWith(0, 0);
       led.on();
-      expect(setDigitalOutputSpy).toHaveBeenCalledWith(0, 1);
+      expect(setDigitalOutputSpy).to.have.been.calledWith(0, 1);
       led.toggle();
-      expect(offSpy).toHaveBeenCalledTimes(2);
+      expect(offSpy).to.have.been.calledTwice;
     });
   });
 
   describe('blink()', () => {
+    let led, clock;
     let boardClient = new MBFirmataClientStub();
 
     beforeAll(() => {
@@ -80,25 +83,25 @@ describe('ExternalLed', function () {
         pin: 0,
         isOn: false,
       });
-      jest.useFakeTimers();
-      jest.spyOn(led, 'setDigitalOutputOn').mockClear();
-      jest.spyOn(led, 'setDigitalOutputOff').mockClear();
+      clock = sinon.useFakeTimers();
+      sinon.spy(led, 'setDigitalOutputOn');
+      sinon.spy(led, 'setDigitalOutputOff');
     });
 
     afterAll(() => {
-      jest.useRealTimers();
-      jest.restoreAllMocks();
+      clock.restore();
+      sinon.restore();
     });
 
     it(`calls toggle_ every set interval`, () => {
       led.blink(100);
-      expect(led.setDigitalOutputOff).toHaveBeenCalledTimes(1);
-      jest.advanceTimersByTime(100);
-      expect(led.setDigitalOutputOn).toHaveBeenCalledTimes(1);
-      jest.advanceTimersByTime(100);
-      expect(led.setDigitalOutputOff).toHaveBeenCalledTimes(2);
-      jest.advanceTimersByTime(100);
-      expect(led.setDigitalOutputOn).toHaveBeenCalledTimes(2);
+      expect(led.setDigitalOutputOff).to.have.been.calledOnce;
+      clock.tick(100);
+      expect(led.setDigitalOutputOn).to.have.been.calledOnce;
+      clock.tick(100);
+      expect(led.setDigitalOutputOff).to.have.been.calledTwice;
+      clock.tick(100);
+      expect(led.setDigitalOutputOn).to.have.been.calledTwice;
     });
   });
 });

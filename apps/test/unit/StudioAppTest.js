@@ -17,7 +17,7 @@ import {
 } from '@cdo/apps/StudioApp';
 import * as utils from '@cdo/apps/utils';
 
-
+import {expect} from '../util/reconfiguredChai';
 import setBlocklyGlobal from '../util/setupBlocklyGlobal';
 import {
   sandboxDocumentBody,

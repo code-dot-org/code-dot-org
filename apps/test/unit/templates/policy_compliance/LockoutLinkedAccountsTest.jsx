@@ -4,7 +4,7 @@ import React from 'react';
 import LockoutLinkedAccounts from '@cdo/apps/templates/policy_compliance/LockoutLinkedAccounts';
 
 import {hashString} from '../../../../src/utils';
-
+import {expect} from '../../../util/deprecatedChai';
 
 const DEFAULT_PROPS = {
   apiUrl: 'https://studio.code.org/api/foo',
@@ -23,7 +23,7 @@ const DEFAULT_DATE_OPTIONS = {
 describe('LockoutLinkedAccounts', () => {
   it('renders the parent email box if the user does not have permission', () => {
     const wrapper = shallow(<LockoutLinkedAccounts {...DEFAULT_PROPS} />);
-    expect(wrapper.find('#parent-email')).toBeDefined();
+    expect(wrapper.find('#parent-email')).to.exist;
   });
 
   it('shows the parent email and timestamp for a pending permission request', () => {
@@ -56,7 +56,7 @@ describe('LockoutLinkedAccounts', () => {
     );
     const statusText = wrapper.find('#permission-status');
     expect(statusText).to.have.text('Granted');
-    expect(wrapper.find('#parent-email')).toBeFalsy();
+    expect(wrapper.find('#parent-email')).to.not.exist;
   });
 
   it('disables the submit button when the user enters their own email', () => {

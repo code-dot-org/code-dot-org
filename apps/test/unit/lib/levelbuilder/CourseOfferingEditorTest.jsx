@@ -1,10 +1,11 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import CourseOfferingEditor from '@cdo/apps/lib/levelbuilder/CourseOfferingEditor';
 import * as utils from '@cdo/apps/utils';
 
-
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('CourseOfferingEditor', () => {
   let defaultProps;
@@ -71,18 +72,20 @@ describe('CourseOfferingEditor', () => {
   });
 
   describe('Saving Course Offering Editor', () => {
+    let clock, server;
+
     beforeEach(() => {
       server = sinon.fakeServer.create();
-      jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
+      sinon.stub(utils, 'navigateToHref');
     });
 
     afterEach(() => {
       if (clock) {
-        jest.useRealTimers();
+        clock.restore();
         clock = undefined;
       }
-      server.mockRestore();
-      utils.navigateToHref.mockRestore();
+      server.restore();
+      utils.navigateToHref.restore();
     });
 
     it('can save and keep editing', () => {
@@ -115,21 +118,22 @@ describe('CourseOfferingEditor', () => {
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
       saveAndKeepEditingButton.simulate('click');
 
       // check the the spinner is showing
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
 
-      jest.useFakeTimers().setSystemTime(new Date('2020-12-01'));
+      clock = sinon.useFakeTimers(new Date('2020-12-01'));
       server.respond();
-      jest.advanceTimersByTime(50);
+      clock.tick(50);
 
       wrapper.update();
-      expect(utils.navigateToHref).not.toHaveBeenCalled();
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(0);
+      expect(utils.navigateToHref).to.not.have.been.called;
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
       //check that last saved message is showing
-      expect(wrapper.find('.lastSavedMessage').length).toBe(1);
+      expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
     });
 
     it('shows error when save and keep editing has error saving', () => {
@@ -145,19 +149,20 @@ describe('CourseOfferingEditor', () => {
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
       saveAndKeepEditingButton.simulate('click');
 
       // check the the spinner is showing
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
 
       server.respond();
       wrapper.update();
-      expect(utils.navigateToHref).not.toHaveBeenCalled();
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(0);
+      expect(utils.navigateToHref).to.not.have.been.called;
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
       expect(
         wrapper.find('.saveBar').contains('Error Saving: There was an error')
-      ).toBe(true);
+      ).to.be.true;
     });
 
     it('can save and close', () => {
@@ -190,15 +195,17 @@ describe('CourseOfferingEditor', () => {
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndCloseButton = saveBar.find('button').at(2);
-      expect(saveAndCloseButton.contains('Save and Close')).toBe(true);
+      expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
       saveAndCloseButton.simulate('click');
 
       // check the the spinner is showing
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
 
       server.respond();
       wrapper.update();
-      expect(utils.navigateToHref).toHaveBeenCalledWith(`/${window.location.search}`);
+      expect(utils.navigateToHref).to.have.been.calledWith(
+        `/${window.location.search}`
+      );
     });
 
     it('shows error when save and keep editing has error saving', () => {
@@ -214,21 +221,21 @@ describe('CourseOfferingEditor', () => {
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndCloseButton = saveBar.find('button').at(2);
-      expect(saveAndCloseButton.contains('Save and Close')).toBe(true);
+      expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
       saveAndCloseButton.simulate('click');
 
       // check the the spinner is showing
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
 
       server.respond();
 
       wrapper.update();
-      expect(utils.navigateToHref).not.toHaveBeenCalled();
+      expect(utils.navigateToHref).to.not.have.been.called;
 
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(0);
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
       expect(
         wrapper.find('.saveBar').contains('Error Saving: There was an error')
-      ).toBe(true);
+      ).to.be.true;
     });
   });
 });

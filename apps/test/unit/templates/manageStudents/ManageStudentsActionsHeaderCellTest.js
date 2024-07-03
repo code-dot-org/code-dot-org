@@ -4,13 +4,13 @@ import React from 'react';
 import {UnconnectedManageStudentsActionsHeaderCell as ManageStudentsActionsHeaderCell} from '@cdo/apps/templates/manageStudents/ManageStudentsActionsHeaderCell';
 import i18n from '@cdo/locale';
 
-
+import {expect} from '../../../util/deprecatedChai';
 
 describe('ManageStudentsActionsCell', () => {
   it('renders the edit all option', () => {
     const wrapper = shallow(<ManageStudentsActionsHeaderCell />);
     const editAllString = i18n.editAll();
-    expect(wrapper).toEqual(expect.arrayContaining([editAllString]));
+    expect(wrapper).to.contain(editAllString);
   });
 
   it('renders the control project sharing option if the share column is hidden', () => {
@@ -18,7 +18,7 @@ describe('ManageStudentsActionsCell', () => {
       <ManageStudentsActionsHeaderCell isShareColumnVisible={false} />
     );
     const controlProjectSharing = i18n.controlProjectSharing();
-    expect(wrapper).toEqual(expect.arrayContaining([controlProjectSharing]));
+    expect(wrapper).to.contain(controlProjectSharing);
   });
 
   it('renders the hide project sharing option if the share column is visible', () => {
@@ -26,6 +26,6 @@ describe('ManageStudentsActionsCell', () => {
       <ManageStudentsActionsHeaderCell isShareColumnVisible={true} />
     );
     const hideProjectSharing = i18n.hideProjectSharingColumn();
-    expect(wrapper).toEqual(expect.arrayContaining([hideProjectSharing]));
+    expect(wrapper).to.contain(hideProjectSharing);
   });
 });

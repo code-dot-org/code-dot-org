@@ -1,17 +1,20 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import BackToFrontConfetti from '@cdo/apps/templates/BackToFrontConfetti';
 
-
+import {expect} from '../../util/deprecatedChai';
 
 describe('BackToFrontConfetti', () => {
+  let clock;
+
   beforeEach(() => {
-    jest.useFakeTimers();
+    clock = sinon.useFakeTimers();
   });
 
   afterEach(() => {
-    jest.useRealTimers();
+    clock.restore();
   });
 
   it('initially renders with a negative zIndex', () => {
@@ -21,7 +24,7 @@ describe('BackToFrontConfetti', () => {
 
   it('remains negatively zIndexed indefinitely after rendering', () => {
     const wrapper = mount(<BackToFrontConfetti />);
-    jest.advanceTimersByTime(999);
+    clock.tick(999);
     expect(wrapper).to.have.style('zIndex', '-1');
   });
 
@@ -29,16 +32,16 @@ describe('BackToFrontConfetti', () => {
     const wrapper = mount(<BackToFrontConfetti />);
     wrapper.setProps({active: true});
     expect(wrapper).to.have.style('zIndex', '-1');
-    jest.advanceTimersByTime(10);
+    clock.tick(10);
     expect(wrapper).to.have.style('zIndex', '-1');
   });
 
   it('switches to a positive zIndex shortly after activation', () => {
     const wrapper = mount(<BackToFrontConfetti />);
     wrapper.setProps({active: true});
-    jest.advanceTimersByTime(600);
+    clock.tick(600);
     expect(wrapper).to.have.style('zIndex', '-1');
-    jest.advanceTimersByTime(100);
+    clock.tick(100);
     expect(wrapper).to.have.style('zIndex', '1');
   });
 });

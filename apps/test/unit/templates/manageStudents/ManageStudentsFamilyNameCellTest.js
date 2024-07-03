@@ -5,7 +5,7 @@ import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import ManageStudentFamilyNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsFamilyNameCell';
 
-
+import {expect} from '../../../util/deprecatedChai';
 
 const DEFAULT_PROPS = {
   id: 2,
@@ -23,8 +23,8 @@ describe('ManageStudentFamilyNameCell', () => {
         />
       </Provider>
     );
-    expect(wrapper).toContain('FamName');
-    expect(wrapper.find('input').exists()).toBe(false);
+    expect(wrapper).to.contain('FamName');
+    expect(wrapper.find('input').exists()).to.be.false;
   });
 
   it('renders family name input, when editing', () => {
@@ -53,6 +53,6 @@ describe('ManageStudentFamilyNameCell', () => {
     );
     const input = wrapper.find('input');
     expect(input.exists());
-    expect(input.prop('disabled')).toBe(true);
+    expect(input.prop('disabled')).to.be.true;
   });
 });

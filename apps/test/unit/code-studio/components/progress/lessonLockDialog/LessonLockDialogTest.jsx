@@ -1,6 +1,7 @@
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
+import sinon from 'sinon';
 
 import * as lessonLockDataApi from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
 import {UnconnectedLessonLockDialog as LessonLockDialog} from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDialog';
@@ -15,7 +16,7 @@ import {
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-
+import {expect} from '../../../../../util/reconfiguredChai';
 
 const fakeSectionId = 42;
 const fakeUnitId = 1;
@@ -46,13 +47,13 @@ describe('LessonLockDialog with stubbed section selector', () => {
 
   it('renders with minimal props', () => {
     const wrapper = shallow(<LessonLockDialog {...MINIMUM_PROPS} />);
-    expect(wrapper).not.toBeNull();
-    expect(wrapper.text()).not.toHaveLength(0);
+    expect(wrapper).not.to.be.null;
+    expect(wrapper.text()).not.to.be.empty;
   });
 
   it('does not display hidden warning if lesson not hidden', () => {
     const wrapper = shallow(<LessonLockDialog {...MINIMUM_PROPS} />);
-    expect(wrapper.text()).not.toContain(i18n.hiddenAssessmentWarning());
+    expect(wrapper.text()).not.to.include(i18n.hiddenAssessmentWarning());
   });
 
   it('displays hidden warning if lesson is hidden', () => {
@@ -63,7 +64,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
   });
 
   it('renders student row with name and lock status', () => {
-    jest.spyOn(lessonLockDataApi, 'useGetLockState').mockClear().mockReturnValue({
+    sinon.stub(lessonLockDataApi, 'useGetLockState').returns({
       loading: false,
       serverLockState: [{name: 'fakeName', lockStatus: LockStatus.Locked}],
     });
@@ -74,16 +75,16 @@ describe('LessonLockDialog with stubbed section selector', () => {
       </Provider>
     );
 
-    expect(getStudentRows(wrapper)).toHaveLength(1);
+    expect(getStudentRows(wrapper)).to.have.length(1);
     const studentRow = getStudentRows(wrapper).at(0);
-    expect(studentRow.props().name).toBe('fakeName');
-    expect(studentRow.props().lockStatus).toBe(LockStatus.Locked);
+    expect(studentRow.props().name).to.equal('fakeName');
+    expect(studentRow.props().lockStatus).to.equal(LockStatus.Locked);
 
-    lessonLockDataApi.useGetLockState.mockRestore();
+    lessonLockDataApi.useGetLockState.restore();
   });
 
   it('clicking "Allow editing" sets all statuses to Editable', () => {
-    jest.spyOn(lessonLockDataApi, 'useGetLockState').mockClear().mockReturnValue({
+    sinon.stub(lessonLockDataApi, 'useGetLockState').returns({
       loading: false,
       serverLockState: [
         {name: 'fakeName1', lockStatus: LockStatus.Locked},
@@ -98,7 +99,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
     );
 
     getStudentRows(wrapper).forEach(row => {
-      expect(row.props().lockStatus).toBe(LockStatus.Locked);
+      expect(row.props().lockStatus).to.equal(LockStatus.Locked);
     });
 
     const allowEditingButton = wrapper.find('button').at(1);
@@ -107,14 +108,14 @@ describe('LessonLockDialog with stubbed section selector', () => {
     wrapper.update();
 
     getStudentRows(wrapper).forEach(row => {
-      expect(row.props().lockStatus).toBe(LockStatus.Editable);
+      expect(row.props().lockStatus).to.equal(LockStatus.Editable);
     });
 
-    lessonLockDataApi.useGetLockState.mockRestore();
+    lessonLockDataApi.useGetLockState.restore();
   });
 
   it('clicking "Lock lesson" sets all statuses to Locked', () => {
-    jest.spyOn(lessonLockDataApi, 'useGetLockState').mockClear().mockReturnValue({
+    sinon.stub(lessonLockDataApi, 'useGetLockState').returns({
       loading: false,
       serverLockState: [
         {name: 'fakeName1', lockStatus: LockStatus.Editable},
@@ -129,7 +130,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
     );
 
     getStudentRows(wrapper).forEach(row => {
-      expect(row.props().lockStatus).toBe(LockStatus.Editable);
+      expect(row.props().lockStatus).to.equal(LockStatus.Editable);
     });
 
     const lockLessonButton = wrapper.find('button').at(2);
@@ -138,14 +139,14 @@ describe('LessonLockDialog with stubbed section selector', () => {
     wrapper.update();
 
     getStudentRows(wrapper).forEach(row => {
-      expect(row.props().lockStatus).toBe(LockStatus.Locked);
+      expect(row.props().lockStatus).to.equal(LockStatus.Locked);
     });
 
-    lessonLockDataApi.useGetLockState.mockRestore();
+    lessonLockDataApi.useGetLockState.restore();
   });
 
   it('clicking "Show answers" sets all statuses to ReadOnlyAnswers', () => {
-    jest.spyOn(lessonLockDataApi, 'useGetLockState').mockClear().mockReturnValue({
+    sinon.stub(lessonLockDataApi, 'useGetLockState').returns({
       loading: false,
       serverLockState: [
         {name: 'fakeName1', lockStatus: LockStatus.Editable},
@@ -160,7 +161,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
     );
 
     getStudentRows(wrapper).forEach(row => {
-      expect(row.props().lockStatus).toBe(LockStatus.Editable);
+      expect(row.props().lockStatus).to.equal(LockStatus.Editable);
     });
 
     const showAnswersButton = wrapper.find('button').at(3);
@@ -169,15 +170,15 @@ describe('LessonLockDialog with stubbed section selector', () => {
     wrapper.update();
 
     getStudentRows(wrapper).forEach(row => {
-      expect(row.props().lockStatus).toBe(LockStatus.ReadonlyAnswers);
+      expect(row.props().lockStatus).to.equal(LockStatus.ReadonlyAnswers);
     });
 
-    lessonLockDataApi.useGetLockState.mockRestore();
+    lessonLockDataApi.useGetLockState.restore();
   });
 
   describe('viewSection callback', () => {
-    beforeEach(() => jest.spyOn(window, 'open').mockClear().mockImplementation());
-    afterEach(() => window.open.mockRestore());
+    beforeEach(() => sinon.stub(window, 'open'));
+    afterEach(() => window.open.restore());
 
     it('opens a window to the section assessments page', () => {
       const wrapper = mount(
@@ -191,7 +192,9 @@ describe('LessonLockDialog with stubbed section selector', () => {
       viewSectionButton.simulate('click');
       wrapper.update();
 
-      expect(window.open).toHaveBeenCalledWith(`/teacher_dashboard/sections/${fakeSectionId}/assessments`);
+      expect(window.open).to.have.been.calledOnce.and.calledWith(
+        `/teacher_dashboard/sections/${fakeSectionId}/assessments`
+      );
     });
   });
 
@@ -200,14 +203,15 @@ describe('LessonLockDialog with stubbed section selector', () => {
       {name: 'fakeName1', lockStatus: LockStatus.Editable},
       {name: 'fakeName2', lockStatus: LockStatus.Editable},
     ];
-    jest.spyOn(lessonLockDataApi, 'useGetLockState').mockClear().mockReturnValue({
+    sinon.stub(lessonLockDataApi, 'useGetLockState').returns({
       loading: false,
       serverLockState: initialLockStatus,
     });
-    const lessonLockSaveStub = jest.spyOn(lessonLockDataApi, 'saveLockState').mockClear()
-      .mockReturnValue(new Promise(resolve => resolve({ok: true})));
-    const refetchStub = jest.fn().mockReturnValue(new Promise(resolve => resolve()));
-    const handleCloseSpy = jest.fn();
+    const lessonLockSaveStub = sinon
+      .stub(lessonLockDataApi, 'saveLockState')
+      .returns(new Promise(resolve => resolve({ok: true})));
+    const refetchStub = sinon.stub().returns(new Promise(resolve => resolve()));
+    const handleCloseSpy = sinon.spy();
 
     const wrapper = mount(
       <Provider store={store}>
@@ -230,14 +234,14 @@ describe('LessonLockDialog with stubbed section selector', () => {
     wrapper.update();
 
     await setTimeout(() => {}, 50);
-    expect(lessonLockSaveStub).toHaveBeenCalled();
+    expect(lessonLockSaveStub).to.have.been.called;
     await setTimeout(() => {}, 50);
-    expect(refetchStub).toHaveBeenCalled();
+    expect(refetchStub).to.have.been.called;
     await setTimeout(() => {}, 50);
-    expect(handleCloseSpy).toHaveBeenCalled();
+    expect(handleCloseSpy).to.have.been.called;
 
-    lessonLockDataApi.useGetLockState.mockRestore();
-    lessonLockDataApi.saveLockState.mockRestore();
+    lessonLockDataApi.useGetLockState.restore();
+    lessonLockDataApi.saveLockState.restore();
   });
 
   it('handleSave shows default error if failed with no message', async () => {
@@ -245,14 +249,15 @@ describe('LessonLockDialog with stubbed section selector', () => {
       {name: 'fakeName1', lockStatus: LockStatus.Editable},
       {name: 'fakeName2', lockStatus: LockStatus.Editable},
     ];
-    jest.spyOn(lessonLockDataApi, 'useGetLockState').mockClear().mockReturnValue({
+    sinon.stub(lessonLockDataApi, 'useGetLockState').returns({
       loading: false,
       serverLockState: initialLockStatus,
     });
-    const lessonLockSaveStub = jest.spyOn(lessonLockDataApi, 'saveLockState').mockClear()
-      .mockReturnValue(Promise.resolve({ok: false, json: () => Promise.resolve({})}));
-    const refetchStub = jest.fn().mockReturnValue(new Promise(resolve => resolve()));
-    const handleCloseSpy = jest.fn();
+    const lessonLockSaveStub = sinon
+      .stub(lessonLockDataApi, 'saveLockState')
+      .returns(Promise.resolve({ok: false, json: () => Promise.resolve({})}));
+    const refetchStub = sinon.stub().returns(new Promise(resolve => resolve()));
+    const handleCloseSpy = sinon.spy();
 
     const wrapper = mount(
       <Provider store={store}>
@@ -275,14 +280,14 @@ describe('LessonLockDialog with stubbed section selector', () => {
     wrapper.update();
 
     await setTimeout(() => {}, 50);
-    expect(lessonLockSaveStub).toHaveBeenCalled();
+    expect(lessonLockSaveStub).to.have.been.called;
     await setTimeout(() => {}, 50);
 
-    expect(wrapper.text().includes(i18n.errorSavingLockStatus())).toBe(true);
-    expect(handleCloseSpy).not.toHaveBeenCalled();
+    expect(wrapper.text().includes(i18n.errorSavingLockStatus())).to.be.true;
+    expect(handleCloseSpy).to.not.be.called;
 
-    lessonLockDataApi.useGetLockState.mockRestore();
-    lessonLockDataApi.saveLockState.mockRestore();
+    lessonLockDataApi.useGetLockState.restore();
+    lessonLockDataApi.saveLockState.restore();
   });
 
   it('handleSave shows error message from server if provided', async () => {
@@ -290,19 +295,20 @@ describe('LessonLockDialog with stubbed section selector', () => {
       {name: 'fakeName1', lockStatus: LockStatus.Editable},
       {name: 'fakeName2', lockStatus: LockStatus.Editable},
     ];
-    jest.spyOn(lessonLockDataApi, 'useGetLockState').mockClear().mockReturnValue({
+    sinon.stub(lessonLockDataApi, 'useGetLockState').returns({
       loading: false,
       serverLockState: initialLockStatus,
     });
-    const lessonLockSaveStub = jest.spyOn(lessonLockDataApi, 'saveLockState').mockClear()
-      .mockReturnValue(
+    const lessonLockSaveStub = sinon
+      .stub(lessonLockDataApi, 'saveLockState')
+      .returns(
         Promise.resolve({
           ok: false,
           json: () => Promise.resolve({error: 'Error message from server'}),
         })
       );
-    const refetchStub = jest.fn().mockReturnValue(new Promise(resolve => resolve()));
-    const handleCloseSpy = jest.fn();
+    const refetchStub = sinon.stub().returns(new Promise(resolve => resolve()));
+    const handleCloseSpy = sinon.spy();
 
     const wrapper = mount(
       <Provider store={store}>
@@ -325,13 +331,13 @@ describe('LessonLockDialog with stubbed section selector', () => {
     wrapper.update();
 
     await setTimeout(() => {}, 50);
-    expect(lessonLockSaveStub).toHaveBeenCalled();
+    expect(lessonLockSaveStub).to.have.been.called;
     await setTimeout(() => {}, 50);
 
-    expect(wrapper.text().includes('Error message from server')).toBe(true);
-    expect(handleCloseSpy).not.toHaveBeenCalled();
+    expect(wrapper.text().includes('Error message from server')).to.be.true;
+    expect(handleCloseSpy).to.not.be.called;
 
-    lessonLockDataApi.useGetLockState.mockRestore();
-    lessonLockDataApi.saveLockState.mockRestore();
+    lessonLockDataApi.useGetLockState.restore();
+    lessonLockDataApi.saveLockState.restore();
   });
 });

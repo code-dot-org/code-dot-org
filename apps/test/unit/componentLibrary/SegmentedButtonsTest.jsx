@@ -1,10 +1,11 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
+import sinon from 'sinon';
 
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
 
-
+import {expect} from '../../util/reconfiguredChai';
 
 const valuesMap = {};
 const onSegmentedButtonsChange = (name, value) => (valuesMap[name] = value);
@@ -28,14 +29,14 @@ describe('Design System - Segmented Buttons', () => {
     const segmentedButton1 = screen.getByText('Label');
     const segmentedButton2 = screen.getByText('Label2');
 
-    expect(segmentedButton1).toBeDefined();
-    expect(segmentedButton2).toBeDefined();
-    expect(valuesMap.test1).toBe('label');
+    expect(segmentedButton1).to.exist;
+    expect(segmentedButton2).to.exist;
+    expect(valuesMap.test1).to.equal('label');
   });
 
   it('SegmentedButtons - changes selected button on click', async () => {
     const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+    const spyOnChange = sinon.spy();
     // set segmentedButton default value
     onSegmentedButtonsChange('test2', 'label');
     const onChange = value => {
@@ -57,9 +58,9 @@ describe('Design System - Segmented Buttons', () => {
     let segmentedButton1 = screen.getByText('Label');
     const segmentedButton2 = screen.getByText('Label2');
 
-    expect(segmentedButton1).toBeDefined();
-    expect(segmentedButton2).toBeDefined();
-    expect(valuesMap.test2).toBe('label');
+    expect(segmentedButton1).to.exist;
+    expect(segmentedButton2).to.exist;
+    expect(valuesMap.test2).to.equal('label');
 
     await user.click(segmentedButton2);
 
@@ -77,9 +78,9 @@ describe('Design System - Segmented Buttons', () => {
 
     segmentedButton1 = screen.getByText('Label');
 
-    expect(spyOnChange).toHaveBeenCalledTimes(1);
-    expect(spyOnChange).toHaveBeenCalledWith('label-2');
-    expect(valuesMap.test2).toBe('label-2');
+    expect(spyOnChange).to.have.been.calledOnce;
+    expect(spyOnChange).to.have.been.calledWith('label-2');
+    expect(valuesMap.test2).to.equal('label-2');
 
     await user.click(segmentedButton1);
 
@@ -95,14 +96,14 @@ describe('Design System - Segmented Buttons', () => {
       />
     );
 
-    expect(spyOnChange).toHaveBeenCalledTimes(2);
-    expect(spyOnChange).toHaveBeenCalledWith('label');
-    expect(valuesMap.test2).toBe('label');
+    expect(spyOnChange).to.have.been.calledTwice;
+    expect(spyOnChange).to.have.been.calledWith('label');
+    expect(valuesMap.test2).to.equal('label');
   });
 
   it("SegmentedButtons - renders disabled button, doesn't change on click", async () => {
     const user = userEvent.setup();
-    const spyOnChange = jest.fn();
+    const spyOnChange = sinon.spy();
     // set segmentedButton default value
     onSegmentedButtonsChange('test3', 'label');
     const onChange = value => {
@@ -125,9 +126,9 @@ describe('Design System - Segmented Buttons', () => {
     let segmentedButton1 = screen.getByText('Label');
     const segmentedButton2 = screen.getByText('Label2');
 
-    expect(segmentedButton1).toBeDefined();
-    expect(segmentedButton2).toBeDefined();
-    expect(valuesMap.test3).toBe('label');
+    expect(segmentedButton1).to.exist;
+    expect(segmentedButton2).to.exist;
+    expect(valuesMap.test3).to.equal('label');
 
     await user.click(segmentedButton2);
 
@@ -145,8 +146,8 @@ describe('Design System - Segmented Buttons', () => {
 
     segmentedButton1 = screen.getByText('Label');
 
-    expect(spyOnChange).not.toHaveBeenCalled();
-    expect(valuesMap.test3).toBe('label');
+    expect(spyOnChange).to.not.have.been.called;
+    expect(valuesMap.test3).to.equal('label');
 
     await user.click(segmentedButton1);
 
@@ -162,7 +163,7 @@ describe('Design System - Segmented Buttons', () => {
       />
     );
 
-    expect(spyOnChange).toHaveBeenCalled().once;
-    expect(spyOnChange).toHaveBeenCalledWith('label');
+    expect(spyOnChange).to.have.been.called.once;
+    expect(spyOnChange).to.have.been.calledWith('label');
   });
 });

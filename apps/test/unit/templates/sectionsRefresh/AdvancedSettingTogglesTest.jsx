@@ -1,9 +1,10 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import AdvancedSettingToggles from '@cdo/apps/templates/sectionsRefresh/AdvancedSettingToggles';
 
-
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('AdvancedSettingToggles', () => {
   it('renders PairProgramming and LockThisSection toggles to true and false as default respectively', () => {
@@ -16,10 +17,10 @@ describe('AdvancedSettingToggles', () => {
     );
     expect(
       wrapper.find('ToggleSwitch[id="uitest-pair-toggle"]').props().isToggledOn
-    ).toBe(true);
+    ).to.be.true;
     expect(
       wrapper.find('ToggleSwitch[id="uitest-lock-toggle"]').props().isToggledOn
-    ).toBe(false);
+    ).to.be.false;
   });
 
   it('renders Lesson Extras Toggle when available', () => {
@@ -37,7 +38,7 @@ describe('AdvancedSettingToggles', () => {
     );
     expect(
       wrapper.find('ToggleSwitch[id="uitest-lesson-extras-toggle"]')
-    ).toHaveLength(1);
+    ).to.have.lengthOf(1);
   });
 
   it('renders TTS Toggle when available', () => {
@@ -55,7 +56,7 @@ describe('AdvancedSettingToggles', () => {
     );
     expect(
       wrapper.find('ToggleSwitch[id="uitest-tts-toggle"]')
-    ).toHaveLength(1);
+    ).to.have.lengthOf(1);
   });
 
   it('renders TTS Toggle when available', () => {
@@ -73,7 +74,7 @@ describe('AdvancedSettingToggles', () => {
     );
     expect(
       wrapper.find('ToggleSwitch[id="uitest-tts-toggle"]')
-    ).toHaveLength(1);
+    ).to.have.lengthOf(1);
   });
 
   it('changes the status of pair programming setting when clicked', () => {
@@ -94,7 +95,7 @@ describe('AdvancedSettingToggles', () => {
       .find('ToggleSwitch[id="uitest-pair-toggle"]')
       .at(0);
     pairProgramming.simulate('toggle', {preventDefault: () => {}});
-    expect(updateSection).toHaveBeenCalledTimes(1);
-    expect(updateSection).toHaveBeenCalledWith('pairingAllowed', false);
+    expect(updateSection).to.have.been.calledOnce;
+    expect(updateSection).to.have.been.calledWith('pairingAllowed', false);
   });
 });

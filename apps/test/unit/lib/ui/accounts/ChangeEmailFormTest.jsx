@@ -1,9 +1,10 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import ChangeEmailForm from '@cdo/apps/lib/ui/accounts/ChangeEmailForm';
 
-
+import {expect} from '../../../../util/deprecatedChai';
 
 describe('ChangeEmailForm', () => {
   const EMAIL_SELECTOR = 'input[type="email"]';
@@ -25,16 +26,16 @@ describe('ChangeEmailForm', () => {
       const wrapper = mount(
         <ChangeEmailForm {...DEFAULT_PROPS} userType="teacher" />
       );
-      expect(wrapper.find(OPT_IN_SELECTOR)).toBeDefined();
-      expect(wrapper.find(OPT_OUT_SELECTOR)).toBeDefined();
+      expect(wrapper.find(OPT_IN_SELECTOR)).to.exist;
+      expect(wrapper.find(OPT_OUT_SELECTOR)).to.exist;
     });
 
     it('is not rendered for students', () => {
       const wrapper = mount(
         <ChangeEmailForm {...DEFAULT_PROPS} userType="student" />
       );
-      expect(wrapper.find(OPT_IN_SELECTOR)).toBeFalsy();
-      expect(wrapper.find(OPT_OUT_SELECTOR)).toBeFalsy();
+      expect(wrapper.find(OPT_IN_SELECTOR)).not.to.exist;
+      expect(wrapper.find(OPT_OUT_SELECTOR)).not.to.exist;
     });
   });
 
@@ -48,7 +49,7 @@ describe('ChangeEmailForm', () => {
             isPasswordRequired={true}
           />
         );
-        expect(wrapper.find(PASSWORD_SELECTOR)).toBeDefined();
+        expect(wrapper.find(PASSWORD_SELECTOR)).to.exist;
       });
 
       it('is rendered for students', () => {
@@ -59,7 +60,7 @@ describe('ChangeEmailForm', () => {
             isPasswordRequired={true}
           />
         );
-        expect(wrapper.find(PASSWORD_SELECTOR)).toBeDefined();
+        expect(wrapper.find(PASSWORD_SELECTOR)).to.exist;
       });
     });
 
@@ -72,7 +73,7 @@ describe('ChangeEmailForm', () => {
             isPasswordRequired={false}
           />
         );
-        expect(wrapper.find(PASSWORD_SELECTOR)).toBeFalsy();
+        expect(wrapper.find(PASSWORD_SELECTOR)).not.to.exist;
       });
 
       it('is not rendered for students', () => {
@@ -83,7 +84,7 @@ describe('ChangeEmailForm', () => {
             isPasswordRequired={false}
           />
         );
-        expect(wrapper.find(PASSWORD_SELECTOR)).toBeFalsy();
+        expect(wrapper.find(PASSWORD_SELECTOR)).not.to.exist;
       });
     });
   });
@@ -98,7 +99,7 @@ describe('ChangeEmailForm', () => {
     };
 
     beforeEach(() => {
-      onChange = jest.fn();
+      onChange = sinon.spy();
       wrapper = mount(
         <ChangeEmailForm
           {...DEFAULT_PROPS}
@@ -109,30 +110,30 @@ describe('ChangeEmailForm', () => {
     });
 
     it('when the email field changes', () => {
-      expect(onChange).not.toHaveBeenCalled();
+      expect(onChange).not.to.have.been.called;
 
       const changedEmail = 'newEmail@example.com';
       wrapper
         .find(EMAIL_SELECTOR)
         .simulate('change', {target: {value: changedEmail}});
 
-      expect(onChange).toHaveBeenCalledTimes(1);
-      expect(onChange.mock.calls[0][0]).toEqual({
+      expect(onChange).to.have.been.calledOnce;
+      expect(onChange.firstCall.args[0]).to.deep.equal({
         ...initialValues,
         newEmail: changedEmail,
       });
     });
 
     it('when the password field changes', () => {
-      expect(onChange).not.toHaveBeenCalled();
+      expect(onChange).not.to.have.been.called;
 
       const changedPassword = 'differentPassword';
       wrapper
         .find(PASSWORD_SELECTOR)
         .simulate('change', {target: {value: changedPassword}});
 
-      expect(onChange).toHaveBeenCalledTimes(1);
-      expect(onChange.mock.calls[0][0]).toEqual({
+      expect(onChange).to.have.been.calledOnce;
+      expect(onChange.firstCall.args[0]).to.deep.equal({
         ...initialValues,
         currentPassword: changedPassword,
       });
@@ -140,13 +141,13 @@ describe('ChangeEmailForm', () => {
 
     it('when the email opt-in field changes', () => {
       wrapper.setProps({userType: 'teacher'});
-      expect(onChange).not.toHaveBeenCalled();
+      expect(onChange).not.to.have.been.called;
 
       const changedOptIn = 'no';
       wrapper.find(OPT_OUT_SELECTOR).simulate('click');
 
-      expect(onChange).toHaveBeenCalledTimes(1);
-      expect(onChange.mock.calls[0][0]).toEqual({
+      expect(onChange).to.have.been.calledOnce;
+      expect(onChange.firstCall.args[0]).to.deep.equal({
         ...initialValues,
         emailOptIn: changedOptIn,
       });
@@ -157,60 +158,60 @@ describe('ChangeEmailForm', () => {
     let onSubmit, wrapper;
 
     beforeEach(() => {
-      onSubmit = jest.fn();
+      onSubmit = sinon.spy();
       wrapper = mount(
         <ChangeEmailForm {...DEFAULT_PROPS} onSubmit={onSubmit} />
       );
     });
 
     it('when the enter key is pressed in the email field', () => {
-      expect(onSubmit).not.toHaveBeenCalled();
+      expect(onSubmit).not.to.have.been.called;
 
       wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Enter'});
 
-      expect(onSubmit).toHaveBeenCalledTimes(1);
-      expect(onSubmit.mock.calls[0]).toHaveLength(0);
+      expect(onSubmit).to.have.been.calledOnce;
+      expect(onSubmit.firstCall.args).to.be.empty;
     });
 
     it('when the enter key is pressed in the password field', () => {
-      expect(onSubmit).not.toHaveBeenCalled();
+      expect(onSubmit).not.to.have.been.called;
 
       wrapper.find(PASSWORD_SELECTOR).simulate('keydown', {key: 'Enter'});
 
-      expect(onSubmit).toHaveBeenCalledTimes(1);
-      expect(onSubmit.mock.calls[0]).toHaveLength(0);
+      expect(onSubmit).to.have.been.calledOnce;
+      expect(onSubmit.firstCall.args).to.be.empty;
     });
 
     it('when the enter key is pressed on the opt-in field', () => {
       wrapper.setProps({userType: 'teacher'});
-      expect(onSubmit).not.toHaveBeenCalled();
+      expect(onSubmit).not.to.have.been.called;
 
       wrapper.find(OPT_IN_SELECTOR).simulate('keydown', {key: 'Enter'});
 
-      expect(onSubmit).toHaveBeenCalledTimes(1);
-      expect(onSubmit.mock.calls[0]).toHaveLength(0);
+      expect(onSubmit).to.have.been.calledOnce;
+      expect(onSubmit.firstCall.args).to.be.empty;
     });
 
     it('but not when other keys are pressed', () => {
-      expect(onSubmit).not.toHaveBeenCalled();
+      expect(onSubmit).not.to.have.been.called;
 
       wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'a'});
       wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Backspace'});
       wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Escape'});
 
-      expect(onSubmit).not.toHaveBeenCalled();
+      expect(onSubmit).not.to.have.been.called;
     });
 
     it('and not when the form is disabled', () => {
       wrapper.setProps({userType: 'teacher'});
       wrapper.setProps({disabled: true});
-      expect(onSubmit).not.toHaveBeenCalled();
+      expect(onSubmit).not.to.have.been.called;
 
       wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Enter'});
       wrapper.find(PASSWORD_SELECTOR).simulate('keydown', {key: 'Enter'});
       wrapper.find(OPT_IN_SELECTOR).simulate('keydown', {key: 'Enter'});
 
-      expect(onSubmit).not.toHaveBeenCalled();
+      expect(onSubmit).not.to.have.been.called;
     });
   });
 
@@ -243,13 +244,16 @@ describe('ChangeEmailForm', () => {
       wrapper = mount(
         <ChangeEmailForm {...DEFAULT_PROPS} userType="teacher" />
       );
-      emailSpy = jest.spyOn(wrapper.find(EMAIL_SELECTOR).getDOMNode(), 'focus').mockClear().mockImplementation();
-      passwordSpy = jest.spyOn(wrapper.find(PASSWORD_SELECTOR).getDOMNode(), 'focus').mockClear().mockImplementation();
+      emailSpy = sinon.stub(wrapper.find(EMAIL_SELECTOR).getDOMNode(), 'focus');
+      passwordSpy = sinon.stub(
+        wrapper.find(PASSWORD_SELECTOR).getDOMNode(),
+        'focus'
+      );
     });
 
     afterEach(() => {
-      emailSpy.mockRestore();
-      passwordSpy.mockRestore();
+      emailSpy.restore();
+      passwordSpy.restore();
     });
 
     it('does nothing if there are no validation errors', () => {
@@ -258,8 +262,8 @@ describe('ChangeEmailForm', () => {
       });
 
       wrapper.instance().focusOnAnError();
-      expect(emailSpy).not.toHaveBeenCalled();
-      expect(passwordSpy).not.toHaveBeenCalled();
+      expect(emailSpy).not.to.have.been.called;
+      expect(passwordSpy).not.to.have.been.called;
     });
 
     it('focuses on the email field if there is an email validation error', () => {
@@ -270,8 +274,8 @@ describe('ChangeEmailForm', () => {
       });
 
       wrapper.instance().focusOnAnError();
-      expect(emailSpy).toHaveBeenCalledTimes(1);
-      expect(passwordSpy).not.toHaveBeenCalled();
+      expect(emailSpy).to.have.been.calledOnce;
+      expect(passwordSpy).not.to.have.been.called;
     });
 
     it('focuses on the password field if there is a password validation error', () => {
@@ -282,8 +286,8 @@ describe('ChangeEmailForm', () => {
       });
 
       wrapper.instance().focusOnAnError();
-      expect(emailSpy).not.toHaveBeenCalled();
-      expect(passwordSpy).toHaveBeenCalledTimes(1);
+      expect(emailSpy).not.to.have.been.called;
+      expect(passwordSpy).to.have.been.calledOnce;
     });
 
     it('focuses on the email field if there are both email and password validation errors', () => {
@@ -295,8 +299,8 @@ describe('ChangeEmailForm', () => {
       });
 
       wrapper.instance().focusOnAnError();
-      expect(emailSpy).toHaveBeenCalledTimes(1);
-      expect(passwordSpy).not.toHaveBeenCalled();
+      expect(emailSpy).to.have.been.calledOnce;
+      expect(passwordSpy).not.to.have.been.called;
     });
   });
 });

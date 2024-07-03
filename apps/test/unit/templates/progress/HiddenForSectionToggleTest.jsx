@@ -1,11 +1,12 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import Button from '@cdo/apps/templates/Button';
 import {UnconnectedHiddenForSectionToggle as HiddenForSectionToggle} from '@cdo/apps/templates/progress/HiddenForSectionToggle';
 import i18n from '@cdo/locale';
 
-
+import {expect} from '../../../util/deprecatedChai';
 
 describe('HiddenForSectionToggle', () => {
   it('renders two buttons reflecting hidden state', () => {
@@ -40,24 +41,24 @@ describe('HiddenForSectionToggle', () => {
   });
 
   it('calls onChange handler when buttons are clicked', () => {
-    const callback = jest.fn();
+    const callback = sinon.spy();
     const wrapper = shallow(
       <HiddenForSectionToggle hidden={false} onChange={callback} />
     );
 
     // Click the first button
     wrapper.find(Button).at(0).props().onClick();
-    expect(callback).toHaveBeenCalledWith('visible');
+    expect(callback).to.have.been.calledOnce.and.calledWith('visible');
 
-    callback.mockReset();
+    callback.resetHistory();
 
     // Click the second button
     wrapper.find(Button).at(1).props().onClick();
-    expect(callback).toHaveBeenCalledWith('hidden');
+    expect(callback).to.have.been.calledOnce.and.calledWith('hidden');
   });
 
   it('does not call onChange when disabled', () => {
-    const callback = jest.fn();
+    const callback = sinon.spy();
     const wrapper = shallow(
       <HiddenForSectionToggle hidden={false} onChange={callback} disabled />
     );
@@ -65,6 +66,6 @@ describe('HiddenForSectionToggle', () => {
     // Click both buttons
     wrapper.find(Button).at(0).props().onClick();
     wrapper.find(Button).at(1).props().onClick();
-    expect(callback).not.toHaveBeenCalled();
+    expect(callback).not.to.have.been.called;
   });
 });

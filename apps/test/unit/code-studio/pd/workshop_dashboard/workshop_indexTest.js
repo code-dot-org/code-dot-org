@@ -1,5 +1,7 @@
-import { shallow } from 'enzyme';
+import {expect} from 'chai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import Permission, {
   Facilitator,
@@ -52,12 +54,14 @@ describe('WorkshopIndex', () => {
           context,
         });
 
-        expect(workshopIndex.find('ButtonToolbar Button').length).toBe(buttons.length);
+        expect(workshopIndex.find('ButtonToolbar Button').length).to.equal(
+          buttons.length
+        );
         expect(
           workshopIndex.find('ButtonToolbar Button').map(button => {
             return button.children().first().text();
           })
-        ).toEqual(buttons);
+        ).to.deep.equal(buttons);
       });
     });
   });

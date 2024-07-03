@@ -2,6 +2,7 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
+import sinon from 'sinon';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
@@ -9,7 +10,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import MarketingAnnouncementBanner from '@cdo/apps/templates/studioHomepages/MarketingAnnouncementBanner';
 import * as utils from '@cdo/apps/utils';
 
-
+import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   announcement: {
@@ -47,50 +48,50 @@ const isBannerDisplayed = wrapper => {
 
 describe('MarketingAnnouncementBanner', () => {
   it('if banner has not been dismissed, banner is displayed', () => {
-    jest.spyOn(utils, 'tryGetLocalStorage').mockClear().mockReturnValue(null);
+    sinon.stub(utils, 'tryGetLocalStorage').returns(null);
 
     const wrapper = setUp();
-    expect(isBannerDisplayed(wrapper)).toBe(true);
-    utils.tryGetLocalStorage.mockRestore();
+    expect(isBannerDisplayed(wrapper)).to.be.true;
+    utils.tryGetLocalStorage.restore();
   });
 
   it('if banner has been dismissed, banner is not displayed', () => {
-    jest.spyOn(utils, 'tryGetLocalStorage').mockClear().mockReturnValue('false');
+    sinon.stub(utils, 'tryGetLocalStorage').returns('false');
 
     const wrapper = setUp();
-    expect(isBannerDisplayed(wrapper)).toBe(false);
+    expect(isBannerDisplayed(wrapper)).to.be.false;
 
-    utils.tryGetLocalStorage.mockRestore();
+    utils.tryGetLocalStorage.restore();
   });
 
   it('when banner is being displayed, clicking button hides banner', () => {
-    jest.spyOn(utils, 'tryGetLocalStorage').mockClear().mockReturnValue(null);
+    sinon.stub(utils, 'tryGetLocalStorage').returns(null);
 
     const wrapper = setUp();
     wrapper
       .find('button#marketing-announcement-banner--dismiss')
       .simulate('click');
-    expect(isBannerDisplayed(wrapper)).toBe(false);
+    expect(isBannerDisplayed(wrapper)).to.be.false;
 
-    utils.tryGetLocalStorage.mockRestore();
+    utils.tryGetLocalStorage.restore();
   });
 
   it('when banner is being displayed, clicking sets local storage', () => {
-    jest.spyOn(utils, 'tryGetLocalStorage').mockClear().mockReturnValue(null);
+    sinon.stub(utils, 'tryGetLocalStorage').returns(null);
 
-    const setLocalStorageSpy = jest.spyOn(utils, 'trySetLocalStorage').mockClear();
+    const setLocalStorageSpy = sinon.spy(utils, 'trySetLocalStorage');
     const wrapper = setUp();
     wrapper
       .find('button#marketing-announcement-banner--dismiss')
       .simulate('click');
     expect(setLocalStorageSpy.calledOnce);
 
-    utils.tryGetLocalStorage.mockRestore();
+    utils.tryGetLocalStorage.restore();
   });
 
   it('sends event to firehose when banner is dismissed', () => {
-    jest.spyOn(utils, 'tryGetLocalStorage').mockClear().mockReturnValue(null);
-    const firehoseSpy = jest.spyOn(firehoseClient, 'putRecord').mockClear();
+    sinon.stub(utils, 'tryGetLocalStorage').returns(null);
+    const firehoseSpy = sinon.spy(firehoseClient, 'putRecord');
 
     const wrapper = setUp();
     wrapper
@@ -106,13 +107,13 @@ describe('MarketingAnnouncementBanner', () => {
       }),
     });
 
-    utils.tryGetLocalStorage.mockRestore();
-    firehoseSpy.mockRestore();
+    utils.tryGetLocalStorage.restore();
+    firehoseSpy.restore();
   });
 
   it('sends event to firehose when button is clicked', () => {
-    jest.spyOn(utils, 'tryGetLocalStorage').mockClear().mockReturnValue(null);
-    const firehoseSpy = jest.spyOn(firehoseClient, 'putRecord').mockClear();
+    sinon.stub(utils, 'tryGetLocalStorage').returns(null);
+    const firehoseSpy = sinon.spy(firehoseClient, 'putRecord');
 
     const wrapper = setUp();
     wrapper.find('a#announcement-button').simulate('click');
@@ -126,7 +127,7 @@ describe('MarketingAnnouncementBanner', () => {
       }),
     });
 
-    utils.tryGetLocalStorage.mockRestore();
-    firehoseSpy.mockRestore();
+    utils.tryGetLocalStorage.restore();
+    firehoseSpy.restore();
   });
 });

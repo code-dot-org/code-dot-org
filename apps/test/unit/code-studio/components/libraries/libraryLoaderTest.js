@@ -1,9 +1,11 @@
+import sinon from 'sinon';
+
 import annotationList from '@cdo/apps/acemode/annotationList';
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import loadLibrary from '@cdo/apps/code-studio/components/libraries/libraryLoader';
 import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
 
-
+import {expect} from '../../../../util/reconfiguredChai';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('libraryLoader.load', () => {
@@ -26,59 +28,65 @@ describe('libraryLoader.load', () => {
   });
 
   beforeEach(() => {
-    getJSLintAnnotationsStub = jest.spyOn(annotationList, 'getJSLintAnnotations').mockClear().mockImplementation();
-    sourceStub = jest.spyOn(window.dashboard.project, 'getUpdatedSourceAndHtml_').mockClear().mockImplementation();
-    functionStub = jest.spyOn(libraryParser, 'getFunctions').mockClear().mockImplementation();
-    jest.spyOn(window.dashboard.project, 'getLevelName').mockClear().mockReturnValue(libraryName);
-    fetchStub = jest.spyOn(libraryClientApi, 'fetchLatest').mockClear().mockImplementation();
-    onErrorStub = jest.fn();
-    onSuccessStub = jest.fn();
+    getJSLintAnnotationsStub = sinon.stub(
+      annotationList,
+      'getJSLintAnnotations'
+    );
+    sourceStub = sinon.stub(
+      window.dashboard.project,
+      'getUpdatedSourceAndHtml_'
+    );
+    functionStub = sinon.stub(libraryParser, 'getFunctions');
+    sinon.stub(window.dashboard.project, 'getLevelName').returns(libraryName);
+    fetchStub = sinon.stub(libraryClientApi, 'fetchLatest');
+    onErrorStub = sinon.stub();
+    onSuccessStub = sinon.stub();
   });
 
   afterEach(() => {
-    annotationList.getJSLintAnnotations.mockRestore();
-    window.dashboard.project.getUpdatedSourceAndHtml_.mockRestore();
-    libraryParser.getFunctions.mockRestore();
-    window.dashboard.project.getLevelName.mockRestore();
-    libraryClientApi.fetchLatest.mockRestore();
-    onErrorStub.mockReset();
-    onSuccessStub.mockReset();
+    annotationList.getJSLintAnnotations.restore();
+    window.dashboard.project.getUpdatedSourceAndHtml_.restore();
+    libraryParser.getFunctions.restore();
+    window.dashboard.project.getLevelName.restore();
+    libraryClientApi.fetchLatest.restore();
+    onErrorStub.resetHistory();
+    onSuccessStub.resetHistory();
   });
 
   it('calls onError when an error exists in the code', async () => {
-    getJSLintAnnotationsStub.mockReturnValue([{type: 'error'}]);
+    getJSLintAnnotationsStub.returns([{type: 'error'}]);
 
     await loadLibrary(libraryClientApi, onErrorStub, onSuccessStub);
 
-    expect(onErrorStub).toHaveBeenCalled();
-    expect(onSuccessStub).not.toHaveBeenCalled();
+    expect(onErrorStub.called).to.be.true;
+    expect(onSuccessStub.called).to.be.false;
   });
 
   it('calls onError when there are no functions', async () => {
-    getJSLintAnnotationsStub.mockReturnValue([]);
+    getJSLintAnnotationsStub.returns([]);
     sourceStub.yields({source: ''});
-    fetchStub.mockImplementation((...args) => args[1](undefined, 404));
-    functionStub.mockReturnValue([]);
+    fetchStub.callsArgWith(1, undefined, 404);
+    functionStub.returns([]);
 
     await loadLibrary(libraryClientApi, onErrorStub, onSuccessStub);
 
-    expect(onErrorStub).toHaveBeenCalled();
-    expect(onSuccessStub).not.toHaveBeenCalled();
+    expect(onErrorStub.called).to.be.true;
+    expect(onSuccessStub.called).to.be.false;
   });
 
   it('prepends imported libraries to the exported source', async () => {
     let library = 'function bar() {}';
     let sourceFunctionList = [{functionName: 'foo', comment: ''}];
-    getJSLintAnnotationsStub.mockReturnValue([]);
-    functionStub.mockReturnValue(sourceFunctionList);
+    getJSLintAnnotationsStub.returns([]);
+    functionStub.returns(sourceFunctionList);
     sourceStub.yields({source: source, libraries: [library]});
-    fetchStub.mockImplementation((...args) => args[1](undefined, 404));
-    jest.spyOn(libraryParser, 'createLibraryClosure').mockClear().mockReturnValue(library);
+    fetchStub.callsArgWith(1, undefined, 404);
+    sinon.stub(libraryParser, 'createLibraryClosure').returns(library);
 
     await loadLibrary(libraryClientApi, onErrorStub, onSuccessStub);
 
-    expect(onErrorStub).not.toHaveBeenCalled();
-    expect(onSuccessStub).toHaveBeenCalledWith({
+    expect(onErrorStub.called).to.be.false;
+    expect(onSuccessStub).to.have.been.calledWith({
       alreadyPublished: false,
       libraryDescription: '',
       libraryName: libraryName,
@@ -87,7 +95,7 @@ describe('libraryLoader.load', () => {
       sourceFunctionList: sourceFunctionList,
     });
 
-    libraryParser.createLibraryClosure.mockRestore();
+    libraryParser.createLibraryClosure.restore();
   });
 
   it('pre-sets library values to the values of the already-published library', async () => {
@@ -100,15 +108,15 @@ describe('libraryLoader.load', () => {
       name: 'existingLibraryName',
       functions: ['foo', 'baz'],
     };
-    getJSLintAnnotationsStub.mockReturnValue([]);
-    functionStub.mockReturnValue(sourceFunctionList);
+    getJSLintAnnotationsStub.returns([]);
+    functionStub.returns(sourceFunctionList);
     sourceStub.yields({source: source});
-    fetchStub.mockImplementation((...args) => args[0](JSON.stringify(existingLibrary)));
+    fetchStub.callsArgWith(0, JSON.stringify(existingLibrary));
 
     await loadLibrary(libraryClientApi, onErrorStub, onSuccessStub);
 
-    expect(onErrorStub).not.toHaveBeenCalled();
-    expect(onSuccessStub).toHaveBeenCalledWith({
+    expect(onErrorStub.called).to.be.false;
+    expect(onSuccessStub).to.have.been.calledWith({
       alreadyPublished: true,
       libraryDescription: existingLibrary.description,
       libraryName: existingLibrary.name,

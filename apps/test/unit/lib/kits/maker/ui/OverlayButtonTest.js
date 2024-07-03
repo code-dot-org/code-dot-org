@@ -1,20 +1,21 @@
 /** @file Test maker overlay button */
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import OverlayButton from '@cdo/apps/lib/kits/maker/ui/OverlayButton';
 
-
+import {expect} from '../../../../../util/deprecatedChai';
 
 describe('OverlayButton', () => {
   it('renders a button', () => {
     const wrapper = mount(<OverlayButton text="Click me" onClick={() => {}} />);
-    expect(wrapper.find('button').length).toBeGreaterThan(0);
+    expect(wrapper).to.have.descendants('button');
   });
 
   it('renders the given text inside the button', () => {
     const wrapper = mount(<OverlayButton text="xyzzy" onClick={() => {}} />);
-    expect(wrapper.text()).toContain('xyzzy');
+    expect(wrapper.text()).to.include('xyzzy');
   });
 
   it('puts a provided className on the button', () => {
@@ -25,10 +26,10 @@ describe('OverlayButton', () => {
   });
 
   it('calls onClick when clicked', () => {
-    const spy = jest.fn();
+    const spy = sinon.spy();
     const wrapper = mount(<OverlayButton text="OK" onClick={spy} />);
-    expect(spy).not.toHaveBeenCalled();
+    expect(spy).not.to.have.been.called;
     wrapper.find('button').simulate('click');
-    expect(spy).toHaveBeenCalledTimes(1);
+    expect(spy).to.have.been.calledOnce;
   });
 });

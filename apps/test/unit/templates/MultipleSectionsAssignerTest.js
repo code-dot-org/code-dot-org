@@ -1,5 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {UnconnectedMultipleSectionsAssigner as MultipleSectionsAssigner} from '@cdo/apps/templates/MultipleSectionsAssigner';
@@ -9,7 +10,7 @@ import {
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-
+import {expect} from '../../util/reconfiguredChai';
 
 describe('MultipleSectionsAssigner', () => {
   const assigedStandaloneUnitSection = fakeTeacherSectionsForDropdown[3];
@@ -47,7 +48,7 @@ describe('MultipleSectionsAssigner', () => {
         .filterWhere(n => n.props().name === assignedCourseANDUnitSection.id)
         .first()
         .props().checked
-    ).toBe(true);
+    ).to.be.true;
 
     // Checks that a section assiged the course but not the unit is NOT checked
     expect(
@@ -56,7 +57,7 @@ describe('MultipleSectionsAssigner', () => {
         .filterWhere(n => n.props().name === assigedCourseButNOTUnitSection.id)
         .first()
         .props().checked
-    ).toBe(false);
+    ).to.be.false;
   });
 
   it('renders checked and unchecked checkboxes for sections on the COURSE landing page', () => {
@@ -74,7 +75,7 @@ describe('MultipleSectionsAssigner', () => {
         .filterWhere(n => n.props().name === assignedCourseANDUnitSection.id)
         .first()
         .props().checked
-    ).toBe(true);
+    ).to.be.true;
 
     // Checks that a section assiged the course but not the unit is checked
     expect(
@@ -83,7 +84,7 @@ describe('MultipleSectionsAssigner', () => {
         .filterWhere(n => n.props().name === assigedCourseButNOTUnitSection.id)
         .first()
         .props().checked
-    ).toBe(true);
+    ).to.be.true;
 
     // Checks that a section not assigned ANY curriculum is NOT checked
     expect(
@@ -92,7 +93,7 @@ describe('MultipleSectionsAssigner', () => {
         .filterWhere(n => n.props().name === unassignedSection.id)
         .first()
         .props().checked
-    ).toBe(false);
+    ).to.be.false;
 
     // Checks that a section assigned to a different curriculum is NOT checked
     expect(
@@ -101,7 +102,7 @@ describe('MultipleSectionsAssigner', () => {
         .filterWhere(n => n.props().name === assignedSection.id)
         .first()
         .props().checked
-    ).toBe(false);
+    ).to.be.false;
   });
 
   it('renders checked and unchecked checkboxes for sections on a STAND ALONE landing page', () => {
@@ -120,7 +121,7 @@ describe('MultipleSectionsAssigner', () => {
         .filterWhere(n => n.props().name === assigedStandaloneUnitSection.id)
         .first()
         .props().checked
-    ).toBe(true);
+    ).to.be.true;
 
     // Checks that a section assiged the course but not the unit is NOT checked
     expect(
@@ -129,7 +130,7 @@ describe('MultipleSectionsAssigner', () => {
         .filterWhere(n => n.props().name === assignedSection.id)
         .first()
         .props().checked
-    ).toBe(false);
+    ).to.be.false;
   });
 
   it('renders all student sections for a student course', () => {
@@ -150,7 +151,7 @@ describe('MultipleSectionsAssigner', () => {
         wrapper
           .find('Checkbox')
           .filterWhere(option => option.props().name === section.id)
-      ).toBeDefined();
+      ).to.exist;
     });
 
     const notAssignableSections = fakeTeacherSectionsForDropdown.filter(
@@ -161,7 +162,7 @@ describe('MultipleSectionsAssigner', () => {
         wrapper
           .find('Checkbox')
           .filterWhere(option => option.props().name === section.id)
-      ).toHaveLength(0);
+      ).to.have.lengthOf(0);
     });
   });
 
@@ -184,7 +185,7 @@ describe('MultipleSectionsAssigner', () => {
         wrapper
           .find('Checkbox')
           .filterWhere(option => option.props().name === section.id)
-      ).toBeDefined();
+      ).to.exist;
     });
 
     const notAssignableSections = fakeTeacherSectionsForDropdown.filter(
@@ -195,7 +196,7 @@ describe('MultipleSectionsAssigner', () => {
         wrapper
           .find('Checkbox')
           .filterWhere(option => option.props().name === section.id)
-      ).toHaveLength(0);
+      ).to.have.lengthOf(0);
     });
   });
 
@@ -226,13 +227,13 @@ describe('MultipleSectionsAssigner', () => {
         .filterWhere(n => n.props().name === assignedCourseANDUnitSection.id)
         .first()
         .props().checked
-    ).toBe(false);
+    ).to.be.false;
 
     wrapper.find('#confirm-assign').simulate('click');
 
-    expect(assignToSection).toHaveBeenCalledTimes(1);
-    expect(reassignConfirm).toHaveBeenCalledTimes(1);
-    expect(assignToSection).toHaveBeenCalledWith(
+    expect(assignToSection).to.have.been.calledOnce;
+    expect(reassignConfirm).to.have.been.calledOnce;
+    expect(assignToSection).to.have.been.calledWith(
       assignedCourseANDUnitSection.id,
       assignedCourseANDUnitSection.courseId,
       assignedCourseANDUnitSection.courseOfferingId,
@@ -269,13 +270,13 @@ describe('MultipleSectionsAssigner', () => {
         .filterWhere(n => n.props().name === unassignedSection.id)
         .first()
         .props().checked
-    ).toBe(true);
+    ).to.be.true;
 
     wrapper.find('#confirm-assign').simulate('click');
 
-    expect(updateHiddenScript).toHaveBeenCalledTimes(1);
-    expect(assignToSection).toHaveBeenCalledTimes(1);
-    expect(assignToSection).toHaveBeenCalledWith(
+    expect(updateHiddenScript).to.have.been.calledOnce;
+    expect(assignToSection).to.have.been.calledOnce;
+    expect(assignToSection).to.have.been.calledWith(
       unassignedSection.id,
       assigedStandaloneUnitSection.courseId,
       assigedStandaloneUnitSection.courseOfferingId,
@@ -311,13 +312,15 @@ describe('MultipleSectionsAssigner', () => {
         .filterWhere(n => n.props().name === assigedStandaloneUnitSection.id)
         .first()
         .props().checked
-    ).toBe(false);
+    ).to.be.false;
 
     wrapper.find('#confirm-assign').simulate('click');
 
-    expect(unassignSection).toHaveBeenCalledTimes(1);
-    expect(reassignConfirm).toHaveBeenCalledTimes(1);
-    expect(unassignSection).toHaveBeenCalledWith(assigedStandaloneUnitSection.id);
+    expect(unassignSection).to.have.been.calledOnce;
+    expect(reassignConfirm).to.have.been.calledOnce;
+    expect(unassignSection).to.have.been.calledWith(
+      assigedStandaloneUnitSection.id
+    );
   });
 
   it('assigns a unit on the UNIT landing page of non-standalone course when checkbox is checked', () => {
@@ -349,14 +352,14 @@ describe('MultipleSectionsAssigner', () => {
         .filterWhere(n => n.props().name === unassignedSection.id)
         .first()
         .props().checked
-    ).toBe(true);
+    ).to.be.true;
 
     wrapper.find('#confirm-assign').simulate('click');
 
-    expect(updateHiddenScript).toHaveBeenCalledTimes(1);
-    expect(assignToSection).toHaveBeenCalledTimes(1);
-    expect(reassignConfirm).toHaveBeenCalledTimes(1);
-    expect(assignToSection).toHaveBeenCalledWith(
+    expect(updateHiddenScript).to.have.been.calledOnce;
+    expect(assignToSection).to.have.been.calledOnce;
+    expect(reassignConfirm).to.have.been.calledOnce;
+    expect(assignToSection).to.have.been.calledWith(
       unassignedSection.id,
       assignedCourseANDUnitSection.courseId,
       assignedCourseANDUnitSection.courseOfferingId,
@@ -392,13 +395,16 @@ describe('MultipleSectionsAssigner', () => {
         .filterWhere(n => n.props().name === assignedCourseANDUnitSection.id)
         .first()
         .props().checked
-    ).toBe(false);
+    ).to.be.false;
 
     wrapper.find('#confirm-assign').simulate('click');
 
-    expect(unassignSection).toHaveBeenCalledTimes(1);
-    expect(reassignConfirm).toHaveBeenCalledTimes(1);
-    expect(unassignSection).toHaveBeenCalledWith(assignedCourseANDUnitSection.id, '');
+    expect(unassignSection).to.have.been.calledOnce;
+    expect(reassignConfirm).to.have.been.calledOnce;
+    expect(unassignSection).to.have.been.calledWith(
+      assignedCourseANDUnitSection.id,
+      ''
+    );
   });
 
   it('assigns a course on the COURSE landing page checkbox is checked', () => {
@@ -428,13 +434,13 @@ describe('MultipleSectionsAssigner', () => {
         .filterWhere(n => n.props().name === unassignedSection.id)
         .first()
         .props().checked
-    ).toBe(true);
+    ).to.be.true;
 
     wrapper.find('#confirm-assign').simulate('click');
 
-    expect(assignToSection).toHaveBeenCalledTimes(1);
-    expect(reassignConfirm).toHaveBeenCalledTimes(1);
-    expect(assignToSection).toHaveBeenCalledWith(
+    expect(assignToSection).to.have.been.calledOnce;
+    expect(reassignConfirm).to.have.been.calledOnce;
+    expect(assignToSection).to.have.been.calledWith(
       unassignedSection.id,
       assignedCourseANDUnitSection.courseId,
       assignedCourseANDUnitSection.courseOfferingId,
@@ -454,7 +460,7 @@ describe('MultipleSectionsAssigner', () => {
     wrapper.find('#select-all-sections').simulate('click');
     const allSections = wrapper.find('Checkbox');
     for (let i = 0; i < allSections.length; i++) {
-      expect(allSections.at(i).props().checked).toBe(true);
+      expect(allSections.at(i).props().checked).to.be.true;
     }
   });
 });

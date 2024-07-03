@@ -1,9 +1,10 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import ChangeUserTypeForm from '@cdo/apps/lib/ui/accounts/ChangeUserTypeForm';
 
-
+import {expect} from '../../../../util/deprecatedChai';
 
 describe('ChangeUserTypeForm', () => {
   const EMAIL_SELECTOR = 'input[type="email"]';
@@ -25,7 +26,7 @@ describe('ChangeUserTypeForm', () => {
     };
 
     beforeEach(() => {
-      onChange = jest.fn();
+      onChange = sinon.spy();
       wrapper = mount(
         <ChangeUserTypeForm
           {...DEFAULT_PROPS}
@@ -36,30 +37,30 @@ describe('ChangeUserTypeForm', () => {
     });
 
     it('when the email field changes', () => {
-      expect(onChange).not.toHaveBeenCalled();
+      expect(onChange).not.to.have.been.called;
 
       const changedEmail = 'currentEmail@example.com';
       wrapper
         .find(EMAIL_SELECTOR)
         .simulate('change', {target: {value: changedEmail}});
 
-      expect(onChange).toHaveBeenCalledTimes(1);
-      expect(onChange.mock.calls[0][0]).toEqual({
+      expect(onChange).to.have.been.calledOnce;
+      expect(onChange.firstCall.args[0]).to.deep.equal({
         ...initialValues,
         email: changedEmail,
       });
     });
 
     it('when the email opt-in field changes', () => {
-      expect(onChange).not.toHaveBeenCalled();
+      expect(onChange).not.to.have.been.called;
 
       const newOptIn = 'yes';
       wrapper
         .find(OPT_IN_SELECTOR)
         .simulate('change', {target: {value: newOptIn}});
 
-      expect(onChange).toHaveBeenCalledTimes(1);
-      expect(onChange.mock.calls[0][0]).toEqual({
+      expect(onChange).to.have.been.calledOnce;
+      expect(onChange.firstCall.args[0]).to.deep.equal({
         ...initialValues,
         emailOptIn: newOptIn,
       });
@@ -70,48 +71,48 @@ describe('ChangeUserTypeForm', () => {
     let onSubmit, wrapper;
 
     beforeEach(() => {
-      onSubmit = jest.fn();
+      onSubmit = sinon.spy();
       wrapper = mount(
         <ChangeUserTypeForm {...DEFAULT_PROPS} onSubmit={onSubmit} />
       );
     });
 
     it('when the enter key is pressed in the email field', () => {
-      expect(onSubmit).not.toHaveBeenCalled();
+      expect(onSubmit).not.to.have.been.called;
 
       wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Enter'});
 
-      expect(onSubmit).toHaveBeenCalledTimes(1);
-      expect(onSubmit.mock.calls[0]).toHaveLength(0);
+      expect(onSubmit).to.have.been.calledOnce;
+      expect(onSubmit.firstCall.args).to.be.empty;
     });
 
     it('when the enter key is pressed in email opt-in field', () => {
-      expect(onSubmit).not.toHaveBeenCalled();
+      expect(onSubmit).not.to.have.been.called;
 
       wrapper.find(OPT_IN_SELECTOR).simulate('keydown', {key: 'Enter'});
 
-      expect(onSubmit).toHaveBeenCalledTimes(1);
-      expect(onSubmit.mock.calls[0]).toHaveLength(0);
+      expect(onSubmit).to.have.been.calledOnce;
+      expect(onSubmit.firstCall.args).to.be.empty;
     });
 
     it('but not when other keys are pressed', () => {
-      expect(onSubmit).not.toHaveBeenCalled();
+      expect(onSubmit).not.to.have.been.called;
 
       wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'a'});
       wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Backspace'});
       wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Escape'});
 
-      expect(onSubmit).not.toHaveBeenCalled();
+      expect(onSubmit).not.to.have.been.called;
     });
 
     it('and not when the form is disabled', () => {
       wrapper.setProps({disabled: true});
-      expect(onSubmit).not.toHaveBeenCalled();
+      expect(onSubmit).not.to.have.been.called;
 
       wrapper.find(EMAIL_SELECTOR).simulate('keydown', {key: 'Enter'});
       wrapper.find(OPT_IN_SELECTOR).simulate('keydown', {key: 'Enter'});
 
-      expect(onSubmit).not.toHaveBeenCalled();
+      expect(onSubmit).not.to.have.been.called;
     });
   });
 
@@ -136,11 +137,11 @@ describe('ChangeUserTypeForm', () => {
 
     beforeEach(() => {
       wrapper = mount(<ChangeUserTypeForm {...DEFAULT_PROPS} />);
-      emailSpy = jest.spyOn(wrapper.find(EMAIL_SELECTOR).getDOMNode(), 'focus').mockClear().mockImplementation();
+      emailSpy = sinon.stub(wrapper.find(EMAIL_SELECTOR).getDOMNode(), 'focus');
     });
 
     afterEach(() => {
-      emailSpy.mockRestore();
+      emailSpy.restore();
     });
 
     it('does nothing if there are no validation errors', () => {
@@ -149,7 +150,7 @@ describe('ChangeUserTypeForm', () => {
       });
 
       wrapper.instance().focusOnAnError();
-      expect(emailSpy).not.toHaveBeenCalled();
+      expect(emailSpy).not.to.have.been.called;
     });
 
     it('focuses on the email field if there is an email validation error', () => {
@@ -160,7 +161,7 @@ describe('ChangeUserTypeForm', () => {
       });
 
       wrapper.instance().focusOnAnError();
-      expect(emailSpy).toHaveBeenCalledTimes(1);
+      expect(emailSpy).to.have.been.calledOnce;
     });
   });
 });

@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import sinon from 'sinon';
 
 import {files as filesApi} from '@cdo/apps/clientApi';
 import header from '@cdo/apps/code-studio/header';
@@ -7,7 +8,7 @@ import {CP_API} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Playgrou
 import * as utils from '@cdo/apps/utils';
 import msg from '@cdo/locale';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {expect, assert} from '../../../util/reconfiguredChai';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 describe('project.js', () => {
@@ -22,279 +23,317 @@ describe('project.js', () => {
   beforeEach(() => {
     sourceHandler = createStubSourceHandler();
     replaceAppOptions();
-    jest.spyOn(utils, 'reload').mockClear().mockImplementation();
-    jest.spyOn(header, 'showProjectHeader').mockClear().mockImplementation();
-    jest.spyOn(header, 'showMinimalProjectHeader').mockClear().mockImplementation();
-    jest.spyOn(header, 'updateTimestamp').mockClear().mockImplementation();
+    sinon.stub(utils, 'reload');
+    sinon.stub(header, 'showProjectHeader');
+    sinon.stub(header, 'showMinimalProjectHeader');
+    sinon.stub(header, 'updateTimestamp');
   });
 
   afterEach(() => {
-    utils.reload.mockRestore();
-    header.showProjectHeader.mockRestore();
-    header.showMinimalProjectHeader.mockRestore();
-    header.updateTimestamp.mockRestore();
+    utils.reload.restore();
+    header.showProjectHeader.restore();
+    header.showMinimalProjectHeader.restore();
+    header.updateTimestamp.restore();
     restoreAppOptions();
   });
 
   describe('getNewProjectName()', () => {
     it('for applab', () => {
       window.appOptions.app = 'applab';
-      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameAppLab());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameAppLab()
+      );
     });
 
     it('for gamelab', () => {
       window.appOptions.app = 'gamelab';
-      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameGameLab());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameGameLab()
+      );
     });
 
     it('for weblab', () => {
       window.appOptions.app = 'weblab';
-      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameWebLab());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameWebLab()
+      );
     });
 
     it('for artist', () => {
       window.appOptions.app = 'turtle';
       window.appOptions.skinId = 'artist';
-      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameArtist());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameArtist()
+      );
     });
 
     it('for artist_zombie', () => {
       window.appOptions.app = 'turtle';
       window.appOptions.skinId = 'artist_zombie';
-      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameArtist());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameArtist()
+      );
     });
 
     it('for anna', () => {
       window.appOptions.app = 'turtle';
       window.appOptions.skinId = 'anna';
-      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameFrozen());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameFrozen()
+      );
     });
 
     it('for elsa', () => {
       window.appOptions.app = 'turtle';
       window.appOptions.skinId = 'elsa';
-      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameFrozen());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameFrozen()
+      );
     });
 
     it('for Big Game', () => {
       window.appOptions.app = 'studio';
       window.appOptions.level = {useContractEditor: true};
-      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameBigGame());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameBigGame()
+      );
     });
 
     it('for Play Lab', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'studio';
-      expect(project.getNewProjectName()).toBe(msg.defaultProjectNamePlayLab());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNamePlayLab()
+      );
     });
 
     it('for infinity', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'infinity';
-      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameInfinity());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameInfinity()
+      );
     });
 
     it('for gumball', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'gumball';
-      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameGumball());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameGumball()
+      );
     });
 
     it('for iceage', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'iceage';
-      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameIceAge());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameIceAge()
+      );
     });
 
     it('for Star Wars', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'hoc2015';
-      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameStarWars());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameStarWars()
+      );
     });
 
     it('for craft', () => {
       window.appOptions.app = 'craft';
-      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameMinecraft());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameMinecraft()
+      );
     });
 
     it('for flappy', () => {
       window.appOptions.app = 'flappy';
-      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameFlappy());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameFlappy()
+      );
     });
 
     it('for bounce', () => {
       window.appOptions.app = 'bounce';
-      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameBounce());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameBounce()
+      );
     });
 
     it('for sports', () => {
       window.appOptions.app = 'bounce';
       window.appOptions.skinId = 'sports';
-      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameSports());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameSports()
+      );
     });
 
     it('for basketball', () => {
       window.appOptions.app = 'bounce';
       window.appOptions.skinId = 'basketball';
-      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameBasketball());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameBasketball()
+      );
     });
 
     it('for dance', () => {
       window.appOptions.app = 'dance';
-      expect(project.getNewProjectName()).toBe(msg.defaultProjectNameDance());
+      expect(project.getNewProjectName()).to.equal(
+        msg.defaultProjectNameDance()
+      );
     });
 
     it('default case', () => {
       window.appOptions.app = 'someOtherType';
-      expect(project.getNewProjectName()).toBe(msg.defaultProjectName());
+      expect(project.getNewProjectName()).to.equal(msg.defaultProjectName());
     });
   });
 
   describe('getStandaloneApp()', () => {
     it('for any level with a predefined project type', () => {
       window.appOptions.level = {projectType: 'foobar'};
-      expect(project.getStandaloneApp()).toBe('foobar');
+      expect(project.getStandaloneApp()).to.equal('foobar');
     });
 
     it('for applab', () => {
       window.appOptions.app = 'applab';
-      expect(project.getStandaloneApp()).toBe('applab');
+      expect(project.getStandaloneApp()).to.equal('applab');
     });
 
     it('for dance', () => {
       window.appOptions.app = 'dance';
-      expect(project.getStandaloneApp()).toBe('dance');
+      expect(project.getStandaloneApp()).to.equal('dance');
     });
 
     it('for flappy', () => {
       window.appOptions.app = 'flappy';
-      expect(project.getStandaloneApp()).toBe('flappy');
+      expect(project.getStandaloneApp()).to.equal('flappy');
     });
 
     it('for weblab', () => {
       window.appOptions.app = 'weblab';
-      expect(project.getStandaloneApp()).toBe('weblab');
+      expect(project.getStandaloneApp()).to.equal('weblab');
     });
 
     it('for gamelab', () => {
       window.appOptions.app = 'gamelab';
-      expect(project.getStandaloneApp()).toBe('gamelab');
+      expect(project.getStandaloneApp()).to.equal('gamelab');
     });
 
     it('for spritelab', () => {
       window.appOptions.app = 'spritelab';
-      expect(project.getStandaloneApp()).toBe('spritelab');
+      expect(project.getStandaloneApp()).to.equal('spritelab');
     });
 
     it('for artist', () => {
       window.appOptions.app = 'turtle';
-      expect(project.getStandaloneApp()).toBe('artist');
+      expect(project.getStandaloneApp()).to.equal('artist');
     });
 
     it('for artist_k1', () => {
       window.appOptions.app = 'turtle';
       window.appOptions.level = {isK1: true};
-      expect(project.getStandaloneApp()).toBe('artist_k1');
+      expect(project.getStandaloneApp()).to.equal('artist_k1');
     });
 
     it('for frozen', () => {
       window.appOptions.app = 'turtle';
       window.appOptions.skinId = _.sample(['anna', 'elsa']);
-      expect(project.getStandaloneApp()).toBe('frozen');
+      expect(project.getStandaloneApp()).to.equal('frozen');
     });
 
     it('for minecraft_adventurer', () => {
       window.appOptions.app = 'craft';
-      expect(project.getStandaloneApp()).toBe('minecraft_adventurer');
+      expect(project.getStandaloneApp()).to.equal('minecraft_adventurer');
     });
 
     it('for minecraft_hero', () => {
       window.appOptions.app = 'craft';
       window.appOptions.level = {isAgentLevel: true};
-      expect(project.getStandaloneApp()).toBe('minecraft_hero');
+      expect(project.getStandaloneApp()).to.equal('minecraft_hero');
     });
 
     it('for minecraft_designer', () => {
       window.appOptions.app = 'craft';
       window.appOptions.level = {isEventLevel: true};
-      expect(project.getStandaloneApp()).toBe('minecraft_designer');
+      expect(project.getStandaloneApp()).to.equal('minecraft_designer');
     });
 
     it('for minecraft_codebuilder', () => {
       window.appOptions.app = 'craft';
       window.appOptions.level = {isConnectionLevel: true};
-      expect(project.getStandaloneApp()).toBe('minecraft_codebuilder');
+      expect(project.getStandaloneApp()).to.equal('minecraft_codebuilder');
     });
 
     it('for playlab', () => {
       window.appOptions.app = 'studio';
-      expect(project.getStandaloneApp()).toBe('playlab');
+      expect(project.getStandaloneApp()).to.equal('playlab');
     });
 
     it('for playlab_k1', () => {
       window.appOptions.app = 'studio';
       window.appOptions.level = {isK1: true};
-      expect(project.getStandaloneApp()).toBe('playlab_k1');
+      expect(project.getStandaloneApp()).to.equal('playlab_k1');
     });
 
     it('for algebra_game', () => {
       window.appOptions.app = 'studio';
       window.appOptions.level = {useContractEditor: true};
-      expect(project.getStandaloneApp()).toBe('algebra_game');
+      expect(project.getStandaloneApp()).to.equal('algebra_game');
     });
 
     it('for starwars', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'hoc2015';
       window.appOptions.droplet = true;
-      expect(project.getStandaloneApp()).toBe('starwars');
+      expect(project.getStandaloneApp()).to.equal('starwars');
     });
 
     it('for starwarsblocks_hour', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'hoc2015';
       window.appOptions.droplet = false;
-      expect(project.getStandaloneApp()).toBe('starwarsblocks_hour');
+      expect(project.getStandaloneApp()).to.equal('starwarsblocks_hour');
     });
 
     it('for iceage', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'iceage';
-      expect(project.getStandaloneApp()).toBe('iceage');
+      expect(project.getStandaloneApp()).to.equal('iceage');
     });
 
     it('for infinity', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'infinity';
-      expect(project.getStandaloneApp()).toBe('infinity');
+      expect(project.getStandaloneApp()).to.equal('infinity');
     });
 
     it('for gumball', () => {
       window.appOptions.app = 'studio';
       window.appOptions.skinId = 'gumball';
-      expect(project.getStandaloneApp()).toBe('gumball');
+      expect(project.getStandaloneApp()).to.equal('gumball');
     });
 
     it('for bounce', () => {
       window.appOptions.app = 'bounce';
-      expect(project.getStandaloneApp()).toBe('bounce');
+      expect(project.getStandaloneApp()).to.equal('bounce');
     });
 
     it('for sports', () => {
       window.appOptions.app = 'bounce';
       window.appOptions.skinId = 'sports';
-      expect(project.getStandaloneApp()).toBe('sports');
+      expect(project.getStandaloneApp()).to.equal('sports');
     });
 
     it('for basketball', () => {
       window.appOptions.app = 'bounce';
       window.appOptions.skinId = 'basketball';
-      expect(project.getStandaloneApp()).toBe('basketball');
+      expect(project.getStandaloneApp()).to.equal('basketball');
     });
 
     it('default case', () => {
       window.appOptions.app = 'someothertype';
-      expect(project.getStandaloneApp()).toBeNull();
+      expect(project.getStandaloneApp()).to.be.null;
     });
   });
 
@@ -303,36 +342,36 @@ describe('project.js', () => {
     let url;
 
     beforeEach(function () {
-      stubUrl = jest.spyOn(project, 'getUrl').mockClear().mockImplementation(() => url);
+      stubUrl = sinon.stub(project, 'getUrl').callsFake(() => url);
     });
 
     afterEach(function () {
-      stubUrl.mockRestore();
+      stubUrl.restore();
     });
 
     it('typical url', function () {
       url = 'http://url';
-      expect(project.getProjectUrl('/view')).toBe('http://url/view');
+      expect(project.getProjectUrl('/view')).to.equal('http://url/view');
     });
 
     it('with ending slashes', function () {
       url = 'http://url//';
-      expect(project.getProjectUrl('/view')).toBe('http://url/view');
+      expect(project.getProjectUrl('/view')).to.equal('http://url/view');
     });
 
     it('with query string', function () {
       url = 'http://url?query';
-      expect(project.getProjectUrl('/view')).toBe('http://url/view?query');
+      expect(project.getProjectUrl('/view')).to.equal('http://url/view?query');
     });
 
     it('with hash', function () {
       url = 'http://url#hash';
-      expect(project.getProjectUrl('/view')).toBe('http://url/view');
+      expect(project.getProjectUrl('/view')).to.equal('http://url/view');
     });
 
     it('with ending slashes, query, and hash', function () {
       url = 'http://url/?query#hash';
-      expect(project.getProjectUrl('/view')).toBe('http://url/view?query');
+      expect(project.getProjectUrl('/view')).to.equal('http://url/view?query');
     });
   });
 
@@ -364,15 +403,15 @@ describe('project.js', () => {
     const CODEPROJECTS_APP_TYPES = ['weblab'];
 
     beforeEach(() => {
-      jest.spyOn(project, 'getLocation').mockClear().mockImplementation(() => fakeLocation);
-      jest.spyOn(project, 'getCurrentId').mockClear().mockReturnValue(fakeProjectId);
-      jest.spyOn(project, 'getStandaloneApp').mockClear().mockImplementation();
+      sinon.stub(project, 'getLocation').callsFake(() => fakeLocation);
+      sinon.stub(project, 'getCurrentId').returns(fakeProjectId);
+      sinon.stub(project, 'getStandaloneApp');
     });
 
     afterEach(() => {
-      project.getStandaloneApp.mockRestore();
-      project.getCurrentId.mockRestore();
-      project.getLocation.mockRestore();
+      project.getStandaloneApp.restore();
+      project.getCurrentId.restore();
+      project.getLocation.restore();
     });
 
     function setFakeLocation(url) {
@@ -385,18 +424,18 @@ describe('project.js', () => {
         NORMAL_APP_TYPES.forEach(appType => {
           const expected = `${origin}/projects/${appType}/${fakeProjectId}`;
           describe(`${appType} projects share to ${expected}`, () => {
-            beforeEach(() => project.getStandaloneApp.mockReturnValue(appType));
+            beforeEach(() => project.getStandaloneApp.returns(appType));
 
             it(`from project edit page`, () => {
               setFakeLocation(
                 `${origin}/projects/${appType}/${fakeProjectId}/edit`
               );
-              expect(project.getShareUrl()).toBe(expected);
+              expect(project.getShareUrl()).to.equal(expected);
             });
 
             it(`from a script level`, () => {
               setFakeLocation(`${origin}/s/csp3-2019/lessons/10/levels/4`);
-              expect(project.getShareUrl()).toBe(expected);
+              expect(project.getShareUrl()).to.equal(expected);
             });
           });
         });
@@ -404,25 +443,25 @@ describe('project.js', () => {
         CODEPROJECTS_APP_TYPES.forEach(appType => {
           const expected = `${codeProjectsOrigin}/projects/weblab/${fakeProjectId}`;
           describe(`${appType} projects share to ${expected}`, () => {
-            beforeEach(() => project.getStandaloneApp.mockReturnValue(appType));
+            beforeEach(() => project.getStandaloneApp.returns(appType));
 
             it(`from project edit page`, () => {
               setFakeLocation(
                 `${origin}/projects/${appType}/${fakeProjectId}/edit`
               );
-              expect(project.getShareUrl()).toBe(expected);
+              expect(project.getShareUrl()).to.equal(expected);
             });
 
             it(`from project view page`, () => {
               setFakeLocation(
                 `${origin}/projects/${appType}/${fakeProjectId}/view`
               );
-              expect(project.getShareUrl()).toBe(expected);
+              expect(project.getShareUrl()).to.equal(expected);
             });
 
             it(`from a script level`, () => {
               setFakeLocation(`${origin}/s/csp3-2019/lessons/10/levels/4`);
-              expect(project.getShareUrl()).toBe(expected);
+              expect(project.getShareUrl()).to.equal(expected);
             });
           });
         });
@@ -435,37 +474,37 @@ describe('project.js', () => {
       let oldClassList = [1];
       let newClassList = [2];
       setData({sharedWith: oldClassList});
-      jest.spyOn(project, 'updateChannels_').mockClear().mockImplementation();
+      sinon.stub(project, 'updateChannels_');
 
-      expect(project.getCurrentLibrarySharedClasses()).toBe(oldClassList);
+      expect(project.getCurrentLibrarySharedClasses()).to.equal(oldClassList);
       project.setLibrarySharedClasses(newClassList);
-      expect(project.getCurrentLibrarySharedClasses()).toBe(newClassList);
+      expect(project.getCurrentLibrarySharedClasses()).to.equal(newClassList);
 
       setData({});
-      project.updateChannels_.mockRestore();
+      project.updateChannels_.restore();
     });
 
     it('does nothing if the classes passed are not in an array', () => {
       let oldClassList = [1];
       setData({sharedWith: oldClassList});
-      jest.spyOn(project, 'updateChannels_').mockClear().mockImplementation();
+      sinon.stub(project, 'updateChannels_');
 
-      expect(project.getCurrentLibrarySharedClasses()).toBe(oldClassList);
+      expect(project.getCurrentLibrarySharedClasses()).to.equal(oldClassList);
       project.setLibrarySharedClasses(2);
-      expect(project.getCurrentLibrarySharedClasses()).toBe(oldClassList);
+      expect(project.getCurrentLibrarySharedClasses()).to.equal(oldClassList);
 
       setData({});
-      project.updateChannels_.mockRestore();
+      project.updateChannels_.restore();
     });
   });
 
   describe('setLibraryDetails()', () => {
     beforeEach(() => {
-      jest.spyOn(project, 'updateChannels_').mockClear().mockImplementation();
+      sinon.stub(project, 'updateChannels_');
     });
 
     afterEach(() => {
-      project.updateChannels_.mockRestore();
+      project.updateChannels_.restore();
       setData({});
     });
 
@@ -473,24 +512,24 @@ describe('project.js', () => {
       let oldName = 'initialLibrary';
       let newName = 'newLibraryName';
       setData({libraryName: oldName});
-      expect(project.getCurrentLibraryName()).toBe(oldName);
+      expect(project.getCurrentLibraryName()).to.equal(oldName);
 
       project.setLibraryDetails({libraryName: newName});
 
-      expect(project.getCurrentLibraryName()).toBe(newName);
-      expect(project.updateChannels_).toHaveBeenCalled();
+      expect(project.getCurrentLibraryName()).to.equal(newName);
+      expect(project.updateChannels_).to.have.been.called;
     });
 
     it('updates current library description if libraryDescription provided', () => {
       let oldDescription = 'initialDescription';
       let newDescription = 'newLibraryDescription';
       setData({libraryDescription: oldDescription});
-      expect(project.getCurrentLibraryDescription()).toBe(oldDescription);
+      expect(project.getCurrentLibraryDescription()).to.equal(oldDescription);
 
       project.setLibraryDetails({libraryDescription: newDescription});
 
-      expect(project.getCurrentLibraryDescription()).toBe(newDescription);
-      expect(project.updateChannels_).toHaveBeenCalled();
+      expect(project.getCurrentLibraryDescription()).to.equal(newDescription);
+      expect(project.updateChannels_).to.have.been.called;
     });
 
     it('updates current latestLibraryVersion if latestLibraryVersion provided', () => {
@@ -498,40 +537,40 @@ describe('project.js', () => {
       let newVersion = '654321';
       setData({latestLibraryVersion: oldVersion});
       let currentProject = project.__TestInterface.getCurrent();
-      expect(currentProject.latestLibraryVersion).toBe(oldVersion);
+      expect(currentProject.latestLibraryVersion).to.equal(oldVersion);
 
       project.setLibraryDetails({latestLibraryVersion: newVersion});
 
       currentProject = project.__TestInterface.getCurrent();
-      expect(currentProject.latestLibraryVersion).toBe(newVersion);
+      expect(currentProject.latestLibraryVersion).to.equal(newVersion);
 
       project.setLibraryDetails({latestLibraryVersion: -1});
 
       currentProject = project.__TestInterface.getCurrent();
-      expect(currentProject.latestLibraryVersion).toBeNull();
+      expect(currentProject.latestLibraryVersion).to.be.null;
     });
 
     it('updates current publishLibrary if publishing is true', () => {
       setData({publishLibrary: false});
       let currentProject = project.__TestInterface.getCurrent();
-      expect(currentProject.publishLibrary).toBe(false);
+      expect(currentProject.publishLibrary).to.be.false;
 
       project.setLibraryDetails({publishing: true});
 
       currentProject = project.__TestInterface.getCurrent();
-      expect(currentProject.publishLibrary).toBe(true);
+      expect(currentProject.publishLibrary).to.be.true;
     });
 
     it('nullifies current libraryPublishedAt if publishing is false', () => {
       const oldPublishedAt = new Date();
       setData({libraryPublishedAt: oldPublishedAt});
       let currentProject = project.__TestInterface.getCurrent();
-      expect(currentProject.libraryPublishedAt).toBe(oldPublishedAt);
+      expect(currentProject.libraryPublishedAt).to.equal(oldPublishedAt);
 
       project.setLibraryDetails({publishing: false});
 
       currentProject = project.__TestInterface.getCurrent();
-      expect(currentProject.libraryPublishedAt).toBeNull();
+      expect(currentProject.libraryPublishedAt).to.be.null;
     });
 
     it('does not overwrite current with undefined/missing config properties', () => {
@@ -551,34 +590,39 @@ describe('project.js', () => {
       });
 
       currentProject = project.__TestInterface.getCurrent();
-      expect(currentProject.libraryName).toBe(lib.libraryName);
-      expect(currentProject.libraryDescription).toBe('new description');
-      expect(currentProject.latestLibraryVersion).toBe(lib.latestLibraryVersion);
-      expect(currentProject.libraryPublishedAt).toBe(lib.libraryPublishedAt);
+      expect(currentProject.libraryName).to.equal(lib.libraryName);
+      expect(currentProject.libraryDescription).to.equal('new description');
+      expect(currentProject.latestLibraryVersion).to.equal(
+        lib.latestLibraryVersion
+      );
+      expect(currentProject.libraryPublishedAt).to.equal(
+        lib.libraryPublishedAt
+      );
     });
   });
 
   describe('setProjectLibraries()', () => {
     beforeEach(() => {
-      jest.spyOn(project, 'saveSourceAndHtml_').mockClear()
-        .mockImplementation((source, callback) => {
+      sinon
+        .stub(project, 'saveSourceAndHtml_')
+        .callsFake((source, callback) => {
           callback();
         });
     });
 
     afterEach(() => {
-      project.saveSourceAndHtml_.mockRestore();
+      project.saveSourceAndHtml_.restore();
     });
 
     it('performs a save with the new library list', () => {
       let library = ['test'];
-      sourceHandler.getLibrariesList.mockReturnValue(undefined);
+      sourceHandler.getLibrariesList.returns(undefined);
       project.init(sourceHandler);
       return project.setProjectLibraries(library).then(() => {
-        expect(project.saveSourceAndHtml_).toHaveBeenCalled();
+        expect(project.saveSourceAndHtml_).to.have.been.called;
         expect(
-          project.saveSourceAndHtml_.mock.calls[0][0].libraries
-        ).toBe(library);
+          project.saveSourceAndHtml_.getCall(0).args[0].libraries
+        ).to.equal(library);
       });
     });
 
@@ -588,12 +632,12 @@ describe('project.js', () => {
       project.init(sourceHandler);
       return project.setProjectLibraries(library).then(() => {
         expect(
-          project.saveSourceAndHtml_.mock.calls[0][0].libraries
-        ).toBe(library);
+          project.saveSourceAndHtml_.getCall(0).args[0].libraries
+        ).to.equal(library);
         return project.setProjectLibraries(result).then(() => {
           expect(
-            project.saveSourceAndHtml_.mock.calls[1][0].libraries
-          ).toBe(result);
+            project.saveSourceAndHtml_.getCall(1).args[0].libraries
+          ).to.equal(result);
         });
       });
     });
@@ -601,41 +645,43 @@ describe('project.js', () => {
 
   describe('setMakerEnabled()', () => {
     beforeEach(() => {
-      jest.spyOn(project, 'saveSourceAndHtml_').mockClear()
-        .mockImplementation((source, callback) => {
+      sinon
+        .stub(project, 'saveSourceAndHtml_')
+        .callsFake((source, callback) => {
           callback();
         });
     });
 
     afterEach(() => {
-      project.saveSourceAndHtml_.mockRestore();
+      project.saveSourceAndHtml_.restore();
     });
 
     it('performs a save with maker set to circuitPlayground enabled if it was disabled', () => {
-      sourceHandler.getMakerAPIsEnabled.mockReturnValue(false);
+      sourceHandler.getMakerAPIsEnabled.returns(false);
       project.init(sourceHandler);
       return project.setMakerEnabled(CP_API).then(() => {
-        expect(project.saveSourceAndHtml_).toHaveBeenCalled();
+        expect(project.saveSourceAndHtml_).to.have.been.called;
         expect(
-          project.saveSourceAndHtml_.mock.calls[0][0].makerAPIsEnabled
-        ).toBe(CP_API);
+          project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled
+        ).to.equal(CP_API);
       });
     });
 
     it('performs a save with maker disabled if it was enabled', () => {
-      sourceHandler.getMakerAPIsEnabled.mockReturnValue(true);
+      sourceHandler.getMakerAPIsEnabled.returns(true);
       project.init(sourceHandler);
       return project.setMakerEnabled(null).then(() => {
-        expect(project.saveSourceAndHtml_).toHaveBeenCalled();
-        expect(project.saveSourceAndHtml_.mock.calls[0][0].makerAPIsEnabled).toBeNull();
+        expect(project.saveSourceAndHtml_).to.have.been.called;
+        expect(project.saveSourceAndHtml_.getCall(0).args[0].makerAPIsEnabled)
+          .to.be.null;
       });
     });
 
     it('always results in a page reload', () => {
       project.init(sourceHandler);
-      expect(utils.reload).not.toHaveBeenCalled();
+      expect(utils.reload).not.to.have.been.called;
       return project.setMakerEnabled(null).then(() => {
-        expect(utils.reload).toHaveBeenCalled();
+        expect(utils.reload).to.have.been.called;
       });
     });
   });
@@ -647,7 +693,7 @@ describe('project.js', () => {
 
     it('saves selected song', () => {
       return project.saveSelectedSong('peas').then(() => {
-        expect(sourceHandler.setSelectedSong).toHaveBeenCalled();
+        expect(sourceHandler.setSelectedSong).to.have.been.called;
       });
     });
   });
@@ -656,14 +702,14 @@ describe('project.js', () => {
     let server;
 
     beforeEach(() => {
-      jest.spyOn(project, 'getStandaloneApp').mockClear().mockReturnValue('artist');
+      sinon.stub(project, 'getStandaloneApp').returns('artist');
       server = sinon.createFakeServer({autoRespond: true});
       project.init(sourceHandler);
     });
 
     afterEach(() => {
-      server.mockRestore();
-      project.getStandaloneApp.mockRestore();
+      server.restore();
+      project.getStandaloneApp.restore();
     });
 
     it('performs a client-side remix', async () => {
@@ -677,9 +723,9 @@ describe('project.js', () => {
       stubPutMainJson(server);
       project.__TestInterface.setCurrentSourceVersionId('fakeid');
       await project.copy('Remixed project');
-      expect(server.requests[1].url).toMatch(/main.json/);
-      expect(server.requests[1].url).not.toMatch(/currentVersion=/);
-      expect(server.requests[1].url).not.toMatch(/replace=(true|false)/);
+      expect(server.requests[1].url).to.match(/main.json/);
+      expect(server.requests[1].url).not.to.match(/currentVersion=/);
+      expect(server.requests[1].url).not.to.match(/replace=(true|false)/);
     });
   });
 
@@ -688,35 +734,35 @@ describe('project.js', () => {
 
     beforeEach(() => {
       window.appOptions.channel = 'mychannel';
-      jest.spyOn(utils, 'currentLocation').mockClear().mockReturnValue({
+      sinon.stub(utils, 'currentLocation').returns({
         pathname: '/projects/artist/mychannel',
         search: '',
       });
-      jest.spyOn(project, 'getStandaloneApp').mockClear().mockReturnValue('artist');
+      sinon.stub(project, 'getStandaloneApp').returns('artist');
       server = sinon.createFakeServer({autoRespond: true});
       project.init(sourceHandler);
     });
 
     afterEach(() => {
-      server.mockRestore();
-      project.getStandaloneApp.mockRestore();
-      utils.currentLocation.mockRestore();
+      server.restore();
+      project.getStandaloneApp.restore();
+      utils.currentLocation.restore();
     });
 
     describe('standalone project', () => {
       beforeEach(() => {
-        jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
+        sinon.stub(utils, 'navigateToHref');
       });
 
       afterEach(() => {
-        utils.navigateToHref.mockRestore();
+        utils.navigateToHref.restore();
       });
 
       it('succeeds when ajax requests succeed', done => {
         stubGetChannels(server);
         stubGetMainJson(server);
         project.load().then(() => {
-          expect(utils.navigateToHref).not.toHaveBeenCalled();
+          expect(utils.navigateToHref).not.to.have.been.called;
           done();
         });
       });
@@ -724,7 +770,7 @@ describe('project.js', () => {
       it('fails when channel not found', done => {
         stubGetChannelsWithNotFound(server);
         project.load().catch(() => {
-          expect(project.channelNotFound()).toBe(true);
+          expect(project.channelNotFound()).to.be.true;
           done();
         });
       });
@@ -750,8 +796,8 @@ describe('project.js', () => {
         stubGetChannels(server);
         stubGetSourcesWithNotFound(server);
         project.load().catch(() => {
-          expect(project.channelNotFound()).toBe(false);
-          expect(project.sourceNotFound()).toBe(true);
+          expect(project.channelNotFound()).to.be.false;
+          expect(project.sourceNotFound()).to.be.true;
           done();
         });
       });
@@ -794,28 +840,30 @@ describe('project.js', () => {
     let server;
 
     beforeEach(() => {
-      jest.spyOn(project, 'getStandaloneApp').mockClear().mockReturnValue('dance');
-      jest.spyOn(project, 'save').mockClear().mockReturnValue(Promise.resolve());
-      jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
+      sinon.stub(project, 'getStandaloneApp').returns('dance');
+      sinon.stub(project, 'save').returns(Promise.resolve());
+      sinon.stub(utils, 'navigateToHref');
       server = sinon.createFakeServer({autoRespond: true});
       project.init(sourceHandler);
     });
 
     afterEach(() => {
-      server.mockRestore();
-      utils.navigateToHref.mockRestore();
-      project.save.mockRestore();
-      project.getStandaloneApp.mockRestore();
+      server.restore();
+      utils.navigateToHref.restore();
+      project.save.restore();
+      project.getStandaloneApp.restore();
     });
 
     it('navigates to server-side remix', async () => {
-      project.getStandaloneApp.mockReturnValue('dance');
+      project.getStandaloneApp.returns('dance');
       setData({});
 
       await project.serverSideRemix();
 
-      expect(utils.navigateToHref).toHaveBeenCalledTimes(1);
-      expect(utils.navigateToHref.mock.calls[0][0]).toMatch(/projects\/dance\/.*\/remix/);
+      expect(utils.navigateToHref).to.have.been.calledOnce;
+      expect(utils.navigateToHref.firstCall.args[0]).to.match(
+        /projects\/dance\/.*\/remix/
+      );
     });
 
     it('saves first if you are the project owner', async () => {
@@ -823,8 +871,8 @@ describe('project.js', () => {
 
       await project.serverSideRemix();
 
-      expect(project.save).toHaveBeenCalledTimes(1);
-      expect(project.save.mock.calls[0]).toEqual([false, true]);
+      expect(project.save).to.have.been.calledOnce;
+      expect(project.save.firstCall.args).to.deep.equal([false, true]);
     });
 
     it('does not save if you are not the project owner', async () => {
@@ -832,7 +880,7 @@ describe('project.js', () => {
 
       await project.serverSideRemix();
 
-      expect(project.save).not.toHaveBeenCalled();
+      expect(project.save).not.to.have.been.called;
     });
 
     it("sets a default project name if it doesn't have one", async () => {
@@ -840,16 +888,16 @@ describe('project.js', () => {
 
       await project.serverSideRemix();
 
-      expect(project.getCurrentName()).toBe('My Project');
+      expect(project.getCurrentName()).to.equal('My Project');
     });
 
     it('sets a special default project name for Big Game', async () => {
-      project.getStandaloneApp.mockReturnValue('algebra_game');
+      project.getStandaloneApp.returns('algebra_game');
       setData({name: undefined});
 
       await project.serverSideRemix();
 
-      expect(project.getCurrentName()).toBe('Big Game Template');
+      expect(project.getCurrentName()).to.equal('Big Game Template');
     });
 
     it('does not change the name if the project already has one', async () => {
@@ -857,7 +905,7 @@ describe('project.js', () => {
 
       await project.serverSideRemix();
 
-      expect(project.getCurrentName()).toBe('Existing name');
+      expect(project.getCurrentName()).to.equal('Existing name');
     });
   });
 
@@ -866,7 +914,7 @@ describe('project.js', () => {
     const STUB_BLOB = 'stub-binary-data';
 
     beforeEach(() => {
-      jest.spyOn(filesApi, 'putFile').mockClear().mockImplementation();
+      sinon.stub(filesApi, 'putFile');
 
       const projectData = {
         id: STUB_CHANNEL_ID,
@@ -878,16 +926,16 @@ describe('project.js', () => {
     afterEach(() => {
       project.updateCurrentData_(null, undefined);
 
-      filesApi.putFile.mockRestore();
+      filesApi.putFile.restore();
     });
 
     it('calls filesApi.putFile with correct parameters', () => {
       project.saveThumbnail(STUB_BLOB);
 
-      expect(filesApi.putFile).toHaveBeenCalledTimes(1);
-      const call = filesApi.putFile.mock.calls[0];
-      expect(call.mock.calls[0]).toBe('.metadata/thumbnail.png');
-      expect(call.mock.calls[1]).toBe(STUB_BLOB);
+      expect(filesApi.putFile).to.have.been.calledOnce;
+      const call = filesApi.putFile.getCall(0);
+      expect(call.args[0]).to.equal('.metadata/thumbnail.png');
+      expect(call.args[1]).to.equal(STUB_BLOB);
     });
 
     it('succeeds if filesApi.putFile succeeds', done => {
@@ -901,8 +949,8 @@ describe('project.js', () => {
 
       const promise = project.saveThumbnail(undefined);
       promise.catch(e => {
-        expect(e).toContain('PNG blob required.');
-        expect(filesApi.putFile).not.toHaveBeenCalled();
+        expect(e).to.contain('PNG blob required.');
+        expect(filesApi.putFile).not.to.have.been.called;
         done();
       });
     });
@@ -912,8 +960,8 @@ describe('project.js', () => {
 
       const promise = project.saveThumbnail(STUB_BLOB);
       promise.catch(e => {
-        expect(e).toContain('Project not initialized');
-        expect(filesApi.putFile).not.toHaveBeenCalled();
+        expect(e).to.contain('Project not initialized');
+        expect(filesApi.putFile).not.to.have.been.called;
         done();
       });
     });
@@ -922,8 +970,8 @@ describe('project.js', () => {
       setData({});
 
       project.saveThumbnail(STUB_BLOB).catch(e => {
-        expect(e).toContain('Project not owned by current user');
-        expect(filesApi.putFile).not.toHaveBeenCalled();
+        expect(e).to.contain('Project not owned by current user');
+        expect(filesApi.putFile).not.to.have.been.called;
         done();
       });
     });
@@ -932,7 +980,7 @@ describe('project.js', () => {
       filesApi.putFile.callsFake((path, blob, success, error) => error('foo'));
 
       project.saveThumbnail(STUB_BLOB).catch(e => {
-        expect(e).toContain('foo');
+        expect(e).to.contain('foo');
         done();
       });
     });
@@ -945,37 +993,38 @@ describe('project.js', () => {
 
     it('compares unset sources as if they were an empty string', () => {
       setSources({});
-      expect(project.isCurrentCodeDifferent('')).toBe(false);
+      expect(project.isCurrentCodeDifferent('')).to.be.false;
     });
 
     it('compares null inputs as if they were an empty string', () => {
       setSources({source: ''});
-      expect(project.isCurrentCodeDifferent(null)).toBe(false);
+      expect(project.isCurrentCodeDifferent(null)).to.be.false;
     });
 
     it('compares unset input sources as if they were an empty string', () => {
       setSources({source: ''});
-      expect(project.isCurrentCodeDifferent()).toBe(false);
+      expect(project.isCurrentCodeDifferent()).to.be.false;
     });
 
     it('ignores differences in line endings', () => {
       setSources({source: 'foo\r\n\r\nbar'});
-      expect(project.isCurrentCodeDifferent('foo\n\nbar')).toBe(false);
+      expect(project.isCurrentCodeDifferent('foo\n\nbar')).to.be.false;
     });
 
     it('ignores differences in xml closing tags', () => {
       setSources({source: '<xml><test/></xml>'});
-      expect(project.isCurrentCodeDifferent('<xml><test></test></xml>')).toBe(false);
+      expect(project.isCurrentCodeDifferent('<xml><test></test></xml>')).to.be
+        .false;
     });
 
     it('notices differences in xml', () => {
       setSources({source: '<xml><test/></xml>'});
-      expect(project.isCurrentCodeDifferent('<xml><test2/></xml>')).toBe(true);
+      expect(project.isCurrentCodeDifferent('<xml><test2/></xml>')).to.be.true;
     });
 
     it('notices differences in text', () => {
       setSources({source: 'test'});
-      expect(project.isCurrentCodeDifferent('test2')).toBe(true);
+      expect(project.isCurrentCodeDifferent('test2')).to.be.true;
     });
   });
 
@@ -995,19 +1044,19 @@ describe('project.js', () => {
 
       // spy on updateChannels_ to determine if a request to save channel
       // metadata was sent
-      updateChannelSpy = jest.spyOn(project, 'updateChannels_').mockClear();
+      updateChannelSpy = sinon.spy(project, 'updateChannels_');
     });
 
     afterEach(() => {
-      server.mockRestore();
-      project.updateChannels_.mockRestore();
+      server.restore();
+      project.updateChannels_.restore();
     });
 
     it('calls updateChannels_ if source code changes', done => {
       setData({isOwner: true});
 
       // change getLevelSource stub to simulate changing source code
-      const getLevelSourceStub = jest.fn();
+      const getLevelSourceStub = sinon.stub();
       getLevelSourceStub.resolves();
       getLevelSourceStub.onCall(0).resolves('source code v0');
       getLevelSourceStub.onCall(1).resolves('source code v1');
@@ -1018,7 +1067,7 @@ describe('project.js', () => {
         .saveIfSourcesChanged()
         .then(() => project.saveIfSourcesChanged())
         .then(() => {
-          expect(updateChannelSpy).toHaveBeenCalledTimes(2);
+          expect(updateChannelSpy).to.have.been.calledTwice;
           done();
         })
         .catch(err => done(err));
@@ -1029,7 +1078,7 @@ describe('project.js', () => {
       setData({isOwner: true});
 
       // change getLevelSource stub to simulate changing source code
-      const getLevelSourceStub = jest.fn();
+      const getLevelSourceStub = sinon.stub();
       getLevelSourceStub.resolves();
       getLevelSourceStub.onCall(0).resolves('source code v0');
       getLevelSourceStub.onCall(1).resolves('source code v1');
@@ -1041,7 +1090,7 @@ describe('project.js', () => {
         .saveIfSourcesChanged()
         .then(() => project.saveIfSourcesChanged())
         .then(() => {
-          expect(updateChannelSpy).toHaveBeenCalledTimes(1);
+          expect(updateChannelSpy).to.have.been.calledOnce;
           done();
         })
         .catch(err => done(err));
@@ -1179,24 +1228,24 @@ function stubPutMainJson(server) {
 
 function createStubSourceHandler() {
   return {
-    setInitialLevelHtml: jest.fn(),
-    getLevelHtml: jest.fn(),
-    setInitialLevelSource: jest.fn(),
-    getLevelSource: jest.fn().resolves(),
-    setInitialAnimationList: jest.fn(),
-    getAnimationList: jest.fn().callsFake(cb => cb({})),
-    setMakerAPIsEnabled: jest.fn(),
-    getMakerAPIsEnabled: jest.fn(),
-    setSelectedSong: jest.fn(),
-    getSelectedSong: jest.fn(),
-    setSelectedPoem: jest.fn(),
-    getSelectedPoem: jest.fn(),
-    prepareForRemix: jest.fn().resolves(),
-    setInitialLibrariesList: jest.fn(),
-    getLibrariesList: jest.fn(),
-    setInRestrictedShareMode: jest.fn(),
-    inRestrictedShareMode: jest.fn(),
-    setTeacherHasConfirmedUploadWarning: jest.fn(),
-    teacherHasConfirmedUploadWarning: jest.fn(),
+    setInitialLevelHtml: sinon.stub(),
+    getLevelHtml: sinon.stub(),
+    setInitialLevelSource: sinon.stub(),
+    getLevelSource: sinon.stub().resolves(),
+    setInitialAnimationList: sinon.stub(),
+    getAnimationList: sinon.stub().callsFake(cb => cb({})),
+    setMakerAPIsEnabled: sinon.stub(),
+    getMakerAPIsEnabled: sinon.stub(),
+    setSelectedSong: sinon.stub(),
+    getSelectedSong: sinon.stub(),
+    setSelectedPoem: sinon.stub(),
+    getSelectedPoem: sinon.stub(),
+    prepareForRemix: sinon.stub().resolves(),
+    setInitialLibrariesList: sinon.stub(),
+    getLibrariesList: sinon.stub(),
+    setInRestrictedShareMode: sinon.stub(),
+    inRestrictedShareMode: sinon.stub(),
+    setTeacherHasConfirmedUploadWarning: sinon.stub(),
+    teacherHasConfirmedUploadWarning: sinon.stub(),
   };
 }

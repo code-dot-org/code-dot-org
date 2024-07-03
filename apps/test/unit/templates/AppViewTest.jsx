@@ -3,7 +3,7 @@ import React from 'react';
 
 import {UnconnectedAppView as AppView} from '@cdo/apps/templates/AppView';
 
-
+import {expect} from '../../util/deprecatedChai';
 
 describe('AppView', () => {
   const DEFAULT_PROPS = {
@@ -23,11 +23,11 @@ describe('AppView', () => {
         pinWorkspaceToBottom={false}
       />
     );
-    expect(wrapper).not.toBeNull();
-    expect(wrapper.find('#visualizationColumn')).to.not.have.className(
+    expect(wrapper).not.to.be.null;
+    expect(wrapper.find('#visualizationColumn')).not.to.have.className(
       'responsive'
     );
-    expect(wrapper.find('#visualizationColumn')).to.not.have.className(
+    expect(wrapper.find('#visualizationColumn')).not.to.have.className(
       'pin_bottom'
     );
   });
@@ -41,11 +41,11 @@ describe('AppView', () => {
         pinWorkspaceToBottom={false}
       />
     );
-    expect(wrapper).not.toBeNull();
+    expect(wrapper).not.to.be.null;
     expect(wrapper.find('#visualizationColumn')).to.have.className(
       'responsive'
     );
-    expect(wrapper.find('#visualizationColumn')).to.not.have.className(
+    expect(wrapper.find('#visualizationColumn')).not.to.have.className(
       'pin_bottom'
     );
   });
@@ -59,8 +59,8 @@ describe('AppView', () => {
         pinWorkspaceToBottom={true}
       />
     );
-    expect(wrapper).not.toBeNull();
-    expect(wrapper.find('#visualizationColumn')).to.not.have.className(
+    expect(wrapper).not.to.be.null;
+    expect(wrapper.find('#visualizationColumn')).not.to.have.className(
       'responsive'
     );
     expect(wrapper.find('#visualizationColumn')).to.have.className(

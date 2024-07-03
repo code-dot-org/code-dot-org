@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import {sources as sourcesApi} from '@cdo/apps/clientApi';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -7,7 +8,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
 import * as utils from '@cdo/apps/utils';
 
-import {assert} from '../../util/reconfiguredChai';
+import {assert, expect} from '../../util/reconfiguredChai';
 
 const FAKE_CURRENT_VERSION = 'current-version-id';
 const FAKE_PREVIOUS_VERSION = 'previous-version-id';
@@ -31,11 +32,11 @@ describe('VersionHistoryWithCommitsDialog', () => {
   let wrapper;
 
   beforeEach(() => {
-    jest.spyOn(utils, 'reload').mockClear().mockImplementation();
+    sinon.stub(utils, 'reload');
   });
 
   afterEach(() => {
-    utils.reload.mockRestore();
+    utils.reload.restore();
 
     if (wrapper) {
       wrapper.unmount();
@@ -45,13 +46,13 @@ describe('VersionHistoryWithCommitsDialog', () => {
 
   describe('using the sources api', () => {
     beforeEach(() => {
-      jest.spyOn(sourcesApi, 'ajax').mockClear().mockImplementation();
-      jest.spyOn(sourcesApi, 'restorePreviousFileVersion').mockClear().mockImplementation();
+      sinon.stub(sourcesApi, 'ajax');
+      sinon.stub(sourcesApi, 'restorePreviousFileVersion');
     });
 
     afterEach(() => {
-      sourcesApi.restorePreviousFileVersion.mockRestore();
-      sourcesApi.ajax.mockRestore();
+      sourcesApi.restorePreviousFileVersion.restore();
+      sourcesApi.ajax.restore();
     });
 
     testVersionHistoryWithCommitsDialog({
@@ -62,18 +63,18 @@ describe('VersionHistoryWithCommitsDialog', () => {
         isOpen: true,
       },
       finishVersionHistoryLoad: () => {
-        sourcesApi.ajax.mock.calls[0][2](FAKE_VERSION_LIST_RESPONSE);
+        sourcesApi.ajax.firstCall.args[2](FAKE_VERSION_LIST_RESPONSE);
         wrapper.update();
       },
       failVersionHistoryLoad: () => {
-        sourcesApi.ajax.mock.calls[0][3]();
+        sourcesApi.ajax.firstCall.args[3]();
         wrapper.update();
       },
       restoreSpy: () => sourcesApi.restorePreviousFileVersion,
       finishRestoreVersion: () =>
-        sourcesApi.restorePreviousFileVersion.mock.calls[0][2](),
+        sourcesApi.restorePreviousFileVersion.firstCall.args[2](),
       failRestoreVersion: () =>
-        sourcesApi.restorePreviousFileVersion.mock.calls[0][3](),
+        sourcesApi.restorePreviousFileVersion.firstCall.args[3](),
     });
   });
 
@@ -97,7 +98,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
     it('renders an error on failed version history load', () => {
       wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       failVersionHistoryLoad();
-      expect(wrapper.text()).toContain('An error occurred.');
+      expect(wrapper.text()).to.include('An error occurred.');
     });
 
     it('renders a version list on successful version history load', () => {
@@ -113,17 +114,17 @@ describe('VersionHistoryWithCommitsDialog', () => {
       );
 
       // Rendered two version rows
-      expect(wrapper.find('VersionWithCommit')).toHaveLength(2);
-      expect(wrapper.text()).toContain('Commit comment');
+      expect(wrapper.find('VersionWithCommit')).to.have.length(2);
+      expect(wrapper.text()).to.include('Commit comment');
     });
 
     it('attempts to restore a chosen version when clicking restore button', () => {
       wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       finishVersionHistoryLoad();
-      expect(restoreSpy()).not.toHaveBeenCalled();
+      expect(restoreSpy()).not.to.have.been.called;
 
       wrapper.find('Button').at(3).simulate('click');
-      expect(restoreSpy()).toHaveBeenCalledTimes(1);
+      expect(restoreSpy()).to.have.been.calledOnce;
     });
 
     it('renders an error on failed restore', () => {
@@ -132,17 +133,17 @@ describe('VersionHistoryWithCommitsDialog', () => {
       wrapper.find('Button').at(3).simulate('click');
 
       failRestoreVersion();
-      expect(wrapper.text()).toContain('An error occurred.');
+      expect(wrapper.text()).to.include('An error occurred.');
     });
 
     it('reloads the page on successful restore', () => {
       wrapper = mount(<VersionHistoryWithCommitsDialog {...props} />);
       finishVersionHistoryLoad();
       wrapper.find('Button').at(3).simulate('click');
-      expect(utils.reload).not.toHaveBeenCalled();
+      expect(utils.reload).not.to.have.been.called;
 
       finishRestoreVersion();
-      expect(utils.reload).toHaveBeenCalledTimes(1);
+      expect(utils.reload).to.have.been.calledOnce;
     });
 
     it('shows a confirmation after clicking Start Over', () => {
@@ -184,7 +185,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
       wrapper.find('Button').last().simulate('click');
 
       // Rendered two version rows
-      expect(wrapper.find('VersionWithCommit')).toHaveLength(2);
+      expect(wrapper.find('VersionWithCommit')).to.have.length(2);
     });
 
     it('shows a confirmation with template project warning', () => {
@@ -196,22 +197,23 @@ describe('VersionHistoryWithCommitsDialog', () => {
       // Click "Start Over"
       wrapper.find('Button').last().simulate('click');
 
-      expect(wrapper.find('.template-level-warning')).toBeDefined();
+      expect(wrapper.find('.template-level-warning')).to.exist;
     });
 
     describe('confirming Start Over', () => {
       let handleClearPuzzle;
 
       beforeEach(() => {
-        jest.spyOn(firehoseClient, 'putRecord').mockClear().mockImplementation();
-        jest.spyOn(project, 'getCurrentId').mockClear().mockReturnValue('fake-project-id');
-        jest.spyOn(project, 'getCurrentSourceVersionId').mockClear()
-          .mockReturnValue(FAKE_CURRENT_VERSION);
-        jest.spyOn(project, 'getShareUrl').mockClear().mockReturnValue('fake-share-url');
-        jest.spyOn(project, 'isOwner').mockClear().mockReturnValue(true);
-        jest.spyOn(project, 'save').mockClear().mockImplementation();
+        sinon.stub(firehoseClient, 'putRecord');
+        sinon.stub(project, 'getCurrentId').returns('fake-project-id');
+        sinon
+          .stub(project, 'getCurrentSourceVersionId')
+          .returns(FAKE_CURRENT_VERSION);
+        sinon.stub(project, 'getShareUrl').returns('fake-share-url');
+        sinon.stub(project, 'isOwner').returns(true);
+        sinon.stub(project, 'save');
 
-        handleClearPuzzle = jest.fn().mockReturnValue(Promise.resolve());
+        handleClearPuzzle = sinon.stub().returns(Promise.resolve());
         wrapper = mount(
           <VersionHistoryWithCommitsDialog
             {...props}
@@ -225,12 +227,12 @@ describe('VersionHistoryWithCommitsDialog', () => {
 
       afterEach(async () => {
         await wasCalled(utils.reload);
-        firehoseClient.putRecord.mockRestore();
-        project.getCurrentId.mockRestore();
-        project.getCurrentSourceVersionId.mockRestore();
-        project.getShareUrl.mockRestore();
-        project.isOwner.mockRestore();
-        project.save.mockRestore();
+        firehoseClient.putRecord.restore();
+        project.getCurrentId.restore();
+        project.getCurrentSourceVersionId.restore();
+        project.getShareUrl.restore();
+        project.isOwner.restore();
+        project.save.restore();
       });
 
       it('immediately renders spinner', () => {
@@ -242,33 +244,36 @@ describe('VersionHistoryWithCommitsDialog', () => {
       });
 
       it('logs to firehose', () => {
-        expect(firehoseClient.putRecord).toHaveBeenCalledWith({
-          study: 'project-data-integrity',
-          study_group: 'v4',
-          event: 'clear-puzzle',
-          project_id: 'fake-project-id',
-          data_json: JSON.stringify({
-            isOwner: true,
-            currentUrl: window.location.href,
-            shareUrl: 'fake-share-url',
-            isProjectTemplateLevel: false,
-            currentSourceVersionId: FAKE_CURRENT_VERSION,
-          }),
-        }, {includeUserId: true});
+        expect(firehoseClient.putRecord).to.have.been.calledOnce.and.calledWith(
+          {
+            study: 'project-data-integrity',
+            study_group: 'v4',
+            event: 'clear-puzzle',
+            project_id: 'fake-project-id',
+            data_json: JSON.stringify({
+              isOwner: true,
+              currentUrl: window.location.href,
+              shareUrl: 'fake-share-url',
+              isProjectTemplateLevel: false,
+              currentSourceVersionId: FAKE_CURRENT_VERSION,
+            }),
+          },
+          {includeUserId: true}
+        );
       });
 
       it('calls handleClearPuzzle prop', () => {
-        expect(handleClearPuzzle).toHaveBeenCalledTimes(1);
+        expect(handleClearPuzzle).to.have.been.calledOnce;
       });
 
       it('calls project.save(true)', async () => {
         await wasCalled(project.save);
-        expect(project.save).toHaveBeenCalledWith(true);
+        expect(project.save).to.have.been.calledOnce.and.calledWith(true);
       });
 
       it('reloads the page', async () => {
         await wasCalled(utils.reload);
-        expect(utils.reload).toHaveBeenCalledTimes(1);
+        expect(utils.reload).to.have.been.calledOnce;
       });
     });
   }

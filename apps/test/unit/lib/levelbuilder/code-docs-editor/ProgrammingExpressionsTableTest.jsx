@@ -1,16 +1,17 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
+import sinon from 'sinon';
 
 import ProgrammingExpressionsTable from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingExpressionsTable';
 
-
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('ProgrammingExpressionsTable', () => {
   let defaultProps, fetchStub, returnData;
 
   beforeEach(() => {
-    fetchStub = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
+    fetchStub = sinon.stub(window, 'fetch');
     returnData = {
       numPages: 2,
       results: [
@@ -98,28 +99,28 @@ describe('ProgrammingExpressionsTable', () => {
   });
 
   afterEach(() => {
-    fetchStub.mockRestore();
+    fetchStub.restore();
   });
 
   it('renders dropdowns with resultType, environments and categories', () => {
     const wrapper = shallow(<ProgrammingExpressionsTable {...defaultProps} />);
-    expect(wrapper.find('select').length).toBe(3);
+    expect(wrapper.find('select').length).to.equal(3);
   });
 
   it('renders dropdowns with environments and categories', () => {
     const wrapper = shallow(<ProgrammingExpressionsTable {...defaultProps} />);
-    expect(wrapper.find('select').length).toBe(3);
+    expect(wrapper.find('select').length).to.equal(3);
 
     const resultTypeSelector = wrapper.find('select').first();
-    expect(resultTypeSelector.find('option').length).toBe(2);
+    expect(resultTypeSelector.find('option').length).to.equal(2);
 
     const environmentSelector = wrapper.find('select').at(1);
-    expect(environmentSelector.find('option').length).toBe(4);
-    expect(environmentSelector.props().value).toBe('all');
+    expect(environmentSelector.find('option').length).to.equal(4);
+    expect(environmentSelector.props().value).to.equal('all');
 
     const categorySelector = wrapper.find('select').at(2);
-    expect(categorySelector.find('option').length).toBe(4);
-    expect(categorySelector.props().value).toBe('all');
+    expect(categorySelector.find('option').length).to.equal(4);
+    expect(categorySelector.props().value).to.equal('all');
   });
 
   it('updates category dropdown when environment is selected', () => {
@@ -129,7 +130,7 @@ describe('ProgrammingExpressionsTable', () => {
     environmentSelector.simulate('change', {target: {value: 1}});
 
     const categorySelector = wrapper.find('select').at(2);
-    expect(categorySelector.find('option').length).toBe(2);
+    expect(categorySelector.find('option').length).to.equal(2);
   });
 
   it('updates resultType dropdown when resultType is selected', () => {
@@ -142,92 +143,84 @@ describe('ProgrammingExpressionsTable', () => {
     environmentSelector.simulate('change', {target: {value: 1}});
 
     const categorySelector = wrapper.find('select').at(2);
-    expect(categorySelector.find('option').length).toBe(2);
+    expect(categorySelector.find('option').length).to.equal(2);
   });
 
   it('shows table with programming expressions after load', () => {
-    fetchStub.mockImplementation((...args) => {
-      if (args[0] === '/programming_expressions/get_filtered_results?page=1') {
-        return Promise.resolve({ok: true, json: () => returnData});
-      }
-    });
+    fetchStub
+      .withArgs('/programming_expressions/get_filtered_results?page=1')
+      .returns(Promise.resolve({ok: true, json: () => returnData}));
     const wrapper = isolateComponent(
       <ProgrammingExpressionsTable {...defaultProps} />
     );
     return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
-      expect(fetchStub).toHaveBeenCalledTimes(1);
+      expect(fetchStub.callCount).to.equal(1);
       // A reactabular table has a Header and a Body
-      expect(wrapper.findAll('Header').length).toBe(1);
-      expect(wrapper.findAll('Body').length).toBe(1);
-      expect(wrapper.findOne('Body').props.rows).toEqual(returnData.results);
+      expect(wrapper.findAll('Header').length).to.equal(1);
+      expect(wrapper.findAll('Body').length).to.equal(1);
+      expect(wrapper.findOne('Body').props.rows).to.eql(returnData.results);
     });
   });
 
   it('loads data but doesnt show expressions if hidden is true', () => {
-    fetchStub.mockImplementation((...args) => {
-      if (args[0] === '/programming_expressions/get_filtered_results?page=1') {
-        return Promise.resolve({ok: true, json: () => returnData});
-      }
-    });
+    fetchStub
+      .withArgs('/programming_expressions/get_filtered_results?page=1')
+      .returns(Promise.resolve({ok: true, json: () => returnData}));
     const wrapper = isolateComponent(
       <ProgrammingExpressionsTable {...defaultProps} hidden />
     );
     return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
-      expect(fetchStub).toHaveBeenCalledTimes(1);
+      expect(fetchStub.callCount).to.equal(1);
       // A reactabular table has a Header and a Body
-      expect(wrapper.findAll('Header').length).toBe(0);
-      expect(wrapper.findAll('Body').length).toBe(0);
+      expect(wrapper.findAll('Header').length).to.equal(0);
+      expect(wrapper.findAll('Body').length).to.equal(0);
     });
   });
 
   it('shows confirmation dialog before destroying expression', () => {
-    fetchStub.mockImplementation((...args) => {
-      if (args[0] === '/programming_expressions/get_filtered_results?page=1') {
-        return Promise.resolve({ok: true, json: () => returnData});
-      }
-    });
+    fetchStub
+      .withArgs('/programming_expressions/get_filtered_results?page=1')
+      .returns(Promise.resolve({ok: true, json: () => returnData}));
     const wrapper = mount(<ProgrammingExpressionsTable {...defaultProps} />);
     return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
       const fetchCount = fetchStub.callCount;
-      expect(fetchCount).toBe(1);
+      expect(fetchCount).to.equal(1);
       wrapper.update();
       const destroyButton = wrapper.find('BodyRow').at(1).find('Button').at(2);
       destroyButton.simulate('click');
-      expect(wrapper.find('StylizedBaseDialog').length).toBe(1);
-      expect(fetchStub).toHaveBeenCalledTimes(fetchCount);
+      expect(wrapper.find('StylizedBaseDialog').length).to.equal(1);
+      expect(fetchStub.callCount).to.equal(fetchCount);
     });
   });
 
   it('does not show confirmation dialog for disabled destroy button', () => {
-    fetchStub.mockImplementation((...args) => {
-      if (args[0] === '/programming_expressions/get_filtered_results?page=1') {
-        return Promise.resolve({ok: true, json: () => returnData});
-      }
-    });
+    fetchStub
+      .withArgs('/programming_expressions/get_filtered_results?page=1')
+      .returns(Promise.resolve({ok: true, json: () => returnData}));
     const wrapper = mount(<ProgrammingExpressionsTable {...defaultProps} />);
     return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
       const fetchCount = fetchStub.callCount;
-      expect(fetchCount).toBe(1);
+      expect(fetchCount).to.equal(1);
       wrapper.update();
       const destroyButton = wrapper.find('BodyRow').at(2).find('Button').at(2);
       destroyButton.simulate('click');
-      expect(wrapper.find('StylizedBaseDialog').length).toBe(0);
-      expect(fetchStub).toHaveBeenCalledTimes(fetchCount);
+      expect(wrapper.find('StylizedBaseDialog').length).to.equal(0);
+      expect(fetchStub.callCount).to.equal(fetchCount);
     });
   });
 
   it('shows clone dialog to clone expression', () => {
-    fetchStub.mockImplementation((...args) => {
-      if (args[0] === '/programming_expressions/get_filtered_results?page=1') {
-        return Promise.resolve({ok: true, json: () => returnData});
-      }
-    });
+    fetchStub
+      .withArgs('/programming_expressions/get_filtered_results?page=1')
+      .returns(Promise.resolve({ok: true, json: () => returnData}));
     const wrapper = mount(<ProgrammingExpressionsTable {...defaultProps} />);
     return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
       wrapper.update();
       const destroyButton = wrapper.find('BodyRow').at(2).find('Button').at(1);
       destroyButton.simulate('click');
-      expect(wrapper.find('CloneProgrammingExpressionDialog').length).toBe(1);
+      expect(wrapper.find('CloneProgrammingExpressionDialog').length).to.equal(
+        1
+      );
     });
   });
 });

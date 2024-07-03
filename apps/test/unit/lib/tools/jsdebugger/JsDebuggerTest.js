@@ -1,6 +1,7 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
+import sinon from 'sinon';
 
 import dom from '@cdo/apps/dom';
 import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
@@ -15,7 +16,7 @@ import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import * as utils from '@cdo/apps/utils';
 
-
+import {expect} from '../../../../util/deprecatedChai';
 import {
   allowConsoleWarnings,
   createMouseEvent,
@@ -42,7 +43,7 @@ describe('The JSDebugger component', () => {
     codeApp.id = 'codeApp';
     document.body.appendChild(codeApp);
 
-    const runApp = jest.fn();
+    const runApp = sinon.spy();
     getStore().dispatch(
       setPageConstants({
         appType: 'applab',
@@ -58,8 +59,9 @@ describe('The JSDebugger component', () => {
 
     // Stub getTouchEventName to return valid event names as if we were in Chrome on a
     // mobile device, regardless of what browser the tests are running on.
-    jest.spyOn(dom, 'getTouchEventName').mockClear()
-      .mockImplementation(name => dom.TOUCH_MAP[name]['standard']);
+    sinon
+      .stub(dom, 'getTouchEventName')
+      .callsFake(name => dom.TOUCH_MAP[name]['standard']);
 
     ({addEventSpy, removeEventSpy} = getBodyEventSpies());
     ['mousemove', 'touchmove', 'mouseup', 'touchend'].forEach(e => {
@@ -67,11 +69,11 @@ describe('The JSDebugger component', () => {
       removeEventSpy.withArgs(e);
     });
 
-    jest.spyOn(utils, 'fireResizeEvent').mockClear().mockImplementation();
+    sinon.stub(utils, 'fireResizeEvent');
 
     root = mount(
       <Provider store={getStore()}>
-        <JsDebugger onSlideOpen={jest.fn()} onSlideShut={jest.fn()} />
+        <JsDebugger onSlideOpen={sinon.spy()} onSlideShut={sinon.spy()} />
       </Provider>
     );
     // Get the inner JsDebugger component by name (inside the Radium and
@@ -81,8 +83,8 @@ describe('The JSDebugger component', () => {
 
   afterEach(() => {
     root.unmount();
-    dom.getTouchEventName.mockRestore();
-    utils.fireResizeEvent.mockRestore();
+    dom.getTouchEventName.restore();
+    utils.fireResizeEvent.restore();
     restoreRedux();
   });
 
@@ -95,16 +97,16 @@ describe('The JSDebugger component', () => {
   const debugConsole = () => root.find('#debug-console');
 
   it('renders a div', () => {
-    expect(root.find('div#debug-area')).toBeDefined();
+    expect(root.find('div#debug-area')).to.exist;
   });
 
   it('initially has the height of 120px', () => {
-    expect(debugAreaEl().instance().style.height).toBe('120px');
+    expect(debugAreaEl().instance().style.height).to.equal('120px');
   });
 
   describe('The header', () => {
     it('contains an icon for closing the debugger', () => {
-      expect(closeIcon()).toBeDefined();
+      expect(closeIcon()).to.exist;
     });
   });
 
@@ -115,16 +117,16 @@ describe('The JSDebugger component', () => {
     });
 
     it('will make isOpen return false', () => {
-      expect(root.find('JsDebugger').props().isOpen).toBe(false);
+      expect(root.find('JsDebugger').props().isOpen).to.be.false;
     });
 
     it('will swap out the open/close icons', () => {
-      expect(closeIcon()).toBeFalsy();
-      expect(openIcon()).toBeDefined();
+      expect(closeIcon()).not.to.exist;
+      expect(openIcon()).to.exist;
     });
 
     it('will call the onSlideShut prop', () => {
-      expect(jsDebugger.props().onSlideShut).toHaveBeenCalled();
+      expect(jsDebugger.props().onSlideShut).to.have.been.called;
     });
 
     describe('Then clicking the open icon', () => {
@@ -134,20 +136,20 @@ describe('The JSDebugger component', () => {
       });
 
       it('will make isOpen return true again', () => {
-        expect(jsDebugger.props().isOpen).toBe(true);
+        expect(jsDebugger.props().isOpen).to.be.true;
       });
 
       it('will again swap out the open/close icons', () => {
-        expect(closeIcon()).toBeDefined();
-        expect(openIcon()).toBeFalsy();
+        expect(closeIcon()).to.exist;
+        expect(openIcon()).not.to.exist;
       });
 
       it('will expand the debugger by setting the height in the css', () => {
-        expect(debugAreaEl().instance().style.height).toBe('120px');
+        expect(debugAreaEl().instance().style.height).to.equal('120px');
       });
 
       it('will call the onSlideOpen prop', () => {
-        expect(jsDebugger.props().onSlideOpen).toHaveBeenCalled();
+        expect(jsDebugger.props().onSlideOpen).to.have.been.called;
       });
 
       describe('And resizing the debug area with other code', () => {
@@ -157,14 +159,14 @@ describe('The JSDebugger component', () => {
         });
 
         it('will make closing and opening the debugger return to the same height', () => {
-          expect(debugAreaEl().instance().style.height).toBe('350px');
+          expect(debugAreaEl().instance().style.height).to.equal('350px');
           // close
           jsDebugger.instance().slideToggle();
           jsDebugger.update();
           // re-open
           jsDebugger.instance().slideToggle();
           jsDebugger.update();
-          expect(debugAreaEl().instance().style.height).toBe('350px');
+          expect(debugAreaEl().instance().style.height).to.equal('350px');
         });
       });
     });
@@ -183,8 +185,8 @@ describe('The JSDebugger component', () => {
     });
 
     it('mouseup and touchend events on document.body are subscribed to', () => {
-      expect(addEventSpy.withArgs('mouseup')).toHaveBeenCalled();
-      expect(addEventSpy.withArgs('touchend')).toHaveBeenCalled();
+      expect(addEventSpy.withArgs('mouseup')).to.have.been.called;
+      expect(addEventSpy.withArgs('touchend')).to.have.been.called;
     });
 
     describe('when the mouse is pressed on the resize bar', () => {
@@ -192,8 +194,8 @@ describe('The JSDebugger component', () => {
         resizeBar().simulate('mouseDown');
       });
       it('starts listening to mouse move events on the docment body', () => {
-        expect(addEventSpy.withArgs('mousemove')).toHaveBeenCalled();
-        expect(addEventSpy.withArgs('touchmove')).toHaveBeenCalled();
+        expect(addEventSpy.withArgs('mousemove')).to.have.been.called;
+        expect(addEventSpy.withArgs('touchmove')).to.have.been.called;
       });
 
       describe('when the mouse is moved', () => {
@@ -208,7 +210,7 @@ describe('The JSDebugger component', () => {
 
           document.body.dispatchEvent(mouseEvent);
           jsDebugger.update();
-          expect(debugAreaEl().instance().style.height).toBe('200px');
+          expect(debugAreaEl().instance().style.height).to.equal('200px');
         });
 
         it('and will do so multiple times', () => {
@@ -223,19 +225,20 @@ describe('The JSDebugger component', () => {
           document.body.dispatchEvent(mouseEvent);
 
           jsDebugger.update();
-          expect(debugAreaEl().instance().style.height).toBe('180px');
+          expect(debugAreaEl().instance().style.height).to.equal('180px');
         });
 
         describe('when the mouse is unpressed', () => {
           beforeEach(() => {
             document.body.dispatchEvent(createMouseEvent('touchmove', 0, 120));
             addEventSpy
-              .withArgs('touchend').mock.calls.forEach(args => args[1](new CustomEvent('touchend')));
+              .withArgs('touchend')
+              .args.forEach(args => args[1](new CustomEvent('touchend')));
           });
 
           it('will stop responding to mouse move events', () => {
-            expect(removeEventSpy.withArgs('touchmove')).toHaveBeenCalled();
-            expect(removeEventSpy.withArgs('mousemove')).toHaveBeenCalled();
+            expect(removeEventSpy.withArgs('touchmove')).to.have.been.called;
+            expect(removeEventSpy.withArgs('mousemove')).to.have.been.called;
           });
         });
       });
@@ -244,8 +247,8 @@ describe('The JSDebugger component', () => {
 
   describe('Resizing the watchers bar', () => {
     it('mouseup and touchend events on document.body are subscribed to', () => {
-      expect(addEventSpy.withArgs('mouseup')).toHaveBeenCalled();
-      expect(addEventSpy.withArgs('touchend')).toHaveBeenCalled();
+      expect(addEventSpy.withArgs('mouseup')).to.have.been.called;
+      expect(addEventSpy.withArgs('touchend')).to.have.been.called;
     });
 
     describe('when the mouse is pressed on the resize bar', () => {
@@ -254,13 +257,13 @@ describe('The JSDebugger component', () => {
       });
 
       it('starts listening to mouse move events on the docment body', () => {
-        expect(addEventSpy.withArgs('mousemove')).toHaveBeenCalled();
-        expect(addEventSpy.withArgs('touchmove')).toHaveBeenCalled();
+        expect(addEventSpy.withArgs('mousemove')).to.have.been.called;
+        expect(addEventSpy.withArgs('touchmove')).to.have.been.called;
       });
 
       it('does not change the position of anything', () => {
-        expect(watchersResizeBar().instance().style.right).toBe('');
-        expect(debugConsole().instance().style.right).toBe('');
+        expect(watchersResizeBar().instance().style.right).to.equal('');
+        expect(debugConsole().instance().style.right).to.equal('');
       });
 
       describe('when the mouse is moved', () => {
@@ -270,28 +273,29 @@ describe('The JSDebugger component', () => {
         });
 
         it("changes the 'right' position of the watchers resize bar", () => {
-          expect(watchersResizeBar().instance().style.right).toBe('300px');
+          expect(watchersResizeBar().instance().style.right).to.equal('300px');
         });
 
         it("changes the 'right' style of the debug console", () => {
-          expect(debugConsole().instance().style.right).toBe('300px');
+          expect(debugConsole().instance().style.right).to.equal('300px');
         });
 
         it('and will do so multiple times', () => {
           document.body.dispatchEvent(createMouseEvent('touchmove', -320, 0));
-          expect(debugConsole().instance().style.right).toBe('320px');
+          expect(debugConsole().instance().style.right).to.equal('320px');
         });
 
         describe('when the mouse is unpressed', () => {
           beforeEach(() => {
             document.body.dispatchEvent(createMouseEvent('touchmove', -320, 0));
             addEventSpy
-              .withArgs('touchend').mock.calls.forEach(args => args[1](new CustomEvent('touchend')));
+              .withArgs('touchend')
+              .args.forEach(args => args[1](new CustomEvent('touchend')));
           });
 
           it('will stop responding to mouse move events', () => {
-            expect(removeEventSpy.withArgs('touchmove')).toHaveBeenCalled();
-            expect(removeEventSpy.withArgs('mousemove')).toHaveBeenCalled();
+            expect(removeEventSpy.withArgs('touchmove')).to.have.been.called;
+            expect(removeEventSpy.withArgs('mousemove')).to.have.been.called;
           });
         });
       });
@@ -346,17 +350,17 @@ function createOrCaptureSpy(parentObj, methodName) {
       // Something is already spying on this method.  Capture the spy for use
       // in our test, and don't clean it up ourselves.
       spyFn = parentObj[methodName];
-      expect(spyFn).not.toHaveBeenCalled();
+      expect(spyFn).not.to.have.been.called;
       wasCaptured = true;
     } else {
-      spyFn = jest.spyOn(parentObj, methodName).mockClear();
+      spyFn = sinon.spy(parentObj, methodName);
       wasCaptured = false;
     }
   });
 
   afterEach(() => {
     if (!wasCaptured) {
-      spyFn.mockRestore();
+      spyFn.restore();
     }
   });
 

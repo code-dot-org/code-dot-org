@@ -2,6 +2,7 @@ import {assert} from 'chai';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Factory} from 'rosie';
+import sinon from 'sinon';
 
 import './workshopFactory';
 import IntroPanel from '@cdo/apps/code-studio/pd/workshop_dashboard/IntroPanel';
@@ -11,11 +12,11 @@ describe('IntroPanel', () => {
 
   beforeEach(() => {
     server = sinon.createFakeServer();
-    loadWorkshop = jest.fn();
+    loadWorkshop = sinon.spy();
   });
 
   afterEach(() => {
-    server.mockRestore();
+    server.restore();
     server = null;
   });
 
@@ -40,7 +41,7 @@ describe('IntroPanel', () => {
 
       // The dialog should be closed and we should have called for a workshop refresh
       assert.isFalse(wrapper.state('showStartWorkshopConfirmation'));
-      assert(loadWorkshop.toHaveBeenCalledTimes(1));
+      assert(loadWorkshop.calledOnce);
     });
 
     it('begin to start the workshop, then change your mind', () => {
@@ -109,7 +110,7 @@ describe('IntroPanel', () => {
       wrapper.update();
 
       // The dialog should be closed and we should have called for a workshop refresh
-      assert(loadWorkshop.toHaveBeenCalledTimes(1));
+      assert(loadWorkshop.calledOnce);
     });
 
     it('begin to unstart the workshop, then change your mind', () => {

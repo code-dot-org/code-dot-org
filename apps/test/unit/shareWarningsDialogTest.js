@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import ShareWarningsDialog from '@cdo/apps/templates/ShareWarningsDialog';
 import commonMsg from '@cdo/locale';
 
-
+import {expect} from '../util/deprecatedChai';
 
 describe('ShareWarningsDialog', () => {
   it('renders ShareWarnings with age prompt', () => {

@@ -2,10 +2,11 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import {mapValues} from 'lodash';
 import React from 'react';
+import sinon from 'sinon';
 
 import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
 
-
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('Petition on submit', () => {
   const minimumInputs = {
@@ -54,12 +55,12 @@ describe('Petition on submit', () => {
     mount(<PetitionCallToAction gaPagePath={'/congrats/coursetest-2030'} />);
 
   beforeEach(() => {
-    jest.spyOn($, 'ajax').mockClear();
+    sinon.spy($, 'ajax');
     window.ga = sinon.fake();
   });
 
   afterEach(() => {
-    jest.restoreAllMocks();
+    sinon.restore();
     window.ga = undefined;
   });
 
@@ -67,15 +68,17 @@ describe('Petition on submit', () => {
     const petition = mountPetition();
     submitForm(petition);
 
-    expect($.ajax).not.toHaveBeenCalled();
+    expect($.ajax).to.not.have.been.called;
   });
   it('sends request if all required fields are valid', () => {
     const petition = mountPetition();
     addInputsToPetition(petition, minimumInputs);
     submitForm(petition);
 
-    const serverCalledWith = $.ajax.mock.calls[0][0];
-    expect(JSON.parse(serverCalledWith.data)).toEqual(expectedDataFromInputs(minimumInputs));
+    const serverCalledWith = $.ajax.getCall(0).args[0];
+    expect(JSON.parse(serverCalledWith.data)).to.deep.equal(
+      expectedDataFromInputs(minimumInputs)
+    );
   });
   it('sends request with name and email anonymized if under 16', () => {
     const petition = mountPetition();
@@ -90,8 +93,8 @@ describe('Petition on submit', () => {
     addInputsToPetition(petition, inputs);
     submitForm(petition);
 
-    const serverCalledWith = $.ajax.mock.calls[0][0];
-    expect(JSON.parse(serverCalledWith.data)).toEqual({
+    const serverCalledWith = $.ajax.getCall(0).args[0];
+    expect(JSON.parse(serverCalledWith.data)).to.deep.equal({
       ...expectedDataFromInputs(inputs),
       name_s: '',
       email_s: 'anonymous@code.org',
@@ -115,8 +118,8 @@ describe('Petition on submit', () => {
     addInputsToPetition(petition, inputs);
     submitForm(petition);
 
-    const serverCalledWith = $.ajax.mock.calls[0][0];
-    expect(JSON.parse(serverCalledWith.data)).toEqual({
+    const serverCalledWith = $.ajax.getCall(0).args[0];
+    expect(JSON.parse(serverCalledWith.data)).to.deep.equal({
       ...expectedDataFromInputs(inputs),
       role_s: 'engineer', // The 'role' value has a consistent name regardless of language
     });
@@ -126,11 +129,11 @@ describe('Petition on submit', () => {
     addInputsToPetition(petition, minimumInputs);
     submitForm(petition);
 
-    sinon.toHaveBeenCalledTimes(1);
+    sinon.assert.calledOnce(window.ga);
   });
   it('does not report to google analytics if unsuccessful submit', () => {
     const petition = mountPetition();
     submitForm(petition);
-    expect(window.ga).not.toHaveBeenCalled();
+    sinon.assert.notCalled(window.ga);
   });
 });

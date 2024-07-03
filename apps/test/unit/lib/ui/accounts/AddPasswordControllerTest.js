@@ -1,9 +1,10 @@
 import $ from 'jquery';
 import ReactDOM from 'react-dom';
+import {spy, stub} from 'sinon';
 
 import AddPasswordController from '@cdo/apps/lib/ui/accounts/AddPasswordController';
 
-import {assert} from '../../../../util/reconfiguredChai';
+import {expect, assert} from '../../../../util/reconfiguredChai';
 
 describe('AddPasswordController', () => {
   let controller, form, mockMountPoint;
@@ -23,15 +24,15 @@ describe('AddPasswordController', () => {
   });
 
   afterEach(() => {
-    ReactDOM.render.mockRestore();
+    ReactDOM.render.restore();
     document.body.removeChild(mockMountPoint);
   });
 
   describe('renderAddPasswordForm', () => {
     it('renders AddPasswordForm', () => {
-      expect(ReactDOM.render).not.toHaveBeenCalled();
+      expect(ReactDOM.render).not.to.have.been.called;
       controller.renderAddPasswordForm();
-      expect(ReactDOM.render).toHaveBeenCalledTimes(1);
+      expect(ReactDOM.render).to.have.been.calledOnce;
     });
   });
 
@@ -44,7 +45,7 @@ describe('AddPasswordController', () => {
       it('sets password field', async () => {
         await controller.submitAddPassword('newpassword', 'newpassword');
         const passwordValue = form.find('#add-password_user_password').val();
-        expect(passwordValue).toBe('newpassword');
+        expect(passwordValue).to.equal('newpassword');
       });
 
       it('sets password confirmation field', async () => {
@@ -52,7 +53,7 @@ describe('AddPasswordController', () => {
         const passwordValue = form
           .find('#add-password_user_password_confirmation')
           .val();
-        expect(passwordValue).toBe('otherpassword');
+        expect(passwordValue).to.equal('otherpassword');
       });
 
       it('resolves to undefined', async () => {

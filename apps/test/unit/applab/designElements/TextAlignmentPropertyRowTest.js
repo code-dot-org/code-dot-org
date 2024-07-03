@@ -1,5 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import EnumPropertyRow from '@cdo/apps/applab/designElements/EnumPropertyRow';
 import TextAlignmentPropertyRow, {
@@ -9,7 +10,7 @@ import TextAlignmentPropertyRow, {
   TEXT_ALIGNMENT_JUSTIFY,
 } from '@cdo/apps/applab/designElements/TextAlignmentPropertyRow';
 
-
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('TextAlignmentPropertyRow', () => {
   let initialValue;
@@ -18,7 +19,7 @@ describe('TextAlignmentPropertyRow', () => {
 
   beforeEach(() => {
     initialValue = TEXT_ALIGNMENT_LEFT;
-    handleChange = jest.fn();
+    handleChange = sinon.stub();
     wrapper = shallow(
       <TextAlignmentPropertyRow
         initialValue={initialValue}
@@ -30,21 +31,21 @@ describe('TextAlignmentPropertyRow', () => {
   it('renders EnumPropertyRow with correct props', () => {
     const enumPropertyRow = wrapper.find(EnumPropertyRow);
 
-    expect(enumPropertyRow.prop('desc')).toBe('text alignment');
-    expect(enumPropertyRow.prop('initialValue')).toBe(initialValue);
-    expect(enumPropertyRow.prop('options')).toEqual([
+    expect(enumPropertyRow.prop('desc')).to.equal('text alignment');
+    expect(enumPropertyRow.prop('initialValue')).to.equal(initialValue);
+    expect(enumPropertyRow.prop('options')).to.deep.equal([
       TEXT_ALIGNMENT_LEFT,
       TEXT_ALIGNMENT_RIGHT,
       TEXT_ALIGNMENT_CENTER,
       TEXT_ALIGNMENT_JUSTIFY,
     ]);
-    expect(enumPropertyRow.prop('displayOptions')).toEqual([
+    expect(enumPropertyRow.prop('displayOptions')).to.deep.equal([
       'left',
       'right',
       'center',
       'justify',
     ]);
-    expect(enumPropertyRow.prop('handleChange')).toBe(handleChange);
+    expect(enumPropertyRow.prop('handleChange')).to.equal(handleChange);
   });
 
   it('calls handleChange when the value changes', () => {

@@ -1,5 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import {stub} from 'sinon';
 
 import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagIcon';
 import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
@@ -15,11 +16,11 @@ const defaultProps = {
 
 describe('LessonExtrasProgressBubble', () => {
   beforeEach(() => {
-    stub(utils, 'currentLocation').mockReturnValue({search: ''});
+    stub(utils, 'currentLocation').returns({search: ''});
   });
 
   afterEach(() => {
-    utils.currentLocation.mockRestore();
+    utils.currentLocation.restore();
   });
 
   it('renders a link to given url', () => {
@@ -29,8 +30,8 @@ describe('LessonExtrasProgressBubble', () => {
   });
 
   it('preserves query params', () => {
-    utils.currentLocation.mockRestore();
-    stub(utils, 'currentLocation').mockReturnValue({search: '?foo=1'});
+    utils.currentLocation.restore();
+    stub(utils, 'currentLocation').returns({search: '?foo=1'});
 
     const wrapper = shallow(<LessonExtrasProgressBubble {...defaultProps} />);
 
@@ -38,8 +39,8 @@ describe('LessonExtrasProgressBubble', () => {
   });
 
   it('removes id from query params', () => {
-    utils.currentLocation.mockRestore();
-    stub(utils, 'currentLocation').mockReturnValue({search: '?id=1&foo=1'});
+    utils.currentLocation.restore();
+    stub(utils, 'currentLocation').returns({search: '?id=1&foo=1'});
 
     const wrapper = shallow(<LessonExtrasProgressBubble {...defaultProps} />);
 

@@ -1,11 +1,12 @@
 import $ from 'jquery';
 import ReactDOM from 'react-dom';
+import {spy, stub} from 'sinon';
 
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
 import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
 import color from '@cdo/apps/util/color';
 
-
+import {expect} from '../../../../util/reconfiguredChai';
 
 export const ENCRYPTED_EMAIL_PLACEHOLDER = '***encrypted***';
 
@@ -54,42 +55,42 @@ describe('ChangeEmailController', () => {
 
     afterEach(() => {
       controller.hideChangeEmailModal();
-      ReactDOM.render.mockRestore();
-      ReactDOM.unmountComponentAtNode.mockRestore();
+      ReactDOM.render.restore();
+      ReactDOM.unmountComponentAtNode.restore();
     });
 
     it('shows on showChangeEmailModal', () => {
-      expect(ReactDOM.render).not.toHaveBeenCalled();
+      expect(ReactDOM.render).not.to.have.been.called;
       controller.showChangeEmailModal();
-      expect(ReactDOM.render).toHaveBeenCalledTimes(1);
+      expect(ReactDOM.render).to.have.been.calledOnce;
     });
 
     it('show is idempotent', () => {
-      expect(ReactDOM.render).not.toHaveBeenCalled();
+      expect(ReactDOM.render).not.to.have.been.called;
       controller.showChangeEmailModal();
       controller.showChangeEmailModal();
-      expect(ReactDOM.render).toHaveBeenCalledTimes(1);
+      expect(ReactDOM.render).to.have.been.calledOnce;
     });
 
     it('shows when the #edit-email-link is clicked', () => {
-      expect(ReactDOM.render).not.toHaveBeenCalled();
+      expect(ReactDOM.render).not.to.have.been.called;
       link.click();
-      expect(ReactDOM.render).toHaveBeenCalledTimes(1);
+      expect(ReactDOM.render).to.have.been.calledOnce;
     });
 
     it('hides on hideChangeEmailModal', () => {
       controller.showChangeEmailModal();
-      expect(ReactDOM.unmountComponentAtNode).not.toHaveBeenCalled();
+      expect(ReactDOM.unmountComponentAtNode).not.to.have.been.called;
       controller.hideChangeEmailModal();
-      expect(ReactDOM.unmountComponentAtNode).toHaveBeenCalledTimes(1);
+      expect(ReactDOM.unmountComponentAtNode).to.have.been.calledOnce;
     });
 
     it('hide is idempotent', () => {
       controller.showChangeEmailModal();
-      expect(ReactDOM.unmountComponentAtNode).not.toHaveBeenCalled();
+      expect(ReactDOM.unmountComponentAtNode).not.to.have.been.called;
       controller.hideChangeEmailModal();
       controller.hideChangeEmailModal();
-      expect(ReactDOM.unmountComponentAtNode).toHaveBeenCalledTimes(1);
+      expect(ReactDOM.unmountComponentAtNode).to.have.been.calledOnce;
     });
   });
 
@@ -105,7 +106,9 @@ describe('ChangeEmailController', () => {
         newEmail: TEST_EMAIL,
         currentPassword: TEST_PASSWORD,
       });
-      expect(form.find('#change-email-modal_user_email').val()).toBe(TEST_EMAIL);
+      expect(form.find('#change-email-modal_user_email').val()).to.equal(
+        TEST_EMAIL
+      );
     });
 
     it('clears email field if user is under 13', async () => {
@@ -114,7 +117,7 @@ describe('ChangeEmailController', () => {
         newEmail: TEST_EMAIL,
         currentPassword: TEST_PASSWORD,
       });
-      expect(form.find('#change-email-modal_user_email').val()).toBe('');
+      expect(form.find('#change-email-modal_user_email').val()).to.equal('');
     });
 
     it('sets hashed email field', async () => {
@@ -122,7 +125,9 @@ describe('ChangeEmailController', () => {
         newEmail: TEST_EMAIL,
         currentPassword: TEST_PASSWORD,
       });
-      expect(form.find('#change-email-modal_user_hashed_email').val()).toBe(hashEmail(TEST_EMAIL));
+      expect(form.find('#change-email-modal_user_hashed_email').val()).to.equal(
+        hashEmail(TEST_EMAIL)
+      );
     });
 
     it('sets email_preference_opt_in if "yes"', async () => {
@@ -133,7 +138,7 @@ describe('ChangeEmailController', () => {
       });
       expect(
         form.find('#change-email-modal_user_email_preference_opt_in').val()
-      ).toBe('yes');
+      ).to.equal('yes');
     });
 
     it('sets email_preference_opt_in if "no"', async () => {
@@ -144,7 +149,7 @@ describe('ChangeEmailController', () => {
       });
       expect(
         form.find('#change-email-modal_user_email_preference_opt_in').val()
-      ).toBe('no');
+      ).to.equal('no');
     });
 
     it('does not set email_preference_opt_in otherwise', async () => {
@@ -155,7 +160,7 @@ describe('ChangeEmailController', () => {
       });
       expect(
         form.find('#change-email-modal_user_email_preference_opt_in').val()
-      ).toBe('');
+      ).to.equal('');
     });
 
     it('sets current password field', async () => {
@@ -165,7 +170,7 @@ describe('ChangeEmailController', () => {
       });
       expect(
         form.find('#change-email-modal_user_current_password').val()
-      ).toBe(TEST_PASSWORD);
+      ).to.equal(TEST_PASSWORD);
     });
 
     it('resolves to new email on success', async () => {
@@ -173,7 +178,7 @@ describe('ChangeEmailController', () => {
         newEmail: TEST_EMAIL,
         currentPassword: TEST_PASSWORD,
       });
-      expect(newEmail).toBe(TEST_EMAIL);
+      expect(newEmail).to.equal(TEST_EMAIL);
     });
 
     it('rejects on failure', async () => {
@@ -217,21 +222,21 @@ describe('ChangeEmailController', () => {
     it('updates the displayed user email for a teacher', () => {
       controller = newController(21, 'teacher');
       controller.onEmailChanged(TEST_EMAIL);
-      expect(displayedUserEmail.text()).toBe(TEST_EMAIL);
+      expect(displayedUserEmail.text()).to.equal(TEST_EMAIL);
     });
 
     it('does not update the displayed user email for a student', () => {
       controller = newController(21, 'student');
       displayedUserEmail.text(ENCRYPTED_EMAIL_PLACEHOLDER);
       controller.onEmailChanged(TEST_EMAIL);
-      expect(displayedUserEmail.text()).toBe(ENCRYPTED_EMAIL_PLACEHOLDER);
+      expect(displayedUserEmail.text()).to.equal(ENCRYPTED_EMAIL_PLACEHOLDER);
     });
 
     it('causes a highlight effect on the displayed user email', () => {
       controller = newController(21, 'student');
-      expect(displayedUserEmail.effect).not.toHaveBeenCalled();
+      expect(displayedUserEmail.effect).not.to.have.been.called;
       controller.onEmailChanged(TEST_EMAIL);
-      expect(displayedUserEmail.effect).toHaveBeenCalledWith('highlight', {
+      expect(displayedUserEmail.effect).to.have.been.calledWith('highlight', {
         duration: 1500,
         color: color.orange,
       });
@@ -239,9 +244,12 @@ describe('ChangeEmailController', () => {
 
     it('calls the emailChangeCallback with new email and hashed email', () => {
       controller = newController(21, 'student');
-      expect(emailChangedCallback).not.toHaveBeenCalled();
+      expect(emailChangedCallback).not.to.have.been.called;
       controller.onEmailChanged(TEST_EMAIL);
-      expect(emailChangedCallback).toHaveBeenCalledWith(TEST_EMAIL, hashEmail(TEST_EMAIL));
+      expect(emailChangedCallback).to.have.been.calledWith(
+        TEST_EMAIL,
+        hashEmail(TEST_EMAIL)
+      );
     });
   });
 });

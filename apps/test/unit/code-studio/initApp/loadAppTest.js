@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import sinon from 'sinon';
 
 import {files} from '@cdo/apps/clientApi';
 import clientState from '@cdo/apps/code-studio/clientState';
@@ -9,7 +10,7 @@ import loadAppOptions, {
 import project from '@cdo/apps/code-studio/initApp/project';
 import * as imageUtils from '@cdo/apps/imageUtils';
 
-
+import {expect} from '../../../util/reconfiguredChai';
 
 const SERVER_LEVEL_ID = 5;
 const SERVER_PROJECT_LEVEL_ID = 10;
@@ -22,25 +23,27 @@ describe('loadApp.js', () => {
 
   beforeAll(() => {
     oldAppOptions = window.appOptions;
-    jest.spyOn(clientState, 'writeSourceForLevel').mockClear()
-      .mockImplementation((scriptName, levelId, date, program) => {
+    sinon
+      .stub(clientState, 'writeSourceForLevel')
+      .callsFake((scriptName, levelId, date, program) => {
         writtenLevelId = levelId;
       });
-    jest.spyOn(clientState, 'sourceForLevel').mockClear()
-      .mockImplementation((scriptName, levelId, timestamp) => {
+    sinon
+      .stub(clientState, 'sourceForLevel')
+      .callsFake((scriptName, levelId, timestamp) => {
         readLevelId = levelId;
         return OLD_CODE;
       });
-    jest.spyOn(project, 'load').mockClear().mockImplementation(() => ({
+    sinon.stub(project, 'load').callsFake(() => ({
       then: successCallback => successCallback(),
     }));
-    jest.spyOn(project, 'hideBecauseAbusive').mockClear().mockReturnValue(false);
-    jest.spyOn(project, 'hideBecausePrivacyViolationOrProfane').mockClear().mockReturnValue(false);
-    jest.spyOn(project, 'getSharingDisabled').mockClear().mockReturnValue(false);
+    sinon.stub(project, 'hideBecauseAbusive').returns(false);
+    sinon.stub(project, 'hideBecausePrivacyViolationOrProfane').returns(false);
+    sinon.stub(project, 'getSharingDisabled').returns(false);
   });
   beforeEach(() => {
-    jest.spyOn(clientState, 'queryParams').mockClear().mockReturnValue(undefined);
-    jest.spyOn($, 'ajax').mockClear().mockImplementation(() => ({
+    sinon.stub(clientState, 'queryParams').returns(undefined);
+    sinon.stub($, 'ajax').callsFake(() => ({
       done: successCallback => ({
         fail: failureCallback => {
           successCallback({signedIn: false});
@@ -55,23 +58,24 @@ describe('loadApp.js', () => {
     setAppOptions(appOptions);
   });
   afterAll(() => {
-    clientState.writeSourceForLevel.mockRestore();
-    clientState.sourceForLevel.mockRestore();
-    project.load.mockRestore();
-    project.hideBecauseAbusive.mockRestore();
-    project.hideBecausePrivacyViolationOrProfane.mockRestore();
-    project.getSharingDisabled.mockRestore();
+    clientState.writeSourceForLevel.restore();
+    clientState.sourceForLevel.restore();
+    project.load.restore();
+    project.hideBecauseAbusive.restore();
+    project.hideBecausePrivacyViolationOrProfane.restore();
+    project.getSharingDisabled.restore();
     window.appOptions = oldAppOptions;
   });
   afterEach(() => {
-    clientState.queryParams.mockRestore();
-    $.ajax.mockRestore();
+    clientState.queryParams.restore();
+    $.ajax.restore();
   });
 
   const stubQueryParams = (paramName, paramValue) => {
-    clientState.queryParams.mockRestore(); // restore the default stub
-    jest.spyOn(clientState, 'queryParams').mockClear()
-      .mockImplementation(param => (param === paramName ? paramValue : undefined));
+    clientState.queryParams.restore(); // restore the default stub
+    sinon
+      .stub(clientState, 'queryParams')
+      .callsFake(param => (param === paramName ? paramValue : undefined));
   };
 
   const stubAppOptionsRequests = (
@@ -79,18 +83,10 @@ describe('loadApp.js', () => {
     userAppOptionsResponse = {signedIn: false},
     exampleSolutionsResponse = []
   ) => {
-    $.ajax.mockRestore();
-    const ajaxStub = jest.spyOn($, 'ajax').mockClear().mockImplementation();
-    ajaxStub.mockImplementation(() => {
-      if (ajaxStub.mock.calls.length === 0) {
-        return exampleSolutionsResponse;
-      }
-    });
-    ajaxStub.mockImplementation(() => {
-      if (ajaxStub.mock.calls.length === 1) {
-        return userAppOptionsResponse;
-      }
-    });
+    $.ajax.restore();
+    const ajaxStub = sinon.stub($, 'ajax');
+    ajaxStub.onCall(0).returns(exampleSolutionsResponse);
+    ajaxStub.onCall(1).returns(userAppOptionsResponse);
   };
 
   describe('loadAppAsync for cached levels', () => {
@@ -115,8 +111,8 @@ describe('loadApp.js', () => {
 
       loadAppOptions()
         .then(() => {
-          expect(readLevelId).toBe(SERVER_LEVEL_ID);
-          expect(window.appOptions.level.lastAttempt).toBe(OLD_CODE);
+          expect(readLevelId).to.equal(SERVER_LEVEL_ID);
+          expect(window.appOptions.level.lastAttempt).to.equal(OLD_CODE);
 
           document.body.removeChild(appOptionsData);
           done();
@@ -135,8 +131,8 @@ describe('loadApp.js', () => {
 
       loadAppOptions()
         .then(() => {
-          expect(readLevelId).toBe(SERVER_PROJECT_LEVEL_ID);
-          expect(window.appOptions.level.lastAttempt).toBe(OLD_CODE);
+          expect(readLevelId).to.equal(SERVER_PROJECT_LEVEL_ID);
+          expect(window.appOptions.level.lastAttempt).to.equal(OLD_CODE);
 
           document.body.removeChild(appOptionsData);
           done();
@@ -155,8 +151,8 @@ describe('loadApp.js', () => {
 
       loadAppOptions()
         .then(() => {
-          expect(window.appOptions.level.lastAttempt).toBeUndefined();
-          expect(readLevelId).toBeUndefined();
+          expect(window.appOptions.level.lastAttempt).to.be.undefined;
+          expect(readLevelId).to.be.undefined;
 
           document.body.removeChild(appOptionsData);
           done();
@@ -185,7 +181,7 @@ describe('loadApp.js', () => {
 
       loadAppOptions()
         .then(() => {
-          expect(window.appOptions.channel).toBe(responseChannel);
+          expect(window.appOptions.channel).to.equal(responseChannel);
           document.body.removeChild(appOptionsData);
           done();
         })
@@ -216,7 +212,7 @@ describe('loadApp.js', () => {
 
       loadAppOptions()
         .then(() => {
-          expect(window.appOptions.exampleSolutions).toBe(exampleSolutions);
+          expect(window.appOptions.exampleSolutions).to.equal(exampleSolutions);
           document.body.removeChild(appOptionsData);
           done();
         })
@@ -229,15 +225,15 @@ describe('loadApp.js', () => {
       'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
 
     beforeEach(() => {
-      jest.spyOn(imageUtils, 'dataURIToFramedBlob').mockClear().mockImplementation();
-      jest.spyOn(files, 'putFile').mockClear().mockImplementation();
+      sinon.stub(imageUtils, 'dataURIToFramedBlob');
+      sinon.stub(files, 'putFile');
       appOptions.level.isProjectLevel = true;
       appOptions.level.edit_blocks = false;
     });
 
     afterEach(() => {
-      files.putFile.mockRestore();
-      imageUtils.dataURIToFramedBlob.mockRestore();
+      files.putFile.restore();
+      imageUtils.dataURIToFramedBlob.restore();
     });
 
     it('uploads a share image for a non-droplet project (instead of writing the level)', done => {
@@ -246,8 +242,8 @@ describe('loadApp.js', () => {
       );
 
       files.putFile.callsFake((name, blob) => {
-        expect(writtenLevelId).toBeUndefined();
-        expect(name).toBe('_share_image.png');
+        expect(writtenLevelId).to.be.undefined;
+        expect(name).to.equal('_share_image.png');
         done();
       });
 
@@ -255,7 +251,7 @@ describe('loadApp.js', () => {
       appOptions.onAttempt({image: BLANK_PNG_PIXEL});
 
       // dataURIToFramedBlob gets called synchronously, eventually calls putFile.
-      expect(imageUtils.dataURIToFramedBlob).toHaveBeenCalledTimes(1);
+      expect(imageUtils.dataURIToFramedBlob).to.have.been.calledOnce;
     });
 
     // Make sure we can prevent sharing of certain level types
@@ -263,9 +259,9 @@ describe('loadApp.js', () => {
       appOptions.level.disableSharing = true;
       setupApp(appOptions);
       appOptions.onAttempt({image: BLANK_PNG_PIXEL});
-      expect(writtenLevelId).toBeUndefined();
-      expect(imageUtils.dataURIToFramedBlob).not.toHaveBeenCalled();
-      expect(files.putFile).not.toHaveBeenCalled();
+      expect(writtenLevelId).to.be.undefined;
+      expect(imageUtils.dataURIToFramedBlob).not.to.have.been.called;
+      expect(files.putFile).not.to.have.been.called;
     });
 
     // Catch the edge case with calc and eval projects, which don't generate
@@ -275,9 +271,9 @@ describe('loadApp.js', () => {
       appOptions.onAttempt({
         /* No image in report */
       });
-      expect(writtenLevelId).toBeUndefined();
-      expect(imageUtils.dataURIToFramedBlob).not.toHaveBeenCalled();
-      expect(files.putFile).not.toHaveBeenCalled();
+      expect(writtenLevelId).to.be.undefined;
+      expect(imageUtils.dataURIToFramedBlob).not.to.have.been.called;
+      expect(files.putFile).not.to.have.been.called;
     });
   });
 });

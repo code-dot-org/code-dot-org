@@ -1,6 +1,7 @@
 import {render} from '@testing-library/react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import {
   AudioQueue,
@@ -8,7 +9,7 @@ import {
 } from '@cdo/apps/templates/instructions/AudioQueue';
 import {UnconnectedInlineAudio as InlineAudio} from '@cdo/apps/templates/instructions/InlineAudio';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import {setExternalGlobals} from '../../../util/testUtils';
 
 const DEFAULT_PROPS = {
@@ -115,23 +116,23 @@ describe('InlineAudio', function () {
     const wrapper = mount(
       <InlineAudio {...DEFAULT_PROPS} textToSpeechEnabled />
     );
-    expect(wrapper.find('.inline-audio').exists()).toBe(false);
+    expect(wrapper.find('.inline-audio').exists()).to.be.false;
     const component = wrapper.at(0);
     component.instance().setState({loaded: true});
     wrapper.setProps({});
-    expect(wrapper.find('.inline-audio').exists()).toBe(true);
+    expect(wrapper.find('.inline-audio').exists()).to.be.true;
   });
 
   it('can toggle audio', async function () {
     const component = getComponent(<InlineAudio {...DEFAULT_PROPS} />);
 
-    expect(component.state().playing).toBe(false);
+    expect(component.state().playing).to.be.false;
     component.instance().toggleAudio();
     await waitForPromises();
-    expect(component.state().playing).toBe(true);
+    expect(component.state().playing).to.be.true;
     component.instance().toggleAudio();
     await waitForPromises();
-    expect(component.state().playing).toBe(false);
+    expect(component.state().playing).to.be.false;
   });
 
   it('autoplays if autoplay of text-to-speech is enabled', async function () {
@@ -140,7 +141,7 @@ describe('InlineAudio', function () {
     );
 
     await waitForPromises();
-    expect(component.state().playing).toBe(true);
+    expect(component.state().playing).to.be.true;
   });
 
   it('when playAudio resolves, state.playing set to true', async () => {
@@ -148,39 +149,39 @@ describe('InlineAudio', function () {
       <InlineAudio assetUrl={function () {}} ttsAutoplayEnabled={false} />
     );
 
-    expect(component.state().playing).toBe(false);
+    expect(component.state().playing).to.be.false;
     await component.instance().playAudio();
-    expect(component.state().playing).toBe(true);
+    expect(component.state().playing).to.be.true;
   });
 
   it('only initializes Audio once', function () {
-    jest.spyOn(window, 'Audio').mockClear();
+    sinon.spy(window, 'Audio');
     const component = getComponent(<InlineAudio {...DEFAULT_PROPS} />);
 
-    expect(window.Audio).toHaveBeenCalledTimes(1);
+    expect(window.Audio).to.have.been.calledOnce;
     component.instance().playAudio();
-    expect(window.Audio).toHaveBeenCalledTimes(1);
+    expect(window.Audio).to.have.been.calledOnce;
     component.instance().pauseAudio();
-    expect(window.Audio).toHaveBeenCalledTimes(1);
+    expect(window.Audio).to.have.been.calledOnce;
     component.instance().playAudio();
-    expect(window.Audio).toHaveBeenCalledTimes(1);
-    jest.restoreAllMocks();
+    expect(window.Audio).to.have.been.calledOnce;
+    sinon.restore();
   });
 
   it('handles source update gracefully, stopping audio', async function () {
     const wrapper = mount(<InlineAudio {...DEFAULT_PROPS} />);
     const component = wrapper.at(0);
     await component.instance().playAudio();
-    expect(component.state().playing).toBe(true);
+    expect(component.state().playing).to.be.true;
 
     wrapper.setProps({src: 'state2'});
-    expect(component.state().audio).toBeUndefined();
-    expect(component.state().playing).toBe(false);
-    expect(component.state().error).toBe(false);
+    expect(component.state().audio).to.be.undefined;
+    expect(component.state().playing).to.be.false;
+    expect(component.state().error).to.be.false;
   });
 
   it('calls addToQueue for each InlineAudio rendered', () => {
-    const addToQueueSpy = jest.fn();
+    const addToQueueSpy = sinon.spy();
     render(
       <AudioQueueContext.Provider
         value={{
@@ -194,11 +195,11 @@ describe('InlineAudio', function () {
         <InlineAudio {...DEFAULT_PROPS} ttsAutoplayEnabled={true} />
       </AudioQueueContext.Provider>
     );
-    expect(addToQueueSpy).toHaveBeenCalledTimes(2);
+    expect(addToQueueSpy).to.have.been.calledTwice;
   });
 
   it('does not add to queue if autoplay is off', () => {
-    const addToQueueSpy = jest.fn();
+    const addToQueueSpy = sinon.spy();
     render(
       <AudioQueueContext.Provider
         value={{
@@ -211,7 +212,7 @@ describe('InlineAudio', function () {
         <InlineAudio {...DEFAULT_PROPS} />
       </AudioQueueContext.Provider>
     );
-    expect(addToQueueSpy).not.toHaveBeenCalled();
+    expect(addToQueueSpy).to.not.have.been.called;
   });
 });
 

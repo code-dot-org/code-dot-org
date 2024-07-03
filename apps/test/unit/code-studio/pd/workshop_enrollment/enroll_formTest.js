@@ -1,8 +1,9 @@
-import {assert} from 'chai';
+import {assert, expect} from 'chai';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import jQuery from 'jquery';
 import {pick, omit} from 'lodash';
 import React from 'react';
+import sinon from 'sinon';
 
 import EnrollForm from '@cdo/apps/code-studio/pd/workshop_enrollment/enroll_form';
 import {SubjectNames} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
@@ -15,11 +16,11 @@ describe('Enroll Form', () => {
   let enrollForm;
   beforeEach(() => {
     server = sinon.fakeServer.create();
-    jest.spyOn(jQuery, 'ajax').mockClear();
+    sinon.spy(jQuery, 'ajax');
   });
   afterEach(() => {
-    server.mockRestore();
-    jQuery.ajax.mockRestore();
+    server.restore();
+    jQuery.ajax.restore();
   });
 
   const props = {
@@ -62,15 +63,15 @@ describe('Enroll Form', () => {
   const testValidateFields = (form, params, errorProperty) => {
     form.setState(params);
     form.find('#submit').simulate('click');
-    expect(form.state('errors')).toHaveProperty(errorProperty);
-    expect(jQuery.ajax).not.toHaveBeenCalled();
+    expect(form.state('errors')).to.have.property(errorProperty);
+    expect(jQuery.ajax.called).to.be.false;
   };
 
   const testSuccessfulSubmit = (form, params) => {
     form.setState(params);
     form.find('#submit').simulate('click');
-    expect(form.state('errors')).toHaveLength(0);
-    expect(jQuery.ajax).toHaveBeenCalled();
+    expect(form.state('errors')).to.be.empty;
+    expect(jQuery.ajax.called).to.be.true;
   };
 
   describe('CSF Enroll Form', () => {
@@ -415,15 +416,15 @@ describe('Enroll Form', () => {
 
     it('displays describe role question after answered as other', () => {
       enrollForm.setState({role: 'Other'});
-      expect(enrollForm.find('#describe_role')).toHaveLength(1);
+      expect(enrollForm.find('#describe_role')).to.have.length(1);
     });
 
     it('does not display describe role question after answered as counselor or admin', () => {
       enrollForm.setState({role: 'Administrator'});
-      expect(enrollForm.find('#describe_role')).toHaveLength(0);
+      expect(enrollForm.find('#describe_role')).to.have.length(0);
 
       enrollForm.setState({role: 'Counselor'});
-      expect(enrollForm.find('#describe_role')).toHaveLength(0);
+      expect(enrollForm.find('#describe_role')).to.have.length(0);
     });
 
     it('submits when all required params are present', () => {
@@ -469,16 +470,18 @@ describe('Enroll Form', () => {
 
       enrollForm.find('#submit').simulate('click');
 
-      expect(jQuery.ajax).toHaveBeenCalledTimes(1);
-      expect(JSON.parse(jQuery.ajax.mock.calls[0][0].data)).toEqual(expectedData);
+      expect(jQuery.ajax.calledOnce).to.be.true;
+      expect(JSON.parse(jQuery.ajax.getCall(0).args[0].data)).to.deep.equal(
+        expectedData
+      );
     });
 
     it('do not submit other school_info fields when school_id is selected', () => {
       enrollForm.setState(requiredParams);
       enrollForm.find('#submit').simulate('click');
 
-      expect(jQuery.ajax).toHaveBeenCalledTimes(1);
-      expect(JSON.parse(jQuery.ajax.mock.calls[0][0].data)).toEqual({
+      expect(jQuery.ajax.calledOnce).to.be.true;
+      expect(JSON.parse(jQuery.ajax.getCall(0).args[0].data)).to.deep.equal({
         ...requiredParams,
         school_info: {school_id: school_id},
       });
@@ -489,14 +492,14 @@ describe('Enroll Form', () => {
 
       // Submit button should stay enabled if invalid data was provided.
       // In this case, no "role" was included, which is a required field.
-      expect(enrollForm.find('#submit').prop('disabled')).toBe(false);
+      expect(enrollForm.find('#submit').prop('disabled')).to.be.false;
       enrollForm.find('#submit').simulate('click');
-      expect(enrollForm.find('#submit').prop('disabled')).toBe(false);
+      expect(enrollForm.find('#submit').prop('disabled')).to.be.false;
 
       // Submit button becomes disabled once legitimate submission is made.
       enrollForm.setState({role: 'Librarian'});
       enrollForm.find('#submit').simulate('click');
-      expect(enrollForm.find('#submit').prop('disabled')).toBe(true);
+      expect(enrollForm.find('#submit').prop('disabled')).to.be.true;
     });
 
     it('set first name when rendered as a student', () => {
@@ -515,15 +518,15 @@ describe('Enroll Form', () => {
           onSubmissionComplete={props.onSubmissionComplete}
         />
       );
-      expect(enrollForm.state('email')).toBe('');
-      expect(enrollForm.state('first_name')).toBe('Student');
+      expect(enrollForm.state('email')).to.equal('');
+      expect(enrollForm.state('first_name')).to.equal('Student');
 
       // If I submit in this state, first name should not be one
       // of the validation errors.
       enrollForm.find('#submit').simulate('click');
-      expect(jQuery.ajax).not.toHaveBeenCalled();
-      expect(enrollForm.state('errors')).toHaveProperty('email');
-      expect(enrollForm.state('errors')).not.toHaveProperty('first_name');
+      expect(jQuery.ajax.called).to.be.false;
+      expect(enrollForm.state('errors')).to.have.property('email');
+      expect(enrollForm.state('errors')).not.to.have.property('first_name');
     });
 
     // first name and email fields are set as props on page load

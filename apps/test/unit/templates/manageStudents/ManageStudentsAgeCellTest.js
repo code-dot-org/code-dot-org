@@ -1,9 +1,10 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import {UnconnectedManageStudentAgeCell as ManageStudentAgeCell} from '@cdo/apps/templates/manageStudents/ManageStudentsAgeCell';
 
-
+import {expect} from '../../../util/deprecatedChai';
 
 const DEFAULT_PROPS = {
   id: 2,
@@ -15,8 +16,8 @@ describe('ManageStudentAgeCell', () => {
   let editStudent, setSharingDefault;
 
   beforeEach(() => {
-    editStudent = jest.fn();
-    setSharingDefault = jest.fn();
+    editStudent = sinon.spy();
+    setSharingDefault = sinon.spy();
   });
 
   it('renders the age set for the student, when not editing', () => {
@@ -28,8 +29,8 @@ describe('ManageStudentAgeCell', () => {
         setSharingDefault={setSharingDefault}
       />
     );
-    expect(wrapper).toContain(10);
-    expect(wrapper.find('select').exists()).toBe(false);
+    expect(wrapper).to.contain(10);
+    expect(wrapper.find('select').exists()).to.be.false;
   });
 
   it('renders age select dropdown, when editing', () => {
@@ -43,7 +44,7 @@ describe('ManageStudentAgeCell', () => {
       />
     );
     expect(wrapper.find('select').exists());
-    expect(wrapper.find('option')).toHaveLength(19);
+    expect(wrapper.find('option')).to.have.length(19);
   });
 
   it('changing the age from one value to another calls editStudent', () => {
@@ -56,13 +57,13 @@ describe('ManageStudentAgeCell', () => {
         setSharingDefault={setSharingDefault}
       />
     );
-    expect(editStudent).toHaveBeenCalledTimes(0);
-    expect(setSharingDefault).toHaveBeenCalledTimes(0);
+    expect(editStudent.callCount).to.equal(0);
+    expect(setSharingDefault.callCount).to.equal(0);
     wrapper.find('select').simulate('change', {target: {value: '21+'}});
-    expect(editStudent).toHaveBeenCalledTimes(1);
+    expect(editStudent.callCount).to.equal(1);
     // setSharing default should not be called because the age was changed from
     // 10 to  21+ and we only call setSharingDefault if initial age is ''.
-    expect(setSharingDefault).toHaveBeenCalledTimes(0);
+    expect(setSharingDefault.callCount).to.equal(0);
   });
 
   it('selecting an initial age from the dropdown calls editStudent and setSharingDefault', () => {
@@ -75,11 +76,11 @@ describe('ManageStudentAgeCell', () => {
         setSharingDefault={setSharingDefault}
       />
     );
-    expect(editStudent).toHaveBeenCalledTimes(0);
-    expect(setSharingDefault).toHaveBeenCalledTimes(0);
+    expect(editStudent.callCount).to.equal(0);
+    expect(setSharingDefault.callCount).to.equal(0);
     wrapper.find('select').simulate('change', {target: {value: 13}});
-    expect(editStudent).toHaveBeenCalledTimes(1);
+    expect(editStudent.callCount).to.equal(1);
     // setSharing default should be called because initial age was ''.
-    expect(setSharingDefault).toHaveBeenCalledTimes(1);
+    expect(setSharingDefault.callCount).to.equal(1);
   });
 });

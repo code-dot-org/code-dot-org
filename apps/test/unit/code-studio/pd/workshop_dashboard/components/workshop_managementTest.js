@@ -1,6 +1,8 @@
-import { shallow } from 'enzyme';
+import {expect} from 'chai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import sinon from 'sinon';
 
 import ConfirmationDialog from '@cdo/apps/code-studio/pd/components/confirmation_dialog';
 import {WorkshopManagement} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_management';
@@ -47,13 +49,13 @@ describe('WorkshopManagement', () => {
     const filtered = findButtons().filterWhere(
       b => b.children().first().text() === text
     );
-    expect(filtered).toHaveLength(1);
+    expect(filtered).to.have.length(1);
     return filtered.first();
   };
 
   const verifyViewWorkshopButton = () => {
     const viewWorkshopButton = findButtonWithText('View Workshop');
-    expect(viewWorkshopButton.props().href).toEqual('viewHref');
+    expect(viewWorkshopButton.props().href).to.eql('viewHref');
 
     mockRouter.expects('push').withExactArgs('viewUrl');
     viewWorkshopButton.simulate('click', mockClickEvent);
@@ -75,7 +77,7 @@ describe('WorkshopManagement', () => {
         date: '2020-06-01',
         subject: '5-day Summer',
       });
-      expect(surveyUrl).toEqual('/workshop_daily_survey_results/123');
+      expect(surveyUrl).to.eql('/workshop_daily_survey_results/123');
     });
 
     it('uses foorm results for Intro workshop past May 2020', () => {
@@ -83,7 +85,7 @@ describe('WorkshopManagement', () => {
         date: '2020-05-08',
         subject: 'Intro',
       });
-      expect(surveyUrl).toEqual('/workshop_daily_survey_results/123');
+      expect(surveyUrl).to.eql('/workshop_daily_survey_results/123');
     });
 
     it('uses daily results for academic year workshop past August 2018', () => {
@@ -91,7 +93,7 @@ describe('WorkshopManagement', () => {
         date: '2018-09-01',
         subject: 'Academic Year Workshop 1',
       });
-      expect(surveyUrl).toEqual('/daily_survey_results/123');
+      expect(surveyUrl).to.eql('/daily_survey_results/123');
     });
 
     it('uses survey results for academic year workshop before August 2018', () => {
@@ -99,7 +101,7 @@ describe('WorkshopManagement', () => {
         date: '2018-07-01',
         subject: 'Academic Year Workshop 1',
       });
-      expect(surveyUrl).toBeNull();
+      expect(surveyUrl).to.eql(null);
     });
 
     it('uses daily results for local summer in 2018', () => {
@@ -107,7 +109,7 @@ describe('WorkshopManagement', () => {
         date: '2018-07-01',
         subject: WorkshopTypes.local_summer,
       });
-      expect(surveyUrl).toEqual('/daily_survey_results/123');
+      expect(surveyUrl).to.eql('/daily_survey_results/123');
     });
 
     it('uses daily results for teachercon in 2018', () => {
@@ -115,13 +117,13 @@ describe('WorkshopManagement', () => {
         date: '2018-07-01',
         subject: WorkshopTypes.teachercon,
       });
-      expect(surveyUrl).toEqual('/daily_survey_results/123');
+      expect(surveyUrl).to.eql('/daily_survey_results/123');
     });
 
     it('uses organizer results for organizers', () => {
       const organizerPermission = new Permission([Organizer]);
       const surveyUrl = getSurveyUrlForProps({permission: organizerPermission});
-      expect(surveyUrl).toBeNull();
+      expect(surveyUrl).to.eql(null);
     });
 
     it('uses organizer results for program managers', () => {
@@ -129,12 +131,12 @@ describe('WorkshopManagement', () => {
       const surveyUrl = getSurveyUrlForProps({
         permission: programManagerPermission,
       });
-      expect(surveyUrl).toBeNull();
+      expect(surveyUrl).to.eql(null);
     });
 
     it('uses survey_results by default', () => {
       const surveyUrl = getSurveyUrlForProps();
-      expect(surveyUrl).toBeNull();
+      expect(surveyUrl).to.eql(null);
     });
   });
 
@@ -142,16 +144,16 @@ describe('WorkshopManagement', () => {
     let deleteStub;
 
     beforeEach(() => {
-      deleteStub = jest.fn();
+      deleteStub = sinon.spy();
       mockRouter
         .expects('createHref')
         .withExactArgs('viewUrl')
-        .mockReturnValue('viewHref')
+        .returns('viewHref')
         .atLeast(1);
       mockRouter
         .expects('createHref')
         .withExactArgs('editUrl')
-        .mockReturnValue('editHref')
+        .returns('editHref')
         .atLeast(1);
 
       workshopManagement = shallow(
@@ -165,11 +167,11 @@ describe('WorkshopManagement', () => {
     });
 
     afterEach(() => {
-      expect(deleteStub).not.toHaveBeenCalled();
+      expect(deleteStub.notCalled).to.be.true;
     });
 
     it('Has 3 buttons', () => {
-      expect(findButtons()).toHaveLength(3);
+      expect(findButtons()).to.have.length(3);
     });
 
     it('Has a view workshop button', () => {
@@ -178,7 +180,7 @@ describe('WorkshopManagement', () => {
 
     it('Has an edit button', () => {
       const editButton = findButtonWithText('Edit');
-      expect(editButton.props().href).toEqual('editHref');
+      expect(editButton.props().href).to.eql('editHref');
 
       mockRouter.expects('push').withExactArgs('editUrl');
       editButton.simulate('click', mockClickEvent);
@@ -188,7 +190,7 @@ describe('WorkshopManagement', () => {
       const deleteButton = findButtonWithText('Delete');
 
       deleteButton.simulate('click', mockClickEvent);
-      expect(workshopManagement.state().showDeleteConfirmation).toBe(true);
+      expect(workshopManagement.state().showDeleteConfirmation).to.be.true;
     });
 
     describe('Delete confirmation', () => {
@@ -199,20 +201,24 @@ describe('WorkshopManagement', () => {
       });
 
       it('Is displayed when showDeleteConfirmation is set', () => {
-        expect(deleteConfirmationDialog).toHaveLength(1);
-        expect(deleteConfirmationDialog.props().onOk).toEqual(workshopManagement.instance().handleDeleteConfirmed);
-        expect(deleteConfirmationDialog.props().onCancel).toEqual(workshopManagement.instance().handleDeleteCanceled);
+        expect(deleteConfirmationDialog).to.have.length(1);
+        expect(deleteConfirmationDialog.props().onOk).to.eql(
+          workshopManagement.instance().handleDeleteConfirmed
+        );
+        expect(deleteConfirmationDialog.props().onCancel).to.eql(
+          workshopManagement.instance().handleDeleteCanceled
+        );
       });
 
       it('Goes away when canceled', () => {
         deleteConfirmationDialog.props().onCancel();
-        expect(workshopManagement.state().showDeleteConfirmation).toBe(false);
+        expect(workshopManagement.state().showDeleteConfirmation).to.be.false;
       });
 
       it('Calls the supplied onDelete func when confirmed', () => {
         deleteConfirmationDialog.props().onOk();
-        expect(deleteStub).toHaveBeenCalledWith(123);
-        deleteStub.mockReset();
+        expect(deleteStub.withArgs(123).calledOnce).to.be.true;
+        deleteStub.resetHistory();
       });
     });
   });
@@ -222,7 +228,7 @@ describe('WorkshopManagement', () => {
       mockRouter
         .expects('createHref')
         .withExactArgs('viewUrl')
-        .mockReturnValue('viewHref')
+        .returns('viewHref')
         .atLeast(1);
 
       workshopManagement = shallow(<WorkshopManagement {...defaultProps} />, {
@@ -231,7 +237,7 @@ describe('WorkshopManagement', () => {
     });
 
     it('Has only a view workshop button', () => {
-      expect(findButtons()).toHaveLength(1);
+      expect(findButtons()).to.have.length(1);
       verifyViewWorkshopButton();
     });
   });
@@ -241,7 +247,7 @@ describe('WorkshopManagement', () => {
       mockRouter
         .expects('createHref')
         .withExactArgs('viewUrl')
-        .mockReturnValue('viewHref');
+        .returns('viewHref');
 
       workshopManagement = shallow(
         <WorkshopManagement
@@ -254,7 +260,7 @@ describe('WorkshopManagement', () => {
     });
 
     it('Has 1 button', () => {
-      expect(findButtons()).toHaveLength(1);
+      expect(findButtons()).to.have.length(1);
     });
 
     it('Has a view workshop button', () => {
@@ -267,7 +273,7 @@ describe('WorkshopManagement', () => {
       mockRouter
         .expects('createHref')
         .withExactArgs('viewUrl')
-        .mockReturnValue('viewHref');
+        .returns('viewHref');
 
       workshopManagement = shallow(
         <WorkshopManagement
@@ -280,7 +286,7 @@ describe('WorkshopManagement', () => {
     });
 
     it('Has 1 button', () => {
-      expect(findButtons()).toHaveLength(1);
+      expect(findButtons()).to.have.length(1);
     });
 
     it('Has a view workshop button', () => {
@@ -293,7 +299,7 @@ describe('WorkshopManagement', () => {
       mockRouter
         .expects('createHref')
         .withExactArgs('viewUrl')
-        .mockReturnValue('viewHref');
+        .returns('viewHref');
 
       workshopManagement = shallow(
         <WorkshopManagement
@@ -306,7 +312,7 @@ describe('WorkshopManagement', () => {
     });
 
     it('Has 1 button', () => {
-      expect(findButtons()).toHaveLength(1);
+      expect(findButtons()).to.have.length(1);
     });
 
     it('Has a view workshop button', () => {
@@ -319,11 +325,11 @@ describe('WorkshopManagement', () => {
       mockRouter
         .expects('createHref')
         .withExactArgs('viewUrl')
-        .mockReturnValue('viewHref');
+        .returns('viewHref');
       mockRouter
         .expects('createHref')
         .withExactArgs('/daily_survey_results/123')
-        .mockReturnValue('surveyResultsHref');
+        .returns('surveyResultsHref');
 
       workshopManagement = shallow(
         <WorkshopManagement
@@ -342,11 +348,11 @@ describe('WorkshopManagement', () => {
       mockRouter
         .expects('createHref')
         .withExactArgs('viewUrl')
-        .mockReturnValue('viewHref');
+        .returns('viewHref');
       mockRouter
         .expects('createHref')
         .withExactArgs('/workshop_daily_survey_results/123')
-        .mockReturnValue('surveyResultsHref');
+        .returns('surveyResultsHref');
 
       workshopManagement = shallow(
         <WorkshopManagement

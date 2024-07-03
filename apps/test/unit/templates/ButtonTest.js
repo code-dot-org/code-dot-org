@@ -1,5 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import Button from '@cdo/apps/templates/Button';
 
@@ -50,7 +51,7 @@ describe('Button', () => {
   });
 
   it('renders a div when button has an onClick', () => {
-    const onClick = jest.fn();
+    const onClick = sinon.spy();
     const wrapper = shallow(
       <Button
         __useDeprecatedTag
@@ -64,7 +65,7 @@ describe('Button', () => {
     assert.strictEqual(wrapper.props().href, undefined);
     assert.equal(wrapper.props().onClick, onClick);
     wrapper.simulate('click');
-    assert(onClick.toHaveBeenCalledTimes(1));
+    assert(onClick.calledOnce);
   });
 
   it('doesnt respond to clicks when disabled', () => {
@@ -80,7 +81,7 @@ describe('Button', () => {
     );
 
     wrapper.simulate('click');
-    assert(!onClick.toHaveBeenCalledTimes(1));
+    assert(!onClick.calledOnce);
   });
 
   it('renders bigger if we use a large size', () => {

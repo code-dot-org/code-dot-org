@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {expect, assert} from 'chai';
 import Sinon, {SinonStubbedInstance} from 'sinon';
 
 import {DEFAULT_PATTERN_LENGTH} from '@cdo/apps/music/constants';

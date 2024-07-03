@@ -1,8 +1,10 @@
+import sinon from 'sinon';
+
 import * as cdoSerializationHelpers from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
 import {getCode, moveHiddenBlocks} from '@cdo/apps/blockly/addons/cdoUtils';
 import * as cdoXml from '@cdo/apps/blockly/addons/cdoXml';
 
-
+import {expect} from '../../../util/reconfiguredChai';
 import setBlocklyGlobal from '../../../util/setupBlocklyGlobal';
 
 setBlocklyGlobal();
@@ -19,7 +21,7 @@ describe('CdoUtils', () => {
 
       const typesToHide = ['procedures_defnoreturn'];
       const result = moveHiddenBlocks(source, typesToHide);
-      expect(result).toEqual({
+      expect(result).to.deep.equal({
         mainSource: {
           blocks: {
             blocks: [{type: 'when_run', id: 1}],
@@ -46,7 +48,7 @@ describe('CdoUtils', () => {
 
       const typesToHide = ['procedures_defnoreturn'];
       const result = moveHiddenBlocks(source, typesToHide);
-      expect(result).toEqual({
+      expect(result).to.deep.equal({
         mainSource: {blocks: {blocks: []}, procedures: [{id: 'a'}]},
         hiddenDefinitionSource: {
           blocks: {
@@ -85,7 +87,7 @@ describe('CdoUtils', () => {
 
       const typesToHide = ['procedures_defnoreturn'];
       const result = moveHiddenBlocks(source, typesToHide);
-      expect(result).toEqual({
+      expect(result).to.deep.equal({
         mainSource: {
           blocks: {blocks: [{type: 'when_run', id: 1}]},
           procedures: [{id: 'a'}],
@@ -125,7 +127,7 @@ describe('CdoUtils', () => {
       };
       const procedureTypesToHide = ['procedures_defnoreturn'];
       const result = moveHiddenBlocks(source, procedureTypesToHide);
-      expect(result).toEqual({
+      expect(result).to.deep.equal({
         mainSource: {blocks: {blocks: []}, procedures: [{id: 'a'}]},
         hiddenDefinitionSource: {
           blocks: {
@@ -166,7 +168,7 @@ describe('CdoUtils', () => {
         'behavior_definition',
       ];
       const result = moveHiddenBlocks(source, procedureTypesToHide);
-      expect(result).toEqual({
+      expect(result).to.deep.equal({
         mainSource: {
           blocks: {blocks: [{type: 'when_run', id: 1}]},
           procedures: [{id: 'a'}, {id: 'b'}],
@@ -200,23 +202,23 @@ describe('CdoUtils', () => {
     });
 
     afterEach(() => {
-      sandbox.mockRestore();
+      sandbox.restore();
     });
 
     it('should call Blockly.Xml methods when getSourceAsJson is false', () => {
       const workspaceStub = {};
       const domToTextStub = sandbox
         .stub(Blockly.Xml, 'domToText')
-        .mockReturnValue('xml_text');
+        .returns('xml_text');
       const getProjectXmlStub = sandbox
         .stub(cdoXml, 'getProjectXml')
-        .mockReturnValue('dom');
+        .returns('dom');
 
       const result = getCode(workspaceStub, false);
 
-      expect(getProjectXmlStub).toHaveBeenCalledWith(workspaceStub);
-      expect(domToTextStub).toHaveBeenCalledWith('dom');
-      expect(result).toBe('xml_text');
+      expect(getProjectXmlStub).to.have.been.calledWith(workspaceStub);
+      expect(domToTextStub).to.have.been.calledWith('dom');
+      expect(result).to.equal('xml_text');
     });
 
     it('should call getProjectSerialization when getSourceAsJson is true', () => {
@@ -229,13 +231,15 @@ describe('CdoUtils', () => {
 
       const getProjectSerializationStub = sandbox
         .stub(cdoSerializationHelpers, 'getProjectSerialization')
-        .mockReturnValue(serializationStub);
+        .returns(serializationStub);
 
       const result = getCode(workspaceStub, true);
 
-      expect(getProjectSerializationStub).toHaveBeenCalledWith(workspaceStub);
+      expect(getProjectSerializationStub).to.have.been.calledWith(
+        workspaceStub
+      );
 
-      expect(result).toBe(JSON.stringify(serializationStub));
+      expect(result).to.equal(JSON.stringify(serializationStub));
     });
   });
 });

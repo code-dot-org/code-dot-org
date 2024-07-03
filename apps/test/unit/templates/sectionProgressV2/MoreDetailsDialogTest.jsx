@@ -1,9 +1,10 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
+import sinon from 'sinon';
 
 import MoreDetailsDialog from '@cdo/apps/templates/sectionProgressV2/MoreDetailsDialog';
 
-
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('MoreDetailsDialog', () => {
   it('renders the dialog with required elements', () => {
@@ -17,12 +18,12 @@ describe('MoreDetailsDialog', () => {
   });
 
   it('calls onClose when the close button is clicked', () => {
-    const onCloseMock = jest.fn();
+    const onCloseMock = sinon.spy();
     render(<MoreDetailsDialog onClose={onCloseMock} />);
 
     const closeButton = screen.getByRole('button');
     fireEvent.click(closeButton);
 
-    expect(onCloseMock).toHaveBeenCalledTimes(1);
+    expect(onCloseMock).to.have.been.calledOnce;
   });
 });

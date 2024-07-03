@@ -1,20 +1,21 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDialog';
 import commonI18n from '@cdo/locale';
 
-
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('ModelManagerDialog', () => {
   afterEach(() => {
-    jest.restoreAllMocks();
+    sinon.restore();
   });
 
   describe('localization', () => {
     it('is used when there are no models', () => {
-      jest.spyOn(commonI18n, 'aiTrainedModels').mockClear().mockReturnValue('i18n-header');
-      jest.spyOn(commonI18n, 'aiTrainedModelsNoModels').mockClear().mockReturnValue('i18n-nomodel');
+      sinon.stub(commonI18n, 'aiTrainedModels').returns('i18n-header');
+      sinon.stub(commonI18n, 'aiTrainedModelsNoModels').returns('i18n-nomodel');
 
       const wrapper = shallow(
         <ModelManagerDialog
@@ -36,8 +37,8 @@ describe('ModelManagerDialog', () => {
 
       let message = modal.find('select + div').first();
 
-      expect(modal.find('h1').text()).toContain('i18n-header');
-      expect(message.text()).toContain('i18n-nomodel');
+      expect(modal.find('h1').text()).to.contain('i18n-header');
+      expect(message.text()).to.contain('i18n-nomodel');
     });
 
     it('is used when there are models', () => {
@@ -49,7 +50,7 @@ describe('ModelManagerDialog', () => {
       };
 
       for (const key in i18n) {
-        jest.spyOn(commonI18n, key).mockClear().mockReturnValue(i18n[key]);
+        sinon.stub(commonI18n, key).returns(i18n[key]);
       }
 
       const wrapper = shallow(
@@ -86,11 +87,11 @@ describe('ModelManagerDialog', () => {
       let importButton = modal.find('Button').first();
       let deleteButton = modal.find('Button').at(1);
 
-      expect(modal.find('h1').text()).toContain('i18n-header');
-      expect(modal.find('select + div').exists()).toBe(false);
-      expect(importButton.prop('text')).toContain('i18n-import');
-      expect(importButton.prop('pendingText')).toContain('i18n-importing');
-      expect(deleteButton.prop('text')).toContain('i18n-delete');
+      expect(modal.find('h1').text()).to.contain('i18n-header');
+      expect(modal.find('select + div').exists()).to.equal(false);
+      expect(importButton.prop('text')).to.contain('i18n-import');
+      expect(importButton.prop('pendingText')).to.contain('i18n-importing');
+      expect(deleteButton.prop('text')).to.contain('i18n-delete');
     });
 
     it('is used within the delete confirmation modal', () => {
@@ -103,7 +104,7 @@ describe('ModelManagerDialog', () => {
       };
 
       for (const key in i18n) {
-        jest.spyOn(commonI18n, key).mockClear().mockReturnValue(i18n[key]);
+        sinon.stub(commonI18n, key).returns(i18n[key]);
       }
 
       const wrapper = shallow(
@@ -123,11 +124,11 @@ describe('ModelManagerDialog', () => {
       let deleteButton = modal.find('Button').at(1);
       let message = modal.find('p').first();
 
-      expect(modal.find('h1').text()).toContain('i18n-delete-confirm');
-      expect(message.text()).toContain('i18n-delete-message');
-      expect(noButton.prop('text')).toContain('i18n-no');
-      expect(deleteButton.prop('text')).toContain('i18n-delete');
-      expect(deleteButton.prop('pendingText')).toContain('i18n-deleting');
+      expect(modal.find('h1').text()).to.contain('i18n-delete-confirm');
+      expect(message.text()).to.contain('i18n-delete-message');
+      expect(noButton.prop('text')).to.contain('i18n-no');
+      expect(deleteButton.prop('text')).to.contain('i18n-delete');
+      expect(deleteButton.prop('pendingText')).to.contain('i18n-deleting');
     });
 
     it('is used within the delete confirmation modal to display the delete model failure message', () => {
@@ -136,7 +137,7 @@ describe('ModelManagerDialog', () => {
       };
 
       for (const key in i18n) {
-        jest.spyOn(commonI18n, key).mockClear().mockReturnValue(i18n[key]);
+        sinon.stub(commonI18n, key).returns(i18n[key]);
       }
 
       // Stub the request for deletion.
@@ -196,11 +197,11 @@ describe('ModelManagerDialog', () => {
       // Ensure it is passed the id for the localization.
       expect(
         commonI18n.aiTrainedModelsDeleteModelFailed
-      ).toHaveBeenCalledWith(expect.anything()('id', '0'));
+      ).to.have.been.calledWith(sinon.match.has('id', '0'));
 
       // Find and compare the status string.
       let deleteMessage = modal.find('p').at(1);
-      expect(deleteMessage.text()).toContain('i18n-delete-fail');
+      expect(deleteMessage.text()).to.contain('i18n-delete-fail');
     });
   });
 });

@@ -1,9 +1,10 @@
 import $ from 'jquery';
 import ReactDOM from 'react-dom';
+import {spy, stub} from 'sinon';
 
 import AddParentEmailController from '@cdo/apps/lib/ui/accounts/AddParentEmailController';
 
-
+import {expect} from '../../../../util/reconfiguredChai';
 
 export const ENCRYPTED_EMAIL_PLACEHOLDER = '***encrypted***';
 
@@ -53,42 +54,42 @@ describe('AddParentEmailController', () => {
 
     afterEach(() => {
       controller.hideAddParentEmailModal();
-      ReactDOM.render.mockRestore();
-      ReactDOM.unmountComponentAtNode.mockRestore();
+      ReactDOM.render.restore();
+      ReactDOM.unmountComponentAtNode.restore();
     });
 
     it('shows on showAddParentEmailModal', () => {
-      expect(ReactDOM.render).not.toHaveBeenCalled();
+      expect(ReactDOM.render).not.to.have.been.called;
       controller.showAddParentEmailModal();
-      expect(ReactDOM.render).toHaveBeenCalledTimes(1);
+      expect(ReactDOM.render).to.have.been.calledOnce;
     });
 
     it('show is idempotent', () => {
-      expect(ReactDOM.render).not.toHaveBeenCalled();
+      expect(ReactDOM.render).not.to.have.been.called;
       controller.showAddParentEmailModal();
       controller.showAddParentEmailModal();
-      expect(ReactDOM.render).toHaveBeenCalledTimes(1);
+      expect(ReactDOM.render).to.have.been.calledOnce;
     });
 
     it('shows when the link is clicked', () => {
-      expect(ReactDOM.render).not.toHaveBeenCalled();
+      expect(ReactDOM.render).not.to.have.been.called;
       link.click();
-      expect(ReactDOM.render).toHaveBeenCalledTimes(1);
+      expect(ReactDOM.render).to.have.been.calledOnce;
     });
 
     it('hides on hideAddParentEmailModal', () => {
       controller.showAddParentEmailModal();
-      expect(ReactDOM.unmountComponentAtNode).not.toHaveBeenCalled();
+      expect(ReactDOM.unmountComponentAtNode).not.to.have.been.called;
       controller.hideAddParentEmailModal();
-      expect(ReactDOM.unmountComponentAtNode).toHaveBeenCalledTimes(1);
+      expect(ReactDOM.unmountComponentAtNode).to.have.been.calledOnce;
     });
 
     it('hide is idempotent', () => {
       controller.showAddParentEmailModal();
-      expect(ReactDOM.unmountComponentAtNode).not.toHaveBeenCalled();
+      expect(ReactDOM.unmountComponentAtNode).not.to.have.been.called;
       controller.hideAddParentEmailModal();
       controller.hideAddParentEmailModal();
-      expect(ReactDOM.unmountComponentAtNode).toHaveBeenCalledTimes(1);
+      expect(ReactDOM.unmountComponentAtNode).to.have.been.calledOnce;
     });
   });
 
@@ -105,7 +106,7 @@ describe('AddParentEmailController', () => {
       });
       expect(
         form.find('#add-parent-email-modal_user_parent_email').val()
-      ).toBe(TEST_EMAIL);
+      ).to.equal(TEST_EMAIL);
     });
 
     it('sets email_preference_opt_in if "yes"', async () => {
@@ -117,7 +118,7 @@ describe('AddParentEmailController', () => {
         form
           .find('#add-parent-email-modal_user_parent_email_preference_opt_in')
           .val()
-      ).toBe('yes');
+      ).to.equal('yes');
     });
 
     it('sets email_preference_opt_in if "no"', async () => {
@@ -129,7 +130,7 @@ describe('AddParentEmailController', () => {
         form
           .find('#add-parent-email-modal_user_parent_email_preference_opt_in')
           .val()
-      ).toBe('no');
+      ).to.equal('no');
     });
 
     it('does not set email_preference_opt_in otherwise', async () => {
@@ -141,7 +142,7 @@ describe('AddParentEmailController', () => {
         form
           .find('#add-parent-email-modal_user_parent_email_preference_opt_in')
           .val()
-      ).toBe('');
+      ).to.equal('');
     });
 
     it('resolves to new email on success', async () => {
@@ -149,7 +150,7 @@ describe('AddParentEmailController', () => {
         parentEmail: TEST_EMAIL,
         parentEmailOptIn: 'yes',
       });
-      expect(parentEmail).toBe(TEST_EMAIL);
+      expect(parentEmail).to.equal(TEST_EMAIL);
     });
 
     it('rejects on failure', async () => {
@@ -191,7 +192,7 @@ describe('AddParentEmailController', () => {
     it('calls the onSuccessCallback on success', () => {
       controller = newController();
       controller.onParentEmailChanged(TEST_EMAIL);
-      expect(onSuccessCallback).toHaveBeenCalledTimes(1);
+      expect(onSuccessCallback).to.have.been.calledOnce;
     });
   });
 });

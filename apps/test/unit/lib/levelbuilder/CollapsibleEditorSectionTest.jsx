@@ -3,7 +3,7 @@ import React from 'react';
 
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 
-
+import {expect} from '../../../util/reconfiguredChai';
 
 import moduleStyles from '@cdo/apps/lib/levelbuilder/levelbuilder.module.scss';
 
@@ -21,15 +21,17 @@ describe('CollapsibleEditorSection', () => {
         <span>Child</span>
       </CollapsibleEditorSection>
     );
-    expect(wrapper.contains('Section Title')).toBe(true);
-    expect(wrapper.contains('Child')).toBe(true);
-    expect(wrapper.find('span').length).toBe(1);
+    expect(wrapper.contains('Section Title')).to.be.true;
+    expect(wrapper.contains('Child')).to.be.true;
+    expect(wrapper.find('span').length).to.equal(1);
     let icon = wrapper.find('FontAwesome');
-    expect(icon.length).toBe(1);
-    expect(icon.props().icon).toContain('compress');
+    expect(icon.length).to.equal(1);
+    expect(icon.props().icon).to.include('compress');
 
     const editorsWrapper = wrapper.children().last();
-    expect(editorsWrapper.props().className).toEqual(expect.arrayContaining([moduleStyles.nonFullWidth]));
+    expect(editorsWrapper.props().className).to.include(
+      moduleStyles.nonFullWidth
+    );
   });
 
   it('renders in full width', () => {
@@ -39,7 +41,9 @@ describe('CollapsibleEditorSection', () => {
       </CollapsibleEditorSection>
     );
     const editorsWrapper = wrapper.children().last();
-    expect(editorsWrapper.props().className).toEqual(expect.not.arrayContaining([moduleStyles.nonFullWidth]));
+    expect(editorsWrapper.props().className).to.not.include(
+      moduleStyles.nonFullWidth
+    );
   });
 
   it('clicking h2 collapses area', () => {
@@ -50,10 +54,10 @@ describe('CollapsibleEditorSection', () => {
     );
 
     let icon = wrapper.find('FontAwesome');
-    expect(icon.props().icon).toContain('compress');
+    expect(icon.props().icon).to.include('compress');
 
     wrapper.find('button').simulate('click');
 
-    expect(wrapper.find('FontAwesome').props().icon).toContain('expand');
+    expect(wrapper.find('FontAwesome').props().icon).to.include('expand');
   });
 });

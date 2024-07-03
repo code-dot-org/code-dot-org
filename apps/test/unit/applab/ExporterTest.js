@@ -1,3 +1,5 @@
+import sinon from 'sinon';
+
 import Exporter, {getAppOptionsFile} from '@cdo/apps/applab/Exporter';
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {setAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
@@ -11,7 +13,7 @@ import pageConstantsReducer, {
   setPageConstants,
 } from '@cdo/apps/redux/pageConstants';
 
-import {assert} from '../../util/reconfiguredChai';
+import {assert, expect} from '../../util/reconfiguredChai';
 
 const assets = require('@cdo/apps/code-studio/assets');
 
@@ -115,7 +117,7 @@ describe('Applab Exporter,', function () {
       assetPathPrefix: '/v3/assets/',
     });
 
-    assets.listStore.list.mockReturnValue([
+    assets.listStore.list.returns([
       {filename: 'foo.png'},
       {filename: 'bar.png'},
       {filename: 'zoo.mp3'},
@@ -129,8 +131,9 @@ describe('Applab Exporter,', function () {
     server.respondWith('/blockly/media/third.jpg', 'blockly third.jpg content');
 
     // Needed to simulate fetch() response to '/projects/applab/fake_id/export_create_channel'
-    jest.spyOn(window, 'fetch').mockClear()
-      .mockReturnValue(
+    sinon
+      .stub(window, 'fetch')
+      .returns(
         Promise.resolve(
           new Response(JSON.stringify({channel_id: 'new_fake_id'}))
         )
@@ -254,8 +257,8 @@ describe('Applab Exporter,', function () {
   });
 
   afterEach(function () {
-    server.mockRestore();
-    window.fetch.mockRestore();
+    server.restore();
+    window.fetch.restore();
     assetPrefix.init({});
     window.userNameCookieKey = stashedCookieKey;
     restoreRedux();
@@ -553,7 +556,7 @@ describe('Applab Exporter,', function () {
     });
 
     it('should run custom marshall methods', done => {
-      jest.spyOn(window, 'write').mockClear();
+      sinon.spy(window, 'write');
       runExportedApp(
         `
           var a = 'abcdef'.split('');
@@ -562,7 +565,7 @@ describe('Applab Exporter,', function () {
           `,
         `<div><div class="screen" id="screen1" tabindex="1"></div></div>`,
         () => {
-          expect(window.write).toHaveBeenCalledWith([
+          expect(window.write).to.have.been.calledWith([
             'a',
             'b',
             'c',

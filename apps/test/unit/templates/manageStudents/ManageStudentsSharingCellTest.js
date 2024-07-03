@@ -5,7 +5,7 @@ import {Checkbox} from 'react-bootstrap'; // eslint-disable-line no-restricted-i
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {UnconnectedManageStudentsSharingCell as ManageStudentsSharingCell} from '@cdo/apps/templates/manageStudents/ManageStudentsSharingCell';
 
-
+import {expect} from '../../../util/deprecatedChai';
 
 describe('ManageStudentsSharingCell', () => {
   it('renders a checked Checkbox if editing and can share', () => {
@@ -45,10 +45,10 @@ describe('ManageStudentsSharingCell', () => {
         editedValue={true}
       />
     );
-    expect(wrapper.containsMatchingElement(<Checkbox />)).toBe(false);
+    expect(wrapper.containsMatchingElement(<Checkbox />)).to.equal(false);
     expect(
       wrapper.containsMatchingElement(<FontAwesome icon="check" />)
-    ).toBe(false);
+    ).to.equal(false);
   });
 
   it('renders a FontAwesome checkmark if not editing and can share', () => {

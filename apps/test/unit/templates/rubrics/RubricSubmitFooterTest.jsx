@@ -3,6 +3,7 @@ import {render, screen, act} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import {Provider} from 'react-redux';
+import sinon from 'sinon';
 
 import {
   getStore,
@@ -17,7 +18,7 @@ import RubricSubmitFooter from '@cdo/apps/templates/rubrics/RubricSubmitFooter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
-
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('RubricSubmitFooter', () => {
   let store;
@@ -37,7 +38,7 @@ describe('RubricSubmitFooter', () => {
 
   // Stubs updateTeacherFeedback() to call the fail callback only.
   function stubFailedUpdateTeacherFeedback() {
-    updateTeacherFeedbackStub.mockReturnValue({
+    updateTeacherFeedbackStub.returns({
       done: _ => {
         return {fail: cb => cb()};
       },
@@ -46,7 +47,7 @@ describe('RubricSubmitFooter', () => {
 
   // Stubs updateTeacherFeedback() to call the done callback only.
   function stubSuccessfulUpdateTeacherFeedback() {
-    updateTeacherFeedbackStub.mockReturnValue({
+    updateTeacherFeedbackStub.returns({
       done: cb => {
         cb();
         return {fail: _ => {}};
@@ -58,44 +59,54 @@ describe('RubricSubmitFooter', () => {
   function stubFailedSubmitEvaluations() {
     postStub
       .withArgs(
-        expect.objectContaining(/\/rubrics\/\d+\/submit_evaluations$/),
-        expect.anything(),
+        sinon.match(/\/rubrics\/\d+\/submit_evaluations$/),
+        sinon.match.any,
         true,
-        expect.anything()
+        sinon.match.any
       )
       .rejects();
   }
 
   // Stubs HttpClient.post() to respond with some incorrect response body
   function stubInvalidResponseFromSubmitEvaluations() {
-    postStub.mockImplementation((...args) => {
-      if (args[0] === expect.objectContaining(/\/rubrics\/\d+\/submit_evaluations$/) && args.length >= 4 && args[2] === true && args.length >= 4) {
-        return new Promise(resolve => {
+    postStub
+      .withArgs(
+        sinon.match(/\/rubrics\/\d+\/submit_evaluations$/),
+        sinon.match.any,
+        true,
+        sinon.match.any
+      )
+      .returns(
+        new Promise(resolve => {
           resolve({
             json: () =>
               Promise.resolve({
                 someOtherStuff: 42,
               }),
           });
-        });
-      }
-    });
+        })
+      );
   }
 
   // Stubs HttpClient.post() to respond with the expected response body
   function stubSuccessfulSubmitEvaluations() {
-    postStub.mockImplementation((...args) => {
-      if (args[0] === expect.objectContaining(/\/rubrics\/\d+\/submit_evaluations$/) && args.length >= 4 && args[2] === true && args.length >= 4) {
-        return new Promise(resolve => {
+    postStub
+      .withArgs(
+        sinon.match(/\/rubrics\/\d+\/submit_evaluations$/),
+        sinon.match.any,
+        true,
+        sinon.match.any
+      )
+      .returns(
+        new Promise(resolve => {
           resolve({
             json: () =>
               Promise.resolve({
                 submittedAt: timestamp,
               }),
           });
-        });
-      }
-    });
+        })
+      );
   }
 
   // Stubs getTeacherFeedbackForStudent to respond successfully as expected
@@ -105,41 +116,44 @@ describe('RubricSubmitFooter', () => {
     scriptId,
     data
   ) {
-    const request = jest.fn();
-    request.getResponseHeader = jest.fn().mockImplementation((...args) => {
-      if (args[0] === 'crsf-token') {
-        return crsfToken;
-      }
-    });
-    getTeacherFeedbackForStudentStub.mockImplementation((...args) => {
-      if (args[0] === studentId && args[1] === levelId && args[2] === scriptId) {
-        return {
-            done: cb => {
-              new Promise(resolve => {
-                resolve([data, null, request]);
-              }).then(([a, b, c]) => {
-                cb(a, b, c);
-              });
-            },
-          };
-      }
-    });
+    const request = sinon.stub();
+    request.getResponseHeader = sinon
+      .stub()
+      .withArgs('crsf-token')
+      .returns(crsfToken);
+    getTeacherFeedbackForStudentStub
+      .withArgs(studentId, levelId, scriptId)
+      .returns({
+        done: cb => {
+          new Promise(resolve => {
+            resolve([data, null, request]);
+          }).then(([a, b, c]) => {
+            cb(a, b, c);
+          });
+        },
+      });
   }
 
   beforeEach(() => {
     // Stub out the updateTeacherFeedback function
-    updateTeacherFeedbackStub = jest.spyOn(teacherFeedbackDataApi, 'updateTeacherFeedback').mockClear().mockImplementation();
-    updateTeacherFeedbackStub.mockReturnValue({});
+    updateTeacherFeedbackStub = sinon.stub(
+      teacherFeedbackDataApi,
+      'updateTeacherFeedback'
+    );
+    updateTeacherFeedbackStub.returns({});
 
     // Stub out the getTeacherFeedbackForStudent and return a crsf token
     crsfToken = 'some-crsf-token';
-    getTeacherFeedbackForStudentStub = jest.spyOn(topInstructionDataApi, 'getTeacherFeedbackForStudent').mockClear().mockImplementation();
-    getTeacherFeedbackForStudentStub.mockReturnValue({});
+    getTeacherFeedbackForStudentStub = sinon.stub(
+      topInstructionDataApi,
+      'getTeacherFeedbackForStudent'
+    );
+    getTeacherFeedbackForStudentStub.returns({});
 
     // Stub out the submit with timestamp
     timestamp = '2024-03-10';
-    postStub = jest.spyOn(HttpClient, 'post').mockClear().mockImplementation();
-    postStub.mockReturnValue({});
+    postStub = sinon.stub(HttpClient, 'post');
+    postStub.returns({});
 
     // Stub redux
     stubRedux();
@@ -150,9 +164,9 @@ describe('RubricSubmitFooter', () => {
   afterEach(() => {
     // Restore all stubs
     restoreRedux();
-    postStub.mockRestore();
-    getTeacherFeedbackForStudentStub.mockRestore();
-    updateTeacherFeedbackStub.mockRestore();
+    postStub.restore();
+    getTeacherFeedbackForStudentStub.restore();
+    updateTeacherFeedbackStub.restore();
   });
 
   const defaultRubric = {
@@ -229,19 +243,27 @@ describe('RubricSubmitFooter', () => {
     // Assert that 'feedback submitted' appears with the old timestamp
     const priorDate = new Date(priorTimestamp);
     const priorCheck = priorDate.toLocaleString();
-    expect(container.querySelector('#ui-feedback-submitted-timestamp').textContent).toEqual(expect.arrayContaining([priorCheck]));
+    expect(
+      container.querySelector('#ui-feedback-submitted-timestamp').textContent
+    ).to.contain(priorCheck);
 
     // Press submit, wait until things resolve, and see the crsf-token from the initial request
     await user.click(button);
-    expect(updateTeacherFeedbackStub).toHaveBeenCalledWith(expect.anything(), crsfToken);
+    sinon.assert.calledWith(
+      updateTeacherFeedbackStub,
+      sinon.match.any,
+      crsfToken
+    );
 
     // Assert that the post was also called
-    sinon.toHaveBeenCalled();
+    sinon.assert.called(postStub);
 
     // Assert that 'feedback submitted' appears
     const lastSubmittedDateObj = new Date(timestamp);
     const check = lastSubmittedDateObj.toLocaleString();
-    expect(container.querySelector('#ui-feedback-submitted-timestamp').textContent).toEqual(expect.arrayContaining([check]));
+    expect(
+      container.querySelector('#ui-feedback-submitted-timestamp').textContent
+    ).to.contain(check);
   });
 
   it('gracefully handles no prior teacher feedback and still sets csrf-token', async () => {
@@ -275,7 +297,7 @@ describe('RubricSubmitFooter', () => {
     // There's no prior timestamp
     expect(
       container.querySelector('#ui-feedback-submitted-timestamp').textContent
-    ).toBe('');
+    ).to.equal('');
 
     // Wait until feedback is retrieved successfully
     await wait();
@@ -286,8 +308,12 @@ describe('RubricSubmitFooter', () => {
 
     // Press submit, wait until things resolve, and see the crsf-token from the initial request
     await user.click(button);
-    expect(updateTeacherFeedbackStub).toHaveBeenCalledWith(expect.anything(), crsfToken);
-    sinon.toHaveBeenCalled();
+    sinon.assert.calledWith(
+      updateTeacherFeedbackStub,
+      sinon.match.any,
+      crsfToken
+    );
+    sinon.assert.called(postStub);
   });
 
   it('sets keepWorking when previously set in teacher feedback', async () => {
@@ -345,7 +371,7 @@ describe('RubricSubmitFooter', () => {
     // There's no prior timestamp
     expect(
       container.querySelector('#ui-feedback-submitted-timestamp').textContent
-    ).toBe('');
+    ).to.equal('');
 
     // Wait until feedback is retrieved successfully
     await wait();
@@ -353,11 +379,15 @@ describe('RubricSubmitFooter', () => {
     // Press submit, wait until things resolve, and see the crsf-token from the initial request
     const button = screen.getByRole('button', {name: i18n.submitToStudent()});
     await user.click(button);
-    expect(updateTeacherFeedbackStub).toHaveBeenCalledWith(expect.anything(), crsfToken);
-    sinon.toHaveBeenCalled();
+    sinon.assert.calledWith(
+      updateTeacherFeedbackStub,
+      sinon.match.any,
+      crsfToken
+    );
+    sinon.assert.called(postStub);
 
     // Assert that the feedback error is NOT there
-    expect(container.querySelector('#ui-feedback-submitted-error')).toBeNull();
+    expect(container.querySelector('#ui-feedback-submitted-error')).to.be.null;
   });
 
   it('handles error updating feedback on submit button click', async () => {
@@ -384,7 +414,7 @@ describe('RubricSubmitFooter', () => {
     // There's no prior timestamp
     expect(
       container.querySelector('#ui-feedback-submitted-timestamp').textContent
-    ).toBe('');
+    ).to.equal('');
 
     // Wait until feedback is retrieved successfully
     await wait();
@@ -396,7 +426,7 @@ describe('RubricSubmitFooter', () => {
     // Assert that the feedback error appears
     expect(
       container.querySelector('#ui-feedback-submitted-error').textContent
-    ).toContain(i18n.errorSubmittingFeedback());
+    ).to.contain(i18n.errorSubmittingFeedback());
   });
 
   it('handles error submitting evaluations on submit button click', async () => {
@@ -424,7 +454,7 @@ describe('RubricSubmitFooter', () => {
     // There's no prior timestamp
     expect(
       container.querySelector('#ui-feedback-submitted-timestamp').textContent
-    ).toBe('');
+    ).to.equal('');
 
     // Wait until feedback is retrieved successfully
     await wait();
@@ -436,7 +466,7 @@ describe('RubricSubmitFooter', () => {
     // Assert that the feedback error appears
     expect(
       container.querySelector('#ui-feedback-submitted-error').textContent
-    ).toContain(i18n.errorSubmittingFeedback());
+    ).to.contain(i18n.errorSubmittingFeedback());
   });
 
   it('handles error when submitting evaluations returns an invalid response on submit button click', async () => {
@@ -464,7 +494,7 @@ describe('RubricSubmitFooter', () => {
     // There's no prior timestamp
     expect(
       container.querySelector('#ui-feedback-submitted-timestamp').textContent
-    ).toBe('');
+    ).to.equal('');
 
     // Wait until feedback is retrieved successfully
     await wait();
@@ -476,6 +506,6 @@ describe('RubricSubmitFooter', () => {
     // Assert that the feedback error appears
     expect(
       container.querySelector('#ui-feedback-submitted-error').textContent
-    ).toContain(i18n.errorSubmittingFeedback());
+    ).to.contain(i18n.errorSubmittingFeedback());
   });
 });

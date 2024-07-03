@@ -1,5 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 import {UnconnectedBackpack as Backpack} from '@cdo/apps/javalab/Backpack';
@@ -8,7 +9,7 @@ import javalab from '@cdo/apps/javalab/redux/javalabRedux';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 
 import {BackpackAPIContext} from '../../../src/javalab/BackpackAPIContext';
-import {assert} from '../../util/reconfiguredChai';
+import {expect, assert} from '../../util/reconfiguredChai';
 
 describe('Java Lab Backpack Test', () => {
   let defaultProps, backpackApiStub;
@@ -17,7 +18,7 @@ describe('Java Lab Backpack Test', () => {
     stubRedux();
     registerReducers({javalab});
     backpackApiStub = sinon.createStubInstance(BackpackClientApi);
-    backpackApiStub.hasBackpack.mockReturnValue(true);
+    backpackApiStub.hasBackpack.returns(true);
     defaultProps = {
       displayTheme: DisplayTheme.DARK,
       isButtonDisabled: false,
@@ -55,17 +56,20 @@ describe('Java Lab Backpack Test', () => {
       target: {name: 'Class1.java', checked: false},
     });
     const selectedFiles = wrapper.instance().state.selectedFiles;
-    expect(selectedFiles.length).toBe(2);
-    expect(selectedFiles[0]).toBe('Class2.java');
-    expect(selectedFiles[1]).toBe('Class3.java');
+    expect(selectedFiles.length).to.equal(2);
+    expect(selectedFiles[0]).to.equal('Class2.java');
+    expect(selectedFiles[1]).to.equal('Class3.java');
   });
 
   it('expand dropdown triggers getFileList', () => {
     const wrapper = renderWithProps({});
-    const getFileListStub = jest.spyOn(BackpackClientApi.prototype, 'getFileList').mockClear().mockImplementation();
+    const getFileListStub = sinon.stub(
+      BackpackClientApi.prototype,
+      'getFileList'
+    );
     wrapper.instance().expandDropdown();
     expect(getFileListStub.calledOnce);
-    getFileListStub.mockRestore();
+    getFileListStub.restore();
   });
 
   it('expand dropdown resets state correctly', () => {
@@ -82,8 +86,8 @@ describe('Java Lab Backpack Test', () => {
     const state = wrapper.instance().state;
     assert(state.dropdownOpen);
     assert.isFalse(state.backpackLoadError);
-    expect(state.selectedFiles.length).toBe(0);
-    expect(state.backpackFilenames.length).toBe(0);
+    expect(state.selectedFiles.length).to.equal(0);
+    expect(state.backpackFilenames.length).to.equal(0);
   });
 
   it('import shows warning before overwriting files', () => {
@@ -101,7 +105,7 @@ describe('Java Lab Backpack Test', () => {
     wrapper.instance().handleImport();
 
     const state = wrapper.instance().state;
-    expect(state.openDialog).toBe('IMPORT_WARNING');
+    expect(state.openDialog).to.equal('IMPORT_WARNING');
   });
 
   it('import shows error if hidden file name is used', () => {
@@ -119,7 +123,7 @@ describe('Java Lab Backpack Test', () => {
     wrapper.instance().handleImport();
 
     const state = wrapper.instance().state;
-    expect(state.openDialog).toBe('IMPORT_ERROR');
+    expect(state.openDialog).to.equal('IMPORT_ERROR');
   });
 
   it('no dialog shown if there are no duplicate file names', () => {
@@ -134,12 +138,12 @@ describe('Java Lab Backpack Test', () => {
     wrapper.instance().handleImport();
 
     const state = wrapper.instance().state;
-    expect(state.openDialog).toBeNull();
+    expect(state.openDialog).to.equal(null);
   });
 
   it('renders nothing if backpack is disabled', () => {
     const wrapper = renderWithProps({backpackEnabled: false});
-    expect(wrapper.isEmptyRender()).toBe(true);
+    expect(wrapper.isEmptyRender()).to.be.true;
   });
 
   it('delete shows warning before deleting files', () => {
@@ -156,7 +160,7 @@ describe('Java Lab Backpack Test', () => {
     wrapper.instance().confirmAndDeleteFiles();
 
     const state = wrapper.instance().state;
-    expect(state.openDialog).toBe('DELETE_CONFIRM');
+    expect(state.openDialog).to.equal('DELETE_CONFIRM');
   });
 
   it('dropdown and modal are closed if delete succeeds', () => {
@@ -170,7 +174,7 @@ describe('Java Lab Backpack Test', () => {
       selectedFiles: ['file1', 'file3'],
     });
     // set up delete files to call success callback
-    backpackApiStub.deleteFiles.mockImplementation((...args) => args[2]());
+    backpackApiStub.deleteFiles.callsArg(2);
 
     // open modal
     wrapper.instance().confirmAndDeleteFiles();
@@ -178,7 +182,7 @@ describe('Java Lab Backpack Test', () => {
     wrapper.instance().handleDelete();
 
     const state = wrapper.instance().state;
-    expect(state.openDialog).toBeNull();
+    expect(state.openDialog).to.equal(null);
   });
 
   it('Delete error modal is shown if delete fails', () => {
@@ -192,7 +196,7 @@ describe('Java Lab Backpack Test', () => {
       selectedFiles: ['file1', 'file3'],
     });
     // set up delete files to call failure callback
-    backpackApiStub.deleteFiles.mockImplementation((...args) => args[1](null, ['file1', 'file3']));
+    backpackApiStub.deleteFiles.callsArgWith(1, null, ['file1', 'file3']);
 
     // open modal
     wrapper.instance().confirmAndDeleteFiles();
@@ -200,7 +204,7 @@ describe('Java Lab Backpack Test', () => {
     wrapper.instance().handleDelete();
 
     const state = wrapper.instance().state;
-    expect(state.openDialog).toBe('DELETE_ERROR');
+    expect(state.openDialog).to.equal('DELETE_ERROR');
   });
 
   it('Deleted files are removed from dropdown on partial delete success', () => {
@@ -214,7 +218,7 @@ describe('Java Lab Backpack Test', () => {
       selectedFiles: ['file1', 'file3'],
     });
     // set up delete files to call failure callback where only file 1 failed to delete
-    backpackApiStub.deleteFiles.mockImplementation((...args) => args[1](null, ['file1']));
+    backpackApiStub.deleteFiles.callsArgWith(1, null, ['file1']);
 
     // open modal
     wrapper.instance().confirmAndDeleteFiles();
@@ -224,9 +228,9 @@ describe('Java Lab Backpack Test', () => {
     const state = wrapper.instance().state;
     const selectedFiles = state.selectedFiles;
     // selected files should only contain the file that failed to delete (file1).
-    expect(selectedFiles.length).toBe(1);
-    expect(selectedFiles[0]).toBe('file1');
+    expect(selectedFiles.length).to.equal(1);
+    expect(selectedFiles[0]).to.equal('file1');
     // backpackFilenames should have length 2 (file3 should be gone)
-    expect(state.backpackFilenames.length).toBe(2);
+    expect(state.backpackFilenames.length).to.equal(2);
   });
 });

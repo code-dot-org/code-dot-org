@@ -2,6 +2,7 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
+import sinon from 'sinon';
 
 import EditableProjectName from '@cdo/apps/code-studio/components/header/EditableProjectName';
 import projectReducer, {
@@ -11,7 +12,7 @@ import lab2Redux from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 
-
+import {expect} from '../../../../util/reconfiguredChai';
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('EditableProjectName', () => {
@@ -49,23 +50,23 @@ describe('EditableProjectName', () => {
     );
 
     // Initially displays the project name and an edit button
-    expect(wrapper.find('.project_name').text()).toBe('Brand New Project');
-    expect(wrapper.find('.project_name').type()).toBe('div');
-    expect(wrapper.find('.project_edit')).toHaveLength(1);
-    expect(wrapper.find('.project_save')).toHaveLength(0);
+    expect(wrapper.find('.project_name').text()).to.equal('Brand New Project');
+    expect(wrapper.find('.project_name').type()).to.equal('div');
+    expect(wrapper.find('.project_edit')).to.have.lengthOf(1);
+    expect(wrapper.find('.project_save')).to.have.lengthOf(0);
 
     // Clicking the edit button displays an input and a save button
     wrapper.find('.project_edit').simulate('click');
-    expect(wrapper.find('.project_name').type()).toBe('input');
-    expect(wrapper.find('.project_edit')).toHaveLength(0);
-    expect(wrapper.find('.project_save')).toHaveLength(1);
+    expect(wrapper.find('.project_name').type()).to.equal('input');
+    expect(wrapper.find('.project_edit')).to.have.lengthOf(0);
+    expect(wrapper.find('.project_save')).to.have.lengthOf(1);
 
     // Modifying the input and clicking save will update the name
-    const renameSpy = jest.spyOn(window.dashboard.project, 'rename').mockClear();
+    const renameSpy = sinon.spy(window.dashboard.project, 'rename');
     wrapper.find('.project_name').getDOMNode().value = 'New Name';
     wrapper.find('.project_save').simulate('click');
-    expect(renameSpy).toHaveBeenCalledTimes(1);
-    expect(renameSpy).toHaveBeenCalledWith('New Name');
+    expect(renameSpy.calledOnce).to.be.true;
+    expect(renameSpy.calledWith('New Name')).to.be.true;
 
     // This manual wait-and-update is needed because a rename is an async operation,
     // which we're faking in our test, and enzyme doesn't always re-render when needed
@@ -73,20 +74,21 @@ describe('EditableProjectName', () => {
     await new Promise(resolve => setTimeout(resolve, 0));
     wrapper.update();
 
-    expect(wrapper.find('.project_name').type()).toBe('div');
-    expect(wrapper.find('.project_edit')).toHaveLength(1);
-    expect(wrapper.find('.project_save')).toHaveLength(0);
-    renameSpy.mockRestore();
+    expect(wrapper.find('.project_name').type()).to.equal('div');
+    expect(wrapper.find('.project_edit')).to.have.lengthOf(1);
+    expect(wrapper.find('.project_save')).to.have.lengthOf(0);
+    renameSpy.restore();
   });
 
   it('calls lab2 rename if lab2 projects are enabled', () => {
-    const renameStub = jest.fn().mockReturnValue(Promise.resolve());
+    const renameStub = sinon.stub().returns(Promise.resolve());
     const projectManagerStub = sinon.createStubInstance(ProjectManager, {
       rename: renameStub,
     });
-    jest.spyOn(Lab2Registry, 'getInstance').mockClear()
-      .mockReturnValue({getProjectManager: () => projectManagerStub});
-    jest.spyOn(Lab2Registry, 'hasEnabledProjects').mockClear().mockReturnValue(true);
+    sinon
+      .stub(Lab2Registry, 'getInstance')
+      .returns({getProjectManager: () => projectManagerStub});
+    sinon.stub(Lab2Registry, 'hasEnabledProjects').returns(true);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -99,10 +101,10 @@ describe('EditableProjectName', () => {
 
     wrapper.find('.project_name').getDOMNode().value = 'New Name';
     wrapper.find('.project_save').simulate('click');
-    expect(renameStub).toHaveBeenCalledTimes(1);
-    expect(renameStub).toHaveBeenCalledWith('New Name');
+    expect(renameStub.calledOnce).to.be.true;
+    expect(renameStub.calledWith('New Name')).to.be.true;
 
-    Lab2Registry.getInstance.mockRestore();
-    Lab2Registry.hasEnabledProjects.mockRestore();
+    Lab2Registry.getInstance.restore();
+    Lab2Registry.hasEnabledProjects.restore();
   });
 });

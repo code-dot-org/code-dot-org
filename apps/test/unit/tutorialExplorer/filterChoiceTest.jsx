@@ -1,9 +1,10 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import FilterChoice from '@cdo/apps/tutorialExplorer/filterChoice';
 
-
+import {expect} from '../../util/deprecatedChai';
 
 const TEST_GROUP_NAME = 'Mansfield Park';
 const TEST_NAME = 'Persuasion';
@@ -61,7 +62,7 @@ describe('FilterChoice', () => {
   });
 
   it('Calls provided handler on change', () => {
-    const callback = jest.fn();
+    const callback = sinon.spy();
     const testNewCheckedValue = Math.random() < 0.5;
     const wrapper = shallow(
       <FilterChoice {...DEFAULT_PROPS} onUserInput={callback} />
@@ -73,6 +74,10 @@ describe('FilterChoice', () => {
       },
     });
 
-    expect(callback).toHaveBeenCalledWith(TEST_GROUP_NAME, TEST_NAME, testNewCheckedValue);
+    expect(callback).to.have.been.calledOnce.and.calledWith(
+      TEST_GROUP_NAME,
+      TEST_NAME,
+      testNewCheckedValue
+    );
   });
 });

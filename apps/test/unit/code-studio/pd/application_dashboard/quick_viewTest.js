@@ -1,5 +1,7 @@
-import { shallow } from 'enzyme';
+import {expect} from 'chai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import {QuickView} from '@cdo/apps/code-studio/pd/application_dashboard/quick_view';
 import QuickViewTable from '@cdo/apps/code-studio/pd/application_dashboard/quick_view_table';
@@ -34,18 +36,18 @@ describe('Quick View', () => {
     });
 
     it('Is loading', () => {
-      expect(quickView.state('loading')).toBe(true);
+      expect(quickView.state('loading')).to.be.true;
     });
     it('Renders a spinner', () => {
-      expect(quickView.find('Spinner')).toHaveLength(1);
+      expect(quickView.find('Spinner')).to.have.length(1);
     });
     it('Does not render a table', () => {
-      expect(quickView.find(QuickViewTable)).toHaveLength(0);
+      expect(quickView.find(QuickViewTable)).to.have.length(0);
     });
     it('Renders the CSV Download button', () => {
       expect(
         quickView.find('Button').findWhere(b => b.text() === 'Download CSV')
-      ).toHaveLength(1);
+      ).to.have.length(1);
     });
   });
 
@@ -86,24 +88,24 @@ describe('Quick View', () => {
       quickView.update();
     });
     afterAll(() => {
-      server.mockRestore();
+      server.restore();
     });
 
     it('Is no longer loading', () => {
-      expect(quickView.state('loading')).toBe(false);
+      expect(quickView.state('loading')).to.be.false;
     });
     it('Does not render a spinner', () => {
-      expect(quickView.find('Spinner')).toHaveLength(0);
+      expect(quickView.find('Spinner')).to.have.length(0);
     });
     it('Renders 1 table with the returned applications', () => {
       const table = quickView.find(QuickViewTable);
-      expect(table).toHaveLength(1);
-      expect(table.prop('applications')).toEqual(applicationsData);
+      expect(table).to.have.length(1);
+      expect(table.prop('applications')).to.eql(applicationsData);
     });
     it('Renders the CSV Download button', () => {
       expect(
         quickView.find('Button').findWhere(b => b.text() === 'Download CSV')
-      ).toHaveLength(1);
+      ).to.have.length(1);
     });
   });
 });

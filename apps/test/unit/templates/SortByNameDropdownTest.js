@@ -1,10 +1,11 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
+import sinon from 'sinon';
 
 import {UnconnectedSortByNameDropdown} from '@cdo/apps/templates/SortByNameDropdown';
 
-
+import {expect} from '../../util/reconfiguredChai';
 
 describe('SortByNameDropdown', () => {
   it('renders dropdown', () => {
@@ -14,8 +15,8 @@ describe('SortByNameDropdown', () => {
         setSortByFamilyName={() => {}}
       />
     );
-    expect(wrapper.find('select').length).toBe(1);
-    expect(wrapper.find('select').props().value).toBe('displayName');
+    expect(wrapper.find('select').length).to.equal(1);
+    expect(wrapper.find('select').props().value).to.equal('displayName');
   });
   it('renders dropdown with family name selected', () => {
     const wrapper = mount(
@@ -24,8 +25,8 @@ describe('SortByNameDropdown', () => {
         setSortByFamilyName={() => {}}
       />
     );
-    expect(wrapper.find('select').length).toBe(1);
-    expect(wrapper.find('select').props().value).toBe('familyName');
+    expect(wrapper.find('select').length).to.equal(1);
+    expect(wrapper.find('select').props().value).to.equal('familyName');
   });
 
   it("saves the sort mode setting to the user's preferences", () => {
@@ -33,9 +34,9 @@ describe('SortByNameDropdown', () => {
     const unitName = 'course1';
     const source = 'TeacherPanel';
 
-    jest.spyOn($, 'post').mockClear();
+    sinon.spy($, 'post');
 
-    const setSortSpy = jest.fn();
+    const setSortSpy = sinon.spy();
 
     const wrapper = mount(
       <UnconnectedSortByNameDropdown
@@ -47,7 +48,7 @@ describe('SortByNameDropdown', () => {
       />
     );
 
-    expect(wrapper.find('select').props().value).toBe('displayName');
+    expect(wrapper.find('select').props().value).to.equal('displayName');
 
     wrapper.find('select').simulate('change', {target: {value: 'familyName'}});
 
@@ -63,6 +64,6 @@ describe('SortByNameDropdown', () => {
       unitName,
       source
     );
-    $.post.mockRestore();
+    $.post.restore();
   });
 });

@@ -1,6 +1,7 @@
 import {assert} from 'chai';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import EndWorkshopPanel from '@cdo/apps/code-studio/pd/workshop_dashboard/EndWorkshopPanel';
 
@@ -9,11 +10,11 @@ describe('EndWorkshopPanel', () => {
 
   beforeEach(() => {
     server = sinon.createFakeServer();
-    loadWorkshop = jest.fn();
+    loadWorkshop = sinon.spy();
   });
 
   afterEach(() => {
-    server.mockRestore();
+    server.restore();
     server = null;
   });
 
@@ -77,7 +78,7 @@ describe('EndWorkshopPanel', () => {
 
     // Ensure we closed the dialog and reloaded the workshop
     refuteDialogIsShowing(wrapper);
-    assert(loadWorkshop.toHaveBeenCalledTimes(1));
+    assert(loadWorkshop.calledOnce);
   });
 
   function assertDialogIsShowing(wrapper) {

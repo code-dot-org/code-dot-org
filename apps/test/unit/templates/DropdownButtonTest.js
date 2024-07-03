@@ -1,12 +1,13 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import Button from '@cdo/apps/templates/Button';
 import {DropdownButton} from '@cdo/apps/templates/DropdownButton';
 
 import {assert} from '../../util/reconfiguredChai';
 
-const clickSpy = jest.fn();
+const clickSpy = sinon.spy();
 
 const defaultProps = {
   text: 'Click me',
@@ -15,7 +16,7 @@ const defaultProps = {
 };
 
 describe('DropdownButton', () => {
-  beforeEach(() => clickSpy.mockReset());
+  beforeEach(() => clickSpy.resetHistory());
 
   it('is initially just a button', () => {
     const wrapper = shallow(<DropdownButton {...defaultProps} />);
@@ -40,7 +41,7 @@ describe('DropdownButton', () => {
     wrapper.find('Button').simulate('click');
     assert(wrapper.find('a').at(1).props().onClick);
     wrapper.find('a').at(1).simulate('click');
-    assert(clickSpy.toHaveBeenCalledTimes(1));
+    assert(clickSpy.calledOnce);
 
     // dropdown is closed
     assert.equal(wrapper.find('a').length, 0);

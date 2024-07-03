@@ -18,7 +18,7 @@ import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import * as utils from '@cdo/apps/utils';
 
-
+import {expect} from '../../util/reconfiguredChai';
 import {createStore} from '../../util/redux';
 import {setExternalGlobals} from '../../util/testUtils';
 

@@ -3,6 +3,7 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
 import {Provider} from 'react-redux';
+import sinon from 'sinon';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {
@@ -26,12 +27,12 @@ import {
 } from '@cdo/apps/redux';
 import * as utils from '@cdo/apps/utils';
 
-import {assert} from '../../../../util/reconfiguredChai';
+import {assert, expect} from '../../../../util/reconfiguredChai';
 
 describe('UnitEditor', () => {
   let defaultProps, store;
   beforeEach(() => {
-    jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
+    sinon.stub(utils, 'navigateToHref');
     stubRedux();
 
     registerReducers({
@@ -95,7 +96,7 @@ describe('UnitEditor', () => {
 
   afterEach(() => {
     restoreRedux();
-    utils.navigateToHref.mockRestore();
+    utils.navigateToHref.restore();
   });
 
   const createWrapper = overrideProps => {
@@ -119,7 +120,8 @@ describe('UnitEditor', () => {
   describe('Script Editor', () => {
     it('does not show publishing editor if hasCourse is true', () => {
       renderDefault({hasCourse: true});
-      expect(screen.queryByTestId('course-version-publishing-editor')).toBeFalsy();
+      expect(screen.queryByTestId('course-version-publishing-editor')).to.not
+        .exist;
     });
 
     it('shows publishing editor if hasCourse is false', () => {
@@ -177,15 +179,15 @@ describe('UnitEditor', () => {
         initialCourseVersionId: 1,
       });
 
-      expect(wrapper.find('input').length).toBe(24);
-      expect(wrapper.find('input[type="checkbox"]').length).toBe(11);
-      expect(wrapper.find('textarea').length).toBe(4);
-      expect(wrapper.find('select').length).toBe(5);
-      expect(wrapper.find('CollapsibleEditorSection').length).toBe(11);
-      expect(wrapper.find('SaveBar').length).toBe(1);
-      expect(wrapper.find('CourseTypeEditor').length).toBe(1);
+      expect(wrapper.find('input').length).to.equal(24);
+      expect(wrapper.find('input[type="checkbox"]').length).to.equal(11);
+      expect(wrapper.find('textarea').length).to.equal(4);
+      expect(wrapper.find('select').length).to.equal(5);
+      expect(wrapper.find('CollapsibleEditorSection').length).to.equal(11);
+      expect(wrapper.find('SaveBar').length).to.equal(1);
+      expect(wrapper.find('CourseTypeEditor').length).to.equal(1);
 
-      expect(wrapper.find('UnitCard').length).toBe(1);
+      expect(wrapper.find('UnitCard').length).to.equal(1);
     });
 
     it('locale selection is a multi select checkbox component with initial options selected', () => {
@@ -207,7 +209,7 @@ describe('UnitEditor', () => {
               li.find('input[type="checkbox"]').length === 1 &&
               li.find('strong').length === 1
           ).length
-      ).toBe(4);
+      ).to.equal(4);
 
       expect(
         wrapper
@@ -218,7 +220,7 @@ describe('UnitEditor', () => {
               li.find('strong').filterWhere(st => st.text() === 'hi-IN')
                 .length === 1
           ).length
-      ).toBe(1);
+      ).to.equal(1);
 
       expect(
         wrapper
@@ -229,7 +231,7 @@ describe('UnitEditor', () => {
               li.find('strong').filterWhere(st => st.text() === 'ta-IN')
                 .length === 1
           ).length
-      ).toBe(1);
+      ).to.equal(1);
     });
 
     it('disables changing student facing lesson plan checkbox when not allowed to make major curriculum changes', () => {
@@ -241,10 +243,10 @@ describe('UnitEditor', () => {
 
       expect(
         wrapper.find('.student-facing-lesson-plan-checkbox').length
-      ).toBe(1);
+      ).to.equal(1);
       expect(
         wrapper.find('.student-facing-lesson-plan-checkbox').props().disabled
-      ).toBe(true);
+      ).to.equal(true);
     });
 
     it('allows changing student facing lesson plan checkbox when allowed to make major curriculum changes to hidden unit', () => {
@@ -257,10 +259,10 @@ describe('UnitEditor', () => {
 
       expect(
         wrapper.find('.student-facing-lesson-plan-checkbox').length
-      ).toBe(1);
+      ).to.equal(1);
       expect(
         wrapper.find('.student-facing-lesson-plan-checkbox').props().disabled
-      ).toBe(false);
+      ).to.equal(false);
     });
 
     describe('Teacher Resources', () => {
@@ -268,21 +270,21 @@ describe('UnitEditor', () => {
         const wrapper = createWrapper({
           isMigrated: true,
         });
-        expect(wrapper.find('ResourcesEditor').first()).toBeDefined();
+        expect(wrapper.find('ResourcesEditor').first()).to.exist;
       });
     });
 
     it('has correct markdown for preview of unit description', () => {
       const wrapper = createWrapper({});
-      expect(wrapper.find('TextareaWithMarkdownPreview').length).toBe(2);
+      expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(2);
       expect(
         wrapper.find('TextareaWithMarkdownPreview').at(0).prop('markdown')
-      ).toBe(
+      ).to.equal(
         '# TEACHER Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
       );
       expect(
         wrapper.find('TextareaWithMarkdownPreview').at(1).prop('markdown')
-      ).toBe(
+      ).to.equal(
         '# STUDENT Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
       );
     });
@@ -295,8 +297,8 @@ describe('UnitEditor', () => {
 
     let peerReviewCountInput = wrapper.find('#number_peer_reviews_input');
 
-    expect(peerReviewCountInput.props().disabled).toBe(false);
-    expect(peerReviewCountInput.props().value).toBe(2);
+    expect(peerReviewCountInput.props().disabled).to.be.false;
+    expect(peerReviewCountInput.props().value).to.equal(2);
 
     const instructorReviewOnlyCheckbox = wrapper.find(
       '#only_instructor_review_checkbox'
@@ -307,14 +309,16 @@ describe('UnitEditor', () => {
 
     peerReviewCountInput = wrapper.find('#number_peer_reviews_input');
 
-    expect(peerReviewCountInput.props().disabled).toBe(true);
-    expect(peerReviewCountInput.props().value).toBe(0);
+    expect(peerReviewCountInput.props().disabled).to.be.true;
+    expect(peerReviewCountInput.props().value).to.equal(0);
   });
 
   describe('Saving Script Editor', () => {
+    let clock;
+
     afterEach(() => {
       if (clock) {
-        jest.useRealTimers();
+        clock.restore();
         clock = undefined;
       }
     });
@@ -336,26 +340,27 @@ describe('UnitEditor', () => {
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
       saveAndKeepEditingButton.simulate('click');
 
       // check the the spinner is showing
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
-      expect(unitEditor.state().isSaving).toBe(true);
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+      expect(unitEditor.state().isSaving).to.equal(true);
 
-      jest.useFakeTimers().setSystemTime(new Date('2020-12-01'));
+      clock = sinon.useFakeTimers(new Date('2020-12-01'));
       const expectedLastSaved = Date.now();
       server.respond();
-      jest.advanceTimersByTime(50);
+      clock.tick(50);
 
       unitEditor.update();
-      expect(utils.navigateToHref).not.toHaveBeenCalled();
-      expect(unitEditor.state().isSaving).toBe(false);
-      expect(unitEditor.state().lastSaved).toBe(expectedLastSaved);
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(0);
+      expect(utils.navigateToHref).to.not.have.been.called;
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().lastSaved).to.equal(expectedLastSaved);
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
       //check that last saved message is showing
-      expect(wrapper.find('.lastSavedMessage').length).toBe(1);
-      server.mockRestore();
+      expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
+      server.restore();
     });
 
     it('shows error when save and keep editing has error saving', () => {
@@ -373,24 +378,25 @@ describe('UnitEditor', () => {
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
       saveAndKeepEditingButton.simulate('click');
 
       // check the the spinner is showing
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
-      expect(unitEditor.state().isSaving).toBe(true);
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+      expect(unitEditor.state().isSaving).to.equal(true);
 
       server.respond();
       unitEditor.update();
-      expect(utils.navigateToHref).not.toHaveBeenCalled();
-      expect(unitEditor.state().isSaving).toBe(false);
-      expect(unitEditor.state().error).toBe('There was an error');
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(0);
+      expect(utils.navigateToHref).to.not.have.been.called;
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal('There was an error');
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
       expect(
         wrapper.find('.saveBar').contains('Error Saving: There was an error')
-      ).toBe(true);
+      ).to.be.true;
 
-      server.mockRestore();
+      server.restore();
     });
 
     it('Timeout error shows custom error message to refresh and check it saved', () => {
@@ -435,20 +441,23 @@ describe('UnitEditor', () => {
     });
 
     it('shows error when showCalendar is true and weeklyInstructionalMinutes not provided', () => {
-      jest.spyOn($, 'ajax').mockClear().mockImplementation();
+      sinon.stub($, 'ajax');
       const wrapper = createWrapper({initialShowCalendar: true});
       const unitEditor = wrapper.find('UnitEditor');
 
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
       saveAndKeepEditingButton.simulate('click');
 
-      expect($.ajax).not.toHaveBeenCalled();
+      expect($.ajax).to.not.have.been.called;
 
-      expect(unitEditor.state().isSaving).toBe(false);
-      expect(unitEditor.state().error).toBe('Please provide instructional minutes per week in Unit Calendar Settings.');
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal(
+        'Please provide instructional minutes per week in Unit Calendar Settings.'
+      );
 
       expect(
         wrapper
@@ -456,12 +465,12 @@ describe('UnitEditor', () => {
           .contains(
             'Error Saving: Please provide instructional minutes per week in Unit Calendar Settings.'
           )
-      ).toBe(true);
-      $.ajax.mockRestore();
+      ).to.be.true;
+      $.ajax.restore();
     });
 
     it('shows error when showCalendar is true and weeklyInstructionalMinutes is invalid', () => {
-      jest.spyOn($, 'ajax').mockClear().mockImplementation();
+      sinon.stub($, 'ajax');
       const wrapper = createWrapper({
         initialShowCalendar: true,
         initialWeeklyInstructionalMinutes: -100,
@@ -471,13 +480,14 @@ describe('UnitEditor', () => {
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
       saveAndKeepEditingButton.simulate('click');
 
-      expect($.ajax).not.toHaveBeenCalled();
+      expect($.ajax).to.not.have.been.called;
 
-      expect(unitEditor.state().isSaving).toBe(false);
-      expect(unitEditor.state().error).toBe(
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal(
         'Please provide a positive number of instructional minutes per week in Unit Calendar Settings.'
       );
 
@@ -487,12 +497,12 @@ describe('UnitEditor', () => {
           .contains(
             'Error Saving: Please provide a positive number of instructional minutes per week in Unit Calendar Settings.'
           )
-      ).toBe(true);
-      $.ajax.mockRestore();
+      ).to.be.true;
+      $.ajax.restore();
     });
 
     it('shows error when published state is pilot but no pilot experiment given', () => {
-      jest.spyOn($, 'ajax').mockClear().mockImplementation();
+      sinon.stub($, 'ajax');
       const wrapper = createWrapper({});
 
       const unitEditor = wrapper.find('UnitEditor');
@@ -504,13 +514,14 @@ describe('UnitEditor', () => {
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
       saveAndKeepEditingButton.simulate('click');
 
-      expect($.ajax).not.toHaveBeenCalled();
+      expect($.ajax).to.not.have.been.called;
 
-      expect(unitEditor.state().isSaving).toBe(false);
-      expect(unitEditor.state().error).toBe(
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal(
         'Please provide a pilot experiment in order to save with published state as pilot.'
       );
 
@@ -520,13 +531,13 @@ describe('UnitEditor', () => {
           .contains(
             'Error Saving: Please provide a pilot experiment in order to save with published state as pilot.'
           )
-      ).toBe(true);
+      ).to.be.true;
 
-      $.ajax.mockRestore();
+      $.ajax.restore();
     });
 
     it('shows error when published state is preview or stable and device compatibility JSON is null', () => {
-      jest.spyOn($, 'ajax').mockClear().mockImplementation();
+      sinon.stub($, 'ajax');
       const wrapper = createWrapper({
         isMissingRequiredDeviceCompatibilities: true,
         hasCourse: true,
@@ -541,13 +552,14 @@ describe('UnitEditor', () => {
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
       saveAndKeepEditingButton.simulate('click');
 
-      expect($.ajax).not.toHaveBeenCalled();
+      expect($.ajax).to.not.have.been.called;
 
-      expect(unitEditor.state().isSaving).toBe(false);
-      expect(unitEditor.state().error).toBe(
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal(
         'Please set all device compatibilities in order to save with published state as preview or stable.'
       );
 
@@ -557,13 +569,13 @@ describe('UnitEditor', () => {
           .contains(
             'Error Saving: Please set all device compatibilities in order to save with published state as preview or stable.'
           )
-      ).toBe(true);
+      ).to.be.true;
 
-      $.ajax.mockRestore();
+      $.ajax.restore();
     });
 
     it('shows error when published state is preview or stable and at least one device compatibility is not set', () => {
-      jest.spyOn($, 'ajax').mockClear().mockImplementation();
+      sinon.stub($, 'ajax');
       const wrapper = createWrapper({
         isMissingRequiredDeviceCompatibilities: true,
         hasCourse: true,
@@ -579,13 +591,14 @@ describe('UnitEditor', () => {
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
       saveAndKeepEditingButton.simulate('click');
 
-      expect($.ajax).not.toHaveBeenCalled();
+      expect($.ajax).to.not.have.been.called;
 
-      expect(unitEditor.state().isSaving).toBe(false);
-      expect(unitEditor.state().error).toBe(
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal(
         'Please set all device compatibilities in order to save with published state as preview or stable.'
       );
 
@@ -595,9 +608,9 @@ describe('UnitEditor', () => {
           .contains(
             'Error Saving: Please set all device compatibilities in order to save with published state as preview or stable.'
           )
-      ).toBe(true);
+      ).to.be.true;
 
-      $.ajax.mockRestore();
+      $.ajax.restore();
     });
 
     it('saves successfully if unit is not a course and only version year is set', () => {
@@ -622,30 +635,31 @@ describe('UnitEditor', () => {
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
       saveAndKeepEditingButton.simulate('click');
 
       // check the the spinner is showing
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
-      expect(unitEditor.state().isSaving).toBe(true);
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+      expect(unitEditor.state().isSaving).to.equal(true);
 
-      jest.useFakeTimers().setSystemTime(new Date('2020-12-01'));
+      clock = sinon.useFakeTimers(new Date('2020-12-01'));
       const expectedLastSaved = Date.now();
       server.respond();
-      jest.advanceTimersByTime(50);
+      clock.tick(50);
 
       unitEditor.update();
-      expect(utils.navigateToHref).not.toHaveBeenCalled();
-      expect(unitEditor.state().isSaving).toBe(false);
-      expect(unitEditor.state().lastSaved).toBe(expectedLastSaved);
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(0);
+      expect(utils.navigateToHref).to.not.have.been.called;
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().lastSaved).to.equal(expectedLastSaved);
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
       //check that last saved message is showing
-      expect(wrapper.find('.lastSavedMessage').length).toBe(1);
-      server.mockRestore();
+      expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
+      server.restore();
     });
 
     it('shows error when version year is set but family name is not', () => {
-      jest.spyOn($, 'ajax').mockClear().mockImplementation();
+      sinon.stub($, 'ajax');
       const wrapper = createWrapper({initialIsCourse: true});
 
       const unitEditor = wrapper.find('UnitEditor');
@@ -657,13 +671,16 @@ describe('UnitEditor', () => {
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
       saveAndKeepEditingButton.simulate('click');
 
-      expect($.ajax).not.toHaveBeenCalled();
+      expect($.ajax).to.not.have.been.called;
 
-      expect(unitEditor.state().isSaving).toBe(false);
-      expect(unitEditor.state().error).toBe('Please set both version year and family name.');
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal(
+        'Please set both version year and family name.'
+      );
 
       expect(
         wrapper
@@ -671,13 +688,13 @@ describe('UnitEditor', () => {
           .contains(
             'Error Saving: Please set both version year and family name.'
           )
-      ).toBe(true);
+      ).to.be.true;
 
-      $.ajax.mockRestore();
+      $.ajax.restore();
     });
 
     it('shows error when moving standalone unit out of in development if not supplied all standalone unit information', () => {
-      jest.spyOn($, 'ajax').mockClear().mockImplementation();
+      sinon.stub($, 'ajax');
       const wrapper = createWrapper({initialIsCourse: false, hasCourse: false});
 
       const unitEditor = wrapper.find('UnitEditor');
@@ -686,13 +703,14 @@ describe('UnitEditor', () => {
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
       saveAndKeepEditingButton.simulate('click');
 
-      expect($.ajax).not.toHaveBeenCalled();
+      expect($.ajax).to.not.have.been.called;
 
-      expect(unitEditor.state().isSaving).toBe(false);
-      expect(unitEditor.state().error).toBe(
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal(
         'Standalone units that are not in development must be a standalone unit with family name and version year.'
       );
 
@@ -702,13 +720,13 @@ describe('UnitEditor', () => {
           .contains(
             'Error Saving: Standalone units that are not in development must be a standalone unit with family name and version year.'
           )
-      ).toBe(true);
+      ).to.be.true;
 
-      $.ajax.mockRestore();
+      $.ajax.restore();
     });
 
     it('saves successfully when moving standalone unit out of in development if professional learning course', () => {
-      jest.spyOn(window, 'confirm').mockClear().mockImplementation(() => true);
+      sinon.stub(window, 'confirm').callsFake(() => true);
       const wrapper = createWrapper({initialIsCourse: false, hasCourse: false});
 
       const unitEditor = wrapper.find('UnitEditor');
@@ -728,31 +746,32 @@ describe('UnitEditor', () => {
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
       saveAndKeepEditingButton.simulate('click');
 
       // check the the spinner is showing
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
-      expect(unitEditor.state().isSaving).toBe(true);
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+      expect(unitEditor.state().isSaving).to.equal(true);
 
-      jest.useFakeTimers().setSystemTime(new Date('2020-12-01'));
+      clock = sinon.useFakeTimers(new Date('2020-12-01'));
       const expectedLastSaved = Date.now();
       server.respond();
-      jest.advanceTimersByTime(50);
+      clock.tick(50);
 
       unitEditor.update();
-      expect(utils.navigateToHref).not.toHaveBeenCalled();
-      expect(unitEditor.state().isSaving).toBe(false);
-      expect(unitEditor.state().lastSaved).toBe(expectedLastSaved);
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(0);
+      expect(utils.navigateToHref).to.not.have.been.called;
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().lastSaved).to.equal(expectedLastSaved);
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
       //check that last saved message is showing
-      expect(wrapper.find('.lastSavedMessage').length).toBe(1);
-      server.mockRestore();
-      window.confirm.mockRestore();
+      expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
+      server.restore();
+      window.confirm.restore();
     });
 
     it('shows error when family name is set but version year is not', () => {
-      jest.spyOn($, 'ajax').mockClear().mockImplementation();
+      sinon.stub($, 'ajax');
       const wrapper = createWrapper({initialIsCourse: true});
 
       const unitEditor = wrapper.find('UnitEditor');
@@ -764,13 +783,16 @@ describe('UnitEditor', () => {
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndKeepEditingButton = saveBar.find('button').at(1);
-      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
       saveAndKeepEditingButton.simulate('click');
 
-      expect($.ajax).not.toHaveBeenCalled();
+      expect($.ajax).to.not.have.been.called;
 
-      expect(unitEditor.state().isSaving).toBe(false);
-      expect(unitEditor.state().error).toBe('Please set both version year and family name.');
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal(
+        'Please set both version year and family name.'
+      );
 
       expect(
         wrapper
@@ -778,9 +800,9 @@ describe('UnitEditor', () => {
           .contains(
             'Error Saving: Please set both version year and family name.'
           )
-      ).toBe(true);
+      ).to.be.true;
 
-      $.ajax.mockRestore();
+      $.ajax.restore();
     });
 
     it('can save and close', () => {
@@ -800,18 +822,20 @@ describe('UnitEditor', () => {
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndCloseButton = saveBar.find('button').at(2);
-      expect(saveAndCloseButton.contains('Save and Close')).toBe(true);
+      expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
       saveAndCloseButton.simulate('click');
 
       // check the the spinner is showing
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
-      expect(unitEditor.state().isSaving).toBe(true);
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+      expect(unitEditor.state().isSaving).to.equal(true);
 
       server.respond();
       unitEditor.update();
-      expect(utils.navigateToHref).toHaveBeenCalledWith(`/s/test-unit${window.location.search}`);
+      expect(utils.navigateToHref).to.have.been.calledWith(
+        `/s/test-unit${window.location.search}`
+      );
 
-      server.mockRestore();
+      server.restore();
     });
 
     it('shows error when save and keep editing has error saving', () => {
@@ -829,26 +853,26 @@ describe('UnitEditor', () => {
       const saveBar = wrapper.find('SaveBar');
 
       const saveAndCloseButton = saveBar.find('button').at(2);
-      expect(saveAndCloseButton.contains('Save and Close')).toBe(true);
+      expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
       saveAndCloseButton.simulate('click');
 
       // check the the spinner is showing
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
-      expect(unitEditor.state().isSaving).toBe(true);
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+      expect(unitEditor.state().isSaving).to.equal(true);
 
       server.respond();
 
       unitEditor.update();
-      expect(utils.navigateToHref).not.toHaveBeenCalled();
+      expect(utils.navigateToHref).to.not.have.been.called;
 
-      expect(unitEditor.state().isSaving).toBe(false);
-      expect(unitEditor.state().error).toBe('There was an error');
-      expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(0);
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal('There was an error');
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
       expect(
         wrapper.find('.saveBar').contains('Error Saving: There was an error')
-      ).toBe(true);
+      ).to.be.true;
 
-      server.mockRestore();
+      server.restore();
     });
   });
 });

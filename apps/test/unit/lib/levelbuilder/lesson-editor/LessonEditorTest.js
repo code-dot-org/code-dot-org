@@ -2,6 +2,7 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
 import {Provider} from 'react-redux';
+import sinon from 'sinon';
 
 import reducers, {
   initActivities,
@@ -28,7 +29,7 @@ import {
 } from '@cdo/apps/redux';
 import * as utils from '@cdo/apps/utils';
 
-
+import {expect} from '../../../../util/reconfiguredChai';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 import {sampleActivities, searchOptions} from './activitiesTestData';
@@ -39,8 +40,9 @@ describe('LessonEditor', () => {
   // lifecycle method.
   allowConsoleWarnings();
 
+  let defaultProps, store, clock;
   beforeEach(() => {
-    jest.spyOn(utils, 'navigateToHref').mockClear().mockImplementation();
+    sinon.stub(utils, 'navigateToHref');
     stubRedux();
     registerReducers({
       ...reducers,
@@ -94,9 +96,9 @@ describe('LessonEditor', () => {
 
   afterEach(() => {
     restoreRedux();
-    utils.navigateToHref.mockRestore();
+    utils.navigateToHref.restore();
     if (clock) {
-      jest.useRealTimers();
+      clock.restore();
       clock = undefined;
     }
   });
@@ -112,32 +114,34 @@ describe('LessonEditor', () => {
 
   it('renders default props', () => {
     const wrapper = createWrapper({});
-    // Lesson Name
-    expect(wrapper.contains('Lesson Name')).toBe(true);
-    // Lesson Overview
-    expect(wrapper.contains('Lesson Overview')).toBe(true);
-    // student overview
-    expect(wrapper.contains('Overview of the lesson for students')).toBe(true);
-    // purpose
-    expect(wrapper.contains('The purpose of the lesson is for people to learn')).toBe(true);
-    expect(wrapper.find('Connect(ActivitiesEditor)').length).toBe(1);
-    expect(wrapper.find('input').at(1).props().disabled).toBe(false);
-    expect(wrapper.find('input').at(2).props().disabled).toBe(false);
-    expect(wrapper.find('AnnouncementsEditor').length).toBe(1);
-    expect(wrapper.find('CollapsibleEditorSection').length).toBe(12);
-    expect(wrapper.find('ResourcesEditor').length).toBe(1);
-    expect(wrapper.find('VocabulariesEditor').length).toBe(1);
-    expect(wrapper.find('ProgrammingExpressionsEditor').length).toBe(1);
-    expect(wrapper.find('StandardsEditor').length).toBe(2);
-    expect(wrapper.find('SaveBar').length).toBe(1);
+    expect(wrapper.contains('Lesson Name'), 'Lesson Name').to.be.true;
+    expect(wrapper.contains('Lesson Overview'), 'Lesson Overview').to.be.true;
+    expect(
+      wrapper.contains('Overview of the lesson for students'),
+      'student overview'
+    ).to.be.true;
+    expect(
+      wrapper.contains('The purpose of the lesson is for people to learn'),
+      'purpose'
+    ).to.be.true;
+    expect(wrapper.find('Connect(ActivitiesEditor)').length).to.equal(1);
+    expect(wrapper.find('input').at(1).props().disabled).to.equal(false);
+    expect(wrapper.find('input').at(2).props().disabled).to.equal(false);
+    expect(wrapper.find('AnnouncementsEditor').length).to.equal(1);
+    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(12);
+    expect(wrapper.find('ResourcesEditor').length).to.equal(1);
+    expect(wrapper.find('VocabulariesEditor').length).to.equal(1);
+    expect(wrapper.find('ProgrammingExpressionsEditor').length).to.equal(1);
+    expect(wrapper.find('StandardsEditor').length).to.equal(2);
+    expect(wrapper.find('SaveBar').length).to.equal(1);
   });
 
   it('disables editing of lockable and has lesson plan for visible script', () => {
     let unitInfoCopy = _.cloneDeep(defaultProps.unitInfo);
     unitInfoCopy.allowMajorCurriculumChanges = false;
     const wrapper = createWrapper({unitInfo: unitInfoCopy});
-    expect(wrapper.find('input').at(1).props().disabled).toBe(true);
-    expect(wrapper.find('input').at(2).props().disabled).toBe(true);
+    expect(wrapper.find('input').at(1).props().disabled).to.equal(true);
+    expect(wrapper.find('input').at(2).props().disabled).to.equal(true);
   });
 
   it('renders lesson editor for lesson without lesson plan', () => {
@@ -159,50 +163,47 @@ describe('LessonEditor', () => {
         courseVersionId: 1,
       },
     });
-    // Lesson Name
-    expect(wrapper.contains('Survey Name')).toBe(true);
-    // Lesson Overview
-    expect(wrapper.contains('Survey Overview')).toBe(true);
-    // student overview
-    expect(wrapper.contains('Student survey overview')).toBe(true);
-    expect(wrapper.find('Connect(ActivitiesEditor)').length).toBe(1);
-    expect(wrapper.find('TextareaWithMarkdownPreview').length).toBe(2);
-    expect(wrapper.find('input').length).toBe(8);
-    expect(wrapper.find('select').length).toBe(1);
-    expect(wrapper.find('AnnouncementsEditor').length).toBe(0);
-    expect(wrapper.find('CollapsibleEditorSection').length).toBe(3);
-    expect(wrapper.find('ResourcesEditor').length).toBe(0);
-    expect(wrapper.find('SaveBar').length).toBe(1);
+    expect(wrapper.contains('Survey Name'), 'Lesson Name').to.be.true;
+    expect(wrapper.contains('Survey Overview'), 'Lesson Overview').to.be.true;
+    expect(wrapper.contains('Student survey overview'), 'student overview').to
+      .be.true;
+    expect(wrapper.find('Connect(ActivitiesEditor)').length).to.equal(1);
+    expect(wrapper.find('TextareaWithMarkdownPreview').length).to.equal(2);
+    expect(wrapper.find('input').length).to.equal(8);
+    expect(wrapper.find('select').length).to.equal(1);
+    expect(wrapper.find('AnnouncementsEditor').length).to.equal(0);
+    expect(wrapper.find('CollapsibleEditorSection').length).to.equal(3);
+    expect(wrapper.find('ResourcesEditor').length).to.equal(0);
+    expect(wrapper.find('SaveBar').length).to.equal(1);
   });
 
   it('can add activity', () => {
     const wrapper = createWrapper({});
-    expect(wrapper.find('Connect(ActivitiesEditor)').length).toBe(1);
-    // Activity
-    expect(wrapper.find('Activity').length).toBe(1);
-    // ActivitySection
-    expect(wrapper.find('ActivitySection').length).toBe(3);
+    expect(wrapper.find('Connect(ActivitiesEditor)').length).to.equal(1);
+    expect(wrapper.find('Activity').length, 'Activity').to.equal(1);
+    expect(wrapper.find('ActivitySection').length, 'ActivitySection').to.equal(
+      3
+    );
     const button = wrapper.find('.add-activity');
-    // button
-    expect(button.length).toBe(1);
+    expect(button.length, 'button').to.equal(1);
     button.simulate('mousedown');
-    expect(wrapper.find('Activity', 'Activity').length).toBe(2);
-    // ActivitySection
-    expect(wrapper.find('ActivitySection').length).toBe(4);
+    expect(wrapper.find('Activity', 'Activity').length).to.equal(2);
+    expect(wrapper.find('ActivitySection').length, 'ActivitySection').to.equal(
+      4
+    );
   });
 
   it('can add activity section', () => {
     const wrapper = createWrapper({});
-    expect(wrapper.find('Connect(ActivitiesEditor)').length).toBe(1);
-    // Activity
-    expect(wrapper.find('Activity').length).toBe(1);
-    // ActivitySection
-    expect(wrapper.find('ActivitySection').length).toBe(3);
+    expect(wrapper.find('Connect(ActivitiesEditor)').length).to.equal(1);
+    expect(wrapper.find('Activity').length, 'Activity').to.equal(1);
+    expect(wrapper.find('ActivitySection').length, 'ActivitySection').to.equal(
+      3
+    );
     const button = wrapper.find('.add-activity-section');
-    // button
-    expect(button.length).toBe(1);
+    expect(button.length, 'button').to.equal(1);
     button.simulate('mousedown');
-    expect(wrapper.find('ActivitySection').length).toBe(4);
+    expect(wrapper.find('ActivitySection').length).to.equal(4);
   });
 
   it('can save and keep editing', () => {
@@ -220,26 +221,27 @@ describe('LessonEditor', () => {
     const saveBar = wrapper.find('SaveBar');
 
     const saveAndKeepEditingButton = saveBar.find('button').at(1);
-    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
+    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+      .true;
     saveAndKeepEditingButton.simulate('click');
 
     // check the the spinner is showing
-    expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
-    expect(lessonEditor.state().isSaving).toBe(true);
+    expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+    expect(lessonEditor.state().isSaving).to.equal(true);
 
-    jest.useFakeTimers().setSystemTime(new Date('2020-12-01'));
+    clock = sinon.useFakeTimers(new Date('2020-12-01'));
     const expectedLastSaved = Date.now();
     server.respond();
-    jest.advanceTimersByTime(50);
+    clock.tick(50);
 
     lessonEditor.update();
-    expect(utils.navigateToHref).not.toHaveBeenCalled();
-    expect(lessonEditor.state().isSaving).toBe(false);
-    expect(lessonEditor.state().lastSaved).toBe(expectedLastSaved);
-    expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(0);
+    expect(utils.navigateToHref).to.not.have.been.called;
+    expect(lessonEditor.state().isSaving).to.equal(false);
+    expect(lessonEditor.state().lastSaved).to.equal(expectedLastSaved);
+    expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
     //check that last saved message is showing
-    expect(wrapper.find('.lastSavedMessage').length).toBe(1);
-    server.mockRestore();
+    expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
+    server.restore();
   });
 
   it('shows error when save and keep editing has error saving', () => {
@@ -257,24 +259,25 @@ describe('LessonEditor', () => {
     const saveBar = wrapper.find('SaveBar');
 
     const saveAndKeepEditingButton = saveBar.find('button').at(1);
-    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
+    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+      .true;
     saveAndKeepEditingButton.simulate('click');
 
     // check the the spinner is showing
-    expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
-    expect(lessonEditor.state().isSaving).toBe(true);
+    expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+    expect(lessonEditor.state().isSaving).to.equal(true);
 
     server.respond();
     lessonEditor.update();
-    expect(utils.navigateToHref).not.toHaveBeenCalled();
-    expect(lessonEditor.state().isSaving).toBe(false);
-    expect(lessonEditor.state().error).toBe('There was an error');
-    expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(0);
+    expect(utils.navigateToHref).to.not.have.been.called;
+    expect(lessonEditor.state().isSaving).to.equal(false);
+    expect(lessonEditor.state().error).to.equal('There was an error');
+    expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
     expect(
       wrapper.find('.saveBar').contains('Error Saving: There was an error')
-    ).toBe(true);
+    ).to.be.true;
 
-    server.mockRestore();
+    server.restore();
   });
 
   it('can save and close lesson with lesson plan', () => {
@@ -292,18 +295,20 @@ describe('LessonEditor', () => {
     const saveBar = wrapper.find('SaveBar');
 
     const saveAndCloseButton = saveBar.find('button').at(2);
-    expect(saveAndCloseButton.contains('Save and Close')).toBe(true);
+    expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
     saveAndCloseButton.simulate('click');
 
     // check the the spinner is showing
-    expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
-    expect(lessonEditor.state().isSaving).toBe(true);
+    expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+    expect(lessonEditor.state().isSaving).to.equal(true);
 
     server.respond();
     lessonEditor.update();
-    expect(utils.navigateToHref).toHaveBeenCalledWith(`/lessons/1${window.location.search}`);
+    expect(utils.navigateToHref).to.have.been.calledWith(
+      `/lessons/1${window.location.search}`
+    );
 
-    server.mockRestore();
+    server.restore();
   });
 
   it('can save and close lesson without lesson plan', () => {
@@ -321,19 +326,21 @@ describe('LessonEditor', () => {
     const saveBar = wrapper.find('SaveBar');
 
     const saveAndCloseButton = saveBar.find('button').at(2);
-    expect(saveAndCloseButton.contains('Save and Close')).toBe(true);
+    expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
     saveAndCloseButton.simulate('click');
 
     // check the the spinner is showing
-    expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
-    expect(lessonEditor.state().isSaving).toBe(true);
+    expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+    expect(lessonEditor.state().isSaving).to.equal(true);
 
     server.respond();
     lessonEditor.update();
     // navigates to the script overview page
-    expect(utils.navigateToHref).toHaveBeenCalledWith(`/s/my-script/${window.location.search}`);
+    expect(utils.navigateToHref).to.have.been.calledWith(
+      `/s/my-script/${window.location.search}`
+    );
 
-    server.mockRestore();
+    server.restore();
   });
 
   it('shows error when save and keep editing has error saving', () => {
@@ -351,37 +358,41 @@ describe('LessonEditor', () => {
     const saveBar = wrapper.find('SaveBar');
 
     const saveAndCloseButton = saveBar.find('button').at(2);
-    expect(saveAndCloseButton.contains('Save and Close')).toBe(true);
+    expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
     saveAndCloseButton.simulate('click');
 
     // check the the spinner is showing
-    expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
-    expect(lessonEditor.state().isSaving).toBe(true);
+    expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+    expect(lessonEditor.state().isSaving).to.equal(true);
 
     server.respond();
 
     lessonEditor.update();
-    expect(utils.navigateToHref).not.toHaveBeenCalled();
+    expect(utils.navigateToHref).to.not.have.been.called;
 
-    expect(lessonEditor.state().isSaving).toBe(false);
-    expect(lessonEditor.state().error).toBe('There was an error');
-    expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(0);
+    expect(lessonEditor.state().isSaving).to.equal(false);
+    expect(lessonEditor.state().error).to.equal('There was an error');
+    expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
     expect(
       wrapper.find('.saveBar').contains('Error Saving: There was an error')
-    ).toBe(true);
+    ).to.be.true;
 
-    server.mockRestore();
+    server.restore();
   });
 
   it('should render "Add Rubric" button when hasRubric prop is false', () => {
     const wrapper = createWrapper({});
-    expect(wrapper.find('.btn.add-rubric').text()).toContain('Add Rubric');
-    expect(wrapper.find('.btn.add-rubric').props().href).toBe('/rubrics/new?lessonId=1');
+    expect(wrapper.find('.btn.add-rubric').text()).to.contain('Add Rubric');
+    expect(wrapper.find('.btn.add-rubric').props().href).to.equal(
+      '/rubrics/new?lessonId=1'
+    );
   });
 
   it('should render "Edit Rubric" button when hasRubric prop is true', () => {
     const wrapper = createWrapper({rubricId: 9});
-    expect(wrapper.find('.btn.add-rubric').text()).toContain('Edit Rubric');
-    expect(wrapper.find('.btn.add-rubric').props().href).toBe('/rubrics/9/edit');
+    expect(wrapper.find('.btn.add-rubric').text()).to.contain('Edit Rubric');
+    expect(wrapper.find('.btn.add-rubric').props().href).to.equal(
+      '/rubrics/9/edit'
+    );
   });
 });

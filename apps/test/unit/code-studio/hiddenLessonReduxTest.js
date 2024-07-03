@@ -1,4 +1,5 @@
 import {assert} from 'chai';
+import sinon from 'sinon';
 
 import reducer, {
   toggleHiddenLesson,
@@ -39,7 +40,7 @@ describe('hiddenLessonRedux', () => {
       xhr.onCreate = req => {
         lastRequest = req;
       };
-      reducerSpy = jest.fn(reducer);
+      reducerSpy = sinon.spy(reducer);
       stubRedux();
       registerReducers({
         hiddenLesson: reducerSpy,
@@ -50,7 +51,7 @@ describe('hiddenLessonRedux', () => {
 
     afterEach(() => {
       lastRequest = null;
-      xhr.mockRestore();
+      xhr.restore();
       restoreRedux();
     });
 
@@ -235,11 +236,11 @@ describe('hiddenLessonRedux', () => {
 
     describe('toggleHiddenScript', () => {
       it('updates state and makes POST', () => {
-        const dispatch = jest.fn();
+        const dispatch = sinon.spy();
         toggleHiddenScript('somescript', '123', '45', true)(dispatch);
 
         assert(
-          dispatch.mock.calls[0].calledWithExactly(
+          dispatch.firstCall.calledWithExactly(
             updateHiddenScript('123', '45', true)
           )
         );
@@ -302,7 +303,7 @@ describe('hiddenLessonRedux', () => {
       let dispatch;
 
       beforeEach(() => {
-        dispatch = jest.fn();
+        dispatch = sinon.spy();
       });
 
       it('dispatches for each section/script for teachers', () => {
@@ -312,15 +313,15 @@ describe('hiddenLessonRedux', () => {
         };
         initializeHiddenScripts(data)(dispatch);
         assert.deepEqual(
-          dispatch.mock.calls[0][0],
+          dispatch.getCall(0).args[0],
           updateHiddenScript('123', '1', true)
         );
         assert.deepEqual(
-          dispatch.mock.calls[1][0],
+          dispatch.getCall(1).args[0],
           updateHiddenScript('123', '2', true)
         );
         assert.deepEqual(
-          dispatch.mock.calls[2][0],
+          dispatch.getCall(2).args[0],
           updateHiddenScript('456', '3', true)
         );
       });
@@ -330,15 +331,15 @@ describe('hiddenLessonRedux', () => {
         initializeHiddenScripts(data)(dispatch);
 
         assert.deepEqual(
-          dispatch.mock.calls[0][0],
+          dispatch.getCall(0).args[0],
           updateHiddenScript(STUDENT_SECTION_ID, '1', true)
         );
         assert.deepEqual(
-          dispatch.mock.calls[1][0],
+          dispatch.getCall(1).args[0],
           updateHiddenScript(STUDENT_SECTION_ID, '2', true)
         );
         assert.deepEqual(
-          dispatch.mock.calls[2][0],
+          dispatch.getCall(2).args[0],
           updateHiddenScript(STUDENT_SECTION_ID, '3', true)
         );
       });

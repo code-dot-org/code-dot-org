@@ -1,5 +1,6 @@
 import {assert} from 'chai';
 import _ from 'lodash';
+import sinon from 'sinon';
 
 import reducer, {
   initProgress,
@@ -1485,10 +1486,10 @@ describe('progressReduxTest', () => {
     beforeEach(() => {
       server = sinon.fakeServer.create();
       state = {scriptName: 'my-script'};
-      dispatch = jest.fn();
+      dispatch = sinon.spy();
     });
 
-    afterEach(() => server.mockRestore());
+    afterEach(() => server.restore());
 
     const serverResponse = data => {
       server.respondWith([
@@ -1499,7 +1500,7 @@ describe('progressReduxTest', () => {
     };
 
     const getDispatchActions = () => {
-      return dispatch.mock.calls.map(call => call.mock.calls[0].type);
+      return dispatch.getCalls().map(call => call.args[0].type);
     };
 
     it('requests user progress and does not set new progress with no data', () => {

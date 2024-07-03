@@ -1,6 +1,7 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
+import sinon from 'sinon';
 
 import PhotoSelectionView from '@cdo/apps/javalab/components/PhotoSelectionView';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
@@ -18,7 +19,7 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 
-
+import {expect} from '../../util/reconfiguredChai';
 
 describe('Java Lab Console Test', () => {
   let store;
@@ -50,10 +51,10 @@ describe('Java Lab Console Test', () => {
       const editor = createWrapper();
       expect(
         editor.find('input').first().instance().style.backgroundColor
-      ).toBe('rgba(0, 0, 0, 0)');
+      ).to.equal('rgba(0, 0, 0, 0)');
       expect(
         editor.find('.javalab-console').first().instance().style.backgroundColor
-      ).toBe('rgb(255, 255, 255)');
+      ).to.equal('rgb(255, 255, 255)');
     });
 
     it('Has dark mode', () => {
@@ -61,10 +62,10 @@ describe('Java Lab Console Test', () => {
       store.dispatch(setDisplayTheme(DisplayTheme.DARK));
       expect(
         editor.find('input').first().instance().style.backgroundColor
-      ).toBe('rgba(0, 0, 0, 0)');
+      ).to.equal('rgba(0, 0, 0, 0)');
       expect(
         editor.find('.javalab-console').first().instance().style.backgroundColor
-      ).toBe('rgb(0, 0, 0)');
+      ).to.equal('rgb(0, 0, 0)');
     });
   });
 
@@ -73,34 +74,34 @@ describe('Java Lab Console Test', () => {
     let onPhotoPrompterFileSelected, wrapper;
 
     beforeEach(() => {
-      onPhotoPrompterFileSelected = jest.fn();
+      onPhotoPrompterFileSelected = sinon.stub();
       wrapper = createWrapper({
         onPhotoPrompterFileSelected: onPhotoPrompterFileSelected,
       });
     });
 
     it('shows and hides photo prompter based on isPhotoPrompterOpen', () => {
-      expect(wrapper.find(PhotoSelectionView)).toHaveLength(0);
+      expect(wrapper.find(PhotoSelectionView)).to.be.empty;
 
       store.dispatch(openPhotoPrompter(prompt));
       wrapper.update();
 
-      expect(wrapper.find(PhotoSelectionView).length).toBe(1);
+      expect(wrapper.find(PhotoSelectionView).length).to.equal(1);
       const photoSelectionView = wrapper.find(PhotoSelectionView).first();
-      expect(photoSelectionView.props().promptText).toBe(prompt);
+      expect(photoSelectionView.props().promptText).to.equal(prompt);
 
       store.dispatch(closePhotoPrompter());
       wrapper.update();
-      expect(wrapper.find(PhotoSelectionView)).toHaveLength(0);
+      expect(wrapper.find(PhotoSelectionView)).to.be.empty;
     });
 
     it('hides console logs if photo prompter is open', () => {
-      expect(wrapper.find('input').length).toBe(1);
+      expect(wrapper.find('input').length).to.equal(1);
 
       store.dispatch(openPhotoPrompter(prompt));
       wrapper.update();
 
-      expect(wrapper.find('input')).toHaveLength(0);
+      expect(wrapper.find('input')).to.be.empty;
     });
 
     it('calls onPhotoPrompterFileSelected callback and closes photo prompter after file is selected', () => {
@@ -109,14 +110,14 @@ describe('Java Lab Console Test', () => {
       store.dispatch(openPhotoPrompter(prompt));
       wrapper.update();
 
-      expect(wrapper.find(PhotoSelectionView).length).toBe(1);
+      expect(wrapper.find(PhotoSelectionView).length).to.equal(1);
       const photoSelectionView = wrapper.find(PhotoSelectionView).first();
 
       photoSelectionView.props().onPhotoSelected(file);
       wrapper.update();
 
-      expect(onPhotoPrompterFileSelected).toHaveBeenCalledWith(file);
-      expect(wrapper.find(PhotoSelectionView)).toHaveLength(0);
+      sinon.assert.calledWith(onPhotoPrompterFileSelected, file);
+      expect(wrapper.find(PhotoSelectionView)).to.be.empty;
     });
   });
 });

@@ -3,6 +3,7 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
 import {Provider} from 'react-redux';
+import sinon from 'sinon';
 
 import FoormEntityEditor from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityEditor';
 import FoormLibrarySaveBar, {
@@ -19,7 +20,7 @@ import foorm, {
   setLibraryData,
   setLibraryQuestionData,
 } from '../../../../../src/code-studio/pd/foorm/editor/foormEditorRedux';
-
+import {expect} from '../../../../util/reconfiguredChai';
 global.$ = require('jquery');
 
 describe('FoormEntityEditor in Library editing mode', () => {
@@ -66,7 +67,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
 
   afterEach(() => {
     restoreRedux();
-    server.mockRestore();
+    server.restore();
   });
 
   const sampleExistingLibraryQuestionData = {
@@ -115,25 +116,25 @@ describe('FoormEntityEditor in Library editing mode', () => {
     const saveBar = wrapper.find(UnconnectedFoormLibrarySaveBar);
 
     const saveButton = saveBar.find('button').at(0);
-    expect(saveButton.contains('Save')).toBe(true);
+    expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
     // expect first response checking whether library question appears in any published forms
     server.respond();
 
     // check the spinner is showing
-    expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
-    expect(saveBar.state().isSaving).toBe(true);
+    expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+    expect(saveBar.state().isSaving).to.equal(true);
 
     // expect second response (upon successful save of the library question)
     server.respond();
     saveBar.update();
 
-    expect(saveBar.find('FontAwesome').length).toBe(0);
-    expect(saveBar.state().isSaving).toBe(false);
+    expect(saveBar.find('FontAwesome').length).to.equal(0);
+    expect(saveBar.state().isSaving).to.equal(false);
 
     //check that last saved message is showing
-    expect(wrapper.find('.lastSavedMessage').length).toBe(1);
+    expect(wrapper.find('.lastSavedMessage').length).to.equal(1);
   });
 
   it('can save new library question in existing library', () => {
@@ -148,7 +149,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
     const saveBar = wrapper.find(UnconnectedFoormLibrarySaveBar);
 
     const saveButton = saveBar.find('button').at(0);
-    expect(saveButton.contains('Save')).toBe(true);
+    expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
     // expect first response checking whether library question appears in any published forms
@@ -184,7 +185,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
     const saveBar = wrapper.find(UnconnectedFoormLibrarySaveBar);
 
     const saveButton = saveBar.find('button').at(0);
-    expect(saveButton.contains('Save')).toBe(true);
+    expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
     // expect first response checking whether library question appears in any published forms
@@ -231,7 +232,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
     const saveBar = wrapper.find(UnconnectedFoormLibrarySaveBar);
 
     const saveButton = saveBar.find('button').at(0);
-    expect(saveButton.contains('Save')).toBe(true);
+    expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
     // server tells us that library question appears in a published form
@@ -258,27 +259,27 @@ describe('FoormEntityEditor in Library editing mode', () => {
     const saveBar = wrapper.find(UnconnectedFoormLibrarySaveBar);
 
     const saveButton = saveBar.find('button').at(0);
-    expect(saveButton.contains('Save')).toBe(true);
+    expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
     // expect first response checking whether library question appears in any published forms
     server.respond();
 
     // check the spinner is showing
-    expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
-    expect(saveBar.state().isSaving).toBe(true);
+    expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+    expect(saveBar.state().isSaving).to.equal(true);
 
     server.respond();
     saveBar.update();
 
-    expect(saveBar.find('FontAwesome').length).toBe(0);
-    expect(saveBar.state().isSaving).toBe(false);
+    expect(saveBar.find('FontAwesome').length).to.equal(0);
+    expect(saveBar.state().isSaving).to.equal(false);
 
     //check that save error message is showing
-    expect(wrapper.find('.saveErrorMessage').length).toBe(1);
+    expect(wrapper.find('.saveErrorMessage').length).to.equal(1);
     expect(
       wrapper.find('.saveErrorMessage').contains('Error Saving: Save error')
-    ).toBe(true);
+    ).to.be.true;
   });
 
   it('can cancel save new survey', () => {
@@ -288,15 +289,15 @@ describe('FoormEntityEditor in Library editing mode', () => {
 
     // click save button
     const saveButton = saveBar.find('button').at(0);
-    expect(saveButton.contains('Save')).toBe(true);
+    expect(saveButton.contains('Save')).to.be.true;
     saveButton.simulate('click');
 
     // expect first response checking whether library question appears in any published forms
     server.respond();
 
     // check the spinner is showing
-    expect(wrapper.find('.saveBar').find('FontAwesome').length).toBe(1);
-    expect(saveBar.state().isSaving).toBe(true);
+    expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+    expect(saveBar.state().isSaving).to.equal(true);
 
     // check that modal pops up
     assert(
@@ -310,10 +311,10 @@ describe('FoormEntityEditor in Library editing mode', () => {
 
     saveBar.update();
 
-    expect(saveBar.find('FontAwesome').length).toBe(0);
-    expect(saveBar.state().isSaving).toBe(false);
+    expect(saveBar.find('FontAwesome').length).to.equal(0);
+    expect(saveBar.state().isSaving).to.equal(false);
 
     // check that last saved message is not showing
-    expect(wrapper.find('.lastSavedMessage').length).toBe(0);
+    expect(wrapper.find('.lastSavedMessage').length).to.equal(0);
   });
 });

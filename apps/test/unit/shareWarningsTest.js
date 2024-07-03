@@ -1,6 +1,6 @@
 import * as utils from '@cdo/apps/utils';
 
-import {assert} from '../util/reconfiguredChai';
+import {assert, expect} from '../util/reconfiguredChai';
 
 var ReactDOM = require('react-dom');
 var sinon = require('sinon');

@@ -1,9 +1,10 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+import sinon from 'sinon';
 
 import {UnconnectedJoinSection as JoinSection} from '@cdo/apps/templates/studioHomepages/JoinSection';
 
-
+import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   enrolledInASection: false,
@@ -19,35 +20,35 @@ describe('JoinSection', () => {
   });
 
   afterEach(() => {
-    server.mockRestore();
+    server.restore();
   });
 
   it('renders with a dashed border when not enrolled in a section', () => {
     const wrapper = shallow(
       <JoinSection {...DEFAULT_PROPS} enrolledInASection={false} />
     );
-    expect(wrapper.prop('style')).toMatchObject({borderStyle: 'dashed'});
+    expect(wrapper.prop('style')).to.include({borderStyle: 'dashed'});
   });
 
   it('renders with a solid border when enrolled in a section', () => {
     const wrapper = shallow(
       <JoinSection {...DEFAULT_PROPS} enrolledInASection={true} />
     );
-    expect(wrapper.prop('style')).toMatchObject({borderStyle: 'solid'});
+    expect(wrapper.prop('style')).to.include({borderStyle: 'solid'});
   });
 
   it('renders with disabled button when input is empty', () => {
     const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
-    expect(wrapper.find('Button').prop('disabled')).toBe(true);
+    expect(wrapper.find('Button').prop('disabled')).to.be.true;
     wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
-    expect(wrapper.find('Button').prop('disabled')).toBe(false);
+    expect(wrapper.find('Button').prop('disabled')).to.be.false;
   });
 
   it('updates state when typing', () => {
     const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
     wrapper.find('input').simulate('change', {target: {value: 'ABCDEF'}});
-    expect(wrapper.state()).toEqual({sectionCode: 'ABCDEF'});
-    expect(wrapper.find('input').prop('value')).toBe('ABCDEF');
+    expect(wrapper.state()).to.deep.equal({sectionCode: 'ABCDEF'});
+    expect(wrapper.find('input').prop('value')).to.equal('ABCDEF');
   });
 
   it('button click sends join request', done => {
@@ -60,11 +61,11 @@ describe('JoinSection', () => {
       }),
     ]);
 
-    const updateSections = jest.fn(function () {
-      expect(wrapper.state()).toEqual({sectionCode: ''});
-      expect(wrapper.find('input').prop('value')).toBe('');
+    const updateSections = sinon.spy(function () {
+      expect(wrapper.state()).to.deep.equal({sectionCode: ''});
+      expect(wrapper.find('input').prop('value')).to.equal('');
 
-      expect(updateSections).toHaveBeenCalledTimes(1);
+      expect(updateSections).to.have.been.calledOnce;
 
       done();
     });
@@ -87,11 +88,11 @@ describe('JoinSection', () => {
       }),
     ]);
 
-    const updateSections = jest.fn(function () {
-      expect(wrapper.state()).toEqual({sectionCode: ''});
-      expect(wrapper.find('input').prop('value')).toBe('');
+    const updateSections = sinon.spy(function () {
+      expect(wrapper.state()).to.deep.equal({sectionCode: ''});
+      expect(wrapper.find('input').prop('value')).to.equal('');
 
-      expect(updateSections).toHaveBeenCalledTimes(1);
+      expect(updateSections).to.have.been.calledOnce;
 
       done();
     });
@@ -114,11 +115,11 @@ describe('JoinSection', () => {
       }),
     ]);
 
-    const updateSections = jest.fn(function () {
-      expect(wrapper.state()).toEqual({sectionCode: ''});
-      expect(wrapper.find('input').prop('value')).toBe('');
+    const updateSections = sinon.spy(function () {
+      expect(wrapper.state()).to.deep.equal({sectionCode: ''});
+      expect(wrapper.find('input').prop('value')).to.equal('');
 
-      expect(updateSections).toHaveBeenCalledTimes(1);
+      expect(updateSections).to.have.been.calledOnce;
 
       done();
     });
@@ -136,8 +137,8 @@ describe('JoinSection', () => {
     wrapper.setState({sectionCode: 'ABCDEF'});
 
     wrapper.find('input').simulate('keyup', {key: 'Escape'});
-    expect(wrapper.state()).toEqual({sectionCode: ''});
-    expect(wrapper.find('input').prop('value')).toBe('');
+    expect(wrapper.state()).to.deep.equal({sectionCode: ''});
+    expect(wrapper.find('input').prop('value')).to.equal('');
   });
 
   it('ignores other keyup events gracefully', () => {
@@ -145,8 +146,8 @@ describe('JoinSection', () => {
     wrapper.setState({sectionCode: 'ABC'});
 
     wrapper.find('input').simulate('keyup', {key: 'Z'});
-    expect(wrapper.state()).toEqual({sectionCode: 'ABC'});
-    expect(wrapper.find('input').prop('value')).toBe('ABC');
+    expect(wrapper.state()).to.deep.equal({sectionCode: 'ABC'});
+    expect(wrapper.find('input').prop('value')).to.equal('ABC');
   });
 
   it('handles failed request with specific reason', done => {
@@ -159,11 +160,11 @@ describe('JoinSection', () => {
       }),
     ]);
 
-    const updateSectionsResult = jest.fn(function () {
-      expect(wrapper.state()).toEqual({sectionCode: ''});
-      expect(wrapper.find('input').prop('value')).toBe('');
+    const updateSectionsResult = sinon.spy(function () {
+      expect(wrapper.state()).to.deep.equal({sectionCode: ''});
+      expect(wrapper.find('input').prop('value')).to.equal('');
 
-      expect(updateSectionsResult).toHaveBeenCalledTimes(1);
+      expect(updateSectionsResult).to.have.been.calledOnce;
 
       done();
     });
@@ -186,11 +187,11 @@ describe('JoinSection', () => {
       '',
     ]);
 
-    const updateSectionsResult = jest.fn(function () {
-      expect(wrapper.state()).toEqual({sectionCode: ''});
-      expect(wrapper.find('input').prop('value')).toBe('');
+    const updateSectionsResult = sinon.spy(function () {
+      expect(wrapper.state()).to.deep.equal({sectionCode: ''});
+      expect(wrapper.find('input').prop('value')).to.equal('');
 
-      expect(updateSectionsResult).toHaveBeenCalledTimes(1);
+      expect(updateSectionsResult).to.have.been.calledOnce;
 
       done();
     });
@@ -209,8 +210,8 @@ describe('JoinSection', () => {
   it('makes get request to server for captcha info in componentDidMount', () => {
     const wrapper = shallow(<JoinSection {...DEFAULT_PROPS} />);
     const instance = wrapper.instance();
-    const fetchCaptchaSpy = jest.spyOn(instance, 'fetchCaptchaInfo').mockClear();
+    const fetchCaptchaSpy = sinon.spy(instance, 'fetchCaptchaInfo');
     instance.componentDidMount();
-    expect(fetchCaptchaSpy).toHaveBeenCalledTimes(1);
+    expect(fetchCaptchaSpy).to.have.been.calledOnce;
   });
 });

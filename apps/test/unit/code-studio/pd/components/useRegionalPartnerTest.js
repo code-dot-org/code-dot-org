@@ -3,6 +3,7 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {act} from 'react-dom/test-utils';
+import sinon from 'sinon';
 
 import {
   PROGRAM_CSD,
@@ -10,7 +11,7 @@ import {
 } from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplicationConstants';
 import {useRegionalPartner} from '@cdo/apps/code-studio/pd/components/useRegionalPartner';
 
-
+import {expect} from '../../../../util/reconfiguredChai';
 
 let regionalPartnerData, regionalPartnerError;
 
@@ -43,27 +44,28 @@ const mockApiResponse = (status = 200, body = {}) => {
 };
 
 describe('useRegionalPartner tests', () => {
+  let clock, fetchStub, debounceStub;
   beforeEach(() => {
     regionalPartnerData = undefined;
     regionalPartnerError = false;
-    jest.useFakeTimers();
-    fetchStub = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
-    debounceStub = jest.spyOn(_, 'debounce').mockClear().mockImplementation(f => f);
+    clock = sinon.useFakeTimers();
+    fetchStub = sinon.stub(window, 'fetch');
+    debounceStub = sinon.stub(_, 'debounce').callsFake(f => f);
   });
   afterEach(() => {
-    jest.useRealTimers();
-    fetchStub.mockRestore();
-    debounceStub.mockRestore();
+    clock.restore();
+    fetchStub.restore();
+    debounceStub.restore();
   });
 
   it('returns undefined when loading', async () => {
     let rendered;
-    fetch.mockReset();
+    fetch.resetBehavior();
     rendered = await mount(<RegionalPartnerUser data={{}} />);
     const [regionalPartner, regionalPartnerError] =
       getRegionalPartnerData(rendered);
-    expect(regionalPartner).toBeUndefined();
-    expect(regionalPartnerError).toBe(false);
+    expect(regionalPartner).to.equal(undefined);
+    expect(regionalPartnerError).to.equal(false);
     rendered.unmount();
   });
 
@@ -75,8 +77,8 @@ describe('useRegionalPartner tests', () => {
     });
     const [regionalPartner, regionalPartnerError] =
       getRegionalPartnerData(rendered);
-    expect(regionalPartner).toBeNull();
-    expect(regionalPartnerError).toBe(true);
+    expect(regionalPartner).to.equal(null);
+    expect(regionalPartnerError).to.equal(true);
     rendered.unmount();
   });
 
@@ -98,8 +100,8 @@ describe('useRegionalPartner tests', () => {
     await clock.runAllAsync();
     const [regionalPartner, regionalPartnerError] =
       getRegionalPartnerData(rendered);
-    expect(regionalPartner).toBeNull();
-    expect(regionalPartnerError).toBe(true);
+    expect(regionalPartner).to.equal(null);
+    expect(regionalPartnerError).to.equal(true);
     rendered.unmount();
   });
 
@@ -122,11 +124,11 @@ describe('useRegionalPartner tests', () => {
 
     const [regionalPartner, regionalPartnerError] =
       getRegionalPartnerData(rendered);
-    expect(fetch).toHaveBeenCalledWith(
+    expect(fetch).to.be.calledWith(
       `/api/v1/pd/regional_partner_workshops/find?course=CS+Discoveries&subject=5-day+Summer&zip_code=12345&state=AK`
     );
-    expect(regionalPartner).toBeNull();
-    expect(regionalPartnerError).toBe(false);
+    expect(regionalPartner).to.equal(null);
+    expect(regionalPartnerError).to.equal(false);
     rendered.unmount();
   });
 
@@ -149,11 +151,11 @@ describe('useRegionalPartner tests', () => {
 
     const [regionalPartner, regionalPartnerError] =
       getRegionalPartnerData(rendered);
-    expect(fetch).toHaveBeenCalledWith(
+    expect(fetch).to.be.calledWith(
       `/api/v1/pd/regional_partner_workshops/find?course=Computer+Science+A&subject=5-day+Summer&zip_code=12345&state=AK`
     );
-    expect(regionalPartner).toEqual(GOOD_RESPONSE);
-    expect(regionalPartnerError).toBe(false);
+    expect(regionalPartner).to.deep.equal(GOOD_RESPONSE);
+    expect(regionalPartnerError).to.equal(false);
     rendered.unmount();
   });
 });

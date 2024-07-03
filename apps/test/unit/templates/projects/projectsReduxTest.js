@@ -1,3 +1,5 @@
+import sinon from 'sinon';
+
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import {
   stubRedux,
@@ -299,12 +301,12 @@ describe('projectsRedux', () => {
       registerReducers({projects});
       store = getStore();
       libraryApiStub = sinon.createStubInstance(LibraryClientApi, {
-        unpublish: jest.fn(),
+        unpublish: sinon.stub(),
       });
     });
 
     afterEach(() => {
-      server.mockRestore();
+      server.restore();
       restoreRedux();
     });
 
@@ -327,12 +329,12 @@ describe('projectsRedux', () => {
       store.dispatch(action);
       server.respond();
 
-      assert(libraryApiStub.toHaveBeenCalledTimes(1));
+      assert(libraryApiStub.unpublish.calledOnce);
     });
 
     it('does not unpublish library if fetchProjectToUpdate fails', () => {
       setFetchPersonalProjectsResponse(500);
-      const onCompleteSpy = jest.fn();
+      const onCompleteSpy = sinon.spy();
 
       const action = unpublishProjectLibrary(
         projectId,
@@ -343,7 +345,7 @@ describe('projectsRedux', () => {
       server.respond();
 
       assert.equal(0, libraryApiStub.unpublish.callCount);
-      assert(onCompleteSpy.toHaveBeenCalledTimes(1));
+      assert(onCompleteSpy.calledOnce);
     });
   });
 });

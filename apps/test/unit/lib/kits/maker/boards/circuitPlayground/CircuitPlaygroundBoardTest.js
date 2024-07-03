@@ -1,6 +1,7 @@
 import five from '@code-dot-org/johnny-five';
 import _ from 'lodash';
 import Playground from 'playground-io';
+import sinon from 'sinon';
 
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
 import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
@@ -11,7 +12,7 @@ import {
 import {BOARD_TYPE} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 
-
+import {expect} from '../../../../../../util/reconfiguredChai';
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardInterfaceTestUtil';
 
 import {itMakesCircuitPlaygroundComponentsAvailable} from './CircuitPlaygroundComponentTestUtil';
@@ -32,23 +33,24 @@ describe('CircuitPlaygroundBoard', () => {
   beforeEach(() => {
     // We use real playground-io, but our test configuration swaps in mock-firmata
     // for real firmata (see webpack.js) changing Playground's parent class.
-    jest.spyOn(CircuitPlaygroundBoard, 'makePlaygroundTransport').mockClear()
-      .mockImplementation(() => {
+    sinon
+      .stub(CircuitPlaygroundBoard, 'makePlaygroundTransport')
+      .callsFake(() => {
         playground = new Playground({});
         playground.SERIAL_PORT_IDs.DEFAULT = 0x08;
 
         // mock-firmata doesn't implement these (yet) - and we want to monitor how
         // they are called.
-        playground.sysexCommand = jest.fn();
-        playground.sysexResponse = jest.fn();
+        playground.sysexCommand = sinon.spy();
+        playground.sysexResponse = sinon.spy();
 
         // Also spy on these
-        jest.spyOn(playground, 'reset').mockClear();
-        jest.spyOn(playground, 'pinMode').mockClear();
-        jest.spyOn(playground, 'digitalWrite').mockClear();
-        jest.spyOn(playground, 'digitalRead').mockClear().mockImplementation().mockImplementation((...args) => args[1](0));
-        jest.spyOn(playground, 'analogWrite').mockClear();
-        jest.spyOn(playground, 'analogRead').mockClear().mockImplementation().mockImplementation((...args) => args[1](0));
+        sinon.spy(playground, 'reset');
+        sinon.spy(playground, 'pinMode');
+        sinon.spy(playground, 'digitalWrite');
+        sinon.stub(playground, 'digitalRead').callsArgWith(1, 0);
+        sinon.spy(playground, 'analogWrite');
+        sinon.stub(playground, 'analogRead').callsArgWith(1, 0);
 
         // Pretend to be totally ready
         playground.emit('connect');
@@ -60,7 +62,7 @@ describe('CircuitPlaygroundBoard', () => {
     // Construct a board to test on
     board = new CircuitPlaygroundBoard();
     circuitPlaygroundBoardSetup();
-    jest.spyOn(CircuitPlaygroundBoard, 'openWebSerial').mockClear().mockImplementation(() => {
+    sinon.stub(CircuitPlaygroundBoard, 'openWebSerial').callsFake(() => {
       return Promise.resolve();
     });
   });
@@ -68,18 +70,18 @@ describe('CircuitPlaygroundBoard', () => {
   afterEach(() => {
     playground = undefined;
     board = undefined;
-    CircuitPlaygroundBoard.makePlaygroundTransport.mockRestore();
+    CircuitPlaygroundBoard.makePlaygroundTransport.restore();
     circuitPlaygroundBoardTeardown();
-    jest.restoreAllMocks();
+    sinon.restore();
   });
 
   function circuitPlaygroundBoardSetup() {
     // 'CrOS' represents ChromeOS
-    userAgentSpy = jest.spyOn(navigator, 'userAgent').mockClear().mockImplementation().value('CrOS');
+    userAgentSpy = sinon.stub(navigator, 'userAgent').value('CrOS');
   }
 
   function circuitPlaygroundBoardTeardown() {
-    userAgentSpy.mockRestore();
+    userAgentSpy.restore();
   }
 
   // Test coverage for Maker Board Interface
@@ -105,33 +107,33 @@ describe('CircuitPlaygroundBoard', () => {
         // The CP board contains 16 'prewiredComponents_' which are assigned by
         // function createCircuitPlaygroundComponents which include components, board,
         // and JS_CONSTANTS.
-        expect(Object.keys(board.prewiredComponents_)).toHaveLength(16);
-        expect(board.prewiredComponents_.board).toBeInstanceOf(Object);
-        expect(Array.isArray(board.prewiredComponents_.colorLeds)).toBe(true);
-        expect(board.prewiredComponents_.led).toBeInstanceOf(Object);
-        expect(board.prewiredComponents_.toggleSwitch).toBeInstanceOf(Object);
-        expect(board.prewiredComponents_.buzzer).toBeInstanceOf(Object);
-        expect(board.prewiredComponents_.soundSensor).toBeInstanceOf(Object);
-        expect(board.prewiredComponents_.tempSensor).toBeInstanceOf(Object);
-        expect(board.prewiredComponents_.lightSensor).toBeInstanceOf(Object);
-        expect(board.prewiredComponents_.accelerometer).toBeInstanceOf(Object);
-        expect(board.prewiredComponents_.buttonL).toBeInstanceOf(Object);
-        expect(board.prewiredComponents_.buttonR).toBeInstanceOf(Object);
-        expect(board.prewiredComponents_.INPUT).toBeInstanceOf(Number);
-        expect(board.prewiredComponents_.OUTPUT).toBeInstanceOf(Number);
-        expect(board.prewiredComponents_.ANALOG).toBeInstanceOf(Number);
-        expect(board.prewiredComponents_.PWM).toBeInstanceOf(Number);
-        expect(board.prewiredComponents_.SERVO).toBeInstanceOf(Number);
+        expect(Object.keys(board.prewiredComponents_)).to.have.length(16);
+        expect(board.prewiredComponents_.board).to.be.a('object');
+        expect(board.prewiredComponents_.colorLeds).to.be.a('array');
+        expect(board.prewiredComponents_.led).to.be.a('object');
+        expect(board.prewiredComponents_.toggleSwitch).to.be.a('object');
+        expect(board.prewiredComponents_.buzzer).to.be.a('object');
+        expect(board.prewiredComponents_.soundSensor).to.be.a('object');
+        expect(board.prewiredComponents_.tempSensor).to.be.a('object');
+        expect(board.prewiredComponents_.lightSensor).to.be.a('object');
+        expect(board.prewiredComponents_.accelerometer).to.be.a('object');
+        expect(board.prewiredComponents_.buttonL).to.be.a('object');
+        expect(board.prewiredComponents_.buttonR).to.be.a('object');
+        expect(board.prewiredComponents_.INPUT).to.be.a('number');
+        expect(board.prewiredComponents_.OUTPUT).to.be.a('number');
+        expect(board.prewiredComponents_.ANALOG).to.be.a('number');
+        expect(board.prewiredComponents_.PWM).to.be.a('number');
+        expect(board.prewiredComponents_.SERVO).to.be.a('number');
       });
     });
 
     it(`establishes forwarding for the 'disconnect' event`, () => {
       return board.connect().then(() => {
-        const spy = jest.fn();
+        const spy = sinon.spy();
         board.on('disconnect', spy);
-        expect(spy).not.toHaveBeenCalled();
+        expect(spy).not.to.have.been.called;
         playground.emit('disconnect');
-        expect(spy).toHaveBeenCalledTimes(1);
+        expect(spy).to.have.been.calledOnce;
       });
     });
   });
@@ -143,14 +145,14 @@ describe('CircuitPlaygroundBoard', () => {
 
     it('does not initialize components', () => {
       return board.connectToFirmware().then(() => {
-        expect(board.prewiredComponents_).toBeNull();
+        expect(board.prewiredComponents_).to.be.null;
       });
     });
 
     it('does not set the boardType for classic boards', () => {
       board.port_ = {vendorId: '0x239A', productId: '0x8011'};
       return board.connectToFirmware().then(() => {
-        expect(board.boardType_).toBe(BOARD_TYPE.CLASSIC);
+        expect(board.boardType_).to.equal(BOARD_TYPE.CLASSIC);
       });
     });
 
@@ -160,7 +162,7 @@ describe('CircuitPlaygroundBoard', () => {
         productId: '0x8018',
       };
       return board.connectToFirmware().then(() => {
-        expect(board.boardType_).toBe(BOARD_TYPE.EXPRESS);
+        expect(board.boardType_).to.equal(BOARD_TYPE.EXPRESS);
       });
     });
   });
@@ -169,8 +171,9 @@ describe('CircuitPlaygroundBoard', () => {
     let wrappedPort;
     beforeEach(() => {
       wrappedPort = new WebSerialPortWrapper();
-      jest.spyOn(wrappedPort, 'openCPPort').mockClear()
-        .mockReturnValue(new Promise(resolve => resolve(wrappedPort)));
+      sinon
+        .stub(wrappedPort, 'openCPPort')
+        .returns(new Promise(resolve => resolve(wrappedPort)));
       board = new CircuitPlaygroundBoard(wrappedPort);
       board.port_.vendorId = '0x239A';
     });
@@ -178,21 +181,24 @@ describe('CircuitPlaygroundBoard', () => {
     it('does not set the boardType for classic boards', () => {
       board.port_.productId = '0x8011';
       return board.connectToFirmware().then(() => {
-        expect(board.boardType_).toBe(BOARD_TYPE.CLASSIC);
+        expect(board.boardType_).to.equal(BOARD_TYPE.CLASSIC);
       });
     });
 
     it('sets the boardType for express boards', () => {
       board.port_.productId = '0x8018';
       return board.connectToFirmware().then(() => {
-        expect(board.boardType_).toBe(BOARD_TYPE.EXPRESS);
+        expect(board.boardType_).to.equal(BOARD_TYPE.EXPRESS);
       });
     });
   });
 
   describe(`initializeComponents()`, () => {
     it('throws if called before connecting to firmware', () => {
-      expect(() => board.initializeComponents()).toThrow(Error);
+      expect(() => board.initializeComponents()).to.throw(
+        Error,
+        'Cannot initialize components: Not connected to board firmware.'
+      );
     });
 
     it('initializes a set of components', () => {
@@ -200,7 +206,7 @@ describe('CircuitPlaygroundBoard', () => {
         .connectToFirmware()
         .then(() => board.initializeComponents())
         .then(() => {
-          expect(Object.keys(board.prewiredComponents_)).toHaveLength(16);
+          expect(Object.keys(board.prewiredComponents_)).to.have.length(16);
         });
     });
   });
@@ -210,17 +216,17 @@ describe('CircuitPlaygroundBoard', () => {
       return board.connect().then(() => {
         const led1 = board.createLed(0);
         const led2 = board.createLed(1);
-        jest.spyOn(led1, 'stop').mockClear();
-        jest.spyOn(led2, 'stop').mockClear();
+        sinon.spy(led1, 'stop');
+        sinon.spy(led2, 'stop');
 
         // reset() will call resetDynamicComponents() which, for each LED, will call off()
         // which internally calls stop().
-        expect(led1.stop).not.toHaveBeenCalled();
-        expect(led2.stop).not.toHaveBeenCalled();
+        expect(led1.stop).not.to.have.been.called;
+        expect(led2.stop).not.to.have.been.called;
 
-        board.mockReset();
-        expect(led1.stop).toHaveBeenCalledTimes(1);
-        expect(led2.stop).toHaveBeenCalledTimes(1);
+        board.reset();
+        expect(led1.stop).to.have.been.calledOnce;
+        expect(led2.stop).to.have.been.calledOnce;
       });
     });
   });
@@ -231,7 +237,7 @@ describe('CircuitPlaygroundBoard', () => {
         .connect()
         .then(() => board.destroy())
         .then(() => {
-          expect(playground.reset).toHaveBeenCalledTimes(1);
+          expect(playground.reset).to.have.been.calledOnce;
         });
     });
 
@@ -242,19 +248,19 @@ describe('CircuitPlaygroundBoard', () => {
       // This is a fragile approach to testing this fix, but reproducing the
       // real problem in tests is going to be near-impossible since we stub
       // Firmata at the webpack layer in our tests.
-      expect(Playground.hasRegisteredSysexResponse).toBeUndefined();
+      expect(Playground.hasRegisteredSysexResponse).to.be.undefined;
       return board.connect().then(() => {
-        expect(playground.sysexResponse).toHaveBeenCalledTimes(2);
-        expect(Playground.hasRegisteredSysexResponse).toBe(true);
+        expect(playground.sysexResponse).to.have.been.calledTwice;
+        expect(Playground.hasRegisteredSysexResponse).to.be.true;
         return board.destroy().then(() => {
-          expect(Playground.hasRegisteredSysexResponse).toBeUndefined();
+          expect(Playground.hasRegisteredSysexResponse).to.be.undefined;
 
           const newBoard = new CircuitPlaygroundBoard();
-          expect(Playground.hasRegisteredSysexResponse).toBeUndefined();
+          expect(Playground.hasRegisteredSysexResponse).to.be.undefined;
           return newBoard.connect().then(() => {
             // Connecting creates new a new playground transport, and a new spy
-            expect(playground.sysexResponse).toHaveBeenCalledTimes(2);
-            expect(Playground.hasRegisteredSysexResponse).toBe(true);
+            expect(playground.sysexResponse).to.have.been.calledTwice;
+            expect(Playground.hasRegisteredSysexResponse).to.be.true;
           });
         });
       });
@@ -264,15 +270,15 @@ describe('CircuitPlaygroundBoard', () => {
       return board.connect().then(() => {
         const led1 = board.createLed(0);
         const led2 = board.createLed(1);
-        jest.spyOn(led1, 'stop').mockClear();
-        jest.spyOn(led2, 'stop').mockClear();
+        sinon.spy(led1, 'stop');
+        sinon.spy(led2, 'stop');
 
-        expect(led1.stop).not.toHaveBeenCalled();
-        expect(led2.stop).not.toHaveBeenCalled();
+        expect(led1.stop).not.to.have.been.called;
+        expect(led2.stop).not.to.have.been.called;
 
         return board.destroy().then(() => {
-          expect(led1.stop).toHaveBeenCalledTimes(1);
-          expect(led2.stop).toHaveBeenCalledTimes(1);
+          expect(led1.stop).to.have.been.calledOnce;
+          expect(led2.stop).to.have.been.calledOnce;
         });
       });
     });
@@ -287,6 +293,8 @@ describe('CircuitPlaygroundBoard', () => {
   });
 
   describe(`celebrateSuccessfulConnection()`, () => {
+    let clock, yieldToPromiseChain;
+
     beforeEach(() => {
       // Promise chains and fake timers don't work together so well, so we
       // give ourselves a real `setTimeout(cb, 0)` function that will let any
@@ -303,11 +311,11 @@ describe('CircuitPlaygroundBoard', () => {
 
       // Now use fake timers so we can test exactly when the different commands
       // are sent to the board
-      jest.useFakeTimers();
+      clock = sinon.useFakeTimers();
     });
 
     afterEach(() => {
-      jest.useRealTimers();
+      clock.restore();
       restoreComponentInitialization(five.Sensor);
       restoreComponentInitialization(five.Thermometer);
     });
@@ -339,7 +347,7 @@ describe('CircuitPlaygroundBoard', () => {
             // The initial invocation set up timers to enable each LED in sequence
             for (let i = 0; i < leds.length; i++) {
               leds[i].expects('color').once().calledWith('blue');
-              jest.advanceTimersByTime(80);
+              clock.tick(80);
               leds[i].verify();
             }
             // No new buzzer commands
@@ -351,7 +359,7 @@ describe('CircuitPlaygroundBoard', () => {
               // The next 'from' set up timers to disable each LED in sequence
               for (let i = 0; i < leds.length; i++) {
                 leds[i].expects('off').once();
-                jest.advanceTimersByTime(80);
+                clock.tick(80);
                 leds[i].verify();
               }
               // No new buzzer commands
@@ -374,7 +382,7 @@ describe('CircuitPlaygroundBoard', () => {
         const pin = 11;
         const arg2 = 1023;
         board.pinMode(pin, arg2);
-        expect(playground.pinMode).toHaveBeenCalledWith(pin, arg2);
+        expect(playground.pinMode).to.have.been.calledWith(pin, arg2);
       });
     });
 
@@ -383,7 +391,10 @@ describe('CircuitPlaygroundBoard', () => {
         const pin = xPins[0];
         const arg2 = 1023;
         board.pinMode(pin, arg2);
-        expect(playground.pinMode).toHaveBeenCalledWith(classicPins[0], arg2);
+        expect(playground.pinMode).to.have.been.calledWith(
+          classicPins[0],
+          arg2
+        );
       });
     });
   });
@@ -394,7 +405,7 @@ describe('CircuitPlaygroundBoard', () => {
         const pin = 11;
         const arg2 = 1023;
         board.digitalWrite(pin, arg2);
-        expect(playground.digitalWrite).toHaveBeenCalledWith(pin, arg2);
+        expect(playground.digitalWrite).to.have.been.calledWith(pin, arg2);
       });
     });
 
@@ -403,7 +414,10 @@ describe('CircuitPlaygroundBoard', () => {
         const pin = xPins[1];
         const arg2 = 1023;
         board.digitalWrite(pin, arg2);
-        expect(playground.digitalWrite).toHaveBeenCalledWith(classicPins[1], arg2);
+        expect(playground.digitalWrite).to.have.been.calledWith(
+          classicPins[1],
+          arg2
+        );
       });
     });
   });
@@ -414,7 +428,7 @@ describe('CircuitPlaygroundBoard', () => {
         const pin = 11;
         const arg2 = () => {};
         board.digitalRead(pin, arg2);
-        expect(playground.digitalRead).toHaveBeenCalledWith(pin, arg2);
+        expect(playground.digitalRead).to.have.been.calledWith(pin, arg2);
       });
     });
 
@@ -423,7 +437,10 @@ describe('CircuitPlaygroundBoard', () => {
         const pin = xPins[2];
         const arg2 = () => {};
         board.digitalRead(pin, arg2);
-        expect(playground.digitalRead).toHaveBeenCalledWith(classicPins[2], arg2);
+        expect(playground.digitalRead).to.have.been.calledWith(
+          classicPins[2],
+          arg2
+        );
       });
     });
   });
@@ -434,7 +451,7 @@ describe('CircuitPlaygroundBoard', () => {
         const pin = 11;
         const arg2 = 1023;
         board.analogWrite(pin, arg2);
-        expect(playground.analogWrite).toHaveBeenCalledWith(pin, arg2);
+        expect(playground.analogWrite).to.have.been.calledWith(pin, arg2);
       });
     });
 
@@ -443,7 +460,10 @@ describe('CircuitPlaygroundBoard', () => {
         const pin = xPins[3];
         const arg2 = 1023;
         board.analogWrite(pin, arg2);
-        expect(playground.analogWrite).toHaveBeenCalledWith(classicPins[3], arg2);
+        expect(playground.analogWrite).to.have.been.calledWith(
+          classicPins[3],
+          arg2
+        );
       });
     });
   });
@@ -454,7 +474,7 @@ describe('CircuitPlaygroundBoard', () => {
         const pin = 11;
         const arg2 = () => {};
         board.analogRead(pin, arg2);
-        expect(playground.analogRead).toHaveBeenCalledWith(pin, arg2);
+        expect(playground.analogRead).to.have.been.calledWith(pin, arg2);
       });
     });
 
@@ -463,19 +483,22 @@ describe('CircuitPlaygroundBoard', () => {
         const pin = xPins[4];
         const arg2 = () => {};
         board.analogRead(pin, arg2);
-        expect(playground.analogRead).toHaveBeenCalledWith(classicPins[4], arg2);
+        expect(playground.analogRead).to.have.been.calledWith(
+          classicPins[4],
+          arg2
+        );
       });
     });
   });
 
   describe(`boardConnected()`, () => {
     it('returns false at first', () => {
-      expect(board.boardConnected()).toBe(false);
+      expect(board.boardConnected()).to.be.false;
     });
 
     it('returns true after connecting', () => {
       return board.connect().then(() => {
-        expect(board.boardConnected()).toBe(true);
+        expect(board.boardConnected()).to.be.true;
       });
     });
 
@@ -484,7 +507,7 @@ describe('CircuitPlaygroundBoard', () => {
         .connect()
         .then(() => board.destroy())
         .then(() => {
-          expect(board.boardConnected()).toBe(false);
+          expect(board.boardConnected()).to.be.false;
         });
     });
   });
@@ -494,7 +517,7 @@ describe('CircuitPlaygroundBoard', () => {
       return board.connect().then(() => {
         const pin = 13;
         const newLed = board.createLed(pin);
-        expect(newLed).toBeInstanceOf(Led);
+        expect(newLed).to.be.an.instanceOf(Led);
       });
     });
 
@@ -502,7 +525,7 @@ describe('CircuitPlaygroundBoard', () => {
       return board.connect().then(() => {
         const pin = xPins[5];
         const newLed = board.createLed(pin);
-        expect(newLed.pin).toBe(classicPins[5]);
+        expect(newLed.pin).to.equal(classicPins[5]);
       });
     });
   });
@@ -512,7 +535,7 @@ describe('CircuitPlaygroundBoard', () => {
       return board.connect().then(() => {
         const pin = 13;
         const newButton = board.createButton(pin);
-        expect(newButton).toBeInstanceOf(five.Button);
+        expect(newButton).to.be.an.instanceOf(five.Button);
       });
     });
 
@@ -520,7 +543,7 @@ describe('CircuitPlaygroundBoard', () => {
       return board.connect().then(() => {
         const pin = xPins[6];
         const newLed = board.createButton(pin);
-        expect(newLed.pin).toBe(classicPins[6]);
+        expect(newLed.pin).to.equal(classicPins[6]);
       });
     });
 
@@ -528,7 +551,7 @@ describe('CircuitPlaygroundBoard', () => {
       return board.connect().then(() => {
         EXTERNAL_PINS.forEach(pin => {
           const newButton = board.createButton(pin);
-          expect(newButton.pullup).toBe(true);
+          expect(newButton.pullup).to.be.true;
         });
       });
     });
@@ -539,7 +562,7 @@ describe('CircuitPlaygroundBoard', () => {
           .filter(pin => !EXTERNAL_PINS.includes(pin))
           .forEach(pin => {
             const newButton = board.createButton(pin);
-            expect(newButton.pullup).toBe(false);
+            expect(newButton.pullup).to.be.false;
           });
       });
     });
@@ -548,7 +571,7 @@ describe('CircuitPlaygroundBoard', () => {
   describe(`mappedPin(pin)`, () => {
     it(`returns the Classic pin value of the provided Express pin value`, () => {
       for (let i = 0; i < xPins.length; i++) {
-        expect(board.mappedPin(xPins[i])).toBe(classicPins[i]);
+        expect(board.mappedPin(xPins[i])).to.equal(classicPins[i]);
       }
     });
   });

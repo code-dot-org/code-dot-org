@@ -6,7 +6,7 @@ import TutorialDetail from '@cdo/apps/tutorialExplorer/tutorialDetail';
 import TutorialSet from '@cdo/apps/tutorialExplorer/tutorialSet';
 import i18n from '@cdo/tutorialExplorer/locale';
 
-
+import {expect} from '../../util/deprecatedChai';
 
 const TUTORIAL_1 = {
   name: 'Tutorial 1',
