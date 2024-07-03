@@ -1,6 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
 import ChangeEmailModal from '@cdo/apps/lib/ui/accounts/ChangeEmailModal';

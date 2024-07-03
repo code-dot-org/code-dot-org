@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import {files as filesApi} from '@cdo/apps/clientApi';
 import header from '@cdo/apps/code-studio/header';

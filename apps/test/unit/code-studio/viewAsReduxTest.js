@@ -1,5 +1,5 @@
 import {assert} from 'chai'; //eslint-disable-line no-restricted-imports
-import sinon, {stub} from 'sinon';
+import sinon, {stub} from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
 import reducer, {

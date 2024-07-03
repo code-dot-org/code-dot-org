@@ -3,7 +3,7 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {act} from 'react-dom/test-utils';
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import {
   PROGRAM_CSD,

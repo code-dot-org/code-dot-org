@@ -1,7 +1,7 @@
 import {isolateComponent} from 'isolate-react';
 import $ from 'jquery';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import {PROGRAM_CSD} from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplicationConstants';
 import FormController from '@cdo/apps/code-studio/pd/form_components_func/FormController';

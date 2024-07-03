@@ -1,4 +1,4 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import project from '@cdo/apps/code-studio/initApp/project';
 import {

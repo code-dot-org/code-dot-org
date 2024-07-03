@@ -1,4 +1,4 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import {TestResults} from '@cdo/apps/constants';
 import FeedbackUtils from '@cdo/apps/feedback';

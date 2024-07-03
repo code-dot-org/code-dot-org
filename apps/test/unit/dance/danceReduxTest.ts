@@ -1,6 +1,6 @@
 import {assert} from 'chai'; //eslint-disable-line no-restricted-imports
 import {combineReducers, Store} from 'redux';
-import Sinon from 'sinon';
+import Sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 import {StubFunction} from 'test/types/types';
 
 import * as codeStudioUtils from '@cdo/apps/code-studio/utils';

@@ -1,6 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import React from 'react';
-import sinon, {SinonStub} from 'sinon';
+import sinon, {SinonStub} from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import ChildAccountConsent, {

@@ -1,6 +1,6 @@
 import {render} from '@testing-library/react';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import {
   AudioQueue,

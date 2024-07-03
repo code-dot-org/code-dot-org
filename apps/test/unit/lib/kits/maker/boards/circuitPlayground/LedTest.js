@@ -1,6 +1,6 @@
 /** @file Tests for our johnny-five Led wrapper */
 import five from '@code-dot-org/johnny-five';
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
 import {makeCPBoardStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';

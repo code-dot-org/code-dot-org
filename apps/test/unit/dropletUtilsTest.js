@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import * as dropletUtils from '@cdo/apps/dropletUtils';
 import {globalFunctions} from '@cdo/apps/dropletUtilsGlobalFunctions';

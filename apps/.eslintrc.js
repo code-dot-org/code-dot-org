@@ -156,6 +156,10 @@ module.exports = {
             name: 'chai',
             message: 'Use jest matchers instead of chai',
           },
+          {
+            name: 'sinon',
+            message: 'Use jest spys and stubs instead of sinon',
+          },
         ],
         patterns: [
           {

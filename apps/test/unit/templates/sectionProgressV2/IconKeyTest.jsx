@@ -1,6 +1,6 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import IconKey from '@cdo/apps/templates/sectionProgressV2/IconKey';
 import * as utils from '@cdo/apps/utils';

@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom';
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import GameLab from '@cdo/apps/p5lab/gamelab/GameLab';

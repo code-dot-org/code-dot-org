@@ -1,4 +1,4 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import annotationList from '@cdo/apps/acemode/annotationList';
 import EditorAnnotator, {DropletAnnotator} from '@cdo/apps/EditorAnnotator';

@@ -1,5 +1,5 @@
 import Interpreter from '@code-dot-org/js-interpreter';
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 import Observer from '@cdo/apps/Observer';

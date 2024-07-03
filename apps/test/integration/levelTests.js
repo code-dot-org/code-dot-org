@@ -10,7 +10,7 @@
 // feedback when a user gets the puzzle wrong?
 
 import jQuery from 'jquery';
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import project from '@cdo/apps/code-studio/initApp/project';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';

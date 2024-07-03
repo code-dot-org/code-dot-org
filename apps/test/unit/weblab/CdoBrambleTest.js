@@ -1,4 +1,4 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import CdoBramble from '@cdo/apps/weblab/CdoBramble';
 

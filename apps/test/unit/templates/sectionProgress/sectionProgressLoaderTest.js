@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import * as redux from '@cdo/apps/redux';
 import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';

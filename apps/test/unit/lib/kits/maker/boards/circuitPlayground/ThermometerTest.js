@@ -1,6 +1,6 @@
 /** @file Test the Thermometer controller wrapping playground-io Thermometer */
 import Playground from 'playground-io';
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import Thermometer from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Thermometer';
 

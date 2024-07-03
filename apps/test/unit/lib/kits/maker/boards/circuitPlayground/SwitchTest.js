@@ -1,5 +1,5 @@
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import Switch, {
   READ_ONLY_PROPERTIES,

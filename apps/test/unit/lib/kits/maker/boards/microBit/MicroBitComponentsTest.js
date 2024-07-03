@@ -1,6 +1,6 @@
 /** @file MicroBit Component setup tests */
 import {EventEmitter} from 'events';
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';
 import {

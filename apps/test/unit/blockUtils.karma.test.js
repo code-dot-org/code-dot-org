@@ -1,5 +1,5 @@
 import dedent from 'dedent';
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import {
   appendBlocksByCategory,

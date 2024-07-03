@@ -1,6 +1,6 @@
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import Button from '@cdo/apps/templates/Button';

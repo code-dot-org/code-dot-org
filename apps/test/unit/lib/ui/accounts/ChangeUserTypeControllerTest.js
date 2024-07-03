@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import ReactDOM from 'react-dom';
-import {spy, stub} from 'sinon';
+import {spy, stub} from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeController';
 import * as utils from '@cdo/apps/utils';

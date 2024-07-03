@@ -1,4 +1,4 @@
-import * as sinon from 'sinon';
+import * as sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 import {StubFunction} from 'test/types/types';
 
 import ProgramExecutor from '@cdo/apps/dance/lab2/ProgramExecutor';

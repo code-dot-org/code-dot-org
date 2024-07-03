@@ -1,4 +1,4 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import * as dontMarshalApi from '@cdo/apps/dontMarshalApi';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';

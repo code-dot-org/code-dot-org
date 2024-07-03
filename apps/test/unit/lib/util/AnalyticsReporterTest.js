@@ -1,4 +1,4 @@
-import {stub} from 'sinon';
+import {stub} from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import * as utils from '@cdo/apps/utils';

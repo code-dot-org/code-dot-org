@@ -1,7 +1,7 @@
 import five from '@code-dot-org/johnny-five';
 import _ from 'lodash';
 import Playground from 'playground-io';
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
 import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';

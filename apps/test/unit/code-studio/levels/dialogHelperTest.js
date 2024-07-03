@@ -1,7 +1,7 @@
 import $ from 'jquery'; //eslint-disable-line no-restricted-imports
 import React from 'react';
 import 'jquery-ui/ui/effects/effect-drop';
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import {
   showDialog,

@@ -1,4 +1,4 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import MusicController from '@cdo/apps/MusicController';
 import Sounds from '@cdo/apps/Sounds';

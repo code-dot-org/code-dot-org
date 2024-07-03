@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import ReactDOM from 'react-dom';
-import {spy, stub} from 'sinon';
+import {spy, stub} from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import AddParentEmailController from '@cdo/apps/lib/ui/accounts/AddParentEmailController';
 

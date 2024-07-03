@@ -1,5 +1,5 @@
 import GoogleBlockly from 'blockly/core';
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import {READ_ONLY_PROPERTIES} from '@cdo/apps/blockly/constants';
 import initializeGoogleBlocklyWrapper from '@cdo/apps/blockly/googleBlocklyWrapper';

@@ -3,7 +3,7 @@ import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-impo
 import _ from 'lodash';
 import React from 'react';
 import {Factory} from 'rosie';
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import EnrollmentsPanel, {
   MOVE_ENROLLMENT_BUTTON_NAME,

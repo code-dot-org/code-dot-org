@@ -1,6 +1,6 @@
 // We have to include the locale files below as translations must be loaded in the global
 // scope for HeadlessChrome to run properly.
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 // eslint-disable-line no-unused-vars
 import * as craftRedux from '@cdo/apps/craft/redux';

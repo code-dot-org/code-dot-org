@@ -1,6 +1,6 @@
 import $ from 'jquery'; //eslint-disable-line no-restricted-imports
 import _ from 'lodash';
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import reducer, {
   LockStatus,

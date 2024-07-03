@@ -1,4 +1,4 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 
 import Exporter, {getAppOptionsFile} from '@cdo/apps/applab/Exporter';
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
