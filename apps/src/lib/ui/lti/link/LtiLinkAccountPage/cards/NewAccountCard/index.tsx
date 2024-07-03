@@ -19,7 +19,7 @@ import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 const NewAccountCard = () => {
-  const {ltiProviderName, newAccountUrl, emailAddress} =
+  const {ltiProviderName, newAccountUrl, emailAddress, userType} =
     useContext(LtiProviderContext)!;
   const finishSignupFormRef = useRef<HTMLFormElement>(null);
   const isStudentEmailPostEnabled = DCDO.get(
@@ -31,6 +31,7 @@ const NewAccountCard = () => {
   const handleNewAccountSaved = () => {
     const eventPayload = {
       lms_name: ltiProviderName,
+      user_type: userType,
     };
     analyticsReporter.sendEvent(
       'lti_new_account_click',

@@ -11,8 +11,8 @@
     },
     "new_name": null,
     "family_name": "grade5-maker",
-    "serialized_at": "2024-06-27 16:39:01 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-07-02 20:18:12 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -5581,6 +5581,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/grade5-maker-2024/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/grade5-maker-2024/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/grade5-maker-2024/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Conditionals with Cards",
       "url": "https://youtu.be/UymN4lTL50s",
       "key": "conditionals_with_cards",
@@ -6341,6 +6374,24 @@
     {
       "seeding_key": {
         "resource.key": "_grade_5_-_maker_with_micro_bit_slides",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
         "script.name": "grade5-maker-2024"
       }
     },

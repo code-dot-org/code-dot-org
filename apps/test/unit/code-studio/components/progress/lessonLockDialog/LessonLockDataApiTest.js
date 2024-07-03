@@ -12,6 +12,8 @@ import * as useFetch from '@cdo/apps/util/useFetch';
 
 import {expect} from '../../../../../util/reconfiguredChai';
 
+window.fetch = jest.fn();
+
 describe('LessonLockDataApi', () => {
   const fakeUnitId = 1;
   const fakeLessonId = 2;

@@ -137,7 +137,7 @@ end
 
 Then /^I open the library publish dialog/ do
   steps <<-STEPS
-    When I open the share dialog
+    When I open the project share dialog
     And I click selector "#project-share a:contains('Show advanced options')" if it exists
     And I click selector "#project-share li:contains('Share as library')"
     And I click selector "button:contains('Share as library')"

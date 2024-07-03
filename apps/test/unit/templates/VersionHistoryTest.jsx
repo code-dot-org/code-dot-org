@@ -28,6 +28,14 @@ const FAKE_VERSION_LIST_RESPONSE = {
   ]),
 };
 
+jest.mock('@cdo/apps/code-studio/initApp/project', () => ({
+  getCurrentId: jest.fn().mockReturnValue('fake-project-id'),
+  getCurrentSourceVersionId: jest.fn().mockReturnValue('current-version-id'),
+  getShareUrl: jest.fn().mockReturnValue('fake-share-url'),
+  isOwner: jest.fn().mockReturnValue(true),
+  save: jest.fn(),
+}));
+
 describe('VersionHistory', () => {
   let wrapper;
 
@@ -249,13 +257,6 @@ describe('VersionHistory', () => {
 
       beforeEach(() => {
         sinon.stub(firehoseClient, 'putRecord');
-        sinon.stub(project, 'getCurrentId').returns('fake-project-id');
-        sinon
-          .stub(project, 'getCurrentSourceVersionId')
-          .returns(FAKE_CURRENT_VERSION);
-        sinon.stub(project, 'getShareUrl').returns('fake-share-url');
-        sinon.stub(project, 'isOwner').returns(true);
-        sinon.stub(project, 'save');
 
         handleClearPuzzle = sinon.stub().returns(Promise.resolve());
         wrapper = mount(
@@ -269,11 +270,6 @@ describe('VersionHistory', () => {
       afterEach(async () => {
         await wasCalled(utils.reload);
         firehoseClient.putRecord.restore();
-        project.getCurrentId.restore();
-        project.getCurrentSourceVersionId.restore();
-        project.getShareUrl.restore();
-        project.isOwner.restore();
-        project.save.restore();
       });
 
       it('immediately renders spinner', () => {
@@ -309,7 +305,8 @@ describe('VersionHistory', () => {
 
       it('calls project.save(true)', async () => {
         await wasCalled(project.save);
-        expect(project.save).to.have.been.calledOnce.and.calledWith(true);
+        expect(project.save.mock.calls.length).to.equal(1);
+        expect(project.save.mock.calls[0][0]).to.equal(true);
       });
 
       it('reloads the page', async () => {
@@ -323,7 +320,11 @@ describe('VersionHistory', () => {
 async function wasCalled(spy) {
   await new Promise(resolve => {
     const interval = setInterval(() => {
-      if (spy.callCount > 0) {
+      // swap between sinon and jest mocks
+      const callCount = Object.prototype.hasOwnProperty.call(spy, 'callCount')
+        ? spy.callCount
+        : spy.mock.calls.length;
+      if (callCount > 0) {
         clearInterval(interval);
         resolve();
       }

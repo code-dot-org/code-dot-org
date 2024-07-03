@@ -125,7 +125,7 @@ describe('ProgressTableLevelBubble', () => {
     cacheExports.clearElementsCache('BasicBubble');
   });
 
-  after(() => {
+  afterAll(() => {
     renderPropsSpy.resetHistory();
     cacheExports.clearElementsCache('BasicBubble');
   });

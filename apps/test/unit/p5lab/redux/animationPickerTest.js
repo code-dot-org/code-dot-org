@@ -228,7 +228,7 @@ describe('animationPicker', function () {
     let show = animationPicker.show;
     let saveSelectedAnimations = animationPicker.saveSelectedAnimations;
 
-    before(() => {
+    beforeAll(() => {
       stubRedux();
       registerReducers(commonReducers);
       registerReducers({animationPicker: reducer});
@@ -236,7 +236,7 @@ describe('animationPicker', function () {
       getStore().dispatch(show(Goal.NEW_ANIMATION, true));
     });
 
-    after(() => {
+    afterAll(() => {
       restoreRedux();
     });
 

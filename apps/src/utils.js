@@ -1,10 +1,12 @@
-import $ from 'jquery';
 import Immutable from 'immutable';
+import $ from 'jquery';
+import md5 from 'md5';
 import RGBColor from 'rgbcolor';
+
 import {Position} from './constants';
 import {dataURIFromURI} from './imageUtils';
+
 import './polyfills';
-import md5 from 'md5';
 
 /**
  * Checks whether the given subsequence is truly a subsequence of the given sequence,
