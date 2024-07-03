@@ -42,14 +42,16 @@ const PredictResetButton: React.FunctionComponent = () => {
         text={i18n.deleteAnswer()}
         onClick={handleResetClick}
         size={'s'}
-        className={moduleStyles.predictResetButton}
         disabled={!hasSubmitted}
+        iconLeft={{iconStyle: 'solid', iconName: 'trash'}}
+        type={'secondary'}
+        color={'black'}
       />
       <HelpTip>{i18n.deleteAnswerHelpTip()}</HelpTip>
       {resetFailed && (
-        <span className={moduleStyles.resetError}>
+        <div className={moduleStyles.resetError}>
           {i18n.errorResettingAnswer()}
-        </span>
+        </div>
       )}
     </div>
   );
