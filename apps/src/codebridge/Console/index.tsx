@@ -71,6 +71,7 @@ const Console: React.FunctionComponent = () => {
                   onClick={() => setGraphModalOpen(true)}
                   size="xs"
                   type="primary"
+                  aria-label="open matplotlib_image in pop-up"
                 />
                 {graphModalOpen && (
                   <GraphModal
