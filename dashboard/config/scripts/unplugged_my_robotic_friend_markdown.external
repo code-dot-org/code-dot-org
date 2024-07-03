@@ -1,0 +1,23 @@
+name 'unplugged_my robotic friend_markdown'
+title 'my robotic friend markdown'
+
+markdown <<MARKDOWN
+##My Robotic Friend 
+<div>
+<img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/aac95bd322fbb6a49d5e7865156d6b36-image-1719937697479.28.13 AM.png" />
+
+<div style="float: left; width: 70%; padding-left:20px">
+<h4>
+<strong>This is an Unplugged Activity! </strong>
+</h4>
+
+> Ask your teacher for these handouts:
+> - **<a href="https://docs.google.com/document/d/1jGz8znfkzhgZ3RNd7Kg1AnDZ2LZ7vjf7VujzPz_84b4/edit" target="_blank">Cup Spacing</a>**
+> - **<a href="https://docs.google.com/document/d/1D8W0FETv5OBGj-Fl8gJGHruSvbAhoEtCs6SZxSkKOSc/edit" target="_blank">Symbol Key</a>**
+> - **<a href="https://docs.google.com/document/d/1cq6CvIuCrpS9MfRySO1070uXZ238OuXcqou1mfjV7BM/edit" target="_blank">Cup Stacking Ideas</a>**
+> - **<a href="https://docs.google.com/document/d/1go_BJorY8OzmqWyB5z8_FY7bbPCWg1ZBxfjewU0nMmA/edit" target="_blank">Paper Trapezoid Template</a>**
+
+</div>
+
+
+MARKDOWN

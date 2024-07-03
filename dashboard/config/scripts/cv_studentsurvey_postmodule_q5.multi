@@ -1,8 +1,8 @@
 name 'cv-studentsurvey-postmodule-q5'
-question 'How interested are you to continue exploring computer vision or related fields after this module?'
-right 'Very likely'
-right 'Likely'
+question 'This unit made me more interested in pursuing a career in computer science.'
+right 'Strongly disagree'
+right 'Disagree'
 right 'Neutral'
-right 'Unlikely'
-right 'Very unlikely'
+right 'Agree'
+right 'Strongly agree'
 allow_multiple_attempts true
