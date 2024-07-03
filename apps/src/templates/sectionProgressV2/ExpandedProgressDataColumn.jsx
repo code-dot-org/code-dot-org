@@ -22,7 +22,6 @@ function ExpandedProgressDataColumn({
   lesson,
   levelProgressByStudent,
   sortedStudents,
-  removeExpandedLesson,
   sectionId,
   expandedMetadataStudentIds,
 }) {
@@ -121,7 +120,6 @@ function ExpandedProgressDataColumn({
       </caption>
       <ExpandedProgressColumnHeader
         lesson={lesson}
-        removeExpandedLesson={removeExpandedLesson}
         expandedChoiceLevels={expandedChoiceLevels}
         toggleExpandedChoiceLevel={toggleExpandedChoiceLevel}
       />
@@ -136,7 +134,6 @@ ExpandedProgressDataColumn.propTypes = {
     PropTypes.objectOf(studentLevelProgressType)
   ).isRequired,
   lesson: PropTypes.object.isRequired,
-  removeExpandedLesson: PropTypes.func.isRequired,
   sectionId: PropTypes.number,
   expandedMetadataStudentIds: PropTypes.array,
 };

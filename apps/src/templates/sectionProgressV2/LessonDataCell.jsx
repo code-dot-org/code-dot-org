@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 
 import {lessonHasLevels} from '../progress/progressHelpers';
 import {studentLessonProgressType} from '../progress/progressTypes';
+import {addExpandedLesson} from '../sectionProgress/sectionProgressRedux';
 import {teacherDashboardUrl} from '../teacherDashboard/urlHelpers';
 
 import {ITEM_TYPE} from './ItemType';
@@ -17,6 +18,7 @@ import styles from './progress-table-v2.module.scss';
 function LessonDataCell({
   lesson,
   sectionId,
+  scriptId,
   locked,
   studentLessonProgress,
   addExpandedLesson,
@@ -65,7 +67,7 @@ function LessonDataCell({
   };
 
   const expandLesson = interactive
-    ? () => addExpandedLesson(lesson)
+    ? () => addExpandedLesson(scriptId, sectionId, lesson)
     : undefined;
 
   const lessonCellUnexpanded = getCellComponent(
@@ -95,13 +97,22 @@ function LessonDataCell({
 
 export const UnconnectedLessonDataCell = LessonDataCell;
 
-export default connect(state => ({
-  sectionId: state.teacherSections.selectedSectionId,
-}))(LessonDataCell);
+export default connect(
+  state => ({
+    sectionId: state.teacherSections.selectedSectionId,
+    scriptId: state.unitSelection.scriptId,
+  }),
+  dispatch => ({
+    addExpandedLesson(scriptId, sectionId, lessonId) {
+      dispatch(addExpandedLesson(scriptId, sectionId, lessonId));
+    },
+  })
+)(LessonDataCell);
 
 LessonDataCell.propTypes = {
   locked: PropTypes.bool,
   sectionId: PropTypes.number,
+  scriptId: PropTypes.number,
   studentLessonProgress: studentLessonProgressType,
   lesson: PropTypes.object.isRequired,
   addExpandedLesson: PropTypes.func.isRequired,

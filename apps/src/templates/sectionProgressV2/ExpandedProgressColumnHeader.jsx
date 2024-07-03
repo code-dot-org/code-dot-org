@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 
 import i18n from '@cdo/locale';
 
 import FontAwesome from '../FontAwesome';
+import {removeExpandedLesson} from '../sectionProgress/sectionProgressRedux';
 
 import LessonTitleTooltip, {getTooltipId} from './LessonTitleTooltip';
 import {getLessonColumnHeaderId} from './LevelDataCell';
@@ -11,7 +13,9 @@ import LevelProgressHeader from './LevelProgressHeader';
 
 import styles from './progress-table-v2.module.scss';
 
-export default function ExpandedProgressColumnHeader({
+function ExpandedProgressColumnHeader({
+  scriptId,
+  sectionId,
   lesson,
   removeExpandedLesson,
   expandedChoiceLevels,
@@ -57,7 +61,7 @@ export default function ExpandedProgressColumnHeader({
               'ui-test-expanded-progress-column-header-' +
               lesson.relative_position
             }
-            onClick={() => removeExpandedLesson(lesson.id)}
+            onClick={() => removeExpandedLesson(scriptId, sectionId, lesson.id)}
             aria-label={headerText}
             aria-expanded={true}
             type="button"
@@ -96,7 +100,21 @@ export default function ExpandedProgressColumnHeader({
   );
 }
 
+export default connect(
+  state => ({
+    sectionId: state.teacherSections.selectedSectionId,
+    scriptId: state.unitSelection.scriptId,
+  }),
+  dispatch => ({
+    removeExpandedLesson(scriptId, sectionId, lessonId) {
+      dispatch(removeExpandedLesson(scriptId, sectionId, lessonId));
+    },
+  })
+)(ExpandedProgressColumnHeader);
+
 ExpandedProgressColumnHeader.propTypes = {
+  scriptId: PropTypes.number.isRequired,
+  sectionId: PropTypes.number.isRequired,
   lesson: PropTypes.object.isRequired,
   removeExpandedLesson: PropTypes.func.isRequired,
   expandedChoiceLevels: PropTypes.arrayOf(PropTypes.string).isRequired,

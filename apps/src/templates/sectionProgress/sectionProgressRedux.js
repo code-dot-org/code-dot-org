@@ -1,8 +1,12 @@
 import _ from 'lodash';
 
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {SET_SCRIPT} from '@cdo/apps/redux/unitSelectionRedux';
+import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
 
 import firehoseClient from '../../lib/util/firehose';
+import {lessonHasLevels} from '../progress/progressHelpers';
 
 import {ViewType} from './sectionProgressConstants';
 
@@ -13,6 +17,14 @@ const FINISH_LOADING_PROGRESS = 'sectionProgress/FINISH_LOADING_PROGRESS';
 const START_REFRESHING_PROGRESS = 'sectionProgress/START_REFRESHING_PROGRESS';
 const FINISH_REFRESHING_PROGRESS = 'sectionProgress/FINISH_REFRESHING_PROGRESS';
 const ADD_DATA_BY_UNIT = 'sectionProgress/ADD_DATA_BY_UNIT';
+
+const LOAD_EXPANDED_LESSONS_FROM_LOCAL_STORAGE =
+  'sectionProgress/LOAD_EXPANDED_LESSONS_FROM_LOCAL_STORAGE';
+const ADD_EXPANDED_LESSON = 'sectionProgress/ADD_EXPANDED_LESSON';
+const REMOVE_EXPANDED_LESSON = 'sectionProgress/REMOVE_EXPANDED_LESSON';
+
+const TOGGLE_EXPANDED_CHOICE_LEVEL =
+  'sectionProgress/TOGGLE_EXPANDED_CHOICE_LEVEL';
 
 const EXPAND_METADATA_FOR_STUDENTS =
   'sectionProgress/EXPAND_METADATA_FOR_STUDENTS';
@@ -38,6 +50,32 @@ export const addDataByUnit = data => ({
   data,
 });
 
+export const loadExpandedLessonsFromLocalStorage = (scriptId, sectionId) => ({
+  type: LOAD_EXPANDED_LESSONS_FROM_LOCAL_STORAGE,
+  scriptId,
+  sectionId,
+});
+
+export const addExpandedLesson = (scriptId, sectionId, lesson) => ({
+  type: ADD_EXPANDED_LESSON,
+  scriptId,
+  sectionId,
+  lesson,
+});
+
+export const removeExpandedLesson = (scriptId, sectionId, lessonId) => ({
+  type: REMOVE_EXPANDED_LESSON,
+  scriptId,
+  sectionId,
+  lessonId,
+});
+
+export const toggleExpandedChoiceLevel = (sectionId, levelId) => ({
+  type: TOGGLE_EXPANDED_CHOICE_LEVEL,
+  sectionId,
+  levelId,
+});
+
 export const expandMetadataForStudents = studentIds => ({
   type: EXPAND_METADATA_FOR_STUDENTS,
   studentIds,
@@ -59,6 +97,8 @@ const initialState = {
   lessonOfInterest: INITIAL_LESSON_OF_INTEREST,
   isLoadingProgress: false,
   isRefreshingProgress: false,
+  expandedLessonIds: {},
+  expandedChoiceLevelIds: {},
   expandedMetadataStudentIds: [],
 };
 
@@ -126,6 +166,83 @@ export default function sectionProgress(state = initialState, action) {
       },
     };
   }
+  if (action.type === LOAD_EXPANDED_LESSONS_FROM_LOCAL_STORAGE) {
+    const expandedLessonIds = getLocalStorage(
+      action.scriptId,
+      action.sectionId
+    );
+    return {
+      ...state,
+      expandedLessonIds: {
+        ...state.expandedLessonIds,
+        [action.sectionId]: expandedLessonIds,
+      },
+    };
+  }
+  if (action.type === ADD_EXPANDED_LESSON) {
+    if (!action.lesson.lockable && lessonHasLevels(action.lesson)) {
+      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_LESSON_EXPAND, {
+        sectionId: action.sectionId,
+        lessonId: action.lesson.id,
+      });
+
+      const newSectionExpandedLessonIds = _.uniq([
+        ...(state.expandedLessonIds[action.sectionId] || []),
+        action.lesson.id,
+      ]);
+      saveExpandedLessonIdsToLocalStorage(
+        action.scriptId,
+        action.sectionId,
+        newSectionExpandedLessonIds
+      );
+
+      return {
+        ...state,
+        expandedLessonIds: {
+          ...state.expandedLessonIds,
+          [action.sectionId]: newSectionExpandedLessonIds,
+        },
+      };
+    }
+  }
+  if (action.type === REMOVE_EXPANDED_LESSON) {
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_LESSON_COLLAPSE, {
+      sectionId: action.sectionId,
+      lessonId: action.lessonId,
+    });
+
+    const newSectionExpandedLessonIds = state.expandedLessonIds[
+      action.sectionId
+    ].filter(lessonId => lessonId !== action.lessonId);
+    saveExpandedLessonIdsToLocalStorage(
+      action.scriptId,
+      action.sectionId,
+      newSectionExpandedLessonIds
+    );
+
+    return {
+      ...state,
+      expandedLessonIds: {
+        ...state.expandedLessonIds,
+        [action.sectionId]: newSectionExpandedLessonIds,
+      },
+    };
+  }
+  if (action.type === TOGGLE_EXPANDED_CHOICE_LEVEL) {
+    const newSectionExpandedChoiceLevelIds = state.expandedChoiceLevelIds[
+      action.sectionId
+    ].includes(action.levelId)
+      ? state.expandedChoiceLevelIds.filter(id => id !== action.levelId)
+      : [...state.expandedChoiceLevelIds, action.levelId];
+
+    return {
+      ...state,
+      expandedChoiceLevelIds: {
+        ...state.expandedChoiceLevelIds,
+        [action.sectionId]: newSectionExpandedChoiceLevelIds,
+      },
+    };
+  }
   if (action.type === EXPAND_METADATA_FOR_STUDENTS) {
     return {
       ...state,
@@ -177,4 +294,34 @@ export const jumpToLessonDetails = lessonOfInterest => {
  */
 export const getCurrentUnitData = state => {
   return state.sectionProgress.unitDataByUnit[state.unitSelection.scriptId];
+};
+
+const getExpandedLessonLocalStorageString = (scriptId, sectionId) =>
+  `expandedLessonProgressV2-${scriptId}-${sectionId}`;
+
+const saveExpandedLessonIdsToLocalStorage = (
+  scriptId,
+  sectionId,
+  lessonIds
+) => {
+  trySetLocalStorage(
+    getExpandedLessonLocalStorageString(scriptId, sectionId),
+    JSON.stringify(lessonIds)
+  );
+};
+
+const getLocalStorage = (scriptId, sectionId) => {
+  try {
+    return (
+      JSON.parse(
+        tryGetLocalStorage(
+          getExpandedLessonLocalStorageString(scriptId, sectionId),
+          []
+        )
+      ) || []
+    );
+  } catch (e) {
+    // If we fail to parse the local storage, default to nothing expanded.
+    return [];
+  }
 };

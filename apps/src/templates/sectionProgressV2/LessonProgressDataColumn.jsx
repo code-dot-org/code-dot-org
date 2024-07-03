@@ -18,7 +18,6 @@ function LessonProgressDataColumn({
   lessonProgressByStudent,
   levelProgressByStudent,
   sortedStudents,
-  addExpandedLesson,
   expandedMetadataStudentIds,
 }) {
   const lockedPerStudent = React.useMemo(
@@ -44,11 +43,7 @@ function LessonProgressDataColumn({
 
   return (
     <div className={styles.lessonColumn}>
-      <LessonProgressColumnHeader
-        lesson={lesson}
-        addExpandedLesson={addExpandedLesson}
-        allLocked={allLocked}
-      />
+      <LessonProgressColumnHeader lesson={lesson} allLocked={allLocked} />
 
       <div className={styles.lessonDataColumn}>
         {sortedStudents.map(student => (
@@ -60,7 +55,6 @@ function LessonProgressDataColumn({
             }
             key={student.id + '.' + lesson.id}
             studentId={student.id}
-            addExpandedLesson={addExpandedLesson}
             metadataExpanded={expandedMetadataStudentIds.includes(student.id)}
           />
         ))}
@@ -80,7 +74,6 @@ LessonProgressDataColumn.propTypes = {
     PropTypes.objectOf(studentLevelProgressType)
   ).isRequired,
   lesson: PropTypes.object.isRequired,
-  addExpandedLesson: PropTypes.func.isRequired,
   expandedMetadataStudentIds: PropTypes.array,
 };
 
