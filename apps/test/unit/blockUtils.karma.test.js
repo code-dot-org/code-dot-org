@@ -12,6 +12,7 @@ import {
 } from '@cdo/apps/block_utils';
 import {parseElement, serialize} from '@cdo/apps/xml.js';
 
+import {expect} from '../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 import {allowConsoleWarnings} from '../util/testUtils';
 
 describe('block utils', () => {

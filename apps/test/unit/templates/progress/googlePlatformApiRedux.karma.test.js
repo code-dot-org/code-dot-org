@@ -10,6 +10,8 @@ import reducer, {
   canShowGoogleShareButton,
 } from '@cdo/apps/templates/progress/googlePlatformApiRedux';
 
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+
 describe('Google Platoform API redux module', () => {
   const initialState = {
     loading: false,

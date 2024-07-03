@@ -4,6 +4,8 @@ import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
 import CustomMarshaler from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshaler';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+
 import {
   makeAssertableObj,
   attachAssertToInterpreter,

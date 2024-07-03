@@ -4,6 +4,8 @@ import React from 'react';
 import CrosshairOverlay from '@cdo/apps/templates/CrosshairOverlay';
 import {VisualizationOverlay} from '@cdo/apps/templates/VisualizationOverlay';
 
+import {expect} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
+
 describe('VisualizationOverlay', () => {
   const TEST_APP_WIDTH = 300,
     TEST_APP_HEIGHT = 200;
