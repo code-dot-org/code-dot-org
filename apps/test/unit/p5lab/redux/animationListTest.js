@@ -54,7 +54,7 @@ describe('animationList', function () {
   describe('animationSourceUrl', function () {
     const key = 'foo';
 
-    before(() => assetPrefix.init({}));
+    beforeAll(() => assetPrefix.init({}));
 
     it(`returns the sourceUrl from props if it exists and is not an uploaded image`, function () {
       const props = {sourceUrl: 'bar'};

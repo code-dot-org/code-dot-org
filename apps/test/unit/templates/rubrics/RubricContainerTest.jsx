@@ -24,6 +24,14 @@ import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/reconfiguredChai';
 
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  post: jest.fn().mockResolvedValue({
+    json: jest.fn().mockReturnValue({}),
+  }),
+}));
+
+fetch.mockIf(/\/rubrics\/.*/, JSON.stringify(''));
+
 describe('RubricContainer', () => {
   let clock;
   let store;
@@ -974,6 +982,9 @@ describe('RubricContainer', () => {
       </Provider>
     );
 
+    const tourFabBg = document.getElementById('tour-fab-bg');
+    tourFabBg.scrollBy = jest.fn();
+
     const nextButton = await findByText('Next Tip');
 
     fireEvent.click(nextButton);
@@ -1017,7 +1028,11 @@ describe('RubricContainer', () => {
       </Provider>
     );
 
-    const skipButton = await findByRole('button', {name: '×'});
+    const skipButton = await findByRole(
+      'button',
+      {name: '×'},
+      {timeout: 10_000} // wait for introjs to load
+    );
 
     fireEvent.click(skipButton);
 
@@ -1050,7 +1065,8 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
-
+    const tourFabBg = document.getElementById('tour-fab-bg');
+    tourFabBg.scrollBy = jest.fn();
     const nextButton = await findByText('Next Tip');
 
     fireEvent.click(nextButton);
@@ -1094,6 +1110,8 @@ describe('RubricContainer', () => {
       </Provider>
     );
 
+    const tourFabBg = document.getElementById('tour-fab-bg');
+    tourFabBg.scrollBy = jest.fn();
     await wait();
 
     expect(queryByText('Getting Started with Your AI Teaching Assistant')).to

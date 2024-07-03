@@ -52,7 +52,7 @@ describe('MicroBitButton', function () {
         pin: 0,
       });
     });
-    after(() => {
+    afterAll(() => {
       sinon.restore();
     });
 

@@ -4,8 +4,9 @@ import cookies from 'js-cookie';
 import {getUserSignedInFromCookieAndDom} from '@cdo/apps/code-studio/initSigninState';
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 
-import {allowConsoleErrors} from '../../util/testUtils';
+import {allowConsoleErrors, setExternalGlobals} from '../../util/testUtils';
 
+setExternalGlobals();
 describe('initSigninStateTest', () => {
   describe('getUserSignedInFromCookieAndDom', () => {
     allowConsoleErrors();
@@ -26,12 +27,12 @@ describe('initSigninStateTest', () => {
       headerDiv.appendChild(name);
     }
 
-    before(() => {
+    beforeAll(() => {
       stashedRackEnv = window.dashboard.rack_env;
       window.dashboard.rack_env = 'unit_test';
       cookieName = environmentSpecificCookieName('_shortName');
     });
-    after(() => {
+    afterAll(() => {
       window.dashboard.rack_env = stashedRackEnv;
     });
 

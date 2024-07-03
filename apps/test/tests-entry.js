@@ -57,7 +57,7 @@ if (testType('unit')) {
         bodyTag.innerHTML = '<script></script>';
       });
     });
-    runTests(require.context('./unit', true, /\.[j|t]sx?$/));
+    runTests(require.context('./unit', true, /\.karma\.test\.[j|t]sx?$/));
   });
 }
 
