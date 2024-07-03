@@ -134,15 +134,6 @@ function InviteToV2ProgressModal({
           aria-label={i18n.dialogAnnouncement()}
           className={styles.dialog}
         >
-          <button
-            id="ui-close-dialog"
-            type="button"
-            onClick={handleDismiss}
-            aria-label={i18n.closeDialog()}
-            className={styles.xCloseButton}
-          >
-            <i id="x-close" className="fa-solid fa-xmark" />
-          </button>
           <img src={newProgressViewGraphic} alt="" />
           <Heading2>{i18n.progressTrackingAnnouncement()}</Heading2>
           <BodyTwoText>{i18n.progressTrackingInvite()}</BodyTwoText>

@@ -37,6 +37,7 @@ function AccessibleDialog({
             role="dialog"
           >
             <button
+              id="ui-close-dialog"
               type="button"
               onClick={onClose}
               className={closeIconStyle}
