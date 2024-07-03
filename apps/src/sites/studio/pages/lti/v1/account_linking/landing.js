@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const emailAddress = scriptData['email'];
   const newCtaType = scriptData['new_cta_type'];
   const continueAccountUrl = scriptData['continue_account_url'];
+  const userType = scriptData['user_type'];
 
   const ltiProviderContext = {
     ltiProvider,
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     emailAddress,
     newCtaType,
     continueAccountUrl,
+    userType,
   };
 
   ReactDOM.render(
