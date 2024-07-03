@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
 import {connect} from 'react-redux';
 
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import Link from '@cdo/apps/componentLibrary/link';
 import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -27,6 +28,7 @@ function SectionProgressSelector({
   sectionId,
 }) {
   const [hasJustSwitchedToV2, setHasJustSwitchedToV2] = React.useState(false);
+  const params = queryParams('view');
 
   const onShowProgressTableV2Change = useCallback(() => {
     const shouldShowV2 = !showProgressTableV2;
@@ -79,9 +81,19 @@ function SectionProgressSelector({
   // If the user has not selected manually the v1 or v2 table, show the DCDO defined default.
   // If a user has selected manually, show that version.
   const isPreferenceSet = showProgressTableV2 !== undefined;
+
+  // If there is a url pram, use that param to determine to show V2.
+  const displayV2FromUrl = params === 'v2';
+
   const displayV2 = isPreferenceSet
     ? showProgressTableV2
+    : displayV2FromUrl
+    ? true
     : DCDO.get('progress-table-v2-default-v2', false);
+
+  // const displayV2 = isPreferenceSet
+  //   ? showProgressTableV2
+  //   : DCDO.get('progress-table-v2-default-v2', false);
 
   const toggleV1OrV2Link = () => (
     <div className={styles.toggleViews}>
