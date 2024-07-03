@@ -2,3 +2,9 @@
   position: fixed;
   top: 0;
 }
+
+.floatHeaderInterior {
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+}

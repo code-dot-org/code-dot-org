@@ -147,7 +147,7 @@ function FloatingHeader({
           return (
             <table
               className={progressStyles.expandedColumn}
-              key={lesson.id + 'header-cpy'}
+              key={lesson.id + '-float-header'}
             >
               <ExpandedProgressColumnHeader
                 lesson={lesson}
@@ -161,13 +161,13 @@ function FloatingHeader({
         return (
           <div
             className={progressStyles.lessonColumn}
-            key={lesson.id + 'header-cpy'}
+            key={lesson.id + '-float-header'}
           >
             <LessonProgressColumnHeader
               lesson={lesson}
               addExpandedLesson={addExpandedLesson}
               allLocked={allLocked}
-              key={lesson.id + 'header-cpy'}
+              key={lesson.id + '-float-header'}
             />
           </div>
         );
@@ -185,23 +185,19 @@ function FloatingHeader({
   return (
     <div className={styles.floatingHeader}>
       {shouldFloatHeader && (
-        <div className={styles.floatHeader} style={{}}>
+        <div className={styles.floatHeader}>
           <div
             style={{
               width: headerWidth + 'px',
-              display: 'flex',
-              flexDirection: 'row',
-              overflowX: 'hidden',
             }}
+            className={styles.floatHeaderInterior}
             ref={headerRef}
           >
             {headers}
           </div>
         </div>
       )}
-      <div className={styles.childContainer} ref={childContainerRef}>
-        <div className={styles.child}>{children}</div>
-      </div>
+      <div ref={childContainerRef}>{children}</div>
     </div>
   );
 }
