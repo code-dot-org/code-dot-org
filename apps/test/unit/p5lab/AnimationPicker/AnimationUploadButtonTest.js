@@ -6,7 +6,6 @@ import ImageUploadModal from '@cdo/apps/templates/imageUploadWarning/ImageUpload
 
 import AnimationPickerListItem from '../../../../src/p5lab/AnimationPicker/AnimationPickerListItem';
 
-
 const emptyFunction = () => {};
 
 const defaultProps = {

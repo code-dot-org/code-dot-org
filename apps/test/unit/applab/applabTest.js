@@ -558,7 +558,9 @@ describe('Applab', () => {
   });
 
   describe('Applab.init()', () => {
-    beforeAll(() => jest.spyOn(Applab, 'render').mockClear().mockImplementation());
+    beforeAll(() =>
+      jest.spyOn(Applab, 'render').mockClear().mockImplementation()
+    );
     afterAll(() => Applab.render.mockRestore());
     let containerDiv, codeWorkspaceDiv;
 

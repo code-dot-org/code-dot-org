@@ -90,12 +90,16 @@ describe('Matrix Choice Responses', () => {
       1: {7: 2},
       2: {6: 1},
     };
-    expect(choiceResponses.first().props().answers.toString()).toBe(expectedPdAnswers.toString());
+    expect(choiceResponses.first().props().answers.toString()).toBe(
+      expectedPdAnswers.toString()
+    );
 
     // suitable_my_level only had a response for facilitator 2
     const expectedSuitableAnswers = {
       2: {5: 2},
     };
-    expect(choiceResponses.last().props().answers.toString()).toBe(expectedSuitableAnswers.toString());
+    expect(choiceResponses.last().props().answers.toString()).toBe(
+      expectedSuitableAnswers.toString()
+    );
   });
 });

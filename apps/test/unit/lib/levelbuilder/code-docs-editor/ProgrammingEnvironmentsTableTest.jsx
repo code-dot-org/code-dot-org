@@ -3,8 +3,6 @@ import React from 'react';
 
 import ProgrammingEnvironmentsTable from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingEnvironmentsTable';
 
-
-
 describe('ProgrammingEnvironmentsTable', () => {
   let defaultProps;
 
@@ -38,7 +36,9 @@ describe('ProgrammingEnvironmentsTable', () => {
 
     expect(wrapper.find('Header').length).toBe(1);
     expect(wrapper.find('Body').length).toBe(1);
-    expect(wrapper.find('Body').props().rows).toEqual(defaultProps.programmingEnvironments);
+    expect(wrapper.find('Body').props().rows).toEqual(
+      defaultProps.programmingEnvironments
+    );
   });
 
   it('doesnt show table if hidden is true', () => {

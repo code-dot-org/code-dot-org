@@ -3,7 +3,6 @@ import React from 'react';
 
 import ObjectivesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ObjectivesEditor';
 
-
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 describe('ObjectivesEditor', () => {

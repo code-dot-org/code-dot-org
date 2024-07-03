@@ -11,8 +11,6 @@ import {
   stubRedux,
 } from '@cdo/apps/redux';
 
-
-
 describe('Java Lab Control Buttons Test', () => {
   let defaultProps;
   let store;
@@ -61,12 +59,16 @@ describe('Java Lab Control Buttons Test', () => {
 
   it('disables run button if disableRunButton is true', () => {
     renderDefault({disableRunButton: true});
-    expect(screen.getByRole('button', {name: 'Run'}).getAttribute('disabled')).toBeDefined();
+    expect(
+      screen.getByRole('button', {name: 'Run'}).getAttribute('disabled')
+    ).toBeDefined();
   });
 
   it('disables test button if disableTestButton is true', () => {
     renderDefault({disableTestButton: true});
-    expect(screen.getByRole('button', {name: 'Test'}).getAttribute('disabled')).toBeDefined();
+    expect(
+      screen.getByRole('button', {name: 'Test'}).getAttribute('disabled')
+    ).toBeDefined();
   });
 
   it('hides test button if showTestButton is false', () => {

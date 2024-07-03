@@ -5,8 +5,6 @@ import HintDisplayLightbulb from '@cdo/apps/templates/HintDisplayLightbulb';
 import {UnconnectedInstructionsCsfLeftCol as InstructionsCsfLeftCol} from '@cdo/apps/templates/instructions/InstructionsCsfLeftCol';
 import PromptIcon from '@cdo/apps/templates/instructions/PromptIcon';
 
-
-
 const DEFAULT_PROPS = {
   requestHint: () => {},
   setColWidth: () => {},

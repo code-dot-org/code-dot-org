@@ -3,8 +3,6 @@ import React from 'react';
 
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 
-
-
 describe('TextareaWithMarkdownPreview', () => {
   let defaultProps, handleMarkdownChange;
   beforeEach(() => {

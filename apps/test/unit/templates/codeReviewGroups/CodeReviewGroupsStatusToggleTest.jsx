@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedCodeReviewGroupsStatusToggle} from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsStatusToggle';
 
-
-
 describe('Code Review Groups Status Toggle', () => {
   let setCodeReviewExpiration, fakeSectionId;
   beforeEach(() => {

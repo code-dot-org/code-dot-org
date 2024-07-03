@@ -3,8 +3,6 @@ import React from 'react';
 
 import NewDataDocForm from '@cdo/apps/lib/levelbuilder/data-docs-editor/NewDataDocForm';
 
-
-
 describe('NewDataDocForm', () => {
   it('renders form', () => {
     const wrapper = shallow(<NewDataDocForm />);

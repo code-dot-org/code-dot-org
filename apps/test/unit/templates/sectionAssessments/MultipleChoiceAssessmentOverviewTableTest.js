@@ -4,8 +4,6 @@ import React from 'react';
 import {UnconnectedMultipleChoiceAssessmentsOverviewTable} from '@cdo/apps/templates/sectionAssessments/MultipleChoiceAssessmentsOverviewTable';
 import commonMsg from '@cdo/locale';
 
-
-
 const multipleChoiceData = [
   {
     id: 1,

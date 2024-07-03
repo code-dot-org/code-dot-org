@@ -3,8 +3,6 @@ import React from 'react';
 
 import ReferenceGuideEditAll from '@cdo/apps/lib/levelbuilder/reference-guide-editor/ReferenceGuideEditAll';
 
-
-
 const makeReferenceGuide = (key, parent = null, pos = 0) => ({
   display_name: key,
   key: key,
@@ -74,9 +72,14 @@ describe('ReferenceGuideEditAll', () => {
         baseUrl={'/courses/etc/guides'}
       />
     );
-    expect(
-      wrapper.findAll('.guide-box').map(box => box.content())
-    ).toEqual(['a', 'b', 'c', 'e', 'f', 'd']);
+    expect(wrapper.findAll('.guide-box').map(box => box.content())).toEqual([
+      'a',
+      'b',
+      'c',
+      'e',
+      'f',
+      'd',
+    ]);
 
     // input order shouldn't matter
     referenceGuides = [
@@ -95,9 +98,16 @@ describe('ReferenceGuideEditAll', () => {
         baseUrl={'/courses/etc/guides'}
       />
     );
-    expect(
-      wrapper.findAll('.guide-box').map(box => box.content())
-    ).toEqual(['a', 'b', 'c', 'e', 'f', 'g', 'h', 'd']);
+    expect(wrapper.findAll('.guide-box').map(box => box.content())).toEqual([
+      'a',
+      'b',
+      'c',
+      'e',
+      'f',
+      'g',
+      'h',
+      'd',
+    ]);
   });
 
   it('indents the reference guides by level depth', () => {
@@ -137,18 +147,22 @@ describe('ReferenceGuideEditAll', () => {
         baseUrl={'/courses/etc/guides'}
       />
     );
-    expect(
-      wrapper.findAll('.guide-box').map(box => box.content())
-    ).toEqual(['a', 'b', 'c']);
+    expect(wrapper.findAll('.guide-box').map(box => box.content())).toEqual([
+      'a',
+      'b',
+      'c',
+    ]);
 
     // click down on b
     wrapper
       .findAll('.actions-box')[1]
       .findAll('MiniIconButton')[3]
       .props.func();
-    expect(
-      wrapper.findAll('.guide-box').map(box => box.content())
-    ).toEqual(['a', 'c', 'b']);
+    expect(wrapper.findAll('.guide-box').map(box => box.content())).toEqual([
+      'a',
+      'c',
+      'b',
+    ]);
     expect(fetchSpy).toHaveBeenCalledTimes(2);
 
     // click up on a
@@ -156,9 +170,11 @@ describe('ReferenceGuideEditAll', () => {
       .findAll('.actions-box')[0]
       .findAll('MiniIconButton')[2]
       .props.func();
-    expect(
-      wrapper.findAll('.guide-box').map(box => box.content())
-    ).toEqual(['a', 'c', 'b']);
+    expect(wrapper.findAll('.guide-box').map(box => box.content())).toEqual([
+      'a',
+      'c',
+      'b',
+    ]);
     expect(fetchSpy).toHaveBeenCalledTimes(2);
 
     // click down on b
@@ -166,9 +182,11 @@ describe('ReferenceGuideEditAll', () => {
       .findAll('.actions-box')[2]
       .findAll('MiniIconButton')[3]
       .props.func();
-    expect(
-      wrapper.findAll('.guide-box').map(box => box.content())
-    ).toEqual(['a', 'c', 'b']);
+    expect(wrapper.findAll('.guide-box').map(box => box.content())).toEqual([
+      'a',
+      'c',
+      'b',
+    ]);
     expect(fetchSpy).toHaveBeenCalledTimes(2);
 
     // click down on a
@@ -176,9 +194,11 @@ describe('ReferenceGuideEditAll', () => {
       .findAll('.actions-box')[0]
       .findAll('MiniIconButton')[3]
       .props.func();
-    expect(
-      wrapper.findAll('.guide-box').map(box => box.content())
-    ).toEqual(['c', 'a', 'b']);
+    expect(wrapper.findAll('.guide-box').map(box => box.content())).toEqual([
+      'c',
+      'a',
+      'b',
+    ]);
     expect(fetchSpy).toHaveBeenCalledTimes(4);
   });
 
@@ -196,9 +216,13 @@ describe('ReferenceGuideEditAll', () => {
         baseUrl={'/courses/etc/guides'}
       />
     );
-    expect(
-      wrapper.findAll('.guide-box').map(box => box.content())
-    ).toEqual(['a', 'b', 'd', 'e', 'c']);
+    expect(wrapper.findAll('.guide-box').map(box => box.content())).toEqual([
+      'a',
+      'b',
+      'd',
+      'e',
+      'c',
+    ]);
 
     // click delete on second
     wrapper
@@ -209,9 +233,10 @@ describe('ReferenceGuideEditAll', () => {
 
     // confirm delete
     wrapper.findOne('DeleteWarningDialog').props.deleteGuide();
-    expect(
-      wrapper.findAll('.guide-box').map(box => box.content())
-    ).toEqual(['a', 'c']);
+    expect(wrapper.findAll('.guide-box').map(box => box.content())).toEqual([
+      'a',
+      'c',
+    ]);
     expect(wrapper.exists('DeleteWarningDialog')).not.toBe(true);
   });
 });

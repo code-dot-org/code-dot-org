@@ -11,8 +11,6 @@ import ProgressTableDetailCell from '@cdo/apps/templates/sectionProgress/progres
 import ProgressTableLevelBubble from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelBubble';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
-
-
 const level_1 = fakeLevel({
   id: '123',
   levelNumber: 1,

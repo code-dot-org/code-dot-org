@@ -4,8 +4,6 @@ import React from 'react';
 import EditTableRow from '@cdo/apps/storage/dataBrowser/EditTableRow';
 import commonI18n from '@cdo/locale';
 
-
-
 describe('EditTableRow', () => {
   describe('localization', () => {
     function createEditTableRow() {
@@ -47,7 +45,10 @@ describe('EditTableRow', () => {
     });
 
     it('should render a localized string while saving the row', () => {
-      jest.spyOn(commonI18n, 'saving').mockClear().mockReturnValue('i18n-saving');
+      jest
+        .spyOn(commonI18n, 'saving')
+        .mockClear()
+        .mockReturnValue('i18n-saving');
 
       const wrapper = createEditTableRow();
 
@@ -59,7 +60,10 @@ describe('EditTableRow', () => {
     });
 
     it('should render a localized string for "Delete"', () => {
-      jest.spyOn(commonI18n, 'delete').mockClear().mockReturnValue('i18n-delete');
+      jest
+        .spyOn(commonI18n, 'delete')
+        .mockClear()
+        .mockReturnValue('i18n-delete');
 
       const wrapper = createEditTableRow();
 
@@ -68,7 +72,10 @@ describe('EditTableRow', () => {
     });
 
     it('should render a localized string while saving the row', () => {
-      jest.spyOn(commonI18n, 'deletingWithEllipsis').mockClear().mockReturnValue('i18n-deleting');
+      jest
+        .spyOn(commonI18n, 'deletingWithEllipsis')
+        .mockClear()
+        .mockReturnValue('i18n-deleting');
 
       const wrapper = createEditTableRow();
 

@@ -8,8 +8,6 @@ import EnhancedSafeMarkdown, {
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import * as expandableImages from '@cdo/apps/templates/utils/expandableImages';
 
-
-
 describe('EnhancedSafeMarkdown', () => {
   it('renders SafeMarkdown by default', () => {
     const wrapper = shallow(<EnhancedSafeMarkdown markdown="test" />);
@@ -40,7 +38,9 @@ describe('EnhancedSafeMarkdown', () => {
 
   describe('ExpandableImagesWrapper', () => {
     it('renders expandable images', () => {
-      const renderSpy = jest.spyOn(expandableImages, 'renderExpandableImages').mockClear();
+      const renderSpy = jest
+        .spyOn(expandableImages, 'renderExpandableImages')
+        .mockClear();
       // We use mount rather than shallow here because renderExpandableImages
       // expects an actual node as an argument
       mount(

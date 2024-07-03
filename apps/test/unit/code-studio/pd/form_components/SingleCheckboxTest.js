@@ -4,8 +4,6 @@ import {Checkbox} from 'react-bootstrap'; // eslint-disable-line no-restricted-i
 
 import SingleCheckbox from '@cdo/apps/code-studio/pd/form_components/SingleCheckbox';
 
-
-
 describe('SingleCheckbox', () => {
   it('renders a basic checkbox', () => {
     const singleCheckbox = shallow(
@@ -29,8 +27,12 @@ describe('SingleCheckbox', () => {
         />
       );
 
-    expect(singleCheckBoxWithValue(true).find(Checkbox).prop('checked')).toBe(true);
-    expect(singleCheckBoxWithValue(false).find(Checkbox).prop('checked')).toBe(false);
+    expect(singleCheckBoxWithValue(true).find(Checkbox).prop('checked')).toBe(
+      true
+    );
+    expect(singleCheckBoxWithValue(false).find(Checkbox).prop('checked')).toBe(
+      false
+    );
   });
 
   it('Calls supplied onChange function with the updated value', () => {

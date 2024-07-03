@@ -6,8 +6,6 @@ import PlaygroundButton from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/
 import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import {makeCPBoardStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 
-
-
 describe('PlaygroundButton', function () {
   it('is a johnny-five Button component', function () {
     const button = new PlaygroundButton({

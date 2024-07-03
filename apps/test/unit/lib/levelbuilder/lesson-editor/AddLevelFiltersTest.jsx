@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedAddLevelFilters as AddLevelFilters} from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelFilters';
 
-
-
 import {searchOptions} from './activitiesTestData';
 
 describe('AddLevelFilters', () => {

@@ -5,8 +5,6 @@ import React, {useState} from 'react';
 
 import TextField from '@cdo/apps/componentLibrary/textField';
 
-
-
 describe('Design System - TextField', () => {
   const renderTextField = props => {
     const Wrapper = () => {

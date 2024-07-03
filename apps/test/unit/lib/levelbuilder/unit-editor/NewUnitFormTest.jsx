@@ -3,8 +3,6 @@ import React from 'react';
 
 import NewUnitForm from '@cdo/apps/lib/levelbuilder/unit-editor/NewUnitForm';
 
-
-
 describe('NewUnitFormTest', () => {
   let defaultProps;
   beforeEach(() => {
@@ -97,11 +95,15 @@ describe('NewUnitFormTest', () => {
     fields = wrapper.find('NewCourseFields');
     expect(fields.find('.isVersionedSelector').length).toBe(1);
     expect(fields.find('CourseTypeEditor').length).toBe(1);
-    expect(fields.find('CourseTypeEditor').props().instructorAudience).toBe('teacher');
-    expect(
-      fields.find('CourseTypeEditor').props().participantAudience
-    ).toBe('student');
-    expect(fields.find('CourseTypeEditor').props().instructionType).toBe('teacher_led');
+    expect(fields.find('CourseTypeEditor').props().instructorAudience).toBe(
+      'teacher'
+    );
+    expect(fields.find('CourseTypeEditor').props().participantAudience).toBe(
+      'student'
+    );
+    expect(fields.find('CourseTypeEditor').props().instructionType).toBe(
+      'teacher_led'
+    );
 
     fields
       .find('.familyNameSelector')
@@ -111,11 +113,15 @@ describe('NewUnitFormTest', () => {
     fields = wrapper.find('NewCourseFields');
     expect(fields.find('.isVersionedSelector').length).toBe(1);
     expect(fields.find('CourseTypeEditor').length).toBe(1);
-    expect(fields.find('CourseTypeEditor').props().instructorAudience).toBe('universal_instructor');
-    expect(
-      fields.find('CourseTypeEditor').props().participantAudience
-    ).toBe('teacher');
-    expect(fields.find('CourseTypeEditor').props().instructionType).toBe('self_paced');
+    expect(fields.find('CourseTypeEditor').props().instructorAudience).toBe(
+      'universal_instructor'
+    );
+    expect(fields.find('CourseTypeEditor').props().participantAudience).toBe(
+      'teacher'
+    );
+    expect(fields.find('CourseTypeEditor').props().instructionType).toBe(
+      'self_paced'
+    );
   });
 
   it('can create a new unit for multi unit course', () => {

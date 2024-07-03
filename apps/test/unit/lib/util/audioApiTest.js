@@ -9,8 +9,6 @@ import {
 import dropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 
-
-
 describe('Audio API', function () {
   // Check that every command, has an executor, has a droplet config entry.
   // May eventually need to allow droplet config entries to not have a matching
@@ -20,16 +18,24 @@ describe('Audio API', function () {
       if (!Object.prototype.hasOwnProperty.call(commands, commandName)) {
         continue;
       }
-      expect(executors.hasOwnProperty(commandName)).toBeTruthy();
-      expect(dropletConfig.hasOwnProperty(commandName)).toBeTruthy();
+      expect(
+        Object.prototype.hasOwnProperty.call(executors, commandName)
+      ).toBeTruthy();
+      expect(
+        Object.prototype.hasOwnProperty.call(dropletConfig, commandName)
+      ).toBeTruthy();
     }
 
     for (let commandName in executors) {
       if (!Object.prototype.hasOwnProperty.call(executors, commandName)) {
         continue;
       }
-      expect(commands.hasOwnProperty(commandName)).toBeTruthy();
-      expect(dropletConfig.hasOwnProperty(commandName)).toBeTruthy();
+      expect(
+        Object.prototype.hasOwnProperty.call(commands, commandName)
+      ).toBeTruthy();
+      expect(
+        Object.prototype.hasOwnProperty.call(dropletConfig, commandName)
+      ).toBeTruthy();
     }
 
     for (let commandName in dropletConfig) {
@@ -38,8 +44,12 @@ describe('Audio API', function () {
       }
       expect(dropletConfig[commandName].func).toBe(commandName);
       expect(dropletConfig[commandName].parent).toBe(executors);
-      expect(commands.hasOwnProperty(commandName)).toBeTruthy();
-      expect(executors.hasOwnProperty(commandName)).toBeTruthy();
+      expect(
+        Object.prototype.hasOwnProperty.call(commands, commandName)
+      ).toBeTruthy();
+      expect(
+        Object.prototype.hasOwnProperty.call(executors, commandName)
+      ).toBeTruthy();
     }
   });
 
@@ -47,10 +57,7 @@ describe('Audio API', function () {
     it('has two arguments, "url" and "loop"', function () {
       const funcName = 'playSound';
       // Check droplet config for the 2 documented params
-      expect(dropletConfig[funcName].paletteParams).toEqual([
-        'url',
-        'loop',
-      ]);
+      expect(dropletConfig[funcName].paletteParams).toEqual(['url', 'loop']);
       expect(dropletConfig[funcName].params).toHaveLength(2);
 
       // Check executors map arguments to object correctly
@@ -123,7 +130,10 @@ describe('Audio API', function () {
           createSoundPromise: jest.fn(),
           enqueueAndPlay: jest.fn(),
         };
-        jest.spyOn(AzureTextToSpeech, 'getSingleton').mockClear().mockReturnValue(azureTTSStub);
+        jest
+          .spyOn(AzureTextToSpeech, 'getSingleton')
+          .mockClear()
+          .mockReturnValue(azureTTSStub);
         setAppOptions({
           azureSpeechServiceVoices: {
             English: {female: 'en-female', locale: 'en-US'},

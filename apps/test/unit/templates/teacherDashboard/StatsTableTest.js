@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedStatsTable as StatsTable} from '@cdo/apps/templates/teacherDashboard/StatsTable';
 
-
-
 const students = [
   {id: 3, name: 'Student C', familyName: 'Lastname A'},
   {id: 2, name: 'Student B', familyName: 'Lastname B'},

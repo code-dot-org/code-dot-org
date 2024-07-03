@@ -10,8 +10,6 @@ import responsive, {
 import styleConstants from '@cdo/apps/styleConstants';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 
-
-
 const store = createStore(combineReducers({responsive}));
 store.dispatch(setResponsiveSize(ResponsiveSize.lg));
 

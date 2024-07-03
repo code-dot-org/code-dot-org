@@ -4,8 +4,6 @@ import React from 'react';
 import {KeyCodes} from '@cdo/apps/constants';
 import {InlineDropdownMenu} from '@cdo/apps/templates/InlineDropdownMenu';
 
-
-
 const clickSpy = jest.fn();
 
 const defaultProps = {

@@ -4,8 +4,6 @@ import React from 'react';
 import {UnconnectedSectionAssigner as SectionAssigner} from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import {fakeTeacherSectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/sectionAssignmentTestHelper';
 
-
-
 describe('SectionAssigner', () => {
   // const store = createStore(combineReducers())
   const unassignedSection = fakeTeacherSectionsForDropdown[0];

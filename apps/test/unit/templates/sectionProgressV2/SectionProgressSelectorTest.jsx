@@ -24,8 +24,6 @@ import SectionProgressSelector from '@cdo/apps/templates/sectionProgressV2/Secti
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-
-
 const V1_PAGE_LINK_TEXT = 'Try out new progress view (beta)';
 const V2_PAGE_LINK_TEXT = 'Switch to old progress view';
 const V1_TEST_ID = 'section-progress-v1';
@@ -61,7 +59,10 @@ describe('SectionProgressSelector', () => {
     postStub = jest.spyOn($, 'post').mockClear().mockImplementation();
     postStub.mockReturnValue(Promise.resolve());
 
-    jest.spyOn(_, 'debounce').mockClear().mockImplementation(fn => fn);
+    jest
+      .spyOn(_, 'debounce')
+      .mockClear()
+      .mockImplementation(fn => fn);
   });
 
   afterEach(() => {
@@ -148,9 +149,12 @@ describe('SectionProgressSelector', () => {
     const link = screen.getByText(V1_PAGE_LINK_TEXT);
     fireEvent.click(link);
 
-    expect(postStub).toHaveBeenCalledWith('/api/v1/users/show_progress_table_v2', {
-      show_progress_table_v2: true,
-    });
+    expect(postStub).toHaveBeenCalledWith(
+      '/api/v1/users/show_progress_table_v2',
+      {
+        show_progress_table_v2: true,
+      }
+    );
   });
 
   it('shows v1 only if user not in closed beta', () => {

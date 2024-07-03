@@ -5,8 +5,6 @@ import {CSVLink} from 'react-csv';
 import {UnconnectedFeedbackDownload as FeedbackDownload} from '@cdo/apps/templates/sectionAssessments/FeedbackDownload';
 import i18n from '@cdo/locale';
 
-
-
 const DEFAULT_PROPS = {
   sectionName: 'My Section',
   onClickDownload: () => {},
@@ -49,6 +47,8 @@ describe('FeedbackDownload', () => {
   it('passes expected file name to CSVLink', () => {
     const wrapper = setUp();
     const fileName = wrapper.find(CSVLink).props().filename;
-    expect(fileName.includes('Feedback for My Section in Script Name on')).toBe(true);
+    expect(fileName.includes('Feedback for My Section in Script Name on')).toBe(
+      true
+    );
   });
 });

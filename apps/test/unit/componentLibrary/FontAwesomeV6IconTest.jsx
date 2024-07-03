@@ -3,8 +3,6 @@ import React from 'react';
 
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
-
-
 describe('Design System - FontAwesomeV6Icon', () => {
   it('FontAwesomeV6Icon - renders with correct classNames and title', () => {
     render(

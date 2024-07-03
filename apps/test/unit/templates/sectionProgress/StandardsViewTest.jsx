@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedStandardsView as StandardsView} from '@cdo/apps/templates/sectionProgress/standards/StandardsView';
 
-
-
 describe('StandardView', () => {
   let DEFAULT_PROPS;
 

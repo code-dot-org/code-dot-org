@@ -3,8 +3,6 @@ import React from 'react';
 
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 
-
-
 describe('HeightResizer', () => {
   it('handles a drag event', () => {
     const resizeItemTopCallback = jest.fn().mockReturnValue(5);

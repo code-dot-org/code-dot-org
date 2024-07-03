@@ -3,8 +3,6 @@ import React from 'react';
 
 import ExampleEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ExampleEditor';
 
-
-
 describe('ExampleEditor', () => {
   let defaultProps, updateSpy;
 
@@ -39,7 +37,9 @@ describe('ExampleEditor', () => {
   it('displays markdown editor for description', () => {
     const wrapper = shallow(<ExampleEditor {...defaultProps} />);
     const descriptionEditor = wrapper.find('TextareaWithMarkdownPreview').at(0);
-    expect(descriptionEditor.props().markdown).toBe('this is the first example');
+    expect(descriptionEditor.props().markdown).toBe(
+      'this is the first example'
+    );
   });
 
   it('displays markdown editor for code', () => {

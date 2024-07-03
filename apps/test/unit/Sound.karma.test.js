@@ -2,8 +2,6 @@ import sinon from 'sinon';
 
 import Sound from '@cdo/apps/Sound';
 
-
-
 describe('Sound', () => {
   let sound;
 

@@ -5,8 +5,6 @@ import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import {NO_SCHOOL_SETTING} from '@cdo/apps/templates/SchoolZipSearch';
 import i18n from '@cdo/locale';
 
-
-
 describe('SchoolDataInputs', () => {
   function renderDefault(propOverrides = {}) {
     render(<SchoolDataInputs {...propOverrides} />);

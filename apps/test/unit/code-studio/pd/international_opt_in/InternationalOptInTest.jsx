@@ -3,8 +3,6 @@ import React from 'react';
 
 import InternationalOptIn from '@cdo/apps/code-studio/pd/international_opt_in/InternationalOptIn';
 
-
-
 describe('InternationalOptInTest', () => {
   const defaultProps = {
     options: {
@@ -115,7 +113,9 @@ describe('InternationalOptInTest', () => {
       const wrapper = mount(<InternationalOptIn {...defaultProps} />);
       wrapper.setState({data: {schoolCountry: 'Colombia'}});
 
-      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).toBe(true);
+      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).toBe(
+        true
+      );
       expect(wrapper.find('select#schoolCity').prop('disabled')).toBe(true);
       expect(wrapper.find('select#schoolName').prop('disabled')).toBe(true);
 
@@ -123,7 +123,9 @@ describe('InternationalOptInTest', () => {
         data: {schoolDepartment: 'department', ...wrapper.state().data},
       });
 
-      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).toBe(false);
+      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).toBe(
+        false
+      );
       expect(wrapper.find('select#schoolCity').prop('disabled')).toBe(true);
       expect(wrapper.find('select#schoolName').prop('disabled')).toBe(true);
 
@@ -131,7 +133,9 @@ describe('InternationalOptInTest', () => {
         data: {schoolMunicipality: 'municipality', ...wrapper.state().data},
       });
 
-      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).toBe(false);
+      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).toBe(
+        false
+      );
       expect(wrapper.find('select#schoolCity').prop('disabled')).toBe(false);
       expect(wrapper.find('select#schoolName').prop('disabled')).toBe(true);
 
@@ -139,7 +143,9 @@ describe('InternationalOptInTest', () => {
         data: {schoolCity: 'city', ...wrapper.state().data},
       });
 
-      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).toBe(false);
+      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).toBe(
+        false
+      );
       expect(wrapper.find('select#schoolCity').prop('disabled')).toBe(false);
       expect(wrapper.find('select#schoolName').prop('disabled')).toBe(false);
     });
@@ -188,9 +194,9 @@ describe('InternationalOptInTest', () => {
         'department 1',
         'department 2',
       ]);
-      expect(
-        wrapper.find('select#schoolMunicipality').children()
-      ).toHaveLength(2);
+      expect(wrapper.find('select#schoolMunicipality').children()).toHaveLength(
+        2
+      );
       expect(wrapper.find('select#schoolCity').children()).toHaveLength(2);
       expect(wrapper.find('select#schoolName').children()).toHaveLength(2);
 
@@ -461,21 +467,27 @@ describe('InternationalOptInTest', () => {
       const wrapper = mount(<InternationalOptIn {...defaultProps} />);
       wrapper.setState({data: {schoolCountry: 'Uzbekistan'}});
 
-      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).toBe(true);
+      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).toBe(
+        true
+      );
       expect(wrapper.find('select#schoolName').prop('disabled')).toBe(true);
 
       wrapper.setState({
         data: {schoolDepartment: 'department', ...wrapper.state().data},
       });
 
-      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).toBe(false);
+      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).toBe(
+        false
+      );
       expect(wrapper.find('select#schoolName').prop('disabled')).toBe(true);
 
       wrapper.setState({
         data: {schoolMunicipality: 'district', ...wrapper.state().data},
       });
 
-      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).toBe(false);
+      expect(wrapper.find('select#schoolMunicipality').prop('disabled')).toBe(
+        false
+      );
       expect(wrapper.find('select#schoolName').prop('disabled')).toBe(false);
     });
 
@@ -511,9 +523,9 @@ describe('InternationalOptInTest', () => {
         'department 1',
         'department 2',
       ]);
-      expect(
-        wrapper.find('select#schoolMunicipality').children()
-      ).toHaveLength(2);
+      expect(wrapper.find('select#schoolMunicipality').children()).toHaveLength(
+        2
+      );
       expect(wrapper.find('select#schoolName').children()).toHaveLength(2);
 
       // after selecting a department, district becomes available

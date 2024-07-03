@@ -1,7 +1,6 @@
 /** @file Tests for convertXmlToBlockly utility */
 import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
 
-
 import setupBlocklyGlobal from '../../util/setupBlocklyGlobal';
 
 describe('convertXmlToBlockly', function () {

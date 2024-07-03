@@ -3,8 +3,6 @@ import React from 'react';
 
 import HideToolbarHelper from '@cdo/apps/templates/HideToolbarHelper';
 
-
-
 describe('HideToolbarHelper', function () {
   it('shows the hide toolbar helper', function () {
     const component = shallow(<HideToolbarHelper />);
@@ -41,12 +39,17 @@ describe('HideToolbarHelper', function () {
 
     const instance = component.instance();
 
-    const setHideHelperCookie = jest.spyOn(instance, 'setHideHelperCookie').mockClear().mockImplementation();
+    const setHideHelperCookie = jest
+      .spyOn(instance, 'setHideHelperCookie')
+      .mockClear()
+      .mockImplementation();
 
     jest.spyOn(instance, 'isCompatibleiOS').mockClear().mockReturnValue(true);
     jest.spyOn(instance, 'isHideCookieSet').mockClear().mockReturnValue(false);
     jest.spyOn(instance, 'isLandscape').mockClear().mockReturnValue(true);
-    const isToolbarShowing = jest.spyOn(instance, 'isToolbarShowing').mockClear()
+    const isToolbarShowing = jest
+      .spyOn(instance, 'isToolbarShowing')
+      .mockClear()
       .mockReturnValue(true);
 
     instance.updateLayout();

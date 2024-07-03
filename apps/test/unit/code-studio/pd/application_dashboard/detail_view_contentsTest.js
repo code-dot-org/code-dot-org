@@ -132,7 +132,9 @@ describe('DetailViewContents', () => {
 
       const statusDropdowns = screen.getAllByDisplayValue('Accepted');
       statusDropdowns.forEach(statusDropdown => {
-        expect(within(statusDropdown).queryByText('Awaiting Admin Approval')).toBeNull();
+        expect(
+          within(statusDropdown).queryByText('Awaiting Admin Approval')
+        ).toBeNull();
       });
     });
 

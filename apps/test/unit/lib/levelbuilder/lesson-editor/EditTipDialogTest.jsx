@@ -3,8 +3,6 @@ import React from 'react';
 
 import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialog';
 
-
-
 describe('EditTipDialog', () => {
   let defaultProps, handleConfirm, handleDelete;
   beforeEach(() => {

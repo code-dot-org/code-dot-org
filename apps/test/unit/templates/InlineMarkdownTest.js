@@ -3,8 +3,6 @@ import React from 'react';
 
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 
-
-
 describe('InlineMarkdown', () => {
   it('will render basic inline markdown', () => {
     const wrapper = shallow(
@@ -69,9 +67,11 @@ describe('InlineMarkdown', () => {
     );
 
     // block html is ignored
-    expect(advancedWrapper.equals(
-      <span>Some advanced htmlnot usually supported by markdown</span>
-    )).toBe(true);
+    expect(
+      advancedWrapper.equals(
+        <span>Some advanced htmlnot usually supported by markdown</span>
+      )
+    ).toBe(true);
   });
 
   // This test was added as part of a change to prevent this component from

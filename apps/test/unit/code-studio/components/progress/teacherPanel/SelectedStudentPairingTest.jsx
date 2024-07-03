@@ -3,8 +3,6 @@ import React from 'react';
 
 import SelectedStudentPairing from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentPairing';
 
-
-
 const DEFAULT_PROPS = {
   partnerNames: ['Student 1'],
   partnerCount: 1,
@@ -77,6 +75,8 @@ describe('SelectedStudentPairing', () => {
     expect(wrapper.contains('Worked With:')).toBe(true);
     expect(wrapper.contains('Student 1 + 3')).toBe(true);
     expect(tooltip).toHaveLength(1);
-    expect(tooltip.prop('text')).toBe('Student 1, Student 2 + 2 other student(s)');
+    expect(tooltip.prop('text')).toBe(
+      'Student 1, Student 2 + 2 other student(s)'
+    );
   });
 });

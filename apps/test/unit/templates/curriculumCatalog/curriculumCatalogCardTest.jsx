@@ -19,7 +19,6 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-
 import {sections} from '../studioHomepages/fakeSectionUtils';
 
 describe('CurriculumCatalogCard', () => {
@@ -142,8 +141,8 @@ describe('CurriculumCatalogCard', () => {
     );
 
     // does not show when not hovered
-    remainingLabels.forEach(
-      label => expect(screen.queryByText(translatedLabels[label])).toBeNull()
+    remainingLabels.forEach(label =>
+      expect(screen.queryByText(translatedLabels[label])).toBeNull()
     );
 
     fireEvent.mouseOver(plusSignText);
@@ -288,8 +287,8 @@ describe('CurriculumCatalogCard', () => {
       ),
     });
 
-    sections.forEach(
-      section => expect(screen.queryByText(section.name)).toBeNull()
+    sections.forEach(section =>
+      expect(screen.queryByText(section.name)).toBeNull()
     );
     fireEvent.click(assignButton);
     sections.forEach(section => screen.getByText(section.name));

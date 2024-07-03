@@ -4,8 +4,6 @@ import React from 'react';
 
 import Link from '@cdo/apps/componentLibrary/link';
 
-
-
 describe('Design System - Link', () => {
   it('Link - renders with correct text when passed as children prop', () => {
     render(<Link href="https://studio.code.org/home">Home</Link>);

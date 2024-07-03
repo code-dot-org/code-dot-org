@@ -18,8 +18,6 @@ import {
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-
-
 const TEST_WORKSHOP = {
   id: 1,
   course: 'Test Course 1',
@@ -91,13 +89,17 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plLandingGettingStartedHeading());
     expect(screen.queryByText(i18n.plLandingStartSurvey())).toBeFalsy();
     screen.getByTestId('enrolled-workshops-loader');
-    expect(screen.queryByText(i18n.plLandingSelfPacedProgressHeading())).toBeFalsy();
+    expect(
+      screen.queryByText(i18n.plLandingSelfPacedProgressHeading())
+    ).toBeFalsy();
     screen.getByText(i18n.plLandingStaticPLMidHighHeading());
   });
 
   it('page shows a survey banner for a teacher with a pending survey', () => {
     renderDefault();
-    expect(screen.queryByText(i18n.plLandingGettingStartedHeading())).toBeFalsy();
+    expect(
+      screen.queryByText(i18n.plLandingGettingStartedHeading())
+    ).toBeFalsy();
     screen.getByText(i18n.plLandingStartSurvey());
     screen.getByTestId('enrolled-workshops-loader');
     screen.getByText(i18n.plLandingSelfPacedProgressHeading());
@@ -106,7 +108,9 @@ describe('LandingPage', () => {
 
   it('page shows a survey banner for a CSD/CSP teacher with a pending survey', () => {
     renderDefault();
-    expect(screen.queryByText(i18n.plLandingGettingStartedHeading())).toBeFalsy();
+    expect(
+      screen.queryByText(i18n.plLandingGettingStartedHeading())
+    ).toBeFalsy();
     screen.getByText(i18n.plLandingStartSurvey());
     screen.getByTestId('enrolled-workshops-loader');
     screen.getByText(i18n.plLandingSelfPacedProgressHeading());
@@ -118,7 +122,9 @@ describe('LandingPage', () => {
       lastWorkshopSurveyUrl: null,
       lastWorkshopSurveyCourse: null,
     });
-    expect(screen.queryByText(i18n.plLandingGettingStartedHeading())).toBeFalsy();
+    expect(
+      screen.queryByText(i18n.plLandingGettingStartedHeading())
+    ).toBeFalsy();
     expect(screen.queryByText(i18n.plLandingStartSurvey())).toBeFalsy();
     screen.getByTestId('enrolled-workshops-loader');
     screen.getByText(i18n.plLandingSelfPacedProgressHeading());
@@ -130,9 +136,9 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plLandingSelfPacedProgressHeading());
     expect(screen.getAllByTestId('progress-bar').length).toBe(2);
     expect(screen.getByText(i18n.selfPacedPlCompleted()));
-    expect(
-      screen.getAllByText(i18n.selfPacedPlContinueCourse()).length
-    ).toBe(2);
+    expect(screen.getAllByText(i18n.selfPacedPlContinueCourse()).length).toBe(
+      2
+    );
     expect(
       screen.getAllByText(i18n.selfPacedPlPrintCertificates()).length
     ).toBe(2);
@@ -158,7 +164,9 @@ describe('LandingPage', () => {
     expect(screen.queryByText(i18n.plLandingTabFacilitatorCenter())).toBeNull();
     expect(screen.queryByText(i18n.plLandingTabInstructorCenter())).toBeNull();
     expect(screen.queryByText(i18n.plLandingTabRPCenter())).toBeNull();
-    expect(screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())).toBeNull();
+    expect(
+      screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())
+    ).toBeNull();
   });
 
   it('page only shows Professional Learning and Facilitator Center tabs for facilitator', () => {
@@ -170,7 +178,9 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plLandingTabFacilitatorCenter());
     expect(screen.queryByText(i18n.plLandingTabInstructorCenter())).toBeNull();
     expect(screen.queryByText(i18n.plLandingTabRPCenter())).toBeNull();
-    expect(screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())).toBeNull();
+    expect(
+      screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())
+    ).toBeNull();
   });
 
   it('page only shows Professional Learning and Facilitator Center tabs for users with facilitator and (universal instructor or peer reviewer) permissions', () => {
@@ -182,7 +192,9 @@ describe('LandingPage', () => {
     screen.getByText(i18n.plLandingTabFacilitatorCenter());
     expect(screen.queryByText(i18n.plLandingTabInstructorCenter())).toBeNull();
     expect(screen.queryByText(i18n.plLandingTabRPCenter())).toBeNull();
-    expect(screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())).toBeNull();
+    expect(
+      screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())
+    ).toBeNull();
   });
 
   it('page only shows Professional Learning and Instructor Center tabs for universal instructors', () => {
@@ -194,7 +206,9 @@ describe('LandingPage', () => {
     expect(screen.queryByText(i18n.plLandingTabFacilitatorCenter())).toBeNull();
     screen.getByText(i18n.plLandingTabInstructorCenter());
     expect(screen.queryByText(i18n.plLandingTabRPCenter())).toBeNull();
-    expect(screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())).toBeNull();
+    expect(
+      screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())
+    ).toBeNull();
   });
 
   it('page only shows Professional Learning and Instructor Center tabs for peer reviewers', () => {
@@ -206,7 +220,9 @@ describe('LandingPage', () => {
     expect(screen.queryByText(i18n.plLandingTabFacilitatorCenter())).toBeNull();
     screen.getByText(i18n.plLandingTabInstructorCenter());
     expect(screen.queryByText(i18n.plLandingTabRPCenter())).toBeNull();
-    expect(screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())).toBeNull();
+    expect(
+      screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())
+    ).toBeNull();
   });
 
   it('page only shows Professional Learning and Regional Partner Center tabs for program managers', () => {
@@ -218,7 +234,9 @@ describe('LandingPage', () => {
     expect(screen.queryByText(i18n.plLandingTabFacilitatorCenter())).toBeNull();
     expect(screen.queryByText(i18n.plLandingTabInstructorCenter())).toBeNull();
     screen.getByText(i18n.plLandingTabRPCenter());
-    expect(screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())).toBeNull();
+    expect(
+      screen.queryByText(i18n.plLandingTabWorkshopOrganizerCenter())
+    ).toBeNull();
   });
 
   it('page only shows Professional Learning and Workshop Organizer Center tabs for workshop organizers', () => {

@@ -7,7 +7,6 @@ import reducer from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import SharingControlActionsHeaderCell from '@cdo/apps/templates/manageStudents/SharingControlActionsHeaderCell';
 import i18n from '@cdo/locale';
 
-
 import {allowConsoleWarnings} from '../../../util/throwOnConsole';
 
 describe('SharingControlActionsHeaderCell', () => {

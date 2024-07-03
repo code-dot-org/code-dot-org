@@ -3,7 +3,6 @@ import React from 'react';
 
 import MarkdownInstructions from '@cdo/apps/templates/instructions/MarkdownInstructions';
 
-
 import {setExternalGlobals} from '../../../util/testUtils';
 
 describe('MarkdownInstructions', function () {

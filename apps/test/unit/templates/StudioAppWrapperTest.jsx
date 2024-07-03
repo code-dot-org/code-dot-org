@@ -7,8 +7,6 @@ import RotateContainer from '@cdo/apps/templates/RotateContainer';
 import StudioAppIdleTimer from '@cdo/apps/templates/StudioAppIdleTimer';
 import {UnconnectedStudioAppWrapper as StudioAppWrapper} from '@cdo/apps/templates/StudioAppWrapper';
 
-
-
 const DEFAULT_PROPS = {
   assetUrl: () => '/',
   isEmbedView: false,

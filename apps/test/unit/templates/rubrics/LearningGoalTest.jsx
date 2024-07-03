@@ -6,8 +6,6 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import LearningGoal from '@cdo/apps/templates/rubrics/LearningGoal';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 
-
-
 describe('LearningGoal', () => {
   const studentLevelInfo = {name: 'Grace Hopper', timeSpent: 706};
 
@@ -23,7 +21,9 @@ describe('LearningGoal', () => {
       />
     );
     expect(wrapper.find('EvidenceLevels')).toHaveLength(1);
-    expect(wrapper.find('EvidenceLevels').props().evidenceLevels).toEqual([{understanding: 1, teacherDescription: 'test'}]);
+    expect(wrapper.find('EvidenceLevels').props().evidenceLevels).toEqual([
+      {understanding: 1, teacherDescription: 'test'},
+    ]);
     expect(wrapper.find('SafeMarkdown')).toHaveLength(0);
   });
 
@@ -48,7 +48,9 @@ describe('LearningGoal', () => {
       />
     );
     expect(wrapper.find('AiAssessment')).toHaveLength(1);
-    expect(wrapper.find('AiAssessment').props().studentName).toBe(studentLevelInfo.name);
+    expect(wrapper.find('AiAssessment').props().studentName).toBe(
+      studentLevelInfo.name
+    );
     expect(wrapper.find('AiAssessment').props().aiConfidence).toBe(50);
     expect(wrapper.find('AiAssessment').props().aiUnderstandingLevel).toBe(3);
     expect(wrapper.find('AiAssessment').props().isAiAssessed).toBe(true);
@@ -181,19 +183,25 @@ describe('LearningGoal', () => {
       />
     );
     wrapper.find('summary').simulate('click');
-    expect(sendEventSpy).toHaveBeenCalledWith(EVENTS.TA_RUBRIC_LEARNING_GOAL_EXPANDED_EVENT, {
-      unitName: 'test-2023',
-      levelName: 'test-level',
-      learningGoalKey: 'key',
-      learningGoal: 'Testing',
-    });
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.TA_RUBRIC_LEARNING_GOAL_EXPANDED_EVENT,
+      {
+        unitName: 'test-2023',
+        levelName: 'test-level',
+        learningGoalKey: 'key',
+        learningGoal: 'Testing',
+      }
+    );
     wrapper.find('summary').simulate('click');
-    expect(sendEventSpy).toHaveBeenCalledWith(EVENTS.TA_RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT, {
-      unitName: 'test-2023',
-      levelName: 'test-level',
-      learningGoalKey: 'key',
-      learningGoal: 'Testing',
-    });
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.TA_RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT,
+      {
+        unitName: 'test-2023',
+        levelName: 'test-level',
+        learningGoalKey: 'key',
+        learningGoal: 'Testing',
+      }
+    );
     sendEventSpy.mockRestore();
   });
 
@@ -276,7 +284,9 @@ describe('LearningGoal', () => {
         }}
       />
     );
-    expect(wrapper.find('BodyThreeText').props().children).toBe('Limited Evidence');
+    expect(wrapper.find('BodyThreeText').props().children).toBe(
+      'Limited Evidence'
+    );
   });
 
   it('shows No Evidence understanding in header if submittedEvaluation contains understand', () => {
@@ -310,7 +320,11 @@ describe('LearningGoal', () => {
     };
     const wrapper = shallow(<LearningGoal {...props} />);
     expect(wrapper.find('EvidenceLevels').props().isStudent).toBe(true);
-    expect(wrapper.find('EvidenceLevels').props().submittedEvaluation).toBe(props.submittedEvaluation);
-    expect(wrapper.find('EvidenceLevels').props().evidenceLevels).toBe(props.learningGoal.evidenceLevels);
+    expect(wrapper.find('EvidenceLevels').props().submittedEvaluation).toBe(
+      props.submittedEvaluation
+    );
+    expect(wrapper.find('EvidenceLevels').props().evidenceLevels).toBe(
+      props.learningGoal.evidenceLevels
+    );
   });
 });

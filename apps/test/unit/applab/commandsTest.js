@@ -3,8 +3,6 @@ import $ from 'jquery';
 import {rgb, setSelectionRange, openUrl} from '@cdo/apps/applab/commands';
 import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 
-
-
 describe('rgb command', () => {
   it('returns an rgba string with no alpha', function () {
     const opts = {r: 255, g: 0, b: 75};
@@ -83,8 +81,10 @@ describe('setSelectionRange', () => {
       selectionStart: 0,
       selectionEnd: 0,
     });
-    expect(errorHandler.outputWarning).toHaveBeenCalledWith('The setSelectionRange() elementId parameter refers to ' +
-      'an id ("fakeElementId") which does not exist.');
+    expect(errorHandler.outputWarning).toHaveBeenCalledWith(
+      'The setSelectionRange() elementId parameter refers to ' +
+        'an id ("fakeElementId") which does not exist.'
+    );
   });
 
   it('warns if start is not a number', () => {
@@ -93,7 +93,9 @@ describe('setSelectionRange', () => {
       selectionStart: 'string',
       selectionEnd: 0,
     });
-    expect(errorHandler.outputWarning).toHaveBeenCalledWith('setSelectionRange() start parameter value (string) is not a number.');
+    expect(errorHandler.outputWarning).toHaveBeenCalledWith(
+      'setSelectionRange() start parameter value (string) is not a number.'
+    );
   });
 
   it('warns if end is not a number', () => {
@@ -102,7 +104,9 @@ describe('setSelectionRange', () => {
       selectionStart: 0,
       selectionEnd: 'string',
     });
-    expect(errorHandler.outputWarning).toHaveBeenCalledWith('setSelectionRange() end parameter value (string) is not a number.');
+    expect(errorHandler.outputWarning).toHaveBeenCalledWith(
+      'setSelectionRange() end parameter value (string) is not a number.'
+    );
   });
 
   it('warns if direction is not a string', () => {
@@ -127,15 +131,18 @@ describe('openUrl', () => {
     };
     injectErrorHandler(errorHandler);
     jest.spyOn(window, 'open').mockClear();
-    jest.spyOn($, 'ajax').mockClear().mockImplementation(() => {
-      return {
-        success() {
-          return {
-            fail() {},
-          };
-        },
-      };
-    });
+    jest
+      .spyOn($, 'ajax')
+      .mockClear()
+      .mockImplementation(() => {
+        return {
+          success() {
+            return {
+              fail() {},
+            };
+          },
+        };
+      });
   });
 
   afterEach(() => {
@@ -147,7 +154,9 @@ describe('openUrl', () => {
   it('fails if given a non-string url', () => {
     openUrl({url: 42});
 
-    expect(errorHandler.outputWarning).toHaveBeenCalledWith('openUrl() url parameter value (42) is not a string.');
+    expect(errorHandler.outputWarning).toHaveBeenCalledWith(
+      'openUrl() url parameter value (42) is not a string.'
+    );
   });
 
   it('opens new tab for "studio.code.org" and "code.org" links', () => {

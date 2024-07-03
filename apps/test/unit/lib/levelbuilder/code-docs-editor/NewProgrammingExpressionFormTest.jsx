@@ -3,8 +3,6 @@ import React from 'react';
 
 import NewProgrammingExpressionForm from '@cdo/apps/lib/levelbuilder/code-docs-editor/NewProgrammingExpressionForm';
 
-
-
 describe('NewProgrammingExpressionForm', () => {
   it('renders form', () => {
     const wrapper = shallow(

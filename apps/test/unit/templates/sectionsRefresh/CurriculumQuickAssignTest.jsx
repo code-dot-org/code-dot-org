@@ -4,8 +4,6 @@ import React from 'react';
 import CurriculumQuickAssign from '@cdo/apps/templates/sectionsRefresh/CurriculumQuickAssign';
 import i18n from '@cdo/locale';
 
-
-
 window.fetch = jest.fn().mockResolvedValue({json: jest.fn()});
 
 describe('CurriculumQuickAssign', () => {
@@ -18,10 +16,12 @@ describe('CurriculumQuickAssign', () => {
     expect(wrapper.find('p').length).toBe(1);
     // We haven't specified participantType = student, so all 5 buttons appear
     expect(wrapper.find('Button').length).toBe(5);
-    expect(wrapper.find('Button').at(0).props().text).toBe(i18n.courseBlocksGradeBandsElementary());
-    expect(
-      wrapper.find('Button[id="uitest-high-button"]').props().text
-    ).toBe(i18n.courseBlocksGradeBandsHigh());
+    expect(wrapper.find('Button').at(0).props().text).toBe(
+      i18n.courseBlocksGradeBandsElementary()
+    );
+    expect(wrapper.find('Button[id="uitest-high-button"]').props().text).toBe(
+      i18n.courseBlocksGradeBandsHigh()
+    );
     expect(wrapper.find('input').length).toBe(1);
   });
 

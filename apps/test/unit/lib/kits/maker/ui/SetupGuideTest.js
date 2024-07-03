@@ -5,8 +5,6 @@ import React from 'react';
 import applabI18n from '@cdo/applab/locale';
 import SetupGuide from '@cdo/apps/lib/kits/maker/ui/SetupGuide';
 
-
-
 describe('MakerSetupGuide', () => {
   describe('General description displayed correctly', () => {
     it('uses localized general description', () => {

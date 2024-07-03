@@ -4,14 +4,16 @@ import React from 'react';
 import * as progressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import {UnconnectedStandardsReport as StandardsReport} from '@cdo/apps/templates/sectionProgress/standards/StandardsReport';
 
-
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 describe('StandardsReport', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
-    jest.spyOn(progressLoader, 'loadUnitProgress').mockClear().mockImplementation();
+    jest
+      .spyOn(progressLoader, 'loadUnitProgress')
+      .mockClear()
+      .mockImplementation();
     DEFAULT_PROPS = {
       scriptId: 2,
       teacherName: 'Awesome Teacher',

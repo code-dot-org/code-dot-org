@@ -4,8 +4,6 @@ import React from 'react';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import SingleSectionSetUp from '@cdo/apps/templates/sectionsRefresh/SingleSectionSetUp';
 
-
-
 describe('SingleSectionSetUp', () => {
   it('calls updateSection when name is updated', () => {
     const updateSectionSpy = jest.fn();

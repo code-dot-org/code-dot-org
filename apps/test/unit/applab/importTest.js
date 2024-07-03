@@ -16,7 +16,6 @@ import pageConstantsReducer, {
   setPageConstants,
 } from '@cdo/apps/redux/pageConstants';
 
-
 import {allowConsoleErrors} from '../../util/testUtils';
 
 $.fn.disableSelection = jest.fn();
@@ -84,14 +83,14 @@ describe('The applab/import module', () => {
       });
 
       it('should list all of the screens as importable', () => {
-        importable.screens.forEach(
-          screen => expect(screen.canBeImported).toBe(true)
+        importable.screens.forEach(screen =>
+          expect(screen.canBeImported).toBe(true)
         );
       });
 
       it('should list all of the screens as not replacing existing screens', () => {
-        importable.screens.forEach(
-          screen => expect(screen.willReplace).toBe(false)
+        importable.screens.forEach(screen =>
+          expect(screen.willReplace).toBe(false)
         );
       });
 
@@ -186,9 +185,7 @@ describe('The applab/import module', () => {
       });
 
       it('should list the assets to replace', () => {
-        expect(importable.screens[0].assetsToReplace).toEqual([
-          'asset1.png',
-        ]);
+        expect(importable.screens[0].assetsToReplace).toEqual(['asset1.png']);
       });
 
       it('should list the assets to import without replacing', () => {
@@ -263,10 +260,7 @@ describe('The applab/import module', () => {
       importScreensAndAssets(project.id, [project.screens[0]], []);
       expect(designMode.getAllScreenIds()).toEqual(['screen1']);
       importScreensAndAssets(project.id, [project.screens[1]], []);
-      expect(designMode.getAllScreenIds()).toEqual([
-        'screen1',
-        'screen2',
-      ]);
+      expect(designMode.getAllScreenIds()).toEqual(['screen1', 'screen2']);
     });
 
     it('will replace screens with the same screen id', async () => {
@@ -289,7 +283,9 @@ describe('The applab/import module', () => {
       await importScreensAndAssets(project.id, [project.screens[0]], []);
       expect(designMode.getAllScreenIds()).toEqual(['screen1']);
       expect(elementUtils.getPrefixedElementById('input1')).toBeNull();
-      expect(elementUtils.getPrefixedElementById('importedInput')).not.toBeNull();
+      expect(
+        elementUtils.getPrefixedElementById('importedInput')
+      ).not.toBeNull();
     });
 
     it('can run through the same import twice without getting conflicts', () => {
@@ -319,14 +315,17 @@ describe('The applab/import module', () => {
         [project.screens[0], project.screens[1]],
         []
       );
-      expect(designMode.getAllScreenIds()).toEqual([
-        'screen1',
-        'screen2',
-      ]);
+      expect(designMode.getAllScreenIds()).toEqual(['screen1', 'screen2']);
       expect(elementUtils.getPrefixedElementById('input1')).toBeNull();
-      expect(elementUtils.getPrefixedElementById('importedInput')).not.toBeNull();
-      expect(elementUtils.getPrefixedElementById('importedInput2')).not.toBeNull();
-      expect(elementUtils.getPrefixedElementById('importedInput3')).not.toBeNull();
+      expect(
+        elementUtils.getPrefixedElementById('importedInput')
+      ).not.toBeNull();
+      expect(
+        elementUtils.getPrefixedElementById('importedInput2')
+      ).not.toBeNull();
+      expect(
+        elementUtils.getPrefixedElementById('importedInput3')
+      ).not.toBeNull();
 
       project = getImportableProject(
         getProjectWithHTML(`
@@ -391,12 +390,11 @@ describe('The applab/import module', () => {
       it('will import the specified screens', () => {
         var [, , success] = assetsApi.copyAssets.mock.lastCall;
         success();
-        expect(designMode.getAllScreenIds()).toEqual([
-          'screen1',
-          'screen2',
-        ]);
+        expect(designMode.getAllScreenIds()).toEqual(['screen1', 'screen2']);
         expect(elementUtils.getPrefixedElementById('input1')).toBeNull();
-        expect(elementUtils.getPrefixedElementById('importedInput')).not.toBeNull();
+        expect(
+          elementUtils.getPrefixedElementById('importedInput')
+        ).not.toBeNull();
         expect(elementUtils.getPrefixedElementById('img1')).not.toBeNull();
       });
 
@@ -405,12 +403,14 @@ describe('The applab/import module', () => {
         var [projectId, allAssetsToReplace] =
           assetsApi.copyAssets.mock.calls[0];
         expect(projectId).toBe(project.id);
-        expect(allAssetsToReplace).toEqual(expect.arrayContaining([
-          'asset1.png',
-          'asset2.png',
-          'asset3.png',
-          'asset4.png',
-        ]));
+        expect(allAssetsToReplace).toEqual(
+          expect.arrayContaining([
+            'asset1.png',
+            'asset2.png',
+            'asset3.png',
+            'asset4.png',
+          ])
+        );
       });
 
       it('will call resolve if the operation was successful', () => {

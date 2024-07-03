@@ -3,8 +3,6 @@ import Immutable from 'immutable';
 import reducer, * as watchedExpressions from '@cdo/apps/redux/watchedExpressions';
 import {createUuid} from '@cdo/apps/utils';
 
-
-
 describe('watchedExpressions', function () {
   describe('reducer', function () {
     var initialState = Immutable.List();

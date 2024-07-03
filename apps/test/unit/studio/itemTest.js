@@ -16,8 +16,6 @@ import Studio from '@cdo/apps/studio/studio';
 import Item from '@cdo/apps/studio/Item';
 import Sprite from '@cdo/apps/studio/Sprite';
 
-
-
 describe('item', () => {
   beforeAll(() => {
     Studio.trackedBehavior = {};
@@ -48,7 +46,10 @@ describe('item', () => {
         // the destination-setting logic uses _.shuffle to semi-randomize the
         // set of possible destinations before sorting them by score. We would
         // instead like to make it deterministic.
-        shuffleSpy = jest.spyOn(_, 'shuffle').mockClear().mockImplementation(ar => ar);
+        shuffleSpy = jest
+          .spyOn(_, 'shuffle')
+          .mockClear()
+          .mockImplementation(ar => ar);
       });
 
       afterEach(() => {

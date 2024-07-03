@@ -1,7 +1,5 @@
 import library from '@cdo/apps/applab/designElements/library';
 
-
-
 function getRect(photoSelectComponent) {
   return {
     left: parseInt(photoSelectComponent.style.left, 10),

@@ -3,8 +3,6 @@ import React from 'react';
 
 import SummaryTeacherInstructions from '@cdo/apps/templates/levelSummary/SummaryTeacherInstructions';
 
-
-
 describe('SummaryTeacherInstructions', () => {
   it('renders teacher markdown if defined', () => {
     const wrapper = mount(

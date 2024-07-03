@@ -3,8 +3,6 @@ import React from 'react';
 
 import RelatedLessons from '@cdo/apps/lib/levelbuilder/lesson-editor/RelatedLessons';
 
-
-
 describe('RelatedLessons', () => {
   let defaultProps;
   beforeEach(() => {
@@ -40,7 +38,9 @@ describe('RelatedLessons', () => {
   it('renders default props', () => {
     const wrapper = shallow(<RelatedLessons {...defaultProps} />);
     expect(wrapper.text()).toContain('Update Similar Lessons');
-    expect(wrapper.text()).toContain('The following lessons are similar to this one.');
+    expect(wrapper.text()).toContain(
+      'The following lessons are similar to this one.'
+    );
 
     const link1 = wrapper.find('a').at(0);
     expect(link1.props().href).toBe('/lessons/123/edit');

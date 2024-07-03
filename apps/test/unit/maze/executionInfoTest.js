@@ -1,7 +1,5 @@
 import ExecutionInfo from '@cdo/apps/maze/executionInfo';
 
-
-
 describe('ExecutionInfo tests', function () {
   it('single action queue/dequeue', function () {
     var executionInfo = new ExecutionInfo();

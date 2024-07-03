@@ -4,7 +4,6 @@ import React from 'react';
 
 import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
 
-
 import {sampleActivities} from '../../../lib/levelbuilder/lesson-editor/activitiesTestData';
 
 describe('Activity', () => {

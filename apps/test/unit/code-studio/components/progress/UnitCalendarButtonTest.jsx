@@ -4,8 +4,6 @@ import React from 'react';
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
 import UnitCalendarDialog from '@cdo/apps/code-studio/components/progress/UnitCalendarDialog';
 
-
-
 import {testLessons} from './unitCalendarTestData';
 
 describe('UnitCalendarButton', () => {

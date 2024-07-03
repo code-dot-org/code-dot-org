@@ -7,7 +7,6 @@ import {
   lessonCompletedByStandard,
 } from '../../../../src/templates/sectionProgress/standards/standardsTestHelpers';
 
-
 describe('StandardsProgressTable', () => {
   it('renders a description cell for each standard', () => {
     const wrapper = mount(
@@ -16,6 +15,8 @@ describe('StandardsProgressTable', () => {
         lessonsByStandard={lessonCompletedByStandard}
       />
     );
-    expect(wrapper.find('StandardDescriptionCell')).toHaveLength(standardsData.length);
+    expect(wrapper.find('StandardDescriptionCell')).toHaveLength(
+      standardsData.length
+    );
   });
 });

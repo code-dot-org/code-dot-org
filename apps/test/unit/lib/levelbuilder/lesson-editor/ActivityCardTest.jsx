@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedActivityCard as ActivityCard} from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCard';
 
-
-
 import {
   sampleActivities,
   sampleActivityForLessonWithoutLessonPlan,
@@ -158,7 +156,11 @@ describe('ActivityCard', () => {
 
     const titleInput = wrapper.find('input').at(0);
     titleInput.simulate('change', {target: {value: 'New Title'}});
-    expect(updateActivityField).toHaveBeenCalledWith(1, 'displayName', 'New Title');
+    expect(updateActivityField).toHaveBeenCalledWith(
+      1,
+      'displayName',
+      'New Title'
+    );
   });
 
   it('edit activity duration', () => {

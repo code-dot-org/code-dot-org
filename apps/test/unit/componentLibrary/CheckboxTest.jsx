@@ -4,7 +4,6 @@ import React from 'react';
 
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 
-
 describe('Design System - Checkbox', () => {
   it('Checkbox - renders with correct label', () => {
     render(

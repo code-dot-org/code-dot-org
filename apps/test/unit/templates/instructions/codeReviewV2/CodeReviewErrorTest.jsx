@@ -5,8 +5,6 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
 import javalabMsg from '@cdo/javalab/locale';
 
-
-
 const DEFAULT_PROPS = {
   messageTitle: null,
   messageText: null,

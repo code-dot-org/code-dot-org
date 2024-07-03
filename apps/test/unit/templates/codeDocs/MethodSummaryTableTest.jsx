@@ -3,8 +3,6 @@ import React from 'react';
 
 import MethodSummaryTable from '@cdo/apps/templates/codeDocs/MethodSummaryTable';
 
-
-
 describe('MethodSummaryTable', () => {
   let defaultMethods;
 
@@ -33,12 +31,12 @@ describe('MethodSummaryTable', () => {
   it('show the markdown content for each method', () => {
     const wrapper = shallow(<MethodSummaryTable methods={defaultMethods} />);
     expect(wrapper.find('EnhancedSafeMarkdown').length).toBe(2);
-    expect(
-      wrapper.find('EnhancedSafeMarkdown').at(0).props().markdown
-    ).toBe('A description about what this method does');
-    expect(
-      wrapper.find('EnhancedSafeMarkdown').at(1).props().markdown
-    ).toBe('A description about what this method and parameter does');
+    expect(wrapper.find('EnhancedSafeMarkdown').at(0).props().markdown).toBe(
+      'A description about what this method does'
+    );
+    expect(wrapper.find('EnhancedSafeMarkdown').at(1).props().markdown).toBe(
+      'A description about what this method and parameter does'
+    );
   });
 
   it('shows a link to the method', () => {

@@ -3,8 +3,6 @@ import {
   processBlockAndChildren,
 } from '@cdo/apps/blockly/addons/cdoXml';
 
-
-
 const parser = new DOMParser();
 
 describe('addMutationToMiniToolboxBlocks', function () {

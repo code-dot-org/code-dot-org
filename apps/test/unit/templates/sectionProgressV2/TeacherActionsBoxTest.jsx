@@ -3,8 +3,6 @@ import React from 'react';
 
 import TeacherActionsBox from '@cdo/apps/templates/sectionProgressV2/TeacherActionsBox';
 
-
-
 describe('TeacherActionsBox Component', () => {
   it('renders all options', () => {
     render(<TeacherActionsBox />);

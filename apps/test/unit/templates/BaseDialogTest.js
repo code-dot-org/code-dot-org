@@ -4,8 +4,6 @@ import React from 'react';
 
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
-
-
 describe('BaseDialog', function () {
   describe('fullWidth option', function () {
     it('has only the modal class (no explicit width) by default', function () {

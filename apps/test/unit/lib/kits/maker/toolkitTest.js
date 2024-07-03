@@ -13,8 +13,6 @@ import {
   getStore,
 } from '@cdo/apps/redux';
 
-
-
 describe('maker/toolkit.js', () => {
   it('exports dropletConfig as-is', () => {
     expect(maker.dropletConfig).toBe(dropletConfig);

@@ -3,8 +3,6 @@ import React from 'react';
 
 import NavigationSidebar from '@cdo/apps/lab2/levelEditors/NavigationSidebar';
 
-
-
 describe('Navigation Sidebar', () => {
   let textarea;
 

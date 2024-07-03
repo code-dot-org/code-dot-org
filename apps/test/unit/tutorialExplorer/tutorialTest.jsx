@@ -5,8 +5,6 @@ import LazyLoad from 'react-lazy-load';
 import Image from '@cdo/apps/tutorialExplorer/image';
 import Tutorial from '@cdo/apps/tutorialExplorer/tutorial';
 
-
-
 const CALLBACK = () => {};
 const FAKE_TUTORIAL = {
   name: 'How to train your dragon',

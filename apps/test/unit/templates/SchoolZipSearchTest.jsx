@@ -3,8 +3,6 @@ import React from 'react';
 
 import SchoolZipSearch from '@cdo/apps/templates/SchoolZipSearch';
 
-
-
 const DEFAULT_PROPS = {
   fieldNames: {
     ncesSchoolId: 'ncesSchoolId',

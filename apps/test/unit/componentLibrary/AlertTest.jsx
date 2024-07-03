@@ -4,8 +4,6 @@ import React from 'react';
 
 import Alert from '@cdo/apps/componentLibrary/alert';
 
-
-
 describe('Design System - Alert', () => {
   it('Alert - renders with correct text', () => {
     render(<Alert text="Alert text" />);
@@ -24,16 +22,24 @@ describe('Design System - Alert', () => {
 
   it('Alert - renders default icon for specific types', () => {
     const {rerender} = render(<Alert text="Success Alert" type="success" />);
-    expect(screen.getByTestId('font-awesome-v6-icon').className).toContain('fa-check-circle');
+    expect(screen.getByTestId('font-awesome-v6-icon').className).toContain(
+      'fa-check-circle'
+    );
 
     rerender(<Alert text="Danger Alert" type="danger" />);
-    expect(screen.getByTestId('font-awesome-v6-icon').className).toContain('fa-circle-xmark');
+    expect(screen.getByTestId('font-awesome-v6-icon').className).toContain(
+      'fa-circle-xmark'
+    );
 
     rerender(<Alert text="Warning Alert" type="warning" />);
-    expect(screen.getByTestId('font-awesome-v6-icon').className).toContain('fa-exclamation-circle');
+    expect(screen.getByTestId('font-awesome-v6-icon').className).toContain(
+      'fa-exclamation-circle'
+    );
 
     rerender(<Alert text="Info Alert" type="info" />);
-    expect(screen.getByTestId('font-awesome-v6-icon').className).toContain('fa-circle-info');
+    expect(screen.getByTestId('font-awesome-v6-icon').className).toContain(
+      'fa-circle-info'
+    );
   });
 
   it('Alert - renders link correctly', () => {

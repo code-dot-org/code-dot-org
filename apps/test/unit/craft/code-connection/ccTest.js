@@ -1,8 +1,6 @@
 import {executeUserCode} from '@cdo/apps/craft/code-connection/craft';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
-
-
 describe('Code Connection extension', () => {
   beforeEach(() => {
     jest.spyOn(studioApp(), 'highlight').mockClear().mockImplementation();
@@ -33,7 +31,9 @@ describe('Code Connection extension', () => {
   it('give block to verify item type', done => {
     const mockClient = {
       async_command: command => {
-        expect(command).toEqual('give?player=steve&itemName=stone&data=1&amount=2');
+        expect(command).toEqual(
+          'give?player=steve&itemName=stone&data=1&amount=2'
+        );
         done();
       },
     };

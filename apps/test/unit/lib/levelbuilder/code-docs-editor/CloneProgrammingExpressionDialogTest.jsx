@@ -5,8 +5,6 @@ import CloneProgrammingExpressionDialog, {
   CloneFormDialog,
 } from '@cdo/apps/lib/levelbuilder/code-docs-editor/CloneProgrammingExpressionDialog';
 
-
-
 describe('CloneFormDialog', () => {
   let defaultProps, onCloneSuccessSpy;
 
@@ -108,7 +106,10 @@ describe('CloneFormDialog', () => {
       .simulate('change', {target: {value: 'uicontrols'}});
 
     const returnData = {editUrl: '/programming_expressions/100/edit'};
-    const fetchStub = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
+    const fetchStub = jest
+      .spyOn(window, 'fetch')
+      .mockClear()
+      .mockImplementation();
     fetchStub.mockImplementation((...args) => {
       if (args[0] === '/programming_expressions/7/clone') {
         return Promise.resolve({ok: true, json: () => returnData});
@@ -173,7 +174,10 @@ describe('CloneProgrammingExpressionDialog integration test', () => {
       .at(0)
       .simulate('change', {target: {value: 'applab'}});
     const returnData = {editUrl: '/programming_expressions/100/edit'};
-    const fetchStub = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
+    const fetchStub = jest
+      .spyOn(window, 'fetch')
+      .mockClear()
+      .mockImplementation();
     fetchStub.mockImplementation((...args) => {
       if (args[0] === '/programming_expressions/7/clone') {
         return Promise.resolve({ok: true, json: () => returnData});
@@ -183,7 +187,9 @@ describe('CloneProgrammingExpressionDialog integration test', () => {
     return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
       wrapper.update();
       expect(wrapper.find('FooterButton').length).toBe(1);
-      expect(wrapper.find('TextLink').props().href).toBe('/programming_expressions/100/edit');
+      expect(wrapper.find('TextLink').props().href).toBe(
+        '/programming_expressions/100/edit'
+      );
       fetchStub.mockRestore();
     });
   });

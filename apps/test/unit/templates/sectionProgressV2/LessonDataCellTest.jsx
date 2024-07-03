@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedLessonDataCell} from '@cdo/apps/templates/sectionProgressV2/LessonDataCell';
 
-
-
 const DEFAULT_PROPS = {
   locked: false,
   sectionId: 1,

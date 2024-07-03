@@ -3,8 +3,6 @@ import React from 'react';
 
 import EvidenceDescriptionsRow from '@cdo/apps/lib/levelbuilder/rubrics/EvidenceDescriptionsRow.jsx';
 
-
-
 describe('EvidenceDescriptionsRow', () => {
   const evidenceLevelData = {
     learningGoalId: 'learningGoal-1',

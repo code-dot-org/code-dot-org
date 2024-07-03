@@ -3,8 +3,6 @@ import React from 'react';
 
 import CachedElement, {unitTestExports} from '@cdo/apps/util/CachedElement';
 
-
-
 const cache = unitTestExports.elementsHtmlCache;
 const defaultType = 'div';
 const defaultContent = '1';
@@ -61,12 +59,16 @@ describe('CachedElement', () => {
 
     // verify that the nested `CachedElement` isn't in the tree
     expect(wrapper.find(CachedElement)).toHaveLength(1);
-    expect(wrapper.find(CachedElement).childAt(0).find(CachedElement)).toHaveLength(0);
+    expect(
+      wrapper.find(CachedElement).childAt(0).find(CachedElement)
+    ).toHaveLength(0);
 
     expect(getCachedElement()).toBe(defaultHtml);
     expect(getCachedElement('CachedElement')).toBe(nestedHtml);
     expect(wrapper.html()).toContain(nestedHtml);
-    expect(wrapper.childAt(0).props().dangerouslySetInnerHTML.__html).toBe(nestedHtml);
+    expect(wrapper.childAt(0).props().dangerouslySetInnerHTML.__html).toBe(
+      nestedHtml
+    );
   });
 
   it('only caches one element when rendering multiple with same key', () => {
@@ -85,7 +87,9 @@ describe('CachedElement', () => {
 
     const cachedHtml = getCachedElement();
     cached.forEach(node => {
-      expect(node.childAt(0).props().dangerouslySetInnerHTML.__html).toBe(cachedHtml);
+      expect(node.childAt(0).props().dangerouslySetInnerHTML.__html).toBe(
+        cachedHtml
+      );
     });
   });
 
@@ -104,7 +108,9 @@ describe('CachedElement', () => {
     expect(cached).toHaveLength(3);
 
     cached.forEach(node => {
-      expect(node.childAt(0).props().dangerouslySetInnerHTML.__html).toBe(defaultHtml);
+      expect(node.childAt(0).props().dangerouslySetInnerHTML.__html).toBe(
+        defaultHtml
+      );
     });
   });
 

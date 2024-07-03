@@ -12,8 +12,6 @@ import {
 } from '@cdo/apps/templates/progress/BubbleFactory';
 import color from '@cdo/apps/util/color';
 
-
-
 describe('BubbleBadge', () => {
   it('renders an AssessmentBadge for BadgeType.assessment', () => {
     const wrapper = shallow(

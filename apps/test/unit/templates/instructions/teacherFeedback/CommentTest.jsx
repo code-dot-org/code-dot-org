@@ -3,8 +3,6 @@ import React from 'react';
 
 import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
 
-
-
 const DEFAULT_PROPS = {
   isEditable: true,
   onCommentChange: () => {},

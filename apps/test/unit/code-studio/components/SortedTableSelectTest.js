@@ -3,8 +3,6 @@ import React from 'react';
 
 import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelect';
 
-
-
 const ROW_DATA = [
   {id: 1, name: 'itemb'},
   {id: 3, name: 'itemc'},

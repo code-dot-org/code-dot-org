@@ -5,8 +5,6 @@ import StyledCodeBlock, {
   buildProgrammingExpressionMarkdown,
 } from '@cdo/apps/templates/lessonOverview/StyledCodeBlock';
 
-
-
 describe('StyledCodeBlock', () => {
   describe('buildProgrammingExpressionMarkdown', () => {
     it('builds a full visual code block markdown expression', () => {
@@ -40,7 +38,9 @@ describe('StyledCodeBlock', () => {
       />
     );
 
-    expect(wrapper.find('SafeMarkdown').props().markdown).toBe('[`playSound`(#000000)](/docs/applab/playSound)');
+    expect(wrapper.find('SafeMarkdown').props().markdown).toBe(
+      '[`playSound`(#000000)](/docs/applab/playSound)'
+    );
   });
 
   it('build regular code markdown when no color supplied', () => {
@@ -54,7 +54,9 @@ describe('StyledCodeBlock', () => {
       />
     );
 
-    expect(wrapper.find('SafeMarkdown').props().markdown).toBe('[`playSound`](/docs/applab/playSound)');
+    expect(wrapper.find('SafeMarkdown').props().markdown).toBe(
+      '[`playSound`](/docs/applab/playSound)'
+    );
   });
 
   it('embeds block if blockName is provided', () => {

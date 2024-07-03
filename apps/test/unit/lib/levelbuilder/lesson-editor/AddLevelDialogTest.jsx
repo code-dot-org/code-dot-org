@@ -3,8 +3,6 @@ import React from 'react';
 
 import AddLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialog';
 
-
-
 import {sampleActivities} from './activitiesTestData';
 
 describe('AddLevelDialog', () => {

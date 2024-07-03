@@ -1,7 +1,5 @@
 import spritelabInputList, * as spritelabInput from '@cdo/apps/p5lab/redux/spritelabInput';
 
-
-
 const PromptType = spritelabInput.PromptType;
 
 describe('spritelabInput', () => {

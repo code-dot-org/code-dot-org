@@ -1,8 +1,6 @@
 import {convertBlocksXml} from '@cdo/apps/craft/code-connection/utils';
 import {parseElement} from '@cdo/apps/xml';
 
-
-
 const normalizeWhitespace = function (xmlString) {
   return xmlString.replace(/\n\s*/g, '\n');
 };
@@ -43,7 +41,9 @@ describe('convertBlocksXml', () => {
     ];
 
     sources.forEach((source, i) => {
-      expect(normalizeWhitespace(convertBlocksXml(source))).toBe(normalizeWhitespace(expected[i]));
+      expect(normalizeWhitespace(convertBlocksXml(source))).toBe(
+        normalizeWhitespace(expected[i])
+      );
     });
   });
 

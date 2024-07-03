@@ -17,8 +17,6 @@ import {
   shouldRunWithVirtualBoard,
 } from '@cdo/apps/lib/kits/maker/redux';
 
-
-
 describe('maker/redux.js', () => {
   let store;
 

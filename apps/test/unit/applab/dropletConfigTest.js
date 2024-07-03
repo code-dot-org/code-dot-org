@@ -1,8 +1,6 @@
 /** @file Test applab droplet config behavior */
 import {blocks} from '@cdo/apps/applab/dropletConfig';
 
-
-
 describe(`Applab droplet configuration`, () => {
   it('uses half the max height for the default location of lines, circles, and rectangles', () => {
     const lineBlocks = blocks.filter(block => block.func === 'line');

@@ -6,8 +6,6 @@ import CrossTabChart, {
   getColorForValue,
 } from '@cdo/apps/storage/dataBrowser/dataVisualizer/CrossTabChart';
 
-
-
 const DEFAULT_PROPS = {
   records: [],
   numericColumns: [],
@@ -32,7 +30,9 @@ describe('CrossTabChart', () => {
     it('maps intermediate values proportionately', () => {
       expect(getColorForValue(50, 0, 100)).toBe('hsl(217, 89%, 78%)');
 
-      expect(getColorForValue(2, 0, 3)).toBe('hsl(217, 89%, 70.66666666666667%)');
+      expect(getColorForValue(2, 0, 3)).toBe(
+        'hsl(217, 89%, 70.66666666666667%)'
+      );
 
       expect(getColorForValue(20, 10, 50)).toBe('hsl(217, 89%, 89%)');
     });
@@ -61,7 +61,9 @@ describe('CrossTabChart', () => {
         ],
         columns: ['abc', 1, 2, 3],
       };
-      expect(createPivotTable(records, [], 'abc', 'value')).toEqual(expectedPivotData);
+      expect(createPivotTable(records, [], 'abc', 'value')).toEqual(
+        expectedPivotData
+      );
     });
 
     it('sorts string columns alphabetically, but with the row column first', () => {
@@ -80,7 +82,9 @@ describe('CrossTabChart', () => {
         ],
         columns: ['abc', 'a', 'z'],
       };
-      expect(createPivotTable(records, [], 'abc', 'value')).toEqual(expectedPivotData);
+      expect(createPivotTable(records, [], 'abc', 'value')).toEqual(
+        expectedPivotData
+      );
     });
 
     it('sorts numeric columns numerically, with the row column first', () => {
@@ -99,9 +103,9 @@ describe('CrossTabChart', () => {
         ],
         columns: ['abc', 18, 134],
       };
-      expect(
-        createPivotTable(records, ['value'], 'abc', 'value')
-      ).toEqual(expectedPivotData);
+      expect(createPivotTable(records, ['value'], 'abc', 'value')).toEqual(
+        expectedPivotData
+      );
     });
 
     it('sorts rows', () => {
@@ -121,7 +125,9 @@ describe('CrossTabChart', () => {
         ],
         columns: ['abc', 'x', 'y'],
       };
-      expect(createPivotTable(records, [], 'abc', 'value')).toEqual(expectedPivotData);
+      expect(createPivotTable(records, [], 'abc', 'value')).toEqual(
+        expectedPivotData
+      );
     });
   });
 });

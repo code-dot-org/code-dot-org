@@ -10,8 +10,6 @@ import {
 } from '@cdo/apps/templates/sectionProgress/sectionProgressTestHelpers';
 import i18n from '@cdo/locale';
 
-
-
 const TEST_STUDENT_1 = {
   id: 1,
   name: 'Joe',

@@ -5,8 +5,6 @@ import CollapserButton from '@cdo/apps/templates/instructions/CollapserButton';
 import {UnconnectedInstructionsCsfRightCol as InstructionsCsfRightCol} from '@cdo/apps/templates/instructions/InstructionsCsfRightCol';
 import ScrollButtons from '@cdo/apps/templates/instructions/ScrollButtons';
 
-
-
 const DEFAULT_PROPS = {
   shouldDisplayHintPrompt: () => {},
   hasShortAndLongInstructions: false,

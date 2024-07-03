@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedStandardsEditor as StandardsEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/StandardsEditor';
 
-
-
 const fakeStandards = [
   {
     frameworkShortcode: 'framework-1',

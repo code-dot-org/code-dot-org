@@ -4,8 +4,6 @@ import React from 'react';
 
 import _BaseButton from '@cdo/apps/componentLibrary/button/_baseButton/_BaseButton';
 
-
-
 describe('Design System - _BaseButton', () => {
   it('_BaseButton - renders with correct text', () => {
     render(<_BaseButton text="_BaseButton test" onClick={() => null} />);

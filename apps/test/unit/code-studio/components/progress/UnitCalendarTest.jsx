@@ -3,8 +3,6 @@ import React from 'react';
 
 import UnitCalendar from '@cdo/apps/code-studio/components/progress/UnitCalendar';
 
-
-
 import {testLessonSchedule, testLessons} from './unitCalendarTestData';
 
 describe('UnitCalendar', () => {

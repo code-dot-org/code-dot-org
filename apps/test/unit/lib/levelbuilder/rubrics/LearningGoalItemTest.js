@@ -3,8 +3,6 @@ import React from 'react';
 
 import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
 
-
-
 describe('LearningGoalItem', () => {
   let defaultProps;
   const deleteLearningGoalSpy = jest.fn();
@@ -26,15 +24,15 @@ describe('LearningGoalItem', () => {
     const wrapper = shallow(<LearningGoalItem {...defaultProps} />);
     expect(wrapper.find('.uitest-learning-goal-card').length).toBe(1);
     expect(wrapper.find('.uitest-rubric-key-concept-input').length).toBe(1);
-    expect(
-      wrapper.find('.uitest-rubric-key-concept-input').props().value
-    ).toBe('Testing Learning Goal');
+    expect(wrapper.find('.uitest-rubric-key-concept-input').props().value).toBe(
+      'Testing Learning Goal'
+    );
     expect(wrapper.find('input[type="checkbox"]').length).toBe(1);
     expect(wrapper.find('Button').length).toBe(1);
     expect(wrapper.find('EvidenceDescriptions').length).toBe(1);
-    expect(
-      wrapper.find('EvidenceDescriptions').prop('learningGoalData')
-    ).toBe(defaultProps.exisitingLearningGoalData);
+    expect(wrapper.find('EvidenceDescriptions').prop('learningGoalData')).toBe(
+      defaultProps.exisitingLearningGoalData
+    );
     expect(wrapper.find('textarea').length).toBe(1);
   });
 
@@ -84,13 +82,18 @@ describe('LearningGoalItem', () => {
     wrapper
       .find('textarea')
       .simulate('change', {target: {value: 'Learning Goal Tip'}});
-    expect(
-      updateLearningGoalSpy
-    ).toHaveBeenCalledWith(exisitingLearningGoalData.id, 'tips', 'Learning Goal Tip');
+    expect(updateLearningGoalSpy).toHaveBeenCalledWith(
+      exisitingLearningGoalData.id,
+      'tips',
+      'Learning Goal Tip'
+    );
   });
 
   it('displays confirmation dialog when learning goal name input receives focus and AI assessment is checked', () => {
-    const dialogStub = jest.spyOn(window, 'confirm').mockClear().mockReturnValue(true);
+    const dialogStub = jest
+      .spyOn(window, 'confirm')
+      .mockClear()
+      .mockReturnValue(true);
 
     const enabledAiData = {
       key: 'learningGoal-1',

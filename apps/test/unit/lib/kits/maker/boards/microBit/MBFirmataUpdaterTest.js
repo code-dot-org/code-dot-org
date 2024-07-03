@@ -17,8 +17,6 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 
-
-
 describe('MBFirmataUpdater', () => {
   const mbFirmataUpdater = new MBFirmataUpdater();
   describe('detectMicroBitVersion function', () => {
@@ -57,7 +55,9 @@ describe('MBFirmataUpdater', () => {
     });
 
     it('throws an error if the micro:bit version is invalid', () => {
-      expect(() => mbFirmataUpdater.getFirmataURLByVersion('v3')).toThrow('micro:bit version is invalid.');
+      expect(() => mbFirmataUpdater.getFirmataURLByVersion('v3')).toThrow(
+        'micro:bit version is invalid.'
+      );
     });
   });
 

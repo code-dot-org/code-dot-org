@@ -9,8 +9,6 @@ import {
 import color from '@cdo/apps/util/color';
 import javalabMsg from '@cdo/javalab/locale';
 
-
-
 const DEFAULT_PROPS = {
   type: codeReviewTimelineElementType.CREATED,
   isLast: false,
@@ -72,7 +70,9 @@ describe('CodeReviewTimelineElement', () => {
       });
       const eyeballLink = wrapper.find('EyeballLink');
       expect(eyeballLink).toHaveLength(1);
-      expect(eyeballLink.props().versionHref.includes('version=asdfjkl')).toBe(true);
+      expect(eyeballLink.props().versionHref.includes('version=asdfjkl')).toBe(
+        true
+      );
     });
 
     it('has expected params in eyeball link', () => {
@@ -88,9 +88,15 @@ describe('CodeReviewTimelineElement', () => {
         viewAsCodeReviewer: false,
       });
       const eyeballLink = wrapper.find('EyeballLink');
-      expect(eyeballLink.props().versionHref.includes('version=asdfjkl')).toBe(true);
-      expect(eyeballLink.props().versionHref.includes('user_id=123')).toBe(true);
-      expect(eyeballLink.props().versionHref.includes('section_id=456')).toBe(true);
+      expect(eyeballLink.props().versionHref.includes('version=asdfjkl')).toBe(
+        true
+      );
+      expect(eyeballLink.props().versionHref.includes('user_id=123')).toBe(
+        true
+      );
+      expect(eyeballLink.props().versionHref.includes('section_id=456')).toBe(
+        true
+      );
       utils.queryParams.mockRestore();
     });
 

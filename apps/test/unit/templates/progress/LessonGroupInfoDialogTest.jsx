@@ -3,8 +3,6 @@ import React from 'react';
 
 import LessonGroupInfoDialog from '@cdo/apps/templates/progress/LessonGroupInfoDialog';
 
-
-
 const DEFAULT_PROPS = {
   isOpen: true,
   displayName: 'Lesson Group Name',

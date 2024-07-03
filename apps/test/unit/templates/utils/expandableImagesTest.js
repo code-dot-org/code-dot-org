@@ -2,8 +2,6 @@ import ReactDOM from 'react-dom';
 
 import {renderExpandableImages} from '@cdo/apps/templates/utils/expandableImages';
 
-
-
 describe('expandableImages', () => {
   describe('renderExpandableImages', () => {
     let renderSpy;

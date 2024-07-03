@@ -3,8 +3,6 @@ import React from 'react';
 
 import NewProgrammingClassForm from '@cdo/apps/lib/levelbuilder/code-docs-editor/NewProgrammingClassForm';
 
-
-
 describe('NewProgrammingClassForm', () => {
   it('renders form', () => {
     const wrapper = shallow(

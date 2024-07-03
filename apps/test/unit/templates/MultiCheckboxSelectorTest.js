@@ -4,8 +4,6 @@ import React from 'react';
 
 import MultiCheckboxSelector from '@cdo/apps/templates/MultiCheckboxSelector';
 
-
-
 const ItemComponent = function ({item}) {
   return <strong>{item}</strong>;
 };

@@ -8,8 +8,6 @@ import {
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 
-
-
 var Goal = animationPicker.Goal;
 
 const testAnimation = {
@@ -167,9 +165,9 @@ describe('animationPicker', function () {
         const state = {selectedAnimations: {}};
         const newState = reducer(state, addSelectedAnimation(testAnimation));
         expect(newState).not.toBe(state);
-        expect(
-          newState.selectedAnimations[testAnimation.sourceUrl]
-        ).toEqual(testAnimation);
+        expect(newState.selectedAnimations[testAnimation.sourceUrl]).toEqual(
+          testAnimation
+        );
       });
     });
 

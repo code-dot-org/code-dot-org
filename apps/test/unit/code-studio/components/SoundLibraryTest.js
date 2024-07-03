@@ -3,8 +3,6 @@ import React from 'react';
 
 import SoundLibrary from '@cdo/apps/code-studio/components/SoundLibrary';
 
-
-
 describe('SoundListEntry', () => {
   it('stops playing sound when user chooses a sound', () => {
     const wrapper = mount(<SoundLibrary assetChosen={() => true} />);

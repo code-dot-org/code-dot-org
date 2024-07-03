@@ -1,8 +1,6 @@
 /** @file Tests for share dialog redux module */
 import reducer, * as shareDialog from '@cdo/apps/code-studio/components/shareDialogRedux';
 
-
-
 describe('Share dialog redux module', () => {
   let originalState = {
     isOpen: false,
@@ -44,9 +42,9 @@ describe('Share dialog redux module', () => {
   });
 
   it('hideShareDialog sets isOpen to false', () => {
-    expect(
-      reducer({isOpen: true}, shareDialog.hideShareDialog()).isOpen
-    ).toBe(false);
+    expect(reducer({isOpen: true}, shareDialog.hideShareDialog()).isOpen).toBe(
+      false
+    );
   });
 
   it('hideShareDialog sets unpublish values to false', () => {
@@ -72,7 +70,9 @@ describe('Share dialog redux module', () => {
   });
 
   it('unpublish project sets isUnpublishPending to true', () => {
-    expect(reducer(undefined, {type: UNPUBLISH_REQUEST}).isUnpublishPending).toBe(true);
+    expect(
+      reducer(undefined, {type: UNPUBLISH_REQUEST}).isUnpublishPending
+    ).toBe(true);
   });
 
   it('unpublish project only changes isUnpublishPending', () => {

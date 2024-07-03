@@ -1,7 +1,5 @@
 import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/p5lab/shapes';
 
-
-
 describe('GameLab Shapes', function () {
   const propsByKeyOneItem = {
     123: {

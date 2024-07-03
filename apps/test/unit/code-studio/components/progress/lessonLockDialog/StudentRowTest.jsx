@@ -4,8 +4,6 @@ import React from 'react';
 import {LockStatus} from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
 import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
 
-
-
 const DEFAULT_PROPS = {
   index: 1,
   name: 'Jerry',

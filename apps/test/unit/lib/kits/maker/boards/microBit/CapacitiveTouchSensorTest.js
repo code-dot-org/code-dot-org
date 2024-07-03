@@ -1,8 +1,6 @@
 import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 
-
-
 describe('CapacitiveTouchSensor', function () {
   let boardClient, sensor;
   let testPin = 2;
@@ -27,7 +25,9 @@ describe('CapacitiveTouchSensor', function () {
   describe(`start() and stop()`, () => {
     it(`trigger the parent call`, () => {
       let startSpy = jest.spyOn(boardClient, 'streamAnalogChannel').mockClear();
-      let stopSpy = jest.spyOn(boardClient, 'stopStreamingAnalogChannel').mockClear();
+      let stopSpy = jest
+        .spyOn(boardClient, 'stopStreamingAnalogChannel')
+        .mockClear();
       sensor.start();
       expect(startSpy).toHaveBeenCalledTimes(1);
       expect(startSpy).toHaveBeenCalledWith(testPin);

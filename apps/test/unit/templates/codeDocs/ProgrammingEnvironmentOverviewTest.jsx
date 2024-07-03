@@ -5,8 +5,6 @@ import ProgrammingEnvironmentOverview, {
   CategorySection,
 } from '@cdo/apps/templates/codeDocs/ProgrammingEnvironmentOverview';
 
-
-
 describe('ProgrammingEnvironmentOverview', () => {
   let defaultProgrammingEnvironment;
 
@@ -51,9 +49,9 @@ describe('ProgrammingEnvironmentOverview', () => {
       />
     );
     expect(wrapper.find('EnhancedSafeMarkdown').length).toBe(1);
-    expect(
-      wrapper.find('EnhancedSafeMarkdown').first().props().markdown
-    ).toBe('spritelab description');
+    expect(wrapper.find('EnhancedSafeMarkdown').first().props().markdown).toBe(
+      'spritelab description'
+    );
     expect(wrapper.find('TextLink').props().href).toBe('/p/spritelab');
   });
 

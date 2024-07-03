@@ -3,8 +3,6 @@ import React from 'react';
 
 import {AppLabTooltipOverlay} from '@cdo/apps/applab/AppLabTooltipOverlay';
 
-
-
 // ES5-style require necessary to stub gridUtils.draggedElementDropPoint
 var gridUtils = require('@cdo/apps/applab/gridUtils');
 
@@ -23,7 +21,10 @@ describe('AppLabTooltipOverlay', () => {
   var result, stubDraggedElementDropPoint;
 
   beforeEach(() => {
-    stubDraggedElementDropPoint = jest.spyOn(gridUtils, 'draggedElementDropPoint').mockClear().mockImplementation();
+    stubDraggedElementDropPoint = jest
+      .spyOn(gridUtils, 'draggedElementDropPoint')
+      .mockClear()
+      .mockImplementation();
   });
 
   afterEach(() => {
@@ -56,7 +57,9 @@ describe('AppLabTooltipOverlay', () => {
     it('always has a provider that returns current coordinate text', () => {
       expect(result.props().providers.length).toBe(1);
       expect(result.props().providers[0]).toBeInstanceOf(Function);
-      expect(result.props().providers[0](result.props())).toBe(`x: ${Math.round(TEST_MOUSE_X)}, y: ${Math.round(TEST_MOUSE_Y)}`);
+      expect(result.props().providers[0](result.props())).toBe(
+        `x: ${Math.round(TEST_MOUSE_X)}, y: ${Math.round(TEST_MOUSE_Y)}`
+      );
     });
   });
 
@@ -85,7 +88,9 @@ describe('AppLabTooltipOverlay', () => {
 
     it('gives modified position to coordinates provider', () => {
       expect(result.props().providers[0]).toBeInstanceOf(Function);
-      expect(result.props().providers[0](result.props())).toBe(`x: ${Math.floor(DROP_POINT_X)}, y: ${Math.floor(DROP_POINT_Y)}`);
+      expect(result.props().providers[0](result.props())).toBe(
+        `x: ${Math.floor(DROP_POINT_X)}, y: ${Math.floor(DROP_POINT_Y)}`
+      );
     });
   });
 
@@ -123,7 +128,9 @@ describe('AppLabTooltipOverlay', () => {
       it('has a second provider that returns the element ID', () => {
         expect(result.props().providers.length).toBe(2);
         expect(result.props().providers[1]).toBeInstanceOf(Function);
-        expect(result.props().providers[1](result.props)).toBe(`id: ${CONTROL_ID}`);
+        expect(result.props().providers[1](result.props)).toBe(
+          `id: ${CONTROL_ID}`
+        );
       });
     });
 
@@ -140,7 +147,9 @@ describe('AppLabTooltipOverlay', () => {
       it('has a second provider that returns the screen ID', () => {
         expect(result.props().providers.length).toBe(2);
         expect(result.props().providers[1]).toBeInstanceOf(Function);
-        expect(result.props().providers[1](result.props)).toBe(`id: ${SCREEN_ID}`);
+        expect(result.props().providers[1](result.props)).toBe(
+          `id: ${SCREEN_ID}`
+        );
       });
     });
   });

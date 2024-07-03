@@ -4,8 +4,6 @@ import React from 'react';
 
 import {UnwrappedInstructionsWithWorkspace as InstructionsWithWorkspace} from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
 
-
-
 describe('InstructionsWithWorkspace', () => {
   it('renders instructions and code workspace', () => {
     const wrapper = shallow(
@@ -85,9 +83,7 @@ describe('InstructionsWithWorkspace', () => {
     it('handles resize', () => {
       const wrapper = setupComponent();
       wrapper.instance().onResize();
-      expect(
-        setInstructionsMaxHeightAvailable
-      ).toHaveBeenCalledWith(230);
+      expect(setInstructionsMaxHeightAvailable).toHaveBeenCalledWith(230);
     });
 
     it('breakpoint in behavior at total height of 420 (meets all reserves)', () => {

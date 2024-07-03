@@ -5,8 +5,6 @@ import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalIte
 import RubricEditor from '@cdo/apps/lib/levelbuilder/rubrics/RubricEditor';
 import Button from '@cdo/apps/templates/Button';
 
-
-
 describe('RubricEditorTest ', () => {
   let wrapper;
   const addNewConceptSpy = jest.fn();
@@ -27,7 +25,9 @@ describe('RubricEditorTest ', () => {
   });
 
   it('renders correct LearningGoalItem components', () => {
-    expect(wrapper.find(LearningGoalItem)).toHaveLength(sampleLearningGoalList.length);
+    expect(wrapper.find(LearningGoalItem)).toHaveLength(
+      sampleLearningGoalList.length
+    );
     expect(
       wrapper.find('LearningGoalItem').at(0).prop('exisitingLearningGoalData')
     ).toBe(sampleLearningGoalList[0]);

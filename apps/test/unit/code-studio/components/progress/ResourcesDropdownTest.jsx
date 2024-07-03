@@ -6,8 +6,6 @@ import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import i18n from '@cdo/locale';
 
-
-
 describe('ResourcesDropdown', () => {
   it('renders resources for teacher', () => {
     const wrapper = shallow(

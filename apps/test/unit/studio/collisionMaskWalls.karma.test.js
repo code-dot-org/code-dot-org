@@ -1,7 +1,5 @@
 import CollisionMaskWalls from '@cdo/apps/studio/collisionMaskWalls';
 
-
-
 describe('collisionMaskWalls', function () {
   var walls;
   beforeEach(function (done) {

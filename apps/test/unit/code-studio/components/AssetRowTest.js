@@ -3,8 +3,6 @@ import React from 'react';
 
 import AssetRow from '@cdo/apps/code-studio/components/AssetRow';
 
-
-
 const DEFAULT_PROPS = {
   name: `fo\'o's.bar`,
   type: 'image',

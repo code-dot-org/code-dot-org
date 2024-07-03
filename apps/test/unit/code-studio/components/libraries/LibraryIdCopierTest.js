@@ -3,8 +3,6 @@ import React from 'react';
 
 import LibraryIdCopier from '@cdo/apps/code-studio/components/libraries/LibraryIdCopier.jsx';
 
-
-
 describe('LibraryIdCopier', () => {
   const CHANNEL_ID_SELECTOR = 'input[type="text"]';
   const channelId = '123';

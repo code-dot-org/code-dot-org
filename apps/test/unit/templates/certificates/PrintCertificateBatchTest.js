@@ -3,8 +3,6 @@ import React from 'react';
 
 import PrintCertificateBatch from '@cdo/apps/templates/certificates/PrintCertificateBatch';
 
-
-
 describe('PrintCertificateBatch', () => {
   it('renders zero certificates', () => {
     const wrapper = shallow(<PrintCertificateBatch imageUrls={[]} />);

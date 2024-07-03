@@ -4,8 +4,6 @@ import React from 'react';
 
 import ProgressTableStudentName from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentName';
 
-
-
 const DEFAULT_PROPS = {
   name: 'Joe',
   studentId: 1,

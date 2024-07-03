@@ -5,8 +5,6 @@ import LessonToken, {
   LessonTokenContents,
 } from '@cdo/apps/lib/levelbuilder/unit-editor/LessonToken';
 
-
-
 const defaultLesson = {
   id: 10,
   key: 'lesson-1',

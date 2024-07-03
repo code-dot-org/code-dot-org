@@ -3,8 +3,6 @@ import React from 'react';
 
 import VersionUnitDropdowns from '@cdo/apps/templates/sectionsRefresh/VersionUnitDropdowns';
 
-
-
 import {highSchoolCourseOfferings} from './CourseOfferingsTestData';
 
 const csdOffering = highSchoolCourseOfferings['high']['Course'][
@@ -33,7 +31,9 @@ describe('VersionUnitDropdowns', () => {
 
     // Counts all dropdown options across the two lists
     expect(wrapper.find('option').length).toBe(5);
-    expect(wrapper.contains("Problem Solving and Computing ('22-'23)")).toBe(true);
+    expect(wrapper.contains("Problem Solving and Computing ('22-'23)")).toBe(
+      true
+    );
     expect(wrapper.contains("Web Development ('22-'23)")).toBe(true);
   });
 

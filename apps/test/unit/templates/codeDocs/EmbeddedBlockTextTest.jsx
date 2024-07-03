@@ -3,8 +3,6 @@ import React from 'react';
 
 import EmbeddedBlock from '@cdo/apps/templates/codeDocs/EmbeddedBlock';
 
-
-
 describe('EmbeddedBlock', () => {
   it('renders div for block wrapped with link', () => {
     const wrapper = shallow(

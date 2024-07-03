@@ -9,7 +9,6 @@ import AnimationPickerListItem from '@cdo/apps/p5lab/AnimationPicker/AnimationPi
 import AnimationUploadButton from '@cdo/apps/p5lab/AnimationPicker/AnimationUploadButton';
 import {CostumeCategories} from '@cdo/apps/p5lab/spritelab/constants';
 
-
 import testAnimationLibrary from '../testAnimationLibrary.json';
 
 const msg = require('@cdo/locale');

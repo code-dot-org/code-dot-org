@@ -4,8 +4,6 @@ import React from 'react';
 
 import {IconDropdown} from '@cdo/apps/componentLibrary/dropdown';
 
-
-
 const allOptions = [
   {
     value: 'option-1',

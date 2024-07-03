@@ -7,8 +7,6 @@ import {
   lessonCompletedByStandard,
 } from '@cdo/apps/templates/sectionProgress/standards/standardsTestHelpers';
 
-
-
 describe('StandardDescriptionCell', () => {
   let DEFAULT_PROPS = {
     description: standardsData[1].description,
@@ -18,9 +16,9 @@ describe('StandardDescriptionCell', () => {
 
   it('shows the correct number of progress boxes for lessons', () => {
     const wrapper = shallow(<StandardDescriptionCell {...DEFAULT_PROPS} />);
-    expect(
-      wrapper.find('Connect(ProgressBoxForLessonNumber)')
-    ).toHaveLength(lessonCompletedByStandard[1].length);
+    expect(wrapper.find('Connect(ProgressBoxForLessonNumber)')).toHaveLength(
+      lessonCompletedByStandard[1].length
+    );
   });
   it('does not show the tooltip in the standards report view', () => {
     const wrapper = shallow(
@@ -30,6 +28,8 @@ describe('StandardDescriptionCell', () => {
   });
   it('shows the tooltips for each lesson when not viewing the standards report', () => {
     const wrapper = shallow(<StandardDescriptionCell {...DEFAULT_PROPS} />);
-    expect(wrapper.find('ReactTooltip')).toHaveLength(lessonCompletedByStandard[1].length);
+    expect(wrapper.find('ReactTooltip')).toHaveLength(
+      lessonCompletedByStandard[1].length
+    );
   });
 });

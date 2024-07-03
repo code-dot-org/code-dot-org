@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedActivitySectionCardButtons as ActivitySectionCardButtons} from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitySectionCardButtons';
 
-
-
 import {sampleActivities} from './activitiesTestData';
 
 describe('ActivitySectionCardButtons', () => {

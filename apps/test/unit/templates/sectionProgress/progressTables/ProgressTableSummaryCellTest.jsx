@@ -7,8 +7,6 @@ import ProgressTableSummaryCell, {
 } from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableSummaryCell';
 import color from '@cdo/apps/util/color';
 
-
-
 const DEFAULT_PROPS = {
   studentId: 1,
   studentLessonProgress: {

@@ -8,8 +8,6 @@ import Notification from '@cdo/apps/templates/Notification';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import i18n from '@cdo/locale';
 
-
-
 import {courses, topCourse, joinedSections} from './homepagesTestData';
 
 describe('StudentHomepage', () => {

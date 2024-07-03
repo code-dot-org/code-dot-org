@@ -18,8 +18,6 @@ import pageConstantsReducer, {
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import msg from '@cdo/locale';
 
-
-
 describe('SettingsCog', () => {
   it('renders as a FontAwesome icon', () => {
     const wrapper = shallow(<SettingsCog />);

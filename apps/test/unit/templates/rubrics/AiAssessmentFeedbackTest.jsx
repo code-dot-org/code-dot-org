@@ -4,8 +4,6 @@ import React from 'react';
 import AiAssessmentFeedback from '@cdo/apps/templates/rubrics/AiAssessmentFeedback';
 import AiAssessmentFeedbackContext from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
 
-
-
 describe('AiAssessmentFeedback', () => {
   const mockAiInfo = {
     id: 2,

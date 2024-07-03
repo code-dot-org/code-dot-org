@@ -4,7 +4,6 @@ import React from 'react';
 import ProjectHeader from '@cdo/apps/code-studio/components/header/ProjectHeader';
 import ProjectImport from '@cdo/apps/code-studio/components/header/ProjectImport';
 
-
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('ProjectHeader', () => {

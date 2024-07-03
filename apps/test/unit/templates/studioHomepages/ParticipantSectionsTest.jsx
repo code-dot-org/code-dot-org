@@ -4,8 +4,6 @@ import React from 'react';
 import ParticipantSections from '@cdo/apps/templates/studioHomepages/ParticipantSections';
 import SectionsAsStudentTable from '@cdo/apps/templates/studioHomepages/SectionsAsStudentTable';
 
-
-
 import {sections} from './fakeSectionUtils';
 
 describe('ParticipantSections', () => {

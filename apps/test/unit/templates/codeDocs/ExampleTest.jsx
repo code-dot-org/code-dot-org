@@ -3,8 +3,6 @@ import React from 'react';
 
 import Example from '@cdo/apps/templates/codeDocs/Example';
 
-
-
 describe('Example', () => {
   it('embeds app without code', () => {
     const example = {

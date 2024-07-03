@@ -7,8 +7,6 @@ import {
 } from '@cdo/apps/templates/sectionAssessments/assessmentsTestHelpers';
 import FreeResponsesSurveyTable from '@cdo/apps/templates/sectionAssessments/FreeResponsesSurveyTable';
 
-
-
 describe('FreeResponsesSurveyTable', () => {
   it('renders a table', () => {
     const wrapper = mount(

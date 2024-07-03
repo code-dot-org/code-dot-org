@@ -4,8 +4,6 @@ import React from 'react';
 
 import Toggle from '@cdo/apps/componentLibrary/toggle';
 
-
-
 describe('Design System - Toggle', () => {
   it('Toggle - renders with correct label', () => {
     const toggleLabel = 'Toggle label';

@@ -6,8 +6,6 @@ import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedbac
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-
-
 const DEFAULT_PROPS = {
   latestReviewState: null,
 };

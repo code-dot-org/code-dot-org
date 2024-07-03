@@ -3,7 +3,6 @@ import sinon from 'sinon';
 
 import initPage from '@cdo/apps/sites/studio/pages/scripts/edit';
 
-
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 describe('the level builder page init script', () => {

@@ -11,8 +11,6 @@ import {
 
 import ButtonList from '@cdo/apps/code-studio/pd/form_components/ButtonList';
 
-
-
 describe('ButtonList', () => {
   describe('With type: radio', () => {
     let radioList;

@@ -4,8 +4,6 @@ import React from 'react';
 import {UnconnectedRetryProjectSaveDialog as RetryProjectSaveDialog} from '@cdo/apps/code-studio/components/header/RetryProjectSaveDialog';
 import {projectUpdatedStatuses as statuses} from '@cdo/apps/code-studio/projectRedux';
 
-
-
 const errorTitle = 'Error saving your project';
 
 describe('RetryProjectSaveDialog', () => {

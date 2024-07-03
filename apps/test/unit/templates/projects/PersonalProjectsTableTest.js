@@ -15,7 +15,6 @@ import {UnconnectedPersonalProjectsTable as PersonalProjectsTable} from '@cdo/ap
 import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
 import i18n from '@cdo/locale';
 
-
 import {allowConsoleWarnings} from '../../../util/throwOnConsole';
 
 describe('PersonalProjectsTable', () => {
@@ -59,9 +58,13 @@ describe('PersonalProjectsTable', () => {
         .at(3)
         .find('a');
       expect(firstProjectName.text()).toBe(stubFakePersonalProjectData[0].name);
-      expect(secondProjectName.text()).toBe(stubFakePersonalProjectData[1].name);
+      expect(secondProjectName.text()).toBe(
+        stubFakePersonalProjectData[1].name
+      );
       expect(thirdProjectName.text()).toBe(stubFakePersonalProjectData[2].name);
-      expect(fourthProjectName.text()).toBe(stubFakePersonalProjectData[3].name);
+      expect(fourthProjectName.text()).toBe(
+        stubFakePersonalProjectData[3].name
+      );
     });
 
     it('if there are no projects and user is signed in displays no personal projects message', () => {
@@ -87,9 +90,11 @@ describe('PersonalProjectsTable', () => {
           />
         </Provider>
       );
-      expect(wrapper.find('SafeMarkdown').props().markdown).toBe(i18n.noSavedProjects({
-        signInUrl: '/users/sign_in?user_return_to=/projects',
-      }));
+      expect(wrapper.find('SafeMarkdown').props().markdown).toBe(
+        i18n.noSavedProjects({
+          signInUrl: '/users/sign_in?user_return_to=/projects',
+        })
+      );
     });
   });
 

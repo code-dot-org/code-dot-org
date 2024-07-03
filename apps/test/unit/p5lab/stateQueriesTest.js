@@ -4,7 +4,6 @@ import {
   countAllowedModes,
 } from '@cdo/apps/p5lab/stateQueries';
 
-
 import {forEveryBooleanPermutation} from '../../util/testUtils';
 
 describe('stateQueries', function () {

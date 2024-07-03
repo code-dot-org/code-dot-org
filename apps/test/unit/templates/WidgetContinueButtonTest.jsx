@@ -4,8 +4,6 @@ import React from 'react';
 import * as dialogHelper from '@cdo/apps/code-studio/levels/dialogHelper';
 import WidgetContinueButton from '@cdo/apps/templates/WidgetContinueButton';
 
-
-
 describe('WidgetContinueButton', () => {
   beforeEach(() => {
     jest.spyOn(dialogHelper, 'processResults').mockClear().mockImplementation();

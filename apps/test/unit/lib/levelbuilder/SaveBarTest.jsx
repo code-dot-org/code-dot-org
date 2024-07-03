@@ -4,8 +4,6 @@ import React from 'react';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import * as utils from '@cdo/apps/utils';
 
-
-
 describe('SaveBar', () => {
   let handleSave;
   beforeEach(() => {
@@ -23,7 +21,9 @@ describe('SaveBar', () => {
     const wrapper = shallow(<SaveBar handleSave={handleSave} />);
 
     const saveAndKeepEditingButton = wrapper.find('button').at(0);
-    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(true);
+    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).toBe(
+      true
+    );
     saveAndKeepEditingButton.simulate('click');
 
     expect(handleSave).toHaveBeenCalledTimes(1);
@@ -43,7 +43,9 @@ describe('SaveBar', () => {
       <SaveBar handleSave={handleSave} lastSaved={Date.now()} />
     );
 
-    expect(wrapper.find('.lastSavedMessage').text()).toContain('Last saved at:');
+    expect(wrapper.find('.lastSavedMessage').text()).toContain(
+      'Last saved at:'
+    );
   });
 
   it('shows error when props error is set', () => {

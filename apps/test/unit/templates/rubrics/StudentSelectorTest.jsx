@@ -7,8 +7,6 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {UnconnectedStudentSelector as StudentSelector} from '@cdo/apps/templates/rubrics/StudentSelector';
 import * as utils from '@cdo/apps/utils';
 
-
-
 function setup(jsx) {
   return {
     user: userEvent.setup(),
@@ -37,7 +35,9 @@ describe('StudentSelector', () => {
     students: [STUDENT_1, STUDENT_2],
   };
 
-  beforeEach(() => jest.spyOn(utils, 'reload').mockClear().mockImplementation());
+  beforeEach(() =>
+    jest.spyOn(utils, 'reload').mockClear().mockImplementation()
+  );
   afterEach(() => utils.reload.mockRestore());
 
   it('sends event on Student selection', async () => {
@@ -46,13 +46,16 @@ describe('StudentSelector', () => {
     const dropdown = screen.getByLabelText('Select a student');
     await user.click(dropdown);
     await user.click(screen.getByText('Student 2 FamNameA'));
-    expect(sendEventSpy).toHaveBeenCalledWith(EVENTS.TA_RUBRIC_DROPDOWN_STUDENT_SELECTED, {
-      unitName: 'test-2023',
-      courseName: 'course-2023',
-      levelName: 'test_level',
-      sectionId: defaultProps.sectionId,
-      studentId: STUDENT_2.id,
-    });
+    expect(sendEventSpy).toHaveBeenCalledWith(
+      EVENTS.TA_RUBRIC_DROPDOWN_STUDENT_SELECTED,
+      {
+        unitName: 'test-2023',
+        courseName: 'course-2023',
+        levelName: 'test_level',
+        sectionId: defaultProps.sectionId,
+        studentId: STUDENT_2.id,
+      }
+    );
     sendEventSpy.mockRestore();
   });
 });

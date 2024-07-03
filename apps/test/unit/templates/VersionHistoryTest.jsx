@@ -54,7 +54,10 @@ describe('VersionHistory', () => {
   describe('using the sources api', () => {
     beforeEach(() => {
       jest.spyOn(sourcesApi, 'ajax').mockClear().mockImplementation();
-      jest.spyOn(sourcesApi, 'restorePreviousFileVersion').mockClear().mockImplementation();
+      jest
+        .spyOn(sourcesApi, 'restorePreviousFileVersion')
+        .mockClear()
+        .mockImplementation();
     });
 
     afterEach(() => {
@@ -84,8 +87,14 @@ describe('VersionHistory', () => {
 
   describe('using the files api', () => {
     beforeEach(() => {
-      jest.spyOn(filesApi, 'getVersionHistory').mockClear().mockImplementation();
-      jest.spyOn(filesApi, 'restorePreviousVersion').mockClear().mockImplementation();
+      jest
+        .spyOn(filesApi, 'getVersionHistory')
+        .mockClear()
+        .mockImplementation();
+      jest
+        .spyOn(filesApi, 'restorePreviousVersion')
+        .mockClear()
+        .mockImplementation();
     });
 
     afterEach(() => {
@@ -101,9 +110,7 @@ describe('VersionHistory', () => {
         isReadOnly: false,
       },
       finishVersionHistoryLoad: () => {
-        filesApi.getVersionHistory.mock.calls[0][0](
-          FAKE_VERSION_LIST_RESPONSE
-        );
+        filesApi.getVersionHistory.mock.calls[0][0](FAKE_VERSION_LIST_RESPONSE);
         wrapper.update();
       },
       failVersionHistoryLoad: () =>
@@ -255,7 +262,10 @@ describe('VersionHistory', () => {
       let handleClearPuzzle;
 
       beforeEach(() => {
-        jest.spyOn(firehoseClient, 'putRecord').mockClear().mockImplementation();
+        jest
+          .spyOn(firehoseClient, 'putRecord')
+          .mockClear()
+          .mockImplementation();
 
         handleClearPuzzle = jest.fn().mockReturnValue(Promise.resolve());
         wrapper = mount(
@@ -280,19 +290,22 @@ describe('VersionHistory', () => {
       });
 
       it('logs to firehose', () => {
-        expect(firehoseClient.putRecord).toHaveBeenCalledWith({
-          study: 'project-data-integrity',
-          study_group: 'v4',
-          event: 'clear-puzzle',
-          project_id: 'fake-project-id',
-          data_json: JSON.stringify({
-            isOwner: true,
-            currentUrl: window.location.href,
-            shareUrl: 'fake-share-url',
-            isProjectTemplateLevel: false,
-            currentSourceVersionId: FAKE_CURRENT_VERSION,
-          }),
-        }, {includeUserId: true});
+        expect(firehoseClient.putRecord).toHaveBeenCalledWith(
+          {
+            study: 'project-data-integrity',
+            study_group: 'v4',
+            event: 'clear-puzzle',
+            project_id: 'fake-project-id',
+            data_json: JSON.stringify({
+              isOwner: true,
+              currentUrl: window.location.href,
+              shareUrl: 'fake-share-url',
+              isProjectTemplateLevel: false,
+              currentSourceVersionId: FAKE_CURRENT_VERSION,
+            }),
+          },
+          {includeUserId: true}
+        );
       });
 
       it('calls handleClearPuzzle prop', () => {

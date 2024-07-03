@@ -3,8 +3,6 @@ import React from 'react';
 
 import NewReferenceGuideForm from '@cdo/apps/lib/levelbuilder/reference-guide-editor/NewReferenceGuideForm';
 
-
-
 describe('NewReferenceGuide', () => {
   it('renders form', () => {
     const wrapper = shallow(<NewReferenceGuideForm baseUrl={'hello/world'} />);

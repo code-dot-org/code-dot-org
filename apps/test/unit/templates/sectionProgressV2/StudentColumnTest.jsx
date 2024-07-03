@@ -13,8 +13,6 @@ import currentUser from '@cdo/apps/templates/currentUserRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import StudentColumn from '@cdo/apps/templates/sectionProgressV2/StudentColumn.jsx';
 
-
-
 const studentA = {
   name: 'Sherlock',
   familyName: 'Holmes',

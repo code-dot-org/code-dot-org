@@ -11,8 +11,6 @@ import TooltipOverlay, {
   BETWEEN_RECT_MARGIN,
 } from '@cdo/apps/templates/TooltipOverlay';
 
-
-
 describe('TooltipOverlay', () => {
   const TEST_APP_WIDTH = 300,
     TEST_APP_HEIGHT = 200;
@@ -110,9 +108,7 @@ describe('TooltipOverlay', () => {
       height: 0,
     });
 
-    expect(
-      withStrings(['one']).instance().getTooltipDimensions()
-    ).toEqual({
+    expect(withStrings(['one']).instance().getTooltipDimensions()).toEqual({
       width: TEXT_RECT_WIDTH,
       height: TEXT_RECT_HEIGHT,
     });
@@ -138,7 +134,9 @@ describe('TooltipOverlay', () => {
         mouseX: 50,
         mouseY: 100,
       };
-      expect(coordinatesProvider()(props)).toBe(`x: ${props.mouseX}, y: ${props.mouseY}`);
+      expect(coordinatesProvider()(props)).toBe(
+        `x: ${props.mouseX}, y: ${props.mouseY}`
+      );
     });
 
     it('rounds the given coordinates', function () {
@@ -154,7 +152,9 @@ describe('TooltipOverlay', () => {
         mouseY: 100,
       };
       const isRtl = true;
-      expect(coordinatesProvider(false, isRtl)(props)).toBe(`\u202A${props.mouseY} :y, ${props.mouseX} :x\u202C`);
+      expect(coordinatesProvider(false, isRtl)(props)).toBe(
+        `\u202A${props.mouseY} :y, ${props.mouseX} :x\u202C`
+      );
     });
   });
 

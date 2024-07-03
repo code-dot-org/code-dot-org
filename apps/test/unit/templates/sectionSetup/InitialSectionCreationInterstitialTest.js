@@ -7,8 +7,6 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import InitialSectionCreationInterstitial from '@cdo/apps/templates/sectionSetup/InitialSectionCreationInterstitial';
 
-
-
 describe('InitialSectionCreationInterstitial', () => {
   it('logs an Amplitude event for when the dialog is abandoned', () => {
     const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();

@@ -3,8 +3,6 @@ import React from 'react';
 
 import RollupUnitEntry from '@cdo/apps/templates/courseRollupPages/RollupUnitEntry';
 
-
-
 import {courseData} from './rollupTestData';
 
 describe('RollupUnitEntry', () => {

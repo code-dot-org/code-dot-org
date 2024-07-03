@@ -1,5 +1,3 @@
-
-
 var animationTab = require('@cdo/apps/p5lab/redux/animationTab');
 
 describe('AnimationTab', function () {
@@ -28,7 +26,10 @@ describe('AnimationTab', function () {
       it('changes selected animation in state', function () {
         var newState = reducer(initialState, selectAnimation('animationKey'));
         expect(newState).not.toBe(initialState);
-        expect(newState).toHaveProperty('currentAnimations.ANIMATION', 'animationKey');
+        expect(newState).toHaveProperty(
+          'currentAnimations.ANIMATION',
+          'animationKey'
+        );
       });
 
       it('does not change state if animation already selected', function () {
@@ -47,7 +48,10 @@ describe('AnimationTab', function () {
       it('changes selected background in state', function () {
         var newState = reducer(initialState, selectBackground('backgroundKey'));
         expect(newState).not.toBe(initialState);
-        expect(newState).toHaveProperty('currentAnimations.BACKGROUND', 'backgroundKey');
+        expect(newState).toHaveProperty(
+          'currentAnimations.BACKGROUND',
+          'backgroundKey'
+        );
       });
 
       it('does not change state if background already selected', function () {

@@ -7,8 +7,6 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import SectionsAsStudentTable from '@cdo/apps/templates/studioHomepages/SectionsAsStudentTable';
 import i18n from '@cdo/locale';
 
-
-
 import {joinedSections} from './homepagesTestData';
 
 const store = createStore(combineReducers({isRtl}));

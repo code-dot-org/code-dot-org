@@ -146,7 +146,9 @@ describe('CurriculumCatalog', () => {
       if (curriculum.image && curriculum.image !== null) {
         expect(imagesStr).toMatch(new RegExp(`src="${curriculum.image}"`));
       } else {
-        expect(imagesStr).toMatch(new RegExp(`src="https:\\/\\/images\\.code\\.org\\/\\S*.png"`));
+        expect(imagesStr).toMatch(
+          new RegExp(`src="https:\\/\\/images\\.code\\.org\\/\\S*.png"`)
+        );
       }
     });
   });
@@ -823,7 +825,9 @@ describe('CurriculumCatalog', () => {
       const storedRecommenderResults = JSON.parse(
         tryGetSessionStorage('similarRecommenderResults', '{}')
       );
-      expect(storedRecommenderResults[firstTestCurriculum.key].key).toBe(similarCurriculumRecommendations[0].key);
+      expect(storedRecommenderResults[firstTestCurriculum.key].key).toBe(
+        similarCurriculumRecommendations[0].key
+      );
     });
 
     it('sets sessionStorage for Stretch Curriculum Recommender result', () => {
@@ -867,7 +871,9 @@ describe('CurriculumCatalog', () => {
         tryGetSessionStorage('stretchRecommenderResults', '{}')
       );
 
-      expect(storedRecommenderResults[firstTestCurriculum.key].key).toBe(recommendedStretchCurriculum.key);
+      expect(storedRecommenderResults[firstTestCurriculum.key].key).toBe(
+        recommendedStretchCurriculum.key
+      );
     });
   });
 });

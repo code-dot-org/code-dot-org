@@ -5,7 +5,6 @@ import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
 
 import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
 
-
 describe('Sprite Commands', () => {
   let coreLibrary;
   const sprite1Name = 'sprite1';
@@ -31,15 +30,15 @@ describe('Sprite Commands', () => {
     coreLibrary.addSprite({name: sprite2Name, animation: 'b'});
     coreLibrary.addSprite({name: sprite3Name, animation: 'a'});
 
-    expect(
-      commands.countByAnimation.apply(coreLibrary, [{costume: 'a'}])
-    ).toBe(2);
-    expect(
-      commands.countByAnimation.apply(coreLibrary, [{costume: 'b'}])
-    ).toBe(1);
-    expect(
-      commands.countByAnimation.apply(coreLibrary, [{costume: 'c'}])
-    ).toBe(0);
+    expect(commands.countByAnimation.apply(coreLibrary, [{costume: 'a'}])).toBe(
+      2
+    );
+    expect(commands.countByAnimation.apply(coreLibrary, [{costume: 'b'}])).toBe(
+      1
+    );
+    expect(commands.countByAnimation.apply(coreLibrary, [{costume: 'c'}])).toBe(
+      0
+    );
 
     expect(
       commands.countByAnimation.apply(coreLibrary, [{name: sprite1Name}])
@@ -50,10 +49,14 @@ describe('Sprite Commands', () => {
     coreLibrary.addSprite({name: sprite1Name});
     coreLibrary.addSprite({name: sprite2Name});
 
-    expect(coreLibrary.getSpriteIdsInUse()).toEqual(expect.arrayContaining([0, 1]));
+    expect(coreLibrary.getSpriteIdsInUse()).toEqual(
+      expect.arrayContaining([0, 1])
+    );
 
     commands.destroy.apply(coreLibrary, [{name: sprite1Name}]);
-    expect(coreLibrary.getSpriteIdsInUse()).toEqual(expect.arrayContaining([1]));
+    expect(coreLibrary.getSpriteIdsInUse()).toEqual(
+      expect.arrayContaining([1])
+    );
 
     commands.destroy.apply(coreLibrary, [{name: sprite2Name}]);
     expect(coreLibrary.getSpriteIdsInUse()).toEqual(expect.arrayContaining([]));
@@ -66,7 +69,9 @@ describe('Sprite Commands', () => {
 
     commands.destroy.apply(coreLibrary, [{costume: 'a'}]);
 
-    expect(coreLibrary.getSpriteIdsInUse()).toEqual(expect.arrayContaining([1]));
+    expect(coreLibrary.getSpriteIdsInUse()).toEqual(
+      expect.arrayContaining([1])
+    );
   });
 
   it('getProp for single sprite', () => {
@@ -107,9 +112,9 @@ describe('Sprite Commands', () => {
       location: {x: 321, y: 123},
     });
 
-    expect(
-      commands.getProp.apply(coreLibrary, [{costume: 'label'}, 'x'])
-    ).toBe(123);
+    expect(commands.getProp.apply(coreLibrary, [{costume: 'label'}, 'x'])).toBe(
+      123
+    );
   });
 
   it('setAnimation for single sprite', () => {

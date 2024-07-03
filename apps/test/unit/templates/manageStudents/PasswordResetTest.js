@@ -3,8 +3,6 @@ import React from 'react';
 
 import PasswordReset from '@cdo/apps/templates/manageStudents/PasswordReset';
 
-
-
 describe('PasswordReset', () => {
   it('disables reset password button if resetDisabled prop is true', () => {
     let wrapper = mount(<PasswordReset />);

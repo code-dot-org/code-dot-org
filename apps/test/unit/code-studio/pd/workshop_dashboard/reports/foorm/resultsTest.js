@@ -1,4 +1,4 @@
-import { mount } from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -319,9 +319,9 @@ describe('Foorm Daily Survey Results', () => {
       'MatrixChoiceResponses'
     );
     expect(generalMatrixResponses).toHaveLength(1);
-    expect(
-      generalMatrixResponses.first().find('ChoiceResponses')
-    ).toHaveLength(2);
+    expect(generalMatrixResponses.first().find('ChoiceResponses')).toHaveLength(
+      2
+    );
 
     let facilitatorSectionResults = sectionResults.last();
     expect(

@@ -4,8 +4,6 @@ import React from 'react';
 import Button from '@cdo/apps/templates/Button';
 import {UnconnectedEndOfLessonDialog as EndOfLessonDialog} from '@cdo/apps/templates/EndOfLessonDialog';
 
-
-
 const DEFAULT_PROPS = {
   lessonNumber: 2,
   isSummaryView: false,
@@ -34,11 +32,14 @@ describe('EndOfLessonDialog', () => {
   it('scrolls summary progress row into view when dismissed and isSummaryView = true', () => {
     const scrollIntoViewSpy = jest.fn();
 
-    jest.spyOn(document, 'getElementById').mockClear().mockImplementation((...args) => {
-      if (args[0] === 'summary-progress-row-2') {
-        return {scrollIntoView: scrollIntoViewSpy};
-      }
-    });
+    jest
+      .spyOn(document, 'getElementById')
+      .mockClear()
+      .mockImplementation((...args) => {
+        if (args[0] === 'summary-progress-row-2') {
+          return {scrollIntoView: scrollIntoViewSpy};
+        }
+      });
 
     const wrapper = setUp({isSummaryView: true});
     wrapper.find(Button).simulate('click');
@@ -50,11 +51,14 @@ describe('EndOfLessonDialog', () => {
   it('scrolls progress lesson into view when dismissed and isSummaryView = false', () => {
     const scrollIntoViewSpy = jest.fn();
 
-    jest.spyOn(document, 'getElementById').mockClear().mockImplementation((...args) => {
-      if (args[0] === 'progress-lesson-2') {
-        return {scrollIntoView: scrollIntoViewSpy};
-      }
-    });
+    jest
+      .spyOn(document, 'getElementById')
+      .mockClear()
+      .mockImplementation((...args) => {
+        if (args[0] === 'progress-lesson-2') {
+          return {scrollIntoView: scrollIntoViewSpy};
+        }
+      });
 
     const wrapper = setUp({isSummaryView: false});
     wrapper.find(Button).simulate('click');

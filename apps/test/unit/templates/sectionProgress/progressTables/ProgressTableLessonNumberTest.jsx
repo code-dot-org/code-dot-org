@@ -8,8 +8,6 @@ import ProgressTableLessonNumber, {
 } from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';
 import color from '@cdo/apps/util/color';
 
-
-
 const DEFAULT_PROPS = {
   id: 1,
   name: 'Intro to Problem Solving',

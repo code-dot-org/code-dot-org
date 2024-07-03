@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedErrorDialogStack as ErrorDialogStack} from '@cdo/apps/p5lab/ErrorDialogStack';
 
-
-
 var errorDialogStack = require('@cdo/apps/p5lab/redux/errorDialogStack');
 
 describe('ErrorDialogStack', function () {
@@ -70,7 +68,9 @@ describe('ErrorDialogStack', function () {
             isSpriteLab={false}
           />
         );
-        expect(dialog.text()).toContain('It looks like we are having trouble loading your animation');
+        expect(dialog.text()).toContain(
+          'It looks like we are having trouble loading your animation'
+        );
         expect(dialog.text()).toContain('https://code.org/contact');
         expect(dialog.find('Button')).toHaveLength(2);
       });
@@ -86,7 +86,9 @@ describe('ErrorDialogStack', function () {
             isSpriteLab={false}
           />
         );
-        expect(dialog.text()).not.toContain('It looks like we are having trouble loading your animation');
+        expect(dialog.text()).not.toContain(
+          'It looks like we are having trouble loading your animation'
+        );
         // only shows the close dialog 'X' button
         expect(dialog.find('Button')).toHaveLength(1);
       });

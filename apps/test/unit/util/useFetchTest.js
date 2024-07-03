@@ -4,7 +4,6 @@ import React from 'react';
 
 import {useFetch} from '@cdo/apps/util/useFetch';
 
-
 import {allowConsoleErrors} from '../../util/testUtils';
 
 // Functional react component to host the useFetch hook
@@ -40,7 +39,9 @@ describe('useFetch', () => {
 
   it('returns expected data on successful fetch', async () => {
     const expectedData = {name: 'Joe', age: 10};
-    fetchSpy.mockReturnValue(Promise.resolve({ok: true, json: () => expectedData}));
+    fetchSpy.mockReturnValue(
+      Promise.resolve({ok: true, json: () => expectedData})
+    );
 
     mount(<UseFetchHarness url={'/'} options={{}} deps={[]} />);
     await processEventLoop();

@@ -5,8 +5,6 @@ import {
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 
-
-
 describe('LightSensor', function () {
   let boardClient, lightSensor;
 
@@ -65,7 +63,9 @@ describe('LightSensor', function () {
   describe(`start() and stop()`, () => {
     it(`trigger the parent call`, () => {
       let startSpy = jest.spyOn(boardClient, 'streamAnalogChannel').mockClear();
-      let stopSpy = jest.spyOn(boardClient, 'stopStreamingAnalogChannel').mockClear();
+      let stopSpy = jest
+        .spyOn(boardClient, 'stopStreamingAnalogChannel')
+        .mockClear();
       lightSensor.start();
       expect(startSpy).toHaveBeenCalledTimes(1);
       expect(startSpy).toHaveBeenCalledWith(SENSOR_CHANNELS.lightSensor);

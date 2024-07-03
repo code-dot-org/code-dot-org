@@ -3,8 +3,6 @@ import React from 'react';
 
 import {ProjectNotFoundAlert} from '@cdo/apps/code-studio/initApp/renderProjectNotFound';
 
-
-
 describe('ProjectNotFoundAlert', () => {
   it('renders AlertExclamation with message', () => {
     const wrapper = shallow(<ProjectNotFoundAlert />);

@@ -16,8 +16,6 @@ import teacherSections, {
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-
-
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
 const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};
 const STUDENTS = [STUDENT_1, STUDENT_2];

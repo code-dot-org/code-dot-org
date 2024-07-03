@@ -4,8 +4,6 @@ import React from 'react';
 
 import {UnconnectedLevelTokenDetails as LevelTokenDetails} from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
 
-
-
 const defaultScriptLevel = {
   id: '10',
   position: 1,

@@ -5,7 +5,6 @@ import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
 
 import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
 
-
 describe('Behavior Commands', () => {
   let coreLibrary, animation;
   beforeEach(() => {
@@ -20,9 +19,18 @@ describe('Behavior Commands', () => {
   describe('draggableFunc', () => {
     let mousePressedOverStub, mouseWentDownStub, mouseWentUpStub;
     beforeEach(() => {
-      mousePressedOverStub = jest.spyOn(coreLibrary.p5, 'mousePressedOver').mockClear().mockImplementation();
-      mouseWentDownStub = jest.spyOn(coreLibrary.p5, 'mouseWentDown').mockClear().mockImplementation();
-      mouseWentUpStub = jest.spyOn(coreLibrary.p5, 'mouseWentUp').mockClear().mockImplementation();
+      mousePressedOverStub = jest
+        .spyOn(coreLibrary.p5, 'mousePressedOver')
+        .mockClear()
+        .mockImplementation();
+      mouseWentDownStub = jest
+        .spyOn(coreLibrary.p5, 'mouseWentDown')
+        .mockClear()
+        .mockImplementation();
+      mouseWentUpStub = jest
+        .spyOn(coreLibrary.p5, 'mouseWentUp')
+        .mockClear()
+        .mockImplementation();
     });
 
     afterEach(() => {

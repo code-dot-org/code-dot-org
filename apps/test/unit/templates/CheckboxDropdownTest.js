@@ -34,7 +34,9 @@ describe('CheckboxDropdown', function () {
     const wrapper = mount(<CheckboxDropdown {...defaultProps} />);
     const checkboxes = wrapper.find('input');
 
-    expect(checkboxes).toHaveLength(Object.keys(defaultProps.allOptions).length);
+    expect(checkboxes).toHaveLength(
+      Object.keys(defaultProps.allOptions).length
+    );
     checkboxes.forEach(checkbox => assert(!checkbox.props().checked));
   });
 
@@ -42,9 +44,13 @@ describe('CheckboxDropdown', function () {
     const wrapper = mount(<CheckboxDropdown {...propsWithCheckedOptions} />);
     const checkboxes = wrapper.find('input');
 
-    expect(checkboxes).toHaveLength(Object.keys(defaultProps.allOptions).length);
+    expect(checkboxes).toHaveLength(
+      Object.keys(defaultProps.allOptions).length
+    );
     checkboxes.forEach(checkbox => {
-      expect(checkbox.props().checked).toBe(propsWithCheckedOptions.checkedOptions.includes(checkbox.props().value));
+      expect(checkbox.props().checked).toBe(
+        propsWithCheckedOptions.checkedOptions.includes(checkbox.props().value)
+      );
     });
   });
 

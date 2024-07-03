@@ -3,8 +3,6 @@ import {
   ResponsiveSize,
 } from '@cdo/apps/code-studio/responsiveRedux';
 
-
-
 describe('responsiveRedux', () => {
   it('getResponsiveBreakpoint returns lg', () => {
     expect(getResponsiveBreakpoint(1000)).toBe(ResponsiveSize.lg);

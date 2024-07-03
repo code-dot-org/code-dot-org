@@ -9,8 +9,6 @@ import {
 } from '@cdo/apps/storage/dataBrowser/dataVisualizer/VisualizerModal';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
-
-
 const DEFAULT_PROPS = {
   isRtl: false,
   tableColumns: ['column1', 'column2'],
@@ -121,9 +119,9 @@ describe('VisualizerModal', () => {
         {id: 3, name: 'charlie', age: 9, male: true},
       ];
       let expectedNumericColumns = ['id', 'age'];
-      expect(
-        wrapper.instance().findNumericColumns(records, columns)
-      ).toEqual(expectedNumericColumns);
+      expect(wrapper.instance().findNumericColumns(records, columns)).toEqual(
+        expectedNumericColumns
+      );
     });
 
     it('ignores blank cells', () => {
@@ -154,9 +152,9 @@ describe('VisualizerModal', () => {
         'numericWithNull',
         'numericWithEmptyString',
       ];
-      expect(
-        wrapper.instance().findNumericColumns(records, columns)
-      ).toEqual(expectedNumericColumns);
+      expect(wrapper.instance().findNumericColumns(records, columns)).toEqual(
+        expectedNumericColumns
+      );
     });
 
     it('interprets columns with some numeric and some non-numeric values as non-numeric', () => {
@@ -167,9 +165,9 @@ describe('VisualizerModal', () => {
         {id: 3, name: 'charlie', age: 9, 'partially numeric': 5},
       ];
       let expectedNumericColumns = ['id', 'age'];
-      expect(
-        wrapper.instance().findNumericColumns(records, columns)
-      ).toEqual(expectedNumericColumns);
+      expect(wrapper.instance().findNumericColumns(records, columns)).toEqual(
+        expectedNumericColumns
+      );
     });
   });
 
@@ -422,14 +420,14 @@ describe('VisualizerModal', () => {
       });
     });
     it('works for bar charts', () => {
-      expect(
-        wrapper.instance().chartOptionsToString(ChartType.BAR_CHART)
-      ).toBe('Values: column1');
+      expect(wrapper.instance().chartOptionsToString(ChartType.BAR_CHART)).toBe(
+        'Values: column1'
+      );
     });
     it('works for histograms', () => {
-      expect(
-        wrapper.instance().chartOptionsToString(ChartType.HISTOGRAM)
-      ).toBe('Values: column1, Bucket Size: 2');
+      expect(wrapper.instance().chartOptionsToString(ChartType.HISTOGRAM)).toBe(
+        'Values: column1, Bucket Size: 2'
+      );
     });
     it('works for scatter plots', () => {
       expect(
@@ -437,18 +435,18 @@ describe('VisualizerModal', () => {
       ).toBe('X Values: column1, Y Values: column2');
     });
     it('works for cross tab charts', () => {
-      expect(
-        wrapper.instance().chartOptionsToString(ChartType.CROSS_TAB)
-      ).toBe('X Values: column1, Y Values: column2');
+      expect(wrapper.instance().chartOptionsToString(ChartType.CROSS_TAB)).toBe(
+        'X Values: column1, Y Values: column2'
+      );
     });
     it('works for filtering', () => {
       wrapper.instance().setState({
         filterColumn: 'column3',
         filterValue: 'value',
       });
-      expect(
-        wrapper.instance().chartOptionsToString(ChartType.BAR_CHART)
-      ).toBe('Values: column1, Filtered column3 to value');
+      expect(wrapper.instance().chartOptionsToString(ChartType.BAR_CHART)).toBe(
+        'Values: column1, Filtered column3 to value'
+      );
     });
   });
 });

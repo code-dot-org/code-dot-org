@@ -67,12 +67,16 @@ describe('BubbleChoice', () => {
 
       const backButton = wrapper.find('button').at(0);
       backButton.simulate('click');
-      expect(utils.navigateToHref).toHaveBeenCalledWith(DEFAULT_PROPS.level.previous_level_url + window.location.search);
+      expect(utils.navigateToHref).toHaveBeenCalledWith(
+        DEFAULT_PROPS.level.previous_level_url + window.location.search
+      );
 
       const finishButton = wrapper.find('button').at(1);
       assert.equal('Finish', finishButton.text());
       finishButton.simulate('click');
-      expect(utils.navigateToHref).toHaveBeenCalledWith(DEFAULT_PROPS.level.redirect_url + window.location.search);
+      expect(utils.navigateToHref).toHaveBeenCalledWith(
+        DEFAULT_PROPS.level.redirect_url + window.location.search
+      );
     });
 
     it('redirect to script page if no previous_level/redirect urls', () => {
@@ -88,12 +92,16 @@ describe('BubbleChoice', () => {
 
       const backButton = wrapper.find('button').at(0);
       backButton.simulate('click');
-      expect(utils.navigateToHref).toHaveBeenCalledWith(DEFAULT_PROPS.level.script_url + window.location.search);
+      expect(utils.navigateToHref).toHaveBeenCalledWith(
+        DEFAULT_PROPS.level.script_url + window.location.search
+      );
 
       const finishButton = wrapper.find('button').at(1);
       assert.equal('Finish', finishButton.text());
       finishButton.simulate('click');
-      expect(utils.navigateToHref).toHaveBeenCalledWith(DEFAULT_PROPS.level.script_url + window.location.search);
+      expect(utils.navigateToHref).toHaveBeenCalledWith(
+        DEFAULT_PROPS.level.script_url + window.location.search
+      );
     });
 
     it('hides back button if no previous level or script url', () => {

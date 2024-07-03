@@ -9,8 +9,6 @@ import {
   toBoolean,
 } from '@cdo/apps/storage/dataBrowser/dataUtils';
 
-
-
 describe('isBlank', () => {
   it('counts null, undefined, and empty string as blank', () => {
     expect(isBlank(null)).toBe(true);
@@ -74,17 +72,13 @@ describe('ignoreMissingValues', () => {
   });
 
   it('filters out records missing a value for any provided column', () => {
-    expect(
-      ignoreMissingValues(records, ['category1', 'category2'])
-    ).toEqual([
+    expect(ignoreMissingValues(records, ['category1', 'category2'])).toEqual([
       {category1: 'red', category2: 1, category3: 10},
       {category1: 'blue', category2: 1, category3: 20},
       {category1: 'red', category2: 3, category3: 10},
       {category1: 'blue', category2: 1, category3: null},
     ]);
-    expect(
-      ignoreMissingValues(records, ['category2', 'category3'])
-    ).toEqual([
+    expect(ignoreMissingValues(records, ['category2', 'category3'])).toEqual([
       {category1: 'red', category2: 1, category3: 10},
       {category1: 'blue', category2: 1, category3: 20},
       {category1: 'red', category2: 3, category3: 10},
@@ -180,7 +174,9 @@ describe('castValue', () => {
 
   it('does not allow objects or arrays', () => {
     expect(() => castValue('[1, 2, 3]')).toThrow(/Invalid entry type: object/);
-    expect(() => castValue('{"a": 1, "b": 2, "c": 3}')).toThrow(/Invalid entry type: object/);
+    expect(() => castValue('{"a": 1, "b": 2, "c": 3}')).toThrow(
+      /Invalid entry type: object/
+    );
   });
 
   it('converts "undefined" to undefined', () => {
@@ -189,8 +185,10 @@ describe('castValue', () => {
 
   it('only allows unquoted strings if allowUnquotedStrings is true', () => {
     expect(castValue('abc', /* allowUnquotedStrings */ true)).toBe('abc');
-    expect(() => castValue('abc', /* allowUnquotedStrings */ false)).toThrow(//      PhantomJS|Chrome
-    /JSON Parse error|Unexpected token/);
+    expect(() => castValue('abc', /* allowUnquotedStrings */ false)).toThrow(
+      //      PhantomJS|Chrome
+      /JSON Parse error|Unexpected token/
+    );
   });
 });
 

@@ -4,8 +4,6 @@ import React from 'react';
 import EditKeyRow from '@cdo/apps/storage/dataBrowser/EditKeyRow';
 import commonI18n from '@cdo/locale';
 
-
-
 describe('EditKeyRow', () => {
   describe('localization', () => {
     function createEditKeyRow() {
@@ -45,7 +43,10 @@ describe('EditKeyRow', () => {
     });
 
     it('should render a localized string while saving the row', () => {
-      jest.spyOn(commonI18n, 'saving').mockClear().mockReturnValue('i18n-saving');
+      jest
+        .spyOn(commonI18n, 'saving')
+        .mockClear()
+        .mockReturnValue('i18n-saving');
 
       const wrapper = createEditKeyRow();
 
@@ -57,7 +58,10 @@ describe('EditKeyRow', () => {
     });
 
     it('should render a localized string for "Delete"', () => {
-      jest.spyOn(commonI18n, 'delete').mockClear().mockReturnValue('i18n-delete');
+      jest
+        .spyOn(commonI18n, 'delete')
+        .mockClear()
+        .mockReturnValue('i18n-delete');
 
       const wrapper = createEditKeyRow();
 
@@ -66,7 +70,10 @@ describe('EditKeyRow', () => {
     });
 
     it('should render a localized string while saving the row', () => {
-      jest.spyOn(commonI18n, 'deletingWithEllipsis').mockClear().mockReturnValue('i18n-deleting');
+      jest
+        .spyOn(commonI18n, 'deletingWithEllipsis')
+        .mockClear()
+        .mockReturnValue('i18n-deleting');
 
       const wrapper = createEditKeyRow();
 

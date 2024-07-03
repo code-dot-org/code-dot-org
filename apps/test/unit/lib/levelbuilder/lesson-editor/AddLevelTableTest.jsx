@@ -3,8 +3,6 @@ import React from 'react';
 
 import AddLevelTable from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTable';
 
-
-
 describe('AddLevelTable', () => {
   let defaultProps, addLevel, setCurrentPage;
   beforeEach(() => {

@@ -1,4 +1,4 @@
-import { mount } from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/unit-editor/LessonExtrasEditor';

@@ -9,8 +9,6 @@ import viewAs from '@cdo/apps/code-studio/viewAsRedux';
 import SummaryTopLinks from '@cdo/apps/templates/levelSummary/SummaryTopLinks';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-
-
 import styles from '@cdo/apps/templates/levelSummary/summary.module.scss';
 
 const JS_DATA = {

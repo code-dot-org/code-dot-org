@@ -13,8 +13,6 @@ import {
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 
-
-
 describe('The ScreenSelector component', () => {
   beforeEach(() => {
     stubRedux();

@@ -4,8 +4,6 @@ import React from 'react';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 
-
-
 let dropdownValue;
 let onDropdownChange = value => (dropdownValue = value);
 

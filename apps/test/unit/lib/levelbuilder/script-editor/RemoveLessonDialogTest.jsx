@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedRemoveLessonDialog as RemoveLessonDialog} from '@cdo/apps/lib/levelbuilder/unit-editor/RemoveLessonDialog';
 
-
-
 describe('RemoveLessonDialog', () => {
   let handleClose, removeLesson, props;
   beforeEach(() => {

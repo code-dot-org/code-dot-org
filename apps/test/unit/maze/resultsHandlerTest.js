@@ -1,7 +1,5 @@
 import {MazeController} from '@code-dot-org/maze';
 
-
-
 const BeeHandler = require('@cdo/apps/maze/results/bee');
 const CollectorHandler = require('@cdo/apps/maze/results/collector');
 const FarmerHandler = require('@cdo/apps/maze/results/farmer');

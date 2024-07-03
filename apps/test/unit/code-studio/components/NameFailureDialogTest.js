@@ -3,8 +3,6 @@ import React from 'react';
 
 import NameFailureDialog from '@cdo/apps/code-studio/components/NameFailureDialog';
 
-
-
 describe('NameFailureDialog', () => {
   it('renders with flagged text', () => {
     const wrapper = shallow(

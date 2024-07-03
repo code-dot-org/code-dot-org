@@ -25,8 +25,6 @@ import {
 import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
 import javalabMsg from '@cdo/javalab/locale';
 
-
-
 describe('JavalabEditorDialogManager', () => {
   let defaultProps;
 
@@ -73,9 +71,11 @@ describe('JavalabEditorDialogManager', () => {
       expect(deleteProps.isOpen).toBe(true);
       expect(deleteProps.handleConfirm).toBe(defaultProps.onDeleteFile);
       expect(deleteProps.handleClose).toBe(defaultProps.closeEditorDialog);
-      expect(deleteProps.message).toBe(javalabMsg.deleteFileConfirmation({
-        filename: filenameToDelete,
-      }));
+      expect(deleteProps.message).toBe(
+        javalabMsg.deleteFileConfirmation({
+          filename: filenameToDelete,
+        })
+      );
       expect(deleteProps.confirmButtonText).toBe(javalabMsg.delete());
       expect(deleteProps.closeButtonText).toBe(javalabMsg.cancel());
       expect(deleteProps.displayTheme).toBe(defaultProps.displayTheme);
@@ -209,8 +209,12 @@ describe('JavalabEditorDialogManager', () => {
       expect(versionHistoryDialog).toBeDefined();
       const versionHistoryProps = versionHistoryDialog.props();
       expect(versionHistoryProps.isOpen).toBe(true);
-      expect(versionHistoryProps.handleClearPuzzle).toBe(defaultProps.handleClearPuzzle);
-      expect(versionHistoryProps.isProjectTemplateLevel).toBe(defaultProps.isProjectTemplateLevel);
+      expect(versionHistoryProps.handleClearPuzzle).toBe(
+        defaultProps.handleClearPuzzle
+      );
+      expect(versionHistoryProps.isProjectTemplateLevel).toBe(
+        defaultProps.isProjectTemplateLevel
+      );
       expect(versionHistoryProps.onClose).toBe(defaultProps.closeEditorDialog);
     });
   });

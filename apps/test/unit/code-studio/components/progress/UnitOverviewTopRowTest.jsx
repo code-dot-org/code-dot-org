@@ -12,8 +12,6 @@ import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailTog
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
 import i18n from '@cdo/locale';
 
-
-
 import {testLessons} from './unitCalendarTestData';
 
 const defaultProps = {

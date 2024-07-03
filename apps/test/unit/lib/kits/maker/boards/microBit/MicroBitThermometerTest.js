@@ -2,8 +2,6 @@ import {SENSOR_CHANNELS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBit
 import MicroBitThermometer from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitThermometer';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 
-
-
 describe('MicroBitThermometer', function () {
   let boardClient, thermometer;
 
@@ -40,7 +38,9 @@ describe('MicroBitThermometer', function () {
   describe(`start() and stop()`, () => {
     it(`trigger the parent call`, () => {
       let startSpy = jest.spyOn(boardClient, 'streamAnalogChannel').mockClear();
-      let stopSpy = jest.spyOn(boardClient, 'stopStreamingAnalogChannel').mockClear();
+      let stopSpy = jest
+        .spyOn(boardClient, 'stopStreamingAnalogChannel')
+        .mockClear();
       thermometer.start();
       expect(startSpy).toHaveBeenCalledTimes(1);
       expect(startSpy).toHaveBeenCalledWith(SENSOR_CHANNELS.tempSensor);

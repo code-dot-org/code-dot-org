@@ -5,14 +5,15 @@ import GoogleChart from '@cdo/apps/applab/GoogleChart';
 import {ChartType} from '@cdo/apps/storage/dataBrowser/dataUtils';
 import GoogleChartWrapper from '@cdo/apps/storage/dataBrowser/dataVisualizer/GoogleChartWrapper';
 
-
-
 describe('GoogleChartWrapper', () => {
   describe('updateChart', () => {
     let spy;
     beforeEach(() => {
       GoogleChart.lib = {};
-      spy = jest.spyOn(GoogleChart.prototype, 'drawChart').mockClear().mockImplementation();
+      spy = jest
+        .spyOn(GoogleChart.prototype, 'drawChart')
+        .mockClear()
+        .mockImplementation();
     });
     afterEach(() => {
       spy.mockRestore();

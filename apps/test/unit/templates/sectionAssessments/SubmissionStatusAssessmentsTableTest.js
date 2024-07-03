@@ -167,7 +167,9 @@ describe('SubmissionStatusAssessmentsTable', () => {
     );
 
     // Renders a user-friendly formatted time string
-    expect(wrapper.find('.timestampCell').first().text()).toBe('10/7/2018, 8:52:05 PM');
+    expect(wrapper.find('.timestampCell').first().text()).toBe(
+      '10/7/2018, 8:52:05 PM'
+    );
 
     // Also renders a machine/screen-reader-friendly (Date)Time Element
     expect(wrapper.find('.timestampCell').first().find('time')).toBeDefined();
@@ -187,9 +189,9 @@ describe('SubmissionStatusAssessmentsTable', () => {
         localeCode={'es-MX'}
       />
     );
-    expect(
-      basicNonEnglishWrapper.find('.timestampCell').first().text()
-    ).toBe('7/10/2018 20:52:05');
+    expect(basicNonEnglishWrapper.find('.timestampCell').first().text()).toBe(
+      '7/10/2018 20:52:05'
+    );
 
     // localeCode will undefined by default here, but it defaults to null in
     // redux; so, make sure we explicitly test that particular falsy value
@@ -199,6 +201,8 @@ describe('SubmissionStatusAssessmentsTable', () => {
         localeCode={null}
       />
     );
-    expect(nullLocaleWrapper.find('.timestampCell').first().text()).toBe('10/7/2018, 8:52:05 PM');
+    expect(nullLocaleWrapper.find('.timestampCell').first().text()).toBe(
+      '10/7/2018, 8:52:05 PM'
+    );
   });
 });

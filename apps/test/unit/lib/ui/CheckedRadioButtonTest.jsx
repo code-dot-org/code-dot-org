@@ -3,8 +3,6 @@ import React from 'react';
 
 import {CheckedRadioButton} from '@cdo/apps/lib/ui/CheckedRadioButton';
 
-
-
 const DEFAULT_PROPS = {
   id: 'rubric-input-performanceLevel1',
   disabledMode: false,

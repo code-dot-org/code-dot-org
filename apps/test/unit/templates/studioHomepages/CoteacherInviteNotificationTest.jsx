@@ -4,8 +4,6 @@ import React from 'react';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import {UnconnectedCoteacherInviteNotification as CoteacherInviteNotification} from '@cdo/apps/templates/studioHomepages/CoteacherInviteNotification';
 
-
-
 describe('CoteacherInviteNotification', () => {
   const defaultProps = {
     isForPl: false,

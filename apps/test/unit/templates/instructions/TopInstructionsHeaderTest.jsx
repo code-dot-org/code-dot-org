@@ -8,8 +8,6 @@ import TopInstructionsHeader from '@cdo/apps/templates/instructions/TopInstructi
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import i18n from '@cdo/locale';
 
-
-
 const DEFAULT_PROPS = {
   teacherOnly: false,
   tabSelected: TabType.INSTRUCTIONS,

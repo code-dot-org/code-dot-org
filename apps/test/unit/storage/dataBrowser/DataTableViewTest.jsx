@@ -4,8 +4,6 @@ import React from 'react';
 import {UnconnectedDataTableView as DataTableView} from '@cdo/apps/storage/dataBrowser/DataTableView';
 import commonI18n from '@cdo/locale';
 
-
-
 const DEFAULT_PROPS = {
   isRtl: false,
   tableColumns: [],
@@ -41,7 +39,10 @@ describe('DataTableView', () => {
     });
 
     it('should render a localized string for "Back to data"', () => {
-      jest.spyOn(commonI18n, 'backToData').mockClear().mockReturnValue('i18n-back-to-data');
+      jest
+        .spyOn(commonI18n, 'backToData')
+        .mockClear()
+        .mockReturnValue('i18n-back-to-data');
 
       const wrapper = shallow(<DataTableView {...DEFAULT_PROPS} />);
 
@@ -50,7 +51,10 @@ describe('DataTableView', () => {
     });
 
     it('should render a localized string for the "Debug view"', () => {
-      jest.spyOn(commonI18n, 'dataTableDebugView').mockClear().mockReturnValue('i18n-debug-view');
+      jest
+        .spyOn(commonI18n, 'dataTableDebugView')
+        .mockClear()
+        .mockReturnValue('i18n-debug-view');
 
       const wrapper = shallow(<DataTableView {...DEFAULT_PROPS} />);
 
@@ -59,7 +63,10 @@ describe('DataTableView', () => {
     });
 
     it('should render a localized string for the "Table view"', () => {
-      jest.spyOn(commonI18n, 'dataTableTableView').mockClear().mockReturnValue('i18n-table-view');
+      jest
+        .spyOn(commonI18n, 'dataTableTableView')
+        .mockClear()
+        .mockReturnValue('i18n-table-view');
 
       const wrapper = shallow(<DataTableView {...DEFAULT_PROPS} />);
 

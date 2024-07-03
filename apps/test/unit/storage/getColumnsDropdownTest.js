@@ -1,7 +1,5 @@
 import {__TestInterface} from '@cdo/apps/storage/getColumnDropdown';
 
-
-
 describe('getTableNameFromColumnSocket', () => {
   const makeFakeSocket = function (tableName) {
     return {

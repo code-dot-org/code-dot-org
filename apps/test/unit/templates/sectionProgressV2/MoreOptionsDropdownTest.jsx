@@ -4,8 +4,6 @@ import React from 'react';
 import {UnconnectedMoreOptionsDropdown as MoreOptionsDropdown} from '@cdo/apps/templates/sectionProgressV2/MoreOptionsDropdown';
 import i18n from '@cdo/locale';
 
-
-
 describe('MoreOptionsDropdown', () => {
   const students = [
     {id: 1, name: 'Student1'},

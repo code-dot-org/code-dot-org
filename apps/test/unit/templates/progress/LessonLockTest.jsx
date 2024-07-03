@@ -6,8 +6,6 @@ import Button from '@cdo/apps/templates/Button';
 import LessonLock from '@cdo/apps/templates/progress/LessonLock';
 import i18n from '@cdo/locale';
 
-
-
 const FAKE_LESSON_ID = 33;
 const FAKE_UNIT_ID = 1;
 const DEFAULT_PROPS = {

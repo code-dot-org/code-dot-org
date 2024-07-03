@@ -3,8 +3,6 @@ import React from 'react';
 
 import ImageUploadModal from '@cdo/apps/templates/imageUploadWarning/ImageUploadModal';
 
-
-
 const defaultProps = {
   isOpen: true,
   cancelUpload: () => {},

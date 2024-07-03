@@ -10,8 +10,6 @@ import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
 import ProgressTableLevelIconSet from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelIconSet';
 import {unitTestExports} from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelSpacer';
 
-
-
 const levelWithSublevels = {
   id: '123',
   levelNumber: 1,
@@ -33,6 +31,8 @@ describe('ProgressTableLevelIconSet', () => {
   it('renders extra space for sublevels', () => {
     const wrapper = mount(<ProgressTableLevelIconSet {...DEFAULT_PROPS} />);
     const sublevelSpacer = wrapper.find(unitTestExports.SublevelSpacer);
-    expect(sublevelSpacer.childAt(0).props().style.width).toBe(2 * bubbleContainerWidths[BubbleSize.letter]);
+    expect(sublevelSpacer.childAt(0).props().style.width).toBe(
+      2 * bubbleContainerWidths[BubbleSize.letter]
+    );
   });
 });

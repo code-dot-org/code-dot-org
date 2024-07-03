@@ -3,7 +3,6 @@ import {
   BOARD_TYPE,
 } from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
-
 import {
   CIRCUIT_PLAYGROUND_EXPRESS_PORTS,
   CIRCUIT_PLAYGROUND_PORTS,
@@ -13,13 +12,15 @@ import {
 describe('boardUtils', () => {
   describe(`detectBoardTypeFromPort()`, () => {
     it('sets the type of board detected for Classic boards', () => {
-      expect(detectBoardTypeFromPort(CIRCUIT_PLAYGROUND_PORTS[0])).toBe(BOARD_TYPE.CLASSIC);
+      expect(detectBoardTypeFromPort(CIRCUIT_PLAYGROUND_PORTS[0])).toBe(
+        BOARD_TYPE.CLASSIC
+      );
     });
 
     it('sets the type of board detected for Express boards', () => {
-      expect(
-        detectBoardTypeFromPort(CIRCUIT_PLAYGROUND_EXPRESS_PORTS[0])
-      ).toBe(BOARD_TYPE.EXPRESS);
+      expect(detectBoardTypeFromPort(CIRCUIT_PLAYGROUND_EXPRESS_PORTS[0])).toBe(
+        BOARD_TYPE.EXPRESS
+      );
     });
 
     it('sets the type of board detected for other boards', () => {

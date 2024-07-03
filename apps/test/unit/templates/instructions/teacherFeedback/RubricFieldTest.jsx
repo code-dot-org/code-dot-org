@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnwrappedRubricField as RubricField} from '@cdo/apps/templates/instructions/teacherFeedback/RubricField';
 
-
-
 const DEFAULT_PROPS = {
   showFeedbackInputAreas: true,
   rubricLevel: 'performanceLevel1',

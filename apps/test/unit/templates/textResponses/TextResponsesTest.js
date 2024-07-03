@@ -5,8 +5,6 @@ import {act} from 'react-dom/test-utils';
 import * as textReponsesDataApi from '@cdo/apps/templates/textResponses/textReponsesDataApi';
 import {UnconnectedTextResponses as TextResponses} from '@cdo/apps/templates/textResponses/TextResponses';
 
-
-
 // responses (object) - keys are scriptIds, values are
 // array of student text responses for that script
 const responses = [
@@ -42,7 +40,9 @@ const responses = [
 describe('TextResponses', () => {
   describe('when there are text responses', () => {
     beforeEach(() => {
-      jest.spyOn(textReponsesDataApi, 'loadTextResponsesFromServer').mockClear()
+      jest
+        .spyOn(textReponsesDataApi, 'loadTextResponsesFromServer')
+        .mockClear()
         .mockReturnValue(Promise.resolve(responses));
     });
 
@@ -133,7 +133,9 @@ describe('TextResponses', () => {
 
   describe('when there are no text responses', () => {
     beforeEach(() => {
-      jest.spyOn(textReponsesDataApi, 'loadTextResponsesFromServer').mockClear()
+      jest
+        .spyOn(textReponsesDataApi, 'loadTextResponsesFromServer')
+        .mockClear()
         .mockReturnValue(Promise.resolve({}));
     });
 

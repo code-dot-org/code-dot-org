@@ -3,8 +3,6 @@ import React from 'react';
 
 import CloneLessonDialogButton from '@cdo/apps/lib/levelbuilder/CloneLessonDialogButton';
 
-
-
 describe('CloneLessonDialogButton', () => {
   let defaultProps;
 

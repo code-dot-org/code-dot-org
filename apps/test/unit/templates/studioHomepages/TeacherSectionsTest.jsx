@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedTeacherSections as TeacherSections} from '@cdo/apps/templates/studioHomepages/TeacherSections';
 
-
-
 describe('TeacherSections', () => {
   const defaultProps = {
     asyncLoadSectionData: () => {},

@@ -4,8 +4,6 @@ import React from 'react';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import SchoolNotFound from '@cdo/apps/templates/SchoolNotFound';
 
-
-
 const MINIMUM_PROPS = {
   onCountryChange: () => {},
   onSchoolTypeChange: () => {},
@@ -31,8 +29,14 @@ describe('SchoolInfoInputs', () => {
     const schoolNotFound = wrapper.find(SchoolNotFound);
     expect(schoolNotFound).toBeDefined();
     expect(schoolNotFound.props()).toHaveProperty('schoolName', '');
-    expect(schoolNotFound.props()).toHaveProperty('schoolType', SchoolNotFound.OMIT_FIELD);
-    expect(schoolNotFound.props()).toHaveProperty('schoolCity', SchoolNotFound.OMIT_FIELD);
+    expect(schoolNotFound.props()).toHaveProperty(
+      'schoolType',
+      SchoolNotFound.OMIT_FIELD
+    );
+    expect(schoolNotFound.props()).toHaveProperty(
+      'schoolCity',
+      SchoolNotFound.OMIT_FIELD
+    );
     expect(schoolNotFound.props()).toHaveProperty('schoolState', '');
     expect(schoolNotFound.props()).toHaveProperty('schoolZip', '');
     expect(schoolNotFound.props()).toHaveProperty('schoolLocation', '');
@@ -48,9 +52,18 @@ describe('SchoolInfoInputs', () => {
     );
     const schoolNotFound = wrapper.find(SchoolNotFound);
     expect(schoolNotFound).toBeDefined();
-    expect(schoolNotFound.props()).toHaveProperty('schoolName', SchoolNotFound.OMIT_FIELD);
-    expect(schoolNotFound.props()).toHaveProperty('schoolType', SchoolNotFound.OMIT_FIELD);
-    expect(schoolNotFound.props()).toHaveProperty('schoolCity', SchoolNotFound.OMIT_FIELD);
+    expect(schoolNotFound.props()).toHaveProperty(
+      'schoolName',
+      SchoolNotFound.OMIT_FIELD
+    );
+    expect(schoolNotFound.props()).toHaveProperty(
+      'schoolType',
+      SchoolNotFound.OMIT_FIELD
+    );
+    expect(schoolNotFound.props()).toHaveProperty(
+      'schoolCity',
+      SchoolNotFound.OMIT_FIELD
+    );
     expect(schoolNotFound.props()).toHaveProperty('schoolState', '');
     expect(schoolNotFound.props()).toHaveProperty('schoolZip', '');
     expect(schoolNotFound.props()).toHaveProperty('schoolLocation', '');
@@ -67,10 +80,22 @@ describe('SchoolInfoInputs', () => {
     const schoolNotFound = wrapper.find(SchoolNotFound);
     expect(schoolNotFound).toBeDefined();
     expect(schoolNotFound.props()).toHaveProperty('schoolName', '');
-    expect(schoolNotFound.props()).toHaveProperty('schoolType', SchoolNotFound.OMIT_FIELD);
-    expect(schoolNotFound.props()).toHaveProperty('schoolCity', SchoolNotFound.OMIT_FIELD);
-    expect(schoolNotFound.props()).toHaveProperty('schoolState', SchoolNotFound.OMIT_FIELD);
-    expect(schoolNotFound.props()).toHaveProperty('schoolZip', SchoolNotFound.OMIT_FIELD);
+    expect(schoolNotFound.props()).toHaveProperty(
+      'schoolType',
+      SchoolNotFound.OMIT_FIELD
+    );
+    expect(schoolNotFound.props()).toHaveProperty(
+      'schoolCity',
+      SchoolNotFound.OMIT_FIELD
+    );
+    expect(schoolNotFound.props()).toHaveProperty(
+      'schoolState',
+      SchoolNotFound.OMIT_FIELD
+    );
+    expect(schoolNotFound.props()).toHaveProperty(
+      'schoolZip',
+      SchoolNotFound.OMIT_FIELD
+    );
     expect(schoolNotFound.props()).toHaveProperty('schoolLocation', '');
   });
 
@@ -84,11 +109,26 @@ describe('SchoolInfoInputs', () => {
     );
     const schoolNotFound = wrapper.find(SchoolNotFound);
     expect(schoolNotFound).toBeDefined();
-    expect(schoolNotFound.props()).toHaveProperty('schoolName', SchoolNotFound.OMIT_FIELD);
-    expect(schoolNotFound.props()).toHaveProperty('schoolType', SchoolNotFound.OMIT_FIELD);
-    expect(schoolNotFound.props()).toHaveProperty('schoolCity', SchoolNotFound.OMIT_FIELD);
-    expect(schoolNotFound.props()).toHaveProperty('schoolState', SchoolNotFound.OMIT_FIELD);
-    expect(schoolNotFound.props()).toHaveProperty('schoolZip', SchoolNotFound.OMIT_FIELD);
+    expect(schoolNotFound.props()).toHaveProperty(
+      'schoolName',
+      SchoolNotFound.OMIT_FIELD
+    );
+    expect(schoolNotFound.props()).toHaveProperty(
+      'schoolType',
+      SchoolNotFound.OMIT_FIELD
+    );
+    expect(schoolNotFound.props()).toHaveProperty(
+      'schoolCity',
+      SchoolNotFound.OMIT_FIELD
+    );
+    expect(schoolNotFound.props()).toHaveProperty(
+      'schoolState',
+      SchoolNotFound.OMIT_FIELD
+    );
+    expect(schoolNotFound.props()).toHaveProperty(
+      'schoolZip',
+      SchoolNotFound.OMIT_FIELD
+    );
     expect(schoolNotFound.props()).toHaveProperty('schoolLocation', '');
   });
 });

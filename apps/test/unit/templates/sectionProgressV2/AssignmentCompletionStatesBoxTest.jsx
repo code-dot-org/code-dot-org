@@ -3,8 +3,6 @@ import React from 'react';
 
 import AssignmentCompletionStatesBox from '@cdo/apps/templates/sectionProgressV2/AssignmentCompletionStatesBox';
 
-
-
 describe('AssignmentCompletionStatesBox Component', () => {
   it('renders all options', () => {
     render(<AssignmentCompletionStatesBox />);

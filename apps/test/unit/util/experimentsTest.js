@@ -1,8 +1,6 @@
 import DCDO from '@cdo/apps/dcdo';
 import experiments from '@cdo/apps/util/experiments';
 
-
-
 describe('experiments.isEnabled', () => {
   afterEach(() => {
     // cleanup changes the tests made to the global DCDO object.

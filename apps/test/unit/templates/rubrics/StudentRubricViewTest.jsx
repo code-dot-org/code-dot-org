@@ -3,8 +3,6 @@ import React from 'react';
 
 import StudentRubricView from '@cdo/apps/templates/rubrics/StudentRubricView';
 
-
-
 describe('StudentRubricView', () => {
   const defaultRubric = {
     learningGoals: [
@@ -37,13 +35,13 @@ describe('StudentRubricView', () => {
     const wrapper = shallow(<StudentRubricView rubric={defaultRubric} />);
     const renderedLearningGoals = wrapper.find('LearningGoal');
     expect(renderedLearningGoals).toHaveLength(2);
-    expect(
-      renderedLearningGoals.at(0).props().learningGoal.learningGoal
-    ).toBe('goal 1');
+    expect(renderedLearningGoals.at(0).props().learningGoal.learningGoal).toBe(
+      'goal 1'
+    );
     expect(renderedLearningGoals.at(0).props().canProvideFeedback).toBe(false);
-    expect(
-      renderedLearningGoals.at(1).props().learningGoal.learningGoal
-    ).toBe('goal 2');
+    expect(renderedLearningGoals.at(1).props().learningGoal.learningGoal).toBe(
+      'goal 2'
+    );
     expect(renderedLearningGoals.at(1).props().canProvideFeedback).toBe(false);
     expect(renderedLearningGoals.at(1).props().isStudent).toBe(true);
   });

@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedActivitiesEditor as ActivitiesEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
 
-
-
 import {sampleActivities} from './activitiesTestData';
 
 describe('ActivitiesEditor', () => {
@@ -48,6 +46,10 @@ describe('ActivitiesEditor', () => {
     const button = wrapper.find('button').at(0);
     expect(button.text()).toContain('Activity');
     button.simulate('mouseDown');
-    expect(addActivity).toHaveBeenCalledWith(1, 'activity-2', 'activitySection-1');
+    expect(addActivity).toHaveBeenCalledWith(
+      1,
+      'activity-2',
+      'activitySection-1'
+    );
   });
 });

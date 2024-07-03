@@ -15,7 +15,6 @@ import {
   fakeDetailRowsForStudent,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressTestHelpers';
 
-
 import {allowConsoleWarnings} from '../../../../util/testUtils';
 
 import progressTableStyleConstants from '@cdo/apps/templates/sectionProgress/progressTables/progress-table-constants.module.scss';
@@ -135,7 +134,11 @@ describe('ProgressTableContentView', () => {
     const headers = wrapper.find('th');
     expect(headers.at(0).props().style?.minWidth).toBeUndefined();
     expect(headers.at(0).props().style?.maxWidth).toBeUndefined();
-    expect(headers.at(3).props().style.minWidth).toBe(parseInt(progressTableStyleConstants.MIN_COLUMN_WIDTH));
-    expect(headers.at(3).props().style.maxWidth).toBe(parseInt(progressTableStyleConstants.MIN_COLUMN_WIDTH));
+    expect(headers.at(3).props().style.minWidth).toBe(
+      parseInt(progressTableStyleConstants.MIN_COLUMN_WIDTH)
+    );
+    expect(headers.at(3).props().style.maxWidth).toBe(
+      parseInt(progressTableStyleConstants.MIN_COLUMN_WIDTH)
+    );
   });
 });

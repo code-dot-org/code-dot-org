@@ -7,8 +7,6 @@ import {
   subjectsAndTopicsOrder,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 
-
-
 describe('CourseOfferingHelpers', () => {
   it('each translatedCourseOfferingCsTopics constant is mapped to a non-empty string', () => {
     Object.values(translatedCourseOfferingCsTopics).forEach(cs_topic => {

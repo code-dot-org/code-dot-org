@@ -6,8 +6,6 @@ import {
   getBrowserName,
 } from '@cdo/apps/util/browser-detector';
 
-
-
 describe('Browser Detector', () => {
   let userAgentStub;
   let appVersionStub;

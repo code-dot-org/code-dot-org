@@ -5,8 +5,6 @@ import {
   printerStyleNumberRangeToList,
 } from '@cdo/apps/blockly/utils';
 
-
-
 describe('the parseSoundPathString function', () => {
   it('for a valid path to sound file, returns a user-friendly sound name with category', () => {
     expect(
@@ -22,23 +20,32 @@ describe('the parseSoundPathString function', () => {
 
   it('for an invalid path to sound file, throws an error', () => {
     const errMsg = 'This is not a valid path to a sound file.';
-    expect(() => {
+    const result = () => {
       parseSoundPathString('sound');
-    }).toThrow(Error);
+    };
+
+    expect(result).toThrow(Error);
+    expect(result).toThrow(errMsg);
   });
 
   it('for an invalid path to sound file (no mp3 file extension), throws an error', () => {
     const errMsg = 'This is not a valid path to a sound file.';
-    expect(() => {
+    const result = () => {
       parseSoundPathString(`${SOUND_PREFIX}default`);
-    }).toThrow(Error);
+    };
+
+    expect(result).toThrow(Error);
+    expect(result).toThrow(errMsg);
   });
 
   it('for an invalid path to sound file (does not begin with sound://), throws an error', () => {
     const errMsg = 'This is not a valid path to a sound file.';
-    expect(() => {
+    const result = () => {
       parseSoundPathString('default.mp3');
-    }).toThrow(Error);
+    };
+
+    expect(result).toThrow(Error);
+    expect(result).toThrow(errMsg);
   });
 });
 
@@ -55,7 +62,9 @@ describe('the printerStyleNumberRangeToList function', () => {
     expect(printerStyleNumberRangeToList('1,2,4,6')).toEqual([1, 2, 4, 6]);
   });
   it('for a string containing multiple number ranges, returns number list', () => {
-    expect(printerStyleNumberRangeToList('1-3,5-7')).toEqual([1, 2, 3, 5, 6, 7]);
+    expect(printerStyleNumberRangeToList('1-3,5-7')).toEqual([
+      1, 2, 3, 5, 6, 7,
+    ]);
   });
   it('for a string containing no numbers, returns empty list', () => {
     expect(

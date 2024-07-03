@@ -3,8 +3,6 @@ import React from 'react';
 
 import LessonTip from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
 
-
-
 describe('LessonTip', () => {
   let defaultProps;
   beforeEach(() => {

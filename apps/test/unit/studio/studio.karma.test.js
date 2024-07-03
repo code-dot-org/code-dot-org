@@ -7,7 +7,6 @@ import Studio, {
   calculateBubblePosition,
 } from '@cdo/apps/studio/studio';
 
-
 import {
   replaceOnWindow,
   restoreOnWindow,

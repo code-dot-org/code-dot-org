@@ -4,8 +4,6 @@ import React from 'react';
 
 import Tags from '@cdo/apps/componentLibrary/tags';
 
-
-
 describe('Design System - Tags', () => {
   it('Tags - renders with correct label', () => {
     render(

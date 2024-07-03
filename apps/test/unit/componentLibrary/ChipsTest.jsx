@@ -4,8 +4,6 @@ import React from 'react';
 
 import Chips from '@cdo/apps/componentLibrary/chips';
 
-
-
 const options = [
   {value: 'chip1', label: 'Chip1'},
   {value: 'chip2', label: 'Chip2'},

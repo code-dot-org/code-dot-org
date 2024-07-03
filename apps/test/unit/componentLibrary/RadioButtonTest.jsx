@@ -4,7 +4,6 @@ import React from 'react';
 
 import RadioButton from '@cdo/apps/componentLibrary/radioButton';
 
-
 describe('Design System - Radio Button', () => {
   it('RadioButton - renders with correct label', () => {
     const radioButtonLabel = 'Radio Button label';

@@ -6,8 +6,6 @@ import './CodeReviewTestHelper';
 import {UnconnectedComment as Comment} from '@cdo/apps/templates/instructions/codeReviewV2/Comment';
 import color from '@cdo/apps/util/color';
 
-
-
 const DEFAULT_COMMENT = Factory.build('CodeReviewV2Comment');
 const DEFAULT_PROPS = {
   comment: DEFAULT_COMMENT,

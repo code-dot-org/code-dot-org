@@ -1,4 +1,4 @@
-import { shallow } from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import FreeResponseSection from '@cdo/apps/code-studio/pd/workshop_dashboard/components/survey_results/free_response_section';

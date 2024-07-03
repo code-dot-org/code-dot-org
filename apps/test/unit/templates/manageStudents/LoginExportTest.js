@@ -5,8 +5,6 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import LoginExport from '@cdo/apps/templates/manageStudents/LoginExport';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
-
-
 const DEFAULT_PROPS = {
   sectionCode: 'ABCDEF',
   sectionName: 'Section Name',

@@ -3,8 +3,6 @@ import React from 'react';
 
 import ReferenceGuideView from '@cdo/apps/templates/referenceGuides/ReferenceGuideView';
 
-
-
 describe('ReferenceGuideView', () => {
   it('reference guide shows title', () => {
     const referenceGuide = {
@@ -39,7 +37,9 @@ describe('ReferenceGuideView', () => {
         baseUrl={'fgsfds'}
       />
     );
-    expect(wrapper.findOne('ReferenceGuide').props.referenceGuide).toBe(referenceGuide);
+    expect(wrapper.findOne('ReferenceGuide').props.referenceGuide).toBe(
+      referenceGuide
+    );
   });
 
   it('reference guide formats categories for nav bar', () => {
@@ -99,7 +99,11 @@ describe('ReferenceGuideView', () => {
     expect(bar.props.children[1].key).toBe('guide2');
 
     // renders first category item
-    expect(bar.props.children[0].props.children[0].props.text).toContain('display name 3');
-    expect(bar.props.children[0].props.children[1].props.text).toContain('display name 5');
+    expect(bar.props.children[0].props.children[0].props.text).toContain(
+      'display name 3'
+    );
+    expect(bar.props.children[0].props.children[1].props.text).toContain(
+      'display name 5'
+    );
   });
 });

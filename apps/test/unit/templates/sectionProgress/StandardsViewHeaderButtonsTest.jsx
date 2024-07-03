@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedStandardsViewHeaderButtons as StandardsViewHeaderButtons} from '@cdo/apps/templates/sectionProgress/standards/StandardsViewHeaderButtons';
 
-
-
 describe('StandardsViewHeaderButtons', () => {
   it('does not show update unplugged progress button if no unplugged lessons', () => {
     const wrapper = shallow(

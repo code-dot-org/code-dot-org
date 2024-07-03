@@ -10,8 +10,6 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {UnconnectedTeacherDashboardHeader as TeacherDashboardHeader} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardHeader';
 import i18n from '@cdo/locale';
 
-
-
 // Note: The UnconnectedTeacherDashboadHeader assumes the sections it receives
 // have already been filtered (to remove hidden sections) and sorted
 const MOCK_SECTIONS = [
@@ -101,14 +99,14 @@ describe('TeacherDashboardHeader', () => {
     expect(dropdownLinks).toHaveLength(3);
 
     let checkmarkIcon = <FontAwesome icon="check" />;
-    expect(
-      dropdownLinks.at(0).contains('intro to computer science III')
-    ).toBe(true);
+    expect(dropdownLinks.at(0).contains('intro to computer science III')).toBe(
+      true
+    );
     expect(dropdownLinks.at(0).contains(checkmarkIcon)).toBe(true);
 
-    expect(
-      dropdownLinks.at(1).contains('intro to computer science II')
-    ).toBe(true);
+    expect(dropdownLinks.at(1).contains('intro to computer science II')).toBe(
+      true
+    );
     expect(dropdownLinks.at(1).contains(checkmarkIcon)).toBe(false);
   });
 

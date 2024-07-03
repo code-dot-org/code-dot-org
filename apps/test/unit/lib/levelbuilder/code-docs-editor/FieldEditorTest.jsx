@@ -3,8 +3,6 @@ import React from 'react';
 
 import FieldEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/FieldEditor';
 
-
-
 describe('FieldEditor', () => {
   let defaultProps, updateSpy;
 

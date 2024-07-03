@@ -3,8 +3,6 @@ import {ACCEL_EVENT_ID} from '@cdo/apps/lib/kits/maker/boards/microBit/MBFirmata
 import {SENSOR_CHANNELS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 
-
-
 describe('MicroBitAccelerometer', function () {
   let boardClient;
   let accelerometer;
@@ -71,7 +69,9 @@ describe('MicroBitAccelerometer', function () {
   describe(`start() and stop()`, () => {
     it(`trigger the parent call`, () => {
       let startSpy = jest.spyOn(boardClient, 'streamAnalogChannel').mockClear();
-      let stopSpy = jest.spyOn(boardClient, 'stopStreamingAnalogChannel').mockClear();
+      let stopSpy = jest
+        .spyOn(boardClient, 'stopStreamingAnalogChannel')
+        .mockClear();
       accelerometer.start();
       expect(startSpy).toHaveBeenCalledTimes(3);
       expect(startSpy).toHaveBeenCalledWith(SENSOR_CHANNELS.accelX);
@@ -95,7 +95,9 @@ describe('MicroBitAccelerometer', function () {
 
       expect(accelerometer.pitch).toBe(accelerometer.getOrientation('pitch'));
       expect(accelerometer.roll).toBe(accelerometer.getOrientation('roll'));
-      expect(accelerometer.inclination).toBe(accelerometer.getOrientation('inclination'));
+      expect(accelerometer.inclination).toBe(
+        accelerometer.getOrientation('inclination')
+      );
     });
   });
 
@@ -112,7 +114,9 @@ describe('MicroBitAccelerometer', function () {
     });
 
     it(`total parameter returns acceleration`, () => {
-      expect(accelerometer.getAcceleration('total')).toBe(accelerometer.acceleration);
+      expect(accelerometer.getAcceleration('total')).toBe(
+        accelerometer.acceleration
+      );
     });
 
     it(`x, y, z parameter returns x, y, z acceleration`, () => {

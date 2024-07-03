@@ -1,7 +1,5 @@
 import parser from '@cdo/apps/code-studio/components/libraries/libraryParser';
 
-
-
 describe('Library parser', () => {
   describe('sanitizeName', () => {
     it('removes whitespace', () => {
@@ -46,13 +44,15 @@ describe('Library parser', () => {
           emptyLibraryName,
           emptyDescription
         )
-      ).toBe(JSON.stringify({
-        name: emptyLibraryName,
-        description: emptyDescription,
-        functions: emptyFunctions,
-        dropletConfig: [],
-        source: emptyCode,
-      }));
+      ).toBe(
+        JSON.stringify({
+          name: emptyLibraryName,
+          description: emptyDescription,
+          functions: emptyFunctions,
+          dropletConfig: [],
+          source: emptyCode,
+        })
+      );
     });
 
     describe('will return early', () => {
@@ -151,13 +151,15 @@ describe('Library parser', () => {
           emptyLibraryName,
           emptyDescription
         )
-      ).toEqual(JSON.stringify({
-        name: emptyLibraryName,
-        description: emptyDescription,
-        functions: [functionName],
-        dropletConfig: expectedDropletConfig,
-        source: emptyCode,
-      }));
+      ).toEqual(
+        JSON.stringify({
+          name: emptyLibraryName,
+          description: emptyDescription,
+          functions: [functionName],
+          dropletConfig: expectedDropletConfig,
+          source: emptyCode,
+        })
+      );
     });
 
     it('is able to parse functions with parameters', () => {
@@ -196,13 +198,15 @@ describe('Library parser', () => {
           emptyLibraryName,
           emptyDescription
         )
-      ).toEqual(JSON.stringify({
-        name: emptyLibraryName,
-        description: emptyDescription,
-        functions: functions,
-        dropletConfig: expectedDropletConfig,
-        source: emptyCode,
-      }));
+      ).toEqual(
+        JSON.stringify({
+          name: emptyLibraryName,
+          description: emptyDescription,
+          functions: functions,
+          dropletConfig: expectedDropletConfig,
+          source: emptyCode,
+        })
+      );
     });
   });
 
@@ -284,7 +288,9 @@ describe('Library parser', () => {
       };
       let closureFunctions = `${firstFunction}: ${firstFunction},${secondFunction}: ${secondFunction}`;
       let newJson = parser.createLibraryClosure(originalJson);
-      expect(newJson).toBe(closureCreator(emptyLibraryName, code, closureFunctions));
+      expect(newJson).toBe(
+        closureCreator(emptyLibraryName, code, closureFunctions)
+      );
     });
   });
 });

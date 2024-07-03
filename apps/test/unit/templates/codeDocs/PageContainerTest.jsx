@@ -3,8 +3,6 @@ import React from 'react';
 
 import PageContainer from '@cdo/apps/templates/codeDocs/PageContainer';
 
-
-
 describe('PageContainer', () => {
   it('renders NavigationBar', () => {
     const wrapper = shallow(

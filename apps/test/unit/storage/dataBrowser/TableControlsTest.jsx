@@ -20,8 +20,6 @@ import {changeView} from '@cdo/apps/storage/redux/data';
 import experiments from '@cdo/apps/util/experiments';
 import commonI18n from '@cdo/locale';
 
-
-
 const DEFAULT_PROPS = {
   isRtl: false,
   clearTable: () => {},
@@ -91,7 +89,10 @@ describe('TableControls', () => {
     });
 
     it('should render a localized string for "Clear Table"', () => {
-      jest.spyOn(commonI18n, 'clearTable').mockClear().mockReturnValue('i18n-clear-table');
+      jest
+        .spyOn(commonI18n, 'clearTable')
+        .mockClear()
+        .mockReturnValue('i18n-clear-table');
 
       const store = getStore();
       const wrapper = mount(

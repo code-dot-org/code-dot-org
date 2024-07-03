@@ -4,8 +4,6 @@ import React from 'react';
 import {UnconnectedDataTable as DataTable} from '@cdo/apps/storage/dataBrowser/DataTable';
 import commonI18n from '@cdo/locale';
 
-
-
 const DEFAULT_PROPS = {
   readOnly: false,
   rowsPerPage: 5,
@@ -27,7 +25,10 @@ describe('DataTable', () => {
     }
 
     it('should render a localized string for "Actions" column', () => {
-      jest.spyOn(commonI18n, 'actions').mockClear().mockReturnValue('i18n-actions');
+      jest
+        .spyOn(commonI18n, 'actions')
+        .mockClear()
+        .mockReturnValue('i18n-actions');
 
       const wrapper = createDataTable();
 
@@ -36,7 +37,10 @@ describe('DataTable', () => {
     });
 
     it('should render a localized string for labeling the current page', () => {
-      jest.spyOn(commonI18n, 'paginationLabel').mockClear().mockReturnValue('i18n-page');
+      jest
+        .spyOn(commonI18n, 'paginationLabel')
+        .mockClear()
+        .mockReturnValue('i18n-page');
 
       const wrapper = createDataTable({
         rowsPerPage: 1,

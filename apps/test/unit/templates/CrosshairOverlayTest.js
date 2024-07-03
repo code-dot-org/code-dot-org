@@ -6,8 +6,6 @@ import CrosshairOverlay, {
   styles,
 } from '@cdo/apps/templates/CrosshairOverlay';
 
-
-
 describe('CrosshairOverlay', () => {
   const TEST_APP_WIDTH = 300,
     TEST_APP_HEIGHT = 200;
@@ -45,8 +43,12 @@ describe('CrosshairOverlay', () => {
   it('renders null if mouse is out of bounds', () => {
     expect(renderAtMousePosition(-1, 0).html()).toBeNull();
     expect(renderAtMousePosition(0, -1).html()).toBeNull();
-    expect(renderAtMousePosition(TEST_APP_WIDTH + 1, TEST_APP_HEIGHT).html()).toBeNull();
-    expect(renderAtMousePosition(TEST_APP_WIDTH, TEST_APP_HEIGHT + 1).html()).toBeNull();
+    expect(
+      renderAtMousePosition(TEST_APP_WIDTH + 1, TEST_APP_HEIGHT).html()
+    ).toBeNull();
+    expect(
+      renderAtMousePosition(TEST_APP_WIDTH, TEST_APP_HEIGHT + 1).html()
+    ).toBeNull();
   });
 
   it('renders lines converging at mouse position if mouse is in bounds', () => {

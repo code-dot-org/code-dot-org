@@ -1,7 +1,5 @@
 import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/p5lab/shapes';
 
-
-
 var testUtils = require('../../util/testUtils');
 
 describe('throwIfSerializedAnimationListIsInvalid', function () {
@@ -17,7 +15,9 @@ describe('throwIfSerializedAnimationListIsInvalid', function () {
   });
 
   it('throws if passed anything empty', function () {
-    expect(() => throwIfSerializedAnimationListIsInvalid(undefined)).toThrow(Error);
+    expect(() => throwIfSerializedAnimationListIsInvalid(undefined)).toThrow(
+      Error
+    );
     expect(() => throwIfSerializedAnimationListIsInvalid(null)).toThrow(Error);
   });
 

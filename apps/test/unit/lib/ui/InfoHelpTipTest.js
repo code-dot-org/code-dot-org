@@ -7,8 +7,6 @@ import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
-
-
 // "it renders" test that checks for FontAwesome and ReactTooltip
 
 describe('InfoHelpTip', () => {
@@ -28,6 +26,8 @@ describe('InfoHelpTip', () => {
     expect(wrapper.find(ReactTooltip)).toHaveLength(1);
     expect(wrapper.find(ReactTooltip).props().id).toBe('test-id');
     expect(wrapper.find(BodyTwoText)).toHaveLength(1);
-    expect(wrapper.find(BodyTwoText).at(0).props().children).toBe('test content');
+    expect(wrapper.find(BodyTwoText).at(0).props().children).toBe(
+      'test content'
+    );
   });
 });

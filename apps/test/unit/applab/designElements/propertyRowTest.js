@@ -3,8 +3,6 @@ import React from 'react';
 
 import PropertyRow from '@cdo/apps/applab/designElements/PropertyRow';
 
-
-
 describe('applab property row', function () {
   it('does not change an id row when a space is added', () => {
     var initialValue = 'HelloWorld';

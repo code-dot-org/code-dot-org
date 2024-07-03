@@ -5,8 +5,6 @@ import EvidenceDescriptions from '@cdo/apps/lib/levelbuilder/rubrics/EvidenceDes
 import {UNDERSTANDING_LEVEL_STRINGS} from '@cdo/apps/templates/rubrics/rubricHelpers';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 
-
-
 describe('EvidenceDescriptions', () => {
   let defaultProps;
   const updateLearningGoal = jest.fn();
@@ -68,9 +66,11 @@ describe('EvidenceDescriptions', () => {
     ).toBe(updateLearningGoal);
     expect(
       wrapper.find('EvidenceDescriptionsRow').at(0).props().evidenceLevelData
-    ).toBe(learningGoalData.learningGoalEvidenceLevelsAttributes[
-      [RubricUnderstandingLevels.EXTENSIVE]
-    ]);
+    ).toBe(
+      learningGoalData.learningGoalEvidenceLevelsAttributes[
+        [RubricUnderstandingLevels.EXTENSIVE]
+      ]
+    );
     expect(
       wrapper.find('EvidenceDescriptionsRow').at(0).props().learningGoalId
     ).toBe(learningGoalData.id);

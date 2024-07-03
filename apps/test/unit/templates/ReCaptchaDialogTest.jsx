@@ -3,8 +3,6 @@ import React from 'react';
 
 import ReCaptchaDialog from '@cdo/apps/templates/ReCaptchaDialog';
 
-
-
 const GOOGLE_RECAPTCHA_TEST_KEY = '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI';
 
 const DEFAULT_PROPS = {

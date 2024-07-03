@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedFindResourceDialog as FindResourceDialog} from '@cdo/apps/lib/levelbuilder/lesson-editor/FindResourceDialog';
 
-
-
 import resourceTestData from './resourceTestData';
 
 describe('FindResourceDialog', () => {

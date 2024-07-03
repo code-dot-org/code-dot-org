@@ -4,8 +4,6 @@ import React from 'react';
 import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 
-
-
 describe('ProgressLegend', () => {
   it('renders a single table without extra columns', () => {
     const wrapper = shallow(<ProgressLegend includeCsfColumn={false} />);

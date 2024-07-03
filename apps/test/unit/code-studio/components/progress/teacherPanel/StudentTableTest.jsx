@@ -5,8 +5,6 @@ import {UnconnectedStudentTable as StudentTable} from '@cdo/apps/code-studio/com
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-
-
 const DEFAULT_PROPS = {
   students: [
     {id: 1, name: 'Student 1', familyName: 'FamNameB'},

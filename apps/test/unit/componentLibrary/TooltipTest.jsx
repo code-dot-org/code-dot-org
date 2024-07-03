@@ -4,8 +4,6 @@ import React from 'react';
 
 import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 
-
-
 describe('Design System - Tooltip', () => {
   it('Tooltip - renders with correct label', async () => {
     const user = userEvent.setup();

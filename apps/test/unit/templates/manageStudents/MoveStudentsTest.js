@@ -9,8 +9,6 @@ import {
 import {UnconnectedMoveStudents as MoveStudents} from '@cdo/apps/templates/manageStudents/MoveStudents';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
-
-
 const studentData = [
   {id: 1, name: 'studentb'},
   {id: 3, name: 'studentc'},

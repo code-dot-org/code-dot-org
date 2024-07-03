@@ -6,8 +6,6 @@ import LevelFeedback from '@cdo/apps/templates/feedback/LevelFeedback';
 import LevelFeedbackEntry from '@cdo/apps/templates/feedback/LevelFeedbackEntry';
 import i18n from '@cdo/locale';
 
-
-
 const feedback = {
   id: 1,
   seen_on_feedback_page_at: null,

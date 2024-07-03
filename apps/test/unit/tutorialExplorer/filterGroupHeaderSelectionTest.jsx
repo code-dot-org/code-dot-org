@@ -3,8 +3,6 @@ import React from 'react';
 
 import FilterGroupHeaderSelection from '@cdo/apps/tutorialExplorer/filterGroupHeaderSelection';
 
-
-
 const FAKE_ON_USER_INPUT = () => {};
 const DEFAULT_PROPS = {
   containerStyle: {},

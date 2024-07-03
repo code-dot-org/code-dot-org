@@ -4,8 +4,6 @@ import React from 'react';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {UnconnectedDocumentationTab} from '@cdo/apps/templates/instructions/DocumentationTab';
 
-
-
 const ENVIRONMENT = 'javalab';
 
 describe('DocumentationTabTest', () => {

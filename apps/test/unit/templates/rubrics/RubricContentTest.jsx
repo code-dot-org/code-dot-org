@@ -12,8 +12,6 @@ import {
 import RubricContent from '@cdo/apps/templates/rubrics/RubricContent';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-
-
 describe('RubricContent', () => {
   let store;
   beforeEach(() => {
@@ -82,9 +80,15 @@ describe('RubricContent', () => {
       </Provider>
     );
     expect(wrapper.find('LearningGoals').length).toBe(1);
-    expect(wrapper.find('LearningGoals').prop('studentLevelInfo')).toBe(studentLevelInfo);
-    expect(wrapper.find('LearningGoals').prop('learningGoals')).toBe(defaultRubric.learningGoals);
-    expect(wrapper.find('LearningGoals').prop('aiEvaluations')).toBe(aiEvaluations);
+    expect(wrapper.find('LearningGoals').prop('studentLevelInfo')).toBe(
+      studentLevelInfo
+    );
+    expect(wrapper.find('LearningGoals').prop('learningGoals')).toBe(
+      defaultRubric.learningGoals
+    );
+    expect(wrapper.find('LearningGoals').prop('aiEvaluations')).toBe(
+      aiEvaluations
+    );
   });
 
   it('displays Student and Section selectors', () => {
@@ -108,7 +112,9 @@ describe('RubricContent', () => {
     );
     const renderedLearningGoals = wrapper.find('LearningGoals');
     expect(renderedLearningGoals).toHaveLength(1);
-    expect(renderedLearningGoals.props().learningGoals).toBe(defaultRubric.learningGoals);
+    expect(renderedLearningGoals.props().learningGoals).toBe(
+      defaultRubric.learningGoals
+    );
     expect(renderedLearningGoals.props().canProvideFeedback).toBe(false);
   });
 
@@ -122,20 +128,26 @@ describe('RubricContent', () => {
     );
     const renderedLearningGoals = wrapper.find('LearningGoals');
     expect(renderedLearningGoals).toHaveLength(1);
-    expect(renderedLearningGoals.props().learningGoals).toBe(defaultRubric.learningGoals);
+    expect(renderedLearningGoals.props().learningGoals).toBe(
+      defaultRubric.learningGoals
+    );
     expect(renderedLearningGoals.props().canProvideFeedback).toBe(false);
   });
 
   it('shows level title when teacher is viewing student work', () => {
     const wrapper = shallow(<RubricContent {...defaultProps} />);
-    expect(wrapper.find('Heading3').at(0).props().children).toBe('Lesson 3: Data Structures');
+    expect(wrapper.find('Heading3').at(0).props().children).toBe(
+      'Lesson 3: Data Structures'
+    );
   });
 
   it('shows level title when teacher is not viewing student work', () => {
     const wrapper = shallow(
       <RubricContent {...defaultProps} studentLevelInfo={null} />
     );
-    expect(wrapper.find('Heading3').at(0).props().children).toBe('Lesson 3: Data Structures');
+    expect(wrapper.find('Heading3').at(0).props().children).toBe(
+      'Lesson 3: Data Structures'
+    );
   });
 
   it('shows student data if provided', () => {
@@ -193,7 +205,9 @@ describe('RubricContent', () => {
       </Provider>
     );
 
-    expect(wrapper.find('LearningGoals').prop('aiEvaluations')).not.toBe(aiEvaluations);
+    expect(wrapper.find('LearningGoals').prop('aiEvaluations')).not.toBe(
+      aiEvaluations
+    );
   });
 
   it('shows info alert when not viewing project level', () => {
@@ -201,7 +215,9 @@ describe('RubricContent', () => {
       <RubricContent {...defaultProps} onLevelForEvaluation={false} />
     );
     expect(wrapper.find('InfoAlert').length).toBe(1);
-    expect(wrapper.find('InfoAlert').props().text).toBe('Rubrics can only be evaluated on project levels.');
+    expect(wrapper.find('InfoAlert').props().text).toBe(
+      'Rubrics can only be evaluated on project levels.'
+    );
   });
 
   it('shows info alert when not viewing student work', () => {
@@ -209,6 +225,8 @@ describe('RubricContent', () => {
       <RubricContent {...defaultProps} studentLevelInfo={null} />
     );
     expect(wrapper.find('InfoAlert').length).toBe(1);
-    expect(wrapper.find('InfoAlert').props().text).toBe('Select a student from the dropdown menu to view and evaluate their work.');
+    expect(wrapper.find('InfoAlert').props().text).toBe(
+      'Select a student from the dropdown menu to view and evaluate their work.'
+    );
   });
 });

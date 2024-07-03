@@ -3,8 +3,6 @@ import React from 'react';
 
 import {ShareTeacherLibraries} from '@cdo/apps/code-studio/components/libraries/ShareTeacherLibraries.jsx';
 
-
-
 describe('ShareTeacherLibraries', () => {
   const SECTIONS = [
     {id: 1, name: 'a'},

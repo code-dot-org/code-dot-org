@@ -3,8 +3,6 @@ import React from 'react';
 
 import JoinSectionNotifications from '@cdo/apps/templates/studioHomepages/JoinSectionNotifications';
 
-
-
 const SUCCESSFUL_JOIN = {
   action: 'join',
   result: 'success',

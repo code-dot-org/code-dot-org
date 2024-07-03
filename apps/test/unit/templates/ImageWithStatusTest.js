@@ -3,8 +3,6 @@ import React from 'react';
 
 import {ImageWithStatus} from '@cdo/apps/templates/ImageWithStatus';
 
-
-
 const CAT_IMAGE_URL = '/base/static/common_images/stickers/cat.png';
 const BOGUS_IMAGE_URL = '/nonexistent.png';
 const THUMBNAIL_SIZE = 50;

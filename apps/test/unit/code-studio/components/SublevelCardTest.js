@@ -79,6 +79,8 @@ describe('SublevelCard', () => {
   it('maps sublevel keys to camelcase before passing to ProgressBubble', () => {
     const wrapper = setUp();
     const progressBubbleLevel = wrapper.find(ProgressBubble).props().level;
-    expect(progressBubbleLevel.teacherFeedbackReviewState).toBe(ReviewStates.keepWorking);
+    expect(progressBubbleLevel.teacherFeedbackReviewState).toBe(
+      ReviewStates.keepWorking
+    );
   });
 });

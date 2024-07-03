@@ -6,8 +6,6 @@ import UnitCalendarDialog, {
   WEEK_WIDTH,
 } from '@cdo/apps/code-studio/components/progress/UnitCalendarDialog';
 
-
-
 import {testLessons} from './unitCalendarTestData';
 
 describe('UnitCalendarDialog', () => {

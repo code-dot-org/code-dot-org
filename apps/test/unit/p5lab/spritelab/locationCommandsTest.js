@@ -3,7 +3,6 @@ import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
 
 import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
 
-
 describe('Location Commands', () => {
   let coreLibrary;
   const spriteName = 'sprite1';

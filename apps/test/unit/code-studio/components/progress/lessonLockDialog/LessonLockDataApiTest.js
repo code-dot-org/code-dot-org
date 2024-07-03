@@ -9,8 +9,6 @@ import {
 } from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
 import * as useFetch from '@cdo/apps/util/useFetch';
 
-
-
 window.fetch = jest.fn();
 
 describe('LessonLockDataApi', () => {

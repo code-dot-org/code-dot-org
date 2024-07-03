@@ -7,8 +7,6 @@ import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/Revie
 import {UnconnectedCommitsAndReviewTab as CommitsAndReviewTab} from '@cdo/apps/templates/instructions/CommitsAndReviewTab';
 import javalabMsg from '@cdo/javalab/locale';
 
-
-
 const DEFAULT_PROPS = {
   channelId: 'asdfjkl',
   serverLevelId: 1,

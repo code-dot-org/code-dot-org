@@ -5,8 +5,6 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {UnconnectedLessonGroup as LessonGroup} from '@cdo/apps/templates/progress/LessonGroup';
 import {fakeLesson} from '@cdo/apps/templates/progress/progressTestHelpers';
 
-
-
 const DEFAULT_PROPS = {
   isPlc: false,
   isSummaryView: false,

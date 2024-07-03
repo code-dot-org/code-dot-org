@@ -3,8 +3,6 @@ import React from 'react';
 
 import DataDocView from '@cdo/apps/templates/dataDocs/DataDocView';
 
-
-
 describe('DataDocView', () => {
   let defaultProps;
   const docName = 'Name of Doc';
@@ -20,8 +18,8 @@ describe('DataDocView', () => {
   it('shows data doc name and content', () => {
     const wrapper = shallow(<DataDocView {...defaultProps} />);
     expect(wrapper.text()).toContain(docName);
-    expect(
-      wrapper.find('EnhancedSafeMarkdown').first().props().markdown
-    ).toBe(docContent);
+    expect(wrapper.find('EnhancedSafeMarkdown').first().props().markdown).toBe(
+      docContent
+    );
   });
 });

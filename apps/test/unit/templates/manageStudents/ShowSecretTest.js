@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedShowSecret as ShowSecret} from '@cdo/apps/templates/manageStudents/ShowSecret';
 
-
-
 const DEFAULT_PROPS = {
   initialIsShowing: false,
   id: 1,

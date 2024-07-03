@@ -3,8 +3,6 @@ import {
   arrayToMap,
 } from '@cdo/apps/blockly/addons/cdoFieldDropdown';
 
-
-
 describe('Testing function getUpdateOptionsFromConfig', () => {
   describe('Test config string with printer-style number range', () => {
     it('Config only has a number range', () => {

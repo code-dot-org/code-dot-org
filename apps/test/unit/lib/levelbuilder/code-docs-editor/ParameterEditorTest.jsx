@@ -3,8 +3,6 @@ import React from 'react';
 
 import ParameterEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ParameterEditor';
 
-
-
 describe('ParameterEditor', () => {
   let defaultProps, updateSpy;
 

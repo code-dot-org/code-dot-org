@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedLessonGroupCard as LessonGroupCard} from '@cdo/apps/lib/levelbuilder/unit-editor/LessonGroupCard';
 
-
-
 export const nonUserFacingGroup = {
   key: 'lg-key',
   displayName: null,
@@ -105,12 +103,12 @@ describe('LessonGroupCard', () => {
 
     expect(wrapper.contains('Lesson Group Name:')).toBe(true);
 
-    expect(
-      wrapper.find('MarkdownEnabledTextarea').at(0).props().markdown
-    ).toBe('Lesson group description');
-    expect(
-      wrapper.find('MarkdownEnabledTextarea').at(1).props().markdown
-    ).toBe('Big questions');
+    expect(wrapper.find('MarkdownEnabledTextarea').at(0).props().markdown).toBe(
+      'Lesson group description'
+    );
+    expect(wrapper.find('MarkdownEnabledTextarea').at(1).props().markdown).toBe(
+      'Big questions'
+    );
   });
 
   it('hides OrderControls when not allowed to make major curriculum changes', () => {
@@ -162,7 +160,10 @@ describe('LessonGroupCard', () => {
   });
 
   it('adds lesson when button pressed', () => {
-    const prompt = jest.spyOn(window, 'prompt').mockClear().mockImplementation();
+    const prompt = jest
+      .spyOn(window, 'prompt')
+      .mockClear()
+      .mockImplementation();
     prompt.mockReturnValue('Lesson Name');
 
     const wrapper = shallow(<LessonGroupCard {...defaultProps} />);

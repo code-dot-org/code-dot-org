@@ -7,8 +7,6 @@ import {
   LevelTokenContents,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
 
-
-
 const defaultScriptLevel = {
   id: '11',
   position: 1,
@@ -85,9 +83,13 @@ describe('LevelTokenContents', () => {
 
   it('shows no purple indicators when not an assessment, challenge or bonus', () => {
     const wrapper = shallow(<LevelTokenContents {...defaultProps} />);
-    expect(wrapper.containsMatchingElement(<span>assessment</span>)).toBe(false);
+    expect(wrapper.containsMatchingElement(<span>assessment</span>)).toBe(
+      false
+    );
     expect(wrapper.containsMatchingElement(<span>bonus</span>)).toBe(false);
-    expect(wrapper.containsMatchingElement(<span>instructor in training</span>)).toBe(false);
+    expect(
+      wrapper.containsMatchingElement(<span>instructor in training</span>)
+    ).toBe(false);
     expect(wrapper.containsMatchingElement(<span>challenge</span>)).toBe(false);
     expect(wrapper.containsMatchingElement(<span>variants</span>)).toBe(false);
   });
@@ -138,7 +140,9 @@ describe('LevelTokenContents', () => {
     const wrapper = shallow(
       <LevelTokenContents {...defaultProps} scriptLevel={tempScriptLevel} />
     );
-    expect(wrapper.containsMatchingElement(<span>instructor in training</span>)).toBe(true);
+    expect(
+      wrapper.containsMatchingElement(<span>instructor in training</span>)
+    ).toBe(true);
   });
 
   it('shows challenge indicator when challenge', () => {

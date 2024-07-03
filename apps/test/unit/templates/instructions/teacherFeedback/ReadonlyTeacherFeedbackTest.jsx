@@ -7,8 +7,6 @@ import ReadOnlyReviewState from '@cdo/apps/templates/instructions/teacherFeedbac
 import ReadonlyTeacherFeedback from '@cdo/apps/templates/instructions/teacherFeedback/ReadonlyTeacherFeedback';
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 
-
-
 const DEFAULT_PROPS = {
   rubric: null,
   visible: true,
@@ -134,7 +132,9 @@ describe('ReadonlyTeacherFeedback', () => {
       const wrapper = setUp({latestFeedback});
       const reviewState = wrapper.find(ReadOnlyReviewState);
       expect(reviewState).toHaveLength(1);
-      expect(reviewState.props().latestReviewState).toBe(ReviewStates.keepWorking);
+      expect(reviewState.props().latestReviewState).toBe(
+        ReviewStates.keepWorking
+      );
     });
 
     it('renders ReadOnlyReviewState with expected props - awaiting Review', () => {
@@ -145,7 +145,9 @@ describe('ReadonlyTeacherFeedback', () => {
       const wrapper = setUp({latestFeedback});
       const reviewState = wrapper.find(ReadOnlyReviewState);
       expect(reviewState).toHaveLength(1);
-      expect(reviewState.props().latestReviewState).toBe(ReviewStates.awaitingReview);
+      expect(reviewState.props().latestReviewState).toBe(
+        ReviewStates.awaitingReview
+      );
     });
 
     it('displays lastUpdated message', () => {

@@ -1,4 +1,4 @@
-import { shallow } from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import UsPhoneNumberInput from '@cdo/apps/code-studio/pd/form_components/UsPhoneNumberInput';
@@ -66,8 +66,6 @@ describe('UsPhoneNumberInput', () => {
 
     it('Returns false for strings that are not 10 digit numbers', () => {
       [null, '', 'x', '1234567890x', '123-456-7890'].forEach(nonPhoneNumber => {
-        const failMessage = `Expected isValid to be false for: ${nonPhoneNumber}`;
-        // failMessage
         expect(UsPhoneNumberInput.isValid(nonPhoneNumber)).toBe(false);
       });
     });
@@ -85,8 +83,6 @@ describe('UsPhoneNumberInput', () => {
         ['   123-@~! ', '123'],
       ].forEach(testCase => {
         const [input, expectedResult] = testCase;
-        const failMessage = `Expected toJustNumbers to return "${expectedResult}" for: "${input}"`;
-        // failMessage
         expect(UsPhoneNumberInput.toJustNumbers(input)).toEqual(expectedResult);
       });
     });
@@ -118,9 +114,9 @@ describe('UsPhoneNumberInput', () => {
         ['(123) 456-7890x', '(123) 456-7890'],
       ].forEach(testCase => {
         const [input, expectedResult] = testCase;
-        const failMessage = `Expected coercePhoneNubmer to return "${expectedResult}" for: "${input}"`;
-        // failMessage
-        expect(UsPhoneNumberInput.coercePhoneNumber(input)).toEqual(expectedResult);
+        expect(UsPhoneNumberInput.coercePhoneNumber(input)).toEqual(
+          expectedResult
+        );
       });
     });
   });

@@ -4,8 +4,6 @@ import React from 'react';
 
 import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 
-
-
 describe('Design System - CloseButton', () => {
   it('renders with default props', () => {
     render(<CloseButton onClick={() => {}} aria-label="default close" />);

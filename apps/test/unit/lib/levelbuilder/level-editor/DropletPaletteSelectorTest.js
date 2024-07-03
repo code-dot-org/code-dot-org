@@ -4,8 +4,6 @@ import React from 'react';
 
 import DropletPaletteSelector from '@cdo/apps/lib/levelbuilder/level-editor/DropletPaletteSelector';
 
-
-
 describe('DropletPaletteSelector', () => {
   let textArea, editor;
   beforeEach(() => {

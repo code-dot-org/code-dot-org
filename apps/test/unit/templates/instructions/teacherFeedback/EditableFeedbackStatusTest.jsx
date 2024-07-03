@@ -4,8 +4,6 @@ import React from 'react';
 
 import EditableFeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/EditableFeedbackStatus';
 
-
-
 const setUp = latestFeedback => {
   const props = {latestFeedback};
   return shallow(<EditableFeedbackStatus {...props} />);
@@ -49,7 +47,9 @@ describe('EditableFeedbackStatus', () => {
     expect(wrapper.find('FontAwesome').props().icon).toBe('check');
 
     const formattedDate = moment(twoDaysAgo).format('l');
-    expect(wrapper.text().includes(`Seen by student ${formattedDate}`)).toBe(true);
+    expect(wrapper.text().includes(`Seen by student ${formattedDate}`)).toBe(
+      true
+    );
   });
 
   it('displays nicely formatted date if student updated their progress since feedback was left', () => {

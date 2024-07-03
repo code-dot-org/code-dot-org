@@ -3,8 +3,6 @@ import React from 'react';
 
 import AppLabCrosshairOverlay from '@cdo/apps/applab/AppLabCrosshairOverlay';
 
-
-
 // ES5-style require necessary to stub gridUtils.draggedElementDropPoint
 var gridUtils = require('@cdo/apps/applab/gridUtils');
 
@@ -16,7 +14,10 @@ describe('AppLabCrosshairOverlay', () => {
   var stubDraggedElementDropPoint;
 
   beforeEach(() => {
-    stubDraggedElementDropPoint = jest.spyOn(gridUtils, 'draggedElementDropPoint').mockClear().mockImplementation();
+    stubDraggedElementDropPoint = jest
+      .spyOn(gridUtils, 'draggedElementDropPoint')
+      .mockClear()
+      .mockImplementation();
   });
 
   afterEach(() => {
@@ -46,7 +47,10 @@ describe('AppLabCrosshairOverlay', () => {
   it('renders to CrosshairOverlay with overridden mouse coordinates when dragging', () => {
     const dropPointX = 42;
     const dropPointY = 43;
-    stubDraggedElementDropPoint.mockReturnValue({left: dropPointX, top: dropPointY});
+    stubDraggedElementDropPoint.mockReturnValue({
+      left: dropPointX,
+      top: dropPointY,
+    });
     var element = shallow(
       <AppLabCrosshairOverlay
         width={TEST_APP_WIDTH}

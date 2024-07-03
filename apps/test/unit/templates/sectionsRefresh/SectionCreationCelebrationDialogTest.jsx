@@ -3,8 +3,6 @@ import React from 'react';
 
 import SectionCreationCelebrationDialog from '@cdo/apps/templates/sectionsRefresh/SectionCreationCelebrationDialog';
 
-
-
 describe('SectionCreationCelebrationDialog', () => {
   it('renders dialog with gif', () => {
     const wrapper = shallow(<SectionCreationCelebrationDialog />);

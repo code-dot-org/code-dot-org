@@ -5,8 +5,6 @@ import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
 import i18n from '@cdo/locale';
 
-
-
 const DEFAULT_PROPS = {
   latestReviewState: null,
   onReviewStateChange: () => {},
@@ -28,7 +26,9 @@ describe('EditableReviewState', () => {
     const wrapper = setUp();
     const tooltip = wrapper.find('ReactTooltip');
     expect(tooltip).toHaveLength(1);
-    expect(tooltip.contains(i18n.teacherFeedbackKeepWorkingTooltip())).toBe(true);
+    expect(tooltip.contains(i18n.teacherFeedbackKeepWorkingTooltip())).toBe(
+      true
+    );
   });
 
   it('displays a checked checkbox if reviewState is keepWorking and student is not awaiting review', () => {
@@ -115,7 +115,9 @@ describe('EditableReviewState', () => {
 
       const tooltip = wrapper.find('ReactTooltip');
       expect(tooltip).toHaveLength(1);
-      expect(tooltip.contains(i18n.teacherFeedbackAwaitingReviewTooltip())).toBe(true);
+      expect(
+        tooltip.contains(i18n.teacherFeedbackAwaitingReviewTooltip())
+      ).toBe(true);
     });
 
     it('when checkbox is click, it calls onReviewStateChange with value completed', () => {

@@ -1,8 +1,6 @@
 import DropletAutocompletePopupTooltipManager from '@cdo/apps/blockTooltips/DropletAutocompletePopupTooltipManager.js';
 import commonI18n from '@cdo/locale';
 
-
-
 import {DropletTooltipManagerStub} from './stubs';
 
 describe('DropletAutocompletePopupTooltipManager', () => {
@@ -13,7 +11,10 @@ describe('DropletAutocompletePopupTooltipManager', () => {
   describe('getTooltipHTML', () => {
     it('should render localized string for "Examples"', () => {
       // Stub the i18n calls.
-      jest.spyOn(commonI18n, 'examples').mockClear().mockReturnValue('i18n-examples');
+      jest
+        .spyOn(commonI18n, 'examples')
+        .mockClear()
+        .mockReturnValue('i18n-examples');
 
       // Mock a DropletTooltipManager.
       let tooltipManager = DropletTooltipManagerStub({

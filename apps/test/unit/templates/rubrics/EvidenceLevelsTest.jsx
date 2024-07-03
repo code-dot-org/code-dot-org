@@ -3,8 +3,6 @@ import React from 'react';
 
 import EvidenceLevels from '@cdo/apps/templates/rubrics/EvidenceLevels';
 
-
-
 const DEFAULT_PROPS = {
   evidenceLevels: [
     {id: 1, understanding: 1, teacherDescription: 'test1'},

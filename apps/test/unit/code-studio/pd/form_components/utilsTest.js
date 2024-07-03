@@ -1,7 +1,5 @@
 import utils from '@cdo/apps/code-studio/pd/form_components/utils';
 
-
-
 describe('FormComponents Utils', () => {
   it('normalizes SimpleAnswer to Answer', () => {
     const input = 'simple answer';

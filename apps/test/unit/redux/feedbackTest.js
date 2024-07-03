@@ -1,7 +1,5 @@
 import reducer, * as feedback from '@cdo/apps/redux/feedback';
 
-
-
 describe('feedback redux module', () => {
   it('has expected default state', () => {
     expect(reducer(undefined, {})).toEqual({

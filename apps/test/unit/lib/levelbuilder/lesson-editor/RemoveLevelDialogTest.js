@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedRemoveLevelDialog as RemoveLevelDialog} from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog';
 
-
-
 import {sampleActivities} from './activitiesTestData';
 
 describe('RemoveLevelDialog', () => {

@@ -9,8 +9,6 @@ import {
   getStore,
 } from '@cdo/apps/redux';
 
-
-
 describe('javalabRedux', () => {
   let store;
   beforeEach(() => {
@@ -25,12 +23,18 @@ describe('javalabRedux', () => {
     const fileInitialSource = initialState.sources[fileName];
     const newText = 'some new text';
 
-    expect(getStore().getState().javalabEditor.sources[fileName]).toBe(fileInitialSource);
+    expect(getStore().getState().javalabEditor.sources[fileName]).toBe(
+      fileInitialSource
+    );
     store.dispatch(sourceTextUpdated(fileName, newText));
 
     const updatedSources = getStore().getState().javalabEditor.sources;
     expect(updatedSources[fileName].text).toBe(newText);
-    expect(updatedSources[fileName].isVisible).toBe(fileInitialSource.isVisible);
-    expect(updatedSources[fileName].isValidation).toBe(fileInitialSource.isValidation);
+    expect(updatedSources[fileName].isVisible).toBe(
+      fileInitialSource.isVisible
+    );
+    expect(updatedSources[fileName].isValidation).toBe(
+      fileInitialSource.isValidation
+    );
   });
 });

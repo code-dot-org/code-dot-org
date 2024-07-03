@@ -4,7 +4,6 @@ import * as userSectionClient from '@cdo/apps/util/userSectionClient';
 
 import NetSimLobby from '../../../src/netsim/NetSimLobby.js';
 
-
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 
 const SIGNED_IN_USER = {
@@ -16,7 +15,10 @@ const SIGNED_IN_USER = {
 describe('NetSimLobby', () => {
   let rootDiv, netsim, getUserSectionsStub;
   beforeEach(function () {
-    getUserSectionsStub = jest.spyOn(userSectionClient, 'getUserSections').mockClear().mockImplementation();
+    getUserSectionsStub = jest
+      .spyOn(userSectionClient, 'getUserSections')
+      .mockClear()
+      .mockImplementation();
     NetSimTestUtils.initializeGlobalsToDefaultValues();
     rootDiv = $('<div>');
     netsim = {
@@ -54,6 +56,8 @@ describe('NetSimLobby', () => {
     ];
     netsimLobby.buildShardChoiceList_(sectionList, null);
     expect(netsimLobby.shardChoices_).toHaveLength(1);
-    expect(netsimLobby.shardChoices_.map(obj => obj.displayName)).toContain('Course 2');
+    expect(netsimLobby.shardChoices_.map(obj => obj.displayName)).toContain(
+      'Course 2'
+    );
   });
 });

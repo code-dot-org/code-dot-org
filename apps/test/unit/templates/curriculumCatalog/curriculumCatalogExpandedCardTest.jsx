@@ -12,7 +12,6 @@ import ExpandedCurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog
 import {translatedAvailableResources} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-
 import {FULL_TEST_COURSES} from '../../util/curriculumRecommenderTestCurricula';
 
 describe('CurriculumCatalogExpandedCard', () => {
@@ -158,7 +157,9 @@ describe('CurriculumCatalogExpandedCard', () => {
     });
 
     //Checks for correct amount of Horizontal dividers
-    expect(availableResourcesContainer.querySelectorAll('hr')).toHaveLength(Object.keys(availableResources).length);
+    expect(availableResourcesContainer.querySelectorAll('hr')).toHaveLength(
+      Object.keys(availableResources).length
+    );
   });
 
   it('does not render available resources section when no available resources', () => {

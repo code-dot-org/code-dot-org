@@ -4,8 +4,6 @@ import React from 'react';
 import {questionOne} from '@cdo/apps/templates/sectionAssessments/assessmentsTestHelpers';
 import FreeResponsesAssessmentsTable from '@cdo/apps/templates/sectionAssessments/FreeResponsesAssessmentsTable';
 
-
-
 describe('FreeResponsesAssessmentsTable', () => {
   it('renders a table', () => {
     const wrapper = mount(

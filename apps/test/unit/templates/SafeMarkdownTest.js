@@ -3,8 +3,6 @@ import React from 'react';
 
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
-
-
 describe('SafeMarkdown', () => {
   it('will render basic markdown', () => {
     const wrapper = shallow(
@@ -28,13 +26,15 @@ describe('SafeMarkdown', () => {
     );
 
     // inline html is rendered directly
-    expect(basicWrapper.equals(
-      <div>
-        <p>
-          <strong>some</strong> <em>basic</em> <a href="markdown">inline</a>
-        </p>
-      </div>
-    )).toBe(true);
+    expect(
+      basicWrapper.equals(
+        <div>
+          <p>
+            <strong>some</strong> <em>basic</em> <a href="markdown">inline</a>
+          </p>
+        </div>
+      )
+    ).toBe(true);
 
     const advancedWrapper = shallow(
       <SafeMarkdown markdown="<table><thead><th>Some advanced html</th><th><strong>not</strong> usually supported by markdown</th></thead></table>" />
@@ -42,20 +42,22 @@ describe('SafeMarkdown', () => {
 
     // note the output has added <tr> tags as appropriate
     // inline html including non-markdown-supported constructs is rendered directly
-    expect(advancedWrapper.equals(
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <th>Some advanced html</th>
-              <th>
-                <strong>not</strong> usually supported by markdown
-              </th>
-            </tr>
-          </thead>
-        </table>
-      </div>
-    )).toBe(true);
+    expect(
+      advancedWrapper.equals(
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>Some advanced html</th>
+                <th>
+                  <strong>not</strong> usually supported by markdown
+                </th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      )
+    ).toBe(true);
   });
 
   it('implements expandableImages', () => {
@@ -64,13 +66,15 @@ describe('SafeMarkdown', () => {
     );
 
     // regular images are rendered normally
-    expect(regularImage.equals(
-      <div>
-        <p>
-          <img src="http://example.com/img.jpg" alt="regular" />
-        </p>
-      </div>
-    )).toBe(true);
+    expect(
+      regularImage.equals(
+        <div>
+          <p>
+            <img src="http://example.com/img.jpg" alt="regular" />
+          </p>
+        </div>
+      )
+    ).toBe(true);
 
     const expandableImage = shallow(
       <SafeMarkdown markdown="![expandable](http://example.com/img.jpg)" />
@@ -79,16 +83,18 @@ describe('SafeMarkdown', () => {
     // Enzyme doesn't like the data-url property when comparing equality
     // directly, so we use .html() as a proxy for this test
     // expandable images are rendered as custom spans
-    expect(expandableImage.html()).toBe(shallow(
-      <div>
-        <p>
-          <span
-            data-url="http://example.com/img.jpg"
-            className="expandable-image"
-          />
-        </p>
-      </div>
-    ).html());
+    expect(expandableImage.html()).toBe(
+      shallow(
+        <div>
+          <p>
+            <span
+              data-url="http://example.com/img.jpg"
+              className="expandable-image"
+            />
+          </p>
+        </div>
+      ).html()
+    );
   });
 
   it('implements visualCodeBlocks', () => {
@@ -97,30 +103,34 @@ describe('SafeMarkdown', () => {
     );
 
     // regular code blocks are rendered normally
-    expect(regularCodeBlock.equals(
-      <div>
-        <p>
-          some markdown with a <code>regular</code> code block
-        </p>
-      </div>
-    )).toBe(true);
+    expect(
+      regularCodeBlock.equals(
+        <div>
+          <p>
+            some markdown with a <code>regular</code> code block
+          </p>
+        </div>
+      )
+    ).toBe(true);
 
     const visualCodeBlock = shallow(
       <SafeMarkdown markdown="some markdown with a `visual`(#c0ffee) code block" />
     );
 
     // visual code blocks are rendered with expected properties
-    expect(visualCodeBlock.equals(
-      <div>
-        <p>
-          some markdown with a{' '}
-          <code className="visual-block" style={{backgroundColor: '#c0ffee'}}>
-            visual
-          </code>{' '}
-          code block
-        </p>
-      </div>
-    )).toBe(true);
+    expect(
+      visualCodeBlock.equals(
+        <div>
+          <p>
+            some markdown with a{' '}
+            <code className="visual-block" style={{backgroundColor: '#c0ffee'}}>
+              visual
+            </code>{' '}
+            code block
+          </p>
+        </div>
+      )
+    ).toBe(true);
   });
 
   it('renders XML as top level block when appropriate', () => {
@@ -251,6 +261,8 @@ describe('SafeMarkdown', () => {
     );
 
     // JS events in XML are ignored
-    expect(xmlJSInjection.html()).toBe('<div><xml is="xml"><block is="block"></block></xml></div>');
+    expect(xmlJSInjection.html()).toBe(
+      '<div><xml is="xml"><block is="block"></block></xml></div>'
+    );
   });
 });

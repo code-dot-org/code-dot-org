@@ -1,7 +1,5 @@
 import {fixMenuGenerator} from '@cdo/apps/blockly/addons/cdoFieldImageDropdown';
 
-
-
 describe('CdoFieldImageDropdown', () => {
   it('restructures menu items to make images', () => {
     const options = [

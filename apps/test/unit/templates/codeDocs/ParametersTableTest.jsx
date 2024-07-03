@@ -3,8 +3,6 @@ import React from 'react';
 
 import ParametersTable from '@cdo/apps/templates/codeDocs/ParametersTable';
 
-
-
 describe('ParametersTable', () => {
   let defaultParameters;
 
@@ -72,8 +70,8 @@ describe('ParametersTable', () => {
     expect(secondRow.find('td').at(0).text()).toBe('param2');
     expect(secondRow.find('td').at(1).text()).toBe('');
     expect(secondRow.find('td').at(2).find('.fa-check').length).toBe(0);
-    expect(
-      secondRow.find('td').at(3).find('EnhancedSafeMarkdown').length
-    ).toBe(0);
+    expect(secondRow.find('td').at(3).find('EnhancedSafeMarkdown').length).toBe(
+      0
+    );
   });
 });

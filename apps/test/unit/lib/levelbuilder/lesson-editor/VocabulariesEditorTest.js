@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedVocabulariesEditor as VocabulariesEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/VocabulariesEditor';
 
-
-
 describe('VocabulariesEditor', () => {
   let defaultProps, addVocabulary, updateVocabulary, removeVocabulary;
   beforeEach(() => {

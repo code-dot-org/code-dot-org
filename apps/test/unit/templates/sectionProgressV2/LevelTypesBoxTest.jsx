@@ -3,8 +3,6 @@ import React from 'react';
 
 import LevelTypesBox from '@cdo/apps/templates/sectionProgressV2/LevelTypesBox';
 
-
-
 describe('LevelTypesBox Component', () => {
   it('renders three options', () => {
     render(<LevelTypesBox />);

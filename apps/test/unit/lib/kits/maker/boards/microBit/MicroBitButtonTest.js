@@ -3,8 +3,6 @@ import {EventEmitter} from 'events';
 import MicroBitButton from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitButton';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 
-
-
 describe('MicroBitButton', function () {
   it('is an event emitter component', function () {
     const button = new MicroBitButton({

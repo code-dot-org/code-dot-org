@@ -4,8 +4,6 @@ import React from 'react';
 import ConfirmDeleteButton from '@cdo/apps/storage/dataBrowser/ConfirmDeleteButton';
 import commonI18n from '@cdo/locale';
 
-
-
 describe('ConfirmDeleteButton', () => {
   describe('localization', () => {
     function createConfirmDeleteButton() {
@@ -26,7 +24,10 @@ describe('ConfirmDeleteButton', () => {
     });
 
     it('should render a localized string for "Cancel"', () => {
-      jest.spyOn(commonI18n, 'cancel').mockClear().mockReturnValue('i18n-cancel');
+      jest
+        .spyOn(commonI18n, 'cancel')
+        .mockClear()
+        .mockReturnValue('i18n-cancel');
 
       const wrapper = createConfirmDeleteButton();
 
@@ -35,7 +36,10 @@ describe('ConfirmDeleteButton', () => {
     });
 
     it('should render a default localized string for "Delete" as the confirmation text', () => {
-      jest.spyOn(commonI18n, 'delete').mockClear().mockReturnValue('i18n-delete');
+      jest
+        .spyOn(commonI18n, 'delete')
+        .mockClear()
+        .mockReturnValue('i18n-delete');
 
       const wrapper = createConfirmDeleteButton();
 

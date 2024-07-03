@@ -3,8 +3,6 @@ import React from 'react';
 
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
 
-
-
 import {joinedSections, joinedPlSections} from './homepagesTestData';
 
 const defaultProps = {

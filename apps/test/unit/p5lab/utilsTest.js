@@ -1,7 +1,5 @@
 import {formatForPlayspace} from '@cdo/apps/p5lab/utils';
 
-
-
 describe('formatForPlayspace', function () {
   it('formats large numbers in scientific notation with 2 significant digits', function () {
     expect(formatForPlayspace(1e21)).toBe('1.0e+21');

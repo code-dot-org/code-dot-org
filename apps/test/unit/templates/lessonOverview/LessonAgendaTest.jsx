@@ -3,8 +3,6 @@ import React from 'react';
 
 import LessonAgenda from '@cdo/apps/templates/lessonOverview/LessonAgenda';
 
-
-
 describe('LessonAgenda', () => {
   let defaultProps;
   beforeEach(() => {

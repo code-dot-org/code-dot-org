@@ -4,8 +4,6 @@ import React from 'react';
 
 import {CheckboxDropdown} from '@cdo/apps/componentLibrary/dropdown';
 
-
-
 const allOptions = [
   {value: 'option-1', label: 'option1'},
   {value: 'option-2', label: 'option2'},

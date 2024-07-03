@@ -4,8 +4,6 @@ import React from 'react';
 
 import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 
-
-
 describe('ValidationStep', () => {
   describe('can render every status', () => {
     // This is the lazy 100% coverage test :D

@@ -78,7 +78,9 @@ describe('Survey Rollup Table Foorm', () => {
     // check headers are generated correctly
     const headerCells = rollupTable.find('HeaderRow').find('th');
     expect(headerCells.at(1).text()).toBe('Average for this workshop');
-    expect(headerCells.at(2).text()).toBe("Average across all of Facilitator 1's CS Fundamentals workshops");
+    expect(headerCells.at(2).text()).toBe(
+      "Average across all of Facilitator 1's CS Fundamentals workshops"
+    );
     // 5 expected columns: Question, Average for this workshop,
     // Average for facilitator 1, Average for facilitator 1,
     // Average for this course

@@ -7,8 +7,6 @@ import {
 } from '@cdo/apps/templates/projects/ProjectsList';
 import SectionProjectsList from '@cdo/apps/templates/projects/SectionProjectsList';
 
-
-
 const CAT_IMAGE_URL = '/base/static/common_images/stickers/cat.png';
 
 const STUB_PROJECTS_DATA = [
@@ -674,9 +672,11 @@ describe('SectionProjectsList', () => {
 
   describe('getStudentNames', () => {
     it('shows students in alphabetical order and without duplicates', () => {
-      expect(
-        SectionProjectsList.getStudentNames(STUB_PROJECTS_DATA)
-      ).toEqual(['Alice', 'Bob', 'Charlie']);
+      expect(SectionProjectsList.getStudentNames(STUB_PROJECTS_DATA)).toEqual([
+        'Alice',
+        'Bob',
+        'Charlie',
+      ]);
     });
   });
 

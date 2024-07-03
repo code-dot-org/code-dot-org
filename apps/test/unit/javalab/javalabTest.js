@@ -16,9 +16,8 @@ import {
   restoreStudioApp,
 } from '@cdo/apps/StudioApp';
 
-
-
-window.fetch = jest.fn()
+window.fetch = jest
+  .fn()
   .mockResolvedValue({json: jest.fn(), headers: {get: jest.fn()}});
 
 describe('Javalab', () => {
@@ -57,7 +56,10 @@ describe('Javalab', () => {
     });
 
     it('triggers an autosave if there are unsaved changes', () => {
-      jest.spyOn(project, 'hasOwnerChangedProject').mockClear().mockReturnValue(true);
+      jest
+        .spyOn(project, 'hasOwnerChangedProject')
+        .mockClear()
+        .mockReturnValue(true);
 
       javalab.beforeUnload(eventStub);
 
@@ -82,7 +84,9 @@ describe('Javalab', () => {
 
       javalab.init(config);
 
-      expect(getStore().dispatch).toHaveBeenCalledWith(setAllSourcesAndFileMetadata(config.level.startSources));
+      expect(getStore().dispatch).toHaveBeenCalledWith(
+        setAllSourcesAndFileMetadata(config.level.startSources)
+      );
     });
 
     it('with lastAttempt if there is one', () => {
@@ -102,7 +106,9 @@ describe('Javalab', () => {
       };
       javalab.init(config);
 
-      expect(getStore().dispatch).toHaveBeenCalledWith(setAllSourcesAndFileMetadata(config.level.lastAttempt));
+      expect(getStore().dispatch).toHaveBeenCalledWith(
+        setAllSourcesAndFileMetadata(config.level.lastAttempt)
+      );
     });
 
     it('does not populate if start sources are empty', () => {
@@ -111,7 +117,9 @@ describe('Javalab', () => {
       };
       javalab.init(config);
 
-      expect(getStore().getState().javalab.sources).not.toBe(config.level.startSources);
+      expect(getStore().getState().javalab.sources).not.toBe(
+        config.level.startSources
+      );
     });
 
     it('with exemplarSources if there are any', () => {
@@ -124,7 +132,9 @@ describe('Javalab', () => {
       };
       javalab.init(config);
 
-      expect(getStore().dispatch).toHaveBeenCalledWith(setAllSourcesAndFileMetadata(config.level.exemplarSources));
+      expect(getStore().dispatch).toHaveBeenCalledWith(
+        setAllSourcesAndFileMetadata(config.level.exemplarSources)
+      );
     });
   });
 });

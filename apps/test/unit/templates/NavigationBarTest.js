@@ -8,8 +8,6 @@ import {
 } from '@cdo/apps/templates/NavigationBar';
 import color from '@cdo/apps/util/color';
 
-
-
 describe('NavigationItem', () => {
   it('item renders text', () => {
     const wrapper = isolateComponent(
@@ -71,7 +69,9 @@ describe('NavigationCategory', () => {
         initialIsOpen={true}
       />
     );
-    expect(wrapper.findOne('.category').props.style.backgroundColor).toBe(color.purple);
+    expect(wrapper.findOne('.category').props.style.backgroundColor).toBe(
+      color.purple
+    );
   });
 });
 

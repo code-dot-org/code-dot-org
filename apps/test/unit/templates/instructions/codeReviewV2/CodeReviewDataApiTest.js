@@ -3,8 +3,6 @@ import CodeReviewDataApi, {
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 import * as utils from '@cdo/apps/utils';
 
-
-
 const fakeCommitData = [
   {
     id: 1,
@@ -88,10 +86,15 @@ describe('CodeReviewDataApi', () => {
         fakeProjectLevelId,
         fakeScriptId
       );
-      jest.spyOn(CodeReviewDataApi.prototype, 'getCommits').mockClear().mockImplementation(() => {
-        return Promise.resolve(fakeCommitData);
-      });
-      jest.spyOn(CodeReviewDataApi.prototype, 'getCodeReviews').mockClear()
+      jest
+        .spyOn(CodeReviewDataApi.prototype, 'getCommits')
+        .mockClear()
+        .mockImplementation(() => {
+          return Promise.resolve(fakeCommitData);
+        });
+      jest
+        .spyOn(CodeReviewDataApi.prototype, 'getCodeReviews')
+        .mockClear()
         .mockImplementation(() => {
           return Promise.resolve(fakeReviewData);
         });
@@ -113,8 +116,12 @@ describe('CodeReviewDataApi', () => {
 
     it('adds the timelineElementType to each element', async () => {
       const {timelineData, openReview} = await dataApi.getInitialTimelineData();
-      expect(timelineData[0].timelineElementType).toBe(timelineElementType.commit);
-      expect(timelineData[2].timelineElementType).toBe(timelineElementType.review);
+      expect(timelineData[0].timelineElementType).toBe(
+        timelineElementType.commit
+      );
+      expect(timelineData[2].timelineElementType).toBe(
+        timelineElementType.review
+      );
       expect(openReview.timelineElementType).toBe(timelineElementType.review);
     });
   });
@@ -131,12 +138,15 @@ describe('CodeReviewDataApi', () => {
     });
 
     beforeEach(() => {
-      ajaxStub = jest.spyOn($, 'ajax').mockClear().mockReturnValue({
-        done: successCallback => {
-          successCallback(fakeReviewData[0]);
-          return {fail: () => {}};
-        },
-      });
+      ajaxStub = jest
+        .spyOn($, 'ajax')
+        .mockClear()
+        .mockReturnValue({
+          done: successCallback => {
+            successCallback(fakeReviewData[0]);
+            return {fail: () => {}};
+          },
+        });
     });
 
     afterEach(() => {
@@ -174,12 +184,15 @@ describe('CodeReviewDataApi', () => {
     });
 
     beforeEach(() => {
-      ajaxStub = jest.spyOn($, 'ajax').mockClear().mockReturnValue({
-        done: successCallback => {
-          successCallback(fakeReviewData[0]);
-          return {fail: () => {}};
-        },
-      });
+      ajaxStub = jest
+        .spyOn($, 'ajax')
+        .mockClear()
+        .mockReturnValue({
+          done: successCallback => {
+            successCallback(fakeReviewData[0]);
+            return {fail: () => {}};
+          },
+        });
     });
 
     afterEach(() => {
@@ -222,12 +235,15 @@ describe('CodeReviewDataApi', () => {
     });
 
     beforeEach(() => {
-      ajaxStub = jest.spyOn($, 'ajax').mockClear().mockReturnValue({
-        done: successCallback => {
-          successCallback(fakeReviewData[0]);
-          return {fail: () => {}};
-        },
-      });
+      ajaxStub = jest
+        .spyOn($, 'ajax')
+        .mockClear()
+        .mockReturnValue({
+          done: successCallback => {
+            successCallback(fakeReviewData[0]);
+            return {fail: () => {}};
+          },
+        });
     });
 
     afterEach(() => {
@@ -236,8 +252,12 @@ describe('CodeReviewDataApi', () => {
 
     it('rejects with profanity error if profanity is found', async () => {
       const profaneWordsRes = ['word1', 'word2'];
-      jest.spyOn(utils, 'findProfanity').mockClear()
-        .mockReturnValue({done: successCallback => successCallback(profaneWordsRes)});
+      jest
+        .spyOn(utils, 'findProfanity')
+        .mockClear()
+        .mockReturnValue({
+          done: successCallback => successCallback(profaneWordsRes),
+        });
 
       try {
         await dataApi.submitNewCodeReviewComment(fakeComment, fakeReviewId);
@@ -252,9 +272,12 @@ describe('CodeReviewDataApi', () => {
     });
 
     it('calls code_review_comments endpoint if profanity is not found', async () => {
-      jest.spyOn(utils, 'findProfanity').mockClear().mockReturnValue({
-        done: successCallback => successCallback(null),
-      });
+      jest
+        .spyOn(utils, 'findProfanity')
+        .mockClear()
+        .mockReturnValue({
+          done: successCallback => successCallback(null),
+        });
 
       await dataApi.submitNewCodeReviewComment(fakeComment, fakeReviewId);
 
@@ -283,12 +306,15 @@ describe('CodeReviewDataApi', () => {
     });
 
     beforeEach(() => {
-      ajaxStub = jest.spyOn($, 'ajax').mockClear().mockReturnValue({
-        done: successCallback => {
-          successCallback(fakeReviewData[0]);
-          return {fail: () => {}};
-        },
-      });
+      ajaxStub = jest
+        .spyOn($, 'ajax')
+        .mockClear()
+        .mockReturnValue({
+          done: successCallback => {
+            successCallback(fakeReviewData[0]);
+            return {fail: () => {}};
+          },
+        });
     });
 
     afterEach(() => {

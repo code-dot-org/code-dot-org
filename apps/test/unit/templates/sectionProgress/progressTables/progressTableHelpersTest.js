@@ -11,8 +11,6 @@ import {
   unitTestExports,
 } from '@cdo/apps/templates/sectionProgress/progressTables/progressTableHelpers';
 
-
-
 describe('progressTableHelpers', () => {
   describe('formatTimeSpent', () => {
     const formatTimeSpent = unitTestExports.formatTimeSpent;

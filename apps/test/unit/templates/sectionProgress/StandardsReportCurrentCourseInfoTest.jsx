@@ -3,8 +3,6 @@ import React from 'react';
 
 import StandardsReportCurrentCourseInfo from '@cdo/apps/templates/sectionProgress/standards/StandardsReportCurrentCourseInfo';
 
-
-
 describe('StandardsReportCurrentCourseInfo', () => {
   let DEFAULT_PROPS;
 

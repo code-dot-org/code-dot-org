@@ -3,8 +3,6 @@ import RGBColor from 'rgbcolor';
 import {themeOptions, fontFamilyOptions} from '@cdo/apps/applab/constants';
 import library from '@cdo/apps/applab/designElements/library';
 
-
-
 describe('Applab designElements/elementThemes', () => {
   function expectValidFontFamilyThemeValue(element) {
     const elementThemeValues = library.getThemeValues(element);

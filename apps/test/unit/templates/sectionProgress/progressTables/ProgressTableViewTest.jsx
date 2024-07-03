@@ -31,8 +31,6 @@ import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConst
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-
-
 const LESSON_1 = fakeLessonWithLevels({position: 1});
 const LESSON_2 = fakeLessonWithLevels({position: 2}, 2);
 const STUDENTS = fakeStudents(2);
@@ -95,14 +93,18 @@ describe('ProgressTableView', () => {
     );
 
     const wrapper = setUp(ViewType.SUMMARY, overrideState);
-    expect(wrapper.find(ProgressTableContentView).props().needsGutter).toBe(true);
+    expect(wrapper.find(ProgressTableContentView).props().needsGutter).toBe(
+      true
+    );
   });
 
   it('passes needsGutter false to the ProgressTableContentView when the student row height is less than the body height', () => {
     // 2 students will not exceed max height (default props)
     const wrapper = setUp();
 
-    expect(wrapper.find(ProgressTableContentView).props().needsGutter).toBe(false);
+    expect(wrapper.find(ProgressTableContentView).props().needsGutter).toBe(
+      false
+    );
   });
 
   describe('summary view', () => {
@@ -119,13 +121,17 @@ describe('ProgressTableView', () => {
       );
 
       const wrapper = setUp(ViewType.SUMMARY, overrideState);
-      expect(wrapper.find(SummaryViewLegend).props().showCSFProgressBox).toBe(true);
+      expect(wrapper.find(SummaryViewLegend).props().showCSFProgressBox).toBe(
+        true
+      );
     });
 
     it('renders a ProgressTableSummaryCell for each lesson for each student', () => {
       const wrapper = setUp(ViewType.SUMMARY);
       const expectedSummaryCellCount = STUDENTS.length * LESSONS.length;
-      expect(wrapper.find(ProgressTableSummaryCell)).toHaveLength(expectedSummaryCellCount);
+      expect(wrapper.find(ProgressTableSummaryCell)).toHaveLength(
+        expectedSummaryCellCount
+      );
     });
 
     it('renders a single header for content and student list views', () => {
@@ -146,7 +152,10 @@ describe('ProgressTableView', () => {
       const timeSpentFormatterStub = jest.fn();
       const lastUpdatedFormatterStub = jest.fn();
 
-      const getSummaryCellFormattersStub = jest.spyOn(progressTableHelpers, 'getSummaryCellFormatters').mockClear().mockImplementation();
+      const getSummaryCellFormattersStub = jest
+        .spyOn(progressTableHelpers, 'getSummaryCellFormatters')
+        .mockClear()
+        .mockImplementation();
       getSummaryCellFormattersStub.mockReturnValue([
         () => <div />, // main cell formatter
         timeSpentFormatterStub,
@@ -173,7 +182,9 @@ describe('ProgressTableView', () => {
 
     it('passes `includeReviewStates` to ProgressLegend when unit is CSD', () => {
       const wrapper = setUp(ViewType.DETAIL);
-      expect(wrapper.find(ProgressLegend).props().includeReviewStates).toBe(true);
+      expect(wrapper.find(ProgressLegend).props().includeReviewStates).toBe(
+        true
+      );
     });
 
     it('renders ProgressTableDetailCells', () => {
@@ -203,14 +214,19 @@ describe('ProgressTableView', () => {
         .find(ProgressTableContentView)
         .find(Sticky.Header);
       // one ProgressTableLevelIconSet for each of the 2 lessons
-      expect(contentViewHeaders.find(ProgressTableLevelIconSet)).toHaveLength(2);
+      expect(contentViewHeaders.find(ProgressTableLevelIconSet)).toHaveLength(
+        2
+      );
     });
 
     it('calls timeSpent/lastUpdated formatters when a row is expanded', () => {
       const timeSpentFormatterStub = jest.fn();
       const lastUpdatedFormatterStub = jest.fn();
 
-      const getDetailCellFormattersStub = jest.spyOn(progressTableHelpers, 'getDetailCellFormatters').mockClear().mockImplementation();
+      const getDetailCellFormattersStub = jest
+        .spyOn(progressTableHelpers, 'getDetailCellFormatters')
+        .mockClear()
+        .mockImplementation();
       getDetailCellFormattersStub.mockReturnValue([
         () => <div />, // main cell formatter
         timeSpentFormatterStub,
@@ -272,6 +288,8 @@ describe('ProgressTableView', () => {
     // The student generator makes the first student have the first given name
     // alphabetically. The last student has the first family name alphabetically
     expect(givenNameWrapper.state.rows[0].student.id).toBe(0);
-    expect(familyNameWrapper.state.rows[0].student.id).toBe(STUDENTS.length - 1);
+    expect(familyNameWrapper.state.rows[0].student.id).toBe(
+      STUDENTS.length - 1
+    );
   });
 });

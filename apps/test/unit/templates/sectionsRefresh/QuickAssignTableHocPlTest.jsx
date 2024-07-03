@@ -5,8 +5,6 @@ import {MARKETING_AUDIENCE} from '@cdo/apps/templates/sectionsRefresh/Curriculum
 import QuickAssignTableHocPl from '@cdo/apps/templates/sectionsRefresh/QuickAssignTableHocPl';
 import i18n from '@cdo/locale';
 
-
-
 import {hocCourseOfferings, plCourseOfferings} from './CourseOfferingsTestData';
 
 const DEFAULT_PROPS = {

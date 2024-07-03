@@ -1,7 +1,5 @@
 import * as elementUtils from '@cdo/apps/applab/designElements/elementUtils';
 
-
-
 describe('Applab designElements/elementUtils', function () {
   describe('calculatePadding', () => {
     it('returns (0,0) for empty padding string', () => {

@@ -4,8 +4,6 @@ import React from 'react';
 import {stubFakeProjectLibraryData} from '@cdo/apps/templates/projects/generateFakeProjects';
 import {UnconnectedLibraryTable as LibraryTable} from '@cdo/apps/templates/projects/LibraryTable';
 
-
-
 const DEFAULT_PROPS = {
   personalProjectsList: [],
   unpublishProjectLibrary: () => {},

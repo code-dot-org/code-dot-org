@@ -4,8 +4,6 @@ import React from 'react';
 import {UnconnectedKVPairs as KVPairs} from '@cdo/apps/storage/dataBrowser/KVPairs';
 import commonI18n from '@cdo/locale';
 
-
-
 describe('KVPairs', () => {
   describe('localization', () => {
     function createKVPairs() {
@@ -24,9 +22,18 @@ describe('KVPairs', () => {
     });
 
     it('should render a localized strings for every column header', () => {
-      jest.spyOn(commonI18n, 'actions').mockClear().mockReturnValue('i18n-actions');
-      jest.spyOn(commonI18n, 'dataTableKey').mockClear().mockReturnValue('i18n-data-table-key');
-      jest.spyOn(commonI18n, 'dataTableValue').mockClear().mockReturnValue('i18n-data-table-value');
+      jest
+        .spyOn(commonI18n, 'actions')
+        .mockClear()
+        .mockReturnValue('i18n-actions');
+      jest
+        .spyOn(commonI18n, 'dataTableKey')
+        .mockClear()
+        .mockReturnValue('i18n-data-table-key');
+      jest
+        .spyOn(commonI18n, 'dataTableValue')
+        .mockClear()
+        .mockReturnValue('i18n-data-table-value');
 
       const wrapper = createKVPairs();
 

@@ -9,8 +9,6 @@ import CodeReviewTimelineElement, {
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 import CodeReviewTimelineReview from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineReview';
 
-
-
 const DEFAULT_PROPS = {
   timelineData: [
     {
@@ -69,7 +67,9 @@ describe('CodeReviewTimeline', () => {
     const wrapper = setUp();
     const createdElement = wrapper.find(CodeReviewTimelineElement);
     expect(createdElement).toHaveLength(1);
-    expect(createdElement.props().type).toBe(codeReviewTimelineElementType.CREATED);
+    expect(createdElement.props().type).toBe(
+      codeReviewTimelineElementType.CREATED
+    );
     expect(createdElement.props().isLast).toBe(false);
   });
 

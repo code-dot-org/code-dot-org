@@ -5,8 +5,6 @@ import TextConsole, {
   AUTO_CLOSE_TIME,
 } from '@cdo/apps/p5lab/spritelab/TextConsole';
 
-
-
 describe('Sprite Lab Text Console', () => {
   let wrapper;
 

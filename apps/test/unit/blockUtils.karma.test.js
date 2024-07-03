@@ -12,7 +12,6 @@ import {
 } from '@cdo/apps/block_utils';
 import {parseElement, serialize} from '@cdo/apps/xml.js';
 
-
 import {allowConsoleWarnings} from '../util/testUtils';
 
 describe('block utils', () => {

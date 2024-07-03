@@ -3,8 +3,6 @@ import React from 'react';
 
 import AddResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddResourceDialog';
 
-
-
 describe('AddResourceDialog', () => {
   let defaultProps, onSaveSpy, handleCloseSpy;
   beforeEach(() => {
@@ -50,7 +48,10 @@ describe('AddResourceDialog', () => {
       name: 'my resource name',
       url: 'code.org',
     });
-    const saveResourceSpy = jest.spyOn(instance, 'saveResource').mockClear().mockImplementation();
+    const saveResourceSpy = jest
+      .spyOn(instance, 'saveResource')
+      .mockClear()
+      .mockImplementation();
     instance.forceUpdate();
     wrapper.update();
     wrapper.find('#submit-button').simulate('submit');
@@ -74,7 +75,9 @@ describe('AddResourceDialog', () => {
         existingResource={existingResource}
       />
     );
-    expect(wrapper.find('[name="name"]').props().value).toBe('existing resource');
+    expect(wrapper.find('[name="name"]').props().value).toBe(
+      'existing resource'
+    );
     expect(wrapper.find('[name="url"]').props().value).toBe('fake.url');
     expect(wrapper.find('[name="includeInPdf"]').props().checked).toBe(true);
     expect(wrapper.find('[name="type"]').props().value).toBe('Handout');

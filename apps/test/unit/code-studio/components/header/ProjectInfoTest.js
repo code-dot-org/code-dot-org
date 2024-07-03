@@ -8,8 +8,6 @@ import ProjectHeader from '@cdo/apps/code-studio/components/header/ProjectHeader
 import {UnconnectedProjectInfo as ProjectInfo} from '@cdo/apps/code-studio/components/header/ProjectInfo';
 import {possibleHeaders} from '@cdo/apps/code-studio/headerRedux';
 
-
-
 // TODO: These components have circular dependencies which causes the component to mount as undefined randomly
 // Mock out to break the circularity until we can untangle them
 jest.mock('@cdo/apps/code-studio/components/header/LevelBuilderSaveButton');

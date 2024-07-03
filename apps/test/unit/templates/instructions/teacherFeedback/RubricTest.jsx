@@ -4,8 +4,6 @@ import React from 'react';
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 import i18n from '@cdo/locale';
 
-
-
 const DEFAULT_PROPS = {
   rubric: {
     keyConcept: 'This is the Key Concept',

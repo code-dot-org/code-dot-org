@@ -2,8 +2,6 @@ import Compass from '@cdo/apps/lib/kits/maker/boards/microBit/Compass';
 import {SENSOR_CHANNELS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 
-
-
 describe('MicroBit Compass', function () {
   let boardClient;
   let compass;
@@ -42,7 +40,9 @@ describe('MicroBit Compass', function () {
   describe(`start() and stop()`, () => {
     it(`trigger the parent call`, () => {
       let startSpy = jest.spyOn(boardClient, 'streamAnalogChannel').mockClear();
-      let stopSpy = jest.spyOn(boardClient, 'stopStreamingAnalogChannel').mockClear();
+      let stopSpy = jest
+        .spyOn(boardClient, 'stopStreamingAnalogChannel')
+        .mockClear();
       compass.start();
       expect(startSpy).toHaveBeenCalledTimes(2);
       expect(startSpy).toHaveBeenCalledWith(SENSOR_CHANNELS.magX);

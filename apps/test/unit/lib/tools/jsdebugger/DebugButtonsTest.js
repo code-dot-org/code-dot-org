@@ -12,8 +12,6 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 
-
-
 const EXAMPLE_CODE = `
 for (var i = 0; i < 10; i++) {
   i;

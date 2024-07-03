@@ -3,8 +3,6 @@ import React from 'react';
 
 import SocialShare from '@cdo/apps/templates/certificates/SocialShare';
 
-
-
 describe('SocialShare', () => {
   // SocialShare uses a function from url_test.js to check if images are accessible
   // before loading buttons. This is a slightly hacky way of resolving that function.
@@ -29,10 +27,14 @@ describe('SocialShare', () => {
     expect(screen.queryByTitle('Share to LinkedIn')).toBeFalsy();
 
     expect(screen.queryByTitle('Share to Facebook')).toBeDefined();
-    expect(screen.getByTitle('Share to Facebook').closest('a').href).toBe('https://www.facebook.com/sharer/sharer.php?facebook');
+    expect(screen.getByTitle('Share to Facebook').closest('a').href).toBe(
+      'https://www.facebook.com/sharer/sharer.php?facebook'
+    );
 
     expect(screen.queryByTitle('Share to Twitter')).toBeDefined();
-    expect(screen.getByTitle('Share to Twitter').closest('a').href).toBe('https://twitter.com/share?twitter');
+    expect(screen.getByTitle('Share to Twitter').closest('a').href).toBe(
+      'https://twitter.com/share?twitter'
+    );
 
     expect(screen.getByText('Print').closest('a').href).toContain('/print');
   });
@@ -52,13 +54,19 @@ describe('SocialShare', () => {
     resolveImageAccess();
 
     expect(screen.queryByTitle('Share to LinkedIn')).toBeDefined();
-    expect(screen.getByTitle('Share to LinkedIn').closest('a').href).toBe('https://www.linkedin.com/sharing/share-offsite/?linkedin');
+    expect(screen.getByTitle('Share to LinkedIn').closest('a').href).toBe(
+      'https://www.linkedin.com/sharing/share-offsite/?linkedin'
+    );
 
     expect(screen.queryByTitle('Share to Facebook')).toBeDefined();
-    expect(screen.getByTitle('Share to Facebook').closest('a').href).toBe('https://www.facebook.com/sharer/sharer.php?facebook');
+    expect(screen.getByTitle('Share to Facebook').closest('a').href).toBe(
+      'https://www.facebook.com/sharer/sharer.php?facebook'
+    );
 
     expect(screen.queryByTitle('Share to Twitter')).toBeDefined();
-    expect(screen.getByTitle('Share to Twitter').closest('a').href).toBe('https://twitter.com/share?twitter');
+    expect(screen.getByTitle('Share to Twitter').closest('a').href).toBe(
+      'https://twitter.com/share?twitter'
+    );
 
     expect(screen.getByText('Print').closest('a').href).toContain('/print');
   });

@@ -1,5 +1,3 @@
-
-
 var _ = require('lodash');
 var combineReducers = require('redux').combineReducers;
 

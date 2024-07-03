@@ -5,8 +5,6 @@ import Certificate from '@cdo/apps/templates/certificates/Certificate';
 import Congrats from '@cdo/apps/templates/certificates/Congrats';
 import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 
-
-
 describe('Congrats', () => {
   const userTypes = ['signedOut', 'teacher', 'student'];
   const certificateData = [

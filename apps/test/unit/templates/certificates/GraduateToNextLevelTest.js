@@ -3,8 +3,6 @@ import React from 'react';
 
 import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 
-
-
 const propsPassedToVerticalImageResourceCard = props =>
   isolateComponent(<GraduateToNextLevel {...props} />).findOne(
     'VerticalImageResourceCard'

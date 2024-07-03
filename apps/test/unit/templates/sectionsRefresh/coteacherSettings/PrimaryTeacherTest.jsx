@@ -3,8 +3,6 @@ import React from 'react';
 
 import PrimaryTeacher from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/PrimaryTeacher';
 
-
-
 const testPrimaryTeacher = {
   name: 'Parmesan',
   email: 'parmesan@code.org',

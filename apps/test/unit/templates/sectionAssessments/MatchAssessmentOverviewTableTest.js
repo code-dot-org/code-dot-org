@@ -4,8 +4,6 @@ import React from 'react';
 import {matchQuestionWith4Pairs} from '@cdo/apps/templates/sectionAssessments/assessmentsTestHelpers';
 import {UnconnectedMatchAssessmentsOverviewTable} from '@cdo/apps/templates/sectionAssessments/MatchAssessmentsOverviewTable';
 
-
-
 describe('MatchAssessmentsOverviewTable', () => {
   it('renders the correct number of cells', () => {
     const wrapper = mount(

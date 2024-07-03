@@ -13,8 +13,6 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 
-
-
 const newJSInterpreter = () => {
   let interpreter = new JSInterpreter({
     shouldRunAtMaxSpeed: () => false,
@@ -43,7 +41,9 @@ describe('The DebugConsole component when the console is enabled', () => {
       </Provider>
     );
     const debugConsoleInstance = root.find('DebugConsole').instance();
-    jumpToBottomSpy = jest.spyOn(debugConsoleInstance, 'jumpToBottom').mockClear();
+    jumpToBottomSpy = jest
+      .spyOn(debugConsoleInstance, 'jumpToBottom')
+      .mockClear();
   });
 
   afterEach(() => {
@@ -280,7 +280,9 @@ describe('The DebugConsole component when the console is enabled', () => {
             output: {foo: 'bar'},
           })
         );
-        expect(debugOutput().text()).toBe('> {foo: \'bar\'}< ▶Object {foo: "bar"}');
+        expect(debugOutput().text()).toBe(
+          '> {foo: \'bar\'}< ▶Object {foo: "bar"}'
+        );
       });
     });
 
@@ -292,7 +294,9 @@ describe('The DebugConsole component when the console is enabled', () => {
       });
 
       it('the error gets appended to the output', () => {
-        expect(debugOutput().text()).toContain('< "ReferenceError: a is not defined"');
+        expect(debugOutput().text()).toContain(
+          '< "ReferenceError: a is not defined"'
+        );
       });
     });
   });
@@ -305,7 +309,10 @@ describe('The DebugConsole component when the console is enabled', () => {
       selection = '';
       inputEl = debugInput().instance();
       jest.spyOn(inputEl, 'focus').mockClear();
-      jest.spyOn(window, 'getSelection').mockClear().mockImplementation(() => selection);
+      jest
+        .spyOn(window, 'getSelection')
+        .mockClear()
+        .mockImplementation(() => selection);
     });
 
     afterEach(() => {
@@ -336,7 +343,9 @@ describe('The DebugConsole component when the console is enabled', () => {
       getStore().dispatch(
         actions.appendLog({output: 'test warning text'}, 'WARNING')
       );
-      expect(debugOutput().instance().style.backgroundColor).toBe('rgb(255, 247, 223)');
+      expect(debugOutput().instance().style.backgroundColor).toBe(
+        'rgb(255, 247, 223)'
+      );
     });
 
     it('error debug output will change background color to lightest red', () => {
@@ -347,7 +356,9 @@ describe('The DebugConsole component when the console is enabled', () => {
       getStore().dispatch(
         actions.appendLog({output: 'test error text'}, 'ERROR')
       );
-      expect(debugOutput().instance().style.backgroundColor).toBe('rgb(255, 204, 204)');
+      expect(debugOutput().instance().style.backgroundColor).toBe(
+        'rgb(255, 204, 204)'
+      );
     });
   });
 });

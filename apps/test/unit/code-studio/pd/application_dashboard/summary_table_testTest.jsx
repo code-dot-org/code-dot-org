@@ -6,7 +6,6 @@ import {getApplicationStatuses} from '@cdo/apps/code-studio/pd/application_dashb
 
 import {SummaryTable} from '../../../../../src/code-studio/pd/application_dashboard/summary_table';
 
-
 const getTableContents = wrapper =>
   wrapper.find('td').map(tableContent => tableContent.text());
 

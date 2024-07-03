@@ -8,8 +8,6 @@ import {
 import {UnconnectedLessonProgressColumnHeader} from '@cdo/apps/templates/sectionProgressV2/LessonProgressColumnHeader.jsx';
 import i18n from '@cdo/locale';
 
-
-
 const LESSON = fakeLessonWithLevels({numberedLesson: true}, 1);
 
 const DEFAULT_PROPS = {

@@ -4,8 +4,6 @@ import {BrowserRouter as Router} from 'react-router-dom';
 
 import TeacherDashboardNavigation from '@cdo/apps/templates/teacherDashboard/TeacherDashboardNavigation.jsx';
 
-
-
 const CUSTOM_LINKS = [
   {
     label: 'custom link 1',

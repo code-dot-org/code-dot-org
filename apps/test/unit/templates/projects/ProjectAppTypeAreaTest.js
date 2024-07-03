@@ -14,7 +14,6 @@ import projectsReducer, {
   appendProjects,
 } from '@cdo/apps/templates/projects/projectsRedux';
 
-
 import {
   allowConsoleErrors,
   allowConsoleWarnings,

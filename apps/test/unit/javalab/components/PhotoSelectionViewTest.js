@@ -3,8 +3,6 @@ import React from 'react';
 
 import PhotoSelectionView from '@cdo/apps/javalab/components/PhotoSelectionView';
 
-
-
 describe('PhotoSelectionView', () => {
   const file = new File([], 'file');
   let onPhotoSelected, promptText;

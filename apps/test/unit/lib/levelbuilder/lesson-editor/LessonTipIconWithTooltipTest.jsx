@@ -3,8 +3,6 @@ import React from 'react';
 
 import LessonTipIconWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonTipIconWithTooltip';
 
-
-
 describe('LessonTipIconWithTooltip', () => {
   let defaultProps, onClick;
   beforeEach(() => {

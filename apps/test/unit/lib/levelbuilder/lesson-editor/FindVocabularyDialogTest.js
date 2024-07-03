@@ -3,8 +3,6 @@ import React from 'react';
 
 import FindVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindVocabularyDialog';
 
-
-
 describe('FindVocabularyDialog', () => {
   let defaultProps, handleConfirm;
   beforeEach(() => {

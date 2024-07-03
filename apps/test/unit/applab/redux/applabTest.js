@@ -115,7 +115,9 @@ describe('App Lab redux module', () => {
       });
       it('and back to CODE mode', () => {
         store.dispatch(actions.changeInterfaceMode(ApplabInterfaceMode.DATA));
-        expect(store.getState().interfaceMode).not.toBe(ApplabInterfaceMode.CODE);
+        expect(store.getState().interfaceMode).not.toBe(
+          ApplabInterfaceMode.CODE
+        );
         store.dispatch(actions.changeInterfaceMode(ApplabInterfaceMode.CODE));
         expect(store.getState().interfaceMode).toBe(ApplabInterfaceMode.CODE);
       });

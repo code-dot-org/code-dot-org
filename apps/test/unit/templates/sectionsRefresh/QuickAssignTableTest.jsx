@@ -5,8 +5,6 @@ import {MARKETING_AUDIENCE} from '@cdo/apps/templates/sectionsRefresh/Curriculum
 import QuickAssignTable from '@cdo/apps/templates/sectionsRefresh/QuickAssignTable';
 import i18n from '@cdo/locale';
 
-
-
 import {
   elementarySchoolCourseOffering,
   highSchoolCourseOfferings,
@@ -73,7 +71,9 @@ describe('QuickAssignTable', () => {
     radio.simulate('change', {
       target: {value: 'Computer Science A', checked: true},
     });
-    expect(updateSpy).toHaveBeenCalledWith(expect.objectContaining({versionId: 373}));
+    expect(updateSpy).toHaveBeenCalledWith(
+      expect.objectContaining({versionId: 373})
+    );
   });
 
   it('automatically checks correct radio button if course is already assigned', () => {

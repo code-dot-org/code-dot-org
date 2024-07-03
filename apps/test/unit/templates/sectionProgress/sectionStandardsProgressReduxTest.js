@@ -385,9 +385,9 @@ describe('sectionStandardsProgressRedux', () => {
     });
 
     it('accurately calculates the number of lessons completed when there is student progress and teacher marked', () => {
-      expect(
-        getNumberLessonsCompleted(stateForTeacherMarkedAndProgress)
-      ).toBe(2);
+      expect(getNumberLessonsCompleted(stateForTeacherMarkedAndProgress)).toBe(
+        2
+      );
     });
   });
 });

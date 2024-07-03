@@ -6,8 +6,6 @@ import DisabledBubblesAlert from '@cdo/apps/code-studio/DisabledBubblesAlert';
 import Alert from '@cdo/apps/templates/alert';
 import i18n from '@cdo/locale';
 
-
-
 describe('DisabledBubblesAlert', () => {
   it('is visible at first, if not seen before', () => {
     sessionStorage.setItem('disabledBubblesAlertSeen', 'false');

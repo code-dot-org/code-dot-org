@@ -10,8 +10,6 @@ import reducer, {
   canShowGoogleShareButton,
 } from '@cdo/apps/templates/progress/googlePlatformApiRedux';
 
-
-
 describe('Google Platoform API redux module', () => {
   const initialState = {
     loading: false,

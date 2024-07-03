@@ -16,8 +16,6 @@ import Dialog, {
   Cancel,
 } from '@cdo/apps/templates/Dialog';
 
-
-
 describe('AssetListItem', () => {
   var item;
 
@@ -43,7 +41,9 @@ describe('AssetListItem', () => {
         asset={{filename: 'bar.mp3', category: 'audio', willReplace: true}}
       />
     );
-    expect(item.text()).toContain('Warning: Importing this will replace your existing "bar.mp3".');
+    expect(item.text()).toContain(
+      'Warning: Importing this will replace your existing "bar.mp3".'
+    );
   });
 
   it('uses the current project id when no other id is specified', () => {
@@ -52,7 +52,9 @@ describe('AssetListItem', () => {
         asset={{filename: 'bar.png', category: 'image', willReplace: false}}
       />
     );
-    expect(itemWithoutProjectId.find('img').prop('src')).toContain('/v3/assets/undefined/bar.png');
+    expect(itemWithoutProjectId.find('img').prop('src')).toContain(
+      '/v3/assets/undefined/bar.png'
+    );
   });
 
   it("uses the specified project's id", () => {
@@ -62,7 +64,9 @@ describe('AssetListItem', () => {
         asset={{filename: 'bar.png', category: 'image', willReplace: false}}
       />
     );
-    expect(itemWithProjectId.find('img').prop('src')).toContain('/v3/assets/1234/bar.png');
+    expect(itemWithProjectId.find('img').prop('src')).toContain(
+      '/v3/assets/1234/bar.png'
+    );
   });
 });
 
@@ -101,7 +105,9 @@ describe('ScreenListItem', () => {
       />
     );
     expect(item.text()).toContain('main_screen');
-    expect(item.text()).toContain('Importing this will replace your existing screen: "main_screen".');
+    expect(item.text()).toContain(
+      'Importing this will replace your existing screen: "main_screen".'
+    );
   });
 
   it('Will show a warning when replacing another screen with assets', () => {
@@ -119,8 +125,12 @@ describe('ScreenListItem', () => {
       />
     );
     expect(item.text()).toContain('main_screen');
-    expect(item.text()).toContain('Importing this will replace your existing screen: "main_screen".');
-    expect(item.text()).toContain('Importing this will replace your existing assets: "foo.png", "bar.png".');
+    expect(item.text()).toContain(
+      'Importing this will replace your existing screen: "main_screen".'
+    );
+    expect(item.text()).toContain(
+      'Importing this will replace your existing assets: "foo.png", "bar.png".'
+    );
   });
 
   it('Will show the list of conflicting Ids if there are any', () => {
@@ -138,10 +148,16 @@ describe('ScreenListItem', () => {
       />
     );
     expect(item.text()).toContain('main_screen');
-    expect(item.text()).toContain('Uses existing element or screen IDs: "input1", "input2".');
+    expect(item.text()).toContain(
+      'Uses existing element or screen IDs: "input1", "input2".'
+    );
     // we don't want to show other errors related to importing.
-    expect(item.text()).not.toContain('Importing this will replace your existing assets');
-    expect(item.text()).not.toContain('Importing this will replace your existing screen');
+    expect(item.text()).not.toContain(
+      'Importing this will replace your existing assets'
+    );
+    expect(item.text()).not.toContain(
+      'Importing this will replace your existing screen'
+    );
   });
 });
 

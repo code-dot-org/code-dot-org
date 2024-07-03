@@ -14,8 +14,6 @@ import {
   registerReducers,
 } from '@cdo/apps/redux';
 
-
-
 describe('ProgrammingExpressionsEditor', () => {
   let defaultProps,
     addProgrammingExpression,

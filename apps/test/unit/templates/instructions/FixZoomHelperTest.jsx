@@ -3,8 +3,6 @@ import React from 'react';
 
 import FixZoomHelper from '@cdo/apps/templates/FixZoomHelper';
 
-
-
 describe('FixZoomHelper', function () {
   it('shows nothing when not zoomed', function () {
     const component = shallow(<FixZoomHelper />);
@@ -68,7 +66,10 @@ describe('FixZoomHelper', function () {
     const instance = component.instance();
 
     jest.spyOn(instance, 'isLandscape').mockClear().mockReturnValue(true);
-    const isZoomedStub = jest.spyOn(instance, 'isZoomed').mockClear().mockImplementation();
+    const isZoomedStub = jest
+      .spyOn(instance, 'isZoomed')
+      .mockClear()
+      .mockImplementation();
     isZoomedStub.mockReturnValue(true);
     instance.updateViewport();
 

@@ -3,8 +3,6 @@ import React from 'react';
 
 import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
 
-
-
 describe('OrderControls', () => {
   let move, remove, defaultProps;
   beforeEach(() => {
@@ -26,7 +24,9 @@ describe('OrderControls', () => {
 
     wrapper.find('.fa-trash').simulate('mousedown');
     expect(wrapper.find('.modal')).toHaveLength(1);
-    expect(wrapper.find('.modal').text()).toContain('Are you sure you want to remove');
+    expect(wrapper.find('.modal').text()).toContain(
+      'Are you sure you want to remove'
+    );
     expect(remove).not.toHaveBeenCalled();
 
     const deleteButton = wrapper.find('Button').at(2);

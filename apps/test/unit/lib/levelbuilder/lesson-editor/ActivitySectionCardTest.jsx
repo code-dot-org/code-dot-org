@@ -20,7 +20,6 @@ import {
   registerReducers,
 } from '@cdo/apps/redux';
 
-
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 import {sampleActivities, searchOptions} from './activitiesTestData';
@@ -175,7 +174,12 @@ describe('ActivitySectionCard', () => {
 
     const titleInput = wrapper.find('input').at(0);
     titleInput.simulate('change', {target: {value: 'New Title'}});
-    expect(updateActivitySectionField).toHaveBeenCalledWith(1, 1, 'displayName', 'New Title');
+    expect(updateActivitySectionField).toHaveBeenCalledWith(
+      1,
+      1,
+      'displayName',
+      'New Title'
+    );
   });
 
   it('edit activity section duration', () => {
@@ -183,7 +187,12 @@ describe('ActivitySectionCard', () => {
 
     const durationInput = wrapper.find('input').at(1);
     durationInput.simulate('change', {target: {value: '5'}});
-    expect(updateActivitySectionField).toHaveBeenCalledWith(1, 1, 'duration', '5');
+    expect(updateActivitySectionField).toHaveBeenCalledWith(
+      1,
+      1,
+      'duration',
+      '5'
+    );
   });
 
   it('edit activity section remarks', () => {
@@ -191,7 +200,12 @@ describe('ActivitySectionCard', () => {
 
     const remarksInput = wrapper.find('input').at(2);
     remarksInput.simulate('change', {target: {value: ''}});
-    expect(updateActivitySectionField).toHaveBeenCalledWith(1, 1, 'remarks', false);
+    expect(updateActivitySectionField).toHaveBeenCalledWith(
+      1,
+      1,
+      'remarks',
+      false
+    );
   });
 
   it('edit activity section progressionName', () => {
@@ -204,7 +218,12 @@ describe('ActivitySectionCard', () => {
 
     const progressionInput = wrapper.find('input').at(3);
     progressionInput.simulate('change', {target: {value: 'Progression Name'}});
-    expect(updateActivitySectionField).toHaveBeenCalledWith(1, 3, 'progressionName', 'Progression Name');
+    expect(updateActivitySectionField).toHaveBeenCalledWith(
+      1,
+      3,
+      'progressionName',
+      'Progression Name'
+    );
   });
 
   it('edit activity section description', () => {
@@ -212,7 +231,12 @@ describe('ActivitySectionCard', () => {
 
     const titleInput = wrapper.find('textarea').at(0);
     titleInput.simulate('change', {target: {value: 'My section description'}});
-    expect(updateActivitySectionField).toHaveBeenCalledWith(1, 1, 'text', 'My section description');
+    expect(updateActivitySectionField).toHaveBeenCalledWith(
+      1,
+      1,
+      'text',
+      'My section description'
+    );
   });
 
   it('can move activity section down to next activity', () => {
@@ -298,12 +322,16 @@ describe('ActivitySectionCard', () => {
 
     // inserting without a cursor position will insert at the beginning
     instance.insertMarkdownSyntaxAtSelection('new syntax ');
-    expect(updateActivitySectionField.mock.lastCall[3]).toBe('new syntax Simple text');
+    expect(updateActivitySectionField.mock.lastCall[3]).toBe(
+      'new syntax Simple text'
+    );
 
     // inserting with a cursor position will insert at that position
     instance.editorTextAreaRef.selectionStart = 6;
     instance.insertMarkdownSyntaxAtSelection(' new syntax');
-    expect(updateActivitySectionField.mock.lastCall[3]).toBe('Simple new syntax text');
+    expect(updateActivitySectionField.mock.lastCall[3]).toBe(
+      'Simple new syntax text'
+    );
   });
 
   it('can replace selected text with insertMarkdownSyntaxAtSelection', () => {
@@ -316,7 +344,9 @@ describe('ActivitySectionCard', () => {
     instance.editorTextAreaRef.selectionStart = 0;
     instance.editorTextAreaRef.selectionEnd = 6;
     instance.insertMarkdownSyntaxAtSelection('Basic insertion');
-    expect(updateActivitySectionField.mock.lastCall[3]).toBe('Basic insertion text');
+    expect(updateActivitySectionField.mock.lastCall[3]).toBe(
+      'Basic insertion text'
+    );
 
     instance.editorTextAreaRef.selectionStart = 7;
     instance.editorTextAreaRef.selectionEnd = 11;

@@ -6,7 +6,6 @@ import {TestResults} from '@cdo/apps/constants';
 import * as htmlToCanvasWrapper from '@cdo/apps/util/htmlToCanvasWrapper';
 import {isCaptureComplete} from '@cdo/apps/util/thumbnail';
 
-
 import tickWrapper from '../../util/tickWrapper';
 
 export default {

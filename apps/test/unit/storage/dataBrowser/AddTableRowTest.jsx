@@ -4,8 +4,6 @@ import React from 'react';
 import AddTableRow from '@cdo/apps/storage/dataBrowser/AddTableRow';
 import commonI18n from '@cdo/locale';
 
-
-
 describe('AddTableRow', () => {
   describe('localization', () => {
     function createAddTableRow() {
@@ -24,7 +22,10 @@ describe('AddTableRow', () => {
     });
 
     it('should render a localized string for "Add Row"', () => {
-      jest.spyOn(commonI18n, 'addRowToTable').mockClear().mockReturnValue('i18n-add-to-table');
+      jest
+        .spyOn(commonI18n, 'addRowToTable')
+        .mockClear()
+        .mockReturnValue('i18n-add-to-table');
 
       const wrapper = createAddTableRow();
 
@@ -33,7 +34,10 @@ describe('AddTableRow', () => {
     });
 
     it('should render a localized string while adding the row', () => {
-      jest.spyOn(commonI18n, 'addingToTable').mockClear().mockReturnValue('i18n-adding-to-table');
+      jest
+        .spyOn(commonI18n, 'addingToTable')
+        .mockClear()
+        .mockReturnValue('i18n-adding-to-table');
 
       const wrapper = createAddTableRow();
 
@@ -42,7 +46,10 @@ describe('AddTableRow', () => {
     });
 
     it('should render a localized string for the placeholder text', () => {
-      jest.spyOn(commonI18n, 'enterText').mockClear().mockReturnValue('i18n-enter-text');
+      jest
+        .spyOn(commonI18n, 'enterText')
+        .mockClear()
+        .mockReturnValue('i18n-enter-text');
 
       const wrapper = createAddTableRow();
 

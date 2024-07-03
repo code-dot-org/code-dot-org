@@ -2,8 +2,6 @@ import {levelProgressStyle} from '@cdo/apps/templates/progress/progressStyles';
 import color from '@cdo/apps/util/color';
 import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 
-
-
 describe('progressStyles', () => {
   describe('levelProgressStyle', () => {
     it('when level is assessment and levelStatus is not tried has expected background and border color', () => {

@@ -100,12 +100,16 @@ describe('StudentLessonOverview', () => {
     expect(wrapper.contains('Lesson 1: Lesson 1')).toBe(true);
 
     const enhancedSafeMarkdowns = wrapper.find('EnhancedSafeMarkdown');
-    expect(enhancedSafeMarkdowns.at(0).props().markdown).toContain('Lesson Overview');
+    expect(enhancedSafeMarkdowns.at(0).props().markdown).toContain(
+      'Lesson Overview'
+    );
 
     const inlineMarkdowns = wrapper.find('InlineMarkdown');
 
     // The first contains the vocabulary
-    expect(inlineMarkdowns.at(0).props().markdown).toContain('**Algorithm** - A list of steps to finish a task.');
+    expect(inlineMarkdowns.at(0).props().markdown).toContain(
+      '**Algorithm** - A list of steps to finish a task.'
+    );
   });
 
   it('show print button if there is a pdf', () => {

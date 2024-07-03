@@ -1,7 +1,5 @@
 import WorkshopFilter from '@cdo/apps/code-studio/pd/workshop_dashboard/workshop_filter';
 
-
-
 describe('WorkshopFilter component', () => {
   it('can create and combine subject options', () => {
     const currentSubjects = {

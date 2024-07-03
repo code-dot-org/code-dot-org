@@ -3,8 +3,6 @@ import React from 'react';
 
 import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
 
-
-
 const isolateCallToAction = props =>
   isolateComponent(
     <PetitionCallToAction gaPagePath={'/congrats/coursetest-2030'} {...props} />

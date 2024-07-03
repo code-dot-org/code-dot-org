@@ -6,8 +6,6 @@ import {
   RESIZE_VISUALIZATION_EVENT,
 } from '@cdo/apps/lib/ui/VisualizationResizeBar';
 
-
-
 describe('VisualizationResizeBar', function () {
   let wrapper;
 
@@ -23,11 +21,17 @@ describe('VisualizationResizeBar', function () {
   });
 
   it('has the id "visualizationResizeBar"', () => {
-    expect(wrapper.find('div').props()).toHaveProperty('id', 'visualizationResizeBar');
+    expect(wrapper.find('div').props()).toHaveProperty(
+      'id',
+      'visualizationResizeBar'
+    );
   });
 
   it('is configured to display a font-awesome vertical ellipsis', () => {
-    expect(wrapper.find('div').props()).toHaveProperty('className', 'fa fa-ellipsis-v');
+    expect(wrapper.find('div').props()).toHaveProperty(
+      'className',
+      'fa fa-ellipsis-v'
+    );
   });
 
   it('responds to and reports drag events', () => {

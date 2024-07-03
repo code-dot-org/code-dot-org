@@ -3,8 +3,6 @@ import React from 'react';
 
 import CertificateShare from '@cdo/apps/templates/certificates/CertificateShare';
 
-
-
 const defaultImageAlt = 'certificate alt text';
 const defaultProps = {
   imageUrl: '/certificate-image',

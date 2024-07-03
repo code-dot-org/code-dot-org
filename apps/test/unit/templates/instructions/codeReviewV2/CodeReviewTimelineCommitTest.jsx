@@ -8,8 +8,6 @@ import CodeReviewTimelineElement, {
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 import javalabMsg from '@cdo/javalab/locale';
 
-
-
 const DEFAULT_PROPS = {
   commit: {
     id: 1,
@@ -30,7 +28,9 @@ describe('CodeReviewTimelineCommit', () => {
     const wrapper = setUp();
     const timelineElement = wrapper.find(CodeReviewTimelineElement);
     expect(timelineElement).toHaveLength(1);
-    expect(timelineElement.props().type).toBe(codeReviewTimelineElementType.COMMIT);
+    expect(timelineElement.props().type).toBe(
+      codeReviewTimelineElementType.COMMIT
+    );
   });
 
   it('passes isLastElementInTimeline and projectVersion to CodeReviewTimelineElement', () => {
@@ -38,7 +38,9 @@ describe('CodeReviewTimelineCommit', () => {
     const timelineElementProps = wrapper
       .find(CodeReviewTimelineElement)
       .props();
-    expect(timelineElementProps.projectVersionId).toBe(DEFAULT_PROPS.commit.projectVersion);
+    expect(timelineElementProps.projectVersionId).toBe(
+      DEFAULT_PROPS.commit.projectVersion
+    );
     expect(timelineElementProps.isLast).toBe(false);
   });
 

@@ -4,8 +4,6 @@ import React from 'react';
 
 import {RadioButtonsGroup} from '@cdo/apps/componentLibrary/radioButton';
 
-
-
 const radioButtonsData = [
   {
     name: 'test-radioButton1',

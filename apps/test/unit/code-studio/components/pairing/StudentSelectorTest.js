@@ -3,8 +3,6 @@ import React from 'react';
 
 import StudentSelector from '@cdo/apps/code-studio/components/pairing/StudentSelector';
 
-
-
 describe('StudentSelector', () => {
   describe('with more than 4 students selected', () => {
     const students = [

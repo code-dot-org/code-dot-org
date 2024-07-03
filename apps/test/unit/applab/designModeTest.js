@@ -10,8 +10,6 @@ import pageConstantsReducer, {
   setPageConstants,
 } from '@cdo/apps/redux/pageConstants';
 
-
-
 describe('appendPx', () => {
   it('returns a valid css positive integer', function () {
     const cssVal = designMode.appendPx(100);
@@ -242,9 +240,9 @@ describe('setProperty and read Property', () => {
     });
 
     it('Return url for url input', () => {
-      expect(
-        assignImageType(picture, 'https://code.org/images/logo.png')
-      ).toBe('url');
+      expect(assignImageType(picture, 'https://code.org/images/logo.png')).toBe(
+        'url'
+      );
     });
 
     it('Return default for empty input', () => {

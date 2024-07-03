@@ -3,8 +3,6 @@ import React from 'react';
 
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
 
-
-
 describe('ResourcesEditor', () => {
   let defaultProps;
 

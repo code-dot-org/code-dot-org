@@ -6,8 +6,6 @@ import DisabledBubblesModal from '@cdo/apps/code-studio/DisabledBubblesModal';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import i18n from '@cdo/locale';
 
-
-
 describe('DisabledBubblesModal', () => {
   it('is open to begin with', () => {
     const wrapper = shallow(<DisabledBubblesModal />);

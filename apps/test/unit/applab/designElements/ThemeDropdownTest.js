@@ -3,8 +3,6 @@ import React from 'react';
 
 import ThemeDropdown from '@cdo/apps/applab/designElements/ThemeDropdown';
 
-
-
 const DEFAULT_PROPS = {
   initialValue: 'citrus',
   handleChange: () => {},

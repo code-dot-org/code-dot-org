@@ -4,8 +4,6 @@ import React from 'react';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
 
-
-
 describe('CourseVersionPublishingEditor', () => {
   let defaultProps,
     updatePilotExperiment,
@@ -45,9 +43,9 @@ describe('CourseVersionPublishingEditor', () => {
         publishedState={PublishedState.in_development}
       />
     );
-    expect(
-      wrapper.find('.publishedStateSelector').find('option').length
-    ).toBe(7);
+    expect(wrapper.find('.publishedStateSelector').find('option').length).toBe(
+      7
+    );
     expect(
       wrapper.find('.publishedStateSelector').find('option').at(0).props().value
     ).toBe('in_development');
@@ -79,9 +77,9 @@ describe('CourseVersionPublishingEditor', () => {
         publishedState={PublishedState.pilot}
       />
     );
-    expect(
-      wrapper.find('.publishedStateSelector').find('option').length
-    ).toBe(3);
+    expect(wrapper.find('.publishedStateSelector').find('option').length).toBe(
+      3
+    );
     expect(
       wrapper.find('.publishedStateSelector').find('option').at(0).props().value
     ).toBe('pilot');
@@ -101,9 +99,9 @@ describe('CourseVersionPublishingEditor', () => {
         publishedState={PublishedState.beta}
       />
     );
-    expect(
-      wrapper.find('.publishedStateSelector').find('option').length
-    ).toBe(5);
+    expect(wrapper.find('.publishedStateSelector').find('option').length).toBe(
+      5
+    );
     expect(
       wrapper.find('.publishedStateSelector').find('option').at(0).props().value
     ).toBe('beta');
@@ -129,9 +127,9 @@ describe('CourseVersionPublishingEditor', () => {
         publishedState={PublishedState.preview}
       />
     );
-    expect(
-      wrapper.find('.publishedStateSelector').find('option').length
-    ).toBe(4);
+    expect(wrapper.find('.publishedStateSelector').find('option').length).toBe(
+      4
+    );
     expect(
       wrapper.find('.publishedStateSelector').find('option').at(0).props().value
     ).toBe('preview');
@@ -154,9 +152,9 @@ describe('CourseVersionPublishingEditor', () => {
         publishedState={PublishedState.stable}
       />
     );
-    expect(
-      wrapper.find('.publishedStateSelector').find('option').length
-    ).toBe(3);
+    expect(wrapper.find('.publishedStateSelector').find('option').length).toBe(
+      3
+    );
     expect(
       wrapper.find('.publishedStateSelector').find('option').at(0).props().value
     ).toBe('stable');
@@ -176,9 +174,9 @@ describe('CourseVersionPublishingEditor', () => {
         publishedState={PublishedState.sunsetting}
       />
     );
-    expect(
-      wrapper.find('.publishedStateSelector').find('option').length
-    ).toBe(2);
+    expect(wrapper.find('.publishedStateSelector').find('option').length).toBe(
+      2
+    );
     expect(
       wrapper.find('.publishedStateSelector').find('option').at(0).props().value
     ).toBe('sunsetting');
@@ -195,9 +193,9 @@ describe('CourseVersionPublishingEditor', () => {
         publishedState={PublishedState.deprecated}
       />
     );
-    expect(
-      wrapper.find('.publishedStateSelector').find('option').length
-    ).toBe(1);
+    expect(wrapper.find('.publishedStateSelector').find('option').length).toBe(
+      1
+    );
     expect(
       wrapper.find('.publishedStateSelector').find('option').props().value
     ).toBe('deprecated');
@@ -211,7 +209,9 @@ describe('CourseVersionPublishingEditor', () => {
         pilotExperiment={'my-pilot'}
       />
     );
-    expect(wrapper.find('.publishedStateSelector').props().value).toBe(PublishedState.pilot);
+    expect(wrapper.find('.publishedStateSelector').props().value).toBe(
+      PublishedState.pilot
+    );
     expect(wrapper.find('.pilotExperimentInput').length).toBe(1);
   });
 
@@ -219,7 +219,9 @@ describe('CourseVersionPublishingEditor', () => {
     const wrapper = shallow(
       <CourseVersionPublishingEditor {...defaultProps} />
     );
-    expect(wrapper.find('.publishedStateSelector').props().value).toBe(PublishedState.beta);
+    expect(wrapper.find('.publishedStateSelector').props().value).toBe(
+      PublishedState.beta
+    );
     expect(wrapper.find('.pilotExperimentInput').length).toBe(0);
   });
 

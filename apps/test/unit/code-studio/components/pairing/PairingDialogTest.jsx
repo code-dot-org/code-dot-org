@@ -5,8 +5,6 @@ import Pairing from '@cdo/apps/code-studio/components/pairing/Pairing';
 import PairingDialog from '@cdo/apps/code-studio/components/pairing/PairingDialog';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
-
-
 describe('PairingDialog', () => {
   it('renders a dialog containing the Pairing component', () => {
     const wrapper = shallow(<PairingDialog source="Any old test string" />);

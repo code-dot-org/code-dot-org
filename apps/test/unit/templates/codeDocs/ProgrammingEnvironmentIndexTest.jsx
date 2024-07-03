@@ -5,8 +5,6 @@ import ProgrammingEnvironmentIndex, {
   ProgrammingEnvironmentCard,
 } from '@cdo/apps/templates/codeDocs/ProgrammingEnvironmentIndex';
 
-
-
 describe('ProgrammingEnvironmentIndex', () => {
   it('renders card for each IDE', () => {
     const wrapper = shallow(
@@ -48,7 +46,9 @@ describe('ProgrammingEnvironmentCard', () => {
     );
     expect(wrapper.find('h2').length).toBe(1);
     expect(wrapper.text().includes('Sprite Lab'));
-    expect(wrapper.find('EnhancedSafeMarkdown').props().markdown).toBe('description of spritelab');
+    expect(wrapper.find('EnhancedSafeMarkdown').props().markdown).toBe(
+      'description of spritelab'
+    );
     expect(wrapper.find('img').props().src).toBe('code.org/spritelab');
     expect(wrapper.find('Button').props().href).toBe('/docs/spritelab');
   });
@@ -82,7 +82,9 @@ describe('ProgrammingEnvironmentCard', () => {
       />
     );
     expect(wrapper.find('h2').length).toBe(0);
-    expect(wrapper.find('EnhancedSafeMarkdown').props().markdown).toBe('description of spritelab');
+    expect(wrapper.find('EnhancedSafeMarkdown').props().markdown).toBe(
+      'description of spritelab'
+    );
     expect(wrapper.find('img').props().src).toBe('code.org/spritelab');
     expect(wrapper.find('Button').props().href).toBe('/docs/spritelab');
   });

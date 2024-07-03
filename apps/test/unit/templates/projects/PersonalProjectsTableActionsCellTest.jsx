@@ -3,8 +3,6 @@ import React from 'react';
 
 import {PersonalProjectsTableActionsCell} from '@cdo/apps/templates/projects/PersonalProjectsTableActionsCell';
 
-
-
 describe('PersonalProjectsTableActionsCell', () => {
   it('shows NameFailureDialog when there is a projectNameFailure', () => {
     const profanity = 'farts';

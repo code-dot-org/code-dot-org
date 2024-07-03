@@ -3,8 +3,6 @@ import React from 'react';
 
 import {VersionNotFoundAlert} from '@cdo/apps/code-studio/initApp/renderVersionNotFound';
 
-
-
 describe('VersionNotFoundAlert', () => {
   it('renders AlertExclamation with message', () => {
     const wrapper = shallow(<VersionNotFoundAlert />);

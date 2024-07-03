@@ -12,8 +12,6 @@ import {
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 
-
-
 describe('Gamelab blocks', () => {
   describe('costumeList()', () => {
     let animationList = {
@@ -79,9 +77,9 @@ describe('Custom Input Types', () => {
         },
       };
       const arg = {name: "te'st"};
-      expect(
-        customInputTypes['soundPicker'].generateCode(block, arg)
-      ).toEqual(`"te\'st"`);
+      expect(customInputTypes['soundPicker'].generateCode(block, arg)).toEqual(
+        `"te\'st"`
+      );
     });
   });
 });

@@ -15,8 +15,6 @@ import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-
-
 const students = [
   {id: 1, name: 'Student 1'},
   {id: 2, name: 'Student 2'},
@@ -79,7 +77,9 @@ describe('TeacherPanel', () => {
   let teacherPanelDataStub;
 
   beforeEach(() => {
-    teacherPanelDataStub = jest.spyOn(teacherPanelData, 'queryLockStatus').mockClear()
+    teacherPanelDataStub = jest
+      .spyOn(teacherPanelData, 'queryLockStatus')
+      .mockClear()
       .mockReturnValue(
         Promise.resolve({
           teacherSections,
@@ -165,12 +165,15 @@ describe('TeacherPanel', () => {
   });
 
   it('loads initial data and calls get/set students for section', async () => {
-    jest.spyOn(teacherPanelData, 'getStudentsForSection').mockClear().mockReturnValue(
-      Promise.resolve({
-        id: 55,
-        students: [],
-      })
-    );
+    jest
+      .spyOn(teacherPanelData, 'getStudentsForSection')
+      .mockClear()
+      .mockReturnValue(
+        Promise.resolve({
+          id: 55,
+          students: [],
+        })
+      );
 
     const setStudentsForCurrentSectionStub = jest.fn();
     const overrideProps = {
@@ -304,11 +307,14 @@ describe('TeacherPanel', () => {
     });
 
     it('on level displays SelectedStudentInfo when students have loaded, passes expected props', () => {
-      jest.spyOn(utils, 'queryParams').mockClear().mockImplementation((...args) => {
-        if (args[0] === 'user_id') {
-          return '1';
-        }
-      });
+      jest
+        .spyOn(utils, 'queryParams')
+        .mockClear()
+        .mockImplementation((...args) => {
+          if (args[0] === 'user_id') {
+            return '1';
+          }
+        });
 
       const wrapper = setUp({
         viewAs: ViewType.Instructor,

@@ -9,8 +9,6 @@ import {
 } from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
 import {PROCEDURE_DEFINITION_TYPES} from '@cdo/apps/blockly/constants';
 
-
-
 describe('CdoSerializationHelpers', () => {
   describe('addPositionsToState', () => {
     it('should add x/y values from XML to JSON serialization', () => {

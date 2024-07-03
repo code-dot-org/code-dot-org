@@ -3,8 +3,6 @@ import React from 'react';
 
 import {UnconnectedAllVocabulariesEditor as AllVocabulariesEditor} from '@cdo/apps/lib/levelbuilder/AllVocabulariesEditor';
 
-
-
 describe('AllVocabulariesEditor', () => {
   let defaultProps, addVocabulary, updateVocabulary, removeVocabulary;
   beforeEach(() => {

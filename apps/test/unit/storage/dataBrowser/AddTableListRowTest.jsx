@@ -4,8 +4,6 @@ import React from 'react';
 import AddTableListRow from '@cdo/apps/storage/dataBrowser/AddTableListRow';
 import commonI18n from '@cdo/locale';
 
-
-
 describe('AddTableListRow', () => {
   describe('localization', () => {
     function createAddTableListRow() {
@@ -17,7 +15,10 @@ describe('AddTableListRow', () => {
     });
 
     it('should render a localized string for placeholder text', () => {
-      jest.spyOn(commonI18n, 'dataTableNamePlaceholder').mockClear().mockReturnValue('i18n-holder');
+      jest
+        .spyOn(commonI18n, 'dataTableNamePlaceholder')
+        .mockClear()
+        .mockReturnValue('i18n-holder');
 
       const wrapper = createAddTableListRow();
 

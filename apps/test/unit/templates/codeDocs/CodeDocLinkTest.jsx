@@ -3,8 +3,6 @@ import React from 'react';
 
 import CodeDocLink from '@cdo/apps/templates/codeDocs/CodeDocLink';
 
-
-
 describe('CodeDocLink', () => {
   it('renders simple link when no blockName provided', () => {
     const wrapper = shallow(
@@ -17,7 +15,9 @@ describe('CodeDocLink', () => {
       />
     );
     expect(wrapper.find('TextLink').length).toBe(1);
-    expect(wrapper.find('TextLink').first().props().href).toBe('/docs/applab/code');
+    expect(wrapper.find('TextLink').first().props().href).toBe(
+      '/docs/applab/code'
+    );
     expect(wrapper.find('EmbeddedBlock').length).toBe(0);
   });
 
@@ -48,7 +48,9 @@ describe('CodeDocLink', () => {
       />
     );
     expect(wrapper.find('TextLink').length).toBe(1);
-    expect(wrapper.find('TextLink').first().props().href).toBe('/docs/spritelab/code');
+    expect(wrapper.find('TextLink').first().props().href).toBe(
+      '/docs/spritelab/code'
+    );
     expect(wrapper.find('EmbeddedBlock').length).toBe(0);
   });
 });

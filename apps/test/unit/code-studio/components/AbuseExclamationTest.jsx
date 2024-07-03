@@ -3,8 +3,6 @@ import React from 'react';
 
 import AbuseExclamation from '@cdo/apps/code-studio/components/AbuseExclamation';
 
-
-
 describe('AbuseExclamation', () => {
   it('renders AbuseExclamation components', () => {
     const wrapper = shallow(

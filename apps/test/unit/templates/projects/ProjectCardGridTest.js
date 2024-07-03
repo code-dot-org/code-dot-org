@@ -7,8 +7,6 @@ import ProjectAppTypeArea from '@cdo/apps/templates/projects/ProjectAppTypeArea.
 import ProjectCardGrid from '@cdo/apps/templates/projects/ProjectCardGrid';
 import reducer from '@cdo/apps/templates/projects/projectsRedux';
 
-
-
 import {projects} from './projectsTestData';
 
 describe('ProjectCardGrid', () => {

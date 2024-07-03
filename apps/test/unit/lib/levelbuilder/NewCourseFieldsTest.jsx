@@ -3,8 +3,6 @@ import React from 'react';
 
 import NewCourseFields from '@cdo/apps/lib/levelbuilder/NewCourseFields';
 
-
-
 describe('NewCourseFieldsTest', () => {
   let defaultProps, setFamilyName, setVersionYear, setFamilyAndCourseType;
   beforeEach(() => {
@@ -132,7 +130,9 @@ describe('NewCourseFieldsTest', () => {
     wrapper.setProps({versionYear: 'unversioned'});
 
     expect(wrapper.find('.versionYearSelector').length).toBe(1);
-    expect(wrapper.find('.versionYearSelector').props().value).toBe('unversioned');
+    expect(wrapper.find('.versionYearSelector').props().value).toBe(
+      'unversioned'
+    );
     expect(wrapper.find('.versionYearSelector').props().disabled).toBe(true);
   });
 
@@ -157,7 +157,9 @@ describe('NewCourseFieldsTest', () => {
     wrapper.setProps({versionYear: 'unversioned'});
 
     expect(wrapper.find('.versionYearSelector').length).toBe(1);
-    expect(wrapper.find('.versionYearSelector').props().value).toBe('unversioned');
+    expect(wrapper.find('.versionYearSelector').props().value).toBe(
+      'unversioned'
+    );
     expect(wrapper.find('.versionYearSelector').props().disabled).toBe(true);
   });
 

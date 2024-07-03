@@ -4,8 +4,6 @@ import React from 'react';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import LoadableComponent from '@cdo/apps/templates/LoadableComponent';
 
-
-
 describe('LoadableComponent', () => {
   let loadFunction, loadArgs, renderFunction, renderedText, errorMessage;
 

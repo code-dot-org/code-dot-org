@@ -3,8 +3,6 @@ import React from 'react';
 
 import VideoThumbnail from '@cdo/apps/templates/VideoThumbnail';
 
-
-
 describe('VideoThumbnail', () => {
   it('renders a link on the video thumbnail', () => {
     const wrapper = shallow(
@@ -34,7 +32,10 @@ describe('VideoThumbnail', () => {
         openInNewTab
       />
     );
-    const windowOpenStub = jest.spyOn(window, 'open').mockClear().mockImplementation();
+    const windowOpenStub = jest
+      .spyOn(window, 'open')
+      .mockClear()
+      .mockImplementation();
     wrapper.instance().onThumbnailClick();
     expect(windowOpenStub).toHaveBeenCalledTimes(1);
     windowOpenStub.mockRestore();

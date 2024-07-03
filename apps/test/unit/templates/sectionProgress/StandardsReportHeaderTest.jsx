@@ -3,8 +3,6 @@ import React from 'react';
 
 import StandardsReportHeader from '@cdo/apps/templates/sectionProgress/standards/StandardsReportHeader';
 
-
-
 describe('StandardsReportHeader', () => {
   let DEFAULT_PROPS;
 

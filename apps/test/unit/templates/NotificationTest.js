@@ -8,8 +8,6 @@ import Button from '@cdo/apps/templates//Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Notification from '@cdo/apps/templates/Notification';
 
-
-
 const announcement = {
   heading: 'Go beyond an Hour of Code',
   buttonText: 'Go Beyond',

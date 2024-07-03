@@ -4,8 +4,6 @@ import React from 'react';
 import {WIDGET_WIDTH} from '@cdo/apps/applab/constants';
 import {UnconnectedVisualization} from '@cdo/apps/applab/Visualization';
 
-
-
 describe('Visualization', () => {
   describe('in widget mode', () => {
     let visualization;
@@ -26,7 +24,9 @@ describe('Visualization', () => {
     });
 
     it('uses the widgetWidth and widgetHeight classes', () => {
-      expect(visualization.instance().getVisualizationClassNames()).toBe('widgetWidth widgetHeight');
+      expect(visualization.instance().getVisualizationClassNames()).toBe(
+        'widgetWidth widgetHeight'
+      );
     });
 
     it('applies the correct width to child elements', () => {

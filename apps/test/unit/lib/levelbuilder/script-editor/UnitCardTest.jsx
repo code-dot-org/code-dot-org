@@ -13,8 +13,6 @@ import {
   registerReducers,
 } from '@cdo/apps/redux';
 
-
-
 import {nonUserFacingGroup} from './LessonGroupCardTest';
 
 describe('UnitCard', () => {
@@ -131,7 +129,9 @@ describe('UnitCard', () => {
     expect(wrapper.find('Connect(LessonGroupCard)')).toHaveLength(1);
     expect(wrapper.find('button')).toHaveLength(2);
     expect(wrapper.find('button').at(0).text()).toContain('Add Lesson Group');
-    expect(wrapper.find('button').at(1).text()).toContain('Disable Lesson Groups');
+    expect(wrapper.find('button').at(1).text()).toContain(
+      'Disable Lesson Groups'
+    );
   });
 
   it('displays UnitCard correctly when non user facing lesson group', () => {
@@ -144,7 +144,10 @@ describe('UnitCard', () => {
   });
 
   it('add new lesson group', () => {
-    const prompt = jest.spyOn(window, 'prompt').mockClear().mockImplementation();
+    const prompt = jest
+      .spyOn(window, 'prompt')
+      .mockClear()
+      .mockImplementation();
     prompt.mockReturnValue('Lesson Group Name');
 
     let wrapper = shallow(<UnitCard {...defaultProps} />);
@@ -158,7 +161,10 @@ describe('UnitCard', () => {
   });
 
   it('enable lesson groups', () => {
-    const prompt = jest.spyOn(window, 'prompt').mockClear().mockImplementation();
+    const prompt = jest
+      .spyOn(window, 'prompt')
+      .mockClear()
+      .mockImplementation();
     prompt.mockReturnValue('Lesson Group Name');
 
     let wrapper = shallow(

@@ -9,8 +9,6 @@ import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-
-
 const DEFAULT_FEEDBACK = {
   id: 1,
   seen_on_feedback_page_at: null,
@@ -92,21 +90,30 @@ describe('LevelFeedbackEntry', () => {
   });
 
   it('hides the comment expander if the comment is not long', () => {
-    jest.spyOn(ReactDOM, 'findDOMNode').mockClear().mockReturnValue({offsetHeight: 20});
+    jest
+      .spyOn(ReactDOM, 'findDOMNode')
+      .mockClear()
+      .mockReturnValue({offsetHeight: 20});
     const wrapper = setUp({});
     expect(wrapper.find({icon: 'caret-right'})).toHaveLength(0);
     ReactDOM.findDOMNode.mockRestore();
   });
 
   it('displays the comment expander if the comment is long', () => {
-    jest.spyOn(ReactDOM, 'findDOMNode').mockClear().mockReturnValue({offsetHeight: 60});
+    jest
+      .spyOn(ReactDOM, 'findDOMNode')
+      .mockClear()
+      .mockReturnValue({offsetHeight: 60});
     const wrapper = setUp({});
     expect(wrapper.find({icon: 'caret-right'})).toHaveLength(1);
     ReactDOM.findDOMNode.mockRestore();
   });
 
   it('displays the fade if the comment is long (and collapsed)', () => {
-    jest.spyOn(ReactDOM, 'findDOMNode').mockClear().mockReturnValue({offsetHeight: 60});
+    jest
+      .spyOn(ReactDOM, 'findDOMNode')
+      .mockClear()
+      .mockReturnValue({offsetHeight: 60});
     const wrapper = setUp({});
     expect(wrapper.find('#comment-fade')).toHaveLength(1);
     ReactDOM.findDOMNode.mockRestore();

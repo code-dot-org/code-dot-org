@@ -5,8 +5,6 @@ import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teach
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-
-
 const LEVEL_WITH_PROGRESS = {
   id: '123',
   assessment: null,

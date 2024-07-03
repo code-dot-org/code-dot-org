@@ -8,8 +8,6 @@ import Instructions from '@cdo/apps/templates/instructions/Instructions';
 import {UnconnectedInstructionsCsfMiddleCol as InstructionsCsfMiddleCol} from '@cdo/apps/templates/instructions/InstructionsCsfMiddleCol';
 import LegacyButton from '@cdo/apps/templates/LegacyButton';
 
-
-
 const DEFAULT_PROPS = {
   dismissHintPrompt: () => {},
   shouldDisplayHintPrompt: () => {},
@@ -53,7 +51,9 @@ describe('InstructionsCsfMiddleCol', () => {
       collapsed: true,
       shortInstructions,
     });
-    expect(wrapper.find(Instructions).prop('instructions')).toBe(shortInstructions);
+    expect(wrapper.find(Instructions).prop('instructions')).toBe(
+      shortInstructions
+    );
   });
 
   it('passes short instructions to Instructions component if not in a collapsed state with no long instructions', () => {
@@ -65,7 +65,9 @@ describe('InstructionsCsfMiddleCol', () => {
       shortInstructions,
       longInstructions,
     });
-    expect(wrapper.find(Instructions).prop('instructions')).toBe(shortInstructions);
+    expect(wrapper.find(Instructions).prop('instructions')).toBe(
+      shortInstructions
+    );
   });
 
   it('passes long instructions to Instructions component if not in a collapsed state with both short and long instructions', () => {
@@ -75,13 +77,17 @@ describe('InstructionsCsfMiddleCol', () => {
       collapsed: false,
       longInstructions,
     });
-    expect(wrapper.find(Instructions).prop('instructions')).toBe(longInstructions);
+    expect(wrapper.find(Instructions).prop('instructions')).toBe(
+      longInstructions
+    );
   });
 
   it('passes inputOutputTable to Instructions when not collapsed', () => {
     const inputOutputTable = [[1, 2, 3, 4]];
     const wrapper = setUp({collapsed: false, inputOutputTable});
-    expect(wrapper.find(Instructions).props().inputOutputTable).toBe(inputOutputTable);
+    expect(wrapper.find(Instructions).props().inputOutputTable).toBe(
+      inputOutputTable
+    );
   });
 
   it('passes undefined for inputOutputTable to Instructions when collapsed', () => {

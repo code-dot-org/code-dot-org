@@ -9,8 +9,6 @@ import AiAssessmentFeedbackContext from '@cdo/apps/templates/rubrics/AiAssessmen
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-
-
 describe('AiAssessmentBox', () => {
   const reportingData = {
     unitName: 'test-2023',
@@ -65,12 +63,12 @@ describe('AiAssessmentBox', () => {
         <AiAssessmentBox {...props} />
       </AiAssessmentFeedbackContext.Provider>
     );
-    expect(
-      wrapper.find('BodyFourText StrongText + span').first().text()
-    ).toBe(i18n.aiStudentAssessment({
-      studentName: props.studentName,
-      understandingLevel: i18n.aiAssessmentDoesMeet(),
-    }));
+    expect(wrapper.find('BodyFourText StrongText + span').first().text()).toBe(
+      i18n.aiStudentAssessment({
+        studentName: props.studentName,
+        understandingLevel: i18n.aiAssessmentDoesMeet(),
+      })
+    );
   });
 
   it('renders AiAssessmentBox with AiConfidenceBox when available', () => {
@@ -189,7 +187,10 @@ describe('AiAssessmentBox', () => {
   });
 
   it('navigates to the line when the evidence link for a line number is activated', () => {
-    const scrollToLineStub = jest.spyOn(EditorAnnotator, 'scrollToLine').mockClear().mockImplementation();
+    const scrollToLineStub = jest
+      .spyOn(EditorAnnotator, 'scrollToLine')
+      .mockClear()
+      .mockImplementation();
 
     const wrapper = mount(
       <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
@@ -216,7 +217,10 @@ describe('AiAssessmentBox', () => {
   it('should send an event when the evidence link is clicked', () => {
     const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
     const eventName = EVENTS.TA_RUBRIC_EVIDENCE_GOTO_CLICKED;
-    const scrollToLineStub = jest.spyOn(EditorAnnotator, 'scrollToLine').mockClear().mockImplementation();
+    const scrollToLineStub = jest
+      .spyOn(EditorAnnotator, 'scrollToLine')
+      .mockClear()
+      .mockImplementation();
 
     const wrapper = mount(
       <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>

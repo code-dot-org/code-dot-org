@@ -5,8 +5,6 @@ import {
 } from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
 import {IMPORTANT_TOPICS} from '@cdo/apps/util/curriculumRecommender/curriculumRecommenderConstants';
 
-
-
 import {
   IS_FEATURED_TEST_COURSES,
   DURATION_TEST_COURSES,

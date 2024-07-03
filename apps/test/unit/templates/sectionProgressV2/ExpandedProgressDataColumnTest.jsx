@@ -24,8 +24,6 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-
-
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
 const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};
 const STUDENTS = [STUDENT_1, STUDENT_2];
@@ -117,7 +115,9 @@ describe('ExpandedProgressDataColumn', () => {
       ).toBeDefined();
     });
 
-    expect(screen.queryAllByRole('link')).toHaveLength(LESSON.levels.length * STUDENTS.length);
+    expect(screen.queryAllByRole('link')).toHaveLength(
+      LESSON.levels.length * STUDENTS.length
+    );
   });
 
   it('Shows unexpanded choice level', () => {
@@ -133,7 +133,9 @@ describe('ExpandedProgressDataColumn', () => {
       expect(screen.queryByText(sublevel.bubbleText)).toBeFalsy();
     });
 
-    expect(screen.queryAllByRole('link')).toHaveLength(lesson.levels.length * STUDENTS.length);
+    expect(screen.queryAllByRole('link')).toHaveLength(
+      lesson.levels.length * STUDENTS.length
+    );
   });
 
   it('Shows expanded choice level', () => {
@@ -143,8 +145,10 @@ describe('ExpandedProgressDataColumn', () => {
     );
     fireEvent.click(choiceLevelHeader);
 
-    expect(screen.queryAllByRole('link')).toHaveLength((lesson.levels.length + levelWithSublevels.sublevels.length) *
-      STUDENTS.length);
+    expect(screen.queryAllByRole('link')).toHaveLength(
+      (lesson.levels.length + levelWithSublevels.sublevels.length) *
+        STUDENTS.length
+    );
 
     expect(
       screen.queryAllByLabelText(ITEM_TYPE.CHOICE_LEVEL.title)

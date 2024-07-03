@@ -3,8 +3,6 @@ import React from 'react';
 
 import MethodNameEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/MethodNameEditor';
 
-
-
 describe('MethodNameEditor', () => {
   let defaultProps, updateSpy;
 

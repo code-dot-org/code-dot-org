@@ -7,8 +7,6 @@ import {
   channels as channelsApi,
 } from '@cdo/apps/clientApi';
 
-
-
 describe('Applab ImportProjectDialog component', function () {
   var form, urlInput, nextButton;
 
@@ -40,8 +38,10 @@ describe('Applab ImportProjectDialog component', function () {
 
   it('renders a warning if there was an error', () => {
     render(<ImportProjectDialog {...defaultProps} error={true} />);
-    expect(form.find('p').last().text()).toBe("We can't seem to find this project. " +
-      "Please make sure you've entered a valid App Lab project URL.");
+    expect(form.find('p').last().text()).toBe(
+      "We can't seem to find this project. " +
+        "Please make sure you've entered a valid App Lab project URL."
+    );
   });
 
   it('it disables the next button and shows a spinner while the url is fetched', () => {

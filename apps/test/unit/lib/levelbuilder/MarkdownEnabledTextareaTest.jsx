@@ -3,8 +3,6 @@ import React from 'react';
 
 import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledTextarea';
 
-
-
 describe('MarkdownEnabledTextarea', () => {
   let defaultProps, handleMarkdownChange;
   beforeEach(() => {

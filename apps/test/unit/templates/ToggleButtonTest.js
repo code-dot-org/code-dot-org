@@ -3,8 +3,6 @@ import React from 'react';
 
 import ToggleButton from '@cdo/apps/templates/ToggleButton';
 
-
-
 describe('ToggleButton', () => {
   it('renders a "button" element', () => {
     const toggleButton = mount(

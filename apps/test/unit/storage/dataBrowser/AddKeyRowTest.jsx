@@ -4,8 +4,6 @@ import React from 'react';
 import AddKeyRow from '@cdo/apps/storage/dataBrowser/AddKeyRow';
 import commonI18n from '@cdo/locale';
 
-
-
 describe('AddKeyRow', () => {
   describe('localization', () => {
     function createAddKeyRow() {
@@ -23,7 +21,10 @@ describe('AddKeyRow', () => {
     });
 
     it('should render a localized string for "Add Pair"', () => {
-      jest.spyOn(commonI18n, 'addPairToTable').mockClear().mockReturnValue('i18n-add-to-table');
+      jest
+        .spyOn(commonI18n, 'addPairToTable')
+        .mockClear()
+        .mockReturnValue('i18n-add-to-table');
 
       const wrapper = createAddKeyRow();
 
@@ -32,7 +33,10 @@ describe('AddKeyRow', () => {
     });
 
     it('should render a localized string while adding the row', () => {
-      jest.spyOn(commonI18n, 'addingToTable').mockClear().mockReturnValue('i18n-adding-to-table');
+      jest
+        .spyOn(commonI18n, 'addingToTable')
+        .mockClear()
+        .mockReturnValue('i18n-adding-to-table');
 
       const wrapper = createAddKeyRow();
 
@@ -41,7 +45,10 @@ describe('AddKeyRow', () => {
     });
 
     it('should render a localized string for the placeholder text', () => {
-      jest.spyOn(commonI18n, 'enterText').mockClear().mockReturnValue('i18n-enter-text');
+      jest
+        .spyOn(commonI18n, 'enterText')
+        .mockClear()
+        .mockReturnValue('i18n-enter-text');
 
       const wrapper = createAddKeyRow();
 

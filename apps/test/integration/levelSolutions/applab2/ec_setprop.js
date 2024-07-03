@@ -2,8 +2,6 @@ import $ from 'jquery';
 
 import {TestResults} from '@cdo/apps/constants';
 
-
-
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
 
