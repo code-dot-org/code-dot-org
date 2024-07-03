@@ -8,7 +8,7 @@ import {
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import {UnconnectedSummaryProgressRow as SummaryProgressRow} from '@cdo/apps/templates/progress/SummaryProgressRow';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const baseProps = {
   dark: false,

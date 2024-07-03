@@ -8,7 +8,7 @@ import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/Revie
 import * as utils from '@cdo/apps/utils';
 import javalabMsg from '@cdo/javalab/locale';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   viewPeerList: true,

@@ -4,7 +4,7 @@ import React from 'react';
 import ProgressLessonContent from '@cdo/apps/templates/progress/ProgressLessonContent';
 import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('ProgressLessonContent', function () {
   it('renders a bubble set (with no pill) when there is a single unnamed progression', () => {

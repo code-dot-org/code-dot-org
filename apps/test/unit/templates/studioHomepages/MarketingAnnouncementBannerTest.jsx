@@ -10,7 +10,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import MarketingAnnouncementBanner from '@cdo/apps/templates/studioHomepages/MarketingAnnouncementBanner';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   announcement: {

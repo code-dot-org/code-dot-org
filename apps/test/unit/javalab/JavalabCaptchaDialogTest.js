@@ -6,7 +6,7 @@ import {UnconnectedJavalabCaptchaDialog as JavalabCaptchaDialog} from '@cdo/apps
 import ReCaptchaDialog from '@cdo/apps/templates/ReCaptchaDialog';
 import javalabMsg from '@cdo/javalab/locale';
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('JavalabCaptchaDialog', () => {
   let defaultProps,

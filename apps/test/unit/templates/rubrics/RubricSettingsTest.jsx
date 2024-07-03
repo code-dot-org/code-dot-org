@@ -22,7 +22,7 @@ import RubricSettings from '@cdo/apps/templates/rubrics/RubricSettings';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('RubricSettings', () => {
   let clock;

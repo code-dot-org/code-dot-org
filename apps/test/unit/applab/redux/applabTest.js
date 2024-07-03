@@ -9,7 +9,7 @@ import {
 } from '@cdo/apps/redux';
 
 import {REDIRECT_RESPONSE} from '../../../../src/applab/redux/applab';
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('App Lab redux module', () => {
   let store;

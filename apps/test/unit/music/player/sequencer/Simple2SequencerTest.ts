@@ -1,4 +1,4 @@
-import {expect, assert} from 'chai';
+import {expect, assert} from 'chai'; //eslint-disable-line no-restricted-imports
 import Sinon, {SinonStubbedInstance} from 'sinon';
 
 import {DEFAULT_PATTERN_LENGTH} from '@cdo/apps/music/constants';

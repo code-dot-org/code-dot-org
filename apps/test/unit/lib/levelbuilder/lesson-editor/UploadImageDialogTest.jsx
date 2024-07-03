@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('UploadImageDialog', () => {
   it('uploads selected image', () => {

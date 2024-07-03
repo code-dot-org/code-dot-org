@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from 'chai'; //eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
 import 'jquery-ui/ui/effects/effect-drop';

@@ -7,7 +7,7 @@ import {
   fakeLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('DetailProgressTable', () => {
   const lessons = [

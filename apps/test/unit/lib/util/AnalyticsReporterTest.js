@@ -3,7 +3,7 @@ import {stub} from 'sinon';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('AnalyticsReporter', () => {
   describe('formatUserId', () => {

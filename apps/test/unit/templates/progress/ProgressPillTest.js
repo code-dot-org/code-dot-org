@@ -8,7 +8,7 @@ import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
 import {UnconnectedProgressPill as ProgressPill} from '@cdo/apps/templates/progress/ProgressPill';
 import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const unpluggedLevel = {
   id: '1',

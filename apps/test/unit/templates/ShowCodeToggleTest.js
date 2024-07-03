@@ -15,7 +15,7 @@ import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 jest.mock('@cdo/apps/code-studio/initApp/project', () => ({
   ...jest.requireActual('@cdo/apps/code-studio/initApp/project'),

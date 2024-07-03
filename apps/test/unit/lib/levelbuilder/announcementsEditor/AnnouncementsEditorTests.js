@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import * as utils from '@cdo/apps/utils';
 
-import {assert} from '../../../../util/reconfiguredChai';
+import {assert} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const sampleAnnouncement = {
   key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',

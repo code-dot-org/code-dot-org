@@ -3,7 +3,7 @@ import sinon from 'sinon';
 
 import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('CodeReviewGroupsDataApi', () => {
   const sectionId = 101;

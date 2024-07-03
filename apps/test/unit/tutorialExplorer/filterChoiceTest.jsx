@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import FilterChoice from '@cdo/apps/tutorialExplorer/filterChoice';
 
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/deprecatedChai'; //eslint-disable-line no-restricted-imports
 
 const TEST_GROUP_NAME = 'Mansfield Park';
 const TEST_NAME = 'Persuasion';

@@ -7,7 +7,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {UnconnectedLevelDetailsDialog as LevelDetailsDialog} from '@cdo/apps/templates/lessonOverview/activities/LevelDetailsDialog';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('LevelDetailsDialogTest', () => {
   let handleCloseSpy, loadVideoSpy, defaultProps;

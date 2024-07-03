@@ -9,7 +9,7 @@ import javalab from '@cdo/apps/javalab/redux/javalabRedux';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 
 import {BackpackAPIContext} from '../../../src/javalab/BackpackAPIContext';
-import {expect, assert} from '../../util/reconfiguredChai';
+import {expect, assert} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('Java Lab Backpack Test', () => {
   let defaultProps, backpackApiStub;

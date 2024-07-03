@@ -22,7 +22,7 @@ import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSection
 import {RubricAiEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   post: jest.fn().mockResolvedValue({

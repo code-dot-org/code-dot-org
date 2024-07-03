@@ -6,7 +6,7 @@ import {globalFunctions} from '@cdo/apps/dropletUtilsGlobalFunctions';
 import * as mazeDropletConfig from '@cdo/apps/maze/dropletConfig';
 import color from '@cdo/apps/util/color';
 
-import {assert, expect} from '../util/reconfiguredChai';
+import {assert, expect} from '../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 import * as testUtils from './../util/testUtils';
 

@@ -6,7 +6,7 @@ import * as progressHelpers from '@cdo/apps/templates/progress/progressHelpers';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import * as sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const serverScriptResponse = {
   csf: true,

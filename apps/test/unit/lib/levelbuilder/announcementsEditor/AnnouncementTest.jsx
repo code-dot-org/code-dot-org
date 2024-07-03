@@ -3,7 +3,7 @@ import React from 'react';
 
 import Announcement from '@cdo/apps/lib/levelbuilder/announcementsEditor/Announcement';
 
-import {assert} from '../../../../util/reconfiguredChai';
+import {assert} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const sampleAnnouncement = {
   key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',

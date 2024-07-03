@@ -16,7 +16,7 @@ import {
   UserTestResultSignalType,
   TestStatus,
 } from '../../../src/javalab/constants';
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('JavabuilderConnection', () => {
   let onOutputMessage,

@@ -23,7 +23,7 @@ import projects, {
   unpublishProjectLibrary,
 } from '@cdo/apps/templates/projects/projectsRedux';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('projectsRedux', () => {
   const initialState = projects(undefined, {});

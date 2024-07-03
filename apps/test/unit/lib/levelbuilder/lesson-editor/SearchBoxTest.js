@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import SearchBox from '@cdo/apps/lib/levelbuilder/lesson-editor/SearchBox';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('SearchBox', () => {
   let defaultProps, constructOptions, fetchSpy;

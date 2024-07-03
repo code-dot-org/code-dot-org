@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import AddCoteacher from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/AddCoteacher';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   numCoteachers: 3,

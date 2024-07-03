@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+import {expect} from 'chai'; //eslint-disable-line no-restricted-imports
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';

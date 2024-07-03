@@ -13,7 +13,7 @@ import {UnconnectedCodeReviewTimelineReview as CodeReviewTimelineReview} from '@
 import Comment from '@cdo/apps/templates/instructions/codeReviewV2/Comment';
 import javalabMsg from '@cdo/javalab/locale';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const DEFAULT_REVIEW = {
   id: 1,

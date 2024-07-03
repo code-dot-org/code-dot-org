@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import OrderableList from '@cdo/apps/lib/levelbuilder/code-docs-editor/OrderableList';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('OrderableList', () => {
   let defaultProps, setListSpy, renderItemSpy;

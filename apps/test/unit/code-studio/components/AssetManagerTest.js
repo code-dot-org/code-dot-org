@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import AssetManager from '@cdo/apps/code-studio/components/AssetManager';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   uploadsEnabled: true,

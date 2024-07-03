@@ -43,7 +43,7 @@ import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import javalabMsg from '@cdo/javalab/locale';
 
 import {BackpackAPIContext} from '../../../src/javalab/BackpackAPIContext';
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 import {allowConsoleWarnings} from '../../util/throwOnConsole';
 
 describe('Java Lab Editor Test', () => {

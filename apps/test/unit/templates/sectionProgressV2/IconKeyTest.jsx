@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import IconKey from '@cdo/apps/templates/sectionProgressV2/IconKey';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('IconKey Component', () => {
   it('renders the open state initially', () => {

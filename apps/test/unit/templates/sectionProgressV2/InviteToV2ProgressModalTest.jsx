@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import {UnconnectedInviteToV2ProgressModal} from '@cdo/apps/templates/sectionProgressV2/InviteToV2ProgressModal';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   setShowProgressTableV2: () => {},

@@ -5,7 +5,7 @@ import Announcements from '@cdo/apps/code-studio/components/progress/Announcemen
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Notification from '@cdo/apps/templates/Notification';
 
-import {assert} from '../../../../util/reconfiguredChai';
+import {assert} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 import {
   fakeStudentAnnouncement,

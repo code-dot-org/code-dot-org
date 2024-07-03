@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import ShareWarningsDialog from '@cdo/apps/templates/ShareWarningsDialog';
 import commonMsg from '@cdo/locale';
 
-import {expect} from '../util/deprecatedChai';
+import {expect} from '../util/deprecatedChai'; //eslint-disable-line no-restricted-imports
 
 describe('ShareWarningsDialog', () => {
   it('renders ShareWarnings with age prompt', () => {

@@ -12,7 +12,7 @@ import {
 import LibraryPublisher from '@cdo/apps/code-studio/components/libraries/LibraryPublisher.jsx';
 import PublishSuccessDisplay from '@cdo/apps/code-studio/components/libraries/PublishSuccessDisplay.jsx';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('LibraryCreationDialog', () => {
   describe('UI', () => {

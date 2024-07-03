@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import {PoemEditor} from '@cdo/apps/p5lab/poetry/PoemSelector';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 describe('PoemEditor', () => {

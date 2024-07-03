@@ -4,7 +4,7 @@ import React from 'react';
 import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
 import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 let defaultProps = {
   coursesWithProgress: fakeCoursesWithProgress,

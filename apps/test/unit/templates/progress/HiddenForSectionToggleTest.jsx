@@ -6,7 +6,7 @@ import Button from '@cdo/apps/templates/Button';
 import {UnconnectedHiddenForSectionToggle as HiddenForSectionToggle} from '@cdo/apps/templates/progress/HiddenForSectionToggle';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/deprecatedChai'; //eslint-disable-line no-restricted-imports
 
 describe('HiddenForSectionToggle', () => {
   it('renders two buttons reflecting hidden state', () => {

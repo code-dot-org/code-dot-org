@@ -3,7 +3,7 @@ import React from 'react';
 
 import SoundPicker from '@cdo/apps/code-studio/components/SoundPicker';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('SoundPicker', () => {
   const defaultProps = {

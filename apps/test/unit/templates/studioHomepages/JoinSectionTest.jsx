@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import {UnconnectedJoinSection as JoinSection} from '@cdo/apps/templates/studioHomepages/JoinSection';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   enrolledInASection: false,

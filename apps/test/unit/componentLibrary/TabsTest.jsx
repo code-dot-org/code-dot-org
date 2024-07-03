@@ -5,7 +5,7 @@ import sinon from 'sinon';
 
 import Tabs from '@cdo/apps/componentLibrary/tabs';
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const valuesMap = {};
 const onSelectedTabChange = (name, value) => (valuesMap[name] = value);

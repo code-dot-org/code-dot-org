@@ -8,7 +8,7 @@ import {
   restoreStudioApp,
 } from '@cdo/apps/StudioApp';
 
-import {expect} from '../util/reconfiguredChai';
+import {expect} from '../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('EditorAnnotator', () => {
   let patchStub;

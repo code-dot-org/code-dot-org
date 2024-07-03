@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from 'chai'; //eslint-disable-line no-restricted-imports
 import cookies from 'js-cookie';
 
 import {getUserSignedInFromCookieAndDom} from '@cdo/apps/code-studio/initSigninState';

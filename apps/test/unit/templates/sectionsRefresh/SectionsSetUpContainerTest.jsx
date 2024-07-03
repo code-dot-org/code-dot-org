@@ -6,7 +6,7 @@ import * as utils from '@cdo/apps/code-studio/utils';
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
 import * as windowUtils from '@cdo/apps/utils';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('SectionsSetUpContainer', () => {
   afterEach(() => {

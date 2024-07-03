@@ -6,7 +6,7 @@ import {
   metaTagDescription,
 } from '@cdo/apps/lib/util/urlHelpers';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 import {stubWindowDashboard, stubWindowPegasus} from '../../../util/testUtils';
 
 describe('pegasus()', () => {

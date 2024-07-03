@@ -5,7 +5,7 @@ import {
   restoreStudioApp,
 } from '@cdo/apps/StudioApp';
 
-import {assert} from '../util/reconfiguredChai';
+import {assert} from '../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 import loadSource from './util/loadSource';
 

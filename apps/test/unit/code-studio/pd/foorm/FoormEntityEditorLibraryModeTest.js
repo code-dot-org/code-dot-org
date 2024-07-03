@@ -1,4 +1,4 @@
-import {assert} from 'chai';
+import {assert} from 'chai'; //eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
@@ -20,7 +20,7 @@ import foorm, {
   setLibraryData,
   setLibraryQuestionData,
 } from '../../../../../src/code-studio/pd/foorm/editor/foormEditorRedux';
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 global.$ = require('jquery');
 
 describe('FoormEntityEditor in Library editing mode', () => {

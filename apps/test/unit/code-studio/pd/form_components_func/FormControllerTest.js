@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import {PROGRAM_CSD} from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplicationConstants';
 import FormController from '@cdo/apps/code-studio/pd/form_components_func/FormController';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 let DummyPage1 = () => {
   return <div>Page 1</div>;

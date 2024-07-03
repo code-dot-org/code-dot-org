@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import {UnconnectedProjectRemix as ProjectRemix} from '@cdo/apps/code-studio/components/header/ProjectRemix';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 const defaultProps = {

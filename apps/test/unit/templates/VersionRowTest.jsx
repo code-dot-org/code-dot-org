@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import VersionRow from '@cdo/apps/templates/VersionRow';
 import msg from '@cdo/locale';
 
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/deprecatedChai'; //eslint-disable-line no-restricted-imports
 
 describe('VersionRow', () => {
   const MINIMUM_PROPS = {

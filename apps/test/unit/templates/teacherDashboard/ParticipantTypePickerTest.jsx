@@ -3,7 +3,7 @@ import React from 'react';
 
 import ParticipantTypePicker from '@cdo/apps/templates/teacherDashboard/ParticipantTypePicker';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('ParticipantTypePicker', () => {
   let defaultProps, setParticipantType, handleCancel;

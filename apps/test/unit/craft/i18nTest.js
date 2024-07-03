@@ -5,7 +5,7 @@ import {blockTypesToDropdownOptions} from '@cdo/apps/craft/utils';
 // eslint-disable-next-line no-unused-vars
 import commonI18n from '@cdo/locale';
 
-import {assert} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('Minecraft Internationalization', () => {
   it('provides a user-friendly name for a block when possible', () => {

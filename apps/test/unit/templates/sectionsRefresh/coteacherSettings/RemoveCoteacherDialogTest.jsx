@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import RemoveCoteacherDialog from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/RemoveCoteacherDialog';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const createStubbedCoteacherDialog = coteacherToRemove => {
   const setCoteacherToRemove = sinon.spy();

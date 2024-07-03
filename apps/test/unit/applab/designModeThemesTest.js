@@ -6,7 +6,7 @@ import elementLibrary from '@cdo/apps/applab/designElements/library';
 import designMode from '@cdo/apps/applab/designMode';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('themes: ', () => {
   let designModeViz;

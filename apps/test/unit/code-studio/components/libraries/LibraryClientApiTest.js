@@ -2,7 +2,7 @@ import sinon from 'sinon';
 
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 
-import {assert} from '../../../../util/reconfiguredChai';
+import {assert} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('LibraryClientApi', () => {
   const channelId = 'abc123';

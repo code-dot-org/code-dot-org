@@ -2,7 +2,7 @@ import sinon from 'sinon';
 
 import * as timeoutList from '@cdo/apps/lib/util/timeoutList';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('timeoutList', () => {
   let clock;

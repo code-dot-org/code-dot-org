@@ -31,7 +31,7 @@ import pageConstantsReducer, {
   setPageConstants,
 } from '@cdo/apps/redux/pageConstants';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 import {createStore} from '../../../util/redux';
 import {setExternalGlobals} from '../../../util/testUtils';
 

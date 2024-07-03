@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import Button from '@cdo/apps/templates/Button';
 import {DropdownButton} from '@cdo/apps/templates/DropdownButton';
 
-import {assert} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const clickSpy = sinon.spy();
 

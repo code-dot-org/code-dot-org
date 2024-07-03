@@ -1,6 +1,6 @@
 import photoSelect from '@cdo/apps/applab/designElements/photoSelect';
 
-import {assert} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 var setPropertyDropdown = require('@cdo/apps/applab/setPropertyDropdown');
 

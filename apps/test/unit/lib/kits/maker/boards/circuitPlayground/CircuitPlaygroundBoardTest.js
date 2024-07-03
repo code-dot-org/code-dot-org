@@ -12,7 +12,7 @@ import {
 import {BOARD_TYPE} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardInterfaceTestUtil';
 
 import {itMakesCircuitPlaygroundComponentsAvailable} from './CircuitPlaygroundComponentTestUtil';

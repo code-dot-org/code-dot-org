@@ -26,7 +26,7 @@ import {
 import reducers from '@cdo/apps/weblab/reducers';
 import WebLab from '@cdo/apps/weblab/WebLab';
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 var filesApi = require('@cdo/apps/clientApi').files;
 var assetListStore = require('@cdo/apps/code-studio/assets/assetListStore');

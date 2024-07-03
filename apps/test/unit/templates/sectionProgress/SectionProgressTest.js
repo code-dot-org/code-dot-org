@@ -8,7 +8,7 @@ import {UnconnectedSectionProgress} from '@cdo/apps/templates/sectionProgress/Se
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import * as progressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 
-import {expect, assert} from '../../../util/reconfiguredChai';
+import {expect, assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const studentData = [
   {id: 1, name: 'studentb'},

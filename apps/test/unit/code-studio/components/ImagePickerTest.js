@@ -8,7 +8,7 @@ import ImageURLInput from '@cdo/apps/code-studio/components/ImageURLInput';
 import {stubRedux, registerReducers} from '@cdo/apps/redux';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('ImagePicker', () => {
   const defaultProps = {

@@ -5,7 +5,7 @@ import sinon from 'sinon';
 
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('WorkspaceAlert', () => {
   let jQueryHeight;

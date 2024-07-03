@@ -18,7 +18,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 // These are test observations that would be given by the AI.
 const observations = 'This is an observation. This is another observation.';

@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import {UnconnectedAddSectionDialog as AddSectionDialog} from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('AddSectionDialog', () => {
   let defaultProps,

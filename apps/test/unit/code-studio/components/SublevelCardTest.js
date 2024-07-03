@@ -5,7 +5,7 @@ import SublevelCard from '@cdo/apps/code-studio/components/SublevelCard';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const DEFAULT_SUBLEVEL = {
   id: '1',

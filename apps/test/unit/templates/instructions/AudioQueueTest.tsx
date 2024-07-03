@@ -7,7 +7,7 @@ import {
   AudioQueueContext,
 } from '@cdo/apps/templates/instructions/AudioQueue';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 import {setExternalGlobals} from '../../../util/testUtils';
 
 interface QueueContext {

@@ -28,7 +28,7 @@ import {
 import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 
-import {assert} from '../util/reconfiguredChai';
+import {assert} from '../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 import loadSource from './util/loadSource';
 import {setupBlocklyFrame} from './util/testBlockly';

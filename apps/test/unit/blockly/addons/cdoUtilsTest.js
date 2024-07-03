@@ -4,7 +4,7 @@ import * as cdoSerializationHelpers from '@cdo/apps/blockly/addons/cdoSerializat
 import {getCode, moveHiddenBlocks} from '@cdo/apps/blockly/addons/cdoUtils';
 import * as cdoXml from '@cdo/apps/blockly/addons/cdoXml';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 import setBlocklyGlobal from '../../../util/setupBlocklyGlobal';
 
 setBlocklyGlobal();

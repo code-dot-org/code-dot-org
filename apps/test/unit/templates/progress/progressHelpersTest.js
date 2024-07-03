@@ -18,7 +18,7 @@ import {
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import {LevelKind, LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('progressHelpers', () => {
   describe('lessonIsVisible', () => {

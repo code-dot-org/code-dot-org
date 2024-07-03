@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import ProgrammingMethodEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingMethodEditor';
 import {getStore} from '@cdo/apps/redux';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('ProgrammingMethodEditor', () => {
   let initialProgrammingMethod, fetchSpy;

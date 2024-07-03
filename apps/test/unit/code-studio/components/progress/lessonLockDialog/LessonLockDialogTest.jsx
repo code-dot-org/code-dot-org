@@ -16,7 +16,7 @@ import {
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const fakeSectionId = 42;
 const fakeUnitId = 1;

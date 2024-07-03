@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const testPrimaryTeacher = {
   name: 'T-rex',

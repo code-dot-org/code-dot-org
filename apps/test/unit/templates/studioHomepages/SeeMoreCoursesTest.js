@@ -7,7 +7,7 @@ import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
 import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
 import color from '@cdo/apps/util/color';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 import {courses} from './homepagesTestData';
 

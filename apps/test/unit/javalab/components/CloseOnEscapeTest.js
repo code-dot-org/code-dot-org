@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('CloseOnEscape', () => {
   let wrapper, handleClose, className;

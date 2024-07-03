@@ -7,7 +7,7 @@ import {
   fakeLevel,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('ProgressLevelSet', function () {
   it('has a pill and no bubbles for a single level', () => {

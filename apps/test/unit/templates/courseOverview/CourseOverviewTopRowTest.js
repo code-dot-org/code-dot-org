@@ -3,7 +3,7 @@ import React from 'react';
 
 import CourseOverviewTopRow from '@cdo/apps/templates/courseOverview/CourseOverviewTopRow';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const defaultProps = {
   sectionsForDropdown: [],

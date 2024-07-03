@@ -6,7 +6,7 @@ import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeCo
 import * as utils from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('ChangeUserTypeController', () => {
   let controller, form, button, status, dropdown;

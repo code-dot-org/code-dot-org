@@ -11,7 +11,7 @@ import {
 import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
 
 import {UnconnectedCodeWorkspace as CodeWorkspace} from '../../../src/templates/CodeWorkspace';
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/deprecatedChai'; //eslint-disable-line no-restricted-imports
 
 describe('CodeWorkspace', () => {
   const MINIMUM_PROPS = {

@@ -9,7 +9,7 @@ import CommitDialogFileRow from '@cdo/apps/javalab/CommitDialogFileRow';
 import i18n from '@cdo/javalab/locale';
 
 import {BackpackAPIContext} from '../../../src/javalab/BackpackAPIContext';
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('CommitDialog test', () => {
   let defaultProps, handleCommitSpy, setCommitSaveStatusSpy, backpackApiStub;

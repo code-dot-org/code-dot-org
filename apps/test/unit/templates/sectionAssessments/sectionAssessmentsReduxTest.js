@@ -33,7 +33,7 @@ import sectionAssessments, {
   notStartedFakeTimestamp,
 } from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('sectionAssessmentsRedux', () => {
   const initialState = sectionAssessments(undefined, {});

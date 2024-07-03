@@ -26,7 +26,7 @@ import {
   setWindowLocation,
   resetWindowLocation,
 } from '../../../../src/code-studio/utils';
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 import {FULL_TEST_COURSES} from '../../util/curriculumRecommenderTestCurricula';
 import {sections} from '../studioHomepages/fakeSectionUtils';
 

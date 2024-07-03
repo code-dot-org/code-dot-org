@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import Alert from '@cdo/apps/templates/alert';
 
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/deprecatedChai'; //eslint-disable-line no-restricted-imports
 
 describe('Alert', () => {
   it('renders any children', () => {

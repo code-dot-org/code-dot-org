@@ -8,7 +8,7 @@ import DeleteAccount, {
 import {getCheckboxes} from '@cdo/apps/lib/ui/accounts/DeleteAccountHelpers';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../../util/deprecatedChai';
+import {expect} from '../../../../util/deprecatedChai'; //eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   isPasswordRequired: true,

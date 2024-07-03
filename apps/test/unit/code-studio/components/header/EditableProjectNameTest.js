@@ -12,7 +12,7 @@ import lab2Redux from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('EditableProjectName', () => {

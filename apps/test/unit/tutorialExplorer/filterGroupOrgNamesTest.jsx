@@ -6,7 +6,7 @@ import FilterGroupContainer from '@cdo/apps/tutorialExplorer/filterGroupContaine
 import FilterGroupOrgNames from '@cdo/apps/tutorialExplorer/filterGroupOrgNames';
 import i18n from '@cdo/tutorialExplorer/locale';
 
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/deprecatedChai'; //eslint-disable-line no-restricted-imports
 
 const TEST_ORG_NAME = 'Code Studio';
 const ORG_1 = 'Hogwarts School';

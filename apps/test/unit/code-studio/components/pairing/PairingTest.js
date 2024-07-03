@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import Pairing from '@cdo/apps/code-studio/components/pairing/Pairing.jsx';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('Pairing component', function () {
   function createDomElement() {

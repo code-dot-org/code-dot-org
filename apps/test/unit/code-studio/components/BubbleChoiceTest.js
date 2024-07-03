@@ -4,7 +4,7 @@ import React from 'react';
 import BubbleChoice from '@cdo/apps/code-studio/components/BubbleChoice';
 import * as utils from '@cdo/apps/utils';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const fakeSublevels = [
   {

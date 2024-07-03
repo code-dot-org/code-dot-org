@@ -6,7 +6,7 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('ResourceList', () => {
   it('displays resources in bulleted list', () => {

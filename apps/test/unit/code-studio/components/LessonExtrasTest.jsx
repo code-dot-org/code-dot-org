@@ -3,7 +3,7 @@ import React from 'react';
 
 import LessonExtras from '@cdo/apps/code-studio/components/lessonExtras/LessonExtras';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 import {bonusLevels} from './lessonExtrasTestHelpers';
 

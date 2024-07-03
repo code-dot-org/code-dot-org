@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import applabI18n from '@cdo/applab/locale';
 import {UnconnectedMakerStatusOverlay} from '@cdo/apps/lib/kits/maker/ui/MakerStatusOverlay';
 
-import {expect} from '../../../../../util/deprecatedChai';
+import {expect} from '../../../../../util/deprecatedChai'; //eslint-disable-line no-restricted-imports
 
 describe('MakerStatusOverlay', () => {
   beforeEach(() => {

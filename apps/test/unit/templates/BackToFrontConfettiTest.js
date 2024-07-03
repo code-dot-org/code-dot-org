@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import BackToFrontConfetti from '@cdo/apps/templates/BackToFrontConfetti';
 
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/deprecatedChai'; //eslint-disable-line no-restricted-imports
 
 describe('BackToFrontConfetti', () => {
   let clock;

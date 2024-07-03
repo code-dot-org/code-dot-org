@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const sectionId = 11;
 

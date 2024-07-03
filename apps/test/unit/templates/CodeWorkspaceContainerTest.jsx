@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import {TestableCodeWorkspaceContainer as CodeWorkspaceContainer} from '@cdo/apps/templates/CodeWorkspaceContainer';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/deprecatedChai'; //eslint-disable-line no-restricted-imports
 
 describe('CodeWorkspaceContainer', () => {
   let wrapper;

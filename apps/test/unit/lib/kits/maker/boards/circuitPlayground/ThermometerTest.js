@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import Thermometer from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Thermometer';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('Thermometer', function () {
   let testObj;

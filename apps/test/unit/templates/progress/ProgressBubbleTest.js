@@ -15,7 +15,7 @@ import color from '@cdo/apps/util/color';
 import * as utils from '@cdo/apps/utils';
 import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert, expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const defaultProps = {
   level: {

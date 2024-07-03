@@ -5,7 +5,7 @@ import sinon from 'sinon';
 
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const valuesMap = {};
 const onSegmentedButtonsChange = (name, value) => (valuesMap[name] = value);

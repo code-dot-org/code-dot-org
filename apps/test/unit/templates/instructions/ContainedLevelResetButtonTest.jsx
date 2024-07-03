@@ -6,7 +6,7 @@ import * as CodeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels
 import {UnconnectedContainedLevelResetButton as ContainedLevelResetButton} from '@cdo/apps/templates/instructions/ContainedLevelResetButton';
 import experiments from '@cdo/apps/util/experiments';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('ContainedLevelResetButton', () => {
   let queryUserProgressSpy;

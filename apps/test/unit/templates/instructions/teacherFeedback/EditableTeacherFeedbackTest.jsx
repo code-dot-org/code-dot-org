@@ -10,7 +10,7 @@ import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedbac
 import {UnconnectedEditableTeacherFeedback as EditableTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/EditableTeacherFeedback';
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 
-import {expect, assert} from '../../../../util/reconfiguredChai';
+import {expect, assert} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   user: 5,

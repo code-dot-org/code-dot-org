@@ -5,7 +5,7 @@ import sinon from 'sinon';
 
 import {UnconnectedSortByNameDropdown} from '@cdo/apps/templates/SortByNameDropdown';
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('SortByNameDropdown', () => {
   it('renders dropdown', () => {

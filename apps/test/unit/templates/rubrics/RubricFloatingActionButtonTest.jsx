@@ -16,7 +16,7 @@ import {
 import {UnconnectedRubricFloatingActionButton as RubricFloatingActionButton} from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   post: jest.fn().mockResolvedValue({

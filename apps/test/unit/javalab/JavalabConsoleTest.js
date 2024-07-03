@@ -19,7 +19,7 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('Java Lab Console Test', () => {
   let store;

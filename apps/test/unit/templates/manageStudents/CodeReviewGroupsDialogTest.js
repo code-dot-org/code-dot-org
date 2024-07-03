@@ -7,7 +7,7 @@ import Button from '@cdo/apps/templates/Button';
 import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
 import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('CodeReviewGroupsDialog', () => {
   let wrapper, dataApi, fakeGroups;

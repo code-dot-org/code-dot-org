@@ -8,7 +8,7 @@ import {
   SearchForm,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/FindProgrammingExpressionDialog';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('SearchForm', () => {
   it('renders passed programming environments as options', () => {

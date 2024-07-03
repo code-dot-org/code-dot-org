@@ -8,7 +8,7 @@ import {
 import SubmissionStatusAssessmentsTable from '@cdo/apps/templates/sectionAssessments/SubmissionStatusAssessmentsTable';
 import i18n from '@cdo/locale';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('SubmissionStatusAssessmentsTable', () => {
   it('renders a table', () => {

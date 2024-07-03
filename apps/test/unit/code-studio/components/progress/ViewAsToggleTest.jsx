@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import {UnconnectedViewAsToggle as ViewAsToggle} from '@cdo/apps/code-studio/components/progress/ViewAsToggle';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   viewAs: ViewType.Participant,

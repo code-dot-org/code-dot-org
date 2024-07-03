@@ -22,7 +22,7 @@ import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setInstructionsConstants} from '@cdo/apps/redux/instructions';
 import GameButtons from '@cdo/apps/templates/GameButtons';
 
-import {assert} from '../util/reconfiguredChai';
+import {assert} from '../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('getContainedLevelResultInfo', () => {
   const containedLevelResult = {

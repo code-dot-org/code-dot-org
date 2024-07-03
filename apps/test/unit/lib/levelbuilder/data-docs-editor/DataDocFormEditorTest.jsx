@@ -8,7 +8,7 @@ import DataDocFormEditor from '@cdo/apps/lib/levelbuilder/data-docs-editor/DataD
 import {getStore} from '@cdo/apps/redux';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('DataDocFormEditor', () => {
   let defaultProps;

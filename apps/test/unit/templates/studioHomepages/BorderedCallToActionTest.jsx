@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('BorderedCallToAction', () => {
   const headingText = 'Do Something';

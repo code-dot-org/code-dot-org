@@ -6,7 +6,7 @@ import sinon from 'sinon';
 
 import {N_COLOR_LEDS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 export function itMakesCircuitPlaygroundComponentsAvailable(
   BoardClient,

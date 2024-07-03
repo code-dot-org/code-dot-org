@@ -8,6 +8,7 @@ import Button from '@cdo/apps/templates/Button';
 import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';
 import i18n from '@cdo/locale';
 
+// eslint-disable-next-line no-restricted-imports
 import {
   // assert,
   expect,

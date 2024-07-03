@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
 import {UnconnectedJavalabSettings} from '@cdo/apps/javalab/JavalabSettings';
 
-import {assert} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('JavalabSettings', () => {
   let setDisplayTheme,

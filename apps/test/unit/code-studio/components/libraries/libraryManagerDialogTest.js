@@ -9,7 +9,7 @@ import LibraryManagerDialog, {
 } from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
 import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
 
-import {expect, assert} from '../../../../util/reconfiguredChai';
+import {expect, assert} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('LibraryManagerDialog', () => {

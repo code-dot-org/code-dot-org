@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import PopUpMenu, {MenuBubble} from '@cdo/apps/lib/ui/PopUpMenu';
 import msg from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('PopUpMenu', () => {
   const targetPoint = {left: 0, top: 0};

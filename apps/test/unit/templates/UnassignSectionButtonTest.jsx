@@ -4,7 +4,7 @@ import React from 'react';
 import {UnconnectedUnassignSectionButton as UnassignSectionButton} from '@cdo/apps/templates/UnassignSectionButton';
 import i18n from '@cdo/locale';
 
-import {assert} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   sectionId: 1,

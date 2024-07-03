@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import AddLevelTableRow from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTableRow';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('AddLevelTableRow', () => {
   let defaultProps, addLevel;

@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import NeoPixel from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/NeoPixel';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('NeoPixel', function () {
   beforeEach(() => {

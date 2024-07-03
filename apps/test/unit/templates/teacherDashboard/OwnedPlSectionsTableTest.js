@@ -15,7 +15,7 @@ import teacherSections, {
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const plSectionRowData = [
   {

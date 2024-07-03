@@ -13,7 +13,7 @@ import {
   assets as assetsApi,
 } from '@cdo/apps/clientApi';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 import {createStore} from '../../../util/redux';
 import {allowConsoleErrors} from '../../../util/testUtils';
 

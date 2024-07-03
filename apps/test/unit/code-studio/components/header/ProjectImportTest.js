@@ -5,7 +5,7 @@ import sinon from 'sinon';
 
 import ProjectImport from '@cdo/apps/code-studio/components/header/ProjectImport';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('ProjectImport', () => {

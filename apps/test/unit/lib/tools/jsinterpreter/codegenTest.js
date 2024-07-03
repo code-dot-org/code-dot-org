@@ -1,6 +1,6 @@
 import * as codegen from '@cdo/apps/lib/tools/jsinterpreter/codegen';
 
-import {assert} from '../../../../util/reconfiguredChai';
+import {assert} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('codegen', function () {
   describe('generates cumulative length stats', function () {

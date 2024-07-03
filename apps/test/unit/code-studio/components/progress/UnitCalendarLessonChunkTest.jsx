@@ -5,7 +5,7 @@ import ReactTooltip from 'react-tooltip';
 import UnitCalendarLessonChunk from '@cdo/apps/code-studio/components/progress/UnitCalendarLessonChunk';
 import color from '@cdo/apps/util/color';
 
-import {assert} from '../../../../util/reconfiguredChai';
+import {assert} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const sampleLessonChunk = {
   id: 1,

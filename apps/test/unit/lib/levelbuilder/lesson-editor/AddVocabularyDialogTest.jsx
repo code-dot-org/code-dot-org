@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import AddVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddVocabularyDialog';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 describe('AddVocabularyDialog', () => {

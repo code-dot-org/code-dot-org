@@ -6,7 +6,7 @@ import SendToPhone from '@cdo/apps/code-studio/components/SendToPhone';
 import WireframeButtons from '@cdo/apps/lib/ui/WireframeButtons';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/deprecatedChai'; //eslint-disable-line no-restricted-imports
 
 describe('WireframeButtons', () => {
   let wrapper;

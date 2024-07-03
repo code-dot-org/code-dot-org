@@ -6,7 +6,7 @@ import SchoolInfoConfirmationDialog from '@cdo/apps/lib/ui/SchoolInfoConfirmatio
 import SchoolInfoInterstitial from '@cdo/apps/lib/ui/SchoolInfoInterstitial';
 import {Body} from '@cdo/apps/templates/Dialog';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('SchoolInfoConfirmationDialog', () => {
   const MINIMUM_PROPS = {

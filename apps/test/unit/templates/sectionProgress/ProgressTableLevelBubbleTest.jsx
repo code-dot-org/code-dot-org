@@ -20,7 +20,7 @@ import color from '@cdo/apps/util/color';
 import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const TITLE = '1';
 

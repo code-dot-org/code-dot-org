@@ -18,7 +18,7 @@ import {currentLocation} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import {updateQueryParam} from '../../../../src/code-studio/utils';
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('BubbleFactory', () => {
   describe('BasicBubble', () => {

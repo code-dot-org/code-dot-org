@@ -17,7 +17,7 @@ import {
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import Switch from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Switch';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 import {
   newBoard,

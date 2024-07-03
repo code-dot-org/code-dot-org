@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import {UnconnectedProgressFeedbackBanner} from '@cdo/apps/templates/sectionProgressV2/ProgressFeedbackBanner';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('ProgressFeedbackBanner', () => {
   const fakeFetch = sinon.spy();

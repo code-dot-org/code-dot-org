@@ -3,7 +3,7 @@ import {stub} from 'sinon';
 import {validateFirehoseDataSize} from '@cdo/apps/lib/util/firehose';
 import logToCloud from '@cdo/apps/logToCloud';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 jest.unmock('@cdo/apps/lib/util/firehose');
 

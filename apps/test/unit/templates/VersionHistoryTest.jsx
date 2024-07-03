@@ -8,7 +8,7 @@ import VersionHistory from '@cdo/apps/templates/VersionHistory';
 import VersionRow from '@cdo/apps/templates/VersionRow';
 import * as utils from '@cdo/apps/utils';
 
-import {assert} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const FAKE_CURRENT_VERSION = 'current-version-id';
 const FAKE_PREVIOUS_VERSION = 'previous-version-id';

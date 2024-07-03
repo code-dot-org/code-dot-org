@@ -7,7 +7,7 @@ import * as craftRedux from '@cdo/apps/craft/redux';
 import * as utils from '@cdo/apps/craft/utils';
 import commonI18n from '@cdo/locale'; // eslint-disable-line no-unused-vars
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('craft utils', () => {
   describe('handlePlayerSelection', () => {

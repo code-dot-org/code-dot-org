@@ -8,7 +8,7 @@ import {
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
 
-import {assert} from '../../../../util/reconfiguredChai';
+import {assert} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const defaultProps = {
   instructorAudience: InstructorAudience.teacher,

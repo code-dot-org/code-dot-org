@@ -2,7 +2,7 @@
 import {spy} from 'sinon';
 
 import {createStatefulP5Wrapper} from '../../util/gamelab/TestableP5Wrapper';
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 import {sandboxDocumentBody} from '../../util/testUtils';
 
 describe('P5GroupWrapper', function () {

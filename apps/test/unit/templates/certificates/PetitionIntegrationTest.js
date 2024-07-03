@@ -6,7 +6,7 @@ import sinon from 'sinon';
 
 import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('Petition on submit', () => {
   const minimumInputs = {

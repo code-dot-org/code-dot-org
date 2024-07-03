@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import EvidenceLevelsForTeachers from '@cdo/apps/templates/rubrics/EvidenceLevelsForTeachers';
 import {UNDERSTANDING_LEVEL_STRINGS} from '@cdo/apps/templates/rubrics/rubricHelpers';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   evidenceLevels: [

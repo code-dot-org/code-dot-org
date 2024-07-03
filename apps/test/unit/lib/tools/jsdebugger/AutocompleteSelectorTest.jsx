@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import AutocompleteSelector from '@cdo/apps/lib/tools/jsdebugger/AutocompleteSelector';
 
-import {expect} from '../../../../util/deprecatedChai';
+import {expect} from '../../../../util/deprecatedChai'; //eslint-disable-line no-restricted-imports
 import {allowConsoleWarnings} from '../../../../util/testUtils';
 
 describe('AutocompleteSelector', () => {

@@ -5,7 +5,7 @@ import sinon from 'sinon';
 import FormComponent from '@cdo/apps/code-studio/pd/form_components/FormComponent';
 import FormController from '@cdo/apps/code-studio/pd/form_components/FormController';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 class DummyPage1 extends FormComponent {
   static associatedFields = [];

@@ -6,7 +6,7 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 
-import {assert} from '../../../../util/reconfiguredChai';
+import {assert} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const defaultProps = {
   excludeCsfColumnInLegend: true,

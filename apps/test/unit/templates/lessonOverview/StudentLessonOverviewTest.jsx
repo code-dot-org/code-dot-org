@@ -6,7 +6,7 @@ import Button from '@cdo/apps/templates/Button';
 import {UnconnectedStudentLessonOverview as StudentLessonOverview} from '@cdo/apps/templates/lessonOverview/StudentLessonOverview';
 import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 import {
   fakeStudentAnnouncement,
   fakeTeacherAndStudentAnnouncement,

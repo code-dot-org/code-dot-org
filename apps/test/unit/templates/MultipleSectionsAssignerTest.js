@@ -10,7 +10,7 @@ import {
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 describe('MultipleSectionsAssigner', () => {
   const assigedStandaloneUnitSection = fakeTeacherSectionsForDropdown[3];

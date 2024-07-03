@@ -4,7 +4,7 @@ import sinon from 'sinon';
 
 import {UnconnectedManageStudentAgeCell as ManageStudentAgeCell} from '@cdo/apps/templates/manageStudents/ManageStudentsAgeCell';
 
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/deprecatedChai'; //eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   id: 2,

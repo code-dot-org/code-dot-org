@@ -7,7 +7,7 @@ import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const singleLessonGroup = [
   {

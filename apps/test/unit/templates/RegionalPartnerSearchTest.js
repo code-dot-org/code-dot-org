@@ -10,7 +10,7 @@ import {
 import {UnconnectedRegionalPartnerSearch as RegionalPartnerSearch} from '@cdo/apps/templates/RegionalPartnerSearch';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 const MINIMUM_PROPS = {
   responsiveSize: 'md',

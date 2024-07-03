@@ -1,6 +1,6 @@
 import * as utils from '@cdo/apps/templates/lessonOverview/googleDocsUtils';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 const {isGDocsUrl, gDocsBaseUrl, gDocsPdfUrl, gDocsMsOfficeUrl, gDocsCopyUrl} =
   utils;
 

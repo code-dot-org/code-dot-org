@@ -11,7 +11,7 @@ import {
 } from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplicationConstants';
 import {useRegionalPartner} from '@cdo/apps/code-studio/pd/components/useRegionalPartner';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; //eslint-disable-line no-restricted-imports
 
 let regionalPartnerData, regionalPartnerError;
 
