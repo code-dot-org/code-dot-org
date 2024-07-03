@@ -1028,7 +1028,11 @@ describe('RubricContainer', () => {
       </Provider>
     );
 
-    const skipButton = await findByRole('button', {name: '×'});
+    const skipButton = await findByRole(
+      'button',
+      {name: '×'},
+      {timeout: 10_000} // wait for introjs to load
+    );
 
     fireEvent.click(skipButton);
 
