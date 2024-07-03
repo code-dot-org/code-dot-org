@@ -9,12 +9,14 @@ interface PredictQuestionProps {
   predictSettings: LevelPredictSettings | undefined;
   predictResponse: string | undefined;
   setPredictResponse: (response: string) => void;
+  predictAnswerLocked: boolean;
 }
 
 const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
   predictSettings,
   predictResponse,
   setPredictResponse,
+  predictAnswerLocked,
 }) => {
   if (!predictSettings?.isPredictLevel) {
     return null;
@@ -43,28 +45,37 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
           onChange={e => setPredictResponse(e.target.value)}
           style={{height: predictSettings.freeResponseHeight || 20}}
           className={moduleStyles.freeResponse}
+          readOnly={predictAnswerLocked}
         />
       ) : (
-        predictSettings.multipleChoiceOptions?.map((option, index) => (
-          <label
-            key={`multiple-choice-${index}`}
-            className={moduleStyles.multipleChoiceContainer}
-          >
-            <input
-              type={predictSettings.isMultiSelect ? 'checkbox' : 'radio'}
-              value={option}
-              checked={
-                (predictResponse &&
-                  predictResponse.split(',').includes(option)) ||
-                false
-              }
-              onChange={handleMultiSelectChanged}
-              name={option}
-              key={index}
-            />
-            <span className={moduleStyles.multipleChoiceLabel}>{option}</span>
-          </label>
-        ))
+        predictSettings.multipleChoiceOptions?.map((option, index) => {
+          // Add a capital letter to the beginning of each option, starting with A.
+          const letterForOption = String.fromCharCode(index + 65) + '.';
+          return (
+            <label
+              key={`multiple-choice-${index}`}
+              className={moduleStyles.multipleChoiceContainer}
+            >
+              <input
+                type={predictSettings.isMultiSelect ? 'checkbox' : 'radio'}
+                value={option}
+                checked={
+                  (predictResponse &&
+                    predictResponse.split(',').includes(option)) ||
+                  false
+                }
+                onChange={handleMultiSelectChanged}
+                name={option}
+                key={index}
+                disabled={predictAnswerLocked}
+              />
+              <span className={moduleStyles.multipleChoiceLetter}>
+                {letterForOption}
+              </span>
+              <span className={moduleStyles.multipleChoiceLabel}>{option}</span>
+            </label>
+          );
+        })
       )}
     </>
   );

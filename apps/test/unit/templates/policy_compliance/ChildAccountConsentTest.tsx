@@ -20,7 +20,7 @@ describe('ChildAccountConsent', () => {
     (analyticsReporter.sendEvent as sinon.SinonStub).restore();
   });
 
-  context('no parent permission', () => {
+  describe('no parent permission', () => {
     const props: ChildAccountConsentProps = {
       permissionGranted: false,
     };
@@ -39,7 +39,7 @@ describe('ChildAccountConsent', () => {
     });
   });
 
-  context('has parent permission', () => {
+  describe('has parent permission', () => {
     const permissionGrantedDate = new Date();
     const props: ChildAccountConsentProps = {
       permissionGranted: true,

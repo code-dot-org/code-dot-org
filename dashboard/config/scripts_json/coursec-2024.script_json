@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2024-06-28 21:56:34 UTC",
+    "serialized_at": "2024-07-01 20:02:35 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -9392,6 +9392,32 @@
       }
     },
     {
+      "name": "CSF Change Log 2024-25",
+      "url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/template/preview",
+      "key": "csf_change_log_2024-25",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/export",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csf_change_log_2024-25"
+      }
+    },
+    {
+      "name": "CSF Syllabus 2024-25",
+      "url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/edit#heading=h.d1b2pnqkkc57/template/preview",
+      "key": "csf_syllabus_2024-25",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/edit#heading=h.d1b2pnqkkc57/export",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csf_syllabus_2024-25"
+      }
+    },
+    {
       "name": "Debugging Guide",
       "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA",
       "key": "debugging_guide",
@@ -9648,6 +9674,19 @@
       },
       "seeding_key": {
         "resource.key": "sample_level_solutions"
+      }
+    },
+    {
+      "name": "CSF State Standards for CS - Master Crosswalk List",
+      "url": "https://docs.google.com/document/d/1sw5P6ejdXTK5H-TWxFCtYeI77sxxJwlY5V0k6p96reQ/edit#heading=h.73du1rws92dv/template/preview",
+      "key": "state_standards_for_cs_-_master_crosswalk_list",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1sw5P6ejdXTK5H-TWxFCtYeI77sxxJwlY5V0k6p96reQ/edit#heading=h.73du1rws92dv/export",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "state_standards_for_cs_-_master_crosswalk_list"
       }
     },
     {
@@ -10177,6 +10216,18 @@
     },
     {
       "seeding_key": {
+        "resource.key": "csf_change_log_2024-25",
+        "script.name": "coursec-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csf_syllabus_2024-25",
+        "script.name": "coursec-2024"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "debugging_guide_1",
         "script.name": "coursec-2024"
       }
@@ -10196,6 +10247,12 @@
     {
       "seeding_key": {
         "resource.key": "lesson_type_guide",
+        "script.name": "coursec-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "state_standards_for_cs_-_master_crosswalk_list",
         "script.name": "coursec-2024"
       }
     },

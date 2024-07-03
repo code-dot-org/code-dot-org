@@ -4,6 +4,7 @@ module Services::ChildAccount
   def self.start_grace_period(user)
     update_compliance(user, Policies::ChildAccount::ComplianceState::GRACE_PERIOD)
     user.save!
+    Services::ChildAccount::EventLogger.log_grace_period_start(user)
   end
 
   # Sets the child's account to a lock_out state according to our Child Account
@@ -16,12 +17,14 @@ module Services::ChildAccount
     )
     user.child_account_compliance_lock_out_date = DateTime.now
     user.save!
+    Services::ChildAccount::EventLogger.log_account_locking(user)
   end
 
   # Removes the current child's account compliance state.
   def self.remove_compliance(user)
     update_compliance(user, nil)
     user.save!
+    Services::ChildAccount::EventLogger.log_compliance_removing(user)
   end
 
   # Updates the child_account_compliance_state attribute to the given state.
@@ -40,9 +43,10 @@ module Services::ChildAccount
   def self.grant_permission_request!(permission_request)
     return unless permission_request
     user = permission_request.user
-    if user.child_account_compliance_state != Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
+    unless Policies::ChildAccount::ComplianceState.permission_granted?(user)
       update_compliance(user, Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED)
       user.save!
+      Services::ChildAccount::EventLogger.log_permission_granting(user)
       parent_email = permission_request.parent_email
       ParentMailer.
         parent_permission_confirmation(parent_email).

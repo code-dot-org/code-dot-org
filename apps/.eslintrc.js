@@ -29,6 +29,7 @@ module.exports = {
     'jsx-a11y',
     'storybook',
     'import',
+    'jest',
   ],
   parserOptions: {
     babelOptions: {
@@ -43,6 +44,7 @@ module.exports = {
   ],
   env: {
     es6: true,
+    'jest/globals': true,
   },
   globals: {
     $: 'readonly',

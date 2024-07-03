@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "computer-vision",
-    "serialized_at": "2024-06-30 22:45:29 UTC",
+    "serialized_at": "2024-07-02 01:41:23 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -33,7 +33,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Pre-Module Survey"
+        "display_name": "Getting Started"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
@@ -45,7 +45,7 @@
       "user_facing": true,
       "position": 2,
       "properties": {
-        "display_name": "Content, Part 1"
+        "display_name": "Content"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-2",
@@ -53,35 +53,11 @@
       }
     },
     {
-      "key": "lessonGroup-4",
+      "key": "lessonGroup-6",
       "user_facing": true,
       "position": 3,
       "properties": {
-        "display_name": "Mid-Module Survey"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "computer-vision"
-      }
-    },
-    {
-      "key": "lessonGroup-5",
-      "user_facing": true,
-      "position": 4,
-      "properties": {
-        "display_name": "Content, Part 2"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "computer-vision"
-      }
-    },
-    {
-      "key": "lessonGroup-6",
-      "user_facing": true,
-      "position": 5,
-      "properties": {
-        "display_name": "Post-Module Survey"
+        "display_name": "Wrapping Up"
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-6",
@@ -92,13 +68,15 @@
   "lessons": [
     {
       "key": "lesson-1",
-      "name": "Pre-Module Survey",
+      "name": "Getting Started",
       "absolute_position": 1,
       "lockable": true,
-      "has_lesson_plan": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "assessment": true
+        "assessment": true,
+        "overview": "Students complete a pre-assessment to gauge their prior knowledge related to the module's content.",
+        "student_overview": "You complete a pre-assessment to gauge your prior knowledge."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -112,7 +90,7 @@
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 1,
+      "relative_position": 2,
       "properties": {
         "overview": "**How can computer vision be used to solve problems?**\n\nIn this introductory lesson on computer vision, students explore the fundamentals of how computers interpret visual data. The lesson begins with a warm-up activity where students hypothesize algorithms to differentiate between \"X\" and \"O\". They then engage with a video that discusses the basics of machine learning and the recognition of complex shapes in computer vision. The core activity, \"The Search for Pixel,\" provides a hands-on approach to understanding image processing through a series of problem-solving rounds. By the end of the lesson, students should be able to construct a working definition of computer vision and identify its real-world applications.",
         "preparation": "* Print copies of The Search for Pixel activity guide (one for each student)\n* Print the Clue Cards resource (one class set)\n",
@@ -130,7 +108,7 @@
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 2,
+      "relative_position": 3,
       "properties": {
         "overview": "**How can we put ourselves in the shoes of our users?**\n\nThis lesson introduces the unit project and has students review the rubric. Next, this lesson delves into understanding user needs and problems through qualitative and quantitative data collection. Students are introduced to the Design Thinking Process, particularly the \"Empathize\" phase, using real-world examples like FarmWise's approach to understanding farmer needs. Students then practice developing empathy and tailored research questions for community-specific issues. The aim is for students to learn effective strategies for gathering user data that will inform the design of practical solutions.",
         "preparation": "* Print copies of the Project Rubric (one for each student)\n* Print copies of the Communities I Belong To activity guide (one for each student)\n* Print copies of the Problem Observations to Research Questions activity guide (one for each group of students)\n",
@@ -148,7 +126,7 @@
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 3,
+      "relative_position": 4,
       "properties": {
         "overview": "**How can we collect data that helps us better understand our users?**\n\nIn this lesson, students learn to distinguish between qualitative and quantitative data, which are vital skills for understanding user needs and behaviors. This lesson uses a workout tracking device as a case study to discuss privacy concerns and user demographics. Students then develop a data collection plan that includes crafting questions that yield both data types. By the end of the lesson, students should be able to apply these skills to create surveys tailored to collecting useful user data, which they will use to inform their project designs.",
         "preparation": "* (Optional) Print copies of the Paper Survey Template (one for each group of students)\n",
@@ -166,7 +144,7 @@
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 4,
+      "relative_position": 5,
       "properties": {
         "overview": "**How can data visualizations give insight into a community's needs?**\n\nThis lesson focuses on the pivotal role of data in shaping product features and services. Students learn to translate user data into actionable insights through visual representations. Using examples like robotic vacuum cleaners, students explore how data visualizations can highlight user concerns and inform feature development. Activities guide them through creating and interpreting their own visualizations using tools like Google Sheets, culminating in a deep understanding of how visual data can reveal trends and needs within a community.",
         "preparation": "* Students will need access to the data that they gathered from the survey that they created and distributed in the previous lesson. If students don’t have access to data, you may provide them with a pre-created set of survey data.\n",
@@ -184,7 +162,7 @@
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 5,
+      "relative_position": 6,
       "properties": {
         "overview": "**How can we identify the core problem our product or service should address?**\n\nThis lesson equips students with the tools to deeply understand user needs and articulate problem statements effectively. The lesson focuses on constructing user stories from gathered data and using these to develop specific, insightful problem statements that address real user concerns. Activities will challenge students to analyze user behavior patterns and to think critically about the underlying reasons for these behaviors, using iterative questioning to refine their understanding. By the end of the lesson, students should be able to create user stories and corresponding problem statements that guide the development of user-centered solutions.",
         "preparation": "* Print copies of the User Personas and Problem Statements activity guide (one for each project group)\n",
@@ -202,7 +180,7 @@
       "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 6,
+      "relative_position": 7,
       "properties": {
         "overview": "**How should we tell computers what a pixel represents in an image?**\n\nThis lesson introduces students to the fundamental concepts of digital image processing and information encoding. Students explore how images are represented on screens using pixels and color values (RGB) and how QR codes use these principles to encode data. Students engage in activities that illustrate the conversion of binary data into visual patterns and explore decoding mechanisms. By the end of the lesson, students should be able to explain the information stored within a pixel and apply their knowledge to encode and decode QR codes.",
         "preparation": "* Print or provide a digital copy of the QR Code Exploration Activity Guide\n* Print or provide a digital copy of the Lotus Blossom diagram\n",
@@ -220,7 +198,7 @@
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 8,
       "properties": {
         "overview": "**Why do we use image filters?**\n\nThis lesson focuses on developing algorithms that help computers identify and outline distinct boundaries within images. Students learn how edge detection algorithms work and their applications in computer vision, particularly in image processing and enhancement. They engage in activities that involve writing and optimizing their own edge detection algorithms and discussing their efficiency and practical applications. By the end of this lesson, students should understand the technical aspects and importance of edge detection in various computer vision tasks.",
         "preparation": "* Print a classroom set of the Algorithm Hint Cards\n",
@@ -233,28 +211,12 @@
       }
     },
     {
-      "key": "lesson-2",
-      "name": "Mid-Module Survey",
-      "absolute_position": 9,
-      "lockable": true,
-      "has_lesson_plan": false,
-      "relative_position": 2,
-      "properties": {
-        "assessment": true
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "computer-vision"
-      }
-    },
-    {
       "key": "Datasets and Models",
       "name": "Datasets and Models",
-      "absolute_position": 10,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 8,
+      "relative_position": 9,
       "properties": {
         "overview": "**How do we know a dataset is appropriate for a specific problem?**\n\nIn this lesson, students explore the role of datasets in training computer vision models and learn how to evaluate the suitability of datasets for specific applications. The lesson includes hands-on exploration of the COCO dataset and object detection models using MediaPipe, allowing students to understand the practical aspects of using pre-trained models and the importance of confidence scores in model predictions. By the end of this lesson, students should be able to assess the relevance and quality of a dataset for solving a particular problem in computer vision.",
         "preparation": "* Print copies of the Classifying and Grouping Images resource (one set for each pair of students)\n",
@@ -262,17 +224,17 @@
       },
       "seeding_key": {
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
     {
       "key": "Training Data and Bias",
       "name": "Training Data and Bias",
-      "absolute_position": 11,
+      "absolute_position": 10,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 9,
+      "relative_position": 10,
       "properties": {
         "overview": "**How might bias affect users who engage with computer vision applications?**\n\nThis lesson addresses the critical topic of bias in computer vision systems. Students explore how biases in training data can affect the performance and fairness of computer vision applications using practical activities like the COCO dataset exploration and Auto-Doggie Door model testing. Students engage in discussions and activities designed to identify potential biases and propose methods to mitigate them, ensuring more equitable technology solutions. By the end of this lesson, students should be able to recognize bias in datasets and understand strategies to reduce its impact.",
         "preparation": "* Print copies of the Bingo Cards resource (one card for each student)\n",
@@ -280,17 +242,17 @@
       },
       "seeding_key": {
         "lesson.key": "Training Data and Bias",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
     {
       "key": "Training a Model",
       "name": "Training a Model",
-      "absolute_position": 12,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 11,
       "properties": {
         "overview": "**How does the quality and quantity of training data impact the performance of computer vision models?**\n\nThis lesson introduces students to the practical aspects of training a computer vision model using the Teachable Machine platform. This lesson emphasizes the importance of visual data in training models and the impact of data quality and quantity on model performance. Students engage in hands-on activities to create, train, and test their own image or pose classification models, understanding the challenges and considerations involved in model development. By the end of the lesson, students should be proficient in the basics of model training and evaluating their models in real-world applications.",
         "preparation": "* Print the Object Cards resource\n* Print copies of the Training a Model activity guide (one for each student)\n",
@@ -298,17 +260,17 @@
       },
       "seeding_key": {
         "lesson.key": "Training a Model",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
     {
       "key": "Impacts of Computer Vision",
       "name": "Impacts of Computer Vision",
-      "absolute_position": 13,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 12,
       "properties": {
         "overview": "**How do the benefits and challenges of computer vision technologies impact society?**\n\nThis lesson examines the ethical implications, potential biases, privacy concerns, and security challenges associated with computer vision technologies. Students are encouraged to think critically about developing and implementing computer vision in various sectors of society and explore how to ethically align technologies with societal needs, ensure privacy protection, and manage biases. By the end of this lesson, students should be able to articulate thoughtful perspectives on how computer vision technologies can be developed and used responsibly.",
         "preparation": "* Print copies of the Ethics Exploration activity guide (one for each pair of students)\n",
@@ -316,17 +278,17 @@
       },
       "seeding_key": {
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
     {
       "key": "Prototype Development, Part 1",
       "name": "Prototype Development, Part 1",
-      "absolute_position": 14,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 13,
       "properties": {
         "overview": "**How might we develop computer vision applications that focus on our user's needs?**\n\nThis lesson is about initiating the prototyping phase in developing computer vision applications. Students are guided through creating and refining prototypes that address societal issues and personal interests. The iterative nature of design is emphasized, encouraging students to apply feedback effectively to enhance their projects. The activities include discussing the scope of their projects, deciding on additional features, and using various methods like storyboards and digital mockups to visualize their ideas. By the end of this lesson, students should clearly understand how to develop and refine a prototype that meets user needs.",
         "preparation": "* Collect necessary materials for prototype development, which may include paper, markers, crafting supplies, and any specific tools relevant to the computer vision projects being developed.\n* Print the Inspiration Cards resource (one class set)\n* Gather different colored cups or colored construction paper for the status updates (one set for each project group)\n",
@@ -334,34 +296,34 @@
       },
       "seeding_key": {
         "lesson.key": "Prototype Development, Part 1",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
     {
       "key": "Prototype Development, Part 2",
       "name": "Prototype Development, Part 2",
-      "absolute_position": 15,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 14,
       "properties": {
         "overview": "**How might we develop computer vision applications that focus on our user's needs?**\n\nThis lesson continues the practical work of refining and iterating on computer vision prototypes, students began in the previous lesson. Students focus on assessing and enhancing the prototypes based on specific criteria outlined in a rubric. Students are encouraged to identify improvement areas and seek and incorporate feedback effectively. By the end of this lesson, students should have made significant advances in their prototypes, with a clearer understanding of how to align their projects with user needs.",
         "student_overview": "**How might we develop computer vision applications that focus on our user's needs?**\n\nIn today's lesson, we're continuing to develop and refine our computer vision prototypes. You evaluate what's working and what's not, using a rubric to guide your revisions. We also discuss any challenges you're facing and brainstorm solutions together. This iteration process is key to creating a solution that truly meets the needs of its users. By the end of the lesson, your prototype should be closer to something that can be tested and eventually implemented."
       },
       "seeding_key": {
         "lesson.key": "Prototype Development, Part 2",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
     {
       "key": "User Feedback",
       "name": "User Feedback",
-      "absolute_position": 16,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 15,
       "properties": {
         "overview": "This lesson is an essential phase in the Design Thinking Process where students learn the value of gathering and incorporating user feedback into their computer vision projects. Students are guided through the process of role-playing different users to understand diverse perspectives and needs. They learn how to receive and interpret feedback constructively to refine their prototypes. By the end of this lesson, students should have actionable insights to enhance their projects based on user feedback.\n\n**Question of the day:** How can testing a design with users help to improve it?",
         "preparation": "* Print copies of the User Feedback sheets, double-sided (about 6-8 feedback sheets per group)\n",
@@ -369,17 +331,17 @@
       },
       "seeding_key": {
         "lesson.key": "User Feedback",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
     {
       "key": "Implementing Feedback",
       "name": "Implementing Feedback",
-      "absolute_position": 17,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 16,
       "properties": {
         "overview": "**How can user feedback inform the iterative nature of the Design Thinking Process?**\n\nIn this lesson, students refine their prototypes based on user feedback. Students learn to evaluate, prioritize, and effectively incorporate suggestions to enhance their computer vision projects. The lesson emphasizes the importance of being responsive to user needs and adjusting designs accordingly through a structured activity involving a categorization method (Must Have, Should Have, Could Have, Will Not Have). By the end of this lesson, students should have a refined prototype that better meets the needs of their target users.",
         "preparation": "* Gather enough of each type of object used in the Warm-up activity for each group of two to three students so that each group has a physical object to work with during the activity. \n* Create or arrange the materials for students to categorize feedback (e.g., sticky notes in various colors, digital platforms like Miro or Google Slides for virtual categorization, and printed templates for feedback organization).\n* Ensure that necessary tools for prototype iteration are ready and accessible. This could involve software for digital prototypes or materials like paper, markers, and model-making supplies for physical prototypes.\n",
@@ -387,19 +349,21 @@
       },
       "seeding_key": {
         "lesson.key": "Implementing Feedback",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
     {
       "key": "lesson-3",
-      "name": "Post-Module Survey",
-      "absolute_position": 18,
+      "name": "Assessment Day",
+      "absolute_position": 17,
       "lockable": true,
-      "has_lesson_plan": false,
-      "relative_position": 3,
+      "has_lesson_plan": true,
+      "relative_position": 17,
       "properties": {
-        "assessment": true
+        "assessment": true,
+        "overview": "Students complete an end-of-module-assessment to assess how much they have learned.",
+        "student_overview": "You complete an end-of-module assessment to assess how much you have learned."
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -413,9 +377,24 @@
       "key": "c582bab5-d357-4683-9855-65434e8b87b8",
       "position": 1,
       "properties": {
+        "name": "Before the Lesson"
       },
       "seeding_key": {
         "lesson_activity.key": "c582bab5-d357-4683-9855-65434e8b87b8",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "computer-vision"
+      }
+    },
+    {
+      "key": "6fe21666-5440-44c5-a840-5e52cd7f73f1",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Pre-Assessment and Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6fe21666-5440-44c5-a840-5e52cd7f73f1",
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "computer-vision"
@@ -467,7 +446,7 @@
       "key": "5c0b2d51-69a6-436f-9b5a-5fda75fd2f8c",
       "position": 1,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Warm Up"
       },
       "seeding_key": {
@@ -481,7 +460,7 @@
       "key": "8d2c7be6-f2d9-44b5-8a95-a162c314c3af",
       "position": 2,
       "properties": {
-        "duration": 25,
+        "duration": 30,
         "name": "Activity"
       },
       "seeding_key": {
@@ -716,18 +695,6 @@
       }
     },
     {
-      "key": "e7641a2a-de49-490e-a6f3-92c206636231",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e7641a2a-de49-490e-a6f3-92c206636231",
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "computer-vision"
-      }
-    },
-    {
       "key": "84e5b613-8cde-4b87-852e-938344f2d082",
       "position": 1,
       "properties": {
@@ -737,7 +704,7 @@
       "seeding_key": {
         "lesson_activity.key": "84e5b613-8cde-4b87-852e-938344f2d082",
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -751,7 +718,7 @@
       "seeding_key": {
         "lesson_activity.key": "d6a9c577-a65a-4338-a03a-8c5c747c8208",
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -765,7 +732,7 @@
       "seeding_key": {
         "lesson_activity.key": "803b1081-9ef3-4822-aa85-83574caca513",
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -779,7 +746,7 @@
       "seeding_key": {
         "lesson_activity.key": "2299880f-4589-404f-9251-dcfac42545e9",
         "lesson.key": "Training Data and Bias",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -793,7 +760,7 @@
       "seeding_key": {
         "lesson_activity.key": "c4d1d730-7745-4fe0-bc12-2bcca877f8b3",
         "lesson.key": "Training Data and Bias",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -807,7 +774,7 @@
       "seeding_key": {
         "lesson_activity.key": "930ea9cf-5a2d-406b-8de7-b5889bf37a50",
         "lesson.key": "Training Data and Bias",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -821,7 +788,7 @@
       "seeding_key": {
         "lesson_activity.key": "7bb3709f-a535-4b3a-96a9-a0e981cb9979",
         "lesson.key": "Training a Model",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -835,7 +802,7 @@
       "seeding_key": {
         "lesson_activity.key": "3e02099a-4aa0-4f0a-ba3b-bd72ba974c50",
         "lesson.key": "Training a Model",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -849,7 +816,7 @@
       "seeding_key": {
         "lesson_activity.key": "383c91ef-02b9-42f6-b5b3-150807adfe99",
         "lesson.key": "Training a Model",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -863,7 +830,7 @@
       "seeding_key": {
         "lesson_activity.key": "0f988d9d-7cc3-4481-9989-7036821dd71b",
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -877,7 +844,7 @@
       "seeding_key": {
         "lesson_activity.key": "3bda7820-c464-43ad-9da8-390a2d6c5f82",
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -891,7 +858,7 @@
       "seeding_key": {
         "lesson_activity.key": "395da187-e41d-43e6-8596-a1ca22b1a5b0",
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -905,7 +872,7 @@
       "seeding_key": {
         "lesson_activity.key": "dcd22052-1a70-4b84-ae16-05a0ef6fdad8",
         "lesson.key": "Prototype Development, Part 1",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -919,7 +886,7 @@
       "seeding_key": {
         "lesson_activity.key": "16809e0b-dddd-4257-9942-1c84d03a1d0c",
         "lesson.key": "Prototype Development, Part 1",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -933,7 +900,7 @@
       "seeding_key": {
         "lesson_activity.key": "d3660592-031c-412b-8578-aa946b2ef542",
         "lesson.key": "Prototype Development, Part 1",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -947,7 +914,7 @@
       "seeding_key": {
         "lesson_activity.key": "922023c3-9f05-4922-bc95-7e1661485977",
         "lesson.key": "Prototype Development, Part 2",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -961,7 +928,7 @@
       "seeding_key": {
         "lesson_activity.key": "028bb578-2d0c-4761-affb-ead97f3ef5fb",
         "lesson.key": "Prototype Development, Part 2",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -975,7 +942,7 @@
       "seeding_key": {
         "lesson_activity.key": "efc9f23a-837a-40cd-a8df-61d6bf88df75",
         "lesson.key": "Prototype Development, Part 2",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -989,7 +956,7 @@
       "seeding_key": {
         "lesson_activity.key": "94697415-e05a-4e74-ab95-5389a87c40b4",
         "lesson.key": "User Feedback",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -1003,7 +970,7 @@
       "seeding_key": {
         "lesson_activity.key": "75862838-fb39-4ee1-bcd0-6a915d3d75bd",
         "lesson.key": "User Feedback",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -1017,7 +984,7 @@
       "seeding_key": {
         "lesson_activity.key": "1bf19ce2-d1be-4429-8ddc-819f3f445c94",
         "lesson.key": "User Feedback",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -1031,7 +998,7 @@
       "seeding_key": {
         "lesson_activity.key": "a9e02cc3-0487-4740-88d8-9014efc4b79d",
         "lesson.key": "Implementing Feedback",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -1045,7 +1012,7 @@
       "seeding_key": {
         "lesson_activity.key": "9f2bd694-380f-4cef-9a4c-49fccdfed77a",
         "lesson.key": "Implementing Feedback",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -1059,7 +1026,21 @@
       "seeding_key": {
         "lesson_activity.key": "de9290f3-95b0-4d47-9ac8-c6066e895174",
         "lesson.key": "Implementing Feedback",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision"
+      }
+    },
+    {
+      "key": "99dfe3d9-545e-4b4a-80aa-e99a3189f928",
+      "position": 4,
+      "properties": {
+        "duration": 30,
+        "name": "[Optional] Personal Career Exploration"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "99dfe3d9-545e-4b4a-80aa-e99a3189f928",
+        "lesson.key": "Implementing Feedback",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision"
       }
     },
@@ -1067,6 +1048,8 @@
       "key": "224c11c1-acd9-4819-aac7-af96d31319b4",
       "position": 1,
       "properties": {
+        "duration": 45,
+        "name": "End-of-Unit Assessment and Survey"
       },
       "seeding_key": {
         "lesson_activity.key": "224c11c1-acd9-4819-aac7-af96d31319b4",
@@ -1078,14 +1061,63 @@
   ],
   "activity_sections": [
     {
-      "key": "a356024a-1869-4365-9527-827c0b2b3ff3",
+      "key": "368a9062-9c9d-47dd-9977-b245d5aafd17",
       "position": 1,
       "properties": {
+        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day.\n\n**Supports for Teachers:** You can learn more about bringing AI lessons to your classroom through our [AI 101 for Teachers series](https://code.org/ai/pl/101). AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of AI and its transformative potential in education."
+      },
+      "seeding_key": {
+        "activity_section.key": "368a9062-9c9d-47dd-9977-b245d5aafd17",
+        "lesson_activity.key": "c582bab5-d357-4683-9855-65434e8b87b8"
+      }
+    },
+    {
+      "key": "b9280c3b-4f1c-4197-b162-b0fb97a0d1fa",
+      "position": 1,
+      "properties": {
+        "description": "Before we start the unit, we will take a pre-assessment to see how much we already know about computer vision. Don't worry about how many you get right or wrong! This is for us to get a sense of where we are starting and also allows us to see how much we have learned by the end of the unit.",
+        "name": "Pre-Assessment",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b9280c3b-4f1c-4197-b162-b0fb97a0d1fa",
+        "lesson_activity.key": "6fe21666-5440-44c5-a840-5e52cd7f73f1"
+      }
+    },
+    {
+      "key": "cbd363ba-758e-49e7-9f6e-d4e366c9f79b",
+      "position": 2,
+      "properties": {
+        "description": "Direct students to Level 1 to complete the pre-assessment. This pre-assessment can be used to measure learning gains by the end of the module.",
+        "progression_name": "Pre-Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "cbd363ba-758e-49e7-9f6e-d4e366c9f79b",
+        "lesson_activity.key": "6fe21666-5440-44c5-a840-5e52cd7f73f1"
+      }
+    },
+    {
+      "key": "ec048fe4-08a3-43e3-98f8-e1c159f1290e",
+      "position": 3,
+      "properties": {
+        "description": "Direct students to Level 2 to complete a quick pre-module survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "Pre-Module Survey",
         "progression_name": "Pre-Module Survey"
       },
       "seeding_key": {
-        "activity_section.key": "a356024a-1869-4365-9527-827c0b2b3ff3",
-        "lesson_activity.key": "c582bab5-d357-4683-9855-65434e8b87b8"
+        "activity_section.key": "ec048fe4-08a3-43e3-98f8-e1c159f1290e",
+        "lesson_activity.key": "6fe21666-5440-44c5-a840-5e52cd7f73f1"
+      }
+    },
+    {
+      "key": "6aef55bc-d486-43f7-8fde-eec8165054e9",
+      "position": 4,
+      "properties": {
+        "description": "While students take their survey, please complete [**this pre-module survey for teachers**](https://studio.code.org/form/computer_vision_module_pre_survey) as well. Your feedback is valued and appreciated!"
+      },
+      "seeding_key": {
+        "activity_section.key": "6aef55bc-d486-43f7-8fde-eec8165054e9",
+        "lesson_activity.key": "6fe21666-5440-44c5-a840-5e52cd7f73f1"
       }
     },
     {
@@ -1268,7 +1300,7 @@
       "key": "81934bad-bc82-4084-bdee-5c685ec920bf",
       "position": 1,
       "properties": {
-        "description": "In the previous lesson, we saw a range of computer vision techniques and use cases. Over the next few lessons, we'll look more closely at some specific examples of computer vision applications. Today, we'll look at one of the companies mentioned in the video we saw before – Farmwise – which builds automated weeding technology.",
+        "description": "Many of the jobs of today will evolve in fairly dramatic ways once computer vision technologies mature and are more widely available. It is fair to say that the jobs of tomorrow are just now being thought-up and developed. Job seekers who are able to innovate and evolve  traditional professions stand to be highly sought after.\n\nThroughout this module, you will have the opportunity to explore how different careers might incorporate computer vision in order to be more effective, more efficient and more rewarding.\n",
         "remarks": true
       },
       "seeding_key": {
@@ -1280,11 +1312,11 @@
       "key": "dd4e4b01-904c-4f73-86da-8a019e020a18",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Watch the video about Farmwise together as a class, and have students think about the following guiding questions: What specific problem does this technology help solve? How does this technology incorporate computer vision? Who benefits from this technology?\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What could be an unintended negative consequence of this technology?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this discussion to get students to see that there are multiple sides to most things. Some topics that students might bring up or that you could prompt students to think about: Loss of jobs for farm workers Lack of access to this technology for smaller farms, making it harder for them to compete Data security when it comes to farming techniques such as placement of or spacing between plants.\n",
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Watch the video \"Computer Vision and On-Field AI\" together as a class, and have students think about the following guiding question: How was computer vision able to collect information to assist this athlete?\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How was computer vision able to collect information to assist this athlete?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this discussion to get students to see that computer vision was able to convert the positioning of the athlete into a series of lines that represent their legs, arms, body, and head. The application was able to measure angles, speeds, and locations between these vectors and compute a possible way to increase the efficacy of the kick in a more scientific way than a traditional coach might be able to do.\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Move on from the discussion after 5 minutes. It’s okay if these case studies bring up more questions than answers! If you find your class generating a lot of questions, you could consider capturing these in a Parking Lot or on a KWL Chart."
+            "markdown": "Move on from the discussion after 5 minutes. It’s okay if these career explorations bring up more questions than answers! If you find your class generating a lot of questions, you could consider capturing these in a Parking Lot or on a KWL Chart."
           }
         ]
       },
@@ -1294,9 +1326,21 @@
       }
     },
     {
-      "key": "04fb2477-86dd-4f27-8a72-d3fb79345304",
+      "key": "f198e11c-7453-4d75-8621-4b09d3f69736",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete the “Incorporating Computer Science” activity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students will explore how common jobs in the sporting world might incorporate computer vision for positive effect. They should first choose a profession in the sporting world; there are suggested options available, though students should feel free to pick any career that is interesting to them. Next, they choose a computer vision technique from the list provided. They will write a free response in which they answer the following questions:\n\n* _What is one aspect / task associated with the job that could benefit from a computer vision solution?_\n* _How might one of the computer vision techniques seen here evolve the way that this job functions?_\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students in quickly choosing a sample career and beginning the more important work of exploring how computer vision might be used within the profession.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "f198e11c-7453-4d75-8621-4b09d3f69736",
+        "lesson_activity.key": "5c0b2d51-69a6-436f-9b5a-5fda75fd2f8c"
+      }
+    },
+    {
+      "key": "04fb2477-86dd-4f27-8a72-d3fb79345304",
+      "position": 4,
+      "properties": {
+        "progression_name": "Career Spotlight: The Sports Industry"
       },
       "seeding_key": {
         "activity_section.key": "04fb2477-86dd-4f27-8a72-d3fb79345304",
@@ -1304,10 +1348,26 @@
       }
     },
     {
-      "key": "ee3c23ef-7b1e-47f3-a455-c8b1e51193b7",
-      "position": 4,
+      "key": "c96d7103-a151-491c-bb4e-32d895953bd1",
+      "position": 5,
       "properties": {
-        "description": "We will continue to look at more case studies throughout the next few lessons. For the rest of today, let’s take a look at a process that teams use to develop applications such as the one we just looked at.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "It might help to think in reverse– students could choose a technique first and then brainstorm about how it might be used for a particular profession. If students get stuck, encourage them to approach the warm-up with this strategy.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c96d7103-a151-491c-bb4e-32d895953bd1",
+        "lesson_activity.key": "5c0b2d51-69a6-436f-9b5a-5fda75fd2f8c"
+      }
+    },
+    {
+      "key": "ee3c23ef-7b1e-47f3-a455-c8b1e51193b7",
+      "position": 6,
+      "properties": {
+        "description": "We will continue to look at more computer vision career explorations and case studies throughout the next few lessons. For the rest of today, we will turn our attention to the project that you will be working to develop during this unit. ",
         "remarks": true
       },
       "seeding_key": {
@@ -1522,7 +1582,7 @@
       "key": "f8baf136-2ec3-4294-8194-c43cdcef137b",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete the reflection questions on Levels 1 and 2.\n\n1. _Describe a community you belong to and a potential problem within that community that you discussed with your group._\n2. _What was one research question you wrote down to learn more about the users' needs and why would that be important to learn about?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goal:** \n\n1. This question aims to assess students' ability to connect their personal experiences with the broader scope of computer vision applications, encouraging them to think critically about how technology can serve diverse needs. \n2. The goal here is to evaluate students' understanding of how to translate observations about a community's challenges into open-ended questions that can effectively guide user research and data gathering.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to complete the reflection questions on Levels 2 and 3.\n\n1. _Describe a community you belong to and a potential problem within that community that you discussed with your group._\n2. _What was one research question you wrote down to learn more about the users' needs and why would that be important to learn about?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goal:** \n\n1. This question aims to assess students' ability to connect their personal experiences with the broader scope of computer vision applications, encouraging them to think critically about how technology can serve diverse needs. \n2. The goal here is to evaluate students' understanding of how to translate observations about a community's challenges into open-ended questions that can effectively guide user research and data gathering.",
         "progression_name": "Reflection",
         "tips": [
           {
@@ -2600,8 +2660,32 @@
       }
     },
     {
-      "key": "cdfb7a9c-4cea-421c-b8d8-6b736d85ac4f",
+      "key": "f23105a0-e4a9-46bb-ae4c-18c289435ba0",
       "position": 3,
+      "properties": {
+        "description": "Direct students to Level 3 to complete a quick mid-module survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "Mid-Module Survey",
+        "progression_name": "Mid-Module Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "f23105a0-e4a9-46bb-ae4c-18c289435ba0",
+        "lesson_activity.key": "02045366-94ac-4236-b403-3b0a988b3cd1"
+      }
+    },
+    {
+      "key": "7715b3ed-05bb-4f7c-97ca-d054f2c83244",
+      "position": 4,
+      "properties": {
+        "description": "While students take their survey, please complete [**this pre-module survey for teachers**](https://studio.code.org/form/computer_vision_module_mid_survey) as well. Your feedback is valued and appreciated!"
+      },
+      "seeding_key": {
+        "activity_section.key": "7715b3ed-05bb-4f7c-97ca-d054f2c83244",
+        "lesson_activity.key": "02045366-94ac-4236-b403-3b0a988b3cd1"
+      }
+    },
+    {
+      "key": "cdfb7a9c-4cea-421c-b8d8-6b736d85ac4f",
+      "position": 5,
       "properties": {
         "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://www.play.juicemind.com/quizzes/x0Jx9owE8cFyGjkhfbh9).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "name": "(Optional) JuiceMind Assessment",
@@ -2613,21 +2697,10 @@
       }
     },
     {
-      "key": "46396d29-1cd8-43af-921c-f7a7c926e51a",
-      "position": 1,
-      "properties": {
-        "progression_name": "Mid-Module Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "46396d29-1cd8-43af-921c-f7a7c926e51a",
-        "lesson_activity.key": "e7641a2a-de49-490e-a6f3-92c206636231"
-      }
-    },
-    {
       "key": "91d61207-ba54-4f65-b5ce-57e2e0818733",
       "position": 1,
       "properties": {
-        "description": "In the previous lesson, you developed an edge detection algorithm to isolate an object in an image. Once we have objects or other important things isolated within an image, how do we train a computer vision application to understand what these things are?",
+        "description": "Let's begin today by revisiting how computer vision is and is going to impact careers, specifically within the healthcare industry.",
         "remarks": true
       },
       "seeding_key": {
@@ -2639,13 +2712,7 @@
       "key": "27c42c78-1382-4282-960a-e25725b74609",
       "position": 2,
       "properties": {
-        "description": "**Group:** Place students in pairs or small groups of 3.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a set of the Classifying and Grouping Images.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students work with their partner to group, sort, and label a collection of images based on similarities that they see.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work on finding their ideal groupings, tell them to create labels to organize their thinking. You should also encourage them to revise and reform groupings at any time. Reinforce to them that there is not one answer that you are looking for.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The images were chosen purposefully, so that there are many different ways to group them. Students could group them based on objects that they see, locations, contexts, or even color palette. Often they will find that an image belongs in two of the categories that they created."
-          }
-        ]
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Students should navigate to Lesson 8, Level 1.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should choose one of the options that are available to them on this choice level. All of the options here explain current ways that computer vision is being used within the healthcare industry today. Students should use the free response box to answer the following question:\n* I_s this an effective and trusted use of computer vision?_\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through their example, you might ask them to explain to you how computer vision is being used in the example that they chose. You might also ask what jobs within the healthcare industry this particular computer vision implementation might affect.\n"
       },
       "seeding_key": {
         "activity_section.key": "27c42c78-1382-4282-960a-e25725b74609",
@@ -2663,10 +2730,21 @@
       }
     },
     {
-      "key": "9cdec13b-b42c-42a9-9a91-2150a6b69bc2",
+      "key": "7ab8a9b4-51bb-411e-a34f-81987201b0e9",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What is the correct way to group the images?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Short answer - there is no correct way! It is important to point out that there are many different ways of grouping the images – it could be based on similar objects that are detected in the scene (e.g. cooking utensils), on location (e.g. inside of a school), on attributes (e.g. clean vs. dirty / color palette), or context (e.g. it must be lunch time!). An important takeaway is that while there are many ways to group, sort, and label images, the most important consideration is the purpose behind what you are grouping. If we want a dataset that will help a computer vision application to identify objects in a scene, for instance, then labeling and classifying by object type would be the ideal way to group these images.\n\nAnother important conversation thread that could emerge is that it is often difficult (if not impossible!) to sort the images based on a singular object. If you made two categories- books and tables- there are images that contain one or the other, but also images that contain both. Therefore, being able to tag multiple objects within an image becomes important."
+        "progression_name": "Career Spotlight: Healthcare"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ab8a9b4-51bb-411e-a34f-81987201b0e9",
+        "lesson_activity.key": "84e5b613-8cde-4b87-852e-938344f2d082"
+      }
+    },
+    {
+      "key": "9cdec13b-b42c-42a9-9a91-2150a6b69bc2",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Students should navigate to Lesson 8, Level 2.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** With a partner, students will brainstorm a way in which computer vision might help solve one of major issues in the healthcare field listed on this level. They should explain what computer vision technology might be implemented, how computer vision will help solve one of the major issues in healthcare, and what healthcare jobs might benefit as a result.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** If students need help interpreting any of the major issues that are listed, you can explain it to them as follows:\n* Rising costs of healthcare: in real terms, in the United States healthcare costs have risen by 290% since 1980. Costs are so high that in a recent Kaiser Family Foundation poll, 43% of respondents said that a family member had put off or postponed necessary health care as a result.\n* Shortage of healthcare workers: despite the millions of workers employed in the healthcare industry, 132 countries are experiencing shortages of physicians, with an estimated 12.8 million more doctors needed worldwide to alleviate this problem. The United States is expected to face a shortage of up to 124,000 physicians and supportive roles by 2034.\n* Time-intensive record keeping: according to a study involving 155,000 US physicians, on average, physicians spend more than 16 minutes per patient ecounter using electronic health records (EHR). This time was split between chart review, documentation, and ordering."
       },
       "seeding_key": {
         "activity_section.key": "9cdec13b-b42c-42a9-9a91-2150a6b69bc2",
@@ -2674,11 +2752,21 @@
       }
     },
     {
-      "key": "6162e39a-0865-4f04-925d-039c3b86a629",
-      "position": 5,
+      "key": "ae16668a-57e6-4eb4-960d-b3b9fa9cf6e5",
+      "position": 6,
       "properties": {
-        "description": "Having access to datasets full of thousands or millions of images that are sorted and labelled with information is absolutely essential in being able to train a computer vision system to interpret the world around us.",
-        "remarks": true
+        "progression_name": "Solving Healthcare Issues with Computer Vision"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae16668a-57e6-4eb4-960d-b3b9fa9cf6e5",
+        "lesson_activity.key": "84e5b613-8cde-4b87-852e-938344f2d082"
+      }
+    },
+    {
+      "key": "6162e39a-0865-4f04-925d-039c3b86a629",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How were you able to use computer vision to assist with one of the major issues facing the healthcare industry as it relates to your chosen profession?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:**  Encourage students to share their computer vision solutions. A major point that should come out of the discussion is that no one computer vision solution will solve any of the major problems facing careers in the healthcare industry. However, a series of small and innovative uses of computer vision can, over time, add up to have a large positive impact on healthcare."
       },
       "seeding_key": {
         "activity_section.key": "6162e39a-0865-4f04-925d-039c3b86a629",
@@ -2689,7 +2777,7 @@
       "key": "95774b9e-5129-4dcf-ab08-1961d39146bd",
       "position": 1,
       "properties": {
-        "description": "As we just experienced, it can be a lot of work to classify images sometimes. There are lots of different rules and patterns that you can use for how you choose to organize them. However, the act of ordering, sorting, and classifying the objects in images is essential in order to train computer vision applications to learn what they are seeing with their camera. Just like we need to learn to interpret the world around us through repeated use of our five senses, so too must a computer vision application train in order to make sense of what it sees in images.",
+        "description": "In the previous lesson, you developed an edge detection algorithm to isolate an object in an image. Once we have objects or other important things isolated within an image, how do we train a computer vision application to understand what these things are? \n\nThe act of ordering, sorting, and classifying the objects in images is essential in order to train computer vision applications to learn what they are seeing with their camera. Just like we need to learn to interpret the world around us through repeated use of our five senses, so too must a computer vision application train in order to make sense of what it sees in images.",
         "remarks": true
       },
       "seeding_key": {
@@ -2701,7 +2789,7 @@
       "key": "c6ce6ee5-3c90-40fe-89e2-1ff3e7f043f0",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to access the COCO Dataset website. They should first read the purpose of the dataset, and should then navigate to the Explore section.\n\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 3 to access the COCO Dataset website. They should first read the purpose of the dataset, and should then navigate to the Explore section.\n\n",
         "progression_name": "COCO Dataset"
       },
       "seeding_key": {
@@ -2816,7 +2904,7 @@
       "key": "9bfa8d09-3497-4707-927e-f3b0675e5a32",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How might an image dataset labeled with classes help a computer vision application?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Having a well-labeled dataset is crucial in being able to train computer vision models to accurately identify and classify the objects that it sees. However, as seen here with COCO, the classes that it is able to recognize are limited in scope. Oftentimes, there is a need to create and classify one’s own dataset for more niche computer vision applications and tasks.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 to access MediaPipe's Object Detection model demo. Have students play around with the model by uploading a sample image.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How might an image dataset labeled with classes help a computer vision application?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Having a well-labeled dataset is crucial in being able to train computer vision models to accurately identify and classify the objects that it sees. However, as seen here with COCO, the classes that it is able to recognize are limited in scope. Oftentimes, there is a need to create and classify one’s own dataset for more niche computer vision applications and tasks.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 4 to access MediaPipe's Object Detection model demo. Have students play around with the model by uploading a sample image.",
         "progression_name": "MediaPipe Object Detection",
         "tips": [
           {
@@ -3492,7 +3580,7 @@
       "key": "d3968ea9-88a9-4423-ab2a-9f7f24889121",
       "position": 1,
       "properties": {
-        "description": "We have already created a sample model using Teachable Machine that might be used in our computer vision application, and today we will expand our prototypes to include other ways to show our users what our design might offer them.",
+        "description": "Let's begin today by revisiting how computer vision is and is going to impact careers. One job that has embraced all of innovations that have been brought by computer vision is that of a Design / Creative Technologist. \n\nThe job of Design / Creative Technologist is best explained by those that do it. Let’s examine some of the women in this profession and the amazing and innovative work that they do.\n",
         "remarks": true
       },
       "seeding_key": {
@@ -3504,7 +3592,7 @@
       "key": "c8b13392-abe5-466c-8a89-f93db18afcc8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"Design Thinking: Prototype\" (0:33 to 1:48)\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _The video describes three reasons for creating a prototype. Which one do you find most compelling?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Get students to use their own words to describe and define these reasons from the video.\n\nIn the case that no students raise their hands for some of the choices here is how you can summarize those points: One, to explore what is possible– sometimes it is difficult to know what is possible without trying it; a prototype is a low stakes way of assessing possibilities. Two, to inspire your users– seeing is believing. Without putting some form of a product into a user’s hands, it might be difficult to convey the true depth of the experience. And third, to converse– to begin a dialogue about how the product can solve a key problem for users. The prototype can begin a conversation with users that will lead to further development and iteration, which often only makes the solution stronger in the end.\n\n<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video \"Design Thinking: Prototype\" (1:49 to 2:54)\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Prompt students to write down their response to this question before moving on to the next slide to facilitate a Give One, Get One.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to participate in a Give One, Get One."
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Students should navigate to Lesson 13, Level 1.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should choose one of the three interviews that are present on this choice level. As they read through the brief interview, they should make note of what they notice and what they wonder about the person / profession in the free-response box.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work, you might consider asking them to explain how the design technologist that they chose incorporates computer vision in their work, and why it is personally meaningful to them. "
       },
       "seeding_key": {
         "activity_section.key": "c8b13392-abe5-466c-8a89-f93db18afcc8",
@@ -3512,8 +3600,42 @@
       }
     },
     {
-      "key": "71062426-0797-4922-8920-f9b73388df53",
+      "key": "0c90ab6f-876f-4f62-a329-781c1e90d488",
+      "position": 3,
+      "properties": {
+        "progression_name": "Career Spotlight: Design Technologist"
+      },
+      "seeding_key": {
+        "activity_section.key": "0c90ab6f-876f-4f62-a329-781c1e90d488",
+        "lesson_activity.key": "dcd22052-1a70-4b84-ae16-05a0ef6fdad8"
+      }
+    },
+    {
+      "key": "5163bd89-8240-4739-92e7-d439a1978aa5",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What did you learn about the job of Design / Creative Technologist?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Aside from being able to explain what the three women do in their role as Design / Creative Technologists (summarized below), the discussion should also focus on how different each woman’s work is and how computer vision allows each woman a freedom of expression and interaction necessary to create their art.\n* Johanna Jaskowska - creates innovative and viral Instagram and TikTok filters that utilize computer vision.\n* Mélanie Chappuis - uses interactive computer vision where visitors to an installation can “try on” clothes by having them projected onto their bodies.\n* Maria Than - uses creative tech and design for social good, and to start conversations on important topics like sustainability and racism through alternative methods of communication."
+      },
+      "seeding_key": {
+        "activity_section.key": "5163bd89-8240-4739-92e7-d439a1978aa5",
+        "lesson_activity.key": "dcd22052-1a70-4b84-ae16-05a0ef6fdad8"
+      }
+    },
+    {
+      "key": "bf28d471-1281-4dc9-9f0b-90211395a74e",
       "position": 1,
+      "properties": {
+        "description": "We have already created a sample model using Teachable Machine that might be used in our computer vision application, and today we will expand our prototypes to include other ways to show our users what our design might offer them.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bf28d471-1281-4dc9-9f0b-90211395a74e",
+        "lesson_activity.key": "16809e0b-dddd-4257-9942-1c84d03a1d0c"
+      }
+    },
+    {
+      "key": "71062426-0797-4922-8920-f9b73388df53",
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _In addition to your Teachable Machine model, what else could you add to your prototype?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is an opportunity to allow students to dream big. However, the main goal of this discussion, in addition to hearing what other groups might be considering, is to help students try to constrain the scope of the prototype. Students will often propose something more grand in scope than is possible in the time that is given to them. Therefore, trying to keep a reasonable expectation of what is expected and possible over the next two class periods is a useful discussion to engage in.\n\n"
       },
@@ -3524,7 +3646,7 @@
     },
     {
       "key": "dcbbb1ae-ff5b-4595-842b-d39a88af8e69",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "Here are some possibilities that you and your group might consider and which fit within the scope of the prototype. You might be unfamiliar with some of these ideas, but that doesn’t mean that you should count them out. A little quick research might show you that it might be the best solution to your prototyping needs.\n\nAs you work, you may need a jolt of inspiration to find the perfect idea for how to improve your prototype. If that’s the case, feel free to come up and use one of our Inspiration Cards! They will give you one concrete item that you can add to your prototype.\n\nAs you work with your group, we will be using a series of non-verbal communication signals in order to communicate your group’s needs. You will be receiving a stack of different color cups, with each cup symbolizing a different status. The cup that is on the top of the stack – the one most visible – will be what determines your group’s status.",
         "remarks": true
@@ -3536,7 +3658,7 @@
     },
     {
       "key": "d68a2904-3f0e-4e5b-a430-8cf360302d39",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group one stack of cups containing each of the four colors.",
         "tips": [
@@ -3555,7 +3677,7 @@
       "key": "43af4336-25d1-42ea-9894-f7be4a556c79",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete their reflection questions on Levels 1 and 2.\n\n1. _What part of today’s prototyping activity was most useful, interesting, or engaging for you? Explain why._\n2. _What does 'scope' mean in the context of project planning, and how did you determine the scope of your prototype?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goals:** \n1. Reading through student responses before the start of the next class will be helpful to course correct any issues or identify any students who are struggling to identify anything useful, interesting or engaging about the prototyping process and work with them to find something useful or engaging and to better address student needs on Day Two. \n2. Students should explain the concept of project scope as it relates to the features, functions, and timeline of their prototype, discussing how they decided what was feasible to accomplish within the constraints of the project.\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to complete their reflection questions on Levels 2 and 3.\n\n1. _What part of today’s prototyping activity was most useful, interesting, or engaging for you? Explain why._\n2. _What does 'scope' mean in the context of project planning, and how did you determine the scope of your prototype?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goals:** \n1. Reading through student responses before the start of the next class will be helpful to course correct any issues or identify any students who are struggling to identify anything useful, interesting or engaging about the prototyping process and work with them to find something useful or engaging and to better address student needs on Day Two. \n2. Students should explain the concept of project scope as it relates to the features, functions, and timeline of their prototype, discussing how they decided what was feasible to accomplish within the constraints of the project.\n",
         "progression_name": "Reflection",
         "tips": [
           {
@@ -3592,19 +3714,65 @@
       }
     },
     {
-      "key": "a1585f1f-f996-42ee-a8ba-d6059175f37b",
+      "key": "5d9f8de2-64d4-454b-806b-87321074abf2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to select the types of prototypes they worked on in the last class. \n* Question – *What prototype component(s) have you implemented in your project thus far?* \n  * Storyboards \n  * Paper Prototypes \n  * Digital mockup \n  * UI Hot Spot activity \n  * Annotated images \n  * Image filters \n  * Flowcharting \n  * Other",
-        "progression_name": "Prototype Components"
+        "description": "Let's begin today by continuing our exploration of the Design / Creative Technologist career.\n\nWe will have a design technologist, Jerome Morrison, explain to you what he does at the his company, Meow Wolf.",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "a1585f1f-f996-42ee-a8ba-d6059175f37b",
+        "activity_section.key": "5d9f8de2-64d4-454b-806b-87321074abf2",
         "lesson_activity.key": "922023c3-9f05-4922-bc95-7e1661485977"
       }
     },
     {
-      "key": "4b5ea46e-d8ba-492b-9bfb-b5e2b49f0546",
+      "key": "f42f5b28-ae9a-44a5-a8c4-19d4f864c7ce",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Watch the video \"Careers with Computer Science - Meow Wolf\" together as a class, and have students think about the following guiding questions: What do you notice? What do you wonder? How does Jerome Morrison use computer vision?\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How does Jerome Morrison use computer vision as a design technologist?_\n* Whole class discussion\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Jerome’s use of computer vision seeks to create playful, engaging experiences for people who enter Meow Wolf. It can be something as obvious as a lighting change, a secret door opening, or a prop moving across the room. On other occasions, he uses computer vision to impart a more subtle influence on his audience by changing background sounds or music, adding scent, or slowly illuminating objects or pathways."
+      },
+      "seeding_key": {
+        "activity_section.key": "f42f5b28-ae9a-44a5-a8c4-19d4f864c7ce",
+        "lesson_activity.key": "922023c3-9f05-4922-bc95-7e1661485977"
+      }
+    },
+    {
+      "key": "d666fa82-11f5-44eb-a291-e08f38a49b9a",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Students should navigate to Lesson 14, Level 1.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** With a partner, students should brainstorm a way to use computer vision within an installation that a Design / Creative Technologist might create for a local museum or interactive exhibit space like Meow Wolf and write a description of it in the free-respose box on this level.  Note: Students might want an example before they begin. There is a sample exhibit plan on the next slide.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** s students work through this activity, ask them what computer vision technique they are employing, and have them explain what it does. This is a good time to correct any misconceptions about the technology or how it works. Students can also be encouraged to synthesize different computer vision techniques together to create a more elaborate experience.",
+        "progression_name": "Career Spotlight: Interactive Exhibit"
+      },
+      "seeding_key": {
+        "activity_section.key": "d666fa82-11f5-44eb-a291-e08f38a49b9a",
+        "lesson_activity.key": "922023c3-9f05-4922-bc95-7e1661485977"
+      }
+    },
+    {
+      "key": "e7509aac-329e-4808-a60c-0bc0c83f68a7",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What interactive exhibit did you and your partner brainstorm? How is computer vision used in your proposed installation?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** There will be a wide variety of ideas presented; however, students should be able to articulate at least one computer vision technique that they might use in order to enhance the exhibit and how it works. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e7509aac-329e-4808-a60c-0bc0c83f68a7",
+        "lesson_activity.key": "922023c3-9f05-4922-bc95-7e1661485977"
+      }
+    },
+    {
+      "key": "5b72dd56-b12d-4bbd-b042-7236d1467166",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to select the types of prototypes they worked on in the last class. \n* Question – *What prototype component(s) have you implemented in your project thus far?* \n  * Storyboards \n  * Paper Prototypes \n  * Digital mockup \n  * UI Hot Spot activity \n  * Annotated images \n  * Image filters \n  * Flowcharting \n  * Other",
+        "progression_name": "Prototype Components"
+      },
+      "seeding_key": {
+        "activity_section.key": "5b72dd56-b12d-4bbd-b042-7236d1467166",
+        "lesson_activity.key": "028bb578-2d0c-4761-affb-ead97f3ef5fb"
+      }
+    },
+    {
+      "key": "dd1ae179-1a6c-439a-b548-62f157db78f3",
       "position": 2,
       "properties": {
         "description": "\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Share the results with students so that they can see how other groups are tackling this phase of the project.",
@@ -3616,34 +3784,13 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "4b5ea46e-d8ba-492b-9bfb-b5e2b49f0546",
-        "lesson_activity.key": "922023c3-9f05-4922-bc95-7e1661485977"
-      }
-    },
-    {
-      "key": "5d9f8de2-64d4-454b-806b-87321074abf2",
-      "position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "5d9f8de2-64d4-454b-806b-87321074abf2",
-        "lesson_activity.key": "922023c3-9f05-4922-bc95-7e1661485977"
-      }
-    },
-    {
-      "key": "f42f5b28-ae9a-44a5-a8c4-19d4f864c7ce",
-      "position": 4,
-      "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What is working best about your approach to your prototype thus far?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This allows students the opportunity to share with one another about the status of their project. By sharing positive practices and things that are working well, it can serve as positive reinforcement for other groups– they might adopt the approach / strategy in their own project.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What ideas have you had to scrap and/or iterate on?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Asking this question reinforces the important idea that part of prototyping involves trying (and sometimes failing). Reinforce that the act of self-evaluation and iteration are incredibly important components of both Design Thinking and Project-Based Learning. In the event a student states that they have not had to scrap or iterate on any ideas, encourage the student to think more broadly about the design and development process, emphasizing that iteration doesn't always mean making large, noticeable changes. Sometimes, iteration can be as subtle as tweaking a user interface element, adjusting the wording in instructions, or changing the flow of a process based on potential user feedback. Ask the student to reflect on any aspect of their project that required even minor adjustments or where they faced challenges, even if those challenges didn't lead to drastic changes. Highlight that the iterative process is about continuous improvement and learning from both what works and what doesn't, encouraging a mindset of ongoing refinement and resilience."
-      },
-      "seeding_key": {
-        "activity_section.key": "f42f5b28-ae9a-44a5-a8c4-19d4f864c7ce",
-        "lesson_activity.key": "922023c3-9f05-4922-bc95-7e1661485977"
+        "activity_section.key": "dd1ae179-1a6c-439a-b548-62f157db78f3",
+        "lesson_activity.key": "028bb578-2d0c-4761-affb-ead97f3ef5fb"
       }
     },
     {
       "key": "f8c33af9-061c-4b82-a084-31b8395129bc",
-      "position": 1,
+      "position": 3,
       "properties": {
         "description": "As you work with your group, we will be using a series of non-verbal communication signals in order to communicate your group’s needs. You will be receiving a stack of different color cups, with each cup symbolizing a different status. The cup that is on the top of the stack – the one most visible – will be what determines your group’s status.",
         "remarks": true
@@ -3655,7 +3802,7 @@
     },
     {
       "key": "a7c1a878-af6b-42aa-88bf-8082ddc3b1c1",
-      "position": 2,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to self-assess their project using the rubric. Remind students to reference an Inspiration Card if they need it.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group one stack of cups containing each of the four colors.\n"
       },
@@ -3668,7 +3815,7 @@
       "key": "1d0a1526-f56c-440c-aaef-65ff9c9bd9f1",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 2 to complete their reflection question on Levels 2 and 3.\n\n2. _Reflect on the prototyping process so far. What aspects of your prototype are you most proud of, and why?_\n3. _How have you prepared your prototype for user testing, and what are you hoping to learn from this phase?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goal:** \n2. Encourages students to think critically about their work, focusing on achievements and innovations they've introduced in their prototype, fostering a sense of accomplishment and encouraging peer-to-peer learning. \n3. Students should discuss their preparations for the testing phase, what they aim to learn from user interactions, and how they plan to use this feedback to further refine their computer vision applications.\n",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 2 to complete their reflection question on Levels 3 and 4.\n\n2. _Reflect on the prototyping process so far. What aspects of your prototype are you most proud of, and why?_\n3. _How have you prepared your prototype for user testing, and what are you hoping to learn from this phase?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goal:** \n2. Encourages students to think critically about their work, focusing on achievements and innovations they've introduced in their prototype, fostering a sense of accomplishment and encouraging peer-to-peer learning. \n3. Students should discuss their preparations for the testing phase, what they aim to learn from user interactions, and how they plan to use this feedback to further refine their computer vision applications.\n",
         "progression_name": "Reflection",
         "tips": [
           {
@@ -4145,13 +4292,73 @@
       }
     },
     {
-      "key": "f4075c68-1877-40de-8104-ccc0ddeff97c",
+      "key": "b055c090-99f4-4b4f-a902-5e5a6d6430cb",
       "position": 1,
       "properties": {
+        "description": "_This is an optional portion of the unit_. It allows students to have the opportunity to explore careers of personal interest more in-depth, exploring how they use computer vision currently and into the future. "
+      },
+      "seeding_key": {
+        "activity_section.key": "b055c090-99f4-4b4f-a902-5e5a6d6430cb",
+        "lesson_activity.key": "99dfe3d9-545e-4b4a-80aa-e99a3189f928"
+      }
+    },
+    {
+      "key": "ac0af091-fd19-4869-ba6a-8ec182d32d82",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student/pair of students a copy of the Career Exploration Activity. Students should have access to the Occupational Outlook Handbook from the Bureau of Labor Statistics over the internet.\n\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Students should go to Lesson 16, Level 4.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** The link on this level will take students to the Bureau of Labor Statistics’ Occupational Outlook Handbook. Have them spend 10 minutes exploring various careers. Once they choose one, have them complete the first page of the activity guide, in which they describe the tasks / duties associated with the career, the projected salary, and the job outlook in the future. On the second page, students will explain how computer vision is used in the profession and speculate how computer vision might be incorporated\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Students might get stuck navigating through the website and finding what they want. Show them how to use the search bar, if necessary, in order to pinpoint a profession which they are interested in. You can also show them how to choose a category and to explore the possible professions in that manner.",
+        "progression_name": "Personal Career Exploration"
+      },
+      "seeding_key": {
+        "activity_section.key": "ac0af091-fd19-4869-ba6a-8ec182d32d82",
+        "lesson_activity.key": "99dfe3d9-545e-4b4a-80aa-e99a3189f928"
+      }
+    },
+    {
+      "key": "df320e82-d1ba-47c6-8027-d70188603717",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What profession did you explore? How might computer vision impact the career now and into the future?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is a great opportunity to hear about the students' passions and interests and to brainstorm as a class about what effects computer vision might have on a whole host of industries."
+      },
+      "seeding_key": {
+        "activity_section.key": "df320e82-d1ba-47c6-8027-d70188603717",
+        "lesson_activity.key": "99dfe3d9-545e-4b4a-80aa-e99a3189f928"
+      }
+    },
+    {
+      "key": "56829c24-20a4-41ff-8821-21d0e0363141",
+      "position": 1,
+      "properties": {
+        "description": "Direct students to Level 1 to complete the end-of-unit assessment.",
+        "name": "End-of-Unit Assessment",
+        "progression_name": "End-Of-Unit Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "56829c24-20a4-41ff-8821-21d0e0363141",
+        "lesson_activity.key": "224c11c1-acd9-4819-aac7-af96d31319b4"
+      }
+    },
+    {
+      "key": "f4075c68-1877-40de-8104-ccc0ddeff97c",
+      "position": 2,
+      "properties": {
+        "description": "Direct students to Level 2 to complete a quick post-module survey. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "Post-Module Survey",
         "progression_name": "Post-Module Survey"
       },
       "seeding_key": {
         "activity_section.key": "f4075c68-1877-40de-8104-ccc0ddeff97c",
+        "lesson_activity.key": "224c11c1-acd9-4819-aac7-af96d31319b4"
+      }
+    },
+    {
+      "key": "185512a3-4d42-43cc-9125-3680c8979f39",
+      "position": 3,
+      "properties": {
+        "description": "While students take their survey, please complete [**this pre-module survey for teachers**](https://studio.code.org/form/computer_vision_module_post_survey) as well. Your feedback is valued and appreciated!"
+      },
+      "seeding_key": {
+        "activity_section.key": "185512a3-4d42-43cc-9125-3680c8979f39",
         "lesson_activity.key": "224c11c1-acd9-4819-aac7-af96d31319b4"
       }
     }
@@ -4163,9 +4370,28 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "cv-studentsurvey-premodule"
+        "progression": "Pre-Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer-Vision-Assessment-Pre"
         ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "computer-vision",
+        "activity_section.key": "cbd363ba-758e-49e7-9f6e-d4e366c9f79b"
+      },
+      "level_keys": [
+        "Computer-Vision-Assessment-Pre"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
         "progression": "Pre-Module Survey"
       },
       "bonus": false,
@@ -4176,14 +4402,14 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "computer-vision",
-        "activity_section.key": "a356024a-1869-4365-9527-827c0b2b3ff3"
+        "activity_section.key": "ec048fe4-08a3-43e3-98f8-e1c159f1290e"
       },
       "level_keys": [
         "cv-studentsurvey-premodule"
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4208,7 +4434,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 4,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4233,7 +4459,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -4258,8 +4484,30 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Career Spotlight: The Sports Industry"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_CareerExploration2_2_2024"
+        ],
+        "lesson.key": "Empathizing with Users",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "04fb2477-86dd-4f27-8a72-d3fb79345304"
+      },
+      "level_keys": [
+        "CV_CareerExploration2_2_2024"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4283,8 +4531,8 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 2,
+      "chapter": 8,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
@@ -4308,8 +4556,8 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 3,
+      "chapter": 9,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4333,7 +4581,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4358,7 +4606,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 11,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4383,7 +4631,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4408,7 +4656,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4433,7 +4681,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4458,7 +4706,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4483,7 +4731,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4508,7 +4756,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -4533,7 +4781,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
@@ -4558,7 +4806,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 19,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4583,7 +4831,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4608,7 +4856,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4633,7 +4881,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -4658,7 +4906,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -4683,7 +4931,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4708,7 +4956,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -4733,8 +4981,30 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 26,
       "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Mid-Module Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "cv-studentsurvey-midmodule"
+        ],
+        "lesson.key": "Edge Detection",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "f23105a0-e4a9-46bb-ae4c-18c289435ba0"
+      },
+      "level_keys": [
+        "cv-studentsurvey-midmodule"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4758,33 +5028,52 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": true,
+      "assessment": false,
       "properties": {
-        "level_keys": [
-          "cv-studentsurvey-midmodule"
-        ],
-        "progression": "Mid-Module Survey"
+        "progression": "Career Spotlight: Healthcare"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "cv-studentsurvey-midmodule"
+          "CV_CareerExploration3_3_2024"
         ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson.key": "Datasets and Models",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
-        "activity_section.key": "46396d29-1cd8-43af-921c-f7a7c926e51a"
+        "activity_section.key": "7ab8a9b4-51bb-411e-a34f-81987201b0e9"
       },
       "level_keys": [
-        "cv-studentsurvey-midmodule"
+        "CV_CareerExploration3_3_2024"
       ]
     },
     {
-      "chapter": 26,
-      "position": 1,
+      "chapter": 29,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Solving Healthcare Issues with Computer Vision"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_CareerExploration3_2_2024"
+        ],
+        "lesson.key": "Datasets and Models",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "ae16668a-57e6-4eb4-960d-b3b9fa9cf6e5"
+      },
+      "level_keys": [
+        "CV_CareerExploration3_2_2024"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4799,7 +5088,7 @@
           "CV_L8_COCO_Link_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "c6ce6ee5-3c90-40fe-89e2-1ff3e7f043f0"
       },
@@ -4808,8 +5097,8 @@
       ]
     },
     {
-      "chapter": 27,
-      "position": 2,
+      "chapter": 31,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4824,7 +5113,7 @@
           "CV_L8_MediaPipe_ObjectDet_Link_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "9bfa8d09-3497-4707-927e-f3b0675e5a32"
       },
@@ -4833,8 +5122,8 @@
       ]
     },
     {
-      "chapter": 28,
-      "position": 3,
+      "chapter": 32,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4849,7 +5138,7 @@
           "CV_L8_ResourceLinks_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "dd3b68e5-a4c8-4800-94d9-643319e1b8be"
       },
@@ -4858,8 +5147,8 @@
       ]
     },
     {
-      "chapter": 29,
-      "position": 4,
+      "chapter": 33,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4874,7 +5163,7 @@
           "CV_L8_MediaPipe_ImageClass_Link_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "57f8b4b9-c30b-4fe5-bebc-2710dd8d1c6c"
       },
@@ -4883,8 +5172,8 @@
       ]
     },
     {
-      "chapter": 30,
-      "position": 5,
+      "chapter": 34,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4899,7 +5188,7 @@
           "CV_L8_Reflection_1_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "5738164b-bfca-4b39-a664-ea87deef03a0"
       },
@@ -4908,8 +5197,8 @@
       ]
     },
     {
-      "chapter": 31,
-      "position": 6,
+      "chapter": 35,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
@@ -4924,7 +5213,7 @@
           "CV_L8_Reflection_2_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "5738164b-bfca-4b39-a664-ea87deef03a0"
       },
@@ -4933,8 +5222,8 @@
       ]
     },
     {
-      "chapter": 32,
-      "position": 7,
+      "chapter": 36,
+      "position": 9,
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
@@ -4949,7 +5238,7 @@
           "CV_L8_Reflection_3_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "5738164b-bfca-4b39-a664-ea87deef03a0"
       },
@@ -4958,8 +5247,8 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 8,
+      "chapter": 37,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4974,7 +5263,7 @@
           "computervision-lesson8-juicemindquiz"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "797dd0ca-f067-4eea-81c7-6cd6e30016b3"
       },
@@ -4983,7 +5272,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 38,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4999,7 +5288,7 @@
           "CV_L9_MediaPipe_ObDet-Images_Link_2024"
         ],
         "lesson.key": "Training Data and Bias",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "8a76f868-a89a-4338-a074-72637947f61b"
       },
@@ -5008,7 +5297,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 39,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5024,7 +5313,7 @@
           "CV_L9_Reflection_1_2024"
         ],
         "lesson.key": "Training Data and Bias",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "bf29ae7f-76b2-46a6-99d1-7ee87f46e606"
       },
@@ -5033,7 +5322,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 40,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -5049,7 +5338,7 @@
           "CV_L9_Reflection_2_2024"
         ],
         "lesson.key": "Training Data and Bias",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "bf29ae7f-76b2-46a6-99d1-7ee87f46e606"
       },
@@ -5058,7 +5347,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 41,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5074,7 +5363,7 @@
           "computervision-lesson9-juicemindquiz"
         ],
         "lesson.key": "Training Data and Bias",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "43ca4e0b-1de9-4d98-864e-ea88da3f530b"
       },
@@ -5083,7 +5372,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 42,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5099,7 +5388,7 @@
           "CV_L10_TeachableMachine_Link_2024"
         ],
         "lesson.key": "Training a Model",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "6e3df592-b227-4c89-ae68-c614e74565d1"
       },
@@ -5108,7 +5397,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 43,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5124,7 +5413,7 @@
           "CV_L10_Reflection_1_2024"
         ],
         "lesson.key": "Training a Model",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "07144221-0b91-4065-9361-c142dcc3be0f"
       },
@@ -5133,7 +5422,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 44,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -5149,7 +5438,7 @@
           "CV_L10_Reflection_2_2024"
         ],
         "lesson.key": "Training a Model",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "07144221-0b91-4065-9361-c142dcc3be0f"
       },
@@ -5158,7 +5447,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 45,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
@@ -5174,7 +5463,7 @@
           "CV_L10_Reflection_3_2024"
         ],
         "lesson.key": "Training a Model",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "07144221-0b91-4065-9361-c142dcc3be0f"
       },
@@ -5183,7 +5472,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 46,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5199,7 +5488,7 @@
           "computervision-lesson10-juicemindquiz"
         ],
         "lesson.key": "Training a Model",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "0c2c2366-9c0f-4bdb-92b9-a32dc185f5c7"
       },
@@ -5208,7 +5497,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5224,7 +5513,7 @@
           "CV_L11_EthicsExploration_ChoiceLevels_2024"
         ],
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "584cb41b-45ea-4e9e-b487-9324e26043d4"
       },
@@ -5233,7 +5522,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5249,7 +5538,7 @@
           "CV_L11_Reflection_1_2024"
         ],
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "82ace473-e389-4d7b-958c-f7571bfbc04d"
       },
@@ -5258,7 +5547,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
@@ -5274,7 +5563,7 @@
           "CV_L11_Reflection_2_2024"
         ],
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "82ace473-e389-4d7b-958c-f7571bfbc04d"
       },
@@ -5283,7 +5572,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 3,
       "assessment": true,
@@ -5299,7 +5588,7 @@
           "CV_L11_Reflection_3_2024"
         ],
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "82ace473-e389-4d7b-958c-f7571bfbc04d"
       },
@@ -5308,7 +5597,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 51,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5324,7 +5613,7 @@
           "computervision-lesson11-juicemindquiz"
         ],
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "e97074bf-7b80-49d7-8c15-c08f937bdd2f"
       },
@@ -5333,8 +5622,30 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 52,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Career Spotlight: Design Technologist"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_CareerExploration1_1_2024"
+        ],
+        "lesson.key": "Prototype Development, Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "0c90ab6f-876f-4f62-a329-781c1e90d488"
+      },
+      "level_keys": [
+        "CV_CareerExploration1_1_2024"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -5349,7 +5660,7 @@
           "CV_L12_Reflection_1_2024"
         ],
         "lesson.key": "Prototype Development, Part 1",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "43af4336-25d1-42ea-9894-f7be4a556c79"
       },
@@ -5358,8 +5669,8 @@
       ]
     },
     {
-      "chapter": 49,
-      "position": 2,
+      "chapter": 54,
+      "position": 3,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
@@ -5374,7 +5685,7 @@
           "CV_L12_Reflection_2_2024"
         ],
         "lesson.key": "Prototype Development, Part 1",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "43af4336-25d1-42ea-9894-f7be4a556c79"
       },
@@ -5383,14 +5694,33 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CV_L13_PrototypeComponents_2024"
+        "progression": "Career Spotlight: Interactive Exhibit"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_CareerExploration1_3_2024"
         ],
+        "lesson.key": "Prototype Development, Part 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "d666fa82-11f5-44eb-a291-e08f38a49b9a"
+      },
+      "level_keys": [
+        "CV_CareerExploration1_3_2024"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "progression": "Prototype Components"
       },
       "bonus": false,
@@ -5399,17 +5729,17 @@
           "CV_L13_PrototypeComponents_2024"
         ],
         "lesson.key": "Prototype Development, Part 2",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
-        "activity_section.key": "a1585f1f-f996-42ee-a8ba-d6059175f37b"
+        "activity_section.key": "5b72dd56-b12d-4bbd-b042-7236d1467166"
       },
       "level_keys": [
         "CV_L13_PrototypeComponents_2024"
       ]
     },
     {
-      "chapter": 51,
-      "position": 2,
+      "chapter": 57,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -5424,7 +5754,7 @@
           "CV_L13_Reflection_1_2024"
         ],
         "lesson.key": "Prototype Development, Part 2",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "1d0a1526-f56c-440c-aaef-65ff9c9bd9f1"
       },
@@ -5433,8 +5763,8 @@
       ]
     },
     {
-      "chapter": 52,
-      "position": 3,
+      "chapter": 58,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
@@ -5449,7 +5779,7 @@
           "CV_L13_Reflection_2_2024"
         ],
         "lesson.key": "Prototype Development, Part 2",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "1d0a1526-f56c-440c-aaef-65ff9c9bd9f1"
       },
@@ -5458,8 +5788,8 @@
       ]
     },
     {
-      "chapter": 53,
-      "position": 4,
+      "chapter": 59,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5474,7 +5804,7 @@
           "computervision-lesson13-juicemindquiz"
         ],
         "lesson.key": "Prototype Development, Part 2",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "06657cb8-7c2a-4353-858f-99c4a0fda125"
       },
@@ -5483,7 +5813,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5499,7 +5829,7 @@
           "CV_L14_Reflection_1_2024"
         ],
         "lesson.key": "User Feedback",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "b8556db2-ed9f-49bd-aa9d-ad97556537eb"
       },
@@ -5508,7 +5838,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 61,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -5524,7 +5854,7 @@
           "CV_L14_Reflection_2_2024"
         ],
         "lesson.key": "User Feedback",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "b8556db2-ed9f-49bd-aa9d-ad97556537eb"
       },
@@ -5533,7 +5863,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 62,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
@@ -5549,7 +5879,7 @@
           "CV_L14_Reflection_3_2024"
         ],
         "lesson.key": "User Feedback",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "b8556db2-ed9f-49bd-aa9d-ad97556537eb"
       },
@@ -5558,7 +5888,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 63,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5574,7 +5904,7 @@
           "computervision-lesson14-juicemindquiz"
         ],
         "lesson.key": "User Feedback",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "e74bf027-d2db-446f-a82e-222cc8a389a2"
       },
@@ -5583,7 +5913,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5599,7 +5929,7 @@
           "CV_L15_Reflection_1_2024"
         ],
         "lesson.key": "Implementing Feedback",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "10e5e893-5cfa-435f-92ba-a1de04ea23ab"
       },
@@ -5608,7 +5938,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 65,
       "position": 2,
       "activity_section_position": 2,
       "assessment": true,
@@ -5624,7 +5954,7 @@
           "CV_L15_Reflection_2_2024"
         ],
         "lesson.key": "Implementing Feedback",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "10e5e893-5cfa-435f-92ba-a1de04ea23ab"
       },
@@ -5633,7 +5963,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 66,
       "position": 3,
       "activity_section_position": 3,
       "assessment": true,
@@ -5649,7 +5979,7 @@
           "CV_L15_Reflection_3_2024"
         ],
         "lesson.key": "Implementing Feedback",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "10e5e893-5cfa-435f-92ba-a1de04ea23ab"
       },
@@ -5658,8 +5988,52 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 67,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Personal Career Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CV_CareerExploration4_4_2024"
+        ],
+        "lesson.key": "Implementing Feedback",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "ac0af091-fd19-4869-ba6a-8ec182d32d82"
+      },
+      "level_keys": [
+        "CV_CareerExploration4_4_2024"
+      ]
+    },
+    {
+      "chapter": 68,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End-Of-Unit Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Computer-Vision-Post-Assessment-Quiz"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "computer-vision",
+        "activity_section.key": "56829c24-20a4-41ff-8821-21d0e0363141"
+      },
+      "level_keys": [
+        "Computer-Vision-Post-Assessment-Quiz"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -5686,6 +6060,18 @@
   "levels_script_levels": [
     {
       "seeding_key": {
+        "level.key": "Computer-Vision-Assessment-Pre",
+        "script_level.level_keys": [
+          "Computer-Vision-Assessment-Pre"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "computer-vision",
+        "activity_section.key": "cbd363ba-758e-49e7-9f6e-d4e366c9f79b"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "cv-studentsurvey-premodule",
         "script_level.level_keys": [
           "cv-studentsurvey-premodule"
@@ -5693,7 +6079,7 @@
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "computer-vision",
-        "activity_section.key": "a356024a-1869-4365-9527-827c0b2b3ff3"
+        "activity_section.key": "ec048fe4-08a3-43e3-98f8-e1c159f1290e"
       }
     },
     {
@@ -5730,6 +6116,18 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "5a2ae495-4449-4496-8b1c-3aa87e2eb6b0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_CareerExploration2_2_2024",
+        "script_level.level_keys": [
+          "CV_CareerExploration2_2_2024"
+        ],
+        "lesson.key": "Empathizing with Users",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "04fb2477-86dd-4f27-8a72-d3fb79345304"
       }
     },
     {
@@ -5962,6 +6360,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "cv-studentsurvey-midmodule",
+        "script_level.level_keys": [
+          "cv-studentsurvey-midmodule"
+        ],
+        "lesson.key": "Edge Detection",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "f23105a0-e4a9-46bb-ae4c-18c289435ba0"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "computervision-lesson7-juicemindquiz",
         "script_level.level_keys": [
           "computervision-lesson7-juicemindquiz"
@@ -5974,14 +6384,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "cv-studentsurvey-midmodule",
+        "level.key": "CV_CareerExploration3_3_2024",
         "script_level.level_keys": [
-          "cv-studentsurvey-midmodule"
+          "CV_CareerExploration3_3_2024"
         ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson.key": "Datasets and Models",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
-        "activity_section.key": "46396d29-1cd8-43af-921c-f7a7c926e51a"
+        "activity_section.key": "7ab8a9b4-51bb-411e-a34f-81987201b0e9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_CareerExploration3_2_2024",
+        "script_level.level_keys": [
+          "CV_CareerExploration3_2_2024"
+        ],
+        "lesson.key": "Datasets and Models",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "ae16668a-57e6-4eb4-960d-b3b9fa9cf6e5"
       }
     },
     {
@@ -5991,7 +6413,7 @@
           "CV_L8_COCO_Link_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "c6ce6ee5-3c90-40fe-89e2-1ff3e7f043f0"
       }
@@ -6003,7 +6425,7 @@
           "CV_L8_MediaPipe_ObjectDet_Link_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "9bfa8d09-3497-4707-927e-f3b0675e5a32"
       }
@@ -6015,7 +6437,7 @@
           "CV_L8_ResourceLinks_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "dd3b68e5-a4c8-4800-94d9-643319e1b8be"
       }
@@ -6027,7 +6449,7 @@
           "CV_L8_MediaPipe_ImageClass_Link_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "57f8b4b9-c30b-4fe5-bebc-2710dd8d1c6c"
       }
@@ -6039,7 +6461,7 @@
           "CV_L8_Reflection_1_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "5738164b-bfca-4b39-a664-ea87deef03a0"
       }
@@ -6051,7 +6473,7 @@
           "CV_L8_Reflection_2_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "5738164b-bfca-4b39-a664-ea87deef03a0"
       }
@@ -6063,7 +6485,7 @@
           "CV_L8_Reflection_3_2024"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "5738164b-bfca-4b39-a664-ea87deef03a0"
       }
@@ -6075,7 +6497,7 @@
           "computervision-lesson8-juicemindquiz"
         ],
         "lesson.key": "Datasets and Models",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "797dd0ca-f067-4eea-81c7-6cd6e30016b3"
       }
@@ -6087,7 +6509,7 @@
           "CV_L9_MediaPipe_ObDet-Images_Link_2024"
         ],
         "lesson.key": "Training Data and Bias",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "8a76f868-a89a-4338-a074-72637947f61b"
       }
@@ -6099,7 +6521,7 @@
           "CV_L9_Reflection_1_2024"
         ],
         "lesson.key": "Training Data and Bias",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "bf29ae7f-76b2-46a6-99d1-7ee87f46e606"
       }
@@ -6111,7 +6533,7 @@
           "CV_L9_Reflection_2_2024"
         ],
         "lesson.key": "Training Data and Bias",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "bf29ae7f-76b2-46a6-99d1-7ee87f46e606"
       }
@@ -6123,7 +6545,7 @@
           "computervision-lesson9-juicemindquiz"
         ],
         "lesson.key": "Training Data and Bias",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "43ca4e0b-1de9-4d98-864e-ea88da3f530b"
       }
@@ -6135,7 +6557,7 @@
           "CV_L10_TeachableMachine_Link_2024"
         ],
         "lesson.key": "Training a Model",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "6e3df592-b227-4c89-ae68-c614e74565d1"
       }
@@ -6147,7 +6569,7 @@
           "CV_L10_Reflection_1_2024"
         ],
         "lesson.key": "Training a Model",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "07144221-0b91-4065-9361-c142dcc3be0f"
       }
@@ -6159,7 +6581,7 @@
           "CV_L10_Reflection_2_2024"
         ],
         "lesson.key": "Training a Model",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "07144221-0b91-4065-9361-c142dcc3be0f"
       }
@@ -6171,7 +6593,7 @@
           "CV_L10_Reflection_3_2024"
         ],
         "lesson.key": "Training a Model",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "07144221-0b91-4065-9361-c142dcc3be0f"
       }
@@ -6183,7 +6605,7 @@
           "computervision-lesson10-juicemindquiz"
         ],
         "lesson.key": "Training a Model",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "0c2c2366-9c0f-4bdb-92b9-a32dc185f5c7"
       }
@@ -6195,7 +6617,7 @@
           "CV_L11_EthicsExploration_ChoiceLevels_2024"
         ],
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "584cb41b-45ea-4e9e-b487-9324e26043d4"
       }
@@ -6207,7 +6629,7 @@
           "CV_L11_Reflection_1_2024"
         ],
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "82ace473-e389-4d7b-958c-f7571bfbc04d"
       }
@@ -6219,7 +6641,7 @@
           "CV_L11_Reflection_2_2024"
         ],
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "82ace473-e389-4d7b-958c-f7571bfbc04d"
       }
@@ -6231,7 +6653,7 @@
           "CV_L11_Reflection_3_2024"
         ],
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "82ace473-e389-4d7b-958c-f7571bfbc04d"
       }
@@ -6243,9 +6665,21 @@
           "computervision-lesson11-juicemindquiz"
         ],
         "lesson.key": "Impacts of Computer Vision",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "e97074bf-7b80-49d7-8c15-c08f937bdd2f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_CareerExploration1_1_2024",
+        "script_level.level_keys": [
+          "CV_CareerExploration1_1_2024"
+        ],
+        "lesson.key": "Prototype Development, Part 1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "0c90ab6f-876f-4f62-a329-781c1e90d488"
       }
     },
     {
@@ -6255,7 +6689,7 @@
           "CV_L12_Reflection_1_2024"
         ],
         "lesson.key": "Prototype Development, Part 1",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "43af4336-25d1-42ea-9894-f7be4a556c79"
       }
@@ -6267,9 +6701,21 @@
           "CV_L12_Reflection_2_2024"
         ],
         "lesson.key": "Prototype Development, Part 1",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "43af4336-25d1-42ea-9894-f7be4a556c79"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_CareerExploration1_3_2024",
+        "script_level.level_keys": [
+          "CV_CareerExploration1_3_2024"
+        ],
+        "lesson.key": "Prototype Development, Part 2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "d666fa82-11f5-44eb-a291-e08f38a49b9a"
       }
     },
     {
@@ -6279,9 +6725,9 @@
           "CV_L13_PrototypeComponents_2024"
         ],
         "lesson.key": "Prototype Development, Part 2",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
-        "activity_section.key": "a1585f1f-f996-42ee-a8ba-d6059175f37b"
+        "activity_section.key": "5b72dd56-b12d-4bbd-b042-7236d1467166"
       }
     },
     {
@@ -6291,7 +6737,7 @@
           "CV_L13_Reflection_1_2024"
         ],
         "lesson.key": "Prototype Development, Part 2",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "1d0a1526-f56c-440c-aaef-65ff9c9bd9f1"
       }
@@ -6303,7 +6749,7 @@
           "CV_L13_Reflection_2_2024"
         ],
         "lesson.key": "Prototype Development, Part 2",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "1d0a1526-f56c-440c-aaef-65ff9c9bd9f1"
       }
@@ -6315,7 +6761,7 @@
           "computervision-lesson13-juicemindquiz"
         ],
         "lesson.key": "Prototype Development, Part 2",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "06657cb8-7c2a-4353-858f-99c4a0fda125"
       }
@@ -6327,7 +6773,7 @@
           "CV_L14_Reflection_1_2024"
         ],
         "lesson.key": "User Feedback",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "b8556db2-ed9f-49bd-aa9d-ad97556537eb"
       }
@@ -6339,7 +6785,7 @@
           "CV_L14_Reflection_2_2024"
         ],
         "lesson.key": "User Feedback",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "b8556db2-ed9f-49bd-aa9d-ad97556537eb"
       }
@@ -6351,7 +6797,7 @@
           "CV_L14_Reflection_3_2024"
         ],
         "lesson.key": "User Feedback",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "b8556db2-ed9f-49bd-aa9d-ad97556537eb"
       }
@@ -6363,7 +6809,7 @@
           "computervision-lesson14-juicemindquiz"
         ],
         "lesson.key": "User Feedback",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "e74bf027-d2db-446f-a82e-222cc8a389a2"
       }
@@ -6375,7 +6821,7 @@
           "CV_L15_Reflection_1_2024"
         ],
         "lesson.key": "Implementing Feedback",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "10e5e893-5cfa-435f-92ba-a1de04ea23ab"
       }
@@ -6387,7 +6833,7 @@
           "CV_L15_Reflection_2_2024"
         ],
         "lesson.key": "Implementing Feedback",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "10e5e893-5cfa-435f-92ba-a1de04ea23ab"
       }
@@ -6399,9 +6845,33 @@
           "CV_L15_Reflection_3_2024"
         ],
         "lesson.key": "Implementing Feedback",
-        "lesson_group.key": "lessonGroup-5",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
         "activity_section.key": "10e5e893-5cfa-435f-92ba-a1de04ea23ab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CV_CareerExploration4_4_2024",
+        "script_level.level_keys": [
+          "CV_CareerExploration4_4_2024"
+        ],
+        "lesson.key": "Implementing Feedback",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "computer-vision",
+        "activity_section.key": "ac0af091-fd19-4869-ba6a-8ec182d32d82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Computer-Vision-Post-Assessment-Quiz",
+        "script_level.level_keys": [
+          "Computer-Vision-Post-Assessment-Quiz"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "computer-vision",
+        "activity_section.key": "56829c24-20a4-41ff-8821-21d0e0363141"
       }
     },
     {
@@ -6428,6 +6898,30 @@
       },
       "seeding_key": {
         "resource.key": "_key_qr_code_exploration"
+      }
+    },
+    {
+      "name": "[Optional] Personal Career Exploration",
+      "url": "https://docs.google.com/presentation/d/1DN2Go1OSa8SLI9jt8R21zR0aaRFV5BOQ04wEXHZr4QM/edit?usp=sharing",
+      "key": "_optional_personal_career_exploration",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "_optional_personal_career_exploration"
+      }
+    },
+    {
+      "name": "[Optional] Personal Career Exploration",
+      "url": "https://docs.google.com/document/d/13rlR_TR6ulHiMu-Hx_b03pyFFRfsYW0emQLbLnuLM8k/edit?usp=sharing",
+      "key": "_optional_personal_career_exploration_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "_optional_personal_career_exploration_1"
       }
     },
     {
@@ -6498,6 +6992,18 @@
       },
       "seeding_key": {
         "resource.key": "bingo_cards"
+      }
+    },
+    {
+      "name": "Careers with Computer Science - Meow Wolf",
+      "url": "https://youtu.be/dhvQ7L5UScs?feature=shared",
+      "key": "careers_with_computer_science_-_meow_wolf",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "careers_with_computer_science_-_meow_wolf"
       }
     },
     {
@@ -7169,6 +7675,18 @@
     {
       "seeding_key": {
         "lesson.key": "Implementing Feedback",
+        "resource.key": "_optional_personal_career_exploration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Implementing Feedback",
+        "resource.key": "_optional_personal_career_exploration_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Implementing Feedback",
         "resource.key": "implementing_feedback"
       }
     },
@@ -7248,6 +7766,12 @@
       "seeding_key": {
         "lesson.key": "Prototype Development, Part 1",
         "resource.key": "prototype_development_part_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Prototype Development, Part 2",
+        "resource.key": "careers_with_computer_science_-_meow_wolf"
       }
     },
     {

@@ -33,11 +33,6 @@ describe('TeacherApplication', () => {
     sinon.stub($, 'param').returns(new $.Deferred());
     sinon.stub(window, 'fetch').returns(Promise.resolve({ok: true}));
     sinon.stub(utils, 'reload');
-    sinon
-      .stub(window.sessionStorage, 'getItem')
-      .withArgs('TeacherApplication')
-      .returns(JSON.stringify({}));
-    sinon.stub(window.sessionStorage, 'setItem');
     window.ga = sinon.fake();
   });
 
@@ -65,17 +60,9 @@ describe('TeacherApplication', () => {
   });
 
   it('Sets the school dropdown value from storage', () => {
-    window.sessionStorage.getItem.restore();
-    sinon
-      .stub(window.sessionStorage, 'getItem')
-      .withArgs('TeacherApplication')
-      .returns({program: 'CSD', school: '25'});
-    const page = mount(
-      <FindYourRegion
-        {...defaultProps}
-        data={window.sessionStorage.getItem('TeacherApplication')}
-      />
-    );
+    const data = {program: 'CSD', school: '25'};
+
+    const page = mount(<FindYourRegion {...defaultProps} data={data} />);
     expect(page.find('SchoolAutocompleteDropdown').prop('value')).to.equal(
       '25'
     );

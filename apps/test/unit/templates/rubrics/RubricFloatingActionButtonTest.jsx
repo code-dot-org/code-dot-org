@@ -18,6 +18,14 @@ import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSection
 
 import {expect} from '../../../util/reconfiguredChai';
 
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  post: jest.fn().mockResolvedValue({
+    json: jest.fn().mockReturnValue({}),
+  }),
+}));
+
+fetch.mockIf(/\/rubrics\/.*/, JSON.stringify(''));
+
 const defaultProps = {
   rubric: {
     level: {
@@ -56,13 +64,11 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
     });
 
     afterEach(() => {
-      sessionStorage.getItem.withArgs('RubricFabOpenStateKey').returns(null);
-      sessionStorage.getItem.restore();
+      sessionStorage.removeItem('RubricFabOpenStateKey');
     });
 
     it('renders pulse animation when session storage is empty', () => {
       const sendEventSpy = sinon.stub(analyticsReporter, 'sendEvent');
-      sessionStorage.getItem.withArgs('RubricFabOpenStateKey').returns(null);
       render(
         <Provider store={getStore()}>
           <RubricFloatingActionButton {...defaultProps} />
@@ -90,7 +96,7 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
 
     it('sends open on page load event when open state is true in session storage', () => {
       const sendEventSpy = sinon.stub(analyticsReporter, 'sendEvent');
-      sessionStorage.getItem.withArgs('RubricFabOpenStateKey').returns(true);
+      sessionStorage.setItem('RubricFabOpenStateKey', 'true');
       render(
         <Provider store={getStore()}>
           <RubricFloatingActionButton {...defaultProps} />
@@ -112,7 +118,7 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
 
     it('does not render pulse animation when open state is present in session storage', () => {
       const sendEventSpy = sinon.stub(analyticsReporter, 'sendEvent');
-      sessionStorage.getItem.withArgs('RubricFabOpenStateKey').returns(false);
+      sessionStorage.setItem('RubricFabOpenStateKey', 'false');
       render(
         <Provider store={getStore()}>
           <RubricFloatingActionButton {...defaultProps} />

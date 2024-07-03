@@ -6,6 +6,8 @@ import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/reconfiguredChai';
 
+window.fetch = jest.fn().mockResolvedValue({json: jest.fn()});
+
 describe('CurriculumQuickAssign', () => {
   it('renders headers and the top row of buttons', () => {
     const wrapper = mount(

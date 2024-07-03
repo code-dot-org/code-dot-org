@@ -57,7 +57,7 @@ describe('UploadImageDialog', () => {
     expect(handleClose.callCount).to.equal(0);
     expect(uploadImage.callCount).to.equal(0);
 
-    return new Promise(resolve => setImmediate(resolve)).then(() => {
+    return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
       wrapper.find('Button').last().simulate('click');
       expect(handleClose.callCount).to.equal(1);
       expect(uploadImage.callCount).to.equal(1);
@@ -89,7 +89,7 @@ describe('UploadImageDialog', () => {
     expect(wrapper.find('Button').last().props().disabled).to.be.true;
     expect(wrapper.find('FontAwesome').length).to.equal(1);
 
-    return new Promise(resolve => setImmediate(resolve)).then(() => {
+    return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
       wrapper
         .find('input')
         .first()

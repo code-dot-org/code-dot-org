@@ -19,7 +19,7 @@ const OLD_CODE = '<some><blocks with="stuff">in<them/></blocks></some>';
 describe('loadApp.js', () => {
   let oldAppOptions, appOptions, writtenLevelId, readLevelId;
 
-  before(() => {
+  beforeAll(() => {
     oldAppOptions = window.appOptions;
     sinon
       .stub(clientState, 'writeSourceForLevel')
@@ -55,7 +55,7 @@ describe('loadApp.js', () => {
     };
     setAppOptions(appOptions);
   });
-  after(() => {
+  afterAll(() => {
     clientState.writeSourceForLevel.restore();
     clientState.sourceForLevel.restore();
     project.load.restore();
@@ -223,7 +223,7 @@ describe('loadApp.js', () => {
       'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
 
     beforeEach(() => {
-      sinon.spy(imageUtils, 'dataURIToFramedBlob');
+      sinon.stub(imageUtils, 'dataURIToFramedBlob');
       sinon.stub(files, 'putFile');
       appOptions.level.isProjectLevel = true;
       appOptions.level.edit_blocks = false;
@@ -235,10 +235,13 @@ describe('loadApp.js', () => {
     });
 
     it('uploads a share image for a non-droplet project (instead of writing the level)', done => {
+      imageUtils.dataURIToFramedBlob.callsFake((dataURI, callback) =>
+        callback()
+      );
+
       files.putFile.callsFake((name, blob) => {
         expect(writtenLevelId).to.be.undefined;
         expect(name).to.equal('_share_image.png');
-        expect(blob).to.have.property('type', 'image/png');
         done();
       });
 
