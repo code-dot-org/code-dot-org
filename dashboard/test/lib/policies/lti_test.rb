@@ -99,7 +99,7 @@ class Policies::LtiTest < ActiveSupport::TestCase
     user = create_opted_out_user
 
     session = {}
-    Services::Lti.initialize_lms_landing_session(session, 'canvas_cloud', 'new')
+    Services::Lti.initialize_lms_landing_session(session, 'canvas_cloud', 'new', user.user_type)
 
     assert_equal true, Policies::Lti.account_linking?(session, user)
   end
@@ -119,7 +119,7 @@ class Policies::LtiTest < ActiveSupport::TestCase
     user.save
 
     session = {}
-    Services::Lti.initialize_lms_landing_session(session, 'canvas_cloud', 'new')
+    Services::Lti.initialize_lms_landing_session(session, 'canvas_cloud', 'new', user.user_type)
 
     assert_equal false, Policies::Lti.account_linking?(session, user)
   end
@@ -130,7 +130,7 @@ class Policies::LtiTest < ActiveSupport::TestCase
     user.save
 
     session = {}
-    Services::Lti.initialize_lms_landing_session(session, 'canvas_cloud', 'new')
+    Services::Lti.initialize_lms_landing_session(session, 'canvas_cloud', 'new', user.user_type)
 
     assert_equal false, Policies::Lti.account_linking?(session, user)
   end

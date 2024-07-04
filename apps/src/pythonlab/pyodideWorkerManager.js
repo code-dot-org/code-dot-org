@@ -1,19 +1,21 @@
-import {getStore} from '@cdo/apps/redux';
-import {
-  applyPatches,
-  deleteCachedUserModules,
-} from './pythonHelpers/pythonScriptUtils';
-import {MATPLOTLIB_IMG_TAG} from './pythonHelpers/patches';
 import {
   appendOutputImage,
   appendSystemMessage,
   appendSystemOutMessage,
   appendErrorMessage,
 } from '@codebridge/redux/consoleRedux';
+
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
-import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+import {getStore} from '@cdo/apps/redux';
+
 import {parseErrorMessage} from './pythonHelpers/messageHelpers';
+import {MATPLOTLIB_IMG_TAG} from './pythonHelpers/patches';
+import {
+  applyPatches,
+  deleteCachedUserModules,
+} from './pythonHelpers/pythonScriptUtils';
 
 // This syntax doesn't work with typescript, so this file is in js.
 const pyodideWorker = new Worker(

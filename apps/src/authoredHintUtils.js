@@ -1,10 +1,11 @@
 import $ from 'jquery';
-import FeedbackBlocks from './feedbackBlocks';
 
+import FeedbackBlocks from './feedbackBlocks';
 import {trySetLocalStorage} from './utils';
 
-var parseXmlElement = require('./xml').parseElement;
 var msg = require('@cdo/locale');
+
+var parseXmlElement = require('./xml').parseElement;
 
 /**
  * @overview A helper class for all actions associated with the Authored

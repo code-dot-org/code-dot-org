@@ -1,11 +1,13 @@
-import * as codeStudioLevels from './code-studio/levels/codeStudioLevels';
-import {TestResults} from './constants';
-import * as callouts from '@cdo/apps/code-studio/callouts';
-import {getStore} from './redux';
-import {setAwaitingContainedResponse} from './redux/runState';
-import locale from '@cdo/locale';
 import $ from 'jquery';
 import queryString from 'query-string';
+
+import * as callouts from '@cdo/apps/code-studio/callouts';
+import locale from '@cdo/locale';
+
+import * as codeStudioLevels from './code-studio/levels/codeStudioLevels';
+import {TestResults} from './constants';
+import {getStore} from './redux';
+import {setAwaitingContainedResponse} from './redux/runState';
 
 const PostState = {
   None: 'None',
