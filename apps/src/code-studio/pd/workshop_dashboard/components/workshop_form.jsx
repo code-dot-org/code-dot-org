@@ -65,14 +65,7 @@ const placeholderSession = {
   endTime: '5:00pm',
 };
 
-// TODO pipe in PL topics via ACQ-2020
-const ALL_PL_TOPICS = [
-  'Test Self Paced PL Topic',
-  'Another Test Self Paced PL Topic',
-  'A Third Test Self Paced PL Topic',
-  'And a Final Very Long Test Self Paced PL Topic That Takes Up a Line',
-];
-
+let ALL_PL_TOPICS = {};
 const INPUT_HEIGHT = 34;
 
 // When selecting whether a workshop is virtual through the UI,
@@ -185,6 +178,7 @@ export class WorkshopForm extends React.Component {
       this.loadAvailableFacilitators(props.workshop.course);
     }
 
+    this.loadPlCourseOfferings();
     this.loadRegionalPartners();
 
     return initialState;
@@ -197,9 +191,11 @@ export class WorkshopForm extends React.Component {
     if (this.loadWorkshopRequest) {
       this.loadWorkshopRequest.abort();
     }
-
     if (this.loadRegionalPartnersRequest) {
       this.loadRegionalPartnersRequest.abort();
+    }
+    if (this.loadPlCoursesRequest) {
+      this.loadPlCoursesRequest.abort();
     }
   }
 
@@ -228,6 +224,16 @@ export class WorkshopForm extends React.Component {
       this.setState({
         regionalPartners: data,
       });
+    });
+  }
+
+  loadPlCourseOfferings() {
+    this.loadPlCoursesRequest = $.ajax({
+      method: 'GET',
+      url: `/course_offerings/self_paced_pl_course_offerings`,
+      dataType: 'json',
+    }).done(data => {
+      ALL_PL_TOPICS = data;
     });
   }
 
@@ -738,17 +744,17 @@ export class WorkshopForm extends React.Component {
   };
 
   // Selects the given value in the topic dropdown
-  handleTopicSelect = event => {
+  handleTopicSelect = (id, event) => {
     const value = Object.keys(event)[0];
     const isChecked = event[value];
 
     let updatedTopics;
     if (isChecked) {
       // Add checked item into applied filters
-      updatedTopics = [...this.state.plTopics, value];
+      updatedTopics = [...this.state.plTopics, id];
     } else {
       // Remove unchecked item from applied filters
-      updatedTopics = this.state.plTopics.filter(item => item !== value);
+      updatedTopics = this.state.plTopics.filter(item => item !== id);
     }
     this.setState({plTopics: updatedTopics});
   };
@@ -1193,18 +1199,18 @@ export class WorkshopForm extends React.Component {
                       aria-labelledby="dropdownMenuButton"
                     >
                       <ul style={styles.listItems}>
-                        {ALL_PL_TOPICS.map(label => (
+                        {Object.values(ALL_PL_TOPICS).map(object => (
                           <li
                             className="dropdown-item"
                             style={styles.singleItem}
-                            key={label}
+                            key={object.id}
                           >
                             <SingleCheckbox
                               style={styles.check}
-                              name={label}
-                              label={label}
-                              onChange={e => this.handleTopicSelect(e)}
-                              value={this.state.plTopics.includes(label)}
+                              name={object.display_name}
+                              label={object.display_name}
+                              onChange={e => this.handleTopicSelect(object.id, e)}
+                              value={this.state.plTopics.includes(object.id)}
                             />
                           </li>
                         ))}
