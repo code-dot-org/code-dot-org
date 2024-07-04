@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "computer-vision",
-    "serialized_at": "2024-07-02 01:41:23 UTC",
+    "serialized_at": "2024-07-04 00:52:07 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1034,8 +1034,7 @@
       "key": "99dfe3d9-545e-4b4a-80aa-e99a3189f928",
       "position": 4,
       "properties": {
-        "duration": 30,
-        "name": "[Optional] Personal Career Exploration"
+        "name": "(Optional) Personal Career Exploration"
       },
       "seeding_key": {
         "lesson_activity.key": "99dfe3d9-545e-4b4a-80aa-e99a3189f928",
@@ -1160,22 +1159,10 @@
       }
     },
     {
-      "key": "664c257d-f489-4aac-8dc8-7ff0fea3af97",
+      "key": "01e871b5-bbc9-4caf-a19f-69e34269572b",
       "position": 4,
       "properties": {
-        "description": "Throughout this module we will be learning how computer scientists are developing sophisticated computer vision algorithms utilizing AI and data. By training these models with loads of data, the computer itself begins to write and tweak its own algorithms to help it decode and understand what an \"X\" might be. Even if it sees a version that it has never seen before, if the training was thorough enough, it should be able to recognize the letter. That is one of the goals of computer vision: to train computers to see and interpret the world around them just like we are able to do as human beings.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "664c257d-f489-4aac-8dc8-7ff0fea3af97",
-        "lesson_activity.key": "e97760a8-0005-4918-82cc-01c34870f228"
-      }
-    },
-    {
-      "key": "01e871b5-bbc9-4caf-a19f-69e34269572b",
-      "position": 5,
-      "properties": {
-        "description": "Let’s take a look at an introductory video that details the basics of what computer vision is, how it differs from traditional programming / algorithm development, and what some uses might be.",
+        "description": "Let’s take a look at an introductory video that details the basics of what computer vision is, how it differs from traditional programming and algorithm development, and what some uses might be.",
         "remarks": true
       },
       "seeding_key": {
@@ -1185,9 +1172,9 @@
     },
     {
       "key": "ea597b76-fc94-49ca-956b-ed25edb3a838",
-      "position": 6,
+      "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** How AI Works: Computer Vision (4:16 to 6:25)\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What does a computer have to do to recognize complex shapes?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** A computer often begins by looking at the edges within an image, and then to break down what is left into smaller, simpler patterns. An eye, in the example given, can have its edges highlighted to reveal that it contains two arcs with two concentric circles inside. By training a machine learning model using lots of data, the computer can keep increasing its accuracy with its guesses until it learns how to “see” correctly."
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** How AI Works: Computer Vision (4:16 to 6:25)\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What does a computer have to do to recognize complex shapes?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** A computer often begins by looking at the edges within an image, and then to break down what is left into smaller, simpler patterns. An eye, in the example given, can have its edges highlighted to reveal that it contains two arcs with two concentric circles inside. By training a machine learning model using lots of data, the computer can keep increasing its accuracy with its guesses until it learns how to “see” correctly.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "ea597b76-fc94-49ca-956b-ed25edb3a838",
@@ -1225,7 +1212,7 @@
       "key": "1f74a741-a5e2-4132-9fb0-afd802244e0b",
       "position": 3,
       "properties": {
-        "description": "In order to learn a bit more about computer vision, you are all going to assume the roles of digital detectives today. Pixel the cat has gone missing! You will visit different locations around the city, searching for information about what happened to the cat, and aided by use of computer vision techniques to reveal these clues.",
+        "description": "To learn a bit more about computer vision, you are all going to assume the roles of digital detectives today. Pixel the cat has gone missing! You will visit different locations around the city, searching for information about what happened to the cat, and aided by use of computer vision techniques to reveal these clues.",
         "remarks": true
       },
       "seeding_key": {
@@ -1237,7 +1224,7 @@
       "key": "938f9b67-70af-4f3e-b997-e350f45d6f2a",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to complete The Search for Pixel activity."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce The Search for Pixel activity.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to complete The Search for Pixel activity."
       },
       "seeding_key": {
         "activity_section.key": "938f9b67-70af-4f3e-b997-e350f45d6f2a",
@@ -1252,7 +1239,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "It might be helpful to assign roles in the group. In a group of three, those roles might look as follows: Driver - Responsible for clicking and navigating the group; Narrator - Reads important directions and clues that pop up on the screen Scribe - Takes notes about what the team has discovered on the activity guide.\n\nSet up the clue cards at the front of the room. There are two cards for each round (a total of 12 cards). Clue 1 for each round hints at the solution, while Clue 2 walks through how to solve the round. You might suggest that students send up a representative to read what is on the card, rather than taking the card back to their work stations. This way, you only need to print one community set of cards for everyone to use. The cards should be printed double-sided, if possible, so that they can be laid face down and the students know which one to flip over."
+            "markdown": "It might be helpful to assign roles in the group. In a group of three, those roles might look as follows:\n* **Driver** - Responsible for clicking and navigating the group.\n* **Narrator** - Reads important directions and clues that pop up on the screen.\n* **Scribe** - Takes notes about what the team has discovered on the activity guide.\n\nSet up the clue cards at the front of the room. There are two cards for each round (a total of 12 cards). Clue 1 for each round hints at the solution, while Clue 2 walks through how to solve the round. You might suggest that students send up a representative to read what is on the card, rather than taking the card back to their work stations. This way, you only need to print one community set of cards for everyone to use. The cards should be printed double-sided, if possible, so that they can be laid face down and the students know which one to flip over."
           }
         ]
       },
@@ -1265,8 +1252,8 @@
       "key": "ef4655bf-d645-45a4-8551-89e0501f2b1c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 2 to complete the reflection question:\n\n* _What is your definition of computer vision?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Reflection Goal:** This activity allows students to share what they have constructed as their working definition of computer vision thus far. This definition is sure to evolve and grow as the module progresses. Some possible examples for a working definition that students might construct include: \n* Computer vision is like when your computer tries to figure out what's in a picture, kind of like how we recognize our friends' faces or stuff in photos \n* Computer vision helps computers 'see' and understand the images and videos like we do, but through cameras and algorithms \n* It's like teaching a computer to see and interpret the world around it, so it can recognize objects, people, and even actions \n* It's a part of artificial intelligence where computers are trained to interpret and understand the visual world.",
-        "progression_name": "Reflection"
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 2 to respond to the Check for Understanding question.",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "ef4655bf-d645-45a4-8551-89e0501f2b1c",
@@ -1297,20 +1284,8 @@
       }
     },
     {
-      "key": "81934bad-bc82-4084-bdee-5c685ec920bf",
-      "position": 1,
-      "properties": {
-        "description": "Many of the jobs of today will evolve in fairly dramatic ways once computer vision technologies mature and are more widely available. It is fair to say that the jobs of tomorrow are just now being thought-up and developed. Job seekers who are able to innovate and evolve  traditional professions stand to be highly sought after.\n\nThroughout this module, you will have the opportunity to explore how different careers might incorporate computer vision in order to be more effective, more efficient and more rewarding.\n",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "81934bad-bc82-4084-bdee-5c685ec920bf",
-        "lesson_activity.key": "5c0b2d51-69a6-436f-9b5a-5fda75fd2f8c"
-      }
-    },
-    {
       "key": "dd4e4b01-904c-4f73-86da-8a019e020a18",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Watch the video \"Computer Vision and On-Field AI\" together as a class, and have students think about the following guiding question: How was computer vision able to collect information to assist this athlete?\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How was computer vision able to collect information to assist this athlete?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Use this discussion to get students to see that computer vision was able to convert the positioning of the athlete into a series of lines that represent their legs, arms, body, and head. The application was able to measure angles, speeds, and locations between these vectors and compute a possible way to increase the efficacy of the kick in a more scientific way than a traditional coach might be able to do.\n",
         "tips": [
@@ -1326,10 +1301,21 @@
       }
     },
     {
+      "key": "74320d58-4ced-44b8-bff1-fd48a5c49841",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "74320d58-4ced-44b8-bff1-fd48a5c49841",
+        "lesson_activity.key": "5c0b2d51-69a6-436f-9b5a-5fda75fd2f8c"
+      }
+    },
+    {
       "key": "f198e11c-7453-4d75-8621-4b09d3f69736",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete the “Incorporating Computer Science” activity.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students will explore how common jobs in the sporting world might incorporate computer vision for positive effect. They should first choose a profession in the sporting world; there are suggested options available, though students should feel free to pick any career that is interesting to them. Next, they choose a computer vision technique from the list provided. They will write a free response in which they answer the following questions:\n\n* _What is one aspect / task associated with the job that could benefit from a computer vision solution?_\n* _How might one of the computer vision techniques seen here evolve the way that this job functions?_\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students in quickly choosing a sample career and beginning the more important work of exploring how computer vision might be used within the profession.\n\n"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct student to Level 1 to complete the “Incorporating Computer Science” activity.\n\n",
+        "progression_name": "Career Explorations: The Sports Industry"
       },
       "seeding_key": {
         "activity_section.key": "f198e11c-7453-4d75-8621-4b09d3f69736",
@@ -1337,20 +1323,10 @@
       }
     },
     {
-      "key": "04fb2477-86dd-4f27-8a72-d3fb79345304",
+      "key": "c96d7103-a151-491c-bb4e-32d895953bd1",
       "position": 4,
       "properties": {
-        "progression_name": "Career Spotlight: The Sports Industry"
-      },
-      "seeding_key": {
-        "activity_section.key": "04fb2477-86dd-4f27-8a72-d3fb79345304",
-        "lesson_activity.key": "5c0b2d51-69a6-436f-9b5a-5fda75fd2f8c"
-      }
-    },
-    {
-      "key": "c96d7103-a151-491c-bb4e-32d895953bd1",
-      "position": 5,
-      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students will explore how common jobs in the sporting world might incorporate computer vision for positive effect. They should first choose a profession in the sporting world; there are suggested options available, though students should feel free to pick any career that is interesting to them. Next, they choose a computer vision technique from the list provided. They will write a free response in which they answer the following questions:\n\n* _What is one task associated with the job that could benefit from a computer vision solution?_\n* _How might one of the computer vision techniques seen here evolve the way that this job functions?_\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Assist students in quickly choosing a sample career and beginning the more important work of exploring how computer vision might be used within the profession.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1360,18 +1336,6 @@
       },
       "seeding_key": {
         "activity_section.key": "c96d7103-a151-491c-bb4e-32d895953bd1",
-        "lesson_activity.key": "5c0b2d51-69a6-436f-9b5a-5fda75fd2f8c"
-      }
-    },
-    {
-      "key": "ee3c23ef-7b1e-47f3-a455-c8b1e51193b7",
-      "position": 6,
-      "properties": {
-        "description": "We will continue to look at more computer vision career explorations and case studies throughout the next few lessons. For the rest of today, we will turn our attention to the project that you will be working to develop during this unit. ",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "ee3c23ef-7b1e-47f3-a455-c8b1e51193b7",
         "lesson_activity.key": "5c0b2d51-69a6-436f-9b5a-5fda75fd2f8c"
       }
     },
@@ -1700,7 +1664,7 @@
       "key": "954207a4-3b5e-43e2-9686-88fbf0c2d416",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Which of the questions you brainstormed need: Qualitative data? Quantitative data?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** It’s likely that groups will have questions that lead to qualitative data since most of the examples from Lesson 2 fell into this category. That sets up the motivation for the next slide, which supports students in revising questions.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group of students a copy of the Collecting Data From Users activity guide. If you collected the Lesson 2 - Problem Observations → Research Questions, pass these back to students for reference for this part of class."
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Which of the questions you brainstormed need: Qualitative data? Quantitative data?_\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** It’s likely that groups will have questions that lead to qualitative data since most of the examples from Lesson 3 fell into this category. That sets up the motivation for the next slide, which supports students in revising questions.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each group of students a copy of the Collecting Data From Users activity guide. If you collected the Lesson 3 - Problem Observations → Research Questions, pass these back to students for reference for this part of class."
       },
       "seeding_key": {
         "activity_section.key": "954207a4-3b5e-43e2-9686-88fbf0c2d416",
@@ -2164,7 +2128,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The User Stories will be revisited in Lesson 14, so you may consider collecting these at the end of class."
+            "markdown": "The User Stories will be revisited in Lesson 15, so you may consider collecting these at the end of class."
           }
         ]
       },
@@ -2712,7 +2676,7 @@
       "key": "27c42c78-1382-4282-960a-e25725b74609",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Students should navigate to Lesson 8, Level 1.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should choose one of the options that are available to them on this choice level. All of the options here explain current ways that computer vision is being used within the healthcare industry today. Students should use the free response box to answer the following question:\n* I_s this an effective and trusted use of computer vision?_\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through their example, you might ask them to explain to you how computer vision is being used in the example that they chose. You might also ask what jobs within the healthcare industry this particular computer vision implementation might affect.\n"
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Students should navigate to Lesson 9, Level 1.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Students should choose one of the options that are available to them on this choice level. All of the options here explain current ways that computer vision is being used within the healthcare industry today. Students should use the free response box to answer the following question:\n* I_s this an effective and trusted use of computer vision?_\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through their example, you might ask them to explain to you how computer vision is being used in the example that they chose. You might also ask what jobs within the healthcare industry this particular computer vision implementation might affect.\n"
       },
       "seeding_key": {
         "activity_section.key": "27c42c78-1382-4282-960a-e25725b74609",
@@ -2744,7 +2708,7 @@
       "key": "9cdec13b-b42c-42a9-9a91-2150a6b69bc2",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Students should navigate to Lesson 8, Level 2.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** With a partner, students will brainstorm a way in which computer vision might help solve one of major issues in the healthcare field listed on this level. They should explain what computer vision technology might be implemented, how computer vision will help solve one of the major issues in healthcare, and what healthcare jobs might benefit as a result.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** If students need help interpreting any of the major issues that are listed, you can explain it to them as follows:\n* Rising costs of healthcare: in real terms, in the United States healthcare costs have risen by 290% since 1980. Costs are so high that in a recent Kaiser Family Foundation poll, 43% of respondents said that a family member had put off or postponed necessary health care as a result.\n* Shortage of healthcare workers: despite the millions of workers employed in the healthcare industry, 132 countries are experiencing shortages of physicians, with an estimated 12.8 million more doctors needed worldwide to alleviate this problem. The United States is expected to face a shortage of up to 124,000 physicians and supportive roles by 2034.\n* Time-intensive record keeping: according to a study involving 155,000 US physicians, on average, physicians spend more than 16 minutes per patient ecounter using electronic health records (EHR). This time was split between chart review, documentation, and ordering."
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Students should navigate to Lesson 9, Level 2.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** With a partner, students will brainstorm a way in which computer vision might help solve one of major issues in the healthcare field listed on this level. They should explain what computer vision technology might be implemented, how computer vision will help solve one of the major issues in healthcare, and what healthcare jobs might benefit as a result.\n\n<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** If students need help interpreting any of the major issues that are listed, you can explain it to them as follows:\n* Rising costs of healthcare: in real terms, in the United States healthcare costs have risen by 290% since 1980. Costs are so high that in a recent Kaiser Family Foundation poll, 43% of respondents said that a family member had put off or postponed necessary health care as a result.\n* Shortage of healthcare workers: despite the millions of workers employed in the healthcare industry, 132 countries are experiencing shortages of physicians, with an estimated 12.8 million more doctors needed worldwide to alleviate this problem. The United States is expected to face a shortage of up to 124,000 physicians and supportive roles by 2034.\n* Time-intensive record keeping: according to a study involving 155,000 US physicians, on average, physicians spend more than 16 minutes per patient ecounter using electronic health records (EHR). This time was split between chart review, documentation, and ordering."
       },
       "seeding_key": {
         "activity_section.key": "9cdec13b-b42c-42a9-9a91-2150a6b69bc2",
@@ -3212,7 +3176,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The Idea Outlines will be revisited in Lesson 14, so you may consider collecting these at the end of class."
+            "markdown": "The Idea Outlines will be revisited in Lesson 15, so you may consider collecting these at the end of class."
           }
         ]
       },
@@ -4370,6 +4334,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Computer-Vision-Assessment-Pre"
+        ],
         "progression": "Pre-Assessment"
       },
       "bonus": false,
@@ -4392,6 +4359,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "cv-studentsurvey-premodule"
+        ],
         "progression": "Pre-Module Survey"
       },
       "bonus": false,
@@ -4442,7 +4412,7 @@
         "level_keys": [
           "CV_L1_Reflection_1_2024"
         ],
-        "progression": "Reflection"
+        "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -4489,7 +4459,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Career Spotlight: The Sports Industry"
+        "progression": "Career Explorations: The Sports Industry"
       },
       "bonus": false,
       "seeding_key": {
@@ -4499,7 +4469,7 @@
         "lesson.key": "Empathizing with Users",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
-        "activity_section.key": "04fb2477-86dd-4f27-8a72-d3fb79345304"
+        "activity_section.key": "f198e11c-7453-4d75-8621-4b09d3f69736"
       },
       "level_keys": [
         "CV_CareerExploration2_2_2024"
@@ -4986,6 +4956,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "cv-studentsurvey-midmodule"
+        ],
         "progression": "Mid-Module Survey"
       },
       "bonus": false,
@@ -5033,6 +5006,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_CareerExploration3_3_2024"
+        ],
         "progression": "Career Spotlight: Healthcare"
       },
       "bonus": false,
@@ -5055,6 +5031,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_CareerExploration3_2_2024"
+        ],
         "progression": "Solving Healthcare Issues with Computer Vision"
       },
       "bonus": false,
@@ -5627,6 +5606,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_CareerExploration1_1_2024"
+        ],
         "progression": "Career Spotlight: Design Technologist"
       },
       "bonus": false,
@@ -5699,6 +5681,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_CareerExploration1_3_2024"
+        ],
         "progression": "Career Spotlight: Interactive Exhibit"
       },
       "bonus": false,
@@ -5721,6 +5706,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_L13_PrototypeComponents_2024"
+        ],
         "progression": "Prototype Components"
       },
       "bonus": false,
@@ -5993,6 +5981,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CV_CareerExploration4_4_2024"
+        ],
         "progression": "Personal Career Exploration"
       },
       "bonus": false,
@@ -6013,8 +6004,11 @@
       "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
+        "level_keys": [
+          "Computer-Vision-Post-Assessment-Quiz"
+        ],
         "progression": "End-Of-Unit Assessment"
       },
       "bonus": false,
@@ -6127,7 +6121,7 @@
         "lesson.key": "Empathizing with Users",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "computer-vision",
-        "activity_section.key": "04fb2477-86dd-4f27-8a72-d3fb79345304"
+        "activity_section.key": "f198e11c-7453-4d75-8621-4b09d3f69736"
       }
     },
     {
@@ -6901,19 +6895,7 @@
       }
     },
     {
-      "name": "[Optional] Personal Career Exploration",
-      "url": "https://docs.google.com/presentation/d/1DN2Go1OSa8SLI9jt8R21zR0aaRFV5BOQ04wEXHZr4QM/edit?usp=sharing",
-      "key": "_optional_personal_career_exploration",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "_optional_personal_career_exploration"
-      }
-    },
-    {
-      "name": "[Optional] Personal Career Exploration",
+      "name": "Personal Career Exploration",
       "url": "https://docs.google.com/document/d/13rlR_TR6ulHiMu-Hx_b03pyFFRfsYW0emQLbLnuLM8k/edit?usp=sharing",
       "key": "_optional_personal_career_exploration_1",
       "properties": {
@@ -7675,12 +7657,6 @@
     {
       "seeding_key": {
         "lesson.key": "Implementing Feedback",
-        "resource.key": "_optional_personal_career_exploration"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Implementing Feedback",
         "resource.key": "_optional_personal_career_exploration_1"
       }
     },
@@ -7912,7 +7888,7 @@
     {
       "key": "computer_vision",
       "word": "Computer Vision",
-      "definition": "A field of artificial intelligence (AI) that allows computers to interpret and understand visual inputs.",
+      "definition": "a field of artificial intelligence (AI) that allows computers to interpret and understand visual inputs",
       "properties": {
       },
       "seeding_key": {
@@ -7952,7 +7928,7 @@
     {
       "key": "empathy",
       "word": "Empathy",
-      "definition": "In design, paying attention to a user's feelings and needs when designing a product.",
+      "definition": "in design, paying attention to a user's feelings and needs when designing a product",
       "properties": {
       },
       "seeding_key": {
@@ -8042,7 +8018,7 @@
     {
       "key": "user",
       "word": "User",
-      "definition": "Someone who uses an object, including software and hardware.",
+      "definition": "someone who uses an object, including software and hardware",
       "properties": {
       },
       "seeding_key": {
