@@ -6,8 +6,6 @@ const model = new MusicRNN(
 );
 model.initialize();
 
-const temperature = 1; // 1.0;
-
 const midiDrums = [36, 38, 42, 46, 41, 43, 45, 49, 51];
 const reverseMidiMapping = new Map([
   [36, 0],
@@ -73,7 +71,11 @@ const reverseMidiMapping = new Map([
   [82, 8],
 ]);
 
-export function generatePattern(seed: PatternTickEvent[], length: number) {
+export function generatePattern(
+  seed: PatternTickEvent[],
+  length: number,
+  temperature: number
+) {
   const seedSeq = toNoteSequence(seed);
   return model
     .continueSequence(seedSeq, length, temperature)

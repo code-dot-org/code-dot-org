@@ -52,6 +52,8 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   // data.
   const currentValue: PatternEventValue = JSON.parse(JSON.stringify(initValue));
 
+  const [aiTemperature, setAiTemperature] = useState(1);
+
   const availableKits = useMemo(() => {
     return library.kits;
   }, [library.kits]);
@@ -101,7 +103,8 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
 
     return classNames(
       styles.cell,
-      isSet && styles.activeCell,
+      isSet && tick < 5 && styles.activeCellEarly,
+      isSet && tick >= 5 && styles.activeCell,
       isHighlighted && styles.highlightedCell
     );
   };
@@ -150,7 +153,7 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
 
   const handleAiClick = useCallback(async () => {
     const seedEvents = currentValue.events.filter(event => event.tick < 4);
-    const newEvents = await generatePattern(seedEvents, 28 - 16 /* 16 - 4*/);
+    const newEvents = await generatePattern(seedEvents, 28 - 16, aiTemperature);
 
     const newValue: PatternEventValue = {
       kit: currentValue.kit,
@@ -158,7 +161,7 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
     };
 
     onChange(newValue);
-  }, [currentValue, onChange]);
+  }, [currentValue, onChange, aiTemperature]);
 
   return (
     <div className={styles.patternPanel}>
@@ -169,12 +172,38 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
           </option>
         ))}
       </select>
-      <img
-        src={aiBot}
-        alt=""
-        style={{width: 20, float: 'right'}}
-        onClick={handleAiClick}
-      />
+      <div
+        style={{
+          float: 'right',
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+        }}
+      >
+        <input
+          type="range"
+          min={0.5}
+          max={2}
+          step={0.1}
+          value={aiTemperature}
+          onChange={event => {
+            setAiTemperature(event.target.valueAsNumber);
+          }}
+          style={{width: 100, height: 5}}
+        />
+        <div
+          style={{
+            width: 20,
+            marginLeft: 5,
+            marginRight: 15,
+            textAlign: 'right',
+          }}
+        >
+          {aiTemperature}
+        </div>
+        <img src={aiBot} alt="" style={{width: 20}} onClick={handleAiClick} />
+      </div>
+
       <LoadingOverlay show={isLoading} />
       {currentFolder.sounds.map((sound, index) => {
         return (
