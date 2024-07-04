@@ -1,7 +1,6 @@
 @import 'color';
 @import "@cdo/apps/componentLibrary/typography/typography.module";
 @import "@cdo/apps/componentLibrary/common/styles/mixins";
-@import "@cdo/apps/componentLibrary/common/styles/colors.css";
 
 $alert-span-vertical-top-spacing: 2px;
 
@@ -27,8 +26,7 @@ $alert-span-vertical-top-spacing: 2px;
 
 // Types (colors)
 .alert-primary {
-  //background-color: $light_secondary_100;
-  background-color: var(--background-brand-aqua-bg-brand-aqua-light)
+  background-color: $light_secondary_100;
 }
 
 .alert-success {
