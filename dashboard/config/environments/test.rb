@@ -1,3 +1,5 @@
+require 'cdo/rack/geolocation_override'
+
 Dashboard::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -7,6 +9,9 @@ Dashboard::Application.configure do
   # https://stackoverflow.com/a/70566038/1810460
   # https://github.com/rails/spring/issues/598#issuecomment-1268885973
   config.cache_classes = !(defined?(Spring::Env) && Spring::Env.new.server_running?)
+
+  # Apply the remote_addr middleware to allow pretending to be at a particular IP
+  config.middleware.insert_after ActionDispatch::RequestId, Rack::GeolocationOverride
 
   # Do not eager load code on boot. This avoids loading your whole application
   # just for the purpose of running a single test. If you are using a tool that
