@@ -2,16 +2,16 @@
  * A set of reducers that are used across all of our apps
  */
 
-import runState from './runState';
-import layout from './layout';
 import authoredHints from './authoredHints';
-import pageConstants from './pageConstants';
+import blockly from './blockly';
+import feedback from './feedback';
 import instructions from './instructions';
 import instructionsDialog from './instructionsDialog';
-import watchedExpressions from './watchedExpressions';
-import feedback from './feedback';
+import layout from './layout';
+import pageConstants from './pageConstants';
+import runState from './runState';
 import studioAppActivity from './studioAppActivity';
-import blockly from './blockly';
+import watchedExpressions from './watchedExpressions';
 
 module.exports = {
   runState,
