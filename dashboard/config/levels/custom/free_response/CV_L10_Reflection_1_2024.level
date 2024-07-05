@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2024-06-17T22:34:31.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# Challenges Creating and Training Your Model\r\n\r\n#### What challenges did you encounter while creating and training your model, and how did you address them?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
+    "long_instructions": "## Challenges Creating and Training Your Model\r\n\r\nWhat challenges did you encounter while creating and training your model, and how did you address them?",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -19,9 +20,8 @@
     "allow_multiple_attempts": "false",
     "teacher_markdown": "Encourages students to reflect on any difficulties faced during model training, such as inadequate data or model misclassification, and discuss the strategies they used to overcome these challenges.\r\n"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-06-17T22:34:31.564+00:00\",\"changed\":[\"cloned from \\\"CV_L10_Reflection_1\\\"\"],\"cloned_from\":\"CV_L10_Reflection_1\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-06-17T22:34:31.564+00:00\",\"changed\":[\"cloned from \\\"CV_L10_Reflection_1\\\"\"],\"cloned_from\":\"CV_L10_Reflection_1\"},{\"changed_at\":\"2024-07-04 18:37:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
