@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.4.1]()
+## [0.4.1](https://github.com/code-dot-org/code-dot-org/pull/59610)
 
 * updated BaseButton props to support native HTML element attributes
 
