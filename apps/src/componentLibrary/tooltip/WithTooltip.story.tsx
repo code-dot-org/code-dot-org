@@ -21,9 +21,7 @@ export default {
 //
 const SingleTemplate: StoryFn<TooltipProps> = args => (
   <WithTooltip tooltipProps={{...args}}>
-    <button style={{margin: 0}} type="button">
-      Hover me
-    </button>
+    <Button onClick={() => null} text="Hover me" />
   </WithTooltip>
 );
 
@@ -37,7 +35,7 @@ const MultipleTemplate: StoryFn<{components: TooltipProps[]}> = args => (
     <div style={{display: 'flex', gap: '20px', flexWrap: 'wrap'}}>
       {args.components?.map(componentArg => (
         <WithTooltip key={componentArg.tooltipId} tooltipProps={componentArg}>
-          <Button onClick={() => null} text={'Hover me'} />
+          <Button onClick={() => null} text="Hover me" />
         </WithTooltip>
       ))}
     </div>
