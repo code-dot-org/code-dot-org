@@ -34,7 +34,7 @@ FIND_SHARED_TABLES = true
 # Probably want `SKIP_MISSING_PROJECT_IDS = true` for the real production run,
 # but when running locally, you'll probably want it set to false (since you don't
 # have a real Projects table locally).
-SKIP_MISSING_PROJECT_IDS = true
+SKIP_MISSING_PROJECT_IDS = false
 
 # DEBUG FLAGS:
 DEBUG_SHARED_TABLES = false
@@ -67,8 +67,8 @@ end
 set_active_record_connection_pool_size(10)
 
 # Don't use more workers than we have connections in our SQL connection pool.
-# NUM_PARALLEL_WORKERS = 1
-NUM_PARALLEL_WORKERS = ActiveRecord::Base.connection_pool.size - 1
+NUM_PARALLEL_WORKERS = 1
+# NUM_PARALLEL_WORKERS = ActiveRecord::Base.connection_pool.size - 1
 
 def get_project_id(channel_id)
   storage_decrypt_channel_id(channel_id)[1]
@@ -259,6 +259,67 @@ end
 class SkippedMissingProject < StandardError
 end
 
+def do_migration_transaction(project_id, tables, kvps)
+  ActiveRecord::Base.transaction do
+    insert_datablock_tables(tables)
+    insert_datablock_kvps(kvps)
+
+    # Now that its migrated, switch the project over to using DatablockStorage
+    ProjectUseDatablockStorage.where(project_id: project_id).delete_all
+    ProjectUseDatablockStorage.create!(project_id: project_id, use_datablock_storage: true)
+
+    # Do not allow transaction to complete if DRY_RUN==true
+    raise ActiveRecord::Rollback if DRY_RUN
+  end
+end
+
+def replace_trailing_spaces_with_underscore(str)
+  trailing_spaces_count = str.length - str.rstrip.length
+  str.rstrip + ("_" * trailing_spaces_count)
+end
+
+def do_migration_patchup_trailing_spaces(project_id, kvps, tables)
+  # Datablock Storage can't tell the difference between 'key ' and 'key' due
+  # to quirks in how MySQL indexes work. If we get a failed transaction,
+  # we first replace trailing spaces with underscores, and then try again
+
+  message = ""
+  message += "Failed to do transaction:\n"
+  kvps.each do |kvp|
+    key = kvp[:key]
+    if key.start_with?("takenusername", "userTaken")
+      return nil
+    end
+    return nil if key.start_with?("takenusername", "userTaken")
+    newkey = replace_trailing_spaces_with_underscore(key)
+    message += "\tRenaming key: #{kvp[:key].inspect} -> #{newkey.inspect}\n" if key != newkey
+    kvp[:key] = newkey
+  end
+  tables.each do |table|
+    table_name = table[:table][:table_name]
+    newtablename = replace_trailing_spaces_with_underscore(table_name)
+    message += "\tRenaming table: #{table[:table][:table_name]} -> #{newtablename}\n" if table_name != newtablename
+    table[:table][:table_name] = newtablename
+  end
+  begin
+    do_migration_transaction(project_id, tables, kvps)
+  rescue ActiveRecord::RecordNotUnique
+    message += "\n"
+    message += "\tSECOND FAILURE\n"
+    message += "\tkvps:\n"
+    kvps.each do |kvp|
+      message += "\t\t#{kvp[:key]}\n"
+    end
+    message += "\ttables:\n"
+    tables.each do |table|
+      message += "\t\t#{table[:table][:table_name]}\n"
+    end
+    message += "\tEND SECOND FAILURE\n"
+    puts message
+    raise
+  end
+end
+
 def migrate(channel_id)
   channel = firebase_get_channel(channel_id)
   project_id = get_project_id(channel_id)
@@ -271,16 +332,11 @@ def migrate(channel_id)
 
   tables = fetch_datablock_tables(channel, project_id)
   kvps = fetch_datablock_kvps(channel, project_id)
-  ActiveRecord::Base.transaction do
-    insert_datablock_tables(tables)
-    insert_datablock_kvps(kvps)
 
-    # Now that its migrated, switch the project over to using DatablockStorage
-    ProjectUseDatablockStorage.where(project_id: project_id).delete_all
-    ProjectUseDatablockStorage.create!(project_id: project_id, use_datablock_storage: true)
-
-    # Do not allow transaction to complete if DRY_RUN==true
-    raise ActiveRecord::Rollback if DRY_RUN
+  begin
+    do_migration_transaction(project_id, tables, kvps)
+  rescue ActiveRecord::RecordNotUnique
+    do_migration_patchup_trailing_spaces(project_id, kvps, tables)
   end
 end
 
