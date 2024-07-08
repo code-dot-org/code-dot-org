@@ -10,10 +10,10 @@ $default-spacing: 16px;
   flex-direction: column;
   background-color: $light_white;
   padding: 10px;
+  overflow: hidden;
 }
 
 .conversationArea {
-  height: 65vh;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
