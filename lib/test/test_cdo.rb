@@ -1,6 +1,98 @@
 require_relative 'test_helper'
 require 'cdo'
 
+describe CDO do
+  describe '.aws_access?' do
+    context 'in production' do
+      before do
+        CDO.stubs(:rack_env?).with(:production).returns(true)
+      end
+
+      it 'should return true' do
+        assert(CDO.aws_access?)
+      end
+
+      context 'AWS_PROFILE is empty' do
+        around do |test|
+          Object.stub_const('ENV', ENV.to_hash.merge('AWS_PROFILE' => nil)) do
+            test.call
+          end
+        end
+
+        it 'should return true' do
+          assert(CDO.aws_access?)
+        end
+      end
+
+      context 'AWS_PROFILE has a value with "cdo"' do
+        around do |test|
+          Object.stub_const('ENV', ENV.to_hash.merge('AWS_PROFILE' => 'some-cdo')) do
+            test.call
+          end
+        end
+
+        it 'should return true' do
+          assert(CDO.aws_access?)
+        end
+      end
+
+      context 'AWS_PROFILE has an unrelated value instead' do
+        around do |test|
+          Object.stub_const('ENV', ENV.to_hash.merge('AWS_PROFILE' => 'some-other-thing')) do
+            test.call
+          end
+        end
+
+        it 'should return true' do
+          assert(CDO.aws_access?)
+        end
+      end
+    end
+
+    context 'in development' do
+      before do
+        CDO.stubs(:rack_env?).with(:production).returns(false)
+      end
+
+      context 'AWS_PROFILE is empty' do
+        around do |test|
+          Object.stub_const('ENV', ENV.to_hash.merge('AWS_PROFILE' => nil)) do
+            test.call
+          end
+        end
+
+        it 'should return false' do
+          refute(CDO.aws_access?)
+        end
+      end
+
+      context 'AWS_PROFILE has a value with "cdo"' do
+        around do |test|
+          Object.stub_const('ENV', ENV.to_hash.merge('AWS_PROFILE' => 'some-cdo')) do
+            test.call
+          end
+        end
+
+        it 'should return true' do
+          assert(CDO.aws_access?)
+        end
+      end
+
+      context 'AWS_PROFILE has an unrelated value instead' do
+        around do |test|
+          Object.stub_const('ENV', ENV.to_hash.merge('AWS_PROFILE' => 'some-other-thing')) do
+            test.call
+          end
+        end
+
+        it 'should return false' do
+          refute(CDO.aws_access?)
+        end
+      end
+    end
+  end
+end
+
 class CdoTest < Minitest::Test
   def test_curriculum_languages
     # DCDO request is cached, and only called once
