@@ -1,7 +1,7 @@
 @import 'color.scss';
 @import './aichat-common.module.scss';
 
-$default-spacing: 2px;
+$default-spacing: 16px;
 
 .chatWorkspace {
   @extend %panel-section;
@@ -13,7 +13,6 @@ $default-spacing: 2px;
 }
 
 .conversationArea {
-  margin: 5px 2%;
   height: 65vh;
   display: flex;
   flex-direction: column;
@@ -21,6 +20,7 @@ $default-spacing: 2px;
   gap: $default-spacing;
   box-sizing: border-box;
   overflow-y: auto;
+  padding: $default-spacing;
 }
 
 .waitingForResponse {
