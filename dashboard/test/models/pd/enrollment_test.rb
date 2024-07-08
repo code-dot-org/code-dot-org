@@ -95,7 +95,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     enrollment.first_name = 'FirstName'
     enrollment.last_name = 'LastName'
     enrollment.email = 'teacher@example.net'
-    enrollment.school_info = build :school_info
     assert enrollment.valid?
   end
 
