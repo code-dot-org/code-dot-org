@@ -10,10 +10,11 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {askAITutor} from '../redux/aiTutorRedux';
+import {genericCompilation, genericValidation} from '../constants';
 
 const QuickActions = {
-  [ActionType.COMPILATION]: "Why doesn't my code compile?",
-  [ActionType.VALIDATION]: "Why aren't my tests passing?",
+  [ActionType.COMPILATION]: genericCompilation,
+  [ActionType.VALIDATION]: genericValidation,
 };
 
 const AITutorSuggestedPrompts: React.FunctionComponent = () => {

@@ -1,4 +1,5 @@
 import React from 'react';
+import UploadCSV from './UploadCSV';
 
 /**
  * Renders 
@@ -7,8 +8,10 @@ import React from 'react';
 const AITutorResponseGenerator: React.FC = () => {
   return (
     <div>
-      AI Response Generator goes here. 
-      Upload CSV 
+      AI Response Generator goes here.
+      <UploadCSV /> 
+      
+      {/* Upload CSV 
       Sanity check for the right columns 
       Format message to send, system prompt + student input 
       Send message to AI Tutor 
@@ -18,7 +21,7 @@ const AITutorResponseGenerator: React.FC = () => {
 
       Nice to have: 
         some indication of how far through the process we are
-        AI model selection, indication of some kind
+        AI model selection, indication of some kind */}
     </div>
   );
 };
