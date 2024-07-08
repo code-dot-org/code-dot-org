@@ -58,8 +58,6 @@ class HttpCache
     'onetrust_cookie_scripts',
     # Feature flag for the Colorado Privacy Act (CPA)
     'cpa_experience',
-    # Allows DCDO settings via cookies. See: Rack::CookieDCDO
-    'DCDO',
     # Page mode, for A/B experiments and feature-flag rollouts.
     'pm'
   ].freeze
@@ -138,6 +136,9 @@ class HttpCache
     # Whether admin has assumed current identity
     assumed_identity = "_assumed_identity#{env_suffix}"
     default_cookies = DEFAULT_COOKIES + [user_type, limit_project_types, assumed_identity]
+
+    # Allows mocking of DCDO settings via cookies for testing purposes. See: Rack::CookieDCDO
+    default_cookies << 'DCDO' if env.to_s == 'test'
 
     # These cookies are allowlisted on all session-specific (not cached) pages.
     allowlisted_cookies = [
