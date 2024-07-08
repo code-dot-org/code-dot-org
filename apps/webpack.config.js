@@ -80,7 +80,6 @@ const circularDependenciesSet = new Set(circularDependencies);
 // as we see our known circular dependencies, we're gonna remove them from our list. That way,
 // we can report at the end if any circular dependencies have been cleaned up.
 let seenCircles = new Set();
-let numUnresolvedCircles = 0;
 const nodePolyfillConfig = {
   plugins: [
     new webpack.ProvidePlugin({
@@ -108,10 +107,9 @@ const nodePolyfillConfig = {
         const pathString = paths.join(' -> ');
         // if the path is not a known existing one, then note as an error
         if (!circularDependenciesSet.has(pathString)) {
-          numUnresolvedCircles++;
           compilation.errors.push(
             new Error(
-              `Circular Dependency Checker : A new Circular Dependency found.\nKnown circular dependencies can be found in 'apps/circular_dependencies.json'\n Circular dependency: ${pathString}`
+              `Circular Dependency Checker : A new Circular Dependency found.\nKnown circular dependencies can be found in 'apps/circular_dependencies.json'\n Circular dependency: ${pathString}.`
             )
           );
         }
@@ -121,19 +119,10 @@ const nodePolyfillConfig = {
       // finally, at the end, if we still have any circles that we previously knew about but did not see
       // this time, note it as a warning.
       onEnd: ({compilation}) => {
-        if (numUnresolvedCircles > 0) {
-          compilation.warnings.push(
-            new Error(
-              `Circular Dependency Checker : Number of total unresolved circular dependencies (see errors below): ${numUnresolvedCircles}`
-            )
-          );
-        }
         if (seenCircles.size > 0) {
           compilation.warnings.push(
             new Error(
-              `Circular Dependency Checker : ${
-                Array.from(seenCircles).length
-              } resolved circular dependencies can be removed from circular_dependencies.json :\n  ${Array.from(
+              `Circular Dependency Checker : Resolved circular dependencies can be removed from circular_dependencies.json :\n  ${Array.from(
                 seenCircles
               ).join('\n  ')}`
             )
