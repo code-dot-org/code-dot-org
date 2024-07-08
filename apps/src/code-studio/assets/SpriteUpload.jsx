@@ -1,7 +1,5 @@
 import React from 'react';
-import color from '@cdo/apps/util/color';
-import {makeEnum} from '@cdo/apps/utils';
-import ValidationStep, {Status} from '../../lib/ui/ValidationStep';
+
 import {
   getManifest,
   getLevelAnimationsFiles,
@@ -10,6 +8,10 @@ import {
   uploadMetadataToAnimationLibrary,
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import color from '@cdo/apps/util/color';
+import {makeEnum} from '@cdo/apps/utils';
+
+import ValidationStep, {Status} from '../../lib/ui/ValidationStep';
 
 const EXTENSION_CHECK = 'extensionError';
 const FILENAME_CHECK = 'filenameError';
