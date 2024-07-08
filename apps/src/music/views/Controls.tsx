@@ -119,7 +119,7 @@ const Controls: React.FunctionComponent<ControlsProps> = ({
     state => state.music.soundLoadingProgress < 1
   );
 
-  // Sends a Statsig event with the Run button is pressed when a user is signed out
+  // Sends a Statsig event when the Run button is pressed when a user is signed out
   const sendAnalyticsEvent = (): void => {
     const isSignedOut: boolean =
       document
