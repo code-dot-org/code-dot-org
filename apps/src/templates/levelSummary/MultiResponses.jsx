@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useMemo} from 'react';
+import React, {useMemo, useCallback} from 'react';
 import {Chart} from 'react-google-charts';
 
 import color from '@cdo/apps/util/color';
@@ -48,7 +48,41 @@ const multiChartData = (data, highlightCorrect = false) => [
 ];
 
 const MultiResponses = ({scriptData, showCorrectAnswer = false}) => {
-  const answers = scriptData.level.properties.answers;
+  const getAnswersAndCorrectAnswers = useCallback(() => {
+    if (scriptData.level.properties.answers) {
+      const answers = scriptData.level.properties.answers;
+      const correctAnswers = answers.reduce((acc, cur, i) => {
+        if (cur.correct) {
+          acc.push([...LETTERS][i]);
+        }
+        return acc;
+      }, []);
+      const formattedAnswers = answers.reduce((acc, cur) => {
+        acc.push(cur.text);
+        return acc;
+      }, []);
+      return [formattedAnswers, correctAnswers];
+    } else if (scriptData.level.properties.predict_settings) {
+      const predictSettings = scriptData.level.properties.predict_settings;
+      if (predictSettings.multipleChoiceOptions) {
+        const answers = predictSettings.multipleChoiceOptions;
+        const correctAnswers = predictSettings.solution
+          .split(',')
+          .reduce((acc, cur, i) => {
+            acc.push([...LETTERS][answers.indexOf(cur)]);
+            return acc;
+          }, []);
+
+        return [answers, correctAnswers];
+      }
+    }
+    return [[], null];
+  }, [
+    scriptData.level.properties.answers,
+    scriptData.level.properties.predict_settings,
+  ]);
+
+  const [answers, correctAnswers] = getAnswersAndCorrectAnswers();
   const answerData = useMemo(
     () => multiAnswerCounts(scriptData.responses, answers.length),
     [scriptData.responses, answers.length]
@@ -56,16 +90,6 @@ const MultiResponses = ({scriptData, showCorrectAnswer = false}) => {
   const answerMax = useMemo(
     () => Math.max(...Object.values(answerData)),
     [answerData]
-  );
-  const correctAnswers = useMemo(
-    () =>
-      answers.reduce((acc, cur, i) => {
-        if (cur.correct) {
-          acc.push([...LETTERS][i]);
-        }
-        return acc;
-      }, []),
-    [answers]
   );
 
   return (

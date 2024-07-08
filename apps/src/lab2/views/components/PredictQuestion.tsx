@@ -58,10 +58,10 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
             >
               <input
                 type={predictSettings.isMultiSelect ? 'checkbox' : 'radio'}
-                value={option}
+                value={index.toString()}
                 checked={
                   (predictResponse &&
-                    predictResponse.split(',').includes(option)) ||
+                    predictResponse.split(',').includes(index.toString())) ||
                   false
                 }
                 onChange={handleMultiSelectChanged}

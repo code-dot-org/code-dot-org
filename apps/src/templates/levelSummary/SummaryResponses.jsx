@@ -28,7 +28,15 @@ const SummaryResponses = ({
   currentLevelId,
   levels,
 }) => {
+  console.log({scriptData});
   const currentLevel = levels.find(l => l.activeId === currentLevelId);
+  const predictSettings = scriptData.level.properties?.predict_settings;
+  const isFreeResponse =
+    scriptData.level.type === FREE_RESPONSE ||
+    predictSettings?.questionType === 'freeResponse';
+  const isMulti =
+    scriptData.level.type === MULTI ||
+    predictSettings?.questionType === 'multipleChoice';
 
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
 
@@ -60,21 +68,27 @@ const SummaryResponses = ({
     const correctAnswerElement = document.getElementById(
       'summary-correct-answer'
     );
-    if (correctAnswerElement) {
-      if (showCorrectAnswer) {
-        correctAnswerElement.classList.add(styles.correctAnswersContainer);
-        correctAnswerElement.classList.remove('hide');
-      } else {
-        correctAnswerElement.classList.add('hide');
-        correctAnswerElement.classList.remove(styles.correctAnswersContainer);
+    const predictAnswerElement = document.getElementById(
+      'summary-predict-correct-answer'
+    );
+    const showOrHideAnswer = answerElement => {
+      if (answerElement) {
+        if (showCorrectAnswer) {
+          answerElement.classList.add(styles.correctAnswersContainer);
+          answerElement.classList.remove('hide');
+        } else {
+          answerElement.classList.add('hide');
+          answerElement.classList.remove(styles.correctAnswersContainer);
+        }
       }
-    }
+    };
+    showOrHideAnswer(correctAnswerElement);
+    showOrHideAnswer(predictAnswerElement);
   }, [showCorrectAnswer]);
 
   // "Show correct answer" toggle is only shown for some level types, and
   // only when the policy allows it for that user.
-  const showAnswerToggle =
-    scriptData.answer_is_visible && scriptData.level.type === MULTI;
+  const showAnswerToggle = scriptData.answer_is_visible && isMulti;
 
   return (
     <div className={styles.summaryContainer} id="summary-container">
@@ -123,12 +137,12 @@ const SummaryResponses = ({
         )}
 
         {/* Free response visualization */}
-        {scriptData.level.type === FREE_RESPONSE && (
+        {isFreeResponse && (
           <FreeResponseResponses responses={scriptData.responses} />
         )}
 
         {/* Multi visualization */}
-        {scriptData.level.type === MULTI && (
+        {isMulti && (
           <MultiResponses
             scriptData={scriptData}
             showCorrectAnswer={showCorrectAnswer}
