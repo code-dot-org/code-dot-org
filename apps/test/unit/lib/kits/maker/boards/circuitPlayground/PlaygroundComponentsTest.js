@@ -1,21 +1,24 @@
 /** @file Playground Component setup tests */
 import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
-import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
+
+import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
+import NeoPixel from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/NeoPixel';
+import Piezo from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Piezo';
 import {
   createCircuitPlaygroundComponents,
   cleanupCircuitPlaygroundComponents,
   componentConstructors,
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundComponents';
-import Piezo from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Piezo';
-import NeoPixel from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/NeoPixel';
-import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
-import Switch from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Switch';
 import {
   CP_ACCEL_STREAM_ON,
   CP_COMMAND,
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
+import Switch from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Switch';
+
+import {expect} from '../../../../../../util/reconfiguredChai';
+
 import {
   newBoard,
   setSensorAnalogValue,

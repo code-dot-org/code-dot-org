@@ -109,7 +109,7 @@ const nodePolyfillConfig = {
         if (!circularDependenciesSet.has(pathString)) {
           compilation.errors.push(
             new Error(
-              `Circular Dependency Checker : New Circular Dependency found : ${pathString}`
+              `Circular Dependency Checker : A new Circular Dependency found.\nKnown circular dependencies can be found in 'apps/circular_dependencies.json'\n Circular dependency: ${pathString}.`
             )
           );
         }
@@ -170,6 +170,41 @@ const localeDoNotImportP5Lab = (cdo, dir = 'src') => [
   localeDoNotImport(cdo.replace(/^@cdo/, `${dir}/p5lab`)),
 ];
 
+const APPLICATION_ALIASES = {
+  '@cdo/apps': p('src'),
+  '@cdo/static': p('static'),
+  repl: p('src/noop'),
+  '@cdo/storybook': p('.storybook'),
+  '@cdoide': p('src/weblab2/CDOIDE'),
+  '@cdo/generated-scripts': p('generated-scripts'),
+  '@codebridge': p('src/codebridge'),
+};
+
+const LOCALE_ALIASES = {
+  '@cdo/locale': path.resolve(__dirname, 'src/util/locale-do-not-import.js'),
+  ...Object.fromEntries([
+    localeDoNotImport('@cdo/aichat/locale'),
+    localeDoNotImport('@cdo/applab/locale'),
+    localeDoNotImport('@cdo/codebridge/locale'),
+    localeDoNotImport('@cdo/javalab/locale'),
+    localeDoNotImport('@cdo/music/locale'),
+    localeDoNotImport('@cdo/netsim/locale'),
+    localeDoNotImport('@cdo/regionalPartnerMiniContact/locale'),
+    localeDoNotImport('@cdo/regionalPartnerSearch/locale'),
+    localeDoNotImport('@cdo/standaloneVideo/locale'),
+    localeDoNotImport('@cdo/tutorialExplorer/locale'),
+    localeDoNotImport('@cdo/weblab/locale'),
+    localeDoNotImportP5Lab('@cdo/gamelab/locale'),
+    localeDoNotImportP5Lab('@cdo/poetry/locale'),
+    localeDoNotImportP5Lab('@cdo/spritelab/locale'),
+  ]),
+};
+
+const WEBPACK_ALIASES = {
+  ...APPLICATION_ALIASES,
+  ...LOCALE_ALIASES,
+};
+
 // Our base webpack config, from which our other webpack configs are derived,
 // including our main config, the karma config, and the storybook config.
 //
@@ -189,32 +224,8 @@ const WEBPACK_BASE_CONFIG = {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     fallback: {...nodePolyfillConfig.resolve.fallback},
     alias: {
-      '@cdo/locale': path.resolve(
-        __dirname,
-        'src/util/locale-do-not-import.js'
-      ),
-      ...Object.fromEntries([
-        localeDoNotImport('@cdo/aichat/locale'),
-        localeDoNotImport('@cdo/applab/locale'),
-        localeDoNotImport('@cdo/javalab/locale'),
-        localeDoNotImport('@cdo/music/locale'),
-        localeDoNotImport('@cdo/netsim/locale'),
-        localeDoNotImport('@cdo/regionalPartnerMiniContact/locale'),
-        localeDoNotImport('@cdo/regionalPartnerSearch/locale'),
-        localeDoNotImport('@cdo/standaloneVideo/locale'),
-        localeDoNotImport('@cdo/tutorialExplorer/locale'),
-        localeDoNotImport('@cdo/weblab/locale'),
-        localeDoNotImportP5Lab('@cdo/gamelab/locale'),
-        localeDoNotImportP5Lab('@cdo/poetry/locale'),
-        localeDoNotImportP5Lab('@cdo/spritelab/locale'),
-      ]),
-      '@cdo/apps': p('src'),
-      '@cdo/static': p('static'),
-      repl: p('src/noop'),
-      '@cdo/storybook': p('.storybook'),
+      ...WEBPACK_ALIASES,
       serialport: false,
-      '@codebridge': p('src/codebridge'),
-      '@cdo/generated-scripts': p('generated-scripts'),
     },
   },
   module: {
@@ -223,6 +234,9 @@ const WEBPACK_BASE_CONFIG = {
         test: /\.ejs$/,
         include: [p('src'), p('test')],
         loader: 'ejs-webpack-loader',
+        options: {
+          strict: true,
+        },
       },
       {test: /\.css$/, use: [{loader: 'style-loader'}, {loader: 'css-loader'}]},
 
@@ -742,4 +756,6 @@ module.exports = {
   localeDoNotImport,
   // Used as the basis for karma and storybook webpack configs:
   WEBPACK_BASE_CONFIG,
+  APPLICATION_ALIASES,
+  LOCALE_ALIASES,
 };

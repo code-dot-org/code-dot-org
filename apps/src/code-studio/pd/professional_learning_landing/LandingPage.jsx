@@ -7,7 +7,7 @@ import {connect, useDispatch} from 'react-redux';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
-import {EnrolledWorkshops, EnrolledWorkshopsTable} from './EnrolledWorkshops';
+import {EnrolledWorkshops, WorkshopsTable} from './EnrolledWorkshops';
 import {
   COURSE_CSF,
   COURSE_CSD,
@@ -33,6 +33,7 @@ import {
   hiddenPlSectionIds,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import shapes from '@cdo/apps/templates/studioHomepages/shapes';
+import DCDO from '@cdo/apps/dcdo';
 
 const getAvailableTabs = permissions => {
   let tabs = [
@@ -99,11 +100,6 @@ function LandingPage({
       ? style.headerWithTabsContainer
       : style.headerWithoutTabsContainer;
 
-  const showGettingStartedBanner =
-    !currentYearApplicationId &&
-    !hasEnrolledInWorkshop &&
-    plCoursesStarted?.length === 0;
-
   const joinedPlSectionsStyling =
     joinedPlSections?.length > 0 ? '' : style.joinedPlSectionsWithNoSections;
 
@@ -113,23 +109,6 @@ function LandingPage({
     dispatch(asyncLoadSectionData());
     dispatch(asyncLoadCoteacherInvite());
   }, [dispatch]);
-
-  const RenderGettingStartedBanner = () => (
-    <TwoColumnActionBlock
-      imageUrl={pegasus(
-        '/images/fill-540x300/professional-learning/pl-superhero-girl-crop.png'
-      )}
-      heading={i18n.plLandingGettingStartedHeading()}
-      subHeading={i18n.plLandingGettingStartedSubHeading()}
-      description={i18n.plLandingGettingStartedDescription()}
-      buttons={[
-        {
-          url: pegasus('/educate/professional-learning'),
-          text: i18n.plLandingGettingStartedButton(),
-        },
-      ]}
-    />
-  );
 
   const RenderLastWorkshopSurveyBanner = () => (
     <TwoColumnActionBlock
@@ -147,6 +126,56 @@ function LandingPage({
       ]}
     />
   );
+
+  // Renders at most one banner for a user:
+  // - if the user hasn't used any PL resources yet, show the Getting Started banner
+  // - if the user has a pending workshop survery (mutually exclusive from the above), show a banner to fill out the survey
+  // - else, render either nothing or an announcement banner
+  const RenderBanner = () => {
+    const showGettingStartedBanner =
+      !currentYearApplicationId &&
+      !hasEnrolledInWorkshop &&
+      plCoursesStarted?.length === 0;
+
+    if (showGettingStartedBanner) {
+      return (
+        <TwoColumnActionBlock
+          imageUrl={pegasus(
+            '/images/fill-540x300/professional-learning/pl-superhero-girl-crop.png'
+          )}
+          heading={i18n.plLandingGettingStartedHeading()}
+          subHeading={i18n.plLandingGettingStartedSubHeading()}
+          description={i18n.plLandingGettingStartedDescription()}
+          buttons={[
+            {
+              url: pegasus('/educate/professional-learning'),
+              text: i18n.plLandingGettingStartedButton(),
+            },
+          ]}
+        />
+      );
+    } else if (lastWorkshopSurveyUrl) {
+      return RenderLastWorkshopSurveyBanner();
+    } else if (!!DCDO.get('curriculum-launch-2024', false)) {
+      // TODO(ACQ-1998): Remove this block after the 2024 curriculum launch
+      return (
+        <TwoColumnActionBlock
+          imageUrl={pegasus(
+            '/images/fill-540x300/professional-learning/banner-books-with-background.png'
+          )}
+          subHeading={i18n.plLandingCurriculumLaunchBannerSubHeading()}
+          description={i18n.plLandingCurriculumLaunchBannerDescription()}
+          buttons={[
+            {
+              url: pegasus('/educate/professional-learning'),
+              text: i18n.plLandingCurriculumLaunchBannerButtonText(),
+              ariaLabel: i18n.plLandingCurriculumLaunchBannerButtonAriaLabel(),
+            },
+          ]}
+        />
+      );
+    }
+  };
 
   const RenderSelfPacedPL = () => {
     return (
@@ -312,8 +341,7 @@ function LandingPage({
   const RenderMyPlTab = () => {
     return (
       <>
-        {showGettingStartedBanner && RenderGettingStartedBanner()}
-        {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
+        {RenderBanner()}
         {plCoursesStarted?.length >= 1 && RenderSelfPacedPL()}
         <div className={joinedPlSectionsStyling}>
           <JoinSectionArea
@@ -342,9 +370,10 @@ function LandingPage({
         </section>
         {RenderOwnedPlSections()}
         {workshopsAsFacilitator?.length > 0 && (
-          <EnrolledWorkshopsTable
+          <WorkshopsTable
             workshops={workshopsAsFacilitator}
             forMyPlPage={true}
+            tableHeader={i18n.inProgressAndUpcomingWorkshops()}
           />
         )}
       </>
@@ -364,9 +393,10 @@ function LandingPage({
           {RenderRegionalPartnerResources()}
         </section>
         {workshopsAsRegionalPartner?.length > 0 && (
-          <EnrolledWorkshopsTable
+          <WorkshopsTable
             workshops={workshopsAsRegionalPartner}
             forMyPlPage={true}
+            tableHeader={i18n.inProgressAndUpcomingWorkshops()}
           />
         )}
       </>
@@ -389,9 +419,10 @@ function LandingPage({
           />
         </section>
         {workshopsAsOrganizer?.length > 0 && (
-          <EnrolledWorkshopsTable
+          <WorkshopsTable
             workshops={workshopsAsOrganizer}
             forMyPlPage={true}
+            tableHeader={i18n.inProgressAndUpcomingWorkshops()}
           />
         )}
       </>

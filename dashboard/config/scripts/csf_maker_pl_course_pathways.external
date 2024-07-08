@@ -12,33 +12,23 @@ markdown <<MARKDOWN
 
 <table width="850px">
 	<tr> 
-    	<th style="font-size: 22px;"> <b>Course C  </b> &nbsp <i>(2nd-3rd grade)</i></th>
-        <th style="font-size: 22px;"> <b>Course D  </b> &nbsp <i>(3rd-4th grade)</i></th>
+    	<th style="font-size: 22px;"> <b>Grade 2  </b> </th>
+        <th style="font-size: 22px;"> <b>Grade 3  </b></th>
     </tr>
     <tr>
     	<td>
-         <a href="https://levelbuilder-studio.code.org/s/coursec-maker-2024-pilot" target="blank" rel="noopener noreferrer">Course C: Maker with micro:bit page</a> 
+         <a href="https://studio.code.org/s/grade2-maker-2024" target="blank" rel="noopener noreferrer">Grade 2: Maker with micro:bit page</a> 
         	
         </td>
     	<td>
-         <a href="https://levelbuilder-studio.code.org/s/coursed-maker-2024-pilot" target="blank" rel="noopener noreferrer">Course D: Maker with micro:bit page</a> 
+         <a href="https://studio.code.org/s/grade3-maker-2024" target="blank" rel="noopener noreferrer">Grade 3: Maker with micro:bit page</a> 
         	
         </td>
       </tr>
-      <tr>
-     	<td> 
-          <a href="https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf" target="blank" rel="noopener noreferrer">Course C: micro:bit booklet</a>         
-        </td>
-       
-      
-        <td> 
-       
-         <a href="https://code.org/maker/assets/CSF-Booklet-Course-D-Nov2023.pdf" target="blank" rel="noopener noreferrer">Course D: micro:bit booklet</a>
-         </td>
-     </tr>
+     
      <tr>
-    	<td> <img src="https://images.code.org/fc483808785b3ebb9f2c948787e4c888-image-1707411089235.png" alt="three paths for microbit. Beginner, intermediate, stretch." width="425" style="border-radius:10px;  margin: 0px 10px 0px 0px;"></td>
-    	<td> <img src="https://images.code.org/87616895ad471157e472551c69510059-image-1707415334218.png" alt="three paths for microbit. Beginner, intermediate, stretch." width="425" style="border-radius:10px;  margin: 0px 10px 00px 0px;"></td>
+    	<td> <img src="https://images.code.org/b2873426c972bef9183fbc3cca26005f-image-1718914643665.png" alt="three paths for microbit. Beginner, intermediate, stretch." width="425" style="border-radius:10px;  margin: 0px 10px 0px 0px;"></td>
+    	<td> <img src="https://images.code.org/0c982f551f39baf2d98195b8f29d41f8-image-1718914746745.png" alt="three paths for microbit. Beginner, intermediate, stretch." width="425" style="border-radius:10px;  margin: 0px 10px 00px 0px;"></td>
       </tr>
 </table>
 
@@ -62,28 +52,23 @@ markdown <<MARKDOWN
 <br>
 <table width="850px">
 	<tr> 
-        <th style="font-size: 22px;"><b>Course E  </b> &nbsp <i>(4th-5th grade)</i></th>
-        <th style="font-size: 22px;"><b>Course F  </b> &nbsp <i>(5th-6th grade)</i></th>
+        <th style="font-size: 22px;"><b>Grade 4  </b> </th>
+        <th style="font-size: 22px;"><b>Grade 5  </b></th>
     </tr>
     <tr>
          <td>
-          <a href="https://levelbuilder-studio.code.org/s/coursee-maker-2024-pilot" target="blank" rel="noopener noreferrer">Course E: Maker with micro:bit page</a> 
+          <a href="https://studio.code.org/s/grade4-maker-2024" target="blank" rel="noopener noreferrer">Grade 4: Maker with micro:bit page</a> 
    	      </td>
     	<td>
-        <a href="https://levelbuilder-studio.code.org/s/coursef-maker-2024-pilot" target="blank" rel="noopener noreferrer">Course F: Maker with micro:bit page</a> 
+        <a href="https://studio.code.org/s/grade5-maker-2024" target="blank" rel="noopener noreferrer">Grade 5: Maker with micro:bit page</a> 
         </td>
     </tr>
+    
+   
+     
      <tr>
-     	<td>
-         <a href="https://code.org/maker/assets/CSF-Booklet-Course-E-Nov2023.pdf" target="blank" rel="noopener noreferrer">Course E: micro:bit booklet</a> 
-        </td>
-        <td>
-         <a href="https://code.org/maker/assets/CSF-Booklet-Course-F-Nov2023.pdf" target="blank" rel="noopener noreferrer">Course F: micro:bit booklet</a> 
-        </td>
-     </tr>
-     <tr>
-    	<td> <img src="https://images.code.org/fea5987b40b47122eeac02acedb323ba-image-1707415592944.png" alt="three paths for microbit. Beginner, intermediate, stretch." width="425" style="border-radius:10px;  margin: 0px 10px 0px 0px;"></td>
-    	<td> <img src="https://images.code.org/6e6fe76933c422c8940146a86aa36389-image-1707415697454.png" alt="three paths for microbit. Beginner, intermediate, stretch." width="425" style="border-radius:10px;  margin: 0px 10px 0px 0px;"></td>
+    	<td> <img src="https://images.code.org/6d203333d8a6bbb7623f53d22a4f72ad-image-1718914691500.png" alt="three paths for microbit. Beginner, intermediate, stretch." width="425" style="border-radius:10px;  margin: 0px 10px 0px 0px;"></td>
+    	<td> <img src="https://images.code.org/f82d23b48951be28ce5fc2f71f2dd689-image-1718914795439.png" alt="three paths for microbit. Beginner, intermediate, stretch." width="425" style="border-radius:10px;  margin: 0px 10px 0px 0px;"></td>
       </tr>
 </table>
 
@@ -103,4 +88,8 @@ markdown <<MARKDOWN
         <td width = "141px"><b>Events</b><br><b>Conditionals</b><br><b>Variables</b></td>
     </tr>
 </table>
+
+![]()
+
+![]()
 MARKDOWN

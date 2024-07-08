@@ -142,7 +142,7 @@ var whenRunMoveSouth =
   </block>';
 
 var whenUpDown =
-  '<block type="studio_whenUp" deletable="false" x="20" y="20"></block> \
+  '<block type="studio_whenUp" deletable="false" x="20" y="20" id="3"></block> \
   <block type="studio_whenDown" deletable="false" x="20" y="150"></block>';
 
 var whenUpDownLeftRight =
@@ -3616,6 +3616,24 @@ levels.hoc2015_blockly_7 = extend(levels.js_hoc2015_event_two_items, {
       },
     },
     {
+      id: 'playlab:hoc2015_blockly_7:placeCommandsHere',
+      element_id: '[data-id="3"]',
+      hide_target_selector: '.blocklyDraggable',
+      qtip_config: {
+        content: {
+          text: msg.calloutBlocklyPlaceMoveUpHere(),
+        },
+        position: {
+          my: 'top left',
+          at: 'bottom left',
+          adjust: {
+            x: 22,
+            y: 0,
+          },
+        },
+      },
+    },
+    {
       id: 'playlab:hoc2015_blockly_7:arrowsCallout',
       element_id: '#upButton',
       hide_target_selector: '#soft-buttons',
@@ -3656,7 +3674,7 @@ levels.hoc2015_blockly_9 = extend(levels.js_hoc2015_score, {
   },
   startBlocks:
     '<block type="studio_whenTouchGoal" deletable="false"> \
-      <next><block type="studio_playSound"><title name="SOUND">R2-D2random</title></block> \
+      <next><block type="studio_playSound" id="4"><title name="SOUND">R2-D2random</title></block> \
       </next></block>',
   toolbox: tb(
     '<block type="studio_playSound"></block> \
@@ -3694,6 +3712,20 @@ levels.hoc2015_blockly_9 = extend(levels.js_hoc2015_score, {
         },
       },
     },
+    {
+      id: 'playlab:hoc2015_blockly_9:placeCommandsAtTop',
+      element_id: '[data-id="4"]',
+      hide_target_selector: '.blocklyDraggable',
+      qtip_config: {
+        content: {
+          text: msg.calloutShowPlaySound(),
+        },
+        position: {
+          my: 'top left',
+          at: 'bottom center',
+        },
+      },
+    },
   ],
 });
 
@@ -3720,7 +3752,7 @@ levels.hoc2015_blockly_11 = extend(levels.js_hoc2015_add_characters, {
       <next> \
        <block type="studio_playSound"><title name="SOUND">R2-D2sound1</title> \
         <next> \
-         <block type="studio_addCharacter"><title name="VALUE">"pufferpig"</title></block> \
+         <block type="studio_addCharacter" id="8"><title name="VALUE">"pufferpig"</title></block> \
         </next> \
        </block> \
       </next> \
@@ -3746,6 +3778,24 @@ levels.hoc2015_blockly_11 = extend(levels.js_hoc2015_add_characters, {
     {
       id: 'playlab:hoc2015_blockly_11:calloutPutCommandsHereRunStart',
       element_id: '[block-id="8"]',
+      hide_target_selector: '.blocklyDraggable',
+      qtip_config: {
+        content: {
+          text: msg.calloutPutCommandsHereRunStart(),
+        },
+        position: {
+          my: 'top left',
+          at: 'bottom left',
+          adjust: {
+            x: 22,
+            y: 0,
+          },
+        },
+      },
+    },
+    {
+      id: 'playlab:hoc2015_blockly_11:calloutPutCommandsHereRunStart',
+      element_id: '[data-id="8"]',
       hide_target_selector: '.blocklyDraggable',
       qtip_config: {
         content: {
@@ -3792,7 +3842,7 @@ levels.hoc2015_blockly_12 = extend(levels.js_hoc2015_chain_characters, {
       <next> \
        <block type="studio_playSound"><title name="SOUND">TauntaunRandom</title> \
         <next> \
-         <block type="studio_addPoints"><title name="VALUE">50</title></block> \
+         <block type="studio_addPoints" id="12"><title name="VALUE">50</title></block> \
         </next> \
        </block> \
       </next> \
@@ -3812,6 +3862,24 @@ levels.hoc2015_blockly_12 = extend(levels.js_hoc2015_chain_characters, {
     {
       id: 'playlab:hoc2015_blockly_12:calloutPlaceTwoWhenTauntaun',
       element_id: '[block-id="12"]',
+      hide_target_selector: '.blocklyDraggable',
+      qtip_config: {
+        content: {
+          text: msg.calloutPlaceTwoWhenTauntaun(),
+        },
+        position: {
+          my: 'top left',
+          at: 'bottom center',
+          adjust: {
+            x: 0,
+            y: 0,
+          },
+        },
+      },
+    },
+    {
+      id: 'playlab:hoc2015_blockly_12:calloutPlaceTwoWhenTauntaun',
+      element_id: '[data-id="12"]',
       hide_target_selector: '.blocklyDraggable',
       qtip_config: {
         content: {
@@ -3847,7 +3915,7 @@ levels.hoc2015_blockly_13 = extend(levels.js_hoc2015_multiply_characters, {
         <block type="studio_addPoints"><title name="VALUE">100</title></block> \
         <block type="studio_removePoints"><title name="VALUE">100</title></block> \
         <block type="studio_playSound"></block> \
-        <block type="studio_whenGetCharacter"><title name="VALUE">mousedroid</title></block>'
+        <block type="studio_whenGetCharacter" id="5"><title name="VALUE">mousedroid</title></block>'
   ),
   requiredBlocks: [
     // TODO: addCharacter, addPoints
@@ -3856,6 +3924,20 @@ levels.hoc2015_blockly_13 = extend(levels.js_hoc2015_multiply_characters, {
     {
       id: 'playlab:hoc2015_blockly_13:calloutPlaceTwo',
       element_id: '[block-id="5"]',
+      hide_target_selector: '.blocklyDraggable',
+      qtip_config: {
+        content: {
+          text: msg.calloutPlaceTwo(),
+        },
+        position: {
+          my: 'top left',
+          at: 'bottom center',
+        },
+      },
+    },
+    {
+      id: 'playlab:hoc2015_blockly_13:calloutPlaceTwo',
+      element_id: '[data-id="5"]',
       hide_target_selector: '.blocklyDraggable',
       qtip_config: {
         content: {
@@ -3895,7 +3977,7 @@ levels.hoc2015_blockly_14 = extend(levels.js_hoc2015_change_setting, {
       </next> \
      </block>',
   toolbox: tb(
-    '<block type="studio_setSprite"><title name="VALUE">"c-3po"</title></block> \
+    '<block type="studio_setSprite" id="1"><title name="VALUE">"c-3po"</title></block> \
         <block type="studio_setDroidSpeed"><title name="VALUE">fast</title></block> \
         <block type="studio_setBackground"></block> \
         <block type="studio_setMap"></block> \
@@ -3912,6 +3994,19 @@ levels.hoc2015_blockly_14 = extend(levels.js_hoc2015_change_setting, {
     {
       id: 'playlab:hoc2015_blockly_14:setMap',
       element_id: '[block-id="1"]',
+      qtip_config: {
+        content: {
+          text: msg.calloutSetDroidAndSpeed(),
+        },
+        position: {
+          my: 'center left',
+          at: 'center right',
+        },
+      },
+    },
+    {
+      id: 'playlab:hoc2015_blockly_14:setMap',
+      element_id: '[data-id="1"]',
       qtip_config: {
         content: {
           text: msg.calloutSetDroidAndSpeed(),

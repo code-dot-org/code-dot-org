@@ -44,6 +44,7 @@ import CdoFieldFlyout from './addons/cdoFieldFlyout';
 import CdoFieldImage from './addons/cdoFieldImage';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldLabel from './addons/cdoFieldLabel';
+import CdoFieldParameter from './addons/cdoFieldParameter';
 import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import initializeGenerator from './addons/cdoGenerator';
@@ -262,6 +263,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     // We know it's a field, so it's safe to cast as unknown.
     ['field_bitmap', 'FieldBitmap', CdoFieldBitmap as unknown as FieldProto],
     ['field_label', 'FieldLabel', CdoFieldLabel],
+    ['field_parameter', 'FieldParameter', CdoFieldParameter],
   ];
   blocklyWrapper.overrideFields(fieldOverrides);
 
@@ -488,7 +490,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   extendedWorkspaceSvg.addUnusedBlocksHelpListener = function () {};
 
   extendedWorkspaceSvg.getAllUsedBlocks = function () {
-    return this.getAllBlocks().filter(block => block.isEnabled());
+    return this.getAllBlocks().filter(
+      block => block.isEnabled() && block.getRootBlock().isEnabled()
+    );
   };
 
   extendedWorkspaceSvg.isReadOnly = function () {
@@ -781,6 +785,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     hiddenDefinitionWorkspace.noFunctionBlockFrame = true;
     blocklyWrapper.setHiddenDefinitionWorkspace(hiddenDefinitionWorkspace);
     blocklyWrapper.useModalFunctionEditor = options.useModalFunctionEditor;
+    // Disable parameter editing by default (e.g. Lab2)
+    blocklyWrapper.enableParamEditing = options.disableParamEditing === false;
 
     if (options.useModalFunctionEditor) {
       // If the modal function editor is enabled for this level,
@@ -823,14 +829,23 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
   // Google Blockly labs also need to clear separate workspaces for the function editor.
   blocklyWrapper.clearAllStudentWorkspaces = function () {
-    Blockly.getMainWorkspace().clear();
-    const functionEditorWorkspace = Blockly.getFunctionEditorWorkspace();
-    if (functionEditorWorkspace) {
-      functionEditorWorkspace.clear();
-    }
-    if (Blockly.getHiddenDefinitionWorkspace()) {
-      Blockly.getHiddenDefinitionWorkspace().clear();
-    }
+    // Disable Blockly events to prevent unnecessary event mirroring
+    Blockly.Events.disable();
+
+    const studentWorkspaces = [
+      Blockly.getMainWorkspace(),
+      Blockly.getFunctionEditorWorkspace(),
+      Blockly.getHiddenDefinitionWorkspace(),
+    ];
+
+    studentWorkspaces.forEach(workspace => {
+      if (workspace) {
+        workspace.clear();
+        workspace.getProcedureMap().clear();
+      }
+    });
+
+    Blockly.Events.enable();
   };
 
   blocklyWrapper.customBlocks = customBlocks;

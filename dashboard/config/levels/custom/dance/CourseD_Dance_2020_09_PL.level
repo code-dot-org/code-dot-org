@@ -1,0 +1,170 @@
+<Dancelab>
+  <config><![CDATA[{
+  "game_id": 63,
+  "created_at": "2024-06-26T17:31:20.000Z",
+  "level_num": "custom",
+  "user_id": 182,
+  "properties": {
+    "skin": "dance",
+    "helper_libraries": [
+      "DanceLab"
+    ],
+    "hide_animation_mode": "true",
+    "show_type_hints": "true",
+    "use_modal_function_editor": "false",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "hide_custom_blocks": "true",
+    "use_default_sprites": "false",
+    "parent_level_id": 21711,
+    "block_pool": "Dancelab",
+    "preload_asset_list": [
+      "https://curriculum.code.org/images/sprites/dance_20191106/robot_32.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/robot_33.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/robot_34.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/robot_35.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/moose_24.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/moose_25.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/moose_26.png",
+      "https://curriculum.code.org/images/sprites/dance_20191106/moose_27.png",
+      "https://curriculum.code.org/images/DancePartyLoading.gif"
+    ],
+    "name_suffix": "_PL",
+    "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"**How do I pass this level?**\\n\\n* Just press the \\\"Finish\\\" button!\",\"hint_id\":\"validation\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/c6c3bc2f9a1203067d672832e8874d59/Dance_2019_09.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"**Need some ideas?**\\n\\n* Repeatedly change a dancer's size to make it grow.\\n* Repeatedly change a dancer's rotation to make it spin.\\n\\n*You can also use negative numbers to create an opposite effect!*\",\"hint_id\":\"repeat_every_ideas\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2b18c408ece2ac2f98b20c1ed5a911e0/Dance_2019_09.mp3\"},{\"hint_class\":null,\"hint_markdown\":\"**Optional Challenge**\\n* You can also use this new event block to cycle through a list of dance moves by setting the move to `(Random)`, `(Next)`, or `(Previous)`.\\n<xml><block type=\\\"Dancelab_changeMoveEachLR\\\">\\n    <title name=\\\"GROUP\\\">???</title>\\n    <title name=\\\"MOVE\\\">\\\"rand\\\"</title>\\n    <title name=\\\"DIR\\\">-1</title>\\n  </block></xml>\",\"hint_id\":\"next_previous\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/bdbafe8a9d15e0bc0384f3032e7a647f/Dance_2019_09.mp3\"}]",
+    "default_song": "starships_nickiminaj",
+    "long_instructions": "This **new block** is a special kind of event that is triggered over and over.\r\n\r\n<xml><block type=\"Dancelab_everySeconds\"><title name=\"N\">2</title><title name=\"UNIT\">\"measures\"</title></block></xml>\r\n\r\nBy placing the other new blocks in your toolbox inside the repeat block you can repeatedly change dancers' properties over time. Be creative and have fun!\r\n\r\n*When you are done press the Finish button.*",
+    "short_instructions": "Be creative with these new blocks!",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"new_block_3\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".blocklyFlyout [data-id=\\\"7\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"new_block_4\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".blocklyFlyout [data-id=\\\"6\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "upButton",
+      "downButton"
+    ],
+    "tts_long_instructions_override": "This new block is a special kind of event that is triggered over and over.\r\n\r\nBy placing the other new blocks in your toolbox inside the repeat block you can repeatedly change dancers' properties over time. Be creative and have fun!\r\n\r\nWhen you are done press the Finish button.",
+    "encrypted_examples": "JvP/SPnQLQqzQaGthfRPamHPy/sowsfXbxG/Q1PDmSsoAbWoKPnvISrKuLnu\nkcV1Y2Sx57zq4DXl8ve1IA/DgC8wdkcch5Y4suhIkerLp8eUwv3aSiQaS/du\nN8wnH4BZCgO8xziLpPLL5eYqgO8v7A==\n",
+    "hint_prompt_attempts_threshold": "1",
+    "validation_enabled": "false",
+    "hide_pause_button": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-06-26T17:31:20.744+00:00\",\"changed\":[\"cloned from \\\"CourseD_Dance_2020_09_grade5\\\"\"],\"cloned_from\":\"CourseD_Dance_2020_09_grade5\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "repeat_loops": 1,
+    "events": 1
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="Dancelab_whenSetup" deletable="false" movable="false">
+          <statement name="DO">
+            <block type="Dancelab_setBackgroundEffectWithPalette">
+              <title name="PALETTE">"neon"</title>
+              <title name="EFFECT">"squiggles"</title>
+              <next>
+                <block type="Dancelab_makeNewDanceSpriteGroup">
+                  <title name="N">16</title>
+                  <title name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">"ROBOT"</title>
+                  <title name="LAYOUT">"border"</title>
+                  <next>
+                    <block type="Dancelab_makeAnonymousDanceSprite">
+                      <title name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">"UNICORN"</title>
+                      <title name="LOCATION">{x: 200, y: 200}</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+        <block type="Dancelab_everySeconds">
+          <title name="N">2</title>
+          <title name="UNIT">"measures"</title>
+          <statement name="DO">
+            <block type="Dancelab_setBackgroundEffectWithPalette">
+              <title name="PALETTE">"rave"</title>
+              <title name="EFFECT">"rand"</title>
+              <next>
+                <block type="Dancelab_changeMoveEachLR">
+                  <title name="GROUP">sprites</title>
+                  <title name="MOVE">"rand"</title>
+                  <title name="DIR">-1</title>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="Dancelab_setBackgroundEffectWithPalette">
+          <title name="PALETTE">"tropical"</title>
+          <title name="EFFECT">"rand"</title>
+        </block>
+        <block type="Dancelab_makeAnonymousDanceSprite">
+          <title name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">"UNICORN"</title>
+          <title name="LOCATION">{x: 200, y: 200}</title>
+        </block>
+        <block type="Dancelab_makeNewDanceSpriteGroup">
+          <title name="N">5</title>
+          <title name="COSTUME" config="&quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">"ROBOT"</title>
+          <title name="LAYOUT">"random"</title>
+        </block>
+        <block type="Dancelab_changeMoveEachLR">
+          <title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">"ROBOT"</title>
+          <title name="MOVE">"rand"</title>
+          <title name="DIR">-1</title>
+        </block>
+        <block type="Dancelab_doMoveEachLR">
+          <title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">"ROBOT"</title>
+          <title name="MOVE">"rand"</title>
+          <title name="DIR">-1</title>
+        </block>
+        <block type="Dancelab_changePropEachBy" id="6">
+          <title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">sprites</title>
+          <title name="PROPERTY">"scale"</title>
+          <title name="VAL">10</title>
+        </block>
+        <block type="Dancelab_setPropRandomEach" id="7">
+          <title name="GROUP" config="sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;, &quot;SLOTH&quot;">sprites</title>
+          <title name="PROPERTY">"scale"</title>
+        </block>
+        <block type="Dancelab_atTimestamp">
+          <title name="TIMESTAMP">4</title>
+          <title name="UNIT">"measures"</title>
+        </block>
+        <block type="Dancelab_whenKey">
+          <title name="KEY">"up"</title>
+        </block>
+        <block type="Dancelab_everySeconds">
+          <title name="N">2</title>
+          <title name="UNIT">"measures"</title>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Dancelab>

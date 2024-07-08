@@ -58,6 +58,13 @@ class Policies::LtiTest < ActiveSupport::TestCase
     assert_nil Policies::Lti.find_platform_by_issuer(invalid_issuer)
   end
 
+  test 'find_platform_name_by_issuer should return the platform name (string) or empty string if it does not exist' do
+    valid_issuer = 'https://canvas.instructure.com'
+    invalid_issuer = 'https://fake.com'
+    assert Policies::Lti.find_platform_name_by_issuer(valid_issuer)
+    assert_empty Policies::Lti.find_platform_name_by_issuer(invalid_issuer)
+  end
+
   test 'lti_provided_email should return the :email stored in the LTI option given LTI user' do
     user = create :teacher, :with_lti_auth
     assert_equal user.email, Policies::Lti.lti_provided_email(user)
@@ -78,6 +85,54 @@ class Policies::LtiTest < ActiveSupport::TestCase
 
   test 'lti_teacher returns true if instructor' do
     assert_equal true, Policies::Lti.lti_teacher?(['http://purl.imsglobal.org/vocab/lis/v1/institution/person#Instructor'])
+  end
+
+  def create_opted_out_user
+    user = create :student, :with_lti_auth
+    user.lms_landing_opted_out = false
+    user.save
+
+    user
+  end
+
+  test 'account_linking returns true if session initialized, single LTI auth, and not opted out' do
+    user = create_opted_out_user
+
+    session = {}
+    Services::Lti.initialize_lms_landing_session(session, 'canvas_cloud', 'new', user.user_type)
+
+    assert_equal true, Policies::Lti.account_linking?(session, user)
+  end
+
+  test 'account_linking returns false if session is not initialized' do
+    user = create_opted_out_user
+
+    session = {}
+
+    assert_equal false, Policies::Lti.account_linking?(session, user)
+  end
+
+  test 'account_linking returns false if session initialized, with multiple LTI auth' do
+    user = create_opted_out_user
+    google_auth = create(:google_authentication_option, user: user)
+    user.authentication_options << google_auth
+    user.save
+
+    session = {}
+    Services::Lti.initialize_lms_landing_session(session, 'canvas_cloud', 'new', user.user_type)
+
+    assert_equal false, Policies::Lti.account_linking?(session, user)
+  end
+
+  test 'account_linking returns false if session initialized, single LTI auth, and opted out' do
+    user = create_opted_out_user
+    user.lms_landing_opted_out = true
+    user.save
+
+    session = {}
+    Services::Lti.initialize_lms_landing_session(session, 'canvas_cloud', 'new', user.user_type)
+
+    assert_equal false, Policies::Lti.account_linking?(session, user)
   end
 
   test 'show_email_input?' do

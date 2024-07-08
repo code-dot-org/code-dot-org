@@ -1,8 +1,9 @@
 import _ from 'lodash';
-import cdoBlockStyles from './blockly/themes/cdoBlockStyles';
-import xml from './xml';
-import MetricsReporter from './lib/metrics/MetricsReporter';
+
 import {BlockColors, BlockStyles, EMPTY_OPTION} from './blockly/constants';
+import cdoBlockStyles from './blockly/themes/cdoBlockStyles';
+import MetricsReporter from './lib/metrics/MetricsReporter';
+import xml from './xml';
 
 const styleTypes = Object.keys(cdoBlockStyles);
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];

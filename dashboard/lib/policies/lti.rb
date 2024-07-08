@@ -141,6 +141,10 @@ class Policies::Lti
     !user.authentication_options.empty? && user.authentication_options.any?(&:lti?)
   end
 
+  def self.only_lti_auth?(user)
+    user.authentication_options&.length == 1 && user.authentication_options.first.lti?
+  end
+
   def self.issuer(user)
     auth_options = user.authentication_options.find(&:lti?)
     if auth_options
@@ -160,6 +164,11 @@ class Policies::Lti
 
   def self.find_platform_by_issuer(issuer)
     LMS_PLATFORMS.values.find {|platform| platform[:issuer] == issuer}
+  end
+
+  def self.find_platform_name_by_issuer(issuer)
+    platform_name, _ = LMS_PLATFORMS.find {|_, platform| platform[:issuer] == issuer}
+    platform_name.to_s
   end
 
   # Returns the email provided by the LMS when creating the User through LTI
@@ -213,5 +222,9 @@ class Policies::Lti
   # Check if a partial registration is in progress for an LTI user.
   def self.lti_registration_in_progress?(session)
     PartialRegistration.in_progress?(session) && PartialRegistration.get_provider(session) == AuthenticationOption::LTI_V1
+  end
+
+  def self.account_linking?(session, user)
+    session[:lms_landing].present? && only_lti_auth?(user) && !user.lms_landing_opted_out
   end
 end

@@ -1,20 +1,21 @@
-import React from 'react';
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {assert, expect} from 'chai';
-import {Factory} from 'rosie';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import {FormControl} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import '../workshopFactory';
+import {Provider} from 'react-redux';
+import {MemoryRouter} from 'react-router-dom';
+import {createStore, combineReducers} from 'redux';
+import {Factory} from 'rosie';
+import sinon from 'sinon';
+
+import {WorkshopForm} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_form';
 import Permission, {
   WorkshopAdmin,
   ProgramManager,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
-import {WorkshopForm} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_form';
-import '../workshopFactory';
 import {Subjects} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import {Provider} from 'react-redux';
-import {MemoryRouter} from 'react-router-dom';
 import mapboxReducer from '@cdo/apps/redux/mapbox';
-import {createStore, combineReducers} from 'redux';
-import sinon from 'sinon';
 
 // Returns a fake "today" for the stubbed out "getToday" method in workshop_form.jsx.
 // isEndOfYear:
@@ -533,6 +534,30 @@ describe('WorkshopForm test', () => {
     assert(wrapper.find('#suppress_email').exists());
     assert(wrapper.find('#suppress_email').first().props().value);
     assert(wrapper.find('#suppress_email').first().props().disabled);
+  });
+
+  it('selecting Build Your Own Workshop does not show subject, paid, or email fields', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            today={getFakeToday(false)}
+            readOnly={false}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    const courseField = wrapper.find('#course').first();
+    courseField.simulate('change', {
+      target: {name: 'course', value: 'Build Your Own Workshop'},
+    });
+
+    expect(wrapper.find('#subject')).to.have.lengthOf(0);
+    expect(wrapper.find('#funded')).to.have.lengthOf(0);
+    expect(wrapper.find('#suppress_email')).to.have.lengthOf(0);
   });
 
   it('editing form as non-admin does not show organizer field', () => {

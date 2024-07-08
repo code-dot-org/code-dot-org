@@ -1,10 +1,8 @@
 /** @file The Bob character panel from the crypto widget */
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import CharacterPanel from './CharacterPanel';
-import NumberedSteps, {Step} from './NumberedSteps';
-import IntegerField from './IntegerField';
-import IntegerTextbox from './IntegerTextbox';
 import {
   PublicModulusDropdown,
   SecretNumberDropdown,
@@ -14,6 +12,9 @@ import {
   KeywordPublicNumber,
   KeywordSecretNumber,
 } from './cryptographyFields';
+import IntegerField from './IntegerField';
+import IntegerTextbox from './IntegerTextbox';
+import NumberedSteps, {Step} from './NumberedSteps';
 import {COLORS} from './style';
 
 const INITIAL_STATE = {

@@ -3,11 +3,20 @@ import React from 'react';
 import sinon from 'sinon';
 
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {registerReducers, stubRedux} from '@cdo/apps/redux';
+import commonReducers from '@cdo/apps/redux/commonReducers';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {UnconnectedLoginTypePicker as LoginTypePicker} from '@cdo/apps/templates/teacherDashboard/LoginTypePicker';
 
 import {expect} from '../../../util/reconfiguredChai';
 
 describe('LoginTypePicker', () => {
+  beforeEach(() => {
+    stubRedux();
+    registerReducers(commonReducers);
+    registerReducers({currentUser});
+  });
+
   it('sends analytic event when a login type is selected', () => {
     const wrapper = shallow(
       <LoginTypePicker

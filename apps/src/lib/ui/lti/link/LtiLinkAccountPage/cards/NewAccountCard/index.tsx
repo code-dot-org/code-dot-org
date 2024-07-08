@@ -8,28 +8,57 @@ import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import styles from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/link-account.module.scss';
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
-import React, {useContext, useRef} from 'react';
+import React, {useContext, useRef, useState} from 'react';
 import i18n from '@cdo/locale';
 import {LtiProviderContext} from '../../context';
 import DCDO from '@cdo/apps/dcdo';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import {navigateToHref} from '@cdo/apps/utils';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 const NewAccountCard = () => {
-  const {ltiProviderName, newAccountUrl, emailAddress} =
+  const {ltiProviderName, newAccountUrl, emailAddress, userType} =
     useContext(LtiProviderContext)!;
   const finishSignupFormRef = useRef<HTMLFormElement>(null);
   const isStudentEmailPostEnabled = DCDO.get(
     'student-email-post-enabled',
     false
   );
+  const [isSaving, setIsSaving] = useState(false);
 
-  const handleNewAccountSubmit = () => {
+  const handleNewAccountSaved = () => {
+    const eventPayload = {
+      lms_name: ltiProviderName,
+      user_type: userType,
+    };
+    analyticsReporter.sendEvent(
+      'lti_new_account_click',
+      eventPayload,
+      PLATFORMS.STATSIG
+    );
     if (isStudentEmailPostEnabled) {
       finishSignupFormRef.current?.submit();
     } else {
       navigateToHref(newAccountUrl);
     }
+  };
+
+  const handleNewAccountSubmit = async () => {
+    setIsSaving(true);
+
+    fetch('/lti/v1/account_linking/new_account', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': await getAuthenticityToken(),
+      },
+    }).then(response => {
+      if (response.ok) {
+        handleNewAccountSaved();
+      }
+    });
   };
 
   return (
@@ -65,6 +94,8 @@ const NewAccountCard = () => {
           color={buttonColors.white}
           size="l"
           text={i18n.ltiLinkAccountNewAccountCardActionLabel()}
+          isPending={isSaving}
+          disabled={isSaving}
           onClick={handleNewAccountSubmit}
         />
       </CardActions>

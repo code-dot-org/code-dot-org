@@ -1,10 +1,12 @@
-import LtiDynamicRegistrationPage from '@cdo/apps/lib/ui/lti/registration/LtiDynamicRegistrationPage';
 import {fireEvent, render, screen} from '@testing-library/react';
-import React from 'react';
-import {expect} from '../../../../../util/reconfiguredChai';
-import i18n from '@cdo/locale';
 import $ from 'jquery';
+import React from 'react';
 import sinon from 'sinon';
+
+import LtiDynamicRegistrationPage from '@cdo/apps/lib/ui/lti/registration/LtiDynamicRegistrationPage';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../../../util/reconfiguredChai';
 
 const MOCK_DATA = {
   email: 'test@code.org',

@@ -1,17 +1,19 @@
-import {DetailViewContents} from '@cdo/apps/code-studio/pd/application_dashboard/detail_view_contents';
+import {render, screen, fireEvent, within} from '@testing-library/react';
+import _ from 'lodash';
+import React from 'react';
+import {Provider} from 'react-redux';
+import {BrowserRouter as Router} from 'react-router-dom';
+
 import {
   getApplicationStatuses,
   ScholarshipStatusRequiredStatuses,
 } from '@cdo/apps/code-studio/pd/application_dashboard/constants';
+import {DetailViewContents} from '@cdo/apps/code-studio/pd/application_dashboard/detail_view_contents';
 import {PrincipalApprovalState} from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import React from 'react';
-import {render, screen, fireEvent, within} from '@testing-library/react';
-import {Provider} from 'react-redux';
-import _ from 'lodash';
+import {getStore, restoreRedux, stubRedux} from '@cdo/apps/redux';
+
 import {assert, expect} from '../../../../util/reconfiguredChai';
 import {allowConsoleWarnings} from '../../../../util/testUtils';
-import {getStore, restoreRedux, stubRedux} from '@cdo/apps/redux';
-import {BrowserRouter as Router} from 'react-router-dom';
 
 describe('DetailViewContents', () => {
   allowConsoleWarnings();

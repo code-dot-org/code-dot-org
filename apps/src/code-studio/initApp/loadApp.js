@@ -24,7 +24,7 @@ import trackEvent from '../../util/trackEvent';
 import msg from '@cdo/locale';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const SHARE_IMAGE_NAME = '_share_image.png';
 
@@ -63,11 +63,15 @@ export function setupApp(appOptions) {
       const isViewingStudent = !!queryParams('user_id');
       const teacherViewingStudentWork = isTeacher && isViewingStudent;
       if (teacherViewingStudentWork) {
-        analyticsReporter.sendEvent(EVENTS.TEACHER_VIEWING_STUDENT_WORK, {
-          unitId: appOptions.serverScriptId,
-          levelId: appOptions.serverLevelId,
-          sectionId: queryParams('section_id'),
-        });
+        analyticsReporter.sendEvent(
+          EVENTS.TEACHER_VIEWING_STUDENT_WORK,
+          {
+            unitId: appOptions.serverScriptId,
+            levelId: appOptions.serverLevelId,
+            sectionId: queryParams('section_id'),
+          },
+          PLATFORMS.BOTH
+        );
       }
 
       if (

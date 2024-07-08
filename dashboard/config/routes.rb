@@ -26,6 +26,7 @@ Dashboard::Application.routes.draw do
     resources :user_levels, only: [:update, :destroy]
     post '/delete_predict_level_progress', to: 'user_levels#delete_predict_level_progress'
     get '/user_levels/get_token', to: 'user_levels#get_token'
+    get '/user_levels/level_source/:script_id/:level_id', to: 'user_levels#get_level_source'
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
@@ -60,6 +61,8 @@ Dashboard::Application.routes.draw do
         get 'test'
       end
     end
+
+    resources :images, only: [:new]
 
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
@@ -233,6 +236,8 @@ Dashboard::Application.routes.draw do
     put '/featured_projects/:channel_id/unfeature', to: 'featured_projects#unfeature'
     put '/featured_projects/:channel_id/feature', to: 'featured_projects#feature'
     put '/featured_projects/:channel_id/bookmark', to: 'featured_projects#bookmark'
+
+    get 'projects/:channel_id/extra_links', to: 'projects#extra_links'
 
     resources :projects, path: '/projects/', only: [:index] do
       collection do
@@ -629,7 +634,9 @@ Dashboard::Application.routes.draw do
         namespace :account_linking do
           get :landing
           get :existing_account
+          get :finish_link
           post :link_email
+          post :new_account
         end
       end
     end

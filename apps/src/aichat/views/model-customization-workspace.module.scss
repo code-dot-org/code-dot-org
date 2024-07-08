@@ -1,5 +1,6 @@
 @import 'color';
 @import '../../mixins.scss';
+@import './aichat-common.module.scss';
 
 %full-width {
   width: 100%;
@@ -7,9 +8,20 @@
 }
 
 .modelCustomizationWorkspace {
+  @extend %panel-section;
   height: 100%;
   display: flex;
   flex-direction: column;
+  background: $light_white;
+
+  .tabsContainer {
+    background-color: #EAEBEB
+  }
+
+  .tabPanels {
+    padding: 16px;
+    height: 100%;
+  }
 
   textarea {
     @extend %full-width;
@@ -47,7 +59,7 @@
 
 .customizationContainer {
   overflow-y: auto;
-  height: 65vh;
+  height: 62vh;
 }
 
 .footerButtonContainer {

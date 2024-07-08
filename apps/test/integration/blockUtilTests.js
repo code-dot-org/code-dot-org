@@ -1,9 +1,11 @@
-import {assert} from '../util/reconfiguredChai';
-import {setupTestBlockly} from './util/testBlockly';
 import {parseElement} from '@cdo/apps/xml';
 
-var requiredBlockUtils = require('@cdo/apps/required_block_utils');
+import {assert} from '../util/reconfiguredChai';
+
+import {setupTestBlockly} from './util/testBlockly';
+
 var blockUtils = require('@cdo/apps/block_utils');
+var requiredBlockUtils = require('@cdo/apps/required_block_utils');
 
 describe('blockUtils', function () {
   beforeEach(function () {

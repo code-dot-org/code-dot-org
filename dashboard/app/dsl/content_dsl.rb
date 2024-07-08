@@ -9,6 +9,8 @@ class ContentDSL < LevelDSL
   def type(text) @hash[:type] = text end
   def submittable(text) @hash[:submittable] = text end
   def display_name(text) @hash[:display_name] = text end
+  def bubble_choice_description(text) @hash[:bubble_choice_description] = text end
+  def thumbnail_url(text) @hash[:thumbnail_url] = text end
   def display_as_unplugged(text) @hash[:display_as_unplugged] = text end
   def use_large_video_player(text) @hash[:use_large_video_player] = text end
   def hide_reference_area(text) @hash[:hide_reference_area] = text end

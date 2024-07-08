@@ -1,14 +1,16 @@
+import Firebase from 'firebase';
 import $ from 'jquery';
 import _ from 'lodash';
+
+import {installCustomBlocks} from '@cdo/apps/block_utils';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
-import {assert} from '../../util/reconfiguredChai';
 import {
   getConfigRef,
   getProjectDatabase,
 } from '@cdo/apps/storage/firebaseUtils';
-import Firebase from 'firebase';
+
 import MockFirebase from '../../util/MockFirebase';
-import {installCustomBlocks} from '@cdo/apps/block_utils';
+import {assert} from '../../util/reconfiguredChai';
 
 var testCollectionUtils = require('./testCollectionUtils');
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_05_22_163806) do
+ActiveRecord::Schema.define(version: 2024_07_02_214406) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 2024_05_22_163806) do
     t.boolean "thumbs_down"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "details"
     t.index ["ai_tutor_interaction_id", "user_id"], name: "index_ai_tutor_feedback_on_interaction_and_user", unique: true
     t.index ["user_id"], name: "fk_rails_105c1f9428"
   end
@@ -425,6 +426,15 @@ ActiveRecord::Schema.define(version: 2024_05_22_163806) do
     t.datetime "published_date"
     t.integer "self_paced_pl_course_offering_id"
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
+  end
+
+  create_table "course_offerings_pd_workshops", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.bigint "pd_workshop_id", null: false
+    t.bigint "course_offering_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["course_offering_id"], name: "index_course_offerings_pd_workshops_on_course_offering_id"
+    t.index ["pd_workshop_id"], name: "index_course_offerings_pd_workshops_on_pd_workshop_id"
   end
 
   create_table "course_scripts", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
