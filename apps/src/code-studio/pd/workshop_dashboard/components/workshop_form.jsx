@@ -1209,7 +1209,9 @@ export class WorkshopForm extends React.Component {
                               style={styles.check}
                               name={object.display_name}
                               label={object.display_name}
-                              onChange={e => this.handleTopicSelect(object.id, e)}
+                              onChange={e =>
+                                this.handleTopicSelect(object.id, e)
+                              }
                               value={this.state.plTopics.includes(object.id)}
                             />
                           </li>
