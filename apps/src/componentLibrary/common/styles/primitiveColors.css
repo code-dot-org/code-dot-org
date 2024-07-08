@@ -22,6 +22,7 @@
     --accent-orange-80: #ad7000;
     --accent-orange-90: #855500;
     --accent-strawberry-10: #ffe3e3;
+    --accent-strawberry-100: #430d0d;
     --accent-strawberry-20: #ffcdcd;
     --accent-strawberry-30: #ffabab;
     --accent-strawberry-40: #f88585;
@@ -30,7 +31,6 @@
     --accent-strawberry-70: #a93737;
     --accent-strawberry-80: #872626;
     --accent-strawberry-90: #651818;
-    --accent-strawberry-strawberry-100: #430d0d;
     --brand-aqua-10: #ebfffe;
     --brand-aqua-100: #005552;
     --brand-aqua-20: #bffffc;
@@ -108,6 +108,7 @@
     --sentiment-error-70: #aa2513;
     --sentiment-error-80: #842418;
     --sentiment-error-90: #6a1b11;
+    --sentiment-information-10: #dceffb;
     --sentiment-information-100: #0b2946;
     --sentiment-information-20: #bde0fa;
     --sentiment-information-30: #83c7f6;
@@ -117,7 +118,6 @@
     --sentiment-information-70: #0a5a9a;
     --sentiment-information-80: #0d4d7f;
     --sentiment-information-90: #10416a;
-    --sentiment-information-info-10: #dceffb;
     --sentiment-success-10: #e2f6e2;
     --sentiment-success-100: #0e360f;
     --sentiment-success-20: #c7ecc6;
@@ -137,7 +137,5 @@
     --sentiment-warning-60: #e9ae09;
     --sentiment-warning-70: #c88504;
     --sentiment-warning-80: #a05f08;
-    --sentiment-warning-90: #806319;
-
+    --sentiment-warning-90: #7d4b07;
 }
-
