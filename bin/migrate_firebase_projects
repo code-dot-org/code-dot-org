@@ -21,7 +21,7 @@
 # TODO: post-firebase-cleanup, remove this script #56994
 
 # If DRY_RUN: run SQL in a transaction but rollback before committing
-DRY_RUN = false
+DRY_RUN = true
 
 # De-duplicate tables: see if the records exactly match an existing shared
 # table and link it to that using is_shared_table instead of copying the records
@@ -278,7 +278,7 @@ def replace_trailing_spaces_with_underscore(str)
   str.rstrip + ("_" * trailing_spaces_count)
 end
 
-def do_migration_patchup_trailing_spaces(project_id, kvps, tables)
+def do_migration_patchup_trailing_spaces(channel_id, project_id, kvps, tables)
   # Datablock Storage can't tell the difference between 'key ' and 'key' due
   # to quirks in how MySQL indexes work. If we get a failed transaction,
   # we first replace trailing spaces with underscores, and then try again
@@ -287,10 +287,10 @@ def do_migration_patchup_trailing_spaces(project_id, kvps, tables)
   message += "Failed to do transaction:\n"
   kvps.each do |kvp|
     key = kvp[:key]
+    # These are all variations of a chat app
     if key.start_with?("takenusername", "userTaken")
       return nil
     end
-    return nil if key.start_with?("takenusername", "userTaken")
     newkey = replace_trailing_spaces_with_underscore(key)
     message += "\tRenaming key: #{kvp[:key].inspect} -> #{newkey.inspect}\n" if key != newkey
     kvp[:key] = newkey
@@ -298,24 +298,33 @@ def do_migration_patchup_trailing_spaces(project_id, kvps, tables)
   tables.each do |table|
     table_name = table[:table][:table_name]
     newtablename = replace_trailing_spaces_with_underscore(table_name)
-    message += "\tRenaming table: #{table[:table][:table_name]} -> #{newtablename}\n" if table_name != newtablename
+    message += "\tRenaming table: #{table[:table][:table_name].inspect} -> #{newtablename.inspect}\n" if table_name != newtablename
+    table[:records].each do |record|
+      record[:table_name] = newtablename
+    end
     table[:table][:table_name] = newtablename
   end
   begin
     do_migration_transaction(project_id, tables, kvps)
-  rescue ActiveRecord::RecordNotUnique
+  rescue ActiveRecord::RecordNotUnique => exception
     message += "\n"
-    message += "\tSECOND FAILURE\n"
+    message += "\tSECOND FAILURE on #{channel_id}\n"
+    message += "\ttable defs:\n"
+    tables.each do |table|
+      message += "\t#{table[:table].inspect}\n"
+    end
     message += "\tkvps:\n"
     kvps.each do |kvp|
-      message += "\t\t#{kvp[:key]}\n"
+      message += "\t\t#{kvp[:key].inspect}\n"
     end
     message += "\ttables:\n"
     tables.each do |table|
-      message += "\t\t#{table[:table][:table_name]}\n"
+      message += "\t\t#{table[:table][:table_name].inspect}\n"
     end
     message += "\tEND SECOND FAILURE\n"
     puts message
+    puts
+    puts exception.message
     raise
   end
 end
@@ -336,7 +345,7 @@ def migrate(channel_id)
   begin
     do_migration_transaction(project_id, tables, kvps)
   rescue ActiveRecord::RecordNotUnique
-    do_migration_patchup_trailing_spaces(project_id, kvps, tables)
+    do_migration_patchup_trailing_spaces(channel_id, project_id, kvps, tables)
   end
 end
 
