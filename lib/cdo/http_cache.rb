@@ -138,6 +138,7 @@ class HttpCache
     default_cookies = DEFAULT_COOKIES + [user_type, limit_project_types, assumed_identity]
 
     # Allow the DCDO cookie if the cookie DCDO feature is enabled.
+    CDO.log.info("CDO.use_cookie_dcdo: #{CDO.use_cookie_dcdo.inspect}")
     if CDO.use_cookie_dcdo
       require 'cdo/rack/cookie_dcdo'
       default_cookies << Rack::CookieDCDO::KEY
