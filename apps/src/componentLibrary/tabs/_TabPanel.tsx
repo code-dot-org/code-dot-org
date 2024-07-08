@@ -6,7 +6,6 @@ interface TabPanelProps {
   id: string;
   /* The ID of the button element that controls this panel's visibility. */
   labelledBy: string;
-  className?: string;
 }
 
 const _TabPanel: React.FunctionComponent<TabPanelProps> = ({
@@ -14,15 +13,8 @@ const _TabPanel: React.FunctionComponent<TabPanelProps> = ({
   isActive,
   id,
   labelledBy,
-  className,
 }) => (
-  <div
-    role="tabpanel"
-    id={id}
-    aria-labelledby={labelledBy}
-    hidden={!isActive}
-    className={className}
-  >
+  <div role="tabpanel" id={id} aria-labelledby={labelledBy} hidden={!isActive}>
     {content}
   </div>
 );

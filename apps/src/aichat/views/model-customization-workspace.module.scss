@@ -23,10 +23,10 @@
     padding: 16px 0;
     flex: 1;
     overflow: hidden;
-  }
 
-  .tabPanel {
-    height: 100%;
+    > div {
+      height: 100%;
+    }
   }
 
   textarea {

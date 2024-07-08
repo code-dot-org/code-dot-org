@@ -107,7 +107,6 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
             isActive={tab.value === selectedTabValue}
             id={`${nameStripped}-panel-${tab.value}`}
             labelledBy={`${nameStripped}-tab-${tab.value}`}
-            className={tab.className}
           />
         ))}
       </div>

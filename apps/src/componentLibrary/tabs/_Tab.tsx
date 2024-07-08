@@ -27,8 +27,6 @@ export interface TabModel {
   tabContent: React.ReactNode;
   /** Is tab disabled */
   disabled?: boolean;
-  /** Custom class name for the container that wraps this tab */
-  className?: string;
 }
 
 interface TabsProps extends TabModel {
