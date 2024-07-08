@@ -63,14 +63,14 @@ class LessonOverview extends Component {
     );
   }
 
-  recordAndNavigateToPdf = (e, firehoseKey, url) => {
-    // Prevent navigation to url until callback
-    e.preventDefault();
+  recordAndHandleResource = (e, firehoseKey, action, url = null) => {
+    e.preventDefault(); // Prevent navigation to url until callback
+    const event = action === 'navigate' ? 'open-pdf' : 'print-from-browser';
     firehoseClient.putRecord(
       {
         study: 'pdf-click',
         study_group: 'lesson',
-        event: 'open-pdf',
+        event: event,
         data_json: JSON.stringify({
           name: this.props.lesson.key,
           pdfType: firehoseKey,
@@ -79,7 +79,11 @@ class LessonOverview extends Component {
       {
         includeUserId: true,
         callback: () => {
-          window.location.href = url;
+          if (action === 'navigate' && url) {
+            window.location.href = url; // Navigate to the URL
+          } else if (action === 'print') {
+            window.print(); // Trigger the print dialog
+          }
         },
       }
     );
@@ -113,16 +117,14 @@ class LessonOverview extends Component {
 
   renderPrintOptions = () => {
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
-    const handlePrint = e => {
-      e.preventDefault(); // Prevent the default link behavior
-      window.print(); // Trigger the print dialog
-    };
 
     if (pdfDropdownOptions.length > 0 && userLocale === 'en-US') {
       return pdfDropdownOptions.map(option => (
         <a
           key={option.key}
-          onClick={e => this.recordAndNavigateToPdf(e, option.key, option.url)}
+          onClick={e =>
+            this.recordAndHandleResource(e, option.key, 'navigate', option.url)
+          }
           href={option.url}
         >
           {option.name}
@@ -130,7 +132,11 @@ class LessonOverview extends Component {
       ));
     } else {
       return [
-        <a key="windowPrint" href="#" onClick={handlePrint}>
+        <a
+          key="windowPrint"
+          onClick={e => this.recordAndHandleResource(e, 'windowPrint', 'print')}
+          href="#"
+        >
           {i18n.printLessonPlan()}
         </a>,
       ];
