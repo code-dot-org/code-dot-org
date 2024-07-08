@@ -1,11 +1,11 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import SwapLayoutButton from '@codebridge/SwapLayoutButton';
 import {ProjectFile, ConfigType, PreviewComponent} from '@codebridge/types';
 import {previewFileType} from '@codebridge/utils';
 import React, {useState, useEffect} from 'react';
 
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 
-import HeaderButtons from './HeaderButtons';
 import {HTMLPreview} from './HTMLPreview';
 
 import moduleStyles from './styles/previewContainer.module.scss';
@@ -72,7 +72,7 @@ export const PreviewContainer = () => {
     <PanelContainer
       id="editor-workspace"
       headerContent={headerContent}
-      rightHeaderContent={<HeaderButtons />}
+      rightHeaderContent={<SwapLayoutButton />}
       className={moduleStyles.previewContainer}
     >
       <select
