@@ -37,6 +37,25 @@ const defaultProject: ProjectSources = {
   },
 };
 
+const labeledGridLayouts = {
+  horizontal: {
+    gridLayoutRows: '1fr 1fr 1fr 48px',
+    gridLayoutColumns: '300px minmax(0, 1fr)',
+    gridLayout: `
+  "info-panel workspace"
+  "file-browser workspace"
+  "file-browser console"
+  "file-browser control-buttons"`,
+  },
+  vertical: {
+    gridLayoutRows: '1fr 1fr 48px',
+    gridLayoutColumns: '300px minmax(0, 1fr) minmax(0, 1fr)',
+    gridLayout: `
+    "info-panel workspace console"
+    "file-browser workspace console"
+    "file-browser control-buttons control-buttons"`,
+  },
+};
 const defaultConfig: ConfigType = {
   activeLeftNav: 'Files',
   languageMapping: pythonlabLangMapping,
@@ -67,14 +86,9 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  gridLayoutRows: '1fr 1fr 1fr 48px',
-  gridLayoutColumns: '300px minmax(0, 1fr)',
-  gridLayout: `
-    "info-panel workspace"
-    "file-browser workspace"
-    "file-browser console"
-    "file-browser control-buttons"
-  `,
+
+  labeledGridLayouts,
+  activeGridLayout: 'horizontal',
 };
 
 const PythonlabView: React.FunctionComponent = () => {
