@@ -13,7 +13,7 @@ import {
   InputGroup,
   Table,
 } from 'react-bootstrap';
-// eslint-enable no-restricted-imports
+/* eslint-enable no-restricted-imports */
 import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
