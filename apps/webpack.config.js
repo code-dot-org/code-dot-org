@@ -109,7 +109,7 @@ const nodePolyfillConfig = {
         if (!circularDependenciesSet.has(pathString)) {
           compilation.errors.push(
             new Error(
-              `Circular Dependency Checker : A new Circular Dependency found.\nKnown circular dependencies can be found in 'apps/circular_dependencies.json'\n Circular dependency: ${pathString}.`
+              `Circular Dependency Checker : A new Circular Dependency found.\nKnown circular dependencies can be found in 'apps/circular_dependencies.json'\n Circular dependency: ${pathString}`
             )
           );
         }
@@ -122,7 +122,9 @@ const nodePolyfillConfig = {
         if (seenCircles.size > 0) {
           compilation.warnings.push(
             new Error(
-              `Circular Dependency Checker : Resolved circular dependencies can be removed from circular_dependencies.json :\n  ${Array.from(
+              `Circular Dependency Checker : ${
+                Array.from(seenCircles).length
+              } resolved circular dependencies can be removed from circular_dependencies.json :\n  ${Array.from(
                 seenCircles
               ).join('\n  ')}`
             )
