@@ -197,9 +197,15 @@ def fetch_datablock_tables(channel, project_id)
     datablock_tables << {table: datablock_table, records: datablock_records}
   end
 
+  # Sort shared_tables to the end so if we have to truncate to make the max table count (10)
+  # we truncate shared_tables first.
+  datablock_tables.sort_by! {|table| table[:table][:is_shared_table].nil? ? 0 : 1}
+
   current_tables = channel["current_tables"]
   current_tables = {} unless current_tables.is_a? Hash
-  datablock_tables += current_tables.map do |table_name, _value|
+  current_tables = current_tables.keys
+
+  datablock_tables += current_tables.map do |table_name|
     {
       table: {
         project_id: project_id,
@@ -212,7 +218,7 @@ def fetch_datablock_tables(channel, project_id)
     }
   end
 
-  datablock_tables
+  datablock_tables[0...10]
 end
 
 def fetch_datablock_kvps(channel, project_id)
