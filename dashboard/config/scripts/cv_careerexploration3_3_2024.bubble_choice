@@ -1,6 +1,6 @@
 name 'CV_CareerExploration3_3_2024'
-display_name 'Computer Vision in Action in Healthcare'
-description 'While the usage of computer vision will grow at a rapid pace and transform the whole healthcare industry, how is computer vision used today? Explore one of the ways below:'
+display_name 'Computer Vision in Healthcare'
+description 'While the usage of computer vision will grow at a rapid pace and transform the whole healthcare industry, how is computer vision used today? Explore one of the ways below.'
 
 sublevels
 level 'CV_CareerExploration3_3a_2024'

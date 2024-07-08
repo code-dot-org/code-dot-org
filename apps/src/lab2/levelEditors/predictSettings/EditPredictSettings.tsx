@@ -22,7 +22,6 @@ const EditPredictSettings: React.FunctionComponent<
     allowMultipleAttempts: false,
     placeholderText: '',
     multipleChoiceOptions: [''],
-    multipleChoiceAnswers: [],
     freeResponseHeight: 20,
   };
 
@@ -45,6 +44,7 @@ const EditPredictSettings: React.FunctionComponent<
     setPredictSettings({
       ...predictSettings,
       questionType: e.target.value as PredictQuestionType,
+      solution: '', // Reset solution as it is used by both question types.
     });
   };
 

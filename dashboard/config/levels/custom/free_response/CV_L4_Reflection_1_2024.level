@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2024-06-17T22:34:22.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# Analyzing Data\r\n\r\n#### What was one observation, question, or inference that you can make about the data that you have gathered based on your visualization?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
+    "long_instructions": "## Analyzing Data\r\n\r\nWhat was one observation, question, or inference that you can make about the data that you have gathered based on your visualization?",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -17,11 +18,10 @@
     "parent_level_id": 20662,
     "name_suffix": "_2024",
     "allow_multiple_attempts": "false",
-    "teacher_markdown": "Review the different analyses that students performed on their data in order to know which groups might need more assistance at the next stage of project development, in which they will be taking this observation / question / inference and turning it into a user persona that attempts to ***define*** the type of user that might use their product, and what problem they have that might be potentially solved with a computer vision application.\r\n"
+    "teacher_markdown": "Review the different analyses that students performed on their data in order to know which groups might need more assistance at the next stage of project development, in which they will be taking this observation, question, or inference and turning it into a user persona that attempts to define the type of user that might use their product, and what problem they have that might be potentially solved with a computer vision application.\r\n"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-06-17T22:34:22.322+00:00\",\"changed\":[\"cloned from \\\"CV_L4_Reflection_1\\\"\"],\"cloned_from\":\"CV_L4_Reflection_1\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-06-17T22:34:22.322+00:00\",\"changed\":[\"cloned from \\\"CV_L4_Reflection_1\\\"\"],\"cloned_from\":\"CV_L4_Reflection_1\"},{\"changed_at\":\"2024-07-04 18:26:57 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
