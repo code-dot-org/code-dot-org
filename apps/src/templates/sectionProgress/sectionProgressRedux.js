@@ -180,30 +180,32 @@ export default function sectionProgress(state = initialState, action) {
     };
   }
   if (action.type === ADD_EXPANDED_LESSON) {
-    if (!action.lesson.lockable && lessonHasLevels(action.lesson)) {
-      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_LESSON_EXPAND, {
-        sectionId: action.sectionId,
-        lessonId: action.lesson.id,
-      });
-
-      const newSectionExpandedLessonIds = _.uniq([
-        ...(state.expandedLessonIds[action.sectionId] || []),
-        action.lesson.id,
-      ]);
-      saveExpandedLessonIdsToLocalStorage(
-        action.scriptId,
-        action.sectionId,
-        newSectionExpandedLessonIds
-      );
-
-      return {
-        ...state,
-        expandedLessonIds: {
-          ...state.expandedLessonIds,
-          [action.sectionId]: newSectionExpandedLessonIds,
-        },
-      };
+    if (action.lesson.lockable && !lessonHasLevels(action.lesson)) {
+      return state;
     }
+
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_LESSON_EXPAND, {
+      sectionId: action.sectionId,
+      lessonId: action.lesson.id,
+    });
+
+    const newSectionExpandedLessonIds = _.uniq([
+      ...(state.expandedLessonIds[action.sectionId] || []),
+      action.lesson.id,
+    ]);
+    saveExpandedLessonIdsToLocalStorage(
+      action.scriptId,
+      action.sectionId,
+      newSectionExpandedLessonIds
+    );
+
+    return {
+      ...state,
+      expandedLessonIds: {
+        ...state.expandedLessonIds,
+        [action.sectionId]: newSectionExpandedLessonIds,
+      },
+    };
   }
   if (action.type === REMOVE_EXPANDED_LESSON) {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_LESSON_COLLAPSE, {
