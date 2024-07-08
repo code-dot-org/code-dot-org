@@ -29,7 +29,7 @@ const labeledGridLayouts = {
     "file-browser workspace preview-container"`,
   },
   vertical: {
-    gridLayoutRows: '300px minmax(0, 1fr)',
+    gridLayoutRows: '300px minmax(0, 1fr) 1fr',
     gridLayoutColumns: '300px minmax(0, 1fr) 1fr',
     gridLayout: `
     "info-panel workspace workspace"

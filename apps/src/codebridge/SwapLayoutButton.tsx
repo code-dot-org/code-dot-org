@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button';
 
@@ -20,25 +20,29 @@ import {useCodebridgeContext} from './codebridgeContext';
 const SwapLayoutButton: React.FunctionComponent = () => {
   const {config, setConfig} = useCodebridgeContext();
 
+  const iconName =
+    config.activeGridLayout === 'horizontal' ? 'table-columns' : 'table-rows';
+
+  const onClick = useCallback(
+    () =>
+      setConfig({
+        ...config,
+        activeGridLayout:
+          config.activeGridLayout === 'horizontal' ? 'vertical' : 'horizontal',
+      }),
+    [config, setConfig]
+  );
+
   if (!config.activeGridLayout || !config.labeledGridLayouts) {
     return null;
   }
 
-  const iconName =
-    config.activeGridLayout === 'horizontal' ? 'table-columns' : 'table-rows';
-
-  const callback = () =>
-    setConfig({
-      ...config,
-      activeGridLayout:
-        config.activeGridLayout === 'horizontal' ? 'vertical' : 'horizontal',
-    });
   return (
     <Button
       icon={{iconStyle: 'solid', iconName}}
       isIconOnly
       color={'black'}
-      onClick={callback}
+      onClick={onClick}
       ariaLabel={'change layout'}
       size={'xs'}
     />
