@@ -180,7 +180,7 @@ export default function sectionProgress(state = initialState, action) {
     };
   }
   if (action.type === ADD_EXPANDED_LESSON) {
-    if (action.lesson.lockable && !lessonHasLevels(action.lesson)) {
+    if (action.lesson.lockable || !lessonHasLevels(action.lesson)) {
       return state;
     }
 
