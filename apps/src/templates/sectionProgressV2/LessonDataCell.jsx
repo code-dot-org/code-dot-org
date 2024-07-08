@@ -18,7 +18,7 @@ import styles from './progress-table-v2.module.scss';
 function LessonDataCell({
   lesson,
   sectionId,
-  scriptId,
+  unitId,
   locked,
   studentLessonProgress,
   addExpandedLesson,
@@ -67,7 +67,7 @@ function LessonDataCell({
   };
 
   const expandLesson = interactive
-    ? () => addExpandedLesson(scriptId, sectionId, lesson)
+    ? () => addExpandedLesson(unitId, sectionId, lesson)
     : undefined;
 
   const lessonCellUnexpanded = getCellComponent(
@@ -100,11 +100,11 @@ export const UnconnectedLessonDataCell = LessonDataCell;
 export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId,
-    scriptId: state.unitSelection.scriptId,
+    unitId: state.unitSelection.scriptId,
   }),
   dispatch => ({
-    addExpandedLesson(scriptId, sectionId, lessonId) {
-      dispatch(addExpandedLesson(scriptId, sectionId, lessonId));
+    addExpandedLesson(unitId, sectionId, lessonId) {
+      dispatch(addExpandedLesson(unitId, sectionId, lessonId));
     },
   })
 )(LessonDataCell);
@@ -112,7 +112,7 @@ export default connect(
 LessonDataCell.propTypes = {
   locked: PropTypes.bool,
   sectionId: PropTypes.number,
-  scriptId: PropTypes.number,
+  unitId: PropTypes.number,
   studentLessonProgress: studentLessonProgressType,
   lesson: PropTypes.object.isRequired,
   addExpandedLesson: PropTypes.func.isRequired,

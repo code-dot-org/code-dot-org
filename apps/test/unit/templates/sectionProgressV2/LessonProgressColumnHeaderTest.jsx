@@ -15,7 +15,7 @@ const LESSON = fakeLessonWithLevels({numberedLesson: true}, 1);
 
 const DEFAULT_PROPS = {
   sectionId: 1,
-  scriptId: 1,
+  unitId: 1,
   lesson: LESSON,
   addExpandedLesson: () => {},
   allLocked: true,

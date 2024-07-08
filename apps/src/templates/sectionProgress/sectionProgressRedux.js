@@ -50,22 +50,22 @@ export const addDataByUnit = data => ({
   data,
 });
 
-export const loadExpandedLessonsFromLocalStorage = (scriptId, sectionId) => ({
+export const loadExpandedLessonsFromLocalStorage = (unitId, sectionId) => ({
   type: LOAD_EXPANDED_LESSONS_FROM_LOCAL_STORAGE,
-  scriptId,
+  unitId,
   sectionId,
 });
 
-export const addExpandedLesson = (scriptId, sectionId, lesson) => ({
+export const addExpandedLesson = (unitId, sectionId, lesson) => ({
   type: ADD_EXPANDED_LESSON,
-  scriptId,
+  unitId,
   sectionId,
   lesson,
 });
 
-export const removeExpandedLesson = (scriptId, sectionId, lessonId) => ({
+export const removeExpandedLesson = (unitId, sectionId, lessonId) => ({
   type: REMOVE_EXPANDED_LESSON,
-  scriptId,
+  unitId,
   sectionId,
   lessonId,
 });
@@ -167,10 +167,7 @@ export default function sectionProgress(state = initialState, action) {
     };
   }
   if (action.type === LOAD_EXPANDED_LESSONS_FROM_LOCAL_STORAGE) {
-    const expandedLessonIds = getLocalStorage(
-      action.scriptId,
-      action.sectionId
-    );
+    const expandedLessonIds = getLocalStorage(action.unitId, action.sectionId);
     return {
       ...state,
       expandedLessonIds: {
@@ -194,7 +191,7 @@ export default function sectionProgress(state = initialState, action) {
       action.lesson.id,
     ]);
     saveExpandedLessonIdsToLocalStorage(
-      action.scriptId,
+      action.unitId,
       action.sectionId,
       newSectionExpandedLessonIds
     );
@@ -217,7 +214,7 @@ export default function sectionProgress(state = initialState, action) {
       action.sectionId
     ].filter(lessonId => lessonId !== action.lessonId);
     saveExpandedLessonIdsToLocalStorage(
-      action.scriptId,
+      action.unitId,
       action.sectionId,
       newSectionExpandedLessonIds
     );
@@ -310,26 +307,22 @@ export const getCurrentUnitData = state => {
   return state.sectionProgress.unitDataByUnit[state.unitSelection.scriptId];
 };
 
-const getExpandedLessonLocalStorageString = (scriptId, sectionId) =>
-  `expandedLessonProgressV2-${scriptId}-${sectionId}`;
+const getExpandedLessonLocalStorageString = (unitId, sectionId) =>
+  `expandedLessonProgressV2-${unitId}-${sectionId}`;
 
-const saveExpandedLessonIdsToLocalStorage = (
-  scriptId,
-  sectionId,
-  lessonIds
-) => {
+const saveExpandedLessonIdsToLocalStorage = (unitId, sectionId, lessonIds) => {
   trySetLocalStorage(
-    getExpandedLessonLocalStorageString(scriptId, sectionId),
+    getExpandedLessonLocalStorageString(unitId, sectionId),
     JSON.stringify(lessonIds)
   );
 };
 
-const getLocalStorage = (scriptId, sectionId) => {
+const getLocalStorage = (unitId, sectionId) => {
   try {
     return (
       JSON.parse(
         tryGetLocalStorage(
-          getExpandedLessonLocalStorageString(scriptId, sectionId),
+          getExpandedLessonLocalStorageString(unitId, sectionId),
           []
         )
       ) || []

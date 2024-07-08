@@ -14,7 +14,7 @@ import LevelProgressHeader from './LevelProgressHeader';
 import styles from './progress-table-v2.module.scss';
 
 function ExpandedProgressColumnHeader({
-  scriptId,
+  unitId,
   sectionId,
   lesson,
   removeExpandedLesson,
@@ -60,7 +60,7 @@ function ExpandedProgressColumnHeader({
               'ui-test-expanded-progress-column-header-' +
               lesson.relative_position
             }
-            onClick={() => removeExpandedLesson(scriptId, sectionId, lesson.id)}
+            onClick={() => removeExpandedLesson(unitId, sectionId, lesson.id)}
             aria-label={headerText}
             aria-expanded={true}
             type="button"
@@ -101,18 +101,18 @@ function ExpandedProgressColumnHeader({
 export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId,
-    scriptId: state.unitSelection.scriptId,
+    unitId: state.unitSelection.scriptId,
     expandedChoiceLevelIds: state.sectionProgress.expandedChoiceLevelIds,
   }),
   dispatch => ({
-    removeExpandedLesson(scriptId, sectionId, lessonId) {
-      dispatch(removeExpandedLesson(scriptId, sectionId, lessonId));
+    removeExpandedLesson(unitId, sectionId, lessonId) {
+      dispatch(removeExpandedLesson(unitId, sectionId, lessonId));
     },
   })
 )(ExpandedProgressColumnHeader);
 
 ExpandedProgressColumnHeader.propTypes = {
-  scriptId: PropTypes.number.isRequired,
+  unitId: PropTypes.number.isRequired,
   sectionId: PropTypes.number.isRequired,
   lesson: PropTypes.object.isRequired,
   removeExpandedLesson: PropTypes.func.isRequired,
