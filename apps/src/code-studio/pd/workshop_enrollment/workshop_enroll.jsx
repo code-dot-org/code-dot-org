@@ -156,39 +156,46 @@ export default class WorkshopEnroll extends React.Component {
       'workshop course': this.props.workshop.course,
       'workshop subject': this.props.workshop.subject,
     });
-    return (
-      <div>
-        <h1>Thank you for registering</h1>
-        <p>
-          You will receive a confirmation email. If you have any questions or
-          need to request special accommodations, please reach out directly to
-          the workshop organizer: {this.props.workshop.organizer.name} at{' '}
-          {this.props.workshop.organizer.email}.
-        </p>
-        <p>
-          If you need to cancel, click <a href={this.state.cancelUrl}>here</a>.
-        </p>
-        <br />
-        {!this.state.accountExists && (
-          <div>
-            <h1>Get a Head Start: Create Your Code.org Account</h1>
-            <p>
-              If you don’t have a Code.org account yet, click below to create
-              one. You'll need a Code.org account on the day of the workshop.
-              You'll use this account to manage your students and view their
-              progress when you start teaching, so be sure to use the email
-              you'll use when you teach.
-            </p>
 
-            <a href={this.state.signUpUrl}>
-              <button type="button" className="primary">
-                Create account now
-              </button>
-            </a>
-          </div>
-        )}
-      </div>
-    );
+    if (this.props.workshop.course === 'Build Your Own Workshop') {
+      // If successfully enrolled in Build Your Own workshop, redirect to My PL landing page
+      window.location.href = '/my-professional-learning';
+    } else {
+      return (
+        <div>
+          <h1>Thank you for registering</h1>
+          <p>
+            You will receive a confirmation email. If you have any questions or
+            need to request special accommodations, please reach out directly to
+            the workshop organizer: {this.props.workshop.organizer.name} at{' '}
+            {this.props.workshop.organizer.email}.
+          </p>
+          <p>
+            If you need to cancel, click <a href={this.state.cancelUrl}>here</a>
+            .
+          </p>
+          <br />
+          {!this.state.accountExists && (
+            <div>
+              <h1>Get a Head Start: Create Your Code.org Account</h1>
+              <p>
+                If you don’t have a Code.org account yet, click below to create
+                one. You'll need a Code.org account on the day of the workshop.
+                You'll use this account to manage your students and view their
+                progress when you start teaching, so be sure to use the email
+                you'll use when you teach.
+              </p>
+
+              <a href={this.state.signUpUrl}>
+                <button type="button" className="primary">
+                  Create account now
+                </button>
+              </a>
+            </div>
+          )}
+        </div>
+      );
+    }
   }
 
   render() {
