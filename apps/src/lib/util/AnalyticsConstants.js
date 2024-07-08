@@ -253,6 +253,8 @@ const EVENTS = {
   // Header navigation
   SIGNED_OUT_USER_SEES_HEADER: 'Signed Out Navigation Header Shown',
   SIGNED_OUT_USER_CLICKS_HEADER_LINK: 'Signed Out User Clicks Header Link',
+  SIGNED_OUT_USER_CLICKS_HAMBURGER_LINK:
+    'Signed Out User Clicks Hamburger Link',
 
   // Header Create menu
   SIGNED_OUT_USER_CLICKS_CREATE_DROPDOWN:
