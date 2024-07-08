@@ -78,6 +78,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
           <Button
             text="Add"
             type="secondary"
+            color="gray"
             size="s"
             onClick={onAdd}
             iconLeft={{iconName: 'plus'}}

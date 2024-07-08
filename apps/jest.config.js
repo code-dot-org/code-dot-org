@@ -142,6 +142,7 @@ const config = {
         includeStackTrace: true,
         includeSuiteFailure: true,
         pageTitle: 'Test Report',
+        outputPath: '<rootDir>/build/test-report/index.html',
       },
     ],
   ],

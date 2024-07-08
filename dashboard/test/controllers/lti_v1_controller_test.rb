@@ -607,7 +607,8 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     expected = {
       lti_provider_name: "platform_name",
-      new_cta_type: "new"
+      new_cta_type: "new",
+      user_type: "student",
     }
 
     assert_equal expected, session[:lms_landing]

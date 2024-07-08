@@ -21,9 +21,9 @@ import '../build/locales/en_us/flappy_locale.js';
 
 import enzyme from 'enzyme'; // eslint-disable-line no-restricted-imports
 import Adapter from 'enzyme-adapter-react-16';
+import mockFetch from 'jest-fetch-mock';
 import $ from 'jquery';
 import {TextEncoder, TextDecoder} from 'util';
-import mockFetch from 'jest-fetch-mock';
 
 enzyme.configure({adapter: new Adapter()});
 window.IN_UNIT_TEST = true;
@@ -82,5 +82,12 @@ global.PISKEL_DEVELOPMENT_MODE = 'false';
 
 jest.mock('@cdo/apps/lib/util/firehose', () => ({
   putRecord: jest.fn(),
+}));
+// Mock out toImage as it produces a live image relying on browser callbacks to properly instantiate
+// imageUtils is tested in the integration test suite instead of jest.
+jest.mock('@cdo/apps/imageUtils', () => ({
+  ...jest.requireActual('@cdo/apps/imageUtils'),
+  toImage: jest.fn(),
+  dataURIToSourceSize: jest.fn(),
 }));
 fetch.mockIf('/api/v1/users/current', JSON.stringify(''));

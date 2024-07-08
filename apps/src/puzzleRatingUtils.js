@@ -3,10 +3,12 @@
  * Ratings, aka the Fun-O-Meter.
  */
 
+import $ from 'jquery';
+
 import locale from '@cdo/locale';
 
-import $ from 'jquery';
 import {trySetLocalStorage} from './utils';
+
 var dom = require('./dom');
 
 var puzzleRatingUtils = {};
