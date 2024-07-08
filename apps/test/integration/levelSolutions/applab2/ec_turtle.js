@@ -1,8 +1,11 @@
+import {TestResults} from '@cdo/apps/constants';
+
+var $ = require('jquery');
+
+var levels = require('@cdo/apps/applab/levels');
+
 var testUtils = require('../../../util/testUtils');
 var tickWrapper = require('../../util/tickWrapper');
-import {TestResults} from '@cdo/apps/constants';
-var levels = require('@cdo/apps/applab/levels');
-var $ = require('jquery');
 
 module.exports = {
   app: 'applab',

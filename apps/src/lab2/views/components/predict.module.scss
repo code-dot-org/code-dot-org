@@ -1,3 +1,5 @@
+@import 'color.scss';
+
 .multipleChoiceContainer {
   display: flex;
   align-items: start;
@@ -17,4 +19,11 @@
 
 .freeResponse {
   max-width: 100%;
+}
+
+.predictSolutionContainer {
+  margin: 10px;
+  padding: 5px;
+  background-color: $light_white;
+  border-radius: 5px;
 }

@@ -171,6 +171,11 @@ $(document).ready(() => {
 
   // Style selected user type button to show it has been clicked
   function styleSelectedUserTypeButton(value) {
+    // For LTI, the user type is implied from the LMS so the buttons will not appear
+    if (!teacherButton || !studentButton) {
+      return;
+    }
+
     if (value === 'teacher') {
       teacherButton.classList.add('select-user-type-button-selected');
       studentButton.classList.remove('select-user-type-button-selected');
