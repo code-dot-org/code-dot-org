@@ -305,6 +305,8 @@ class User < ApplicationRecord
     self.gender = Policies::Gender.normalize gender
   end
 
+  before_validation :student_in_lockout_flow?, on: :update
+
   validate :validate_us_state, if: :should_validate_us_state?
 
   before_validation on: [:create, :update], if: -> {gender_teacher_input.present? && will_save_change_to_attribute?('properties')} do
@@ -2762,6 +2764,24 @@ class User < ApplicationRecord
     # us_state is only a required field if the User lives in the US.
     return false unless %w[US RD].include? country_code
     new_record? || us_state_changed?
+  end
+
+  def student_in_lockout_flow?
+    return unless should_validate_us_state?
+    return unless birthday_changed? || us_state_changed?
+
+    # Create copy of user to mock the user's state before an update.
+    user_before_update = dup
+
+    # If us_state or age is changed, set to previous value before the update to be used to check if the user is in the lockout flow.
+    user_before_update.us_state = properties_was['us_state'] if us_state_changed?
+    user_before_update.birthday = birthday_was if birthday_changed?
+
+    potentially_locked = Policies::ChildAccount.underage?(user_before_update)
+    # The student is in a 'lockout' flow if they are potentially locked out and not unlocked
+    if potentially_locked && !Policies::ChildAccount::ComplianceState.permission_granted?(user_before_update)
+      errors.add(:us_state, "LOCKOUT FLOW")
+    end
   end
 
   private def ai_tutor_feature_globally_disabled?
