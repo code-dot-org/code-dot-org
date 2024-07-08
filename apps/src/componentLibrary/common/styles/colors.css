@@ -31,19 +31,21 @@
     --background-error-light: var(--sentiment-error-10);
     --background-error-primary: var(--sentiment-error-50);
     --background-error-strong: var(--sentiment-error-70);
-    --background-info-light: var(--sentiment-information-info-10);
+    --background-info-light: var(--sentiment-information-10);
     --background-info-primary: var(--sentiment-information-50);
     --background-info-strong: var(--sentiment-information-70);
+    --background-neutral-black-fixed: var(--neutral-base-black);
     --background-neutral-disabled: var(--neutral-gray-20);
-    --background-neutral-inverse: var(--neutral-base-black);
     --background-neutral-octonary: var(--neutral-gray-80);
     --background-neutral-primary: var(--neutral-base-white);
+    --background-neutral-primary-inverse: var(--neutral-base-black);
     --background-neutral-quaternary: var(--neutral-gray-20);
     --background-neutral-quinary: var(--neutral-gray-30);
     --background-neutral-secondary: var(--neutral-gray-5);
     --background-neutral-senary: var(--neutral-gray-50);
     --background-neutral-septenary: var(--neutral-gray-70);
     --background-neutral-tertiary: var(--neutral-gray-10);
+    --background-neutral-white-fixed: var(--neutral-base-white);
     --background-success-light: var(--sentiment-success-10);
     --background-success-primary: var(--sentiment-success-50);
     --background-success-strong: var(--sentiment-success-70);
@@ -62,7 +64,7 @@
     --borders-error-light: var(--sentiment-error-10);
     --borders-error-primary: var(--sentiment-error-50);
     --borders-error-strong: var(--sentiment-error-70);
-    --borders-info-light: var(--sentiment-information-info-10);
+    --borders-info-light: var(--sentiment-information-10);
     --borders-info-primary: var(--sentiment-information-50);
     --borders-info-strong: var(--sentiment-information-70);
     --borders-neutral-disabled: var(--neutral-gray-20);
@@ -110,7 +112,6 @@
 
 /* Dark Theme Semantic Colors */
 [data-theme="Dark"] {
-    /* color */
     --background-brand-aqua-light: var(--brand-aqua-90);
     --background-brand-aqua-primary: var(--brand-aqua-50);
     --background-brand-aqua-strong: var(--brand-aqua-70);
@@ -129,16 +130,18 @@
     --background-info-light: var(--sentiment-information-90);
     --background-info-primary: var(--sentiment-information-50);
     --background-info-strong: var(--sentiment-information-70);
+    --background-neutral-black-fixed: var(--neutral-base-black);
     --background-neutral-disabled: var(--neutral-gray-80);
-    --background-neutral-inverse: var(--neutral-base-white);
     --background-neutral-octonary: var(--neutral-gray-20);
     --background-neutral-primary: var(--neutral-base-black);
+    --background-neutral-primary-inverse: var(--neutral-base-white);
     --background-neutral-quaternary: var(--neutral-gray-80);
     --background-neutral-quinary: var(--neutral-gray-70);
     --background-neutral-secondary: var(--neutral-gray-95);
     --background-neutral-senary: var(--neutral-gray-50);
     --background-neutral-septenary: var(--neutral-gray-30);
     --background-neutral-tertiary: var(--neutral-gray-90);
+    --background-neutral-white-fixed: var(--neutral-base-white);
     --background-success-light: var(--sentiment-success-90);
     --background-success-primary: var(--sentiment-success-50);
     --background-success-strong: var(--sentiment-success-70);
