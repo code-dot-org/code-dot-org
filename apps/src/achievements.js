@@ -1,4 +1,5 @@
 import msg from '@cdo/locale';
+
 import authoredHintUtils from './authoredHintUtils';
 
 export default function getAchievements(state) {

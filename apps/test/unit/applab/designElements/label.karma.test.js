@@ -1,5 +1,9 @@
 import $ from 'jquery';
 
+// This line was added due to the circular dependency introduced from the applab locale from the library import
+// Removing this will cause a webpack require failure if this test runs alone
+import '@cdo/locale';
+
 import * as applabConstants from '@cdo/apps/applab/constants';
 import library from '@cdo/apps/applab/designElements/library';
 

@@ -221,7 +221,7 @@ describe('FormController', () => {
       });
 
       let render;
-      before(() => {
+      beforeAll(() => {
         // Skip rendering
         render = sinon.stub(DummyForm.prototype, 'render');
         render.returns(null);

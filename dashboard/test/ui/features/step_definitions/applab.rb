@@ -101,7 +101,7 @@ end
 
 When /^I navigate to the embedded version of my project$/ do
   steps <<-GHERKIN
-    When I open the share dialog
+    When I open the project share dialog
     And I click selector "#project-share a:contains('Show advanced options')"
     And I click selector "#project-share li:contains('Embed')"
     And I copy the embed code into a new document
@@ -110,7 +110,7 @@ end
 
 When /^I navigate to the embedded version of my project with source hidden$/ do
   steps <<-GHERKIN
-    When I open the share dialog
+    When I open the project share dialog
     And I click selector "#project-share a:contains('Show advanced options')"
     And I click selector "#project-share li:contains('Embed')"
     And I click selector "#project-share label:contains('Hide ability to view code')"

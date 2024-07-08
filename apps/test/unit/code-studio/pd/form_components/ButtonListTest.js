@@ -20,7 +20,7 @@ describe('ButtonList', () => {
     let radioList;
     let onChangeCallback;
 
-    before(() => {
+    beforeAll(() => {
       onChangeCallback = sinon.spy();
 
       radioList = shallow(
@@ -177,7 +177,7 @@ describe('ButtonList', () => {
     let onDogBreedInputChange;
     let dogBreedInput;
 
-    before(() => {
+    beforeAll(() => {
       onDogBreedInputChange = sinon.spy();
 
       buttonList = shallow(

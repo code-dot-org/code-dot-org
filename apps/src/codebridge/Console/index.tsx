@@ -1,10 +1,12 @@
 import {resetOutput} from '@codebridge/redux/consoleRedux';
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {useDispatch} from 'react-redux';
 
-import Button from '@cdo/apps/componentLibrary/button';
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import GraphModal from './GraphModal';
 
 import moduleStyles from './console.module.scss';
 
@@ -14,6 +16,8 @@ const Console: React.FunctionComponent = () => {
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
   const previousLevelId = useRef(levelId);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+
+  const [graphModalOpen, setGraphModalOpen] = useState(false);
 
   // TODO: Update this with other apps that use the console as needed.
   const systemMessagePrefix = appName === 'pythonlab' ? '[PYTHON LAB] ' : '';
@@ -54,11 +58,28 @@ const Console: React.FunctionComponent = () => {
         {codeOutput.map((outputLine, index) => {
           if (outputLine.type === 'img') {
             return (
-              <img
-                key={index}
-                src={`data:image/png;base64,${outputLine.contents}`}
-                alt="matplotlib_image"
-              />
+              <div key={index}>
+                <img
+                  src={`data:image/png;base64,${outputLine.contents}`}
+                  alt="matplotlib_image"
+                />
+                <Button
+                  color={buttonColors.black}
+                  disabled={false}
+                  icon={{iconName: 'up-right-from-square', iconStyle: 'solid'}}
+                  isIconOnly={true}
+                  onClick={() => setGraphModalOpen(true)}
+                  size="xs"
+                  type="primary"
+                  aria-label="open matplotlib_image in pop-up"
+                />
+                {graphModalOpen && (
+                  <GraphModal
+                    src={`data:image/png;base64,${outputLine.contents}`}
+                    onClose={() => setGraphModalOpen(false)}
+                  />
+                )}
+              </div>
             );
           } else if (
             outputLine.type === 'system_out' ||
