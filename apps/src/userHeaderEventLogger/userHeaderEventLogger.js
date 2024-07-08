@@ -23,6 +23,7 @@ function addClickEventToLinks(selector, eventName) {
 $(document).ready(function () {
   const headerCreateMenu = document.getElementById('header_create_menu');
   const pageUrl = document.querySelector('meta[property="og:url"]')?.content;
+  const helpIcon = document.querySelector('#help-icon');
 
   if (getScriptData('isSignedOut')) {
     analyticsReporter.sendEvent(
@@ -31,16 +32,26 @@ $(document).ready(function () {
       PLATFORMS.STATSIG
     );
 
-    // Adds event to each header link when clicked
+    // Log if a header link is clicked
     addClickEventToLinks(
       'headerlink',
       EVENTS.SIGNED_OUT_USER_CLICKS_HEADER_LINK
     );
-    // Adds event to each hamburger link when clicked
+
+    // Log if a hamburger link is clicked
     addClickEventToLinks(
       'hamburgerlink',
       EVENTS.SIGNED_OUT_USER_CLICKS_HAMBURGER_LINK
     );
+
+    // Log if the Help icon menu is clicked
+    helpIcon.addEventListener('click', () => {
+      analyticsReporter.sendEvent(
+        EVENTS.SIGNED_OUT_USER_CLICKS_HELP_MENU,
+        {},
+        PLATFORMS.STATSIG
+      );
+    });
   }
 
   if (getScriptData('isSignedOut') && headerCreateMenu) {
