@@ -14,6 +14,20 @@ $(document).ready(function () {
       {pageUrl: pageUrl || 'studio page'},
       PLATFORMS.STATSIG
     );
+
+    // Adds event to each header link when clicked
+    const headerLinks = document.querySelectorAll('.headerlink');
+    headerLinks.forEach(headerLink => {
+      headerLink.addEventListener('click', () => {
+        analyticsReporter.sendEvent(
+          EVENTS.SIGNED_OUT_USER_CLICKS_HEADER_LINK,
+          {
+            headerLink: headerLink.innerText,
+          },
+          PLATFORMS.STATSIG
+        );
+      });
+    });
   }
 
   if (getScriptData('isSignedOut') && headerCreateMenu) {
