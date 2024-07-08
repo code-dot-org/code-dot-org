@@ -8,7 +8,7 @@ module BlocklyHelpers
 
   def generate_drag_code(from, to, target_dx, target_dy)
     id_selector = get_id_selector
-    generate_selector_drag_code "[#{id_selector}='#{from}']", "[#{id_selector}='#{to}']", target_dx, target_dy
+    generate_selector_drag_code "[#{id_selector}='#{from}']:last", "[#{id_selector}='#{to}']", target_dx, target_dy
   end
 
   def generate_selector_drag_code(from, to, target_dx, target_dy)
