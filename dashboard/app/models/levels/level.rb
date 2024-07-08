@@ -880,7 +880,7 @@ class Level < ApplicationRecord
   end
 
   def predict_level?
-    return properties.dig('predict_settings', 'isPredictLevel')
+    return properties.dig('predict_settings', 'isPredictLevel').present?
   end
 
   # Returns the level name, removing the name_suffix first (if present), and
