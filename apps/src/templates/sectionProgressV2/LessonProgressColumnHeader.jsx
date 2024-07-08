@@ -101,6 +101,8 @@ export default connect(
   })
 )(LessonProgressColumnHeader);
 
+export const UnconnectedLessonProgressColumnHeader = LessonProgressColumnHeader;
+
 LessonProgressColumnHeader.propTypes = {
   sectionId: PropTypes.number,
   scriptId: PropTypes.number,

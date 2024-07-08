@@ -6,7 +6,7 @@ import {
   fakeLessonWithLevels,
   fakeLesson,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
-import LessonProgressColumnHeader from '@cdo/apps/templates/sectionProgressV2/LessonProgressColumnHeader.jsx';
+import {UnconnectedLessonProgressColumnHeader} from '@cdo/apps/templates/sectionProgressV2/LessonProgressColumnHeader.jsx';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/reconfiguredChai';
@@ -14,6 +14,8 @@ import {expect} from '../../../util/reconfiguredChai';
 const LESSON = fakeLessonWithLevels({numberedLesson: true}, 1);
 
 const DEFAULT_PROPS = {
+  sectionId: 1,
+  scriptId: 1,
   lesson: LESSON,
   addExpandedLesson: () => {},
   allLocked: true,
@@ -21,7 +23,7 @@ const DEFAULT_PROPS = {
 
 const renderDefault = overrideProps => {
   const props = {...DEFAULT_PROPS, ...overrideProps};
-  render(<LessonProgressColumnHeader {...props} />);
+  render(<UnconnectedLessonProgressColumnHeader {...props} />);
 };
 
 describe('LessonProgressColumnHeader', () => {
