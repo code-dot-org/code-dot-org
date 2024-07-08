@@ -1,4 +1,5 @@
 import React from 'react';
+
 import SurveyRollupTable from '../../components/survey_results/survey_rollup_table';
 import {COURSE_CSF} from '../../workshopConstants';
 
