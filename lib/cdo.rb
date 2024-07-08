@@ -292,7 +292,7 @@ module Cdo
 
     # The web server instance has some intention to use AWS credentials?
     def aws_access?
-      rack_env?(:development) && !!ENV['AWS_PROFILE']&.include?('cdo')
+      rack_env?(:production) || !!ENV['AWS_PROFILE']&.include?('cdo')
     end
 
     def shared_image_url(path)
