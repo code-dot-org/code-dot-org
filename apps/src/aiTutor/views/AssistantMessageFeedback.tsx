@@ -1,8 +1,11 @@
 import React, {useState} from 'react';
 
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
+import i18n from '@cdo/locale';
 
-import {saveFeedback, FeedbackData} from '../interactionsApi';
+import {FeedbackData} from '../interactionsApi';
+
+import AssistantMessageFeedbackDetails from './AssistantMessageFeedbackDetails';
 
 import style from './chat-workspace.module.scss';
 
@@ -17,39 +20,22 @@ const AssistantMessageFeedback: React.FC<AssistantMessageProps> = ({
     thumbsUp: false,
     thumbsDown: false,
   });
+  const [detailsOpen, setDetailsOpen] = useState<boolean>(false);
 
-  const handleFeedbackSubmission = async (
-    thumbsUp: boolean,
-    messageId?: number
-  ) => {
-    if (!messageId) {
-      return;
-    }
-
-    // This logic allows the user to "ungive" feedback by clicking the same button again
-    // If the user "ungives" all feedback, a row with null values will persist in the database
-    const feedbackData = {
-      thumbsUp: thumbsUp ? (feedbackState.thumbsUp ? null : true) : null,
-      thumbsDown: thumbsUp ? null : feedbackState.thumbsDown ? null : true,
-    };
-
-    try {
-      setFeedbackState(feedbackData);
-      await saveFeedback(messageId, feedbackData);
-    } catch (error) {
-      setFeedbackState({thumbsUp: null, thumbsDown: null});
-    }
+  const handleIconClick = (thumbsUp: boolean, thumbsDown: boolean) => {
+    setFeedbackState({thumbsUp: thumbsUp, thumbsDown: thumbsDown});
+    setDetailsOpen(thumbsUp || thumbsDown);
   };
 
   return (
     <div className={style.feedbackIcons}>
-      Was this helpful?
+      {i18n.aiFeedbackQuestion()}
       <Button
         color={buttonColors.black}
         disabled={false}
         icon={{iconName: 'thumbs-up', iconStyle: 'solid'}}
         isIconOnly={true}
-        onClick={() => handleFeedbackSubmission(true, messageId)}
+        onClick={() => handleIconClick(true, false)}
         size="xs"
         type={feedbackState.thumbsUp ? 'primary' : 'tertiary'}
       />
@@ -58,10 +44,17 @@ const AssistantMessageFeedback: React.FC<AssistantMessageProps> = ({
         disabled={false}
         icon={{iconName: 'thumbs-down', iconStyle: 'solid'}}
         isIconOnly={true}
-        onClick={() => handleFeedbackSubmission(false, messageId)}
+        onClick={() => handleIconClick(false, true)}
         size="xs"
         type={feedbackState.thumbsDown ? 'primary' : 'tertiary'}
       />
+      {detailsOpen && (
+        <AssistantMessageFeedbackDetails
+          feedbackData={feedbackState}
+          messageId={messageId}
+          onClose={() => setDetailsOpen(false)}
+        />
+      )}
     </div>
   );
 };

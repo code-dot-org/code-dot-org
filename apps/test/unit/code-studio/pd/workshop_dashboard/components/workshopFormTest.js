@@ -536,6 +536,30 @@ describe('WorkshopForm test', () => {
     assert(wrapper.find('#suppress_email').first().props().disabled);
   });
 
+  it('selecting Build Your Own Workshop does not show subject, paid, or email fields', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            today={getFakeToday(false)}
+            readOnly={false}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    const courseField = wrapper.find('#course').first();
+    courseField.simulate('change', {
+      target: {name: 'course', value: 'Build Your Own Workshop'},
+    });
+
+    expect(wrapper.find('#subject')).to.have.lengthOf(0);
+    expect(wrapper.find('#funded')).to.have.lengthOf(0);
+    expect(wrapper.find('#suppress_email')).to.have.lengthOf(0);
+  });
+
   it('editing form as non-admin does not show organizer field', () => {
     const wrapper = mount(
       <Provider store={store}>

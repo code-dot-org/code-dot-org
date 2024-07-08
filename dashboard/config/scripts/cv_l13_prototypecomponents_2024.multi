@@ -2,8 +2,8 @@ name 'CV_L13_PrototypeComponents_2024'
 type 'multi2'
 question 'What prototype component(s) have you implemented in your project thus far?'
 editor_experiment ''
-display_name 'Prototype Components Check'
-title 'Prototype Components Check'
+display_name 'Prototype Components'
+title 'Prototype Components'
 description ''
 
 

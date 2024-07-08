@@ -557,6 +557,7 @@ en:
     parent_email_hint: "(this can be used for password recovery)"
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
     update: "Update Account"
+    update_field_parent_permission_required: '(You must obtain parental permission before updating this field)'
     account_successfully_updated: "Account successfully updated."
     auth_option_saved: "You have successfully linked your %{provider} account with email %{email}."
     auth_option_saved_no_email: "You have successfully linked your %{provider} account."

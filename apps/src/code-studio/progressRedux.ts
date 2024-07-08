@@ -18,6 +18,7 @@ import {
   PayloadAction,
   ThunkAction,
   ThunkDispatch,
+  createAsyncThunk,
   createSlice,
 } from '@reduxjs/toolkit';
 import {
@@ -42,6 +43,8 @@ import {
 } from './progressReduxSelectors';
 import {getBubbleUrl} from '../templates/progress/BubbleFactory';
 import {navigateToHref} from '../utils';
+import {RootState} from '@cdo/apps/types/redux';
+import {AppDispatch} from '../util/reduxHooks';
 
 export interface ProgressState {
   currentLevelId: string | null;
@@ -79,6 +82,13 @@ export interface ProgressState {
   unitStudentDescription: string | undefined;
   changeFocusAreaPath: string | undefined;
   unitCompleted: boolean | undefined;
+}
+
+export interface MilestoneReport {
+  app: string;
+  result: boolean;
+  testResult: number;
+  program?: string;
 }
 
 const initialState: ProgressState = {
@@ -280,12 +290,7 @@ const progressSlice = createSlice({
 });
 
 // Thunks
-type ProgressThunkAction = ThunkAction<
-  void,
-  {progress: ProgressState},
-  undefined,
-  AnyAction
->;
+type ProgressThunkAction = ThunkAction<void, RootState, undefined, AnyAction>;
 
 export const queryUserProgress =
   (userId: string, mergeProgress: boolean = true): ProgressThunkAction =>
@@ -364,46 +369,74 @@ export function navigateToNextLevel(): ProgressThunkAction {
 // will not be reloading. Currently only used by Lab2 labs.
 export function sendSuccessReport(appType: string): ProgressThunkAction {
   return (dispatch, getState) => {
-    const state = getState().progress;
-    const levelId = state.currentLevelId;
-    if (!state.currentLessonId || !levelId) {
-      return;
-    }
-    const scriptLevelId = getCurrentScriptLevelId(getState());
-    if (!scriptLevelId) {
-      return;
-    }
-
-    // The server does not appear to use the user ID parameter,
-    // so just pass 0, like some other milestone posts do.
-    const userId = 0;
-
-    // An ideal score.
-    const idealPassResult = TestResults.ALL_PASS;
-
-    const data = {
-      app: appType,
-      result: true,
-      testResult: idealPassResult,
-    };
-
-    fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}`, {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    }).then(response => {
-      if (response.ok && levelId !== null) {
-        // Update the progress store by merging in this
-        // particular result immediately.
-        dispatch(mergeResults({[levelId]: idealPassResult}));
-      }
-    });
+    sendReportHelper(appType, TestResults.ALL_PASS, dispatch, getState);
   };
 }
 
+export const sendPredictLevelReport = createAsyncThunk<
+  void,
+  {appType: string; predictResponse: string},
+  {
+    dispatch: AppDispatch;
+    state: RootState;
+  }
+>('progress/sendPredictLevelReport', async (payload, thunkAPI) => {
+  sendReportHelper(
+    payload.appType,
+    TestResults.CONTAINED_LEVEL_RESULT,
+    thunkAPI.dispatch,
+    thunkAPI.getState,
+    payload.predictResponse
+  );
+});
+
 // Helpers
+
+function sendReportHelper(
+  appType: string,
+  result: number,
+  dispatch: ThunkDispatch<RootState, undefined, AnyAction>,
+  getState: () => RootState,
+  program?: string
+) {
+  const state = getState().progress;
+  const levelId = state.currentLevelId;
+  if (!state.currentLessonId || !levelId) {
+    return;
+  }
+  const scriptLevelId = getCurrentScriptLevelId(getState());
+  if (!scriptLevelId) {
+    return;
+  }
+
+  // The server does not appear to use the user ID parameter,
+  // so just pass 0, like some other milestone posts do.
+  const userId = 0;
+
+  const data: MilestoneReport = {
+    app: appType,
+    result: true,
+    testResult: result,
+  };
+
+  if (program) {
+    data.program = program;
+  }
+
+  fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}`, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  }).then(response => {
+    if (response.ok && levelId !== null) {
+      // Update the progress store by merging in this
+      // particular result immediately.
+      dispatch(mergeResults({[levelId]: result}));
+    }
+  });
+}
 
 /**
  * Requests user progress from the server and dispatches other redux actions

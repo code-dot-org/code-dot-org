@@ -1,10 +1,12 @@
-import {AnyAction, Dispatch} from 'redux';
-import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
-import {asyncRun} from './pyodideWorkerManager';
-import {getTestRunnerScript} from './pythonHelpers/scripts';
 import {appendSystemMessage} from '@codebridge/redux/consoleRedux';
+import {AnyAction, Dispatch} from 'redux';
+
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
+import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
+
+import {asyncRun} from './pyodideWorkerManager';
+import {getTestRunnerScript} from './pythonHelpers/scripts';
 
 export function handleRunClick(
   runTests: boolean,

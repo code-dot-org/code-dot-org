@@ -28,6 +28,9 @@ const ChatWorkspace: React.FunctionComponent = () => {
     (state: {aichat: AichatState}) => state.aichat.isWaitingForChatResponse
   );
 
+  // Compare the messages as a string since the object reference will change on every update.
+  // This way we will only scroll when the contents of the messages have changed.
+  const messagesString = JSON.stringify(messages);
   const conversationContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -37,7 +40,7 @@ const ChatWorkspace: React.FunctionComponent = () => {
         behavior: 'smooth',
       });
     }
-  }, [conversationContainerRef, messages, isWaitingForChatResponse]);
+  }, [messagesString, isWaitingForChatResponse]);
 
   const dispatch = useAppDispatch();
 

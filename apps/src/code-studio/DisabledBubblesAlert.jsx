@@ -13,9 +13,8 @@ export default class DisabledBubblesAlert extends React.Component {
     super(props);
 
     // Once alert has been dismissed, don't show again.
-    const disabledBubblesAlertSeen = sessionStorage.getItem(
-      'disabledBubblesAlertSeen'
-    );
+    const disabledBubblesAlertSeen =
+      sessionStorage.getItem('disabledBubblesAlertSeen') === 'true';
     this.state = {
       visible: !disabledBubblesAlertSeen,
     };

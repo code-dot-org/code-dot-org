@@ -42,7 +42,10 @@ const SummaryEntryPoint = ({scriptData, students, selectedSection}) => {
           <div className={styles.responseIcon}>
             <i className="fa fa-user" />
           </div>
-          <div className={styles.responseCounter}>
+          <div
+            className={styles.responseCounter}
+            data-testid={'response-counter'}
+          >
             <p>
               <span className={styles.counter}>
                 {scriptData.response_count}/{students.length}{' '}
