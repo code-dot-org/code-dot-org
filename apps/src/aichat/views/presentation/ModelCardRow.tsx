@@ -8,9 +8,9 @@ import customizationStyles from '../model-customization-workspace.module.scss';
 
 interface ModelCardRowProps {
   title: string;
-  titleIcon: string;
+  titleIcon?: string;
   expandedContent: string | string[];
-  tooltipText: string;
+  tooltipText?: string;
 }
 
 const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
@@ -49,12 +49,16 @@ const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
           titleIcon={titleIcon}
           collapsedIcon="caret-right"
           expandedIcon="caret-down"
-          tooltip={{
-            text: tooltipText,
-            size: 's',
-            tooltipId: `${title}-tooltip`,
-            className: customizationStyles.tooltip,
-          }}
+          tooltip={
+            tooltipText
+              ? {
+                  text: tooltipText,
+                  size: 's',
+                  tooltipId: `${title}-tooltip`,
+                  className: customizationStyles.tooltip,
+                }
+              : undefined
+          }
         >
           <BodyThreeText className={moduleStyles.expandedContent}>
             <div>{expandedContentToDisplay}</div>

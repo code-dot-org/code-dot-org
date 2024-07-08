@@ -70,14 +70,14 @@ const PresentationView: React.FunctionComponent = () => {
       </Heading4>
       <div className={moduleStyles.modelCardFields}>
         {MODEL_CARD_FIELDS_LABELS_ICONS.map(
-          ([property, label, iconName, _, displayTooltip]) => {
+          ({property, label, icon, displayTooltip}) => {
             if (property === 'botName' || property === 'isPublished') {
               return null;
             }
             return (
               <ModelCardRow
                 title={label}
-                titleIcon={iconName}
+                titleIcon={icon}
                 expandedContent={modelCardInfo[property]}
                 key={property}
                 tooltipText={displayTooltip}
