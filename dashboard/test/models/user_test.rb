@@ -5439,7 +5439,7 @@ class UserTest < ActiveSupport::TestCase
     assert student.us_state_changed?
   end
 
-  test "lockout flow" do
+  test "student in lockout flow cannot change us_state or age" do
     student = create :student, :U13, :in_colorado, :without_parent_permission
     assert_raises(ActiveRecord::RecordInvalid) do
       student.update!(us_state: 'CA')
