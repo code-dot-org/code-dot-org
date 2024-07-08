@@ -21,7 +21,7 @@
 # TODO: post-firebase-cleanup, remove this script #56994
 
 # If DRY_RUN: run SQL in a transaction but rollback before committing
-DRY_RUN = true
+DRY_RUN = false
 
 # De-duplicate tables: see if the records exactly match an existing shared
 # table and link it to that using is_shared_table instead of copying the records
@@ -64,11 +64,11 @@ def set_active_record_connection_pool_size(pool_size)
   )
 end
 
-set_active_record_connection_pool_size(10)
+# set_active_record_connection_pool_size(10)
 
 # Don't use more workers than we have connections in our SQL connection pool.
-NUM_PARALLEL_WORKERS = 1
-# NUM_PARALLEL_WORKERS = ActiveRecord::Base.connection_pool.size - 1
+# NUM_PARALLEL_WORKERS = 1
+NUM_PARALLEL_WORKERS = ActiveRecord::Base.connection_pool.size - 1
 
 def get_project_id(channel_id)
   storage_decrypt_channel_id(channel_id)[1]
@@ -203,7 +203,11 @@ def fetch_datablock_tables(channel, project_id)
 
   current_tables = channel["current_tables"]
   current_tables = {} unless current_tables.is_a? Hash
-  current_tables = current_tables.keys
+  current_tables = Set.new(current_tables.keys)
+
+  datablock_tables.filter! do |table|
+    !current_tables.include?(table[:table][:table_name])
+  end
 
   datablock_tables += current_tables.map do |table_name|
     {
