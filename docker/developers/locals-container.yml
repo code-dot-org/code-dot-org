@@ -12,6 +12,11 @@ db_endpoint_writer: 'db'
 db_credential_admin:
   username: root
   password: password
+db_endpoint_proxy_reporting: 'db'
+db_endpoint_proxy_reader: 'db'
+db_credential_reader:
+  username: root
+  password: password
 statsig_server_secret_key: 'secret-fake-key'
 statsig_api_client_key: 'client-fake-key'
 session_store_server: redis://redis:6379/0/session
