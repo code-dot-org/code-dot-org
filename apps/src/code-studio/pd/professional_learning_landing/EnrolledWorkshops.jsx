@@ -1,17 +1,19 @@
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {Table, Button, Modal} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import ReactTooltip from 'react-tooltip';
+
+import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
+
 import * as utils from '../../../utils';
 import WorkshopTableLoader from '../workshop_dashboard/components/workshop_table_loader';
 import {workshopShape} from '../workshop_dashboard/types.js';
-import {Table, Button, Modal} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import ReactTooltip from 'react-tooltip';
-import moment from 'moment';
 import {
   DATE_FORMAT,
   TIME_FORMAT,
 } from '../workshop_dashboard/workshopConstants';
-import {Heading2} from '@cdo/apps/componentLibrary/typography';
 
 class EnrolledWorkshops extends React.Component {
   render() {
