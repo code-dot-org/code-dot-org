@@ -45,7 +45,7 @@ let UnwrappedGuide = class Guide extends React.Component {
         setState({clickToContinueTimerId: null});
       }
       if (clickToContinueAnimationIntervalId) {
-        clearTimeout(clickToContinueAnimationIntervalId);
+        clearInterval(clickToContinueAnimationIntervalId);
         setState({clickToContinueAnimationIntervalId: null});
       }
     }
@@ -53,7 +53,6 @@ let UnwrappedGuide = class Guide extends React.Component {
 
   renderClickToContinueReminder(currentGuide) {
     return (
-      getState().showClickToContinue && currentGuide.style !== 'Info' && !currentGuide.noDimBackground && (
         <div style={styles.guideClickToContinueReminderContainer} className="fade">
           <img
             style={getState().clickToContinueIconFrame1 ? styles.guideHideClickToContinueAnimationFrame : {}}
@@ -65,7 +64,7 @@ let UnwrappedGuide = class Guide extends React.Component {
             src={fingerClickIcon2}
           />
         </div>
-      ))
+      )
   }
 
   render() {
@@ -130,7 +129,10 @@ let UnwrappedGuide = class Guide extends React.Component {
                     >
                       {currentGuide.textFn(getState())}
                     </Typist>
-                    {this.renderClickToContinueReminder(currentGuide)}
+                    {getState().showClickToContinue
+                      && currentGuide.style !== 'Info'
+                      && !currentGuide.noDimBackground
+                      && this.renderClickToContinueReminder(currentGuide)}
                   </div>
                   <div
                     style={
@@ -146,8 +148,7 @@ let UnwrappedGuide = class Guide extends React.Component {
                   </div>
                   {currentGuide.style === 'Info' && (
                     <Button
-                      style={styles.infoGuideButton} onClick={() => {
-                    }}
+                      style={styles.infoGuideButton} onClick={() => {}}
                     >
                       {I18n.t('continue')}
                     </Button>
