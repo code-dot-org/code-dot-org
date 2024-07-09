@@ -178,6 +178,17 @@ const AichatView: React.FunctionComponent = () => {
     }
   }, [dialogControl, resetProject]);
 
+  const onClear = useCallback(() => {
+    dispatch(clearChatMessages());
+    analyticsReporter.sendEvent(
+      EVENTS.CHAT_ACTION,
+      {
+        action: 'Clear chat history',
+      },
+      PLATFORMS.BOTH
+    );
+  }, [dispatch]);
+
   return (
     <div id="aichat-lab" className={moduleStyles.aichatLab}>
       {showPresentationToggle() && (
@@ -256,7 +267,7 @@ const AichatView: React.FunctionComponent = () => {
               );
             })}
           >
-            <ChatWorkspace />
+            <ChatWorkspace onClear={onClear} />
           </PanelContainer>
         </div>
       </div>
@@ -267,15 +278,6 @@ const AichatView: React.FunctionComponent = () => {
 const renderChatWorkspaceHeaderRight = (onClear: () => void) => {
   return (
     <div className={moduleStyles.chatHeaderRight}>
-      <Button
-        onClick={onClear}
-        text="Clear"
-        iconLeft={{iconName: 'paintbrush'}}
-        size="xs"
-        color="white"
-        type="secondary"
-        className={moduleStyles.aichatViewButton}
-      />
       <CopyButton />
     </div>
   );
