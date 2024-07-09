@@ -29,7 +29,7 @@ class AichatController < ApplicationController
   private def get_response_body
     # Check for profanity
     locale = params[:locale] || "en"
-    filter_result = ShareFiltering.find_failure(params[:newMessage][:chatMessageText], locale)
+    filter_result = ShareFiltering.find_profanity_failure(params[:newMessage][:chatMessageText], locale)
     if filter_result&.type == ShareFiltering::FailureType::PROFANITY
       messages = [
         get_user_message(SharedConstants::AI_INTERACTION_STATUS[:PROFANITY_VIOLATION])
@@ -57,7 +57,7 @@ class AichatController < ApplicationController
     sagemaker_response = AichatSagemakerHelper.request_sagemaker_chat_completion(input, params[:aichatModelCustomizations][:selectedModelId])
     latest_assistant_response = AichatSagemakerHelper.get_sagemaker_assistant_response(sagemaker_response, params[:aichatModelCustomizations][:selectedModelId])
 
-    filter_result = ShareFiltering.find_failure(latest_assistant_response, locale)
+    filter_result = ShareFiltering.find_profanity_failure(latest_assistant_response, locale)
     if filter_result&.type == ShareFiltering::FailureType::PROFANITY
       messages = [
         get_user_message(SharedConstants::AI_INTERACTION_STATUS[:ERROR]),
