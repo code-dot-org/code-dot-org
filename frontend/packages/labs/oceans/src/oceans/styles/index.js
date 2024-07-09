@@ -507,6 +507,15 @@ const styles = {
     padding: 20,
     opacity: 0
   },
+  guideClickToContinueReminderContainer: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    height: 30,
+    alignItems: 'end'
+  },
+  guideHideClickToContinueAnimationFrame: {
+    display: 'none'
+  },
   guideBackground: {
     backgroundColor: 'rgba(0,0,0,0.3)',
     position: 'absolute',

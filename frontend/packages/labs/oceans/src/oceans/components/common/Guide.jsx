@@ -1,10 +1,8 @@
 import React from 'react'
 import Radium from "radium";
 import Typist from "react-typist";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faArrowCircleDown} from "@fortawesome/free-solid-svg-icons";
 
-import "@ml/oceans/styles/bounce.css";
+import "@ml/oceans/styles/fade.css";
 
 import {getState, setState} from "@ml/oceans/state";
 import guide from "@ml/oceans/models/guide";
@@ -29,7 +27,6 @@ let UnwrappedGuide = class Guide extends React.Component {
         setState({clickToContinueAnimationIntervalId: intervalId});
       }, 2000);
       setState({clickToContinueTimerId: timerId});
-
     }
   }
 
@@ -37,16 +34,38 @@ let UnwrappedGuide = class Guide extends React.Component {
     const dismissed = guide.dismissCurrentGuide();
     if (dismissed) {
       soundLibrary.playSound('other');
+
       setState({showClickToContinue: false});
-      if (getState().clickToContinueTimerId) {
-        clearTimeout(getState().clickToContinueTimerId);
+      const {
+        clickToContinueTimerId,
+        clickToContinueAnimationIntervalId
+      } = getState();
+      if (clickToContinueTimerId) {
+        clearTimeout(clickToContinueTimerId);
         setState({clickToContinueTimerId: null});
       }
-      if (getState().clickToContinueAnimationIntervalId) {
-        clearTimeout(getState().clickToContinueAnimationIntervalId);
+      if (clickToContinueAnimationIntervalId) {
+        clearTimeout(clickToContinueAnimationIntervalId);
         setState({clickToContinueAnimationIntervalId: null});
       }
     }
+  }
+
+  renderClickToContinueReminder(currentGuide) {
+    return (
+      getState().showClickToContinue && currentGuide.style !== 'Info' && !currentGuide.noDimBackground && (
+        <div style={styles.guideClickToContinueReminderContainer} className="fade">
+          <img
+            style={getState().clickToContinueIconFrame1 ? styles.guideHideClickToContinueAnimationFrame : {}}
+            src={fingerClickIcon1}
+            alt={'A clicking animation reminding users to click anywhere to continue.'}
+          />
+          <img
+            style={getState().clickToContinueIconFrame1 ? {} : styles.guideHideClickToContinueAnimationFrame}
+            src={fingerClickIcon2}
+          />
+        </div>
+      ))
   }
 
   render() {
@@ -111,12 +130,7 @@ let UnwrappedGuide = class Guide extends React.Component {
                     >
                       {currentGuide.textFn(getState())}
                     </Typist>
-                    {getState().showClickToContinue && currentGuide.style !== 'Info' && !currentGuide.noDimBackground && (
-                      <div style={{display: 'flex', justifyContent: 'flex-end', height: 30, alignItems: 'end'}} className="fade">
-                        <img style={!getState().clickToContinueIconFrame1 ? {display: 'none'} : {}} src={fingerClickIcon1} />
-                        <img style={getState().clickToContinueIconFrame1 ? {display: 'none'} : {}} src={fingerClickIcon2} />
-                      </div>
-                    )}
+                    {this.renderClickToContinueReminder(currentGuide)}
                   </div>
                   <div
                     style={
@@ -127,16 +141,14 @@ let UnwrappedGuide = class Guide extends React.Component {
                   >
                     <div style={styles.guideFinalText}>
                       {currentGuide.textFn(getState())}
-                      {getState().showClickToContinue && currentGuide.style !== 'Info' && !currentGuide.noDimBackground && (
-                        <div style={{display: 'flex', justifyContent: 'flex-end', height: 30, alignItems: 'end'}}>
-                          <img style={!getState().clickToContinueIconFrame1 ? {display: 'none'} : {}} src={fingerClickIcon1} />
-                          <img style={getState().clickToContinueIconFrame1 ? {display: 'none'} : {}} src={fingerClickIcon2} />
-                        </div>
-                      )}
+                      {this.renderClickToContinueReminder(currentGuide)}
                     </div>
                   </div>
                   {currentGuide.style === 'Info' && (
-                    <Button style={styles.infoGuideButton} onClick={() => {}}>
+                    <Button
+                      style={styles.infoGuideButton} onClick={() => {
+                    }}
+                    >
                       {I18n.t('continue')}
                     </Button>
                   )}

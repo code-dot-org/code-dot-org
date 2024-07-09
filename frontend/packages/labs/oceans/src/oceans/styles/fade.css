@@ -1,0 +1,11 @@
+.fade {
+  animation: show 600ms 100ms ease-in forwards;
+  opacity: 0;
+}
+
+@keyframes show {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
