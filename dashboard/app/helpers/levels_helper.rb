@@ -586,7 +586,8 @@ module LevelsHelper
       channel_id = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
 
       # TODO: post-firebase-cleanup, remove ProjectUseDatablockStorage once we reach 100% datablock storage: #56994
-      storage_options[:useDatablockStorage] = ProjectUseDatablockStorage.use_data_block_storage_for?(channel_id)
+      # storage_options[:useDatablockStorage] = ProjectUseDatablockStorage.use_data_block_storage_for?(channel_id)
+      storage_options[:useDatablockStorage] = true
 
       # TODO: post-firebase-cleanup, remove all code in this unless block: #56994
       unless storage_options[:useDatablockStorage]
