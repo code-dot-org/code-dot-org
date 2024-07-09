@@ -30,43 +30,22 @@ let UnwrappedGuide = class Guide extends React.Component {
     setState({guideShowing: true, guideTypingTimer: undefined});
   }
 
-  onTextToSpeechDone() {
-    setState({guideShowing: true, textToSpeechCurrentGuide: undefined});
-  }
-
   onGuideClick = () => {
     const state = getState();
     const currentGuide = guide.getCurrentGuide();
 
-    let textToSpeechStarted = false;
-
-    // Start playing text to speech.
-    if (
-      state.textToSpeechLocale &&
-      hasTextToSpeechVoices() &&
-      !state.hasTextToSpeechStartedByClick &&
-      state.textToSpeechCurrentGuide !== currentGuide &&
-      currentGuide
-    ) {
-      if (
-        startTextToSpeech(
-          currentGuide.textFn(getState()),
-          state.textToSpeechLocale,
-          this.onTextToSpeechDone
-        )
-      ) {
-        setState(
-          {
-            hasTextToSpeechStartedByClick: true,
-            textToSpeechCurrentGuide: currentGuide
-          },
-          {skipCallback: true}
-        );
-        textToSpeechStarted = true;
-      }
-    }
-
-    if (!textToSpeechStarted) {
+    if (this.updateTextToSpeech(true)) {
+      // This click started text to speech.
+      setState(
+        {
+          hasTextToSpeechStartedByClick: true,
+          textToSpeechCurrentGuide: currentGuide
+        },
+        {skipCallback: true}
+      );
+    } else {
+      // This click did not start text to speech, so attempt
+      // to dismiss the guide.
       const dismissed = guide.dismissCurrentGuide();
       if (dismissed) {
         if (state.textToSpeechLocale) {
@@ -75,6 +54,44 @@ let UnwrappedGuide = class Guide extends React.Component {
         soundLibrary.playSound('other');
       }
     }
+  };
+
+  // Called from both the guide click handler and the render method, and
+  // attempts to play text to speech if needed.  Returns true if it believes
+  // it started text to speech.
+  updateTextToSpeech = inClickHandler => {
+    const state = getState();
+    const currentGuide = guide.getCurrentGuide();
+
+    // Do nothing if text to speech is not desired or yet available.
+    if (!state.textToSpeechLocale || !hasTextToSpeechVoices()) {
+      return false;
+    }
+
+    // Do nothing if there is no current guide, or if we've already started
+    // text to speech for the current guide (which might have finished
+    // playing by now).
+    if (
+      !currentGuide ||
+      state.textToSpeechCurrentGuide === currentGuide
+    ) {
+      return false;
+    }
+
+    // If we are in a click handler, do nothing if we've already started
+    // text to speech from a click handler.
+    // If we are not in a click handler, do nothing if we've never started
+    // from a click handler before.
+    if (inClickHandler === state.hasTextToSpeechStartedByClick) {
+      return false;
+    }
+
+    // Make an attempt to play text to speech, and return whether we
+    // believe it has started.
+    return startTextToSpeech(
+      currentGuide.textFn(getState()),
+      state.textToSpeechLocale
+    );
   };
 
   render() {
@@ -106,27 +123,9 @@ let UnwrappedGuide = class Guide extends React.Component {
       setState({guideTypingTimer}, {skipCallback: true});
     }
 
-    // Start playing text to speech.
-    if (
-      state.textToSpeechLocale &&
-      hasTextToSpeechVoices() &&
-      state.hasTextToSpeechStartedByClick &&
-      !state.guideShowing &&
-      state.textToSpeechCurrentGuide !== currentGuide &&
-      currentGuide
-    ) {
-      if (
-        startTextToSpeech(
-          currentGuide.textFn(getState()),
-          state.textToSpeechLocale,
-          this.onTextToSpeechDone
-        )
-      ) {
-        setState(
-          {textToSpeechCurrentGuide: currentGuide},
-          {skipCallback: true}
-        );
-      }
+    if (this.updateTextToSpeech(false)) {
+      // This call started text to speech.
+      setState({textToSpeechCurrentGuide: currentGuide}, {skipCallback: true});
     }
 
     return (

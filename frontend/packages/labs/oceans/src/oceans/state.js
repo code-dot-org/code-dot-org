@@ -41,11 +41,12 @@ const initialState = {
   guideTypingTimer: undefined,
   showConfirmationDialog: false,
   confirmationDialogOnYes: null,
+  // An optional text-to-speech locale which activates the feature.
   textToSpeechLocale: undefined,
   // Whether text to speech has ever been successfully
   // started via a user click.
   hasTextToSpeechStartedByClick: false,
-  // The current guide, if any, being played as text
+  // The most recent guide, if any, being played as text
   // to speech.
   textToSpeechCurrentGuide: undefined
 };

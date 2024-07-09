@@ -31,13 +31,13 @@ export function startTextToSpeech(text, locale, onComplete) {
     }
   }
 
-  utterance.onend = onComplete;
+  if (onComplete) {
+    utterance.onend = onComplete;
+  }
 
   speechSynthesis.cancel();
 
   speechSynthesis.speak(utterance);
-
-  console.log('Saying:', text);
 
   return true;
 }
