@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
 import FormComponent from '../form_components/FormComponent';
 
 export default class PreWorkshopQuestions extends FormComponent {

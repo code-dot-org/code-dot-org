@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
 import ConfirmationDialog from '../components/confirmation_dialog';
 
 export default class EnrollmentCancelButton extends React.Component {
