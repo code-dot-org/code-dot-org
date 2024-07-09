@@ -95,7 +95,7 @@ export interface MilestoneReport extends OptionalMilestoneData {
 
 interface OptionalMilestoneData {
   program?: string;
-  submitted?: boolean;
+  submitted?: string;
 }
 
 const initialState: ProgressState = {
@@ -409,7 +409,7 @@ export const sendSubmitReport = createAsyncThunk<
   }
 >('progress/sendSubmitReport', async (payload, thunkAPI) => {
   const extraPayload = {
-    submitted: payload.submitted,
+    submitted: payload.submitted.toString(),
   };
   await sendReportHelper(
     payload.appType,
