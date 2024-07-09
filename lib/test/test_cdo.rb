@@ -2,14 +2,18 @@ require_relative 'test_helper'
 require 'cdo'
 
 describe CDO do
+  let(:described_class) {CDO}
+
   describe '.aws_access?' do
+    let(:aws_access?) {described_class.aws_access?}
+
     context 'in production' do
       before do
         CDO.stubs(:rack_env?).with(:production).returns(true)
       end
 
       it 'should return true' do
-        assert(CDO.aws_access?)
+        _(aws_access?).must_equal true
       end
 
       context 'AWS_PROFILE is empty' do
@@ -20,7 +24,7 @@ describe CDO do
         end
 
         it 'should return true' do
-          assert(CDO.aws_access?)
+          _(aws_access?).must_equal true
         end
       end
 
@@ -32,7 +36,7 @@ describe CDO do
         end
 
         it 'should return true' do
-          assert(CDO.aws_access?)
+          _(aws_access?).must_equal true
         end
       end
 
@@ -44,7 +48,7 @@ describe CDO do
         end
 
         it 'should return true' do
-          assert(CDO.aws_access?)
+          _(aws_access?).must_equal true
         end
       end
     end
@@ -62,7 +66,7 @@ describe CDO do
         end
 
         it 'should return false' do
-          refute(CDO.aws_access?)
+          _(aws_access?).must_equal false
         end
       end
 
@@ -74,7 +78,7 @@ describe CDO do
         end
 
         it 'should return true' do
-          assert(CDO.aws_access?)
+          _(aws_access?).must_equal true
         end
       end
 
@@ -86,7 +90,7 @@ describe CDO do
         end
 
         it 'should return false' do
-          refute(CDO.aws_access?)
+          _(aws_access?).must_equal false
         end
       end
     end
