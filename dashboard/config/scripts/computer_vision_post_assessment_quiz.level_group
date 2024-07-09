@@ -1,0 +1,18 @@
+name 'Computer-Vision-Post-Assessment-Quiz'
+title 'Computer Vision Module Pre-Assessment'
+submittable 'true'
+anonymous 'false'
+
+page
+level 'Computer-Vision-Post-Assessment-Q1'
+level 'Computer-Vision-Post-Assessment-Q2'
+level 'Computer-Vision-Post-Assessment-Q3'
+level 'Computer-Vision-Post-Assessment-Q4'
+level 'Computer-Vision-Post-Assessment-Q5'
+
+page
+level 'Computer-Vision-Post-Assessment-Q6'
+level 'Computer-Vision-Post-Assessment-Q7'
+level 'Computer-Vision-Post-Assessment-Q8'
+level 'Computer-Vision-Post-Assessment-Q9'
+level 'Computer-Vision-Post-Assessment-Q10'

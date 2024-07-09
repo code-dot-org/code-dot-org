@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React, {useMemo} from 'react';
 
 import {
@@ -58,11 +59,16 @@ const PresentationView: React.FunctionComponent = () => {
   ]);
 
   return (
-    <div className={styles.verticalFlexContainer}>
-      <div>
-        <Heading4 className={moduleStyles.modelCardTitle}>
-          {modelCardInfo['botName']}
-        </Heading4>
+    <div
+      className={classNames(
+        styles.verticalFlexContainer,
+        moduleStyles.container
+      )}
+    >
+      <Heading4 className={moduleStyles.modelCardTitle}>
+        {modelCardInfo['botName']}
+      </Heading4>
+      <div className={moduleStyles.modelCardFields}>
         {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label, iconName]) => {
           if (property === 'botName' || property === 'isPublished') {
             return null;

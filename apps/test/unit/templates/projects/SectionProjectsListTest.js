@@ -167,7 +167,7 @@ describe('SectionProjectsList', () => {
     );
 
     const lastEditedHeader = root.find('th').at(COLUMNS.LAST_EDITED);
-    expect(getNode(lastEditedHeader).innerText).to.contain('Last Edited');
+    expect(getNode(lastEditedHeader).textContent).to.contain('Last Edited');
 
     // Show least recently edited first
     lastEditedHeader.simulate('click');
@@ -218,7 +218,7 @@ describe('SectionProjectsList', () => {
 
   it('can be sorted by project name', () => {
     const projectNameHeader = root.find('th').at(COLUMNS.PROJECT_NAME);
-    expect(getNode(projectNameHeader).innerText).to.contain('Project Name');
+    expect(getNode(projectNameHeader).textContent).to.contain('Project Name');
 
     // Sort in ascending order by project name
     projectNameHeader.simulate('click');
@@ -315,7 +315,7 @@ describe('SectionProjectsList', () => {
 
   it('can be sorted by student name', () => {
     const projectNameHeader = root.find('th').at(COLUMNS.STUDENT_NAME);
-    expect(getNode(projectNameHeader).innerText).to.contain('Student Name');
+    expect(getNode(projectNameHeader).textContent).to.contain('Student Name');
 
     // Sort in ascending order by student name
     projectNameHeader.simulate('click');
@@ -414,7 +414,7 @@ describe('SectionProjectsList', () => {
 
   it('can be sorted by app type', () => {
     const appTypeHeader = root.find('th').at(COLUMNS.APP_TYPE);
-    expect(getNode(appTypeHeader).innerText).to.contain('Type');
+    expect(getNode(appTypeHeader).textContent).to.contain('Type');
 
     // Sort in ascending order by app type
     appTypeHeader.simulate('click');
@@ -514,10 +514,10 @@ describe('SectionProjectsList', () => {
   it('shows the correct list of students in the student filter dropdown', () => {
     const options = root.find('option');
     expect(options).to.have.length(4);
-    expect(getNode(options, 0).innerText).to.equal('All students');
-    expect(getNode(options, 1).innerText).to.equal('Alice');
-    expect(getNode(options, 2).innerText).to.equal('Bob');
-    expect(getNode(options, 3).innerText).to.equal('Charlie');
+    expect(getNode(options, 0).textContent).to.equal('All students');
+    expect(getNode(options, 1).textContent).to.equal('Alice');
+    expect(getNode(options, 2).textContent).to.equal('Bob');
+    expect(getNode(options, 3).textContent).to.equal('Charlie');
 
     const select = root.find('select');
     expect(getNode(select).value).to.equal('_all_students');
@@ -562,7 +562,7 @@ describe('SectionProjectsList', () => {
     expect(getNode(select).value).to.equal('Alice');
 
     const appTypeHeader = root.find('th').at(COLUMNS.APP_TYPE);
-    expect(getNode(appTypeHeader).innerText).to.contain('Type');
+    expect(getNode(appTypeHeader).textContent).to.contain('Type');
 
     // Sort in ascending order by app type
     appTypeHeader.simulate('click');
@@ -667,9 +667,9 @@ describe('SectionProjectsList', () => {
     // Charlie should no longer appear in the dropdown
     const options = root.find('option');
     expect(options).to.have.length(3);
-    expect(getNode(options, 0).innerText).to.equal('All students');
-    expect(getNode(options, 1).innerText).to.equal('Alice');
-    expect(getNode(options, 2).innerText).to.equal('Bob');
+    expect(getNode(options, 0).textContent).to.equal('All students');
+    expect(getNode(options, 1).textContent).to.equal('Alice');
+    expect(getNode(options, 2).textContent).to.equal('Bob');
   });
 
   describe('getStudentNames', () => {
@@ -728,12 +728,12 @@ describe('SectionProjectsList', () => {
     columnMap = COLUMNS_WITHOUT_THUMBNAILS
   ) {
     const projectNameActual =
-      rowElement.childNodes[columnMap.PROJECT_NAME].innerText;
+      rowElement.childNodes[columnMap.PROJECT_NAME].textContent;
     const studentNameActual =
-      rowElement.childNodes[columnMap.STUDENT_NAME].innerText;
-    const appTypeActual = rowElement.childNodes[columnMap.APP_TYPE].innerText;
+      rowElement.childNodes[columnMap.STUDENT_NAME].textContent;
+    const appTypeActual = rowElement.childNodes[columnMap.APP_TYPE].textContent;
     const lastEditedActual =
-      rowElement.childNodes[columnMap.LAST_EDITED].innerText;
+      rowElement.childNodes[columnMap.LAST_EDITED].textContent;
 
     expect(projectNameActual).to.equal(projectName);
     expect(studentNameActual).to.equal(studentName);

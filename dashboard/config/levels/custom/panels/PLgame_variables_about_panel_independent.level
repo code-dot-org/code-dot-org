@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2024-06-06T19:17:25.000Z",
   "level_num": "custom",
@@ -19,7 +20,7 @@
         "layout": "text-top-right"
       },
       {
-        "text": "#STEP 2️⃣ \n##Set variable \n\nSet the value of the variable with this block.\n\n<img src=\"https://images.code.org/fe305474ecbaffc5475149eb9977c2f2-image-1712095484307.jpg\" style=\"margin-right: 40px; width: 75%\">\n\n\nWhat should the starting score be?",
+        "text": "#STEP 2️⃣ \n##Set variable \n\nSet the value of the variable with this block.\n\n<img src=\"https://images.code.org/fe305474ecbaffc5475149eb9977c2f2-image-1712095484307.jpg\" style=\"margin-right: 40px; width: 75%\">\n\n\nWhat should the starting score be?\n\n**Teacher Tip:** Changing variable blocks are typically attached to event blocks, as the change does not occur until something happens. ",
         "imageUrl": "https://images.code.org/398139030689a8f8f6fe47cdbddcf90a-setPanel.gif",
         "key": "games_dev_variables_panel-a8841bd0-4808-48cc-85ac-2d43ce210226"
       },
@@ -31,7 +32,6 @@
     ],
     "name_suffix": "_independent"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-06-06T19:17:25.396+00:00\",\"changed\":[\"cloned from \\\"game_variables_about_panel_independent\\\"\"],\"cloned_from\":\"game_variables_about_panel_independent\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-06T19:17:25.396+00:00\",\"changed\":[\"cloned from \\\"game_variables_about_panel_independent\\\"\"],\"cloned_from\":\"game_variables_about_panel_independent\"},{\"changed_at\":\"2024-07-08 21:25:19 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
 </Panels>

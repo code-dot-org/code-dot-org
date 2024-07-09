@@ -61,7 +61,7 @@ class SessionsController < Devise::SessionsController
     return redirect_to new_user_session_path unless current_user
 
     # If the user is npt locked out with the Child Account Policy, redirect them to /home
-    redirect_to home_path unless Policies::ChildAccount::ComplianceState.locked_out?(current_user)
+    return redirect_to home_path unless Policies::ChildAccount::ComplianceState.locked_out?(current_user)
 
     # Basic defaults. If the @pending_email is empty, the request was never sent
     @pending_email = ''
@@ -73,8 +73,8 @@ class SessionsController < Devise::SessionsController
       @disallowed_email = current_user.hashed_email
     end
 
-    # Determine the deletion date as the creation time of the account + 7 days
-    @delete_date = current_user.created_at.since(7.days)
+    # Determine the deletion date as the lockout date of the account + 7 days
+    @delete_date = DateTime.parse(current_user.child_account_compliance_lock_out_date).since(7.days)
 
     # Find any existing permission request for this user
     # Students might have issued a few requests. We render the latest one.

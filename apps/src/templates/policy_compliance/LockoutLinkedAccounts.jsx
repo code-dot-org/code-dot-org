@@ -65,10 +65,11 @@ export default function LockoutLinkedAccounts(props) {
 
   useEffect(() => {
     reportEvent(EVENTS.CAP_SETTINGS_SHOWN, {
+      providers: props.providers,
       inSection: props.inSection,
       consentStatus: props.permissionStatus,
     });
-  }, [props.inSection, props.permissionStatus]);
+  }, [props]);
 
   /**
    * This useEffect hook is responsible for reporting successful parent permission request events:
@@ -83,21 +84,24 @@ export default function LockoutLinkedAccounts(props) {
 
     if (!prevPendingEmail) {
       reportEvent(EVENTS.CAP_SETTINGS_EMAIL_SUBMITTED, {
+        providers: props.providers,
         inSection: props.inSection,
         consentStatus: parentalPermissionRequest.consent_status,
       });
     } else if (parentalPermissionRequest.parent_email === prevPendingEmail) {
       reportEvent(EVENTS.CAP_SETTINGS_EMAIL_RESEND, {
+        providers: props.providers,
         inSection: props.inSection,
         consentStatus: parentalPermissionRequest.consent_status,
       });
     } else {
       reportEvent(EVENTS.CAP_SETTINGS_EMAIL_UPDATED, {
+        providers: props.providers,
         inSection: props.inSection,
         consentStatus: parentalPermissionRequest.consent_status,
       });
     }
-  }, [action, prevPendingEmail, parentalPermissionRequest, props.inSection]);
+  }, [action, prevPendingEmail, parentalPermissionRequest, props]);
 
   // When the email field is updated, also update the disability state of the
   // submit button.
@@ -298,6 +302,7 @@ LockoutLinkedAccounts.propTypes = {
   permissionStatus: PropTypes.string,
   userEmail: PropTypes.string,
   inSection: PropTypes.bool,
+  providers: PropTypes.arrayOf(PropTypes.string),
 };
 
 const styles = {

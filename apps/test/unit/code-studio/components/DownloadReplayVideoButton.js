@@ -17,14 +17,14 @@ describe.skip('DownloadReplayVideoButton', () => {
 
   let originalAppOptions;
 
-  before(function () {
+  beforeAll(function () {
     originalAppOptions = window.appOptions;
     window.appOptions = {
       signedReplayLogUrl: 'some-url.com',
     };
   });
 
-  after(function () {
+  afterAll(function () {
     window.appOptions = originalAppOptions;
   });
 
