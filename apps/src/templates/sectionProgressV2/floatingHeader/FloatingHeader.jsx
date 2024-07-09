@@ -8,6 +8,10 @@ import LessonProgressColumnHeader from '../LessonProgressColumnHeader';
 
 import styles from './floating-header.module.scss';
 import progressStyles from '../progress-table-v2.module.scss';
+import {
+  areAllLevelsLocked,
+  getLockedStatusPerStudent,
+} from '../LockedLessonUtils';
 
 /** A component that displays lesson headers in a floating header above a table.
  *
@@ -109,25 +113,18 @@ function FloatingHeader({
     };
   }, [handleScrollAndResize, setScrollCallback, headerRef]);
 
-  const lockedPerStudent = React.useCallback(
-    lesson =>
-      Object.fromEntries(
-        sortedStudents.map(student => [
-          student.id,
-          lesson.lockable &&
-            lesson.levels.every(
-              level => levelProgressByStudent[student.id][level.id]?.locked
-            ),
-        ])
-      ),
-    [levelProgressByStudent, sortedStudents]
-  );
-
   // For lockable lessons, check whether each level is locked for each student.
   // Used to control locked/unlocked icon in lesson header.
-  const allLocked = React.useMemo(
-    () => sortedStudents.every(student => lockedPerStudent[student.id]),
-    [sortedStudents, lockedPerStudent]
+  const getLessonAllLocked = React.useCallback(
+    lesson =>
+      areAllLevelsLocked(
+        getLockedStatusPerStudent(
+          levelProgressByStudent,
+          sortedStudents,
+          lesson
+        )
+      ),
+    [levelProgressByStudent, sortedStudents]
   );
 
   const headers = React.useMemo(
@@ -150,13 +147,13 @@ function FloatingHeader({
           >
             <LessonProgressColumnHeader
               lesson={lesson}
-              allLocked={allLocked}
+              allLocked={getLessonAllLocked(lesson)}
               key={lesson.id + '-float-header'}
             />
           </div>
         );
       }),
-    [lessons, expandedLessonIds, allLocked]
+    [lessons, expandedLessonIds, getLessonAllLocked]
   );
 
   return (
