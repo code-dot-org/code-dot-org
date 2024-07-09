@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import Radium from "radium";
 import Typist from "react-typist";
 
@@ -20,6 +20,7 @@ let UnwrappedGuide = class Guide extends React.Component {
     clearInterval(getState().guideTypingTimer);
     setState({guideShowing: true, guideTypingTimer: null});
 
+    // filter out all this other behavior too if not in K5 mode?
     if (!guide.getCurrentGuide().noDimBackground) {
       const timerId = setTimeout(() => {
         setState({showClickToContinue: true});
@@ -53,6 +54,9 @@ let UnwrappedGuide = class Guide extends React.Component {
 
   renderClickToContinueReminder(currentGuide) {
     return (
+      getState().guides === 'K5' &&
+      currentGuide.style !== 'Info' &&
+      !currentGuide.noDimBackground && (
         <div style={styles.guideClickToContinueReminderContainer} className="fade">
           <img
             style={getState().clickToContinueIconFrame1 ? styles.guideHideClickToContinueAnimationFrame : {}}
@@ -64,7 +68,7 @@ let UnwrappedGuide = class Guide extends React.Component {
             src={fingerClickIcon2}
           />
         </div>
-      )
+      ))
   }
 
   render() {
@@ -130,8 +134,6 @@ let UnwrappedGuide = class Guide extends React.Component {
                       {currentGuide.textFn(getState())}
                     </Typist>
                     {getState().showClickToContinue
-                      && currentGuide.style !== 'Info'
-                      && !currentGuide.noDimBackground
                       && this.renderClickToContinueReminder(currentGuide)}
                   </div>
                   <div
@@ -148,7 +150,8 @@ let UnwrappedGuide = class Guide extends React.Component {
                   </div>
                   {currentGuide.style === 'Info' && (
                     <Button
-                      style={styles.infoGuideButton} onClick={() => {}}
+                      style={styles.infoGuideButton} onClick={() => {
+                    }}
                     >
                       {I18n.t('continue')}
                     </Button>
