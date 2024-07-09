@@ -49,7 +49,7 @@ class Pd::Workshop < ApplicationRecord
 
   has_many :regional_partner_program_managers, source: :program_managers, through: :regional_partner
 
-  has_and_belongs_to_many :course_offerings, join_table: :course_offerings_pd_workshops, foreign_key: 'pd_workshop_id', association_foreign_key: 'course_offering_id'
+  has_and_belongs_to_many :course_offerings, join_table: :course_offerings_pd_workshops, foreign_key: 'pd_workshop_id'
 
   serialized_attrs [
     'fee',
