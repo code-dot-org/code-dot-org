@@ -12,7 +12,7 @@ import {
   isTestEnvironment,
 } from '../../utils';
 import logToCloud from '@cdo/apps/logToCloud';
-import cookies from 'js-cookie';
+import currentLocale from '@cdo/apps/util/currentLocale';
 
 /**
  * A barebones client for posting data to an AWS Firehose stream.
@@ -120,7 +120,7 @@ class FirehoseClient {
     if (window.appOptions) {
       return window.appOptions.locale;
     } else {
-      return cookies.get('language_') || 'en-US';
+      return currentLocale();
     }
   }
 

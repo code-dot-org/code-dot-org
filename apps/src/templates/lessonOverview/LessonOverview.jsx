@@ -1,4 +1,3 @@
-import cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
@@ -24,6 +23,7 @@ import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '@cdo/apps/util/color';
+import currentLocale from '@cdo/apps/util/currentLocale';
 import {linkWithQueryParams} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
@@ -32,6 +32,13 @@ import FontAwesome from '../FontAwesome';
 
 import LessonStandards from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';
+
+const ResourceActions = {
+  PRINT: 'print',
+  NAVIGATE: 'navigate',
+};
+
+const WINDOW_PRINT = 'windowPrint';
 
 class LessonOverview extends Component {
   static propTypes = {
@@ -65,7 +72,8 @@ class LessonOverview extends Component {
 
   recordAndHandleResource = (e, firehoseKey, action, url = null) => {
     e.preventDefault(); // Prevent navigation to url until callback
-    const event = action === 'navigate' ? 'open-pdf' : 'print-from-browser';
+    const event =
+      action === ResourceActions.NAVIGATE ? 'open-pdf' : 'print-from-browser';
     firehoseClient.putRecord(
       {
         study: 'pdf-click',
@@ -79,9 +87,9 @@ class LessonOverview extends Component {
       {
         includeUserId: true,
         callback: () => {
-          if (action === 'navigate' && url) {
+          if (action === ResourceActions.NAVIGATE && url) {
             window.location.href = url; // Navigate to the URL
-          } else if (action === 'print') {
+          } else if (action === ResourceActions.PRINT) {
             window.print(); // Trigger the print dialog
           }
         },
@@ -118,12 +126,17 @@ class LessonOverview extends Component {
   renderPrintOptions = () => {
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
 
-    if (pdfDropdownOptions.length > 0 && userLocale === 'en-US') {
+    if (pdfDropdownOptions.length > 0 && currentLocale() === 'en-US') {
       return pdfDropdownOptions.map(option => (
         <a
           key={option.key}
           onClick={e =>
-            this.recordAndHandleResource(e, option.key, 'navigate', option.url)
+            this.recordAndHandleResource(
+              e,
+              option.key,
+              ResourceActions.NAVIGATE,
+              option.url
+            )
           }
           href={option.url}
         >
@@ -133,8 +146,10 @@ class LessonOverview extends Component {
     } else {
       return [
         <a
-          key="windowPrint"
-          onClick={e => this.recordAndHandleResource(e, 'windowPrint', 'print')}
+          key={WINDOW_PRINT}
+          onClick={e =>
+            this.recordAndHandleResource(e, WINDOW_PRINT, ResourceActions.PRINT)
+          }
           href="#"
         >
           {i18n.printLessonPlan()}
@@ -363,9 +378,6 @@ class LessonOverview extends Component {
     );
   }
 }
-
-// Get the current locale.
-const userLocale = cookies.get('language_') || 'en-US';
 
 const styles = {
   frontPage: {
