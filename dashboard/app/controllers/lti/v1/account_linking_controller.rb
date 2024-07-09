@@ -1,3 +1,5 @@
+require 'metrics/events'
+
 module Lti
   module V1
     class AccountLinkingController < ApplicationController
@@ -38,6 +40,15 @@ module Lti
         if existing_user&.valid_password?(params[:password])
           Services::Lti::AccountLinker.call(user: existing_user, session: session)
           sign_in existing_user
+          metadata = {
+            'user_type' => existing_user.user_type,
+            'lms_name' => existing_user.lti_user_identities.first.lti_integration[:platform_name],
+          }
+          Metrics::Events.log_event(
+            user: existing_user,
+            event_name: 'lti_user_signin',
+            metadata: metadata,
+          )
           target_url = session[:user_return_to] || home_path
           redirect_to target_url
         else
