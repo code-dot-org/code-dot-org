@@ -56,6 +56,7 @@ export const MultiItemInput: React.FunctionComponent<{
               isIconOnly
               size="s"
               type="secondary"
+              color="gray"
               icon={{iconName: 'plus'}}
             />
           )}
@@ -65,6 +66,7 @@ export const MultiItemInput: React.FunctionComponent<{
             isIconOnly
             size="s"
             type="secondary"
+            color="gray"
             icon={{iconName: 'minus'}}
           />
         </div>

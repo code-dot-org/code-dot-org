@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+
 import i18n from '@cdo/locale';
 
 import ProjectRemix from './ProjectRemix';

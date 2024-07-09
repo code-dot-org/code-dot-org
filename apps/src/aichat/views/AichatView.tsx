@@ -96,8 +96,8 @@ const AichatView: React.FunctionComponent = () => {
     projectManager.addSaveSuccessListener(() => {
       dispatch(onSaveComplete());
     });
-    projectManager.addSaveFailListener(() => {
-      dispatch(onSaveFail());
+    projectManager.addSaveFailListener((e: Error) => {
+      dispatch(onSaveFail(e));
     });
   }, [projectManager, dispatch]);
 
@@ -192,8 +192,13 @@ const AichatView: React.FunctionComponent = () => {
               <PanelContainer
                 id="aichat-instructions-panel"
                 headerContent={commonI18n.instructions()}
+                className={moduleStyles.panelContainer}
+                headerClassName={moduleStyles.panelHeader}
               >
-                <Instructions beforeNextLevel={beforeNextLevel} />
+                <Instructions
+                  beforeNextLevel={beforeNextLevel}
+                  className={moduleStyles.instructions}
+                />
               </PanelContainer>
             </div>
             {!allFieldsHidden && (
@@ -201,6 +206,8 @@ const AichatView: React.FunctionComponent = () => {
                 <PanelContainer
                   id="aichat-model-customization-panel"
                   headerContent="Model Customization"
+                  className={moduleStyles.panelContainer}
+                  headerClassName={moduleStyles.panelHeader}
                   rightHeaderContent={renderModelCustomizationHeaderRight(
                     () => {
                       onClickStartOver();
@@ -225,6 +232,8 @@ const AichatView: React.FunctionComponent = () => {
             <PanelContainer
               id="aichat-presentation-panel"
               headerContent={'Model Card'}
+              className={moduleStyles.panelContainer}
+              headerClassName={moduleStyles.panelHeader}
             >
               <PresentationView />
             </PanelContainer>
@@ -234,6 +243,8 @@ const AichatView: React.FunctionComponent = () => {
           <PanelContainer
             id="aichat-workspace-panel"
             headerContent={chatWorkspaceHeader}
+            className={moduleStyles.panelContainer}
+            headerClassName={moduleStyles.panelHeader}
             rightHeaderContent={renderChatWorkspaceHeaderRight(() => {
               dispatch(clearChatMessages());
               analyticsReporter.sendEvent(

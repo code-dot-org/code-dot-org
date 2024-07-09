@@ -1,13 +1,15 @@
-import React from 'react';
+import $ from 'jquery';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
+
+import LessonProgress from '../progress/LessonProgress';
+
+import HeaderFinish from './HeaderFinish';
+import HeaderPopup from './HeaderPopup';
 import ProjectInfo from './ProjectInfo';
 import ScriptName from './ScriptName';
-import LessonProgress from '../progress/LessonProgress';
-import HeaderPopup from './HeaderPopup';
-import HeaderFinish from './HeaderFinish';
-import _ from 'lodash';
-import $ from 'jquery';
 
 // These components will be given additional width beyond what they desire.
 const scriptNameExtraWidth = 10;

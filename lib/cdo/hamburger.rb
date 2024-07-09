@@ -11,6 +11,7 @@ class Hamburger
   SHOW_ALWAYS = "show-always".freeze
   HIDE_ALWAYS = "hide-always".freeze
   SHOW_MOBILE = "show-mobile".freeze
+  SHOW_SMALL_DESKTOP = "show-small-desktop".freeze
 
   def self.get_divider_visibility(above_section_visibility, below_section_visibility)
     return HIDE_ALWAYS if above_section_visibility == HIDE_ALWAYS || below_section_visibility == HIDE_ALWAYS
@@ -23,7 +24,7 @@ class Hamburger
     show_student_options = HIDE_ALWAYS
     show_pegasus_options = HIDE_ALWAYS
     show_intl_about = SHOW_MOBILE
-    show_help_options = SHOW_MOBILE
+    show_help_options = SHOW_SMALL_DESKTOP
 
     if options[:level]
       # The header is taken over by level-related UI, so we need the hamburger
@@ -32,8 +33,10 @@ class Hamburger
       case options[:user_type]
       when 'teacher'
         show_teacher_options = SHOW_ALWAYS
+        show_help_options = SHOW_MOBILE
       when 'student'
         show_student_options = SHOW_ALWAYS
+        show_help_options = SHOW_MOBILE
       end
 
       # Regardless of user type, then they also need the pegasus
@@ -47,14 +50,16 @@ class Hamburger
       case options[:user_type]
       when 'teacher'
         show_teacher_options = SHOW_MOBILE
+        show_help_options = SHOW_MOBILE
       when 'student'
         show_student_options = SHOW_MOBILE
+        show_help_options = SHOW_MOBILE
       end
 
       # We want to show the pegasus options.  They're in the hamburger for desktop
       # if they didn't fit on the header, or they're just in it for mobile if they did.
       show_pegasus_options =
-        (options[:user_type] == "teacher" || options[:user_type] == "student") ? SHOW_ALWAYS : SHOW_MOBILE
+        (options[:user_type] == "teacher" || options[:user_type] == "student" || options[:level]) ? SHOW_ALWAYS : SHOW_SMALL_DESKTOP
     end
 
     # Do we show hamburger on all widths, only mobile, or not at all?
@@ -64,6 +69,8 @@ class Hamburger
         SHOW_ALWAYS
       elsif show_set.include? SHOW_MOBILE
         SHOW_MOBILE
+      elsif show_set.include? SHOW_SMALL_DESKTOP
+        SHOW_SMALL_DESKTOP
       else
         HIDE_ALWAYS
       end
@@ -82,6 +89,8 @@ class Hamburger
   def self.get_hamburger_contents(options)
     loc_prefix = options[:loc_prefix]
     is_teacher_or_student = options[:user_type] == "teacher" || options[:user_type] == "student"
+    is_level = options[:level]
+    hide_small_desktop = is_teacher_or_student || is_level
 
     # Teacher-specific hamburger dropdown links.
     teacher_entries = [
@@ -185,7 +194,7 @@ class Hamburger
     entries << {
       title: I18n.t("#{loc_prefix}learn"),
       url: CDO.code_org_url("/students"),
-      class: visibility[:show_pegasus_options],
+      class: visibility[:show_pegasus_options] + (hide_small_desktop ? "" : " hide-small-desktop"),
       id: "learn"
     }
 
@@ -194,13 +203,13 @@ class Hamburger
       title: I18n.t("#{loc_prefix}teach"),
       id: "educate_entries",
       subentries: educate_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
-      class: visibility[:show_pegasus_options]
+      class: visibility[:show_pegasus_options] + (hide_small_desktop ? "" : " hide-small-desktop")
     }
 
     entries << {
       title: I18n.t("#{loc_prefix}districts"),
       url: CDO.code_org_url("/administrators"),
-      class: visibility[:show_pegasus_options],
+      class: visibility[:show_pegasus_options] + (hide_small_desktop ? "" : " hide-small-desktop"),
       id: "districts"
     }
 
@@ -245,7 +254,7 @@ class Hamburger
 
     # Show help links at the bottom of the list for signed out users.
     unless is_teacher_or_student
-      entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]), id: "before-help"}
+      entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]) + (is_level ? "  hide-large-desktop" : ""), id: "before-help"}
       entries.concat(help_contents.each {|e| e[:class] = visibility[:show_help_options]})
     end
 
@@ -275,10 +284,10 @@ class Hamburger
       {title: I18n.t("#{loc_prefix}learn"), url: CDO.code_org_url("/students"), id: "header-learn"},
       {title: I18n.t("#{loc_prefix}teach"), url: CDO.code_org_url("/teach"), id: "header-teach"},
       {title: I18n.t("#{loc_prefix}districts"), url: CDO.code_org_url("/administrators"), id: "header-districts"},
-      {title: I18n.t("#{loc_prefix}stats"), url: CDO.code_org_url("/promote"), id: "header-stats"},
-      {title: I18n.t("#{loc_prefix}help_us"), url: CDO.code_org_url("/help"), id: "header-help"},
-      {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-incubator"},
-      {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/about"), id: "header-about"}
+      {title: I18n.t("#{loc_prefix}stats"), url: CDO.code_org_url("/promote"), id: "header-stats", class: "hide-small-desktop"},
+      {title: I18n.t("#{loc_prefix}help_us"), url: CDO.code_org_url("/help"), id: "header-help", class: "hide-small-desktop"},
+      {title: I18n.t("#{loc_prefix}incubator"), url: CDO.studio_url("/incubator"), id: "header-incubator", class: "hide-small-desktop"},
+      {title: I18n.t("#{loc_prefix}about"), url: CDO.code_org_url("/about"), id: "header-about", class: "hide-small-desktop"}
     ]
 
     if options[:user_type] == "teacher"

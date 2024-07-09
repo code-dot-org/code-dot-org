@@ -70,9 +70,11 @@ describe('Code Review Comment', () => {
   });
 
   it('displays hide option for visible resolved comment', () => {
+    jest.spyOn(React, 'useRef').mockReturnValue({current: true});
+
     const wrapper = renderWrapper({isResolved: true});
     const onClickPromise = wrapper.find('a').first().invoke('onClick')();
-    onClickPromise.then(() =>
+    return onClickPromise.then(() =>
       expect(wrapper.find('.fa-eye-slash')).to.have.lengthOf(1)
     );
   });

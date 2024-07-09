@@ -43,7 +43,7 @@
       "downButton",
       "upButton"
     ],
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseD_playLab_condFP_1\",\r\n  \"callout_text\": \"we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.\",\r\n  \"element_id\": \"[id=':2.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"courseD_playLab_condFP_1\",\"callout_text\":\"we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.\",\"element_id\":\"[id=':2.label']\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"top left\",\"at\":\"top right\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\"[id='blockly-1.label']\",\"localization_key\":\"courseD_playLab_condFP_1\",\"callout_text\":\"we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"top left\",\"at\":\"top right\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "short_instructions": "Now, build your own game to show off to your friends!",
     "parent_level_id": 7968,
     "name_suffix": "_2018",
@@ -57,7 +57,6 @@
     "include_shared_functions": "false",
     "authored_hints": "[]",
     "default_num_example_blocks": "false",
-    "contained_level_names": null,
     "preload_asset_list": null
   },
   "published": true,

@@ -1,16 +1,17 @@
-import React from 'react';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
-import color from '@cdo/apps/util/color';
+import queryString from 'query-string';
+import React from 'react';
+
+import MazeThumbnail from '@cdo/apps/code-studio/components/lessonExtras/MazeThumbnail';
 import fontConstants from '@cdo/apps/fontConstants';
-import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
-import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagIcon';
-import MazeThumbnail from '@cdo/apps/code-studio/components/lessonExtras/MazeThumbnail';
-import queryString from 'query-string';
+import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
+import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import {levelType} from '@cdo/apps/templates/progress/progressTypes';
-import _ from 'lodash';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import color from '@cdo/apps/util/color';
 
 export default class SublevelCard extends React.Component {
   static propTypes = {

@@ -3,7 +3,6 @@ title 'Let\'s Explore the Data!'
 submittable 'true' 
 anonymous 'false'
 
-
 page
 text 'k5_ai_student_data_overview'
 level 'k5_ai_student_data_scenarios'

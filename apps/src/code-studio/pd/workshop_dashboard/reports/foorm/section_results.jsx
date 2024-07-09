@@ -1,6 +1,7 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import _ from 'lodash';
+
 import MatrixChoiceResponses from '../../components/survey_results/matrix_choice_responses';
 import SingleQuestionChoiceResponses from '../../components/survey_results/single_question_choice_responses';
 import TextResponses from '../../components/survey_results/text_responses';

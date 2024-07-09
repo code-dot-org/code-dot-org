@@ -24,7 +24,15 @@ describe('CloneLessonDialog', () => {
   });
 
   it('disables clone button while saving', () => {
-    fetchSpy.resolves();
+    let returnData = {
+      editLessonUrl: '/lessons/1/edit',
+      editScriptUrl: '/s/test-script/edit',
+    };
+
+    fetchSpy
+      .withArgs('/lessons/1/clone')
+      .returns(Promise.resolve({ok: true, json: () => returnData}));
+
     const wrapper = shallow(<CloneLessonDialog {...defaultProps} />);
     wrapper.find('Button').at(1).simulate('click');
     expect(wrapper.find('Button').at(1).props().disabled).to.be.true;
