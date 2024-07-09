@@ -40,13 +40,22 @@ class UserLevelsController < ApplicationController
     return head :ok
   end
 
-  # GET /user_levels/level_source/:script_id/:level_id
+  # GET /user_levels/:script_id/:level_id/level_source
   # Get the level source data for the current user's most recent attempt at the given level in the given script.
   # If there is no attempt, return null.
   def get_level_source
     user_levels = UserLevel.where(user_id: current_user.id, level_id: params[:level_id], script_id: params[:script_id])
     most_recent_user_level = user_levels.order(updated_at: :desc).first
     return render json: {data: most_recent_user_level&.level_source&.data}, status: :ok
+  end
+
+  # GET /user_levels/:script_id/:level_id
+  # Get the user level for the current user's most recent attempt at the given level in the given script.
+  # If there is no attempt, return null.
+  def get
+    user_levels = UserLevel.where(user_id: current_user.id, level_id: params[:level_id], script_id: params[:script_id])
+    most_recent_user_level = user_levels.order(updated_at: :desc).first
+    return render json: {user_level: most_recent_user_level}, status: :ok
   end
 
   private def set_user_level

@@ -87,11 +87,15 @@ export interface ProgressState {
   unitCompleted: boolean | undefined;
 }
 
-export interface MilestoneReport {
+export interface MilestoneReport extends OptionalMilestoneData {
   app: string;
   result: boolean;
   testResult: number;
+}
+
+interface OptionalMilestoneData {
   program?: string;
+  submitted?: boolean;
 }
 
 const initialState: ProgressState = {
@@ -384,12 +388,35 @@ export const sendPredictLevelReport = createAsyncThunk<
     state: RootState;
   }
 >('progress/sendPredictLevelReport', async (payload, thunkAPI) => {
+  const extraPayload = {
+    program: payload.predictResponse,
+  };
   sendReportHelper(
     payload.appType,
     TestResults.CONTAINED_LEVEL_RESULT,
     thunkAPI.dispatch,
     thunkAPI.getState,
-    payload.predictResponse
+    extraPayload
+  );
+});
+
+export const sendSubmitReport = createAsyncThunk<
+  void,
+  {appType: string; submitted: boolean},
+  {
+    dispatch: AppDispatch;
+    state: RootState;
+  }
+>('progress/sendSubmitReport', async (payload, thunkAPI) => {
+  const extraPayload = {
+    submitted: payload.submitted,
+  };
+  sendReportHelper(
+    payload.appType,
+    TestResults.CONTAINED_LEVEL_RESULT,
+    thunkAPI.dispatch,
+    thunkAPI.getState,
+    extraPayload
   );
 });
 
@@ -400,7 +427,7 @@ function sendReportHelper(
   result: number,
   dispatch: ThunkDispatch<RootState, undefined, AnyAction>,
   getState: () => RootState,
-  program?: string
+  extraData?: OptionalMilestoneData
 ) {
   const state = getState().progress;
   const levelId = state.currentLevelId;
@@ -415,16 +442,14 @@ function sendReportHelper(
   // The server does not appear to use the user ID parameter,
   // so just pass 0, like some other milestone posts do.
   const userId = 0;
+  extraData = extraData || {};
 
   const data: MilestoneReport = {
     app: appType,
     result: true,
     testResult: result,
+    ...extraData,
   };
-
-  if (program) {
-    data.program = program;
-  }
 
   fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}`, {
     method: 'POST',

@@ -39,7 +39,7 @@ import {
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import {START_SOURCES} from './constants';
-import {getPredictResponse} from './projects/userLevelsApi';
+import {getPredictResponse, getUserLevel} from './projects/userLevelsApi';
 
 interface PageError {
   errorMessage: string;
@@ -67,6 +67,9 @@ export interface LabState {
   levelProperties: LevelProperties | undefined;
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
+  // If this is a submittable level, boolean indicating if the user has submitted their response.
+  // A submitted level should be read-only.
+  submitted: boolean | undefined;
 }
 
 const initialState: LabState = {
@@ -78,6 +81,7 @@ const initialState: LabState = {
   validationState: getInitialValidationState(),
   levelProperties: undefined,
   isShareView: undefined,
+  submitted: undefined,
 };
 
 // Thunks
@@ -116,6 +120,7 @@ export const setUpWithLevel = createAsyncThunk(
       const levelProperties = await loadLevelProperties(
         payload.levelPropertiesPath
       );
+      console.log({levelProperties});
 
       Lab2Registry.getInstance()
         .getMetricsReporter()
@@ -158,6 +163,11 @@ export const setUpWithLevel = createAsyncThunk(
         // If this isn't a predict level, reset the response to an empty string
         // to avoid potentially confusing behavior.
         thunkAPI.dispatch(setLoadedPredictResponse(''));
+      }
+
+      if (levelProperties.submittable && payload.scriptId) {
+        const userLevel = await getUserLevel(payload.levelId, payload.scriptId);
+        console.log({userLevel});
       }
 
       // Create a new project manager. If we have a channel id,
@@ -278,14 +288,15 @@ export const isReadOnlyWorkspace = (state: {lab: LabState}) => {
   const isFrozen = !!state.lab.channel?.frozen;
   const isPredictLevel =
     state.lab.levelProperties?.predictSettings?.isPredictLevel || false;
+  const hasSubmitted = state.lab.submitted || false;
   // We are always in edit mode if we are in start or editing exemplar mode.
   // Both of these modes have no channel.
   if (isStartMode || isEditingExemplarMode) {
     return false;
   }
   // Otherwise, we are in read only mode if we are not the owner of the channel,
-  // the level is frozen, or the level is a predict level.
-  return !isOwner || isFrozen || isPredictLevel;
+  // the level is frozen, the level is a predict level, or the level has been submitted.
+  return !isOwner || isFrozen || isPredictLevel || hasSubmitted;
 };
 
 // If there is an error present on the page.
@@ -345,6 +356,9 @@ const labSlice = createSlice({
     },
     setIsShareView(state, action: PayloadAction<boolean>) {
       state.isShareView = action.payload;
+    },
+    setSubmitted(state, action: PayloadAction<boolean>) {
+      state.submitted = action.payload;
     },
   },
   extraReducers: builder => {
@@ -505,6 +519,7 @@ export const {
   clearPageError,
   setValidationState,
   setIsShareView,
+  setSubmitted,
 } = labSlice.actions;
 
 // These should not be set outside of the lab slice.

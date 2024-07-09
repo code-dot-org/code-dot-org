@@ -33,6 +33,9 @@ const ControlButtons: React.FunctionComponent = () => {
   const isPredictLevel = useAppSelector(
     state => state.lab.levelProperties?.predictSettings?.isPredictLevel
   );
+  // const isSubmittable = useAppSelector(
+  //   state => state.lab.levelProperties?.submittable
+  // );
   const disableRunAndTest = loading || (isPredictLevel && !hasPredictResponse);
 
   const navigationButtonText = hasNextLevel

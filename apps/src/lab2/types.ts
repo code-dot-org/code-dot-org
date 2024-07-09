@@ -160,6 +160,7 @@ export interface LevelProperties {
   // For Teachers Only value
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
+  submittable?: boolean;
 }
 
 // Level configuration data used by project-backed labs that don't require
