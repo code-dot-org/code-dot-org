@@ -9,8 +9,8 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {askAITutor} from '../redux/aiTutorRedux';
 import {genericCompilation, genericValidation} from '../constants';
+import {askAITutor} from '../redux/aiTutorRedux';
 
 const QuickActions = {
   [ActionType.COMPILATION]: genericCompilation,

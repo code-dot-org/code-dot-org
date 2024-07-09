@@ -3,5 +3,8 @@ import ReactDOM from 'react-dom';
 import AITutorResponseGenerator from '@cdo/apps/lib/levelbuilder/ai-tutor/AITutorResponseGenerator';
 
 $(document).ready(() => {
-  ReactDOM.render(<AITutorResponseGenerator />, document.getElementById('generator'));
+  ReactDOM.render(
+    <AITutorResponseGenerator />,
+    document.getElementById('generator')
+  );
 });
