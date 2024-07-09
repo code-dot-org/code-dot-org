@@ -5,7 +5,7 @@ module AichatSagemakerHelper
   INSTRUCTIONS_END_TOKEN = "[/INST]"
   SENTENCE_BEGIN_TOKEN = "<s>"
   SENTENCE_END_TOKEN = "</s>"
-  MAX_NEW_TOKENS = 512
+  MAX_NEW_TOKENS = 300
   TOP_P = 0.9
 
   def self.create_sagemaker_client
@@ -50,9 +50,11 @@ module AichatSagemakerHelper
 
   def self.get_sagemaker_assistant_response(sagemaker_response)
     parsed_response = JSON.parse(sagemaker_response.body.string)
+    puts "parsed_response: #{parsed_response}"
     generated_text = parsed_response[0]["generated_text"]
     parts = generated_text.split(INSTRUCTIONS_END_TOKEN)
-    parts.last
+    last = parts.last
+    last.split("}").first
   end
 
   def self.wrap_as_instructions(message)
