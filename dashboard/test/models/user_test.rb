@@ -336,7 +336,7 @@ class UserTest < ActiveSupport::TestCase
     application_form_data['alternateEmail'] = nil
     application.update!(form_data_hash: application_form_data)
 
-    assert application.form_data_hash['alternateEmail'].empty?
+    assert application.form_data_hash['alternateEmail'].blank?
     assert_equal user.email_for_enrollments, user.email
   end
 
