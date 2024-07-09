@@ -1,4 +1,5 @@
 @import 'color.scss';
+@import './common.scss';
 
 // We actually fade out the block to reveal the lab underneath.
 // We will do it over 1s, and then leave it invisible.
@@ -45,7 +46,7 @@
   width: 100%;
   height: 100%;
   position: fixed;
-  top: 52px;
+  top: $top-spacing;
   left: 0;
   right: 0;
   bottom: 0;
@@ -70,8 +71,6 @@
   &.fadeLoaded {
     animation: fade-out-block 0.5s;
   }
-
-
 
   .slowLoadContainer {
     display: flex;
