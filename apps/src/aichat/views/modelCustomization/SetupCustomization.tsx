@@ -5,7 +5,6 @@ import {useSelector} from 'react-redux';
 import {AichatLevelProperties, ModelDescription} from '@cdo/apps/aichat/types';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown/SimpleDropdown';
-import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -79,38 +78,31 @@ const SetupCustomization: React.FunctionComponent = () => {
   const renderChooseAndCompareModels = () => {
     return (
       <div className={styles.inputContainer}>
-        <WithTooltip
-          tooltipProps={{
-            text: 'This is the underlying language model being used by the chatbot. Use the dropdown to select from additional fine-tuned models.',
-            size: 's',
-            tooltipId: 'selected-model-tooltip',
-            direction: 'onLeft',
-            className: styles.tooltip,
-          }}
-          tooltipOverlayClassName={styles['full-width']}
-        >
-          <div className={styles['full-width']}>
-            <SimpleDropdown
-              labelText="Selected model:"
-              onChange={event =>
-                dispatch(
-                  setAiCustomizationProperty({
-                    property: 'selectedModelId',
-                    value: event.target.value,
-                  })
-                )
-              }
-              items={availableModels.map(model => {
-                return {value: model.id, text: model.name};
-              })}
-              selectedValue={chosenModelId}
-              name="model"
-              size="s"
-              className={styles.selectedModelDropdown}
-              disabled={isDisabled(selectedModelId) || readOnlyWorkspace}
-            />
-          </div>
-        </WithTooltip>
+        <FieldLabel
+          id="selected-model"
+          label="Selected model:"
+          tooltipText="This is the underlying language model being used by the chatbot. Use the dropdown to select from additional fine-tuned models."
+        />
+        <SimpleDropdown
+          labelText="Selected model:"
+          isLabelVisible={false}
+          onChange={event =>
+            dispatch(
+              setAiCustomizationProperty({
+                property: 'selectedModelId',
+                value: event.target.value,
+              })
+            )
+          }
+          items={availableModels.map(model => {
+            return {value: model.id, text: model.name};
+          })}
+          selectedValue={chosenModelId}
+          name="model"
+          size="s"
+          className={styles.selectedModelDropdown}
+          disabled={isDisabled(selectedModelId) || readOnlyWorkspace}
+        />
         {isEditable(selectedModelId) && (
           <Button
             text="Compare Models"

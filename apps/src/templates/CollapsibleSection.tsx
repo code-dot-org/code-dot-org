@@ -7,8 +7,6 @@ import {
 } from '@cdo/apps/componentLibrary/typography/types';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 
-import {TooltipProps, WithTooltip} from '../componentLibrary/tooltip';
-
 import moduleStyles from './collapsible-section.module.scss';
 
 interface CollapsibleSectionProps {
@@ -22,7 +20,6 @@ interface CollapsibleSectionProps {
   initiallyCollapsed?: boolean;
   collapsedIcon?: string;
   expandedIcon?: string;
-  tooltip?: TooltipProps;
 }
 
 const CollapsibleSection: React.FunctionComponent<CollapsibleSectionProps> = ({
@@ -36,7 +33,6 @@ const CollapsibleSection: React.FunctionComponent<CollapsibleSectionProps> = ({
   initiallyCollapsed = true,
   collapsedIcon = 'chevron-down',
   expandedIcon = 'chevron-up',
-  tooltip,
 }) => {
   const [collapsed, setCollapsed] = useState(initiallyCollapsed);
   const toggleCollapsed = useCallback(() => {
@@ -44,54 +40,46 @@ const CollapsibleSection: React.FunctionComponent<CollapsibleSectionProps> = ({
   }, [collapsed, setCollapsed]);
   const hasTitleIcon = titleIcon !== undefined;
 
-  const titleRow = (
-    <div className={moduleStyles.titleRow}>
-      <button
-        type="button"
-        onClick={toggleCollapsed}
-        className={moduleStyles.expandCollapseButton}
-      >
-        <FontAwesomeV6Icon
-          iconName={collapsed ? collapsedIcon : expandedIcon}
-          iconStyle="solid"
-        />
-      </button>
-      {hasTitleIcon && (
+  return (
+    <>
+      <div className={moduleStyles.titleRow}>
         <button
           type="button"
           onClick={toggleCollapsed}
           className={moduleStyles.expandCollapseButton}
         >
           <FontAwesomeV6Icon
-            iconName={titleIcon}
+            iconName={collapsed ? collapsedIcon : expandedIcon}
             iconStyle="solid"
-            className={titleIconStyle}
           />
         </button>
-      )}
-      <button
-        type="button"
-        onClick={toggleCollapsed}
-        className={moduleStyles.expandCollapseButton}
-      >
-        <Typography
-          semanticTag={titleSemanticTag}
-          visualAppearance={titleVisualAppearance}
-          className={titleStyle}
+        {hasTitleIcon && (
+          <button
+            type="button"
+            onClick={toggleCollapsed}
+            className={moduleStyles.expandCollapseButton}
+          >
+            <FontAwesomeV6Icon
+              iconName={titleIcon}
+              iconStyle="solid"
+              className={titleIconStyle}
+            />
+          </button>
+        )}
+        <button
+          type="button"
+          onClick={toggleCollapsed}
+          className={moduleStyles.expandCollapseButton}
         >
-          {title}
-        </Typography>
-      </button>
-    </div>
-  );
-
-  return (
-    <>
-      {tooltip ? (
-        <WithTooltip tooltipProps={tooltip}>{titleRow}</WithTooltip>
-      ) : (
-        titleRow
-      )}
+          <Typography
+            semanticTag={titleSemanticTag}
+            visualAppearance={titleVisualAppearance}
+            className={titleStyle}
+          >
+            {title}
+          </Typography>
+        </button>
+      </div>
       {!collapsed && children}
     </>
   );

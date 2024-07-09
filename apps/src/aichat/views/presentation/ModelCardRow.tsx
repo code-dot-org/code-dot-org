@@ -4,7 +4,6 @@ import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
 import moduleStyles from './model-card-row.module.scss';
-import customizationStyles from '../model-customization-workspace.module.scss';
 
 interface ModelCardRowProps {
   title: string;
@@ -17,7 +16,7 @@ const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
   title,
   titleIcon,
   expandedContent,
-  tooltipText,
+  tooltipText, // TODO: Use tooltip text
 }) => {
   const expandedContentToDisplay = useMemo(() => {
     if (Array.isArray(expandedContent)) {
@@ -49,16 +48,6 @@ const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
           titleIcon={titleIcon}
           collapsedIcon="caret-right"
           expandedIcon="caret-down"
-          tooltip={
-            tooltipText
-              ? {
-                  text: tooltipText,
-                  size: 's',
-                  tooltipId: `${title}-tooltip`,
-                  className: customizationStyles.tooltip,
-                }
-              : undefined
-          }
         >
           <BodyThreeText className={moduleStyles.expandedContent}>
             <div>{expandedContentToDisplay}</div>

@@ -113,3 +113,13 @@
 .tooltip {
   animation: fade-in 0.3s;
 }
+
+.fieldLabelContainer {
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+
+  .icon {
+    color: $light_gray_500;
+  }
+}
