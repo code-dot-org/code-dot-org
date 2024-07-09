@@ -27,6 +27,13 @@ let textToSpeechStartedViaClick = false;
 // to speech.
 let textToSpeechCurrentGuide = undefined;
 
+export const stopTypingSounds = () => {
+  if (guideTypingTimer) {
+    clearInterval(guideTypingTimer);
+    guideTypingTimer = undefined;
+  }
+};
+
 let UnwrappedGuide = class Guide extends React.Component {
   onTypingDone() {
     clearInterval(guideTypingTimer);
