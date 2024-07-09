@@ -9,6 +9,7 @@ module AichatSagemakerHelper
   TOP_P = 0.9
   ARITHMO_MODEL = "gen-ai-arithmo2-mistral-7b"
   PIRATE_MODEL = "gen-ai-mistral-pirate-7b"
+  KAREN_MODEL = "gen-ai-karen-creative-mistral-7b"
 
   def self.create_sagemaker_client
     Aws::SageMakerRuntime::Client.new
@@ -21,6 +22,10 @@ module AichatSagemakerHelper
     selected_model = aichat_params[:selectedModelId]
     if selected_model == ARITHMO_MODEL
       inputs = "Question: " + new_message[:chatMessageText]
+    elsif selected_model == KAREN_MODEL
+      inputs = "<|im_start|>system\nYou are a helpful assistant<|im_end|>\n"
+      inputs = inputs + "<|im_start|>user\nEdit the following text for spelling and grammar mistakes: " + new_message[:chatMessageText] + "<|im_end|>\n"
+      inputs = inputs + "<|im_start|>assistant"
     else
       inputs = ""
       if aichat_params[:systemPrompt].length > 0
@@ -59,18 +64,23 @@ module AichatSagemakerHelper
   end
 
   def self.get_sagemaker_assistant_response(sagemaker_response, selected_model_id)
-    puts "selected_model_id: #{selected_model_id}"
     parsed_response = JSON.parse(sagemaker_response.body.string)
     puts "parsed_response: #{parsed_response}"
     generated_text = parsed_response[0]["generated_text"]
-    parts = generated_text.split(INSTRUCTIONS_END_TOKEN)
+    if selected_model_id == KAREN_MODEL
+      parts = generated_text.split('<|im_start|>assistant')
+    else
+      parts = generated_text.split(INSTRUCTIONS_END_TOKEN)
+    end
     last = parts.last
     if selected_model_id == PIRATE_MODEL
       # Custom stopping string characters is used to separate the assistant's response from the rest of the generated text.
       last = last.split(/[}~*`]/).first
       # Remove double quotes in assistant's response.
       last = last.gsub(/\"/, "")
-    end
+    elsif selected_model_id == KAREN_MODEL
+      last = last.split("}").first
+    end  
     last
   end
 
