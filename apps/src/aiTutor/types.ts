@@ -22,7 +22,6 @@ export interface AITutorInteraction {
   levelId?: number;
   scriptId?: number;
   type: AITutorTypesValue | undefined;
-  isProjectBacked?: boolean;
   prompt: string;
   status: AITutorInteractionStatusValue;
   aiResponse?: string;
@@ -60,7 +59,6 @@ export interface Level {
   id: number;
   type: string;
   hasValidation: boolean;
-  isProjectBacked: boolean;
   aiTutorAvailable: boolean;
   isAssessment: boolean;
 }
