@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Papa from 'papaparse';
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import Button from '@cdo/apps/componentLibrary/button/Button';
@@ -18,6 +18,7 @@ const AITutorResponseGenerator: React.FC = () => {
   const [csvFile, setCsvFile] = useState<File | null>(null);
   const [data, setData] = useState<AIInteraction[]>([]);
   const [responseCount, setResponseCount] = useState<number>(0);
+  const [responsesPending, setResponsesPending] = useState<boolean>(false);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files ? event.target.files[0] : null;
@@ -40,6 +41,7 @@ const AITutorResponseGenerator: React.FC = () => {
   };
 
   const getAIResponses = () => {
+    setResponsesPending(true)
     for (let i = 0; i < data.length; i++) {
       askAI(data[i]);
     }
@@ -68,6 +70,12 @@ const AITutorResponseGenerator: React.FC = () => {
   const dataUploaded = data.length !== 0;
   const aiResponded = dataUploaded && data.length === responseCount;
 
+  useEffect(() => {
+    if (aiResponded) {
+      setResponsesPending(false);
+    }
+  }, [aiResponded]);
+
   return (
     <div>
       <h2>Generate AI Tutor Responses</h2>
@@ -95,6 +103,7 @@ const AITutorResponseGenerator: React.FC = () => {
           text="Get AI Tutor Responses"
           onClick={getAIResponses}
           disabled={!dataUploaded}
+          isPending={responsesPending}
         />
         <span>
           {responseCount} of {data.length}
