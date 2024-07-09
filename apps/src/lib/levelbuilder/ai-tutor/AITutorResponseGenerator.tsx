@@ -4,6 +4,7 @@ import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import {formatQuestionForAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {ChatContext} from '@cdo/apps/aiTutor/types';
+import styles from './ai-tutor-response-generator.module.scss';
 
 /**
  * Renders a series of buttons that allow levelbuilders to upload a CSV of
@@ -85,7 +86,7 @@ const AITutorResponseGenerator: React.FC = () => {
         resulting updated CSV. Your CSV must include a `studentInput` column to
         succeed.
       </p>
-      <div style={{marginBottom: '10px'}}>
+      <div className={styles.buttonSpacing}>
         <input
           className="csv-input"
           type="file"
@@ -94,11 +95,11 @@ const AITutorResponseGenerator: React.FC = () => {
         />
       </div>
 
-      <div style={{marginBottom: '10px'}}>
+      <div className={styles.buttonSpacing}>
         <Button text="Upload" onClick={importCSV} disabled={!csvSelected} />
       </div>
 
-      <div style={{marginBottom: '10px'}}>
+      <div className={styles.buttonSpacing}>
         <Button
           text="Get AI Tutor Responses"
           onClick={getAIResponses}
