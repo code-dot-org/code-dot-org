@@ -1199,20 +1199,20 @@ export class WorkshopForm extends React.Component {
                       aria-labelledby="dropdownMenuButton"
                     >
                       <ul style={styles.listItems}>
-                        {Object.values(ALL_PL_TOPICS).map(object => (
+                        {Object.values(ALL_PL_TOPICS).map(topic => (
                           <li
                             className="dropdown-item"
                             style={styles.singleItem}
-                            key={object.id}
+                            key={topic.id}
                           >
                             <SingleCheckbox
                               style={styles.check}
-                              name={object.display_name}
-                              label={object.display_name}
+                              name={topic.display_name}
+                              label={topic.display_name}
                               onChange={e =>
-                                this.handleTopicSelect(object.id, e)
+                                this.handleTopicSelect(topic.id, e)
                               }
-                              value={this.state.plTopics.includes(object.id)}
+                              value={this.state.plTopics.includes(topic.id)}
                             />
                           </li>
                         ))}

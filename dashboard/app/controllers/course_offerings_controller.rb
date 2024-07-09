@@ -38,7 +38,7 @@ class CourseOfferingsController < ApplicationController
   def self_paced_pl_course_offerings
     return head :bad_request unless current_user
     offerings = CourseOffering.assignable_course_offerings(current_user).select {|co| co.get_participant_audience == 'teacher' && co.instruction_type == 'self_paced'}
-    render :ok, json: offerings.map(&:summarize_self_paced_pl).to_json
+    render :ok, json: offerings&.map(&:summarize_self_paced_pl).to_json
   end
 
   private def course_offering_params
