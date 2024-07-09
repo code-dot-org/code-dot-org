@@ -79,7 +79,7 @@ module AichatSagemakerHelper
     format_sagemaker_assistant_response_output(generated_text, selected_model_id)
   end
 
-  def self.format_sagemaker_assistant_response_output(generate_text, selected_model_id)
+  def self.format_sagemaker_assistant_response_output(generated_text, selected_model_id)
     if selected_model_id == FINE_TUNED_MODELS[:KAREN]
       parts = generated_text.split(CHAT_ML_BEGIN_TOKEN + ASSISTANT)
     elsif selected_model_id == FINE_TUNED_MODELS[:ARITHMO]
