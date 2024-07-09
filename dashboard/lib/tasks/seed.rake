@@ -34,11 +34,11 @@ namespace :seed do
   end
 
   # Path to the dashboard directory from which content files (under /config) should be read.
-  DASHBOARD_DIR = ENV['DASHBOARD_DIR'] || '.'
-  DASHBOARD_PATHNAME = Pathname(DASHBOARD_DIR)
+  CURRICULUM_CONTENT_DIR = ENV['CURRICULUM_CONTENT_DIR'] || '.'
+  CURRICULUM_CONTENT_PATHNAME = Pathname(CURRICULUM_CONTENT_DIR)
 
   timed_task_with_logging videos: :environment do
-    Video.setup(DASHBOARD_DIR)
+    Video.setup(CURRICULUM_CONTENT_DIR)
   end
 
   timed_task_with_logging concepts: :environment do
@@ -58,19 +58,19 @@ namespace :seed do
   end
 
   timed_task_with_logging foorm_libraries: :environment do
-    Foorm::Library.setup(DASHBOARD_DIR)
+    Foorm::Library.setup(CURRICULUM_CONTENT_DIR)
   end
 
   timed_task_with_logging foorm_forms: :environment do
-    Foorm::Form.setup(DASHBOARD_DIR)
+    Foorm::Form.setup(CURRICULUM_CONTENT_DIR)
   end
 
   timed_task_with_logging foorms: :environment do
-    Foorm::Library.setup(DASHBOARD_DIR)
-    Foorm::Form.setup(DASHBOARD_DIR)
+    Foorm::Library.setup(CURRICULUM_CONTENT_DIR)
+    Foorm::Form.setup(CURRICULUM_CONTENT_DIR)
   end
 
-  SCRIPTS_GLOB = Dir.glob("#{DASHBOARD_DIR}/config/scripts_json/**/*.script_json").sort.flatten.freeze
+  SCRIPTS_GLOB = Dir.glob("#{CURRICULUM_CONTENT_DIR}/config/scripts_json/**/*.script_json").sort.flatten.freeze
   SPECIAL_UI_TEST_SCRIPTS = %w(
     ui-test-script-in-course-2017
     ui-test-script-in-course-2019
@@ -146,7 +146,7 @@ namespace :seed do
     oceans
     sports
   ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
-  SEEDED = "#{DASHBOARD_DIR}/config/scripts/.seeded".freeze
+  SEEDED = "#{CURRICULUM_CONTENT_DIR}/config/scripts/.seeded".freeze
 
   # Update scripts in the database from their file definitions.
   #
@@ -215,7 +215,7 @@ namespace :seed do
   end
 
   timed_task_with_logging courses: :environment do
-    Dir.glob(UnitGroup.file_path('**', DASHBOARD_PATHNAME)).sort.map do |path|
+    Dir.glob(UnitGroup.file_path('**', CURRICULUM_CONTENT_PATHNAME)).sort.map do |path|
       UnitGroup.load_from_path(path)
     end
   end
@@ -232,7 +232,7 @@ namespace :seed do
 
   # multi and match files must be seeded before any custom levels which contain them
   CHILD_DSL_TYPES = %w(TextMatch ContractMatch External Match Multi EvaluationMulti).freeze
-  CHILD_DSL_FILES = CHILD_DSL_TYPES.map {|x| Dir.glob("#{DASHBOARD_DIR}/config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
+  CHILD_DSL_FILES = CHILD_DSL_TYPES.map {|x| Dir.glob("#{CURRICULUM_CONTENT_DIR}/config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
 
   timed_task_with_logging child_dsls: :environment do
     DSLDefined.transaction do
@@ -243,7 +243,7 @@ namespace :seed do
   # bubble choice and level group files must be seeded last, since they can
   # contain many other level types
   PARENT_DSL_TYPES = %w(BubbleChoice LevelGroup).freeze
-  PARENT_DSL_FILES = PARENT_DSL_TYPES.map {|x| Dir.glob("#{DASHBOARD_DIR}/config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
+  PARENT_DSL_FILES = PARENT_DSL_TYPES.map {|x| Dir.glob("#{CURRICULUM_CONTENT_DIR}/config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
 
   timed_task_with_logging parent_dsls: :environment do
     DSLDefined.transaction do
@@ -256,7 +256,7 @@ namespace :seed do
   # rake seed:single_dsl DSL_FILENAME=csa_unit_6_assessment_2023.level_group
   timed_task_with_logging single_dsl: :environment do
     DSLDefined.transaction do
-      dsl_files = Dir.glob("#{DASHBOARD_DIR}/config/scripts/**/#{ENV['DSL_FILENAME']}")
+      dsl_files = Dir.glob("#{CURRICULUM_CONTENT_DIR}/config/scripts/**/#{ENV['DSL_FILENAME']}")
 
       unless dsl_files.count > 0
         raise 'no matching dsl-defined level files found. please check filename for exact case and spelling.'
@@ -292,26 +292,26 @@ namespace :seed do
   end
 
   timed_task_with_logging blocks: :environment do
-    Block.load_records(root_dir: DASHBOARD_PATHNAME)
+    Block.load_records(root_dir: CURRICULUM_CONTENT_PATHNAME)
   end
 
   timed_task_with_logging shared_blockly_functions: :environment do
-    SharedBlocklyFunction.load_records(root_dir: DASHBOARD_PATHNAME)
+    SharedBlocklyFunction.load_records(root_dir: CURRICULUM_CONTENT_PATHNAME)
   end
 
   timed_task_with_logging libraries: :environment do
-    Library.load_records(root_dir: DASHBOARD_PATHNAME)
+    Library.load_records(root_dir: CURRICULUM_CONTENT_PATHNAME)
   end
 
   # Generate the database entry from the custom levels json file.
   # Optionally limit to a single level via LEVEL_NAME= env variable.
   timed_task_with_logging custom_levels: :environment do
     level_name = ENV['LEVEL_NAME']
-    LevelLoader.load_custom_levels(level_name, DASHBOARD_DIR)
+    LevelLoader.load_custom_levels(level_name, CURRICULUM_CONTENT_DIR)
   end
 
   timed_task_with_logging deprecated_blockly_levels: :environment do
-    Services::DeprecatedLevelLoader.load_blockly_levels(DASHBOARD_DIR)
+    Services::DeprecatedLevelLoader.load_blockly_levels(CURRICULUM_CONTENT_DIR)
   end
 
   # Seeds the data in callouts
@@ -325,7 +325,7 @@ namespace :seed do
   end
 
   timed_task_with_logging course_offerings: :environment do
-    CourseOffering.seed_all(root_dir: DASHBOARD_PATHNAME)
+    CourseOffering.seed_all(root_dir: CURRICULUM_CONTENT_PATHNAME)
   end
 
   timed_task_with_logging course_offerings_ui_tests: :environment do
@@ -335,7 +335,7 @@ namespace :seed do
   end
 
   timed_task_with_logging reference_guides: :environment do
-    ReferenceGuide.seed_all(DASHBOARD_PATHNAME)
+    ReferenceGuide.seed_all(CURRICULUM_CONTENT_PATHNAME)
   end
 
   # Seeds Standards
@@ -346,13 +346,13 @@ namespace :seed do
   end
 
   timed_task_with_logging code_docs: :environment do
-    ProgrammingEnvironment.seed_all(root_dir: DASHBOARD_PATHNAME)
-    ProgrammingExpression.seed_all(root_dir: DASHBOARD_PATHNAME)
-    ProgrammingClass.seed_all(root_dir: DASHBOARD_PATHNAME)
+    ProgrammingEnvironment.seed_all(root_dir: CURRICULUM_CONTENT_PATHNAME)
+    ProgrammingExpression.seed_all(root_dir: CURRICULUM_CONTENT_PATHNAME)
+    ProgrammingClass.seed_all(root_dir: CURRICULUM_CONTENT_PATHNAME)
   end
 
   timed_task_with_logging data_docs: :environment do
-    DataDoc.seed_all(DASHBOARD_DIR)
+    DataDoc.seed_all(CURRICULUM_CONTENT_DIR)
   end
 
   # Seeds the data in school_districts
