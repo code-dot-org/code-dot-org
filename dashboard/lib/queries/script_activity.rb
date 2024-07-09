@@ -8,7 +8,7 @@ class Queries::ScriptActivity
   # Retrieve all scripts this user has started but not yet completed
   # return [Unit]
   def self.working_on_student_units(user)
-    working_on_units(user).reject {|s| s.pl_course?}
+    working_on_units(user).reject(&:pl_course?)
   end
 
   # Retrieve all scripts this user has started but not yet completed

@@ -1995,13 +1995,13 @@ class User < ApplicationRecord
       end
     end
 
-    user_course_data = courses_as_participant.reject {|c| c.pl_course?}.map(&:summarize_short)
+    user_course_data = courses_as_participant.reject(&:pl_course?).map(&:summarize_short)
 
     user_course_data + user_script_data
   end
 
   def sections_as_student_participant
-    sections_as_student.reject {|s| s.pl_section?}
+    sections_as_student.reject(&:pl_section?)
   end
 
   def sections_as_pl_participant

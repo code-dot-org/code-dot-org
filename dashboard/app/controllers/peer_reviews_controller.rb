@@ -28,7 +28,7 @@ class PeerReviewsController < ApplicationController
       plc_courses.each do |course|
         course_unit_map[course.id] = course.
           plc_course_units.
-          reject {|course_unit| course_unit.deprecated?}.
+          reject(&:deprecated?).
           map {|course_unit| [course_unit.name, course_unit.id]}
       end
     end
