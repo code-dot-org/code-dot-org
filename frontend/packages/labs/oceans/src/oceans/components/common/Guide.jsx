@@ -16,34 +16,22 @@ import {
   hasTextToSpeechVoices
 } from '@ml/utils/TextToSpeech';
 
-// A timer used for playing typing sounds.
-let guideTypingTimer = undefined;
-
-// Whether text to speech has ever been successfully
-// started via a user click.
-let textToSpeechStartedViaClick = false;
-
-// The current guide, if any, being played as text
-// to speech.
-let textToSpeechCurrentGuide = undefined;
-
 export const stopTypingSounds = () => {
-  if (guideTypingTimer) {
-    clearInterval(guideTypingTimer);
-    guideTypingTimer = undefined;
+  const state = getState();
+  if (state.guideTypingTimer) {
+    clearInterval(state.guideTypingTimer);
+    setState({guideTypingTimer: undefined}, {skipCallback: true});
   }
 };
 
 let UnwrappedGuide = class Guide extends React.Component {
   onTypingDone() {
-    clearInterval(guideTypingTimer);
-    setState({guideShowing: true});
-    guideTypingTimer = undefined;
+    clearInterval(getState().guideTypingTimer);
+    setState({guideShowing: true, guideTypingTimer: undefined});
   }
 
   onTextToSpeechDone() {
-    setState({guideShowing: true});
-    textToSpeechCurrentGuide = undefined;
+    setState({guideShowing: true, textToSpeechCurrentGuide: undefined});
   }
 
   onGuideClick = () => {
@@ -56,8 +44,8 @@ let UnwrappedGuide = class Guide extends React.Component {
     if (
       state.textToSpeechLocale &&
       hasTextToSpeechVoices() &&
-      !textToSpeechStartedViaClick &&
-      textToSpeechCurrentGuide !== currentGuide &&
+      !state.hasTextToSpeechStartedByClick &&
+      state.textToSpeechCurrentGuide !== currentGuide &&
       currentGuide
     ) {
       if (
@@ -67,8 +55,13 @@ let UnwrappedGuide = class Guide extends React.Component {
           this.onTextToSpeechDone
         )
       ) {
-        textToSpeechCurrentGuide = currentGuide;
-        textToSpeechStartedViaClick = true;
+        setState(
+          {
+            hasTextToSpeechStartedByClick: true,
+            textToSpeechCurrentGuide: currentGuide
+          },
+          {skipCallback: true}
+        );
         textToSpeechStarted = true;
       }
     }
@@ -104,21 +97,22 @@ let UnwrappedGuide = class Guide extends React.Component {
     if (
       !state.textToSpeechLocale &&
       !state.guideShowing &&
-      !guideTypingTimer &&
+      !state.guideTypingTimer &&
       currentGuide
     ) {
-      guideTypingTimer = setInterval(() => {
+      const guideTypingTimer = setInterval(() => {
         soundLibrary.playSound('no', 0.5);
       }, 1000 / 10);
+      setState({guideTypingTimer}, {skipCallback: true});
     }
 
     // Start playing text to speech.
     if (
       state.textToSpeechLocale &&
       hasTextToSpeechVoices() &&
-      textToSpeechStartedViaClick &&
+      state.hasTextToSpeechStartedByClick &&
       !state.guideShowing &&
-      textToSpeechCurrentGuide !== currentGuide &&
+      state.textToSpeechCurrentGuide !== currentGuide &&
       currentGuide
     ) {
       if (
@@ -128,7 +122,10 @@ let UnwrappedGuide = class Guide extends React.Component {
           this.onTextToSpeechDone
         )
       ) {
-        textToSpeechCurrentGuide = currentGuide;
+        setState(
+          {textToSpeechCurrentGuide: currentGuide},
+          {skipCallback: true}
+        );
       }
     }
 
