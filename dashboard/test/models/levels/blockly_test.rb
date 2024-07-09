@@ -1239,9 +1239,9 @@ class BlocklyTest < ActiveSupport::TestCase
     assert_equal parsed_xml.at_xpath('//block[@type="studio_ask"]/*[@name="VAR"]').content, localized_variable_str
   end
 
-  test 'localizes long_instruction when present' do
+  test 'localizes long_instructions when present' do
     test_locale = 'te-ST'
-    level_name = 'test localize long_instruction'
+    level_name = 'test localize long_instructions'
     level = create(
       :level,
       :blockly,
@@ -1262,9 +1262,9 @@ class BlocklyTest < ActiveSupport::TestCase
     assert_equal 'translated long instructions', level.localized_long_instructions
   end
 
-  test 'localizes long_instruction and removes escaped backticks when present' do
+  test 'localizes long_instructions and removes escaped backticks when present' do
     test_locale = 'te-ST'
-    level_name = 'test localize long_instruction'
+    level_name = 'test localize long_instructions'
     level = create(
       :level,
       :blockly,

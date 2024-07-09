@@ -465,7 +465,7 @@ class Blockly < Level
     localized_blockly_in_text(unescaped_codeblocks)
   end
 
-  # Processes and localizes the TRANSALTIONTEXT from i18n start libraries content.
+  # Processes and localizes the TRANSLATIONTEXT from i18n start libraries content.
   # @param start_libraries [String] JSON-encoded string representing an array of library objects.
   # Each library object should contain a name and source field.
   # @return [String] JSON-encoded string representing the localized start libraries.
