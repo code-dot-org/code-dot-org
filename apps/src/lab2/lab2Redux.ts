@@ -40,6 +40,7 @@ import {
 } from '@cdo/apps/lab2/projects/utils';
 import {START_SOURCES} from './constants';
 import {getPredictResponse, getUserLevel} from './projects/userLevelsApi';
+import {sendSubmitReport} from '../code-studio/progressRedux';
 
 interface PageError {
   errorMessage: string;
@@ -397,6 +398,9 @@ const labSlice = createSlice({
     });
     builder.addCase(setUpWithoutLevel.pending, state => {
       state.isLoadingProjectOrLevel = true;
+    });
+    builder.addCase(sendSubmitReport.fulfilled, (state, action) => {
+      state.submitted = action.meta.arg.submitted;
     });
   },
 });

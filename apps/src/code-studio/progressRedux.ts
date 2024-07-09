@@ -411,7 +411,7 @@ export const sendSubmitReport = createAsyncThunk<
   const extraPayload = {
     submitted: payload.submitted,
   };
-  sendReportHelper(
+  await sendReportHelper(
     payload.appType,
     TestResults.CONTAINED_LEVEL_RESULT,
     thunkAPI.dispatch,
