@@ -60,11 +60,13 @@ $(document).ready(() => {
       document.getElementById('predict-question')
     );
 
-    ReactDOM.render(
-      <UnconnectedPredictSolution
-        predictSettings={scriptData.level.properties.predict_settings}
-      />,
-      document.getElementById('summary-correct-answer')
-    );
+    if (document.getElementById('summary-correct-answer')) {
+      ReactDOM.render(
+        <UnconnectedPredictSolution
+          predictSettings={scriptData.level.properties.predict_settings}
+        />,
+        document.getElementById('summary-correct-answer')
+      );
+    }
   }
 });

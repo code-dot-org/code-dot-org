@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useMemo, useCallback} from 'react';
+import React, {useMemo} from 'react';
 import {Chart} from 'react-google-charts';
 
 import color from '@cdo/apps/util/color';
@@ -48,7 +48,7 @@ const multiChartData = (data, highlightCorrect = false) => [
 ];
 
 const MultiResponses = ({scriptData, showCorrectAnswer = false}) => {
-  const getAnswersAndCorrectAnswers = useCallback(() => {
+  const [answers, correctAnswers] = useMemo(() => {
     if (scriptData.level.properties.answers) {
       const answers = scriptData.level.properties.answers;
       const correctAnswers = answers.reduce((acc, cur, i) => {
@@ -82,7 +82,6 @@ const MultiResponses = ({scriptData, showCorrectAnswer = false}) => {
     scriptData.level.properties.predict_settings,
   ]);
 
-  const [answers, correctAnswers] = getAnswersAndCorrectAnswers();
   const answerData = useMemo(
     () => multiAnswerCounts(scriptData.responses, answers.length),
     [scriptData.responses, answers.length]
