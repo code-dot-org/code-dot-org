@@ -38,7 +38,9 @@ const initialState = {
   guideDismissals: [],
   guideShowing: false,
   showConfirmationDialog: false,
-  confirmationDialogOnYes: null
+  confirmationDialogOnYes: null,
+  showClickToContinue: false,
+  clickToContinueTimerId: null,
 };
 let state = {...initialState};
 

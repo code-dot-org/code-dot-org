@@ -19,12 +19,22 @@ let UnwrappedGuide = class Guide extends React.Component {
   onShowing() {
     clearInterval(getState().guideTypingTimer);
     setState({guideShowing: true, guideTypingTimer: null});
+
+    if (!guide.getCurrentGuide().noDimBackground) {
+      const timerId = setTimeout(() => setState({showClickToContinue: true}), 2000);
+      setState({clickToContinueTimerId: timerId});
+    }
   }
 
   dismissGuideClick() {
     const dismissed = guide.dismissCurrentGuide();
     if (dismissed) {
       soundLibrary.playSound('other');
+      setState({showClickToContinue: false});
+      if (getState().clickToContinueTimerId) {
+        clearTimeout(getState().clickToContinueTimerId);
+        setState({clickToContinueTimerId: null});
+      }
     }
   }
 
@@ -90,7 +100,7 @@ let UnwrappedGuide = class Guide extends React.Component {
                     >
                       {currentGuide.textFn(getState())}
                     </Typist>
-                    {!getState().guideTypingTimer && currentGuide.style !== 'Info' && (
+                    {getState().showClickToContinue && currentGuide.style !== 'Info' && !currentGuide.noDimBackground && (
                       <div style={{display: 'flex', justifyContent: 'flex-end', height: 30, alignItems: 'end'}}>
                         <FontAwesomeIcon icon={faArrowCircleDown} className="bounce" />
                       </div>
@@ -105,7 +115,7 @@ let UnwrappedGuide = class Guide extends React.Component {
                   >
                     <div style={styles.guideFinalText}>
                       {currentGuide.textFn(getState())}
-                      {currentGuide.style !== 'Info' && (
+                      {getState().showClickToContinue && currentGuide.style !== 'Info' && !currentGuide.noDimBackground && (
                         <div style={{display: 'flex', justifyContent: 'flex-end', height: 30, alignItems: 'end'}}>
                           <FontAwesomeIcon icon={faArrowCircleDown} className="bounce" />
                         </div>
