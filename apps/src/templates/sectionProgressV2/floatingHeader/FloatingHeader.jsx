@@ -5,13 +5,13 @@ import {connect} from 'react-redux';
 import {getCurrentUnitData} from '../../sectionProgress/sectionProgressRedux';
 import ExpandedProgressColumnHeader from '../ExpandedProgressColumnHeader';
 import LessonProgressColumnHeader from '../LessonProgressColumnHeader';
-
-import styles from './floating-header.module.scss';
-import progressStyles from '../progress-table-v2.module.scss';
 import {
   areAllLevelsLocked,
   getLockedStatusPerStudent,
 } from '../LockedLessonUtils';
+
+import styles from './floating-header.module.scss';
+import progressStyles from '../progress-table-v2.module.scss';
 
 /** A component that displays lesson headers in a floating header above a table.
  *
