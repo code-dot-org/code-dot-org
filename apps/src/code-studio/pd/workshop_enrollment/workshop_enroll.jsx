@@ -151,16 +151,20 @@ export default class WorkshopEnroll extends React.Component {
   }
 
   renderSuccess() {
-    analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
-      'regional partner': this.props.workshop.regional_partner?.name,
-      'workshop course': this.props.workshop.course,
-      'workshop subject': this.props.workshop.subject,
-    });
-
     if (this.props.workshop.course === 'Build Your Own Workshop') {
-      // If successfully enrolled in Build Your Own workshop, redirect to My PL landing page
-      window.location.href = '/my-professional-learning';
+      // If successfully enrolled in Build Your Own workshop, redirect to My PL landing page. The
+      // WORKSHOP_ENROLLMENT_COMPLETED_EVENT event will be logged on that page since event logs
+      // immediately followed by redirects sometimes do not fire.
+      const rpName = this.props.workshop.regional_partner?.name;
+      const wsCourse = this.props.workshop.course;
+      const wsSubject = this.props.workshop.subject;
+      window.location.href = `/my-professional-learning?rpName=${rpName}&wsCourse=${wsCourse}&wsSubject=${wsSubject}`;
     } else {
+      analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
+        'regional partner': this.props.workshop.regional_partner?.name,
+        'workshop course': this.props.workshop.course,
+        'workshop subject': this.props.workshop.subject,
+      });
       return (
         <div>
           <h1>Thank you for registering</h1>
