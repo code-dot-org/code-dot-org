@@ -22,13 +22,13 @@ function addClickEventToLinks(selector, eventName) {
 
 $(document).ready(function () {
   const headerCreateMenu = document.getElementById('header_create_menu');
-  const pageUrl = document.querySelector('meta[property="og:url"]')?.content;
+  const pageUrl = window.location.href;
   const helpIcon = document.querySelector('#help-icon');
 
   if (getScriptData('isSignedOut')) {
     analyticsReporter.sendEvent(
       EVENTS.SIGNED_OUT_USER_SEES_HEADER,
-      {pageUrl: pageUrl || 'studio page'},
+      {pageUrl: pageUrl},
       PLATFORMS.STATSIG
     );
 
