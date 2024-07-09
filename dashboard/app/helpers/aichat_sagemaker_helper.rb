@@ -40,7 +40,7 @@ module AichatSagemakerHelper
       # must start with a user prompt and alternate between user and assistant.
       # Mistral-7B-Instruction LLM instruction format doc at https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1.
       inputs = ""
-      if aichat_params[:systemPrompt].length > 0
+      if !aichat_params[:systemPrompt].empty?
         inputs = aichat_params[:systemPrompt] + " "
       end
       inputs += aichat_params[:retrievalContexts].join(" ") if aichat_params[:retrievalContexts]
@@ -91,28 +91,29 @@ module AichatSagemakerHelper
   end
 
   def self.format_sagemaker_assistant_response_output(generated_text, selected_model_id)
-    if selected_model_id == FINE_TUNED_MODELS[:KAREN]
-      parts = generated_text.split(CHAT_ML_BEGIN_TOKEN + ASSISTANT)
-    elsif selected_model_id == FINE_TUNED_MODELS[:ARITHMO]
-      parts = generated_text.split("Answer:")
-    else
-      parts = generated_text.split(INSTRUCTIONS_END_TOKEN)
-    end
+    parts =
+      if selected_model_id == FINE_TUNED_MODELS[:KAREN]
+        generated_text.split(CHAT_ML_BEGIN_TOKEN + ASSISTANT)
+      elsif selected_model_id == FINE_TUNED_MODELS[:ARITHMO]
+        generated_text.split("Answer:")
+      else
+        generated_text.split(INSTRUCTIONS_END_TOKEN)
+      end
     last = parts.last
     if selected_model_id == FINE_TUNED_MODELS[:PIRATE]
       # These characters is used to separate the assistant's response from the rest of the generated text
-      # which sometimes seems to include jargon or extraneous characters or code snippets.      
+      # which sometimes includes jargon, extraneous characters or code snippets.      
       last = last.split(/[}~*`]/).first
       # Remove double quotes in assistant's response.
-      last = last.gsub(/\"/, "")
+      last = last.delete("\"")
     elsif selected_model_id == FINE_TUNED_MODELS[:KAREN]
       last = last.split("}").first
-    end  
+    end
     last
   end
 
   def self.wrap_as_instructions(message)
-    if message.length > 0
+    if !message.empty?
       return INSTRUCTIONS_BEGIN_TOKEN + message + INSTRUCTIONS_END_TOKEN
     end
     message
