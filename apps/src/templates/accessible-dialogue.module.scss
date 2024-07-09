@@ -24,3 +24,47 @@
   padding: 1rem;
   overflow: auto;
 }
+
+.xCloseButton {
+  // Clear default button styles
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  box-shadow: none;
+
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  i {
+    color: $light_gray_300;
+    font-size: 1.1875rem;
+    line-height: 1.4844rem;
+    width: 1.4844rem;
+  }
+
+  &:hover {
+    // Clear default button styles
+    box-shadow: none;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+
+    i {
+      color: $light_gray_500;
+    }
+  }
+
+  &:focus {
+    outline: $brand_primary_default solid 2px;
+    outline-offset: 2px;
+  }
+}

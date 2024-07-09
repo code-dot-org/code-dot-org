@@ -8,7 +8,7 @@
       - if entry[:type] == "divider"
         .divider{id: entry[:id], class: entry[:class]}
       - elsif entry[:type] == "expander"
-        .hamburger-expandable-item.item{id: entry[:id], tabindex: "0"}
+        .hamburger-expandable-item.item{id: entry[:id], class: entry[:class], tabindex: "0"}
           .text= entry[:title]
           %i.arrow-down{class: "fa fa-caret-down"}
           %i.arrow-up{class: "fa fa-caret-up"}

@@ -2,6 +2,7 @@ require 'cdo/shared_cache'
 require 'honeybadger/ruby'
 require 'services/lti'
 require 'policies/lti'
+require 'metrics/events'
 
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   include UsersHelper
@@ -582,6 +583,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         flash.alert = I18n.t('lti.account_linking.backend_error')
         redirect_to user_session_path and return
       end
+
+      metadata = {
+        'user_type' => user.user_type,
+        'lms_name' => user.lti_user_identities.first.lti_integration[:platform_name],
+      }
+      Metrics::Events.log_event(
+        user: user,
+        event_name: 'lti_user_signin',
+        metadata: metadata,
+      )
       sign_in_and_redirect user and return
     end
 
