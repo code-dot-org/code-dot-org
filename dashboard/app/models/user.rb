@@ -2767,7 +2767,8 @@ class User < ApplicationRecord
   end
 
   def student_in_lockout_flow?
-    return unless should_validate_us_state?
+    return unless user_type == TYPE_STUDENT
+    return unless %w[US RD].include? country_code
     return unless birthday_changed? || us_state_changed?
 
     # Create copy of user to mock the user's state before an update.
