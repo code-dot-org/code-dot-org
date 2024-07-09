@@ -41,6 +41,8 @@ const initialState = {
   confirmationDialogOnYes: null,
   showClickToContinue: false,
   clickToContinueTimerId: null,
+  clickToContinueAnimationIntervalId: null,
+  clickToContinueIconFrame1: true,
 };
 let state = {...initialState};
 

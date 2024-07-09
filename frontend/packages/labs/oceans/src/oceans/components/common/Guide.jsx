@@ -14,6 +14,8 @@ import colors from "@ml/oceans/styles/colors";
 import I18n from "@ml/oceans/i18n";
 import {Button} from "@ml/oceans/components/common";
 import arrowDownImage from "@public/images/arrow-down.png";
+import fingerClickIcon1 from "@public/images/finger-click-icon-1.svg";
+import fingerClickIcon2 from "@public/images/finger-click-icon-2.svg";
 
 let UnwrappedGuide = class Guide extends React.Component {
   onShowing() {
@@ -21,8 +23,13 @@ let UnwrappedGuide = class Guide extends React.Component {
     setState({guideShowing: true, guideTypingTimer: null});
 
     if (!guide.getCurrentGuide().noDimBackground) {
-      const timerId = setTimeout(() => setState({showClickToContinue: true}), 2000);
+      const timerId = setTimeout(() => {
+        setState({showClickToContinue: true});
+        const intervalId = setInterval(() => setState({clickToContinueIconFrame1: !getState().clickToContinueIconFrame1}), 400);
+        setState({clickToContinueAnimationIntervalId: intervalId});
+      }, 2000);
       setState({clickToContinueTimerId: timerId});
+
     }
   }
 
@@ -34,6 +41,10 @@ let UnwrappedGuide = class Guide extends React.Component {
       if (getState().clickToContinueTimerId) {
         clearTimeout(getState().clickToContinueTimerId);
         setState({clickToContinueTimerId: null});
+      }
+      if (getState().clickToContinueAnimationIntervalId) {
+        clearTimeout(getState().clickToContinueAnimationIntervalId);
+        setState({clickToContinueAnimationIntervalId: null});
       }
     }
   }
@@ -101,8 +112,9 @@ let UnwrappedGuide = class Guide extends React.Component {
                       {currentGuide.textFn(getState())}
                     </Typist>
                     {getState().showClickToContinue && currentGuide.style !== 'Info' && !currentGuide.noDimBackground && (
-                      <div style={{display: 'flex', justifyContent: 'flex-end', height: 30, alignItems: 'end'}}>
-                        <FontAwesomeIcon icon={faArrowCircleDown} className="bounce" />
+                      <div style={{display: 'flex', justifyContent: 'flex-end', height: 30, alignItems: 'end'}} className="fade">
+                        <img style={!getState().clickToContinueIconFrame1 ? {display: 'none'} : {}} src={fingerClickIcon1} />
+                        <img style={getState().clickToContinueIconFrame1 ? {display: 'none'} : {}} src={fingerClickIcon2} />
                       </div>
                     )}
                   </div>
@@ -117,7 +129,8 @@ let UnwrappedGuide = class Guide extends React.Component {
                       {currentGuide.textFn(getState())}
                       {getState().showClickToContinue && currentGuide.style !== 'Info' && !currentGuide.noDimBackground && (
                         <div style={{display: 'flex', justifyContent: 'flex-end', height: 30, alignItems: 'end'}}>
-                          <FontAwesomeIcon icon={faArrowCircleDown} className="bounce" />
+                          <img style={!getState().clickToContinueIconFrame1 ? {display: 'none'} : {}} src={fingerClickIcon1} />
+                          <img style={getState().clickToContinueIconFrame1 ? {display: 'none'} : {}} src={fingerClickIcon2} />
                         </div>
                       )}
                     </div>
