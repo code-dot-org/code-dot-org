@@ -293,17 +293,7 @@ const WEBPACK_BASE_CONFIG = {
         // this file when asset digests are turned off, it will return a
         // 404 because it thinks the hash is a digest and it won't
         // be able to find the file without the hash. :( :(
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 1024,
-              // uses the file-loader when file size is over the limit
-              name: '[name]wp[contenthash].[ext]',
-              esModule: false,
-            },
-          },
-        ],
+        type: 'asset/inline',
       },
       {
         test: /\.jsx?$/,
