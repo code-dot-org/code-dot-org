@@ -1,13 +1,15 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import ProjectHeader from './ProjectHeader';
+
+import {possibleHeaders} from '../../headerRedux';
+
+import headerVignetteStyles from './HeaderVignette';
+import LevelBuilderSaveButton from './LevelBuilderSaveButton';
 import MinimalProjectHeader from './MinimalProjectHeader';
 import ProjectBackedHeader from './ProjectBackedHeader';
-import LevelBuilderSaveButton from './LevelBuilderSaveButton';
-import {possibleHeaders} from '../../headerRedux';
-import headerVignetteStyles from './HeaderVignette';
-import $ from 'jquery';
+import ProjectHeader from './ProjectHeader';
 
 const headerComponents = {
   [possibleHeaders.project]: ProjectHeader,

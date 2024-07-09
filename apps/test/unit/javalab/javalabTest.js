@@ -19,6 +19,10 @@ import {
 
 import {expect} from '../../util/reconfiguredChai';
 
+window.fetch = jest
+  .fn()
+  .mockResolvedValue({json: jest.fn(), headers: {get: jest.fn()}});
+
 describe('Javalab', () => {
   let javalab;
   let config;

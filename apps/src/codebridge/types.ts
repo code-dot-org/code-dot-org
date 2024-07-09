@@ -32,7 +32,7 @@ export type ConfigType = {
   Instructions?: () => JSX.Element;
   defaultTheme?: EditorTheme;
   leftNav: LeftNavElement[];
-  gridLayout: string;
+  gridLayout?: string;
   gridLayoutRows?: string;
   gridLayoutColumns?: string;
   editableFileTypes: string[];
@@ -40,6 +40,14 @@ export type ConfigType = {
   blankEmptyEditor?: boolean;
   PreviewComponents?: {[key: string]: PreviewComponent};
   languageMapping: {[key: string]: LanguageSupport};
+  labeledGridLayouts?: {
+    [key: string]: {
+      gridLayout: string;
+      gridLayoutRows: string;
+      gridLayoutColumns: string;
+    };
+  };
+  activeGridLayout?: string;
 };
 
 export type ProjectType = MultiFileSource;

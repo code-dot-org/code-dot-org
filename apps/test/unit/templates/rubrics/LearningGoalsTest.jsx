@@ -524,7 +524,7 @@ describe('LearningGoals - Enzyme', () => {
         sinon.match.any,
         sinon.match.any,
         sinon.match.any,
-        sinon.match({backgroundImage: sinon.match(tipIconImage)})
+        sinon.match({backgroundImage: sinon.match(`${tipIconImage}`)})
       );
     });
 

@@ -10,6 +10,13 @@ import {possibleHeaders} from '@cdo/apps/code-studio/headerRedux';
 
 import {expect} from '../../../../util/reconfiguredChai';
 
+// TODO: These components have circular dependencies which causes the component to mount as undefined randomly
+// Mock out to break the circularity until we can untangle them
+jest.mock('@cdo/apps/code-studio/components/header/LevelBuilderSaveButton');
+jest.mock('@cdo/apps/code-studio/components/header/ProjectBackedHeader');
+jest.mock('@cdo/apps/code-studio/components/header/MinimalProjectHeader');
+jest.mock('@cdo/apps/code-studio/components/header/ProjectHeader');
+
 describe('ProjectInfo', () => {
   it('renders nothing by default', () => {
     const wrapper = shallow(<ProjectInfo />);
@@ -25,6 +32,7 @@ describe('ProjectInfo', () => {
     };
 
     Object.entries(headerComponents).forEach(([currentHeader, component]) => {
+      console.log(currentHeader);
       const wrapper = shallow(<ProjectInfo currentHeader={currentHeader} />);
       expect(wrapper.find(component)).to.have.lengthOf(1);
     });

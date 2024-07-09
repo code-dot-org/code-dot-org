@@ -1,17 +1,20 @@
 // Pythonlab view
-import React, {useState} from 'react';
-import moduleStyles from './pythonlab-view.module.scss';
-import {ConfigType} from '@codebridge/types';
-import {LanguageSupport} from '@codemirror/language';
-import {python} from '@codemirror/lang-python';
 import {Codebridge} from '@codebridge/Codebridge';
-import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
-import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {useSource} from '@codebridge/hooks/useSource';
-import {handleRunClick} from './pyodideRunner';
-import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {ConfigType} from '@codebridge/types';
+import {python} from '@codemirror/lang-python';
+import {LanguageSupport} from '@codemirror/language';
+import React, {useState} from 'react';
+
 import {sendPredictLevelReport} from '@cdo/apps/code-studio/progressRedux';
+import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {isPredictAnswerLocked} from '@cdo/apps/lab2/redux/predictLevelRedux';
+import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {handleRunClick} from './pyodideRunner';
+
+import moduleStyles from './pythonlab-view.module.scss';
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
@@ -34,6 +37,25 @@ const defaultProject: ProjectSources = {
   },
 };
 
+const labeledGridLayouts = {
+  horizontal: {
+    gridLayoutRows: '1fr 1fr 1fr 48px',
+    gridLayoutColumns: '300px minmax(0, 1fr)',
+    gridLayout: `
+  "info-panel workspace"
+  "file-browser workspace"
+  "file-browser console"
+  "file-browser control-buttons"`,
+  },
+  vertical: {
+    gridLayoutRows: '1fr 1fr 48px',
+    gridLayoutColumns: '300px minmax(0, 1fr) minmax(0, 1fr)',
+    gridLayout: `
+    "info-panel workspace console"
+    "file-browser workspace console"
+    "file-browser control-buttons control-buttons"`,
+  },
+};
 const defaultConfig: ConfigType = {
   activeLeftNav: 'Files',
   languageMapping: pythonlabLangMapping,
@@ -64,14 +86,9 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  gridLayoutRows: '1fr 1fr 1fr 48px',
-  gridLayoutColumns: '300px minmax(0, 1fr)',
-  gridLayout: `
-    "info-panel workspace"
-    "file-browser workspace"
-    "file-browser console"
-    "file-browser control-buttons"
-  `,
+
+  labeledGridLayouts,
+  activeGridLayout: 'horizontal',
 };
 
 const PythonlabView: React.FunctionComponent = () => {

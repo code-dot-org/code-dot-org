@@ -17,12 +17,14 @@ import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 const ContinueAccountCard = () => {
-  const {ltiProviderName, continueAccountUrl} = useContext(LtiProviderContext)!;
+  const {ltiProviderName, continueAccountUrl, userType} =
+    useContext(LtiProviderContext)!;
   const [isSaving, setIsSaving] = useState(false);
 
   const handleNewAccountSaved = () => {
     const eventPayload = {
       lms_name: ltiProviderName,
+      user_type: userType,
     };
     analyticsReporter.sendEvent(
       'lti_continue_account_click',

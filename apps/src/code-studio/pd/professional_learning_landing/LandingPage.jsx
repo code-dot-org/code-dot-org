@@ -4,29 +4,21 @@
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 import {connect, useDispatch} from 'react-redux';
-import i18n from '@cdo/locale';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import {Heading2} from '@cdo/apps/componentLibrary/typography';
-import {EnrolledWorkshops, WorkshopsTable} from './EnrolledWorkshops';
-import {
-  COURSE_CSF,
-  COURSE_CSD,
-  COURSE_CSP,
-  COURSE_CSA,
-} from '../workshop_dashboard/workshopConstants';
-import SelfPacedProgressTable from './SelfPacedProgressTable';
-import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
-import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
-import ActionBlocksWrapper from '@cdo/apps/templates/studioHomepages/ActionBlocksWrapper';
-import CoteacherInviteNotification from '@cdo/apps/templates/studioHomepages/CoteacherInviteNotification';
-import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
-import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
-import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
-import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
-import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
-import style from './landingPage.module.scss';
-import './tableStyles.scss';
+
 import Tabs from '@cdo/apps/componentLibrary/tabs';
+import {Heading2} from '@cdo/apps/componentLibrary/typography';
+import DCDO from '@cdo/apps/dcdo';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
+import ActionBlocksWrapper from '@cdo/apps/templates/studioHomepages/ActionBlocksWrapper';
+import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
+import CoteacherInviteNotification from '@cdo/apps/templates/studioHomepages/CoteacherInviteNotification';
+import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
+import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
+import shapes from '@cdo/apps/templates/studioHomepages/shapes';
+import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
+import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
+import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
 import {
   asyncLoadSectionData,
   asyncLoadCoteacherInvite,
@@ -37,6 +29,21 @@ import shapes from '@cdo/apps/templates/studioHomepages/shapes';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import DCDO from '@cdo/apps/dcdo';
+import i18n from '@cdo/locale';
+
+import {
+  COURSE_CSF,
+  COURSE_CSD,
+  COURSE_CSP,
+  COURSE_CSA,
+} from '../workshop_dashboard/workshopConstants';
+
+import {EnrolledWorkshops, WorkshopsTable} from './EnrolledWorkshops';
+import SelfPacedProgressTable from './SelfPacedProgressTable';
+
+import style from './landingPage.module.scss';
+
+import './tableStyles.scss';
 
 const getAvailableTabs = permissions => {
   let tabs = [

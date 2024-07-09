@@ -95,12 +95,12 @@ describe('SchoolAutocompleteDropdown', () => {
     describe('(stubbing debounce)', () => {
       let debounceStub;
 
-      before(() => {
+      beforeAll(() => {
         // stub out debounce to return the original function, so it's called immediately
         debounceStub = sinon.stub(_, 'debounce').callsFake(f => f);
       });
 
-      after(() => {
+      afterAll(() => {
         debounceStub.restore();
       });
 

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "k5gamedesignsandbox",
-    "serialized_at": "2024-06-18 16:35:10 UTC",
+    "serialized_at": "2024-07-08 20:46:23 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -34,12 +34,80 @@
   ],
   "lessons": [
     {
-      "key": "lesson-4",
-      "name": "Game Design",
+      "key": "Welcome to Codeorg",
+      "name": "Welcome to Code.org",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 1,
+      "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to Code.org's mission.\n\n**Suggested Time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to Code.org's mission.\n\n**Suggested Time:** 10 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024"
+      }
+    },
+    {
+      "key": "Navigating the Codeorg Learning Platform",
+      "name": "Navigating the Code.org Learning Platform",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n\n**Suggested time:** 35 minutes",
+        "student_overview": "**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n\n**Suggested time:** 35 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024"
+      }
+    },
+    {
+      "key": "Navigating Lesson Plans and Resources",
+      "name": "Navigating Lesson Plans and Resources",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**You will:**\n\n* Locate and use course lesson plans and teacher resources.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Locate and use course lesson plans and teacher resources.\n\n**Suggested time:** 20 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024"
+      }
+    },
+    {
+      "key": "Navigating Support",
+      "name": "Navigating Support",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**You will:**\n\n* Access support while teaching Code.org curricula. \n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Access support while teaching Code.org curricula. \n\n**Suggested time:** 15 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Game Design",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -51,10 +119,10 @@
     {
       "key": "lesson-5",
       "name": "Variables as Score",
-      "absolute_position": 2,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 2,
+      "relative_position": 6,
       "properties": {
       },
       "seeding_key": {
@@ -66,10 +134,10 @@
     {
       "key": "lesson-6",
       "name": "Environment and Players",
-      "absolute_position": 3,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 3,
+      "relative_position": 7,
       "properties": {
       },
       "seeding_key": {
@@ -81,10 +149,10 @@
     {
       "key": "lesson-7",
       "name": "Game Jam",
-      "absolute_position": 4,
+      "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 4,
+      "relative_position": 8,
       "properties": {
       },
       "seeding_key": {
@@ -96,10 +164,10 @@
     {
       "key": "lesson-8",
       "name": "Next Steps",
-      "absolute_position": 5,
+      "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": false,
-      "relative_position": 5,
+      "relative_position": 9,
       "properties": {
       },
       "seeding_key": {
@@ -110,6 +178,58 @@
     }
   ],
   "lesson_activities": [
+    {
+      "key": "bef381be-ca1d-4a33-bf96-cb7c1faad9b1",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bef381be-ca1d-4a33-bf96-cb7c1faad9b1",
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024"
+      }
+    },
+    {
+      "key": "4932e76d-3d2f-4dd0-b62e-ead640bc77a9",
+      "position": 1,
+      "properties": {
+        "duration": 35
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4932e76d-3d2f-4dd0-b62e-ead640bc77a9",
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024"
+      }
+    },
+    {
+      "key": "4b97cf43-d67c-4f60-86e5-9a5d4df1323b",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4b97cf43-d67c-4f60-86e5-9a5d4df1323b",
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024"
+      }
+    },
+    {
+      "key": "1b3d584e-2b6f-45ed-a477-46ac00319e15",
+      "position": 1,
+      "properties": {
+        "duration": 15
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1b3d584e-2b6f-45ed-a477-46ac00319e15",
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024"
+      }
+    },
     {
       "key": "712548a5-e207-424c-b46e-4b04c3406f65",
       "position": 1,
@@ -173,6 +293,160 @@
   ],
   "activity_sections": [
     {
+      "key": "be4fc81b-af03-416e-ad28-b8c6b1e622ca",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "be4fc81b-af03-416e-ad28-b8c6b1e622ca",
+        "lesson_activity.key": "bef381be-ca1d-4a33-bf96-cb7c1faad9b1"
+      }
+    },
+    {
+      "key": "aa54d104-708c-425d-9c92-de30db4556f6",
+      "position": 2,
+      "properties": {
+        "progression_name": "Welcome to Code.org"
+      },
+      "seeding_key": {
+        "activity_section.key": "aa54d104-708c-425d-9c92-de30db4556f6",
+        "lesson_activity.key": "bef381be-ca1d-4a33-bf96-cb7c1faad9b1"
+      }
+    },
+    {
+      "key": "d862b5e9-95b7-4053-9baa-6a2bea9ab8fa",
+      "position": 3,
+      "properties": {
+        "progression_name": "Welcome to Creating Apps for Devices"
+      },
+      "seeding_key": {
+        "activity_section.key": "d862b5e9-95b7-4053-9baa-6a2bea9ab8fa",
+        "lesson_activity.key": "bef381be-ca1d-4a33-bf96-cb7c1faad9b1"
+      }
+    },
+    {
+      "key": "b0d738ac-4328-4537-bd49-5deeeec26e9c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "b0d738ac-4328-4537-bd49-5deeeec26e9c",
+        "lesson_activity.key": "4932e76d-3d2f-4dd0-b62e-ead640bc77a9"
+      }
+    },
+    {
+      "key": "31bf1664-6cd2-4284-8efa-0bb88dd6398b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Tour the Code.org Learning Platform"
+      },
+      "seeding_key": {
+        "activity_section.key": "31bf1664-6cd2-4284-8efa-0bb88dd6398b",
+        "lesson_activity.key": "4932e76d-3d2f-4dd0-b62e-ead640bc77a9"
+      }
+    },
+    {
+      "key": "7d4292ff-116a-4ae3-af93-f27bafadd078",
+      "position": 3,
+      "properties": {
+        "progression_name": "Set Up a Class Section"
+      },
+      "seeding_key": {
+        "activity_section.key": "7d4292ff-116a-4ae3-af93-f27bafadd078",
+        "lesson_activity.key": "4932e76d-3d2f-4dd0-b62e-ead640bc77a9"
+      }
+    },
+    {
+      "key": "e9efc746-098e-4da9-a255-c90774cea978",
+      "position": 4,
+      "properties": {
+        "progression_name": "Explore the Student View"
+      },
+      "seeding_key": {
+        "activity_section.key": "e9efc746-098e-4da9-a255-c90774cea978",
+        "lesson_activity.key": "4932e76d-3d2f-4dd0-b62e-ead640bc77a9"
+      }
+    },
+    {
+      "key": "66be591f-716d-4263-8c52-abaa3877ba26",
+      "position": 5,
+      "properties": {
+        "progression_name": "Track Student Progress and Provide Feedback"
+      },
+      "seeding_key": {
+        "activity_section.key": "66be591f-716d-4263-8c52-abaa3877ba26",
+        "lesson_activity.key": "4932e76d-3d2f-4dd0-b62e-ead640bc77a9"
+      }
+    },
+    {
+      "key": "dad0c31f-af83-4217-9939-69fbe7c993cf",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "dad0c31f-af83-4217-9939-69fbe7c993cf",
+        "lesson_activity.key": "4b97cf43-d67c-4f60-86e5-9a5d4df1323b"
+      }
+    },
+    {
+      "key": "bfa5f7c5-ba50-4f4b-9cb0-9cf9f97d81fb",
+      "position": 2,
+      "properties": {
+        "progression_name": "Explore Course Lesson Plans"
+      },
+      "seeding_key": {
+        "activity_section.key": "bfa5f7c5-ba50-4f4b-9cb0-9cf9f97d81fb",
+        "lesson_activity.key": "4b97cf43-d67c-4f60-86e5-9a5d4df1323b"
+      }
+    },
+    {
+      "key": "fef22384-fe41-47af-954b-16c2174d2828",
+      "position": 3,
+      "properties": {
+        "progression_name": "Explore Additional Teacher Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "fef22384-fe41-47af-954b-16c2174d2828",
+        "lesson_activity.key": "4b97cf43-d67c-4f60-86e5-9a5d4df1323b"
+      }
+    },
+    {
+      "key": "1ee004bc-7d39-411a-ab67-94f04d5f0cff",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "1ee004bc-7d39-411a-ab67-94f04d5f0cff",
+        "lesson_activity.key": "1b3d584e-2b6f-45ed-a477-46ac00319e15"
+      }
+    },
+    {
+      "key": "8d20fedc-0e9a-431e-997d-9d5c29673b19",
+      "position": 2,
+      "properties": {
+        "progression_name": "Additional support for teachers"
+      },
+      "seeding_key": {
+        "activity_section.key": "8d20fedc-0e9a-431e-997d-9d5c29673b19",
+        "lesson_activity.key": "1b3d584e-2b6f-45ed-a477-46ac00319e15"
+      }
+    },
+    {
+      "key": "2b500a15-67ee-4446-b083-b0378ca29651",
+      "position": 3,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "2b500a15-67ee-4446-b083-b0378ca29651",
+        "lesson_activity.key": "1b3d584e-2b6f-45ed-a477-46ac00319e15"
+      }
+    },
+    {
       "key": "c6a63028-1855-4849-b5a8-6e946aa045ca",
       "position": 1,
       "properties": {
@@ -231,6 +505,781 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_physical-computing_1"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_physical-computing_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "be4fc81b-af03-416e-ad28-b8c6b1e622ca"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-Overview-Welcome_physical-computing_1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview_1"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "be4fc81b-af03-416e-ad28-b8c6b1e622ca"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview_1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-24-mod1-Certificate_1"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-24-mod1-Certificate_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "be4fc81b-af03-416e-ad28-b8c6b1e622ca"
+      },
+      "level_keys": [
+        "SP-VPL-24-mod1-Certificate_1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_1"
+        ],
+        "progression": "Welcome to Code.org"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "aa54d104-708c-425d-9c92-de30db4556f6"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-welcome-vid_1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_physical-computing_1"
+        ],
+        "progression": "Welcome to Code.org"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_physical-computing_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "aa54d104-708c-425d-9c92-de30db4556f6"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-CSisFoundational_physical-computing_1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod1-Advice-TipVid_1"
+        ],
+        "progression": "Welcome to Code.org"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Advice-TipVid_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "aa54d104-708c-425d-9c92-de30db4556f6"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-Advice-TipVid_1"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Overview-WebsiteNavigation_physical-computing_2"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Overview-WebsiteNavigation_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "b0d738ac-4328-4537-bd49-5deeeec26e9c"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Overview-WebsiteNavigation_physical-computing_2"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-tour-vid_2"
+        ],
+        "progression": "Tour the Code.org Learning Platform"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-tour-vid_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "31bf1664-6cd2-4284-8efa-0bb88dd6398b"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-tour-vid_2"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Task-VerifiedTeacher_physical-computing_2"
+        ],
+        "progression": "Tour the Code.org Learning Platform"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-VerifiedTeacher_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "31bf1664-6cd2-4284-8efa-0bb88dd6398b"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Task-VerifiedTeacher_physical-computing_2"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ClassSection-vid_2"
+        ],
+        "progression": "Set Up a Class Section"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ClassSection-vid_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "7d4292ff-116a-4ae3-af93-f27bafadd078"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ClassSection-vid_2"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "k5SP-VPL-21-mod2-LMSIntegrations"
+        ],
+        "progression": "Set Up a Class Section"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "k5SP-VPL-21-mod2-LMSIntegrations"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "7d4292ff-116a-4ae3-af93-f27bafadd078"
+      },
+      "level_keys": [
+        "k5SP-VPL-21-mod2-LMSIntegrations"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Task-ClassSection_physical-computing_2"
+        ],
+        "progression": "Set Up a Class Section"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-ClassSection_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "7d4292ff-116a-4ae3-af93-f27bafadd078"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Task-ClassSection_physical-computing_2"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_physical-computing_2"
+        ],
+        "progression": "Set Up a Class Section"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "7d4292ff-116a-4ae3-af93-f27bafadd078"
+      },
+      "level_keys": [
+        "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_physical-computing_2"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-StudentExperience-vid_2"
+        ],
+        "progression": "Explore the Student View"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-StudentExperience-vid_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "e9efc746-098e-4da9-a255-c90774cea978"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-StudentExperience-vid_2"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Task-StudentView_physical-computing_2"
+        ],
+        "progression": "Explore the Student View"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-StudentView_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "e9efc746-098e-4da9-a255-c90774cea978"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Task-StudentView_physical-computing_2"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ProgessAndFeedback-vid_2"
+        ],
+        "progression": "Track Student Progress and Provide Feedback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ProgessAndFeedback-vid_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "66be591f-716d-4263-8c52-abaa3877ba26"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ProgessAndFeedback-vid_2"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-progress-c4u_physical-computing_2"
+        ],
+        "progression": "Track Student Progress and Provide Feedback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-progress-c4u_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "66be591f-716d-4263-8c52-abaa3877ba26"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-progress-c4u_physical-computing_2"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-feedback-c4u_physical-computing_2"
+        ],
+        "progression": "Track Student Progress and Provide Feedback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-feedback-c4u_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "66be591f-716d-4263-8c52-abaa3877ba26"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-feedback-c4u_physical-computing_2"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-TeachersInClassrooms_physical-computing_3"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-TeachersInClassrooms_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "dad0c31f-af83-4217-9939-69fbe7c993cf"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-TeachersInClassrooms_physical-computing_3"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-NavigatingLessonPlans_physical-computing_3"
+        ],
+        "progression": "Explore Course Lesson Plans"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-NavigatingLessonPlans_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "bfa5f7c5-ba50-4f4b-9cb0-9cf9f97d81fb"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-NavigatingLessonPlans_physical-computing_3"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ExploreLessonPlan_physical-computing_3"
+        ],
+        "progression": "Explore Course Lesson Plans"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ExploreLessonPlan_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "bfa5f7c5-ba50-4f4b-9cb0-9cf9f97d81fb"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ExploreLessonPlan_physical-computing_3"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-LessonPlanning_physical-computing_3"
+        ],
+        "progression": "Explore Course Lesson Plans"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-LessonPlanning_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "bfa5f7c5-ba50-4f4b-9cb0-9cf9f97d81fb"
+      },
+      "level_keys": [
+        "SP-VPL_21-mod2-MakeAPlan-LessonPlanning_physical-computing_3"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing_3"
+        ],
+        "progression": "Explore Additional Teacher Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "fef22384-fe41-47af-954b-16c2174d2828"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing_3"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-UnitCalendar_physical-computing_3"
+        ],
+        "progression": "Explore Additional Teacher Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-UnitCalendar_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "fef22384-fe41-47af-954b-16c2174d2828"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-UnitCalendar_physical-computing_3"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-TaskResources_physical-computing_1"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-TaskResources_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "1ee004bc-7d39-411a-ab67-94f04d5f0cff"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-TaskResources_physical-computing_1"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-navigating support_physical-computing_1"
+        ],
+        "progression": "Additional support for teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-navigating support_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "8d20fedc-0e9a-431e-997d-9d5c29673b19"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-navigating support_physical-computing_1"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ReadSupportArticles_physical-computing_1"
+        ],
+        "progression": "Additional support for teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ReadSupportArticles_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "8d20fedc-0e9a-431e-997d-9d5c29673b19"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ReadSupportArticles_physical-computing_1"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-ReportAProblem_physical-computing_1"
+        ],
+        "progression": "Additional support for teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ReportAProblem_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "8d20fedc-0e9a-431e-997d-9d5c29673b19"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ReportAProblem_physical-computing_1"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-JoinTheTeacherCommunity_physical-computing_1"
+        ],
+        "progression": "Additional support for teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-JoinTheTeacherCommunity_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "8d20fedc-0e9a-431e-997d-9d5c29673b19"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-JoinTheTeacherCommunity_physical-computing_1"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-Support-c4u_physical-computing_1"
+        ],
+        "progression": "Additional support for teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Support-c4u_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "8d20fedc-0e9a-431e-997d-9d5c29673b19"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Support-c4u_physical-computing_1"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-CSD-Unit1-Module1WrapUp_1"
+        ],
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-CSD-Unit1-Module1WrapUp_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "2b500a15-67ee-4446-b083-b0378ca29651"
+      },
+      "level_keys": [
+        "SP-CSD-Unit1-Module1WrapUp_1"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PL"
         ]
       },
@@ -249,9 +1298,30 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLSP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      },
+      "level_keys": [
+        "PLSP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PL"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 3,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -273,9 +1343,9 @@
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 3,
+      "chapter": 35,
+      "position": 4,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -297,9 +1367,9 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 36,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -321,9 +1391,9 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 37,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -345,9 +1415,9 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
-      "activity_section_position": 6,
+      "chapter": 38,
+      "position": 7,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -369,9 +1439,9 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 7,
+      "chapter": 39,
+      "position": 8,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -393,9 +1463,9 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
-      "activity_section_position": 8,
+      "chapter": 40,
+      "position": 9,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -417,9 +1487,9 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
-      "activity_section_position": 9,
+      "chapter": 41,
+      "position": 10,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -441,9 +1511,9 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
-      "activity_section_position": 10,
+      "chapter": 42,
+      "position": 11,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -465,9 +1535,9 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
-      "activity_section_position": 11,
+      "chapter": 43,
+      "position": 12,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -489,9 +1559,9 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 12,
-      "activity_section_position": 12,
+      "chapter": 44,
+      "position": 13,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -513,7 +1583,28 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 45,
+      "position": 14,
+      "activity_section_position": 14,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Plpl-k5-2_checkUnderstanding_events_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      },
+      "level_keys": [
+        "Plpl-k5-2_checkUnderstanding_events_2024"
+      ]
+    },
+    {
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -537,7 +1628,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -561,7 +1652,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -585,7 +1676,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 49,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -609,7 +1700,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 50,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -633,7 +1724,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 51,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -657,7 +1748,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 52,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -681,7 +1772,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 53,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -705,7 +1796,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 54,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -729,7 +1820,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 55,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
@@ -753,7 +1844,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 56,
       "position": 11,
       "activity_section_position": 11,
       "assessment": false,
@@ -777,7 +1868,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 57,
       "position": 12,
       "activity_section_position": 12,
       "assessment": false,
@@ -801,7 +1892,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -825,7 +1916,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 59,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -849,7 +1940,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 60,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -873,7 +1964,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 61,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -897,7 +1988,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 62,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -921,7 +2012,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 63,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -945,7 +2036,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 64,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -969,7 +2060,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 65,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -993,7 +2084,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 66,
       "position": 9,
       "activity_section_position": 9,
       "assessment": false,
@@ -1017,7 +2108,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 67,
       "position": 10,
       "activity_section_position": 10,
       "assessment": false,
@@ -1041,7 +2132,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 68,
       "position": 11,
       "activity_section_position": 11,
       "assessment": false,
@@ -1065,7 +2156,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 69,
       "position": 12,
       "activity_section_position": 12,
       "assessment": false,
@@ -1089,7 +2180,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 70,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1113,7 +2204,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 71,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1137,7 +2228,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 72,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1161,7 +2252,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 73,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1185,7 +2276,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 74,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -1209,11 +2300,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLPLpl-k5-2_PLexperiences_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1230,11 +2324,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 76,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLpl-k5-2_PLexperiences_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1254,9 +2351,393 @@
   "levels_script_levels": [
     {
       "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-Overview-Welcome_physical-computing_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_physical-computing_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "be4fc81b-af03-416e-ad28-b8c6b1e622ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "be4fc81b-af03-416e-ad28-b8c6b1e622ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-24-mod1-Certificate_1",
+        "script_level.level_keys": [
+          "SP-VPL-24-mod1-Certificate_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "be4fc81b-af03-416e-ad28-b8c6b1e622ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-welcome-vid_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "aa54d104-708c-425d-9c92-de30db4556f6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-CSisFoundational_physical-computing_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_physical-computing_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "aa54d104-708c-425d-9c92-de30db4556f6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-Advice-TipVid_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Advice-TipVid_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "aa54d104-708c-425d-9c92-de30db4556f6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Overview-WebsiteNavigation_physical-computing_2",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Overview-WebsiteNavigation_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "b0d738ac-4328-4537-bd49-5deeeec26e9c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-tour-vid_2",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-tour-vid_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "31bf1664-6cd2-4284-8efa-0bb88dd6398b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Task-VerifiedTeacher_physical-computing_2",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-VerifiedTeacher_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "31bf1664-6cd2-4284-8efa-0bb88dd6398b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ClassSection-vid_2",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ClassSection-vid_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "7d4292ff-116a-4ae3-af93-f27bafadd078"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "k5SP-VPL-21-mod2-LMSIntegrations",
+        "script_level.level_keys": [
+          "k5SP-VPL-21-mod2-LMSIntegrations"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "7d4292ff-116a-4ae3-af93-f27bafadd078"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Task-ClassSection_physical-computing_2",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-ClassSection_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "7d4292ff-116a-4ae3-af93-f27bafadd078"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_physical-computing_2",
+        "script_level.level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "7d4292ff-116a-4ae3-af93-f27bafadd078"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-StudentExperience-vid_2",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-StudentExperience-vid_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "e9efc746-098e-4da9-a255-c90774cea978"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Task-StudentView_physical-computing_2",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-StudentView_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "e9efc746-098e-4da9-a255-c90774cea978"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ProgessAndFeedback-vid_2",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ProgessAndFeedback-vid_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "66be591f-716d-4263-8c52-abaa3877ba26"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-progress-c4u_physical-computing_2",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-progress-c4u_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "66be591f-716d-4263-8c52-abaa3877ba26"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-feedback-c4u_physical-computing_2",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-feedback-c4u_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "66be591f-716d-4263-8c52-abaa3877ba26"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-TeachersInClassrooms_physical-computing_3",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-TeachersInClassrooms_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "dad0c31f-af83-4217-9939-69fbe7c993cf"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-NavigatingLessonPlans_physical-computing_3",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-NavigatingLessonPlans_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "bfa5f7c5-ba50-4f4b-9cb0-9cf9f97d81fb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ExploreLessonPlan_physical-computing_3",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ExploreLessonPlan_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "bfa5f7c5-ba50-4f4b-9cb0-9cf9f97d81fb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL_21-mod2-MakeAPlan-LessonPlanning_physical-computing_3",
+        "script_level.level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-LessonPlanning_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "bfa5f7c5-ba50-4f4b-9cb0-9cf9f97d81fb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing_3",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "fef22384-fe41-47af-954b-16c2174d2828"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-UnitCalendar_physical-computing_3",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-UnitCalendar_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "fef22384-fe41-47af-954b-16c2174d2828"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-TaskResources_physical-computing_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-TaskResources_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "1ee004bc-7d39-411a-ab67-94f04d5f0cff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-navigating support_physical-computing_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-navigating support_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "8d20fedc-0e9a-431e-997d-9d5c29673b19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ReadSupportArticles_physical-computing_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ReadSupportArticles_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "8d20fedc-0e9a-431e-997d-9d5c29673b19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ReportAProblem_physical-computing_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ReportAProblem_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "8d20fedc-0e9a-431e-997d-9d5c29673b19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-JoinTheTeacherCommunity_physical-computing_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-JoinTheTeacherCommunity_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "8d20fedc-0e9a-431e-997d-9d5c29673b19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Support-c4u_physical-computing_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Support-c4u_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "8d20fedc-0e9a-431e-997d-9d5c29673b19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-CSD-Unit1-Module1WrapUp_1",
+        "script_level.level_keys": [
+          "SP-CSD-Unit1-Module1WrapUp_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "2b500a15-67ee-4446-b083-b0378ca29651"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PL",
         "script_level.level_keys": [
           "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PL"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLSP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PL",
+        "script_level.level_keys": [
+          "PLSP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PL"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
@@ -1389,6 +2870,18 @@
         "level.key": "PL game_design_remove_object_independent",
         "script_level.level_keys": [
           "PL game_design_remove_object_independent"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Plpl-k5-2_checkUnderstanding_events_2024",
+        "script_level.level_keys": [
+          "Plpl-k5-2_checkUnderstanding_events_2024"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",

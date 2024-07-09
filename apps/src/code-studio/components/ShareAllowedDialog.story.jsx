@@ -1,12 +1,14 @@
-import React from 'react';
-import {UnconnectedShareAllowedDialog as ShareAllowedDialog} from './ShareAllowedDialog';
-import {Provider} from 'react-redux';
-import {reduxStore} from '@cdo/storybook/decorators';
 import {action} from '@storybook/addon-actions';
-import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
-import pageConstants from '@cdo/apps/redux/pageConstants';
+import React from 'react';
+import {Provider} from 'react-redux';
+
 import shareDialog from '@cdo/apps/code-studio/components/shareDialogRedux';
 import project from '@cdo/apps/code-studio/projectRedux';
+import pageConstants from '@cdo/apps/redux/pageConstants';
+import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
+import {reduxStore} from '@cdo/storybook/decorators';
+
+import {UnconnectedShareAllowedDialog as ShareAllowedDialog} from './ShareAllowedDialog';
 
 export default {
   component: ShareAllowedDialog,

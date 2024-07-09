@@ -34,6 +34,10 @@ module CAP
           it 'student should not be locked out' do
             assert_student_is_not_locked_out
           end
+
+          it 'student should be redirected away from the lockout page' do
+            assert_student_is_redirected_away_from_lockout
+          end
         end
 
         describe 'new user lockout phase' do
@@ -49,6 +53,10 @@ module CAP
             it 'student should not be locked out yet' do
               assert_student_is_not_locked_out
             end
+
+            it 'student should be redirected away from the lockout page' do
+              assert_student_is_redirected_away_from_lockout
+            end
           end
 
           context 'when student was create before P20-937-exception-date' do
@@ -56,6 +64,10 @@ module CAP
 
             it 'student should not be locked out yet' do
               assert_student_is_not_locked_out
+            end
+
+            it 'student should be redirected away from the lockout page' do
+              assert_student_is_redirected_away_from_lockout
             end
           end
 
@@ -67,6 +79,10 @@ module CAP
             it 'student should not be locked out yet' do
               assert_student_is_not_locked_out
             end
+
+            it 'student should be redirected away from the lockout page' do
+              assert_student_is_redirected_away_from_lockout
+            end
           end
 
           context 'when student is CAP compliant' do
@@ -74,6 +90,10 @@ module CAP
 
             it 'student should not be locked out' do
               assert_student_is_not_locked_out
+            end
+
+            it 'student should be redirected away from the lockout page' do
+              assert_student_is_redirected_away_from_lockout
             end
           end
         end
@@ -85,10 +105,10 @@ module CAP
             assert_student_is_locked_out_until_permission_granted
           end
 
-          context 'when student was create before policy took effect' do
+          context 'when student was created before policy took effect' do
             let(:student) {create(:cpa_non_compliant_student, :predates_policy)}
 
-            it 'student should be locked out after his grace period has ended' do
+            it 'student should be locked out after their grace period has ended' do
               assert_enqueued_with job: CAP::LockoutJob, args: [user_id: student.id, reschedules: 1], at: grace_period_duration.from_now.since(1.minute) do
                 assert_student_in_grace_period
               end
@@ -115,21 +135,33 @@ module CAP
               end
             end
 
+            it 'student should be redirected away from the lockout page' do
+              assert_student_is_redirected_away_from_lockout
+            end
+
             context 'when student provider is Clever' do
               let(:student) {create(:cpa_non_compliant_student, :predates_policy, :clever_sso_provider, :migrated_imported_from_clever)}
 
-              it 'student should be neither transited to grace period state nor locked out' do
+              it 'student should be neither transitioned to grace period state nor locked out' do
                 assert_student_is_not_locked_out
                 refute Policies::ChildAccount::ComplianceState.grace_period?(student.reload)
+              end
+
+              it 'student should be redirected away from the lockout page' do
+                assert_student_is_redirected_away_from_lockout
               end
             end
 
             context 'when student provider is LTI' do
               let(:student) {create(:cpa_non_compliant_student, :predates_policy, :qwiklabs_sso_provider, :with_lti_auth)}
 
-              it 'student should be neither transited to grace period state nor locked out' do
+              it 'student should be neither transitioned to grace period state nor locked out' do
                 assert_student_is_not_locked_out
                 refute Policies::ChildAccount::ComplianceState.grace_period?(student.reload)
+              end
+
+              it 'student should be redirected away from the lockout page' do
+                assert_student_is_redirected_away_from_lockout
               end
             end
           end
@@ -140,9 +172,13 @@ module CAP
             it 'student should be transited to grace period state' do
               assert_student_in_grace_period
             end
+
+            it 'student should be redirected away from the lockout page' do
+              assert_student_is_redirected_away_from_lockout
+            end
           end
 
-          context 'when student became compliant during his grace period' do
+          context 'when student became compliant during their grace period' do
             let(:student) {create(:cpa_non_compliant_student, :predates_policy, :in_grace_period)}
 
             before do
@@ -161,6 +197,10 @@ module CAP
                 )
               end
             end
+
+            it 'student should be redirected away from the lockout page' do
+              assert_student_is_redirected_away_from_lockout
+            end
           end
 
           context 'when student provider is Google' do
@@ -173,6 +213,10 @@ module CAP
 
               it 'student should be transited to grace period state' do
                 assert_student_in_grace_period
+              end
+
+              it 'student should be redirected away from the lockout page' do
+                assert_student_is_redirected_away_from_lockout
               end
             end
 
@@ -219,6 +263,14 @@ module CAP
             child_account_compliance_state_last_updated: DateTime.now.iso8601(3),
             child_account_compliance_lock_out_date: nil,
           }
+        end
+
+        private def assert_student_is_redirected_away_from_lockout
+          get lockout_path
+          follow_redirect!
+
+          assert_equal 200, status
+          assert_equal home_path, path
         end
 
         private def assert_student_is_locked_out_until_permission_granted

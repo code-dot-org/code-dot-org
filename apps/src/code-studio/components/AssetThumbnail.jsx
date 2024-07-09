@@ -1,7 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import color from '@cdo/apps/util/color';
+import React from 'react';
+
 import {assets as assetsApi} from '@cdo/apps/clientApi';
+import color from '@cdo/apps/util/color';
 
 const defaultIcons = {
   image: 'fa fa-picture-o',

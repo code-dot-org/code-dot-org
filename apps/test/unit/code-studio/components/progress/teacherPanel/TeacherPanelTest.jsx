@@ -65,7 +65,35 @@ const setUpWithMount = async overrideProps => {
   );
 };
 
+fetch.mockResponse(JSON.stringify({}));
+
 describe('TeacherPanel', () => {
+  const teacherSections = [{id: 1, name: 'CSF section'}];
+  const sectionLockStatus = {
+    1: {
+      section_id: 1,
+      section_name: 'CSF section',
+      lessons: [],
+    },
+  };
+
+  let teacherPanelDataStub;
+
+  beforeEach(() => {
+    teacherPanelDataStub = sinon
+      .stub(teacherPanelData, 'queryLockStatus')
+      .returns(
+        Promise.resolve({
+          teacherSections,
+          sectionLockStatus,
+        })
+      );
+  });
+
+  afterEach(() => {
+    teacherPanelDataStub.restore();
+  });
+
   describe('on unit page', () => {
     it('initial view as participant has teacher panel header and view toggle', () => {
       const wrapper = setUp({viewAs: ViewType.Participant});
@@ -173,22 +201,6 @@ describe('TeacherPanel', () => {
   });
 
   it('loads initial data and calls get/set lock status', async () => {
-    const teacherSections = [{id: 1, name: 'CSF section'}];
-    const sectionLockStatus = {
-      1: {
-        section_id: 1,
-        section_name: 'CSF section',
-        lessons: [],
-      },
-    };
-
-    sinon.stub(teacherPanelData, 'queryLockStatus').returns(
-      Promise.resolve({
-        teacherSections,
-        sectionLockStatus,
-      })
-    );
-
     const setSectionsStub = sinon.stub();
     const setSectionLockStatusStub = sinon.stub();
     const overrideProps = {

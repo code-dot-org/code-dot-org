@@ -1,0 +1,41 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-07-07T05:36:45.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Student.java</code> add the following method below the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">createStudentFromFile(String filename)</code> method.\r\n<pre style=\"background-color: #333333; color: white;\">\r\npublic double getMaxGPA(String filename) throws IOException {\r\n      File file = new File(filename);\r\n      Scanner scanner = new Scanner(file);\r\n\r\n      double maxGPA = 0.0;\r\n      double currentValue = 0.0;\r\n      while(scanner.hasNext()){\r\n        currentValue = scanner.nextDouble();\r\n        System.out.println(currentValue);\r\n      }\r\n      \r\n      scanner.close();\r\n      return maxGPA;\r\n    }\r\n\r\n</pre>\r\n\r\nIn <code style=\"background-color: #ececec; color: black; font-weight: bold;\">StudentRunner.java</code>, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getMaxGPA(String filename)</code> method and print the results:\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\nSystem.out.print(\"Max GPA: \");\r\nSystem.out.println(myStudent.getMaxGPA2(\"gpa_data.txt\"));\r\n</pre>\r\n1. What is printed as a result of calling the method?\r\n\r\n2. What causes the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">while</code> loop to terminate? \r\n\r\n\r\n✅ **TO DO:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Student.java</code> replace the algorithm in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">while</code> loop of the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getMaxGPA(String filename)</code> method with the algorithm below.\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\ncurrentValue = scanner.nextDouble();\r\nif(currentValue > maxGPA){\r\n\tmaxGPA = currentValue;\r\n}\r\n</pre>\r\n\r\n1. What difference do you notice in the output?\r\n\r\n2. Is there a difference in what causes the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">while</code> loop to terminate? ",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "StudentRunner.java": {
+        "text": "import java.io.IOException;\n\npublic class StudentRunner {\n  public static void main(String[] args) throws IOException{\n    \n    Student myStudent = new Student();\n    System.out.println(myStudent);\n\n    myStudent = myStudent.createStudentFromFile(\"student_data.txt\");\n    System.out.println(myStudent);\n\n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n    \n    \n  }\n}\n  ",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Student.java": {
+        "text": "import java.io.File;\nimport java.io.IOException;\nimport java.util.Scanner;\n\npublic class Student {\n    private String name;\n    private double gpa;\n\n    public Student() {\n      name = \"unknown\";\n      gpa = 0.0;\n    }\n\n    public Student(String name) {\n      this.name = name;\n      gpa = 0.0;\n    }\n\n    public Student(String name, double gpa){\n      this.name = name;\n      this.gpa = gpa;\n    }\n\n    public Student createStudentFromFile(String filename) throws IOException {\n      File file = new File(filename);\n      Scanner scanner = new Scanner(file);\n      String name = scanner.nextLine();\n      scanner.close();\n      return new Student(name);\n    }\n\n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n\n\n  \n  \n    public String getName() {\n        return name;\n    }\n\n    public String toString() {\n        return name;\n    }\n}",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "student_data.txt": {
+        "text": "Aiden Chen\nFatima Ahmed\nLiam Smith\nPriya Patel\nSantiago Garcia\nHiroshi Tanaka\nAmara Johnson\nElena Rossi\nNguyen Tran\nOlga Ivanova",
+        "isVisible": true,
+        "tabOrder": 2
+      },
+      "gpa_data.txt": {
+        "text": "3.85\n2.67\n3.14\n3.76\n2.94\n3.45\n3.98\n2.75\n3.33\n3.89",
+        "isVisible": true,
+        "tabOrder": 3
+      }
+    },
+    "ai_tutor_available": "false"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-07-07T05:36:45.418+00:00\",\"changed\":[\"cloned from \\\"CSA U3L6 Reading Files-L2\\\"\"],\"cloned_from\":\"CSA U3L6 Reading Files-L2\"},{\"changed_at\":\"2024-07-07 05:36:54 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-07-07 06:48:21 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-07-07 06:52:12 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-07-07 07:13:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-07-07 07:14:52 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-07-07 07:15:07 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-07-07 07:40:41 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-07-07 07:45:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-07-07 07:58:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-07-07 08:02:00 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Javalab>

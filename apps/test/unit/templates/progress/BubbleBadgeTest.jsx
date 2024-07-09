@@ -102,7 +102,7 @@ describe('BubbleBadge', () => {
       expect(wrapper.find('FontAwesome[icon="check"]')).to.have.length(1);
     });
 
-    it('displays a white border when hasWhiteBorder is true', () => {
+    describe('displays a white border when hasWhiteBorder is true', () => {
       it('has a exclamation icon', () => {
         const wrapper = mount(<AssessmentBadge hasWhiteBorder={true} />);
         expect(wrapper.find('FontAwesome[icon="circle-thin"]')).to.have.length(

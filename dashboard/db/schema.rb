@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_07_01_205906) do
+ActiveRecord::Schema.define(version: 2024_07_02_214406) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -409,7 +409,6 @@ ActiveRecord::Schema.define(version: 2024_07_01_205906) do
     t.string "display_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "category", default: "other", null: false
     t.boolean "is_featured", default: false, null: false
     t.boolean "assignable", default: true, null: false
     t.string "curriculum_type"
@@ -428,7 +427,7 @@ ActiveRecord::Schema.define(version: 2024_07_01_205906) do
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
   end
 
-  create_table "course_offerings_pd_workshops", id: false, charset: "utf8mb4", collation: "utf8mb4_unicode_ci", force: :cascade do |t|
+  create_table "course_offerings_pd_workshops", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.bigint "pd_workshop_id", null: false
     t.bigint "course_offering_id", null: false
     t.datetime "created_at", precision: 6, null: false

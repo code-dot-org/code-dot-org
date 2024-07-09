@@ -1,6 +1,8 @@
-import tickWrapper from '../../util/tickWrapper';
-import {TestResults} from '@cdo/apps/constants';
 import $ from 'jquery';
+
+import {TestResults} from '@cdo/apps/constants';
+
+import tickWrapper from '../../util/tickWrapper';
 
 /**
  * @fileoverview Test various level configuration parameters.
