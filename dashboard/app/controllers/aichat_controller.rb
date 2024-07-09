@@ -55,7 +55,7 @@ class AichatController < ApplicationController
       params.to_unsafe_h[:newMessage]
     )
     sagemaker_response = AichatSagemakerHelper.request_sagemaker_chat_completion(input, params[:aichatModelCustomizations][:selectedModelId])
-    latest_assistant_response = AichatSagemakerHelper.get_sagemaker_assistant_response(sagemaker_response)
+    latest_assistant_response = AichatSagemakerHelper.get_sagemaker_assistant_response(sagemaker_response, params[:aichatModelCustomizations][:selectedModelId])
 
     filter_result = ShareFiltering.find_failure(latest_assistant_response, locale)
     if filter_result&.type == ShareFiltering::FailureType::PROFANITY
