@@ -122,19 +122,15 @@ describe I18nScriptUtils do
     let(:provided_yaml_file_data) {"---\nen-US:\n  data\n"}
     let(:expected_yaml_output) {%Q["en-US":\n  data\n]}
 
-    before do
-      FileUtils.mkdir_p File.dirname(provided_yaml_file_path)
-      File.write provided_yaml_file_path, provided_yaml_file_data
-    end
-
     it 'yml file should be reformatted correctly' do
+      File.expects(:read).with(provided_yaml_file_path).returns(provided_yaml_file_data)
+      File.expects(:write).with(provided_yaml_file_path, expected_yaml_output)
       _(fix_yml_file)
-      expect(File.read(provided_yaml_file_path)).must_equal expected_yaml_output
     end
   end
 
   describe '.to_js_locale' do
-    let(:to_js_locale) {I18nScriptUtils.to_js_locale(locale)}
+    let(:to_js_locale) {described_class.to_js_locale(locale)}
 
     let(:locale) {'en-US'}
     let(:expected_locale_string) {'en_us'}
