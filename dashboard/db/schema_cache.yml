@@ -1519,14 +1519,6 @@ columns:
   - *20
   - *21
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: category
-    sql_type_metadata: *3
-    'null': false
-    default: other
-    default_function:
-    collation: utf8mb3_unicode_ci
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: is_featured
     sql_type_metadata: *7
     'null': false

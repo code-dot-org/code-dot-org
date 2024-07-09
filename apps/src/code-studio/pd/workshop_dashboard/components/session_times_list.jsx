@@ -3,6 +3,7 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import SessionTime from './session_time';
 
 export default class SessionTimesList extends React.Component {

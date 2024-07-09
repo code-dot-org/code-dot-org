@@ -3,13 +3,15 @@
  * Sets date, startTime, and endTime for the session.
  */
 import _ from 'lodash';
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
-import moment from 'moment';
 import {Row, Col, Button, FormGroup, HelpBlock} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import TimeSelect from './time_select';
-import DatePicker from './date_picker';
+
 import {DATE_FORMAT, TIME_FORMAT} from '../workshopConstants';
+
+import DatePicker from './date_picker';
+import TimeSelect from './time_select';
 
 const MIN_TIME = moment('7:00am', TIME_FORMAT);
 const MAX_TIME = moment('7:00pm', TIME_FORMAT);

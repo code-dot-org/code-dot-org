@@ -54,6 +54,26 @@ export const Codebridge = React.memo(
       'control-buttons': ControlButtons,
     };
 
+    let gridLayout: string;
+    let gridLayoutRows: string;
+    let gridLayoutColumns: string;
+    if (
+      config.gridLayout &&
+      config.gridLayoutRows &&
+      config.gridLayoutColumns
+    ) {
+      gridLayout = config.gridLayout;
+      gridLayoutRows = config.gridLayoutRows;
+      gridLayoutColumns = config.gridLayoutColumns;
+    } else if (config.labeledGridLayouts && config.activeGridLayout) {
+      const labeledLayout = config.labeledGridLayouts[config.activeGridLayout];
+      gridLayout = labeledLayout.gridLayout;
+      gridLayoutRows = labeledLayout.gridLayoutRows;
+      gridLayoutColumns = labeledLayout.gridLayoutColumns;
+    } else {
+      throw new Error('Cannot render codebridge - no layout provided');
+    }
+
     return (
       <CodebridgeContextProvider
         value={{
@@ -69,13 +89,13 @@ export const Codebridge = React.memo(
         <div
           className="cdoide-container"
           style={{
-            gridTemplateAreas: config.gridLayout,
-            gridTemplateRows: config.gridLayoutRows,
-            gridTemplateColumns: config.gridLayoutColumns,
+            gridTemplateAreas: gridLayout,
+            gridTemplateRows: gridLayoutRows,
+            gridTemplateColumns: gridLayoutColumns,
           }}
         >
           {(Object.keys(ComponentMap) as Array<keyof typeof ComponentMap>)
-            .filter(key => config.gridLayout.match(key))
+            .filter(key => gridLayout.match(key))
             .map(key => {
               const Component = ComponentMap[key];
               return <Component key={key} />;

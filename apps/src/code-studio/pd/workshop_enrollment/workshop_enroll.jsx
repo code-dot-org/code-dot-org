@@ -3,12 +3,14 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
-import WorkshopDetails from './workshop_details';
-import FacilitatorBio from './facilitator_bio';
+
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
 import EnrollForm from './enroll_form';
 import {WorkshopPropType, FacilitatorPropType} from './enrollmentConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import FacilitatorBio from './facilitator_bio';
+import WorkshopDetails from './workshop_details';
 
 const SUBMISSION_STATUSES = {
   UNSUBMITTED: 'unsubmitted',
