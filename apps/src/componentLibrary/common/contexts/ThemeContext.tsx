@@ -13,7 +13,7 @@ interface ThemeContextProps {
 
 /**
  * Handles multiple themes logic.
- * Can ThemeProvider can be stacked, meaning that you can have different theme in existing themeContext by
+ * ThemeProvider can be stacked, meaning that you can have different theme in existing themeContext by
  * simply wrapping needed section into another ThemeProvider which will
  * break this section out of higher level ThemeProvider. In other words - you can stack ThemeProviders multiple times,
  * the theme value for the styles will be taken from the closest ThemeProvider or html element with data-theme
