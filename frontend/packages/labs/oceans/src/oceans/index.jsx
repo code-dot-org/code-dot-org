@@ -7,6 +7,7 @@ import Sounds from './Sounds';
 import {getState} from './state';
 
 let currentAppMode = queryStrFor('mode') || 'fishvtrash';
+const currentGuides = queryStrFor('guides');
 let textToSpeechLocale = queryStrFor('tts');
 let canvas, backgroundCanvas;
 
@@ -27,6 +28,7 @@ function initDemoPage() {
 
   initAll({
     appMode: currentAppMode,
+    guides: currentGuides,
     textToSpeechLocale,
     onContinue,
     canvas,

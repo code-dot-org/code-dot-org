@@ -15,6 +15,7 @@ import I18n from './i18n';
 //  backgroundCanvas
 //  appMode
 //  onContinue
+//  guides
 //
 export const initAll = function(options) {
   const {canvas, backgroundCanvas} = options;
