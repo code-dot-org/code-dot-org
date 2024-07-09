@@ -57,6 +57,10 @@ export const ThemeProvider = ({children}: {children: ReactNode}) => {
     setTheme(prevTheme => (prevTheme === 'Light' ? 'Dark' : 'Light'));
   };
 
+  /**
+   * We're adding data-theme attribute to a html element to be able to access current theme value in styles
+   * (scss/css files) via [data-theme='Light'] selectors. (See: ./../styles/colors.css)
+   * */
   return (
     <ThemeContext.Provider value={{theme, toggleTheme, setTheme}}>
       <div data-theme={theme}>{children}</div>
