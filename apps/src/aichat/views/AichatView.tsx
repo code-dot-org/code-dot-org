@@ -256,29 +256,16 @@ const AichatView: React.FunctionComponent = () => {
             headerContent={chatWorkspaceHeader}
             className={moduleStyles.panelContainer}
             headerClassName={moduleStyles.panelHeader}
-            rightHeaderContent={renderChatWorkspaceHeaderRight(() => {
-              dispatch(clearChatMessages());
-              analyticsReporter.sendEvent(
-                EVENTS.CHAT_ACTION,
-                {
-                  action: 'Clear chat history',
-                },
-                PLATFORMS.BOTH
-              );
-            })}
+            rightHeaderContent={
+              <div className={moduleStyles.chatHeaderRight}>
+                <CopyButton />
+              </div>
+            }
           >
             <ChatWorkspace onClear={onClear} />
           </PanelContainer>
         </div>
       </div>
-    </div>
-  );
-};
-
-const renderChatWorkspaceHeaderRight = (onClear: () => void) => {
-  return (
-    <div className={moduleStyles.chatHeaderRight}>
-      <CopyButton />
     </div>
   );
 };
