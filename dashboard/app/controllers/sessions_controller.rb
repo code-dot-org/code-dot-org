@@ -61,7 +61,7 @@ class SessionsController < Devise::SessionsController
     return redirect_to new_user_session_path unless current_user
 
     # If the user is npt locked out with the Child Account Policy, redirect them to /home
-    redirect_to home_path unless Policies::ChildAccount::ComplianceState.locked_out?(current_user)
+    return redirect_to home_path unless Policies::ChildAccount::ComplianceState.locked_out?(current_user)
 
     # Basic defaults. If the @pending_email is empty, the request was never sent
     @pending_email = ''
