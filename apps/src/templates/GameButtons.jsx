@@ -23,9 +23,7 @@ export const FinishButton = () => (
 
 const sendAnalyticsEvent = () => {
   const isSignedOut =
-    document
-      .querySelector('script[data-issignedout="true"]')
-      ?.getAttribute('data-issignedout') === 'true';
+    document.querySelector('script[data-issignedout="true"]') !== null;
 
   if (isSignedOut) {
     analyticsReporter.sendEvent(

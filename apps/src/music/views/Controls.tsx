@@ -122,9 +122,7 @@ const Controls: React.FunctionComponent<ControlsProps> = ({
   // Sends a Statsig event when the Run button is pressed when a user is signed out
   const sendAnalyticsEvent = (): void => {
     const isSignedOut: boolean =
-      document
-        .querySelector('script[data-issignedout="true"]')
-        ?.getAttribute('data-issignedout') === 'true';
+      document.querySelector('script[data-issignedout="true"]') !== null;
 
     if (isSignedOut && !isPlaying) {
       analyticsReporter.sendEvent(
