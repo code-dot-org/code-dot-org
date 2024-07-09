@@ -646,6 +646,13 @@ describe('Guide', () => {
     soundLibrary.playSound.restore();
   });
 
+  it('sets guideTypingTimer if not already started', () => {
+    setState({guideShowing: false, guideTypingTimer: null});
+    const wrapper = shallow(<Guide {...DEFAULT_PROPS} />);
+
+    expect(getState().guideTypingTimer).not.toBeNull();
+  });
+
   it('is dismissable', () => {
     const dismissCurrentGuideStub = sinon
       .stub(guide, 'dismissCurrentGuide')
