@@ -49,6 +49,8 @@ class Pd::Workshop < ApplicationRecord
 
   has_many :regional_partner_program_managers, source: :program_managers, through: :regional_partner
 
+  has_and_belongs_to_many :course_offerings, join_table: :course_offerings_pd_workshops
+
   serialized_attrs [
     'fee',
 
