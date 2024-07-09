@@ -1,5 +1,3 @@
-require 'cdo/rack/geolocation_override'
-
 Dashboard::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -23,9 +21,6 @@ Dashboard::Application.configure do
   config.hosts << "localhost.hourofcode.com"
   config.hosts << "localhost.codeprojects.org"
   config.hosts << "localhost-advocacy.code.org"
-
-  # Apply the remote_addr middleware to allow pretending to be at a particular IP
-  config.middleware.insert_after ActionDispatch::RequestId, Rack::GeolocationOverride
 
   # Do not eager load code on boot.
   config.eager_load = false
