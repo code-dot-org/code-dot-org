@@ -257,6 +257,14 @@ When /^I wait until the first (?:element )?"([^"]*)" (?:has|contains) text "([^"
   wait_until {@browser.execute_script("return $(#{selector.dump}).first().text();").include? text}
 end
 
+When /^I wait until (?:element )?"([^"]*)" (?:has|contains) one or more integers$/ do |selector|
+  wait_for_jquery
+  wait_until do
+    element_text = @browser.execute_script("return $(#{selector.dump}).text();")
+    element_text.match?(/\d+/)
+  end
+end
+
 When /^I wait until (?:element )?"([^"]*)" is (not )?checked$/ do |selector, negation|
   wait_until {@browser.execute_script("return $(\"#{selector}\").is(':checked');") == negation.nil?}
 end
