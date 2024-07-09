@@ -2,15 +2,15 @@ import React, {useEffect, useState} from 'react';
 import Papa from 'papaparse';
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import Button from '@cdo/apps/componentLibrary/button/Button';
+import {formatQuestionForAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
+import {ChatContext} from '@cdo/apps/aiTutor/types';
 
 /**
  * Renders a series of buttons that allow levelbuilders to upload a CSV of
  * student inputs and get back AI Tutor responses in bulk.
  */
 
-interface AIInteraction {
-  id: number;
-  studentInput: string;
+interface AIInteraction extends ChatContext {
   aiResponse: string | undefined;
 }
 
@@ -41,18 +41,18 @@ const AITutorResponseGenerator: React.FC = () => {
   };
 
   const getAIResponses = () => {
-    setResponsesPending(true)
+    setResponsesPending(true);
     for (let i = 0; i < data.length; i++) {
       askAI(data[i]);
     }
   };
 
-  const askAI = async (prompt: AIInteraction) => {
+  const askAI = async (row: AIInteraction) => {
     const chatApiResponse = await getChatCompletionMessage(
-      prompt.studentInput,
+      formatQuestionForAITutor(row),
       []
     );
-    prompt.aiResponse = chatApiResponse.assistantResponse;
+    row.aiResponse = chatApiResponse.assistantResponse;
     setResponseCount(prevResponseCount => prevResponseCount + 1);
   };
 
@@ -62,7 +62,7 @@ const AITutorResponseGenerator: React.FC = () => {
     const csvURL = window.URL.createObjectURL(csvData);
     const tempLink = document.createElement('a');
     tempLink.href = csvURL;
-    tempLink.setAttribute('download', 'AITutorResponses.csv');
+    tempLink.setAttribute('download', 'ai_tutor_responses.csv');
     tempLink.click();
   };
 
