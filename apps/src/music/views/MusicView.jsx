@@ -3,7 +3,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import MusicPlayer from '../player/MusicPlayer';
+// This is the Music Lab specific AnalyticsReporter
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
+// This is the utils AnalyticsReporter
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {AnalyticsContext} from '../context';
 import Globals from '../globals';
@@ -498,6 +502,15 @@ class UnconnectedMusicView extends React.Component {
   };
 
   setPlaying = play => {
+    // Sends a Statsig event when the Run button is pressed by a signed out user
+    if (play && this.props.signInState === SignInState.SignedOut) {
+      analyticsReporter.sendEvent(
+        EVENTS.RUN_BUTTON_PRESSED_SIGNED_OUT,
+        {},
+        PLATFORMS.STATSIG
+      );
+    }
+
     if (play) {
       this.playSong();
       if (this.props.isProjectLevel) {
