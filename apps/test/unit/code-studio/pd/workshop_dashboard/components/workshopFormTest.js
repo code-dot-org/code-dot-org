@@ -598,7 +598,7 @@ describe('WorkshopForm test', () => {
     // A user can select either the label or checkbox, so we expect 2 for each here
     expect(wrapper.find('#myPlTestTopic')).to.have.lengthOf(2);
     expect(wrapper.find('#mySecondTopic')).to.have.lengthOf(2);
-  });  
+  });
 
   it('editing form as non-admin does not show organizer field', () => {
     const wrapper = mount(
