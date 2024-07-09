@@ -12,6 +12,7 @@ module AichatSagemakerHelper
   NEWLINE = "\n"
   MAX_NEW_TOKENS = 512
   TOP_P = 0.9
+  PIRATE_CUSTOM_STOPPING_STRINGS = ["},"]
   FINE_TUNED_MODELS = {
     ARITHMO: "gen-ai-arithmo2-mistral-7b",
     PIRATE: "gen-ai-mistral-pirate-7b",
@@ -55,12 +56,22 @@ module AichatSagemakerHelper
         end
       end
     end
+    # Custom stopping strings used for output quality for Pirate model.
+    # Using these seem to help with latency in receiving assistant response.
+    # https://huggingface.co/phanerozoic/Mistral-Pirate-7b-v0.3
+    stopping_strings =
+      if selected_model_id == FINE_TUNED_MODELS[:PIRATE]
+        PIRATE_CUSTOM_STOPPING_STRINGS
+      else
+        []
+      end
     {
       inputs: inputs,
       parameters: {
         temperature: aichat_params[:temperature].to_f,
         max_new_tokens: MAX_NEW_TOKENS,
-        top_p: TOP_P
+        top_p: TOP_P,
+        stop: stopping_strings,
       }
     }
   end
@@ -74,7 +85,7 @@ module AichatSagemakerHelper
   end
 
   def self.get_sagemaker_assistant_response(sagemaker_response, selected_model_id)
-    parsed_response = JSON.parse(sagemaker_response.body.string)   
+    parsed_response = JSON.parse(sagemaker_response.body.string)
     generated_text = parsed_response[0]["generated_text"]
     format_sagemaker_assistant_response_output(generated_text, selected_model_id)
   end
@@ -89,8 +100,8 @@ module AichatSagemakerHelper
     end
     last = parts.last
     if selected_model_id == FINE_TUNED_MODELS[:PIRATE]
-      # Custom stopping string characters is used to separate the assistant's response from the rest of the generated text.
-      # https://huggingface.co/phanerozoic/Mistral-Pirate-7b-v0.3
+      # These characters is used to separate the assistant's response from the rest of the generated text
+      # which sometimes seems to include jargon or extraneous characters or code snippets.      
       last = last.split(/[}~*`]/).first
       # Remove double quotes in assistant's response.
       last = last.gsub(/\"/, "")
