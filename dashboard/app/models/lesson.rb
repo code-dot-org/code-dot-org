@@ -490,7 +490,7 @@ class Lesson < ApplicationRecord
       key: key,
       displayName: localized_name,
       overview: get_localized_property(:student_overview) || '',
-      announcements: (announcements || []).select {|announcement| announcement['visibility'] != "Teacher-only"},
+      announcements: (announcements || []).reject {|announcement| announcement['visibility'] == "Teacher-only"},
       resources: (all_resources['Student'] || []).concat(all_resources['All'] || []),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_show),
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_show),

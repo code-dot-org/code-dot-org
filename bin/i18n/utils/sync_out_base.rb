@@ -32,8 +32,8 @@ module I18n
       #
       # @return [Array<CdoLanguage>] supported CDO languages except the source language
       protected def languages
-        @languages ||= I18nScriptUtils.cdo_languages.select do |cdo_language|
-          cdo_language[:locale_s] != I18nScriptUtils::SOURCE_LOCALE
+        @languages ||= I18nScriptUtils.cdo_languages.reject do |cdo_language|
+          cdo_language[:locale_s] == I18nScriptUtils::SOURCE_LOCALE
         end
       end
 

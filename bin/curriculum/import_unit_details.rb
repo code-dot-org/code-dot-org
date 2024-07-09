@@ -112,7 +112,7 @@ def main(options)
     end
 
     paired_lesson_ids = lesson_pairs.map {|lesson, _| lesson.id}
-    lessons_without_lesson_plan_to_update = script.lessons.select {|l| !l.has_lesson_plan?}.reject {|l| paired_lesson_ids.include?(l.id)}
+    lessons_without_lesson_plan_to_update = script.lessons.reject {|l| l.has_lesson_plan?}.reject {|l| paired_lesson_ids.include?(l.id)}
     lessons_without_lesson_plan_to_update.each do |no_lesson_plan|
       LessonImportHelper.update_lesson(no_lesson_plan, options.models)
     end
@@ -185,7 +185,7 @@ def get_validated_lesson_pairs(script, cb_unit)
   cb_lessons = get_cb_lessons(cb_unit)
 
   # Compare lessons with lesson plans from CB and Code Studio.
-  lessons_with_lesson_plans = script.lessons.reject {|l| !l.has_lesson_plan?}
+  lessons_with_lesson_plans = script.lessons.select {|l| l.has_lesson_plan?}
   unless lessons_with_lesson_plans.count == cb_lessons.count
     raise "mismatched lesson counts for unit #{script.name} CS: #{lessons_with_lesson_plans.count} CB: #{cb_lessons.count}"
   end

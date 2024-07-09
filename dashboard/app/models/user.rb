@@ -1456,8 +1456,8 @@ class User < ApplicationRecord
   end
 
   def visible_script_levels(script)
-    script.script_levels.select do |sl|
-      !script_level_hidden?(sl)
+    script.script_levels.reject do |sl|
+      script_level_hidden?(sl)
     end
   end
 
@@ -1976,7 +1976,7 @@ class User < ApplicationRecord
     user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self).
       select {|user_script| unit_group_units_script_ids.exclude?(user_script.script_id)}
 
-    user_student_scripts = user_scripts.select {|us| !us.script.pl_course?}
+    user_student_scripts = user_scripts.reject {|us| us.script.pl_course?}
 
     user_script_data = user_student_scripts.filter_map do |user_script|
       # Skip this script if we are excluding the primary script and this is the
@@ -1995,13 +1995,13 @@ class User < ApplicationRecord
       end
     end
 
-    user_course_data = courses_as_participant.select {|c| !c.pl_course?}.map(&:summarize_short)
+    user_course_data = courses_as_participant.reject {|c| c.pl_course?}.map(&:summarize_short)
 
     user_course_data + user_script_data
   end
 
   def sections_as_student_participant
-    sections_as_student.select {|s| !s.pl_section?}
+    sections_as_student.reject {|s| s.pl_section?}
   end
 
   def sections_as_pl_participant

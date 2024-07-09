@@ -98,6 +98,6 @@ class CodeReviewsController < ApplicationController
     followeds.
       filter_map {|followed| followed.code_review_group&.followers&.pluck(:student_user_id)}.
       flatten.
-      select {|user_id| user_id != student.id}
+      reject {|user_id| user_id == student.id}
   end
 end

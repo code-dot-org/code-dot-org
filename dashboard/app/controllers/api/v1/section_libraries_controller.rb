@@ -19,6 +19,6 @@ class Api::V1::SectionLibrariesController < Api::V1::JSONApiController
 
   private def active_sections
     sections = current_user.sections_instructed + current_user.sections_as_student
-    sections.select {|section| !section.hidden}
+    sections.reject {|section| section.hidden}
   end
 end

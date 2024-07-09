@@ -77,7 +77,7 @@ module Rack
 
       # Skip if :include is provided and evaluates to false
       if @include &&
-          !(@include == env['PATH_INFO'])
+          @include != env['PATH_INFO']
         return false
       end
 

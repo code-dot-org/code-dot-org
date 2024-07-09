@@ -256,7 +256,7 @@ class Level < ApplicationRecord
       end
     end
 
-    !(current_parent&.type == "LevelGroup")
+    current_parent&.type != "LevelGroup"
   end
 
   def to_xml(options = {})

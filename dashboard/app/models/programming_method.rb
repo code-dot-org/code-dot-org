@@ -69,7 +69,7 @@ class ProgrammingMethod < ApplicationRecord
       examples: parsed_examples,
       syntax: syntax,
       externalLink: external_link,
-      canHaveOverload: !programming_class.programming_methods.any? {|m| m.overload_of == key},
+      canHaveOverload: programming_class.programming_methods.none? {|m| m.overload_of == key},
       overloadOf: overload_of
     }
   end

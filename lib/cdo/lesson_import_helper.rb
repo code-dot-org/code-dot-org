@@ -146,7 +146,7 @@ module LessonImportHelper
   def self.create_activity_sections(activity_markdown, lesson_activity_id, levels)
     activity_markdown.gsub!(/slide!!!slide-\d+(?:<!-- place where you'd like the icon -->)?/, '<i class="fa fa-list-alt" aria-hidden="true"></i>')
     activity_markdown.gsub!(/\[\/?guide\]/, '')
-    tip_matches = find_tips(activity_markdown).select {|m| m[1] != 'say'}.map {|m| {index: activity_markdown.index(m[0]), type: 'tip', match: m, substring: m[0]}}
+    tip_matches = find_tips(activity_markdown).reject {|m| m[1] == 'say'}.map {|m| {index: activity_markdown.index(m[0]), type: 'tip', match: m, substring: m[0]}}
     name_matches = find_activity_section_names(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'name', match: m, substring: m[0]}}
     pullthrough_matches = find_code_studio_pullthrough(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'pullthrough', match: m, substring: m[0]}}
     remark_matches = find_remarks(activity_markdown).map {|m| {index: activity_markdown.index(m[0]), type: 'remark', match: m, substring: m[0]}}

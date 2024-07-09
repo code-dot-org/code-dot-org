@@ -10,7 +10,7 @@ require src_dir 'database'
 
 CONTAINED_LEVEL_RESULT = 101 # see constants.js
 
-containers = Level.all.select {|x| !x.contained_levels.empty?}
+containers = Level.all.reject {|x| x.contained_levels.empty?}
 contained_level_ids = containers.map {|x| x.contained_levels[0].id}
 
 ActiveRecord::Base.transaction do
