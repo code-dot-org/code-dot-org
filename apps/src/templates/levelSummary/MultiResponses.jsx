@@ -48,24 +48,29 @@ const multiChartData = (data, highlightCorrect = false) => [
 ];
 
 const MultiResponses = ({scriptData, showCorrectAnswer = false}) => {
-  const [answers, correctAnswers] = useMemo(() => {
+  // Get the number of answers and a list of correct answers.
+  // The correct answers will be the letters for the correct answers, ex. ['A', 'C']
+  const [numAnswers, correctAnswers] = useMemo(() => {
     if (scriptData.level.properties.answers) {
+      // If the level is a multi/contained level, the answers are in the level properties.
       const answers = scriptData.level.properties.answers;
+
       const correctAnswers = answers.reduce((acc, cur, i) => {
         if (cur.correct) {
           acc.push([...LETTERS][i]);
         }
         return acc;
       }, []);
-      const formattedAnswers = answers.reduce((acc, cur) => {
-        acc.push(cur.text);
-        return acc;
-      }, []);
-      return [formattedAnswers, correctAnswers];
+
+      return [answers.length, correctAnswers];
     } else if (scriptData.level.properties.predict_settings) {
+      // If the level is a predict level (lab2) the answers are in predict_settings.
       const predictSettings = scriptData.level.properties.predict_settings;
+      // We should only be trying to load this component if this is a multiple choice question.
       if (predictSettings.multipleChoiceOptions) {
         const answers = predictSettings.multipleChoiceOptions;
+
+        // solution is a comma-separated list of strings.
         const correctAnswers = predictSettings.solution
           .split(',')
           .reduce((acc, cur, i) => {
@@ -73,18 +78,18 @@ const MultiResponses = ({scriptData, showCorrectAnswer = false}) => {
             return acc;
           }, []);
 
-        return [answers, correctAnswers];
+        return [answers.length, correctAnswers];
       }
     }
-    return [[], null];
+    return [0, []];
   }, [
     scriptData.level.properties.answers,
     scriptData.level.properties.predict_settings,
   ]);
 
   const answerData = useMemo(
-    () => multiAnswerCounts(scriptData.responses, answers.length),
-    [scriptData.responses, answers.length]
+    () => multiAnswerCounts(scriptData.responses, numAnswers),
+    [scriptData.responses, numAnswers]
   );
   const answerMax = useMemo(
     () => Math.max(...Object.values(answerData)),

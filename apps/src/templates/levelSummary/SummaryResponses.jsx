@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {PredictQuestionType} from '@cdo/apps/lab2/levelEditors/types';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import i18n from '@cdo/locale';
@@ -28,15 +29,14 @@ const SummaryResponses = ({
   currentLevelId,
   levels,
 }) => {
-  console.log({scriptData});
   const currentLevel = levels.find(l => l.activeId === currentLevelId);
   const predictSettings = scriptData.level.properties?.predict_settings;
   const isFreeResponse =
     scriptData.level.type === FREE_RESPONSE ||
-    predictSettings?.questionType === 'freeResponse';
+    predictSettings?.questionType === PredictQuestionType.FreeResponse;
   const isMulti =
     scriptData.level.type === MULTI ||
-    predictSettings?.questionType === 'multipleChoice';
+    predictSettings?.questionType === PredictQuestionType.MultipleChoice;
 
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
 
@@ -82,6 +82,7 @@ const SummaryResponses = ({
         }
       }
     };
+
     showOrHideAnswer(correctAnswerElement);
     showOrHideAnswer(predictAnswerElement);
   }, [showCorrectAnswer]);

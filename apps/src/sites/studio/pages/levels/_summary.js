@@ -51,21 +51,29 @@ $(document).ready(() => {
     document.getElementById('summary-teacher-instructions')
   );
 
+  // Predict levels are a lab2 feature that replace contained levels.
   if (scriptData.level.properties.predict_settings?.isPredictLevel) {
-    ReactDOM.render(
-      <SummaryPredictQuestion
-        question={scriptData.level.properties.long_instructions}
-        predictSettings={scriptData.level.properties.predict_settings}
-      />,
-      document.getElementById('predict-question')
+    const predictQuestionContainer =
+      document.getElementById('predict-question');
+    const correctAnswerContainer = document.getElementById(
+      'summary-correct-answer'
     );
+    if (predictQuestionContainer) {
+      ReactDOM.render(
+        <SummaryPredictQuestion
+          question={scriptData.level.properties.long_instructions}
+          predictSettings={scriptData.level.properties.predict_settings}
+        />,
+        predictQuestionContainer
+      );
+    }
 
-    if (document.getElementById('summary-correct-answer')) {
+    if (correctAnswerContainer) {
       ReactDOM.render(
         <UnconnectedPredictSolution
           predictSettings={scriptData.level.properties.predict_settings}
         />,
-        document.getElementById('summary-correct-answer')
+        correctAnswerContainer
       );
     }
   }
