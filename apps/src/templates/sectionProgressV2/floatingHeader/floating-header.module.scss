@@ -1,0 +1,11 @@
+.floatHeader {
+  position: fixed;
+  top: 0;
+  background-color: white;
+}
+
+.floatHeaderInterior {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
