@@ -64,7 +64,7 @@ end
 
 # Create sparse checkout of staging content directories on production-daemon
 # for the purpose of content seeding.
-if (node['cdo-apps']['daemon'] && %w[production].include?(node.chef_environment))
+if node['cdo-apps']['daemon'] && %w[production].include?(node.chef_environment)
   worktree_path = File.join(home_path, 'staging')
 
   execute 'create worktree for managing deployment scripts' do
