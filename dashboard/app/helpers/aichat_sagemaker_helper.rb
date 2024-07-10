@@ -26,23 +26,28 @@ module AichatSagemakerHelper
 
   def self.format_inputs_for_sagemaker_request(aichat_params, stored_messages, new_message)
     selected_model_id = aichat_params[:selectedModelId]
+    # Add system prompt and retrieval contexts if available to inputs as part of instructions that will be sent to model.
+    inputs = ""
+    inputs = aichat_params[:systemPrompt] + " " unless aichat_params[:systemPrompt].empty?
+    inputs << aichat_params[:retrievalContexts].join(" ") if aichat_params[:retrievalContexts]
     if selected_model_id == FINE_TUNED_MODELS[:ARITHMO]
-      # Format input for Arithmo model with customized format as detailed at https://huggingface.co/akjindal53244/Arithmo-Mistral-7B.
-      inputs = "Question: " + new_message[:chatMessageText]
-      inputs = inputs + NEWLINE + "Answer:"
+      # Format input for Arithmo model as detailed at https://huggingface.co/akjindal53244/Arithmo-Mistral-7B.
+      # Note the Question-Answer format - prior user and assistant messages are NOT included.
+      inputs = "Question: " + inputs + " " + new_message[:chatMessageText]
+      inputs << + NEWLINE + "Answer:"
     elsif selected_model_id == FINE_TUNED_MODELS[:KAREN]
       # Format input for Karen model using ChatML. Details at https://huggingface.co/FPHam/Karen_TheEditor_V2_CREATIVE_Mistral_7B.
-      inputs = CHAT_ML_BEGIN_TOKEN + SYSTEM + NEWLINE + aichat_params[:systemPrompt] + CHAT_ML_BEGIN_TOKEN + NEWLINE
-      inputs = inputs + CHAT_ML_BEGIN_TOKEN + USER + NEWLINE + KAREN_PRETEXT + new_message[:chatMessageText] + CHAT_ML_END_TOKEN + NEWLINE
-      inputs = inputs + CHAT_ML_BEGIN_TOKEN + ASSISTANT
+      # Note that prior user and assistant messages are NOT included and the customized
+      # pretext is always used so that the given user message is edited and not responded to.
+      inputs = CHAT_ML_BEGIN_TOKEN + SYSTEM + NEWLINE + inputs + CHAT_ML_BEGIN_TOKEN + NEWLINE
+      inputs << CHAT_ML_BEGIN_TOKEN + USER + NEWLINE + KAREN_PRETEXT + new_message[:chatMessageText] + CHAT_ML_END_TOKEN + NEWLINE
+      inputs << CHAT_ML_BEGIN_TOKEN + ASSISTANT
     else
       # The instruction-tuned version of Mistral accepts formatted instructions where conversation roles
       # must start with a user prompt and alternate between user and assistant.
       # Mistral-7B-Instruction LLM instruction format doc at https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1.
-      inputs = ""
-      inputs = aichat_params[:systemPrompt] + " " unless aichat_params[:systemPrompt].empty?
-      inputs += aichat_params[:retrievalContexts].join(" ") if aichat_params[:retrievalContexts]
-      inputs = SENTENCE_BEGIN_TOKEN + wrap_as_instructions(inputs)
+      inputs << SENTENCE_BEGIN_TOKEN + wrap_as_instructions(inputs)
+      # Add user and assistant messages including most recent user message.
       all_messages = [*stored_messages, new_message]
       all_messages.each do |msg|
         if msg[:role] == USER
