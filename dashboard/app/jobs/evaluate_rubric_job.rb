@@ -12,12 +12,6 @@ class EvaluateRubricJob < ApplicationJob
   ATTEMPTS_ON_SERVICE_UNAVAILABLE = 3
   ATTEMPTS_ON_GATEWAY_TIMEOUT = 3
 
-  # Maximum number of evaluations that a student can request for a rubric
-  STUDENT_EVALUATION_LIMIT = 10
-
-  # Maximum number of evaluations a teacher can request for a rubric per student
-  TEACHER_EVALUATION_LIMIT = 10
-
   # This is raised if there is any raised error due to a rate limit, e.g. a 429
   # received from the aiproxy service.
   class TooManyRequestsError < StandardError
@@ -302,8 +296,8 @@ class EvaluateRubricJob < ApplicationJob
       status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
     ).count
 
-    raise StudentLimitError.new(user_id: user_id, rubric_id: rubric.id) if requested_by_self && count >= STUDENT_EVALUATION_LIMIT
-    raise TeacherLimitError.new(user_id: user_id, requester_id: requester_id, rubric_id: rubric.id) if !requested_by_self && count >= TEACHER_EVALUATION_LIMIT
+    raise StudentLimitError.new(user_id: user_id, rubric_id: rubric.id) if requested_by_self && count >= SharedConstants::RUBRIC_AI_EVALUATION_LIMITS[:STUDENT_LIMIT]
+    raise TeacherLimitError.new(user_id: user_id, requester_id: requester_id, rubric_id: rubric.id) if !requested_by_self && count >= SharedConstants::RUBRIC_AI_EVALUATION_LIMITS[:TEACHER_LIMIT]
   end
 
   # get the channel id of the project which stores the user's code on this script level.

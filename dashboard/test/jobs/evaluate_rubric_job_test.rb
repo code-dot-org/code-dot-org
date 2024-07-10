@@ -506,7 +506,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     channel_id = channel_token.channel
 
     # create more existing RubricAiEvaluation records than are allowed
-    existing_job_count = EvaluateRubricJob::STUDENT_EVALUATION_LIMIT + 1
+    existing_job_count = SharedConstants::RUBRIC_AI_EVALUATION_LIMITS[:STUDENT_LIMIT] + 1
     existing_job_count.times do
       create(
         :rubric_ai_evaluation, user: @student, requester: @student, rubric: @rubric,
@@ -531,7 +531,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     channel_id = channel_token.channel
 
     # create more existing RubricAiEvaluation records than are allowed
-    existing_job_count = EvaluateRubricJob::TEACHER_EVALUATION_LIMIT + 1
+    existing_job_count = SharedConstants::RUBRIC_AI_EVALUATION_LIMITS[:TEACHER_LIMIT] + 1
     existing_job_count.times do
       create(
         :rubric_ai_evaluation, user: @student, requester: @teacher, rubric: @rubric,
