@@ -305,7 +305,7 @@ class User < ApplicationRecord
     self.gender = Policies::Gender.normalize gender
   end
 
-  before_validation :student_in_lockout_flow?, on: :update
+  before_validation :enforce_age_or_state_update, on: :update, if: :should_check_age_or_state_update?
 
   validate :validate_us_state, if: :should_validate_us_state?
 
@@ -2766,17 +2766,15 @@ class User < ApplicationRecord
     new_record? || us_state_changed?
   end
 
-  def student_in_lockout_flow?
-    return unless user_type == TYPE_STUDENT
-    return unless %w[US RD].include? country_code
-    return unless birthday_changed? || us_state_changed?
+  def should_check_age_or_state_update?
+    return false unless student?
+    return false unless %w[US RD].include? country_code
+    birthday_changed? || us_state_changed?
+  end
 
+  private def enforce_age_or_state_update
     # Create copy of user to mock the user's state before an update.
-    user_before_update = dup
-
-    # If us_state or age is changed, set to previous value before the update to be used to check if the user is in the lockout flow.
-    user_before_update.us_state = properties_was['us_state'] if us_state_changed?
-    user_before_update.birthday = birthday_was if birthday_changed?
+    user_before_update = User.new(attributes.deep_merge(changed_attributes))
 
     potentially_locked = Policies::ChildAccount.underage?(user_before_update)
     # The student is in a 'lockout' flow if they are potentially locked out and not unlocked
