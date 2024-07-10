@@ -33,9 +33,9 @@ const FieldLabel: React.FunctionComponent<FieldLabelProps> = ({
           className: styles.tooltip,
         }}
       >
-        <div>
+        <button type="button" className={styles.iconButton}>
           <FontAwesomeV6Icon iconName={'info-circle'} className={styles.icon} />
-        </div>
+        </button>
       </WithTooltip>
     </div>
   );

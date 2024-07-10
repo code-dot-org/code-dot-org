@@ -112,14 +112,20 @@
 
 .tooltip {
   animation: fade-in 0.3s;
+  text-align: left;
 }
 
 .fieldLabelContainer {
   display: flex;
   gap: 6px;
-  align-items: baseline;
+  align-items: flex-start;
 
-  .icon {
-    color: $light_gray_500;
+  .iconButton {
+    @include remove-button-styles;
+
+    .icon {
+      font-size: 13px;
+      color: $light_gray_500;
+    }
   }
 }

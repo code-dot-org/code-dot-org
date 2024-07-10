@@ -80,11 +80,11 @@ const SetupCustomization: React.FunctionComponent = () => {
       <div className={styles.inputContainer}>
         <FieldLabel
           id="selected-model"
-          label="Selected model:"
+          label="Selected model"
           tooltipText="This is the underlying language model being used by the chatbot. Use the dropdown to select from additional fine-tuned models."
         />
         <SimpleDropdown
-          labelText="Selected model:"
+          labelText="Selected model"
           isLabelVisible={false}
           onChange={event =>
             dispatch(
