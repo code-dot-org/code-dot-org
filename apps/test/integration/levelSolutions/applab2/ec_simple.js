@@ -56,10 +56,45 @@ module.exports = {
       ],
     },
 
-    // Missing coverage of the data category here.
-    // Most data blocks make network calls and modify data records. To get
-    // test coverage of these here, we would probably need to mock portions of that.
-    // We do have UI test coverage of data apis in dataBlocks.feature
+    // The data category of blocks is tested using UI tests, see: dataBlocks.feature
+    // which contains tests for each type of data block (createRecord, etc)
+    //
+    // We don't test them here because datablocks require access to the dashboard backend
+    // (not available in our integration tests), and while we could mock the calls, the
+    // testing benefit would be relatively low, and mocking is not well supported in
+    // levelSolutions shaped tests to start with.
+    {
+      description: 'Data block palette',
+      editCode: true,
+      xml: ``,
+
+      runBeforeClick(assert) {
+        $('.droplet-palette-group-header:contains(Data)').click();
+        const actualBlocks = $('.droplet-palette-canvas > g')
+          .map((i, el) => $(el).text().split('(')[0].replace(/\W/g, ''))
+          .toArray();
+        const expectedBlocks = [
+          'getColumn',
+          'startWebRequest',
+          'setKeyValue',
+          'getKeyValue',
+          'createRecord',
+          'readRecords',
+          'updateRecord',
+          'deleteRecord',
+          'getUserId',
+          'drawChart',
+          'drawChartFromRecords',
+          'getPrediction',
+        ];
+        assert.deepEqual(actualBlocks, expectedBlocks);
+        Applab.onPuzzleComplete();
+      },
+      expected: {
+        result: true,
+        testResult: TestResults.FREE_PLAY,
+      },
+    },
 
     // These exercise all of the blocks in Control category
     // It does not validate that they behave correctly, just that we don't end
