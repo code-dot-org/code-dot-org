@@ -171,7 +171,9 @@ function FloatingHeader({
           </div>
         </div>
       )}
-      <div ref={childContainerRef}>{children}</div>
+      <div ref={childContainerRef} className={styles.childContainer}>
+        {children}
+      </div>
     </div>
   );
 }
