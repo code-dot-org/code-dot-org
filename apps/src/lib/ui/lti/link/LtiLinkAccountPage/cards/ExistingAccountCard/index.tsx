@@ -24,6 +24,7 @@ const ExistingAccountCard = () => {
     emailAddress,
     userType,
   } = useContext(LtiProviderContext)!;
+  const isLMS = true;
   const urlParams = new URLSearchParams({
     lms_name: ltiProviderName,
     lti_provider: ltiProvider,
@@ -57,9 +58,11 @@ const ExistingAccountCard = () => {
         }
       />
       <CardContent className={cardStyles.cardContent}>
-        {i18n.ltiLinkAccountExistingAccountCardContent({
-          providerName: ltiProviderName,
-        })}
+        {isLMS
+          ? i18n.ltiLinkAccountExistingAccountCardContent({
+              providerName: ltiProviderName,
+            })
+          : i18n.nonLMSAccountExistingAccountCardContentWorkshopEnroll()}
       </CardContent>
       <CardActions>
         <Button

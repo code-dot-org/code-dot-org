@@ -8,6 +8,7 @@ import {LtiProviderContext} from '../context';
 
 const WelcomeBanner = () => {
   const {ltiProviderName} = useContext(LtiProviderContext)!;
+  const isLMS = true;
 
   return (
     <div className={styles.welcomeContainer}>
@@ -15,16 +16,20 @@ const WelcomeBanner = () => {
 
       <div className={styles.titleContainer}>
         <Typography semanticTag={'h1'} visualAppearance={'heading-xxl'}>
-          {i18n.ltiLinkAccountWelcomeBannerHeaderLabel()}
+          {isLMS
+            ? i18n.ltiLinkAccountWelcomeBannerHeaderLabel()
+            : i18n.nonLMSLinkAccountWelcomeBannerHeaderLabel()}
         </Typography>
         <Typography
           className={styles.titleDesc}
           semanticTag={'p'}
           visualAppearance={'body-two'}
         >
-          {i18n.ltiLinkAccountWelcomeBannerContent({
-            providerName: ltiProviderName,
-          })}
+          {isLMS
+            ? i18n.ltiLinkAccountWelcomeBannerContent({
+                providerName: ltiProviderName,
+              })
+            : i18n.nonLMSLinkAccountWelcomeBannerContentWorkshopEnroll()}
         </Typography>
       </div>
     </div>

@@ -21,6 +21,7 @@ import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 const NewAccountCard = () => {
   const {ltiProviderName, newAccountUrl, emailAddress, userType} =
     useContext(LtiProviderContext)!;
+  const isLMS = true;
   const finishSignupFormRef = useRef<HTMLFormElement>(null);
   const isStudentEmailPostEnabled = DCDO.get(
     'student-email-post-enabled',
@@ -73,9 +74,11 @@ const NewAccountCard = () => {
         }
       />
       <CardContent>
-        {i18n.ltiLinkAccountNewAccountCardContent({
-          providerName: ltiProviderName,
-        })}
+        {isLMS
+          ? i18n.ltiLinkAccountNewAccountCardContent({
+              providerName: ltiProviderName,
+            })
+          : i18n.nonLMSAccountNewAccountCardContentWorkshopEnroll()}
 
         <form
           data-testid={'new-account-form'}
@@ -93,7 +96,11 @@ const NewAccountCard = () => {
           className={classNames(styles.button, styles.cardSecondaryButton)}
           color={buttonColors.white}
           size="l"
-          text={i18n.ltiLinkAccountNewAccountCardActionLabel()}
+          text={
+            isLMS
+              ? i18n.ltiLinkAccountNewAccountCardActionLabel()
+              : i18n.nonLMSAccountNewAccountCardActionLabel()
+          }
           isPending={isSaving}
           disabled={isSaving}
           onClick={handleNewAccountSubmit}
