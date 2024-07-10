@@ -55,7 +55,6 @@ export async function getUserLevel(
       rootUrl(levelId, scriptId),
       {}
     );
-    // The program is the predict response.
     return response.value?.user_level;
   } catch (e) {
     if (e instanceof NetworkError) {
