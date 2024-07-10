@@ -65,7 +65,7 @@
         {
           "type": "radiogroup",
           "name": "how_ai_makes_decisions_know_what_students_learn",
-          "title": "After completing this module, I have a basic understanding of what my students will learn in Code.org’s How AI Makes Decisions curriculum for K-5 students.",
+          "title": "After completing this module, I have a basic understanding of what my students will learn in Code.org’s How AI Makes Decisions curriculum.",
           "choices": [
             {
               "value": "1",
@@ -92,7 +92,7 @@
         {
           "type": "radiogroup",
           "name": "how_ai_makes_decisions_comfort_ability_to_teach",
-          "title": "After completing this module, I feel more comfortable in my ability to teach Code.org’s How AI Makes Decisions curriculum for K-5 students than I did before starting this professional learning course.",
+          "title": "After completing this module, I feel more comfortable in my ability to teach Code.org’s How AI Makes Decisions curriculum than I did before starting this professional learning course.",
           "choices": [
             {
               "value": "1",
@@ -153,7 +153,7 @@
             },
             {
               "value": "making_a_plan",
-              "text": "Making a plan to prepare to teach Code.org's How AI Makes Decisions curriculum for K-5 students."
+              "text": "Making a plan to prepare to teach Code.org's How AI Makes Decisions curriculum."
             },
             {
               "value": "check_for_understanding",
@@ -233,5 +233,5 @@
       ]
     }
   ],
-  "published": false
+  "published": true
 }
