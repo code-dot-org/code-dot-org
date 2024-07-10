@@ -337,28 +337,6 @@ const WEBPACK_BASE_CONFIG = {
         ],
         exclude: /node_modules/,
       },
-      // modify WEBPACK_BASE_CONFIG's preLoaders for code coverage info
-      ...(envConstants.COVERAGE
-        ? [
-            {
-              test: /\.jsx?$/,
-              enforce: 'post',
-              loader: 'istanbul-instrumenter-loader',
-              include: p('src'),
-              exclude: [
-                // we need to turn off instrumentation for this file
-                // because we have tests that actually make assertions
-                // about the contents of the compiled version of this file :(
-                p('src/flappy/levels.js'),
-              ],
-              options: {
-                cacheDirectory: true,
-                compact: false,
-                esModules: true,
-              },
-            },
-          ]
-        : []),
       ...(process.env.DEV
         ? [
             // Enable source maps locally for Blockly for easier debugging.

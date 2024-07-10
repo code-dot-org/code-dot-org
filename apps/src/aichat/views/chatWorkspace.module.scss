@@ -26,3 +26,8 @@ $default-spacing: 16px;
 .waitingForResponse {
   width: 50px;
 }
+
+.buttonRow {
+  display: flex;
+  padding: 0 10px 10px 10px;
+}
