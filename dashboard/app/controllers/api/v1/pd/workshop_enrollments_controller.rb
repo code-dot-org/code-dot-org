@@ -59,7 +59,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       ActiveRecord::Base.transaction do
         enrollment = ::Pd::Enrollment.new workshop: @workshop
 
-        if @workshop.course == 'Build Your Own Workshop'
+        if @workshop.course == COURSE_BUILD_YOUR_OWN
           enrollment.update!(enrollment_params)
         else
           enrollment.update!(enrollment_params.merge(school_info_attributes: school_info_params))
