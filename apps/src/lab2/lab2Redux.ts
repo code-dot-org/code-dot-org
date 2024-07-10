@@ -39,8 +39,10 @@ import {
   getAppOptionsViewingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
 import {START_SOURCES} from './constants';
-import {getPredictResponse, getUserLevel} from './projects/userLevelsApi';
-import {sendSubmitReport} from '../code-studio/progressRedux';
+import {getPredictResponse} from './projects/userLevelsApi';
+import {RootState} from '../types/redux';
+import {getCurrentLevel} from '../code-studio/progressReduxSelectors';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 interface PageError {
   errorMessage: string;
@@ -165,11 +167,6 @@ export const setUpWithLevel = createAsyncThunk(
         thunkAPI.dispatch(setLoadedPredictResponse(''));
       }
 
-      if (levelProperties.submittable && payload.scriptId) {
-        const userLevel = await getUserLevel(payload.levelId, payload.scriptId);
-        thunkAPI.dispatch(setSubmitted(userLevel?.submitted || false));
-      }
-
       // Create a new project manager. If we have a channel id,
       // default to loading the project for that channel. Otherwise
       // create a project manager for the given level and script id.
@@ -281,14 +278,14 @@ export const isLabLoading = (state: {lab: LabState}) =>
   state.lab.isLoadingProjectOrLevel || state.lab.isLoading;
 
 // This may depend on more factors, such as share.
-export const isReadOnlyWorkspace = (state: {lab: LabState}) => {
+export const isReadOnlyWorkspace = (state: RootState) => {
   const isOwner = state.lab.channel?.isOwner;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const isEditingExemplarMode = getAppOptionsEditingExemplar();
   const isFrozen = !!state.lab.channel?.frozen;
   const isPredictLevel =
     state.lab.levelProperties?.predictSettings?.isPredictLevel || false;
-  const hasSubmitted = state.lab.submitted || false;
+  const hasSubmitted = getCurrentLevel(state)?.status === LevelStatus.submitted;
   // We are always in edit mode if we are in start or editing exemplar mode.
   // Both of these modes have no channel.
   if (isStartMode || isEditingExemplarMode) {
@@ -357,9 +354,6 @@ const labSlice = createSlice({
     setIsShareView(state, action: PayloadAction<boolean>) {
       state.isShareView = action.payload;
     },
-    setSubmitted(state, action: PayloadAction<boolean>) {
-      state.submitted = action.payload;
-    },
   },
   extraReducers: builder => {
     builder.addCase(setUpWithLevel.fulfilled, state => {
@@ -397,9 +391,6 @@ const labSlice = createSlice({
     });
     builder.addCase(setUpWithoutLevel.pending, state => {
       state.isLoadingProjectOrLevel = true;
-    });
-    builder.addCase(sendSubmitReport.fulfilled, (state, action) => {
-      state.submitted = action.meta.arg.submitted;
     });
   },
 });
@@ -525,6 +516,6 @@ export const {
 } = labSlice.actions;
 
 // These should not be set outside of the lab slice.
-const {setChannel, onLevelChange, setSubmitted} = labSlice.actions;
+const {setChannel, onLevelChange} = labSlice.actions;
 
 export default labSlice.reducer;
