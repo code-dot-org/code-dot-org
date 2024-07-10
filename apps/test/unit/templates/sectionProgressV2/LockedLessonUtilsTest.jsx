@@ -88,7 +88,7 @@ describe('LockedLessonUtils', () => {
   });
 
   describe('areAllLevelsLocks', () => {
-    it('all levels are unlocked', () => {
+    it('not all levels are locked', () => {
       expect(areAllLevelsLocked({1: true, 2: false})).toBeFalsy();
       expect(areAllLevelsLocked({1: false, 2: false})).toBeFalsy();
       expect(areAllLevelsLocked({2: false})).toBeFalsy();
