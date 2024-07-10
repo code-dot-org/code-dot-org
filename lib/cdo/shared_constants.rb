@@ -636,6 +636,10 @@ module SharedConstants
     PROFANITY_VIOLATION: 1002,
     # Request Too Large
     REQUEST_TOO_LARGE: 1003,
+    # Student exceeded max number of evaluations per project
+    STUDENT_LIMIT_EXCEEDED: 1004,
+    # Teacher exceeded max number of evaluations per student per project
+    TEACHER_LIMIT_EXCEEDED: 1005,
   }.freeze
 
   EMAIL_LINKS = OpenStruct.new(

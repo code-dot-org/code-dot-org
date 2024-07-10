@@ -12,6 +12,12 @@ class EvaluateRubricJob < ApplicationJob
   ATTEMPTS_ON_SERVICE_UNAVAILABLE = 3
   ATTEMPTS_ON_GATEWAY_TIMEOUT = 3
 
+  # Maximum number of evaluations that a student can request for a rubric
+  STUDENT_EVALUATION_LIMIT = 10
+
+  # Maximum number of evaluations a teacher can request for a rubric per student
+  TEACHER_EVALUATION_LIMIT = 10
+
   # This is raised if there is any raised error due to a rate limit, e.g. a 429
   # received from the aiproxy service.
   class TooManyRequestsError < StandardError
@@ -65,6 +71,12 @@ class EvaluateRubricJob < ApplicationJob
       @response = response
 
       super("Gateway Timeout for #{response.request.uri}: #{response.code} #{response.message} #{response.body}")
+    end
+  end
+
+  class StudentLimitError < StandardError
+    def initialize(user_id:, rubric_id:)
+      super("Student #{user_id} has exceeded the limit of evaluations for rubric #{rubric_id}")
     end
   end
 
@@ -144,6 +156,17 @@ class EvaluateRubricJob < ApplicationJob
     rubric_ai_evaluation.save!
   end
 
+  rescue_from(StudentLimitError) do |exception|
+    if rack_env?(:development)
+      puts "EvaluateRubricJob StudentLimitError: #{exception.message}"
+    end
+
+    # Record the failure mode, so we can show the right message to the teacher
+    rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(self)
+    rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:STUDENT_LIMIT_EXCEEDED]
+    rubric_ai_evaluation.save!
+  end
+
   # Retry on any reported rate limit (429 status). With 3 attempts, 'exponentially_longer' waits 3s, then 18s.
   retry_on TooManyRequestsError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_RATE_LIMIT do |job, error|
     AiRubricMetrics.log_metric(metric_name: :RateLimit)
@@ -173,6 +196,9 @@ class EvaluateRubricJob < ApplicationJob
   end
 
   def perform(user_id:, requester_id:, script_level_id:, rubric_ai_evaluation_id: nil)
+    # prevent the job from running if per-user limits have been exceeded.
+    check_evaluation_limits(user_id: user_id, requester_id: requester_id, script_level_id: script_level_id)
+
     user = User.find(user_id)
     script_level = ScriptLevel.find(script_level_id)
     lesson_s3_name = AiRubricConfig.get_lesson_s3_name(script_level)
@@ -243,6 +269,23 @@ class EvaluateRubricJob < ApplicationJob
 
     # Return the Rubric
     rubric_ai_evaluation
+  end
+
+  # Check if the student or teacher has exceeded the evaluation limit for the rubric.
+  private def check_evaluation_limits(user_id:, requester_id:, script_level_id:)
+    script_level = ScriptLevel.find(script_level_id)
+    rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
+
+    requested_by_self = user_id == requester_id
+
+    count = RubricAiEvaluation.where(
+      user_id: user_id,
+      requester_id: requester_id,
+      rubric_id: rubric.id,
+      status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
+    ).count
+
+    raise StudentLimitError.new(user_id: user_id, rubric_id: rubric.id) if requested_by_self && count >= STUDENT_EVALUATION_LIMIT
   end
 
   # get the channel id of the project which stores the user's code on this script level.
