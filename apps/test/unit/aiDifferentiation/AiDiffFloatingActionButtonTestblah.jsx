@@ -1,7 +1,7 @@
 import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
 
-import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AIDiffFloatingActionButton';
+import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 
 import {expect} from '../../util/reconfiguredChai';
 
