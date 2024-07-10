@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
+
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import i18n from '@cdo/locale';
+
 import Button from '../../templates/Button';
 
 // Record events to Firehose to understand how often users:

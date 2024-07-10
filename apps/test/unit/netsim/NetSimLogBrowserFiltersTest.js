@@ -9,7 +9,7 @@ import NetSimLogBrowserFilters, {
 } from '@cdo/apps/netsim/NetSimLogBrowserFilters';
 import i18n from '@cdo/netsim/locale';
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/deprecatedChai';
 
 describe('NetSimLogBrowserFilters', function () {
   describe('Student View', function () {

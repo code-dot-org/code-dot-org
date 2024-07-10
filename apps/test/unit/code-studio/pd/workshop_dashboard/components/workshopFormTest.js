@@ -560,6 +560,46 @@ describe('WorkshopForm test', () => {
     expect(wrapper.find('#suppress_email')).to.have.lengthOf(0);
   });
 
+  it('selecting Build Your Own Workshop shows pl topics', () => {
+    const server = sinon.fakeServer.create();
+    server.respondWith(
+      'GET',
+      '/course_offerings/self_paced_pl_course_offerings',
+      [
+        200,
+        {'Content-Type': 'application/json'},
+        JSON.stringify([
+          {id: '123', display_name: 'myPlTestTopic'},
+          {id: '234', display_name: 'mySecondTopic'},
+        ]),
+      ]
+    );
+    const wrapper = mount(
+      <Provider store={store}>
+        <MemoryRouter>
+          <WorkshopForm
+            permission={new Permission([WorkshopAdmin])}
+            facilitatorCourses={[]}
+            today={getFakeToday(false)}
+            readOnly={false}
+          />
+        </MemoryRouter>
+      </Provider>
+    );
+    server.respond();
+    // Verify the topics dropdown doesn't show up until Build Your Own is selected
+    expect(wrapper.find('#topics')).to.have.lengthOf(0);
+    const courseField = wrapper.find('#course').first();
+    courseField.simulate('change', {
+      target: {name: 'course', value: 'Build Your Own Workshop'},
+    });
+    expect(wrapper.find('#topics')).to.have.lengthOf(1);
+    wrapper.find('#dropdownMenuButton').first().simulate('click');
+    // A user can select either the label or checkbox, so we expect 2 for each here
+    expect(wrapper.find('#myPlTestTopic')).to.have.lengthOf(2);
+    expect(wrapper.find('#mySecondTopic')).to.have.lengthOf(2);
+  });
+
   it('editing form as non-admin does not show organizer field', () => {
     const wrapper = mount(
       <Provider store={store}>
