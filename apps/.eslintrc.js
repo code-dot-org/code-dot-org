@@ -29,6 +29,7 @@ module.exports = {
     'jsx-a11y',
     'storybook',
     'import',
+    'jest',
   ],
   parserOptions: {
     babelOptions: {
@@ -43,6 +44,7 @@ module.exports = {
   ],
   env: {
     es6: true,
+    'jest/globals': true,
   },
   globals: {
     $: 'readonly',
@@ -184,28 +186,16 @@ module.exports = {
       // To turn on the order rule for a folder, remove it from this list and run `yarn lint --fix`
       // Commit any changes made.
       files: [
-        'src/*',
-        'src/code-studio/**',
         'src/dance/**',
-        'src/fish/*',
-        'src/flappy/*',
         'src/generated/**',
-        'src/hamburger/*',
         'src/javalab/**',
         'src/lab2/**',
         'src/lib/**',
         'src/music/**',
-        'src/musicMenu/*',
         'src/p5lab/**',
-        'src/panels/*',
-        'src/publicKeyCryptography/*',
-        'src/pythonlab/*',
-        'src/redux/*',
         'src/sites/**',
         // This one had some problems, see https://github.com/code-dot-org/code-dot-org/pull/58284
         'src/templates/curriculumCatalog/**',
-        'test/integration/**',
-        'test/*',
       ],
     },
   ],

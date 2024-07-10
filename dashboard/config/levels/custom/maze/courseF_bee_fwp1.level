@@ -34,13 +34,13 @@
     "long_instructions": "Check beneath the clouds to see if the flowers have any nectar.  \r\n\r\nFor this whole stage, each flower will have exactly **one** unit of nectar, and each honeycomb will need exactly **one** unit of honey. \r\n\r\n\r\n",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"Use `if` statements to make sure you're only getting nectar from a flower.\",\"hint_id\":\"courseF_bee_fwp1_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e3ecd61e0655e7edccb3c0e4aca87410/courseF_bee_fwp1.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"Continue along the path using a `repeat` block. Make sure you are using a `move forward` block and checking if there is a flower using a `if` statement.\",\"hint_id\":\"courseF_bee_fwp1_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e16f283d8e582108f878e5b8cf689c9e/courseF_bee_fwp1.mp3\"}]",
     "instructions_important": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseF_bee_fwp1_1\",\r\n  \"callout_text\": \"You can find `if` statements in here.\",\r\n  \"element_id\": \"[id=':4.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"top right\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 15\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"courseF_bee_fwp1_1\",\"callout_text\":\"You can find `if` statements in here.\",\"element_id\":\"[id=':4.label']\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"top left\",\"at\":\"top right\",\"adjust\":{\"x\":0,\"y\":15}}}},{\"element_id\":\"[id='blockly-3.label']\",\"localization_key\":\"courseF_bee_fwp1_1\",\"callout_text\":\"You can find `if` statements in here.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"top left\",\"at\":\"top right\",\"adjust\":{\"x\":0,\"y\":15}}},\"on\":\"\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
     "hint_prompt_attempts_threshold": 6,
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

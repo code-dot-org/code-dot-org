@@ -42,6 +42,11 @@ const EVENTS = {
   CAP_PARENT_EMAIL_BANNER_CLICKED: 'CAP Parent Email Banner Clicked',
   CAP_PARENT_EMAIL_MODAL_SHOWN: 'CAP Parent Email Modal Shown',
   CAP_PARENT_EMAIL_MODAL_CLOSED: 'CAP Parent Email Modal Closed',
+  CAP_LOCKOUT_SHOWN: 'CAP Lockout Shown',
+  CAP_LOCKOUT_SIGN_OUT: 'CAP Lockout Sign Out',
+  CAP_LOCKOUT_EMAIL_SUBMITTED: 'CAP Lockout Email Submitted',
+  CAP_LOCKOUT_EMAIL_UPDATED: 'CAP Lockout Email Updated',
+  CAP_LOCKOUT_EMAIL_RESEND: 'CAP Lockout Email Resend',
   CAP_PARENT_EMAIL_SUBMITTED: 'CAP Parent Email Submitted',
   CAP_PARENT_EMAIL_UPDATED: 'CAP Parent Email Updated',
   CAP_PARENT_EMAIL_RESEND: 'CAP Parent Email Resend',
@@ -244,6 +249,13 @@ const EVENTS = {
 
   // PL Landing Page
   MY_PL_PAGE_VISITED: 'My Professional Learning Page Visited',
+
+  // Header navigation
+  SIGNED_OUT_USER_SEES_HEADER: 'Signed Out Navigation Header Shown',
+  SIGNED_OUT_USER_CLICKS_HEADER_LINK: 'Signed Out User Clicks Header Link',
+  SIGNED_OUT_USER_CLICKS_HAMBURGER_LINK:
+    'Signed Out User Clicks Hamburger Link',
+  SIGNED_OUT_USER_CLICKS_HELP_MENU: 'Signed Out User Clicks Help Menu',
 
   // Header Create menu
   SIGNED_OUT_USER_CLICKS_CREATE_DROPDOWN:

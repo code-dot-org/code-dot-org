@@ -21,6 +21,7 @@ import ExpandedProgressDataColumn from '@cdo/apps/templates/sectionProgressV2/Ex
 import {ITEM_TYPE} from '@cdo/apps/templates/sectionProgressV2/ItemType';
 import teacherSections, {
   selectSection,
+  setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import {expect} from '../../../util/reconfiguredChai';
@@ -31,6 +32,24 @@ const STUDENTS = [STUDENT_1, STUDENT_2];
 const NUM_LEVELS = 4;
 const LESSON = fakeLessonWithLevels({}, NUM_LEVELS);
 const LEVEL_PROGRESS = fakeStudentLevelProgress(LESSON.levels, STUDENTS);
+
+const FAKE_SECTION = {
+  id: 101,
+  location: '/v2/sections/101',
+  name: 'My Section',
+  login_type: 'google_oauth2',
+  participant_type: 'student',
+  grade: '2',
+  code: 'PMTKVH',
+  lesson_extras: false,
+  pairing_allowed: true,
+  sharing_disabled: false,
+  script: null,
+  course_id: 29,
+  studentCount: 5,
+  students: Object.values(STUDENTS),
+  hidden: false,
+};
 
 const DEFAULT_PROPS = {
   lesson: LESSON,
@@ -49,7 +68,9 @@ describe('ExpandedProgressDataColumn', () => {
     store.dispatch(
       addDataByUnit({studentLevelProgressByUnit: {1: LEVEL_PROGRESS}})
     );
-    store.dispatch(selectSection(1));
+
+    store.dispatch(setSections([FAKE_SECTION]));
+    store.dispatch(selectSection(FAKE_SECTION.id));
   });
 
   afterEach(() => {

@@ -65,12 +65,8 @@ describe('Check cookies and session storage appear on click', () => {
   it('session storage appears when clicked', () => {
     const wrapper = mount(<SignInCalloutWrapper />);
     wrapper.setState({hideCallout: false});
-    var sessionSetStub = sinon.stub(sessionStorage, 'setItem');
     wrapper.find('.uitest-login-callout').simulate('click');
-    expect(sessionSetStub).to.have.been.calledWith(
-      'hide_signin_callout',
-      'true'
-    );
+    expect(sessionStorage.getItem('hide_signin_callout')).to.equal('true');
   });
 
   it('if cookie is set, callout does not appear', () => {

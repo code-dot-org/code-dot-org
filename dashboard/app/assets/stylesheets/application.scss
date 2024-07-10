@@ -230,8 +230,9 @@ img.video_thumbnail {
     }
   }
 
-  @media screen and (max-width: 1120px) {
-    .create_menu {
+  @media (min-width: 1024px) and (max-width: 1268px) {
+    &.hide-small-desktop,
+    .hide-small-desktop {
       display: none !important;
     }
   }

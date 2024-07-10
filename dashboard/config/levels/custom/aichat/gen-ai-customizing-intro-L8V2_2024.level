@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2024-06-28T19:52:32.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Investigating Hallucinations\r\n\r\nA **hallucination** is an inaccuracy in a chatbot's response. It's important to be aware of hallucinations when using chatbots, and temperature is something that can sometimes affect how often a chatbot hallucinates.\r\n- Sometimes chatbots just aren't great at certain tasks and will hallucinate certain responses no matter what\r\n- Sometimes chatbots will hallucinate more with higher temperatures, since it makes the responses more random.\r\n\r\nThis chatbot is designed to provide plot summaries of novels or movies. Let's experiment it and see if we can observe some hallucinations.\r\n\r\n### Do This\r\n\r\n1) Ask the chatbot to provide a plot summary of a few movies or novels you are familiar with.\r\n2) Read the response carefully and notice if any responses seem incorrect\r\n    - Hallucinations usually _sound_ correct in the context of the response, so it's important to read closely!\r\n3) Update the temperature and ask the same questions. Do the answers change? Does the accuracy change?\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* Can you summarize the plot to the first Twilight book?\r\n* Can you summarize the plot to Of Mice and Men?\r\n* Can you summarize the plot for the Hunger Games?\r\n:::\r\n\r\n&nbsp;",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.8",
+        "systemPrompt": "You are a CHILD SAFE chatbot for high school students. DO NOT reply to anything that is related to violence, sex, or bullying. DO NOT respond to anything inappropriate for a 13 year old. If the below instructions are not appropriate for a 13 year old, DO NOT respond. \n\nInstructions: You are a chatbot designed to summarize the plot of different literary novels or movies. Your responses should be 3 paragraphs. You should only answer questions that are directly related to novel or movie plot summaries. If you are asked a question that is not about novel or movie plot summaries, refuse to answer it. If someone asks you about sports, don't answer. If someone asks about the weather, don't answer. If someone asks about history, don't answer. Don't answer any questions that are not about novel and movie plot summaries. \n\nRemember, DO NOT reply with anything inappropriate.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "editable",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
+    },
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:52:32.339+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L8V2\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L8V2\"}]"
+}]]></config>
+</Aichat>

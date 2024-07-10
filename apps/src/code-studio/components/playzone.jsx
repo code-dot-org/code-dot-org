@@ -3,8 +3,11 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from '../../util/color';
+
 import i18n from '@cdo/locale';
+
+import color from '../../util/color';
+
 import CreateSomething from './lessonExtras/CreateSomething';
 
 export default class PlayZone extends React.Component {

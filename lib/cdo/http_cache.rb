@@ -138,7 +138,10 @@ class HttpCache
     default_cookies = DEFAULT_COOKIES + [user_type, limit_project_types, assumed_identity]
 
     # Allows mocking of DCDO settings via cookies. See: Rack::CookieDCDO
-    default_cookies << 'DCDO' if CDO.use_cookie_dcdo
+    if CDO.use_cookie_dcdo
+      require 'cdo/rack/cookie_dcdo'
+      default_cookies << Rack::CookieDCDO::KEY
+    end
 
     # These cookies are allowlisted on all session-specific (not cached) pages.
     allowlisted_cookies = [

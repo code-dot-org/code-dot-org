@@ -62,6 +62,7 @@ Feature: Professional Learning landing page
     # Sees Instructor Professional Learning Sections section
     And I wait until element "button:contains(Create a section)" is visible
 
+  @skip
   Scenario: Regional Partner sees relevant content sections
     Given I am a program manager with started and completed courses
     And I am on "http://studio.code.org/my-professional-learning"

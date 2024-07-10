@@ -64,11 +64,7 @@ describe('RubricSubmitFooter', () => {
         true,
         sinon.match.any
       )
-      .returns(
-        new Promise(resolve => {
-          throw new Error('some error');
-        })
-      );
+      .rejects();
   }
 
   // Stubs HttpClient.post() to respond with some incorrect response body

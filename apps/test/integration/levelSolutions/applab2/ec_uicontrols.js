@@ -2,8 +2,10 @@
  * A set of tests for blocks in the UI controls section of the toolbox
  */
 import $ from 'jquery';
-var tickWrapper = require('../../util/tickWrapper');
+
 import {TestResults} from '@cdo/apps/constants';
+
+var tickWrapper = require('../../util/tickWrapper');
 
 // take advantage of the fact that we expose the filesystem via
 // localhost
