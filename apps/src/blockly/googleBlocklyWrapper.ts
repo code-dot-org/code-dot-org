@@ -12,7 +12,7 @@ import {
   ScrollBlockDragger,
   ScrollOptions,
 } from '@blockly/plugin-scroll-options';
-import {ConnectionType, Options, Theme, Workspace} from 'blockly';
+import {Options, Theme, Workspace} from 'blockly';
 import {FieldProto} from 'blockly/core/field';
 import {javascriptGenerator} from 'blockly/javascript';
 
