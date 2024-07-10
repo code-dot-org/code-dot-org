@@ -80,6 +80,12 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
+  class TeacherLimitError < StandardError
+    def initialize(user_id:, requester_id:, rubric_id:)
+      super("Teacher #{requester_id} has exceeded the limit of evaluations for student #{user_id} on rubric #{rubric_id}")
+    end
+  end
+
   before_enqueue do |job|
     rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(job)
     rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:QUEUED]
@@ -164,6 +170,17 @@ class EvaluateRubricJob < ApplicationJob
     # Record the failure mode, so we can show the right message to the teacher
     rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(self)
     rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:STUDENT_LIMIT_EXCEEDED]
+    rubric_ai_evaluation.save!
+  end
+
+  rescue_from(TeacherLimitError) do |exception|
+    if rack_env?(:development)
+      puts "EvaluateRubricJob TeacherLimitError: #{exception.message}"
+    end
+
+    # Record the failure mode, so we can show the right message to the teacher
+    rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(self)
+    rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:TEACHER_LIMIT_EXCEEDED]
     rubric_ai_evaluation.save!
   end
 
@@ -286,6 +303,7 @@ class EvaluateRubricJob < ApplicationJob
     ).count
 
     raise StudentLimitError.new(user_id: user_id, rubric_id: rubric.id) if requested_by_self && count >= STUDENT_EVALUATION_LIMIT
+    raise TeacherLimitError.new(user_id: user_id, requester_id: requester_id, rubric_id: rubric.id) if !requested_by_self && count >= TEACHER_EVALUATION_LIMIT
   end
 
   # get the channel id of the project which stores the user's code on this script level.
