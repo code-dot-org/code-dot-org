@@ -17,7 +17,6 @@ interface SummaryPredictQuestionProps {
 const SummaryPredictQuestion: React.FunctionComponent<
   SummaryPredictQuestionProps
 > = ({question, predictSettings}) => {
-  console.log(predictSettings);
   return (
     <div>
       <EnhancedSafeMarkdown markdown={question} />
