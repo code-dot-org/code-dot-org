@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "k5gamedesignsandbox",
-    "serialized_at": "2024-07-08 20:46:23 UTC",
+    "serialized_at": "2024-07-09 21:10:49 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -234,6 +234,7 @@
       "key": "712548a5-e207-424c-b46e-4b04c3406f65",
       "position": 1,
       "properties": {
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "712548a5-e207-424c-b46e-4b04c3406f65",
@@ -246,6 +247,7 @@
       "key": "6b0fa850-c669-4659-910c-db2c1583b98e",
       "position": 1,
       "properties": {
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "6b0fa850-c669-4659-910c-db2c1583b98e",
@@ -258,6 +260,7 @@
       "key": "e71add96-41f5-414f-b8c7-0e2cc4f147a5",
       "position": 1,
       "properties": {
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "e71add96-41f5-414f-b8c7-0e2cc4f147a5",
@@ -270,6 +273,7 @@
       "key": "63aa8f7a-3bba-4216-a9e1-5c2df247bb62",
       "position": 1,
       "properties": {
+        "duration": 20
       },
       "seeding_key": {
         "lesson_activity.key": "63aa8f7a-3bba-4216-a9e1-5c2df247bb62",
@@ -282,6 +286,7 @@
       "key": "8ed60295-13e3-4ffa-9a55-1525758b58e6",
       "position": 1,
       "properties": {
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "8ed60295-13e3-4ffa-9a55-1525758b58e6",
@@ -450,6 +455,7 @@
       "key": "c6a63028-1855-4849-b5a8-6e946aa045ca",
       "position": 1,
       "properties": {
+        "progression_name": "Game Design Set Up"
       },
       "seeding_key": {
         "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca",
@@ -457,9 +463,42 @@
       }
     },
     {
+      "key": "1aab949b-1e5e-4161-9bea-7a29c62e8349",
+      "position": 2,
+      "properties": {
+        "progression_name": "Behaviors"
+      },
+      "seeding_key": {
+        "activity_section.key": "1aab949b-1e5e-4161-9bea-7a29c62e8349",
+        "lesson_activity.key": "712548a5-e207-424c-b46e-4b04c3406f65"
+      }
+    },
+    {
+      "key": "d3c87e3c-9c26-45f1-8c87-547ffd9882f1",
+      "position": 3,
+      "properties": {
+        "progression_name": "Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "d3c87e3c-9c26-45f1-8c87-547ffd9882f1",
+        "lesson_activity.key": "712548a5-e207-424c-b46e-4b04c3406f65"
+      }
+    },
+    {
+      "key": "82da1bfb-fdeb-4c4f-9d2f-23f82add34a9",
+      "position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "82da1bfb-fdeb-4c4f-9d2f-23f82add34a9",
+        "lesson_activity.key": "712548a5-e207-424c-b46e-4b04c3406f65"
+      }
+    },
+    {
       "key": "e1ce43ef-3334-4f36-a807-822ca4493655",
       "position": 1,
       "properties": {
+        "progression_name": "Intro to Variables "
       },
       "seeding_key": {
         "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655",
@@ -467,9 +506,31 @@
       }
     },
     {
+      "key": "25adc30d-8b8c-49a2-ba72-0b941a2cf42f",
+      "position": 2,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "25adc30d-8b8c-49a2-ba72-0b941a2cf42f",
+        "lesson_activity.key": "6b0fa850-c669-4659-910c-db2c1583b98e"
+      }
+    },
+    {
+      "key": "54baa048-91d3-4002-af79-e7d68792d254",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "54baa048-91d3-4002-af79-e7d68792d254",
+        "lesson_activity.key": "6b0fa850-c669-4659-910c-db2c1583b98e"
+      }
+    },
+    {
       "key": "165295d4-4939-46fa-9f10-7ff86b9dbf82",
       "position": 1,
       "properties": {
+        "progression_name": "Sprite Type: Environment "
       },
       "seeding_key": {
         "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82",
@@ -477,12 +538,88 @@
       }
     },
     {
-      "key": "07f45915-cb1b-4b6e-9ce0-d53220298c27",
-      "position": 1,
+      "key": "dbe32129-2ab3-45dd-b517-152271c34ad6",
+      "position": 2,
+      "properties": {
+        "progression_name": "Sprite Type: Player"
+      },
+      "seeding_key": {
+        "activity_section.key": "dbe32129-2ab3-45dd-b517-152271c34ad6",
+        "lesson_activity.key": "e71add96-41f5-414f-b8c7-0e2cc4f147a5"
+      }
+    },
+    {
+      "key": "269e5f26-0e4d-4513-a028-84710480921a",
+      "position": 3,
       "properties": {
       },
       "seeding_key": {
+        "activity_section.key": "269e5f26-0e4d-4513-a028-84710480921a",
+        "lesson_activity.key": "e71add96-41f5-414f-b8c7-0e2cc4f147a5"
+      }
+    },
+    {
+      "key": "07f45915-cb1b-4b6e-9ce0-d53220298c27",
+      "position": 1,
+      "properties": {
+        "progression_name": "What is a Game Jam?"
+      },
+      "seeding_key": {
         "activity_section.key": "07f45915-cb1b-4b6e-9ce0-d53220298c27",
+        "lesson_activity.key": "63aa8f7a-3bba-4216-a9e1-5c2df247bb62"
+      }
+    },
+    {
+      "key": "5c27ce31-35e1-4644-a029-625f6850dcca",
+      "position": 2,
+      "properties": {
+        "progression_name": "Game Jam Theme Generator"
+      },
+      "seeding_key": {
+        "activity_section.key": "5c27ce31-35e1-4644-a029-625f6850dcca",
+        "lesson_activity.key": "63aa8f7a-3bba-4216-a9e1-5c2df247bb62"
+      }
+    },
+    {
+      "key": "2686b7b0-62fa-4d9c-9f6e-954815715bcb",
+      "position": 3,
+      "properties": {
+        "progression_name": "Plan"
+      },
+      "seeding_key": {
+        "activity_section.key": "2686b7b0-62fa-4d9c-9f6e-954815715bcb",
+        "lesson_activity.key": "63aa8f7a-3bba-4216-a9e1-5c2df247bb62"
+      }
+    },
+    {
+      "key": "6dbae1b4-5176-41d7-9d6f-1846481f5b19",
+      "position": 4,
+      "properties": {
+        "progression_name": "Create"
+      },
+      "seeding_key": {
+        "activity_section.key": "6dbae1b4-5176-41d7-9d6f-1846481f5b19",
+        "lesson_activity.key": "63aa8f7a-3bba-4216-a9e1-5c2df247bb62"
+      }
+    },
+    {
+      "key": "9075a4c1-5135-43a2-a5e3-6d6362914f3b",
+      "position": 5,
+      "properties": {
+        "progression_name": "Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "9075a4c1-5135-43a2-a5e3-6d6362914f3b",
+        "lesson_activity.key": "63aa8f7a-3bba-4216-a9e1-5c2df247bb62"
+      }
+    },
+    {
+      "key": "4a49d610-9499-4ace-a16e-f8a8e39baf20",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "4a49d610-9499-4ace-a16e-f8a8e39baf20",
         "lesson_activity.key": "63aa8f7a-3bba-4216-a9e1-5c2df247bb62"
       }
     },
@@ -1281,7 +1418,8 @@
       "properties": {
         "level_keys": [
           "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PL"
-        ]
+        ],
+        "progression": "Game Design Set Up"
       },
       "bonus": false,
       "seeding_key": {
@@ -1303,6 +1441,10 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLSP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PL"
+        ],
+        "progression": "Game Design Set Up"
       },
       "bonus": false,
       "seeding_key": {
@@ -1326,7 +1468,8 @@
       "properties": {
         "level_keys": [
           "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PL1"
-        ]
+        ],
+        "progression": "Game Design Set Up"
       },
       "bonus": false,
       "seeding_key": {
@@ -1350,7 +1493,8 @@
       "properties": {
         "level_keys": [
           "game_design_video_spritesPL"
-        ]
+        ],
+        "progression": "Game Design Set Up"
       },
       "bonus": false,
       "seeding_key": {
@@ -1374,7 +1518,8 @@
       "properties": {
         "level_keys": [
           "PLgame_design_player_independent"
-        ]
+        ],
+        "progression": "Game Design Set Up"
       },
       "bonus": false,
       "seeding_key": {
@@ -1398,7 +1543,8 @@
       "properties": {
         "level_keys": [
           "PLgame_design_location_independent"
-        ]
+        ],
+        "progression": "Game Design Set Up"
       },
       "bonus": false,
       "seeding_key": {
@@ -1417,12 +1563,10 @@
     {
       "chapter": 38,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PLgame_design_behavior_independent"
-        ]
+        "progression": "Behaviors"
       },
       "bonus": false,
       "seeding_key": {
@@ -1432,7 +1576,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+        "activity_section.key": "1aab949b-1e5e-4161-9bea-7a29c62e8349"
       },
       "level_keys": [
         "PLgame_design_behavior_independent"
@@ -1441,12 +1585,10 @@
     {
       "chapter": 39,
       "position": 8,
-      "activity_section_position": 8,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PLgame_design_two_behaviors_independent"
-        ]
+        "progression": "Behaviors"
       },
       "bonus": false,
       "seeding_key": {
@@ -1456,7 +1598,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+        "activity_section.key": "1aab949b-1e5e-4161-9bea-7a29c62e8349"
       },
       "level_keys": [
         "PLgame_design_two_behaviors_independent"
@@ -1465,12 +1607,10 @@
     {
       "chapter": 40,
       "position": 9,
-      "activity_section_position": 9,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PLpl-k5-2-eventsvideo_2024"
-        ]
+        "progression": "Events"
       },
       "bonus": false,
       "seeding_key": {
@@ -1480,7 +1620,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+        "activity_section.key": "d3c87e3c-9c26-45f1-8c87-547ffd9882f1"
       },
       "level_keys": [
         "PLpl-k5-2-eventsvideo_2024"
@@ -1489,12 +1629,10 @@
     {
       "chapter": 41,
       "position": 10,
-      "activity_section_position": 10,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PLgame_design_panel_events_independent"
-        ]
+        "progression": "Events"
       },
       "bonus": false,
       "seeding_key": {
@@ -1504,7 +1642,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+        "activity_section.key": "d3c87e3c-9c26-45f1-8c87-547ffd9882f1"
       },
       "level_keys": [
         "PLgame_design_panel_events_independent"
@@ -1513,12 +1651,10 @@
     {
       "chapter": 42,
       "position": 11,
-      "activity_section_position": 11,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PLgame_design_event_click_independent"
-        ]
+        "progression": "Events"
       },
       "bonus": false,
       "seeding_key": {
@@ -1528,7 +1664,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+        "activity_section.key": "d3c87e3c-9c26-45f1-8c87-547ffd9882f1"
       },
       "level_keys": [
         "PLgame_design_event_click_independent"
@@ -1537,12 +1673,10 @@
     {
       "chapter": 43,
       "position": 12,
-      "activity_section_position": 12,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PLgame_design_toolbox_object_independent"
-        ]
+        "progression": "Events"
       },
       "bonus": false,
       "seeding_key": {
@@ -1552,7 +1686,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+        "activity_section.key": "d3c87e3c-9c26-45f1-8c87-547ffd9882f1"
       },
       "level_keys": [
         "PLgame_design_toolbox_object_independent"
@@ -1561,12 +1695,10 @@
     {
       "chapter": 44,
       "position": 13,
-      "activity_section_position": 13,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PL game_design_remove_object_independent"
-        ]
+        "progression": "Events"
       },
       "bonus": false,
       "seeding_key": {
@@ -1576,7 +1708,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+        "activity_section.key": "d3c87e3c-9c26-45f1-8c87-547ffd9882f1"
       },
       "level_keys": [
         "PL game_design_remove_object_independent"
@@ -1585,7 +1717,7 @@
     {
       "chapter": 45,
       "position": 14,
-      "activity_section_position": 14,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
       },
@@ -1597,7 +1729,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+        "activity_section.key": "82da1bfb-fdeb-4c4f-9d2f-23f82add34a9"
       },
       "level_keys": [
         "Plpl-k5-2_checkUnderstanding_events_2024"
@@ -1605,13 +1737,35 @@
     },
     {
       "chapter": 46,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLCSC-SelfPaced-lessonplans_2023"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "82da1bfb-fdeb-4c4f-9d2f-23f82add34a9"
+      },
+      "level_keys": [
+        "PLCSC-SelfPaced-lessonplans_2023"
+      ]
+    },
+    {
+      "chapter": 47,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PLPL"
-        ]
+        ],
+        "progression": "Intro to Variables "
       },
       "bonus": false,
       "seeding_key": {
@@ -1628,14 +1782,15 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PLSP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PLPL"
-        ]
+        ],
+        "progression": "Intro to Variables "
       },
       "bonus": false,
       "seeding_key": {
@@ -1652,14 +1807,15 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PLPLSP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PLPL"
-        ]
+        ],
+        "progression": "Intro to Variables "
       },
       "bonus": false,
       "seeding_key": {
@@ -1676,14 +1832,15 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PLgame_variables_intro_choices_course-e_independent"
-        ]
+        ],
+        "progression": "Intro to Variables "
       },
       "bonus": false,
       "seeding_key": {
@@ -1700,14 +1857,15 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PLgame_variables_video_intro_independent"
-        ]
+        ],
+        "progression": "Intro to Variables "
       },
       "bonus": false,
       "seeding_key": {
@@ -1724,14 +1882,15 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PLgame_variables_about_panel_independent"
-        ]
+        ],
+        "progression": "Intro to Variables "
       },
       "bonus": false,
       "seeding_key": {
@@ -1748,14 +1907,12 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PLgame_variables_show_independent"
-        ]
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1765,21 +1922,19 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+        "activity_section.key": "25adc30d-8b8c-49a2-ba72-0b941a2cf42f"
       },
       "level_keys": [
         "PLgame_variables_show_independent"
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 8,
-      "activity_section_position": 8,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PLgame_variables_increase_independent"
-        ]
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1789,21 +1944,19 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+        "activity_section.key": "25adc30d-8b8c-49a2-ba72-0b941a2cf42f"
       },
       "level_keys": [
         "PLgame_variables_increase_independent"
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 9,
-      "activity_section_position": 9,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PLgame_variables_match_course-e_independent"
-        ]
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1813,21 +1966,19 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+        "activity_section.key": "25adc30d-8b8c-49a2-ba72-0b941a2cf42f"
       },
       "level_keys": [
         "PLgame_variables_match_course-e_independent"
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 10,
-      "activity_section_position": 10,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PLgame_conditional_about_panel_independent"
-        ]
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1837,21 +1988,19 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+        "activity_section.key": "25adc30d-8b8c-49a2-ba72-0b941a2cf42f"
       },
       "level_keys": [
         "PLgame_conditional_about_panel_independent"
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 11,
-      "activity_section_position": 11,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PLgame_variables_conditional_independent"
-        ]
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -1861,21 +2010,18 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+        "activity_section.key": "25adc30d-8b8c-49a2-ba72-0b941a2cf42f"
       },
       "level_keys": [
         "PLgame_variables_conditional_independent"
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 12,
-      "activity_section_position": 12,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PLgame_variables_match_condition_course-e_independent"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1885,21 +2031,43 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+        "activity_section.key": "54baa048-91d3-4002-af79-e7d68792d254"
       },
       "level_keys": [
         "PLgame_variables_match_condition_course-e_independent"
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "variables lesson plan"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "54baa048-91d3-4002-af79-e7d68792d254"
+      },
+      "level_keys": [
+        "variables lesson plan"
+      ]
+    },
+    {
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "environmentPL"
-        ]
+        ],
+        "progression": "Sprite Type: Environment "
       },
       "bonus": false,
       "seeding_key": {
@@ -1916,14 +2084,15 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 61,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PLenvironmentPL"
-        ]
+        ],
+        "progression": "Sprite Type: Environment "
       },
       "bonus": false,
       "seeding_key": {
@@ -1940,14 +2109,15 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PLgame_development_environment_choices_course-e_independent"
-        ]
+        ],
+        "progression": "Sprite Type: Environment "
       },
       "bonus": false,
       "seeding_key": {
@@ -1964,14 +2134,15 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PLgame_development_sprites_type_panel_independent"
-        ]
+        ],
+        "progression": "Sprite Type: Environment "
       },
       "bonus": false,
       "seeding_key": {
@@ -1988,14 +2159,15 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PLgame_development_environment_type_independent"
-        ]
+        ],
+        "progression": "Sprite Type: Environment "
       },
       "bonus": false,
       "seeding_key": {
@@ -2012,14 +2184,15 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PLgame_development_environment_type2_independent"
-        ]
+        ],
+        "progression": "Sprite Type: Environment "
       },
       "bonus": false,
       "seeding_key": {
@@ -2036,14 +2209,12 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PLgame_development_player_type_panel_independent"
-        ]
+        "progression": "Sprite Type: Player"
       },
       "bonus": false,
       "seeding_key": {
@@ -2053,21 +2224,19 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+        "activity_section.key": "dbe32129-2ab3-45dd-b517-152271c34ad6"
       },
       "level_keys": [
         "PLgame_development_player_type_panel_independent"
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 8,
-      "activity_section_position": 8,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PLgame_development_player_type_independent"
-        ]
+        "progression": "Sprite Type: Player"
       },
       "bonus": false,
       "seeding_key": {
@@ -2077,21 +2246,19 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+        "activity_section.key": "dbe32129-2ab3-45dd-b517-152271c34ad6"
       },
       "level_keys": [
         "PLgame_development_player_type_independent"
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 68,
       "position": 9,
-      "activity_section_position": 9,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PLgame_development_jump_independent"
-        ]
+        "progression": "Sprite Type: Player"
       },
       "bonus": false,
       "seeding_key": {
@@ -2101,21 +2268,19 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+        "activity_section.key": "dbe32129-2ab3-45dd-b517-152271c34ad6"
       },
       "level_keys": [
         "PLgame_development_jump_independent"
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 69,
       "position": 10,
-      "activity_section_position": 10,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PLgame_development_types_independent"
-        ]
+        "progression": "Sprite Type: Player"
       },
       "bonus": false,
       "seeding_key": {
@@ -2125,21 +2290,19 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+        "activity_section.key": "dbe32129-2ab3-45dd-b517-152271c34ad6"
       },
       "level_keys": [
         "PLgame_development_types_independent"
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 70,
       "position": 11,
-      "activity_section_position": 11,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PLgame_development_matching_course-e_independent"
-        ]
+        "progression": "Sprite Type: Player"
       },
       "bonus": false,
       "seeding_key": {
@@ -2149,21 +2312,18 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+        "activity_section.key": "dbe32129-2ab3-45dd-b517-152271c34ad6"
       },
       "level_keys": [
         "PLgame_development_matching_course-e_independent"
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 71,
       "position": 12,
-      "activity_section_position": 12,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PLgame_development_debug_choices_course-e_independent"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2173,21 +2333,43 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+        "activity_section.key": "269e5f26-0e4d-4513-a028-84710480921a"
       },
       "level_keys": [
         "PLgame_development_debug_choices_course-e_independent"
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 72,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "environment lesson plan"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "269e5f26-0e4d-4513-a028-84710480921a"
+      },
+      "level_keys": [
+        "environment lesson plan"
+      ]
+    },
+    {
+      "chapter": 73,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
           "GamejamPL"
-        ]
+        ],
+        "progression": "What is a Game Jam?"
       },
       "bonus": false,
       "seeding_key": {
@@ -2204,14 +2386,15 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 74,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
           "PLGamejamPL"
-        ]
+        ],
+        "progression": "What is a Game Jam?"
       },
       "bonus": false,
       "seeding_key": {
@@ -2228,14 +2411,37 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 75,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "PLgame_jam_theme_generator_independent"
-        ]
+          "PLSP-VPL-21-mod1-welcome-vid_1"
+        ],
+        "progression": "What is a Game Jam?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLSP-VPL-21-mod1-welcome-vid_1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "07f45915-cb1b-4b6e-9ce0-d53220298c27"
+      },
+      "level_keys": [
+        "PLSP-VPL-21-mod1-welcome-vid_1"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Game Jam Theme Generator"
       },
       "bonus": false,
       "seeding_key": {
@@ -2245,21 +2451,19 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "07f45915-cb1b-4b6e-9ce0-d53220298c27"
+        "activity_section.key": "5c27ce31-35e1-4644-a029-625f6850dcca"
       },
       "level_keys": [
         "PLgame_jam_theme_generator_independent"
       ]
     },
     {
-      "chapter": 73,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 77,
+      "position": 5,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PLgame_jam_create_plan_course-e_independent"
-        ]
+        "progression": "Plan"
       },
       "bonus": false,
       "seeding_key": {
@@ -2269,21 +2473,41 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "07f45915-cb1b-4b6e-9ce0-d53220298c27"
+        "activity_section.key": "2686b7b0-62fa-4d9c-9f6e-954815715bcb"
       },
       "level_keys": [
         "PLgame_jam_create_plan_course-e_independent"
       ]
     },
     {
-      "chapter": 74,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 78,
+      "position": 6,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PLgame_jam_play_course-e_independent"
-        ]
+        "progression": "Create"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "plgame_jam_create_game_independent"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "6dbae1b4-5176-41d7-9d6f-1846481f5b19"
+      },
+      "level_keys": [
+        "plgame_jam_create_game_independent"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Play"
       },
       "bonus": false,
       "seeding_key": {
@@ -2293,14 +2517,35 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "07f45915-cb1b-4b6e-9ce0-d53220298c27"
+        "activity_section.key": "9075a4c1-5135-43a2-a5e3-6d6362914f3b"
       },
       "level_keys": [
         "PLgame_jam_play_course-e_independent"
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 80,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "game jam lesson plan"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "4a49d610-9499-4ace-a16e-f8a8e39baf20"
+      },
+      "level_keys": [
+        "game jam lesson plan"
+      ]
+    },
+    {
+      "chapter": 81,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2324,7 +2569,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 82,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2802,7 +3047,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+        "activity_section.key": "1aab949b-1e5e-4161-9bea-7a29c62e8349"
       }
     },
     {
@@ -2814,7 +3059,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+        "activity_section.key": "1aab949b-1e5e-4161-9bea-7a29c62e8349"
       }
     },
     {
@@ -2826,7 +3071,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+        "activity_section.key": "d3c87e3c-9c26-45f1-8c87-547ffd9882f1"
       }
     },
     {
@@ -2838,7 +3083,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+        "activity_section.key": "d3c87e3c-9c26-45f1-8c87-547ffd9882f1"
       }
     },
     {
@@ -2850,7 +3095,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+        "activity_section.key": "d3c87e3c-9c26-45f1-8c87-547ffd9882f1"
       }
     },
     {
@@ -2862,7 +3107,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+        "activity_section.key": "d3c87e3c-9c26-45f1-8c87-547ffd9882f1"
       }
     },
     {
@@ -2874,7 +3119,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+        "activity_section.key": "d3c87e3c-9c26-45f1-8c87-547ffd9882f1"
       }
     },
     {
@@ -2886,7 +3131,19 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "c6a63028-1855-4849-b5a8-6e946aa045ca"
+        "activity_section.key": "82da1bfb-fdeb-4c4f-9d2f-23f82add34a9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLCSC-SelfPaced-lessonplans_2023",
+        "script_level.level_keys": [
+          "PLCSC-SelfPaced-lessonplans_2023"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "82da1bfb-fdeb-4c4f-9d2f-23f82add34a9"
       }
     },
     {
@@ -2970,7 +3227,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+        "activity_section.key": "25adc30d-8b8c-49a2-ba72-0b941a2cf42f"
       }
     },
     {
@@ -2982,7 +3239,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+        "activity_section.key": "25adc30d-8b8c-49a2-ba72-0b941a2cf42f"
       }
     },
     {
@@ -2994,7 +3251,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+        "activity_section.key": "25adc30d-8b8c-49a2-ba72-0b941a2cf42f"
       }
     },
     {
@@ -3006,7 +3263,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+        "activity_section.key": "25adc30d-8b8c-49a2-ba72-0b941a2cf42f"
       }
     },
     {
@@ -3018,7 +3275,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+        "activity_section.key": "25adc30d-8b8c-49a2-ba72-0b941a2cf42f"
       }
     },
     {
@@ -3030,7 +3287,19 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "e1ce43ef-3334-4f36-a807-822ca4493655"
+        "activity_section.key": "54baa048-91d3-4002-af79-e7d68792d254"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "variables lesson plan",
+        "script_level.level_keys": [
+          "variables lesson plan"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "54baa048-91d3-4002-af79-e7d68792d254"
       }
     },
     {
@@ -3114,7 +3383,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+        "activity_section.key": "dbe32129-2ab3-45dd-b517-152271c34ad6"
       }
     },
     {
@@ -3126,7 +3395,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+        "activity_section.key": "dbe32129-2ab3-45dd-b517-152271c34ad6"
       }
     },
     {
@@ -3138,7 +3407,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+        "activity_section.key": "dbe32129-2ab3-45dd-b517-152271c34ad6"
       }
     },
     {
@@ -3150,7 +3419,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+        "activity_section.key": "dbe32129-2ab3-45dd-b517-152271c34ad6"
       }
     },
     {
@@ -3162,7 +3431,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+        "activity_section.key": "dbe32129-2ab3-45dd-b517-152271c34ad6"
       }
     },
     {
@@ -3174,7 +3443,19 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "165295d4-4939-46fa-9f10-7ff86b9dbf82"
+        "activity_section.key": "269e5f26-0e4d-4513-a028-84710480921a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "environment lesson plan",
+        "script_level.level_keys": [
+          "environment lesson plan"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "269e5f26-0e4d-4513-a028-84710480921a"
       }
     },
     {
@@ -3203,6 +3484,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "PLSP-VPL-21-mod1-welcome-vid_1",
+        "script_level.level_keys": [
+          "PLSP-VPL-21-mod1-welcome-vid_1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "07f45915-cb1b-4b6e-9ce0-d53220298c27"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "PLgame_jam_theme_generator_independent",
         "script_level.level_keys": [
           "PLgame_jam_theme_generator_independent"
@@ -3210,7 +3503,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "07f45915-cb1b-4b6e-9ce0-d53220298c27"
+        "activity_section.key": "5c27ce31-35e1-4644-a029-625f6850dcca"
       }
     },
     {
@@ -3222,7 +3515,19 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "07f45915-cb1b-4b6e-9ce0-d53220298c27"
+        "activity_section.key": "2686b7b0-62fa-4d9c-9f6e-954815715bcb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "plgame_jam_create_game_independent",
+        "script_level.level_keys": [
+          "plgame_jam_create_game_independent"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "6dbae1b4-5176-41d7-9d6f-1846481f5b19"
       }
     },
     {
@@ -3234,7 +3539,19 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "k5gamedesignsandbox-2024",
-        "activity_section.key": "07f45915-cb1b-4b6e-9ce0-d53220298c27"
+        "activity_section.key": "9075a4c1-5135-43a2-a5e3-6d6362914f3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "game jam lesson plan",
+        "script_level.level_keys": [
+          "game jam lesson plan"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "k5gamedesignsandbox-2024",
+        "activity_section.key": "4a49d610-9499-4ace-a16e-f8a8e39baf20"
       }
     },
     {
