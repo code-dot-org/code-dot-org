@@ -4,7 +4,7 @@
   "category": "Loops",
   "category_key": "loops",
   "block_name": "controls_for",
-  "content": "Repeats a sequence of code a specified number of times, and tracks a value each time the loop is run.\r\n\r\nSometimes we want to repeat things a certain number of times, but we want to keep track of values as we do. For loops are different than repeat loops because they use a counter variable to track a value. That value can then be used in the code inside the block.\r\n\r\nThe counter variable begins with the starting value. Each time the program goes through the loop, the sequence of code inside the block is run. The step value is then added to the counter variable, and the loop continues to run until the counter reaches the stopping value. Once the for loop is finished, the program will continue where it left off.\r\n\r\n**Examples:**\r\n \r\nfor **counter** from **1** to **4** count by **1**  \r\nThe loop will run 4 times.\r\n\r\n1. counter = 1\r\n\r\n2. counter = 2\r\n\r\n3. counter = 3\r\n\r\n4. counter = 4\r\n\r\nfor **counter** from **3** to **9** count by **3**  \r\nThe loop will run 3 times.\r\n\r\n1. counter = 3\r\n\r\n2. counter = 6\r\n\r\n3. counter = 9",
+  "content": "Repeats a sequence of code a specified number of times, and tracks a value each time the loop is run.\n\nSometimes we want to repeat things a certain number of times, but we want to keep track of values as we do. For loops are different than repeat loops because they use a counter variable to track a value. That value can then be used in the code inside the block.\n\nThe counter variable begins with the starting value. Each time the program goes through the loop, the sequence of code inside the block is run. The step value is then added to the counter variable, and the loop continues to run until the counter reaches the stopping value. Once the for loop is finished, the program will continue down the blocks after the for loop.\n\n**Examples:**\n \nfor **counter** from **1** to **4** count by **1**  \nThe loop will run 4 times.\n\n1. counter = 1\n\n2. counter = 2\n\n3. counter = 3\n\n4. counter = 4\n\nfor **counter** from **3** to **9** count by **3**  \nThe loop will run 3 times.\n\n1. counter = 3\n\n2. counter = 6\n\n3. counter = 9",
   "examples": [
     {
       "name": "Example 1",
@@ -35,7 +35,7 @@
       "name": "starting value",
       "type": "",
       "required": true,
-      "description": "The value the counter variable start at"
+      "description": "The value the counter variable starts at"
     },
     {
       "name": "ending value",

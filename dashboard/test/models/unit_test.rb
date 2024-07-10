@@ -35,16 +35,8 @@ class UnitTest < ActiveSupport::TestCase
     @csa_unit = create :csa_script, name: 'csa1'
 
     @csc_unit = create :csc_script, name: 'csc1', is_course: true, family_name: 'csc-test-unit', version_year: 'unversioned'
-    CourseOffering.add_course_offering(@csc_unit)
-    @csc_unit.course_version.course_offering.category = 'csc'
-    @csc_unit.course_version.course_offering.save!
-    @csc_unit.reload
 
     @hoc_unit = create :hoc_script, name: 'hoc1', is_course: true, family_name: 'hoc-test-unit', version_year: 'unversioned'
-    CourseOffering.add_course_offering(@hoc_unit)
-    @hoc_unit.course_version.course_offering.category = 'hoc'
-    @hoc_unit.course_version.course_offering.save!
-    @hoc_unit.reload
 
     @csf_unit_2019 = create :csf_script, name: 'csf-2019', version_year: '2019'
 
@@ -1678,18 +1670,6 @@ class UnitTest < ActiveSupport::TestCase
     assert_equal assessment_script_levels[0], script_level
   end
 
-  test "self.modern_elementary_courses_available?" do
-    course1_modern = create(:script, name: 'course1-modern', supported_locales: ["en-us", "it-it"])
-    course2_modern = create(:script, name: 'course2-modern', supported_locales: ["fr-fr", "en-us"])
-
-    Unit.stubs(:modern_elementary_courses).returns([course1_modern, course2_modern])
-
-    assert Unit.modern_elementary_courses_available?("en-us")
-    refute Unit.modern_elementary_courses_available?("ch-ch")
-    refute Unit.modern_elementary_courses_available?("it-it")
-    refute Unit.modern_elementary_courses_available?("fr-fr")
-  end
-
   test 'locale_english_name_map' do
     english_names = Unit.locale_english_name_map
     assert english_names.key?('en-US')
@@ -2466,6 +2446,46 @@ class UnitTest < ActiveSupport::TestCase
   test 'finish_url returns unit finish url if not in a unit group' do
     unit = create :script, is_course: true
     assert unit.finish_url.include?(unit.name)
+  end
+
+  test 'deleting standalone unit deletes corresponding dependencies' do
+    standalone_unit = create :script, is_migrated: true, is_course: true, version_year: '2021', family_name: 'csf', name: 'standalone-2021'
+    course_version = create :course_version, content_root: standalone_unit
+    CourseOffering.add_course_offering(standalone_unit)
+    lesson = create :lesson, script: standalone_unit
+    lesson_gp = create :lesson_group, script: standalone_unit, lessons: [lesson]
+
+    # delete standalone unit
+    unit_id = standalone_unit.id
+    standalone_unit.destroy
+
+    assert Unit.find_by(id: unit_id).nil?
+    assert CourseVersion.find_by(id: course_version.id).nil?
+    assert Lesson.find_by(id: lesson.id).nil?
+    assert LessonGroup.find_by(id: lesson_gp.id).nil?
+  end
+
+  test 'deleting unit in unit group deletes corresponding dependencies' do
+    unit_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
+    unit_group = create(:unit_group)
+    unit_gp_unit = create :unit_group_unit, unit_group: @unit_group, script: unit_in_course, position: 1
+    CourseOffering.add_course_offering(unit_group)
+
+    unit_group.reload
+    unit_in_course.reload
+    course_version = unit_group.course_version
+    assert UnitGroupUnit.find_by(id: unit_gp_unit.id)
+
+    # delete unit in unit group
+    unit_id = unit_in_course.id
+    unit_in_course.destroy
+
+    assert Unit.find_by(id: unit_id).nil?
+    assert UnitGroup.find_by(id: unit_group.id)
+
+    # Course version is associated to unit group and shouldn't be deleted
+    assert CourseVersion.find_by(id: course_version.id)
+    assert UnitGroupUnit.find_by(id: unit_gp_unit.id).nil?
   end
 
   private def has_unlaunched_unit?(units)

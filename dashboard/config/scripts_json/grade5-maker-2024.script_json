@@ -4,14 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSC",
       "is_course": true,
       "is_migrated": true,
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": "grade5-maker",
-    "serialized_at": "2024-05-28 22:49:55 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-07-02 20:18:12 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -522,20 +523,8 @@
       }
     },
     {
-      "key": "9ea1e628-f61b-4433-90c4-2481ba452aef",
-      "position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "9ea1e628-f61b-4433-90c4-2481ba452aef",
-        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "grade5-maker-2024"
-      }
-    },
-    {
       "key": "1d10e3ce-e460-415d-9b35-5dc2d757ad5f",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -549,7 +538,7 @@
     },
     {
       "key": "7b1e2059-a7f0-47f4-80ac-bfe9cdcf813d",
-      "position": 5,
+      "position": 4,
       "properties": {
         "name": "[Optional] Extension"
       },
@@ -562,7 +551,7 @@
     },
     {
       "key": "0b271ae2-cdfc-47c6-adb3-922ec658b708",
-      "position": 6,
+      "position": 5,
       "properties": {
         "name": "[Optional] Extended learning"
       },
@@ -1708,16 +1697,6 @@
       }
     },
     {
-      "key": "fc2ab111-2119-47c1-9f4b-190f572138bb",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "fc2ab111-2119-47c1-9f4b-190f572138bb",
-        "lesson_activity.key": "9ea1e628-f61b-4433-90c4-2481ba452aef"
-      }
-    },
-    {
       "key": "ca286d88-399a-40b9-bce2-e50ca6b2553b",
       "position": 1,
       "properties": {
@@ -1734,7 +1713,7 @@
       "key": "4a2dfff0-a49e-499c-a090-cdc3721a11f2",
       "position": 1,
       "properties": {
-        "description": "This extension is perfect for students working online at makecode.microbit.org without a physical micro:bit device. While the step counter activity might not give them a chance to directly test their code on a physical device, creating a scoreboard counter offers a fantastic way to engage them and create a program they can test and use.\n\nOnce their programs are up and running, students can use their apps in a Rock, Paper, Scissors tournament with classmates, their scores tracked and displayed on the custom scoreboards they created. It's a fun and interactive way to test their programming skills and a bit of friendly competition.\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/_2sqKyg4Tb2Tb\" target=\"_blank\">here.</a>**",
+        "description": "This extension is perfect for students working online at makecode.microbit.org without a physical micro:bit device. While the step counter activity might not give them a chance to directly test their code on a physical device, creating a scoreboard counter offers a fantastic way to engage them and create a program they can test and use.\n\nOnce their programs are up and running, students can use their apps in a Rock, Paper, Scissors tournament with classmates, their scores tracked and displayed on the custom scoreboards they created. It's a fun and interactive way to test their programming skills and a bit of friendly competition.\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/_2sqKyg4Tb2Tb\" target=\"_blank\">here.</a>**\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1Yv_Hqk4pWRp4e0gpFS_iuRIry2LIlPfn5fCp8flZkYc/template/preview\" target=\"_blank\">here.</a>**",
         "name": "Scoreboard"
       },
       "seeding_key": {
@@ -1869,7 +1848,7 @@
       "key": "22076275-cab9-4d04-a740-52051335f928",
       "position": 1,
       "properties": {
-        "description": "This activity introduces the concepts of If/Then using the familiar fairytale of the Three Little Pigs. The story clearly demonstrates the \"if\" and \"then\" relationship that forms the core of conditional statements. By seeing the pigs make choices (building with different materials) and the resulting consequences (strong house vs. weak house), students grasp the concept in a real-world way. By creating a storyboard students will visualize the \"if\" and \"then\" scenarios. This visual aid helps solidify their understanding and provides a clear reference point when writing their own conditional statements with the micro:bit. It provides a fun and engaging context for them to learn about conditionals. They can connect with the characters and the cause-and-effect nature of the story.\n\n**Find The Three Little Pigs story <a href=\"https://youtu.be/CtP83CWOMwc?si=bVG-sYcYeaBTrAfL\" target=\"_blank\">here.</a>**",
+        "description": "This activity introduces the concepts of If/Then using the familiar fairytale of the Three Little Pigs. The story clearly demonstrates the \"if\" and \"then\" relationship that forms the core of conditional statements. By seeing the pigs make choices (building with different materials) and the resulting consequences (strong house vs. weak house), students grasp the concept in a real-world way. By creating a storyboard students will visualize the \"if\" and \"then\" scenarios. This visual aid helps solidify their understanding and provides a clear reference point when writing their own conditional statements with the micro:bit. It provides a fun and engaging context for them to learn about conditionals. They can connect with the characters and the cause-and-effect nature of the story.\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1xNxJFtpb9VI8miyTx3TitTUJGPYNMl1j-ALE1e2Qk2s/template/preview\" target=\"_blank\">here.</a>**\n\n**Find The Three Little Pigs story <a href=\"https://youtu.be/CtP83CWOMwc?si=bVG-sYcYeaBTrAfL\" target=\"_blank\">here.</a>**",
         "name": "Three Little Pigs"
       },
       "seeding_key": {
@@ -2287,7 +2266,7 @@
       "key": "88bc42e7-ca10-4c3c-8581-6dfc786029a0",
       "position": 1,
       "properties": {
-        "description": "Building on the understanding of If/Then statements from the conditionals with cards activity, this exercise allows students to immediately apply that knowledge in a practical and engaging way. \n\nStudents will combine their understanding of If/Then statements with the micro:bit's capabilities to create a musical and animated experience. Using If/Then statements, students will program the micro:bit to play specific notes (a simple 3-note song like \"Mary Had a Little Lamb\") when specific buttons are pressed (A, B, or A & B pressed together).\n\nTo further the engagement, students will create a stick figure animation using the micro:bit's LED display. This animation will come dance whenever a sound is played!\n\nThis activity serves as a bridge between the conditional statements concepts and the Micro:bit pet activity. It allows them to experiment with the micro:bit's functions earlier, solidifying their understanding of If/Then statements through a fun and interactive experience.This activity can be adapted to different skill levels. You may adjust the complexity of the song or the dancing animation based on your students' progress.\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/_38sKbu4ivDzu\" target=\"_blank\">here.</a>**\n",
+        "description": "Building on the understanding of If/Then statements from the conditionals with cards activity, this exercise allows students to immediately apply that knowledge in a practical and engaging way. \n\nStudents will combine their understanding of If/Then statements with the micro:bit's capabilities to create a musical and animated experience. Using If/Then statements, students will program the micro:bit to play specific notes (a simple 3-note song like \"Mary Had a Little Lamb\") when specific buttons are pressed (A, B, or A & B pressed together).\n\nTo further the engagement, students will create a stick figure animation using the micro:bit's LED display. This animation will come dance whenever a sound is played!\n\nThis activity serves as a bridge between the conditional statements concepts and the Micro:bit pet activity. It allows them to experiment with the micro:bit's functions earlier, solidifying their understanding of If/Then statements through a fun and interactive experience.This activity can be adapted to different skill levels. You may adjust the complexity of the song or the dancing animation based on your students' progress.\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/_38sKbu4ivDzu\" target=\"_blank\">here.</a>**\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1_XtzfuSqh16dNVyW2QTKD75N9jyXQzXCf6VKEAnEIv8/template/preview\" target=\"_blank\">here.</a>**",
         "name": "Music and Dance"
       },
       "seeding_key": {
@@ -2351,7 +2330,7 @@
       "key": "fddf296b-272f-4ca2-8090-6f159b33cc9b",
       "position": 1,
       "properties": {
-        "description": "This activity strengthens students' grasp of conditionals and utilizes functions to help them creating an interactive pet. The pet uses the LED screen and sounds to provide an engaging and creative experience. Students will program their micro:bit's LED screen to generate visual and auditory responses for their virtual pet.\n\nThis project extends beyond traditional programming, offering a fantastic opportunity for students with artistic and creative inclinations. It empowers them to design a physical \"body\" for the micro:bit, transforming it from a circuit board into a playful companion.\n\nOnce the micro:bit is programmed and the body is built, encourage students to write a short story featuring their micro:pet. The story should incorporate the pet's emotions to reflect the events in the story. Students can then share their stories, making their micro:bit pets react accordingly throughout the reading.\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/_7b5cU2JDYJiv\" target=\"_blank\">here.</a>**\n\n**Find a micro:bit character demo video <a href=\"https://www.youtube.com/watch?v=yIig7oIYNZw\" target=\"_blank\">here.</a>** You may need to watch the video two times.",
+        "description": "This activity strengthens students' grasp of conditionals and utilizes functions to help them creating an interactive pet. The pet uses the LED screen and sounds to provide an engaging and creative experience. Students will program their micro:bit's LED screen to generate visual and auditory responses for their virtual pet.\n\nThis project extends beyond traditional programming, offering a fantastic opportunity for students with artistic and creative inclinations. It empowers them to design a physical \"body\" for the micro:bit, transforming it from a circuit board into a playful companion.\n\nOnce the micro:bit is programmed and the body is built, encourage students to write a short story featuring their micro:pet. The story should incorporate the pet's emotions to reflect the events in the story. Students can then share their stories, making their micro:bit pets react accordingly throughout the reading.\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/_7b5cU2JDYJiv\" target=\"_blank\">here.</a>**\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1D6A2bgwedQmLcz9a3z7_Qhestcx_NLimuGvINwqKbnE/template/preview\" target=\"_blank\">here.**\n\n**Find a micro:bit character demo video <a href=\"https://www.youtube.com/watch?v=yIig7oIYNZw\" target=\"_blank\">here.</a>** You may need to watch the video two times.",
         "name": "Storytelling"
       },
       "seeding_key": {
@@ -2653,7 +2632,7 @@
       "key": "7f8645d2-be1b-4236-9cfe-c168549670a1",
       "position": 1,
       "properties": {
-        "description": "In this activity, students create a digital bubble level using a micro:bit. This project introduces them to engineering concepts and practical tool building through the micro:bit. More importantly, the digital bubble level allows them to explore their surroundings – the classroom, hallways, or even outside – investigating real-world applications of levels. This activity will engage their curiosity and encourage discovery, all while introducing the concept of engineering in an interactive and exploratory way.\n\nStudents will incorporate the concepts of **variables**, **loops**, **conditionals**, **sensors**, **LEDs**, and **sounds** to create and realistic tool.\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/_6fzRY7Fy927C\" target=\"_blank\">here.</a>**",
+        "description": "In this activity, students create a digital bubble level using a micro:bit. This project introduces them to engineering concepts and practical tool building through the micro:bit. More importantly, the digital bubble level allows them to explore their surroundings – the classroom, hallways, or even outside – investigating real-world applications of levels. This activity will engage their curiosity and encourage discovery, all while introducing the concept of engineering in an interactive and exploratory way.\n\nStudents will incorporate the concepts of **variables**, **loops**, **conditionals**, **sensors**, **LEDs**, and **sounds** to create and realistic tool.\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/_6fzRY7Fy927C\" target=\"_blank\">here.</a>**\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1m_PC49F-oObDxS7XdZAmX5Akq0aTG4FZDjVe535whlY/template/preview\" target=\"_blank\">here.</a>**",
         "name": "Digital Bubble Level"
       },
       "seeding_key": {
@@ -3455,6 +3434,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_step_counter_grade5"
+        ],
         "progression": "Step counter coding with micro:bit"
       },
       "bonus": false,
@@ -4153,6 +4135,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_microbit_pet_grade5"
+        ],
         "progression": "Micro:bit pet with micro:bit"
       },
       "bonus": false,
@@ -4600,6 +4585,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_f_maker_max_min_thermometer_grade5"
+        ],
         "progression": "Max-min thermometer with micro:bit"
       },
       "bonus": false,
@@ -5557,12 +5545,11 @@
   ],
   "resources": [
     {
-      "name": "**Grade 5 - Maker with micro:bit slides",
+      "name": "Grade 5 - Maker with micro:bit slides",
       "url": "https://docs.google.com/presentation/d/1CrNrbnG4-DuDf4Pejrcnz1ZStBotO-Oq59aik-iq4DE/template/preview",
       "key": "_grade_5_-_maker_with_micro_bit_slides",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1CrNrbnG4-DuDf4Pejrcnz1ZStBotO-Oq59aik-iq4DE/export/pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5591,6 +5578,39 @@
       },
       "seeding_key": {
         "resource.key": "_optional_how_to_put_code_onto_micro_bit"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/grade5-maker-2024/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/grade5-maker-2024/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/grade5-maker-2024/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
       }
     },
     {
@@ -5860,6 +5880,18 @@
       },
       "seeding_key": {
         "resource.key": "meet_your_micro_bit_video_guide"
+      }
+    },
+    {
+      "name": "micro:bit MakeCode block cut-out cards",
+      "url": "https://microbit.org/teach/classroom-resources/microbit-makecode-blocks-cutout-cards/",
+      "key": "micro_bit_makecode_block_cut-out_cards",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "micro_bit_makecode_block_cut-out_cards"
       }
     },
     {
@@ -6342,6 +6374,30 @@
     {
       "seeding_key": {
         "resource.key": "_grade_5_-_maker_with_micro_bit_slides",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "micro_bit_makecode_block_cut-out_cards",
         "script.name": "grade5-maker-2024"
       }
     }

@@ -16,10 +16,7 @@ Scenario: Can Toggle to the Personal Project Gallery
   And I wait until element "#projects-page" is visible
   And I wait until element "#uitest-public-projects" is visible
   And element "#uitest-personal-projects" is not visible
-  Then I click selector "#uitest-gallery-switcher div:contains(My Projects)"
-  Then check that I am on "http://studio.code.org/projects"
-  And I wait until element "#uitest-personal-projects" is visible
-  And element "#uitest-public-projects" is not visible
+  And I navigate to the personal gallery via the gallery switcher
 
 Scenario: Can See Special Topics and View More with Experiment enabled
   Given I am on "http://studio.code.org/projects/public/?enableExperiments=special-topic"

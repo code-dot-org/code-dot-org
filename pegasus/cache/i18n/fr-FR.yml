@@ -2678,6 +2678,7 @@ fr-FR:
   user_header_artist: 'Artiste '
   user_header_create: 'Créer '
   user_header_create_account: Créer un compte
+  user_header_create_account_low_cap: Créer un compte
   user_header_dance: Soirée Dansante
   user_header_flappy: Flappy
   user_header_gamelab: Labo Jeux
@@ -2686,6 +2687,7 @@ fr-FR:
   user_header_minecraft: Minecraft
   user_header_my_projects: Mes projets
   user_header_new_project: Nouveau projet
+  user_header_new_project_low_cap: Nouveau projet
   user_header_playlab: Labo de jeux
   user_header_settings: Mon compte
   user_header_signin: Connexion

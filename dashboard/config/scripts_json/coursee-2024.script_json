@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2024-05-29 18:23:47 UTC",
+    "serialized_at": "2024-07-02 20:06:56 UTC",
     "published_state": "preview",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -318,12 +318,28 @@
       }
     },
     {
-      "key": "Functions in Minecraft",
-      "name": "Functions in Minecraft",
+      "key": "Music Lab Intro Tutorial ",
+      "name": "Music Lab Intro Tutorial ",
       "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 12,
+      "properties": {
+        "overview": "In this engaging and interactive lesson, students will dive into the world of music creation through coding. Using Music Lab, a block-based integrated development environment (IDE), learners will discover the power of programming to make their own unique sounds, compose songs, and perform live music. By the end of this lesson, students will not only have developed foundational coding skills but also an appreciation for the interdisciplinary connection between music and technology. All the skills they learn in this tutorial will set them up for success when they get to the Music Lab project, which is an open space for students to create any song they'd like!\n\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024"
+      }
+    },
+    {
+      "key": "Functions in Minecraft",
+      "name": "Functions in Minecraft",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will begin to understand how functions can be helpful!",
@@ -340,10 +356,10 @@
     {
       "key": "Functions with Artist",
       "name": "Functions with Artist",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 14,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will use functions with the Artist.",
@@ -360,10 +376,10 @@
     {
       "key": "Conditionals in Minecraft: Voyage Aquatic",
       "name": "Conditionals in Minecraft: Voyage Aquatic",
-      "absolute_position": 14,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 15,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building/context-setting** lesson, students will get the chance to practice content that they have learned up to this point, as well as getting a sneak peek at conditionals!",
@@ -380,10 +396,10 @@
     {
       "key": "Conditionals with the Farmer",
       "name": "Conditionals with the Farmer",
-      "absolute_position": 15,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 16,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **skill-building** lesson focuses on a new type of programming puzzle, featuring a farmer who needs to prepare her fields for planting crops. ",
@@ -400,10 +416,10 @@
     {
       "key": "Functions with Harvester",
       "name": "Functions with Harvester",
-      "absolute_position": 16,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 17,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will use conditionals with functions to harvest crops in _Harvester_.",
@@ -420,10 +436,10 @@
     {
       "key": "Designing for Accessibility",
       "name": "Designing for Accessibility",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
         "overview": "In this **exploratory** lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps. ",
         "preparation": "* For context, read about the ***types of disabilities**. \n* Read through the speaker notes in the ***slide deck**.\n* Prepare enough sketching/drawing supplies for all students.",
@@ -439,10 +455,10 @@
     {
       "key": "Digital Sharing",
       "name": "Digital Sharing",
-      "absolute_position": 18,
+      "absolute_position": 19,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 18,
+      "relative_position": 19,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **exploratory** lesson helps students understand the challenges and benefits of respecting ownership and copyright, particularly in digital environments. ",
@@ -460,10 +476,10 @@
     {
       "key": "End of Course Project",
       "name": "End of Course Project",
-      "absolute_position": 19,
+      "absolute_position": 20,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 19,
+      "relative_position": 20,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **project** lesson takes students through the process of designing, developing, and showcasing new projects! ",
@@ -1108,6 +1124,20 @@
       "seeding_key": {
         "lesson_activity.key": "adbb5296-6cfb-40c4-9d4d-b0bc2148ca5b",
         "lesson.key": "Songwriting",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024"
+      }
+    },
+    {
+      "key": "760b1f45-7fa1-4312-b03d-6617a247da0a",
+      "position": 1,
+      "properties": {
+        "duration": 60,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "760b1f45-7fa1-4312-b03d-6617a247da0a",
+        "lesson.key": "Music Lab Intro Tutorial ",
         "lesson_group.key": "csf_functions",
         "script.name": "coursee-2024"
       }
@@ -3241,10 +3271,21 @@
       "properties": {
         "description": "A fantastic way to compare functions to something we see in our everyday lives is to look at songs. Songs often have certain groups of lyrics that repeat over and over. We call such a group a \"chorus.\"",
         "name": "Songwriting",
-        "progression_name": "Songwriting - Functions Unplugged Activity"
+        "progression_name": "Songwriting - Functions Video "
       },
       "seeding_key": {
         "activity_section.key": "cb8bcf11-fb5f-4ed2-918e-85f026790996",
+        "lesson_activity.key": "04d07c6c-fb48-403e-9b89-e68886c9f314"
+      }
+    },
+    {
+      "key": "490c3e70-6a03-4f27-b8a9-dd814ec06c4b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Songwriting - Student Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "490c3e70-6a03-4f27-b8a9-dd814ec06c4b",
         "lesson_activity.key": "04d07c6c-fb48-403e-9b89-e68886c9f314"
       }
     },
@@ -3346,6 +3387,146 @@
       "seeding_key": {
         "activity_section.key": "66e7bb8a-25e0-4588-b17a-df61f2bce6b3",
         "lesson_activity.key": "adbb5296-6cfb-40c4-9d4d-b0bc2148ca5b"
+      }
+    },
+    {
+      "key": "500f999c-17e1-4262-950a-9e31c78f28ba",
+      "position": 1,
+      "properties": {
+        "description": "Today, we'll learn how to make music with code! First, you'll learn how to add simple sounds to a song. Then, you'll learn how to play lots of sounds at the same time, just like real songs have drums, bass, and guitars playing at the same time.\n\nThen, you'll explore how loops can make beats repeat, how functions organize sections of your song, and how events can start new sounds with the press of a button.\n\nFollow the directions on every level to learn how to make your own song. By the end, you'll have coded a song that you can share.\n\nLet's start making music!",
+        "name": "Intro",
+        "progression_name": "Introduction",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To ensure all students read the instructions in the first level, consider displaying them on the board and going over them as a class.\n\nProgress to Level 2 and demonstrate how to click on the bold words to trigger an arrow that points to the block or Music Lab feature the word is referring to."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "500f999c-17e1-4262-950a-9e31c78f28ba",
+        "lesson_activity.key": "760b1f45-7fa1-4312-b03d-6617a247da0a"
+      }
+    },
+    {
+      "key": "1234f691-e45a-4757-8ddb-089cfc43bfc2",
+      "position": 2,
+      "properties": {
+        "description": "Read the instructions on the left. Click on the bold words to see the block or feature it is referring to.\n\nIn this level, drag the play sound block from the toolbox and connect it under when run in the workspace.\n\nNotice there is a preview of the sound in the timeline at the bottom of your screen. To play your code, click the \"Run\" button. If you like it, click \"Continue\" to move on to the next level.",
+        "name": "Play a sound",
+        "progression_name": "Play a sound"
+      },
+      "seeding_key": {
+        "activity_section.key": "1234f691-e45a-4757-8ddb-089cfc43bfc2",
+        "lesson_activity.key": "760b1f45-7fa1-4312-b03d-6617a247da0a"
+      }
+    },
+    {
+      "key": "88801a5c-cec2-44fc-97dd-af295e89ea2c",
+      "position": 3,
+      "properties": {
+        "name": "Play more sounds",
+        "progression_name": "Play more sounds"
+      },
+      "seeding_key": {
+        "activity_section.key": "88801a5c-cec2-44fc-97dd-af295e89ea2c",
+        "lesson_activity.key": "760b1f45-7fa1-4312-b03d-6617a247da0a"
+      }
+    },
+    {
+      "key": "1b14941c-f9d6-4268-9840-31ea73502013",
+      "position": 4,
+      "properties": {
+        "description": "Loops are a fundamental concept in programming that allow a sequence of instructions to be repeated multiple times. In the context of Music Lab, loops can be used to repeat a series of notes or rhythms, making it easier to create repetitive patterns in music, such as choruses or verses, without needing to code each repetition individually.",
+        "name": "Repeat",
+        "progression_name": "Repeat"
+      },
+      "seeding_key": {
+        "activity_section.key": "1b14941c-f9d6-4268-9840-31ea73502013",
+        "lesson_activity.key": "760b1f45-7fa1-4312-b03d-6617a247da0a"
+      }
+    },
+    {
+      "key": "c2918da9-5d3b-4e63-b3f2-08870ea6b0ba",
+      "position": 5,
+      "properties": {
+        "name": "Play together",
+        "progression_name": "Play together",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider stopping the class to go over Level 6 together. Display the level on the board and read the instructions as a class. Ensure students understand that two different sounds can be played at the same time if they are both in the play together block. \n\nContrast the `play together` block with the `repeat` block to notice that play together plays the sounds at the same time while repeat plays the sounds sequentially over and over. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c2918da9-5d3b-4e63-b3f2-08870ea6b0ba",
+        "lesson_activity.key": "760b1f45-7fa1-4312-b03d-6617a247da0a"
+      }
+    },
+    {
+      "key": "a6bff97a-73b6-4a65-9d6c-57205d88bbc7",
+      "position": 6,
+      "properties": {
+        "description": "Functions are blocks of code designed to perform a particular task. When composing music, students can use functions to encapsulate parts of their songs, such as a melody or a beat. This not only organizes the song's structure but also enables students to reuse these parts, making the coding process more efficient and the code itself more readable.",
+        "name": "Functions",
+        "progression_name": "Functions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider going over Level 8 as a whole class. Direct students to notice how a function is a chunk of code that stands on its own. It's not connected to the when `run block`. Once they have coded what they want in their function, students need to \"call\" the function. This means they need to use the new function block, like `chorus`, and connect it under `when run`.\n\nYou can also mention how it's important to name your function something you can easily remember. For example, if students want a function that triggers a chunk of code that acts as the verse of the song, they should name their function `verse`."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a6bff97a-73b6-4a65-9d6c-57205d88bbc7",
+        "lesson_activity.key": "760b1f45-7fa1-4312-b03d-6617a247da0a"
+      }
+    },
+    {
+      "key": "01c5578c-f235-4ee9-8752-cd157ebebb7f",
+      "position": 7,
+      "properties": {
+        "description": "Events are actions or occurrences that happen during the runtime of a program, which can trigger specific blocks of code to execute. In music coding, events can be used to make the composition interactive. For example, pressing a number key could trigger a function that plays a sound effect or starts a beat. Events allow students to play live music or add dynamic elements to their compositions.",
+        "name": "Play live",
+        "progression_name": "Triggers",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider going over Level 10 as a whole class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "01c5578c-f235-4ee9-8752-cd157ebebb7f",
+        "lesson_activity.key": "760b1f45-7fa1-4312-b03d-6617a247da0a"
+      }
+    },
+    {
+      "key": "438dd61e-fcc9-48f3-81fc-2473e2c13c59",
+      "position": 8,
+      "properties": {
+        "description": "The `play notes` and `play drums` blocks allow students to compose a new melody or custom drum beats to add to their song. Clicking on the rectangle field on the block will open a window to customize the notes or drums. ",
+        "name": "Compose ",
+        "progression_name": "Custom notes & beats"
+      },
+      "seeding_key": {
+        "activity_section.key": "438dd61e-fcc9-48f3-81fc-2473e2c13c59",
+        "lesson_activity.key": "760b1f45-7fa1-4312-b03d-6617a247da0a"
+      }
+    },
+    {
+      "key": "f1f52555-9a55-447a-814c-8bca154fbb08",
+      "position": 9,
+      "properties": {
+        "description": "Clicking \"Continue\" after this final level will send students to the Music Lab free play project where they can build their own musical compositions. If a student gets stuck, direct them back to the tutorial to jog their memory.",
+        "name": "Outro",
+        "progression_name": "Outro"
+      },
+      "seeding_key": {
+        "activity_section.key": "f1f52555-9a55-447a-814c-8bca154fbb08",
+        "lesson_activity.key": "760b1f45-7fa1-4312-b03d-6617a247da0a"
       }
     },
     {
@@ -4043,8 +4224,19 @@
       }
     },
     {
-      "key": "16253d90-77df-4b84-b2d6-05008b504146",
+      "key": "6492df3a-69b7-459c-9791-d324dfa7692d",
       "position": 2,
+      "properties": {
+        "progression_name": "Designing for Accessibility - Student Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "6492df3a-69b7-459c-9791-d324dfa7692d",
+        "lesson_activity.key": "6a302aff-31aa-4c04-b406-a3a177d84eb3"
+      }
+    },
+    {
+      "key": "16253d90-77df-4b84-b2d6-05008b504146",
+      "position": 3,
       "properties": {
         "description": "####Scenarios (10 min)\n**Display**: Display each scenario from the Designing for Accessibility scenarios. While displaying a scenario image, read its accompanying script to the class (see below). Discussion questions are included in relevant slides.\n\n#### Designing for Accessibility Scenarios\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Meet Wei\" slide\n\n* Wei is a talented kid who LOVES music. She plays piano and sings very well! \n* Wei is visually impaired. While she is not completely blind, it is very difficult for her to see things, even if they are near her eyes.\n* Wei has had to learn piano differently from kids who aren’t visually impaired, but that hasn’t stopped her from becoming a great musician! \n* Wei recently began creating her own music. She is very proud of it! She would like to record and share her music with her friends.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Introducing Grammaphone!\" slide\n\n* Grammaphone is a popular new app that allows people to upload and share their own music with friends. \n\n**Discuss**: What do you think about this app? How do you think this app works?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Wei and Grammaphone\" slide\n\n* Wei needs to use Grammaphone to share her music. After all, it’s the most popular music-sharing app!\n* However, she’s having a difficult time using the app. Why do you think that is? \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Meet Roger\" slide\n\n* Roger is an energetic kid who loves video games! He especially likes playing sports games with his friends.\n* Things have been hard for Roger lately, though. A few years ago, Roger’s hand had to be “amputated” (surgically removed) due to an accident. \n* Thankfully, computer scientists, engineers, and doctors are working hard to provide Roger with a cool-looking robotic “prosthetic hand,” which will be awesome!\n* But for now, Roger wants to play sports video games with his friends! \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Introducing Football Frenzy!\" slide\n\n* Football Frenzy is a new mobile game that everyone loves!\n* It has cool graphics, awesome sound effects, tight controls, and amazing action!\n\n**Discuss**: What do you think about this app? How do you think this game is played?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Roger and Football Frenzy\" slide\n\n* All of Roger’s friends play Football Frenzy. It’s connected online so that you can play it anywhere!\n* Roger wants to play Football Frenzy with them, but he is having a difficult time. Why do you think that is?\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show \"Designing for Accessibility\" slide\n\n* Neither of these apps was designed with people like Wei and Roger in mind.\n* When it comes to these apps, what specific features do you think Wei and Roger wish for? \n* Let’s redesign these apps! \n\n####App Redesign Activity (25 min)\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Your turn!” slide\n\nThe final scenario allows students to sketch a redesign of one app from the scenarios (\"Grammaphone\" for Wei or \"Football Frenzy\" for Roger). \n\nStudents should primarily focus their efforts on making their redesigned app more accessible for either of them, along with any other accessibility features they can think of. Students can design as many screens for the app as they wish, and they do not need to make their app look anything like the original examples.\n\nIf there is time, students may redesign apps for both characters.\n\n**Distribute**: Pass out crayons/pencils/etc. to each student as they open their reflection journals. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: “Share Out” slide\n\n**Share**: After designing, students share their app design with a neighbor, or if there is time, some students can share with the whole class. Each student should answer how their app design addresses the need of the user in question."
       },
@@ -4110,10 +4302,21 @@
       "position": 1,
       "properties": {
         "name": "Digital Sharing",
-        "progression_name": "Digital Sharing - Unplugged Activity"
+        "progression_name": "Digital Sharing - Video"
       },
       "seeding_key": {
         "activity_section.key": "aa6e6678-bb0c-4966-87f1-96e1107b210a",
+        "lesson_activity.key": "986ea707-e5eb-40fe-8cf2-d7881ec1773e"
+      }
+    },
+    {
+      "key": "b7074d5f-5938-40e9-83b5-db17015e3df6",
+      "position": 2,
+      "properties": {
+        "progression_name": "Digital Sharing - Discussion Questions"
+      },
+      "seeding_key": {
+        "activity_section.key": "b7074d5f-5938-40e9-83b5-db17015e3df6",
         "lesson_activity.key": "986ea707-e5eb-40fe-8cf2-d7881ec1773e"
       }
     },
@@ -6254,7 +6457,7 @@
         "level_keys": [
           "Songwriting-Unplugged2022_2024"
         ],
-        "progression": "Songwriting - Functions Unplugged Activity"
+        "progression": "Songwriting - Functions Video "
       },
       "bonus": false,
       "seeding_key": {
@@ -6272,6 +6475,403 @@
     },
     {
       "chapter": 74,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Songwriting - Student Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_songwriting_markdown"
+        ],
+        "lesson.key": "Songwriting",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "490c3e70-6a03-4f27-b8a9-dd814ec06c4b"
+      },
+      "level_keys": [
+        "unplugged_songwriting_markdown"
+      ]
+    },
+    {
+      "chapter": 75,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music_lab_intro_panels_start2_coursee"
+        ],
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music_lab_intro_panels_start2_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "500f999c-17e1-4262-950a-9e31c78f28ba"
+      },
+      "level_keys": [
+        "music_lab_intro_panels_start2_coursee"
+      ]
+    },
+    {
+      "chapter": 76,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_play_sound_coursee"
+        ],
+        "progression": "Play a sound"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_play_sound_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "1234f691-e45a-4757-8ddb-089cfc43bfc2"
+      },
+      "level_keys": [
+        "musiclab_tutorial_play_sound_coursee"
+      ]
+    },
+    {
+      "chapter": 77,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_change_sound_coursee"
+        ],
+        "progression": "Play more sounds"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_change_sound_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "88801a5c-cec2-44fc-97dd-af295e89ea2c"
+      },
+      "level_keys": [
+        "musiclab_tutorial_change_sound_coursee"
+      ]
+    },
+    {
+      "chapter": 78,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_repeat_coursee"
+        ],
+        "progression": "Repeat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_repeat_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "1b14941c-f9d6-4268-9840-31ea73502013"
+      },
+      "level_keys": [
+        "musiclab_tutorial_panels_repeat_coursee"
+      ]
+    },
+    {
+      "chapter": 79,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_repeat_coursee"
+        ],
+        "progression": "Repeat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_repeat_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "1b14941c-f9d6-4268-9840-31ea73502013"
+      },
+      "level_keys": [
+        "musiclab_tutorial_repeat_coursee"
+      ]
+    },
+    {
+      "chapter": 80,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_playtogether_coursee"
+        ],
+        "progression": "Play together"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_playtogether_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c2918da9-5d3b-4e63-b3f2-08870ea6b0ba"
+      },
+      "level_keys": [
+        "musiclab_tutorial_panels_playtogether_coursee"
+      ]
+    },
+    {
+      "chapter": 81,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_play_together_coursee"
+        ],
+        "progression": "Play together"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_play_together_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c2918da9-5d3b-4e63-b3f2-08870ea6b0ba"
+      },
+      "level_keys": [
+        "musiclab_tutorial_play_together_coursee"
+      ]
+    },
+    {
+      "chapter": 82,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_function_coursee"
+        ],
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_function_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "a6bff97a-73b6-4a65-9d6c-57205d88bbc7"
+      },
+      "level_keys": [
+        "musiclab_tutorial_panels_function_coursee"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_function_coursee"
+        ],
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_function_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "a6bff97a-73b6-4a65-9d6c-57205d88bbc7"
+      },
+      "level_keys": [
+        "musiclab_tutorial_function_coursee"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_trigger_coursee"
+        ],
+        "progression": "Triggers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_trigger_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "01c5578c-f235-4ee9-8752-cd157ebebb7f"
+      },
+      "level_keys": [
+        "musiclab_tutorial_panels_trigger_coursee"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_trigger_coursee"
+        ],
+        "progression": "Triggers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_trigger_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "01c5578c-f235-4ee9-8752-cd157ebebb7f"
+      },
+      "level_keys": [
+        "musiclab_tutorial_trigger_coursee"
+      ]
+    },
+    {
+      "chapter": 86,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_notes_coursee"
+        ],
+        "progression": "Custom notes & beats"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_notes_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "438dd61e-fcc9-48f3-81fc-2473e2c13c59"
+      },
+      "level_keys": [
+        "musiclab_tutorial_panels_notes_coursee"
+      ]
+    },
+    {
+      "chapter": 87,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_notes_coursee"
+        ],
+        "progression": "Custom notes & beats"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_notes_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "438dd61e-fcc9-48f3-81fc-2473e2c13c59"
+      },
+      "level_keys": [
+        "musiclab_tutorial_notes_coursee"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 14,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_drums_coursee"
+        ],
+        "progression": "Custom notes & beats"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_drums_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "438dd61e-fcc9-48f3-81fc-2473e2c13c59"
+      },
+      "level_keys": [
+        "musiclab_tutorial_drums_coursee"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "usiclab_tutorial_panels_end_coursee"
+        ],
+        "progression": "Outro"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "usiclab_tutorial_panels_end_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "f1f52555-9a55-447a-814c-8bca154fbb08"
+      },
+      "level_keys": [
+        "usiclab_tutorial_panels_end_coursee"
+      ]
+    },
+    {
+      "chapter": 90,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6296,7 +6896,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 91,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6321,7 +6921,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 92,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6346,7 +6946,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 93,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6371,7 +6971,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 94,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6396,7 +6996,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 95,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6421,7 +7021,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 96,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6446,7 +7046,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 97,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -6471,7 +7071,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 98,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -6496,7 +7096,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 99,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6521,7 +7121,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 100,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -6546,7 +7146,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 101,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -6571,7 +7171,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 102,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -6596,7 +7196,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 103,
       "position": 14,
       "activity_section_position": 4,
       "assessment": false,
@@ -6621,7 +7221,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 104,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -6646,7 +7246,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 105,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -6671,7 +7271,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 106,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6696,7 +7296,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 107,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6721,7 +7321,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 108,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6746,7 +7346,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 109,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6771,7 +7371,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 110,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -6796,7 +7396,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 111,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -6821,7 +7421,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 112,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -6846,7 +7446,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 113,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -6871,7 +7471,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 114,
       "position": 9,
       "activity_section_position": 8,
       "assessment": false,
@@ -6896,7 +7496,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 115,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6921,7 +7521,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 116,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -6946,7 +7546,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 117,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -6971,7 +7571,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 118,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6996,7 +7596,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 119,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7021,7 +7621,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 120,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7046,7 +7646,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 121,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7071,7 +7671,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 122,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7096,7 +7696,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 123,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7121,7 +7721,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 124,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -7146,7 +7746,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 125,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -7171,7 +7771,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 126,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7196,7 +7796,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 127,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -7221,7 +7821,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 128,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -7246,7 +7846,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 129,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -7271,7 +7871,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 130,
       "position": 13,
       "activity_section_position": 4,
       "assessment": false,
@@ -7296,7 +7896,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 131,
       "position": 14,
       "activity_section_position": 5,
       "assessment": false,
@@ -7321,7 +7921,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 132,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -7346,7 +7946,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 133,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -7371,7 +7971,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 134,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7396,7 +7996,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 135,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7421,7 +8021,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 136,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7446,7 +8046,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 137,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7471,7 +8071,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 138,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7496,7 +8096,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 139,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7521,7 +8121,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 140,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -7546,7 +8146,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 141,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -7571,7 +8171,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 142,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -7596,7 +8196,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 143,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -7621,7 +8221,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 144,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -7646,7 +8246,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 145,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -7671,7 +8271,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 146,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -7696,7 +8296,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 147,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -7721,7 +8321,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 148,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -7747,7 +8347,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 149,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -7772,7 +8372,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 150,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7797,7 +8397,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 151,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7822,7 +8422,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 152,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7847,7 +8447,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 153,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7872,7 +8472,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 154,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -7897,7 +8497,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 155,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -7922,7 +8522,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 156,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -7947,7 +8547,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 157,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -7972,7 +8572,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 158,
       "position": 9,
       "activity_section_position": 8,
       "assessment": false,
@@ -7997,7 +8597,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 159,
       "position": 10,
       "activity_section_position": 9,
       "assessment": false,
@@ -8022,7 +8622,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 160,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -8048,7 +8648,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 161,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -8073,7 +8673,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 162,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -8098,7 +8698,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 163,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8123,7 +8723,29 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 164,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Designing for Accessibility - Student Discussion"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_designing for accessibility_markdown"
+        ],
+        "lesson.key": "Designing for Accessibility",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursee-2024",
+        "activity_section.key": "6492df3a-69b7-459c-9791-d324dfa7692d"
+      },
+      "level_keys": [
+        "unplugged_designing for accessibility_markdown"
+      ]
+    },
+    {
+      "chapter": 165,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8131,7 +8753,7 @@
         "level_keys": [
           "DigitalSharing-Unplugged2022_2024"
         ],
-        "progression": "Digital Sharing - Unplugged Activity"
+        "progression": "Digital Sharing - Video"
       },
       "bonus": false,
       "seeding_key": {
@@ -8148,7 +8770,29 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 166,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Digital Sharing - Discussion Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_digital sharing_markdown"
+        ],
+        "lesson.key": "Digital Sharing",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursee-2024",
+        "activity_section.key": "b7074d5f-5938-40e9-83b5-db17015e3df6"
+      },
+      "level_keys": [
+        "unplugged_digital sharing_markdown"
+      ]
+    },
+    {
+      "chapter": 167,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8173,7 +8817,7 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 168,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9077,6 +9721,198 @@
     },
     {
       "seeding_key": {
+        "level.key": "unplugged_songwriting_markdown",
+        "script_level.level_keys": [
+          "unplugged_songwriting_markdown"
+        ],
+        "lesson.key": "Songwriting",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "490c3e70-6a03-4f27-b8a9-dd814ec06c4b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music_lab_intro_panels_start2_coursee",
+        "script_level.level_keys": [
+          "music_lab_intro_panels_start2_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "500f999c-17e1-4262-950a-9e31c78f28ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_play_sound_coursee",
+        "script_level.level_keys": [
+          "musiclab_tutorial_play_sound_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "1234f691-e45a-4757-8ddb-089cfc43bfc2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_change_sound_coursee",
+        "script_level.level_keys": [
+          "musiclab_tutorial_change_sound_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "88801a5c-cec2-44fc-97dd-af295e89ea2c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_panels_repeat_coursee",
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_repeat_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "1b14941c-f9d6-4268-9840-31ea73502013"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_repeat_coursee",
+        "script_level.level_keys": [
+          "musiclab_tutorial_repeat_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "1b14941c-f9d6-4268-9840-31ea73502013"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_panels_playtogether_coursee",
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_playtogether_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c2918da9-5d3b-4e63-b3f2-08870ea6b0ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_play_together_coursee",
+        "script_level.level_keys": [
+          "musiclab_tutorial_play_together_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "c2918da9-5d3b-4e63-b3f2-08870ea6b0ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_panels_function_coursee",
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_function_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "a6bff97a-73b6-4a65-9d6c-57205d88bbc7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_function_coursee",
+        "script_level.level_keys": [
+          "musiclab_tutorial_function_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "a6bff97a-73b6-4a65-9d6c-57205d88bbc7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_panels_trigger_coursee",
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_trigger_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "01c5578c-f235-4ee9-8752-cd157ebebb7f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_trigger_coursee",
+        "script_level.level_keys": [
+          "musiclab_tutorial_trigger_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "01c5578c-f235-4ee9-8752-cd157ebebb7f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_panels_notes_coursee",
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_notes_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "438dd61e-fcc9-48f3-81fc-2473e2c13c59"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_notes_coursee",
+        "script_level.level_keys": [
+          "musiclab_tutorial_notes_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "438dd61e-fcc9-48f3-81fc-2473e2c13c59"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_drums_coursee",
+        "script_level.level_keys": [
+          "musiclab_tutorial_drums_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "438dd61e-fcc9-48f3-81fc-2473e2c13c59"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "usiclab_tutorial_panels_end_coursee",
+        "script_level.level_keys": [
+          "usiclab_tutorial_panels_end_coursee"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_functions",
+        "script.name": "coursee-2024",
+        "activity_section.key": "f1f52555-9a55-447a-814c-8bca154fbb08"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseE_hero_vid1_2024",
         "script_level.level_keys": [
           "courseE_hero_vid1_2024"
@@ -9965,6 +10801,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "unplugged_designing for accessibility_markdown",
+        "script_level.level_keys": [
+          "unplugged_designing for accessibility_markdown"
+        ],
+        "lesson.key": "Designing for Accessibility",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursee-2024",
+        "activity_section.key": "6492df3a-69b7-459c-9791-d324dfa7692d"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "DigitalSharing-Unplugged2022_2024",
         "script_level.level_keys": [
           "DigitalSharing-Unplugged2022_2024"
@@ -9973,6 +10821,18 @@
         "lesson_group.key": "lessonGroup-7",
         "script.name": "coursee-2024",
         "activity_section.key": "aa6e6678-bb0c-4966-87f1-96e1107b210a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unplugged_digital sharing_markdown",
+        "script_level.level_keys": [
+          "unplugged_digital sharing_markdown"
+        ],
+        "lesson.key": "Digital Sharing",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursee-2024",
+        "activity_section.key": "b7074d5f-5938-40e9-83b5-db17015e3df6"
       }
     },
     {
@@ -10146,15 +11006,29 @@
       }
     },
     {
-      "name": "CSF Course Syllabus",
-      "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
-      "key": "csf_course_syllabus",
+      "name": "CSF Change Log 2024-25",
+      "url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/template/preview",
+      "key": "csf_change_log_2024-25",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/template/export",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "csf_course_syllabus"
+        "resource.key": "csf_change_log_2024-25"
+      }
+    },
+    {
+      "name": "CSF Syllabus 2024-25",
+      "url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/edit#heading=h.d1b2pnqkkc57/template/preivew",
+      "key": "csf_syllabus_2024-25",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/edit#heading=h.d1b2pnqkkc57/export",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csf_syllabus_2024-25"
       }
     },
     {
@@ -10427,6 +11301,16 @@
       },
       "seeding_key": {
         "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "name": "CSF State Standards for CS - Master Crosswalk List",
+      "url": "https://docs.google.com/document/d/1sw5P6ejdXTK5H-TWxFCtYeI77sxxJwlY5V0k6p96reQ/edit#heading=h.73du1rws92dv/template/preview",
+      "key": "state_standards_for_computer_science_-_master_crosswalk_list",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "state_standards_for_computer_science_-_master_crosswalk_list"
       }
     },
     {
@@ -10860,7 +11744,13 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csf_course_syllabus",
+        "resource.key": "csf_change_log_2024-25",
+        "script.name": "coursee-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csf_syllabus_2024-25",
         "script.name": "coursee-2024"
       }
     },
@@ -10891,6 +11781,12 @@
     {
       "seeding_key": {
         "resource.key": "sprite_lab_documentation",
+        "script.name": "coursee-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "state_standards_for_computer_science_-_master_crosswalk_list",
         "script.name": "coursee-2024"
       }
     },
@@ -11018,6 +11914,16 @@
       }
     },
     {
+      "key": "events",
+      "word": "Events",
+      "definition": "Events are actions or occurrences that happen during the runtime of a program, which can trigger specific blocks of code to execute.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "events"
+      }
+    },
+    {
       "key": "function",
       "word": "Function",
       "definition": "A piece of code that you can call over and over again.",
@@ -11025,6 +11931,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "function"
+      }
+    },
+    {
+      "key": "functions",
+      "word": "Functions",
+      "definition": "Functions are blocks of code designed to perform a particular task. When composing music, students can use functions to encapsulate parts of their songs, such as a melody or a beat.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "functions"
       }
     },
     {
@@ -11055,6 +11971,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "loop"
+      }
+    },
+    {
+      "key": "loops",
+      "word": "Loops",
+      "definition": "Loops allow a sequence of instructions to be repeated multiple times.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loops"
       }
     },
     {
@@ -11371,6 +12297,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "vocabulary.key": "events"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "vocabulary.key": "functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "vocabulary.key": "loops"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Private and Personal Information",
         "vocabulary.key": "personal_information_csm"
       }
@@ -11636,6 +12580,16 @@
       "seeding_key": {
         "lesson.key": "Songwriting",
         "objective.key": "5e943bf6-3d0f-4715-b18e-f71e3dc0d88a"
+      }
+    },
+    {
+      "key": "67c2cb75-59f5-448a-a526-1e139a6c1975",
+      "properties": {
+        "description": "Utilize sound generation, loops, functions, and events in a project to craft and share a unique composition."
+      },
+      "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "objective.key": "67c2cb75-59f5-448a-a526-1e139a6c1975"
       }
     },
     {

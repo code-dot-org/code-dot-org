@@ -1,7 +1,6 @@
 {
   "key": "pilot-k5-ai",
   "display_name": "[Pilot] Elementary AI Module",
-  "category": "csc",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Module",

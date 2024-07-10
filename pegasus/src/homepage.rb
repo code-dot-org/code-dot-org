@@ -251,6 +251,8 @@ class Homepage
           text_desc: action["text_desc"],
           text_desc_02: action["text_desc_02"],
           text_overline: action["text_overline"],
+          external_link: action["external_link"],
+          button_color_white: action["button_color_white"],
           button_link: action["button_link"],
           studio_button_link: action["studio_button_link"],
           button_label_primary: action["button_label_primary"],

@@ -1,4 +1,3 @@
-import moment from 'moment';
 import {
   createAsyncThunk,
   createSlice,
@@ -8,81 +7,62 @@ import {
   ThunkDispatch,
 } from '@reduxjs/toolkit';
 
+import {Role} from '@cdo/apps/aiComponentLibrary/chatItems/types';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {registerReducers} from '@cdo/apps/redux';
 import {RootState} from '@cdo/apps/types/redux';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {
-  AiInteractionStatus as Status,
-  AichatErrorType,
-} from '@cdo/generated-scripts/sharedConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {NetworkError} from '@cdo/apps/util/HttpClient';
+import {AppDispatch} from '@cdo/apps/util/reduxHooks';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
+import {postAichatCompletionMessage} from '../aichatCompletionApi';
+import {saveTypeToAnalyticsEvent} from '../constants';
 import {
-  AI_CUSTOMIZATIONS_LABELS,
+  AiCustomizations,
+  AichatContext,
+  FieldVisibilities,
+  LevelAichatSettings,
+  ModelCardInfo,
+  SaveType,
+  ViewMode,
+  Visibility,
+  ChatMessage,
+  ChatItem,
+  isModelUpdate,
+  isNotification,
+  isChatMessage,
+  ModelUpdate,
+  Notification,
+} from '../types';
+import {
   DEFAULT_VISIBILITIES,
   EMPTY_AI_CUSTOMIZATIONS,
 } from '../views/modelCustomization/constants';
-import {postAichatCompletionMessage} from '../aichatCompletionApi';
+import {validateModelId} from '../views/modelCustomization/utils';
+
 import {
-  AiCustomizations,
-  AichatInteractionStatusValue,
-  ChatCompletionMessage,
-  AichatContext,
-  LevelAichatSettings,
-  ModelCardInfo,
-  Role,
-  ViewMode,
-  Visibility,
-} from '../types';
-import {getTypedKeys} from '@cdo/apps/types/utils';
-import {AppDispatch} from '@cdo/apps/util/reduxHooks';
+  allFieldsHidden,
+  findChangedProperties,
+  getNewMessageId,
+  hasFilledOutModelCard,
+} from './utils';
 
-const haveDifferentValues = (
-  value1: AiCustomizations[keyof AiCustomizations],
-  value2: AiCustomizations[keyof AiCustomizations]
-): boolean => {
-  if (typeof value1 === 'object' && typeof value2 === 'object') {
-    return JSON.stringify(value1) !== JSON.stringify(value2);
-  }
-
-  return value1 !== value2;
+const messageListKeys = ['chatItemsPast', 'chatItemsCurrent'] as const;
+type MessageLocation = {
+  index: number;
+  messageListKey: (typeof messageListKeys)[number];
 };
-
-const findChangedProperties = (
-  previous: AiCustomizations | undefined,
-  next: AiCustomizations
-) => {
-  if (!previous) {
-    return Object.keys(next);
-  }
-
-  const changedProperties: string[] = [];
-  Object.keys(next).forEach(key => {
-    const typedKey = key as keyof AiCustomizations;
-    if (haveDifferentValues(previous[typedKey], next[typedKey])) {
-      changedProperties.push(key);
-    }
-  });
-
-  return changedProperties;
-};
-
-const getCurrentTimestamp = () => moment(Date.now()).format('YYYY-MM-DD HH:mm');
-const getCurrentTime = () => moment(Date.now()).format('LT');
-
-const saveTypeToAnalyticsEvent: {[key in SaveType]: string} = {
-  updateChatbot: EVENTS.UPDATE_CHATBOT,
-  publishModelCard: EVENTS.PUBLISH_MODEL_CARD_INFO,
-  saveModelCard: EVENTS.SAVE_MODEL_CARD_INFO,
-};
-
-type SaveType = 'updateChatbot' | 'publishModelCard' | 'saveModelCard';
 
 export interface AichatState {
-  // All user and assistant chat messages - includes too personal and inappropriate user messages.
-  // Messages will be logged and stored.
-  chatMessages: ChatCompletionMessage[];
+  // Content from previous chat sessions that we track purely for visibility to the user
+  // and do not send to the model as history.
+  chatItemsPast: ChatItem[];
+  // Items in the current chat session that we want to provide as history to the model.
+  chatItemsCurrent: ChatItem[];
+  // The user message currently awaiting response from the model (if any).
+  chatMessagePending?: ChatMessage;
   // Denotes whether we are waiting for a chat completion response from the backend
   isWaitingForChatResponse: boolean;
   // Denotes whether we should show the warning modal
@@ -91,7 +71,7 @@ export interface AichatState {
   chatMessageError: boolean;
   currentAiCustomizations: AiCustomizations;
   savedAiCustomizations: AiCustomizations;
-  fieldVisibilities: {[key in keyof AiCustomizations]: Visibility};
+  fieldVisibilities: FieldVisibilities;
   viewMode: ViewMode;
   currentSessionId?: number;
   // If a save is currently in progress
@@ -101,7 +81,9 @@ export interface AichatState {
 }
 
 const initialState: AichatState = {
-  chatMessages: [],
+  chatItemsPast: [],
+  chatItemsCurrent: [],
+  chatMessagePending: undefined,
   isWaitingForChatResponse: false,
   showWarningModal: true,
   chatMessageError: false,
@@ -163,14 +145,6 @@ export const saveModelCard = createAsyncThunk(
   }
 );
 
-// This variable keeps track of the most recent message ID so that we can
-// assign a unique message id in increasing sequence to a new message.
-let latestMessageId = 0;
-const getNewMessageId = () => {
-  latestMessageId += 1;
-  return latestMessageId;
-};
-
 // This is the "core" update logic that is shared when a student saves their
 // model customizations (setup, retrieval, and "publish" tab)
 const saveAiCustomization = async (
@@ -231,14 +205,13 @@ export const onSaveComplete =
     }
 
     changedProperties.forEach(property => {
+      const typedProperty = property as keyof AiCustomizations;
       dispatch(
-        addChatMessage({
+        addModelUpdate({
           id: getNewMessageId(),
-          role: Role.MODEL_UPDATE,
-          chatMessageText:
-            AI_CUSTOMIZATIONS_LABELS[property as keyof AiCustomizations],
-          status: Status.OK,
-          timestamp: getCurrentTime(),
+          updatedField: typedProperty,
+          updatedValue: currentAiCustomizations[typedProperty],
+          timestamp: Date.now(),
         })
       );
 
@@ -264,15 +237,68 @@ export const onSaveComplete =
     }
   };
 
+// Thunk called when a save no-ops (there are no changes to save)
+export const onSaveNoop =
+  () => (dispatch: AppDispatch, getState: () => RootState) => {
+    // Even if no changes were saved, go to the presentation page if the user tried to publish
+    // a model card.
+    if (getState().aichat.currentSaveType === 'publishModelCard') {
+      dispatch(setViewMode(ViewMode.PRESENTATION));
+    }
+    dispatch(endSave());
+  };
+
 // Thunk called when a save has failed.
-export const onSaveFail = () => (dispatch: AppDispatch) => {
+export const onSaveFail =
+  (e: Error) => (dispatch: AppDispatch, getState: () => RootState) => {
+    // Default save error message.
+    let errorMessage =
+      'There was an error saving your project. Please try again.';
+    if (e instanceof NetworkError) {
+      e.response
+        .json()
+        .then(body => {
+          const changedProperties = findChangedProperties(
+            getState().aichat.savedAiCustomizations,
+            getState().aichat.currentAiCustomizations
+          );
+          let flaggedProperties;
+          if (
+            changedProperties.includes('systemPrompt') &&
+            changedProperties.includes('retrievalContexts')
+          ) {
+            flaggedProperties = 'system prompt and/or retrieval contexts';
+          } else if (changedProperties.includes('systemPrompt')) {
+            flaggedProperties = 'system prompt';
+          } else if (changedProperties.includes('retrievalContexts')) {
+            flaggedProperties = 'retrieval contexts';
+          }
+          if (body?.details?.profaneWords?.length > 0 && flaggedProperties) {
+            errorMessage = `Profanity detected in the ${flaggedProperties} and cannot be updated. Please try again.`;
+          }
+          dispatchSaveFailNotification(dispatch, errorMessage);
+        })
+        // Catch any errors in parsing the response body or if there was no response body
+        // and fall back to the default error message.
+        .catch(() => {
+          dispatchSaveFailNotification(dispatch, errorMessage);
+        });
+    } else {
+      // If an Error was passed instead of a NetworkError, fall back to the default error message.
+      dispatchSaveFailNotification(dispatch, errorMessage);
+    }
+  };
+
+const dispatchSaveFailNotification = (
+  dispatch: AppDispatch,
+  errorMessage: string
+) => {
   dispatch(
-    addChatMessage({
+    addNotification({
       id: getNewMessageId(),
-      role: Role.ERROR_NOTIFICATION,
-      chatMessageText: 'Error updating project. Please try again.',
-      status: Status.ERROR,
-      timestamp: getCurrentTime(),
+      text: errorMessage,
+      notificationType: 'error',
+      timestamp: Date.now(),
     })
   );
   // Notify the UI that the save is complete.
@@ -288,7 +314,7 @@ export const submitChatContents = createAsyncThunk(
     const state = thunkAPI.getState() as RootState;
     const {
       savedAiCustomizations: aiCustomizations,
-      chatMessages: storedMessages,
+      chatItemsCurrent,
       currentSessionId,
     } = state.aichat;
 
@@ -298,29 +324,45 @@ export const submitChatContents = createAsyncThunk(
       channelId: state.lab.channel?.id,
     };
     // Create the new user ChatCompleteMessage and add to chatMessages.
-    const newMessage: ChatCompletionMessage = {
-      id: getNewMessageId(),
+    const newMessage: ChatMessage = {
       role: Role.USER,
       status: Status.UNKNOWN,
       chatMessageText: newUserMessageText,
-      timestamp: getCurrentTimestamp(),
-      sessionId: currentSessionId,
+      timestamp: Date.now(),
     };
-    thunkAPI.dispatch(addChatMessage(newMessage));
+    thunkAPI.dispatch(setChatMessagePending(newMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
-    const chatApiResponse = await postAichatCompletionMessage(
-      newUserMessageText,
-      currentSessionId
-        ? storedMessages.filter(
-            message => message.sessionId === currentSessionId
-          )
-        : [],
-      aiCustomizations,
-      aichatContext,
-      currentSessionId
-    );
+
+    let chatApiResponse;
+    try {
+      chatApiResponse = await postAichatCompletionMessage(
+        newMessage,
+        chatItemsCurrent.filter(isChatMessage) as ChatMessage[],
+        aiCustomizations,
+        aichatContext,
+        currentSessionId
+      );
+    } catch (error) {
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError('Error in aichat completion request', error as Error);
+
+      thunkAPI.dispatch(clearChatMessagePending());
+      thunkAPI.dispatch(addChatMessage({...newMessage, status: Status.ERROR}));
+
+      const assistantChatMessage: ChatMessage = {
+        role: Role.ASSISTANT,
+        status: Status.ERROR,
+        chatMessageText: 'error',
+        timestamp: Date.now(),
+      };
+      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
+
+      return;
+    }
+
     Lab2Registry.getInstance()
       .getMetricsReporter()
       .reportLoadTime('AichatModelResponseTime', Date.now() - startTime, [
@@ -330,67 +372,20 @@ export const submitChatContents = createAsyncThunk(
         },
       ]);
 
-    // Regardless of response type,
-    // assign last user message to session.
     if (chatApiResponse.session_id) {
       thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
-      thunkAPI.dispatch(
-        updateChatMessageSession({
-          id: newMessage.id,
-          sessionId: chatApiResponse.session_id,
-        })
+    }
+
+    if (chatApiResponse.flagged_content) {
+      console.log(
+        `Content flagged by profanity filter: ${chatApiResponse.flagged_content}`
       );
     }
 
-    // success state: received response from model ("assistant")
-    if (chatApiResponse?.role === Role.ASSISTANT) {
-      const assistantChatMessage: ChatCompletionMessage = {
-        id: getNewMessageId(),
-        role: Role.ASSISTANT,
-        status: Status.OK,
-        chatMessageText: chatApiResponse.content,
-        timestamp: getCurrentTimestamp(),
-        sessionId: chatApiResponse.session_id,
-      };
-      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
-
-      thunkAPI.dispatch(
-        updateUserChatMessageStatus({
-          id: newMessage.id,
-          status: Status.OK,
-        })
-      );
-
-      // error state #1: model generated profanity
-    } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_MODEL) {
-      const assistantChatMessage: ChatCompletionMessage = {
-        id: getNewMessageId(),
-        role: Role.ASSISTANT,
-        status: Status.ERROR,
-        chatMessageText: 'error',
-        timestamp: getCurrentTimestamp(),
-      };
-      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
-
-      thunkAPI.dispatch(
-        updateUserChatMessageStatus({
-          id: newMessage.id,
-          status: Status.ERROR,
-        })
-      );
-
-      // error state #2: user message contained profanity
-    } else if (chatApiResponse?.status === AichatErrorType.PROFANITY_USER) {
-      // Logging to allow visibility into flagged content.
-      console.log(chatApiResponse);
-
-      thunkAPI.dispatch(
-        updateUserChatMessageStatus({
-          id: newMessage.id,
-          status: Status.PROFANITY_VIOLATION,
-        })
-      );
-    }
+    thunkAPI.dispatch(clearChatMessagePending());
+    chatApiResponse.messages.forEach(message =>
+      thunkAPI.dispatch(addChatMessage({...message, timestamp: Date.now()}))
+    );
   }
 );
 
@@ -398,67 +393,46 @@ const aichatSlice = createSlice({
   name: 'aichat',
   initialState,
   reducers: {
-    addChatMessage: (state, action: PayloadAction<ChatCompletionMessage>) => {
-      state.chatMessages.push(action.payload);
+    addChatMessage: (state, action: PayloadAction<ChatMessage>) => {
+      state.chatItemsCurrent.push(action.payload);
+    },
+    addModelUpdate: (state, action: PayloadAction<ModelUpdate>) => {
+      state.chatItemsCurrent.push(action.payload);
+    },
+    addNotification: (state, action: PayloadAction<Notification>) => {
+      state.chatItemsCurrent.push(action.payload);
     },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
-      const updatedMessages = [...state.chatMessages];
-      const messageToRemovePosition = updatedMessages.findIndex(
-        message => message.id === action.payload
+      const modelUpdateMessageInfo = getUpdateMessageLocation(
+        action.payload,
+        state
       );
-
-      // Only allow removing individual messages that are model updates and error notifications,
-      // as we want to retain user and bot message history
-      // when requesting model responses within a chat session.
-      // If we want to clear all history
-      // and start a new session, see clearChatMessages.
-      if (
-        messageToRemovePosition < 0 ||
-        (updatedMessages[messageToRemovePosition].role !== Role.MODEL_UPDATE &&
-          updatedMessages[messageToRemovePosition].role !==
-            Role.ERROR_NOTIFICATION)
-      ) {
+      if (!modelUpdateMessageInfo) {
         return;
       }
-      updatedMessages.splice(messageToRemovePosition, 1);
 
-      state.chatMessages = updatedMessages;
+      const {index, messageListKey} = modelUpdateMessageInfo;
+      state[messageListKey].splice(index, 1);
     },
     clearChatMessages: state => {
-      state.chatMessages = [];
+      state.chatItemsPast = [];
+      state.chatItemsCurrent = [];
       state.currentSessionId = undefined;
     },
+    setChatMessagePending: (state, action: PayloadAction<ChatMessage>) => {
+      state.chatMessagePending = action.payload;
+    },
+    clearChatMessagePending: state => (state.chatMessagePending = undefined),
     setNewChatSession: state => {
+      state.chatItemsPast.push(...state.chatItemsCurrent);
+      state.chatItemsCurrent = [];
       state.currentSessionId = undefined;
     },
     setChatSessionId: (state, action: PayloadAction<number>) => {
       state.currentSessionId = action.payload;
     },
-    setIsWaitingForChatResponse: (state, action: PayloadAction<boolean>) => {
-      state.isWaitingForChatResponse = action.payload;
-    },
     setShowWarningModal: (state, action: PayloadAction<boolean>) => {
       state.showWarningModal = action.payload;
-    },
-    updateUserChatMessageStatus: (
-      state,
-      action: PayloadAction<{id: number; status: AichatInteractionStatusValue}>
-    ) => {
-      const {id, status} = action.payload;
-      const chatMessage = state.chatMessages.find(msg => msg.id === id);
-      if (chatMessage && chatMessage.role === Role.USER) {
-        chatMessage.status = status;
-      }
-    },
-    updateChatMessageSession: (
-      state,
-      action: PayloadAction<{id: number; sessionId: number}>
-    ) => {
-      const {id, sessionId} = action.payload;
-      const chatMessage = state.chatMessages.find(msg => msg.id === id);
-      if (chatMessage) {
-        chatMessage.sessionId = sessionId;
-      }
     },
     setViewMode: (state, action: PayloadAction<ViewMode>) => {
       state.viewMode = action.payload;
@@ -493,8 +467,38 @@ const aichatSlice = createSlice({
         }
       }
 
+      // Make sure model ID is valid
+      reconciledAiCustomizations = {
+        ...reconciledAiCustomizations,
+        selectedModelId: validateModelId(
+          reconciledAiCustomizations.selectedModelId
+        ),
+      };
+
       state.savedAiCustomizations = reconciledAiCustomizations;
       state.currentAiCustomizations = reconciledAiCustomizations;
+      state.fieldVisibilities =
+        levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
+    },
+    resetToDefaultAiCustomizations: (
+      state,
+      action: PayloadAction<LevelAichatSettings | undefined>
+    ) => {
+      const levelAichatSettings = action.payload;
+
+      let defaultAiCustomizations: AiCustomizations =
+        levelAichatSettings?.initialCustomizations || EMPTY_AI_CUSTOMIZATIONS;
+
+      // Make sure model ID is valid
+      defaultAiCustomizations = {
+        ...defaultAiCustomizations,
+        selectedModelId: validateModelId(
+          defaultAiCustomizations.selectedModelId
+        ),
+      };
+
+      state.savedAiCustomizations = defaultAiCustomizations;
+      state.currentAiCustomizations = defaultAiCustomizations;
       state.fieldVisibilities =
         levelAichatSettings?.visibilities || DEFAULT_VISIBILITIES;
     },
@@ -557,28 +561,29 @@ const aichatSlice = createSlice({
   },
 });
 
-const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
-  for (const key of getTypedKeys(modelCardInfo)) {
-    if (key === 'isPublished') {
-      continue;
-    } else if (key === 'exampleTopics') {
-      if (
-        !modelCardInfo['exampleTopics'].filter(topic => topic.length).length
-      ) {
-        return false;
-      }
-    } else if (!modelCardInfo[key].length) {
-      return false;
+const getUpdateMessageLocation = (
+  id: number,
+  state: AichatState
+): MessageLocation | undefined => {
+  for (const messageListKey of messageListKeys) {
+    const messageList = state[messageListKey];
+
+    // Only allow removing individual messages that are model updates and error notifications,
+    // as we want to retain user and bot message history
+    // when requesting model responses within a chat session.
+    // If we want to clear all history
+    // and start a new session, see clearChatMessages.
+    const itemToRemovePosition = messageList.findIndex(
+      message =>
+        (isModelUpdate(message) && message.id === id) ||
+        (isNotification(message) && message.id === id)
+    );
+
+    if (itemToRemovePosition >= 0) {
+      return {index: itemToRemovePosition, messageListKey};
     }
   }
-
-  return true;
 };
-
-const allFieldsHidden = (fieldVisibilities: AichatState['fieldVisibilities']) =>
-  getTypedKeys(fieldVisibilities).every(
-    key => fieldVisibilities[key] === Visibility.HIDDEN
-  );
 
 // Selectors
 export const selectHasFilledOutModelCard = createSelector(
@@ -591,23 +596,42 @@ export const selectAllFieldsHidden = createSelector(
   allFieldsHidden
 );
 
+export const selectAllMessages = (state: {aichat: AichatState}) => {
+  const {chatItemsPast, chatItemsCurrent, chatMessagePending} = state.aichat;
+  const messages = [...chatItemsPast, ...chatItemsCurrent];
+  if (chatMessagePending) {
+    messages.push(chatMessagePending);
+  }
+  return messages;
+};
+
+export const selectHavePropertiesChanged = (state: RootState) =>
+  findChangedProperties(
+    state.aichat.savedAiCustomizations,
+    state.aichat.currentAiCustomizations
+  ).length > 0;
+
 // Actions not to be used outside of this file
-const {startSave} = aichatSlice.actions;
+const {
+  addChatMessage,
+  addModelUpdate,
+  startSave,
+  setChatMessagePending,
+  clearChatMessagePending,
+  setSavedAiCustomizations,
+} = aichatSlice.actions;
 
 registerReducers({aichat: aichatSlice.reducer});
 export const {
-  addChatMessage,
+  addNotification,
   removeUpdateMessage,
   setNewChatSession,
   setChatSessionId,
   clearChatMessages,
-  setIsWaitingForChatResponse,
   setShowWarningModal,
-  updateUserChatMessageStatus,
-  updateChatMessageSession,
+  resetToDefaultAiCustomizations,
   setViewMode,
   setStartingAiCustomizations,
-  setSavedAiCustomizations,
   setAiCustomizationProperty,
   setModelCardProperty,
   endSave,

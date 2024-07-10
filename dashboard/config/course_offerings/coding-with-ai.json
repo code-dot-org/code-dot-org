@@ -1,7 +1,6 @@
 {
   "key": "coding-with-ai",
   "display_name": "Coding with AI",
-  "category": "aiml",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",

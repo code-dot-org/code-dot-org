@@ -1,7 +1,6 @@
 {
   "key": "pilot-coursef-maker-2024",
   "display_name": "[Pilot] Course F Maker with micro:bit",
-  "category": "csf",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Course",

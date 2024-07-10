@@ -1,9 +1,12 @@
-import React from 'react';
-import {assert} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import React from 'react';
+
 import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Notification from '@cdo/apps/templates/Notification';
+
+import {assert} from '../../../../util/reconfiguredChai';
+
 import {
   fakeStudentAnnouncement,
   fakeTeacherAndStudentAnnouncement,

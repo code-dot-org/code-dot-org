@@ -1,18 +1,8 @@
 import {assert} from 'chai';
-import _ from 'lodash';
 import $ from 'jquery';
+import _ from 'lodash';
 import sinon from 'sinon';
-import fakeSectionData, {scriptId} from './fakeSectionData';
-import {
-  stubRedux,
-  restoreRedux,
-  registerReducers,
-  getStore,
-} from '@cdo/apps/redux';
-import {
-  NO_SECTION,
-  selectSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+
 import reducer, {
   LockStatus,
   beginSave,
@@ -28,6 +18,18 @@ import reducer, {
   setSectionLockStatus,
   refetchSectionLockStatus,
 } from '@cdo/apps/code-studio/lessonLockRedux';
+import {
+  stubRedux,
+  restoreRedux,
+  registerReducers,
+  getStore,
+} from '@cdo/apps/redux';
+import {
+  NO_SECTION,
+  selectSection,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+
+import fakeSectionData, {scriptId} from './fakeSectionData';
 
 // some arbitrary data in a form we expect to receive from the server
 // We get this from our call to /api/lock_status

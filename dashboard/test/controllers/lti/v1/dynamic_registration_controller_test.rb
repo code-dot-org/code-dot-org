@@ -37,7 +37,17 @@ class Lti::V1::DynamicRegistrationControllerTest < ActionController::TestCase
     }
     CacheClient.any_instance.stubs(:read).with(registration_id).returns(registration_data)
     response = {client_id: client_id}
-    Lti::DynamicRegistration.any_instance.stubs(:make_registration_request).returns(response)
+    LtiDynamicRegistrationClient.any_instance.stubs(:make_registration_request).returns(response)
+
+    Metrics::Events.expects(:log_event_with_session).with(
+      has_entries(
+        session: session,
+        event_name: 'lti_dynamic_registration_completed',
+        metadata: {
+          lms_name: Policies::Lti::LMS_PLATFORMS[:canvas_cloud][:name],
+        },
+      )
+    )
 
     post :create_registration, params: {email: email, registration_id: registration_id}
     assert_response :created
@@ -83,7 +93,7 @@ class Lti::V1::DynamicRegistrationControllerTest < ActionController::TestCase
       lms_account_name: name,
     }
     CacheClient.any_instance.stubs(:read).with(registration_id).returns(registration_data)
-    Lti::DynamicRegistration.any_instance.stubs(:make_registration_request).raises RuntimeError
+    LtiDynamicRegistrationClient.any_instance.stubs(:make_registration_request).raises RuntimeError
 
     post :create_registration, params: {email: email, registration_id: registration_id}
     assert_response :internal_server_error

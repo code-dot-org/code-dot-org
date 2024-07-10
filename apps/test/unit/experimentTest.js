@@ -1,7 +1,9 @@
+import sinon from 'sinon';
+
+import experiments from '@cdo/apps/util/experiments';
+
 import {assert} from '../util/reconfiguredChai';
 import {setExternalGlobals} from '../util/testUtils';
-import experiments from '@cdo/apps/util/experiments';
-import sinon from 'sinon';
 
 describe('experiments', function () {
   let mockedQueryString = '';
@@ -9,7 +11,7 @@ describe('experiments', function () {
 
   setExternalGlobals();
 
-  before(function () {
+  beforeAll(function () {
     experiments.getQueryString_ = function () {
       return mockedQueryString;
     };

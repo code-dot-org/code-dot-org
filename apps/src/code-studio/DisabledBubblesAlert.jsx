@@ -1,8 +1,10 @@
 import React from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import Alert from '@cdo/apps/templates/alert';
 import i18n from '@cdo/locale';
+
 import {disabledBubblesSupportArticle} from './disabledBubbles';
-import fontConstants from '@cdo/apps/fontConstants';
 
 /**
  * Component that displays a small notification at the top of the page when
@@ -13,9 +15,8 @@ export default class DisabledBubblesAlert extends React.Component {
     super(props);
 
     // Once alert has been dismissed, don't show again.
-    const disabledBubblesAlertSeen = sessionStorage.getItem(
-      'disabledBubblesAlertSeen'
-    );
+    const disabledBubblesAlertSeen =
+      sessionStorage.getItem('disabledBubblesAlertSeen') === 'true';
     this.state = {
       visible: !disabledBubblesAlertSeen,
     };

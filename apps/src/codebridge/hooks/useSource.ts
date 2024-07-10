@@ -1,12 +1,16 @@
-import {useMemo, useEffect, useCallback} from 'react';
+import {useMemo, useEffect, useCallback, useRef} from 'react';
 
 import header from '@cdo/apps/code-studio/header';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {
   getAppOptionsEditBlocks,
   getAppOptionsEditingExemplar,
 } from '@cdo/apps/lab2/projects/utils';
-import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {
+  setAndSaveProjectSource,
+  setProjectSource,
+} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -21,20 +25,31 @@ export const useSource = (defaultSources: ProjectSources) => {
     state => state.lab2Project.projectSource
   );
   const source = projectSource?.source as MultiFileSource;
-  const channelId = useAppSelector(state => state.lab.channel?.id);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const isEditingExemplarMode = getAppOptionsEditingExemplar();
   const initialSources = useInitialSources(defaultSources);
   const levelStartSource = useAppSelector(
     state => state.lab.levelProperties?.source
   );
+  const previousLevelIdRef = useRef<number | null>(null);
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+
+  const setSourceHelper = useMemo(
+    () => (newProjectSource: ProjectSources) => {
+      const saveFunction = isReadOnly
+        ? setProjectSource
+        : setAndSaveProjectSource;
+      dispatch(saveFunction(newProjectSource));
+    },
+    [dispatch, isReadOnly]
+  );
 
   const setSource = useMemo(
     () => (newSource: MultiFileSource) => {
-      dispatch(setAndSaveProjectSource({source: newSource}));
+      setSourceHelper({source: newSource});
     },
-    [dispatch]
+    [setSourceHelper]
   );
 
   const resetToStartSource = useCallback(() => {
@@ -56,11 +71,16 @@ export const useSource = (defaultSources: ProjectSources) => {
   }, [isStartMode, isEditingExemplarMode, levelId, source]);
 
   useEffect(() => {
-    // We reset the project when the channelId changes, as this means we are on a new level.
-    if (initialSources) {
-      dispatch(setAndSaveProjectSource(initialSources));
+    if (levelId && previousLevelIdRef.current !== levelId) {
+      // We reset the project when the levelId changes, as this means we are on a new level.
+      if (initialSources) {
+        setSourceHelper(initialSources);
+      }
+      if (levelId) {
+        previousLevelIdRef.current = levelId;
+      }
     }
-  }, [channelId, initialSources, dispatch]);
+  }, [initialSources, levelId, setSourceHelper]);
 
   return {source, setSource, resetToStartSource};
 };

@@ -108,7 +108,7 @@ sq-AL:
   cargobot_beyond_platformtext: iPad
   cargobot_beyond_shortdescription: Programo një krah roboti në iPad-in tënd
   carousel_heading_apps_games: Bëj aplikacionet ose lojrat e tua
-  carousel_heading_beginners: Tutoriale për Fillestarët
+  carousel_heading_beginners: Tutoriale për klasat K-8
   carousel_heading_beyond_devices: Aplikacione për telefona dhe tableta
   carousel_heading_beyond_javascript: Mësoni JavaScript
   carousel_heading_beyond_languages: Mësoni gjuhë të tjera programimi
@@ -509,6 +509,9 @@ sq-AL:
   dashboard_curriculum_middle_title: Burime për Mësues të Shkollave 9-vjeçare
   dashboard_curriculum_overview: Pamja e përgjithshme e Planit Mësimor K-5
   dashboard_debugging: 'Rregullimi:'
+  dashboard_error_other_section: Nëse jeni duke i zhvendosur nxënësit midis sesioneve
+    tuaja, zgjedhni sesionin tuaj nga menyja rënëse. Zgjedhni vetëm “Tjetër mësimdhënës”
+    për të zhvendosur nxënësit tuaj në një sesion të mësimdhënësit tjetër.
   dashboard_faq: Pyetjet më të shpeshta
   dashboard_faq_k5: Pyetje e shtruar shpesh të K-5
   dashboard_filter_all: Të gjitha
@@ -614,6 +617,7 @@ sq-AL:
   dashboard_question: Pyetje
   dashboard_responses_view: 'Shiko përgjigjet e mesazheve në:'
   dashboard_sections_account_creation_question: Kush i krijon llogaritë e studentëve?
+  dashboard_sections_both_sections: Dëshironi që nxënësit të jenë në të dy sesionet?
   dashboard_sections_choose_secret: Nëse ti dëshiron të sigurosh llogari për studentët
     e tu, zgjidh një mënyrë fshehje një <b>fjalë</b> ose një<b> figurë</b> për atë
     seksion.
@@ -626,8 +630,11 @@ sq-AL:
   dashboard_sections_login_type_explanation: Kjo tabelë shpjegonë se cili nga këto
     lloje logimi, <b>figura, fjala ose email-i</b>, do të duash të zgjedhësh për një
     seksion.
+  dashboard_sections_move_students: Zhvendos nxënësit
   dashboard_sections_name: 'Emri i sesionit:'
+  dashboard_sections_new_google_section: Seksioni i importit nga Google Classroom
   dashboard_sections_new_section: Seksion i ri
+  dashboard_sections_other_section: Mësimdhënës tjetër
   dashboard_sections_password_account_creation: Fjalëkalimi i krijuar nga studentet
   dashboard_sections_password_question: Çfarë përdorin studentët si një "fjalëkalim"?
   dashboard_sections_picture_account_creation: Një figurë e caktuar nga Code.org
@@ -649,7 +656,7 @@ sq-AL:
   dashboard_sections_switch_section: 'Ndrysho seksionin:'
   dashboard_sections_table_code: Pjesë Kodi
   dashboard_sections_table_course: Kurs
-  dashboard_sections_table_grade: Notë
+  dashboard_sections_table_grade: Klasa
   dashboard_sections_table_pairing_allowed: Programimi në ekip
   dashboard_sections_table_secret: Mënyra e logimit
   dashboard_sections_table_section: Pjesë
@@ -862,7 +869,7 @@ sq-AL:
   hoc2014_host: Organizo
   hoc2014_students: Studentët
   hoc2014_support: Mbështete &#x25BE;
-  hoc2014_teachers: Mesuesit
+  hoc2014_teachers: Mësuesit
   hoc2014_try: Provoje
   hoc2014_try_frozen: Artistët me Anna dhe Elsa, nga Frozen
   hoc2014_try_new_tutorial: Provo tutorialin tonë të ri Ora e Kodimit në beta
@@ -871,6 +878,7 @@ sq-AL:
   hoc2014_whatishoc: Çfarë është Ora e Kodimit?
   hoc2018_creativity_create: Krijo
   hoc2018_creativity_hoc_coming: Ora e kodimit po vjen…
+  hoc2018_creativity_what_will_you_create: Çfarë do të krijoni?
   hoc2018_dance_amazon_about_future_engineer_button: Mëso më shumë
   hoc2018_dance_keep_on_dancing_box_title: Vazhdoni të kërceni
   hoc2018_dance_party_box_title: Festë vallëzimi
@@ -891,6 +899,7 @@ sq-AL:
   hoc2018_mc_educators_box2_button: Shkarko
   hoc2018_mc_homepage_join_us: Na u bashko!
   hoc2018_mc_homepage_try_it: Provoje
+  hoc2018_mc_homepage_what_create: Çfarë do të krijoni?
   hoc2018_mc_page_title: Tutorialet e Orës së Kodimit Minecraft
   hoc2018_mc_start: Fillo
   hoc2018_mc_video_1min: 1 minutë
@@ -967,7 +976,7 @@ sq-AL:
     &ldquo; Fëmijët tanë &mdash; duke përfshirë edhe vajzat tona &mdash;
     kanë nevojë t'ju jepet mundësia të mësojnë shkencat kompjuterike. &rdquo;
     Sheryl, COO në Facebook
-  homepage_hero_text_stat_loc: "#loc rreshtat e kodimit të përgatitura nga studentët"
+  homepage_hero_text_stat_loc: "#loc rreshtat e kodimit të përgatitura nga nxënësit"
   homepage_hero_text_stat_served: 'Ora e Kodimit: #served dorëzuar'
   homepage_hero_text_stat_students: "#student_count llogari studentësh në Code Studio"
   homepage_hero_text_student1: |-
@@ -1028,6 +1037,7 @@ sq-AL:
   homepage_slot_text_title_hoc: Ora e Kodimit
   homepage_slot_text_title_students: Studentët
   homepage_solot_text_link_volunteer: Vullnetarizo për Orën e Kodimit
+  homepage_stats_teachers: mësimdhënësit përdorin Code.org
   hopscotch_beyond_gradelevel: Shkolla tetë vjeçare +
   hopscotch_beyond_longdescription: Tutorial për studentët në iPad duke përdorur gjuhën
     e programimit Hopscotch. Studentët do të ndërtojnë lojëra dhe aplikacione për
@@ -1492,6 +1502,9 @@ sq-AL:
   studiobar_title_nolink: Eksploro Code Studio
   submit: Dorëzo
   support_url: http://support.code.org/
+  syncing_students_instructions: 'Nëse seksioni juaj Code.org është i vjetëruar ndonjëherë
+    me listën tuaj të nxënësve në Google Classroom, klikoni në butonin “Sinkronizoni
+    nxënësit nga Google Classroom” në skedën “Menaxho nxënëst”:'
   teacherled_gradelevel: Moshat 5+
   teacherled_platformtext: Browserat e kohës, smartphones, tableta
   teachers_notes: Shënimet e Mësuesit
@@ -1585,8 +1598,8 @@ sq-AL:
   third_party_gradelevel_5to12: Klasat 5-12
   third_party_gradelevel_6plus: Klasat 6+
   third_party_gradelevel_8plus: Klasat 8+
-  third_party_gradelevel_kto2: Klasat ParaShk-2
-  third_party_gradelevel_kto8: Klasat ParaShk-8
+  third_party_gradelevel_kto2: Klasat K-2
+  third_party_gradelevel_kto8: Klasat K-8
   third_party_khan_btn_forum: Forumi CS Akademia Khan
   third_party_khan_btn_learn: Mëso CS me Akademin Khan
   third_party_khan_desc: |-
@@ -1726,6 +1739,7 @@ sq-AL:
   user_header_artist: 'Artisti '
   user_header_create: 'Krijo '
   user_header_create_account: Krijo llogari
+  user_header_create_account_low_cap: Krijo llogari
   user_header_dance: Festë vallëzimi
   user_header_flappy: Flappy
   user_header_gamelab: Game Lab
@@ -1734,6 +1748,7 @@ sq-AL:
   user_header_minecraft: Minecraft
   user_header_my_projects: Projektet e mia
   user_header_new_project: Projekti i ri
+  user_header_new_project_low_cap: Projekti i ri
   user_header_playlab: Play Lab
   user_header_settings: Cilësimet e llogarisë
   user_header_signin: Kyçu

@@ -599,7 +599,7 @@ nav.main .help_button .help_icon {
 }
 
 nav.main .help_button .help_contents {
-  top: 46px;
+  top: 44px;
 }
 
 nav.main #hamburger #hamburger-icon {
@@ -607,8 +607,22 @@ nav.main #hamburger #hamburger-icon {
   margin-inline-start: 6px;
 }
 
-@media screen and (max-width: 1010px) {
-  nav.main .create_menu,
+nav.main #hamburger #hamburger-contents {
+  top: 51px;
+  right: -3px;
+}
+
+/* Show the hamburger on small desktop
+  with appropriate links hidden */
+@media (min-width: 1024px) and (max-width: 1268px) {
+  nav.main .left ul li:nth-child(n+4),
+  nav.main #hamburger-contents > div:nth-child(-n+4) {
+    display: none !important;
+  }
+}
+
+/* Hide the main list of links on mobile */
+@media (max-width: 1023px) {
   nav.main .left ul {
     display: none;
   }

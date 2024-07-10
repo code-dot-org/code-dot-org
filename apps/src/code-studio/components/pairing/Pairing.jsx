@@ -1,12 +1,14 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import SectionSelector from './SectionSelector.jsx';
-import StudentSelector from './StudentSelector.jsx';
-import i18n from '@cdo/locale';
+
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import color from '@cdo/apps/util/color';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import i18n from '@cdo/locale';
+
+import SectionSelector from './SectionSelector.jsx';
+import StudentSelector from './StudentSelector.jsx';
 
 /**
  * A component for managing pair programming.

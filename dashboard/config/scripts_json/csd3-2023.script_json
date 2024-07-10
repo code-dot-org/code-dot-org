@@ -39,7 +39,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-11 16:45:35 UTC",
+    "serialized_at": "2024-06-21 21:28:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -21843,7 +21843,7 @@
     },
     {
       "understanding": 0,
-      "teacher_description": "No elements (shapes, sprites, or text) are placed on the screen using the coordinate system.",
+      "teacher_description": "Consists solely of sprites or shapes with no inclusion of text, or it lacks any elements (shapes, sprites, or text) positioned on the screen using the coordinate system.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 0,
@@ -21855,7 +21855,7 @@
     },
     {
       "understanding": 1,
-      "teacher_description": "A cumulative of at least a total of 3 elements are placed on the screen using the coordinate system (e.g 2 sprites & 1 line of text or 1 sprite, 1 shape, & 1 line of text)",
+      "teacher_description": "A cumulative total of at least 2 elements (one of which is text) are placed on the screen using the coordinate system (e.g., 1 sprite and 1 line of text or 1 shape and 1 line of text).",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 1,

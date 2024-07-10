@@ -1,0 +1,22 @@
+name 'unplugged_pattern block data_markdown'
+title 'pattern block data markdown'
+
+markdown <<MARKDOWN
+##Pattern Block Data
+<div>
+<img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/6bb3445bb60a44ff09d956b97fb419d5-image-1719938194541.36.32 AM.png" />
+
+<div style="float: left; width: 70%; padding-left:20px">
+<h4>
+<strong>This is an Unplugged Activity! </strong>
+</h4>
+
+> Ask your teacher for what you need:
+> - Items to sort by shape, color, or size
+> - A piece of paper and pencil
+
+
+</div>
+
+
+MARKDOWN

@@ -1,10 +1,12 @@
+import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
+import {loadPyodide, version} from 'pyodide';
+
 import {
   getUpdatedSourceAndDeleteFiles,
   importPackagesFromFiles,
+  resetGlobals,
   writeSource,
 } from './pythonHelpers/pythonScriptUtils';
-import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
-import {loadPyodide, version} from 'pyodide';
 
 async function loadPyodideAndPackages() {
   self.pyodide = await loadPyodide({
@@ -25,11 +27,13 @@ async function loadPyodideAndPackages() {
 }
 
 let pyodideReadyPromise = null;
+let pyodideGlobals = null;
 async function initializePyodide() {
   if (pyodideReadyPromise === null) {
     pyodideReadyPromise = loadPyodideAndPackages();
   }
   await pyodideReadyPromise;
+  pyodideGlobals = self.pyodide.globals.toJs();
 }
 
 // Get pyodide ready as soon as possible.
@@ -54,6 +58,7 @@ self.onmessage = async event => {
     self.postMessage
   );
   self.postMessage({type: 'updated_source', message: updatedSource, id});
+  resetGlobals(self.pyodide, pyodideGlobals);
   self.postMessage({type: 'run_complete', message: results, id});
 };
 

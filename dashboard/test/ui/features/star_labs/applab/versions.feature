@@ -1,7 +1,7 @@
+@no_phone
 @as_student
 Feature: App Lab Versions
 
-@no_phone
 Scenario: Script Level Versions
   Given I am on "http://studio.code.org/s/allthethings/lessons/18/levels/1?noautoplay=true"
   And I wait for the page to fully load

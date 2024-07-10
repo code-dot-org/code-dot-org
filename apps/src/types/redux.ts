@@ -10,6 +10,7 @@ import {JavalabState} from '@cdo/apps/javalab/redux/javalabRedux';
 import {JavalabViewState} from '@cdo/apps/javalab/redux/viewRedux';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {Lab2ProjectState} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {PredictLevelState} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {MazeState} from '@cdo/apps/maze/redux';
 import {MusicState} from '@cdo/apps/music/redux/musicRedux';
 import {LayoutState} from '@cdo/apps/redux/layout';
@@ -42,5 +43,6 @@ export interface RootState {
   mapbox: MapboxState;
   maze: MazeState;
   music: MusicState;
+  predictLevel: PredictLevelState;
   progress: ProgressState;
 }

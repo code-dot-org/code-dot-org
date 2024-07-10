@@ -12,7 +12,7 @@
  */
 import {SourcesStore} from './SourcesStore';
 import {ChannelsStore} from './ChannelsStore';
-import {Channel, Project, ProjectSources} from '../types';
+import {Channel, ProjectAndSources, ProjectSources} from '../types';
 import {currentLocation} from '@cdo/apps/utils';
 import LabMetricsReporter from '../Lab2MetricsReporter';
 import {ValidationError} from '../responseValidators';
@@ -72,7 +72,7 @@ export default class ProjectManager {
   }
 
   // Load the project from the sources and channels store.
-  async load(): Promise<Project> {
+  async load(): Promise<ProjectAndSources> {
     if (this.destroyed) {
       this.throwErrorIfDestroyed('load');
     }
@@ -304,7 +304,11 @@ export default class ProjectManager {
     // Only save the source if it has changed.
     if (this.sourcesToSave && sourceChanged) {
       try {
-        await this.sourcesStore.save(this.channelId, this.sourcesToSave);
+        await this.sourcesStore.save(
+          this.channelId,
+          this.sourcesToSave,
+          this.lastChannel.projectType
+        );
       } catch (error) {
         this.onSaveFail('Error saving sources', error as Error);
         return;

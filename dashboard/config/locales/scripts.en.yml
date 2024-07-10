@@ -10486,7 +10486,7 @@ en:
           title: Coding a Time Capsule (2023)
           description_audience: ''
           description_short: ''
-          description: "##Suggested Pre-Work for this Module\n\n**Social Studies:** Read any of these [Multiple Perspectives Read Alouds](https://docs.google.com/document/d/1GU2wLxQ2xkoYGrjJU2mbngZEDxOX7bEWTlh4Ns1cnh8/template/preview) together as a class to enrich the discussion questions throughout the module, especially regarding the importance of having your voice in your own story, and what happens if certain things are included or left out. \n\n**ELA:** Read poetry together: Read a few poems together as a class and practice naming the mood of each poem. Encourage students to share their interpretation, even if it’s different from someone else’s. Make sure that all students are familiar with the structure of a poem before Lesson 2, in which students will write their own poems.\n\n**Computer Science:**  Students will be working with sprites and events in the module. We recommend beginning with [Hello World](https://studio.code.org/s/coursee-2023/lessons/4) (45 minutes) where students will gain a basic introduction to sprites and how to animate them with events. "
+          description: "##Suggested Pre-Work for this Module\n\n**Social Studies:** Read any of these [Multiple Perspectives Read Alouds](https://docs.google.com/document/d/1GU2wLxQ2xkoYGrjJU2mbngZEDxOX7bEWTlh4Ns1cnh8/template/preview) together as a class to enrich the discussion questions throughout the module, especially regarding the importance of having your voice in your own story, and what happens if certain things are included or left out. \n\n**ELA:** Read poetry together: Read a few poems together as a class and practice naming the mood of each poem. Encourage students to share their interpretation, even if it’s different from someone else’s. Make sure that all students are familiar with the structure of a poem before Lesson 2, in which students will write their own poems.\n\n**Computer Science:**  Students will be working with sprites and events in the module. We recommend beginning with [Hello World](https://studio.code.org/s/coursee-2023/lessons/4) (45 minutes) where students will gain a basic introduction to sprites and how to animate them with events. \n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n"
           student_description: ''
         vpl-csd7-ayw-pilot-2022:
           lessons:
@@ -10567,7 +10567,7 @@ en:
           title: Coding Interactive Maps (2023)
           description_audience: ''
           description_short: ''
-          description: "##Suggested Pre-Work for this Module\n \n**Social Studies:** Students will discuss and code several different types of maps. To build a base understanding together you might consider reading one of these books about maps: [Maps by Aleksandra and Daniel Mizielinski](https://oladaniel.com/maps), [The Once Upon a Time Map Book by BG Hennessy](https://bghennessy.com/f/the-once-upon-a-time-map-book), or [City Atlas: Travel the World with 30 City Maps by Georgia Cherry](https://www.youtube.com/watch?v=LRy3daJLhtg).\n\nAdditionally, it may be beneficial to spend some time **building interactive maps with hands on materials in your classroom**: fill a bucket with colored strips of felt to represent roads, rivers, houses and more. Let students build and play in an imaginary town. Or after a shared experience (ie recess or field trip) create a topographical map using play-dough or salt dough.\n\n\n**Computer Science:** In this module students will be working a lot with sprites including changing the location and size of them and initiating behaviors. [CSFundamentals Course F Lesson 3](https://studio.code.org/s/coursef-2023/lessons/3) is a great introduction to two concepts at the heart of this all: sprites and behaviors.\n"
+          description: "##Suggested Pre-Work for this Module\n \n**Social Studies:** Students will discuss and code several different types of maps. To build a base understanding together you might consider reading one of these books about maps: [Maps by Aleksandra and Daniel Mizielinski](https://oladaniel.com/maps), [The Once Upon a Time Map Book by BG Hennessy](https://bghennessy.com/f/the-once-upon-a-time-map-book), or [City Atlas: Travel the World with 30 City Maps by Georgia Cherry](https://www.youtube.com/watch?v=LRy3daJLhtg).\n\nAdditionally, it may be beneficial to spend some time **building interactive maps with hands on materials in your classroom**: fill a bucket with colored strips of felt to represent roads, rivers, houses and more. Let students build and play in an imaginary town. Or after a shared experience (ie recess or field trip) create a topographical map using play-dough or salt dough.\n\n\n**Computer Science:** In this module students will be working a lot with sprites including changing the location and size of them and initiating behaviors. [CSFundamentals Course F Lesson 3](https://studio.code.org/s/coursef-2023/lessons/3) is a great introduction to two concepts at the heart of this all: sprites and behaviors.\n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n"
           student_description: ''
         blockchain-2023:
           lessons:
@@ -10628,7 +10628,7 @@ en:
           title: Simulating a Marine Ecosystem (2023)
           description_audience: ''
           description_short: ''
-          description: "##Suggested Pre-Work for this Module\n \n**Science:** Students will simulate a marine life ecosystem in Lessons 1 and 2. To build familiarity with this ecosystem, we recommend this [Ocean Animals Video](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42 minutes). \n\nIn Lesson 2, students will code several sustainable fishing practices. These are a few readings to build some background knowledge and deepen connections to the real world: [Understanding Overfishing](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing) (Monterey Bay Aquarium article), or [Mw,kwa Talks to the Loon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC) (Children's book).\n\n**Computer Science:** In this module, students will learn new coding concepts that might be difficult for new-to-computer science students. If students are not familiar with Code.org’s Sprite Lab we recommend trying [Swimming Fish with Sprite Lab](https://studio.code.org/s/coursee-2022/lessons/3) (55 minutes) for a basic introduction to the tool. \n\nThis module also uses an advanced CS concept called conditional statements. Students learn this concept in a scaffolded way, but some students may benefit from first engaging in this introduction to conditionals unplugged activity: [Conditionals with Cards](https://studio.code.org/s/coursed-2022/lessons/12) (50 minutes).\n"
+          description: "##Suggested Pre-Work for this Module\n \n**Science:** Students will simulate a marine life ecosystem in Lessons 1 and 2. To build familiarity with this ecosystem, we recommend this [Ocean Animals Video](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42 minutes). \n\nIn Lesson 2, students will code several sustainable fishing practices. These are a few readings to build some background knowledge and deepen connections to the real world: [Understanding Overfishing](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing) (Monterey Bay Aquarium article), or [Mw,kwa Talks to the Loon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC) (Children's book).\n\n**Computer Science:** In this module, students will learn new coding concepts that might be difficult for new-to-computer science students. If students are not familiar with Code.org’s Sprite Lab we recommend trying [Swimming Fish with Sprite Lab](https://studio.code.org/s/coursee-2022/lessons/3) (55 minutes) for a basic introduction to the tool. \n\nThis module also uses an advanced CS concept called conditional statements. Students learn this concept in a scaffolded way, but some students may benefit from first engaging in this introduction to conditionals unplugged activity: [Conditionals with Cards](https://studio.code.org/s/coursed-2022/lessons/12) (50 minutes).\n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n\n"
           student_description: ''
         csc-adaptations-2023:
           lessons:
@@ -10641,7 +10641,7 @@ en:
           title: Modeling Animal Adaptations (2023)
           description_audience: ''
           description_short: ''
-          description: "##Suggested Pre-Work for this Module\n \n**Science:** Students will simulate several animal adaptations. To build familiarity with adaptations, we recommend this [Living Things Change Video](https://www.youtube.com/watch?v=xDSFlRunlrU&list=PLdG-lk1eEmZnq4ZO2CzERCv6jZkYIHCbR&index=4) (4:36 minutes). \n\n**Computer Science:** In this module students will be working a lot with sprites including changing the location and size of them and initiating behaviors. [CSF Making Sprites](https://studio.code.org/s/coursef-2023/lessons/3) is a great introduction to two concepts at the heart of this all: sprites and behaviors.\n"
+          description: "##Suggested Pre-Work for this Module\n \n**Science:** Students will simulate several animal adaptations. To build familiarity with adaptations, we recommend this [Living Things Change Video](https://www.youtube.com/watch?v=xDSFlRunlrU&list=PLdG-lk1eEmZnq4ZO2CzERCv6jZkYIHCbR&index=4) (4:36 minutes). \n\n**Computer Science:** In this module students will be working a lot with sprites including changing the location and size of them and initiating behaviors. [CSF Making Sprites](https://studio.code.org/s/coursef-2023/lessons/3) is a great introduction to two concepts at the heart of this all: sprites and behaviors.\n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n\n"
           student_description: ''
         drafting:
           lessons: {}
@@ -10701,7 +10701,7 @@ en:
           title: Coding with Poetry (2023)
           description_audience: ''
           description_short: ''
-          description: "##Suggested Pre-Work for this Module\n \n**English Language Arts:** To prepare for this module and create some shared understanding of poetry together we recommend starting by reading poetry together: Read a few poems together as a class and practice naming the mood of each poem. Encourage students to share their interpretation, even if it’s different from someone else’s. Make sure that all students are familiar with the structure of a poem before Lesson 2, in which students will write their own poems.\n\n**Computer Science:**  As a warm up to the tool students can add art and animation to a classic poem in this [Poem Art](https://studio.code.org/s/poem-art-2021/lessons/1) (55 minutes) Hour of Code activity!\n\nAdditionally, in this module students will use event blocks to program changes at important lines in the poem. To start building skills with events try [Build a Flappy Game](https://studio.code.org/s/coursec-2023/lessons/12) (60 minutes) . "
+          description: "##Suggested Pre-Work for this Module\n \n**English Language Arts:** To prepare for this module and create some shared understanding of poetry together we recommend starting by reading poetry together: Read a few poems together as a class and practice naming the mood of each poem. Encourage students to share their interpretation, even if it’s different from someone else’s. Make sure that all students are familiar with the structure of a poem before Lesson 2, in which students will write their own poems.\n\n**Computer Science:**  As a warm up to the tool students can add art and animation to a classic poem in this [Poem Art](https://studio.code.org/s/poem-art-2021/lessons/1) (55 minutes) Hour of Code activity!\n\nAdditionally, in this module students will use event blocks to program changes at important lines in the poem. To start building skills with events try [Build a Flappy Game](https://studio.code.org/s/coursec-2023/lessons/12) (60 minutes). \n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n"
           student_description: ''
         poemmaker-2023:
           lessons: {}
@@ -10739,7 +10739,7 @@ en:
           title: Coding Book Covers (2023)
           description_audience: ''
           description_short: ''
-          description: "##Suggested Pre-Work for this Module\n \n**English Language Arts:** Building some familiarity with and background knowledge on book covers, the elements they all share (title, author, illustrations, etc) and design choices will help students focus. Here are two hands on activities to try in your classroom: \n- **Book sort**: Have groups of students organize books into genre piles, based only on the book cover. Students make inferences based on the book cover about what genre a book may fall under.\n- **Cover comparison**: show students multiple covers for the same book. Engage in a discussion about what is different in each cover and evaluation which version is best.\n\n\n**Computer Science:** In this module, students will learn the basics of coding using code.org's Sprite Lab. These activities may be supportive to engage in before starting the module:\n- Introduce students to the idea of **events** with this unplugged activity: [The Big Event](https://studio.code.org/s/course1/lessons/15/levels/1) (15-minute activity). The teacher will press buttons on a paper remote and students will react depending on which button is pressed. \n- [Making Sprites](https://studio.code.org/s/coursef-2023/lessons/3) (50 minutes) is a great self-paced introduction to the basics of coding with sprites.\n"
+          description: "##Suggested Pre-Work for this Module\n \n**English Language Arts:** Building some familiarity with and background knowledge on book covers, the elements they all share (title, author, illustrations, etc) and design choices will help students focus. Here are two hands on activities to try in your classroom: \n- **Book sort**: Have groups of students organize books into genre piles, based only on the book cover. Students make inferences based on the book cover about what genre a book may fall under.\n- **Cover comparison**: show students multiple covers for the same book. Engage in a discussion about what is different in each cover and evaluation which version is best.\n\n\n**Computer Science:** In this module, students will learn the basics of coding using code.org's Sprite Lab. These activities may be supportive to engage in before starting the module:\n- Introduce students to the idea of **events** with this unplugged activity: [The Big Event](https://studio.code.org/s/course1/lessons/15/levels/1) (15-minute activity). The teacher will press buttons on a paper remote and students will react depending on which button is pressed. \n- [Making Sprites](https://studio.code.org/s/coursef-2023/lessons/3) (50 minutes) is a great self-paced introduction to the basics of coding with sprites.\n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n"
           student_description: ''
         pre-express-2023:
           lesson_groups:
@@ -11117,7 +11117,7 @@ en:
           title: Coding a Geometric Star Quilt (2023)
           description_audience: ''
           description_short: ''
-          description: "##Suggested Pre-Work for this Module\n \n**Math:** Students will be working with shapes and angles in this module. To build familiarity, we recommend playing these active songs [Types of Angles song](https://www.youtube.com/watch?v=kGAGkysDunw&t=1s) (2:47 minutes) and [Angles & Lines](https://www.youtube.com/watch?v=an1tG3upvow) (3:06 minutes). \n\nThese are a few children's books to build some background knowledge and deepen connections to the real world:  \n- [Shota and the Star Quilt](https://www.amazon.com/Shota-Star-Quilt-Folk-Tales/dp/1840890231) Picture book about the tradition of quilting and how traditions can change over time\n- [Rainbow Weavers](https://www.amazon.com/Rainbow-Weaver-Tejedora-del-Arcoiris/dp/0892393742/ref=asc_df_0892393742/?tag=hyprod-20&linkCode=df0&hvadid=312089887152&hvpos=&hvnetw=g&hvrand=526653230527463008&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9033356&hvtargid=pla-522520885864&psc=1) This picture book is about weaving, not quilting, but it could deepen students' understanding of how indigenous traditions evolve.\n- [A Trapezoid is Not a Dinosaur](https://www.mathsthroughstories.org/a-trapezoid-is-not-a-dinosaur.html) by Suzanne Morris \n- [The Greedy Triangle](https://youngmathematicians.edc.org/picture_book/%EF%BB%BF%EF%BB%BFthe-greedy-triangle/) by Marilyn Burns\n- Any of these [Geometry Read Alouds](https://www.k-5mathteachingresources.com/geometry-read-aloud.html)\n\n**Computer Science:** In this module, students will use Code.org's Artist tool. If students are not yet familiar with it, we recommend trying [Intro to Artist lesson](https://studio.code.org/s/artist/lessons/1) (50 minutes) for a basic introduction to the tool. \n\n"
+          description: "##Suggested Pre-Work for this Module\n \n**Math:** Students will be working with shapes and angles in this module. To build familiarity, we recommend playing these active songs [Types of Angles song](https://www.youtube.com/watch?v=kGAGkysDunw&t=1s) (2:47 minutes) and [Angles & Lines](https://www.youtube.com/watch?v=an1tG3upvow) (3:06 minutes). \n\nThese are a few children's books to build some background knowledge and deepen connections to the real world:  \n- [Shota and the Star Quilt](https://www.amazon.com/Shota-Star-Quilt-Folk-Tales/dp/1840890231) Picture book about the tradition of quilting and how traditions can change over time\n- [Rainbow Weavers](https://www.amazon.com/Rainbow-Weaver-Tejedora-del-Arcoiris/dp/0892393742/ref=asc_df_0892393742/?tag=hyprod-20&linkCode=df0&hvadid=312089887152&hvpos=&hvnetw=g&hvrand=526653230527463008&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9033356&hvtargid=pla-522520885864&psc=1) This picture book is about weaving, not quilting, but it could deepen students' understanding of how indigenous traditions evolve.\n- [A Trapezoid is Not a Dinosaur](https://www.mathsthroughstories.org/a-trapezoid-is-not-a-dinosaur.html) by Suzanne Morris \n- [The Greedy Triangle](https://youngmathematicians.edc.org/picture_book/%EF%BB%BF%EF%BB%BFthe-greedy-triangle/) by Marilyn Burns\n- Any of these [Geometry Read Alouds](https://www.k-5mathteachingresources.com/geometry-read-aloud.html)\n\n**Computer Science:** In this module, students will use Code.org's Artist tool. If students are not yet familiar with it, we recommend trying [Intro to Artist lesson](https://studio.code.org/s/artist/lessons/1) (50 minutes) for a basic introduction to the tool. \n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n\n"
           student_description: ''
         focus-on-creativity4-2023:
           lessons: {}
@@ -14909,7 +14909,10 @@ en:
           title: Coding with AI
           description_audience: ''
           description_short: This unit uses AI to simplify concepts, solve problems, generate code, and instill ethical AI practices for confident learners in a rapidly changing world.
-          description: This unit empowers students to become confident, ethical coders. Students learn how to leverage generative AI tools to help explain code, tackle problems, and even generate code. More than just coding, this unit emphasizes ethical considerations and responsible use of AI, preparing students for the ever-evolving tech landscape.
+          description: |-
+            This unit empowers students to become confident, ethical coders. Students learn how to leverage generative AI tools to help explain code, tackle problems, and even generate code. More than just coding, this unit emphasizes ethical considerations and responsible use of AI, preparing students for the ever-evolving tech landscape.
+
+            Take a look at the [Getting Started with Coding with AI](https://docs.google.com/document/d/1hLR7WS8KmFxrjoM2Tr28rgfa0IZQ8otksw8ujYkdW3Y/edit?usp=sharing) guide for information on implementation options, what you and your students will need for this module, and helpful information to learn more about chatbots and large language models.
           student_description: |-
             In this unit, you'll learn how to use AI like help you:
 
@@ -14962,11 +14965,11 @@ en:
               name: Implementing with Code.org
           lesson_groups: {}
           name: self-paced-pl-microbit-2024-1
-          title: Introduction to Maker K-5 Units
+          title: Getting Started with Code.org [Optional]
           description_audience: ''
           description_short: ''
-          description: "#### This module is a short introduction to both Code.org and this professional learning course. \n\n#### **You will:**\n* #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n* #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** 30 minutes"
-          student_description: "#### This module is a short introduction to both Code.org and this professional learning course. \n\n#### **You will:**\n* #### Get an introduction to Code.org and CS Fundamentals Maker with micro:bit.\n* #### add objective \n* #### Learn how to engage in this professional learning course.\n\n#### **Suggested Time:** 30 minutes"
+          description: "#### This module is a short introduction to using the Code.org platform.\n\n#### **You will:**\n* #### Get an introduction to Code.org \n* #### Learn to navigate the teacher features on the Code.org platform\n\n#### **Suggested Time:** 30 minutes"
+          student_description: "#### This module is a short introduction to using the Code.org platform.\n\n#### **You will:**\n* #### Get an introduction to Code.org \n* #### Learn to navigate the teacher features on the Code.org platform\n\n#### **Suggested Time:** 30 minutes"
         self-paced-pl-microbit-2024-2:
           lessons:
             lesson-1:
@@ -15055,7 +15058,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: melissambcc
-          title: Course C (2nd-3rd Grade)
+          title: 2nd Grade
           description_audience: ''
           description_short: ''
           description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n\n\n#### **Suggested Time:** 30 minutes\n\n\n"
@@ -15074,7 +15077,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: melissambcd
-          title: Course D (3rd-4th Grade)
+          title: 3rd Grade
           description_audience: ''
           description_short: ''
           description: |+
@@ -15104,7 +15107,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: melissambce
-          title: Course E (4th-5th) Grade
+          title: 4th Grade
           description_audience: ''
           description_short: ''
           description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n\n\n#### **Suggested Time:** 30 minutes\n\n\n"
@@ -15113,7 +15116,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: melissambcf
-          title: Course F (5th-6th Grade)
+          title: 5th Grade
           description_audience: ''
           description_short: ''
           description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Code using events with Code.org.\n* #### Explore an unplugged coding lesson. \n* #### Create and code with variables.\n\n\n#### **Suggested Time:** 40 minutes\n\n\n"
@@ -15518,29 +15521,25 @@ en:
           description_audience: ''
           description_short: Learn how to effectively and ethically use generative AI chatbots in the writing and research process in these standalone lessons.
           description: |-
-            This unit consists of two standalone lessons -- one about writing with AI and one about researching with AI. You may teach one or both of them. Both are meant to be used in Humanities classes, to help demystify ethical and effective use of chatbots in Humanities subject areas. Both lessons encourage students to explore the uses of these rapidly growing technologies and reflect on when and where to use them. If you wish to teach one but not the other, [click here to learn about hiding lessons](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students)
+            This unit consists of two standalone lessons -- one about writing with AI and one about researching with AI. You may teach one or both of them. Both are meant to be used in humanities classes, to help demystify ethical and effective use of chatbots in humanities subject areas. Both lessons encourage students to explore the uses of these rapidly growing technologies and reflect on when and where to use them. If you wish to teach one but not the other, [**click here to learn about hiding lessons**](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students)
 
-            In the Writing Process Lesson students will:
-            * Prompt a chatbot to help brainstorm, draft or revise an essay.
-            * Discuss with your classmates which of these uses supported your learning, versus detracted from it, and why.
-            * Build Values for using AI with your class.
+            In the Writing Process lesson, students will:
+            * Assess the ethical implications of using AI for writing assistance, considering issues such as originality, intellectual integrity, and the balance between human creativity and AI assistance
+            * Craft effective prompts to interact with LLMs to generate useful and relevant responses for various writing tasks
 
-            In the Research Process Lesson, students will:
-            * Use a chatbot and a search engine to research and verify information.
-            * Learn how to more effectively prompt a chatbot in the process.
-            * Discuss what kind of research AI is helpful for.
+            In the Research Process lesson, students will:
+            * Evaluate the effectiveness and appropriateness of LLM-generated responses in different research scenarios
+            * Use a search engine and an AI chatbot to research and verify information
 
-            **Support for teachers**: You can learn more about bringing AI lessons to your classroom through our [AI 101 for Teachers](https://code.org/ai/pl/101) series. AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education.
+            **Support for teachers**: You can learn more about bringing AI lessons to your classroom through our [**AI 101 for Teachers**](https://code.org/ai/pl/101) series. AI 101 for Teachers is a free, foundational online professional learning series for any teacher and educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education.
           student_description: |-
-            In the Writing Process Lesson you will:
-            * Prompt a chatbot to help brainstorm, draft or revise an essay.
-            * Discuss with your classmates which of these uses supported your learning, versus detracted from it, and why.
-            * Build Values for using AI with your class.
+            In the Writing Process lesson, you will:
+            * Assess the ethical implications of using AI for writing assistance, considering issues such as originality, intellectual integrity, and the balance between human creativity and AI assistance
+            * Craft effective prompts to interact with LLMs to generate useful and relevant responses for various writing tasks
 
             In the Research Process Lesson, you will:
-            * Use a chatbot and a search engine to research and verify information.
-            * Learn how to more effectively prompt a chatbot in the process.
-            * Discuss what kind of research AI is helpful for.
+            * Evaluate the effectiveness and appropriateness of LLM-generated responses in different research scenarios
+            * Use a search engine and an AI chatbot to research and verify information
         self-paced-pl-csd1-2024:
           lesson_groups:
             lessonGroup-2:
@@ -16386,6 +16385,8 @@ en:
               name: AI and Machine Learning
             lesson-5:
               name: Code.org's AI Module
+            lesson-3:
+              name: Next Steps
           lesson_groups: {}
           name: k5aisandbox-2024
           title: K5 AI Sandbox
@@ -16404,7 +16405,9 @@ en:
             lesson-7:
               name: Game Jam
             lesson-8:
-              name: Getting Started
+              name: Next Steps
+            lesson-9:
+              name: Getting Started with Code.org (Optional)
           lesson_groups: {}
           name: k5gamedesignsandbox-2024
           title: K5 Game Design Sandbox
@@ -16425,7 +16428,7 @@ en:
             lessonGroup-5:
               display_name: End of Course Project
           title: Course A (2024)
-          description: 'Course A offers a computer science curriculum for beginning readers, including Kindergarten students. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety. '
+          description: "Course A offers a computer science curriculum for beginning readers, including Kindergarten students. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety. \n\n**New to teaching CS?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/k5-onlinepd-2023)."
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers.
           description_audience: 'Ages: 4-7'
@@ -16446,7 +16449,12 @@ en:
             lessonGroup-6:
               display_name: End of Course Project
           title: Course B (2024)
-          description: We developed Course B with first graders in mind. While the concepts in Course B parallel those in Course A, students learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
+          description: |-
+            We developed Course B with first graders in mind. While the concepts in Course B parallel those in Course A, students learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
+
+            **New to teaching CS?**
+
+            Get started with our [self-paced Professional Learning](https://studio.code.org/s/k5-onlinepd-2023).
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
           description_short: An introduction to computer science for pre-readers. Similar to Course A, but with added concept depth.
           description_audience: 'Ages: 5-8'
@@ -16467,7 +16475,12 @@ en:
             end_of_course_project:
               display_name: End of Course Project
           title: Course C (2024)
-          description: We developed Course C for students in second grade. Students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
+          description: |-
+            We developed Course C for students in second grade. Students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
+
+            **New to teaching CS?**
+
+            Get started with our [self-paced Professional Learning](https://studio.code.org/s/k5-onlinepd-2023).
           student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
           description_short: Learn the basics of computer science and create your own art, stories, and games.
           description_audience: 'Ages: 6-10'
@@ -16492,7 +16505,7 @@ en:
             lessonGroup-7:
               display_name: Computing Systems
           title: Course D (2024)
-          description: 'We created course D for students in third grade.  The course begins with a review of the concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, while loops, conditionals, and more. '
+          description: "We created course D for students in third grade.  The course begins with a review of the concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, while loops, conditionals, and more. \n\n**New to teaching CS?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/k5-onlinepd-2023)."
           student_description: Learn about loops, conditionals, and events. Beyond coding, learn about digital citizenship.
           description_short: Learn about conditional statements. Create your own art, games, and even a dance party.
           description_audience: 'Ages: 7-11'
@@ -16517,7 +16530,12 @@ en:
             end_of_course_project:
               display_name: End of Course Project
           title: Course E (2024)
-          description: We created Course E for students in fourth grade. The course begins with an introduction to the Sprite Lab programming tool. Students will learn to make fun, interactive projects that reinforce what they’ll learn about online safety. Following these lessons, students will engage in more complex coding. Students will learn about nested loops, functions, and conditionals. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
+          description: |-
+            We created Course E for students in fourth grade. The course begins with an introduction to the Sprite Lab programming tool. Students will learn to make fun, interactive projects that reinforce what they’ll learn about online safety. Following these lessons, students will engage in more complex coding. Students will learn about nested loops, functions, and conditionals. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
+
+            **New to teaching CS?**
+
+            Get started with our [self-paced Professional Learning](https://studio.code.org/s/k5-onlinepd-2023).
           student_description: Start coding with algorithms, events, loops, conditionals, and functions! By the end of this course, design and create a game or drawing that you can share with your friends and family.
           description_short: Learn the basics of sprites, nested loops, and functions.
           description_audience: 'Ages: 8-12'
@@ -16536,7 +16554,12 @@ en:
             lessonGroup-6:
               display_name: End of Course Project
           title: Course F (2024)
-          description: We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.
+          description: |-
+            We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn about variables in a variety of contexts. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects to share with their friends and family.
+
+            **New to teaching CS?**
+
+            Get started with our [self-paced Professional Learning](https://studio.code.org/s/k5-onlinepd-2023).
           student_description: Learn to code with sprites and variables, and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
           description_short: Learn all the concepts in Computer Science Fundamentals and create your own art, story or game.
           description_audience: 'Ages: 9-13'
@@ -16874,7 +16897,7 @@ en:
           title: Grade 2 - Maker with micro:bit
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nNot sure where to begin? Start with the first micro:bit project pathway and work your way through all three pathways, ordered by increasing difficulty. Each of the three pathways has two components. First, students will develop their coding knowledge by completing skill-building lessons from Code.org's CS Fundamentals course. Then, students will go to the micro:bit platform to code their physical computing projects. \n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning](https://studio.code.org/courses/microbitmakermodule-2024). \n\nThis self-paced course covers the following topics: \n- How to use the Code.org curriculum \n- How to setup a classroom on Code.org \n- How to use micro:bits \n- How to use the “Meet your micro:bit” project\n- How to setup a classroom on micro:bit\n- How to assess student learning \n"
           student_description: ''
         grade3-maker-2024:
           lessons: {}
@@ -16889,7 +16912,7 @@ en:
           title: Grade 3 - Maker with micro:bit
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nNot sure where to begin? Start with the first micro:bit project pathway and work your way through all three pathways, ordered by increasing difficulty. Each of the three pathways has two components. First, students will develop their coding knowledge by completing skill-building lessons from Code.org’s CS Fundamentals course. Then, students will go to the micro:bit platform to code their physical computing projects.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning](https://studio.code.org/courses/microbitmakermodule-2024). \n\nThis self-paced course covers the following topics: \n- How to use the Code.org curriculum \n- How to setup a classroom on Code.org \n- How to use micro:bits \n- How to use the “Meet your micro:bit” project\n- How to setup a classroom on micro:bit\n- How to assess student learning \n"
           student_description: ''
         grade4-maker-2024:
           lessons: {}
@@ -16904,7 +16927,7 @@ en:
           title: Grade 4 - Maker with micro:bit
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nNot sure where to begin? Start with the first micro:bit project pathway and work your way through all three pathways, ordered by increasing difficulty. Each of the three pathways has two components. First, students will develop their coding knowledge by completing skill-building lessons from Code.org’s CS Fundamentals course. Then, students will go to the micro:bit platform to code their physical computing projects.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning](https://studio.code.org/courses/microbitmakermodule-2024). \n\nThis self-paced course covers the following topics: \n- How to use the Code.org curriculum \n- How to setup a classroom on Code.org \n- How to use micro:bits \n- How to use the “Meet your micro:bit” project\n- How to setup a classroom on micro:bit\n- How to assess student learning \n"
           student_description: ''
         grade5-maker-2024:
           lessons: {}
@@ -16919,7 +16942,7 @@ en:
           title: Grade 5 - Maker with micro:bit
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "Bring hands-on technology learning to Computer Science with our Maker course, designed around the micro:bit physical computing device. This course bridges the gap between digital and physical worlds, enabling students to transfer their computer programs into real-world applications with the micro:bit. Students will learn fundamental coding principles such as sequencing, loops, conditional logic, and event handling, and they will gain practical experience in how hardware and software can work together.\n\nNot sure where to begin? Start with the first micro:bit project pathway and work your way through all three pathways, ordered by increasing difficulty. Each of the three pathways has two components. First, students will develop their coding knowledge by completing skill-building lessons from Code.org’s CS Fundamentals course. Then, students will go to the micro:bit platform to code their physical computing projects.\n\n**New to micro:bit?** \n\nGet started with our [self-paced Professional Learning](https://studio.code.org/courses/microbitmakermodule-2024). \n\nThis self-paced course covers the following topics: \n- How to use the Code.org curriculum \n- How to setup a classroom on Code.org \n- How to use micro:bits \n- How to use the “Meet your micro:bit” project\n- How to setup a classroom on micro:bit\n- How to assess student learning \n"
           student_description: ''
         k5-ai-data-2024:
           lessons:
@@ -16932,7 +16955,12 @@ en:
           title: How AI Makes Decisions
           description_audience: ''
           description_short: ''
-          description: ''
+          description: |-
+            Dive into the exciting world of artificial intelligence with Code.org’s innovative module, “How AI Makes Decisions,” tailored for upper elementary school students! This module is named to highlight its focus on unraveling the processes that AI systems use to analyze training data and make decisions. In these five lessons, AI concepts are broken down into engaging, age-appropriate lessons that focus on the critical role of data. Students will use Code.org’s AI tools for fun, educational AI experiences while gaining insight into how AI works behind the scenes. Each lesson provides several opportunities for class discussions about AI, bias, and the impact of AI tools on daily life.
+
+            **New to teaching AI?**
+
+            Get started with our [self-paced Professional Learning](https://studio.code.org/courses/elementaryai-2024).
           student_description: ''
         music-tutorial-2024:
           lessons:
@@ -17006,7 +17034,13 @@ en:
           title: Game Design (2024)
           description_audience: ''
           description_short: ''
-          description: ''
+          description: |2-
+
+            The Game Design module provides an exciting introduction to creating and codng games using Sprite Lab, a block-based programming environment.  In the first lesson, students will learn the basics of creating and animating sprites and making them interactive. The second lesson introduces variables, teaching students how to use them for tracking and modifying game elements like scores. The third lesson dives into game mechanics, focusing on player movement, obstacles, and win/lose conditions. The fourth lesson is a Game Jam where students collaboratively design and code a game based on a randomly generated theme. The final lesson emphasizes user feedback and data-driven improvements, enabling students to refine their games and enhance the player experience.
+
+            **New to teaching Game Design?**
+
+            Get started with our [self-paced Professional Learning](https://studio.code.org/courses/3-5gamedesign-2024).
           student_description: ''
         gettingstarted-k5:
           lessons:
@@ -17029,6 +17063,10 @@ en:
               name: 'Lesson 2: Making Sense of Data'
             lesson-3:
               name: Crafting Effective Questions From Data
+            lesson-4:
+              name: Cleaning Data
+            lesson-5:
+              name: Python Lab Playground
           lesson_groups: {}
           name: data-science-playground
           title: Data Science Playground!
@@ -17767,6 +17805,248 @@ en:
           lesson_groups: {}
           name: sandbox-csf-f
           title: SANDBOX CSF Course F
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-foundations-unit1:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-foundations-unit1
+          title: Foundations of CS Unit 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-foundations-unit2:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-foundations-unit2
+          title: Foundations of CS Unit 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-foundations-unit3:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-foundations-unit3
+          title: Artificial Intelligence (AI) and Machine Learning
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-foundations-unit4:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-foundations-unit4
+          title: Networks and the Internet
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-foundations-unit5:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-foundations-unit5
+          title: Cybersecurity and Global Impacts
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-foundations-unit6:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-foundations-unit6
+          title: Intro to Programming with Turtle
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-foundations-unit1:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-foundations-unit1
+          title: Computer Systems and Devices
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-foundations-unit2:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-foundations-unit2
+          title: Representing Information
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        gen-ai-customizing-pilot-v2:
+          lessons:
+            lesson-11:
+              name: Issue Statements
+            lesson-12:
+              name: User Feedback
+            lesson-13:
+              name: 'Project: Solving Community Problems with Chatbots'
+          lesson_groups: {}
+          name: gen-ai-customizing-pilot-v2
+          title: Customizing Language Models
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-computer-vision:
+          lessons:
+            lesson-1:
+              name: Introduction to Computer Vision
+          lesson_groups: {}
+          name: self-paced-pl-computer-vision
+          title: self-paced-pl-computer-vision
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-coding-with-ai:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-coding-with-ai
+          title: self-paced-pl-coding-with-ai
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        computer-vision:
+          title: Computer Vision
+          description: |-
+            This unit introduces students to the fundamentals, applications, and ethical implications of computer vision technologies. The unit starts with basic concepts and gradually builds up to complex topics, including data collection, model training, prototype development, and the integration of user feedback. Each lesson is designed to enhance students' understanding through hands-on activities and discussions culminating in the development of a prototype. The curriculum emphasizes critical thinking, problem-solving, and ethical considerations, equipping students with the skills to develop and evaluate technology that addresses real-world problems. Through iterative design and user-centered approaches, students not only learn the technical aspects of computer vision but also its impact on society, preparing them to be thoughtful innovators in a rapidly advancing technological landscape.
+
+            Take a look at the [**Getting Started with Computer Vision**](https://docs.google.com/document/d/1G5NztlmSlZ3pAN09mnze1eGzuLXQVvVjoqzTHqeEgk0/edit?usp=sharing) for information about what you and your students will need for this module.
+          student_description: In this unit, you'll dive into how computers interpret and understand visual information from the world around us. You'll start with the basics of how images are captured and processed and move on to more complex topics like training data, model development, and the ethical implications of artificial intelligence. Through a series of interactive lessons, hands-on activities, and project-based learning, you'll get to design your own computer vision app. Along the way, you'll learn not only about the technology itself but also how it can be used responsibly to make a positive impact in various fields like healthcare, automotive, and public safety.
+          description_short: ''
+          description_audience: ''
+          lessons:
+            lesson-1:
+              name: Pre-Module Survey
+            lesson-2:
+              name: Mid-Module Survey
+            lesson-3:
+              name: Post-Module Survey
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Getting Started
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-4:
+              display_name: Mid-Module Survey
+            lessonGroup-5:
+              display_name: Content, Part 2
+            lessonGroup-6:
+              display_name: Wrapping Up
+          name: computer-vision
+        gen-ai-standalone:
+          lessons:
+            lesson-1:
+              name: Explore Chatbots and Large Language Models
+          lesson_groups: {}
+          name: gen-ai-standalone
+          title: Generative AI Goes to Congress
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-computer-vision-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-computer-vision-2024
+          title: Preparing to Teach Computer Vision
+          description_audience: ''
+          description_short: ''
+          description: "**You will:** \n* Get an introduction to Teaching Computer Vision\n* Define and identify different uses of computer vision\n* Utilize the design process to solve problems\n* Explore Computer Vision lessons\n\n**Suggested Time:** 90 minutes"
+          student_description: ''
+        self-paced-pl-coding-with-ai-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-coding-with-ai-2024
+          title: Preparing to Teach Coding with AI
+          description_audience: ''
+          description_short: ''
+          description: "**You will:**\n* Get an introduction to Coding with AI\n* Learn about different Large Language Models\n* Practice using AI to help with the coding process\n* Explore Coding with AI lessons\n\n**Suggested Time:** 120 minutes \n"
+          student_description: "**You will: **\n* Get an introduction to Coding with AI\n* Learn about different Large Language Models\n* Practice using AI to help with the coding process\n* Explore Coding with AI lessons\n\n**Suggested Time:** 120 minutes "
+        self-paced-pl-coding-w-ai-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-coding-w-ai-2024
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-pl-getting-started-cv-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-getting-started-cv-2024
+          title: Getting Started with Code.org [Optional]
+          description_audience: ''
+          description_short: ''
+          description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes"
+          student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes"
+        self-paced-pl-getting-started-coding-w-ai-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-getting-started-coding-w-ai-2024
+          title: Getting Started with Code.org [Optional]
+          description_audience: ''
+          description_short: ''
+          description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes"
+          student_description: "**You will:**\n\n* Get an introduction to Code.org’s mission. \n* Learn how to navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n* Locate and use course lesson plans and teacher resources.\n* Learn how to access support while teaching Code.org curricula.\n\n**Suggested time:** 80 minutes"
+        data-science-sample:
+          lessons:
+            lesson-1:
+              name: Data Science
+          lesson_groups: {}
+          name: data-science-sample
+          title: Data Science Sample
+          description_audience: ''
+          description_short: Sample progression for data science
+          description: ''
+          student_description: ''
+        sandbox-welcome-to-maker:
+          lessons:
+            lesson-1:
+              name: Welcome to Maker with micro:bit
+          lesson_groups: {}
+          name: sandbox-welcome-to-maker
+          title: Introduction to Teaching Maker with micro:bit
+          description_audience: ''
+          description_short: ''
+          description: "#### This lesson gives an overview of this professional learning module.\n\n#### You will: \n- #### get an introduction to the Maker with micro:bit course\n- ####plan your path for this professional learning module\n\n####**Suggested Time:**  10 minutes"
+          student_description: "#### This lesson gives an overview of this professional learning module.\n\n#### You will: \n- #### get an introduction to the Maker with micro:bit course\n- ####plan your path for this professional learning module\n\n####**Suggested Time:**  10 minutes"
+        pl-maker-shallowcopy:
+          lessons: {}
+          lesson_groups: {}
+        maker-shallow:
+          lessons:
+            lesson-1:
+              name: DanceParty
+          lesson_groups: {}
+          name: maker-shallow
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        gen-ai-staging:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Foundations of Gen AI
+            lessonGroup-3:
+              display_name: Customizing Language Models
+            lessonGroup-4:
+              display_name: User-Centered Design
+          name: gen-ai-staging
+          title: ''
           description_audience: ''
           description_short: ''
           description: ''

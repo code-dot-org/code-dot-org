@@ -3,6 +3,12 @@
 var msg = require('./locale');
 
 /**
+ * This block destructures the local variables for use within this ejs template.
+ */
+var page = locals.page;
+var level = locals.level;
+
+/**
  * Template to create function for filling in shovels.
  */
 var fillShovelfuls = function(n) { -%>

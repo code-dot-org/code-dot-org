@@ -1,11 +1,13 @@
 import $ from 'jquery';
 import sinon from 'sinon';
-import {assert, expect} from '../../util/reconfiguredChai';
-import project from '@cdo/apps/code-studio/initApp/project';
-import commonMsg from '@cdo/locale';
+
 import applabMsg from '@cdo/applab/locale';
-import * as testUtils from '../../util/testUtils';
-import * as utils from '@cdo/apps/utils';
+import Applab from '@cdo/apps/applab/applab';
+import applabCommands from '@cdo/apps/applab/commands';
+import * as constants from '@cdo/apps/applab/constants';
+import designMode from '@cdo/apps/applab/designMode';
+import {reducers} from '@cdo/apps/applab/redux/applab';
+import project from '@cdo/apps/code-studio/initApp/project';
 import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {
   getStore,
@@ -13,13 +15,25 @@ import {
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import {reducers} from '@cdo/apps/applab/redux/applab';
+import commonReducers from '@cdo/apps/redux/commonReducers';
 import pageConstantsReducer from '@cdo/apps/redux/pageConstants';
-import Applab from '@cdo/apps/applab/applab';
-import designMode from '@cdo/apps/applab/designMode';
-import applabCommands from '@cdo/apps/applab/commands';
-import * as constants from '@cdo/apps/applab/constants';
 import shareWarnings from '@cdo/apps/shareWarnings';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
+import * as utils from '@cdo/apps/utils';
+import commonMsg from '@cdo/locale';
+
+import {assert, expect} from '../../util/reconfiguredChai';
+import setupBlocklyGlobal from '../../util/setupBlocklyGlobal';
+import * as testUtils from '../../util/testUtils';
+
+window.Applab = Applab;
+
+jest.mock('@cdo/apps/code-studio/initApp/project', () => ({
+  ...jest.requireActual('@cdo/apps/code-studio/initApp/project'),
+  getCurrentId: jest.fn().mockReturnValue('some-project-id'),
+  exceedsAbuseThreshold: jest.fn(),
+  hasPrivacyProfanityViolation: jest.fn(),
+}));
 
 function setupVizDom() {
   // Create a sample DOM to test against
@@ -42,6 +56,8 @@ function setupVizDom() {
 }
 
 describe('Applab', () => {
+  setupBlocklyGlobal();
+
   testUtils.sandboxDocumentBody();
   testUtils.setExternalGlobals();
 
@@ -543,12 +559,45 @@ describe('Applab', () => {
   });
 
   describe('Applab.init()', () => {
-    before(() => sinon.stub(Applab, 'render'));
-    after(() => Applab.render.restore());
+    beforeAll(() => sinon.stub(Applab, 'render'));
+    afterAll(() => Applab.render.restore());
+    let containerDiv, codeWorkspaceDiv;
 
     beforeEach(() => {
       stubRedux();
+      registerReducers(commonReducers);
       registerReducers({...reducers, pageConstants: pageConstantsReducer});
+
+      codeWorkspaceDiv = document.createElement('div');
+      codeWorkspaceDiv.id = 'codeWorkspace';
+      document.body.appendChild(codeWorkspaceDiv);
+      containerDiv = document.createElement('div');
+      containerDiv.id = 'foo';
+      containerDiv.innerHTML = `
+      <button id="runButton" />
+      <button id="resetButton" />
+      <div id="visualizationColumn" />
+      <div id="toolbox-header" />
+      `;
+      document.body.appendChild(containerDiv);
+
+      let testDivApplab = document.createElement('div');
+      testDivApplab.setAttribute('id', 'divApplab');
+      document.body.appendChild(testDivApplab);
+
+      studioApp().init({
+        enableShowCode: true,
+        containerId: 'foo',
+        level: {
+          id: 'some-level-id',
+          editCode: true,
+          codeFunctions: {},
+        },
+        dropletConfig: {
+          blocks: [],
+        },
+        skin: {},
+      });
     });
 
     afterEach(restoreRedux);

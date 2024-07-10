@@ -1,6 +1,5 @@
+import animationListReducer from '@cdo/apps/p5lab/redux/animationList';
 import reducer, * as animationPicker from '@cdo/apps/p5lab/redux/animationPicker';
-import {expect} from '../../../util/reconfiguredChai';
-var Goal = animationPicker.Goal;
 import {
   getStore,
   registerReducers,
@@ -8,7 +7,10 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
-import animationListReducer from '@cdo/apps/p5lab/redux/animationList';
+
+import {expect} from '../../../util/reconfiguredChai';
+
+var Goal = animationPicker.Goal;
 
 const testAnimation = {
   name: 'test_animation',
@@ -226,7 +228,7 @@ describe('animationPicker', function () {
     let show = animationPicker.show;
     let saveSelectedAnimations = animationPicker.saveSelectedAnimations;
 
-    before(() => {
+    beforeAll(() => {
       stubRedux();
       registerReducers(commonReducers);
       registerReducers({animationPicker: reducer});
@@ -234,7 +236,7 @@ describe('animationPicker', function () {
       getStore().dispatch(show(Goal.NEW_ANIMATION, true));
     });
 
-    after(() => {
+    afterAll(() => {
       restoreRedux();
     });
 

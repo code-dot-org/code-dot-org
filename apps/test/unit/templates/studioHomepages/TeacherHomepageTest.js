@@ -45,13 +45,9 @@ describe('TeacherHomepage', () => {
   beforeEach(() => {
     server = sinon.fakeServer.create();
     server.respondWith('POST', '/dashboardapi/sections', successResponse());
-    sinon.stub(sessionStorage, 'getItem');
-    sinon.stub(sessionStorage, 'setItem');
   });
   afterEach(() => {
     server.restore();
-    sessionStorage.setItem.restore();
-    sessionStorage.getItem.restore();
   });
 
   it('shows a Header Banner that says My Dashboard', () => {
@@ -67,24 +63,20 @@ describe('TeacherHomepage', () => {
 
   it('logs an Amplitude event only on first render', () => {
     const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
-    sessionStorage.getItem.withArgs('logged_teacher_session').returns(false);
+    sessionStorage.setItem('logged_teacher_session', 'false');
     setUp();
 
-    expect(sessionStorage.setItem).to.have.been.calledOnce;
-    expect(sessionStorage.setItem).to.have.been.calledWith(
-      'logged_teacher_session',
-      'true'
-    );
+    expect(sessionStorage.getItem('logged_teacher_session')).to.equal('true');
     expect(analyticsSpy).to.have.been.calledOnce;
     expect(analyticsSpy.firstCall.args).to.deep.eq([
       'Teacher Login',
       {'user id': 42},
+      'Both',
     ]);
 
     // After setting the session value to true, we should not see sessionStorage.setItem or analyticsSpy called again.
-    sessionStorage.getItem.withArgs('logged_teacher_session').returns('true');
+    sessionStorage.setItem('logged_teacher_session', 'true');
     setUp();
-    expect(sessionStorage.setItem).to.have.been.calledOnce;
     expect(analyticsSpy).to.have.been.calledOnce;
 
     analyticsSpy.restore();
@@ -187,12 +179,6 @@ describe('TeacherHomepage', () => {
       courses: courses,
       topCourse: topCourse,
     });
-  });
-
-  // TODO - This test can be removed when the corresponding section is removed
-  it('renders PL has moved section if plCourses exist', () => {
-    const wrapper = setUp();
-    wrapper.find('pl-courses-placeholder');
   });
 
   it('renders a TeacherResources component', () => {

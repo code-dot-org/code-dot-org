@@ -1,19 +1,22 @@
-import React from 'react';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
-import {UnconnectedUnitCard as UnitCard} from '@cdo/apps/lib/levelbuilder/unit-editor/UnitCard';
+import React from 'react';
+import {Provider} from 'react-redux';
 import sinon from 'sinon';
-import {nonUserFacingGroup} from './LessonGroupCardTest';
+
+import {UnconnectedUnitCard as UnitCard} from '@cdo/apps/lib/levelbuilder/unit-editor/UnitCard';
+import reducers, {
+  init,
+} from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 import {
   stubRedux,
   restoreRedux,
   getStore,
   registerReducers,
 } from '@cdo/apps/redux';
-import reducers, {
-  init,
-} from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
-import {Provider} from 'react-redux';
+
+import {expect} from '../../../../util/reconfiguredChai';
+
+import {nonUserFacingGroup} from './LessonGroupCardTest';
 
 describe('UnitCard', () => {
   let defaultProps,
