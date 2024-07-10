@@ -8,6 +8,19 @@
     align-items: flex-start;
     margin: 0;
     padding: 0;
+    position: relative;
+
+    &::after {
+      // Adds a border to the bottom of the tabs
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      z-index: -1;
+      border-bottom: 1px solid black;
+    }
 
     li {
       list-style: none;
@@ -40,6 +53,11 @@
   }
 
   &.tabs-light {
+
+    ul::after {
+      border-color: $light_gray_200;
+    }
+
     li button {
       color: $light_gray_800;
 
@@ -75,6 +93,10 @@
   }
 
   &.tabs-dark {
+    ul::after {
+      border-color: $light_gray_800;
+    }
+
     li button {
       color: $light_gray_200;
 
@@ -117,6 +139,10 @@
   }
 
   &.tabs-light {
+    ul::after {
+      border-color: $light_gray_200;
+    }
+
     li button {
       color: $light_gray_800;
       background-color: $light_gray_50;
@@ -162,6 +188,10 @@
   }
 
   &.tabs-dark {
+    ul::after {
+      border-color: $light_gray_800;
+    }
+
     li button {
       color: $light_gray_200;
       background-color: $light_gray_950;
