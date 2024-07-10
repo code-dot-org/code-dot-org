@@ -28,7 +28,7 @@ var page = locals.page;
       </block>
     <% } -%>
     <% if (level > 8) { -%>
-      <block type="maze_forever"></block>
+      <block type="maze_forever" id="repeatForever"></block>
       <% if (level === 13 || level === 15) { -%>
         <block type="maze_if"><title name="DIR">isPathLeft</title></block>
       <% } else if (level === 14 || level === 16) { -%>
