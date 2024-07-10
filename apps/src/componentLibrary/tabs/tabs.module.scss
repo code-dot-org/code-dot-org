@@ -142,12 +142,14 @@
         color: $light_primary_500;
         background-color: $light_white;
         border: 1px solid $light_gray_200 !important;
+        border-bottom-color: transparent !important;
       }
 
       &.selectedTab {
         color: $light_primary_500;
         background-color: $light_white;
         border: 1px solid $light_gray_200;
+        border-bottom-color: transparent;
       }
 
       &:disabled {
