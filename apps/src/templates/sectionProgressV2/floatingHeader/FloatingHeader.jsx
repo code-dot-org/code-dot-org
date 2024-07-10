@@ -157,7 +157,9 @@ function FloatingHeader({
   );
 
   return (
-    <div className={styles.floatingHeader}>
+    // The floating header is a copy of the header that isn't visible.
+    // Screen readers should ignore it and only need the original/non-floating header..
+    <div className={styles.floatingHeader} aria-hidden={true}>
       {shouldFloatHeader && (
         <div className={styles.floatHeader}>
           <div
