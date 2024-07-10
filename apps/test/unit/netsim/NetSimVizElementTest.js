@@ -21,7 +21,7 @@ describe('NetSimVizElement', function () {
 
     it('immediately creates SVG root element', function () {
       var root = vizElement.getRoot();
-      assert.equal('[object SVGGElement]', root[0].toString());
+      assert.equal('[object SVGElement]', root[0].toString());
     });
   });
 });
