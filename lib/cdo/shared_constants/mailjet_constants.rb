@@ -5,7 +5,7 @@ module MailJetConstants
         production: {
           default: 5_831_384,
           'es-MX': 5_973_069,
-          'ex-ES': 5_973_070
+          'es-ES': 5_973_070
         },
         staging: {
           default: 5_917_989
