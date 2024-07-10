@@ -51,37 +51,29 @@ const MultiResponses = ({scriptData, showCorrectAnswer = false}) => {
   // Get the number of answers and a list of correct answers.
   // The correct answers will be the letters for the correct answers, ex. ['A', 'C']
   const [numAnswers, correctAnswers] = useMemo(() => {
+    let answers = [];
+    let correctIndices = [];
     if (scriptData.level.properties.answers) {
       // If the level is a multi/contained level, the answers are in the level properties.
-      const answers = scriptData.level.properties.answers;
-
-      const correctAnswers = answers.reduce((acc, cur, i) => {
-        if (cur.correct) {
-          acc.push([...LETTERS][i]);
-        }
-        return acc;
-      }, []);
-
-      return [answers.length, correctAnswers];
+      answers = scriptData.level.properties.answers;
+      correctIndices = answers
+        .filter(answer => answer.correct)
+        .map(answer => answers.indexOf(answer));
     } else if (scriptData.level.properties.predict_settings) {
       // If the level is a predict level (lab2) the answers are in predict_settings.
       const predictSettings = scriptData.level.properties.predict_settings;
       // We should only be trying to load this component if this is a multiple choice question.
       if (predictSettings.multipleChoiceOptions) {
-        const answers = predictSettings.multipleChoiceOptions;
+        answers = predictSettings.multipleChoiceOptions;
 
         // solution is a comma-separated list of strings.
-        const correctAnswers = predictSettings.solution
+        correctIndices = predictSettings.solution
           .split(',')
-          .reduce((acc, cur, i) => {
-            acc.push([...LETTERS][answers.indexOf(cur)]);
-            return acc;
-          }, []);
-
-        return [answers.length, correctAnswers];
+          .map(answer => answers.indexOf(answer));
       }
     }
-    return [0, []];
+    const correctAnswers = correctIndices.map(index => LETTERS.charAt(index));
+    return [answers.length, correctAnswers];
   }, [
     scriptData.level.properties.answers,
     scriptData.level.properties.predict_settings,
