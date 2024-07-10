@@ -1,14 +1,16 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import color from '@cdo/apps/util/color';
-import i18n from '@cdo/locale';
-import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {levelWithProgress, studentShape} from './types';
-import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
+import React from 'react';
+import {connect} from 'react-redux';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
+import color from '@cdo/apps/util/color';
+import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
+import i18n from '@cdo/locale';
+
+import {levelWithProgress, studentShape} from './types';
 
 class StudentTable extends React.Component {
   static propTypes = {

@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import Button from '@cdo/apps/templates/Button';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import i18n from '@cdo/locale';
+
 import color from '../../util/color';
 
 export default class NameFailureDialog extends React.Component {

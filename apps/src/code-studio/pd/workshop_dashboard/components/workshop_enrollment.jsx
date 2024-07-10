@@ -1,17 +1,20 @@
 /**
  * Displays nicely-formatted session time for a workshop.
  */
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import _ from 'lodash';
 import {Tabs, Tab} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import {enrollmentShape} from '../types';
-import WorkshopEnrollmentSchoolInfo from './workshop_enrollment_school_info';
-import WorkshopEnrollmentPreSurvey from './workshop_enrollment_pre_survey';
+
 import {
   SubjectNames,
   ActiveCourseWorkshops,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
+import {enrollmentShape} from '../types';
+
+import WorkshopEnrollmentPreSurvey from './workshop_enrollment_pre_survey';
+import WorkshopEnrollmentSchoolInfo from './workshop_enrollment_school_info';
 
 export default class WorkshopEnrollment extends React.Component {
   static propTypes = {

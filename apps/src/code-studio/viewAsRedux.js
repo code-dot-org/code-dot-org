@@ -3,8 +3,8 @@
  * or as a instructor
  */
 
-import {makeEnum, reload} from '@cdo/apps/utils';
 import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
+import {makeEnum, reload} from '@cdo/apps/utils';
 
 export const ViewType = makeEnum('Participant', 'Instructor');
 

@@ -8,16 +8,18 @@ import $ from 'jquery';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {connect} from 'react-redux';
 import {Grid, Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {connect} from 'react-redux';
+
 import Spinner from '../components/spinner';
-import {PermissionPropType, WorkshopAdmin} from './permission';
-import SignUpPanel from './SignUpPanel';
-import IntroPanel from './IntroPanel';
+
 import AttendancePanel from './AttendancePanel';
+import DetailsPanel from './DetailsPanel';
 import EndWorkshopPanel from './EndWorkshopPanel';
 import EnrollmentsPanel from './EnrollmentsPanel';
-import DetailsPanel from './DetailsPanel';
+import IntroPanel from './IntroPanel';
+import {PermissionPropType, WorkshopAdmin} from './permission';
+import SignUpPanel from './SignUpPanel';
 
 export class Workshop extends React.Component {
   static contextTypes = {
