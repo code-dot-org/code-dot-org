@@ -17,28 +17,28 @@ import PanelsLabView from '@cdo/apps/panels/PanelsLabView';
 import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo';
 import Weblab2View from '@cdo/apps/weblab2/Weblab2View';
 
-export type AppName =
-  | 'aichat'
-  | 'applab'
-  | 'calc'
-  | 'dance'
-  | 'eval'
-  | 'flappy'
-  | 'gamelab'
-  | 'javalab'
-  | 'music'
-  | 'thebadguys'
-  | 'weblab'
-  | 'turtle'
-  | 'craft'
-  | 'studio'
-  | 'bounce'
-  | 'poetry'
-  | 'pythonlab'
-  | 'spritelab'
-  | 'standalone_video'
-  | 'panels'
-  | 'weblab2';
+// export type AppName =
+//   | 'aichat'
+//   | 'applab'
+//   | 'calc'
+//   | 'dance'
+//   | 'eval'
+//   | 'flappy'
+//   | 'gamelab'
+//   | 'javalab'
+//   | 'music'
+//   | 'thebadguys'
+//   | 'weblab'
+//   | 'turtle'
+//   | 'craft'
+//   | 'studio'
+//   | 'bounce'
+//   | 'poetry'
+//   | 'pythonlab'
+//   | 'spritelab'
+//   | 'standalone_video'
+//   | 'panels'
+//   | 'weblab2';
 
 // Configuration for how a Lab should be rendered
 export interface AppProperties {
@@ -71,7 +71,7 @@ export interface AppProperties {
   setupFunction?: () => void;
 }
 
-export const lab2Entrypoints: {[appName in AppName]?: AppProperties} = {
+export const lab2Entrypoints: Record<string, AppProperties> = {
   music: {
     backgroundMode: true,
     node: <MusicView />,
@@ -114,3 +114,5 @@ export const lab2Entrypoints: {[appName in AppName]?: AppProperties} = {
     theme: Theme.DARK,
   },
 };
+
+export type AppName = keyof typeof lab2Entrypoints;
