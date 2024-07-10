@@ -1,6 +1,6 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {appendSystemMessage} from '@codebridge/redux/consoleRedux';
-import React from 'react';
+import React, {useState} from 'react';
 
 import {
   navigateToNextLevel,
@@ -26,6 +26,7 @@ interface PermissionResponse {
 const ControlButtons: React.FunctionComponent = () => {
   const {onRun} = useCodebridgeContext();
   const {loading, data} = useFetch('/api/v1/users/current/permissions');
+  const [hasRun, setHasRun] = useState(false);
   const dispatch = useAppDispatch();
 
   const source = useAppSelector(
@@ -64,6 +65,7 @@ const ControlButtons: React.FunctionComponent = () => {
         ? (data as PermissionResponse)
         : {permissions: []};
       onRun(runTests, dispatch, parsedPermissions.permissions, source);
+      setHasRun(true);
     } else {
       dispatch(appendSystemMessage("We don't know how to run your code."));
     }
@@ -89,6 +91,11 @@ const ControlButtons: React.FunctionComponent = () => {
     }
   };
 
+  // We disabled navigation is we are still loading, or if this is a submittable level,
+  // the user has not submitted yet, and the user has not run their code during this session.
+  const disableNavigation =
+    loading || (isSubmittable && !hasSubmitted && !hasRun);
+
   return (
     <div className={moduleStyles.controlButtonsContainer}>
       <Button
@@ -111,7 +118,7 @@ const ControlButtons: React.FunctionComponent = () => {
       <Button
         text={getNavigationButtonText()}
         onClick={handleNavigation}
-        disabled={loading}
+        disabled={disableNavigation}
         color={'purple'}
         className={moduleStyles.navigationButton}
         size={'s'}
