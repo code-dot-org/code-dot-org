@@ -583,19 +583,7 @@ module LevelsHelper
 
     # TODO: post-firebase-cleanup, remove this whole if statement: #56994
     if DatablockStorageController::SUPPORTED_PROJECT_TYPES.include? @level.game.app
-      channel_id = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
-
-      # TODO: post-firebase-cleanup, remove ProjectUseDatablockStorage once we reach 100% datablock storage: #56994
-      # storage_options[:useDatablockStorage] = ProjectUseDatablockStorage.use_data_block_storage_for?(channel_id)
       storage_options[:useDatablockStorage] = true
-
-      # TODO: post-firebase-cleanup, remove all code in this unless block: #56994
-      unless storage_options[:useDatablockStorage]
-        storage_options[:firebaseName] = CDO.firebase_name
-        storage_options[:firebaseAuthToken] = firebase_auth_token
-        storage_options[:firebaseSharedAuthToken] = firebase_shared_auth_token
-        storage_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
-      end
     end
 
     storage_options
