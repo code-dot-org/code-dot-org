@@ -15,10 +15,6 @@
           "choices": [
             {
               "value": "better_understand_course",
-              "text": "Better understand Code.org's K-5 curriculum"
-            },
-            {
-              "value": "better_understand_course_k5_game_design",
               "text": "Better understand Code.org's game design curriculum for K-5 students"
             },
             {
@@ -73,7 +69,7 @@
         {
           "type": "radiogroup",
           "name": "plan_to_teach_modules",
-          "title": "Are you planning to teach one a Code.org K-5 computer science course? ",
+          "title": "Are you planning to teach one Code.org K-5 computer science course? ",
           "choices": [
             {
               "value": "no",
