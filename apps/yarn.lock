@@ -8112,13 +8112,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"async@npm:0.9.0":
-  version: 0.9.0
-  resolution: "async@npm:0.9.0"
-  checksum: 31c29c216d3f00b3f8ff610f5d6a9f9155525fa1395367b00c8d0580d556166e1882485c04d50e67b3b8216bde635e69682ab0d4fa9a5a42d95bf84d5de230b3
-  languageName: node
-  linkType: hard
-
 "async@npm:3.2.3":
   version: 3.2.3
   resolution: "async@npm:3.2.3"
@@ -8788,7 +8781,6 @@ __metadata:
     history: ^2.0.1
     html2canvas: ^0.5.0-beta4
     htmlhint: ^1.1.4
-    http-server: ^0.9.0
     identity-obj-proxy: ^3.0.0
     immutable: 3.8.1
     intro.js: ^7.2.0
@@ -10088,13 +10080,6 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"colors@npm:1.0.3":
-  version: 1.0.3
-  resolution: "colors@npm:1.0.3"
-  checksum: 234e8d3ab7e4003851cdd6a1f02eaa16dabc502ee5f4dc576ad7959c64b7477b15bd21177bab4055a4c0a66aa3d919753958030445f87c39a253d73b7a3637f5
-  languageName: node
-  linkType: hard
-
 "colors@npm:~1.1.2":
   version: 1.1.2
   resolution: "colors@npm:1.1.2"
@@ -10501,13 +10486,6 @@ canvg@gabelerner/canvg:
     object-assign: ^4
     vary: ^1
   checksum: ced838404ccd184f61ab4fdc5847035b681c90db7ac17e428f3d81d69e2989d2b680cc254da0e2554f5ed4f8a341820a1ce3d1c16b499f6e2f47a1b9b07b5006
-  languageName: node
-  linkType: hard
-
-"corser@npm:~2.0.0":
-  version: 2.0.1
-  resolution: "corser@npm:2.0.1"
-  checksum: 9ff6944eda760c8c3118747a636afc3ede53b41e7b9960513a15b88032209a728e630ae4b41e20a941e34da129fe9094d1f5d95123ef64ac2e16cdad8dce9c87
   languageName: node
   linkType: hard
 
@@ -11701,20 +11679,6 @@ canvg@gabelerner/canvg:
   version: 0.2.0
   resolution: "eastasianwidth@npm:0.2.0"
   checksum: 7d00d7cd8e49b9afa762a813faac332dee781932d6f2c848dc348939c4253f1d4564341b7af1d041853bc3f32c2ef141b58e0a4d9862c17a7f08f68df1e0f1ed
-  languageName: node
-  linkType: hard
-
-"ecstatic@npm:^1.4.0":
-  version: 1.4.1
-  resolution: "ecstatic@npm:1.4.1"
-  dependencies:
-    he: ^0.5.0
-    mime: ^1.2.11
-    minimist: ^1.1.0
-    url-join: ^1.0.0
-  bin:
-    ecstatic: ./lib/ecstatic.js
-  checksum: 0ee53509a25a601a306a224d24b80e2f9ed4f33285dad67cf22a14683f09e9f673282feac32eb1a422ebe576d8086c18eedb35cdf60ea269c2d36f8cc2c43984
   languageName: node
   linkType: hard
 
@@ -13148,13 +13112,6 @@ es6-shim@latest:
   version: 0.4.14
   resolution: "eventemitter2@npm:0.4.14"
   checksum: 214603a32aba5f49c0d7a68202a0d5e01e89b3c872c7c32172e80b513aaa06ee74d54de212705483a01c03dda7b396874b3576cbe9bc96d92bae0912dad89eb2
-  languageName: node
-  linkType: hard
-
-"eventemitter3@npm:1.x.x":
-  version: 1.2.0
-  resolution: "eventemitter3@npm:1.2.0"
-  checksum: 1ce3c91340f5038bd611c31a32c69167ccc598049a6844f58400583b4d70f5c0c2d13a201c763624f81de461498fe2767d0bfadcb2c0c417e37556a481b00c1d
   languageName: node
   linkType: hard
 
@@ -15433,15 +15390,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"he@npm:^0.5.0":
-  version: 0.5.0
-  resolution: "he@npm:0.5.0"
-  bin:
-    he: bin/he
-  checksum: f39da362d871daf36ad487aa3fcac8bd2d9b350ea378f4f3854dceacf73c2663ec672fc8c18e708c983f4d76ebd38e24640c46d0cd92dd3493aaf3a19ca93967
-  languageName: node
-  linkType: hard
-
 "history@npm:^2.0.1":
   version: 2.1.2
   resolution: "history@npm:2.1.2"
@@ -15835,35 +15783,6 @@ es6-shim@latest:
     follow-redirects: ^1.0.0
     requires-port: ^1.0.0
   checksum: f5bd96bf83e0b1e4226633dbb51f8b056c3e6321917df402deacec31dd7fe433914fc7a2c1831cf7ae21e69c90b3a669b8f434723e9e8b71fd68afe30737b6a5
-  languageName: node
-  linkType: hard
-
-"http-proxy@npm:^1.8.1":
-  version: 1.11.1
-  resolution: "http-proxy@npm:1.11.1"
-  dependencies:
-    eventemitter3: 1.x.x
-    requires-port: 0.x.x
-  checksum: 2bd44ed6f45d49de125862df3818edd64fa6bcdc54baa509c4d3665e19dd3c4a95b80de3e7d9550b95b920c5e235564ff21eb9aff7f74b4df81892555d096ec7
-  languageName: node
-  linkType: hard
-
-"http-server@npm:^0.9.0":
-  version: 0.9.0
-  resolution: "http-server@npm:0.9.0"
-  dependencies:
-    colors: 1.0.3
-    corser: ~2.0.0
-    ecstatic: ^1.4.0
-    http-proxy: ^1.8.1
-    opener: ~1.4.0
-    optimist: 0.6.x
-    portfinder: 0.4.x
-    union: ~0.4.3
-  bin:
-    hs: ./bin/http-server
-    http-server: ./bin/http-server
-  checksum: d74ad0acfb4c8187883d29192c203e15d031a3668e83cb080a905180b302a5ce40b34e1a28a886469ae3c06f8b39f88907584dfa847a999de636a277e0eaae32
   languageName: node
   linkType: hard
 
@@ -19320,7 +19239,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"mime@npm:1.6.0, mime@npm:^1.2.11":
+"mime@npm:1.6.0":
   version: 1.6.0
   resolution: "mime@npm:1.6.0"
   bin:
@@ -19472,7 +19391,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"minimist@npm:^1.1.0, minimist@npm:^1.2.0, minimist@npm:^1.2.5":
+"minimist@npm:^1.2.0, minimist@npm:^1.2.5":
   version: 1.2.5
   resolution: "minimist@npm:1.2.5"
   checksum: 86706ce5b36c16bfc35c5fe3dbb01d5acdc9a22f2b6cc810b6680656a1d2c0e44a0159c9a3ba51fb072bb5c203e49e10b51dcd0eec39c481f4c42086719bae52
@@ -19613,7 +19532,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"mkdirp@npm:0.5.x, mkdirp@npm:^0.5.1, mkdirp@npm:^0.5.4":
+"mkdirp@npm:^0.5.1, mkdirp@npm:^0.5.4":
   version: 0.5.5
   resolution: "mkdirp@npm:0.5.5"
   dependencies:
@@ -20723,15 +20642,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"opener@npm:~1.4.0":
-  version: 1.4.2
-  resolution: "opener@npm:1.4.2"
-  bin:
-    opener: opener.js
-  checksum: 4a2d02e7e716fdde52e7ef77db34b1c40e6fd51decb933df9d70ef3da55226c95dfa2f8d92dfb84902cf17d6f3a06190a04f4d0da7aaad01aa9b11eb24ba0edd
-  languageName: node
-  linkType: hard
-
 "opentype.js@npm:^0.4.9":
   version: 0.4.11
   resolution: "opentype.js@npm:0.4.11"
@@ -21526,16 +21436,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"portfinder@npm:0.4.x":
-  version: 0.4.0
-  resolution: "portfinder@npm:0.4.0"
-  dependencies:
-    async: 0.9.0
-    mkdirp: 0.5.x
-  checksum: fde853556ae33eac7ce93a68e0301e5534376d237d4ff963e1ba5e09bd5641086709dacab7c811b01d17d4642ec04ee93b6e47e3960112b56316300930050ac4
-  languageName: node
-  linkType: hard
-
 "portfinder@npm:^1.0.17":
   version: 1.0.32
   resolution: "portfinder@npm:1.0.32"
@@ -22178,13 +22078,6 @@ es6-shim@latest:
   version: 6.7.0
   resolution: "qs@npm:6.7.0"
   checksum: dfd5f6adef50e36e908cfa70a6233871b5afe66fbaca37ecc1da352ba29eb2151a3797991948f158bb37fccde51bd57845cb619a8035287bfc24e4591172c347
-  languageName: node
-  linkType: hard
-
-"qs@npm:~2.3.3":
-  version: 2.3.3
-  resolution: "qs@npm:2.3.3"
-  checksum: 8ff84a6300bd7c3207c7aada3f349c39bd845761fd804c7dbd9b7146474c8654603a7491090d083a9c86846c3a719ef6f5ef81e1bb2839bd3b435d4a937ce83a
   languageName: node
   linkType: hard
 
@@ -23947,13 +23840,6 @@ es6-shim@latest:
   version: 1.2.0
   resolution: "requireindex@npm:1.2.0"
   checksum: 50d8b10a1ff1fdf6aea7a1870bc7bd238b0fb1917d8d7ca17fd03afc38a65dcd7a8a4eddd031f89128b5f0065833d5c92c4fef67f2c04e8624057fe626c9cf94
-  languageName: node
-  linkType: hard
-
-"requires-port@npm:0.x.x":
-  version: 0.0.1
-  resolution: "requires-port@npm:0.0.1"
-  checksum: 36a3414a76ff1dd4f7df519c2315e7af3eb54312d764319cf9aea4e0ab3a084772ff01edb46487c04fa5c9abe5de627e8eeb500d350b9b21407b94fe346358e2
   languageName: node
   linkType: hard
 
@@ -27252,15 +27138,6 @@ temporal@latest:
   languageName: node
   linkType: hard
 
-"union@npm:~0.4.3":
-  version: 0.4.6
-  resolution: "union@npm:0.4.6"
-  dependencies:
-    qs: ~2.3.3
-  checksum: 21719a1bea92cd3b06f9742aa3f13cc2e6e288c44b91ba5b6561b4765ea3b0daf7e2d4ec61d27973a656b6f7054d46bf5d9a5038c32cb5787e105fc58aee0b8d
-  languageName: node
-  linkType: hard
-
 "unique-filename@npm:^1.1.1":
   version: 1.1.1
   resolution: "unique-filename@npm:1.1.1"
@@ -27557,13 +27434,6 @@ temporal@latest:
   version: 0.1.0
   resolution: "urix@npm:0.1.0"
   checksum: 4c076ecfbf3411e888547fe844e52378ab5ada2d2f27625139011eada79925e77f7fbf0e4016d45e6a9e9adb6b7e64981bd49b22700c7c401c5fc15f423303b3
-  languageName: node
-  linkType: hard
-
-"url-join@npm:^1.0.0":
-  version: 1.1.0
-  resolution: "url-join@npm:1.1.0"
-  checksum: affa33998f671205e9bbfba95d840fa7445d548f903f79912836a4cdb068c8a926c1dfe94c220fe5fbd822b6be9a199561c78d0cb181abafee2075b4f03a9c28
   languageName: node
   linkType: hard
 
