@@ -238,7 +238,6 @@ FirebaseStorage.createRecord = function (
   onSuccess,
   onError
 ) {
-  throw new Error("DISABLED AND BROKEN");
   tableName = fixTableName(tableName, onError);
 
   // Assign a unique id for the new record.
