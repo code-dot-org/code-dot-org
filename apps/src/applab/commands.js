@@ -2020,7 +2020,10 @@ applabCommands.updateRecord = function (opts) {
     return;
   }
   var onComplete = applabCommands.handleUpdateRecord.bind(this, opts);
-  var onError = opts.onError || getAsyncOutputWarning();
+  var onError = error => {
+    getAsyncOutputWarning()(error);
+    onComplete(null, false);
+  };
   try {
     rateLimit();
     Applab.storage.updateRecord(opts.table, opts.record, onComplete, onError);
