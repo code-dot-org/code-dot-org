@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2024_05_30_170255) do
-=======
 ActiveRecord::Schema.define(version: 2024_07_02_214406) do
->>>>>>> staging
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -52,7 +48,6 @@ ActiveRecord::Schema.define(version: 2024_07_02_214406) do
     t.datetime "updated_at", precision: 6, null: false
     t.text "details"
     t.index ["ai_tutor_interaction_id", "user_id"], name: "index_ai_tutor_feedback_on_interaction_and_user", unique: true
-    t.index ["inappropriate"], name: "index_ai_tutor_interaction_feedbacks_on_inappropriate"
     t.index ["user_id"], name: "fk_rails_105c1f9428"
   end
 
