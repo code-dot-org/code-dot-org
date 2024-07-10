@@ -7,7 +7,7 @@
 import classNames from 'classnames';
 import React, {Suspense, useContext, useEffect, useState} from 'react';
 import ProgressContainer from '../progress/ProgressContainer';
-import {AppName} from 'lab2Entrypoints';
+import {AppName} from '../types';
 import moduleStyles from './lab-views-renderer.module.scss';
 import {DEFAULT_THEME, ThemeContext} from './ThemeWrapper';
 import Loading from './Loading';
