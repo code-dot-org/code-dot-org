@@ -7,6 +7,8 @@ import React from 'react';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
+import {COURSE_BYO} from '../workshop_dashboard/workshopConstants';
+
 import EnrollForm from './enroll_form';
 import {WorkshopPropType, FacilitatorPropType} from './enrollmentConstants';
 import FacilitatorBio from './facilitator_bio';
@@ -42,7 +44,7 @@ export default class WorkshopEnroll extends React.Component {
   constructor(props) {
     super(props);
 
-    if (this.props.workshop.course === 'Build Your Own Workshop') {
+    if (this.props.workshop.course === COURSE_BYO) {
       this.skipEnrollForm();
     }
 
@@ -153,7 +155,7 @@ export default class WorkshopEnroll extends React.Component {
   }
 
   renderSuccess() {
-    if (this.props.workshop.course === 'Build Your Own Workshop') {
+    if (this.props.workshop.course === COURSE_BYO) {
       // If successfully enrolled in Build Your Own workshop, redirect to My PL landing page. The
       // WORKSHOP_ENROLLMENT_COMPLETED_EVENT event will be logged on that page since event logs
       // immediately followed by redirects sometimes do not fire.
