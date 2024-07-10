@@ -516,6 +516,9 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     assert_equal existing_job_count, RubricAiEvaluation.where(user_id: @student.id).count
     assert_equal SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS], RubricAiEvaluation.where(user_id: @student.id).last.status
 
+    # make sure we do not try to make an API call
+    HTTParty.stubs(:post).never
+
     perform_enqueued_jobs do
       EvaluateRubricJob.perform_later(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id)
     end
@@ -539,6 +542,9 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     last_eval = RubricAiEvaluation.where(user: @student, requester: @teacher).last
     assert_equal SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS], last_eval.status
     assert_equal @teacher.id, last_eval.requester_id
+
+    # make sure we do not try to make an API call
+    HTTParty.stubs(:post).never
 
     perform_enqueued_jobs do
       EvaluateRubricJob.perform_later(user_id: @student.id, requester_id: @teacher.id, script_level_id: @script_level.id)
