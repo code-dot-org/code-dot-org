@@ -147,7 +147,7 @@ DatablockStorage.deleteRecord = function (
   _fetch('delete_record', 'DELETE', {
     table_name: tableName,
     record_id: record.id,
-  }).then(onSuccess, onError);
+  }).then(() => onSuccess(true), onError);
 };
 
 async function getTableNames({isSharedTable = false} = {}) {
