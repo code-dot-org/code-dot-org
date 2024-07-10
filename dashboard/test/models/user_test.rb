@@ -5453,7 +5453,7 @@ class UserTest < ActiveSupport::TestCase
 
     student = create :student, :U13, :in_colorado, :with_parent_permission
     student.update!(us_state: 'WA')
-    studet.reload
+    student.reload
     assert_equal student.us_state, 'WA'
 
     student = create :student, :U13

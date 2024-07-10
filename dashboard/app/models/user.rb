@@ -2781,7 +2781,8 @@ class User < ApplicationRecord
     potentially_locked = Policies::ChildAccount.underage?(user_before_update)
     # The student is in a 'lockout' flow if they are potentially locked out and not unlocked
     if potentially_locked && !Policies::ChildAccount::ComplianceState.permission_granted?(user_before_update)
-      errors.add(:us_state, :invalid)
+      errors.add(:us_state,  I18n.t('activerecord.errors.models.user.attributes.lockout_flow')) if us_state_changed?
+      errors.add(:age,  I18n.t('activerecord.errors.models.user.attributes.lockout_flow')) if birthday_changed?
     end
   end
 

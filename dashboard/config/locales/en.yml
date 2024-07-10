@@ -45,6 +45,7 @@ en:
               invalid: "is invalid. Note that each link can only be used once to reset your password, and only the most recently sent link will work."
             unlock_token:
               invalid: "is invalid or expired, possibly because your account has already been unlocked."
+            lockout_flow: "cannot be updated when in lockout flow."
       messages:
         blank: "is required"
         blank_plural: "are required"
