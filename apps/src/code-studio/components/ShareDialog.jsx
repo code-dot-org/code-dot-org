@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+
 import ShareAllowedDialog from './ShareAllowedDialog';
 import ShareDisallowedDialog from './ShareDisallowedDialog';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
 class ShareDialog extends Component {
   static propTypes = {

@@ -6,10 +6,13 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {Row, Col, ButtonToolbar, Button, Tabs, Tab} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
-import SessionTime from '../components/session_time';
+
+import color from '@cdo/apps/util/color';
+
 import Spinner from '../../components/spinner';
-import SessionAttendance from './session_attendance';
+import SessionTime from '../components/session_time';
 import {
   PermissionPropType,
   WorkshopAdmin,
@@ -17,8 +20,8 @@ import {
   Facilitator,
   ProgramManager,
 } from '../permission';
-import color from '@cdo/apps/util/color';
-import {Row, Col, ButtonToolbar, Button, Tabs, Tab} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
+import SessionAttendance from './session_attendance';
 
 export class WorkshopAttendance extends React.Component {
   static contextTypes = {

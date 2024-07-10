@@ -10,10 +10,12 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import {getPathToApplication} from '@cdo/apps/code-studio/pd/application_dashboard/pathToApplicationHelper';
+import {CourseKeyMap} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
 import ApplicationLoader from './application_loader';
 import DetailViewContents from './detail_view_contents';
-import {CourseKeyMap} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import {getPathToApplication} from '@cdo/apps/code-studio/pd/application_dashboard/pathToApplicationHelper';
 
 export default class DetailView extends React.Component {
   static propTypes = {

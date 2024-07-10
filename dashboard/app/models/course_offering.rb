@@ -270,6 +270,13 @@ class CourseOffering < ApplicationRecord
     }
   end
 
+  def summarize_self_paced_pl
+    {
+      id: id,
+      display_name: display_name_with_latest_year
+    }
+  end
+
   def localized_display_name
     localized_name = I18n.t(
       key,

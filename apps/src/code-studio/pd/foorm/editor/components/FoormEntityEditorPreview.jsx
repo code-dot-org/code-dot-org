@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Foorm from '../../Foorm';
 import {connect} from 'react-redux';
+
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+
+import Foorm from '../../Foorm';
 
 // Preview panel for Foorm editor.
 class FoormEntityEditorPreview extends Component {
