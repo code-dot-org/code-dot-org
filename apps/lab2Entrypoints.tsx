@@ -43,7 +43,7 @@ import Weblab2View from '@cdo/apps/weblab2/Weblab2View';
 //   | 'weblab2';
 
 // Configuration for how a Lab should be rendered
-export interface AppProperties {
+export interface LabProperties {
   /**
    * Whether this lab should remain rendered in the background once mounted.
    * If true, the lab will always be present in the tree, but will be hidden
@@ -73,7 +73,7 @@ export interface AppProperties {
   setupFunction?: () => void;
 }
 
-export const lab2Entrypoints: Record<string, AppProperties> = {
+export const lab2Entrypoints: Record<string, LabProperties> = {
   music: {
     backgroundMode: true,
     node: <MusicView />,

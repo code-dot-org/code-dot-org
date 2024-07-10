@@ -16,7 +16,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {getAppOptionsViewingExemplar} from '../projects/utils';
 import NoExemplarPage from './components/NoExemplarPage';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {lab2Entrypoints, AppProperties} from '../../../lab2Entrypoints';
+import {lab2Entrypoints, LabProperties} from '../../../lab2Entrypoints';
 
 const hideExtraLinks = queryParams('hide-extra-links') === 'true';
 
@@ -50,13 +50,13 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     }
   }, [currentAppName, setTheme]);
 
-  const renderApp = (appProperties: AppProperties) => {
-    return appProperties.lazyNode ? (
+  const renderApp = (labProperties: LabProperties) => {
+    return labProperties.lazyNode ? (
       <Suspense fallback={<Loading isLoading={true} />}>
-        <appProperties.lazyNode />
+        <labProperties.lazyNode />
       </Suspense>
     ) : (
-      appProperties.node
+      labProperties.node
     );
   };
 
