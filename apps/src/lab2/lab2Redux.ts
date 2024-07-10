@@ -121,7 +121,6 @@ export const setUpWithLevel = createAsyncThunk(
       const levelProperties = await loadLevelProperties(
         payload.levelPropertiesPath
       );
-      console.log({levelProperties});
 
       Lab2Registry.getInstance()
         .getMetricsReporter()
@@ -168,7 +167,7 @@ export const setUpWithLevel = createAsyncThunk(
 
       if (levelProperties.submittable && payload.scriptId) {
         const userLevel = await getUserLevel(payload.levelId, payload.scriptId);
-        console.log({userLevel});
+        thunkAPI.dispatch(setSubmitted(userLevel?.submitted || false));
       }
 
       // Create a new project manager. If we have a channel id,
@@ -523,10 +522,9 @@ export const {
   clearPageError,
   setValidationState,
   setIsShareView,
-  setSubmitted,
 } = labSlice.actions;
 
 // These should not be set outside of the lab slice.
-const {setChannel, onLevelChange} = labSlice.actions;
+const {setChannel, onLevelChange, setSubmitted} = labSlice.actions;
 
 export default labSlice.reducer;

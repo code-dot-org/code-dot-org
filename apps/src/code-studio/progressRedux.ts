@@ -411,12 +411,20 @@ export const sendSubmitReport = createAsyncThunk<
   const extraPayload = {
     submitted: payload.submitted.toString(),
   };
+  const result = payload.submitted
+    ? TestResults.SUBMITTED_RESULT
+    : TestResults.UNSUBMITTED_ATTEMPT;
   await sendReportHelper(
     payload.appType,
-    TestResults.CONTAINED_LEVEL_RESULT,
+    result,
     thunkAPI.dispatch,
     thunkAPI.getState,
     extraPayload
+  );
+  // Submit status isn't properly updated by just saving the status code, so re-query
+  // user progress to force the bubble to update.
+  thunkAPI.dispatch(
+    queryUserProgress(thunkAPI.getState().currentUser.userId.toString())
   );
 });
 
