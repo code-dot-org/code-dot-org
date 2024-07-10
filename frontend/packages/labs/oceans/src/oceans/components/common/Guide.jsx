@@ -15,18 +15,28 @@ import arrowDownImage from "@public/images/arrow-down.png";
 import fingerClickIcon1 from "@public/images/finger-click-icon-1.svg";
 import fingerClickIcon2 from "@public/images/finger-click-icon-2.svg";
 
+// Visible only for our K5 progression for now.
+// Also hide for guides that don't require you to click anywhere to continue ("noDimBackground")
+// and in our "Did you know?" guides ("Info" style).
+const includeClickToContinue = () => {
+  return (
+    getState().guides === 'K5'
+    && !guide.getCurrentGuide().noDimBackground
+    && guide.getCurrentGuide().style !== 'Info'
+  );
+}
+
 let UnwrappedGuide = class Guide extends React.Component {
   onShowing() {
     clearInterval(getState().guideTypingTimer);
     setState({guideShowing: true, guideTypingTimer: null});
 
-    // filter out all this other behavior too if not in K5 mode?
-    if (!guide.getCurrentGuide().noDimBackground) {
+    if (includeClickToContinue()) {
       const timerId = setTimeout(() => {
         setState({showClickToContinue: true});
         const intervalId = setInterval(() => setState({clickToContinueIconFrame1: !getState().clickToContinueIconFrame1}), 400);
         setState({clickToContinueAnimationIntervalId: intervalId});
-      }, 2000);
+      }, 4000);
       setState({clickToContinueTimerId: timerId});
     }
   }
@@ -36,39 +46,38 @@ let UnwrappedGuide = class Guide extends React.Component {
     if (dismissed) {
       soundLibrary.playSound('other');
 
-      setState({showClickToContinue: false});
-      const {
-        clickToContinueTimerId,
-        clickToContinueAnimationIntervalId
-      } = getState();
-      if (clickToContinueTimerId) {
-        clearTimeout(clickToContinueTimerId);
-        setState({clickToContinueTimerId: null});
-      }
-      if (clickToContinueAnimationIntervalId) {
-        clearInterval(clickToContinueAnimationIntervalId);
-        setState({clickToContinueAnimationIntervalId: null});
+      if (includeClickToContinue()) {
+        setState({showClickToContinue: false});
+        const {
+          clickToContinueTimerId,
+          clickToContinueAnimationIntervalId
+        } = getState();
+        if (clickToContinueTimerId) {
+          clearTimeout(clickToContinueTimerId);
+          setState({clickToContinueTimerId: null});
+        }
+        if (clickToContinueAnimationIntervalId) {
+          clearInterval(clickToContinueAnimationIntervalId);
+          setState({clickToContinueAnimationIntervalId: null});
+        }
       }
     }
   }
 
-  renderClickToContinueReminder(currentGuide) {
+  renderClickToContinueReminder() {
     return (
-      getState().guides === 'K5' &&
-      currentGuide.style !== 'Info' &&
-      !currentGuide.noDimBackground && (
-        <div style={styles.guideClickToContinueReminderContainer} className="fade">
-          <img
-            style={getState().clickToContinueIconFrame1 ? styles.guideHideClickToContinueAnimationFrame : {}}
-            src={fingerClickIcon1}
-            alt={'A clicking animation reminding users to click anywhere to continue.'}
-          />
-          <img
-            style={getState().clickToContinueIconFrame1 ? {} : styles.guideHideClickToContinueAnimationFrame}
-            src={fingerClickIcon2}
-          />
-        </div>
-      ))
+      <div style={styles.guideClickToContinueReminderContainer} className="fade">
+        <img
+          style={getState().clickToContinueIconFrame1 ? styles.guideHideClickToContinueAnimationFrame : {}}
+          src={fingerClickIcon1}
+          alt={'A clicking animation reminding users to click anywhere to continue.'}
+        />
+        <img
+          style={getState().clickToContinueIconFrame1 ? {} : styles.guideHideClickToContinueAnimationFrame}
+          src={fingerClickIcon2}
+        />
+      </div>
+    )
   }
 
   render() {
@@ -87,12 +96,13 @@ let UnwrappedGuide = class Guide extends React.Component {
       }
     }
 
-    // Start playing the typing sounds.
+    // If we're just starting to animate a new guide,
+    // start playing the typing sounds and make sure the click to continue icon isn't showing.
     if (!state.guideShowing && !state.guideTypingTimer && currentGuide) {
       const guideTypingTimer = setInterval(() => {
         soundLibrary.playSound('no', 0.5);
       }, 1000 / 10);
-      setState({guideTypingTimer});
+      setState({guideTypingTimer, showClickToContinue: false});
     }
 
     return (
@@ -133,8 +143,7 @@ let UnwrappedGuide = class Guide extends React.Component {
                     >
                       {currentGuide.textFn(getState())}
                     </Typist>
-                    {getState().showClickToContinue
-                      && this.renderClickToContinueReminder(currentGuide)}
+                    {includeClickToContinue() && getState().showClickToContinue && this.renderClickToContinueReminder()}
                   </div>
                   <div
                     style={
@@ -145,7 +154,7 @@ let UnwrappedGuide = class Guide extends React.Component {
                   >
                     <div style={styles.guideFinalText}>
                       {currentGuide.textFn(getState())}
-                      {this.renderClickToContinueReminder(currentGuide)}
+                      {includeClickToContinue() && getState().showClickToContinue && this.renderClickToContinueReminder()}
                     </div>
                   </div>
                   {currentGuide.style === 'Info' && (
