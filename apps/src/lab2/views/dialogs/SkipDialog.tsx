@@ -1,7 +1,11 @@
-import Typography from '@cdo/apps/componentLibrary/typography';
 import React from 'react';
+
+import Typography from '@cdo/apps/componentLibrary/typography';
+
 import {BaseDialogProps} from './DialogManager';
+
 import moduleStyles from './confirm-dialog.module.scss';
+
 const commonI18n = require('@cdo/locale');
 
 /**

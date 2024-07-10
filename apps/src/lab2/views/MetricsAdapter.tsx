@@ -1,6 +1,8 @@
-import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
+
+import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
+
 import {LabState} from '../lab2Redux';
 import Lab2Registry from '../Lab2Registry';
 

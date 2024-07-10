@@ -1,16 +1,12 @@
 import React, {useCallback, useState} from 'react';
 
-import {
-  BodyFourText,
-  BodyThreeText,
-} from '@cdo/apps/componentLibrary/typography';
+import {modelDescriptions} from '@cdo/apps/aichat/constants';
 import {
   AiCustomizations,
   LevelAichatSettings,
   ModelCardInfo,
   Visibility,
 } from '@cdo/apps/aichat/types';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {
   MAX_RETRIEVAL_CONTEXTS,
   MAX_TEMPERATURE,
@@ -21,17 +17,22 @@ import {
   DEFAULT_VISIBILITIES,
   EMPTY_MODEL_CARD_INFO,
 } from '@cdo/apps/aichat/views/modelCustomization/constants';
-import MultiItemInput from '@cdo/apps/templates/MultiItemInput';
+import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
+import {
+  BodyFourText,
+  BodyThreeText,
+} from '@cdo/apps/componentLibrary/typography';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
+import MultiItemInput from '@cdo/apps/templates/MultiItemInput';
+import {getTypedKeys} from '@cdo/apps/types/utils';
 
 import FieldSection from './FieldSection';
 import ModelCardFields from './ModelCardFields';
 import ModelSelectionFields from './ModelSelectionFields';
-import VisibilityDropdown from './VisibilityDropdown';
 import {UpdateContext} from './UpdateContext';
+import VisibilityDropdown from './VisibilityDropdown';
+
 import moduleStyles from './edit-aichat-settings.module.scss';
-import {getTypedKeys} from '@cdo/apps/types/utils';
-import {modelDescriptions} from '@cdo/apps/aichat/constants';
 
 function sanitizeSettings(settings: LevelAichatSettings) {
   const sanitizedModelCardInfo = sanitizeField(

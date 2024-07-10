@@ -11,6 +11,31 @@ import {
   PayloadAction,
   ThunkDispatch,
 } from '@reduxjs/toolkit';
+
+import {
+  getAppOptionsEditBlocks,
+  getAppOptionsEditingExemplar,
+  getAppOptionsViewingExemplar,
+} from '@cdo/apps/lab2/projects/utils';
+
+import {
+  setProjectUpdatedAt,
+  setProjectUpdatedError,
+  setProjectUpdatedSaving,
+  setProjectUpdatedSaved,
+} from '../code-studio/projectRedux';
+import HttpClient, {NetworkError} from '../util/HttpClient';
+
+import {START_SOURCES} from './constants';
+import Lab2Registry from './Lab2Registry';
+import {
+  getInitialValidationState,
+  ValidationState,
+} from './progress/ProgressManager';
+import ProjectManager from './projects/ProjectManager';
+import ProjectManagerFactory from './projects/ProjectManagerFactory';
+import {getPredictResponse} from './projects/userLevelsApi';
+import {LevelPropertiesValidator} from './responseValidators';
 import {
   AppName,
   Channel,
@@ -18,28 +43,6 @@ import {
   ProjectManagerStorageType,
   ProjectSources,
 } from './types';
-import Lab2Registry from './Lab2Registry';
-import ProjectManagerFactory from './projects/ProjectManagerFactory';
-import {
-  setProjectUpdatedAt,
-  setProjectUpdatedError,
-  setProjectUpdatedSaving,
-  setProjectUpdatedSaved,
-} from '../code-studio/projectRedux';
-import ProjectManager from './projects/ProjectManager';
-import HttpClient, {NetworkError} from '../util/HttpClient';
-import {
-  getInitialValidationState,
-  ValidationState,
-} from './progress/ProgressManager';
-import {LevelPropertiesValidator} from './responseValidators';
-import {
-  getAppOptionsEditBlocks,
-  getAppOptionsEditingExemplar,
-  getAppOptionsViewingExemplar,
-} from '@cdo/apps/lab2/projects/utils';
-import {START_SOURCES} from './constants';
-import {getPredictResponse} from './projects/userLevelsApi';
 
 interface PageError {
   errorMessage: string;
