@@ -23,7 +23,7 @@ import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {
   setUserRoleInCourse,
   CourseRoles,
-  SignInState,
+  isSignedIn,
 } from '@cdo/apps/templates/currentUserRedux';
 import InstructionsDialog from '@cdo/apps/templates/instructions/InstructionsDialog';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
@@ -2124,8 +2124,7 @@ StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
   var codeWorkspace = container.querySelector('#codeWorkspace');
 
-  const isSignedOut =
-    getStore().getState().currentUser.signInState === SignInState.SignedOut;
+  const isSignedOut = !config.isSignedIn;
   const isStandaloneProject = config.scriptId === undefined;
 
   var runButton = container.querySelector('#runButton');
@@ -2151,6 +2150,7 @@ StudioApp.prototype.configureDom = function (config) {
   // This is related to the Create Account Button A/B Test; see Jira ticket:
   // https://codedotorg.atlassian.net/browse/ACQ-1938
   if (runButton && isSignedOut && isStandaloneProject) {
+    console.log(isSignedIn);
     dom.addClickTouchEvent(runButton, () => {
       analyticsReporter.sendEvent(
         EVENTS.RUN_BUTTON_PRESSED_SIGNED_OUT,
