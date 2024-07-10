@@ -82,10 +82,16 @@ function LessonDataCell({
     return (
       <div className={styles.lessonDataCellExpanded}>
         {lessonCellUnexpanded}
-        <div className={classNames(styles.gridBox, styles.gridBoxMetadata)}>
+        <div
+          id={'ui-test-time-spent-' + lesson.relative_position}
+          className={classNames(styles.gridBox, styles.gridBoxMetadata)}
+        >
           {formatTimeSpent(studentLessonProgress)}
         </div>
-        <div className={classNames(styles.gridBox, styles.gridBoxMetadata)}>
+        <div
+          id={'ui-test-last-updated-' + lesson.relative_position}
+          className={classNames(styles.gridBox, styles.gridBoxMetadata)}
+        >
           {formatLastUpdated(studentLessonProgress)}
         </div>
       </div>

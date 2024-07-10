@@ -31,7 +31,11 @@ Scenario: Teacher can open and close Icon Key and details
 Scenario: Viewing student metadata
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
-  And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
+  And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/9?noautoplay=true"
+  And I wait to see "#runButton"
+  When I press "runButton"
+  And I wait for 5 seconds
+  And I submit this level
 
   # Progress tab
   When I sign in as "Teacher_Sally" and go home
@@ -52,12 +56,14 @@ Scenario: Viewing student metadata
   Then I click selector "#ui-see-more-options-dropdown"
   And I wait until element "div:contains(Expand all student rows)" is visible
   And I wait until element "div:contains(Collapse all student rows)" is visible
-  And I wait for 60 seconds
 
   # Can click on more options and it responds appropriately
   Then I click selector "#ui-test-expand-all"
   And I wait until element "div:contains(Last Updated)" is visible
   And I wait until element "div:contains(Time Spent)" is visible
+  And I wait until element "#ui-test-lesson-header-44" is visible
+  And I scroll to "#ui-test-lesson-header-44"
+  And I wait until "#ui-test-time-spent-44" contains one or more integers
   Then I click selector "#ui-see-more-options-dropdown"
   Then I click selector "#ui-test-collapse-all"
   And element "div:contains(Time Spent)" does not exist
