@@ -1,22 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
+
+import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
+import project from '@cdo/apps/code-studio/initApp/project';
+import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {TestResults} from '@cdo/apps/constants';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import javalabMsg from '@cdo/javalab/locale';
+
+import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
+import {
+  getContainedLevelResultInfo,
+  postContainedLevelAttempt,
+  runAfterPostContainedLevel,
+} from '../containedLevels';
+import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
+
+import {BackpackAPIContext} from './BackpackAPIContext';
+import {CsaViewMode, ExecutionType, InputMessageType} from './constants';
+import {getDisplayThemeFromString} from './DisplayTheme';
+import JavabuilderConnection from './JavabuilderConnection';
 import JavalabView from './JavalabView';
-import javalab, {
-  setIsStartMode,
-  setLevelName,
-  setIsRunning,
-  setIsTesting,
-  setBackpackEnabled,
-  setIsReadOnlyWorkspace,
-  setHasOpenCodeReview,
-  setValidationPassed,
-  setHasRunOrTestedCode,
-  setIsJavabuilderConnecting,
-  setIsCaptchaDialogOpen,
-} from './redux/javalabRedux';
+import Neighborhood from './neighborhood/Neighborhood';
+import NeighborhoodVisualizationColumn from './neighborhood/NeighborhoodVisualizationColumn';
 import javalabConsole, {
   appendOutputLog,
   appendNewlineToConsoleLog,
@@ -31,26 +38,22 @@ import {
   setAllValidation,
   setHasCompilationError,
 } from './redux/editorRedux';
+import javalab, {
+  setIsStartMode,
+  setLevelName,
+  setIsRunning,
+  setIsTesting,
+  setBackpackEnabled,
+  setIsReadOnlyWorkspace,
+  setHasOpenCodeReview,
+  setValidationPassed,
+  setHasRunOrTestedCode,
+  setIsJavabuilderConnecting,
+  setIsCaptchaDialogOpen,
+} from './redux/javalabRedux';
 import javalabView, {setDisplayTheme} from './redux/viewRedux';
-import {TestResults} from '@cdo/apps/constants';
-import project from '@cdo/apps/code-studio/initApp/project';
-import JavabuilderConnection from './JavabuilderConnection';
-import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
-import Neighborhood from './neighborhood/Neighborhood';
-import NeighborhoodVisualizationColumn from './neighborhood/NeighborhoodVisualizationColumn';
-import TheaterVisualizationColumn from './theater/TheaterVisualizationColumn';
 import Theater from './theater/Theater';
-import {CsaViewMode, ExecutionType, InputMessageType} from './constants';
-import {getDisplayThemeFromString} from './DisplayTheme';
-import {
-  getContainedLevelResultInfo,
-  postContainedLevelAttempt,
-  runAfterPostContainedLevel,
-} from '../containedLevels';
-import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
-import {BackpackAPIContext} from './BackpackAPIContext';
-import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
+import TheaterVisualizationColumn from './theater/TheaterVisualizationColumn';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
