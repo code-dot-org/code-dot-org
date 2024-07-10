@@ -1,12 +1,14 @@
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import React, {useState} from 'react';
 
+import Button from '@cdo/apps/componentLibrary/button/Button';
+import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 
-const CelebrationImage = require('@cdo/static/pd/EnrollmentCelebration.png');
 import style from '@cdo/apps/code-studio/pd/professional_learning_landing/landingPage.module.scss';
+
+const CelebrationImage = require('@cdo/static/pd/EnrollmentCelebration.png');
 
 export default function WorkshopEnrollmentCelebrationDialog({
   workshopName = 'a new workshop',
@@ -17,24 +19,27 @@ export default function WorkshopEnrollmentCelebrationDialog({
   };
 
   return (
-    <div className={style.celebrationContainer}>
-      {isOpen && (
-        <AccessibleDialog onClose={onClose} closeOnClickBackdrop={true}>
+    isOpen && (
+      <AccessibleDialog
+        className={style.celebrationContainer}
+        onClose={onClose}
+        closeOnClickBackdrop={true}
+      >
+        <div className={style.containerMargin}>
+          <img src={CelebrationImage} alt="" />
           <div className={style.containerMargin}>
-            <img src={CelebrationImage} alt="" />
-            <div className={style.containerMargin}>
-              <h2>{i18n.enrollmentCelebrationTitle()}</h2>
-              <>{i18n.enrollmentCelebrationBody({workshopName})}</>
-            </div>
-            <Button
-              onClick={onClose}
-              text={i18n.enrollmentCelebrationCallToAction()}
-              color={Button.ButtonColor.brandSecondaryDefault}
-            />
+            <Heading2>{i18n.enrollmentCelebrationTitle()}</Heading2>
+            <BodyTwoText>
+              {i18n.enrollmentCelebrationBody({workshopName})}
+            </BodyTwoText>
           </div>
-        </AccessibleDialog>
-      )}
-    </div>
+          <Button
+            onClick={onClose}
+            text={i18n.enrollmentCelebrationCallToAction()}
+          />
+        </div>
+      </AccessibleDialog>
+    )
   );
 }
 
