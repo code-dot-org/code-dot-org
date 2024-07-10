@@ -14912,7 +14912,13 @@ en:
           description: |-
             This unit empowers students to become confident, ethical coders. Students learn how to leverage generative AI tools to help explain code, tackle problems, and even generate code. More than just coding, this unit emphasizes ethical considerations and responsible use of AI, preparing students for the ever-evolving tech landscape.
 
+            ## What do I need to teach this module?
+
             Take a look at the [Getting Started with Coding with AI](https://docs.google.com/document/d/1hLR7WS8KmFxrjoM2Tr28rgfa0IZQ8otksw8ujYkdW3Y/edit?usp=sharing) guide for information on implementation options, what you and your students will need for this module, and helpful information to learn more about chatbots and large language models.
+
+            ## How can I prepare to teach this module?
+
+            If you are interested in teaching this module, we recommend completing the free [**Coding with AI Self-Paced Professional Development Module**](https://studio.code.org/courses/self-paced-pl-coding-with-ai-2024). The module is designed to take 2-3 hours to complete. No previous computer science experience is required.
           student_description: |-
             In this unit, you'll learn how to use AI like help you:
 
@@ -17921,7 +17927,13 @@ en:
           description: |-
             This unit introduces students to the fundamentals, applications, and ethical implications of computer vision technologies. The unit starts with basic concepts and gradually builds up to complex topics, including data collection, model training, prototype development, and the integration of user feedback. Each lesson is designed to enhance students' understanding through hands-on activities and discussions culminating in the development of a prototype. The curriculum emphasizes critical thinking, problem-solving, and ethical considerations, equipping students with the skills to develop and evaluate technology that addresses real-world problems. Through iterative design and user-centered approaches, students not only learn the technical aspects of computer vision but also its impact on society, preparing them to be thoughtful innovators in a rapidly advancing technological landscape.
 
+            ## What do I need to teach this module?
+
             Take a look at the [**Getting Started with Computer Vision**](https://docs.google.com/document/d/1G5NztlmSlZ3pAN09mnze1eGzuLXQVvVjoqzTHqeEgk0/edit?usp=sharing) for information about what you and your students will need for this module.
+
+            ## How can I prepare to teach this module?
+
+            If you are interested in teaching this module, we recommend completing the free [**Computer Vision Self-Paced Professional Development Module**](http://studio.code.org/courses/self-paced-pl-computer-vision-2024). The module is designed to take 2-3 hours to complete. No previous computer science experience is required.
           student_description: In this unit, you'll dive into how computers interpret and understand visual information from the world around us. You'll start with the basics of how images are captured and processed and move on to more complex topics like training data, model development, and the ethical implications of artificial intelligence. Through a series of interactive lessons, hands-on activities, and project-based learning, you'll get to design your own computer vision app. Along the way, you'll learn not only about the technology itself but also how it can be used responsibly to make a positive impact in various fields like healthcare, automotive, and public safety.
           description_short: ''
           description_audience: ''
