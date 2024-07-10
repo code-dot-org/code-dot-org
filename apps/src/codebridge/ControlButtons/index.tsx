@@ -1,6 +1,6 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {appendSystemMessage} from '@codebridge/redux/consoleRedux';
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 
 import {
   navigateToNextLevel,
@@ -12,6 +12,10 @@ import {
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import Button from '@cdo/apps/componentLibrary/button';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {
+  DialogContext,
+  DialogType,
+} from '@cdo/apps/lab2/views/dialogs/DialogManager';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {useFetch} from '@cdo/apps/util/useFetch';
@@ -25,6 +29,7 @@ interface PermissionResponse {
 
 const ControlButtons: React.FunctionComponent = () => {
   const {onRun} = useCodebridgeContext();
+  const dialogControl = useContext(DialogContext);
   const {loading, data} = useFetch('/api/v1/users/current/permissions');
   const [hasRun, setHasRun] = useState(false);
   const dispatch = useAppDispatch();
@@ -54,10 +59,32 @@ const ControlButtons: React.FunctionComponent = () => {
   // No-op for now. TODO: figure out what the finish button should do.
   // https://codedotorg.atlassian.net/browse/CT-664
   const onFinish = () => {};
-  const onSubmit = () =>
+
+  const onSubmit = () => {
+    const dialogTitle = hasSubmitted
+      ? commonI18n.unsubmitYourProject()
+      : commonI18n.submitYourProject();
+    const dialogMessage = hasSubmitted
+      ? commonI18n.unsubmitYourProjectConfirm()
+      : commonI18n.submitYourProjectConfirm();
+    dialogControl?.showDialog(
+      DialogType.GenericConfirmation,
+      handleSubmit,
+      dialogTitle,
+      dialogMessage
+    );
+  };
+
+  const handleSubmit = () => {
     dispatch(
       sendSubmitReport({appType: appType || '', submitted: !hasSubmitted})
     );
+    // Go to the next level if we have one and we just submitted.
+    // TODO: If onContinue starts to update progress, make sure we don't override the submitted status.
+    if (hasNextLevel && !hasSubmitted) {
+      onContinue();
+    }
+  };
 
   const handleRun = (runTests: boolean) => {
     if (onRun) {
