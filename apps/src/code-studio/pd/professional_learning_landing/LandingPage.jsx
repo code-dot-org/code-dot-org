@@ -8,6 +8,8 @@ import {connect, useDispatch} from 'react-redux';
 import Tabs from '@cdo/apps/componentLibrary/tabs';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import DCDO from '@cdo/apps/dcdo';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
 import ActionBlocksWrapper from '@cdo/apps/templates/studioHomepages/ActionBlocksWrapper';
@@ -24,13 +26,9 @@ import {
   asyncLoadCoteacherInvite,
   hiddenPlSectionIds,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {queryParams, updateQueryParam} from '../../utils';
-import shapes from '@cdo/apps/templates/studioHomepages/shapes';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import DCDO from '@cdo/apps/dcdo';
 import i18n from '@cdo/locale';
 
+import {queryParams, updateQueryParam} from '../../utils';
 import {
   COURSE_CSF,
   COURSE_CSD,
