@@ -6,12 +6,16 @@ import {
   navigateToNextLevel,
   sendSubmitReport,
 } from '@cdo/apps/code-studio/progressRedux';
-import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {
+  getCurrentLevel,
+  nextLevelId,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 import Button from '@cdo/apps/componentLibrary/button';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {useFetch} from '@cdo/apps/util/useFetch';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStyles from './control-buttons.module.scss';
 
@@ -40,7 +44,9 @@ const ControlButtons: React.FunctionComponent = () => {
     state => state.lab.levelProperties?.submittable
   );
   const appType = useAppSelector(state => state.lab.levelProperties?.appName);
-  const hasSubmitted = useAppSelector(state => state.lab.submitted);
+  const hasSubmitted = useAppSelector(
+    state => getCurrentLevel(state)?.status === LevelStatus.submitted
+  );
   const disableRunAndTest = loading || (isPredictLevel && !hasPredictResponse);
 
   const onContinue = () => dispatch(navigateToNextLevel());

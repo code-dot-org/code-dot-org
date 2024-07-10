@@ -70,9 +70,6 @@ export interface LabState {
   levelProperties: LevelProperties | undefined;
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
-  // If this is a submittable level, boolean indicating if the user has submitted their response.
-  // A submitted level should be read-only.
-  submitted: boolean | undefined;
 }
 
 const initialState: LabState = {
@@ -84,7 +81,6 @@ const initialState: LabState = {
   validationState: getInitialValidationState(),
   levelProperties: undefined,
   isShareView: undefined,
-  submitted: undefined,
 };
 
 // Thunks
