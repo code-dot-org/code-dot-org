@@ -7,12 +7,12 @@ import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import style from './ai-differentiation.module.scss';
 
-interface AIDiffContainerProps {
+interface AiDiffContainerProps {
   closeTutor?: () => void;
   open: boolean;
 }
 
-const AIDiffContainer: React.FC<AIDiffContainerProps> = ({
+const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   closeTutor,
   open,
 }) => {
@@ -33,12 +33,12 @@ const AIDiffContainer: React.FC<AIDiffContainerProps> = ({
       onStop={onStopHandler}
     >
       <div
-        className={classnames(style.aiTutorContainer, {
-          [style.hiddenAITutorPanel]: !open,
+        className={classnames(style.aiDiffContainer, {
+          [style.hiddenAiDiffPanel]: !open,
         })}
       >
-        <div className={style.aiTutorHeader}>
-          <div className={style.aiTutorHeaderLeftSide}>
+        <div className={style.aiDiffHeader}>
+          <div className={style.aiDiffHeaderLeftSide}>
             <img
               src={aiBotOutlineIcon}
               className={style.aiBotOutlineIcon}
@@ -46,7 +46,7 @@ const AIDiffContainer: React.FC<AIDiffContainerProps> = ({
             />
             <span>{aiDiffHeaderText}</span>
           </div>
-          <div className={style.aiTutorHeaderRightSide}>
+          <div className={style.aiDiffHeaderRightSide}>
             <Button
               color="white"
               icon={{iconName: 'times', iconStyle: 'solid'}}
@@ -64,4 +64,4 @@ const AIDiffContainer: React.FC<AIDiffContainerProps> = ({
   );
 };
 
-export default AIDiffContainer;
+export default AiDiffContainer;

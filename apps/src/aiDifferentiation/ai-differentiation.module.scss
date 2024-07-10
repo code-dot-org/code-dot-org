@@ -3,7 +3,7 @@
 @import '@cdo/apps/componentLibrary/common/styles/mixins';
 
 
-.aiTutorContainer {
+.aiDiffContainer {
   position: fixed;
   left: 10px;
   bottom: 120px;
@@ -11,11 +11,11 @@
   width: 760px;
 }
 
-.hiddenAITutorPanel {
+.hiddenAiDiffPanel {
   display: none;
 }
 
-.aiTutorHeader {
+.aiDiffHeader {
   border-radius: 4px 4px 0 0;
   background: $neutral_dark;
   color: $neutral_white;
@@ -33,7 +33,7 @@
   align-self: stretch;
 }
 
-.aiTutorHeaderLeftSide {
+.aiDiffHeaderLeftSide {
   display: flex;
   gap: 0.25rem;
   align-items: center;
@@ -49,7 +49,7 @@
   }
 }
 
-.aiTutorHeaderRightSide {
+.aiDiffHeaderRightSide {
   display: flex;
   align-items: flex-start;
   align-self: stretch;
