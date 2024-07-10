@@ -2766,7 +2766,7 @@ class User < ApplicationRecord
     new_record? || us_state_changed?
   end
 
-  def should_check_age_or_state_update?
+  private def should_check_age_or_state_update?
     return false unless student?
     return false unless %w[US RD].include? country_code
     birthday_changed? || us_state_changed?
