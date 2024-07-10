@@ -17,9 +17,7 @@ import fingerClickIcon2 from '@public/images/finger-click-icon-2.svg';
 
 let UnwrappedGuide = class Guide extends React.Component {
   onShowing() {
-    const state = getState();
-
-    clearInterval(state.guideTypingTimer);
+    clearInterval(getState().guideTypingTimer);
     setState({guideShowing: true, guideTypingTimer: null});
   }
 
@@ -28,7 +26,7 @@ let UnwrappedGuide = class Guide extends React.Component {
     if (dismissed) {
       soundLibrary.playSound('other');
     }
-  }
+  }x
 
   render() {
     const state = getState();
