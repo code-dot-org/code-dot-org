@@ -2086,7 +2086,10 @@ applabCommands.deleteRecord = function (opts) {
     return;
   }
   var onComplete = applabCommands.handleDeleteRecord.bind(this, opts);
-  var onError = opts.onError || getAsyncOutputWarning();
+  var onError = error => {
+    getAsyncOutputWarning()(error);
+    onComplete(false);
+  };
   try {
     rateLimit();
     Applab.storage.deleteRecord(opts.table, opts.record, onComplete, onError);
