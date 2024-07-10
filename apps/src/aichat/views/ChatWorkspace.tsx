@@ -7,6 +7,7 @@ import {
   setShowWarningModal,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
+import {Button} from '@cdo/apps/componentLibrary/button';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import ChatItemView from './ChatItemView';
@@ -14,10 +15,16 @@ import UserChatMessageEditor from './UserChatMessageEditor';
 
 import moduleStyles from './chatWorkspace.module.scss';
 
+interface ChatWorkspaceProps {
+  onClear: () => void;
+}
+
 /**
  * Renders the AI Chat Lab main chat workspace component.
  */
-const ChatWorkspace: React.FunctionComponent = () => {
+const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
+  onClear,
+}) => {
   const showWarningModal = useSelector(
     (state: {aichat: AichatState}) => state.aichat.showWarningModal
   );
@@ -75,6 +82,16 @@ const ChatWorkspace: React.FunctionComponent = () => {
         {showWaitingAnimation()}
       </div>
       <UserChatMessageEditor />
+      <div className={moduleStyles.buttonRow}>
+        <Button
+          text="Clear chat"
+          iconLeft={{iconName: 'eraser'}}
+          size="s"
+          type="secondary"
+          color="gray"
+          onClick={onClear}
+        />
+      </div>
     </div>
   );
 };

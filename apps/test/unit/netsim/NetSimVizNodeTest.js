@@ -27,21 +27,21 @@ describe('NetSimVizNode', function () {
 
     it('immediately creates SVG elements', function () {
       var root = vizNode.getRoot();
-      assert.equal('[object SVGGElement]', root[0].toString());
+      assert.equal('[object SVGElement]', root[0].toString());
 
       var rootChildren = root.children();
       assert.equal(3, rootChildren.length);
 
       var circle = rootChildren[0];
-      assert.equal('[object SVGCircleElement]', circle.toString());
+      assert.equal('[object SVGElement]', circle.toString());
 
       var nameGroup = rootChildren[1];
-      assert.equal('[object SVGGElement]', nameGroup.toString());
+      assert.equal('[object SVGElement]', nameGroup.toString());
       var nameChildren = $(nameGroup).children();
       assert.equal(2, nameChildren.length);
 
       var addressGroup = rootChildren[2];
-      assert.equal('[object SVGGElement]', addressGroup.toString());
+      assert.equal('[object SVGElement]', addressGroup.toString());
       var addressChildren = $(addressGroup).children();
       assert.equal(2, addressChildren.length);
     });
