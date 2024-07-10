@@ -9,6 +9,8 @@
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
+import type {AppName} from '../../lab2Entrypoints';
+export type {AppName};
 
 /// ------ PROJECTS ------ ///
 
@@ -198,29 +200,6 @@ export type ProjectType =
   | 'playlab_k1'
   | 'sports'
   | 'basketball';
-
-export type AppName =
-  | 'aichat'
-  | 'applab'
-  | 'calc'
-  | 'dance'
-  | 'eval'
-  | 'flappy'
-  | 'gamelab'
-  | 'javalab'
-  | 'music'
-  | 'thebadguys'
-  | 'weblab'
-  | 'turtle'
-  | 'craft'
-  | 'studio'
-  | 'bounce'
-  | 'poetry'
-  | 'pythonlab'
-  | 'spritelab'
-  | 'standalone_video'
-  | 'panels'
-  | 'weblab2';
 
 export type StandaloneAppName =
   | 'spritelab'
