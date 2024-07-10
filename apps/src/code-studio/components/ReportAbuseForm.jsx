@@ -3,10 +3,12 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import {getChannelIdFromUrl} from '@cdo/apps/reportAbuse';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import msg from '@cdo/locale';
-import {getChannelIdFromUrl} from '@cdo/apps/reportAbuse';
+
 import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
 
 /**

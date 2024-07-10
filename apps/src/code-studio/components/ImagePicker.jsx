@@ -1,14 +1,17 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import {ICON_PREFIX} from '@cdo/apps/applab/constants';
+import fontConstants from '@cdo/apps/fontConstants';
 import {getStore} from '@cdo/apps/redux';
-import AssetManager, {ImageMode} from './AssetManager';
+import i18n from '@cdo/locale';
+
 import color from '../../util/color';
+
+import AssetManager, {ImageMode} from './AssetManager';
 import IconLibrary from './IconLibrary';
 import ImageURLInput from './ImageURLInput';
-import {ICON_PREFIX} from '@cdo/apps/applab/constants';
 import {RecordingFileType} from './recorders';
-import i18n from '@cdo/locale';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const extensionFilter = {
   // Note: .jfif files will be converted to .jpg by the server.

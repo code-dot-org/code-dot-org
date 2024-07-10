@@ -447,11 +447,10 @@
     }
   },
   "https://studio.code.org/s/computer-vision/lessons/2/levels/1": {
-    "long_instructions": "# The Search for Pixel\n\nPixel the cat, the beloved pet of the mayor of CeeVeeville, has gone missing! You have been hired to become a digital detective and to help bring the feline back home. In this activity, you will examine a variety of different locations/scenes within the city, using computer vision techniques to help solve Pixel’s strange disappearance.\n\n<b>How to Navigate Through the Activity</b>\n\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; height: 100px\">\n<img src=\"https://images.code.org/b05349920bec958f7a51f55ea1f13806-image-1708624312371.png\" style=\"margin-right: 40px; float: left\">\n<p>Make sure to use <i>slideshow mode</i> on the slide in order to be able to click and interact with icons, images, and hotspots. This is found on the upper-right corner of Google Slides. If accessed through this level, the activity will default to slideshow mode.</p>\n</div>\n\n</br>\n\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; height: 100px\">\n<img src=\"https://images.code.org/00ecd0e70d06511ff234a692cb939a90-image-1708624464517.png\" style=\"margin-right: 40px; float: left\">\n<p>Use the main city map to navigate to different locations in order to investigate the scene. Clicking any of the icons with the red dashed border will navigate you to that scene. Different locations will appear depending on the round of the activity.</p>\n</div>\n\n</br>\n\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; height: 100px\">\n<img src=\"https://images.code.org/f9e5c300438cb295cc6c4f983b921cf4-image-1708624680237.png\" style=\"margin-right: 40px; float: left\">\n<p>Each scene contains a visual image of what you find there. There are often different views within each scene. You can navigate through these views by using the view menu on the right-hand side of the screen.\n</p>\n</div>\n\n</br>\n\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; height: 100px\">\n<img src=\"https://images.code.org/572809c9413fb8b78e56608af80de770-image-1708624701218.png\" style=\"margin-right: 40px; float: right\">\n<p>Click the map icon to return to the main city map in order to visit another location.</p>\n</div>\n\n</br>\n\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; height: 100px\">\n<img src=\"https://images.code.org/b3dfdcffd82def3f9f502f50b0c72b84-image-1708624727643.png\" style=\"margin-right: 40px; float: left\">\n<p>To learn about what computer vision technique can be used in the scene, click the question mark icon.</p>\n</div>\n\n</br>\n\n<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; height: 100px\">\n<img src=\"https://images.code.org/02f7f23665cfdb392a85872925f30920-image-1708624732862.png\" style=\"margin-right: 40px; float: left\">\n<p>To apply the computer vision technique within the scene, click the magnifying glass icon.</p>\n</div>\n\n</br>\nEach scene is also a puzzle – it will require you to interact with the image in order to find clues to help solve the mystery. Clicking specific places on the image will result in clues surfacing and allowing you to follow on the trail of Pixel the cat."
+    "long_instructions": "## The Search for Pixel\n\nPixel the cat, the beloved pet of the mayor of CeeVeeville, has gone missing! You have been hired to become a digital detective and to help bring the feline back home. In this activity, you will examine a variety of different locations and scenes within the city, using computer vision techniques to help solve Pixel's strange disappearance."
   },
   "https://studio.code.org/s/computer-vision/lessons/2/levels/2": {
-    "long_instructions": "# Introduction to Computer Vision Reflection\n\n### What is your definition of computer vision?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
-    "teacher_markdown": "Allows students to share what they have constructed as their working definition of computer vision thus far. This definition is sure to evolve and grow as the module progresses. Some possible examples for a working definition might include:\n\n-   Computer vision is like when your computer tries to figure out what's in a picture, kind of like how we recognize our friends' faces or stuff in photos\n-   Computer vision helps computers 'see' and understand the images and videos like we do, but through cameras and algorithms\n-   It's like teaching a computer to see and interpret the world around it, so it can recognize objects, people, and even actions\n-   It's a part of artificial intelligence where computers are trained to interpret and understand the visual world"
+    "long_instructions": "## Check for Understanding\n\nWhat is your definition of computer vision?"
   },
   "https://studio.code.org/s/computer-vision/lessons/2/levels/3": {
     "dsls": {
@@ -459,18 +458,16 @@
     }
   },
   "https://studio.code.org/s/computer-vision/lessons/3/levels/1": {
-    "display_name": "Athletic Coach",
-    "bubble_choice_description": "Coaches teach amateur and professional athletes the skills they need to succeed at their sport.",
-    "long_instructions": "## How Might This Job Evolve?\n\nExplore how common jobs in the sporting world might incorporate computer vision to have a dramatic positive effect.\n\n<strong>Step One: </strong>Focus on one sports-related profession:\n\n-   Coach\n-   Athlete\n-   Scout\n-   Athetic Trainer\n-   Sports Analyst\n-   Sports Announcer / Broadcaster\n\n<strong>Step Two:</strong> With a partner, brainstorm a possible way in which one or more of the computer vision techniques listed below might be used to have an impact and make the job more efficient, more effective, or more rewarding.\n\n[][0]\n\n<strong>Step Three:</strong> Include the following information in the free response box below:\n\n-   The name of the sports-related job that you examined\n-   What is one aspect / task associated with the job that could benefit from a computer vision solution?\n-   How might one of the computer vision techniques seen here evolve the way that this job functions?",
+    "long_instructions": "## How Might This Job Evolve?\n\nExplore how common jobs in the sporting world might incorporate computer vision to have a dramatic positive effect.\n\n**Step One:** Focus on one sports-related profession:\n\n-   Coach\n-   Athlete\n-   Scout\n-   Athletic Trainer\n-   Sports Analyst\n-   Sports Announce\n\n**Step Two:** With a partner, brainstorm a possible way in which one or more of the computer vision techniques listed below might be used to have an impact and make the job more efficient, more effective, or more rewarding.\n\n-   Body or object tracking\n-   Facial recognition\n-   Character or text recognition\n-   Object or feature recognition\n\n**Step Three:** Include the following information in the free response box below:\n\n-   The name of the sports-related job that you examined\n-   What is one aspect / task associated with the job that could benefit from a computer vision solution?\n-   How might one of the computer vision techniques seen here evolve the way that this job functions?",
     "placeholder": "Enter your thoughts and ideas here",
     "title": "Incorporating Computer Vision "
   },
   "https://studio.code.org/s/computer-vision/lessons/3/levels/2": {
-    "long_instructions": "# What Community?\n\n#### Describe a community you belong to and a potential problem within that community that you discussed with your group.\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## What Community?\n\nDescribe a community you belong to and a potential problem within that community that you discussed with your group.",
     "teacher_markdown": "This question aims to assess students' ability to connect their personal experiences with the broader scope of computer vision applications, encouraging them to think critically about how technology can serve diverse needs."
   },
   "https://studio.code.org/s/computer-vision/lessons/3/levels/3": {
-    "long_instructions": "# Research Questions\n\n#### What was one research question you wrote down to learn more about the users' needs and why would that be important to learn about?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Research Questions\n\nWhat was one research question you wrote down to learn more about the users' needs and why would that be important to learn about?",
     "teacher_markdown": "The goal here is to evaluate students' understanding of how to translate observations about a community's challenges into open-ended questions that can effectively guide user research and data gathering."
   },
   "https://studio.code.org/s/computer-vision/lessons/3/levels/4": {
@@ -479,7 +476,7 @@
     }
   },
   "https://studio.code.org/s/computer-vision/lessons/4/levels/1": {
-    "long_instructions": "# Qualitative and Quantitative Data\n\n#### Reflecting on today's lesson, how do qualitative and quantitative data each contribute to understanding user needs in computer vision applications?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Qualitative and Quantitative Data\n\nReflecting on today's lesson, how do qualitative and quantitative data each contribute to understanding user needs in computer vision applications?",
     "teacher_markdown": "This question is designed to synthesize learning, asking students to consider how different types of data offer complementary insights into user needs, preferences, and behaviors, thereby informing more empathetic and effective design solutions."
   },
   "https://studio.code.org/s/computer-vision/lessons/4/levels/2": {
@@ -489,15 +486,15 @@
   },
   "https://studio.code.org/s/computer-vision/lessons/5/levels/1": {
     "dsls": {
-      "markdown": "# Sample Dataset\n\n#### Click [here](https://docs.google.com/spreadsheets/d/1yMLeTKjwj6_TmLK_amHL-RhAQ-rZGq6CGTWyB9e0QBs/copy) to make a copy of the dataset. \n\n# Data Visualizations Activity Guide\n\n#### Click [here](https://docs.google.com/document/d/11zhUUIl-tURa8QR8djG8OYSZJQq8yCMlCgi52Nlb9ao/copy) to make a copy of the activity guide.\n\n\n"
+      "markdown": "## Sample Dataset\n\nClick <a href=\"https://docs.google.com/spreadsheets/d/1yMLeTKjwj6_TmLK_amHL-RhAQ-rZGq6CGTWyB9e0QBs/copy\" target=\"_blank\">here</a> to make a copy of the dataset. \n\n<br />\n\n## Data Visualizations Activity Guide\n\nClick <a href=\"https://docs.google.com/document/d/11zhUUIl-tURa8QR8djG8OYSZJQq8yCMlCgi52Nlb9ao/copy\">here</a> to make a copy of the activity guide.\n\n\n"
     }
   },
   "https://studio.code.org/s/computer-vision/lessons/5/levels/2": {
-    "long_instructions": "# From Data to Viz\n\n#### Click the link below to explore the different types of data visualizations."
+    "long_instructions": "## From Data to Viz\n\nClick the link below to explore the different types of data visualizations."
   },
   "https://studio.code.org/s/computer-vision/lessons/5/levels/3": {
-    "long_instructions": "# Analyzing Data\n\n#### What was one observation, question, or inference that you can make about the data that you have gathered based on your visualization?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
-    "teacher_markdown": "Review the different analyses that students performed on their data in order to know which groups might need more assistance at the next stage of project development, in which they will be taking this observation / question / inference and turning it into a user persona that attempts to **_define_** the type of user that might use their product, and what problem they have that might be potentially solved with a computer vision application."
+    "long_instructions": "## Analyzing Data\n\nWhat was one observation, question, or inference that you can make about the data that you have gathered based on your visualization?",
+    "teacher_markdown": "Review the different analyses that students performed on their data in order to know which groups might need more assistance at the next stage of project development, in which they will be taking this observation, question, or inference and turning it into a user persona that attempts to define the type of user that might use their product, and what problem they have that might be potentially solved with a computer vision application."
   },
   "https://studio.code.org/s/computer-vision/lessons/5/levels/4": {
     "dsls": {
@@ -505,15 +502,15 @@
     }
   },
   "https://studio.code.org/s/computer-vision/lessons/6/levels/1": {
-    "long_instructions": "# User Personas\n\n#### Explain what a user persona is and how it helps in designing a computer vision application.\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## User Personas\n\nExplain what a user persona is and how it helps in designing a computer vision application.",
     "teacher_markdown": "Students should be able to articulate that a user persona is a fictional character created based on research to represent a user type that might use the application, emphasizing how it helps focus design efforts to meet specific user needs."
   },
   "https://studio.code.org/s/computer-vision/lessons/6/levels/2": {
-    "long_instructions": "# User Story\n\n#### Describe a user story you created based on your data visualizations. What data informed this story?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## User Story\n\nDescribe a user story you created based on your data visualizations. What data informed this story?",
     "teacher_markdown": "This question assesses students' ability to analyze data visualizations and extract insights that inform the creation of a user story, demonstrating the link between data interpretation and user-centered design."
   },
   "https://studio.code.org/s/computer-vision/lessons/6/levels/3": {
-    "long_instructions": "# Problem Statements\n\n#### How did you transition from your user story to developing a core problem statement? Provide an example from your work.\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Problem Statements\n\nHow did you transition from your user story to developing a core problem statement? Provide an example from your work.",
     "teacher_markdown": "Students should explain the process of identifying core issues from user stories by asking \"Why?\" multiple times, showcasing their understanding of digging deeper into user needs to define a core problem."
   },
   "https://studio.code.org/s/computer-vision/lessons/6/levels/4": {
@@ -522,13 +519,13 @@
     }
   },
   "https://studio.code.org/s/computer-vision/lessons/7/levels/1": {
-    "long_instructions": "# Binary to Base 10\n\n#### Click the link below to convert your binary number to a base 10 number."
+    "long_instructions": "## Binary to Base 10\n\nClick the link below to convert your binary number to a base 10 number."
   },
   "https://studio.code.org/s/computer-vision/lessons/7/levels/2": {
-    "long_instructions": "# Google Color Picker\n\n#### Click the link below to enter the activity guide values into the RGB box to reveal the mystery color that was encoded into your QR code."
+    "long_instructions": "## Google Color Picker\n\nClick the link below to enter the activity guide values into the RGB box to reveal the mystery color that was encoded into your QR code."
   },
   "https://studio.code.org/s/computer-vision/lessons/7/levels/3": {
-    "long_instructions": "# Pixels, RGB, and Computer Vision\n\n#### Considering what you've learned about pixels and RGB values, what kinds of information do you think computer vision algorithms can extract from images, and for what purposes?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Pixels, RGB, and Computer Vision\n\nConsidering what you've learned about pixels and RGB values, what kinds of information do you think computer vision algorithms can extract from images, and for what purposes?",
     "teacher_markdown": "Encouraging students to think broadly about the applications of computer vision, including color detection, pattern recognition, and object identification, and how these capabilities can serve various purposes across industries."
   },
   "https://studio.code.org/s/computer-vision/lessons/7/levels/4": {
@@ -537,11 +534,11 @@
     }
   },
   "https://studio.code.org/s/computer-vision/lessons/8/levels/1": {
-    "long_instructions": "# Edge Detection and Image Processing\n\n#### Explain the concept of edge detection in computer vision and its importance in image processing.\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Edge Detection and Image Processing\n\nExplain the concept of edge detection in computer vision and its importance in image processing.",
     "teacher_markdown": "Students should be able to define edge detection as a technique used to identify the boundaries or edges within images, highlighting its significance in distinguishing objects from their background, which is crucial for various computer vision applications."
   },
   "https://studio.code.org/s/computer-vision/lessons/8/levels/2": {
-    "long_instructions": "# Edge Detection and Your Application\n\n#### How might edge detection filters be utilized in the computer vision application you're developing?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Edge Detection and Your Application\n\nHow might edge detection filters be utilized in the computer vision application you're developing?",
     "teacher_markdown": "Encourages students to think about the practical application of edge detection in their own computer vision projects, discussing how it could improve object recognition, tracking, or other functionalities."
   },
   "https://studio.code.org/s/computer-vision/lessons/8/levels/3": {
@@ -729,8 +726,8 @@
   },
   "https://studio.code.org/s/computer-vision/lessons/9/levels/1": {
     "dsls": {
-      "description": "While the usage of computer vision will grow at a rapid pace and transform the whole healthcare industry, how is computer vision used today? Explore one of the ways below:",
-      "display_name": "Computer Vision in Action in Healthcare"
+      "description": "While the usage of computer vision will grow at a rapid pace and transform the whole healthcare industry, how is computer vision used today? Explore one of the ways below.",
+      "display_name": "Computer Vision in Healthcare"
     },
     "sublevels": {
       "CV_CareerExploration3_3a_2024": {
@@ -764,10 +761,7 @@
     }
   },
   "https://studio.code.org/s/computer-vision/lessons/9/levels/2": {
-    "display_name": "Athletic Coach",
-    "bubble_choice_description": "Coaches teach amateur and professional athletes the skills they need to succeed at their sport.",
-    "long_instructions": "## How Can Computer Vision Further Assist Healthcare Workers?\n\nNow that you have explored some of the ways in which computer vision is expanding within the healthcare industry, use your knowledge to help problem-solve.\n\nThe following were identified as some of the main issues associated with the modern healthcare system:\n\n-   **Rising costs of healthcare**\n-   **Shortage of healthcare workers**\n-   **Time-intensive records keeping**\n\nWith a partner, focus on one healthcare profession and brainstorm a possible way in which one or more of the computer vision techniques listed below might assist help to address one of the major issues in healthcare currently. If you need help selected, a list of healthcare professions can be [here][0]\n\n[][1]\n\nInclude the following:\n\n-   The name of the healthcare-related job\n-   What major healthcare issue will be addressing?\n-   How might one of the computer vision techniques seen here assist to alleviate this major issue in some way (_either small or large_)?",
-    "placeholder": "Enter your thoughts and ideas here",
+    "long_instructions": "## How Can Computer Vision Further Assist Healthcare Workers?\n\nNow that you have explored some of the ways in which computer vision is expanding within the healthcare industry, use your knowledge to help problem-solve.\n\nThe following were identified as some of the main issues associated with the modern healthcare system:\n\n-   **Rising costs of healthcare**\n-   **Shortage of healthcare workers**\n-   **Time-intensive records keeping**\n\nWith a partner, focus on one healthcare profession and brainstorm a possible way in which one or more of the computer vision techniques listed below might assist help to address one of the major issues in healthcare currently. If you need help selected, a list of healthcare professions can be <a href=\"https://www.bls.gov/ooh/healthcare/home.htm\">here</a>.\n\n-   Image analysis\n-   Augemented reality\n-   Character or text recognition\n-   Object or feature recognition\n\nInclude the following in your response:\n\n-   The name of the healthcare-related job\n-   What major healthcare issue will be addressing?\n-   How might one of the computer vision techniques seen here assist to alleviate this major issue in some way?",
     "title": "Incorporating Computer Vision "
   },
   "https://studio.code.org/s/computer-vision/lessons/9/levels/3": {
@@ -785,15 +779,15 @@
     "long_instructions": "# MediaPipe Image Classification\n\n#### Click the link below to get to MediaPipe's Image Classification model demo."
   },
   "https://studio.code.org/s/computer-vision/lessons/9/levels/7": {
-    "long_instructions": "# Training Computer Vision Models\n\n#### Can you explain how datasets like COCO and ImageNet are used in training computer vision models?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Training Computer Vision Models\n\nCan you explain how datasets like COCO and ImageNet are used in training computer vision models?",
     "teacher_markdown": "Students should discuss the role of large image datasets in providing the labeled data necessary for training computer vision models to recognize and classify objects within images"
   },
   "https://studio.code.org/s/computer-vision/lessons/9/levels/8": {
-    "long_instructions": "# Confidence Scores\n\n#### What is a confidence score, and why is it important in the output of a computer vision model?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Confidence Scores\n\nWhat is a confidence score, and why is it important in the output of a computer vision model?",
     "teacher_markdown": "This question assesses students’ understanding of confidence scores as a measure of how certain a computer vision model is about its predictions, emphasizing its importance in determining the reliability of these predictions."
   },
   "https://studio.code.org/s/computer-vision/lessons/9/levels/9": {
-    "long_instructions": "# Influence of Datasets\n\n#### Reflecting on today’s lesson, how do the suitability and characteristics of different datasets influence the design of computer vision applications?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Influence of Datasets\n\nReflecting on today’s lesson, how do the suitability and characteristics of different datasets influence the design of computer vision applications?",
     "teacher_markdown": "To synthesize learning by having students articulate the critical role of selecting appropriate datasets in designing computer vision applications that can accurately perceive and interpret images."
   },
   "https://studio.code.org/s/computer-vision/lessons/9/levels/10": {
@@ -805,11 +799,11 @@
     "long_instructions": "# MediaPipe Object Detection\n\n#### Click [here][0] to download the image files to use with the model.\n\n#### Click the link below to get to MediaPipe's Object Detection model demo."
   },
   "https://studio.code.org/s/computer-vision/lessons/10/levels/2": {
-    "long_instructions": "# Bias in Applications\n\n#### How might bias in computer vision applications impact users differently based on their background or characteristics?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Bias in Applications\n\nHow might bias in computer vision applications impact users differently based on their background or characteristics?",
     "teacher_markdown": "To evaluate students' understanding of the differential impacts of bias, such as how facial recognition systems may perform poorly on certain demographic groups due to underrepresentation in training datasets."
   },
   "https://studio.code.org/s/computer-vision/lessons/10/levels/3": {
-    "long_instructions": "# Bias in Training Data\n\n#### How can bias in the data used to train computer vision models affect the performance and reliability of these systems?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Bias in Training Data\n\nHow can bias in the data used to train computer vision models affect the performance and reliability of these systems?",
     "teacher_markdown": "Students should discuss how biased training data can lead to computer vision systems that are unfair or inaccurate, particularly by failing to recognize or improperly categorizing objects or people not adequately represented in the training data."
   },
   "https://studio.code.org/s/computer-vision/lessons/10/levels/4": {
@@ -821,15 +815,15 @@
     "long_instructions": "# Teachable Machine\n\n#### Click the link below to access Teachable Machine."
   },
   "https://studio.code.org/s/computer-vision/lessons/11/levels/2": {
-    "long_instructions": "# Challenges Creating and Training Your Model\n\n#### What challenges did you encounter while creating and training your model, and how did you address them?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Challenges Creating and Training Your Model\n\nWhat challenges did you encounter while creating and training your model, and how did you address them?",
     "teacher_markdown": "Encourages students to reflect on any difficulties faced during model training, such as inadequate data or model misclassification, and discuss the strategies they used to overcome these challenges."
   },
   "https://studio.code.org/s/computer-vision/lessons/11/levels/3": {
-    "long_instructions": "# Real-World Applications\n\n#### How can the model you created be applied to the real-world problem you are trying to solve with your computer vision application?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Real-World Applications\n\nHow can the model you created be applied to the real-world problem you are trying to solve with your computer vision application?",
     "teacher_markdown": "This question aims to connect the technical process of model training with its practical application, encouraging students to think about how their model addresses the specific needs identified in their project's problem statement."
   },
   "https://studio.code.org/s/computer-vision/lessons/11/levels/4": {
-    "long_instructions": "# Data Diversity\n\n#### Reflecting on today's lesson, why is the diversity of data crucial in training a computer vision model, and how did the Teachable Machine activity enhance your understanding of this concept?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Data Diversity\n\nReflecting on today's lesson, why is the diversity of data crucial in training a computer vision model, and how did the Teachable Machine activity enhance your understanding of this concept?",
     "teacher_markdown": "To synthesize learning by having students articulate the importance of diverse training data in developing effective and equitable computer vision models and reflect on how the hands-on experience with Teachable Machine highlighted these concepts."
   },
   "https://studio.code.org/s/computer-vision/lessons/11/levels/5": {
@@ -839,7 +833,7 @@
   },
   "https://studio.code.org/s/computer-vision/lessons/12/levels/1": {
     "dsls": {
-      "description": "Choose one of the Computer Vision technologies (facial recognition, autonomous vehicles, or health and medicine) and select ONE source option for that technology from the options below:",
+      "description": "Choose one of the computer vision technologies (facial recognition, autonomous vehicles, or health and medicine) and select ONE source option for that technology from the options below.",
       "display_name": "Ethics Exploration"
     },
     "sublevels": {
@@ -906,15 +900,15 @@
     }
   },
   "https://studio.code.org/s/computer-vision/lessons/12/levels/2": {
-    "long_instructions": "# Evolving Thoughts\n\n#### Complete this statement: When investigating my computer vision technology, I originally thought **\\_\\_**. After comparing and discussing with classmates who had the same tech, I now/still think ****\\_\\_\\_\\_****, because ****\\_\\_\\_\\_****.\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Evolving Thoughts\n\nComplete this statement: When investigating my computer vision technology, I originally thought **\\_\\_**. After comparing and discussing with classmates who had the same tech, I now/still think ****\\_\\_\\_\\_****, because ****\\_\\_\\_\\_****.",
     "teacher_markdown": "Completing this statement encourages students to reflect on and articulate how collaborative discussions have deepened or altered their understanding of computer vision technologies, particularly regarding their ethical, privacy, and societal implications. "
   },
   "https://studio.code.org/s/computer-vision/lessons/12/levels/3": {
-    "long_instructions": "# Navigating Ethical Challenges\n\n#### How can society navigate the ethical challenges presented by Computer Vision technologies to ensure they benefit all members equitably?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Navigating Ethical Challenges\n\nHow can society navigate the ethical challenges presented by Computer Vision technologies to ensure they benefit all members equitably?",
     "teacher_markdown": "The goal here is to encourage students to think broadly about the roles of education, transparency, public engagement and perhaps even policy in addressing ethical challenges. This discussion aims to highlight the importance of multidisciplinary approaches, including ethics, law, and technology, in creating a framework that safeguards individual rights while fostering innovation."
   },
   "https://studio.code.org/s/computer-vision/lessons/12/levels/4": {
-    "long_instructions": "# Ethical Considerations\n\n#### What is the single most important ethical consideration that you feel needs to be made when a new Computer Vision technology is introduced? Why do you feel that way?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Ethical Considerations\n\nWhat is the single most important ethical consideration that you feel needs to be made when a new Computer Vision technology is introduced? Why do you feel that way?",
     "teacher_markdown": "This question aims to personalize the ethical considerations of computer vision technologies, prompting students to reflect on and articulate their values and priorities. The goal is to foster a deeper understanding of the diverse ethical dimensions these technologies entail, such as privacy, consent, transparency, and accountability. By identifying and discussing the most pressing ethical issue from their perspective, students can explore the rationale behind ethical guidelines and the potential consequences of overlooking these considerations."
   },
   "https://studio.code.org/s/computer-vision/lessons/12/levels/5": {
@@ -924,7 +918,7 @@
   },
   "https://studio.code.org/s/computer-vision/lessons/13/levels/1": {
     "dsls": {
-      "description": "Explore the jobs of the future by seeing how computer vision might aid, enhance, or redefine professions. Below are interviews from a variety of people who work as Design/Creative Technologists, utilizing varied computer vision applications to aid in the interactivity of their work. All interviews are excerpted from https://www.creativelivesinprogress.com/job-roles/creative-technologist",
+      "description": "Explore the jobs of the future by seeing how computer vision might aid, enhance, or redefine professions. Below are interviews from a variety of people who work as Creative Technologists, utilizing varied computer vision applications to aid in the interactivity of their work. All interviews are excerpted from https://www.creativelivesinprogress.com/job-roles/creative-technologist",
       "display_name": "Computer Vision Career Exploration 1"
     },
     "sublevels": {
@@ -952,19 +946,14 @@
     }
   },
   "https://studio.code.org/s/computer-vision/lessons/13/levels/2": {
-    "long_instructions": "# Prototyping Self-Reflection\n\n#### What part of today’s prototyping activity was most useful, interesting, or engaging for you? Explain why.\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Prototyping Self-Reflection\n\nWhat part of today's prototyping activity was most useful, interesting, or engaging for you? Explain why.",
     "teacher_markdown": "Reading through student responses before the start of the next class will be helpful to course correct any issues or identify any students who are struggling to identify anything useful, interesting or engaging about the prototyping process and work with them to find something useful or engaging and to better address student needs on Day Two."
   },
   "https://studio.code.org/s/computer-vision/lessons/13/levels/3": {
-    "long_instructions": "# Project Planning and Scope\n\n#### What does 'scope' mean in the context of project planning, and how did you determine the scope of your prototype?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Project Planning and Scope\n\nWhat does 'scope' mean in the context of project planning, and how did you determine the scope of your prototype?",
     "teacher_markdown": "Students should explain the concept of project scope as it relates to the features, functions, and timeline of their prototype, discussing how they decided what was feasible to accomplish within the constraints of the project."
   },
   "https://studio.code.org/s/computer-vision/lessons/14/levels/1": {
-    "long_instructions": "## The Exhibit of the Future!\n\nWith a partner, brainstorm a way to use computer vision within an installation that a creative/design technologist might create for a local museum or an interactive exhibit space like Meow Wolf.\n\nUse the space below to describe your ideas. You may also, optionally, upload a sketch or other supporting digital artifact that helps explain your idea.",
-    "placeholder": "Write a description of your interactive exhibit here.",
-    "title": "Design an Interactive Exhibit"
-  },
-  "https://studio.code.org/s/computer-vision/lessons/14/levels/2": {
     "dsls": {
       "answers": [
         {
@@ -1005,32 +994,32 @@
           "text": "What prototype component(s) have you implemented in your project thus far?"
         }
       ],
-      "title": "Prototype Components Check"
+      "title": "Prototype Components"
     }
   },
-  "https://studio.code.org/s/computer-vision/lessons/14/levels/3": {
-    "long_instructions": "# Prototype Process Reflection\n\n#### Reflect on the prototyping process so far. What aspects of your prototype are you most proud of, and why?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+  "https://studio.code.org/s/computer-vision/lessons/14/levels/2": {
+    "long_instructions": "## Prototype Process Reflection\n\nReflect on the prototyping process so far. What aspects of your prototype are you most proud of, and why?",
     "teacher_markdown": "Encourages students to think critically about their work, focusing on achievements and innovations they've introduced in their prototype, fostering a sense of accomplishment and encouraging peer-to-peer learning."
   },
-  "https://studio.code.org/s/computer-vision/lessons/14/levels/4": {
-    "long_instructions": "# User Testing Preparation\n\n#### How have you prepared your prototype for user testing, and what are you hoping to learn from this phase?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+  "https://studio.code.org/s/computer-vision/lessons/14/levels/3": {
+    "long_instructions": "## User Testing Preparation\n\nHow have you prepared your prototype for user testing, and what are you hoping to learn from this phase?",
     "teacher_markdown": "Students should discuss their preparations for the testing phase, what they aim to learn from user interactions, and how they plan to use this feedback to further refine their computer vision applications."
   },
-  "https://studio.code.org/s/computer-vision/lessons/14/levels/5": {
+  "https://studio.code.org/s/computer-vision/lessons/14/levels/4": {
     "dsls": {
       "markdown": "## Check for Understanding\n\nGo to <a href=\"https://play.juicemind.com/join\" target=\"_blank\">JuiceMind</a>, and enter the game pin provided by your teacher.\n\n[![](https://images.code.org/29a9578c54dfa193482daf02b994c225-image-1719412135873.png)](https://play.juicemind.com/join)\n"
     }
   },
   "https://studio.code.org/s/computer-vision/lessons/15/levels/1": {
-    "long_instructions": "# Lessons Learned\n\n#### What can we learn by testing our design in front of our intended users?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Lessons Learned\n\nWhat can we learn by testing our design in front of our intended users?",
     "teacher_markdown": "Responses should reflect an understanding that user testing is essential for creating solutions that are genuinely useful and user-friendly. Students should mention how testing with intended users ensures the product meets real-world needs and usability standards."
   },
   "https://studio.code.org/s/computer-vision/lessons/15/levels/2": {
-    "long_instructions": "# Role-Playing Reflection\n\n#### How did role-playing as a user persona change your perspective on the computer vision applications you reviewed?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Role-Playing Reflection\n\nHow did role-playing as a user persona change your perspective on the computer vision applications you reviewed?",
     "teacher_markdown": "Encourages students to reflect on how adopting a user persona provided new insights into the user experience, highlighting the value of empathy in designing user-centered solutions."
   },
   "https://studio.code.org/s/computer-vision/lessons/15/levels/3": {
-    "long_instructions": "# Influential Feedback\n\n#### What was the most surprising or insightful piece of feedback you received, and how will it influence your project moving forward?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Influential Feedback\n\nWhat was the most surprising or insightful piece of feedback you received, and how will it influence your project moving forward?",
     "teacher_markdown": "Students should evaluate how feedback from diverse perspectives can offer unexpected insights, and how such feedback can drive the project to better meet user needs or address previously overlooked issues."
   },
   "https://studio.code.org/s/computer-vision/lessons/15/levels/4": {
@@ -1039,20 +1028,20 @@
     }
   },
   "https://studio.code.org/s/computer-vision/lessons/16/levels/1": {
-    "long_instructions": "# Iteration Process Reflection\n\n#### Reflect on the iteration process of your prototype. What aspects of this process did you find most effective in improving your design, and why do you think these elements were particularly successful?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Iteration Process Reflection\n\nReflect on the iteration process of your prototype. What aspects of this process did you find most effective in improving your design, and why do you think these elements were particularly successful?",
     "teacher_markdown": "This question encourages students to analyze and articulate which parts of the iteration process contributed most significantly to their prototype's development, fostering an understanding of effective design practices. Students should provide clear examples of successful iteration elements, such as rapid prototyping, user testing sessions, or specific types of feedback that were particularly insightful along with an explanation of why these elements were effective."
   },
   "https://studio.code.org/s/computer-vision/lessons/16/levels/2": {
-    "long_instructions": "# Feedback Implementation\n\n#### Describe a specific instance where implementing feedback was challenging. What was the feedback, why was it difficult to implement, and how did you address the challenge?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Feedback Implementation\n\nDescribe a specific instance where implementing feedback was challenging. What was the feedback, why was it difficult to implement, and how did you address the challenge?",
     "teacher_markdown": "This question encourages students to reflect on the difficulties encountered in implementing feedback and discuss the strategies or compromises made to navigate these challenges while still striving to meet user needs."
   },
   "https://studio.code.org/s/computer-vision/lessons/16/levels/3": {
-    "long_instructions": "# Feedback Experience\n\n#### What have you learned about the process of collecting, evaluating, and acting on feedback throughout this project? How will this learning influence your approach to future projects?\n\n**Use the space below to answer the above prompt**\n\n[][0]",
+    "long_instructions": "## Feedback Experience\n\nWhat have you learned about the process of collecting, evaluating, and acting on feedback throughout this project? How will this learning influence your approach to future projects?",
     "teacher_markdown": "This question aims to explore what students have gleaned from their experiences with feedback, emphasizing the importance of feedback in design and how it shapes their approach to projects. "
   },
   "https://studio.code.org/s/computer-vision/lessons/16/levels/4": {
     "dsls": {
-      "markdown": "##[Optional] Personal Career Exploration\n\n###Do This:\n1.  Explore the Occupational Outlook Handbook from the BLS in order to find a career that is interesting to you.\n2. Provide relevant statistics about the profession in the spaces provided below\n3. Explain one way that computer vision is already being used in the profession OR speculate about one way how computer vision might be incorporated into the profession in the future.\n\n###[Link to Occupational Outlook Handbook](https://www.bls.gov/ooh/)\n"
+      "markdown": "## Personal Career Exploration\n\n### Do This:\n1.  Explore the Occupational Outlook Handbook from the BLS in order to find a career that is interesting to you.\n2. Provide relevant statistics about the profession in the spaces provided below\n3. Explain one way that computer vision is already being used in the profession OR speculate about one way how computer vision might be incorporated into the profession in the future.\n\n<a href=\"https://www.bls.gov/ooh/\" target=\"_blank\">Occupational Outlook Handbook</a>\n"
     }
   },
   "https://studio.code.org/s/computer-vision/lessons/17/levels/1": {
@@ -1481,15 +1470,15 @@
           ]
         }
       },
-      "cv-studentsurvey-postmodule-q5": {
+      "cv-studentsurvey-postmodule-q11": {
         "dsls": {
           "answers": [
             {
-              "text": "Very likely",
+              "text": "Strongly disagree",
               "correct": true
             },
             {
-              "text": "Likely",
+              "text": "Disagree",
               "correct": true
             },
             {
@@ -1497,17 +1486,110 @@
               "correct": true
             },
             {
-              "text": "Unlikely",
+              "text": "Agree",
               "correct": true
             },
             {
-              "text": "Very unlikely",
+              "text": "Strongly agree",
               "correct": true
             }
           ],
           "questions": [
             {
-              "text": "How interested are you to continue exploring computer vision or related fields after this module?"
+              "text": "I like this computer vision unit."
+            }
+          ]
+        }
+      },
+      "cv-studentsurvey-postmodule-q10": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I can be myself in this computer science class."
+            }
+          ]
+        }
+      },
+      "cv-studentsurvey-postmodule-q5": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "This unit made me more interested in pursuing a career in computer science."
+            }
+          ]
+        }
+      },
+      "cv-studentsurvey-postmodule-q9": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Strongly disagree",
+              "correct": true
+            },
+            {
+              "text": "Disagree",
+              "correct": true
+            },
+            {
+              "text": "Neutral",
+              "correct": true
+            },
+            {
+              "text": "Agree",
+              "correct": true
+            },
+            {
+              "text": "Strongly agree",
+              "correct": true
+            }
+          ],
+          "questions": [
+            {
+              "text": "I want to take more computer science classes in the future."
             }
           ]
         }
