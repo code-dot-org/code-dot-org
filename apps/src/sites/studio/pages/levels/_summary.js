@@ -56,7 +56,7 @@ $(document).ready(() => {
     const predictQuestionContainer =
       document.getElementById('predict-question');
     const correctAnswerContainer = document.getElementById(
-      'summary-correct-answer'
+      'summary-predict-correct-answer'
     );
     if (predictQuestionContainer) {
       ReactDOM.render(
