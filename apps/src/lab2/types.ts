@@ -272,12 +272,13 @@ export interface ExtraLinksLevelData {
   is_standalone_project: boolean;
 }
 export interface ExtraLinksProjectData {
-  owner_info: {storage_id: number; name: string};
-  project_info: {
+  owner_info?: {storage_id: number; name: string};
+  project_info?: {
     id: number;
     sources_link: string;
     is_featured_project: boolean;
     featured_status: string;
     remix_ancestry: string[];
   };
+  meesage?: string;
 }
