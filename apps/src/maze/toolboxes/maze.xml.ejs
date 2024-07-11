@@ -6,9 +6,9 @@ var level = locals.level;
 var page = locals.page;
 %>
 <xml id="toolbox" style="display: none;">
-  <block type="maze_moveForward"></block>
-  <block type="maze_turn"><title name="DIR">turnLeft</title></block>
-  <block type="maze_turn"><title name="DIR">turnRight</title></block>
+  <block type="maze_moveForward" id="moveForward"></block>
+  <block type="maze_turn" id="turnLeft"><title name="DIR">turnLeft</title></block>
+  <block type="maze_turn" id="turnRight"><title name="DIR">turnRight</title></block>
   <% if (page === 1) { -%>
     <% if (level > 2) { -%>
       <block type="maze_forever"></block>
@@ -28,11 +28,11 @@ var page = locals.page;
       </block>
     <% } -%>
     <% if (level > 8) { -%>
-      <block type="maze_forever"></block>
+      <block type="maze_forever" id="repeatForever"></block>
       <% if (level === 13 || level === 15) { -%>
         <block type="maze_if"><title name="DIR">isPathLeft</title></block>
       <% } else if (level === 14 || level === 16) { -%>
-        <block type="maze_if"><title name="DIR">isPathRight</title></block>
+        <block type="maze_if" id="ifPathRight"><title name="DIR">isPathRight</title></block>
       <% } -%>
       <% if (level > 16) { -%>
        <block type="maze_ifElse"></block>

@@ -155,7 +155,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   getGenerator: () => JavascriptGeneratorType;
   addEmbeddedWorkspace: (workspace: Workspace) => void;
   isEmbeddedWorkspace: (workspace: Workspace) => boolean;
-  findEmptyContainerBlock: () => void;
+  findEmptyContainerBlock: (blocks: Block[]) => Block | null;
   createEmbeddedWorkspace: (
     container: HTMLElement,
     xml: Node,

@@ -95,6 +95,7 @@ export interface MilestoneReport extends OptionalMilestoneData {
 
 interface OptionalMilestoneData {
   program?: string;
+  // Submitted is a boolean, which the server expects as a string.
   submitted?: string;
 }
 

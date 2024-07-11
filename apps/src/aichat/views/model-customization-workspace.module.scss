@@ -2,7 +2,8 @@
 @import '../../mixins.scss';
 @import './aichat-common.module.scss';
 
-%full-width {
+%full-width,
+.full-width {
   width: 100%;
   box-sizing: border-box;
 }
@@ -94,4 +95,14 @@
 .compareModelsButton {
   padding: 5px 16px;
   margin: 10px 0;
+}
+
+.fieldLabelContainer {
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+}
+
+.fieldLabel {
+  margin: 0;
 }

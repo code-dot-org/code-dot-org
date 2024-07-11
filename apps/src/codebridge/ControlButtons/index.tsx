@@ -98,30 +98,29 @@ const ControlButtons: React.FunctionComponent = () => {
     }
   };
 
-  const handleNavigation = () => {
-    if (isSubmittable) {
-      onSubmit();
-    } else if (hasNextLevel) {
-      onContinue();
-    } else {
-      onFinish();
-    }
-  };
-
-  const getNavigationButtonText = () => {
-    if (isSubmittable) {
-      return hasSubmitted ? commonI18n.unsubmit() : commonI18n.submit();
-    } else if (hasNextLevel) {
-      return commonI18n.continue();
-    } else {
-      return commonI18n.finish();
-    }
-  };
-
   // We disabled navigation is we are still loading, or if this is a submittable level,
   // the user has not submitted yet, and the user has not run their code during this session.
   const disableNavigation =
     loading || (isSubmittable && !hasSubmitted && !hasRun);
+  const getNavigationButtonProps = () => {
+    if (isSubmittable) {
+      return {
+        navigationText: hasSubmitted
+          ? commonI18n.unsubmit()
+          : commonI18n.submit(),
+        handleNavigation: onSubmit,
+      };
+    } else if (hasNextLevel) {
+      return {
+        navigationText: commonI18n.continue(),
+        handleNavigation: onContinue,
+      };
+    } else {
+      return {navigationText: commonI18n.finish(), handleNavigation: onFinish};
+    }
+  };
+
+  const {navigationText, handleNavigation} = getNavigationButtonProps();
 
   return (
     <div className={moduleStyles.controlButtonsContainer}>
@@ -143,7 +142,7 @@ const ControlButtons: React.FunctionComponent = () => {
         size={'s'}
       />
       <Button
-        text={getNavigationButtonText()}
+        text={navigationText}
         onClick={handleNavigation}
         disabled={disableNavigation}
         color={'purple'}

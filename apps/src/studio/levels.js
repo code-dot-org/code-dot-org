@@ -224,7 +224,7 @@ levels.dog_hello = {
   timeoutFailureTick: 100,
   toolbox: tb(blockOfType('studio_saySprite')),
   startBlocks:
-    '<block type="when_run" deletable="false" x="20" y="20"></block>',
+    '<block type="when_run" deletable="false" x="20" y="20" id="whenRun"></block>',
 };
 levels.k1_1 = extend(levels.dog_hello, {
   isK1: true,
@@ -292,7 +292,7 @@ levels.dog_and_cat_hello = {
     },
   },
   timeoutFailureTick: 200,
-  toolbox: tb(blockOfType('studio_saySprite')),
+  toolbox: tb('<block type="studio_saySprite" id="actorSay"></block>'),
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"></block>',
 };
@@ -415,7 +415,7 @@ levels.playlab_3 = {
   firstSpriteIndex: 26, // tennis girl
   toolbox: tb(
     '<block type="studio_moveDistance"><title name="DIR">1</title><title name="DISTANCE">200</title></block>' +
-      '<block type="studio_moveDistance"><title name="DIR">2</title><title name="DISTANCE">200</title></block>' +
+      '<block type="studio_moveDistance" id="moveRight"><title name="DIR">2</title><title name="DISTANCE">200</title></block>' +
       '<block type="studio_moveDistance"><title name="DIR">4</title><title name="DISTANCE">200</title></block>' +
       '<block type="studio_moveDistance"><title name="DIR">8</title><title name="DISTANCE">200</title></block>'
   ),
@@ -561,7 +561,7 @@ levels.playlab_4 = {
   ),
   startBlocks:
     '<block type="when_run" deletable="false" x="20" y="20"></block>' +
-    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="120"></block>',
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="120" id="whenActorTouches"></block>',
   map: [
     [0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 16, 0, 0, 0, 0],
@@ -916,7 +916,7 @@ levels.playlab_7 = {
       '<block type="studio_moveDistance"><title name="DIR">8</title><title name="DISTANCE">400</title></block>'
   ),
   startBlocks:
-    '<block type="studio_repeatForever" deletable="false" x="20" y="20"></block>',
+    '<block type="studio_repeatForever" deletable="false" x="20" y="20" id="repeatForever"></block>',
   requiredBlocks: [
     [
       {
@@ -1161,7 +1161,7 @@ levels.playlab_8 = {
       '<block type="studio_playSound"><title name="SOUND">winpoint</title></block>'
   ),
   startBlocks:
-    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="20"></block>' +
+    '<block type="studio_whenSpriteCollided" deletable="false" x="20" y="20" id="whenActorTouches"></block>' +
     '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
     '<statement name="DO">' +
     blockUtils.blockWithNext(
@@ -1346,7 +1346,7 @@ levels.playlab_9 = {
   ),
   minWorkspaceHeight: 1250,
   startBlocks:
-    '<block type="when_run" deletable="false" x="20" y="20"></block>' +
+    '<block type="when_run" deletable="false" x="20" y="20" id="whenRun"></block>' +
     '<block type="studio_repeatForever" deletable="false" x="20" y="150">' +
     '<statement name="DO">' +
     blockUtils.blockWithNext(
