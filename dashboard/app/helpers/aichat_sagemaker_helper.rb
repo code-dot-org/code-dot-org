@@ -1,14 +1,14 @@
 module AichatSagemakerHelper
-  require "ai_model_processors/mistral_processor"
+  require_relative './ai_model_processors/mistral_processor'
 
   ASSISTANT = "assistant"
   USER = "user"
-  SYSTEM = "system"
-  KAREN_PRETEXT = "Edit the following text for spelling and grammar mistakes: "
   INSTRUCTIONS_BEGIN_TOKEN = "[INST]"
   INSTRUCTIONS_END_TOKEN = "[/INST]"
   SENTENCE_BEGIN_TOKEN = "<s>"
   SENTENCE_END_TOKEN = "</s>"
+  SYSTEM = "system"
+  KAREN_PRETEXT = "Edit the following text for spelling and grammar mistakes: "
   CHAT_ML_BEGIN_TOKEN = "<|im_start|>"
   CHAT_ML_END_TOKEN = "<|im_end|>"
   NEWLINE = "\n"
@@ -37,7 +37,7 @@ module AichatSagemakerHelper
   def self.format_inputs_for_sagemaker_request(aichat_params, stored_messages, new_message)
     selected_model_id = aichat_params[:selectedModelId]
     # Add system prompt and retrieval contexts if available to inputs as part of instructions that will be sent to model.
-    instructions = get_instructions(aichat_params[:systemPrompt], aichat_params[:retrievalContexts])  
+    instructions = get_instructions(aichat_params[:systemPrompt], aichat_params[:retrievalContexts])
     model_processor = get_model_processor(selected_model_id, instructions)
     inputs = model_processor.format_inputs(instructions, stored_messages, new_message)
     stopping_strings = model_processor.get_stop_strings
@@ -56,13 +56,13 @@ module AichatSagemakerHelper
   def self.get_model_processor(selected_model_id, instructions)
     case selected_model_id      
     when MODELS[:PIRATE]
-      return PirateProcessor.new(instructions)
+      return PirateProcessor.new
     when MODELS[:KAREN]
-      return KarenProcessor.new(instructions)
+      return KarenProcessor.new
     when MODELS[:ARITHMO]
-      return ArithmoProcessor.new(instructions)
+      return ArithmoProcessor.new
     else
-      return MistralProcessor.new(instructions)
+      return MistralProcessor.new
     end    
   end
 
