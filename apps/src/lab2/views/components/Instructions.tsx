@@ -15,6 +15,7 @@ import {
   isPredictAnswerLocked,
   setPredictResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
+import PredictSummary from './PredictSummary';
 const commonI18n = require('@cdo/locale');
 
 interface InstructionsProps {
@@ -269,6 +270,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             id="instructions-text"
             className={moduleStyles['text-' + theme]}
           >
+            {predictSettings?.isPredictLevel && <PredictSummary />}
             <EnhancedSafeMarkdown
               markdown={text}
               className={moduleStyles.markdownText}
