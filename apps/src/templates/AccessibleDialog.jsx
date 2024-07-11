@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
+import i18n from '@cdo/locale';
 
 import defaultStyle from './accessible-dialogue.module.scss';
 
@@ -46,6 +47,7 @@ function AccessibleDialog({
               type="button"
               onClick={xIconOnClick}
               className={closeIconStyle}
+              aria-label={i18n.closeDialog()}
             >
               <i
                 id="x-close"
