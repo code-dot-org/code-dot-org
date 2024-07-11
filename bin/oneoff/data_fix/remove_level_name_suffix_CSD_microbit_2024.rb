@@ -21,7 +21,7 @@ def remove_level_name_suffix
 
   unit = Unit.find_by_name("csd6b-2024")
   unit.levels.each do |level|
-    next unless level.name_suffix == "mb_2024"
+    next unless level.name_suffix == "_mb_2024"
 
     puts "Updating name suffix for level [#{level.name}]"
     level.update(name_suffix: nil)
