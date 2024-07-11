@@ -63,7 +63,7 @@ const ExistingAccountCard = () => {
             ? i18n.ltiLinkAccountExistingAccountCardContent({
                 providerName: ltiProviderName,
               })
-            : i18n.nonLMSAccountExistingAccountCardContentWorkshopEnroll()}
+            : i18n.accountExistingAccountCardContentWorkshopEnroll()}
         </CardContent>
       </div>
       <CardActions>

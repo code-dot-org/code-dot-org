@@ -18,7 +18,7 @@ const WelcomeBanner = () => {
         <Typography semanticTag={'h1'} visualAppearance={'heading-xxl'}>
           {isLMS
             ? i18n.ltiLinkAccountWelcomeBannerHeaderLabel()
-            : i18n.nonLMSLinkAccountWelcomeBannerHeaderLabel()}
+            : i18n.accountWelcomeBannerHeaderLabel()}
         </Typography>
         <Typography
           className={styles.titleDesc}
@@ -29,7 +29,7 @@ const WelcomeBanner = () => {
             ? i18n.ltiLinkAccountWelcomeBannerContent({
                 providerName: ltiProviderName,
               })
-            : i18n.nonLMSLinkAccountWelcomeBannerContentWorkshopEnroll()}
+            : i18n.accountWelcomeBannerContentWorkshopEnroll()}
         </Typography>
       </div>
     </div>

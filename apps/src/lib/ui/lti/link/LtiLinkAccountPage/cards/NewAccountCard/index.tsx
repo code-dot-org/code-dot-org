@@ -79,7 +79,7 @@ const NewAccountCard = () => {
             ? i18n.ltiLinkAccountNewAccountCardContent({
                 providerName: ltiProviderName,
               })
-            : i18n.nonLMSAccountNewAccountCardContentWorkshopEnroll()}
+            : i18n.accountNewAccountCardContentWorkshopEnroll()}
 
           <form
             data-testid={'new-account-form'}
@@ -101,7 +101,7 @@ const NewAccountCard = () => {
           text={
             isLMS
               ? i18n.ltiLinkAccountNewAccountCardActionLabel()
-              : i18n.nonLMSAccountNewAccountCardActionLabel()
+              : i18n.createAccount()
           }
           isPending={isSaving}
           disabled={isSaving}
