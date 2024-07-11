@@ -69,6 +69,10 @@ function InviteToV2ProgressModal({
     setInvitationOpen(showInvitation());
   }, [dateProgressTableInvitationDelayed, hasSeenProgressTableInvite]);
 
+  // This function is called any time the user has seen the modal and then gets rid of it
+  // They could "get rid of it" by hitting the "x" button, clicking "remind me later",
+  // or clicking "try it now".  This sends an amplitude event saying the user has seen the modal
+  // and then closes the modal.
   const handleModalClose = React.useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_SEEN_INVITATION, {
       sectionId,
@@ -76,6 +80,10 @@ function InviteToV2ProgressModal({
     setInvitationOpen(false);
   }, [sectionId]);
 
+  // This function is called when the user clicks the "x" button on the modal
+  // It sends an amplitude event saying the user has dismissed the modal
+  // It sets the state of the modal is closed, so that if a user clicks back to this tab
+  // the modal will not reappear
   const handleDismiss = React.useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_DISMISS_INVITATION, {
       sectionId,
