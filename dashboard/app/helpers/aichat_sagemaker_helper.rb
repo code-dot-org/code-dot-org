@@ -1,4 +1,6 @@
 module AichatSagemakerHelper
+  require "ai_model_processors/mistral_processor"
+
   ASSISTANT = "assistant"
   USER = "user"
   SYSTEM = "system"
@@ -36,7 +38,7 @@ module AichatSagemakerHelper
     selected_model_id = aichat_params[:selectedModelId]
     # Add system prompt and retrieval contexts if available to inputs as part of instructions that will be sent to model.
     instructions = get_instructions(aichat_params[:systemPrompt], aichat_params[:retrievalContexts])  
-    model_processor = get_model_processor(selected_model_id)
+    model_processor = get_model_processor(selected_model_id, instructions)
     inputs = model_processor.format_inputs(instructions, stored_messages, new_message)
     stopping_strings = model_processor.get_stop_strings
 
@@ -51,16 +53,16 @@ module AichatSagemakerHelper
     }
   end
 
-  def self.get_model_processor(selected_model_id)
+  def self.get_model_processor(selected_model_id, instructions)
     case selected_model_id      
     when MODELS[:PIRATE]
-      return PirateProcessor.new
+      return PirateProcessor.new(instructions)
     when MODELS[:KAREN]
-      return KarenProcessor.new
+      return KarenProcessor.new(instructions)
     when MODELS[:ARITHMO]
-      return ArithmoProcessor.new
+      return ArithmoProcessor.new(instructions)
     else
-      return MistralProcessor.new
+      return MistralProcessor.new(instructions)
     end    
   end
 

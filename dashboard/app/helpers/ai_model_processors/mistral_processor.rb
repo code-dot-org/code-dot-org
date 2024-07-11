@@ -1,5 +1,9 @@
 class MistralProcessor
-  def self.format_inputs(instructions, stored_messages, new_message)
+  def initialize(instructions)
+    @instructions = instructions
+  end
+
+  def format_inputs(instructions, stored_messages, new_message)
     # The instruction-tuned version of Mistral accepts formatted instructions where conversation roles
     # must start with a user prompt and alternate between user and assistant.
     # Mistral-7B-Instruction LLM instruction format doc at https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1.
@@ -19,10 +23,10 @@ class MistralProcessor
     inputs
   end
 
-  def self.format_outputs
+  def format_outputs
   end
 
-  def self.get_stop_strings
+  def get_stop_strings
     []
   end
 end
