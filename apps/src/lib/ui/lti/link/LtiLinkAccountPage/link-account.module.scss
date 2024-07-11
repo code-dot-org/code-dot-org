@@ -47,22 +47,6 @@
   padding-bottom: 16px;
 }
 
-.h1 {
-  color: purple !important;
-}
-
-.cardTitle {
-  .h1 {
-    color: green !important;
-  }
-  .CardHeader {
-    color: blue !important;
-    .h1 {
-      color: red !important;
-    }
-  }
-}
-
 .button {
   width: 100%;
 }
