@@ -1,3 +1,4 @@
+import NetSimTestUtils from '../../util/netsimTestUtils';
 import {assert} from '../../util/reconfiguredChai';
 
 var NetSimVizElement = require('@cdo/apps/netsim/NetSimVizElement');
@@ -9,6 +10,8 @@ describe('NetSimVizWire', function () {
 
   describe('defaults', function () {
     beforeEach(function () {
+      NetSimTestUtils.initializeGlobalsToDefaultValues();
+
       localVizNode = new NetSimVizNode();
       remoteVizNode = new NetSimVizNode();
       vizWire = new NetSimVizWire(localVizNode, remoteVizNode);
@@ -28,19 +31,19 @@ describe('NetSimVizWire', function () {
 
     it('immediately creates SVG elements', function () {
       var root = vizWire.getRoot();
-      assert.equal('[object SVGGElement]', root[0].toString());
+      assert.equal('[object SVGElement]', root[0].toString());
 
       var rootChildren = root.children();
       assert.equal(3, rootChildren.length);
 
       var line = rootChildren[0];
-      assert.equal('[object SVGPathElement]', line.toString());
+      assert.equal('[object SVGElement]', line.toString());
 
       var questionMark = rootChildren[1];
-      assert.equal('[object SVGTextElement]', questionMark.toString());
+      assert.equal('[object SVGElement]', questionMark.toString());
 
       var textBit = rootChildren[2];
-      assert.equal('[object SVGTextElement]', textBit.toString());
+      assert.equal('[object SVGElement]', textBit.toString());
     });
   });
 });

@@ -6,7 +6,7 @@ import {spy} from 'sinon';
 import NetSimLogBrowser from '@cdo/apps/netsim/NetSimLogBrowser';
 import i18n from '@cdo/netsim/locale';
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/deprecatedChai';
 
 describe('NetSimLogBrowser', function () {
   it('renders warning-free with the least possible parameters', function () {

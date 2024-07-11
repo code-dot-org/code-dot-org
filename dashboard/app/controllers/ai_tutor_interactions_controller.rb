@@ -27,8 +27,8 @@ class AiTutorInteractionsController < ApplicationController
     ai_tutor_interaction_params[:user_id] = current_user.id
     ai_tutor_interaction_params[:ai_model_version] = SharedConstants::AI_TUTOR_CHAT_MODEL_VERISON
 
-    # TODO: There might be a way to restrict this to only do this lookup for levels that use the projects system, but isProjectBacked
-    # isn't it. For now, since all the levels this is enabled for use projects/are JavaLab levels, we can just do this for all of them.
+    # TODO: We may want to only do this lookup for levels that use the projects system (e.g. level.channel_backed?)
+    # For now, since all the levels this is enabled for use projects/are JavaLab levels, we can just do this for all of them.
     project_data = find_project_and_version_id(ai_tutor_interaction_params[:level_id], ai_tutor_interaction_params[:script_id])
     ai_tutor_interaction_params[:project_id] = project_data[:project_id]
     ai_tutor_interaction_params[:project_version_id] = project_data[:version_id]
