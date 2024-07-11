@@ -26,7 +26,7 @@ let UnwrappedGuide = class Guide extends React.Component {
     if (dismissed) {
       soundLibrary.playSound('other');
     }
-  }x
+  }
 
   render() {
     const state = getState();
