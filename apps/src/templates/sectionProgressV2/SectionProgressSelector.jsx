@@ -35,6 +35,7 @@ function SectionProgressSelector({
     if (params === 'v2') {
       setShowProgressTableV2(true);
       setHasJustToggledViews(true);
+      new UserPreferences().setShowProgressTableV2(true);
     }
   }, [setShowProgressTableV2, setHasJustToggledViews]);
 
@@ -104,11 +105,11 @@ function SectionProgressSelector({
   // If there is a url pram, use that param to determine to show V2.
   const displayV2FromUrl = params === 'v2';
 
-  const displayV2 = displayV2FromUrl
-    ? true
-    : isPreferenceSet
-    ? showProgressTableV2
-    : DCDO.get('progress-table-v2-default-v2', false);
+  const displayV2 =
+    displayV2FromUrl ||
+    (isPreferenceSet
+      ? showProgressTableV2
+      : DCDO.get('progress-table-v2-default-v2', false));
 
   const toggleV1OrV2Link = () => (
     <div className={styles.toggleViews}>
