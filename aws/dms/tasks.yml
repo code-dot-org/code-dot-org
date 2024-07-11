@@ -147,6 +147,7 @@ cron-user-hierarchy:
     - invitation_by_id
     - invitations_count
     - parent_email
+    - unlock_token
 - dashboard.user_geos:
     remove_column:
     - ip_address
