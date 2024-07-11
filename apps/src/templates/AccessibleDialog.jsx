@@ -10,6 +10,7 @@ import defaultStyle from './accessible-dialogue.module.scss';
 function AccessibleDialog({
   styles,
   onClose,
+  onDismiss,
   children,
   className,
   initialFocus = true,
@@ -19,6 +20,10 @@ function AccessibleDialog({
   const modalStyle = styles?.modal || defaultStyle.modal;
   const backdropStyle = styles?.modalBackdrop || defaultStyle.modalBackdrop;
   const closeIconStyle = styles?.xCloseButton || defaultStyle.xCloseButton;
+
+  // This provides the option for there to be different behaviors between closing the dialog
+  // and explicitly dismissing it, for example when the user has selected "remind me later".
+  const xIconOnClick = onDismiss ? onDismiss : onClose;
 
   return (
     <div>
@@ -39,7 +44,7 @@ function AccessibleDialog({
             <button
               id="ui-close-dialog"
               type="button"
-              onClick={onClose}
+              onClick={xIconOnClick}
               className={closeIconStyle}
             >
               <i
@@ -60,6 +65,7 @@ function AccessibleDialog({
 AccessibleDialog.propTypes = {
   styles: PropTypes.object,
   onClose: PropTypes.func.isRequired,
+  onDismiss: PropTypes.func,
   children: PropTypes.node,
   className: PropTypes.string,
   initialFocus: PropTypes.bool,

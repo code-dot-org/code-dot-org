@@ -126,6 +126,7 @@ function InviteToV2ProgressModal({
     return (
       <AccessibleDialog
         onClose={handleModalClose}
+        onDismiss={handleDismiss}
         initialFocus={false}
         className={styles.modal}
       >
