@@ -31,7 +31,8 @@ class MistralProcessor
     message
   end
 
-  def format_outputs
+  def format_outputs(generated_text)
+    generated_text.split(INSTRUCTIONS_END_TOKEN).last
   end
 
   def get_stop_strings
