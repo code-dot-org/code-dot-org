@@ -26,6 +26,7 @@ import {
 import {connect} from 'react-redux';
 import Select from 'react-select';
 
+import {BuildYourOwnWorkshop} from '@cdo/apps/code-studio/pd/constants';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {
   ActiveCourseWorkshops,
@@ -59,8 +60,6 @@ import ModuleSelect from './ModuleSelect';
 import OrganizerFormPart from './organizer_form_part';
 import SessionListFormPart from './session_list_form_part';
 import SubjectSelect from './SubjectSelect';
-
-import {BuildYourOwnWorkshop} from '@cdo/apps/code-studio/pd/constants';
 
 // Default to today, 9am-5pm.
 const placeholderSession = {

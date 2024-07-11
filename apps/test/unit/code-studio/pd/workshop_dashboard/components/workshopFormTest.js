@@ -9,6 +9,7 @@ import {createStore, combineReducers} from 'redux';
 import {Factory} from 'rosie';
 import sinon from 'sinon';
 
+import {BuildYourOwnWorkshop} from '@cdo/apps/code-studio/pd/constants';
 import {WorkshopForm} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_form';
 import Permission, {
   WorkshopAdmin,
