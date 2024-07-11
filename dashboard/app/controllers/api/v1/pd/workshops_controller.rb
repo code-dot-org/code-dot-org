@@ -167,7 +167,15 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
   # PATCH /api/v1/pd/workshops/1
   def update
     adjust_facilitators
-    adjust_course_offerings
+
+    if params[:pd_workshop][:course] == Pd::Workshop::COURSE_BUILD_YOUR_OWN
+      supplied_course_offering_ids = params[:pd_workshop].delete(:course_offerings)
+      if supplied_course_offering_ids.blank?
+        return render json: {error: "Cannot create a Build Your Own workshop without PL topics"}, status: :bad_request
+      else
+        adjust_course_offerings(supplied_course_offering_ids)
+      end
+    end
 
     # The below user types have permission to set the regional partner. CSF Facilitators
     # can initially set the regional partner, but cannot edit it once it is set.
@@ -193,7 +201,15 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
   def create
     @workshop.organizer = current_user
     adjust_facilitators
-    adjust_course_offerings
+
+    if params[:pd_workshop][:course] == Pd::Workshop::COURSE_BUILD_YOUR_OWN
+      supplied_course_offering_ids = params[:pd_workshop].delete(:course_offerings)
+      if supplied_course_offering_ids.blank?
+        return render json: {error: "Cannot create a Build Your Own workshop without PL topics"}, status: :bad_request
+      else
+        adjust_course_offerings(supplied_course_offering_ids)
+      end
+    end
 
     if @workshop.virtual && user_cannot_freely_edit_virtual(@workshop.course, @workshop.subject, @workshop.workshop_starting_date)
       render json: {error: "non-workshop-admin cannot create a virtual CSP/CSA Summer Workshop within a month of it starting."}, status: :bad_request
@@ -280,10 +296,7 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
     Pd::WorkshopMailer.organizer_detail_change_notification(@workshop).deliver_now
   end
 
-  private def adjust_course_offerings
-    supplied_course_offering_ids = params[:pd_workshop].delete(:course_offerings)
-    return unless supplied_course_offering_ids
-
+  private def adjust_course_offerings(supplied_course_offering_ids)
     existing_course_offering_ids = @workshop.course_offerings.map(&:id)
     new_course_offering_ids = supplied_course_offering_ids - existing_course_offering_ids
     course_offering_ids_to_remove = existing_course_offering_ids - supplied_course_offering_ids
