@@ -2134,8 +2134,23 @@ StudioApp.prototype.configureDom = function (config) {
     leading: true,
     trailing: false,
   });
+
+  function handleRunButtonClick() {
+    throttledRunClick.call(this);
+    // Sends a Statsig event when the Run button is pressed by a signed out user
+    // This is related to the Create Account Button A/B Test; see Jira ticket:
+    // https://codedotorg.atlassian.net/browse/ACQ-1938
+    if (isSignedOut && isStandaloneProject) {
+      analyticsReporter.sendEvent(
+        EVENTS.RUN_BUTTON_PRESSED_SIGNED_OUT,
+        {},
+        PLATFORMS.STATSIG
+      );
+    }
+  }
+
   if (runButton && resetButton) {
-    dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
+    dom.addClickTouchEvent(runButton, _.bind(handleRunButtonClick, this));
     dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
     this.keyHandler.registerEvent(['Control', 'Enter'], () => {
       if (this.isRunning()) {
@@ -2143,18 +2158,6 @@ StudioApp.prototype.configureDom = function (config) {
       } else {
         throttledRunClick();
       }
-    });
-  }
-  // Sends a Statsig event when the Run button is pressed by a signed out user
-  // This is related to the Create Account Button A/B Test; see Jira ticket:
-  // https://codedotorg.atlassian.net/browse/ACQ-1938
-  if (runButton && isSignedOut && isStandaloneProject) {
-    dom.addClickTouchEvent(runButton, () => {
-      analyticsReporter.sendEvent(
-        EVENTS.RUN_BUTTON_PRESSED_SIGNED_OUT,
-        {},
-        PLATFORMS.STATSIG
-      );
     });
   }
   var skipButton = container.querySelector('#skipButton');
