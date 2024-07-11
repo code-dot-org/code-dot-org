@@ -250,6 +250,13 @@ const EVENTS = {
   // PL Landing Page
   MY_PL_PAGE_VISITED: 'My Professional Learning Page Visited',
 
+  // Header navigation
+  SIGNED_OUT_USER_SEES_HEADER: 'Signed Out Navigation Header Shown',
+  SIGNED_OUT_USER_CLICKS_HEADER_LINK: 'Signed Out User Clicks Header Link',
+  SIGNED_OUT_USER_CLICKS_HAMBURGER_LINK:
+    'Signed Out User Clicks Hamburger Link',
+  SIGNED_OUT_USER_CLICKS_HELP_MENU: 'Signed Out User Clicks Help Menu',
+
   // Header Create menu
   SIGNED_OUT_USER_CLICKS_CREATE_DROPDOWN:
     'Signed Out User Clicks Create Dropdown',
