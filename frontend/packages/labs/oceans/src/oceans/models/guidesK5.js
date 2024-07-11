@@ -1,8 +1,5 @@
 import {AppMode, Modes} from '../constants';
-import turtleImage from '@public/images/turtle-large.png';
 import seahorseImage from '@public/images/seahorse-large.png';
-import trashBottleImage from '@public/images/bottle-large.png';
-import trashCanImage from '@public/images/can-large.png';
 import I18n from '../i18n';
 
 const imageStyleOverrides = {
