@@ -6,7 +6,7 @@ class MistralProcessor
   SENTENCE_BEGIN_TOKEN = "<s>".freeze
   SENTENCE_END_TOKEN = "</s>".freeze
 
-  def format_inputs(instructions, stored_messages, new_message)
+  def format_model_inputs(instructions, new_message, stored_messages)
     # The instruction-tuned version of Mistral accepts formatted input where conversation roles
     # must start with a user prompt and alternate between user and assistant.
     # Mistral-7B-Instruction LLM instruction format doc at https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1.
@@ -31,7 +31,7 @@ class MistralProcessor
     message
   end
 
-  def format_outputs(generated_text)
+  def format_model_output(generated_text)
     generated_text.split(INSTRUCTIONS_END_TOKEN).last
   end
 
