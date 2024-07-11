@@ -340,5 +340,13 @@ FactoryBot.define do
       num_facilitators {2}
       each_session_hours {7}
     end
+
+    factory :build_your_own do
+      course {Pd::Workshop::COURSE_BUILD_YOUR_OWN}
+      course_offerings {[] << (create :course_offering)}
+      capacity {40}
+      num_sessions {1}
+      num_facilitators {0}
+    end
   end
 end
