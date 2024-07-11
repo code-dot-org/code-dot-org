@@ -20,7 +20,10 @@ theme: responsive_full_width
       %img.rounded-corners.box-shadow-primary{src: "/images/admins-page-top.png", alt: "", style: "position: relative; width: 100%;"}
     .clear
 
-= view :section_divider_line
+- if !!DCDO.get('curriculum-launch-2024', false)
+  = view :curriculum_launch_skinny_banner
+- else
+  = view :section_divider_line
 
 %section.why-teach-cs
   .wrapper
