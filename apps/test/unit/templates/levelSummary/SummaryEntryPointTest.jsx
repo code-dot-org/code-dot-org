@@ -49,7 +49,7 @@ describe('SummaryEntryPoint', () => {
     expect(wrapper.find('a').length).to.eq(1);
     expect(wrapper.find('a').prop('href')).to.match(/^\/[^\/]*\/summary/);
     // Student/response counter
-    expect(wrapper.find(`.${styles.responseCounter}`).text()).to.eq(
+    expect(wrapper.find(`[data-testid="response-counter"]`).text()).to.eq(
       '1/1 students answered'
     );
   });
@@ -76,7 +76,7 @@ describe('SummaryEntryPoint', () => {
       },
     });
 
-    expect(wrapper.find(`.${styles.responseIcon}`).length).to.eq(0);
-    expect(wrapper.find(`.${styles.responseCounter}`).length).to.eq(0);
+    expect(wrapper.find(`.fa`).length).to.eq(0);
+    expect(wrapper.find(`[data-testid="response-counter"]`).length).to.eq(0);
   });
 });

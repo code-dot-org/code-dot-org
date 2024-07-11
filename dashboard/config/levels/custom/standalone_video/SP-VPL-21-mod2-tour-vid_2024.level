@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 63,
   "properties": {
-    "video_key": "Getting_Started_BasicFeatures",
+    "video_key": "PL_BasicFeatures_2024",
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
@@ -16,7 +16,7 @@
     "long_instructions": "## Consider the following when watching this video:\r\n#### What features are available on the Code.org learning platform to support me in teaching CS Discoveries?\r\n\r\n#### **Additional Resource:**\r\n\r\n* #### <a href=\"https://support.code.org/hc/en-us/articles/228116468-I-d-like-to-start-using-Code-org-in-my-classroom-How-should-I-start-\" target=\"blank\" rel=\"noopener noreferrer\" >Getting Started on Code.org</a> \r\n "
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-22T19:08:07.093+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-21-mod2-tour-vid_2022\\\"\"],\"cloned_from\":\"SP-VPL-21-mod2-tour-vid_2022\"},{\"changed_at\":\"2024-04-24 19:08:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-04-24 20:15:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-22T19:08:07.093+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-21-mod2-tour-vid_2022\\\"\"],\"cloned_from\":\"SP-VPL-21-mod2-tour-vid_2022\"},{\"changed_at\":\"2024-04-24 19:08:05 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-04-24 20:15:04 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-06-24 19:07:01 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

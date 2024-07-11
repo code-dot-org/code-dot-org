@@ -1,0 +1,8 @@
+name 'CV_CareerExploration1_1_2024'
+display_name 'Computer Vision Career Exploration 1'
+description 'Explore the jobs of the future by seeing how computer vision might aid, enhance, or redefine professions. Below are interviews from a variety of people who work as Creative Technologists, utilizing varied computer vision applications to aid in the interactivity of their work. All interviews are excerpted from https://www.creativelivesinprogress.com/job-roles/creative-technologist'
+
+sublevels
+level 'CV_CareerExploration1_2d_2024'
+level 'CV_CareerExploration1_2b_2024'
+level 'CV_CareerExploration1_2c_2024'

@@ -20,7 +20,7 @@ import Sprite from '@cdo/apps/studio/Sprite';
 import {expect} from '../../util/reconfiguredChai';
 
 describe('item', () => {
-  before(() => {
+  beforeAll(() => {
     Studio.trackedBehavior = {};
     Studio.trackedBehavior.createdItems = {};
     Studio.SQUARE_SIZE = 50;

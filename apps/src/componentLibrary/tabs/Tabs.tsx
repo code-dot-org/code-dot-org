@@ -24,7 +24,7 @@ export interface TabsProps {
   size?: ComponentSizeXSToL;
   /** Custom className for Tabs container */
   tabsContainerClassName?: string;
-  /** Custom className for Tab Panels container */
+  /** Custom id for Tabs container */
   tabsContainerId?: string;
   /** Custom className for Tab Panels container */
   tabPanelsContainerClassName?: string;

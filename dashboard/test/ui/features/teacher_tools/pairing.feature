@@ -17,11 +17,9 @@ Feature: Student pairing
     And I click selector "#submitButton"
     Then I wait to see ".modal"
     And I wait until element "#confirm-button" is visible
-    And I click selector "#confirm-button"
-    # safari sometimes doesn't wait for the page load to initiate before checking if it's finished
-    And I wait for 5 seconds
-    And I wait until I am on "http://studio.code.org/s/allthethings/lessons/18/levels/8"
+    And I click selector "#confirm-button" to load a new page
     And I wait for the page to fully load
+    And check that the URL contains "/s/allthethings/lessons/18/levels/8"
     And I verify progress in the header of the current page is "perfect_assessment" for level 7
     And I sign out
     # verify the level is completed for the other student

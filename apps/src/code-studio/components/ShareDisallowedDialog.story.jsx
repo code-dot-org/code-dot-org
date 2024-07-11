@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {UnconnectedShareDisallowedDialog as ShareDisallowedDialog} from './ShareDisallowedDialog';
 
 export default {

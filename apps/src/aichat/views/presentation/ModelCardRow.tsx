@@ -7,14 +7,16 @@ import moduleStyles from './model-card-row.module.scss';
 
 interface ModelCardRowProps {
   title: string;
-  titleIcon: string;
+  titleIcon?: string;
   expandedContent: string | string[];
+  tooltipText?: string;
 }
 
 const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
   title,
   titleIcon,
   expandedContent,
+  tooltipText, // TODO: Use tooltip text
 }) => {
   const expandedContentToDisplay = useMemo(() => {
     if (Array.isArray(expandedContent)) {

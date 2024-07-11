@@ -1,11 +1,13 @@
-import React from 'react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
 import sinon from 'sinon';
+
 import {
   UnconnectedVisualizationResizeBar as VisualizationResizeBar,
   RESIZE_VISUALIZATION_EVENT,
 } from '@cdo/apps/lib/ui/VisualizationResizeBar';
+
+import {expect} from '../../../util/deprecatedChai';
 
 describe('VisualizationResizeBar', function () {
   let wrapper;

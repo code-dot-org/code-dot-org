@@ -33,6 +33,7 @@
           = f.label :password
           = f.password_field :password, autofocus: email != '', required: true
 
+        / Additional values to be used in redirects on the link_email controller action
         = f.hidden_field :lti_provider, value: params[:lti_provider]
         = f.hidden_field :lms_name, value: params[:lms_name]
 

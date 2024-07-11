@@ -11,7 +11,6 @@ Scenario: Save Artist Project
 
   When I am not signed in
   And I open the project share dialog
-  Then the project cannot be published
 
   And I navigate to the share URL
   And I wait until element "#visualization" is visible

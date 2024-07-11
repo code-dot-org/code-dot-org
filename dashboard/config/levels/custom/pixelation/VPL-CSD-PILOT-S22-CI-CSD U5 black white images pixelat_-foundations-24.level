@@ -1,0 +1,29 @@
+<Pixelation>
+  <config><![CDATA[{
+  "game_id": 44,
+  "created_at": "2024-06-27T22:51:11.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "long_instructions": "# Do This\r\n\r\n#### Practice using 1 as \"on\" and 0 as \"off\" to complete the final two rows of the \"X\" shape.",
+    "instructions_important": "false",
+    "display_name": "Black and White Pixelation Widget",
+    "version": "1",
+    "hex": "false",
+    "skip_dialog": true,
+    "href": "pixelation/pixelation.html",
+    "data": "01111111101011111101110111101111101101111111001111111100111111101101111101111011",
+    "short_instructions": "Practice using 1 as \"on\" and 0 as \"off\" to complete the final two rows of the \"X\" shape.",
+    "hide_encoding_controls": "true",
+    "v1_hide_sliders": "true",
+    "v1_initial_width": "10",
+    "v1_initial_height": "10",
+    "parent_level_id": 20315,
+    "name_suffix": "_-foundations-24",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-06-27T22:51:11.105+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD U5 black white images pixelation_2024\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD U5 black white images pixelation_2024\"}]"
+}]]></config>
+</Pixelation>

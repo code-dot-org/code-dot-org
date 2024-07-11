@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2024-06-28T19:58:12.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Self-Help and Wellness\r\n\r\nHave you ever helped someone get over the hiccups, or cheer up when they’re feeling down, or relieve a body ache? Let's create a chatbot that gives people friendly advice on how to get over common ailments (like hiccups or body aches or toothaches). Use techniques you've learned in this unit to make the chatbot as authentic and engaging as possible.",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.5",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "editable",
+        "systemPrompt": "editable",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
+    },
+    "project_template_level_name": "gen-ai-customizing-retrieval-templateC_2024",
+    "display_name": "Self-Help and Wellness",
+    "bubble_choice_description": "Have you ever helped someone get over the hiccups, or cheer up when they’re feeling down, or relieve a body ache? Let's create a chatbot that gives people friendly advice on how to get over common ailments (like hiccups or body aches or toothaches).",
+    "thumbnail_url": "https://images.code.org/b35a73f301a1dce3c0883037ddae09f2-Lesson 6 - Level 9C - Self-Help and Wellness.png",
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:58:12.204+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-synthesis-L11C\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-synthesis-L11C\"}]"
+}]]></config>
+</Aichat>

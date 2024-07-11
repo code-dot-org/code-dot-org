@@ -1,12 +1,15 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import i18n from '@cdo/locale';
+
 import * as utils from '../../../utils';
 import {refreshProjectName} from '../../projectRedux';
+
 import styles from './project-header.module.scss';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import classNames from 'classnames';
 
 class ProjectRemix extends React.Component {
   static propTypes = {
