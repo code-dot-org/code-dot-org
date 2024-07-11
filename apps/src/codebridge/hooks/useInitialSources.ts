@@ -19,20 +19,30 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
   const levelStartSource = useAppSelector(
     state => state.lab.levelProperties?.startSources
   );
+  const levelTemplateSource = useAppSelector(
+    state => state.lab.levelProperties?.templateSources
+  );
+
   const exemplarSources = useAppSelector(
     state => state.lab.levelProperties?.exemplarSources
   );
-  // We memoize this object so that it doesn't cause an unexpected re-render.
+  // We memoize these objects so that they don't cause an unexpected re-render.
   const projectStartSource: ProjectSources | undefined = useMemo(
     () => (levelStartSource ? {source: levelStartSource} : undefined),
     [levelStartSource]
   );
+  const templateStartSource: ProjectSources | undefined = useMemo(
+    () => (levelTemplateSource ? {source: levelTemplateSource} : undefined),
+    [levelTemplateSource]
+  );
+
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const isEditingExemplar = getAppOptionsEditingExemplar();
   const isViewingExemplar = getAppOptionsViewingExemplar();
 
   const initialSources = useMemo(() => {
     const startSources = projectStartSource || defaultSources;
+    const templateSources = templateStartSource;
 
     if (isStartMode) {
       return startSources;
@@ -40,13 +50,16 @@ export const useInitialSources = (defaultSources: ProjectSources) => {
     if (isEditingExemplar || isViewingExemplar) {
       // If we are viewing exemplars sources and have no exemplar, we show a fallback
       // page from LabViewsRenderer. We fall back to start sources for editing.
-      return exemplarSources ? {source: exemplarSources} : startSources;
+      return exemplarSources
+        ? {source: exemplarSources}
+        : templateSources || startSources;
     }
 
     const projectSources = labInitialSources;
-    return projectSources || startSources;
+    return projectSources || templateSources || startSources;
   }, [
     projectStartSource,
+    templateStartSource,
     defaultSources,
     isStartMode,
     isEditingExemplar,
