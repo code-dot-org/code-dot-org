@@ -15,7 +15,13 @@ interface AIInteraction extends ChatContext {
   aiResponse: string | undefined;
 }
 
-const AITutorResponseGenerator: React.FC = () => {
+interface AITutorBulkResponseGeneratorProps {
+  allowed: boolean;
+}
+
+const AITutorBulkResponseGenerator: React.FC<
+  AITutorBulkResponseGeneratorProps
+> = ({allowed}) => {
   const [csvFile, setCsvFile] = useState<File | null>(null);
   const [data, setData] = useState<AIInteraction[]>([]);
   const [responseCount, setResponseCount] = useState<number>(0);
@@ -80,46 +86,58 @@ const AITutorResponseGenerator: React.FC = () => {
   return (
     <div>
       <h2>Generate AI Tutor Responses</h2>
+      {!allowed && (
+        <h3 className={styles.denied}>
+          You need to be a levelbuilder with AI Tutor access to use this tool.
+        </h3>
+      )}
       <p>
-        This allows you to upload a CSV of student inputs that will be sent to
-        AI Tutor. AI Tutor responses will then be saved and you can download the
-        resulting updated CSV. Your CSV must include a `studentInput` column to
-        succeed.
+        Upload a CSV of student inputs that will be sent to AI Tutor. AI Tutor
+        responses will then be saved and you can download the resulting updated
+        CSV. Your CSV must include a `studentInput` column to succeed.
       </p>
-      <div className={styles.buttonSpacing}>
-        <input
-          className="csv-input"
-          type="file"
-          name="file"
-          onChange={handleChange}
-        />
-      </div>
-
-      <div className={styles.buttonSpacing}>
-        <Button text="Upload" onClick={importCSV} disabled={!csvSelected} />
-      </div>
-
-      <div className={styles.buttonSpacing}>
-        <Button
-          text="Get AI Tutor Responses"
-          onClick={getAIResponses}
-          disabled={!dataUploaded}
-          isPending={responsesPending}
-        />
-        <span>
-          {responseCount} of {data.length}
-        </span>
-      </div>
 
       <div>
-        <Button
-          text=" Download CSV"
-          onClick={downloadCSV}
-          disabled={!aiResponded}
-        />
+        <div className={styles.buttonSpacing}>
+          <input
+            className="csv-input"
+            type="file"
+            name="file"
+            onChange={handleChange}
+            disabled={!allowed}
+          />
+        </div>
+
+        <div className={styles.buttonSpacing}>
+          <Button
+            text="Upload"
+            onClick={importCSV}
+            disabled={!csvSelected || !allowed}
+          />
+        </div>
+
+        <div className={styles.buttonSpacing}>
+          <Button
+            text="Get AI Tutor Responses"
+            onClick={getAIResponses}
+            disabled={!dataUploaded || !allowed}
+            isPending={responsesPending}
+          />
+          <span>
+            {responseCount} of {data.length}
+          </span>
+        </div>
+
+        <div>
+          <Button
+            text=" Download CSV"
+            onClick={downloadCSV}
+            disabled={!aiResponded || !allowed}
+          />
+        </div>
       </div>
     </div>
   );
 };
 
-export default AITutorResponseGenerator;
+export default AITutorBulkResponseGenerator;
