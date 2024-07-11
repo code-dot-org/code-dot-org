@@ -1,11 +1,17 @@
-.fade {
-  animation: show 600ms 100ms ease-in forwards;
-  opacity: 0;
-}
-
-@keyframes show {
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
   100% {
     opacity: 1;
-    transform: none;
+  }
+}
+
+@keyframes blink {
+  0%, 45% {
+    opacity: 0;
+  }
+  55%, 100% {
+    opacity: 1;
   }
 }

@@ -9,7 +9,7 @@
       "jsx"
     ],
     "moduleNameMapper": {
-      ".+\\.(bin|jpg|jpeg|png|mp3|ogg|wav|gif)$": "identity-obj-proxy",
+      ".+\\.(bin|jpg|jpeg|png|mp3|ogg|wav|gif|svg|css)$": "identity-obj-proxy",
       "^@ml(.*)$": "<rootDir>/src/$1",
       "^@public(.*)$": "<rootDir>/public/$1"
     },

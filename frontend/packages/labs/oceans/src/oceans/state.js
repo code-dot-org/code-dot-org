@@ -38,11 +38,7 @@ const initialState = {
   guideDismissals: [],
   guideShowing: false,
   showConfirmationDialog: false,
-  confirmationDialogOnYes: null,
-  showClickToContinue: false,
-  clickToContinueTimerId: null,
-  clickToContinueAnimationIntervalId: null,
-  clickToContinueIconFrame1: true,
+  confirmationDialogOnYes: null
 };
 let state = {...initialState};
 

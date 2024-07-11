@@ -1,83 +1,31 @@
 import React from 'react';
-import Radium from "radium";
-import Typist from "react-typist";
+import Radium from 'radium';
+import Typist from 'react-typist';
 
-import "@ml/oceans/styles/fade.css";
+import '@ml/oceans/styles/fade.css';
 
-import {getState, setState} from "@ml/oceans/state";
-import guide from "@ml/oceans/models/guide";
-import soundLibrary from "@ml/oceans/models/soundLibrary";
-import styles from "@ml/oceans/styles";
-import colors from "@ml/oceans/styles/colors";
-import I18n from "@ml/oceans/i18n";
-import {Button} from "@ml/oceans/components/common";
-import arrowDownImage from "@public/images/arrow-down.png";
-import fingerClickIcon1 from "@public/images/finger-click-icon-1.svg";
-import fingerClickIcon2 from "@public/images/finger-click-icon-2.svg";
-
-// Visible only for our K5 progression for now.
-// Also hide for guides that don't require you to click anywhere to continue ("noDimBackground")
-// and in our "Did you know?" guides ("Info" style).
-const includeClickToContinue = () => {
-  return (
-    getState().guides === 'K5'
-    && !guide.getCurrentGuide().noDimBackground
-    && guide.getCurrentGuide().style !== 'Info'
-  );
-}
+import {getState, setState} from '@ml/oceans/state';
+import guide from '@ml/oceans/models/guide';
+import soundLibrary from '@ml/oceans/models/soundLibrary';
+import styles from '@ml/oceans/styles';
+import colors from '@ml/oceans/styles/colors';
+import I18n from '@ml/oceans/i18n';
+import {Button} from '@ml/oceans/components/common';
+import arrowDownImage from '@public/images/arrow-down.png';
+import fingerClickIcon1 from '@public/images/finger-click-icon-1.svg';
+import fingerClickIcon2 from '@public/images/finger-click-icon-2.svg';
 
 let UnwrappedGuide = class Guide extends React.Component {
   onShowing() {
     clearInterval(getState().guideTypingTimer);
     setState({guideShowing: true, guideTypingTimer: null});
-
-    if (includeClickToContinue()) {
-      const timerId = setTimeout(() => {
-        setState({showClickToContinue: true});
-        const intervalId = setInterval(() => setState({clickToContinueIconFrame1: !getState().clickToContinueIconFrame1}), 400);
-        setState({clickToContinueAnimationIntervalId: intervalId});
-      }, 4000);
-      setState({clickToContinueTimerId: timerId});
-    }
   }
 
   dismissGuideClick() {
     const dismissed = guide.dismissCurrentGuide();
     if (dismissed) {
       soundLibrary.playSound('other');
-
-      if (includeClickToContinue()) {
-        setState({showClickToContinue: false});
-        const {
-          clickToContinueTimerId,
-          clickToContinueAnimationIntervalId
-        } = getState();
-        if (clickToContinueTimerId) {
-          clearTimeout(clickToContinueTimerId);
-          setState({clickToContinueTimerId: null});
-        }
-        if (clickToContinueAnimationIntervalId) {
-          clearInterval(clickToContinueAnimationIntervalId);
-          setState({clickToContinueAnimationIntervalId: null});
-        }
-      }
     }
-  }
-
-  renderClickToContinueReminder() {
-    return (
-      <div style={styles.guideClickToContinueReminderContainer} className="fade">
-        <img
-          style={getState().clickToContinueIconFrame1 ? styles.guideHideClickToContinueAnimationFrame : {}}
-          src={fingerClickIcon1}
-          alt={'A clicking animation reminding users to click anywhere to continue.'}
-        />
-        <img
-          style={getState().clickToContinueIconFrame1 ? {} : styles.guideHideClickToContinueAnimationFrame}
-          src={fingerClickIcon2}
-        />
-      </div>
-    )
   }
 
   render() {
@@ -96,14 +44,19 @@ let UnwrappedGuide = class Guide extends React.Component {
       }
     }
 
-    // If we're just starting to animate a new guide,
-    // start playing the typing sounds and make sure the click to continue icon isn't showing.
+    // Start playing the typing sounds.
     if (!state.guideShowing && !state.guideTypingTimer && currentGuide) {
       const guideTypingTimer = setInterval(() => {
         soundLibrary.playSound('no', 0.5);
       }, 1000 / 10);
-      setState({guideTypingTimer, showClickToContinue: false});
+      setState({guideTypingTimer});
     }
+
+    const renderClickToContinueReminder =
+      state.guides === 'K5' &&
+      state.guideShowing &&
+      !currentGuide.noDimBackground &&
+      currentGuide.style !== 'Info';
 
     return (
       <div>
@@ -143,7 +96,6 @@ let UnwrappedGuide = class Guide extends React.Component {
                     >
                       {currentGuide.textFn(getState())}
                     </Typist>
-                    {includeClickToContinue() && getState().showClickToContinue && this.renderClickToContinueReminder()}
                   </div>
                   <div
                     style={
@@ -154,14 +106,24 @@ let UnwrappedGuide = class Guide extends React.Component {
                   >
                     <div style={styles.guideFinalText}>
                       {currentGuide.textFn(getState())}
-                      {includeClickToContinue() && getState().showClickToContinue && this.renderClickToContinueReminder()}
                     </div>
                   </div>
+                  {renderClickToContinueReminder && (
+                    <div style={styles.guideClickToContinueReminderContainer}>
+                      <img
+                        src={fingerClickIcon1}
+                        alt=""
+                        style={styles.guideClickToContinueReminder1}
+                      />
+                      <img
+                        src={fingerClickIcon2}
+                        alt=""
+                        style={styles.guideClickToContinueReminder2}
+                      />
+                    </div>
+                  )}
                   {currentGuide.style === 'Info' && (
-                    <Button
-                      style={styles.infoGuideButton} onClick={() => {
-                    }}
-                    >
+                    <Button style={styles.infoGuideButton} onClick={() => {}}>
                       {I18n.t('continue')}
                     </Button>
                   )}
