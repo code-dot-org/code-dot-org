@@ -879,6 +879,10 @@ class Level < ApplicationRecord
     properties['validation_code'].present? || properties['success_condition'].present?
   end
 
+  def predict_level?
+    return properties.dig('predict_settings', 'isPredictLevel').present?
+  end
+
   # Returns the level name, removing the name_suffix first (if present), and
   # also removing any additional suffixes of the format "_NNNN" which might
   # represent a version year.

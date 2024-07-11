@@ -37,7 +37,7 @@ const FieldSection: React.FunctionComponent<FieldSectionProps> = ({
   return (
     <div className={moduleStyles.fieldSection}>
       <hr />
-      <CollapsibleSection title={labelText}>
+      <CollapsibleSection headerContent={labelText}>
         {description && (
           <BodyFourText>
             <i>{description}</i>

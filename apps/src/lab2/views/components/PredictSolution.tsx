@@ -1,7 +1,10 @@
 import React from 'react';
 
 import {BodyThreeText, Heading1} from '@cdo/apps/componentLibrary/typography';
-import {PredictQuestionType} from '@cdo/apps/lab2/levelEditors/types';
+import {
+  LevelPredictSettings,
+  PredictQuestionType,
+} from '@cdo/apps/lab2/levelEditors/types';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 
@@ -14,6 +17,16 @@ const PredictSolution: React.FunctionComponent = () => {
     state => state.lab.levelProperties?.predictSettings
   );
 
+  return <UnconnectedPredictSolution predictSettings={predictSettings} />;
+};
+
+interface UnconnectedPredictSolutionProps {
+  predictSettings: LevelPredictSettings | undefined;
+}
+
+export const UnconnectedPredictSolution: React.FunctionComponent<
+  UnconnectedPredictSolutionProps
+> = ({predictSettings}) => {
   if (!predictSettings?.solution) {
     return null;
   }

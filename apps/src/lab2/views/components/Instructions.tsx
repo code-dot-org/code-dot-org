@@ -17,6 +17,7 @@ import {LabState} from '../../lab2Redux';
 import {ThemeContext} from '../ThemeWrapper';
 
 import PredictQuestion from './PredictQuestion';
+import PredictSummary from './PredictSummary';
 
 import moduleStyles from './instructions.module.scss';
 
@@ -274,6 +275,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             id="instructions-text"
             className={moduleStyles['text-' + theme]}
           >
+            {predictSettings?.isPredictLevel && <PredictSummary />}
             <EnhancedSafeMarkdown
               markdown={text}
               className={moduleStyles.markdownText}

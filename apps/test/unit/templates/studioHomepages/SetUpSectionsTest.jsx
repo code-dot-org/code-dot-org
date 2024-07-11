@@ -2,6 +2,7 @@ import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-impo
 import React from 'react';
 import sinon from 'sinon';
 
+import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import {UnconnectedSetUpSections as SetUpSections} from '@cdo/apps/templates/studioHomepages/SetUpSections';
@@ -45,6 +46,7 @@ describe('SetUpSections', () => {
     expect(analyticsSpy.firstCall.args).to.deep.eq([
       'Section Setup Started',
       {},
+      PLATFORMS.BOTH,
     ]);
 
     analyticsSpy.restore();
