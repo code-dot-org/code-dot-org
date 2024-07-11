@@ -46,13 +46,15 @@ $(document).ready(function () {
     );
 
     // Log if the Create Account button is clicked
-    createAccountButton.addEventListener('click', () => {
-      analyticsReporter.sendEvent(
-        EVENTS.CREATE_ACCOUNT_BUTTON_CLICKED,
-        {pageUrl: pageUrl},
-        PLATFORMS.BOTH
-      );
-    });
+    if (createAccountButton) {
+      createAccountButton.addEventListener('click', () => {
+        analyticsReporter.sendEvent(
+          EVENTS.CREATE_ACCOUNT_BUTTON_CLICKED,
+          {pageUrl: pageUrl},
+          PLATFORMS.BOTH
+        );
+      });
+    }
 
     // Log if the Help icon menu is clicked
     helpIcon.addEventListener('click', () => {
