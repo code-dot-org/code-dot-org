@@ -151,7 +151,6 @@ module Pd::Foorm
       assert_equal expected_choice_3, form_data['question3']['choices']
     end
 
-
     test 'parses boolean questions correctly' do
       panel_form_data = {
         pages: [
