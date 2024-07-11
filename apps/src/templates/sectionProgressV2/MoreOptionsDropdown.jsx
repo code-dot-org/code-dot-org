@@ -88,6 +88,7 @@ function MoreOptionsDropdown({
         className={style.expandButton}
         onClick={handleDropdownClick}
         aria-label={i18n.additionalOptions()}
+        id="ui-see-more-options-dropdown"
       >
         <FontAwesome icon="ellipsis-vertical" />
       </button>
@@ -105,7 +106,7 @@ function MoreOptionsDropdown({
             style={{marginTop: '4px', padding: '5px 14px'}}
           >
             <FontAwesome icon="arrows-from-line" />
-            <div>{i18n.expandAll()}</div>
+            <div id="ui-test-expand-all">{i18n.expandAll()}</div>
           </PopUpMenu.Item>
           <PopUpMenu.Item
             className={style.menuItem}
@@ -113,7 +114,7 @@ function MoreOptionsDropdown({
             style={{marginBottom: '4px', padding: '5px 14px'}}
           >
             <FontAwesome icon="arrows-to-line" />
-            <div>{i18n.collapseAll()}</div>
+            <div id="ui-test-collapse-all">{i18n.collapseAll()}</div>
           </PopUpMenu.Item>
         </PopUpMenu>
       )}
