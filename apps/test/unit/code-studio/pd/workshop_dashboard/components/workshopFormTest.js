@@ -589,16 +589,16 @@ describe('WorkshopForm test', () => {
     );
     server.respond();
     // Verify the topics dropdown doesn't show up until Build Your Own is selected
-    expect(wrapper.find('#topics')).to.have.lengthOf(0);
+    expect(wrapper.find('#course_offerings')).to.have.lengthOf(0);
     const courseField = wrapper.find('#course').first();
     courseField.simulate('change', {
       target: {name: 'course', value: BuildYourOwnWorkshop},
     });
-    expect(wrapper.find('#topics')).to.have.lengthOf(1);
+    expect(wrapper.find('#course_offerings')).to.have.lengthOf(1);
     wrapper.find('#dropdownMenuButton').first().simulate('click');
     // A user can select either the label or checkbox, so we expect 2 for each here
-    expect(wrapper.find('#myPlTestTopic')).to.have.lengthOf(2);
-    expect(wrapper.find('#mySecondTopic')).to.have.lengthOf(2);
+    expect(wrapper.find({name: 'myPlTestTopic'})).to.have.lengthOf(2);
+    expect(wrapper.find({name: 'mySecondTopic'})).to.have.lengthOf(2);
   });
 
   it('editing form as non-admin does not show organizer field', () => {
