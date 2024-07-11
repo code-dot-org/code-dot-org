@@ -34,6 +34,8 @@ class CourseOffering < ApplicationRecord
   has_many :course_versions, -> {where(content_root_type: ['UnitGroup', 'Unit'])}
   belongs_to :self_paced_pl_course_offering, class_name: 'CourseOffering', optional: true
 
+  has_and_belongs_to_many :pd_workshops, class_name: 'Pd::Workshop', join_table: :course_offerings_pd_workshops, association_foreign_key: 'pd_workshop_id'
+
   validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true
   validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values, message: "must be one of the course offering marketing initiatives. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true
   validate :grade_levels_format
@@ -267,6 +269,13 @@ class CourseOffering < ApplicationRecord
       key: key,
       display_name: any_versions_launched? ? localized_display_name : localized_display_name + ' *',
       course_versions: course_versions.select {|cv| cv.course_assignable?(user)}.map {|cv| cv.summarize_for_assignment_dropdown(user, locale_code)}
+    }
+  end
+
+  def summarize_self_paced_pl
+    {
+      id: id,
+      display_name: display_name_with_latest_year
     }
   end
 
