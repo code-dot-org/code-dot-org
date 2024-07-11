@@ -55,8 +55,8 @@ let UnwrappedGuide = class Guide extends React.Component {
     const renderClickToContinueReminder =
       state.guides === 'K5' &&
       state.guideShowing &&
-      !guide.getCurrentGuide().noDimBackground &&
-      guide.getCurrentGuide().style !== 'Info';
+      !currentGuide.noDimBackground &&
+      currentGuide.style !== 'Info';
 
     return (
       <div>
@@ -109,10 +109,7 @@ let UnwrappedGuide = class Guide extends React.Component {
                     </div>
                   </div>
                   {renderClickToContinueReminder && (
-                    <div
-                      id="click-to-continue-reminder"
-                      style={styles.guideClickToContinueReminderContainer}
-                    >
+                    <div style={styles.guideClickToContinueReminderContainer}>
                       <img
                         src={fingerClickIcon1}
                         alt=""
