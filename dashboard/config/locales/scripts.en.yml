@@ -15087,10 +15087,10 @@ en:
           description_audience: ''
           description_short: ''
           description: |+
-            #### This module covers the concepts and skills that are in the micro:bit beginner track.
+            #### This module covers the concepts and skills that are in the first micro:bit  track.
 
             #### **You will:**
-            * #### Code using loops and conditionals with Code.org.
+            * #### Code using events and conditionals with Code.org.
 
 
             #### **Suggested Time:** 40 minutes
@@ -18063,3 +18063,163 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        self-paced-pl-foundations-intro:
+          lessons:
+            lesson-1:
+              name: Introduction
+            lesson-2:
+              name: Using this Professional Learning Course
+          lesson_groups: {}
+          name: self-paced-pl-foundations-intro
+          title: Introduction to Teaching Foundations of Computer Science
+          description_audience: ''
+          description_short: ''
+          description: "##### ⭐️ **Start here!** This module is a short introduction to this professional learning course.\n\n##### **You will:** \n\n* ##### Get an introduction to Code.org and Foundations of Computer Science.\n* ##### Learn about the content you'll teach in Foundations of Computer Science.\n* ##### Learn how to engage in this professional learning course.\n\n##### **Suggested Time:** 5 minutes"
+          student_description: "##### ⭐️ **Start here!** This module is a short introduction to this professional learning course.\n\n##### **You will:** \n\n* ##### Get an introduction to Code.org and Foundations of Computer Science.\n* ##### Learn about the content you'll teach in Foundations of Computer Science.\n* ##### Learn how to engage in this professional learning course.\n\n##### **Suggested Time:** 5 minutes"
+        self-paced-pl-foundations-getting-started:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-foundations-getting-started
+          title: Getting Started
+          description_audience: ''
+          description_short: ''
+          description: |-
+            ##### This professional learning module will give you an overview of the Code.org platform and its teacher- and student-facing features.
+
+            ##### **You will:**
+
+            * ##### Get an introduction to Code.org’s mission.
+            * ##### Learn how to navigate the Code.org website and teacher tools.
+            * ##### Set up a classroom section.
+            * ##### Locate and use course lesson plans and teacher resources.
+            * ##### Learn how to access support while teaching Code.org curricula.
+
+            ##### **Suggested time:** 80 minutes
+          student_description: ''
+        self-paced-pl-foundations-teaching-cs:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-foundations-teaching-cs
+          title: Teaching Computer Science
+          description_audience: ''
+          description_short: ''
+          description: |-
+            ##### In this module, you will be introduced to authentic computer science practices that students will engage with. You will also explore the role of the teacher within a computer science classroom and make a plan for how you will support student learning while teaching Foundations of Computer Science.
+
+            ##### **You will**:
+
+            * ##### Consider the role of the teacher in a computer science classroom.
+            * #####  Learn about authentic computer science practices that students will develop.
+            * ##### Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
+
+            ##### **Suggested Time**: 40 minutes
+          student_description: |-
+            ##### In this module, you will be introduced to authentic computer science practices that students will engage with. You will also explore the role of the teacher within a computer science classroom and make a plan for how you will support student learning while teaching Foundations of Computer Science.
+
+            ##### **You will**:
+
+            * ##### Consider the role of the teacher in a computer science classroom.
+            * #####  Learn about authentic computer science practices that students will develop.
+            * ##### Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
+
+            ##### **Suggested Time**: 40 minutes
+        k5plgamedesign:
+          lessons: {}
+          lesson_groups: {}
+          name: k5plgamedesign
+          title: Game Design
+          description_audience: ''
+          description_short: ''
+          description: "**You will:**\n\n* Learn the basic elements of game design.\n* Use variables to keep score.\n* Code environment and player sprites. \n* Learn how to host a game jam in your classroom. \n* Learn how to access Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
+          student_description: "**You will:**\n\n* Learn the basic elements of game design.\n* Use variables to keep score.\n* Code environment and player sprites. \n* Learn how to host a game jam in your classroom. \n* Learn how to access Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
+        k5gettingstarted:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Getting Started with Code.org
+          name: k5gettingstarted
+          title: Getting Started
+          description_audience: ''
+          description_short: ''
+          description: "#### **You will:**\n\n#### * Get an introduction to Code.org’s mission. \n#### * Learn how to navigate the Code.org website and teacher tools.\n#### * Set up a classroom section.\n#### * Locate and use course lesson plans and teacher resources.\n#### * Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+          student_description: "#### **You will:**\n\n#### * Get an introduction to Code.org’s mission. \n#### * Learn how to navigate the Code.org website and teacher tools.\n#### * Set up a classroom section.\n#### * Locate and use course lesson plans and teacher resources.\n#### * Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+        k5howaimakesdecisions:
+          lessons: {}
+          lesson_groups: {}
+          name: k5howaimakesdecisions
+          title: How AI Makes Decisions
+          description_audience: ''
+          description_short: ''
+          description: "**You will:**\n\n* Learn what AI is and how it is used. \n* Learn how AI makes decisions using machine learning and data. \n* Learn how AI makes predictions.\n* Practice training AI using Code.org's AI Bot.\n* Learn how AI can be used as a tool in school. \n* Get ideas for sharing students' voices \n\n\n**Suggested time:** 80 minutes\n"
+          student_description: "**You will:**\n\n* Learn what AI is and how it is used. \n* Learn how AI makes decisions using machine learning and data. \n* Learn how AI makes predictions.\n* Practice training AI using Code.org's AI Bot.\n* Learn how AI can be used as a tool in school. \n* Get ideas for sharing students' voices \n\n\n**Suggested time:** 80 minutes\n"
+        k5maker:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Getting Started with Code.org
+          name: k5maker
+          title: 2nd Grade
+          description_audience: ''
+          description_short: ''
+          description: |
+            #### This module covers the concepts and skills that are in the first micro:bit  track.
+
+            #### **You will:**
+            * #### Code using events and conditionals with Code.org.
+
+
+            #### **Suggested Time:** 55 minutes
+          student_description: |
+            #### This module covers the concepts and skills that are in the first micro:bit  track.
+
+            #### **You will:**
+            * #### Code using events and conditionals with Code.org.
+
+
+            #### **Suggested Time:** 55 minutes
+        k5microbitmaker:
+          lessons: {}
+          lesson_groups: {}
+          name: k5microbitmaker
+          title: 3rd Grade
+          description_audience: ''
+          description_short: ''
+          description: |+
+            #### This module covers the concepts and skills that are in the first micro:bit  track.
+
+            #### **You will:**
+            * #### Code using events and conditionals with Code.org.
+
+
+            #### **Suggested Time:** 55 minutes
+
+
+          student_description: |+
+            #### This module covers the concepts and skills that are in the first micro:bit  track.
+
+            #### **You will:**
+            * #### Code using events and conditionals with Code.org.
+
+
+            #### **Suggested Time:** 55 minutes
+
+
+        k5maker4thgrade:
+          lessons: {}
+          lesson_groups: {}
+          name: k5maker4thgrade
+          title: 4th Grade
+          description_audience: ''
+          description_short: ''
+          description: "#### This module covers the concepts and skills that are in the first micro:bit track.\n\n#### **You will:**\n* #### Explore an unplugged coding lesson. \n* #### Code using events with Code.org.\n\n\n\n#### **Suggested Time:** 60 minutes\n\n\n"
+          student_description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Explore an unplugged coding lesson. \n* #### Code using events with Code.org.\n\n\n\n#### **Suggested Time:** 60 minutes\n\n\n"
+        k5maker5thgrade:
+          lessons: {}
+          lesson_groups: {}
+          name: k5maker5thgrade
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: "#### This module covers the concepts and skills that are in the first micro:bit track.\n\n#### **You will:**\n* #### Explore an unplugged coding lesson. \n* #### Code using events with Code.org.\n\n* #### Create and code with variables.\n\n\n#### **Suggested Time:** 70 minutes\n\n\n"
+          student_description: "#### This module covers the concepts and skills that are in the first micro:bit track.\n\n#### **You will:**\n* #### Explore an unplugged coding lesson. \n* #### Code using events with Code.org.\n\n* #### Create and code with variables.\n\n\n#### **Suggested Time:** 70 minutes\n\n\n"
+...

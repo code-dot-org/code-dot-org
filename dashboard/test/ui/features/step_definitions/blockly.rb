@@ -294,11 +294,11 @@ Then /^the modal function editor is open$/ do
   expect(modal_dialog_visible).to eq(true)
 end
 
-When(/^I set block "([^"]*)" to have a value of "(.*?)" for title "(.*?)"$/) do |block_id, value, title|
+When(/^I set block "([^"]*)" to have a value of "(.*?)" for field "(.*?)"$/) do |block_id, value, field_name|
   script = "
-    Blockly.mainBlockSpace.getAllBlocks().forEach(function (b) {
-      if (b.id === #{get_block_id(block_id)}) {
-        b.setTitleValue('#{value}', '#{title}');
+    Blockly.getMainWorkspace().getAllBlocks().forEach(function (b) {
+      if (b.id === '#{get_block_id(block_id)}') {
+        b.setFieldValue('#{value}', '#{field_name}');
       }
     });"
   puts script

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "k5aisandbox",
-    "serialized_at": "2024-07-10 18:34:06 UTC",
+    "serialized_at": "2024-07-10 20:16:28 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -217,6 +217,7 @@
       "key": "9bd30dfc-d7d7-4636-8ecb-0521d2f2d7b2",
       "position": 1,
       "properties": {
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "9bd30dfc-d7d7-4636-8ecb-0521d2f2d7b2",
@@ -229,6 +230,7 @@
       "key": "4e00b2bb-569e-4a60-913b-0e4b8028c596",
       "position": 1,
       "properties": {
+        "duration": 5
       },
       "seeding_key": {
         "lesson_activity.key": "4e00b2bb-569e-4a60-913b-0e4b8028c596",
