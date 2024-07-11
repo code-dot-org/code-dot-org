@@ -29,7 +29,7 @@ class AddDeviseLockableToUsers < ActiveRecord::Migration[6.1]
   end
 
   def self.down
-    remove_column :users, :unlock_token
     remove_index :users, :unlock_token
+    remove_column :users, :unlock_token
   end
 end
