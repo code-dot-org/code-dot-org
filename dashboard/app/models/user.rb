@@ -2774,8 +2774,7 @@ class User < ApplicationRecord
 
   private def enforce_age_or_state_update
     # Create copy of user to mock the user's state before an update.
-    user_before_update = User.new(attributes.deep_merge(changed_attributes))
-
+    user_before_update = User.new(attributes.merge(changed_attributes))
     potentially_locked = Policies::ChildAccount.underage?(user_before_update)
     # The student is in a 'lockout' flow if they are potentially locked out and not unlocked
     if potentially_locked && !Policies::ChildAccount::ComplianceState.permission_granted?(user_before_update)
