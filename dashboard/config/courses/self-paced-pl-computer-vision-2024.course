@@ -10,7 +10,6 @@
   "instructor_audience": "facilitator",
   "properties": {
     "family_name": "self-paced-pl-computer-vision",
-    "has_numbered_units": true,
     "version_year": "2024"
   },
   "resources": [
