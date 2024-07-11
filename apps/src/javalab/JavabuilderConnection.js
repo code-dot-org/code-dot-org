@@ -1,3 +1,8 @@
+import project from '@cdo/apps/code-studio/initApp/project';
+import logToCloud from '@cdo/apps/logToCloud';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import javalabMsg from '@cdo/javalab/locale';
+
 import {
   WebSocketMessageType,
   StatusMessageType,
@@ -8,11 +13,7 @@ import {
   JavabuilderLockoutType,
 } from './constants';
 import {handleException} from './javabuilderExceptionHandler';
-import project from '@cdo/apps/code-studio/initApp/project';
-import javalabMsg from '@cdo/javalab/locale';
 import {onTestResult} from './testResultHandler';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import logToCloud from '@cdo/apps/logToCloud';
 import {getUnsupportedMiniAppMessage} from './utils';
 
 const WEBSOCKET_CLOSED_NORMAL_CODE = 1000;

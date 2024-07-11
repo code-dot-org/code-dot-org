@@ -1,12 +1,16 @@
-import Typography from '@cdo/apps/componentLibrary/typography';
 import React from 'react';
-import {BaseDialogProps} from './DialogManager';
-import moduleStyles from './confirm-dialog.module.scss';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {TEXT_BASED_LABS} from '../../constants';
-import {commonI18n} from '@cdo/apps/types/locale';
+
 import aichatI18n from '@cdo/apps/aichat/locale';
+import Typography from '@cdo/apps/componentLibrary/typography';
+import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {TEXT_BASED_LABS} from '../../constants';
 import {AppName} from '../../types';
+
+import {BaseDialogProps} from './DialogManager';
+
+import moduleStyles from './confirm-dialog.module.scss';
 
 // Lab-specific messages for starting over.
 const LAB_SPECIFIC_MESSAGES: {[appName in AppName]?: string} = {

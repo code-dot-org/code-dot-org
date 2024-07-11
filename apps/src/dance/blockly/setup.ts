@@ -1,6 +1,6 @@
-import danceBlocks from '@cdo/apps/dance/blockly/blocks';
-import * as commonBlocks from '@cdo/apps/blocksCommon';
 import {BlockDefinition} from '@cdo/apps/blockly/types';
+import * as commonBlocks from '@cdo/apps/blocksCommon';
+import danceBlocks from '@cdo/apps/dance/blockly/blocks';
 
 const blockUtils = require('@cdo/apps/block_utils');
 
