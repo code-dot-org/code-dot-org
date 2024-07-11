@@ -2,9 +2,9 @@
 Feature: Hour of Code tests for users that are signed in
 
 Scenario:
-  Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
+  Given I am on "http://studio.code.org/hoc/1?noautoplay=true&blocklyVersion=google"
   And I wait for the page to fully load
-  And I drag block "1" to block "5"
+  And I drag block "moveForward" to block "startBlock"
   And I press "runButton"
   Then I wait to see ".modal"
   And element ".modal .congrats" contains text "You completed Puzzle 1."
@@ -19,14 +19,14 @@ Scenario:
   Then I am on "http://studio.code.org/s/20-hour/lessons/2/levels/2?noautoplay=true"
   And I verify progress in the header of the current page is "not_tried" for level 1
   # Level source is saved
-  Then I am on "http://studio.code.org/hoc/1?noautoplay=true"
+  Then I am on "http://studio.code.org/hoc/1?noautoplay=true&blocklyVersion=google"
   And I wait for the page to fully load
-  And block "6" is child of block "5"
+  And block "moveForward" is child of block "startBlock"
   # Level source is reset
   Then I am on "http://studio.code.org/hoc/reset"
-  Then I am on "http://studio.code.org/hoc/1?noautoplay=true"
+  Then I am on "http://studio.code.org/hoc/1?noautoplay=true&blocklyVersion=google"
   And I wait for the page to fully load
-  And block "6" is child of block "5"
+  And block "moveForward" is child of block "startBlock"
 
 Scenario: Failing at puzzle 6, refreshing puzzle 6, bubble should show up as attempted
   Given I am on "http://studio.code.org/hoc/6?noautoplay=true"

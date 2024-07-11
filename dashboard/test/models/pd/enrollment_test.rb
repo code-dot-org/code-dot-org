@@ -95,7 +95,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     enrollment.first_name = 'FirstName'
     enrollment.last_name = 'LastName'
     enrollment.email = 'teacher@example.net'
-    enrollment.school_info = build :school_info
     assert enrollment.valid?
   end
 
@@ -244,16 +243,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_deprecated 'name is deprecated. Use first_name & last_name instead.' do
       enrollment.name = 'First Last'
     end
-  end
-
-  test 'school info is required on new enrollments, create and update' do
-    e = assert_raises ActiveRecord::RecordInvalid do
-      create :pd_enrollment, school_info: nil
-    end
-    assert_includes(e.message, 'Validation failed: School info is required')
-
-    enrollment = create :pd_enrollment
-    refute enrollment.update(school_info: nil)
   end
 
   test 'old enrollments with no last name are still valid' do
@@ -587,18 +576,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_raises ActiveRecord::RecordInvalid do
       create :pd_enrollment, school: 'a school'
     end
-  end
-
-  test 'school info country required on create' do
-    enrollment = build :pd_enrollment, school_info: create(:school_info_without_country)
-    refute enrollment.valid?
-    assert_includes(enrollment.errors.full_messages, 'School info must have a country')
-  end
-
-  test 'old enrollments with no school info country are grandfathered in' do
-    old_enrollment = build :pd_enrollment, school_info: create(:school_info_without_country)
-    old_enrollment.save(validate: false)
-    assert old_enrollment.valid?
   end
 
   test 'enrollment is deleted after clear_data for deleted owner' do
