@@ -45,8 +45,12 @@ class DatasetsControllerTest < ActionController::TestCase
     CSV
 
     post :update, params: {dataset_name: 'cats', csv_data: csv_data}
-    post :update, params: {dataset_name: 'dogs', csv_data: csv_data}
+    assert_response :success
 
+    post :update, params: {dataset_name: 'dogs', csv_data: csv_data}
+    assert_response :success
+
+    assert_equal 2, DatablockStorageTable.get_shared_table_names.count
   ensure
     DatablockStorageTable.const_set(:MAX_TABLE_COUNT, original_max_table_count)
   end
