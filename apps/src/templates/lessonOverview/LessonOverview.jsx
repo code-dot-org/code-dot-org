@@ -25,6 +25,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '@cdo/apps/util/color';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import {linkWithQueryParams} from '@cdo/apps/utils';
+import {DefaultLocale} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import Announcements from '../../code-studio/components/progress/Announcements';
@@ -126,7 +127,7 @@ class LessonOverview extends Component {
   renderPrintOptions = () => {
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
 
-    if (pdfDropdownOptions.length > 0 && currentLocale() === 'en-US') {
+    if (pdfDropdownOptions.length > 0 && currentLocale() === DefaultLocale) {
       return pdfDropdownOptions.map(option => (
         <a
           key={option.key}
