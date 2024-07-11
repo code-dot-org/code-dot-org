@@ -215,7 +215,7 @@ describe('forceInsertTopBlock', function () {
     withoutXml = '';
     result = blockUtils.forceInsertTopBlock(withoutXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"/></xml>';
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"/></xml>';
     msg = '\n' + 'result: ' + result + '\n' + 'expect: ' + expected + '\n';
     assert(result === expected, msg);
 
@@ -232,7 +232,7 @@ describe('forceInsertTopBlock', function () {
     withoutXml = '<block type="foo"/>';
     result = blockUtils.forceInsertTopBlock(withoutXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"><next>' +
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"><next>' +
       withoutXml +
       '</next></block></xml>';
     msg = '\n' + 'result: ' + result + '\n' + 'expect: ' + expected + '\n';
@@ -255,7 +255,7 @@ describe('forceInsertTopBlock', function () {
     withoutXml = block1 + block2;
     result = blockUtils.forceInsertTopBlock(withoutXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"><next>' +
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"><next>' +
       block1 +
       '</next></block>' +
       block2 +
@@ -280,7 +280,7 @@ describe('forceInsertTopBlock', function () {
     withoutXml = '<block type="foo"><next><block type="foo2"/></next></block>';
     result = blockUtils.forceInsertTopBlock(withoutXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"><next>' +
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"><next>' +
       withoutXml +
       '</next></block></xml>';
     msg = '\n' + 'result: ' + result + '\n' + 'expect: ' + expected + '\n';
@@ -303,7 +303,7 @@ describe('forceInsertTopBlock', function () {
     withoutXml = block1 + block2;
     result = blockUtils.forceInsertTopBlock(withoutXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"/>' +
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"/>' +
       block1 +
       block2 +
       '</xml>';
