@@ -1,18 +1,21 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 
 import FontAwesome from '../FontAwesome';
+import {toggleExpandedChoiceLevel} from '../sectionProgress/sectionProgressRedux';
 
 import {getLevelColumnHeaderId} from './LevelDataCell';
 
 import styles from './progress-table-v2.module.scss';
 
-export default function ExpandedProgressColumnHeader({
+function LevelProgressHeader({
   lesson,
   level,
   isLevelExpanded,
   toggleExpandedChoiceLevel,
+  sectionId,
 }) {
   const isExpandable = level.sublevels?.length > 0;
 
@@ -61,7 +64,7 @@ export default function ExpandedProgressColumnHeader({
           )}
           scope="col"
           id={getLevelColumnHeaderId(level.id)}
-          onClick={() => toggleExpandedChoiceLevel(level)}
+          onClick={() => toggleExpandedChoiceLevel(sectionId, level)}
         >
           {level.sublevels?.length > 0
             ? expandedLevel(true)
@@ -93,6 +96,7 @@ export default function ExpandedProgressColumnHeader({
       isExpandable,
       toggleExpandedChoiceLevel,
       expandedLevel,
+      sectionId,
       getLevelHeaderContent,
     ]
   );
@@ -108,7 +112,7 @@ export default function ExpandedProgressColumnHeader({
           isExpandable && styles.pointerMouse
         )}
         key={lesson.id + '.' + level.id + '-h'}
-        onClick={() => toggleExpandedChoiceLevel(level)}
+        onClick={() => toggleExpandedChoiceLevel(sectionId, level)}
         id={getLevelColumnHeaderId(level.id)}
       >
         {level.sublevels?.length > 0
@@ -119,6 +123,7 @@ export default function ExpandedProgressColumnHeader({
     [
       lesson,
       level,
+      sectionId,
       toggleExpandedChoiceLevel,
       isExpandable,
       expandedLevel,
@@ -131,9 +136,21 @@ export default function ExpandedProgressColumnHeader({
     : unexpandedLevel();
 }
 
-ExpandedProgressColumnHeader.propTypes = {
+export default connect(
+  state => ({
+    sectionId: state.teacherSections.selectedSectionId,
+  }),
+  dispatch => ({
+    toggleExpandedChoiceLevel(sectionId, levelId) {
+      dispatch(toggleExpandedChoiceLevel(sectionId, levelId));
+    },
+  })
+)(LevelProgressHeader);
+
+LevelProgressHeader.propTypes = {
   lesson: PropTypes.object.isRequired,
   level: PropTypes.object.isRequired,
   isLevelExpanded: PropTypes.bool,
-  toggleExpandedChoiceLevel: PropTypes.func,
+  toggleExpandedChoiceLevel: PropTypes.func.isRequired,
+  sectionId: PropTypes.number.isRequired,
 };

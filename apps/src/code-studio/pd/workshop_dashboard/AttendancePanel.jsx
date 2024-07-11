@@ -1,9 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import moment from 'moment';
+import PropTypes from 'prop-types';
+import React from 'react';
 import {Row, Col, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import WorkshopPanel from './WorkshopPanel';
+
 import {DATE_FORMAT} from './workshopConstants';
+import WorkshopPanel from './WorkshopPanel';
 
 /**
  * Provides controls for taking attendance in a workshop session.

@@ -1,37 +1,40 @@
 /**
  * Main landing page and router for the workshop dashboard.
  */
+import {createHistory} from 'history';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Provider} from 'react-redux';
-import {createStore, combineReducers} from 'redux';
 import {Router, Route, IndexRedirect, useRouterHistory} from 'react-router';
-import {createHistory} from 'history';
-import NewWorkshop from './new_workshop';
-import Workshop from './workshop';
-import Header from '../components/header';
-import LegacySurveySummaries from './legacy_survey_summaries.jsx';
-import {ResultsLoader as DailySurveyResultsLoader} from './reports/local_summer_workshop_daily_survey/results_loader';
-import FoormDailySurveyResultsLoader from './reports/foorm/results_loader';
-import WorkshopIndex from './workshop_index';
-import WorkshopFilter from './workshop_filter';
-import WorkshopAttendance from './attendance/workshop_attendance';
-import ReportView from './reports/report_view';
-import workshopDashboardReducers, {
-  setPermission,
-  setFacilitatorCourses,
-} from './reducers';
+import {createStore, combineReducers} from 'redux';
+
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
+
+import Header from '../components/header';
+import {
+  RegionalPartnerShape,
+  ALL_PARTNERS_OPTION,
+} from '../components/regional_partner_dropdown';
 import regionalPartnerReducers, {
   setRegionalPartners,
   setRegionalPartnerFilter,
   getInitialRegionalPartnerFilter,
 } from '../components/regional_partners_reducers';
+
+import WorkshopAttendance from './attendance/workshop_attendance';
+import LegacySurveySummaries from './legacy_survey_summaries.jsx';
+import NewWorkshop from './new_workshop';
 import {WorkshopAdmin} from './permission';
-import {
-  RegionalPartnerShape,
-  ALL_PARTNERS_OPTION,
-} from '../components/regional_partner_dropdown';
+import workshopDashboardReducers, {
+  setPermission,
+  setFacilitatorCourses,
+} from './reducers';
+import FoormDailySurveyResultsLoader from './reports/foorm/results_loader';
+import {ResultsLoader as DailySurveyResultsLoader} from './reports/local_summer_workshop_daily_survey/results_loader';
+import ReportView from './reports/report_view';
+import Workshop from './workshop';
+import WorkshopFilter from './workshop_filter';
+import WorkshopIndex from './workshop_index';
 
 const ROOT_PATH = '/pd/workshop_dashboard';
 // eslint-disable-next-line react-hooks/rules-of-hooks
