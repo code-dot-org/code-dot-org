@@ -19,7 +19,10 @@ import {
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {RubricAiEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
+import {
+  RubricAiEvaluationLimits,
+  RubricAiEvaluationStatus,
+} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/reconfiguredChai';
@@ -706,8 +709,100 @@ describe('RubricContainer', () => {
     wrapper.update();
     expect(userFetchStub).to.have.been.called;
     expect(allFetchStub).to.have.been.called;
+    expect(wrapper.find('[title="info circle icon"]').length).to.be.greaterThan(
+      0
+    );
     expect(wrapper.text()).to.include(
       i18n.aiEvaluationStatus_request_too_large()
+    );
+    expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
+  });
+
+  it('shows ready state on initial load for status 1004', async () => {
+    const returnedJson = {
+      attempted: true,
+      lastAttemptEvaluated: false,
+      status: 1004,
+    };
+    const returnedJsonAll = {
+      attemptedCount: 1,
+      attemptedUnevaluatedCount: 0,
+      csrfToken: 'abcdef',
+    };
+
+    const userFetchStub = stubFetchEvalStatusForUser(returnedJson);
+    const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchAiEvaluations(mockAiEvaluations);
+
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          sectionId={42}
+          open
+        />
+      </Provider>
+    );
+
+    // Perform fetches
+    await wait();
+
+    wrapper.update();
+    expect(userFetchStub).to.have.been.called;
+    expect(allFetchStub).to.have.been.called;
+    expect(wrapper.find('[title="info circle icon"]').length).to.equal(0);
+    expect(wrapper.find('Button').at(0).props().disabled).to.be.false;
+  });
+
+  it('shows error on initial load for status 1005', async () => {
+    const returnedJson = {
+      attempted: true,
+      lastAttemptEvaluated: false,
+      status: 1005,
+    };
+    const returnedJsonAll = {
+      attemptedCount: 1,
+      attemptedUnevaluatedCount: 0,
+      csrfToken: 'abcdef',
+    };
+
+    const userFetchStub = stubFetchEvalStatusForUser(returnedJson);
+    const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchAiEvaluations(mockAiEvaluations);
+
+    const wrapper = mount(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          sectionId={42}
+          open
+        />
+      </Provider>
+    );
+
+    // Perform fetches
+    await wait();
+
+    wrapper.update();
+    expect(userFetchStub).to.have.been.called;
+    expect(allFetchStub).to.have.been.called;
+    expect(wrapper.find('[title="info circle icon"]').length).to.be.greaterThan(
+      0
+    );
+    expect(wrapper.text()).to.include(
+      i18n.aiEvaluationStatus_teacher_limit_exceeded({
+        limit: RubricAiEvaluationLimits.TEACHER_LIMIT,
+      })
     );
     expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
   });

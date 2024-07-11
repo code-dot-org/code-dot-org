@@ -180,7 +180,11 @@ export const InfoAlert = ({text, dismissable}) => {
       })}
     >
       <div className={style.infoAlertLeft}>
-        <FontAwesome icon="info-circle" className={style.infoAlertIcon} />
+        <FontAwesome
+          icon="info-circle"
+          className={style.infoAlertIcon}
+          title="info circle icon"
+        />
         <BodyTwoText>{text}</BodyTwoText>
       </div>
       {!!dismissable && (
