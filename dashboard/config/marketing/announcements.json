@@ -1,6 +1,6 @@
 {
   "pages": {
-    "/home": "lms-launch",
+    "/home": "curriculum-launch-2024",
     "/student-home": "music-lab-launch"
   },
   "banners": {
@@ -40,7 +40,7 @@
     },
     "curriculum-launch-2024": {
       "dcdo": "curriculum-launch-2024",
-      "image": "",
+      "image": "/shared/images/banners/banner-curriculum-launch-2024.png",
       "title": "Discover new and updated curriculum!",
       "body": "Explore our latest units and professional learning resources to inspire future tech innovators.",
       "buttonText": "See what's new",
