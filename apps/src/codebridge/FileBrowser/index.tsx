@@ -12,6 +12,7 @@ import {
   getFileIcon,
   shouldShowFile,
 } from '@codebridge/utils';
+import fileDownload from 'js-file-download';
 import React, {useContext, useMemo} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
@@ -28,6 +29,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
 import {
+  downloadFileType,
   moveFilePromptType,
   newFilePromptType,
   newFolderPromptType,
@@ -43,6 +45,7 @@ type FilesComponentProps = {
   folders: ProjectType['folders'];
   parentId?: FolderId;
 
+  downloadFile: downloadFileType;
   moveFilePrompt: moveFilePromptType;
   newFilePrompt: newFilePromptType;
   newFolderPrompt: newFolderPromptType;
@@ -56,6 +59,7 @@ const InnerFileBrowser = React.memo(
     parentId,
     folders,
     files,
+    downloadFile,
     newFolderPrompt,
     newFilePrompt,
     moveFilePrompt,
@@ -203,6 +207,7 @@ const InnerFileBrowser = React.memo(
                       newFolderPrompt={newFolderPrompt}
                       parentId={f.id}
                       files={files}
+                      downloadFile={downloadFile}
                       newFilePrompt={newFilePrompt}
                       moveFilePrompt={moveFilePrompt}
                       renameFilePrompt={renameFilePrompt}
@@ -237,6 +242,10 @@ const InnerFileBrowser = React.memo(
                       <span onClick={() => renameFilePrompt(f.id)}>
                         <i className="fa-solid fa-pencil" />{' '}
                         {codebridgeI18n.renameFile()}
+                      </span>
+                      <span onClick={() => downloadFile(f.id)}>
+                        <i className="fa-solid fa-download" />{' '}
+                        {codebridgeI18n.downloadFile()}
                       </span>
                       <span onClick={() => handleDeleteFile(f.id)}>
                         <i className="fa-solid fa-trash" />{' '}
@@ -288,6 +297,20 @@ export const FileBrowser = React.memo(() => {
         newFolder({parentId, folderName, folderId});
       },
     [newFolder, project.folders]
+  );
+
+  const downloadFile: FilesComponentProps['downloadFile'] = useMemo(
+    () => fileId => {
+      const file = project.files[fileId];
+      // NOTE - this is arbitrary and maybe we need more? Also, maybe this should be elsewhere or more easy to configure?
+      const downloadableFileType = new Set(['txt', 'html', 'css', 'py', 'csv']);
+      if (downloadableFileType.has(file.language)) {
+        fileDownload(file.contents, file.name);
+      } else {
+        alert(codebridgeI18n.downloadFileError({extension: file.language}));
+      }
+    },
+    [project.files]
   );
 
   const newFilePrompt: FilesComponentProps['newFilePrompt'] = useMemo(
@@ -430,6 +453,7 @@ export const FileBrowser = React.memo(() => {
         <InnerFileBrowser
           parentId={DEFAULT_FOLDER_ID}
           folders={project.folders}
+          downloadFile={downloadFile}
           newFolderPrompt={newFolderPrompt}
           files={project.files}
           newFilePrompt={newFilePrompt}
