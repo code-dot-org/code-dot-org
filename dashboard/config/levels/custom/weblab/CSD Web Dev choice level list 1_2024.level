@@ -1,5 +1,6 @@
 <Weblab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 58,
   "created_at": "2023-11-28T16:58:34.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "instructions_important": "false",
     "hide_share_and_remix": "true",
-    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n</div>\r\n\r\n# Debug Ordered List\r\n\r\nThere are a some issues with this page's list. Can you fix them?\r\n\r\n# Do This\r\n\r\n1) Find and fix the problems that are causing the bugs.\r\n",
+    "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n</div>\r\n\r\n# Debug Ordered List\r\n\r\nThere are some issues with this page's list. Can you fix them?\r\n\r\n# Do This\r\n\r\n1) Find and fix the problems that are causing the bugs.\r\n",
     "submittable": "false",
     "parent_level_id": 20958,
     "name_suffix": "_2024",
@@ -33,8 +34,7 @@
     "map_reference": "/courses/csd-2022/guides/web-lab",
     "validation_enabled": "false"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:34.038+00:00\",\"changed\":[\"cloned from \\\"CSD Web Dev choice level list 1_2023\\\"\"],\"cloned_from\":\"CSD Web Dev choice level list 1_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T16:58:34.038+00:00\",\"changed\":[\"cloned from \\\"CSD Web Dev choice level list 1_2023\\\"\"],\"cloned_from\":\"CSD Web Dev choice level list 1_2023\"},{\"changed_at\":\"2024-07-11 03:13:01 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\"],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"}]"
 }]]></config>
 </Weblab>

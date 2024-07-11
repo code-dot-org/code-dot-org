@@ -14912,7 +14912,13 @@ en:
           description: |-
             This unit empowers students to become confident, ethical coders. Students learn how to leverage generative AI tools to help explain code, tackle problems, and even generate code. More than just coding, this unit emphasizes ethical considerations and responsible use of AI, preparing students for the ever-evolving tech landscape.
 
+            ## What do I need to teach this module?
+
             Take a look at the [Getting Started with Coding with AI](https://docs.google.com/document/d/1hLR7WS8KmFxrjoM2Tr28rgfa0IZQ8otksw8ujYkdW3Y/edit?usp=sharing) guide for information on implementation options, what you and your students will need for this module, and helpful information to learn more about chatbots and large language models.
+
+            ## How can I prepare to teach this module?
+
+            If you are interested in teaching this module, we recommend completing the free [**Coding with AI Self-Paced Professional Development Module**](https://studio.code.org/courses/self-paced-pl-coding-with-ai-2024). The module is designed to take 2-3 hours to complete. No previous computer science experience is required.
           student_description: |-
             In this unit, you'll learn how to use AI like help you:
 
@@ -15081,10 +15087,10 @@ en:
           description_audience: ''
           description_short: ''
           description: |+
-            #### This module covers the concepts and skills that are in the micro:bit beginner track.
+            #### This module covers the concepts and skills that are in the first micro:bit  track.
 
             #### **You will:**
-            * #### Code using loops and conditionals with Code.org.
+            * #### Code using events and conditionals with Code.org.
 
 
             #### **Suggested Time:** 40 minutes
@@ -17191,7 +17197,7 @@ en:
               display_name: Building Physical Prototypes
             lessonGroup-5:
               display_name: Survey
-          title: Creating Apps with Devices (micro:bit) ('24-'25)
+          title: Creating Apps with Devices (micro:bit) ('23-'24)
           description: "In the Creating Apps for Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit](/s/devices). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Inputs and Outputs Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Building Physical Prototypes Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom](https://code.org/maker/microbit)\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-microbit). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n&nbsp;\n&nbsp;\n&nbsp;"
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and BBC micro:bit, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the micro:bit as the basis for an innovation of your own design.
           description_short: ''
@@ -17512,7 +17518,7 @@ en:
               display_name: Inputs and Outputs
             lessonGroup-4:
               display_name: Building Physical Prototypes
-          title: Unit 3B - (Option B) Creating Apps with Devices - micro:bit ('24-'25)
+          title: Unit 3B - (Option B) Creating Apps with Devices (micro:bit)
           description: "In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit](/s/focus-on-hardware3a-2023). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom](https://code.org/maker/microbit)\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices (micro:bit) Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-microbit). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went."
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and BBC micro:bit, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the micro:bit as the basis for an innovation of your own design.
           description_short: ''
@@ -17921,7 +17927,13 @@ en:
           description: |-
             This unit introduces students to the fundamentals, applications, and ethical implications of computer vision technologies. The unit starts with basic concepts and gradually builds up to complex topics, including data collection, model training, prototype development, and the integration of user feedback. Each lesson is designed to enhance students' understanding through hands-on activities and discussions culminating in the development of a prototype. The curriculum emphasizes critical thinking, problem-solving, and ethical considerations, equipping students with the skills to develop and evaluate technology that addresses real-world problems. Through iterative design and user-centered approaches, students not only learn the technical aspects of computer vision but also its impact on society, preparing them to be thoughtful innovators in a rapidly advancing technological landscape.
 
+            ## What do I need to teach this module?
+
             Take a look at the [**Getting Started with Computer Vision**](https://docs.google.com/document/d/1G5NztlmSlZ3pAN09mnze1eGzuLXQVvVjoqzTHqeEgk0/edit?usp=sharing) for information about what you and your students will need for this module.
+
+            ## How can I prepare to teach this module?
+
+            If you are interested in teaching this module, we recommend completing the free [**Computer Vision Self-Paced Professional Development Module**](http://studio.code.org/courses/self-paced-pl-computer-vision-2024). The module is designed to take 2-3 hours to complete. No previous computer science experience is required.
           student_description: In this unit, you'll dive into how computers interpret and understand visual information from the world around us. You'll start with the basics of how images are captured and processed and move on to more complex topics like training data, model development, and the ethical implications of artificial intelligence. Through a series of interactive lessons, hands-on activities, and project-based learning, you'll get to design your own computer vision app. Along the way, you'll learn not only about the technology itself but also how it can be used responsibly to make a positive impact in various fields like healthcare, automotive, and public safety.
           description_short: ''
           description_audience: ''
@@ -18051,3 +18063,163 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        self-paced-pl-foundations-intro:
+          lessons:
+            lesson-1:
+              name: Introduction
+            lesson-2:
+              name: Using this Professional Learning Course
+          lesson_groups: {}
+          name: self-paced-pl-foundations-intro
+          title: Introduction to Teaching Foundations of Computer Science
+          description_audience: ''
+          description_short: ''
+          description: "##### ⭐️ **Start here!** This module is a short introduction to this professional learning course.\n\n##### **You will:** \n\n* ##### Get an introduction to Code.org and Foundations of Computer Science.\n* ##### Learn about the content you'll teach in Foundations of Computer Science.\n* ##### Learn how to engage in this professional learning course.\n\n##### **Suggested Time:** 5 minutes"
+          student_description: "##### ⭐️ **Start here!** This module is a short introduction to this professional learning course.\n\n##### **You will:** \n\n* ##### Get an introduction to Code.org and Foundations of Computer Science.\n* ##### Learn about the content you'll teach in Foundations of Computer Science.\n* ##### Learn how to engage in this professional learning course.\n\n##### **Suggested Time:** 5 minutes"
+        self-paced-pl-foundations-getting-started:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-foundations-getting-started
+          title: Getting Started
+          description_audience: ''
+          description_short: ''
+          description: |-
+            ##### This professional learning module will give you an overview of the Code.org platform and its teacher- and student-facing features.
+
+            ##### **You will:**
+
+            * ##### Get an introduction to Code.org’s mission.
+            * ##### Learn how to navigate the Code.org website and teacher tools.
+            * ##### Set up a classroom section.
+            * ##### Locate and use course lesson plans and teacher resources.
+            * ##### Learn how to access support while teaching Code.org curricula.
+
+            ##### **Suggested time:** 80 minutes
+          student_description: ''
+        self-paced-pl-foundations-teaching-cs:
+          lessons: {}
+          lesson_groups: {}
+          name: self-paced-pl-foundations-teaching-cs
+          title: Teaching Computer Science
+          description_audience: ''
+          description_short: ''
+          description: |-
+            ##### In this module, you will be introduced to authentic computer science practices that students will engage with. You will also explore the role of the teacher within a computer science classroom and make a plan for how you will support student learning while teaching Foundations of Computer Science.
+
+            ##### **You will**:
+
+            * ##### Consider the role of the teacher in a computer science classroom.
+            * #####  Learn about authentic computer science practices that students will develop.
+            * ##### Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
+
+            ##### **Suggested Time**: 40 minutes
+          student_description: |-
+            ##### In this module, you will be introduced to authentic computer science practices that students will engage with. You will also explore the role of the teacher within a computer science classroom and make a plan for how you will support student learning while teaching Foundations of Computer Science.
+
+            ##### **You will**:
+
+            * ##### Consider the role of the teacher in a computer science classroom.
+            * #####  Learn about authentic computer science practices that students will develop.
+            * ##### Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
+
+            ##### **Suggested Time**: 40 minutes
+        k5plgamedesign:
+          lessons: {}
+          lesson_groups: {}
+          name: k5plgamedesign
+          title: Game Design
+          description_audience: ''
+          description_short: ''
+          description: "**You will:**\n\n* Learn the basic elements of game design.\n* Use variables to keep score.\n* Code environment and player sprites. \n* Learn how to host a game jam in your classroom. \n* Learn how to access Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
+          student_description: "**You will:**\n\n* Learn the basic elements of game design.\n* Use variables to keep score.\n* Code environment and player sprites. \n* Learn how to host a game jam in your classroom. \n* Learn how to access Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
+        k5gettingstarted:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Getting Started with Code.org
+          name: k5gettingstarted
+          title: Getting Started
+          description_audience: ''
+          description_short: ''
+          description: "#### **You will:**\n\n#### * Get an introduction to Code.org’s mission. \n#### * Learn how to navigate the Code.org website and teacher tools.\n#### * Set up a classroom section.\n#### * Locate and use course lesson plans and teacher resources.\n#### * Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+          student_description: "#### **You will:**\n\n#### * Get an introduction to Code.org’s mission. \n#### * Learn how to navigate the Code.org website and teacher tools.\n#### * Set up a classroom section.\n#### * Locate and use course lesson plans and teacher resources.\n#### * Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+        k5howaimakesdecisions:
+          lessons: {}
+          lesson_groups: {}
+          name: k5howaimakesdecisions
+          title: How AI Makes Decisions
+          description_audience: ''
+          description_short: ''
+          description: "**You will:**\n\n* Learn what AI is and how it is used. \n* Learn how AI makes decisions using machine learning and data. \n* Learn how AI makes predictions.\n* Practice training AI using Code.org's AI Bot.\n* Learn how AI can be used as a tool in school. \n* Get ideas for sharing students' voices \n\n\n**Suggested time:** 80 minutes\n"
+          student_description: "**You will:**\n\n* Learn what AI is and how it is used. \n* Learn how AI makes decisions using machine learning and data. \n* Learn how AI makes predictions.\n* Practice training AI using Code.org's AI Bot.\n* Learn how AI can be used as a tool in school. \n* Get ideas for sharing students' voices \n\n\n**Suggested time:** 80 minutes\n"
+        k5maker:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Getting Started with Code.org
+          name: k5maker
+          title: 2nd Grade
+          description_audience: ''
+          description_short: ''
+          description: |
+            #### This module covers the concepts and skills that are in the first micro:bit  track.
+
+            #### **You will:**
+            * #### Code using events and conditionals with Code.org.
+
+
+            #### **Suggested Time:** 55 minutes
+          student_description: |
+            #### This module covers the concepts and skills that are in the first micro:bit  track.
+
+            #### **You will:**
+            * #### Code using events and conditionals with Code.org.
+
+
+            #### **Suggested Time:** 55 minutes
+        k5microbitmaker:
+          lessons: {}
+          lesson_groups: {}
+          name: k5microbitmaker
+          title: 3rd Grade
+          description_audience: ''
+          description_short: ''
+          description: |+
+            #### This module covers the concepts and skills that are in the first micro:bit  track.
+
+            #### **You will:**
+            * #### Code using events and conditionals with Code.org.
+
+
+            #### **Suggested Time:** 55 minutes
+
+
+          student_description: |+
+            #### This module covers the concepts and skills that are in the first micro:bit  track.
+
+            #### **You will:**
+            * #### Code using events and conditionals with Code.org.
+
+
+            #### **Suggested Time:** 55 minutes
+
+
+        k5maker4thgrade:
+          lessons: {}
+          lesson_groups: {}
+          name: k5maker4thgrade
+          title: 4th Grade
+          description_audience: ''
+          description_short: ''
+          description: "#### This module covers the concepts and skills that are in the first micro:bit track.\n\n#### **You will:**\n* #### Explore an unplugged coding lesson. \n* #### Code using events with Code.org.\n\n\n\n#### **Suggested Time:** 60 minutes\n\n\n"
+          student_description: "#### This module covers the concepts and skills that are in the micro:bit beginner track.\n\n#### **You will:**\n* #### Explore an unplugged coding lesson. \n* #### Code using events with Code.org.\n\n\n\n#### **Suggested Time:** 60 minutes\n\n\n"
+        k5maker5thgrade:
+          lessons: {}
+          lesson_groups: {}
+          name: k5maker5thgrade
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: "#### This module covers the concepts and skills that are in the first micro:bit track.\n\n#### **You will:**\n* #### Explore an unplugged coding lesson. \n* #### Code using events with Code.org.\n\n* #### Create and code with variables.\n\n\n#### **Suggested Time:** 70 minutes\n\n\n"
+          student_description: "#### This module covers the concepts and skills that are in the first micro:bit track.\n\n#### **You will:**\n* #### Explore an unplugged coding lesson. \n* #### Code using events with Code.org.\n\n* #### Create and code with variables.\n\n\n#### **Suggested Time:** 70 minutes\n\n\n"
+...

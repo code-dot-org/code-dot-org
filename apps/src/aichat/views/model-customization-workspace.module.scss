@@ -2,7 +2,8 @@
 @import '../../mixins.scss';
 @import './aichat-common.module.scss';
 
-%full-width {
+%full-width,
+.full-width {
   width: 100%;
   box-sizing: border-box;
 }
@@ -94,4 +95,37 @@
 .compareModelsButton {
   padding: 5px 16px;
   margin: 10px 0;
+}
+
+.fieldLabel {
+  margin: 0;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.tooltip {
+  animation: fade-in 0.3s;
+  text-align: left;
+}
+
+.fieldLabelContainer {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
+
+  .iconButton {
+    @include remove-button-styles;
+
+    .icon {
+      font-size: 13px;
+      color: $light_gray_500;
+    }
+  }
 }
