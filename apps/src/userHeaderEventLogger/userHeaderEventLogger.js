@@ -24,6 +24,7 @@ $(document).ready(function () {
   const headerCreateMenu = document.getElementById('header_create_menu');
   const pageUrl = window.location.href;
   const helpIcon = document.querySelector('#help-icon');
+  const createAccountButton = document.querySelector('#create_account_button');
 
   if (getScriptData('isSignedOut')) {
     analyticsReporter.sendEvent(
@@ -43,6 +44,15 @@ $(document).ready(function () {
       'hamburgerlink',
       EVENTS.SIGNED_OUT_USER_CLICKS_HAMBURGER_LINK
     );
+
+    // Log if the Help icon menu is clicked
+    createAccountButton.addEventListener('click', () => {
+      analyticsReporter.sendEvent(
+        EVENTS.CREATE_ACCOUNT_BUTTON_CLICKED,
+        {pageUrl: pageUrl},
+        PLATFORMS.BOTH
+      );
+    });
 
     // Log if the Help icon menu is clicked
     helpIcon.addEventListener('click', () => {
