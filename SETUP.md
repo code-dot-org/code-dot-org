@@ -121,7 +121,7 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
 
 1. Install **brew packages**:
    ```
-   brew install rbenv ruby-build nvm mysql redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java
+   brew install rbenv ruby-build nvm mysql@8.0 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java
    ```
 
 1. Initialize **Git LFS**:
@@ -138,10 +138,18 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
        ==> Successfully started `redis` (label: homebrew.mxcl.redis)
        ```
    3. macOS will notify you that `redis` has been configured to start automatically upon user login. Confirm this in System Settings --> General --> Login Items --> `redis-server` 
-1. Setup your local **MySql server**
-   1. Start mysql server:
+1. Setup your local **MySQL database server**
+   1. Link MySQL 8
         ```
-        brew services start mysql
+        brew link --force --overwrite mysql@8.0
+        ```
+   2. Verify Link
+        ```
+        mysql --version  # should show: mysql  Ver 8.0.[xx]
+        ```
+   3. Start mysql server:
+        ```
+        brew services start mysql # Should notify you that MySQL server has been added to Login Items
         ```
    2. Confirm that MySQL has started by running:
         ```

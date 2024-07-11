@@ -20,7 +20,7 @@
     "impressive": "false",
     "slider_speed": ".50",
     "embed": "false",
-    "callout_json": "[\r\n  {\"localization_key\":\"set_length\",\"callout_text\":\"Use this block to set \\\"length\\\" to the correct value.\",\"element_id\":\"[block-id='14']\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "callout_json": "[{\"localization_key\":\"set_length\",\"callout_text\":\"Use this block to set \\\"length\\\" to the correct value.\",\"element_id\":\"[block-id='14']\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}},{\"element_id\":\"[data-id='14']\",\"localization_key\":\"set_length\",\"callout_text\":\"Use this block to set \\\"length\\\" to the correct value.\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}},\"on\":null}]",
     "ideal": "21",
     "disable_sharing": "false",
     "long_instructions": "Let's set the `sides` variable to 5. The more sides we add to this algorithm, the bigger this whole pattern gets!\r\n\r\nNotice that there is another variable called `length`.\r\nWe can now use that variable wherever we have a `move forward` block.\r\n\r\nSet the `length` variable to 75 for this shape.",
@@ -41,8 +41,8 @@
     "disable_if_else_editing": "false",
     "show_type_hints": "false",
     "discard_background": "false",
-    "preload_asset_list": null,
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
@@ -106,7 +106,7 @@
                             <block type="draw_move" inline="true">
                               <title name="DIR">moveForward</title>
                               <next>
-                                <block type="draw_turn" inline="true">
+                                <block type="draw_turn" inline="true" id="14">
                                   <title name="DIR">turnRight</title>
                                   <value name="VALUE">
                                     <block type="math_arithmetic" inline="true">

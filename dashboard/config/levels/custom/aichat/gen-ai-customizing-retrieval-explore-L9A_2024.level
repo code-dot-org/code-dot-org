@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2024-06-28T19:56:05.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Personal Passions & Hot Takes\r\n\r\nHas anyone ever asked you to explain a book series or show or other content that you are obsessed with and have lots of strong opinions on? Wouldn't it be nice to have a chatbot that could help with that?\r\n\r\n### Do This\r\n\r\n1) Decide on a book or show or other content that you have strong opinions for.\r\n2) Set a system prompt to answer questions about this topic. \r\n3) Add at least 5 retrieval statements that exemplify your \"hot takes\" or strong opinions on the content. \r\n    - For example, which team member is clearly the best and why?\r\n    - Write your retrieval as statements of fact that the chatbot can refer to\r\n\r\nTest the chatbot! Have a 4-5 message conversation! When you're done, press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.5",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "editable",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
+    },
+    "project_template_level_name": "gen-ai-customizing-retrieval-templateA_2024",
+    "display_name": "Personal Passions",
+    "bubble_choice_description": "Has anyone ever asked you to explain a book series or show or other content that you are obsessed with and have lots of strong opinions on? Wouldn't it be nice to have a chatbot that could help with that?",
+    "thumbnail_url": "https://images.code.org/6675c8f20144cb2fb5134589e2ff5adf-Lesson 6 - Level 9A - Personal Passions and Hot Takes.png",
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:56:05.622+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-explore-L9A\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-explore-L9A\"}]"
+}]]></config>
+</Aichat>

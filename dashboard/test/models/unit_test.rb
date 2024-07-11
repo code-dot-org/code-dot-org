@@ -1532,6 +1532,35 @@ class UnitTest < ActiveSupport::TestCase
     assert_empty unit.text_response_levels
   end
 
+  test 'predict free response level is listed in text_response_levels' do
+    unit = create :script
+    lesson_group = create :lesson_group, script: unit
+    lesson = create :lesson, script: unit, lesson_group: lesson_group
+    level = create :pythonlab, properties: {
+      predict_settings: {isPredictLevel: true, questionType: 'freeResponse'}
+    }
+    create :script_level, script: unit, lesson: lesson, levels: [level]
+
+    assert_equal level, unit.text_response_levels.first[:levels].first
+  end
+
+  test 'predict multiple choice level is listed in text_response_levels' do
+    unit = create :script
+    lesson_group = create :lesson_group, script: unit
+    lesson = create :lesson, script: unit, lesson_group: lesson_group
+    level = create :pythonlab, properties: {
+      predict_settings: {
+        isPredictLevel: true,
+        questionType: 'multipleChoice',
+        multipleChoiceOptions: ['a', 'b', 'c'],
+        solution: 'a'
+      }
+    }
+    create :script_level, script: unit, lesson: lesson, levels: [level]
+
+    assert_empty unit.text_response_levels
+  end
+
   test "course_link retuns nil if unit is in no courses" do
     unit = create :script
     create :unit_group, name: 'csp'
@@ -2446,6 +2475,46 @@ class UnitTest < ActiveSupport::TestCase
   test 'finish_url returns unit finish url if not in a unit group' do
     unit = create :script, is_course: true
     assert unit.finish_url.include?(unit.name)
+  end
+
+  test 'deleting standalone unit deletes corresponding dependencies' do
+    standalone_unit = create :script, is_migrated: true, is_course: true, version_year: '2021', family_name: 'csf', name: 'standalone-2021'
+    course_version = create :course_version, content_root: standalone_unit
+    CourseOffering.add_course_offering(standalone_unit)
+    lesson = create :lesson, script: standalone_unit
+    lesson_gp = create :lesson_group, script: standalone_unit, lessons: [lesson]
+
+    # delete standalone unit
+    unit_id = standalone_unit.id
+    standalone_unit.destroy
+
+    assert Unit.find_by(id: unit_id).nil?
+    assert CourseVersion.find_by(id: course_version.id).nil?
+    assert Lesson.find_by(id: lesson.id).nil?
+    assert LessonGroup.find_by(id: lesson_gp.id).nil?
+  end
+
+  test 'deleting unit in unit group deletes corresponding dependencies' do
+    unit_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
+    unit_group = create(:unit_group)
+    unit_gp_unit = create :unit_group_unit, unit_group: @unit_group, script: unit_in_course, position: 1
+    CourseOffering.add_course_offering(unit_group)
+
+    unit_group.reload
+    unit_in_course.reload
+    course_version = unit_group.course_version
+    assert UnitGroupUnit.find_by(id: unit_gp_unit.id)
+
+    # delete unit in unit group
+    unit_id = unit_in_course.id
+    unit_in_course.destroy
+
+    assert Unit.find_by(id: unit_id).nil?
+    assert UnitGroup.find_by(id: unit_group.id)
+
+    # Course version is associated to unit group and shouldn't be deleted
+    assert CourseVersion.find_by(id: course_version.id)
+    assert UnitGroupUnit.find_by(id: unit_gp_unit.id).nil?
   end
 
   private def has_unlaunched_unit?(units)

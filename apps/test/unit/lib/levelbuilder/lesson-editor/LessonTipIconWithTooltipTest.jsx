@@ -1,8 +1,10 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
-import LessonTipIconWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonTipIconWithTooltip';
+import React from 'react';
 import sinon from 'sinon';
+
+import LessonTipIconWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonTipIconWithTooltip';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('LessonTipIconWithTooltip', () => {
   let defaultProps, onClick;

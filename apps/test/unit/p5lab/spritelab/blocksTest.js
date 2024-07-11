@@ -1,4 +1,7 @@
-import {expect} from '../../../util/reconfiguredChai';
+import reducer, {
+  setInitialAnimationList,
+  animationSourceUrl,
+} from '@cdo/apps/p5lab/redux/animationList';
 import {costumeList, customInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
 import {
   registerReducers,
@@ -6,12 +9,10 @@ import {
   restoreRedux,
   getStore,
 } from '@cdo/apps/redux';
-import reducer, {
-  setInitialAnimationList,
-  animationSourceUrl,
-} from '@cdo/apps/p5lab/redux/animationList';
-import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import commonReducers from '@cdo/apps/redux/commonReducers';
+import {setPageConstants} from '@cdo/apps/redux/pageConstants';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('Gamelab blocks', () => {
   describe('costumeList()', () => {

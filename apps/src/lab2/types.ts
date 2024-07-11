@@ -8,6 +8,7 @@
 // The library data should definitely live elsewhere.
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
+import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 
 /// ------ PROJECTS ------ ///
 
@@ -57,6 +58,7 @@ export interface SourceUpdateOptions {
   replace: boolean;
   firstSaveTimestamp: string;
   tabId: string | null;
+  projectType?: ProjectType;
 }
 
 // -- BLOCKLY -- //
@@ -157,6 +159,7 @@ export interface LevelProperties {
   exemplarSources?: MultiFileSource;
   // For Teachers Only value
   teacherMarkdown?: string;
+  predictSettings?: LevelPredictSettings;
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -256,7 +259,7 @@ export enum ProjectManagerStorageType {
   REMOTE = 'REMOTE',
 }
 
-export interface ExtraLinksData {
+export interface ExtraLinksLevelData {
   links: {[key: string]: {text: string; url: string; access_key?: string}[]};
   can_clone: boolean;
   can_delete: boolean;
@@ -265,4 +268,15 @@ export interface ExtraLinksData {
     script: string;
     path: string;
   }[];
+  is_standalone_project: boolean;
+}
+export interface ExtraLinksProjectData {
+  owner_info: {storage_id: number; name: string};
+  project_info: {
+    id: number;
+    sources_link: string;
+    is_featured_project: boolean;
+    featured_status: string;
+    remix_ancestry: string[];
+  };
 }

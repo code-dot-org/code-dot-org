@@ -49,6 +49,20 @@ theme: responsive_full_width
     %p=hoc_s("coding_with_ai_page.lessons.desc")
     = view :"coding_with_ai/coding_with_ai_lessons"
 
+-# TODO remove DCDO logic after the 2024 curriculum launch
+- if !!DCDO.get('curriculum-launch-2024', false)
+  %section.bg-neutral-light
+    .wrapper
+      %h2=hoc_s("coding_with_ai_page.teach.heading")
+      = view :"coding_with_ai/coding_with_ai_teach"
+- else
+  = view :section_divider_line
+
+%section
+  .wrapper
+    %h2=hoc_s("coding_with_ai_page.faq.heading")
+    = view :"coding_with_ai/coding_with_ai_faq"
+
 %section.bg-neutral-light
   .wrapper.centered
     %h2=hoc_s("coding_with_ai_page.learn_more.heading")
@@ -58,14 +72,3 @@ theme: responsive_full_width
     %p=hoc_s("coding_with_ai_page.learn_more.desc")
     %a.link-button.secondary{href: "/ai"}
       =hoc_s("coding_with_ai_page.learn_more.button")
-
-%section.no-padding-bottom
-  .wrapper
-    %h2=hoc_s("coding_with_ai_page.faq.heading")
-    = view :"coding_with_ai/coding_with_ai_faq"
-
-%section
-  .wrapper
-    %h2=hoc_s("coding_with_ai_page.resources.heading")
-    %p=hoc_s("coding_with_ai_page.resources.desc")
-    = view :"ai_pages_shared/ai_pages_resources", white_bg: false

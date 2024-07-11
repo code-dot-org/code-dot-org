@@ -1,11 +1,13 @@
 /** @file Test InfoHelpTip component */
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+import ReactTooltip from 'react-tooltip';
+
+import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import ReactTooltip from 'react-tooltip';
-import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 // "it renders" test that checks for FontAwesome and ReactTooltip
 

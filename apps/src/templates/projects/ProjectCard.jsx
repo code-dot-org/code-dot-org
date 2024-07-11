@@ -4,7 +4,6 @@ import React from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
 
 import color from '../../util/color';
@@ -25,45 +24,6 @@ export default class ProjectCard extends React.Component {
 
   constructor(props) {
     super(props);
-  }
-
-  renderHeader() {
-    const {hasBeenReported} = this.state;
-
-    if (!hasBeenReported) {
-      return (
-        <div
-          style={{
-            ...styles.thumbnail,
-            ...styles.header,
-            justifyContent: 'flex-end',
-          }}
-        >
-          <button
-            type="button"
-            onClick={this.showReportAbusePopUp}
-            className={style.cautionButton}
-          >
-            <FontAwesome
-              icon="circle-exclamation"
-              className={style.cautionIcon}
-            />
-          </button>
-        </div>
-      );
-    } else {
-      return (
-        <div
-          style={{
-            ...styles.thumbnail,
-            ...styles.header,
-            justifyContent: 'center',
-          }}
-        >
-          <p className={style.reported}>{i18n.reported()}</p>
-        </div>
-      );
-    }
   }
 
   render() {

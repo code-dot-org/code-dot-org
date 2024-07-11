@@ -3,6 +3,12 @@
 var msg = require('./locale');
 
 /**
+ * This block destructures the local variables for use within this ejs template.
+ */
+var page = locals.page;
+var level = locals.level;
+
+/**
  * Template to create function for filling in shovels.
  */
 var fillShovelfuls = function(n) { -%>
@@ -45,7 +51,7 @@ var removeShovelfuls = function(n) { -%>
 
 <% if (page === 1) { -%>
   <% if (level === 1) { -%>
-    <block type="maze_moveForward" x="70" y="70"></block>
+    <block type="maze_moveForward" x="70" y="70" id="startBlock"></block>
   <% } else if (level === 2) { -%>
     <block type="maze_moveForward" x="70" y="70"></block>
   <% } else if (level === 3) { -%>

@@ -8,6 +8,7 @@ import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElemen
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
+import FieldLabel from './FieldLabel';
 import UpdateButton from './UpdateButton';
 import {isDisabled} from './utils';
 
@@ -61,9 +62,11 @@ const RetrievalCustomization: React.FunctionComponent = () => {
     <div className={modelCustomizationStyles.verticalFlexContainer}>
       <div className={modelCustomizationStyles.customizationContainer}>
         <div className={modelCustomizationStyles.inputContainer}>
-          <label htmlFor="system-prompt">
-            <StrongText>Retrieval</StrongText>
-          </label>
+          <FieldLabel
+            label="Retrieval"
+            id="retrieval-input"
+            tooltipText="Retrieval lets you add new information for a chatbot to reference. Type in each retrieval statement into the text box, then click “Add” for each one."
+          />
           <textarea
             id="retrieval-input"
             onChange={event => setNewRetrievalContext(event.target.value)}
@@ -75,6 +78,8 @@ const RetrievalCustomization: React.FunctionComponent = () => {
           <Button
             text="Add"
             type="secondary"
+            color="gray"
+            size="s"
             onClick={onAdd}
             iconLeft={{iconName: 'plus'}}
             disabled={!newRetrievalContext || isReadOnly}

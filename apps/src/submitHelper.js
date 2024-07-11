@@ -3,12 +3,14 @@
  * submit/unsubmit buttons if the level is submittable.
  */
 
-import commonMsg from '@cdo/locale';
-import dom from './dom';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import DialogButtons from './templates/DialogButtons';
+
+import commonMsg from '@cdo/locale';
+
 import {getLastServerResponse} from './code-studio/reporting';
+import dom from './dom';
+import DialogButtons from './templates/DialogButtons';
 
 // Parameters provided by the calling app.
 let studioApp, onPuzzleComplete, unsubmitUrl;

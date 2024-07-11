@@ -1,10 +1,12 @@
-import React from 'react';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+import sinon from 'sinon';
+
 import CloneProgrammingExpressionDialog, {
   CloneFormDialog,
 } from '@cdo/apps/lib/levelbuilder/code-docs-editor/CloneProgrammingExpressionDialog';
+
 import {expect} from '../../../../util/reconfiguredChai';
-import sinon from 'sinon';
 
 describe('CloneFormDialog', () => {
   let defaultProps, onCloneSuccessSpy;
@@ -112,7 +114,7 @@ describe('CloneFormDialog', () => {
       .withArgs('/programming_expressions/7/clone')
       .returns(Promise.resolve({ok: true, json: () => returnData}));
     wrapper.find('Button').last().simulate('click');
-    return new Promise(resolve => setImmediate(resolve)).then(() => {
+    return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
       expect(onCloneSuccessSpy).to.be.calledOnce;
       fetchStub.restore();
     });
@@ -175,7 +177,7 @@ describe('CloneProgrammingExpressionDialog integration test', () => {
       .withArgs('/programming_expressions/7/clone')
       .returns(Promise.resolve({ok: true, json: () => returnData}));
     wrapper.find('Button').last().simulate('click');
-    return new Promise(resolve => setImmediate(resolve)).then(() => {
+    return new Promise(resolve => setTimeout(resolve, 0)).then(() => {
       wrapper.update();
       expect(wrapper.find('FooterButton').length).to.equal(1);
       expect(wrapper.find('TextLink').props().href).to.equal(

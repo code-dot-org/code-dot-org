@@ -1,4 +1,5 @@
 import React from 'react';
+
 import MazeThumbnail from './MazeThumbnail';
 
 const sampleMap = [

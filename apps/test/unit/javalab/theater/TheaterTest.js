@@ -1,11 +1,13 @@
 import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
+
 import {
   TheaterSignalType,
   InputMessageType,
   InputMessage,
 } from '@cdo/apps/javalab/constants';
 import Theater from '@cdo/apps/javalab/theater/Theater';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('Theater', () => {
   let theater,

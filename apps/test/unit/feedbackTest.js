@@ -1,8 +1,10 @@
-import {assert} from '../util/reconfiguredChai';
 import sinon from 'sinon';
-import FeedbackUtils from '@cdo/apps/feedback';
+
 import {TestResults} from '@cdo/apps/constants';
+import FeedbackUtils from '@cdo/apps/feedback';
 import msg from '@cdo/locale';
+
+import {assert} from '../util/reconfiguredChai';
 
 describe('FeedbackUtils', () => {
   describe('getFeedbackMessage', () => {

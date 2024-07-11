@@ -4,36 +4,44 @@
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 import {connect, useDispatch} from 'react-redux';
-import i18n from '@cdo/locale';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+
+import Tabs from '@cdo/apps/componentLibrary/tabs';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
-import {EnrolledWorkshops, WorkshopsTable} from './EnrolledWorkshops';
+import DCDO from '@cdo/apps/dcdo';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
+import ActionBlocksWrapper from '@cdo/apps/templates/studioHomepages/ActionBlocksWrapper';
+import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
+import CoteacherInviteNotification from '@cdo/apps/templates/studioHomepages/CoteacherInviteNotification';
+import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
+import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
+import shapes from '@cdo/apps/templates/studioHomepages/shapes';
+import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
+import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
+import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
+import {
+  asyncLoadSectionData,
+  asyncLoadCoteacherInvite,
+  hiddenPlSectionIds,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import i18n from '@cdo/locale';
+
+import {queryParams, updateQueryParam} from '../../utils';
 import {
   COURSE_CSF,
   COURSE_CSD,
   COURSE_CSP,
   COURSE_CSA,
 } from '../workshop_dashboard/workshopConstants';
+
+import {EnrolledWorkshops, WorkshopsTable} from './EnrolledWorkshops';
 import SelfPacedProgressTable from './SelfPacedProgressTable';
-import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
-import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
-import ActionBlocksWrapper from '@cdo/apps/templates/studioHomepages/ActionBlocksWrapper';
-import CoteacherInviteNotification from '@cdo/apps/templates/studioHomepages/CoteacherInviteNotification';
-import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
-import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
-import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
-import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
-import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
+
 import style from './landingPage.module.scss';
+
 import './tableStyles.scss';
-import Tabs from '@cdo/apps/componentLibrary/tabs';
-import {
-  asyncLoadSectionData,
-  asyncLoadCoteacherInvite,
-  hiddenPlSectionIds,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import shapes from '@cdo/apps/templates/studioHomepages/shapes';
-import DCDO from '@cdo/apps/dcdo';
 
 const getAvailableTabs = permissions => {
   let tabs = [
@@ -95,6 +103,8 @@ function LandingPage({
 }) {
   const availableTabs = getAvailableTabs(userPermissions);
   const [currentTab, setCurrentTab] = useState(availableTabs[0].value);
+  const [showEnrollmentSuccessMessage, setShowEnrollmentSuccessMessage] =
+    useState(false);
   const headerContainerStyles =
     availableTabs.length > 1
       ? style.headerWithTabsContainer
@@ -102,6 +112,22 @@ function LandingPage({
 
   const joinedPlSectionsStyling =
     joinedPlSections?.length > 0 ? '' : style.joinedPlSectionsWithNoSections;
+
+  // If sent here from successfully enrolling in a workshop, log WORKSHOP_ENROLLMENT_COMPLETED_EVENT.
+  const urlParams = queryParams();
+  if (urlParams && Object.keys(urlParams).includes('rpName')) {
+    analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
+      'regional partner': urlParams['rpName'],
+      'workshop course': urlParams['wsCourse'],
+      'workshop subject': urlParams['wsSubject'],
+    });
+
+    updateQueryParam('rpName', undefined, false);
+    updateQueryParam('wsCourse', undefined, false);
+    updateQueryParam('wsSubject', undefined, false);
+
+    setShowEnrollmentSuccessMessage(true);
+  }
 
   // Load PL section info into redux
   const dispatch = useDispatch();
@@ -341,6 +367,23 @@ function LandingPage({
   const RenderMyPlTab = () => {
     return (
       <>
+        {showEnrollmentSuccessMessage && (
+          <div style={successMessageStyling.successContainer}>
+            <div style={successMessageStyling.successMessage}>
+              <p style={successMessageStyling.text}>
+                You successfully enrolled in a Build Your Own workshop!
+              </p>
+              <button
+                aria-label="close success message"
+                onClick={() => setShowEnrollmentSuccessMessage(false)}
+                type="button"
+                style={successMessageStyling.button}
+              >
+                <strong>X</strong>
+              </button>
+            </div>
+          </div>
+        )}
         {RenderBanner()}
         {plCoursesStarted?.length >= 1 && RenderSelfPacedPL()}
         <div className={joinedPlSectionsStyling}>
@@ -456,6 +499,35 @@ function LandingPage({
     </>
   );
 }
+
+const successMessageStyling = {
+  successContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  successMessage: {
+    display: 'flex',
+    minWidth: '250px',
+    backgroundColor: 'green',
+    textAlign: 'center',
+    borderRadius: '5px',
+    position: 'fixed',
+    zIndex: 4,
+    top: '240px',
+  },
+  button: {
+    maxHeight: '1.5em',
+    margin: '3px 6px',
+    padding: 0,
+    backgroundColor: 'transparent',
+    border: 'none',
+    fontSize: '12px',
+  },
+  text: {
+    margin: '16px',
+    color: 'black',
+  },
+};
 
 export const UnconnectedLandingPage = LandingPage;
 

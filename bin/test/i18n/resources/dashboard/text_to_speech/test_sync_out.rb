@@ -21,6 +21,12 @@ describe I18n::Resources::Dashboard::TextToSpeech::SyncOut do
     assert_equal I18n::Utils::SyncOutBase, described_class.superclass
   end
 
+  describe 'TTS_LOCALES' do
+    it 'returns TextToSpeech VOICES keys excluding :en-US' do
+      _(described_class::TTS_LOCALES).must_equal %i[es-ES es-MX it-IT pt-BR]
+    end
+  end
+
   describe '#perform' do
     let(:perform_sync_out) {described_instance.perform}
 
@@ -41,7 +47,7 @@ describe I18n::Resources::Dashboard::TextToSpeech::SyncOut do
     end
 
     around do |test|
-      I18nScriptUtils.stub_const(:TTS_LOCALES, [locale]) {test.call}
+      described_class.stub_const(:TTS_LOCALES, [locale]) {test.call}
     end
 
     before do

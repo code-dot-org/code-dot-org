@@ -160,6 +160,7 @@ class User < ApplicationRecord
     has_seen_progress_table_v2_invitation
     date_progress_table_invitation_last_delayed
     user_provided_us_state
+    lms_landing_opted_out
   )
 
   attr_accessor(
@@ -289,8 +290,6 @@ class User < ApplicationRecord
   after_save :save_parent_email_preference, if: :parent_email_preference_opt_in_required?
 
   after_save :save_email_reg_partner_preference, if: -> {share_teacher_email_reg_partner_opt_in_radio_choice.present?}
-
-  after_save :log_cap_event, if: -> {properties_previous_change&.dig(1, 'child_account_compliance_state')}
 
   after_create if: -> {Policies::Lti.lti? self} do
     Services::Lti.create_lti_user_identity(self)
@@ -442,7 +441,7 @@ class User < ApplicationRecord
       status: 'accepted'
     ).order(application_year: :desc).first&.form_data_hash
     alternate_email = latest_accepted_app ? latest_accepted_app['alternateEmail'] : ''
-    alternate_email&.empty? ? email : alternate_email
+    alternate_email.presence || email
   end
 
   # assign a course to a facilitator that is qualified to teach it
@@ -2894,14 +2893,6 @@ class User < ApplicationRecord
     # Report an error if an invalid value was submitted (probably tampering).
     unless User.us_state_dropdown_options.include?(us_state)
       errors.add(:us_state, :invalid)
-    end
-  end
-
-  private def log_cap_event
-    if Policies::ChildAccount::ComplianceState.locked_out?(self)
-      Services::ChildAccount::EventLogger.log_account_locking(self)
-    elsif Policies::ChildAccount::ComplianceState.permission_granted?(self)
-      Services::ChildAccount::EventLogger.log_permission_granting(self)
     end
   end
 end

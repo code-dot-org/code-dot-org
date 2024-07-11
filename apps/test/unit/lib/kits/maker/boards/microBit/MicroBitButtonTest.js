@@ -1,8 +1,10 @@
-import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
-import {expect} from '../../../../../../util/reconfiguredChai';
 import {EventEmitter} from 'events';
 import sinon from 'sinon';
+
 import MicroBitButton from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitButton';
+import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
+
+import {expect} from '../../../../../../util/reconfiguredChai';
 
 describe('MicroBitButton', function () {
   it('is an event emitter component', function () {
@@ -50,7 +52,7 @@ describe('MicroBitButton', function () {
         pin: 0,
       });
     });
-    after(() => {
+    afterAll(() => {
       sinon.restore();
     });
 

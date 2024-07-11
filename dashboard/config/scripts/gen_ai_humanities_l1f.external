@@ -1,5 +1,8 @@
 name 'gen-ai-humanities-L1F'
 title 'Crafting Prompts'
+display_name 'Research Summary'
+bubble_choice_description 'Summarize the key findings of a recent study on the effects of screen time on children.'
+thumbnail_url 'https://images.code.org/a3b885fc3acab4e0d34ac0f719d64b9b-image-1719504598425.png'
 
 markdown <<MARKDOWN
 ## Research Summary

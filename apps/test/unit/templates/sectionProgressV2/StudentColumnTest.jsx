@@ -98,12 +98,12 @@ describe('StudentColumn', () => {
       sortedStudents: [studentA, studentB],
     });
     let holmes = screen.getByText('Sherlock Holmes');
-    expect(holmes.ariaExpanded).to.equal('false');
+    expect(holmes.getAttribute('aria-expanded')).to.equal('false');
 
     fireEvent.click(holmes);
 
     holmes = screen.getByText('Sherlock Holmes');
-    expect(holmes.ariaExpanded).to.equal('true');
+    expect(holmes.getAttribute('aria-expanded')).to.equal('true');
 
     screen.getByText('Time Spent (mins)');
     screen.getByText('Last Updated');

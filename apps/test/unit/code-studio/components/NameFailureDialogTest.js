@@ -1,7 +1,9 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import NameFailureDialog from '@cdo/apps/code-studio/components/NameFailureDialog';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('NameFailureDialog', () => {
   it('renders with flagged text', () => {

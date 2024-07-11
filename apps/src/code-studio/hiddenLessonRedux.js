@@ -2,8 +2,8 @@
  * Reducer and actions used to track what sections/scripts are are hidden on a
  * per section basis.
  */
-import $ from 'jquery';
 import Immutable from 'immutable';
+import $ from 'jquery';
 
 const SET_HIDDEN_LESSONS = 'hiddenLesson/SET_HIDDEN_LESSONS';
 const UPDATE_HIDDEN_LESSON = 'hiddenLesson/UPDATE_HIDDEN_LESSON';
