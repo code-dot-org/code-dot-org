@@ -3,9 +3,10 @@ import {CourseRoles} from '@cdo/apps/templates/currentUserRedux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
 import {resetPredictProgress} from '@cdo/apps/lab2/redux/predictLevelRedux';
-import moduleStyles from './predict.module.scss';
 import React from 'react';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import Alert from '@cdo/apps/componentLibrary/alert/Alert';
+import moduleStyles from './predict.module.scss';
 
 // Modernized version of src/templates/instructions/ContainedLevelResetButton.
 // This component handles showing the predict reset button for instructors.
@@ -49,9 +50,11 @@ const PredictResetButton: React.FunctionComponent = () => {
       />
       <HelpTip>{i18n.deleteAnswerHelpTip()}</HelpTip>
       {resetFailed && (
-        <div className={moduleStyles.resetError}>
-          {i18n.errorResettingAnswer()}
-        </div>
+        <Alert
+          type="danger"
+          text={i18n.errorResettingAnswer()}
+          className={moduleStyles.resetError}
+        />
       )}
     </div>
   );
