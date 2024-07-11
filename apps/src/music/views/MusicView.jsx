@@ -502,21 +502,20 @@ class UnconnectedMusicView extends React.Component {
   };
 
   setPlaying = play => {
-    // Sends a Statsig event when the Run button is pressed by a signed out user
-    // This is related to the Create Account Button A/B Test; see Jira ticket:
-    // https://codedotorg.atlassian.net/browse/ACQ-1938
-    if (play && this.props.signInState === SignInState.SignedOut) {
-      analyticsReporter.sendEvent(
-        EVENTS.RUN_BUTTON_PRESSED_SIGNED_OUT,
-        {},
-        PLATFORMS.STATSIG
-      );
-    }
-
     if (play) {
       this.playSong();
       if (this.props.isProjectLevel) {
         this.analyticsReporter.onButtonClicked('play');
+      }
+      // Sends a Statsig event when the Run button is pressed by a signed out user
+      // This is related to the Create Account Button A/B Test; see Jira ticket:
+      // https://codedotorg.atlassian.net/browse/ACQ-1938
+      if (this.props.signInState === SignInState.SignedOut) {
+        analyticsReporter.sendEvent(
+          EVENTS.RUN_BUTTON_PRESSED_SIGNED_OUT,
+          {},
+          PLATFORMS.STATSIG
+        );
       }
     } else {
       this.stopSong();
