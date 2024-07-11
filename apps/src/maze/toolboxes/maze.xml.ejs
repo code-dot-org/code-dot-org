@@ -7,7 +7,7 @@ var page = locals.page;
 %>
 <xml id="toolbox" style="display: none;">
   <block type="maze_moveForward" id="moveForward"></block>
-  <block type="maze_turn"><title name="DIR">turnLeft</title></block>
+  <block type="maze_turn" id="turnLeft"><title name="DIR">turnLeft</title></block>
   <block type="maze_turn" id="turnRight"><title name="DIR">turnRight</title></block>
   <% if (page === 1) { -%>
     <% if (level > 2) { -%>
