@@ -511,7 +511,6 @@ const styles = {
     position: 'absolute',
     right: '1%',
     bottom: 0,
-    width: 25,
     width: '5%',
     minWidth: 25,
     height: 15,
