@@ -1,0 +1,37 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2024-06-28T19:57:13.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "## Retrieval for Accurate Information\n### Chatbots don't have all the answers and sometimes hallucinate",
+        "imageUrl": "https://images.code.org/cbc7f352cf914baee0f6c09804a6f358-retrieval-accurate-v2-1.png",
+        "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c"
+      },
+      {
+        "text": "## Retrieval for Accurate Information\n### For situations that require very high accuracy, we can add information with retrieval",
+        "imageUrl": "https://images.code.org/a247ead0f3e7a43267acc24679cf0040-retrieval-accurate-v2-2.png",
+        "key": "gen-ai-customizing-retrieval-practice-L5-007134e2-0169-4294-b8d0-b6de250851c6"
+      },
+      {
+        "text": "## Retrieval for Accurate Information\n### This lets the chatbot answer with highly accurate information",
+        "imageUrl": "https://images.code.org/e5571a5f1e2852dec6ad1e6af5a58bb9-retrieval-accurate-v2-3.png",
+        "key": "gen-ai-customizing-retrieval-practice-L5-e1d170f7-39bc-48d3-9e7e-5168b460494e"
+      },
+      {
+        "text": "## Retrieval for Accurate Information\n### The situation in this example might seem weird, **but it really happened!**\n\n[Read more about it here](https://arstechnica.com/tech-policy/2024/02/air-canada-must-honor-refund-policy-invented-by-airlines-chatbot/)",
+        "imageUrl": "https://images.code.org/f3357af562bb6e9f9bc6c8504e35af52-retrieval-accurate-v2-4.png",
+        "key": "gen-ai-customizing-retrieval-practice-L5-35adae9d-8147-4ee2-befe-6ff93f337466",
+        "layout": "text-bottom-right"
+      }
+    ],
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:57:13.332+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L5\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L5\"}]"
+}]]></config>
+</Panels>

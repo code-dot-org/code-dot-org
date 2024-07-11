@@ -1,13 +1,14 @@
+import {
+  detectBoardTypeFromPort,
+  BOARD_TYPE,
+} from '@cdo/apps/lib/kits/maker/util/boardUtils';
+
 import {expect} from '../../../../../util/reconfiguredChai';
 import {
   CIRCUIT_PLAYGROUND_EXPRESS_PORTS,
   CIRCUIT_PLAYGROUND_PORTS,
   FLORA_PORTS,
 } from '../sampleSerialPorts';
-import {
-  detectBoardTypeFromPort,
-  BOARD_TYPE,
-} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
 describe('boardUtils', () => {
   describe(`detectBoardTypeFromPort()`, () => {

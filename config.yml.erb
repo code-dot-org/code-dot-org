@@ -330,6 +330,9 @@ netsim_shard_expiry_seconds: 7200
 dcdo_table_name:       dcdo_<%=env%>
 gatekeeper_table_name: gatekeeper_<%=env%>
 
+# Allows DCDO settings via cookies. See: `dashboard/test/ui/features/cookie_dcdo.feature`
+use_cookie_dcdo: false
+
 # Poste (internal transactional email processing framework)
 poste_host: '<%= code_org_url.sub('//', '') %>'
 poste_attachment_dir:
@@ -346,7 +349,7 @@ chef_org_name: code-dot-org
 chef_client_key: <%="#{ENV['HOME']}/.chef/#{chef_node_name}.pem"%>
 chef_validation_client_name: <%="#{chef_org_name}-validator"%>
 chef_validation_key: <%="#{ENV['HOME']}/.chef/#{chef_validation_client_name}.pem"%>
-chef_server_url: '<%="https://api.opscode.com/organizations/#{chef_org_name}"%>'
+chef_server_url: '<%="https://code-org.saas.chef.io/organizations/#{chef_org_name}"%>'
 
 # Cloudfront keys for private content
 cloudfront_key_pair_id: !Secret

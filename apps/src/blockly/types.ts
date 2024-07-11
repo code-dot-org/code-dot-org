@@ -35,6 +35,7 @@ import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
 import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
+import CdoFieldParameter from './addons/cdoFieldParameter';
 import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import FunctionEditor from './addons/functionEditor';
@@ -78,6 +79,7 @@ type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  enableParamEditing: boolean;
   selected: BlockSvg;
   blockCountMap: Map<string, number> | undefined;
   blockLimitMap: Map<string, number> | undefined;
@@ -112,6 +114,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   FieldFlyout: typeof CdoFieldFlyout;
   FieldBitmap: typeof CdoFieldBitmap;
   FieldVariable: typeof CdoFieldVariable;
+  FieldParameter: typeof CdoFieldParameter;
   JavaScript: JavascriptGeneratorType;
   assetUrl: (path: string) => string;
   customSimpleDialog: (config: object) => void;
@@ -152,7 +155,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   getGenerator: () => JavascriptGeneratorType;
   addEmbeddedWorkspace: (workspace: Workspace) => void;
   isEmbeddedWorkspace: (workspace: Workspace) => boolean;
-  findEmptyContainerBlock: () => void;
+  findEmptyContainerBlock: (blocks: Block[]) => Block | null;
   createEmbeddedWorkspace: (
     container: HTMLElement,
     xml: Node,
@@ -215,6 +218,7 @@ export interface ExtendedBlock extends Block {
 }
 
 export interface ExtendedWorkspaceSvg extends WorkspaceSvg {
+  flyoutParentBlock: Block | null;
   globalVariables: string[];
   noFunctionBlockFrame: boolean;
   events: {
@@ -249,6 +253,7 @@ export interface ExtendedBlocklyOptions extends BlocklyOptions {
   useModalFunctionEditor: boolean;
   useBlocklyDynamicCategories: boolean;
   grayOutUndeletableBlocks: boolean | undefined;
+  disableParamEditing: boolean;
 }
 
 export interface ExtendedWorkspace extends Workspace {
@@ -258,7 +263,7 @@ export interface ExtendedWorkspace extends Workspace {
 type CodeGeneratorType = typeof CodeGenerator;
 export interface ExtendedGenerator extends CodeGeneratorType {
   xmlToCode: (name: string, domBlocks: Element) => string;
-  xmlToBlocks: (name: string, xml: Node) => Block[];
+  xmlToBlocks: (name: string, xml: Element) => Block[];
   blockSpaceToCode: (
     name: string,
     opt_typeFilter?: string | string[]

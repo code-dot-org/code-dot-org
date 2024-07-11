@@ -1,0 +1,22 @@
+name 'More Data Yields More Accurate Results_prod'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Reinforce Main Takeaways
+
+##More Data Yields More Accurate Results
+
+#### In the previous activity, you used machine learning to train an AI bot to recognize fish. <b>Machine learning algorithms require data provided to it by humans.</b> You may have noticed that <b>the more data you provide to AI, the more accurate the results are. </b> That’s because AI makes predictions based on patterns it has seen from large datasets. As a result, sometimes AI gets it wrong in a way that a human wouldn’t because AI only learns what you teach it. 
+
+
+## Teacher Tip: 
+
+#### This activity is a great example of how to reinforce the idea that <b>“AI is not magical or random” </b> with your students. For example, if you mistakenly label a tire as a fish, AI will start to think that tires are fish. This happens because AI makes its predictions based on the data it receives, so it gets confused when the information is incorrect.
+
+
+
+<div style="clear:both"/>
+
+
+MARKDOWN

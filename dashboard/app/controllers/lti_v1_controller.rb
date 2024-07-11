@@ -168,6 +168,7 @@ class LtiV1Controller < ApplicationController
       }
 
       destination_url = "#{target_link_uri}?#{redirect_params.to_query}"
+      session[:user_return_to] = destination_url
 
       if user
         sign_in user
@@ -181,6 +182,15 @@ class LtiV1Controller < ApplicationController
           event_name: 'lti_user_signin',
           metadata: metadata,
         )
+
+        # If this is the user's first login, send them into the account linking flow
+        if DCDO.get('lti_account_linking_enabled', false) && !user.lms_landing_opted_out
+          Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'continue', user.user_type)
+          PartialRegistration.persist_attributes(session, user)
+          publish_linking_page_visit(user, integration[:platform_name])
+          render 'lti/v1/account_linking/landing', locals: {email: Services::Lti.get_claim(decoded_jwt, :email)} and return
+        end
+
         # If on code.org, the user is a student and the LTI has the same user as a teacher, upgrade the student to a teacher.
         if lti_account_type == User::TYPE_TEACHER && user.user_type == User::TYPE_STUDENT
           @form_data = {
@@ -197,9 +207,10 @@ class LtiV1Controller < ApplicationController
         # PartialRegistration removes the email address, so store it in a local variable first
         email_address = Services::Lti.get_claim(decoded_jwt, :email)
         PartialRegistration.persist_attributes(session, user)
-        session[:user_return_to] = destination_url
         if DCDO.get('lti_account_linking_enabled', false)
-          render 'lti/v1/account_linking/landing', locals: {lti_provider: integration[:platform_name], email: email_address} and return
+          Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'new', user.user_type)
+          publish_linking_page_visit(user, integration[:platform_name])
+          render 'lti/v1/account_linking/landing', locals: {email: email_address} and return
         end
 
         if DCDO.get('student-email-post-enabled', false)
@@ -410,7 +421,8 @@ class LtiV1Controller < ApplicationController
       metadata = {
         lms_name: platform_name,
       }
-      Metrics::Events.log_event(
+      Metrics::Events.log_event_with_session(
+        session: session,
         event_name: 'lti_portal_registration_completed',
         metadata: metadata,
       )
@@ -478,5 +490,16 @@ class LtiV1Controller < ApplicationController
       context: context
     )
     unauthorized_status
+  end
+
+  private def publish_linking_page_visit(user, platform_name)
+    metadata = {
+      'lms_name' => platform_name,
+    }
+    Metrics::Events.log_event(
+      user: user,
+      event_name: 'lti_account_linking_page_visit',
+      metadata: metadata,
+    )
   end
 end

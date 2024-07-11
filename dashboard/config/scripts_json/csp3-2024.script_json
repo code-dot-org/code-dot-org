@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-09 18:19:52 UTC",
+    "serialized_at": "2024-06-25 23:31:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1505,7 +1505,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Prepping for this lesson:** The best way to prepare for this lesson is to go through the experience yourself. Check out the three apps in Code Studio to get a sense for how they work. Then move on to the Code Investigation and actually try to answer all the questions for each app. To help you out, however, answers are provided in the \"For Teachers Only\" tab for verified teachers.\n\n**Show code at the front:** If your room allows it, display the code at the front of the room. When students mentions specific lines of code actually scroll to that line and read through it together.\n\n**Discuss specific lines of code:** As you run discussions, model talking about programs by specifically calling out lines of code, as in \"I can see that when the playSound block on line 2 is highlighted the sound plays....\"\n\n**Save modifications for the end:** This lesson can be tight on time. Rather than have students modify the code all at once, you can save modifications for the end of the Code Investigation and have students pick a single app they wish to modify.\n\n**OK to Break Things:** When using the widgets in Units 1 and 2 it's not really possible to \"break things\". That's a little different than how things work in App Lab where it is possible to write code that may not run at all. Encourage students that this is ok. Using blocks makes it easier to avoid errors, and if students need to they can use the version history to set the code back to its original state.\n"
+            "markdown": "**Prepping for this lesson:** The best way to prepare for this lesson is to go through the experience yourself. Check out the first three tasks in Code Studio to get a sense for how they work. Then move on to the Code Investigation and actually try to answer all the questions for each app. To help you out, however, answers are provided in the \"For Teachers Only\" tab for verified teachers.\n\n**Show code at the front:** If your room allows it, display the code at the front of the room. When students mentions specific lines of code actually scroll to that line and read through it together.\n\n**Discuss specific lines of code:** As you run discussions, model talking about programs by specifically calling out lines of code, as in \"I can see that when the playSound block on line 2 is highlighted the sound plays....\"\n\n**Save modifications for the end:** This lesson can be tight on time. Rather than have students modify the code all at once, you can save modifications for the end of the Code Investigation and have students pick a single app they wish to modify.\n\n**OK to Break Things:** When using the widgets in Units 1 and 2 it's not really possible to \"break things\". That's a little different than how things work in App Lab where it is possible to write code that may not run at all. Encourage students that this is ok. Using blocks makes it easier to avoid errors, and if students need to they can use the version history to set the code back to its original state.\n"
           }
         ]
       },

@@ -326,15 +326,14 @@ class SessionsControllerTest < ActionController::TestCase
     let(:user) {create(:parent_managed_student)}
 
     let(:user_is_locked_out) {true}
-    let(:latest_permission_request) {nil}
 
     around do |test|
       Timecop.freeze {test.call}
     end
 
     before do
-      Policies::ChildAccount.stubs(:locked_out?).with(user).returns(user_is_locked_out)
-      Queries::ChildAccount.stubs(:latest_permission_request).with(user).returns(latest_permission_request)
+      Policies::ChildAccount::ComplianceState.stubs(:locked_out?).with(user).returns(user_is_locked_out)
+      user.update(child_account_compliance_lock_out_date: DateTime.now)
 
       sign_in user
     end
@@ -349,9 +348,9 @@ class SessionsControllerTest < ActionController::TestCase
       _(assigns[:disallowed_email]).must_equal ''
     end
 
-    it 'assigns @delete_date with 7 day after user creation' do
+    it 'assigns @delete_date with 7 day after user lockout date' do
       get :lockout
-      _(assigns[:delete_date]).must_equal user.created_at.since(7.days)
+      _(assigns[:delete_date]).must_equal DateTime.parse(user.child_account_compliance_lock_out_date).since(7.days)
     end
 
     it 'renders lockout page' do
@@ -380,8 +379,8 @@ class SessionsControllerTest < ActionController::TestCase
     end
 
     context 'when permission request is already sent' do
-      let(:latest_permission_request) do
-        build(:parental_permission_request, parent_email: parent_email, updated_at: request_date)
+      before do
+        create(:parental_permission_request, user: user, parent_email: parent_email, updated_at: request_date)
       end
 
       let(:parent_email) {'latest_permission_request@parent.email'}

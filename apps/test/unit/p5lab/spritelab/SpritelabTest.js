@@ -1,13 +1,13 @@
 import ReactDOM from 'react-dom';
 import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
-import SpriteLab from '@cdo/apps/p5lab/spritelab/SpriteLab';
+
+import reducers from '@cdo/apps/p5lab/reducers';
 import {
   addAnimation,
   editAnimation,
   setInitialAnimationList,
 } from '@cdo/apps/p5lab/redux/animationList';
-import Sounds from '@cdo/apps/Sounds';
+import SpriteLab from '@cdo/apps/p5lab/spritelab/SpriteLab';
 import {
   getStore,
   registerReducers,
@@ -16,11 +16,14 @@ import {
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setIsRunning} from '@cdo/apps/redux/runState';
-import reducers from '@cdo/apps/p5lab/reducers';
-import {setExternalGlobals} from '../../../util/testUtils';
+import Sounds from '@cdo/apps/Sounds';
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
+
+import {expect} from '../../../util/reconfiguredChai';
+import setBlocklyGlobal from '../../../util/setupBlocklyGlobal';
+import {setExternalGlobals} from '../../../util/testUtils';
 
 const backgroundSprite = {
   orderedKeys: ['44c5937d-c5c0-4676-bd0c-f7a86e99dd98'],
@@ -36,9 +39,10 @@ const backgroundSprite = {
 
 describe('SpriteLab', () => {
   setExternalGlobals();
+  setBlocklyGlobal();
 
-  before(() => sinon.stub(ReactDOM, 'render'));
-  after(() => ReactDOM.render.restore());
+  beforeAll(() => sinon.stub(ReactDOM, 'render'));
+  afterAll(() => ReactDOM.render.restore());
 
   beforeEach(stubRedux);
   afterEach(restoreRedux);

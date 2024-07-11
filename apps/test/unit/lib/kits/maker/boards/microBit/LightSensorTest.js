@@ -1,11 +1,13 @@
-import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
-import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
+
 import LightSensor from '@cdo/apps/lib/kits/maker/boards/microBit/LightSensor';
 import {
   SENSOR_CHANNELS,
   MAX_LIGHT_SENSOR_VALUE,
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
+import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
+
+import {expect} from '../../../../../../util/reconfiguredChai';
 
 describe('LightSensor', function () {
   let boardClient, lightSensor;

@@ -1,18 +1,18 @@
 /** @file Test of progress.js. */
 
 import assert from 'assert';
-import sinon from 'sinon';
 import queryString from 'query-string';
+import sinon from 'sinon';
 
-import * as viewAsRedux from '@cdo/apps/code-studio/viewAsRedux';
-import {__testonly__} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {initViewAs} from '@cdo/apps/code-studio/progress';
+import {__testonly__} from '@cdo/apps/code-studio/progressReduxSelectors';
+import * as viewAsRedux from '@cdo/apps/code-studio/viewAsRedux';
 
 describe('bestResultLevelId', function () {
   var progressData;
   const bestResultLevelId = __testonly__.bestResultLevelId;
 
-  before(function () {
+  beforeAll(function () {
     progressData = {
       1: 0,
       2: 0,
@@ -42,7 +42,7 @@ describe('bestResultLevelId', function () {
 
 describe('initViewAs', function () {
   let mockStore, mockSetViewType, mockQueryStringParse;
-  before(function () {
+  beforeAll(function () {
     mockStore = {
       dispatch: sinon.fake(),
     };
@@ -51,7 +51,7 @@ describe('initViewAs', function () {
     mockQueryStringParse = sinon.stub(queryString, 'parse').returns({});
   });
 
-  after(function () {
+  afterAll(function () {
     mockSetViewType.restore();
     mockQueryStringParse.restore();
   });

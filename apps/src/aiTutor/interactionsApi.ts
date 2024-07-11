@@ -1,7 +1,8 @@
-import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
-import {AITutorInteraction} from './types';
-import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 import {MetricEvent} from '@cdo/apps/lib/metrics/events';
+import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+
+import {AITutorInteraction} from './types';
 
 // TODO: Pagination options can be added here
 interface FetchAITutorInteractionsOptions {
@@ -77,6 +78,7 @@ export const fetchAITutorInteractions = async (
 export interface FeedbackData {
   thumbsUp?: boolean | null;
   thumbsDown?: boolean | null;
+  details?: string | null;
 }
 
 export async function saveFeedback(

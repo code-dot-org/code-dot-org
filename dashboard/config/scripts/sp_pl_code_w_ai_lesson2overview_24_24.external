@@ -1,0 +1,25 @@
+name 'sp-pl-Code_w_AI-lesson2Overview_24_24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Coding with AI: Lesson Overviews
+
+#### So far, you have learned to chat with a large language model (LLM) using a prompting structure. In this lesson, you will explore the lessons in the Coding with AI unit and learn how large language models can help you code while navigating different ethical concerns.
+
+<img src="https://images.code.org/0b5fe821780ebd992abb1f7c906a7a47-image-1712763289940.png" alt="AI bot" style="border-radius:40px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 0 60px 20px 0;">
+
+## In this lesson, you will:
+
+* #### Review the content of each lesson in the Coding with AI unit
+- #### Practice using LLMs to help with coding 
+- #### Preview activities in the lessons
+- #### Evaluate ethical concerns with using AI
+
+
+### **Suggested time:** 75 minutes
+
+
+## Let's get started! 
+
+MARKDOWN

@@ -5,11 +5,14 @@
 
 import React, {useLayoutEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {refreshProjectName, ProjectState} from '../../projectRedux';
-import EditProjectName from './EditProjectName';
-import DisplayProjectName from './DisplayProjectName';
+
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+
+import {refreshProjectName, ProjectState} from '../../projectRedux';
+
+import DisplayProjectName from './DisplayProjectName';
+import EditProjectName from './EditProjectName';
 
 const EditableProjectName: React.FunctionComponent<
   EditableProjectNameProps

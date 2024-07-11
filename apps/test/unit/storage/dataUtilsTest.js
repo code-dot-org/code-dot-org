@@ -1,4 +1,3 @@
-import {expect} from '../../util/reconfiguredChai';
 import {
   isBlank,
   ignoreMissingValues,
@@ -9,6 +8,8 @@ import {
   isBoolean,
   toBoolean,
 } from '@cdo/apps/storage/dataBrowser/dataUtils';
+
+import {expect} from '../../util/reconfiguredChai';
 
 describe('isBlank', () => {
   it('counts null, undefined, and empty string as blank', () => {

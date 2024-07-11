@@ -1,0 +1,30 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2024-06-28T19:52:32.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "Based on the last few levels:\r\n\r\n1) What types of tasks do you think a **⬆️ high** temperature is better suited for?\r\n1) What types of tasks do you think a **⬇️ low** temperature is better suited for?",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19018,
+    "name_suffix": "_2024",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "title": "Mid-Lesson Check-In",
+    "placeholder": "Write your answer here!",
+    "teacher_markdown": "Students should notice that higher temperature is better for more creative and open-ended tasks (like the poetry level), while lower temperature can be better for more fact and information based tasks (like the historical biography level). Mid temperatures are better for a combination of the two (like making an argument, that requires both logical and emotional appeals).\r\n\r\nStudents may also call out places where bias and hallucinations are important. Lower temperatures can be better for places where we want to try and eliminate hallucinations, although we will learn some better tricks for this later in the unit."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:52:32.159+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L7\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L7\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

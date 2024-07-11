@@ -160,6 +160,7 @@ class User < ApplicationRecord
     has_seen_progress_table_v2_invitation
     date_progress_table_invitation_last_delayed
     user_provided_us_state
+    lms_landing_opted_out
   )
 
   attr_accessor(
@@ -234,6 +235,8 @@ class User < ApplicationRecord
 
   has_many :lti_user_identities, dependent: :destroy
 
+  has_one :latest_parental_permission_request, -> {order(updated_at: :desc)}, class_name: 'ParentalPermissionRequest'
+
   # This custom validator makes email collision checks on the AuthenticationOption
   # model also show up as validation errors for the email field on the User
   # model.
@@ -288,8 +291,6 @@ class User < ApplicationRecord
 
   after_save :save_email_reg_partner_preference, if: -> {share_teacher_email_reg_partner_opt_in_radio_choice.present?}
 
-  after_save :log_cap_event, if: -> {properties_previous_change&.dig(1, 'child_account_compliance_state')}
-
   after_create if: -> {Policies::Lti.lti? self} do
     Services::Lti.create_lti_user_identity(self)
   end
@@ -303,10 +304,6 @@ class User < ApplicationRecord
   end
 
   validate :validate_us_state, if: :should_validate_us_state?
-
-  before_create unless: -> {Policies::ChildAccount.compliant?(self)} do
-    Services::ChildAccount.lock_out(self)
-  end
 
   before_validation on: [:create, :update], if: -> {gender_teacher_input.present? && will_save_change_to_attribute?('properties')} do
     self.gender = Policies::Gender.normalize gender_teacher_input
@@ -816,6 +813,8 @@ class User < ApplicationRecord
   def email_and_hashed_email_must_be_unique
     # skip the db lookup if we are already invalid
     return if errors.present?
+    # allow duplicate accounts to be created for LMS users that are unlinked
+    return if authentication_options.length == 1 && authentication_options.first&.lti?
 
     if ((email.present? && (other_user = User.find_by_email_or_hashed_email(email))) ||
         (hashed_email.present? && (other_user = User.find_by_hashed_email(hashed_email)))) &&
@@ -2246,6 +2245,7 @@ class User < ApplicationRecord
       ai_tutor_access_denied: !!ai_tutor_access_denied,
       at_risk_age_gated: Policies::ChildAccount.parent_permission_required?(self),
       child_account_compliance_state: child_account_compliance_state,
+      latest_permission_request_sent_at: latest_parental_permission_request&.updated_at,
     }
   end
 
@@ -2893,14 +2893,6 @@ class User < ApplicationRecord
     # Report an error if an invalid value was submitted (probably tampering).
     unless User.us_state_dropdown_options.include?(us_state)
       errors.add(:us_state, :invalid)
-    end
-  end
-
-  private def log_cap_event
-    if Policies::ChildAccount::ComplianceState.locked_out?(self)
-      Services::ChildAccount::EventLogger.log_account_locking(self)
-    elsif Policies::ChildAccount::ComplianceState.permission_granted?(self)
-      Services::ChildAccount::EventLogger.log_permission_granting(self)
     end
   end
 end

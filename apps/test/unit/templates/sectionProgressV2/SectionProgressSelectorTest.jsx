@@ -34,6 +34,8 @@ const V2_TEST_ID = 'section-progress-v2';
 
 const DEFAULT_PROPS = {};
 
+jest.mock('@cdo/apps/templates/sectionProgress/sectionProgressLoader');
+
 describe('SectionProgressSelector', () => {
   let store;
 
@@ -191,7 +193,7 @@ describe('SectionProgressSelector', () => {
     expect(screen.queryByTestId(V2_TEST_ID)).to.not.exist;
   });
 
-  it('shows modal if modal is available', () => {
+  it('shows modal if modal is enabled and the user has not seen the invite before', () => {
     DCDO.set('progress-table-v2-enabled', true);
     DCDO.set('progress-table-v2-closed-beta-enabled', true);
     DCDO.set('disable-try-new-progress-view-modal', false);
@@ -204,7 +206,7 @@ describe('SectionProgressSelector', () => {
     screen.getByText(i18n.progressTrackingAnnouncement());
   });
 
-  it('does not show modal if modal is not available', () => {
+  it('does not show modal if modal is disabled', () => {
     DCDO.set('progress-table-v2-enabled', true);
     DCDO.set('progress-table-v2-closed-beta-enabled', true);
     DCDO.set('disable-try-new-progress-view-modal', true);
@@ -214,6 +216,29 @@ describe('SectionProgressSelector', () => {
 
     renderDefault();
 
+    screen.getByText(V1_PAGE_LINK_TEXT);
+    screen.getByTestId(V1_TEST_ID);
+
+    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).to.not
+      .exist;
+  });
+
+  it('does not show modal if the user has just switched from V1', () => {
+    DCDO.set('progress-table-v2-enabled', true);
+    DCDO.set('progress-table-v2-closed-beta-enabled', true);
+    DCDO.set('disable-try-new-progress-view-modal', false);
+
+    store.dispatch(setDateProgressTableInvitationDelayed(''));
+    store.dispatch(setHasSeenProgressTableInvite(false));
+
+    renderDefault();
+    store.dispatch(setShowProgressTableV2(true));
+
+    // Click the link to switch to V1
+    const link = screen.getByText(V2_PAGE_LINK_TEXT);
+    fireEvent.click(link);
+
+    // Check that the modal is not shown.
     screen.getByText(V1_PAGE_LINK_TEXT);
     screen.getByTestId(V1_TEST_ID);
 

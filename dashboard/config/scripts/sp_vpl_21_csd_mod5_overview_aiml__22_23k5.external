@@ -3,9 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Teaching AI and Machine Learning
+# How AI Makes Decisions
 
-##### Welcome! This free self-paced professional learning module is designed help you prepare to teach Code.org's Artificial Intelligence and Machine Learning unit. 
+##### Welcome! This free self-paced professional learning module is designed help you prepare to teach Code.org's"How AI Makes Decisions" unit, for 3-5th grade students. 
 
 
 <img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="Image of AI bot and a model card" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
@@ -13,13 +13,11 @@ markdown <<MARKDOWN
 
 ## In this module, you will:
 
-* ##### Get an introduction to artificial intelligence and machine learning.
-* ##### Practice key concepts included in the unit.
-* ##### Engage with AI Lab and App Lab.
-* ##### Explore end of chapter projects.
+* ##### Get an introduction to artificial intelligence (AI) and machine learning.
+* ##### Practice key concepts included in the unit..
 * ##### Make a plan for implementing the unit with your students.
 
-### **Suggested time:** ??? minutes
+### **Suggested time:** 15 minutes
 
 ## Take the pre-survey
 

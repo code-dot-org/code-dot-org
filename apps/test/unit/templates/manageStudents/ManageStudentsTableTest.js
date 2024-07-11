@@ -222,11 +222,11 @@ describe('ManageStudentsTable', () => {
     });
 
     describe('Gender field feature flag', () => {
-      before(() => {
+      beforeAll(() => {
         experiments.setEnabled(experiments.GENDER_FEATURE_ENABLED, true);
       });
 
-      after(() => {
+      afterAll(() => {
         experiments.setEnabled(experiments.GENDER_FEATURE_ENABLED, false);
       });
 

@@ -1,0 +1,22 @@
+{
+  "name": "3-5gamedesign-2024",
+  "script_names": [
+    "k5gettingstarted",
+    "k5plgamedesign"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "3-5gamedesign",
+    "has_numbered_units": true,
+    "version_year": "2024"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

@@ -1,14 +1,15 @@
-import {expect} from '../../../util/reconfiguredChai';
+import javalabEditor, {
+  initialState,
+  sourceTextUpdated,
+} from '@cdo/apps/javalab/redux/editorRedux';
 import {
   stubRedux,
   restoreRedux,
   registerReducers,
   getStore,
 } from '@cdo/apps/redux';
-import javalabEditor, {
-  initialState,
-  sourceTextUpdated,
-} from '@cdo/apps/javalab/redux/editorRedux';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('javalabRedux', () => {
   let store;

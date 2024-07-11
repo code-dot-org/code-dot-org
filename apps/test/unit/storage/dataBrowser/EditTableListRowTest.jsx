@@ -1,10 +1,11 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../util/reconfiguredChai';
-import commonI18n from '@cdo/locale';
+import React from 'react';
 import sinon from 'sinon';
 
 import EditTableListRow from '@cdo/apps/storage/dataBrowser/EditTableListRow';
+import commonI18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('EditTableListRow', () => {
   describe('localization', () => {

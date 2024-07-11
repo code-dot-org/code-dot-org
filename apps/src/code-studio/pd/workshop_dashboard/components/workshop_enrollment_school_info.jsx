@@ -1,20 +1,22 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {connect} from 'react-redux';
 import {Button, Table} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import ConfirmationDialog from '../../components/confirmation_dialog';
-import {enrollmentShape} from '../types';
-import {workshopEnrollmentStyles as styles} from '../workshop_enrollment_styles';
-import ScholarshipDropdown from '../../components/scholarshipDropdown';
-import Spinner from '../../components/spinner';
-import {WorkshopAdmin, ProgramManager} from '../permission';
+import {connect} from 'react-redux';
+
 import {CourseSpecificScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
 import {
   SubjectNames,
   CourseKeyMap,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
 import {CSD, CSP, CSA} from '../../application/ApplicationConstants';
 import {DASHBOARD_COURSES} from '../../application_dashboard/application_dashboard.jsx';
+import ConfirmationDialog from '../../components/confirmation_dialog';
+import ScholarshipDropdown from '../../components/scholarshipDropdown';
+import Spinner from '../../components/spinner';
+import {WorkshopAdmin, ProgramManager} from '../permission';
+import {enrollmentShape} from '../types';
+import {workshopEnrollmentStyles as styles} from '../workshop_enrollment_styles';
 
 const CSF = 'CS Fundamentals';
 const DEEP_DIVE = SubjectNames.SUBJECT_CSF_201;

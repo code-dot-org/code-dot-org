@@ -17,6 +17,12 @@ describe I18n::Resources::Apps::TextToSpeech::SyncOut do
     assert_equal I18n::Utils::SyncOutBase, described_class.superclass
   end
 
+  describe 'TTS_LOCALES' do
+    it 'returns TextToSpeech VOICES keys' do
+      _(described_class::TTS_LOCALES).must_equal %i[en-US es-ES es-MX it-IT pt-BR]
+    end
+  end
+
   describe '#perform' do
     let(:perform_sync_out) {described_instance.perform}
 
@@ -33,7 +39,7 @@ describe I18n::Resources::Apps::TextToSpeech::SyncOut do
     let(:labs_feedback_message_keys) {{lab => [lab_message_key]}}
 
     around do |test|
-      I18nScriptUtils.stub_const(:TTS_LOCALES, [locale]) do
+      described_class.stub_const(:TTS_LOCALES, [locale]) do
         described_class.stub_const(:LABS_FEEDBACK_MESSAGE_KEYS, labs_feedback_message_keys) {test.call}
       end
     end
@@ -49,7 +55,7 @@ describe I18n::Resources::Apps::TextToSpeech::SyncOut do
 
       TextToSpeech.expects(:sanitize).with(lab_message_i10n).once.returns(expected_tts_message_l10n)
       TextToSpeech.expects(:tts_path).with(lab_message_i10n, lab_message_i10n, locale: locale).once.returns(expected_tts_file_path)
-      TextToSpeech.expects(:tts_upload_to_s3).with(expected_tts_message_l10n, expected_tts_file_path, 'update_i18n_static_messages', locale: locale).once
+      TextToSpeech.expects(:tts_upload_to_s3).with(expected_tts_message_l10n, 'message', expected_tts_file_path, 'update_i18n_static_messages', locale: locale).once
 
       perform_sync_out
     end

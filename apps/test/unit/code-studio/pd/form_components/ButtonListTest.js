@@ -1,8 +1,5 @@
-import ButtonList from '@cdo/apps/code-studio/pd/form_components/ButtonList';
-import React from 'react';
-import {expect} from '../../../../util/reconfiguredChai';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import sinon from 'sinon';
+import React from 'react';
 /* eslint-disable no-restricted-imports */
 import {
   Radio,
@@ -12,13 +9,18 @@ import {
   HelpBlock,
 } from 'react-bootstrap';
 /* eslint-enable no-restricted-imports */
+import sinon from 'sinon';
+
+import ButtonList from '@cdo/apps/code-studio/pd/form_components/ButtonList';
+
+import {expect} from '../../../../util/reconfiguredChai';
 
 describe('ButtonList', () => {
   describe('With type: radio', () => {
     let radioList;
     let onChangeCallback;
 
-    before(() => {
+    beforeAll(() => {
       onChangeCallback = sinon.spy();
 
       radioList = shallow(
@@ -175,7 +177,7 @@ describe('ButtonList', () => {
     let onDogBreedInputChange;
     let dogBreedInput;
 
-    before(() => {
+    beforeAll(() => {
       onDogBreedInputChange = sinon.spy();
 
       buttonList = shallow(

@@ -19,14 +19,16 @@
 #
 module CAP
   class UserEvent < ApplicationRecord
-    POLICIES = Policies::ChildAccount::STATE_POLICY.each_value.map {|policy| policy[:name]}.freeze
+    POLICIES = Policies::ChildAccount.state_policies.each_value.map {|policy| policy[:name]}.freeze
 
     NAMES = [
       PARENT_EMAIL_SUBMIT = 'parent_email_submit'.freeze,
       PARENT_EMAIL_UPDATE = 'parent_email_update'.freeze,
       PERMISSION_GRANTING = 'permission_granting'.freeze,
+      GRACE_PERIOD_START = 'grace_period_start'.freeze,
       ACCOUNT_LOCKING = 'account_locking'.freeze,
       ACCOUNT_PURGING = 'account_purging'.freeze,
+      COMPLIANCE_REMOVING = 'compliance_removing'.freeze,
     ].freeze
 
     enum policy: POLICIES.index_by(&:underscore), _suffix: true
@@ -36,12 +38,5 @@ module CAP
 
     validates :name, presence: true
     validates :policy, presence: true
-
-    before_save :ensure_state_is_set
-
-    private def ensure_state_is_set
-      self.state_before ||= user.child_account_compliance_state
-      self.state_after ||= user.child_account_compliance_state
-    end
   end
 end
