@@ -72,17 +72,10 @@ class DeleteAccountsHelper
     end
 
     # Clear Firebase contents for user's channels
+    # TODO: unfirebase, write a version of this for Datablock Storage: #57004
     # TODO: post-firebase-cleanup, switch to the datablock storage version: #56994
     @log.puts "Deleting Firebase contents for #{channel_count} channels"
     FirebaseHelper.delete_channels encrypted_channel_ids
-
-    # Clear Datablock Storage contents for user's projects
-    @log.puts "Deleting Datablock Storage contents for #{project_ids.count} projects"
-    project_ids.each do |project_id|
-      DASHBOARD_DB[:datablock_storage_tables].where(project_id: project_id).delete
-      DASHBOARD_DB[:datablock_storage_kvps].where(project_id: project_id).delete
-      DASHBOARD_DB[:datablock_storage_records].where(project_id: project_id).delete
-    end
 
     @log.puts "Deleted #{channel_count} channels" if channel_count > 0
   end
