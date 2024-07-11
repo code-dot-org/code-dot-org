@@ -20758,17 +20758,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"parallel-transform@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "parallel-transform@npm:1.1.0"
-  dependencies:
-    cyclist: ~0.2.2
-    inherits: ^2.0.3
-    readable-stream: ^2.1.5
-  checksum: a729bf82706914a5fcb995472007fd8443978e22075ba34f5347b967766ce617796052c4f7370449f00b180acd18202869e2f5af716f776da6b28152ad3fee37
-  languageName: node
-  linkType: hard
-
 "param-case@npm:2.1.x":
   version: 2.1.1
   resolution: "param-case@npm:2.1.1"
