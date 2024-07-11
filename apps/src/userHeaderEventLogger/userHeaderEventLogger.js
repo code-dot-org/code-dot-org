@@ -45,7 +45,7 @@ $(document).ready(function () {
       EVENTS.SIGNED_OUT_USER_CLICKS_HAMBURGER_LINK
     );
 
-    // Log if the Help icon menu is clicked
+    // Log if the Create Account button is clicked
     createAccountButton.addEventListener('click', () => {
       analyticsReporter.sendEvent(
         EVENTS.CREATE_ACCOUNT_BUTTON_CLICKED,
