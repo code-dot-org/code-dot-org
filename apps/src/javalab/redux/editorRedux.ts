@@ -1,12 +1,13 @@
 /**
  * Redux store for editor-specific Java Lab state.
  */
+import {createSelector, createSlice, PayloadAction} from '@reduxjs/toolkit';
+import _ from 'lodash';
+
 import {
   fileMetadataForEditor,
   updateAllSourceFileOrders,
 } from '../JavalabFileHelper';
-import _ from 'lodash';
-import {createSelector, createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {JavalabEditorDialog} from '../types';
 
 interface EditorFilesMap {

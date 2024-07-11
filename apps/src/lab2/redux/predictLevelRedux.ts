@@ -1,17 +1,19 @@
 import {
-  queryUserProgress,
-  sendPredictLevelReport,
-} from '@cdo/apps/code-studio/progressRedux';
-import {
   PayloadAction,
   createAsyncThunk,
   createSelector,
   createSlice,
 } from '@reduxjs/toolkit';
+
+import {
+  queryUserProgress,
+  sendPredictLevelReport,
+} from '@cdo/apps/code-studio/progressRedux';
 import {setLoadedPredictResponse} from '@cdo/apps/lab2/lab2Redux';
 import {RootState} from '@cdo/apps/types/redux';
-import {resetPredictLevelProgress} from '../projects/userLevelsApi';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
+
+import {resetPredictLevelProgress} from '../projects/userLevelsApi';
 
 export interface PredictLevelState {
   response: string;

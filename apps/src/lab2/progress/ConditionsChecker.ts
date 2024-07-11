@@ -2,8 +2,9 @@
 // whether a set of conditions have all been satisfied.  Unknown conditions are
 // skipped.  The accumulated satisfied conditions can be cleared at any time.
 
-import {Condition} from '../types';
 import _ from 'lodash';
+
+import {Condition} from '../types';
 
 export default class ConditionsChecker {
   private currentSatisfiedConditions: Condition[];

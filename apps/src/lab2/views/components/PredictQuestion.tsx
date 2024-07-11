@@ -1,10 +1,13 @@
 import React from 'react';
+
 import {
   LevelPredictSettings,
   PredictQuestionType,
 } from '@cdo/apps/lab2/levelEditors/types';
-import moduleStyles from './predict.module.scss';
+
 import PredictResetButton from './PredictResetButton';
+
+import moduleStyles from './predict.module.scss';
 
 interface PredictQuestionProps {
   predictSettings: LevelPredictSettings | undefined;

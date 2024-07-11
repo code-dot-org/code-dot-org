@@ -1,8 +1,10 @@
+import React from 'react';
+
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {LinkButton} from '@cdo/apps/componentLibrary/button';
 import commonI18n from '@cdo/locale';
-import React from 'react';
+
 import moduleStyles from './predict.module.scss';
 
 const SUMMARY_PATH = '/summary';
