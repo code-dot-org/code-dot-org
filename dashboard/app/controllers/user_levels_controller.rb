@@ -65,6 +65,6 @@ class UserLevelsController < ApplicationController
   # Some lab2 levels have a predict_settings field that indicates they are predict levels.
   # We allow clearing progress on these levels as well as multi or free-response levels.
   private def clearable_level_type?(level)
-    ['Multi', 'FreeResponse'].include?(level.type) || (level.uses_lab2? && level.predict_settings&.dig("isPredictLevel"))
+    ['Multi', 'FreeResponse'].include?(level.type) || level.predict_level?
   end
 end
