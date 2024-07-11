@@ -515,7 +515,7 @@ const styles = {
     width: '5%',
     minWidth: 25,
     height: 15,
-    animation: '0.25s ease-in 3s 1 normal backwards running fadein'
+    animation: '0.25s ease-in 4s 1 normal backwards running fadein'
   },
   guideClickToContinueReminder1: {
     width: '100%',
