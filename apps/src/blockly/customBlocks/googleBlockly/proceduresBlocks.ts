@@ -68,6 +68,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_def_mini_toolbox',
       'modal_procedures_no_destroy',
       'procedure_def_no_gray_out',
+      'procedure_def_get_info',
     ],
     mutator: 'procedure_def_mutator',
   },
@@ -312,6 +313,17 @@ GoogleBlockly.Extensions.registerMixin('procedure_def_no_gray_out', {
     return false;
   },
 });
+
+// Used for giving feedback about empty function definition blocks.
+GoogleBlockly.Extensions.registerMixin('procedure_def_get_info', {
+  getProcedureInfo: function () {
+    return {
+      name: this.getFieldValue('NAME'),
+      callType: this.callType_,
+    };
+  },
+});
+
 /**
  * Constructs the blocks required by the flyout for the procedure category.
  * Modeled after core Blockly procedures flyout category, but excludes unwanted blocks.
