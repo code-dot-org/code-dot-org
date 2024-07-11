@@ -68,34 +68,36 @@ const NewAccountCard = () => {
         title={i18n.ltiLinkAccountNewAccountCardHeaderLabel()}
         icon={
           <FontAwesomeV6Icon
-            className={classNames(styles.icon, 'fa-3x')}
+            className={classNames(styles.icon, 'fa-2x')}
             iconName={'user-plus'}
           />
         }
       />
-      <CardContent>
-        {isLMS
-          ? i18n.ltiLinkAccountNewAccountCardContent({
-              providerName: ltiProviderName,
-            })
-          : i18n.nonLMSAccountNewAccountCardContentWorkshopEnroll()}
+      <div className={classNames(styles.cardContentContainer)}>
+        <CardContent>
+          {isLMS
+            ? i18n.ltiLinkAccountNewAccountCardContent({
+                providerName: ltiProviderName,
+              })
+            : i18n.nonLMSAccountNewAccountCardContentWorkshopEnroll()}
 
-        <form
-          data-testid={'new-account-form'}
-          action={newAccountUrl}
-          ref={finishSignupFormRef}
-          method="post"
-          className={styles.newAccountForm}
-        >
-          <RailsAuthenticityToken />
-          <input type="hidden" value={emailAddress} name={'user[email]'} />
-        </form>
-      </CardContent>
+          <form
+            data-testid={'new-account-form'}
+            action={newAccountUrl}
+            ref={finishSignupFormRef}
+            method="post"
+            className={styles.newAccountForm}
+          >
+            <RailsAuthenticityToken />
+            <input type="hidden" value={emailAddress} name={'user[email]'} />
+          </form>
+        </CardContent>
+      </div>
       <CardActions>
         <Button
           className={classNames(styles.button, styles.cardSecondaryButton)}
           color={buttonColors.white}
-          size="l"
+          size="m"
           text={
             isLMS
               ? i18n.ltiLinkAccountNewAccountCardActionLabel()

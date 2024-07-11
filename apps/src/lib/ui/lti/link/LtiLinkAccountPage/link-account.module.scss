@@ -1,13 +1,33 @@
-@import 'style-constants';
+@import 'color', 'style-constants';
+
+.mainContainer {
+  background-color: $light_gray_50;
+}
+
+.contentContainer {
+  max-width: $content-width;
+  margin: auto;
+  font-size: 16px;
+  padding-bottom: 32px;
+}
+
+.welcomeContainer {
+  text-align: center;
+}
+
+.welcomeBannerContainer img {
+  width: 40px;
+  height: 40px;
+}
 
 .icon {
   width: 45px;
-  height: 36px;
+  height: 40px;
   color: #0093A4;
 }
 
 .cdoLogo {
-  margin-top: 60px;
+  margin-top: 64px;
 }
 
 .titleContainer {
@@ -23,6 +43,26 @@
   gap: 24px;
 }
 
+.cardContentContainer {
+  padding-bottom: 16px;
+}
+
+.h1 {
+  color: purple !important;
+}
+
+.cardTitle {
+  .h1 {
+    color: green !important;
+  }
+  .CardHeader {
+    color: blue !important;
+    .h1 {
+      color: red !important;
+    }
+  }
+}
+
 .button {
   width: 100%;
 }
@@ -36,22 +76,6 @@
 // Increase specificity to override base button
 .cardSecondaryButton.cardSecondaryButton {
   border: 1px solid #292F36
-}
-
-.mainContainer {
-  max-width: $content-width;
-  margin: auto;
-  font-size: 16px;
-  padding-bottom: 32px;
-}
-
-.welcomeContainer {
-  text-align: center;
-}
-
-.welcomeBannerContainer img {
-  width: 40px;
-  height: 40px;
 }
 
 .newAccountForm {

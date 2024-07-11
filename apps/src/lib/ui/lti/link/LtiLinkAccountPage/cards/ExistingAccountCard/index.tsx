@@ -52,24 +52,26 @@ const ExistingAccountCard = () => {
         title={i18n.ltiLinkAccountExistingAccountCardHeaderLabel()}
         icon={
           <FontAwesomeV6Icon
-            className={classNames(styles.icon, 'fa-3x')}
+            className={classNames(styles.icon, 'fa-2x')}
             iconName={'user-check'}
           />
         }
       />
-      <CardContent className={cardStyles.cardContent}>
-        {isLMS
-          ? i18n.ltiLinkAccountExistingAccountCardContent({
-              providerName: ltiProviderName,
-            })
-          : i18n.nonLMSAccountExistingAccountCardContentWorkshopEnroll()}
-      </CardContent>
+      <div className={classNames(styles.cardContentContainer)}>
+        <CardContent className={cardStyles.cardContent}>
+          {isLMS
+            ? i18n.ltiLinkAccountExistingAccountCardContent({
+                providerName: ltiProviderName,
+              })
+            : i18n.nonLMSAccountExistingAccountCardContentWorkshopEnroll()}
+        </CardContent>
+      </div>
       <CardActions>
         <Button
           className={styles.button}
           color={buttonColors.purple}
           type={'primary'}
-          size="l"
+          size="m"
           onClick={handleExistingAccountSubmit}
           text={i18n.ltiLinkAccountExistingAccountCardActionLabel()}
         />

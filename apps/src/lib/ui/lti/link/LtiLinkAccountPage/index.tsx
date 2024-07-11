@@ -21,13 +21,19 @@ const LtiLinkAccountPage = () => {
 
   return (
     <main className={styles.mainContainer}>
-      <WelcomeBanner />
-      <div className={styles.cardContainer}>
-        {newCtaType === 'new' || !isLMS ? <NewAccountCard /> : <ContinueCard />}
-        <ExistingAccountCard />
-      </div>
-      <div className={styles.cancelButtonContainer}>
-        <Link text={i18n.cancel()} href={`#`} onClick={handleCancel} />
+      <div className={styles.contentContainer}>
+        <WelcomeBanner />
+        <div className={styles.cardContainer}>
+          {newCtaType === 'new' || !isLMS ? (
+            <NewAccountCard />
+          ) : (
+            <ContinueCard />
+          )}
+          <ExistingAccountCard />
+        </div>
+        <div className={styles.cancelButtonContainer}>
+          <Link text={i18n.cancel()} href={`#`} onClick={handleCancel} />
+        </div>
       </div>
     </main>
   );
