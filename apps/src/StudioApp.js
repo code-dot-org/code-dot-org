@@ -2124,7 +2124,7 @@ StudioApp.prototype.configureDom = function (config) {
   var codeWorkspace = container.querySelector('#codeWorkspace');
 
   const isSignedOut = !config.isSignedIn;
-  const isStandaloneProject = config.scriptId === undefined;
+  const isStandaloneProject = config.level.isProjectLevel;
 
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
