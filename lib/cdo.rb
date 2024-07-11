@@ -292,7 +292,13 @@ module Cdo
 
     # The web server instance has some intention to use AWS credentials?
     def aws_access?
-      rack_env?(:development) && !!ENV['AWS_PROFILE']&.include?('cdo')
+      rack_env?(:production) || !!ENV['AWS_PROFILE']&.include?('cdo')
+    end
+
+    # The web server in connected to an emulated (non-production) AWS system.
+    def aws_emulated?
+      # This is true when an endpoint is set explicitly
+      !!CDO.aws_endpoint
     end
 
     def shared_image_url(path)

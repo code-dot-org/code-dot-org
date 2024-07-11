@@ -1,0 +1,38 @@
+# Based on:
+# - https://github.com/localstack/localstack/blob/master/docker-compose.yml
+# - https://medium.com/@muthomititus/a-guide-to-localstack-with-docker-compose-e1487e3a776f
+# - https://refactorfirst.com/localstack-with-docker-compose
+# - https://whattodevnow.medium.com/using-localstack-with-docker-compose-to-mock-aws-services-bb25a5b01d4b
+
+include:
+  - path: ./docker-compose.networks.yml
+
+services:
+  localstack-base: &localstack-base
+    hostname: localstack
+    image: localstack/localstack:${LOCALSTACK_VERSION:-latest}
+    environment:
+      DEBUG: ${LOCALSTACK_DEBUG:-0}
+      DEFAULT_REGION: us-east-1
+      DOCKER_HOST: unix:///var/run/docker.sock
+    volumes:
+      - "${LOCALSTACK_VOLUME_DIR:-localstack_data}:/var/lib/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+  localstack-contained:
+    <<: *localstack-base
+    container_name: cdo-localstack-contained
+    expose:
+      - "4566"
+    networks:
+      cdo_network_test:
+      cdo_network:
+
+  localstack:
+    container_name: cdo-localstack-main
+    <<: *localstack-base
+    ports:
+      - "4566:4566"
+
+volumes:
+  localstack_data:

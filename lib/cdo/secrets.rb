@@ -29,7 +29,16 @@ module Cdo
     # @return [Concurrent::Promises::Future<Aws::SecretsManager::Client>] Secrets Manager Client
     def client_promise
       @client_promise ||= Concurrent::Promises.future_on(@pool) do
-        @client || Aws::SecretsManager::Client.new
+        if CDO.aws_emulated?
+          @client || Aws::SecretsManager::Client.new(
+            endpoint: CDO.aws_endpoint,
+            access_key_id: CDO.aws_access_key_id,
+            secret_access_key: CDO.aws_secret_access_key,
+            region: CDO.aws_region,
+          )
+        else
+          @client || Aws::SecretsManager::Client.new
+        end
       end
     end
 

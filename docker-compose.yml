@@ -20,3 +20,6 @@ include:
 
   # Commands that serve as git hooks
   - path: ./docker/developers/docker-compose.hooks.yml
+
+  # Localstack support
+  - path: ./docker/developers/docker-compose.localstack.yml

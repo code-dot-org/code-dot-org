@@ -47,7 +47,17 @@ module AWS
     # the credentials specified in the CDO config.
     # @return [Aws::S3::Client]
     def self.connect_v2!
-      self.s3 ||= Aws::S3::Client.new
+      if CDO.aws_emulated?
+        self.s3 ||= Aws::S3::Client.new(
+          endpoint: CDO.aws_endpoint,
+          access_key_id: CDO.aws_access_key_id,
+          secret_access_key: CDO.aws_secret_access_key,
+          region: CDO.aws_region,
+          force_path_style: true,
+        )
+      else
+        self.s3 ||= Aws::S3::Client.new
+      end
 
       # Adjust s3_timeout using a dynamic variable,
       # updating the S3 client if the variable changes.

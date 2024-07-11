@@ -2,6 +2,10 @@ dashboard_enable_pegasus: true
 build_apps: true
 use_my_apps: true
 
+aws_endpoint: http://localstack:4566
+aws_access_key_id: local-development
+aws_secret_access_key: local-development
+
 slack_bot_token: localoverride
 pardot_private_key: localoverride
 firebase_secret: localoverride
