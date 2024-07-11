@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-06-28 15:55:58 UTC",
+    "serialized_at": "2024-07-11 15:29:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1282,6 +1282,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-computer_vision_juiceMInd_intro"
+        ],
         "progression": "Teaching Resources"
       },
       "bonus": false,
