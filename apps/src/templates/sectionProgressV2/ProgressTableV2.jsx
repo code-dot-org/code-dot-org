@@ -3,12 +3,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import stringKeyComparator from '@cdo/apps/util/stringKeyComparator';
 
-import {lessonHasLevels} from '../progress/progressHelpers';
 import {studentLevelProgressType} from '../progress/progressTypes';
 import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';
 import {loadUnitProgress} from '../sectionProgress/sectionProgressLoader';
@@ -34,7 +31,6 @@ function ProgressTableV2({
   students,
   unitData,
   expandedLessonIds,
-  setExpandedLessons,
   isSkeleton,
   unitId,
   levelProgressByStudent,
@@ -64,35 +60,6 @@ function ProgressTableV2({
 
   const tableRef = React.useRef();
 
-  const removeExpandedLesson = React.useCallback(
-    lessonId => {
-      setExpandedLessons(expandedLessonIds =>
-        expandedLessonIds.filter(id => id !== lessonId)
-      );
-      analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_LESSON_COLLAPSE, {
-        sectionId: sectionId,
-        lessonId: lessonId,
-      });
-    },
-    [setExpandedLessons, sectionId]
-  );
-
-  const addExpandedLesson = React.useCallback(
-    lesson => {
-      if (!lesson.lockable && lessonHasLevels(lesson)) {
-        setExpandedLessons(expandedLessonIds => [
-          ...expandedLessonIds,
-          lesson.id,
-        ]);
-        analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_LESSON_EXPAND, {
-          sectionId: sectionId,
-          lessonId: lesson.id,
-        });
-      }
-    },
-    [setExpandedLessons, sectionId]
-  );
-
   const getRenderedColumn = React.useCallback(
     (lesson, index) => {
       if (isSkeleton) {
@@ -107,10 +74,8 @@ function ProgressTableV2({
       if (expandedLessonIds.includes(lesson.id)) {
         return (
           <ExpandedProgressDataColumn
-            sectionId={sectionId}
             lesson={lesson}
             sortedStudents={sortedStudents}
-            removeExpandedLesson={removeExpandedLesson}
             key={index}
           />
         );
@@ -119,20 +84,12 @@ function ProgressTableV2({
           <LessonProgressDataColumn
             lesson={lesson}
             sortedStudents={sortedStudents}
-            addExpandedLesson={addExpandedLesson}
             key={index}
           />
         );
       }
     },
-    [
-      isSkeleton,
-      sortedStudents,
-      expandedLessonIds,
-      sectionId,
-      removeExpandedLesson,
-      addExpandedLesson,
-    ]
+    [isSkeleton, sortedStudents, expandedLessonIds]
   );
 
   const table = React.useMemo(() => {
@@ -186,7 +143,6 @@ ProgressTableV2.propTypes = {
   students: PropTypes.arrayOf(studentShape),
   unitData: unitDataPropType,
   expandedLessonIds: PropTypes.arrayOf(PropTypes.number).isRequired,
-  setExpandedLessons: PropTypes.func.isRequired,
   isSkeleton: PropTypes.bool,
   unitId: PropTypes.number,
   levelProgressByStudent: PropTypes.objectOf(
@@ -204,4 +160,8 @@ export default connect(state => ({
     state.sectionProgress.studentLevelProgressByUnit[
       state.unitSelection.scriptId
     ],
+  expandedLessonIds:
+    state.sectionProgress.expandedLessonIds[
+      state.teacherSections.selectedSectionId
+    ] || [],
 }))(ProgressTableV2);

@@ -3,6 +3,7 @@
  * the applicationData prop of the child component.
  */
 
+import parseJson from 'json-parse-better-errors';
 import PropTypes from 'prop-types';
 import React from 'react';
 /* eslint-disable no-restricted-imports */
@@ -15,8 +16,8 @@ import {
   Panel,
   Table,
 } from 'react-bootstrap';
+
 /* eslint-enable no-restricted-imports */
-import parseJson from 'json-parse-better-errors';
 import color from '@cdo/apps/util/color';
 
 export default class FormDataEdit extends React.Component {

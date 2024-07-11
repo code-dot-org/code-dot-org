@@ -1,6 +1,7 @@
-import libraryParser from './libraryParser';
 import annotationList from '@cdo/apps/acemode/annotationList';
 import i18n from '@cdo/locale';
+
+import libraryParser from './libraryParser';
 
 /**
  * Gathers all known metadata about a user-created library and passes that data
