@@ -58,7 +58,6 @@ class TeacherDashboardControllerTest < ActionController::TestCase
 
     get :redirect_to_newest_section
 
-    newest_section = @section_owner.sections_instructed.order(created_at: :desc).first
-    assert_redirected_to "/teacher_dashboard/sections/#{newest_section.id}/progress?view=v2"
+    assert_redirected_to "/teacher_dashboard/sections/#{@section.id}/progress?view=v2"
   end
 end
