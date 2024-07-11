@@ -144,7 +144,7 @@ export interface LevelProperties {
   isK1?: boolean;
   skin?: string;
   toolboxBlocks?: string;
-  source?: MultiFileSource;
+  startSources?: MultiFileSource;
   sharedBlocks?: BlockDefinition[];
   validations?: Validation[];
   // An optional URL that allows the user to skip the progression.
