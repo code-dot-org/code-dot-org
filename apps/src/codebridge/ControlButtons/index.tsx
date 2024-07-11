@@ -69,25 +69,25 @@ const ControlButtons: React.FunctionComponent = () => {
     }
   };
 
-  const handleNavigation = () => {
+  const getNavigationButtonProps = () => {
     if (isSubmittable) {
-      onSubmit();
+      return {
+        navigationText: hasSubmitted
+          ? commonI18n.unsubmit()
+          : commonI18n.submit(),
+        handleNavigation: onSubmit,
+      };
     } else if (hasNextLevel) {
-      onContinue();
+      return {
+        navigationText: commonI18n.continue(),
+        handleNavigation: onContinue,
+      };
     } else {
-      onFinish();
+      return {navigationText: commonI18n.finish(), handleNavigation: onFinish};
     }
   };
 
-  const getNavigationButtonText = () => {
-    if (isSubmittable) {
-      return hasSubmitted ? commonI18n.unsubmit() : commonI18n.submit();
-    } else if (hasNextLevel) {
-      return commonI18n.continue();
-    } else {
-      return commonI18n.finish();
-    }
-  };
+  const {navigationText, handleNavigation} = getNavigationButtonProps();
 
   return (
     <div className={moduleStyles.controlButtonsContainer}>
@@ -109,7 +109,7 @@ const ControlButtons: React.FunctionComponent = () => {
         size={'s'}
       />
       <Button
-        text={getNavigationButtonText()}
+        text={navigationText}
         onClick={handleNavigation}
         disabled={loading}
         color={'purple'}
