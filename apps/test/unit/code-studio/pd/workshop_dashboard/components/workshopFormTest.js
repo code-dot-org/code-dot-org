@@ -552,7 +552,7 @@ describe('WorkshopForm test', () => {
 
     const courseField = wrapper.find('#course').first();
     courseField.simulate('change', {
-      target: {name: 'course', value: 'Build Your Own Workshop'},
+      target: {name: 'course', value: BuildYourOwnWorkshop},
     });
 
     expect(wrapper.find('#subject')).to.have.lengthOf(0);
@@ -591,7 +591,7 @@ describe('WorkshopForm test', () => {
     expect(wrapper.find('#topics')).to.have.lengthOf(0);
     const courseField = wrapper.find('#course').first();
     courseField.simulate('change', {
-      target: {name: 'course', value: 'Build Your Own Workshop'},
+      target: {name: 'course', value: BuildYourOwnWorkshop},
     });
     expect(wrapper.find('#topics')).to.have.lengthOf(1);
     wrapper.find('#dropdownMenuButton').first().simulate('click');

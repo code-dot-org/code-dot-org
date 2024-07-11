@@ -167,6 +167,7 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
   # PATCH /api/v1/pd/workshops/1
   def update
     adjust_facilitators
+    adjust_course_offerings
 
     # The below user types have permission to set the regional partner. CSF Facilitators
     # can initially set the regional partner, but cannot edit it once it is set.
@@ -192,6 +193,7 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
   def create
     @workshop.organizer = current_user
     adjust_facilitators
+    adjust_course_offerings
 
     if @workshop.virtual && user_cannot_freely_edit_virtual(@workshop.course, @workshop.subject, @workshop.workshop_starting_date)
       render json: {error: "non-workshop-admin cannot create a virtual CSP/CSA Summer Workshop within a month of it starting."}, status: :bad_request
@@ -276,6 +278,26 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
       Pd::WorkshopMailer.facilitator_detail_change_notification(facilitator, @workshop).deliver_now
     end
     Pd::WorkshopMailer.organizer_detail_change_notification(@workshop).deliver_now
+  end
+
+  private def adjust_course_offerings
+    supplied_course_offering_ids = params[:pd_workshop].delete(:course_offerings)
+    return unless supplied_course_offering_ids
+
+    existing_course_offering_ids = @workshop.course_offerings.map(&:id)
+    new_course_offering_ids = supplied_course_offering_ids - existing_course_offering_ids
+    course_offering_ids_to_remove = existing_course_offering_ids - supplied_course_offering_ids
+
+    course_offering_ids_to_remove.each do |course_offering_id|
+      @workshop.course_offerings.delete(course_offering_id)
+    end
+
+    new_course_offering_ids.each do |course_offering_id|
+      course_offering = CourseOffering.find_by(id: course_offering_id)
+      # Return if we don't find a corresponding/valid Course Offering
+      next unless course_offering
+      @workshop.course_offerings << course_offering
+    end
   end
 
   private def adjust_facilitators

@@ -21,3 +21,5 @@ export const PrivacyDialogMode = utils.makeEnum(
   'TEACHER_APPLICATION',
   'PRINCIPAL_APPROVAL'
 );
+
+export const BuildYourOwnWorkshop = 'Build Your Own Workshop';
