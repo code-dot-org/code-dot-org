@@ -224,7 +224,7 @@ class UnitGroup < ApplicationRecord
     unaddable_unit_names = new_units_objects.select do |s|
       s.unit_group != self && s.prevent_course_version_change?
     end.map(&:name)
-    raise "Cannot add units with resources or vocabulary: #{unaddable_unit_names}" if unaddable_unit_names.any?
+    raise "Cannot add units that have resources or vocabulary: #{unaddable_unit_names}" if unaddable_unit_names.any?
 
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
