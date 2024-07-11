@@ -116,6 +116,13 @@ def connect_block(from, to)
   "targetBlock.nextConnection.connect(blockToMove.previousConnection);"
 end
 
+def connect_block_statement(from, to)
+  "var workspace = Blockly.getMainWorkspace();" \
+  "var blockToMove = workspace.getBlockById('#{from}');" \
+  "var targetBlock = workspace.getBlockById('#{to}');" \
+  "targetBlock.inputList[1].connection.connect(blockToMove.previousConnection);"
+end
+
 def delete_block(id)
   "var workspace = Blockly.getMainWorkspace();" \
   "var blockToDelete = workspace.getBlockById('#{id}');" \
