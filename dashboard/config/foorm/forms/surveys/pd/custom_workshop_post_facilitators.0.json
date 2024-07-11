@@ -109,8 +109,8 @@
         {
           "type": "text",
           "name": "workshop_location_other",
-          "visibleIf": "{workshop_location} = 'standalone'",
-          "title": "Where did you host this workshop?"
+          "visibleIf": "{workshop_location} anyof ['standalone','other']",
+          "title": "Please describe where was this workshop hosted."
         },
         {
           "type": "rating",
