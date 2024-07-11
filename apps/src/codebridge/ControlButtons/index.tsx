@@ -2,13 +2,20 @@ import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {appendSystemMessage} from '@codebridge/redux/consoleRedux';
 import React from 'react';
 
-import {navigateToNextLevel} from '@cdo/apps/code-studio/progressRedux';
-import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {
+  navigateToNextLevel,
+  sendSubmitReport,
+} from '@cdo/apps/code-studio/progressRedux';
+import {
+  getCurrentLevel,
+  nextLevelId,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 import Button from '@cdo/apps/componentLibrary/button';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {useFetch} from '@cdo/apps/util/useFetch';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStyles from './control-buttons.module.scss';
 
@@ -33,16 +40,23 @@ const ControlButtons: React.FunctionComponent = () => {
   const isPredictLevel = useAppSelector(
     state => state.lab.levelProperties?.predictSettings?.isPredictLevel
   );
+  const isSubmittable = useAppSelector(
+    state => state.lab.levelProperties?.submittable
+  );
+  const appType = useAppSelector(state => state.lab.levelProperties?.appName);
+  const hasSubmitted = useAppSelector(
+    state => getCurrentLevel(state)?.status === LevelStatus.submitted
+  );
   const disableRunAndTest = loading || (isPredictLevel && !hasPredictResponse);
-
-  const navigationButtonText = hasNextLevel
-    ? commonI18n.continue()
-    : commonI18n.finish();
 
   const onContinue = () => dispatch(navigateToNextLevel());
   // No-op for now. TODO: figure out what the finish button should do.
   // https://codedotorg.atlassian.net/browse/CT-664
   const onFinish = () => {};
+  const onSubmit = () =>
+    dispatch(
+      sendSubmitReport({appType: appType || '', submitted: !hasSubmitted})
+    );
 
   const handleRun = (runTests: boolean) => {
     if (onRun) {
@@ -54,6 +68,26 @@ const ControlButtons: React.FunctionComponent = () => {
       dispatch(appendSystemMessage("We don't know how to run your code."));
     }
   };
+
+  const getNavigationButtonProps = () => {
+    if (isSubmittable) {
+      return {
+        navigationText: hasSubmitted
+          ? commonI18n.unsubmit()
+          : commonI18n.submit(),
+        handleNavigation: onSubmit,
+      };
+    } else if (hasNextLevel) {
+      return {
+        navigationText: commonI18n.continue(),
+        handleNavigation: onContinue,
+      };
+    } else {
+      return {navigationText: commonI18n.finish(), handleNavigation: onFinish};
+    }
+  };
+
+  const {navigationText, handleNavigation} = getNavigationButtonProps();
 
   return (
     <div className={moduleStyles.controlButtonsContainer}>
@@ -75,8 +109,8 @@ const ControlButtons: React.FunctionComponent = () => {
         size={'s'}
       />
       <Button
-        text={navigationButtonText}
-        onClick={hasNextLevel ? onContinue : onFinish}
+        text={navigationText}
+        onClick={handleNavigation}
         disabled={loading}
         color={'purple'}
         className={moduleStyles.navigationButton}

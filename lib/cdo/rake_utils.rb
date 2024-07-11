@@ -44,7 +44,7 @@ module RakeUtils
 
   def self.system_with_chat_logging(*args)
     command = command_(*args)
-    ChatClient.log "#{ENV['USER']}@#{CDO.rack_env}:#{Dir.pwd}$ #{command}"
+    ChatClient.log "#{ENV.fetch('USER', nil)}@#{CDO.rack_env}:#{Dir.pwd}$ #{command}"
     system_ command
   end
 
@@ -213,11 +213,11 @@ module RakeUtils
   end
 
   def self.npm_install(*args)
-    run_packages_with('npm install', ENV['CI'] && '--frozen-lockfile', *args)
+    run_packages_with('npm install', ENV.fetch('CI', nil) && '--frozen-lockfile', *args)
   end
 
   def self.yarn_install(*args)
-    run_packages_with('yarn', ENV['CI'] && '--frozen-lockfile', *args)
+    run_packages_with('yarn', ENV.fetch('CI', nil) && '--frozen-lockfile', *args)
   end
 
   def self.npm_rebuild(*args)
