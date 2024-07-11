@@ -352,6 +352,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    get 'course_offerings/self_paced_pl_course_offerings', to: 'course_offerings#self_paced_pl_course_offerings'
     get '/course/:course_name', to: redirect('/courses/%{course_name}')
     get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
     # these routes use course_course_name to match generated routes below that are nested within courses

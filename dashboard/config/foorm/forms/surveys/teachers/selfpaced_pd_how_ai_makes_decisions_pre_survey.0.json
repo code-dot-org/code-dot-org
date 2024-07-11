@@ -14,12 +14,12 @@
           "title": "My main goal for this professional learning is to:",
           "choices": [
             {
-              "value": "better_understand_k_5",
-              "text": "Better understand Code.org's K-5 curriculum"
+              "value": "better_understand_course",
+              "text": "Better understand Code.org's How AI Makes Decisions curriculum"
             },
             {
-              "value": "learn_programming",
-              "text": "Learn the basics of computer programming"
+              "value": "learn_basics",
+              "text": "Learn the basics of how AI makes decisions"
             },
             {
               "value": "learn_cs_teaching_strategies",
@@ -69,7 +69,7 @@
         {
           "type": "radiogroup",
           "name": "plan_to_teach_modules",
-          "title": "Are you planning to teach a Code.org K-5 Computer Science Course? ",
+          "title": "Are you planning to teach a Code.org’s How AI Makes Decisions lesson? ",
           "choices": [
             {
               "value": "no",
@@ -271,5 +271,5 @@
       ]
     }
   ],
-  "published": false
+  "published": true
 }

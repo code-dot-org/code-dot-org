@@ -67,7 +67,6 @@ export const askAITutor = createAsyncThunk(
     const instructionsState = state as {instructions: InstructionsState};
     const levelContext = {
       levelId: aiTutorState.aiTutor.level?.id,
-      isProjectBacked: aiTutorState.aiTutor.level?.isProjectBacked,
       scriptId: aiTutorState.aiTutor.scriptId,
     };
 
