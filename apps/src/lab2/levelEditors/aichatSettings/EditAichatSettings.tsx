@@ -225,7 +225,7 @@ const EditAichatSettings: React.FunctionComponent<{
         />
         <div className={moduleStyles.fieldSection}>
           <hr />
-          <CollapsibleSection title="Model Card">
+          <CollapsibleSection headerContent="Model Card">
             <div className={moduleStyles.fieldRow}>
               <ModelCardFields />
               <VisibilityDropdown
@@ -237,7 +237,7 @@ const EditAichatSettings: React.FunctionComponent<{
         </div>
         <div className={moduleStyles.fieldSection}>
           <hr />
-          <CollapsibleSection title="Additional Configuration">
+          <CollapsibleSection headerContent="Additional Configuration">
             <BodyFourText>
               <i>
                 Students always have access to the Edit View, where they can
