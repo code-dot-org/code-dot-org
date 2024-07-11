@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-10 21:12:53 UTC",
+    "serialized_at": "2024-07-11 14:49:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -351,7 +351,7 @@
       "key": "64cec072-cd7c-4daa-8719-57740de9ffc7",
       "position": 4,
       "properties": {
-        "progression_name": "Variables Review"
+        "progression_name": "Next Steps"
       },
       "seeding_key": {
         "activity_section.key": "64cec072-cd7c-4daa-8719-57740de9ffc7",
@@ -366,6 +366,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLPLIntro to Events_1_prod"
+        ],
         "progression": "Unplugged Lesson with Events"
       },
       "bonus": false,
@@ -388,6 +391,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dancepartyPL_prod"
+        ],
         "progression": "Unplugged Lesson with Events"
       },
       "bonus": false,
@@ -410,6 +416,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid1_prod"
+        ],
         "progression": "Video: Warm Up"
       },
       "bonus": false,
@@ -432,6 +441,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_01_prod"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -454,6 +466,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid2_prod"
+        ],
         "progression": "Video: Events"
       },
       "bonus": false,
@@ -476,6 +491,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_02_prod"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -498,6 +516,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_03_prod"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -520,6 +541,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid3_prod"
+        ],
         "progression": "Video: Measures"
       },
       "bonus": false,
@@ -542,6 +566,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_04_prod"
+        ],
         "progression": "Measures"
       },
       "bonus": false,
@@ -564,6 +591,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_05_prod"
+        ],
         "progression": "Measures"
       },
       "bonus": false,
@@ -586,6 +616,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_06_prod"
+        ],
         "progression": "Measures"
       },
       "bonus": false,
@@ -608,6 +641,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid4_prod"
+        ],
         "progression": "Video: Properties"
       },
       "bonus": false,
@@ -630,6 +666,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_07_prod"
+        ],
         "progression": "Properties"
       },
       "bonus": false,
@@ -652,6 +691,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_08_prod"
+        ],
         "progression": "Properties"
       },
       "bonus": false,
@@ -674,6 +716,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_09_prod"
+        ],
         "progression": "Properties"
       },
       "bonus": false,
@@ -696,6 +741,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid5_prod"
+        ],
         "progression": "Video: Wrap-up"
       },
       "bonus": false,
@@ -718,6 +766,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_10_prod"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -740,6 +791,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_bonus1_prod"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -762,6 +816,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_bonus3_prod"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -784,6 +841,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "intro to variables_1_prod"
+        ],
         "progression": "Introduction to Variables"
       },
       "bonus": false,
@@ -806,6 +866,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Variable MB_prod"
+        ],
         "progression": "Introduction to Variables"
       },
       "bonus": false,
@@ -828,6 +891,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_predict_2023MB_prod"
+        ],
         "progression": "Coding with Variables"
       },
       "bonus": false,
@@ -850,6 +916,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_set_2023MB_prod"
+        ],
         "progression": "Coding with Variables"
       },
       "bonus": false,
@@ -872,6 +941,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables2_change_2023MB_prod"
+        ],
         "progression": "Coding with Variables"
       },
       "bonus": false,
@@ -894,6 +966,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_sprites_2023MB_prod"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,
@@ -916,6 +991,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_remove_2023MB_prod"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,
@@ -938,6 +1016,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_variable_2023MB_prod"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,
@@ -960,6 +1041,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_score_2023MB_prod"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,
@@ -982,6 +1066,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_clicker_finish_2023MB_prod"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,
@@ -1004,6 +1091,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L4 Multiple Choice packets2022_2023MB1_1_prod"
+        ],
         "progression": "Create a Clicker Game"
       },
       "bonus": false,
@@ -1023,23 +1113,23 @@
     {
       "chapter": 31,
       "position": 12,
-      "activity_section_position": 7,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Create a Clicker Game"
+        "progression": "Next Steps"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSF_maker_microbit_PL_end_naviagtion_F_prod"
+          "maker_microbit_PL_end_naviagtion_D_pl_prod"
         ],
         "lesson.key": "Counting with Variables",
         "lesson_group.key": "",
         "script.name": "k5maker5thgrade",
-        "activity_section.key": "6ccf79be-7755-4250-b270-cc47351614a8"
+        "activity_section.key": "64cec072-cd7c-4daa-8719-57740de9ffc7"
       },
       "level_keys": [
-        "CSF_maker_microbit_PL_end_naviagtion_F_prod"
+        "maker_microbit_PL_end_naviagtion_D_pl_prod"
       ]
     }
   ],
@@ -1406,14 +1496,14 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSF_maker_microbit_PL_end_naviagtion_F_prod",
+        "level.key": "maker_microbit_PL_end_naviagtion_D_pl_prod",
         "script_level.level_keys": [
-          "CSF_maker_microbit_PL_end_naviagtion_F_prod"
+          "maker_microbit_PL_end_naviagtion_D_pl_prod"
         ],
         "lesson.key": "Counting with Variables",
         "lesson_group.key": "",
         "script.name": "k5maker5thgrade",
-        "activity_section.key": "6ccf79be-7755-4250-b270-cc47351614a8"
+        "activity_section.key": "64cec072-cd7c-4daa-8719-57740de9ffc7"
       }
     }
   ],

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-06-27 22:33:40 UTC",
+    "serialized_at": "2024-07-11 16:22:00 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -215,6 +215,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U6_physical-computi_-foundations24"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -237,6 +240,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-24-mod1-Certificate_-foundations24"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -259,6 +265,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_-foundations24"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -281,6 +290,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U6L2_physical-comput_-foundations24"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -303,6 +315,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-LessonTypes_-foundations24"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -325,6 +340,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-Devices-22-pre-survey_-foundations24"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -347,6 +365,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-Summer-CI-Unit_PSP-U6L3_-foundations24"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -369,6 +390,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-PSP-vid_-foundations24"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -391,6 +415,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_setup_-foundations24"
+        ],
         "progression": "Connect your Circuit Playground"
       },
       "bonus": false,
@@ -413,6 +440,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-MakerApp-appLab_physical-compu_-foundations24"
+        ],
         "progression": "Connect your Circuit Playground"
       },
       "bonus": false,
@@ -435,6 +465,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB3_-foundations24"
+        ],
         "progression": "Connect your Circuit Playground"
       },
       "bonus": false,
@@ -457,6 +490,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L3_physical-computing_-foundations24"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -479,6 +515,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI6-CSD circuit video_-foundations24"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -501,6 +540,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Ove_phy_-foundations24"
+        ],
         "progression": "Introduction to Inputs and Outputs"
       },
       "bonus": false,
@@ -523,6 +565,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_-foundations24"
+        ],
         "progression": "Introduction to Inputs and Outputs"
       },
       "bonus": false,
@@ -545,6 +590,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-PILOT-CSD U6 - Board Inputs - SB1_-foundations24"
+        ],
         "progression": "Introduction to Inputs and Outputs"
       },
       "bonus": false,
@@ -567,6 +615,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB2_-foundations24"
+        ],
         "progression": "Add Complexity to Your App"
       },
       "bonus": false,
@@ -589,6 +640,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB4_-foundations24"
+        ],
         "progression": "Add Complexity to Your App"
       },
       "bonus": false,
@@ -611,6 +665,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_-foundations24"
+        ],
         "progression": "Add Complexity to Your App"
       },
       "bonus": false,
@@ -633,6 +690,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB1_-foundations24"
+        ],
         "progression": "Explore Additional Board Events"
       },
       "bonus": false,
@@ -655,6 +715,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB2_-foundations24"
+        ],
         "progression": "Explore Additional Board Events"
       },
       "bonus": false,
@@ -677,6 +740,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_-foundations24"
+        ],
         "progression": "Explore Additional Board Events"
       },
       "bonus": false,
@@ -699,6 +765,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_phy_-foundations24"
+        ],
         "progression": "Preview the End-of-Chapter Project"
       },
       "bonus": false,

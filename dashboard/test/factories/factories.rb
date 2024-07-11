@@ -926,6 +926,11 @@ FactoryBot.define do
     level_num {'custom'}
   end
 
+  factory :pythonlab, parent: :level, class: Pythonlab do
+    game {Game.pythonlab}
+    level_num {'custom'}
+  end
+
   factory :block do
     transient do
       sequence(:index)

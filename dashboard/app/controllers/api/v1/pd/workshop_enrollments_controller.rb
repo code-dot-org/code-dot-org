@@ -58,9 +58,14 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     else
       ActiveRecord::Base.transaction do
         enrollment = ::Pd::Enrollment.new workshop: @workshop
-        enrollment.update!(enrollment_params.merge(school_info_attributes: school_info_params))
 
-        user&.update_school_info(enrollment.school_info)
+        if @workshop.course == COURSE_BUILD_YOUR_OWN
+          enrollment.update!(enrollment_params)
+        else
+          enrollment.update!(enrollment_params.merge(school_info_attributes: school_info_params))
+          user&.update_school_info(enrollment.school_info)
+        end
+
         Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
         Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment).deliver_now
 
