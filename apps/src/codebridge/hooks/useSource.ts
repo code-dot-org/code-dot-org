@@ -59,7 +59,7 @@ export const useSource = (defaultSources: ProjectSources) => {
   useEffect(() => {
     if (isStartMode) {
       header.showLevelBuilderSaveButton(() => {
-        return {source};
+        return {start_sources: source};
       });
     } else if (isEditingExemplarMode) {
       header.showLevelBuilderSaveButton(
