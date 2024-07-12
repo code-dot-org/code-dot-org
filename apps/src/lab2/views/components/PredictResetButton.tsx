@@ -1,11 +1,13 @@
+import React from 'react';
+
+import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button} from '@cdo/apps/componentLibrary/button';
+import {resetPredictProgress} from '@cdo/apps/lab2/redux/predictLevelRedux';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import {CourseRoles} from '@cdo/apps/templates/currentUserRedux';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
-import {resetPredictProgress} from '@cdo/apps/lab2/redux/predictLevelRedux';
-import React from 'react';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
+
 import moduleStyles from './predict.module.scss';
 
 // Modernized version of src/templates/instructions/ContainedLevelResetButton.
