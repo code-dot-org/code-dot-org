@@ -45,7 +45,7 @@ const initialState: AITutorState = {
   isChatOpen: false,
 };
 
-const formatQuestionForAITutor = (chatContext: ChatContext) => {
+export const formatQuestionForAITutor = (chatContext: ChatContext) => {
   if (chatContext.actionType === AITutorTypes.GENERAL_CHAT) {
     return chatContext.studentInput;
   }

@@ -46,6 +46,8 @@ experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
 experiments.GENDER_FEATURE_ENABLED = 'gender';
 // Experiment for enabling the CPA lockout
 experiments.CPA_EXPERIENCE = 'cpa_experience';
+// Experiment for enabling the AI-TA differentiation chat
+experiments.AI_DIFFERENTIATION = 'ai-differentiation';
 experiments.AI_RUBRICS = 'ai-rubrics';
 experiments.NON_AI_RUBRICS = 'non-ai-rubrics';
 // Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section

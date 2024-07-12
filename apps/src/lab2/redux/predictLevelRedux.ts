@@ -1,5 +1,6 @@
-import {sendPredictLevelReport} from '@cdo/apps/code-studio/progressRedux';
 import {PayloadAction, createSelector, createSlice} from '@reduxjs/toolkit';
+
+import {sendPredictLevelReport} from '@cdo/apps/code-studio/progressRedux';
 import {setLoadedPredictResponse} from '@cdo/apps/lab2/lab2Redux';
 import {RootState} from '@cdo/apps/types/redux';
 

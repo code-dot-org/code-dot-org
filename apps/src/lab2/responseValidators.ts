@@ -1,12 +1,13 @@
 import {ResponseValidator} from '@cdo/apps/util/HttpClient';
+
+import {BLOCKLY_LABS, LABS_WITH_JSON_SOURCES} from './constants';
+import Lab2Registry from './Lab2Registry';
 import {
   BlocklySource,
   LevelProperties,
   MultiFileSource,
   ProjectSources,
 } from './types';
-import Lab2Registry from './Lab2Registry';
-import {BLOCKLY_LABS, LABS_WITH_JSON_SOURCES} from './constants';
 
 // Validator for Blockly sources.
 const BlocklySourceResponseValidator: ResponseValidator<

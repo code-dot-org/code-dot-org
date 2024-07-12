@@ -1,17 +1,20 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import {openEditorDialog} from './redux/editorRedux';
-import msg from '@cdo/locale';
-import javalabMsg from '@cdo/javalab/locale';
+
 import PaneHeader, {
   PaneSection,
   PaneButton,
 } from '@cdo/apps/templates/PaneHeader';
-import {DisplayTheme} from './DisplayTheme';
-import Backpack from './Backpack';
-import {JavalabEditorDialog} from './types';
+import javalabMsg from '@cdo/javalab/locale';
+import msg from '@cdo/locale';
+
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
+
+import Backpack from './Backpack';
+import {DisplayTheme} from './DisplayTheme';
+import {openEditorDialog} from './redux/editorRedux';
+import {JavalabEditorDialog} from './types';
 
 /**
  * Renders the header portion of the Java Lab editor, consisting of the New File,
