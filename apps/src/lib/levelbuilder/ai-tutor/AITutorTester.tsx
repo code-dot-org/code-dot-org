@@ -4,7 +4,7 @@ import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import {formatQuestionForAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {ChatContext} from '@cdo/apps/aiTutor/types';
-import styles from './ai-tutor-response-generator.module.scss';
+import styles from './ai-tutor-tester.module.scss';
 
 /**
  * Renders a series of buttons that allow levelbuilders to upload a CSV of
@@ -16,12 +16,12 @@ interface AIInteraction extends ChatContext {
   aiResponse: string | undefined;
 }
 
-interface AITutorBulkResponseGeneratorProps {
+interface AITutorTesterProps {
   allowed: boolean;
 }
 
-const AITutorBulkResponseGenerator: React.FC<
-  AITutorBulkResponseGeneratorProps
+const AITutorTester: React.FC<
+  AITutorTesterProps
 > = ({allowed}) => {
   const [csvFile, setCsvFile] = useState<File | null>(null);
   const [data, setData] = useState<AIInteraction[]>([]);
@@ -142,4 +142,4 @@ const AITutorBulkResponseGenerator: React.FC<
   );
 };
 
-export default AITutorBulkResponseGenerator;
+export default AITutorTester;
