@@ -8,6 +8,7 @@ import style from './ai-tutor-tester.module.scss';
 const AITutorTesterSampleColumns: React.FC = () => {
   const rows = [
     {
+      id: 1,
       studentInput:
         "REQUIRED. The student's question e.g. 'Why doesn't my code compile?",
       systemPrompt:
@@ -34,7 +35,7 @@ const AITutorTesterSampleColumns: React.FC = () => {
         </thead>
         <tbody>
           {rows.map(row => (
-            <tr className={style.row}>
+            <tr className={style.row} key={row.id}>
               <td className={style.cell}>{row.studentInput}</td>
               <td className={style.cell}>{row.systemPrompt}</td>
               <td className={style.cell}>{row.studentCode}</td>

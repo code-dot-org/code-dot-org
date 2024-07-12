@@ -24,7 +24,7 @@ class OpenaiChatController < ApplicationController
 
     # The system prompt can be passed in as a param for testing purposes. If there isn't a custom
     # system prompt, use the default prompt stored server-side.
-    system_prompt = !params[:systemPrompt] == "" ? params[:systemPrompt] : read_file_from_s3(S3_TUTOR_SYSTEM_PROMPT_PATH)
+    system_prompt = !!params[:systemPrompt] ? params[:systemPrompt] : read_file_from_s3(S3_TUTOR_SYSTEM_PROMPT_PATH)
 
     # Determine if the level is validated and fetch test file contents if it is
     test_file_contents = ""

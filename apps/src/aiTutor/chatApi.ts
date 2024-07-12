@@ -50,13 +50,13 @@ export async function postOpenaiChatCompletion(
         messages: messagesToSend,
         type: tutorType,
         levelInstructions,
-        systemPrompt
+        systemPrompt,
       }
     : {
         messages: messagesToSend,
         type: tutorType,
         levelInstructions,
-        systemPrompt
+        systemPrompt,
       };
 
   const response = await HttpClient.post(
@@ -92,7 +92,7 @@ export async function getChatCompletionMessage(
   systemPrompt?: string,
   levelId?: number,
   tutorType?: AITutorTypesValue,
-  levelInstructions?: string,
+  levelInstructions?: string
 ): Promise<ChatCompletionResponse> {
   const messagesToSend = [
     ...formatForChatCompletion(chatMessages),
