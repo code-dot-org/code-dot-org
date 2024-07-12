@@ -1,15 +1,12 @@
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 
-const rootUrl = (levelId: number, scriptId: number) =>
-  `/user_levels/level_source/${scriptId}/${levelId}`;
-
 export async function getPredictResponse(
   levelId: number,
   scriptId: number
 ): Promise<string | null> {
   try {
     const response = await HttpClient.fetchJson<{data: string}>(
-      rootUrl(levelId, scriptId),
+      `/user_levels/level_source/${scriptId}/${levelId}`,
       {}
     );
     // The program is the predict response.
@@ -38,4 +35,11 @@ export async function resetPredictLevelProgress(
     true,
     {'Content-Type': 'application/json'}
   );
+}
+
+export async function getSectionSummary(sectionId: number, levelId: number) {
+  return await HttpClient.fetchJson<{
+    response_count: number;
+    num_students: number;
+  }>(`/user_levels/section_summary/${sectionId}/${levelId}`, {});
 }

@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import {useSelector} from 'react-redux';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
+import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {LinkButton} from '@cdo/apps/componentLibrary/button';
+import {getSectionSummary} from '@cdo/apps/lab2/projects/userLevelsApi';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 
 import moduleStyles from './predict.module.scss';
@@ -17,6 +21,24 @@ const PredictSummary: React.FunctionComponent = () => {
     `viewAs=${ViewType.Instructor}`
   );
   const summaryUrl = document.location.pathname + SUMMARY_PATH + params;
+  const currentSectionId = useSelector(
+    (state: {teacherSections: {selectedSectionId: number}}) =>
+      state.teacherSections.selectedSectionId
+  );
+  const currentLevelId = useAppSelector(state => getCurrentLevel(state)?.id);
+  const [responseCount, setResponseCount] = React.useState<number | null>(null);
+  const [numStudents, setNumStudents] = React.useState<number | null>(null);
+  useEffect(() => {
+    console.log({currentSectionId, currentLevelId});
+    if (currentSectionId && currentLevelId) {
+      getSectionSummary(currentSectionId, currentLevelId).then(response => {
+        if (response.response.ok) {
+          setResponseCount(response.value.response_count);
+          setNumStudents(response.value.num_students);
+        }
+      });
+    }
+  }, [currentSectionId, currentLevelId]);
 
   return (
     <InstructorsOnly>
@@ -29,6 +51,11 @@ const PredictSummary: React.FunctionComponent = () => {
           color={'black'}
         />
         {/** TODO: Add summary of number of students who submitted a response. */}
+        {responseCount !== null && numStudents !== null && (
+          <div>
+            {responseCount} / {numStudents} {commonI18n.studentsAnswered()}
+          </div>
+        )}
       </div>
     </InstructorsOnly>
   );
