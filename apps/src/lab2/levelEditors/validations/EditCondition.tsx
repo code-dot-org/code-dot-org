@@ -1,6 +1,9 @@
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import React from 'react';
+
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+
 import {Condition, ConditionType} from '../../types';
+
 import moduleStyles from './edit-validations.module.scss';
 
 interface EditConditionProps {

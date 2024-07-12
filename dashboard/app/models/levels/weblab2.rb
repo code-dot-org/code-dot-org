@@ -25,7 +25,7 @@
 #
 class Weblab2 < Level
   serialized_attrs %w(
-    source
+    start_sources
     hide_share_and_remix
     is_project_level
     encrypted_exemplar_sources

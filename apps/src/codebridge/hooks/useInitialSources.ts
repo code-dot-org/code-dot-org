@@ -17,7 +17,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 export const useInitialSources = (defaultSources: ProjectSources) => {
   const labInitialSources = useAppSelector(state => state.lab.initialSources);
   const levelStartSource = useAppSelector(
-    state => state.lab.levelProperties?.source
+    state => state.lab.levelProperties?.startSources
   );
   const exemplarSources = useAppSelector(
     state => state.lab.levelProperties?.exemplarSources
