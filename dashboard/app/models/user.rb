@@ -91,6 +91,7 @@ class User < ApplicationRecord
   include UserPermissionGrantee
   include PartialRegistration
   include Rails.application.routes.url_helpers
+  include Devise::ManualUserSessionExpiration
 
   # Notes:
   #   data_transfer_agreement_source: Indicates the source of the data transfer
