@@ -37,6 +37,9 @@ const PredictSummary: React.FunctionComponent = () => {
           setNumStudents(response.value.num_students);
         }
       });
+    } else {
+      setResponseCount(null);
+      setNumStudents(null);
     }
   }, [currentSectionId, currentLevelId]);
 
@@ -50,7 +53,6 @@ const PredictSummary: React.FunctionComponent = () => {
           type={'secondary'}
           color={'black'}
         />
-        {/** TODO: Add summary of number of students who submitted a response. */}
         {responseCount !== null && numStudents !== null && (
           <div>
             <span className={moduleStyles.responseIcon}>
