@@ -45,7 +45,4 @@ class AichatSagemakerHelperTest < ActionView::TestCase
     expected_pirate_stop_strings = ["},"]
     assert_equal inputs[:parameters][:stop], expected_pirate_stop_strings
   end
-
-
-  test 'Testing fo'
 end
