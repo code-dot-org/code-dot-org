@@ -40,11 +40,7 @@ Scenario: Viewing student metadata
   # Progress tab
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
-  And I wait until element "a:contains('Untitled Section')" is visible
-  And I save the section id from row 0 of the section table
-  Then I navigate to teacher dashboard for the section I saved
-  Then I click selector "#ui-close-dialog"
-  And I wait until element "#uitest-course-dropdown" is visible
+  And I navigate to the V2 progress dashboard for "Untitled Section"
 
   # Toggle to V2 progress view
   Then I click selector "#ui-test-toggle-progress-view"
