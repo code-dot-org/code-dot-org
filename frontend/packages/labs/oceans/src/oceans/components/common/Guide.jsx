@@ -34,7 +34,7 @@ let UnwrappedGuide = class Guide extends React.Component {
     const state = getState();
     const currentGuide = guide.getCurrentGuide();
 
-    if (this.updateTextToSpeech(true)) {
+    if (this.attemptTextToSpeechTextToSpeech(true)) {
       // This click started text to speech.
       setState(
         {
@@ -59,7 +59,7 @@ let UnwrappedGuide = class Guide extends React.Component {
   // Called from both the guide click handler and the render method, and
   // attempts to play text to speech if needed.  Returns true if it believes
   // it started text to speech.
-  updateTextToSpeech = inClickHandler => {
+  attemptTextToSpeechTextToSpeech = inClickHandler => {
     const state = getState();
     const currentGuide = guide.getCurrentGuide();
 
@@ -78,6 +78,10 @@ let UnwrappedGuide = class Guide extends React.Component {
       return false;
     }
 
+    // In this implementation, we want to start the first play of text to
+    // speech from a click handler, but all subsequent plays when we first
+    // render a new piece of text, rather than from a click handler.
+    // Therefore:
     // If we are in a click handler, do nothing if we've already started
     // text to speech from a click handler.
     // If we are not in a click handler, do nothing if we've never started
@@ -123,7 +127,7 @@ let UnwrappedGuide = class Guide extends React.Component {
       setState({guideTypingTimer}, {skipCallback: true});
     }
 
-    if (this.updateTextToSpeech(false)) {
+    if (this.attemptTextToSpeechTextToSpeech(false)) {
       // This call started text to speech.
       setState({textToSpeechCurrentGuide: currentGuide}, {skipCallback: true});
     }
