@@ -1,5 +1,5 @@
 class UserLevelsController < ApplicationController
-  before_action :authenticate_user!, except: [:get_level_source]
+  before_action :authenticate_user!, except: [:get_level_source, :get_section_response_summary]
   check_authorization
   load_and_authorize_resource
   protect_from_forgery except: [:update] # referer is the script level page which is publically cacheable
@@ -47,6 +47,17 @@ class UserLevelsController < ApplicationController
     user_levels = UserLevel.where(user_id: current_user.id, level_id: params[:level_id], script_id: params[:script_id])
     most_recent_user_level = user_levels.order(updated_at: :desc).first
     return render json: {data: most_recent_user_level&.level_source&.data}, status: :ok
+  end
+
+  def get_section_response_summary
+    section = Section.find(params[:section_id])
+    return head :bad_request, text: "Section not found" unless section
+    level = Level.find(params[:level_id])
+    return head :bad_request, text: "Level not found" unless level
+    return head :forbidden, text: 'User must be instructor of section' unless section.instructors.include?(@current_user)
+    puts "current user owns section"
+    responses = UserLevel.where(level: level, user: section.students)
+    return render json: {response_count: responses.count, num_students: section.students.count}, status: :ok
   end
 
   private def set_user_level
