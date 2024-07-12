@@ -3,6 +3,7 @@ import FocusTrap from 'focus-trap-react';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
 import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
 import i18n from '@cdo/locale';
 
@@ -42,20 +43,12 @@ function AccessibleDialog({
             className={classnames(modalStyle, className)}
             role="dialog"
           >
-            <button
+            <CloseButton
               id="ui-close-dialog"
-              type="button"
-              onClick={xIconOnClick}
               className={closeIconStyle}
-              aria-label={i18n.closeDialog()}
-            >
-              <i
-                id="x-close"
-                className="fa-solid fa-xmark"
-                aria-hidden={true}
-              />
-              <span className="sr-only">Close</span>
-            </button>
+              ariaLabel={i18n.closeDialog()}
+              onClick={xIconOnClick}
+            />
             {children}
           </div>
         </FocusTrap>
