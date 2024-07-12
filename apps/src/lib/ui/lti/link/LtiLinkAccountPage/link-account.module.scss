@@ -1,5 +1,35 @@
 @import 'color', 'style-constants';
 
+.cardIcon {
+  width: 45px;
+  height: 40px;
+  color: #0093A4;
+}
+
+.cardContainer {
+  display: flex;
+  gap: 24px;
+}
+
+.cardContentContainer {
+  padding-bottom: 16px;
+}
+
+.button {
+  width: 100%;
+}
+
+.cancelButtonContainer {
+  padding-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+// Increase specificity to override base button
+.cardSecondaryButton.cardSecondaryButton {
+  border: 1px solid #292F36
+}
+
 .mainContainer {
   background-color: $light_gray_50;
 }
@@ -38,36 +68,6 @@
 
 .titleDesc {
   margin: 10px 0 64px 0;
-}
-
-.cardContainer {
-  display: flex;
-  gap: 24px;
-}
-
-.cardContentContainer {
-  padding-bottom: 16px;
-}
-
-.cardIcon {
-  width: 45px;
-  height: 40px;
-  color: #0093A4;
-}
-
-.button {
-  width: 100%;
-}
-
-.cancelButtonContainer {
-  padding-top: 30px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-// Increase specificity to override base button
-.cardSecondaryButton.cardSecondaryButton {
-  border: 1px solid #292F36
 }
 
 .newAccountForm {
