@@ -85,5 +85,4 @@ class AichatSagemakerHelperTest < ActionView::TestCase
     expected_model_output = "\n 8 + 9 * 5 = 53."
     assert_equal model_output, expected_model_output
   end
-
 end
