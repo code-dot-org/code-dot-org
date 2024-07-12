@@ -58,16 +58,8 @@ const PredictSummary: React.FunctionComponent = () => {
             <span className={moduleStyles.responseIcon}>
               <i className="fa fa-user" />
             </span>
-            <span
-              className={moduleStyles.responseCounter}
-              data-testid={'response-counter'}
-            >
-              <span className={moduleStyles.counter}>
-                {responseCount}/{numStudents}{' '}
-              </span>
-              <span className={moduleStyles.text}>
-                {commonI18n.studentsAnswered()}
-              </span>
+            <span>
+              {responseCount}/{numStudents} {commonI18n.studentsAnswered()}
             </span>
           </div>
         )}
