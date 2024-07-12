@@ -18,8 +18,6 @@ class KarenProcessor < MistralProcessor
   end
 
   def format_model_output(generated_text)
-    assistant_response = generated_text.split(CHAT_ML_BEGIN_TOKEN + ASSISTANT).last
-    # Remove extraneous characters at end of assistant response from Karen model.
-    assistant_response.split("}").first
+    generated_text.split(CHAT_ML_BEGIN_TOKEN + ASSISTANT).last
   end
 end
