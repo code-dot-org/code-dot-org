@@ -52,7 +52,7 @@ const ExistingAccountCard = () => {
         title={i18n.ltiLinkAccountExistingAccountCardHeaderLabel()}
         icon={
           <FontAwesomeV6Icon
-            className={classNames(styles.icon, 'fa-2x')}
+            className={classNames(styles.cardIcon, 'fa-2x')}
             iconName={'user-check'}
           />
         }
