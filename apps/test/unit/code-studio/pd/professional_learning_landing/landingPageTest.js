@@ -14,6 +14,10 @@ import {
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
+import {
+  setWindowLocation,
+  resetWindowLocation,
+} from '../../../../src/code-studio/utils';
 import {expect} from '../../../../util/reconfiguredChai';
 
 const TEST_WORKSHOP = {
@@ -65,6 +69,7 @@ describe('LandingPage', () => {
 
   afterEach(() => {
     restoreRedux();
+    resetWindowLocation();
   });
 
   function renderDefault(propOverrides = {}) {
@@ -337,5 +342,25 @@ describe('LandingPage', () => {
 
     // Workshop Organizer workshop table
     screen.getByText('In Progress and Upcoming Workshops');
+  });
+
+  it('page does not show success dialog when not redirected here from successful enrollment', () => {
+    renderDefault();
+
+    expect(
+      screen.queryByText(
+        i18n.enrollmentCelebrationBody({workshopName: 'a new workshop'})
+      )
+    ).to.be.null;
+  });
+
+  it('page shows success dialog when redirected here from successful enrollment', () => {
+    const workshopCourseName = 'TEST COURSE';
+    setWindowLocation({search: `?wsCourse=${workshopCourseName}`});
+    renderDefault();
+
+    screen.getByText(
+      i18n.enrollmentCelebrationBody({workshopName: workshopCourseName})
+    );
   });
 });
