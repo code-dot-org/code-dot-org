@@ -61,7 +61,6 @@ class UserLevelsController < ApplicationController
     level = Level.find(params[:level_id])
     return head :bad_request, text: "Level not found" unless level
     return head :forbidden, text: 'User must be instructor of section' unless section.instructors.include?(@current_user)
-    puts "current user owns section"
     responses = UserLevel.where(level: level, user: section.students)
     return render json: {response_count: responses.count, num_students: section.students.count}, status: :ok
   end

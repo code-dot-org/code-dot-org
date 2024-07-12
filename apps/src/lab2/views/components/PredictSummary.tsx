@@ -9,7 +9,7 @@ import {getSectionSummary} from '@cdo/apps/lab2/projects/userLevelsApi';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 
-import moduleStyles from './predict.module.scss';
+import moduleStyles from './predict-summary.module.scss';
 
 const SUMMARY_PATH = '/summary';
 
@@ -28,8 +28,8 @@ const PredictSummary: React.FunctionComponent = () => {
   const currentLevelId = useAppSelector(state => getCurrentLevel(state)?.id);
   const [responseCount, setResponseCount] = React.useState<number | null>(null);
   const [numStudents, setNumStudents] = React.useState<number | null>(null);
+
   useEffect(() => {
-    console.log({currentSectionId, currentLevelId});
     if (currentSectionId && currentLevelId) {
       getSectionSummary(currentSectionId, currentLevelId).then(response => {
         if (response.response.ok) {
@@ -46,14 +46,27 @@ const PredictSummary: React.FunctionComponent = () => {
         <LinkButton
           href={summaryUrl}
           text={commonI18n.viewStudentResponses()}
-          size={'s'}
+          size={'xs'}
           type={'secondary'}
           color={'black'}
         />
         {/** TODO: Add summary of number of students who submitted a response. */}
         {responseCount !== null && numStudents !== null && (
           <div>
-            {responseCount} / {numStudents} {commonI18n.studentsAnswered()}
+            <span className={moduleStyles.responseIcon}>
+              <i className="fa fa-user" />
+            </span>
+            <span
+              className={moduleStyles.responseCounter}
+              data-testid={'response-counter'}
+            >
+              <span className={moduleStyles.counter}>
+                {responseCount}/{numStudents}{' '}
+              </span>
+              <span className={moduleStyles.text}>
+                {commonI18n.studentsAnswered()}
+              </span>
+            </span>
           </div>
         )}
       </div>

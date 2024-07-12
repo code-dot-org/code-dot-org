@@ -1,0 +1,17 @@
+@import 'color.scss';
+
+.predictSummaryContainer {
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.responseIcon {
+  padding-right: 4px;
+  :global(.fa) {
+    vertical-align: middle;
+    font-size: 20px;
+    color: $brand_primary_default;
+  }
+}
