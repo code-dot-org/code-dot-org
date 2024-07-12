@@ -98,7 +98,7 @@ const ControlButtons: React.FunctionComponent = () => {
     }
   };
 
-  // We disabled navigation is we are still loading, or if this is a submittable level,
+  // We disabled navigation if we are still loading, or if this is a submittable level,
   // the user has not submitted yet, and the user has not run their code during this session.
   const disableNavigation =
     loading || (isSubmittable && !hasSubmitted && !hasRun);
