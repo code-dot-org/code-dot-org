@@ -57,15 +57,16 @@ module AichatSagemakerHelper
     end
   end
 
-  def self.request_sagemaker_chat_completion(input, selected_model_id)
+  def self.request_sagemaker_chat_completion(inputs, selected_model_id)
     create_sagemaker_client.invoke_endpoint(
       endpoint_name: selected_model_id, # required
-      body: input.to_json, # required
+      body: inputs.to_json, # required
       content_type: "application/json"
     )
   end
 
-  def self.get_sagemaker_assistant_response(sagemaker_response, selected_model_id)
+  def self.get_sagemaker_assistant_response(inputs, selected_model_id)
+    sagemaker_response = request_sagemaker_chat_completion(inputs, selected_model_id)
     parsed_response = JSON.parse(sagemaker_response.body.string)
     generated_text = parsed_response[0]["generated_text"]
     model_processor = get_model_processor(selected_model_id)
