@@ -1,8 +1,8 @@
 module AichatSagemakerHelper
-  require_relative './ai_model_processors/mistral_processor'
-  require_relative './ai_model_processors/arithmo_processor'
-  require_relative './ai_model_processors/karen_processor'
-  require_relative './ai_model_processors/pirate_processor'
+  require_relative './mistral_processor'
+  require_relative './arithmo_processor'
+  require_relative './karen_processor'
+  require_relative './pirate_processor'
 
   MAX_NEW_TOKENS = 512
   TOP_P = 0.9
