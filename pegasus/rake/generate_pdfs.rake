@@ -28,7 +28,7 @@ def pdf_conversions_for_state_pages(state_codes)
   end
 end
 
-base_url = ENV['base_url']
+base_url = ENV.fetch('base_url', nil)
 
 def generate_pdf_file(base_url, pdf_conversion_info, fetchfile_for_pdf)
   require 'pdf/conversion'

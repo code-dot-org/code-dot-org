@@ -1,11 +1,15 @@
 import React, {useEffect, useState} from 'react';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {ExtraLinksLevelData, ExtraLinksProjectData} from '@cdo/apps/lab2/types';
 import Button from '@cdo/apps/templates/Button';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import {ExtraLinksLevelData, ExtraLinksProjectData} from '@cdo/apps/lab2/types';
-import moduleStyles from './extra-links.module.scss';
-import ExtraLinksModal from './ExtraLinksModal';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
 import {PERMISSIONS} from '../constants';
+
+import ExtraLinksModal from './ExtraLinksModal';
+
+import moduleStyles from './extra-links.module.scss';
 
 interface ExtraLinksProps {
   levelId: number;

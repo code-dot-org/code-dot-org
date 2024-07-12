@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-06-26 17:37:21 UTC",
+    "serialized_at": "2024-07-10 20:57:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -450,6 +450,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLIntro to Events_1_pl"
+        ],
         "progression": "Ecosystems Simulation"
       },
       "bonus": false,
@@ -472,6 +475,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2-eventsvideo_pl"
+        ],
         "progression": "Ecosystems Simulation"
       },
       "bonus": false,
@@ -494,6 +500,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_fish_pl"
+        ],
         "progression": "Ecosystems Simulation"
       },
       "bonus": false,
@@ -516,6 +525,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_algae_pl"
+        ],
         "progression": "Food Chain Setup"
       },
       "bonus": false,
@@ -538,6 +550,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_boat_pl"
+        ],
         "progression": "Food Chain Setup"
       },
       "bonus": false,
@@ -560,6 +575,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_matching_events_maker_grade3_pl"
+        ],
         "progression": "Food Chain Setup"
       },
       "bonus": false,
@@ -582,6 +600,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_conditionals_overview_maker_grade3_pl"
+        ],
         "progression": "If... then... Conditional Statements"
       },
       "bonus": false,
@@ -604,6 +625,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_coral_pl"
+        ],
         "progression": "If... then... Conditional Statements"
       },
       "bonus": false,
@@ -626,6 +650,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_coral_health_pl"
+        ],
         "progression": "If... then... Conditional Statements"
       },
       "bonus": false,
@@ -648,6 +675,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_justright_algae_pl"
+        ],
         "progression": "If... then... Conditional Statements"
       },
       "bonus": false,
@@ -670,6 +700,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_matching_conditionals_maker_grade3_pl"
+        ],
         "progression": "If... then... Conditional Statements"
       },
       "bonus": false,
@@ -692,6 +725,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_algae_freeplay_pl"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -714,6 +750,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSF_maker_microbit_PL_end_naviagtion_D_pl"
+        ],
         "progression": "Next Steps"
       },
       "bonus": false,

@@ -1,10 +1,11 @@
+import {createContext} from 'react';
+
 import {
   AiCustomizations,
   LevelAichatSettings,
   ModelCardInfo,
   Visibility,
 } from '@cdo/apps/aichat/types';
-import {createContext} from 'react';
 
 export const UpdateContext = createContext({
   aichatSettings: {} as LevelAichatSettings,
