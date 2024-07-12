@@ -1,9 +1,13 @@
+import React from 'react';
+
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import React from 'react';
+
 import {ConditionType, Validation, Condition} from '../../types';
-import moduleStyles from './edit-validations.module.scss';
+
 import EditCondition from './EditCondition';
+
+import moduleStyles from './edit-validations.module.scss';
 
 interface EditValidationProps {
   validation: Validation;

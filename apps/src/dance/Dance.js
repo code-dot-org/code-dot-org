@@ -1,20 +1,38 @@
+import DanceAPI from '@code-dot-org/dance-party/src/api';
+import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
+import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
+import ResourceLoader from '@code-dot-org/dance-party/src/ResourceLoader';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import AppView from '../templates/AppView';
-import {getStore} from '../redux';
-import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import {commands as audioCommands} from '../lib/util/audioApi';
 
-var dom = require('../dom');
-import DanceVisualizationColumn from './DanceVisualizationColumn';
-import Sounds from '../Sounds';
+import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
+import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+
+import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
+import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArtistTags';
+import project from '../code-studio/initApp/project';
 import {TestResults} from '../constants';
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import {EVENTS} from '../lib/util/AnalyticsConstants';
+import analyticsReporter from '../lib/util/AnalyticsReporter';
+import {commands as audioCommands} from '../lib/util/audioApi';
+import logToCloud from '../logToCloud';
+import {getStore} from '../redux';
+import Sounds from '../Sounds';
+import AppView from '../templates/AppView';
+import {
+  captureThumbnailFromCanvas,
+  setThumbnailBlobFromCanvas,
+} from '../util/thumbnail';
+import trackEvent from '../util/trackEvent';
+
+import {DANCE_AI_SOUNDS} from './ai/constants';
 import {ASSET_BASE, DancelabReservedWords} from './constants';
-import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
-import DanceAPI from '@code-dot-org/dance-party/src/api';
-import ResourceLoader from '@code-dot-org/dance-party/src/ResourceLoader';
-import danceMsg from './locale';
+import danceMetricsReporter from './danceMetricsReporter';
 import {
   reducers,
   setRunIsStarting,
@@ -22,27 +40,12 @@ import {
   setSong,
   setAiOutput,
 } from './danceRedux';
-import trackEvent from '../util/trackEvent';
-import analyticsReporter from '../lib/util/AnalyticsReporter';
-import {EVENTS} from '../lib/util/AnalyticsConstants';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import logToCloud from '../logToCloud';
-import {saveReplayLog} from '../code-studio/components/shareDialogRedux';
-import {
-  captureThumbnailFromCanvas,
-  setThumbnailBlobFromCanvas,
-} from '../util/thumbnail';
-import project from '../code-studio/initApp/project';
+import DanceVisualizationColumn from './DanceVisualizationColumn';
+import danceMsg from './locale';
 import {loadSongMetadata} from './songs';
-import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArtistTags';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
-import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
 import utils from './utils';
-import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
-import danceMetricsReporter from './danceMetricsReporter';
-import {ErrorFallbackPage} from '@cdo/apps/lab2/views/ErrorFallbackPage';
-import {DANCE_AI_SOUNDS} from './ai/constants';
+
+var dom = require('../dom');
 
 const ButtonState = {
   UP: 0,

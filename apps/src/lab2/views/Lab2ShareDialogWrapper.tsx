@@ -1,11 +1,14 @@
-import ShareDialogLegacy from '@cdo/apps/code-studio/components/ShareDialog';
-import ShareDialog from './dialogs/ShareDialog';
 import React from 'react';
 import {useSelector} from 'react-redux';
-import {LabState} from '../lab2Redux';
-import {isSignedIn as getIsSignedIn} from '@cdo/apps/templates/currentUserRedux';
+
+import ShareDialogLegacy from '@cdo/apps/code-studio/components/ShareDialog';
 import popupWindow from '@cdo/apps/code-studio/popup-window';
 import {LABS_USING_NEW_SHARE_DIALOG} from '@cdo/apps/lab2/constants';
+import {isSignedIn as getIsSignedIn} from '@cdo/apps/templates/currentUserRedux';
+
+import {LabState} from '../lab2Redux';
+
+import ShareDialog from './dialogs/ShareDialog';
 
 /**
  * Wrapper around ShareDialog that plumbs in the necessary props for a Lab2 project.

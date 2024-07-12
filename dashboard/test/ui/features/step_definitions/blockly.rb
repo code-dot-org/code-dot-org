@@ -50,6 +50,11 @@ When /^I connect block "([^"]*)" to block "([^"]*)"$/ do |from, to|
   @browser.execute_script code
 end
 
+When /^I connect block "([^"]*)" inside block "([^"]*)"$/ do |from, to|
+  code = connect_block_statement(from, to)
+  @browser.execute_script code
+end
+
 When /^I delete block "([^"]*)"$/ do |id|
   code = delete_block(id)
   @browser.execute_script code

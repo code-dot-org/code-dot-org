@@ -8,11 +8,12 @@
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-10 21:13:35 UTC",
+    "serialized_at": "2024-07-11 20:33:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -285,6 +286,17 @@
         "activity_section.key": "fda1d09c-a4ac-47ae-a1e5-d555e6a14c79",
         "lesson_activity.key": "4e8571c1-e023-417b-b7b0-f732ed047ac3"
       }
+    },
+    {
+      "key": "0882522a-16fa-4f6c-9fcb-df5b2990bf50",
+      "position": 13,
+      "properties": {
+        "progression_name": "Next Steps"
+      },
+      "seeding_key": {
+        "activity_section.key": "0882522a-16fa-4f6c-9fcb-df5b2990bf50",
+        "lesson_activity.key": "4e8571c1-e023-417b-b7b0-f732ed047ac3"
+      }
     }
   ],
   "script_levels": [
@@ -294,6 +306,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLPLIntro to Events_1_prod"
+        ],
         "progression": "Unplugged Lesson with Events"
       },
       "bonus": false,
@@ -316,6 +331,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2-eventsvideo_prod"
+        ],
         "progression": "Unplugged Lesson with Events"
       },
       "bonus": false,
@@ -338,6 +356,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLcourse_c_maker_dance_party_unpluggedMB_1_prod"
+        ],
         "progression": "Unplugged Lesson with Events"
       },
       "bonus": false,
@@ -360,6 +381,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid1_prod"
+        ],
         "progression": "Video: Warm Up"
       },
       "bonus": false,
@@ -382,6 +406,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_01_prod"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -404,6 +431,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid2_prod"
+        ],
         "progression": "Video: Events"
       },
       "bonus": false,
@@ -426,6 +456,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_02_prod"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -448,6 +481,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_03_prod"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -470,6 +506,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid3_prod"
+        ],
         "progression": "Video: Measures"
       },
       "bonus": false,
@@ -492,6 +531,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_04_prod"
+        ],
         "progression": "Measures"
       },
       "bonus": false,
@@ -514,6 +556,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_05_prod"
+        ],
         "progression": "Measures"
       },
       "bonus": false,
@@ -536,6 +581,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_06_prod"
+        ],
         "progression": "Measures"
       },
       "bonus": false,
@@ -558,6 +606,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid4_prod"
+        ],
         "progression": "Video: Properties"
       },
       "bonus": false,
@@ -580,6 +631,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_07_prod"
+        ],
         "progression": "Properties"
       },
       "bonus": false,
@@ -602,6 +656,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_08_prod"
+        ],
         "progression": "Properties"
       },
       "bonus": false,
@@ -624,6 +681,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_09_prod"
+        ],
         "progression": "Properties"
       },
       "bonus": false,
@@ -646,6 +706,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid5_prod"
+        ],
         "progression": "Video: Wrap-up"
       },
       "bonus": false,
@@ -668,6 +731,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_10_prod"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -690,6 +756,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_bonus1_prod"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -712,6 +781,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_bonus3_prod"
+        ],
         "progression": "Lesson Extras"
       },
       "bonus": true,
@@ -726,6 +798,28 @@
       },
       "level_keys": [
         "CourseD_Dance_2020_bonus3_prod"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 18,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Next Steps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "maker_microbit_PL_end_naviagtion_D_pl_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker4thgrade",
+        "activity_section.key": "0882522a-16fa-4f6c-9fcb-df5b2990bf50"
+      },
+      "level_keys": [
+        "maker_microbit_PL_end_naviagtion_D_pl_prod"
       ]
     }
   ],
@@ -968,6 +1062,18 @@
         "lesson_group.key": "",
         "script.name": "k5maker4thgrade",
         "activity_section.key": "fda1d09c-a4ac-47ae-a1e5-d555e6a14c79"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "maker_microbit_PL_end_naviagtion_D_pl_prod",
+        "script_level.level_keys": [
+          "maker_microbit_PL_end_naviagtion_D_pl_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker4thgrade",
+        "activity_section.key": "0882522a-16fa-4f6c-9fcb-df5b2990bf50"
       }
     }
   ],

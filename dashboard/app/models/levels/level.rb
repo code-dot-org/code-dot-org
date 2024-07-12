@@ -845,7 +845,6 @@ class Level < ApplicationRecord
     properties_camelized[:useRestrictedSongs] = game.use_restricted_songs?
     properties_camelized[:usesProjects] = try(:is_project_level) || channel_backed?
 
-    properties_camelized['startSources'] = try(:start_sources)
     if try(:project_template_level).try(:start_sources)
       properties_camelized['templateSources'] = try(:project_template_level).try(:start_sources)
     end
@@ -878,6 +877,10 @@ class Level < ApplicationRecord
       return properties.dig('level_data', 'validations').present?
     end
     properties['validation_code'].present? || properties['success_condition'].present?
+  end
+
+  def predict_level?
+    return properties.dig('predict_settings', 'isPredictLevel').present?
   end
 
   # Returns the level name, removing the name_suffix first (if present), and
