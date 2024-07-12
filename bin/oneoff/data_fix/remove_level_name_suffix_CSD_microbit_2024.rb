@@ -19,13 +19,16 @@ require_relative '../../../dashboard/config/environment'
 def remove_level_name_suffix
   raise unless Rails.application.config.levelbuilder_mode
 
-  unit = Unit.find_by_name("csd6b-2024")
-  unit.levels.each do |level|
-    next unless level.name_suffix == "_mb_2024"
+  levels_to_update = Level.where("name LIKE ?", "%\\_mb\\_2024")
+  levels_to_update.each do |level|
+    if level.name_suffix == "_mb_2024"
+      puts "Processing level [#{level.name}] with name_suffix [#{level.name_suffix}]"
 
-    puts "Updating name suffix for level [#{level.name}]"
-    level.update(name_suffix: nil)
-    level.save!
+      level.update(name_suffix: nil)
+      level.save!
+    else
+      puts "Ignoring level [#{level.name}] with name_suffix [#{level.name_suffix}] not matching _mb_2024"
+    end
   end
 end
 
