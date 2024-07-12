@@ -1,0 +1,13 @@
+%h1
+  Warning - Some of your students require parental consent to continue using Code.org accounts
+%p
+  Hello - Because your classroom is located in Colorado, in order to comply with the Colorado Privacy Act, parent or guardian consent will be required for students under 13 to continue leveraging Google Classroom or personal logins on Code.org after 7/1/2024.
+  It appears that one or more students in the following sections require parental or guardian consent to continue using their accounts with Code.org
+  = @sections.each do |section|
+    %ul
+      %li
+        %a{ :href => section.link, :title => section.name }
+  Please ensure these students obtain parental or guardian consent via the steps here, or leverage a section that does not use personal user name or Google Classroom logins for students under 13.
+%p
+  Regards,
+  Code.org
