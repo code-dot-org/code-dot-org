@@ -29,7 +29,10 @@ class UserLevelsController < ApplicationController
     return head :forbidden, text: 'User must be instructor of course' unless script.can_be_instructor?(current_user)
     level = Level.find(params[:level_id])
     return head :not_found, text: 'Level not found' unless level
-    return head :bad_request, text: "Clearing progress on level type #{level.type} is not supported" unless ['Multi', 'FreeResponse'].include?(level.type)
+    unless clearable_level_type?(level)
+      return head :bad_request, text: "Clearing progress on level type #{level.type} is not supported"
+    end
+
     UserLevel.where(user_id: current_user.id, script_id: script.id, level: level.id).destroy_all
     return head :ok
   end
@@ -68,5 +71,11 @@ class UserLevelsController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   private def user_level_params
     params.require(:user_level).permit(:best_result, :submitted)
+  end
+
+  # Some lab2 levels have a predict_settings field that indicates they are predict levels.
+  # We allow clearing progress on these levels as well as multi or free-response levels.
+  private def clearable_level_type?(level)
+    ['Multi', 'FreeResponse'].include?(level.type) || level.predict_level?
   end
 end
