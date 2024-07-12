@@ -56,12 +56,19 @@ export const useSource = (defaultSources: ProjectSources) => {
   );
 
   const resetToStartSource = useCallback(() => {
+    // When resetting in start mode, we always use the level start source.
     setSource(
-      templateStartSource ||
+      (!isStartMode && templateStartSource) ||
         levelStartSource ||
         (defaultSources.source as MultiFileSource)
     );
-  }, [defaultSources.source, levelStartSource, setSource]);
+  }, [
+    defaultSources.source,
+    isStartMode,
+    templateStartSource,
+    levelStartSource,
+    setSource,
+  ]);
 
   useEffect(() => {
     if (isStartMode) {
