@@ -14,12 +14,13 @@
         "playlab_k1",
         "artist"
       ],
+      "tts": true,
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2024-07-02 20:32:23 UTC",
-    "published_state": "preview",
+    "serialized_at": "2024-07-11 15:59:57 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -4957,6 +4958,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_blank space stories_markdown"
+        ],
         "progression": "Blank Space Stories - Student Resources"
       },
       "bonus": false,
@@ -6679,6 +6683,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_the internet_markdown"
+        ],
         "progression": "The Internet - Student Resources"
       },
       "bonus": false,

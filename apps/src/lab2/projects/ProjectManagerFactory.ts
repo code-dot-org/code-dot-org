@@ -4,10 +4,11 @@
  * for the given type.
  */
 
+import {ProjectManagerStorageType} from '../types';
+
 import {RemoteChannelsStore, LocalChannelsStore} from './ChannelsStore';
 import ProjectManager from './ProjectManager';
 import {RemoteSourcesStore, LocalSourcesStore} from './SourcesStore';
-import {ProjectManagerStorageType} from '../types';
 
 export default class ProjectManagerFactory {
   /**

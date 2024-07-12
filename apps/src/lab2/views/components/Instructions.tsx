@@ -1,20 +1,26 @@
-import React, {useCallback, useContext, useEffect, useState} from 'react';
 import classNames from 'classnames';
-import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import moduleStyles from './instructions.module.scss';
+import React, {useCallback, useContext, useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
+
 import {navigateToNextLevel} from '@cdo/apps/code-studio/progressRedux';
 import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
-import {LabState} from '../../lab2Redux';
-import {ThemeContext} from '../ThemeWrapper';
-import PredictQuestion from './PredictQuestion';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 import {
   isPredictAnswerLocked,
   setPredictResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {LabState} from '../../lab2Redux';
+import {ThemeContext} from '../ThemeWrapper';
+
+import PredictQuestion from './PredictQuestion';
+import PredictSummary from './PredictSummary';
+
+import moduleStyles from './instructions.module.scss';
+
 const commonI18n = require('@cdo/locale');
 
 interface InstructionsProps {
@@ -269,6 +275,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             id="instructions-text"
             className={moduleStyles['text-' + theme]}
           >
+            {predictSettings?.isPredictLevel && <PredictSummary />}
             <EnhancedSafeMarkdown
               markdown={text}
               className={moduleStyles.markdownText}

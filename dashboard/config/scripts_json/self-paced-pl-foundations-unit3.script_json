@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-06-27 22:54:29 UTC",
+    "serialized_at": "2024-07-12 01:33:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -275,6 +275,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23_-foundations24"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -297,6 +300,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-24-mod1-Certificate_-foundations24"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -319,6 +325,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-UnitOverview-AIML_-22_23_-foundations24"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -341,6 +350,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-ML-vid_-foundations24"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -363,6 +375,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-Intro-Quotes_-22_23_-foundations24"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -385,6 +400,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-lesson1-Overview-AIML_-22_23_-foundations24"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -407,6 +425,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-U7L1L1_-foundations24"
+        ],
         "progression": "Practice Training A.I. Bot "
       },
       "bonus": false,
@@ -429,6 +450,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-MLintro-c4u_-22_23_-foundations24"
+        ],
         "progression": "Practice Training A.I. Bot "
       },
       "bonus": false,
@@ -451,6 +475,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-2-4Overview-AIML_-22_23_-foundations24"
+        ],
         "progression": "Explore the First Week of Curriculum"
       },
       "bonus": false,
@@ -473,6 +500,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-L5overview-AIML_-22_23_-foundations24"
+        ],
         "progression": "Explore the First Week of Curriculum"
       },
       "bonus": false,
@@ -495,6 +525,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod5-PL-lesson2-overview_-22_23_-foundations24"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -517,6 +550,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-AILab-vid_-foundations24"
+        ],
         "progression": "Introduction to AI Lab"
       },
       "bonus": false,
@@ -539,6 +575,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-L6overview-AIML_-22_23_-foundations24"
+        ],
         "progression": "Introduction to AI Lab"
       },
       "bonus": false,
@@ -561,6 +600,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-Mod5-ml-intro ai lab-shapes v1_-foundations24"
+        ],
         "progression": "Practice Training a Machine Learning Model"
       },
       "bonus": false,
@@ -583,6 +625,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-AILabVocab-c4u_-22_23_-foundations24"
+        ],
         "progression": "Practice Training a Machine Learning Model"
       },
       "bonus": false,
@@ -605,6 +650,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-AILabPart2-vid_-foundations24"
+        ],
         "progression": "Practice Training a Machine Learning Model"
       },
       "bonus": false,
@@ -627,6 +675,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-L6overviewCont-AIML_-22_23_-foundations24"
+        ],
         "progression": "Practice Training a Machine Learning Model"
       },
       "bonus": false,
@@ -649,6 +700,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-Mod5-ml-intro categorical-pizza_-foundations24"
+        ],
         "progression": "Practice Training a Machine Learning Model"
       },
       "bonus": false,
@@ -671,6 +725,9 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-DataVisualizations-c4u_-22_23_-foundations24"
+        ],
         "progression": "Practice Training a Machine Learning Model"
       },
       "bonus": false,
@@ -693,6 +750,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod5-PL-lesson3-overview_-22_23_-foundations24"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -715,6 +775,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-Mod5ml-intro app lab-book recommender 0_-foundations24"
+        ],
         "progression": "Explore Machine Learning Apps"
       },
       "bonus": false,
@@ -737,6 +800,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-Mod5-ml-intro app lab-book recommender demo_-foundations24"
+        ],
         "progression": "Explore Machine Learning Apps"
       },
       "bonus": false,
@@ -759,6 +825,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-use model card-example3A_-foundations24"
+        ],
         "progression": "Explore Machine Learning Apps"
       },
       "bonus": false,
@@ -781,6 +850,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod5-PL-lesson4-overview_-22_23_-foundations24"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -803,6 +875,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-BiasOverview-AIML_-22_23_-foundations24"
+        ],
         "progression": "AI and Ethics"
       },
       "bonus": false,
@@ -825,6 +900,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-TrainingDataBias-vid_-foundations24"
+        ],
         "progression": "AI and Ethics"
       },
       "bonus": false,
@@ -847,6 +925,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-model card-medical app v2 2021-2_-foundations24"
+        ],
         "progression": "AI and Ethics"
       },
       "bonus": false,
@@ -869,6 +950,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-model card-medical-3_-22_23_-foundations24"
+        ],
         "progression": "AI and Ethics"
       },
       "bonus": false,
@@ -891,6 +975,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-ModelCards-c4u_-22_23_-foundations24"
+        ],
         "progression": "AI and Ethics"
       },
       "bonus": false,
@@ -913,6 +1000,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-EqualAccessAndBias-vid_-foundations24"
+        ],
         "progression": "AI and Ethics"
       },
       "bonus": false,
@@ -935,6 +1025,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-L14examples-AIML_-22_23_-foundations24"
+        ],
         "progression": "AI and Ethics"
       },
       "bonus": false,
