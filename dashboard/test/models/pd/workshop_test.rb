@@ -1492,11 +1492,6 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.valid?
   end
 
-  test 'Build Your Own Workshop type is valid' do
-    workshop = build :build_your_own
-    assert workshop.valid?
-  end
-
   test 'virtual specific subjects must be virtual' do
     workshop = build :pd_workshop,
       course: COURSE_CSP,

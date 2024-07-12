@@ -173,7 +173,7 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
       if supplied_course_offering_ids.blank?
         return render json: {error: "Cannot create a Build Your Own workshop without PL topics"}, status: :bad_request
       else
-        adjust_course_offerings(supplied_course_offering_ids)
+        @workshop.course_offerings = supplied_course_offering_ids.filter_map {|id| CourseOffering.find_by(id: id)}
       end
     end
 
@@ -207,7 +207,7 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
       if supplied_course_offering_ids.blank?
         return render json: {error: "Cannot create a Build Your Own workshop without PL topics"}, status: :bad_request
       else
-        adjust_course_offerings(supplied_course_offering_ids)
+        @workshop.course_offerings = supplied_course_offering_ids.filter_map {|id| CourseOffering.find_by(id: id)}
       end
     end
 
@@ -294,23 +294,6 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
       Pd::WorkshopMailer.facilitator_detail_change_notification(facilitator, @workshop).deliver_now
     end
     Pd::WorkshopMailer.organizer_detail_change_notification(@workshop).deliver_now
-  end
-
-  private def adjust_course_offerings(supplied_course_offering_ids)
-    existing_course_offering_ids = @workshop.course_offerings.map(&:id)
-    new_course_offering_ids = supplied_course_offering_ids - existing_course_offering_ids
-    course_offering_ids_to_remove = existing_course_offering_ids - supplied_course_offering_ids
-
-    course_offering_ids_to_remove.each do |course_offering_id|
-      @workshop.course_offerings.delete(course_offering_id)
-    end
-
-    new_course_offering_ids.each do |course_offering_id|
-      course_offering = CourseOffering.find_by(id: course_offering_id)
-      # Return if we don't find a corresponding/valid Course Offering
-      next unless course_offering
-      @workshop.course_offerings << course_offering
-    end
   end
 
   private def adjust_facilitators
