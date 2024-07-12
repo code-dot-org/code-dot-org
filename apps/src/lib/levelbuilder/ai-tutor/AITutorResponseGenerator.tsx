@@ -12,6 +12,7 @@ import styles from './ai-tutor-response-generator.module.scss';
  */
 
 interface AIInteraction extends ChatContext {
+  systemPrompt: string | undefined;
   aiResponse: string | undefined;
 }
 
@@ -57,7 +58,8 @@ const AITutorBulkResponseGenerator: React.FC<
   const askAI = async (row: AIInteraction) => {
     const chatApiResponse = await getChatCompletionMessage(
       formatQuestionForAITutor(row),
-      []
+      [],
+      row.systemPrompt,
     );
     row.aiResponse = chatApiResponse.assistantResponse;
     setResponseCount(prevResponseCount => prevResponseCount + 1);
