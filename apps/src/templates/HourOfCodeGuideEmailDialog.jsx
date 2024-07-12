@@ -6,7 +6,7 @@ import {Heading2, Heading3} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import Button from '@cdo/apps/componentLibrary/button/Button';
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import i18n from '@cdo/locale';
 
@@ -141,7 +141,8 @@ function HourOfCodeGuideEmailDialog({isSignedIn, unitId}) {
               className={style.whiteButton}
               text={continueWithoutEmailButtonText}
               onClick={onClose}
-              color={'white'}
+              color={buttonColors.gray}
+              type="secondary"
             />
             <Button
               id="uitest-email-guide"
