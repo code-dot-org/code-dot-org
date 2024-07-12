@@ -5,6 +5,7 @@ import Button from '@cdo/apps/componentLibrary/button/Button';
 import {formatQuestionForAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {ChatContext} from '@cdo/apps/aiTutor/types';
 import styles from './ai-tutor-tester.module.scss';
+import AITutorTesterSampleColumns from './AITutorTesterSampleColumns';
 
 /**
  * Renders a series of buttons that allow levelbuilders to upload a CSV of
@@ -20,9 +21,7 @@ interface AITutorTesterProps {
   allowed: boolean;
 }
 
-const AITutorTester: React.FC<
-  AITutorTesterProps
-> = ({allowed}) => {
+const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
   const [csvFile, setCsvFile] = useState<File | null>(null);
   const [data, setData] = useState<AIInteraction[]>([]);
   const [responseCount, setResponseCount] = useState<number>(0);
@@ -59,7 +58,7 @@ const AITutorTester: React.FC<
     const chatApiResponse = await getChatCompletionMessage(
       formatQuestionForAITutor(row),
       [],
-      row.systemPrompt,
+      row.systemPrompt
     );
     row.aiResponse = chatApiResponse.assistantResponse;
     setResponseCount(prevResponseCount => prevResponseCount + 1);
@@ -96,9 +95,9 @@ const AITutorTester: React.FC<
       <p>
         Upload a CSV of student inputs that will be sent to AI Tutor. AI Tutor
         responses will then be saved and you can download the resulting updated
-        CSV. Your CSV must include a `studentInput` column to succeed.
+        CSV.
       </p>
-
+      <AITutorTesterSampleColumns />
       <div>
         <div className={styles.buttonSpacing}>
           <input
@@ -138,6 +137,7 @@ const AITutorTester: React.FC<
           />
         </div>
       </div>
+      <br />
     </div>
   );
 };
