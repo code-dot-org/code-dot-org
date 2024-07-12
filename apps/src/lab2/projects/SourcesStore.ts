@@ -3,10 +3,13 @@
  * and remote (saved to the server) implementations of the SourcesStore.
  * A SourcesStore manages the loading and saving of sources to the appropriate location.
  */
-import {ProjectSources, ProjectType} from '../types';
-import * as sourcesApi from './sourcesApi';
-const {getTabId} = require('@cdo/apps/utils');
 import {NetworkError} from '@cdo/apps/util/HttpClient';
+
+import {ProjectSources, ProjectType} from '../types';
+
+import * as sourcesApi from './sourcesApi';
+
+const {getTabId} = require('@cdo/apps/utils');
 
 export interface SourcesStore {
   load: (key: string) => Promise<ProjectSources>;

@@ -58,7 +58,7 @@ class BlockTest < ActiveSupport::TestCase
     new_block = create :block
     File.delete old_block.file_path
 
-    Block.load_records('config/blocks/fakeLevelType/*.json')
+    Block.load_records(blob: 'config/blocks/fakeLevelType/*.json')
 
     assert_nil Block.find_by(name: old_block.name)
     refute_nil Block.find_by(name: new_block.name)

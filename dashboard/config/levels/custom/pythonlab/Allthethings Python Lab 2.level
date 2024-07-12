@@ -8,7 +8,7 @@
     "encrypted": "false",
     "long_instructions": "## Python Lab with Validation\r\n\r\nThis level has some built-in validation code.",
     "hide_share_and_remix": "false",
-    "source": {
+    "start_sources": {
       "files": {
         "1": {
           "id": "1",
