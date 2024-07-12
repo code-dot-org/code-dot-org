@@ -341,6 +341,9 @@ const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
   }
   const ownerInfo = projectLinkData.owner_info;
   const projectInfo = projectLinkData.project_info;
+  if (!ownerInfo || !projectInfo) {
+    return null;
+  }
   const remixList = projectInfo.remix_ancestry;
 
   return (
