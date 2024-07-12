@@ -54,13 +54,18 @@ const PredictSummary: React.FunctionComponent = () => {
           color={'black'}
         />
         {responseCount !== null && numStudents !== null && (
-          <div>
-            <span className={moduleStyles.responseIcon}>
+          <div className={moduleStyles.responses}>
+            <div className={moduleStyles.responseIcon}>
               <i className="fa fa-user" />
-            </span>
-            <span>
-              {responseCount}/{numStudents} {commonI18n.studentsAnswered()}
-            </span>
+            </div>
+            <div>
+              <span className={moduleStyles.responseCount}>
+                {responseCount}/{numStudents}
+              </span>
+              <span className={moduleStyles.responseLabel}>
+                {commonI18n.studentsAnswered()}
+              </span>
+            </div>
           </div>
         )}
       </div>
