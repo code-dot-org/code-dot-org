@@ -8,11 +8,12 @@
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-10 19:57:06 UTC",
+    "serialized_at": "2024-07-11 20:42:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -369,6 +370,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PL_prod"
+        ],
         "progression": "Game Design Set Up"
       },
       "bonus": false,
@@ -391,6 +395,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLSP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PL_prod"
+        ],
         "progression": "Game Design Set Up"
       },
       "bonus": false,
@@ -413,6 +420,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PL1_prod"
+        ],
         "progression": "Game Design Set Up"
       },
       "bonus": false,
@@ -435,6 +445,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_design_video_sprites_prod"
+        ],
         "progression": "Game Design Set Up"
       },
       "bonus": false,
@@ -457,6 +470,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_design_player_prod"
+        ],
         "progression": "Game Design Set Up"
       },
       "bonus": false,
@@ -479,6 +495,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_design_location_prod"
+        ],
         "progression": "Game Design Set Up"
       },
       "bonus": false,
@@ -501,6 +520,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_design_behavior_prod"
+        ],
         "progression": "Behaviors"
       },
       "bonus": false,
@@ -523,6 +545,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_design_two_behaviors_prod"
+        ],
         "progression": "Behaviors"
       },
       "bonus": false,
@@ -545,6 +570,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLpl-k5-2-eventsvideo_prod"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -567,6 +595,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_design_panel_events_prod"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -589,6 +620,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_design_event_click_prod"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -611,6 +645,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_design_toolbox_object_prod"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -633,6 +670,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL game_design_remove_object_prod"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -655,6 +695,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Plpl-k5-2_checkUnderstanding_events_prod"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -676,6 +719,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLCSC-SelfPaced-lessonplans_prod"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -697,6 +743,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PLPL_prod"
+        ],
         "progression": "Intro to Variables "
       },
       "bonus": false,
@@ -719,6 +768,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLSP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PLPL_prod"
+        ],
         "progression": "Intro to Variables "
       },
       "bonus": false,
@@ -741,6 +793,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLPLSP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PLPL_prod"
+        ],
         "progression": "Intro to Variables "
       },
       "bonus": false,
@@ -763,6 +818,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_variables_intro_choices_course-e_independent_prod"
+        ],
         "progression": "Intro to Variables "
       },
       "bonus": false,
@@ -785,6 +843,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_variables_video_intro_prod"
+        ],
         "progression": "Intro to Variables "
       },
       "bonus": false,
@@ -807,6 +868,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_variables_about_panel_prod"
+        ],
         "progression": "Intro to Variables "
       },
       "bonus": false,
@@ -829,6 +893,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_variables_show_prod"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -851,6 +918,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_variables_increase_prod"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -873,6 +943,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_variables_match_course-e_independent_prod"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -895,6 +968,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_conditional_about_panel_prod"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -917,6 +993,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_variables_conditional_prod"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -939,6 +1018,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_variables_match_condition_course-e_independent_prod"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -960,6 +1042,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "variables lesson plan_prod"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -981,6 +1066,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "environmentPL_prod"
+        ],
         "progression": "Sprite Type: Environment "
       },
       "bonus": false,
@@ -1003,6 +1091,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLenvironmentPL_prod"
+        ],
         "progression": "Sprite Type: Environment "
       },
       "bonus": false,
@@ -1025,6 +1116,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_development_environment_choices_course-e_independent_prod"
+        ],
         "progression": "Sprite Type: Environment "
       },
       "bonus": false,
@@ -1047,6 +1141,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_development_sprites_type_panel_prod"
+        ],
         "progression": "Sprite Type: Environment "
       },
       "bonus": false,
@@ -1069,6 +1166,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_development_environment_type_prod"
+        ],
         "progression": "Sprite Type: Environment "
       },
       "bonus": false,
@@ -1091,6 +1191,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_development_environment_type2_prod"
+        ],
         "progression": "Sprite Type: Environment "
       },
       "bonus": false,
@@ -1113,6 +1216,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_development_player_type_panel_prod"
+        ],
         "progression": "Sprite Type: Player"
       },
       "bonus": false,
@@ -1135,6 +1241,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_development_player_type_prod"
+        ],
         "progression": "Sprite Type: Player"
       },
       "bonus": false,
@@ -1157,6 +1266,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_development_jump_prod"
+        ],
         "progression": "Sprite Type: Player"
       },
       "bonus": false,
@@ -1179,6 +1291,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_development_types_prod"
+        ],
         "progression": "Sprite Type: Player"
       },
       "bonus": false,
@@ -1201,6 +1316,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_development_matching_course-e_independent_prod"
+        ],
         "progression": "Sprite Type: Player"
       },
       "bonus": false,
@@ -1223,6 +1341,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_development_debug_choices_course-e_independent_prod"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1244,6 +1365,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "environment lesson plan_prod"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1265,6 +1389,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "GamejamPL_prod"
+        ],
         "progression": "What is a Game Jam?"
       },
       "bonus": false,
@@ -1287,6 +1414,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLGamejamPL_prod"
+        ],
         "progression": "What is a Game Jam?"
       },
       "bonus": false,
@@ -1309,6 +1439,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLSP-VPL-21-mod1-welcome-vid_prod"
+        ],
         "progression": "What is a Game Jam?"
       },
       "bonus": false,
@@ -1331,6 +1464,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_jam_theme_generator_prod"
+        ],
         "progression": "Game Jam Theme Generator"
       },
       "bonus": false,
@@ -1353,6 +1489,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_jam_create_plan_course-e_independent_prod"
+        ],
         "progression": "Plan"
       },
       "bonus": false,
@@ -1375,6 +1514,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "plgame_jam_create_game_prod"
+        ],
         "progression": "Create"
       },
       "bonus": false,
@@ -1397,6 +1539,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLgame_jam_play_course-e_independent_prod"
+        ],
         "progression": "Play"
       },
       "bonus": false,
@@ -1419,6 +1564,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "game jam lesson plan_prod"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1440,6 +1588,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLPLpl-k5-2_PLexperiences_prod"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1461,6 +1612,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLpl-k5-2_PLexperiences_prod"
+        ]
       },
       "bonus": false,
       "seeding_key": {

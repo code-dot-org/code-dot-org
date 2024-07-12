@@ -8,11 +8,12 @@
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-10 21:00:48 UTC",
+    "serialized_at": "2024-07-11 20:29:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -217,6 +218,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Course_C_prod"
+        ],
         "progression": "Intro to Events"
       },
       "bonus": false,
@@ -239,6 +243,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Events_1_prod"
+        ],
         "progression": "Intro to Events"
       },
       "bonus": false,
@@ -261,6 +268,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2-eventsvideo_prod"
+        ],
         "progression": "Intro to Events"
       },
       "bonus": false,
@@ -283,6 +293,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "course_c_maker_dance_party_unpluggedMB_1_prod"
+        ],
         "progression": "Unplugged Lesson with Events"
       },
       "bonus": false,
@@ -305,6 +318,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_video_flappyIntro_2023MB_prod"
+        ],
         "progression": "Events with Flappy Bird"
       },
       "bonus": false,
@@ -327,6 +343,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLcourseC_flappy_events1_prod"
+        ],
         "progression": "Events with Flappy Bird"
       },
       "bonus": false,
@@ -349,6 +368,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLcourseC_flappy_events2_prod"
+        ],
         "progression": "Events with Flappy Bird"
       },
       "bonus": false,
@@ -371,6 +393,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLcourseC_flappy_events3_prod"
+        ],
         "progression": "Events with Flappy Bird"
       },
       "bonus": false,
@@ -393,6 +418,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLcourseC_flappy_events4_prod"
+        ],
         "progression": "Events with Flappy Bird"
       },
       "bonus": false,
@@ -415,6 +443,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLcourseC_flappy_events5_prod"
+        ],
         "progression": "Events with Flappy Bird"
       },
       "bonus": false,
@@ -437,6 +468,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLcourseD_bounce_events1s_prod"
+        ],
         "progression": "Events in Bounce"
       },
       "bonus": false,
@@ -459,6 +493,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLcourseD_bounce_events2s_prod"
+        ],
         "progression": "Events in Bounce"
       },
       "bonus": false,
@@ -481,6 +518,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLcourseD_bounce_events5s_prod"
+        ],
         "progression": "Events in Bounce"
       },
       "bonus": false,
@@ -503,6 +543,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLcourseD_bounce_events6s_prod"
+        ],
         "progression": "Events in Bounce"
       },
       "bonus": false,
@@ -525,6 +568,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLcourseD_bounce_events7s_prod"
+        ],
         "progression": "Events in Bounce"
       },
       "bonus": false,
@@ -547,6 +593,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLcourseD_bounce_events10s_prod"
+        ],
         "progression": "Events in Bounce"
       },
       "bonus": false,
@@ -569,6 +618,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLcourseD_bounce_events11s_prod"
+        ],
         "progression": "Events in Bounce"
       },
       "bonus": false,
@@ -591,6 +643,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLcourseD_bounce_events12s_prod"
+        ],
         "progression": "Events in Bounce"
       },
       "bonus": false,
@@ -613,6 +668,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSF_maker_microbit_PL_end_naviagtion_C_prod"
+        ],
         "progression": "Next Steps"
       },
       "bonus": false,
@@ -635,6 +693,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLIntro to Events_1_pl_prod"
+        ],
         "progression": "Ecosystems Simulation"
       },
       "bonus": false,
@@ -657,6 +718,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2-eventsvideo_prod"
+        ],
         "progression": "Ecosystems Simulation"
       },
       "bonus": false,
@@ -679,6 +743,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_fish_prod"
+        ],
         "progression": "Ecosystems Simulation"
       },
       "bonus": false,
@@ -701,6 +768,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_algae_prod"
+        ],
         "progression": "Food Chain Setup"
       },
       "bonus": false,
@@ -723,6 +793,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_boat_prod"
+        ],
         "progression": "Food Chain Setup"
       },
       "bonus": false,
@@ -745,6 +818,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_matching_events_maker_grade3_pl_prod"
+        ],
         "progression": "Food Chain Setup"
       },
       "bonus": false,
@@ -767,6 +843,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_conditionals_overview_maker_grade3_pl_prod"
+        ],
         "progression": "If... then... Conditional Statements"
       },
       "bonus": false,
@@ -789,6 +868,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_coral_prod"
+        ],
         "progression": "If... then... Conditional Statements"
       },
       "bonus": false,
@@ -811,6 +893,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_coral_health_prod"
+        ],
         "progression": "If... then... Conditional Statements"
       },
       "bonus": false,
@@ -833,6 +918,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_ocean_justright_algae_prod"
+        ],
         "progression": "If... then... Conditional Statements"
       },
       "bonus": false,
@@ -855,6 +943,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_matching_conditionals_maker_grade3_pl_prod"
+        ],
         "progression": "If... then... Conditional Statements"
       },
       "bonus": false,
@@ -877,6 +968,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc_ecosystems_algae_freeplay_prod"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -899,6 +993,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSF_maker_microbit_PL_end_naviagtion_D_pl_prod"
+        ],
         "progression": "Next Steps"
       },
       "bonus": false,

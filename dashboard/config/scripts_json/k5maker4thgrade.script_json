@@ -8,11 +8,12 @@
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-11 14:46:37 UTC",
+    "serialized_at": "2024-07-11 20:33:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
