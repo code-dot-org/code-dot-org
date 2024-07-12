@@ -9,7 +9,7 @@ import {createStore, combineReducers} from 'redux';
 import {Factory} from 'rosie';
 import sinon from 'sinon';
 
-import {BuildYourOwnWorkshop} from '@cdo/apps/code-studio/pd/constants';
+import {COURSE_BUILD_YOUR_OWN} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshopConstants';
 import {WorkshopForm} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_form';
 import Permission, {
   WorkshopAdmin,
@@ -553,7 +553,7 @@ describe('WorkshopForm test', () => {
 
     const courseField = wrapper.find('#course').first();
     courseField.simulate('change', {
-      target: {name: 'course', value: BuildYourOwnWorkshop},
+      target: {name: 'course', value: COURSE_BUILD_YOUR_OWN},
     });
 
     expect(wrapper.find('#subject')).to.have.lengthOf(0);
@@ -592,7 +592,7 @@ describe('WorkshopForm test', () => {
     expect(wrapper.find('#course_offerings')).to.have.lengthOf(0);
     const courseField = wrapper.find('#course').first();
     courseField.simulate('change', {
-      target: {name: 'course', value: BuildYourOwnWorkshop},
+      target: {name: 'course', value: COURSE_BUILD_YOUR_OWN},
     });
     expect(wrapper.find('#course_offerings')).to.have.lengthOf(1);
     wrapper.find('#dropdownMenuButton').first().simulate('click');

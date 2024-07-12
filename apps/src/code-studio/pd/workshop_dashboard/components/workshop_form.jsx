@@ -26,7 +26,6 @@ import {
 import {connect} from 'react-redux';
 import Select from 'react-select';
 
-import {BuildYourOwnWorkshop} from '@cdo/apps/code-studio/pd/constants';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {
   ActiveCourseWorkshops,
@@ -52,7 +51,7 @@ import {
   ProgramManager,
   CsfFacilitator,
 } from '../permission';
-import {TIME_FORMAT, DATE_FORMAT, DATETIME_FORMAT} from '../workshopConstants';
+import {TIME_FORMAT, DATE_FORMAT, DATETIME_FORMAT, COURSE_BUILD_YOUR_OWN} from '../workshopConstants';
 
 import CourseSelect from './CourseSelect';
 import FacilitatorListFormPart from './facilitator_list_form_part';
@@ -427,7 +426,7 @@ export class WorkshopForm extends React.Component {
   renderWorkshopTypeOptions(validation) {
     const isCsf = this.state.course === 'CS Fundamentals';
     const isAdminCounselor = this.state.course === 'Admin/Counselor Workshop';
-    const isBuildYourOwnWorkshop = this.state.course === BuildYourOwnWorkshop;
+    const isBuildYourOwnWorkshop = this.state.course === COURSE_BUILD_YOUR_OWN;
     const showFeeInput =
       isCsf &&
       this.state.subject &&
@@ -834,7 +833,7 @@ export class WorkshopForm extends React.Component {
       course_offerings: [],
     });
     this.loadAvailableFacilitators(course);
-    if (course === BuildYourOwnWorkshop) {
+    if (course === COURSE_BUILD_YOUR_OWN) {
       this.setState({funded: false, suppress_email: true});
     }
   };
@@ -1049,7 +1048,7 @@ export class WorkshopForm extends React.Component {
       }
       if (
         this.state.course &&
-        this.state.course === BuildYourOwnWorkshop &&
+        this.state.course === COURSE_BUILD_YOUR_OWN &&
         this.state.course_offerings.length === 0
       ) {
         validation.isValid = false;
@@ -1168,9 +1167,9 @@ export class WorkshopForm extends React.Component {
               )}
             </Col>
           </Row>
-          <Row>
-            <FormGroup validationState={validation.style.course_offerings}>
-              {this.state.course === BuildYourOwnWorkshop && (
+          {this.state.course === COURSE_BUILD_YOUR_OWN && (
+            <Row>
+              <FormGroup validationState={validation.style.course_offerings}>
                 <div style={styles.container}>
                   <div style={styles.extraMargin}>
                     <label>Select Workshop Topic(s)</label>
@@ -1239,9 +1238,9 @@ export class WorkshopForm extends React.Component {
                     <HelpBlock>{validation.help.course_offerings}</HelpBlock>
                   </div>
                 </div>
-              )}
-            </FormGroup>
-          </Row>
+              </FormGroup>
+            </Row>
+          )}
           <Row>
             <Col sm={5}>
               {this.shouldRenderModules() && (
@@ -1349,7 +1348,7 @@ const styles = {
     fontWeight: 100,
   },
   listItems: {
-    margin: '10px',
+    margin: 10,
   },
   singleItem: {
     display: 'flex',
