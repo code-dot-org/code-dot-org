@@ -323,11 +323,17 @@ class DeleteAccountsHelper
   end
 
   def delete_rubric_ai_evaluations(user_id)
+    # This finds all RubricAiEvaluation records which evalute this user's work,
+    # whether they were implicitly requested by the student when they submitted
+    # the project, or explicitly requested by their teacher.
     as_student = RubricAiEvaluation.where(user_id: user_id)
     as_student_count = as_student.count
     as_student.each(&:destroy)
     @log.puts "Deleted #{as_student_count} RubricAiEvaluation as student" if as_student_count > 0
 
+    # We've already deleted all evaluations of this user's work as a student.
+    # Any remaining evaluations requested by this user are requests made
+    # by a teacher to evaluate a student's work.
     as_teacher = RubricAiEvaluation.where(requester_id: user_id)
     as_teacher_count = as_teacher.count
     as_teacher.each(&:destroy)
