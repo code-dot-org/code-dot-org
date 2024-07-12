@@ -45,7 +45,7 @@ module AichatSagemakerHelper
   end
 
   def self.get_model_processor(selected_model_id)
-    case selected_model_id      
+    case selected_model_id
     when MODELS[:PIRATE]
       return PirateProcessor.new
     when MODELS[:KAREN]
@@ -54,7 +54,7 @@ module AichatSagemakerHelper
       return ArithmoProcessor.new
     else
       return MistralProcessor.new
-    end    
+    end
   end
 
   def self.request_sagemaker_chat_completion(input, selected_model_id)

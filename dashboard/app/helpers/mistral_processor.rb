@@ -20,7 +20,7 @@ class MistralProcessor
       elsif msg[:role] == MistralProcessor::ASSISTANT
         # Note that each assistant message in the conversation history is followed by
         # the end-of-sentence token but a begin-of-sentence token is not required.
-        inputs << msg[:chatMessageText] + MistralProcessor::SENTENCE_END_TOKEN
+        inputs << (msg[:chatMessageText] + MistralProcessor::SENTENCE_END_TOKEN)
       end
     end
     inputs
