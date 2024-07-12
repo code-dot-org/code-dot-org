@@ -73,26 +73,24 @@ const NewAccountCard = () => {
           />
         }
       />
-      <div className={classNames(styles.cardContentContainer)}>
-        <CardContent>
-          {isLMS
-            ? i18n.ltiLinkAccountNewAccountCardContent({
-                providerName: ltiProviderName,
-              })
-            : i18n.accountNewAccountCardContentWorkshopEnroll()}
+      <CardContent className={classNames(styles.cardContent)}>
+        {isLMS
+          ? i18n.ltiLinkAccountNewAccountCardContent({
+              providerName: ltiProviderName,
+            })
+          : i18n.accountNewAccountCardContentWorkshopEnroll()}
 
-          <form
-            data-testid={'new-account-form'}
-            action={newAccountUrl}
-            ref={finishSignupFormRef}
-            method="post"
-            className={styles.newAccountForm}
-          >
-            <RailsAuthenticityToken />
-            <input type="hidden" value={emailAddress} name={'user[email]'} />
-          </form>
-        </CardContent>
-      </div>
+        <form
+          data-testid={'new-account-form'}
+          action={newAccountUrl}
+          ref={finishSignupFormRef}
+          method="post"
+          className={styles.newAccountForm}
+        >
+          <RailsAuthenticityToken />
+          <input type="hidden" value={emailAddress} name={'user[email]'} />
+        </form>
+      </CardContent>
       <CardActions>
         <Button
           className={classNames(styles.button, styles.cardSecondaryButton)}

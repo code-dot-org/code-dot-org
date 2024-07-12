@@ -62,11 +62,9 @@ const ContinueAccountCard = () => {
           />
         }
       />
-      <div className={classNames(styles.cardContentContainer)}>
-        <CardContent>
-          {i18n.ltiLinkAccountContinueAccountCardContent()}
-        </CardContent>
-      </div>
+      <CardContent className={styles.cardContentContainer}>
+        {i18n.ltiLinkAccountContinueAccountCardContent()}
+      </CardContent>
       <CardActions>
         <Button
           className={classNames(styles.button, styles.cardSecondaryButton)}

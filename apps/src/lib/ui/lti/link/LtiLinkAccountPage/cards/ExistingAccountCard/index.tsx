@@ -7,7 +7,6 @@ import {
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import styles from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/link-account.module.scss';
-import cardStyles from '@cdo/apps/componentLibrary/card/Card/card.module.scss';
 import {buttonColors, Button} from '@cdo/apps/componentLibrary/button';
 import React, {useContext} from 'react';
 import i18n from '@cdo/locale';
@@ -57,15 +56,13 @@ const ExistingAccountCard = () => {
           />
         }
       />
-      <div className={classNames(styles.cardContentContainer)}>
-        <CardContent className={cardStyles.cardContent}>
-          {isLMS
-            ? i18n.ltiLinkAccountExistingAccountCardContent({
-                providerName: ltiProviderName,
-              })
-            : i18n.accountExistingAccountCardContentWorkshopEnroll()}
-        </CardContent>
-      </div>
+      <CardContent className={classNames(styles.cardContent)}>
+        {isLMS
+          ? i18n.ltiLinkAccountExistingAccountCardContent({
+              providerName: ltiProviderName,
+            })
+          : i18n.accountExistingAccountCardContentWorkshopEnroll()}
+      </CardContent>
       <CardActions>
         <Button
           className={styles.button}
