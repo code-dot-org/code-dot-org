@@ -52,6 +52,9 @@ class UserLevelsController < ApplicationController
     return render json: {data: most_recent_user_level&.level_source&.data}, status: :ok
   end
 
+  # GET /user_levels/section_summary/:section_id/:level_id
+  # Get the number of responses and number of students in the section for the given level.
+  # Only instructors of the section can access this information.
   def get_section_response_summary
     section = Section.find(params[:section_id])
     return head :bad_request, text: "Section not found" unless section
