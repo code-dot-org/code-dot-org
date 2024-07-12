@@ -9,12 +9,12 @@ import {createStore, combineReducers} from 'redux';
 import {Factory} from 'rosie';
 import sinon from 'sinon';
 
-import {COURSE_BUILD_YOUR_OWN} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshopConstants';
 import {WorkshopForm} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_form';
 import Permission, {
   WorkshopAdmin,
   ProgramManager,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
+import {COURSE_BUILD_YOUR_OWN} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshopConstants';
 import {Subjects} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import mapboxReducer from '@cdo/apps/redux/mapbox';
 

@@ -51,7 +51,12 @@ import {
   ProgramManager,
   CsfFacilitator,
 } from '../permission';
-import {TIME_FORMAT, DATE_FORMAT, DATETIME_FORMAT, COURSE_BUILD_YOUR_OWN} from '../workshopConstants';
+import {
+  TIME_FORMAT,
+  DATE_FORMAT,
+  DATETIME_FORMAT,
+  COURSE_BUILD_YOUR_OWN,
+} from '../workshopConstants';
 
 import CourseSelect from './CourseSelect';
 import FacilitatorListFormPart from './facilitator_list_form_part';
