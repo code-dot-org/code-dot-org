@@ -147,7 +147,10 @@ export default class SmallFooter extends React.Component {
       return;
     }
 
-    if (this.state.menuState === MenuState.EXPANDED) {
+    if (
+      this.state.menuState === MenuState.EXPANDED ||
+      this.state.menuState === MenuState.COPYRIGHT
+    ) {
       this.setState({menuState: MenuState.MINIMIZED});
       return;
     }
