@@ -18,19 +18,6 @@ markdown <<MARKDOWN
 <div style="clear:both;">
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em; font-weight: bold;">❓ How is using resources related to the problem solving process?</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-
-* #### **Define** - Describe what you need to know.
-* #### **Prepare** - Decide where to look for the information.
-* #### **Try** - Read the resources.
-* #### **Reflect** - Think about what worked.
-</p></div></details>
-
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 <summary style="font-size: 1.5em; font-weight: bold;">🧰 What resources are available to students?</summary>
 
 #### Resources are available throughout programming activities and are set up to be used as needed, not read as a pre-reading or presented as a lecture. Students are not expected to already know all of the needed information when they start programming.  This structure reflects the “discovery” model of the curriculum, but also supports students in the authentic use of resources and code documentation.
@@ -84,8 +71,4 @@ markdown <<MARKDOWN
 ####  Informational resources are available to students throughout programming lessons to give them just-in-time information to solve their problems. These resources allow students to self-differentiate, deciding for themselves how much help they need for a particular activity. Students should continue to explore resources and previous solutions throughout the lessons as they experiment and create computational artifacts.
 </p></div></details>
 <br>
-
-#### <a href="https://docs.google.com/document/d/1GpNdN-6LVOMSFeYRLTruil18Gc5_bebPulriW7VkpTs/view" target="blank" rel="noopener noreferrer">Click here</a> to read the CS Discoveries Guide to Using Resources. 
-
-
 MARKDOWN

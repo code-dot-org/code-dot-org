@@ -37,10 +37,10 @@ const CopyButton: React.FunctionComponent = () => {
   return (
     <Button
       onClick={handleCopy}
-      text="Copy Chat"
+      text="Copy chat"
       iconLeft={{iconName: 'clipboard'}}
-      size="xs"
-      color="white"
+      size="s"
+      color="gray"
       type="secondary"
     />
   );

@@ -10,7 +10,7 @@
     "long_instructions": "## Step 1: Import Necessary Libraries\r\nLet's start by importing the Python libraries `pandas` and `matplotlib`.\r\n\r\n### Do This\r\n1. Import `pandas` as `pd`\r\n2. Import `matplotlib.pyplot` as `plt`",
     "hide_share_and_remix": "false",
     "teacher_markdown": "Remind students of the purpose of each library: `pandas` for data manipulation and `matplotlib` for plotting graphs.\r\n",
-    "source": {
+    "start_sources": {
       "files": {
         "0": {
           "id": "0",

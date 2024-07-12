@@ -4,6 +4,7 @@
  * A ChannelsStore manages the loading and saving of channels.
  */
 import {Channel, DefaultChannel} from '../types';
+
 import * as channelsApi from './channelsApi';
 import * as projectsApi from './projectsApi';
 
