@@ -2,11 +2,11 @@ import cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import {Heading2, Heading3} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import i18n from '@cdo/locale';
 
