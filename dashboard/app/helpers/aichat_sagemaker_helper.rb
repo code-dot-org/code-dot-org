@@ -20,18 +20,18 @@ module AichatSagemakerHelper
     instructions
   end
 
-  def self.format_inputs_for_sagemaker_request(aichat_params, stored_messages, new_message)
-    selected_model_id = aichat_params[:selectedModelId]
+  def self.format_inputs_for_sagemaker_request(aichat_model_customizations, stored_messages, new_message)
+    selected_model_id = aichat_model_customizations[:selectedModelId]
     # Add system prompt and retrieval contexts if available to inputs as part of instructions that will be sent to model.
-    instructions = get_instructions(aichat_params[:systemPrompt], aichat_params[:retrievalContexts])
+    instructions = get_instructions(aichat_model_customizations[:systemPrompt], aichat_model_customizations[:retrievalContexts])
     model_processor = get_model_processor(selected_model_id)
-    inputs = model_processor.format_model_inputs(instructions, new_message, stored_messages)
+    inputs = model_processor.format_model_inputs(instructions, new_message, stored_messages) # TEST THIS METHOD
     stopping_strings = model_processor.get_stop_strings
 
     {
       inputs: inputs,
       parameters: {
-        temperature: aichat_params[:temperature].to_f,
+        temperature: aichat_model_customizations[:temperature].to_f,
         max_new_tokens: MAX_NEW_TOKENS,
         top_p: TOP_P,
         stop: stopping_strings,
@@ -65,7 +65,7 @@ module AichatSagemakerHelper
     parsed_response = JSON.parse(sagemaker_response.body.string)
     generated_text = parsed_response[0]["generated_text"]
     model_processor = get_model_processor(selected_model_id)
-    model_processor.format_model_output(generated_text)
+    model_processor.format_model_output(generated_text) # TEST THIS METHOD
   end
 
   def self.can_request_aichat_chat_completion?

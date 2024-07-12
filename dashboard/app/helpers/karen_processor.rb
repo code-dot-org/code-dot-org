@@ -11,7 +11,7 @@ class KarenProcessor < MistralProcessor
     # Format input for Karen model using ChatML as detailed at https://huggingface.co/FPHam/Karen_TheEditor_V2_CREATIVE_Mistral_7B.
     # Note that prior user and assistant messages are NOT included and the customized
     # pretext is always used so that the given user message is edited and not responded to.
-    inputs = KarenProcessor::CHAT_ML_BEGIN_TOKEN + KarenProcessor::SYSTEM + KarenProcessor::NEWLINE + instructions + KarenProcessor::CHAT_ML_BEGIN_TOKEN + KarenProcessor::NEWLINE
+    inputs = KarenProcessor::CHAT_ML_BEGIN_TOKEN + KarenProcessor::SYSTEM + KarenProcessor::NEWLINE + instructions + KarenProcessor::CHAT_ML_END_TOKEN + KarenProcessor::NEWLINE
     inputs << (KarenProcessor::CHAT_ML_BEGIN_TOKEN + KarenProcessor::USER + KarenProcessor::NEWLINE + KarenProcessor::KAREN_PRETEXT + new_message[:chatMessageText] + KarenProcessor::CHAT_ML_END_TOKEN + KarenProcessor::NEWLINE)
     inputs << (KarenProcessor::CHAT_ML_BEGIN_TOKEN + KarenProcessor::ASSISTANT)
     inputs
