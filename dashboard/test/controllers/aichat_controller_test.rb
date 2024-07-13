@@ -31,7 +31,7 @@ class AichatControllerTest < ActionController::TestCase
 
   setup do
     @assistant_response = "This is an assistant response from Sagemaker"
-    AichatSagemakerHelper.stubs(:request_sagemaker_chat_completion).returns({status: 200, json: {body: {}}})
+    AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).returns(@assistant_response)
     @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
   end
 
