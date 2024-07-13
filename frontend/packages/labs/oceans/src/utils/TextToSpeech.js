@@ -1,5 +1,5 @@
 const supportedVoiceLanguages = ['en', 'it'];
-let recommendedVoices = [];
+const recommendedVoices = {};
 supportedVoiceLanguages.forEach(supportedVoiceLanguage => {
   recommendedVoices[
     supportedVoiceLanguage
