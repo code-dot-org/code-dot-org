@@ -177,12 +177,12 @@
     line-height: 1.2em;
   }
 
-  ol {
+  ol, ul {
     line-height: 0;
   }
 
   li {
-    margin-bottom: 10px;
+    //margin-bottom: 10px;
   }
 
   code {
@@ -192,4 +192,35 @@
   p {
     font-size: 14px;
   }
+}
+
+.runtestcontainer {
+  display: flex;
+  gap: 20px;
+  margin-top: auto;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  flex-shrink: 0;
+
+  &Green {
+    background-color: rgb(14, 190, 14);
+  }
+
+  &Red {
+    background-color: #d62911;
+  }
+}
+
+.instructionText {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feedback {
+  margin-top: auto;
 }

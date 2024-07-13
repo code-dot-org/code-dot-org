@@ -39,21 +39,21 @@ const defaultProject: ProjectSources = {
 
 const labeledGridLayouts = {
   horizontal: {
-    gridLayoutRows: '1fr 1fr 1fr 48px',
-    gridLayoutColumns: '300px minmax(0, 1fr)',
+    gridLayoutRows: '1fr 1fr 1fr 1fr',
+    gridLayoutColumns: '350px minmax(0, 1fr)',
     gridLayout: `
   "info-panel workspace"
-  "file-browser workspace"
-  "file-browser console"
-  "file-browser control-buttons"`,
+  "info-panel workspace"
+  "info-panel workspace"
+  "info-panel console"`,
   },
   vertical: {
-    gridLayoutRows: '1fr 1fr 48px',
-    gridLayoutColumns: '300px minmax(0, 1fr) minmax(0, 1fr)',
+    gridLayoutRows: '1fr 1fr 1fr',
+    gridLayoutColumns: '350px minmax(0, 1fr) minmax(0, 1fr)',
     gridLayout: `
     "info-panel workspace console"
-    "file-browser workspace console"
-    "file-browser control-buttons control-buttons"`,
+    "info-panel workspace console"
+    "info-panel workspace console"`,
   },
 };
 const defaultConfig: ConfigType = {

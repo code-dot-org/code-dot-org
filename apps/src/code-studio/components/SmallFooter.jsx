@@ -157,6 +157,7 @@ export default class SmallFooter extends React.Component {
   render() {
     const styles = {
       smallFooter: {
+        display: 'none',
         fontSize: this.props.fontSize,
       },
       base: {

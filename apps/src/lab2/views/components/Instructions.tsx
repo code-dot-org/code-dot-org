@@ -202,8 +202,6 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
 
   const vertical = layout === 'vertical';
 
-  const canShowContinueButton = showContinueButton && onNextPanel;
-
   const canShowFinishButton = showFinishButton;
 
   const onFinish = useCallback(() => {
@@ -220,6 +218,61 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
 
   const finalMessage =
     'You finished this lesson! Check in with your teacher for the next activity';
+
+  const texts = [
+    '__1. Import Necessary Libraries__',
+    '__2. Load the Data__',
+    '__3. Inspect the Data__',
+    '__4. Calculate Average Ratings__',
+    '__5. Plot the Data__',
+    '__6. Analyze the Output__',
+  ];
+
+  const bodies = [
+    "Let's start by importing the Python libraries pandas and matplotlib.\n" +
+      '- Import `pandas` as `pd`\n' +
+      '- Import `matplotlib.pyplot` as `plt`',
+    "You'll need to load your dataset from a CSV file into a pandas DataFrame so you can manipulate and analyze the data.\n" +
+      '- Load the dataset containing the product ratings.',
+    "Let's display the first few rows of the dataset to understand its structure.\n" +
+      '- Print the first few rows of the dataset to understand its structure.',
+    'Calculate the average rating for each product so we can understand the overall customer satisfaction for each item. Group the data by product to find the average.\n' +
+      '- Use `groupby` to group the data by product.\n' +
+      '- Calculate the average rating for each product.',
+    "Let's visualize it! Create a bar chart to visually represent the average ratings for each product to compare them at a glance.\n" +
+      '- Use plot to create a bar chart. Be sure to set:\n' +
+      '  - the title of the chart\n' +
+      '  - the label for the x axis\n' +
+      '  - the label for the y axis\n' +
+      '- Show the bar chart!',
+    'Take a look at the resulting bar chart.',
+  ];
+
+  const testSteps = [
+    {showTexts: 1, dotColors: ['grey']},
+    {showTexts: 2, dotColors: ['green', 'grey']},
+    {showTexts: 3, dotColors: ['green', 'green', 'grey']},
+    {showTexts: 3, dotColors: ['green', 'green', 'red']},
+    {showTexts: 4, dotColors: ['green', 'green', 'green', 'grey']},
+    {showTexts: 4, dotColors: ['green', 'red', 'green', 'red']},
+    {showTexts: 4, dotColors: ['green', 'green', 'green', 'green']},
+    {showTexts: 5, dotColors: ['green', 'green', 'green', 'green', 'grey']},
+    {
+      showTexts: 6,
+      dotColors: ['green', 'green', 'green', 'green', 'green', 'grey'],
+    },
+    {
+      showTexts: 6,
+      dotColors: ['green', 'green', 'green', 'green', 'green', 'green'],
+    },
+  ];
+
+  const [testStep, setTestStep] = useState(0);
+
+  const currentTestStep = testSteps[testStep];
+
+  const canShowContinueButton = testStep === testSteps.length - 1;
+  const canShowRunTestButtons = !canShowContinueButton;
 
   return (
     <div
@@ -238,63 +291,44 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
           vertical && moduleStyles.itemVertical
         )}
       >
-        {imageUrl && (
-          <div
-            className={classNames(
-              moduleStyles.imageContainer,
-              !vertical && moduleStyles.horizontal
-            )}
-          >
-            {
-              // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
-              // Verify or update this alt-text as necessary
-            }
-            <img
-              src={imageUrl}
+        {texts
+          .filter((entry, entryIndex) => entryIndex < currentTestStep.showTexts)
+          .map((text, index) => (
+            <div
+              key={text}
+              id="instructions-text"
               className={classNames(
-                moduleStyles.image,
-                !vertical && moduleStyles.fixedHeight
+                moduleStyles.instructionText,
+                moduleStyles['text-' + theme]
               )}
-              onClick={() => imageClicked()}
-              alt=""
-            />
-            {showBigImage && (
+            >
+              <EnhancedSafeMarkdown
+                markdown={
+                  text +
+                  (currentTestStep.dotColors[index] !== 'green'
+                    ? '\n\n' + bodies[index]
+                    : '')
+                }
+                className={moduleStyles.markdownText}
+                handleInstructionsTextClick={handleInstructionsTextClick}
+              />
               <div
                 className={classNames(
-                  moduleStyles.bigImage,
-                  imagePopOutDirection === 'left' && moduleStyles.bigImageLeft
+                  moduleStyles.dot,
+                  currentTestStep.dotColors[index] === 'red'
+                    ? moduleStyles.dotRed
+                    : currentTestStep.dotColors[index] === 'green'
+                    ? moduleStyles.dotGreen
+                    : undefined
                 )}
-              >
-                {
-                  // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
-                  // Verify or update this alt-text as necessary
-                }
-                <img src={imageUrl} onClick={() => imageClicked()} alt="" />
-              </div>
-            )}
-          </div>
-        )}
-        {text && (
-          <div
-            key={text}
-            id="instructions-text"
-            className={moduleStyles['text-' + theme]}
-          >
-            {predictSettings?.isPredictLevel && <PredictSummary />}
-            <EnhancedSafeMarkdown
-              markdown={text}
-              className={moduleStyles.markdownText}
-              handleInstructionsTextClick={handleInstructionsTextClick}
-            />
-            <PredictQuestion
-              predictSettings={predictSettings}
-              predictResponse={predictResponse}
-              setPredictResponse={setPredictResponse}
-              predictAnswerLocked={predictAnswerLocked}
-            />
-          </div>
-        )}
-        {(message || canShowContinueButton || canShowFinishButton) && (
+              />
+            </div>
+          ))}
+
+        {(message ||
+          canShowContinueButton ||
+          canShowFinishButton ||
+          canShowRunTestButtons) && (
           <div
             key={messageIndex + ' - ' + message}
             id="instructions-feedback"
@@ -310,6 +344,26 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   className={moduleStyles.markdownText}
                   handleInstructionsTextClick={handleInstructionsTextClick}
                 />
+              )}
+              {canShowRunTestButtons && (
+                <div className={moduleStyles.runtestcontainer}>
+                  <button
+                    id="instructions-run-button"
+                    type="button"
+                    onClick={onNextPanel}
+                    className={moduleStyles.buttonInstruction}
+                  >
+                    Run
+                  </button>
+                  <button
+                    id="instructions-test-button"
+                    type="button"
+                    onClick={() => setTestStep(testStep + 1)}
+                    className={moduleStyles.buttonInstruction}
+                  >
+                    Test
+                  </button>
+                </div>
               )}
               {canShowContinueButton && (
                 <button

@@ -339,6 +339,7 @@ class HeaderMiddle extends React.Component {
 
 const styles = {
   headerMiddleContent: {
+    opacity: 0,
     width: '100%',
     display: 'flex',
     alignItems: 'center',

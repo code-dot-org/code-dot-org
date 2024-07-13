@@ -17,6 +17,7 @@
   cursor: pointer;
   white-space: nowrap;
   justify-content: space-between;
+  align-items: center;
   gap: 10px;
   padding-left: 2px;
   padding-right: 2px;
