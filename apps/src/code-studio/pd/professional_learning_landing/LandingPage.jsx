@@ -85,6 +85,26 @@ const getAvailableTabs = permissions => {
   return tabs;
 };
 
+const getEnrollSucessWorkshopName = () => {
+  // If sent here from successfully enrolling in a workshop, log WORKSHOP_ENROLLMENT_COMPLETED_EVENT.
+  const urlParams = queryParams();
+  if (urlParams && Object.keys(urlParams).includes('wsCourse')) {
+    const workshopCourseName = urlParams['wsCourse'];
+
+    analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
+      'regional partner': urlParams['rpName'],
+      'workshop course': workshopCourseName,
+      'workshop subject': urlParams['wsSubject'],
+    });
+
+    updateQueryParam('rpName', undefined, false);
+    updateQueryParam('wsCourse', undefined, false);
+    updateQueryParam('wsSubject', undefined, false);
+
+    return workshopCourseName;
+  }
+};
+
 function LandingPage({
   lastWorkshopSurveyUrl,
   lastWorkshopSurveyCourse,
@@ -103,9 +123,10 @@ function LandingPage({
   hiddenPlSectionIds,
 }) {
   const availableTabs = getAvailableTabs(userPermissions);
+  const [enrollSuccessWorkshopName, setEnrollSuccessWorkshopName] = useState(
+    getEnrollSucessWorkshopName()
+  );
   const [currentTab, setCurrentTab] = useState(availableTabs[0].value);
-  const [enrollSuccessWorkshopName, setEnrollSuccessWorkshopName] =
-    useState(null);
   const headerContainerStyles =
     availableTabs.length > 1
       ? style.headerWithTabsContainer
@@ -113,22 +134,6 @@ function LandingPage({
 
   const joinedPlSectionsStyling =
     joinedPlSections?.length > 0 ? '' : style.joinedPlSectionsWithNoSections;
-
-  // If sent here from successfully enrolling in a workshop, log WORKSHOP_ENROLLMENT_COMPLETED_EVENT.
-  const urlParams = queryParams();
-  if (urlParams && Object.keys(urlParams).includes('wsCourse')) {
-    setEnrollSuccessWorkshopName(urlParams['wsCourse']);
-
-    analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
-      'regional partner': urlParams['rpName'],
-      'workshop course': urlParams['wsCourse'],
-      'workshop subject': urlParams['wsSubject'],
-    });
-
-    updateQueryParam('rpName', undefined, false);
-    updateQueryParam('wsCourse', undefined, false);
-    updateQueryParam('wsSubject', undefined, false);
-  }
 
   // Load PL section info into redux
   const dispatch = useDispatch();
@@ -371,6 +376,7 @@ function LandingPage({
         {enrollSuccessWorkshopName && (
           <WorkshopEnrollmentCelebrationDialog
             workshopName={enrollSuccessWorkshopName}
+            onClose={() => setEnrollSuccessWorkshopName(null)}
           />
         )}
         {RenderBanner()}

@@ -69,7 +69,6 @@ describe('LandingPage', () => {
 
   afterEach(() => {
     restoreRedux();
-    resetWindowLocation();
   });
 
   function renderDefault(propOverrides = {}) {
@@ -362,5 +361,6 @@ describe('LandingPage', () => {
     screen.getByText(
       i18n.enrollmentCelebrationBody({workshopName: workshopCourseName})
     );
+    resetWindowLocation();
   });
 });
