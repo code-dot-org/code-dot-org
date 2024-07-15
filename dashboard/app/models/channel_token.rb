@@ -86,7 +86,7 @@ class ChannelToken < ApplicationRecord
   #   using the value from the `data` param.
   def self.create_channel(ip, project, data: {}, src: nil, type: nil, remix_parent_id: nil, standalone: true, level: nil)
     if src
-      data = project.get(src)
+      data = project.get(src).stringify_keys
       data['name'] = "Remix: #{data['name']}"
       data['hidden'] = false
       data['frozen'] = false
