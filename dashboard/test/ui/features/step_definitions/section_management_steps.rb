@@ -390,6 +390,7 @@ And /^I navigate to the V2 progress dashboard for "([^"]+)"$/ do |section_name|
     And I wait until element "#uitest-teacher-dashboard-nav" is visible
     And check that the URL contains "/teacher_dashboard/sections/"
     And I wait until element "#uitest-course-dropdown" is visible
+    Then I append "/?enableExperiments=section_progress_v2" to the URL
     And I click selector "#ui-close-dialog" if I see it
 
     # toggle to V2 progress view
