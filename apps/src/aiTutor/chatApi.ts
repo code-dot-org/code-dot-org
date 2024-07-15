@@ -41,23 +41,14 @@ export async function postOpenaiChatCompletion(
   messagesToSend: OpenaiChatCompletionMessage[],
   levelId?: number,
   tutorType?: AITutorTypesValue,
-  levelInstructions?: string,
   systemPrompt?: string
 ): Promise<OpenaiChatCompletionMessage | null> {
-  const payload = levelId
-    ? {
-        levelId: levelId,
-        messages: messagesToSend,
-        type: tutorType,
-        levelInstructions,
-        systemPrompt,
-      }
-    : {
-        messages: messagesToSend,
-        type: tutorType,
-        levelInstructions,
-        systemPrompt,
-      };
+  const payload = {
+    messages: messagesToSend,
+    levelId: levelId,
+    type: tutorType,
+    systemPrompt: systemPrompt,
+  };
 
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
@@ -91,8 +82,7 @@ export async function getChatCompletionMessage(
   chatMessages: ChatCompletionMessage[],
   systemPrompt?: string,
   levelId?: number,
-  tutorType?: AITutorTypesValue,
-  levelInstructions?: string
+  tutorType?: AITutorTypesValue
 ): Promise<ChatCompletionResponse> {
   const messagesToSend = [
     ...formatForChatCompletion(chatMessages),
@@ -105,7 +95,6 @@ export async function getChatCompletionMessage(
       messagesToSend,
       levelId,
       tutorType,
-      levelInstructions,
       systemPrompt
     );
   } catch (error) {
