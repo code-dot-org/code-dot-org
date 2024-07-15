@@ -6018,6 +6018,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/papaparse@npm:^5.3.14, @types/papaparse@npm:^5.3.9":
+  version: 5.3.14
+  resolution: "@types/papaparse@npm:5.3.14"
+  dependencies:
+    "@types/node": "*"
+  checksum: fbf942ed92179eeb824d4e544cc701468157a4ce3f6f668f8b17692d9886fea92ccff5e56965615ff64f049efa01ff95ddb7d30c67e0186bc802a6cc8ef26e63
+  languageName: node
+  linkType: hard
+
 "@types/parse-json@npm:^4.0.0":
   version: 4.0.0
   resolution: "@types/parse-json@npm:4.0.0"
@@ -8210,6 +8219,7 @@ __metadata:
     "@types/jquery": ^3.5.16
     "@types/js-cookie": ^3.0.6
     "@types/mocha": ^10.0.1
+    "@types/papaparse": ^5.3.14
     "@types/qrcode.react": ^1.0.5
     "@types/react": ^18.0.28
     "@types/react-bootstrap": ^0.32.36
@@ -8365,6 +8375,7 @@ __metadata:
     react-motion: ^0.5.2
     react-onclickoutside: ~5.11.1
     react-paginate: ^6.3.0
+    react-papaparse: ^4.4.0
     react-pointable: ^1.1.1
     react-portal: ^4.2.1
     react-redux: ~8.0.5
@@ -20326,6 +20337,13 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
+"papaparse@npm:^5.4.1":
+  version: 5.4.1
+  resolution: "papaparse@npm:5.4.1"
+  checksum: fc9e52f7158dca3517c229e3309065b1ab5da6c7194572fba4f31ff138bc43e3c91182cc40365cc828f97fe10d0aca416068fd731661058bea0f69ddb84a411a
+  languageName: node
+  linkType: hard
+
 "param-case@npm:2.1.x":
   version: 2.1.1
   resolution: "param-case@npm:2.1.1"
@@ -22136,6 +22154,16 @@ es6-shim@latest:
   peerDependencies:
     react: ^16.0.0
   checksum: 9810a693a394ea648ccec068d29e827fb59bd364f444ca76eded437c7eb5bf3b0d87fe787be871bdc7203daa97955f05953ee980955ab6d0049078e7126257ad
+  languageName: node
+  linkType: hard
+
+"react-papaparse@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "react-papaparse@npm:4.4.0"
+  dependencies:
+    "@types/papaparse": ^5.3.9
+    papaparse: ^5.4.1
+  checksum: 1404659aba4bd4e5a77667a80e72d5d3a4ca6c1d9e1db7f9f07f34e46331217846ddd522398bbd835be6ca9d0a3993d3f413a13dafe4582ac6f9aad020ec9c40
   languageName: node
   linkType: hard
 

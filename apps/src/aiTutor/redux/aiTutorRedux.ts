@@ -45,7 +45,7 @@ const initialState: AITutorState = {
   isChatOpen: false,
 };
 
-const formatQuestionForAITutor = (chatContext: ChatContext) => {
+export const formatQuestionForAITutor = (chatContext: ChatContext) => {
   if (chatContext.actionType === AITutorTypes.GENERAL_CHAT) {
     return chatContext.studentInput;
   }
@@ -84,6 +84,7 @@ export const askAITutor = createAsyncThunk(
     const chatApiResponse = await getChatCompletionMessage(
       formattedQuestion,
       storedMessages,
+      '',
       levelContext.levelId,
       chatContext.actionType,
       levelInstructions
