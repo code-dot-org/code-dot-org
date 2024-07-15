@@ -46,7 +46,7 @@ function AccessibleDialog({
             <CloseButton
               id="ui-close-dialog"
               className={closeIconStyle}
-              ariaLabel={i18n.closeDialog()}
+              aria-label={i18n.closeDialog()}
               onClick={xIconOnClick}
             />
             {children}
