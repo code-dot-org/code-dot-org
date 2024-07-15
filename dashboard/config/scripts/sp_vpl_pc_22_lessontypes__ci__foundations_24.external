@@ -5,40 +5,26 @@ description 'description here'
 markdown <<MARKDOWN
 # Unit Structure
 
-#### The Creating Apps with Devices unit is divided into <strong>two chapters.</strong> Each chapter includes several small projects and activities that provide an opportunity for students to practice new skills. If you are short on time, you may choose to complete only the first chapter of the unit.
-
+#### The Computer Systems and Devices unit includes small projects and activities that provide an opportunity for students to practice new skills. 
 
 ## Introduction to App Lab
 
-#### The Creating Apps with Devices unit begins with a lesson on App Lab to get your students familiar with the tool they will use this unit. If your students are already familiar with App Lab, you may decide to skip this lesson. <a href="https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students" target="blank" rel="noopener noreferrer">Click here</a> to learn more about skipping this lesson, allowing your classes to start right away with Chapter 1: Inputs and Outputs.
+#### The Computer Systems and Devices unit begins with a lesson on App Lab to get your students familiar with the tool they will use this unit. 
 
+## Unit Content
 
-## Chapters
+#### This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many "smart" hardware they may experience in their day-to-day lives.
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Chapter 1: Inputs and Outputs</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
+#### **Goals**
 
-#### <strong>Description:</strong> This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many "smart" hardware they may experience in their day-to-day lives.
+* #### Design and build a physical computing device that integrates physical inputs and outputs with digital apps.
+* #### Create app prototypes that use a physical device to control a digital app.
+
+#### **Big Questions**
 
 * #### What inputs and outputs are available on a physical device?
 * #### What inputs and outputs are available on an app?
 * #### How can we create apps that use a physical device to control a digital app?
-</p></div>
-</details>
-
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Chapter 2: Building Physical Prototypes</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-#### <strong>Description:</strong> In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.
-
-* #### How can a physical device use sensors to react to a physical environment?
-* #### How can simple hardware be used to develop innovative new products?
-</p></div>
-</details>
 
 ## Lessons
 #### Most lessons are designed for **45 minute class periods**, but can be modified for longer or shorter class periods. Some lessons, such as project lessons, take multiple days to complete. Suggested times are included in each lesson plan.

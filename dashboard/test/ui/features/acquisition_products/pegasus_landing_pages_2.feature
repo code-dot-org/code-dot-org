@@ -16,4 +16,4 @@ Examples:
   | http://code.org/tools/applab                                      | app lab tutorial landing   |
   | http://code.org/dance                                             | dance tutorial landing     |
   | http://code.org/educate/resources/videos                          | video resources landing    |
-  | http://code.org/educate/resources/videos?force_youtube_fallback=1 | resources yt fallback      |
+#  | http://code.org/educate/resources/videos?force_youtube_fallback=1 | resources yt fallback      |
