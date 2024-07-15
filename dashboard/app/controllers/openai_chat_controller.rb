@@ -22,8 +22,9 @@ class OpenaiChatController < ApplicationController
     # If the content is profane, we skip sending to OpenAI and instead hardcode a warning response on the front-end.
     return render(status: :ok, json: {safety_status: filter_result.type, flagged_content: filter_result.content}) if filter_result && filter_result.type == 'profanity'
 
-    # The system prompt is stored server-side so we need to prepend it to the student's messages
-    system_prompt = read_file_from_s3(S3_TUTOR_SYSTEM_PROMPT_PATH)
+    # The system prompt can be passed in as a param for testing purposes. If there isn't a custom
+    # system prompt, use the default prompt stored server-side.
+    system_prompt = !!params[:systemPrompt] ? params[:systemPrompt] : read_file_from_s3(S3_TUTOR_SYSTEM_PROMPT_PATH)
 
     # Determine if the level is validated and fetch test file contents if it is
     test_file_contents = ""

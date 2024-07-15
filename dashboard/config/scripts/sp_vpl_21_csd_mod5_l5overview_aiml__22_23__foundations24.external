@@ -3,9 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson 6: Classification Models 
+# Lesson 5: Classification Models 
 
-## Lesson 6 Overview
+## Lesson 5 Overview
 
 ### **Question of the Day:** How do computers learn to classify data?
 
