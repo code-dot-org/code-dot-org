@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('resize', handleWindowResize);
     handleWindowResize();
   } else {
-    // Hide the Create account button if in the Control bucket
+    // Hide the Create account button in the Control bucket
     createAccountButton ? (createAccountButton.style.display = 'none') : null;
     // Hide the Sign in and Create account buttons in the hamburger
     hamburgerButtons ? (hamburgerButtons.style.display = 'none') : null;

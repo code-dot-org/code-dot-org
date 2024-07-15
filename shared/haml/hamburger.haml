@@ -4,6 +4,7 @@
 
 #hamburger{class: contents[:visibility], tabindex: "0", 'aria-label': I18n.t('header_screen_reader_hamburger')}
   #hamburger-contents.hide-responsive-menu
+    -# Show the Sign in and Create account buttons if the user is not signed in
     - unless user_type
       #hamburger-sign-up-buttons
         .button-wrapper
