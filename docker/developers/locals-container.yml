@@ -3,8 +3,9 @@ build_apps: true
 use_my_apps: true
 
 aws_endpoint: http://localstack:4566
+aws_s3_endpoint: http://minio:9000
 aws_access_key_id: local-development
-aws_secret_access_key: local-development
+aws_secret_access_key: allstudents
 
 slack_bot_token: localoverride
 pardot_private_key: localoverride
@@ -25,3 +26,7 @@ statsig_server_secret_key: 'secret-fake-key'
 statsig_api_client_key: 'client-fake-key'
 session_store_server: redis://redis:6379/0/session
 geocoder_redis_url: redis://redis:6379/0/geocoder
+
+# Restricted keys
+cloudfront_private_key: !Secret
+cloudfront_key_pair_id: !Secret

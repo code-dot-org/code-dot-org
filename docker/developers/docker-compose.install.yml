@@ -55,34 +55,26 @@ services:
     command: /bin/bash -l -c '../docker/developers/run.sh yarn install'
 
   install-localstack:
-    image: amazon/aws-cli
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web-base
     depends_on:
-      localstack-contained:
+      localstack:
         condition: service_healthy
+      minio:
+        condition: service_started
     environment:
       - AWS_ACCESS_KEY_ID=local-development
-      - AWS_SECRET_ACCESS_KEY=local-development
+      - AWS_SECRET_ACCESS_KEY=allstudents
       - AWS_DEFAULT_REGION=us-east-1
-      - AWS_ENDPOINT_URL=http://localstack:4566
+      - AWS_LOCALSTACK_ENDPOINT_URL=http://localstack:4566
+      - AWS_S3_ENDPOINT_URL=http://minio:9000
     entrypoint: /bin/bash -c
-    command: |-
-      "
-      aws s3api create-bucket --bucket cdo-animation-library;
-      aws s3api put-bucket-versioning --bucket cdo-animation-library --versioning-configuration Status=Enabled;
-      aws s3api create-bucket --bucket cdo-v3-animations --object-lock-enabled-for-bucket;
-      aws s3api create-bucket --bucket cdo-v3-assets --object-lock-enabled-for-bucket;
-      aws s3api create-bucket --bucket cdo-v3-files --object-lock-enabled-for-bucket;
-      aws s3api create-bucket --bucket cdo-v3-libraries --object-lock-enabled-for-bucket;
-      aws s3api create-bucket --bucket cdo-v3-sources --object-lock-enabled-for-bucket;
-      aws s3api create-bucket --bucket cdo-ai --object-lock-enabled-for-bucket;
-      aws s3api create-bucket --bucket videos.code.org;
-      aws secretsmanager describe-secret --secret-id \"development/cdo/firebase_secret\" 2>/dev/null || \
-      aws secretsmanager create-secret --name \"development/cdo/firebase_secret\" --secret-string \"placeholder-firebase-secret\"
-      aws secretsmanager describe-secret --secret-id \"development/cdo/firebase_shared_secret\" 2>/dev/null || \
-      aws secretsmanager create-secret --name \"development/cdo/firebase_shared_secret\" --secret-string \"placeholder-firebase-shared-secret\"
-      aws secretsmanager describe-secret --secret-id \"development/cdo/slack_bot_token\" 2>/dev/null || \
-      aws secretsmanager create-secret --name \"development/cdo/slack_bot_token\" --secret-string \"placeholder-slack-token\"
-      "
+    volumes:
+      - ../..:/app/src
+      - ./locals-container.yml:/app/src/locals.yml
+    working_dir: /app/src/docker/developers
+    command: "./install-localstack.sh"
     networks:
       cdo_network_test:
       cdo_network:

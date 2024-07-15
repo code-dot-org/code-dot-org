@@ -1,0 +1,23 @@
+include:
+  - path: ./docker-compose.networks.yml
+  - path: ./docker-compose.localstack.yml
+
+services:
+  s3browser:
+    image: cloudlena/s3manager
+    expose:
+      - "8080"
+    ports:
+      - "8080:8080"
+    depends_on:
+      localstack:
+        condition: service_healthy
+    environment:
+      ACCESS_KEY_ID: local-development
+      SECRET_ACCESS_KEY: allstudents
+      REGION: us-east-1
+      ENDPOINT: localstack:4566
+      USE_SSL: false
+    networks:
+      cdo_network_test:
+      cdo_network:

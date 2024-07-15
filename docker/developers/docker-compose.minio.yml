@@ -1,0 +1,47 @@
+include:
+  - path: ./docker-compose.networks.yml
+
+services:
+  minio:
+    hostname: minio
+    # x86 image:
+    image: minio/minio:${MINIO_VERSION:-latest}
+    # arm image:
+    #image: pixelchrome/minio-arm:latest-arm32v7
+    environment: &minio-env
+      MINIO_VOLUMES: "http://minio:9000/data{1...4}"
+      MINIO_SERVER_URL: "http://minio:9000"
+      MINIO_ROOT_USER: local-development
+      MINIO_ROOT_PASSWORD: allstudents
+      MINIO_STORAGE_CLASS_STANDARD: "EC:2"
+    ports:
+      - "9000:9000"
+      - "3001:3001"
+    volumes:
+      - minio1_storage:/data1
+      - minio2_storage:/data2
+      - minio3_storage:/data3
+      - minio4_storage:/data4
+    command: server --console-address ":3001" /data1 /data2 /data3 /data4
+    networks:
+      cdo_network:
+      cdo_network_test:
+
+  mc:
+    image: minio/mc
+    depends_on:
+      minio:
+        condition: service_started
+    entrypoint: ''
+    environment:
+      <<: *minio-env
+    profiles:
+      - web
+    networks:
+      cdo_network:
+
+volumes:
+  minio1_storage:
+  minio2_storage:
+  minio3_storage:
+  minio4_storage:

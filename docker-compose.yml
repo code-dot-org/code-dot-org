@@ -23,3 +23,9 @@ include:
 
   # Localstack support
   - path: ./docker/developers/docker-compose.localstack.yml
+
+  # MinIO (S3 emulation)
+  - path: ./docker/developers/docker-compose.minio.yml
+
+  # S3 Browser
+  - path: ./docker/developers/docker-compose.s3browser.yml

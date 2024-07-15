@@ -36,7 +36,7 @@ services:
         condition: service_healthy
       redis-contained:
         condition: service_started
-      localstack-contained:
+      localstack:
         condition: service_healthy
     tty: true
     command: /bin/bash -l -c './bin/dashboard-server'

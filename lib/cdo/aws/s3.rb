@@ -49,7 +49,7 @@ module AWS
     def self.connect_v2!
       if CDO.aws_emulated?
         self.s3 ||= Aws::S3::Client.new(
-          endpoint: CDO.aws_endpoint,
+          endpoint: CDO.aws_s3_endpoint || CDO.aws_endpoint,
           access_key_id: CDO.aws_access_key_id,
           secret_access_key: CDO.aws_secret_access_key,
           region: CDO.aws_region,

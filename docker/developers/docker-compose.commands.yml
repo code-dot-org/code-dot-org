@@ -13,6 +13,7 @@ services:
     volumes: &common-shell-volumes
       - ./.bash_history:/home/cdodev/.bash_history
       - ./.irb_history:/home/cdodev/.irb_history
+      - ./locals-container.yml:/app/src/locals.yml
     command: /bin/bash -l
   shell-aws: &command-aws-base
     extends:
@@ -30,8 +31,18 @@ services:
   # Spins up a dashboard server console with contributor access
   console:
     <<: *command-base
+    environment:
+      SKIP_I18N_INIT: true
+    command: /bin/bash -l -c './bin/dashboard-console'
+  console-full-init:
+    <<: *command-base
     command: /bin/bash -l -c './bin/dashboard-console'
   console-aws:
+    <<: *command-aws-base
+    environment:
+      SKIP_I18N_INIT: true
+    command: /bin/bash -l -c './bin/dashboard-console'
+  console-aws-full-init:
     <<: *command-aws-base
     command: /bin/bash -l -c './bin/dashboard-console'
 

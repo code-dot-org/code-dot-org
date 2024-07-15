@@ -19,20 +19,16 @@ services:
       - "${LOCALSTACK_VOLUME_DIR:-localstack_data}:/var/lib/localstack"
       - "/var/run/docker.sock:/var/run/docker.sock"
 
-  localstack-contained:
+  localstack:
     <<: *localstack-base
-    container_name: cdo-localstack-contained
+    container_name: cdo-localstack
     expose:
       - "4566"
+    ports:
+      - "4566:4566"
     networks:
       cdo_network_test:
       cdo_network:
-
-  localstack:
-    container_name: cdo-localstack-main
-    <<: *localstack-base
-    ports:
-      - "4566:4566"
 
 volumes:
   localstack_data:
