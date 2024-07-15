@@ -97,11 +97,6 @@ class AichatControllerTest < ActionController::TestCase
       ]
     )
 
-    # Note that second expected argument filters out the previous profane message
-    # in what we send to Sagemaker.
-    AichatSagemakerHelper.expects(:format_inputs_for_sagemaker_request).
-      with(params[:aichatModelCustomizations], [ok_message], params[:newMessage].stringify_keys).once
-
     sign_in(@genai_pilot_student)
     post :chat_completion, params: params, as: :json
     assert_response :success

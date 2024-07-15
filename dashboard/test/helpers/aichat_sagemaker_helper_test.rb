@@ -62,7 +62,7 @@ class AichatSagemakerHelperTest < ActionView::TestCase
     assert_equal model_output, expected_model_output
   end
 
-  test 'Testing format sagemaker model output for Karen model with ' do
+  test 'Testing format sagemaker model output for Karen model' do
     model_processor = KarenProcessor.new
     generated_text = "<|im_start|>system\n<|im_end|>\n<|im_start|>user\nEdit the following text for spelling and grammar mistakes: hi ther<|im_end|>\n<|im_start|>assistant\nHi there!"
     model_output = model_processor.format_model_output(generated_text)
