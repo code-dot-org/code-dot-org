@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
   );
   const signInButtonDesktop = document.querySelector('#signin_button.desktop');
   const hamburgerButtons = document.querySelector('#hamburger-sign-up-buttons');
+  const signUpPage = window.location.pathname.includes('/users/sign_up');
 
   function handleWindowResize() {
     if (window.innerWidth < 425) {
@@ -33,18 +34,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (
     showCreateAccountButton() &&
-    // Hide this on the Sign Up page
-    !window.location.pathname.includes('/users/sign_up')
+    createAccountButton &&
+    hamburgerButtons &&
+    !signUpPage
   ) {
-    // Show the Create Account button if in the Test bucket
+    // Show the Create Account button in the Test bucket
     createAccountButton.style.display = 'block';
     // Hide the Sign in and Create account buttons if the screen size is <425px
     window.addEventListener('resize', handleWindowResize);
     handleWindowResize();
   } else {
     // Hide the Create account button if in the Control bucket
-    createAccountButton.style.display = 'none';
+    createAccountButton ? (createAccountButton.style.display = 'none') : null;
     // Hide the Sign in and Create account buttons in the hamburger
-    hamburgerButtons.style.display = 'none';
+    hamburgerButtons ? (hamburgerButtons.style.display = 'none') : null;
   }
 });
