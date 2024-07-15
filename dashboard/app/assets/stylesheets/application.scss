@@ -1264,6 +1264,7 @@ $default-modal-width: 640px;
 
 #sign_in_or_user {
   float: left;
+  display: flex;
 }
 
 input.header_input {
