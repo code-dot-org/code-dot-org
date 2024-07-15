@@ -43,7 +43,6 @@ Scenario: Viewing student metadata
   And I navigate to the V2 progress dashboard for "Untitled Section"
 
   # Toggle to V2 progress view
-  Then I click selector "#ui-test-toggle-progress-view"
   And I wait until element "h6:contains(Icon Key)" is visible
   And I wait until element "#ui-test-progress-table-v2" is visible
 
