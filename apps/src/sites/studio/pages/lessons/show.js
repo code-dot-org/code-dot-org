@@ -17,6 +17,8 @@ import {
   setVerified,
   setVerifiedResources,
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
+import experiments from '@cdo/apps/util/experiments';
+import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {tooltipifyVocabulary} from '@cdo/apps/utils';
 import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
@@ -31,6 +33,7 @@ $(document).ready(function () {
   displayLessonOverview();
   prepareExpandableImageDialog();
   tooltipifyVocabulary();
+  displayDifferentiationChat();
   renderCopyLessonButton();
 });
 
@@ -136,6 +139,15 @@ function prepareExpandableImageDialog() {
     </Provider>,
     container
   );
+}
+
+function displayDifferentiationChat() {
+  const aiDiffFabMountPoint = document.getElementById(
+    'ai-differentiation-fab-mount-point'
+  );
+  if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
+    ReactDOM.render(<AiDiffFloatingActionButton />, aiDiffFabMountPoint);
+  }
 }
 
 const renderCopyLessonButton = () => {

@@ -1,5 +1,6 @@
-import {ProjectType} from '../types';
 import * as utils from '@cdo/apps/utils';
+
+import {ProjectType} from '../types';
 
 const rootUrl = '/projects/';
 

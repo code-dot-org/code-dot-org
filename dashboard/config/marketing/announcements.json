@@ -29,22 +29,13 @@
       "buttonUrl": "https://code.org/music",
       "buttonId": "music-lab-launch"
     },
-    "lms-launch": {
-      "dcdo": "show-updated-lms-content",
-      "image": "/shared/images/banners/banner-lms-launch.png",
-      "title": "Discover our new LMS integrations",
-      "body": "We've added new LMS integrations for Canvas and Schoology! Connect existing LMS classrooms in your school to Code.org with one-click Roster Syncing, Single Sign-On, and integrated access to curriculum.",
-      "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/lms",
-      "buttonId": "lms-launch"
-    },
     "curriculum-launch-2024": {
       "dcdo": "curriculum-launch-2024",
       "image": "/shared/images/banners/banner-curriculum-launch-2024.png",
       "title": "Discover new and updated curriculum!",
       "body": "Explore our latest units and professional learning resources to inspire future tech innovators.",
       "buttonText": "See what's new",
-      "buttonUrl": "",
+      "buttonUrl": "https://codeorg.medium.com/ai-game-design-and-more-in-code-orgs-2024-25-curriculum-updates-caff691935ad",
       "buttonId": "curriculum-launch-2024"
     },
     "progress-launch": {

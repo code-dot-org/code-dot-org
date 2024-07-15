@@ -1,10 +1,10 @@
 $width-sm: 640px;
 
-.lms-banner {
-  background: url('/images/banners/banner-lms-pattern.png') center center;
+.curriculum-banner-skinny {
+  background: url('/images/banners/banner-bg-school-supplies-dark-black.png') center center;
   background-color: #292F36;
   background-size: cover;
-  padding: 2rem;
+  padding: 1rem 2rem;
 
   .wrapper {
     max-width: 960px;
@@ -37,7 +37,7 @@ $width-sm: 640px;
   }
 
   img {
-    max-width: 12rem;
+    max-width: 10rem;
     
     @media (max-width: $width-sm) {
       align-self: center;

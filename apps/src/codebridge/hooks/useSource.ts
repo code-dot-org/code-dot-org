@@ -29,7 +29,7 @@ export const useSource = (defaultSources: ProjectSources) => {
   const isEditingExemplarMode = getAppOptionsEditingExemplar();
   const initialSources = useInitialSources(defaultSources);
   const levelStartSource = useAppSelector(
-    state => state.lab.levelProperties?.source
+    state => state.lab.levelProperties?.startSources
   );
   const previousLevelIdRef = useRef<number | null>(null);
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
@@ -59,7 +59,7 @@ export const useSource = (defaultSources: ProjectSources) => {
   useEffect(() => {
     if (isStartMode) {
       header.showLevelBuilderSaveButton(() => {
-        return {source};
+        return {start_sources: source};
       });
     } else if (isEditingExemplarMode) {
       header.showLevelBuilderSaveButton(

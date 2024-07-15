@@ -1,8 +1,12 @@
 import React from 'react';
+
 import {
   LevelPredictSettings,
   PredictQuestionType,
 } from '@cdo/apps/lab2/levelEditors/types';
+
+import PredictResetButton from './PredictResetButton';
+
 import moduleStyles from './predict.module.scss';
 
 interface PredictQuestionProps {
@@ -58,10 +62,10 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
             >
               <input
                 type={predictSettings.isMultiSelect ? 'checkbox' : 'radio'}
-                value={option}
+                value={index.toString()}
                 checked={
                   (predictResponse &&
-                    predictResponse.split(',').includes(option)) ||
+                    predictResponse.split(',').includes(index.toString())) ||
                   false
                 }
                 onChange={handleMultiSelectChanged}
@@ -77,6 +81,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
           );
         })
       )}
+      <PredictResetButton />
     </>
   );
 };

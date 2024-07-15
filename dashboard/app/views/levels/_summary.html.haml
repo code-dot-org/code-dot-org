@@ -78,6 +78,9 @@
             - localized_answers.each do |answer|
               %li{style: "height: #{height}"}!= render_multi_or_match_content(answer['text'])
 
+    - elsif level.predict_level?
+      #predict-question
+
   #summary-responses
 
   - if answer_is_visible
@@ -97,6 +100,8 @@
                 - if correct_answer[:letter]
                   = "#{correct_answer[:letter]}. "
                 != render_multi_or_match_content(localized_answers[correct_answer[:index]]['text'])
+    - elsif level.predict_level?
+      #summary-predict-correct-answer.hide
 
   #summary-feedback-banner
 

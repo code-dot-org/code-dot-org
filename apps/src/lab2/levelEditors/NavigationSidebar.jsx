@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
+
 import {Heading3} from '@cdo/apps/componentLibrary/typography';
+
 import moduleStyles from './navigation.module.scss';
 
 const NavigationSidebar = () => {

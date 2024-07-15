@@ -936,6 +936,7 @@ class Pd::Workshop < ApplicationRecord
       organizer: organizer,
       enrollment_code: enrollments&.first&.code,
       status: state,
+      course_offerings: course_offerings,
     }
   end
 end
