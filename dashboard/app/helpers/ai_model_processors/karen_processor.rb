@@ -1,4 +1,4 @@
-class AiModelProcessors::KarenProcessor < MistralProcessor
+class AiModelProcessors::KarenProcessor < AiModelProcessors::MistralProcessor
   SYSTEM = "system".freeze
   KAREN_PRETEXT = "Edit the following text for spelling and grammar mistakes: ".freeze
   CHAT_ML_BEGIN_TOKEN = "<|im_start|>".freeze
