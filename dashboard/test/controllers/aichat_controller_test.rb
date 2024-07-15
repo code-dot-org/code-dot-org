@@ -74,7 +74,7 @@ class AichatControllerTest < ActionController::TestCase
 
   test 'returns user profanity status when chat message contains profanity' do
     sign_in(@genai_pilot_student)
-    ShareFiltering.stubs(:find_failure).returns(ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn'))
+    ShareFiltering.stubs(:find_profanity_failure).returns(ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn'))
     post :chat_completion, params: @profanity_violation_params, as: :json
 
     assert_response :success
@@ -114,7 +114,7 @@ class AichatControllerTest < ActionController::TestCase
 
   test 'returns model profanity status when model response contains profanity' do
     sign_in(@genai_pilot_student)
-    ShareFiltering.stubs(:find_failure).returns(
+    ShareFiltering.stubs(:find_profanity_failure).returns(
       nil,
       ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn')
     )
