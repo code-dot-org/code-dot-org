@@ -29,14 +29,16 @@ const WelcomeBanner = () => {
 
   return (
     <div className={styles.welcomeContainer}>
-      <div className={styles.welcomeIconContainer}>
-        <img src={ltiProviderIcon} alt={ltiProviderName} />
-        <FontAwesomeV6Icon
-          className={styles.exchangeIcon}
-          iconName={'exchange'}
-        />
-        <img src={codeLogo} alt={i18n.codeLogo()} />
-      </div>
+      {ltiProviderIcon && (
+        <div className={styles.welcomeIconContainer}>
+          <img src={ltiProviderIcon} alt={ltiProviderName} />
+          <FontAwesomeV6Icon
+            className={styles.exchangeIcon}
+            iconName={'exchange'}
+          />
+          <img src={codeLogo} alt={i18n.codeLogo()} />
+        </div>
+      )}
 
       <div className={styles.titleContainer}>
         <Typography semanticTag={'h1'} visualAppearance={'heading-xxl'}>
