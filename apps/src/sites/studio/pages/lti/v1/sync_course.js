@@ -6,6 +6,7 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import LtiSectionSyncDialog from '@cdo/apps/lib/ui/lti/sync/LtiSectionSyncDialog';
 import getScriptData from '@cdo/apps/util/getScriptData';
 

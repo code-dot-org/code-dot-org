@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import LessonEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonEditor';
-import {getStore, registerReducers} from '@cdo/apps/redux';
+import {Provider} from 'react-redux';
+
 import reducers, {
   initActivities,
   initLevelSearching,
   initUnitInfo,
   mapActivityDataForEditor,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import LessonEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonEditor';
+import programmingExpressionsEditor, {
+  initProgrammingExpressions,
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
 import createResourcesReducer, {
   initResources,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
@@ -18,12 +21,10 @@ import createStandardsReducer, {
 import vocabulariesEditor, {
   initVocabularies,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
-import programmingExpressionsEditor, {
-  initProgrammingExpressions,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
-import {Provider} from 'react-redux';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
   const lessonData = getScriptData('lesson');

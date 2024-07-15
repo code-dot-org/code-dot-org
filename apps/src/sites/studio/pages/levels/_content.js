@@ -1,12 +1,13 @@
 import $ from 'jquery';
-import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import React from 'react';
 import ReactDom from 'react-dom';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
+
 import commonBlocks from '@cdo/apps/blocksCommon';
-import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
+import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import logToCloud from '@cdo/apps/logToCloud';
+import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   // Load app specific Blockly blocks. This will enable level creators to write
