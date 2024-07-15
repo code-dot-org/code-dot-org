@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class DeviseLockableTest < ActionController::TestCase
+class DeviseUnlocksControllerTest < ActionController::TestCase
   tests Devise::UnlocksController
   include Devise::Test::ControllerHelpers
 
