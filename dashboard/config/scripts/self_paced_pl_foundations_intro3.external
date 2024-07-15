@@ -30,12 +30,13 @@ markdown <<MARKDOWN
 #### At this time, only the first three units of Foundations of Computer Science have Curriculum Overviews:
 
 * #### **Unit 1:** Computer Systems and Devices
-	* #### Version 1: For classrooms with <a href="https://code.org/maker/circuitplayground" target="blank" rel="noopener noreferrer">Adafruit's Circuit Playground</a>
-	* #### Version 2: For classrooms with the <a href="https://code.org/maker/microbit" target="blank" rel="noopener noreferrer">BBC micro:bit</a>
+	* #### Option A: For classrooms with the <a href="https://code.org/maker/microbit" target="blank" rel="noopener noreferrer">BBC micro:bit</a>
+    * #### Option B: For classrooms with <a href="https://code.org/maker/circuitplayground" target="blank" rel="noopener noreferrer">Adafruit's Circuit Playground</a>
+
 * #### **Unit 2:** Representing Information
 * #### **Unit 3:** Artificial Intelligence and Machine Learning
 
-#### For the last three units, we recommend going through the curriculum and completing the student activities to prepare to teach the content.
+#### For the last three units and the no-device version of Unit 1, we recommend going through the curriculum and completing the student activities to prepare to teach the content.
 
 </p></div>
 

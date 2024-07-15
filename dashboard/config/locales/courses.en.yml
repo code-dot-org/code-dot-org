@@ -918,7 +918,7 @@ en:
             - You can access the [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) to learn more about getting started.
           version_title: "'24-'25"
         focus-on-creativity-2024:
-          title: Focus on Creativity '24-'25 (CS Discoveries)
+          title: Focus on Creativity '24-'25 (CS Discoveries)  ('24-'25)
           description_short: A collection of Computer Science Discovery units that focuses on being creative and creating with computing.
           description_student: |-
             Focus on Creativity is a collection of Computer Science Discoveries (CS Discoveries) units that empowers students to be creative as they learn to create websites, animations and games, and apps for devices. Students create authentic artifacts and engage with computer science not only as a medium for creativity, but also for communication, problem-solving, and fun.
@@ -1003,23 +1003,23 @@ en:
           description_student: |
             ## Welcome!
 
-            ##### Welcome to Code.org's free self-paced online course for educators to get started teaching **Foundations of Computer Science**! After completing this online course, you'll be ready to get started teaching Code.org's **Foundations of Computer Science** course with your students.
+            ##### Welcome to Code.org's free self-paced online course for educators to get started teaching <a href="https://studio.code.org/courses/foundations-of-cs-beta-2024" target="blank" rel="noopener noreferrer">**Foundations of Computer Science**</a>! After completing this online course, you'll be ready to get started teaching Code.org's **Foundations of Computer Science** course with your students.
 
             ### **Find the learning that works for you**
 
-            * ##### **Start with Introduction to Teaching Foundations of CS:** This section will introduce you to this course and help you customize your learning path.
+            * ##### **Start with Introduction to Teaching Foundations of Computer Science:** This section will introduce you to this course and help you customize your learning path.
             * ##### **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson. However, we encourage you to engage with the content at your own pace.
-            * ##### **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and Foundations of CS. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about this professional learning course before getting started.
+            * ##### **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and Foundations of Computer Science. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about this professional learning course before getting started.
           description_teacher: |
             ## Welcome!
 
-            ##### Welcome to Code.org's free self-paced online course for educators to get started teaching **Foundations of Computer Science**! After completing this online course, you'll be ready to get started teaching Code.org's **Foundations of Computer Science** course with your students.
+            ##### Welcome to Code.org's free self-paced online course for educators to get started teaching <a href="https://studio.code.org/courses/foundations-of-cs-beta-2024" target="blank" rel="noopener noreferrer">**Foundations of Computer Science**</a>! After completing this online course, you'll be ready to get started teaching Code.org's **Foundations of Computer Science** course with your students.
 
             ### **Find the learning that works for you**
 
-            * ##### **Start with Introduction to Teaching Foundations of CS:** This section will introduce you to this course and help you customize your learning path.
+            * ##### **Start with Introduction to Teaching Foundations of Computer Science:** This section will introduce you to this course and help you customize your learning path.
             * ##### **Go at your own pace:** This self-paced course is designed to put you in the driver's seat, and give you control over your own learning. Suggested times are given for each module and lesson. However, we encourage you to engage with the content at your own pace.
-            * ##### **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and Foundations of CS. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about this professional learning course before getting started.
+            * ##### **Pick your content:** The content of this professional learning course is organized in the suggested progression for teachers new to both Code.org and Foundations of Computer Science. However, you can engage with the content in the order that best meets your needs. We recommend all teachers start with the short welcome unit to learn more about this professional learning course before getting started.
           version_title: "'24-'25"
         self-paced-pl-computer-vision:
           title: self-paced-pl-computer-vision
@@ -1083,4 +1083,10 @@ en:
             * **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**
 
             * **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and Coding with AI. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Preparing to Teach Coding with AI.
+          version_title: "'24-'25"
+        data-science-2024:
+          title: Data Science Pilot
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
           version_title: "'24-'25"
