@@ -67,6 +67,8 @@ Dashboard::Application.routes.draw do
 
     resources :images, only: [:new]
 
+    get "/ai_tutor/tester", to: "ai_tutor#tester"
+
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
 

@@ -1520,6 +1520,10 @@ class User < ApplicationRecord
     permission?(UserPermission::AUTHORIZED_TEACHER)
   end
 
+  def levelbuilder?
+    permission?(UserPermission::LEVELBUILDER)
+  end
+
   # A user is a verified instructor if you are a universal_instructor, plc_reviewer,
   # facilitator, authorized_teacher, or levelbuilder. All of these permissions tell us someone
   # should be trusted with locked down instructor only content. It is important to use this

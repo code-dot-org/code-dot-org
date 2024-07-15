@@ -5,6 +5,8 @@ import {
   PredictQuestionType,
 } from '@cdo/apps/lab2/levelEditors/types';
 
+import PredictResetButton from './PredictResetButton';
+
 import moduleStyles from './predict.module.scss';
 
 interface PredictQuestionProps {
@@ -79,6 +81,7 @@ const PredictQuestion: React.FunctionComponent<PredictQuestionProps> = ({
           );
         })
       )}
+      <PredictResetButton />
     </>
   );
 };

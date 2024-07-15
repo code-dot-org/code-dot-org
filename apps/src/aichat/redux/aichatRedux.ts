@@ -215,11 +215,20 @@ export const onSaveComplete =
         })
       );
 
+      // Report to analytics the changed value for only selected model id and temperature properties.
+      // Do not include the free text changes (system prompt and retrieval contexts).
+      const propertiesChangedValueToReport = ['selectedModelId', 'temperature'];
+      const propertyChangedTo = propertiesChangedValueToReport.includes(
+        typedProperty
+      )
+        ? currentAiCustomizations[typedProperty]
+        : 'NULL';
       if (currentSaveType) {
         analyticsReporter.sendEvent(
           saveTypeToAnalyticsEvent[currentSaveType],
           {
             propertyUpdated: property,
+            propertyChangedTo,
             levelPath: window.location.pathname,
           },
           PLATFORMS.BOTH

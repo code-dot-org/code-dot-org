@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-10 23:05:50 UTC",
+    "serialized_at": "2024-07-13 00:45:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -87,6 +87,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-foundations-intro1"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -109,6 +112,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-foundations-intro2"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -131,6 +137,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-foundations-intro3"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
