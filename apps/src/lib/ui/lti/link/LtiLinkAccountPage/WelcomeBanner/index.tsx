@@ -11,7 +11,6 @@ import {LtiProviderContext} from '../context';
 
 const WelcomeBanner = () => {
   const {ltiProvider, ltiProviderName} = useContext(LtiProviderContext)!;
-  const isLMS = true;
 
   const getLtiProviderIcon = useCallback(() => {
     switch (ltiProvider) {
@@ -31,34 +30,26 @@ const WelcomeBanner = () => {
   return (
     <div className={styles.welcomeContainer}>
       <div className={styles.welcomeIconContainer}>
-        {isLMS && (
-          <>
-            <img src={ltiProviderIcon} alt={ltiProviderName} />
-            <FontAwesomeV6Icon
-              className={styles.exchangeIcon}
-              iconName={'exchange'}
-            />
-          </>
-        )}
+        <img src={ltiProviderIcon} alt={ltiProviderName} />
+        <FontAwesomeV6Icon
+          className={styles.exchangeIcon}
+          iconName={'exchange'}
+        />
         <img src={codeLogo} alt={i18n.codeLogo()} />
       </div>
 
       <div className={styles.titleContainer}>
         <Typography semanticTag={'h1'} visualAppearance={'heading-xxl'}>
-          {isLMS
-            ? i18n.ltiLinkAccountWelcomeBannerHeaderLabel()
-            : i18n.accountWelcomeBannerHeaderLabel()}
+          {i18n.ltiLinkAccountWelcomeBannerHeaderLabel()}
         </Typography>
         <Typography
           className={styles.titleDesc}
           semanticTag={'p'}
           visualAppearance={'body-two'}
         >
-          {isLMS
-            ? i18n.ltiLinkAccountWelcomeBannerContent({
-                providerName: ltiProviderName,
-              })
-            : i18n.accountWelcomeBannerContentWorkshopEnroll()}
+          {i18n.ltiLinkAccountWelcomeBannerContent({
+            providerName: ltiProviderName,
+          })}
         </Typography>
       </div>
     </div>

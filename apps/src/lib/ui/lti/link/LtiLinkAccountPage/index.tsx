@@ -12,7 +12,6 @@ import {LtiProviderContext} from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/c
 
 const LtiLinkAccountPage = () => {
   const {newCtaType} = useContext(LtiProviderContext)!;
-  const isLMS = true;
   const handleCancel = () => {
     newCtaType === 'new'
       ? navigateToHref(`/users/cancel`)
@@ -24,11 +23,7 @@ const LtiLinkAccountPage = () => {
       <div className={styles.contentContainer}>
         <WelcomeBanner />
         <div className={styles.cardContainer}>
-          {newCtaType === 'new' || !isLMS ? (
-            <NewAccountCard />
-          ) : (
-            <ContinueCard />
-          )}
+          {newCtaType === 'new' ? <NewAccountCard /> : <ContinueCard />}
           <ExistingAccountCard />
         </div>
         <div className={styles.cancelButtonContainer}>
