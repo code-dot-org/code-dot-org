@@ -2,10 +2,10 @@ require 'test_helper'
 
 class CraftTest < ActiveSupport::TestCase
   def setup
-    @craft = Craft.new
+    @gamelab_jr = Craft.new
   end
 
   test 'uses_google_blockly? returns true' do
-    assert @craft.uses_google_blockly?
+    assert @gamelab_jr.uses_google_blockly?
   end
 end

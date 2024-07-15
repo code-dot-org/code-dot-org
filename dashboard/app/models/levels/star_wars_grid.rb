@@ -43,10 +43,6 @@ class StarWarsGrid < Studio
     %w(hoc2015x)
   end
 
-  def uses_google_blockly?
-    DCDO.get('maze_sw_google_blockly', true)
-  end
-
   def common_blocks(_)
     <<-XML.strip_heredoc.chomp
       <category name="Direction Movement (Text)">

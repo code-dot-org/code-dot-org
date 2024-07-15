@@ -15,7 +15,7 @@ Feature: Callouts
     | url                                                | callout_id | text                                                                     | close_target      |
     | http://studio.code.org/s/20-hour/lessons/2/levels/1?noautoplay=true  | 1          | Hit "Run" to try your program                                            | #runButton        |
     | http://studio.code.org/hoc/1?noautoplay=true        | 1          | Hit "Run" to try your program                                            | #runButton        |
-    | http://studio.code.org/hoc/1?noautoplay=true        | 0          | Drag a "move" block and snap it below the other block                    | [data-id='moveForward']    |
+    | http://studio.code.org/hoc/1?noautoplay=true        | 0          | Drag a "move" block and snap it below the other block                    | [block-id='1']    |
     | http://studio.code.org/s/20-hour/lessons/2/levels/9?noautoplay=true | 0          | Blocks that are grey can't be deleted. Can you solve the puzzle anyway?  | g                 |
     | http://studio.code.org/hoc/9?noautoplay=true        | 0          | Blocks that are grey can't be deleted. Can you solve the puzzle anyway?  | g                 |
     | http://studio.code.org/s/20-hour/lessons/2/levels/14?noautoplay=true | 0          | Click here to see the code for the program you're making                 | #show-code-header |
