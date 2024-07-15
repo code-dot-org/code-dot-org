@@ -507,6 +507,24 @@ const styles = {
     padding: 20,
     opacity: 0
   },
+  guideClickToContinueReminderContainer: {
+    position: 'absolute',
+    right: '1%',
+    bottom: 0,
+    width: '5%',
+    minWidth: 25,
+    height: 15,
+    animation: '0.25s ease-in 4s 1 normal backwards running fadein'
+  },
+  guideClickToContinueReminder1: {
+    width: '100%',
+    position: 'absolute'
+  },
+  guideClickToContinueReminder2: {
+    animation: '1s linear 0.5s infinite normal none running blink',
+    width: '100%',
+    position: 'absolute'
+  },
   guideBackground: {
     backgroundColor: 'rgba(0,0,0,0.3)',
     position: 'absolute',

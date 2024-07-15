@@ -1,8 +1,5 @@
 import {AppMode, Modes} from '../constants';
-import turtleImage from '@public/images/turtle-large.png';
 import seahorseImage from '@public/images/seahorse-large.png';
-import trashBottleImage from '@public/images/bottle-large.png';
-import trashCanImage from '@public/images/can-large.png';
 import I18n from '../i18n';
 
 const imageStyleOverrides = {
@@ -11,6 +8,9 @@ const imageStyleOverrides = {
   bottle: {bottom: '1%', left: '20%'},
   can: {bottom: '2%', left: '16%'}
 };
+
+const encourageStopTrainingCountsFishLong = [150, 200, 250];
+const encourageStopTrainingCountsDefault = [100, ...encourageStopTrainingCountsFishLong];
 
 const guidesK5 = [
   {
@@ -43,51 +43,12 @@ const guidesK5 = [
     arrow: 'LowerCenter'
   },
   {
-    id: 'fishvtrash-training-pause1',
-    textFn: () => I18n.t('fishvtrash-training-pause1'),
+    id: "fishvtrash-training-pause2",
+    textFn: () => I18n.t("fishvtrash-training-pause2"),
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
-      fn: state => {
-        return state.yesCount + state.noCount >= 5;
-      }
-    },
-    style: 'Info',
-    image: trashBottleImage,
-    imageStyle: imageStyleOverrides.bottle
-  },
-  {
-    id: 'fishvtrash-training-pause2',
-    textFn: () => I18n.t('fishvtrash-training-pause2'),
-    when: {
-      appMode: AppMode.FishVTrash,
-      currentMode: Modes.Training,
-      fn: state => {
-        return state.yesCount + state.noCount >= 5;
-      }
-    }
-  },
-  {
-    id: 'fishvtrash-training-pause3',
-    textFn: () => I18n.t('fishvtrash-training-pause3'),
-    when: {
-      appMode: AppMode.FishVTrash,
-      currentMode: Modes.Training,
-      fn: state => {
-        return state.yesCount + state.noCount >= 15;
-      }
-    },
-    style: 'Info',
-    image: trashCanImage,
-    imageStyle: imageStyleOverrides.can
-  },
-  {
-    id: 'fishvtrash-training-pause4',
-    textFn: () => I18n.t('fishvtrash-training-pause4'),
-    when: {
-      appMode: AppMode.FishVTrash,
-      currentMode: Modes.Training,
-      fn: state => {
+      fn: (state) => {
         return state.yesCount + state.noCount >= 15;
       }
     }
@@ -98,11 +59,24 @@ const guidesK5 = [
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
-      fn: state => {
-        return state.yesCount + state.noCount >= 30;
+      fn: (state) => {
+        return state.yesCount + state.noCount >= 50;
+      },
+    },
+  },
+  ...encourageStopTrainingCountsDefault.map(count => {
+    return {
+      id: `fishvtrash-training-generic-please-continue-count-${count}`,
+      textFn: () => I18n.t('training-generic-please-continue'),
+      when: {
+        appMode: AppMode.FishVTrash,
+        currentMode: Modes.Training,
+        fn: state => {
+          return state.yesCount + state.noCount >= count;
+        }
       }
     }
-  },
+  }),
   {
     id: 'fishvtrash-predicting-init1',
     textFn: () => I18n.t('fishvtrash-predicting-init1'),
@@ -168,9 +142,12 @@ const guidesK5 = [
     arrow: 'LowerRight'
   },
   {
-    id: 'creaturesvtrashdemo-predicting-init1',
-    textFn: () => 'This is a test string.',
-    when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting}
+    id: "creaturesvtrashdemo-predicting-init1",
+    textFn: () => I18n.t("creaturesvtrashdemo-predicting-init1"),
+    when: {
+      appMode: AppMode.CreaturesVTrashDemo,
+      currentMode: Modes.Predicting,
+    },
   },
   {
     id: 'creaturesvtrashdemo-predicting-init2',
@@ -238,9 +215,9 @@ const guidesK5 = [
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
-      fn: state => {
-        return state.yesCount + state.noCount >= 5;
-      }
+      fn: (state) => {
+        return state.yesCount + state.noCount >= 15;
+      },
     },
     style: 'Info',
     image: seahorseImage,
@@ -252,32 +229,7 @@ const guidesK5 = [
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
-      fn: state => {
-        return state.yesCount + state.noCount >= 5;
-      }
-    }
-  },
-  {
-    id: 'creaturesvtrash-training-init4',
-    textFn: () => I18n.t('creaturesvtrash-training-init4'),
-    when: {
-      appMode: AppMode.CreaturesVTrash,
-      currentMode: Modes.Training,
-      fn: state => {
-        return state.yesCount + state.noCount >= 15;
-      }
-    },
-    style: 'Info',
-    image: turtleImage,
-    imageStyle: imageStyleOverrides.turtle
-  },
-  {
-    id: 'creaturesvtrash-training-init5',
-    textFn: () => I18n.t('creaturesvtrash-training-init5'),
-    when: {
-      appMode: AppMode.CreaturesVTrash,
-      currentMode: Modes.Training,
-      fn: state => {
+      fn: (state) => {
         return state.yesCount + state.noCount >= 15;
       }
     }
@@ -288,11 +240,24 @@ const guidesK5 = [
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
-      fn: state => {
-        return state.yesCount + state.noCount >= 30;
+      fn: (state) => {
+        return state.yesCount + state.noCount >= 50;
+      },
+    },
+  },
+  ...encourageStopTrainingCountsDefault.map(count => {
+    return {
+      id: `creaturesvtrash-training-generic-please-continue-count-${count}`,
+      textFn: () => I18n.t('training-generic-please-continue'),
+      when: {
+        appMode: AppMode.CreaturesVTrash,
+        currentMode: Modes.Training,
+        fn: state => {
+          return state.yesCount + state.noCount >= count;
+        }
       }
     }
-  },
+  }),
   {
     id: 'creaturesvtrash-predicting-init1',
     textFn: () => I18n.t('creaturesvtrash-predicting-init1'),
@@ -438,6 +403,19 @@ const guidesK5 = [
       }
     }
   },
+  ...encourageStopTrainingCountsFishLong.map(count => {
+    return {
+      id: `fishlong-training-generic-please-continue-count-${count}`,
+      textFn: () => I18n.t('training-generic-please-continue'),
+      when: {
+        appMode: AppMode.FishLong,
+        currentMode: Modes.Training,
+        fn: state => {
+          return state.yesCount + state.noCount >= count;
+        }
+      }
+    }
+  }),
   {
     id: 'fishlong-training-many',
     textFn: () => I18n.t('fishlong-training-many'),

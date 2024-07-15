@@ -2,6 +2,8 @@ import React from 'react';
 import Radium from 'radium';
 import Typist from 'react-typist';
 
+import '@ml/oceans/styles/fade.css';
+
 import {getState, setState} from '@ml/oceans/state';
 import guide from '@ml/oceans/models/guide';
 import soundLibrary from '@ml/oceans/models/soundLibrary';
@@ -15,6 +17,8 @@ import {
   stopTextToSpeech,
   hasTextToSpeechVoices
 } from '@ml/utils/TextToSpeech';
+import fingerClickIcon1 from '@public/images/finger-click-icon-1.svg';
+import fingerClickIcon2 from '@public/images/finger-click-icon-2.svg';
 
 export const stopTypingSounds = () => {
   const state = getState();
@@ -132,6 +136,12 @@ let UnwrappedGuide = class Guide extends React.Component {
       setState({textToSpeechCurrentGuide: currentGuide}, {skipCallback: true});
     }
 
+    const renderClickToContinueReminder =
+      state.guides === 'K5' &&
+      state.guideShowing &&
+      !currentGuide.noDimBackground &&
+      currentGuide.style !== 'Info';
+
     return (
       <div>
         {currentGuide && currentGuide.image && (
@@ -184,6 +194,20 @@ let UnwrappedGuide = class Guide extends React.Component {
                       {currentGuide.textFn(getState())}
                     </div>
                   </div>
+                  {renderClickToContinueReminder && (
+                    <div style={styles.guideClickToContinueReminderContainer}>
+                      <img
+                        src={fingerClickIcon1}
+                        alt=""
+                        style={styles.guideClickToContinueReminder1}
+                      />
+                      <img
+                        src={fingerClickIcon2}
+                        alt=""
+                        style={styles.guideClickToContinueReminder2}
+                      />
+                    </div>
+                  )}
                   {currentGuide.style === 'Info' && (
                     <Button style={styles.infoGuideButton} onClick={() => {}}>
                       {I18n.t('continue')}
