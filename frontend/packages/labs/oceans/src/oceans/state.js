@@ -37,8 +37,18 @@ const initialState = {
   pondRecallFishMaxExplainValue: 1,
   guideDismissals: [],
   guideShowing: false,
+  // A timer used for playing typing sounds.
+  guideTypingTimer: undefined,
   showConfirmationDialog: false,
-  confirmationDialogOnYes: null
+  confirmationDialogOnYes: null,
+  // An optional text-to-speech locale which activates the feature.
+  textToSpeechLocale: undefined,
+  // Whether text to speech has ever been successfully
+  // started via a user click.
+  hasTextToSpeechStartedByClick: false,
+  // The most recent guide, if any, being played as text
+  // to speech.
+  textToSpeechCurrentGuide: undefined
 };
 let state = {...initialState};
 

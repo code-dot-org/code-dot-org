@@ -14,33 +14,33 @@ const encourageStopTrainingCountsDefault = [100, ...encourageStopTrainingCountsF
 
 const guidesK5 = [
   {
-    id: "fishvtrash-training-init1",
+    id: 'fishvtrash-training-init1',
     textFn: () => {
-      return I18n.t("fishvtrash-training-init1");
+      return I18n.t('fishvtrash-training-init1');
     },
-    when: { appMode: AppMode.FishVTrash, currentMode: Modes.Training },
+    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training}
   },
   {
-    id: "fishvtrash-training-init2",
+    id: 'fishvtrash-training-init2',
     textFn: () => {
-      return I18n.t("fishvtrash-training-init2");
+      return I18n.t('fishvtrash-training-init2');
     },
-    when: { appMode: AppMode.FishVTrash, currentMode: Modes.Training },
-    arrow: "BotRight",
+    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training},
+    arrow: 'BotRight'
   },
   {
-    id: "fishvtrash-training-init3",
+    id: 'fishvtrash-training-init3',
     textFn: () => {
-      return I18n.t("fishvtrash-training-init3");
+      return I18n.t('fishvtrash-training-init3');
     },
-    when: { appMode: AppMode.FishVTrash, currentMode: Modes.Training },
+    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training}
   },
   {
-    id: "fishvtrash-training-init4",
-    textFn: () => I18n.t("fishvtrash-training-init4"),
-    when: { appMode: AppMode.FishVTrash, currentMode: Modes.Training },
-    style: "Center",
-    arrow: "LowerCenter",
+    id: 'fishvtrash-training-init4',
+    textFn: () => I18n.t('fishvtrash-training-init4'),
+    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Training},
+    style: 'Center',
+    arrow: 'LowerCenter'
   },
   {
     id: "fishvtrash-training-pause2",
@@ -50,12 +50,12 @@ const guidesK5 = [
       currentMode: Modes.Training,
       fn: (state) => {
         return state.yesCount + state.noCount >= 15;
-      },
-    },
+      }
+    }
   },
   {
-    id: "fishvtrash-training-pause5",
-    textFn: () => I18n.t("fishvtrash-training-pause5"),
+    id: 'fishvtrash-training-pause5',
+    textFn: () => I18n.t('fishvtrash-training-pause5'),
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Training,
@@ -78,50 +78,68 @@ const guidesK5 = [
     }
   }),
   {
-    id: "fishvtrash-predicting-init1",
-    textFn: () => I18n.t("fishvtrash-predicting-init1"),
-    when: { appMode: AppMode.FishVTrash, currentMode: Modes.Predicting },
+    id: 'fishvtrash-predicting-init1',
+    textFn: () => I18n.t('fishvtrash-predicting-init1'),
+    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Predicting}
   },
   {
-    id: "fishvtrash-predicting-init2",
-    textFn: () => I18n.t("fishvtrash-predicting-init2"),
-    when: { appMode: AppMode.FishVTrash, currentMode: Modes.Predicting },
+    id: 'fishvtrash-predicting-init2',
+    textFn: () => I18n.t('fishvtrash-predicting-init2'),
+    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Predicting}
   },
   {
-    id: "fishvtrash-predicting-init3",
-    textFn: () => I18n.t("fishvtrash-predicting-init3"),
-    when: { appMode: AppMode.FishVTrash, currentMode: Modes.Predicting },
+    id: 'fishvtrash-predicting-init3',
+    textFn: () => I18n.t('fishvtrash-predicting-init3'),
+    when: {appMode: AppMode.FishVTrash, currentMode: Modes.Predicting},
     noDimBackground: true,
-    arrow: "LowerRight",
+    arrow: 'LowerRight'
   },
   {
-    id: "fishvtrash-pond-init1",
-    textFn: () => I18n.t("fishvtrash-pond-init1"),
+    id: 'fishvtrash-pond-init1',
+    textFn: () => I18n.t('fishvtrash-pond-init1'),
     when: {
       appMode: AppMode.FishVTrash,
       currentMode: Modes.Pond,
-      fn: (state) => {
+      fn: state => {
         return state.fishData && state.totalPondFish !== null;
-      },
+      }
+    }
+  },
+  {
+    id: 'fishvtrash-pond-recall',
+    textFn: () => I18n.t('fishvtrash-pond-recall'),
+    when: {
+      appMode: AppMode.FishVTrash,
+      currentMode: Modes.Pond,
+      fn: state => {
+        return state.fishData && state.totalPondFish !== null;
+      }
     },
+    arrow: 'UpperRight'
   },
   {
-    id: "fishvtrash-pond-recall",
-    textFn: () => I18n.t("fishvtrash-pond-recall"),
-    when: { appMode: AppMode.FishVTrash, currentMode: Modes.Pond },
-    arrow: "UpperRight",
+    id: 'fishvtrash-pond-init2',
+    textFn: () => I18n.t('fishvtrash-pond-init2'),
+    when: {
+      appMode: AppMode.FishVTrash,
+      currentMode: Modes.Pond,
+      fn: state => {
+        return state.fishData && state.totalPondFish !== null;
+      }
+    },
+    arrow: 'LowerLeft'
   },
   {
-    id: "fishvtrash-pond-init2",
-    textFn: () => I18n.t("fishvtrash-pond-init2"),
-    when: { appMode: AppMode.FishVTrash, currentMode: Modes.Pond },
-    arrow: "LowerLeft",
-  },
-  {
-    id: "fishvtrash-pond-init3",
-    textFn: () => I18n.t("fishvtrash-pond-init3"),
-    when: { appMode: AppMode.FishVTrash, currentMode: Modes.Pond },
-    arrow: "LowerRight",
+    id: 'fishvtrash-pond-init3',
+    textFn: () => I18n.t('fishvtrash-pond-init3'),
+    when: {
+      appMode: AppMode.FishVTrash,
+      currentMode: Modes.Pond,
+      fn: state => {
+        return state.fishData && state.totalPondFish !== null;
+      }
+    },
+    arrow: 'LowerRight'
   },
   {
     id: "creaturesvtrashdemo-predicting-init1",
@@ -132,77 +150,68 @@ const guidesK5 = [
     },
   },
   {
-    id: "creaturesvtrashdemo-predicting-init2",
-    textFn: () => I18n.t("creaturesvtrashdemo-predicting-init2"),
-    when: {
-      appMode: AppMode.CreaturesVTrashDemo,
-      currentMode: Modes.Predicting,
-    },
+    id: 'creaturesvtrashdemo-predicting-init2',
+    textFn: () => I18n.t('creaturesvtrashdemo-predicting-init2'),
+    when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting}
   },
   {
-    id: "creaturesvtrashdemo-predicting-init3",
-    textFn: () => I18n.t("creaturesvtrashdemo-predicting-init3"),
-    when: {
-      appMode: AppMode.CreaturesVTrashDemo,
-      currentMode: Modes.Predicting,
-    },
+    id: 'creaturesvtrashdemo-predicting-init3',
+    textFn: () => I18n.t('creaturesvtrashdemo-predicting-init3'),
+    when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting}
   },
   {
-    id: "creaturesvtrashdemo-predicting-init4",
-    textFn: () => I18n.t("creaturesvtrashdemo-predicting-init4"),
+    id: 'creaturesvtrashdemo-predicting-init4',
+    textFn: () => I18n.t('creaturesvtrashdemo-predicting-init4'),
+    when: {appMode: AppMode.CreaturesVTrashDemo, currentMode: Modes.Predicting},
+    noDimBackground: true,
+    arrow: 'LowerRight'
+  },
+  {
+    id: 'creaturesvtrashdemo-predicting-pause1',
+    textFn: () => I18n.t('creaturesvtrashdemo-predicting-pause1'),
     when: {
       appMode: AppMode.CreaturesVTrashDemo,
       currentMode: Modes.Predicting,
+      isPaused: true
+    }
+  },
+  {
+    id: 'creaturesvtrashdemo-predicting-pause2',
+    textFn: () => I18n.t('creaturesvtrashdemo-predicting-pause2'),
+    when: {
+      appMode: AppMode.CreaturesVTrashDemo,
+      currentMode: Modes.Predicting,
+      isPaused: true
+    }
+  },
+  {
+    id: 'creaturesvtrashdemo-predicting-pause3',
+    textFn: () => I18n.t('creaturesvtrashdemo-predicting-pause3'),
+    when: {
+      appMode: AppMode.CreaturesVTrashDemo,
+      currentMode: Modes.Predicting,
+      isPaused: true
+    }
+  },
+  {
+    id: 'creaturesvtrashdemo-predicting-pause4',
+    textFn: () => I18n.t('creaturesvtrashdemo-predicting-pause4'),
+    when: {
+      appMode: AppMode.CreaturesVTrashDemo,
+      currentMode: Modes.Predicting,
+      isPaused: true
     },
     noDimBackground: true,
-    arrow: "LowerRight",
+    arrow: 'LowerRight'
   },
   {
-    id: "creaturesvtrashdemo-predicting-pause1",
-    textFn: () => I18n.t("creaturesvtrashdemo-predicting-pause1"),
-    when: {
-      appMode: AppMode.CreaturesVTrashDemo,
-      currentMode: Modes.Predicting,
-      isPaused: true,
-    },
+    id: 'creaturesvtrash-training-init1',
+    textFn: () => I18n.t('creaturesvtrash-training-init1'),
+    when: {appMode: AppMode.CreaturesVTrash, currentMode: Modes.Training}
   },
   {
-    id: "creaturesvtrashdemo-predicting-pause2",
-    textFn: () => I18n.t("creaturesvtrashdemo-predicting-pause2"),
-    when: {
-      appMode: AppMode.CreaturesVTrashDemo,
-      currentMode: Modes.Predicting,
-      isPaused: true,
-    },
-  },
-  {
-    id: "creaturesvtrashdemo-predicting-pause3",
-    textFn: () => I18n.t("creaturesvtrashdemo-predicting-pause3"),
-    when: {
-      appMode: AppMode.CreaturesVTrashDemo,
-      currentMode: Modes.Predicting,
-      isPaused: true,
-    },
-  },
-  {
-    id: "creaturesvtrashdemo-predicting-pause4",
-    textFn: () => I18n.t("creaturesvtrashdemo-predicting-pause4"),
-    when: {
-      appMode: AppMode.CreaturesVTrashDemo,
-      currentMode: Modes.Predicting,
-      isPaused: true,
-    },
-    noDimBackground: true,
-    arrow: "LowerRight",
-  },
-  {
-    id: "creaturesvtrash-training-init1",
-    textFn: () => I18n.t("creaturesvtrash-training-init1"),
-    when: { appMode: AppMode.CreaturesVTrash, currentMode: Modes.Training },
-  },
-  {
-    id: "creaturesvtrash-training-init2",
-    textFn: () => I18n.t("creaturesvtrash-training-init2"),
+    id: 'creaturesvtrash-training-init2',
+    textFn: () => I18n.t('creaturesvtrash-training-init2'),
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
@@ -210,24 +219,24 @@ const guidesK5 = [
         return state.yesCount + state.noCount >= 15;
       },
     },
-    style: "Info",
+    style: 'Info',
     image: seahorseImage,
-    imageStyle: imageStyleOverrides.seahorse,
+    imageStyle: imageStyleOverrides.seahorse
   },
   {
-    id: "creaturesvtrash-training-init3",
-    textFn: () => I18n.t("creaturesvtrash-training-init3"),
+    id: 'creaturesvtrash-training-init3',
+    textFn: () => I18n.t('creaturesvtrash-training-init3'),
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
       fn: (state) => {
         return state.yesCount + state.noCount >= 15;
-      },
-    },
+      }
+    }
   },
   {
-    id: "creaturesvtrash-training-init6",
-    textFn: () => I18n.t("creaturesvtrash-training-init6"),
+    id: 'creaturesvtrash-training-init6',
+    textFn: () => I18n.t('creaturesvtrash-training-init6'),
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Training,
@@ -250,143 +259,149 @@ const guidesK5 = [
     }
   }),
   {
-    id: "creaturesvtrash-predicting-init1",
-    textFn: () => I18n.t("creaturesvtrash-predicting-init1"),
-    when: { appMode: AppMode.CreaturesVTrash, currentMode: Modes.Predicting },
+    id: 'creaturesvtrash-predicting-init1',
+    textFn: () => I18n.t('creaturesvtrash-predicting-init1'),
+    when: {appMode: AppMode.CreaturesVTrash, currentMode: Modes.Predicting}
   },
   {
-    id: "creaturesvtrash-pond-init1",
-    textFn: () => I18n.t("creaturesvtrash-pond-init1"),
+    id: 'creaturesvtrash-pond-init1',
+    textFn: () => I18n.t('creaturesvtrash-pond-init1'),
     when: {
       appMode: AppMode.CreaturesVTrash,
       currentMode: Modes.Pond,
-      fn: (state) => {
+      fn: state => {
         return state.fishData && state.totalPondFish !== null;
-      },
-    },
+      }
+    }
   },
   {
-    id: "fishshort-words-init1",
-    textFn: () => I18n.t("fishshort-words-init1"),
-    when: { appMode: AppMode.FishShort, currentMode: Modes.Words },
+    id: 'fishshort-words-init1',
+    textFn: () => I18n.t('fishshort-words-init1'),
+    when: {appMode: AppMode.FishShort, currentMode: Modes.Words}
   },
   {
-    id: "fishshort-words-init2",
-    textFn: () => I18n.t("fishshort-words-init2"),
-    when: { appMode: AppMode.FishShort, currentMode: Modes.Words },
+    id: 'fishshort-words-init2',
+    textFn: () => I18n.t('fishshort-words-init2'),
+    when: {appMode: AppMode.FishShort, currentMode: Modes.Words}
   },
   {
-    id: "fishshort-words-training-pause1",
-    textFn: () => I18n.t("fishshort-words-training-pause1"),
+    id: 'fishshort-words-training-pause1',
+    textFn: () => I18n.t('fishshort-words-training-pause1'),
     when: {
       appMode: AppMode.FishShort,
       currentMode: Modes.Training,
-      fn: (state) => {
+      fn: state => {
         return state.yesCount + state.noCount >= 10;
-      },
-    },
+      }
+    }
   },
   {
-    id: "fishshort-words-training-pause2",
-    textFn: () => I18n.t("fishshort-words-training-pause2"),
+    id: 'fishshort-words-training-pause2',
+    textFn: () => I18n.t('fishshort-words-training-pause2'),
     when: {
       appMode: AppMode.FishShort,
       currentMode: Modes.Training,
-      fn: (state) => {
+      fn: state => {
         return state.yesCount + state.noCount >= 30;
-      },
-    },
+      }
+    }
   },
   {
-    id: "fishshort-predicting-init1",
-    textFn: (state) =>
-      I18n.t("fishshort-predicting-init1", {
-        word: state.word.toLowerCase(),
+    id: 'fishshort-predicting-init1',
+    textFn: state =>
+      I18n.t('fishshort-predicting-init1', {
+        word: state.word.toLowerCase()
       }),
-    when: { appMode: AppMode.FishShort, currentMode: Modes.Predicting },
+    when: {appMode: AppMode.FishShort, currentMode: Modes.Predicting}
   },
   {
-    id: "fishshort-predicting-init2",
-    textFn: (state) =>
-      I18n.t("fishshort-predicting-init2", {
-        word: state.word.toLowerCase(),
+    id: 'fishshort-predicting-init2',
+    textFn: state =>
+      I18n.t('fishshort-predicting-init2', {
+        word: state.word.toLowerCase()
       }),
-    when: { appMode: AppMode.FishShort, currentMode: Modes.Predicting },
+    when: {appMode: AppMode.FishShort, currentMode: Modes.Predicting}
   },
   {
-    id: "fishshort-pond-init1",
-    textFn: (state) =>
-      I18n.t("fishshort-pond-init1", {
+    id: 'fishshort-pond-init1',
+    textFn: state =>
+      I18n.t('fishshort-pond-init1', {
         n: state.fishData.length,
-        word: state.word.toLowerCase(),
+        word: state.word.toLowerCase()
       }),
     when: {
       appMode: AppMode.FishShort,
       currentMode: Modes.Pond,
-      fn: (state) => {
+      fn: state => {
         return state.fishData && state.totalPondFish !== null;
-      },
+      }
+    }
+  },
+  {
+    id: 'fishshort-pond-init2',
+    textFn: () => I18n.t('fishshort-pond-init2'),
+    when: {
+      appMode: AppMode.FishShort,
+      currentMode: Modes.Pond,
+      fn: state => {
+        return state.fishData && state.totalPondFish !== null;
+      }
     },
+    arrow: 'UpperFarRight'
   },
   {
-    id: "fishshort-pond-init2",
-    textFn: () => I18n.t("fishshort-pond-init2"),
-    when: { appMode: AppMode.FishShort, currentMode: Modes.Pond },
-    arrow: "UpperFarRight",
+    id: 'fishlong-words-init1',
+    textFn: () => I18n.t('fishlong-words-init1'),
+    when: {appMode: AppMode.FishLong, currentMode: Modes.Words}
   },
   {
-    id: "fishlong-words-init1",
-    textFn: () => I18n.t("fishlong-words-init1"),
-    when: { appMode: AppMode.FishLong, currentMode: Modes.Words },
+    id: 'fishlong-words-init2',
+    textFn: () => I18n.t('fishlong-words-init2'),
+    when: {appMode: AppMode.FishLong, currentMode: Modes.Words}
   },
   {
-    id: "fishlong-words-init2",
-    textFn: () => I18n.t("fishlong-words-init2"),
-    when: { appMode: AppMode.FishLong, currentMode: Modes.Words },
-  },
-  {
-    id: "fishlong-training-pause1",
-    textFn: () => I18n.t("fishlong-training-pause1"),
+    id: 'fishlong-training-pause1',
+    textFn: () => I18n.t('fishlong-training-pause1'),
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Training,
-      fn: (state) => {
+      fn: state => {
         return state.yesCount + state.noCount > 5;
-      },
-    },
+      }
+    }
   },
   {
-    id: "fishlong-training-pause2",
-    textFn: () => I18n.t("fishlong-training-pause2"),
+    id: 'fishlong-training-pause2',
+    textFn: () => I18n.t('fishlong-training-pause2'),
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Training,
-      fn: (state) => {
+      fn: state => {
         return state.yesCount + state.noCount >= 30;
-      },
-    },
+      }
+    }
   },
   {
-    id: "fishlong-training-pause3",
-    textFn: () => I18n.t("fishlong-training-pause3"),
+    id: 'fishlong-training-pause3',
+    textFn: () => I18n.t('fishlong-training-pause3'),
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Training,
-      fn: (state) => {
+      fn: state => {
         return state.yesCount + state.noCount >= 50;
-      },
-    },
+      }
+    }
   },
   {
-    id: "fishlong-training-pause4",
-    textFn: () => I18n.t("fishlong-training-pause4"),
+    id: 'fishlong-training-pause4',
+    textFn: () => I18n.t('fishlong-training-pause4'),
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Training,
-      fn: (state) => {
+      fn: state => {
         return state.yesCount + state.noCount >= 100;
-      },
-    },
+      }
+    }
   },
   ...encourageStopTrainingCountsFishLong.map(count => {
     return {
@@ -402,59 +417,71 @@ const guidesK5 = [
     }
   }),
   {
-    id: "fishlong-training-many",
-    textFn: () => I18n.t("fishlong-training-many"),
+    id: 'fishlong-training-many',
+    textFn: () => I18n.t('fishlong-training-many'),
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Training,
-      fn: (state) => {
+      fn: state => {
         return state.yesCount + state.noCount >= 300;
-      },
-    },
+      }
+    }
   },
   {
-    id: "fishlong-predicting-init1",
-    textFn: (state) =>
-      I18n.t("fishlong-predicting-init1", {
-        word: state.word.toLowerCase(),
+    id: 'fishlong-predicting-init1',
+    textFn: state =>
+      I18n.t('fishlong-predicting-init1', {
+        word: state.word.toLowerCase()
       }),
-    when: { appMode: AppMode.FishLong, currentMode: Modes.Predicting },
+    when: {appMode: AppMode.FishLong, currentMode: Modes.Predicting}
   },
   {
-    id: "fishlong-predicting-init2",
-    textFn: (state) =>
-      I18n.t("fishlong-predicting-init2", {
-        word: state.word.toLowerCase(),
+    id: 'fishlong-predicting-init2',
+    textFn: state =>
+      I18n.t('fishlong-predicting-init2', {
+        word: state.word.toLowerCase()
       }),
-    when: { appMode: AppMode.FishLong, currentMode: Modes.Predicting },
+    when: {appMode: AppMode.FishLong, currentMode: Modes.Predicting}
   },
   {
-    id: "fishlong-pond-init1",
-    textFn: (state) =>
-      I18n.t("fishlong-pond-init1", {
+    id: 'fishlong-pond-init1',
+    textFn: state =>
+      I18n.t('fishlong-pond-init1', {
         n: state.fishData.length,
-        word: state.word.toLowerCase(),
+        word: state.word.toLowerCase()
       }),
     when: {
       appMode: AppMode.FishLong,
       currentMode: Modes.Pond,
-      fn: (state) => {
+      fn: state => {
         return state.fishData && state.totalPondFish !== null;
-      },
+      }
+    }
+  },
+  {
+    id: 'fishlong-pond-init2',
+    textFn: () => I18n.t('fishlong-pond-init2'),
+    when: {
+      appMode: AppMode.FishLong,
+      currentMode: Modes.Pond,
+      fn: state => {
+        return state.fishData && state.totalPondFish !== null;
+      }
     },
+    arrow: 'LowerLeft'
   },
   {
-    id: "fishlong-pond-init2",
-    textFn: () => I18n.t("fishlong-pond-init2"),
-    when: { appMode: AppMode.FishLong, currentMode: Modes.Pond },
-    arrow: "LowerLeft",
-  },
-  {
-    id: "fishlong-pond-init3",
-    textFn: () => I18n.t("fishlong-pond-init3"),
-    when: { appMode: AppMode.FishLong, currentMode: Modes.Pond },
-    arrow: "LowishRight",
-  },
+    id: 'fishlong-pond-init3',
+    textFn: () => I18n.t('fishlong-pond-init3'),
+    when: {
+      appMode: AppMode.FishLong,
+      currentMode: Modes.Pond,
+      fn: state => {
+        return state.fishData && state.totalPondFish !== null;
+      }
+    },
+    arrow: 'LowishRight'
+  }
 ];
 
 export default guidesK5;

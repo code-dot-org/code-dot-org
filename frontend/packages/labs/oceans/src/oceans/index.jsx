@@ -4,19 +4,16 @@ import './assetPath';
 import {queryStrFor} from './helpers';
 import {initAll} from './init';
 import Sounds from './Sounds';
-import {getState} from './state';
+import {stopTypingSounds} from '@ml/oceans/components/common/Guide';
 
 let currentAppMode = queryStrFor('mode') || 'fishvtrash';
 const currentGuides = queryStrFor('guides');
+let textToSpeechLocale = queryStrFor('tts');
 let canvas, backgroundCanvas;
 
 function onLevelChange(event) {
-  // Stop any typing sounds.  (Don't modify state, though, since that would
-  // callback into our renderer again.)
-  const existingTypingTimer = getState().guideTypingTimer;
-  if (existingTypingTimer) {
-    clearInterval(existingTypingTimer);
-  }
+  // Stop any typing sounds.
+  stopTypingSounds();
 
   currentAppMode = event.target.id;
   initDemoPage();
@@ -28,6 +25,7 @@ function initDemoPage() {
   initAll({
     appMode: currentAppMode,
     guides: currentGuides,
+    textToSpeechLocale,
     onContinue,
     canvas,
     backgroundCanvas,
