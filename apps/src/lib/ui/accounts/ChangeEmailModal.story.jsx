@@ -1,6 +1,7 @@
-import React from 'react';
-import ChangeEmailModal from './ChangeEmailModal';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
+import ChangeEmailModal from './ChangeEmailModal';
 
 const DEFAULT_PROPS = {
   handleSubmit: action('handleSubmit callback'),

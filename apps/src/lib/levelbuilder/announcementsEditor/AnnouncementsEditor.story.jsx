@@ -1,6 +1,7 @@
 import React from 'react';
-import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import {Provider} from 'react-redux';
+
+import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import {reduxStore} from '@cdo/storybook/decorators';
 
 const announcements = [

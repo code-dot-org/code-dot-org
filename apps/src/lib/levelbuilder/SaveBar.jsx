@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from '@cdo/apps/util/color';
+
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import color from '@cdo/apps/util/color';
 import {navigateToHref} from '@cdo/apps/utils';
 
 export default function SaveBar({

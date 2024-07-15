@@ -1,6 +1,7 @@
-import React from 'react';
-import LtiSectionSyncDialog from '@cdo/apps/lib/ui/lti/sync/LtiSectionSyncDialog';
 import {StoryFn} from '@storybook/react';
+import React from 'react';
+
+import LtiSectionSyncDialog from '@cdo/apps/lib/ui/lti/sync/LtiSectionSyncDialog';
 
 export default {
   component: LtiSectionSyncDialog,

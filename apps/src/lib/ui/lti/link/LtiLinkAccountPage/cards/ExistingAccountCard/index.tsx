@@ -1,3 +1,7 @@
+import classNames from 'classnames';
+import React, {useContext} from 'react';
+
+import {buttonColors, Button} from '@cdo/apps/componentLibrary/button';
 import {
   Card,
   CardActions,
@@ -5,16 +9,15 @@ import {
   CardHeader,
 } from '@cdo/apps/componentLibrary/card';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import classNames from 'classnames';
-import styles from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/link-account.module.scss';
-import cardStyles from '@cdo/apps/componentLibrary/card/Card/card.module.scss';
-import {buttonColors, Button} from '@cdo/apps/componentLibrary/button';
-import React, {useContext} from 'react';
-import i18n from '@cdo/locale';
-import {LtiProviderContext} from '../../context';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {navigateToHref} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import {LtiProviderContext} from '../../context';
+
+import cardStyles from '@cdo/apps/componentLibrary/card/Card/card.module.scss';
+import styles from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/link-account.module.scss';
 
 const ExistingAccountCard = () => {
   const {
