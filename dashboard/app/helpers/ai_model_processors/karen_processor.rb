@@ -11,12 +11,9 @@ class AiModelProcessors::KarenProcessor < MistralProcessor
     # Format input for Karen model using ChatML as detailed at https://huggingface.co/FPHam/Karen_TheEditor_V2_CREATIVE_Mistral_7B.
     # Note that prior user and assistant messages are NOT included and the customized
     # pretext is always used so that the given user message is edited and not responded to.
-    BEGIN_TOKEN = AiModelProcessors::KarenProcessor::CHAT_ML_BEGIN_TOKEN
-    END_TOKEN = AiModelProcessors::KarenProcessor::CHAT_ML_END_TOKEN
-    NEWLINE = AiModelProcessors::KarenProcessor::NEWLINE
-    inputs = BEGIN_TOKEN + AiModelProcessors::KarenProcessor::SYSTEM + NEWLINE + instructions + END_TOKEN + NEWLINE
-    inputs << (BEGIN_TOKEN + AiModelProcessors::KarenProcessor::USER + NEWLINE + AiModelProcessors::KarenProcessor::KAREN_PRETEXT + new_message[:chatMessageText] + END_TOKEN + NEWLINE)
-    inputs << (BEGIN_TOKEN + AiModelProcessors::KarenProcessor::ASSISTANT)
+    inputs = AiModelProcessors::KarenProcessor::CHAT_ML_BEGIN_TOKEN + AiModelProcessors::KarenProcessor::SYSTEM + AiModelProcessors::KarenProcessor::NEWLINE + instructions + AiModelProcessors::KarenProcessor::CHAT_ML_END_TOKEN + AiModelProcessors::KarenProcessor::NEWLINE
+    inputs << (AiModelProcessors::KarenProcessor::CHAT_ML_BEGIN_TOKEN + AiModelProcessors::KarenProcessor::USER + AiModelProcessors::KarenProcessor::NEWLINE + AiModelProcessors::KarenProcessor::KAREN_PRETEXT + new_message[:chatMessageText] + AiModelProcessors::KarenProcessor::CHAT_ML_END_TOKEN + AiModelProcessors::KarenProcessor::NEWLINE)
+    inputs << (AiModelProcessors::KarenProcessor::CHAT_ML_BEGIN_TOKEN + AiModelProcessors::KarenProcessor::ASSISTANT)
     inputs
   end
 
