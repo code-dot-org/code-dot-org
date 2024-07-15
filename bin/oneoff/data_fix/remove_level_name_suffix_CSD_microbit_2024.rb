@@ -24,8 +24,7 @@ def remove_level_name_suffix
     if level.name_suffix == "_mb_2024"
       puts "Processing level [#{level.name}] with name_suffix [#{level.name_suffix}]"
 
-      level.update(name_suffix: nil)
-      level.save!
+      level.update!(name_suffix: nil)
     else
       puts "Ignoring level [#{level.name}] with name_suffix [#{level.name_suffix}] not matching _mb_2024"
     end
