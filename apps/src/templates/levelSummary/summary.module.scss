@@ -105,13 +105,21 @@ label.sectionSelector {
     margin-bottom: 16px;
     // TODO: Update to use #E6F6F8 once the phase-2 brand colors are in.
     background-color: $lightest_cyan;
-    display: inline-block;
     width: 100%;
     box-sizing: border-box;
     border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
     p {
       margin: 0;
+    }
+
+    .studentAnswerMenuButton {
+      width: 26px;
+      height: 26px;
+      margin-inline-start: 8px;
     }
   }
 
