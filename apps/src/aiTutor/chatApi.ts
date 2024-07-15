@@ -76,7 +76,7 @@ export async function getChatCompletionMessage(
   formattedQuestion: string,
   chatMessages: ChatCompletionMessage[],
   systemPrompt?: string,
-  levelId?: number,
+  levelId?: number
 ): Promise<ChatCompletionResponse> {
   const messagesToSend = [
     ...formatForChatCompletion(chatMessages),

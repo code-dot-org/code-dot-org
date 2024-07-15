@@ -116,14 +116,16 @@ class OpenaiChatController < ApplicationController
       return render(status: :bad_request, json: {message: "Couldn't find level with id=#{level_id}."})
     end
 
-    if level.validation.values.empty?
-      return render(status: :bad_request, json: {message: "There are no test files associated with level id=#{level_id}."})
-    else
-      test_file_contents = ""
-      level.validation.each_value do |validation|
-        test_file_contents += validation["text"]
+    test_file_contents = ""
+    if !!level.validation
+      if level.validation.values.empty?
+        return render(status: :bad_request, json: {message: "There are no test files associated with level id=#{level_id}."})
+      else
+        level.validation.each_value do |validation|
+          test_file_contents += validation["text"]
+        end
       end
-      return test_file_contents
     end
+    return test_file_contents
   end
 end
