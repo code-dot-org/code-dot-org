@@ -1,6 +1,8 @@
-import GoogleBlockly from 'blockly/core';
-import CdoAngleHelper from './cdoAngleHelper';
 import {BlockSvg} from 'blockly';
+
+import GoogleBlockly from 'blockly/core';
+
+import CdoAngleHelper from './cdoAngleHelper';
 
 interface AngleTextInputOptions {
   directionTitle: string; // Ex. 'DIR'

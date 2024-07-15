@@ -29,11 +29,11 @@ import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
 
+import CdoAngleHelper from './addons/cdoAngleHelper';
 import CdoBlockSerializer from './addons/cdoBlockSerializer';
 import CdoConnectionChecker from './addons/cdoConnectionChecker';
 import initializeCdoConstants from './addons/cdoConstants';
 import initializeCss from './addons/cdoCss';
-import CdoAngleHelper from './addons/cdoAngleHelper';
 import CdoFieldAngleDropdown from './addons/cdoFieldAngleDropdown';
 import CdoFieldAngleTextInput from './addons/cdoFieldAngleTextInput';
 import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
