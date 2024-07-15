@@ -35,7 +35,8 @@ class DatasetsControllerTest < ActionController::TestCase
     assert_equal JSON.parse(@test_manifest.to_json), DatablockStorageLibraryManifest.instance.library_manifest
   end
 
-  test 'update: can exceed max table count' do
+  # Exceeding max table count allows curriculum writers to add new shared datasets in levelbuilder mode
+  test 'update: can exceed max table count for shared tables' do
     original_max_table_count = DatablockStorageTable::MAX_TABLE_COUNT
     DatablockStorageTable.const_set(:MAX_TABLE_COUNT, 1)
 
