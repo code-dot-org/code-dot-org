@@ -1,4 +1,4 @@
-class KarenProcessor < MistralProcessor
+class AiModelProcessors::KarenProcessor < MistralProcessor
   SYSTEM = "system".freeze
   KAREN_PRETEXT = "Edit the following text for spelling and grammar mistakes: ".freeze
   CHAT_ML_BEGIN_TOKEN = "<|im_start|>".freeze
@@ -11,9 +11,12 @@ class KarenProcessor < MistralProcessor
     # Format input for Karen model using ChatML as detailed at https://huggingface.co/FPHam/Karen_TheEditor_V2_CREATIVE_Mistral_7B.
     # Note that prior user and assistant messages are NOT included and the customized
     # pretext is always used so that the given user message is edited and not responded to.
-    inputs = KarenProcessor::CHAT_ML_BEGIN_TOKEN + KarenProcessor::SYSTEM + KarenProcessor::NEWLINE + instructions + KarenProcessor::CHAT_ML_END_TOKEN + KarenProcessor::NEWLINE
-    inputs << (KarenProcessor::CHAT_ML_BEGIN_TOKEN + KarenProcessor::USER + KarenProcessor::NEWLINE + KarenProcessor::KAREN_PRETEXT + new_message[:chatMessageText] + KarenProcessor::CHAT_ML_END_TOKEN + KarenProcessor::NEWLINE)
-    inputs << (KarenProcessor::CHAT_ML_BEGIN_TOKEN + KarenProcessor::ASSISTANT)
+    BEGIN_TOKEN = AiModelProcessors::KarenProcessor::CHAT_ML_BEGIN_TOKEN
+    END_TOKEN = AiModelProcessors::KarenProcessor::CHAT_ML_END_TOKEN
+    NEWLINE = AiModelProcessors::KarenProcessor::NEWLINE
+    inputs = BEGIN_TOKEN + AiModelProcessors::KarenProcessor::SYSTEM + NEWLINE + instructions + END_TOKEN + NEWLINE
+    inputs << (BEGIN_TOKEN + AiModelProcessors::KarenProcessor::USER + NEWLINE + AiModelProcessors::KarenProcessor::KAREN_PRETEXT + new_message[:chatMessageText] + END_TOKEN + NEWLINE)
+    inputs << (BEGIN_TOKEN + AiModelProcessors::KarenProcessor::ASSISTANT)
     inputs
   end
 

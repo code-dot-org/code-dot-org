@@ -1,4 +1,4 @@
-class ArithmoProcessor < MistralProcessor
+class AiModelProcessors::ArithmoProcessor < MistralProcessor
   NEWLINE = "\n".freeze
 
   def format_model_inputs(instructions, new_message, stored_messages)

@@ -42,13 +42,13 @@ module AichatSagemakerHelper
   def self.get_model_processor(selected_model_id)
     case selected_model_id
     when MODELS[:PIRATE]
-      return PirateProcessor.new
+      return AiModelProcessors::PirateProcessor.new
     when MODELS[:KAREN]
-      return KarenProcessor.new
+      return AiModelProcessors::KarenProcessor.new
     when MODELS[:ARITHMO]
-      return ArithmoProcessor.new
+      return AiModelProcessors::ArithmoProcessor.new
     else
-      return MistralProcessor.new
+      return AiModelProcessors::MistralProcessor.new
     end
   end
 
