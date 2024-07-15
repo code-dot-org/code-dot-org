@@ -320,7 +320,7 @@ module AWS
 
       # If we are emulating AWS, we just return mock cloudfront policy output
       return {
-        "CloudFront-Policy": policy
+        "CloudFront-Policy": Base64.encode64(policy).tr('+=/', '-_~')
       } if CDO.aws_emulated?
 
       signer = Aws::CloudFront::CookieSigner.new(
