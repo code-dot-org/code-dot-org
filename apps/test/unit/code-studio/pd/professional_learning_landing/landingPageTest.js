@@ -6,6 +6,10 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {selfPacedCourseConstants} from '@cdo/apps/code-studio/pd/professional_learning_landing/constants.js';
 import {UnconnectedLandingPage as LandingPage} from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
 import {
+  setWindowLocation,
+  resetWindowLocation,
+} from '@cdo/apps/code-studio/utils';
+import {
   getStore,
   registerReducers,
   stubRedux,
@@ -14,10 +18,6 @@ import {
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-import {
-  setWindowLocation,
-  resetWindowLocation,
-} from '../../../../src/code-studio/utils';
 import {expect} from '../../../../util/reconfiguredChai';
 
 const TEST_WORKSHOP = {
