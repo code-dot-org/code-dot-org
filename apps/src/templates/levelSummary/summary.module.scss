@@ -119,7 +119,69 @@ label.sectionSelector {
     .studentAnswerMenuButton {
       width: 26px;
       height: 26px;
+    }
+
+    .studentAnswerMenuDropdownContainer {
+      position: relative;
       margin-inline-start: 8px;
+    }
+
+    .studentAnswerMenuDropdown {
+      position: absolute;
+      bottom: auto;
+      left: 0;
+      z-index: 1000;
+      display: block;
+      float: left;
+      margin: 0.25rem 0;
+      list-style: none;
+      background-color: #fff;
+      border: 1px solid rgba(0 0 0 / .15);
+      border-radius: 4px;
+      -webkit-box-shadow: 0 6px 12px rgba(0 0 0 / .175);
+      box-shadow: 0 6px 12px rgba(0 0 0 / .175);
+      background-clip: padding-box;
+      padding: .25rem 0 0;
+
+      ul {
+        margin: 0;
+      }
+    }
+
+    & .dropdownOption {
+      /* Reset's every elements apperance */
+      background: none repeat scroll 0 0 transparent;
+      border: none !important;
+      border-radius: 0;
+      border-spacing: 0;
+      list-style: none outside none;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      text-indent: 0;
+      box-shadow: none;
+
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      &:focus-visible {
+        outline: 2px solid $light_primary_500;
+        outline-offset: -2px;
+      }
+
+      i {
+        display: inline-block;
+      }
+    }
+
+    ul {
+      li {
+        list-style-type: none;
+        display: flex;
+        align-items: flex-end;
+        align-self: stretch;
+      }
     }
   }
 
