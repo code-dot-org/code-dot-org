@@ -195,3 +195,5 @@ Scenario: Teacher can view choice levels
   # View expanded choice level
   And I click selector "button:contains(b)"
   And I see no difference for "unexpanded choice level - closed"
+
+  And I close my eyes
