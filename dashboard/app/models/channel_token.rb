@@ -86,15 +86,13 @@ class ChannelToken < ApplicationRecord
   #   using the value from the `data` param.
   def self.create_channel(ip, project, data: {}, src: nil, type: nil, remix_parent_id: nil, standalone: true, level: nil)
     if src
-      data = project.get(src).stringify_keys
-      data['name'] = "Remix: #{data['name']}"
-      data['hidden'] = false
-      data['frozen'] = false
+      data = project.get(src)
+      data.merge!(name: "Remix: #{data['name']}", hidden: false, frozen: false)
     end
 
     timestamp = Time.now
     project.create(
-      data.merge('createdAt' => timestamp, 'updatedAt' => timestamp),
+      data.merge(createdAt: timestamp, updatedAt: timestamp),
       ip: ip,
       type: type,
       remix_parent_id: remix_parent_id,
