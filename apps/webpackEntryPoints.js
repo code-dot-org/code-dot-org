@@ -1,6 +1,6 @@
 // Entrypoints for old-style "lab1" labs
 //
-// New labs should instead use Lab2, see: lab2Entrypoints.tsx
+// New labs should instead use Lab2, see: lab2EntryPoints.ts
 
 const ALL_APPS = [
   'ailab',
