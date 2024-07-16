@@ -84,7 +84,7 @@ export const askAITutor = createAsyncThunk(
     const chatApiResponse = await getChatCompletionMessage(
       formattedQuestion,
       storedMessages,
-      '',
+      undefined,
       levelContext.levelId,
       chatContext.actionType,
       levelInstructions
