@@ -399,6 +399,47 @@ describe('UnitEditor', () => {
       server.restore();
     });
 
+    it('Timeout error shows custom error message to refresh and check it saved', () => {
+      const wrapper = createWrapper({});
+      const unitEditor = wrapper.find('UnitEditor');
+
+      let server = sinon.fakeServer.create();
+      server.respondWith('PUT', `/s/1`, [
+        504,
+        {'Content-Type': 'application/json'},
+        'Error: Gateway Timeout',
+      ]);
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(1);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      // check the the spinner is showing
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+      expect(unitEditor.state().isSaving).to.equal(true);
+
+      server.respond();
+      unitEditor.update();
+      expect(utils.navigateToHref).to.not.have.been.called;
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal(
+        'The save request timed out. Please refresh the page and verify your changes have been saved correctly.'
+      );
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
+      expect(
+        wrapper
+          .find('.saveBar')
+          .contains(
+            'Error Saving: The save request timed out. Please refresh the page and verify your changes have been saved correctly.'
+          )
+      ).to.be.true;
+
+      server.restore();
+    });
+
     it('shows error when showCalendar is true and weeklyInstructionalMinutes not provided', () => {
       sinon.stub($, 'ajax');
       const wrapper = createWrapper({initialShowCalendar: true});

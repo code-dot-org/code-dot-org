@@ -31,6 +31,9 @@ export const useSource = (defaultSources: ProjectSources) => {
   const levelStartSource = useAppSelector(
     state => state.lab.levelProperties?.startSources
   );
+  const templateStartSource = useAppSelector(
+    state => state.lab.levelProperties?.templateSources
+  );
   const previousLevelIdRef = useRef<number | null>(null);
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
@@ -53,8 +56,19 @@ export const useSource = (defaultSources: ProjectSources) => {
   );
 
   const resetToStartSource = useCallback(() => {
-    setSource(levelStartSource || (defaultSources.source as MultiFileSource));
-  }, [defaultSources.source, levelStartSource, setSource]);
+    // When resetting in start mode, we always use the level start source.
+    setSource(
+      (!isStartMode && templateStartSource) ||
+        levelStartSource ||
+        (defaultSources.source as MultiFileSource)
+    );
+  }, [
+    defaultSources.source,
+    isStartMode,
+    templateStartSource,
+    levelStartSource,
+    setSource,
+  ]);
 
   useEffect(() => {
     if (isStartMode) {
