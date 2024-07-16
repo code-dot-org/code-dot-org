@@ -362,7 +362,7 @@ class Projects
   # 'createdAt', 'updatedAt', 'publishedAt' and 'projectType' merged from the
   # corresponding database row values.
   def self.merged_row_value(row, channel_id:, is_owner:)
-    JSON.parse(row[:value]).merge(
+    JSON.parse(row[:value], symbolize_names: true).merge(
       {
         id: channel_id,
         isOwner: is_owner,
