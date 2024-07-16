@@ -32,6 +32,7 @@ class Fish < Level
     submittable
     mode
     background
+    guides
   )
 
   def self.create_from_level_builder(params, level_params)
