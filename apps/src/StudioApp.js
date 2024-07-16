@@ -62,7 +62,6 @@ import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
 import WireframeButtons from './lib/ui/WireframeButtons';
 import firehoseClient from './lib/util/firehose';
-import logToCloud from './logToCloud';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import {getStore} from './redux';
 import {
@@ -3533,27 +3532,6 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
 
   const instructionsConstants = determineInstructionsConstants(config);
   getStore().dispatch(setInstructionsConstants(instructionsConstants));
-};
-
-StudioApp.prototype.showRateLimitAlert = function () {
-  // only show the alert once per session
-  if (this.hasSeenRateLimitAlert_) {
-    return false;
-  }
-  this.hasSeenRateLimitAlert_ = true;
-
-  var alert = <div>{msg.dataLimitAlert()}</div>;
-  if (this.share) {
-    this.displayPlayspaceAlert('error', alert);
-  } else {
-    this.displayWorkspaceAlert('error', alert);
-  }
-
-  logToCloud.addPageAction(logToCloud.PageAction.FirebaseRateLimitExceeded, {
-    isEditing: project.isEditing(),
-    isOwner: project.isOwner(),
-    share: !!this.share,
-  });
 };
 
 /** @return Promise */
