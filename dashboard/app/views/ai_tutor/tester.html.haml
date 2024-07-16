@@ -1,0 +1,7 @@
+:ruby
+    ai_tutor_tester_data = {}
+    ai_tutor_tester_data[:allowed] = current_user.has_ai_tutor_access? && current_user.levelbuilder?
+
+%script{src: webpack_asset_path('js/ai_tutor/tester.js'), data: {aiTutorTester: ai_tutor_tester_data.to_json}}
+
+#tester

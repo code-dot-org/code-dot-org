@@ -18,12 +18,13 @@ export const MODEL_CARD_FIELDS_LABELS_ICONS: {
   label: string;
   icon?: string;
   editTooltip: string;
-  displayTooltip?: string;
+  displayTooltip: string;
 }[] = [
   {
     property: 'botName',
     label: 'Chatbot Name',
     editTooltip: 'Give your chatbot a unique name.',
+    displayTooltip: '',
   },
   {
     property: 'description',

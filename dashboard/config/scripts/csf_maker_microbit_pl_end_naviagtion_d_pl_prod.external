@@ -9,28 +9,31 @@ markdown <<MARKDOWN
 
 <br>
 
-## CSF Maker with micro:bit module components: 
+## Maker with micro:bit module components: 
 
-<p style = "font-size:30px; font-weight:bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="color:black; background-color:#5ED5DD; font-size: 14pt">Unit 1</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="color:white; background-color:#8c52BA; font-size: 14pt">Unit 2</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="color:white; background-color:#ed6060; font-size: 14pt">Unit 3</code> </p>
-
-<p style = "font-size:30px; font-weight:bold"> <code style="color:black; background-color:#5ED5DD; font-size: 14pt">Intro to Code.org (optional)</code>+<code style="color:white; background-color:#8c52BA; font-size: 14pt">Pick Your Grade</code>+<code style="color:white; background-color:#ed6060; font-size: 14pt">Physical Computing with micro:bit</code> </p>
+![](https://images.code.org/7203bf40c418e1c597319c8424be7996-image-1719505018594.png)
 
 <br>
 
 
 ---
 
-## What's next? 
-### **Choose your learning experience:**
+## Choose your path
 
-- #### Continue to **4th Grade** 
-#### *Click the 'Continue' button on the bottom right of the page*
+#### Click 'Continue' on the bottom right to go to the **NEXT GRADE LEVEL** Module 
 
-###  **OR** 
+#### Otherwise, click the 'Return to Menu' button to select the level you want complete next.
 
-- #### Return to the **overview page** to select the next unit
-#### *Click the 'Return to Overview Page' button on the bottom left of the page*
+<a class="btn btn-large btn-primary" href="https://studio.code.org/courses/microbitmakermodule-2024" rel="noopener noreferrer" style="float:left;">Return to Menu</a>
 
-<a class="btn btn-large btn-primary" href="https://levelbuilder-studio.code.org/courses/melissasandbox-2024" rel="noopener noreferrer" style="float:left;">Return to Overview Page</a>
+
+
+
+
+
+
+
+
+
 
 MARKDOWN

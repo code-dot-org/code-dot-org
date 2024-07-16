@@ -137,7 +137,7 @@
           "text_desc": "curriculum_launch_2024.banner.desc",
           "external_link": true,
           "button_color_white": true,
-          "button_link": "#",
+          "button_link": "https://codeorg.medium.com/ai-game-design-and-more-in-code-orgs-2024-25-curriculum-updates-caff691935ad",
           "button_text": "curriculum_launch_2024.banner.button_learn_more_here",
           "img_src": "/images/banners/banner-curriculum-catalog-illustration-black.png"
         }

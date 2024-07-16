@@ -11,6 +11,7 @@ import {Button} from '@cdo/apps/componentLibrary/button';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import ChatItemView from './ChatItemView';
+import CopyButton from './CopyButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
 import moduleStyles from './chatWorkspace.module.scss';
@@ -91,6 +92,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           color="gray"
           onClick={onClear}
         />
+        <CopyButton />
       </div>
     </div>
   );

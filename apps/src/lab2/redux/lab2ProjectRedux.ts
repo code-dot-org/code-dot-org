@@ -1,7 +1,9 @@
-import {ProjectSources} from '@cdo/apps/lab2/types';
-import {RootState} from '@cdo/apps/types/redux';
 import {PayloadAction, ThunkAction, createSlice} from '@reduxjs/toolkit';
 import {AnyAction} from 'redux';
+
+import {ProjectSources} from '@cdo/apps/lab2/types';
+import {RootState} from '@cdo/apps/types/redux';
+
 import Lab2Registry from '../Lab2Registry';
 
 export interface Lab2ProjectState {

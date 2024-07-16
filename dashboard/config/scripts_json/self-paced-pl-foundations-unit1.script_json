@@ -6,11 +6,12 @@
     "properties": {
       "curriculum_umbrella": "Foundations of CS",
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-06-27 22:33:40 UTC",
+    "serialized_at": "2024-07-13 00:46:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -35,14 +36,14 @@
   "lessons": [
     {
       "key": "Introduction to Creating Apps with Devices ",
-      "name": "Introduction to Creating Apps with Devices ",
+      "name": "Introduction to Computer Systems and Devices with Circuit Playground",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
-        "overview": "**You will:**\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground.\n\n**Suggested time:** 20 minutes",
-        "student_overview": "**You will:**\n\n* Get an introduction to Creating Apps for Devices.\n* Set up your Circuit Playground.\n\n**Suggested time:** 20 minutes"
+        "overview": "**You will:**\n\n* Get an introduction to Computer Systems and Devices.\n* Set up your Circuit Playground.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to Computer Systems and Devices.\n* Set up your Circuit Playground.\n\n**Suggested time:** 20 minutes"
       },
       "seeding_key": {
         "lesson.key": "Introduction to Creating Apps with Devices ",
@@ -215,6 +216,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U6_physical-computi_-foundations24"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -237,6 +241,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-24-mod1-Certificate_-foundations24"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -259,6 +266,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_-foundations24"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -281,6 +291,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U6L2_physical-comput_-foundations24"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -303,6 +316,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-LessonTypes_-foundations24"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -325,28 +341,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Unit Overview"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL-Devices-22-pre-survey_-foundations24"
+        "level_keys": [
+          "VPL-CSD-Summer-CI-Unit_PSP-U6L3_-foundations24"
         ],
-        "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-foundations-unit1",
-        "activity_section.key": "7499ca36-f88a-4a93-9deb-2030c902db14"
-      },
-      "level_keys": [
-        "VPL-Devices-22-pre-survey_-foundations24"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 7,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -364,11 +361,14 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
-      "activity_section_position": 6,
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-PC-22-PSP-vid_-foundations24"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -386,11 +386,14 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
+      "chapter": 8,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CP-Overview-Video_setup_-foundations24"
+        ],
         "progression": "Connect your Circuit Playground"
       },
       "bonus": false,
@@ -408,11 +411,14 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
+      "chapter": 9,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-22-CI-mod6-MakerApp-appLab_physical-compu_-foundations24"
+        ],
         "progression": "Connect your Circuit Playground"
       },
       "bonus": false,
@@ -430,11 +436,14 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
+      "chapter": 10,
+      "position": 10,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB3_-foundations24"
+        ],
         "progression": "Connect your Circuit Playground"
       },
       "bonus": false,
@@ -452,11 +461,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Overview-U6L3_physical-computing_-foundations24"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -474,11 +486,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI6-CSD circuit video_-foundations24"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -496,11 +511,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod 6- lesson3-inputOutput-Ove_phy_-foundations24"
+        ],
         "progression": "Introduction to Inputs and Outputs"
       },
       "bonus": false,
@@ -518,11 +536,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Board Outputs - SB1_-foundations24"
+        ],
         "progression": "Introduction to Inputs and Outputs"
       },
       "bonus": false,
@@ -540,11 +561,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 15,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-PILOT-CSD U6 - Board Inputs - SB1_-foundations24"
+        ],
         "progression": "Introduction to Inputs and Outputs"
       },
       "bonus": false,
@@ -562,11 +586,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 16,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB2_-foundations24"
+        ],
         "progression": "Add Complexity to Your App"
       },
       "bonus": false,
@@ -584,11 +611,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 17,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB4_-foundations24"
+        ],
         "progression": "Add Complexity to Your App"
       },
       "bonus": false,
@@ -606,11 +636,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 18,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - If Variables - SB7_-foundations24"
+        ],
         "progression": "Add Complexity to Your App"
       },
       "bonus": false,
@@ -628,11 +661,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 19,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB1_-foundations24"
+        ],
         "progression": "Explore Additional Board Events"
       },
       "bonus": false,
@@ -650,11 +686,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Color LEDs - SB2_-foundations24"
+        ],
         "progression": "Explore Additional Board Events"
       },
       "bonus": false,
@@ -672,11 +711,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 11,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U6 - Combine Inputs - SB3_-foundations24"
+        ],
         "progression": "Explore Additional Board Events"
       },
       "bonus": false,
@@ -694,11 +736,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U6L5C_phy_-foundations24"
+        ],
         "progression": "Preview the End-of-Chapter Project"
       },
       "bonus": false,
@@ -770,18 +815,6 @@
         "level.key": "SP-VPL-PC-22-LessonTypes_-foundations24",
         "script_level.level_keys": [
           "SP-VPL-PC-22-LessonTypes_-foundations24"
-        ],
-        "lesson.key": "Introduction to Creating Apps with Devices ",
-        "lesson_group.key": "",
-        "script.name": "self-paced-pl-foundations-unit1",
-        "activity_section.key": "7499ca36-f88a-4a93-9deb-2030c902db14"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "VPL-Devices-22-pre-survey_-foundations24",
-        "script_level.level_keys": [
-          "VPL-Devices-22-pre-survey_-foundations24"
         ],
         "lesson.key": "Introduction to Creating Apps with Devices ",
         "lesson_group.key": "",

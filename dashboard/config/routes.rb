@@ -7,6 +7,9 @@ Dashboard::Application.routes.draw do
   # Redirect studio.code.org/courses to code.org/students
   get "/courses", to: redirect(CDO.code_org_url("/students"))
 
+  # Redirect studio.code.org/sections/teacher_dashboard/first_section_progress to most recent section
+  get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section"
+
   constraints host: CDO.codeprojects_hostname do
     # Routes needed for the footer on weblab share links on codeprojects
     get '/weblab/footer', to: 'projects#weblab_footer'
@@ -63,6 +66,8 @@ Dashboard::Application.routes.draw do
     end
 
     resources :images, only: [:new]
+
+    get "/ai_tutor/tester", to: "ai_tutor#tester"
 
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'

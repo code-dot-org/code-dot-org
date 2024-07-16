@@ -1,6 +1,6 @@
 name 'Gen AI Humanities - Student Survey Intro'
 markdown <<MARKDOWN
-###Please take a moment to respond to this short survey.
+### Please take a moment to respond to this short survey.
 
 Code.org takes your privacy seriously. Your responses here will be kept **anonymous**. Your teacher can see responses for the whole class but without names attached.
 MARKDOWN
@@ -8,5 +8,5 @@ MARKDOWN
 teacher_markdown <<MARKDOWN
 **Teacher End-Of-Unit Survey:** While your students complete the survey, we would appreciate you completing a short teacher survey.
 
-##[Click Here for Teacher Survey](https://www.code.org)
+##[Click Here for Teacher Survey](https://studio.code.org/form/csc_generative_ai_lesson_writing_process_teacher_survey)
 MARKDOWN

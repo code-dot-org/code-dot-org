@@ -11750,7 +11750,7 @@ en:
             lessonGroup-4:
               display_name: Building Physical Prototypes
           name: focus-on-design-with-purpose4b-2023
-          title: Unit 4B - (Option B) Creating Apps with Devices (micro:bit)
+          title: Unit 4B - (Option B) Creating Apps with Devices (micro:bit) ('24-'25)
           description_audience: ''
           description_short: ''
           description: "In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit](/s/focus-on-design-with-purpose4a-2023). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom](https://code.org/maker/microbit)\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices (micro:bit) Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-microbit). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went."
@@ -17037,7 +17037,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: elem-game-design-2024
-          title: Game Design (2024)
+          title: Elementary Game Design
           description_audience: ''
           description_short: ''
           description: |2-
@@ -17197,7 +17197,7 @@ en:
               display_name: Building Physical Prototypes
             lessonGroup-5:
               display_name: Survey
-          title: Creating Apps with Devices (micro:bit) ('23-'24)
+          title: Creating Apps with Devices (micro:bit) ('24-'25)
           description: "In the Creating Apps for Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit](/s/devices). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Inputs and Outputs Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Building Physical Prototypes Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom](https://code.org/maker/microbit)\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-microbit). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n&nbsp;\n&nbsp;\n&nbsp;"
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and BBC micro:bit, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the micro:bit as the basis for an innovation of your own design.
           description_short: ''
@@ -17339,6 +17339,8 @@ en:
           student_description: " In this unit, you’ll step into the shoes of a web developer and learn how to design and create web pages for a user. You’ll learn how to structure and style your user's pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
           description_short: " Learn to build your own web site in Web Lab."
           description_audience: ''
+          lessons: {}
+          name: focus-on-coding2-2024
         focus-on-coding3-2024:
           lesson_groups:
             lessonGroup-2:
@@ -17375,7 +17377,7 @@ en:
               display_name: Inputs and Outputs
             lessonGroup-4:
               display_name: Building Physical Prototypes
-          title: Unit 4B - Creating Apps with Devices - micro:bit ('24-'25)
+          title: 'Unit 4B - Creating Apps with Devices (micro:bit) '
           description: "In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit](/s/focus-on-coding4a-2023). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom](https://code.org/maker/microbit)\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices (micro:bit) Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-microbit). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went."
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and BBC micro:bit, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the micro:bit as the basis for an innovation of your own design.
           description_short: ''
@@ -17388,6 +17390,9 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: focus-on-coding-post-survey-2024
         focus-on-creativity1-2024:
           lesson_groups:
             lessonGroup-4:
@@ -17416,6 +17421,8 @@ en:
           student_description: " In this unit, you’ll step into the shoes of a web developer and learn how to design and create web pages for a user. You’ll learn how to structure and style your user's pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
           description_short: " Learn to build your own web site in Web Lab."
           description_audience: ''
+          lessons: {}
+          name: focus-on-creativity2-2024
         focus-on-creativity3-2024:
           lesson_groups:
             lessonGroup-2:
@@ -17452,7 +17459,7 @@ en:
               display_name: Inputs and Outputs
             lessonGroup-4:
               display_name: Building Physical Prototypes
-          title: Unit 4B - (Option B) Creating Apps with Devices - micro:bit ('24-'25)
+          title: Unit 4B - (Option B) Creating Apps with Devices (micro:bit)
           description: "In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit](/s/focus-on-creativity4a-2023). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom](https://code.org/maker/microbit)\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices (micro:bit) Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-microbit). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went."
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and BBC micro:bit, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the micro:bit as the basis for an innovation of your own design.
           description_short: ''
@@ -17465,6 +17472,9 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: focus-on-creativity-post-survey-2024
         focus-on-hardware1-2024:
           lesson_groups:
             lessonGroup-5:
@@ -17518,7 +17528,7 @@ en:
               display_name: Inputs and Outputs
             lessonGroup-4:
               display_name: Building Physical Prototypes
-          title: Unit 3B - (Option B) Creating Apps with Devices (micro:bit)
+          title: Unit 3B - (Option B) Creating Apps with Devices (micro:bit)  ('24-'25)
           description: "In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit](/s/focus-on-hardware3a-2023). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom](https://code.org/maker/microbit)\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices (micro:bit) Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-microbit). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went."
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and BBC micro:bit, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the micro:bit as the basis for an innovation of your own design.
           description_short: ''
@@ -17531,6 +17541,9 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: focus-on-hardware-post-survey-2024
         focus-on-design-with-purpose1-2024:
           lesson_groups:
             lessonGroup-4:
@@ -17559,6 +17572,8 @@ en:
           student_description: " In this unit, you’ll step into the shoes of a web developer and learn how to design and create web pages for a user. You’ll learn how to structure and style your user's pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
           description_short: " Learn to build your own web site in Web Lab."
           description_audience: ''
+          lessons: {}
+          name: focus-on-design-with-purpose2-2024
         focus-on-design-with-purpose3-2024:
           lesson_groups:
             lessonGroup-2:
@@ -17595,7 +17610,7 @@ en:
               display_name: Inputs and Outputs
             lessonGroup-4:
               display_name: Building Physical Prototypes
-          title: Unit 4B - (Option B) Creating Apps with Devices - micro:bit ('24-'25)
+          title: Unit 4B - (Option B) Creating Apps with Devices (micro:bit) ('24-'25)
           description: "In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit](/s/focus-on-design-with-purpose4a-2023). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom](https://code.org/maker/microbit)\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices (micro:bit) Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-microbit). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went."
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and BBC micro:bit, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the micro:bit as the basis for an innovation of your own design.
           description_short: ''
@@ -17608,6 +17623,9 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: focus-on-design-with-purpose-post-survey-2024
         focus-on-impact-in-society1-2024:
           lesson_groups:
             lessonGroup-4:
@@ -17698,6 +17716,9 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: focus-on-impact-in-society-post-survey-2024
         focus-on-data1-2024:
           lesson_groups:
             lessonGroup-4:
@@ -17749,6 +17770,9 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: focus-on-data-post-survey-2024
         sandbox-csf-a:
           lessons: {}
           lesson_groups: {}
@@ -17837,20 +17861,58 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-foundations-unit3
-          title: Artificial Intelligence (AI) and Machine Learning
+          title: 'Curriculum Overview: Unit 3 - Artificial Intelligence (AI) and Machine Learning'
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            ##### This section contains a curriculum overview of the Artificial Intelligence (AI) and Machine Learning unit.
+
+            ##### **You will:**
+
+            * ##### Get an introduction to artificial intelligence and machine learning.
+            * ##### Practice key concepts included in the unit.
+            * ##### Engage with AI Lab and App Lab.
+
+            ##### **Suggested time:** 70 minutes
+          student_description: |-
+            ##### This section contains a curriculum overview of the Artificial Intelligence (AI) and Machine Learning unit.
+
+            ##### **You will:**
+
+            * ##### Get an introduction to artificial intelligence and machine learning.
+            * ##### Practice key concepts included in the unit.
+            * ##### Engage with AI Lab and App Lab.
+
+            ##### **Suggested time:** 70 minutes
         self-paced-pl-foundations-unit4:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-foundations-unit4
-          title: Networks and the Internet
+          title: 'Curriculum Overview: Unit 1A - (Option A) Computer Systems and Devices with micro:bit'
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            ##### This section contains a curriculum overview of the Computer Systems and Devices unit, focusing on the BBC micro:bit.
+
+            ##### **You will:**
+
+            * ##### Get an introduction to Computer Systems and Devices
+            * ##### Set up your micro:bit
+            * ##### Practice key concepts included in the unit.
+            * ##### Preview the end-of-unit project.
+
+            ##### **Suggested time:** 55 minutes
+          student_description: |-
+            ##### This section contains a curriculum overview of the Computer Systems and Devices unit, focusing on the BBC micro:bit.
+
+            ##### **You will:**
+
+            * ##### Get an introduction to Computer Systems and Devices
+            * ##### Set up your micro:bit
+            * ##### Practice key concepts included in the unit.
+            * ##### Preview the end-of-unit project.
+
+            ##### **Suggested time:** 55 minutes
         self-paced-pl-foundations-unit5:
           lessons: {}
           lesson_groups: {}
@@ -17873,20 +17935,56 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-foundations-unit1
-          title: Computer Systems and Devices
+          title: 'Curriculum Overview: Unit 1B - (Option B) Computer Systems and Devices with Circuit Playground'
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            ##### This section contains a curriculum overview of the Computer Systems and Devices unit, focusing on Adafruit's Circuit Playground.
+
+            ##### **You will:**
+
+            * ##### Get an introduction to Computer Systems and Devices
+            * ##### Set up your Circuit Playground.
+            * ##### Practice key concepts included in the unit.
+            * ##### Preview the end-of-unit project.
+
+            ##### **Suggested time:** 55 minutes
+          student_description: |-
+            ##### This section contains a curriculum overview of the Computer Systems and Devices unit, focusing on Adafruit's Circuit Playground.
+
+            ##### **You will:**
+
+            * ##### Get an introduction to Computer Systems and Devices
+            * ##### Set up your Circuit Playground.
+            * ##### Practice key concepts included in the unit.
+            * ##### Preview the end-of-unit project.
+
+            ##### **Suggested time:** 55 minutes
         self-paced-pl-foundations-unit2:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-foundations-unit2
-          title: Representing Information
+          title: 'Curriculum Overview: Unit 2 - Representing Information'
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: |-
+            ##### This section contains a curriculum overview of the Representing Information unit.
+
+            ##### **You will:**
+
+            * ##### Get an introduction to Representing Information.
+            * ##### Practice key concepts included in the unit.
+
+            ##### **Suggested time:** 40 minutes
+          student_description: |-
+            ##### This section contains a curriculum overview of the Representing Information unit.
+
+            ##### **You will:**
+
+            * ##### Get an introduction to Representing Information.
+            * ##### Practice key concepts included in the unit.
+
+            ##### **Suggested time:** 40 minutes
         gen-ai-customizing-pilot-v2:
           lessons:
             lesson-11:
@@ -17974,7 +18072,7 @@ en:
           title: Preparing to Teach Computer Vision
           description_audience: ''
           description_short: ''
-          description: "**You will:** \n* Get an introduction to Teaching Computer Vision\n* Define and identify different uses of computer vision\n* Utilize the design process to solve problems\n* Explore Computer Vision lessons\n\n**Suggested Time:** 90 minutes"
+          description: "#### **You will:** \n* #### Get an introduction to Teaching Computer Vision\n* #### Define and identify different uses of computer vision\n* #### Utilize the design process to solve problems\n* #### Explore Computer Vision lessons\n\n#### **Suggested Time:** 90 minutes"
           student_description: ''
         self-paced-pl-coding-with-ai-2024:
           lessons: {}
@@ -17983,7 +18081,7 @@ en:
           title: Preparing to Teach Coding with AI
           description_audience: ''
           description_short: ''
-          description: "**You will:**\n* Get an introduction to Coding with AI\n* Learn about different Large Language Models\n* Practice using AI to help with the coding process\n* Explore Coding with AI lessons\n\n**Suggested Time:** 120 minutes \n"
+          description: "#### **You will:**\n* #### Get an introduction to Coding with AI\n* #### Learn about different Large Language Models\n* #### Practice using AI to help with the coding process\n* ####Explore Coding with AI lessons\n\n#### **Suggested Time:** 120 minutes \n"
           student_description: "**You will: **\n* Get an introduction to Coding with AI\n* Learn about different Large Language Models\n* Practice using AI to help with the coding process\n* Explore Coding with AI lessons\n\n**Suggested Time:** 120 minutes "
         self-paced-pl-coding-w-ai-2024:
           lessons: {}
@@ -18112,7 +18210,7 @@ en:
             * #####  Learn about authentic computer science practices that students will develop.
             * ##### Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
 
-            ##### **Suggested Time**: 40 minutes
+            ##### **Suggested Time**: 25 minutes
           student_description: |-
             ##### In this module, you will be introduced to authentic computer science practices that students will engage with. You will also explore the role of the teacher within a computer science classroom and make a plan for how you will support student learning while teaching Foundations of Computer Science.
 
@@ -18122,7 +18220,7 @@ en:
             * #####  Learn about authentic computer science practices that students will develop.
             * ##### Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
 
-            ##### **Suggested Time**: 40 minutes
+            ##### **Suggested Time**: 25 minutes
         k5plgamedesign:
           lessons: {}
           lesson_groups: {}
@@ -18130,18 +18228,18 @@ en:
           title: Game Design
           description_audience: ''
           description_short: ''
-          description: "**You will:**\n\n* Learn the basic elements of game design.\n* Use variables to keep score.\n* Code environment and player sprites. \n* Learn how to host a game jam in your classroom. \n* Learn how to access Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
-          student_description: "**You will:**\n\n* Learn the basic elements of game design.\n* Use variables to keep score.\n* Code environment and player sprites. \n* Learn how to host a game jam in your classroom. \n* Learn how to access Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
+          description: "#### **You will:**\n\n* ####  Learn the basic elements of game design.\n* #### Use variables to keep score.\n* ####  Code environment and player sprites. \n* #### Learn how to host a game jam in your classroom. \n* #### Learn how to access Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
+          student_description: "#### **You will:**\n\n* #### Learn the basic elements of game design.\n* #### Use variables to keep score.\n* #### Code environment and player sprites. \n* #### Learn how to host a game jam in your classroom. \n* ####  Learn how to access Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
         k5gettingstarted:
           lessons: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Getting Started with Code.org
           name: k5gettingstarted
-          title: Getting Started
+          title: Getting Started [Optional]
           description_audience: ''
           description_short: ''
-          description: "#### **You will:**\n\n#### * Get an introduction to Code.org’s mission. \n#### * Learn how to navigate the Code.org website and teacher tools.\n#### * Set up a classroom section.\n#### * Locate and use course lesson plans and teacher resources.\n#### * Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+          description: "#### **You will:**\n\n* ####  Get an introduction to Code.org’s mission. \n* ####  Learn how to navigate the Code.org website and teacher tools.\n* ####  Set up a classroom section.\n* ####  Locate and use course lesson plans and teacher resources.\n* ####  Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
           student_description: "#### **You will:**\n\n#### * Get an introduction to Code.org’s mission. \n#### * Learn how to navigate the Code.org website and teacher tools.\n#### * Set up a classroom section.\n#### * Locate and use course lesson plans and teacher resources.\n#### * Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
         k5howaimakesdecisions:
           lessons: {}
@@ -18150,7 +18248,7 @@ en:
           title: How AI Makes Decisions
           description_audience: ''
           description_short: ''
-          description: "**You will:**\n\n* Learn what AI is and how it is used. \n* Learn how AI makes decisions using machine learning and data. \n* Learn how AI makes predictions.\n* Practice training AI using Code.org's AI Bot.\n* Learn how AI can be used as a tool in school. \n* Get ideas for sharing students' voices \n\n\n**Suggested time:** 80 minutes\n"
+          description: " #### **You will:**\n\n* #### Learn what AI is and how it is used. \n*  ####Learn how AI makes decisions using machine learning and data. \n*  ####Learn how AI makes predictions.\n* #### Practice training AI using Code.org's AI Bot.\n*  ####Learn how AI can be used as a tool in school. \n*  ####Get ideas for sharing students' voices \n\n\n**Suggested time:** 80 minutes\n"
           student_description: "**You will:**\n\n* Learn what AI is and how it is used. \n* Learn how AI makes decisions using machine learning and data. \n* Learn how AI makes predictions.\n* Practice training AI using Code.org's AI Bot.\n* Learn how AI can be used as a tool in school. \n* Get ideas for sharing students' voices \n\n\n**Suggested time:** 80 minutes\n"
         k5maker:
           lessons: {}
@@ -18217,9 +18315,68 @@ en:
           lessons: {}
           lesson_groups: {}
           name: k5maker5thgrade
-          title: ''
+          title: 5th Grade
           description_audience: ''
           description_short: ''
           description: "#### This module covers the concepts and skills that are in the first micro:bit track.\n\n#### **You will:**\n* #### Explore an unplugged coding lesson. \n* #### Code using events with Code.org.\n\n* #### Create and code with variables.\n\n\n#### **Suggested Time:** 70 minutes\n\n\n"
           student_description: "#### This module covers the concepts and skills that are in the first micro:bit track.\n\n#### **You will:**\n* #### Explore an unplugged coding lesson. \n* #### Code using events with Code.org.\n\n* #### Create and code with variables.\n\n\n#### **Suggested Time:** 70 minutes\n\n\n"
+        intro-to-data-science:
+          lessons: {}
+          lesson_groups: {}
+          name: intro-to-data-science
+          title: Introduction to Data Science
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        intro-to-data-science-2024:
+          lessons:
+            lesson-13:
+              name: Pre-Assessment
+            lesson-1:
+              name: Introduction to Data Science
+            lesson-2:
+              name: Making Sense of Data
+            lesson-3:
+              name: Ethical Data Collection
+            lesson-4:
+              name: Data Rights
+            lesson-5:
+              name: Effective Data Questions
+            lesson-6:
+              name: Data Storytelling
+            lesson-7:
+              name: Introduction to Data Visualization
+            lesson-8:
+              name: Data Cleaning and Analysis Techniques
+            lesson-9:
+              name: Data Interpretation
+            lesson-10:
+              name: More Visualization Techniques
+            lesson-11:
+              name: Crafting Stories with Data Project
+            lesson-12:
+              name: Assessment Day
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Getting Started
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: intro-to-data-science-2024
+          title: Introduction to Data Science
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        data-science-with-python-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: data-science-with-python-2024
+          title: Data Science with Python
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
 ...
