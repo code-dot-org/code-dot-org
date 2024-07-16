@@ -5,7 +5,7 @@ class AiModelProcessors::MistralProcessor
     USER: 'user'
   }.freeze
   MISTRAL = {
-    INSTRUCTIONS_BEGIN_TOKEN: '[INST',
+    INSTRUCTIONS_BEGIN_TOKEN: '[INST]',
     INSTRUCTIONS_END_TOKEN: '[/INST]',
     SENTENCE_BEGIN_TOKEN: '<s>',
     SENTENCE_END_TOKEN: '</s>'
