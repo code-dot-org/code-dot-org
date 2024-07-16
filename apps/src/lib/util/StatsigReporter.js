@@ -38,7 +38,7 @@ class StatsigReporter {
     const managed_test_environment = managed_test_environment_element
       ? managed_test_environment_element.dataset.managedTestServer === 'true'
       : false;
-    this.local_mode = !(isProductionEnvironment() || managed_test_environment);
+    this.local_mode = !!(isProductionEnvironment() || managed_test_environment);
     const options = {
       environment: {tier: getEnvironment()},
       localMode: this.local_mode,
