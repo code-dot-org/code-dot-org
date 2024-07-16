@@ -6,6 +6,10 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {selfPacedCourseConstants} from '@cdo/apps/code-studio/pd/professional_learning_landing/constants.js';
 import {UnconnectedLandingPage as LandingPage} from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
 import {
+  setWindowLocation,
+  resetWindowLocation,
+} from '@cdo/apps/code-studio/utils';
+import {
   getStore,
   registerReducers,
   stubRedux,
@@ -337,5 +341,26 @@ describe('LandingPage', () => {
 
     // Workshop Organizer workshop table
     screen.getByText('In Progress and Upcoming Workshops');
+  });
+
+  it('page does not show success dialog when not redirected here from successful enrollment', () => {
+    renderDefault();
+
+    expect(
+      screen.queryByText(
+        i18n.enrollmentCelebrationBody({workshopName: 'a new workshop'})
+      )
+    ).to.be.null;
+  });
+
+  it('page shows success dialog when redirected here from successful enrollment', () => {
+    const workshopCourseName = 'TEST COURSE';
+    setWindowLocation({search: `?wsCourse=${workshopCourseName}`});
+    renderDefault();
+
+    screen.getByText(
+      i18n.enrollmentCelebrationBody({workshopName: workshopCourseName})
+    );
+    resetWindowLocation();
   });
 });

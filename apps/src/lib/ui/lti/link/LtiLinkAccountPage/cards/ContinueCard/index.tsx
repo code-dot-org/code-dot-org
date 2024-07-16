@@ -57,19 +57,19 @@ const ContinueAccountCard = () => {
         title={i18n.ltiLinkAccountNewAccountCardHeaderLabel()}
         icon={
           <FontAwesomeV6Icon
-            className={classNames(styles.icon, 'fa-3x')}
+            className={classNames(styles.cardIcon, 'fa-2x')}
             iconName={'user-plus'}
           />
         }
       />
-      <CardContent>
+      <CardContent className={styles.cardContentContainer}>
         {i18n.ltiLinkAccountContinueAccountCardContent()}
       </CardContent>
       <CardActions>
         <Button
           className={classNames(styles.button, styles.cardSecondaryButton)}
           color={buttonColors.white}
-          size="l"
+          size="m"
           isPending={isSaving}
           disabled={isSaving}
           text={i18n.ltiIframeCallToAction()}
