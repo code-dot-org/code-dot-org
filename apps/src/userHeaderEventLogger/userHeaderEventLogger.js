@@ -21,6 +21,7 @@ function addClickEventToLinks(selector, eventName) {
 }
 
 $(document).ready(function () {
+  const signInButton = document.getElementById('signin_button');
   const headerCreateMenu = document.getElementById('header_create_menu');
   const pageUrl = window.location.href;
   const helpIcon = document.querySelector('#help-icon');
@@ -43,6 +44,15 @@ $(document).ready(function () {
       'hamburgerlink',
       EVENTS.SIGNED_OUT_USER_CLICKS_HAMBURGER_LINK
     );
+
+    // Log if the Sign in button is clicked
+    signInButton.addEventListener('click', () => {
+      analyticsReporter.sendEvent(
+        EVENTS.SIGNED_OUT_USER_CLICKS_SIGN_IN,
+        {pageUrl: pageUrl},
+        PLATFORMS.STATSIG
+      );
+    });
 
     // Log if the Help icon menu is clicked
     helpIcon.addEventListener('click', () => {
