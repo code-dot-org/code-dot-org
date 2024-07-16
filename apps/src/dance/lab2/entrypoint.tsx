@@ -5,6 +5,6 @@ import React from 'react';
 export const DanceEntryPoint: Lab2EntryPoint = {
   backgroundMode: false,
   theme: Theme.LIGHT,
-  entryPoint: OptionsToAvoid.UseHardcodedEntryPoint_WARNING_Bloats_Lab2_Bundle,
-  hardcodedEntryPoint: <DanceView />,
+  view: OptionsToAvoid.UseHardcodedEntryPoint_WARNING_Bloats_Lab2_Bundle,
+  hardcodedView: <DanceView />,
 };

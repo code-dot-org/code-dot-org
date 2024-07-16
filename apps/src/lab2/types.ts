@@ -210,17 +210,17 @@ export interface Lab2EntryPoint {
    * example.
    */
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  entryPoint: LazyExoticComponent<ComponentType<any>> | OptionsToAvoid;
+  view: LazyExoticComponent<ComponentType<any>> | OptionsToAvoid;
   /**
    * Using this option will result in hardcoding this lab into the downloaded
    * bundle for ALL other lab2 labs, slowing down their loading and consuming
-   * excessive school internet bandwidth. Please use `entryPoint` instead,
+   * excessive school internet bandwidth. Please use `view` instead,
    * which lazy loads you lab on demand, unless you have a really good reason
    * you can't lazy load.
    *
    * See `pythonlab/entrypoint.tsx` for an example that doesn't use this option.
    */
-  hardcodedEntryPoint?: React.ReactNode;
+  hardcodedView?: React.ReactNode;
   /**
    * Display theme for this lab. This will likely be configured by user
    * preferences eventually, but for now this is fixed for each lab. Defaults

@@ -6,6 +6,6 @@ import Weblab2View from '@cdo/apps/weblab2/Weblab2View'; // avoid hardcoding imp
 export const Weblab2EntryPoint: Lab2EntryPoint = {
   backgroundMode: false,
   theme: Theme.DARK,
-  entryPoint: OptionsToAvoid.UseHardcodedEntryPoint_WARNING_Bloats_Lab2_Bundle,
-  hardcodedEntryPoint: <Weblab2View />,
+  view: OptionsToAvoid.UseHardcodedEntryPoint_WARNING_Bloats_Lab2_Bundle,
+  hardcodedView: <Weblab2View />,
 };
