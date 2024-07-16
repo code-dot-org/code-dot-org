@@ -9,19 +9,21 @@ Feature: Policy Compliance and Parental Permission
 
     # It should not be a pending request
     Then I wait to see "#lockout-panel-form"
-    And element "#permission-status" contains text "Not Submitted"
+    Then I wait until element "#permission-status" contains text "Not Submitted"
+    And element ".lockout-panel h2" contains text "Just one more thing!"
+    And element "#lockout-panel-form > p:nth-child(1)" contains text "We need your parent or guardian to approve your account before you can get started. Please supply us with your parent or guardian's email address so they can grant you permission."
+    And element "#lockout-panel-form > p:nth-child(2)" contains text "Note: Your account will be deleted if we do not receive your parent or guardian's permission by "
 
     # Type in the email do re-enable the button
     And I press keys "parent@example.com" for element "#parent-email"
     Then element "#lockout-submit" is enabled
 
     # Ensure that we are now "pending"
-    And I take note of the current loaded page
     When I press "lockout-submit"
-    Then I wait until I am on a different page than I noted before
-
-    Then I wait to see "#lockout-panel-form"
-    And element "#permission-status" contains text "Pending"
+    Then I wait until element "#permission-status" contains text "Pending"
+    And element ".lockout-panel h2" contains text "Thanks! We've contacted your parent/guardian."
+    And element "#lockout-panel-form > p:nth-child(1)" contains text "We sent an email to parent@example.com. Didn't receive anything? Update your parent or guardian's email below or send another request."
+    And element "#lockout-panel-form > p:nth-child(2)" contains text "Note: Your account will be deleted if we do not receive your parent or guardian's permission by "
 
   Scenario: New under 13 account should be able to provide state and see lockout page to send parental request.
     Given I am on "http://studio.code.org"
@@ -47,12 +49,8 @@ Feature: Policy Compliance and Parental Permission
     Then element "#lockout-submit" is enabled
 
     # Ensure that we are now "pending"
-    And I take note of the current loaded page
     When I press "lockout-submit"
-    Then I wait until I am on a different page than I noted before
-
-    Then I wait to see "#lockout-panel-form"
-    And element "#permission-status" contains text "Pending"
+    Then I wait until element "#permission-status" contains text "Pending"
 
   Scenario: New under 13 account should be able to elect to sign out at the lockout.
     Given I am on "http://studio.code.org"
@@ -87,17 +85,11 @@ Feature: Policy Compliance and Parental Permission
     Then element "#lockout-submit" is enabled
 
     # Ensure that we are now "pending"
-    And I take note of the current loaded page
     When I press "lockout-submit"
-    Then I wait until I am on a different page than I noted before
-
-    Then I wait to see "#lockout-panel-form"
     Then I wait until element "#permission-status" contains text "Pending"
 
     # Perform a "resend"
-    And I take note of the current loaded page
     When I press "lockout-resend"
-    Then I wait until I am on a different page than I noted before
     Then I wait to see "#lockout-panel-form"
 
   Scenario: New under 13 account should be able to send a different email
@@ -117,12 +109,8 @@ Feature: Policy Compliance and Parental Permission
     Then element "#lockout-submit" is enabled
 
     # Ensure that we are now "pending"
-    And I take note of the current loaded page
     When I press "lockout-submit"
-    Then I wait until I am on a different page than I noted before
-
-    Then I wait to see "#lockout-panel-form"
-    And element "#permission-status" contains text "Pending"
+    Then I wait until element "#permission-status" contains text "Pending"
 
     # Type in the email do re-enable the button
     When I clear the text from element "#parent-email"
@@ -130,10 +118,8 @@ Feature: Policy Compliance and Parental Permission
     Then element "#lockout-submit" is enabled
 
     # Ensure that the new email was used
-    And I take note of the current loaded page
     When I press "lockout-submit"
-    Then I wait until I am on a different page than I noted before
-
+    And I reload the page
     Then I wait to see "#lockout-panel-form"
     And element "#parent-email" has value "parent2@example.com"
 
