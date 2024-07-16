@@ -212,8 +212,7 @@ export interface Lab2EntryPoint {
    * component using a dynamic import. See `pythonlab/entrypoint.tsx` for an
    * example.
    */
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  view: LazyExoticComponent<ComponentType<any>> | OptionsToAvoid;
+  view: LazyExoticComponent<ComponentType> | OptionsToAvoid;
   /**
    * Using this option will result in hardcoding this lab into the downloaded
    * bundle for ALL other lab2 labs, slowing down their loading and consuming
@@ -223,7 +222,7 @@ export interface Lab2EntryPoint {
    *
    * See `pythonlab/entrypoint.tsx` for an example that doesn't use this option.
    */
-  hardcodedView?: React.ReactNode;
+  hardcodedView?: ComponentType;
   /**
    * Display theme for this lab. This will likely be configured by user
    * preferences eventually, but for now this is fixed for each lab. Defaults
