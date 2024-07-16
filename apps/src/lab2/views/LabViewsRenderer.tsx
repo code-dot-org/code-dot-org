@@ -54,13 +54,13 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     }
   }, [currentAppName, setTheme]);
 
-  const renderApp = (labProperties: Lab2EntryPoint): React.ReactNode => {
-    return labProperties.view ===
+  const renderApp = (lab2EntryPoint: Lab2EntryPoint): React.ReactNode => {
+    return lab2EntryPoint.view ===
       OptionsToAvoid.UseHardcodedView_WARNING_Bloats_Lab2_Bundle ? (
-      React.createElement(labProperties.hardcodedView!)
+      React.createElement(lab2EntryPoint.hardcodedView!)
     ) : (
       <Suspense fallback={<Loading isLoading={true} />}>
-        <labProperties.view />
+        <lab2EntryPoint.view />
       </Suspense>
     );
   };
