@@ -3,6 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import locale from '@cdo/locale';
 
@@ -220,13 +221,17 @@ class RosterDialog extends React.Component {
     this.setState({selectedId: id});
   };
 
-  // valid event names: 'Section Setup Complete', 'Section Setup Cancelled'.
+  // valid event names: 'Section Setup Completed', 'Section Setup Cancelled'.
   recordSectionSetupExitEvent = eventName => {
     const {rosterProvider} = this.props;
 
-    analyticsReporter.sendEvent(eventName, {
-      oauthSource: rosterProvider,
-    });
+    analyticsReporter.sendEvent(
+      eventName,
+      {
+        oauthSource: rosterProvider,
+      },
+      PLATFORMS.BOTH
+    );
   };
 
   render() {

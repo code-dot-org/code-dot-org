@@ -183,7 +183,7 @@ module CAP
 
             before do
               Timecop.travel(grace_period_duration.from_now)
-              student.update!(age: 13)
+              student.update_attribute(:age, 13) # bypass validation
             end
 
             it 'student should not be locked out' do

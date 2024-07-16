@@ -19,7 +19,7 @@ Dashboard::Application.configure do
 
   # test environment should use precompiled, minified, digested assets like production,
   # unless it's being used for unit tests.
-  ci_test = !!(ENV['UNIT_TEST'] || ENV['CI'])
+  ci_test = !!(ENV['UNIT_TEST'] || ENV.fetch('CI', nil))
 
   unless ci_test
     # Compress JavaScripts and CSS.

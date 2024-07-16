@@ -7,12 +7,13 @@
 // live elsewhere.
 // The library data should definitely live elsewhere.
 
+import {ComponentType, LazyExoticComponent} from 'react';
+
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
-import {lab2EntryPoints} from '../../lab2EntryPoints';
 import {Theme} from '@cdo/apps/lab2/views/ThemeWrapper';
 
-import {ComponentType, LazyExoticComponent} from 'react';
+import {lab2EntryPoints} from '../../lab2EntryPoints';
 
 export {Theme};
 
@@ -150,7 +151,8 @@ export interface LevelProperties {
   isK1?: boolean;
   skin?: string;
   toolboxBlocks?: string;
-  source?: MultiFileSource;
+  startSources?: MultiFileSource;
+  templateSources?: MultiFileSource;
   sharedBlocks?: BlockDefinition[];
   validations?: Validation[];
   // An optional URL that allows the user to skip the progression.
@@ -166,6 +168,7 @@ export interface LevelProperties {
   // For Teachers Only value
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
+  submittable?: boolean;
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -309,12 +312,13 @@ export interface ExtraLinksLevelData {
   is_standalone_project: boolean;
 }
 export interface ExtraLinksProjectData {
-  owner_info: {storage_id: number; name: string};
-  project_info: {
+  owner_info?: {storage_id: number; name: string};
+  project_info?: {
     id: number;
     sources_link: string;
     is_featured_project: boolean;
     featured_status: string;
     remix_ancestry: string[];
   };
+  meesage?: string;
 }

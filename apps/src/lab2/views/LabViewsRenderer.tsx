@@ -6,17 +6,21 @@
 
 import classNames from 'classnames';
 import React, {Suspense, useContext, useEffect, useState} from 'react';
-import ProgressContainer from '../progress/ProgressContainer';
-import {AppName, Lab2EntryPoint} from '../types';
-import moduleStyles from './lab-views-renderer.module.scss';
-import {DEFAULT_THEME, ThemeContext} from './ThemeWrapper';
-import Loading from './Loading';
-import ExtraLinks from './ExtraLinks';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {getAppOptionsViewingExemplar} from '../projects/utils';
-import NoExemplarPage from './components/NoExemplarPage';
+
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
+import ProgressContainer from '../progress/ProgressContainer';
+import {getAppOptionsViewingExemplar} from '../projects/utils';
+import {AppName, Lab2EntryPoint} from '../types';
+
+import NoExemplarPage from './components/NoExemplarPage';
+import ExtraLinks from './ExtraLinks';
+import Loading from './Loading';
+import {DEFAULT_THEME, ThemeContext} from './ThemeWrapper';
+
+import moduleStyles from './lab-views-renderer.module.scss';
 
 const hideExtraLinks = queryParams('hide-extra-links') === 'true';
 

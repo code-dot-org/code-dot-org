@@ -186,10 +186,6 @@ module.exports = {
       // To turn on the order rule for a folder, remove it from this list and run `yarn lint --fix`
       // Commit any changes made.
       files: [
-        'src/dance/**',
-        'src/generated/**',
-        'src/javalab/**',
-        'src/lab2/**',
         'src/lib/**',
         'src/music/**',
         'src/p5lab/**',

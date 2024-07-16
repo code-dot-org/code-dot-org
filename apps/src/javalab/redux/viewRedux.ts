@@ -14,13 +14,13 @@ import {
 } from '@reduxjs/toolkit';
 
 const {DisplayTheme} = require('@cdo/apps/javalab/DisplayTheme');
-const UserPreferences = require('@cdo/apps/lib/util/UserPreferences');
 const {
   DEFAULT_FONT_SIZE_PX,
   FONT_SIZE_INCREMENT_PX,
   MAX_FONT_SIZE_PX,
   MIN_FONT_SIZE_PX,
 } = require('@cdo/apps/lab2/views/components/editor/editorThemes');
+const UserPreferences = require('@cdo/apps/lib/util/UserPreferences');
 
 type DisplayThemeValue = 'light' | 'dark';
 

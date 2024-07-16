@@ -1,19 +1,23 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import {TypedUseSelectorHook, useSelector} from 'react-redux';
+
+import SongSelector from '@cdo/apps/dance/SongSelector';
+import {LabState} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {registerReducers} from '@cdo/apps/redux';
 import AgeDialog from '@cdo/apps/templates/AgeDialog';
 import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
-import {getFilterStatus} from '../../songs';
-import moduleStyles from './dance-view.module.scss';
-import SongSelector from '@cdo/apps/dance/SongSelector';
-import {DanceState, initSongs, reducers, setSong} from '../../danceRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {LabState} from '@cdo/apps/lab2/lab2Redux';
-import {DanceLevelProperties, DanceProjectSources} from '../../types';
-import {registerReducers} from '@cdo/apps/redux';
+
 import {installCommonBlocks, installDanceBlocks} from '../../blockly/setup';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {DanceState, initSongs, reducers, setSong} from '../../danceRedux';
+import {getFilterStatus} from '../../songs';
+import {DanceLevelProperties, DanceProjectSources} from '../../types';
+
+import moduleStyles from './dance-view.module.scss';
+
 const commonI18n = require('@cdo/locale');
 
 const DANCE_VISUALIZATION_ID = 'dance-visualization';

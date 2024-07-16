@@ -524,7 +524,7 @@ def main
   check_for_cdo_keys
   check_github_token
 
-  dotd_name = ENV['CDODEV_DOTD_NAME'] || ENV['USER']
+  dotd_name = ENV['CDODEV_DOTD_NAME'] || ENV.fetch('USER', nil)
   @logger.info("#{Time.new.strftime('%A, %B %d %Y')}: #{dotd_name} is DOTD")
 
   puts_script_intro(dotd_name)
