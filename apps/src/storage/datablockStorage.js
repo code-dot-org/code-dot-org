@@ -390,7 +390,7 @@ DatablockStorage.clearAllData = function (onSuccess, onError) {
 
 // This is a new method for DatablockStorage which replaces the above APIs
 DatablockStorage.addSharedTable = function (tableName, onSuccess, onError) {
-  _fetch('add_shared_table', 'POST', {
+  return _fetch('add_shared_table', 'POST', {
     table_name: tableName,
   }).then(onSuccess, onError);
 };
