@@ -347,7 +347,7 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   private def validate_max_table_count
-    if DatablockStorageTable.where(project_id: project_id).count >= MAX_TABLE_COUNT
+    if DatablockStorageTable.where(project_id: project_id).count >= MAX_TABLE_COUNT && project_id != SHARED_TABLE_PROJECT_ID
       raise StudentFacingError.new(:MAX_TABLES_EXCEEDED), "Cannot create more than #{MAX_TABLE_COUNT} tables"
     end
   end
