@@ -2579,15 +2579,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@blockly/field-angle@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@blockly/field-angle@npm:4.0.0"
-  peerDependencies:
-    blockly: ^10.0.0
-  checksum: d21b7ad0785b579eb9fee8945709dce2fe7a5a773d0bda18cb38fa253a5da1781f19cd93babbe7a21b8884fdf3b862634504211b41dc61f3edd994534b6137cb
-  languageName: node
-  linkType: hard
-
 "@blockly/field-bitmap@npm:^4.1.0":
   version: 4.1.0
   resolution: "@blockly/field-bitmap@npm:4.1.0"
@@ -8162,7 +8153,6 @@ __metadata:
     "@babel/preset-env": ^7.24.4
     "@babel/preset-react": ^7.24.1
     "@blockly/block-shareable-procedures": ~4.0.5
-    "@blockly/field-angle": ^4.0.0
     "@blockly/field-bitmap": ^4.1.0
     "@blockly/field-colour": ^4.0.0
     "@blockly/field-grid-dropdown": ~4.0.9
