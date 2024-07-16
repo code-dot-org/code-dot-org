@@ -16,7 +16,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {getAppOptionsViewingExemplar} from '../projects/utils';
 import NoExemplarPage from './components/NoExemplarPage';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import lab2EntryPoints from '../../../lab2EntryPoints';
+import {lab2EntryPoints} from '../../../lab2EntryPoints';
 
 const hideExtraLinks = queryParams('hide-extra-links') === 'true';
 

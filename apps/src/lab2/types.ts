@@ -9,7 +9,7 @@
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
-import lab2EntryPoints from '../../lab2EntryPoints';
+import {lab2EntryPoints} from '../../lab2EntryPoints';
 import {Theme} from '@cdo/apps/lab2/views/ThemeWrapper';
 
 import {ComponentType, LazyExoticComponent} from 'react';

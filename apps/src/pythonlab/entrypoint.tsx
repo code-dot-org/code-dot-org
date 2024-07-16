@@ -2,7 +2,7 @@ import React, {lazy} from 'react';
 
 import {Lab2EntryPoint, Theme} from '@cdo/apps/lab2/types';
 
-export default {
+export const PythonlabEntryPoint: Lab2EntryPoint = {
   backgroundMode: false,
   node: <div />,
   lazyNode: lazy(() =>
@@ -13,4 +13,4 @@ export default {
     )
   ),
   theme: Theme.DARK,
-} as Lab2EntryPoint;
+};
