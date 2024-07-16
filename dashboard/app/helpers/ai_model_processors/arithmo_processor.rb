@@ -1,9 +1,8 @@
-class AiModelProcessors::ArithmoProcessor < AiModelProcessors::MistralProcessor  
+class AiModelProcessors::ArithmoProcessor < AiModelProcessors::MistralProcessor
   ARITHMO = {
     QUESTION_LABEL: 'Question: ',
     ANSWER_LABEL: 'Answer:'
   }.freeze
-
 
   def format_model_inputs(instructions, new_message, stored_messages)
     # Format input for Arithmo model as detailed at https://huggingface.co/akjindal53244/Arithmo-Mistral-7B.
