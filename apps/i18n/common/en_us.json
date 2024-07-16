@@ -1331,6 +1331,7 @@
   "hiddenScriptTooltip": "Please select a section before trying to toggle whether or not the unit is visible to your students.",
   "hiddenUnitWarningNotice": "The unit is hidden for this section",
   "hiddenUnitWarningDetails": "Go to the course overview page to update which units are visible to your students by clicking \"View all units.\"",
+  "hiddenResponses": "{numHiddenResponses} response(s) hidden.",
   "hide": "Hide",
   "hideAbilityToViewCode": "Hide ability to view code",
   "hideAllLessons": "Hide All Lessons",
