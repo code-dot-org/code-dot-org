@@ -5,6 +5,6 @@ import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo'; // avoi
 
 export const StandaloneVideoEntryPoint: Lab2EntryPoint = {
   backgroundMode: false,
-  view: OptionsToAvoid.UseHardcodedEntryPoint_WARNING_Bloats_Lab2_Bundle,
+  view: OptionsToAvoid.UseHardcodedView_WARNING_Bloats_Lab2_Bundle,
   hardcodedView: <StandaloneVideo />,
 };

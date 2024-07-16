@@ -8,6 +8,6 @@ export const MusicEntryPoint: Lab2EntryPoint = {
   backgroundMode: true,
   theme: Theme.DARK,
   setupFunction: setUpBlocklyForMusicLab,
-  view: OptionsToAvoid.UseHardcodedEntryPoint_WARNING_Bloats_Lab2_Bundle,
+  view: OptionsToAvoid.UseHardcodedView_WARNING_Bloats_Lab2_Bundle,
   hardcodedView: <MusicView />,
 };

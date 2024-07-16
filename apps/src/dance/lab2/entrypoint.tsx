@@ -7,6 +7,6 @@ import DanceView from './views/DanceView';
 export const DanceEntryPoint: Lab2EntryPoint = {
   backgroundMode: false,
   theme: Theme.LIGHT,
-  view: OptionsToAvoid.UseHardcodedEntryPoint_WARNING_Bloats_Lab2_Bundle,
+  view: OptionsToAvoid.UseHardcodedView_WARNING_Bloats_Lab2_Bundle,
   hardcodedView: <DanceView />,
 };

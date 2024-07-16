@@ -6,6 +6,6 @@ import {Lab2EntryPoint, OptionsToAvoid, Theme} from '@cdo/apps/lab2/types';
 export const AIChatEntryPoint: Lab2EntryPoint = {
   backgroundMode: false,
   theme: Theme.LIGHT,
-  view: OptionsToAvoid.UseHardcodedEntryPoint_WARNING_Bloats_Lab2_Bundle,
+  view: OptionsToAvoid.UseHardcodedView_WARNING_Bloats_Lab2_Bundle,
   hardcodedView: <AichatView />,
 };

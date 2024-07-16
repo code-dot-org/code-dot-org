@@ -56,7 +56,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
 
   const renderApp = (labProperties: Lab2EntryPoint): React.ReactNode => {
     return labProperties.view ===
-      OptionsToAvoid.UseHardcodedEntryPoint_WARNING_Bloats_Lab2_Bundle ? (
+      OptionsToAvoid.UseHardcodedView_WARNING_Bloats_Lab2_Bundle ? (
       labProperties.hardcodedView!
     ) : (
       <Suspense fallback={<Loading isLoading={true} />}>

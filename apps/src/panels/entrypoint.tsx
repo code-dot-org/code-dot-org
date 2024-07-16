@@ -5,6 +5,6 @@ import PanelsLabView from '@cdo/apps/panels/PanelsLabView'; // avoid hardcoding 
 
 export const PanelsEntryPoint: Lab2EntryPoint = {
   backgroundMode: false,
-  view: OptionsToAvoid.UseHardcodedEntryPoint_WARNING_Bloats_Lab2_Bundle,
+  view: OptionsToAvoid.UseHardcodedView_WARNING_Bloats_Lab2_Bundle,
   hardcodedView: <PanelsLabView />,
 };

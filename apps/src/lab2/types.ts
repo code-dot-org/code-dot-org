@@ -195,7 +195,7 @@ export enum OptionsToAvoid {
    * Please only use this option if there's a good reason you can't lazy load
    * your lab. With this option set, you must also specify `hardcodedEntryPoint`.
    */
-  UseHardcodedEntryPoint_WARNING_Bloats_Lab2_Bundle,
+  UseHardcodedView_WARNING_Bloats_Lab2_Bundle,
 }
 
 // Configuration for how a Lab should be rendered
