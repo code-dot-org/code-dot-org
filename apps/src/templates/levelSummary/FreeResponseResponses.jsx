@@ -36,7 +36,7 @@ const FreeResponseResponses = ({responses}) => {
           icon={{iconName: 'eye-slash'}}
           onClick={() => setHiddenResponses([])}
           link={{
-            text: i18n.showAllResponses(),
+            text: i18n.showHiddenResponses(),
             onClick: () => setHiddenResponses([]),
             href: null,
           }}
