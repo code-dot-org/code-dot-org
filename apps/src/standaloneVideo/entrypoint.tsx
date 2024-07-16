@@ -1,9 +1,10 @@
 import React from 'react';
 
-import {Lab2EntryPoint} from '@cdo/apps/lab2/types';
-import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo';
+import {OptionsToAvoid, Lab2EntryPoint} from '@cdo/apps/lab2/types';
+import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo'; // avoid hardcoding imports like this in an entrypoint.tsx
 
 export const StandaloneVideoEntryPoint: Lab2EntryPoint = {
   backgroundMode: false,
-  node: <StandaloneVideo />,
+  entryPoint: OptionsToAvoid.UseHardcodedEntryPoint_WARNING_Bloats_Lab2_Bundle,
+  hardcodedEntryPoint: <StandaloneVideo />,
 };

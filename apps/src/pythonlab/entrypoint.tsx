@@ -4,8 +4,8 @@ import {Lab2EntryPoint, Theme} from '@cdo/apps/lab2/types';
 
 export const PythonlabEntryPoint: Lab2EntryPoint = {
   backgroundMode: false,
-  node: <div />,
-  lazyNode: lazy(() =>
+  hardcodedEntryPoint: <div />,
+  entryPoint: lazy(() =>
     import(/* webpackChunkName: "pythonlab" */ './index.js').then(
       ({PythonlabView}) => ({
         default: PythonlabView,

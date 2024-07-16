@@ -181,6 +181,20 @@ export interface VideoLevelData {
   download: string;
 }
 
+export enum OptionsToAvoid {
+  /**
+   * @deprecated: using this option will result in hardcoding this lab into the
+   * downloaded bundle for ALL other lab2 labs, slowing down their loading and
+   * consuming excessive school internet bandwidth.
+   *
+   * See `pythonlab/entrypoint.tsx` for an example that doesn't use this option.
+   *
+   * Please only use this option if there's a good reason you can't lazy load
+   * your lab. With this option set, you must also specify `hardcodedEntryPoint`.
+   */
+  UseHardcodedEntryPoint_WARNING_Bloats_Lab2_Bundle,
+}
+
 // Configuration for how a Lab should be rendered
 export interface Lab2EntryPoint {
   /**
@@ -191,19 +205,22 @@ export interface Lab2EntryPoint {
    */
   backgroundMode: boolean;
   /**
-   * @deprecated Lab2Entrypoint.node should not be used in new code, use
-   * `Lab2Entrypoint.lazyNode` instead. See `pythonlab/entrypoint.tsx` for an
-   * example. Using this field will result in a single giant lab2 code bundle
-   * which will be slow for students to load.
-   */
-  node: React.ReactNode;
-  /**
    * A lazy loaded view for the lab. If this is specified, it will be used
    * over the node property. This is useful for lab views that load extra
    * dependencies that we don't want loaded for every lab.
    */
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  lazyNode?: LazyExoticComponent<ComponentType<any>>;
+  entryPoint: LazyExoticComponent<ComponentType<any>> | OptionsToAvoid;
+  /**
+   * Using this option will result in hardcoding this lab into the downloaded
+   * bundle for ALL other lab2 labs, slowing down their loading and consuming
+   * excessive school internet bandwidth. Please use `entryPoint` instead,
+   * which lazy loads you lab on demand, unless you have a really good reason
+   * you can't lazy load.
+   *
+   * See `pythonlab/entrypoint.tsx` for an example that doesn't use this option.
+   */
+  hardcodedEntryPoint?: React.ReactNode;
   /**
    * Display theme for this lab. This will likely be configured by user
    * preferences eventually, but for now this is fixed for each lab. Defaults

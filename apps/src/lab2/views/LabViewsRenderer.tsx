@@ -51,12 +51,12 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   }, [currentAppName, setTheme]);
 
   const renderApp = (labProperties: Lab2EntryPoint) => {
-    return labProperties.lazyNode ? (
+    return labProperties.entryPoint ? (
       <Suspense fallback={<Loading isLoading={true} />}>
-        <labProperties.lazyNode />
+        <labProperties.entryPoint />
       </Suspense>
     ) : (
-      labProperties.node
+      labProperties.hardcodedEntryPoint
     );
   };
 
