@@ -167,6 +167,9 @@
       %div= form.submit t('crud.update'), id: 'edit-ai-settings', class: 'btn btn-warning'
 
 %div#expire-other-sessions
+  %hr
+  %h2= "Manage Other Sessions"
+  %p= "If you would like to log out of your account on any other browsers that you may be signed in on, you can do so here"
   = form_for(resource, as: resource_name, url: expire_other_path, html: {method: :delete}) do |form|
     = form.submit 'Log Out of All Other Browsers', class: 'btn btn-warning'
 
