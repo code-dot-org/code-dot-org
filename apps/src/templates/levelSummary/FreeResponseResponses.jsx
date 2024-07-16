@@ -43,7 +43,7 @@ const FreeResponseResponses = ({responses}) => {
           text={i18n.hiddenResponses({
             numHiddenResponses: hiddenResponses.length,
           })}
-          className={styles.hiddenResponsesAlert}
+          type="gray"
         />
       )}
     </div>
