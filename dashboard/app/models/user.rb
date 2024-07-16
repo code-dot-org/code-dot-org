@@ -91,7 +91,6 @@ class User < ApplicationRecord
   include UserPermissionGrantee
   include PartialRegistration
   include Rails.application.routes.url_helpers
-  include Devise::ManualUserSessionExpiration
 
   # Notes:
   #   data_transfer_agreement_source: Indicates the source of the data transfer
@@ -188,6 +187,10 @@ class User < ApplicationRecord
   # :lockable, :timeoutable
   devise :invitable, :database_authenticatable, :registerable, :omniauthable,
     :recoverable, :rememberable, :trackable
+
+  # Make sure to include this concern after devise, since the Devise methods it
+  # extends would otherwise be overwritten.
+  include Devise::ManualSessionExpiration
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 

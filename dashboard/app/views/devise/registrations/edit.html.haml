@@ -166,6 +166,10 @@
             = t('activerecord.attributes.user.ai_rubrics_disabled')
       %div= form.submit t('crud.update'), id: 'edit-ai-settings', class: 'btn btn-warning'
 
+%div#expire-other-sessions
+  = form_for(resource, as: resource_name, url: expire_other_path, html: {method: :delete}) do |form|
+    = form.submit 'Log Out of All Other Browsers', class: 'btn btn-warning'
+
 - if current_user.migrated?
   -# Mount point for React ManageLinkedAccounts component.
   %div#manage-linked-accounts

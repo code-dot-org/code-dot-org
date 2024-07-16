@@ -46,6 +46,16 @@ class SessionsController < Devise::SessionsController
     end
   end
 
+  # DELETE /resource/expire_other
+  def expire_other
+    user = current_user
+    user.expire_all_sessions!
+    sign_out
+    sign_in(:user, user)
+    flash[:notice] = "Successfully logged out of all other sessions"
+    redirect_back(fallback_location: users_edit_path)
+  end
+
   # GET /reset_session
   def reset
     client_state.reset
