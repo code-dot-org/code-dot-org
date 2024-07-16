@@ -129,7 +129,7 @@ label.sectionSelector {
     .studentAnswerMenuDropdown {
       position: absolute;
       bottom: auto;
-      left: 0;
+      right: 0;
       z-index: 1000;
       display: block;
       float: left;
@@ -159,7 +159,7 @@ label.sectionSelector {
       text-indent: 0;
       box-shadow: none;
       width: 100%;
-      padding: 5px 10px;
+      padding: 5px 10px 5px 0;
       white-space: nowrap;
 
       display: flex;
@@ -167,7 +167,7 @@ label.sectionSelector {
       cursor: pointer;
 
       &:hover {
-        background-color: $light_gray_200;
+        background-color: $light_secondary_100;
       }
 
       &:focus-visible {
@@ -177,7 +177,7 @@ label.sectionSelector {
 
       i {
         display: inline-block;
-        margin-inline-end: 8px;
+        min-width: 2em;
       }
     }
 
