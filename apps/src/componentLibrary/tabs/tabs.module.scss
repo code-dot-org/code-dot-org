@@ -286,16 +286,40 @@
         gap: 0.375rem;
         height: 2rem;
 
+        &:hover, &:focus-visible {
+          &:not(.selectedTab) {
+            padding: 0 calc(0.75rem + 1px);
+          }
+        }
+
         &:has(i:first-child) {
           padding-inline-start: 0.625rem;
+
+          &:hover, &:focus-visible {
+            &:not(.selectedTab) {
+              padding-inline-start: calc(0.625rem + 1px);
+            }
+          }
         }
 
         &:has(i:last-child) {
           padding-inline-end: 0.625rem;
+
+          &:hover, &:focus-visible {
+            &:not(.selectedTab) {
+              padding-inline-end: calc(0.625rem + 1px);
+            }
+          }
         }
 
         &.iconOnlyTab {
           padding: 0 0.625rem;
+
+          &:hover, &:focus-visible {
+            &:not(.selectedTab) {
+              padding: 0 calc(0.625rem + 1px);
+            }
+          }
         }
 
         span {
@@ -432,16 +456,40 @@
         gap: 0.25rem;
         height: 1.5rem;
 
+        &:hover, &:focus-visible {
+          &:not(.selectedTab) {
+            padding: 0 calc(0.625rem + 1px);
+          }
+        }
+
         &:has(i:first-child) {
           padding-inline-start: 0.5rem;
+
+          &:hover, &:focus-visible {
+            &:not(.selectedTab) {
+              padding-inline-start: calc(0.5rem + 1px);
+            }
+          }
         }
 
         &:has(i:last-child) {
           padding-inline-end: 0.5rem;
+
+          &:hover, &:focus-visible {
+            &:not(.selectedTab) {
+              padding-inline-end: calc(0.5rem + 1px);
+            }
+          }
         }
 
         &.iconOnlyTab {
           padding: 0 0.5rem;
+
+          &:hover, &:focus-visible {
+            &:not(.selectedTab) {
+              padding: 0 calc(0.5rem + 1px);
+            }
+          }
         }
 
         span {
@@ -494,16 +542,40 @@
         gap: 0.25rem;
         height: 1.25rem;
 
+        &:hover, &:focus-visible {
+          &:not(.selectedTab) {
+            padding: 0 calc(0.5rem + 1px);
+          }
+        }
+
         &:has(i:first-child) {
           padding-inline-start: 0.4375rem;
+
+          &:hover, &:focus-visible {
+            &:not(.selectedTab) {
+              padding-inline-start: calc(0.4375rem + 1px);
+            }
+          }
         }
 
         &:has(i:last-child) {
           padding-inline-end: 0.4375rem;
+
+          &:hover, &:focus-visible {
+            &:not(.selectedTab) {
+              padding-inline-end: calc(0.4375rem + 1px);
+            }
+          }
         }
 
         &.iconOnlyTab {
           padding: 0 0.4375rem;
+
+          &:hover, &:focus-visible {
+            &:not(.selectedTab) {
+              padding: 0 calc(0.4375rem + 1px);
+            }
+          }
         }
 
         span {
