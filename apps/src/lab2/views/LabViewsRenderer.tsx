@@ -13,7 +13,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {lab2EntryPoints} from '../../../lab2EntryPoints';
 import ProgressContainer from '../progress/ProgressContainer';
 import {getAppOptionsViewingExemplar} from '../projects/utils';
-import {AppName, Lab2EntryPoint} from '../types';
+import {AppName, Lab2EntryPoint, OptionsToAvoid} from '../types';
 
 import NoExemplarPage from './components/NoExemplarPage';
 import ExtraLinks from './ExtraLinks';
@@ -54,13 +54,14 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     }
   }, [currentAppName, setTheme]);
 
-  const renderApp = (labProperties: Lab2EntryPoint) => {
-    return labProperties.view ? (
+  const renderApp = (labProperties: Lab2EntryPoint): React.ReactNode => {
+    return labProperties.view ===
+      OptionsToAvoid.UseHardcodedEntryPoint_WARNING_Bloats_Lab2_Bundle ? (
+      labProperties.hardcodedView!
+    ) : (
       <Suspense fallback={<Loading isLoading={true} />}>
         <labProperties.view />
       </Suspense>
-    ) : (
-      labProperties.hardcodedView
     );
   };
 
