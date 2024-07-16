@@ -110,15 +110,25 @@ Resources:
   MySQLDatabaseSourceEndpoint:
     Type: AWS::DMS::Endpoint
     Properties:
-      EndpointIdentifier: !Sub "MySQLReportingEndpoint-${AWS::StackName}"
+      EndpointIdentifier: !Sub "MySQL-${AWS::StackName}"
       EndpointType: source
       EngineName: aurora
       ServerName: !Ref RDSHost
       Port: 3306
-      # The RDSUsername and RDSPassword Stack Parameters must be set to a read only user that can authenticate on the
-      # production RDS Proxy Reporting endpoint.
       Username: !Ref RDSUsername
       Password: !Ref RDSPassword
+      MySqlSettings:
+        # Initialize MySQL client to execute SELECT statements with long execution times that fetch large result sets
+        # without negatively impacting transaction isolation on the cluster and increase several client connection
+        # timeouts to ensure that pauses during the export don't result in prematurely terminated connections.
+        AfterConnectScript:  >-
+          SET SESSION aurora_read_replica_read_committed=ON;
+          SET SESSION transaction_isolation="READ-COMMITTED";
+          SET SESSION max_execution_time = 0;
+          SET SESSION net_read_timeout=300;
+          SET SESSION net_write_timeout=300;
+          SET SESSION wait_timeout = 300;
+          SET SESSION interactive_timeout = 300;
       ExtraConnectionAttributes: ResumeFetchForXRows=0;UnloadTimeout=86400
   RedshiftEndpoint:
     Type: AWS::DMS::Endpoint
