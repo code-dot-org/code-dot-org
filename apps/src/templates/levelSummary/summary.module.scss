@@ -135,13 +135,13 @@ label.sectionSelector {
       float: left;
       margin: 0.25rem 0;
       list-style: none;
-      background-color: #fff;
+      background-color: $light_white;
       border: 1px solid rgba(0 0 0 / .15);
       border-radius: 4px;
-      -webkit-box-shadow: 0 6px 12px rgba(0 0 0 / .175);
+      -webkit-box-shadow: 0 6px 12px rgba(20 16 16 0.175);
       box-shadow: 0 6px 12px rgba(0 0 0 / .175);
       background-clip: padding-box;
-      padding: .25rem 0 0;
+      padding: .25rem 0 .25rem;
 
       ul {
         margin: 0;
@@ -154,16 +154,21 @@ label.sectionSelector {
       border: none !important;
       border-radius: 0;
       border-spacing: 0;
-      list-style: none outside none;
       margin: 0;
-      padding: 0;
       text-decoration: none;
       text-indent: 0;
       box-shadow: none;
+      width: 100%;
+      padding: 5px 10px;
+      white-space: nowrap;
 
       display: flex;
       align-items: center;
       cursor: pointer;
+
+      &:hover {
+        background-color: $light_gray_200;
+      }
 
       &:focus-visible {
         outline: 2px solid $light_primary_500;
@@ -172,6 +177,7 @@ label.sectionSelector {
 
       i {
         display: inline-block;
+        margin-inline-end: 8px;
       }
     }
 
