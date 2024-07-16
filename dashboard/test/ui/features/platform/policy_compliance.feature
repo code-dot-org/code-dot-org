@@ -164,7 +164,7 @@ Feature: Policy Compliance and Parental Permission
     Then I am on "http://studio.code.org/home"
 
   Scenario: Teacher should be able to connect a third-party account even without a state specified
-    Given I create a teacher who has never signed in named "AMDTrad Teacher" after CPA exception and go home
+    Given I create a teacher who has never signed in named "Amstrad Teacher" after CPA exception and go home
 
     # Find the unlocked buttons to connect an account
     Given I am on "http://studio.code.org/users/edit?cpa-partial-lockout=1"
