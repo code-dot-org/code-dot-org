@@ -263,6 +263,10 @@ const EVENTS = {
   SIGNED_OUT_USER_SELECTS_CREATE_DROPDOWN_OPTION:
     'Signed Out User Selects Create Dropdown Option',
 
+  // Projects
+  RUN_BUTTON_PRESSED_SIGNED_OUT:
+    'Signed Out User Presses Run Button on Standalone Project',
+
   // Project sharing via 'Share' button
   SHARING_DIALOG_OPEN: 'User Opens Project Share Dialog',
   SHARING_LINK_COPY: 'User Clicks Project Copy Link In Share Dialog',

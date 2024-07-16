@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-11 20:42:55 UTC",
+    "serialized_at": "2024-07-15 19:46:42 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -217,6 +217,7 @@
       "key": "c5163016-0652-45f2-8b03-8a67e15a1721",
       "position": 4,
       "properties": {
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "c5163016-0652-45f2-8b03-8a67e15a1721",
@@ -249,6 +250,7 @@
       "key": "c6fc3de1-87b1-49d4-8291-b71151975e2b",
       "position": 3,
       "properties": {
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "c6fc3de1-87b1-49d4-8291-b71151975e2b",
@@ -281,6 +283,7 @@
       "key": "164dd42b-8feb-4404-bf49-f23844a5edf9",
       "position": 3,
       "properties": {
+        "progression_name": "Choice Level"
       },
       "seeding_key": {
         "activity_section.key": "164dd42b-8feb-4404-bf49-f23844a5edf9",
@@ -346,6 +349,7 @@
       "key": "67609012-9377-463a-92dd-086f9d1ffd55",
       "position": 6,
       "properties": {
+        "progression_name": "Classroom Implementation"
       },
       "seeding_key": {
         "activity_section.key": "67609012-9377-463a-92dd-086f9d1ffd55",
@@ -356,6 +360,7 @@
       "key": "7ac7fb68-8b0b-4090-b2e9-9f3b251f2f51",
       "position": 1,
       "properties": {
+        "progression_name": "Next Steps"
       },
       "seeding_key": {
         "activity_section.key": "7ac7fb68-8b0b-4090-b2e9-9f3b251f2f51",
@@ -697,7 +702,8 @@
       "properties": {
         "level_keys": [
           "Plpl-k5-2_checkUnderstanding_events_prod"
-        ]
+        ],
+        "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -721,7 +727,8 @@
       "properties": {
         "level_keys": [
           "PLCSC-SelfPaced-lessonplans_prod"
-        ]
+        ],
+        "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -1020,7 +1027,8 @@
       "properties": {
         "level_keys": [
           "PLgame_variables_match_condition_course-e_independent_prod"
-        ]
+        ],
+        "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -1044,7 +1052,8 @@
       "properties": {
         "level_keys": [
           "variables lesson plan_prod"
-        ]
+        ],
+        "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -1343,7 +1352,8 @@
       "properties": {
         "level_keys": [
           "PLgame_development_debug_choices_course-e_independent_prod"
-        ]
+        ],
+        "progression": "Choice Level"
       },
       "bonus": false,
       "seeding_key": {
@@ -1367,7 +1377,8 @@
       "properties": {
         "level_keys": [
           "environment lesson plan_prod"
-        ]
+        ],
+        "progression": "Choice Level"
       },
       "bonus": false,
       "seeding_key": {
@@ -1566,7 +1577,8 @@
       "properties": {
         "level_keys": [
           "game jam lesson plan_prod"
-        ]
+        ],
+        "progression": "Classroom Implementation"
       },
       "bonus": false,
       "seeding_key": {
@@ -1590,7 +1602,8 @@
       "properties": {
         "level_keys": [
           "PLPLpl-k5-2_PLexperiences_prod"
-        ]
+        ],
+        "progression": "Next Steps"
       },
       "bonus": false,
       "seeding_key": {
@@ -1614,7 +1627,8 @@
       "properties": {
         "level_keys": [
           "PLpl-k5-2_PLexperiences_prod"
-        ]
+        ],
+        "progression": "Next Steps"
       },
       "bonus": false,
       "seeding_key": {
