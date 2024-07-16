@@ -1,8 +1,10 @@
-// Registration of code entry-point for all Lab2-based labs
-//
-// Want to add a new lab? See [lab2/README.md](./lab2/README.md)
-//
-// Note: old-style "lab1" labs use a different system, see webpackEntryPoints.js
+/*
+ * All Lab2-based labs must be registered here.
+ *
+ * Want to add a new lab? See lab2/README.md: 'How to Create a New Lab'
+ *
+ * Note: old-style "lab1" labs use a different system, see webpackEntryPoints.js
+ */
 
 import {AIChatEntryPoint} from '@cdo/apps/aichat/entrypoint';
 import {DanceEntryPoint} from '@cdo/apps/dance/lab2/entrypoint';
