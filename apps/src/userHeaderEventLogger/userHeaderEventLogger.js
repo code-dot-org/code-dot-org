@@ -12,7 +12,7 @@ function addClickEventToLinks(selector, eventName) {
       analyticsReporter.sendEvent(
         eventName,
         {
-          [selector]: link.innerText,
+          [selector]: link.href,
         },
         PLATFORMS.STATSIG
       );
