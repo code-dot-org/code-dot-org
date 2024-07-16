@@ -205,9 +205,9 @@ export interface Lab2EntryPoint {
    */
   backgroundMode: boolean;
   /**
-   * A lazy loaded view for the lab. If this is specified, it will be used
-   * over the node property. This is useful for lab views that load extra
-   * dependencies that we don't want loaded for every lab.
+   * A lazy loaded view for the lab. This should be a lazy-loaded react
+   * component using a dynamic import. See `pythonlab/entrypoint.tsx` for an
+   * example.
    */
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   entryPoint: LazyExoticComponent<ComponentType<any>> | OptionsToAvoid;
