@@ -1,5 +1,9 @@
 @import 'color', 'style-constants';
 
+body {
+  background-color: $light_gray_50;
+}
+
 .cardIcon {
   width: 45px;
   height: 40px;
@@ -28,10 +32,6 @@
 // Increase specificity to override base button
 .cardSecondaryButton.cardSecondaryButton {
   border: 1px solid #292F36
-}
-
-.mainContainer {
-  background-color: $light_gray_50;
 }
 
 .contentContainer {

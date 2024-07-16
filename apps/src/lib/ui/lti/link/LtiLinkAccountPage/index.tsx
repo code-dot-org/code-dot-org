@@ -19,7 +19,7 @@ const LtiLinkAccountPage = () => {
   };
 
   return (
-    <main className={styles.mainContainer}>
+    <main>
       <div className={styles.contentContainer}>
         <WelcomeBanner />
         <div className={styles.cardContainer}>
