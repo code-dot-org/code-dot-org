@@ -5,7 +5,7 @@ class AiModelProcessors::ArithmoProcessor < AiModelProcessors::MistralProcessor
     # Format input for Arithmo model as detailed at https://huggingface.co/akjindal53244/Arithmo-Mistral-7B.
     # Note the Question-Answer format - prior user and assistant messages are NOT included.
     inputs = "Question: " + instructions + " " + new_message[:chatMessageText]
-    inputs << (ArithmoProcessor::NEWLINE + "Answer:")
+    inputs << (AiModelProcessors::ArithmoProcessor::NEWLINE + "Answer:")
     inputs
   end
 
