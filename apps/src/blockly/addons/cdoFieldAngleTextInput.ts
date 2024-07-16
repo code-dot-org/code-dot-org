@@ -1,17 +1,16 @@
-import {BlockSvg} from 'blockly';
 import GoogleBlockly from 'blockly/core';
 
 import CdoAngleHelper from './cdoAngleHelper';
+import {ExtendedBlockSvg} from '../types';
 
 interface AngleTextInputOptions {
   directionTitle: string; // Ex. 'DIR'
   direction: string; // Ex. 'turnRight'
 }
 export default class CdoFieldAngleTextInput extends GoogleBlockly.FieldNumber {
-  newDiv_: HTMLDivElement | null;
   angleHelper: CdoAngleHelper | null;
-  direction: string;
-  directionFieldName: string;
+  direction: string | undefined;
+  directionFieldName: string | undefined;
   /**
    * Class for an editable text field which will shows an angle picker.
    * @param {string} text The initial content of the field.
@@ -20,11 +19,10 @@ export default class CdoFieldAngleTextInput extends GoogleBlockly.FieldNumber {
    * @param {string} opt_options.directionTitle the name of the field from which
    *     to obtain direction information
    */
-  constructor(text: string, opt_options: AngleTextInputOptions) {
+  constructor(text: string, opt_options?: AngleTextInputOptions) {
     super(text);
-    this.newDiv_ = null;
     this.angleHelper = null;
-    this.direction = opt_options.direction;
+    this.direction = opt_options?.direction;
     this.directionFieldName = opt_options?.directionTitle;
   }
 
@@ -41,12 +39,15 @@ export default class CdoFieldAngleTextInput extends GoogleBlockly.FieldNumber {
     if (!direction && this.directionFieldName) {
       direction = this.getSourceBlock()?.getFieldValue(this.directionFieldName);
     }
+    if (!direction) {
+      direction = 'turnRight';
+    }
 
     super.showEditor_(e);
 
     const sourceBlock = this.getSourceBlock();
     this.angleHelper = new Blockly.AngleHelper(direction, {
-      arcColour: (sourceBlock as BlockSvg)?.style.colourPrimary,
+      arcColour: (sourceBlock as ExtendedBlockSvg)?.style.colourPrimary,
       onUpdate: () => {
         const angleValue = this.angleHelper?.getAngle();
         this.setValue(angleValue);
@@ -57,22 +58,26 @@ export default class CdoFieldAngleTextInput extends GoogleBlockly.FieldNumber {
         }
       },
       angle: parseInt(`${this.getValue()}`),
+      enableBackgroundRotation: true,
     });
     Blockly.WidgetDiv.createDom();
-    const angleHelperDiv = this.createDiv(this.angleHelper.width_);
+    const angleHelperDiv = this.createAngleHelperContainer(
+      this.angleHelper.width_
+    );
     Blockly.WidgetDiv.getDiv()?.appendChild(angleHelperDiv);
     this.angleHelper.init(angleHelperDiv);
   }
 
-  createDiv(width: number) {
-    this.newDiv_ = document.createElement('div');
-    this.newDiv_.style.width = width + 'px';
-    this.newDiv_.style.backgroundColor = (
-      this.getSourceBlock() as BlockSvg
+  createAngleHelperContainer(width: number) {
+    const div = document.createElement('div');
+    div.style.width = width + 'px';
+    div.style.backgroundColor = (
+      this.getSourceBlock() as ExtendedBlockSvg
     ).style.colourPrimary;
-    this.newDiv_.style.padding = '5px';
-    this.newDiv_.style.paddingBottom = '0px';
-    return this.newDiv_;
+    div.style.padding = '5px';
+    div.style.paddingBottom = '0px';
+    Blockly.utils.dom.addClass(div, 'blocklyAngleHelperContainer');
+    return div;
   }
 
   doValueUpdate_(newValue: number) {

@@ -481,7 +481,6 @@ class CdoAngleHelper {
     startAngle: number,
     endAngle: number
   ): string {
-    console.log({center, radius, startAngle, endAngle});
     const vector = center.clone().add(new Vector(radius, 0));
     const start = Vector.rotateAroundPoint(vector, center, startAngle);
     const end = Vector.rotateAroundPoint(vector, center, endAngle);
