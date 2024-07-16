@@ -3,40 +3,22 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Unit Structure
+# Unit Content
 
-#### The Data and Society unit is divided into **two chapters**. Each chapter includes activities that provide an opportunity for students to practice new skills. If you are short on time, you may choose to complete only the first chapter of the unit.
+#### The Representing Information unit focuses on data representation and its role in solving information problems. Students learn what a representation system needs to be useful, and how computers are able to represent different types of information using binary systems. For the chapter project, students represent their perfect day in a binary punch card and trade with classmates to decipher.
 
-## Chapters
+#### **Goals**
 
-##### Click on the arrows to expand each section.
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">📘 Chapter 1: Representing Information</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
+* #### Understand the role of data and data representation in solving information problems.
+* #### Explain the necessary components of any data representation scheme, as well as the particulars of binary and the common ways that various types of simple and complex data are represented in binary code.
 
-#### <strong>Description:</strong> This chapter focuses on data representation and its role in solving information problems. Students learn what a representation system needs to be useful, and how computers are able to represent different types of information using binary systems. For the chapter project, students represent their perfect day in a binary punch card and trade with classmates to decipher.
+#### **Big Questions**
 
 * #### Why is representation important in problem solving?
 * #### What features does a representation system need to be useful?
 * #### What is necessary to create usable binary representation systems?
 * #### How can we combine systems together to get more complex information?
-</p></div>
-</details>
 
-<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;">📗 Chapter 2: Solving Data Problems</summary>
-<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
-    <p>
-
-#### <strong>Description:</strong> Students explore how data can be used to answer interesting questions and solve problems. Using a modified version of the general Problem Solving Process, students look at how computers and humans use data differently and the pros and cons of automating problem solving. After learning ways that computers use data in the real world, students choose their own problem and use data to address it.
-
-* #### How does data help us to solve problems?
-* #### How do computers and humans use data differently?
-* #### What parts of the data problem solving process can be automated?
-* #### What kinds of problems do computers use data to solve in the real world?
-</p></div>
-</details>
 
 ## Lessons
 #### Most lessons are designed for **45 minute class periods**, but can be modified for longer or shorter class periods. Some lessons, such as project lessons, take multiple days to complete. Suggested times are included in each lesson plan.

@@ -1,10 +1,11 @@
-import React, {useState, useCallback, ChangeEvent} from 'react';
 import classnames from 'classnames';
+import React, {useState, useCallback, ChangeEvent} from 'react';
 
-import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import {getFilteredSongKeys} from '@cdo/apps/dance/songs';
-import Button from '@cdo/apps/templates/Button';
 import {SongData} from '@cdo/apps/dance/types';
+import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+import Button from '@cdo/apps/templates/Button';
+
 import moduleStyles from '@cdo/apps/dance/song-selector.module.scss';
 
 const commonI18n = require('@cdo/locale');

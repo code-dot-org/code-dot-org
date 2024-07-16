@@ -26,7 +26,7 @@ import {
 import {connect} from 'react-redux';
 import Select from 'react-select';
 
-import SingleCheckbox from '@cdo/apps/code-studio/pd/form_components/SingleCheckbox';
+import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {
   ActiveCourseWorkshops,
   Subjects,
@@ -51,7 +51,12 @@ import {
   ProgramManager,
   CsfFacilitator,
 } from '../permission';
-import {TIME_FORMAT, DATE_FORMAT, DATETIME_FORMAT} from '../workshopConstants';
+import {
+  TIME_FORMAT,
+  DATE_FORMAT,
+  DATETIME_FORMAT,
+  COURSE_BUILD_YOUR_OWN,
+} from '../workshopConstants';
 
 import CourseSelect from './CourseSelect';
 import FacilitatorListFormPart from './facilitator_list_form_part';
@@ -68,14 +73,7 @@ const placeholderSession = {
   endTime: '5:00pm',
 };
 
-// TODO pipe in PL topics via ACQ-2020
-const ALL_PL_TOPICS = [
-  'Test Self Paced PL Topic',
-  'Another Test Self Paced PL Topic',
-  'A Third Test Self Paced PL Topic',
-  'And a Final Very Long Test Self Paced PL Topic That Takes Up a Line',
-];
-
+let ALL_PL_TOPICS = {};
 const INPUT_HEIGHT = 34;
 
 // When selecting whether a workshop is virtual through the UI,
@@ -119,6 +117,7 @@ export class WorkshopForm extends React.Component {
         name: PropTypes.string,
       }),
       module: PropTypes.string,
+      course_offerings: PropTypes.array,
     }),
     onSaved: PropTypes.func,
     today: PropTypes.instanceOf(Date),
@@ -156,7 +155,7 @@ export class WorkshopForm extends React.Component {
       virtual: false,
       suppress_email: false,
       third_party_provider: null,
-      plTopics: [],
+      course_offerings: [],
     };
 
     if (props.workshop) {
@@ -180,6 +179,7 @@ export class WorkshopForm extends React.Component {
           'virtual',
           'suppress_email',
           'third_party_provider',
+          'course_offerings',
         ])
       );
       initialState.sessions = this.prepareSessionsForForm(
@@ -188,8 +188,8 @@ export class WorkshopForm extends React.Component {
       this.loadAvailableFacilitators(props.workshop.course);
     }
 
+    this.loadPlCourseOfferings();
     this.loadRegionalPartners();
-
     return initialState;
   }
 
@@ -200,9 +200,11 @@ export class WorkshopForm extends React.Component {
     if (this.loadWorkshopRequest) {
       this.loadWorkshopRequest.abort();
     }
-
     if (this.loadRegionalPartnersRequest) {
       this.loadRegionalPartnersRequest.abort();
+    }
+    if (this.loadPlCoursesRequest) {
+      this.loadPlCoursesRequest.abort();
     }
   }
 
@@ -231,6 +233,16 @@ export class WorkshopForm extends React.Component {
       this.setState({
         regionalPartners: data,
       });
+    });
+  }
+
+  loadPlCourseOfferings() {
+    this.loadPlCoursesRequest = $.ajax({
+      method: 'GET',
+      url: `/course_offerings/self_paced_pl_course_offerings`,
+      dataType: 'json',
+    }).done(data => {
+      ALL_PL_TOPICS = data;
     });
   }
 
@@ -419,8 +431,7 @@ export class WorkshopForm extends React.Component {
   renderWorkshopTypeOptions(validation) {
     const isCsf = this.state.course === 'CS Fundamentals';
     const isAdminCounselor = this.state.course === 'Admin/Counselor Workshop';
-    const isBuildYourOwnWorkshop =
-      this.state.course === 'Build Your Own Workshop';
+    const isBuildYourOwnWorkshop = this.state.course === COURSE_BUILD_YOUR_OWN;
     const showFeeInput =
       isCsf &&
       this.state.subject &&
@@ -741,19 +752,16 @@ export class WorkshopForm extends React.Component {
   };
 
   // Selects the given value in the topic dropdown
-  handleTopicSelect = event => {
-    const value = Object.keys(event)[0];
-    const isChecked = event[value];
-
+  handleTopicSelect = (id, isChecked) => {
     let updatedTopics;
     if (isChecked) {
-      // Add checked item into applied filters
-      updatedTopics = [...this.state.plTopics, value];
+      // Add checked item into list
+      updatedTopics = [...this.state.course_offerings, id];
     } else {
-      // Remove unchecked item from applied filters
-      updatedTopics = this.state.plTopics.filter(item => item !== value);
+      // Remove unchecked item from list
+      updatedTopics = this.state.course_offerings.filter(item => item !== id);
     }
-    this.setState({plTopics: updatedTopics});
+    this.setState({course_offerings: updatedTopics});
   };
 
   handleLocationChange = event => {
@@ -827,9 +835,10 @@ export class WorkshopForm extends React.Component {
       funding_type: null,
       suppress_email: false,
       module: null,
+      course_offerings: [],
     });
     this.loadAvailableFacilitators(course);
-    if (course === 'Build Your Own Workshop') {
+    if (course === COURSE_BUILD_YOUR_OWN) {
       this.setState({funded: false, suppress_email: true});
     }
   };
@@ -898,6 +907,7 @@ export class WorkshopForm extends React.Component {
         this.state.destroyedSessions
       ),
       regional_partner_id: this.state.regional_partner_id,
+      course_offerings: this.state.course_offerings,
     };
 
     if (this.state.organizer) {
@@ -1041,6 +1051,15 @@ export class WorkshopForm extends React.Component {
         validation.style.course = 'error';
         validation.help.course = 'Required.';
       }
+      if (
+        this.state.course &&
+        this.state.course === COURSE_BUILD_YOUR_OWN &&
+        this.state.course_offerings.length === 0
+      ) {
+        validation.isValid = false;
+        validation.style.course_offerings = 'error';
+        validation.help.course_offerings = 'Required.';
+      }
       if (this.shouldRenderSubject() && !this.state.subject) {
         validation.isValid = false;
         validation.style.subject = 'error';
@@ -1153,71 +1172,80 @@ export class WorkshopForm extends React.Component {
               )}
             </Col>
           </Row>
-          <Row>
-            {this.state.course === 'Build Your Own Workshop' && (
-              <div style={styles.container}>
-                <div style={styles.extraMargin}>
-                  <label>Select Workshop Topic(s)</label>
-                  <div
-                    className="dropdown show"
-                    id={'topics'}
-                    onKeyDown={this.onKeyDown}
-                  >
-                    <button
-                      style={{...styles.fullWidth, ...styles.topicsButton}}
-                      className="btn btn-secondary dropdown-toggle"
-                      id="dropdownMenuButton"
-                      type="button"
-                      data-toggle="dropdown"
-                      aria-haspopup={true}
-                      aria-label="topics dropdown"
-                    >
-                      {this.state.plTopics.length > 0 && (
-                        <FontAwesome
-                          style={styles.alignCenter}
-                          id={'check-icon'}
-                          icon="check-circle"
-                          title={'topics'}
-                        />
-                      )}
-                      <div
-                        style={{...styles.alignCenter, ...styles.buttonLabel}}
-                      >
-                        PL Topics
-                      </div>
-                      <FontAwesome
-                        style={styles.icon}
-                        id={'chevron-down-icon'}
-                        icon={'chevron-down'}
-                      />
-                    </button>
+          {this.state.course === COURSE_BUILD_YOUR_OWN && (
+            <Row>
+              <FormGroup validationState={validation.style.course_offerings}>
+                <div style={styles.container}>
+                  <div style={styles.extraMargin}>
+                    <label>Select Workshop Topic(s)</label>
                     <div
-                      className={classnames('dropdown-menu')}
-                      aria-labelledby="dropdownMenuButton"
+                      className="dropdown show"
+                      id={'course_offerings'}
+                      onKeyDown={this.onKeyDown}
                     >
-                      <ul style={styles.listItems}>
-                        {ALL_PL_TOPICS.map(label => (
-                          <li
-                            className="dropdown-item"
-                            style={styles.singleItem}
-                            key={label}
-                          >
-                            <SingleCheckbox
-                              style={styles.check}
-                              name={label}
-                              label={label}
-                              onChange={e => this.handleTopicSelect(e)}
-                              value={this.state.plTopics.includes(label)}
-                            />
-                          </li>
-                        ))}
-                      </ul>
+                      <button
+                        style={{...styles.fullWidth, ...styles.topicsButton}}
+                        className="btn btn-secondary dropdown-toggle"
+                        id="dropdownMenuButton"
+                        type="button"
+                        data-toggle="dropdown"
+                        aria-haspopup={true}
+                        aria-label="pl Topics dropdown"
+                      >
+                        {this.state.course_offerings.length > 0 && (
+                          <FontAwesome
+                            style={styles.alignCenter}
+                            id={'check-icon'}
+                            icon="check-circle"
+                            title={'course_offerings'}
+                          />
+                        )}
+                        <div
+                          style={{...styles.alignCenter, ...styles.buttonLabel}}
+                        >
+                          PL Topics
+                        </div>
+                        <FontAwesome
+                          style={styles.icon}
+                          id={'chevron-down-icon'}
+                          icon={'chevron-down'}
+                        />
+                      </button>
+                      <div
+                        className={classnames('dropdown-menu')}
+                        aria-labelledby="dropdownMenuButton"
+                      >
+                        <ul style={styles.listItems}>
+                          {Object.values(ALL_PL_TOPICS).map(topic => (
+                            <li
+                              className="dropdown-item"
+                              style={styles.singleItem}
+                              key={topic.id}
+                            >
+                              <Checkbox
+                                name={topic.display_name}
+                                label={topic.display_name}
+                                checked={this.state.course_offerings.includes(
+                                  topic.id
+                                )}
+                                onChange={e =>
+                                  this.handleTopicSelect(
+                                    topic.id,
+                                    e.target.checked
+                                  )
+                                }
+                              />
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
+                    <HelpBlock>{validation.help.course_offerings}</HelpBlock>
                   </div>
                 </div>
-              </div>
-            )}
-          </Row>
+              </FormGroup>
+            </Row>
+          )}
           <Row>
             <Col sm={5}>
               {this.shouldRenderModules() && (
@@ -1325,14 +1353,11 @@ const styles = {
     fontWeight: 100,
   },
   listItems: {
-    margin: '0 10px 0 0',
+    margin: 10,
   },
   singleItem: {
     display: 'flex',
     padding: 5,
-    alignItems: 'start',
-    gap: 12,
-    margin: 0,
   },
   check: {
     position: 'relative',

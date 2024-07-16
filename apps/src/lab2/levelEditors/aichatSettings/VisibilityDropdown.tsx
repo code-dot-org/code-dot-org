@@ -1,6 +1,8 @@
-import {AiCustomizations, Visibility} from '@cdo/apps/aichat/types';
 import React, {useContext} from 'react';
+
+import {AiCustomizations, Visibility} from '@cdo/apps/aichat/types';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+
 import {UpdateContext} from './UpdateContext';
 
 const VisibilityDropdown: React.FunctionComponent<{

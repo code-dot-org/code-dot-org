@@ -1199,6 +1199,7 @@ ru-RU:
   header_courses: курсы
   header_districts: Район
   header_documentation: Документация
+  header_donate: Пожертвовать
   header_educate_beyond: За пределами Code.org
   header_educate_community: Онлайн сообщество
   header_educate_elementary: Начальная школа
@@ -2591,6 +2592,8 @@ ru-RU:
   user_header_logout: Выйти
   user_header_minecraft: Minecraft
   user_header_my_projects: Мои проекты
+  user_header_new_project: Новый проект
+  user_header_new_project_low_cap: Новый проект
   user_header_playlab: Лаборатория игр
   user_header_settings: Настройки аккаунта
   user_header_signin: Вход
