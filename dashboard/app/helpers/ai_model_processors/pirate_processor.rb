@@ -1,6 +1,6 @@
 class AiModelProcessors::PirateProcessor < AiModelProcessors::MistralProcessor
   def format_model_output(generated_text)
-    last = generated_text.split(INSTRUCTIONS_END_TOKEN).last
+    last = generated_text.split(MISTRAL[:INSTRUCTIONS_END_TOKEN]).last
     # These characters is used to separate the assistant response received from the Pirate model
     # from the rest of the generated text which sometimes includes jargon, extraneous characters
     # or code snippets.
