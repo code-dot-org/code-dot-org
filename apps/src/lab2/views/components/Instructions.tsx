@@ -291,6 +291,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
           vertical && moduleStyles.itemVertical
         )}
       >
+        <div className={moduleStyles.lessonHeading}>Data science lesson</div>
         {texts
           .filter((entry, entryIndex) => entryIndex < currentTestStep.showTexts)
           .map((text, index) => (

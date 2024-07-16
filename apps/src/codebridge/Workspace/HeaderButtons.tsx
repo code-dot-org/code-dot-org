@@ -35,6 +35,7 @@ const WorkspaceHeaderButtons: React.FunctionComponent = () => {
         ariaLabel={'Start Over'}
         size={'xs'}
       />
+      <i style={{padding: '0 10px'}} className="fa-solid fa-bars" />
     </div>
   );
 };

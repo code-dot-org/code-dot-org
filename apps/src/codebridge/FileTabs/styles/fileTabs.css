@@ -9,6 +9,7 @@
   color: white;
   scrollbar-width: none;
   grid-area: file-tabs;
+  margin-top: 6px;
 }
 
 .file-tab {
