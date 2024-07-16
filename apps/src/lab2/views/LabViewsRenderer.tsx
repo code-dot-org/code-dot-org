@@ -7,7 +7,7 @@
 import classNames from 'classnames';
 import React, {Suspense, useContext, useEffect, useState} from 'react';
 import ProgressContainer from '../progress/ProgressContainer';
-import {AppName} from '../types';
+import {AppName, Lab2Entrypoint} from '../types';
 import moduleStyles from './lab-views-renderer.module.scss';
 import {DEFAULT_THEME, ThemeContext} from './ThemeWrapper';
 import Loading from './Loading';
@@ -16,7 +16,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {getAppOptionsViewingExemplar} from '../projects/utils';
 import NoExemplarPage from './components/NoExemplarPage';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {lab2Entrypoints, LabProperties} from '../../../lab2Entrypoints';
+import {lab2Entrypoints} from '../../../lab2Entrypoints';
 
 const hideExtraLinks = queryParams('hide-extra-links') === 'true';
 
@@ -50,7 +50,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
     }
   }, [currentAppName, setTheme]);
 
-  const renderApp = (labProperties: LabProperties) => {
+  const renderApp = (labProperties: Lab2Entrypoint) => {
     return labProperties.lazyNode ? (
       <Suspense fallback={<Loading isLoading={true} />}>
         <labProperties.lazyNode />

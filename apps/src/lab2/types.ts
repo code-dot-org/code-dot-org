@@ -9,8 +9,12 @@
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
-import type {AppName} from '../../lab2Entrypoints';
-export type {AppName};
+import type {lab2Entrypoints} from '../../lab2Entrypoints';
+import {Theme} from '@cdo/apps/lab2/views/ThemeWrapper';
+
+import {ComponentType, LazyExoticComponent} from 'react';
+
+export {Theme};
 
 /// ------ PROJECTS ------ ///
 
@@ -177,6 +181,42 @@ export interface VideoLevelData {
   download: string;
 }
 
+// Configuration for how a Lab should be rendered
+export interface Lab2Entrypoint {
+  /**
+   * Whether this lab should remain rendered in the background once mounted.
+   * If true, the lab will always be present in the tree, but will be hidden
+   * via visibility: hidden when not active. If false, the lab will only
+   * be rendered in the tree when active.
+   */
+  backgroundMode: boolean;
+  /**
+   * @deprecated Lab2Entrypoint.node should not be used in new code, use
+   * `Lab2Entrypoint.lazyNode` instead. See `pythonlab/entrypoint.tsx` for an
+   * example. Using this field will result in a single giant lab2 code bundle
+   * which will be slow for students to load.
+   */
+  node: React.ReactNode;
+  /**
+   * A lazy loaded view for the lab. If this is specified, it will be used
+   * over the node property. This is useful for lab views that load extra
+   * dependencies that we don't want loaded for every lab.
+   */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  lazyNode?: LazyExoticComponent<ComponentType<any>>;
+  /**
+   * Display theme for this lab. This will likely be configured by user
+   * preferences eventually, but for now this is fixed for each lab. Defaults
+   * to the default theme if not specified.
+   */
+  theme?: Theme;
+  /**
+   * Optional function to run when the lab is first mounted. This is useful
+   * for any one-time setup actions such as setting up Blockly.
+   */
+  setupFunction?: () => void;
+}
+
 export type LevelData = ProjectLevelData | VideoLevelData;
 
 export type ProjectType =
@@ -200,6 +240,8 @@ export type ProjectType =
   | 'playlab_k1'
   | 'sports'
   | 'basketball';
+
+export type AppName = keyof typeof lab2Entrypoints;
 
 export type StandaloneAppName =
   | 'spritelab'

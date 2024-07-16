@@ -8,90 +8,21 @@
 //
 // Note: old-style "lab1" labs use a different system, see webpackEntryPoints.js
 
-import React, {ComponentType, LazyExoticComponent, lazy} from 'react';
+import aichatEntrypoint from '@cdo/apps/aichat/entrypoint';
+import danceEntrypoint from '@cdo/apps/dance/lab2/entrypoint';
+import type {Lab2Entrypoint} from '@cdo/apps/lab2/types';
+import musicEntrypoint from '@cdo/apps/music/entrypoint';
+import panelsEntrypoint from '@cdo/apps/panels/entrypoint';
+import pythonlabEntrypoint from '@cdo/apps/pythonlab/entrypoint';
+import standaloneVideoEntrypoint from '@cdo/apps/standaloneVideo/entrypoint';
+import weblab2Entrypoint from '@cdo/apps/weblab2/entrypoint';
 
-import AichatView from '@cdo/apps/aichat/views/AichatView';
-import DanceView from '@cdo/apps/dance/lab2/views/DanceView';
-import {Theme} from '@cdo/apps/lab2/views/ThemeWrapper';
-import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
-import MusicView from '@cdo/apps/music/views/MusicView';
-import PanelsLabView from '@cdo/apps/panels/PanelsLabView';
-import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo';
-import Weblab2View from '@cdo/apps/weblab2/Weblab2View';
-
-// Configuration for how a Lab should be rendered
-export interface LabProperties {
-  /**
-   * Whether this lab should remain rendered in the background once mounted.
-   * If true, the lab will always be present in the tree, but will be hidden
-   * via visibility: hidden when not active. If false, the lab will only
-   * be rendered in the tree when active.
-   */
-  backgroundMode: boolean;
-  /** React View for the Lab */
-  node: React.ReactNode;
-  /**
-   * A lazy loaded view for the lab. If this is specified, it will be used
-   * over the node property. This is useful for lab views that load extra
-   * dependencies that we don't want loaded for every lab.
-   */
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  lazyNode?: LazyExoticComponent<ComponentType<any>>;
-  /**
-   * Display theme for this lab. This will likely be configured by user
-   * preferences eventually, but for now this is fixed for each lab. Defaults
-   * to the default theme if not specified.
-   */
-  theme?: Theme;
-  /**
-   * Optional function to run when the lab is first mounted. This is useful
-   * for any one-time setup actions such as setting up Blockly.
-   */
-  setupFunction?: () => void;
-}
-
-export const lab2Entrypoints: Record<string, LabProperties> = {
-  music: {
-    backgroundMode: true,
-    node: <MusicView />,
-    theme: Theme.DARK,
-    setupFunction: setUpBlocklyForMusicLab,
-  },
-  standalone_video: {
-    backgroundMode: false,
-    node: <StandaloneVideo />,
-  },
-  aichat: {
-    backgroundMode: false,
-    node: <AichatView />,
-    theme: Theme.LIGHT,
-  },
-  dance: {
-    backgroundMode: false,
-    node: <DanceView />,
-    theme: Theme.LIGHT,
-  },
-  pythonlab: {
-    backgroundMode: false,
-    node: <div />,
-    lazyNode: lazy(() =>
-      import(
-        /* webpackChunkName: "pythonlab" */ './src/pythonlab/index.js'
-      ).then(({PythonlabView}) => ({
-        default: PythonlabView,
-      }))
-    ),
-    theme: Theme.DARK,
-  },
-  panels: {
-    backgroundMode: false,
-    node: <PanelsLabView />,
-  },
-  weblab2: {
-    backgroundMode: false,
-    node: <Weblab2View />,
-    theme: Theme.DARK,
-  },
+export const lab2Entrypoints: Record<string, Lab2Entrypoint> = {
+  aichat: aichatEntrypoint,
+  dance: danceEntrypoint,
+  music: musicEntrypoint,
+  panels: panelsEntrypoint,
+  pythonlab: pythonlabEntrypoint,
+  standalone_video: standaloneVideoEntrypoint,
+  weblab2: weblab2Entrypoint,
 };
-
-export type AppName = keyof typeof lab2Entrypoints;
