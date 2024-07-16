@@ -4,6 +4,7 @@ import React from 'react';
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import DCDO from '@cdo/apps/dcdo';
+import i18n from '@cdo/locale';
 
 import styles from './summary.module.scss';
 
@@ -19,7 +20,7 @@ const ResponseMenuDropdown = ({response}) => {
       <Button
         onClick={() => setIsOpen(!isOpen)}
         isIconOnly={true}
-        icon={{iconName: 'ellipsis-vertical'}}
+        icon={{iconName: 'ellipsis-vertical', title: i18n.additionalOptions()}}
         color={buttonColors.black}
         size="xs"
         type="tertiary"
@@ -35,7 +36,7 @@ const ResponseMenuDropdown = ({response}) => {
                 onClick={() => setIsOpen(false)}
               >
                 <FontAwesomeV6Icon iconName="thumbtack" />
-                Pin response
+                {i18n.pinResponse()}
               </button>
             </li>
             <li>
@@ -45,7 +46,7 @@ const ResponseMenuDropdown = ({response}) => {
                 onClick={() => setIsOpen(false)}
               >
                 <FontAwesomeV6Icon iconName="eye-slash" />
-                Hide response
+                {i18n.hideResponse()}
               </button>
             </li>
           </ul>
