@@ -1,5 +1,4 @@
 import {BlockSvg} from 'blockly';
-
 import GoogleBlockly from 'blockly/core';
 
 import CdoAngleHelper from './cdoAngleHelper';
