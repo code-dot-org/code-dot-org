@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {lazy} from 'react';
 
-import {Lab2Entrypoint, Theme} from '@cdo/apps/lab2/types';
+import {Lab2EntryPoint, Theme} from '@cdo/apps/lab2/types';
 
 export default {
   backgroundMode: false,
@@ -13,4 +13,4 @@ export default {
     )
   ),
   theme: Theme.DARK,
-} as Lab2Entrypoint;
+} as Lab2EntryPoint;

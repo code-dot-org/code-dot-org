@@ -8,21 +8,21 @@
 //
 // Note: old-style "lab1" labs use a different system, see webpackEntryPoints.js
 
-import aichatEntrypoint from '@cdo/apps/aichat/entrypoint';
-import danceEntrypoint from '@cdo/apps/dance/lab2/entrypoint';
-import type {Lab2Entrypoint} from '@cdo/apps/lab2/types';
-import musicEntrypoint from '@cdo/apps/music/entrypoint';
-import panelsEntrypoint from '@cdo/apps/panels/entrypoint';
-import pythonlabEntrypoint from '@cdo/apps/pythonlab/entrypoint';
-import standaloneVideoEntrypoint from '@cdo/apps/standaloneVideo/entrypoint';
-import weblab2Entrypoint from '@cdo/apps/weblab2/entrypoint';
+import aichatEntryPoint from '@cdo/apps/aichat/entrypoint';
+import danceEntryPoint from '@cdo/apps/dance/lab2/entrypoint';
+import type {Lab2EntryPoint} from '@cdo/apps/lab2/types';
+import musicEntryPoint from '@cdo/apps/music/entrypoint';
+import panelsEntryPoint from '@cdo/apps/panels/entrypoint';
+import pythonlabEntryPoint from '@cdo/apps/pythonlab/entrypoint';
+import standaloneVideoEntryPoint from '@cdo/apps/standaloneVideo/entrypoint';
+import weblab2EntryPoint from '@cdo/apps/weblab2/entrypoint';
 
-export const lab2Entrypoints: Record<string, Lab2Entrypoint> = {
-  aichat: aichatEntrypoint,
-  dance: danceEntrypoint,
-  music: musicEntrypoint,
-  panels: panelsEntrypoint,
-  pythonlab: pythonlabEntrypoint,
-  standalone_video: standaloneVideoEntrypoint,
-  weblab2: weblab2Entrypoint,
-};
+export default {
+  aichat: aichatEntryPoint,
+  dance: danceEntryPoint,
+  music: musicEntryPoint,
+  panels: panelsEntryPoint,
+  pythonlab: pythonlabEntryPoint,
+  standalone_video: standaloneVideoEntryPoint,
+  weblab2: weblab2EntryPoint,
+} as Record<string, Lab2EntryPoint>;

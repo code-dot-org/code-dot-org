@@ -9,7 +9,7 @@
 
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
-import type {lab2Entrypoints} from '../../lab2Entrypoints';
+import lab2EntryPoints from '../../lab2EntryPoints';
 import {Theme} from '@cdo/apps/lab2/views/ThemeWrapper';
 
 import {ComponentType, LazyExoticComponent} from 'react';
@@ -182,7 +182,7 @@ export interface VideoLevelData {
 }
 
 // Configuration for how a Lab should be rendered
-export interface Lab2Entrypoint {
+export interface Lab2EntryPoint {
   /**
    * Whether this lab should remain rendered in the background once mounted.
    * If true, the lab will always be present in the tree, but will be hidden
@@ -241,7 +241,7 @@ export type ProjectType =
   | 'sports'
   | 'basketball';
 
-export type AppName = keyof typeof lab2Entrypoints;
+export type AppName = keyof typeof lab2EntryPoints;
 
 export type StandaloneAppName =
   | 'spritelab'

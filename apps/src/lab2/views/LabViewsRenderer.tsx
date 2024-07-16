@@ -7,7 +7,7 @@
 import classNames from 'classnames';
 import React, {Suspense, useContext, useEffect, useState} from 'react';
 import ProgressContainer from '../progress/ProgressContainer';
-import {AppName, Lab2Entrypoint} from '../types';
+import {AppName, Lab2EntryPoint} from '../types';
 import moduleStyles from './lab-views-renderer.module.scss';
 import {DEFAULT_THEME, ThemeContext} from './ThemeWrapper';
 import Loading from './Loading';
@@ -16,7 +16,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {getAppOptionsViewingExemplar} from '../projects/utils';
 import NoExemplarPage from './components/NoExemplarPage';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {lab2Entrypoints} from '../../../lab2Entrypoints';
+import lab2EntryPoints from '../../../lab2EntryPoints';
 
 const hideExtraLinks = queryParams('hide-extra-links') === 'true';
 
@@ -36,7 +36,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   useEffect(() => {
     if (currentAppName && !appsToRender.includes(currentAppName)) {
       // Run the setup function for the Lab if it has one.
-      lab2Entrypoints[currentAppName]?.setupFunction?.();
+      lab2EntryPoints[currentAppName]?.setupFunction?.();
       setAppsToRender([...appsToRender, currentAppName]);
     }
   }, [currentAppName, appsToRender]);
@@ -45,12 +45,12 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   const {setTheme} = useContext(ThemeContext);
   useEffect(() => {
     if (currentAppName) {
-      const theme = lab2Entrypoints[currentAppName]?.theme || DEFAULT_THEME;
+      const theme = lab2EntryPoints[currentAppName]?.theme || DEFAULT_THEME;
       setTheme(theme);
     }
   }, [currentAppName, setTheme]);
 
-  const renderApp = (labProperties: Lab2Entrypoint) => {
+  const renderApp = (labProperties: Lab2EntryPoint) => {
     return labProperties.lazyNode ? (
       <Suspense fallback={<Loading isLoading={true} />}>
         <labProperties.lazyNode />
@@ -68,7 +68,7 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   return (
     <>
       {appsToRender.map(appName => {
-        const properties = lab2Entrypoints[appName];
+        const properties = lab2EntryPoints[appName];
         if (!properties) {
           console.warn("Don't know how to render app: " + appName);
           return null;

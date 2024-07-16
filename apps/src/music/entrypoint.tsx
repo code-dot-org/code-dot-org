@@ -1,7 +1,7 @@
 import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
 import MusicView from '@cdo/apps/music/views/MusicView';
 
-import {Lab2Entrypoint, Theme} from '@cdo/apps/lab2/types';
+import {Lab2EntryPoint, Theme} from '@cdo/apps/lab2/types';
 import React from 'react';
 
 export default {
@@ -9,4 +9,4 @@ export default {
   node: <MusicView />,
   theme: Theme.DARK,
   setupFunction: setUpBlocklyForMusicLab,
-} as Lab2Entrypoint;
+} as Lab2EntryPoint;
