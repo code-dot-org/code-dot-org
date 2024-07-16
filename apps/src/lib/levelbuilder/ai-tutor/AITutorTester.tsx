@@ -4,7 +4,8 @@ import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import {formatQuestionForAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {ChatContext} from '@cdo/apps/aiTutor/types';
-import styles from './ai-tutor-response-generator.module.scss';
+import styles from './ai-tutor-tester.module.scss';
+import AITutorTesterSampleColumns from './AITutorTesterSampleColumns';
 
 /**
  * Renders a series of buttons that allow levelbuilders to upload a CSV of
@@ -12,16 +13,15 @@ import styles from './ai-tutor-response-generator.module.scss';
  */
 
 interface AIInteraction extends ChatContext {
+  systemPrompt: string | undefined;
   aiResponse: string | undefined;
 }
 
-interface AITutorBulkResponseGeneratorProps {
+interface AITutorTesterProps {
   allowed: boolean;
 }
 
-const AITutorBulkResponseGenerator: React.FC<
-  AITutorBulkResponseGeneratorProps
-> = ({allowed}) => {
+const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
   const [csvFile, setCsvFile] = useState<File | null>(null);
   const [data, setData] = useState<AIInteraction[]>([]);
   const [responseCount, setResponseCount] = useState<number>(0);
@@ -57,7 +57,8 @@ const AITutorBulkResponseGenerator: React.FC<
   const askAI = async (row: AIInteraction) => {
     const chatApiResponse = await getChatCompletionMessage(
       formatQuestionForAITutor(row),
-      []
+      [],
+      row.systemPrompt
     );
     row.aiResponse = chatApiResponse.assistantResponse;
     setResponseCount(prevResponseCount => prevResponseCount + 1);
@@ -94,9 +95,9 @@ const AITutorBulkResponseGenerator: React.FC<
       <p>
         Upload a CSV of student inputs that will be sent to AI Tutor. AI Tutor
         responses will then be saved and you can download the resulting updated
-        CSV. Your CSV must include a `studentInput` column to succeed.
+        CSV.
       </p>
-
+      <AITutorTesterSampleColumns />
       <div>
         <div className={styles.buttonSpacing}>
           <input
@@ -136,8 +137,9 @@ const AITutorBulkResponseGenerator: React.FC<
           />
         </div>
       </div>
+      <br />
     </div>
   );
 };
 
-export default AITutorBulkResponseGenerator;
+export default AITutorTester;

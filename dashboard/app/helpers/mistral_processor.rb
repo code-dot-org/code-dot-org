@@ -11,7 +11,7 @@ class MistralProcessor
     # must start with a user prompt and alternate between user and assistant.
     # Mistral-7B-Instruction LLM instruction format doc at https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.1.
     # Biomistral and Pirate models also use this input format.
-    inputs = (MistralProcessor::INSTRUCTIONS_BEGIN_TOKEN + wrap_as_instructions(instructions))
+    inputs = (MistralProcessor::SENTENCE_BEGIN_TOKEN + wrap_as_instructions(instructions))
     # Add user and assistant messages including most recent user message.
     all_messages = [*stored_messages, new_message]
     all_messages.each do |msg|
