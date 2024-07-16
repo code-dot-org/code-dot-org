@@ -77,7 +77,9 @@ function SectionProgressV2({
           {i18n.lessonsIn()}
 
           <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
-          {expandedMetadataEnabled && <MoreOptionsDropdown />}
+          {expandedMetadataEnabled && (
+            <MoreOptionsDropdown sectionId={sectionId} />
+          )}
         </Heading6>
       </div>
       <ProgressTableV2 isSkeleton={!levelDataInitialized} />

@@ -4,6 +4,8 @@ import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
@@ -21,6 +23,7 @@ function MoreOptionsDropdown({
   students,
   expandMetadataForStudents,
   collapseMetadataForStudents,
+  sectionId,
 }) {
   const [opened, setOpened] = useState(false);
   const [menuLocation, setMenuLocation] = useState({menuTop: 0, menuLeft: 0});
@@ -33,11 +36,17 @@ function MoreOptionsDropdown({
   );
 
   const expandMetaDataForAllStudents = () => {
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ALL_ROWS_EXPANDED, {
+      sectionId: sectionId,
+    });
     expandMetadataForStudents(getAllStudentIds);
     setOpened(false);
   };
 
   const collapseMetaDataForAllStudents = () => {
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ALL_ROWS_COLLAPSED, {
+      sectionId: sectionId,
+    });
     collapseMetadataForStudents(getAllStudentIds);
     setOpened(false);
   };
@@ -124,6 +133,7 @@ MoreOptionsDropdown.propTypes = {
   students: PropTypes.arrayOf(studentShape),
   expandMetadataForStudents: PropTypes.func,
   collapseMetadataForStudents: PropTypes.func,
+  sectionId: PropTypes.number,
 };
 
 export const UnconnectedMoreOptionsDropdown = MoreOptionsDropdown;
