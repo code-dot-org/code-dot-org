@@ -41,7 +41,6 @@
       box-shadow: none;
     }
   }
-
 }
 
 // Tabs Colors
@@ -99,7 +98,6 @@
 
     li button {
       color: $light_gray_200;
-
 
       &:hover {
         color: $light_white;
@@ -234,7 +232,6 @@
         border: 1px solid $light_gray_800;
       }
     }
-
   }
 }
 
@@ -294,12 +291,11 @@
         }
 
         span {
-          margin: 1px 0 0;
+          margin: 3px 0 0;
         }
       }
     }
   }
-
 }
 
 .tabs-m {
@@ -356,7 +352,7 @@
         }
 
         span {
-          margin: 1px 0 0;
+          margin: 3px 0 0;
         }
       }
     }
@@ -417,7 +413,7 @@
         }
 
         span {
-          margin: 1px 0 0;
+          margin: 3px 0 0;
         }
       }
     }
