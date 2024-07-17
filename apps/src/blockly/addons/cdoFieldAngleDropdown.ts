@@ -41,7 +41,6 @@ export default class CdoFieldAngleDropdown extends CdoFieldDropdown {
    * @override
    */
   showEditor_(e?: MouseEvent) {
-    const direction = this.getDirection();
     super.showEditor_(e);
 
     // See cdoCss for custom styling of the dropdown.
@@ -50,9 +49,7 @@ export default class CdoFieldAngleDropdown extends CdoFieldDropdown {
       'fieldAngleDropDownContainer'
     );
 
-    const angleHelperContainer = this.createAngleHelperContainer();
-    this.initializeAngleHelper(direction, angleHelperContainer);
-
+    this.initializeAngleHelper();
     this.animateAngleHelperOnMenuOptionHighlight();
   }
 
@@ -85,17 +82,13 @@ export default class CdoFieldAngleDropdown extends CdoFieldDropdown {
   }
 
   /**
-   * Initialize the angle helper with the provided direction and container.
-   * @param {string} direction The direction for the angle helper.
-   * @param {HTMLDivElement} container The container element for the angle helper.
+   * Initialize the angle helper.
    * @private
    */
-  private initializeAngleHelper(
-    direction: string,
-    container: HTMLDivElement
-  ): void {
+  private initializeAngleHelper(): void {
+    const container = this.createAngleHelperContainer();
     const sourceBlock = this.getSourceBlock() as Block;
-    this.angleHelper = new Blockly.AngleHelper(direction, {
+    this.angleHelper = new Blockly.AngleHelper(this.getDirection(), {
       onUpdate: this.updateDropdownMenuOptions.bind(this),
       snapPoints: this.getOptions().map(option => parseInt(option[1])),
       arcColour: (sourceBlock as ExtendedBlockSvg)?.style.colourPrimary,
