@@ -34,7 +34,7 @@ module AitutorSystemPromptHelper
 
   def self.get_language_specific_system_prompt(unit)
     language = unit.csa? ? 'Java' : 'Python'
-    "Specific Exclusions: Refrain from discussing topics not explicitly related to computer
+    "\n Specific Exclusions: Refrain from discussing topics not explicitly related to computer
     science or #{language} programming."
   end
 
