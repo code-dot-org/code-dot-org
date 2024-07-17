@@ -7,7 +7,6 @@ const isInCreateAccountButtonExperiment = statsigReporter.getIsInExperiment(
 );
 
 export function showCreateAccountButton() {
-  console.log(isInCreateAccountButtonExperiment);
   return isInCreateAccountButtonExperiment;
 }
 
@@ -20,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const hamburgerButtons = document.querySelector('#hamburger-sign-up-buttons');
   const signUpPage = window.location.pathname.includes('/users/sign_up');
 
+  // This function is only called for the Create Account A/B Test experiment
   function handleWindowResize() {
     if (window.innerWidth < 425) {
       signInButtonDesktop.style.display = 'none';
