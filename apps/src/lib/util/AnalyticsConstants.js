@@ -135,6 +135,10 @@ const EVENTS = {
     'Teacher clicked delete section from the section table',
   SECTION_TABLE_PRINT_CERTIFICATES_CLICKED:
     'Teacher clicked print certificates from the section table',
+  SECTION_TABLE_SYNC_GOOGLE_CLASSROOM_CLICKED:
+    'Teacher clicked sync Google Classroom from the section table',
+  SECTION_TABLE_SYNC_CLEVER_CLICKED:
+    'Teacher clicked sync Clever from the section table',
 
   // Section progress v2
   PROGRESS_V2_VIEW: 'Section New Progress Viewed ',
