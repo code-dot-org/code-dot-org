@@ -28,15 +28,10 @@ $(document).ready(function () {
   const screenWidth = window.innerWidth;
 
   function getHeaderType(screenWidth) {
-    if (screenWidth < 425) {
-      return 'mobile';
-    } else if (screenWidth < 1024) {
-      return 'tablet';
-    } else if (screenWidth >= 1024 && screenWidth <= 1268) {
-      return 'small desktop';
-    } else {
-      return 'large desktop';
-    }
+    if (screenWidth < 425) return 'mobile';
+    if (screenWidth < 1024) return 'tablet';
+    if (screenWidth <= 1268) return 'small desktop';
+    return 'large desktop';
   }
 
   if (getScriptData('isSignedOut')) {
