@@ -274,15 +274,6 @@ export const setUpWithoutLevel = createAsyncThunk(
   }
 );
 
-// Function for external components to notify the Lab2 lifecycle notifier that the level is changing.
-export const notifyLevelChange = (
-  previousLevelId: string,
-  nextLevelId: string
-) =>
-  Lab2Registry.getInstance()
-    .getLifecycleNotifier()
-    .notify(LifecycleEvent.LevelChangeRequested, previousLevelId, nextLevelId);
-
 // Selectors
 
 // If any load is currently in progress.

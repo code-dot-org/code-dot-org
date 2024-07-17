@@ -8,7 +8,7 @@ export enum LifecycleEvent {
 
 type callbackArgs = {
   [LifecycleEvent.LevelChangeRequested]: [
-    previousLevelId: string,
+    previousLevelId: string | null,
     nextLevelId: string
   ];
   [LifecycleEvent.LevelLoadStarted]: [levelId: number];

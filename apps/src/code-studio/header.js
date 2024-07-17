@@ -107,7 +107,7 @@ header.build = function (
 
   // Set up a navigation handler, in case we contain levels that don't
   // require a page reload when switching between them.
-  setupNavigationHandler(lessonData);
+  setupNavigationHandler(currentLevelId);
 
   // Hold off on rendering HeaderMiddle.  This will allow the "app load"
   // to potentially begin before we first render HeaderMiddle, giving HeaderMiddle
