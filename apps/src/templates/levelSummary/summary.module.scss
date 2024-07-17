@@ -1,4 +1,4 @@
-@import "color.scss";
+@import 'color.scss';
 
 .summaryContainer {
   max-width: 970px;
@@ -75,7 +75,7 @@ label.sectionSelector {
   float: right;
 }
 
-[dir="rtl"] .toggleContainer {
+[dir='rtl'] .toggleContainer {
   float: left;
 }
 
@@ -98,11 +98,22 @@ label.sectionSelector {
     column-gap: 48px;
     padding-top: 24px;
     padding-bottom: 12px;
+
+    .studentName {
+      min-height: 24px;
+      margin-bottom: 16px;
+
+      p {
+        margin: 0;
+        font-size: 14px;
+        font-weight: bold;
+        padding-left: 12px;
+      }
+    }
   }
 
   .studentAnswer {
     padding: 12px;
-    margin-bottom: 16px;
     // TODO: Update to use #E6F6F8 once the phase-2 brand colors are in.
     background-color: $lightest_cyan;
     display: inline-block;

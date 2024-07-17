@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import Toggle from '@cdo/apps/componentLibrary/toggle';
 import {PredictQuestionType} from '@cdo/apps/lab2/levelEditors/types';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -39,6 +40,7 @@ const SummaryResponses = ({
     predictSettings?.questionType === PredictQuestionType.MultipleChoice;
 
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
+  const [showStudentNames, setShowStudentNames] = useState(false);
 
   // To avoid confusion, if a teacher tries to view the summary as a student,
   // send them back to the level in Participant mode instead.
@@ -139,7 +141,22 @@ const SummaryResponses = ({
 
         {/* Free response visualization */}
         {isFreeResponse && (
-          <FreeResponseResponses responses={scriptData.responses} />
+          <div>
+            <Toggle
+              onChange={() => {
+                setShowStudentNames(!showStudentNames);
+              }}
+              checked={showStudentNames}
+              label={i18n.showStudentNames()}
+              position={'right'}
+              size={'s'}
+              name={'showStudentNames'}
+            />
+            <FreeResponseResponses
+              responses={scriptData.responses}
+              showStudentNames={showStudentNames}
+            />
+          </div>
         )}
 
         {/* Multi visualization */}
