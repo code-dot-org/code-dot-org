@@ -6,8 +6,9 @@
 # may require anothe way to seed this data at that point: #56994
 class SeedDatasetsFromFirebase < ActiveRecord::Migration[6.1]
   def up
-    seed_manifest_from_firebase
-    seed_tables_from_firebase
+    # We now seed these from `rake seed:datablock_storage`, so disabling here
+    # seed_manifest_from_firebase
+    # seed_tables_from_firebase
   rescue => exception
     message = <<~LOG
       Failed to seed datablock storage library from Firebase: #{exception.message}

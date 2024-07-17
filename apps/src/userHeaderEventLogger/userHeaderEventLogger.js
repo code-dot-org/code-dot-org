@@ -25,6 +25,7 @@ $(document).ready(function () {
   const headerCreateMenu = document.getElementById('header_create_menu');
   const pageUrl = window.location.href;
   const helpIcon = document.querySelector('#help-icon');
+  const createAccountButton = document.querySelector('#create_account_button');
   const screenWidth = window.innerWidth;
 
   function getHeaderType(screenWidth) {
@@ -55,6 +56,17 @@ $(document).ready(function () {
       'hamburgerlink',
       EVENTS.SIGNED_OUT_USER_CLICKS_HAMBURGER_LINK
     );
+
+    // Log if the Create Account button is clicked
+    if (createAccountButton) {
+      createAccountButton.addEventListener('click', () => {
+        analyticsReporter.sendEvent(
+          EVENTS.CREATE_ACCOUNT_BUTTON_CLICKED,
+          {pageUrl: pageUrl},
+          PLATFORMS.BOTH
+        );
+      });
+    }
 
     // Log if the Sign in button is clicked
     signInButton.addEventListener('click', () => {

@@ -14,6 +14,7 @@ Scenario: Data Browser
   When I press keys "foo" for element "#data-browser input"
   And I click selector "#data-browser button:contains(Add)"
   And I wait until element "#dataTable" is visible
+  And I wait for 1 second
   Then I see no difference for "data table"
 
   When I press enter key

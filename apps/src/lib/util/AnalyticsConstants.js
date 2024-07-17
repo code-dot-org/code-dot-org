@@ -138,6 +138,13 @@ const EVENTS = {
   PROGRESS_V2_DELAY_INVITATION:
     'Section Progress Invitation Modal Remind Later',
   PROGRESS_V2_SEEN_INVITATION: 'Section Progress Invitation Modal seen by user',
+  PROGRESS_V2_ONE_ROW_EXPANDED: 'Section New Progress One Student Row Expanded',
+  PROGRESS_V2_ALL_ROWS_EXPANDED:
+    'Section New Progress All Student Rows Expanded',
+  PROGRESS_V2_ONE_ROW_COLLAPSED:
+    'Section New Progress One Student Row Collapsed',
+  PROGRESS_V2_ALL_ROWS_COLLAPSED:
+    'Section New Progress All Student Rows Collapsed',
 
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
@@ -257,6 +264,7 @@ const EVENTS = {
     'Signed Out User Clicks Hamburger Link',
   SIGNED_OUT_USER_CLICKS_SIGN_IN: 'Signed Out User Clicks Sign In Button',
   SIGNED_OUT_USER_CLICKS_HELP_MENU: 'Signed Out User Clicks Help Menu',
+  CREATE_ACCOUNT_BUTTON_CLICKED: 'Create Account Button Clicked',
 
   // Header Create menu
   SIGNED_OUT_USER_CLICKS_CREATE_DROPDOWN:
