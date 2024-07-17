@@ -1,11 +1,15 @@
 import React, {useState} from 'react';
-import {LevelPredictSettings, PredictQuestionType} from '../types';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
-import moduleStyles from './edit-predict-settings.module.scss';
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
+
+import {LevelPredictSettings, PredictQuestionType} from '../types';
+
 import FreeResponseFields from './FreeResponseFields';
 import MultipleChoiceFields from './MultipleChoiceFields';
+
+import moduleStyles from './edit-predict-settings.module.scss';
 
 interface EditPredictSettingsProps {
   initialSettings: LevelPredictSettings;

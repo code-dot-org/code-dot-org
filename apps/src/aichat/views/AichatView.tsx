@@ -38,7 +38,6 @@ import {getNewMessageId} from '../redux/utils';
 import {AichatLevelProperties, Notification, ViewMode} from '../types';
 
 import ChatWorkspace from './ChatWorkspace';
-import CopyButton from './CopyButton';
 import {isDisabled} from './modelCustomization/utils';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import PresentationView from './presentation/PresentationView';
@@ -256,11 +255,6 @@ const AichatView: React.FunctionComponent = () => {
             headerContent={chatWorkspaceHeader}
             className={moduleStyles.panelContainer}
             headerClassName={moduleStyles.panelHeader}
-            rightHeaderContent={
-              <div className={moduleStyles.chatHeaderRight}>
-                <CopyButton />
-              </div>
-            }
           >
             <ChatWorkspace onClear={onClear} />
           </PanelContainer>

@@ -2,7 +2,6 @@ import {
   Role,
   AITutorInteractionStatus as Status,
   AITutorInteractionStatusValue,
-  AITutorTypesValue,
   ChatCompletionMessage,
 } from '@cdo/apps/aiTutor/types';
 import {MetricEvent} from '@cdo/apps/lib/metrics/events';
@@ -34,27 +33,17 @@ const logViolationDetails = (response: OpenaiChatCompletionMessage) => {
 
 /**
  * This function sends a POST request to the chat completion backend controller.
- * Note: This function needs access to the tutorType so it can decide whether to include
- * validation code on the backend.
  */
 export async function postOpenaiChatCompletion(
   messagesToSend: OpenaiChatCompletionMessage[],
   levelId?: number,
-  tutorType?: AITutorTypesValue,
-  levelInstructions?: string
+  systemPrompt?: string
 ): Promise<OpenaiChatCompletionMessage | null> {
-  const payload = levelId
-    ? {
-        levelId: levelId,
-        messages: messagesToSend,
-        type: tutorType,
-        levelInstructions,
-      }
-    : {
-        messages: messagesToSend,
-        type: tutorType,
-        levelInstructions,
-      };
+  const payload = {
+    messages: messagesToSend,
+    levelId: levelId,
+    systemPrompt: systemPrompt,
+  };
 
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
@@ -86,9 +75,8 @@ const formatForChatCompletion = (
 export async function getChatCompletionMessage(
   formattedQuestion: string,
   chatMessages: ChatCompletionMessage[],
-  levelId?: number,
-  tutorType?: AITutorTypesValue,
-  levelInstructions?: string
+  systemPrompt?: string,
+  levelId?: number
 ): Promise<ChatCompletionResponse> {
   const messagesToSend = [
     ...formatForChatCompletion(chatMessages),
@@ -100,8 +88,7 @@ export async function getChatCompletionMessage(
     response = await postOpenaiChatCompletion(
       messagesToSend,
       levelId,
-      tutorType,
-      levelInstructions
+      systemPrompt
     );
   } catch (error) {
     MetricsReporter.logError({

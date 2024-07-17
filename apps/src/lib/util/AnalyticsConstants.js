@@ -138,6 +138,13 @@ const EVENTS = {
   PROGRESS_V2_DELAY_INVITATION:
     'Section Progress Invitation Modal Remind Later',
   PROGRESS_V2_SEEN_INVITATION: 'Section Progress Invitation Modal seen by user',
+  PROGRESS_V2_ONE_ROW_EXPANDED: 'Section New Progress One Student Row Expanded',
+  PROGRESS_V2_ALL_ROWS_EXPANDED:
+    'Section New Progress All Student Rows Expanded',
+  PROGRESS_V2_ONE_ROW_COLLAPSED:
+    'Section New Progress One Student Row Collapsed',
+  PROGRESS_V2_ALL_ROWS_COLLAPSED:
+    'Section New Progress All Student Rows Collapsed',
 
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
@@ -262,6 +269,10 @@ const EVENTS = {
     'Signed Out User Clicks Create Dropdown',
   SIGNED_OUT_USER_SELECTS_CREATE_DROPDOWN_OPTION:
     'Signed Out User Selects Create Dropdown Option',
+
+  // Projects
+  RUN_BUTTON_PRESSED_SIGNED_OUT:
+    'Signed Out User Presses Run Button on Standalone Project',
 
   // Project sharing via 'Share' button
   SHARING_DIALOG_OPEN: 'User Opens Project Share Dialog',

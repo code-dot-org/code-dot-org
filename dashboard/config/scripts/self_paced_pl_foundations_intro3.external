@@ -20,8 +20,26 @@ markdown <<MARKDOWN
 ### **📚 Teaching Computer Science**
 #### This unit covers some of the pedagogical strategies that you'll need to be familiar with to teach computer science. This unit is general to Code.org curricula and details our approach to teaching the subject.
 
-### **🔍 Curriculum Overview**
-#### This unit will give you more information about the units in Foundations of Computer Science. Learn more about specific unit content and student activities.
+### **🔍 Curriculum Overviews**
+#### These units will give you more information about the units in Foundations of Computer Science. Learn more about specific unit content and student activities. 
+
+<div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
+
+### **NOTE**:
+
+#### At this time, only the first three units of Foundations of Computer Science have Curriculum Overviews:
+
+* #### **Unit 1:** Computer Systems and Devices
+	* #### Option A: For classrooms with the <a href="https://code.org/maker/microbit" target="blank" rel="noopener noreferrer">BBC micro:bit</a>
+    * #### Option B: For classrooms with <a href="https://code.org/maker/circuitplayground" target="blank" rel="noopener noreferrer">Adafruit's Circuit Playground</a>
+
+* #### **Unit 2:** Representing Information
+* #### **Unit 3:** Artificial Intelligence and Machine Learning
+
+#### For the last three units and the no-device version of Unit 1, we recommend going through the curriculum and completing the student activities to prepare to teach the content.
+
+</p></div>
+
 ___
 
 #### Feel free to complete as much or as little of this module as is useful for you and your students! Stop, start, and revisit content as you see fit. We hope you'll find these activities useful to start teaching Foundations of Computer Science.

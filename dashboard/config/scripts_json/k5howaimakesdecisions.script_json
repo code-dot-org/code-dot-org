@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-10 20:17:37 UTC",
+    "serialized_at": "2024-07-15 21:26:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -201,6 +201,7 @@
       "key": "d05c52fb-7316-4308-8616-3b1c3d2dd27c",
       "position": 1,
       "properties": {
+        "progression_name": "Next Steps"
       },
       "seeding_key": {
         "activity_section.key": "d05c52fb-7316-4308-8616-3b1c3d2dd27c",
@@ -215,6 +216,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5_prod"
+        ],
         "progression": "What is AI?"
       },
       "bonus": false,
@@ -237,6 +241,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPD-K5 Begin_2023_K5CSConcepts_TextPageAI_prod"
+        ],
         "progression": "What is AI?"
       },
       "bonus": false,
@@ -259,6 +266,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-ai-101-mod2-intro_03_2024K5_prod"
+        ],
         "progression": "What is AI?"
       },
       "bonus": false,
@@ -281,6 +291,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-ML-vid_23K5_prod"
+        ],
         "progression": "What is AI?"
       },
       "bonus": false,
@@ -303,6 +316,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2-behaviors -intro_2024_K5blockAI_prod"
+        ],
         "progression": "What is AI?"
       },
       "bonus": false,
@@ -325,6 +341,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-k5-2-behaviors -intro_2024_K5Intro1_prod"
+        ],
         "progression": "Lesson 1: Making Predictions"
       },
       "bonus": false,
@@ -347,6 +366,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLpl-k5-2-behaviors -intro_2024_K5Intro1_prod"
+        ],
         "progression": "Lesson 1: Making Predictions"
       },
       "bonus": false,
@@ -369,6 +391,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "which doesnt belong_prod"
+        ],
         "progression": "Lesson 1: Making Predictions"
       },
       "bonus": false,
@@ -391,6 +416,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLsorting_items_wings_prod"
+        ],
         "progression": "Lesson 1: Making Predictions"
       },
       "bonus": false,
@@ -413,6 +441,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sorting_items_prediction_2_prod"
+        ],
         "progression": "Lesson 1: Making Predictions"
       },
       "bonus": false,
@@ -435,6 +466,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sorting_items_by_fill_color_prod"
+        ],
         "progression": "Lesson 1: Making Predictions"
       },
       "bonus": false,
@@ -457,6 +491,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sorting_items_new_prod"
+        ],
         "progression": "Lesson 1: Making Predictions"
       },
       "bonus": false,
@@ -479,6 +516,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "k5_ai_matching_sort_data_pl_prod"
+        ],
         "progression": "Lesson 1: Making Predictions"
       },
       "bonus": false,
@@ -501,6 +541,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLOceans_Video_Elementary_Machine_Learning_prod"
+        ],
         "progression": "Lesson 2: Training AI"
       },
       "bonus": false,
@@ -523,6 +566,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_CreaturesVTrashDemo_prod"
+        ],
         "progression": "Lesson 2: Training AI"
       },
       "bonus": false,
@@ -545,6 +591,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash_prod"
+        ],
         "progression": "Lesson 2: Training AI"
       },
       "bonus": false,
@@ -567,6 +616,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "More Data Yields More Accurate Results_prod"
+        ],
         "progression": "Lesson 2: Training AI"
       },
       "bonus": false,
@@ -589,6 +641,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long_prod"
+        ],
         "progression": "Lesson 2: Training AI"
       },
       "bonus": false,
@@ -611,6 +666,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AI Fish Bias Outcome_prod"
+        ],
         "progression": "Lesson 2: Training AI"
       },
       "bonus": false,
@@ -633,6 +691,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLU2L4 Multiple Choice packets2022_prod"
+        ],
         "progression": "Lesson 2: Training AI"
       },
       "bonus": false,
@@ -655,6 +716,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "what is bias_prod"
+        ],
         "progression": "Lesson 2: Training AI"
       },
       "bonus": false,
@@ -677,6 +741,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Why is bias important_prod"
+        ],
         "progression": "Lesson 2: Training AI"
       },
       "bonus": false,
@@ -699,6 +766,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "feature vector_prod"
+        ],
         "progression": "Lesson 3: Using AI Bot"
       },
       "bonus": false,
@@ -721,6 +791,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "k5_ai_pilot_sorting_foods_prod"
+        ],
         "progression": "Lesson 3: Using AI Bot"
       },
       "bonus": false,
@@ -743,6 +816,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "k5_ai_pilot_sorting_fruit_vegetables_prod"
+        ],
         "progression": "Lesson 3: Using AI Bot"
       },
       "bonus": false,
@@ -765,6 +841,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sorting_items_emoji_prod"
+        ],
         "progression": "Lesson 3: Using AI Bot"
       },
       "bonus": false,
@@ -787,6 +866,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "k5_ai_matching_background_emoji_pl_prod"
+        ],
         "progression": "Lesson 3: Using AI Bot"
       },
       "bonus": false,
@@ -809,6 +891,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ai_data_dance_party_video_level_prod"
+        ],
         "progression": "Lesson 3: Using AI Bot"
       },
       "bonus": false,
@@ -831,6 +916,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dance_ai_customize_effect_prod"
+        ],
         "progression": "Lesson 3: Using AI Bot"
       },
       "bonus": false,
@@ -853,6 +941,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "k5_ai_data_student_data_questions_level_ai_prod"
+        ],
         "progression": "Lesson 4: AI Tools in School"
       },
       "bonus": false,
@@ -875,6 +966,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "k5_ai_final_choice_level_pl_prod"
+        ],
         "progression": "Lesson 5: Share Students' Voice"
       },
       "bonus": false,
@@ -897,6 +991,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLPLPLpl-k5-2_PLexperiences_prod"
+        ],
+        "progression": "Next Steps"
       },
       "bonus": false,
       "seeding_key": {

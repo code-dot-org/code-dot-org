@@ -12,9 +12,13 @@ const CelebrationImage = require('@cdo/static/pd/EnrollmentCelebration.png');
 
 export default function WorkshopEnrollmentCelebrationDialog({
   workshopName = 'a new workshop',
+  onClose,
 }) {
   const [isOpen, setIsOpen] = useState(true);
-  const onClose = () => {
+  const onCloseDialog = () => {
+    if (onClose) {
+      onClose();
+    }
     setIsOpen(false);
   };
 
@@ -22,7 +26,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
     isOpen && (
       <AccessibleDialog
         className={style.celebrationContainer}
-        onClose={onClose}
+        onClose={onCloseDialog}
         closeOnClickBackdrop={true}
       >
         <div className={style.containerMargin}>
@@ -34,7 +38,7 @@ export default function WorkshopEnrollmentCelebrationDialog({
             </BodyTwoText>
           </div>
           <Button
-            onClick={onClose}
+            onClick={onCloseDialog}
             text={i18n.enrollmentCelebrationCallToAction()}
           />
         </div>
@@ -45,4 +49,5 @@ export default function WorkshopEnrollmentCelebrationDialog({
 
 WorkshopEnrollmentCelebrationDialog.propTypes = {
   workshopName: PropTypes.string,
+  onClose: PropTypes.func,
 };

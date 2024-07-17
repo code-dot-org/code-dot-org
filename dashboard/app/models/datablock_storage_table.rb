@@ -220,7 +220,7 @@ class DatablockStorageTable < ApplicationRecord
 
     max_csv_size = MAX_TABLE_ROW_COUNT * DatablockStorageRecord::MAX_RECORD_LENGTH
     if table_data_csv.bytesize > max_csv_size
-      raise StudentFacingError.new(:CSV_TOO_LARGE), "CSV is too large to import, max CSV size is #{(max_csv_size.to_f / (1024 * 1024)).round} MB"
+      raise StudentFacingError.new(:IMPORT_FAILED), "CSV is too large to import, maximum CSV size is #{(max_csv_size.to_f / (1024 * 1024)).round} MB"
     end
 
     new_records = CSV.parse(table_data_csv, headers: true).map(&:to_h)
@@ -347,7 +347,7 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   private def validate_max_table_count
-    if DatablockStorageTable.where(project_id: project_id).count >= MAX_TABLE_COUNT
+    if DatablockStorageTable.where(project_id: project_id).count >= MAX_TABLE_COUNT && project_id != SHARED_TABLE_PROJECT_ID
       raise StudentFacingError.new(:MAX_TABLES_EXCEEDED), "Cannot create more than #{MAX_TABLE_COUNT} tables"
     end
   end

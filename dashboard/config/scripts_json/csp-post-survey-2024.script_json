@@ -6,11 +6,12 @@
     "properties": {
       "curriculum_umbrella": "CSP",
       "hideable_lessons": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-09 17:47:15 UTC",
+    "serialized_at": "2024-07-11 16:55:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

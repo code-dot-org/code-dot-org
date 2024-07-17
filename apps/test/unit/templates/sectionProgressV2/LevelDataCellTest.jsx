@@ -92,11 +92,23 @@ describe('LevelDataCell', () => {
     screen.getByRole('link', {name: ITEM_TYPE.NO_PROGRESS.title});
   });
 
-  it('Validated level', () => {
+  it('Validated perfect level', () => {
     renderDefault({
       studentLevelProgress: {
         ...PROGRESS,
         status: LevelStatus.perfect,
+      },
+      level: {isValidated: true, id: 1, url: TEST_URL},
+    });
+
+    screen.getByRole('link', {name: ITEM_TYPE.VALIDATED.title});
+  });
+
+  it('Validated passed level', () => {
+    renderDefault({
+      studentLevelProgress: {
+        ...PROGRESS,
+        status: LevelStatus.passed,
       },
       level: {isValidated: true, id: 1, url: TEST_URL},
     });

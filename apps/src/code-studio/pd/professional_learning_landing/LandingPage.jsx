@@ -8,6 +8,8 @@ import {connect, useDispatch} from 'react-redux';
 import Tabs from '@cdo/apps/componentLibrary/tabs';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import DCDO from '@cdo/apps/dcdo';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
 import ActionBlocksWrapper from '@cdo/apps/templates/studioHomepages/ActionBlocksWrapper';
@@ -26,12 +28,14 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
+import {queryParams, updateQueryParam} from '../../utils';
 import {
   COURSE_CSF,
   COURSE_CSD,
   COURSE_CSP,
   COURSE_CSA,
 } from '../workshop_dashboard/workshopConstants';
+import WorkshopEnrollmentCelebrationDialog from '../workshop_enrollment/WorkshopEnrollmentCelebrationDialog';
 
 import {EnrolledWorkshops, WorkshopsTable} from './EnrolledWorkshops';
 import SelfPacedProgressTable from './SelfPacedProgressTable';
@@ -81,6 +85,26 @@ const getAvailableTabs = permissions => {
   return tabs;
 };
 
+const getEnrollSucessWorkshopName = () => {
+  // If sent here from successfully enrolling in a workshop, log WORKSHOP_ENROLLMENT_COMPLETED_EVENT.
+  const urlParams = queryParams();
+  if (urlParams && Object.keys(urlParams).includes('wsCourse')) {
+    const workshopCourseName = urlParams['wsCourse'];
+
+    analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
+      'regional partner': urlParams['rpName'],
+      'workshop course': workshopCourseName,
+      'workshop subject': urlParams['wsSubject'],
+    });
+
+    updateQueryParam('rpName', undefined, false);
+    updateQueryParam('wsCourse', undefined, false);
+    updateQueryParam('wsSubject', undefined, false);
+
+    return workshopCourseName;
+  }
+};
+
 function LandingPage({
   lastWorkshopSurveyUrl,
   lastWorkshopSurveyCourse,
@@ -99,6 +123,9 @@ function LandingPage({
   hiddenPlSectionIds,
 }) {
   const availableTabs = getAvailableTabs(userPermissions);
+  const [enrollSuccessWorkshopName, setEnrollSuccessWorkshopName] = useState(
+    getEnrollSucessWorkshopName()
+  );
   const [currentTab, setCurrentTab] = useState(availableTabs[0].value);
   const headerContainerStyles =
     availableTabs.length > 1
@@ -346,6 +373,12 @@ function LandingPage({
   const RenderMyPlTab = () => {
     return (
       <>
+        {enrollSuccessWorkshopName && (
+          <WorkshopEnrollmentCelebrationDialog
+            workshopName={enrollSuccessWorkshopName}
+            onClose={() => setEnrollSuccessWorkshopName(null)}
+          />
+        )}
         {RenderBanner()}
         {plCoursesStarted?.length >= 1 && RenderSelfPacedPL()}
         <div className={joinedPlSectionsStyling}>
