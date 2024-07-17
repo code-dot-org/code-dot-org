@@ -13,14 +13,16 @@ const FreeResponseResponses = ({responses, showStudentNames}) => {
       {responses.map(response => (
         <div key={response.user_id} className={styles.studentResponseBlock}>
           <div className={styles.studentAnswer}>
-            <p>{response.text}</p>
-            <ResponseMenuDropdown response={response} />
-          </div>
-          {DCDO.get('cfu-show-names-enabled', false) && (
-            <div className={styles.studentName}>
-              {showStudentNames && <p>{response.student_name}</p>}
+            <div className={styles.studentAnswerInterior}>
+              <p>{response.text}</p>
+              <ResponseMenuDropdown response={response} />
             </div>
-          )}
+            {DCDO.get('cfu-show-names-enabled', false) && (
+              <div className={styles.studentName}>
+                {showStudentNames && <p>{response.student_name}</p>}
+              </div>
+            )}
+          </div>
         </div>
       ))}
     </div>
