@@ -9,6 +9,7 @@ import i18n from '@cdo/locale';
 
 import {Card} from './Card';
 
+import cardStyles from '@cdo/apps/componentLibrary/card/Card/card.module.scss';
 import styles from '@cdo/apps/lib/ui/simpleSignUp/link-account.module.scss';
 
 const meta: Meta<typeof Card> = {
@@ -23,7 +24,7 @@ export const UserSignupCard: Story = {
   render: () => (
     <Card data-testid={'existing-account-card'}>
       <CardHeader title={i18n.ltiLinkAccountExistingAccountCardHeaderLabel()} />
-      <CardContent className={styles.cardContent}>
+      <CardContent className={cardStyles.cardContent}>
         {i18n.ltiLinkAccountExistingAccountCardContent({
           providerName: 'Canvas',
         })}
