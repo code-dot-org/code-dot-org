@@ -112,7 +112,8 @@ export default class CdoFieldAngleDropdown extends CdoFieldDropdown {
               if (menuItemContent) {
                 const valueNode = menuItemContent.childNodes[1];
                 if (valueNode && valueNode.nodeType === Node.TEXT_NODE) {
-                  const angleValue = (valueNode as Text).nodeValue?.trim();
+                  const angleValue =
+                    (valueNode as Text).nodeValue?.trim() || '0';
                   this.angleHelper?.animateAngleChange(parseInt(angleValue));
                 }
               }
