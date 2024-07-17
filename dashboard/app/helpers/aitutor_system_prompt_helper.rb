@@ -32,7 +32,8 @@ module AitutorSystemPromptHelper
     base_system_prompt
   end
 
-  def self.get_language_specific_system_prompt(language = 'Java')
+  def self.get_language_specific_system_prompt(unit)
+    language = unit.csa? ? 'Java' : 'Python'
     "Specific Exclusions: Refrain from discussing topics not explicitly related to computer
     science or #{language} programming."
   end
@@ -43,14 +44,8 @@ module AitutorSystemPromptHelper
   end
 
   def self.get_validated_level_test_file_contents(level)
-    # level = Level.find(level_id)
-
-    # unless level
-    #   return render(status: :bad_request, json: {message: "Couldn't find level with id=#{level_id}."})
-    # end
-
     test_file_contents = ""
-    if !!level.validation
+    if level.validation
       if level.validation.values.empty?
         return render(status: :bad_request, json: {message: "There are no test files associated with level id=#{level_id}."})
       else
@@ -59,25 +54,27 @@ module AitutorSystemPromptHelper
         end
       end
     end
-    "\n The contents of the test file are: #{test_file_contents}"
+    test_file_contents.empty? ?
+      "\n There are no tests for this level." :
+      "\n The contents of the test file are: #{test_file_contents}"
   end
 
   def self.get_system_prompt(level_id, script_id)
-    # unless level
-    #   return render(status: :bad_request, json: {message: "Couldn't find level with id=#{level_id}."})
-    # end
-    # level = Level.find(level_id)
-    # puts "----- LEVEL ----"
-    # puts level.inspect
-    # puts level.script_levels.any? { |sl| }.unit.csa?
-    sl = ScriptLevel.where(script_id: script_id)
-    puts "script_levels"
-    puts
-    puts sl.inspect
-    # is_csa_unit = Unit.find(id: script_id).csa?
-    # puts "CSA?"
-    # puts is_csa_unit
-    system_prompt = get_base_system_prompt + get_language_specific_system_prompt + get_level_instructions(level) + get_validated_level_test_file_contents(level)
+    level = Level.find(level_id)
+    unless level
+      return render(status: :bad_request, json: {message: "Couldn't find level with id=#{level_id}."})
+    end
+
+    unit = Unit.find(script_id)
+    unless unit
+      return render(status: :bad_request, json: {message: "Couldn't find unit with id=#{script_id}."})
+    end
+
+    system_prompt =
+      get_base_system_prompt +
+      get_language_specific_system_prompt(unit) +
+      get_level_instructions(level) +
+      get_validated_level_test_file_contents(level)
 
     system_prompt
   end
