@@ -8367,6 +8367,7 @@ __metadata:
     jquery: 1.12.1
     jquery-ui: ^1.12.1
     js-cookie: ^2.1.2
+    js-file-download: ^0.4.12
     jshint: ^2.13.6
     json-parse-better-errors: ^1.0.1
     jsonic: ^0.3.0
@@ -17151,6 +17152,13 @@ es6-shim@latest:
   version: 2.1.3
   resolution: "js-cookie@npm:2.1.3"
   checksum: 7b05429e8b11d7a1f9a1eb667f00f403beb7919ab5d96d97195258e5f0af531ff50e150b389295064f03941784bc42e23b65e743ac2aa39d25c6757066e04aae
+  languageName: node
+  linkType: hard
+
+"js-file-download@npm:^0.4.12":
+  version: 0.4.12
+  resolution: "js-file-download@npm:0.4.12"
+  checksum: a03847eef0184fbf34a7b7fd365ea6aa1a6cc142efeac52c4baa0cdde845dc93718eb66808dfcffd6c91b37ddc9d058d352ac9698b4280744bad3587240c93b6
   languageName: node
   linkType: hard
 
