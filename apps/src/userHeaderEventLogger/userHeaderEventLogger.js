@@ -32,7 +32,7 @@ $(document).ready(function () {
       return 'mobile';
     } else if (screenWidth < 1024) {
       return 'tablet';
-    } else if (screenWidth > 1024 && screenWidth < 1268) {
+    } else if (screenWidth >= 1024 && screenWidth <= 1268) {
       return 'small desktop';
     } else {
       return 'large desktop';
