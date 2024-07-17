@@ -67,8 +67,13 @@ const InnerFileBrowser = React.memo(
     renameFolderPrompt,
     setFileType,
   }: FilesComponentProps) => {
-    const {openFile, deleteFile, toggleOpenFolder, deleteFolder} =
-      useCodebridgeContext();
+    const {
+      openFile,
+      deleteFile,
+      toggleOpenFolder,
+      deleteFolder,
+      config: {editableFileTypes},
+    } = useCodebridgeContext();
     const dialogControl = useContext(DialogContext);
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
@@ -243,10 +248,12 @@ const InnerFileBrowser = React.memo(
                         <i className="fa-solid fa-pencil" />{' '}
                         {codebridgeI18n.renameFile()}
                       </span>
-                      <span onClick={() => downloadFile(f.id)}>
-                        <i className="fa-solid fa-download" />{' '}
-                        {codebridgeI18n.downloadFile()}
-                      </span>
+                      {editableFileTypes.some(type => type === f.language) && (
+                        <span onClick={() => downloadFile(f.id)}>
+                          <i className="fa-solid fa-download" />{' '}
+                          {codebridgeI18n.downloadFile()}
+                        </span>
+                      )}
                       <span onClick={() => handleDeleteFile(f.id)}>
                         <i className="fa-solid fa-trash" />{' '}
                         {codebridgeI18n.deleteFile()}
@@ -302,13 +309,7 @@ export const FileBrowser = React.memo(() => {
   const downloadFile: FilesComponentProps['downloadFile'] = useMemo(
     () => fileId => {
       const file = project.files[fileId];
-      // NOTE - this is arbitrary and maybe we need more? Also, maybe this should be elsewhere or more easy to configure?
-      const downloadableFileType = new Set(['txt', 'html', 'css', 'py', 'csv']);
-      if (downloadableFileType.has(file.language)) {
-        fileDownload(file.contents, file.name);
-      } else {
-        alert(codebridgeI18n.downloadFileError({extension: file.language}));
-      }
+      fileDownload(file.contents, file.name);
     },
     [project.files]
   );
