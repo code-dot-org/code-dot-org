@@ -97,14 +97,6 @@ use_my_apps: true
 # Log in to https://rpm.newrelic.com/accounts/501463 to get the key
 #new_relic_license_key: ''
 
-
-# Credentials for connecting to Firebase to use data blocks or data browser
-# in Applab.
-#firebase_name: 'cdo-v3-dev'
-#firebase_secret: localoverride
-#firebase_shared_secret: localoverride
-
-
 # Configuration and credentials for the Geocoder gem.  Google Maps provides a
 # street address geocoding service, while freegeoip provides an IP address
 # geocoding service.  (The former is "lookup" in the Geocoder config, while the
