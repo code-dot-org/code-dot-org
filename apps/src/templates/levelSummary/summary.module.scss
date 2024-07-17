@@ -105,6 +105,14 @@ label.sectionSelector {
     padding-top: 24px;
     padding-bottom: 12px;
   }
+  
+  .pinnedResponsesColumns {
+    width: 100%;
+    columns: 2 auto;
+    column-gap: 48px;
+    padding-top: 24px;
+    padding-bottom: 12px;
+  }
 
   .studentAnswer {
     padding: 12px;

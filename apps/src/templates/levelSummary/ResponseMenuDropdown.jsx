@@ -8,12 +8,49 @@ import i18n from '@cdo/locale';
 
 import styles from './summary.module.scss';
 
-const ResponseMenuDropdown = ({response, hideResponse}) => {
+const ResponseMenuDropdown = ({
+  response,
+  hideResponse,
+  pinResponse,
+  unpinResponse,
+}) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   if (!DCDO.get('cfu-pin-hide-enabled', false)) {
     return null;
   }
+
+  const getPinnedDropdownOption = () => {
+    if (unpinResponse) {
+      return (
+        <button
+          className={styles.dropdownOption}
+          type="button"
+          onClick={() => {
+            setIsOpen(false);
+            unpinResponse(response);
+          }}
+        >
+          <FontAwesomeV6Icon iconName="thumbtack" />
+          {i18n.unpinResponse()}
+        </button>
+      );
+    } else {
+      return (
+        <button
+          type="button"
+          className={styles.dropdownOption}
+          onClick={() => {
+            setIsOpen(false);
+            pinResponse(response);
+          }}
+        >
+          <FontAwesomeV6Icon iconName="thumbtack" />
+          {i18n.pinResponse()}
+        </button>
+      );
+    }
+  };
 
   return (
     <div className={styles.studentAnswerMenuDropdownContainer}>
@@ -29,16 +66,7 @@ const ResponseMenuDropdown = ({response, hideResponse}) => {
       {isOpen && (
         <div className={styles.studentAnswerMenuDropdown}>
           <ul>
-            <li>
-              <button
-                type="button"
-                className={styles.dropdownOption}
-                onClick={() => setIsOpen(false)}
-              >
-                <FontAwesomeV6Icon iconName="thumbtack" />
-                {i18n.pinResponse()}
-              </button>
-            </li>
+            <li>{getPinnedDropdownOption()}</li>
             <li>
               <button
                 className={styles.dropdownOption}
@@ -62,6 +90,8 @@ const ResponseMenuDropdown = ({response, hideResponse}) => {
 ResponseMenuDropdown.propTypes = {
   response: PropTypes.object,
   hideResponse: PropTypes.func,
+  pinResponse: PropTypes.func,
+  unpinResponse: PropTypes.func,
 };
 
 export default ResponseMenuDropdown;
