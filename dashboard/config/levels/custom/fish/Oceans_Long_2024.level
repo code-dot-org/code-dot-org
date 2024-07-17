@@ -6,6 +6,8 @@
   "user_id": 155,
   "properties": {
     "mode": "long",
+    "guides": "K5",
+    "background": "oceans-blue",
     "parent_level_id": 19643,
     "name_suffix": "_2024"
   },
