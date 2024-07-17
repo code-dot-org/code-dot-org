@@ -180,8 +180,12 @@ class SectionActionDropdown extends Component {
                 href={teacherDashboardUrl(sectionData.id, '/login_info')}
                 className="print-login-link"
                 onClick={() => {
+                  const loginInstructionsEvent =
+                    sectionData.loginType === SectionLoginType.email
+                      ? EVENTS.SECTION_TABLE_JOIN_INSTRUCTIONS_CLICKED
+                      : EVENTS.SECTION_TABLE_PRINT_LOGIN_CARDS_CLICKED;
                   analyticsReporter.sendEvent(
-                    EVENTS.SECTION_TABLE_LOGIN_INSTRUCTIONS_CLICKED,
+                    loginInstructionsEvent,
                     {},
                     PLATFORMS.BOTH
                   );

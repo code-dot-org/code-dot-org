@@ -121,8 +121,10 @@ const EVENTS = {
   SORT_BY_DISPLAY_NAME: 'Sorted by display name',
 
   // Section table on teacher My Dashboard
-  SECTION_TABLE_LOGIN_INSTRUCTIONS_CLICKED:
-    'Section table join instructions or login cards clicked',
+  SECTION_TABLE_PRINT_LOGIN_CARDS_CLICKED:
+    'Section table print login cards clicked',
+  SECTION_TABLE_JOIN_INSTRUCTIONS_CLICKED:
+    'Section table join instructions clicked',
   SECTION_TABLE_EDIT_SECTION_DETAILS_CLICKED:
     'Section table edit section details clicked',
   SECTION_TABLE_VIEW_PROGRESS_CLICKED: 'Section table view progress clicked',
