@@ -65,7 +65,6 @@ class RequestTest
         # "Base" domains and subdomains are returned unmodified
         'studio.code.org': 'studio.code.org',
         'code.org': 'code.org',
-        'advocacy.code.org': 'advocacy.code.org',
         'hourofcode.com': 'hourofcode.com',
 
         # Localhost- and environment-specific subdomains are normalized to the
@@ -74,7 +73,6 @@ class RequestTest
         'staging-studio.code.org': 'studio.code.org',
         'localhost.code.org': 'code.org',
         'test.code.org': 'code.org',
-        'test-advocacy.code.org': 'advocacy.code.org',
         'localhost.hourofcode.com': 'hourofcode.com',
 
         # Entirely unrecognized domains are normalized to just code.org

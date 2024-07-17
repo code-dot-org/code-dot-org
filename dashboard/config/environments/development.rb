@@ -20,7 +20,6 @@ Dashboard::Application.configure do
   config.hosts << "localhost.code.org"
   config.hosts << "localhost.hourofcode.com"
   config.hosts << "localhost.codeprojects.org"
-  config.hosts << "localhost-advocacy.code.org"
 
   # Do not eager load code on boot.
   config.eager_load = false

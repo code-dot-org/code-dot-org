@@ -111,7 +111,7 @@ class Documents < Sinatra::Base
         ['.fetch']
     # Note: shared_resources.rb has additional configuration for Sass::Plugin
     Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
-    ['code.org', 'hourofcode.com', 'advocacy.code.org'].each do |site|
+    ['code.org', 'hourofcode.com'].each do |site|
       Sass::Plugin.add_template_location(
         sites_v3_dir(site, 'public', 'css'),
         sites_v3_dir(site, 'public', 'css', 'generated')
