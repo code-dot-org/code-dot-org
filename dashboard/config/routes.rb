@@ -1216,11 +1216,6 @@ Dashboard::Application.routes.draw do
         # Datablock Storage: Project API
         get :project_has_data
         delete :clear_all_data
-
-        # TODO: post-firebase-cleanup, remove
-        # Project Use Datablock Storage API
-        put :use_datablock_storage
-        put :use_firebase_storage
       end
     end
   end

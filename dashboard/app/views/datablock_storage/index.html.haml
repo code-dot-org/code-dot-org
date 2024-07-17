@@ -1,14 +1,5 @@
 -# TODO: post-firebase-cleanup, consider removing this entire debug interface (or not 🤷‍♀️): #56994
 
-%strong{:class => "code", :id => "message"} This project uses #{@storage_backend} as its backing store.
-
--# TODO: post-firebase-cleanup, remove this conditional, #56994
-%h3 switch storage backend
-= form_tag "use_datablock_storage", :method => :put, :remote => false do
-  = submit_tag "use_datablock_storage"
-= form_tag "use_firebase_storage", :method => :put, :remote => false do
-  = submit_tag "use_firebase_storage"
-
 %h2 Tables
 %table
   %tr

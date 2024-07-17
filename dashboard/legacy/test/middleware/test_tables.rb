@@ -65,9 +65,4 @@ class TablesTest < Minitest::Test
     delete "/v3/channels/#{@channel_id}"
     assert last_response.successful?
   end
-
-  # TODO: unfirebase, this should moved to datablock_storage_controler, see: #56996
-  private def export_firebase(table_name = @table_name)
-    get "/v3/export-firebase-tables/#{@channel_id}/#{table_name}"
-  end
 end
