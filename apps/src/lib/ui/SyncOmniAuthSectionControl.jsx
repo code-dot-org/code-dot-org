@@ -21,7 +21,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import LtiSectionSyncDialog, {
   LtiSectionSyncResultShape,
-} from '@cdo/apps/lib/ui/lti/sync/LtiSectionSyncDialog';
+} from '@cdo/apps/lib/ui/simpleSignUp/lti/sync/LtiSectionSyncDialog';
 
 const SUPPORTED_PROVIDERS = [
   OAuthSectionTypes.clever,
