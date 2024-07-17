@@ -3,8 +3,6 @@ import React from 'react';
 
 import FreeResponseResponses from '@cdo/apps/templates/levelSummary/FreeResponseResponses';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 import styles from '@cdo/apps/templates/levelSummary/summary.module.scss';
 
 describe('FreeResponseResponses', () => {
@@ -18,10 +16,10 @@ describe('FreeResponseResponses', () => {
     ];
     const wrapper = shallow(<FreeResponseResponses responses={responses} />);
 
-    expect(wrapper.find(`.${styles.studentAnswer}`).length).to.eq(
+    expect(wrapper.find(`.${styles.studentAnswer}`)).toHaveLength(
       responses.length
     );
-    expect(wrapper.find(`.${styles.studentAnswer}`).at(0).text()).to.eq(
+    expect(wrapper.find(`.${styles.studentAnswer}`).at(0).text()).toContain(
       'student response 1'
     );
   });

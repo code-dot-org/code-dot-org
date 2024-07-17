@@ -2743,9 +2743,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/ml-activities@npm:0.0.26":
-  version: 0.0.26
-  resolution: "@code-dot-org/ml-activities@npm:0.0.26"
+"@code-dot-org/ml-activities@npm:0.0.29":
+  version: 0.0.29
+  resolution: "@code-dot-org/ml-activities@npm:0.0.29"
   dependencies:
     "@fortawesome/fontawesome-svg-core": ^1.2.25
     "@fortawesome/free-solid-svg-icons": ^5.11.2
@@ -2755,9 +2755,9 @@ __metadata:
   peerDependencies:
     lodash: ^4.17.5
     radium: ^0.25.2
-    react: ~15.4.0
-    react-dom: ~15.4.0
-  checksum: 48ac8045e0e6d074e3f6778c0efaafeac07f4704e2c0f3fffc886e36acc1426187a89d0d485a32607ec92f30d46dc55c15594b90d020f821d948c5a568277c45
+    react: ~16.14.0
+    react-dom: ~16.14.0
+  checksum: 18f7cbb741273eb10cb380572b01492ac3f7f9027c0a1869e85ba2330f203e65a503bb95ade5bfc34b1fac6f1b01c5e6ef140f1500a2c60620e5cc40c756e3ee
   languageName: node
   linkType: hard
 
@@ -8180,7 +8180,7 @@ __metadata:
     "@code-dot-org/js-interpreter": 1.3.13
     "@code-dot-org/js-numbers": 0.1.0-cdo.0
     "@code-dot-org/maze": 2.16.0
-    "@code-dot-org/ml-activities": 0.0.26
+    "@code-dot-org/ml-activities": 0.0.29
     "@code-dot-org/ml-playground": 0.0.47
     "@code-dot-org/p5.play": 1.3.21-cdo
     "@code-dot-org/piskel": 0.13.0-cdo.13
@@ -8313,7 +8313,7 @@ __metadata:
     jquery: 1.12.1
     jquery-ui: ^1.12.1
     js-cookie: ^2.1.2
-    jshint: ^2.9.5
+    jshint: ^2.13.6
     json-parse-better-errors: ^1.0.1
     jsonic: ^0.3.0
     jszip: 3.10.1
@@ -17270,21 +17270,20 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"jshint@npm:^2.9.5":
-  version: 2.9.5
-  resolution: "jshint@npm:2.9.5"
+"jshint@npm:^2.13.6":
+  version: 2.13.6
+  resolution: "jshint@npm:2.13.6"
   dependencies:
     cli: ~1.0.0
     console-browserify: 1.1.x
     exit: 0.1.x
     htmlparser2: 3.8.x
-    lodash: 3.7.x
+    lodash: ~4.17.21
     minimatch: ~3.0.2
-    shelljs: 0.3.x
     strip-json-comments: 1.0.x
   bin:
-    jshint: ./bin/jshint
-  checksum: e04da959ad69fc49852cfa052f7e8541c77158a942d71ddd5511f5f6edeb222779eb56cca1d5527040e93ca851186406e474ca12e9cdf85537aaca3134cb8d7e
+    jshint: bin/jshint
+  checksum: ec7f67feef215445a338f4d1594396428db42a47cb2e157e543331b41a7d590d83fa6441302af4d19a1700e1f9132328747913090d5590d2730798de4c9826d2
   languageName: node
   linkType: hard
 
@@ -17992,13 +17991,6 @@ es6-shim@latest:
   version: 4.4.2
   resolution: "lodash.truncate@npm:4.4.2"
   checksum: b463d8a382cfb5f0e71c504dcb6f807a7bd379ff1ea216669aa42c52fc28c54e404bfbd96791aa09e6df0de2c1d7b8f1b7f4b1a61f324d38fe98bc535aeee4f5
-  languageName: node
-  linkType: hard
-
-"lodash@npm:3.7.x":
-  version: 3.7.0
-  resolution: "lodash@npm:3.7.0"
-  checksum: 78b7ab0eeb1e6999a22ff855bed8e2d0d1ee58392956ed8c5f46ad4c3b449ea76c01767225713ec1836e77841319ae1d3a7f1f8972bb51e57adea9a15f50eb96
   languageName: node
   linkType: hard
 
@@ -24251,15 +24243,6 @@ es6-shim@latest:
   version: 1.8.1
   resolution: "shell-quote@npm:1.8.1"
   checksum: 5f01201f4ef504d4c6a9d0d283fa17075f6770bfbe4c5850b074974c68062f37929ca61700d95ad2ac8822e14e8c4b990ca0e6e9272e64befd74ce5e19f0736b
-  languageName: node
-  linkType: hard
-
-"shelljs@npm:0.3.x":
-  version: 0.3.0
-  resolution: "shelljs@npm:0.3.0"
-  bin:
-    shjs: ./bin/shjs
-  checksum: 6e57d6bff3bb101525f251fd80358b983fb9c8175dc31593496bfcdf66701b78dba33b9319e38026ac31b2c80875794fc71bd2fdd9cdb86fbeb81fcbfce28d7b
   languageName: node
   linkType: hard
 

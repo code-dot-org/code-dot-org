@@ -30,7 +30,7 @@ const WelcomeBanner = () => {
   return (
     <div className={styles.welcomeContainer}>
       {ltiProviderIcon && (
-        <div className={styles.welcomeBannerContainer}>
+        <div className={styles.welcomeIconContainer}>
           <img src={ltiProviderIcon} alt={ltiProviderName} />
           <FontAwesomeV6Icon
             className={styles.exchangeIcon}
@@ -40,15 +40,20 @@ const WelcomeBanner = () => {
         </div>
       )}
 
-      <Typography semanticTag={'h1'} visualAppearance={'heading-xxl'}>
-        {i18n.ltiLinkAccountWelcomeBannerHeaderLabel()}
-      </Typography>
-
-      <Typography semanticTag={'p'} visualAppearance={'body-two'}>
-        {i18n.ltiLinkAccountWelcomeBannerContent({
-          providerName: ltiProviderName,
-        })}
-      </Typography>
+      <div className={styles.titleContainer}>
+        <Typography semanticTag={'h1'} visualAppearance={'heading-xxl'}>
+          {i18n.ltiLinkAccountWelcomeBannerHeaderLabel()}
+        </Typography>
+        <Typography
+          className={styles.titleDesc}
+          semanticTag={'p'}
+          visualAppearance={'body-two'}
+        >
+          {i18n.ltiLinkAccountWelcomeBannerContent({
+            providerName: ltiProviderName,
+          })}
+        </Typography>
+      </div>
     </div>
   );
 };
