@@ -24,7 +24,7 @@ class BackpackTest < ActiveSupport::TestCase
     Backpack.any_instance.stubs(:storage_id_for_user_id).with(@user.id).returns(@storage_id)
     backpack = Backpack.find_or_create(@user.id, 'fake-ip')
     project = Projects.new(@storage_id).get(backpack.channel)
-    assert project[:hidden]
+    assert project["hidden"]
   end
 
   test 'find_or_create returns existing backpack if it exists' do
