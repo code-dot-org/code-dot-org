@@ -25,11 +25,27 @@ $(document).ready(function () {
   const headerCreateMenu = document.getElementById('header_create_menu');
   const pageUrl = window.location.href;
   const helpIcon = document.querySelector('#help-icon');
+  const screenWidth = window.innerWidth;
+
+  function getHeaderType(screenWidth) {
+    if (screenWidth < 425) {
+      return 'mobile';
+    } else if (screenWidth < 1024) {
+      return 'tablet';
+    } else if (screenWidth > 1024 && screenWidth < 1268) {
+      return 'small desktop';
+    } else {
+      return 'large desktop';
+    }
+  }
 
   if (getScriptData('isSignedOut')) {
     analyticsReporter.sendEvent(
       EVENTS.SIGNED_OUT_USER_SEES_HEADER,
-      {pageUrl: pageUrl},
+      {
+        pageUrl: pageUrl,
+        headerType: getHeaderType(screenWidth),
+      },
       PLATFORMS.STATSIG
     );
 
