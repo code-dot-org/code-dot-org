@@ -1,26 +1,33 @@
 # Building assets on adhoc environment
+
 ## Flow of CI build system
+
 - `bin/start-build`
+
   - signal a cron job on daemon servers (e.g. adhoc, staging, test) to restart the build on that server by creating `./build-started` file
 
 - `cookbooks/cdo-apps/templates/default/crontab.erb`
+
   - Run `aws/ci_build` every minute on daemon environments.
 
 - `aws/ci_build`
+
   - Fetch and pull git changes. Run bundle install. Run `bundle exec rake ci`
   - `lib/cdo/rake_utils.rb` contains git, npm, rake helper functions
 
 - `lib/rake/ci.rake`
-  - Run Firebase CI (:upload_rules, :set_config, :clear_test_channels)
+
   - Build apps, dashboard, pegasus and tools
   - Deploy: Upgrade frontend and update CloudFormation stack
   - Flush cache
   - Publish GitHub release if on production
 
 - `lib/rake/build.rake`
+
   - Build apps (first), dashboard, pegasus, and tools (last)
 
   - Build apps
+
     - Only build if any of the apps_build_trigger_paths have changed since last build.
     - Install dependencies by running `yarn`
     - Rebuild PhantomJS `npm rebuild phantomjs-prebuilt`
@@ -55,13 +62,12 @@
 - More details on building apps and asset pipeline: [apps/docs/build.md](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/docs/build.md)
 
 ## How to debug asset pipeline issue on adhoc
+
 - Check build log for issue. (The system auto rebuild whenever we switch branch.)
   - `tail -f log/chat_messages.log`
   - Example of a successful build
     ```
     [adhoc] Running CI build...
-    [adhoc] Uploading security rules to firebase...
-    [adhoc] Setting firebase configuration parameters...
     [adhoc] Updating local <b>chef</b> cookbooks...
     [adhoc] Running rake build...
     [adhoc] Running build...
@@ -94,7 +100,8 @@
     - sudo systemctl restart varnish
 
 ## How to fix seeding issue when building adhoc
-- Option 1: Fix seeding file  (e.g. ApSchoolCode seeding)
+
+- Option 1: Fix seeding file (e.g. ApSchoolCode seeding)
   - Go to `dashboard/lib/tasks/seed.rake` to see how that table is seeded. It could be seeded from a CSV or S3.
   - Edit the seed CSV file to remove conflicting rows. Make a backup of the file first.
 - Option 2: Skip seeding

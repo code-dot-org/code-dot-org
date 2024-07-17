@@ -8277,7 +8277,6 @@ __metadata:
     file-loader: ^6.2.0
     filesaver.js: 0.2.0
     firebase: ^2.4.2
-    firebase-bolt: ^0.8.0
     firebase-mock: 1.0.8
     firmata: ^2.2.0
     focus-trap-react: ^10.1.1
@@ -8973,7 +8972,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"chai@npm:3.5.0, chai@npm:^3.2.0":
+"chai@npm:3.5.0":
   version: 3.5.0
   resolution: "chai@npm:3.5.0"
   dependencies:
@@ -11894,13 +11893,6 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"es6-promise@npm:^3.2.1":
-  version: 3.3.1
-  resolution: "es6-promise@npm:3.3.1"
-  checksum: ce4044009c2b78db18b15212338eb711cd8a4d485961bc9ec18bb24e8c1e91c96d3295b0fcf63066fc0fa1b0ade36da05e6657827d4336dece382be2429b8398
-  languageName: node
-  linkType: hard
-
 "es6-promise@npm:^4.0.3":
   version: 4.0.5
   resolution: "es6-promise@npm:4.0.5"
@@ -13172,21 +13164,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"firebase-bolt@npm:^0.8.0":
-  version: 0.8.1
-  resolution: "firebase-bolt@npm:0.8.1"
-  dependencies:
-    chai: ^3.2.0
-    es6-promise: ^3.2.1
-    firebase-token-generator: ^2.0.0
-    minimist: ^1.2.0
-    node-uuid: ^1.4.3
-  bin:
-    firebase-bolt: bin/firebase-bolt
-  checksum: ab3e3e2a55f885f9fbd32f6cb9d3a2c53ecd20cacb71a3e6744d10d74e142ac8546b85f9d43329ddf2628a2dc9743d8deca4db80f4b6c5c911e709bc900400a0
-  languageName: node
-  linkType: hard
-
 "firebase-mock@npm:1.0.8":
   version: 1.0.8
   resolution: "firebase-mock@npm:1.0.8"
@@ -13196,13 +13173,6 @@ es6-shim@latest:
     md5: ~2.2.1
     rsvp: ^3.3.3
   checksum: 94c1b892ad23faae5186e94f505ad8c6bfad6274b369773bcc3e47257b9636719082cb9d11e0681c9a8a06ba25c14e1d16a4fc73977b2d8b87220100c647e48b
-  languageName: node
-  linkType: hard
-
-"firebase-token-generator@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "firebase-token-generator@npm:2.0.0"
-  checksum: 69678463433c8cc431fbfefc5a6f53acd59a85da4685fea916678dc6182f8e8819fe577af70e3e17ba32cd99c83af8bc419a06a65d8d6870321644c0174db377
   languageName: node
   linkType: hard
 
@@ -19390,15 +19360,6 @@ es6-shim@latest:
   version: 2.0.14
   resolution: "node-releases@npm:2.0.14"
   checksum: 59443a2f77acac854c42d321bf1b43dea0aef55cd544c6a686e9816a697300458d4e82239e2d794ea05f7bbbc8a94500332e2d3ac3f11f52e4b16cbe638b3c41
-  languageName: node
-  linkType: hard
-
-"node-uuid@npm:^1.4.3":
-  version: 1.4.7
-  resolution: "node-uuid@npm:1.4.7"
-  bin:
-    uuid: ./bin/uuid
-  checksum: 21504ee7562eb9f0cc50968f91bc45c44c0bf0ea312abb787ee88092bebf3bb3be4597c59051c86348f6b2f055ecb0934e7a44acae94e54a4b3b9dbb70420a1a
   languageName: node
   linkType: hard
 
