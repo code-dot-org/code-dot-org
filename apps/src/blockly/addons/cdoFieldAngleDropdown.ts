@@ -90,7 +90,10 @@ export default class CdoFieldAngleDropdown extends CdoFieldDropdown {
    * @param {HTMLDivElement} container The container element for the angle helper.
    * @private
    */
-  private initializeAngleHelper(direction: string, container: HTMLDivElement) {
+  private initializeAngleHelper(
+    direction: string,
+    container: HTMLDivElement
+  ): void {
     const sourceBlock = this.getSourceBlock() as Block;
     this.angleHelper = new Blockly.AngleHelper(direction, {
       onUpdate: this.updateDropdownMenuOptions.bind(this),
@@ -108,7 +111,7 @@ export default class CdoFieldAngleDropdown extends CdoFieldDropdown {
    * @param {string | number} angleValue The selected angle value.
    * @private
    */
-  private updateDropdownMenuOptions() {
+  private updateDropdownMenuOptions(): void {
     const angleValue = this.angleHelper?.getAngle() as number;
     this.setValue(`${angleValue}`);
     // Blockly has no public methods for getting dropdown menu items, so this
