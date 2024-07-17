@@ -3,7 +3,7 @@ import React, {useContext} from 'react';
 
 import LtiNewAccountCard from './cards/LtiNewAccountCard';
 import LtiExistingAccountCard from './cards/LtiExistingAccountCard';
-import LtiContinueCard from './cards/LtiContinueCard';
+import LtiContinueAccountCard from './cards/LtiContinueAccountCard';
 import LtiWelcomeBanner from './LtiWelcomeBanner';
 import i18n from '@cdo/locale';
 import {navigateToHref} from '@cdo/apps/utils';
@@ -23,7 +23,11 @@ const LtiLinkAccountPage = () => {
       <div className={styles.contentContainer}>
         <LtiWelcomeBanner />
         <div className={styles.cardContainer}>
-          {newCtaType === 'new' ? <LtiNewAccountCard /> : <LtiContinueCard />}
+          {newCtaType === 'new' ? (
+            <LtiNewAccountCard />
+          ) : (
+            <LtiContinueAccountCard />
+          )}
           <LtiExistingAccountCard />
         </div>
         <div className={styles.cancelButtonContainer}>
