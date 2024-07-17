@@ -13,23 +13,25 @@ const FreeResponseResponses = ({responses}) => {
 
   return (
     <div className={styles.studentResponsesContent}>
-      <div className={styles.studentResponsesColumns}>
-        {responses
-          .filter(response => !hiddenResponses.includes(response.user_id))
-          .map(response => (
-            <div key={response.user_id} className={styles.studentAnswer}>
-              <p>{response.text}</p>
-              <ResponseMenuDropdown
-                response={response}
-                hideResponse={response =>
-                  setHiddenResponses(prevHidden => [
-                    ...prevHidden,
-                    response.user_id,
-                  ])
-                }
-              />
-            </div>
-          ))}
+      <div className={styles.studentAnswerInterior}>
+        <div className={styles.studentResponsesColumns}>
+          {responses
+            .filter(response => !hiddenResponses.includes(response.user_id))
+            .map(response => (
+              <div key={response.user_id} className={styles.studentAnswer}>
+                <p>{response.text}</p>
+                <ResponseMenuDropdown
+                  response={response}
+                  hideResponse={response =>
+                    setHiddenResponses(prevHidden => [
+                      ...prevHidden,
+                      response.user_id,
+                    ])
+                  }
+                />
+              </div>
+            ))}
+        </div>
       </div>
       {hiddenResponses.length > 0 && (
         <Alert

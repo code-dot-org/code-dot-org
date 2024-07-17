@@ -114,9 +114,14 @@ label.sectionSelector {
     width: 100%;
     box-sizing: border-box;
     border-radius: 4px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    // inline-block is necessary to prevent boxes from splitting across columns.
+    display: inline-block;
+
+    .studentAnswerInterior {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
     p {
       margin: 0;
