@@ -79,6 +79,8 @@ class DatablockStorageTable < ApplicationRecord
 
     shared_table.create_records(records)
     shared_table.save!
+
+    shared_table
   end
 
   def self.find_shared_table(table_name)
