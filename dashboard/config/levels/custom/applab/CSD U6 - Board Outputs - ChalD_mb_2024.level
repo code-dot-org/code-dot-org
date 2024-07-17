@@ -64,7 +64,6 @@
     "long_instructions": "# Education App\r\n\r\nCreate an app that uses the `ledScreen` that could be used in an educational setting. For example, you could make\r\nan interactive quiz app for revising any subject or topic. Add buttons with questions on the screen and scroll answers on the micro:bit’s LED display, so you can test yourself without sharing the answers on your screen.\r\n\r\nYou may not be able to create the \"perfect\" app yet, but you can develop a **prototype** which shows the general idea of the app and some of the basic features behind how it could work.",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20396,
-    "name_suffix": "_mb_2024",
     "reference_links": [
       "/courses/csd-2022/guides/responding-to-user-input",
       "/courses/csd-2022/guides/producing-output",
