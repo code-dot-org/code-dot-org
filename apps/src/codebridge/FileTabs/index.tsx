@@ -72,7 +72,7 @@ export const FileTabs = React.memo(() => {
       >
         <SortableContext items={files} strategy={horizontalListSortingStrategy}>
           {files.map(f => (
-            <Sortable id={f.id} key={f.id}>
+            <Sortable id={f.id} key={f.id} isDragging={f.id === draggingFileId}>
               <FileTab file={f} />
             </Sortable>
           ))}
