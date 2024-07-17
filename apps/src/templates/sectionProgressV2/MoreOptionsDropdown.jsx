@@ -141,6 +141,7 @@ export const UnconnectedMoreOptionsDropdown = MoreOptionsDropdown;
 export default connect(
   state => ({
     students: state.teacherSections.selectedStudents,
+    sectionId: state.teacherSections.selectedSectionId,
   }),
   dispatch => ({
     expandMetadataForStudents: studentIds =>
