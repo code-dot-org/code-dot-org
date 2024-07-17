@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-16 06:25:28 UTC",
+    "serialized_at": "2024-07-16 14:44:17 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -230,6 +230,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "**How do the visualizations data scientists choose impact our interpretation of data?**\n\nThis lesson delves into how various data visualizations can shape our understanding of the same topic, emphasizing identifying trends, patterns, and outliers. Students will analyze individual datasets and create visualizations before participating in a jigsaw activity to merge and discuss insights from different perspectives. This collaborative approach enhances their ability to critically assess data and understand the ethical considerations involved in its presentation.",
+        "preparation": "* Print out copies of the activity guide for each dataset",
+        "student_overview": "**How do the visualizations data scientists choose impact our interpretation of data?**\n\nIn this lesson, you'll explore how different visualizations influence our understanding of the same data. Through individual analysis and group collaboration, you'll learn to identify trends, patterns, outliers, and the impact of how data is presented."
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -245,6 +248,9 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "overview": "**How can we gain deeper insights into our data?**\n\nIn this lesson, students will deepen their understanding of data visualization by using additional features in CODAP to analyze various datasets. They learn to use formulas and other visualization tools to interpret data through different lenses and discuss ethical considerations such as bias and privacy. The lesson aims to enhance their skills in technical data handling and critical thinking about the impacts of data analysis.",
+        "preparation": "* Print copies of the Visualization Techniques activity guide (one for each student)",
+        "student_overview": "**How can we gain deeper insights into our data?**\n\nIn this lesson,  you'll dive into advanced data visualization techniques using CODAP! You'll learn how to reveal deeper insights from data and discuss the importance of using these tools responsibly. Get ready to uncover the hidden stories data can tell!"
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -260,6 +266,9 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "overview": "**What is the process of choosing a data set and forming a question to investigate?**\n\nOn Day 1, students will choose a dataset to investigate and generate RSAIR questions. They will familiarize themselves with their dataset through a Three Reads of Data, select a data question to investigate, and start discussing potential barriers to success.",
+        "preparation": "* Provide a copy of the project guide for each student\n* **(Optional)** Print out a copy of the Data Question Peer Review for each student",
+        "student_overview": "**What is the process of choosing a data set and forming a question to investigate?**\n\nToday, you will choose a dataset, go through a Three Reads of Data, and form your RSAIR data question. You will also discuss any potential barriers to completing the project."
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -3200,6 +3209,18 @@
   ],
   "resources": [
     {
+      "name": "[EXEMPLAR] Jigsaw Graphs",
+      "url": "https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FLZicfZ8p84qBSfEs0LRw%2Ffile.json",
+      "key": "_exemplar_jigsaw_graphs",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_jigsaw_graphs"
+      }
+    },
+    {
       "name": "[KEY] Data Scientist Bingo",
       "url": "https://docs.google.com/document/d/1arZXqs-PZbSe53kvNvl4wNgMmWDDit131wiblo5ImF0/view",
       "key": "_key_data_scientist_bingo",
@@ -3249,6 +3270,31 @@
       }
     },
     {
+      "name": "Crafting Stories with Data Project",
+      "url": "https://docs.google.com/presentation/d/1k58rMvqRdWNCBLv8YWgtVn8_68ckfGWxRKmLo3XL8iM/template/preview",
+      "key": "crafting_stories_with_data_project",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "crafting_stories_with_data_project"
+      }
+    },
+    {
+      "name": "Crafting Stories with Data Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1wIqaBJxxyYquYiuWS2-CYN2zpSWA6mqI2j3S4cKHbvE/edit#heading=h.3gr1mqiax0ng",
+      "key": "crafting_stories_with_data_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "crafting_stories_with_data_project_planning_guide"
+      }
+    },
+    {
       "name": "Data Collection Methods",
       "url": "https://docs.google.com/document/d/1i7H5FuiJ9wKRgHJVX94b7p0YqJwx5_YPQVJJD_HC75o/view",
       "key": "data_collection_methods",
@@ -3259,6 +3305,109 @@
       },
       "seeding_key": {
         "resource.key": "data_collection_methods"
+      }
+    },
+    {
+      "name": "Data Interpretation",
+      "url": "https://docs.google.com/presentation/d/1miYE3vdccvAFzf_OsVBFkFCsNcFMVLYQ-pJ-r6ugTCY/template/preview",
+      "key": "data_interpretation",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "data_interpretation"
+      }
+    },
+    {
+      "name": "Data Interpretation - Dataset #1",
+      "url": "https://docs.google.com/document/d/1baUZ-M7KUmz0slX8iULIVUJKpnqg-Q6wZFCuHlNaAr8/edit?usp=drive_link",
+      "key": "data_interpretation_-_dataset_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_interpretation_-_dataset_1"
+      }
+    },
+    {
+      "name": "Data Interpretation - Dataset #2",
+      "url": "https://docs.google.com/document/d/1dk7aMg3kt__oRVdkNGBlwMRJ7M64PJ5JpCpqK3qHnRQ/edit?usp=drive_link",
+      "key": "data_interpretation_-_dataset_2",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_interpretation_-_dataset_2"
+      }
+    },
+    {
+      "name": "Data Interpretation - Dataset #3",
+      "url": "https://docs.google.com/document/d/1istc2atn3m4WFlk-xKtp5GI579ALAuP-Py4w3ohpaJc/edit?usp=drive_link",
+      "key": "data_interpretation_-_dataset_3",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_interpretation_-_dataset_3"
+      }
+    },
+    {
+      "name": "Data Interpretation - Dataset #4",
+      "url": "https://docs.google.com/document/d/1eGXSm1jBl_RRU4NZqXwiHSi-lzl-RNWIrrzlrM4xgg0/edit?usp=drive_link",
+      "key": "data_interpretation_-_dataset_4",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_interpretation_-_dataset_4"
+      }
+    },
+    {
+      "name": "Data Interpretation - Dataset #5",
+      "url": "https://docs.google.com/document/d/101BWNLoTdZ9_nnvV9CMqesNXjZLgqCJViLwBBAej0JM/edit?usp=drive_link",
+      "key": "data_interpretation_-_dataset_5",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_interpretation_-_dataset_5"
+      }
+    },
+    {
+      "name": "Data Interpretation - Dataset #6",
+      "url": "https://docs.google.com/document/d/1z5PuP-GOnk55S-mYI2QSWxc_vnRGBlihwtwDJa5UXz8/edit?usp=drive_link",
+      "key": "data_interpretation_-_dataset_6",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_interpretation_-_dataset_6"
+      }
+    },
+    {
+      "name": "Data Question Peer Review",
+      "url": "https://docs.google.com/document/d/1A6tPg-WhJPmjYJMqKjUh3toQexGdsS0wjbQ52Otj430/edit?usp=sharing",
+      "key": "data_question_peer_review",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_question_peer_review"
       }
     },
     {
@@ -3423,6 +3572,18 @@
       }
     },
     {
+      "name": "More Visualization Techniques",
+      "url": "https://docs.google.com/presentation/d/1r06gRF-64qnEtmfF781Lns3ny9ODkW4jDyp3oUTlPyY/template/preview",
+      "key": "more_visualization_techniques",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "more_visualization_techniques"
+      }
+    },
+    {
       "name": "Possible Questions",
       "url": "https://docs.google.com/document/d/1IW9npsTXMycjHznEfWqY_J16z8ULBru-oyKU7Bd_ftI/view",
       "key": "possible_questions",
@@ -3446,6 +3607,19 @@
       },
       "seeding_key": {
         "resource.key": "privacy_policy_statements"
+      }
+    },
+    {
+      "name": "Visualization Techniques",
+      "url": "https://docs.google.com/document/d/1dQM0oBAF7E69ji75o0GOncvCe-hPk_fXAqGo0HKOa8Y/edit?usp=sharing",
+      "key": "visualization_techniques",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "visualization_techniques"
       }
     }
   ],
@@ -3478,6 +3652,36 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "introduction_to_data_science"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "more_visualization_techniques"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "visualization_techniques"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "crafting_stories_with_data_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "crafting_stories_with_data_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "data_question_peer_review"
       }
     },
     {
@@ -3574,6 +3778,54 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "cleaning_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "_exemplar_jigsaw_graphs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "data_interpretation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "data_interpretation_-_dataset_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "data_interpretation_-_dataset_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "data_interpretation_-_dataset_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "data_interpretation_-_dataset_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "data_interpretation_-_dataset_5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "data_interpretation_-_dataset_6"
       }
     }
   ],
@@ -3785,6 +4037,26 @@
       }
     },
     {
+      "key": "outlier",
+      "word": "outlier",
+      "definition": "a data point that significantly differs from other data points",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "outlier"
+      }
+    },
+    {
+      "key": "pattern",
+      "word": "pattern",
+      "definition": "a consistent or recurring sequence that can be observed and predicted",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "pattern"
+      }
+    },
+    {
       "key": "persuasive_data_story",
       "word": "persuasive data story",
       "definition": "attempts to convince the audience of a stance based on evidence from data and visualizations",
@@ -3842,6 +4114,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "spreadsheet"
+      }
+    },
+    {
+      "key": "trend",
+      "word": "trend",
+      "definition": "the general direction in which data points are heading over a period of time",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "trend"
       }
     }
   ],
@@ -4001,6 +4283,24 @@
         "lesson.key": "lesson-8",
         "vocabulary.key": "skewed_distribution"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "outlier"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "pattern"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "trend"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -4015,6 +4315,26 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "objective.key": "05cdd93f-dd38-4de6-99af-37eb2b5a8707"
+      }
+    },
+    {
+      "key": "09adc903-9575-4664-9f8e-aaf88bce13e9",
+      "properties": {
+        "description": "Identify a data set to investigate and generate questions"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "09adc903-9575-4664-9f8e-aaf88bce13e9"
+      }
+    },
+    {
+      "key": "0e749838-f265-4984-8a07-f2311f02041e",
+      "properties": {
+        "description": "Analyze data to identify key trends, patterns, and outliers"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "0e749838-f265-4984-8a07-f2311f02041e"
       }
     },
     {
@@ -4068,6 +4388,16 @@
       }
     },
     {
+      "key": "3c1b9e27-5fbb-403a-af3e-2e62069d51d0",
+      "properties": {
+        "description": "Interpret the information presented in different data visualizations and discuss the potential insights they offer"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "3c1b9e27-5fbb-403a-af3e-2e62069d51d0"
+      }
+    },
+    {
       "key": "44446117-f104-4df4-94ef-52f5cd932448",
       "properties": {
         "description": "Define \"data\" and \"data science\""
@@ -4098,6 +4428,16 @@
       }
     },
     {
+      "key": "6d9992db-8062-4896-9257-3654c66a59a2",
+      "properties": {
+        "description": "Identify a data question to investigate"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "6d9992db-8062-4896-9257-3654c66a59a2"
+      }
+    },
+    {
       "key": "880cb788-9242-4223-b872-8a91648bf32d",
       "properties": {
         "description": "Create dot plots, bar charts, and scatter plots"
@@ -4105,6 +4445,16 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "objective.key": "880cb788-9242-4223-b872-8a91648bf32d"
+      }
+    },
+    {
+      "key": "8b3735d8-0509-4727-8e58-c557690e7b7d",
+      "properties": {
+        "description": "Evaluate ethical considerations involved in data visualization"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "8b3735d8-0509-4727-8e58-c557690e7b7d"
       }
     },
     {
@@ -4125,6 +4475,26 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "objective.key": "a3ce4189-ecaf-4bab-9688-6ff6338f8ea2"
+      }
+    },
+    {
+      "key": "a70e7775-2272-4292-a81f-d32a699e091f",
+      "properties": {
+        "description": "Explain how different visualization methods can lead to deeper insights"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "a70e7775-2272-4292-a81f-d32a699e091f"
+      }
+    },
+    {
+      "key": "acc60ccb-d032-4769-8450-42a799c540a5",
+      "properties": {
+        "description": "Use additional visualization techniques to explore and interpret datasets"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "acc60ccb-d032-4769-8450-42a799c540a5"
       }
     },
     {
@@ -4158,6 +4528,16 @@
       }
     },
     {
+      "key": "ef4f043c-86f9-4a95-8802-63d5c585d406",
+      "properties": {
+        "description": "Formulate clear and relevant questions based on the data set, following the RSAIR criteria"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "ef4f043c-86f9-4a95-8802-63d5c585d406"
+      }
+    },
+    {
       "key": "f7559a99-2863-497a-83c8-1f4839157ceb",
       "properties": {
         "description": "Discuss multiple real-world applications of data science and their impact on various industries"
@@ -4179,6 +4559,41 @@
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -4261,6 +4676,20 @@
         "lesson.key": "lesson-8",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
       }
     }
   ],
