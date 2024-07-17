@@ -57,6 +57,7 @@ class DCDOBase < DynamicConfigBase
       'progress-v2-metadata-enabled': DCDO.get('progress-v2-metadata-enabled', false),
       'show-age-gated-students-banner': DCDO.get('show-age-gated-students-banner', true),
       'cfu-pin-hide-enabled': DCDO.get('cfu-pin-hide-enabled', false),
+      'cfu-show-names-enabled': DCDO.get('cfu-pin-hide-enabled', false),
     }
   end
 end

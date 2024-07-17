@@ -6,6 +6,7 @@ import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSe
 import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Toggle from '@cdo/apps/componentLibrary/toggle';
+import DCDO from '@cdo/apps/dcdo';
 import {PredictQuestionType} from '@cdo/apps/lab2/levelEditors/types';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -93,6 +94,18 @@ const SummaryResponses = ({
   // only when the policy allows it for that user.
   const showAnswerToggle = scriptData.answer_is_visible && isMulti;
 
+  const toggleNames = () => {
+    // if (showStudentNames) {
+    //   // event for turnning names off
+    //   logEvent(CFU_NAMES_TOGGLED_OFF);
+    // } else {
+    //   // event for turnning names on
+    //   logEvent(CFU_NAMES_TOGGLED_OFF);
+    // }
+    setShowStudentNames(!showStudentNames);
+    // analyticsReporter.sendEvent(STARTED_EVENT, {}, PLATFORMS.BOTH);
+  };
+
   return (
     <div className={styles.summaryContainer} id="summary-container">
       {/* Student Responses */}
@@ -126,11 +139,9 @@ const SummaryResponses = ({
             </label>
           )}
 
-          {isFreeResponse && (
+          {isFreeResponse && DCDO.get('cfu-show-names-enabled', false) && (
             <Toggle
-              onChange={() => {
-                setShowStudentNames(!showStudentNames);
-              }}
+              onChange={toggleNames}
               checked={showStudentNames}
               label={i18n.showStudentNames()}
               position={'right'}
