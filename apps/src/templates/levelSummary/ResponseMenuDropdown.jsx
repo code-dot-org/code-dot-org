@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -61,7 +62,10 @@ const ResponseMenuDropdown = ({
         color={buttonColors.purple}
         size="xs"
         type="tertiary"
-        className={styles.studentAnswerMenuButton}
+        className={classNames(
+          styles.studentAnswerMenuButton,
+          styles.studentAnswerMenuButtonPinned
+        )}
       />
       {isOpen && (
         <div className={styles.studentAnswerMenuDropdown}>

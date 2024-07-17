@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -30,7 +31,13 @@ const FreeResponseResponses = ({responses}) => {
         {pinnedResponses
           .filter(response => !hiddenResponses.includes(response.user_id))
           .map(response => (
-            <div key={response.user_id} className={styles.studentAnswer}>
+            <div
+              key={response.user_id}
+              className={classNames(
+                styles.studentAnswer,
+                styles.pinnedResponse
+              )}
+            >
               <p>{response.text}</p>
               <ResponseMenuDropdown
                 response={response}
@@ -51,7 +58,13 @@ const FreeResponseResponses = ({responses}) => {
       </div>
       <div className={styles.studentResponsesColumns}>
         {filteredResponses.map(response => (
-          <div key={response.user_id} className={styles.studentAnswer}>
+          <div
+            key={response.user_id}
+            className={classNames(
+              styles.studentAnswer,
+              styles.unpinnedResponse
+            )}
+          >
             <p>{response.text}</p>
             <ResponseMenuDropdown
               response={response}
