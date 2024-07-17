@@ -1,6 +1,7 @@
-import CdoFieldDropdown, {CustomMenuGenerator} from './cdoFieldDropdown';
-import CdoAngleHelper from './cdoAngleHelper';
 import {ExtendedBlockSvg} from '../types';
+
+import CdoAngleHelper from './cdoAngleHelper';
+import CdoFieldDropdown, {CustomMenuGenerator} from './cdoFieldDropdown';
 
 interface AngleDropdownOptions {
   direction: string; // Ex. 'turnRight'
