@@ -15,12 +15,13 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "tts": true,
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2024-05-29 18:24:58 UTC",
-    "published_state": "preview",
+    "serialized_at": "2024-07-11 16:13:53 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -20542,6 +20543,16 @@
       }
     },
     {
+      "name": "CSF Change Log 2024-25",
+      "url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/template/preview",
+      "key": "csf_change_log_2024-25",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csf_change_log_2024-25"
+      }
+    },
+    {
       "name": "CSF Express End of Course Project Planning Guide",
       "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing",
       "key": "csf_express_end_of_course_project_planning_guide",
@@ -21127,6 +21138,12 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary",
+        "script.name": "express-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csf_change_log_2024-25",
         "script.name": "express-2024"
       }
     },

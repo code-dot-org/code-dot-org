@@ -39,7 +39,6 @@ describe('PersonalProjectsTable', () => {
             personalProjectsList={stubFakePersonalProjectData}
             isLoadingPersonalProjectsList={false}
             isUserSignedIn={true}
-            canShare={true}
           />
         </Provider>
       );
@@ -80,7 +79,6 @@ describe('PersonalProjectsTable', () => {
             personalProjectsList={[]}
             isLoadingPersonalProjectsList={false}
             isUserSignedIn={true}
-            canShare={true}
           />
         </Provider>
       );
@@ -94,7 +92,6 @@ describe('PersonalProjectsTable', () => {
             personalProjectsList={[]}
             isLoadingPersonalProjectsList={false}
             isUserSignedIn={false}
-            canShare={true}
           />
         </Provider>
       );
@@ -114,7 +111,6 @@ describe('PersonalProjectsTable', () => {
             personalProjectsList={[]}
             isLoadingPersonalProjectsList={true}
             isUserSignedIn={true}
-            canShare={true}
           />
         </Provider>
       );

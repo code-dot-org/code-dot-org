@@ -56,6 +56,12 @@ $level-cell-width: 52;
   }
 }
 
+.outerTable {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
 .tableInterior {
   display: flex;
   flex-direction: row;
@@ -465,4 +471,5 @@ $level-cell-width: 52;
 .lessonDataCellExpanded {
   display: flex;
   flex-direction: column;
+  padding: 0;
 }

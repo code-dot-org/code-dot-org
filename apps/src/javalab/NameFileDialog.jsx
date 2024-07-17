@@ -1,7 +1,9 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
+
 import {DisplayTheme} from './DisplayTheme';
 
 export default class NameFileDialog extends Component {

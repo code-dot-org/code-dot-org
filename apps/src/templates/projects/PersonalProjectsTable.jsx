@@ -36,8 +36,6 @@ export const COLUMNS = {
 
 class PersonalProjectsTable extends React.Component {
   static propTypes = {
-    canShare: PropTypes.bool.isRequired,
-
     // Provided by Redux
     personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType),
     isLoadingPersonalProjectsList: PropTypes.bool.isRequired,

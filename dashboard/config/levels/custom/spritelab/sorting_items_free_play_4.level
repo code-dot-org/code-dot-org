@@ -57,11 +57,11 @@
     "standalone_app_name": "spritelab",
     "display_name": "Level Four",
     "bubble_choice_description": "You choose how to sort these items!",
-    "thumbnail_url": "https://images.code.org/f34f566e1dadcc5839fe236a517e0e1a-genz.png",
+    "thumbnail_url": "https://images.code.org/aeabe162d5d458497f0bcc14cc2ad1a0-sublevel4.png",
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-17T21:05:51.676+00:00\",\"changed\":[\"cloned from \\\"sorting_items_free_play_2\\\"\"],\"cloned_from\":\"sorting_items_free_play_2\"},{\"changed_at\":\"2024-05-17 21:06:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:12:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"display_name\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:13:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:13:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:17:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:19:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:20:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:22:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:25:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"display_name\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-06-17 15:02:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-17T21:05:51.676+00:00\",\"changed\":[\"cloned from \\\"sorting_items_free_play_2\\\"\"],\"cloned_from\":\"sorting_items_free_play_2\"},{\"changed_at\":\"2024-05-17 21:06:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:12:22 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"start_animations\",\"display_name\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:13:00 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:13:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:17:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:19:36 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:20:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"embed\",\"encrypted_examples\",\"validation_enabled\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:22:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-17 21:25:03 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"display_name\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-06-17 15:02:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"authored_hints\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-07-09 19:38:16 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-07-09 21:55:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"thumbnail_url\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -75,11 +75,11 @@
           <variable id="p^ypJlw_zWtA|5=6;)pL">touchBool10c</variable>
           <variable id="?x^U~(cTla@$I});v[2[">touchBool1a</variable>
           <variable id="H;5AGdXg_S~KN+MUXKxm">touchBool1b</variable>
-          <variable id="[5MGQBj.wmTd1,hugh:a">boxOne</variable>
+          <variable id="[5MGQBj.wmTd1,hugh:a">box one</variable>
           <variable id=")aS+E!^R+hhus!_O2c|,">touchBool1c</variable>
-          <variable id="Mpvz^cL%/])CvWk|$+En">boxTwo</variable>
+          <variable id="Mpvz^cL%/])CvWk|$+En">box two</variable>
           <variable id="i9W9J:{$Ng,kCHA*tEO2">touchBool2a</variable>
-          <variable id="dG/wycthq4HPyln?dyYZ">boxThree</variable>
+          <variable id="dG/wycthq4HPyln?dyYZ">box three</variable>
           <variable id="g[rt4O][}H1OQ-^#D~Y}">touchBool2b</variable>
           <variable id="4FQy6JXGuP((v,vH]Qha">touchBool2c</variable>
           <variable id="!y(s$u~AJJLcm_Z+C|cm">touchBool3a</variable>
@@ -1223,7 +1223,7 @@
                                                             </statement>
                                                             <next>
                                                             <block type="variables_set">
-                                                            <field name="VAR" id="[5MGQBj.wmTd1,hugh:a">boxOne</field>
+                                                            <field name="VAR" id="[5MGQBj.wmTd1,hugh:a">box one</field>
                                                             <value name="VALUE">
                                                             <block type="math_arithmetic">
                                                             <field name="OP">ADD</field>
@@ -1321,7 +1321,7 @@
                                                             </value>
                                                             <next>
                                                             <block type="variables_set">
-                                                            <field name="VAR" id="Mpvz^cL%/])CvWk|$+En">boxTwo</field>
+                                                            <field name="VAR" id="Mpvz^cL%/])CvWk|$+En">box two</field>
                                                             <value name="VALUE">
                                                             <block type="math_arithmetic">
                                                             <field name="OP">ADD</field>
@@ -1419,7 +1419,7 @@
                                                             </value>
                                                             <next>
                                                             <block type="variables_set">
-                                                            <field name="VAR" id="dG/wycthq4HPyln?dyYZ">boxThree</field>
+                                                            <field name="VAR" id="dG/wycthq4HPyln?dyYZ">box three</field>
                                                             <value name="VALUE">
                                                             <block type="math_arithmetic">
                                                             <field name="OP">ADD</field>
@@ -1601,7 +1601,7 @@
                   </value>
                   <next>
                     <block type="variables_set">
-                      <field name="VAR" id="[5MGQBj.wmTd1,hugh:a">boxOne</field>
+                      <field name="VAR" id="[5MGQBj.wmTd1,hugh:a">box one</field>
                       <value name="VALUE">
                         <block type="math_number">
                           <field name="NUM">0</field>
@@ -1609,7 +1609,7 @@
                       </value>
                       <next>
                         <block type="variables_set">
-                          <field name="VAR" id="Mpvz^cL%/])CvWk|$+En">boxTwo</field>
+                          <field name="VAR" id="Mpvz^cL%/])CvWk|$+En">box two</field>
                           <value name="VALUE">
                             <block type="math_number">
                               <field name="NUM">0</field>
@@ -1617,7 +1617,7 @@
                           </value>
                           <next>
                             <block type="variables_set">
-                              <field name="VAR" id="dG/wycthq4HPyln?dyYZ">boxThree</field>
+                              <field name="VAR" id="dG/wycthq4HPyln?dyYZ">box three</field>
                               <value name="VALUE">
                                 <block type="math_number">
                                   <field name="NUM">0</field>
@@ -1625,7 +1625,7 @@
                               </value>
                               <next>
                                 <block type="gamelab_showVariable">
-                                  <field name="VAR" id="[5MGQBj.wmTd1,hugh:a">boxOne</field>
+                                  <field name="VAR" id="[5MGQBj.wmTd1,hugh:a">box one</field>
                                   <value name="LOCATION">
                                     <block type="gamelab_location_picker">
                                       <field name="LOCATION">{"x":61,"y":367}</field>
@@ -1633,7 +1633,7 @@
                                   </value>
                                   <next>
                                     <block type="gamelab_showVariable">
-                                      <field name="VAR" id="Mpvz^cL%/])CvWk|$+En">boxTwo</field>
+                                      <field name="VAR" id="Mpvz^cL%/])CvWk|$+En">box two</field>
                                       <value name="LOCATION">
                                         <block type="gamelab_location_picker">
                                           <field name="LOCATION">{"x":199,"y":367}</field>
@@ -1641,7 +1641,7 @@
                                       </value>
                                       <next>
                                         <block type="gamelab_showVariable">
-                                          <field name="VAR" id="dG/wycthq4HPyln?dyYZ">boxThree</field>
+                                          <field name="VAR" id="dG/wycthq4HPyln?dyYZ">box three</field>
                                           <value name="LOCATION">
                                             <block type="gamelab_location_picker">
                                               <field name="LOCATION">{"x":332,"y":367}</field>

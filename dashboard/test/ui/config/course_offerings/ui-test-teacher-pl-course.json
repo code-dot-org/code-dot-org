@@ -1,7 +1,6 @@
 {
   "key": "ui-test-teacher-pl-course",
   "display_name": "Teacher PL Course",
-  "category": "pl_other",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Professional Learning",

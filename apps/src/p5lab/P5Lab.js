@@ -31,7 +31,7 @@ var p5GroupWrapper = require('./P5GroupWrapper');
 var gamelabCommands = require('./gamelab/commands');
 import {initializeSubmitHelper, onSubmitComplete} from '@cdo/apps/submitHelper';
 var dom = require('@cdo/apps/dom');
-import {initStorage, FIREBASE_STORAGE} from '../storage/storage';
+import {initStorage, DATABLOCK_STORAGE} from '../storage/storage';
 import {getStore} from '@cdo/apps/redux';
 import {
   allAnimationsSingleFrameSelector,
@@ -254,13 +254,9 @@ export default class P5Lab {
     config.usesAssets = true;
 
     this.studioApp_.labUserId = config.labUserId;
-    // TODO: unfirebase, convert to datablock storage: #56995
-    this.studioApp_.storage = initStorage(FIREBASE_STORAGE, {
+
+    this.studioApp_.storage = initStorage(DATABLOCK_STORAGE, {
       channelId: config.channel,
-      firebaseName: config.firebaseName,
-      firebaseAuthToken: config.firebaseAuthToken,
-      firebaseChannelIdSuffix: config.firebaseChannelIdSuffix || '',
-      showRateLimitAlert: this.studioApp_.showRateLimitAlert,
     });
 
     this.p5Wrapper.init({

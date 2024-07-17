@@ -5,12 +5,12 @@
 
 import $ from 'jquery';
 import _ from 'lodash';
-import {makeEnum} from '@cdo/apps/utils';
 
 import {
   NO_SECTION,
   SELECT_SECTION,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {makeEnum} from '@cdo/apps/utils';
 
 export const LockStatus = makeEnum('Locked', 'Editable', 'ReadonlyAnswers');
 

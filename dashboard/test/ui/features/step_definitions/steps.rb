@@ -63,11 +63,11 @@ end
 
 def replace_hostname(url)
   UrlConverter.new(
-    dashboard_host: ENV['DASHBOARD_TEST_DOMAIN'],
-    pegasus_host: ENV['PEGASUS_TEST_DOMAIN'],
-    hourofcode_host: ENV['HOUROFCODE_TEST_DOMAIN'],
-    csedweek_host: ENV['CSEDWEEK_TEST_DOMAIN'],
-    advocacy_host: ENV['ADVOCACY_TEST_DOMAIN']
+    dashboard_host: ENV.fetch('DASHBOARD_TEST_DOMAIN', nil),
+    pegasus_host: ENV.fetch('PEGASUS_TEST_DOMAIN', nil),
+    hourofcode_host: ENV.fetch('HOUROFCODE_TEST_DOMAIN', nil),
+    csedweek_host: ENV.fetch('CSEDWEEK_TEST_DOMAIN', nil),
+    advocacy_host: ENV.fetch('ADVOCACY_TEST_DOMAIN', nil)
   ).replace_origin(url)
 end
 
@@ -335,6 +335,9 @@ And /^check that the URL matches "([^"]*)"$/ do |regex_text|
 end
 
 Then /^I wait until I am on "([^"]*)"$/ do |url|
+  if @browser.capabilities.browser_name == 'Safari'
+    puts "WARNING: 'I wait until I am on' is not reliable in Safari. Consider 'to load a new page' steps instead."
+  end
   url = replace_hostname(url)
   begin
     wait_until {@browser.current_url == url}
@@ -1045,12 +1048,18 @@ def set_cookie(key, value)
     value: value,
   }
 
-  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /\.code.org/ &&
-      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /\.code.org/
+  if ENV.fetch('DASHBOARD_TEST_DOMAIN', nil) && ENV.fetch('DASHBOARD_TEST_DOMAIN', nil) =~ /\.code.org/ &&
+      ENV.fetch('PEGASUS_TEST_DOMAIN', nil) && ENV.fetch('PEGASUS_TEST_DOMAIN', nil) =~ /\.code.org/
     params[:domain] = '.code.org' # top level domain cookie
   end
 
   @browser.manage.add_cookie params
+end
+
+Given(/^I use a cookie to mock the DCDO key "([^"]*)" as "(.*)"$/) do |key, json|
+  mock_dcdo(key, JSON.parse(json))
+rescue JSON::ParserError
+  mock_dcdo(key, json)
 end
 
 And(/^I set the language cookie$/) do

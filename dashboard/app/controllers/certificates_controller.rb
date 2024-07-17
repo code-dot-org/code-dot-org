@@ -24,6 +24,8 @@ class CertificatesController < ApplicationController
     image_alt = data['name'] ?
       I18n.t('certificates.alt_text_with_name', course_name: course_name, student_name: data['name']) :
       I18n.t('certificates.alt_text_no_name', course_name: course_name)
+    # The alt text string is a good page title, so re-using it here.
+    @page_title = I18n.t('certificates.alt_text_no_name', course_name: course_name)
 
     @certificate_data = {
       imageUrl: @image_url,

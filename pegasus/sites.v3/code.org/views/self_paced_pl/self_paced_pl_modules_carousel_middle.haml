@@ -13,25 +13,19 @@
       aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_ai_101),
       new: true
     },
-  ]
-  if !!DCDO.get('curriculum-launch-2024', false)
-    block_items.push(
-      {
-        overline: hoc_s(:module_grade_6_12_teachers),
-        title: hoc_s(:module_label_teaching_coding_with_ai),
-        image: '/images/self-paced-pl-tile-coding-with-ai.png',
-        curriculum: hoc_s(:curriculum_name_coding_with_ai),
-        duration: hoc_s(:module_duration_2_hrs),
-        prerequisites: hoc_s(:module_prerequisites_none),
-        url_primary: CDO.studio_url("/courses/self-paced-pl-coding-with-ai"),
-        url_secondary: '/curriculum/coding-with-ai',
-        aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_coding_with_ai),
-        aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_coding_with_ai),
-        new: true,
-      }
-    )
-  end
-  block_items += [
+    {
+      overline: hoc_s(:module_grade_6_12_teachers),
+      title: hoc_s(:module_label_teaching_coding_with_ai),
+      image: '/images/self-paced-pl-tile-coding-with-ai.png',
+      curriculum: hoc_s(:curriculum_name_coding_with_ai),
+      duration: hoc_s(:module_duration_2_hrs),
+      prerequisites: hoc_s(:module_prerequisites_none),
+      url_primary: CDO.studio_url("/courses/self-paced-pl-coding-with-ai-2024"),
+      url_secondary: '/curriculum/coding-with-ai',
+      aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_coding_with_ai),
+      aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_coding_with_ai),
+      new: true,
+    },
     {
       overline: hoc_s(:module_grade_6_10_teachers),
       title: hoc_s(:curriculum_name_teaching_animation),
@@ -40,7 +34,7 @@
       duration: hoc_s(:module_duration_3_hrs_20_minutes),
       prerequisites: hoc_s(:module_prerequisites_none),
       url_primary: CDO.studio_url("/courses/self-paced-pl-csd-unit3"),
-      url_secondary: CDO.studio_url("/s/interactive-games-animations"),
+      url_secondary: CDO.studio_url("/s/interactive-games-animations?viewAs=Instructor"),
       aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_interactive_animations_games),
       aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_interactive_animations_games),
     },
@@ -64,7 +58,7 @@
       duration: hoc_s(:module_duration_3_hrs),
       prerequisites: hoc_s(:module_prerequisites_none),
       url_primary: CDO.studio_url("/courses/self-paced-pl-csd"),
-      url_secondary: CDO.studio_url("/courses/csd?viewAs=Instructor"),
+      url_secondary: CDO.studio_url("/courses/csd?viewAs=Instructor?viewAs=Instructor"),
       aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_csd),
       aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_csd),
     },
@@ -76,7 +70,7 @@
       duration: hoc_s(:module_duration_2_hrs),
       prerequisites: hoc_s(:module_prerequisites_none),
       url_primary: CDO.studio_url("/courses/self-paced-pl-csd-unit1"),
-      url_secondary: CDO.studio_url("/s/problem-solving-computing"),
+      url_secondary: CDO.studio_url("/s/problem-solving-computing?viewAs=Instructor"),
       aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_problem_solving),
       aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_problem_solving),
     },
@@ -112,7 +106,7 @@
       duration: hoc_s(:module_duration_2_hrs_30_minutes),
       prerequisites: hoc_s(:module_prerequisites_none),
       url_primary: CDO.studio_url("/courses/self-paced-pl-csd-unit5"),
-      url_secondary: CDO.studio_url("/s/data-society"),
+      url_secondary: CDO.studio_url("/s/data-society?viewAs=Instructor"),
       aria_label_primary: hoc_s(:aria_label_call_to_action_explore_data_society_pl),
       aria_label_secondary: hoc_s(:aria_label_call_to_action_explore_data_society_curriculum),
     },
@@ -124,7 +118,7 @@
       duration: hoc_s(:module_duration_2_hrs),
       prerequisites: hoc_s(:module_prerequisites_none),
       url_primary: CDO.studio_url("/courses/self-paced-pl-csd-unit4"),
-      url_secondary: CDO.studio_url("/s/design-process"),
+      url_secondary: CDO.studio_url("/s/design-process?viewAs=Instructor"),
       aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_the_design_process),
       aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_design_process),
     },
@@ -136,7 +130,7 @@
       duration: hoc_s(:module_duration_2_hrs),
       prerequisites: hoc_s(:module_prerequisites_none),
       url_primary: CDO.studio_url('/courses/self-paced-pl-csd-unit2'),
-      url_secondary: CDO.studio_url('/s/web-development'),
+      url_secondary: CDO.studio_url('/s/web-development?viewAs=Instructor'),
       aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_web_development),
       aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_web_development),
     }

@@ -29,7 +29,7 @@ class AichatController < ApplicationController
   private def get_response_body
     # Check for profanity
     locale = params[:locale] || "en"
-    filter_result = ShareFiltering.find_failure(params[:newMessage][:chatMessageText], locale)
+    filter_result = ShareFiltering.find_profanity_failure(params[:newMessage][:chatMessageText], locale)
     if filter_result&.type == ShareFiltering::FailureType::PROFANITY
       messages = [
         get_user_message(SharedConstants::AI_INTERACTION_STATUS[:PROFANITY_VIOLATION])
@@ -49,15 +49,14 @@ class AichatController < ApplicationController
     # Use to_unsafe_h here to allow testing this function.
     # Safe params are primarily targeted at preventing "mass assignment vulnerability"
     # which isn't relevant here.
-    input = AichatSagemakerHelper.format_inputs_for_sagemaker_request(
+    inputs = AichatSagemakerHelper.format_inputs_for_sagemaker_request(
       params.to_unsafe_h[:aichatModelCustomizations],
       messages_for_model,
       params.to_unsafe_h[:newMessage]
     )
-    sagemaker_response = AichatSagemakerHelper.request_sagemaker_chat_completion(input, params[:aichatModelCustomizations][:selectedModelId])
-    latest_assistant_response = AichatSagemakerHelper.get_sagemaker_assistant_response(sagemaker_response)
+    latest_assistant_response_from_sagemaker = AichatSagemakerHelper.get_sagemaker_assistant_response(inputs, params[:aichatModelCustomizations][:selectedModelId])
 
-    filter_result = ShareFiltering.find_failure(latest_assistant_response, locale)
+    filter_result = ShareFiltering.find_profanity_failure(latest_assistant_response_from_sagemaker, locale)
     if filter_result&.type == ShareFiltering::FailureType::PROFANITY
       messages = [
         get_user_message(SharedConstants::AI_INTERACTION_STATUS[:ERROR]),
@@ -71,7 +70,7 @@ class AichatController < ApplicationController
       Honeybadger.notify(
         'Profanity returned from aichat model (blocked before reaching student)',
         context: {
-          model_response: latest_assistant_response,
+          model_response: latest_assistant_response_from_sagemaker,
           flagged_content: filter_result.content,
           aichat_session_id: log_chat_session(messages)
         }
@@ -83,7 +82,7 @@ class AichatController < ApplicationController
     assistant_message = {
       role: "assistant",
       status: SharedConstants::AI_INTERACTION_STATUS[:OK],
-      chatMessageText: latest_assistant_response,
+      chatMessageText: latest_assistant_response_from_sagemaker,
     }
 
     messages = [

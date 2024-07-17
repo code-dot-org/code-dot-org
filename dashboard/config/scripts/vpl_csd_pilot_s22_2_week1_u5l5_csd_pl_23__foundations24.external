@@ -1,0 +1,115 @@
+name 'VPL-CSD-pilot-S22-2-week1-U5L5_CSD_PL_23_-foundations24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lessons 1 - 5 
+
+#### The first five lessons of the unit focus on the various ways in which data can be represented. These representations allow computers to recognize and process the data. 
+
+## Overview of Lessons 1 - 5
+
+##### Click the dropdown arrows below to view lesson overviews.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size:1.5em; font-weight: bold;">🔎 Lesson 1: Representation Matters</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/506af3c88251d051105883ef4aea222b-image-1707521770014.34.59 PM.jpg" alt="Four different food items." width="250px" style="float:left; margin-left:10px; margin-right:20px; margin-bottom: 10px;">
+
+#### **Question of the Day:** How does data affect decisions we make every day?
+
+#### **Lesson Overview:**
+
+#### In the first lesson of the data unit, students get an overview of what data is and how it is used to solve problems. Students start off with a brief discussion to come to a common understanding of data. They then split into groups and use a data set to make a series of meal recommendations for people with various criteria. Each group has the choices of meal represented in a different way (pictures, recipes, menu, nutrition) that gives an advantage for one of the recommendations. Afterwards, groups compare their responses and discuss how the different representations of the meal data affected how the students were able to solve the different problems.
+
+#### **Students will be able to:** 
+* #### Choose the best way to represent some information based on how it will be used.
+* #### Provide examples of how representing data in different ways can affect its ability to solve different problems.
+</p>
+</div>
+</details>
+
+<div style="clear:both"/>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 2: Patterns and Representation</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/11300428da6102f31f7651fb78f6cf4b-image-1707521974894.39.20 PM.png" alt="Activity Guide for Lesson 2 showing different animals to represent information." width="250px" style="float:left; margin-left:10px; margin-right:20px; margin-bottom: 10px;">
+
+#### **Question of the Day:** How can we create a system for representing information?
+
+#### **Lesson Overview:**
+
+#### In this lesson students create their own system for representing information. They begin by brainstorming all the different systems they already use to represent yes-no responses. They then work in small groups to create a system that can represent any letter in the alphabet using only a single stack of cards. The cards used have one of 6 different possible drawings (6 animals, 6 colors, etc.) and so to represent the entire alphabet students will need to use patterns of multiple cards to represent each letter. Students create messages with their systems and exchange with other groups to ensure the system worked as intended. In the wrap-up discussion the class reviews any pros and cons of the different systems. They discuss commonalities between working systems and recognize that there are many possible solutions to this problem and what's important is that everyone uses the same arbitrary system to communicate.
+
+#### **Students will be able to:** 
+* #### Create and use a system for representing information
+* #### Describe the necessary features of a system for representing information
+</p></div>
+</details>
+
+<div style="clear:both"/>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 3: ASCII and Binary Representation</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:20px;">
+    <p>
+<img src="https://images.code.org/61c26edb9d2b6a3e24082f03bc5fbb2b-image-1707522137763.42.15 PM.png" alt="Activity Guide with ASCII activity." width="250px" style="float:left; margin-left:10px; margin-right:20px; margin-bottom: 10px;">
+
+#### **Question of the Day:** What system do computers use to represent letters and words?
+
+#### **Lesson Overview:**
+
+#### In this lesson students learn to use their first binary system for encoding information, the ASCII system for representing letters and other characters. At the beginning of the lesson the teacher introduces the fact that computers must represent information using either "on" or "off". Then students are introduced to the ASCII system for representing text using binary symbols. Students practice using this system before encoding their own message using ASCII. At the end of the lesson a debrief conversation helps synthesize the key learning objectives of the activity.
+
+#### **Students will be able to:** 
+* #### Define a binary system as one that uses just two possible states to represent information
+* #### Use the ASCII system to encode and decode text information in binary
+</p></div>
+</details>
+
+<div style="clear:both"/>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 4: Representing Images</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/8e2d7b007e645705df1a47d93022b967-image-1707522249388.44.05 PM.png" alt="Binary smiley face" width="250px" style="float:left; margin-left:10px; margin-right:20px; margin-bottom: 10px;">
+
+#### **Question of the Day:** What system do computers use to represent images?
+
+#### **Lesson Overview:**
+
+#### In this lesson students learn how computers represent images. To begin the lesson they consider the challenge of turning all the complexity of vision into a binary pattern. Through a series of images showing how this transformation is made students are introduced to the concept of splitting images into squares or "pixels" which can then be turned on or off individually to make the entire image. Students then do a short set of challenges using the Pixelation Widget in order to draw black and white images. Puzzles are designed to call out some of the challenges of representing images in this way. In the wrap up students make connections between the system for representing images and the system for representing text they learned in the previous lesson.
+
+#### **Students will be able to:** 
+* #### Create and manipulate binary patterns to represent black and white images
+* #### Describe common features of systems used to represent information in binary
+</p></div>
+</details>
+
+<div style="clear:both"/>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 5: Representing Numbers</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:40px;">
+    <p>
+<img src="https://images.code.org/32dcc5d95c74f89694b643a4e5563e59-image-1648862768302.JPG" alt="Binary app." width="250px" style="float:left; margin-left:10px; margin-right:20px; margin-bottom: 10px;">
+
+#### **Question of the Day:** What system do computers use to represent numbers?
+
+#### **Lesson Overview:**
+
+#### In this lesson, students learn about the binary number system. With a set of cards that represent the place values in a binary (base-2) number system by a collection of dots, students turn bits "on" or "off" by turning cards face up and face down, then observe the numbers that result from these different patterns. Eventually, students extend the pattern to a generic 4-bit system.
+
+#### **Students will be able to:** 
+* #### Extend a representation system based on patterns.
+* #### Use a binary system to represent numbers.
+</p></div>
+</details>
+
+<div style="clear:both"/>
+MARKDOWN

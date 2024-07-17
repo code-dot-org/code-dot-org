@@ -6,11 +6,12 @@
     "properties": {
       "curriculum_umbrella": "Foundations of CS",
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-06-04 00:28:56 UTC",
+    "serialized_at": "2024-07-13 00:46:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -33,19 +34,1021 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "Introduction to Data and Society",
+      "name": "Introduction to Representing Information",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to Code.org's Representing Information unit.\n* Get a preview of the first week of the Representing Information content.\n\n**Suggested time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to Code.org's Data and Society unit.\n* Get a preview of the first week of the Data and Society unit content.\n\n**Suggested time:** 10 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2"
+      }
+    },
+    {
+      "key": "Explore Data at a Small Scale",
+      "name": "Explore Data at a Small Scale",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**You will:**\n\n* Learn how to represent text, images, and numbers using binary. \n* Apply a method of encryption to keep data private. \n\n**Suggested time:** 30 minutes",
+        "student_overview": "**You will:**\n\n* Learn how to represent text, images, and numbers using binary. \n* Apply a method of encryption to keep data private. \n\n**Suggested time:** 30 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "f60afa38-8015-4993-a6d7-74476036e5ab",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f60afa38-8015-4993-a6d7-74476036e5ab",
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2"
+      }
+    },
+    {
+      "key": "f2b09397-8da6-4117-b71a-1ad2960333c7",
+      "position": 1,
+      "properties": {
+        "duration": 30
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f2b09397-8da6-4117-b71a-1ad2960333c7",
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "7589a462-d255-4051-8cfa-cc543b4d8181",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to This Module"
+      },
+      "seeding_key": {
+        "activity_section.key": "7589a462-d255-4051-8cfa-cc543b4d8181",
+        "lesson_activity.key": "f60afa38-8015-4993-a6d7-74476036e5ab"
+      }
+    },
+    {
+      "key": "9c63d168-a074-4d30-8f6b-7a69215fc47c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Unit Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "9c63d168-a074-4d30-8f6b-7a69215fc47c",
+        "lesson_activity.key": "f60afa38-8015-4993-a6d7-74476036e5ab"
+      }
+    },
+    {
+      "key": "332b5686-97d1-4831-b273-2f089f4b4eca",
+      "position": 3,
+      "properties": {
+        "progression_name": "Explore the First Week of Curriculum"
+      },
+      "seeding_key": {
+        "activity_section.key": "332b5686-97d1-4831-b273-2f089f4b4eca",
+        "lesson_activity.key": "f60afa38-8015-4993-a6d7-74476036e5ab"
+      }
+    },
+    {
+      "key": "4df7060a-b829-4fdf-a879-7c9e6f936655",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "4df7060a-b829-4fdf-a879-7c9e6f936655",
+        "lesson_activity.key": "f2b09397-8da6-4117-b71a-1ad2960333c7"
+      }
+    },
+    {
+      "key": "cbea9ca1-d87b-4ed3-ba12-4903f78f0742",
+      "position": 2,
+      "properties": {
+        "progression_name": "Representing Letters"
+      },
+      "seeding_key": {
+        "activity_section.key": "cbea9ca1-d87b-4ed3-ba12-4903f78f0742",
+        "lesson_activity.key": "f2b09397-8da6-4117-b71a-1ad2960333c7"
+      }
+    },
+    {
+      "key": "9f0c1495-c4f7-44f0-b85e-7caca0268b27",
+      "position": 3,
+      "properties": {
+        "progression_name": "Representing Images"
+      },
+      "seeding_key": {
+        "activity_section.key": "9f0c1495-c4f7-44f0-b85e-7caca0268b27",
+        "lesson_activity.key": "f2b09397-8da6-4117-b71a-1ad2960333c7"
+      }
+    },
+    {
+      "key": "93411f30-43eb-4370-8e46-f71ce8f76326",
+      "position": 4,
+      "properties": {
+        "progression_name": "Representing Numbers"
+      },
+      "seeding_key": {
+        "activity_section.key": "93411f30-43eb-4370-8e46-f71ce8f76326",
+        "lesson_activity.key": "f2b09397-8da6-4117-b71a-1ad2960333c7"
+      }
+    },
+    {
+      "key": "3fc16dc5-62ad-43a2-b01e-865cc4d0f90e",
+      "position": 5,
+      "properties": {
+        "progression_name": "Data Privacy"
+      },
+      "seeding_key": {
+        "activity_section.key": "3fc16dc5-62ad-43a2-b01e-865cc4d0f90e",
+        "lesson_activity.key": "f2b09397-8da6-4117-b71a-1ad2960333c7"
+      }
+    },
+    {
+      "key": "1920f84c-f8c5-4573-814a-852ed46f6f31",
+      "position": 6,
+      "properties": {
+        "progression_name": "Section Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "1920f84c-f8c5-4573-814a-852ed46f6f31",
+        "lesson_activity.key": "f2b09397-8da6-4117-b71a-1ad2960333c7"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U5_CSD_PL_23_-foundations24"
+        ],
+        "progression": "Introduction to This Module"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U5_CSD_PL_23_-foundations24"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "7589a462-d255-4051-8cfa-cc543b4d8181"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-ModuleOverview-U5_CSD_PL_23_-foundations24"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-24-mod1-Certificate_-foundations24"
+        ],
+        "progression": "Introduction to This Module"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-24-mod1-Certificate_-foundations24"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "7589a462-d255-4051-8cfa-cc543b4d8181"
+      },
+      "level_keys": [
+        "SP-VPL-24-mod1-Certificate_-foundations24"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit5_-foundations24"
+        ],
+        "progression": "Introduction to This Module"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit5_-foundations24"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "7589a462-d255-4051-8cfa-cc543b4d8181"
+      },
+      "level_keys": [
+        "VPL-CSD-PL Overview-self-paced-unit5_-foundations24"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U5L2_CSD_PL_23_-foundations24"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U5L2_CSD_PL_23_-foundations24"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "9c63d168-a074-4d30-8f6b-7a69215fc47c"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_Overview_U5L2_CSD_PL_23_-foundations24"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CI-LessonTypes-U5_CSD_PL_23_-foundations24"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CI-LessonTypes-U5_CSD_PL_23_-foundations24"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "9c63d168-a074-4d30-8f6b-7a69215fc47c"
+      },
+      "level_keys": [
+        "VPL-CI-LessonTypes-U5_CSD_PL_23_-foundations24"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U5L3_CSD_PL_23_-foundations24"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U5L3_CSD_PL_23_-foundations24"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "9c63d168-a074-4d30-8f6b-7a69215fc47c"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-CI-Unit_PSP-U5L3_CSD_PL_23_-foundations24"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U5L5_CSD_PL_23_-foundations24"
+        ],
+        "progression": "Explore the First Week of Curriculum"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U5L5_CSD_PL_23_-foundations24"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "332b5686-97d1-4831-b273-2f089f4b4eca"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-2-week1-U5L5_CSD_PL_23_-foundations24"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod5-lesson2-overview_CSD_PL_23_-foundations-24"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod5-lesson2-overview_CSD_PL_23_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "4df7060a-b829-4fdf-a879-7c9e6f936655"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-mod5-lesson2-overview_CSD_PL_23_-foundations-24"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-5-representing data_CSD_PL_23_-foundations-24"
+        ],
+        "progression": "Representing Letters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-representing data_CSD_PL_23_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "cbea9ca1-d87b-4ed3-ba12-4903f78f0742"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-5-representing data_CSD_PL_23_-foundations-24"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-5-ASCII_CSD_PL_23_-foundations-24"
+        ],
+        "progression": "Representing Letters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-ASCII_CSD_PL_23_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "cbea9ca1-d87b-4ed3-ba12-4903f78f0742"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-5-ASCII_CSD_PL_23_-foundations-24"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-5-Pixels_CSD_PL_23_-foundations-24"
+        ],
+        "progression": "Representing Images"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-Pixels_CSD_PL_23_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "9f0c1495-c4f7-44f0-b85e-7caca0268b27"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-5-Pixels_CSD_PL_23_-foundations-24"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 black white images pixelat_-foundations-24"
+        ],
+        "progression": "Representing Images"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 black white images pixelat_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "9f0c1495-c4f7-44f0-b85e-7caca0268b27"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U5 black white images pixelat_-foundations-24"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 binary video_-foundations-24"
+        ],
+        "progression": "Representing Numbers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 binary video_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "93411f30-43eb-4370-8e46-f71ce8f76326"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U5 binary video_-foundations-24"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-5-representing numbers_CSD_PL_23_-foundations-24"
+        ],
+        "progression": "Representing Numbers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-representing numbers_CSD_PL_23_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "93411f30-43eb-4370-8e46-f71ce8f76326"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-5-representing numbers_CSD_PL_23_-foundations-24"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 binary widget_-foundations-24"
+        ],
+        "progression": "Representing Numbers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 binary widget_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "93411f30-43eb-4370-8e46-f71ce8f76326"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U5 binary widget_-foundations-24"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-binary-c4u-6bit_CSD_PL_23_-foundations-24"
+        ],
+        "progression": "Representing Numbers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-binary-c4u-6bit_CSD_PL_23_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "93411f30-43eb-4370-8e46-f71ce8f76326"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-binary-c4u-6bit_CSD_PL_23_-foundations-24"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 10,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 binary 8 bits_-foundations-24"
+        ],
+        "progression": "Representing Numbers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 binary 8 bits_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "93411f30-43eb-4370-8e46-f71ce8f76326"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-CSD U5 binary 8 bits_-foundations-24"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-5-EncryptionAndDecryption_CSD_PL_23_-foundations-24"
+        ],
+        "progression": "Data Privacy"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-EncryptionAndDecryption_CSD_PL_23_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "3fc16dc5-62ad-43a2-b01e-865cc4d0f90e"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-5-EncryptionAndDecryption_CSD_PL_23_-foundations-24"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-pilot-S22-5-EncryptionAndDecryption-Practice_C_-foundations-24"
+        ],
+        "progression": "Data Privacy"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-EncryptionAndDecryption-Practice_C_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "3fc16dc5-62ad-43a2-b01e-865cc4d0f90e"
+      },
+      "level_keys": [
+        "VPL-CSD-pilot-S22-5-EncryptionAndDecryption-Practice_C_-foundations-24"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-U4-DecryptionPractice_-foundations-24"
+        ],
+        "progression": "Data Privacy"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-U4-DecryptionPractice_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "3fc16dc5-62ad-43a2-b01e-865cc4d0f90e"
+      },
+      "level_keys": [
+        "VPL-CSD-U4-DecryptionPractice_-foundations-24"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-U5L6_CSD_PL_23_-foundations-24"
+        ],
+        "progression": "Section Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-U5L6_CSD_PL_23_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "1920f84c-f8c5-4573-814a-852ed46f6f31"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-vocab-c4u-U5L6_CSD_PL_23_-foundations-24"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 15,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Section Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U5L5C1_CS_-foundations24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "1920f84c-f8c5-4573-814a-852ed46f6f31"
+      },
+      "level_keys": [
+        "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U5L5C1_CS_-foundations24"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 16,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "VPL-CSD_U5SelfPaced_Lesson2WrapUp_-foundations-24"
+        ],
+        "progression": "Section Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "VPL-CSD_U5SelfPaced_Lesson2WrapUp_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "1920f84c-f8c5-4573-814a-852ed46f6f31"
+      },
+      "level_keys": [
+        "VPL-CSD_U5SelfPaced_Lesson2WrapUp_-foundations-24"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-ModuleOverview-U5_CSD_PL_23_-foundations24",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-ModuleOverview-U5_CSD_PL_23_-foundations24"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "7589a462-d255-4051-8cfa-cc543b4d8181"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-24-mod1-Certificate_-foundations24",
+        "script_level.level_keys": [
+          "SP-VPL-24-mod1-Certificate_-foundations24"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "7589a462-d255-4051-8cfa-cc543b4d8181"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PL Overview-self-paced-unit5_-foundations24",
+        "script_level.level_keys": [
+          "VPL-CSD-PL Overview-self-paced-unit5_-foundations24"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "7589a462-d255-4051-8cfa-cc543b4d8181"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_Overview_U5L2_CSD_PL_23_-foundations24",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_Overview_U5L2_CSD_PL_23_-foundations24"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "9c63d168-a074-4d30-8f6b-7a69215fc47c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CI-LessonTypes-U5_CSD_PL_23_-foundations24",
+        "script_level.level_keys": [
+          "VPL-CI-LessonTypes-U5_CSD_PL_23_-foundations24"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "9c63d168-a074-4d30-8f6b-7a69215fc47c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-CI-Unit_PSP-U5L3_CSD_PL_23_-foundations24",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-CI-Unit_PSP-U5L3_CSD_PL_23_-foundations24"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "9c63d168-a074-4d30-8f6b-7a69215fc47c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-2-week1-U5L5_CSD_PL_23_-foundations24",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-2-week1-U5L5_CSD_PL_23_-foundations24"
+        ],
+        "lesson.key": "Introduction to Data and Society",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "332b5686-97d1-4831-b273-2f089f4b4eca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-mod5-lesson2-overview_CSD_PL_23_-foundations-24",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-mod5-lesson2-overview_CSD_PL_23_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "4df7060a-b829-4fdf-a879-7c9e6f936655"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-5-representing data_CSD_PL_23_-foundations-24",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-representing data_CSD_PL_23_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "cbea9ca1-d87b-4ed3-ba12-4903f78f0742"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-5-ASCII_CSD_PL_23_-foundations-24",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-ASCII_CSD_PL_23_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "cbea9ca1-d87b-4ed3-ba12-4903f78f0742"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-5-Pixels_CSD_PL_23_-foundations-24",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-Pixels_CSD_PL_23_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "9f0c1495-c4f7-44f0-b85e-7caca0268b27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U5 black white images pixelat_-foundations-24",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 black white images pixelat_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "9f0c1495-c4f7-44f0-b85e-7caca0268b27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U5 binary video_-foundations-24",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 binary video_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "93411f30-43eb-4370-8e46-f71ce8f76326"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-5-representing numbers_CSD_PL_23_-foundations-24",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-representing numbers_CSD_PL_23_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "93411f30-43eb-4370-8e46-f71ce8f76326"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U5 binary widget_-foundations-24",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 binary widget_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "93411f30-43eb-4370-8e46-f71ce8f76326"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-binary-c4u-6bit_CSD_PL_23_-foundations-24",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-binary-c4u-6bit_CSD_PL_23_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "93411f30-43eb-4370-8e46-f71ce8f76326"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-CSD U5 binary 8 bits_-foundations-24",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-CSD U5 binary 8 bits_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "93411f30-43eb-4370-8e46-f71ce8f76326"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-5-EncryptionAndDecryption_CSD_PL_23_-foundations-24",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-EncryptionAndDecryption_CSD_PL_23_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "3fc16dc5-62ad-43a2-b01e-865cc4d0f90e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-pilot-S22-5-EncryptionAndDecryption-Practice_C_-foundations-24",
+        "script_level.level_keys": [
+          "VPL-CSD-pilot-S22-5-EncryptionAndDecryption-Practice_C_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "3fc16dc5-62ad-43a2-b01e-865cc4d0f90e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-U4-DecryptionPractice_-foundations-24",
+        "script_level.level_keys": [
+          "VPL-CSD-U4-DecryptionPractice_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "3fc16dc5-62ad-43a2-b01e-865cc4d0f90e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-vocab-c4u-U5L6_CSD_PL_23_-foundations-24",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-vocab-c4u-U5L6_CSD_PL_23_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "1920f84c-f8c5-4573-814a-852ed46f6f31"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U5L5C1_CS_-foundations24",
+        "script_level.level_keys": [
+          "VPL-CSD-PILOT-S22-CI-Chapter1-ProjectOverview-U5L5C1_CS_-foundations24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "1920f84c-f8c5-4573-814a-852ed46f6f31"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "VPL-CSD_U5SelfPaced_Lesson2WrapUp_-foundations-24",
+        "script_level.level_keys": [
+          "VPL-CSD_U5SelfPaced_Lesson2WrapUp_-foundations-24"
+        ],
+        "lesson.key": "Explore Data at a Small Scale",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit2",
+        "activity_section.key": "1920f84c-f8c5-4573-814a-852ed46f6f31"
+      }
+    }
   ],
   "resources": [
 

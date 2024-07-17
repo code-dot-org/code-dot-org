@@ -144,6 +144,38 @@ class UserLevelsControllerTest < ActionController::TestCase
     end
   end
 
+  test "teacher can delete own progress on a Python Lab predict level" do
+    user = create :teacher
+    sign_in user
+    script = create :script
+    level = create :level, type: "Pythonlab", properties: {predict_settings: {isPredictLevel: true}}
+    create :user_level, user: user, script: script, level: level
+
+    assert_destroys(UserLevel) do
+      post :delete_predict_level_progress, params: {
+        script_id: script.id,
+        level_id: level.id
+      }
+      assert_response :success
+    end
+  end
+
+  test "teacher cannot delete own progress on a regular Python Lab level" do
+    user = create :teacher
+    sign_in user
+    script = create :script
+    level = create :level, type: "Pythonlab"
+    create :user_level, user: user, script: script, level: level
+
+    assert_does_not_destroy(UserLevel) do
+      post :delete_predict_level_progress, params: {
+        script_id: script.id,
+        level_id: level.id
+      }
+      assert_response :bad_request
+    end
+  end
+
   test "teacher cannot delete own progress on an unsupported level" do
     user = create :teacher
     sign_in user
@@ -158,5 +190,50 @@ class UserLevelsControllerTest < ActionController::TestCase
       }
       assert_response :bad_request
     end
+  end
+
+  test "user can get their level source data" do
+    user = create :user
+    sign_in user
+
+    script = create :script
+    level = create :level
+    level_source_data = 'my level source'
+    level_source = create :level_source, level: @level, data: level_source_data
+    create :user_level, user: user, best_result: 100, script: script,
+      level: level, level_source: level_source
+
+    get :get_level_source, params: {script_id: script.id, level_id: level.id}
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal level_source_data, body['data']
+  end
+
+  test "signed out user cannot get level source data" do
+    other_user = create :user
+    script = create :script
+    level = create :level
+
+    level_source_data = 'my level source'
+    level_source = create :level_source, level: @level, data: level_source_data
+    create :user_level, user: other_user, best_result: 100, script: script,
+      level: level, level_source: level_source
+
+    @request.headers["Accept"] = "*/*"
+    get :get_level_source, params: {script_id: script.id, level_id: level.id}
+    assert_response :forbidden
+  end
+
+  test "user without level source gets nil data for level source" do
+    user = create :user
+    sign_in user
+
+    script = create :script
+    level = create :level
+
+    get :get_level_source, params: {script_id: script.id, level_id: level.id}
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal nil, body['data']
   end
 end

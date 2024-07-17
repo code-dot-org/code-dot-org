@@ -7,7 +7,7 @@ import {
   RESIZE_VISUALIZATION_EVENT,
 } from '@cdo/apps/lib/ui/VisualizationResizeBar';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/deprecatedChai';
 
 describe('VisualizationResizeBar', function () {
   let wrapper;

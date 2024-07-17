@@ -844,9 +844,9 @@ class Level < ApplicationRecord
     properties_camelized[:appName] = game&.app
     properties_camelized[:useRestrictedSongs] = game.use_restricted_songs?
     properties_camelized[:usesProjects] = try(:is_project_level) || channel_backed?
-    if try(:project_template_level).try(:source) || try(:source)
-      # Override start sources with project template level sources if they exist
-      properties_camelized['source'] = try(:project_template_level).try(:source) || try(:source)
+
+    if try(:project_template_level).try(:start_sources)
+      properties_camelized['templateSources'] = try(:project_template_level).try(:start_sources)
     end
     # Localized properties
     properties_camelized["validations"] = localized_validations if properties_camelized["validations"]
@@ -859,6 +859,10 @@ class Level < ApplicationRecord
       # Verified instructors can view exemplars and levelbuilders can edit them, so we include them in the properties
       # for these users.
       properties_camelized[:exemplarSources] = try(:exemplar_sources)
+    else
+      # Users who are not verified teachers or levelbuilders should not be able to see predict level solutions
+      properties_camelized["predictSettings"]&.delete("solution")
+      properties_camelized["predictSettings"]&.delete("multipleChoiceAnswers")
     end
     properties_camelized
   end
@@ -873,6 +877,10 @@ class Level < ApplicationRecord
       return properties.dig('level_data', 'validations').present?
     end
     properties['validation_code'].present? || properties['success_condition'].present?
+  end
+
+  def predict_level?
+    return properties.dig('predict_settings', 'isPredictLevel').present?
   end
 
   # Returns the level name, removing the name_suffix first (if present), and

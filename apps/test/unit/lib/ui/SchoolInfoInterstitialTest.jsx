@@ -9,7 +9,7 @@ import Button from '@cdo/apps/templates/Button';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/deprecatedChai';
 
 describe('SchoolInfoInterstitial', () => {
   const MINIMUM_PROPS = {

@@ -57,7 +57,6 @@ import {
   initStorage,
   isFirebaseStorage,
   DATABLOCK_STORAGE,
-  FIREBASE_STORAGE,
 } from '../storage/storage';
 import {singleton as studioApp} from '../StudioApp';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
@@ -421,21 +420,9 @@ Applab.init = function (config) {
   }
   Applab.channelId = config.channel;
 
-  // TODO: post-firebase-cleanup, remove this conditional when we're removing firebase: #56994
-  if (!!config.useDatablockStorage) {
-    Applab.storage = initStorage(DATABLOCK_STORAGE, {
-      channelId: config.channel,
-    });
-  } else {
-    Applab.storage = initStorage(FIREBASE_STORAGE, {
-      channelId: config.channel,
-      firebaseName: config.firebaseName,
-      firebaseAuthToken: config.firebaseAuthToken,
-      firebaseSharedAuthToken: config.firebaseSharedAuthToken,
-      firebaseChannelIdSuffix: config.firebaseChannelIdSuffix || '',
-      showRateLimitAlert: studioApp().showRateLimitAlert,
-    });
-  }
+  Applab.storage = initStorage(DATABLOCK_STORAGE, {
+    channelId: config.channel,
+  });
 
   // inlcude channel id in any new relic actions we generate
   logToCloud.setCustomAttribute('channelId', Applab.channelId);
@@ -692,7 +679,7 @@ Applab.init = function (config) {
     isCurriculumLevel: isCurriculumLevel(config.level.validationEnabled),
   });
 
-  config.dropletConfig = dropletConfig;
+  config.dropletConfig = {...dropletConfig};
 
   if (config.level.aiEnabled) {
     config.dropletConfig = utils.deepMergeConcatArrays(

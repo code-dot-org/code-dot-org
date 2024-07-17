@@ -12,6 +12,7 @@ import {
   isTestEnvironment,
 } from '../../utils';
 import logToCloud from '@cdo/apps/logToCloud';
+import currentLocale from '@cdo/apps/util/currentLocale';
 
 /**
  * A barebones client for posting data to an AWS Firehose stream.
@@ -118,6 +119,8 @@ class FirehoseClient {
   getLocale() {
     if (window.appOptions) {
       return window.appOptions.locale;
+    } else {
+      return currentLocale();
     }
   }
 

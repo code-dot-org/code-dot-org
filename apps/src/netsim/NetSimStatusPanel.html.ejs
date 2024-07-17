@@ -1,6 +1,14 @@
 <%
 var i18n = require('@cdo/netsim/locale');
 %>
+<%
+/**
+ * This block destructures the local variables for use within this ejs template.
+ */
+var myHostname = locals.myHostname;
+var myAddress = locals.myAddress;
+var shareLink = locals.shareLink;
+%>
 <div class="content-wrap">
   <% if (myHostname) { %>
   <p>My hostname: <%= myHostname %></p>

@@ -14,39 +14,41 @@ class OpenaiChatController < ApplicationController
     unless has_required_messages_param?
       return render(status: :bad_request, json: {})
     end
-
     # Check for PII / Profanity
     locale = params[:locale] || "en"
     # Just look at the most recent message from the student.
     message = params[:messages].last[:content]
-    filter_result = ShareFiltering.find_failure(message, locale) if message
-    # If the content is inappropriate, we skip sending to OpenAI and instead hardcode a warning response on the front-end.
-    return render(status: :ok, json: {status: filter_result.type, flagged_content: filter_result.content}) if filter_result
+    filter_result = ShareFiltering.find_failure(message, locale, {}) if message
+    # If the content is profane, we skip sending to OpenAI and instead hardcode a warning response on the front-end.
+    return render(status: :ok, json: {safety_status: filter_result.type, flagged_content: filter_result.content}) if filter_result && filter_result.type == 'profanity'
 
-    # The system prompt is stored server-side so we need to prepend it to the student's messages
-    system_prompt = read_file_from_s3(S3_TUTOR_SYSTEM_PROMPT_PATH)
+    # Fetch the level-specific context: instructions and test files if applicable
+    level_id = params[:levelId]
 
-    # Determine if the level is validated and fetch test file contents if it is
+    level_instructions = ""
+    level_instructions = get_level_instructions(level_id) if !!level_id
+
     test_file_contents = ""
-    if validated_level?
-      level_id = params[:levelId]
-      test_file_contents = get_validated_level_test_file_contents(level_id)
-    end
+    test_file_contents = get_validated_level_test_file_contents(level_id) if !!level_id
 
-    updated_system_prompt = add_content_to_system_prompt(system_prompt, params[:levelInstructions], test_file_contents)
+    # The system prompt can be passed in as a param for testing purposes. If there isn't a custom
+    # system prompt, use the default prompt stored server-side.
+    system_prompt = !!params[:systemPrompt] ? params[:systemPrompt] : read_file_from_s3(S3_TUTOR_SYSTEM_PROMPT_PATH)
+    updated_system_prompt = add_content_to_system_prompt(system_prompt, level_instructions, test_file_contents)
+
     messages = prepend_system_prompt(updated_system_prompt, params[:messages])
 
     response = OpenaiChatHelper.request_chat_completion(messages)
     chat_completion_return_message = OpenaiChatHelper.get_chat_completion_response_message(response)
+    # We currently allow PII flagged content through to OpenAI because false positives were impacting user experience.
+    # We send the flagged content along in the request so we can log it for analysis.
+    chat_completion_return_message[:json][:safety_status] = filter_result.type if filter_result
+    chat_completion_return_message[:json][:flagged_content] = filter_result.content if filter_result
     return render(status: chat_completion_return_message[:status], json: chat_completion_return_message[:json])
   end
 
   def has_required_messages_param?
     params[:messages].present?
-  end
-
-  def validated_level?
-    params[:type].present? && params[:type] == 'validation'
   end
 
   def add_content_to_system_prompt(system_prompt, level_instructions, test_file_contents)
@@ -97,6 +99,16 @@ class OpenaiChatController < ApplicationController
     return content
   end
 
+  private def get_level_instructions(level_id)
+    level = Level.find(level_id)
+
+    unless level
+      return render(status: :bad_request, json: {message: "Couldn't find level with id=#{level_id}."})
+    end
+
+    level.properties["long_instructions"]
+  end
+
   private def get_validated_level_test_file_contents(level_id)
     level = Level.find(level_id)
 
@@ -104,14 +116,16 @@ class OpenaiChatController < ApplicationController
       return render(status: :bad_request, json: {message: "Couldn't find level with id=#{level_id}."})
     end
 
-    if level.validation.values.empty?
-      return render(status: :bad_request, json: {message: "There are no test files associated with level id=#{level_id}."})
-    else
-      test_file_contents = ""
-      level.validation.each_value do |validation|
-        test_file_contents += validation["text"]
+    test_file_contents = ""
+    if !!level.validation
+      if level.validation.values.empty?
+        return render(status: :bad_request, json: {message: "There are no test files associated with level id=#{level_id}."})
+      else
+        level.validation.each_value do |validation|
+          test_file_contents += validation["text"]
+        end
       end
-      return test_file_contents
     end
+    return test_file_contents
   end
 end

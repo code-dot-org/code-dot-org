@@ -1,11 +1,14 @@
 /** @file Dropdown with positive integer options, used in crypto widget */
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import loadable from '../util/loadable';
+
 const VirtualizedSelect = loadable(() =>
   import('../templates/VirtualizedSelect')
 );
-import classNames from 'classnames';
+
 import {LINE_HEIGHT} from './style';
 
 export default class IntegerDropdown extends React.Component {

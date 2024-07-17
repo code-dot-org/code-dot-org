@@ -3,118 +3,97 @@ title: Become a Maker | Learn about Physical Computing
 theme: responsive_full_width
 ---
 
-%script{data: {"amplitude-api-key": CDO.safe_amplitude_api_key}}
-%script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
-%script{data: {'managed-test-server': "#{CDO.running_web_application? && CDO.test_system?}"}}
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
-%link{href: "/css/generated/maker-styles.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/maker-styles.css", rel: "stylesheet"}
 
 -# FontAwesome icons
 - icon_microchip = "fa-solid fa-microchip"
 - icon_hands_clapping = "fa-solid fa-hands-clapping"
 - icon_face_smile = "fa-solid fa-face-smile"
 
-%section.hero-banner-basic{style: "background: #00736E"}
-  .wrapper
-    %div.flex-container
-      %div.text-wrapper.col-50
-        %h1.white Become a Maker
-        %p.white Explore your creativity with physical computing.
-      %div.col-30.flex-container.justify-end
-        %img{src: "/images/maker/maker-skinny-banner-img-left.svg", alt: ""}
-        %img{src: "/images/maker/maker-skinny-banner-img-right.svg", alt: ""}
-    .clear
+%section.hero-banner-basic.overlay
+  .wrapper.grid-container.justify-space-between.align-items-center.gap-4.wider-text
+    .text-wrapper
+      %h1.white
+        =hoc_s("maker_page.top.heading")
+      %p.body-one.no-margin-bottom.white
+        =hoc_s("maker_page.top.desc")
+    %figure
+      %img{src: "/images/maker/maker-banner-image.svg", alt: "", style: "width: 100%"}
 
 %section
   .wrapper
-    .text-wrapper.col-60
-      %h2 What is a Maker?
-      %p <strong>Makers invent, explore, innovate, and create using technology like development boards, robotics, 3D printing, programming, and more.</strong>
-      %p.body-three Maker education takes STEM (Science, Technology, Engineering, Mathematics) a step further by inviting hands-on experience and collaboration into the classroom to help teach problem solving and critical thinking.
-    %div.col-33{style: "float: right"}
-      %img{src: "/images/maker/maker-students-cp.png", alt: "", style: "width: 100%; margin-top: .75em"}
-    .clear
+    .grid-container.two-col.justify-space-between.align-items-center.gap-4
+      %figure
+        %img.rounded-corners{src: "/images/maker/maker-students-cp.png", alt: "", style: "width: 100%"}
+      .text-wrapper
+        %h2=hoc_s("maker_page.what.heading")
+        %p.heading-xs{style: "margin-bottom: 1rem"}
+          =hoc_s("maker_page.what.desc_01")
+        %p=hoc_s("maker_page.what.desc_02")
+
+-# TODO - remove the divider line and unhide case study section when we get the link
+= view :section_divider_line
+-# %section.bg-neutral-dark
+-#   .wrapper.flex-container.justify-space-between.align-items-center.flex-direction-column-mobile.gap-2
+-#     .text-wrapper{style: "flex: 0.9"}
+-#       %p.overline-two.white
+-#         =hoc_s("maker_page.case_study.overline")
+-#       %h2.heading-lg.white
+-#         =hoc_s("maker_page.case_study.heading")
+-#       %p.body-three.white.no-margin-bottom
+-#         =hoc_s("maker_page.case_study.desc")
+-#     %img{src: "/images/maker/alaska.png", alt: "", style: "width: 182px"}
+-#     %a.link-button.white.has-external-link{href: "#", target: "_blank", rel: "noopener noreferrer"}
+-#       =hoc_s("maker_page.case_study.button")
+
+%section
+  .wrapper
+    %h2=hoc_s("maker_page.get_started.heading")
+    %p=hoc_s("maker_page.get_started.desc")
+    = view :maker_devices, curriculum_link_cp: "#curriculum-link-cp", curriculum_link_microbit: "#curriculum-link-microbit",  button_label: hoc_s("maker_page.get_started.button.see_curriculum.label"), aria_label_cp: hoc_s("maker_page.get_started.button.see_curriculum.aria_label", markdown: :inline, locals:{device: "BBC micro:bit"}), aria_label_microbit: hoc_s("maker_page.get_started.button.see_curriculum.aria_label", markdown: :inline, locals:{device: "Circuit Playground"})
+
+%section.bg-neutral-light
+  .wrapper.centered
+    %h2=hoc_s("maker_page.why.heading")
+    = view :maker_why_list
+
+%section#curriculum-link-microbit
+  .wrapper
+    %h2=hoc_s("maker_page.curricula_microbit.heading")
+    %p=hoc_s("maker_page.curricula_microbit.desc")
+    = view :maker_curriculum_microbit_carousel
 
 = view :section_divider_line
 
-%section#explore_devices_link
+%section#curriculum-link-cp
   .wrapper
-    %h2 Explore devices
-    %p We have curriculum options that support two different devices — see available options below. <strong>Need a device?</strong> Learn more about the devices below.
-    = view :maker_devices, curriculum_link_cp: "#curriculum_link_cp", curriculum_link_microbit: "#curriculum_link_microbit",  button_label: "See available curriculum", aria_label_cp: "See available curriculum for Circuit Playground device", aria_label_microbit: "See available curriculum for BBC micro:bit device"
-
-%section.bg-neutral-light.why-physical-computing
-  .wrapper
-    %h2 Why physical computing?
-    %p Learning about physical computing requires time on and off the computer. As a result of this different learning dynamic, there are some unique benefits of learning computer science through physical computing. <a class="has-external-link" href="https://www.fieldsofcs.org/physicalcomputing" target="_blank" rel="noopener noreferrer">Learn more about why physical computing is important</a>.
-    %div.flex-container
-      %ul.icon-bullet-list.full-width.col-45
-        %li
-          %div
-            %i{class: "#{icon_microchip}"}
-          .text-wrapper
-            %h3 Real-world applications
-            %p.no-margin-bottom Using a physical device can help students engage and connect the actions on a screen to their impact in the real world.
-        %li
-          %div
-            %i{class: "#{icon_hands_clapping}"}
-          .text-wrapper
-            %h3 Inclusion and engagement
-            %p.no-margin-bottom According to a BBC survey, female students described feeling more confident after exposure to physical computing.
-        %li.no-margin-bottom
-          %div
-            %i{class: "#{icon_face_smile}"}
-          .text-wrapper
-            %h3 Social and emotional learning
-            %p Physical computing encourages students to work together, fostering collaboration, interpersonal skills, and active learning. (<a class="has-external-link" href="https://www.microsoft.com/en-us/research/uploads/prod/2020/04/physical-computing.pdf" target="_blank" rel="noopener noreferrer">Source</a>)
-      %figure.col-50
-        %img{src: "/images/maker/maker-girls-with-devices.png", alt: "", style: "width: 100%"}
-    .clear
-
-%a{id: "curriculum_link_cp"}
-%section
-  .wrapper
-    %h2 Curriculum using the Circuit Playground
+    %h2=hoc_s("maker_page.curricula_circuit_playground.heading")
     = view :maker_curriculum_circuit_playground, explore_unit_link: CDO.studio_url("/s/devices?viewAs=Instructor"), teach_unit_link: CDO.studio_url("/courses/self-paced-pl-physical-computing")
-
-= view :section_divider_line
-
-%a{id: "curriculum_link_microbit"}
-%section
-  .wrapper
-    %h2 Curriculum using the micro:bit
-    %p Code.org has partnered with the Micro:bit Educational Foundation to offer teachers several resources on using the BBC micro:bit device.
-    = view :maker_curriculum_microbit, explore_unit_link: CDO.studio_url("/s/microbit?viewAs=Instructor"), extension_lessons_link: "/maker/csf-microbit", self_paced_pl_link: CDO.studio_url("/courses/self-paced-pl-microbit")
 
 %section.bg-neutral-light
   .wrapper
-    %div.col-45{style: "margin-bottom: 1em"}
-      %h2 Maker careers
-      %h3.heading-sm Meet Jerome Morrison at Meow Wolf
-      %p Jerome is a design technologist at Meow Wolf who works on amazing interactive art installations. With technology, he helps create portals to imaginative worlds at Meow Wolf's location in Santa Fe, New Mexico.
-    %div.col-50{style: "float: right"}
+    .grid-container.two-col.justify-space-between.align-items-center.gap-4
+      .text-wrapper
+        %h2=hoc_s("maker_page.careers.heading")
+        %h3.heading-sm
+          =hoc_s("maker_page.careers.subhead")
+        %p.no-margin-bottom
+          =hoc_s("maker_page.careers.desc")
       %figure.video-responsive{style: "margin-top: 5px; max-width: unset"}
         %div
           %iframe{src: "https://www.youtube-nocookie.com/embed/dhvQ7L5UScs", title: "Careers with Computer Science: Design Technologist at Meow Wolf", allowfullscreen: "true", frameborder: "0"}
-    .clear
 
 %section
   .wrapper
-    %h2 Additional activities
-    .action-block.action-block--two-col
-      %img{src: "/shared/images/announcement/announcement_special_hoc2022.png", alt: "", class: "col-50"}
-      .text-wrapper.col-50
-        %h3.heading-sm Looking for more activity options?
-        %p There are many Maker activities available in the Hour of Code activities list.
-        %a{href: "/learn?platform=robotics", class: "link-button"} Find an activity
-  .clear
+    = view :subscribe_form, subscribe_form_section_title: hoc_s(:subscribe_form_section_title), subscribe_form_section_desc: hoc_s(:subscribe_form_section_desc_maker), form_height: "410px", form_src: "http://go.pardot.com/l/153401/2023-01-10/pqf2sr"
 
 = view :section_divider_line
 
-%section.newsletter-signup
-  .wrapper
-    %h2 Subscribe to the latest news
-    %p Sign up for our monthly emails, which contain the latest news about tools, videos, and other important updates for Maker.
-    %iframe.col-50{:allowtransparency => "true", :frameborder => "0", :height => "500", :scrolling => "yes", :src => "http://go.pardot.com/l/153401/2023-01-10/pqf2sr", :style => "overflow:hidden; float: none", :type => "text/html", :width => "100%"}
+%section
+  .wrapper.centered
+    %h2=hoc_s("maker_page.additional_resources.heading")
+    %p=hoc_s("maker_page.additional_resources.desc")
+    = view :maker_additional_resources
 
-= view :visit_partial_event_logger
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::PHYSICAL_COMPUTING_PAGE_VISITED_EVENT

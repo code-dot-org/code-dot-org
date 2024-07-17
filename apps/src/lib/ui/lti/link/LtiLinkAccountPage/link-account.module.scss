@@ -1,12 +1,22 @@
-.icon {
+@import 'color', 'style-constants';
+
+body {
+  background-color: $light_gray_50;
+}
+
+.cardIcon {
   width: 45px;
-  height: 36px;
+  height: 40px;
   color: #0093A4;
 }
 
 .cardContainer {
   display: flex;
   gap: 24px;
+}
+
+.cardContent {
+  padding-bottom: 16px;
 }
 
 .button {
@@ -24,28 +34,40 @@
   border: 1px solid #292F36
 }
 
-.mainContainer {
+.contentContainer {
+  max-width: $content-width;
+  margin: auto;
   font-size: 16px;
+  padding-bottom: 32px;
 }
 
 .welcomeContainer {
   text-align: center;
 }
 
-.welcomeBannerContainer {
+.welcomeIconContainer {
   display: flex;
   gap: 18px;
   justify-content: center;
   align-items: center;
+  padding-top: 64px;
 }
 
-.welcomeBannerContainer img {
-  width: 40px;
-  height: 40px;
+.welcomeIconContainer img {
+  width: 60px;
+  height: 60px;
 }
 
 .exchangeIcon {
   color: #7F8286;
+}
+
+.titleContainer {
+  margin-top: 24px;
+}
+
+.titleDesc {
+  margin: 10px 0 64px 0;
 }
 
 .newAccountForm {

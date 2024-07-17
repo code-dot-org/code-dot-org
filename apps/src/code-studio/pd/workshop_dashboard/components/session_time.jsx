@@ -1,9 +1,10 @@
 /**
  * Displays nicely-formatted session time for a workshop.
  */
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
-import moment from 'moment';
+
 import {TIME_FORMAT, DATETIME_FORMAT} from '../workshopConstants';
 
 export default class SessionTime extends React.Component {

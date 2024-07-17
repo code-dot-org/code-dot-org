@@ -32,6 +32,11 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       assert_redirected_to lockout_path
     end
 
+    it 'allows current user data retrieving' do
+      get api_v1_users_current_path
+      refute_redirect_to lockout_path
+    end
+
     it 'allows sign out' do
       get destroy_user_session_path
       refute_redirect_to lockout_path
@@ -134,6 +139,37 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       it 'does not redirect to lockout page' do
         get root_path
         refute_redirect_to lockout_path
+      end
+    end
+  end
+
+  describe 'LMS lockout' do
+    let(:user) do
+      create(:student)
+    end
+
+    before do
+      user.authentication_options << build(:lti_authentication_option)
+      user.save
+
+      sign_in user
+    end
+
+    describe 'with session initialized' do
+      before do
+        Policies::Lti.stubs(:account_linking?).returns(true)
+      end
+
+      it 'should redirect to landing path' do
+        get root_path
+
+        assert_redirected_to lti_v1_account_linking_landing_path
+      end
+
+      it 'should NOT redirect to landing path for allow listed paths' do
+        get destroy_user_session_path
+
+        assert_redirected_to '//test.code.org'
       end
     end
   end

@@ -1,0 +1,50 @@
+name 'self-paced-pl-foundations-intro3'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Course Overview
+
+<img src="https://images.code.org/aeff020026512599f9f6c227bcad65e4-image-1720652164594.56.02 PM.png" style="float:right; width:300px; border-radius:30px; margin-left:15px; margin-right: 15px;">
+
+## What's included in this module?
+
+#### This professional learning course is made up of four units:
+
+### ⭐️ **Introduction to Teaching Foundations of Computer Science** (You're here!)
+#### This unit gives you a brief overview of Foundations of Computer Science and this professional learning course. You should have a good idea of where you'll go next after this unit.
+
+### **🚦 Getting Started**
+#### This unit focuses on getting you ready to use the Code.org platform. You can choose to engage with this unit if you're ready to set up a classroom section for your students, want to explore lesson plans, or are curious about the various features we offer.
+
+### **📚 Teaching Computer Science**
+#### This unit covers some of the pedagogical strategies that you'll need to be familiar with to teach computer science. This unit is general to Code.org curricula and details our approach to teaching the subject.
+
+### **🔍 Curriculum Overviews**
+#### These units will give you more information about the units in Foundations of Computer Science. Learn more about specific unit content and student activities. 
+
+<div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
+
+### **NOTE**:
+
+#### At this time, only the first three units of Foundations of Computer Science have Curriculum Overviews:
+
+* #### **Unit 1:** Computer Systems and Devices
+	* #### Option A: For classrooms with the <a href="https://code.org/maker/microbit" target="blank" rel="noopener noreferrer">BBC micro:bit</a>
+    * #### Option B: For classrooms with <a href="https://code.org/maker/circuitplayground" target="blank" rel="noopener noreferrer">Adafruit's Circuit Playground</a>
+
+* #### **Unit 2:** Representing Information
+* #### **Unit 3:** Artificial Intelligence and Machine Learning
+
+#### For the last three units and the no-device version of Unit 1, we recommend going through the curriculum and completing the student activities to prepare to teach the content.
+
+</p></div>
+
+___
+
+#### Feel free to complete as much or as little of this module as is useful for you and your students! Stop, start, and revisit content as you see fit. We hope you'll find these activities useful to start teaching Foundations of Computer Science.
+
+## What's next?
+
+#### Click 'Continue' to move on to the Getting Started unit. Click <a href="https://studio.code.org/courses/self-paced-foundations-cs-2024" target="blank" rel="noopener noreferrer">here</a> to return to the overview page and choose a different unit to engage with.
+MARKDOWN

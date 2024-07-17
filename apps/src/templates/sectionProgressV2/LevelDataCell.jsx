@@ -8,6 +8,7 @@ import {connect} from 'react-redux';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
 
 import {commentLeft, studentNeedsFeedback} from '../progress/progressHelpers';
 import {studentLevelProgressType} from '../progress/progressTypes';
@@ -96,7 +97,8 @@ function LevelDataCell({
       studentLevelProgress.status === LevelStatus.perfect ||
       studentLevelProgress.status === LevelStatus.submitted ||
       studentLevelProgress.status === LevelStatus.free_play_complete ||
-      studentLevelProgress.status === LevelStatus.completed_assessment
+      studentLevelProgress.status === LevelStatus.completed_assessment ||
+      studentLevelProgress.status === LevelStatus.passed
     ) {
       if (level.isValidated) {
         return ITEM_TYPE.VALIDATED;
@@ -104,10 +106,7 @@ function LevelDataCell({
         return ITEM_TYPE.SUBMITTED;
       }
     }
-    if (
-      studentLevelProgress.status === LevelStatus.attempted ||
-      studentLevelProgress.status === LevelStatus.passed
-    ) {
+    if (studentLevelProgress.status === LevelStatus.attempted) {
       return ITEM_TYPE.IN_PROGRESS;
     }
     return ITEM_TYPE.NO_PROGRESS;
@@ -126,6 +125,64 @@ function LevelDataCell({
   }, [studentLevelProgress, level, expandedChoiceLevel]);
 
   const levelCellUnexpanded = (
+    <Link
+      id={'ui-test' + level.path?.replaceAll('/', '-') + '-cell-data'}
+      href={navigateToLevelOverviewUrl(level.url, studentId, sectionId)}
+      openInNewTab
+      external
+      onClick={levelClickedAmplitude(sectionId, level.kind === 'assessment')}
+      className={classNames(styles.expandedLevelLink, linkClassName)}
+    >
+      {itemType ? (
+        <ProgressIcon itemType={itemType} />
+      ) : (
+        <div className={styles.expandedLevelEmpty} />
+      )}
+    </Link>
+  );
+
+  if (metadataExpanded) {
+    return (
+      <td
+        className={styles.lessonDataCellExpanded}
+        headers={getHeadersForCell(
+          studentId,
+          level.id,
+          parentLevelId,
+          lessonId
+        )}
+      >
+        <div
+          className={classNames(
+            styles.gridBox,
+            styles.gridBoxLevel,
+            feedbackStyle,
+            className
+          )}
+        >
+          {levelCellUnexpanded}
+        </div>
+        <div
+          className={classNames(styles.gridBox, styles.gridBoxMetadata, {
+            [styles.gridBoxChoiceSubLevel]: level.parentLevelId !== undefined,
+          })}
+          aria-label={i18n.timeSpentMins()}
+        >
+          {!level.parentLevelId && formatTimeSpent(studentLevelProgress)}
+        </div>
+        <div
+          className={classNames(styles.gridBox, styles.gridBoxMetadata, {
+            [styles.gridBoxChoiceSubLevel]: level.parentLevelId !== undefined,
+          })}
+          aria-label={i18n.lastUpdated()}
+        >
+          {!level.parentLevelId && formatLastUpdated(studentLevelProgress)}
+        </div>
+      </td>
+    );
+  }
+
+  return (
     <td
       className={classNames(
         styles.gridBox,
@@ -135,46 +192,9 @@ function LevelDataCell({
       )}
       headers={getHeadersForCell(studentId, level.id, parentLevelId, lessonId)}
     >
-      <Link
-        id={'ui-test' + level.path?.replaceAll('/', '-') + '-cell-data'}
-        href={navigateToLevelOverviewUrl(level.url, studentId, sectionId)}
-        openInNewTab
-        external
-        onClick={levelClickedAmplitude(sectionId, level.kind === 'assessment')}
-        className={classNames(styles.expandedLevelLink, linkClassName)}
-      >
-        {itemType ? (
-          <ProgressIcon itemType={itemType} />
-        ) : (
-          <div className={styles.expandedLevelEmpty} />
-        )}
-      </Link>
+      {levelCellUnexpanded}
     </td>
   );
-
-  if (metadataExpanded) {
-    return (
-      <div className={styles.lessonDataCellExpanded}>
-        {levelCellUnexpanded}
-        <div
-          className={classNames(styles.gridBox, styles.gridBoxMetadata, {
-            [styles.gridBoxChoiceSubLevel]: level.parentLevelId !== undefined,
-          })}
-        >
-          {!level.parentLevelId && formatTimeSpent(studentLevelProgress)}
-        </div>
-        <div
-          className={classNames(styles.gridBox, styles.gridBoxMetadata, {
-            [styles.gridBoxChoiceSubLevel]: level.parentLevelId !== undefined,
-          })}
-        >
-          {!level.parentLevelId && formatLastUpdated(studentLevelProgress)}
-        </div>
-      </div>
-    );
-  }
-
-  return levelCellUnexpanded;
 }
 
 export const UnconnectedLevelDataCell = LevelDataCell;
