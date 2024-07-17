@@ -80,7 +80,7 @@ class DataLibraryPane extends React.Component {
 
   render() {
     const showUnpublishedTables = experiments.isEnabled(
-      experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES
+      experiments.SHOW_UNPUBLISHED_DATASET_TABLES
     );
     let categories = (this.props.libraryManifest.categories || []).filter(
       category => showUnpublishedTables || category.published
