@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-05-17T16:37:34.000Z",
   "level_num": "custom",
@@ -63,10 +64,13 @@
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"**It's time to get creative.** Use the checklist in the instructions to get started. \",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/01fda9cdff41f10ba441254c01429a82/game_variables_freeplay.mp3\"}]",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-17T16:37:34.197+00:00\",\"changed\":[\"cloned from \\\"game_variables_freeplay_2024\\\"\"],\"cloned_from\":\"game_variables_freeplay_2024\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-17T16:37:34.197+00:00\",\"changed\":[\"cloned from \\\"game_variables_freeplay_2024\\\"\"],\"cloned_from\":\"game_variables_freeplay_2024\"},{\"changed_at\":\"2024-07-16 18:21:33 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 1,
+    "events": 1,
+    "variables": 1,
+    "conditionals": 1
   }
 }]]></config>
   <blocks>
