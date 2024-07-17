@@ -56,8 +56,9 @@ class DataLibraryPane extends React.Component {
         );
       }
     } else {
-      storageBackend().addSharedTable(datasetInfo.name);
-      refreshCurrentDataView();
+      storageBackend()
+        .addSharedTable(datasetInfo.name)
+        .then(() => refreshCurrentDataView());
     }
   };
 

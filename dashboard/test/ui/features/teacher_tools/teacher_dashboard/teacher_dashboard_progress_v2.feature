@@ -4,7 +4,7 @@ Feature: Using the V2 teacher dashboard
 Scenario: Teacher can open and close Icon Key and details
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
-  And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+  And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
 
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
@@ -86,7 +86,7 @@ Scenario: Teacher can view lesson progress for when students have completed a le
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
   # Student completes one of many levels in lesson 2
-  And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+  And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
 
   # Student completes all the levels in lesson 10 (there is only one level)
   Given I am on "http://studio.code.org/s/allthethings/lessons/10/levels/1?noautoplay=true"
@@ -195,3 +195,5 @@ Scenario: Teacher can view choice levels
   # View expanded choice level
   And I click selector "button:contains(b)"
   And I see no difference for "unexpanded choice level - closed"
+
+  And I close my eyes

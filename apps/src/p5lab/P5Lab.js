@@ -31,11 +31,7 @@ var p5GroupWrapper = require('./P5GroupWrapper');
 var gamelabCommands = require('./gamelab/commands');
 import {initializeSubmitHelper, onSubmitComplete} from '@cdo/apps/submitHelper';
 var dom = require('@cdo/apps/dom');
-import {
-  initStorage,
-  FIREBASE_STORAGE,
-  DATABLOCK_STORAGE,
-} from '../storage/storage';
+import {initStorage, DATABLOCK_STORAGE} from '../storage/storage';
 import {getStore} from '@cdo/apps/redux';
 import {
   allAnimationsSingleFrameSelector,
@@ -259,21 +255,9 @@ export default class P5Lab {
 
     this.studioApp_.labUserId = config.labUserId;
 
-    // TODO: post-firebase-cleanup, remove this conditional when we're removing firebase: #56994
-    if (!!config.useDatablockStorage) {
-      this.studioApp_.storage = initStorage(DATABLOCK_STORAGE, {
-        channelId: config.channel,
-      });
-    } else {
-      this.studioApp_.storage = initStorage(FIREBASE_STORAGE, {
-        channelId: config.channel,
-        firebaseName: config.firebaseName,
-        firebaseAuthToken: config.firebaseAuthToken,
-        firebaseSharedAuthToken: config.firebaseSharedAuthToken,
-        firebaseChannelIdSuffix: config.firebaseChannelIdSuffix || '',
-        showRateLimitAlert: this.studioApp_.showRateLimitAlert,
-      });
-    }
+    this.studioApp_.storage = initStorage(DATABLOCK_STORAGE, {
+      channelId: config.channel,
+    });
 
     this.p5Wrapper.init({
       gameLab: this,

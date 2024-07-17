@@ -1,4 +1,5 @@
 import {resetOutput} from '@codebridge/redux/consoleRedux';
+import SwapLayoutButton from '@codebridge/SwapLayoutButton';
 import React, {useEffect, useRef, useState} from 'react';
 import {useDispatch} from 'react-redux';
 
@@ -36,14 +37,17 @@ const Console: React.FunctionComponent = () => {
 
   const headerButton = () => {
     return (
-      <Button
-        isIconOnly
-        color={'black'}
-        icon={{iconStyle: 'solid', iconName: 'eraser'}}
-        ariaLabel="clear console"
-        onClick={clearOutput}
-        size={'xs'}
-      />
+      <>
+        <Button
+          isIconOnly
+          color={'black'}
+          icon={{iconStyle: 'solid', iconName: 'eraser'}}
+          ariaLabel="clear console"
+          onClick={clearOutput}
+          size={'xs'}
+        />
+        <SwapLayoutButton />
+      </>
     );
   };
 

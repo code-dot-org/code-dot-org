@@ -47,6 +47,7 @@ const CloseButton: React.FunctionComponent<CloseButtonProps> = ({
   return (
     <button
       type="button"
+      id="ui-close-dialog"
       aria-label={ariaLabel}
       className={classNames(
         moduleStyles.closeButton,

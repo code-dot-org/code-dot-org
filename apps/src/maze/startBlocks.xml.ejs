@@ -7,10 +7,10 @@ var page = locals.page;
 %>
 <% if (page === 2) { -%>
   <% if (level < 4) { -%>
-    <block type="maze_moveForward" x="70" y="70"></block>
+    <block type="maze_moveForward" x="70" y="70" id="startBlock"></block>
   <% } else if (level === 8) { -%>
     <block type="controls_repeat" x="70" y="70" editable="false"
-      deletable="false">
+      deletable="false" id="undeletableRepeat">
       <title name="TIMES">3</title>
     </block>
   <% } else if (level === 13) { -%>

@@ -173,7 +173,7 @@ class ScriptLevelsController < ApplicationController
       level = @level.contained_levels.any? ? @level.contained_levels.first : @level
 
       # TODO: Change/remove this check as we add support for more level types.
-      if level.is_a?(FreeResponse) || level.is_a?(Multi)
+      if level.is_a?(FreeResponse) || level.is_a?(Multi) || level.predict_level?
         @responses = UserLevel.where(level: level, user: @section&.students)
       end
     end

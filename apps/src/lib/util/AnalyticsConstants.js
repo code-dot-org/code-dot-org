@@ -138,6 +138,13 @@ const EVENTS = {
   PROGRESS_V2_DELAY_INVITATION:
     'Section Progress Invitation Modal Remind Later',
   PROGRESS_V2_SEEN_INVITATION: 'Section Progress Invitation Modal seen by user',
+  PROGRESS_V2_ONE_ROW_EXPANDED: 'Section New Progress One Student Row Expanded',
+  PROGRESS_V2_ALL_ROWS_EXPANDED:
+    'Section New Progress All Student Rows Expanded',
+  PROGRESS_V2_ONE_ROW_COLLAPSED:
+    'Section New Progress One Student Row Collapsed',
+  PROGRESS_V2_ALL_ROWS_COLLAPSED:
+    'Section New Progress All Student Rows Collapsed',
 
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
@@ -250,11 +257,22 @@ const EVENTS = {
   // PL Landing Page
   MY_PL_PAGE_VISITED: 'My Professional Learning Page Visited',
 
+  // Header navigation
+  SIGNED_OUT_USER_SEES_HEADER: 'Signed Out Navigation Header Shown',
+  SIGNED_OUT_USER_CLICKS_HEADER_LINK: 'Signed Out User Clicks Header Link',
+  SIGNED_OUT_USER_CLICKS_HAMBURGER_LINK:
+    'Signed Out User Clicks Hamburger Link',
+  SIGNED_OUT_USER_CLICKS_HELP_MENU: 'Signed Out User Clicks Help Menu',
+
   // Header Create menu
   SIGNED_OUT_USER_CLICKS_CREATE_DROPDOWN:
     'Signed Out User Clicks Create Dropdown',
   SIGNED_OUT_USER_SELECTS_CREATE_DROPDOWN_OPTION:
     'Signed Out User Selects Create Dropdown Option',
+
+  // Projects
+  RUN_BUTTON_PRESSED_SIGNED_OUT:
+    'Signed Out User Presses Run Button on Standalone Project',
 
   // Project sharing via 'Share' button
   SHARING_DIALOG_OPEN: 'User Opens Project Share Dialog',

@@ -7,7 +7,6 @@ import {
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import styles from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/link-account.module.scss';
-import cardStyles from '@cdo/apps/componentLibrary/card/Card/card.module.scss';
 import {buttonColors, Button} from '@cdo/apps/componentLibrary/button';
 import React, {useContext} from 'react';
 import i18n from '@cdo/locale';
@@ -51,12 +50,12 @@ const ExistingAccountCard = () => {
         title={i18n.ltiLinkAccountExistingAccountCardHeaderLabel()}
         icon={
           <FontAwesomeV6Icon
-            className={classNames(styles.icon, 'fa-3x')}
+            className={classNames(styles.cardIcon, 'fa-2x')}
             iconName={'user-check'}
           />
         }
       />
-      <CardContent className={cardStyles.cardContent}>
+      <CardContent className={classNames(styles.cardContent)}>
         {i18n.ltiLinkAccountExistingAccountCardContent({
           providerName: ltiProviderName,
         })}
@@ -66,7 +65,7 @@ const ExistingAccountCard = () => {
           className={styles.button}
           color={buttonColors.purple}
           type={'primary'}
-          size="l"
+          size="m"
           onClick={handleExistingAccountSubmit}
           text={i18n.ltiLinkAccountExistingAccountCardActionLabel()}
         />

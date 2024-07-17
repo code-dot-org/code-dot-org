@@ -65,8 +65,6 @@ class Pd::Enrollment < ApplicationRecord
   validates :email, uniqueness: {scope: :pd_workshop_id, message: 'already enrolled in workshop', case_sensitive: false}, unless: :deleted?
 
   validate :school_forbidden, if: -> {new_record? || school_changed?}
-  validates_presence_of :school_info, unless: -> {deleted? || created_before_school_info?}
-  validate :school_info_country_required, if: -> {!deleted? && (new_record? || school_info_id_changed?)}
 
   before_validation :autoupdate_user_field
   before_save :set_application_id

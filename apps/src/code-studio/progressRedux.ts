@@ -1,5 +1,20 @@
+import {
+  AnyAction,
+  PayloadAction,
+  ThunkAction,
+  ThunkDispatch,
+  createAsyncThunk,
+  createSlice,
+} from '@reduxjs/toolkit';
 import $ from 'jquery';
 import _ from 'lodash';
+
+import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
+import {TestResults} from '@cdo/apps/constants';
+import {
+  processServerStudentProgress,
+  getLevelResult,
+} from '@cdo/apps/templates/progress/progressHelpers';
 import {
   Lesson,
   LessonGroup,
@@ -13,27 +28,18 @@ import {
   PeerReviewLevelInfo,
   LevelWithProgress,
 } from '@cdo/apps/types/progressTypes';
-import {
-  AnyAction,
-  PayloadAction,
-  ThunkAction,
-  ThunkDispatch,
-  createAsyncThunk,
-  createSlice,
-} from '@reduxjs/toolkit';
-import {
-  processServerStudentProgress,
-  getLevelResult,
-} from '@cdo/apps/templates/progress/progressHelpers';
+import {RootState} from '@cdo/apps/types/redux';
+
+import {getBubbleUrl} from '../templates/progress/BubbleFactory';
+import {AppDispatch} from '../util/reduxHooks';
+import {navigateToHref} from '../utils';
+
 import {mergeActivityResult} from './activityUtils';
-import {SET_VIEW_TYPE} from './viewAsRedux';
-import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
-import {authorizeLockable} from './lessonLockRedux';
 import {
   canChangeLevelInPage,
   updateBrowserForLevelNavigation,
 } from './browserNavigation';
-import {TestResults} from '@cdo/apps/constants';
+import {authorizeLockable} from './lessonLockRedux';
 import {
   getCurrentLevel,
   getCurrentLevels,
@@ -41,10 +47,7 @@ import {
   levelById,
   nextLevelId,
 } from './progressReduxSelectors';
-import {getBubbleUrl} from '../templates/progress/BubbleFactory';
-import {navigateToHref} from '../utils';
-import {RootState} from '@cdo/apps/types/redux';
-import {AppDispatch} from '../util/reduxHooks';
+import {SET_VIEW_TYPE} from './viewAsRedux';
 
 export interface ProgressState {
   currentLevelId: string | null;
@@ -84,11 +87,16 @@ export interface ProgressState {
   unitCompleted: boolean | undefined;
 }
 
-export interface MilestoneReport {
+export interface MilestoneReport extends OptionalMilestoneData {
   app: string;
   result: boolean;
   testResult: number;
+}
+
+interface OptionalMilestoneData {
   program?: string;
+  // Submitted is a boolean, which the server expects as a string.
+  submitted?: string;
 }
 
 const initialState: ProgressState = {
@@ -381,12 +389,43 @@ export const sendPredictLevelReport = createAsyncThunk<
     state: RootState;
   }
 >('progress/sendPredictLevelReport', async (payload, thunkAPI) => {
+  const extraPayload = {
+    program: payload.predictResponse,
+  };
   sendReportHelper(
     payload.appType,
     TestResults.CONTAINED_LEVEL_RESULT,
     thunkAPI.dispatch,
     thunkAPI.getState,
-    payload.predictResponse
+    extraPayload
+  );
+});
+
+export const sendSubmitReport = createAsyncThunk<
+  void,
+  {appType: string; submitted: boolean},
+  {
+    dispatch: AppDispatch;
+    state: RootState;
+  }
+>('progress/sendSubmitReport', async (payload, thunkAPI) => {
+  const extraPayload = {
+    submitted: payload.submitted.toString(),
+  };
+  const result = payload.submitted
+    ? TestResults.SUBMITTED_RESULT
+    : TestResults.UNSUBMITTED_ATTEMPT;
+  await sendReportHelper(
+    payload.appType,
+    result,
+    thunkAPI.dispatch,
+    thunkAPI.getState,
+    extraPayload
+  );
+  // Submit status isn't properly updated by just saving the status code, so re-query
+  // user progress to force the bubble to update.
+  thunkAPI.dispatch(
+    queryUserProgress(thunkAPI.getState().currentUser.userId.toString())
   );
 });
 
@@ -397,7 +436,7 @@ function sendReportHelper(
   result: number,
   dispatch: ThunkDispatch<RootState, undefined, AnyAction>,
   getState: () => RootState,
-  program?: string
+  extraData?: OptionalMilestoneData
 ) {
   const state = getState().progress;
   const levelId = state.currentLevelId;
@@ -412,16 +451,14 @@ function sendReportHelper(
   // The server does not appear to use the user ID parameter,
   // so just pass 0, like some other milestone posts do.
   const userId = 0;
+  extraData = extraData || {};
 
   const data: MilestoneReport = {
     app: appType,
     result: true,
     testResult: result,
+    ...extraData,
   };
-
-  if (program) {
-    data.program = program;
-  }
 
   fetch(`/milestone/${userId}/${scriptLevelId}/${levelId}`, {
     method: 'POST',

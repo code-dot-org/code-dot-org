@@ -1,5 +1,5 @@
-import {FieldKey, GeneratedEffect} from '../types';
 import {cachedWeightsMappings} from '../constants';
+import {FieldKey, GeneratedEffect} from '../types';
 
 // Returns the weights for each of the three emoji inputs for a given effect.
 export function getGeneratedEffectScores(
