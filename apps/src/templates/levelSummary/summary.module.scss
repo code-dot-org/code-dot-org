@@ -123,9 +123,7 @@ label.sectionSelector {
   }
 
   .studentAnswer {
-    padding: 12px;
     // TODO: Update to use #E6F6F8 once the phase-2 brand colors are in.
-    background-color: $lightest_cyan;
     width: 100%;
     box-sizing: border-box;
     border-radius: 4px;
@@ -133,6 +131,9 @@ label.sectionSelector {
     display: inline-block;
 
     .studentAnswerInterior {
+      background-color: $lightest_cyan;
+      padding: 12px;
+      border-radius: 4px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
