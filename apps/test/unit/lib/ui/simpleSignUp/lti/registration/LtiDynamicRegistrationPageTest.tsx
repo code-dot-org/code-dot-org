@@ -6,7 +6,7 @@ import sinon from 'sinon';
 import LtiDynamicRegistrationPage from '@cdo/apps/lib/ui/simpleSignUp/lti/registration/LtiDynamicRegistrationPage';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../util/reconfiguredChai';
 
 const MOCK_DATA = {
   email: 'test@code.org',

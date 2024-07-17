@@ -15,7 +15,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {navigateToHref} from '@cdo/apps/utils';
 
-const ExistingAccountCard = () => {
+const LtiExistingAccountCard = () => {
   const {
     ltiProvider,
     ltiProviderName,
@@ -74,4 +74,4 @@ const ExistingAccountCard = () => {
   );
 };
 
-export default ExistingAccountCard;
+export default LtiExistingAccountCard;

@@ -7,7 +7,7 @@ import LtiUpgradeAccountDialog from '@cdo/apps/lib/ui/simpleSignUp/lti/upgrade/L
 import {LtiUpgradeAccountForm} from '@cdo/apps/lib/ui/simpleSignUp/lti/upgrade/types';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../util/reconfiguredChai';
 
 const MOCK_FORM_DATA: LtiUpgradeAccountForm = {
   destination_url: 'https://code.org/upgrade',

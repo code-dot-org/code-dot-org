@@ -10,7 +10,7 @@ import {
 } from '@cdo/apps/lib/ui/simpleSignUp/lti/sync/types';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../util/reconfiguredChai';
 
 const MOCK_ALL_SECTION_MAP: LtiSectionMap = {
   1: {

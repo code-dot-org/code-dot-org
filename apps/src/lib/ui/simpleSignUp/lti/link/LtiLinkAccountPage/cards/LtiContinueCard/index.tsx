@@ -8,24 +8,17 @@ import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import classNames from 'classnames';
 import styles from '../../../../../link-account.module.scss';
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
-import React, {useContext, useRef, useState} from 'react';
+import React, {useContext, useState} from 'react';
 import i18n from '@cdo/locale';
 import {LtiProviderContext} from '../../context';
-import DCDO from '@cdo/apps/dcdo';
-import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import {navigateToHref} from '@cdo/apps/utils';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
-const NewAccountCard = () => {
-  const {ltiProviderName, newAccountUrl, emailAddress, userType} =
+const LtiContinueAccountCard = () => {
+  const {ltiProviderName, continueAccountUrl, userType} =
     useContext(LtiProviderContext)!;
-  const finishSignupFormRef = useRef<HTMLFormElement>(null);
-  const isStudentEmailPostEnabled = DCDO.get(
-    'student-email-post-enabled',
-    false
-  );
   const [isSaving, setIsSaving] = useState(false);
 
   const handleNewAccountSaved = () => {
@@ -34,18 +27,14 @@ const NewAccountCard = () => {
       user_type: userType,
     };
     analyticsReporter.sendEvent(
-      'lti_new_account_click',
+      'lti_continue_account_click',
       eventPayload,
       PLATFORMS.STATSIG
     );
-    if (isStudentEmailPostEnabled) {
-      finishSignupFormRef.current?.submit();
-    } else {
-      navigateToHref(newAccountUrl);
-    }
-  };
 
-  const handleNewAccountSubmit = async () => {
+    navigateToHref(continueAccountUrl);
+  };
+  const handleSubmit = async () => {
     setIsSaving(true);
 
     fetch('/lti/v1/account_linking/new_account', {
@@ -56,13 +45,14 @@ const NewAccountCard = () => {
       },
     }).then(response => {
       if (response.ok) {
+        setIsSaving(false);
         handleNewAccountSaved();
       }
     });
   };
 
   return (
-    <Card data-testid={'new-account-card'}>
+    <Card data-testid={'continue-account-card'}>
       <CardHeader
         title={i18n.ltiLinkAccountNewAccountCardHeaderLabel()}
         icon={
@@ -72,35 +62,22 @@ const NewAccountCard = () => {
           />
         }
       />
-      <CardContent className={classNames(styles.cardContent)}>
-        {i18n.ltiLinkAccountNewAccountCardContent({
-          providerName: ltiProviderName,
-        })}
-
-        <form
-          data-testid={'new-account-form'}
-          action={newAccountUrl}
-          ref={finishSignupFormRef}
-          method="post"
-          className={styles.newAccountForm}
-        >
-          <RailsAuthenticityToken />
-          <input type="hidden" value={emailAddress} name={'user[email]'} />
-        </form>
+      <CardContent className={styles.cardContent}>
+        {i18n.ltiLinkAccountContinueAccountCardContent()}
       </CardContent>
       <CardActions>
         <Button
           className={classNames(styles.button, styles.cardSecondaryButton)}
           color={buttonColors.white}
           size="m"
-          text={i18n.ltiLinkAccountNewAccountCardActionLabel()}
           isPending={isSaving}
           disabled={isSaving}
-          onClick={handleNewAccountSubmit}
+          text={i18n.ltiIframeCallToAction()}
+          onClick={handleSubmit}
         />
       </CardActions>
     </Card>
   );
 };
 
-export default NewAccountCard;
+export default LtiContinueAccountCard;

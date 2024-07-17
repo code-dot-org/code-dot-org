@@ -18,7 +18,7 @@ import * as authenticityTokenStore from '@cdo/apps/util/AuthenticityTokenStore';
 import * as utils from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../../util/reconfiguredChai';
 
 const DEFAULT_CONTEXT: LtiProviderContextProps = {
   ltiProvider: 'canvas_cloud',

@@ -6,7 +6,7 @@ import sinon, {SinonStub} from 'sinon';
 import LtiIframePage from '@cdo/apps/lib/ui/simpleSignUp/lti/iframe/LtiIframePage';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   logoUrl: 'https://code.org/assets/logo.svg',

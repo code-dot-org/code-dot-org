@@ -9,7 +9,7 @@ import schoology from '../../../assets/schoology.svg';
 import codeLogo from '../../../assets/codeLogo.svg';
 import {LtiProviderContext} from '../context';
 
-const WelcomeBanner = () => {
+const LtiWelcomeBanner = () => {
   const {ltiProvider, ltiProviderName} = useContext(LtiProviderContext)!;
 
   const getLtiProviderIcon = useCallback(() => {
@@ -58,4 +58,4 @@ const WelcomeBanner = () => {
   );
 };
 
-export default WelcomeBanner;
+export default LtiWelcomeBanner;

@@ -5,8 +5,8 @@ import {
   LtiProviderContext,
   LtiProviderContextProps,
 } from '@cdo/apps/lib/ui/simpleSignUp/lti/link/LtiLinkAccountPage/context';
+import LtiWelcomeBanner from '@cdo/apps/lib/ui/simpleSignUp/lti/link/LtiLinkAccountPage/LtiWelcomeBanner';
 import {LtiProvider} from '@cdo/apps/lib/ui/simpleSignUp/lti/link/LtiLinkAccountPage/types';
-import WelcomeBanner from '@cdo/apps/lib/ui/simpleSignUp/lti/link/LtiLinkAccountPage/WelcomeBanner';
 import i18n from '@cdo/locale';
 
 const getContext = (ltiProvider: LtiProvider): LtiProviderContextProps => {
@@ -27,7 +27,7 @@ describe('LTI Link Account Welcome Banner Tests', () => {
       it('should render an icon exchange', () => {
         render(
           <LtiProviderContext.Provider value={getContext(providerName)}>
-            <WelcomeBanner />
+            <LtiWelcomeBanner />
           </LtiProviderContext.Provider>
         );
         // Should render provider image
@@ -39,7 +39,7 @@ describe('LTI Link Account Welcome Banner Tests', () => {
       it('should render a header', () => {
         render(
           <LtiProviderContext.Provider value={getContext(providerName)}>
-            <WelcomeBanner />
+            <LtiWelcomeBanner />
           </LtiProviderContext.Provider>
         );
 
@@ -49,7 +49,7 @@ describe('LTI Link Account Welcome Banner Tests', () => {
       it('should render welcone banner content for the provider', () => {
         render(
           <LtiProviderContext.Provider value={getContext(providerName)}>
-            <WelcomeBanner />
+            <LtiWelcomeBanner />
           </LtiProviderContext.Provider>
         );
         screen.getByText(
