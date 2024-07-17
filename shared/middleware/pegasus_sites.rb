@@ -13,7 +13,9 @@ class PegasusSites
     @pegasus_app = Rack::Builder.parse_file(config_ru).first
     pegasus_domains = %w(
       code.org
+      csedweek.org
       hourofcode.com
+      advocacy.code.org
     ).concat(CDO.partners.map {|partner| "#{partner}.code.org"})
     @pegasus_hosts = pegasus_domains.map {|i| CDO.canonical_hostname(i)}
     @config = HttpCache.config(rack_env)
