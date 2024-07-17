@@ -62,7 +62,7 @@ const ContinueAccountCard = () => {
           />
         }
       />
-      <CardContent className={classNames(styles.cardContent)}>
+      <CardContent className={styles.cardContent}>
         {i18n.ltiLinkAccountContinueAccountCardContent()}
       </CardContent>
       <CardActions>
