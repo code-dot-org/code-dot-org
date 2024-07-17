@@ -237,7 +237,6 @@
     "details-element-polyfill": "https://github.com/javan/details-element-polyfill",
     "fast-memoize": "2.0.2",
     "filesaver.js": "0.2.0",
-    "firebase": "^2.4.2",
     "firmata": "^2.2.0",
     "focus-trap-react": "^10.1.1",
     "hammerjs": "^2.0.8",

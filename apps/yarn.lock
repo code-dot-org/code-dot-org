@@ -8276,7 +8276,6 @@ __metadata:
     fast-memoize: 2.0.2
     file-loader: ^6.2.0
     filesaver.js: 0.2.0
-    firebase: ^2.4.2
     firmata: ^2.2.0
     focus-trap-react: ^10.1.1
     fork-ts-checker-webpack-plugin: ^8.0.0
@@ -12842,15 +12841,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"faye-websocket@npm:>=0.6.0":
-  version: 0.11.0
-  resolution: "faye-websocket@npm:0.11.0"
-  dependencies:
-    websocket-driver: ">=0.5.1"
-  checksum: 74b2deb79bc73fa5a7319f22f92da31e09b0b1067100f78480821832c32de173e19044da14190139736ba4b40091174c1fc26a92b1062537caba147757161947
-  languageName: node
-  linkType: hard
-
 "faye-websocket@npm:^0.11.3":
   version: 0.11.4
   resolution: "faye-websocket@npm:0.11.4"
@@ -13153,15 +13143,6 @@ es6-shim@latest:
     object.pick: ^1.2.0
     parse-filepath: ^1.0.1
   checksum: 9c76fb17e9f7e3f21e65b563cf49aed944c6b257a46b04306cef8883d60e295e904f57514443e60c64874914d13557b2f464071181d8d80a37cd9d8565075b7f
-  languageName: node
-  linkType: hard
-
-"firebase@npm:^2.4.2":
-  version: 2.4.2
-  resolution: "firebase@npm:2.4.2"
-  dependencies:
-    faye-websocket: ">=0.6.0"
-  checksum: 757d57f03a1c997b21c8d009e68ffaf49479568f7de9409b8e3365730e139ffe6effa63608003c226c849738a22af67516837542543c15e1ffb18c45c5f9c78b
   languageName: node
   linkType: hard
 
