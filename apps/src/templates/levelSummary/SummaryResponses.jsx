@@ -117,13 +117,28 @@ const SummaryResponses = ({
           </div>
         )}
 
-        {/* Section dropdown */}
-        {hasSections && (
-          <label className={styles.sectionSelector}>
-            {i18n.responsesForClassSection()}
-            <SectionSelector reloadOnChange={true} />
-          </label>
-        )}
+        <div className={styles.headerContainer}>
+          {/* Section dropdown */}
+          {hasSections && (
+            <label className={styles.sectionSelector}>
+              {i18n.responsesForClassSection()}
+              <SectionSelector reloadOnChange={true} />
+            </label>
+          )}
+
+          {isFreeResponse && (
+            <Toggle
+              onChange={() => {
+                setShowStudentNames(!showStudentNames);
+              }}
+              checked={showStudentNames}
+              label={i18n.showStudentNames()}
+              position={'right'}
+              size={'s'}
+              name={'showStudentNames'}
+            />
+          )}
+        </div>
 
         {/* Correct answer toggle */}
         {showAnswerToggle && (
@@ -141,22 +156,10 @@ const SummaryResponses = ({
 
         {/* Free response visualization */}
         {isFreeResponse && (
-          <div>
-            <Toggle
-              onChange={() => {
-                setShowStudentNames(!showStudentNames);
-              }}
-              checked={showStudentNames}
-              label={i18n.showStudentNames()}
-              position={'right'}
-              size={'s'}
-              name={'showStudentNames'}
-            />
-            <FreeResponseResponses
-              responses={scriptData.responses}
-              showStudentNames={showStudentNames}
-            />
-          </div>
+          <FreeResponseResponses
+            responses={scriptData.responses}
+            showStudentNames={showStudentNames}
+          />
         )}
 
         {/* Multi visualization */}

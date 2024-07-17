@@ -11,7 +11,7 @@ const FreeResponseResponses = ({responses, showStudentNames}) => (
           <p>{response.text}</p>
         </div>
         <div className={styles.studentName}>
-          {showStudentNames && <p>{response.user_id}</p>}
+          {showStudentNames && <p>{response.student_name}</p>}
         </div>
       </div>
     ))}

@@ -87,6 +87,13 @@ label.sectionSelector {
   margin-bottom: 24px;
 }
 
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Align items vertically centered */
+  justify-content: space-between;
+}
+
 .studentResponses {
   select {
     display: block;
@@ -102,6 +109,7 @@ label.sectionSelector {
     .studentName {
       min-height: 24px;
       margin-bottom: 16px;
+      padding-top: 4px;
 
       p {
         margin: 0;
