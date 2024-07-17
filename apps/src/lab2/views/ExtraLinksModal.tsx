@@ -124,14 +124,6 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
   return isOpen ? (
     <AccessibleDialog onClose={onClose}>
       <Heading3>Extra links</Heading3>
-
-      <button
-        type="button"
-        onClick={onClose}
-        className={moduleStyles.xCloseButton}
-      >
-        <i id="x-close" className="fa-solid fa-xmark" />
-      </button>
       {Object.entries(levelLinkData.links).map(([listTitle, links]) => (
         // Levels can be part of level groups (sublevels) and/or can be a template level
         // so we list these here as well.

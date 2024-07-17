@@ -67,12 +67,12 @@ const NewAccountCard = () => {
         title={i18n.ltiLinkAccountNewAccountCardHeaderLabel()}
         icon={
           <FontAwesomeV6Icon
-            className={classNames(styles.icon, 'fa-3x')}
+            className={classNames(styles.cardIcon, 'fa-2x')}
             iconName={'user-plus'}
           />
         }
       />
-      <CardContent>
+      <CardContent className={classNames(styles.cardContent)}>
         {i18n.ltiLinkAccountNewAccountCardContent({
           providerName: ltiProviderName,
         })}
@@ -92,7 +92,7 @@ const NewAccountCard = () => {
         <Button
           className={classNames(styles.button, styles.cardSecondaryButton)}
           color={buttonColors.white}
-          size="l"
+          size="m"
           text={i18n.ltiLinkAccountNewAccountCardActionLabel()}
           isPending={isSaving}
           disabled={isSaving}

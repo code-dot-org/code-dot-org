@@ -1,9 +1,4 @@
 module AichatSagemakerHelper
-  require_relative './mistral_processor'
-  require_relative './arithmo_processor'
-  require_relative './karen_processor'
-  require_relative './pirate_processor'
-
   MAX_NEW_TOKENS = 512
   TOP_P = 0.9
   MODELS = {
@@ -25,10 +20,10 @@ module AichatSagemakerHelper
     instructions
   end
 
-  def self.format_inputs_for_sagemaker_request(aichat_params, stored_messages, new_message)
-    selected_model_id = aichat_params[:selectedModelId]
+  def self.format_inputs_for_sagemaker_request(aichat_model_customizations, stored_messages, new_message)
+    selected_model_id = aichat_model_customizations[:selectedModelId]
     # Add system prompt and retrieval contexts if available to inputs as part of instructions that will be sent to model.
-    instructions = get_instructions(aichat_params[:systemPrompt], aichat_params[:retrievalContexts])
+    instructions = get_instructions(aichat_model_customizations[:systemPrompt], aichat_model_customizations[:retrievalContexts])
     model_processor = get_model_processor(selected_model_id)
     inputs = model_processor.format_model_inputs(instructions, new_message, stored_messages)
     stopping_strings = model_processor.get_stop_strings
@@ -36,7 +31,7 @@ module AichatSagemakerHelper
     {
       inputs: inputs,
       parameters: {
-        temperature: aichat_params[:temperature].to_f,
+        temperature: aichat_model_customizations[:temperature].to_f,
         max_new_tokens: MAX_NEW_TOKENS,
         top_p: TOP_P,
         stop: stopping_strings,
@@ -57,15 +52,16 @@ module AichatSagemakerHelper
     end
   end
 
-  def self.request_sagemaker_chat_completion(input, selected_model_id)
+  def self.request_sagemaker_chat_completion(inputs, selected_model_id)
     create_sagemaker_client.invoke_endpoint(
       endpoint_name: selected_model_id, # required
-      body: input.to_json, # required
+      body: inputs.to_json, # required
       content_type: "application/json"
     )
   end
 
-  def self.get_sagemaker_assistant_response(sagemaker_response, selected_model_id)
+  def self.get_sagemaker_assistant_response(inputs, selected_model_id)
+    sagemaker_response = request_sagemaker_chat_completion(inputs, selected_model_id)
     parsed_response = JSON.parse(sagemaker_response.body.string)
     generated_text = parsed_response[0]["generated_text"]
     model_processor = get_model_processor(selected_model_id)

@@ -24,14 +24,6 @@ const ChatWarningModal: React.FunctionComponent<ChatWarningModalProps> = ({
 }) => (
   <AccessibleDialog onClose={onClose} className={moduleStyles.chatWarningModal}>
     <Heading3>{i18n.aiWarningModalHeader()}</Heading3>
-
-    <button
-      type="button"
-      onClick={onClose}
-      className={moduleStyles.xCloseButton}
-    >
-      <i id="x-close" className="fa-solid fa-xmark" />
-    </button>
     <hr />
     <BodyTwoText>
       <StrongText>{i18n.aiWarningModalMessagesAreRecorded()}</StrongText>

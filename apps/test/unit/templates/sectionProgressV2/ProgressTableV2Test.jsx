@@ -33,6 +33,8 @@ const DEFAULT_PROPS = {
 
 const LESSON_ID_1 = UNIT_DATA.lessons[0].id;
 
+const NUM_DEFAULT_LESSONS = 4;
+
 describe('ProgressTableV2', () => {
   let store;
 
@@ -164,7 +166,10 @@ describe('ProgressTableV2', () => {
   it('nothing expanded', () => {
     renderDefault();
 
-    expect(screen.getAllByTitle('Expand')).to.have.lengthOf(4);
+    // floating header doubles the number of lessons
+    expect(screen.getAllByTitle('Expand')).to.have.lengthOf(
+      NUM_DEFAULT_LESSONS * 2
+    );
     expect(screen.queryAllByTitle('Unexpand')).to.have.lengthOf(0);
   });
 
@@ -174,8 +179,11 @@ describe('ProgressTableV2', () => {
       addExpandedLesson(UNIT_DATA.id, SECTION_ID, UNIT_DATA.lessons[0])
     );
 
-    expect(screen.getAllByTitle('Expand')).to.have.lengthOf(3);
-    screen.getByTitle('Unexpand');
+    // floating header doubles the number of lessons
+    expect(screen.getAllByTitle('Expand')).to.have.lengthOf(
+      (NUM_DEFAULT_LESSONS - 1) * 2
+    );
+    expect(screen.getAllByTitle('Unexpand')).to.have.lengthOf(2);
   });
 
   it('multiple lessons expanded', () => {
@@ -188,7 +196,10 @@ describe('ProgressTableV2', () => {
       addExpandedLesson(UNIT_DATA.id, SECTION_ID, UNIT_DATA.lessons[1])
     );
 
-    expect(screen.getAllByTitle('Expand')).to.have.lengthOf(2);
-    expect(screen.getAllByTitle('Unexpand')).to.have.lengthOf(2);
+    // floating header doubles the number of lessons
+    expect(screen.getAllByTitle('Expand')).to.have.lengthOf(
+      (NUM_DEFAULT_LESSONS - 2) * 2
+    );
+    expect(screen.getAllByTitle('Unexpand')).to.have.lengthOf(4);
   });
 });
