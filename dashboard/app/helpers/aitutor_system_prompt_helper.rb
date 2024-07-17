@@ -32,7 +32,7 @@ module AitutorSystemPromptHelper
     base_system_prompt
   end
 
-  def self.get_language_specific_system_prompt(unit)
+  def self.get_programming_language_system_prompt(unit)
     language = unit.csa? ? 'Java' : 'Python'
     "\n Specific Exclusions: Refrain from discussing topics not explicitly related to computer
     science or #{language} programming."
@@ -59,20 +59,10 @@ module AitutorSystemPromptHelper
       "\n The contents of the test file are: #{test_file_contents}"
   end
 
-  def self.get_system_prompt(level_id, script_id)
-    level = Level.find(level_id)
-    unless level
-      return render(status: :bad_request, json: {message: "Couldn't find level with id=#{level_id}."})
-    end
-
-    unit = Unit.find(script_id)
-    unless unit
-      return render(status: :bad_request, json: {message: "Couldn't find unit with id=#{script_id}."})
-    end
-
+  def self.get_system_prompt(level, unit)
     system_prompt =
       get_base_system_prompt +
-      get_language_specific_system_prompt(unit) +
+      get_programming_language_system_prompt(unit) +
       get_level_instructions(level) +
       get_validated_level_test_file_contents(level)
 

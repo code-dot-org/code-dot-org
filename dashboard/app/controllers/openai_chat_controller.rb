@@ -1,13 +1,6 @@
 class OpenaiChatController < ApplicationController
-  S3_AI_BUCKET = 'cdo-ai'.freeze
-  S3_TUTOR_SYSTEM_PROMPT_PATH = 'tutor/system_prompt.txt'.freeze
-
   include OpenaiChatHelper
   authorize_resource class: false
-
-  def s3_client
-    @s3_client ||= AWS::S3.create_client
-  end
 
   # POST /openai/chat_completion
   def chat_completion
@@ -25,8 +18,18 @@ class OpenaiChatController < ApplicationController
     # The system prompt can be passed in as a param for testing purposes. If there isn't a custom
     # system prompt, create one based on the level context.
     level_id = params[:levelId]
+    level = begin Level.find(level_id)
+    rescue ActiveRecord::RecordNotFound
+      return render(status: :bad_request, json: {message: "Couldn't find level with id=#{level_id}."})
+    end
+
     script_id = params[:scriptId]
-    system_prompt = !!params[:systemPrompt] ? params[:systemPrompt] : AitutorSystemPromptHelper.get_system_prompt(level_id, script_id)
+    unit = begin Level.find(script_id)
+    rescue ActiveRecord::RecordNotFound
+      return render(status: :bad_request, json: {message: "Couldn't find unit with id=#{script_id}."})
+    end
+
+    system_prompt = !!params[:systemPrompt] ? params[:systemPrompt] : AitutorSystemPromptHelper.get_system_prompt(level, unit)
 
     messages = prepend_system_prompt(system_prompt, params[:messages])
 
