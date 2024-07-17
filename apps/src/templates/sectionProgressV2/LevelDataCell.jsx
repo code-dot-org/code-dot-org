@@ -97,7 +97,8 @@ function LevelDataCell({
       studentLevelProgress.status === LevelStatus.perfect ||
       studentLevelProgress.status === LevelStatus.submitted ||
       studentLevelProgress.status === LevelStatus.free_play_complete ||
-      studentLevelProgress.status === LevelStatus.completed_assessment
+      studentLevelProgress.status === LevelStatus.completed_assessment ||
+      studentLevelProgress.status === LevelStatus.passed
     ) {
       if (level.isValidated) {
         return ITEM_TYPE.VALIDATED;
@@ -105,10 +106,7 @@ function LevelDataCell({
         return ITEM_TYPE.SUBMITTED;
       }
     }
-    if (
-      studentLevelProgress.status === LevelStatus.attempted ||
-      studentLevelProgress.status === LevelStatus.passed
-    ) {
+    if (studentLevelProgress.status === LevelStatus.attempted) {
       return ITEM_TYPE.IN_PROGRESS;
     }
     return ITEM_TYPE.NO_PROGRESS;

@@ -47,8 +47,8 @@ Feature: BubbleChoice
     Given I am on "http://studio.code.org/s/allthethings/lessons/52/levels/8/sublevel/1"
 
     # Dismiss the dialog
-    And I click selector "#x-close" once I see it
-    And I wait until element "#x-close" is not visible
+    And I click selector "#ui-close-dialog" once I see it
+    And I wait until element "#ui-close-dialog" is not visible
 
     # Complete the level
     And I click selector "#instructions-continue-button" to load a new page
@@ -88,8 +88,8 @@ Feature: BubbleChoice
     Given I am on "http://studio.code.org/s/allthethings/lessons/52/levels/8/sublevel/1"
     
     # Dismiss the dialog
-    And I click selector "#x-close" once I see it
-    And I wait until element "#x-close" is not visible
+    And I click selector "#ui-close-dialog" once I see it
+    And I wait until element "#ui-close-dialog" is not visible
     
     # Teacher has not completed level, so make sure it is not shown as complete
     Then I verify progress for the sublevel with selector ".teacher-panel .progress-bubble:first" is "not_tried"
@@ -104,8 +104,8 @@ Feature: BubbleChoice
     Given I am on "http://studio.code.org/s/allthethings/lessons/52/levels/8/sublevel/1"
     
     # Dismiss the dialog
-    And I click selector "#x-close" once I see it
-    And I wait until element "#x-close" is not visible
+    And I click selector "#ui-close-dialog" once I see it
+    And I wait until element "#ui-close-dialog" is not visible
     
     # Go to another Lab2 level (panels)
     And I click selector ".progress-bubble:nth(5)"
