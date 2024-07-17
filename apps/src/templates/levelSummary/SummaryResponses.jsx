@@ -8,7 +8,7 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Toggle from '@cdo/apps/componentLibrary/toggle';
 import DCDO from '@cdo/apps/dcdo';
 import {PredictQuestionType} from '@cdo/apps/lab2/levelEditors/types';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
@@ -52,13 +52,17 @@ const SummaryResponses = ({
   const logEvent = useCallback(
     eventName => {
       const {level} = scriptData;
-      analyticsReporter.sendEvent(eventName, {
-        levelId: level.id,
-        levelName: level.name,
-        levelType: level.type,
-        sectionSelected: !!selectedSection,
-        ...scriptData.reportingData,
-      });
+      analyticsReporter.sendEvent(
+        eventName,
+        {
+          levelId: level.id,
+          levelName: level.name,
+          levelType: level.type,
+          sectionSelected: !!selectedSection,
+          ...scriptData.reportingData,
+        },
+        PLATFORMS.BOTH
+      );
     },
     [scriptData, selectedSection]
   );
@@ -95,15 +99,12 @@ const SummaryResponses = ({
   const showAnswerToggle = scriptData.answer_is_visible && isMulti;
 
   const toggleNames = () => {
-    // if (showStudentNames) {
-    //   // event for turnning names off
-    //   logEvent(CFU_NAMES_TOGGLED_OFF);
-    // } else {
-    //   // event for turnning names on
-    //   logEvent(CFU_NAMES_TOGGLED_OFF);
-    // }
+    if (showStudentNames) {
+      logEvent(EVENTS.CFU_NAMES_TOGGLED_OFF);
+    } else {
+      logEvent(EVENTS.CFU_NAMES_TOGGLED_ON);
+    }
     setShowStudentNames(!showStudentNames);
-    // analyticsReporter.sendEvent(STARTED_EVENT, {}, PLATFORMS.BOTH);
   };
 
   return (

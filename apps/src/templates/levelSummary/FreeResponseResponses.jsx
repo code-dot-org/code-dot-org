@@ -11,7 +11,7 @@ const FreeResponseResponses = ({responses, showStudentNames}) => {
   return (
     <div className={styles.studentResponsesColumns}>
       {responses.map(response => (
-        <div key={response.user_id}>
+        <div key={response.user_id} className={styles.studentResponseBlock}>
           <div className={styles.studentAnswer}>
             <p>{response.text}</p>
             <ResponseMenuDropdown response={response} />
