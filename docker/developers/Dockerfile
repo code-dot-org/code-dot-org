@@ -80,33 +80,14 @@ RUN . $NVM_DIR/nvm.sh \
     && rm -f /opt/base-nvm/README.md \
     && sudo chown -R ${USERNAME} /opt/base-nvm
 
-# Install AWSCLI
-RUN cd /home/${USERNAME} \
-    && if [ $(uname -m) = "aarch64" ]; then curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip"; else curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"; fi \
-    && unzip awscliv2.zip \
-    && ./aws/install
-
 # Add Ruby binaries to path
 RUN echo -n "\n# Add Ruby binaries on path\nexport PATH=\$PATH:/home/${USERNAME}/.rbenv/versions/${RUBY_VERSION}/bin\n" >> ~/.profile
 
-# Install useful utilities for our install scripts
-RUN sudo -E apt install -y jq
-
 # Install node-pre-gyp (required for Web packaging)
-RUN sudo -E apt install -y node-pre-gyp
+RUN sudo -E apt install -y --no-install-recommends node-pre-gyp
 
-# Install debugging tools
-RUN sudo -E apt-get -y install gdb rsync lsof
-
-# Install rbspy
-RUN cd /home/${USERNAME} \
-    && if [ $(uname -m) = "aarch64" ]; then curl -L "https://github.com/rbspy/rbspy/releases/download/v0.12.1/rbspy-aarch64-musl.tar.gz" -o "rbspy.tar.gz"; else curl -L "https://github.com/rbspy/rbspy/releases/download/v0.12.1/rbspy-x86_64-musl.tar.gz" -o "rbspy.tar.gz"; fi \
-    && tar -xvf ./rbspy.tar.gz \
-    && chmod +x ./rbspy*musl \
-    && sudo cp ./rbspy*musl /usr/local/bin
-
-RUN sudo apt-get -y install --no-install-recommends \
-    python2
+# Install python2 which might be required by some dependencies during their compilation
+RUN sudo -E apt install -y --no-install-recommends python2
 
 # Make temporary directory and do a bundle install
 ARG BUNDLER_VERSION=2.3.22
@@ -122,6 +103,62 @@ RUN cd /app/src \
     && RAILS_ENV=development bundle install \
     && sudo cp -r /home/${USERNAME}/.rbenv /opt/base-rbenv \
     && sudo chown -R ${USERNAME} /opt/base-rbenv
+
+# Development Environment
+# -----------------------
+
+FROM cdo-web AS cdo-web-dev
+
+# Install ffmpeg for audio processing for local bucket population
+RUN sudo apt-get update
+RUN sudo -E apt install -y --no-install-recommends ffmpeg
+
+# Install useful editors
+RUN sudo -E apt install -y --no-install-recommends vim emacs
+
+# Install useful shells and utilities
+RUN sudo -E apt install -y --no-install-recommends tmux bash zsh
+
+# Install useful utilities for our install scripts
+RUN sudo -E apt install -y --no-install-recommends jq
+
+# Install debugging tools
+RUN sudo -E apt-get -y install gdb rsync lsof
+
+# Install rbspy
+RUN cd /home/${USERNAME} \
+    && if [ $(uname -m) = "aarch64" ]; then curl -L "https://github.com/rbspy/rbspy/releases/download/v0.12.1/rbspy-aarch64-musl.tar.gz" -o "rbspy.tar.gz"; else curl -L "https://github.com/rbspy/rbspy/releases/download/v0.12.1/rbspy-x86_64-musl.tar.gz" -o "rbspy.tar.gz"; fi \
+    && tar -xvf ./rbspy.tar.gz \
+    && chmod +x ./rbspy*musl \
+    && sudo cp ./rbspy*musl /usr/local/bin
+
+# Install AWSCLI
+RUN cd /home/${USERNAME} \
+    && if [ $(uname -m) = "aarch64" ]; then curl "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip"; else curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"; fi \
+    && unzip awscliv2.zip \
+    && ./aws/install
+
+# Generate the HTTPS self-signed certificates, just in case we start with HTTPS
+RUN sudo mkdir /var/keys
+RUN sudo chown -R ${USERNAME} /var/keys
+RUN openssl genrsa 2048 > /var/keys/server.key
+RUN chmod 400 /var/keys/server.key
+RUN openssl req -new -x509 -nodes -sha256 -days 365 -key /var/keys/server.key -subj '/CN=cdo-self-signed-cert/C=SK/' -out /var/keys/server.crt
+
+# Allow the 'home' volume to get mounted which is where we persist things like
+# bash / irb history and such for different contexts.
+# Your containers can mount /mnt/home to separate volumes to retain separate histories.
+RUN sudo mkdir -p /mnt/home
+RUN sudo chown -R ${USERNAME} /mnt/home
+RUN touch /mnt/home/.bash_history
+RUN touch /mnt/home/.zsh_history
+RUN touch /mnt/home/.irb_history
+RUN rm -f $HOME/.bash_history
+RUN rm -f $HOME/.irb_history
+RUN rm -f $HOME/.zsh_history
+RUN ln -s /mnt/home/.bash_history $HOME/.bash_history
+RUN ln -s /mnt/home/.zsh_history $HOME/.zsh_history
+RUN ln -s /mnt/home/.irb_history $HOME/.irb_history
 
 # Test Environment
 # ----------------

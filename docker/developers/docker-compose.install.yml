@@ -6,6 +6,7 @@
 
 include:
   - path: ./docker-compose.localstack.yml
+  - path: ./docker-compose.commands.yml
 
 services:
   # This just installs / updates rbenv / Ruby inside the web instance
@@ -78,3 +79,55 @@ services:
     networks:
       cdo_network_test:
       cdo_network:
+
+  # Run the 'rake install' step with/without AWS
+  install: &install-base
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web
+    volumes:
+      - ./locals-container.yml:/app/src/locals.yml
+    environment: &install-environment
+      AFTER: "rm -f .git/hooks/pre-commit .git/hooks/post-checkout .git/hooks/post-merge; ln -s ../../docker/developers/hooks/pre-commit .git/hooks/pre-commit; ln -s ../../docker/developers/hooks/post-merge .git/hooks/post-merge; ln -s ../../docker/developers/hooks/post-checkout .git/hooks/post-checkout"
+    command: /bin/bash -l -c './docker/developers/run.sh bundle exec rake install'
+
+  install-aws: &install-aws-base
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web-aws
+    volumes:
+      - ./locals-container.yml:/app/src/locals.yml
+    environment:
+      <<: *install-environment
+    command: /bin/bash -l -c './docker/developers/run.sh bundle exec rake install'
+
+  install-low-memory:
+    <<: *install-base
+    environment:
+      # Level seeding batch size to be more appropriate for lower-memory situations
+      CDO_LEVEL_SEED_BATCH_SIZE: 500
+
+  install-all-base:
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web-base
+    depends_on:
+      install-localstack:
+        condition: service_completed_successfully
+      install-rbenv:
+        condition: service_completed_successfully
+      install-nvm:
+        condition: service_completed_successfully
+      install-gems:
+        condition: service_completed_successfully
+      install-js:
+        condition: service_completed_successfully
+    entrypoint: /bin/bash -c
+    command: "echo 'Installed libraries and environment dependencies.'"
+
+  # Performs all install steps for an initial setup
+  install-all:
+    <<: *install-base
+    depends_on:
+      install-all-base:
+        condition: service_completed_successfully

@@ -3,23 +3,34 @@ require 'httparty'
 require_relative '../../../deployment'
 require_relative '../../../lib/cdo/aws/s3'
 
-class Populator
+module Populator
   SOURCE_DOMAIN = "https://studio.code.org"
+  API_PATH = ""
 
-  attr_reader :api_path
-
-  class << self
-    def api_path(path)
-      @@api_path = path
-    end
+  def api_path
+    self.class::API_PATH
   end
 
   def base_path
-    File.join(__dir__, bucket_name)
+    File.dirname(File.realpath(Object.const_source_location(base_class.name).first))
+  end
+
+  def base_class
+    parent = self.class
+    while parent != Object
+      parent = parent.module_parent
+      break if parent.const_defined?(:BUCKET)
+    end
+    parent
   end
 
   def bucket_name
-    local_path.split('/s3/').last.split('/').first
+    base_class.const_get(:BUCKET)
+  rescue NameError => exception
+    puts
+    puts "ERROR: you must define BUCKET in root module for #{self.class}"
+    puts
+    raise exception
   end
 
   def local_path(path = nil)
@@ -45,21 +56,23 @@ class Populator
       data = data.call if data.is_a? Proc
       AWS::S3.upload_to_bucket(bucket, path, data, no_random: true)
     end
-  rescue Aws::S3::Errors::NoSuchBucket => e
+  rescue Aws::S3::Errors::NoSuchBucket => exception
     puts
     puts "ERROR: The #{bucket} bucket does not exist!"
     puts " *** : Run the install-localstack command to create the S3 buckets"
     puts
-    raise e
+    raise exception
   end
 
   def download(path)
-    raise "Must define api_path" unless defined?(@@api_path)
+    raise "Must define API_PATH" if api_path == ""
 
-    url = "#{SOURCE_DOMAIN}#{@@api_path}/#{path}"
+    url = "#{SOURCE_DOMAIN}#{api_path}/#{path}"
     to = local_path(path)
     relative_path = File.path(Pathname.new(to).relative_path_from(base_path))
-    unless File.exist?(to)
+    if File.exist?(to)
+      data = File.read(to)
+    else
       response = HTTParty.get(url)
       if response.code != 200
         puts "ERROR: Cannot find the given file"
@@ -70,8 +83,6 @@ class Populator
       puts "Writing #{bucket_name}:#{relative_path}"
       data = response.body
       File.write(to, data)
-    else
-      data = File.read(to)
     end
 
     # Ensure it exists in our bucket

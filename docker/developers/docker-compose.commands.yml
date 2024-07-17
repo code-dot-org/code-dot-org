@@ -11,8 +11,7 @@ services:
       file: docker-compose.dashboard.yml
       service: web
     volumes: &common-shell-volumes
-      - ./.bash_history:/home/cdodev/.bash_history
-      - ./.irb_history:/home/cdodev/.irb_history
+      - home:/mnt/home
       - ./locals-container.yml:/app/src/locals.yml
     command: /bin/bash -l
   shell-aws: &command-aws-base
@@ -52,22 +51,6 @@ services:
     <<: *command-base
     command: /bin/bash -l -c './bin/mysql-client-admin'
 
-  # Run the 'rake install' step with/without AWS
-  install: &install-base
-    <<: *command-base
-    environment:
-      AFTER: "rm -f .git/hooks/pre-commit .git/hooks/post-checkout .git/hooks/post-merge; ln -s ../../docker/developers/hooks/pre-commit .git/hooks/pre-merge; ln -s ../../docker/developers/hooks/post-merge .git/hooks/post-merge; ln -s ../../docker/developers/hooks/post-checkout .git/hooks/post-checkout"
-    command: /bin/bash -l -c './docker/developers/run.sh bundle exec rake install'
-  install-aws:
-    <<: *command-aws-base
-    command: /bin/bash -l -c './docker/developers/run.sh bundle exec rake install'
-
-  install-low-memory:
-    <<: *install-base
-    environment:
-      # Level seeding batch size to be more appropriate for lower-memory situations
-      CDO_LEVEL_SEED_BATCH_SIZE: 500
-
   # Run the 'rake build' step with/without AWS
   build:
     <<: *command-base
@@ -101,6 +84,11 @@ services:
     <<: *command-base
     command: /bin/bash -l -c 'cd dashboard && ../docker/developers/run.sh bundle exec rake db:migrate && RAILS_ENV=test ../docker/developers/run.sh bundle exec rake db:migrate && cd ../pegasus && ../docker/developers/run.sh bundle exec rake db:migrate'
 
+  lint-ruby:
+    <<: *command-base
+    entrypoint: ['/bin/bash', './docker/developers/run.sh', 'bundle', 'exec', 'rubocop']
+    command: []
+
   # Builds the JavaScript for the site
   build-js:
     <<: *command-isolated-base
@@ -119,3 +107,6 @@ services:
     tty: false
     working_dir: /app/src/apps
     command: /bin/bash -l -c '../docker/developers/run.sh yarn start'
+
+volumes:
+  home:

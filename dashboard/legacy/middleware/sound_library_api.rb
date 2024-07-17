@@ -21,12 +21,18 @@ class SoundLibraryApi < Sinatra::Base
   end
 
   #
-  # GET /api/v1/sound-library/<filename>
+  # GET /api/v1/sound-library/<sound_name>
   #
   # Retrieve a file from the sound library
   #
   get %r{/api/v1/sound-library/(.+)} do |sound_name|
     not_found if sound_name.empty?
+
+    if CDO.aws_emulated?
+      # For development environments, we look to see if we should lazily populate the
+      # local bucket first.
+      AWS::S3.populate_local_bucket(SOUND_LIBRARY_BUCKET, sound_name)
+    end
 
     begin
       result = Aws::S3::Bucket.

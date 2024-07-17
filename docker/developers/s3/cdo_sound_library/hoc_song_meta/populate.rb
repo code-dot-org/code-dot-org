@@ -3,13 +3,16 @@
 # Clone a version of this path for local development
 
 require_relative '../../populator'
+require_relative '../../cdo_sound_library/hoc_song_meta'
 
-class HocSongMetaPopulator < Populator
+class CdoSoundLibrary::HocSongMeta::Populate
+  include Populator
+
   # The API path that maps to the bucket
-  api_path '/api/v1/sound-library/hoc_song_meta'
+  API_PATH = '/api/v1/sound-library/hoc_song_meta'
 
-  TEST_MUSIC_URL='https://curriculum.code.org/media/uploads/synthesize.mp3'.freeze
-  TEST_MUSIC_BPM=133.0
+  TEST_MUSIC_URL = 'https://curriculum.code.org/media/uploads/synthesize.mp3'.freeze
+  TEST_MUSIC_BPM = 110.0
 
   def ffmpeg?
     unless defined?(@ffmpeg)
@@ -26,7 +29,7 @@ class HocSongMetaPopulator < Populator
       response = HTTParty.get(url)
       if response.code != 200
         puts "ERROR: Cannot find the given file"
-        exit 1
+        return
       end
 
       # Write out file
@@ -51,7 +54,7 @@ class HocSongMetaPopulator < Populator
       bpm = metadata['bpm'].to_f
       puts "Creating #{file_name} with #{bpm} bpm"
 
-      # Download the 'synthesize' music file which is in 133 bpm
+      # Download the 'synthesize' music file which is in 110 bpm
       test_music_path = download_test_music
 
       # If we have ffmpeg support, we can get the music to match
@@ -67,14 +70,14 @@ class HocSongMetaPopulator < Populator
 
         # Use ffmpeg to add delay and to speed up / slow down test music to match bpm
         #system("ffmpeg -i #{test_music_path} -af adelay=#{delay}|#{delay} #{file_name}.mp3")
-        file_path = local_path("../../cdo-restricted/restricted/#{file_name}")
+        file_path = local_path("../../cdo_restricted/restricted/#{file_name}")
 
         dir_path = File.dirname(file_path)
-        Dir.mkdir(dir_path) unless Dir.exist?(dir_path)
+        FileUtils.mkdir_p(dir_path)
 
         unless File.exist?(file_path)
-          puts("ffmpeg -i #{test_music_path} -af atempo=#{speed},adelay=\"#{delay}\|#{delay}\" #{file_path}")
-          system("ffmpeg -i #{test_music_path} -af atempo=#{speed},adelay=\"#{delay}\|#{delay}\" #{file_path}")
+          ffmpeg_command = "ffmpeg -i #{test_music_path} -af atempo=#{speed},adelay=\"#{delay}|#{delay}\" #{file_path}"
+          system ffmpeg_command
         end
       else
         # Just use the test music at the wrong dimensions
@@ -98,8 +101,4 @@ class HocSongMetaPopulator < Populator
       populate("#{id}.json")
     end
   end
-end
-
-if __FILE__ == $0
-  HocSongMetaPopulator.new.populate
 end

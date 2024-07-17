@@ -17,6 +17,7 @@ def main
 
   thin_args = "-a #{CDO.dashboard_host} -p #{CDO.dashboard_port}"
   thin_args += " --ssl" if CDO.rack_env == :development && CDO.https_development
+  thin_args += " --ssl-key-file #{CDO.https_certificate}.key --ssl-cert-file #{CDO.https_certificate}.crt" if CDO.rack_env == :development && CDO.https_certificate
 
   Dir.chdir(dashboard_dir) do
     system "RAILS_ENV=#{CDO.rack_env} bundle exec #{rerun} thin start #{thin_args}"

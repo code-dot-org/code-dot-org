@@ -86,17 +86,35 @@ fi
 export AWS_ENDPOINT_URL=${AWS_LOCALSTACK_ENDPOINT_URL}
 
 # Create secrets
-aws secretsmanager describe-secret --secret-id "development/cdo/firebase_secret" 2>/dev/null || \
-	aws secretsmanager create-secret --name "development/cdo/firebase_secret" --secret-string "placeholder-firebase-secret"
+SECRETS="
+firebase_secret
+firebase_shared_secret
+cloudfront_private_key
+cloudfront_key_pair_id
+devinternal_db_writer
+applications_gsheet_key
+eir_teacher_enrollments_gsheet_key
+properties_encryption_key
+javabuilder_private_key
+javabuilder_key_password
+pardot_private_key
+redshift_host
+redshift_password
+redshift_username
+slack_bot_token
+"
 
-aws secretsmanager describe-secret --secret-id "development/cdo/firebase_shared_secret" 2>/dev/null || \
-	aws secretsmanager create-secret --name "development/cdo/firebase_shared_secret" --secret-string "placeholder-firebase-shared-secret"
+IFS=$'\n'
+for secret in ${SECRETS}; do
+  #if ! aws secretsmanager describe-secret --secret-id "development/cdo/${secret}" 2>/dev/null; then
+  if ! aws secretsmanager get-secret-value --secret-id "development/cdo/${secret}"; then
+    echo "Creating secret '${secret}' [DOES NOT EXIST]"
+  fi
 
-aws secretsmanager describe-secret --secret-id "development/cdo/slack_bot_token" 2>/dev/null || \
-	aws secretsmanager create-secret --name "development/cdo/slack_bot_token" --secret-string "placeholder-slack-token"
-
-aws secretsmanager describe-secret --secret-id "development/cdo/cloudfront_private_key" 2>/dev/null || \
-	aws secretsmanager create-secret --name "development/cdo/cloudfront_private_key" --secret-string "placeholder-cloudfront-private-key"
-
-aws secretsmanager describe-secret --secret-id "development/cdo/cloudfront_key_pair_id" 2>/dev/null || \
-	aws secretsmanager create-secret --name "development/cdo/cloudfront_key_pair_id" --secret-string "placeholder-cloudfront-key-pair-id"
+  if ! aws secretsmanager describe-secret --secret-id "development/cdo/${secret}"; then
+    echo "Creating secret '${secret}'"
+    aws secretsmanager create-secret --name "development/cdo/${secret}" --secret-string "placeholder-${secret}"
+  else
+    echo "Creating secret '${secret}' [EXISTS]"
+  fi
+done

@@ -10,7 +10,7 @@ services:
     build:
       dockerfile: ./docker/developers/Dockerfile
       context: ../..
-      target: cdo-web
+      target: cdo-web-dev
       args:
         UID: ${FIXUID:-1000}
         GID: ${FIXGID:-${FIXUID:-1000}}
@@ -22,13 +22,31 @@ services:
   web: &cdo-web
     <<: *cdo-web-base
     hostname: web
-    environment:
+    environment: &server-locals
       HOST_PWD: ${PWD}
+      CDO_SLACK_BOT_TOKEN: ''
+      CDO_PARDOT_PRIVATE_KEY: ''
+      CDO_FIREBASE_SECRET: ''
+      CDO_FIREBASE_SHARED_SECRET: ''
+      CDO_PROPERTIES_ENCRYPTION_KEY: ''
+      CDO_DB_WRITER: 'mysql://root:password@db/'
+      CDO_DB_ENDPOINT_WRITER: 'db'
+      CDO_DB_ENDPOINT_PROXY_REPORTING: 'db'
+      CDO_DB_ENDPOINT_PROXY_READER: 'db'
+      CDO_STATSIG_SERVER_SECRET_KEY: 'secret-fake-key'
+      CDO_STATSIG_API_CLIENT_KEY: 'client-fake-key'
+      CDO_SESSION_STORE_SERVER: 'redis://redis:6379/0/session'
+      CDO_GEOCODER_REDIS_URL: 'redis://redis:6379/0/geocoder'
+      CDO_AWS_ACCESS_KEY_ID: 'local-development'
+      CDO_AWS_SECRET_ACCESS_KEY: 'allstudents'
+      CDO_AWS_ENDPOINT: 'http://localstack:4566'
+      CDO_AWS_S3_ENDPOINT: 'http://minio:9000'
+      CDO_CLOUDFRONT_PRIVATE_KEY: '!Secret'
+      CDO_CLOUDFRONT_KEY_PAIR_ID: '!Secret'
     volumes:
       - rbenv:/home/cdodev/.rbenv
       - nvm:/home/cdodev/.nvm
       - ../..:/app/src
-      - ./locals-container.yml:/app/src/locals.yml
     ports:
       - "3000:3000"
     depends_on:
@@ -38,10 +56,23 @@ services:
         condition: service_started
       localstack:
         condition: service_healthy
+      minio:
+        condition: service_started
     tty: true
     command: /bin/bash -l -c './bin/dashboard-server'
     networks:
       cdo_network:
+
+  web-https:
+    <<: *cdo-web
+    ports:
+      - "443:443"
+    environment:
+      <<: *server-locals
+      CDO_HTTPS_DEVELOPMENT: true
+      CDO_HTTPS_CERTIFICATE: '/var/keys/server'
+      CDO_DEFAULT_SCHEME: https
+      CDO_DASHBOARD_PORT: 443
 
   # This adds an AWS credential into the environment
   web-aws:
@@ -63,9 +94,10 @@ services:
     hostname: pegasus
     volumes:
       - ../..:/app/src
-      - ./locals-container.yml:/app/src/locals.yml
     ports:
       - "3001:3000"
+    environment:
+      <<: *server-locals
     depends_on:
       mysql-contained:
         condition: service_healthy

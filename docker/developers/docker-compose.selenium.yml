@@ -31,7 +31,7 @@ services:
       dockerfile: ./selenium-video.Dockerfile
       context: ./selenium-video
     environment:
-      DISPLAY_CONTAINER_NAME: selenium-chrome
+      DISPLAY_CONTAINER_NAME: code-dot-org-selenium-chrome
     volumes:
       - /tmp:/videos
     networks:
@@ -69,7 +69,7 @@ services:
   # A Selenium server that connects through the selenium grid
   selenium-chrome-node:
     # We need an explicit container name for the target of the video service
-    container_name: selenium-chrome
+    container_name: code-dot-org-selenium-chrome
     hostname: chrome
     image: selenium/node-chrome:${SELENIUM_CHROME_VERSION}
     shm_size: 2gb
@@ -115,7 +115,7 @@ services:
   # A Selenium server that connects through the selenium grid
   selenium-firefox-node:
     # We need an explicit container name for the target of the video service
-    container_name: selenium-firefox
+    container_name: code-dot-org-selenium-firefox
     hostname: firefox
     image: seleniarm/node-firefox:${SELENIUM_FIREFOX_VERSION}
     shm_size: 2gb
@@ -160,7 +160,7 @@ services:
   # A Selenium server that connects through the selenium grid
   selenium-edge-node:
     # We need an explicit container name for the target of the video service
-    container_name: selenium-edge
+    container_name: code-dot-org-selenium-edge
     hostname: edge
     image: selenium/node-edge:${SELENIUM_EDGE_VERSION}
     shm_size: 2gb

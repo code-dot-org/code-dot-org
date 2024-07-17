@@ -2,7 +2,7 @@
 
 # If 'docker' is available, we do it via docker compose
 if hash docker 2>/dev/null; then
-  docker compose --progress quiet run --rm git-pre-commit
+  docker compose --progress quiet run --rm -T git-pre-commit
 else
   # Otherwise, attempt to do it via the normal script
   ../../../tools/pre-commit

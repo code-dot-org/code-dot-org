@@ -21,7 +21,6 @@ services:
 
   localstack:
     <<: *localstack-base
-    container_name: cdo-localstack
     expose:
       - "4566"
     ports:
