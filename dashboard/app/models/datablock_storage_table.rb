@@ -71,6 +71,20 @@ class DatablockStorageTable < ApplicationRecord
     get_table_names(SHARED_TABLE_PROJECT_ID)
   end
 
+  def self.update_shared_table(table_name, records)
+    shared_table = DatablockStorageTable.find_or_create_by!(project_id: SHARED_TABLE_PROJECT_ID, table_name: table_name)
+    shared_table.records.delete_all
+    shared_table.columns = ['id']
+    shared_table.save!
+
+    shared_table.create_records(records)
+    shared_table.save!
+
+    shared_table.records.each do |record|
+      puts record.inspect
+    end
+  end
+
   def self.find_shared_table(table_name)
     shared_table = DatablockStorageTable.find_by(project_id: SHARED_TABLE_PROJECT_ID, table_name: table_name)
     raise "Shared table '#{table_name}' does not exist" unless shared_table
