@@ -24,8 +24,8 @@ steps:
     image: curlimages/curl
     commands:
       # If running on EC2, get hostname from ec2 metadata
-      - 'IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")'
-      - 'hostname=$(curl -s -H "X-aws-ec2-metadata-token: $IMDS_TOKEN" http://169.254.169.254/latest/meta-data/public-hostname)'
+      - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
+      - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
       - echo "Running on $hostname"
 
   # We cache a clone of staging in the `cache-staging-clone` pipeline
@@ -143,8 +143,8 @@ steps:
     image: curlimages/curl
     commands:
       # If running on EC2, get hostname from ec2 metadata
-      - 'IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")'
-      - 'hostname=$(curl -s -H "X-aws-ec2-metadata-token: $IMDS_TOKEN" http://169.254.169.254/latest/meta-data/public-hostname)'
+      - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
+      - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
       - echo "Running on $hostname"
 
   # We cache a clone of staging in the `cache-staging-clone` pipeline
@@ -266,7 +266,7 @@ steps:
     image: bitnami/git
     commands:
       - git lfs install
-      - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .
+      - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL . 
 
   - name: cache-staging-clone
     image: plugins/s3-cache
@@ -287,6 +287,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 2529148d7c0778d35b15ace7558fe56380b3f15f2a6f0e6bcbcd06a97ea9dd82
+hmac: 3015b948ea07f038e2eb09c553d5bfbb5ff1a084dc321649037368e8bd13c617
 
 ...
