@@ -62,7 +62,7 @@ const ExistingAccountCard = () => {
       </CardContent>
       <CardActions>
         <Button
-          className={classNames(styles.button, styles.cardSecondaryButton)}
+          className={styles.button}
           color={buttonColors.purple}
           type={'primary'}
           size="m"
