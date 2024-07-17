@@ -4,6 +4,8 @@ import {connect} from 'react-redux';
 
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import QuickActionsCell from '@cdo/apps/templates/tables/QuickActionsCell';
 import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
@@ -91,6 +93,11 @@ class SectionActionDropdown extends Component {
   };
 
   onClickHideShow = () => {
+    analyticsReporter.sendEvent(
+      EVENTS.SECTION_TABLE_ARCHIVE_OR_RESTORE_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
     this.props.toggleSectionHidden(this.props.sectionData.id);
   };
 
@@ -101,6 +108,11 @@ class SectionActionDropdown extends Component {
   };
 
   onRequestDelete = () => {
+    analyticsReporter.sendEvent(
+      EVENTS.SECTION_TABLE_DELETE_SECTION_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
     this.setState({deleting: true});
   };
 
@@ -120,18 +132,39 @@ class SectionActionDropdown extends Component {
               sectionData.grades?.includes('pl')
             )}
             className="edit-section-details-link"
+            onClick={() => {
+              analyticsReporter.sendEvent(
+                EVENTS.SECTION_TABLE_EDIT_SECTION_DETAILS_CLICKED,
+                {},
+                PLATFORMS.BOTH
+              );
+            }}
           >
             {i18n.editSectionDetails()}
           </PopUpMenu.Item>
           <PopUpMenu.Item
             href={teacherDashboardUrl(sectionData.id, '/progress')}
             className="view-progress-link"
+            onClick={() => {
+              analyticsReporter.sendEvent(
+                EVENTS.SECTION_TABLE_VIEW_PROGRESS_CLICKED,
+                {},
+                PLATFORMS.BOTH
+              );
+            }}
           >
             {i18n.sectionViewProgress()}
           </PopUpMenu.Item>
           <PopUpMenu.Item
             href={teacherDashboardUrl(sectionData.id, '/manage_students')}
             className="manage-students-link"
+            onClick={() => {
+              analyticsReporter.sendEvent(
+                EVENTS.SECTION_TABLE_MANAGE_STUDENTS_CLICKED,
+                {},
+                PLATFORMS.BOTH
+              );
+            }}
           >
             {i18n.manageStudents()}
           </PopUpMenu.Item>
@@ -140,6 +173,13 @@ class SectionActionDropdown extends Component {
               <PopUpMenu.Item
                 href={teacherDashboardUrl(sectionData.id, '/login_info')}
                 className="print-login-link"
+                onClick={() => {
+                  analyticsReporter.sendEvent(
+                    EVENTS.SECTION_TABLE_LOGIN_INSTRUCTIONS_CLICKED,
+                    {},
+                    PLATFORMS.BOTH
+                  );
+                }}
               >
                 {sectionData.loginType === SectionLoginType.email
                   ? i18n.joinInstructions()

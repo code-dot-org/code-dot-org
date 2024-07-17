@@ -120,6 +120,20 @@ const EVENTS = {
   SORT_BY_FAMILY_NAME: 'Sorted by family name',
   SORT_BY_DISPLAY_NAME: 'Sorted by display name',
 
+  // Section table on teacher My Dashboard
+  SECTION_TABLE_LOGIN_INSTRUCTIONS_CLICKED:
+    'Teacher clicked print login cards from the section table',
+  SECTION_TABLE_EDIT_SECTION_DETAILS_CLICKED:
+    'Teacher clicked edit section details from the section table',
+  SECTION_TABLE_VIEW_PROGRESS_CLICKED:
+    'Teacher clicked view progress from the section table',
+  SECTION_TABLE_MANAGE_STUDENTS_CLICKED:
+    'Teacher clicked manage students from the section table',
+  SECTION_TABLE_ARCHIVE_OR_RESTORE_CLICKED:
+    'Teacher clicked archive or restore section from the section table',
+  SECTION_TABLE_DELETE_SECTION_CLICKED:
+    'Teacher clicked delete section from the section table',
+
   // Section progress v2
   PROGRESS_V2_VIEW: 'Section New Progress Viewed ',
   PROGRESS_V2_VIEW_NEW_PROGRESS: 'New Progress Link Clicked',
