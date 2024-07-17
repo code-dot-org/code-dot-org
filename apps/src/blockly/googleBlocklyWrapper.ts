@@ -45,6 +45,7 @@ import CdoFieldFlyout from './addons/cdoFieldFlyout';
 import CdoFieldImage from './addons/cdoFieldImage';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldLabel from './addons/cdoFieldLabel';
+import CdoFieldNumber from './addons/cdoFieldNumber';
 import CdoFieldParameter from './addons/cdoFieldParameter';
 import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldVariable from './addons/cdoFieldVariable';
@@ -93,10 +94,12 @@ import {
   ExtendedBlock,
   ExtendedBlockSvg,
   ExtendedBlocklyOptions,
+  ExtendedConnection,
   ExtendedInput,
   ExtendedVariableMap,
   ExtendedWorkspace,
   ExtendedWorkspaceSvg,
+  FieldHelperOptions,
   GoogleBlocklyInstance,
 } from './types';
 import {
@@ -260,6 +263,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   const fieldOverrides: [string, string, FieldProto][] = [
     ['field_variable', 'FieldVariable', CdoFieldVariable],
     ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
+    ['field_number', 'FieldNumber', CdoFieldNumber],
     // CdoFieldBitmap extends from a JavaScript class without typing.
     // We know it's a field, so it's safe to cast as unknown.
     ['field_bitmap', 'FieldBitmap', CdoFieldBitmap as unknown as FieldProto],
@@ -363,6 +367,13 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       return this.blockly_.getSelected();
     },
   });
+  Object.defineProperty(blocklyWrapper, 'BlockFieldHelper', {
+    get: function () {
+      return {
+        ANGLE_HELPER: 'Angle Helper',
+      };
+    },
+  });
 
   // Properties cannot be modified until wrapSettableProperty has been called
   SETTABLE_PROPERTIES.forEach(property =>
@@ -452,6 +463,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   };
 
   const extendedInput = blocklyWrapper.Input.prototype as ExtendedInput;
+  const extendedConnection = blocklyWrapper.Connection
+    .prototype as ExtendedConnection;
 
   extendedInput.setStrictCheck = function (check) {
     return this.setCheck(check);
@@ -462,6 +475,41 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     return this.fieldRow;
   };
 
+  /**
+   * Enable the specified field helper with the specified options for this
+   * input's connection
+   * @param {string} fieldHelper the field helper to retrieve. One of
+   *        Blockly.BlockFieldHelper
+   * @param {*} options for this helper
+   * @return {!Blockly.Input} The input being modified (to allow chaining).
+   */
+  extendedInput.addFieldHelper = function (
+    fieldHelper: string,
+    options: FieldHelperOptions
+  ) {
+    // if (this.type !== Blockly.INPUT_VALUE) {
+    //   throw 'Only Value Inputs can be augmented with helpers';
+    // }
+
+    (this.connection as ExtendedConnection).addFieldHelper(
+      fieldHelper,
+      options
+    );
+    return this;
+  };
+
+  extendedConnection.addFieldHelper = function (
+    fieldHelper: string,
+    options: FieldHelperOptions
+  ) {
+    if (!this.fieldHelpers_) {
+      this.fieldHelpers_ = {};
+    }
+    this.fieldHelpers_[fieldHelper] = options;
+  };
+  extendedConnection.getFieldHelperOptions = function (fieldHelper: string) {
+    return this.fieldHelpers_ && this.fieldHelpers_[fieldHelper];
+  };
   const extendedBlock = blocklyWrapper.Block.prototype as ExtendedBlock;
 
   extendedBlock.interpolateMsg = interpolateMsg;

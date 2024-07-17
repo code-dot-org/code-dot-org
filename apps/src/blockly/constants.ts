@@ -158,7 +158,6 @@ export const READ_ONLY_PROPERTIES = [
   'applab_locale',
   'BasicCursor',
   'Block',
-  'BlockFieldHelper',
   'blockRendering',
   'blockRendering.ConstantProvider',
   'Blocks',
