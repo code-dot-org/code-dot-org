@@ -10,8 +10,10 @@ const FreeResponseResponses = ({responses}) => {
     <div className={styles.studentResponsesColumns}>
       {responses.map(response => (
         <div key={response.user_id} className={styles.studentAnswer}>
-          <p>{response.text}</p>
-          <ResponseMenuDropdown response={response} />
+          <div className={styles.studentAnswerInterior}>
+            <p>{response.text}</p>
+            <ResponseMenuDropdown response={response} />
+          </div>
         </div>
       ))}
     </div>
