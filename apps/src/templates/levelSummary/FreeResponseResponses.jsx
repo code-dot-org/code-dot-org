@@ -30,53 +30,55 @@ const FreeResponseResponses = ({responses}) => {
 
   return (
     <div className={styles.studentResponsesContent}>
-      <div className={styles.pinResponsesSection}>
-        <div className={styles.pinResponsesHeader}>
-          <FontAwesomeV6Icon
-            iconName="thumbtack"
-            className={styles.pinHeaderIcon}
-            scale="1.25x"
-          />
-          <Heading3>{i18n.pinnedResponses()}</Heading3>
-          <Button
-            text={i18n.unpinAll()}
-            onClick={() => setPinnedResponseIds([])}
-            color={buttonColors.gray}
-            type="secondary"
-          />
-        </div>
-        <div className={styles.pinnedResponsesColumns}>
-          {pinnedResponses
-            .filter(response => !hiddenResponses.includes(response.user_id))
-            .map(response => (
-              <div
-                key={response.user_id}
-                className={classNames(
-                  styles.studentAnswer,
-                  styles.pinnedResponse
-                )}
-              >
-                <div className={styles.studentAnswerInterior}>
-                  <p>{response.text}</p>
-                  <ResponseMenuDropdown
-                    response={response}
-                    hideResponse={response =>
-                      setHiddenResponses(prevHidden => [
-                        ...prevHidden,
-                        response.user_id,
-                      ])
-                    }
-                    unpinResponse={response =>
-                      setPinnedResponseIds(prevPinned =>
-                        prevPinned.filter(id => id !== response.user_id)
-                      )
-                    }
-                  />
+      {pinnedResponses.length > 0 && (
+        <div className={styles.pinResponsesSection}>
+          <div className={styles.pinResponsesHeader}>
+            <FontAwesomeV6Icon
+              iconName="thumbtack"
+              className={styles.pinHeaderIcon}
+              scale="1.25x"
+            />
+            <Heading3>{i18n.pinnedResponses()}</Heading3>
+            <Button
+              text={i18n.unpinAll()}
+              onClick={() => setPinnedResponseIds([])}
+              color={buttonColors.gray}
+              type="secondary"
+            />
+          </div>
+          <div className={styles.pinnedResponsesColumns}>
+            {pinnedResponses
+              .filter(response => !hiddenResponses.includes(response.user_id))
+              .map(response => (
+                <div
+                  key={response.user_id}
+                  className={classNames(
+                    styles.studentAnswer,
+                    styles.pinnedResponse
+                  )}
+                >
+                  <div className={styles.studentAnswerInterior}>
+                    <p>{response.text}</p>
+                    <ResponseMenuDropdown
+                      response={response}
+                      hideResponse={response =>
+                        setHiddenResponses(prevHidden => [
+                          ...prevHidden,
+                          response.user_id,
+                        ])
+                      }
+                      unpinResponse={response =>
+                        setPinnedResponseIds(prevPinned =>
+                          prevPinned.filter(id => id !== response.user_id)
+                        )
+                      }
+                    />
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+          </div>
         </div>
-      </div>
+      )}
       <div className={styles.studentResponsesColumns}>
         {filteredResponses.map(response => (
           <div
