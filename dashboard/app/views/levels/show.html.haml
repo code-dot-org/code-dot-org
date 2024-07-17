@@ -87,6 +87,6 @@
 - if @rubric.present? && current_user&.teacher?
   %div#rubric-fab-mount-point
 
-- if current_user&.has_ai_tutor_access? && @script&.csa?
+- if current_user&.has_ai_tutor_access? && @level&.ai_tutor_available?
   %div#ai-tutor-fab-mount-point
 
