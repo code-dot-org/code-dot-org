@@ -81,7 +81,7 @@ export const askAITutor = createAsyncThunk(
       storedMessages,
       systemPrompt,
       levelContext.levelId,
-      levelContext.scriptId,
+      levelContext.scriptId
     );
     thunkAPI.dispatch(
       updateLastChatMessage({
