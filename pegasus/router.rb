@@ -37,7 +37,6 @@ require src_dir 'social_metadata'
 require src_dir 'forms'
 require src_dir 'curriculum_router'
 require src_dir 'homepage'
-require src_dir 'advocacy_site'
 require 'cdo/hamburger'
 
 require pegasus_dir 'helper_modules/multiple_extname_file_utils'
