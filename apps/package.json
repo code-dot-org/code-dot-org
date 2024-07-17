@@ -252,7 +252,7 @@
     "jquery": "1.12.1",
     "jquery-ui": "^1.12.1",
     "js-cookie": "^2.1.2",
-    "jshint": "^2.9.5",
+    "jshint": "^2.13.6",
     "jsonic": "^0.3.0",
     "jszip": "3.10.1",
     "lazysizes": "^4.0.0-rc1",
