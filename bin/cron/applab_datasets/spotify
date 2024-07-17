@@ -1,22 +1,18 @@
 #!/usr/bin/env ruby
 
-# TODO: unfirebase, also update datablock storage: #56993
-# TODO: post-firebase-cleanup, remove the firebase version: #56994
-
 require_relative '../only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
-# This script fetches spotify data from api.spotify and uploads to the shared firebase channel.
+# This script fetches spotify data from api.spotify and uploads to the shared datablock storage table.
 #
 # TESTING LOCALLY (Code.org engineers only)
 # In order to run this file locally, you'll need to temporarily configure your locals.yml file to include
 # development/cdo/spotify_api_client_id and development/cdo/spotify_api_client_secret values
 #
 
+require_relative '../../../dashboard/config/environment'
 require_relative '../../../deployment'
 require 'ostruct'
-# TODO: post-firebase-cleanup, remove the firebase reference: #56994
-require_relative '../../../dashboard/legacy/middleware/helpers/firebase_helper'
 require 'cdo/profanity_filter'
 require 'rest-client'
 
@@ -94,29 +90,26 @@ def get_playlist_data(chart_type, playlist_id)
   end
 
   items = JSON.parse(response)['tracks']['items']
-  columns = ['id', 'Track Name', 'Artist', 'Position']
-  columns.insert(4, 'Popularity') if chart_type == CHART_TYPE[:TOP] # Only include Popularity for Top Charts
 
   regex = generate_profanity_regex(items)
-  records = {}
-  id = 1
 
-  items.each do |item|
+  chart_position = 1
+  records = items.filter_map do |item|
     track = item['track']
     next if track.nil? || regex&.match?(get_track_info_string(track)) # Skip track if it is nil or contains profanity
 
     record = OpenStruct.new
-    record.id = id
-    record.Position = id
+    record.Position = chart_position
     record['Track Name'] = track['name']
     record.Artist = track['artists'][0]['name'] # First will be main artist, featured artists included in record name
     record.Popularity = track['popularity'] if chart_type == CHART_TYPE[:TOP]
 
-    records[id] = record.to_h.to_json
-    id += 1
+    chart_position += 1
+
+    record.to_h
   end
 
-  return records, columns
+  return records
 end
 
 # Only check artist and track names for profanity
@@ -135,8 +128,6 @@ end
 
 def main
   get_token
-  # TODO: post-firebase-cleanup, remove the firebase reference: #56994
-  fb = FirebaseHelper.new('shared')
 
   if $token.nil? || $token.empty?
     Honeybadger.notify_cronjob_error(error_message: "Did not to retrieve Spotify playlist data due to missing authentication token.")
@@ -144,7 +135,7 @@ def main
   end
 
   SPOTIFY_CHARTS.each do |chart|
-    records, columns = get_playlist_data(chart['type'], chart['id'])
+    records = get_playlist_data(chart['type'], chart['id'])
     if records.nil? || records.empty?
       Honeybadger.notify_cronjob_error(
         error_message: "Did not to upload Spotify playlist data due to nil or empty list of records.",
@@ -156,7 +147,10 @@ def main
       )
       next
     end
-    fb.upload_live_table(chart['title'], records, columns)
+
+    ActiveRecord::Base.transaction do
+      DatablockStorageTable.update_shared_table(chart['title'], records)
+    end
   end
 end
 
