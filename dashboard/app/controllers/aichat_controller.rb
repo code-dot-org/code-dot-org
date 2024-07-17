@@ -41,7 +41,7 @@ class AichatController < ApplicationController
       }
     end
 
-    messages_for_model = params.to_unsafe_h[:storedMessages].filter do |message|
+    messages_for_model = params[:storedMessages].filter do |message|
       message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK] &&
         ROLES_FOR_MODEL.include?(message[:role])
     end
