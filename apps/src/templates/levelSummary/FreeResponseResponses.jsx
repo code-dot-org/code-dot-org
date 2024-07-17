@@ -38,21 +38,23 @@ const FreeResponseResponses = ({responses}) => {
                 styles.pinnedResponse
               )}
             >
-              <p>{response.text}</p>
-              <ResponseMenuDropdown
-                response={response}
-                hideResponse={response =>
-                  setHiddenResponses(prevHidden => [
-                    ...prevHidden,
-                    response.user_id,
-                  ])
-                }
-                unpinResponse={response =>
-                  setPinnedResponseIds(prevPinned =>
-                    prevPinned.filter(id => id !== response.user_id)
-                  )
-                }
-              />
+              <div className={styles.studentResponseInterior}>
+                <p>{response.text}</p>
+                <ResponseMenuDropdown
+                  response={response}
+                  hideResponse={response =>
+                    setHiddenResponses(prevHidden => [
+                      ...prevHidden,
+                      response.user_id,
+                    ])
+                  }
+                  unpinResponse={response =>
+                    setPinnedResponseIds(prevPinned =>
+                      prevPinned.filter(id => id !== response.user_id)
+                    )
+                  }
+                />
+              </div>
             </div>
           ))}
       </div>
@@ -65,22 +67,24 @@ const FreeResponseResponses = ({responses}) => {
               styles.unpinnedResponse
             )}
           >
-            <p>{response.text}</p>
-            <ResponseMenuDropdown
-              response={response}
-              hideResponse={response =>
-                setHiddenResponses(prevHidden => [
-                  ...prevHidden,
-                  response.user_id,
-                ])
-              }
-              pinResponse={response =>
-                setPinnedResponseIds(prevPinned => [
-                  ...prevPinned,
-                  response.user_id,
-                ])
-              }
-            />
+            <div className={styles.studentResponseInterior}>
+              <p>{response.text}</p>
+              <ResponseMenuDropdown
+                response={response}
+                hideResponse={response =>
+                  setHiddenResponses(prevHidden => [
+                    ...prevHidden,
+                    response.user_id,
+                  ])
+                }
+                pinResponse={response =>
+                  setPinnedResponseIds(prevPinned => [
+                    ...prevPinned,
+                    response.user_id,
+                  ])
+                }
+              />
+            </div>
           </div>
         ))}
       </div>

@@ -64,7 +64,7 @@ const ResponseMenuDropdown = ({
         type="tertiary"
         className={classNames(
           styles.studentAnswerMenuButton,
-          styles.studentAnswerMenuButtonPinned
+          unpinResponse && styles.studentAnswerMenuButtonPinned
         )}
       />
       {isOpen && (
