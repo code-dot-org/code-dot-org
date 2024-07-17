@@ -8,7 +8,6 @@
 #   code.org/oceans
 #   code.org/hourofcode/overview
 #   code.org/learn
-#   code.org/prize
 #   code.org/hourofcode2022
 #   code.org/maker
 #   code.org/blockchain
