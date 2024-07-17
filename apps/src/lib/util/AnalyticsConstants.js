@@ -122,25 +122,22 @@ const EVENTS = {
 
   // Section table on teacher My Dashboard
   SECTION_TABLE_LOGIN_INSTRUCTIONS_CLICKED:
-    'Teacher clicked print login cards from the section table',
+    'Section table join instructions or login cards clicked',
   SECTION_TABLE_EDIT_SECTION_DETAILS_CLICKED:
-    'Teacher clicked edit section details from the section table',
-  SECTION_TABLE_VIEW_PROGRESS_CLICKED:
-    'Teacher clicked view progress from the section table',
+    'Section table edit section details clicked',
+  SECTION_TABLE_VIEW_PROGRESS_CLICKED: 'Section table view progress clicked',
   SECTION_TABLE_MANAGE_STUDENTS_CLICKED:
-    'Teacher clicked manage students from the section table',
+    'Section table manage students clicked',
   SECTION_TABLE_ARCHIVE_SECTION_CLICKED:
     'Section table archive section clicked',
   SECTION_TABLE_RESTORE_SECTION_CLICKED:
     'Section table restore section clicked',
-  SECTION_TABLE_DELETE_SECTION_CLICKED:
-    'Teacher clicked delete section from the section table',
+  SECTION_TABLE_DELETE_SECTION_CLICKED: 'Section table delete section clicked',
   SECTION_TABLE_PRINT_CERTIFICATES_CLICKED:
-    'Teacher clicked print certificates from the section table',
+    'Section table print certificates clicked',
   SECTION_TABLE_SYNC_GOOGLE_CLASSROOM_CLICKED:
-    'Teacher clicked sync Google Classroom from the section table',
-  SECTION_TABLE_SYNC_CLEVER_CLICKED:
-    'Teacher clicked sync Clever from the section table',
+    'Section table sync google classroom clicked',
+  SECTION_TABLE_SYNC_CLEVER_CLICKED: 'Section table sync clever clicked',
 
   // Section progress v2
   PROGRESS_V2_VIEW: 'Section New Progress Viewed ',
