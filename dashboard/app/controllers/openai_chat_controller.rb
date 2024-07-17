@@ -24,6 +24,13 @@ class OpenaiChatController < ApplicationController
 
     # Fetch the level-specific context: instructions and test files if applicable
     level_id = params[:levelId]
+    script_id = params[:scriptId]
+
+    new_system_prompt = AitutorSystemPromptHelper.get_system_prompt(level_id, script_id)
+
+    puts "new_system_prompt"
+    puts
+    puts new_system_prompt
 
     level_instructions = ""
     level_instructions = get_level_instructions(level_id) if !!level_id
@@ -35,7 +42,7 @@ class OpenaiChatController < ApplicationController
     # system prompt, use the default prompt stored server-side.
 
     # read_file_from_s3(S3_TUTOR_SYSTEM_PROMPT_PATH)
-    system_prompt = !!params[:systemPrompt] ? params[:systemPrompt] : AitutorSystemPromptHelper.get_system_prompt('Java')
+    system_prompt = !!params[:systemPrompt] ? params[:systemPrompt] : read_file_from_s3(S3_TUTOR_SYSTEM_PROMPT_PATH)
     updated_system_prompt = add_content_to_system_prompt(system_prompt, level_instructions, test_file_contents)
 
     messages = prepend_system_prompt(updated_system_prompt, params[:messages])

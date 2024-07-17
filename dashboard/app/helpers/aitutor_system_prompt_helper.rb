@@ -32,12 +32,53 @@ module AitutorSystemPromptHelper
     base_system_prompt
   end
 
-  def self.get_language_specific_system_prompt(language)
+  def self.get_language_specific_system_prompt(language = 'Java')
     "Specific Exclusions: Refrain from discussing topics not explicitly related to computer
     science or #{language} programming."
   end
 
-  def self.get_system_prompt(language)
-    get_base_system_prompt + " " + get_language_specific_system_prompt(language)
+  def self.get_level_instructions(level)
+    level_instructions = level.properties["long_instructions"]
+    "\n Here are the student instructions for this level: #{level_instructions}"
+  end
+
+  def self.get_validated_level_test_file_contents(level)
+    # level = Level.find(level_id)
+
+    # unless level
+    #   return render(status: :bad_request, json: {message: "Couldn't find level with id=#{level_id}."})
+    # end
+
+    test_file_contents = ""
+    if !!level.validation
+      if level.validation.values.empty?
+        return render(status: :bad_request, json: {message: "There are no test files associated with level id=#{level_id}."})
+      else
+        level.validation.each_value do |validation|
+          test_file_contents += validation["text"]
+        end
+      end
+    end
+    "\n The contents of the test file are: #{test_file_contents}"
+  end
+
+  def self.get_system_prompt(level_id, script_id)
+    # unless level
+    #   return render(status: :bad_request, json: {message: "Couldn't find level with id=#{level_id}."})
+    # end
+    # level = Level.find(level_id)
+    # puts "----- LEVEL ----"
+    # puts level.inspect
+    # puts level.script_levels.any? { |sl| }.unit.csa?
+    sl = ScriptLevel.where(script_id: script_id)
+    puts "script_levels"
+    puts
+    puts sl.inspect
+    # is_csa_unit = Unit.find(id: script_id).csa?
+    # puts "CSA?"
+    # puts is_csa_unit
+    system_prompt = get_base_system_prompt + get_language_specific_system_prompt + get_level_instructions(level) + get_validated_level_test_file_contents(level)
+
+    system_prompt
   end
 end
