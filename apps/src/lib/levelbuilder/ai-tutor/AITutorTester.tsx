@@ -13,7 +13,8 @@ import AITutorTesterSampleColumns from './AITutorTesterSampleColumns';
  */
 
 interface AIInteraction extends ChatContext {
-  systemPrompt: string | undefined;
+  systemPrompt?: string | undefined;
+  levelId?: number | undefined;
   aiResponse: string | undefined;
 }
 
@@ -58,7 +59,8 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
     const chatApiResponse = await getChatCompletionMessage(
       formatQuestionForAITutor(row),
       [],
-      row.systemPrompt
+      row.systemPrompt,
+      row.levelId
     );
     row.aiResponse = chatApiResponse.assistantResponse;
     setResponseCount(prevResponseCount => prevResponseCount + 1);
