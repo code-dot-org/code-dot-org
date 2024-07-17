@@ -93,11 +93,10 @@ class SectionActionDropdown extends Component {
   };
 
   onClickHideShow = () => {
-    analyticsReporter.sendEvent(
-      EVENTS.SECTION_TABLE_ARCHIVE_OR_RESTORE_CLICKED,
-      {},
-      PLATFORMS.BOTH
-    );
+    const hideShowEvent = this.props.sectionData.hidden
+      ? EVENTS.SECTION_TABLE_RESTORE_SECTION_CLICKED
+      : EVENTS.SECTION_TABLE_ARCHIVE_SECTION_CLICKED;
+    analyticsReporter.sendEvent(hideShowEvent, {}, PLATFORMS.BOTH);
     this.props.toggleSectionHidden(this.props.sectionData.id);
   };
 
