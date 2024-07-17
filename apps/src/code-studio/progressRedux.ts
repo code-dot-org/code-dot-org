@@ -30,6 +30,7 @@ import {
 } from '@cdo/apps/types/progressTypes';
 import {RootState} from '@cdo/apps/types/redux';
 
+import {notifyLevelChange} from '../lab2/lab2Redux';
 import {getBubbleUrl} from '../templates/progress/BubbleFactory';
 import {AppDispatch} from '../util/reduxHooks';
 import {navigateToHref} from '../utils';
@@ -325,6 +326,8 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
 
     if (canChangeLevelInPage(currentLevel, newLevel)) {
       updateBrowserForLevelNavigation(state, newLevel.path, levelId);
+      // Notify the Lab2 system that the level is changing.
+      notifyLevelChange(currentLevel.id, levelId);
       dispatch(setCurrentLevelId(levelId));
     } else {
       const url = getBubbleUrl(newLevel.path, undefined, undefined, true);

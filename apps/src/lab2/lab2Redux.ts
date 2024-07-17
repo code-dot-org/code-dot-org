@@ -46,6 +46,7 @@ import {
   ProjectManagerStorageType,
   ProjectSources,
 } from './types';
+import {LifecycleEvent} from './utils/LifecycleNotifier';
 
 interface PageError {
   errorMessage: string;
@@ -106,6 +107,9 @@ export const setUpWithLevel = createAsyncThunk(
     },
     thunkAPI
   ) => {
+    Lab2Registry.getInstance()
+      .getLifecycleNotifier()
+      .notify(LifecycleEvent.LevelLoadStarted, payload.levelId);
     try {
       // Update properties for reporting as early as possible in case of errors.
       Lab2Registry.getInstance().getMetricsReporter().updateProperties({
@@ -269,6 +273,15 @@ export const setUpWithoutLevel = createAsyncThunk(
     }
   }
 );
+
+// Function for external components to notify the Lab2 lifecycle notifier that the level is changing.
+export const notifyLevelChange = (
+  previousLevelId: string,
+  nextLevelId: string
+) =>
+  Lab2Registry.getInstance()
+    .getLifecycleNotifier()
+    .notify(LifecycleEvent.LevelChangeRequested, previousLevelId, nextLevelId);
 
 // Selectors
 
@@ -476,6 +489,14 @@ function setProjectAndLevelData(
   if (aborted) {
     return;
   }
+  Lab2Registry.getInstance()
+    .getLifecycleNotifier()
+    .notify(
+      LifecycleEvent.LevelLoadCompleted,
+      data.levelProperties,
+      data.channel,
+      data.initialSources
+    );
   // Dispatch level change last so labs can react to the new level data
   // and new initial sources at once.
   dispatch(onLevelChange(data));
