@@ -9,6 +9,7 @@ const DEFAULT_PROPS = {
     user_id: 1,
     text: 'response text',
   },
+  hideResponse: () => {},
 };
 
 describe('ResponseMenuDropdown', () => {
@@ -46,7 +47,8 @@ describe('ResponseMenuDropdown', () => {
   it('Closes the dropdown when an option is clicked', () => {
     DCDO.set('cfu-pin-hide-enabled', true);
 
-    renderDefault();
+    const hideResponse = jest.fn();
+    renderDefault({hideResponse: hideResponse});
 
     const button = screen.getByRole('button');
     button.click();
@@ -61,6 +63,7 @@ describe('ResponseMenuDropdown', () => {
     const hideResponseButton = screen.getByText('Hide response');
     hideResponseButton.click();
 
+    expect(hideResponse).toHaveBeenCalled();
     expect(screen.queryByText('Pin response')).toBeNull();
   });
 });
