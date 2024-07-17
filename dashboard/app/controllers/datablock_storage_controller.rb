@@ -46,16 +46,6 @@ class DatablockStorageController < ApplicationController
   ]
 
   ##########################################################
-  #   Debug View                                           #
-  ##########################################################
-  def index
-    @key_value_pairs = DatablockStorageKvp.where(project_id: @project_id)
-    @records = DatablockStorageRecord.where(project_id: @project_id)
-    @tables = DatablockStorageTable.where(project_id: @project_id)
-    @library_manifest = DatablockStorageLibraryManifest.instance.library_manifest
-  end
-
-  ##########################################################
   #   Key-Value-Pair API                                   #
   ##########################################################
 

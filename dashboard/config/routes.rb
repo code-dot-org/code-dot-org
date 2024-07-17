@@ -1176,7 +1176,7 @@ Dashboard::Application.routes.draw do
 
     # DatablockStorageController powers the data features of applab,
     # and the key/value pair store feature of gamelab
-    resources :datablock_storage, path: '/datablock_storage/:channel_id/', only: [:index] do
+    resources :datablock_storage, path: '/datablock_storage/:channel_id/', only: [] do
       collection do
         # Datablock Storage: Key-Value-Pair API
         post :set_key_value
