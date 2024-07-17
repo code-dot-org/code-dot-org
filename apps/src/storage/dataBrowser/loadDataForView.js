@@ -19,7 +19,7 @@ export function refreshCurrentDataView() {
 /**
  * Given a particular view in the data sets browser, invoke appropriate
  * commands to the storageBackend() loading the data needed for that view.
- * @param {StorageBackend} storage - firebaseStorage or datablockStorage
+ * @param {StorageBackend} storage
  * @param {DataView} view
  * @param {string} newTableName - name of the table being displayed, if any
  */
