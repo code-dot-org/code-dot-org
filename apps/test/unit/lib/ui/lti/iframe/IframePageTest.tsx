@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import React from 'react';
 import sinon, {SinonStub} from 'sinon';
 
-import LtiIframePage from '@cdo/apps/lib/ui/lti/iframe/LtiIframePage';
+import LtiIframePage from '@cdo/apps/lib/ui/simpleSignUp/lti/iframe/LtiIframePage';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../../../../util/reconfiguredChai';

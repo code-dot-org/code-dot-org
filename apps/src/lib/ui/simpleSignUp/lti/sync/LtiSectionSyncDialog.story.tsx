@@ -1,5 +1,5 @@
 import React from 'react';
-import LtiSectionSyncDialog from '@cdo/apps/lib/ui/lti/sync/LtiSectionSyncDialog';
+import LtiSectionSyncDialog from '@cdo/apps/lib/ui/simpleSignUp/lti/sync/LtiSectionSyncDialog';
 import {StoryFn} from '@storybook/react';
 
 export default {

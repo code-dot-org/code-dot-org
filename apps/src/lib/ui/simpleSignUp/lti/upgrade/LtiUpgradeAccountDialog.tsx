@@ -1,4 +1,4 @@
-import {LtiUpgradeAccountDialogProps} from '@cdo/apps/lib/ui/lti/upgrade/types';
+import {LtiUpgradeAccountDialogProps} from '@cdo/apps/lib/ui/simpleSignUp/lti/upgrade/types';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import React, {CSSProperties, useState} from 'react';
 import i18n from '@cdo/locale';

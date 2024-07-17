@@ -3,7 +3,7 @@ import $ from 'jquery';
 import React from 'react';
 import sinon from 'sinon';
 
-import LtiDynamicRegistrationPage from '@cdo/apps/lib/ui/lti/registration/LtiDynamicRegistrationPage';
+import LtiDynamicRegistrationPage from '@cdo/apps/lib/ui/simpleSignUp/lti/registration/LtiDynamicRegistrationPage';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../../../../util/reconfiguredChai';

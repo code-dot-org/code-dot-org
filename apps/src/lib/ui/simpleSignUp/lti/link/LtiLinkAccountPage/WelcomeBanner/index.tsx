@@ -1,9 +1,9 @@
-import styles from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/link-account.module.scss';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import React, {useCallback, useContext} from 'react';
 import i18n from '@cdo/locale';
 
+import styles from '../../../../link-account.module.scss';
 import canvas from '../../../assets/canvas.svg';
 import schoology from '../../../assets/schoology.svg';
 import codeLogo from '../../../assets/codeLogo.svg';

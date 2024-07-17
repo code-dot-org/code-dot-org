@@ -9,11 +9,11 @@ import React from 'react';
 import sinon from 'sinon';
 
 import DCDO from '@cdo/apps/dcdo';
-import LtiLinkAccountPage from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage';
+import LtiLinkAccountPage from '@cdo/apps/lib/ui/simpleSignUp/lti/link/LtiLinkAccountPage';
 import {
   LtiProviderContext,
   LtiProviderContextProps,
-} from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/context';
+} from '@cdo/apps/lib/ui/simpleSignUp/lti/link/LtiLinkAccountPage/context';
 import * as authenticityTokenStore from '@cdo/apps/util/AuthenticityTokenStore';
 import * as utils from '@cdo/apps/utils';
 import i18n from '@cdo/locale';

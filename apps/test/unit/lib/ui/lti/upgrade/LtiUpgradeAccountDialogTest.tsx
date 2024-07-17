@@ -3,8 +3,8 @@ import $ from 'jquery';
 import React from 'react';
 import sinon from 'sinon';
 
-import LtiUpgradeAccountDialog from '@cdo/apps/lib/ui/lti/upgrade/LtiUpgradeAccountDialog';
-import {LtiUpgradeAccountForm} from '@cdo/apps/lib/ui/lti/upgrade/types';
+import LtiUpgradeAccountDialog from '@cdo/apps/lib/ui/simpleSignUp/lti/upgrade/LtiUpgradeAccountDialog';
+import {LtiUpgradeAccountForm} from '@cdo/apps/lib/ui/simpleSignUp/lti/upgrade/types';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../../../../util/reconfiguredChai';

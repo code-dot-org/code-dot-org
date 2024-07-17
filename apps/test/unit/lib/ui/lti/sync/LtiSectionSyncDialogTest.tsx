@@ -3,11 +3,11 @@ import $ from 'jquery';
 import React from 'react';
 import sinon from 'sinon';
 
-import LtiSectionSyncDialog from '@cdo/apps/lib/ui/lti/sync/LtiSectionSyncDialog';
+import LtiSectionSyncDialog from '@cdo/apps/lib/ui/simpleSignUp/lti/sync/LtiSectionSyncDialog';
 import {
   LtiSectionMap,
   LtiSectionSyncResult,
-} from '@cdo/apps/lib/ui/lti/sync/types';
+} from '@cdo/apps/lib/ui/simpleSignUp/lti/sync/types';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../../../../util/reconfiguredChai';

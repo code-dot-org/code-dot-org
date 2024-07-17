@@ -4,9 +4,9 @@ import React from 'react';
 import {
   LtiProviderContext,
   LtiProviderContextProps,
-} from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/context';
-import {LtiProvider} from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/types';
-import WelcomeBanner from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/WelcomeBanner';
+} from '@cdo/apps/lib/ui/simpleSignUp/lti/link/LtiLinkAccountPage/context';
+import {LtiProvider} from '@cdo/apps/lib/ui/simpleSignUp/lti/link/LtiLinkAccountPage/types';
+import WelcomeBanner from '@cdo/apps/lib/ui/simpleSignUp/lti/link/LtiLinkAccountPage/WelcomeBanner';
 import i18n from '@cdo/locale';
 
 const getContext = (ltiProvider: LtiProvider): LtiProviderContextProps => {
