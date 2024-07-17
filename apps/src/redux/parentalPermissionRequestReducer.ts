@@ -26,7 +26,6 @@ export interface ParentalPermissionRequest {
   requested_at: string;
   resends_sent: number;
   consent_status: string;
-  error?: string;
 }
 
 type ParentalPermissionRequestAction =
@@ -155,8 +154,6 @@ export const requestParentalPermission = async (
   try {
     dispatch({type: REQUEST_PARENTAL_PERMISSION_PERFORM});
 
-    console.log('parental permission request email', parentEmail);
-
     const response = await fetch(REQUEST_PARENTAL_PERMISSION_URL, {
       method: 'POST',
       headers: {
@@ -167,23 +164,7 @@ export const requestParentalPermission = async (
       body: JSON.stringify({'parent-email': parentEmail}),
     });
 
-    console.log('parental permission response', response);
-
-    let responseData: ParentalPermissionRequest = {
-      parent_email: '',
-      requested_at: '',
-      resends_sent: 0,
-      consent_status: '',
-    };
-    try {
-      responseData = await response.json();
-    } catch (jsonError) {
-      console.log('parental permission response error', await response.text());
-      throw jsonError;
-    }
-
-    console.log('parental permission response data', responseData);
-
+    const responseData = await response.json();
     if (!response.ok) throw responseData.error || i18n.formServerError();
 
     dispatch({
@@ -191,8 +172,6 @@ export const requestParentalPermission = async (
       parentalPermissionRequest: responseData,
     });
   } catch (error) {
-    console.error(error);
-
     dispatch({
       type: REQUEST_PARENTAL_PERMISSION_FAILURE,
       error: error instanceof Error ? i18n.formServerError() : error,
