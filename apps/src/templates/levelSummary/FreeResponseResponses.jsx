@@ -38,7 +38,7 @@ const FreeResponseResponses = ({responses}) => {
                 styles.pinnedResponse
               )}
             >
-              <div className={styles.studentResponseInterior}>
+              <div className={styles.studentAnswerInterior}>
                 <p>{response.text}</p>
                 <ResponseMenuDropdown
                   response={response}
@@ -67,7 +67,7 @@ const FreeResponseResponses = ({responses}) => {
               styles.unpinnedResponse
             )}
           >
-            <div className={styles.studentResponseInterior}>
+            <div className={styles.studentAnswerInterior}>
               <p>{response.text}</p>
               <ResponseMenuDropdown
                 response={response}
