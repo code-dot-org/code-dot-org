@@ -13,12 +13,12 @@ const FreeResponseResponses = ({responses}) => {
 
   return (
     <div className={styles.studentResponsesContent}>
-      <div className={styles.studentAnswerInterior}>
-        <div className={styles.studentResponsesColumns}>
-          {responses
-            .filter(response => !hiddenResponses.includes(response.user_id))
-            .map(response => (
-              <div key={response.user_id} className={styles.studentAnswer}>
+      <div className={styles.studentResponsesColumns}>
+        {responses
+          .filter(response => !hiddenResponses.includes(response.user_id))
+          .map(response => (
+            <div key={response.user_id} className={styles.studentAnswer}>
+              <div className={styles.studentAnswerInterior}>
                 <p>{response.text}</p>
                 <ResponseMenuDropdown
                   response={response}
@@ -30,8 +30,8 @@ const FreeResponseResponses = ({responses}) => {
                   }
                 />
               </div>
-            ))}
-        </div>
+            </div>
+          ))}
       </div>
       {hiddenResponses.length > 0 && (
         <Alert
