@@ -473,7 +473,7 @@ Craft.reset = function (first) {
 };
 
 Craft.phaserLoaded = function () {
-  return Craft.gameController?.game?.load?.hasLoaded;
+  return !!Craft.gameController?.game?.load;
 };
 
 /**

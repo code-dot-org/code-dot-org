@@ -610,7 +610,7 @@ export default class Craft {
   }
 
   static phaserLoaded() {
-    return Craft.gameController?.game?.load?.hasLoaded;
+    return !!Craft.gameController?.game?.load;
   }
 
   static levelInitialized() {
