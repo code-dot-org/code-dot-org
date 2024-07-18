@@ -1,4 +1,16 @@
 module AitutorSystemPromptHelper
+  def self.get_system_prompt(level_id, unit_id)
+    level = get_level(level_id)
+    unit = get_unit(unit_id)
+
+    system_prompt = get_base_system_prompt
+    system_prompt << get_programming_language_system_prompt(unit) if unit
+    system_prompt << get_level_instructions(level) if level
+    system_prompt << get_validated_level_test_file_contents(level) if level
+
+    system_prompt
+  end
+
   def self.get_base_system_prompt
     base_system_prompt = "As an AI assistant, your mission is to support a conducive learning environment
       for high school computer science students. You should use language appropriate for conversing with an 8th-grade student.
@@ -55,13 +67,37 @@ module AitutorSystemPromptHelper
       "\n The contents of the test file are: #{test_file_contents}"
   end
 
-  def self.get_system_prompt(level, unit)
-    system_prompt =
-      get_base_system_prompt +
-      get_programming_language_system_prompt(unit) +
-      get_level_instructions(level) +
-      get_validated_level_test_file_contents(level)
+  def self.get_level(level_id)
+    level = nil
+    if level_id
+      level = begin Level.find(level_id)
+      rescue ActiveRecord::RecordNotFound
+        Honeybadger.notify(exception,
+            error_message: 'Invalid level_id in AI Tutor system prompt helper',
+            context: {
+              level_id: level_id,
+              user_id: current_user.id
+            }
+          )
+      end
+    end
+    level
+  end
 
-    system_prompt
+  def self.get_unit(unit_id)
+    unit = nil
+    if unit_id
+      unit = begin Unit.find(unit_id)
+      rescue ActiveRecord::RecordNotFound
+        Honeybadger.notify(exception,
+            error_message: 'Invalid unit_id in AI Tutor system prompt helper',
+            context: {
+              unit_id: unit_id,
+              user_id: current_user.id
+            }
+          )
+      end
+    end
+    unit
   end
 end

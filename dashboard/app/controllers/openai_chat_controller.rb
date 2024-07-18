@@ -18,18 +18,9 @@ class OpenaiChatController < ApplicationController
     # The system prompt can be passed in as a param for testing purposes. If there isn't a custom
     # system prompt, create one based on the level context.
     level_id = params[:levelId]
-    level = begin Level.find(level_id)
-    rescue ActiveRecord::RecordNotFound
-      return render(status: :bad_request, json: {message: "Couldn't find level with id=#{level_id}."})
-    end
-
     script_id = params[:scriptId]
-    unit = begin Unit.find(script_id)
-    rescue ActiveRecord::RecordNotFound
-      return render(status: :bad_request, json: {message: "Couldn't find unit with id=#{script_id}."})
-    end
 
-    system_prompt = !!params[:systemPrompt] ? params[:systemPrompt] : AitutorSystemPromptHelper.get_system_prompt(level, unit)
+    system_prompt = !!params[:systemPrompt] ? params[:systemPrompt] : AitutorSystemPromptHelper.get_system_prompt(level_id, script_id)
 
     messages = prepend_system_prompt(system_prompt, params[:messages])
 
