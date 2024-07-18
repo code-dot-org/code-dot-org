@@ -1,17 +1,14 @@
-import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-
-import fontConstants from '@cdo/apps/fontConstants';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import PropTypes from 'prop-types';
 import Dialog, {Body} from '@cdo/apps/templates/Dialog';
-import color from '@cdo/apps/util/color';
-import i18n from '@cdo/locale';
-
-import {getStore} from '../../redux';
 import Button from '../../templates/Button';
-
 import SchoolInfoInterstitial from './SchoolInfoInterstitial';
+import i18n from '@cdo/locale';
+import color from '@cdo/apps/util/color';
+import {getStore} from '../../redux';
+import fontConstants from '@cdo/apps/fontConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export const styles = {
   button: {

@@ -1,12 +1,11 @@
 import $ from 'jquery';
+import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {LegacyContractMatchErrorDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
-import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 import i18n from '@cdo/locale';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 
 $(window).load(function () {
   $.widget('custom.coloriconselectmenu', $.ui.selectmenu, {

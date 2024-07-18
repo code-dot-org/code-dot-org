@@ -1,10 +1,9 @@
-import _ from 'lodash';
-import PropTypes from 'prop-types';
 import React from 'react';
-import {Portal} from 'react-portal';
+import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip';
-
+import {Portal} from 'react-portal';
 import FontAwesome from '../../templates/FontAwesome';
+import _ from 'lodash';
 
 export default function HelpTip({children}) {
   const id = _.uniqueId();

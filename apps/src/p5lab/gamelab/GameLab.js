@@ -1,15 +1,14 @@
-import project from '@cdo/apps/code-studio/initApp/project';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import msg from '@cdo/gamelab/locale';
 import {getStore} from '@cdo/apps/redux';
+import P5Lab from '../P5Lab';
+import {P5LabType} from '../constants';
+import project from '@cdo/apps/code-studio/initApp/project';
+import {showLevelBuilderSaveButton} from '../../code-studio/header';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
-import msg from '@cdo/gamelab/locale';
-
-import {showLevelBuilderSaveButton} from '../../code-studio/header';
-import {P5LabType} from '../constants';
-import P5Lab from '../P5Lab';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export default class GameLab extends P5Lab {
   getAvatarUrl(levelInstructor) {

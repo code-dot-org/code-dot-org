@@ -1,5 +1,3 @@
-import {getStore} from '@cdo/apps/redux';
-
 import {
   REQUEST_LOCATION,
   CANCEL_LOCATION_SELECTION,
@@ -7,6 +5,7 @@ import {
   UPDATE_LOCATION,
 } from '../actions';
 import {LocationPickerMode} from '../spritelab/constants';
+import {getStore} from '@cdo/apps/redux';
 
 export default function locationPicker(state, action) {
   state = state || {

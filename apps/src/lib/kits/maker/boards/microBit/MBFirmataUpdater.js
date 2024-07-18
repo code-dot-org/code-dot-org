@@ -1,5 +1,3 @@
-import {DAPLink, WebUSB} from 'dapjs';
-
 import {
   MICROBIT_VENDOR_ID,
   MICROBIT_PRODUCT_ID,
@@ -10,10 +8,11 @@ import {
   MICROBIT_V1,
   MICROBIT_V2,
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
-import {setMicroBitFirmataUpdatePercent} from '@cdo/apps/lib/kits/maker/microBitRedux';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {DAPLink, WebUSB} from 'dapjs';
 import {getStore} from '@cdo/apps/redux';
+import {setMicroBitFirmataUpdatePercent} from '@cdo/apps/lib/kits/maker/microBitRedux';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 export default class MBFirmataUpdater {
   constructor() {

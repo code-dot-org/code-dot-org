@@ -1,9 +1,8 @@
-import _ from 'lodash';
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip';
-
 import FontAwesome from '../../templates/FontAwesome';
+import _ from 'lodash';
 
 // Help Tip without the Portal feature, which doesn't work if used in a Modal.
 export default function ModalHelpTip({children}) {

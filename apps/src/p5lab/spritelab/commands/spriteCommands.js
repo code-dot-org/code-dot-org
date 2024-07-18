@@ -1,10 +1,8 @@
-import * as utils from '@cdo/apps/p5lab/utils';
-
-import {APP_HEIGHT} from '../../constants';
-import {layoutSpriteGroup} from '../../layoutUtils';
-
-import {commands as behaviorCommands} from './behaviorCommands';
 import {commands as locationCommands} from './locationCommands';
+import {commands as behaviorCommands} from './behaviorCommands';
+import {layoutSpriteGroup} from '../../layoutUtils';
+import * as utils from '@cdo/apps/p5lab/utils';
+import {APP_HEIGHT} from '../../constants';
 
 export const commands = {
   countByAnimation(spriteArg) {

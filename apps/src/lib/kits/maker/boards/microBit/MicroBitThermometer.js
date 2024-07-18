@@ -1,5 +1,4 @@
 import {EventEmitter} from 'events';
-
 import {roundToHundredth, SENSOR_CHANNELS} from './MicroBitConstants';
 
 export default class MicroBitThermometer extends EventEmitter {

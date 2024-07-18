@@ -1,7 +1,6 @@
-import {action} from '@storybook/addon-actions';
 import React from 'react';
-
 import AddParentEmailModal from './AddParentEmailModal';
+import {action} from '@storybook/addon-actions';
 
 const DEFAULT_PROPS = {
   handleSubmit: action('handleSubmit callback'),

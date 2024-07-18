@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-
 import commonStyles from '../../commonStyles';
 import * as dom from '../../dom';
 

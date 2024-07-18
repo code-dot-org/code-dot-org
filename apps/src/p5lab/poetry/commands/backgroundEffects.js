@@ -1,9 +1,7 @@
-import drawHeart from '@code-dot-org/dance-party/src/shapes/heart';
-
-import {APP_WIDTH, APP_HEIGHT} from '../../constants';
-import {PALETTES} from '../constants';
-
 import * as utils from './utils';
+import {PALETTES} from '../constants';
+import {APP_WIDTH, APP_HEIGHT} from '../../constants';
+import drawHeart from '@code-dot-org/dance-party/src/shapes/heart';
 
 export const commands = {
   setBackground(color) {

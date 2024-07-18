@@ -1,7 +1,6 @@
 import {EventEmitter} from 'events';
-
-import {ACCEL_EVENT_ID} from './MBFirmataWrapper';
 import {SENSOR_CHANNELS, roundToHundredth} from './MicroBitConstants';
+import {ACCEL_EVENT_ID} from './MBFirmataWrapper';
 
 // Transfer the acceleration units from milli-g to meters/second^2
 // Round to the nearest hundredth

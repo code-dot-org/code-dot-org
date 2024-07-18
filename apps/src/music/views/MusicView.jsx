@@ -1,39 +1,20 @@
 /** @file Top-level view for Music */
-import {isEqual} from 'lodash';
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-
-import DCDO from '@cdo/apps/dcdo';
-import {
-  isReadOnlyWorkspace,
-  setIsLoading,
-  setPageError,
-} from '@cdo/apps/lab2/lab2Redux';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
-// This is the utils AnalyticsReporter
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import MusicPlayer from '../player/MusicPlayer';
 // This is the Music Lab specific AnalyticsReporter
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
+// This is the utils AnalyticsReporter
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-
-import AppConfig, {getBlockMode} from '../appConfig';
-import {TRIGGER_FIELD} from '../blockly/constants';
-import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
-import {
-  BlockMode,
-  LEGACY_DEFAULT_LIBRARY,
-  DEFAULT_LIBRARY,
-  DEFAULT_PACK,
-} from '../constants';
 import {AnalyticsContext} from '../context';
 import Globals from '../globals';
-import MusicLibrary from '../player/MusicLibrary';
-import MusicPlayer from '../player/MusicPlayer';
-import AdvancedSequencer from '../player/sequencer/AdvancedSequencer';
-import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
-import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
+import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
+import AppConfig, {getBlockMode} from '../appConfig';
+import SoundUploader from '../utils/SoundUploader';
+import {loadLibrary} from '../utils/Loader';
 import MusicValidator from '../progress/MusicValidator';
 import {
   setLibraryName,
@@ -55,13 +36,29 @@ import {
   setSelectedTriggerId,
   clearSelectedTriggerId,
 } from '../redux/musicRedux';
-import {loadLibrary} from '../utils/Loader';
-import {Key} from '../utils/Notes';
-import SoundUploader from '../utils/SoundUploader';
-
-import Callouts from './Callouts';
 import KeyHandler from './KeyHandler';
+import Callouts from './Callouts';
+import {
+  isReadOnlyWorkspace,
+  setIsLoading,
+  setPageError,
+} from '@cdo/apps/lab2/lab2Redux';
+import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
+import AdvancedSequencer from '../player/sequencer/AdvancedSequencer';
+import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequencer';
+import {
+  BlockMode,
+  LEGACY_DEFAULT_LIBRARY,
+  DEFAULT_LIBRARY,
+  DEFAULT_PACK,
+} from '../constants';
+import {Key} from '../utils/Notes';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {isEqual} from 'lodash';
+import MusicLibrary from '../player/MusicLibrary';
+import {TRIGGER_FIELD} from '../blockly/constants';
 import MusicLabView from './MusicLabView';
+import DCDO from '@cdo/apps/dcdo';
 
 const BLOCKLY_DIV_ID = 'blockly-div';
 

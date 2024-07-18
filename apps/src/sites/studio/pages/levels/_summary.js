@@ -1,17 +1,16 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
-
-import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
-import {UnconnectedPredictSolution} from '@cdo/apps/lab2/views/components/PredictSolution';
 import {getStore} from '@cdo/apps/redux';
-import SummaryPredictQuestion from '@cdo/apps/templates/levelSummary/SummaryPredictQuestion';
+import {Provider} from 'react-redux';
+import getScriptData from '@cdo/apps/util/getScriptData';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import SummaryTopLinks from '@cdo/apps/templates/levelSummary/SummaryTopLinks';
 import SummaryResponses from '@cdo/apps/templates/levelSummary/SummaryResponses';
 import SummaryTeacherInstructions from '@cdo/apps/templates/levelSummary/SummaryTeacherInstructions';
-import SummaryTopLinks from '@cdo/apps/templates/levelSummary/SummaryTopLinks';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import getScriptData from '@cdo/apps/util/getScriptData';
+import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
+import {UnconnectedPredictSolution} from '@cdo/apps/lab2/views/components/PredictSolution';
+import SummaryPredictQuestion from '@cdo/apps/templates/levelSummary/SummaryPredictQuestion';
 
 $(document).ready(() => {
   const store = getStore();

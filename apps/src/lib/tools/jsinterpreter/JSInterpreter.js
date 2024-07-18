@@ -1,16 +1,14 @@
-import {generateAST} from '@code-dot-org/js-interpreter';
+import * as codegen from './codegen';
+import ObservableEventDEPRECATED from '../../../ObservableEventDEPRECATED';
+import * as utils from '../../../utils';
 import acorn from '@code-dot-org/js-interpreter/acorn';
-
+import {getStore} from '../../../redux';
+import CustomMarshalingInterpreter from './CustomMarshalingInterpreter';
+import CustomMarshaler from './CustomMarshaler';
+import {generateAST} from '@code-dot-org/js-interpreter';
 import i18n from '@cdo/locale';
 
-import ObservableEventDEPRECATED from '../../../ObservableEventDEPRECATED';
-import {getStore} from '../../../redux';
 import {setIsDebuggerPaused} from '../../../redux/runState';
-import * as utils from '../../../utils';
-
-import * as codegen from './codegen';
-import CustomMarshaler from './CustomMarshaler';
-import CustomMarshalingInterpreter from './CustomMarshalingInterpreter';
 
 const MAX_CALL_STACK_SIZE = 10000;
 

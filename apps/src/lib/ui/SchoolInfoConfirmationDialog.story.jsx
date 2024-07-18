@@ -1,7 +1,6 @@
-import {action} from '@storybook/addon-actions';
 import React from 'react';
-
 import SchoolInfoConfirmationDialog from './SchoolInfoConfirmationDialog';
+import {action} from '@storybook/addon-actions';
 
 export default {
   component: SchoolInfoConfirmationDialog,

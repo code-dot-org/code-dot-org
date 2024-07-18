@@ -1,8 +1,7 @@
-import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-
+import color from '@cdo/apps/util/color';
 import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import LessonGroupCard from '@cdo/apps/lib/levelbuilder/unit-editor/LessonGroupCard';
 import {
@@ -10,8 +9,7 @@ import {
   convertGroupToUserFacing,
   convertGroupToNonUserFacing,
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
-import color from '@cdo/apps/util/color';
-
+import ReactDOM from 'react-dom';
 import {lessonGroupShape} from './shapes';
 
 class UnitCard extends Component {

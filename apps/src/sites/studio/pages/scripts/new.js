@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import NewUnitForm from '@cdo/apps/lib/levelbuilder/unit-editor/NewUnitForm';
 import getScriptData from '@cdo/apps/util/getScriptData';
 

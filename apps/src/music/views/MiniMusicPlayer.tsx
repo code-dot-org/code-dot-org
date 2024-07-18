@@ -1,24 +1,22 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
-
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import noteImage from '@cdo/static/music/music-note.png';
-
-import Lab2Registry from '../../lab2/Lab2Registry';
+import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
+import {Channel} from '../../lab2/types';
+import MusicPlayer from '../player/MusicPlayer';
+import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
+import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import {
   RemoteSourcesStore,
   SourcesStore,
 } from '../../lab2/projects/SourcesStore';
-import {Channel} from '../../lab2/types';
-import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
-import {setUpBlocklyForMusicLab} from '../blockly/setup';
-import MusicLibrary from '../player/MusicLibrary';
-import MusicPlayer from '../player/MusicPlayer';
-import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import {loadLibrary} from '../utils/Loader';
-
+import MusicLibrary from '../player/MusicLibrary';
+import {setUpBlocklyForMusicLab} from '../blockly/setup';
+import Lab2Registry from '../../lab2/Lab2Registry';
 import moduleStyles from './MiniMusicPlayer.module.scss';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+
+import noteImage from '@cdo/static/music/music-note.png';
 
 interface MiniPlayerViewProps {
   projects: Channel[];

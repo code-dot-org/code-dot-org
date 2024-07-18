@@ -1,9 +1,7 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-
-import Button from '@cdo/apps/templates/Button';
-
+import PropTypes from 'prop-types';
 import LearningGoalItem from './LearningGoalItem';
+import Button from '@cdo/apps/templates/Button';
 
 export default function RubricEditor({
   addNewConcept,

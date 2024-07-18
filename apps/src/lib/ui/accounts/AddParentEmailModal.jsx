@@ -1,13 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
 import i18n from '@cdo/locale';
-
 import BaseDialog from '../../../templates/BaseDialog';
 import color from '../../../util/color';
 import {isEmail} from '../../../util/formatValidation';
-import {pegasus} from '../../util/urlHelpers';
 import {Field, Header, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';
+import {pegasus} from '../../util/urlHelpers';
 
 const STATE_INITIAL = 'initial';
 const STATE_SAVING = 'saving';

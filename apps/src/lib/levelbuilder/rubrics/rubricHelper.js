@@ -1,6 +1,5 @@
-import {snakeCase, isNumber} from 'lodash';
-
 import {navigateToHref} from '@cdo/apps/utils';
+import {snakeCase, isNumber} from 'lodash';
 
 export const RUBRIC_PATH = '/rubrics';
 export const SAVING_TEXT = 'Saving...';

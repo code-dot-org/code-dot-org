@@ -1,5 +1,4 @@
 import {SoundLoadCallbacks} from '../types';
-
 import {Effects} from './interfaces/Effects';
 
 /**

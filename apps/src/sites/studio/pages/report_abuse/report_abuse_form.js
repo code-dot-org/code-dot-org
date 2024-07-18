@@ -1,9 +1,8 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import ReportAbuseForm from '@cdo/apps/code-studio/components/ReportAbuseForm';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import ReportAbuseForm from '@cdo/apps/code-studio/components/ReportAbuseForm';
 
 $(document).ready(function () {
   const props = getScriptData('abuse');

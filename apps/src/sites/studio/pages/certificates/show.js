@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-
-import {getStore} from '@cdo/apps/redux';
-import CertificateShare from '@cdo/apps/templates/certificates/CertificateShare';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import CertificateShare from '@cdo/apps/templates/certificates/CertificateShare';
+import {getStore} from '@cdo/apps/redux';
 
 $(document).ready(function () {
   const store = getStore();

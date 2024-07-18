@@ -1,8 +1,7 @@
-import PropTypes from 'prop-types';
 import React, {useState} from 'react';
-
-import CloneLessonDialog from '@cdo/apps/lib/levelbuilder/unit-editor/CloneLessonDialog';
+import PropTypes from 'prop-types';
 import Button, {ButtonColor} from '@cdo/apps/templates/Button';
+import CloneLessonDialog from '@cdo/apps/lib/levelbuilder/unit-editor/CloneLessonDialog';
 
 export default function CloneLessonDialogButton(props) {
   const [isOpen, setIsOpen] = useState(false);

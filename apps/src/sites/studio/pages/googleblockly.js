@@ -1,9 +1,8 @@
 import GoogleBlockly from 'blockly/core';
 import 'blockly/blocks';
-import cookies from 'js-cookie';
-
-import {blocklyLocaleMap} from '@cdo/apps/blockly/constants';
 import initializeGoogleBlocklyWrapper from '@cdo/apps/blockly/googleBlocklyWrapper';
+import cookies from 'js-cookie';
+import {blocklyLocaleMap} from '@cdo/apps/blockly/constants';
 
 // Blockly provides "messages" files, which are JSON-format files containing human-translated
 // strings that are needed by Blockly.

@@ -1,14 +1,10 @@
-import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-
+import color from '@cdo/apps/util/color';
+import ReactDOM from 'react-dom';
 import {borderRadius, tokenMargin} from '@cdo/apps/lib/levelbuilder/constants';
-import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledTextarea';
 import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
-import CloneLessonDialog from '@cdo/apps/lib/levelbuilder/unit-editor/CloneLessonDialog';
-import LessonToken from '@cdo/apps/lib/levelbuilder/unit-editor/LessonToken';
-import RemoveLessonDialog from '@cdo/apps/lib/levelbuilder/unit-editor/RemoveLessonDialog';
 import {
   moveGroup,
   removeLesson,
@@ -18,9 +14,11 @@ import {
   reorderLesson,
   updateLessonGroupField,
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
-import color from '@cdo/apps/util/color';
-
+import LessonToken from '@cdo/apps/lib/levelbuilder/unit-editor/LessonToken';
 import {lessonGroupShape} from './shapes';
+import CloneLessonDialog from '@cdo/apps/lib/levelbuilder/unit-editor/CloneLessonDialog';
+import RemoveLessonDialog from '@cdo/apps/lib/levelbuilder/unit-editor/RemoveLessonDialog';
+import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledTextarea';
 
 class LessonGroupCard extends Component {
   static propTypes = {

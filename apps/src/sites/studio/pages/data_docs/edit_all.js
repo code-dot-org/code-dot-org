@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import getScriptData from '@cdo/apps/util/getScriptData';
-
 import DataDocEditAll from '../../../../lib/levelbuilder/data-docs-editor/DataDocEditAll';
 
 $(() => {

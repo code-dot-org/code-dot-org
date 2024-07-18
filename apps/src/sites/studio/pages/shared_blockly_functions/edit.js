@@ -1,10 +1,10 @@
-import unzip from 'lodash/unzip';
 import zip from 'lodash/zip';
-
-import {installCustomBlocks} from '@cdo/apps/block_utils';
+import unzip from 'lodash/unzip';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
+
 import {install, customInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
 import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/spritelab/constants';
+import {installCustomBlocks} from '@cdo/apps/block_utils';
 
 const customSimpleDialog = function ({
   bodyText,

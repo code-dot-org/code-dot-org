@@ -1,7 +1,6 @@
 /** @file For running Maker apps without an attached Circuit Playground board. */
-import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import _ from 'lodash';
-
+import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import {
   J5_CONSTANTS,
   N_COLOR_LEDS,

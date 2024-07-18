@@ -1,5 +1,4 @@
 import {SoundType} from '../MusicLibrary';
-
 import {PlaybackEvent} from './PlaybackEvent';
 
 /**

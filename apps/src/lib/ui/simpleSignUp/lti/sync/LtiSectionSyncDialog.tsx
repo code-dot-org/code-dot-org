@@ -1,19 +1,12 @@
-import $ from 'jquery';
-import PropTypes from 'prop-types';
 import React, {CSSProperties, useState} from 'react';
-
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/templates/Button';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
-import i18n from '@cdo/locale';
-
-import {getRosterSyncErrorMessage} from './LtiSectionSyncDialogHelpers';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {
   LtiSection,
   LtiSectionMap,
@@ -22,6 +15,11 @@ import {
   LtiSectionOwnerMap,
   SubView,
 } from './types';
+import PropTypes from 'prop-types';
+import $ from 'jquery';
+import {getRosterSyncErrorMessage} from './LtiSectionSyncDialogHelpers';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 // This dialog is shown to the teacher whenever they have requested Code.org to
 // import/sync the teacher's sections and students managed by their LMS.

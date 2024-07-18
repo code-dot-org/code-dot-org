@@ -6,7 +6,6 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import SchoolInfoConfirmationDialog from '@cdo/apps/lib/ui/SchoolInfoConfirmationDialog';
 import getScriptData from '@cdo/apps/util/getScriptData';
 

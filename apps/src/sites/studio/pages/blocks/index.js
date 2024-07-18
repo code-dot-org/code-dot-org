@@ -1,20 +1,19 @@
 import $ from 'jquery';
-import jsonic from 'jsonic';
-
-import {installCustomBlocks} from '@cdo/apps/block_utils';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
-import {customInputTypes as danceInputTypes} from '@cdo/apps/dance/blockly/blocks';
-import animationList, {
-  setInitialAnimationList,
-} from '@cdo/apps/p5lab/redux/animationList';
+import jsonic from 'jsonic';
+import {parseElement} from '@cdo/apps/xml';
+import {installCustomBlocks} from '@cdo/apps/block_utils';
 import {customInputTypes as spriteLabInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
+import {customInputTypes as danceInputTypes} from '@cdo/apps/dance/blockly/blocks';
 import {
   valueTypeTabShapeMap,
   exampleSprites,
 } from '@cdo/apps/p5lab/spritelab/constants';
-import {getStore, registerReducers} from '@cdo/apps/redux';
 import {shrinkBlockSpaceContainer} from '@cdo/apps/templates/instructions/utils';
-import {parseElement} from '@cdo/apps/xml';
+import animationList, {
+  setInitialAnimationList,
+} from '@cdo/apps/p5lab/redux/animationList';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 
 function renderBlock(element) {
   const name = element.id;

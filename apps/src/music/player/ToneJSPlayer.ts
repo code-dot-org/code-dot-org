@@ -1,3 +1,5 @@
+import {SoundLoadCallbacks} from '../types';
+import SoundCache from './SoundCache';
 import {
   Clock,
   Filter,
@@ -10,17 +12,8 @@ import {
   getContext,
   start,
 } from 'tone';
-import {BarsBeatsSixteenths} from 'tone/build/esm/core/type/Units';
-import {Source, SourceOptions} from 'tone/build/esm/source/Source';
-
-import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-
-import {BUS_EFFECT_COMBINATIONS, DEFAULT_BPM} from '../constants';
-import {SoundLoadCallbacks} from '../types';
-
-import {Effects} from './interfaces/Effects';
-import SoundCache from './SoundCache';
+import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {
   AudioPlayer,
   InstrumentData,
@@ -28,6 +21,10 @@ import {
   SampleEvent,
   SamplerSequence,
 } from './types';
+import {BarsBeatsSixteenths} from 'tone/build/esm/core/type/Units';
+import {Source, SourceOptions} from 'tone/build/esm/source/Source';
+import {BUS_EFFECT_COMBINATIONS, DEFAULT_BPM} from '../constants';
+import {Effects} from './interfaces/Effects';
 import {generateEffectsKeyString} from './utils';
 
 const EMPTY_EFFECTS_KEY = '';

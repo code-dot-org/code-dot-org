@@ -1,9 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-
 import Button from '../../../templates/Button';
 
 /**

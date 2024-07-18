@@ -1,5 +1,4 @@
 const Interpreter = require('@code-dot-org/js-interpreter');
-
 const CustomMarshaler = require('./CustomMarshaler');
 
 const DEFAULT_MAX_STEPS = 5e4;

@@ -1,4 +1,3 @@
-import musicI18n from '../../locale';
 import {BlockTypes} from '../blockTypes';
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
@@ -10,6 +9,7 @@ import {
   TRACK_NAME_FIELD,
 } from '../constants';
 import {fieldRestDurationDefinition, fieldTriggerDefinition} from '../fields';
+import musicI18n from '../../locale';
 
 const getCurrentTrackId = ctx => {
   let block = ctx;

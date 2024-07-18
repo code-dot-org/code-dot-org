@@ -1,10 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-
+import color from '@cdo/apps/util/color';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import {Header, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';
 
 const GUTTER = 20;

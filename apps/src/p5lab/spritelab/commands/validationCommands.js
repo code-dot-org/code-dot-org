@@ -1,5 +1,4 @@
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
-
 import {APP_WIDTH} from '../../constants';
 
 export const commands = {

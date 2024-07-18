@@ -1,9 +1,8 @@
-import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-
+import PropTypes from 'prop-types';
 import ActivityCard from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCard';
-import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
+import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 export default class ActivityCardAndPreview extends Component {
   static propTypes = {

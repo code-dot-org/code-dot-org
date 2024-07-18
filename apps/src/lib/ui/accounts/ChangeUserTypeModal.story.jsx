@@ -1,7 +1,6 @@
-import {action} from '@storybook/addon-actions';
 import React from 'react';
-
 import ChangeUserTypeModal from './ChangeUserTypeModal';
+import {action} from '@storybook/addon-actions';
 
 const DEFAULT_PROPS = {
   handleSubmit: action('handleSubmit callback'),

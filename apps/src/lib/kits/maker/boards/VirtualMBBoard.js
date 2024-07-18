@@ -1,6 +1,5 @@
 /** @file For running Maker apps without an attached MicroBit board. */
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
-
 import {MBFirmataClientStub} from '../util/makeStubBoard';
 
 /**

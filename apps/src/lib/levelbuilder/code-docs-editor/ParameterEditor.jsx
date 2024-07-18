@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-
-import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 
 export default function ParameterEditor({parameter, update}) {
   return (

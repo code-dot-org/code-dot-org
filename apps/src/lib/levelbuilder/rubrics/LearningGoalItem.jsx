@@ -1,12 +1,9 @@
-import PropTypes from 'prop-types';
 import React, {useState} from 'react';
-
-import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
+import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
-
-import Button from '../../../templates/Button';
-
+import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import EvidenceDescriptions from './EvidenceDescriptions';
+import Button from '../../../templates/Button';
 
 export default function LearningGoalItem({
   deleteLearningGoal,

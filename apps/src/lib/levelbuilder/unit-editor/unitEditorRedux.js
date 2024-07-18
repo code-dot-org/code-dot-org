@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-
 import {lessonGroupShape} from './shapes';
 
 const INIT = 'unitEditor/INIT';

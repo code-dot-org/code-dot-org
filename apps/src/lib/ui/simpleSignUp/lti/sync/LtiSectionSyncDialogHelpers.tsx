@@ -1,5 +1,5 @@
-import {LtiSectionSyncResult} from '@cdo/apps/lib/ui/simpleSignUp/lti/sync/types';
 import i18n from '@cdo/locale';
+import {LtiSectionSyncResult} from '@cdo/apps/lib/ui/simpleSignUp/lti/sync/types';
 
 export const getRosterSyncErrorMessage = (syncResult: LtiSectionSyncResult) => {
   switch (syncResult.error) {

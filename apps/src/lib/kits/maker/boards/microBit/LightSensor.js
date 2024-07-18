@@ -1,5 +1,4 @@
 import {EventEmitter} from 'events';
-
 import {
   SENSOR_CHANNELS,
   SAMPLE_INTERVAL,

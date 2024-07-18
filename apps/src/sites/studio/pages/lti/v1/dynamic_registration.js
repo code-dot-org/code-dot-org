@@ -6,7 +6,6 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import LtiDynamicRegistrationPage from '@cdo/apps/lib/ui/simpleSignUp/lti/registration/LtiDynamicRegistrationPage';
 import getScriptData from '@cdo/apps/util/getScriptData';
 

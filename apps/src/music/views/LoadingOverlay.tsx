@@ -1,9 +1,7 @@
-import classNames from 'classnames';
-import React from 'react';
-
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-
+import React from 'react';
 import moduleStyles from './loading-overlay.module.scss';
+import classNames from 'classnames';
 
 const LoadingOverlay: React.FunctionComponent<{show: boolean}> = ({show}) => (
   <div

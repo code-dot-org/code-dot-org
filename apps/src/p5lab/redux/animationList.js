@@ -3,28 +3,25 @@
  */
 import _ from 'lodash';
 import {combineReducers} from 'redux';
-
-import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
-import {animations as animationsApi} from '@cdo/apps/clientApi';
-import {
-  projectChanged,
-  isOwner,
-  getCurrentId,
-} from '@cdo/apps/code-studio/initApp/project';
+import {createUuid} from '@cdo/apps/utils';
 import {
   fetchURLAsBlob,
   blobToDataURI,
   dataURIToSourceSize,
 } from '@cdo/apps/imageUtils';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import trackEvent from '@cdo/apps/util/trackEvent';
-import {createUuid} from '@cdo/apps/utils';
-
-import {P5LabInterfaceMode} from '../constants';
-import {throwIfSerializedAnimationListIsInvalid} from '../shapes';
-
+import {animations as animationsApi} from '@cdo/apps/clientApi';
+import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {selectAnimation, selectBackground} from './animationTab';
 import {reportError} from './errorDialogStack';
+import {throwIfSerializedAnimationListIsInvalid} from '../shapes';
+import {
+  projectChanged,
+  isOwner,
+  getCurrentId,
+} from '@cdo/apps/code-studio/initApp/project';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import trackEvent from '@cdo/apps/util/trackEvent';
+import {P5LabInterfaceMode} from '../constants';
 
 // TODO: Overwrite version ID within session
 // TODO: Load exact version ID on project load

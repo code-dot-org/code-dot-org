@@ -1,8 +1,7 @@
 /** List item placeholder for adding a new item */
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
 import React from 'react';
-
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import style from './new-list-item.module.scss';
 
 /**

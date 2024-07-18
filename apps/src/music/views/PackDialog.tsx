@@ -1,17 +1,14 @@
-import classNames from 'classnames';
 import React, {useCallback, useState, useRef} from 'react';
-import FocusLock from 'react-focus-lock';
-
 import Typography from '@cdo/apps/componentLibrary/typography';
+import FocusLock from 'react-focus-lock';
+import styles from './PackDialog.module.scss';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-
+import {setPackId} from '../redux/musicRedux';
+import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
+import classNames from 'classnames';
+import MusicPlayer from '../player/MusicPlayer';
 import {DEFAULT_PACK} from '../constants';
 import musicI18n from '../locale';
-import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
-import MusicPlayer from '../player/MusicPlayer';
-import {setPackId} from '../redux/musicRedux';
-
-import styles from './PackDialog.module.scss';
 
 interface PackEntryProps {
   playingPreview: string | null;

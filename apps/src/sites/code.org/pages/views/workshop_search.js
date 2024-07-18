@@ -1,5 +1,4 @@
 import $ from 'jquery';
-
 import colors from '@cdo/apps/util/color';
 import getScriptData from '@cdo/apps/util/getScriptData';
 

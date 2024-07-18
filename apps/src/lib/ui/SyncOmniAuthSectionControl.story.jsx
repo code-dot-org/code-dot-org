@@ -1,9 +1,5 @@
-import {action} from '@storybook/addon-actions';
 import React from 'react';
-
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
-
 import {
   SyncOmniAuthSectionButton,
   READY,
@@ -11,6 +7,8 @@ import {
   SUCCESS,
   DISABLED,
 } from './SyncOmniAuthSectionControl';
+import {action} from '@storybook/addon-actions';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 export default {
   component: SyncOmniAuthSectionButton,

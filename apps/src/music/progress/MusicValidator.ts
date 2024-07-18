@@ -1,13 +1,12 @@
 // Music Lab specific validations.
 
-import ConditionsChecker from '@cdo/apps/lab2/progress/ConditionsChecker';
-import {Validator} from '@cdo/apps/lab2/progress/ProgressManager';
+import MusicPlayer from '../player/MusicPlayer';
 import {Condition, ConditionType} from '@cdo/apps/lab2/types';
-
+import ConditionsChecker from '@cdo/apps/lab2/progress/ConditionsChecker';
+import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {ChordEvent} from '../player/interfaces/ChordEvent';
 import {PatternEvent} from '../player/interfaces/PatternEvent';
-import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
-import MusicPlayer from '../player/MusicPlayer';
+import {Validator} from '@cdo/apps/lab2/progress/ProgressManager';
 
 export interface ConditionNames {
   [key: string]: ConditionType;

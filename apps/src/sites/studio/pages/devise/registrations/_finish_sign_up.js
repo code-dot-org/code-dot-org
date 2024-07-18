@@ -1,18 +1,17 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
+import getScriptData from '@cdo/apps/util/getScriptData';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import experiments from '@cdo/apps/util/experiments';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {
   SELECT_A_SCHOOL,
   CLICK_TO_ADD,
   NO_SCHOOL_SETTING,
 } from '@cdo/apps/templates/SchoolZipSearch';
-import experiments from '@cdo/apps/util/experiments';
-import getScriptData from '@cdo/apps/util/getScriptData';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',

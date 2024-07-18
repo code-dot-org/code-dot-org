@@ -5,7 +5,6 @@ import {
   executors as audioExecutors,
   injectExecuteCmd,
 } from '@cdo/apps/lib/util/audioApi';
-
 import MobileControls from './MobileControls';
 
 function executeCmd(id, name, opts) {

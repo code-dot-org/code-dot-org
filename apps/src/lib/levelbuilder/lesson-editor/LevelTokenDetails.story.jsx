@@ -1,7 +1,6 @@
-import {action} from '@storybook/addon-actions';
 import React from 'react';
-
 import {UnconnectedLevelTokenDetails as LevelTokenDetails} from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
+import {action} from '@storybook/addon-actions';
 
 const defaultLevel = {
   id: '10',

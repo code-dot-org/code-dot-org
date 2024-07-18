@@ -2,10 +2,9 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-
 import {getStore} from '@cdo/apps/redux';
-import MakerLanding from '@cdo/apps/templates/MakerLanding';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import MakerLanding from '@cdo/apps/templates/MakerLanding';
 
 $(function () {
   const store = getStore();

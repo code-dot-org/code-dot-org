@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-
 import color from '../../../util/color';
 import {relatedLessonShape} from '../shapes';
 

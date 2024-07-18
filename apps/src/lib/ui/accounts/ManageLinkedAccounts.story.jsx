@@ -1,6 +1,5 @@
-import {action} from '@storybook/addon-actions';
 import React from 'react';
-
+import {action} from '@storybook/addon-actions';
 import {UnconnectedManageLinkedAccounts as ManageLinkedAccounts} from './ManageLinkedAccounts';
 
 const DEFAULT_PROPS = {

@@ -1,18 +1,16 @@
+import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import * as locationUtils from '@cdo/apps/p5lab/locationUtils';
+import commands from './commands/index';
 import {getStore} from '@cdo/apps/redux';
-import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
-import msg from '@cdo/locale';
-
+import {APP_HEIGHT, APP_WIDTH} from '../constants';
+import {MAX_NUM_SPRITES, SPRITE_WARNING_BUFFER} from './constants';
 import {
   workspaceAlertTypes,
   displayWorkspaceAlert,
 } from '../../code-studio/projectRedux';
-import {APP_HEIGHT, APP_WIDTH} from '../constants';
+import msg from '@cdo/locale';
 import {formatForPlayspace} from '../utils';
-
-import commands from './commands/index';
-import {MAX_NUM_SPRITES, SPRITE_WARNING_BUFFER} from './constants';
 
 export default class CoreLibrary {
   constructor(p5, jsInterpreter) {

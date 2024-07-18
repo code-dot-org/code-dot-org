@@ -7604,14 +7604,6 @@ columns:
     default_function:
     collation:
     comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: unlock_token
-    sql_type_metadata: *3
-    'null': true
-    default:
-    default_function:
-    collation: utf8mb3_unicode_ci
-    comment:
   videos:
   - *5
   - *102
@@ -13362,19 +13354,6 @@ indexes:
     columns:
     - username
     - deleted_at
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where:
-    type:
-    using: :btree
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: users
-    name: index_users_on_unlock_token
-    unique: true
-    columns:
-    - unlock_token
     lengths: {}
     orders: {}
     opclasses: {}

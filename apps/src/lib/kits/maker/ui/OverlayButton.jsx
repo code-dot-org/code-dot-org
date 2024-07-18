@@ -1,11 +1,10 @@
 /** Button for use in Maker connection status overlays */
-import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
-import fontConstants from '@cdo/apps/fontConstants';
-
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import color from '../../../../util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const style = {
   height: 40,

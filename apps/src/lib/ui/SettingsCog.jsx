@@ -1,24 +1,21 @@
 /** @file Settings menu cog icon */
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import onClickOutside from 'react-onclickoutside';
+import PropTypes from 'prop-types';
 
-import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
-import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDialog';
-import JavalabDropdown from '@cdo/apps/javalab/components/JavalabDropdown';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import msg from '@cdo/locale';
-
+import FontAwesome from '../../templates/FontAwesome';
 import * as assets from '../../code-studio/assets';
 import project from '../../code-studio/initApp/project';
-import {getStore} from '../../redux';
-import FontAwesome from '../../templates/FontAwesome';
 import * as makerToolkitRedux from '../kits/maker/redux';
-
 import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
-
+import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
+import {getStore} from '../../redux';
+import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDialog';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import classNames from 'classnames';
 import moduleStyles from './settings-cog.module.scss';
+import JavalabDropdown from '@cdo/apps/javalab/components/JavalabDropdown';
+import onClickOutside from 'react-onclickoutside';
 
 // Exported for testing
 export class SettingsCog extends Component {

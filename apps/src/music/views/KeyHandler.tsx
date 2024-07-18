@@ -1,6 +1,5 @@
 import React, {useCallback, useContext, useEffect} from 'react';
 import {useDispatch} from 'react-redux';
-
 import {Triggers} from '../constants';
 import {AnalyticsContext} from '../context';
 import {

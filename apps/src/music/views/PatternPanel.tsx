@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import React, {
   ChangeEvent,
   useCallback,
@@ -6,15 +5,13 @@ import React, {
   useMemo,
   useState,
 } from 'react';
-
-import {PatternEventValue} from '../player/interfaces/PatternEvent';
-import MusicLibrary, {SoundData} from '../player/MusicLibrary';
-import MusicPlayer from '../player/MusicPlayer';
-
-import LoadingOverlay from './LoadingOverlay';
-import PreviewControls from './PreviewControls';
-
+import classNames from 'classnames';
 import styles from './patternPanel.module.scss';
+import PreviewControls from './PreviewControls';
+import MusicLibrary, {SoundData} from '../player/MusicLibrary';
+import {PatternEventValue} from '../player/interfaces/PatternEvent';
+import LoadingOverlay from './LoadingOverlay';
+import MusicPlayer from '../player/MusicPlayer';
 
 // Generate an array containing tick numbers from 1..16.
 const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);

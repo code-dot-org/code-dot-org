@@ -1,15 +1,12 @@
+var api = require('./apiJavascript.js');
+import color from '@cdo/apps/util/color';
+var consoleApi = require('@cdo/apps/consoleApi');
+import {dropletStringBlocks, dropletArrayBlocks} from '../../dropletUtils';
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
 import audioApiDropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';
 import * as timeoutApi from '@cdo/apps/lib/util/timeoutApi';
-import {getStore} from '@cdo/apps/redux';
-import color from '@cdo/apps/util/color';
-
-import {dropletStringBlocks, dropletArrayBlocks} from '../../dropletUtils';
-
 var getAssetDropdown = require('@cdo/apps/assetManagement/getAssetDropdown');
-var consoleApi = require('@cdo/apps/consoleApi');
-
-var api = require('./apiJavascript.js');
+import {getStore} from '@cdo/apps/redux';
 
 var spriteMethodPrefix = '[Sprite].';
 var groupMethodPrefix = '[Group].';

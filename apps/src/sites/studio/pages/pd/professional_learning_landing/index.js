@@ -1,12 +1,11 @@
+import LandingPage from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-
-import LandingPage from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 // Execute after page has fully loaded so the Amplitude event only fires on full page load
 $(() => {

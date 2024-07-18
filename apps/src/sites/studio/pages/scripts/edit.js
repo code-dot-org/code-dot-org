@@ -3,18 +3,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-
+import {getStore, registerReducers} from '@cdo/apps/redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
-import createResourcesReducer, {
-  initResources,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
-import UnitEditor from '@cdo/apps/lib/levelbuilder/unit-editor/UnitEditor';
+import getScriptData from '@cdo/apps/util/getScriptData';
 import reducers, {
   init,
   mapLessonGroupDataForEditor,
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
-import {getStore, registerReducers} from '@cdo/apps/redux';
-import getScriptData from '@cdo/apps/util/getScriptData';
+import createResourcesReducer, {
+  initResources,
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+import UnitEditor from '@cdo/apps/lib/levelbuilder/unit-editor/UnitEditor';
 
 export default function initPage(unitEditorData) {
   const scriptData = unitEditorData.script;

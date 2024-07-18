@@ -1,16 +1,14 @@
+import styles from '../../../link-account.module.scss';
 import React, {useContext} from 'react';
 
+import LtiNewAccountCard from './cards/LtiNewAccountCard';
+import LtiExistingAccountCard from './cards/LtiExistingAccountCard';
+import LtiContinueAccountCard from './cards/LtiContinueAccountCard';
+import LtiWelcomeBanner from './LtiWelcomeBanner';
+import i18n from '@cdo/locale';
+import {navigateToHref} from '@cdo/apps/utils';
 import Link from '@cdo/apps/componentLibrary/link';
 import {LtiProviderContext} from '@cdo/apps/lib/ui/simpleSignUp/lti/link/LtiLinkAccountPage/context';
-import {navigateToHref} from '@cdo/apps/utils';
-import i18n from '@cdo/locale';
-
-import LtiContinueAccountCard from './cards/LtiContinueAccountCard';
-import LtiExistingAccountCard from './cards/LtiExistingAccountCard';
-import LtiNewAccountCard from './cards/LtiNewAccountCard';
-import LtiWelcomeBanner from './LtiWelcomeBanner';
-
-import styles from '../../../link-account.module.scss';
 
 const LtiLinkAccountPage = () => {
   const {newCtaType} = useContext(LtiProviderContext)!;

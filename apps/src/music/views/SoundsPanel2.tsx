@@ -1,23 +1,20 @@
-import classNames from 'classnames';
 import React, {useCallback, useEffect, useRef, useState} from 'react';
-import FocusLock from 'react-focus-lock';
-
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-
+import classNames from 'classnames';
 import {getBaseAssetUrl} from '../appConfig';
-import musicI18n from '../locale';
+import styles from './soundsPanel2.module.scss';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import MusicLibrary, {
   SoundData,
   SoundFolder,
   SoundType,
 } from '../player/MusicLibrary';
 import SoundStyle from '../utils/SoundStyle';
-
+import FocusLock from 'react-focus-lock';
+import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
 import EaseIntoView from './EaseIntoView';
 
-import styles from './soundsPanel2.module.scss';
+import musicI18n from '../locale';
 
 const easeIntoViewDelayFramesFolders = 0;
 const easeIntoViewDelayFramesSounds = 5;

@@ -1,15 +1,14 @@
-import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
+import color from '@cdo/apps/util/color';
+import ActivityCardAndPreview from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCardAndPreview';
 import {connect} from 'react-redux';
-
 import {
   addActivity,
   getSerializedActivities,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import ActivityCardAndPreview from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCardAndPreview';
+import ReactDOM from 'react-dom';
 import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import color from '@cdo/apps/util/color';
 
 /*
  A GUI for editing activities in a lesson. Shows

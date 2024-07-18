@@ -3,7 +3,6 @@
  */
 
 import Pusher from 'pusher-js';
-
 import {PusherChannel, NullChannel} from './PubSubChannel';
 
 /**

@@ -1,5 +1,3 @@
-import musicI18n from '../locale';
-
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   DOCS_BASE_URL,
@@ -18,6 +16,7 @@ import FieldChord from './FieldChord';
 import FieldPattern from './FieldPattern';
 import FieldSounds from './FieldSounds';
 import {MUSIC_BLOCKS} from './musicBlocks';
+import musicI18n from '../locale';
 import {BlockConfig} from './types';
 
 /**

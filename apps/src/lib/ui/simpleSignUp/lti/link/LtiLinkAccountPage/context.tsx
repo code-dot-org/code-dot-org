@@ -1,5 +1,4 @@
 import {createContext} from 'react';
-
 import {LtiProvider} from './types';
 
 export interface LtiProviderContextProps {

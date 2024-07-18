@@ -1,16 +1,15 @@
-import _ from 'lodash';
-import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {Motion, spring} from 'react-motion';
+import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-
+import {Motion, spring} from 'react-motion';
+import color from '@cdo/apps/util/color';
 import {borderRadius, tokenMargin} from '@cdo/apps/lib/levelbuilder/constants';
-import {toggleExpand} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import LevelTokenDetails from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
 import {scriptLevelShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
-import color from '@cdo/apps/util/color';
+import LevelTokenDetails from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
+import {toggleExpand} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+import _ from 'lodash';
 
 /**
  * Component for editing puzzle dots with one or more level variants.

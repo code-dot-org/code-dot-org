@@ -1,16 +1,14 @@
-import GoogleBlockly, {BlockSvg, DropDownDiv, Field} from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import ChordPanel, {ChordPanelProps} from '../views/ChordPanel';
+import GoogleBlockly, {BlockSvg, DropDownDiv, Field} from 'blockly/core';
 import {ChordEventValue} from '../player/interfaces/ChordEvent';
 import MusicLibrary from '../player/MusicLibrary';
-import MusicPlayer from '../player/MusicPlayer';
-import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
 import {getNoteName} from '../utils/Notes';
-import ChordPanel, {ChordPanelProps} from '../views/ChordPanel';
-
-const color = require('@cdo/apps/util/color');
+import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
+import MusicPlayer from '../player/MusicPlayer';
 const experiments = require('@cdo/apps/util/experiments');
+const color = require('@cdo/apps/util/color');
 
 const MAX_DISPLAY_NOTES = 3;
 const FIELD_WIDTH = 51;

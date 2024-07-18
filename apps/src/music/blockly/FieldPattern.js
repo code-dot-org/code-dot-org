@@ -1,12 +1,10 @@
-import GoogleBlockly from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import color from '@cdo/apps/util/color';
-import experiments from '@cdo/apps/util/experiments';
-
-import {generateGraphDataFromPattern} from '../utils/Patterns';
 import PatternPanel from '../views/PatternPanel';
+import GoogleBlockly from 'blockly/core';
+import experiments from '@cdo/apps/util/experiments';
+import {generateGraphDataFromPattern} from '../utils/Patterns';
+import color from '@cdo/apps/util/color';
 
 const FIELD_WIDTH = 32;
 const FIELD_HEIGHT = 18;

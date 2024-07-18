@@ -1,18 +1,17 @@
 import React, {memo, useCallback, useMemo} from 'react';
 
-import {queryParams} from '@cdo/apps/code-studio/utils';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 import musicPlayViewLogo from '@cdo/static/music/music-play-view.png';
 
-import musicI18n from '../locale';
-
+import moduleStyles from './music-play-view.module.scss';
 import ProgressSlider from './ProgressSlider';
 
-import moduleStyles from './music-play-view.module.scss';
+import musicI18n from '../locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 interface MusicPlayViewProps {
   setPlaying: (value: boolean) => void;

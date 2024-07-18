@@ -1,12 +1,10 @@
-import PropTypes from 'prop-types';
-import queryString from 'query-string';
 import React, {useEffect, useState} from 'react';
+import PropTypes from 'prop-types';
 import * as Table from 'reactabular-table';
-
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import queryString from 'query-string';
 import Button from '@cdo/apps/templates/Button';
+import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
-
 import CloneProgrammingExpressionDialog from './CloneProgrammingExpressionDialog';
 
 const DEFAULT_VALUE = 'all';

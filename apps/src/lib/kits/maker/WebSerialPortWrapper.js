@@ -1,5 +1,4 @@
 import {EventEmitter} from 'events';
-
 import {SERIAL_BAUD} from '@cdo/apps/lib/kits/maker/util/boardUtils';
 
 const DEVICE_LOST_ERROR_CODE = 19;

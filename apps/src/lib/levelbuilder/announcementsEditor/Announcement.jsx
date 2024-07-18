@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-
 import {
   announcementShape,
   VisibilityType,
 } from '@cdo/apps/code-studio/announcementsRedux';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import {NotificationType} from '@cdo/apps/templates/Notification';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 export default class Announcement extends Component {
   static propTypes = {

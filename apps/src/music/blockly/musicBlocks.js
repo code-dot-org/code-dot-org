@@ -1,11 +1,6 @@
-import {playSound} from './blocks/advanced';
+import {valueSample} from './blocks/samples';
 import {forLoop} from './blocks/control';
 import {whenRun, triggeredAt, triggeredAtSimple} from './blocks/events';
-import {valueSample} from './blocks/samples';
-import {
-  playSoundAtCurrentLocation,
-  setCurrentLocationNextMeasure,
-} from './blocks/simple';
 import {
   whenRunSimple2,
   triggeredAtSimple2,
@@ -26,6 +21,11 @@ import {
   playSoundInTrack,
   restInTrack,
 } from './blocks/tracks';
+import {
+  playSoundAtCurrentLocation,
+  setCurrentLocationNextMeasure,
+} from './blocks/simple';
+import {playSound} from './blocks/advanced';
 
 // All blocks
 const blockList = [

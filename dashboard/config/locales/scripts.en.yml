@@ -18379,13 +18379,4 @@ en:
           description_short: ''
           description: ''
           student_description: ''
-        tess-getting-started:
-          lessons: {}
-          lesson_groups: {}
-          name: tess-getting-started
-          title: Getting Started with Code.org [Optional]
-          description_audience: ''
-          description_short: ''
-          description: "#### This module is a short introduction to using the Code.org platform.\n\n#### **You will:**\n* #### Get an introduction to Code.org \n* #### Learn to navigate the teacher features on the Code.org platform\n\n#### **Suggested Time:** 30 minutes"
-          student_description: "#### This module is a short introduction to using the Code.org platform.\n\n#### **You will:**\n* #### Get an introduction to Code.org \n* #### Learn to navigate the teacher features on the Code.org platform\n\n#### **Suggested Time:** 30 minutes"
 ...

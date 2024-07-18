@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const INIT = 'resourcesEditor/INIT';

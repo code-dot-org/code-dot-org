@@ -1,15 +1,13 @@
-import PropTypes from 'prop-types';
 import React, {useState} from 'react';
-
+import PropTypes from 'prop-types';
 import {
   BodyThreeText,
   BodyTwoText,
   Heading1,
 } from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/templates/Button';
-import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
-
 import RubricEditor from './RubricEditor';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import {saveRubricToTable, SAVING_TEXT, styles} from './rubricHelper';
 
 export default function RubricsContainer({

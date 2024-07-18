@@ -1,5 +1,5 @@
-import {Record} from 'immutable';
 import $ from 'jquery';
+import {Record} from 'immutable';
 
 export default class UserPreferences extends Record({userId: 'me'}) {
   /**

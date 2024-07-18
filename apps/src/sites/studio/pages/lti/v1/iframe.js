@@ -6,7 +6,6 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import LtiIframePage from '@cdo/apps/lib/ui/simpleSignUp/lti/iframe/LtiIframePage';
 import getScriptData from '@cdo/apps/util/getScriptData';
 

@@ -1,14 +1,12 @@
-import memoize from 'memoize-one';
 import PropTypes from 'prop-types';
-import React from 'react';
 import {connect} from 'react-redux';
-
+import React from 'react';
+import memoize from 'memoize-one';
+import * as shapes from '../shapes';
 import {KeyCodes} from '@cdo/apps/constants';
 import {selectors} from '@cdo/apps/lib/tools/jsdebugger/redux';
-
-import {animationSourceUrl} from '../redux/animationList';
 import {PromptType} from '../redux/spritelabInput';
-import * as shapes from '../shapes';
+import {animationSourceUrl} from '../redux/animationList';
 
 class SpritelabInput extends React.Component {
   static propTypes = {

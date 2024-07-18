@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-
-import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
-import LessonResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
-import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import color from '@cdo/apps/util/color';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import LessonResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
+import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 
 //Editor for Teacher Resources
 export default class ResourcesEditor extends Component {

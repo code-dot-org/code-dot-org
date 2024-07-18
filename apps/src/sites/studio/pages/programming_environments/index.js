@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import ProgrammingEnvironmentIndex from '@cdo/apps/templates/codeDocs/ProgrammingEnvironmentIndex';
 import getScriptData from '@cdo/apps/util/getScriptData';
+import ProgrammingEnvironmentIndex from '@cdo/apps/templates/codeDocs/ProgrammingEnvironmentIndex';
 
 $(document).ready(() => {
   const programmingEnvironments = getScriptData('programmingEnvironments');
