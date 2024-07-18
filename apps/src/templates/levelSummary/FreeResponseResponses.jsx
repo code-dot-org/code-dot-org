@@ -8,6 +8,11 @@ import ResponseMenuDropdown from './ResponseMenuDropdown';
 import styles from './summary.module.scss';
 
 const FreeResponseResponses = ({responses, showStudentNames}) => {
+  const constructStudentName = response =>
+    response.student_family_name
+      ? response.student_display_name + ' ' + response.student_family_name
+      : response.student_display_name;
+
   return (
     <div className={styles.studentResponsesColumns}>
       {responses.map(response => (
@@ -19,7 +24,7 @@ const FreeResponseResponses = ({responses, showStudentNames}) => {
             </div>
             {DCDO.get('cfu-pin-hide-enabled', false) && (
               <div className={styles.studentName}>
-                {showStudentNames && <p>{response.student_name}</p>}
+                {showStudentNames && <p>{constructStudentName(response)}</p>}
               </div>
             )}
           </div>
