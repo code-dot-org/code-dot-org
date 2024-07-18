@@ -73,6 +73,10 @@ echo && echo "Starting jest"
 
 npx jest --silent --maxWorkers ${PROCS}
 
+echo && echo "Starting storybook tests"
+
+yarn test:storybook:ci --maxWorkers ${PROCS}
+
 echo && echo "Pre-webpacking karma tests before running them:"
 
 npx grunt preconcatForKarma
@@ -94,7 +98,6 @@ PARALLEL="parallel --will-cite --halt 2 -j ${PROCS} --joblog - :::"
 ${PARALLEL} <<SCRIPT || (echo && echo && echo "One of the parallel test jobs FAILED, exiting early." && echo && exit 1)
   yarn lint
   npx karma start --testType=unit --port=9876
-  npx karma start --testType=storybook --port=9877
   npx karma start --testType=integration --levelType='turtle' --port=9879
   npx karma start --testType=integration --levelType='maze' --port=9880
   npx karma start --testType=integration --levelType='gamelab' --port=9881
