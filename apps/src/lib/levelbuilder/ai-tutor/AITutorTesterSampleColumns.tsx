@@ -16,7 +16,8 @@ const AITutorTesterSampleColumns: React.FC = () => {
       studentCode: "OPTIONAL. The student's code.",
       levelId:
         "OPTIONAL. If provided, will be used to fetch the level's instructions and test files if applicable. Reminder: it needs to be the levelId for the level in the environment in which you're running the tester.",
-      scriptId: "OPTIONAL. If provided will be used to determine the programming language."
+      scriptId:
+        'OPTIONAL. If provided will be used to determine the programming language.',
     },
   ];
   return (
