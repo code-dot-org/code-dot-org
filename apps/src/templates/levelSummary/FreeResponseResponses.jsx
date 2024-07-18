@@ -22,11 +22,8 @@ const FreeResponseResponses = ({responses}) => {
                 <p>{response.text}</p>
                 <ResponseMenuDropdown
                   response={response}
-                  hideResponse={response =>
-                    setHiddenResponses(prevHidden => [
-                      ...prevHidden,
-                      response.user_id,
-                    ])
+                  hideResponse={userId =>
+                    setHiddenResponses(prevHidden => [...prevHidden, userId])
                   }
                 />
               </div>
@@ -39,8 +36,12 @@ const FreeResponseResponses = ({responses}) => {
           onClick={() => setHiddenResponses([])}
           link={{
             text: i18n.showHiddenResponses(),
-            onClick: () => setHiddenResponses([]),
-            href: null,
+            onClick: e => {
+              e.preventDefault();
+              setHiddenResponses([]);
+            },
+            role: 'button',
+            href: '#',
           }}
           text={i18n.hiddenResponses({
             numHiddenResponses: hiddenResponses.length,

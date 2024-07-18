@@ -45,7 +45,7 @@ const ResponseMenuDropdown = ({response, hideResponse}) => {
                 type="button"
                 onClick={() => {
                   setIsOpen(false);
-                  hideResponse(response);
+                  hideResponse(response.user_id);
                 }}
               >
                 <FontAwesomeV6Icon iconName="eye-slash" />
