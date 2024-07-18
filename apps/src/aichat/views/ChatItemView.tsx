@@ -5,9 +5,9 @@ import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {removeUpdateMessage} from '../redux/aichatRedux';
+import {hideNotification} from '../redux/aichatRedux';
 import {timestampToLocalTime} from '../redux/utils';
-import {ChatItem, isChatMessage, isNotification, isModelUpdate} from '../types';
+import {ChatItem, isChatMessage, isNotification} from '../types';
 
 interface ChatItemViewProps {
   item: ChatItem;
@@ -23,16 +23,7 @@ const ChatItemView: React.FunctionComponent<ChatItemViewProps> = ({item}) => {
     return <ChatMessage {...item} />;
   }
 
-  if (isModelUpdate(item)) {
-    return (
-      <Alert
-        text={item.text}
-        type="success"
-        onClose={() => dispatch(removeUpdateMessage(item.id))}
-        size="s"
-      />
-    );
-  } else if (isNotification(item)) {
+  if (isNotification(item) && !item.hidden) {
     const {id, text, status, timestamp} = item;
     return (
       <Alert
@@ -42,7 +33,7 @@ const ChatItemView: React.FunctionComponent<ChatItemViewProps> = ({item}) => {
             ? 'success'
             : 'danger'
         }
-        onClose={() => dispatch(removeUpdateMessage(id))}
+        onClose={() => dispatch(hideNotification(id))}
         size="s"
       />
     );
