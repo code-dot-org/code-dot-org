@@ -1090,3 +1090,9 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: "'24-'25"
+        tesselementaryai-2024:
+          title: tesselementaryai-2024
+          description_short: testing fix for getting started
+          description_student: testing fix for getting started
+          description_teacher: testing fix for getting started
+          version_title: ''
