@@ -1,5 +1,6 @@
 /** @file JavaScript run only on the gamelab level edit page. */
 import $ from 'jquery';
+
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 
 $(document).ready(function () {

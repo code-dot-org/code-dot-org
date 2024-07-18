@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-05-17T16:38:03.000Z",
   "level_num": "custom",
@@ -74,10 +75,11 @@
     "encrypted_examples": "TIdALavgLHun/5mCEOx4RL8WPQB/sNtoGA5d21h0d1fawHADmFBYmPU7b85P\nSzX1Xqy20CRjDA+xf0fno/8yGw==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-17T16:38:03.735+00:00\",\"changed\":[\"cloned from \\\"game_development_jump_2024\\\"\"],\"cloned_from\":\"game_development_jump_2024\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-17T16:38:03.735+00:00\",\"changed\":[\"cloned from \\\"game_development_jump_2024\\\"\"],\"cloned_from\":\"game_development_jump_2024\"},{\"changed_at\":\"2024-05-21 21:48:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-16 18:25:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 2,
+    "events": 2
   }
 }]]></config>
   <blocks>
@@ -1243,33 +1245,22 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="GameDev_playerJump" id="yy{.[X:.rZzA*3xi2kJb" x="126" y="145">
+        <block type="GameDev_playerJump" id="yy{.[X:.rZzA*3xi2kJb" x="79" y="24">
           <field name="STRENGTH">6</field>
         </block>
-        <block type="gamelab_keyPressed" id="m.$^=s}*r%j`#)Jz9fCe" x="452" y="196">
+        <block type="gamelab_keyPressed" id="m.$^=s}*r%j`#)Jz9fCe" x="77" y="78">
           <field name="CONDITION">"when"</field>
           <field name="KEY">"up"</field>
         </block>
-        <block type="gamelab_makeSpritesGridInput" id="](:gZbK.u65)58Oqq$6L" x="30" y="249">
-          <field name="ANIMATION_NAME">"dirt_grass"</field>
-          <value name="GRID">
-            <shadow type="gamelab_bitmap" id="2/X$Moo)bLDynrrY?;dv">
-              <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
-            </shadow>
-            <block type="gamelab_bitmap" id="Bga~D7j}hzP-_)sB[Q8@">
-              <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,1,1,1,1],[1,1,1,1,1,1,1,1]]</field>
+        <block type="GameDev_setGroup" id="Ns/(cIF~q7lQ-h(Q/5*?" x="46" y="148">
+          <field name="GROUP">"walls"</field>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" id="q*o3l#waMmuaAiBjH%I;">
+              <field name="ANIMATION">"dirt_grass"</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_makeNewSpriteAnon" id="nSMWaV6Vupk7H,J1*Kw;" x="27" y="352">
-          <field name="ANIMATION_NAME">"game_penguin"</field>
-          <value name="LOCATION">
-            <block type="gamelab_location_picker" id="W(o}3QiTq7CP+N14wja[">
-              <field name="LOCATION">{"x":81,"y":34}</field>
-            </block>
-          </value>
-        </block>
-        <block type="gamelab_toggleBehaviorSimple" id="+H{.X4]Mx;D!jf2Ok]8{" x="239" y="416">
+        <block type="gamelab_toggleBehaviorSimple" id="+H{.X4]Mx;D!jf2Ok]8{" x="25" y="240">
           <field name="TOGGLE">"begins"</field>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" id="#@}@B-CM_z?vgs~L7`:O">
@@ -1283,15 +1274,26 @@
             </block>
           </value>
         </block>
-        <block type="GameDev_setGroup" id="Ns/(cIF~q7lQ-h(Q/5*?" x="30" y="476">
-          <field name="GROUP">"walls"</field>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" id="q*o3l#waMmuaAiBjH%I;">
-              <field name="ANIMATION">"dirt_grass"</field>
+        <block type="gamelab_makeSpritesGridInput" id="](:gZbK.u65)58Oqq$6L" x="33" y="336">
+          <field name="ANIMATION_NAME">"dirt_grass"</field>
+          <value name="GRID">
+            <shadow type="gamelab_bitmap" id="2/X$Moo)bLDynrrY?;dv">
+              <field name="GRID">[[1,0,0,0],[0,1,0,0],[0,0,1,0],[0,0,0,1]]</field>
+            </shadow>
+            <block type="gamelab_bitmap" id="Bga~D7j}hzP-_)sB[Q8@">
+              <field name="GRID">[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,1,1,1,1],[1,1,1,1,1,1,1,1]]</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_setBackgroundImageAs" id="h!!GMS1H)!V})+hb4D)2" x="259" y="572">
+        <block type="gamelab_makeNewSpriteAnon" id="nSMWaV6Vupk7H,J1*Kw;" x="33" y="417">
+          <field name="ANIMATION_NAME">"game_penguin"</field>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker" id="W(o}3QiTq7CP+N14wja[">
+              <field name="LOCATION">{"x":81,"y":34}</field>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_setBackgroundImageAs" id="h!!GMS1H)!V})+hb4D)2" x="37" y="504">
           <field name="IMG">"gradient_02"</field>
         </block>
       </xml>

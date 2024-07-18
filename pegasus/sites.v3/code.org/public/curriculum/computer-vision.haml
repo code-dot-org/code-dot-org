@@ -1,75 +1,63 @@
 ---
-title: Software Engineering & Computer Vision
+title: Computer Vision
 theme: responsive_full_width
 ---
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
-%link{href: "/css/generated/computer-vision-software.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/computer-vision-styles.css", rel: "stylesheet"}
 
-%section.hero-banner-basic.overlay
-  .wrapper.flex-container.justify-space-between.align-items-center.wrap
-    .text-wrapper
-      %h1.white
-        =hoc_s(:csa_ai_page_hero_title)
-      %p.white
-        =hoc_s(:csa_ai_page_hero_description, markdown: :inline, locals: {csa_url: "https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a"})
-      %a.link-button.white{href: CDO.studio_url("/s/csa-software-engineering")}
-        =hoc_s(:call_to_action_explore_course)
-    %figure
-      %img{src: "/images/banners/ai-bot-vision.svg", alt: ""}
+  %section.hero-banner-basic.overlay
+    .wrapper.grid-container.justify-space-between.align-items-center.gap-4.wider-text
+      .text-wrapper
+        %h1.white
+          =hoc_s("computer_vision_page.heading")
+        %p.body-two.white
+          =hoc_s("computer_vision_page.top.desc")
+        %a.link-button.white{href: "#curricula"}
+          =hoc_s("computer_vision_page.top.button")
+      %figure
+        %img{src: "/images/banners/ai-bot-vision.svg", alt: "", style: "width: 100%"}
 
-%section
-  .wrapper
-    %div.col-45{style: "margin: .5rem 0 1rem; border: 1px solid;"}
-      = view :display_video_thumbnail, id: "intro_csa", video_code: "pWZG9lXehrQ", play_button: 'center', letterbox: 'false'
-    .text-wrapper.col-50{style: "float: right;"}
-      %h2=hoc_s(:csa_ai_page_video_section_title)
-      %ul
-        %li=hoc_s(:csa_ai_page_video_section_li_1)
-        %li=hoc_s(:csa_ai_page_video_section_li_2)
-        %li=hoc_s(:csa_ai_page_video_section_li_3)
-        %li=hoc_s(:csa_ai_page_video_section_li_4)
-      %a.link-button{href: CDO.studio_url("/s/csa-software-engineering")}
-        =hoc_s(:call_to_action_explore_course)
-    .clear
+  %section
+    .wrapper.centered
+      %h2=hoc_s("computer_vision_page.why.heading")
+      %p=hoc_s("computer_vision_page.why.desc")
+      = view :"computer_vision/computer_vision_why_list"
+      .button-wrapper.centered
+        %a.link-button{href: "#curricula"}
+          =hoc_s("computer_vision_page.why.button.explore_curriculum")
+        %a.link-button.secondary{href: "#professional-learning"}
+          =hoc_s("computer_vision_page.why.button.see_pl")
 
-= view :professional_learning_skinny_banner
+  %section.bg-primary-light
+    .wrapper
+      .flex-container.align-items-center.flex-direction-column-mobile.flex-wrap.gap-2
+        .text-wrapper.flex-2
+          %h2.heading-sm
+            =hoc_s("game_design_page.resources.heading")
+          %p.no-margin-bottom
+            =hoc_s("game_design_page.resources.desc", markdown: :inline)
+        %a.link-button{href: CDO.studio_url("/users/sign_up")}
+          =hoc_s("game_design_page.resources.button")
 
-%section.bg-neutral-light
-  .wrapper
-    = view :curriculum_glance_section, heading: hoc_s(:heading_curriculum_at_a_glance), grades: hoc_s(:module_grade_9_12), duration: hoc_s(:module_duration_2_weeks), level: hoc_s(:module_level_advanced), tools: hoc_s(:csa_ai_page_programming_tools), devices: hoc_s(:csa_page_curriculum_glance_devices), professional_learning: hoc_s(:csa_ai_page_professional_learning), topics: hoc_s(:csa_ai_page_curriculum_topics), accessibility_features: hoc_s(:csa_ai_page_curriculum_accessibility_features), languages: hoc_s(:csa_ai_page_curriculum_languages_support)
+  %section#curricula
+    .wrapper
+      %h2=hoc_s("computer_vision_page.curricula.heading")
+      = view :"computer_vision/computer_vision_curricula"
+      %hr.light
+      #professional-learning
+        %h2=hoc_s("computer_vision_page.teach.heading")
+        %p=hoc_s("computer_vision_page.teach.desc")
+        = view :"computer_vision/computer_vision_teach"
 
-%section
-  .wrapper
-    %h2=hoc_s(:heading_engaging_projects)
-    = view :projects_csa_ai_page
-
-%section.bg-neutral-light
-  .wrapper
-    .hide-tab
-      = view :"tabs_section/resources/resources_tabs", resources_heading: hoc_s(:resources_tabs_heading), resources_desc: hoc_s(:resources_tabs_desc, markdown: :inline, locals: {sign_up_url: CDO.studio_url("/users/sign_up")})
-
-%section
-  .wrapper
-    %h2=hoc_s(:csa_ai_page_learn_more_section_title)
-    .action-block.action-block--two-col
-      %img{src: "/shared/images/social-media/ai-101-social.png", alt: "", class: "col-50"}
-      .text-wrapper.col-50
-        %h3.heading-sm
-          =hoc_s(:csa_ai_page_learn_more_title)
-        %p=hoc_s(:csa_ai_page_learn_more_description)
-        %a.link-button{href: "/ai/pl/101"}
-          =hoc_s(:csa_ai_page_learn_more_link)
-
-= view :section_divider_line
-
-%section.no-padding-bottom.faq__section
-  .wrapper
-    %h2=hoc_s(:heading_faq)
-    = view :faq_computer_vision
-
-%section
-  .wrapper
-    = view :support_and_questions_section
+  %section.bg-neutral-light
+    .wrapper.centered
+      %h2=hoc_s("computer_vision_page.learn_more.heading")
+      = view :"computer_vision/computer_vision_learn_more"
+      %hr.light
+      %h3=hoc_s("computer_vision_page.learn_more.discover.heading")
+      %p=hoc_s("computer_vision_page.learn_more.discover.desc")
+      %a.link-button.secondary{href: "/ai"}
+        =hoc_s("computer_vision_page.learn_more.discover.button")
 
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::COMPUTER_VISION_PAGE_VISITED_EVENT

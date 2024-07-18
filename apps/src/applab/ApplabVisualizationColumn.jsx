@@ -1,19 +1,22 @@
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
+
+import i18n from '@cdo/locale';
+
+import * as dom from '../dom';
+import BelowVisualization from '../templates/BelowVisualization';
+import CompletionButton from '../templates/CompletionButton';
 import GameButtons, {ResetButton} from '../templates/GameButtons';
 import IFrameEmbedOverlay from '../templates/IFrameEmbedOverlay';
-import * as color from '../util/color';
-import {getAppWidth, APP_HEIGHT} from './constants';
-import React from 'react';
-import PropTypes from 'prop-types';
-import Visualization from './Visualization';
-import CompletionButton from '../templates/CompletionButton';
-import PlaySpaceHeader from './PlaySpaceHeader';
-import PhoneFrame from './PhoneFrame';
-import BelowVisualization from '../templates/BelowVisualization';
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
-import {connect} from 'react-redux';
-import classNames from 'classnames';
-import i18n from '@cdo/locale';
-import * as dom from '../dom';
+import * as color from '../util/color';
+
+import {getAppWidth, APP_HEIGHT} from './constants';
+import PhoneFrame from './PhoneFrame';
+import PlaySpaceHeader from './PlaySpaceHeader';
+import Visualization from './Visualization';
 
 class ApplabVisualizationColumn extends React.Component {
   static propTypes = {

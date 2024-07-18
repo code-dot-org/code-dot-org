@@ -1,19 +1,26 @@
-import React, {MouseEvent, useCallback, useRef} from 'react';
-import moduleStyles from './timeline.module.scss';
 import classNames from 'classnames';
-import TimelineSampleEvents from './TimelineSampleEvents';
-import TimelineTrackEvents from './TimelineTrackEvents';
-import TimelineSimple2Events from './TimelineSimple2Events';
-import appConfig, {getBlockMode} from '../appConfig';
-import {BlockMode, MIN_NUM_MEASURES} from '../constants';
+import React, {MouseEvent, useCallback, useRef} from 'react';
 import {useDispatch} from 'react-redux';
+
+import {getBlockMode} from '../appConfig';
+import {BlockMode, MIN_NUM_MEASURES} from '../constants';
 import {
   clearSelectedBlockId,
   setStartPlayheadPosition,
 } from '../redux/musicRedux';
-import {useMusicSelector} from './types';
-import usePlaybackUpdate from './hooks/usePlaybackUpdate';
 
+import usePlaybackUpdate from './hooks/usePlaybackUpdate';
+import TimelineSampleEvents from './TimelineSampleEvents';
+import TimelineSimple2Events from './TimelineSimple2Events';
+import TimelineTrackEvents from './TimelineTrackEvents';
+import {useMusicSelector} from './types';
+
+import moduleStyles from './timeline.module.scss';
+
+// The height of the primary timeline area for drawing events.  This is the height of each measure's
+// vertical bar.
+const timelineHeight = 130;
+// The width of one measure.
 const barWidth = 60;
 // Leave some vertical space between each event block.
 const eventVerticalSpace = 2;
@@ -22,13 +29,16 @@ const paddingOffset = 10;
 // Start scrolling the playhead when it's more than this percentage of the way across the timeline area.
 const playheadScrollThreshold = 0.75;
 
-const getEventHeight = (numUniqueRows: number, availableHeight = 110) => {
+const getEventHeight = (
+  numUniqueRows: number,
+  availableHeight = timelineHeight
+) => {
   // While we might not actually have this many rows to show,
   // we will limit each row's height to the size that would allow
   // this many to be shown at once.
   const minVisible = 5;
 
-  const maxVisible = 10;
+  const maxVisible = 26;
 
   // We might not actually have this many rows to show, but
   // we will size the bars so that this many rows would show.
@@ -82,8 +92,7 @@ const Timeline: React.FunctionComponent = () => {
 
   const onMeasuresBackgroundClick = useCallback(
     (event: MouseEvent) => {
-      // Ignore if playing unless using ToneJS player
-      if (isPlaying && appConfig.getValue('player') !== 'tonejs') {
+      if (isPlaying) {
         return;
       }
       const offset =
@@ -91,7 +100,7 @@ const Timeline: React.FunctionComponent = () => {
         (event.target as Element).getBoundingClientRect().x -
         paddingOffset;
       const exactMeasure = offset / barWidth + 1;
-      // Round measure to the nearest beat (1/4 note)
+      // Round measure to the nearest beat (1/4 note).
       const roundedMeasure = Math.round(exactMeasure * 4) / 4;
       dispatch(setStartPlayheadPosition(roundedMeasure));
     },
@@ -148,7 +157,8 @@ const Timeline: React.FunctionComponent = () => {
         id="timeline-measures-background"
         className={classNames(
           moduleStyles.measuresBackground,
-          moduleStyles.fullWidthOverlay
+          moduleStyles.fullWidthOverlay,
+          !isPlaying && moduleStyles.measuresBackgroundClickable
         )}
         style={{width: paddingOffset + measuresToDisplay * barWidth}}
         onClick={onMeasuresBackgroundClick}
@@ -167,7 +177,8 @@ const Timeline: React.FunctionComponent = () => {
                 className={classNames(
                   moduleStyles.barNumber,
                   measure === Math.floor(currentPlayheadPosition) &&
-                    moduleStyles.barNumberCurrent
+                    moduleStyles.barNumberCurrent,
+                  !isPlaying && moduleStyles.barNumberClickable
                 )}
                 onClick={() => onMeasureNumberClick(measure)}
               >

@@ -1,7 +1,8 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
+import React, {Component} from 'react';
+
 import AddLevelTableRow from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTableRow';
+import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
 import color from '@cdo/apps/util/color';
 
 export default class AddLevelTable extends Component {
@@ -11,6 +12,7 @@ export default class AddLevelTable extends Component {
     currentPage: PropTypes.number.isRequired,
     setCurrentPage: PropTypes.func.isRequired,
     numPages: PropTypes.number.isRequired,
+    currentLevelIds: PropTypes.array,
   };
 
   render() {
@@ -31,6 +33,10 @@ export default class AddLevelTable extends Component {
               <AddLevelTableRow
                 key={level.id}
                 addLevel={this.props.addLevel}
+                isInLesson={
+                  !!this.props.currentLevelIds &&
+                  this.props.currentLevelIds.includes(level.id)
+                }
                 level={level}
               />
             ))}

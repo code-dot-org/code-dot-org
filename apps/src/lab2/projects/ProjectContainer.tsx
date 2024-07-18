@@ -6,18 +6,22 @@
 
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
-import Lab2Registry from '../Lab2Registry';
+
+import header from '@cdo/apps/code-studio/header';
+import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
 import {
-  LabState,
+  getCurrentScriptLevelId,
+  getLevelPropertiesPath,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {
+  isReadOnlyWorkspace,
   setUpWithLevel,
   setUpWithoutLevel,
   shouldHideShareAndRemix,
 } from '../lab2Redux';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {getLevelPropertiesPath} from '@cdo/apps/code-studio/progressReduxSelectors';
-import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
-import header from '@cdo/apps/code-studio/header';
-import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
+import Lab2Registry from '../Lab2Registry';
 import {AppName} from '../types';
 
 const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
@@ -25,31 +29,30 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
   channelId,
   appName,
 }) => {
-  const currentLevelId = useSelector(
-    (state: {progress: ProgressState}) => state.progress.currentLevelId
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const userId = useAppSelector(
+    state => state.progress.viewAsUserId || undefined
   );
-  const userId = useSelector(
-    (state: {progress: ProgressState}) =>
-      state.progress.viewAsUserId || undefined
+  const scriptId = useAppSelector(
+    state => state.progress.scriptId || undefined
   );
-  const scriptId = useSelector(
-    (state: {progress: ProgressState}) => state.progress.scriptId || undefined
-  );
+  const scriptLevelId = useSelector(getCurrentScriptLevelId);
 
-  const isStandaloneProjectLevel = useSelector(
-    (state: {lab: LabState}) => state.lab.levelProperties?.isProjectLevel
+  const isStandaloneProjectLevel = useAppSelector(
+    state => state.lab.levelProperties?.isProjectLevel
   );
   const hideShareAndRemix = useSelector(shouldHideShareAndRemix);
-  const loadedChannelId = useSelector(
-    (state: {lab: LabState}) => state.lab.channel && state.lab.channel.id
+  const loadedChannelId = useAppSelector(
+    state => state.lab.channel && state.lab.channel.id
   );
-  const isOwnerOfChannel = useSelector(
-    (state: {lab: LabState}) => state.lab.channel && state.lab.channel.isOwner
+  const isOwnerOfChannel = useAppSelector(
+    state => state.lab.channel && state.lab.channel.isOwner
   );
 
   const levelPropertiesPath = useSelector(getLevelPropertiesPath);
 
   const dispatch = useAppDispatch();
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
 
   useEffect(() => {
     // The redux types are very complicated, so in order to re-use this variable
@@ -68,6 +71,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
           levelId: parseInt(currentLevelId),
           userId,
           scriptId,
+          scriptLevelId,
           levelPropertiesPath,
           channelId,
         })
@@ -92,6 +96,7 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
     appName,
     currentLevelId,
     scriptId,
+    scriptLevelId,
     levelPropertiesPath,
     dispatch,
     userId,
@@ -103,18 +108,20 @@ const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({
       // Force a save before the page unloads, if there are unsaved changes.
       // If we need to force a save, prevent navigation so we can save first.
       // We skip this if we are already force reloading, as that will occur when
-      // saving already encountered an issue.
+      // saving already encountered an issue. We also can skip this in read only mode,
+      // as we never save in read only mode.
       if (
         projectManager &&
         !projectManager.isForceReloading() &&
-        projectManager.hasUnsavedChanges()
+        projectManager.hasUnsavedChanges() &&
+        !isReadOnly
       ) {
         projectManager.cleanUp();
         event.preventDefault();
         event.returnValue = '';
       }
     });
-  }, []);
+  }, [isReadOnly]);
 
   useEffect(() => {
     // Ensure the header is cleared when we have a change,

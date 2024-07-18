@@ -12,10 +12,6 @@ import {publishedFeaturedProjectPropType} from './projectConstants';
 
 class PublicGallery extends Component {
   static propTypes = {
-    // Controls hiding/showing view more links for App Lab and Game Lab.
-    limitedGallery: PropTypes.bool,
-    includeDanceParty: PropTypes.bool,
-
     // Provided by Redux
     projectLists: PropTypes.shape({
       special_topic: PropTypes.arrayOf(publishedFeaturedProjectPropType),
@@ -27,6 +23,7 @@ class PublicGallery extends Component {
       minecraft: PropTypes.arrayOf(publishedFeaturedProjectPropType),
       dance: PropTypes.arrayOf(publishedFeaturedProjectPropType),
       poetry: PropTypes.arrayOf(publishedFeaturedProjectPropType),
+      music: PropTypes.arrayOf(publishedFeaturedProjectPropType),
     }),
   };
 
@@ -62,15 +59,13 @@ class PublicGallery extends Component {
   }
 
   render() {
-    const {projectLists, limitedGallery, includeDanceParty} = this.props;
+    const {projectLists} = this.props;
 
     return (
       <div id="uitest-public-projects">
         <ProjectCardGrid
           projectLists={this.mapProjectData(projectLists)}
           galleryType="public"
-          limitedGallery={limitedGallery}
-          includeDanceParty={includeDanceParty}
         />
         <div style={styles.bottomButton}>
           <Button

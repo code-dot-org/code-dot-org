@@ -29,7 +29,6 @@ $default-spacing: 2px;
   padding: 10px 10px;
   border-radius: 10px;
   overflow: hidden;
-  max-width: calc(100% - 92px - 1rem);
   margin-bottom: 15px;
 }
 
@@ -54,97 +53,24 @@ $default-spacing: 2px;
   margin: 5px 0 5px 0;
 }
 
-.textArea {
-  width: 80%;
-}
-
-// Warning Modal
-.chatWarningModal {
-  hr {
-    margin: 1rem 0;
-    border-color: $light_gray_200;
-  }
-
-  a {
-    @include main-font-semi-bold;
-    font-size: 1rem;
-    color: $brand_secondary_default;
-    margin: 1rem 0;
-    text-decoration: underline;
-    transition: color ease-in-out 0.2s;
-
-    &:hover {
-      color: $brand_secondary_dark;
-    }
-  }
-}
-
-.xCloseButton {
-  // Clear default button styles
-  background: none;
-  color: inherit;
-  border: none;
-  padding: 0;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-  box-shadow: none;
-
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-
-  i {
-    color: $light_gray_300;
-    font-size: 1.1875rem;
-    line-height: 1.4844rem;
-    width: 1.4844rem;
-  }
-
-  &:hover {
-    // Clear default button styles
-    box-shadow: none;
-    background: none;
-    color: inherit;
-    border: none;
-    padding: 0;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit;
-
-    i {
-      color: $light_gray_500;
-    }
-  }
-
-  &:focus {
-    outline: $brand_primary_default solid 2px;
-    outline-offset: 2px;
-  }
-}
-
-.bottomSection {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.assistantMessageButtonRow .hamburgerMenuButton {
-  border: none;
-  padding: 0 10px;
-  height: 36px;
-}
-
-.assistantMessageButtonRow {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  align-items: center;
-}
-
 .aiTutorMarkdown {
-  pre {
+  pre, code {
     // Color copied for consistency with bootstrap styles auto-applied to SafeMarkdown component
     background-color: #f7f7f9;
-    color: $purple;
+    color: $light_primary_700;
   }
+}
+
+.feedbackIcons {
+  height: 36px;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.feedbackDetails {
+  width: 90%;
+}
+
+.feedbackButton {
+  margin-right: 5px;
 }

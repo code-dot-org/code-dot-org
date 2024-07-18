@@ -83,7 +83,7 @@ const fakeScriptId = 4;
 describe('CodeReviewDataApi', () => {
   describe('getInitialTimelineData', () => {
     let dataApi;
-    before(() => {
+    beforeAll(() => {
       dataApi = new CodeReviewDataApi(
         fakeChannelId,
         fakeLevelId,
@@ -130,7 +130,7 @@ describe('CodeReviewDataApi', () => {
 
   describe('closeReview', () => {
     let dataApi, ajaxStub;
-    before(() => {
+    beforeAll(() => {
       dataApi = new CodeReviewDataApi(
         fakeChannelId,
         fakeLevelId,
@@ -173,7 +173,7 @@ describe('CodeReviewDataApi', () => {
   describe('openNewCodeReview', () => {
     let dataApi, ajaxStub;
     const fakeVersion = 'asdfjkl';
-    before(() => {
+    beforeAll(() => {
       dataApi = new CodeReviewDataApi(
         fakeChannelId,
         fakeLevelId,
@@ -221,7 +221,7 @@ describe('CodeReviewDataApi', () => {
     let dataApi, ajaxStub;
     const fakeReviewId = 11;
     const fakeComment = 'A comment';
-    before(() => {
+    beforeAll(() => {
       dataApi = new CodeReviewDataApi(
         fakeChannelId,
         fakeLevelId,
@@ -283,7 +283,7 @@ describe('CodeReviewDataApi', () => {
 
   describe('toggleResolveComment', () => {
     let dataApi, ajaxStub;
-    before(() => {
+    beforeAll(() => {
       dataApi = new CodeReviewDataApi(
         fakeChannelId,
         fakeLevelId,

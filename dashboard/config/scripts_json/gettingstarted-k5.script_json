@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "gettingstarted-k5",
-    "serialized_at": "2024-05-09 19:27:43 UTC",
+    "serialized_at": "2024-07-10 19:39:50 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -574,14 +574,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "SP-VPL-21-mod2-LMSIntegrations_2"
+          "k5SP-VPL-21-mod2-LMSIntegrations"
         ],
         "progression": "Set Up a Class Section"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-21-mod2-LMSIntegrations_2"
+          "k5SP-VPL-21-mod2-LMSIntegrations"
         ],
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",
@@ -589,7 +589,7 @@
         "activity_section.key": "2a7ab6c7-06a6-4f25-b20a-64172a9247c2"
       },
       "level_keys": [
-        "SP-VPL-21-mod2-LMSIntegrations_2"
+        "k5SP-VPL-21-mod2-LMSIntegrations"
       ]
     },
     {
@@ -1216,9 +1216,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-21-mod2-LMSIntegrations_2",
+        "level.key": "k5SP-VPL-21-mod2-LMSIntegrations",
         "script_level.level_keys": [
-          "SP-VPL-21-mod2-LMSIntegrations_2"
+          "k5SP-VPL-21-mod2-LMSIntegrations"
         ],
         "lesson.key": "Navigating the Codeorg Learning Platform",
         "lesson_group.key": "",

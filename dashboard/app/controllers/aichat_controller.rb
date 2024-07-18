@@ -1,10 +1,12 @@
+ROLES_FOR_MODEL = %w(assistant user).freeze
+
 class AichatController < ApplicationController
   include AichatSagemakerHelper
   authorize_resource class: false
 
   # params are
-  # newMessage: string
-  # storedMessages: Array of {role: <'user', 'system', or 'assistant'>; content: string} - does not include user's new message
+  # newMessage: {role: 'user'; chatMessageText: string; status: string}
+  # storedMessages: Array of {role: <'user', 'system', or 'assistant'>; chatMessageText: string; status: string} - does not include user's new message
   # aichatModelCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
   # aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
   # POST /aichat/chat_completion
@@ -14,75 +16,72 @@ class AichatController < ApplicationController
       return render status: :bad_request, json: {}
     end
 
+    response_body = get_response_body
+    response_body[:session_id] = log_chat_session(response_body[:messages])
+
+    # Rails controller tests reuse the same controller instance across requests within a test,
+    # which causes tests to fail. Nulling out the session ID before responding fixes this issue.
+    # More detail/other confused developers here: https://github.com/rails/rails/issues/24566
+    @session_id = nil
+    render(status: :ok, json: response_body)
+  end
+
+  private def get_response_body
     # Check for profanity
     locale = params[:locale] || "en"
-    filter_result = ShareFiltering.find_failure(params[:newMessage], locale)
+    filter_result = ShareFiltering.find_profanity_failure(params[:newMessage][:chatMessageText], locale)
     if filter_result&.type == ShareFiltering::FailureType::PROFANITY
-      new_messages = [
-        {
-          role: 'user',
-          content: params[:newMessage],
-          status: SharedConstants::AI_INTERACTION_STATUS[:PROFANITY_VIOLATION]
-        }
+      messages = [
+        get_user_message(SharedConstants::AI_INTERACTION_STATUS[:PROFANITY_VIOLATION])
       ]
-      session_id = log_chat_session(new_messages)
-      return render(
-        status: :ok,
-        json: {
-          status: SharedConstants::AICHAT_ERROR_TYPE[:PROFANITY_USER],
-          flagged_content: filter_result.content,
-          session_id: session_id
-        }
-      )
+
+      return {
+        messages: messages,
+        flagged_content: filter_result.content,
+      }
     end
 
-    # Use to_unsafe_h here to allow testing this function.
-    # Safe params are primarily targeted at preventing "mass assignment vulnerability"
-    # which isn't relevant here.
-    input = AichatSagemakerHelper.format_inputs_for_sagemaker_request(
-      params.to_unsafe_h[:aichatModelCustomizations],
-      params.to_unsafe_h[:storedMessages].filter {|message| message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK]},
-      params.to_unsafe_h[:newMessage]
-    )
-    sagemaker_response = AichatSagemakerHelper.request_sagemaker_chat_completion(input, params[:aichatModelCustomizations][:selectedModelId])
-    latest_assistant_response = AichatSagemakerHelper.get_sagemaker_assistant_response(sagemaker_response)
+    messages_for_model = params[:storedMessages].filter do |message|
+      message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK] &&
+        ROLES_FOR_MODEL.include?(message[:role])
+    end
 
-    filter_result = ShareFiltering.find_failure(latest_assistant_response, locale)
+    latest_assistant_response_from_sagemaker = AichatSagemakerHelper.get_sagemaker_assistant_response(params[:aichatModelCustomizations], messages_for_model, params[:newMessage])
+
+    filter_result = ShareFiltering.find_profanity_failure(latest_assistant_response_from_sagemaker, locale)
     if filter_result&.type == ShareFiltering::FailureType::PROFANITY
-      new_messages = [
+      messages = [
+        get_user_message(SharedConstants::AI_INTERACTION_STATUS[:ERROR]),
         {
-          role: 'user',
-          content: params[:newMessage],
-          status: SharedConstants::AI_INTERACTION_STATUS[:ERROR]
+          role: "assistant",
+          status: SharedConstants::AI_INTERACTION_STATUS[:ERROR],
+          chatMessageText: '[redacted - model generated profanity]',
         }
       ]
-      session_id = log_chat_session(new_messages)
 
       Honeybadger.notify(
         'Profanity returned from aichat model (blocked before reaching student)',
         context: {
-          model_response: latest_assistant_response,
+          model_response: latest_assistant_response_from_sagemaker,
           flagged_content: filter_result.content,
-          aichat_session_id: session_id
+          aichat_session_id: log_chat_session(messages)
         }
       )
-      return render(
-        status: :ok,
-        json: {
-          status: SharedConstants::AICHAT_ERROR_TYPE[:PROFANITY_MODEL],
-          session_id: session_id
-        }
-      )
+
+      return {messages: messages}
     end
 
-    assistant_message = {role: "assistant", content: latest_assistant_response, status: SharedConstants::AI_INTERACTION_STATUS[:OK]}
-    new_messages = [
-      {role: 'user', content: params[:newMessage], status: SharedConstants::AI_INTERACTION_STATUS[:OK]},
-      assistant_message,
-    ]
-    session_id = log_chat_session(new_messages)
+    assistant_message = {
+      role: "assistant",
+      status: SharedConstants::AI_INTERACTION_STATUS[:OK],
+      chatMessageText: latest_assistant_response_from_sagemaker,
+    }
 
-    render(status: :ok, json: assistant_message.merge({session_id: session_id}).to_json)
+    messages = [
+      get_user_message(SharedConstants::AI_INTERACTION_STATUS[:OK]),
+      assistant_message
+    ]
+    {messages: messages}
   end
 
   private def has_required_params?
@@ -98,15 +97,20 @@ class AichatController < ApplicationController
   end
 
   private def log_chat_session(new_messages)
+    # Allows us to create/update a new session when we log to Honeybadger
+    # and reuse it when we respond to the client.
+    return @session_id if @session_id
+
     if params[:sessionId].present?
       session_id = params[:sessionId]
       session = AichatSession.find_by(id: session_id)
       if session && matches_existing_session?(session)
-        return update_session(session, new_messages)
+        @session_id = update_session(session, new_messages)
+        return @session_id
       end
     end
 
-    create_session(new_messages)
+    @session_id = create_session(new_messages)
   end
 
   private def matches_existing_session?(session)
@@ -117,9 +121,11 @@ class AichatController < ApplicationController
       return false
     end
 
-    _, project_id = storage_decrypt_channel_id(context[:channelId])
-    if session.project_id != project_id
-      return false
+    if context[:channelId]
+      _, project_id = storage_decrypt_channel_id(context[:channelId])
+      if session.project_id != project_id
+        return false
+      end
     end
 
     if params[:aichatModelCustomizations] != JSON.parse(session.model_customizations) ||
@@ -138,7 +144,11 @@ class AichatController < ApplicationController
 
   private def create_session(new_messages)
     context = params[:aichatContext]
-    _, project_id = storage_decrypt_channel_id(context[:channelId])
+
+    project_id = nil
+    if context[:channelId]
+      _, project_id = storage_decrypt_channel_id(context[:channelId])
+    end
 
     AichatSession.create(
       user_id: current_user.id,
@@ -152,5 +162,9 @@ class AichatController < ApplicationController
 
   private def updated_message_list(new_messages)
     params[:storedMessages] + new_messages
+  end
+
+  private def get_user_message(status)
+    params[:newMessage].merge({status: status})
   end
 end

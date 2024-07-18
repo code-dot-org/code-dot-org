@@ -1,7 +1,7 @@
 import {CodebridgeContextProvider} from '@codebridge/codebridgeContext';
 import {FileBrowser} from '@codebridge/FileBrowser';
 import {useSynchronizedProject} from '@codebridge/hooks';
-import {Instructions} from '@codebridge/Instructions';
+import {InfoPanel} from '@codebridge/InfoPanel';
 import {PreviewContainer} from '@codebridge/PreviewContainer';
 import {SideBar} from '@codebridge/SideBar';
 import {
@@ -14,8 +14,9 @@ import {
 } from '@codebridge/types';
 import React from 'react';
 
-import './styles/cdoIDE.css';
+import './styles/cdoIDE.scss';
 import Console from './Console';
+import ControlButtons from './ControlButtons';
 import Workspace from './Workspace';
 
 type CodebridgeProps = {
@@ -47,10 +48,31 @@ export const Codebridge = React.memo(
       'file-browser': FileBrowser,
       'side-bar': SideBar,
       'preview-container': PreviewContainer,
-      instructions: config.Instructions || Instructions,
+      'info-panel': config.Instructions || InfoPanel,
       workspace: Workspace,
       console: Console,
+      'control-buttons': ControlButtons,
     };
+
+    let gridLayout: string;
+    let gridLayoutRows: string;
+    let gridLayoutColumns: string;
+    if (
+      config.gridLayout &&
+      config.gridLayoutRows &&
+      config.gridLayoutColumns
+    ) {
+      gridLayout = config.gridLayout;
+      gridLayoutRows = config.gridLayoutRows;
+      gridLayoutColumns = config.gridLayoutColumns;
+    } else if (config.labeledGridLayouts && config.activeGridLayout) {
+      const labeledLayout = config.labeledGridLayouts[config.activeGridLayout];
+      gridLayout = labeledLayout.gridLayout;
+      gridLayoutRows = labeledLayout.gridLayoutRows;
+      gridLayoutColumns = labeledLayout.gridLayoutColumns;
+    } else {
+      throw new Error('Cannot render codebridge - no layout provided');
+    }
 
     return (
       <CodebridgeContextProvider
@@ -67,13 +89,13 @@ export const Codebridge = React.memo(
         <div
           className="cdoide-container"
           style={{
-            gridTemplateAreas: config.gridLayout,
-            gridTemplateRows: config.gridLayoutRows,
-            gridTemplateColumns: config.gridLayoutColumns,
+            gridTemplateAreas: gridLayout,
+            gridTemplateRows: gridLayoutRows,
+            gridTemplateColumns: gridLayoutColumns,
           }}
         >
           {(Object.keys(ComponentMap) as Array<keyof typeof ComponentMap>)
-            .filter(key => config.gridLayout.match(key))
+            .filter(key => gridLayout.match(key))
             .map(key => {
               const Component = ComponentMap[key];
               return <Component key={key} />;

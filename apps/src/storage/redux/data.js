@@ -4,6 +4,7 @@
  */
 
 import {Record} from 'immutable';
+
 import {DataView} from '../constants';
 
 const UPDATE_TABLE_LIST = 'data/UPDATE_TABLE_LIST';

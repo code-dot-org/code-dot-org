@@ -1,9 +1,10 @@
-import {expect} from '../../../util/reconfiguredChai';
-import {commands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
 import {commands as actionCommands} from '@cdo/apps/p5lab/spritelab/commands/actionCommands';
-import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
-import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
+import {commands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
 import {MAX_NUM_SPRITES} from '@cdo/apps/p5lab/spritelab/constants';
+import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
+
+import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
+import {expect} from '../../../util/reconfiguredChai';
 
 describe('Sprite Commands', () => {
   let coreLibrary;

@@ -1,19 +1,52 @@
 import {LevelProperties} from '@cdo/apps/lab2/types';
 
+import {Role} from '../aiComponentLibrary/chatItems/types';
+
 // TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
 export type AichatInteractionStatusValue = string;
 
-export type ChatCompletionMessage = {
-  id: number;
-  role: Role;
+export interface ChatItem {
+  // UTC timestamp in milliseconds
+  timestamp: number;
+}
+
+export interface ChatMessage extends ChatItem {
   chatMessageText: string;
+  role: Role;
   status: AichatInteractionStatusValue;
-  timestamp?: string;
-  // sessionId is the Rails-side identifier for the logging session to which this message belongs.
-  // It can be missing a) if the session has been reset because a model customization has changed (or chat history has been reset),
-  // or for model update messages that do not need to be sent to the server.
-  sessionId?: number;
-};
+}
+
+export interface ModelUpdate extends ChatItem {
+  id: number;
+  updatedField: keyof AiCustomizations;
+  updatedValue: AiCustomizations[keyof AiCustomizations];
+}
+
+export interface Notification extends ChatItem {
+  id: number;
+  text: string;
+  notificationType: 'error' | 'success';
+}
+
+// Type Predicates: checks if a ChatItem is a given type, and more helpfully,
+// automatically narrows to the specific type.
+export function isChatMessage(item: ChatItem): item is ChatMessage {
+  return (item as ChatMessage).chatMessageText !== undefined;
+}
+
+export function isModelUpdate(item: ChatItem): item is ModelUpdate {
+  return (item as ModelUpdate).updatedField !== undefined;
+}
+
+export function isNotification(item: ChatItem): item is Notification {
+  return (item as Notification).notificationType !== undefined;
+}
+
+export interface ChatApiResponse {
+  messages: ChatMessage[];
+  session_id: number;
+  flagged_content?: string;
+}
 
 export type AichatContext = {
   currentLevelId: number | null;
@@ -21,25 +54,12 @@ export type AichatContext = {
   channelId: string | undefined;
 };
 
-export enum Role {
-  ASSISTANT = 'assistant',
-  USER = 'user',
-  SYSTEM = 'system',
-  MODEL_UPDATE = 'update',
-}
-
 export enum ViewMode {
   EDIT = 'edit-mode',
   PRESENTATION = 'presentation-mode',
 }
 
 export interface AichatLevelProperties extends LevelProperties {
-  // --- DEPRECATED - used for old AI Chat
-  systemPrompt: string;
-  botTitle?: string;
-  botDescription?: string;
-  // ---
-
   /**
    * Initial AI chat customizations set by the level.
    * For each field, levelbuilders may define the initial default value,
@@ -63,6 +83,8 @@ export interface AiCustomizations {
 // Model customizations sent to backend for aichat levels - excludes modelCardInfo.
 // The customizations will be included in request to LLM endpoint.
 export type AichatModelCustomizations = Omit<AiCustomizations, 'modelCardInfo'>;
+
+export type FieldVisibilities = {[key in keyof AiCustomizations]: Visibility};
 
 /** Chat bot Model Card information */
 export interface ModelCardInfo {
@@ -102,3 +124,6 @@ export interface LevelAichatSettings {
   /** list of ModelDescription.ids to limit the models available to choose from in the level */
   availableModelIds: string[];
 }
+
+// The type of save action being performed (customization update, publish, model card save, etc).
+export type SaveType = 'updateChatbot' | 'publishModelCard' | 'saveModelCard';

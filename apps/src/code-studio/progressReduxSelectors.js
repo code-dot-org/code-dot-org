@@ -2,9 +2,11 @@
 // because they are quite complex and progressRedux.js is already quite large.
 
 import _ from 'lodash';
-import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
-import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
+
 import {TestResults} from '@cdo/apps/constants';
+import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
+import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
+
 import {activityCssClass} from './activityUtils';
 
 const PEER_REVIEW_ID = -1;
@@ -228,18 +230,40 @@ export const levelsForLessonId = (state, lessonId) => {
  */
 export const levelById = (state, lessonId, levelId) => {
   return levelsForLessonId(state, lessonId)
-    .flatMap(level => [level, ...(level?.sublevels || [])])
-    .find(level => level.id === levelId);
+    ?.flatMap(level => [level, ...(level?.sublevels || [])])
+    ?.find(level => level.id === levelId);
 };
 
 export const getCurrentLevel = state => {
   return getCurrentLevels(state)
-    .flatMap(level => [level, ...(level?.sublevels || [])])
-    .find(level => level.isCurrentLevel);
+    ?.flatMap(level => [level, ...(level?.sublevels || [])])
+    ?.find(level => level.isCurrentLevel);
 };
 
 export const getCurrentLevels = state => {
   return levelsForLessonId(state.progress, state.progress.currentLessonId);
+};
+
+/**
+ * Get the script level ID of the current level. If the current level is a sublevel,
+ * (and therefore not a script level) return the parent script level ID.
+ * Returns undefined if there is no current level.
+ */
+export const getCurrentScriptLevelId = state => {
+  const currentLevel = getCurrentLevel(state);
+  if (!currentLevel) {
+    return;
+  }
+
+  if (currentLevel.parentLevelId) {
+    return levelById(
+      state.progress,
+      state.progress.currentLessonId,
+      currentLevel.parentLevelId
+    )?.scriptLevelId;
+  } else {
+    return currentLevel.scriptLevelId;
+  }
 };
 
 /**

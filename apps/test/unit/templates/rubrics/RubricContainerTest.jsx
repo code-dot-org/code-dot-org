@@ -24,11 +24,20 @@ import i18n from '@cdo/locale';
 
 import {expect} from '../../../util/reconfiguredChai';
 
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  post: jest.fn().mockResolvedValue({
+    json: jest.fn().mockReturnValue({}),
+  }),
+}));
+
+fetch.mockIf(/\/rubrics\/.*/, JSON.stringify(''));
+
 describe('RubricContainer', () => {
   let clock;
   let store;
   let fetchStub;
   let ajaxStub;
+  let sendEventSpy;
 
   async function wait() {
     for (let _ = 0; _ < 10; _++) {
@@ -93,6 +102,7 @@ describe('RubricContainer', () => {
         new Response(JSON.stringify({}), {status: 200, statusText: 'OK'})
       )
     );
+    sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
     sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
     stubRedux();
     registerReducers({teacherSections, teacherPanel, currentUser});
@@ -107,6 +117,7 @@ describe('RubricContainer', () => {
     utils.queryParams.restore();
     fetchStub.restore();
     ajaxStub.restore();
+    sendEventSpy.restore();
   });
 
   const notAttemptedJson = {
@@ -452,7 +463,6 @@ describe('RubricContainer', () => {
       8. Calls refreshAiEvaluations
     */
     clock = sinon.useFakeTimers();
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchTeacherEvaluations(noEvals);
@@ -532,7 +542,6 @@ describe('RubricContainer', () => {
     expect(wrapper.find('RubricContent').props().aiEvaluations).to.eql(
       mockAiEvaluations
     );
-    sendEventSpy.restore();
   });
 
   it('shows general error message for status 1000', async () => {
@@ -740,7 +749,6 @@ describe('RubricContainer', () => {
   });
 
   it('sends event when window is dragged', async function () {
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchAiEvaluations(mockAiEvaluations);
@@ -779,7 +787,6 @@ describe('RubricContainer', () => {
       EVENTS.TA_RUBRIC_WINDOW_MOVE_END,
       {window_x_end: 0, window_y_end: 0}
     );
-    sendEventSpy.restore();
   });
 
   it('renders a RubricSubmitFooter if student data for an evaluation level', () => {
@@ -928,7 +935,6 @@ describe('RubricContainer', () => {
   });
 
   it('sends event when tour is started for the first time', async function () {
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchAiEvaluations(mockAiEvaluations);
@@ -954,12 +960,9 @@ describe('RubricContainer', () => {
         {}
       )
     );
-
-    sendEventSpy.restore();
   });
 
   it('sends event when user clicks next and back buttons', async function () {
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchAiEvaluations(mockAiEvaluations);
@@ -978,6 +981,9 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
+
+    const tourFabBg = document.getElementById('tour-fab-bg');
+    tourFabBg.scrollBy = jest.fn();
 
     const nextButton = await findByText('Next Tip');
 
@@ -1000,12 +1006,9 @@ describe('RubricContainer', () => {
         nextStep: 0,
       })
     );
-
-    sendEventSpy.restore();
   });
 
   it('sends event when user exits the tour', async function () {
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchAiEvaluations(mockAiEvaluations);
@@ -1025,7 +1028,11 @@ describe('RubricContainer', () => {
       </Provider>
     );
 
-    const skipButton = await findByRole('button', {name: '×'});
+    const skipButton = await findByRole(
+      'button',
+      {name: '×'},
+      {timeout: 10_000} // wait for introjs to load
+    );
 
     fireEvent.click(skipButton);
 
@@ -1037,12 +1044,9 @@ describe('RubricContainer', () => {
         }
       )
     );
-
-    sendEventSpy.restore();
   });
 
   it('sends event when user completes the tour', async function () {
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchAiEvaluations(mockAiEvaluations);
@@ -1061,7 +1065,8 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
-
+    const tourFabBg = document.getElementById('tour-fab-bg');
+    tourFabBg.scrollBy = jest.fn();
     const nextButton = await findByText('Next Tip');
 
     fireEvent.click(nextButton);
@@ -1082,12 +1087,9 @@ describe('RubricContainer', () => {
         {}
       )
     );
-
-    sendEventSpy.restore();
   });
 
   it('sends event when tour is restarted from ? button', async function () {
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
     stubFetchEvalStatusForUser(readyJson);
     stubFetchEvalStatusForAll(readyJsonAll);
     stubFetchAiEvaluations(mockAiEvaluations);
@@ -1108,6 +1110,8 @@ describe('RubricContainer', () => {
       </Provider>
     );
 
+    const tourFabBg = document.getElementById('tour-fab-bg');
+    tourFabBg.scrollBy = jest.fn();
     await wait();
 
     expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
@@ -1122,7 +1126,5 @@ describe('RubricContainer', () => {
         {}
       )
     );
-
-    sendEventSpy.restore();
   });
 });

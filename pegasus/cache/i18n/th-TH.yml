@@ -811,6 +811,7 @@ th-TH:
   header_courses: คอร์ส
   header_districts: อำเภอ
   header_documentation: เอกสารประกอบ
+  header_donate: ร่วมบริจาค
   header_educate_beyond: นอกเหนือจากรหัส.org
   header_educate_community: ชุมชนออนไลน์
   header_educate_elementary: โรงเรียนประถมศึกษา
@@ -1143,6 +1144,7 @@ th-TH:
   homepage_slot_text_link_k5: คอร์สสำหรับเด็กอนุบาลถึง ป.5
   homepage_slot_text_link_local: ค้นหาชั้นเรียนในท้องถิ่น
   homepage_slot_text_link_middle: มัธยมศึกษาตอนต้น
+  homepage_slot_text_link_middle_and_high: โรงเรียนมัธยมและมัธยม
   homepage_slot_text_link_othercourses: หลักสูตรออนไลน์อื่นๆ
   homepage_slot_text_link_pd: การพัฒนาอย่างมืออาชีพ
   homepage_slot_text_link_stats: ดูสถิติ
@@ -1645,12 +1647,16 @@ th-TH:
   user_header_applab: 'แอ๊ปแล็บ '
   user_header_artist: ศิลปิน
   user_header_create: 'สร้าง '
+  user_header_create_account: สร้างบัญชี
+  user_header_create_account_low_cap: สร้างบัญชี
   user_header_dance: Dance Party
   user_header_flappy: แฟล๊ปปี้
   user_header_gamelab: เกมแล๊บ (Game Lab)
   user_header_label: สวัสดี %{username}
   user_header_logout: ออกจากระบบ
   user_header_minecraft: ไมน์คราฟท์
+  user_header_new_project: New Project
+  user_header_new_project_low_cap: New project
   user_header_playlab: เรื่องราวและเกม
   user_header_settings: บัญชีของฉัน
   user_header_signin: เข้าสู่ระบบ

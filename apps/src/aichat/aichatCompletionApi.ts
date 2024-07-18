@@ -1,12 +1,12 @@
+import HttpClient from '@cdo/apps/util/HttpClient';
+
 import {
-  Role,
-  ChatCompletionMessage,
   AiCustomizations,
   AichatContext,
   AichatModelCustomizations,
+  ChatApiResponse,
+  ChatMessage,
 } from './types';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 const CHAT_COMPLETION_URL = '/aichat/chat_completion';
 
@@ -16,19 +16,18 @@ const CHAT_COMPLETION_URL = '/aichat/chat_completion';
  * and assistant message if successful.
  */
 export async function postAichatCompletionMessage(
-  newMessage: string,
-  messagesToSend: ChatCompletionMessage[],
+  newMessage: ChatMessage,
+  storedMessages: ChatMessage[],
   aiCustomizations: AiCustomizations,
   aichatContext: AichatContext,
   sessionId?: number
-) {
+): Promise<ChatApiResponse> {
   const aichatModelCustomizations: AichatModelCustomizations = {
     selectedModelId: aiCustomizations.selectedModelId,
     temperature: aiCustomizations.temperature,
     retrievalContexts: aiCustomizations.retrievalContexts,
     systemPrompt: aiCustomizations.systemPrompt,
   };
-  const storedMessages = formatMessagesForAichatCompletion(messagesToSend);
   const payload = {
     newMessage,
     storedMessages,
@@ -36,41 +35,14 @@ export async function postAichatCompletionMessage(
     aichatContext,
     ...(sessionId ? {sessionId} : {}),
   };
-  try {
-    const response = await HttpClient.post(
-      CHAT_COMPLETION_URL,
-      JSON.stringify(payload),
-      true,
-      {
-        'Content-Type': 'application/json; charset=UTF-8',
-      }
-    );
-    // For now, response will be null if there was an error.
-    if (response.ok) {
-      return await response.json();
-    } else {
-      return null;
+  const response = await HttpClient.post(
+    CHAT_COMPLETION_URL,
+    JSON.stringify(payload),
+    true,
+    {
+      'Content-Type': 'application/json; charset=UTF-8',
     }
-  } catch (error) {
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .logError('Error in aichat completion request', error as Error);
-  }
+  );
+
+  return await response.json();
 }
-
-const formatMessagesForAichatCompletion = (
-  chatMessages: ChatCompletionMessage[]
-): AichatCompletionMessage[] => {
-  return chatMessages.map(message => {
-    return {
-      role: message.role,
-      content: message.chatMessageText,
-      status: message.status,
-    };
-  });
-};
-
-type AichatCompletionMessage = {
-  role: Role;
-  content: string;
-};

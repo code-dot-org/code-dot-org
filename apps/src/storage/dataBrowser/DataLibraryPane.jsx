@@ -1,19 +1,23 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import {showWarning} from '../redux/data';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import LibraryCategory from './LibraryCategory';
-import SearchBar from '@cdo/apps/templates/SearchBar';
-import {getDatasetInfo} from './dataUtils';
-import msg from '@cdo/locale';
-import PreviewModal from './PreviewModal';
-import {isFirebaseStorage, storageBackend} from '../storage';
-import {WarningType} from '../constants';
-import experiments from '../../util/experiments';
 import _ from 'lodash';
-import style from './data-library-pane.module.scss';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
+
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import SearchBar from '@cdo/apps/templates/SearchBar';
+import msg from '@cdo/locale';
+
+import experiments from '../../util/experiments';
+import {WarningType} from '../constants';
+import {showWarning} from '../redux/data';
+import {isFirebaseStorage, storageBackend} from '../storage';
+
+import {getDatasetInfo} from './dataUtils';
+import LibraryCategory from './LibraryCategory';
 import {refreshCurrentDataView} from './loadDataForView';
+import PreviewModal from './PreviewModal';
+
+import style from './data-library-pane.module.scss';
 
 class DataLibraryPane extends React.Component {
   static propTypes = {
@@ -52,8 +56,9 @@ class DataLibraryPane extends React.Component {
         );
       }
     } else {
-      storageBackend().addSharedTable(datasetInfo.name);
-      refreshCurrentDataView();
+      storageBackend()
+        .addSharedTable(datasetInfo.name)
+        .then(() => refreshCurrentDataView());
     }
   };
 

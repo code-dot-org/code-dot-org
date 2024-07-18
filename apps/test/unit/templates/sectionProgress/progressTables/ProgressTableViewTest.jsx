@@ -46,6 +46,13 @@ const initialState = fakeProgressTableReduxInitialState(
   STUDENTS
 );
 
+jest.mock(
+  '@cdo/apps/templates/sectionProgress/progressTables/progress-table-constants.module.scss',
+  () => ({
+    MAX_ROWS: 14,
+  })
+);
+
 const setUp = (currentView = ViewType.SUMMARY, overrideState = {}) => {
   const store = createStore(
     combineReducers({

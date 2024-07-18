@@ -1,5 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import Button from '@cdo/apps/templates/Button';
 
 class DatasetList extends React.Component {
@@ -45,7 +46,8 @@ class DatasetList extends React.Component {
           size={Button.ButtonSize.large}
         />
         <p>
-          After adding a new dataset, you'll need to
+          After adding a new dataset, you'll need to{' '}
+          <a href="../data_docs/edit">add documentation</a> and{' '}
           <a href="./manifest/edit">edit the manifest</a>.
         </p>
       </div>

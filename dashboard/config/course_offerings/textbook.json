@@ -1,7 +1,6 @@
 {
   "key": "textbook",
   "display_name": "textbook",
-  "category": "other",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,

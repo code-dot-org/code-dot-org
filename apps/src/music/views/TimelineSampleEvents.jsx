@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React, {useRef} from 'react';
-import UniqueSounds from '../utils/UniqueSounds';
-import TimelineElement from './TimelineElement';
 import {useSelector} from 'react-redux';
+
+import UniqueSounds from '../utils/UniqueSounds';
+
+import TimelineElement from './TimelineElement';
 
 /**
  * Renders timeline events, organized by unique sample ID.

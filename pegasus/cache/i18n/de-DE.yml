@@ -1191,6 +1191,7 @@ de-DE:
   header_courses: Kurse
   header_districts: Bezirke
   header_documentation: Dokumentation
+  header_donate: Spenden
   header_educate_beyond: Jenseits von Code.org
   header_educate_community: Online Community
   header_educate_elementary: Grundschule
@@ -1651,6 +1652,7 @@ de-DE:
   homepage_slot_text_link_k5: Kurse für die Vor- und Grundschule
   homepage_slot_text_link_local: Unterricht vor Ort finden
   homepage_slot_text_link_middle: Mittelstufe
+  homepage_slot_text_link_middle_and_high: Mittel- und weiterführende Schule
   homepage_slot_text_link_othercourses: Andere Onlinekurse
   homepage_slot_text_link_pd: Fortbildung
   homepage_slot_text_link_shop: T-shirts, Hüte & mehr

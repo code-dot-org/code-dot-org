@@ -3,12 +3,22 @@
 // This file contains some functionality related to navigating through
 // levels without doing page reloads.
 
-import {getStore} from '../redux';
 import {onLevelIndexChange} from '@cdo/apps/code-studio/progressRedux';
+
+import {getStore} from '../redux';
 
 // Returns whether we can safely navigate between the two given levels
 // without reloading the whole page.
 export function canChangeLevelInPage(currentLevel, newLevel) {
+  // If we are on the summary page, we can't navigate to a new level without
+  // reloading the page. Summary is used for viewing student responses to
+  // predict levels.
+  const path = new URL(document.location).pathname;
+  const pathComponents = path.split('/');
+  if (pathComponents.includes('summary')) {
+    return false;
+  }
+  // Otherwise, we can navigate between any 2 lab2 levels.
   return currentLevel?.usesLab2 && newLevel?.usesLab2;
 }
 

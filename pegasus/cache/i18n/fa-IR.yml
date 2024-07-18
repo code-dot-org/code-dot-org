@@ -808,6 +808,7 @@ fa-IR:
   header_courses: دوره‌ها
   header_districts: ناحیه
   header_documentation: مستندات
+  header_donate: کمک مالی بدهید
   header_educate_beyond: فراتر از Code.org
   header_educate_community: جامعه‌ی مجازی
   header_educate_elementary: مدرسه ابتدایی
@@ -1021,6 +1022,7 @@ fa-IR:
   homepage_slot_text_link_k5: دوره هایی برای بچه های ابتدایی
   homepage_slot_text_link_local: یک کلاس محلی پیدا کنید
   homepage_slot_text_link_middle: راهنمایی
+  homepage_slot_text_link_middle_and_high: دبیرستان و دبیرستان
   homepage_slot_text_link_othercourses: دوره های آنلاین دیگر
   homepage_slot_text_link_pd: توسعه ی حرفه ای
   homepage_slot_text_link_stats: آمار ها را ببینید
@@ -1624,12 +1626,16 @@ fa-IR:
   user_header_applab: 'آزمایشگاه نرم افزار '
   user_header_artist: 'هنرمند '
   user_header_create: 'ایجاد '
+  user_header_create_account: بساز حساب کاربری
+  user_header_create_account_low_cap: بساز حساب کاربری
   user_header_dance: مهمانی رقص
   user_header_flappy: فلاپی
   user_header_gamelab: لابراتوار بازی
   user_header_label: سلام %{username}
   user_header_logout: خروج
   user_header_minecraft: ماین‌کرفت
+  user_header_new_project: پروژه جدید
+  user_header_new_project_low_cap: پروژه جدید
   user_header_playlab: لابراتوار بازی
   user_header_settings: حساب کاربری من
   user_header_signin: ورود

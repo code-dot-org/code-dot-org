@@ -1,0 +1,42 @@
+@import 'color.scss';
+
+.fileTabs {
+  display: flex;
+  justify-content: flex-start;
+  gap: 6px;
+  align-items: flex-end;
+  overflow-x: scroll;
+  max-width: 100%;
+  background-color: $charcoal;
+  color: $white;
+  scrollbar-width: none;
+  grid-area: file-tabs;
+}
+
+.fileTab {
+  padding: 0;
+  display: flex;
+  cursor: pointer;
+  white-space: nowrap;
+  justify-content: space-between;
+  gap: 10px;
+  padding-left: 2px;
+  padding-right: 2px;
+  background-color: $dark_charcoal;
+}
+
+.inlineButton {
+  border: none;
+  background: none;
+  color: inherit;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  white-space: nowrap;
+}
+
+.active {
+  font-weight: bold;
+  background-color: #292f36;
+}

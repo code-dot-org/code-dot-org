@@ -1,7 +1,8 @@
 import {ResponseValidator} from '@cdo/apps/util/HttpClient';
-import {Key} from '../utils/Notes';
-import {baseAssetUrlRestricted, DEFAULT_PACK} from '../constants';
+
 import {getBaseAssetUrl} from '../appConfig';
+import {baseAssetUrlRestricted, DEFAULT_PACK} from '../constants';
+import {Key} from '../utils/Notes';
 
 export default class MusicLibrary {
   private static instance: MusicLibrary;
@@ -71,7 +72,7 @@ export default class MusicLibrary {
     return this.libraryJson.path;
   }
 
-  setCurrentPackId(packId: string) {
+  setCurrentPackId(packId: string | null) {
     this.currentPackId = packId;
   }
 

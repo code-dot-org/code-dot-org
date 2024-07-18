@@ -20,7 +20,10 @@ theme: responsive_full_width
       %img.rounded-corners.box-shadow-primary{src: "/images/admins-page-top.png", alt: "", style: "position: relative; width: 100%;"}
     .clear
 
-= view :section_divider_line
+- if !!DCDO.get('curriculum-launch-2024', false)
+  = view :curriculum_launch_skinny_banner
+- else
+  = view :section_divider_line
 
 %section.why-teach-cs
   .wrapper
@@ -88,19 +91,7 @@ theme: responsive_full_width
   .wrapper
     = view :"administrators/admins_subscribe_form"
 
-%section.lms.bg-neutral-light
-  .wrapper.centered
-    %h2=hoc_s(:admins_page_lms_heading)
-    %p=hoc_s(:admins_page_lms_desc)
-    .logos.flex-container.justify-center.align-items-start.wrap
-      %img{src: "/images/avatars/lms-logo-clever.png", alt: "Clever", style: "width: 115px"}
-      %img{src: "/images/avatars/lms-logo-google-classroom.png", alt: "Google Classroom", style: "width: 185px"}
-      .coming-soon
-        %img{src: "/images/avatars/lms-logo-canvas.png", alt: "Canvas", style: "width: 150px"}
-        %p=hoc_s(:module_label_coming_soon)
-      .coming-soon
-        %img{src: "/images/avatars/lms-logo-schoology.png", alt: "Schoology", style: "width: 185px"}
-        %p=hoc_s(:module_label_coming_soon)
+= view :"lms/lms_integrations_banner"
 
 %section
   .wrapper

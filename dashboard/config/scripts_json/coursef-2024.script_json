@@ -14,12 +14,13 @@
         "playlab_k1",
         "artist"
       ],
+      "tts": true,
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2024-05-10 19:11:21 UTC",
-    "published_state": "beta",
+    "serialized_at": "2024-07-11 15:59:57 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -2126,8 +2127,19 @@
       }
     },
     {
-      "key": "ec25d90f-c693-4289-ac16-e80438eebe2a",
+      "key": "faf95208-ed56-478c-9bb9-01887c624a84",
       "position": 4,
+      "properties": {
+        "progression_name": "Blank Space Stories - Student Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "faf95208-ed56-478c-9bb9-01887c624a84",
+        "lesson_activity.key": "989738db-0ce7-499a-ab80-f739768567b7"
+      }
+    },
+    {
+      "key": "ec25d90f-c693-4289-ac16-e80438eebe2a",
+      "position": 5,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Create Your Own Story” slide\n\n**Do This:** Pass out the ***student worksheet** and go over the instructions. ",
         "tips": [
@@ -3873,6 +3885,17 @@
       }
     },
     {
+      "key": "19983965-bbde-4920-971f-3bdcaad4a3aa",
+      "position": 2,
+      "properties": {
+        "progression_name": "The Internet - Student Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "19983965-bbde-4920-971f-3bdcaad4a3aa",
+        "lesson_activity.key": "d602173a-4f90-4179-aab7-f46bdcde3548"
+      }
+    },
+    {
       "key": "b9ac8cf4-f2a2-40bd-8298-154e94166297",
       "position": 1,
       "properties": {
@@ -4931,6 +4954,31 @@
     },
     {
       "chapter": 30,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "unplugged_blank space stories_markdown"
+        ],
+        "progression": "Blank Space Stories - Student Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_blank space stories_markdown"
+        ],
+        "lesson.key": "Blank Space Stories",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursef-2024",
+        "activity_section.key": "faf95208-ed56-478c-9bb9-01887c624a84"
+      },
+      "level_keys": [
+        "unplugged_blank space stories_markdown"
+      ]
+    },
+    {
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4955,7 +5003,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4980,7 +5028,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5005,7 +5053,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5030,7 +5078,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -5055,7 +5103,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -5080,7 +5128,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -5105,7 +5153,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
@@ -5130,7 +5178,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5155,7 +5203,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5180,7 +5228,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5205,7 +5253,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5230,7 +5278,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5255,7 +5303,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5280,7 +5328,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5305,7 +5353,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5330,7 +5378,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5355,7 +5403,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -5380,7 +5428,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -5405,7 +5453,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -5430,7 +5478,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
@@ -5455,7 +5503,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5480,7 +5528,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -5505,7 +5553,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5530,7 +5578,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5555,7 +5603,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5580,7 +5628,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5605,7 +5653,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -5630,7 +5678,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5655,7 +5703,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5680,7 +5728,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -5705,7 +5753,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -5730,7 +5778,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 10,
       "activity_section_position": 4,
       "assessment": false,
@@ -5755,7 +5803,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 11,
       "activity_section_position": 5,
       "assessment": false,
@@ -5780,7 +5828,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5805,7 +5853,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5830,7 +5878,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5855,7 +5903,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -5880,7 +5928,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -5905,7 +5953,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -5930,7 +5978,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -5955,7 +6003,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -5980,7 +6028,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6005,7 +6053,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6030,7 +6078,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6055,7 +6103,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6080,7 +6128,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6105,7 +6153,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6130,7 +6178,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6155,7 +6203,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6180,7 +6228,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6205,7 +6253,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6230,7 +6278,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6255,7 +6303,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 84,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6280,7 +6328,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 85,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6305,7 +6353,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 86,
       "position": 11,
       "activity_section_position": 2,
       "assessment": false,
@@ -6330,7 +6378,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 87,
       "position": 12,
       "activity_section_position": 3,
       "assessment": false,
@@ -6355,7 +6403,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 88,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -6380,7 +6428,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 89,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -6405,7 +6453,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 90,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6430,7 +6478,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 91,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6455,7 +6503,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 92,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6480,7 +6528,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 93,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -6505,7 +6553,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 94,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6530,7 +6578,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 95,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6555,7 +6603,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 96,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6580,7 +6628,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 97,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6605,7 +6653,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 98,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6630,7 +6678,32 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 99,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "unplugged_the internet_markdown"
+        ],
+        "progression": "The Internet - Student Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_the internet_markdown"
+        ],
+        "lesson.key": "The Internet",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "coursef-2024",
+        "activity_section.key": "19983965-bbde-4920-971f-3bdcaad4a3aa"
+      },
+      "level_keys": [
+        "unplugged_the internet_markdown"
+      ]
+    },
+    {
+      "chapter": 100,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6655,7 +6728,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 101,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7027,6 +7100,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "coursef-2024",
         "activity_section.key": "c12bad6a-e4dc-43c3-a02d-339098873b8f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unplugged_blank space stories_markdown",
+        "script_level.level_keys": [
+          "unplugged_blank space stories_markdown"
+        ],
+        "lesson.key": "Blank Space Stories",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "coursef-2024",
+        "activity_section.key": "faf95208-ed56-478c-9bb9-01887c624a84"
       }
     },
     {
@@ -7847,6 +7932,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "unplugged_the internet_markdown",
+        "script_level.level_keys": [
+          "unplugged_the internet_markdown"
+        ],
+        "lesson.key": "The Internet",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "coursef-2024",
+        "activity_section.key": "19983965-bbde-4920-971f-3bdcaad4a3aa"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "courseF_EOC_examples2022_2022_pilot_-2022-2_2024",
         "script_level.level_keys": [
           "courseF_EOC_examples2022_2022_pilot_-2022-2_2024"
@@ -8013,15 +8110,29 @@
       }
     },
     {
-      "name": "CSF Course Syllabus",
-      "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
-      "key": "csf_course_syllabus",
+      "name": "CSF Change Log 2024-25",
+      "url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/template/preview",
+      "key": "csf_change_log_2024-25",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/template/export",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "csf_course_syllabus"
+        "resource.key": "csf_change_log_2024-25"
+      }
+    },
+    {
+      "name": "CSF Syllabus 2024-25",
+      "url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/edit#heading=h.d1b2pnqkkc57/template/preivew",
+      "key": "csf_syllabus_2024-25",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/edit#heading=h.d1b2pnqkkc57/export",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csf_syllabus_2024-25"
       }
     },
     {
@@ -8223,6 +8334,16 @@
       },
       "seeding_key": {
         "resource.key": "sprite_lab_documentation"
+      }
+    },
+    {
+      "name": "CSF State Standards for CS - Master Crosswalk List",
+      "url": "https://docs.google.com/document/d/1sw5P6ejdXTK5H-TWxFCtYeI77sxxJwlY5V0k6p96reQ/edit#heading=h.73du1rws92dv/template/preview",
+      "key": "state_standards_for_computer_science_-_master_crosswalk_list",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "state_standards_for_computer_science_-_master_crosswalk_list"
       }
     },
     {
@@ -8655,7 +8776,13 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csf_course_syllabus",
+        "resource.key": "csf_change_log_2024-25",
+        "script.name": "coursef-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csf_syllabus_2024-25",
         "script.name": "coursef-2024"
       }
     },
@@ -8686,6 +8813,12 @@
     {
       "seeding_key": {
         "resource.key": "sprite_lab_documentation",
+        "script.name": "coursef-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "state_standards_for_computer_science_-_master_crosswalk_list",
         "script.name": "coursef-2024"
       }
     },

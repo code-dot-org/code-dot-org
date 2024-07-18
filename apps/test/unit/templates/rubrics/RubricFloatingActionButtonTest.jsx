@@ -18,6 +18,14 @@ import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSection
 
 import {expect} from '../../../util/reconfiguredChai';
 
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  post: jest.fn().mockResolvedValue({
+    json: jest.fn().mockReturnValue({}),
+  }),
+}));
+
+fetch.mockIf(/\/rubrics\/.*/, JSON.stringify(''));
+
 const defaultProps = {
   rubric: {
     level: {
@@ -56,17 +64,23 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
     });
 
     afterEach(() => {
-      sessionStorage.getItem.restore();
+      sessionStorage.removeItem('RubricFabOpenStateKey');
     });
 
     it('renders pulse animation when session storage is empty', () => {
-      sessionStorage.getItem.withArgs('RubricFabOpenStateKey').returns(null);
+      const sendEventSpy = sinon.stub(analyticsReporter, 'sendEvent');
       render(
         <Provider store={getStore()}>
           <RubricFloatingActionButton {...defaultProps} />
         </Provider>
       );
-
+      expect(sendEventSpy).to.have.been.calledWith(
+        EVENTS.TA_RUBRIC_CLOSED_ON_PAGE_LOAD,
+        {
+          viewingStudentWork: false,
+          viewingEvaluationLevel: true,
+        }
+      );
       const fab = screen.getByRole('button', {name: 'AI bot'});
       expect(fab.classList.contains('unittest-fab-pulse')).to.be.false;
 
@@ -77,19 +91,51 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
       const taImage = screen.getByRole('img', {name: 'TA overlay'});
       fireEvent.load(taImage);
       expect(fab.classList.contains('unittest-fab-pulse')).to.be.true;
+      sendEventSpy.restore();
     });
 
-    it('does not render pulse animation when open state is present in session storage', () => {
-      sessionStorage.getItem.withArgs('RubricFabOpenStateKey').returns(false);
+    it('sends open on page load event when open state is true in session storage', () => {
+      const sendEventSpy = sinon.stub(analyticsReporter, 'sendEvent');
+      sessionStorage.setItem('RubricFabOpenStateKey', 'true');
       render(
         <Provider store={getStore()}>
           <RubricFloatingActionButton {...defaultProps} />
         </Provider>
       );
+      expect(sendEventSpy).to.have.been.calledWith(
+        EVENTS.TA_RUBRIC_OPEN_ON_PAGE_LOAD,
+        {
+          viewingStudentWork: false,
+          viewingEvaluationLevel: true,
+        }
+      );
       const image = screen.getByRole('img', {name: 'AI bot'});
       fireEvent.load(image);
       const fab = screen.getByRole('button', {name: 'AI bot'});
       expect(fab.classList.contains('unittest-fab-pulse')).to.be.false;
+      sendEventSpy.restore();
+    });
+
+    it('does not render pulse animation when open state is present in session storage', () => {
+      const sendEventSpy = sinon.stub(analyticsReporter, 'sendEvent');
+      sessionStorage.setItem('RubricFabOpenStateKey', 'false');
+      render(
+        <Provider store={getStore()}>
+          <RubricFloatingActionButton {...defaultProps} />
+        </Provider>
+      );
+      expect(sendEventSpy).to.have.been.calledWith(
+        EVENTS.TA_RUBRIC_CLOSED_ON_PAGE_LOAD,
+        {
+          viewingStudentWork: false,
+          viewingEvaluationLevel: true,
+        }
+      );
+      const image = screen.getByRole('img', {name: 'AI bot'});
+      fireEvent.load(image);
+      const fab = screen.getByRole('button', {name: 'AI bot'});
+      expect(fab.classList.contains('unittest-fab-pulse')).to.be.false;
+      sendEventSpy.restore();
     });
   });
 });

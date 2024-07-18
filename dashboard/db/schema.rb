@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_05_14_181513) do
+ActiveRecord::Schema.define(version: 2024_07_02_214406) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 2024_05_14_181513) do
     t.boolean "thumbs_down"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.text "details"
     t.index ["ai_tutor_interaction_id", "user_id"], name: "index_ai_tutor_feedback_on_interaction_and_user", unique: true
     t.index ["user_id"], name: "fk_rails_105c1f9428"
   end
@@ -317,8 +318,8 @@ ActiveRecord::Schema.define(version: 2024_05_14_181513) do
     t.datetime "deleted_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.virtual "active", type: :boolean, as: "if(isnull(`deleted_at`),TRUE,NULL)"
-    t.virtual "open", type: :boolean, as: "if(isnull(`closed_at`),TRUE,NULL)"
+    t.virtual "active", type: :boolean, as: "if((`deleted_at` is null),true,NULL)"
+    t.virtual "open", type: :boolean, as: "if((`closed_at` is null),true,NULL)"
     t.index ["project_id", "deleted_at"], name: "index_code_reviews_on_project_id_and_deleted_at"
     t.index ["user_id", "project_id", "open", "active"], name: "index_code_reviews_unique", unique: true
     t.index ["user_id", "script_id", "project_level_id", "closed_at", "deleted_at"], name: "index_code_reviews_for_peer_lookup"
@@ -408,7 +409,6 @@ ActiveRecord::Schema.define(version: 2024_05_14_181513) do
     t.string "display_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "category", default: "other", null: false
     t.boolean "is_featured", default: false, null: false
     t.boolean "assignable", default: true, null: false
     t.string "curriculum_type"
@@ -425,6 +425,15 @@ ActiveRecord::Schema.define(version: 2024_05_14_181513) do
     t.datetime "published_date"
     t.integer "self_paced_pl_course_offering_id"
     t.index ["key"], name: "index_course_offerings_on_key", unique: true
+  end
+
+  create_table "course_offerings_pd_workshops", id: false, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
+    t.bigint "pd_workshop_id", null: false
+    t.bigint "course_offering_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["course_offering_id"], name: "index_course_offerings_pd_workshops_on_course_offering_id"
+    t.index ["pd_workshop_id"], name: "index_course_offerings_pd_workshops_on_pd_workshop_id"
   end
 
   create_table "course_scripts", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -1146,6 +1155,7 @@ ActiveRecord::Schema.define(version: 2024_05_14_181513) do
     t.index ["code"], name: "index_pd_enrollments_on_code", unique: true
     t.index ["email"], name: "index_pd_enrollments_on_email"
     t.index ["pd_workshop_id"], name: "index_pd_enrollments_on_pd_workshop_id"
+    t.index ["user_id"], name: "index_pd_enrollments_on_user_id"
   end
 
   create_table "pd_facilitator_program_registrations", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
@@ -1666,7 +1676,7 @@ ActiveRecord::Schema.define(version: 2024_05_14_181513) do
     t.index ["project_id"], name: "index_project_use_datablock_storages_on_project_id"
   end
 
-  create_table "projects", id: :integer, charset: "utf8mb4", force: :cascade do |t|
+  create_table "projects", id: :integer, charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.integer "storage_id"
     t.text "value", size: :medium
     t.datetime "updated_at", null: false

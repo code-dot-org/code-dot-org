@@ -2,11 +2,12 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
+
 import {getStore, registerReducers} from '@cdo/apps/redux';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import ProjectsGallery from '@cdo/apps/templates/projects/ProjectsGallery';
-import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
+import deleteDialogReducer from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
 import {Galleries} from '@cdo/apps/templates/projects/projectConstants';
+import ProjectHeader from '@cdo/apps/templates/projects/ProjectHeader';
+import ProjectsGallery from '@cdo/apps/templates/projects/ProjectsGallery';
 import projects, {
   selectGallery,
   setPersonalProjects,
@@ -14,7 +15,7 @@ import projects, {
   setCaptchaKey,
 } from '@cdo/apps/templates/projects/projectsRedux';
 import publishDialogReducer from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
-import deleteDialogReducer from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   const projectsData = getScriptData('projects');
@@ -47,15 +48,9 @@ $(document).ready(() => {
         <ProjectHeader
           canViewAdvancedTools={projectsData.canViewAdvancedTools}
           projectCount={projectsData.projectCount}
-          showPublicGalleryUpdatedInfo={
-            projectsData.showPublicGalleryUpdatedInfo
-          }
         />
         <div className={'main container'}>
-          <ProjectsGallery
-            limitedGallery={projectsData.limitedGallery}
-            canShare={!!projectsData.canShare}
-          />
+          <ProjectsGallery limitedGallery={projectsData.limitedGallery} />
         </div>
       </div>
     </Provider>,

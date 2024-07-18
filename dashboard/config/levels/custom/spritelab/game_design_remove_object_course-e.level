@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-05-17T16:35:17.000Z",
   "level_num": "custom",
@@ -19,7 +20,7 @@
     "submittable": "false",
     "is_k1": "false",
     "skip_instructions_popup": "false",
-    "never_autoplay_video": "false",
+    "never_autoplay_video": "true",
     "disable_param_editing": "true",
     "disable_variable_editing": "false",
     "disable_procedure_autopopulate": "false",
@@ -65,12 +66,14 @@
     "encrypted_examples": "NnN6iejLgpzpjX3vsOoLhx6nGTggt6sgLW5VXGiOcWD1XDQUzTNeQAJlsK5V\nLg5OJMQe29/xYXFrJlUqgb6WWQ==\n",
     "standalone_app_name": "spritelab",
     "short_instructions": "Code your program so that clicking on a sprite removes it. ",
+    "video_key": "csf_lots_of_sprites",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-17T16:35:17.032+00:00\",\"changed\":[\"cloned from \\\"game_design_remove_object_2024\\\"\"],\"cloned_from\":\"game_design_remove_object_2024\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-17T16:35:17.032+00:00\",\"changed\":[\"cloned from \\\"game_design_remove_object_2024\\\"\"],\"cloned_from\":\"game_design_remove_object_2024\"},{\"changed_at\":\"2024-05-24 17:17:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-24 17:28:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"never_autoplay_video\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-15 21:51:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 2,
+    "events": 2
   }
 }]]></config>
   <blocks>

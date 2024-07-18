@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import msg from '@cdo/locale';
-import color from '../util/color';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import {getStore} from '@cdo/apps/redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
-import fontConstants from '@cdo/apps/fontConstants';
+import msg from '@cdo/locale';
+
+import color from '../util/color';
+
 import {isFirebaseStorage} from './storage';
 
 export const ParamType = {

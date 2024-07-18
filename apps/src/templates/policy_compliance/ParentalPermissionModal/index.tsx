@@ -37,14 +37,8 @@ interface ParentalPermissionModalProps {
     parentalPermissionRequest: ParentalPermissionRequest | null | undefined
   ) => void;
   onSubmit?: (parentalPermissionRequest: ParentalPermissionRequest) => void;
-  onResend?: (
-    prevParentalPermissionRequest: ParentalPermissionRequest,
-    parentalPermissionRequest: ParentalPermissionRequest
-  ) => void;
-  onUpdate?: (
-    prevParentalPermissionRequest: ParentalPermissionRequest,
-    parentalPermissionRequest: ParentalPermissionRequest
-  ) => void;
+  onResend?: (parentalPermissionRequest: ParentalPermissionRequest) => void;
+  onUpdate?: (parentalPermissionRequest: ParentalPermissionRequest) => void;
 }
 
 const ParentalPermissionModal: React.FC<ParentalPermissionModalProps> = ({
@@ -101,9 +95,9 @@ const ParentalPermissionModal: React.FC<ParentalPermissionModalProps> = ({
       prevParentalPermissionRequest.parent_email ===
       parentalPermissionRequest.parent_email
     ) {
-      onResend(prevParentalPermissionRequest, parentalPermissionRequest);
+      onResend(parentalPermissionRequest);
     } else {
-      onUpdate(prevParentalPermissionRequest, parentalPermissionRequest);
+      onUpdate(parentalPermissionRequest);
     }
   }, [
     action,
@@ -180,7 +174,7 @@ const ParentalPermissionModal: React.FC<ParentalPermissionModalProps> = ({
     ) : (
       i18n.policyCompliance_parentalPermissionModal_lastEmailSentAt({
         sendingTime: moment(parentalPermissionRequest.requested_at)
-          .lang(currentLocale())
+          .locale(currentLocale())
           .format('lll'),
       })
     );

@@ -3,10 +3,11 @@
  */
 import _ from 'lodash';
 
-import {getFirstParam, getSecondParam, setParamAtIndex} from '../dropletUtils';
-import library from './designElements/library';
 import getAssetDropdown from '../assetManagement/getAssetDropdown';
+import {getFirstParam, getSecondParam, setParamAtIndex} from '../dropletUtils';
+
 import {fontFamilyOptions} from './constants';
+import library from './designElements/library';
 var ElementType = library.ElementType;
 
 /**

@@ -21,7 +21,7 @@
       "name": "sprite",
       "type": "",
       "required": true,
-      "description": "The sprite or sprite group stopping all behaviors"
+      "description": "The sprite or sprite group, whose behaviors are being stopped"
     }
   ],
   "short_description": "Sprite Lab - sprite begins (clone)",

@@ -45,6 +45,21 @@ When /^I drag block "([^"]*)" to block "([^"]*)"$/ do |from, to|
   @browser.execute_script code
 end
 
+When /^I connect block "([^"]*)" to block "([^"]*)"$/ do |from, to|
+  code = connect_block(from, to)
+  @browser.execute_script code
+end
+
+When /^I connect block "([^"]*)" inside block "([^"]*)"$/ do |from, to|
+  code = connect_block_statement(from, to)
+  @browser.execute_script code
+end
+
+When /^I delete block "([^"]*)"$/ do |id|
+  code = delete_block(id)
+  @browser.execute_script code
+end
+
 When /^I drag block matching selector "([^"]*)" to block matching selector "([^"]*)"$/ do |from, to|
   code = generate_selector_drag_code(from, to, 0, 30)
   @browser.execute_script code
@@ -68,6 +83,11 @@ end
 When /^I drag block "([^"]*)" into first position in repeat block "([^"]*)"$/ do |from, to|
   code = generate_drag_code(get_block_id(from), get_block_id(to), 35, 50)
   @browser.execute_script code
+end
+
+When /^I drag block number (\d+) to offset "([^"]*), ([^"]*)"$/ do |index, dx, dy|
+  block_selector = get_indexed_blockly_draggable_selector(index.to_i)
+  drag_indexed_block_to_offset(block_selector, dx, dy)
 end
 
 Then /^block "([^"]*)" is near offset "([^"]*), ([^"]*)"$/ do |block, x, y|
@@ -274,11 +294,11 @@ Then /^the modal function editor is open$/ do
   expect(modal_dialog_visible).to eq(true)
 end
 
-When(/^I set block "([^"]*)" to have a value of "(.*?)" for title "(.*?)"$/) do |block_id, value, title|
+When(/^I set block "([^"]*)" to have a value of "(.*?)" for field "(.*?)"$/) do |block_id, value, field_name|
   script = "
-    Blockly.mainBlockSpace.getAllBlocks().forEach(function (b) {
-      if (b.id === #{get_block_id(block_id)}) {
-        b.setTitleValue('#{value}', '#{title}');
+    Blockly.getMainWorkspace().getAllBlocks().forEach(function (b) {
+      if (b.id === '#{get_block_id(block_id)}') {
+        b.setFieldValue('#{value}', '#{field_name}');
       }
     });"
   puts script

@@ -1,11 +1,18 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import * as utils from '../../utils';
+
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+import LtiSectionSyncDialog, {
+  LtiSectionSyncResultShape,
+} from '@cdo/apps/lib/ui/simpleSignUp/lti/sync/LtiSectionSyncDialog';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import {Heading1} from './Headings';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import Button from '../../templates/Button';
 import {
   importOrUpdateRoster,
   sectionCode,
@@ -15,13 +22,9 @@ import {
   ltiSyncResult,
   syncEnabled,
 } from '../../templates/teacherDashboard/teacherSectionsRedux';
-import Button from '../../templates/Button';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
-import LtiSectionSyncDialog, {
-  LtiSectionSyncResultShape,
-} from '@cdo/apps/lib/ui/lti/sync/LtiSectionSyncDialog';
+import * as utils from '../../utils';
+
+import {Heading1} from './Headings';
 
 const SUPPORTED_PROVIDERS = [
   OAuthSectionTypes.clever,

@@ -1,15 +1,18 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import applabMsg from '@cdo/applab/locale';
+
 import color from '../util/color';
-import elementLibrary from './designElements/library';
-import DeleteElementButton from './designElements/DeleteElementButton';
-import ElementSelect from './ElementSelect';
-import DuplicateElementButton from './designElements/DuplicateElementButton';
+
 import CopyElementToScreenButton from './designElements/CopyElementToScreenButton';
+import DeleteElementButton from './designElements/DeleteElementButton';
+import DuplicateElementButton from './designElements/DuplicateElementButton';
+import elementLibrary from './designElements/library';
 import RestoreThemeDefaultsButton from './designElements/RestoreThemeDefaultsButton';
 import designMode from './designMode';
+import ElementSelect from './ElementSelect';
 
 let nextKey = 0;
 

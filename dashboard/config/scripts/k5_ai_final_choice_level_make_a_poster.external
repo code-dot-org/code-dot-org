@@ -2,11 +2,11 @@ name 'k5_ai_final_choice_level_make_a_poster'
 title 'Make a Poster'
 display_name 'Make a Poster'
 bubble_choice_description '🌶️ Share your thoughts on AI by making a hallway poster.'
-thumbnail_url '![](https://images.code.org/483d23062870c2b485f6a92a1deff1d4-image-1715374258778.50.44 PM.png)'
+thumbnail_url 'https://images.code.org/01091d613829edcef9816386e6dacb2a-image-1719591698259.21.25 AM.png'
 
 
 markdown <<MARKDOWN
-##Make a Poster
+#Make a Poster
 
 <div>
 <img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/1bec43fd061f8f84db40b53e1899f0e7-image-1715118441772.jpg" />
@@ -21,8 +21,7 @@ markdown <<MARKDOWN
 > - A one-two sentence description of how AI works
 > - Your opinion on AI 
 
-**Here is a planning template you can copy to use yourself:**  <a href="https://docs.google.com/document/d/1geTnFqtszszfH7Q4_8ZORTAxvh38b-HuLpV1ezy7mgI/preview" target="_blank"> Using AI Tools in School</a>.
+**Here is a planning template you can copy to use yourself:**  <a href="https://docs.google.com/document/d/14WO5ZNTMFANYcDCcYtXzoH7b8V5tbKIt5oMHj5iaTFg/preview" target="_blank">Share Your Voice - AI Poster</a>.
 
 </div>
-
 MARKDOWN

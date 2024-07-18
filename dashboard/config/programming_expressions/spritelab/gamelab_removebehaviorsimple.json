@@ -4,11 +4,11 @@
   "category": "Behaviors",
   "category_key": "behaviors",
   "block_name": "gamelab_removeBehaviorSimple",
-  "content": "Sprite stops doing the specified behavior.\r\n\r\n(Opens YouTube in new tab)\r\n\r\n[![How To Make A Sprite](https://img.youtube.com/vi/VUmZ2IsFAGo/0.jpg)](https://www.youtube.com/watch?v=VUmZ2IsFAGo)\r\n\r\n\r\nFor more information see [`Adding and Removing Behaviors`(#89eba4)](/docs/spritelab/spritelab_adding-and-removing-behaviors/).",
+  "content": "Sprite stops doing the specified behavior.\n\n(Opens YouTube in new tab)\n\n[How To Make A Sprite](https://www.youtube.com/watch?v=VUmZ2IsFAGo)\n\n\nFor more information see [`Adding and Removing Behaviors`(#89eba4)](/docs/spritelab/spritelab_adding-and-removing-behaviors/).",
   "examples": [
     {
       "name": "Example 1",
-      "description": "The phone will “ring” until the person touches and answers it.\r\n",
+      "description": "The phone will “ring” until the person touches and answers it. Use the left arrow to move the person.\n",
       "app": "https://studio.code.org/projects/spritelab/muxpC-K0WlAWaajtIcc22-1A5JruJ0hAJ3aaCNrZKcQ",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -29,13 +29,13 @@
       "name": "behavior",
       "type": "",
       "required": true,
-      "description": "The  selected the behavior to stop"
+      "description": "The selected behavior to stop"
     },
     {
       "name": "sprite",
       "type": "",
       "required": true,
-      "description": "The sprite or sprite group stopping the behavior"
+      "description": "The sprite or sprite group's behavior that is being stopped"
     }
   ],
   "syntax": "removeBehaviorSimple",

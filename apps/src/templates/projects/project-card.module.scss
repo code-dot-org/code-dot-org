@@ -1,30 +1,6 @@
 @import "color.scss";
 @import "font.scss";
 
-.cautionButton {
-  background-color: transparent;
-  box-shadow: none;
-  outline: none;
-  border: none;
-  padding: 6px;
-  margin-right: 16px;
-  cursor: pointer;
-}
-
-.cautionButton:hover {
-  background-color: $product_negative_light;
-  box-shadow: none;
-}
-
-.cautionIcon {
-  color: $neutral_dark60;
-  font-size: 1rem;
-}
-
-.cautionButton:hover .cautionIcon {
-  color: $product_negative_default;
-}
-
 .card {
   border: 1px solid $border_gray;
   border-radius: 2px;
@@ -66,11 +42,4 @@
 
 .bold {
   @include main-font-semi-bold;
-}
-
-.reported {
-  @include main-font-semi-bold;
-  margin: auto;
-  color: $product_negative_default;
-  font-size: 0.75rem;
 }

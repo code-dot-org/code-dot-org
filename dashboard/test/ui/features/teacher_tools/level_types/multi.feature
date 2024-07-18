@@ -51,7 +51,6 @@ Scenario: Can render without a question
   When element ".submitButton" is visible
   Then element ".multi-question" is not visible
 
-@no_phone
 Scenario: Standalone level without retries locks after answer is submitted
   Given I create a student named "Sally Student"
   And I sign in as "Sally Student"

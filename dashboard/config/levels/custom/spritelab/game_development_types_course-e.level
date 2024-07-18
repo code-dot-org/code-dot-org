@@ -76,8 +76,9 @@
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-17T16:38:04.155+00:00\",\"changed\":[\"cloned from \\\"game_development_types_2024\\\"\"],\"cloned_from\":\"game_development_types_2024\"},{\"changed_at\":\"2024-05-17 16:48:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-17 20:56:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-17T16:38:04.155+00:00\",\"changed\":[\"cloned from \\\"game_development_types_2024\\\"\"],\"cloned_from\":\"game_development_types_2024\"},{\"changed_at\":\"2024-05-17 16:48:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-17 20:56:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-21 22:14:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-16 18:26:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 2
   }
 }]]></config>
   <blocks>
@@ -1269,9 +1270,6 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_setBackgroundImageAs" id="?5sSd7ei5@*~y~GRS]Pv" x="21" y="214">
-          <field name="IMG">"gradient_11"</field>
-        </block>
         <block type="gamelab_makeSpritesGridInput" id=",LH^}VL;[!A!URX*x!Ow" x="52" y="287">
           <field name="ANIMATION_NAME">"greystone"</field>
           <value name="GRID">
@@ -1287,6 +1285,9 @@
               <field name="LOCATION">{"x":81,"y":64}</field>
             </block>
           </value>
+        </block>
+        <block type="gamelab_setBackgroundImageAs" id="?5sSd7ei5@*~y~GRS]Pv" x="72" y="483">
+          <field name="IMG">"gradient_11"</field>
         </block>
       </xml>
     </toolbox_blocks>

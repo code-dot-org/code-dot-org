@@ -1,24 +1,27 @@
 /* eslint no-unused-vars: "error" */
 import sinon from 'sinon';
-import {expect} from '../../util/reconfiguredChai';
-import {allowConsoleErrors} from '../../util/testUtils';
-import designMode from '@cdo/apps/applab/designMode';
-import * as elementUtils from '@cdo/apps/applab/designElements/elementUtils';
-import {assets as assetsApi} from '@cdo/apps/clientApi';
 
+import * as elementUtils from '@cdo/apps/applab/designElements/elementUtils';
+import designMode from '@cdo/apps/applab/designMode';
 import {
   getImportableProject,
   importScreensAndAssets,
 } from '@cdo/apps/applab/import';
-import pageConstantsReducer, {
-  setPageConstants,
-} from '@cdo/apps/redux/pageConstants';
+import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import pageConstantsReducer, {
+  setPageConstants,
+} from '@cdo/apps/redux/pageConstants';
+
+import {expect} from '../../util/reconfiguredChai';
+import {allowConsoleErrors} from '../../util/testUtils';
+
+$.fn.disableSelection = jest.fn();
 
 describe('The applab/import module', () => {
   allowConsoleErrors();
@@ -268,7 +271,7 @@ describe('The applab/import module', () => {
       ]);
     });
 
-    it('will replace screens with the same screen id', () => {
+    it('will replace screens with the same screen id', async () => {
       setExistingHTML(`
         <div class="screen" id="design_screen1">
           <input id="design_input1">
@@ -285,7 +288,7 @@ describe('The applab/import module', () => {
       expect(designMode.getAllScreenIds()).to.deep.equal(['screen1']);
       expect(elementUtils.getPrefixedElementById('input1')).not.to.be.null;
       expect(elementUtils.getPrefixedElementById('importedInput')).to.be.null;
-      importScreensAndAssets(project.id, [project.screens[0]], []);
+      await importScreensAndAssets(project.id, [project.screens[0]], []);
       expect(designMode.getAllScreenIds()).to.deep.equal(['screen1']);
       expect(elementUtils.getPrefixedElementById('input1')).to.be.null;
       expect(elementUtils.getPrefixedElementById('importedInput')).not.to.be

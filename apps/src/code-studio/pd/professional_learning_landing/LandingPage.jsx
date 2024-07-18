@@ -4,35 +4,45 @@
 import PropTypes from 'prop-types';
 import React, {useEffect, useState} from 'react';
 import {connect, useDispatch} from 'react-redux';
-import i18n from '@cdo/locale';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+
+import Tabs from '@cdo/apps/componentLibrary/tabs';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
-import {EnrolledWorkshops, EnrolledWorkshopsTable} from './EnrolledWorkshops';
+import DCDO from '@cdo/apps/dcdo';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
+import ActionBlocksWrapper from '@cdo/apps/templates/studioHomepages/ActionBlocksWrapper';
+import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
+import CoteacherInviteNotification from '@cdo/apps/templates/studioHomepages/CoteacherInviteNotification';
+import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
+import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
+import shapes from '@cdo/apps/templates/studioHomepages/shapes';
+import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
+import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
+import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
+import {
+  asyncLoadSectionData,
+  asyncLoadCoteacherInvite,
+  hiddenPlSectionIds,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import i18n from '@cdo/locale';
+
+import {queryParams, updateQueryParam} from '../../utils';
 import {
   COURSE_CSF,
   COURSE_CSD,
   COURSE_CSP,
   COURSE_CSA,
 } from '../workshop_dashboard/workshopConstants';
+import WorkshopEnrollmentCelebrationDialog from '../workshop_enrollment/WorkshopEnrollmentCelebrationDialog';
+
+import {EnrolledWorkshops, WorkshopsTable} from './EnrolledWorkshops';
 import SelfPacedProgressTable from './SelfPacedProgressTable';
-import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
-import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
-import ActionBlocksWrapper from '@cdo/apps/templates/studioHomepages/ActionBlocksWrapper';
-import CoteacherInviteNotification from '@cdo/apps/templates/studioHomepages/CoteacherInviteNotification';
-import OwnedSections from '@cdo/apps/templates/teacherDashboard/OwnedSections';
-import SetUpSections from '@cdo/apps/templates/studioHomepages/SetUpSections';
-import AddSectionDialog from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
-import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
-import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
+
 import style from './landingPage.module.scss';
+
 import './tableStyles.scss';
-import Tabs from '@cdo/apps/componentLibrary/tabs';
-import {
-  asyncLoadSectionData,
-  asyncLoadCoteacherInvite,
-  hiddenPlSectionIds,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import shapes from '@cdo/apps/templates/studioHomepages/shapes';
 
 const getAvailableTabs = permissions => {
   let tabs = [
@@ -75,12 +85,32 @@ const getAvailableTabs = permissions => {
   return tabs;
 };
 
+const getEnrollSucessWorkshopName = () => {
+  // If sent here from successfully enrolling in a workshop, log WORKSHOP_ENROLLMENT_COMPLETED_EVENT.
+  const urlParams = queryParams();
+  if (urlParams && Object.keys(urlParams).includes('wsCourse')) {
+    const workshopCourseName = urlParams['wsCourse'];
+
+    analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
+      'regional partner': urlParams['rpName'],
+      'workshop course': workshopCourseName,
+      'workshop subject': urlParams['wsSubject'],
+    });
+
+    updateQueryParam('rpName', undefined, false);
+    updateQueryParam('wsCourse', undefined, false);
+    updateQueryParam('wsSubject', undefined, false);
+
+    return workshopCourseName;
+  }
+};
+
 function LandingPage({
   lastWorkshopSurveyUrl,
   lastWorkshopSurveyCourse,
   deeperLearningCourseData,
   currentYearApplicationId,
-  workshopsAsParticipant,
+  hasEnrolledInWorkshop,
   workshopsAsFacilitator,
   workshopsAsOrganizer,
   workshopsAsRegionalPartner,
@@ -93,16 +123,14 @@ function LandingPage({
   hiddenPlSectionIds,
 }) {
   const availableTabs = getAvailableTabs(userPermissions);
+  const [enrollSuccessWorkshopName, setEnrollSuccessWorkshopName] = useState(
+    getEnrollSucessWorkshopName()
+  );
   const [currentTab, setCurrentTab] = useState(availableTabs[0].value);
   const headerContainerStyles =
     availableTabs.length > 1
       ? style.headerWithTabsContainer
       : style.headerWithoutTabsContainer;
-
-  const showGettingStartedBanner =
-    !currentYearApplicationId &&
-    workshopsAsParticipant?.length === 0 &&
-    plCoursesStarted?.length === 0;
 
   const joinedPlSectionsStyling =
     joinedPlSections?.length > 0 ? '' : style.joinedPlSectionsWithNoSections;
@@ -113,23 +141,6 @@ function LandingPage({
     dispatch(asyncLoadSectionData());
     dispatch(asyncLoadCoteacherInvite());
   }, [dispatch]);
-
-  const RenderGettingStartedBanner = () => (
-    <TwoColumnActionBlock
-      imageUrl={pegasus(
-        '/images/fill-540x300/professional-learning/pl-superhero-girl-crop.png'
-      )}
-      heading={i18n.plLandingGettingStartedHeading()}
-      subHeading={i18n.plLandingGettingStartedSubHeading()}
-      description={i18n.plLandingGettingStartedDescription()}
-      buttons={[
-        {
-          url: pegasus('/educate/professional-learning'),
-          text: i18n.plLandingGettingStartedButton(),
-        },
-      ]}
-    />
-  );
 
   const RenderLastWorkshopSurveyBanner = () => (
     <TwoColumnActionBlock
@@ -147,6 +158,56 @@ function LandingPage({
       ]}
     />
   );
+
+  // Renders at most one banner for a user:
+  // - if the user hasn't used any PL resources yet, show the Getting Started banner
+  // - if the user has a pending workshop survery (mutually exclusive from the above), show a banner to fill out the survey
+  // - else, render either nothing or an announcement banner
+  const RenderBanner = () => {
+    const showGettingStartedBanner =
+      !currentYearApplicationId &&
+      !hasEnrolledInWorkshop &&
+      plCoursesStarted?.length === 0;
+
+    if (showGettingStartedBanner) {
+      return (
+        <TwoColumnActionBlock
+          imageUrl={pegasus(
+            '/images/fill-540x300/professional-learning/pl-superhero-girl-crop.png'
+          )}
+          heading={i18n.plLandingGettingStartedHeading()}
+          subHeading={i18n.plLandingGettingStartedSubHeading()}
+          description={i18n.plLandingGettingStartedDescription()}
+          buttons={[
+            {
+              url: pegasus('/educate/professional-learning'),
+              text: i18n.plLandingGettingStartedButton(),
+            },
+          ]}
+        />
+      );
+    } else if (lastWorkshopSurveyUrl) {
+      return RenderLastWorkshopSurveyBanner();
+    } else if (!!DCDO.get('curriculum-launch-2024', false)) {
+      // TODO(ACQ-1998): Remove this block after the 2024 curriculum launch
+      return (
+        <TwoColumnActionBlock
+          imageUrl={pegasus(
+            '/images/fill-540x300/professional-learning/banner-books-with-background.png'
+          )}
+          subHeading={i18n.plLandingCurriculumLaunchBannerSubHeading()}
+          description={i18n.plLandingCurriculumLaunchBannerDescription()}
+          buttons={[
+            {
+              url: pegasus('/educate/professional-learning'),
+              text: i18n.plLandingCurriculumLaunchBannerButtonText(),
+              ariaLabel: i18n.plLandingCurriculumLaunchBannerButtonAriaLabel(),
+            },
+          ]}
+        />
+      );
+    }
+  };
 
   const RenderSelfPacedPL = () => {
     return (
@@ -312,8 +373,13 @@ function LandingPage({
   const RenderMyPlTab = () => {
     return (
       <>
-        {showGettingStartedBanner && RenderGettingStartedBanner()}
-        {lastWorkshopSurveyUrl && RenderLastWorkshopSurveyBanner()}
+        {enrollSuccessWorkshopName && (
+          <WorkshopEnrollmentCelebrationDialog
+            workshopName={enrollSuccessWorkshopName}
+            onClose={() => setEnrollSuccessWorkshopName(null)}
+          />
+        )}
+        {RenderBanner()}
         {plCoursesStarted?.length >= 1 && RenderSelfPacedPL()}
         <div className={joinedPlSectionsStyling}>
           <JoinSectionArea
@@ -342,9 +408,10 @@ function LandingPage({
         </section>
         {RenderOwnedPlSections()}
         {workshopsAsFacilitator?.length > 0 && (
-          <EnrolledWorkshopsTable
+          <WorkshopsTable
             workshops={workshopsAsFacilitator}
             forMyPlPage={true}
+            tableHeader={i18n.inProgressAndUpcomingWorkshops()}
           />
         )}
       </>
@@ -364,9 +431,10 @@ function LandingPage({
           {RenderRegionalPartnerResources()}
         </section>
         {workshopsAsRegionalPartner?.length > 0 && (
-          <EnrolledWorkshopsTable
+          <WorkshopsTable
             workshops={workshopsAsRegionalPartner}
             forMyPlPage={true}
+            tableHeader={i18n.inProgressAndUpcomingWorkshops()}
           />
         )}
       </>
@@ -389,9 +457,10 @@ function LandingPage({
           />
         </section>
         {workshopsAsOrganizer?.length > 0 && (
-          <EnrolledWorkshopsTable
+          <WorkshopsTable
             workshops={workshopsAsOrganizer}
             forMyPlPage={true}
+            tableHeader={i18n.inProgressAndUpcomingWorkshops()}
           />
         )}
       </>
@@ -438,7 +507,7 @@ LandingPage.propTypes = {
   lastWorkshopSurveyCourse: PropTypes.string,
   deeperLearningCourseData: PropTypes.array,
   currentYearApplicationId: PropTypes.number,
-  workshopsAsParticipant: PropTypes.array,
+  hasEnrolledInWorkshop: PropTypes.bool,
   workshopsAsFacilitator: PropTypes.array,
   workshopsAsOrganizer: PropTypes.array,
   workshopsAsRegionalPartner: PropTypes.array,

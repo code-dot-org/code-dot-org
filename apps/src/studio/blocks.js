@@ -10,7 +10,6 @@ import _ from 'lodash';
 import commonMsg from '@cdo/locale';
 
 import {BlockColors, BlockStyles} from '../blockly/constants';
-import sharedFunctionalBlocks from '../sharedFunctionalBlocks';
 import {singleton as studioApp} from '../StudioApp';
 import {stripQuotes, valueOr} from '../utils';
 
@@ -3619,22 +3618,6 @@ exports.install = function (blockly, blockInstallOptions) {
     return code;
   };
 
-  // install number and string
-  sharedFunctionalBlocks.install(blockly, generator);
-
-  // Note: in other languages, the translated values won't be accepted
-  // as valid backgrounds if they are typed in as free text. Also this
-  // block will have the effect of translating the selected text to
-  // english if not connected to the functional_setBackground block.
-  // TODO(i18n): translate these strings in the Studio.setBackground
-  // API instead of here.
-  var functional_background_values = skin.backgroundChoices.slice(1);
-
-  blockly.FunctionalBlockUtils.installStringPicker(blockly, generator, {
-    blockName: 'functional_background_string_picker',
-    values: functional_background_values,
-  });
-
   blockly.Blocks.studio_vanishSprite = {
     helpUrl: '',
     init: function () {
@@ -3656,93 +3639,6 @@ exports.install = function (blockly, blockInstallOptions) {
   generator.studio_vanishSprite = function () {
     var spriteParam = getSpriteIndex(this);
     return "Studio.vanish('block_id_" + this.id + "', " + spriteParam + ');\n';
-  };
-
-  /**
-   * functional_sprite_dropdown
-   */
-  blockly.Blocks.functional_sprite_dropdown = {
-    helpUrl: '',
-    init: function () {
-      Blockly.cdoUtils.setHSV(
-        this,
-        ...blockly.FunctionalTypeColors[blockly.BlockValueType.IMAGE]
-      );
-
-      this.VALUES = skin.spriteChoices;
-
-      var choices = _.map(startAvatars, function (skinId) {
-        return [skin[skinId].dropdownThumbnail, skinId];
-      });
-      var dropdown = new blockly.FieldImageDropdown(
-        choices,
-        skin.dropdownThumbnailWidth,
-        skin.dropdownThumbnailHeight
-      );
-
-      this.appendDummyInput().appendField(dropdown, 'SPRITE_INDEX');
-
-      this.setFunctionalOutput(true);
-    },
-  };
-
-  generator.functional_sprite_dropdown = function () {
-    // returns the sprite index
-    return blockly.JavaScript.quote_(this.getFieldValue('SPRITE_INDEX'));
-  };
-
-  /**
-   * functional_background_dropdown
-   */
-  blockly.Blocks.functional_background_dropdown = {
-    helpUrl: '',
-    init: function () {
-      Blockly.cdoUtils.setHSV(
-        this,
-        ...blockly.FunctionalTypeColors[blockly.BlockValueType.IMAGE]
-      );
-
-      this.VALUES = skin.backgroundChoicesK1;
-      var dropdown = new blockly.FieldImageDropdown(
-        skin.backgroundChoicesK1,
-        skin.dropdownThumbnailWidth,
-        skin.dropdownThumbnailHeight
-      );
-
-      this.appendDummyInput().appendField(dropdown, 'BACKGROUND');
-
-      this.setFunctionalOutput(true);
-    },
-  };
-
-  generator.functional_background_dropdown = function () {
-    // returns the sprite index
-    return generateSetterCode({
-      value: this.getFieldValue('BACKGROUND'),
-      ctx: this,
-      returnValue: true,
-    });
-  };
-
-  /**
-   * functional_keydown
-   */
-  blockly.Blocks.functional_keydown = {
-    helpUrl: '',
-    init: function () {
-      // todo = localize
-      blockly.FunctionalBlockUtils.initTitledFunctionalBlock(
-        this,
-        'keydown?',
-        blockly.BlockValueType.BOOLEAN,
-        [{name: 'ARG1', type: 'Number'}]
-      );
-    },
-  };
-
-  generator.functional_keydown = function () {
-    var keyCode = Blockly.JavaScript.statementToCode(this, 'ARG1', false) || -1;
-    return 'Studio.isKeyDown(' + keyCode + ');';
   };
 
   /**

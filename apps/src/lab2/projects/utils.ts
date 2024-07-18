@@ -1,7 +1,7 @@
-import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
-import {MultiFileSource, ProjectFile} from '../types';
-
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
+
+import {MultiFileSource, ProjectFile, ProjectFileType} from '../types';
 
 // Partial definition of the App Options structure, only defining the
 // pieces we need in this component.
@@ -10,6 +10,8 @@ export interface PartialAppOptions {
   editBlocks: string;
   levelId: number;
   share: boolean;
+  isEditingExemplar: boolean;
+  isViewingExemplar: boolean;
 }
 
 /**
@@ -49,6 +51,28 @@ export function getAppOptionsEditBlocks(): string | undefined {
     return appOptions.editBlocks;
   }
 }
+
+/**
+ * Returns the value of isEditingExemplar provided by App Options, if available.
+ * This can be used to tell if we are currently editing exemplars.
+ */
+export function getAppOptionsEditingExemplar(): boolean | undefined {
+  if (hasScriptData('script[data-appoptions]')) {
+    const appOptions = getScriptData('appoptions') as PartialAppOptions;
+    return appOptions.isEditingExemplar;
+  }
+}
+
+/**
+ * Returns the value of isViewingExemplar provided by App Options, if available.
+ * This can be used to tell if we are currently viewing exemplars.
+ */
+export function getAppOptionsViewingExemplar(): boolean | undefined {
+  if (hasScriptData('script[data-appoptions]')) {
+    const appOptions = getScriptData('appoptions') as PartialAppOptions;
+    return appOptions.isViewingExemplar;
+  }
+}
 /**
  * Returns if the lab should presented in a share/play-only view,
  * if present in App Options. Only used in standalone project levels.
@@ -86,8 +110,11 @@ export function getFileByName(
 export function getActiveFileForProject(project: MultiFileSource) {
   const files = Object.values(project.files);
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-  // No files are hidden in start mode.
-  const visibleFiles = files.filter(f => !f.hidden || isStartMode);
+  // No files are hidden in start mode. In non-start mode, only show starter files
+  // (or files without a type, which default to starter files).
+  const visibleFiles = files.filter(
+    f => isStartMode || !f.type || f.type === ProjectFileType.STARTER
+  );
 
   // Get the first active file, or the first file.
   return visibleFiles.find(f => f.active) || visibleFiles[0];

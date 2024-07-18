@@ -1,7 +1,10 @@
 import React, {useCallback, useState} from 'react';
-import moduleStyles from './dialog-manager.module.scss';
-import StartOverDialog from './StartOverDialog';
+
+import GenericConfirmationDialog from './GenericConfirmationDialog';
 import SkipDialog from './SkipDialog';
+import StartOverDialog from './StartOverDialog';
+
+import moduleStyles from './dialog-manager.module.scss';
 
 /**
  * Manages displaying common dialogs for Lab2.
@@ -10,11 +13,15 @@ import SkipDialog from './SkipDialog';
 export enum DialogType {
   StartOver = 'StartOver',
   Skip = 'Skip',
+  GenericConfirmation = 'GenericConfirmation',
 }
 
 export interface BaseDialogProps {
   handleConfirm: () => void;
   handleCancel: () => void;
+  title?: string;
+  message?: string;
+  confirmText?: string;
 }
 
 const DialogViews: {
@@ -22,6 +29,7 @@ const DialogViews: {
 } = {
   [DialogType.StartOver]: StartOverDialog,
   [DialogType.Skip]: SkipDialog,
+  [DialogType.GenericConfirmation]: GenericConfirmationDialog,
 };
 
 interface DialogManagerProps {
@@ -40,13 +48,35 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
   const [dialogCallback, setDialogCallback] = useState<(() => void) | null>(
     () => null
   );
+  const [dialogTitle, setDialogTitle] = useState<string | undefined>(undefined);
+  const [dialogMessage, setDialogMessage] = useState<string | undefined>(
+    undefined
+  );
+  const [dialogConfirmText, setDialogConfirmText] = useState<
+    string | undefined
+  >(undefined);
 
   const showDialog = useCallback(
-    (dialogType: DialogType, callback: () => void) => {
+    (
+      dialogType: DialogType,
+      callback: () => void,
+      title?: string,
+      message?: string,
+      confirmText?: string
+    ) => {
+      setDialogTitle(title);
+      setDialogMessage(message);
+      setDialogConfirmText(confirmText);
       setOpenDialog(dialogType);
       setDialogCallback(() => callback);
     },
-    [setOpenDialog, setDialogCallback]
+    [
+      setDialogTitle,
+      setDialogMessage,
+      setDialogConfirmText,
+      setOpenDialog,
+      setDialogCallback,
+    ]
   );
 
   const handleConfirm = useCallback(() => {
@@ -73,6 +103,9 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
           <DialogView
             handleConfirm={handleConfirm}
             handleCancel={handleCancel}
+            title={dialogTitle}
+            message={dialogMessage}
+            confirmText={dialogConfirmText}
           />
         </div>
       )}
@@ -82,7 +115,13 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
 };
 
 interface DialogControl {
-  showDialog: (dialogType: DialogType, callback: () => void) => void;
+  showDialog: (
+    dialogType: DialogType,
+    callback: () => void,
+    title?: string,
+    message?: string,
+    confirmText?: string
+  ) => void;
 }
 
 export const DialogContext = React.createContext<DialogControl | null>(null);

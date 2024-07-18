@@ -15,12 +15,13 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "tts": true,
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": "express",
-    "serialized_at": "2024-05-16 22:32:12 UTC",
-    "published_state": "beta",
+    "serialized_at": "2024-07-11 16:13:53 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -15560,6 +15561,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music_lab_intro_panels_start2_express"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -15582,6 +15586,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_play_sound_express"
+        ],
         "progression": "Play a sound"
       },
       "bonus": false,
@@ -15604,6 +15611,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_change_sound_express"
+        ],
         "progression": "Play more sounds"
       },
       "bonus": false,
@@ -15626,6 +15636,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_repeat_express"
+        ],
         "progression": "Repeat"
       },
       "bonus": false,
@@ -15648,6 +15661,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_repeat_express"
+        ],
         "progression": "Repeat"
       },
       "bonus": false,
@@ -15670,6 +15686,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_playtogether_express"
+        ],
         "progression": "Play together"
       },
       "bonus": false,
@@ -15692,6 +15711,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_play_together_express"
+        ],
         "progression": "Play together"
       },
       "bonus": false,
@@ -15714,6 +15736,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_function_express"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -15736,6 +15761,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_function_express"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -15758,6 +15786,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_trigger_express"
+        ],
         "progression": "Triggers"
       },
       "bonus": false,
@@ -15780,6 +15811,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_trigger_express"
+        ],
         "progression": "Triggers"
       },
       "bonus": false,
@@ -15802,6 +15836,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_notes_express"
+        ],
         "progression": "Custom notes & beats"
       },
       "bonus": false,
@@ -15824,6 +15861,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_notes_express"
+        ],
         "progression": "Custom notes & beats"
       },
       "bonus": false,
@@ -15846,6 +15886,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_drums_express"
+        ],
         "progression": "Custom notes & beats"
       },
       "bonus": false,
@@ -15868,6 +15911,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "usiclab_tutorial_panels_end_express"
+        ],
         "progression": "Outro"
       },
       "bonus": false,
@@ -20497,6 +20543,16 @@
       }
     },
     {
+      "name": "CSF Change Log 2024-25",
+      "url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/template/preview",
+      "key": "csf_change_log_2024-25",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csf_change_log_2024-25"
+      }
+    },
+    {
       "name": "CSF Express End of Course Project Planning Guide",
       "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing",
       "key": "csf_express_end_of_course_project_planning_guide",
@@ -21082,6 +21138,12 @@
     {
       "seeding_key": {
         "resource.key": "all_vocabulary",
+        "script.name": "express-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csf_change_log_2024-25",
         "script.name": "express-2024"
       }
     },

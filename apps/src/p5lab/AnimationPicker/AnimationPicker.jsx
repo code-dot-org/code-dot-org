@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {createUuid, makeEnum} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
+
+import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
+import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
-var msg = require('@cdo/locale');
-import styles from './styles';
+import {createUuid, makeEnum} from '@cdo/apps/utils';
+
 import {
   hide,
   pickNewAnimation,
@@ -14,10 +17,11 @@ import {
   handleUploadError,
   saveSelectedAnimations,
 } from '../redux/animationPicker';
+
 import AnimationPickerBody from './AnimationPickerBody.jsx';
-import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
-import {AnimationProps} from '@cdo/apps/p5lab/shapes';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import styles from './styles';
+
+var msg = require('@cdo/locale');
 // Some operating systems round their file sizes, so max size is 101KB even
 // though our error message says 100KB, to help users avoid confusion.
 const MAX_UPLOAD_SIZE = 101000;

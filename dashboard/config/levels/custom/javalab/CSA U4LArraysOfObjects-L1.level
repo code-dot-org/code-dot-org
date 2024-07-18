@@ -1,0 +1,37 @@
+<Javalab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2024-05-25T07:06:01.000Z",
+  "level_num": "custom",
+  "user_id": 19378,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "DogRunner.java": {
+        "text": "public class DogRunner {\n    public static void main(String args[]) {\n        \n        Dog myDog = new Dog(\"Fluffy\", 1, \"Doberman\");\n        Dog yourDog = new Dog(\"Champ\", 5, \"Bulldog\");\n        Dog anotherDog = new Dog(\"Boxy\", 3, \"Boxer\");\n        \n        Dog[] dogs = new Dog[3];\n        dogs[0] = myDog;\n        dogs[1] = yourDog;\n        dogs[2] = anotherDog;\n\n        System.out.println(dogs[0]);\n        System.out.println(dogs[1]);\n        System.out.println(dogs[2]);\n        \n\n      \n    }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Dog.java": {
+        "text": "public class Dog{\n    \n    private String name;\n    private int age;\n    private String breed;\n    \n    Dog(String name, int age, String breed){\n        this.name = name;\n        this.age = age;\n        this.breed = breed;\n    }\n    \n    public String getName(){\n        return name;\n    }\n    \n    public int getAge(){\n        return age;\n    }\n    \n    public String getBreed(){\n        return breed;\n    }\n    \n    public void setName(String newName){\n        name = newName;\n    }\n    \n    public void setAge(int newAge){\n        age = newAge;\n    }\n    \n    public void setBreed(String newBreed){\n        breed = newBreed;\n    }\n    \n    public String toString(){\n        return name + \" is a \" + age + \" year old \" + breed + \".\";\n    }\n    \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "encrypted_examples": [
+
+    ],
+    "contained_level_names": [
+      "CSA U4LArraysOfObjects-PredictResponseL1",
+      "CSA U4LArraysOfObjects-PredictResponseL1"
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-05-25 07:06:04 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-25 07:10:11 +0000\",\"changed\":[],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-25 07:11:24 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-26 04:29:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-05-26 04:33:48 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
+}]]></config>
+</Javalab>

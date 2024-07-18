@@ -1,0 +1,9 @@
+{
+  "key": "changing-sensor-scale",
+  "course_version_key": "2024",
+  "course_offering_key": "focus-on-coding",
+  "parent_reference_guide_key": "maker-toolkit",
+  "display_name": "Changing Sensor Scale",
+  "content": "By default each of the sensors on the Circuit Playground and micro:bit devices convert their sensed data to a particular range.\n- The Circuit Playground converts its data into a range with a minimum value of 0 and a maximum of 1023. \n- The micro:bit converts its data into a range with a minimum value of 0 and a maximum value of 255.\n\nFor some programs, you may want to adjust these ranges to suit your needs.\n\n## Set Scale\n\nThe _setScale_ method allows you to override the default range of a sensor. For example, calling [`lightSensor.setScale(0, 100)`(#f78183)](/docs/applab/lightSensor.setScale/) will change the scale of the [`lightSensor.value`(#f78183)](/docs/applab/lightSensor.value/) so that the lowest value (completely dark) is 0, and the highest (fully bright) is 100.  ",
+  "position": 5
+}

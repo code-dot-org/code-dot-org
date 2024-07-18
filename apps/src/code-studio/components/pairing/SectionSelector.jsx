@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {studentsShape} from './types';
-import i18n from '@cdo/locale';
+
 import {sortSectionsList} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux.js';
+import i18n from '@cdo/locale';
+
+import {studentsShape} from './types';
 
 /**
  * Section selector component, for students in multiple sections.

@@ -1,0 +1,159 @@
+{
+  "script": {
+    "name": "focus-on-creativity-post-survey-2024",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "curriculum_umbrella": "CSD",
+      "is_migrated": true,
+      "tts": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2024-07-11 19:43:09 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "focus-on-creativity-post-survey-2024"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "focus-on-creativity-post-survey-2024"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Post-Course Survey",
+      "name": "Post-Course Survey",
+      "absolute_position": 1,
+      "lockable": true,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "",
+        "script.name": "focus-on-creativity-post-survey-2024"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "17056927-1bfe-43a5-872f-e8b608c62327",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "17056927-1bfe-43a5-872f-e8b608c62327",
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "",
+        "script.name": "focus-on-creativity-post-survey-2024"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "52c94d02-f9b1-4473-a873-428183b8602e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "52c94d02-f9b1-4473-a873-428183b8602e",
+        "lesson_activity.key": "17056927-1bfe-43a5-872f-e8b608c62327"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "csd-post-survey-levelgroup_2024"
+        ],
+        "progression": "Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-post-survey-levelgroup_2024"
+        ],
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "",
+        "script.name": "focus-on-creativity-post-survey-2024",
+        "activity_section.key": "52c94d02-f9b1-4473-a873-428183b8602e"
+      },
+      "level_keys": [
+        "csd-post-survey-levelgroup_2024"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "csd-post-survey-levelgroup_2024",
+        "script_level.level_keys": [
+          "csd-post-survey-levelgroup_2024"
+        ],
+        "lesson.key": "Post-Course Survey",
+        "lesson_group.key": "",
+        "script.name": "focus-on-creativity-post-survey-2024",
+        "activity_section.key": "52c94d02-f9b1-4473-a873-428183b8602e"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

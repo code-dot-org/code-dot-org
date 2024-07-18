@@ -8,8 +8,13 @@ import {register} from 'swiper/element/bundle';
 // register Swiper custom elements
 register();
 
-const swiperActionBlocks = document.querySelector('swiper-container.swiper-01');
-const swiperQuotes = document.querySelector('swiper-container.swiper-02');
+const swiperActionBlocksMiddleHigh = document.querySelector(
+  'swiper-container.swiper-middle-high'
+);
+const swiperActionBlocksPl = document.querySelector(
+  'swiper-container.swiper-pl'
+);
+const swiperQuotes = document.querySelector('swiper-container.swiper-quotes');
 const swiperVideos = document.querySelector('swiper-container.how-ai-works');
 
 const commonParams = {
@@ -77,7 +82,8 @@ const setSwiperParams = (swiper, params) => {
 };
 
 const swipers = [
-  {swiper: swiperActionBlocks, params: actionBlocksParams},
+  {swiper: swiperActionBlocksMiddleHigh, params: actionBlocksParams},
+  {swiper: swiperActionBlocksPl, params: actionBlocksParams},
   {swiper: swiperQuotes, params: quotesParams},
   {swiper: swiperVideos, params: videosParams},
 ];

@@ -1,20 +1,23 @@
-import {assert, expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
-import pageConstantsReducer, {
-  setPageConstants,
-} from '@cdo/apps/redux/pageConstants';
+
+import Exporter, {getAppOptionsFile} from '@cdo/apps/applab/Exporter';
+import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
+import {setAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import pageConstantsReducer, {
+  setPageConstants,
+} from '@cdo/apps/redux/pageConstants';
+
+import {assert, expect} from '../../util/reconfiguredChai';
+
+const assets = require('@cdo/apps/code-studio/assets');
 
 var testUtils = require('../../util/testUtils');
-import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
-import {setAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
-import Exporter, {getAppOptionsFile} from '@cdo/apps/applab/Exporter';
-const assets = require('@cdo/apps/code-studio/assets');
 
 const WEBPACK_RUNTIME_JS_CONTENT = 'webpack-runtime.js content';
 const COMMON_LOCALE_JS_CONTENT = 'common_locale.js content';
@@ -398,7 +401,7 @@ describe('Applab Exporter,', function () {
           );
           const innerTextLines = el
             .querySelector('#divApplab')
-            .innerText.trim()
+            .textContent.trim()
             .split('\n');
           assert.equal(
             innerTextLines[0].trim(),

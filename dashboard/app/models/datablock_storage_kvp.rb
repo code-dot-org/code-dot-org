@@ -29,12 +29,12 @@ class DatablockStorageKvp < ApplicationRecord
   def self.get_kvps(project_id)
     where(project_id: project_id).
       select(:key, :value).
-      to_h {|kvp| [kvp.key, JSON.parse(kvp.value)]}
+      to_h {|kvp| [kvp.key, kvp.value]}
   end
 
   def self.set_kvps(project_id, key_value_hashmap, upsert: true)
     kvps = key_value_hashmap.map do |key, value|
-      kvp_attr = {project_id: project_id, key: key, value: value.to_json}
+      kvp_attr = {project_id: project_id, key: key, value: value}
       DatablockStorageKvp.new(kvp_attr).valid?
       kvp_attr
     end
@@ -46,7 +46,7 @@ class DatablockStorageKvp < ApplicationRecord
       DatablockStorageKvp.insert_all(kvps)
     end
   rescue ActiveRecord::ValueTooLong
-    raise StudentFacingError.new(:MAX_KEY_LENGTH_EXCEEDED), "The key is too large, it must be shorter than #{columns_hash['key'].limit} bytes ('characters')"
+    raise StudentFacingError.new(:KEY_INVALID), "The key is too large, it must be shorter than #{columns_hash['key'].limit} bytes ('characters')"
   end
 
   def self.set_kvp(project_id, key, value)

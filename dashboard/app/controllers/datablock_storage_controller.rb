@@ -69,7 +69,8 @@ class DatablockStorageController < ApplicationController
 
   def get_key_value
     kvp = DatablockStorageKvp.find_by(project_id: @project_id, key: params[:key])
-    render json: kvp ? JSON.parse(kvp.value).to_json : nil
+    # render json: assumes a string is already json encoded, so to_json is necessary.
+    render json: kvp&.value.to_json
   end
 
   def delete_key_value
@@ -325,15 +326,17 @@ class DatablockStorageController < ApplicationController
   end
 
   private def where_table
-    if params[:table_name]
+    if params[:table_name] && params[:table_name].is_a?(String)
       DatablockStorageTable.where(project_id: @project_id, table_name: params[:table_name])
     else
-      raise StudentFacingError, "You must specify a table"
+      raise StudentFacingError, "Table parameter value must be a string"
     end
   end
 
   private def table_or_create
     where_table.first_or_create
+  rescue ActiveRecord::ValueTooLong
+    raise StudentFacingError.new(:TABLE_NAME_INVALID), "The table name is too long, it must be shorter than #{DatablockStorageTable.columns_hash['table_name'].limit} bytes ('characters')"
   rescue ActiveRecord::RecordNotUnique
     # first_or_create() is not atomic, retry in case a create was done in parallel
     where_table.first_or_create

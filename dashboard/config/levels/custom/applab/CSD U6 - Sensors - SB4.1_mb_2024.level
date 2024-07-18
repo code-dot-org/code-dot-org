@@ -1,0 +1,90 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2024-07-10T18:57:37.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "setText": null,
+      "soundSensor.value": null,
+      "onBoardEvent": null,
+      "lightSensor.setScale": {
+        "paramButtons": {
+          "maxArgs": 2,
+          "minArgs": 2
+        },
+        "params": [
+          "1",
+          "10"
+        ],
+        "paletteParams": [
+          "low",
+          "high"
+        ]
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "validation_enabled": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "submittable": "false",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "microbit",
+    "disable_procedure_autopopulate": "false",
+    "long_instructions": "# Set Scale\r\n\r\nThe light sensor ranges from 0-255, but you can also use a [`setScale()`(#f78183)](/docs/applab/lightSensor.setScale/) block to adjust the range of the sensor. These blocks are usually added to the beginning of your code and only need to be used once.\r\n\r\n# Do This\r\n1) Set the range of the `lightSensor` to be between 0 and 100\r\n\t* Add a [`lightSensor.setScale()`(#f78183)](/docs/applab/lightSensor.setScale/) block to the top of your code.\r\n\t* Set the first parameter to `0` and the second parameter to `100`. This represents a range from 0-100\r\n    * ::: details [Show Me How]\r\n![](https://images.code.org/0322a40f599b0d91287db593011cd4b9-image-1675972816472.png)\r\n:::\r\n\r\n**Run Your Code!** You should notice the values now stay between 0 and 100.",
+    "top_level_procedure_autopopulate": "false",
+    "parent_level_id": 20457,
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "ai_enabled": "false",
+    "project_template_level_name": "CSD U6 - Sensors - SB - Data Event Template_mb_2024",
+    "encrypted_examples": "z6T7NMu0wtxNFryEuJglBDsL0/ovFJkhLmKlV1m95nLnlRLjU1Qwj6kzDB4M\nSdvdhmsARBSwz1PfbNZVHsA/Vg==\n",
+    "reference_links": [
+      "/courses/csd-2022/guides/microbit-sensors",
+      "/courses/csd-2022/guides/data-and-change-events",
+      "/courses/csd-2022/guides/changing-sensor-scale",
+      "/maker/setup"
+    ],
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-07-10T18:57:37.937+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - SB4.1_mb2022\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - SB4.1_mb2022\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

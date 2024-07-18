@@ -7,7 +7,7 @@
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Conflict Resolution\r\n\r\nCreate a chatbot to help with conflict resolution for elementary school students. The user describes an interpersonal problem, and the chatbot provides suggestions for how to address the conflict.\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the `Continue`(#7435b2) button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* Another kid at school keeps on making fun of me.\r\n* My friend is being bossy and not letting me choose games.\r\n:::\r\n\r\n&nbsp;",
+    "long_instructions": "## Conflict Resolution\r\n\r\nCreate a chatbot to help with conflict resolution for elementary school students. The user describes an interpersonal problem, and the chatbot provides suggestions for how to address the conflict.\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* Another kid at school keeps on making fun of me.\r\n* My friend is being bossy and not letting me choose games.\r\n:::\r\n\r\n&nbsp;",
     "system_prompt": "deprecated",
     "bot_title": "deprecated",
     "bot_description": "deprecated",
@@ -43,8 +43,11 @@
       "availableModelIds": [
 
       ]
-    }
+    },
+    "display_name": "Conflict Resolution",
+    "bubble_choice_description": "Create a chatbot to help with conflict resolution for elementary school students. The user describes an interpersonal problem, and the chatbot provides suggestions for how to address the conflict.",
+    "thumbnail_url": "https://images.code.org/fbc8b11bf65cfc510fe71db8d49c913f-Lesson 4 - Level 11B - Conflict Resolution.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-03T23:39:25.619+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-template\"},{\"changed_at\":\"2024-05-07 03:17:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-03T23:39:25.619+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-template\"},{\"changed_at\":\"2024-05-07 03:17:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-21 17:31:47 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:11:16 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

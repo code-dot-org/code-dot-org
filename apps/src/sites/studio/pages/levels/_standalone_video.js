@@ -1,13 +1,14 @@
 import $ from 'jquery';
+import _ from 'lodash';
+import React from 'react';
+import ReactDom from 'react-dom';
+
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {onContinue} from '@cdo/apps/code-studio/levels/postOnContinue';
 import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
-import getScriptData from '@cdo/apps/util/getScriptData';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
-import React from 'react';
-import ReactDom from 'react-dom';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import _ from 'lodash';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   registerGetResult();

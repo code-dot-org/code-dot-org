@@ -114,6 +114,8 @@ cron:
 - dashboard.lti_feedbacks
 - dashboard.lti_sections
 - dashboard.lti_user_identities
+- dashboard.new_feature_feedbacks
+- dashboard.cap_user_events
 cron-user-hierarchy:
 - dashboard.users:
     remove_column:
@@ -145,6 +147,7 @@ cron-user-hierarchy:
     - invitation_by_id
     - invitations_count
     - parent_email
+    - unlock_token
 - dashboard.user_geos:
     remove_column:
     - ip_address

@@ -1,18 +1,25 @@
 import React, {useMemo} from 'react';
-import moduleStyles from './model-card-row.module.scss';
+
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {BodyThreeText, Heading6} from '@cdo/apps/componentLibrary/typography';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
-import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
+
+import InfoTooltipIcon from '../InfoTooltipIcon';
+
+import moduleStyles from './model-card-row.module.scss';
 
 interface ModelCardRowProps {
   title: string;
-  titleIcon: string;
+  titleIcon?: string;
   expandedContent: string | string[];
+  tooltipText: string;
 }
 
 const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
   title,
   titleIcon,
   expandedContent,
+  tooltipText,
 }) => {
   const expandedContentToDisplay = useMemo(() => {
     if (Array.isArray(expandedContent)) {
@@ -38,12 +45,29 @@ const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
     <>
       <div className={moduleStyles.modelCardAttributes}>
         <CollapsibleSection
-          title={title}
-          titleSemanticTag="h6"
-          titleVisualAppearance="heading-xs"
-          titleIcon={titleIcon}
           collapsedIcon="caret-right"
           expandedIcon="caret-down"
+          headerContent={
+            <div className={moduleStyles.sectionHeader}>
+              {titleIcon && (
+                <FontAwesomeV6Icon
+                  iconName={titleIcon}
+                  className={moduleStyles.titleIcon}
+                />
+              )}
+              <Heading6
+                visualAppearance="heading-xs"
+                className={moduleStyles.sectionTitle}
+              >
+                {title}
+              </Heading6>
+              <InfoTooltipIcon
+                id={title}
+                tooltipText={tooltipText}
+                direction="onRight"
+              />
+            </div>
+          }
         >
           <BodyThreeText className={moduleStyles.expandedContent}>
             <div>{expandedContentToDisplay}</div>

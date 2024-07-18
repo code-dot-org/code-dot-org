@@ -8,7 +8,7 @@ module BlocklyHelpers
 
   def generate_drag_code(from, to, target_dx, target_dy)
     id_selector = get_id_selector
-    generate_selector_drag_code "[#{id_selector}='#{from}']", "[#{id_selector}='#{to}']", target_dx, target_dy
+    generate_selector_drag_code "[#{id_selector}='#{from}']:last", "[#{id_selector}='#{to}']", target_dx, target_dy
   end
 
   def generate_selector_drag_code(from, to, target_dx, target_dy)
@@ -26,6 +26,16 @@ module BlocklyHelpers
     "var drag_dx = #{to_offset}.left - #{from_offset}.left;" \
         "var drag_dy = #{to_offset}.top  - #{from_offset}.top;" \
         "$(\"[#{id_selector}='#{from}']\").simulate( 'drag', {justDrag: true, handle: 'corner', dx: drag_dx + #{target_dx}, dy: drag_dy + #{target_dy}, moves: 5});"
+  end
+
+  def get_indexed_blockly_draggable_selector(index)
+    ".blocklyDraggable:visible:eq(#{index - 1})"
+  end
+
+  def drag_indexed_block_to_offset(block_selector, dx, dy)
+    target_selector = block_selector # Using the same block as target for relative drag
+    code = generate_selector_drag_code(block_selector, target_selector, dx.to_i, dy.to_i)
+    @browser.execute_script(code)
   end
 
   def generate_offset_code(selector)
@@ -97,6 +107,26 @@ end
 # Google Blockly encodes the id in the DOM element as the "data-id", CDO Blockly calls it the "block-id"
 def get_id_selector
   google_blockly? ? 'data-id' : 'block-id'
+end
+
+def connect_block(from, to)
+  "var workspace = Blockly.getMainWorkspace();" \
+  "var blockToMove = workspace.getBlockById('#{from}');" \
+  "var targetBlock = workspace.getBlockById('#{to}');" \
+  "targetBlock.nextConnection.connect(blockToMove.previousConnection);"
+end
+
+def connect_block_statement(from, to)
+  "var workspace = Blockly.getMainWorkspace();" \
+  "var blockToMove = workspace.getBlockById('#{from}');" \
+  "var targetBlock = workspace.getBlockById('#{to}');" \
+  "targetBlock.inputList[1].connection.connect(blockToMove.previousConnection);"
+end
+
+def delete_block(id)
+  "var workspace = Blockly.getMainWorkspace();" \
+  "var blockToDelete = workspace.getBlockById('#{id}');" \
+  "blockToDelete.dispose();"
 end
 
 World(BlocklyHelpers)

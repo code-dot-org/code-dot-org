@@ -1,7 +1,9 @@
-import {expect} from '../../../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
+
 import LedScreen from '@cdo/apps/lib/kits/maker/boards/microBit/LedScreen';
+import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
+
+import {expect} from '../../../../../../util/reconfiguredChai';
 
 describe('LedScreen', function () {
   describe('on() and off()', () => {
@@ -10,14 +12,14 @@ describe('LedScreen', function () {
     let displaySpy;
     let displayClearSpy;
 
-    before(() => {
+    beforeAll(() => {
       led = new LedScreen({
         mb: boardClient,
       });
       displaySpy = sinon.spy(boardClient, 'displayPlot');
       displayClearSpy = sinon.spy(boardClient, 'displayClear');
     });
-    after(() => {
+    afterAll(() => {
       sinon.restore();
     });
 
@@ -44,13 +46,13 @@ describe('LedScreen', function () {
     let boardClient = new MBFirmataClientStub();
     let displaySpy;
 
-    before(() => {
+    beforeAll(() => {
       led = new LedScreen({
         mb: boardClient,
       });
       displaySpy = sinon.spy(boardClient, 'displayPlot');
     });
-    after(() => {
+    afterAll(() => {
       sinon.restore();
     });
 
@@ -82,13 +84,13 @@ describe('LedScreen', function () {
     let boardClient = new MBFirmataClientStub();
     let displaySpy;
 
-    before(() => {
+    beforeAll(() => {
       led = new LedScreen({
         mb: boardClient,
       });
       displaySpy = sinon.spy(boardClient, 'displayShow');
     });
-    after(() => {
+    afterAll(() => {
       sinon.restore();
     });
 
@@ -112,14 +114,14 @@ describe('LedScreen', function () {
     let scrollStringSpy;
     let scrollNumSpy;
 
-    before(() => {
+    beforeAll(() => {
       led = new LedScreen({
         mb: boardClient,
       });
       scrollStringSpy = sinon.spy(boardClient, 'scrollString');
       scrollNumSpy = sinon.spy(boardClient, 'scrollInteger');
     });
-    after(() => {
+    afterAll(() => {
       sinon.restore();
     });
 

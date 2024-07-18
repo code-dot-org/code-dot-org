@@ -1,0 +1,17 @@
+name 'sp-pl-Coding_w_AI-teachAI_24_24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# TeachAI Toolkit
+
+<img src="https://images.code.org/ec36d6c0eeeeb3782671ca0b991d84ed-image-1712948247453.png" alt="Image CS Discoveries students" width="350px" style="border-radius:10px; float:right; margin: 0 0 0px 40px;">
+
+#### Your classroom, school, or district might not have policies in place to manage the use of AI. TeachAI has created a toolkit to help guide educators in this new terrain. 
+
+#### This toolkit is designed to help education authorities, school leaders, and teachers create thoughtful guidance to help their communities realize the potential benefits of incorporating artificial intelligence in primary and secondary education while understanding and mitigating the potential risks.
+
+#### Take a few minutes to read over the  <a href="https://www.teachai.org/toolkit" target="blank" rel="noopener noreferrer">toolkit</a> for examples of guidance on things like student contracts, parent letters, and existing policies.
+
+
+MARKDOWN

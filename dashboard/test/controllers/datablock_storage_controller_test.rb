@@ -214,6 +214,19 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_equal ['👁️👄👁️'], JSON.parse(@response.body)
   end
 
+  test "create_table enforces max table_name length" do
+    max_table_name_length = 700
+    not_too_many_bees = 'b' * (max_table_name_length - 1) # 1 less 'b' chars than max
+    post _url(:create_table), params: {table_name: not_too_many_bees}
+    assert_response :success
+
+    too_many_bees = 'b' * (max_table_name_length + 1) # 1 more 'b' char than max
+    post _url(:create_table), params: {table_name: too_many_bees}
+    assert_response :bad_request
+
+    assert_equal 'TABLE_NAME_INVALID', JSON.parse(@response.body)['type']
+  end
+
   test "get_key_values" do
     post _url(:set_key_value), params: {
       key: 'name',
@@ -306,6 +319,20 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
     get _url(:read_records), params: {table_name: 'mytable'}
     assert_equal [{"first_name" => 'bob', "age" => 8, "id" => 1}], JSON.parse(@response.body)
+  end
+
+  test "rename_column creates a new column if the old column doesn't exist" do
+    create_bob_record
+
+    put _url(:rename_column), params: {
+      table_name: 'mytable',
+      old_column_name: 'nonexistent',
+      new_column_name: 'newcol'
+    }
+    assert_response :success
+
+    get _url(:get_columns_for_table), params: {table_name: 'mytable'}
+    assert_equal ['id', 'name', 'age', 'newcol'], JSON.parse(@response.body)
   end
 
   test "get_column" do
@@ -470,6 +497,15 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     get _url(:get_key_values)
     assert_response :success
     assert_equal ({"click_count" => 5}), JSON.parse(@response.body)
+  end
+
+  test "populate_key_values_with_string_value" do
+    put _url(:populate_key_values), params: {key_values_json: '{"click_count": "backends"}'}
+    assert_response :success
+
+    get _url(:get_key_values)
+    assert_response :success
+    assert_equal ({"click_count" => "backends"}), JSON.parse(@response.body)
   end
 
   test "populate_key_values does not overwrite existing data" do

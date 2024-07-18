@@ -3,11 +3,6 @@
  * currently active Lab (determined by the current app name). This
  * helps facilitate level-switching between labs without page reloads.
  */
-import AichatView from '@cdo/apps/aichat/views/AichatView';
-import DanceView from '@cdo/apps/dance/lab2/views/DanceView';
-import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
-import MusicView from '@cdo/apps/music/views/MusicView';
-import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo';
 import classNames from 'classnames';
 import React, {
   ComponentType,
@@ -18,15 +13,27 @@ import React, {
   useEffect,
   useState,
 } from 'react';
-import ProgressContainer from '../progress/ProgressContainer';
-import {AppName} from '../types';
-import moduleStyles from './lab-views-renderer.module.scss';
-import {DEFAULT_THEME, Theme, ThemeContext} from './ThemeWrapper';
+
+import AichatView from '@cdo/apps/aichat/views/AichatView';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import DanceView from '@cdo/apps/dance/lab2/views/DanceView';
+import {setUpBlocklyForMusicLab} from '@cdo/apps/music/blockly/setup';
+import MusicView from '@cdo/apps/music/views/MusicView';
 import PanelsLabView from '@cdo/apps/panels/PanelsLabView';
-import Weblab2View from '@cdo/apps/weblab2/Weblab2View';
-import Loading from './Loading';
-import ExtraLinks from './ExtraLinks';
+import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import Weblab2View from '@cdo/apps/weblab2/Weblab2View';
+
+import ProgressContainer from '../progress/ProgressContainer';
+import {getAppOptionsViewingExemplar} from '../projects/utils';
+import {AppName} from '../types';
+
+import NoExemplarPage from './components/NoExemplarPage';
+import ExtraLinks from './ExtraLinks';
+import Loading from './Loading';
+import {DEFAULT_THEME, Theme, ThemeContext} from './ThemeWrapper';
+
+import moduleStyles from './lab-views-renderer.module.scss';
 
 // Configuration for how a Lab should be rendered
 interface AppProperties {
@@ -103,11 +110,17 @@ const appsProperties: {[appName in AppName]?: AppProperties} = {
   },
 };
 
+const hideExtraLinks = queryParams('hide-extra-links') === 'true';
+
 const LabViewsRenderer: React.FunctionComponent = () => {
   const currentAppName = useAppSelector(
     state => state.lab.levelProperties?.appName
   );
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
+  const exemplarSources = useAppSelector(
+    state => state.lab.levelProperties?.exemplarSources
+  );
+  const isViewingExemplar = getAppOptionsViewingExemplar();
 
   const [appsToRender, setAppsToRender] = useState<AppName[]>([]);
 
@@ -152,6 +165,11 @@ const LabViewsRenderer: React.FunctionComponent = () => {
           console.warn("Don't know how to render app: " + appName);
           return null;
         }
+        // Show a fallback no exemplar page if we are  trying to view
+        // exemplar but there is not exemplar for this level.
+        if (isViewingExemplar && !exemplarSources) {
+          return <NoExemplarPage />;
+        }
 
         return (
           <ProgressContainer key={appName} appType={appName}>
@@ -161,14 +179,14 @@ const LabViewsRenderer: React.FunctionComponent = () => {
                 visible={currentAppName === appName}
               >
                 {renderApp(properties)}
-                {levelId && <ExtraLinks levelId={levelId} />}
+                {!hideExtraLinks && levelId && <ExtraLinks levelId={levelId} />}
               </VisibilityContainer>
             )}
 
             {!properties.backgroundMode && currentAppName === appName && (
               <VisibilityContainer appName={appName} visible={true}>
                 {renderApp(properties)}
-                {levelId && <ExtraLinks levelId={levelId} />}
+                {!hideExtraLinks && levelId && <ExtraLinks levelId={levelId} />}
               </VisibilityContainer>
             )}
           </ProgressContainer>

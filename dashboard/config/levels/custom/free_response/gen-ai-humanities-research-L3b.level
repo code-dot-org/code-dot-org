@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-06-21T19:15:00.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Jordan is writing a paper about the role of women in Ancient Egypt. Help him find two ancient Egyptian texts about this topic and relevant quotes from those sources.\r\n\r\n**1. Quote and document from a chatbot:**\r\n\r\n**2. Verified?**",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "encrypted_solution": "UXEmyIGQRjvM10hl53Q+/LbixMh2fRsHD9RZhSSOrFU4t0Y1luCQXsCEApCe\nJDQKB/BTyWoFviIQVEDQG2rv7fb2p3LhLghGn73I/iK+lW1zr2DKj75ahbWv\nmdSOVpL554TLAhechd1E7UUVBHKGfN420zFGN4epHA5UWbNMgFsRyWHFL91A\n5gO/5rmtQQvri2U8UybY3nDXCUDOcgdXN5Wg2j06gXmk6SbPBpW2zPOdtx/o\n5z9xc/pkBKIiaC1XIxO5GSgWTL3PN9dNW7wN5H+ThBOuPtUObZL2f3jNmeED\n2EVXm6E5hUGsgX9QwmxCHU7Kz1DU2lfkutoOFUVdGQWsQp5zzwXWzUP1zJGi\nQe3MjzqadFARMW/N/L6jZRtYEnnsmM/EzviyBM1YKhwvK0DGn0IZVebfkWJ4\nChAPF7ns72NdWb0vjKd99LwEzHynYUO1pNUjCRQvr/v0fTTiLddDCROxDZDf\n91aotCsniIQ9tVxGR77JGlZCdcJCekrbvOS6RpDIWt90crFNwY21lzQetUkB\nJY/o/KyckA9RLK5cddbOzGfe/3Fj3yWoNkHN0zjkXeJd+kvDekVQ2KdTHMwg\n+1ebjJfu/kpVDtOqyc6eMhGXnNB+2LtYgq+RSzoDNI011VPka5Fem2+AQL5n\njdaLRP4lcUKgjJwX07hP+ZLAAa2xnbAy6eO6LJl19BfZRI+4KS1G2qtuqWkD\njCsVqRbH2oJbLV6LZQqjQHSF0g2Hl5RDDk069PgQwNQQHXusWkv1xCyZO7Iu\ne4MqtA5lEg==\n"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-06-21T19:15:00.694+00:00\",\"changed\":[\"cloned from \\\"gen-ai-humanities-research-L2b\\\"\"],\"cloned_from\":\"gen-ai-humanities-research-L2b\"},{\"changed_at\":\"2024-06-21 19:15:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-06-21 22:07:26 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

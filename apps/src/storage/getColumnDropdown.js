@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import msg from '@cdo/locale';
-import GetColumnParamPicker, {ParamType} from './GetColumnParamPicker';
+
 import {getFirstParam} from '../dropletUtils';
 import {stripEncapsulatingDoubleQuotes} from '../utils';
+
+import GetColumnParamPicker, {ParamType} from './GetColumnParamPicker';
 
 function openModal(type, callback, table) {
   const modalDiv = document.createElement('div');

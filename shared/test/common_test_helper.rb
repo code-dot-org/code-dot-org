@@ -9,6 +9,7 @@ require 'minitest/reporters'
 require 'minitest/around/unit'
 require 'minitest-spec-context'
 require 'minitest/stub_const'
+require 'active_support/testing/assertions'
 require 'mocha/mini_test'
 require 'vcr'
 require_relative '../../deployment'
@@ -16,6 +17,11 @@ require 'cdo/db'
 require 'cdo/aws/s3'
 
 raise 'Test helper must only be used in `test` environment!' unless rack_env? :test
+
+module Minitest::Assertions
+  # Include assertions defined in ActiveSupport such as assert_changes, etc.
+  include ActiveSupport::Testing::Assertions
+end
 
 VCR.configure do |c|
   c.cassette_library_dir = File.expand_path 'fixtures/vcr', __dir__
@@ -81,8 +87,17 @@ module SetupTest
 
     VCR.use_cassette(cassette_name, record: record_mode) do
       # rubocop:disable CustomCops/PegasusDbUsage
+      # rubocop:disable CustomCops/DashboardDbUsage
+
+      # The nested transaction seems to cause a database connection failure in some cases. Ensure that the connection
+      # is validated before trying to use it and create a new one if not.
+      PEGASUS_DB.extension(:connection_validator)
+      PEGASUS_DB.pool.connection_validation_timeout = -1
+
+      DASHBOARD_DB.extension(:connection_validator)
+      DASHBOARD_DB.pool.connection_validation_timeout = -1
+
       PEGASUS_DB.transaction(rollback: :always) do
-        # rubocop:disable CustomCops/DashboardDbUsage
         DASHBOARD_DB.transaction(rollback: :always) do
           # Use Minitest#stub here even though we generally prefer Mocha#stubs.
           # Mocha keeps its stubbing logic simple in an attempt to avoid
@@ -92,9 +107,13 @@ module SetupTest
           AWS::S3.stub(:random, proc {random.bytes(16).unpack1('H*')}, &block)
           # rubocop:enable CustomCops/PreferMochaStubsToMinitestStub
         end
-        # rubocop:enable CustomCops/DashboardDbUsage
       end
+
+      # Return connection validation to default settings.
+      PEGASUS_DB.pool.connection_validation_timeout = 3600
+      DASHBOARD_DB.pool.connection_validation_timeout = 3600
       # rubocop:enable CustomCops/PegasusDbUsage
+      # rubocop:enable CustomCops/DashboardDbUsage
     end
 
     # Cached S3-client objects contain AWS credentials,
