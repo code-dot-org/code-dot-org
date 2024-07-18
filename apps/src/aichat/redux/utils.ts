@@ -2,6 +2,7 @@ import moment from 'moment';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatItems/types';
 import {getTypedKeys} from '@cdo/apps/types/utils';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {modelDescriptions} from '../constants';
 import {
@@ -109,7 +110,7 @@ export const formatModelUpdateText = (
 export const getHiddenClearChatMessagesNotification = () => ({
   id: getNewNotificationId(),
   role: Role.NOTIFICATION,
-  status,
+  status: Status.OK,
   text: 'Chat history has been cleared.',
   timestamp: Date.now(),
   hidden: true,
