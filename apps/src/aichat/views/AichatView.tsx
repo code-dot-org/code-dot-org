@@ -36,7 +36,10 @@ import {
   setViewMode,
   updateAiCustomization,
 } from '../redux/aichatRedux';
-import {getNewNotificationId} from '../redux/utils';
+import {
+  getNewNotificationId,
+  getHiddenClearChatMessagesNotification,
+} from '../redux/utils';
 import {AichatLevelProperties, Notification, ViewMode} from '../types';
 
 import ChatWorkspace from './ChatWorkspace';
@@ -182,6 +185,8 @@ const AichatView: React.FunctionComponent = () => {
 
   const onClear = useCallback(() => {
     dispatch(clearChatMessages());
+    // Add hidden notification when user clicks on 'Clear chat' button.
+    dispatch(addNotification(getHiddenClearChatMessagesNotification()));
     analyticsReporter.sendEvent(
       EVENTS.CHAT_ACTION,
       {

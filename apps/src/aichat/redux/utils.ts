@@ -106,3 +106,12 @@ export const formatModelUpdateText = (
 
   return `${fieldLabel} ${updatedText}`;
 };
+
+export const getHiddenClearChatMessagesNotification = () => ({
+  id: getNewNotificationId(),
+  role: Role.NOTIFICATION,
+  status: Status.OK,
+  text: 'Chat history has been cleared.',
+  timestamp: Date.now(),
+  hidden: true,
+});

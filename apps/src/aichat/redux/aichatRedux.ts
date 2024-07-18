@@ -220,7 +220,7 @@ export const onSaveComplete =
 
       // Model update notifications include updates to model card information.
       dispatch(
-        addModelUpdateNotification({
+        addNotification({
           id: getNewNotificationId(),
           role: Role.NOTIFICATION,
           status: Status.OK,
@@ -249,7 +249,7 @@ export const onSaveComplete =
         );
       }
     });
-    const chatItemsCurrent = state.aichat.chatItemsCurrent;
+    const chatItemsCurrent = getState().aichat.chatItemsCurrent;
     // Log notifications on backend.
     // Post user content and messages to backend and retrieve assistant response.
     const aichatContext: AichatContext = {
@@ -447,12 +447,6 @@ const aichatSlice = createSlice({
   initialState,
   reducers: {
     addChatMessage: (state, action: PayloadAction<ChatMessage>) => {
-      state.chatItemsCurrent.push(action.payload);
-    },
-    addModelUpdateNotification: (
-      state,
-      action: PayloadAction<Notification>
-    ) => {
       state.chatItemsCurrent.push(action.payload);
     },
     addNotification: (state, action: PayloadAction<Notification>) => {
@@ -664,7 +658,6 @@ export const selectHavePropertiesChanged = (state: RootState) =>
 // Actions not to be used outside of this file
 const {
   addChatMessage,
-  addModelUpdateNotification,
   startSave,
   setChatMessagePending,
   clearChatMessagePending,
