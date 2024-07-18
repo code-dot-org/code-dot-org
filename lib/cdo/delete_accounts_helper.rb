@@ -72,6 +72,7 @@ class DeleteAccountsHelper
     end
 
     # Clear Firebase contents for user's channels
+    # TODO: unfirebase, write a version of this for Datablock Storage: #57004
     # TODO: post-firebase-cleanup, switch to the datablock storage version: #56994
     @log.puts "Deleting Firebase contents for #{channel_count} channels"
     FirebaseHelper.delete_channels encrypted_channel_ids

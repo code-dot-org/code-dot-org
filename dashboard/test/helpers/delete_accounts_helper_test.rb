@@ -50,6 +50,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
 
     # Skip real Firebase operations
+    # TODO: unfirebase, write a version of this for Datablock Storage: #57004
     # TODO: post-firebase-cleanup, switch to the datablock storage version: #56994
     FirebaseHelper.stubs(:delete_channel)
     FirebaseHelper.stubs(:delete_channels)
