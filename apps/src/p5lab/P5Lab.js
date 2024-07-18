@@ -23,6 +23,7 @@ import {
 import {startInAnimationTab} from './stateQueries';
 
 // Disabling import/order because moving the require statements may have unintended side effects.
+// These require statements required manual ordering to satisfy the autocorrecter linter.
 // This might be safe to remove but needs investigation whether any behavior is changed by order.
 /* eslint-disable import/order */
 var apiJavascript = require('./gamelab/apiJavascript');
