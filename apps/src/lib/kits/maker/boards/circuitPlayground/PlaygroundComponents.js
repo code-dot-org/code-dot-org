@@ -3,21 +3,22 @@
  * conforming to Maker API droplet blocks.
  */
 
+import five from '@code-dot-org/johnny-five';
+import _ from 'lodash';
+import PlaygroundIO from 'playground-io';
+
+import PlaygroundButton from './Button';
+import Led from './Led';
+import NeoPixel from './NeoPixel';
+import Piezo from './Piezo';
 import {
   N_COLOR_LEDS,
   CP_COMMAND,
   CP_ACCEL_STREAM_ON,
 } from './PlaygroundConstants';
-import _ from 'lodash';
-import five from '@code-dot-org/johnny-five';
-import PlaygroundIO from 'playground-io';
-import PlaygroundButton from './Button';
+import Switch from './Switch';
 import PlaygroundThermometer from './Thermometer';
 import TouchSensor from './TouchSensor';
-import Piezo from './Piezo';
-import NeoPixel from './NeoPixel';
-import Led from './Led';
-import Switch from './Switch';
 
 /**
  * Initializes a set of Johnny-Five component instances for the currently

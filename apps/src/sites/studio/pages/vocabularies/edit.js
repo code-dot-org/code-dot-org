@@ -1,12 +1,13 @@
-import getScriptData from '@cdo/apps/util/getScriptData';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+
 import AllVocabulariesEditor from '@cdo/apps/lib/levelbuilder/AllVocabulariesEditor';
 import vocabulariesEditor, {
   initVocabularies,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
-import {Provider} from 'react-redux';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
   const vocabularies = getScriptData('vocabularies');

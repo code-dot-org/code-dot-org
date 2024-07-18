@@ -83,7 +83,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "<img src=\"https://images.code.org/077ce11891f3966e1564cdb7083bad4f-image-1645641750329.png\" style=\"width: 250px; margin: 10px; float: right\" />\r\n\r\n# Text Message Design\r\n\r\nUse variables to change the background color and text color of the text exchange below so it looks similar to the picture to the right. It's okay if the colors don't match exactly as long as each group of messages has the same color scheme. \r\n\r\nYou should use variables to keep the colors consistent between messages from the same person.",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

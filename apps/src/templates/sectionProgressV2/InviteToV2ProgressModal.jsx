@@ -69,23 +69,26 @@ function InviteToV2ProgressModal({
     setInvitationOpen(showInvitation());
   }, [dateProgressTableInvitationDelayed, hasSeenProgressTableInvite]);
 
-  const handleModalClose = React.useCallback(() => {
+  const closeModal = () => {
+    setInvitationOpen(false);
+  };
+
+  const handleDismiss = React.useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_SEEN_INVITATION, {
       sectionId,
     });
-    setInvitationOpen(false);
-  }, [sectionId]);
-
-  const handleDismiss = React.useCallback(() => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_DISMISS_INVITATION, {
       sectionId,
     });
     setHasSeenProgressTableInviteData(false);
     setHasSeenProgressTableInvite(true);
-    setInvitationOpen(false);
+    closeModal();
   }, [sectionId, setHasSeenProgressTableInvite]);
 
   const handleAcceptedInvitation = React.useCallback(() => {
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_SEEN_INVITATION, {
+      sectionId,
+    });
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ACCEPT_INVITATION, {
       sectionId,
     });
@@ -93,6 +96,7 @@ function InviteToV2ProgressModal({
     setHasSeenProgressTableInvite(true);
     setShowProgressTableV2(true);
     setHasJustSwitchedToV2(true);
+    closeModal();
   }, [
     sectionId,
     setHasSeenProgressTableInvite,
@@ -101,12 +105,15 @@ function InviteToV2ProgressModal({
   ]);
 
   const handleDelayInvitation = React.useCallback(() => {
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_SEEN_INVITATION, {
+      sectionId,
+    });
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_DELAY_INVITATION, {
       sectionId,
     });
     setDateInvitationDelayed(new Date());
     setDateProgressTableInvitationDelayed(new Date());
-    setInvitationOpen(false);
+    closeModal();
   }, [sectionId, setDateProgressTableInvitationDelayed]);
 
   const setDateInvitationDelayed = date => {
@@ -125,7 +132,8 @@ function InviteToV2ProgressModal({
   if (invitationOpen) {
     return (
       <AccessibleDialog
-        onClose={handleModalClose}
+        onClose={closeModal}
+        onDismiss={handleDismiss}
         initialFocus={false}
         className={styles.modal}
       >
@@ -134,15 +142,6 @@ function InviteToV2ProgressModal({
           aria-label={i18n.dialogAnnouncement()}
           className={styles.dialog}
         >
-          <button
-            id="ui-close-dialog"
-            type="button"
-            onClick={handleDismiss}
-            aria-label={i18n.closeDialog()}
-            className={styles.xCloseButton}
-          >
-            <i id="x-close" className="fa-solid fa-xmark" />
-          </button>
           <img src={newProgressViewGraphic} alt="" />
           <Heading2>{i18n.progressTrackingAnnouncement()}</Heading2>
           <BodyTwoText>{i18n.progressTrackingInvite()}</BodyTwoText>

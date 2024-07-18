@@ -83,7 +83,6 @@
     "debugger_disabled": "false",
     "makerlab_enabled": "microbit",
     "parent_level_id": 20562,
-    "name_suffix": "_mb_2024",
     "text_mode_at_start": "false",
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/87f9ab915956478189e98a9e16ae36fa-image-1648866175432.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Movement Meter\r\n\r\nThis program uses the change event to increase a movement meter every time the board moves. When the movement meter reaches 100, the screen will change to game over.\r\n\r\n\r\n## Do This\r\nThis program has two bugs that you need to fix:\r\n\r\n1) The movement meter is being triggered by a button press, instead of the accelerometer's `change` event.\r\n2) The programmer forgot how to use the counter pattern to increase the movement variable.\r\n\r\nOnce you have found the bugs, run the program and try to pass the board to your partner without getting the game over screen.",
     "mini_rubric": "false",

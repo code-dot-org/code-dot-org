@@ -67,7 +67,6 @@
     "long_instructions": "# Set Scale\r\n\r\nThe light sensor ranges from 0-255, but you can also use a [`setScale()`(#f78183)](/docs/applab/lightSensor.setScale/) block to adjust the range of the sensor. These blocks are usually added to the beginning of your code and only need to be used once.\r\n\r\n# Do This\r\n1) Set the range of the `lightSensor` to be between 0 and 100\r\n\t* Add a [`lightSensor.setScale()`(#f78183)](/docs/applab/lightSensor.setScale/) block to the top of your code.\r\n\t* Set the first parameter to `0` and the second parameter to `100`. This represents a range from 0-100\r\n    * ::: details [Show Me How]\r\n![](https://images.code.org/0322a40f599b0d91287db593011cd4b9-image-1675972816472.png)\r\n:::\r\n\r\n**Run Your Code!** You should notice the values now stay between 0 and 100.",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20457,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",

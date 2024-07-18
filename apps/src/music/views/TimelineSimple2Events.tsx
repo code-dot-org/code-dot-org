@@ -1,9 +1,11 @@
 import React, {useCallback, useMemo} from 'react';
-import TimelineElement from './TimelineElement';
-import {useMusicSelector} from './types';
+
+import AppConfig from '../appConfig';
 import {FunctionEvents} from '../player/interfaces/FunctionEvents';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
-import AppConfig from '../appConfig';
+
+import TimelineElement from './TimelineElement';
+import {useMusicSelector} from './types';
 
 const useOriginalTimelineLayout =
   AppConfig.getValue('timeline-original-layout') === 'true';
