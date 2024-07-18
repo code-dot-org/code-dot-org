@@ -32,9 +32,10 @@ import {
   ChatItem,
   isModelUpdate,
   isNotification,
-  isChatMessage,
   ModelUpdate,
   Notification,
+  AichatInteractionStatusValue,
+  isLoggedChatItem,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -209,9 +210,12 @@ export const onSaveComplete =
       dispatch(
         addModelUpdate({
           id: getNewMessageId(),
+          role: Role.NOTIFICATION,
+          status: Status.OK,
           updatedField: typedProperty,
           updatedValue: currentAiCustomizations[typedProperty],
           timestamp: Date.now(),
+          text: '',
         })
       );
 
@@ -285,28 +289,34 @@ export const onSaveFail =
           if (body?.details?.profaneWords?.length > 0 && flaggedProperties) {
             errorMessage = `Profanity detected in the ${flaggedProperties} and cannot be updated. Please try again.`;
           }
-          dispatchSaveFailNotification(dispatch, errorMessage);
+          dispatchSaveFailNotification(
+            dispatch,
+            errorMessage,
+            Status.PROFANITY_VIOLATION
+          );
         })
         // Catch any errors in parsing the response body or if there was no response body
         // and fall back to the default error message.
         .catch(() => {
-          dispatchSaveFailNotification(dispatch, errorMessage);
+          dispatchSaveFailNotification(dispatch, errorMessage, Status.ERROR);
         });
     } else {
       // If an Error was passed instead of a NetworkError, fall back to the default error message.
-      dispatchSaveFailNotification(dispatch, errorMessage);
+      dispatchSaveFailNotification(dispatch, errorMessage, Status.ERROR);
     }
   };
 
 const dispatchSaveFailNotification = (
   dispatch: AppDispatch,
-  errorMessage: string
+  errorMessage: string,
+  status: AichatInteractionStatusValue
 ) => {
   dispatch(
     addNotification({
       id: getNewMessageId(),
+      role: Role.NOTIFICATION,
+      status,
       text: errorMessage,
-      notificationType: 'error',
       timestamp: Date.now(),
     })
   );
@@ -348,7 +358,7 @@ export const submitChatContents = createAsyncThunk(
     try {
       chatApiResponse = await postAichatCompletionMessage(
         newMessage,
-        chatItemsCurrent.filter(isChatMessage) as ChatMessage[],
+        chatItemsCurrent.filter(isLoggedChatItem),
         aiCustomizations,
         aichatContext,
         currentSessionId
