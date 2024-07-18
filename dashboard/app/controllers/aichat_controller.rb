@@ -128,9 +128,15 @@ class AichatController < ApplicationController
       end
     end
 
-    if params[:aichatModelCustomizations] != JSON.parse(session.model_customizations) ||
-        params[:storedMessages] != JSON.parse(session.messages)
+    if params[:aichatModelCustomizations] != JSON.parse(session.model_customizations)
       return false
+    end
+    
+    # Compare stored messages excluding timestamps
+    sessions_stored_messages = JSON.parse(session.messages).map { |message| message.except('timestamp') }
+    frontend_stored_messages = params[:storedMessages].map { |message| message.except('timestamp') }
+    if sessions_stored_messages != frontend_stored_messages
+      return false      
     end
 
     true
