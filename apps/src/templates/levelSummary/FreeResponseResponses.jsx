@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import DCDO from '@cdo/apps/dcdo';
-
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
+import DCDO from '@cdo/apps/dcdo';
 import i18n from '@cdo/locale';
 
 import ResponseMenuDropdown from './ResponseMenuDropdown';
