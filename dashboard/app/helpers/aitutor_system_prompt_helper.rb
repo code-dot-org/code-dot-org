@@ -45,13 +45,9 @@ module AitutorSystemPromptHelper
 
   def self.get_validated_level_test_file_contents(level)
     test_file_contents = ""
-    if level.validation
-      if level.validation.values.empty?
-        return render(status: :bad_request, json: {message: "There are no test files associated with level id=#{level_id}."})
-      else
-        level.validation.each_value do |validation|
-          test_file_contents += validation["text"]
-        end
+    if level.respond_to?(:validation) && level.validation && level.validation.values.any?
+      level.validation.each_value do |validation|
+        test_file_contents += validation["text"]
       end
     end
     test_file_contents.empty? ?

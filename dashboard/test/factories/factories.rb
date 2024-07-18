@@ -1187,6 +1187,13 @@ FactoryBot.define do
         csf_script_level.save
       end
     end
+
+    factory :csa_script_level do
+      after(:create) do |csa_script_level|
+        csa_script_level.script.curriculum_umbrella = 'CSA'
+        csa_script_level.save
+      end
+    end
   end
 
   factory :lesson_group do

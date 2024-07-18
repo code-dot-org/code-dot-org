@@ -24,7 +24,7 @@ class OpenaiChatController < ApplicationController
     end
 
     script_id = params[:scriptId]
-    unit = begin Level.find(script_id)
+    unit = begin Unit.find(script_id)
     rescue ActiveRecord::RecordNotFound
       return render(status: :bad_request, json: {message: "Couldn't find unit with id=#{script_id}."})
     end
