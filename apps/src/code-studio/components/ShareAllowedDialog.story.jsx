@@ -14,6 +14,7 @@ export default {
   component: ShareAllowedDialog,
 };
 
+window.dashboard = window.dashboard || {};
 const defaultArgs = {
   isOpen: true,
   canPublish: false,
