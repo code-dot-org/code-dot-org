@@ -59,10 +59,6 @@ class OpenaiChatControllerTest < ActionController::TestCase
   params: {},
   response: :bad_request
 
-  # test level not found
-
-  # test script/unit not found
-
   test 'identifies when chat message contains profanity' do
     student = create(:student_with_ai_tutor_access)
     sign_in(student)
@@ -79,5 +75,29 @@ class OpenaiChatControllerTest < ActionController::TestCase
     post :chat_completion, params: {messages: [{role: "user", content: "my email is l.lovegood@hogwarts.edu"}], locale: "en"}
     assert_equal json_response["safety_status"], ShareFiltering::FailureType::EMAIL
     assert_equal json_response["flagged_content"], "l.lovegood@hogwarts.edu"
+  end
+
+  test 'prepend_system_prompt correctly prepends system prompt to messages' do
+    system_prompt = "Initial system prompt"
+    messages = [{role: "user", content: "First message"}, {role: "user", content: "Second message"}]
+
+    result = @controller.send(:prepend_system_prompt, system_prompt, messages)
+
+    assert_equal 3, result.size
+    assert_equal "Initial system prompt", result.first[:content]
+    assert_equal "system", result.first[:role]
+    assert_equal "First message", result[1][:content]
+    assert_equal "Second message", result[2][:content]
+  end
+
+  test 'prepend_system_prompt handles empty message array' do
+    system_prompt = "Initial system prompt"
+    messages = []
+
+    result = @controller.send(:prepend_system_prompt, system_prompt, messages)
+
+    assert_equal 1, result.size
+    assert_equal "Initial system prompt", result.first[:content]
+    assert_equal "system", result.first[:role]
   end
 end
