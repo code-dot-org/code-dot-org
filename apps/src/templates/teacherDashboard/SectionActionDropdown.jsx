@@ -138,7 +138,7 @@ class SectionActionDropdown extends Component {
               sectionData.grades?.includes('pl')
             )}
             className="edit-section-details-link"
-            onClick={() => {
+            hrefOnClick={() => {
               analyticsReporter.sendEvent(
                 EVENTS.SECTION_TABLE_EDIT_SECTION_DETAILS_CLICKED,
                 {},
@@ -151,7 +151,7 @@ class SectionActionDropdown extends Component {
           <PopUpMenu.Item
             href={teacherDashboardUrl(sectionData.id, '/progress')}
             className="view-progress-link"
-            onClick={() => {
+            hrefOnClick={() => {
               analyticsReporter.sendEvent(
                 EVENTS.SECTION_TABLE_VIEW_PROGRESS_CLICKED,
                 {},
@@ -164,7 +164,7 @@ class SectionActionDropdown extends Component {
           <PopUpMenu.Item
             href={teacherDashboardUrl(sectionData.id, '/manage_students')}
             className="manage-students-link"
-            onClick={() => {
+            hrefOnClick={() => {
               analyticsReporter.sendEvent(
                 EVENTS.SECTION_TABLE_MANAGE_STUDENTS_CLICKED,
                 {},
@@ -179,7 +179,7 @@ class SectionActionDropdown extends Component {
               <PopUpMenu.Item
                 href={teacherDashboardUrl(sectionData.id, '/login_info')}
                 className="print-login-link"
-                onClick={() => {
+                hrefOnClick={() => {
                   const loginInstructionsEvent =
                     sectionData.loginType === SectionLoginType.email
                       ? EVENTS.SECTION_TABLE_JOIN_INSTRUCTIONS_CLICKED
