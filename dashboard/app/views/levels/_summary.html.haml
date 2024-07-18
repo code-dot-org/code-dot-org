@@ -11,7 +11,7 @@
     {
       user_id: response.user_id,
       text: response.level_source&.data,
-      student_name: User.find_by(id: response.user_id)&.name,
+      student_name: response.user.name,
     }
   end&.filter { |r| !!r[:text] }  # Remove empty responses.
 

@@ -112,18 +112,14 @@ label.sectionSelector {
 
     .studentName {
       min-height: 24px;
-
-      p {
-        margin: 0;
-        font-size: 14px;
-        font-weight: bold;
-        padding-left: 12px;
-      }
+      margin: 0;
+      font-size: 14px;
+      font-weight: bold;
+      padding-left: 12px;
     }
   }
 
   .studentAnswer {
-    // TODO: Update to use #E6F6F8 once the phase-2 brand colors are in.
     width: 100%;
     box-sizing: border-box;
     border-radius: 4px;

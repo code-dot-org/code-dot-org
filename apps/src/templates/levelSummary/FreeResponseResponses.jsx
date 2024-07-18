@@ -17,7 +17,7 @@ const FreeResponseResponses = ({responses, showStudentNames}) => {
               <p>{response.text}</p>
               <ResponseMenuDropdown response={response} />
             </div>
-            {DCDO.get('cfu-show-names-enabled', false) && (
+            {DCDO.get('cfu-pin-hide-enabled', false) && (
               <div className={styles.studentName}>
                 {showStudentNames && <p>{response.student_name}</p>}
               </div>

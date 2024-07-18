@@ -104,7 +104,7 @@ const SummaryResponses = ({
     } else {
       logEvent(EVENTS.CFU_NAMES_TOGGLED_ON);
     }
-    setShowStudentNames(!showStudentNames);
+    setShowStudentNames(prevShowStudentNames => !prevShowStudentNames);
   };
 
   return (
@@ -140,7 +140,7 @@ const SummaryResponses = ({
             </label>
           )}
 
-          {isFreeResponse && DCDO.get('cfu-show-names-enabled', false) && (
+          {isFreeResponse && DCDO.get('cfu-pin-hide-enabled', false) && (
             <Toggle
               onChange={toggleNames}
               checked={showStudentNames}
