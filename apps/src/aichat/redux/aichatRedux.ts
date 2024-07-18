@@ -46,6 +46,7 @@ import {validateModelId} from '../views/modelCustomization/utils';
 import {
   allFieldsHidden,
   findChangedProperties,
+  formatModelUpdateText,
   getNewMessageId,
   hasFilledOutModelCard,
 } from './utils';
@@ -207,15 +208,19 @@ export const onSaveComplete =
 
     changedProperties.forEach(property => {
       const typedProperty = property as keyof AiCustomizations;
+      const updatedField = typedProperty;
+      const updatedValue = currentAiCustomizations[typedProperty];
+      const timestamp = Date.now();
+
       dispatch(
         addModelUpdate({
           id: getNewMessageId(),
           role: Role.NOTIFICATION,
           status: Status.OK,
-          updatedField: typedProperty,
-          updatedValue: currentAiCustomizations[typedProperty],
-          timestamp: Date.now(),
-          text: '',
+          updatedField,
+          updatedValue,
+          timestamp,
+          text: formatModelUpdateText(updatedField, updatedValue, timestamp),
         })
       );
 
