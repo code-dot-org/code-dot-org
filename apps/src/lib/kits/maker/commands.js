@@ -3,6 +3,7 @@ import {
   apiValidateType,
   apiValidateTypeAndRange,
 } from '../../util/javascriptMode';
+
 import {BOARD_EVENT_ALIASES} from './boards/circuitPlayground/PlaygroundConstants';
 import MicroBitBoard from './boards/microBit/MicroBitBoard';
 

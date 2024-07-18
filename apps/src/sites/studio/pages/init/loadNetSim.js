@@ -1,8 +1,8 @@
 import appMain from '@cdo/apps/appMain';
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
-import NetSim from '@cdo/apps/netsim/netsim';
 import levels from '@cdo/apps/netsim/levels';
+import NetSim from '@cdo/apps/netsim/netsim';
 import skins from '@cdo/apps/netsim/skins';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
 export default function loadNetSim(options) {
   options.skinsModule = skins;

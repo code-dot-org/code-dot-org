@@ -1,9 +1,11 @@
-import Typography from '@cdo/apps/componentLibrary/typography';
-import React, {useState} from 'react';
-import {Button} from '@cdo/apps/componentLibrary/button';
-import i18n from '@cdo/locale';
-import styles from './styles.module.scss';
 import $ from 'jquery';
+import React, {useState} from 'react';
+
+import {Button} from '@cdo/apps/componentLibrary/button';
+import Typography from '@cdo/apps/componentLibrary/typography';
+import i18n from '@cdo/locale';
+
+import styles from './styles.module.scss';
 
 interface LtiDynamicRegistrationProps {
   logoUrl: string;
