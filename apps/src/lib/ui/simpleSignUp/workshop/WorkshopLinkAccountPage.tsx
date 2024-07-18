@@ -3,7 +3,7 @@ import React from 'react';
 import styles from '../link-account.module.scss';
 
 import WorkshopNewAccountCard from './WorkshopNewAccountCard';
-// import LtiExistingAccountCard from './LtiExistingAccountCard';
+import WorkshopExistingAccountCard from './WorkshopExistingAccountCard';
 import WorkshopContinueAccountCard from './WorkshopContinueAccountCard';
 import WorkshopWelcomeBanner from './WorkshopWelcomeBanner';
 import i18n from '@cdo/locale';
@@ -15,7 +15,14 @@ const WorkshopLinkAccountPage: React.FunctionComponent<{
   emailAddress: string;
   newAccountUrl: string;
   continueAccountUrl: string;
-}> = ({newCtaType, emailAddress, newAccountUrl, continueAccountUrl}) => {
+  existingAccountUrlHref: string;
+}> = ({
+  newCtaType,
+  emailAddress,
+  newAccountUrl,
+  continueAccountUrl,
+  existingAccountUrlHref,
+}) => {
   const handleCancel = () => {
     newCtaType === 'new'
       ? navigateToHref(`/users/cancel`)
@@ -37,7 +44,9 @@ const WorkshopLinkAccountPage: React.FunctionComponent<{
               continueAccountUrl={continueAccountUrl}
             />
           )}
-          {/* <LtiExistingAccountCard /> */}
+          <WorkshopExistingAccountCard
+            existingAccountUrlHref={existingAccountUrlHref}
+          />
         </div>
         <div className={styles.cancelButtonContainer}>
           <Link text={i18n.cancel()} href={`#`} onClick={handleCancel} />
