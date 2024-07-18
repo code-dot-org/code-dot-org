@@ -69,7 +69,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/e6810d27a28507057d9963cd0f8f6cbe-image-1650057342115.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Mood Descriptor\r\nAngel is working on an app that lets them communicate their current mood to a screen that can hang outside their door before anyone enters their room. From inside their room, Angel can press buttons on the micro:bit, which updates the app on the outside of their room. Angel started designing the app, but they haven't added any code yet.\r\n\r\n## Do This\r\n\r\n1. When Angel presses the A button, show a happy face\r\n2. When Angel presses the B button, show a sad face\r\n3. When Angel releases the A button, show a neutral face\r\n4. When Angel releases the B button, show a neutral face\r\n\r\n**Run Your Code!** When you hold a button, the emoji should change to a happy or sad emoji. When you release the button, it should change back to the neutral emoji.",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "true",
     "text_mode_at_start": "false",
     "encrypted": "false",

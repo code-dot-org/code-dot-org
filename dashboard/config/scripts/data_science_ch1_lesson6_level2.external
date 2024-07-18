@@ -1,0 +1,20 @@
+name 'data-science-ch1-lesson6-level2'
+title 'LeBron is the G.O.A.T.'
+description 'LeBron is the G.O.A.T.'
+
+markdown <<MARKDOWN
+#LeBron is the G.O.A.T.
+
+![](https://images.code.org/473f28a873d451cf5cb5b41db156bd49-image-1721236439188.58.08 PM.jpg)
+
+LeBron James' illustrious career is a testament to his unparalleled dominance and consistency on the basketball court, solidifying his case as the greatest player ever. By the age of 28, LeBron achieved the remarkable milestone of 20,000 points, outpacing legends like Kobe Bryant, Wilt Chamberlain, and Michael Jordan, who reached this mark at older ages. His scoring prowess is evident from his consistent point totals, peaking at 2,478 points in the 2005-06 season and maintaining high performance levels across different teams and jersey numbers. With 15,251 points scored as number 23 for the Cavaliers and 4,756 points as number 6 for the Heat, LeBron's ability to excel regardless of his environment underscores his adaptability and relentless pursuit of excellence. This combination of early achievement, sustained performance, and versatility across different contexts cements LeBron James' status as the preeminent basketball player of all time.
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+With a partner, students will review the “LeBron James is the G.O.A.T.” persuasive data story on this level and answer the associated three questions in their activity guide: 
+
+Students will be asked to determine the author’s stance towards LeBron James based on the data and the narrative that are provided. If needed, remind students that stance is the author’s message or position on a subject. 
+They will also be asked to point out data that they find convincing. This is a personal choice, as there are lots of data points to choose from. Help students to focus on the reason why they think that this data point is the most persuasive. If students are unfamiliar with this athlete or basketball in general, support them in focusing on how they would judge the persuasive appeal (successful or not) from the knowledge that they have.
+The last question deals with identifying the conclusions that the author makes from the data provided. These conclusions form the basis of the persuasive data story that the author is attempting to tell. Remind students that this often deals with the author’s interpretation of the data and is often written in such a way as to try and convince the reader of his/her stance.
+MARKDOWN
