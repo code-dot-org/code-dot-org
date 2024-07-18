@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-16T14:14:29.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Warm Up",
+    "long_instructions": "Imagine you are going to study abroad in a country where you don’t know the language, but you plan to learn it during your stay. You have 3 options for where to stay:\r\n\r\n- A hotel room with a bakery and restaurant on the ground floor\r\n- A barn on a farm that grows fruit and employs a mechanic that can repair farm equipment\r\n- An apartment across from a park next and to florist and their family who has lots of young children\r\n\r\n####**Of the three choices, which would you choose and why?**",
+    "teacher_markdown": "Discussion Goal: This can be a quick discussion and there is no single right answer - let students share their thoughts and justify their responses in whatever ways make sense to them. The important thing is that there is a choice involved - we can decide which type of experience we want to have when learning a language, and that choice will influence the types of words and phrases we learn. This will be an important point to make in the following slide.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-16 14:14:33 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

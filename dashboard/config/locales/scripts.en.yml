@@ -18228,7 +18228,7 @@ en:
           title: Game Design
           description_audience: ''
           description_short: ''
-          description: "#### **You will:**\n\n* ####  Learn the basic elements of game design.\n* #### Use variables to keep score.\n* ####  Code environment and player sprites. \n* Learn how to host a game jam in your classroom. \n* Learn how to access Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
+          description: "#### **You will:**\n\n* ####  Learn the basic elements of game design.\n* #### Use variables to keep score.\n* ####  Code environment and player sprites. \n* #### Learn how to host a game jam in your classroom. \n* #### Learn how to access Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
           student_description: "#### **You will:**\n\n* #### Learn the basic elements of game design.\n* #### Use variables to keep score.\n* #### Code environment and player sprites. \n* #### Learn how to host a game jam in your classroom. \n* ####  Learn how to access Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
         k5gettingstarted:
           lessons: {}
@@ -18330,8 +18330,40 @@ en:
           description: ''
           student_description: ''
         intro-to-data-science-2024:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-13:
+              name: Pre-Assessment
+            lesson-1:
+              name: Introduction to Data Science
+            lesson-2:
+              name: Making Sense of Data
+            lesson-3:
+              name: Ethical Data Collection
+            lesson-4:
+              name: Data Rights
+            lesson-5:
+              name: Effective Data Questions
+            lesson-6:
+              name: Data Storytelling
+            lesson-7:
+              name: Introduction to Data Visualization
+            lesson-8:
+              name: Data Cleaning and Analysis Techniques
+            lesson-9:
+              name: Data Interpretation
+            lesson-10:
+              name: More Visualization Techniques
+            lesson-11:
+              name: Crafting Stories with Data Project
+            lesson-12:
+              name: Assessment Day
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Getting Started
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
           name: intro-to-data-science-2024
           title: Introduction to Data Science
           description_audience: ''
@@ -18347,4 +18379,46 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        tess-getting-started:
+          lessons: {}
+          lesson_groups: {}
+          name: tess-getting-started
+          title: Getting Started with Code.org [Optional]
+          description_audience: ''
+          description_short: ''
+          description: "#### This module is a short introduction to using the Code.org platform.\n\n#### **You will:**\n* #### Get an introduction to Code.org \n* #### Learn to navigate the teacher features on the Code.org platform\n\n#### **Suggested Time:** 30 minutes"
+          student_description: "#### This module is a short introduction to using the Code.org platform.\n\n#### **You will:**\n* #### Get an introduction to Code.org \n* #### Learn to navigate the teacher features on the Code.org platform\n\n#### **Suggested Time:** 30 minutes"
+        getting-started-with-code:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Getting Started with Code.org
+          name: getting-started-with-code
+          title: Getting Started [Optional]
+          description_audience: ''
+          description_short: ''
+          description: "#### **You will:**\n\n* ####  Get an introduction to Code.org’s mission. \n* ####  Learn how to navigate the Code.org website and teacher tools.\n* ####  Set up a classroom section.\n* ####  Locate and use course lesson plans and teacher resources.\n* ####  Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+          student_description: "#### **You will:**\n\n#### * Get an introduction to Code.org’s mission. \n#### * Learn how to navigate the Code.org website and teacher tools.\n#### * Set up a classroom section.\n#### * Locate and use course lesson plans and teacher resources.\n#### * Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+        getting-started-with-code-maker:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Getting Started with Code.org
+          name: getting-started-with-code-maker
+          title: Getting Started [Optional]
+          description_audience: ''
+          description_short: ''
+          description: "#### **You will:**\n\n* ####  Get an introduction to Code.org’s mission. \n* ####  Learn how to navigate the Code.org website and teacher tools.\n* ####  Set up a classroom section.\n* ####  Locate and use course lesson plans and teacher resources.\n* ####  Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+          student_description: "#### **You will:**\n\n#### * Get an introduction to Code.org’s mission. \n#### * Learn how to navigate the Code.org website and teacher tools.\n#### * Set up a classroom section.\n#### * Locate and use course lesson plans and teacher resources.\n#### * Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+        getting-started-with-code-game-design:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Getting Started with Code.org
+          name: getting-started-with-code-game-design
+          title: Getting Started [Optional]
+          description_audience: ''
+          description_short: ''
+          description: "#### **You will:**\n\n* ####  Get an introduction to Code.org’s mission. \n* ####  Learn how to navigate the Code.org website and teacher tools.\n* ####  Set up a classroom section.\n* ####  Locate and use course lesson plans and teacher resources.\n* ####  Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+          student_description: "#### **You will:**\n\n#### * Get an introduction to Code.org’s mission. \n#### * Learn how to navigate the Code.org website and teacher tools.\n#### * Set up a classroom section.\n#### * Locate and use course lesson plans and teacher resources.\n#### * Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
 ...

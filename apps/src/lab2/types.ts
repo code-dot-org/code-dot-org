@@ -99,6 +99,7 @@ export type FolderId = string;
 export interface MultiFileSource {
   folders: Record<FolderId, ProjectFolder>;
   files: Record<FileId, ProjectFile>;
+  openFiles?: FileId[];
 }
 
 export interface ProjectFile {

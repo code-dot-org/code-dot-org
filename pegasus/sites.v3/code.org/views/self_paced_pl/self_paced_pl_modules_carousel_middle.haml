@@ -13,25 +13,19 @@
       aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_ai_101),
       new: true
     },
-  ]
-  if !!DCDO.get('curriculum-launch-2024', false)
-    block_items.push(
-      {
-        overline: hoc_s(:module_grade_6_12_teachers),
-        title: hoc_s(:module_label_teaching_coding_with_ai),
-        image: '/images/self-paced-pl-tile-coding-with-ai.png',
-        curriculum: hoc_s(:curriculum_name_coding_with_ai),
-        duration: hoc_s(:module_duration_2_hrs),
-        prerequisites: hoc_s(:module_prerequisites_none),
-        url_primary: CDO.studio_url("/courses/self-paced-pl-coding-with-ai-2024"),
-        url_secondary: '/curriculum/coding-with-ai',
-        aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_coding_with_ai),
-        aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_coding_with_ai),
-        new: true,
-      }
-    )
-  end
-  block_items += [
+    {
+      overline: hoc_s(:module_grade_6_12_teachers),
+      title: hoc_s(:module_label_teaching_coding_with_ai),
+      image: '/images/self-paced-pl-tile-coding-with-ai.png',
+      curriculum: hoc_s(:curriculum_name_coding_with_ai),
+      duration: hoc_s(:module_duration_2_hrs),
+      prerequisites: hoc_s(:module_prerequisites_none),
+      url_primary: CDO.studio_url("/courses/self-paced-pl-coding-with-ai-2024"),
+      url_secondary: '/curriculum/coding-with-ai',
+      aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_coding_with_ai),
+      aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_coding_with_ai),
+      new: true,
+    },
     {
       overline: hoc_s(:module_grade_6_10_teachers),
       title: hoc_s(:curriculum_name_teaching_animation),

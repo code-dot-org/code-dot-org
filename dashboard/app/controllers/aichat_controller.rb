@@ -41,20 +41,12 @@ class AichatController < ApplicationController
       }
     end
 
-    messages_for_model = params.to_unsafe_h[:storedMessages].filter do |message|
+    messages_for_model = params[:storedMessages].filter do |message|
       message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK] &&
         ROLES_FOR_MODEL.include?(message[:role])
     end
 
-    # Use to_unsafe_h here to allow testing this function.
-    # Safe params are primarily targeted at preventing "mass assignment vulnerability"
-    # which isn't relevant here.
-    inputs = AichatSagemakerHelper.format_inputs_for_sagemaker_request(
-      params.to_unsafe_h[:aichatModelCustomizations],
-      messages_for_model,
-      params.to_unsafe_h[:newMessage]
-    )
-    latest_assistant_response_from_sagemaker = AichatSagemakerHelper.get_sagemaker_assistant_response(inputs, params[:aichatModelCustomizations][:selectedModelId])
+    latest_assistant_response_from_sagemaker = AichatSagemakerHelper.get_sagemaker_assistant_response(params[:aichatModelCustomizations], messages_for_model, params[:newMessage])
 
     filter_result = ShareFiltering.find_profanity_failure(latest_assistant_response_from_sagemaker, locale)
     if filter_result&.type == ShareFiltering::FailureType::PROFANITY

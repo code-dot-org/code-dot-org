@@ -29,7 +29,7 @@
 - elsif requested_path.eql? "/educate/professional-learning/cs-principles"
   - redirect "/educate/professional-learning/middle-high"
 - elsif requested_path.eql? "/educate/facilitator"
-  - redirect "/educate/professional-learning/facilitator"
+  - redirect "/educate/professional-learning"
 - elsif requested_path.include? "/educate/facilitator"
   - path = requested_path.gsub("csf", "cs-fundamentals").gsub("css", "cs-in-science").gsub("ecs", "exploring-cs").gsub("csp", "cs-principles").gsub("csd", "cs-discoveries")
   - new_path = path.gsub("/educate/facilitator-", "/educate/professional-learning/") + "-facilitator"
