@@ -2,12 +2,14 @@ import moment from 'moment';
 
 import {getTypedKeys} from '@cdo/apps/types/utils';
 
+import {modelDescriptions} from '../constants';
 import {
   AiCustomizations,
   FieldVisibilities,
   ModelCardInfo,
   Visibility,
 } from '../types';
+import {AI_CUSTOMIZATIONS_LABELS} from '../views/modelCustomization/constants';
 
 // This variable keeps track of the most recent message ID so that we can
 // assign a unique message id in increasing sequence to a new message.
@@ -79,3 +81,27 @@ export const allFieldsHidden = (fieldVisibilities: FieldVisibilities) =>
   getTypedKeys(fieldVisibilities).every(
     key => fieldVisibilities[key] === Visibility.HIDDEN
   );
+
+export const formatModelUpdateText = (
+  updatedField: keyof AiCustomizations,
+  updatedValue: AiCustomizations[keyof AiCustomizations],
+  timestamp: number
+): string => {
+  const fieldLabel = AI_CUSTOMIZATIONS_LABELS[updatedField];
+
+  let updatedToText = undefined;
+  if (updatedField === 'temperature') {
+    updatedToText = updatedValue as number;
+  }
+  if (updatedField === 'selectedModelId') {
+    updatedToText = modelDescriptions.find(
+      model => model.id === updatedValue
+    )?.name;
+  }
+
+  const updatedText = updatedToText
+    ? ` has been updated to ${updatedToText}.`
+    : ' has been updated.';
+
+  return `${fieldLabel} ${updatedText} ${timestampToLocalTime(timestamp)}`;
+};
