@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 import styles from '../../../../link-account.module.scss';
 import canvas from '../../../assets/canvas.svg';
 import schoology from '../../../assets/schoology.svg';
-import codeLogo from '../../../assets/codeLogo.svg';
+import codeLogo from '../../../../assets/codeLogo.svg';
 import {LtiProviderContext} from '../context';
 
 const LtiWelcomeBanner = () => {
