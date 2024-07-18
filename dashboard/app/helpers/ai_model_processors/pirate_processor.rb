@@ -4,7 +4,7 @@ class AiModelProcessors::PirateProcessor < AiModelProcessors::MistralProcessor
     # These characters is used to separate the assistant response received from the Pirate model
     # from the rest of the generated text which sometimes includes jargon, extraneous characters
     # or code snippets.
-    assistant_response = last.split(/[}~*`]/).first
+    assistant_response = last.split(/[}~*`\/\\]/).first
     # Remove double quotes in assistant response.
     assistant_response.delete("\"")
   end
