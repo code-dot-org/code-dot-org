@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
+import Link from '@cdo/apps/componentLibrary/link/Link';
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
-import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+
 import Button from '../../templates/Button';
-import Link from '@cdo/apps/componentLibrary/link/Link';
 
 export default class CourseVersionPublishingEditor extends Component {
   static propTypes = {

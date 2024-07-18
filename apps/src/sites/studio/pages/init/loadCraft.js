@@ -1,3 +1,5 @@
+// Disabling automatic import order in order to have commented manual import sections.
+/* eslint-disable import/order */
 import appMain from '@cdo/apps/appMain';
 
 /**
@@ -36,6 +38,7 @@ import CodeConnectionCraft from '@cdo/apps/craft/code-connection/craft';
 import * as ccBlocks from '@cdo/apps/craft/code-connection/blocks';
 import ccLevels from '@cdo/apps/craft/code-connection/levels';
 import ccSkins from '@cdo/apps/craft/code-connection/skins';
+/* eslint-enable import/order */
 
 export default function loadCraft(options) {
   const appWidth = 434;

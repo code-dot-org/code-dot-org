@@ -1,17 +1,23 @@
 /** @file Board controller for BBC micro:bit */
 
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
+
+import {MAKER_TOOLKIT} from '@cdo/apps/lib/kits/maker/util/makerConstants';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+import {delayPromise} from '../../util/boardUtils';
+
+import CapacitiveTouchSensor from './CapacitiveTouchSensor';
+import ExternalButton from './ExternalButton';
+import ExternalLed from './ExternalLed';
+import LedScreen from './LedScreen';
+import MBFirmataWrapper from './MBFirmataWrapper';
 import {
   createMicroBitComponents,
   cleanupMicroBitComponents,
   enableMicroBitComponents,
   componentConstructors,
 } from './MicroBitComponents';
-import MBFirmataWrapper from './MBFirmataWrapper';
-import ExternalLed from './ExternalLed';
-import ExternalButton from './ExternalButton';
-import CapacitiveTouchSensor from './CapacitiveTouchSensor';
-import LedScreen from './LedScreen';
 import {
   MICROBIT,
   MICROBIT_FIRMWARE_VERSION,
@@ -20,9 +26,6 @@ import {
   CHECKMARK_LEDS,
   ALL_LEDS,
 } from './MicroBitConstants';
-import {delayPromise} from '../../util/boardUtils';
-import {MAKER_TOOLKIT} from '@cdo/apps/lib/kits/maker/util/makerConstants';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
  * Controller interface for BBC micro:bit board using

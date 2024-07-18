@@ -1,9 +1,15 @@
 /** @file Board controller for Adafruit Circuit Playground */
-import _ from 'lodash';
-import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import five from '@code-dot-org/johnny-five';
-import Playground from 'playground-io';
+import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import Firmata from 'firmata';
+import _ from 'lodash';
+import Playground from 'playground-io';
+
+import {detectBoardTypeFromPort, BOARD_TYPE} from '../../util/boardUtils';
+import {isChromeOS} from '../../util/browserChecks';
+
+import PlaygroundButton from './Button';
+import Led from './Led';
 import {
   createCircuitPlaygroundComponents,
   cleanupCircuitPlaygroundComponents,
@@ -18,10 +24,6 @@ import {
   CP_COMMAND,
   J5_CONSTANTS,
 } from './PlaygroundConstants';
-import Led from './Led';
-import PlaygroundButton from './Button';
-import {detectBoardTypeFromPort, BOARD_TYPE} from '../../util/boardUtils';
-import {isChromeOS} from '../../util/browserChecks';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');

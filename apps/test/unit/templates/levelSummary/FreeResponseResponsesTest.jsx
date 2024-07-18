@@ -50,4 +50,27 @@ describe('FreeResponseResponses', () => {
     // Check that family name is displayed when available
     screen.getByText('student 5 smith');
   });
+
+  it('hides responses', () => {
+    DCDO.set('cfu-pin-hide-enabled', true);
+    renderDefault();
+
+    screen.getByText('student response 1');
+
+    const dropdownButton = screen.getAllByTitle('Additional options')[0];
+
+    dropdownButton.click();
+
+    const hideResponseButton = screen.getByRole('button', {
+      name: 'Hide response',
+    });
+    hideResponseButton.click();
+
+    expect(screen.queryByText('student response 1')).toBeNull();
+
+    const showAllResponsesButton = screen.getByText('Show hidden responses');
+    showAllResponsesButton.click();
+
+    screen.getByText('student response 1');
+  });
 });

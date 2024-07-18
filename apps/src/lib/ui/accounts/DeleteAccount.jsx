@@ -1,18 +1,20 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import $ from 'jquery';
-import i18n from '@cdo/locale';
+
 import color from '@cdo/apps/util/color';
+import {navigateToHref} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import AdminAccountDialog from './AdminAccountDialog';
+import BootstrapButton from './BootstrapButton';
+import DeleteAccountDialog from './DeleteAccountDialog';
 import {
   TeacherWarning,
   StudentWarning,
   getCheckboxes,
 } from './DeleteAccountHelpers';
-import {navigateToHref} from '@cdo/apps/utils';
-import BootstrapButton from './BootstrapButton';
 import PersonalLoginDialog from './PersonalLoginDialog';
-import DeleteAccountDialog from './DeleteAccountDialog';
-import AdminAccountDialog from './AdminAccountDialog';
 
 export const DELETE_VERIFICATION_STRING =
   i18n.deleteAccountDialog_verificationString();
