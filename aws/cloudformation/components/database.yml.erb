@@ -225,9 +225,6 @@
         - {AuthScheme: SECRETS, SecretArn: !Ref DatabaseSecretReader, IAMAuth: DISABLED}
       VpcSubnetIds: <%=subnets.to_json%>
       VpcSecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
-      # Set to maximum permitted (8 hours) to ensure Database Migration Service connections do not get closed during
-      # export of large tables.
-      IdleClientTimeout: 28800
   ReportingDBDomainName:
     Type: AWS::Route53::RecordSetGroup
     Properties:
