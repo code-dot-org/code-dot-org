@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import SectionCreationCelebrationDialog from '@cdo/apps/templates/sectionsRefresh/SectionCreationCelebrationDialog';
@@ -9,5 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.appendChild(mountPoint);
 
   updateQueryParam('showSectionCreationDialog', undefined, true);
-  ReactDOM.render(<SectionCreationCelebrationDialog />, mountPoint);
+  const root = createRoot(mountPoint);
+  root.render(<SectionCreationCelebrationDialog />);
 });

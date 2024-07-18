@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import ProgrammingExpressionEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingExpressionEditor';
@@ -24,7 +24,9 @@ $(document).ready(() => {
   const levelSearchingInfo = getScriptData('levelSearchingInfo');
   store.dispatch(initLevelSearching(levelSearchingInfo));
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('edit-container'));
+
+  root.render(
     <Provider store={store}>
       <>
         <ProgrammingExpressionEditor
@@ -34,7 +36,6 @@ $(document).ready(() => {
         />
         <ExpandableImageDialog />
       </>
-    </Provider>,
-    document.getElementById('edit-container')
+    </Provider>
   );
 });

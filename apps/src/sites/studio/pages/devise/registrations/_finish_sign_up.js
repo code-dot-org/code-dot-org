@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -235,11 +235,12 @@ $(document).ready(() => {
 
   function renderSchoolInfo() {
     if (schoolInfoMountPoint) {
-      ReactDOM.render(
+      const root = createRoot(schoolInfoMountPoint);
+
+      root.render(
         <div style={{padding: 10}}>
           <SchoolDataInputs usIp={usIp} />
-        </div>,
-        schoolInfoMountPoint
+        </div>
       );
     }
   }

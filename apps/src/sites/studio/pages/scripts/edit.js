@@ -1,7 +1,7 @@
 /** @file JavaScript run only on the /s/:script_name/edit page. */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
@@ -35,7 +35,9 @@ export default function initPage(unitEditorData) {
     initResources('studentResource', scriptData.student_resources || [])
   );
 
-  ReactDOM.render(
+  const root = createRoot(document.querySelector('.edit_container'));
+
+  root.render(
     <Provider store={store}>
       <UnitEditor
         id={scriptData.id}
@@ -101,8 +103,7 @@ export default function initPage(unitEditorData) {
           scriptData.missingRequiredDeviceCompatibilities
         }
       />
-    </Provider>,
-    document.querySelector('.edit_container')
+    </Provider>
   );
 }
 

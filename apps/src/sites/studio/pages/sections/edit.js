@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
 import getScriptData from '@cdo/apps/util/getScriptData';
@@ -10,11 +10,12 @@ function initPage() {
   const section = getScriptData('section');
   const canEnableAITutor = getScriptData('canEnableAITutor');
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('form'));
+
+  root.render(
     <SectionsSetUpContainer
       sectionToBeEdited={section}
       canEnableAITutor={canEnableAITutor}
-    />,
-    document.getElementById('form')
+    />
   );
 }

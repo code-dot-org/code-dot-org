@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import cookies from 'js-cookie';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
@@ -47,12 +47,14 @@ export default function initSigninState(userType, under13) {
     }
 
     const div = document.createElement('div');
-    ReactDOM.render(
+    const root = createRoot(div);
+
+    root.render(
       <Provider store={store}>
         <SignInOrAgeDialog />
-      </Provider>,
-      div
+      </Provider>
     );
+
     document.body.appendChild(div);
   });
 }

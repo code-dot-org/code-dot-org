@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import {ImagePreview} from '../instructions/AniGifPreview';
 
@@ -33,15 +33,16 @@ export function renderExpandableImages(node, showImageDialog) {
      * We should probably rebuild this in such a way as to not violate React's
      * expectations like this.
      */
-    ReactDOM.render(
+    const root = createRoot(expandableImg);
+
+    root.render(
       <ImagePreview
         url={expandableImg.dataset.url}
         noVisualization={false}
         showInstructionsDialog={() =>
           showImageDialog(expandableImg.dataset.url)
         }
-      />,
-      expandableImg
+      />
     );
   }
 }

@@ -1,7 +1,7 @@
 import {setAssetPath} from '@code-dot-org/ml-playground/dist/assetPath';
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {TestResults} from '@cdo/apps/constants';
@@ -128,11 +128,12 @@ Ailab.prototype.init = function (config) {
     setDynamicInstructionsDefaults(getInstructionsDefaults())
   );
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById(config.containerId));
+
+  root.render(
     <Provider store={getStore()}>
       <AilabView onMount={onMount} />
-    </Provider>,
-    document.getElementById(config.containerId)
+    </Provider>
   );
 };
 

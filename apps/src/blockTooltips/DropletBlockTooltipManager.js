@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import LibraryViewCode from '@cdo/apps/code-studio/components/libraries/LibraryViewCode';
 
@@ -144,7 +144,11 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks_ =
                 if (library) {
                   $('.tooltipstered').tooltipster('hide');
                   $('body').append("<div id='libraryFunctionTooltipModal' />");
-                  ReactDOM.render(
+                  const root = createRoot(
+                    document.querySelector('#libraryFunctionTooltipModal')
+                  );
+
+                  root.render(
                     <LibraryViewCode
                       title={library.name}
                       description={library.description}
@@ -155,8 +159,7 @@ DropletBlockTooltipManager.prototype.installTooltipsForCurrentCategoryBlocks_ =
                         element.parentNode.removeChild(element);
                       }}
                       sourceCode={library.source}
-                    />,
-                    document.querySelector('#libraryFunctionTooltipModal')
+                    />
                   );
                 }
               });

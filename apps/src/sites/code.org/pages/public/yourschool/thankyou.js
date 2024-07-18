@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
@@ -14,10 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
   initResponsive();
 
   const container = document.getElementById('thankyou');
-  ReactDOM.render(
+  const root = createRoot(container);
+
+  root.render(
     <Provider store={getStore()}>
       <YourSchoolResources />
-    </Provider>,
-    container
+    </Provider>
   );
 });

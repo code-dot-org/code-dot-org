@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import ProgrammingMethodEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingMethodEditor';
@@ -16,7 +16,9 @@ $(document).ready(() => {
 
   const programmingMethod = getScriptData('programmingMethod');
   const overloadOptions = getScriptData('overloadOptions');
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('edit-container'));
+
+  root.render(
     <Provider store={store}>
       <>
         <ProgrammingMethodEditor
@@ -25,7 +27,6 @@ $(document).ready(() => {
         />
         <ExpandableImageDialog />
       </>
-    </Provider>,
-    document.getElementById('edit-container')
+    </Provider>
   );
 });

@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import AllFeedbacks from '@cdo/apps/templates/feedback/AllFeedbacks';
 
@@ -10,8 +10,8 @@ function showFeedback() {
   const script = document.querySelector('script[data-feedback]');
   const feedbackData = JSON.parse(script.dataset.feedback);
 
-  ReactDOM.render(
-    <AllFeedbacks feedbacksByLevel={feedbackData.all_feedbacks_by_level} />,
-    document.getElementById('feedback-container')
+  const root = createRoot(document.getElementById('feedback-container'));
+  root.render(
+    <AllFeedbacks feedbacksByLevel={feedbackData.all_feedbacks_by_level} />
   );
 }

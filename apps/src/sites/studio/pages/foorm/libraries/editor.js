@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import foorm, {
@@ -25,15 +25,16 @@ $(document).ready(function () {
   const libraryNamesAndVersions = scriptData.libraryNamesAndVersions;
   getStore().dispatch(setFetchableEntities(libraryNamesAndVersions));
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('editor-container'));
+
+  root.render(
     <Provider store={store}>
       <FoormLibraryEditorManager
         populateCodeMirror={populateCodeMirror}
         resetCodeMirror={resetCodeMirror}
         categories={scriptData.libraryCategories}
       />
-    </Provider>,
-    document.getElementById('editor-container')
+    </Provider>
   );
 });
 

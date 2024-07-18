@@ -5,7 +5,7 @@
  * @see dynamic_registration.html.haml.
  */
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import LtiDynamicRegistrationPage from '@cdo/apps/lib/ui/simpleSignUp/lti/registration/LtiDynamicRegistrationPage';
 import getScriptData from '@cdo/apps/util/getScriptData';
@@ -16,11 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const scriptData = getScriptData('json');
   const {logoUrl, registrationID} = scriptData;
 
-  ReactDOM.render(
+  const root = createRoot(mountPoint);
+
+  root.render(
     <LtiDynamicRegistrationPage
       logoUrl={logoUrl}
       registrationID={registrationID}
-    />,
-    mountPoint
+    />
   );
 });

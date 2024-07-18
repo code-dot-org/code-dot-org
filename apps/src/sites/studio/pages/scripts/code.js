@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/code-studio/redux';
@@ -28,10 +28,11 @@ function initPage() {
 
   const store = getStore();
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('roll_up'));
+
+  root.render(
     <Provider store={store}>
       <UnitRollup objectToRollUp={'Code'} unit={unitSummary} />
-    </Provider>,
-    document.getElementById('roll_up')
+    </Provider>
   );
 }

@@ -1,16 +1,17 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/code-studio/redux';
 import Incubator from '@cdo/apps/templates/studioHomepages/Incubator';
 
 $(document).ready(function () {
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('incubator-container'));
+
+  root.render(
     <Provider store={getStore()}>
       <Incubator />
-    </Provider>,
-    document.getElementById('incubator-container')
+    </Provider>
   );
 });

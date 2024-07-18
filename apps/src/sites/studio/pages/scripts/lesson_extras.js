@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import LessonExtras from '@cdo/apps/code-studio/components/lessonExtras/LessonExtras';
@@ -20,7 +20,9 @@ config.bonusLevels = config.bonusLevels.map(bonus => {
   return bonus;
 });
 
-ReactDOM.render(
+const root = createRoot(document.querySelector('#lesson-extras'));
+
+root.render(
   <Provider store={store}>
     <LessonExtras
       lessonNumber={config.lessonNumber}
@@ -33,6 +35,5 @@ ReactDOM.render(
       userId={viewer.user_id}
       showLessonExtrasWarning={viewer.show_lesson_extras_warning}
     />
-  </Provider>,
-  document.querySelector('#lesson-extras')
+  </Provider>
 );

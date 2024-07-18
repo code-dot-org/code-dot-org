@@ -8,7 +8,7 @@
  */
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import hashEmail from '@cdo/apps/code-studio/hashEmail';
 import initSigninState from '@cdo/apps/code-studio/initSigninState';
@@ -111,12 +111,13 @@ $(document).ready(function () {
   if (document.querySelector(`script[data-gdpr]`)) {
     const gdprData = getScriptData('gdpr');
     if (gdprData.show_gdpr_dialog && gdprData.current_user_id) {
-      ReactDOM.render(
+      const root = createRoot(document.getElementById('gdpr-dialog'));
+
+      root.render(
         <GDPRDialog
           isDialogOpen={gdprData.show_gdpr_dialog}
           currentUserId={gdprData.current_user_id}
-        />,
-        document.getElementById('gdpr-dialog')
+        />
       );
     }
   }

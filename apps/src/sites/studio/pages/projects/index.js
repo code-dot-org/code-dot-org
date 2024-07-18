@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {getStore, registerReducers} from '@cdo/apps/redux';
@@ -42,7 +42,9 @@ $(document).ready(() => {
   store.dispatch(setPublicProjects());
   store.dispatch(setCaptchaKey(projectsData.recaptchaSiteKey));
 
-  ReactDOM.render(
+  const root = createRoot(document.querySelector('#projects-page'));
+
+  root.render(
     <Provider store={store}>
       <div>
         <ProjectHeader
@@ -53,7 +55,6 @@ $(document).ready(() => {
           <ProjectsGallery limitedGallery={projectsData.limitedGallery} />
         </div>
       </div>
-    </Provider>,
-    document.querySelector('#projects-page')
+    </Provider>
   );
 });

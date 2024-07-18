@@ -1,12 +1,10 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import MusicMenu from '@cdo/apps/musicMenu/MusicMenu';
 
 $(document).ready(function () {
-  ReactDOM.render(
-    <MusicMenu />,
-    document.getElementById('musiclab-menu-container')
-  );
+  const root = createRoot(document.getElementById('musiclab-menu-container'));
+  root.render(<MusicMenu />);
 });

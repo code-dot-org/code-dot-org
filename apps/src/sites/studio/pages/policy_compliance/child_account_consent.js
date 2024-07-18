@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import ChildAccountConsent from '@cdo/apps/templates/policy_compliance/ChildAccountConsent';
 
@@ -14,12 +14,13 @@ $(document).ready(function () {
     ? new Date(permissionGrantedDateString)
     : undefined;
   const studentId = element.getAttribute('data-student-id');
-  ReactDOM.render(
+  const root = createRoot(element);
+
+  root.render(
     <ChildAccountConsent
       permissionGranted={permissionGranted}
       permissionGrantedDate={permissionGrantedDate}
       studentId={studentId}
-    />,
-    element
+    />
   );
 });

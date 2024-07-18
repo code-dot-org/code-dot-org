@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
@@ -29,7 +29,9 @@ function showYourSchool() {
     schoolZip: rawSchoolZip ? rawSchoolZip.toString() : undefined,
   };
 
-  ReactDOM.render(
+  const root = createRoot(yourschoolElement[0]);
+
+  root.render(
     <Provider store={getStore()}>
       <YourSchool
         alertHeading={yourschoolElement.data('parameters-alert-heading')}
@@ -43,8 +45,7 @@ function showYourSchool() {
         )}
         tileset={yourschoolElement.data('parameters-tileset')}
       />
-    </Provider>,
-    yourschoolElement[0]
+    </Provider>
   );
 }
 

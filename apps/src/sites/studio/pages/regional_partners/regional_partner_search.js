@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
@@ -21,11 +21,12 @@ function showRegionalPartnerSearch() {
 
   analyticsReporter.sendEvent(EVENTS.RP_LANDING_PAGE_VISITED_EVENT);
 
-  ReactDOM.render(
+  const root = createRoot(regionalPartnerSearchElement[0]);
+
+  root.render(
     <Provider store={getStore()}>
       <RegionalPartnerSearch sourcePageId={sourcePageId} />
-    </Provider>,
-    regionalPartnerSearchElement[0]
+    </Provider>
   );
 }
 

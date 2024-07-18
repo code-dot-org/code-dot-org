@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/redux';
@@ -19,10 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.appendChild(mountPoint);
   const store = getStore();
 
-  ReactDOM.render(
+  const root = createRoot(mountPoint);
+
+  root.render(
     <Provider store={store}>
       <InitialSectionCreationInterstitial />
-    </Provider>,
-    mountPoint
+    </Provider>
   );
 });

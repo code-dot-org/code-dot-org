@@ -1,3 +1,4 @@
+import {createRoot} from 'react-dom/client';
 import $ from 'jquery';
 import 'jquery-ui/ui/effects/effect-drop';
 import 'jquery-ui/ui/widgets/draggable';
@@ -5,7 +6,6 @@ import 'jquery-ui/ui/widgets/droppable';
 import 'jquery-ui/ui/widgets/resizable';
 import objectFitImages from 'object-fit-images';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import RGBColor from 'rgbcolor';
 
@@ -1757,11 +1757,12 @@ designMode.renderDesignWorkspace = function (element) {
     ),
     autogenerateML,
   };
-  ReactDOM.render(
+  const root = createRoot(designWorkspace);
+
+  root.render(
     <Provider store={getStore()}>
       <DesignWorkspace {...props} />
-    </Provider>,
-    designWorkspace
+    </Provider>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import reducers, {
@@ -25,7 +25,9 @@ $(() => {
   const levelSearchingInfo = getScriptData('levelSearchingInfo');
   store.dispatch(initLevelSearching(levelSearchingInfo));
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('show-container'));
+
+  root.render(
     <Provider store={store}>
       <ReferenceGuideEditor
         referenceGuide={referenceGuide}
@@ -33,7 +35,6 @@ $(() => {
         updateUrl={updateUrl}
         editAllUrl={editAllUrl}
       />
-    </Provider>,
-    document.getElementById('show-container')
+    </Provider>
   );
 });

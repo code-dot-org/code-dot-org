@@ -3,7 +3,7 @@ import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
 import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
 import ResourceLoader from '@code-dot-org/dance-party/src/ResourceLoader';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
@@ -191,7 +191,9 @@ Dance.prototype.init = function (config) {
     userId: state.currentUser.userId,
   });
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById(config.containerId));
+
+  root.render(
     <Provider store={getStore()}>
       <ErrorBoundary
         // this is actually the Lab2 Error Fallback page. We may want to refactor this after Hour of Code.
@@ -214,8 +216,7 @@ Dance.prototype.init = function (config) {
           onMount={onMount}
         />
       </ErrorBoundary>
-    </Provider>,
-    document.getElementById(config.containerId)
+    </Provider>
   );
 };
 

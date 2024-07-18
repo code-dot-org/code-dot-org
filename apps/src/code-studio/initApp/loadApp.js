@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import queryString from 'query-string';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import {files} from '@cdo/apps/clientApi';
 import {setAppLoadStarted, setAppLoaded} from '@cdo/apps/code-studio/appRedux';
@@ -152,15 +152,17 @@ export function setupApp(appOptions) {
         const lessonName = `${msg.lesson()} ${lessonInfo.position}: ${
           lessonInfo.name
         }`;
-        ReactDOM.render(
+        const root = createRoot(body);
+
+        root.render(
           <PlayZone
             lessonName={lessonName}
             onContinue={() => {
               dialog.hide();
             }}
-          />,
-          body
+          />
         );
+
         const dialog = new LegacyDialog({
           body: body,
           width: 800,

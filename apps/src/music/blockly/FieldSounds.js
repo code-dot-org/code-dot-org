@@ -1,6 +1,6 @@
 import GoogleBlockly from 'blockly/core';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
@@ -121,7 +121,9 @@ class FieldSounds extends GoogleBlockly.Field {
 
     const CurrentSoundsPanel = useSoundsPanel2 ? SoundsPanel2 : SoundsPanel;
 
-    ReactDOM.render(
+    const root = createRoot(this.newDiv_);
+
+    root.render(
       <CurrentSoundsPanel
         library={this.options.getLibrary()}
         currentValue={this.getValue()}
@@ -145,8 +147,7 @@ class FieldSounds extends GoogleBlockly.Field {
           });
         }}
         onSelect={value => this.setValue(value)}
-      />,
-      this.newDiv_
+      />
     );
   }
 

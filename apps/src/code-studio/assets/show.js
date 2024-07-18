@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import Sounds from '../../Sounds';
 import loadable from '../../util/loadable';
@@ -58,7 +58,9 @@ function showAssetManager(assetChosen, typeFilter, onClose, options) {
 
   let pickerType = typeFilter === 'audio' ? SoundPicker : ImagePicker;
 
-  ReactDOM.render(
+  const root = createRoot(codeDiv);
+
+  root.render(
     React.createElement(pickerType, {
       typeFilter: typeFilter,
       customAllowedExtensions: options.customAllowedExtensions,
@@ -79,8 +81,7 @@ function showAssetManager(assetChosen, typeFilter, onClose, options) {
       libraryOnly: options.libraryOnly,
       currentValue: options.currentValue,
       currentImageType: options.currentImageType,
-    }),
-    codeDiv
+    })
   );
 
   dialog.show();

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import AllVocabulariesEditor from '@cdo/apps/lib/levelbuilder/AllVocabulariesEditor';
@@ -20,7 +20,9 @@ $(document).ready(function () {
   const store = getStore();
   store.dispatch(initVocabularies(vocabularies || []));
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('vocabularies-table'));
+
+  root.render(
     <Provider store={store}>
       <AllVocabulariesEditor
         vocabularies={vocabularies}
@@ -28,7 +30,6 @@ $(document).ready(function () {
         courseVersionLessons={courseVersionData.lessons}
         courseName={courseName}
       />
-    </Provider>,
-    document.getElementById('vocabularies-table')
+    </Provider>
   );
 });

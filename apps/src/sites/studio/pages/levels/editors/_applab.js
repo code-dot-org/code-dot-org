@@ -1,7 +1,7 @@
 /** @file JavaScript run only on the applab level edit page. */
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import {
   configMicrobit,
@@ -140,10 +140,11 @@ $(document).ready(function () {
     }
   }
 
-  ReactDOM.render(
-    <DataLibrary />,
+  const root = createRoot(
     $('<div></div>')
       .insertAfter(`label[for="level_data_library_tables"]`)
       .get(0)
   );
+
+  root.render(<DataLibrary />);
 });

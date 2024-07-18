@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import msg from '@cdo/locale';
 
@@ -12,7 +12,9 @@ function openModal(type, callback, table) {
   const modalDiv = document.createElement('div');
   modalDiv.setAttribute('id', 'modalDiv');
   document.body.appendChild(modalDiv);
-  ReactDOM.render(
+  const root = createRoot(document.querySelector('#modalDiv'));
+
+  root.render(
     <GetColumnParamPicker
       param={type}
       table={table}
@@ -21,8 +23,7 @@ function openModal(type, callback, table) {
         var element = document.getElementById('modalDiv');
         element.parentNode.removeChild(element);
       }}
-    />,
-    document.querySelector('#modalDiv')
+    />
   );
 }
 

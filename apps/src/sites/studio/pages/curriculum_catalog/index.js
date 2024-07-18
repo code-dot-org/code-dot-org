@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -32,7 +32,11 @@ $(document).ready(function () {
     language: languageEnglishName,
   });
 
-  ReactDOM.render(
+  const root = createRoot(
+    document.getElementById('curriculum-catalog-container')
+  );
+
+  root.render(
     <Provider store={store}>
       <CurriculumCatalog
         curriculaData={curriculaData}
@@ -43,7 +47,6 @@ $(document).ready(function () {
         isInUS={isInUS}
         curriculaTaught={curriculaTaught}
       />
-    </Provider>,
-    document.getElementById('curriculum-catalog-container')
+    </Provider>
   );
 });

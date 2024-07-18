@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
@@ -108,7 +108,9 @@ $(document).ready(function () {
 
   const showAITutorTab = canViewStudentAIChatMessages;
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('teacher-dashboard'));
+
+  root.render(
     <Provider store={store}>
       <Router basename={baseUrl}>
         <Switch>
@@ -128,7 +130,6 @@ $(document).ready(function () {
           </Route>
         </Switch>
       </Router>
-    </Provider>,
-    document.getElementById('teacher-dashboard')
+    </Provider>
   );
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import msg from '@cdo/locale';
 
@@ -12,7 +12,9 @@ import showProjectAdmin from '../showProjectAdmin';
  * @param {string} tosText
  */
 export default (project, tosText) => {
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('codeApp'));
+
+  root.render(
     React.createElement(AbuseExclamation, {
       i18n: {
         tos: tosText,
@@ -25,8 +27,7 @@ export default (project, tosText) => {
         go_to_code_studio: msg.goToCodeStudio(),
       },
       isOwner: project.isOwner(),
-    }),
-    document.getElementById('codeApp')
+    })
   );
 
   // update admin box (if it exists) with abuse info

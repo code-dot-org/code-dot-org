@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel.jsx';
 import '@selectize/selectize';
@@ -16,13 +16,14 @@ function renderSchoolDropdown() {
   const schoolSelector = $('#school-selector')[0];
 
   if (schoolSelector) {
-    ReactDOM.render(
+    const root = createRoot(schoolSelector);
+
+    root.render(
       <SchoolAutocompleteDropdownWithLabel
         setField={schoolDropdownOnChange}
         value={schoolData.nces}
         showErrorMsg={schoolData.showDropdownError}
-      />,
-      schoolSelector
+      />
     );
   }
 }

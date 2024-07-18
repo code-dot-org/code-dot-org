@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
@@ -308,7 +308,9 @@ Javalab.prototype.init = function (config) {
     method: 'GET',
   }).then(response => (this.csrf_token = response.headers.get('csrf-token')));
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById(config.containerId));
+
+  root.render(
     <Provider store={getStore()}>
       <BackpackAPIContext.Provider value={backpackApi}>
         <JavalabView
@@ -328,8 +330,7 @@ Javalab.prototype.init = function (config) {
           onPhotoPrompterFileSelected={onPhotoPrompterFileSelected}
         />
       </BackpackAPIContext.Provider>
-    </Provider>,
-    document.getElementById(config.containerId)
+    </Provider>
   );
 
   window.addEventListener('beforeunload', this.beforeUnload.bind(this));

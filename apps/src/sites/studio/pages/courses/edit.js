@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/code-studio/redux';
@@ -33,8 +33,9 @@ function showCourseEditor() {
 
   let announcements = courseEditorData.course_summary.announcements || [];
 
-  // Eventually we want to do this all via redux
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('course_editor'));
+
+  root.render(
     <Provider store={store}>
       <CourseEditor
         name={courseEditorData.course_summary.name}
@@ -86,7 +87,6 @@ function showCourseEditor() {
           courseEditorData.missing_required_device_compatibilities
         }
       />
-    </Provider>,
-    document.getElementById('course_editor')
+    </Provider>
   );
 }

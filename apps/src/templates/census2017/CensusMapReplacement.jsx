@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import i18n from '@cdo/locale';
 
@@ -349,7 +349,9 @@ export default class CensusMapReplacement extends Component {
     teachesCs
   ) => {
     const infoWindowDom = document.createElement('div');
-    ReactDOM.render(
+    const root = createRoot(infoWindowDom);
+
+    root.render(
       <CensusMapInfoWindow
         onTakeSurveyClick={this.props.onTakeSurveyClick}
         schoolId={schoolId}
@@ -358,9 +360,9 @@ export default class CensusMapReplacement extends Component {
         state={state}
         location={location}
         teachesCs={teachesCs}
-      />,
-      infoWindowDom
+      />
     );
+
     return infoWindowDom;
   };
 

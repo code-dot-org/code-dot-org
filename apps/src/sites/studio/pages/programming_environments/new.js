@@ -1,11 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import NewProgrammingEnvironmentForm from '@cdo/apps/lib/levelbuilder/code-docs-editor/NewProgrammingEnvironmentForm';
 
 $(document).ready(() => {
-  ReactDOM.render(
-    <NewProgrammingEnvironmentForm />,
-    document.getElementById('form')
-  );
+  const root = createRoot(document.getElementById('form'));
+  root.render(<NewProgrammingEnvironmentForm />);
 });

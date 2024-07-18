@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import ReportAbuseForm from '@cdo/apps/code-studio/components/ReportAbuseForm';
 import getScriptData from '@cdo/apps/util/getScriptData';
@@ -17,8 +17,6 @@ $(document).ready(function () {
   props.abuseUrl = weblabUrl.includes('channelId')
     ? weblabUrl
     : document.referrer;
-  ReactDOM.render(
-    <ReportAbuseForm {...props} />,
-    document.getElementById('report-abuse-form')
-  );
+  const root = createRoot(document.getElementById('report-abuse-form'));
+  root.render(<ReportAbuseForm {...props} />);
 });

@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import queryString from 'query-string';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
@@ -89,7 +89,9 @@ function showHomepage() {
     />
   );
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('homepage-container'));
+
+  root.render(
     <Provider store={store}>
       <div>
         {isTeacher && (
@@ -142,8 +144,7 @@ function showHomepage() {
           />
         )}
       </div>
-    </Provider>,
-    document.getElementById('homepage-container')
+    </Provider>
   );
 }
 

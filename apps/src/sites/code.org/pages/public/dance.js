@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import ProjectCardRow from '@cdo/apps/templates/projects/ProjectCardRow';
 
@@ -40,12 +40,13 @@ const DANCE_PROJECTS = [
 
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('student_dance_projects');
-  ReactDOM.render(
+  const root = createRoot(container);
+
+  root.render(
     <ProjectCardRow
       galleryType="public"
       showFullThumbnail={true}
       projects={DANCE_PROJECTS}
-    />,
-    container
+    />
   );
 });

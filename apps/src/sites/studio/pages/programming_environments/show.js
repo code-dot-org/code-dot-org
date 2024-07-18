@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import PageContainer from '@cdo/apps/templates/codeDocs/PageContainer';
 import ProgrammingEnvironmentOverview from '@cdo/apps/templates/codeDocs/ProgrammingEnvironmentOverview';
@@ -18,7 +18,9 @@ $(document).ready(() => {
   prepareBlockly();
   const programmingEnvironment = getScriptData('programmingEnvironment');
   const categoriesForNavigation = getScriptData('categoriesForNavigation');
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('container'));
+
+  root.render(
     <PageContainer
       programmingEnvironmentTitle={programmingEnvironment.title}
       categoriesForNavigation={categoriesForNavigation}
@@ -26,7 +28,6 @@ $(document).ready(() => {
       <ProgrammingEnvironmentOverview
         programmingEnvironment={programmingEnvironment}
       />
-    </PageContainer>,
-    document.getElementById('container')
+    </PageContainer>
   );
 });

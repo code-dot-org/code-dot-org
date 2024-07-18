@@ -5,7 +5,7 @@
  * @see sync_course.html.haml.
  */
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import LtiSectionSyncDialog from '@cdo/apps/lib/ui/simpleSignUp/lti/sync/LtiSectionSyncDialog';
 import getScriptData from '@cdo/apps/util/getScriptData';
@@ -23,14 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const result = scriptData['lti_section_sync_result'];
   const lmsName = scriptData['lms_name'];
 
-  ReactDOM.render(
+  const root = createRoot(mountPoint);
+
+  root.render(
     <LtiSectionSyncDialog
       isOpen
       syncResult={result}
       onClose={onClose}
       disableRosterSyncButtonEnabled
       lmsName={lmsName}
-    />,
-    mountPoint
+    />
   );
 });

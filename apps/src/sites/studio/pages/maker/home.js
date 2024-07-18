@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/redux';
@@ -11,10 +11,11 @@ $(function () {
   const store = getStore();
   const course = getScriptData('makerHome').course;
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('maker-home'));
+
+  root.render(
     <Provider store={store}>
       <MakerLanding topCourse={course} />
-    </Provider>,
-    document.getElementById('maker-home')
+    </Provider>
   );
 });

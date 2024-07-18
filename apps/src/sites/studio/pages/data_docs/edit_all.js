@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import getScriptData from '@cdo/apps/util/getScriptData';
 
@@ -7,8 +7,6 @@ import DataDocEditAll from '../../../../lib/levelbuilder/data-docs-editor/DataDo
 
 $(() => {
   const dataDocs = getScriptData('dataDocs');
-  ReactDOM.render(
-    <DataDocEditAll dataDocs={dataDocs} />,
-    document.getElementById('edit-all-data-docs')
-  );
+  const root = createRoot(document.getElementById('edit-all-data-docs'));
+  root.render(<DataDocEditAll dataDocs={dataDocs} />);
 });

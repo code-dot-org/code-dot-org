@@ -1,6 +1,6 @@
 import {setAssetPath} from '@code-dot-org/ml-activities/dist/assetPath';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
@@ -90,11 +90,12 @@ Fish.prototype.init = function (config) {
     isProjectLevel: !!config.level.isProjectLevel,
   });
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById(config.containerId));
+
+  root.render(
     <Provider store={getStore()}>
       <FishView onMount={onMount} />
-    </Provider>,
-    document.getElementById(config.containerId)
+    </Provider>
   );
 };
 

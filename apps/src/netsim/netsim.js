@@ -5,7 +5,7 @@
 
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import {getStore} from '../redux';
 import {openDialog as openInstructionsDialog} from '../redux/instructionsDialog';
@@ -270,14 +270,15 @@ NetSim.prototype.init = function (config) {
   // Push initial level properties into the Redux store
   this.studioApp_.setPageConstants(config);
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById(config.containerId));
+
+  root.render(
     <Provider store={getStore()}>
       <NetSimView
         generateCodeAppHtml={generateCodeAppHtmlFromEjs}
         onMount={onMount}
       />
-    </Provider>,
-    document.getElementById(config.containerId)
+    </Provider>
   );
 };
 
