@@ -8,7 +8,7 @@ import i18n from '@cdo/locale';
 
 import styles from './summary.module.scss';
 
-const ResponseMenuDropdown = ({response}) => {
+const ResponseMenuDropdown = ({response, hideResponse}) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   if (!DCDO.get('cfu-pin-hide-enabled', false)) {
@@ -21,7 +21,7 @@ const ResponseMenuDropdown = ({response}) => {
         onClick={() => setIsOpen(!isOpen)}
         isIconOnly={true}
         icon={{iconName: 'ellipsis-vertical', title: i18n.additionalOptions()}}
-        color={buttonColors.black}
+        color={buttonColors.purple}
         size="xs"
         type="tertiary"
         className={styles.studentAnswerMenuButton}
@@ -43,7 +43,10 @@ const ResponseMenuDropdown = ({response}) => {
               <button
                 className={styles.dropdownOption}
                 type="button"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  setIsOpen(false);
+                  hideResponse(response.user_id);
+                }}
               >
                 <FontAwesomeV6Icon iconName="eye-slash" />
                 {i18n.hideResponse()}
@@ -58,6 +61,7 @@ const ResponseMenuDropdown = ({response}) => {
 
 ResponseMenuDropdown.propTypes = {
   response: PropTypes.object,
+  hideResponse: PropTypes.func,
 };
 
 export default ResponseMenuDropdown;

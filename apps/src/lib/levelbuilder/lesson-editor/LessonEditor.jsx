@@ -1,17 +1,22 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
-import ResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
-import VocabulariesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/VocabulariesEditor';
-import ProgrammingExpressionsEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ProgrammingExpressionsEditor';
-import ObjectivesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ObjectivesEditor';
-import StandardsEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/StandardsEditor';
-import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import {connect} from 'react-redux';
+
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
-import RelatedLessons from './RelatedLessons';
-import color from '@cdo/apps/util/color';
+import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
+import {
+  getSerializedActivities,
+  mapActivityDataForEditor,
+  initActivities,
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import ObjectivesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ObjectivesEditor';
+import ProgrammingExpressionsEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ProgrammingExpressionsEditor';
+import ResourcesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ResourcesEditor';
+import StandardsEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/StandardsEditor';
+import VocabulariesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/VocabulariesEditor';
+import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {
   relatedLessonShape,
   activityShape,
@@ -20,15 +25,12 @@ import {
   programmingExpressionShape,
   standardShape,
 } from '@cdo/apps/lib/levelbuilder/shapes';
-import $ from 'jquery';
-import {connect} from 'react-redux';
-import {
-  getSerializedActivities,
-  mapActivityDataForEditor,
-  initActivities,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import color from '@cdo/apps/util/color';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
-import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
+
+import RelatedLessons from './RelatedLessons';
 
 class LessonEditor extends Component {
   static propTypes = {

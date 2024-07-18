@@ -1,13 +1,15 @@
+import {StoryFn, Meta} from '@storybook/react';
 import React from 'react';
 import {Provider} from 'react-redux';
-import {StoryFn, Meta} from '@storybook/react';
-import {getStore, registerReducers} from '@cdo/apps/redux';
+
 import {BANNER_STATUS} from '@cdo/apps/lib/ui/feedback/FeedbackBanner';
-import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
-import {trySetLocalStorage} from '@cdo/apps/utils';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setInitialData,
 } from '@cdo/apps/templates/currentUserRedux';
+import {trySetLocalStorage} from '@cdo/apps/utils';
+import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
+
 import LtiFeedbackBanner from './LtiFeedbackBanner';
 
 const store = getStore();

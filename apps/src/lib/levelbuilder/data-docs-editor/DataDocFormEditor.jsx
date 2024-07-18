@@ -1,11 +1,12 @@
-import React, {useState} from 'react';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
-import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
-import {navigateToHref} from '@cdo/apps/utils';
+import React, {useState} from 'react';
+
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
+import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
+import {navigateToHref} from '@cdo/apps/utils';
 
 const DataDocFormEditor = props => {
   const {dataDocKey, originalDataDocName, originalDataDocContent} = props;

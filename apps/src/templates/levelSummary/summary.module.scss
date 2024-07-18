@@ -92,6 +92,12 @@ label.sectionSelector {
     display: block;
   }
 
+  .studentResponsesContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
   .studentResponsesColumns {
     width: 100%;
     columns: 2 auto;
