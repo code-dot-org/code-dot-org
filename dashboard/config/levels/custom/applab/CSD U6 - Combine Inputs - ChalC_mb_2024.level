@@ -89,7 +89,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "# Trivia Question\r\n\r\nCreate an app that asks the user a trivia question and lets them type in their response. If they answer correctly, the micro:bit should light. If they answer incorrectly, nothing should happen.\r\n\r\n## Do This\r\n\r\n**Planning:**\r\n\r\n- Decide on a trivia question you would like to ask the user. Make sure your question has one clear answer!\r\n\r\n**Design Mode:**\r\n\r\n- Edit the label to display your trivia question\r\n\r\n**Code Mode:**\r\n\r\n1) Use a variable and [`getProperty()`(#fff176)](/docs/applab/getProperty/) block to get the value from the answer input box\r\n2) Use an [`if statement`(#64B5F6)](/docs/applab/ifBlock/) to check if the user entered the correct answer. If they did, have the micro:bit display a message on the `ledScreen`\r\n\r\n**Run Your Code!** See if a partner can answer your trivia question!\r\n\r\n**Optional Extensions:**\r\n\r\n3) Experiment with the `else` part of an `if-statement` to make your program do something if the user answers incorrectly\r\n4) Create a new celebration screen that the user sees when they get the answer correct",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",
