@@ -89,7 +89,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "# Motorcycle Movement\r\n\r\nCreate an app that moves a motorcycle left and right on the screen using the buttons on the micro:bit. The app has already been started for you: pressing the A button will move the motorcycle to the left by 10 units. This app uses the [Counter Pattern](/docs/concepts/app-lab/the-counter-pattern/) to move the motorcycle.\r\n\r\n# Do This\r\n\r\n* Using the working A button as an example, program the B button to make the motorcycle go to the right.",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

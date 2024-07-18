@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import {TextLink} from '@dsco_/link';
 import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
 import ProgrammingEnvironmentsTable from './ProgrammingEnvironmentsTable';
 import ProgrammingExpressionsTable from './ProgrammingExpressionsTable';
-import {TextLink} from '@dsco_/link';
 
 /*
  * A component that holds multiple sub-components and allows switching between

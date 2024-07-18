@@ -263,6 +263,7 @@ const EVENTS = {
   SIGNED_OUT_USER_CLICKS_HAMBURGER_LINK:
     'Signed Out User Clicks Hamburger Link',
   SIGNED_OUT_USER_CLICKS_HELP_MENU: 'Signed Out User Clicks Help Menu',
+  CREATE_ACCOUNT_BUTTON_CLICKED: 'Create Account Button Clicked',
 
   // Header Create menu
   SIGNED_OUT_USER_CLICKS_CREATE_DROPDOWN:

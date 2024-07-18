@@ -1,11 +1,14 @@
-import React, {useEffect, useState} from 'react';
 import Papa from 'papaparse';
+import React, {useEffect, useState} from 'react';
+
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
-import Button from '@cdo/apps/componentLibrary/button/Button';
 import {formatQuestionForAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {ChatContext} from '@cdo/apps/aiTutor/types';
-import styles from './ai-tutor-tester.module.scss';
+import Button from '@cdo/apps/componentLibrary/button/Button';
+
 import AITutorTesterSampleColumns from './AITutorTesterSampleColumns';
+
+import styles from './ai-tutor-tester.module.scss';
 
 /**
  * Renders a series of buttons that allow levelbuilders to upload a CSV of
