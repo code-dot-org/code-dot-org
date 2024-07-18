@@ -37,4 +37,21 @@ def user_scan
   end
 end
 
-user_scan
+def section_scan
+  Section.find_each do |section|
+    puts "| Section | Teacher |"
+    section.instructors.each do |teacher|
+      user = User.find(teacher.id)
+      puts "| #{section.name} | #{user.username} |"
+    end
+    puts "| Section | Student |"
+    section.followers.each do |follower|
+      user = User.find(follower.student_user_id)
+      puts "| #{section.name} | #{user.username} |"
+      consent_status = user.properties['child_account_compliance_state']
+      puts consent_status
+    end
+  end
+end
+
+section_scan
