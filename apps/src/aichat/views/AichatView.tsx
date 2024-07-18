@@ -36,7 +36,7 @@ import {
   setViewMode,
   updateAiCustomization,
 } from '../redux/aichatRedux';
-import {getNewMessageId} from '../redux/utils';
+import {getNewNotificationId} from '../redux/utils';
 import {AichatLevelProperties, Notification, ViewMode} from '../types';
 
 import ChatWorkspace from './ChatWorkspace';
@@ -47,7 +47,7 @@ import PresentationView from './presentation/PresentationView';
 import moduleStyles from './aichatView.module.scss';
 
 const getResetModelNotification = (): Notification => ({
-  id: getNewMessageId(),
+  id: getNewNotificationId(),
   text: 'Model customizations and model card information have been reset to default settings.',
   status: Status.OK,
   role: Role.NOTIFICATION,

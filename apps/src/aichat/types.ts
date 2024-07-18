@@ -20,21 +20,13 @@ export interface ChatMessage extends ChatItem {
 export interface Notification extends ChatItem {
   id: number;
   text: string;
-}
-
-export interface ModelUpdate extends Notification {
-  updatedField: keyof AiCustomizations;
-  updatedValue: AiCustomizations[keyof AiCustomizations];
+  hidden?: boolean;
 }
 
 // Type Predicates: checks if a ChatItem is a given type, and more helpfully,
 // automatically narrows to the specific type.
 export function isChatMessage(item: ChatItem): item is ChatMessage {
   return (item as ChatMessage).chatMessageText !== undefined;
-}
-
-export function isModelUpdate(item: ChatItem): item is ModelUpdate {
-  return (item as ModelUpdate).updatedField !== undefined;
 }
 
 export function isNotification(item: ChatItem): item is Notification {
