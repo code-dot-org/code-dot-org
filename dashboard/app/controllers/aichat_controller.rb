@@ -14,7 +14,7 @@ class AichatController < ApplicationController
   # POST /aichat/chat_completion
   def chat_completion
     return render status: :forbidden, json: {} unless AichatSagemakerHelper.can_request_aichat_chat_completion?
-    unless has_required_params?
+    unless has_required_params?('chat_completion')
       return render status: :bad_request, json: {}
     end
 
@@ -24,6 +24,17 @@ class AichatController < ApplicationController
     # Rails controller tests reuse the same controller instance across requests within a test,
     # which causes tests to fail. Nulling out the session ID before responding fixes this issue.
     # More detail/other confused developers here: https://github.com/rails/rails/issues/24566
+    @session_id = nil
+    render(status: :ok, json: response_body)
+  end
+
+  def log_notifications
+    return render status: :forbidden, json: {} unless AichatSagemakerHelper.can_request_aichat_chat_completion?
+    unless has_required_params?('log_notifications')
+      return render status: :bad_request, json: {}
+    end
+    response_body = {}
+    response_body[:session_id] = log_chat_session(params[:storedMessages])
     @session_id = nil
     render(status: :ok, json: response_body)
   end
@@ -86,9 +97,14 @@ class AichatController < ApplicationController
     {messages: messages}
   end
 
-  private def has_required_params?
+  private def has_required_params?(endpoint)
     begin
-      params.require([:newMessage, :aichatModelCustomizations, :aichatContext])
+      required_params = [:aichatModelCustomizations, :aichatContext]
+      if endpoint == 'chat_completion'
+        required_params << :newMessage
+      end
+        
+      params.require(required_params)
     rescue ActionController::ParameterMissing
       return false
     end
