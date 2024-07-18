@@ -6,6 +6,7 @@ import {
   AichatModelCustomizations,
   ChatApiResponse,
   ChatMessage,
+  ChatItem,
 } from './types';
 
 const CHAT_COMPLETION_URL = '/aichat/chat_completion';
@@ -17,7 +18,7 @@ const CHAT_COMPLETION_URL = '/aichat/chat_completion';
  */
 export async function postAichatCompletionMessage(
   newMessage: ChatMessage,
-  storedMessages: ChatMessage[],
+  storedMessages: ChatItem[],
   aiCustomizations: AiCustomizations,
   aichatContext: AichatContext,
   sessionId?: number

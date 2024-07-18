@@ -2,6 +2,7 @@
 
 import React, {useCallback, useContext, useEffect} from 'react';
 
+import {Role} from '@cdo/apps/aiComponentLibrary/chatItems/types';
 import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import SegmentedButtons, {
@@ -20,6 +21,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import aichatI18n from '../locale';
 import {
@@ -47,7 +49,8 @@ import moduleStyles from './aichatView.module.scss';
 const getResetModelNotification = (): Notification => ({
   id: getNewMessageId(),
   text: 'Model customizations and model card information have been reset to default settings.',
-  notificationType: 'success',
+  status: Status.OK,
+  role: Role.NOTIFICATION,
   timestamp: Date.now(),
 });
 
