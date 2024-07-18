@@ -31,7 +31,6 @@ class AichatControllerTest < ActionController::TestCase
 
   setup do
     @assistant_response = "This is an assistant response from Sagemaker"
-    AichatSagemakerHelper.stubs(:request_sagemaker_chat_completion).returns({status: 200, json: {body: {}}})
     AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).returns(@assistant_response)
     @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
   end
@@ -100,8 +99,7 @@ class AichatControllerTest < ActionController::TestCase
 
     # Note that second expected argument filters out the previous profane message
     # in what we send to Sagemaker.
-    AichatSagemakerHelper.expects(:format_inputs_for_sagemaker_request).
-      with(params[:aichatModelCustomizations], [ok_message], params[:newMessage].stringify_keys).once
+    AichatSagemakerHelper.expects(:get_sagemaker_assistant_response).with(params[:aichatModelCustomizations], [ok_message], params[:newMessage].stringify_keys).once
 
     sign_in(@genai_pilot_student)
     post :chat_completion, params: params, as: :json

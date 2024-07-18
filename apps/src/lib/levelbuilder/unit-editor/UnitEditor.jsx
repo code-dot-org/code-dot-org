@@ -389,6 +389,14 @@ class UnitEditor extends React.Component {
         }
       })
       .fail(error => {
+        if (error.status === 504) {
+          this.setState({
+            isSaving: false,
+            error:
+              'The save request timed out. Please refresh the page and verify your changes have been saved correctly.',
+          });
+          return;
+        }
         this.setState({isSaving: false, error: error.responseText});
       });
   };

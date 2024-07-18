@@ -1,3 +1,4 @@
+// Disabling automatic import order in order to have commented manual import sections.
 /* eslint-disable import/order */
 import appMain from '@cdo/apps/appMain';
 

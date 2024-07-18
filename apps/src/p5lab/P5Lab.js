@@ -4,36 +4,42 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
-import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
-import project from '@cdo/apps/code-studio/initApp/project';
-import {hasValidContainedLevelResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import {TestResults, ResultType} from '@cdo/apps/constants';
-import {
-  getContainedLevelResultInfo,
-  postContainedLevelAttempt,
-  runAfterPostContainedLevel,
-} from '@cdo/apps/containedLevels';
 import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {
   outputError,
   injectErrorHandler,
 } from '@cdo/apps/lib/util/javascriptMode';
-import * as apiTimeoutList from '@cdo/apps/lib/util/timeoutList';
-import {getStore} from '@cdo/apps/redux';
-import {add as addWatcher} from '@cdo/apps/redux/watchedExpressions';
-import {initializeSubmitHelper, onSubmitComplete} from '@cdo/apps/submitHelper';
 import experiments from '@cdo/apps/util/experiments';
 
 import {TOOLBOX_EDIT_MODE} from '../constants';
-import {
-  initStorage,
-  FIREBASE_STORAGE,
-  DATABLOCK_STORAGE,
-} from '../storage/storage';
 
 import {changeInterfaceMode, viewAnimationJson} from './actions';
 import {P5LabInterfaceMode, APP_WIDTH} from './constants';
+import {
+  SpritelabReservedWords,
+  valueTypeTabShapeMap,
+} from './spritelab/constants';
+import {startInAnimationTab} from './stateQueries';
+
+// Disabling import/order because moving the require statements may have unintended side effects.
+// This might be safe to remove but needs investigation whether any behavior is changed by order.
+/* eslint-disable import/order */
+var apiJavascript = require('./gamelab/apiJavascript');
+var consoleApi = require('@cdo/apps/consoleApi');
+var utils = require('@cdo/apps/utils');
+var dropletConfig = require('./gamelab/dropletConfig');
+var JSInterpreter = require('@cdo/apps/lib/tools/jsinterpreter/JSInterpreter');
+import * as apiTimeoutList from '@cdo/apps/lib/util/timeoutList';
+var JsInterpreterLogger = require('@cdo/apps/JsInterpreterLogger');
+var P5Wrapper = require('./P5Wrapper');
+var p5SpriteWrapper = require('./P5SpriteWrapper');
+var p5GroupWrapper = require('./P5GroupWrapper');
+var gamelabCommands = require('./gamelab/commands');
+import {initializeSubmitHelper, onSubmitComplete} from '@cdo/apps/submitHelper';
+var dom = require('@cdo/apps/dom');
+import {initStorage, DATABLOCK_STORAGE} from '../storage/storage';
+import {getStore} from '@cdo/apps/redux';
 import {
   allAnimationsSingleFrameSelector,
   setInitialAnimationList,
@@ -41,43 +47,24 @@ import {
   withAbsoluteSourceUrls,
 } from './redux/animationList';
 import {getSerializedAnimationList} from './shapes';
-import {
-  SpritelabReservedWords,
-  valueTypeTabShapeMap,
-} from './spritelab/constants';
-import {startInAnimationTab} from './stateQueries';
-
-var consoleApi = require('@cdo/apps/consoleApi');
-var dom = require('@cdo/apps/dom');
-var JsInterpreterLogger = require('@cdo/apps/JsInterpreterLogger');
-var JSInterpreter = require('@cdo/apps/lib/tools/jsinterpreter/JSInterpreter');
-var utils = require('@cdo/apps/utils');
-
-var apiJavascript = require('./gamelab/apiJavascript');
-var gamelabCommands = require('./gamelab/commands');
-var dropletConfig = require('./gamelab/dropletConfig');
-var p5GroupWrapper = require('./P5GroupWrapper');
-var P5LabView = require('./P5LabView');
-var p5SpriteWrapper = require('./P5SpriteWrapper');
-var P5Wrapper = require('./P5Wrapper');
+import {add as addWatcher} from '@cdo/apps/redux/watchedExpressions';
 var reducers = require('./reducers');
-
-// Disabling import order in order to maintain require statements placement
-// Require statements can change behavior based on the order they are called.
-// This might be safe to remove but needs investigation whether any behavior is changed by order.
-/* eslint-disable import/order */
+var P5LabView = require('./P5LabView');
 var Provider = require('react-redux').Provider;
-
 import {shouldOverlaysBeVisible} from '@cdo/apps/templates/VisualizationOverlay';
+import {
+  getContainedLevelResultInfo,
+  postContainedLevelAttempt,
+  runAfterPostContainedLevel,
+} from '@cdo/apps/containedLevels';
+import {hasValidContainedLevelResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {actions as jsDebugger} from '@cdo/apps/lib/tools/jsdebugger/redux';
-
 import {addConsoleMessage, clearConsole} from './redux/textConsole';
-
 import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import Sounds from '@cdo/apps/Sounds';
-
+import {TestResults, ResultType} from '@cdo/apps/constants';
+import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
 import wrap from './gamelab/debugger/replay';
-
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
   clearMarks,
@@ -86,10 +73,9 @@ import {
   mark,
   measure,
 } from '@cdo/apps/util/performance';
-
 import MobileControls from './gamelab/MobileControls';
 import Exporter from './gamelab/Exporter';
-
+import project from '@cdo/apps/code-studio/initApp/project';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
@@ -277,21 +263,9 @@ export default class P5Lab {
 
     this.studioApp_.labUserId = config.labUserId;
 
-    // TODO: post-firebase-cleanup, remove this conditional when we're removing firebase: #56994
-    if (!!config.useDatablockStorage) {
-      this.studioApp_.storage = initStorage(DATABLOCK_STORAGE, {
-        channelId: config.channel,
-      });
-    } else {
-      this.studioApp_.storage = initStorage(FIREBASE_STORAGE, {
-        channelId: config.channel,
-        firebaseName: config.firebaseName,
-        firebaseAuthToken: config.firebaseAuthToken,
-        firebaseSharedAuthToken: config.firebaseSharedAuthToken,
-        firebaseChannelIdSuffix: config.firebaseChannelIdSuffix || '',
-        showRateLimitAlert: this.studioApp_.showRateLimitAlert,
-      });
-    }
+    this.studioApp_.storage = initStorage(DATABLOCK_STORAGE, {
+      channelId: config.channel,
+    });
 
     this.p5Wrapper.init({
       gameLab: this,
