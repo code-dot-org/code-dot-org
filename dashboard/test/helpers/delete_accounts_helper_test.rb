@@ -1923,22 +1923,22 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     with_channel_for student do |project_id_a, _|
       with_channel_for student do |project_id_b, _|
         timestamp = DateTime.now
-        DASHBOARD_DB[:datablock_storage_tables].insert(project_id: project_id_a, table_name: "table_a", columns: '["id", "name"]', created_at: timestamp, updated_at: timestamp)
-        DASHBOARD_DB[:datablock_storage_records].insert(project_id: project_id_a, table_name: "table_a", record_id: 1, record_json: '{"id": 1, "name": "Bob"}')
-        DASHBOARD_DB[:datablock_storage_tables].insert(project_id: project_id_b, table_name: "table_b", columns: '["id", "name"]', created_at: timestamp, updated_at: timestamp)
-        DASHBOARD_DB[:datablock_storage_records].insert(project_id: project_id_b, table_name: "table_b", record_id: 1, record_json: '{"id": 1, "name": "Alice"}')
+        DatablockStorageTable.create(project_id: project_id_a, table_name: "table_a", columns: '["id", "name"]', created_at: timestamp, updated_at: timestamp)
+        DatablockStorageRecord.create(project_id: project_id_a, table_name: "table_a", record_id: 1, record_json: '{"id": 1, "name": "Bob"}')
+        DatablockStorageTable.create(project_id: project_id_b, table_name: "table_b", columns: '["id", "name"]', created_at: timestamp, updated_at: timestamp)
+        DatablockStorageRecord.create(project_id: project_id_b, table_name: "table_b", record_id: 1, record_json: '{"id": 1, "name": "Alice"}')
 
-        assert_equal 1, DASHBOARD_DB[:datablock_storage_tables].where(project_id: project_id_a).count
-        assert_equal 1, DASHBOARD_DB[:datablock_storage_tables].where(project_id: project_id_b).count
-        assert_equal 1, DASHBOARD_DB[:datablock_storage_records].where(project_id: project_id_a).count
-        assert_equal 1, DASHBOARD_DB[:datablock_storage_records].where(project_id: project_id_b).count
+        assert_equal 1, DatablockStorageTable.where(project_id: project_id_a).count
+        assert_equal 1, DatablockStorageTable.where(project_id: project_id_b).count
+        assert_equal 1, DatablockStorageRecord.where(project_id: project_id_a).count
+        assert_equal 1, DatablockStorageRecord.where(project_id: project_id_b).count
 
         purge_user student
         assert_logged "Deleting Datablock Storage contents for 2 projects"
-        assert_empty DASHBOARD_DB[:datablock_storage_tables].where(project_id: project_id_a)
-        assert_empty DASHBOARD_DB[:datablock_storage_tables].where(project_id: project_id_b)
-        assert_empty DASHBOARD_DB[:datablock_storage_records].where(project_id: project_id_a)
-        assert_empty DASHBOARD_DB[:datablock_storage_records].where(project_id: project_id_b)
+        assert_empty DatablockStorageTable.where(project_id: project_id_a)
+        assert_empty DatablockStorageTable.where(project_id: project_id_b)
+        assert_empty DatablockStorageRecord.where(project_id: project_id_a)
+        assert_empty DatablockStorageRecord.where(project_id: project_id_b)
       end
     end
   end
@@ -1948,16 +1948,16 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     student = create :student
     with_channel_for student do |project_id_a, _|
       with_channel_for student do |project_id_b, _|
-        DASHBOARD_DB[:datablock_storage_kvps].insert(project_id: project_id_a, key: "key_a", value: '"value_a"')
-        DASHBOARD_DB[:datablock_storage_kvps].insert(project_id: project_id_b, key: "key_b", value: '"value_b"')
+        DatablockStorageKvp.set_kvp(project_id_a, "key_a", '"value_a"')
+        DatablockStorageKvp.set_kvp(project_id_b, "key_b", '"value_b"')
 
-        assert_equal 1, DASHBOARD_DB[:datablock_storage_kvps].where(project_id: project_id_a).count
-        assert_equal 1, DASHBOARD_DB[:datablock_storage_kvps].where(project_id: project_id_b).count
+        assert_equal 1, DatablockStorageKvp.where(project_id: project_id_a).count
+        assert_equal 1, DatablockStorageKvp.where(project_id: project_id_b).count
 
         purge_user student
         assert_logged "Deleting Datablock Storage contents for 2 projects"
-        assert_empty DASHBOARD_DB[:datablock_storage_kvps].where(project_id: project_id_a)
-        assert_empty DASHBOARD_DB[:datablock_storage_kvps].where(project_id: project_id_b)
+        assert_empty DatablockStorageKvp.where(project_id: project_id_a)
+        assert_empty DatablockStorageKvp.where(project_id: project_id_b)
       end
     end
   end
