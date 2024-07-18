@@ -2,6 +2,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import sinon from 'sinon';
 
+import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 
 import teacherSections, {
@@ -63,7 +64,7 @@ const serverSections = sections.map(serverSectionFromSection);
 
 export const TeacherAtLeastOneSection = () => {
   withFakeServer({sections: serverSections});
-  registerReducers({teacherSections});
+  registerReducers({teacherSections, responsive});
   const store = createStoreWithReducers();
   store.dispatch(setSections(serverSections));
   return (
@@ -75,7 +76,7 @@ export const TeacherAtLeastOneSection = () => {
 
 export const TeacherNoSections = () => {
   withFakeServer();
-  registerReducers({teacherSections});
+  registerReducers({teacherSections, responsive});
   const store = createStoreWithReducers();
   return (
     <Provider store={store}>
