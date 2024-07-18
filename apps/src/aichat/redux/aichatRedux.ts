@@ -17,7 +17,10 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {postAichatCompletionMessage} from '../aichatCompletionApi';
+import {
+  postAichatCompletionMessage,
+  postAichatLogNotifications,
+} from '../aichatCompletionApi';
 import {saveTypeToAnalyticsEvent} from '../constants';
 import {
   AiCustomizations,
@@ -184,9 +187,15 @@ const saveAiCustomization = async (
 // Thunk called after a save has completed successfully.
 // Updates the chat window and reports analytics as necessary.
 export const onSaveComplete =
-  () => (dispatch: AppDispatch, getState: () => RootState) => {
-    const {savedAiCustomizations, currentAiCustomizations, currentSaveType} =
-      getState().aichat;
+  () => async (dispatch: AppDispatch, getState: () => RootState) => {
+    const state = getState();
+    const {
+      savedAiCustomizations,
+      currentAiCustomizations,
+      currentSaveType,
+      chatItemsCurrent,
+      currentSessionId,
+    } = state.aichat;
 
     const changedProperties = findChangedProperties(
       savedAiCustomizations,
@@ -211,6 +220,7 @@ export const onSaveComplete =
       const updatedValue = currentAiCustomizations[typedProperty];
       const timestamp = Date.now();
 
+      // Model update notifications include updates to model card information.
       dispatch(
         addModelUpdateNotification({
           id: getNewNotificationId(),
@@ -241,7 +251,31 @@ export const onSaveComplete =
         );
       }
     });
-
+    // Log notifications on backend.
+    // Post user content and messages to backend and retrieve assistant response.
+    const aichatContext: AichatContext = {
+      currentLevelId: parseInt(state.progress.currentLevelId || ''),
+      scriptId: state.progress.scriptId,
+      channelId: state.lab.channel?.id,
+    };
+    let chatApiLogResponse;
+    try {
+      chatApiLogResponse = await postAichatLogNotifications(
+        chatItemsCurrent.filter(isLoggedChatItem),
+        currentAiCustomizations,
+        aichatContext,
+        currentSessionId
+      );
+    } catch (error) {
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError('Error in aichat log notifications request', error as Error);
+      return;
+    }
+    console.log('chatApiLogResponse', chatApiLogResponse);
+    if (chatApiLogResponse.session_id) {
+      dispatch(setChatSessionId(chatApiLogResponse.session_id));
+    }
     // Update our last saved customizations to match the current customizations
     dispatch(setSavedAiCustomizations(currentAiCustomizations));
     // Notify the UI that the save is complete.
@@ -355,8 +389,6 @@ export const submitChatContents = createAsyncThunk(
 
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
-    console.log('chatItemsCurrent', chatItemsCurrent);
-    console.log('chatItemsCurrent.filter(isLoggedChatItem)', chatItemsCurrent.filter(isLoggedChatItem));
     let chatApiResponse;
     try {
       chatApiResponse = await postAichatCompletionMessage(
