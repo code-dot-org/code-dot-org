@@ -48,7 +48,6 @@ import {
   allFieldsHidden,
   findChangedProperties,
   formatModelUpdateText,
-  getHiddenClearChatMessagesNotification,
   getNewNotificationId,
   hasFilledOutModelCard,
 } from './utils';
@@ -156,7 +155,7 @@ const saveAiCustomization = async (
   saveType: SaveType,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>
 ) => {
-  // Remove any empty example topics on save
+  // Remove any empty example topics on save.
   const trimmedExampleTopics =
     currentAiCustomizations.modelCardInfo.exampleTopics.filter(
       topic => topic.length
@@ -193,7 +192,6 @@ export const onSaveComplete =
       savedAiCustomizations,
       currentAiCustomizations,
       currentSaveType,
-      chatItemsCurrent,
       currentSessionId,
     } = state.aichat;
 
@@ -251,6 +249,7 @@ export const onSaveComplete =
         );
       }
     });
+    const chatItemsCurrent = state.aichat.chatItemsCurrent;
     // Log notifications on backend.
     // Post user content and messages to backend and retrieve assistant response.
     const aichatContext: AichatContext = {
@@ -272,7 +271,7 @@ export const onSaveComplete =
         .logError('Error in aichat log notifications request', error as Error);
       return;
     }
-    console.log('chatApiLogResponse', chatApiLogResponse);
+
     if (chatApiLogResponse.session_id) {
       dispatch(setChatSessionId(chatApiLogResponse.session_id));
     }
@@ -473,9 +472,6 @@ const aichatSlice = createSlice({
       state.chatItemsPast = [];
       state.chatItemsCurrent = [];
       state.currentSessionId = undefined;
-      const hiddenClearChatMessagesNotification =
-        getHiddenClearChatMessagesNotification();
-      state.chatItemsCurrent.push(hiddenClearChatMessagesNotification);
     },
     setChatMessagePending: (state, action: PayloadAction<ChatMessage>) => {
       state.chatMessagePending = action.payload;
