@@ -1,4 +1,5 @@
 import $ from 'jquery';
+
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 // Log page visits on document.ready.

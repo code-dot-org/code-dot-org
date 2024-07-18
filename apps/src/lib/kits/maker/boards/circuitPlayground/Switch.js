@@ -2,9 +2,9 @@
  * Wrapper for johnny-five Switch that changes which events it surfaces
  * to the rest of the system and how often they are fired.
  */
-import _ from 'lodash';
-import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 import five from '@code-dot-org/johnny-five';
+import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
+import _ from 'lodash';
 
 /** @const {number} Pin for the toggle switch on a Circuit Playground. */
 const SWITCH_PIN = 21;

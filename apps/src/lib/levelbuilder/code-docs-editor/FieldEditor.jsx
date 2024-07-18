@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from '@cdo/apps/util/color';
+
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
+import color from '@cdo/apps/util/color';
 
 export default function FieldEditor({field, updateField}) {
   return (

@@ -1,11 +1,13 @@
+import Statsig from 'statsig-js';
+
 import logToCloud from '@cdo/apps/logToCloud';
+import experiments from '@cdo/apps/util/experiments';
+
 import {
   getEnvironment,
   isProductionEnvironment,
   isDevelopmentEnvironment,
 } from '../../utils';
-import Statsig from 'statsig-js';
-import experiments from '@cdo/apps/util/experiments';
 
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;

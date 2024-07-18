@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
-import i18n from '@cdo/locale';
+
 import Toggle from '@cdo/apps/componentLibrary/toggle';
-import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
 
 export default function LtiRosterSyncSettings(props) {
   const enabledLabel = i18n.ltiSectionSyncEnabled();

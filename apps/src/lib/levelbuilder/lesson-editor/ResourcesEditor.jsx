@@ -1,19 +1,21 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import color from '@cdo/apps/util/color';
-import AddResourceDialog from './AddResourceDialog';
-import SearchBox from './SearchBox';
-import Dialog from '@cdo/apps/templates/Dialog';
 import {connect} from 'react-redux';
+import * as Table from 'reactabular-table';
+
 import {
   addResource,
   editResource,
   removeResource,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
-import * as Table from 'reactabular-table';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import Dialog from '@cdo/apps/templates/Dialog';
+import color from '@cdo/apps/util/color';
+
+import AddResourceDialog from './AddResourceDialog';
+import SearchBox from './SearchBox';
 import {lessonEditorTableStyles} from './TableConstants';
-import $ from 'jquery';
 
 class ResourcesEditor extends Component {
   static propTypes = {
