@@ -1096,6 +1096,42 @@ describe('project.js', () => {
         .catch(err => done(err));
     });
   });
+
+  describe('registerSaveOnUnload', () => {
+    it('sets up event handler on unload', () => {
+      const unloadHandlerSpy = sinon.spy();
+      sinon.stub(project.unloadHandler_, 'bind').returns(unloadHandlerSpy);
+      const addEventListenerSpy = sinon.spy(window, 'addEventListener');
+
+      project.registerSaveOnUnload();
+
+      expect(addEventListenerSpy).to.have.been.calledWith(
+        'beforeunload',
+        unloadHandlerSpy
+      );
+
+      window.addEventListener.restore();
+      project.unloadHandler_.bind.restore();
+    });
+
+    it('unload handler calls autosave if unsaved changes observed', () => {
+      sinon.stub(project, 'hasOwnerChangedProject').returns(true);
+      const autosaveSpy = sinon.spy(project, 'autosave');
+      const eventStub = {
+        preventDefault: sinon.stub(),
+        returnValue: undefined,
+      };
+
+      project.unloadHandler_(eventStub);
+
+      expect(autosaveSpy).to.have.been.calledOnce;
+      expect(eventStub.preventDefault).to.have.been.calledOnce;
+      expect(eventStub.returnValue).to.equal('');
+
+      project.hasOwnerChangedProject.restore();
+      project.autosave.restore();
+    });
+  });
 });
 
 function replaceAppOptions() {

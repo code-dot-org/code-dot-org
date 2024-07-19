@@ -202,6 +202,8 @@ Javalab.prototype.init = function (config) {
   });
 
   registerReducers({javalab, javalabConsole, javalabView});
+  project.registerSaveOnUnload();
+
   // If we're in editBlock mode (for editing start_sources) we set up the save button to save
   // the project file information into start_sources on the level.
   if (this.isStartMode) {
@@ -331,21 +333,6 @@ Javalab.prototype.init = function (config) {
     </Provider>,
     document.getElementById(config.containerId)
   );
-
-  window.addEventListener('beforeunload', this.beforeUnload.bind(this));
-};
-
-// Ensure project is saved before exiting
-Javalab.prototype.beforeUnload = function (event) {
-  if (project.hasOwnerChangedProject()) {
-    // Manually trigger an autosave instead of waiting for the next autosave.
-    project.autosave();
-
-    event.preventDefault();
-    event.returnValue = '';
-  } else {
-    delete event.returnValue;
-  }
 };
 
 // Called by the Javalab app when it wants execute student code.

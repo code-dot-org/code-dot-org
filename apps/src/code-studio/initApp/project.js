@@ -990,7 +990,10 @@ var projects = (module.exports = {
           JSON.stringify(currentSources) !== JSON.stringify(newSources);
         if (sourcesChanged || thumbnailChanged) {
           thumbnailChanged = false;
-          this.saveSourceAndHtml_(newSources, resolve);
+          this.saveSourceAndHtml_(newSources, () => {
+            hasProjectChanged = false;
+            resolve();
+          });
         } else {
           resolve();
         }
@@ -1142,6 +1145,7 @@ var projects = (module.exports = {
           if (err) {
             if (err.message.includes('httpStatusCode: 401')) {
               this.showSaveError_();
+              callback(err);
               this.logError_(
                 'unauthorized-save-sources-reload',
                 saveSourcesErrorCount,
@@ -1149,6 +1153,7 @@ var projects = (module.exports = {
               ).finally(() => utils.reload());
             } else if (err.message.includes('httpStatusCode: 409')) {
               this.showSaveError_();
+              callback(err);
               this.logError_(
                 'conflict-save-sources-reload',
                 saveSourcesErrorCount,
@@ -1499,9 +1504,9 @@ var projects = (module.exports = {
    * @param {function} callback Function to be called after saving.
    */
   autosave(callback) {
-    const callCallback = () => {
+    const callCallback = skipHandleUnload => {
       if (callback) {
-        callback();
+        callback(skipHandleUnload);
       }
     };
     // Bail if baseline code doesn't exist (app not yet initialized)
@@ -1542,7 +1547,7 @@ var projects = (module.exports = {
         return;
       }
 
-      this.saveSourceAndHtml_(newSources, () => {
+      this.saveSourceAndHtml_(newSources, skipHandleUnload => {
         if (!projectChangedWhileSaveInProgress) {
           hasProjectChanged = false;
         }
@@ -1927,6 +1932,32 @@ var projects = (module.exports = {
       sourcesApi = useSourcesPublic ? sourcesPublic : sources;
     }
     return sourcesApi;
+  },
+
+  // Sets a callback to save the project before unloading the page.
+  registerSaveOnUnload() {
+    window.addEventListener('beforeunload', this.unloadHandler_.bind(this));
+  },
+
+  unloadHandler_(event) {
+    // Skipped for UI tests
+    if (window.__TestInterface && window.__TestInterface.ignoreOnBeforeUnload) {
+      return;
+    }
+
+    if (this.hasOwnerChangedProject()) {
+      // Manually trigger an autosave instead of waiting for the next autosave.
+      this.autosave(skipHandleUnload => {
+        if (skipHandleUnload) {
+          delete event.returnValue;
+        }
+      });
+
+      event.preventDefault();
+      event.returnValue = '';
+    } else {
+      delete event.returnValue;
+    }
   },
 });
 

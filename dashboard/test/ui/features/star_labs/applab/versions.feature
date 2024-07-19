@@ -14,6 +14,8 @@ Scenario: Script Level Versions
   # reloading here creates a previous version containing only comment 1
   And I reload the page
   And I wait for the page to fully load
+  # Make sure we can navigate to another page without getting an alert
+  And I disable onBeforeUnload
   # this particular level is set to always start in block mode
   And I ensure droplet is in block mode
   And I switch to text mode
