@@ -45,9 +45,6 @@ dashboard_port: 3000
 dashboard_workers: 5
 disable_all_eyes_running: true
 files_s3_directory: files_circle/$CIRCLE_BUILD_NUM
-firebase_name: $FIREBASE_NAME
-firebase_secret: $FIREBASE_SECRET
-firebase_shared_secret: $FIREBASE_SHARED_SECRET
 ignore_eyes_mismatches: true
 libraries_s3_directory: libraries_circle/$CIRCLE_BUILD_NUM
 localize_apps: true

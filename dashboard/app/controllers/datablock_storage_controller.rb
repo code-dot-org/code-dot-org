@@ -60,17 +60,6 @@ class DatablockStorageController < ApplicationController
   ]
 
   ##########################################################
-  #   Debug View                                           #
-  ##########################################################
-  def index
-    @key_value_pairs = DatablockStorageKvp.where(project_id: @project_id)
-    @records = DatablockStorageRecord.where(project_id: @project_id)
-    @tables = DatablockStorageTable.where(project_id: @project_id)
-    @library_manifest = DatablockStorageLibraryManifest.instance.library_manifest
-    @storage_backend = ProjectUseDatablockStorage.use_data_block_storage_for?(params[:channel_id]) ? "Datablock Storage" : "Firebase"
-  end
-
-  ##########################################################
   #   Key-Value-Pair API                                   #
   ##########################################################
 
@@ -300,22 +289,6 @@ class DatablockStorageController < ApplicationController
     DatablockStorageTable.where(project_id: @project_id).delete_all
     DatablockStorageKvp.where(project_id: @project_id).delete_all
     DatablockStorageRecord.where(project_id: @project_id).delete_all
-    render json: true
-  end
-
-  ##########################################################
-  #   Project Use Datablock Storage API                    #
-  ##########################################################
-
-  # TODO: post-firebase-cleanup, remove this code: #56994
-  def use_datablock_storage
-    ProjectUseDatablockStorage.set_data_block_storage_for!(params[:channel_id], true)
-    render json: true
-  end
-
-  # TODO: post-firebase-cleanup, remove this code: #56994
-  def use_firebase_storage
-    ProjectUseDatablockStorage.set_data_block_storage_for!(params[:channel_id], false)
     render json: true
   end
 

@@ -49,12 +49,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       bucket.any_instance.stubs(:hard_delete_channel_content)
     end
 
-    # Skip real Firebase operations
-    # TODO: unfirebase, write a version of this for Datablock Storage: #57004
-    # TODO: post-firebase-cleanup, switch to the datablock storage version: #56994
-    FirebaseHelper.stubs(:delete_channel)
-    FirebaseHelper.stubs(:delete_channels)
-
     # Skip MailJet calls
     MailJet.stubs(:delete_contact)
 
@@ -1959,31 +1953,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         assert_logged "Deleting Datablock Storage contents for 2 projects"
         assert_empty DatablockStorageKvp.where(project_id: project_id_a)
         assert_empty DatablockStorageKvp.where(project_id: project_id_b)
-      end
-    end
-  end
-
-  #
-  # Firebase
-  #
-
-  test "Firebase: deletes content for all of user's channels" do
-    student = create :student
-    with_channel_for student do |project_id_a, _|
-      with_channel_for student do |project_id_b, storage_id|
-        projects_table.where(id: project_id_a).update(state: 'deleted')
-
-        student_channels = [storage_encrypt_channel_id(storage_id, project_id_a),
-                            storage_encrypt_channel_id(storage_id, project_id_b)]
-
-        # TODO: unfirebase, write a version of this for Datablock Storage: #57004
-        # TODO: post-firebase-cleanup, switch to the datablock storage version: #56994
-        FirebaseHelper.
-          expects(:delete_channels).
-          with(student_channels)
-
-        purge_user student
-        assert_logged "Deleting Firebase contents for 2 channels"
       end
     end
   end
