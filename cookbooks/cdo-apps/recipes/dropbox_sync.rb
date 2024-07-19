@@ -1,18 +1,20 @@
 # Install the tool that syncs content between the Dropbox directory and the git
-# repository. Also configure rotation for the tool's fairly verbose logs.
+# repository. Also configure rotation for the tool's fairly verbose logs,
+# including logic to back them up to S3.
 apt_package 'unison'
 file '/etc/logrotate.d/unison' do
   content <<~LOGROTATE
     #{File.join(node[:home], 'unison.log')} {
       daily
       rotate 15
+      dateext
       compress
       missingok
       notifempty
       copytruncate
-      postrotate
+      prerotate
         INSTANCE_ID="`wget -q -O - http://instance-data/latest/meta-data/instance-id`"
-        /usr/local/bin/aws s3 cp $1 "s3://cdo-logs/#{node.chef_environment}-misc-logs/${INSTANCE_ID}-$1"
+        /usr/local/bin/aws s3 cp $1 "s3://cdo-logs/#{node.chef_environment}-misc-logs/${INSTANCE_ID}/$(date +%F)$1"
       endscript
     }
   LOGROTATE
