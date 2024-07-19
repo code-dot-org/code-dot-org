@@ -14,7 +14,7 @@ module InternationalOptInPeople
     cambodia: ["Tech for Kids Academy"],
     canada: ["Digital Moment"],
     chile: ["Kodea", "Mineduc"],
-    colombia: ["Computadores para Educar", "Universidad Católica Luis Amigó", "ARUKAY"],
+    colombia: ["ARUKAY", "Computadores para Educar", "Fundación Pies Descalzos", "Universidad Católica Luis Amigó"],
     dominican_republic: ["The Trust for the Americas"],
     ecuador: ["Montebello Academy", "Progracademy"],
     egypt: ["Little Coder Academy"],
