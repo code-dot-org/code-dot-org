@@ -24,8 +24,22 @@
 # https://github.com/code-dot-org/code-dot-org/pull/56279
 
 class DatablockStorageController < ApplicationController
+  # These methods can be called by data blocks in applab/gamelab
+  METHODS_CALLED_BY_DATA_BLOCKS = [
+    :set_key_value,
+    :get_key_value,
+    :create_record,
+    :read_records,
+    :update_record,
+    :delete_record,
+  ]
+
   before_action :validate_channel_id
-  before_action :authenticate_user!
+
+  # Methods that are called directly by data blocks need to be accessible
+  # even when the applab/gamelab project is shared. In this case we won't
+  # necessarily have a logged-in user.
+  before_action :authenticate_user!, except: METHODS_CALLED_BY_DATA_BLOCKS
 
   StudentFacingError = DatablockStorageTable::StudentFacingError
 
