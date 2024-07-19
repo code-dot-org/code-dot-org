@@ -37,6 +37,7 @@ module I18n
               end
             end
 
+            # pack names not showing up in manifest currently
             manifest['packs'].each do |pack|
               pack_name = pack['name']
               strings[pack_name] = pack_name
