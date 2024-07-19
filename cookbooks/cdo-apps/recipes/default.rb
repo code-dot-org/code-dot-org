@@ -51,7 +51,7 @@ apt_package 'enscript'
 # run, we'd like to have this happen in a separate - ideally ephemeral -
 # environment, independent of any of our build pipeline servers; but for now,
 # the staging server is where it lives.
-if node.chef_environment == 'staging'
+if node.chef_environment == 'adhoc'
   include_recipe 'cdo-apps::dropbox_sync'
 end
 
