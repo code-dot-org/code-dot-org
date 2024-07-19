@@ -6,13 +6,19 @@ import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {Heading3} from '@cdo/apps/componentLibrary/typography';
+import DCDO from '@cdo/apps/dcdo';
 import i18n from '@cdo/locale';
 
 import ResponseMenuDropdown from './ResponseMenuDropdown';
 
 import styles from './summary.module.scss';
 
-const FreeResponseResponses = ({responses}) => {
+const FreeResponseResponses = ({responses, showStudentNames}) => {
+  const constructStudentName = response =>
+    response.student_family_name
+      ? response.student_display_name + ' ' + response.student_family_name
+      : response.student_display_name;
+
   const [hiddenResponses, setHiddenResponses] = React.useState([]);
   const [pinnedResponseIds, setPinnedResponseIds] = React.useState([]);
 
@@ -52,28 +58,40 @@ const FreeResponseResponses = ({responses}) => {
               .map(response => (
                 <div
                   key={response.user_id}
-                  className={classNames(
-                    styles.studentAnswer,
-                    styles.pinnedResponse
-                  )}
+                  className={styles.studentResponseBlock}
                 >
-                  <div className={styles.studentAnswerInterior}>
-                    <p>{response.text}</p>
-                    <ResponseMenuDropdown
-                      response={response}
-                      hideResponse={userId =>
-                        setHiddenResponses(prevHidden => [
-                          ...prevHidden,
-                          userId,
-                        ])
-                      }
-                      unpinResponse={userId =>
-                        setPinnedResponseIds(prevPinned =>
-                          prevPinned.filter(id => id !== userId)
-                        )
-                      }
-                    />
+                  <div
+                    key={response.user_id}
+                    className={classNames(
+                      styles.studentAnswer,
+                      styles.pinnedResponse
+                    )}
+                  >
+                    <div className={styles.studentAnswerInterior}>
+                      <p>{response.text}</p>
+                      <ResponseMenuDropdown
+                        response={response}
+                        hideResponse={userId =>
+                          setHiddenResponses(prevHidden => [
+                            ...prevHidden,
+                            userId,
+                          ])
+                        }
+                        unpinResponse={userId =>
+                          setPinnedResponseIds(prevPinned =>
+                            prevPinned.filter(id => id !== userId)
+                          )
+                        }
+                      />
+                    </div>
                   </div>
+                  {DCDO.get('cfu-pin-hide-enabled', false) && (
+                    <div className={styles.studentName}>
+                      {showStudentNames && (
+                        <p>{constructStudentName(response)}</p>
+                      )}
+                    </div>
+                  )}
                 </div>
               ))}
           </div>
@@ -81,24 +99,30 @@ const FreeResponseResponses = ({responses}) => {
       )}
       <div className={styles.studentResponsesColumns}>
         {filteredResponses.map(response => (
-          <div
-            key={response.user_id}
-            className={classNames(
-              styles.studentAnswer,
-              styles.unpinnedResponse
-            )}
-          >
-            <div className={styles.studentAnswerInterior}>
-              <p>{response.text}</p>
-              <ResponseMenuDropdown
-                response={response}
-                hideResponse={userId =>
-                  setHiddenResponses(prevHidden => [...prevHidden, userId])
-                }
-                pinResponse={userId =>
-                  setPinnedResponseIds(prevPinned => [...prevPinned, userId])
-                }
-              />
+          <div key={response.user_id} className={styles.studentResponseBlock}>
+            <div
+              className={classNames(
+                styles.studentAnswer,
+                styles.unpinnedResponse
+              )}
+            >
+              <div className={styles.studentAnswerInterior}>
+                <p>{response.text}</p>
+                <ResponseMenuDropdown
+                  response={response}
+                  hideResponse={userId =>
+                    setHiddenResponses(prevHidden => [...prevHidden, userId])
+                  }
+                  pinResponse={userId =>
+                    setPinnedResponseIds(prevPinned => [...prevPinned, userId])
+                  }
+                />
+              </div>
+              {DCDO.get('cfu-pin-hide-enabled', false) && (
+                <div className={styles.studentName}>
+                  {showStudentNames && <p>{constructStudentName(response)}</p>}
+                </div>
+              )}
             </div>
           </div>
         ))}
@@ -128,6 +152,7 @@ const FreeResponseResponses = ({responses}) => {
 
 FreeResponseResponses.propTypes = {
   responses: PropTypes.arrayOf(PropTypes.object),
+  showStudentNames: PropTypes.bool,
 };
 
 export default FreeResponseResponses;
