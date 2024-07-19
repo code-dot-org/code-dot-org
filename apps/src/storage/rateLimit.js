@@ -1,6 +1,6 @@
 import PQueue from 'p-queue';
 
-export const MAX_CONCURRENT_BLOCK_IOPS = 5;
+export const MAX_CONCURRENT_BLOCK_IOPS = 3;
 const blockIOQueue = new PQueue({concurrency: MAX_CONCURRENT_BLOCK_IOPS});
 
 // rateLimit() throws an error if called more than RATE_LIMIT times per RATE_LIMIT_INTERVAL_MS
