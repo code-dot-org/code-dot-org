@@ -76,6 +76,15 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
     [disabled, onChange, setActiveDropdownName]
   );
 
+  /* TODO:
+   - tests
+   - stories
+   - docs
+   - changelog
+   - readme
+   - list items
+   - trigger component
+  */
   return (
     <CustomDropdown
       name={name}
