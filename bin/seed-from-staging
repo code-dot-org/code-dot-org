@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require_relative '../deployment'
+require 'cdo/rake_utils'
+
+RakeUtils.git_pull
+Dir.chdir(dashboard_dir) do
+  RakeUtils.rake 'seed:default', 'CURRICULUM_CONTENT_DIR=~/staging/dashboard'
+end
