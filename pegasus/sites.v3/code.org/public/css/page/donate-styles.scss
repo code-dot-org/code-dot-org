@@ -31,6 +31,10 @@ section.donate-options {
 
   .tabs-section {
     min-height: 518px;
+    
+    button.tab {
+      flex: 1;
+    }
 
     @media screen and (max-width: $width-md) {
       margin-bottom: 2rem;
