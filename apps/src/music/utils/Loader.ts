@@ -42,6 +42,48 @@ export const loadLibrary = async (
       {},
       LibraryValidator
     );
-    return new MusicLibrary(libraryFilename, libraryJsonResponse.value);
+    const translations = await loadTranslations('fr_fr');
+    const libraryJsonLocalized = localizeLibrary(
+      libraryJsonResponse.value,
+      translations
+    );
+    return new MusicLibrary(libraryFilename, libraryJsonLocalized);
   }
+};
+
+type Translations = {[key: string]: string};
+
+// set up to take libraryName as arg as well
+const loadTranslations = async (locale: string): Promise<Translations> => {
+  const translations = await HttpClient.fetchJson<Translations>(
+    `https://curriculum.code.org/media/musiclab-test/loc-intro2024/${locale}.json`
+  );
+  return translations.value;
+};
+
+const localizeLibrary = (
+  library: LibraryJson,
+  translations: Translations
+): LibraryJson => {
+  const libraryJsonLocalized = JSON.parse(
+    JSON.stringify(library)
+  ) as LibraryJson;
+  libraryJsonLocalized.instruments.forEach(
+    instrument =>
+      (instrument.name = translations[instrument.name] || instrument.name)
+  );
+  libraryJsonLocalized.kits.forEach(kit => {
+    kit.name = translations[kit.name] || kit.name;
+    kit.sounds.forEach(
+      sound => (sound.name = translations[sound.name] || sound.name)
+    );
+  });
+  libraryJsonLocalized.packs.forEach(pack => {
+    pack.name = translations[pack.name] || pack.name;
+    pack.sounds.forEach(
+      sound => (sound.name = translations[sound.name] || sound.name)
+    );
+  });
+
+  return libraryJsonLocalized;
 };
