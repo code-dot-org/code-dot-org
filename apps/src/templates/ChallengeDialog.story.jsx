@@ -1,5 +1,8 @@
 import React from 'react';
 
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import {registerReducers} from '@cdo/apps/redux';
+import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import BirdsWinAvatar from '@cdo/static/skins/birds/win_avatar.png';
 import HarvesterStaticAvatar from '@cdo/static/skins/harvester/static_avatar.png';
 import HarvesterWinAvatar from '@cdo/static/skins/harvester/win_avatar.png';
@@ -17,6 +20,8 @@ export default {
 const wrapperStyle = {
   marginTop: 100,
 };
+
+registerReducers({...commonReducers, isRtl});
 
 // TEMPLATE
 

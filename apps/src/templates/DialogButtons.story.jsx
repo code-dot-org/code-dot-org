@@ -1,4 +1,10 @@
 import React from 'react';
+import {Provider} from 'react-redux';
+
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import {registerReducers} from '@cdo/apps/redux';
+import * as commonReducers from '@cdo/apps/redux/commonReducers';
+import {reduxStore} from '@cdo/storybook/decorators';
 
 import DialogButtons from './DialogButtons';
 
@@ -6,7 +12,14 @@ export default {
   component: DialogButtons,
 };
 
-const Template = args => <DialogButtons {...args} />;
+const store = reduxStore();
+registerReducers({...commonReducers, isRtl});
+
+const Template = args => (
+  <Provider store={store}>
+    <DialogButtons {...args} />
+  </Provider>
+);
 
 export const OK = Template.bind({});
 OK.args = {

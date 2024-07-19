@@ -1,12 +1,14 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import {setHiddenLessons} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import {
+import hiddenLesson, {
+  setHiddenLessons,
+} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import lessonLock, {
   authorizeLockable,
   setSectionLockStatus,
 } from '@cdo/apps/code-studio/lessonLockRedux';
-import {initProgress} from '@cdo/apps/code-studio/progressRedux';
+import progress, {initProgress} from '@cdo/apps/code-studio/progressRedux';
 import {lessons} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
@@ -93,7 +95,7 @@ const createStore = ({
   allowHidden = true,
   teacherVerified = true,
 } = {}) => {
-  registerReducers({teacherSections});
+  registerReducers({teacherSections, progress, hiddenLesson, lessonLock});
   const store = createStoreWithReducers();
   const lessons = [
     lockableNoPlanYesUrl,
