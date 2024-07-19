@@ -28,12 +28,6 @@ const FreeResponseResponses = ({responses, showStudentNames}) => {
     );
   }, [responses, pinnedResponseIds]);
 
-  const filteredResponses = React.useMemo(() => {
-    return responses
-      .filter(response => !pinnedResponseIds.includes(response.user_id))
-      .filter(response => !hiddenResponses.includes(response.user_id));
-  }, [responses, pinnedResponseIds, hiddenResponses]);
-
   const getResponseBox = (
     response,
     responseClassName,
@@ -103,15 +97,18 @@ const FreeResponseResponses = ({responses, showStudentNames}) => {
         </div>
       )}
       <div className={styles.studentResponsesColumns}>
-        {filteredResponses.map(response =>
-          getResponseBox(
-            response,
-            styles.unpinnedResponse,
-            userId =>
-              setPinnedResponseIds(prevPinned => [...prevPinned, userId]),
-            undefined
-          )
-        )}
+        {responses
+          .filter(response => !pinnedResponseIds.includes(response.user_id))
+          .filter(response => !hiddenResponses.includes(response.user_id))
+          .map(response =>
+            getResponseBox(
+              response,
+              styles.unpinnedResponse,
+              userId =>
+                setPinnedResponseIds(prevPinned => [...prevPinned, userId]),
+              undefined
+            )
+          )}
       </div>
       {hiddenResponses.length > 0 && (
         <Alert
