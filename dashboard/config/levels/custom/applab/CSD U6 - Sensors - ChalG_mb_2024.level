@@ -83,7 +83,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "# Safety App\r\n\r\nCreate an app prototype that could be used to detect safety concerns and react or alert the user. For example, it could detect when the temperature is too hot, possibly indicating that there is a fire. Or the app could detect when the noise level is too loud and could hurt someone's ear drums, then give the user a warning. \r\n\r\nYou may not be able to create the \"perfect\" app yet, but you can develop a **prototype** which shows the general idea of the app and some of the basic features behind how it could work.",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

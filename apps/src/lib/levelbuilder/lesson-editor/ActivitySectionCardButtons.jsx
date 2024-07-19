@@ -1,22 +1,23 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import AddLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialog';
-import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
-import LessonTipIconWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonTipIconWithTooltip';
-import FindProgrammingExpressionDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindProgrammingExpressionDialog';
-import FindResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindResourceDialog';
-import FindVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindVocabularyDialog';
-import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialog';
-import {
-  activitySectionShape,
-  vocabularyShape,
-} from '@cdo/apps/lib/levelbuilder/shapes';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
 import {
   addTip,
   updateTip,
   removeTip,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import AddLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialog';
+import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialog';
+import FindProgrammingExpressionDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindProgrammingExpressionDialog';
+import FindResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindResourceDialog';
+import FindVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindVocabularyDialog';
+import LessonTipIconWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonTipIconWithTooltip';
+import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
+import {
+  activitySectionShape,
+  vocabularyShape,
+} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const AddButton = function (props) {
   let className = 'btn';

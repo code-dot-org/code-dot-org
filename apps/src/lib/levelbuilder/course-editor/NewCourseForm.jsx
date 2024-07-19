@@ -1,7 +1,9 @@
-import React, {useState} from 'react';
-import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
+
 import NewCourseFields from '../NewCourseFields';
 
 export default function NewCourseForm(props) {

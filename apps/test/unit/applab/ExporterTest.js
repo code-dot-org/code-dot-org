@@ -206,10 +206,6 @@ describe('Applab Exporter,', function () {
       hideSource: true,
       share: true,
       labUserId: 'x+OhD4/hmGgtPrHVlrC32TFHAdo',
-      firebaseName: 'cdo-v3-dev',
-      firebaseAuthToken:
-        'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ2IjowLCJpYXQiOjE0ODM5OTg4MjksImQiOnsidWlkIjoiOTIiLCJpc19kYXNoYm9hcmRfdXNlciI6dHJ1ZX19.DX8PP0Q8EDGg7UtMbhT2sT-h39LvDsuuPbA6YesXLG8',
-      firebaseChannelIdSuffix: '-DEVELOPMENT-pcardune',
       isSignedIn: true,
       pinWorkspaceToBottom: true,
       hasVerticalScrollbars: true,

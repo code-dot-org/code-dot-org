@@ -29,7 +29,7 @@ const ResponseMenuDropdown = ({
           type="button"
           onClick={() => {
             setIsOpen(false);
-            unpinResponse(response);
+            unpinResponse(response.user_id);
           }}
         >
           <FontAwesomeV6Icon iconName="thumbtack" />
@@ -43,7 +43,7 @@ const ResponseMenuDropdown = ({
           className={styles.dropdownOption}
           onClick={() => {
             setIsOpen(false);
-            pinResponse(response);
+            pinResponse(response.user_id);
           }}
         >
           <FontAwesomeV6Icon iconName="thumbtack" />
@@ -77,7 +77,7 @@ const ResponseMenuDropdown = ({
                 type="button"
                 onClick={() => {
                   setIsOpen(false);
-                  hideResponse(response);
+                  hideResponse(response.user_id);
                 }}
               >
                 <FontAwesomeV6Icon iconName="eye-slash" />

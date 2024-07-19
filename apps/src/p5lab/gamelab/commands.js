@@ -1,8 +1,8 @@
 /** @file Non-p5 GameLab commands */
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
 import {rateLimit} from '@cdo/apps/storage/rateLimit';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
 import {
   getAsyncOutputWarning,

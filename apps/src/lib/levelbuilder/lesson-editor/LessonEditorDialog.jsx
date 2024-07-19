@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import fontConstants from '@cdo/apps/fontConstants';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
 const defaultStyle = {
   paddingLeft: 20,

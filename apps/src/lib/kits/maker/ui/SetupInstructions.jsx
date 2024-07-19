@@ -1,21 +1,25 @@
 import React from 'react';
-import SetupChecklist from './SetupChecklist';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import i18n from '@cdo/locale';
-import applabI18n from '@cdo/applab/locale';
 import {Provider} from 'react-redux';
-import {isWindows} from '../util/browserChecks';
-import {
-  shouldUseWebSerial,
-  WEB_SERIAL_FILTERS,
-} from '@cdo/apps/lib/kits/maker/util/boardUtils';
-import {getStore} from '@cdo/apps/redux';
+
+import applabI18n from '@cdo/applab/locale';
 import {
   CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_URL,
   CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_FILENAME,
   RESET_BUTTON_NAME,
   BOOT_DRIVE_NAME,
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
+import {
+  shouldUseWebSerial,
+  WEB_SERIAL_FILTERS,
+} from '@cdo/apps/lib/kits/maker/util/boardUtils';
+import {getStore} from '@cdo/apps/redux';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
+
+import {isWindows} from '../util/browserChecks';
+
+import SetupChecklist from './SetupChecklist';
+
 import styles from './setup-instructions.module.scss';
 
 // These are used for jumplinks between the

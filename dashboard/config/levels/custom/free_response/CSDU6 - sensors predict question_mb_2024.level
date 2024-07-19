@@ -13,7 +13,6 @@
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 20456,
-    "name_suffix": "_mb_2024",
     "encrypted": "false",
     "optional": "false",
     "allow_multiple_attempts": "false"

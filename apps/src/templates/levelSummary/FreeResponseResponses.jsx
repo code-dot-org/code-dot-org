@@ -61,15 +61,15 @@ const FreeResponseResponses = ({responses}) => {
                     <p>{response.text}</p>
                     <ResponseMenuDropdown
                       response={response}
-                      hideResponse={response =>
+                      hideResponse={userId =>
                         setHiddenResponses(prevHidden => [
                           ...prevHidden,
-                          response.user_id,
+                          userId,
                         ])
                       }
-                      unpinResponse={response =>
+                      unpinResponse={userId =>
                         setPinnedResponseIds(prevPinned =>
-                          prevPinned.filter(id => id !== response.user_id)
+                          prevPinned.filter(id => id !== userId)
                         )
                       }
                     />
@@ -92,17 +92,11 @@ const FreeResponseResponses = ({responses}) => {
               <p>{response.text}</p>
               <ResponseMenuDropdown
                 response={response}
-                hideResponse={response =>
-                  setHiddenResponses(prevHidden => [
-                    ...prevHidden,
-                    response.user_id,
-                  ])
+                hideResponse={userId =>
+                  setHiddenResponses(prevHidden => [...prevHidden, userId])
                 }
-                pinResponse={response =>
-                  setPinnedResponseIds(prevPinned => [
-                    ...prevPinned,
-                    response.user_id,
-                  ])
+                pinResponse={userId =>
+                  setPinnedResponseIds(prevPinned => [...prevPinned, userId])
                 }
               />
             </div>
@@ -115,8 +109,12 @@ const FreeResponseResponses = ({responses}) => {
           onClick={() => setHiddenResponses([])}
           link={{
             text: i18n.showHiddenResponses(),
-            onClick: () => setHiddenResponses([]),
-            href: null,
+            onClick: e => {
+              e.preventDefault();
+              setHiddenResponses([]);
+            },
+            role: 'button',
+            href: '#',
           }}
           text={i18n.hiddenResponses({
             numHiddenResponses: hiddenResponses.length,

@@ -2,9 +2,19 @@
  * @file Static interface to Maker Toolkit, to simplify App Lab code interfacing
  * with maker and provide clean setup/cancel/reset patterns.
  */
+import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
+import {
+  WEB_SERIAL_FILTERS,
+  shouldUseWebSerial,
+} from '@cdo/apps/lib/kits/maker/util/boardUtils';
+import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
+
 import {getStore} from '../../../redux';
 import trackEvent from '../../../util/trackEvent';
+
 import CircuitPlaygroundBoard from './boards/circuitPlayground/CircuitPlaygroundBoard';
+import MicroBitBoard from './boards/microBit/MicroBitBoard';
+import {MB_API} from './boards/microBit/MicroBitConstants';
 import VirtualCPBoard from './boards/VirtualCPBoard';
 import VirtualMBBoard from './boards/VirtualMBBoard';
 import * as commands from './commands';
@@ -18,14 +28,6 @@ import MakerError, {
   wrapKnownMakerErrors,
 } from './MakerError';
 import * as redux from './redux';
-import MicroBitBoard from './boards/microBit/MicroBitBoard';
-import {MB_API} from './boards/microBit/MicroBitConstants';
-import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
-import {
-  WEB_SERIAL_FILTERS,
-  shouldUseWebSerial,
-} from '@cdo/apps/lib/kits/maker/util/boardUtils';
-import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 
 // Re-export some modules so consumers only need this 'toolkit' module
 export {dropletConfig, configMicrobit, configCircuitPlayground, MakerError};
