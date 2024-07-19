@@ -565,7 +565,7 @@ describe('Applab Exporter,', function () {
           `,
         `<div><div class="screen" id="screen1" tabindex="1"></div></div>`,
         () => {
-          expect(window.write).to.have.been.calledWith([
+          expect(window.write).toHaveBeenCalledWith([
             'a',
             'b',
             'c',
