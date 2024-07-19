@@ -1,13 +1,14 @@
 import $ from 'jquery';
+import queryString from 'query-string';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Congrats from '@cdo/apps/templates/certificates/Congrats';
 import {Provider} from 'react-redux';
-import {getStore} from '@cdo/apps/redux';
-import queryString from 'query-string';
-import {tryGetLocalStorage} from '@cdo/apps/utils';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {getStore} from '@cdo/apps/redux';
+import Congrats from '@cdo/apps/templates/certificates/Congrats';
+import {tryGetLocalStorage} from '@cdo/apps/utils';
 
 $(document).ready(function () {
   const store = getStore();

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import logToCloud from '../../logToCloud';
 
 /**

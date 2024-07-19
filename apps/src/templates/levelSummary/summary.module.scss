@@ -92,6 +92,12 @@ label.sectionSelector {
     display: block;
   }
 
+  .studentResponsesContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
   .studentResponsesColumns {
     width: 100%;
     columns: 2 auto;
@@ -108,9 +114,14 @@ label.sectionSelector {
     width: 100%;
     box-sizing: border-box;
     border-radius: 4px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    // inline-block is necessary to prevent boxes from splitting across columns.
+    display: inline-block;
+
+    .studentAnswerInterior {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
     p {
       margin: 0;

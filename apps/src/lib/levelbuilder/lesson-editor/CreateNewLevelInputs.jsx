@@ -1,6 +1,7 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import $ from 'jquery';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 

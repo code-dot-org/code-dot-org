@@ -1,10 +1,9 @@
+import $ from 'jquery';
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
-import i18n from '@cdo/locale';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import $ from 'jquery';
-import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
+import Select from 'react-select';
+
 import {
   CourseOfferingHeaders,
   CourseOfferingCurriculumTypes,
@@ -14,17 +13,22 @@ import {
   DeviceTypes,
   DeviceCompatibilityLevels,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
+import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import {
   translatedCourseOfferingCsTopics,
   translatedCourseOfferingSchoolSubjects,
   translatedCourseOfferingDeviceTypes,
   translatedCourseOfferingDeviceCompatibilityLevels,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
-import ImageInput from './ImageInput';
-import Select from 'react-select';
-import moment from 'moment';
+import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
+import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
 import DatePicker from '../../code-studio/pd/workshop_dashboard/components/date_picker';
+
+import ImageInput from './ImageInput';
+
 import 'react-select/dist/react-select.css';
 
 const translatedNoneOption = `(${i18n.none()})`;

@@ -75,7 +75,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "<img src=\"https://images.code.org/74019d972f7a63e8f4f16cbec2c2662a-image-1634600926494.png\" style=\"width: 150px; float:right; margin: 10px;\" />\r\n\r\n# Traffic Control\r\n \r\nYou are helping design an app that can control the traffic lights in a construction zone. The app will control the lights to tell drivers whether to merge left or right in order to avoid construction.\r\n \r\nThe app has already been started for you, but the code needs to be finished.\r\n \r\n## Do This\r\n1. Get the value from the direction dropdown and store it in a variable\r\n2. Add an [`if-statement`(#64B5F6)](/docs/applab/ifBlock/) to check if the value from the dropdown is `left`\r\n3. Inside the if-statement: use the [`ledScreen.display()`(#f78183)](/docs/ide/applab/expressions/ledScreen.display) block to display an arrow pointing left.\r\n4. Add an [`if-statement`(#64B5F6)](/docs/applab/ifBlock/) to check if the value from the dropdown is `right`\r\n5. Inside the if-statement: use the [`ledScreen.display()`(#f78183)](/docs/ide/applab/expressions/ledScreen.display) block to display an arrow pointing right.",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "true",
     "text_mode_at_start": "false",
     "encrypted": "false",
