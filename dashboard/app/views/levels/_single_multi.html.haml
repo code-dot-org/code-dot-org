@@ -36,7 +36,7 @@
       = render partial: 'levels/teacher_markdown', locals: {data: level.properties}
 
 .multi{id: "level_#{level.id}", class: layout_class}
-  - if DCDO.get("show_multi_level_summary_entry_point", false) && !in_level_group
+  - if !in_level_group
     %div#summaryEntryPoint
   - question_content_blank = data['content1'].blank? && data['content2'].blank? && data['content3'].blank? && data['markdown'].blank?
   - if question_content_blank

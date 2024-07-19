@@ -1,9 +1,0 @@
-name 'genai-lesson9-wrapup-lv1'
-title 'Wrap Up'
-description 'description here'
-
-markdown <<MARKDOWN
-#Wrap Up
-
-###In your graphic organizer, update the **Output** section with an explanation of how a model generates the final response it gives.
-MARKDOWN

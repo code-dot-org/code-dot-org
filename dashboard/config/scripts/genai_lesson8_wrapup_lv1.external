@@ -1,8 +1,0 @@
-name 'genai-lesson8-wrapup-lv1'
-title 'title'
-description 'description here'
-
-markdown <<MARKDOWN
-#Wrap Up
-###In your graphic organizer, update the **Storage** and **Processing** sections based on your understanding of today’s lesson. Try to incorporate the Attention process in your explanation.
-MARKDOWN
