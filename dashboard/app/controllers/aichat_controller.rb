@@ -103,7 +103,7 @@ class AichatController < ApplicationController
       if endpoint == 'chat_completion'
         required_params << :newMessage
       end
-        
+
       params.require(required_params)
     rescue ActionController::ParameterMissing
       return false
