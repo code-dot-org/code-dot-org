@@ -33,7 +33,7 @@ describe('DatablockStorage', () => {
       }
 
       // This should be over the rate limit
-      await expect(rateLimit(NO_OP, now + RATE_LIMIT)).rejects.toEqual(Error);
+      await expect(rateLimit(NO_OP, now + RATE_LIMIT)).rejects.toThrow(Error);
     });
     it('it succeeds if called more than the rate limit, but after waiting rate limit interval', async () => {
       let now = Date.now();
