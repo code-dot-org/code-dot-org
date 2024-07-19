@@ -26,9 +26,9 @@
   {
     "name": "iPhone",
     "platformName": "iOS",
-    "appium:platformVersion": "16.2",
+    "appium:platformVersion": "current_major",
     "browserName": "safari",
-    "appium:deviceName": "iPhone Simulator",
+    "appium:deviceName": "iPhone Instant Simulator",
     "appium:automationName": "XCUITest",
     "appium:mobile": true,
     "sauce:options": {
@@ -38,9 +38,9 @@
   {
     "name": "iPad",
     "platformName": "iOS",
-    "appium:platformVersion": "14.5",
+    "appium:platformVersion": "current_major",
     "browserName": "safari",
-    "appium:deviceName": "iPad Simulator",
+    "appium:deviceName": "iPad Instant Simulator",
     "appium:mobile": true,
     "appium:automationName": "XCUITest",
     "sauce:options": {
