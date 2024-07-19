@@ -8345,7 +8345,6 @@ __metadata:
     load-grunt-tasks: 3.5.0
     loadable-components: 2.2.3
     loader-utils: ^2.0.4
-    lodash: ^4.17.21
     magicast: ^0.3.3
     md5: ^2.3.0
     memoize-one: ^5.1.1
