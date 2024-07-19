@@ -1909,6 +1909,55 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Project tables and kvps i.e. datablock storage
+  #
+
+  # Table: dashboard.datablock_storage_tables, dashboard.datablock_storage_records
+  test "Datablock Storage: hard-deletes all of user's project tables" do
+    student = create :student
+    with_channel_for student do |project_id_a, _|
+      with_channel_for student do |project_id_b, _|
+        timestamp = DateTime.now
+        DatablockStorageTable.create(project_id: project_id_a, table_name: "table_a", columns: '["id", "name"]', created_at: timestamp, updated_at: timestamp)
+        DatablockStorageRecord.create(project_id: project_id_a, table_name: "table_a", record_id: 1, record_json: '{"id": 1, "name": "Bob"}')
+        DatablockStorageTable.create(project_id: project_id_b, table_name: "table_b", columns: '["id", "name"]', created_at: timestamp, updated_at: timestamp)
+        DatablockStorageRecord.create(project_id: project_id_b, table_name: "table_b", record_id: 1, record_json: '{"id": 1, "name": "Alice"}')
+
+        assert_equal 1, DatablockStorageTable.where(project_id: project_id_a).count
+        assert_equal 1, DatablockStorageTable.where(project_id: project_id_b).count
+        assert_equal 1, DatablockStorageRecord.where(project_id: project_id_a).count
+        assert_equal 1, DatablockStorageRecord.where(project_id: project_id_b).count
+
+        purge_user student
+        assert_logged "Deleting Datablock Storage contents for 2 projects"
+        assert_empty DatablockStorageTable.where(project_id: project_id_a)
+        assert_empty DatablockStorageTable.where(project_id: project_id_b)
+        assert_empty DatablockStorageRecord.where(project_id: project_id_a)
+        assert_empty DatablockStorageRecord.where(project_id: project_id_b)
+      end
+    end
+  end
+
+  # Table: dashboard.datablock_storage_kvps
+  test "Datablock Storage: hard-deletes all of user's project kvps" do
+    student = create :student
+    with_channel_for student do |project_id_a, _|
+      with_channel_for student do |project_id_b, _|
+        DatablockStorageKvp.set_kvp(project_id_a, "key_a", '"value_a"')
+        DatablockStorageKvp.set_kvp(project_id_b, "key_b", '"value_b"')
+
+        assert_equal 1, DatablockStorageKvp.where(project_id: project_id_a).count
+        assert_equal 1, DatablockStorageKvp.where(project_id: project_id_b).count
+
+        purge_user student
+        assert_logged "Deleting Datablock Storage contents for 2 projects"
+        assert_empty DatablockStorageKvp.where(project_id: project_id_a)
+        assert_empty DatablockStorageKvp.where(project_id: project_id_b)
+      end
+    end
+  end
+
+  #
   # contact rollups V2
   #
 

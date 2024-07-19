@@ -71,6 +71,14 @@ class DeleteAccountsHelper
       bucket.hard_delete_channel_content encrypted_channel_id
     end
 
+    # Clear Datablock Storage contents for user's projects
+    @log.puts "Deleting Datablock Storage contents for #{project_ids.count} projects"
+    project_ids.each do |project_id|
+      DatablockStorageTable.where(project_id: project_id).delete_all
+      DatablockStorageKvp.where(project_id: project_id).delete_all
+      DatablockStorageRecord.where(project_id: project_id).delete_all
+    end
+
     @log.puts "Deleted #{channel_count} channels" if channel_count > 0
   end
 
