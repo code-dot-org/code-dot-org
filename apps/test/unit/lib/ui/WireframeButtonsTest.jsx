@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import SendToPhone from '@cdo/apps/code-studio/components/SendToPhone';
 import WireframeButtons from '@cdo/apps/lib/ui/WireframeButtons';
@@ -12,7 +11,10 @@ describe('WireframeButtons', () => {
   let wrapper;
 
   beforeEach(() => {
-    sinon.stub(SendToPhone.prototype, 'maskPhoneInput');
+    jest
+      .spyOn(SendToPhone.prototype, 'maskPhoneInput')
+      .mockClear()
+      .mockImplementation();
   });
 
   afterEach(() => {
@@ -21,7 +23,7 @@ describe('WireframeButtons', () => {
       wrapper = undefined;
     }
 
-    SendToPhone.prototype.maskPhoneInput.restore();
+    SendToPhone.prototype.maskPhoneInput.mockRestore();
   });
 
   describe('Send To Phone button', () => {
