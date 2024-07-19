@@ -49,7 +49,7 @@ const WorkshopNewAccountCard: React.FunctionComponent<{
           className={classNames(styles.button, styles.cardSecondaryButton)}
           color={buttonColors.white}
           size="m"
-          text={i18n.ltiLinkAccountNewAccountCardActionLabel()}
+          text={i18n.createAccount()}
           onClick={() => navigateToHref(newAccountUrl)}
         />
       </CardActions>
