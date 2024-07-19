@@ -104,6 +104,7 @@ def main
     FEATURED_PROJECT_CONSTANTS
     LMS_LINKS
     USER_TYPES
+    SIMPLE_SIGN_UP_FLOWS
   )
 
   # please place all generated scripts into #{REPO_DIR}/apps/generated_scripts

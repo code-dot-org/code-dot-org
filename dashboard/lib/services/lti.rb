@@ -302,6 +302,7 @@ module Services
 
     def self.initialize_lms_landing_session(session, lti_provider_name, new_cta_type, user_type)
       session[:lms_landing] = {
+        signup_flow_type: SharedConstants::SIMPLE_SIGN_UP_FLOWS.LMS,
         lti_provider_name: lti_provider_name,
         new_cta_type: new_cta_type,
         user_type: user_type,
