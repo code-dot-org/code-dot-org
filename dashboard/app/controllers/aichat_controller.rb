@@ -6,7 +6,9 @@ class AichatController < ApplicationController
 
   # params are
   # newMessage: {role: 'user'; chatMessageText: string; status: string}
-  # storedMessages: Array of {role: <'user', 'system', or 'assistant'>; chatMessageText: string; status: string} - does not include user's new message
+  # storedMessages: Array of ChatItems - Does not include user's new message
+  #   {role: <'user', 'notification', or 'assistant'>; status: string;
+  #   chatMessageText: string; for ChatMessages OR text: string; for Notifications }
   # aichatModelCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
   # aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
   # POST /aichat/chat_completion

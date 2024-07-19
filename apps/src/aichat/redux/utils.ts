@@ -1,20 +1,24 @@
 import moment from 'moment';
 
+import {Role} from '@cdo/apps/aiComponentLibrary/chatItems/types';
 import {getTypedKeys} from '@cdo/apps/types/utils';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
+import {modelDescriptions} from '../constants';
 import {
   AiCustomizations,
   FieldVisibilities,
   ModelCardInfo,
   Visibility,
 } from '../types';
+import {AI_CUSTOMIZATIONS_LABELS} from '../views/modelCustomization/constants';
 
-// This variable keeps track of the most recent message ID so that we can
-// assign a unique message id in increasing sequence to a new message.
-let latestMessageId = 0;
-export const getNewMessageId = () => {
-  latestMessageId += 1;
-  return latestMessageId;
+// This variable keeps track of the most recent notification ID so that we can
+// assign a unique notification id in increasing sequence to a new notification.
+let latestNotificationId = 0;
+export const getNewNotificationId = () => {
+  latestNotificationId += 1;
+  return latestNotificationId;
 };
 
 export const timestampToDateTime = (timestamp: number) =>
@@ -79,3 +83,35 @@ export const allFieldsHidden = (fieldVisibilities: FieldVisibilities) =>
   getTypedKeys(fieldVisibilities).every(
     key => fieldVisibilities[key] === Visibility.HIDDEN
   );
+
+export const formatModelUpdateText = (
+  updatedField: keyof AiCustomizations,
+  updatedValue: AiCustomizations[keyof AiCustomizations]
+): string => {
+  const fieldLabel = AI_CUSTOMIZATIONS_LABELS[updatedField];
+
+  let updatedToText = undefined;
+  if (updatedField === 'temperature') {
+    updatedToText = updatedValue as number;
+  }
+  if (updatedField === 'selectedModelId') {
+    updatedToText = modelDescriptions.find(
+      model => model.id === updatedValue
+    )?.name;
+  }
+
+  const updatedText = updatedToText
+    ? ` has been updated to ${updatedToText}.`
+    : ' has been updated.';
+
+  return `${fieldLabel} ${updatedText}`;
+};
+
+export const getHiddenClearChatMessagesNotification = () => ({
+  id: getNewNotificationId(),
+  role: Role.NOTIFICATION,
+  status: Status.OK,
+  text: 'Chat history has been cleared.',
+  timestamp: Date.now(),
+  hidden: true,
+});

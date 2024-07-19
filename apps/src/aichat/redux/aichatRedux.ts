@@ -30,11 +30,10 @@ import {
   Visibility,
   ChatMessage,
   ChatItem,
-  isModelUpdate,
   isNotification,
-  isChatMessage,
-  ModelUpdate,
   Notification,
+  AichatInteractionStatusValue,
+  isLoggedChatItem,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -45,14 +44,15 @@ import {validateModelId} from '../views/modelCustomization/utils';
 import {
   allFieldsHidden,
   findChangedProperties,
-  getNewMessageId,
+  formatModelUpdateText,
+  getNewNotificationId,
   hasFilledOutModelCard,
 } from './utils';
 
-const messageListKeys = ['chatItemsPast', 'chatItemsCurrent'] as const;
-type MessageLocation = {
+const chatItemListKeys = ['chatItemsPast', 'chatItemsCurrent'] as const;
+type ChatItemLocation = {
   index: number;
-  messageListKey: (typeof messageListKeys)[number];
+  chatItemListKey: (typeof chatItemListKeys)[number];
 };
 
 export interface AichatState {
@@ -152,7 +152,7 @@ const saveAiCustomization = async (
   saveType: SaveType,
   dispatch: ThunkDispatch<unknown, unknown, AnyAction>
 ) => {
-  // Remove any empty example topics on save
+  // Remove any empty example topics on save.
   const trimmedExampleTopics =
     currentAiCustomizations.modelCardInfo.exampleTopics.filter(
       topic => topic.length
@@ -206,12 +206,18 @@ export const onSaveComplete =
 
     changedProperties.forEach(property => {
       const typedProperty = property as keyof AiCustomizations;
+      const updatedField = typedProperty;
+      const updatedValue = currentAiCustomizations[typedProperty];
+      const timestamp = Date.now();
+
+      // Model update notifications include updates to model card information.
       dispatch(
-        addModelUpdate({
-          id: getNewMessageId(),
-          updatedField: typedProperty,
-          updatedValue: currentAiCustomizations[typedProperty],
-          timestamp: Date.now(),
+        addNotification({
+          id: getNewNotificationId(),
+          role: Role.NOTIFICATION,
+          status: Status.OK,
+          timestamp,
+          text: formatModelUpdateText(updatedField, updatedValue),
         })
       );
 
@@ -285,28 +291,34 @@ export const onSaveFail =
           if (body?.details?.profaneWords?.length > 0 && flaggedProperties) {
             errorMessage = `Profanity detected in the ${flaggedProperties} and cannot be updated. Please try again.`;
           }
-          dispatchSaveFailNotification(dispatch, errorMessage);
+          dispatchSaveFailNotification(
+            dispatch,
+            errorMessage,
+            Status.PROFANITY_VIOLATION
+          );
         })
         // Catch any errors in parsing the response body or if there was no response body
         // and fall back to the default error message.
         .catch(() => {
-          dispatchSaveFailNotification(dispatch, errorMessage);
+          dispatchSaveFailNotification(dispatch, errorMessage, Status.ERROR);
         });
     } else {
       // If an Error was passed instead of a NetworkError, fall back to the default error message.
-      dispatchSaveFailNotification(dispatch, errorMessage);
+      dispatchSaveFailNotification(dispatch, errorMessage, Status.ERROR);
     }
   };
 
 const dispatchSaveFailNotification = (
   dispatch: AppDispatch,
-  errorMessage: string
+  errorMessage: string,
+  status: AichatInteractionStatusValue
 ) => {
   dispatch(
     addNotification({
-      id: getNewMessageId(),
+      id: getNewNotificationId(),
+      role: Role.NOTIFICATION,
+      status,
       text: errorMessage,
-      notificationType: 'error',
       timestamp: Date.now(),
     })
   );
@@ -348,7 +360,7 @@ export const submitChatContents = createAsyncThunk(
     try {
       chatApiResponse = await postAichatCompletionMessage(
         newMessage,
-        chatItemsCurrent.filter(isChatMessage) as ChatMessage[],
+        chatItemsCurrent.filter(isLoggedChatItem),
         aiCustomizations,
         aichatContext,
         currentSessionId
@@ -405,23 +417,18 @@ const aichatSlice = createSlice({
     addChatMessage: (state, action: PayloadAction<ChatMessage>) => {
       state.chatItemsCurrent.push(action.payload);
     },
-    addModelUpdate: (state, action: PayloadAction<ModelUpdate>) => {
-      state.chatItemsCurrent.push(action.payload);
-    },
     addNotification: (state, action: PayloadAction<Notification>) => {
       state.chatItemsCurrent.push(action.payload);
     },
-    removeUpdateMessage: (state, action: PayloadAction<number>) => {
-      const modelUpdateMessageInfo = getUpdateMessageLocation(
-        action.payload,
-        state
-      );
-      if (!modelUpdateMessageInfo) {
+    hideNotification: (state, action: PayloadAction<number>) => {
+      const notificationInfo = getNotificationLocation(action.payload, state);
+      if (!notificationInfo) {
         return;
       }
 
-      const {index, messageListKey} = modelUpdateMessageInfo;
-      state[messageListKey].splice(index, 1);
+      const {index, chatItemListKey} = notificationInfo;
+      const notificationToHide = state[chatItemListKey][index] as Notification;
+      notificationToHide.hidden = true;
     },
     clearChatMessages: state => {
       state.chatItemsPast = [];
@@ -570,26 +577,22 @@ const aichatSlice = createSlice({
   },
 });
 
-const getUpdateMessageLocation = (
+const getNotificationLocation = (
   id: number,
   state: AichatState
-): MessageLocation | undefined => {
-  for (const messageListKey of messageListKeys) {
-    const messageList = state[messageListKey];
+): ChatItemLocation | undefined => {
+  for (const chatItemListKey of chatItemListKeys) {
+    const chatItemList = state[chatItemListKey];
 
-    // Only allow removing individual messages that are model updates and error notifications,
-    // as we want to retain user and bot message history
-    // when requesting model responses within a chat session.
+    // Only allow hiding from view individual chat items that are notifications (errors and model updates)
     // If we want to clear all history
     // and start a new session, see clearChatMessages.
-    const itemToRemovePosition = messageList.findIndex(
-      message =>
-        (isModelUpdate(message) && message.id === id) ||
-        (isNotification(message) && message.id === id)
+    const itemToRemovePosition = chatItemList.findIndex(
+      chatItem => isNotification(chatItem) && chatItem.id === id
     );
 
     if (itemToRemovePosition >= 0) {
-      return {index: itemToRemovePosition, messageListKey};
+      return {index: itemToRemovePosition, chatItemListKey};
     }
   }
 };
@@ -623,7 +626,6 @@ export const selectHavePropertiesChanged = (state: RootState) =>
 // Actions not to be used outside of this file
 const {
   addChatMessage,
-  addModelUpdate,
   startSave,
   setChatMessagePending,
   clearChatMessagePending,
@@ -633,7 +635,7 @@ const {
 registerReducers({aichat: aichatSlice.reducer});
 export const {
   addNotification,
-  removeUpdateMessage,
+  hideNotification,
   setNewChatSession,
   setChatSessionId,
   clearChatMessages,

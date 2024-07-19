@@ -1,4 +1,5 @@
 import {LevelProperties} from '@cdo/apps/lab2/types';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {Role} from '../aiComponentLibrary/chatItems/types';
 
@@ -8,24 +9,18 @@ export type AichatInteractionStatusValue = string;
 export interface ChatItem {
   // UTC timestamp in milliseconds
   timestamp: number;
-}
-
-export interface ChatMessage extends ChatItem {
-  chatMessageText: string;
   role: Role;
   status: AichatInteractionStatusValue;
 }
 
-export interface ModelUpdate extends ChatItem {
-  id: number;
-  updatedField: keyof AiCustomizations;
-  updatedValue: AiCustomizations[keyof AiCustomizations];
+export interface ChatMessage extends ChatItem {
+  chatMessageText: string;
 }
 
 export interface Notification extends ChatItem {
   id: number;
   text: string;
-  notificationType: 'error' | 'success';
+  hidden?: boolean;
 }
 
 // Type Predicates: checks if a ChatItem is a given type, and more helpfully,
@@ -34,12 +29,15 @@ export function isChatMessage(item: ChatItem): item is ChatMessage {
   return (item as ChatMessage).chatMessageText !== undefined;
 }
 
-export function isModelUpdate(item: ChatItem): item is ModelUpdate {
-  return (item as ModelUpdate).updatedField !== undefined;
+export function isNotification(item: ChatItem): item is Notification {
+  return (item as Notification).id !== undefined;
 }
 
-export function isNotification(item: ChatItem): item is Notification {
-  return (item as Notification).notificationType !== undefined;
+export function isLoggedChatItem(item: ChatItem) {
+  if (isNotification(item) && item.status === Status.ERROR) {
+    return false;
+  }
+  return true;
 }
 
 export interface ChatApiResponse {

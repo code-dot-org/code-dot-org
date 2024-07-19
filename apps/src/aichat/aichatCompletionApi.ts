@@ -6,18 +6,19 @@ import {
   AichatModelCustomizations,
   ChatApiResponse,
   ChatMessage,
+  ChatItem,
 } from './types';
 
 const CHAT_COMPLETION_URL = '/aichat/chat_completion';
 
 /**
- * This function formats chat completion messages and aichatParameters, sends a POST request
+ * This function formats chat completion messages and aichat parameters, sends a POST request
  * to the aichat completion backend controller, then returns the status of the response
  * and assistant message if successful.
  */
 export async function postAichatCompletionMessage(
   newMessage: ChatMessage,
-  storedMessages: ChatMessage[],
+  storedMessages: ChatItem[],
   aiCustomizations: AiCustomizations,
   aichatContext: AichatContext,
   sessionId?: number

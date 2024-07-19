@@ -9,9 +9,7 @@ import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {timestampToDateTime} from '../redux/utils';
-import {ChatItem, isChatMessage, isModelUpdate, isNotification} from '../types';
-
-import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
+import {ChatItem, isChatMessage, isNotification} from '../types';
 
 const CopyButton: React.FunctionComponent = () => {
   const messages = useSelector(selectAllMessages);
@@ -54,12 +52,6 @@ function chatItemToFormattedString(chatItem: ChatItem) {
         ? '[FLAGGED AS PROFANITY]'
         : chatItem.chatMessageText
     }`;
-  }
-
-  if (isModelUpdate(chatItem)) {
-    return `[${formattedTimestamp} - Model Update] ${
-      AI_CUSTOMIZATIONS_LABELS[chatItem.updatedField]
-    } updated.`;
   }
 
   if (isNotification(chatItem)) {

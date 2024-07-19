@@ -2,6 +2,7 @@
 
 import React, {useCallback, useContext, useEffect} from 'react';
 
+import {Role} from '@cdo/apps/aiComponentLibrary/chatItems/types';
 import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import SegmentedButtons, {
@@ -20,6 +21,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import aichatI18n from '../locale';
 import {
@@ -34,7 +36,10 @@ import {
   setViewMode,
   updateAiCustomization,
 } from '../redux/aichatRedux';
-import {getNewMessageId} from '../redux/utils';
+import {
+  getNewNotificationId,
+  getHiddenClearChatMessagesNotification,
+} from '../redux/utils';
 import {AichatLevelProperties, Notification, ViewMode} from '../types';
 
 import ChatWorkspace from './ChatWorkspace';
@@ -45,9 +50,10 @@ import PresentationView from './presentation/PresentationView';
 import moduleStyles from './aichatView.module.scss';
 
 const getResetModelNotification = (): Notification => ({
-  id: getNewMessageId(),
+  id: getNewNotificationId(),
   text: 'Model customizations and model card information have been reset to default settings.',
-  notificationType: 'success',
+  status: Status.OK,
+  role: Role.NOTIFICATION,
   timestamp: Date.now(),
 });
 
@@ -179,6 +185,8 @@ const AichatView: React.FunctionComponent = () => {
 
   const onClear = useCallback(() => {
     dispatch(clearChatMessages());
+    // Add hidden notification when user clicks on 'Clear chat' button.
+    dispatch(addNotification(getHiddenClearChatMessagesNotification()));
     analyticsReporter.sendEvent(
       EVENTS.CHAT_ACTION,
       {
