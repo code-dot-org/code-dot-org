@@ -94,7 +94,7 @@ class MailJetTest < Minitest::Test
     MailJet.send_template_email(mock_contact, email_config, 'en-US')
   end
 
-  def test_send_template_email_locoalized
+  def test_send_template_email_localized
     to_email = 'fake.email@test.xx'
     to_name = 'Fake Name'
     from_address = 'test@code.org'
