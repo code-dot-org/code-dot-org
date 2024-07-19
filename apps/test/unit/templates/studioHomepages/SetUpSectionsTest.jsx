@@ -6,8 +6,6 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import {UnconnectedSetUpSections as SetUpSections} from '@cdo/apps/templates/studioHomepages/SetUpSections';
 
-
-
 describe('SetUpSections', () => {
   it('renders as expected', () => {
     const wrapper = shallow(<SetUpSections beginEditingSection={() => {}} />);

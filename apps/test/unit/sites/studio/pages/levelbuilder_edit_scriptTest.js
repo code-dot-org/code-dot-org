@@ -1,5 +1,4 @@
 import ReactDOM from 'react-dom';
-import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import initPage from '@cdo/apps/sites/studio/pages/scripts/edit';
 
@@ -12,7 +11,7 @@ describe('the level builder page init script', () => {
 
   let container;
   beforeEach(() => {
-    sinon.spy(ReactDOM, 'render');
+    jest.spyOn(ReactDOM, 'render').mockClear();
     container = document.createElement('div');
     document.body.appendChild(container);
     container.className = 'edit_container';
@@ -43,11 +42,10 @@ describe('the level builder page init script', () => {
   });
 
   afterEach(() => {
-    ReactDOM.render.restore();
+    ReactDOM.render.mockRestore();
   });
 
   it('renders to a div with the edit_container class', () => {
-    expect(ReactDOM.render.calledWith(sinon.match.object, container)).to.be
-      .true;
+    expect(ReactDOM.render).toHaveBeenCalledWith(expect.any(Object), container);
   });
 });

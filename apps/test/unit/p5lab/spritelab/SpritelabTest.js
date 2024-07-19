@@ -1,5 +1,4 @@
 import ReactDOM from 'react-dom';
-import sinon from 'sinon';
 
 import reducers from '@cdo/apps/p5lab/reducers';
 import {
@@ -21,7 +20,6 @@ import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
-
 import setBlocklyGlobal from '../../../util/setupBlocklyGlobal';
 import {setExternalGlobals} from '../../../util/testUtils';
 
@@ -41,8 +39,10 @@ describe('SpriteLab', () => {
   setExternalGlobals();
   setBlocklyGlobal();
 
-  beforeAll(() => sinon.stub(ReactDOM, 'render'));
-  afterAll(() => ReactDOM.render.restore());
+  beforeAll(() =>
+    jest.spyOn(ReactDOM, 'render').mockClear().mockImplementation()
+  );
+  afterAll(() => ReactDOM.render.mockRestore());
 
   beforeEach(stubRedux);
   afterEach(restoreRedux);
@@ -62,9 +62,9 @@ describe('SpriteLab', () => {
       registerReducers({...commonReducers, ...reducers});
       instance = new SpriteLab();
       mockStudioApp = {
-        setCheckForEmptyBlocks: sinon.spy(),
-        setPageConstants: sinon.spy(),
-        init: sinon.spy(),
+        setCheckForEmptyBlocks: jest.fn(),
+        setPageConstants: jest.fn(),
+        init: jest.fn(),
         isUsingBlockly: () => false,
         loadLibraries: () => Promise.resolve(),
       };
@@ -79,25 +79,28 @@ describe('SpriteLab', () => {
       beforeEach(() => {
         instance.injectStudioApp(mockStudioApp);
         registerReducers({...commonReducers, ...reducers});
-        instance.areAnimationsReady_ = sinon.stub().returns(true);
-        instance.p5Wrapper = sinon.spy();
-        instance.p5Wrapper.p5 = sinon.spy();
-        instance.p5Wrapper.p5.allSprites = sinon.spy();
-        instance.p5Wrapper.p5.allSprites.removeSprites = sinon.spy();
-        instance.p5Wrapper.p5.redraw = sinon.spy();
-        instance.JSInterpreter = sinon.spy();
-        instance.JSInterpreter.deinitialize = sinon.spy();
-        instance.initInterpreter = sinon.spy();
-        instance.onP5Setup = sinon.spy();
-        instance.onIsDebuggingSpritesChange = sinon.spy();
-        instance.onStepSpeedChange = sinon.spy();
+        instance.areAnimationsReady_ = jest.fn().mockReturnValue(true);
+        instance.p5Wrapper = jest.fn();
+        instance.p5Wrapper.p5 = jest.fn();
+        instance.p5Wrapper.p5.allSprites = jest.fn();
+        instance.p5Wrapper.p5.allSprites.removeSprites = jest.fn();
+        instance.p5Wrapper.p5.redraw = jest.fn();
+        instance.JSInterpreter = jest.fn();
+        instance.JSInterpreter.deinitialize = jest.fn();
+        instance.initInterpreter = jest.fn();
+        instance.onP5Setup = jest.fn();
+        instance.onIsDebuggingSpritesChange = jest.fn();
+        instance.onStepSpeedChange = jest.fn();
         instance.level = {};
 
-        muteSpy = sinon.stub(Sounds.getSingleton(), 'muteURLs');
+        muteSpy = jest
+          .spyOn(Sounds.getSingleton(), 'muteURLs')
+          .mockClear()
+          .mockImplementation();
       });
 
       afterEach(() => {
-        muteSpy.restore();
+        muteSpy.mockRestore();
       });
 
       it('preview mutes sounds', () => {
@@ -167,15 +170,21 @@ describe('SpriteLab', () => {
       describe('reactToExecutionError', () => {
         let alertSpy;
         beforeEach(() => {
-          alertSpy = sinon.stub(studioApp(), 'displayWorkspaceAlert');
-          sinon.stub(instance, 'getMsg').returns({
-            workspaceAlertError: () => 'translated string',
-          });
+          alertSpy = jest
+            .spyOn(studioApp(), 'displayWorkspaceAlert')
+            .mockClear()
+            .mockImplementation();
+          jest
+            .spyOn(instance, 'getMsg')
+            .mockClear()
+            .mockReturnValue({
+              workspaceAlertError: () => 'translated string',
+            });
         });
 
         afterEach(() => {
-          alertSpy.restore();
-          instance.getMsg.restore();
+          alertSpy.mockRestore();
+          instance.getMsg.mockRestore();
         });
 
         it('displays a workspace alert if there is an executionError message', () => {
@@ -196,7 +205,10 @@ describe('SpriteLab', () => {
           instance.setupReduxSubscribers(store);
           originalMainBlockSpace = Blockly.blockly_.mainBlockSpace;
           Blockly.blockly_.mainBlockSpace = {events: {dispatchEvent: () => {}}};
-          eventSpy = sinon.stub(Blockly.mainBlockSpace.events, 'dispatchEvent');
+          eventSpy = jest
+            .spyOn(Blockly.mainBlockSpace.events, 'dispatchEvent')
+            .mockClear()
+            .mockImplementation();
 
           const initialAnimationList = {
             orderedKeys: ['key1'],
@@ -220,11 +232,11 @@ describe('SpriteLab', () => {
           store.dispatch(
             setInitialAnimationList(initialAnimationList, false, true)
           );
-          eventSpy.reset();
+          eventSpy.mockReset();
         });
 
         afterEach(() => {
-          eventSpy.restore();
+          eventSpy.mockRestore();
           Blockly.blockly_.mainBlockSpace = originalMainBlockSpace;
         });
 

@@ -1,4 +1,4 @@
-import {assert} from './deprecatedChai'; //eslint-disable-line no-restricted-imports
+import {assert} from './deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 var _ = require('lodash');
 

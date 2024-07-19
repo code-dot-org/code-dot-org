@@ -5,7 +5,7 @@ import {READ_ONLY_PROPERTIES} from '@cdo/apps/blockly/constants';
 import initializeGoogleBlocklyWrapper from '@cdo/apps/blockly/googleBlocklyWrapper';
 import '@cdo/apps/flappy/flappy'; // Importing the app forces the test to load Blockly
 
-// eslint-disable-line no-restricted-imports
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Google Blockly Wrapper', () => {
   const cdoBlockly = Blockly;
@@ -26,18 +26,18 @@ describe('Google Blockly Wrapper', () => {
     READ_ONLY_PROPERTIES.forEach(property => {
       expect(() => {
         Blockly[property] = 'NEW VALUE';
-      }).toThrow('Cannot set property');
+      }).to.throw('Cannot set property');
     });
   });
 
   it('getGenerator returns the JS Generator', () => {
-    expect(Blockly.getGenerator()).toEqual(Blockly.blockly_.JavaScript);
+    expect(Blockly.getGenerator()).to.deep.equal(Blockly.blockly_.JavaScript);
   });
 
   it('Setting SNAP_RADIUS also sets CONNECTING_SNAP_RADIUS', () => {
     Blockly.SNAP_RADIUS = 0;
-    expect(Blockly.blockly_.CONNECTING_SNAP_RADIUS).toBe(0);
+    expect(Blockly.blockly_.CONNECTING_SNAP_RADIUS).to.equal(0);
     Blockly.SNAP_RADIUS = 100;
-    expect(Blockly.blockly_.CONNECTING_SNAP_RADIUS).toBe(100);
+    expect(Blockly.blockly_.CONNECTING_SNAP_RADIUS).to.equal(100);
   });
 });

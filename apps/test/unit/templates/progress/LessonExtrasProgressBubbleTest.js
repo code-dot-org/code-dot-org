@@ -6,6 +6,8 @@ import LessonExtrasFlagIcon from '@cdo/apps/templates/progress/LessonExtrasFlagI
 import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
 import * as utils from '@cdo/apps/utils';
 
+import {assert} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 const defaultProps = {
   lessonExtrasUrl: '/extras',
   isPerfect: false,
@@ -24,7 +26,7 @@ describe('LessonExtrasProgressBubble', () => {
   it('renders a link to given url', () => {
     const wrapper = shallow(<LessonExtrasProgressBubble {...defaultProps} />);
 
-    expect(wrapper.props().href).toEqual('/extras');
+    assert.equal(wrapper.props().href, '/extras');
   });
 
   it('preserves query params', () => {
@@ -33,7 +35,7 @@ describe('LessonExtrasProgressBubble', () => {
 
     const wrapper = shallow(<LessonExtrasProgressBubble {...defaultProps} />);
 
-    expect(wrapper.props().href).toEqual('/extras?foo=1');
+    assert.equal(wrapper.props().href, '/extras?foo=1');
   });
 
   it('removes id from query params', () => {
@@ -42,18 +44,18 @@ describe('LessonExtrasProgressBubble', () => {
 
     const wrapper = shallow(<LessonExtrasProgressBubble {...defaultProps} />);
 
-    expect(wrapper.props().href).toEqual('/extras?foo=1');
+    assert.equal(wrapper.props().href, '/extras?foo=1');
   });
 
   it('renders a small flag icon when not selected', () => {
     const wrapper = shallow(<LessonExtrasProgressBubble {...defaultProps} />);
-    expect(16).toEqual(wrapper.find(LessonExtrasFlagIcon).props().size);
+    assert.equal(16, wrapper.find(LessonExtrasFlagIcon).props().size);
   });
 
   it('renders a large flag icon when selected', () => {
     const wrapper = shallow(
       <LessonExtrasProgressBubble {...defaultProps} isSelected={true} />
     );
-    expect(24).toEqual(wrapper.find(LessonExtrasFlagIcon).props().size);
+    assert.equal(24, wrapper.find(LessonExtrasFlagIcon).props().size);
   });
 });

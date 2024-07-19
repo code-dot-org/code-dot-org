@@ -20,7 +20,7 @@ import color from '@cdo/apps/util/color';
 import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-// eslint-disable-line no-restricted-imports
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const TITLE = '1';
 
@@ -132,49 +132,49 @@ describe('ProgressTableLevelBubble', () => {
 
   it('renders a link', () => {
     const wrapper = shallow(<ProgressTableLevelBubble {...defaultProps} />);
-    expect(wrapper.find(BubbleLink)).toHaveLength(1);
+    expect(wrapper.find(BubbleLink)).to.have.lengthOf(1);
   });
 
   it('renders default bubble with circle shape', () => {
     const wrapper = getFirstRenderedBasicBubble();
-    expect(wrapper.props().shape).toBe(BubbleShape.circle);
+    expect(wrapper.props().shape).to.equal(BubbleShape.circle);
   });
 
   it('renders concept bubble with diamond shape', () => {
     const wrapper = getFirstRenderedBasicBubble({isConcept: true});
-    expect(wrapper.props().shape).toBe(BubbleShape.diamond);
+    expect(wrapper.props().shape).to.equal(BubbleShape.diamond);
   });
 
   it('renders unplugged bubble with pill shape', () => {
     const wrapper = getFirstRenderedBasicBubble({isUnplugged: true});
-    expect(wrapper.props().shape).toBe(BubbleShape.pill);
+    expect(wrapper.props().shape).to.equal(BubbleShape.pill);
   });
 
   it('shows correct text in unplugged bubble', () => {
     const wrapper = getFirstRenderedBasicBubble({isUnplugged: true});
-    expect(wrapper.text()).toBe(i18n.unpluggedActivity());
+    expect(wrapper.text()).to.equal(i18n.unpluggedActivity());
   });
 
   it('shows title in normal bubble', () => {
     const wrapper = getFirstRenderedBasicBubble();
-    expect(wrapper.text()).toBe(TITLE);
+    expect(wrapper.text()).to.equal(TITLE);
   });
 
   it('shows title in concept bubble', () => {
     const wrapper = getFirstRenderedBasicBubble({isConcept: true});
-    expect(wrapper.text()).toBe(TITLE);
+    expect(wrapper.text()).to.equal(TITLE);
   });
 
   it('shows title in letter bubble', () => {
     const wrapper = getFirstRenderedBasicBubble({
       bubbleSize: BubbleSize.letter,
     });
-    expect(wrapper.text()).toBe(TITLE);
+    expect(wrapper.text()).to.equal(TITLE);
   });
 
   it('does not show title in dot bubble', () => {
     const wrapper = getFirstRenderedBasicBubble({bubbleSize: BubbleSize.dot});
-    expect(wrapper.text()).toBe('');
+    expect(wrapper.text()).to.equal('');
   });
 
   it('shows correct icon when locked', () => {
@@ -182,22 +182,22 @@ describe('ProgressTableLevelBubble', () => {
       isLocked: true,
     });
     const icon = wrapper.find(FontAwesome);
-    expect(icon).toHaveLength(1);
-    expect(icon.at(0).props().icon).toBe('lock');
+    expect(icon).to.have.lengthOf(1);
+    expect(icon.at(0).props().icon).to.equal('lock');
   });
 
   it('shows correct icon for bonus', () => {
     const wrapper = getFirstRenderedBasicBubble({isBonus: true});
     const icon = wrapper.find(FontAwesome);
-    expect(icon).toHaveLength(1);
-    expect(icon.at(0).props().icon).toBe('flag-checkered');
+    expect(icon).to.have.lengthOf(1);
+    expect(icon.at(0).props().icon).to.equal('flag-checkered');
   });
 
   it('shows correct icon for paired', () => {
     const wrapper = getFirstRenderedBasicBubble({isPaired: true});
     const icon = wrapper.find(FontAwesome);
-    expect(icon).toHaveLength(1);
-    expect(icon.at(0).props().icon).toBe('users');
+    expect(icon).to.have.lengthOf(1);
+    expect(icon.at(0).props().icon).to.equal('users');
   });
 
   it('only shows paired icon for bonus + paired', () => {
@@ -206,21 +206,21 @@ describe('ProgressTableLevelBubble', () => {
       isPaired: true,
     });
     const icon = wrapper.find(FontAwesome);
-    expect(icon).toHaveLength(1);
-    expect(icon.at(0).props().icon).toBe('users');
+    expect(icon).to.have.lengthOf(1);
+    expect(icon.at(0).props().icon).to.equal('users');
   });
 
   Object.keys(borderColors).forEach(status => {
     it(`shows correct border color for status ${status} - not assessment`, () => {
       const style = basicBubbleStyleForStatus(status);
-      expect(style.borderColor).toBe(borderColors[status]);
+      expect(style.borderColor).to.equal(borderColors[status]);
     });
   });
 
   Object.keys(backgroundColors).forEach(status => {
     it(`shows correct background color for status ${status} - not assessment`, () => {
       const style = basicBubbleStyleForStatus(status);
-      expect(style.backgroundColor).toBe(backgroundColors[status]);
+      expect(style.backgroundColor).to.equal(backgroundColors[status]);
     });
   });
 
@@ -229,7 +229,7 @@ describe('ProgressTableLevelBubble', () => {
       const style = basicBubbleStyleForStatus(status, {
         levelKind: LevelKind.assessment,
       });
-      expect(style.borderColor).toBe(assessmentBorders[status]);
+      expect(style.borderColor).to.equal(assessmentBorders[status]);
     });
   });
 
@@ -238,7 +238,7 @@ describe('ProgressTableLevelBubble', () => {
       const style = basicBubbleStyleForStatus(status, {
         levelKind: LevelKind.assessment,
       });
-      expect(style.backgroundColor).toBe(assessmentBackgrounds[status]);
+      expect(style.backgroundColor).to.equal(assessmentBackgrounds[status]);
     });
   });
 
@@ -247,49 +247,49 @@ describe('ProgressTableLevelBubble', () => {
       const wrapper = getFirstRenderedBasicBubble({
         reviewState: ReviewStates.keepWorking,
       });
-      expect(wrapper.find(KeepWorkingBadge)).toHaveLength(1);
+      expect(wrapper.find(KeepWorkingBadge)).to.have.lengthOf(1);
     });
 
     it('shows a badge for ReviewState.awaitingReview', () => {
       const wrapper = getFirstRenderedBasicBubble({
         reviewState: ReviewStates.awaitingReview,
       });
-      expect(wrapper.find(KeepWorkingBadge)).toHaveLength(1);
+      expect(wrapper.find(KeepWorkingBadge)).to.have.lengthOf(1);
     });
 
     it('does not show a badge for ReviewState.completed', () => {
       const wrapper = getFirstRenderedBasicBubble({
         reviewState: ReviewStates.completed,
       });
-      expect(wrapper.find(KeepWorkingBadge)).toHaveLength(0);
+      expect(wrapper.find(KeepWorkingBadge)).to.be.empty;
     });
 
     it('does not show a badge if no review state', () => {
       const wrapper = getFirstRenderedBasicBubble({
         reviewState: undefined,
       });
-      expect(wrapper.find(KeepWorkingBadge)).toHaveLength(0);
+      expect(wrapper.find(KeepWorkingBadge)).to.be.empty;
     });
   });
 
   describe('caching', () => {
     it('renders raw HTML instead of component tree', () => {
       const wrapper = mount(<ProgressTableLevelBubble {...defaultProps} />);
-      expect(wrapper.find('div').props().dangerouslySetInnerHTML).toBeDefined();
+      expect(wrapper.find('div').props().dangerouslySetInnerHTML).to.exist;
     });
 
     it('only caches one element when rendering two identical bubbles', () => {
       mount(<ProgressTableLevelBubble {...defaultProps} />);
       mount(<ProgressTableLevelBubble {...defaultProps} />);
-      expect(renderPropsSpy.calledOnce).toBe(true);
-      expect(getCacheSize()).toBe(1);
+      expect(renderPropsSpy.calledOnce).to.be.true;
+      expect(getCacheSize()).to.equal(1);
     });
 
     it('caches two elements when rendering two different bubbles', () => {
       mount(<ProgressTableLevelBubble {...defaultProps} />);
       mount(<ProgressTableLevelBubble {...defaultProps} isUnplugged={true} />);
-      expect(renderPropsSpy.calledTwice).toBe(true);
-      expect(getCacheSize()).toBe(2);
+      expect(renderPropsSpy.calledTwice).to.be.true;
+      expect(getCacheSize()).to.equal(2);
     });
 
     it('renders the same cached html for different bubbles that look the same', () => {
@@ -300,11 +300,11 @@ describe('ProgressTableLevelBubble', () => {
       const wrapperB = mount(
         <ProgressTableLevelBubble {...defaultProps} title="2" isPaired={true} />
       );
-      expect(renderPropsSpy.calledOnce).toBe(true);
-      expect(getCacheSize()).toBe(1);
-      expect(wrapperA.find('div').props().dangerouslySetInnerHTML.__html).toBe(
-        wrapperB.find('div').props().dangerouslySetInnerHTML.__html
-      );
+      expect(renderPropsSpy.calledOnce).to.be.true;
+      expect(getCacheSize()).to.equal(1);
+      expect(
+        wrapperA.find('div').props().dangerouslySetInnerHTML.__html
+      ).to.equal(wrapperB.find('div').props().dangerouslySetInnerHTML.__html);
     });
 
     it('only caches one element when rendering same bubbles with different urls', () => {
@@ -312,8 +312,8 @@ describe('ProgressTableLevelBubble', () => {
       mount(
         <ProgressTableLevelBubble {...defaultProps} url={'/foo/bar/baz'} />
       );
-      expect(renderPropsSpy.calledOnce).toBe(true);
-      expect(getCacheSize()).toBe(1);
+      expect(renderPropsSpy.calledOnce).to.be.true;
+      expect(getCacheSize()).to.equal(1);
     });
   });
 });

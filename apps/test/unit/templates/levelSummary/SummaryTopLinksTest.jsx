@@ -63,7 +63,7 @@ describe('SummaryTopLinks', () => {
     const wrapper = setUpWrapper();
 
     // Back link, but no next link.
-    expect(wrapper.find(`.${styles.navLinks} a`).length).to.eq(1);
+    expect(wrapper.find(`.${styles.navLinks} a`).length).toBe(1);
   });
 
   it('applies correct classes when rtl', () => {
@@ -84,7 +84,7 @@ describe('SummaryTopLinks', () => {
       },
     });
 
-    expect(wrapper.find(`.${styles.navLinkRight}`).length).to.eq(0);
-    expect(wrapper.find(`.${styles.navLinkLeft}`).length).to.eq(1);
+    expect(wrapper.find(`.${styles.navLinkRight}`).length).toBe(0);
+    expect(wrapper.find(`.${styles.navLinkLeft}`).length).toBe(1);
   });
 });

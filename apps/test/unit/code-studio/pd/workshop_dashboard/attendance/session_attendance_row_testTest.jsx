@@ -46,7 +46,7 @@ describe('SessionAttendanceRow', () => {
           </td>
         </tr>
       )
-    ).to.be.ok;
+    ).toBeTruthy();
   });
 
   it('renders attended row', () => {
@@ -73,6 +73,6 @@ describe('SessionAttendanceRow', () => {
           </td>
         </tr>
       )
-    ).to.be.ok;
+    ).toBeTruthy();
   });
 });

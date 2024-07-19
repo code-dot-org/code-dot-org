@@ -11,7 +11,7 @@ import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
 import {
   expect,
   // assert
-} from '../../../util/reconfiguredChai';
+} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 import {courses} from './homepagesTestData';
 

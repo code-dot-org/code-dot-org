@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom';
-import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import GameLab from '@cdo/apps/p5lab/gamelab/GameLab';
@@ -13,7 +13,7 @@ import {
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import Sounds from '@cdo/apps/Sounds';
 
-
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {setExternalGlobals} from '../../util/testUtils';
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
@@ -63,7 +63,7 @@ describe('GameLab', () => {
     });
 
     it('Must have studioApp injected first', () => {
-      expect(() => instance.init({})).toThrow('GameLab requires a StudioApp');
+      expect(() => instance.init({})).to.throw('GameLab requires a StudioApp');
     });
 
     describe('After being injected with a studioApp instance', () => {
@@ -95,7 +95,7 @@ describe('GameLab', () => {
 
         it('Execute unmutes URLs', () => {
           instance.execute();
-          expect(Sounds.getSingleton().unmuteURLs).toHaveBeenCalledTimes(1);
+          expect(Sounds.getSingleton().unmuteURLs).to.have.been.calledOnce;
         });
       });
 
@@ -109,18 +109,18 @@ describe('GameLab', () => {
                 editCode: false,
               },
             })
-          ).to.not.throw;
-          expect(() => instance.init(config)).to.not.throw;
+          ).not.to.throw;
+          expect(() => instance.init(config)).not.to.throw;
         });
 
         describe('the expandDebugger level option', () => {
           it('will leave the debugger closed when false', () => {
-            expect(config.level.expandDebugger).not.toBe(true);
+            expect(config.level.expandDebugger).not.to.be.true;
             instance.init(config);
-            expect(isDebuggerOpen(getStore().getState())).toBe(false);
+            expect(isDebuggerOpen(getStore().getState())).to.be.false;
           });
           it('will open the debugger when true', () => {
-            expect(isDebuggerOpen(getStore().getState())).toBe(false);
+            expect(isDebuggerOpen(getStore().getState())).to.be.false;
             instance.init({
               ...config,
               level: {
@@ -128,7 +128,7 @@ describe('GameLab', () => {
                 expandDebugger: true,
               },
             });
-            expect(isDebuggerOpen(getStore().getState())).toBe(true);
+            expect(isDebuggerOpen(getStore().getState())).to.be.true;
           });
         });
       });

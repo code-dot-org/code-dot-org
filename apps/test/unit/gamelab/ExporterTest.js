@@ -12,6 +12,8 @@ import pageConstantsReducer, {
   setPageConstants,
 } from '@cdo/apps/redux/pageConstants';
 
+import {assert, expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 var testUtils = require('../../util/testUtils');
 
 const emptyAnimationOpts = {
@@ -138,11 +140,11 @@ describe('The Gamelab Exporter,', function () {
       );
       zipPromise.then(
         function () {
-          expect(false).toBe(true);
+          assert.fail('Expected zipPromise not to resolve');
           done();
         },
         function (error) {
-          expect(error.message).toEqual('failed to fetch assets');
+          assert.equal(error.message, 'failed to fetch assets');
           done();
         }
       );
@@ -183,7 +185,7 @@ describe('The Gamelab Exporter,', function () {
       it('should contain a bunch of files', () => {
         const files = Object.keys(zipFiles);
         files.sort();
-        expect(files).toEqual([
+        assert.deepEqual(files, [
           'my-app/',
           'my-app/assets/',
           'my-app/assets/bar.png',
@@ -200,25 +202,26 @@ describe('The Gamelab Exporter,', function () {
       });
 
       it('should contain a p5.js file', function () {
-        expect('my-app/p5.js' in zipFiles).toBeTruthy();
-        expect(zipFiles['my-app/p5.js']).toEqual(P5_JS_CONTENT);
+        assert.property(zipFiles, 'my-app/p5.js');
+        assert.equal(zipFiles['my-app/p5.js'], P5_JS_CONTENT);
       });
 
       it('should contain a p5.play.js file', function () {
-        expect('my-app/p5.play.js' in zipFiles).toBeTruthy();
-        expect(zipFiles['my-app/p5.play.js']).toEqual(P5_PLAY_JS_CONTENT);
+        assert.property(zipFiles, 'my-app/p5.play.js');
+        assert.equal(zipFiles['my-app/p5.play.js'], P5_PLAY_JS_CONTENT);
       });
 
       it('should contain a gamelab-api.js file', function () {
-        expect('my-app/gamelab-api.js' in zipFiles).toBeTruthy();
-        expect(zipFiles['my-app/gamelab-api.js']).toEqual(
+        assert.property(zipFiles, 'my-app/gamelab-api.js');
+        assert.equal(
+          zipFiles['my-app/gamelab-api.js'],
           `${WEBPACK_RUNTIME_JS_CONTENT}\n${GAMELAB_API_MIN_JS_CONTENT}`
         );
       });
 
       it('should contain a gamelab.css file', function () {
-        expect('my-app/gamelab.css' in zipFiles).toBeTruthy();
-        expect(zipFiles['my-app/gamelab.css']).toEqual(GAMELAB_CSS_CONTENT);
+        assert.property(zipFiles, 'my-app/gamelab.css');
+        assert.equal(zipFiles['my-app/gamelab.css'], GAMELAB_CSS_CONTENT);
       });
 
       describe('the index.html file', () => {
@@ -229,34 +232,40 @@ describe('The Gamelab Exporter,', function () {
         });
 
         it('should have a #sketch element', () => {
-          expect(el.querySelector('#sketch')).not.toBeNull();
+          assert.isNotNull(el.querySelector('#sketch'), 'no #sketch element');
         });
 
         it('should have a #soft-buttons element', () => {
-          expect(el.querySelector('#soft-buttons')).not.toBeNull();
+          assert.isNotNull(
+            el.querySelector('#soft-buttons'),
+            'no #soft-buttons element'
+          );
         });
 
         it('should have a #studio-dpad-container element', () => {
-          expect(el.querySelector('#studio-dpad-container')).not.toBeNull();
+          assert.isNotNull(
+            el.querySelector('#studio-dpad-container'),
+            'no #studio-dpad-container element'
+          );
         });
       });
 
       it('should contain a code.js file', function () {
-        expect('my-app/code.js' in zipFiles).toBeTruthy();
+        assert.property(zipFiles, 'my-app/code.js');
       });
 
       it('should contain the asset files used by the project', function () {
-        expect('my-app/assets/foo.png' in zipFiles).toBeTruthy();
-        expect('my-app/assets/bar.png' in zipFiles).toBeTruthy();
-        expect('my-app/assets/zoo.mp3' in zipFiles).toBeTruthy();
+        assert.property(zipFiles, 'my-app/assets/foo.png');
+        assert.property(zipFiles, 'my-app/assets/bar.png');
+        assert.property(zipFiles, 'my-app/assets/zoo.mp3');
       });
 
       it('should contain the sound library files referenced by the project', function () {
-        expect('my-app/assets/default.mp3' in zipFiles).toBeTruthy();
+        assert.property(zipFiles, 'my-app/assets/default.mp3');
       });
 
       it('should rewrite urls in the code to point to the correct asset files', function () {
-        expect(zipFiles['my-app/code.js']).toContain(
+        expect(zipFiles['my-app/code.js']).to.include(
           'console.log("hello");\nplaySound("assets/zoo.mp3");\nplaySound("assets/default.mp3");'
         );
       });

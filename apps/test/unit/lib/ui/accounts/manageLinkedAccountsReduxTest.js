@@ -5,6 +5,8 @@ import manageLinkedAccounts, {
   convertServerAuthOptions,
 } from '@cdo/apps/lib/ui/accounts/manageLinkedAccountsRedux';
 
+import {assert} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 describe('manageLinkedAccountsRedux', () => {
   let server;
 
@@ -28,10 +30,10 @@ describe('manageLinkedAccountsRedux', () => {
       };
       const initializeStateAction = initializeState(state);
       const newState = manageLinkedAccounts(null, initializeStateAction);
-      expect(newState.authenticationOptions).toEqual(authenticationOptions);
-      expect(newState.userHasPassword).toBeTruthy();
-      expect(newState.isGoogleClassroomStudent).toBeTruthy();
-      expect(newState.isCleverStudent).toBeTruthy();
+      assert.deepEqual(newState.authenticationOptions, authenticationOptions);
+      assert(newState.userHasPassword);
+      assert(newState.isGoogleClassroomStudent);
+      assert(newState.isCleverStudent);
     });
   });
 
@@ -51,7 +53,7 @@ describe('manageLinkedAccountsRedux', () => {
       const convertedAuthOptions = convertServerAuthOptions(
         authenticationOptions
       );
-      expect(convertedAuthOptions).toEqual(expectedAuthOptions);
+      assert.deepEqual(convertedAuthOptions, expectedAuthOptions);
     });
   });
 });

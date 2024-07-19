@@ -11,8 +11,8 @@ describe('SummaryTeacherInstructions', () => {
       />
     );
 
-    expect(wrapper.find('SafeMarkdown').length).to.eq(1);
-    expect(wrapper.find('SafeMarkdown').at(0).text()).to.eq(
+    expect(wrapper.find('SafeMarkdown').length).toBe(1);
+    expect(wrapper.find('SafeMarkdown').at(0).text()).toBe(
       'test teacher markdown'
     );
   });

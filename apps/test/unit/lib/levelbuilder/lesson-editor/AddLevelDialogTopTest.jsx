@@ -4,6 +4,8 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {UnconnectedAddLevelDialogTop as AddLevelDialogTop} from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialogTop';
 
+import {assert, expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 import {searchOptions} from './activitiesTestData';
 
 describe('AddLevelDialogTop', () => {
@@ -66,6 +68,6 @@ describe('AddLevelDialogTop', () => {
     expect(!wrapper.exists('Connect(AddLevelFilters)'));
     expect(!wrapper.exists('AddLevelTable'));
     expect(wrapper.exists('FontAwesome'));
-    expect(wrapper.findOne('FontAwesome').props.className).toEqual('fa-spin');
+    assert.equal(wrapper.findOne('FontAwesome').props.className, 'fa-spin');
   });
 });

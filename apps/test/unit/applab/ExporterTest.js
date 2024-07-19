@@ -13,6 +13,8 @@ import pageConstantsReducer, {
   setPageConstants,
 } from '@cdo/apps/redux/pageConstants';
 
+import {assert, expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 const assets = require('@cdo/apps/code-studio/assets');
 
 var testUtils = require('../../util/testUtils');
@@ -284,11 +286,11 @@ describe('Applab Exporter,', function () {
       );
       zipPromise.then(
         function () {
-          expect(false).toBe(true);
+          assert.fail('Expected zipPromise not to resolve');
           done();
         },
         function (error) {
-          expect(error.message).toEqual('failed to fetch assets');
+          assert.equal(error.message, 'failed to fetch assets');
           done();
         }
       );
@@ -338,7 +340,7 @@ describe('Applab Exporter,', function () {
       it('should contain a bunch of files', () => {
         const files = Object.keys(zipFiles);
         files.sort();
-        expect(files).toEqual([
+        assert.deepEqual(files, [
           'my-app/',
           'my-app/README.txt',
           'my-app/applab/',
@@ -366,15 +368,17 @@ describe('Applab Exporter,', function () {
       });
 
       it('should contain an applab-api.js file', function () {
-        expect('my-app/applab/applab-api.js' in zipFiles).toBeTruthy();
-        expect(zipFiles['my-app/applab/applab-api.js']).toEqual(
+        assert.property(zipFiles, 'my-app/applab/applab-api.js');
+        assert.equal(
+          zipFiles['my-app/applab/applab-api.js'],
           `${WEBPACK_RUNTIME_JS_CONTENT}\n${getAppOptionsFile()}\n${COMMON_LOCALE_JS_CONTENT}\n${APPLAB_LOCALE_JS_CONTENT}\n${APPLAB_API_JS_CONTENT}`
         );
       });
 
       it('should contain an applab.css file', function () {
-        expect('my-app/applab/applab.css' in zipFiles).toBeTruthy();
-        expect(zipFiles['my-app/applab/applab.css']).toEqual(
+        assert.property(zipFiles, 'my-app/applab/applab.css');
+        assert.equal(
+          zipFiles['my-app/applab/applab.css'],
           NEW_APPLAB_CSS_CONTENT
         );
       });
@@ -387,55 +391,69 @@ describe('Applab Exporter,', function () {
         });
 
         it('should have a #divApplab element', () => {
-          expect(el.querySelector('#divApplab')).not.toBeNull();
+          assert.isNotNull(
+            el.querySelector('#divApplab'),
+            'no #divApplab element'
+          );
           const innerTextLines = el
             .querySelector('#divApplab')
             .textContent.trim()
             .split('\n');
-          expect(innerTextLines[0].trim()).toEqual('Click Me!');
-          expect(innerTextLines[1].trim()).toEqual('1');
+          assert.equal(
+            innerTextLines[0].trim(),
+            'Click Me!',
+            '#divApplab inner text first line'
+          );
+          assert.equal(
+            innerTextLines[1].trim(),
+            '1',
+            '#divApplab inner text second line'
+          );
         });
       });
 
       it('should contain a style.css file', function () {
-        expect('my-app/style.css' in zipFiles).toBeTruthy();
+        assert.property(zipFiles, 'my-app/style.css');
       });
 
       it('style.css should contain the fontawesome definition', () => {
-        expect(zipFiles['my-app/style.css']).toContain(STYLE_CSS_CONTENT);
+        assert.include(zipFiles['my-app/style.css'], STYLE_CSS_CONTENT);
       });
 
       it('should contain a code.js file', function () {
-        expect('my-app/code.js' in zipFiles).toBeTruthy();
+        assert.property(zipFiles, 'my-app/code.js');
       });
 
       it('should contain a README.txt file', function () {
-        expect('my-app/README.txt' in zipFiles).toBeTruthy();
+        assert.property(zipFiles, 'my-app/README.txt');
       });
 
       it('should contain the asset files used by the project', function () {
-        expect('my-app/assets/foo.png' in zipFiles).toBeTruthy();
-        expect('my-app/assets/bar.png' in zipFiles).toBeTruthy();
-        expect('my-app/assets/zoo.mp3' in zipFiles).toBeTruthy();
+        assert.property(zipFiles, 'my-app/assets/foo.png');
+        assert.property(zipFiles, 'my-app/assets/bar.png');
+        assert.property(zipFiles, 'my-app/assets/zoo.mp3');
       });
 
       it('should contain the sound library files referenced by the project', function () {
-        expect('my-app/assets/default.mp3' in zipFiles).toBeTruthy();
+        assert.property(zipFiles, 'my-app/assets/default.mp3');
       });
 
       it('should rewrite urls in html to point to the correct asset files', function () {
         var el = document.createElement('html');
         el.innerHTML = zipFiles['my-app/index.html'];
-        expect(el.querySelector('#firstImage').getAttribute('src')).toEqual(
+        assert.equal(
+          el.querySelector('#firstImage').getAttribute('src'),
           'assets/foo.png'
         );
-        expect(el.querySelector('#secondImage').getAttribute('src')).toEqual(
+        assert.equal(
+          el.querySelector('#secondImage').getAttribute('src'),
           'assets/foo.png'
         );
       });
 
       it('should rewrite urls in the code to point to the correct asset files', function () {
-        expect(zipFiles['my-app/code.js']).toEqual(
+        assert.equal(
+          zipFiles['my-app/code.js'],
           'console.log("hello");\nplaySound("assets/zoo.mp3");\nplaySound("assets/default.mp3");'
         );
       });
@@ -547,7 +565,7 @@ describe('Applab Exporter,', function () {
           `,
         `<div><div class="screen" id="screen1" tabindex="1"></div></div>`,
         () => {
-          expect(window.write).toHaveBeenCalledWith([
+          expect(window.write).to.have.been.calledWith([
             'a',
             'b',
             'c',
@@ -575,7 +593,8 @@ describe('getAppOptionsFile helper function', () => {
       },
       keyMissingFromAllowlist: 'should not show up',
     });
-    expect(getAppOptionsFile()).toEqual(
+    assert.equal(
+      getAppOptionsFile(),
       'window.APP_OPTIONS = {"level":{"skin":"this should show up"},"channel":"this should be there","readonlyWorkspace":true};'
     );
   });

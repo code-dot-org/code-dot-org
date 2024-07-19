@@ -5,7 +5,7 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 import {UnconnectedProjectRemix as ProjectRemix} from '@cdo/apps/code-studio/components/header/ProjectRemix';
 import * as utils from '@cdo/apps/utils';
 
-// eslint-disable-line no-restricted-imports
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 const defaultProps = {
@@ -47,7 +47,7 @@ describe('ProjectRemix', () => {
 
     const wrapper = shallow(<ProjectRemix {...defaultProps} />);
     wrapper.simulate('click');
-    expect(window.dashboard.project.serverSideRemix.calledOnce).toBe(true);
+    expect(window.dashboard.project.serverSideRemix.calledOnce).to.be.true;
 
     window.dashboard.project.getCurrentId.restore();
     window.dashboard.project.canServerSideRemix.restore();
@@ -59,10 +59,9 @@ describe('ProjectRemix', () => {
 
     const wrapper = shallow(<ProjectRemix {...defaultProps} />);
     wrapper.simulate('click');
-    expect(utils.navigateToHref.calledOnce).toBe(true);
-    expect(
-      utils.navigateToHref.calledWith('/users/sign_in?user_return_to=/')
-    ).toBe(true);
+    expect(utils.navigateToHref.calledOnce).to.be.true;
+    expect(utils.navigateToHref.calledWith('/users/sign_in?user_return_to=/'))
+      .to.be.true;
 
     utils.navigateToHref.restore();
   });
@@ -72,10 +71,9 @@ describe('ProjectRemix', () => {
 
     const wrapper = shallow(<ProjectRemix {...defaultProps} isSignedIn />);
     wrapper.simulate('click');
-    expect(window.dashboard.project.copy.calledOnce).toBe(true);
-    expect(
-      window.dashboard.project.copy.calledWith('Remix: Test Project')
-    ).toBe(true);
+    expect(window.dashboard.project.copy.calledOnce).to.be.true;
+    expect(window.dashboard.project.copy.calledWith('Remix: Test Project')).to
+      .be.true;
 
     window.dashboard.project.copy.restore();
   });

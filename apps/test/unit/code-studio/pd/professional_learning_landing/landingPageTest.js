@@ -344,7 +344,7 @@ describe('LandingPage', () => {
       screen.queryByText(
         i18n.enrollmentCelebrationBody({workshopName: 'a new workshop'})
       )
-    ).to.be.null;
+    ).toBeNull();
   });
 
   it('page shows success dialog when redirected here from successful enrollment', () => {

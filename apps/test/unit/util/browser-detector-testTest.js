@@ -6,6 +6,8 @@ import {
   getBrowserName,
 } from '@cdo/apps/util/browser-detector';
 
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 describe('Browser Detector', () => {
   let userAgentStub;
   let appVersionStub;

@@ -7,6 +7,8 @@ import {SessionAttendance} from '@cdo/apps/code-studio/pd/workshop_dashboard/att
 import Permission from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 import {COURSE_CSF} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshopConstants';
 
+import {expect} from '../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 const FAKE_WORKSHOP_ID = 11;
 const FAKE_SESSION_ID = 22;
 const FAKE_COURSE_NAME = 'Computer Science Postulates';

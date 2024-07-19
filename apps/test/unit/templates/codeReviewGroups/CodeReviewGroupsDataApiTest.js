@@ -3,7 +3,7 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 
-// eslint-disable-line no-restricted-imports
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('CodeReviewGroupsDataApi', () => {
   const sectionId = 101;
@@ -66,7 +66,7 @@ describe('CodeReviewGroupsDataApi', () => {
       `/api/v1/sections/${sectionId}/code_review_groups`
     );
 
-    expect(clientGroupsList).toEqual(convertedResponse);
+    expect(clientGroupsList).to.deep.equal(convertedResponse);
   });
 
   it('makes a POST request with converted group data when calling setCodeReviewGroups', () => {
@@ -78,7 +78,7 @@ describe('CodeReviewGroupsDataApi', () => {
     );
 
     const data = postJSON.getCall(0).args[1];
-    expect(serverGroupsResponse).toEqual(data);
+    expect(serverGroupsResponse).to.deep.equal(data);
   });
 
   it('makes a POST request with enabled value when calling setCodeReviewEnabled', () => {

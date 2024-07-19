@@ -6,7 +6,7 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 
-// eslint-disable-line no-restricted-imports
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('ResourceList', () => {
   it('displays resources in bulleted list', () => {
@@ -31,7 +31,7 @@ describe('ResourceList', () => {
         pageType="teacher-lesson-plan"
       />
     );
-    expect(wrapper.find('li').length).toBe(2);
+    expect(wrapper.find('li').length).to.equal(2);
   });
 
   it('displays resource with download link', () => {
@@ -49,7 +49,7 @@ describe('ResourceList', () => {
         pageType="teacher-lesson-plan"
       />
     );
-    expect(wrapper.find('li').at(0).contains('Download')).toBe(true);
+    expect(wrapper.find('li').at(0).contains('Download')).to.true;
   });
 
   it('displays resource without download link', () => {
@@ -66,7 +66,7 @@ describe('ResourceList', () => {
         pageType="teacher-lesson-plan"
       />
     );
-    expect(wrapper.find('li').at(0).contains('Download')).toBe(false);
+    expect(wrapper.find('li').at(0).contains('Download')).to.false;
   });
 
   it('sends amplitude event when resource is clicked', () => {
@@ -87,12 +87,12 @@ describe('ResourceList', () => {
     );
 
     const num_links = 5;
-    expect(wrapper.find('a').length).toBe(num_links);
+    expect(wrapper.find('a').length).to.equal(num_links);
     wrapper.find('a').forEach(link => {
       link.simulate('click', {preventDefault() {}});
     });
-    expect(analyticsSpy.callCount).toBe(num_links);
-    expect(analyticsSpy.getCall(0).firstArg).toBe(
+    expect(analyticsSpy.callCount).to.equal(num_links);
+    expect(analyticsSpy.getCall(0).firstArg).to.equal(
       EVENTS.LESSON_RESOURCE_LINK_VISITED_EVENT
     );
     analyticsSpy.restore();

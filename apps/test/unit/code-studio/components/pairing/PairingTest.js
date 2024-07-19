@@ -4,7 +4,7 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import Pairing from '@cdo/apps/code-studio/components/pairing/Pairing.jsx';
 
-// eslint-disable-line no-restricted-imports
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Pairing component', function () {
   function createDomElement() {
@@ -26,12 +26,12 @@ describe('Pairing component', function () {
   }
 
   function verifyStartingValues(component, student = 0, select = 0, stop = 0) {
-    expect(component.find('Pairing').length).toBe(1);
-    expect(component.find('.selected').length).toBe(0);
-    expect(component.find('.addPartners').length).toBe(0);
-    expect(component.find('.student').length).toBe(student);
-    expect(component.find('select').length).toBe(select);
-    expect(component.find('.stop').length).toBe(stop);
+    expect(component.find('Pairing').length).to.equal(1);
+    expect(component.find('.selected').length).to.equal(0);
+    expect(component.find('.addPartners').length).to.equal(0);
+    expect(component.find('.student').length).to.equal(student);
+    expect(component.find('select').length).to.equal(select);
+    expect(component.find('.stop').length).to.equal(stop);
   }
 
   describe('handles http errors', () => {
@@ -44,12 +44,12 @@ describe('Pairing component', function () {
     it('when the GET request fails', () => {
       server = setupFakeAjax('', 500);
       component = createDomElement();
-      expect(component.state().loading).toBe(true);
+      expect(component.state().loading).to.be.true;
       server.respond();
       component.update();
 
-      expect(component.state().hasError).toBe(true);
-      expect(component.state().loading).toBe(false);
+      expect(component.state().hasError).to.be.true;
+      expect(component.state().loading).to.be.false;
     });
   });
 
@@ -84,32 +84,32 @@ describe('Pairing component', function () {
     });
 
     it('in handleAddPartners', () => {
-      expect(component.state().hasError).toBe(false);
-      expect(component.state().loading).toBe(false);
+      expect(component.state().hasError).to.be.false;
+      expect(component.state().loading).to.be.false;
 
       component.instance().handleAddPartners([11]);
       component.update();
-      expect(component.state().loading).toBe(true);
-      expect(component.state().hasError).toBe(false);
+      expect(component.state().loading).to.be.true;
+      expect(component.state().hasError).to.be.false;
       server.respond();
       component.update();
 
-      expect(component.state().hasError).toBe(true);
-      expect(component.state().loading).toBe(false);
+      expect(component.state().hasError).to.be.true;
+      expect(component.state().loading).to.be.false;
     });
 
     it('in handleStop', () => {
-      expect(component.state().hasError).toBe(false);
+      expect(component.state().hasError).to.be.false;
 
       component.instance().handleStop({preventDefault: () => {}});
       component.update();
-      expect(component.state().loading).toBe(true);
-      expect(component.state().hasError).toBe(false);
+      expect(component.state().loading).to.be.true;
+      expect(component.state().hasError).to.be.false;
       server.respond();
       component.update();
 
-      expect(component.state().hasError).toBe(true);
-      expect(component.state().loading).toBe(false);
+      expect(component.state().hasError).to.be.true;
+      expect(component.state().loading).to.be.false;
     });
   });
 
@@ -149,14 +149,14 @@ describe('Pairing component', function () {
       // choose first section
       component.find('select').prop('onChange')({target: {value: '1'}});
       component.update();
-      expect(component.find('select').props().value).toBe(1);
-      expect(component.find('.student').length).toBe(2);
+      expect(component.find('select').props().value).to.equal(1);
+      expect(component.find('.student').length).to.equal(2);
 
       // choose second section
       component.find('select').prop('onChange')({target: {value: '15'}});
       component.update();
-      expect(component.find('select').props().value).toBe(15);
-      expect(component.find('.student').length).toBe(0);
+      expect(component.find('select').props().value).to.equal(15);
+      expect(component.find('.student').length).to.equal(0);
     });
   });
 
@@ -211,9 +211,9 @@ describe('Pairing component', function () {
       // click on both students to select
       component.find('.student').first().simulate('click');
       component.find('.student').last().simulate('click');
-      expect(component.find('.student').length).toBe(2);
-      expect(component.find('.selected').length).toBe(2);
-      expect(component.find('.addPartners').length).toBe(1);
+      expect(component.find('.student').length).to.equal(2);
+      expect(component.find('.selected').length).to.equal(2);
+      expect(component.find('.addPartners').length).to.equal(1);
     });
 
     it('should stop displaying addPartners when student is unclicked', function () {
@@ -221,15 +221,15 @@ describe('Pairing component', function () {
 
       // click on first student to select
       component.find('.student').first().simulate('click');
-      expect(component.find('.student').length).toBe(2);
-      expect(component.find('.selected').length).toBe(1);
-      expect(component.find('.addPartners').length).toBe(1);
+      expect(component.find('.student').length).to.equal(2);
+      expect(component.find('.selected').length).to.equal(1);
+      expect(component.find('.addPartners').length).to.equal(1);
 
       // click on first student again to unselect
       component.find('.student').first().simulate('click');
-      expect(component.find('.student').length).toBe(2);
-      expect(component.find('.selected').length).toBe(0);
-      expect(component.find('.addPartners').length).toBe(0);
+      expect(component.find('.student').length).to.equal(2);
+      expect(component.find('.selected').length).to.equal(0);
+      expect(component.find('.addPartners').length).to.equal(0);
     });
 
     it('should let you select a student and add them as a partner', function () {
@@ -237,9 +237,9 @@ describe('Pairing component', function () {
 
       // click on first student to select
       component.find('.student').first().simulate('click');
-      expect(component.find('.student').length).toBe(2);
-      expect(component.find('.selected').length).toBe(1);
-      expect(component.find('.addPartners').length).toBe(1);
+      expect(component.find('.student').length).to.equal(2);
+      expect(component.find('.selected').length).to.equal(1);
+      expect(component.find('.addPartners').length).to.equal(1);
 
       // click on Add Partner to confirm
       component.find('.addPartners').first().simulate('click');
@@ -248,7 +248,7 @@ describe('Pairing component', function () {
       let data = server.requests[server.requests.length - 1].requestBody;
       expect(
         '{"pairings":[{"id":11,"name":"First student"}],"sectionId":1}'
-      ).toBe(data);
+      ).to.equal(data);
     });
   });
 
@@ -301,8 +301,8 @@ describe('Pairing component', function () {
       component.find('.stop').simulate('click');
       server.respond();
       component.update();
-      expect(component.find('.student').length).toBe(0);
-      expect(component.find('select').length).toBe(1);
+      expect(component.find('.student').length).to.equal(0);
+      expect(component.find('select').length).to.equal(1);
     });
   });
 });

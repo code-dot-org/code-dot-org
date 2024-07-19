@@ -1,13 +1,13 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon'; //eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {UnconnectedRosterDialog as RosterDialog} from '@cdo/apps/templates/teacherDashboard/RosterDialog';
 import locale from '@cdo/locale';
 
-import {assert} from '../../../util/reconfiguredChai';
+import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const failedLoadError = {
   status: 404,
@@ -33,7 +33,7 @@ describe('RosterDialog', () => {
         rosterProvider={OAuthSectionTypes.google_classroom}
       />
     );
-    expect(wrapper.html()).toContain(locale.authorizeGoogleClassroomsText());
+    expect(wrapper.html()).contains(locale.authorizeGoogleClassroomsText());
   });
 
   it('sends cancel analytics event when dialog is canceled', () => {
@@ -50,7 +50,7 @@ describe('RosterDialog', () => {
     const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
     wrapper.find('button[id="cancel-button"]').simulate('click');
-    assert(analyticsSpy.toHaveBeenCalledTimes(1));
+    assert(analyticsSpy.calledOnce);
     assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Cancelled');
     assert.deepEqual(
       analyticsSpy.getCall(0).args[analyticsSpy.getCall(0).args.length - 2],
@@ -73,8 +73,8 @@ describe('RosterDialog', () => {
         rosterProvider={OAuthSectionTypes.google_classroom}
       />
     );
-    expect(wrapper.text()).toContain('myClassroom');
-    expect(wrapper.text()).toContain('12345');
+    expect(wrapper.text()).contains('myClassroom');
+    expect(wrapper.text()).contains('12345');
   });
 
   it('sends section set up completed analytics event when import is called', () => {
@@ -92,7 +92,7 @@ describe('RosterDialog', () => {
 
     rosterDialog.instance().setState({selectedId: '2'});
     rosterDialog.instance().importClassroom();
-    assert(analyticsSpy.toHaveBeenCalledTimes(1));
+    assert(analyticsSpy.calledOnce);
     assert.equal(analyticsSpy.getCall(0).firstArg, 'Section Setup Completed');
     assert.deepEqual(
       analyticsSpy.getCall(0).args[analyticsSpy.getCall(0).args.length - 2],
@@ -116,6 +116,6 @@ describe('RosterDialog', () => {
         userId={90}
       />
     );
-    expect(wrapper.find('#import-button-and-redirect')).toHaveLength(1);
+    expect(wrapper.find('#import-button-and-redirect')).to.have.lengthOf(1);
   });
 });

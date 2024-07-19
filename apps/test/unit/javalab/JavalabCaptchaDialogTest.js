@@ -6,7 +6,7 @@ import {UnconnectedJavalabCaptchaDialog as JavalabCaptchaDialog} from '@cdo/apps
 import ReCaptchaDialog from '@cdo/apps/templates/ReCaptchaDialog';
 import javalabMsg from '@cdo/javalab/locale';
 
-// eslint-disable-line no-restricted-imports
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('JavalabCaptchaDialog', () => {
   let defaultProps,
@@ -57,12 +57,12 @@ describe('JavalabCaptchaDialog', () => {
       .props()
       .handleSubmit()
       .then(() => {
-        expect(onVerifySpy.calledOnce).toBe(true);
+        expect(onVerifySpy.calledOnce).to.be.true;
         expect(
           appendOutputLogSpy.calledOnceWith(javalabMsg.verificationSuccessful())
-        ).toBe(true);
-        expect(appendNewlineToConsoleLogSpy.calledOnce).toBe(true);
-        expect(setDialogOpenSpy.calledOnceWith(false)).toBe(true);
+        ).to.be.true;
+        expect(appendNewlineToConsoleLogSpy.calledOnce).to.be.true;
+        expect(setDialogOpenSpy.calledOnceWith(false)).to.be.true;
         done();
       });
   });

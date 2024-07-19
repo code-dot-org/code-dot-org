@@ -46,14 +46,14 @@ describe('SummaryTable', () => {
   it('does not show incomplete status by default', () => {
     const wrapper = customShallow(<SummaryTable {...DEFAULT_PROPS} />);
 
-    expect(getTableContents(wrapper)).not.to.contain('Incomplete');
+    expect(getTableContents(wrapper)).not.toContain('Incomplete');
   });
   it('shows incomplete status if a workshop admin', () => {
     const wrapper = customShallow(
       <SummaryTable {...DEFAULT_PROPS} isWorkshopAdmin />
     );
 
-    expect(getTableContents(wrapper)).to.contain('Incomplete');
+    expect(getTableContents(wrapper)).toContain('Incomplete');
   });
 });
 

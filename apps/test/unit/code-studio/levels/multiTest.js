@@ -123,7 +123,7 @@ describe('multi', () => {
         containedMode,
         allowMultipleAttempts
       );
-      expect(multi.selectedAnswers).to.be.empty;
+      expect(multi.selectedAnswers).toHaveLength(0);
     });
 
     it('selects the server-side last attempt when provided', () => {
@@ -139,7 +139,9 @@ describe('multi', () => {
         containedMode,
         allowMultipleAttempts
       );
-      expect(multi.selectedAnswers).to.include(lastAttemptNum);
+      expect(multi.selectedAnswers).toEqual(
+        expect.arrayContaining([lastAttemptNum])
+      );
     });
 
     it('selects the client-side last attempt when available', () => {
@@ -163,7 +165,9 @@ describe('multi', () => {
         allowMultipleAttempts
       );
 
-      expect(multi.selectedAnswers).to.include(lastAttemptNum);
+      expect(multi.selectedAnswers).toEqual(
+        expect.arrayContaining([lastAttemptNum])
+      );
     });
 
     it('selects the server-side last attempt when both are available', () => {
@@ -187,7 +191,9 @@ describe('multi', () => {
         allowMultipleAttempts
       );
 
-      expect(multi.selectedAnswers).to.include(lastAttemptNum);
+      expect(multi.selectedAnswers).toEqual(
+        expect.arrayContaining([lastAttemptNum])
+      );
     });
 
     it('selects none after attempt is reset', () => {
@@ -211,11 +217,13 @@ describe('multi', () => {
         allowMultipleAttempts
       );
 
-      expect(multi.selectedAnswers).to.include(lastAttemptNum);
+      expect(multi.selectedAnswers).toEqual(
+        expect.arrayContaining([lastAttemptNum])
+      );
 
       multi.resetAnswers();
 
-      expect(multi.selectedAnswers.length).to.equal(0);
+      expect(multi.selectedAnswers.length).toBe(0);
     });
   });
 

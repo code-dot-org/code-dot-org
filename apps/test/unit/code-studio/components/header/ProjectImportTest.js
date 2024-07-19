@@ -5,7 +5,7 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import ProjectImport from '@cdo/apps/code-studio/components/header/ProjectImport';
 
-// eslint-disable-line no-restricted-imports
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('ProjectImport', () => {
@@ -38,7 +38,7 @@ describe('ProjectImport', () => {
 
   it('creates an "import from share link" popup', () => {
     wrapper.simulate('click');
-    expect(showImportPopupStub.calledOnce).toBe(true);
+    expect(showImportPopupStub.calledOnce).to.be.true;
   });
 
   it('can import from level sources', () => {
@@ -51,7 +51,7 @@ describe('ProjectImport', () => {
       }),
     });
     wrapper.simulate('click');
-    expect(ajaxStub.calledOnce).toBe(true);
+    expect(ajaxStub.calledOnce).to.be.true;
     ajaxStub.restore();
   });
 
@@ -62,8 +62,8 @@ describe('ProjectImport', () => {
       'getSourceForChannel'
     );
     wrapper.simulate('click');
-    expect(getSourceSpy.calledOnce).toBe(true);
-    expect(getSourceSpy.calledWith('123abc')).toBe(true);
+    expect(getSourceSpy.calledOnce).to.be.true;
+    expect(getSourceSpy.calledWith('123abc')).to.be.true;
     getSourceSpy.restore();
   });
 
@@ -71,7 +71,7 @@ describe('ProjectImport', () => {
     showImportPopupStub.callsArgWith(0, 'some invalid link');
     const errorMessageSpy = sinon.spy(window.Craft, 'showErrorMessagePopup');
     wrapper.simulate('click');
-    expect(errorMessageSpy.calledOnce).toBe(true);
+    expect(errorMessageSpy.calledOnce).to.be.true;
     errorMessageSpy.restore();
   });
 });

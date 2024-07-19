@@ -2,7 +2,10 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
+
+import {assert} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const sectionId = 11;
 
@@ -16,21 +19,19 @@ describe('PrintCertificates', () => {
   );
 
   it('renders a form', () => {
-    expect(wrapper.is('form')).toBeTruthy();
-    expect(wrapper.props().action).toBeTruthy();
+    assert(wrapper.is('form'));
+    assert(wrapper.props().action, pegasus('/certificates'));
   });
 
   it('has a hidden input for the course name', () => {
-    expect(wrapper.childAt(1).is('input')).toBeTruthy();
-    expect(wrapper.childAt(1).props().type).toEqual('hidden');
-    expect(atob(wrapper.childAt(1).props().value)).toEqual('playlab');
+    assert(wrapper.childAt(1).is('input'));
+    assert.equal(wrapper.childAt(1).props().type, 'hidden');
+    assert.equal(atob(wrapper.childAt(1).props().value), 'playlab');
   });
 
   it('has trigger to open /certificates', () => {
-    expect(wrapper.find('div').length).toEqual(2);
-    expect(
-      wrapper.find('div').last().contains('Print Certificates')
-    ).toBeTruthy();
+    assert.equal(wrapper.find('div').length, 2);
+    assert(wrapper.find('div').last().contains('Print Certificates'));
   });
 
   it('loads student names', finish => {
@@ -51,7 +52,7 @@ describe('PrintCertificates', () => {
     };
 
     wrapper.instance().submitForm = () => {
-      expect(wrapper.state('names')).toEqual([
+      assert.deepEqual(wrapper.state('names'), [
         'Student A',
         'Student B',
         'Student C',
@@ -59,7 +60,7 @@ describe('PrintCertificates', () => {
       finish();
     };
 
-    expect(wrapper.state('names')).toEqual([]);
+    assert.deepEqual(wrapper.state('names'), []);
     wrapper.find('div').last().simulate('click');
     sinon.restore();
   });

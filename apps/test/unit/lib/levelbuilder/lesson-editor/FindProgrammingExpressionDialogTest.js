@@ -8,7 +8,7 @@ import {
   SearchForm,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/FindProgrammingExpressionDialog';
 
-// eslint-disable-line no-restricted-imports
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('SearchForm', () => {
   it('renders passed programming environments as options', () => {
@@ -29,8 +29,8 @@ describe('SearchForm', () => {
       />
     );
 
-    expect(wrapper.find('option').length).toBe(3);
-    expect(wrapper.find('option').map(option => option.text())).toEqual([
+    expect(wrapper.find('option').length).to.equal(3);
+    expect(wrapper.find('option').map(option => option.text())).to.eql([
       'filter',
       'firstProgrammingEnvironment',
       'secondProgrammingEnvironment',
@@ -43,7 +43,7 @@ describe('ProgrammingExpressionTable', () => {
     const wrapper = shallow(
       <ProgrammingExpressionTable handleSelect={() => {}} />
     );
-    expect(wrapper.isEmptyRender()).toBe(true);
+    expect(wrapper.isEmptyRender()).to.equal(true);
   });
 
   it('renders passed programming expressions as table rows', () => {
@@ -65,13 +65,13 @@ describe('ProgrammingExpressionTable', () => {
       />
     );
 
-    expect(wrapper.find('tbody').find('tr').length).toBe(2);
+    expect(wrapper.find('tbody').find('tr').length).to.equal(2);
     expect(
       wrapper
         .find('tbody')
         .find('tr')
         .map(row => row.key())
-    ).toEqual(['first', 'second']);
+    ).to.eql(['first', 'second']);
   });
 });
 
@@ -93,7 +93,7 @@ describe('FindProgrammingExpressionDialog', () => {
         value: 'foo',
       },
     });
-    expect(searchStub.callCount).toBe(1);
+    expect(searchStub.callCount).to.equal(1);
 
     // does not search again on the same query
     wrapper.instance().handleSearch({
@@ -101,13 +101,13 @@ describe('FindProgrammingExpressionDialog', () => {
         value: 'foo',
       },
     });
-    expect(searchStub.callCount).toBe(1);
+    expect(searchStub.callCount).to.equal(1);
 
     // does not search on unrelated changes
     wrapper.setState({
       foo: 'bar',
     });
-    expect(searchStub.callCount).toBe(1);
+    expect(searchStub.callCount).to.equal(1);
 
     // does search on filter or page change
     wrapper.instance().handleFilter({
@@ -115,9 +115,9 @@ describe('FindProgrammingExpressionDialog', () => {
         value: 'foo',
       },
     });
-    expect(searchStub.callCount).toBe(2);
+    expect(searchStub.callCount).to.equal(2);
     wrapper.instance().setCurrentPage(2);
-    expect(searchStub.callCount).toBe(3);
+    expect(searchStub.callCount).to.equal(3);
     searchStub.restore();
   });
 
@@ -145,7 +145,7 @@ describe('FindProgrammingExpressionDialog', () => {
         value: false,
       },
     });
-    expect(fetchStub.callCount).toBe(0);
+    expect(fetchStub.callCount).to.equal(0);
 
     // searches with a query and page
     wrapper.instance().handleSearch({
@@ -153,8 +153,8 @@ describe('FindProgrammingExpressionDialog', () => {
         value: 'foo',
       },
     });
-    expect(fetchStub.callCount).toBe(1);
-    expect(fetchStub.lastCall.args).toEqual([
+    expect(fetchStub.callCount).to.equal(1);
+    expect(fetchStub.lastCall.args).to.eql([
       '/programming_expressions/search?page=1&query=foo',
     ]);
 
@@ -164,8 +164,8 @@ describe('FindProgrammingExpressionDialog', () => {
         value: 'bar',
       },
     });
-    expect(fetchStub.callCount).toBe(2);
-    expect(fetchStub.lastCall.args).toEqual([
+    expect(fetchStub.callCount).to.equal(2);
+    expect(fetchStub.lastCall.args).to.eql([
       '/programming_expressions/search?page=1&programmingEnvironmentName=bar&query=foo',
     ]);
 
