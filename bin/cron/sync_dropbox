@@ -38,6 +38,8 @@ FOLDERS = {
 INTERVAL_SECONDS = 5
 TOTAL_SECONDS = 55 - INTERVAL_SECONDS
 
+LOG_DIR = '/home/ubuntu'.freeze
+
 logger = HighFrequencyReporter.new(Slack, 'sync-dropbox-staging', File.join(LOG_DIR, 'dropbox_sync_error_log.csv'))
 logger.load # load errors from most recent sync
 
@@ -51,7 +53,7 @@ while (Time.now - SCRIPT_START) < TOTAL_SECONDS
     command = [
       "unison /home/ubuntu/Dropbox/Shared/#{key} /home/ubuntu/staging/pegasus/#{value}",
       '-silent -ignore "Name .dropbox" -auto -perms 0 -dontchmod',
-      "-log -logfile /home/ubuntu/unison.log"
+      "-log -logfile #{File.join(LOG_DIR, 'unison.log')}"
     ].join(' ')
     stdout, stderr, _ = Open3.capture3(command)
     next unless stdout == "" && stderr == ""
