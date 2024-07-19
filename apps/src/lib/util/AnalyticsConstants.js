@@ -154,6 +154,10 @@ const EVENTS = {
   SUMMARY_PAGE_NEXT_LEVEL_CLICKED: 'Summary Page Next Level Clicked',
   SUMMARY_PAGE_BACK_TO_LEVEL_CLICKED: 'Summary Page Back To Level Clicked',
 
+  // Check for understanding
+  CFU_NAMES_TOGGLED_ON: 'Summary Page Names Toggled On',
+  CFU_NAMES_TOGGLED_OFF: 'Summary Page Names Toggled Off',
+
   // Maker setup
   MAKER_SETUP_PAGE_BOARD_TYPE_EVENT: 'Board Type On Maker Setup Page',
   MAKER_SETUP_PAGE_MB_VERSION_EVENT: 'Microbit Version',
@@ -262,6 +266,7 @@ const EVENTS = {
   SIGNED_OUT_USER_CLICKS_HEADER_LINK: 'Signed Out User Clicks Header Link',
   SIGNED_OUT_USER_CLICKS_HAMBURGER_LINK:
     'Signed Out User Clicks Hamburger Link',
+  SIGNED_OUT_USER_CLICKS_SIGN_IN: 'Signed Out User Clicks Sign In Button',
   SIGNED_OUT_USER_CLICKS_HELP_MENU: 'Signed Out User Clicks Help Menu',
   CREATE_ACCOUNT_BUTTON_CLICKED: 'Create Account Button Clicked',
 

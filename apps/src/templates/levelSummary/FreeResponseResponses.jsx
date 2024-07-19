@@ -2,13 +2,19 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
+import DCDO from '@cdo/apps/dcdo';
 import i18n from '@cdo/locale';
 
 import ResponseMenuDropdown from './ResponseMenuDropdown';
 
 import styles from './summary.module.scss';
 
-const FreeResponseResponses = ({responses}) => {
+const FreeResponseResponses = ({responses, showStudentNames}) => {
+  const constructStudentName = response =>
+    response.student_family_name
+      ? response.student_display_name + ' ' + response.student_family_name
+      : response.student_display_name;
+
   const [hiddenResponses, setHiddenResponses] = React.useState([]);
 
   return (
@@ -17,15 +23,24 @@ const FreeResponseResponses = ({responses}) => {
         {responses
           .filter(response => !hiddenResponses.includes(response.user_id))
           .map(response => (
-            <div key={response.user_id} className={styles.studentAnswer}>
-              <div className={styles.studentAnswerInterior}>
-                <p>{response.text}</p>
-                <ResponseMenuDropdown
-                  response={response}
-                  hideResponse={userId =>
-                    setHiddenResponses(prevHidden => [...prevHidden, userId])
-                  }
-                />
+            <div key={response.user_id} className={styles.studentResponseBlock}>
+              <div className={styles.studentAnswer}>
+                <div className={styles.studentAnswerInterior}>
+                  <p>{response.text}</p>
+                  <ResponseMenuDropdown
+                    response={response}
+                    hideResponse={userId =>
+                      setHiddenResponses(prevHidden => [...prevHidden, userId])
+                    }
+                  />
+                </div>
+                {DCDO.get('cfu-pin-hide-enabled', false) && (
+                  <div className={styles.studentName}>
+                    {showStudentNames && (
+                      <p>{constructStudentName(response)}</p>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           ))}
@@ -55,6 +70,7 @@ const FreeResponseResponses = ({responses}) => {
 
 FreeResponseResponses.propTypes = {
   responses: PropTypes.arrayOf(PropTypes.object),
+  showStudentNames: PropTypes.bool,
 };
 
 export default FreeResponseResponses;
