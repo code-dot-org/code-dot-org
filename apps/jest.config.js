@@ -27,16 +27,17 @@ Object.entries(APPLICATION_ALIASES).forEach(([alias, localPath]) => {
 
 /**
  * List of node_modules to transform with babel-jest (default is not to transform)
+ *
+ * Packages that include ESM import/export statements in their distributed JS
+ * will need to be added to this list.
  */
 const nodeModulesToTransform = [
   'vmsg',
   '@code-dot-org/johnny-five',
   '@code-dot-org/js-interpreter',
   'blockly/core',
-  // `p-queue/dist/index.js` uses ESM imports
-  'p-queue',
-  // `p-timeout/dist/index.js` uses ESM imports
-  'p-timeout',
+  'p-queue', // uses ESM
+  'p-timeout', // uses ESM
 ];
 
 /**
@@ -248,7 +249,8 @@ const config = {
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   transformIgnorePatterns: [
-    // Don't transform node_modules, with the exception of `nodeModulesToTransform`
+    // Don't transform node_modules, with the exception of the `nodeModulesToTransform` list.
+    // Packages that use import/export statements will need to be added to this list.
     `node_modules/(?!${nodeModulesToTransform.join('|')})`,
   ],
 
