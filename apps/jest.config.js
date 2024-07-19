@@ -35,6 +35,8 @@ const nodeModulesToTransform = [
   'blockly/core',
   // `p-queue/dist/index.js` uses ESM imports
   'p-queue',
+  // `p-timeout/dist/index.js` uses ESM imports
+  'p-timeout',
 ];
 
 /**
