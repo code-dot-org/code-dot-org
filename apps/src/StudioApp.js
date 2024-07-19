@@ -103,10 +103,10 @@ var copyrightStrings;
  */
 const MIN_WIDTH = 1400;
 const DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
-export const MAX_VISUALIZATION_WIDTH = experiments.isEnabled(
+export const MAX_VISUALIZATION_WIDTH = experiments.isEnabledAllowingQueryString(
   experiments.BIG_PLAYSPACE
 )
-  ? 0.75 * window.innerHeight
+  ? Math.min(window.innerHeight - 160, window.innerWidth / 2)
   : 400;
 export const MIN_VISUALIZATION_WIDTH = 200;
 
@@ -1399,6 +1399,25 @@ StudioApp.prototype.onResize = function () {
     // Content below visualization is a resizing scroll area in pinned mode
     onResizeSmallFooter();
   }
+
+  // Let's avoid an infinite recursion by making sure this is a size.
+  if (
+    window.innerHeight !== this.lastWindowInnerHeight ||
+    window.innerWidth !== this.lastWindowInnerWidth
+  ) {
+    this.maxVisualizationWidth = experiments.isEnabledAllowingQueryString(
+      experiments.BIG_PLAYSPACE
+    )
+      ? Math.min(window.innerHeight - 160, window.innerWidth / 2)
+      : 400;
+
+    const visualizationColumn = document.getElementById('visualizationColumn');
+    const visualizationColumnWidth = $(visualizationColumn).width();
+    this.resizeVisualization(visualizationColumnWidth, true);
+
+    this.lastWindowInnerHeight = window.innerHeight;
+    this.lastWindowInnerWidth = window.innerWidth;
+  }
 };
 
 /**
@@ -1498,7 +1517,7 @@ function applyTransformOrigin(element, origin) {
  * Resize the visualization to the given width. If no width is provided, the
  * scale of child elements is updated to the current width.
  */
-StudioApp.prototype.resizeVisualization = function (width) {
+StudioApp.prototype.resizeVisualization = function (width, skipFire = false) {
   if ($('#visualizationColumn').hasClass('wireframeShare')) {
     return;
   }
@@ -1540,7 +1559,8 @@ StudioApp.prototype.resizeVisualization = function (width) {
   visualizationColumn.style.maxWidth = newVizWidth + vizSideBorderWidth + 'px';
   visualization.style.maxWidth = newVizWidthString;
   visualization.style.maxHeight = newVizHeightString;
-  if (experiments.isEnabled(experiments.BIG_PLAYSPACE)) {
+  if (experiments.isEnabledAllowingQueryString(experiments.BIG_PLAYSPACE)) {
+    visualizationColumn.style.width = visualizationColumn.style.maxWidth;
     visualization.style.width = newVizWidthString;
     visualization.style.height = newVizHeightString;
   }
@@ -1568,8 +1588,10 @@ StudioApp.prototype.resizeVisualization = function (width) {
     smallFooter.style.maxWidth = newVizWidthString;
   }
 
-  // Fire resize so blockly and droplet handle this type of resize properly:
-  utils.fireResizeEvent();
+  if (!skipFire) {
+    // Fire resize so blockly and droplet handle this type of resize properly:
+    utils.fireResizeEvent();
+  }
 };
 
 /**
@@ -2025,7 +2047,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
     config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
-  if (experiments.isEnabled(experiments.BIG_PLAYSPACE)) {
+  if (experiments.isEnabledAllowingQueryString(experiments.BIG_PLAYSPACE)) {
     this.nativeVizWidth = 400;
   }
 
