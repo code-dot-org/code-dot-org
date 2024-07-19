@@ -94,6 +94,17 @@ label.sectionSelector {
   justify-content: space-between;
 }
 
+.studentName {
+  min-height: 24px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+
+  p {
+    margin: 0;
+  }
+}
+
 .studentResponses {
   select {
     display: block;
@@ -105,6 +116,13 @@ label.sectionSelector {
     width: 100%;
   }
 
+  .studentResponseBlock {
+    margin-bottom: 22px;
+    // inline-block is necessary to prevent boxes from splitting across columns.
+    display: inline-block;
+    width: 100%;
+  }
+
   .studentResponsesColumns {
     width: 100%;
     columns: 2 auto;
@@ -112,17 +130,6 @@ label.sectionSelector {
     padding-top: 40px;
     padding-bottom: 12px;
 
-    .studentResponseBlock {
-      margin-bottom: 16px;
-    }
-
-    .studentName {
-      min-height: 24px;
-      margin: 0;
-      font-size: 14px;
-      font-weight: bold;
-      padding-left: 12px;
-    }
   }
 
   .pinResponsesSection {
@@ -170,16 +177,11 @@ label.sectionSelector {
   }
 
   .studentAnswer {
-    padding: 12px;
-    margin-bottom: 16px;
     width: 100%;
     box-sizing: border-box;
     border-radius: 4px;
-    // inline-block is necessary to prevent boxes from splitting across columns.
-    display: inline-block;
 
     .studentAnswerInterior {
-      background-color: $lightest_cyan;
       padding: 12px;
       border-radius: 4px;
       display: flex;
