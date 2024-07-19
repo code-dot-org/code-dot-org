@@ -10,7 +10,7 @@ export function overrideHandleTouchMove(blocklyWrapper) {
     if (this.isPinchZoomEnabled && this.cachedPoints.size === 2) {
       this.handlePinch(e);
     } else {
-      // Google Blockly would call handleMove here which can create an inifite loop.
+      // Google Blockly would call handleMove here which can create an infinite loop.
       // We handle multi-touch move logic here without calling handleMove again
       this.updateFromEvent(e);
       if (this.workspaceDragger) {
