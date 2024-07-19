@@ -1,9 +1,11 @@
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import React from 'react';
+
+import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import i18n from '@cdo/locale';
 
-import styles from '../link-account.module.scss';
 import codeLogo from '../assets/codeLogo.svg';
+
+import styles from '../link-account.module.scss';
 
 const WorkshopWelcomeBanner = () => {
   return (

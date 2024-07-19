@@ -1,14 +1,15 @@
 import React from 'react';
 
-import styles from '../link-account.module.scss';
-
-import WorkshopNewAccountCard from './WorkshopNewAccountCard';
-import WorkshopExistingAccountCard from './WorkshopExistingAccountCard';
-import WorkshopContinueAccountCard from './WorkshopContinueAccountCard';
-import WorkshopWelcomeBanner from './WorkshopWelcomeBanner';
-import i18n from '@cdo/locale';
-import {navigateToHref} from '@cdo/apps/utils';
 import Link from '@cdo/apps/componentLibrary/link';
+import {navigateToHref} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import WorkshopContinueAccountCard from './WorkshopContinueAccountCard';
+import WorkshopExistingAccountCard from './WorkshopExistingAccountCard';
+import WorkshopNewAccountCard from './WorkshopNewAccountCard';
+import WorkshopWelcomeBanner from './WorkshopWelcomeBanner';
+
+import styles from '../link-account.module.scss';
 
 const WorkshopLinkAccountPage: React.FunctionComponent<{
   newCtaType: string;
