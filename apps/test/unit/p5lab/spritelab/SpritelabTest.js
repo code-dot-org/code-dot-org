@@ -63,7 +63,6 @@ describe('SpriteLab', () => {
       instance = new SpriteLab();
       mockStudioApp = {
         setCheckForEmptyBlocks: sinon.spy(),
-        showRateLimitAlert: sinon.spy(),
         setPageConstants: sinon.spy(),
         init: sinon.spy(),
         isUsingBlockly: () => false,
