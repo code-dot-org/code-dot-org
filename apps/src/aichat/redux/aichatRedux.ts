@@ -30,10 +30,10 @@ import {
   Visibility,
   ChatMessage,
   ChatItem,
+  isChatMessage,
   isNotification,
   Notification,
   AichatInteractionStatusValue,
-  isLoggedChatItem,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -360,7 +360,7 @@ export const submitChatContents = createAsyncThunk(
     try {
       chatApiResponse = await postAichatCompletionMessage(
         newMessage,
-        chatItemsCurrent.filter(isLoggedChatItem),
+        chatItemsCurrent.filter(isChatMessage) as ChatMessage[],
         aiCustomizations,
         aichatContext,
         currentSessionId
@@ -587,12 +587,12 @@ const getNotificationLocation = (
     // Only allow hiding from view individual chat items that are notifications (errors and model updates)
     // If we want to clear all history
     // and start a new session, see clearChatMessages.
-    const itemToRemovePosition = chatItemList.findIndex(
+    const itemToHidePosition = chatItemList.findIndex(
       chatItem => isNotification(chatItem) && chatItem.id === id
     );
 
-    if (itemToRemovePosition >= 0) {
-      return {index: itemToRemovePosition, chatItemListKey};
+    if (itemToHidePosition >= 0) {
+      return {index: itemToHidePosition, chatItemListKey};
     }
   }
 };
