@@ -218,7 +218,6 @@ class AichatControllerTest < ActionController::TestCase
 
     post :chat_completion, params: @valid_params, as: :json
     session = AichatSession.find(json_response['session_id'])
-    current_session_id = session.id
 
     post :chat_completion, params: @valid_params.merge(
       {
