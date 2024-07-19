@@ -3,8 +3,6 @@ import React from 'react';
 
 import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 const propsPassedToVerticalImageResourceCard = props =>
   isolateComponent(<GraduateToNextLevel {...props} />).findOne(
     'VerticalImageResourceCard'
@@ -15,7 +13,7 @@ describe('GraduateToNextLevel', () => {
     const propsPassed = propsPassedToVerticalImageResourceCard();
     const {id, title, description, link, image} = propsPassed;
     [id, title, description, link, image].forEach(prop => {
-      expect(prop.toLowerCase()).to.contain('app');
+      expect(prop.toLowerCase()).toContain('app');
     });
   });
   it('passes App Lab course info to ResourceCard if bogus scriptName is given', () => {
@@ -24,7 +22,7 @@ describe('GraduateToNextLevel', () => {
     });
     const {id, title, description, link, image} = propsPassed;
     [id, title, description, link, image].forEach(prop => {
-      expect(prop.toLowerCase()).to.contain('app');
+      expect(prop.toLowerCase()).toContain('app');
     });
   });
   [
@@ -45,7 +43,7 @@ describe('GraduateToNextLevel', () => {
       });
       const {id, title, description, link, image} = propsPassed;
       [id, title, description, link, image].forEach(prop => {
-        expect(prop.toLowerCase()).to.contain(scriptName.slice(0, 7));
+        expect(prop.toLowerCase()).toContain(scriptName.slice(0, 7));
       });
     });
   });

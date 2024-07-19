@@ -6,7 +6,7 @@ import MethodWithOverloads, {
   SingleMethod,
 } from '@cdo/apps/templates/codeDocs/MethodWithOverloads';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('MethodWithOverloads', () => {
   it('shows MethodOverloadSection if method has overloads', () => {

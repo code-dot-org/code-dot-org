@@ -1,11 +1,8 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import Button from '@cdo/apps/templates/Button';
 import {UnconnectedEndOfLessonDialog as EndOfLessonDialog} from '@cdo/apps/templates/EndOfLessonDialog';
-
-import {expect} from '../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   lessonNumber: 2,
@@ -22,43 +19,51 @@ describe('EndOfLessonDialog', () => {
     const wrapper = setUp();
 
     it('displays expected header', () => {
-      expect(wrapper.contains('You finished Lesson 2!')).to.be.true;
+      expect(wrapper.contains('You finished Lesson 2!')).toBe(true);
     });
 
     it('displays expected message', () => {
       expect(
         wrapper.contains('Check in with your teacher for the next activity.')
-      ).to.be.true;
+      ).toBe(true);
     });
   });
 
   it('scrolls summary progress row into view when dismissed and isSummaryView = true', () => {
-    const scrollIntoViewSpy = sinon.spy();
+    const scrollIntoViewSpy = jest.fn();
 
-    sinon
-      .stub(document, 'getElementById')
-      .withArgs('summary-progress-row-2')
-      .returns({scrollIntoView: scrollIntoViewSpy});
+    jest
+      .spyOn(document, 'getElementById')
+      .mockClear()
+      .mockImplementation((...args) => {
+        if (args[0] === 'summary-progress-row-2') {
+          return {scrollIntoView: scrollIntoViewSpy};
+        }
+      });
 
     const wrapper = setUp({isSummaryView: true});
     wrapper.find(Button).simulate('click');
-    expect(scrollIntoViewSpy).to.have.been.called;
+    expect(scrollIntoViewSpy).toHaveBeenCalled();
 
-    document.getElementById.restore();
+    document.getElementById.mockRestore();
   });
 
   it('scrolls progress lesson into view when dismissed and isSummaryView = false', () => {
-    const scrollIntoViewSpy = sinon.spy();
+    const scrollIntoViewSpy = jest.fn();
 
-    sinon
-      .stub(document, 'getElementById')
-      .withArgs('progress-lesson-2')
-      .returns({scrollIntoView: scrollIntoViewSpy});
+    jest
+      .spyOn(document, 'getElementById')
+      .mockClear()
+      .mockImplementation((...args) => {
+        if (args[0] === 'progress-lesson-2') {
+          return {scrollIntoView: scrollIntoViewSpy};
+        }
+      });
 
     const wrapper = setUp({isSummaryView: false});
     wrapper.find(Button).simulate('click');
-    expect(scrollIntoViewSpy).to.have.been.called;
+    expect(scrollIntoViewSpy).toHaveBeenCalled();
 
-    document.getElementById.restore();
+    document.getElementById.mockRestore();
   });
 });

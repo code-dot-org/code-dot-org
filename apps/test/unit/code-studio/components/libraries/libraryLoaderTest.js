@@ -1,11 +1,11 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import annotationList from '@cdo/apps/acemode/annotationList';
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import loadLibrary from '@cdo/apps/code-studio/components/libraries/libraryLoader';
 import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('libraryLoader.load', () => {

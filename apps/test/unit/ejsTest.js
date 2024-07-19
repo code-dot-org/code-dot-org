@@ -1,4 +1,4 @@
-import {assert} from '../util/reconfiguredChai';
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 // nonstandard EJS behavior we rely upon in our templates
 describe('ejs test', function () {
   it('renders empty string on undefined object property access', function () {

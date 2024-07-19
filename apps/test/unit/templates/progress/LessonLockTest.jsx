@@ -6,8 +6,6 @@ import Button from '@cdo/apps/templates/Button';
 import LessonLock from '@cdo/apps/templates/progress/LessonLock';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/deprecatedChai';
-
 const FAKE_LESSON_ID = 33;
 const FAKE_UNIT_ID = 1;
 const DEFAULT_PROPS = {
@@ -24,9 +22,9 @@ describe('LessonLock', () => {
   it('renders an open dialog button and no LessonLockDialog by default', () => {
     const wrapper = setUp();
     const openDialogButton = wrapper.find(Button);
-    expect(openDialogButton).to.have.length(1);
-    expect(openDialogButton.props().text).to.equal(i18n.lockSettings());
-    expect(wrapper.find(LessonLockDialog)).to.have.length(0);
+    expect(openDialogButton).toHaveLength(1);
+    expect(openDialogButton.props().text).toBe(i18n.lockSettings());
+    expect(wrapper.find(LessonLockDialog)).toHaveLength(0);
   });
 
   it('renders the LessonLockDialog when button is clicked', () => {
@@ -34,8 +32,8 @@ describe('LessonLock', () => {
     wrapper.find(Button).simulate('click');
 
     const lockDialog = wrapper.find(LessonLockDialog);
-    expect(lockDialog).to.have.length(1);
-    expect(lockDialog.props().unitId).to.equal(FAKE_UNIT_ID);
-    expect(lockDialog.props().lessonId).to.equal(FAKE_LESSON_ID);
+    expect(lockDialog).toHaveLength(1);
+    expect(lockDialog.props().unitId).toBe(FAKE_UNIT_ID);
+    expect(lockDialog.props().lessonId).toBe(FAKE_LESSON_ID);
   });
 });
