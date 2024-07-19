@@ -26,7 +26,7 @@ Object.entries(APPLICATION_ALIASES).forEach(([alias, localPath]) => {
 });
 
 /**
- * List of node_modules to transform with babel-jest (default is not to transform)
+ * List of node_modules to transform with babel-jest.
  *
  * Packages that include ESM import/export statements in their distributed JS
  * will need to be added to this list.
