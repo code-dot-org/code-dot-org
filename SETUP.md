@@ -96,8 +96,6 @@ External contributors can supply alternate placeholder values for secrets normal
 ```
 slack_bot_token: localoverride
 pardot_private_key: localoverride
-firebase_secret: localoverride
-firebase_shared_secret: localoverride
 properties_encryption_key: ''
 ```
 

@@ -1,8 +1,9 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import getScriptData from '@cdo/apps/util/getScriptData';
+
 import EditPanels from '@cdo/apps/lab2/levelEditors/panels/EditPanels';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
   const initialPanels = getScriptData('panels');

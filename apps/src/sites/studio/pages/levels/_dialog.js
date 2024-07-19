@@ -1,8 +1,8 @@
+import {getResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {
   showDialog,
   processResults,
 } from '@cdo/apps/code-studio/levels/dialogHelper';
-import {getResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {LegacyUnsubmitDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
 
 /**

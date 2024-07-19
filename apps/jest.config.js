@@ -13,7 +13,6 @@ const jestAliases = {
   '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
     'jest-transform-stub',
   '\\.(css)$': 'identity-obj-proxy',
-  '^firebase$': '<rootDir>/test/util/MockFirebase.js',
   '^firmata$': 'mock-firmata/mock-firmata',
   'script-loader!@code-dot-org/(.*)': '<rootDir>/node_modules/@code-dot-org/$1',
 };
@@ -24,6 +23,21 @@ const jestAliases = {
 Object.entries(APPLICATION_ALIASES).forEach(([alias, localPath]) => {
   jestAliases[`${alias}/(.*)`] = `${localPath}/$1`;
 });
+
+/**
+ * List of node_modules to transform with babel-jest.
+ *
+ * Packages that include ESM import/export statements in their distributed JS
+ * will need to be added to this list.
+ */
+const nodeModulesToTransform = [
+  'vmsg',
+  '@code-dot-org/johnny-five',
+  '@code-dot-org/js-interpreter',
+  'blockly/core',
+  'p-queue', // uses ESM
+  'p-timeout', // uses ESM
+];
 
 /**
  * For a detailed explanation regarding each configuration property, visit:
@@ -234,7 +248,9 @@ const config = {
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   transformIgnorePatterns: [
-    'node_modules/(?!vmsg|@code-dot-org/johnny-five|@code-dot-org/js-interpreter|blockly/core)',
+    // Don't transform node_modules, with the exception of the `nodeModulesToTransform` list.
+    // Packages that use import/export statements will need to be added to this list.
+    `node_modules/(?!${nodeModulesToTransform.join('|')})`,
   ],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them

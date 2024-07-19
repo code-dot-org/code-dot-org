@@ -6,10 +6,11 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import LtiLinkAccountPage from '@cdo/apps/lib/ui/simpleSignUp/lti/link/LtiLinkAccountPage';
-import getScriptData from '@cdo/apps/util/getScriptData';
 import {LtiProviderContext} from '@cdo/apps/lib/ui/simpleSignUp/lti/link/LtiLinkAccountPage/context';
 import WorkshopLinkAccountPage from '@cdo/apps/lib/ui/simpleSignUp/workshop/WorkshopLinkAccountPage';
+import getScriptData from '@cdo/apps/util/getScriptData';
 import {SimpleSignUpFlows} from '@cdo/generated-scripts/sharedConstants';
 
 document.addEventListener('DOMContentLoaded', () => {

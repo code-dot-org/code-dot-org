@@ -1,14 +1,17 @@
-import React, {useState, useEffect, useCallback} from 'react';
 import classNames from 'classnames';
-import {getNoteName, isBlackKey} from '../utils/Notes';
-import MusicLibrary from '../player/MusicLibrary';
-import {ChordEventValue, PlayStyle} from '../player/interfaces/ChordEvent';
-import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
-import PreviewControls from './PreviewControls';
+import React, {useState, useEffect, useCallback} from 'react';
+
 import musicI18n from '../locale';
-import moduleStyles from './chordPanel.module.scss';
-import LoadingOverlay from './LoadingOverlay';
+import {ChordEventValue, PlayStyle} from '../player/interfaces/ChordEvent';
+import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
+import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
+import {getNoteName, isBlackKey} from '../utils/Notes';
+
+import LoadingOverlay from './LoadingOverlay';
+import PreviewControls from './PreviewControls';
+
+import moduleStyles from './chordPanel.module.scss';
 
 const NUM_OCTAVES = 3;
 const START_OCTAVE = 4;

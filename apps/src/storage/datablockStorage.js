@@ -58,7 +58,7 @@ DatablockStorage.getKeyValue = function (key, onSuccess, onError) {
 
 DatablockStorage.setKeyValue = function (key, value, onSuccess, onError) {
   value = value === undefined ? null : value;
-  _fetch('set_key_value', 'POST', {
+  return _fetch('set_key_value', 'POST', {
     key,
     value: JSON.stringify(value),
   }).then(() => onSuccess(), onError);
@@ -78,7 +78,7 @@ DatablockStorage.createRecord = function (
   onSuccess,
   onError
 ) {
-  createRecord(tableName, record).then(onSuccess, onError);
+  return createRecord(tableName, record).then(onSuccess, onError);
 };
 
 DatablockStorage.updateRecord = function (
@@ -87,7 +87,7 @@ DatablockStorage.updateRecord = function (
   onSuccess,
   onError
 ) {
-  _fetch('update_record', 'PUT', {
+  return _fetch('update_record', 'PUT', {
     table_name: tableName,
     record_id: record.id,
     record_json: JSON.stringify(record),
@@ -144,7 +144,7 @@ DatablockStorage.deleteRecord = function (
   onSuccess,
   onError
 ) {
-  _fetch('delete_record', 'DELETE', {
+  return _fetch('delete_record', 'DELETE', {
     table_name: tableName,
     record_id: record.id,
   }).then(() => onSuccess(true), onError);
@@ -157,7 +157,6 @@ async function getTableNames({isSharedTable = false} = {}) {
   return await response.json();
 }
 
-// This is only called if isDatablockStorage()
 DatablockStorage.getTableNames = function () {
   return getTableNames();
 };

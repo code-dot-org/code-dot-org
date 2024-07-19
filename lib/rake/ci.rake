@@ -92,7 +92,6 @@ namespace :ci do
   end
 
   all_tasks = []
-  all_tasks << 'firebase:ci'
   all_tasks << :build
   all_tasks << :deploy_multi
   all_tasks << :flush_cloudfront_cache
