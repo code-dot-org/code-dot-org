@@ -26,6 +26,18 @@ Object.entries(APPLICATION_ALIASES).forEach(([alias, localPath]) => {
 });
 
 /**
+ * List of node_modules to transform with babel-jest (default is not to transform)
+ */
+const nodeModulesToTransform = [
+  'vmsg',
+  '@code-dot-org/johnny-five',
+  '@code-dot-org/js-interpreter',
+  'blockly/core',
+  // `p-queue/dist/index.js` uses ESM imports
+  'p-queue',
+];
+
+/**
  * For a detailed explanation regarding each configuration property, visit:
  * https://jestjs.io/docs/configuration
  */
@@ -234,7 +246,8 @@ const config = {
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   transformIgnorePatterns: [
-    'node_modules/(?!vmsg|@code-dot-org/johnny-five|@code-dot-org/js-interpreter|blockly/core|p-queue)',
+    // Don't transform node_modules, with the exception of `nodeModulesToTransform`
+    `node_modules/(?!${nodeModulesToTransform.join('|')})`,
   ],
 
   // An array of regexp pattern strings that are matched against all modules before the module loader will automatically return a mock for them
