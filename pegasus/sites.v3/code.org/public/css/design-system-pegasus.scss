@@ -1168,10 +1168,11 @@ section.quote {
   .tab-content-container {
     padding: 30px;
     border-radius: 0px 0px 8px 8px;
-    border-right: 1px solid var(--Light-Gray-200, #D1D4D8);
-    border-bottom: 1px solid var(--Light-Gray-200, #D1D4D8);
-    border-left: 1px solid var(--Light-Gray-200, #D1D4D8);
-    background: var(--Light-White, #FFF);
+    border-right: 1px solid var(--light_gray200);
+    border-bottom: 1px solid var(--light_gray200);
+    border-left: 1px solid var(--light_gray200);
+    //border: 1px solid var(--neutral_dark20);
+    background: var(--neutral_white);
     box-sizing: border-box;
   }
 
