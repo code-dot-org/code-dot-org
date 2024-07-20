@@ -5,7 +5,7 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import EmptySection from '@cdo/apps/templates/teacherDashboard/EmptySection';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('EmptySection', () => {
   it('displays empty desk image and Add Students link when there are no students', () => {

@@ -1,7 +1,7 @@
 import {fireEvent, render, screen, within} from '@testing-library/react';
 import $ from 'jquery';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import LtiSectionSyncDialog from '@cdo/apps/lib/ui/simpleSignUp/lti/sync/LtiSectionSyncDialog';
 import {
@@ -10,7 +10,7 @@ import {
 } from '@cdo/apps/lib/ui/simpleSignUp/lti/sync/types';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const MOCK_ALL_SECTION_MAP: LtiSectionMap = {
   1: {

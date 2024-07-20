@@ -1,5 +1,5 @@
 import {assertOwnProperty} from '../../util/assertions';
-import {assert} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 var NetSimEntity = require('@cdo/apps/netsim/NetSimEntity');
 var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
