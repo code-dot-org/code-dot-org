@@ -11476,6 +11476,7 @@
       what_you_can_make: "Simple animations and games with characters"
       experience: "Beginner"
       call_to_action_learn_more: "Learn more"
+      aria_label_learn_more: "Learn more about Sprite Lab"
       call_to_action_try: "Try Sprite Lab"
     gamelab:
       overline: "Ages 13+"
@@ -11483,6 +11484,7 @@
       what_you_can_make: "Simple animations and games with characters"
       experience: "Beginner"
       call_to_action_learn_more: "Learn more"
+      aria_label_learn_more: "Learn more about Game Lab"
       call_to_action_try: "Try Game Lab"
     applab:
       overline: "Ages 13+"
@@ -11490,6 +11492,7 @@
       what_you_can_make: "Simple Javascript apps with blocks or code"
       experience: "Beginner"
       call_to_action_learn_more: "Learn more"
+      aria_label_learn_more: "Learn more about App Lab"
       call_to_action_try: "Try App Lab"
  
   resources_tabs:
