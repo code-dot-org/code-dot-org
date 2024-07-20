@@ -5,8 +5,6 @@ import {
   RATE_LIMIT_INTERVAL_MS,
 } from '../../../src/storage/rateLimit';
 
-const NO_OP = () => undefined;
-
 describe('DatablockStorage', () => {
   beforeEach(() => {
     resetRateLimit();
@@ -16,38 +14,43 @@ describe('DatablockStorage', () => {
   });
 
   describe('rate limiting', () => {
-    it('succeeds if calling less times than the rate limit', async () => {
+    it('succeeds if calling less times than the rate limit', done => {
       const now = Date.now();
 
       for (let i = 0; i < RATE_LIMIT; i++) {
         const time = now + i;
-        await rateLimit(NO_OP, time);
+        rateLimit(time);
       }
+
+      done();
     });
-    it('fails if called one more time than the rate limit', async () => {
+    it('fails if called one more time than the rate limit', done => {
       const now = Date.now();
 
       for (let i = 0; i < RATE_LIMIT; i++) {
         const time = now + i;
-        await rateLimit(NO_OP, time);
+        rateLimit(time);
       }
 
       // This should be over the rate limit
-      await expect(rateLimit(NO_OP, now + RATE_LIMIT)).rejects.toThrow(Error);
+      expect(() => rateLimit(now + RATE_LIMIT)).to.throw(Error);
+
+      done();
     });
-    it('it succeeds if called more than the rate limit, but after waiting rate limit interval', async () => {
+    it('it succeeds if called more than the rate limit, but after waiting rate limit interval', done => {
       let now = Date.now();
 
       for (let i = 0; i < RATE_LIMIT; i++) {
         const time = now + i;
-        await rateLimit(NO_OP, time);
+        rateLimit(time);
       }
 
       now += RATE_LIMIT_INTERVAL_MS;
       for (let i = 0; i < RATE_LIMIT; i++) {
         const time = now + i;
-        await rateLimit(NO_OP, time);
+        rateLimit(time);
       }
+      done();
     });
   });
 });
