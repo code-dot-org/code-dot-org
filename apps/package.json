@@ -264,7 +264,6 @@
     "ml-knn": "^3.0.0",
     "moment": "^2.29.4",
     "object-fit-images": "^3.2.3",
-    "p-queue": "^8.0.1",
     "pa11y-ci": "^2.3.0",
     "path-browserify": "^1.0.1",
     "pepjs": "^0.4.3",
