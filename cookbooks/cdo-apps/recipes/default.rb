@@ -48,10 +48,9 @@ apt_package 'enscript'
 
 # Install dependencies required to sync content between our Code.org shared
 # Dropbox folder and our git repository only on the staging server. In the long
-# run, we'd like to have this happen in a separate - ideally ephemeral -
-# environment, independent of any of our build pipeline servers; but for now,
-# the staging server is where it lives.
-if node.chef_environment == 'adhoc'
+# run, we'd like to have this happen in a separate environment independent of
+# any of our build pipeline servers; but for now, we default to staging.
+if node.chef_environment == 'staging'
   include_recipe 'cdo-apps::dropbox_sync'
 end
 
