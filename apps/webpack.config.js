@@ -61,6 +61,7 @@ const nodeModulesToTranspile = [
   'ml-array-min',
   'ml-array-rescale',
   'ml-distance-euclidean',
+  'p-queue',
   '@codemirror',
   'style-mod',
   '@lezer',
