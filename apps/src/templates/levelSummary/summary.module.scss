@@ -1,4 +1,4 @@
-@import 'color.scss';
+@import "color.scss";
 
 .summaryContainer {
   max-width: 970px;
@@ -75,7 +75,7 @@ label.sectionSelector {
   float: right;
 }
 
-[dir='rtl'] .toggleContainer {
+[dir="rtl"] .toggleContainer {
   float: left;
 }
 
@@ -85,13 +85,6 @@ label.sectionSelector {
   border-radius: 4px;
   padding: 24px;
   margin-bottom: 24px;
-}
-
-.headerContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .studentResponses {
@@ -111,21 +104,13 @@ label.sectionSelector {
     column-gap: 48px;
     padding-top: 24px;
     padding-bottom: 12px;
-
-    .studentResponseBlock {
-      margin-bottom: 16px;
-    }
-
-    .studentName {
-      min-height: 24px;
-      margin: 0;
-      font-size: 14px;
-      font-weight: bold;
-      padding-left: 12px;
-    }
   }
 
   .studentAnswer {
+    padding: 12px;
+    margin-bottom: 16px;
+    // TODO: Update to use #E6F6F8 once the phase-2 brand colors are in.
+    background-color: $lightest_cyan;
     width: 100%;
     box-sizing: border-box;
     border-radius: 4px;
@@ -133,13 +118,9 @@ label.sectionSelector {
     display: inline-block;
 
     .studentAnswerInterior {
-      background-color: $lightest_cyan;
-      padding: 12px;
-      border-radius: 4px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      margin-bottom: 4px;
     }
 
     p {
@@ -166,12 +147,12 @@ label.sectionSelector {
       margin: 0.25rem 0;
       list-style: none;
       background-color: $light_white;
-      border: 1px solid rgba(0 0 0 / 0.15);
+      border: 1px solid rgba(0 0 0 / .15);
       border-radius: 4px;
       -webkit-box-shadow: 0 6px 12px rgba(20 16 16 / 0.175);
-      box-shadow: 0 6px 12px rgba(0 0 0 / 0.175);
+      box-shadow: 0 6px 12px rgba(0 0 0 / .175);
       background-clip: padding-box;
-      padding: 0.25rem 0 0.25rem;
+      padding: .25rem 0 .25rem;
 
       ul {
         margin: 0;
