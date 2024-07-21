@@ -1,15 +1,18 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import ReactTooltip from 'react-tooltip';
-import _ from 'lodash';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
-import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
-import BootstrapButton from './BootstrapButton';
 import {connect} from 'react-redux';
-import RailsAuthenticityToken from '../../util/RailsAuthenticityToken';
-import {OAuthProviders} from '@cdo/apps/lib/ui/accounts/constants';
+import ReactTooltip from 'react-tooltip';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import {OAuthProviders} from '@cdo/apps/lib/ui/accounts/constants';
+import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import RailsAuthenticityToken from '../../util/RailsAuthenticityToken';
+
+import BootstrapButton from './BootstrapButton';
 import lockImage from './images/lock.svg';
 
 export const ENCRYPTED = `*** ${i18n.encrypted()} ***`;

@@ -1,12 +1,13 @@
 import React, {useState, useEffect, useReducer} from 'react';
-import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
-import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
+
 import {getStore} from '@cdo/apps/redux';
 import {
   ltiFeedbackReducer,
   fetchLtiFeedback,
   createLtiFeedback,
 } from '@cdo/apps/redux/lti/ltiFeedbackReducer';
+import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
+import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import FeedbackBanner, {BANNER_STATUS} from '../../../feedback/FeedbackBanner';

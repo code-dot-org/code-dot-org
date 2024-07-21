@@ -15,7 +15,7 @@ module Cdo
     def self.clone_cluster(
       source_cluster_id: CDO.db_cluster_id,
       clone_cluster_id: "#{source_cluster_id}-clone",
-      instance_type: 'db.t3.2xlarge',
+      instance_type: 'db.r5.large',
       max_attempts: 30,  # It takes ~15 minutes to clone the production cluster, so default to 30 minutes.
       delay: 60
     )

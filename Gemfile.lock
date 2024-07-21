@@ -419,10 +419,6 @@ GEM
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
-    firebase (0.2.6)
-      httpclient
-      json
-    firebase_token_generator (2.0.0)
     fspath (3.1.0)
     gemoji (4.1.0)
     geocoder (1.6.4)
@@ -1031,8 +1027,6 @@ DEPENDENCIES
   factory_bot_rails (~> 6.2)
   fakefs (~> 2.5.0)
   fakeredis
-  firebase
-  firebase_token_generator
   full-name-splitter!
   gemoji
   geocoder

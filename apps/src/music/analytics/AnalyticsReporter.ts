@@ -7,16 +7,18 @@ import {
   flush,
   setUserId,
 } from '@amplitude/analytics-browser';
+import {Block} from 'blockly';
+
+import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
   getEnvironment,
   isDevelopmentEnvironment,
   isProductionEnvironment,
 } from '@cdo/apps/utils';
-import {Block} from 'blockly';
+
 import {BlockTypes} from '../blockly/blockTypes';
 import {FIELD_SOUNDS_NAME} from '../blockly/constants';
-import DCDO from '@cdo/apps/dcdo';
 
 const API_KEY_ENDPOINT = '/musiclab/analytics_key';
 

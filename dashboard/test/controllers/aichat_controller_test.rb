@@ -20,8 +20,8 @@ class AichatControllerTest < ActionController::TestCase
         channelId: "test"
       }
     }
-    valid_message = {role: 'user', chatMessageText: 'hello'}
-    @profanity_violation_message = {role: 'user', chatMessageText: 'Damn you, robot'}
+    valid_message = {role: 'user', chatMessageText: 'hello', status: 'unknown', timestamp: Time.now.to_i}
+    @profanity_violation_message = {role: 'user', chatMessageText: 'Damn you, robot', status: 'unknown', timestamp: Time.now.to_i}
     @valid_params = @common_params.merge(newMessage: valid_message)
     @profanity_violation_params = @common_params.merge(
       newMessage: @profanity_violation_message
@@ -211,5 +211,25 @@ class AichatControllerTest < ActionController::TestCase
     ),
       as: :json
     refute_equal session.id, json_response['session_id']
+  end
+
+  test 'updates existing chat session when session id provided and a message field outside of chatMessageText, role, and status do not match' do
+    sign_in(@genai_pilot_teacher)
+
+    post :chat_completion, params: @valid_params, as: :json
+    session = AichatSession.find(json_response['session_id'])
+
+    post :chat_completion, params: @valid_params.merge(
+      {
+        sessionId: session.id,
+        storedMessages: [
+          @valid_params[:newMessage].merge(status: 'ok').stringify_keys,
+          {role: 'assistant', chatMessageText: @assistant_response, status: 'ok', timestamp: Time.now.to_i}.stringify_keys
+        ],
+        aichatModelCustomizations: @default_model_customizations
+      }
+    ),
+      as: :json
+    assert_equal session.id, json_response['session_id']
   end
 end

@@ -1,15 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
+
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import {DataView} from '@cdo/apps/storage/constants';
+import Dataset from '@cdo/apps/storage/levelbuilder/Dataset';
 import data, {
   changeView,
   updateTableColumns,
   updateTableRecords,
 } from '@cdo/apps/storage/redux/data';
-import {DataView} from '@cdo/apps/storage/constants';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import Dataset from '@cdo/apps/storage/levelbuilder/Dataset';
 
 $(document).ready(function () {
   const dataset = getScriptData('dataset');
