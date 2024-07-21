@@ -101,13 +101,24 @@ class SectionActionDropdown extends Component {
   };
 
   onClickSync = () => {
-    analyticsReporter.sendEvent(
-      this.props.sectionData.loginType === OAuthSectionTypes.google_classroom
-        ? EVENTS.SECTION_TABLE_SYNC_GOOGLE_CLASSROOM_CLICKED
-        : EVENTS.SECTION_TABLE_SYNC_CLEVER_CLICKED,
-      {},
-      PLATFORMS.BOTH
-    );
+    const {loginType} = this.props.sectionData;
+
+    switch (loginType) {
+      case OAuthSectionTypes.google_classroom:
+        analyticsReporter.sendEvent(
+          EVENTS.SECTION_TABLE_SYNC_GOOGLE_CLASSROOM_CLICKED,
+          {},
+          PLATFORMS.BOTH
+        );
+        break;
+      case OAuthSectionTypes.clever:
+        analyticsReporter.sendEvent(
+          EVENTS.SECTION_TABLE_SYNC_CLEVER_CLICKED,
+          {},
+          PLATFORMS.BOTH
+        );
+        break;
+    }
     // Section code is the course ID, without the G- or C- prefix.
     const courseId = this.props.sectionCode.replace(/^[GC]-/, '');
     this.props.updateRoster(courseId, this.props.sectionName);
