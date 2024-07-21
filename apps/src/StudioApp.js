@@ -98,11 +98,12 @@ var codegen = require('./lib/tools/jsinterpreter/codegen');
 var copyrightStrings;
 
 /**
- *
+ * Store experiment parameters.
  */
 const isBigPlayspaceExperiment = experiments.isEnabledAllowingQueryString(
   experiments.BIG_PLAYSPACE
 );
+const bigPlaySpacePadding = queryParams('bigPlayspacePadding') || 160;
 
 /**
  * The minimum width of a playable whole blockly game.
@@ -110,7 +111,7 @@ const isBigPlayspaceExperiment = experiments.isEnabledAllowingQueryString(
 
 const getMaxVisualizationWidth = () => {
   return isBigPlayspaceExperiment
-    ? Math.min(window.innerHeight - 160, window.innerWidth / 2)
+    ? Math.min(window.innerHeight - bigPlaySpacePadding, window.innerWidth / 2)
     : 400;
 };
 
