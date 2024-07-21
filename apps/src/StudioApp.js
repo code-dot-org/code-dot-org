@@ -98,15 +98,25 @@ var codegen = require('./lib/tools/jsinterpreter/codegen');
 var copyrightStrings;
 
 /**
+ *
+ */
+const isBigPlayspaceExperiment = experiments.isEnabledAllowingQueryString(
+  experiments.BIG_PLAYSPACE
+);
+
+/**
  * The minimum width of a playable whole blockly game.
  */
+
+const getMaxVisualizationWidth = () => {
+  return isBigPlayspaceExperiment
+    ? Math.min(window.innerHeight - 160, window.innerWidth / 2)
+    : 400;
+};
+
 const MIN_WIDTH = 1400;
 const DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
-export const MAX_VISUALIZATION_WIDTH = experiments.isEnabledAllowingQueryString(
-  experiments.BIG_PLAYSPACE
-)
-  ? Math.min(window.innerHeight - 160, window.innerWidth / 2)
-  : 400;
+export const MAX_VISUALIZATION_WIDTH = getMaxVisualizationWidth();
 export const MIN_VISUALIZATION_WIDTH = 200;
 
 /**
@@ -254,6 +264,12 @@ class StudioApp extends EventEmitter {
      * Global key handler for the app.
      */
     this.keyHandler = new KeyHandler(document);
+
+    /**
+     * Last window dimensions when a resize was handled.
+     */
+    this.lastWindowInnerWidth = undefined;
+    this.lastWindowInnerHeight = undefined;
   }
 }
 /**
@@ -1399,23 +1415,19 @@ StudioApp.prototype.onResize = function () {
     onResizeSmallFooter();
   }
 
-  // Let's avoid an infinite recursion by making sure this is a size.
+  // Let's avoid an infinite recursion by making sure this is a genuine resize.
   if (
-    window.innerHeight !== this.lastWindowInnerHeight ||
-    window.innerWidth !== this.lastWindowInnerWidth
+    window.innerWidth !== this.lastWindowInnerWidth ||
+    window.innerHeight !== this.lastWindowInnerHeight
   ) {
-    this.maxVisualizationWidth = experiments.isEnabledAllowingQueryString(
-      experiments.BIG_PLAYSPACE
-    )
-      ? Math.min(window.innerHeight - 160, window.innerWidth / 2)
-      : 400;
+    this.maxVisualizationWidth = getMaxVisualizationWidth();
 
     const visualizationColumn = document.getElementById('visualizationColumn');
     const visualizationColumnWidth = $(visualizationColumn).width();
     this.resizeVisualization(visualizationColumnWidth, true);
 
-    this.lastWindowInnerHeight = window.innerHeight;
     this.lastWindowInnerWidth = window.innerWidth;
+    this.lastWindowInnerHeight = window.innerHeight;
   }
 };
 
@@ -1558,7 +1570,7 @@ StudioApp.prototype.resizeVisualization = function (width, skipFire = false) {
   visualizationColumn.style.maxWidth = newVizWidth + vizSideBorderWidth + 'px';
   visualization.style.maxWidth = newVizWidthString;
   visualization.style.maxHeight = newVizHeightString;
-  if (experiments.isEnabledAllowingQueryString(experiments.BIG_PLAYSPACE)) {
+  if (isBigPlayspaceExperiment) {
     visualizationColumn.style.width = visualizationColumn.style.maxWidth;
     visualization.style.width = newVizWidthString;
     visualization.style.height = newVizHeightString;
@@ -2046,7 +2058,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
     config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
-  if (experiments.isEnabledAllowingQueryString(experiments.BIG_PLAYSPACE)) {
+  if (isBigPlayspaceExperiment) {
     this.nativeVizWidth = 400;
   }
 
