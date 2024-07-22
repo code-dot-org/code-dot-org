@@ -3,11 +3,11 @@
 require_relative '../deployment'
 require 'cdo/rake_utils'
 
-puts 'Doing git pull'
-RakeUtils.git_pull
-puts 'Beginning seed process'
 Dir.chdir(dashboard_dir) do
-  RakeUtils.rake 'seed:default', 'CURRICULUM_CONTENT_DIR=~/staging/dashboard'
+  staging_dir = '../../staging'
+  Dir.chdir(staging_dir) do
+    RakeUtils.git_pull
+  end
+  RakeUtils.rake_stream_output 'seed:default', "CURRICULUM_CONTENT_DIR=#{staging_dir}/dashboard"
 end
-puts 'Restarting web service'
 RakeUtils.restart_service CDO.dashboard_web_server_name unless rack_env?(:development)
