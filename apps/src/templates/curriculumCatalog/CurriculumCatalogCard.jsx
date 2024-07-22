@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {concat, intersection} from 'lodash';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Button from '@cdo/apps/templates/Button';
+import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
 import i18n from '@cdo/locale';
 import {
   translatedCourseOfferingCsTopics,
@@ -284,43 +284,41 @@ const CustomizableCurriculumCatalogCard = ({
               )}
             >
               <Button
-                color={Button.ButtonColor.neutralDark}
-                type="button"
                 onClick={onQuickViewClick}
-                aria-label={quickViewButtonDescription}
+                ariaLabel={quickViewButtonDescription}
                 text={i18n.quickView()}
                 className={`${style.buttonFlex} ${style.quickViewButton}`}
+                type="secondary"
+                color="black"
               />
               {isTeacherOrSignedOut && (
                 <>
-                  <Button
-                    __useDeprecatedTag
-                    color={Button.ButtonColor.neutralDark}
-                    type="button"
+                  <LinkButton
+                    color="black"
+                    type="secondary"
                     href={pathToCourse}
-                    aria-label={i18n.learnMoreDescription({
+                    ariaLabel={i18n.learnMoreDescription({
                       course_name: courseDisplayName,
                     })}
                     text={i18n.learnMore()}
                     className={`${style.buttonFlex} ${style.teacherAndSignedOutLearnMoreButton}`}
                   />
                   <Button
-                    color={Button.ButtonColor.brandSecondaryDefault}
-                    type="button"
+                    color="purple"
+                    type="primary"
                     onClick={() => handleClickAssign('top-card')}
-                    aria-label={assignButtonDescription}
+                    ariaLabel={assignButtonDescription}
                     text={assignButtonText}
                     className={style.buttonFlex}
                   />
                 </>
               )}
               {!isTeacherOrSignedOut && (
-                <Button
-                  __useDeprecatedTag
-                  color={Button.ButtonColor.brandSecondaryDefault}
-                  type="button"
+                <LinkButton
+                  color="purple"
+                  type="primary"
                   href={pathToCourse}
-                  aria-label={i18n.tryCourseNow({
+                  ariaLabel={i18n.tryCourseNow({
                     course_name: courseDisplayName,
                   })}
                   text={i18n.tryNow()}
