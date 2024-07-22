@@ -1,5 +1,4 @@
-import {assert} from 'chai';
-import _ from 'lodash';
+import _ from 'lodash'; // eslint-disable-line no-restricted-imports
 
 import vocabularyEditor, {
   addVocabulary,
@@ -39,10 +38,11 @@ describe('vocabulariesEditorRedux reducer tests', () => {
         commonSenseMedia: false,
       })
     );
-    assert.deepEqual(
-      nextState.map(r => r.key),
-      ['vocabulary-1', 'vocabulary-2', 'new-word']
-    );
+    expect(nextState.map(r => r.key)).toEqual([
+      'vocabulary-1',
+      'vocabulary-2',
+      'new-word',
+    ]);
   });
 
   it('edit vocabulary', () => {
@@ -52,10 +52,7 @@ describe('vocabulariesEditorRedux reducer tests', () => {
       initialState,
       updateVocabulary(editedVocabulary)
     );
-    assert.deepEqual(
-      nextState.map(r => r.word),
-      ['new word', 'vocabulary-2']
-    );
+    expect(nextState.map(r => r.word)).toEqual(['new word', 'vocabulary-2']);
   });
 
   it('remove vocabulary', () => {
@@ -63,9 +60,6 @@ describe('vocabulariesEditorRedux reducer tests', () => {
       initialState,
       removeVocabulary('vocabulary-1')
     );
-    assert.deepEqual(
-      nextState.map(r => r.key),
-      ['vocabulary-2']
-    );
+    expect(nextState.map(r => r.key)).toEqual(['vocabulary-2']);
   });
 });

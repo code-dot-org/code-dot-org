@@ -1,5 +1,3 @@
-import sinon from 'sinon';
-
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import {
   reducers,
@@ -15,8 +13,6 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 
-import {expect} from '../../../../util/reconfiguredChai';
-
 describe('The JSDebugger redux duck', () => {
   let store, state, studioApp, interpreter;
   beforeEach(() => {
@@ -29,16 +25,17 @@ describe('The JSDebugger redux duck', () => {
       shouldRunAtMaxSpeed: () => false,
       studioApp,
     });
-    sinon.spy(interpreter, 'handlePauseContinue');
-    sinon.spy(interpreter, 'handleStepIn');
-    sinon.spy(interpreter, 'handleStepOut');
-    sinon.spy(interpreter, 'handleStepOver');
+    jest.spyOn(interpreter, 'handlePauseContinue').mockClear();
+    jest.spyOn(interpreter, 'handleStepIn').mockClear();
+    jest.spyOn(interpreter, 'handleStepOut').mockClear();
+    jest.spyOn(interpreter, 'handleStepOver').mockClear();
 
     // override evalInCurrentScope so we don't have to set up the full interpreter.
-    sinon
-      .stub(interpreter, 'evalInCurrentScope')
+    jest
+      .spyOn(interpreter, 'evalInCurrentScope')
+      .mockClear()
       // eslint-disable-next-line no-eval
-      .callsFake(input => eval(input));
+      .mockImplementation(input => eval(input));
   });
   afterEach(() => {
     restoreRedux();
@@ -68,43 +65,43 @@ describe('The JSDebugger redux duck', () => {
   }
 
   it('exposes state on the jsdebugger key', () => {
-    expect(store.getState().jsdebugger).to.not.be.undefined;
+    expect(store.getState().jsdebugger).toBeDefined();
   });
 
   it('the state can be accesed via the getRoot selector', () => {
-    expect(selectors.getRoot(state)).to.equal(state.jsdebugger);
+    expect(selectors.getRoot(state)).toBe(state.jsdebugger);
   });
 
   describe('the initial state', () => {
     it('is initially not attached to an interpreter', () => {
-      expect(selectors.isAttached(state)).to.be.false;
+      expect(selectors.isAttached(state)).toBe(false);
     });
 
     it('and therefore has no interpreter', () => {
-      expect(selectors.getJSInterpreter(state)).to.be.null;
+      expect(selectors.getJSInterpreter(state)).toBeNull();
     });
 
     it('nor any command history', () => {
-      expect(selectors.getCommandHistory(state)).to.be.null;
+      expect(selectors.getCommandHistory(state)).toBeNull();
     });
 
     it('and no log output', () => {
-      expect(selectors.getLogOutput(state)).to.deep.equal([]);
+      expect(selectors.getLogOutput(state)).toEqual([]);
     });
 
     it('and is closed', () => {
-      expect(selectors.isOpen(state)).to.be.false;
+      expect(selectors.isOpen(state)).toBe(false);
     });
   });
 
   describe('the open and close actions', () => {
     beforeEach(() => store.dispatch(actions.open()));
     it('will open the debugger', () => {
-      expect(selectors.isOpen(store.getState())).to.be.true;
+      expect(selectors.isOpen(store.getState())).toBe(true);
     });
     it('and close the debugger', () => {
       store.dispatch(actions.close());
-      expect(selectors.isOpen(store.getState())).to.be.false;
+      expect(selectors.isOpen(store.getState())).toBe(false);
     });
   });
 
@@ -116,31 +113,31 @@ describe('The JSDebugger redux duck', () => {
         })
       );
       var outputs = selectors.getLogOutput(store.getState());
-      expect(outputs.toJS()[0].output).to.equal('foo');
+      expect(outputs.toJS()[0].output).toBe('foo');
     });
 
     it('will append rich objects to the log output', () => {
       store.dispatch(actions.appendLog({output: {foo: 'bar'}}));
-      expect(
-        selectors.getLogOutput(store.getState()).toJS()[0].output
-      ).to.deep.equal({foo: 'bar'});
+      expect(selectors.getLogOutput(store.getState()).toJS()[0].output).toEqual(
+        {foo: 'bar'}
+      );
     });
 
     it('will append multiple both input and output to the log output', () => {
       store.dispatch(actions.appendLog({input: '1 + 1'}));
       store.dispatch(actions.appendLog({output: 2}));
-      expect(
-        selectors.getLogOutput(store.getState()).toJS()[0].input
-      ).to.deep.equal('1 + 1');
-      expect(
-        selectors.getLogOutput(store.getState()).toJS()[1].output
-      ).to.deep.equal(2);
+      expect(selectors.getLogOutput(store.getState()).toJS()[0].input).toEqual(
+        '1 + 1'
+      );
+      expect(selectors.getLogOutput(store.getState()).toJS()[1].output).toEqual(
+        2
+      );
     });
 
     it('will also trigger the open action if the debugger is not already open', () => {
-      expect(selectors.isOpen(store.getState())).to.be.false;
+      expect(selectors.isOpen(store.getState())).toBe(false);
       store.dispatch(actions.appendLog({output: 'open sesame'}));
-      expect(selectors.isOpen(store.getState())).to.be.true;
+      expect(selectors.isOpen(store.getState())).toBe(true);
     });
 
     it('will append errors and warnings with note to skip react-inspector', () => {
@@ -149,19 +146,19 @@ describe('The JSDebugger redux duck', () => {
       store.dispatch(actions.appendLog({output: 'Even more text'}));
       expect(
         selectors.getLogOutput(store.getState()).toJS()[0].skipInspector
-      ).to.equal(true);
+      ).toBe(true);
       expect(
         selectors.getLogOutput(store.getState()).toJS()[1].skipInspector
-      ).to.equal(true);
+      ).toBe(true);
       expect(
         selectors.getLogOutput(store.getState()).toJS()[2].skipInspector
-      ).to.equal(false);
+      ).toBe(false);
     });
   });
 
   describe('before being initialized', () => {
     it('will throw an error if you try to step in', () => {
-      expect(() => store.dispatch(actions.stepIn())).to.throw(
+      expect(() => store.dispatch(actions.stepIn())).toThrow(
         'jsdebugger has not been initialized yet'
       );
     });
@@ -170,23 +167,23 @@ describe('The JSDebugger redux duck', () => {
   describe('after being initialized with a bad runApp implementation', () => {
     let runApp;
     beforeEach(() => {
-      runApp = sinon.spy();
+      runApp = jest.fn();
       store.dispatch(actions.initialize({runApp}));
       state = store.getState();
     });
 
     it('will throw an error when you try to stepIn()', () => {
-      expect(() => store.dispatch(actions.stepIn())).to.throw(
+      expect(() => store.dispatch(actions.stepIn())).toThrow(
         'runApp should have attached an interpreter'
       );
-      expect(runApp).to.have.been.called;
+      expect(runApp).toHaveBeenCalled();
     });
   });
 
   describe('after being initialized', () => {
     let runApp;
     beforeEach(() => {
-      runApp = sinon.spy(() => {
+      runApp = jest.fn(() => {
         store.dispatch(actions.attach(interpreter));
       });
       store.dispatch(actions.initialize({runApp}));
@@ -194,32 +191,30 @@ describe('The JSDebugger redux duck', () => {
     });
 
     it('you can access a command history object', () => {
-      expect(selectors.getCommandHistory(state)).to.be.an.instanceOf(
-        CommandHistory
-      );
+      expect(selectors.getCommandHistory(state)).toBeInstanceOf(CommandHistory);
     });
 
     it('there is no js interpreter attached yet', () => {
-      expect(selectors.getJSInterpreter(state)).to.be.null;
+      expect(selectors.getJSInterpreter(state)).toBeNull();
     });
 
     describe('before a js interpreter is attached', () => {
       it('the stepOut action throws an error', () => {
-        expect(() => store.dispatch(actions.stepOut())).to.throw(
+        expect(() => store.dispatch(actions.stepOut())).toThrow(
           'No interpreter has been attached'
         );
       });
 
       it('the stepOver action throws an error', () => {
-        expect(() => store.dispatch(actions.stepOver())).to.throw(
+        expect(() => store.dispatch(actions.stepOver())).toThrow(
           'No interpreter has been attached'
         );
       });
 
       it('the evalInCurrentScope action throws an error', () => {
-        expect(() =>
-          store.dispatch(actions.evalInCurrentScope('1+1'))
-        ).to.throw('No interpreter has been attached');
+        expect(() => store.dispatch(actions.evalInCurrentScope('1+1'))).toThrow(
+          'No interpreter has been attached'
+        );
       });
 
       describe('after dispatching the stepIn() action', () => {
@@ -229,18 +224,19 @@ describe('The JSDebugger redux duck', () => {
         });
 
         it('will call whatever runApp function was provided', () => {
-          expect(runApp).to.have.been.called;
+          expect(runApp).toHaveBeenCalled();
         });
 
         it("will immediately call the interpreter's handlePauseContinue method", () => {
           expect(
             selectors.getJSInterpreter(store.getState()).handlePauseContinue
-          ).to.have.been.called;
+          ).toHaveBeenCalled();
         });
 
         it("will call the interpreter's handleStepIn() method", () => {
-          expect(selectors.getJSInterpreter(store.getState()).handleStepIn).to
-            .have.been.called;
+          expect(
+            selectors.getJSInterpreter(store.getState()).handleStepIn
+          ).toHaveBeenCalled();
         });
       });
     });
@@ -252,52 +248,55 @@ describe('The JSDebugger redux duck', () => {
       });
 
       it('you can get the jsinterpreter instance that was attached', () => {
-        expect(selectors.getJSInterpreter(state)).to.equal(interpreter);
+        expect(selectors.getJSInterpreter(state)).toBe(interpreter);
       });
 
       it('the interpreter will trigger pause actions on breakpoints', () => {
-        expect(selectors.isPaused(state)).to.be.false;
+        expect(selectors.isPaused(state)).toBe(false);
         runToBreakpoint();
-        expect(selectors.isPaused(store.getState())).to.be.true;
+        expect(selectors.isPaused(store.getState())).toBe(true);
       });
 
       it('the interpreter will open the debugger on breakpoints', () => {
-        expect(selectors.isOpen(state)).to.be.false;
+        expect(selectors.isOpen(state)).toBe(false);
         runToBreakpoint();
-        expect(selectors.isOpen(store.getState())).to.be.true;
+        expect(selectors.isOpen(store.getState())).toBe(true);
       });
 
       it('the interpreter will log execution warnings', () => {
-        expect(selectors.getLogOutput(state).toJS()).to.deep.equal([]);
+        expect(selectors.getLogOutput(state).toJS()).toEqual([]);
         interpreter.onExecutionWarning.notifyObservers('ouch!', 10);
-        expect(
-          selectors.getLogOutput(store.getState()).toJS()[0].output
-        ).to.equal('ouch!');
+        expect(selectors.getLogOutput(store.getState()).toJS()[0].output).toBe(
+          'ouch!'
+        );
       });
 
       it("changes to the interpreter's next step will be mirrored", () => {
-        expect(selectors.canRunNext(state)).to.be.false;
+        expect(selectors.canRunNext(state)).toBe(false);
         runToBreakpoint();
-        expect(selectors.canRunNext(store.getState())).to.be.true;
+        expect(selectors.canRunNext(store.getState())).toBe(true);
       });
 
       it('you can dispatch the stepOut action', () => {
         store.dispatch(actions.stepOut());
-        expect(selectors.getJSInterpreter(store.getState()).handleStepOut).to
-          .have.been.called;
+        expect(
+          selectors.getJSInterpreter(store.getState()).handleStepOut
+        ).toHaveBeenCalled();
       });
 
       it('you can dispatch the stepOver action', () => {
         store.dispatch(actions.stepOver());
-        expect(selectors.getJSInterpreter(store.getState()).handleStepOver).to
-          .have.been.called;
+        expect(
+          selectors.getJSInterpreter(store.getState()).handleStepOver
+        ).toHaveBeenCalled();
       });
 
       it('you can dispatch the evalInCurrentScope action', () => {
         const result = store.dispatch(actions.evalInCurrentScope('1+1'));
-        expect(selectors.getJSInterpreter(store.getState()).evalInCurrentScope)
-          .to.have.been.called;
-        expect(result).to.equal(2);
+        expect(
+          selectors.getJSInterpreter(store.getState()).evalInCurrentScope
+        ).toHaveBeenCalled();
+        expect(result).toBe(2);
       });
 
       describe('after dispatching the stepIn() action', () => {
@@ -307,7 +306,7 @@ describe('The JSDebugger redux duck', () => {
         });
 
         it('will not call the provided runApp, because an interpreter is already attached', () => {
-          expect(runApp).not.to.have.been.called;
+          expect(runApp).not.toHaveBeenCalled();
         });
       });
 
@@ -319,27 +318,25 @@ describe('The JSDebugger redux duck', () => {
         });
 
         it('will no longer have a jsinterpreter', () => {
-          expect(selectors.getJSInterpreter(state)).to.be.null;
+          expect(selectors.getJSInterpreter(state)).toBeNull();
         });
 
         it('will no longer trigger pause actions', () => {
-          expect(selectors.isPaused(state)).to.be.false;
+          expect(selectors.isPaused(state)).toBe(false);
           runToBreakpoint();
-          expect(selectors.isPaused(store.getState())).to.be.false;
+          expect(selectors.isPaused(store.getState())).toBe(false);
         });
 
         it('will no longer log execution warnings', () => {
-          expect(selectors.getLogOutput(state).toJS()).to.deep.equal([]);
+          expect(selectors.getLogOutput(state).toJS()).toEqual([]);
           interpreter.onExecutionWarning.notifyObservers('ouch!', 10);
-          expect(selectors.getLogOutput(store.getState()).toJS()).to.deep.equal(
-            []
-          );
+          expect(selectors.getLogOutput(store.getState()).toJS()).toEqual([]);
         });
 
         it('will no longer mirror changes to the interpreter state', () => {
-          expect(selectors.canRunNext(state)).to.be.false;
+          expect(selectors.canRunNext(state)).toBe(false);
           runToBreakpoint();
-          expect(selectors.canRunNext(store.getState())).to.be.false;
+          expect(selectors.canRunNext(store.getState())).toBe(false);
         });
       });
     });

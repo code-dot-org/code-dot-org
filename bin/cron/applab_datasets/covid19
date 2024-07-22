@@ -1,18 +1,15 @@
 #!/usr/bin/env ruby
 
-# TODO: unfirebase, also update datablock storage: #56993
-# TODO: post-firebase-cleanup, remove the firebase version: #56994
+require_relative '../only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
 
-# This script fetches covid19 data and uploads to the shared firebase channel.
+# This script fetches covid19 data and uploads it to a datablock storage shared_table.
+require_relative '../../../dashboard/config/environment'
 require_relative '../../../deployment'
-require 'cdo/only_one'
 require 'net/http'
 require 'csv'
 require 'date'
 require 'datapackage'
-
-# TODO: post-firebase-cleanup, remove the firebase reference: #56994
-require_relative '../../../dashboard/legacy/middleware/helpers/firebase_helper'
 
 US_DATA_URL = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv"
 MAX_DAYS = 90 # there are 55 states/territories, and the table must be less than 5000 total rows (5000/55 = 90.9)
@@ -45,27 +42,16 @@ def get_us_covid19_data
            daily_data.keys
          end
 
-  # Add id to each record
-  columns = ['id', 'Date', 'State', 'Total Confirmed Cases', 'Total Deaths']
-  records = {}
-  id = 1
-  days.each do |day|
-    day_records = daily_data[day]
-    day_records.each do |record|
-      record['id'] = id
-      records[id] = record.to_json
-      id += 1
-    end
-  end
-
-  return records, columns
+  records = days.flat_map {|day| daily_data[day]}
+  return records
 end
 
 def main
-  # TODO: post-firebase-cleanup, remove the firebase reference: #56994
-  fb = FirebaseHelper.new('shared')
-  records, columns = get_us_covid19_data
-  fb.upload_live_table('COVID-19 Cases per US State', records, columns)
+  records = get_us_covid19_data
+
+  ActiveRecord::Base.transaction do
+    DatablockStorageTable.update_shared_table('COVID-19 Cases per US State', records)
+  end
 end
 
 main if only_one_running?(__FILE__)

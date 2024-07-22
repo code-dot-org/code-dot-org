@@ -1,4 +1,6 @@
+import musicI18n from '../../locale';
 import {BlockTypes} from '../blockTypes';
+import {getCodeForSingleBlock} from '../blockUtils';
 import {
   TRIGGER_FIELD,
   FIELD_SOUNDS_NAME,
@@ -20,8 +22,6 @@ import {
   fieldChordDefinition,
   fieldTriggerDefinition,
 } from '../fields';
-import {getCodeForSingleBlock} from '../blockUtils';
-import musicI18n from '../../locale';
 
 // Some helpers used when generating code to be used by the interpreter.
 // Called by executeSong().

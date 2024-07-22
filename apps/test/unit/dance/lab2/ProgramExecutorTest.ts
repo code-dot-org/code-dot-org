@@ -1,4 +1,4 @@
-import * as sinon from 'sinon';
+import * as sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 import {StubFunction} from 'test/types/types';
 
 import ProgramExecutor from '@cdo/apps/dance/lab2/ProgramExecutor';
@@ -7,7 +7,7 @@ import utils from '@cdo/apps/dance/utils';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const DanceParty = require('@code-dot-org/dance-party/src/p5.dance');
 

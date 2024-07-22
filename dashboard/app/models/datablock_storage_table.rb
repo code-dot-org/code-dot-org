@@ -71,6 +71,18 @@ class DatablockStorageTable < ApplicationRecord
     get_table_names(SHARED_TABLE_PROJECT_ID)
   end
 
+  def self.update_shared_table(table_name, records)
+    shared_table = DatablockStorageTable.find_or_create_by!(project_id: SHARED_TABLE_PROJECT_ID, table_name: table_name)
+    shared_table.records.delete_all
+    shared_table.columns = ['id']
+    shared_table.save!
+
+    shared_table.create_records(records)
+    shared_table.save!
+
+    shared_table
+  end
+
   def self.find_shared_table(table_name)
     shared_table = DatablockStorageTable.find_by(project_id: SHARED_TABLE_PROJECT_ID, table_name: table_name)
     raise "Shared table '#{table_name}' does not exist" unless shared_table
@@ -220,7 +232,7 @@ class DatablockStorageTable < ApplicationRecord
 
     max_csv_size = MAX_TABLE_ROW_COUNT * DatablockStorageRecord::MAX_RECORD_LENGTH
     if table_data_csv.bytesize > max_csv_size
-      raise StudentFacingError.new(:CSV_TOO_LARGE), "CSV is too large to import, max CSV size is #{(max_csv_size.to_f / (1024 * 1024)).round} MB"
+      raise StudentFacingError.new(:IMPORT_FAILED), "CSV is too large to import, maximum CSV size is #{(max_csv_size.to_f / (1024 * 1024)).round} MB"
     end
 
     new_records = CSV.parse(table_data_csv, headers: true).map(&:to_h)

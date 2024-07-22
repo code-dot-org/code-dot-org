@@ -1,5 +1,5 @@
 /** @file Tests for NetSimPacketEditor */
-import {assert} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 var DataConverters = require('@cdo/apps/netsim/DataConverters');
 var EncodingType = require('@cdo/apps/netsim/NetSimConstants').EncodingType;

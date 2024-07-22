@@ -3,7 +3,7 @@ import {EditorView} from '@codemirror/view';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
@@ -43,7 +43,7 @@ import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import javalabMsg from '@cdo/javalab/locale';
 
 import {BackpackAPIContext} from '../../../src/javalab/BackpackAPIContext';
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {allowConsoleWarnings} from '../../util/throwOnConsole';
 
 describe('Java Lab Editor Test', () => {

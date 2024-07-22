@@ -9,8 +9,6 @@ import viewAs from '@cdo/apps/code-studio/viewAsRedux';
 import SummaryResponses from '@cdo/apps/templates/levelSummary/SummaryResponses';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 import styles from '@cdo/apps/templates/levelSummary/summary.module.scss';
 
 const JS_DATA = {
@@ -67,13 +65,13 @@ describe('SummaryResponses', () => {
     const wrapper = setUpWrapper();
 
     // Student responses.
-    expect(wrapper.find(`.${styles.studentsSubmittedRight}`).text()).to.eq(
+    expect(wrapper.find(`.${styles.studentsSubmittedRight}`).text()).toBe(
       '1/1 students answered'
     );
-    expect(wrapper.find(`div.${styles.studentAnswer}`).length).to.eq(1);
+    expect(wrapper.find(`div.${styles.studentAnswer}`).length).toBe(1);
     // Section selector, with one section.
-    expect(wrapper.find('SectionSelector').length).to.eq(1);
-    expect(wrapper.find('SectionSelector option').length).to.eq(2);
+    expect(wrapper.find('SectionSelector').length).toBe(1);
+    expect(wrapper.find('SectionSelector option').length).toBe(2);
   });
 
   it('applies correct classes when rtl', () => {
@@ -94,8 +92,8 @@ describe('SummaryResponses', () => {
       },
     });
 
-    expect(wrapper.find(`.${styles.studentsSubmittedRight}`).length).to.eq(0);
-    expect(wrapper.find(`.${styles.studentsSubmittedLeft}`).length).to.eq(1);
+    expect(wrapper.find(`.${styles.studentsSubmittedRight}`).length).toBe(0);
+    expect(wrapper.find(`.${styles.studentsSubmittedLeft}`).length).toBe(1);
   });
 
   it('does not render response counter/text if no section selected', () => {
@@ -108,8 +106,8 @@ describe('SummaryResponses', () => {
       },
     });
 
-    expect(wrapper.find(`.${styles.studentsSubmittedRight}`).length).to.eq(0);
-    expect(wrapper.find(`.${styles.studentsSubmittedLeft}`).length).to.eq(0);
+    expect(wrapper.find(`.${styles.studentsSubmittedRight}`).length).toBe(0);
+    expect(wrapper.find(`.${styles.studentsSubmittedLeft}`).length).toBe(0);
   });
 
   it('renders toggle when appropriate', () => {
@@ -127,7 +125,7 @@ describe('SummaryResponses', () => {
       }
     );
 
-    expect(wrapper.find('ToggleSwitch').length).to.eq(1);
+    expect(wrapper.find('ToggleSwitch').length).toBe(1);
   });
 
   it('does not render toggle for Free Response', () => {
@@ -145,7 +143,7 @@ describe('SummaryResponses', () => {
       }
     );
 
-    expect(wrapper.find('ToggleSwitch').length).to.eq(0);
+    expect(wrapper.find('ToggleSwitch').length).toBe(0);
   });
 
   it('does not render toggle without policy permission', () => {
@@ -162,6 +160,6 @@ describe('SummaryResponses', () => {
       }
     );
 
-    expect(wrapper.find('ToggleSwitch').length).to.eq(0);
+    expect(wrapper.find('ToggleSwitch').length).toBe(0);
   });
 });

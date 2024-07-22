@@ -1,5 +1,3 @@
-import {expect} from 'chai';
-
 import {writeSourceForLevel} from '@cdo/apps/code-studio/clientState';
 import FreeResponse from '@cdo/apps/code-studio/levels/freeResponse';
 
@@ -38,7 +36,7 @@ describe('Free Response', () => {
         optional,
         allowMultipleAttempts
       );
-      expect(freeResponse.getResult().response).to.be.empty;
+      expect(freeResponse.getResult().response).toHaveLength(0);
     });
 
     it('shows client-side last attempt when available', () => {
@@ -55,7 +53,7 @@ describe('Free Response', () => {
         optional,
         allowMultipleAttempts
       );
-      expect(freeResponse.getResult().response).to.equal(lastAttemptString);
+      expect(freeResponse.getResult().response).toBe(lastAttemptString);
     });
 
     it('shows the server-side last attempt when both are available', () => {
@@ -73,9 +71,7 @@ describe('Free Response', () => {
         optional,
         allowMultipleAttempts
       );
-      expect(freeResponse.getResult().response).to.equal(
-        otherLastAttemptString
-      );
+      expect(freeResponse.getResult().response).toBe(otherLastAttemptString);
     });
   });
 
@@ -93,9 +89,9 @@ describe('Free Response', () => {
       optional,
       allowMultipleAttempts
     );
-    expect(freeResponse.getResult().response).to.equal(lastAttemptString);
+    expect(freeResponse.getResult().response).toBe(lastAttemptString);
 
     freeResponse.resetAnswers();
-    expect(freeResponse.getResult().response).to.be.empty;
+    expect(freeResponse.getResult().response).toHaveLength(0);
   });
 });
