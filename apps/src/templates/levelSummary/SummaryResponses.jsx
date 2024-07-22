@@ -140,6 +140,19 @@ const SummaryResponses = ({
             </label>
           )}
 
+          {/* Correct answer toggle */}
+          {showAnswerToggle && (
+            <div className={styles.toggleContainer}>
+              <ToggleSwitch
+                isToggledOn={showCorrectAnswer}
+                onToggle={() => {
+                  setShowCorrectAnswer(!showCorrectAnswer);
+                }}
+                label={i18n.showAnswer()}
+                expands="summary-correct-answer"
+              />
+            </div>
+          )}
           {isFreeResponse && DCDO.get('cfu-pin-hide-enabled', false) && (
             <Toggle
               onChange={toggleNames}
@@ -151,20 +164,6 @@ const SummaryResponses = ({
             />
           )}
         </div>
-
-        {/* Correct answer toggle */}
-        {showAnswerToggle && (
-          <div className={styles.toggleContainer}>
-            <ToggleSwitch
-              isToggledOn={showCorrectAnswer}
-              onToggle={() => {
-                setShowCorrectAnswer(!showCorrectAnswer);
-              }}
-              label={i18n.showAnswer()}
-              expands="summary-correct-answer"
-            />
-          </div>
-        )}
 
         {/* Free response visualization */}
         {isFreeResponse && (
