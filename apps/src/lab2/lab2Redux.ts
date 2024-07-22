@@ -288,6 +288,17 @@ export const isReadOnlyWorkspace = (state: RootState) => {
   const isFrozen = !!state.lab.channel?.frozen;
   const isPredictLevel =
     state.lab.levelProperties?.predictSettings?.isPredictLevel || false;
+  let isReadonlyPredictLevel = isPredictLevel;
+  if (isPredictLevel) {
+    const isEditableAfterSubmit =
+      state.lab.levelProperties?.predictSettings?.editableAfterSubmit || false;
+    const hasSubmittedPredictResponse = state.predictLevel.hasSubmittedResponse;
+    // If the predict level is not editable after submit, we are in read only mode.
+    // If the predict level is editable after submit, we are in read only mode if the
+    // user has not yet submitted a response.
+    isReadonlyPredictLevel =
+      !hasSubmittedPredictResponse || !isEditableAfterSubmit;
+  }
   const hasSubmitted = getCurrentLevel(state)?.status === LevelStatus.submitted;
   // We are always in edit mode if we are in start or editing exemplar mode.
   // Both of these modes have no channel.
@@ -296,7 +307,7 @@ export const isReadOnlyWorkspace = (state: RootState) => {
   }
   // Otherwise, we are in read only mode if we are not the owner of the channel,
   // the level is frozen, the level is a predict level, or the level has been submitted.
-  return !isOwner || isFrozen || isPredictLevel || hasSubmitted;
+  return !isOwner || isFrozen || isReadonlyPredictLevel || hasSubmitted;
 };
 
 // If there is an error present on the page.
