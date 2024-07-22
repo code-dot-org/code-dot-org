@@ -97,11 +97,11 @@ In the `short` and `long` modes, the pond also has a metapanel which can show ge
 
 The app uses three layers in the DOM.  Underneath, one canvas contains the scene's background image, while another canvas contains all the sprites.  On top, the app uses React to render HTML elements for the user interface, implemented [here](https://github.com/code-dot-org/ml-activities/blob/c9d24c4b7a20ea12d5dc7a094094c5ef4dfbbde3/src/oceans/ui.jsx).
 
-The app is fully responsive by scaling the canvases and also scaling the size of the HTML elements correspondingly.  This way, the UI simply shrinks to match the underlying canvases.  
+The app is fully responsive by scaling the canvases and also scaling the size of the HTML elements correspondingly.  This way, the UI simply shrinks to match the underlying canvases.
 
 ## Animation
 
-The animation is designed to be be smooth and frame-rate independent.  
+The animation is designed to be be smooth and frame-rate independent.
 
 The prediction screen notably renders the progression based on the concept of a "current offset in time", making it possible to pause, and even reverse the animation, as well as adjust its speed.
 
@@ -111,11 +111,11 @@ The fish pause under the scanner using a simple S-curve adjustment to their move
 
 ## The Guide
 
-After initial playtests, we identified a need to slow the pacing of the tutorial and tell a clear story.  The solution we adopted was text boxes with "typing" text, reminiscent of old-school computer games.  
+After initial playtests, we identified a need to slow the pacing of the tutorial and tell a clear story.  The solution we adopted was text boxes with "typing" text, reminiscent of old-school computer games.
 
 "The Guide" is the implementation of this solution, and was designed to be a simple but flexible system that allowed us to add a variety of text for every step and situation encountered in the tutorial.
 
-Each piece of Guide text is declared, along with the app state needed for it to show (which can even include code for more expressiveness), [here](https://github.com/code-dot-org/ml-activities/blob/main/src/oceans/models/guide.js).  
+Each piece of Guide text is declared, along with the app state needed for it to show (which can even include code for more expressiveness), [here](https://github.com/code-dot-org/ml-activities/blob/main/src/oceans/models/guide.js).
 
 This simple system enabled the team to add a detailed narrative voice to the script, and allowed a variety of team members to contribute text.
 
@@ -177,6 +177,18 @@ If you want to make changes locally in ml-activities and have them show up in yo
 This will set up a symlink in apps/node_modules/@code-dot-org to point at your local changes. Run `yarn build` in ml-activities, and then the code-dot-org apps build should pick up the changes (generated in ml-activities' `dist/`) next time it occurs (including in already-running `yarn start` build in code-dot-org).
   - Note that ml-activities' `yarn start` can be left running when `yarn build` is run.  But a new invocation of `yarn start` will intentionally clear the `dist/` directory populated by `yarn build` to ensure we don't have outdated assets left in it.
 - If you want to go back to using the published module, in the code-dot-org apps/ directory run `yarn unlink @code-dot-org/ml-activities`.  You'll be given additional instructions on how to force the module to be rebuilt after that.
+
+### Publishing a new version
+
+First, ensure you have the `main` branch checked out locally, and that it's up to date.
+
+To publish a new version, the following command should work:
+```
+npm version 0.0.29
+```
+With `0.0.29` replaced by the new version number that should be published.
+
+Note: make sure you are logged into `npm` first.  If not, the command may fail with a misleading `E404` error.  You can see if you're logged in with `npm whoami`, and if not logged in, can can use `npm login`.
 
 ## Adding new fish components
 All fish components live in `public/images/fish` in their respective folders (eg bodies live in `body/`). Despite the fact that the fish face right in most of the tutorial, they are built as if they face left in order to simplify the math for the anchor points. This means that all components should be oriented as if the fish is facing left, which might require flopping any new assets. After adding the assets, they will need to be added to `src/utils/fishData.js`. `bin/determineKnnData.js` will output some of the lines that will be needed in `fishData`.
