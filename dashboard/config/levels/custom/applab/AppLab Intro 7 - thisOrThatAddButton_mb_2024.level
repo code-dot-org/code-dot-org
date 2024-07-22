@@ -69,7 +69,6 @@
     "project_template_level_name": "AppLab Intro 6 - thisOrThatAddButton Template_mb_2024",
     "top_level_procedure_autopopulate": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"AppLabHoCFinal11\",\r\n  \"callout_text\": \"You're now in Design Mode.\",\r\n  \"element_id\": \"#designModeButton\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right bottom\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
-    "name_suffix": "_mb_2024",
     "preload_asset_list": null
   },
   "published": true,

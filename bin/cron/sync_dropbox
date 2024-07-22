@@ -19,7 +19,6 @@ require 'cdo/developers_topic'
 require "open3"
 
 FOLDERS = {
-  "advocacy.code.org" => "sites.v3/advocacy.code.org",
   "code.org" => "sites.v3/code.org",
   "curriculum-6-8" => "sites/virtual/curriculum-6-8",
   "curriculum-algebra" => "sites/virtual/curriculum-algebra",

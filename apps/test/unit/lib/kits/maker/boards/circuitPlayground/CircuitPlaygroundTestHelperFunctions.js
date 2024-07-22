@@ -1,6 +1,6 @@
 import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 const INITIAL_ANALOG_VALUE = 235;
 

@@ -1,4 +1,16 @@
 module AitutorSystemPromptHelper
+  def self.get_system_prompt(level_id, unit_id)
+    level = get_level(level_id)
+    unit = get_unit(unit_id)
+
+    system_prompt = get_base_system_prompt
+    system_prompt << get_programming_language_system_prompt(unit) if unit
+    system_prompt << get_level_instructions(level) if level
+    system_prompt << get_validated_level_test_file_contents(level) if level
+
+    system_prompt
+  end
+
   def self.get_base_system_prompt
     base_system_prompt = "As an AI assistant, your mission is to support a conducive learning environment
       for high school computer science students. You should use language appropriate for conversing with an 8th-grade student.
@@ -32,7 +44,7 @@ module AitutorSystemPromptHelper
     base_system_prompt
   end
 
-  def self.get_language_specific_system_prompt(unit)
+  def self.get_programming_language_system_prompt(unit)
     language = unit.csa? ? 'Java' : 'Python'
     "\n Specific Exclusions: Refrain from discussing topics not explicitly related to computer
     science or #{language} programming."
@@ -45,13 +57,9 @@ module AitutorSystemPromptHelper
 
   def self.get_validated_level_test_file_contents(level)
     test_file_contents = ""
-    if level.validation
-      if level.validation.values.empty?
-        return render(status: :bad_request, json: {message: "There are no test files associated with level id=#{level_id}."})
-      else
-        level.validation.each_value do |validation|
-          test_file_contents += validation["text"]
-        end
+    if level.respond_to?(:validation) && level.validation && level.validation.values.any?
+      level.validation.each_value do |validation|
+        test_file_contents += validation["text"]
       end
     end
     test_file_contents.empty? ?
@@ -59,23 +67,37 @@ module AitutorSystemPromptHelper
       "\n The contents of the test file are: #{test_file_contents}"
   end
 
-  def self.get_system_prompt(level_id, script_id)
-    level = Level.find(level_id)
-    unless level
-      return render(status: :bad_request, json: {message: "Couldn't find level with id=#{level_id}."})
+  def self.get_level(level_id)
+    level = nil
+    if level_id
+      level = begin Level.find(level_id)
+      rescue ActiveRecord::RecordNotFound
+        Honeybadger.notify(exception,
+            error_message: 'Invalid level_id in AI Tutor system prompt helper',
+            context: {
+              level_id: level_id,
+              user_id: current_user.id
+            }
+          )
+      end
     end
+    level
+  end
 
-    unit = Unit.find(script_id)
-    unless unit
-      return render(status: :bad_request, json: {message: "Couldn't find unit with id=#{script_id}."})
+  def self.get_unit(unit_id)
+    unit = nil
+    if unit_id
+      unit = begin Unit.find(unit_id)
+      rescue ActiveRecord::RecordNotFound
+        Honeybadger.notify(exception,
+            error_message: 'Invalid unit_id in AI Tutor system prompt helper',
+            context: {
+              unit_id: unit_id,
+              user_id: current_user.id
+            }
+          )
+      end
     end
-
-    system_prompt =
-      get_base_system_prompt +
-      get_language_specific_system_prompt(unit) +
-      get_level_instructions(level) +
-      get_validated_level_test_file_contents(level)
-
-    system_prompt
+    unit
   end
 end

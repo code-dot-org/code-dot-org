@@ -79,7 +79,7 @@ export async function getChatCompletionMessage(
   chatMessages: ChatCompletionMessage[],
   systemPrompt?: string,
   levelId?: number,
-  scriptId?: number,
+  scriptId?: number
 ): Promise<ChatCompletionResponse> {
   const messagesToSend = [
     ...formatForChatCompletion(chatMessages),
@@ -92,7 +92,7 @@ export async function getChatCompletionMessage(
       messagesToSend,
       levelId,
       scriptId,
-      systemPrompt,
+      systemPrompt
     );
   } catch (error) {
     MetricsReporter.logError({

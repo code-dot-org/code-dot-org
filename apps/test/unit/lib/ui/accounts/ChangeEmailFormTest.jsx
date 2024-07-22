@@ -1,10 +1,10 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import ChangeEmailForm from '@cdo/apps/lib/ui/accounts/ChangeEmailForm';
 
-import {expect} from '../../../../util/deprecatedChai';
+import {expect} from '../../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('ChangeEmailForm', () => {
   const EMAIL_SELECTOR = 'input[type="email"]';

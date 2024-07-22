@@ -3,8 +3,6 @@ import React from 'react';
 
 import ImageUploadModal from '@cdo/apps/templates/imageUploadWarning/ImageUploadModal';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 const defaultProps = {
   isOpen: true,
   cancelUpload: () => {},
@@ -16,12 +14,12 @@ it('warning message requires both checkboxes to be checked to go forward for stu
   const body = shallow(<ImageUploadModal {...defaultProps} />);
 
   let confirmButton = body.find('button').at(1);
-  expect(confirmButton.props().disabled).to.be.true;
+  expect(confirmButton.props().disabled).toBe(true);
   const checkboxes = body.find('input');
   checkboxes.at(0).simulate('change', {target: {checked: true}});
   checkboxes.at(1).simulate('change', {target: {checked: true}});
   confirmButton = body.find('button').at(1);
-  expect(confirmButton.props().disabled).to.be.false;
+  expect(confirmButton.props().disabled).toBe(false);
 });
 
 it('warning message requires PII checkbox to be checked to go forward for teachers', () => {
@@ -32,9 +30,9 @@ it('warning message requires PII checkbox to be checked to go forward for teache
   const body = shallow(<ImageUploadModal {...props} />);
 
   let confirmButton = body.find('button').at(1);
-  expect(confirmButton.props().disabled).to.be.true;
+  expect(confirmButton.props().disabled).toBe(true);
   const checkboxes = body.find('input');
   checkboxes.at(0).simulate('change', {target: {checked: true}});
   confirmButton = body.find('button').at(1);
-  expect(confirmButton.props().disabled).to.be.false;
+  expect(confirmButton.props().disabled).toBe(false);
 });

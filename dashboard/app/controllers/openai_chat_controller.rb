@@ -1,13 +1,6 @@
 class OpenaiChatController < ApplicationController
-  S3_AI_BUCKET = 'cdo-ai'.freeze
-  S3_TUTOR_SYSTEM_PROMPT_PATH = 'tutor/system_prompt.txt'.freeze
-
   include OpenaiChatHelper
   authorize_resource class: false
-
-  def s3_client
-    @s3_client ||= AWS::S3.create_client
-  end
 
   # POST /openai/chat_completion
   def chat_completion
@@ -26,6 +19,7 @@ class OpenaiChatController < ApplicationController
     # system prompt, create one based on the level context.
     level_id = params[:levelId]
     script_id = params[:scriptId]
+
     system_prompt = !!params[:systemPrompt] ? params[:systemPrompt] : AitutorSystemPromptHelper.get_system_prompt(level_id, script_id)
 
     messages = prepend_system_prompt(system_prompt, params[:messages])

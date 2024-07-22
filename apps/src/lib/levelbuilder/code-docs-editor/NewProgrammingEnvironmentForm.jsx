@@ -1,6 +1,7 @@
 import React from 'react';
-import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
+
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 
 export default function NewProgrammingEnvironmentForm() {
   return (

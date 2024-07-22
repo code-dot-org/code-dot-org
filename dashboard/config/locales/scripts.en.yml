@@ -18379,4 +18379,85 @@ en:
           description_short: ''
           description: ''
           student_description: ''
-...
+        tess-getting-started:
+          lessons: {}
+          lesson_groups: {}
+          name: tess-getting-started
+          title: Getting Started with Code.org [Optional]
+          description_audience: ''
+          description_short: ''
+          description: "#### This module is a short introduction to using the Code.org platform.\n\n#### **You will:**\n* #### Get an introduction to Code.org \n* #### Learn to navigate the teacher features on the Code.org platform\n\n#### **Suggested Time:** 30 minutes"
+          student_description: "#### This module is a short introduction to using the Code.org platform.\n\n#### **You will:**\n* #### Get an introduction to Code.org \n* #### Learn to navigate the teacher features on the Code.org platform\n\n#### **Suggested Time:** 30 minutes"
+        getting-started-with-code:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Getting Started with Code.org
+          name: getting-started-with-code
+          title: Getting Started [Optional]
+          description_audience: ''
+          description_short: ''
+          description: "#### **You will:**\n\n* ####  Get an introduction to Code.org’s mission. \n* ####  Learn how to navigate the Code.org website and teacher tools.\n* ####  Set up a classroom section.\n* ####  Locate and use course lesson plans and teacher resources.\n* ####  Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+          student_description: "#### **You will:**\n\n#### * Get an introduction to Code.org’s mission. \n#### * Learn how to navigate the Code.org website and teacher tools.\n#### * Set up a classroom section.\n#### * Locate and use course lesson plans and teacher resources.\n#### * Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+        getting-started-with-code-maker:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Getting Started with Code.org
+          name: getting-started-with-code-maker
+          title: Getting Started [Optional]
+          description_audience: ''
+          description_short: ''
+          description: "#### **You will:**\n\n* ####  Get an introduction to Code.org’s mission. \n* ####  Learn how to navigate the Code.org website and teacher tools.\n* ####  Set up a classroom section.\n* ####  Locate and use course lesson plans and teacher resources.\n* ####  Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+          student_description: "#### **You will:**\n\n#### * Get an introduction to Code.org’s mission. \n#### * Learn how to navigate the Code.org website and teacher tools.\n#### * Set up a classroom section.\n#### * Locate and use course lesson plans and teacher resources.\n#### * Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+        getting-started-with-code-game-design:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Getting Started with Code.org
+          name: getting-started-with-code-game-design
+          title: Getting Started [Optional]
+          description_audience: ''
+          description_short: ''
+          description: "#### **You will:**\n\n* ####  Get an introduction to Code.org’s mission. \n* ####  Learn how to navigate the Code.org website and teacher tools.\n* ####  Set up a classroom section.\n* ####  Locate and use course lesson plans and teacher resources.\n* ####  Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+          student_description: "#### **You will:**\n\n#### * Get an introduction to Code.org’s mission. \n#### * Learn how to navigate the Code.org website and teacher tools.\n#### * Set up a classroom section.\n#### * Locate and use course lesson plans and teacher resources.\n#### * Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+        k5-unplugged:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sequencing
+            lessonGroup-3:
+              display_name: Loops
+            lessonGroup-4:
+              display_name: Events
+            lessonGroup-5:
+              display_name: Impacts of Computing
+            lessonGroup-6:
+              display_name: Data
+            lessonGroup-7:
+              display_name: Computer Systems
+            lessonGroup-8:
+              display_name: Conditionals
+            lessonGroup-9:
+              display_name: Functions
+            lessonGroup-10:
+              display_name: Variables
+          name: k5-unplugged
+          title: Unplugged Activities for K-5
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #####We've compiled a list of all of our unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not!
+
+            <img src="https://images.code.org/8f9ecd6897039d861bccd67cd60a16c4-image-1721339529551.jpg" width=450px style="float:right; margin-left:30px">
+
+            #####We refer to lessons in which students are not working on a computer as “unplugged.” Students will often work with pencil and paper or physical manipulatives. These are intentionally placed kinesthetic opportunities that help students digest complicated concepts in ways that relate to their own lives.
+
+            #####Unplugged lessons are particularly useful for building and maintaining a collaborative classroom environment, and they are useful touchstone experiences you can refer to when introducing more abstract concepts. Each of these activities can either be used alone or with other computer science lessons on related concepts.
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+          student_description: ''

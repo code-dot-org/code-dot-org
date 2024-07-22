@@ -1,9 +1,11 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
-import EvidenceDescriptionsRow from './EvidenceDescriptionsRow';
 import {UNDERSTANDING_LEVEL_STRINGS} from '@cdo/apps/templates/rubrics/rubricHelpers';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
+
+import EvidenceDescriptionsRow from './EvidenceDescriptionsRow';
 
 export default function EvidenceDescriptions({
   learningGoalData,

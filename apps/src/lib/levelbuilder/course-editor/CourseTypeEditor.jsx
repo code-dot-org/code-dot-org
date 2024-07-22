@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import color from '@cdo/apps/util/color';
+
 import {
   InstructorAudience,
   ParticipantAudience,
   InstructionType,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import color from '@cdo/apps/util/color';
 
 const INSTRUCTOR_AUDIENCE_DISPLAY_NAMES = {
   [InstructorAudience.teacher]: 'Teacher',
