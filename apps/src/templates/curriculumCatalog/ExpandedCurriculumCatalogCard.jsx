@@ -256,27 +256,6 @@ const ExpandedCurriculumCatalogCard = ({
               </div>
               <hr className={style.horizontalDivider} />
               <div className={style.buttonsContainer}>
-                {/* <Button
-                  __useDeprecatedTag
-                  color={quickViewButtonColor}
-                  type="button"
-                  href={pathToCourse}
-                  aria-label={
-                    isTeacherOrSignedOut
-                      ? i18n.quickViewDescription({
-                          course_name: courseDisplayName,
-                        })
-                      : i18n.tryCourseNow({
-                          course_name: courseDisplayName,
-                        })
-                  }
-                  text={
-                    isTeacherOrSignedOut
-                      ? i18n.seeCurriculumDetails()
-                      : i18n.tryNow()
-                  }
-                  className={centererStyle.buttonFlex}
-                />*/}
                 {isTeacherOrSignedOut ? (
                   <>
                     <LinkButton
@@ -290,8 +269,6 @@ const ExpandedCurriculumCatalogCard = ({
                       })}
                     />
                     <Button
-                      //color={Button.ButtonColor.brandSecondaryDefault}
-                      //type="button"
                       color="purple"
                       type="primary"
                       onClick={() => assignButtonOnClick('expanded-card')}
