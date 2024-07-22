@@ -7,10 +7,10 @@ require_relative '../../../utils/sync_out_base'
 module I18n
   module Resources
     module Apps
-      module MusiclabManifest
+      module MusiclabLibraries
         class SyncOut < I18n::Utils::SyncOutBase
           def process(language)
-            crowdin_file_path = I18nScriptUtils.crowdin_locale_dir(language[:locale_s], 'musiclab_manifests', 'music-library-intro2024.json')
+            crowdin_file_path = I18nScriptUtils.crowdin_locale_dir(language[:locale_s], 'musiclab_libraries', 'music-library-intro2024.json')
             return unless File.exist?(crowdin_file_path)
 
             # deal with empty translation files?
@@ -40,4 +40,4 @@ module I18n
   end
 end
 
-I18n::Resources::Apps::MusiclabManifest::SyncOut.perform if __FILE__ == $0
+I18n::Resources::Apps::MusiclabLibraries::SyncOut.perform if __FILE__ == $0

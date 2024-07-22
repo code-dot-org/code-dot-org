@@ -7,13 +7,13 @@ require_relative '../../../utils/sync_down_base'
 module I18n
   module Resources
     module Apps
-      module MusiclabManifests
+      module MusiclabLibraries
         class SyncDown < I18n::Utils::SyncDownBase
-          config.download_paths << DownloadPath.new(crowdin_src: 'musiclab_manifests')
+          config.download_paths << DownloadPath.new(crowdin_src: 'musiclab_libraries')
         end
       end
     end
   end
 end
 
-I18n::Resources::Apps::MusiclabManifests::SyncDown.perform if __FILE__ == $0
+I18n::Resources::Apps::MusiclabLibraries::SyncDown.perform if __FILE__ == $0
