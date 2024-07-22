@@ -85,6 +85,12 @@ const MultipleTemplate: StoryFn<{
 export const DefaultActionDropdown = SingleTemplate.bind({});
 DefaultActionDropdown.args = {
   name: 'default-dropdown',
+  triggerButtonProps: {
+    color: 'purple',
+    type: 'primary',
+    isIconOnly: true,
+    icon: {iconName: 'smile', iconStyle: 'solid'},
+  },
   options: [
     {
       value: 'option-1',

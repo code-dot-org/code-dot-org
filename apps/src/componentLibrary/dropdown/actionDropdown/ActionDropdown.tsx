@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, {useCallback, memo, AriaAttributes} from 'react';
 
-import {Button} from '@cdo/apps/componentLibrary/button';
+import {Button, ButtonProps} from '@cdo/apps/componentLibrary/button';
 import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
 import {
   DropdownProviderWrapper,
@@ -48,6 +48,7 @@ export interface ActionDropdownProps extends AriaAttributes {
   selectedOption: ActionDropdownOption;
   /** ActionDropdown onChange handler */
   onChange: (option: ActionDropdownOption) => void;
+  triggerButtonProps?: ButtonProps;
 }
 
 const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
@@ -60,6 +61,7 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
   disabled = false,
   color = dropdownColors.black,
   size = 'm',
+  triggerButtonProps,
   ...rest
 }) => {
   const {setActiveDropdownName} = useDropdownContext();
@@ -74,14 +76,10 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
   );
 
   /* TODO:
-     - tests +
-     - stories +
-     - docs +
-     - changelog +
-     - readme +
-     - list items
-     - trigger component
-     - props
+    - onOptionClick
+    - list items
+    - trigger component
+    - props
     */
   return (
     <CustomDropdown
@@ -93,7 +91,13 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
       size={size}
       {...rest}
       TriggerComponent={(props: TriggerComponentProps) => (
-        <Button {...props} text={labelText} size={size} />
+        <Button
+          {...props}
+          {...triggerButtonProps}
+          text={triggerButtonProps?.isIconOnly ? undefined : labelText}
+          aria-label={triggerButtonProps?.isIconOnly ? labelText : undefined}
+          size={size}
+        />
       )}
     >
       <div className={moduleStyles.dropdownMenuContainer}>
