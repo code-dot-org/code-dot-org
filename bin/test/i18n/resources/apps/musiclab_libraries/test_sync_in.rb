@@ -1,8 +1,8 @@
 require_relative '../../../../test_helper'
-require_relative '../../../../../i18n/resources/apps/animations/sync_in'
+require_relative '../../../../../i18n/resources/apps/musiclab_libraries/sync_in'
 
-describe I18n::Resources::Apps::Animations::SyncIn do
-  let(:described_class) {I18n::Resources::Apps::Animations::SyncIn}
+describe I18n::Resources::Apps::MusiclabLibraries::SyncIn do
+  let(:described_class) {I18n::Resources::Apps::MusiclabLibraries::SyncIn}
   let(:described_instance) {described_class.new}
 
   around do |test|
@@ -16,14 +16,14 @@ describe I18n::Resources::Apps::Animations::SyncIn do
   describe '#process' do
     let(:process) {described_instance.process}
 
-    let(:i18n_source_file_path) {CDO.dir('i18n/locales/source/animations/spritelab_animation_library.json')}
+    let(:i18n_source_file_path) {CDO.dir('i18n/locales/source/musiclab_libraries/music-library-intro2024.json')}
 
     it 'prepares the i18n source file' do
-      ManifestBuilder.expects(new: mock(get_animation_strings: {animation_key: 'animation_val'})).with({spritelab: true, quiet: true}).once
+      described_instance.expects(:get_translation_strings).returns({'lady_gaga_born_this_way/vocals_verse_3': 'Verse 3'})
 
       process
 
-      assert_equal %Q[{\n  "animation_key": "animation_val"\n}], File.read(i18n_source_file_path)
+      assert_equal %Q[{\n  "lady_gaga_born_this_way/vocals_verse_3": "Verse 3"\n}], File.read(i18n_source_file_path)
     end
   end
 end

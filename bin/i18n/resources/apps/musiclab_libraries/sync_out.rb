@@ -18,10 +18,9 @@ module I18n
             i18n_data = I18nScriptUtils.parse_file(crowdin_file_path)
             upload_localized_strings(js_locale, i18n_data) unless options[:testing]
 
-            # do we need this?
-            # i18n_file_path = I18nScriptUtils.locale_dir(language[:locale_s], DIR_NAME, FILE_NAME)
-            # I18nScriptUtils.move_file(crowdin_file_path, i18n_file_path)
-            # I18nScriptUtils.remove_empty_dir File.dirname(crowdin_file_path)
+            i18n_file_path = I18nScriptUtils.locale_dir(language[:locale_s], 'musiclab_libraries', 'music-library-intro2024.json')
+            I18nScriptUtils.move_file(crowdin_file_path, i18n_file_path)
+            I18nScriptUtils.remove_empty_dir File.dirname(crowdin_file_path)
           end
 
           private def upload_localized_strings(js_locale, i18n_data)

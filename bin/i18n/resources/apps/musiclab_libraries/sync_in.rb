@@ -12,7 +12,8 @@ module I18n
     module Apps
       module MusiclabLibraries
         class SyncIn < I18n::Utils::SyncInBase
-          LIBRARY_FILENAMES = %w[music-library-intro2024.json music-library-launch2024.json].freeze
+          # LIBRARY_FILENAMES = %w[music-library-intro2024.json music-library-launch2024.json].freeze
+          LIBRARY_FILENAMES = %w[music-library-intro2024.json].freeze
 
           def process
             LIBRARY_FILENAMES.each do |filename|

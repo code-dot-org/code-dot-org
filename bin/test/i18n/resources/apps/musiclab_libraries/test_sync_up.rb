@@ -1,8 +1,8 @@
 require_relative '../../../../test_helper'
-require_relative '../../../../../i18n/resources/apps/animations/sync_up'
+require_relative '../../../../../i18n/resources/apps/musiclab_libraries/sync_up'
 
-describe I18n::Resources::Apps::Animations::SyncUp do
-  let(:described_class) {I18n::Resources::Apps::Animations::SyncUp}
+describe I18n::Resources::Apps::MusiclabLibraries::SyncUp do
+  let(:described_class) {I18n::Resources::Apps::MusiclabLibraries::SyncUp}
   let(:described_instance) {described_class.new}
 
   around do |test|
@@ -18,15 +18,15 @@ describe I18n::Resources::Apps::Animations::SyncUp do
 
     let(:expected_source_files) do
       [
-        CDO.dir('i18n/locales/source/animations/spritelab_animation_library.json'),
+        CDO.dir('i18n/locales/source/musiclab_libraries/music-library-intro2024.json'),
       ]
     end
 
     let(:unexpected_source_files) do
       [
-        CDO.dir('i18n/locales/source/animations/unexpected.json'),
-        CDO.dir('i18n/locales/source/animations/unexpected.yaml'),
-        CDO.dir('i18n/locales/source/animations/unexpected.yml'),
+        CDO.dir('i18n/locales/source/musiclab_libraries/unexpected.json'),
+        CDO.dir('i18n/locales/source/musiclab_libraries/unexpected.yaml'),
+        CDO.dir('i18n/locales/source/musiclab_libraries/unexpected.yml'),
       ]
     end
 
