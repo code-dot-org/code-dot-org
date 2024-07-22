@@ -125,7 +125,7 @@ describe('SummaryResponses', () => {
       }
     );
 
-    expect(wrapper.find('ToggleSwitch').length).toBe(1);
+    expect(wrapper.find('Toggle').length).toBe(1);
   });
 
   it('does not render toggle for Free Response', () => {
@@ -143,7 +143,7 @@ describe('SummaryResponses', () => {
       }
     );
 
-    expect(wrapper.find('ToggleSwitch').length).toBe(0);
+    expect(wrapper.find('Toggle').length).toBe(0);
   });
 
   it('does not render toggle without policy permission', () => {
@@ -160,6 +160,6 @@ describe('SummaryResponses', () => {
       }
     );
 
-    expect(wrapper.find('ToggleSwitch').length).toBe(0);
+    expect(wrapper.find('Toggle').length).toBe(0);
   });
 });
