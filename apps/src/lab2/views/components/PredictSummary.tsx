@@ -1,8 +1,7 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
-import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {LinkButton} from '@cdo/apps/componentLibrary/button';
 import {getSectionSummary} from '@cdo/apps/lab2/projects/userLevelsApi';
@@ -25,16 +24,19 @@ const PredictSummary: React.FunctionComponent = () => {
     (state: {teacherSections: {selectedSectionId: number}}) =>
       state.teacherSections.selectedSectionId
   );
-  const currentLevelId = useAppSelector(state => getCurrentLevel(state)?.id);
-  const [responseCount, setResponseCount] = React.useState<number | null>(null);
-  const [numStudents, setNumStudents] = React.useState<number | null>(null);
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const [responseCount, setResponseCount] = useState<number | null>(null);
+  const [numStudents, setNumStudents] = useState<number | null>(null);
 
   useEffect(() => {
     if (currentSectionId && currentLevelId) {
       getSectionSummary(currentSectionId, currentLevelId).then(response => {
-        if (response.response.ok) {
+        if (response?.value) {
           setResponseCount(response.value.response_count);
           setNumStudents(response.value.num_students);
+        } else {
+          setResponseCount(null);
+          setNumStudents(null);
         }
       });
     } else {

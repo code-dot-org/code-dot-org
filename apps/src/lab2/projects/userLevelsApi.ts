@@ -37,9 +37,19 @@ export async function resetPredictLevelProgress(
   );
 }
 
-export async function getSectionSummary(sectionId: number, levelId: number) {
-  return await HttpClient.fetchJson<{
-    response_count: number;
-    num_students: number;
-  }>(`/user_levels/section_summary/${sectionId}/${levelId}`, {});
+export async function getSectionSummary(sectionId: number, levelId: string) {
+  try {
+    return await HttpClient.fetchJson<{
+      response_count: number;
+      num_students: number;
+    }>(`/user_levels/section_summary/${sectionId}/${levelId}`, {});
+  } catch (e) {
+    if (e instanceof NetworkError) {
+      // If we hit a network error, it could mean there is no logged-in user
+      // or we had some other issue.
+      // In this case, just return null rather than crashing the page.
+      return null;
+    }
+    throw e;
+  }
 }
