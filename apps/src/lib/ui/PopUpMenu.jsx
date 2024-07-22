@@ -187,6 +187,7 @@ class Item extends Component {
     openInNewTab: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
+    hrefOnClick: PropTypes.func,
   };
 
   render() {
@@ -199,6 +200,7 @@ class Item extends Component {
       openInNewTab,
       className,
       style,
+      hrefOnClick,
     } = this.props;
     const defaultClassName = 'pop-up-menu-item';
     const classList = className
@@ -247,6 +249,7 @@ class Item extends Component {
             href={href}
             style={{...textStyle, ...areaStyle}}
             target={target}
+            onClick={hrefOnClick}
           >
             {children}
           </a>
