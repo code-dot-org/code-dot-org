@@ -9,7 +9,8 @@ import {
   Heading4,
 } from '@cdo/apps/componentLibrary/typography';
 import {TextLink} from '@dsco_/link';
-import Button from '@cdo/apps/templates/Button';
+import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
+import DeprecatedButton from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import {
   translatedCourseOfferingDeviceTypes,
@@ -105,10 +106,6 @@ const ExpandedCurriculumCatalogCard = ({
       150;
     window.scrollTo({top: yOffset, behavior: 'smooth'});
   }, [expandedCardRef]);
-
-  const quickViewButtonColor = !isTeacherOrSignedOut
-    ? Button.ButtonColor.brandSecondaryDefault
-    : Button.ButtonColor.neutralDark;
 
   return (
     <div ref={expandedCardRef}>
@@ -259,7 +256,7 @@ const ExpandedCurriculumCatalogCard = ({
               </div>
               <hr className={style.horizontalDivider} />
               <div className={style.buttonsContainer}>
-                <Button
+                {/* <Button
                   __useDeprecatedTag
                   color={quickViewButtonColor}
                   type="button"
@@ -279,14 +276,39 @@ const ExpandedCurriculumCatalogCard = ({
                       : i18n.tryNow()
                   }
                   className={centererStyle.buttonFlex}
-                />
-                {isTeacherOrSignedOut && (
-                  <Button
-                    color={Button.ButtonColor.brandSecondaryDefault}
-                    type="button"
-                    onClick={() => assignButtonOnClick('expanded-card')}
-                    aria-label={assignButtonDescription}
-                    text={i18n.assignToClassSections()}
+                />*/}
+                {isTeacherOrSignedOut ? (
+                  <>
+                    <LinkButton
+                      color="black"
+                      type="secondary"
+                      href={pathToCourse}
+                      text={i18n.seeCurriculumDetails()}
+                      className={centererStyle.buttonFlex}
+                      ariaLabel={i18n.quickViewDescription({
+                        course_name: courseDisplayName,
+                      })}
+                    />
+                    <Button
+                      //color={Button.ButtonColor.brandSecondaryDefault}
+                      //type="button"
+                      color="purple"
+                      type="primary"
+                      onClick={() => assignButtonOnClick('expanded-card')}
+                      ariaLabel={assignButtonDescription}
+                      text={i18n.assignToClassSections()}
+                      className={centererStyle.buttonFlex}
+                    />
+                  </>
+                ) : (
+                  <LinkButton
+                    color="purple"
+                    type="primary"
+                    href={pathToCourse}
+                    ariaLabel={i18n.tryCourseNow({
+                      course_name: courseDisplayName,
+                    })}
+                    text={i18n.tryNow()}
                     className={centererStyle.buttonFlex}
                   />
                 )}
@@ -298,7 +320,8 @@ const ExpandedCurriculumCatalogCard = ({
                   onClick={onClose}
                   icon="xmark"
                   iconClassName="fa-solid"
-                  aria-label="Close Button"
+                  ariaLabel="Close Button"
+                  isIconOnly
                 />
               </div>
               <div className={style.relatedContainer}>
@@ -311,7 +334,7 @@ const ExpandedCurriculumCatalogCard = ({
                   src={recommendedSimilarCurriculum.image || defaultImageSrc}
                   alt={recommendedSimilarCurriculum.display_name}
                 />
-                <Button
+                <DeprecatedButton
                   id="similarCurriculumButton"
                   name={recommendedSimilarCurriculum.display_name}
                   type="button"
@@ -325,7 +348,7 @@ const ExpandedCurriculumCatalogCard = ({
                   src={recommendedStretchCurriculum.image || defaultImageSrc}
                   alt={recommendedStretchCurriculum.display_name}
                 />
-                <Button
+                <DeprecatedButton
                   id="stretchCurriculumButton"
                   name={recommendedStretchCurriculum.display_name}
                   type="button"
