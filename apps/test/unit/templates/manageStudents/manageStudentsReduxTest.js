@@ -32,7 +32,7 @@ import manageStudents, {
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 import {sectionLoginFactory} from '../../../factories/sectionLogin';
-import {assert} from '../../../util/reconfiguredChai';
+import {assert} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const sectionLoginData = {
   1: sectionLoginFactory.build({id: 1, name: 'StudentNameA', sectionId: 53}),

@@ -1,5 +1,4 @@
 import {render, screen} from '@testing-library/react';
-import {expect} from 'chai';
 import React from 'react';
 
 import {fakeLessonWithLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
@@ -18,7 +17,7 @@ describe('LessonTitleTooltip', () => {
     console.log(lesson);
     render(<LessonTitleTooltip lesson={lesson} />);
 
-    expect(screen.getByText('Lesson 9999 title')).to.exist;
+    expect(screen.getByText('Lesson 9999 title')).toBeDefined();
   });
 
   it('id is parsed correctly', () => {
@@ -27,6 +26,6 @@ describe('LessonTitleTooltip', () => {
       name: 'this is a test lesson',
     });
 
-    expect(getTooltipId(lesson)).to.equal('tooltip-6789');
+    expect(getTooltipId(lesson)).toBe('tooltip-6789');
   });
 });
