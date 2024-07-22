@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
+import {BodyTwoText, Heading1} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import codeLogo from '../assets/codeLogo.svg';
@@ -15,16 +15,10 @@ const WorkshopWelcomeBanner = () => {
       </div>
 
       <div className={styles.titleContainer}>
-        <Typography semanticTag={'h1'} visualAppearance={'heading-xxl'}>
-          {i18n.accountWelcomeBannerHeaderLabel()}
-        </Typography>
-        <Typography
-          className={styles.titleDesc}
-          semanticTag={'p'}
-          visualAppearance={'body-two'}
-        >
+        <Heading1>{i18n.accountWelcomeBannerHeaderLabel()}</Heading1>
+        <BodyTwoText className={styles.titleDesc}>
           {i18n.accountWelcomeBannerContentWorkshopEnroll()}
-        </Typography>
+        </BodyTwoText>
       </div>
     </div>
   );

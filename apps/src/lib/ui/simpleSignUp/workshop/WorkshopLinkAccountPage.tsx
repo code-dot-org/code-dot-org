@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Link from '@cdo/apps/componentLibrary/link';
-import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import WorkshopContinueAccountCard from './WorkshopContinueAccountCard';
@@ -24,11 +23,7 @@ const WorkshopLinkAccountPage: React.FunctionComponent<{
   continueAccountUrl,
   existingAccountUrlHref,
 }) => {
-  const handleCancel = () => {
-    newCtaType === 'new'
-      ? navigateToHref(`/users/cancel`)
-      : navigateToHref(`/users/sign_out`);
-  };
+  const cancelHref = newCtaType === 'new' ? '/users/cancel' : '/users/sign_out';
 
   return (
     <main>
@@ -50,7 +45,7 @@ const WorkshopLinkAccountPage: React.FunctionComponent<{
           />
         </div>
         <div className={styles.cancelButtonContainer}>
-          <Link text={i18n.cancel()} href={`#`} onClick={handleCancel} />
+          <Link text={i18n.cancel()} href={cancelHref} />
         </div>
       </div>
     </main>

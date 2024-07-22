@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, {useRef} from 'react';
 
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
+import {LinkButton} from '@cdo/apps/componentLibrary/button';
 import {
   Card,
   CardActions,
@@ -10,7 +10,6 @@ import {
 } from '@cdo/apps/componentLibrary/card';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
-import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import styles from '../link-account.module.scss';
@@ -47,12 +46,13 @@ const WorkshopNewAccountCard: React.FunctionComponent<{
         </form>
       </CardContent>
       <CardActions>
-        <Button
-          className={classNames(styles.button, styles.cardSecondaryButton)}
-          color={buttonColors.white}
+        <LinkButton
+          className={styles.button}
+          color="black"
           size="m"
           text={i18n.createAccount()}
-          onClick={() => navigateToHref(newAccountUrl)}
+          type="secondary"
+          href={newAccountUrl}
         />
       </CardActions>
     </Card>

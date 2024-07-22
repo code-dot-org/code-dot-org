@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
+import {LinkButton} from '@cdo/apps/componentLibrary/button';
 import {
   Card,
   CardActions,
@@ -9,7 +9,6 @@ import {
   CardHeader,
 } from '@cdo/apps/componentLibrary/card';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import styles from '../link-account.module.scss';
@@ -31,12 +30,13 @@ const WorkshopContinueAccountCard: React.FunctionComponent<{
       {i18n.ltiLinkAccountContinueAccountCardContent()}
     </CardContent>
     <CardActions>
-      <Button
-        className={classNames(styles.button, styles.cardSecondaryButton)}
-        color={buttonColors.white}
+      <LinkButton
+        className={styles.button}
+        color="black"
         size="m"
         text={i18n.ltiIframeCallToAction()}
-        onClick={() => navigateToHref(continueAccountUrl)}
+        type="secondary"
+        href={continueAccountUrl}
       />
     </CardActions>
   </Card>
