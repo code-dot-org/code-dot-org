@@ -98,8 +98,11 @@ const FreeResponseResponses = ({responses, showStudentNames}) => {
       )}
       <div className={styles.studentResponsesColumns}>
         {responses
-          .filter(response => !pinnedResponseIds.includes(response.user_id))
-          .filter(response => !hiddenResponses.includes(response.user_id))
+          .filter(
+            response =>
+              !pinnedResponseIds.includes(response.user_id) &&
+              !hiddenResponses.includes(response.user_id)
+          )
           .map(response =>
             getResponseBox(
               response,
