@@ -19,6 +19,7 @@ const Console: React.FunctionComponent = () => {
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
   const [graphModalOpen, setGraphModalOpen] = useState(false);
+  const [activeGraphIndex, setActiveGraphIndex] = useState(0);
 
   // TODO: Update this with other apps that use the console as needed.
   const systemMessagePrefix = appName === 'pythonlab' ? '[PYTHON LAB] ' : '';
@@ -33,6 +34,12 @@ const Console: React.FunctionComponent = () => {
 
   const clearOutput = () => {
     dispatch(resetOutput());
+    setGraphModalOpen(false);
+  };
+
+  const popOutGraph = (index: number) => {
+    setActiveGraphIndex(index);
+    setGraphModalOpen(true);
   };
 
   const headerButton = () => {
@@ -72,12 +79,12 @@ const Console: React.FunctionComponent = () => {
                   disabled={false}
                   icon={{iconName: 'up-right-from-square', iconStyle: 'solid'}}
                   isIconOnly={true}
-                  onClick={() => setGraphModalOpen(true)}
+                  onClick={() => popOutGraph(index)}
                   size="xs"
                   type="primary"
                   aria-label="open matplotlib_image in pop-up"
                 />
-                {graphModalOpen && (
+                {activeGraphIndex === index && graphModalOpen && (
                   <GraphModal
                     src={`data:image/png;base64,${outputLine.contents}`}
                     onClose={() => setGraphModalOpen(false)}
