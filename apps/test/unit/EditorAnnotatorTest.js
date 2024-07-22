@@ -1,4 +1,4 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import annotationList from '@cdo/apps/acemode/annotationList';
 import EditorAnnotator, {DropletAnnotator} from '@cdo/apps/EditorAnnotator';
@@ -8,7 +8,7 @@ import {
   restoreStudioApp,
 } from '@cdo/apps/StudioApp';
 
-import {expect} from '../util/reconfiguredChai';
+import {expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('EditorAnnotator', () => {
   let patchStub;

@@ -3,8 +3,6 @@ import React from 'react';
 
 import CertificateShare from '@cdo/apps/templates/certificates/CertificateShare';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 const defaultImageAlt = 'certificate alt text';
 const defaultProps = {
   imageUrl: '/certificate-image',
@@ -38,15 +36,15 @@ describe('CertificateShare', () => {
     render(<CertificateShare {...defaultProps} />);
 
     const printLink = screen.getByRole('link', {name: defaultImageAlt});
-    expect(printLink.href).to.include('/certificate-print');
+    expect(printLink.href).toContain('/certificate-print');
     const image = screen.getByRole('img', {name: defaultImageAlt});
-    expect(image.src).to.include('/certificate-image');
+    expect(image.src).toContain('/certificate-image');
 
     const twoColumnActionBlock = screen.getByTestId('two-column-action-block');
     const announcementImg = within(twoColumnActionBlock).getByTestId(
       'two-column-action-block-img'
     );
-    expect(announcementImg.src).to.include('//code.org/announcement-image');
+    expect(announcementImg.src).toContain('//code.org/announcement-image');
   });
 
   it('renders no announcement without announcement prop', () => {
@@ -58,6 +56,6 @@ describe('CertificateShare', () => {
 
     screen.findByRole('link', {name: defaultImageAlt});
 
-    expect(screen.queryByTestId('two-column-action-block')).to.not.exist;
+    expect(screen.queryByTestId('two-column-action-block')).toBeFalsy();
   });
 });

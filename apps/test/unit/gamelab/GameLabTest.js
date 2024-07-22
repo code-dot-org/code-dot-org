@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import GameLab from '@cdo/apps/p5lab/gamelab/GameLab';
@@ -13,7 +13,7 @@ import {
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import Sounds from '@cdo/apps/Sounds';
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {setExternalGlobals} from '../../util/testUtils';
 import 'script-loader!@code-dot-org/p5.play/examples/lib/p5';
 import 'script-loader!@code-dot-org/p5.play/lib/p5.play';

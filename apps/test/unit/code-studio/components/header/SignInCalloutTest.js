@@ -1,12 +1,12 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import cookies from 'js-cookie';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import SignInCalloutWrapper from '@cdo/apps/code-studio/components/header/SignInCalloutWrapper';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('ViewPopup', () => {
   it('displays the correct background darkness', () => {

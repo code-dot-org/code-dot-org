@@ -1,10 +1,8 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import Button from '@cdo/apps/templates/Button';
-
-import {assert} from '../../util/reconfiguredChai';
 
 import style from '@cdo/apps/templates/button.module.scss';
 
@@ -14,9 +12,9 @@ describe('Button', () => {
       <Button __useDeprecatedTag href="/foo/bar" text="Click me" />
     );
 
-    assert(wrapper.is('a'));
-    assert.strictEqual(wrapper.props().href, '/foo/bar');
-    assert.strictEqual(wrapper.props().target, undefined);
+    expect(wrapper.is('a')).toBeTruthy();
+    expect(wrapper.props().href).toBe('/foo/bar');
+    expect(wrapper.props().target).toBe(undefined);
   });
 
   it('modifies target if provided', () => {
@@ -29,9 +27,9 @@ describe('Button', () => {
       />
     );
 
-    assert(wrapper.is('a'));
-    assert.strictEqual(wrapper.props().href, '/foo/bar');
-    assert.strictEqual(wrapper.props().target, '_blank');
+    expect(wrapper.is('a')).toBeTruthy();
+    expect(wrapper.props().href).toBe('/foo/bar');
+    expect(wrapper.props().target).toBe('_blank');
   });
 
   it('attempts to mitigate some of the inherent insecurity when setting target=_blank', () => {
@@ -44,10 +42,10 @@ describe('Button', () => {
       />
     );
 
-    assert.isUndefined(wrapper.props().rel);
+    expect(wrapper.props().rel).not.toBeDefined();
 
     wrapper.setProps({target: '_blank'});
-    assert.strictEqual(wrapper.props().rel, 'noopener noreferrer');
+    expect(wrapper.props().rel).toBe('noopener noreferrer');
   });
 
   it('renders a div when button has an onClick', () => {
@@ -61,11 +59,11 @@ describe('Button', () => {
       />
     );
 
-    assert(wrapper.is('div'));
-    assert.strictEqual(wrapper.props().href, undefined);
-    assert.equal(wrapper.props().onClick, onClick);
+    expect(wrapper.is('div')).toBeTruthy();
+    expect(wrapper.props().href).toBe(undefined);
+    expect(wrapper.props().onClick).toEqual(onClick);
     wrapper.simulate('click');
-    assert(onClick.calledOnce);
+    expect(onClick.calledOnce).toBeTruthy();
   });
 
   it('doesnt respond to clicks when disabled', () => {
@@ -81,7 +79,7 @@ describe('Button', () => {
     );
 
     wrapper.simulate('click');
-    assert(!onClick.calledOnce);
+    expect(!onClick.calledOnce).toBeTruthy();
   });
 
   it('renders bigger if we use a large size', () => {
@@ -96,9 +94,9 @@ describe('Button', () => {
         size={Button.ButtonSize.large}
       />
     );
-    assert.include(regular.props().className, style.default);
+    expect(regular.props().className).toContain(style.default);
 
-    assert.include(large.props().className, style.large);
+    expect(large.props().className).toContain(style.large);
   });
 
   it('renders narrower if we use a narrow size', () => {
@@ -113,9 +111,9 @@ describe('Button', () => {
         size={Button.ButtonSize.narrow}
       />
     );
-    assert.include(regular.props().className, style.default);
+    expect(regular.props().className).toContain(style.default);
 
-    assert.include(narrow.props().className, style.narrow);
+    expect(narrow.props().className).toContain(style.narrow);
   });
 
   it('renders smaller if we use a small size', () => {
@@ -130,16 +128,16 @@ describe('Button', () => {
         size={Button.ButtonSize.small}
       />
     );
-    assert.include(regular.props().className, style.default);
+    expect(regular.props().className).toContain(style.default);
 
-    assert.include(small.props().className, style.small);
+    expect(small.props().className).toContain(style.small);
   });
 
   it('renders an orange button by default', () => {
     const wrapper = shallow(
       <Button __useDeprecatedTag href="/foo/bar" text="Click me" />
     );
-    assert.include(wrapper.props().className, style.orange);
+    expect(wrapper.props().className).toContain(style.orange);
   });
 
   it('renders a blue button if we set color to blue', () => {
@@ -151,7 +149,7 @@ describe('Button', () => {
         color={Button.ButtonColor.blue}
       />
     );
-    assert.include(wrapper.props().className, style.blue);
+    expect(wrapper.props().className).toContain(style.blue);
   });
 
   it('renders a purple button if we set color to purple', () => {
@@ -163,7 +161,7 @@ describe('Button', () => {
         color={Button.ButtonColor.purple}
       />
     );
-    assert.include(wrapper.props().className, style.purple);
+    expect(wrapper.props().className).toContain(style.purple);
   });
 
   it('renders a gray button if we set color to gray', () => {
@@ -175,7 +173,7 @@ describe('Button', () => {
         color={Button.ButtonColor.gray}
       />
     );
-    assert.include(wrapper.props().className, style.gray);
+    expect(wrapper.props().className).toContain(style.gray);
   });
 
   it('renders a white button if we set color to white', () => {
@@ -187,7 +185,7 @@ describe('Button', () => {
         color={Button.ButtonColor.white}
       />
     );
-    assert.include(wrapper.props().className, style.white);
+    expect(wrapper.props().className).toContain(style.white);
   });
 
   it('renders with an icon if specified', () => {
@@ -195,8 +193,8 @@ describe('Button', () => {
       <Button __useDeprecatedTag href="/foo/bar" text="Click me" icon="lock" />
     );
     const icon = wrapper.find('FontAwesome');
-    assert(icon);
-    assert.equal(icon.props().icon, 'lock');
+    expect(icon).toBeTruthy();
+    expect(icon.props().icon).toEqual('lock');
   });
 
   it('supports the download property/attribute', () => {
@@ -206,23 +204,23 @@ describe('Button', () => {
     const wrapper = shallow(
       <Button __useDeprecatedTag download href="/foo/bar" text="Click me" />
     );
-    assert.equal(wrapper.find('a').prop('download'), true);
+    expect(wrapper.find('a').prop('download')).toEqual(true);
     wrapper.setProps({download: 'baz'});
-    assert.equal(wrapper.find('a').prop('download'), 'baz');
+    expect(wrapper.find('a').prop('download')).toEqual('baz');
   });
 
   it('does not support the download property/attribute for non-anchor tags', () => {
     // <button> and <div> elements do not have a download attribute, so we
     // proactively prevent our component from attempting to use the download
     // property when the underlying element would be one of them.
-    assert.throws(() => {
+    expect(() => {
       // button case
       shallow(<Button download text="Click me" />);
-    });
+    }).toThrow();
 
-    assert.throws(() => {
+    expect(() => {
       // div case
       shallow(<Button __useDeprecatedTag download text="Click me" />);
-    });
+    }).toThrow();
   });
 });

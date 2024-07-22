@@ -3,8 +3,6 @@ import React from 'react';
 
 import FilterGroupContainer from '@cdo/apps/tutorialExplorer/filterGroupContainer';
 
-import {assert} from '../../util/reconfiguredChai';
-
 describe('FilterGroupContainer', () => {
   it('renders', () => {
     const title = 'Three Types of Tetris';
@@ -18,13 +16,13 @@ describe('FilterGroupContainer', () => {
     const wrapper = shallow(
       <FilterGroupContainer text={title}>{content}</FilterGroupContainer>
     );
-    assert(
+    expect(
       wrapper.containsMatchingElement(
         <div>
           <div>{title}</div>
           {content}
         </div>
       )
-    );
+    ).toBeTruthy();
   });
 });
