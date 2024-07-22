@@ -72,7 +72,7 @@ class Policies::LtiTest < ActiveSupport::TestCase
 
   test 'lti_provided_email should NOT return an email given a non-LTI user' do
     user = create :teacher
-    assert_equal nil, Policies::Lti.lti_provided_email(user)
+    assert_nil Policies::Lti.lti_provided_email(user)
   end
 
   test 'lti_teacher returns false if administrator' do
@@ -188,7 +188,7 @@ class Policies::LtiTest < ActiveSupport::TestCase
     test 'returns nil unless early access' do
       @early_access.returns(false)
 
-      assert_equal nil, Policies::Lti.early_access_closed?
+      assert_nil Policies::Lti.early_access_closed?
     end
 
     test 'returns true when DCDO `lti_early_access_limit` is true' do
