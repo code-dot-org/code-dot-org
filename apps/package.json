@@ -133,7 +133,7 @@
     "karma-webpack": "^5.0.0",
     "load-grunt-tasks": "3.5.0",
     "magicast": "^0.3.3",
-    "mocha": "^4.1.0",
+    "mocha": "^10.6.0",
     "mock-firmata": "0.2.0",
     "node-js-marker-clusterer": "^1.0.0",
     "prettier": "2.8.7",
