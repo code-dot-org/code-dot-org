@@ -1,0 +1,21 @@
+name 'unplugged_graph paper programming_markdown_unplugged'
+title 'binary bracelets markdown'
+
+markdown <<MARKDOWN
+##Graph Paper Programming
+<div>
+<img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/7a2c651e1c6983a6469b70c25815635f-image-1719939075957.51.12 AM.png" />
+
+<div style="float: left; width: 70%; padding-left:20px">
+<h4>
+<strong>This is an Unplugged Activity! </strong>
+</h4>
+
+> Ask your teacher for what you need:
+> - **<a href="https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing" target="_blank">Activity Worksheet</a>**
+> - **<a href="https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit" target="_blank">Assessment</a>**
+
+</div>
+
+
+MARKDOWN
