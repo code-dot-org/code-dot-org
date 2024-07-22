@@ -42,8 +42,6 @@ export interface ActionDropdownProps extends AriaAttributes {
   /** ActionDropdown label
    * The user-facing label of the dropdown */
   labelText: string;
-  /** ActionDropdown label style type*/
-  labelType?: 'thick' | 'thin';
   /** ActionDropdown options */
   options: ActionDropdownOption[];
   /** ActionDropdown checked options */
@@ -56,7 +54,6 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
   name,
   className,
   labelText,
-  labelType = 'thick',
   options,
   selectedOption = {},
   onChange,
@@ -77,20 +74,20 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
   );
 
   /* TODO:
-   - tests
-   - stories
-   - docs
-   - changelog
-   - readme
-   - list items
-   - trigger component
-  */
+     - tests +
+     - stories +
+     - docs +
+     - changelog +
+     - readme +
+     - list items
+     - trigger component
+     - props
+    */
   return (
     <CustomDropdown
       name={name}
       className={className}
       labelText={labelText}
-      labelType={labelType}
       disabled={disabled}
       color={color}
       size={size}
@@ -153,8 +150,8 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
  *
  * ###  Status: ```Ready for dev```
  *
- * Design System: Icon Dropdown Component.
- * Used to render dropdowns with a list of options with icons.
+ * Design System: Action Dropdown Component.
+ * Used to render dropdowns with a menu/list of different actions.
  */
 const WrappedActionDropdown = (props: ActionDropdownProps) => (
   <DropdownProviderWrapper>
