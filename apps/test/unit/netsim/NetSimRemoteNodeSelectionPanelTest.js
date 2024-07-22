@@ -1,7 +1,7 @@
 /** @file Tests for NetSimRemoteNodeSelectionPanel */
 import $ from 'jquery';
 
-import {assert} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 var DashboardUser = require('@cdo/apps/netsim/DashboardUser');
 var NetSimClientNode = require('@cdo/apps/netsim/NetSimClientNode');

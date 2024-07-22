@@ -1,6 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import AddPasswordForm, {
   SAVING_STATE,
@@ -10,7 +10,7 @@ import AddPasswordForm, {
 } from '@cdo/apps/lib/ui/accounts/AddPasswordForm';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../../util/deprecatedChai';
+import {expect} from '../../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('AddPasswordForm', () => {
   let wrapper, handleSubmit;

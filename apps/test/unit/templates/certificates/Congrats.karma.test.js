@@ -5,7 +5,7 @@ import Certificate from '@cdo/apps/templates/certificates/Certificate';
 import Congrats from '@cdo/apps/templates/certificates/Congrats';
 import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Congrats', () => {
   const userTypes = ['signedOut', 'teacher', 'student'];

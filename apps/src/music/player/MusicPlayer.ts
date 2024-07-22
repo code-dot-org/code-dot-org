@@ -1,4 +1,20 @@
+import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
+
+import appConfig from '../appConfig';
+import {
+  DEFAULT_PATTERN_LENGTH,
+  DEFAULT_CHORD_LENGTH,
+  MIN_BPM,
+  MAX_BPM,
+} from '../constants';
+import {LoadFinishedCallback, UpdateLoadProgressCallback} from '../types';
+import {generateNotesFromChord, ChordNote} from '../utils/Chords';
+import {getPitchName, getTranposedNote, Key} from '../utils/Notes';
+
 import {ChordEvent, ChordEventValue} from './interfaces/ChordEvent';
+import {Effects} from './interfaces/Effects';
 import {PatternEvent, PatternEventValue} from './interfaces/PatternEvent';
 import {PlaybackEvent} from './interfaces/PlaybackEvent';
 import {SoundEvent} from './interfaces/SoundEvent';
@@ -8,13 +24,8 @@ import MusicLibrary, {
   SoundFolder,
 } from './MusicLibrary';
 import SamplePlayer from './SamplePlayer';
-import {generateNotesFromChord, ChordNote} from '../utils/Chords';
-import {getPitchName, getTranposedNote, Key} from '../utils/Notes';
-import {Effects} from './interfaces/Effects';
-import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
-import {LoadFinishedCallback, UpdateLoadProgressCallback} from '../types';
+import SamplePlayerWrapper from './SamplePlayerWrapper';
+import ToneJSPlayer from './ToneJSPlayer';
 import {
   AudioPlayer,
   InstrumentData,
@@ -22,15 +33,6 @@ import {
   SampleEvent,
   SamplerSequence,
 } from './types';
-import SamplePlayerWrapper from './SamplePlayerWrapper';
-import {
-  DEFAULT_PATTERN_LENGTH,
-  DEFAULT_CHORD_LENGTH,
-  MIN_BPM,
-  MAX_BPM,
-} from '../constants';
-import appConfig from '../appConfig';
-import ToneJSPlayer from './ToneJSPlayer';
 
 const DEFAULT_BPM = 120;
 const DEFAULT_KEY = Key.C;

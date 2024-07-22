@@ -30,7 +30,7 @@ http_interactions:
         https://vaas.acapela-group.com ''unsafe-eval''; style-src ''self'' https:
         ''unsafe-inline''; img-src ''self'' https: data: blob:; font-src ''self''
         https: data:; connect-src ''self'' https: https://api.pusherapp.com wss://ws.pusherapp.com
-        wss://*.firebaseio.com http://localhost:8080; media-src ''self'' https: http://vaas.acapela-group.com;
+        http://localhost:8080; media-src ''self'' https: http://vaas.acapela-group.com;
         report-uri //code.org/https/mixed-content; frame-ancestors ''self'' http://*.disney.com
         http://*.diznee.net code.org studio.code.org'
       Date:

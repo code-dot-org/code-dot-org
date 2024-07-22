@@ -5,7 +5,7 @@ title 'Making Counters'
 markdown <<MARKDOWN
 # Emotion Badge
 
-<p style="font-size: 14pt;"> Follow allong with the  <a href="https://studio.code.org/s/grade2-maker-2024/lessons/5" target="_blank"><b>lesson plan.</b></a> Practice the lesson and get comfortable coding <b>events</b> on your micro:bit.</p>
+<p style="font-size: 14pt;"> Follow along with the  <a href="https://studio.code.org/s/grade2-maker-2024/lessons/5" target="_blank"><b>lesson plan.</b></a> Practice the lesson and get comfortable coding <b>events</b> on your micro:bit.</p>
 
 ---
 ## New session setup 
@@ -20,9 +20,11 @@ markdown <<MARKDOWN
 ---
 ## Assigning to your students 
 
-#### Your students will get to the Makecode classroom directly through a link on Code.org similar to the one you will use below. No additional log-ins are required.
+#### Your students will get to the MakeCode classroom using the link you generate by 
+<a href="https://mbit.io/csf-c2-classroom" target="_blank" style="font-size: 14pt;"> 
+starting a new classroom session.</a>
 
-#### Once you are in the new session you can choose to **share a link** or **share a class code** with your students to get them to join. 
+#### Once you are in the new session you can choose to **share a link** or **share a class code** with your students to get them to join. Students will enter their name in order to join.
 
 ![](https://images.code.org/e6703edc7923b36704fe2247a2e2b1a2-image-1718985826515.png)
 
@@ -40,7 +42,7 @@ markdown <<MARKDOWN
 
 
 
-<a href="https://mbit.io/csf-c2-classroome" target="_blank"> 
+<a href="https://mbit.io/csf-c2-classroom" target="_blank"> 
 <img src="https://images.code.org/f0ac453771c56b3f186fc3d40fc94af7-image-1702499895753.png" style="display: block; margin: auto; width: 20%">
 </a>
 

@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-05-17T16:38:03.000Z",
   "level_num": "custom",
@@ -74,10 +75,11 @@
     "encrypted_examples": "TIdALavgLHun/5mCEOx4RL8WPQB/sNtoGA5d21h0d1fawHADmFBYmPU7b85P\nSzX1Xqy20CRjDA+xf0fno/8yGw==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-17T16:38:03.735+00:00\",\"changed\":[\"cloned from \\\"game_development_jump_2024\\\"\"],\"cloned_from\":\"game_development_jump_2024\"},{\"changed_at\":\"2024-05-21 21:48:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-17T16:38:03.735+00:00\",\"changed\":[\"cloned from \\\"game_development_jump_2024\\\"\"],\"cloned_from\":\"game_development_jump_2024\"},{\"changed_at\":\"2024-05-21 21:48:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-16 18:25:54 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 2,
+    "events": 2
   }
 }]]></config>
   <blocks>

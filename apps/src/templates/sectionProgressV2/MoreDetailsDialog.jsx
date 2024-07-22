@@ -39,14 +39,6 @@ export default function MoreDetailsDialog({onClose}) {
       initialFocus={false}
     >
       <Heading3>{i18n.progressTrackingIconKey()}</Heading3>
-      <button
-        id="ui-close-dialog"
-        type="button"
-        onClick={onClose}
-        className={styles.xCloseButton}
-      >
-        <i id="x-close" className="fa-solid fa-xmark" />
-      </button>
       <hr />
       {/* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */}
       <div role="region" className={styles.dialog} tabIndex={0} ref={regionRef}>

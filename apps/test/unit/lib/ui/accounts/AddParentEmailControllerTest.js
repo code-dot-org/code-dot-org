@@ -1,10 +1,10 @@
 import $ from 'jquery';
 import ReactDOM from 'react-dom';
-import {spy, stub} from 'sinon';
+import {spy, stub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import AddParentEmailController from '@cdo/apps/lib/ui/accounts/AddParentEmailController';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 export const ENCRYPTED_EMAIL_PLACEHOLDER = '***encrypted***';
 

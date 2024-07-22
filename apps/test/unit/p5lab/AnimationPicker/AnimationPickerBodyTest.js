@@ -9,7 +9,6 @@ import AnimationPickerListItem from '@cdo/apps/p5lab/AnimationPicker/AnimationPi
 import AnimationUploadButton from '@cdo/apps/p5lab/AnimationPicker/AnimationUploadButton';
 import {CostumeCategories} from '@cdo/apps/p5lab/spritelab/constants';
 
-import {expect} from '../../../util/reconfiguredChai';
 import testAnimationLibrary from '../testAnimationLibrary.json';
 
 const msg = require('@cdo/locale');
@@ -48,10 +47,8 @@ describe('AnimationPickerBody', function () {
     it('shows an upload warning if the upload button is visible', function () {
       const body = shallow(<AnimationPickerBody {...defaultProps} />);
       const warnings = body.find(WarningLabel);
-      expect(warnings).to.have.length(1);
-      expect(warnings.children().text()).to.equal(
-        msg.animationPicker_warning()
-      );
+      expect(warnings).toHaveLength(1);
+      expect(warnings.children().text()).toBe(msg.animationPicker_warning());
     });
   });
 
@@ -64,9 +61,9 @@ describe('AnimationPickerBody', function () {
         },
       };
       const wrapper = shallow(<AnimationPickerBody {...defaultProps} />);
-      expect(wrapper.state('currentPage')).to.equal(0);
+      expect(wrapper.state('currentPage')).toBe(0);
       wrapper.instance().handleScroll(mockEvent);
-      expect(wrapper.state('currentPage')).to.equal(1);
+      expect(wrapper.state('currentPage')).toBe(1);
     });
 
     it('does not fetch next results if not scrolled through 90% of content', () => {
@@ -77,9 +74,9 @@ describe('AnimationPickerBody', function () {
         },
       };
       const wrapper = shallow(<AnimationPickerBody {...defaultProps} />);
-      expect(wrapper.state('currentPage')).to.equal(0);
+      expect(wrapper.state('currentPage')).toBe(0);
       wrapper.instance().handleScroll(mockEvent);
-      expect(wrapper.state('currentPage')).to.equal(0);
+      expect(wrapper.state('currentPage')).toBe(0);
     });
   });
   describe('handleBackgrounds', () => {
@@ -88,17 +85,17 @@ describe('AnimationPickerBody', function () {
         <AnimationPickerBody {...defaultProps} hideBackgrounds={true} />
       );
       const pickerItems = body.find(AnimationPickerListItem);
-      expect(pickerItems.length).to.equal(3);
+      expect(pickerItems.length).toBe(3);
       const uploadButton = body.find(AnimationUploadButton);
-      expect(uploadButton.length).to.equal(1);
+      expect(uploadButton.length).toBe(1);
     });
 
     it('does shows backgrounds if not hideBackgrounds', function () {
       const body = shallow(<AnimationPickerBody {...defaultProps} />);
       const pickerItems = body.find(AnimationPickerListItem);
-      expect(pickerItems.length).to.equal(4);
+      expect(pickerItems.length).toBe(4);
       const uploadButton = body.find(AnimationUploadButton);
-      expect(uploadButton.length).to.equal(1);
+      expect(uploadButton.length).toBe(1);
     });
 
     it('only shows backgrounds if defaultQuery has categoryQuery backgrounds', function () {
@@ -113,7 +110,7 @@ describe('AnimationPickerBody', function () {
         />
       );
       const items = body.find(AnimationPickerListItem);
-      expect(items.length).to.equal(1);
+      expect(items.length).toBe(1);
     });
   });
 });

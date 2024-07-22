@@ -1,12 +1,13 @@
 /** @file Pop-over menu component.  Combine with react-portal to use. */
-import React, {Component, Children} from 'react';
 import PropTypes from 'prop-types';
-
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React, {Component, Children} from 'react';
 import {PortalWithState} from 'react-portal';
-import msg from '@cdo/locale';
-import color from '../../util/color';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import msg from '@cdo/locale';
+
+import color from '../../util/color';
 
 const TAIL_WIDTH = 14;
 const TAIL_HEIGHT = 12;
@@ -186,6 +187,7 @@ class Item extends Component {
     openInNewTab: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
+    hrefOnClick: PropTypes.func,
   };
 
   render() {
@@ -198,6 +200,7 @@ class Item extends Component {
       openInNewTab,
       className,
       style,
+      hrefOnClick,
     } = this.props;
     const defaultClassName = 'pop-up-menu-item';
     const classList = className
@@ -246,6 +249,7 @@ class Item extends Component {
             href={href}
             style={{...textStyle, ...areaStyle}}
             target={target}
+            onClick={hrefOnClick}
           >
             {children}
           </a>

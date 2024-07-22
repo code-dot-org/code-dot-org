@@ -1,4 +1,4 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';
 import ExternalButton from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalButton';
@@ -7,7 +7,7 @@ import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoar
 import {MB_COMPONENT_COUNT} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardInterfaceTestUtil';
 
 import {itMakesMicroBitComponentsAvailable} from './MicroBitComponentTestUtil';

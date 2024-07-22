@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import JobBoard from '@cdo/apps/templates/jobBoard/JobBoard';
 
 $(document).ready(showJobBoard);

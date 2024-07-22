@@ -1,7 +1,7 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import dom from '@cdo/apps/dom';
 import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
@@ -16,7 +16,7 @@ import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../../util/deprecatedChai';
+import {expect} from '../../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 import {
   allowConsoleWarnings,
   createMouseEvent,

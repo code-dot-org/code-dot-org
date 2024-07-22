@@ -1,18 +1,21 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react';
 import classNames from 'classnames';
-import {getBaseAssetUrl} from '../appConfig';
-import styles from './soundsPanel.module.scss';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
+import FocusLock from 'react-focus-lock';
+
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+
+import {getBaseAssetUrl} from '../appConfig';
+import musicI18n from '../locale';
 import MusicLibrary, {
   SoundData,
   SoundFolder,
   SoundType,
 } from '../player/MusicLibrary';
 import SoundStyle from '../utils/SoundStyle';
-import FocusLock from 'react-focus-lock';
-import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
-import musicI18n from '../locale';
+
+import styles from './soundsPanel.module.scss';
 
 /*
  * Renders a UI for previewing and choosing samples. This is currently used within a

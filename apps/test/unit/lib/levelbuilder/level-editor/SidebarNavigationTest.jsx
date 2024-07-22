@@ -3,8 +3,6 @@ import React from 'react';
 
 import NavigationSidebar from '@cdo/apps/lab2/levelEditors/NavigationSidebar';
 
-import {expect} from '../../../../util/reconfiguredChai.js';
-
 describe('Navigation Sidebar', () => {
   let textarea;
 
@@ -24,7 +22,7 @@ describe('Navigation Sidebar', () => {
 
   it('renders the sidebar with list item', () => {
     const sideBar = render(<NavigationSidebar />);
-    expect(sideBar).to.exist;
-    expect(screen.getByRole('listitem')).to.exist;
+    expect(sideBar).toBeDefined();
+    expect(screen.getByRole('listitem')).toBeDefined();
   });
 });
