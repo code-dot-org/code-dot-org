@@ -28,6 +28,7 @@ class DatablockStorageController < ApplicationController
   METHODS_CALLED_BY_DATA_BLOCKS = [
     :set_key_value,
     :get_key_value,
+    :get_column,
     :create_record,
     :read_records,
     :update_record,
