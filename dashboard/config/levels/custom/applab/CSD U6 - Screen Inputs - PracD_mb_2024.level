@@ -49,7 +49,6 @@
     "debugger_disabled": "false",
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/f87aa16429422001fc3f6c0e9216f7be-image-1650646971636.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Debugging\r\n\r\nThis app is meant to ask a series of secret questions to unlock the final screen, but each question has a bug. Read through the code and experiment with the app to fix the bugs and reach the final screen! You only need to update the code that already exists - you don't need to add any new lines of code.\r\n\r\n_Note: Some of the bugs may be in design mode as well as code mode_\r\n\r\n## Do This\r\n\r\n1) Screen 1 Bugs\r\n\t- **What I Expected To Happen:** Selecting \"Mountain Ibex\" and pressing \"Check\" takes me to the next screen\r\n\t- **What Happened Instead:** I always get \"Try Again\" and can't continue\r\n2) Screen 2 Bugs\r\n\t- **What I Expected To Happen:** Using the slider to select 35 and pressing \"Check\" will take me to the next screen\r\n\t- **What Happened Instead:** I can't make the slider go past 10\r\n2) Screen 3 Bugs\r\n\t- **What I Expected To Happen:** Typing \"Open Sesame\" and pressing \"Check\" will take me to the next screen\r\n\t- **What Happened Instead:** I get an error in my code and the app stops working",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

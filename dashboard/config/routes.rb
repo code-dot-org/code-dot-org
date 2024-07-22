@@ -68,7 +68,7 @@ Dashboard::Application.routes.draw do
 
     resources :images, only: [:new]
 
-    get "/ai_tutor/generate_test_responses", to: "ai_tutor#generate_test_responses"
+    get "/ai_tutor/tester", to: "ai_tutor#tester"
 
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
@@ -1177,7 +1177,7 @@ Dashboard::Application.routes.draw do
 
     # DatablockStorageController powers the data features of applab,
     # and the key/value pair store feature of gamelab
-    resources :datablock_storage, path: '/datablock_storage/:channel_id/', only: [:index] do
+    resources :datablock_storage, path: '/datablock_storage/:channel_id/', only: [] do
       collection do
         # Datablock Storage: Key-Value-Pair API
         post :set_key_value
@@ -1217,11 +1217,6 @@ Dashboard::Application.routes.draw do
         # Datablock Storage: Project API
         get :project_has_data
         delete :clear_all_data
-
-        # TODO: post-firebase-cleanup, remove
-        # Project Use Datablock Storage API
-        put :use_datablock_storage
-        put :use_firebase_storage
       end
     end
   end

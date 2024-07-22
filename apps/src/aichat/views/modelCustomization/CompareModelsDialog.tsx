@@ -33,9 +33,6 @@ const CompareModelsDialog: React.FunctionComponent<{
       <div className={styles.headerContainer}>
         <Heading3>Compare Models</Heading3>
       </div>
-      <button type="button" onClick={onClose} className={styles.xCloseButton}>
-        <i id="x-close" className="fa-solid fa-xmark" />
-      </button>
       <hr />
       <div className={styles.modelComparisonContainer}>
         <ModelDescriptionPanel

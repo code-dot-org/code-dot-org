@@ -1,20 +1,22 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Provider} from 'react-redux';
-import $ from 'jquery';
+import {combineReducers, createStore} from 'redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 import i18n from '@cdo/locale';
-import color from '../../util/color';
+
 import BaseDialog from '../../templates/BaseDialog';
 import Button from '../../templates/Button';
 import SchoolInfoInputs, {
   SCHOOL_TYPES_HAVING_NCES_SEARCH,
   SCHOOL_TYPES_HAVING_NAMES,
 } from '../../templates/SchoolInfoInputs';
-import {combineReducers, createStore} from 'redux';
-import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
-import fontConstants from '@cdo/apps/fontConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import color from '../../util/color';
 
 const store = createStore(
   combineReducers({

@@ -1,10 +1,7 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import VersionUnitDropdowns from '@cdo/apps/templates/sectionsRefresh/VersionUnitDropdowns';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 import {highSchoolCourseOfferings} from './CourseOfferingsTestData';
 
@@ -33,22 +30,23 @@ describe('VersionUnitDropdowns', () => {
     const wrapper = setUpMount();
 
     // Counts all dropdown options across the two lists
-    expect(wrapper.find('option').length).to.equal(5);
-    expect(wrapper.contains("Problem Solving and Computing ('22-'23)")).to.be
-      .true;
-    expect(wrapper.contains("Web Development ('22-'23)")).to.be.true;
+    expect(wrapper.find('option').length).toBe(5);
+    expect(wrapper.contains("Problem Solving and Computing ('22-'23)")).toBe(
+      true
+    );
+    expect(wrapper.contains("Web Development ('22-'23)")).toBe(true);
   });
 
   it('assigns correct tts and lesson extras when unit selected', () => {
-    const updateSpy = sinon.spy();
+    const updateSpy = jest.fn();
     const wrapper = setUpMount({updateCourse: updateSpy});
 
-    expect(updateSpy).not.to.have.been.called;
+    expect(updateSpy).not.toHaveBeenCalled();
     wrapper
       .find('select')
       .at(1)
       .simulate('change', {target: {value: 5080}});
-    expect(updateSpy).to.have.been.calledWith({
+    expect(updateSpy).toHaveBeenCalledWith({
       courseOfferingId: 74,
       displayName: 'Computer Science Discoveries',
       versionId: 737,

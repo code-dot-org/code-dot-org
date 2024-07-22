@@ -3,9 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Chapter 1 Project: Human Device Interaction
+# End-of-Unit Project: Human Device Interaction
 
-#### The activities you completed in the previous levels were a selection of activities from Chapter 1 of the Creating Apps with Devices unit. These levels were intended to give you an overview of the skills students will building as they work towards the end of chapter project. 
+#### The activities you completed in the previous levels were a selection of activities from the Computer Systems and Devices unit. These levels were intended to give you an overview of the skills students will building as they work towards the end of chapter project. 
 </p></div>
 
 ## Project Overview
@@ -14,7 +14,7 @@ markdown <<MARKDOWN
 <br>
 
 <div style="background-color: #F7F8FA; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 15px;">
-<b>Note:</b> The examples below show projects that use the Circuit Playground instead of the micro:bit. The types of projets students can create at similar, but we have yet to collect example student projects that use the micro:bit. If you end up teaching this unit and are interested in featuring some of your student projects, please let us know!
+<b>Note:</b> The examples below show projects that use the Circuit Playground instead of the micro:bit. The types of projects students can create at similar, but we have yet to collect example student projects that use the micro:bit. If you end up teaching this unit and are interested in featuring some of your student projects, please let us know!
 </p></div>
 
 ## Sample Student Projects
@@ -31,12 +31,8 @@ markdown <<MARKDOWN
 <div style="clear:both"/>
 <br>
 
-## Pacing Recommendation
-
-#### If you you do not have enough time for Chapter 2, this project can be used as way to wrap up the unit. This project can also be expanded to include a student presentation if you have the time available. 
-
 ## Project Resources
-* #### <a href="https://studio.code.org/s/csd6b-2024/lessons/10" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
+* #### <a href="https://studio.code.org/s/fcs1b-beta-2024/lessons/10" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
 * #### <a href="https://docs.google.com/document/d/1CT34CDDJBgKOSpL6khJ8iv6peIZB217s4fgVr6FXFHI/edit" target="blank" rel="noopener noreferrer" >Project Guide</a> 
 * #### <a href="https://docs.google.com/document/d/1V1CHdXq3_w5B6An2UZA5BXXE_ODfUvis7ZS50v1eDfo/edit" target="blank" rel="noopener noreferrer" >Student Checklist</a> 
 * #### <a href="https://docs.google.com/document/d/12tyPbm7fUlFkQCy_pVjxTcoISKbgXuKxdQOlhtJoSdM/edit" target="blank" rel="noopener noreferrer" >Project Rubric</a> 

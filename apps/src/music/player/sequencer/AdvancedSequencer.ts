@@ -1,8 +1,10 @@
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+
 import {PlaybackEvent} from '../interfaces/PlaybackEvent';
 import MusicLibrary from '../MusicLibrary';
+
 import Sequencer from './Sequencer';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 /**
  * A {@link Sequencer} used in the Advanced (programming with variables) block mode.

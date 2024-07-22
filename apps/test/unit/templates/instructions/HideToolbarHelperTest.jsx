@@ -1,10 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import HideToolbarHelper from '@cdo/apps/templates/HideToolbarHelper';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 describe('HideToolbarHelper', function () {
   it('shows the hide toolbar helper', function () {
@@ -12,14 +9,14 @@ describe('HideToolbarHelper', function () {
 
     const instance = component.instance();
 
-    sinon.stub(instance, 'isCompatibleiOS').returns(true);
-    sinon.stub(instance, 'isHideCookieSet').returns(false);
-    sinon.stub(instance, 'isLandscape').returns(true);
-    sinon.stub(instance, 'isToolbarShowing').returns(true);
+    jest.spyOn(instance, 'isCompatibleiOS').mockClear().mockReturnValue(true);
+    jest.spyOn(instance, 'isHideCookieSet').mockClear().mockReturnValue(false);
+    jest.spyOn(instance, 'isLandscape').mockClear().mockReturnValue(true);
+    jest.spyOn(instance, 'isToolbarShowing').mockClear().mockReturnValue(true);
 
     instance.updateLayout();
 
-    expect(instance.state.showHelper).to.be.true;
+    expect(instance.state.showHelper).toBe(true);
   });
 
   it('does not show the hide toolbar helper', function () {
@@ -27,14 +24,14 @@ describe('HideToolbarHelper', function () {
 
     const instance = component.instance();
 
-    sinon.stub(instance, 'isCompatibleiOS').returns(true);
-    sinon.stub(instance, 'isHideCookieSet').returns(false);
-    sinon.stub(instance, 'isLandscape').returns(true);
-    sinon.stub(instance, 'isToolbarShowing').returns(false);
+    jest.spyOn(instance, 'isCompatibleiOS').mockClear().mockReturnValue(true);
+    jest.spyOn(instance, 'isHideCookieSet').mockClear().mockReturnValue(false);
+    jest.spyOn(instance, 'isLandscape').mockClear().mockReturnValue(true);
+    jest.spyOn(instance, 'isToolbarShowing').mockClear().mockReturnValue(false);
 
     instance.updateLayout();
 
-    expect(instance.state.showHelper).to.be.false;
+    expect(instance.state.showHelper).toBe(false);
   });
 
   it('we set a cookie when the toolbar goes away', function () {
@@ -42,26 +39,30 @@ describe('HideToolbarHelper', function () {
 
     const instance = component.instance();
 
-    const setHideHelperCookie = sinon.stub(instance, 'setHideHelperCookie');
+    const setHideHelperCookie = jest
+      .spyOn(instance, 'setHideHelperCookie')
+      .mockClear()
+      .mockImplementation();
 
-    sinon.stub(instance, 'isCompatibleiOS').returns(true);
-    sinon.stub(instance, 'isHideCookieSet').returns(false);
-    sinon.stub(instance, 'isLandscape').returns(true);
-    const isToolbarShowing = sinon
-      .stub(instance, 'isToolbarShowing')
-      .returns(true);
-
-    instance.updateLayout();
-
-    expect(instance.state.showHelper).to.be.true;
-    expect(setHideHelperCookie).not.to.have.been.called;
-
-    isToolbarShowing.restore();
-    sinon.stub(instance, 'isToolbarShowing').returns(false);
+    jest.spyOn(instance, 'isCompatibleiOS').mockClear().mockReturnValue(true);
+    jest.spyOn(instance, 'isHideCookieSet').mockClear().mockReturnValue(false);
+    jest.spyOn(instance, 'isLandscape').mockClear().mockReturnValue(true);
+    const isToolbarShowing = jest
+      .spyOn(instance, 'isToolbarShowing')
+      .mockClear()
+      .mockReturnValue(true);
 
     instance.updateLayout();
 
-    expect(instance.state.showHelper).to.be.false;
-    expect(setHideHelperCookie).to.have.been.called;
+    expect(instance.state.showHelper).toBe(true);
+    expect(setHideHelperCookie).not.toHaveBeenCalled();
+
+    isToolbarShowing.mockRestore();
+    jest.spyOn(instance, 'isToolbarShowing').mockClear().mockReturnValue(false);
+
+    instance.updateLayout();
+
+    expect(instance.state.showHelper).toBe(false);
+    expect(setHideHelperCookie).toHaveBeenCalled();
   });
 });

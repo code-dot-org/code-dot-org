@@ -2,32 +2,31 @@
  * A React component for our JavaScript debugger UI. Returns a connected component
  * so this can only be used in cases where we have a redux store.
  */
+import classNames from 'classnames';
+import $ from 'jquery';
 import PropTypes from 'prop-types';
+import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
-import $ from 'jquery';
+
 import i18n from '@cdo/locale';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import classNames from 'classnames';
+
 import dom from '../../../dom';
-import commonStyles from '../../../common-styles.module.scss';
-import styles from './js-debugger.module.scss';
-import Watchers from './Watchers';
+import {setStepSpeed, setIsDebuggingSprites} from '../../../redux/runState';
+import {
+  add as addWatchExpression,
+  remove as removeWatchExpression,
+} from '../../../redux/watchedExpressions';
+import FontAwesome from '../../../templates/FontAwesome';
 import PaneHeader, {
   PaneSection,
   PaneButton,
 } from '../../../templates/PaneHeader';
 import SpeedSlider from '../../../templates/SpeedSlider';
-import FontAwesome from '../../../templates/FontAwesome';
-import {setStepSpeed, setIsDebuggingSprites} from '../../../redux/runState';
 import * as utils from '../../../utils';
-import {
-  add as addWatchExpression,
-  remove as removeWatchExpression,
-} from '../../../redux/watchedExpressions';
-import DebugConsole from './DebugConsole';
-import DebugButtons from './DebugButtons';
 
+import DebugButtons from './DebugButtons';
+import DebugConsole from './DebugConsole';
 import {
   // actions
   clearLog,
@@ -40,6 +39,10 @@ import {
   canRunNext,
   getCommandHistory,
 } from './redux';
+import Watchers from './Watchers';
+
+import styles from './js-debugger.module.scss';
+import commonStyles from '../../../common-styles.module.scss';
 
 const debugAreaTransitionValue = 'height 0.4s';
 

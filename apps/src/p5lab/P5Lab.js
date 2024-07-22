@@ -2,22 +2,29 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
+import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
+import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import {
+  outputError,
+  injectErrorHandler,
+} from '@cdo/apps/lib/util/javascriptMode';
+import experiments from '@cdo/apps/util/experiments';
+
+import {TOOLBOX_EDIT_MODE} from '../constants';
+
 import {changeInterfaceMode, viewAnimationJson} from './actions';
-import {startInAnimationTab} from './stateQueries';
 import {P5LabInterfaceMode, APP_WIDTH} from './constants';
 import {
   SpritelabReservedWords,
   valueTypeTabShapeMap,
 } from './spritelab/constants';
-import {TOOLBOX_EDIT_MODE} from '../constants';
-import experiments from '@cdo/apps/util/experiments';
-import {
-  outputError,
-  injectErrorHandler,
-} from '@cdo/apps/lib/util/javascriptMode';
-import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
-import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
-import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import {startInAnimationTab} from './stateQueries';
+
+// Disabling import/order because moving the require statements may have unintended side effects.
+// This might be safe to remove but needs investigation whether any behavior is changed by order.
+/* eslint-disable import/order */
 var apiJavascript = require('./gamelab/apiJavascript');
 var consoleApi = require('@cdo/apps/consoleApi');
 var utils = require('@cdo/apps/utils');
@@ -31,11 +38,7 @@ var p5GroupWrapper = require('./P5GroupWrapper');
 var gamelabCommands = require('./gamelab/commands');
 import {initializeSubmitHelper, onSubmitComplete} from '@cdo/apps/submitHelper';
 var dom = require('@cdo/apps/dom');
-import {
-  initStorage,
-  FIREBASE_STORAGE,
-  DATABLOCK_STORAGE,
-} from '../storage/storage';
+import {initStorage, DATABLOCK_STORAGE} from '../storage/storage';
 import {getStore} from '@cdo/apps/redux';
 import {
   allAnimationsSingleFrameSelector,
@@ -76,6 +79,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+/* eslint-enable import/order */
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -259,21 +263,9 @@ export default class P5Lab {
 
     this.studioApp_.labUserId = config.labUserId;
 
-    // TODO: post-firebase-cleanup, remove this conditional when we're removing firebase: #56994
-    if (!!config.useDatablockStorage) {
-      this.studioApp_.storage = initStorage(DATABLOCK_STORAGE, {
-        channelId: config.channel,
-      });
-    } else {
-      this.studioApp_.storage = initStorage(FIREBASE_STORAGE, {
-        channelId: config.channel,
-        firebaseName: config.firebaseName,
-        firebaseAuthToken: config.firebaseAuthToken,
-        firebaseSharedAuthToken: config.firebaseSharedAuthToken,
-        firebaseChannelIdSuffix: config.firebaseChannelIdSuffix || '',
-        showRateLimitAlert: this.studioApp_.showRateLimitAlert,
-      });
-    }
+    this.studioApp_.storage = initStorage(DATABLOCK_STORAGE, {
+      channelId: config.channel,
+    });
 
     this.p5Wrapper.init({
       gameLab: this,

@@ -3,8 +3,6 @@ import React from 'react';
 
 import Example from '@cdo/apps/templates/codeDocs/Example';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 describe('Example', () => {
   it('embeds app without code', () => {
     const example = {
@@ -17,13 +15,13 @@ describe('Example', () => {
     const wrapper = shallow(
       <Example example={example} programmingEnvironmentName="applab" />
     );
-    expect(wrapper.find('h3').text()).to.equal('Example 1');
-    expect(wrapper.find('EnhancedSafeMarkdown').length).to.equal(2);
+    expect(wrapper.find('h3').text()).toBe('Example 1');
+    expect(wrapper.find('EnhancedSafeMarkdown').length).toBe(2);
     const flexBox = wrapper.find('div').first();
-    expect(flexBox.props().style['display']).to.equal('flex');
+    expect(flexBox.props().style['display']).toBe('flex');
     const app = flexBox.find('iframe');
-    expect(app).to.not.be.null;
-    expect(app.props().src).to.equal('/p/applab/abcde/embed');
+    expect(app).not.toBeNull();
+    expect(app.props().src).toBe('/p/applab/abcde/embed');
   });
 
   it('embeds app with code', () => {
@@ -36,13 +34,13 @@ describe('Example', () => {
     const wrapper = shallow(
       <Example example={example} programmingEnvironmentName="spritelab" />
     );
-    expect(wrapper.find('h3').text()).to.equal('Example 1');
-    expect(wrapper.find('EnhancedSafeMarkdown').length).to.equal(1);
+    expect(wrapper.find('h3').text()).toBe('Example 1');
+    expect(wrapper.find('EnhancedSafeMarkdown').length).toBe(1);
     const div = wrapper.find('div').first();
-    expect(div.props().style['display']).to.not.equal('flex');
+    expect(div.props().style['display']).not.toBe('flex');
     const app = wrapper.find('iframe');
-    expect(app).to.not.be.null;
-    expect(app.props().src).to.equal('/p/spritelab/abcde/embed_app_and_code');
+    expect(app).not.toBeNull();
+    expect(app.props().src).toBe('/p/spritelab/abcde/embed_app_and_code');
   });
 
   it('embeds example without app', () => {
@@ -56,9 +54,9 @@ describe('Example', () => {
     const wrapper = shallow(
       <Example example={example} programmingEnvironmentName="applab" />
     );
-    expect(wrapper.find('iframe').length).to.equal(0);
-    expect(wrapper.find('h3').text()).to.equal('Example 1');
-    expect(wrapper.find('EnhancedSafeMarkdown').length).to.equal(2);
+    expect(wrapper.find('iframe').length).toBe(0);
+    expect(wrapper.find('h3').text()).toBe('Example 1');
+    expect(wrapper.find('EnhancedSafeMarkdown').length).toBe(2);
   });
 
   it('embeds example with image', () => {
@@ -73,10 +71,10 @@ describe('Example', () => {
     const wrapper = shallow(
       <Example example={example} programmingEnvironmentName="applab" />
     );
-    expect(wrapper.find('iframe').length).to.equal(0);
-    expect(wrapper.find('h3').text()).to.equal('Example 1');
-    expect(wrapper.find('EnhancedSafeMarkdown').length).to.equal(2);
-    expect(wrapper.find('img').length).to.equal(1);
-    expect(wrapper.find('img').props().src).to.equal('/image.png');
+    expect(wrapper.find('iframe').length).toBe(0);
+    expect(wrapper.find('h3').text()).toBe('Example 1');
+    expect(wrapper.find('EnhancedSafeMarkdown').length).toBe(2);
+    expect(wrapper.find('img').length).toBe(1);
+    expect(wrapper.find('img').props().src).toBe('/image.png');
   });
 });

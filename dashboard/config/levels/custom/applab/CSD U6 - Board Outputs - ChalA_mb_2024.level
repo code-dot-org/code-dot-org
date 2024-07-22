@@ -64,7 +64,6 @@
     "long_instructions": "# Ratings App\r\n\r\nCreate an app that lets you respond to something - for example rating your own understanding of a topic, or rating anything around you. Your app should consider **accessiblity** and respond with both audio and visuals:\r\n\r\n- It should play a sound representing your rating\r\n- It should light up the `ledScreen` representing your rating\r\n\r\n# Do This\r\n\r\n1. Add code to represent the Happy response in your app. Remember that your representation should include both sound and visuals.\r\n2. Add code to represent the Meh response in your app. Remember that your representation should include both sound and visuals.\r\n3. Add code to represent the Sad response in your app. Remember that your representation should include both sound and visuals.",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20396,
-    "name_suffix": "_mb_2024",
     "reference_links": [
       "/courses/csd-2022/guides/microbit-overview",
       "/courses/csd-2022/guides/microbit-display",
