@@ -33,6 +33,7 @@ class DatablockStorageController < ApplicationController
     :read_records,
     :update_record,
     :delete_record,
+    :get_library_manifest,
   ]
 
   before_action :validate_channel_id
