@@ -1487,18 +1487,6 @@ en:
       success_body: "Great news! Your LMS has been registered with Code.org, and you can continue installing and using your LMS integration. You should receive a confirmation email shortly."
       success_header: "Thank you for registering your LMS!"
       register: "Register LMS"
-      early_access:
-        title: LMS Early Access
-        closed: Sorry, all Early Access slots for Code.org Learning Management System Integrations have been claimed.
-        waitlist: Please [sign-up here](%{sign_up_link}) to join the Early Access waitlist and get updates about LMS Integration releases.
-        form_header: Register your LMS for Integration Early Access
-        form_instructions:
-          Please use this form to register your Learning Management System (LMS) with Code.org.
-          This will allow Early Access to install our LTI integration on your LMS.
-        banner:
-          text:
-            You are using an **Early Access version** of Code.org’s LMS Integration.
-            Encountering issues? [**Report a Bug**](%{bug_report_url})
     upgrade_to_teacher_account:
       error:
         missing_email: "Missing required parameter: Email"
