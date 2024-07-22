@@ -69,8 +69,8 @@ steps:
       filename: unit-tests-cache-ubuntu-20.tar
 
   - name: unit-tests
-    # see: docker/drone/Dockerfile
-    # TODO: switch to codedotorg/cdo-drone
+    # see: docker/continuous-integration/Dockerfile
+    # TODO: switch to codedotorg/cdo-ci
     image: codedotorg/code-dot-org:1.9.3
     pull: always
     volumes:
@@ -189,8 +189,8 @@ steps:
       filename: ui-tests-cache-ubuntu-20.tar
 
   - name: ui-tests
-    # see: docker/drone/Dockerfile
-    # TODO: switch to codedotorg/cdo-drone
+    # see: docker/continuous-integration/Dockerfile
+    # TODO: switch to codedotorg/cdo-ci
     image: codedotorg/code-dot-org:1.9.3
     pull: always
     volumes:
@@ -295,6 +295,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 5915b545321c2aef2d8e34bcb394aa9929c4b48eb9c54bfb4d3c561c61c12a12
+hmac: c477840363aef5622277b7f1a1b47b0b93e6e516e89562b7505d30d2bfd8473c
 
 ...
