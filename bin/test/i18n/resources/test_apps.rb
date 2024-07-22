@@ -9,6 +9,7 @@ describe I18n::Resources::Apps do
       execution_sequence = sequence('execution')
 
       described_class::Animations.expects(:sync_in).in_sequence(execution_sequence)
+      described_class::MusiclabLibraries.expects(:sync_in).in_sequence(execution_sequence)
       described_class::ExternalSources.expects(:sync_in).in_sequence(execution_sequence)
       described_class::Labs.expects(:sync_in).in_sequence(execution_sequence)
 
@@ -21,6 +22,7 @@ describe I18n::Resources::Apps do
       execution_sequence = sequence('execution')
 
       described_class::Animations.expects(:sync_up).in_sequence(execution_sequence)
+      described_class::MusiclabLibraries.expects(:sync_up).in_sequence(execution_sequence)
       described_class::ExternalSources.expects(:sync_up).in_sequence(execution_sequence)
       described_class::Labs.expects(:sync_up).in_sequence(execution_sequence)
 
@@ -33,6 +35,7 @@ describe I18n::Resources::Apps do
       execution_sequence = sequence('execution')
 
       described_class::Animations.expects(:sync_down).in_sequence(execution_sequence)
+      described_class::MusiclabLibraries.expects(:sync_down).in_sequence(execution_sequence)
       described_class::ExternalSources.expects(:sync_down).in_sequence(execution_sequence)
       described_class::Labs.expects(:sync_down).in_sequence(execution_sequence)
 
@@ -45,6 +48,7 @@ describe I18n::Resources::Apps do
       execution_sequence = sequence('execution')
 
       described_class::Animations.expects(:sync_out).in_sequence(execution_sequence)
+      described_class::MusiclabLibraries.expects(:sync_out).in_sequence(execution_sequence)
       described_class::ExternalSources.expects(:sync_out).in_sequence(execution_sequence)
       described_class::Labs.expects(:sync_out).in_sequence(execution_sequence)
       described_class::TextToSpeech.expects(:sync_out).in_sequence(execution_sequence)
