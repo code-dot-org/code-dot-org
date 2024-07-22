@@ -14014,13 +14014,13 @@ es6-shim@latest:
   linkType: hard
 
 "globule@npm:^1.0.0":
-  version: 1.1.0
-  resolution: "globule@npm:1.1.0"
+  version: 1.3.4
+  resolution: "globule@npm:1.3.4"
   dependencies:
     glob: ~7.1.1
-    lodash: ~4.16.4
+    lodash: ^4.17.21
     minimatch: ~3.0.2
-  checksum: 12a69c18ccb231d11a4f9669c9502fd8a1bb6b781b725795582fe82f7da35bb4adcf9acf1b4699a3cfc6274adcc21d86e2565a856841d9ff46e24377ddf0b864
+  checksum: 258b6865c77d54fbd4c91dd6931d99baf81b1485fdf4bd2c053b1a10eab015163cb646e6c96812d5c8b027fb07adfc0b7c7fb13bbbb571f3c12ea60bd7fda2f5
   languageName: node
   linkType: hard
 
@@ -17810,13 +17810,6 @@ es6-shim@latest:
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
-  languageName: node
-  linkType: hard
-
-"lodash@npm:~4.16.4":
-  version: 4.16.6
-  resolution: "lodash@npm:4.16.6"
-  checksum: ed498278295a842a07c0b095d0a6775a1461afb622a189bc8e798ad4f50a07eb53a77a64338938fff5cc5b0d9bcce306c9e531785529a2f1c5c5780d6c517e0f
   languageName: node
   linkType: hard
 
