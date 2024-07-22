@@ -298,7 +298,6 @@ class SessionsControllerTest < ActionController::TestCase
   class LtiAccountLinkingSignInPageTest < ActionDispatch::IntegrationTest
     test 'renders alternative account linking login page during LTI registration' do
       DCDO.stubs(:get)
-      DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
       Policies::Lti.stubs(:lti_registration_in_progress?).returns(true)
 
       get user_session_path
@@ -314,7 +313,6 @@ class SessionsControllerTest < ActionController::TestCase
 
     test 'renders normal login page for non-LTI/non-partial registrations' do
       DCDO.stubs(:get)
-      DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
       Policies::Lti.stubs(:lti_registration_in_progress?).returns(false)
 
       get user_session_path
