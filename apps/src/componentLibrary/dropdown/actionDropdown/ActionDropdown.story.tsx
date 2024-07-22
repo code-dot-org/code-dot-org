@@ -3,22 +3,25 @@ import React, {useState, useCallback} from 'react';
 
 import {dropdownColors} from '@cdo/apps/componentLibrary/dropdown';
 
-import IconDropdown, {IconDropdownProps, IconDropdownOption} from './index';
+import ActionDropdown, {
+  ActionDropdownProps,
+  ActionDropdownOption,
+} from './index';
 
 export default {
   title: 'DesignSystem/Dropdown/Action Dropdown', // eslint-disable-line storybook/no-title-property-in-meta
-  component: IconDropdown.type,
+  component: ActionDropdown.type,
 } as Meta;
 
 //
 // TEMPLATE
 //
-const SingleTemplate: StoryFn<IconDropdownProps> = args => {
+const SingleTemplate: StoryFn<ActionDropdownProps> = args => {
   const [selectedValue, setValue] = useState(
-    args.selectedOption as IconDropdownOption
+    args.selectedOption as ActionDropdownOption
   );
   const onChange = useCallback(
-    (option: IconDropdownOption) => {
+    (option: ActionDropdownOption) => {
       setValue(option);
       args.onChange(option);
     },
@@ -26,7 +29,7 @@ const SingleTemplate: StoryFn<IconDropdownProps> = args => {
   );
 
   return (
-    <IconDropdown
+    <ActionDropdown
       {...args}
       selectedOption={selectedValue}
       onChange={onChange}
@@ -35,10 +38,10 @@ const SingleTemplate: StoryFn<IconDropdownProps> = args => {
 };
 
 const MultipleTemplate: StoryFn<{
-  components: IconDropdownProps[];
+  components: ActionDropdownProps[];
 }> = args => {
   const [values, setValues] = useState(
-    {} as Record<string, IconDropdownOption>
+    {} as Record<string, ActionDropdownOption>
   );
 
   return (
@@ -57,7 +60,7 @@ const MultipleTemplate: StoryFn<{
             });
           }
 
-          const onChange = (option: IconDropdownOption) => {
+          const onChange = (option: ActionDropdownOption) => {
             setValues({
               ...values,
               [componentArg.name]: option,
@@ -66,7 +69,7 @@ const MultipleTemplate: StoryFn<{
           };
 
           return (
-            <IconDropdown
+            <ActionDropdown
               key={`${componentArg.name}`}
               {...componentArg}
               selectedOption={values[componentArg.name]}
@@ -79,8 +82,8 @@ const MultipleTemplate: StoryFn<{
   );
 };
 
-export const DefaultIconDropdown = SingleTemplate.bind({});
-DefaultIconDropdown.args = {
+export const DefaultActionDropdown = SingleTemplate.bind({});
+DefaultActionDropdown.args = {
   name: 'default-dropdown',
   options: [
     {
@@ -106,8 +109,8 @@ DefaultIconDropdown.args = {
   size: 'm',
 };
 
-export const DisabledIconDropdown = SingleTemplate.bind({});
-DisabledIconDropdown.args = {
+export const DisabledActionDropdown = SingleTemplate.bind({});
+DisabledActionDropdown.args = {
   name: 'disabled-dropdown',
   options: [
     {
@@ -133,8 +136,8 @@ DisabledIconDropdown.args = {
   size: 'm',
 };
 
-export const WithDisabledOptionIconDropdown = SingleTemplate.bind({});
-WithDisabledOptionIconDropdown.args = {
+export const WithDisabledOptionActionDropdown = SingleTemplate.bind({});
+WithDisabledOptionActionDropdown.args = {
   name: 'withDisabledOption-dropdown',
   options: [
     {
@@ -166,11 +169,11 @@ WithDisabledOptionIconDropdown.args = {
   size: 'm',
 };
 
-export const ThickAndThinIconDropdowns = MultipleTemplate.bind({});
-ThickAndThinIconDropdowns.args = {
+export const ThickAndThinActionDropdowns = MultipleTemplate.bind({});
+ThickAndThinActionDropdowns.args = {
   components: [
     {
-      name: 'thick-iconDropdown',
+      name: 'thick-ActionDropdown',
       options: [
         {
           value: 'option-1',
@@ -195,7 +198,7 @@ ThickAndThinIconDropdowns.args = {
       disabled: false,
     },
     {
-      name: 'thin-iconDropdown',
+      name: 'thin-ActionDropdown',
       options: [
         {
           value: 'option-1',
@@ -222,8 +225,8 @@ ThickAndThinIconDropdowns.args = {
   ],
 };
 
-export const GroupOfIconDropdownColors = MultipleTemplate.bind({});
-GroupOfIconDropdownColors.args = {
+export const GroupOfActionDropdownColors = MultipleTemplate.bind({});
+GroupOfActionDropdownColors.args = {
   components: [
     {
       name: 'default-dropdown-white',
@@ -302,8 +305,8 @@ GroupOfIconDropdownColors.args = {
     },
   ],
 };
-export const GroupOfSizesOfIconDropdown = MultipleTemplate.bind({});
-GroupOfSizesOfIconDropdown.args = {
+export const GroupOfSizesOfActionDropdown = MultipleTemplate.bind({});
+GroupOfSizesOfActionDropdown.args = {
   components: [
     {
       name: 'default-dropdown-xs',

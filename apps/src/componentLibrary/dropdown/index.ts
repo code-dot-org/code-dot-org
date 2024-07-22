@@ -1,5 +1,5 @@
 import ActionDropdown, {
-  IconDropdownProps as ActionDropdownProps,
+  ActionDropdownProps,
 } from './actionDropdown/ActionDropdown';
 import CheckboxDropdown, {CheckboxDropdownProps} from './checkboxDropdown';
 import IconDropdown, {IconDropdownProps} from './iconDropdown';

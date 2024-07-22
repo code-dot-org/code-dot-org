@@ -20,39 +20,39 @@ import FontAwesomeV6Icon, {
 
 import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
 
-export interface IconDropdownOption {
+export interface ActionDropdownOption {
   value: string;
   label: string;
   isOptionDisabled?: boolean;
   icon: FontAwesomeV6IconProps;
 }
 
-export interface IconDropdownProps extends AriaAttributes {
-  /** IconDropdown name.
+export interface ActionDropdownProps extends AriaAttributes {
+  /** ActionDropdown name.
    * Name of the dropdown, used as unique identifier of the dropdown's HTML element */
   name: string;
-  /** IconDropdown custom class name */
+  /** ActionDropdown custom class name */
   className?: string;
-  /** IconDropdown color */
+  /** ActionDropdown color */
   color?: DropdownColor;
-  /** IconDropdown size */
+  /** ActionDropdown size */
   size: ComponentSizeXSToL;
-  /** IconDropdown disabled state */
+  /** ActionDropdown disabled state */
   disabled?: boolean;
-  /** IconDropdown label
+  /** ActionDropdown label
    * The user-facing label of the dropdown */
   labelText: string;
-  /** IconDropdown label style type*/
+  /** ActionDropdown label style type*/
   labelType?: 'thick' | 'thin';
-  /** IconDropdown options */
-  options: IconDropdownOption[];
-  /** IconDropdown checked options */
-  selectedOption: IconDropdownOption;
-  /** IconDropdown onChange handler */
-  onChange: (option: IconDropdownOption) => void;
+  /** ActionDropdown options */
+  options: ActionDropdownOption[];
+  /** ActionDropdown checked options */
+  selectedOption: ActionDropdownOption;
+  /** ActionDropdown onChange handler */
+  onChange: (option: ActionDropdownOption) => void;
 }
 
-const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
+const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
   name,
   className,
   labelText,
@@ -67,7 +67,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
 }) => {
   const {setActiveDropdownName} = useDropdownContext();
   const onOptionClick = useCallback(
-    (option: IconDropdownOption) => {
+    (option: ActionDropdownOption) => {
       if (!disabled && !option.isOptionDisabled) {
         onChange(option);
         setActiveDropdownName('');
@@ -93,14 +93,13 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
       labelType={labelType}
       disabled={disabled}
       color={color}
-      icon={selectedOption?.icon}
       size={size}
       {...rest}
       TriggerComponent={(props: TriggerComponentProps) => (
-        <Button {...props} text={labelText} />
+        <Button {...props} text={labelText} size={size} />
       )}
     >
-      <form className={moduleStyles.dropdownMenuContainer}>
+      <div className={moduleStyles.dropdownMenuContainer}>
         <ul>
           {options.map(option => {
             const {
@@ -139,7 +138,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
             );
           })}
         </ul>
-      </form>
+      </div>
     </CustomDropdown>
   );
 };
@@ -149,7 +148,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
  * * (✔) implementation of component approved by design team;
  * * (✔) has storybook, covered with stories and documentation;
  * * (✔) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/IconDropdownTest.jsx)
+ * * (see apps/test/unit/componentLibrary/ActionDropdownTest.jsx)
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready for dev```
@@ -157,10 +156,10 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
  * Design System: Icon Dropdown Component.
  * Used to render dropdowns with a list of options with icons.
  */
-const WrappedIconDropdown = (props: IconDropdownProps) => (
+const WrappedActionDropdown = (props: ActionDropdownProps) => (
   <DropdownProviderWrapper>
-    <IconDropdown {...props} />
+    <ActionDropdown {...props} />
   </DropdownProviderWrapper>
 );
 
-export default memo(WrappedIconDropdown);
+export default memo(WrappedActionDropdown);
