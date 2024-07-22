@@ -214,7 +214,7 @@ Devise.setup do |config|
   # Number of authentication tries before locking an account if lock_strategy
   # is failed attempts.
   #
-  # Set to just 2 in the test environment to speed up UI tests.
+  # Set to just two attempts in the test environment to speed up tests.
   config.maximum_attempts = Rails.env.test? ? 2 : 10
 
   # Time interval to unlock the account if :time is enabled as unlock_strategy.

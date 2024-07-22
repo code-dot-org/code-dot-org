@@ -1,5 +1,10 @@
 module Devise
   module Models
+    # Extend Devise's built-in Lockable functionality for compatibility with
+    # our particular implementation needs. In particular, we scope it to apply
+    # only to teachers and add SerializedProperties support.
+    #
+    # See https://www.rubydoc.info/github/plataformatec/devise/Devise/Models/Lockable
     module CustomLockable
       # @override https://github.com/heartcombo/devise/blob/v4.9.3/lib/devise/models/lockable.rb#L122-L125
       def increment_failed_attempts
@@ -27,7 +32,9 @@ module Devise
         reload
       end
 
-      # Add support for `nil` values
+      # Add support for `nil` values; this is necessary because we store the
+      # count of failed attempts in a properties blob rather than a database
+      # column, so it defaults to `nil` rather than `0`.
       # @override https://github.com/heartcombo/devise/blob/v4.9.3/lib/devise/models/lockable.rb#L143-L145
       protected def attempts_exceeded?
         (failed_attempts || 0) >= self.class.maximum_attempts
