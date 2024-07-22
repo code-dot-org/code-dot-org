@@ -4,7 +4,7 @@ import React from 'react';
 import LockoutLinkedAccounts from '@cdo/apps/templates/policy_compliance/LockoutLinkedAccounts';
 
 import {hashString} from '../../../../src/utils';
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   apiUrl: 'https://studio.code.org/api/foo',

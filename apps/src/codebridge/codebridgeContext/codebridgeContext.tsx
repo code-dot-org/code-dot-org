@@ -23,6 +23,7 @@ import {
   RenameFileFunction,
   MoveFileFunction,
   RenameFolderFunction,
+  RearrangeFilesFunction,
 } from './types';
 
 type CodebridgeContextType = {
@@ -45,6 +46,7 @@ type CodebridgeContextType = {
   renameFolder: RenameFolderFunction;
   resetProject: ResetProjectFunction;
   setFileType: setFileType;
+  rearrangeFiles: RearrangeFilesFunction;
 };
 
 export const CodebridgeContext = createContext<CodebridgeContextType | null>(

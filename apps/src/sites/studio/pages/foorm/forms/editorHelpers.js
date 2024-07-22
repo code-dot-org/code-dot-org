@@ -1,11 +1,12 @@
-import {getStore} from '@cdo/apps/redux';
+import _ from 'lodash';
+
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import {
   setQuestions,
   setHasJSONError,
   setHasLintError,
 } from '@cdo/apps/code-studio/pd/foorm/editor/foormEditorRedux';
-import _ from 'lodash';
+import {getStore} from '@cdo/apps/redux';
 
 let codeMirror;
 

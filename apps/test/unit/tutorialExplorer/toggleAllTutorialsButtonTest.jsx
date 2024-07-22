@@ -4,7 +4,7 @@ import React from 'react';
 import ToggleAllTutorialsButton from '@cdo/apps/tutorialExplorer/toggleAllTutorialsButton';
 import i18n from '@cdo/tutorialExplorer/locale';
 
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const FAKE_SHOW_ALL = () => {};
 const FAKE_HIDE_ALL = () => {};

@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import AllFeedbacks from '@cdo/apps/templates/feedback/AllFeedbacks';
 
 $(document).ready(showFeedback);

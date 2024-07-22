@@ -1,11 +1,12 @@
 /** @file Stubbable core setup check behavior for the setup page. */
 import CircuitPlaygroundBoard from '../boards/circuitPlayground/CircuitPlaygroundBoard';
+import MicroBitBoard from '../boards/microBit/MicroBitBoard';
+
 import {
   BOARD_TYPE,
   detectBoardTypeFromPort,
   shouldUseWebSerial,
 } from './boardUtils';
-import MicroBitBoard from '../boards/microBit/MicroBitBoard';
 
 export default class SetupChecker {
   constructor(webSerialPort) {

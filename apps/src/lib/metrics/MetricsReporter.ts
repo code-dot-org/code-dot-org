@@ -1,5 +1,6 @@
 import {getBrowserName} from '@cdo/apps/util/browser-detector';
 import {isDevelopmentEnvironment} from '@cdo/apps/utils';
+
 import DashboardMetricsApi from './DashboardMetricsApi';
 import {MetricsApi} from './MetricsApi';
 import {LogLevel, MetricDatum, MetricDimension, MetricUnit} from './types';
