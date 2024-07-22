@@ -1,12 +1,14 @@
 /** @file Component wrapping embedded Piskel editor */
+import PiskelApi from '@code-dot-org/piskel';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import PiskelApi from '@code-dot-org/piskel';
+
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import * as shapes from '../shapes';
+
 import {editAnimation, removePendingFramesAction} from '../redux/animationList';
 import {show, Goal} from '../redux/animationPicker';
+import * as shapes from '../shapes';
 /**
  * @const {string} domain-relative URL to Piskel index.html
  * In special environment builds, append ?debug flag to get Piskel to load its own debug mode.

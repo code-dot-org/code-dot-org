@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ValidationStep, {Status} from './ValidationStep';
 
 export default {

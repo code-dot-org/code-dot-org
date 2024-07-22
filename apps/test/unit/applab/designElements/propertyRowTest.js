@@ -3,8 +3,6 @@ import React from 'react';
 
 import PropertyRow from '@cdo/apps/applab/designElements/PropertyRow';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 describe('applab property row', function () {
   it('does not change an id row when a space is added', () => {
     var initialValue = 'HelloWorld';
@@ -16,10 +14,10 @@ describe('applab property row', function () {
         handleChange={() => {}}
       />
     );
-    expect(wrapper.state().value).to.equal(initialValue);
+    expect(wrapper.state().value).toBe(initialValue);
     wrapper.instance().handleChangeInternal({target: {value: 'Hello World'}});
     wrapper.update();
-    expect(wrapper.state().value).to.equal(initialValue);
+    expect(wrapper.state().value).toBe(initialValue);
   });
 
   it('changes an id row when edited', () => {
@@ -32,12 +30,12 @@ describe('applab property row', function () {
         handleChange={() => {}}
       />
     );
-    expect(wrapper.state().value).to.equal(initialValue);
+    expect(wrapper.state().value).toBe(initialValue);
     wrapper
       .instance()
       .handleChangeInternal({target: {value: initialValue + 's'}});
     wrapper.update();
-    expect(wrapper.state().value).to.equal(initialValue + 's');
+    expect(wrapper.state().value).toBe(initialValue + 's');
   });
 
   it('changes a row when edited', () => {
@@ -50,9 +48,9 @@ describe('applab property row', function () {
         handleChange={() => {}}
       />
     );
-    expect(wrapper.state().value).to.equal(initialValue);
+    expect(wrapper.state().value).toBe(initialValue);
     wrapper.instance().handleChangeInternal({target: {value: targetValue}});
     wrapper.update();
-    expect(wrapper.state().value).to.equal(targetValue);
+    expect(wrapper.state().value).toBe(targetValue);
   });
 });

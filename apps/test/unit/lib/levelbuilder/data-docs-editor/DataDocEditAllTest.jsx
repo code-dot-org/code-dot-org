@@ -1,10 +1,10 @@
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import DataDocEditAll from '@cdo/apps/lib/levelbuilder/data-docs-editor/DataDocEditAll';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('DataDocEditAll', () => {
   const dataDoc1 = {

@@ -2,22 +2,29 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
+import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
+import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import {
+  outputError,
+  injectErrorHandler,
+} from '@cdo/apps/lib/util/javascriptMode';
+import experiments from '@cdo/apps/util/experiments';
+
+import {TOOLBOX_EDIT_MODE} from '../constants';
+
 import {changeInterfaceMode, viewAnimationJson} from './actions';
-import {startInAnimationTab} from './stateQueries';
 import {P5LabInterfaceMode, APP_WIDTH} from './constants';
 import {
   SpritelabReservedWords,
   valueTypeTabShapeMap,
 } from './spritelab/constants';
-import {TOOLBOX_EDIT_MODE} from '../constants';
-import experiments from '@cdo/apps/util/experiments';
-import {
-  outputError,
-  injectErrorHandler,
-} from '@cdo/apps/lib/util/javascriptMode';
-import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
-import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
-import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import {startInAnimationTab} from './stateQueries';
+
+// Disabling import/order because moving the require statements may have unintended side effects.
+// This might be safe to remove but needs investigation whether any behavior is changed by order.
+/* eslint-disable import/order */
 var apiJavascript = require('./gamelab/apiJavascript');
 var consoleApi = require('@cdo/apps/consoleApi');
 var utils = require('@cdo/apps/utils');
@@ -72,6 +79,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+/* eslint-enable import/order */
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,

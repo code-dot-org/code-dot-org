@@ -1,18 +1,19 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import * as progressLoader from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 import {UnconnectedStandardsReport as StandardsReport} from '@cdo/apps/templates/sectionProgress/standards/StandardsReport';
 
-import {expect} from '../../../util/reconfiguredChai';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 describe('StandardsReport', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
-    sinon.stub(progressLoader, 'loadUnitProgress');
+    jest
+      .spyOn(progressLoader, 'loadUnitProgress')
+      .mockClear()
+      .mockImplementation();
     DEFAULT_PROPS = {
       scriptId: 2,
       teacherName: 'Awesome Teacher',
@@ -42,7 +43,7 @@ describe('StandardsReport', () => {
 
   afterEach(() => {
     restoreOnWindow('opener');
-    progressLoader.loadUnitProgress.restore();
+    progressLoader.loadUnitProgress.mockRestore();
   });
 
   it('report shows print buttons', () => {
@@ -56,7 +57,7 @@ describe('StandardsReport', () => {
     // componentDidMount resets the value of DEFAULT_PROPS but we have to force
     // the wrapper to reset the props
     wrapper.setProps(DEFAULT_PROPS);
-    expect(wrapper.find('PrintReportButton')).to.have.lengthOf(2);
+    expect(wrapper.find('PrintReportButton')).toHaveLength(2);
   });
 
   it('report shows StandardsReportHeader', () => {
@@ -70,7 +71,7 @@ describe('StandardsReport', () => {
     // componentDidMount resets the value of DEFAULT_PROPS but we have to force
     // the wrapper to reset the props
     wrapper.setProps(DEFAULT_PROPS);
-    expect(wrapper.find('StandardsReportHeader')).to.have.lengthOf(1);
+    expect(wrapper.find('StandardsReportHeader')).toHaveLength(1);
   });
 
   it('report shows StandardsReportCurrentCourseInfo', () => {
@@ -84,9 +85,7 @@ describe('StandardsReport', () => {
     // componentDidMount resets the value of DEFAULT_PROPS but we have to force
     // the wrapper to reset the props
     wrapper.setProps(DEFAULT_PROPS);
-    expect(wrapper.find('StandardsReportCurrentCourseInfo')).to.have.lengthOf(
-      1
-    );
+    expect(wrapper.find('StandardsReportCurrentCourseInfo')).toHaveLength(1);
   });
 
   it('report shows teacher comment if one exists', () => {
@@ -100,10 +99,8 @@ describe('StandardsReport', () => {
     // componentDidMount resets the value of DEFAULT_PROPS but we have to force
     // the wrapper to reset the props
     wrapper.setProps(DEFAULT_PROPS);
-    expect(wrapper.contains('Teacher comments')).to.equal(true);
-    expect(wrapper.contains('I love my class they are wonderful')).to.equal(
-      true
-    );
+    expect(wrapper.contains('Teacher comments')).toBe(true);
+    expect(wrapper.contains('I love my class they are wonderful')).toBe(true);
   });
 
   it('report does not show teacher comment section if there is no comment', () => {
@@ -117,7 +114,7 @@ describe('StandardsReport', () => {
     // componentDidMount resets the value of DEFAULT_PROPS but we have to force
     // the wrapper to reset the props
     wrapper.setProps(DEFAULT_PROPS);
-    expect(wrapper.contains('Teacher comments')).to.equal(false);
+    expect(wrapper.contains('Teacher comments')).toBe(false);
   });
 
   it('report shows StandardsProgressTable', () => {
@@ -131,6 +128,6 @@ describe('StandardsReport', () => {
     // componentDidMount resets the value of DEFAULT_PROPS but we have to force
     // the wrapper to reset the props
     wrapper.setProps(DEFAULT_PROPS);
-    expect(wrapper.find('Connect(StandardsProgressTable)')).to.have.lengthOf(1);
+    expect(wrapper.find('Connect(StandardsProgressTable)')).toHaveLength(1);
   });
 });

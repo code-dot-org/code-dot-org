@@ -5,8 +5,6 @@ import {CSVLink} from 'react-csv';
 import {UnconnectedFeedbackDownload as FeedbackDownload} from '@cdo/apps/templates/sectionAssessments/FeedbackDownload';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 const DEFAULT_PROPS = {
   sectionName: 'My Section',
   onClickDownload: () => {},
@@ -29,27 +27,28 @@ describe('FeedbackDownload', () => {
     const wrapper = setUp({isCurrentScriptCSD: true});
 
     const headers = wrapper.find(CSVLink).props().headers;
-    expect(hasHeader(headers, i18n.performanceLevel())).to.be.true;
-    expect(hasHeader(headers, i18n.performanceLevelDetails())).to.be.true;
+    expect(hasHeader(headers, i18n.performanceLevel())).toBe(true);
+    expect(hasHeader(headers, i18n.performanceLevelDetails())).toBe(true);
   });
 
   it('does not pass rubric headers to CSVLink if isCurrentScriptCSD is false', () => {
     const wrapper = setUp({isCurrentScriptCSD: false});
     const headers = wrapper.find(CSVLink).props().headers;
-    expect(hasHeader(headers, i18n.performanceLevel())).to.be.false;
-    expect(hasHeader(headers, i18n.performanceLevelDetails())).to.be.false;
+    expect(hasHeader(headers, i18n.performanceLevel())).toBe(false);
+    expect(hasHeader(headers, i18n.performanceLevelDetails())).toBe(false);
   });
 
   it('passes review state header to CSVLink', () => {
     const wrapper = setUp();
     const headers = wrapper.find(CSVLink).props().headers;
-    expect(hasHeader(headers, i18n.reviewState())).to.be.true;
+    expect(hasHeader(headers, i18n.reviewState())).toBe(true);
   });
 
   it('passes expected file name to CSVLink', () => {
     const wrapper = setUp();
     const fileName = wrapper.find(CSVLink).props().filename;
-    expect(fileName.includes('Feedback for My Section in Script Name on')).to.be
-      .true;
+    expect(fileName.includes('Feedback for My Section in Script Name on')).toBe(
+      true
+    );
   });
 });

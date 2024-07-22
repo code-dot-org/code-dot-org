@@ -4,6 +4,7 @@ import {DEFAULT_PATTERN, DEFAULT_CHORD, Triggers} from '../constants';
 import Globals from '../globals';
 import musicI18n from '../locale';
 import MusicLibrary from '../player/MusicLibrary';
+
 import {
   FIELD_REST_DURATION_NAME,
   FIELD_SOUNDS_NAME,

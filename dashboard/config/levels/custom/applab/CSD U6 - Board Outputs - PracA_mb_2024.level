@@ -56,7 +56,6 @@
     "long_instructions": "<!--\r\n<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/b6680c9d07ed56de86b398e83eab0656-image-1650056929215.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n-->\r\n\r\n# Random LEDs\r\n\r\nWe're trying to create an app that turns on a random LED on the `ledScreen`, but something isn't work correctly. Can you figure out what the bug is?\r\n\r\n- **What I Expected to Happen:** When you press the button, a random LED on the `ledScreen` pops up\r\n- **What Happens Instead:** Only one LED turns on when you press the button\r\n\r\n## Do This\r\n\r\nUpdate the code below so a random LED turns on when you press the button",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20396,
-    "name_suffix": "_mb_2024",
     "reference_links": [
       "/courses/csd-2022/guides/microbit-overview",
       "/courses/csd-2022/guides/microbit-display",

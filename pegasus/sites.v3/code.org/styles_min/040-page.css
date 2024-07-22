@@ -551,7 +551,8 @@ nav.main i.fa-fw {
 
 nav.main .create_menu,
 nav.main .user_menu,
-nav.main .button-signin {
+nav.main .button-signin,
+nav.main .button-create-account {
   border: 2px solid var(--neutral_white);
   border-radius: 4px;
   color: var(--neutral_white);
@@ -560,6 +561,12 @@ nav.main .button-signin {
   text-decoration: none;
   padding: 7px 12px;
   margin: 0;
+}
+
+nav.main .button-create-account {
+  background-color: var(--neutral_white);
+  color: var(--brand_primary_default);
+  font-weight: var(--semi-bold-font-weight);
 }
 
 nav.main .create_menu,
@@ -616,7 +623,7 @@ nav.main #hamburger #hamburger-contents {
   with appropriate links hidden */
 @media (min-width: 1024px) and (max-width: 1268px) {
   nav.main .left ul li:nth-child(n+4),
-  nav.main #hamburger-contents > div:nth-child(-n+4) {
+  nav.main #hamburger-contents > div:nth-child(-n+5) {
     display: none !important;
   }
 }

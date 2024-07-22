@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {expect} from '../util/reconfiguredChai';
+import {expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 var propTypes = require('@cdo/apps/propTypes');
 
