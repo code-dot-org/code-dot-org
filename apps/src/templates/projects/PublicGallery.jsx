@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 
 import i18n from '@cdo/locale';
 
-import Button from '../Button';
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 
 import ProjectCardGrid from './ProjectCardGrid';
 import {publishedFeaturedProjectPropType} from './projectConstants';
@@ -69,10 +69,12 @@ class PublicGallery extends Component {
         />
         <div style={styles.bottomButton}>
           <Button
-            __useDeprecatedTag
+            useAsLink={true}
+            ariaLabel={i18n.reportAbuse()}
             href="https://support.code.org/hc/en-us/articles/360001143952"
-            color={Button.ButtonColor.neutralDark}
+            color={buttonColors.gray}
             text={i18n.reportAbuse()}
+            type='secondary'
           />
         </div>
       </div>
