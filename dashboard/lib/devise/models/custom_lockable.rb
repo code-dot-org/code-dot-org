@@ -10,7 +10,7 @@ module Devise
         # this new feature in case we discover either technical or user
         # experience issues upon first release.
         # TODO infra: remove this once we're convinced the feature is stable.
-        return DCDO.get('devise-custom-lockable-enabled', false)
+        return unless DCDO.get('devise-custom-lockable-enabled', false)
 
         # The original implementation uses
         # ActiveRecord::CounterCache#increment_counter, which is intended to
