@@ -7,7 +7,6 @@
 set -xe
 
 eval "$(rbenv init -)"
-curl -fsSL https://raw.githubusercontent.com/code-dot-org/rbenv-installer/main/bin/rbenv-doctor | bash
 
 bundle install --verbose
 
