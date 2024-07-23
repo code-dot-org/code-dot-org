@@ -7,16 +7,16 @@ import i18n from '@cdo/locale';
 import BaseDialog from '../BaseDialog';
 import DialogFooter from '../teacherDashboard/DialogFooter';
 
-import styles from './personal-projects-name-failure-dialog.module.scss';
+import styles from './project-name-failure-dialog.module.scss';
 
-interface NameFailureDialogProps {
+interface ProjectNameFailureDialogProps {
   flaggedText: string;
   isOpen: boolean;
   handleClose: () => void;
 }
 
-const PersonalProjectsNameFailureDialog: React.FunctionComponent<
-  NameFailureDialogProps
+const ProjectNameFailureDialog: React.FunctionComponent<
+  ProjectNameFailureDialogProps
 > = ({flaggedText, isOpen, handleClose}) => {
   return (
     <BaseDialog
@@ -39,4 +39,4 @@ const PersonalProjectsNameFailureDialog: React.FunctionComponent<
   );
 };
 
-export default PersonalProjectsNameFailureDialog;
+export default ProjectNameFailureDialog;

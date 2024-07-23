@@ -74,6 +74,7 @@ class PublicGallery extends Component {
             color={buttonColors.gray}
             text={i18n.reportAbuse()}
             type="secondary"
+            size="s"
           />
         </div>
       </div>

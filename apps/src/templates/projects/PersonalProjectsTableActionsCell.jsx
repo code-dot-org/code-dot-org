@@ -11,7 +11,7 @@ import FontAwesome from '../FontAwesome';
 import QuickActionsCell from '../tables/QuickActionsCell';
 
 import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
-import PersonalProjectsNameFailureDialog from './PersonalProjectsNameFailureDialog';
+import ProjectNameFailureDialog from './ProjectNameFailureDialog';
 import {
   startRenamingProject,
   cancelRenamingProject,
@@ -109,7 +109,7 @@ export class PersonalProjectsTableActionsCell extends Component {
             />
           </div>
         )}
-        <PersonalProjectsNameFailureDialog
+        <ProjectNameFailureDialog
           flaggedText={this.props.projectNameFailure}
           isOpen={!!this.props.projectNameFailure}
           handleClose={this.handleNameFailureDialogClose}
