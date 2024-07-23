@@ -143,7 +143,6 @@ const SummaryResponses = ({
           {showAnswerToggle && (
             <div className={styles.toggleContainer}>
               <Toggle
-                id={'ui-test-correct-answer-toggle'}
                 onChange={() => {
                   setShowCorrectAnswer(!showCorrectAnswer);
                 }}
