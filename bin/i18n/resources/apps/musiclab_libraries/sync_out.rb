@@ -13,7 +13,6 @@ module I18n
             crowdin_file_path = I18nScriptUtils.crowdin_locale_dir(language[:locale_s], 'musiclab_libraries', 'music-library-intro2024.json')
             return unless File.exist?(crowdin_file_path)
 
-            # deal with empty translation files?
             js_locale = I18nScriptUtils.to_js_locale(language[:locale_s])
             i18n_data = I18nScriptUtils.parse_file(crowdin_file_path)
             upload_localized_strings(js_locale, i18n_data) unless options[:testing]
@@ -26,7 +25,7 @@ module I18n
           private def upload_localized_strings(js_locale, i18n_data)
             AWS::S3.upload_to_bucket(
               'cdo-curriculum',
-              "media/musiclab-test/loc-intro2024/#{js_locale}.json",
+              "media/musiclab/music-library-intro2024-loc/#{js_locale}.json",
               JSON.pretty_generate(i18n_data),
               acl: 'public-read',
               no_random: true,

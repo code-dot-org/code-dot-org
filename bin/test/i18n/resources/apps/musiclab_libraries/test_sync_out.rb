@@ -40,8 +40,6 @@ describe I18n::Resources::Apps::MusiclabLibraries::SyncOut do
     end
 
     before do
-      # spritelab_manifest_builder.stubs(:upload_localized_manifest)
-
       described_instance.stubs(:options).returns(options)
 
       FileUtils.mkdir_p File.dirname(crowdin_file_path)
@@ -76,12 +74,14 @@ describe I18n::Resources::Apps::MusiclabLibraries::SyncOut do
 
       it 'does not upload localized manifest' do
         expect_translation_upload.never
+
         process_language
       end
 
       it 'does not move the Crowdin file to the i18n locale dir' do
         expect_crowdin_file_to_i18n_locale_dir_moving.never
         expect_crowdin_resource_dir_removing.never
+
         process_language
       end
     end

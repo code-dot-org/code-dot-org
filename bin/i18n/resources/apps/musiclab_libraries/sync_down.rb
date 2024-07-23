@@ -2,7 +2,6 @@
 
 require_relative '../../../i18n_script_utils'
 require_relative '../../../utils/sync_down_base'
-# require_relative '../animations'
 
 module I18n
   module Resources
