@@ -18,9 +18,10 @@
     "skip_dialog": true,
     "skip_sound": true,
     "display_name": "Event Space Popularity",
-    "bubble_choice_description": "This data was gathered from a sensor that averaged the amount of people that were within each square meter of space in various locations."
+    "bubble_choice_description": "This data was gathered from a sensor that averaged the amount of people that were within each square meter of space in various locations.",
+    "thumbnail_url": "https://images.code.org/a80e7ceb40072ca7185fb4333f94817b-people.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-07-18 16:16:21 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-18 16:22:10 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-07-18 16:16:21 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-18 16:22:10 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-22 15:26:22 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
