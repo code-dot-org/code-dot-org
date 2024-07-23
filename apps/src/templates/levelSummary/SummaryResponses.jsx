@@ -3,7 +3,6 @@ import React, {useCallback, useEffect, useState} from 'react';
 import {connect} from 'react-redux';
 
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
-import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Toggle from '@cdo/apps/componentLibrary/toggle';
 import DCDO from '@cdo/apps/dcdo';
@@ -143,13 +142,15 @@ const SummaryResponses = ({
           {/* Correct answer toggle */}
           {showAnswerToggle && (
             <div className={styles.toggleContainer}>
-              <ToggleSwitch
-                isToggledOn={showCorrectAnswer}
-                onToggle={() => {
+              <Toggle
+                onChange={() => {
                   setShowCorrectAnswer(!showCorrectAnswer);
                 }}
+                checked={showCorrectAnswer}
                 label={i18n.showAnswer()}
-                expands="summary-correct-answer"
+                position={'right'}
+                size={'s'}
+                name={'summary-correct-answer'}
               />
             </div>
           )}

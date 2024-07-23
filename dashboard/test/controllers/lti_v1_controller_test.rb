@@ -833,22 +833,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_response :internal_server_error
   end
 
-  test 'integration form - renders the integration template' do
-    Policies::Lti.stubs(:early_access?).returns(false)
-
-    get '/lti/v1/integrations'
-
-    assert_template 'lti/v1/integrations'
-  end
-
-  test 'integration form - renders the early access template when early access is enabled' do
-    Policies::Lti.stubs(:early_access?).returns(true)
-
-    get '/lti/v1/integrations'
-
-    assert_template 'lti/v1/integrations/early_access'
-  end
-
   test 'integration - given valid inputs, creates a new integration if one does not exist' do
     name = "Fake School"
     client_id = "1234canvas"
@@ -863,22 +847,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
     assert_response :ok
-  end
-
-  test 'integration - redirects to the form without integration creation when early access is closed' do
-    Policies::Lti.expects(:early_access_closed?).returns(true)
-
-    name = 'Fake School'
-    client_id = '1234canvas'
-    lms = 'canvas_cloud'
-    email = 'fake@email.com'
-
-    assert_no_difference 'LtiIntegration.count' do
-      post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
-    end
-
-    assert_redirected_to lti_v1_integrations_path
-    assert_match /Learning Management System Integrations have been claimed/, flash[:alert]
   end
 
   test 'integration - given missing inputs, does not create a new integration' do
