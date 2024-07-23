@@ -31,17 +31,3 @@ copytruncate
 # Set user/group permissions for archived log files.
 su <%= node[:current_user] %> <%= node[:current_user] %>
 }
-
-# Even though this only applies in staging, the `missingok` directive above will prevent errors in production.
-/home/ubuntu/unison.log {
-    daily
-    rotate 15
-    compress
-    missingok
-    notifempty
-    copytruncate
-    postrotate
-        INSTANCE_ID="`wget -q -O - http://instance-data/latest/meta-data/instance-id`"
-        /usr/local/bin/aws s3 cp $1 "s3://cdo-logs/<%= @env %>-misc-logs/${INSTANCE_ID}-$1"
-    endscript
-}
