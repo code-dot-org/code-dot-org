@@ -44,15 +44,14 @@ export function parseErrorMessage(errorMessage: string) {
     errorLines[mainErrorLine].match(mainErrorLineRegex)![1]
   );
   const correctedMainErrorLine = getMainErrorLine(mainLineNumber);
-  let parsedError = `main.py, line ${correctedMainErrorLine}`;
+  let parsedError = `File "/Files/main.py", line ${correctedMainErrorLine}`;
   let currentLine = mainErrorLine + 1;
-  const lineRegex = /File "\/home\/pyodide\/([^"]+)", line (\d+).*/;
+  const lineRegex = /File "\/Files\/([^"]+)", line (\d+).*/;
   let hasMultiFileStackTrace = false;
   while (currentLine < errorLines.length) {
     if (lineRegex.test(errorLines[currentLine])) {
-      // If the error message refers to another file, remove the reference to the pyodide folder.
-      const [, file, line] = errorLines[currentLine].match(lineRegex)!;
-      parsedError += `\n${file}, line ${line}`;
+      // If the error message refers to another file, we know this is a multi-file stack trace.
+      parsedError += `\n${errorLines[currentLine]}`;
       hasMultiFileStackTrace = true;
     } else {
       if (
