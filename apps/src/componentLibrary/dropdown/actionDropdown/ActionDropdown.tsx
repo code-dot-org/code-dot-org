@@ -1,19 +1,13 @@
 import classNames from 'classnames';
 import React, {useCallback, memo, AriaAttributes} from 'react';
 
-import {Button, ButtonProps} from '@cdo/apps/componentLibrary/button';
-import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
+import {ButtonProps} from '@cdo/apps/componentLibrary/button';
 import {
   DropdownProviderWrapper,
   useDropdownContext,
 } from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
-import {
-  ComponentSizeXSToL,
-  DropdownColor,
-} from '@cdo/apps/componentLibrary/common/types';
-import CustomDropdown, {
-  TriggerComponentProps,
-} from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
+import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
+import CustomDropdown from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
@@ -23,6 +17,7 @@ import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.mod
 export interface ActionDropdownOption {
   value: string;
   label: string;
+  onClick: () => void;
   isOptionDisabled?: boolean;
   icon: FontAwesomeV6IconProps;
 }
@@ -33,8 +28,6 @@ export interface ActionDropdownProps extends AriaAttributes {
   name: string;
   /** ActionDropdown custom class name */
   className?: string;
-  /** ActionDropdown color */
-  color?: DropdownColor;
   /** ActionDropdown size */
   size: ComponentSizeXSToL;
   /** ActionDropdown disabled state */
@@ -44,10 +37,7 @@ export interface ActionDropdownProps extends AriaAttributes {
   labelText: string;
   /** ActionDropdown options */
   options: ActionDropdownOption[];
-  /** ActionDropdown checked options */
-  selectedOption: ActionDropdownOption;
-  /** ActionDropdown onChange handler */
-  onChange: (option: ActionDropdownOption) => void;
+  /** ActionDropdown trigger button props */
   triggerButtonProps?: ButtonProps;
 }
 
@@ -56,49 +46,40 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
   className,
   labelText,
   options,
-  selectedOption = {},
-  onChange,
   disabled = false,
-  color = dropdownColors.black,
   size = 'm',
   triggerButtonProps,
   ...rest
 }) => {
   const {setActiveDropdownName} = useDropdownContext();
   const onOptionClick = useCallback(
-    (option: ActionDropdownOption) => {
-      if (!disabled && !option.isOptionDisabled) {
-        onChange(option);
+    (optionOnClick: () => void) => {
+      if (!disabled) {
+        optionOnClick();
         setActiveDropdownName('');
       }
     },
-    [disabled, onChange, setActiveDropdownName]
+    [disabled, setActiveDropdownName]
   );
 
   /* TODO:
-    - onOptionClick
-    - list items
-    - trigger component
-    - props
-    */
+      - onOptionClick +
+      - list items +
+      - trigger component +
+      - props +
+      - cleanup
+      - placement
+                      */
   return (
     <CustomDropdown
       name={name}
       className={className}
       labelText={labelText}
       disabled={disabled}
-      color={color}
       size={size}
       {...rest}
-      TriggerComponent={(props: TriggerComponentProps) => (
-        <Button
-          {...props}
-          {...triggerButtonProps}
-          text={triggerButtonProps?.isIconOnly ? undefined : labelText}
-          aria-label={triggerButtonProps?.isIconOnly ? labelText : undefined}
-          size={size}
-        />
-      )}
+      useDSCOButtonAsTrigger
+      triggerButtonProps={triggerButtonProps}
     >
       <div className={moduleStyles.dropdownMenuContainer}>
         <ul>
@@ -106,6 +87,7 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
             const {
               value,
               label,
+              onClick,
               isOptionDisabled,
               icon: {
                 iconName,
@@ -119,13 +101,11 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
                 <button
                   className={classNames(
                     moduleStyles.dropdownMenuItem,
-                    isOptionDisabled && moduleStyles.disabledDropdownMenuItem,
-                    selectedOption.value === value &&
-                      moduleStyles.selectedDropdownMenuItem
+                    isOptionDisabled && moduleStyles.disabledDropdownMenuItem
                   )}
                   disabled={isOptionDisabled || disabled}
                   type="button"
-                  onClick={() => onOptionClick(option)}
+                  onClick={() => onOptionClick(onClick)}
                 >
                   <FontAwesomeV6Icon
                     iconName={iconName}
