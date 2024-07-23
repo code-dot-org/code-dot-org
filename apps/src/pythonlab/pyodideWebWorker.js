@@ -50,7 +50,9 @@ self.onmessage = async event => {
   try {
     writeSource(source, DEFAULT_FOLDER_ID, '', self.pyodide);
     await importPackagesFromFiles(source, self.pyodide);
-    results = await self.pyodide.runPythonAsync(python);
+    results = await self.pyodide.runPythonAsync(python, {
+      filename: '/Files/main.py',
+    });
   } catch (error) {
     self.postMessage({type: 'error', message: error.message, id});
   }
