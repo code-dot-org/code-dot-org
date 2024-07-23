@@ -6,9 +6,13 @@
 // Try to avoid use of inline styles if you're creating new component).
 // Keeping that in mind -
 
-$metropolis-font: 'Metropolis', sans-serif;
+$metropolis-font: 'Metropolis';
+$noto-sans-fonts: 'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Armenian', 'Noto Sans Bengali', 'Noto Sans SC',
+                  'Noto Sans TC', 'Noto Sans Devanagari', 'Noto Sans Georgian', 'Noto Sans Hebrew', 'Noto Sans JP',
+                  'Noto Sans Kannada', 'Noto Sans Khmer', 'Noto Sans KR', 'Noto Sans Myanmar', 'Noto Sans Sinhala',
+                  'Noto Sans Tamil', 'Noto Sans Telugu', 'Noto Sans Thai', 'Noto Sans Thaana';
 
-$main-font: $metropolis-font;
+$main-font: $metropolis-font, $noto-sans-fonts, sans-serif;
 
 $thin-font-weight: 100;
 $extra-light-font-weight: 200;

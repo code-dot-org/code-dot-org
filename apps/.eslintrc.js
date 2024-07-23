@@ -148,6 +148,27 @@ module.exports = {
         pathGroupsExcludedImportTypes: ['builtin', 'object'],
       },
     ],
+    'no-restricted-imports': [
+      'error',
+      {
+        paths: [
+          {
+            name: 'chai',
+            message: 'Use jest matchers instead of chai',
+          },
+          {
+            name: 'sinon',
+            message: 'Use jest spys and stubs instead of sinon',
+          },
+        ],
+        patterns: [
+          {
+            group: ['*deprecatedChai', '*reconfiguredChai'],
+            message: 'Use jest matchers instead of chai',
+          },
+        ],
+      },
+    ],
   },
   settings: {
     react: {

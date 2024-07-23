@@ -1,12 +1,9 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import HintDisplayLightbulb from '@cdo/apps/templates/HintDisplayLightbulb';
 import {UnconnectedInstructionsCsfLeftCol as InstructionsCsfLeftCol} from '@cdo/apps/templates/instructions/InstructionsCsfLeftCol';
 import PromptIcon from '@cdo/apps/templates/instructions/PromptIcon';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   requestHint: () => {},
@@ -26,35 +23,35 @@ const setUp = (overrideProps = {}) => {
 
 describe('InstructionsCsfLeftCol', () => {
   it('sets col width and height on mount', () => {
-    const setColWidthSpy = sinon.spy();
-    const setColHeightSpy = sinon.spy();
+    const setColWidthSpy = jest.fn();
+    const setColHeightSpy = jest.fn();
     setUp({setColHeight: setColHeightSpy, setColWidth: setColWidthSpy});
 
     // should be called after mount:
-    expect(setColWidthSpy.calledOnce).to.be.true;
-    expect(setColHeightSpy.calledOnce).to.be.true;
+    expect(setColWidthSpy).toHaveBeenCalledTimes(1);
+    expect(setColHeightSpy).toHaveBeenCalledTimes(1);
   });
 
   it('calls requestHint on clicking .prompt-icon-cell when hasAuthoredHints and hasUnseenHint', () => {
-    const requestHintSpy = sinon.spy();
+    const requestHintSpy = jest.fn();
     const wrapper = setUp({
       hasAuthoredHints: true,
       hasUnseenHint: true,
       requestHint: requestHintSpy,
     });
     wrapper.find('.prompt-icon-cell').simulate('click');
-    expect(requestHintSpy.calledOnce).to.be.true;
+    expect(requestHintSpy).toHaveBeenCalledTimes(1);
   });
 
   it('does not call requestHint on clicking .prompt-icon-cell when not hasAuthoredHints', () => {
-    const requestHintSpy = sinon.spy();
+    const requestHintSpy = jest.fn();
     const wrapper = setUp({
       hasAuthoredHints: false,
       hasUnseenHint: true,
       requestHint: requestHintSpy,
     });
     wrapper.find('.prompt-icon-cell').simulate('click');
-    expect(requestHintSpy.calledOnce).to.be.false;
+    expect(requestHintSpy).not.toHaveBeenCalledTimes(1);
   });
 
   it('displays failureAvatar when there is failure feedback', () => {
@@ -63,7 +60,7 @@ describe('InstructionsCsfLeftCol', () => {
       failureAvatar: failureAvatarSrc,
       feedback: {message: 'failure', isFailure: true},
     });
-    expect(wrapper.find(PromptIcon).props().src).to.equal(failureAvatarSrc);
+    expect(wrapper.find(PromptIcon).props().src).toBe(failureAvatarSrc);
   });
 
   it('displays smallStaticAvatar when feedback is not failure', () => {
@@ -72,13 +69,13 @@ describe('InstructionsCsfLeftCol', () => {
       smallStaticAvatar: smallAvatarSrc,
       feedback: {message: 'feedback', isFailure: false},
     });
-    expect(wrapper.find(PromptIcon).props().src).to.equal(smallAvatarSrc);
+    expect(wrapper.find(PromptIcon).props().src).toBe(smallAvatarSrc);
   });
 
   it('displays hint lightbulb when hasAuthoredHints', () => {
     const wrapper = setUp({
       hasAuthoredHints: true,
     });
-    expect(wrapper.find(HintDisplayLightbulb)).to.have.length(1);
+    expect(wrapper.find(HintDisplayLightbulb)).toHaveLength(1);
   });
 });

@@ -10,6 +10,7 @@ const DEFAULT_PROPS = {
     text: 'response text',
   },
   hideResponse: () => {},
+  pinResponse: () => {},
 };
 
 describe('ResponseMenuDropdown', () => {
@@ -39,16 +40,18 @@ describe('ResponseMenuDropdown', () => {
     expect(screen.getAllByTestId('font-awesome-v6-icon')).toHaveLength(3);
     screen.getByText('Pin response');
     screen.getByText('Hide response');
+    expect(screen.queryByText('Unpin response')).toBeNull();
 
     button.click();
     expect(screen.queryByText('Pin response')).toBeNull();
   });
 
-  it('Closes the dropdown when an option is clicked', () => {
+  it('Hide and pin work', () => {
     DCDO.set('cfu-pin-hide-enabled', true);
 
+    const pinResponse = jest.fn();
     const hideResponse = jest.fn();
-    renderDefault({hideResponse: hideResponse});
+    renderDefault({hideResponse: hideResponse, pinResponse: pinResponse});
 
     const button = screen.getByRole('button');
     button.click();
@@ -57,6 +60,7 @@ describe('ResponseMenuDropdown', () => {
     pinResponseButton.click();
 
     expect(screen.queryByText('Pin response')).toBeNull();
+    expect(pinResponse).toHaveBeenCalled();
 
     button.click();
 
@@ -65,5 +69,23 @@ describe('ResponseMenuDropdown', () => {
 
     expect(hideResponse).toHaveBeenCalled();
     expect(screen.queryByText('Pin response')).toBeNull();
+  });
+
+  it('Show and click unpin', () => {
+    DCDO.set('cfu-pin-hide-enabled', true);
+
+    const unpinResponse = jest.fn();
+    renderDefault({pinResponse: null, unpinResponse: unpinResponse});
+
+    const button = screen.getByRole('button');
+    button.click();
+
+    expect(screen.queryByText('Pin response')).toBeNull();
+    screen.getByText('Hide response');
+
+    const unpinResponseButton = screen.getByText('Unpin response');
+    unpinResponseButton.click();
+
+    expect(screen.queryByText('Unpin response')).toBeNull();
   });
 });

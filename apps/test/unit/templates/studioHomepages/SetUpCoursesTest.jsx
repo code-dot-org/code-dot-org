@@ -4,12 +4,10 @@ import React from 'react';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
 
-import {assert} from '../../../util/reconfiguredChai';
-
 describe('SetUpCourses', () => {
   it('renders as expected for a teacher', () => {
     const wrapper = shallow(<SetUpCourses isTeacher={true} />);
-    assert(
+    expect(
       wrapper.containsMatchingElement(
         <BorderedCallToAction
           type="courses"
@@ -19,12 +17,12 @@ describe('SetUpCourses', () => {
           buttonUrl="/catalog"
         />
       )
-    );
+    ).toBeTruthy();
   });
 
   it('renders as expected for a student', () => {
     const wrapper = shallow(<SetUpCourses isTeacher={false} />);
-    assert(
+    expect(
       wrapper.containsMatchingElement(
         <BorderedCallToAction
           type="courses"
@@ -34,6 +32,6 @@ describe('SetUpCourses', () => {
           buttonUrl="/courses"
         />
       )
-    );
+    ).toBeTruthy();
   });
 });

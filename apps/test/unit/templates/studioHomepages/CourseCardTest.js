@@ -7,10 +7,11 @@ import isRtl, {setRtl} from '@cdo/apps/code-studio/isRtlRedux';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
 
+// eslint-disable-next-line no-restricted-imports
 import {
   expect,
   // assert
-} from '../../../util/reconfiguredChai';
+} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 import {courses} from './homepagesTestData';
 
