@@ -38,7 +38,7 @@ const INITIAL_STATE = {
   },
 };
 
-const renderWithProviders = (state = {}, jsData = {}) => {
+const renderDefault = (state = {}, jsData = {}) => {
   const store = createStore(
     combineReducers({
       isRtl,
@@ -58,7 +58,7 @@ const renderWithProviders = (state = {}, jsData = {}) => {
 
 describe('SummaryResponses', () => {
   it('renders elements', () => {
-    renderWithProviders();
+    renderDefault();
 
     // Student responses
     screen.getByText('1/1 students answered');
@@ -69,7 +69,7 @@ describe('SummaryResponses', () => {
   });
 
   it('does not render response counter/text if no section selected', () => {
-    renderWithProviders({
+    renderDefault({
       teacherSections: {
         selectedStudents: [{id: 0}],
         selectedSectionId: null,
@@ -82,7 +82,7 @@ describe('SummaryResponses', () => {
   });
 
   it('renders toggle when appropriate', () => {
-    renderWithProviders(
+    renderDefault(
       {},
       {
         level: {
@@ -100,7 +100,7 @@ describe('SummaryResponses', () => {
   });
 
   it('does not render toggle for Free Response', () => {
-    renderWithProviders(
+    renderDefault(
       {},
       {
         level: {
@@ -118,7 +118,7 @@ describe('SummaryResponses', () => {
   });
 
   it('does not render toggle without policy permission', () => {
-    renderWithProviders(
+    renderDefault(
       {},
       {
         level: {
