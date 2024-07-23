@@ -234,6 +234,6 @@ class UserLevelsControllerTest < ActionController::TestCase
     get :get_level_source, params: {script_id: script.id, level_id: level.id}
     assert_response :success
     body = JSON.parse(response.body)
-    assert_equal nil, body['data']
+    assert_nil body['data']
   end
 end

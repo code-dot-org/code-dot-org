@@ -56,7 +56,7 @@ export interface ProgressState {
   lessons: Lesson[] | null;
   lessonGroups: LessonGroup[] | null;
   scriptId: number | null;
-  viewAsUserId: string | null;
+  viewAsUserId: number | null;
   scriptName: string | null;
   scriptDisplayName: string | undefined;
   unitTitle: string | null;
@@ -281,7 +281,7 @@ const progressSlice = createSlice({
     setLessonExtrasEnabled(state, action: PayloadAction<boolean>) {
       state.lessonExtrasEnabled = action.payload;
     },
-    setViewAsUserId(state, action: PayloadAction<string>) {
+    setViewAsUserId(state, action: PayloadAction<number>) {
       state.viewAsUserId = action.payload;
     },
   },
