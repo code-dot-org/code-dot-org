@@ -42,7 +42,7 @@
       "allowMultipleAttempts": false,
       "placeholderText": "put your answer here!",
       "freeResponseHeight": 100,
-      "editableAfterSubmit": true
+      "codeEditableAfterSubmit": true
     },
     "ai_tutor_available": "false",
     "submittable": "false"

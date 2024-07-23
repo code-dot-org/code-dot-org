@@ -27,7 +27,7 @@ const EditPredictSettings: React.FunctionComponent<
     placeholderText: '',
     multipleChoiceOptions: [''],
     freeResponseHeight: 20,
-    editableAfterSubmit: false,
+    codeEditableAfterSubmit: false,
   };
 
   const [predictSettings, setPredictSettings] = useState<LevelPredictSettings>(
@@ -122,14 +122,14 @@ const EditPredictSettings: React.FunctionComponent<
           />
           <Checkbox
             label="Allow user to edit code after submitting a response"
-            checked={predictSettings.editableAfterSubmit || false}
+            checked={predictSettings.codeEditableAfterSubmit || false}
             onChange={e =>
               setPredictSettings({
                 ...predictSettings,
-                editableAfterSubmit: e.target.checked,
+                codeEditableAfterSubmit: e.target.checked,
               })
             }
-            name="editable_after_submit"
+            name="code_editable_after_submit"
           />
         </div>
       )}

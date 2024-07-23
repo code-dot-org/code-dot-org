@@ -56,8 +56,11 @@ const ControlButtons: React.FunctionComponent = () => {
     state => getCurrentLevel(state)?.status === LevelStatus.submitted
   );
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-  const disableRunAndTest =
-    loading || (!isStartMode && isPredictLevel && !hasPredictResponse);
+  // We disable the run button in predict levels if we are not in start mode
+  // and the user has not yet written a prediction.
+  const awaitingPredictSubmit =
+    !isStartMode && isPredictLevel && !hasPredictResponse;
+  const disableRunAndTest = loading || awaitingPredictSubmit;
 
   const onContinue = () => dispatch(navigateToNextLevel());
   // No-op for now. TODO: figure out what the finish button should do.

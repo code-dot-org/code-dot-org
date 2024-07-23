@@ -291,9 +291,10 @@ export const isReadOnlyWorkspace = (state: RootState) => {
   let isReadonlyPredictLevel = isPredictLevel;
   if (isPredictLevel) {
     const isEditableAfterSubmit =
-      state.lab.levelProperties?.predictSettings?.editableAfterSubmit || false;
+      state.lab.levelProperties?.predictSettings?.codeEditableAfterSubmit ||
+      false;
     const hasSubmittedPredictResponse = state.predictLevel.hasSubmittedResponse;
-    // If the predict level is not editable after submit or the user has not submitted a response,
+    // If the predict level code is not editable after submit or the user has not submitted a response,
     // the predict level is read only.
     isReadonlyPredictLevel =
       !isEditableAfterSubmit || !hasSubmittedPredictResponse;
