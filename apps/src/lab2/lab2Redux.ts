@@ -102,7 +102,7 @@ export const setUpWithLevel = createAsyncThunk(
       scriptId?: number;
       levelPropertiesPath: string;
       channelId?: string;
-      userId?: string;
+      userId?: number;
       scriptLevelId?: string;
     },
     thunkAPI
