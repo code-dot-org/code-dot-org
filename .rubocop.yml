@@ -94,6 +94,9 @@ Style/EmptyMethod:
 Style/FormatStringToken:
   EnforcedStyle: template
 
+Style/Lambda:
+  EnforcedStyle: literal
+
 Style/NumericLiterals:
   MinDigits: 7
 

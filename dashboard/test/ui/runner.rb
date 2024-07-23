@@ -529,7 +529,7 @@ def browser_feature_generator
     estimate_a <=> estimate_b
   end
 
-  $browser_feature_generator = lambda do
+  $browser_feature_generator = -> do
     if $failed_features > $options.abort_when_failures_exceed
       message = "Abandoning test run; passed limit of #{$options.abort_when_failures_exceed} failed features."
       ChatClient.log message, color: 'red'
@@ -548,7 +548,7 @@ def parallel_config(parallel_limit)
 
     # This 'finish' lambda runs on the main thread after each Parallel.map work
     # item is completed.
-    finish: lambda do |_, _, result|
+    finish: ->(_, _, result) do
       feature_succeeded, _, _ = result
       # Count failures so we can abort the whole test run if we exceed the limit
       $failed_features += 1 unless feature_succeeded

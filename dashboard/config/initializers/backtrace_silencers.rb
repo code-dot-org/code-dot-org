@@ -13,7 +13,7 @@ silenced = [
 
 silenced_expr = Regexp.new(silenced.join('|'))
 
-ActiveSupport::Deprecation.behavior = lambda do |message, callstack, deprecation_horizon, gem_name|
+ActiveSupport::Deprecation.behavior = ->(message, callstack, deprecation_horizon, gem_name) do
   unless message&.match?(silenced_expr)
     ActiveSupport::Deprecation::DEFAULT_BEHAVIORS[:stderr].call(message, callstack, deprecation_horizon, gem_name)
   end

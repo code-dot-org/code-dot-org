@@ -223,13 +223,6 @@ Style/InverseMethods:
 Style/KeywordParametersOrder:
   Enabled: false
 
-# Offense count: 31
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: line_count_dependent, lambda, literal
-Style/Lambda:
-  Enabled: false
-
 # Offense count: 57
 # This cop supports unsafe autocorrection (--autocorrect-all).
 Style/MapToHash:

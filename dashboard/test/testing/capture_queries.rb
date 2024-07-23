@@ -47,7 +47,7 @@ module CaptureQueries
 
   def capture_queries(ignore_filters: IGNORE_FILTERS, capture_filters: [], &block)
     queries = []
-    query = lambda do |_name, start, finish, _id, payload|
+    query = ->(_name, start, finish, _id, payload) do
       duration = finish - start
 
       next if payload.fetch(:cached, false)

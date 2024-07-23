@@ -97,7 +97,7 @@ module Pd::SurveyPipeline::Helper
     # Summarize results for all workshops
     group_config_all_ws = [:name, :type, :answer_type]
 
-    is_selected_question_all_ws = lambda do |hash|
+    is_selected_question_all_ws = ->(hash) do
       context[:question_categories].any? {|category| hash[:name]&.start_with? category}
     end
 
@@ -116,7 +116,7 @@ module Pd::SurveyPipeline::Helper
     # Summarize results for the current workshop
     group_config_this_ws = [:workshop_id, :name, :type, :answer_type]
 
-    is_selected_question_this_ws = lambda do |hash|
+    is_selected_question_this_ws = ->(hash) do
       (hash[:workshop_id] == context[:current_workshop_id]) &&
         context[:question_categories].any? {|category| hash[:name]&.start_with? category}
     end
@@ -156,9 +156,9 @@ module Pd::SurveyPipeline::Helper
 
     # Rules to map groups of survey answers to reducers
     is_single_select_answer =
-      lambda {|hash| [ANSWER_SINGLE_SELECT, ANSWER_SCALE].include? hash[:answer_type]}
+      ->(hash) {[ANSWER_SINGLE_SELECT, ANSWER_SCALE].include? hash[:answer_type]}
     not_single_select_answer =
-      lambda {|hash| [ANSWER_SINGLE_SELECT, ANSWER_SCALE].exclude?(hash[:answer_type])}
+      ->(hash) {[ANSWER_SINGLE_SELECT, ANSWER_SCALE].exclude?(hash[:answer_type])}
 
     map_config = [
       {condition: is_single_select_answer, field: :answer, reducers: [Pd::SurveyPipeline::Reducer::Histogram]},

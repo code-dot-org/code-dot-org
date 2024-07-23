@@ -132,7 +132,7 @@ class ManifestBuilder
     download_progress_bar = ProgressBar.create(total: sound_objects.size) unless @options[:verbose] || @options[:quiet]
 
     # Parallelize downloads
-    Parallel.map(sound_objects.keys, finish: lambda do |_, _, result|
+    Parallel.map(sound_objects.keys, finish: ->(_, _, result) do
       # This lambda runs synchronously after each entry is done
       if result.is_a? String
         @warnings.push result
@@ -247,7 +247,7 @@ class ManifestBuilder
 
     # Parallelize metadata construction because some objects will require an
     # extra S3 request to get version IDs or image dimensions.
-    Parallel.map(sound_objects.keys, finish: lambda do |name, _, result|
+    Parallel.map(sound_objects.keys, finish: ->(name, _, result) do
       # This lambda runs synchronously after each entry is done processing - it's
       # used to collect up results and warnings to the original process/thread.
       if result.is_a? Hash

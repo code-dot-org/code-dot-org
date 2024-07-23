@@ -27,7 +27,7 @@ class CookieAllowlistTest < Minitest::Test
   end
 
   def app
-    cookie_grabber = lambda do |env|
+    cookie_grabber = ->(env) do
       @request_cookies = Rack::Request.new(env).cookies
       @request_env = env
       [200, {'Content-Type' => 'text/plain'}, ['OK']]

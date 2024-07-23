@@ -11,7 +11,7 @@ class HtmlParsingTest < Minitest::Test
   # LibXML bug (?): <span> in head gets (correctly) moved to body element,
   # (incorrectly) removing the body class attribute in the process.
   def app
-    html_parsing_app = lambda do |env|
+    html_parsing_app = ->(env) do
       @request_env = env
       head_span_html = <<~HTML
         <!DOCTYPE html>

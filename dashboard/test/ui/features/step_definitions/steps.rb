@@ -1358,7 +1358,7 @@ end
 Then /^I upload the file named "(.*?)"$/ do |filename|
   unless ENV['TEST_LOCAL'] == 'true'
     # Needed for remote (Sauce Labs) uploads
-    @browser.file_detector = lambda do |args|
+    @browser.file_detector = ->(args) do
       str = args.first.to_s
       str if File.exist? str
     end
