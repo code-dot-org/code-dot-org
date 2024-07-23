@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/templates/Button';
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import i18n from '@cdo/locale';
 
 import color from '../../util/color';
@@ -30,10 +30,13 @@ class CourseCard extends Component {
         <div style={styles.description}>
           <p>{description}</p>
           <Button
-            style={styles.linkBox}
-            color={Button.ButtonColor.neutralDark}
-            text={i18n.viewCourse()}
+            useAsLink={true}
             href={link}
+            ariaLabel={i18n.viewCourse()}
+            color={buttonColors.gray}
+            text={i18n.viewCourse()}
+            type="secondary"
+            size="s"
           />
         </div>
       </a>

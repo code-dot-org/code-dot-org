@@ -6,7 +6,7 @@ import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
-import ResourceCardResponsiveContainer from '../studioHomepages/ResourceCardResponsiveContainer';
+import ResourceCardResponsiveContainer from '../studioHomepages/resourceCards/ResourceCardResponsiveContainer';
 import VerticalImageResourceCard from '../VerticalImageResourceCard';
 
 class TeachersBeyondHoc extends Component {

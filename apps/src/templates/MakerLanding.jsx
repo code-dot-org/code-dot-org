@@ -5,7 +5,7 @@ import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import i18n from '@cdo/locale';
 
 import shapes from './studioHomepages/shapes';
-import TopCourse from './studioHomepages/TopCourse';
+import TopCourse from './studioHomepages/topCourse/TopCourse';
 import VerticalImageResourceCardRow from './VerticalImageResourceCardRow';
 
 export default class MakerLanding extends Component {

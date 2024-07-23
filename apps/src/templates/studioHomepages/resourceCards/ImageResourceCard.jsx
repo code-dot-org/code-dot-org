@@ -4,8 +4,8 @@ import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
 
-import color from '../../util/color';
-import Button from '../Button';
+import color from '../../../util/color';
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 
 class ImageResourceCard extends Component {
   static propTypes = {
@@ -42,11 +42,13 @@ class ImageResourceCard extends Component {
             <div style={styles.description}>{description}</div>
           </div>
           <Button
-            __useDeprecatedTag
+            useAsLink={true}
             href={link}
-            color={Button.ButtonColor.brandSecondaryDefault}
+            ariaLabel={buttonText}
+            color={buttonColors.gray}
             text={buttonText}
-            style={styles.button}
+            type="secondary"
+            size="s"
           />
         </div>
         <img style={styles.image} src={this.getImage()} alt={altText} />

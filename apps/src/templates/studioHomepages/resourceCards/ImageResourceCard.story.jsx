@@ -3,7 +3,7 @@ import {Provider} from 'react-redux';
 
 import {reduxStore} from '@cdo/storybook/decorators';
 
-import ImageResourceCard from './ImageResourceCard';
+import ImageResourceCard from './resourceCards/ImageResourceCard';
 
 export default {
   component: ImageResourceCard,

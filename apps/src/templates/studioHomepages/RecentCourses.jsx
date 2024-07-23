@@ -10,7 +10,7 @@ import CourseCard from './CourseCard';
 import SeeMoreCourses from './SeeMoreCourses';
 import SetUpCourses from './SetUpCourses';
 import shapes from './shapes';
-import TopCourse from './TopCourse';
+import TopCourse from './topCourse/TopCourse';
 import ViewFeedback from './ViewFeedback';
 
 const contentWidth = styleConstants['content-width'];
