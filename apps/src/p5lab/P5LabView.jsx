@@ -114,10 +114,6 @@ class P5LabView extends React.Component {
       display: interfaceMode !== P5LabInterfaceMode.CODE ? 'none' : undefined,
     };
 
-    const visualizationColumnStyle = {
-      width: APP_WIDTH,
-    };
-
     const visualizationColumnClassNames = classNames({
       responsive: isResponsive,
       pin_bottom: !hideSource && pinWorkspaceToBottom,
@@ -142,9 +138,9 @@ class P5LabView extends React.Component {
           id="visualizationColumn"
           className={visualizationColumnClassNames}
           style={
-            experiments.isEnabled(experiments.BIG_PLAYSPACE)
+            experiments.isEnabledAllowingQueryString(experiments.BIG_PLAYSPACE)
               ? {}
-              : visualizationColumnStyle
+              : {width: APP_WIDTH}
           }
         >
           <P5LabVisualizationHeader labType={this.props.labType} />

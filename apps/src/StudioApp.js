@@ -106,10 +106,9 @@ const isBigPlayspaceExperiment = experiments.isEnabledAllowingQueryString(
 const bigPlaySpacePadding = queryParams('bigPlayspacePadding') || 160;
 
 /**
- * The minimum width of a playable whole blockly game.
+ * Get the maximum resizable width of the playspace.
  */
-
-const getMaxVisualizationWidth = () => {
+const getMaxResizableVisualizationWidth = () => {
   return isBigPlayspaceExperiment
     ? Math.min(window.innerHeight - bigPlaySpacePadding, window.innerWidth / 2)
     : 400;
@@ -117,7 +116,8 @@ const getMaxVisualizationWidth = () => {
 
 const MIN_WIDTH = 1400;
 const DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
-export const MAX_VISUALIZATION_WIDTH = getMaxVisualizationWidth();
+const DEFAULT_VISUALIZATION_WIDTH = 400;
+export const MAX_VISUALIZATION_WIDTH = 400;
 export const MIN_VISUALIZATION_WIDTH = 200;
 
 /**
@@ -293,7 +293,7 @@ StudioApp.prototype.configure = function (options) {
   this.assetUrl = _.bind(this.assetUrl_, this);
 
   this.maxVisualizationWidth =
-    options.maxVisualizationWidth || MAX_VISUALIZATION_WIDTH;
+    options.maxVisualizationWidth || getMaxResizableVisualizationWidth();
   this.minVisualizationWidth =
     options.minVisualizationWidth || MIN_VISUALIZATION_WIDTH;
 
@@ -1421,7 +1421,7 @@ StudioApp.prototype.onResize = function () {
     window.innerWidth !== this.lastWindowInnerWidth ||
     window.innerHeight !== this.lastWindowInnerHeight
   ) {
-    this.maxVisualizationWidth = getMaxVisualizationWidth();
+    this.maxVisualizationWidth = getMaxResizableVisualizationWidth();
 
     const visualizationColumn = document.getElementById('visualizationColumn');
     const visualizationColumnWidth = $(visualizationColumn).width();
@@ -1572,8 +1572,9 @@ StudioApp.prototype.resizeVisualization = function (width, skipFire = false) {
   visualization.style.maxWidth = newVizWidthString;
   visualization.style.maxHeight = newVizHeightString;
   if (isBigPlayspaceExperiment) {
+    // Override the max visualization column width.
     visualizationColumn.style.width = visualizationColumn.style.maxWidth;
-    visualization.style.width = newVizWidthString;
+    // Override the visualization height.
     visualization.style.height = newVizHeightString;
   }
 
@@ -2058,10 +2059,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.startBlocks_ =
     config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
-  this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
-  if (isBigPlayspaceExperiment) {
-    this.nativeVizWidth = 400;
-  }
+  this.nativeVizWidth = config.nativeVizWidth || DEFAULT_VISUALIZATION_WIDTH;
 
   if (config.level.initializationBlocks) {
     var xml = parseXmlElement(config.level.initializationBlocks);

@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import {getFilterStatus} from '@cdo/apps/dance/songs';
 import SongSelector from '@cdo/apps/dance/SongSelector';
 import DCDO from '@cdo/apps/dcdo';
+import experiments from '@cdo/apps/util/experiments';
 
 import AgeDialog from '../templates/AgeDialog';
 import ArrowButtons from '../templates/ArrowButtons';
@@ -85,7 +86,13 @@ class DanceVisualizationColumn extends React.Component {
               unitId={this.props.unitId}
             />
           )}
-        <div style={{maxWidth: MAX_GAME_WIDTH}}>
+        <div
+          style={
+            experiments.isEnabledAllowingQueryString(experiments.BIG_PLAYSPACE)
+              ? {}
+              : {maxWidth: MAX_GAME_WIDTH}
+          }
+        >
           {!this.props.isShareView && (
             <SongSelector
               enableSongSelection={enableSongSelection}
