@@ -54,10 +54,12 @@ module I18n
 
             manifest['packs'].each do |pack|
               pack_id = pack['id']
+              strings[pack_id] = pack['name'] unless pack['skip_localization']
+
               pack['sounds'].each do |sound|
                 sound_name = sound['name']
                 id = "#{pack_id}/#{sound['src']}"
-                strings[id] = sound_name
+                strings[id] = sound_name unless sound['skip_localization']
               end
             end
 
