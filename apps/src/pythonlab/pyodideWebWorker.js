@@ -21,6 +21,9 @@ async function loadPyodideAndPackages() {
       'matplotlib',
       `/blockly/js/pyodide/${version}/pythonlab_setup-0.0.1-py3-none-any.whl`,
     ],
+    env: {
+      HOME: '/',
+    },
   });
   self.pyodide.setStdout(getStreamHandlerOptions('sysout'));
   self.pyodide.setStderr(getStreamHandlerOptions('syserr'));
