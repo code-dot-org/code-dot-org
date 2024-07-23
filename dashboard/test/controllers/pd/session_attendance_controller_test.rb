@@ -12,7 +12,7 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
     @teacher = create :teacher
   end
 
-  test_redirect_to_sign_in_for :attend, params: -> {{session_code: @session.code}}
+  test_redirect_to_sign_in_for :attend, params: lambda {{session_code: @session.code}}
 
   test 'attend workshop I organized redirects with cant join message' do
     sign_in @workshop.organizer
@@ -91,7 +91,7 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
     assert_equal @teacher, enrollment.reload.user
   end
 
-  test_redirect_to_sign_in_for :select_enrollment, method: :post, params: -> {{session_code: @session.code}}
+  test_redirect_to_sign_in_for :select_enrollment, method: :post, params: lambda {{session_code: @session.code}}
 
   test 'select_enrollment updates enrollment and creates attendance for selection' do
     sign_in @teacher
@@ -157,7 +157,7 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
     assert_redirected_to action: :upgrade_account
   end
 
-  test_redirect_to_sign_in_for :upgrade_account, params: -> {{session_code: @session.code}}
+  test_redirect_to_sign_in_for :upgrade_account, params: lambda {{session_code: @session.code}}
 
   test 'upgrade_account succeeds for students' do
     student = create :student
@@ -173,7 +173,7 @@ class Pd::SessionAttendanceControllerTest < ActionController::TestCase
     assert_redirected_to action: :attend
   end
 
-  test_redirect_to_sign_in_for :confirm_upgrade_account, method: :post, params: -> {{session_code: @session.code}}
+  test_redirect_to_sign_in_for :confirm_upgrade_account, method: :post, params: lambda {{session_code: @session.code}}
 
   test 'confirm_upgrade_account upgrades the account if the emails match' do
     email = 'accidental_student@example.net'

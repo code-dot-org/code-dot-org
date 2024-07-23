@@ -14,7 +14,7 @@ class RegionalPartnersControllerTest < ActionController::TestCase
     %i(student teacher facilitator workshop_organizer).each do |user_type|
       test_user_gets_response_for action, user: user_type, method: method, params: params, response: :forbidden
     end
-    test_user_gets_response_for action, user: -> {@workshop_admin}, method: method, params: params, response: :success
+    test_user_gets_response_for action, user: lambda {@workshop_admin}, method: method, params: params, response: :success
   end
 
   test_redirect_to_sign_in_for :index

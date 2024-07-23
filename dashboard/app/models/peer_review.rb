@@ -45,13 +45,13 @@ class PeerReview < ApplicationRecord
   belongs_to :level, optional: true
   belongs_to :level_source, optional: true
 
-  validates :status, inclusion: {in: %w{accepted rejected}}, if: -> {from_instructor}
+  validates :status, inclusion: {in: %w{accepted rejected}}, if: lambda {from_instructor}
 
-  before_save :add_status_to_audit_trail, if: -> {reviewer_id? && (status_changed? || data_changed?)}
+  before_save :add_status_to_audit_trail, if: lambda {reviewer_id? && (status_changed? || data_changed?)}
   before_save :add_assignment_to_audit_trail, if: :reviewer_id_changed?
 
-  after_save :send_review_completed_mail, if: -> {saved_change_to_status? && (accepted? || rejected?)}
-  after_update :mark_user_level, if: -> {saved_change_to_status? || saved_change_to_data?}
+  after_save :send_review_completed_mail, if: lambda {saved_change_to_status? && (accepted? || rejected?)}
+  after_update :mark_user_level, if: lambda {saved_change_to_status? || saved_change_to_data?}
 
   def add_assignment_to_audit_trail
     message = reviewer_id.present? ? "ASSIGNED to user id #{reviewer_id}" : 'UNASSIGNED'

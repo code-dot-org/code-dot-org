@@ -1268,14 +1268,14 @@ class LevelsControllerTest < ActionController::TestCase
     :edit,
     response: :forbidden,
     user: :platformization_partner,
-    params: -> {{id: @level.id}}
+    params: lambda {{id: @level.id}}
   )
 
   test_user_gets_response_for(
     :edit,
     response: :success,
     user: :platformization_partner,
-    params: -> {{id: @partner_level.id}}
+    params: lambda {{id: @partner_level.id}}
   )
 
   test_user_gets_response_for(
@@ -1283,7 +1283,7 @@ class LevelsControllerTest < ActionController::TestCase
     method: :patch,
     response: :forbidden,
     user: :platformization_partner,
-    params: -> {{id: @level.id, level: {name: 'new partner name'}}}
+    params: lambda {{id: @level.id, level: {name: 'new partner name'}}}
   )
 
   test_user_gets_response_for(
@@ -1291,7 +1291,7 @@ class LevelsControllerTest < ActionController::TestCase
     method: :patch,
     response: :success,
     user: :platformization_partner,
-    params: -> {{id: @partner_level.id, level: {name: 'new partner name'}}}
+    params: lambda {{id: @partner_level.id, level: {name: 'new partner name'}}}
   )
 
   # Assert that the url is a real S3 url, and not a placeholder.

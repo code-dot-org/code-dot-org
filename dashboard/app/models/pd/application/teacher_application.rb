@@ -76,15 +76,15 @@ module Pd::Application
 
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
 
-    before_validation :set_course_from_program, if: -> {form_data_changed?}
-    before_validation :set_status_from_admin_approval, if: -> {properties_changed?}
+    before_validation :set_course_from_program, if: lambda {form_data_changed?}
+    before_validation :set_status_from_admin_approval, if: lambda {properties_changed?}
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
-    validates :course, presence: true, inclusion: {in: VALID_COURSES}, unless: -> {status == 'incomplete'}
-    validate :workshop_present_if_required_for_status, if: -> {status_changed?}
+    validates :course, presence: true, inclusion: {in: VALID_COURSES}, unless: lambda {status == 'incomplete'}
+    validate :workshop_present_if_required_for_status, if: lambda {status_changed?}
 
-    before_save :save_partner, if: -> {!deleted? && form_data_changed?}
-    before_save :update_user_school_info!, if: -> {form_data_changed?}
-    before_save :log_status, if: -> {status_changed? || form_data_changed?}
+    before_save :save_partner, if: lambda {!deleted? && form_data_changed?}
+    before_save :update_user_school_info!, if: lambda {form_data_changed?}
+    before_save :log_status, if: lambda {status_changed? || form_data_changed?}
 
     serialized_attrs %w(
       pd_workshop_id

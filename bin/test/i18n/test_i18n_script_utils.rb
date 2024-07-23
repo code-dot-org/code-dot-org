@@ -128,7 +128,7 @@ describe I18nScriptUtils do
     end
 
     it 'yml file should be reformatted correctly' do
-      assert_changes -> {File.read(provided_yaml_file_path)}, from: provided_yaml_file_data, to: expected_yaml_output do
+      assert_changes lambda {File.read(provided_yaml_file_path)}, from: provided_yaml_file_data, to: expected_yaml_output do
         fix_yml_file
       end
     end

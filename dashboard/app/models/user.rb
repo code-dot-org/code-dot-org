@@ -192,7 +192,7 @@ class User < ApplicationRecord
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
-  scope :ignore_deleted_at_index, -> {from 'users IGNORE INDEX(index_users_on_deleted_at)'}
+  scope :ignore_deleted_at_index, lambda {from 'users IGNORE INDEX(index_users_on_deleted_at)'}
 
   PROVIDER_MANUAL = 'manual'.freeze # "old" user created by a teacher -- logs in w/ username + password
   PROVIDER_SPONSORED = 'sponsored'.freeze # "new" user created by a teacher -- logs in w/ name + secret picture/word
@@ -237,7 +237,7 @@ class User < ApplicationRecord
 
   has_many :lti_user_identities, dependent: :destroy
 
-  has_one :latest_parental_permission_request, -> {order(updated_at: :desc)}, class_name: 'ParentalPermissionRequest'
+  has_one :latest_parental_permission_request, lambda {order(updated_at: :desc)}, class_name: 'ParentalPermissionRequest'
 
   # This custom validator makes email collision checks on the AuthenticationOption
   # model also show up as validation errors for the email field on the User
@@ -258,7 +258,7 @@ class User < ApplicationRecord
   end
 
   # Validate that a user with the same authentication credentials does not already exist.
-  validate on: :create, if: -> {uid.present?} do |user|
+  validate on: :create, if: lambda {uid.present?} do |user|
     # If the user has a unique authentication ID, fail if there is an existing User with that ID.
     other = User.find_by_credential(type: user.provider, id: user.uid)
     user.errors.add(:uid, "User already exists with uid: #{user.uid} and provider: #{user.provider}") unless other.nil?
@@ -280,28 +280,28 @@ class User < ApplicationRecord
   has_many :pd_attendances, class_name: 'Pd::Attendance', foreign_key: :teacher_id
 
   has_many :sign_ins
-  has_many :user_geos, -> {order(updated_at: :desc)}
+  has_many :user_geos, lambda {order(updated_at: :desc)}
 
   before_validation :normalize_parent_email
   validate :validate_parent_email
 
   after_create :associate_with_potential_pd_enrollments
 
-  after_save :save_email_preference, if: -> {email_preference_opt_in.present?}
+  after_save :save_email_preference, if: lambda {email_preference_opt_in.present?}
 
   after_save :save_parent_email_preference, if: :parent_email_preference_opt_in_required?
 
-  after_save :save_email_reg_partner_preference, if: -> {share_teacher_email_reg_partner_opt_in_radio_choice.present?}
+  after_save :save_email_reg_partner_preference, if: lambda {share_teacher_email_reg_partner_opt_in_radio_choice.present?}
 
-  after_create if: -> {Policies::Lti.lti? self} do
+  after_create if: lambda {Policies::Lti.lti? self} do
     Services::Lti.create_lti_user_identity(self)
   end
 
-  after_create :verify_teacher!, if: -> {teacher? && Policies::Lti.lti?(self)}
+  after_create :verify_teacher!, if: lambda {teacher? && Policies::Lti.lti?(self)}
 
   before_destroy :soft_delete_channels
 
-  before_validation on: :create, if: -> {gender.present?} do
+  before_validation on: :create, if: lambda {gender.present?} do
     self.gender = Policies::Gender.normalize gender
   end
 
@@ -309,11 +309,11 @@ class User < ApplicationRecord
 
   validate :validate_us_state, if: :should_validate_us_state?
 
-  before_validation on: [:create, :update], if: -> {gender_teacher_input.present? && will_save_change_to_attribute?('properties')} do
+  before_validation on: [:create, :update], if: lambda {gender_teacher_input.present? && will_save_change_to_attribute?('properties')} do
     self.gender = Policies::Gender.normalize gender_teacher_input
   end
 
-  before_validation on: [:create, :update], if: -> {gender_student_input.present? && will_save_change_to_attribute?('properties')} do
+  before_validation on: [:create, :update], if: lambda {gender_student_input.present? && will_save_change_to_attribute?('properties')} do
     gender_student_input.strip!
     self.gender = Policies::Gender.normalize gender_student_input
   end
@@ -321,7 +321,7 @@ class User < ApplicationRecord
   validates :gender_student_input, length: {maximum: 50}, no_utf8mb4: true
   validates :gender_teacher_input, no_utf8mb4: true
 
-  validate :lti_roster_sync_enabled, if: -> {lti_roster_sync_enabled.present?} do
+  validate :lti_roster_sync_enabled, if: lambda {lti_roster_sync_enabled.present?} do
     self.lti_roster_sync_enabled = ActiveRecord::Type::Boolean.new.cast(lti_roster_sync_enabled)
   end
 
@@ -510,11 +510,11 @@ class User < ApplicationRecord
 
   has_many :plc_enrollments, class_name: '::Plc::UserCourseEnrollment', dependent: :destroy
 
-  has_many :user_levels, -> {order(id: :desc)}, inverse_of: :user
+  has_many :user_levels, lambda {order(id: :desc)}, inverse_of: :user
 
   has_many :section_instructors, foreign_key: 'instructor_id', dependent: :destroy
-  has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor', foreign_key: 'instructor_id'
-  has_many :sections_instructed, -> {without_deleted.where(section_instructors: {deleted_at: nil})}, through: :active_section_instructors, source: :section
+  has_many :active_section_instructors, lambda {where(status: :active)}, class_name: 'SectionInstructor', foreign_key: 'instructor_id'
+  has_many :sections_instructed, lambda {without_deleted.where(section_instructors: {deleted_at: nil})}, through: :active_section_instructors, source: :section
 
   # "sections" previously referred to what is now called :sections_owned.
   def sections
@@ -523,12 +523,12 @@ class User < ApplicationRecord
 
   # Relationships (sections/followers/students) from being a teacher.
   has_many :sections_owned, dependent: :destroy, class_name: 'Section'
-  has_many :followers, -> {without_deleted}, through: :sections_instructed
+  has_many :followers, lambda {without_deleted}, through: :sections_instructed
   has_many :students, through: :followers, source: :student_user
 
   # Relationships (sections_as_students/followeds/teachers) from being a
   # student.
-  has_many :followeds, -> {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id', dependent: :destroy
+  has_many :followeds, lambda {order 'followers.id'}, class_name: 'Follower', foreign_key: 'student_user_id', dependent: :destroy
   has_many :sections_as_student, through: :followeds, source: :section
   has_many :teachers, through: :sections_as_student, source: :instructors
 
@@ -542,10 +542,10 @@ class User < ApplicationRecord
   # a bit of trickery to sort most recently started/assigned/progressed scripts first and then completed
   # This SQL string is not at risk for injection vulnerabilites because it's
   # just a hardcoded string, so it's safe to wrap in Arel.sql
-  has_many :user_scripts, -> {order Arel.sql("-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc")}
+  has_many :user_scripts, lambda {order Arel.sql("-completed_at asc, greatest(coalesce(started_at, 0), coalesce(assigned_at, 0), coalesce(last_progress_at, 0)) desc, user_scripts.id asc")}
   has_many :scripts, through: :user_scripts, source: :script
 
-  validates :name, presence: true, unless: -> {purged_at}
+  validates :name, presence: true, unless: lambda {purged_at}
   validates :name, length: {within: 1..70}, allow_blank: true
   validates :name, no_utf8mb4: true
 
@@ -558,8 +558,8 @@ class User < ApplicationRecord
   USERNAME_REGEX = /\A#{UserHelpers::USERNAME_ALLOWED_CHARACTERS.source}+\z/i
   validates_length_of :username, within: 5..20, allow_blank: true
   validates_format_of :username, if: :username_changed?, with: USERNAME_REGEX, allow_blank: true
-  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: -> {errors.blank?}
-  validates_uniqueness_of :username, case_sensitive: false, on: :update, if: -> {errors.blank? && username_changed?}
+  validates_uniqueness_of :username, allow_blank: true, case_sensitive: false, on: :create, if: lambda {errors.blank?}
+  validates_uniqueness_of :username, case_sensitive: false, on: :update, if: lambda {errors.blank? && username_changed?}
   validates_presence_of :username, if: :username_required?
   before_validation :generate_username, on: :create
 
@@ -568,12 +568,12 @@ class User < ApplicationRecord
   validates_length_of       :password, within: 6..128, allow_blank: true
 
   validates_presence_of :email_preference_opt_in, if: :email_preference_opt_in_required
-  validates_presence_of :email_preference_request_ip, if: -> {email_preference_opt_in.present?}
-  validates_presence_of :email_preference_source, if: -> {email_preference_opt_in.present?}
-  validates_presence_of :email_preference_form_kind, if: -> {email_preference_opt_in.present?}
+  validates_presence_of :email_preference_request_ip, if: lambda {email_preference_opt_in.present?}
+  validates_presence_of :email_preference_source, if: lambda {email_preference_opt_in.present?}
+  validates_presence_of :email_preference_form_kind, if: lambda {email_preference_opt_in.present?}
 
   # Validations for adding parent email notifications
-  before_validation :parent_email_preference_setup, if: -> {parent_email_preference_opt_in_required? || parent_email_update_only?}
+  before_validation :parent_email_preference_setup, if: lambda {parent_email_preference_opt_in_required? || parent_email_update_only?}
   validates_inclusion_of :parent_email_preference_opt_in, in: %w(yes no), if: :parent_email_preference_opt_in_required?
   validates_presence_of :parent_email_preference_email, if: :parent_email_preference_opt_in_required?
   validates_presence_of :parent_email_preference_request_ip, if: :parent_email_preference_opt_in_required?
@@ -598,10 +598,10 @@ class User < ApplicationRecord
   end
 
   validates :data_transfer_agreement_accepted, acceptance: true, if: :data_transfer_agreement_required
-  validates_presence_of :data_transfer_agreement_request_ip, if: -> {data_transfer_agreement_accepted.present?}
-  validates_inclusion_of :data_transfer_agreement_source, in: DATA_TRANSFER_AGREEMENT_SOURCE_TYPES, if: -> {data_transfer_agreement_accepted.present?}
-  validates_presence_of :data_transfer_agreement_kind, if: -> {data_transfer_agreement_accepted.present?}
-  validates_presence_of :data_transfer_agreement_at, if: -> {data_transfer_agreement_accepted.present?}
+  validates_presence_of :data_transfer_agreement_request_ip, if: lambda {data_transfer_agreement_accepted.present?}
+  validates_inclusion_of :data_transfer_agreement_source, in: DATA_TRANSFER_AGREEMENT_SOURCE_TYPES, if: lambda {data_transfer_agreement_accepted.present?}
+  validates_presence_of :data_transfer_agreement_kind, if: lambda {data_transfer_agreement_accepted.present?}
+  validates_presence_of :data_transfer_agreement_at, if: lambda {data_transfer_agreement_accepted.present?}
 
   # When adding a new version, append to the end of the array
   # using the next increasing natural number.
@@ -619,7 +619,7 @@ class User < ApplicationRecord
     :sanitize_race_data_set_urm,
     :fix_by_user_type
 
-  before_save :remove_cleartext_emails, if: -> {student? && migrated? && user_type_changed?}
+  before_save :remove_cleartext_emails, if: lambda {student? && migrated? && user_type_changed?}
 
   before_save :strip_display_family_names
   def strip_display_family_names
@@ -788,8 +788,8 @@ class User < ApplicationRecord
   validate :presence_of_email_or_hashed_email, if:
       :email_or_hashed_email_required?, on: :create
   validates :email, no_utf8mb4: true
-  validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
-  validate :email_and_hashed_email_must_be_unique, if: -> {email_changed? || hashed_email_changed?}
+  validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: lambda {email.to_s.utf8mb4?}
+  validate :email_and_hashed_email_must_be_unique, if: lambda {email_changed? || hashed_email_changed?}
   validate :presence_of_hashed_email_or_parent_email, if: :requires_email?
 
   def requires_email?

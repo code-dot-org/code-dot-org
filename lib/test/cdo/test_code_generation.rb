@@ -37,7 +37,7 @@ class CodeGenerationTest < Minitest::Test
     end
 
     it 'rejects codes and generates new ones' do
-      reject_proc = ->(code) {code != 'CCCC'}
+      reject_proc = lambda {|code| code != 'CCCC'}
       CodeGeneration.expects(:random_consonant_string).returns('AAAA', 'BBBB', 'CCCC').times(3)
 
       code = CodeGeneration.random_unique_code reject_if: reject_proc
@@ -45,7 +45,7 @@ class CodeGenerationTest < Minitest::Test
     end
 
     it 'gives up after 100 attempts including reject proc' do
-      reject_proc = ->(_code) {true}
+      reject_proc = lambda {|_code| true}
       CodeGeneration.expects(:random_consonant_string).returns('BBBB').times(100)
 
       e = assert_raises RuntimeError do

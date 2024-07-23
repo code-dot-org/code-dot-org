@@ -13,7 +13,7 @@ module Forms
       validates :child_account, presence: true
       validates :parent_email, presence: true
 
-      with_options if: -> {errors.empty?} do
+      with_options if: lambda {errors.empty?} do
         validate :parent_email_is_correct
         validate :permission_not_granted
         validate :parent_email_is_not_own

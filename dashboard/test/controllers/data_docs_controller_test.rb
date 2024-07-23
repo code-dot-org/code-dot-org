@@ -28,21 +28,21 @@ class DataDocsControllerTest < ActionController::TestCase
   test_user_gets_response_for :new, user: :levelbuilder, response: :success
 
   # only levelbuilder can create
-  test_user_gets_response_for :create, params: -> {{key: 'unique_key'}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-  test_user_gets_response_for :create, params: -> {{key: 'unique_key'}}, user: :student, response: :forbidden
-  test_user_gets_response_for :create, params: -> {{key: 'unique_key'}}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :create, params: -> {{key: 'unique_key'}}, user: :levelbuilder, response: :redirect, redirected_to: '/data_docs/unique_key'
+  test_user_gets_response_for :create, params: lambda {{key: 'unique_key'}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :create, params: lambda {{key: 'unique_key'}}, user: :student, response: :forbidden
+  test_user_gets_response_for :create, params: lambda {{key: 'unique_key'}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :create, params: lambda {{key: 'unique_key'}}, user: :levelbuilder, response: :redirect, redirected_to: '/data_docs/unique_key'
 
-  test_user_gets_response_for :show, params: -> {{key: @test_params[:key]}}, user: nil, response: :success
-  test_user_gets_response_for :show, params: -> {{key: @test_params[:key]}}, user: :student, response: :success
-  test_user_gets_response_for :show, params: -> {{key: @test_params[:key]}}, user: :teacher, response: :success
-  test_user_gets_response_for :show, params: -> {{key: @test_params[:key]}}, user: :levelbuilder, response: :success
+  test_user_gets_response_for :show, params: lambda {{key: @test_params[:key]}}, user: nil, response: :success
+  test_user_gets_response_for :show, params: lambda {{key: @test_params[:key]}}, user: :student, response: :success
+  test_user_gets_response_for :show, params: lambda {{key: @test_params[:key]}}, user: :teacher, response: :success
+  test_user_gets_response_for :show, params: lambda {{key: @test_params[:key]}}, user: :levelbuilder, response: :success
 
   # only levelbuilder can edit
-  test_user_gets_response_for :edit, params: -> {@test_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-  test_user_gets_response_for :edit, params: -> {@test_params}, user: :student, response: :forbidden
-  test_user_gets_response_for :edit, params: -> {@test_params}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :edit, params: -> {@test_params}, user: :levelbuilder, response: :success
+  test_user_gets_response_for :edit, params: lambda {@test_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :edit, params: lambda {@test_params}, user: :student, response: :forbidden
+  test_user_gets_response_for :edit, params: lambda {@test_params}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :edit, params: lambda {@test_params}, user: :levelbuilder, response: :success
 
   # only levelbuilder can edit_all
   test_user_gets_response_for :edit_all, user: nil, response: :redirect, redirected_to: '/users/sign_in'
@@ -51,10 +51,10 @@ class DataDocsControllerTest < ActionController::TestCase
   test_user_gets_response_for :edit_all, user: :levelbuilder, response: :success
 
   # only levelbuilder can destroy
-  test_user_gets_response_for :destroy, params: -> {{key: @test_params[:key]}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-  test_user_gets_response_for :destroy, params: -> {{key: @test_params[:key]}}, user: :student, response: :forbidden
-  test_user_gets_response_for :destroy, params: -> {{key: @test_params[:key]}}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :destroy, params: -> {{key: @test_params[:key]}}, user: :levelbuilder, response: :success
+  test_user_gets_response_for :destroy, params: lambda {{key: @test_params[:key]}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :destroy, params: lambda {{key: @test_params[:key]}}, user: :student, response: :forbidden
+  test_user_gets_response_for :destroy, params: lambda {{key: @test_params[:key]}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :destroy, params: lambda {{key: @test_params[:key]}}, user: :levelbuilder, response: :success
 
   test 'creating a new data doc writes serialization and redirects to show page with key in URL' do
     sign_in @levelbuilder

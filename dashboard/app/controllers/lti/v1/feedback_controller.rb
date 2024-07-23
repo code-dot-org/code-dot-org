@@ -2,7 +2,7 @@ module Lti
   module V1
     class FeedbackController < ApplicationController
       before_action :authenticate_user!
-      before_action -> {head :no_content}, unless: -> {Policies::Lti.feedback_available?(current_user)}
+      before_action lambda {head :no_content}, unless: lambda {Policies::Lti.feedback_available?(current_user)}
 
       def create
         @lti_feedback = Lti::Feedback.new(feedback_params)

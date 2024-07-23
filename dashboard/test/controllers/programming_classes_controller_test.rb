@@ -140,40 +140,40 @@ class ProgrammingClassesControllerTest < ActionController::TestCase
     test_user_gets_response_for :new, user: :teacher, response: :forbidden
     test_user_gets_response_for :new, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :create, params: -> {{name: 'name'}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-    test_user_gets_response_for :create, params: -> {{name: 'name'}}, user: :student, response: :forbidden
-    test_user_gets_response_for :create, params: -> {{name: 'name'}}, user: :teacher, response: :forbidden
-    test_user_gets_response_for :create, params: -> {{name: 'name'}}, user: :levelbuilder, response: :success
+    test_user_gets_response_for :create, params: lambda {{name: 'name'}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :create, params: lambda {{name: 'name'}}, user: :student, response: :forbidden
+    test_user_gets_response_for :create, params: lambda {{name: 'name'}}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :create, params: lambda {{name: 'name'}}, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :edit, params: -> {{id: @programming_class.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-    test_user_gets_response_for :edit, params: -> {{id: @programming_class.id}}, user: :student, response: :forbidden
-    test_user_gets_response_for :edit, params: -> {{id: @programming_class.id}}, user: :teacher, response: :forbidden
-    test_user_gets_response_for :edit, params: -> {{id: @programming_class.id}}, user: :levelbuilder, response: :success
+    test_user_gets_response_for :edit, params: lambda {{id: @programming_class.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :edit, params: lambda {{id: @programming_class.id}}, user: :student, response: :forbidden
+    test_user_gets_response_for :edit, params: lambda {{id: @programming_class.id}}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :edit, params: lambda {{id: @programming_class.id}}, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :update, params: -> {@update_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-    test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
-    test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
-    test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
+    test_user_gets_response_for :update, params: lambda {@update_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :update, params: lambda {@update_params}, user: :student, response: :forbidden
+    test_user_gets_response_for :update, params: lambda {@update_params}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :update, params: lambda {@update_params}, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :show, params: -> {{id: @programming_class.id}}, user: nil, response: :success
-    test_user_gets_response_for :show, params: -> {{id: @programming_class.id}}, user: :student, response: :success
-    test_user_gets_response_for :show, params: -> {{id: @programming_class.id}}, user: :teacher, response: :success
-    test_user_gets_response_for :show, params: -> {{id: @programming_class.id}}, user: :levelbuilder, response: :success
+    test_user_gets_response_for :show, params: lambda {{id: @programming_class.id}}, user: nil, response: :success
+    test_user_gets_response_for :show, params: lambda {{id: @programming_class.id}}, user: :student, response: :success
+    test_user_gets_response_for :show, params: lambda {{id: @programming_class.id}}, user: :teacher, response: :success
+    test_user_gets_response_for :show, params: lambda {{id: @programming_class.id}}, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :show, params: -> {{id: @unpublished_programming_class.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in', name: 'test_signed_out_calling_get_show_for_unpublished_class_should_receive_redirect'
-    test_user_gets_response_for :show, params: -> {{id: @unpublished_programming_class.id}}, user: :student, response: :forbidden, name: 'test_student_calling_get_show_for_unpublished_class_should_receive_forbidden'
-    test_user_gets_response_for :show, params: -> {{id: @unpublished_programming_class.id}}, user: :teacher, response: :forbidden, name: 'test_teacher_calling_get_show_for_unpublished_class_should_receive_forbidden'
-    test_user_gets_response_for :show, params: -> {{id: @unpublished_programming_class.id}}, user: :levelbuilder, response: :success, name: 'test_levelbuilder_calling_get_show_for_unpublished_class_should_receive_success'
+    test_user_gets_response_for :show, params: lambda {{id: @unpublished_programming_class.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in', name: 'test_signed_out_calling_get_show_for_unpublished_class_should_receive_redirect'
+    test_user_gets_response_for :show, params: lambda {{id: @unpublished_programming_class.id}}, user: :student, response: :forbidden, name: 'test_student_calling_get_show_for_unpublished_class_should_receive_forbidden'
+    test_user_gets_response_for :show, params: lambda {{id: @unpublished_programming_class.id}}, user: :teacher, response: :forbidden, name: 'test_teacher_calling_get_show_for_unpublished_class_should_receive_forbidden'
+    test_user_gets_response_for :show, params: lambda {{id: @unpublished_programming_class.id}}, user: :levelbuilder, response: :success, name: 'test_levelbuilder_calling_get_show_for_unpublished_class_should_receive_success'
 
-    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_environment.name, programming_class_key: @programming_class.key}}, user: nil, response: :success
-    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_environment.name, programming_class_key: @programming_class.key}}, user: :student, response: :success
-    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_environment.name, programming_class_key: @programming_class.key}}, user: :teacher, response: :success
-    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_environment.name, programming_class_key: @programming_class.key}}, user: :levelbuilder, response: :success
+    test_user_gets_response_for :show_by_keys, params: lambda {{programming_environment_name: @programming_environment.name, programming_class_key: @programming_class.key}}, user: nil, response: :success
+    test_user_gets_response_for :show_by_keys, params: lambda {{programming_environment_name: @programming_environment.name, programming_class_key: @programming_class.key}}, user: :student, response: :success
+    test_user_gets_response_for :show_by_keys, params: lambda {{programming_environment_name: @programming_environment.name, programming_class_key: @programming_class.key}}, user: :teacher, response: :success
+    test_user_gets_response_for :show_by_keys, params: lambda {{programming_environment_name: @programming_environment.name, programming_class_key: @programming_class.key}}, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @unpublished_programming_environment.name, programming_class_key: @unpublished_programming_class.key}}, user: nil, response: :forbidden, name: 'test_signed_out_calling_get_show_by_keys_for_unpublished_class_should_be_forbidden'
-    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @unpublished_programming_environment.name, programming_class_key: @unpublished_programming_class.key}}, user: :student, response: :forbidden, name: 'test_student_calling_get_show_by_keys_for_unpublished_class_should_be_forbidden'
-    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @unpublished_programming_environment.name, programming_class_key: @unpublished_programming_class.key}}, user: :teacher, response: :forbidden, name: 'test_teacher_calling_get_show_by_keys_for_unpublished_class_should_be_forbidden'
-    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @unpublished_programming_environment.name, programming_class_key: @unpublished_programming_class.key}}, user: :levelbuilder, response: :success, name: 'test_levelbuilder_calling_get_show_by_keys_for_unpublished_class_should_receive_success'
+    test_user_gets_response_for :show_by_keys, params: lambda {{programming_environment_name: @unpublished_programming_environment.name, programming_class_key: @unpublished_programming_class.key}}, user: nil, response: :forbidden, name: 'test_signed_out_calling_get_show_by_keys_for_unpublished_class_should_be_forbidden'
+    test_user_gets_response_for :show_by_keys, params: lambda {{programming_environment_name: @unpublished_programming_environment.name, programming_class_key: @unpublished_programming_class.key}}, user: :student, response: :forbidden, name: 'test_student_calling_get_show_by_keys_for_unpublished_class_should_be_forbidden'
+    test_user_gets_response_for :show_by_keys, params: lambda {{programming_environment_name: @unpublished_programming_environment.name, programming_class_key: @unpublished_programming_class.key}}, user: :teacher, response: :forbidden, name: 'test_teacher_calling_get_show_by_keys_for_unpublished_class_should_be_forbidden'
+    test_user_gets_response_for :show_by_keys, params: lambda {{programming_environment_name: @unpublished_programming_environment.name, programming_class_key: @unpublished_programming_class.key}}, user: :levelbuilder, response: :success, name: 'test_levelbuilder_calling_get_show_by_keys_for_unpublished_class_should_receive_success'
   end
 
   class FilterTests < ActionController::TestCase

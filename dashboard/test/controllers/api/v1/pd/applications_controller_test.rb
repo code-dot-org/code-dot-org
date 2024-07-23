@@ -54,9 +54,9 @@ module Api::V1::Pd
     end
 
     test_redirect_to_sign_in_for :index
-    test_redirect_to_sign_in_for :show, params: -> {@test_show_params}
-    test_redirect_to_sign_in_for :update, params: -> {@test_update_params}
-    test_redirect_to_sign_in_for :quick_view, params: -> {@test_quick_view_params}
+    test_redirect_to_sign_in_for :show, params: lambda {@test_show_params}
+    test_redirect_to_sign_in_for :update, params: lambda {@test_update_params}
+    test_redirect_to_sign_in_for :quick_view, params: lambda {@test_quick_view_params}
 
     # Basic auth for read methods, workshop_organizer and program_manager are tested explicitly below
     {
@@ -66,8 +66,8 @@ module Api::V1::Pd
       workshop_admin: :success
     }.each do |user, response|
       test_user_gets_response_for :index, user: user, response: response
-      test_user_gets_response_for :show, params: -> {@test_show_params}, user: user, response: response
-      test_user_gets_response_for :quick_view, params: -> {@test_quick_view_params}, user: user, response: response
+      test_user_gets_response_for :show, params: lambda {@test_show_params}, user: user, response: response
+      test_user_gets_response_for :quick_view, params: lambda {@test_quick_view_params}, user: user, response: response
     end
 
     # Basic auth for write methods
@@ -79,7 +79,7 @@ module Api::V1::Pd
       program_manager: :forbidden,
       workshop_admin: :success
     }.each do |user, response|
-      test_user_gets_response_for :update, params: -> {@test_update_params}, user: user, response: response
+      test_user_gets_response_for :update, params: lambda {@test_update_params}, user: user, response: response
     end
 
     # Auth for incomplete applications
@@ -90,7 +90,7 @@ module Api::V1::Pd
       test_user_gets_response_for :show,
         name: "#{user} gets #{response} when showing incomplete applications",
         user: user,
-        params: -> {{id: @csd_incomplete_application_with_partner.id}},
+        params: lambda {{id: @csd_incomplete_application_with_partner.id}},
         response: response
     end
 
@@ -101,7 +101,7 @@ module Api::V1::Pd
       test_user_gets_response_for :destroy,
         name: "#{user} gets #{response} when deleting incomplete applications",
         user: user,
-        params: -> {{id: @csd_incomplete_application_with_partner.id}},
+        params: lambda {{id: @csd_incomplete_application_with_partner.id}},
         response: response
     end
 
@@ -112,7 +112,7 @@ module Api::V1::Pd
       test_user_gets_response_for :update,
         name: "#{user} gets #{response} when updating incomplete applications",
         user: user,
-        params: -> {{application: {notes: 'Notes!'}, id: @csd_incomplete_application_with_partner.id}},
+        params: lambda {{application: {notes: 'Notes!'}, id: @csd_incomplete_application_with_partner.id}},
         response: response
     end
 

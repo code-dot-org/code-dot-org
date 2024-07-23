@@ -33,13 +33,13 @@ class DatablockStorageTable < ApplicationRecord
 
   # Data reading methods should use read_records instead of directly accessing records
   has_many :records,
-    -> {order(record_id: :asc)},
+    lambda {order(record_id: :asc)},
     autosave: true,
     class_name: 'DatablockStorageRecord',
     foreign_key: [:project_id, :table_name],
     dependent: :delete_all
 
-  after_initialize -> {self.columns ||= ['id']}, if: :new_record?
+  after_initialize lambda {self.columns ||= ['id']}, if: :new_record?
 
   validate :validate_max_table_count, on: :create
 

@@ -18,8 +18,8 @@ COLUMNS = GLUE.get_table(database_name: DATABASE, name: TABLE).
   table.storage_descriptor.columns.map {|c| [c.name, c.type]}.to_h
 
 CONVERTERS = [
-  ->(field, info) {COLUMNS[info.header] == 'int' ? field.to_i : field},
-  ->(field, info) {COLUMNS[info.header] == 'float' ? field.to_f : field}
+  lambda {|field, info| COLUMNS[info.header] == 'int' ? field.to_i : field},
+  lambda {|field, info| COLUMNS[info.header] == 'float' ? field.to_f : field}
 ]
 
 def handler(event:, context:)

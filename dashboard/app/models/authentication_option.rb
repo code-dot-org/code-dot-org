@@ -30,9 +30,9 @@ class AuthenticationOption < ApplicationRecord
     :remove_student_cleartext_email, :fill_authentication_id
 
   validates :email, no_utf8mb4: true
-  validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: -> {email.to_s.utf8mb4?}
+  validates_email_format_of :email, allow_blank: true, if: :email_changed?, unless: lambda {email.to_s.utf8mb4?}
 
-  validate :email_must_be_unique, :hashed_email_must_be_unique, unless: -> {UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include? credential_type}
+  validate :email_must_be_unique, :hashed_email_must_be_unique, unless: lambda {UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include? credential_type}
 
   validates :authentication_id, uniqueness: {scope: [:credential_type, :deleted_at], case_sensitive: true}
   validates :authentication_id, if: :lti?, format: {with: /\A(\S+\|\S+\|\S+)\z/, message: "For LTI authentication_options, format must be 'issuer|audience|subject'"}
@@ -88,7 +88,7 @@ class AuthenticationOption < ApplicationRecord
     MICROSOFT
   ].freeze
 
-  scope :trusted_email, -> {where(credential_type: TRUSTED_EMAIL_CREDENTIAL_TYPES)}
+  scope :trusted_email, lambda {where(credential_type: TRUSTED_EMAIL_CREDENTIAL_TYPES)}
 
   def google?
     credential_type == GOOGLE

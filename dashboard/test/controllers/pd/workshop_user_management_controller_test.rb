@@ -13,8 +13,8 @@ class Pd::WorkshopUserManagementControllerTest < ActionController::TestCase
 
   def self.test_workshop_admin_only(method, action, params = {})
     test_user_gets_response_for action, user: :student, method: method, params: params, response: :forbidden
-    test_user_gets_response_for action, user: -> {@teacher}, method: method, params: params, response: :forbidden
-    test_user_gets_response_for action, user: -> {@workshop_admin}, method: method, params: params, response: :success
+    test_user_gets_response_for action, user: lambda {@teacher}, method: method, params: params, response: :forbidden
+    test_user_gets_response_for action, user: lambda {@workshop_admin}, method: method, params: params, response: :success
   end
 
   test_redirect_to_sign_in_for :facilitator_courses_form

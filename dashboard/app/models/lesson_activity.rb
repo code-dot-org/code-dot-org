@@ -26,7 +26,7 @@ class LessonActivity < ApplicationRecord
 
   belongs_to :lesson, optional: true
   has_one :script, through: :lesson
-  has_many :activity_sections, -> {order(:position)}, dependent: :destroy
+  has_many :activity_sections, lambda {order(:position)}, dependent: :destroy
 
   serialized_attrs %w(
     name

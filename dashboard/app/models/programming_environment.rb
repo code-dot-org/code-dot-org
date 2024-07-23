@@ -24,7 +24,7 @@ class ProgrammingEnvironment < ApplicationRecord
   validates_uniqueness_of :name, case_sensitive: false
 
   alias_attribute :categories, :programming_environment_categories
-  has_many :programming_environment_categories, -> {order(:position)}, dependent: :destroy
+  has_many :programming_environment_categories, lambda {order(:position)}, dependent: :destroy
   has_many :programming_classes, dependent: :destroy
   has_many :programming_expressions, dependent: :destroy
 

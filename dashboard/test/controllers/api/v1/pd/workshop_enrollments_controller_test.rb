@@ -129,7 +129,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
     :index,
     user: :teacher,
     response: :forbidden,
-    params: -> {{workshop_id: @workshop.id}}
+    params: lambda {{workshop_id: @workshop.id}}
   )
 
   test 'admins can delete enrollments from any workshop' do

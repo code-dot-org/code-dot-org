@@ -340,7 +340,7 @@ FactoryBot.define do
     state {'WA'}
   end
 
-  ruby_to_js_style_keys = ->(k) {k.to_s.camelize(:lower)}
+  ruby_to_js_style_keys = lambda {|k| k.to_s.camelize(:lower)}
   factory :form_data_hash, class: 'Hash' do
     initialize_with {attributes.transform_keys(&ruby_to_js_style_keys)}
   end

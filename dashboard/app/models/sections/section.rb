@@ -66,7 +66,7 @@ class Section < ApplicationRecord
   alias_attribute :teacher, :user
 
   has_many :section_instructors, dependent: :destroy
-  has_many :active_section_instructors, -> {where(status: :active)}, class_name: 'SectionInstructor'
+  has_many :active_section_instructors, lambda {where(status: :active)}, class_name: 'SectionInstructor'
   has_many :instructors, through: :active_section_instructors, class_name: 'User'
   has_one :lti_section
   has_one :lti_course, through: :lti_section
@@ -75,10 +75,10 @@ class Section < ApplicationRecord
   has_many :followers, dependent: :destroy
   accepts_nested_attributes_for :followers
 
-  has_many :students, -> {order('name')}, through: :followers, source: :student_user
+  has_many :students, lambda {order('name')}, through: :followers, source: :student_user
   accepts_nested_attributes_for :students
 
-  validates :name, presence: true, unless: -> {deleted?}
+  validates :name, presence: true, unless: lambda {deleted?}
 
   belongs_to :script, class_name: 'Unit', optional: true
   belongs_to :unit_group, foreign_key: 'course_id', optional: true
@@ -97,8 +97,8 @@ class Section < ApplicationRecord
   # Allow accessing section.grades, without a costly column rename.
   alias_attribute :grades, :grade
 
-  validate :grades_are_subset_of_valid_grades, unless: -> {grades.nil?}
-  validate :grades_with_pl_are_only_pl, unless: -> {grades.nil?}
+  validate :grades_are_subset_of_valid_grades, unless: lambda {grades.nil?}
+  validate :grades_with_pl_are_only_pl, unless: lambda {grades.nil?}
 
   validate :pl_sections_must_use_email_logins
   validate :pl_sections_must_use_pl_grade
@@ -225,11 +225,11 @@ class Section < ApplicationRecord
     [LOGIN_TYPE_EMAIL, LOGIN_TYPE_PICTURE, LOGIN_TYPE_WORD].exclude? login_type
   end
 
-  validates_presence_of :user, unless: -> {deleted?}
+  validates_presence_of :user, unless: lambda {deleted?}
   def user_must_be_teacher
     errors.add(:user_id, 'must be a teacher') unless user.try(:teacher?)
   end
-  validate :user_must_be_teacher, unless: -> {deleted?}
+  validate :user_must_be_teacher, unless: lambda {deleted?}
 
   before_create :assign_code
   def assign_code
@@ -254,7 +254,7 @@ class Section < ApplicationRecord
   # the minimum number of letters in their last name needed to uniquely
   # identify them
   def name_safe_students
-    name_splitter_proc = ->(student) {FullNameSplitter.split(student.name)}
+    name_splitter_proc = lambda {|student| FullNameSplitter.split(student.name)}
 
     students_only = students.where.not(user_type: "teacher")
 

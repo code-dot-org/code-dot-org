@@ -66,7 +66,7 @@ module Pd
     validates_presence_of :day
     validate :day_for_subject
 
-    before_validation :set_workshop_from_session, if: -> {pd_session_id_changed? && !pd_workshop_id_changed?}
+    before_validation :set_workshop_from_session, if: lambda {pd_session_id_changed? && !pd_workshop_id_changed?}
     def set_workshop_from_session
       self.pd_workshop_id = pd_session&.pd_workshop_id
     end

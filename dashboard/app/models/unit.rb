@@ -48,7 +48,7 @@ class Unit < ApplicationRecord
   include Unit::TextToSpeech
 
   include Seeded
-  has_many :lesson_groups, -> {order(:position)}, foreign_key: 'script_id', dependent: :destroy
+  has_many :lesson_groups, lambda {order(:position)}, foreign_key: 'script_id', dependent: :destroy
   has_many :lessons, through: :lesson_groups
   has_many :script_levels, through: :lessons
   has_many :levels_script_levels, through: :script_levels # needed for seeding logic
@@ -67,7 +67,7 @@ class Unit < ApplicationRecord
   has_many :unit_groups, through: :unit_group_units
   has_one :course_version, as: :content_root, dependent: :destroy
 
-  scope :with_associated_models, -> do
+  scope :with_associated_models, lambda do
     includes(
       [
         {
@@ -106,7 +106,7 @@ class Unit < ApplicationRecord
   end
 
   # The set of models which may be touched by ScriptSeed
-  scope :with_seed_models, -> do
+  scope :with_seed_models, lambda do
     includes(
       [
         {

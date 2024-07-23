@@ -302,7 +302,7 @@ class ExpiredDeletedAccountPurgerTest < ActiveSupport::TestCase
       )
     )
 
-    assert_difference(-> {QueuedAccountPurge.count}, 2) do
+    assert_difference(lambda {QueuedAccountPurge.count}, 2) do
       edap.purge_expired_deleted_accounts!
     end
 

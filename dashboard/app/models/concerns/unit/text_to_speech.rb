@@ -6,7 +6,7 @@ module Unit::TextToSpeech
 
     serialized_attrs %w[tts]
 
-    scope :tts_enabled, -> {where(arel_table[Arel.sql('properties->"$.tts"')].eq(true))}
+    scope :tts_enabled, lambda {where(arel_table[Arel.sql('properties->"$.tts"')].eq(true))}
   end
 
   # The method conditions must be reflected in the `tts_enabled` scope method

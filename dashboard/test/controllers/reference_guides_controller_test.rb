@@ -169,55 +169,55 @@ class ReferenceGuidesControllerTest < ActionController::TestCase
     assert_redirected_to "/courses/#{@reference_guide_subcategory.course_offering_version}/guides/#{@reference_guide.key}"
   end
 
-  test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: 'unknown_ref_guide'}}, user: :student, response: :not_found
+  test_user_gets_response_for :show, params: lambda {{course_course_name: @reference_guide.course_offering_version, key: 'unknown_ref_guide'}}, user: :student, response: :not_found
 
   # everyone can see basic reference guides
-  test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: nil, response: :success
-  test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: :student, response: :success
-  test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: :teacher, response: :success
-  test_user_gets_response_for :show, params: -> {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: :levelbuilder, response: :success
+  test_user_gets_response_for :show, params: lambda {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: nil, response: :success
+  test_user_gets_response_for :show, params: lambda {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: :student, response: :success
+  test_user_gets_response_for :show, params: lambda {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: :teacher, response: :success
+  test_user_gets_response_for :show, params: lambda {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: :levelbuilder, response: :success
 
   # edit page is levelbuilder only
-  test_user_gets_response_for :edit, params: -> {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: nil, response: :redirect
-  test_user_gets_response_for :edit, params: -> {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: :student, response: :forbidden
-  test_user_gets_response_for :edit, params: -> {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :edit, params: -> {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: :levelbuilder, response: :success
+  test_user_gets_response_for :edit, params: lambda {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: nil, response: :redirect
+  test_user_gets_response_for :edit, params: lambda {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: :student, response: :forbidden
+  test_user_gets_response_for :edit, params: lambda {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :edit, params: lambda {{course_course_name: @reference_guide.course_offering_version, key: @reference_guide.key}}, user: :levelbuilder, response: :success
 
   # edit_all page is levelbuilder only
-  test_user_gets_response_for :edit_all, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: nil, response: :redirect
-  test_user_gets_response_for :edit_all, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :student, response: :forbidden
-  test_user_gets_response_for :edit_all, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :edit_all, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :levelbuilder, response: :success
+  test_user_gets_response_for :edit_all, params: lambda {{course_course_name: @reference_guide.course_offering_version}}, user: nil, response: :redirect
+  test_user_gets_response_for :edit_all, params: lambda {{course_course_name: @reference_guide.course_offering_version}}, user: :student, response: :forbidden
+  test_user_gets_response_for :edit_all, params: lambda {{course_course_name: @reference_guide.course_offering_version}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :edit_all, params: lambda {{course_course_name: @reference_guide.course_offering_version}}, user: :levelbuilder, response: :success
 
   # new page is levelbuilder only
-  test_user_gets_response_for :new, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: nil, response: :redirect
-  test_user_gets_response_for :new, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :student, response: :forbidden
-  test_user_gets_response_for :new, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :new, params: -> {{course_course_name: @reference_guide.course_offering_version}}, user: :levelbuilder, response: :success
+  test_user_gets_response_for :new, params: lambda {{course_course_name: @reference_guide.course_offering_version}}, user: nil, response: :redirect
+  test_user_gets_response_for :new, params: lambda {{course_course_name: @reference_guide.course_offering_version}}, user: :student, response: :forbidden
+  test_user_gets_response_for :new, params: lambda {{course_course_name: @reference_guide.course_offering_version}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :new, params: lambda {{course_course_name: @reference_guide.course_offering_version}}, user: :levelbuilder, response: :success
 
   # pilot reference guides are restricted
   test_user_gets_response_for :show, name: 'not signed-in cannot view pilot ref guide',
-    params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: nil, response: :redirect
+    params: lambda {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: nil, response: :redirect
   test_user_gets_response_for :show, name: 'regular student cannot view pilot ref guide',
-    params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: :student, response: :forbidden
+    params: lambda {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: :student, response: :forbidden
   test_user_gets_response_for :show, name: 'regular teacher cannot view pilot ref guide',
-    params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: :teacher, response: :forbidden
+    params: lambda {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: :teacher, response: :forbidden
   test_user_gets_response_for :edit_all, name: 'regular teacher cannot view pilot ref guide edit_all',
-    params: -> {{course_course_name: @reference_guide_pilot.course_offering_version}}, user: :teacher, response: :forbidden
+    params: lambda {{course_course_name: @reference_guide_pilot.course_offering_version}}, user: :teacher, response: :forbidden
   test_user_gets_response_for :show, name: 'pilot student can view pilot ref guide',
-    params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: -> {@pilot_student}, response: :success
+    params: lambda {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: lambda {@pilot_student}, response: :success
   test_user_gets_response_for :show, name: 'pilot teacher can view pilot ref guide',
-    params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: -> {@pilot_teacher}, response: :success
+    params: lambda {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: lambda {@pilot_teacher}, response: :success
   test_user_gets_response_for :show, name: 'levelbuilder can view pilot ref guide',
-    params: -> {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: :levelbuilder, response: :success
+    params: lambda {{course_course_name: @reference_guide_pilot.course_offering_version, key: @reference_guide_pilot.key}}, user: :levelbuilder, response: :success
 
   # reference guides in development are restricted
   test_user_gets_response_for :show, name: 'not signed-in cannot view indev ref guide',
-    params: -> {{course_course_name: @reference_guide_indev.course_offering_version, key: @reference_guide_indev.key}}, user: nil, response: :redirect
+    params: lambda {{course_course_name: @reference_guide_indev.course_offering_version, key: @reference_guide_indev.key}}, user: nil, response: :redirect
   test_user_gets_response_for :show, name: 'student cannot view indev ref guide',
-    params: -> {{course_course_name: @reference_guide_indev.course_offering_version, key: @reference_guide_indev.key}}, user: :student, response: :forbidden
+    params: lambda {{course_course_name: @reference_guide_indev.course_offering_version, key: @reference_guide_indev.key}}, user: :student, response: :forbidden
   test_user_gets_response_for :show, name: 'teacher cannot view indev ref guide',
-    params: -> {{course_course_name: @reference_guide_indev.course_offering_version, key: @reference_guide_indev.key}}, user: :teacher, response: :forbidden
+    params: lambda {{course_course_name: @reference_guide_indev.course_offering_version, key: @reference_guide_indev.key}}, user: :teacher, response: :forbidden
   test_user_gets_response_for :show, name: 'levelbuilder can view indev ref guide',
-    params: -> {{course_course_name: @reference_guide_indev.course_offering_version, key: @reference_guide_indev.key}}, user: :levelbuilder, response: :success
+    params: lambda {{course_course_name: @reference_guide_indev.course_offering_version, key: @reference_guide_indev.key}}, user: :levelbuilder, response: :success
 end

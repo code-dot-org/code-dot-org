@@ -10,7 +10,7 @@ class StaticModelsTest < Minitest::Test
     StaticModels.stubs(:expires_in).returns(2.minutes)
     Timecop.freeze
 
-    query = -> {PEGASUS_DB[:cdo_donors].all}
+    query = lambda {PEGASUS_DB[:cdo_donors].all}
     query.call
 
     Timecop.travel 1.minute

@@ -99,26 +99,26 @@ class LearningGoalTeacherEvaluationsControllerTest < ActionController::TestCase
   end
 
   # Test create responses
-  test_user_gets_response_for :create, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-  test_user_gets_response_for :create, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :student, response: :forbidden
-  test_user_gets_response_for :create, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :teacher, response: :success
+  test_user_gets_response_for :create, params: lambda {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :create, params: lambda {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :student, response: :forbidden
+  test_user_gets_response_for :create, params: lambda {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :teacher, response: :success
 
   # Test update responses
-  test_user_gets_response_for :update, params: -> {{id: @learning_goal_teacher_evaluation.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-  test_user_gets_response_for :update, params: -> {{id: @learning_goal_teacher_evaluation.id}}, user: :student, response: :forbidden
-  test_user_gets_response_for :update, params: -> {{id: @learning_goal_teacher_evaluation.id}}, user: -> {@teacher}, response: :success
+  test_user_gets_response_for :update, params: lambda {{id: @learning_goal_teacher_evaluation.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :update, params: lambda {{id: @learning_goal_teacher_evaluation.id}}, user: :student, response: :forbidden
+  test_user_gets_response_for :update, params: lambda {{id: @learning_goal_teacher_evaluation.id}}, user: lambda {@teacher}, response: :success
   # Test returns forbidden for a different teacher
-  test_user_gets_response_for :update, params: -> {{id: @learning_goal_teacher_evaluation.id}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :update, params: lambda {{id: @learning_goal_teacher_evaluation.id}}, user: :teacher, response: :forbidden
 
   # Test get_evaluation responses
-  test_user_gets_response_for :get_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-  test_user_gets_response_for :get_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :student, response: :forbidden
-  test_user_gets_response_for :get_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: -> {@teacher}, response: :success
+  test_user_gets_response_for :get_evaluation, params: lambda {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :get_evaluation, params: lambda {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :student, response: :forbidden
+  test_user_gets_response_for :get_evaluation, params: lambda {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: lambda {@teacher}, response: :success
   # Test returns not found for a different teacher
-  test_user_gets_response_for :get_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :teacher, response: :not_found
+  test_user_gets_response_for :get_evaluation, params: lambda {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :teacher, response: :not_found
 
   # Test get_or_create responses
-  test_user_gets_response_for :get_or_create_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-  test_user_gets_response_for :get_or_create_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :student, response: :forbidden
-  test_user_gets_response_for :get_or_create_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :teacher, response: :success
+  test_user_gets_response_for :get_or_create_evaluation, params: lambda {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :get_or_create_evaluation, params: lambda {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :student, response: :forbidden
+  test_user_gets_response_for :get_or_create_evaluation, params: lambda {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :teacher, response: :success
 end

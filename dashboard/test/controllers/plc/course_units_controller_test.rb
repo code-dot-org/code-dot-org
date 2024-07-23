@@ -9,18 +9,18 @@ class Plc::CourseUnitsControllerTest < ActionController::TestCase
   end
 
   # only admins can view the plc course launch page
-  test_user_gets_response_for :launch, params: -> {}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-  test_user_gets_response_for :launch, params: -> {}, user: :student, response: :forbidden
-  test_user_gets_response_for :launch, params: -> {}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :launch, params: -> {}, user: :levelbuilder, response: :forbidden
-  test_user_gets_response_for :launch, params: -> {}, user: :admin, response: :success
+  test_user_gets_response_for :launch, params: lambda {}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :launch, params: lambda {}, user: :student, response: :forbidden
+  test_user_gets_response_for :launch, params: lambda {}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :launch, params: lambda {}, user: :levelbuilder, response: :forbidden
+  test_user_gets_response_for :launch, params: lambda {}, user: :admin, response: :success
 
   # only admins can call launch plc course
-  test_user_gets_response_for :launch_plc_course, method: :post, params: -> {{plc_course_unit_id: @course_unit.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-  test_user_gets_response_for :launch_plc_course, method: :post, params: -> {{plc_course_unit_id: @course_unit.id}}, user: :student, response: :forbidden
-  test_user_gets_response_for :launch_plc_course, method: :post, params: -> {{plc_course_unit_id: @course_unit.id}}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :launch_plc_course, method: :post, params: -> {{plc_course_unit_id: @course_unit.id}}, user: :levelbuilder, response: :forbidden
-  test_user_gets_response_for :launch_plc_course, method: :post, params: -> {{plc_course_unit_id: @course_unit.id}}, user: :admin, response: :redirect, redirected_to: '/plc/course_units/launch?notice=PLC+Course+was+launched'
+  test_user_gets_response_for :launch_plc_course, method: :post, params: lambda {{plc_course_unit_id: @course_unit.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :launch_plc_course, method: :post, params: lambda {{plc_course_unit_id: @course_unit.id}}, user: :student, response: :forbidden
+  test_user_gets_response_for :launch_plc_course, method: :post, params: lambda {{plc_course_unit_id: @course_unit.id}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :launch_plc_course, method: :post, params: lambda {{plc_course_unit_id: @course_unit.id}}, user: :levelbuilder, response: :forbidden
+  test_user_gets_response_for :launch_plc_course, method: :post, params: lambda {{plc_course_unit_id: @course_unit.id}}, user: :admin, response: :redirect, redirected_to: '/plc/course_units/launch?notice=PLC+Course+was+launched'
 
   test "launching course sets started to true" do
     sign_in(@admin)

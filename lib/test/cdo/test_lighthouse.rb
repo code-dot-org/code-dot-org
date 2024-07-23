@@ -26,7 +26,7 @@ class LighthouseTest < Minitest::Test
   def test_lighthouse
     skip
     ensure_lighthouse
-    _, json = with_server(->(_, resp) {resp.body = 'Hello World!'}) do
+    _, json = with_server(lambda {|_, resp| resp.body = 'Hello World!'}) do
       Lighthouse.test("http://localhost:#{PORT}/")
     end
     result = JSON.parse(json)
@@ -36,7 +36,7 @@ class LighthouseTest < Minitest::Test
   def test_lighthouse_errors
     skip
     ensure_lighthouse
-    mount = ->(req, resp) do
+    mount = lambda do |req, resp|
       if req.path == '/'
         resp.content_type = 'text/html'
         resp.body = '<html><body><img src="/error1"/><img src="/error2"/></body></html>'

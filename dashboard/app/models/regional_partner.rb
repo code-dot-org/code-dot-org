@@ -32,7 +32,7 @@ class RegionalPartner < ApplicationRecord
     through: :regional_partner_program_managers
 
   has_many :pd_workshops_organized, class_name: 'Pd::Workshop', through: :regional_partner_program_managers
-  has_many :mappings, -> {order :state, :zip_code}, class_name: 'Pd::RegionalPartnerMapping', dependent: :destroy
+  has_many :mappings, lambda {order :state, :zip_code}, class_name: 'Pd::RegionalPartnerMapping', dependent: :destroy
 
   has_many :pd_workshops, class_name: 'Pd::Workshop'
 
@@ -141,14 +141,14 @@ class RegionalPartner < ApplicationRecord
   PHONE_NUMBER_VALIDATION_REGEX = /(\d.*){10}/
 
   validates :name, length: {minimum: 1, maximum: 255}
-  validates :group, numericality: {only_integer: true, greater_than: 0}, if: -> {group.present?}
-  validates_format_of :phone_number, with: PHONE_NUMBER_VALIDATION_REGEX, if: -> {phone_number.present?}
-  validates :zip_code, us_zip_code: true, if: -> {zip_code.present?}
-  validates_inclusion_of :state, in: STATE_ABBR_WITH_DC_HASH.keys.map(&:to_s), if: -> {state.present?}
-  validates_inclusion_of :applications_principal_approval, in: PRINCIPAL_APPROVAL_TYPES, if: -> {applications_principal_approval.present?}
-  validates_inclusion_of :applications_decision_emails, in: APPLICATION_DECISION_EMAILS, if: -> {applications_decision_emails.present?}
-  validates :csd_cost, numericality: {greater_than: 0}, if: -> {csd_cost.present?}
-  validates :csp_cost, numericality: {greater_than: 0}, if: -> {csp_cost.present?}
+  validates :group, numericality: {only_integer: true, greater_than: 0}, if: lambda {group.present?}
+  validates_format_of :phone_number, with: PHONE_NUMBER_VALIDATION_REGEX, if: lambda {phone_number.present?}
+  validates :zip_code, us_zip_code: true, if: lambda {zip_code.present?}
+  validates_inclusion_of :state, in: STATE_ABBR_WITH_DC_HASH.keys.map(&:to_s), if: lambda {state.present?}
+  validates_inclusion_of :applications_principal_approval, in: PRINCIPAL_APPROVAL_TYPES, if: lambda {applications_principal_approval.present?}
+  validates_inclusion_of :applications_decision_emails, in: APPLICATION_DECISION_EMAILS, if: lambda {applications_decision_emails.present?}
+  validates :csd_cost, numericality: {greater_than: 0}, if: lambda {csd_cost.present?}
+  validates :csp_cost, numericality: {greater_than: 0}, if: lambda {csp_cost.present?}
   validates :is_active, inclusion: {in: [true, false], message: "is required"}
 
   # assign a program manager to a regional partner

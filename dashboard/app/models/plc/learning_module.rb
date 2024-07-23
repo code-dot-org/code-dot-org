@@ -46,9 +46,9 @@ class Plc::LearningModule < ApplicationRecord
 
   validates_inclusion_of :module_type, in: MODULE_TYPES
 
-  scope :required, -> {where(module_type: REQUIRED_MODULE)}
-  scope :content, -> {where(module_type: CONTENT_MODULE)}
-  scope :practice, -> {where(module_type: PRACTICE_MODULE)}
+  scope :required, lambda {where(module_type: REQUIRED_MODULE)}
+  scope :content, lambda {where(module_type: CONTENT_MODULE)}
+  scope :practice, lambda {where(module_type: PRACTICE_MODULE)}
 
   def required?
     module_type == REQUIRED_MODULE

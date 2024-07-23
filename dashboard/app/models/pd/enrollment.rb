@@ -57,19 +57,19 @@ class Pd::Enrollment < ApplicationRecord
 
   # Some old enrollments, from before the first/last name split, don't have last names.
   # Require on all new enrollments.
-  validates_presence_of :last_name, unless: -> {deleted? || created_before_name_split?}
+  validates_presence_of :last_name, unless: lambda {deleted? || created_before_name_split?}
 
   validates_presence_of :email, unless: :deleted?
   validates_confirmation_of :email, unless: :deleted?
   validates_email_format_of :email, allow_blank: true
   validates :email, uniqueness: {scope: :pd_workshop_id, message: 'already enrolled in workshop', case_sensitive: false}, unless: :deleted?
 
-  validate :school_forbidden, if: -> {new_record? || school_changed?}
+  validate :school_forbidden, if: lambda {new_record? || school_changed?}
 
   before_validation :autoupdate_user_field
   before_save :set_application_id
   after_create :set_default_scholarship_info
-  after_save :enroll_in_corresponding_online_learning, if: -> {!deleted? && (saved_change_to_user_id? || saved_change_to_email?)}
+  after_save :enroll_in_corresponding_online_learning, if: lambda {!deleted? && (saved_change_to_user_id? || saved_change_to_email?)}
   after_save :authorize_teacher_account
 
   serialized_attrs %w(
@@ -120,9 +120,9 @@ class Pd::Enrollment < ApplicationRecord
     joins(:school_info).where(school_infos: {school_district_id: school_district.id})
   end
 
-  scope :attended, -> {joins(:attendances).group('pd_enrollments.id')}
-  scope :not_attended, -> {includes(:attendances).where(pd_attendances: {pd_enrollment_id: nil})}
-  scope :for_ended_workshops, -> {joins(:workshop).where.not(pd_workshops: {ended_at: nil})}
+  scope :attended, lambda {joins(:attendances).group('pd_enrollments.id')}
+  scope :not_attended, lambda {includes(:attendances).where(pd_attendances: {pd_enrollment_id: nil})}
+  scope :for_ended_workshops, lambda {joins(:workshop).where.not(pd_workshops: {ended_at: nil})}
 
   # Any enrollment with attendance, for an ended workshop, has a survey.
   # Except for FiT workshops - no exit surveys for them!
@@ -295,8 +295,8 @@ class Pd::Enrollment < ApplicationRecord
   # workshop id
   # @return [Integer, nil] application id or nil if cannot find any application
   def set_application_id
-    course_match = ->(application) {COURSE_NAME_MAP[application.try(:course)&.to_sym] == workshop.try(:course)}
-    pd_match = ->(application) {application.try(:pd_workshop_id) == pd_workshop_id}
+    course_match = lambda {|application| COURSE_NAME_MAP[application.try(:course)&.to_sym] == workshop.try(:course)}
+    pd_match = lambda {|application| application.try(:pd_workshop_id) == pd_workshop_id}
 
     application_id = nil
     # Finds application from the school year of the workshop. Assumes workshops start after 6/1

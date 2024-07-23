@@ -31,15 +31,15 @@ class UnitGroup < ApplicationRecord
 
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
-  has_many :default_unit_group_units, -> {where(experiment_name: nil).order(:position)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
+  has_many :default_unit_group_units, lambda {where(experiment_name: nil).order(:position)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_many :default_units, through: :default_unit_group_units, source: :script
-  has_many :alternate_unit_group_units, -> {where.not(experiment_name: nil)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
+  has_many :alternate_unit_group_units, lambda {where.not(experiment_name: nil)}, class_name: 'UnitGroupUnit', dependent: :destroy, foreign_key: 'course_id'
   has_and_belongs_to_many :resources, join_table: :unit_groups_resources
   has_many :unit_groups_student_resources, dependent: :destroy
   has_many :student_resources, through: :unit_groups_student_resources, source: :resource
   has_one :course_version, as: :content_root, dependent: :destroy
 
-  scope :with_associated_models, -> do
+  scope :with_associated_models, lambda do
     includes(
       [
         :plc_course,

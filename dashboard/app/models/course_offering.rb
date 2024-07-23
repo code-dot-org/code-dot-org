@@ -31,7 +31,7 @@
 class CourseOffering < ApplicationRecord
   include Curriculum::SharedCourseConstants
 
-  has_many :course_versions, -> {where(content_root_type: ['UnitGroup', 'Unit'])}
+  has_many :course_versions, lambda {where(content_root_type: ['UnitGroup', 'Unit'])}
   belongs_to :self_paced_pl_course_offering, class_name: 'CourseOffering', optional: true
 
   has_and_belongs_to_many :pd_workshops, class_name: 'Pd::Workshop', join_table: :course_offerings_pd_workshops, association_foreign_key: 'pd_workshop_id'

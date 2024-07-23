@@ -33,9 +33,9 @@ class Lesson < ApplicationRecord
 
   belongs_to :script, class_name: 'Unit', inverse_of: :lessons, optional: true
   belongs_to :lesson_group, optional: true
-  has_many :lesson_activities, -> {order(:position)}, dependent: :destroy
+  has_many :lesson_activities, lambda {order(:position)}, dependent: :destroy
   has_many :activity_sections, through: :lesson_activities
-  has_many :script_levels, -> {order(:chapter)}, foreign_key: 'stage_id', dependent: :destroy
+  has_many :script_levels, lambda {order(:chapter)}, foreign_key: 'stage_id', dependent: :destroy
   has_many :levels, through: :script_levels
   has_and_belongs_to_many :resources, join_table: :lessons_resources
   has_and_belongs_to_many :vocabularies, join_table: :lessons_vocabularies
@@ -87,9 +87,9 @@ class Lesson < ApplicationRecord
   # absolute_position of 3 but a relative_position of 1
   acts_as_list scope: :script, column: :absolute_position
 
-  validates_uniqueness_of :key, scope: :script_id, case_sensitive: true, message: ->(object, _data) do
+  validates_uniqueness_of :key, scope: :script_id, case_sensitive: true, message: lambda {|object, _data|
     "lesson with key #{object.key.inspect} is already taken within unit #{object.script&.name.inspect}"
-  end
+  }
 
   include CodespanOnlyMarkdownHelper
 

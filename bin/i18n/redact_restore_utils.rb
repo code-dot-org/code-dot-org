@@ -80,7 +80,7 @@ class RedactRestoreUtils
     redacted_data = I18nScriptUtils.parse_file(redacted) || {}
     return if redacted_data.empty?
 
-    restore_data = -> {RedactRestoreUtils.restore_data(source_data, redacted_data, plugins, format)}
+    restore_data = lambda {RedactRestoreUtils.restore_data(source_data, redacted_data, plugins, format)}
 
     if I18nScriptUtils.json_file?(dest)
       I18nScriptUtils.write_json_file(dest, restore_data.call)

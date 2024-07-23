@@ -57,7 +57,7 @@ module Pd::Application
 
     after_initialize :set_type_and_year
 
-    before_validation -> {self.status = 'unreviewed' unless status}
+    before_validation lambda {self.status = 'unreviewed' unless status}
     validate :status_is_valid_for_application_type
     validates_presence_of :type
     validates_presence_of :user_id, unless: proc {|application| application.application_type == PRINCIPAL_APPROVAL_APPLICATION}
@@ -72,7 +72,7 @@ module Pd::Application
     # After creation, an RP or admin can change the status to "accepted," which triggers update_accepted_data.
     before_save :update_accepted_date, if: :status_changed?
 
-    before_create :generate_application_guid, if: -> {application_guid.blank?}
+    before_create :generate_application_guid, if: lambda {application_guid.blank?}
     after_destroy :delete_unsent_email
 
     serialized_attrs %w(

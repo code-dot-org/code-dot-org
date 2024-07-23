@@ -31,7 +31,7 @@ module Api::V1::Pd::Application
     end
 
     # no log in required
-    test_user_gets_response_for :create, method: :put, user: nil, params: -> {@test_params}, response: :success
+    test_user_gets_response_for :create, method: :put, user: nil, params: lambda {@test_params}, response: :success
 
     test 'Updates user and application_guid upon submit' do
       principal = create :teacher

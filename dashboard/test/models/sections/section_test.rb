@@ -252,7 +252,7 @@ class SectionTest < ActiveSupport::TestCase
   end
 
   test "can create section with duplicate name" do
-    assert_difference -> {Section.count}, 2 do
+    assert_difference lambda {Section.count}, 2 do
       2.times do
         Section.create! @default_attrs
       end

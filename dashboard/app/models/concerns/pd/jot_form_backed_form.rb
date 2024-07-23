@@ -14,10 +14,10 @@ module Pd
     included do
       before_validation :map_answers_to_attributes, if: :answers_changed?
       validates_presence_of :form_id, :submission_id
-      after_initialize -> {assign_attributes self.class.static_attribute_values}, if: :new_record?
+      after_initialize lambda {assign_attributes self.class.static_attribute_values}, if: :new_record?
 
-      scope :placeholders, -> {where(answers: nil)}
-      scope :with_answers, -> {where.not(answers: nil)}
+      scope :placeholders, lambda {where(answers: nil)}
+      scope :with_answers, lambda {where.not(answers: nil)}
     end
 
     CACHE_TTL = 5.minutes.freeze

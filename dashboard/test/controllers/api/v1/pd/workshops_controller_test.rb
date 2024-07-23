@@ -354,23 +354,23 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     :show,
     name: 'workshop organizers cannot view a workshop they are not organizing',
     response: :forbidden,
-    user: -> {@workshop_organizer},
-    params: -> {{id: @standalone_workshop.id}}
+    user: lambda {@workshop_organizer},
+    params: lambda {{id: @standalone_workshop.id}}
   )
 
   test_user_gets_response_for(
     :show,
     name: 'program manager workshop organizers cannot view a workshop they are not organizing',
     response: :forbidden,
-    user: -> {@organizer},
-    params: -> {{id: @standalone_workshop.id}}
+    user: lambda {@organizer},
+    params: lambda {{id: @standalone_workshop.id}}
   )
 
   test_user_gets_response_for(
     :show,
     name: 'facilitators can view a workshop they are facilitating',
-    user: -> {@facilitator},
-    params: -> {{id: @workshop.id}}
+    user: lambda {@facilitator},
+    params: lambda {{id: @workshop.id}}
   ) do
     assert_equal @workshop.id, JSON.parse(@response.body)['id']
   end
@@ -379,8 +379,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     :show,
     name: 'facilitators cannot view a workshop they are not organizing',
     response: :forbidden,
-    user: -> {@facilitator},
-    params: -> {{id: @standalone_workshop.id}}
+    user: lambda {@facilitator},
+    params: lambda {{id: @standalone_workshop.id}}
   )
 
   test 'program managers can view a workshop associated with their regional partner' do
@@ -472,7 +472,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     method: :post,
     response: :forbidden,
     user: :facilitator,
-    params: -> {{pd_workshop: workshop_params}}
+    params: lambda {{pd_workshop: workshop_params}}
   )
 
   test 'csf facilitators can create csf workshops' do
@@ -631,8 +631,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     name: 'organizers cannot delete workshops they do not own',
     method: :delete,
     response: :forbidden,
-    user: -> {@workshop_organizer},
-    params: -> {{id: @standalone_workshop.id}}
+    user: lambda {@workshop_organizer},
+    params: lambda {{id: @standalone_workshop.id}}
   )
 
   test_user_gets_response_for(
@@ -640,8 +640,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     name: 'program manager organizers cannot delete workshops they do not own',
     method: :delete,
     response: :forbidden,
-    user: -> {@organizer},
-    params: -> {{id: @standalone_workshop.id}}
+    user: lambda {@organizer},
+    params: lambda {{id: @standalone_workshop.id}}
   )
 
   test_user_gets_response_for(
@@ -649,8 +649,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     name: 'facilitators cannot delete workshops',
     method: :delete,
     response: :forbidden,
-    user: -> {@facilitator},
-    params: -> {{id: @organizer_workshop.id}}
+    user: lambda {@facilitator},
+    params: lambda {{id: @organizer_workshop.id}}
   )
 
   # Action: Update
@@ -732,8 +732,8 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
     name: 'facilitators cannot update workshops they did not organize',
     method: :put,
     response: :forbidden,
-    user: -> {@facilitator},
-    params: -> {{id: @workshop.id, pd_workshop: workshop_params}}
+    user: lambda {@facilitator},
+    params: lambda {{id: @workshop.id, pd_workshop: workshop_params}}
   )
 
   test 'can update a workshop to be virtual with suppressed email' do
@@ -1091,7 +1091,7 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
 
   [:teacher, :user].each do |user_type|
     test_user_gets_response_for :index, response: :forbidden, user: user_type
-    test_user_gets_response_for :show, response: :forbidden, user: user_type, params: -> {{id: @organizer_workshop.id}}
+    test_user_gets_response_for :show, response: :forbidden, user: user_type, params: lambda {{id: @organizer_workshop.id}}
   end
 
   test 'anyone can see the K5 public map index' do
@@ -1102,46 +1102,46 @@ class Api::V1::Pd::WorkshopsControllerTest < ActionController::TestCase
   test_user_gets_response_for(
     :summary,
     name: 'facilitators can get summary for their workshops',
-    user: -> {@facilitator},
-    params: -> {{id: @workshop.id}}
+    user: lambda {@facilitator},
+    params: lambda {{id: @workshop.id}}
   )
 
   test_user_gets_response_for(
     :summary,
     name: 'facilitators cannot get summary for other workshops',
     response: :forbidden,
-    user: -> {@facilitator},
-    params: -> {{id: @standalone_workshop.id}}
+    user: lambda {@facilitator},
+    params: lambda {{id: @standalone_workshop.id}}
   )
 
   test_user_gets_response_for(
     :summary,
     name: 'organizers can get summary for their workshops',
-    user: -> {@workshop_organizer},
-    params: -> {{id: @organizer_workshop.id}}
+    user: lambda {@workshop_organizer},
+    params: lambda {{id: @organizer_workshop.id}}
   )
 
   test_user_gets_response_for(
     :summary,
     name: 'program manager organizers can get summary for their workshops',
-    user: -> {@organizer},
-    params: -> {{id: @workshop.id}}
+    user: lambda {@organizer},
+    params: lambda {{id: @workshop.id}}
   )
 
   test_user_gets_response_for(
     :summary,
     name: 'organizers cannot get summary for other workshops',
     response: :forbidden,
-    user: -> {@workshop_organizer},
-    params: -> {{id: @standalone_workshop.id}}
+    user: lambda {@workshop_organizer},
+    params: lambda {{id: @standalone_workshop.id}}
   )
 
   test_user_gets_response_for(
     :summary,
     name: 'program manager organizers cannot get summary for other workshops',
     response: :forbidden,
-    user: -> {@organizer},
-    params: -> {{id: @standalone_workshop.id}}
+    user: lambda {@organizer},
+    params: lambda {{id: @standalone_workshop.id}}
   )
 
   test 'summary' do

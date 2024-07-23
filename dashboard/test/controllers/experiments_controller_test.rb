@@ -23,7 +23,7 @@ class ExperimentsControllerTest < ActionController::TestCase
 
   test_redirect_to_sign_in_for(
     :set_course_experiment,
-    params: -> {{experiment_name: @pilot_name}}
+    params: lambda {{experiment_name: @pilot_name}}
   )
 
   test_user_gets_response_for(
@@ -32,7 +32,7 @@ class ExperimentsControllerTest < ActionController::TestCase
     response: :redirect,
     user: :student,
     # use proc syntax so we can pass in @pilot_name
-    params: -> {{experiment_name: @pilot_name}}
+    params: lambda {{experiment_name: @pilot_name}}
   ) do
     assert_equal flash[:alert], "Only teachers may join course experiments."
     assert_nil flash[:notice]
@@ -43,8 +43,8 @@ class ExperimentsControllerTest < ActionController::TestCase
     :set_course_experiment,
     name: 'teacher can set valid experiment name',
     response: :redirect,
-    user: -> {@teacher},
-    params: -> {{experiment_name: @pilot_name}}
+    user: lambda {@teacher},
+    params: lambda {{experiment_name: @pilot_name}}
   ) do
     assert_nil flash[:alert]
     assert_includes flash[:notice], "success"
@@ -56,7 +56,7 @@ class ExperimentsControllerTest < ActionController::TestCase
     name: 'teacher cannot set invalid experiment name',
     response: :redirect,
     user: :teacher,
-    params: -> {{experiment_name: 'invalid-experiment-name'}}
+    params: lambda {{experiment_name: 'invalid-experiment-name'}}
   ) do
     assert_includes flash[:alert], "Unknown experiment name"
     assert_nil flash[:notice]
@@ -65,7 +65,7 @@ class ExperimentsControllerTest < ActionController::TestCase
 
   test_redirect_to_sign_in_for(
     :set_single_user_experiment,
-    params: -> {{experiment_name: @pilot_name}}
+    params: lambda {{experiment_name: @pilot_name}}
   )
 
   test_user_gets_response_for(
@@ -73,7 +73,7 @@ class ExperimentsControllerTest < ActionController::TestCase
     name: 'single user can set valid experiment name',
     response: :redirect,
     user: :teacher,
-    params: -> {{experiment_name: @pilot_name}}
+    params: lambda {{experiment_name: @pilot_name}}
   ) do
     assert_nil flash[:alert]
     assert_includes flash[:notice], "You have successfully joined the experiment"
@@ -90,7 +90,7 @@ class ExperimentsControllerTest < ActionController::TestCase
     name: 'single user cannot set invalid experiment name',
     response: :redirect,
     user: :teacher,
-    params: -> {{experiment_name: 'invalid-experiment-name'}}
+    params: lambda {{experiment_name: 'invalid-experiment-name'}}
   ) do
     assert_includes flash[:alert], "not a valid experiment"
     assert_nil flash[:notice]
@@ -99,7 +99,7 @@ class ExperimentsControllerTest < ActionController::TestCase
 
   test_redirect_to_sign_in_for(
     :disable_single_user_experiment,
-    params: -> {{experiment_name: @pilot_name}}
+    params: lambda {{experiment_name: @pilot_name}}
   )
 
   test_user_gets_response_for(
@@ -107,7 +107,7 @@ class ExperimentsControllerTest < ActionController::TestCase
     name: 'single user cannot disable experiment they are not in',
     response: :redirect,
     user: :teacher,
-    params: -> {{experiment_name: 'invalid-experiment-name'}}
+    params: lambda {{experiment_name: 'invalid-experiment-name'}}
   ) do
     assert_includes flash[:alert], "not a valid experiment"
     assert_nil flash[:notice]
@@ -144,7 +144,7 @@ class ExperimentsControllerTest < ActionController::TestCase
     name: 'teacher cannot join experiment where allow_joining_via_url is false',
     response: :redirect,
     user: :teacher,
-    params: -> {{experiment_name: create(:pilot, allow_joining_via_url: false).name}}
+    params: lambda {{experiment_name: create(:pilot, allow_joining_via_url: false).name}}
   ) do
     assert_includes flash[:alert], "is not a valid experiment"
     assert_nil flash[:notice]
@@ -155,8 +155,8 @@ class ExperimentsControllerTest < ActionController::TestCase
     :set_single_user_experiment,
     name: 'teacher can join experiment where allow_joining_via_url is true',
     response: :redirect,
-    user: -> {@teacher},
-    params: -> {{experiment_name: @pilot_name}}
+    user: lambda {@teacher},
+    params: lambda {{experiment_name: @pilot_name}}
   ) do
     assert_nil flash[:alert]
     assert_includes flash[:notice], "success"

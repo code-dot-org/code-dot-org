@@ -83,17 +83,17 @@ class LearningGoalAiEvaluationFeedbacksControllerTest < ActionController::TestCa
     response_json.each {|feedback| assert_equal feedback["learning_goal_ai_evaluation_id"], @learning_goal_ai_evaluation.id}
   end
 
-  test_user_gets_response_for :create, params: -> {{learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id, aiFeedbackApproval: true}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-  test_user_gets_response_for :create, params: -> {{learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id, aiFeedbackApproval: true}}, user: :student, response: :forbidden
-  test_user_gets_response_for :create, params: -> {{learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id, aiFeedbackApproval: true}}, user: :teacher, response: :success
+  test_user_gets_response_for :create, params: lambda {{learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id, aiFeedbackApproval: true}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :create, params: lambda {{learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id, aiFeedbackApproval: true}}, user: :student, response: :forbidden
+  test_user_gets_response_for :create, params: lambda {{learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id, aiFeedbackApproval: true}}, user: :teacher, response: :success
 
-  test_user_gets_response_for :update, params: -> {{id: @learning_goal_ai_evaluation_feedback.id, learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id, aiFeedbackApproval: true}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-  test_user_gets_response_for :update, params: -> {{id: @learning_goal_ai_evaluation_feedback.id, learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id, aiFeedbackApproval: true}}, user: :student, response: :forbidden
-  test_user_gets_response_for :update, params: -> {{id: @learning_goal_ai_evaluation_feedback.id, learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id, aiFeedbackApproval: true}}, user: -> {@teacher}, response: :success
-  test_user_gets_response_for :update, params: -> {{id: @learning_goal_ai_evaluation_feedback.id, learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id, aiFeedbackApproval: true}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :update, params: lambda {{id: @learning_goal_ai_evaluation_feedback.id, learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id, aiFeedbackApproval: true}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :update, params: lambda {{id: @learning_goal_ai_evaluation_feedback.id, learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id, aiFeedbackApproval: true}}, user: :student, response: :forbidden
+  test_user_gets_response_for :update, params: lambda {{id: @learning_goal_ai_evaluation_feedback.id, learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id, aiFeedbackApproval: true}}, user: lambda {@teacher}, response: :success
+  test_user_gets_response_for :update, params: lambda {{id: @learning_goal_ai_evaluation_feedback.id, learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id, aiFeedbackApproval: true}}, user: :teacher, response: :forbidden
 
-  test_user_gets_response_for :get_by_ai_evaluation_id, params: -> {{learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-  test_user_gets_response_for :get_by_ai_evaluation_id, params: -> {{learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id}}, user: :student, response: :forbidden
-  test_user_gets_response_for :get_by_ai_evaluation_id, params: -> {{learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id}}, user: -> {@teacher}, response: :success
-  test_user_gets_response_for :get_by_ai_evaluation_id, params: -> {{learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id}}, user: :teacher, response: :not_found
+  test_user_gets_response_for :get_by_ai_evaluation_id, params: lambda {{learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :get_by_ai_evaluation_id, params: lambda {{learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id}}, user: :student, response: :forbidden
+  test_user_gets_response_for :get_by_ai_evaluation_id, params: lambda {{learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id}}, user: lambda {@teacher}, response: :success
+  test_user_gets_response_for :get_by_ai_evaluation_id, params: lambda {{learningGoalAiEvaluationId: @learning_goal_ai_evaluation.id}}, user: :teacher, response: :not_found
 end

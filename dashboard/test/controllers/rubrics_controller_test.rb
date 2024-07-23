@@ -39,10 +39,10 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   # new page is levelbuilder only
-  test_user_gets_response_for :new, params: -> {{lessonId: @lesson.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-  test_user_gets_response_for :new, params: -> {{lessonId: @lesson.id}}, user: :student, response: :forbidden
-  test_user_gets_response_for :new, params: -> {{lessonId: @lesson.id}}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :new, params: -> {{lessonId: @lesson.id}}, user: :levelbuilder, response: :success
+  test_user_gets_response_for :new, params: lambda {{lessonId: @lesson.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :new, params: lambda {{lessonId: @lesson.id}}, user: :student, response: :forbidden
+  test_user_gets_response_for :new, params: lambda {{lessonId: @lesson.id}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :new, params: lambda {{lessonId: @lesson.id}}, user: :levelbuilder, response: :success
 
   test "create Rubric and Learning Goals with valid params" do
     sign_in @levelbuilder
@@ -1088,7 +1088,7 @@ class RubricsControllerTest < ActionController::TestCase
 
     s3_client.stub_responses(
       :get_object,
-      ->(context) do
+      lambda do |context|
         key = context.params[:key]
         obj = bucket[key]
         raise AiRubricConfig::StubNoSuchKey.new(key) unless obj

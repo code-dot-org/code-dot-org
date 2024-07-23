@@ -32,13 +32,13 @@ class QueuedAccountPurge < ApplicationRecord
   # Un-scope the user association to always include soft-deleted users.
   # This lets us say `joins(:user)` below and not get the `deleted_at is null`
   # part of the generated query.
-  belongs_to :user, -> {with_deleted}, optional: true
+  belongs_to :user, lambda {with_deleted}, optional: true
 
   # Some errors are known to be intermittent, such as external services being temporarily
   # unavailable. If an account purge was queued for one of these reasons, our system can
   # automatically retry it on the next run without developer intervention.
   AUTO_RETRYABLE_REASONS = %w{Net::ReadTimeout}
-  scope :needing_manual_review, -> {where.not(reason_for_review: AUTO_RETRYABLE_REASONS)}
+  scope :needing_manual_review, lambda {where.not(reason_for_review: AUTO_RETRYABLE_REASONS)}
 
   # Used by developers to resolve an account purge queued for manual review,
   # after they've investigated the account and decided it's ready to purge.

@@ -49,13 +49,13 @@ class Follower < ApplicationRecord
     end
   end
 
-  validate :cannot_follow_yourself, unless: -> {deleted?}
-  validate :teacher_must_be_teacher, unless: -> {deleted?}
+  validate :cannot_follow_yourself, unless: lambda {deleted?}
+  validate :teacher_must_be_teacher, unless: lambda {deleted?}
   validate :student_cannot_be_admin
   validate :pl_participant_cannot_have_family_name
 
-  validates_presence_of :student_user, unless: -> {deleted?}
-  validates_presence_of :section, unless: -> {deleted?}
+  validates_presence_of :student_user, unless: lambda {deleted?}
+  validates_presence_of :section, unless: lambda {deleted?}
 
   after_create :assign_script
   def assign_script

@@ -44,15 +44,15 @@ class Api::V1::Projects::SectionProjectsControllerTest < ActionController::TestC
     :index,
     name: 'student cannot access section projects',
     response: :forbidden,
-    user: -> {@student},
-    params: -> {{section_id: @section.id}}
+    user: lambda {@student},
+    params: lambda {{section_id: @section.id}}
   )
 
   test_user_gets_response_for(
     :index,
     name: 'teacher can access their own section projects',
-    user: -> {@teacher},
-    params: -> {{section_id: @section.id}}
+    user: lambda {@teacher},
+    params: lambda {{section_id: @section.id}}
   )
 
   test_user_gets_response_for(
@@ -60,14 +60,14 @@ class Api::V1::Projects::SectionProjectsControllerTest < ActionController::TestC
     name: 'teacher cannot access another teachers section projects',
     response: :forbidden,
     user: :teacher,
-    params: -> {{section_id: @section.id}}
+    params: lambda {{section_id: @section.id}}
   )
 
   test_user_gets_response_for(
     :index,
     name: 'admin can access section projects',
     user: :admin,
-    params: -> {{section_id: @section.id}}
+    params: lambda {{section_id: @section.id}}
   )
 
   test 'section projects details are correct' do

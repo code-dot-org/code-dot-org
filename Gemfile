@@ -322,7 +322,7 @@ gem 'recaptcha', require: 'recaptcha/rails'
 gem 'loofah', '~> 2.19.1'
 
 # Install pg gem only on specific production hosts and the i18n-dev server.
-require_pg = -> do
+require_pg = lambda do
   require 'socket'
   %w[production-daemon production-console i18n-dev].include?(Socket.gethostname)
 end

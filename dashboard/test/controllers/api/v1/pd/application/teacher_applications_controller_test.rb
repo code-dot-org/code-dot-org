@@ -29,46 +29,46 @@ module Api::V1::Pd::Application
     end
 
     test_redirect_to_sign_in_for :create
-    test_user_gets_response_for :create, user: :student, params: -> {@test_params}, response: :forbidden
-    test_user_gets_response_for :create, user: :teacher, params: -> {@test_params}, response: :success
+    test_user_gets_response_for :create, user: :student, params: lambda {@test_params}, response: :forbidden
+    test_user_gets_response_for :create, user: :teacher, params: lambda {@test_params}, response: :success
 
-    test_redirect_to_sign_in_for :update, params: -> {{id: @application.id}}
-    test_user_gets_response_for :update, user: :student, params: -> {{id: @application.id}}, response: :forbidden
+    test_redirect_to_sign_in_for :update, params: lambda {{id: @application.id}}
+    test_user_gets_response_for :update, user: :student, params: lambda {{id: @application.id}}, response: :forbidden
 
     test_user_gets_response_for :update,
       name: 'a teacher cannot update an application they do not own',
       user: :teacher,
-      params: -> {{id: @application.id}},
+      params: lambda {{id: @application.id}},
       response: :forbidden
 
     test_user_gets_response_for :update,
       name: 'a teacher can update an application they own',
-      user:  -> {User.find_by(id: @application.user_id)},
-      params: -> {{id: @application.id}},
+      user:  lambda {User.find_by(id: @application.user_id)},
+      params: lambda {{id: @application.id}},
       response: :success
 
     test_user_gets_response_for :change_principal_approval_requirement,
                                 name: 'program managers can set change_principal_approval_requirement for applications they own',
-                                user: -> {@program_manager},
-                                params: -> {{id: @application.id, principal_approval_not_required: true}},
+                                user: lambda {@program_manager},
+                                params: lambda {{id: @application.id, principal_approval_not_required: true}},
                                 response: :success
 
     test_user_gets_response_for :change_principal_approval_requirement,
                                 name: 'program managers cannot set change_principal_approval_requirement for applications they do not own',
                                 user: :program_manager,
-                                params: -> {{id: @application.id}},
+                                params: lambda {{id: @application.id}},
                                 response: :forbidden
 
     test_user_gets_response_for :send_principal_approval,
       name: 'program managers can send_principal_approval for applications they own',
-      user: -> {@program_manager},
-      params: -> {{id: @application.id}},
+      user: lambda {@program_manager},
+      params: lambda {{id: @application.id}},
       response: :success
 
     test_user_gets_response_for :send_principal_approval,
       name: 'program managers can not send_principal_approval for applications they do not own',
       user: :program_manager,
-      params: -> {{id: @application.id}},
+      params: lambda {{id: @application.id}},
       response: :forbidden
 
     test 'sends email on successful create' do

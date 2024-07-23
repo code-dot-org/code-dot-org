@@ -56,14 +56,14 @@ class ProgrammingMethodsControllerTest < ActionController::TestCase
       @update_params = {id: @programming_method.id, name: 'new name'}
     end
 
-    test_user_gets_response_for :edit, params: -> {{id: @programming_method.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-    test_user_gets_response_for :edit, params: -> {{id: @programming_method.id}}, user: :student, response: :forbidden
-    test_user_gets_response_for :edit, params: -> {{id: @programming_method.id}}, user: :teacher, response: :forbidden
-    test_user_gets_response_for :edit, params: -> {{id: @programming_method.id}}, user: :levelbuilder, response: :success
+    test_user_gets_response_for :edit, params: lambda {{id: @programming_method.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :edit, params: lambda {{id: @programming_method.id}}, user: :student, response: :forbidden
+    test_user_gets_response_for :edit, params: lambda {{id: @programming_method.id}}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :edit, params: lambda {{id: @programming_method.id}}, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :update, params: -> {@update_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-    test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
-    test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
-    test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
+    test_user_gets_response_for :update, params: lambda {@update_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :update, params: lambda {@update_params}, user: :student, response: :forbidden
+    test_user_gets_response_for :update, params: lambda {@update_params}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :update, params: lambda {@update_params}, user: :levelbuilder, response: :success
   end
 end

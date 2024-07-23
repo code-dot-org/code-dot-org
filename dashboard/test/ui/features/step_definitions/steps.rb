@@ -514,14 +514,14 @@ end
 # Prefer clicking with selenium over jquery, since selenium clicks will fail
 # if the target element is obscured by another element.
 When /^I click "([^"]*)"( once it exists)?(?: to load a new (page|tab))?$/ do |selector, wait, load|
-  find = -> {@browser.find_element(:css, selector)}
+  find = lambda {@browser.find_element(:css, selector)}
   element = wait ? wait_until(&find) : find.call
   page_load(load) {element.click}
 end
 
 When /^I click "([^"]*)" if it is visible$/ do |selector|
   if @browser.execute_script(jquery_is_element_visible(selector))
-    find = -> {@browser.find_element(:css, selector)}
+    find = lambda {@browser.find_element(:css, selector)}
     element = find.call
     element.click
   end

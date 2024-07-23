@@ -20,7 +20,7 @@ class Api::V1::Projects::PublicGalleryControllerTest < ActionController::TestCas
   test_user_gets_response_for(
     :index,
     name: 'anonymous user can list all published projects',
-    params: -> {{project_type: 'all'}},
+    params: lambda {{project_type: 'all'}},
   )
 
   test 'project details are correct listing all published featured projects' do

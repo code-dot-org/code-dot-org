@@ -35,11 +35,11 @@ class CodeReview < ApplicationRecord
   # See migration 20220627214005_add_active_to_code_reviews.rb for more information
   # about this unique index and the active and open virtual columns
   validates_uniqueness_of :user_id, scope: [:project_id],
-    conditions: -> {where(closed_at: nil)},
+    conditions: lambda {where(closed_at: nil)},
     message: 'already has an open code review for this project'
 
   # Scope that includes only open code reviews
-  scope :open_reviews, -> {where(closed_at: nil)}
+  scope :open_reviews, lambda {where(closed_at: nil)}
 
   def self.open_for_project?(channel:)
     return false unless channel

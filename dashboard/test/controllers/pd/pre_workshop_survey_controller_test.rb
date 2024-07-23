@@ -14,8 +14,8 @@ class Pd::PreWorkshopSurveyControllerTest < ActionController::TestCase
 
   test_user_gets_response_for(
     :new,
-    user: -> {@teacher},
-    params: -> {{enrollment_code: @enrollment.code}},
+    user: lambda {@teacher},
+    params: lambda {{enrollment_code: @enrollment.code}},
     response: :success
   )
 
@@ -23,7 +23,7 @@ class Pd::PreWorkshopSurveyControllerTest < ActionController::TestCase
     :new,
     name: 'login not required',
     user: nil,
-    params: -> {{enrollment_code: @enrollment.code}},
+    params: lambda {{enrollment_code: @enrollment.code}},
     response: :success
   )
 
@@ -31,7 +31,7 @@ class Pd::PreWorkshopSurveyControllerTest < ActionController::TestCase
     :new,
     name: 'still works when logged into the wrong account',
     user: :teacher,
-    params: -> {{enrollment_code: @enrollment.code}},
+    params: lambda {{enrollment_code: @enrollment.code}},
     response: :success
   )
 

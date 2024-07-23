@@ -22,16 +22,16 @@ class CourseOfferingsControllerTest < ActionController::TestCase
   end
 
   # only levelbuilders can edit or update course offerings
-  test_user_gets_response_for :edit, params: -> {{key: @course_offering.key}}, user: nil, response: :redirect
-  test_user_gets_response_for :edit, params: -> {{key: @course_offering.key}}, user: :student, response: :forbidden
-  test_user_gets_response_for :edit, params: -> {{key: @course_offering.key}}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :edit, params: -> {{key: @course_offering.key}}, user: :levelbuilder, response: :success
+  test_user_gets_response_for :edit, params: lambda {{key: @course_offering.key}}, user: nil, response: :redirect
+  test_user_gets_response_for :edit, params: lambda {{key: @course_offering.key}}, user: :student, response: :forbidden
+  test_user_gets_response_for :edit, params: lambda {{key: @course_offering.key}}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :edit, params: lambda {{key: @course_offering.key}}, user: :levelbuilder, response: :success
 
   # only levelbuilders can update
-  test_user_gets_response_for :update, params: -> {{key: @course_offering.key}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-  test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
-  test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
-  test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
+  test_user_gets_response_for :update, params: lambda {{key: @course_offering.key}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :update, params: lambda {@update_params}, user: :student, response: :forbidden
+  test_user_gets_response_for :update, params: lambda {@update_params}, user: :teacher, response: :forbidden
+  test_user_gets_response_for :update, params: lambda {@update_params}, user: :levelbuilder, response: :success
 
   test 'update course offering updates fields' do
     sign_in @levelbuilder

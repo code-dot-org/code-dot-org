@@ -116,7 +116,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
     end
 
     it 'updates user CAP attributes with "grace period" compliance state' do
-      assert_changes -> {user.properties} do
+      assert_changes lambda {user.properties} do
         start_grace_period
       end
 
@@ -168,7 +168,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
     end
 
     it 'updates user CAP attributes with "lock out" compliance state' do
-      assert_changes -> {user.properties} do
+      assert_changes lambda {user.properties} do
         lock_out
       end
 
@@ -226,13 +226,13 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
     end
 
     it 'removes user CAP compliance state' do
-      assert_changes -> {user.reload.child_account_compliance_state}, from: Policies::ChildAccount::ComplianceState::GRACE_PERIOD, to: nil do
+      assert_changes lambda {user.reload.child_account_compliance_state}, from: Policies::ChildAccount::ComplianceState::GRACE_PERIOD, to: nil do
         remove_user_cap_compliance_state
       end
     end
 
     it 'updates user CAP compliance state last updated date' do
-      assert_changes -> {user.reload.child_account_compliance_state_last_updated}, from: user_cap_compliance_updated_at.iso8601(3), to: DateTime.now.iso8601(3) do
+      assert_changes lambda {user.reload.child_account_compliance_state_last_updated}, from: user_cap_compliance_updated_at.iso8601(3), to: DateTime.now.iso8601(3) do
         remove_user_cap_compliance_state
       end
     end

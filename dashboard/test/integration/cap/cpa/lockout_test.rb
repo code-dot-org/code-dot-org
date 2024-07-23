@@ -125,7 +125,7 @@ module CAP
               end
 
               # No new CAP user events have been logged
-              assert_no_difference -> {CAP::UserEvent.where(user: student).count} do
+              assert_no_difference lambda {CAP::UserEvent.where(user: student).count} do
                 assert_student_in_grace_period
               end
 
@@ -187,7 +187,7 @@ module CAP
             end
 
             it 'student should not be locked out' do
-              assert_changes -> {Policies::ChildAccount::ComplianceState.grace_period?(student.reload)}, from: true, to: false do
+              assert_changes lambda {Policies::ChildAccount::ComplianceState.grace_period?(student.reload)}, from: true, to: false do
                 assert_student_is_not_locked_out
 
                 assert_latest_student_cap_event(

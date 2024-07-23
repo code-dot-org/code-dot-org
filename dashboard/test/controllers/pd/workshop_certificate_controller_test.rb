@@ -20,8 +20,8 @@ class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
   test_user_gets_response_for(
     :generate_certificate,
     name: 'Generates certificate for a real user',
-    user: -> {@user},
-    params: -> {{enrollment_code: @enrollment.code}}
+    user: lambda {@user},
+    params: lambda {{enrollment_code: @enrollment.code}}
   )
 
   test 'Generates no certificate for an invalid enrollment' do
@@ -167,5 +167,5 @@ class Pd::WorkshopCertificateControllerTest < ActionController::TestCase
     mock_image
   end
 
-  test_redirect_to_sign_in_for :generate_certificate, params: -> {{enrollment_code: @enrollment.code}}
+  test_redirect_to_sign_in_for :generate_certificate, params: lambda {{enrollment_code: @enrollment.code}}
 end

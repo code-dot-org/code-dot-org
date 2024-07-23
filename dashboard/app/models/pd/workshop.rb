@@ -41,7 +41,7 @@ class Pd::Workshop < ApplicationRecord
   belongs_to :organizer, class_name: 'User', optional: true
   has_and_belongs_to_many :facilitators, class_name: 'User', join_table: 'pd_workshops_facilitators', foreign_key: 'pd_workshop_id', association_foreign_key: 'user_id'
 
-  has_many :sessions, -> {order :start}, class_name: 'Pd::Session', dependent: :destroy, foreign_key: 'pd_workshop_id'
+  has_many :sessions, lambda {order :start}, class_name: 'Pd::Session', dependent: :destroy, foreign_key: 'pd_workshop_id'
   accepts_nested_attributes_for :sessions, allow_destroy: true
 
   has_many :enrollments, class_name: 'Pd::Enrollment', dependent: :destroy, foreign_key: 'pd_workshop_id'
@@ -89,10 +89,10 @@ class Pd::Workshop < ApplicationRecord
     inclusion: {in: FUNDING_TYPES, if: :funded_csf?},
     absence: {unless: :funded_csf?}
 
-  before_save :process_location, if: -> {location_address_changed?}
+  before_save :process_location, if: lambda {location_address_changed?}
   auto_strip_attributes :location_name, :location_address
 
-  before_save :assign_regional_partner, if: -> {organizer_id_changed? && !regional_partner_id?}
+  before_save :assign_regional_partner, if: lambda {organizer_id_changed? && !regional_partner_id?}
   def assign_regional_partner
     self.regional_partner = organizer.try {|o| o.regional_partners.first}
   end
@@ -191,7 +191,7 @@ class Pd::Workshop < ApplicationRecord
     end
   end
 
-  scope :group_by_id, -> {group('pd_workshops.id')}
+  scope :group_by_id, lambda {group('pd_workshops.id')}
 
   # Filters by scheduled start date (date of first session)
   def self.scheduled_start_on_or_before(date)
@@ -203,13 +203,13 @@ class Pd::Workshop < ApplicationRecord
     joins(:sessions).group_by_id.having('(DATE(MIN(start)) >= ?)', date)
   end
 
-  scope :in_year, ->(year) do
+  scope :in_year, lambda {|year|
     scheduled_start_on_or_after(Date.new(year)).
       scheduled_start_on_or_before(Date.new(year + 1))
-  end
+  }
 
   # Filters to workshops that are scheduled on or after today and have not yet ended
-  scope :future, -> {scheduled_start_on_or_after(Time.zone.today).where(ended_at: nil)}
+  scope :future, lambda {scheduled_start_on_or_after(Time.zone.today).where(ended_at: nil)}
 
   # Orders by the scheduled start date (date of the first session),
   # @param :desc [Boolean] optional - when true, sort descending

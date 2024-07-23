@@ -28,7 +28,7 @@ class Forms::ChildAccount::ParentalPermissionRequestTest < ActiveSupport::TestCa
     test 'updates and returns existing parental permission request resends count' do
       permission_request = create(:parental_permission_request, user: @child_account, parent_email: @parent_email)
 
-      assert_difference -> {permission_request.reload.resends_sent}, 1 do
+      assert_difference lambda {permission_request.reload.resends_sent}, 1 do
         assert @permission_request_form.request
         assert_equal permission_request, @permission_request_form.record
       end
@@ -177,7 +177,7 @@ class Forms::ChildAccount::ParentalPermissionRequestTest < ActiveSupport::TestCa
       expected_mail_error = 'expected_mail_error'
       ParentMailer.expects(:parent_permission_request).raises(expected_mail_error)
 
-      assert_no_difference -> {permission_request.reload.resends_sent} do
+      assert_no_difference lambda {permission_request.reload.resends_sent} do
         assert_raises(expected_mail_error) {@permission_request_form.request}
       end
     end
@@ -186,7 +186,7 @@ class Forms::ChildAccount::ParentalPermissionRequestTest < ActiveSupport::TestCa
       expected_mail_error = 'expected_mail_error'
       ParentMailer.expects(:parent_permission_request).raises(expected_mail_error)
 
-      assert_no_change -> {@child_account.reload.child_account_compliance_state}  do
+      assert_no_change lambda {@child_account.reload.child_account_compliance_state}  do
         assert_raises(expected_mail_error) {@permission_request_form.request}
       end
     end

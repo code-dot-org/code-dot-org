@@ -20,7 +20,7 @@ module Pd::Application
     self.table_name = 'pd_application_emails'
 
     belongs_to :application, class_name: 'Pd::Application::ApplicationBase', foreign_key: 'pd_application_id', optional: true
-    scope :unsent, -> {where(sent_at: nil)}
+    scope :unsent, lambda {where(sent_at: nil)}
 
     def send!
       application.deliver_email self

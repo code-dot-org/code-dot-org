@@ -9,7 +9,7 @@ module UserPermissionGrantee
 
   included do
     has_many :permissions, class_name: 'UserPermission', dependent: :destroy
-    before_save :log_admin_save, if: -> {admin_changed? && UserPermissionGrantee.should_log?}
+    before_save :log_admin_save, if: lambda {admin_changed? && UserPermissionGrantee.should_log?}
   end
 
   # @param permission [UserPermission] the permission to query.

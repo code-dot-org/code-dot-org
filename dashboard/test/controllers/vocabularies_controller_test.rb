@@ -95,14 +95,14 @@ class VocabulariesControllerTest < ActionController::TestCase
       Vocabulary.any_instance.stubs(:serialize_scripts)
     end
 
-    test_user_gets_response_for :create, params: -> {@new_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-    test_user_gets_response_for :create, params: -> {@new_params}, user: :student, response: :forbidden
-    test_user_gets_response_for :create, params: -> {@new_params}, user: :teacher, response: :forbidden
-    test_user_gets_response_for :create, params: -> {@new_params}, user: :levelbuilder, response: :success
+    test_user_gets_response_for :create, params: lambda {@new_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :create, params: lambda {@new_params}, user: :student, response: :forbidden
+    test_user_gets_response_for :create, params: lambda {@new_params}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :create, params: lambda {@new_params}, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :update, params: -> {@update_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-    test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
-    test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
-    test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
+    test_user_gets_response_for :update, params: lambda {@update_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :update, params: lambda {@update_params}, user: :student, response: :forbidden
+    test_user_gets_response_for :update, params: lambda {@update_params}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :update, params: lambda {@update_params}, user: :levelbuilder, response: :success
   end
 end

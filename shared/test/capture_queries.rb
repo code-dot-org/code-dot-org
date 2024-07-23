@@ -6,7 +6,7 @@ module CaptureQueries
     @output ||= StringIO.new
     @logger ||= Logger.new(@output).tap do |l|
       l.level = Logger::DEBUG
-      l.formatter = ->(*, msg) {"#{msg}\n"}
+      l.formatter = lambda {|*, msg| "#{msg}\n"}
     end
   end
 

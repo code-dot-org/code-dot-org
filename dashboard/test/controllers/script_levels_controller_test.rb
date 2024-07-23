@@ -2259,117 +2259,117 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   no_access_msg = "You don&#39;t have access to this level."
 
   test_user_gets_response_for :show, response: :redirect, user: nil,
-    params: -> {script_level_params(@pilot_script_level)},
+    params: lambda {script_level_params(@pilot_script_level)},
     name: 'signed out user cannot view pilot script level'
 
   test_user_gets_response_for(:show, response: :success, user: :student,
-    params: -> {script_level_params(@pilot_script_level)},
+    params: lambda {script_level_params(@pilot_script_level)},
     name: 'student cannot view pilot script level'
   ) do
     assert_includes(response.body, no_access_msg)
   end
 
   test_user_gets_response_for(:show, response: :success, user: :teacher,
-                              params: -> {script_level_params(@pilot_pl_script_level)},
+                              params: lambda {script_level_params(@pilot_pl_script_level)},
                               name: 'participant cannot view pilot script level'
   ) do
     assert_includes(response.body, no_access_msg)
   end
 
   test_user_gets_response_for(:show, response: :success, user: :teacher,
-    params: -> {script_level_params(@pilot_script_level)},
+    params: lambda {script_level_params(@pilot_script_level)},
     name: 'teacher without pilot access cannot view pilot script level'
   ) do
     assert_includes(response.body, no_access_msg)
   end
 
   test_user_gets_response_for(:show, response: :success, user: :facilitator,
-                              params: -> {script_level_params(@pilot_script_level)},
+                              params: lambda {script_level_params(@pilot_script_level)},
                               name: 'instructor without pilot access cannot view pilot script level'
   ) do
     assert_includes(response.body, no_access_msg)
   end
 
-  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_teacher},
-    params: -> {script_level_params(@pilot_script_level)},
+  test_user_gets_response_for(:show, response: :success, user: lambda {@pilot_teacher},
+    params: lambda {script_level_params(@pilot_script_level)},
     name: 'pilot teacher can view pilot script level'
   ) do
     refute response.body.include? no_access_msg
   end
 
-  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_instructor},
-                              params: -> {script_level_params(@pilot_pl_script_level)},
+  test_user_gets_response_for(:show, response: :success, user: lambda {@pilot_instructor},
+                              params: lambda {script_level_params(@pilot_pl_script_level)},
                               name: 'pilot instructor can view pilot script level'
   ) do
     refute response.body.include? no_access_msg
   end
 
-  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_student},
-    params: -> {script_level_params(@pilot_script_level)},
+  test_user_gets_response_for(:show, response: :success, user: lambda {@pilot_student},
+    params: lambda {script_level_params(@pilot_script_level)},
     name: 'pilot student can view pilot script level'
   ) do
     refute response.body.include? no_access_msg
   end
 
-  test_user_gets_response_for(:show, response: :success, user: -> {@pilot_participant},
-                              params: -> {script_level_params(@pilot_pl_script_level)},
+  test_user_gets_response_for(:show, response: :success, user: lambda {@pilot_participant},
+                              params: lambda {script_level_params(@pilot_pl_script_level)},
                               name: 'pilot participant can view pilot script level'
   ) do
     refute response.body.include? no_access_msg
   end
 
   test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
-    params: -> {script_level_params(@pilot_script_level)},
+    params: lambda {script_level_params(@pilot_script_level)},
     name: 'levelbuilder can view pilot script level'
   ) do
     refute response.body.include? no_access_msg
   end
 
   test_user_gets_response_for :show, response: :redirect, user: nil,
-                              params: -> {script_level_params(@in_development_script_level)},
+                              params: lambda {script_level_params(@in_development_script_level)},
                               name: 'signed out user cannot view in_development script level'
 
   test_user_gets_response_for(:show, response: :success, user: :student,
-                              params: -> {script_level_params(@in_development_script_level)},
+                              params: lambda {script_level_params(@in_development_script_level)},
                               name: 'student cannot view in_development script level'
   ) do
     assert_includes(response.body, no_access_msg)
   end
 
   test_user_gets_response_for(:show, response: :success, user: :teacher,
-                              params: -> {script_level_params(@in_development_script_level)},
+                              params: lambda {script_level_params(@in_development_script_level)},
                               name: 'teacher access cannot view in_development script level'
   ) do
     assert_includes(response.body, no_access_msg)
   end
 
   test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
-                              params: -> {script_level_params(@in_development_script_level)},
+                              params: lambda {script_level_params(@in_development_script_level)},
                               name: 'levelbuilder can view in_development script level'
   ) do
     refute response.body.include? no_access_msg
   end
 
   test_user_gets_response_for :show, response: :redirect, user: nil,
-                              params: -> {script_level_params(@pl_script_level)},
+                              params: lambda {script_level_params(@pl_script_level)},
                               name: 'signed out user cannot view pl script level'
 
   test_user_gets_response_for(:show, response: :success, user: :student,
-                              params: -> {script_level_params(@pl_script_level)},
+                              params: lambda {script_level_params(@pl_script_level)},
                               name: 'student cannot view pl script level'
   ) do
     assert_includes(response.body, no_access_msg)
   end
 
   test_user_gets_response_for(:show, response: :success, user: :teacher,
-                              params: -> {script_level_params(@pl_script_level)},
+                              params: lambda {script_level_params(@pl_script_level)},
                               name: 'teacher can view pl script level'
   ) do
     refute response.body.include? no_access_msg
   end
 
   test_user_gets_response_for(:show, response: :success, user: :levelbuilder,
-                              params: -> {script_level_params(@pl_script_level)},
+                              params: lambda {script_level_params(@pl_script_level)},
                               name: 'levelbuilder can view pl script level'
   ) do
     refute response.body.include? no_access_msg

@@ -8,8 +8,8 @@ require "cdo/honeybadger"
 require 'metrics/events'
 
 class LtiV1Controller < ApplicationController
-  before_action -> {redirect_to lti_v1_integrations_path, alert: I18n.t('lti.integration.early_access.closed')},
-                if: -> {Policies::Lti.early_access_closed?}, only: :create_integration
+  before_action lambda {redirect_to lti_v1_integrations_path, alert: I18n.t('lti.integration.early_access.closed')},
+                if: lambda {Policies::Lti.early_access_closed?}, only: :create_integration
 
   # Don't require an authenticity token because LTI Platforms POST to this
   # controller.

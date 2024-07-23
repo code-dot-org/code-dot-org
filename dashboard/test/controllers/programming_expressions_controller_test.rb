@@ -278,39 +278,39 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     test_user_gets_response_for :new, user: :teacher, response: :forbidden
     test_user_gets_response_for :new, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :create, params: -> {{name: 'name'}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-    test_user_gets_response_for :create, params: -> {{name: 'name'}}, user: :student, response: :forbidden
-    test_user_gets_response_for :create, params: -> {{name: 'name'}}, user: :teacher, response: :forbidden
-    test_user_gets_response_for :create, params: -> {{name: 'name'}}, user: :levelbuilder, response: :success
+    test_user_gets_response_for :create, params: lambda {{name: 'name'}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :create, params: lambda {{name: 'name'}}, user: :student, response: :forbidden
+    test_user_gets_response_for :create, params: lambda {{name: 'name'}}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :create, params: lambda {{name: 'name'}}, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :edit, params: -> {{id: @programming_expression.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-    test_user_gets_response_for :edit, params: -> {{id: @programming_expression.id}}, user: :student, response: :forbidden
-    test_user_gets_response_for :edit, params: -> {{id: @programming_expression.id}}, user: :teacher, response: :forbidden
-    test_user_gets_response_for :edit, params: -> {{id: @programming_expression.id}}, user: :levelbuilder, response: :success
+    test_user_gets_response_for :edit, params: lambda {{id: @programming_expression.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :edit, params: lambda {{id: @programming_expression.id}}, user: :student, response: :forbidden
+    test_user_gets_response_for :edit, params: lambda {{id: @programming_expression.id}}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :edit, params: lambda {{id: @programming_expression.id}}, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :update, params: -> {@update_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-    test_user_gets_response_for :update, params: -> {@update_params}, user: :student, response: :forbidden
-    test_user_gets_response_for :update, params: -> {@update_params}, user: :teacher, response: :forbidden
-    test_user_gets_response_for :update, params: -> {@update_params}, user: :levelbuilder, response: :success
+    test_user_gets_response_for :update, params: lambda {@update_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :update, params: lambda {@update_params}, user: :student, response: :forbidden
+    test_user_gets_response_for :update, params: lambda {@update_params}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :update, params: lambda {@update_params}, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :clone, params: -> {@clone_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-    test_user_gets_response_for :clone, params: -> {@clone_params}, user: :student, response: :forbidden
-    test_user_gets_response_for :clone, params: -> {@clone_params}, user: :teacher, response: :forbidden
-    test_user_gets_response_for :clone, params: -> {@clone_params}, user: :levelbuilder, response: :success
+    test_user_gets_response_for :clone, params: lambda {@clone_params}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :clone, params: lambda {@clone_params}, user: :student, response: :forbidden
+    test_user_gets_response_for :clone, params: lambda {@clone_params}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :clone, params: lambda {@clone_params}, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :destroy, params: -> {{id: @programming_expression.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-    test_user_gets_response_for :destroy, params: -> {{id: @programming_expression.id}}, user: :student, response: :forbidden
-    test_user_gets_response_for :destroy, params: -> {{id: @programming_expression.id}}, user: :teacher, response: :forbidden
-    test_user_gets_response_for :destroy, params: -> {{id: @programming_expression.id}}, user: :levelbuilder, response: :success
+    test_user_gets_response_for :destroy, params: lambda {{id: @programming_expression.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+    test_user_gets_response_for :destroy, params: lambda {{id: @programming_expression.id}}, user: :student, response: :forbidden
+    test_user_gets_response_for :destroy, params: lambda {{id: @programming_expression.id}}, user: :teacher, response: :forbidden
+    test_user_gets_response_for :destroy, params: lambda {{id: @programming_expression.id}}, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_expression.programming_environment.name, programming_expression_key: @programming_expression.key}}, user: nil, response: :success
-    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_expression.programming_environment.name, programming_expression_key: @programming_expression.key}}, user: :student, response: :success
-    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_expression.programming_environment.name, programming_expression_key: @programming_expression.key}}, user: :teacher, response: :success
-    test_user_gets_response_for :show_by_keys, params: -> {{programming_environment_name: @programming_expression.programming_environment.name, programming_expression_key: @programming_expression.key}}, user: :levelbuilder, response: :success
+    test_user_gets_response_for :show_by_keys, params: lambda {{programming_environment_name: @programming_expression.programming_environment.name, programming_expression_key: @programming_expression.key}}, user: nil, response: :success
+    test_user_gets_response_for :show_by_keys, params: lambda {{programming_environment_name: @programming_expression.programming_environment.name, programming_expression_key: @programming_expression.key}}, user: :student, response: :success
+    test_user_gets_response_for :show_by_keys, params: lambda {{programming_environment_name: @programming_expression.programming_environment.name, programming_expression_key: @programming_expression.key}}, user: :teacher, response: :success
+    test_user_gets_response_for :show_by_keys, params: lambda {{programming_environment_name: @programming_expression.programming_environment.name, programming_expression_key: @programming_expression.key}}, user: :levelbuilder, response: :success
 
-    test_user_gets_response_for :show, params: -> {{id: @programming_expression.id}}, user: nil, response: :success
-    test_user_gets_response_for :show, params: -> {{id: @programming_expression.id}}, user: :student, response: :success
-    test_user_gets_response_for :show, params: -> {{id: @programming_expression.id}}, user: :teacher, response: :success
-    test_user_gets_response_for :show, params: -> {{id: @programming_expression.id}}, user: :levelbuilder, response: :success
+    test_user_gets_response_for :show, params: lambda {{id: @programming_expression.id}}, user: nil, response: :success
+    test_user_gets_response_for :show, params: lambda {{id: @programming_expression.id}}, user: :student, response: :success
+    test_user_gets_response_for :show, params: lambda {{id: @programming_expression.id}}, user: :teacher, response: :success
+    test_user_gets_response_for :show, params: lambda {{id: @programming_expression.id}}, user: :levelbuilder, response: :success
   end
 end

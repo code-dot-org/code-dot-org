@@ -28,7 +28,7 @@ module Levels
         class_name: 'ParentLevelsChildLevel',
         foreign_key: :child_level_id
       has_many :parent_levels,
-        -> {extending ByKindExtension},
+        lambda {extending ByKindExtension},
         dependent: :restrict_with_error,
         inverse_of: :child_levels,
         through: :levels_parent_levels
@@ -38,7 +38,7 @@ module Levels
         dependent: :destroy,
         foreign_key: :parent_level_id
       has_many :child_levels,
-        -> {extending ByKindExtension},
+        lambda {extending ByKindExtension},
         inverse_of: :parent_levels,
         through: :levels_child_levels
 
