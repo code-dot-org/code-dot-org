@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, {useRef} from 'react';
 
-import {LinkButton} from '@cdo/apps/componentLibrary/button';
+import {LinkButton, buttonColors} from '@cdo/apps/componentLibrary/button';
 import {
   Card,
   CardActions,
@@ -48,7 +48,7 @@ const WorkshopNewAccountCard: React.FunctionComponent<{
       <CardActions>
         <LinkButton
           className={styles.button}
-          color="black"
+          color={buttonColors.black}
           size="m"
           text={i18n.createAccount()}
           type="secondary"

@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import {LinkButton} from '@cdo/apps/componentLibrary/button';
+import {LinkButton, buttonColors} from '@cdo/apps/componentLibrary/button';
 import {
   Card,
   CardActions,
@@ -32,7 +32,7 @@ const WorkshopExistingAccountCard: React.FunctionComponent<{
     <CardActions>
       <LinkButton
         className={styles.button}
-        color="purple"
+        color={buttonColors.purple}
         size="m"
         text={i18n.ltiLinkAccountExistingAccountCardActionLabel()}
         type="primary"
