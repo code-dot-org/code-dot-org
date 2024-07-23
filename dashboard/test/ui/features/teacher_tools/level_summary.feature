@@ -45,7 +45,7 @@ Scenario: Multi level 1
   And I wait until element "#summary-container" is visible
   And I wait to see ".uitest-sectionselect"
   Then I see no difference for "multi level summary 1"
-  And I click selector "button.toggle-input"
+  And I click selector "#ui-test-correct-answer-toggle'"
   And I see no difference for "multi level summary 1 show answer"
   And I close my eyes
 
@@ -59,6 +59,6 @@ Scenario: Multi level 2
   And I wait until element "#summary-container" is visible
   And I wait to see ".uitest-sectionselect"
   Then I see no difference for "multi level summary 2"
-  And I click selector "button.toggle-input"
+  And I click selector "#ui-test-correct-answer-toggle'"
   And I see no difference for "multi level summary 2 show answer"
   And I close my eyes
