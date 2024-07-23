@@ -10,7 +10,12 @@ include:
 services:
   localstack-base: &localstack-base
     hostname: localstack
-    image: localstack/localstack:${LOCALSTACK_VERSION:-latest}
+    # For a normal localstack image, we would use this:
+    #image: localstack/localstack:${LOCALSTACK_VERSION:-latest}
+    # This adds persistence via: https://github.com/GREsau/localstack-persist
+    # Which is similarly licensed as the community edition of LocalStack and
+    # suitable for our community contributors
+    image: gresau/localstack-persist:${LOCALSTACK_VERSION:-latest}
     environment:
       DEBUG: ${LOCALSTACK_DEBUG:-0}
       DEFAULT_REGION: us-east-1

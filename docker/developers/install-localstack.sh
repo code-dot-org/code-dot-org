@@ -85,6 +85,13 @@ fi
 
 export AWS_ENDPOINT_URL=${AWS_LOCALSTACK_ENDPOINT_URL}
 
+# Create keys
+mkdir -p keys
+if [[ ! -e keys/javabuilder.pem ]]; then
+  echo "Creating keys/javabuilder.pem"
+  openssl genrsa 2048 > keys/javabuilder.pem
+fi
+
 # Create secrets
 SECRETS="
 firebase_secret
@@ -95,7 +102,6 @@ devinternal_db_writer
 applications_gsheet_key
 eir_teacher_enrollments_gsheet_key
 properties_encryption_key
-javabuilder_private_key
 javabuilder_key_password
 pardot_private_key
 redshift_host
@@ -118,3 +124,10 @@ for secret in ${SECRETS}; do
     echo "Creating secret '${secret}' [EXISTS]"
   fi
 done
+
+# Add the javabuilder private key
+if ! aws secretsmanager describe-secret --secret-id "development/cdo/javabuilder_private_key"; then
+  aws secretsmanager create-secret --name "development/cdo/javabuilder_private_key" --secret-string file://keys/javabuilder.pem
+else
+  aws secretsmanager update-secret --secret-id "development/cdo/javabuilder_private_key" --secret-string file://keys/javabuilder.pem
+fi
