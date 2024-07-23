@@ -93,7 +93,7 @@ module Pd
     test 'post-workshop special facilitator survey link shows for ended Build Your Own workshops' do
       setup_build_your_own_workshop
 
-      sign_in @facilitators.first
+      sign_in @facilitator
       get `/pd/workshop_survey/new_facilitator_post`
       assert_match %r{#{SURVEY_LINKS[:COURSE_BUILD_YOUR_OWN_FACILITATOR]}.*redirected}, response.body
     end
@@ -540,17 +540,19 @@ module Pd
       @facilitators = @csf101_workshop.facilitators.order(:name, :id)
     end
 
-    private def setup_build_your_own_workshop
+    private def setup_build_your_own_ended_workshop
       @regional_partner = create :regional_partner
       @byo_workshop = create :pd_workshop,
+        :ended,
         funded: false,
         course: Pd::Workshop::COURSE_BUILD_YOUR_OWN,
         subject: nil,
-        course_offerings: [] << (create :course_offering)
+        course_offerings: [] << (create :course_offering),
+        num_facilitators: 1
 
       @byo_enrollment = create :pd_enrollment, :from_user, workshop: @byo_workshop
       @enrolled_byo_teacher = @byo_enrollment.user
-      @facilitators = @byo_workshop.facilitators.order(:name, :id)
+      @facilitator = @byo_workshop.facilitators.first
     end
 
     private def unenrolled_teacher
