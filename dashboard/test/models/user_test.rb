@@ -4012,7 +4012,7 @@ class UserTest < ActiveSupport::TestCase
         has_ever_signed_in: @student.has_ever_signed_in?,
         ai_tutor_access_denied: !!@student.ai_tutor_access_denied,
         at_risk_age_gated: false,
-        child_account_compliance_state: @student.child_account_compliance_state,
+        child_account_compliance_state: @student.cap_state,
         latest_permission_request_sent_at: latest_permission_request_sent_at,
       },
       @student.summarize
@@ -5452,26 +5452,6 @@ class UserTest < ActiveSupport::TestCase
 
       it 'returns resend parental permission request' do
         _(latest_parental_permission_request).must_equal user_permission_request1
-      end
-    end
-  end
-
-  describe 'new CAP columns data assigning before save' do
-    let(:user) {create(:student)}
-
-    it 'assigns "cap_state" with data from "child_account_compliance_state"' do
-      expected_cap_state = Policies::ChildAccount::ComplianceState::LOCKED_OUT
-
-      assert_changes -> {user.reload.cap_state}, from: nil, to: expected_cap_state do
-        user.update!(child_account_compliance_state: expected_cap_state)
-      end
-    end
-
-    it 'assigns "cap_state_date" with data from "child_account_compliance_state"' do
-      expected_cap_state_date = Time.now.change(usec: 0)
-
-      assert_changes -> {user.reload.cap_state_date}, from: nil, to: expected_cap_state_date do
-        user.update!(child_account_compliance_state_last_updated: expected_cap_state_date)
       end
     end
   end

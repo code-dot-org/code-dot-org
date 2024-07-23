@@ -15,7 +15,6 @@ module Services::ChildAccount
       user,
       Policies::ChildAccount::ComplianceState::LOCKED_OUT
     )
-    user.child_account_compliance_lock_out_date = DateTime.now
     user.save!
     Services::ChildAccount::EventLogger.log_account_locking(user)
   end
@@ -27,13 +26,12 @@ module Services::ChildAccount
     Services::ChildAccount::EventLogger.log_compliance_removing(user)
   end
 
-  # Updates the child_account_compliance_state attribute to the given state.
+  # Updates the cap_state attribute to the given state.
   # @param {String} new_state - A constant from Policies::ChildAccount::ComplianceState
   def self.update_compliance(user, new_state)
     return unless user
-    user.child_account_compliance_state = new_state
-    user.child_account_compliance_state_last_updated = DateTime.now
-    user.child_account_compliance_lock_out_date = nil
+    user.cap_state = new_state
+    user.cap_state_date = DateTime.now
   end
 
   # Updates the User in the given PermissionRequest to indicate that their

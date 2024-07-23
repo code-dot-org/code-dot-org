@@ -19,16 +19,16 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
       new_state = Policies::ChildAccount::ComplianceState::LOCKED_OUT
       Services::ChildAccount.update_compliance(user, new_state)
 
-      assert_equal new_state, user.child_account_compliance_state
-      refute_nil user.child_account_compliance_state_last_updated
+      assert_equal new_state, user.cap_state
+      refute_nil user.cap_state_date
 
-      last_updated = user.child_account_compliance_state_last_updated
+      last_updated = user.cap_state_date
       Timecop.travel 5.minutes
       new_state = Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
       Services::ChildAccount.update_compliance(user, new_state)
 
-      assert_equal new_state, user.child_account_compliance_state
-      refute_equal last_updated, user.child_account_compliance_state_last_updated
+      assert_equal new_state, user.cap_state
+      refute_equal last_updated, user.cap_state_date
     end
   end
 
@@ -67,8 +67,8 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
         Services::ChildAccount.grant_permission_request! permission
       end
       user.reload
-      assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, user.child_account_compliance_state
-      refute_empty user.child_account_compliance_state_last_updated
+      assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, user.cap_state
+      refute_nil user.cap_state_date
     end
 
     test 'granting permission twice only makes changes once' do
@@ -78,10 +78,10 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
         Services::ChildAccount.grant_permission_request! permission
       end
       user.reload
-      assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, user.child_account_compliance_state
-      last_updated = user.child_account_compliance_state_last_updated
+      assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, user.cap_state
+      last_updated = user.cap_state_date
       Timecop.travel 5.minutes
-      refute_empty last_updated
+      refute_nil last_updated
 
       # No emails should be sent
       assert_no_enqueued_emails do
@@ -89,7 +89,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
       end
       user.reload
       # The date shouldn't be updated
-      assert_equal last_updated, user.child_account_compliance_state_last_updated
+      assert_equal last_updated, user.cap_state_date
     end
 
     context 'when something goes wrong during user saving' do
@@ -116,14 +116,11 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
     end
 
     it 'updates user CAP attributes with "grace period" compliance state' do
-      assert_changes -> {user.properties} do
-        start_grace_period
-      end
+      start_grace_period
 
       assert_attributes user, {
-        child_account_compliance_state: 'p',
-        child_account_compliance_lock_out_date: nil,
-        child_account_compliance_state_last_updated: DateTime.now.iso8601(3),
+        cap_state: 'p',
+        cap_state_date: Time.now.change(usec: 0),
       }
     end
 
@@ -168,14 +165,11 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
     end
 
     it 'updates user CAP attributes with "lock out" compliance state' do
-      assert_changes -> {user.properties} do
-        lock_out
-      end
+      lock_out
 
       assert_attributes user.reload, {
-        child_account_compliance_state: 'l',
-        child_account_compliance_lock_out_date: DateTime.now.iso8601(3),
-        child_account_compliance_state_last_updated: DateTime.now.iso8601(3),
+        cap_state: 'l',
+        cap_state_date: Time.now.change(usec: 0),
       }
     end
 
@@ -213,11 +207,11 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
   describe '.remove_compliance' do
     let(:remove_user_cap_compliance_state) {Services::ChildAccount.remove_compliance(user)}
 
-    let(:user_cap_compliance_updated_at) {1.day.ago}
+    let(:user_cap_compliance_updated_at) {1.day.ago.change(usec: 0)}
     let(:user) do
       create(
         :non_compliant_child, :in_grace_period,
-        child_account_compliance_state_last_updated: user_cap_compliance_updated_at,
+        cap_state_date: user_cap_compliance_updated_at,
       )
     end
 
@@ -226,13 +220,13 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
     end
 
     it 'removes user CAP compliance state' do
-      assert_changes -> {user.reload.child_account_compliance_state}, from: Policies::ChildAccount::ComplianceState::GRACE_PERIOD, to: nil do
+      assert_changes -> {user.reload.cap_state}, from: Policies::ChildAccount::ComplianceState::GRACE_PERIOD, to: nil do
         remove_user_cap_compliance_state
       end
     end
 
     it 'updates user CAP compliance state last updated date' do
-      assert_changes -> {user.reload.child_account_compliance_state_last_updated}, from: user_cap_compliance_updated_at.iso8601(3), to: DateTime.now.iso8601(3) do
+      assert_changes -> {user.reload.cap_state_date}, from: user_cap_compliance_updated_at, to: Time.now.change(usec: 0) do
         remove_user_cap_compliance_state
       end
     end
