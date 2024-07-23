@@ -5,13 +5,13 @@ import {connect} from 'react-redux';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
 import i18n from '@cdo/locale';
 
-import NameFailureDialog from '../../code-studio/components/NameFailureDialog';
 import color from '../../util/color';
 import Button from '../Button';
 import FontAwesome from '../FontAwesome';
 import QuickActionsCell from '../tables/QuickActionsCell';
 
 import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
+import PersonalProjectsNameFailureDialog from './PersonalProjectsNameFailureDialog';
 import {
   startRenamingProject,
   cancelRenamingProject,
@@ -109,7 +109,7 @@ export class PersonalProjectsTableActionsCell extends Component {
             />
           </div>
         )}
-        <NameFailureDialog
+        <PersonalProjectsNameFailureDialog
           flaggedText={this.props.projectNameFailure}
           isOpen={!!this.props.projectNameFailure}
           handleClose={this.handleNameFailureDialogClose}

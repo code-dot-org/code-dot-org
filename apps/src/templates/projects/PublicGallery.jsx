@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import i18n from '@cdo/locale';
-
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
+import i18n from '@cdo/locale';
 
 import ProjectCardGrid from './ProjectCardGrid';
 import {publishedFeaturedProjectPropType} from './projectConstants';
@@ -74,7 +73,7 @@ class PublicGallery extends Component {
             href="https://support.code.org/hc/en-us/articles/360001143952"
             color={buttonColors.gray}
             text={i18n.reportAbuse()}
-            type='secondary'
+            type="secondary"
           />
         </div>
       </div>
