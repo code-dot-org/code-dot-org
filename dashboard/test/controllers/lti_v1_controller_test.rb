@@ -606,6 +606,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
 
     expected = {
+      signup_flow_type: "lms",
       lti_provider_name: "platform_name",
       new_cta_type: "new",
       user_type: "student",
