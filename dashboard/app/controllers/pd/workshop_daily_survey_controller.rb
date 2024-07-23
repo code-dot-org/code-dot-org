@@ -63,14 +63,6 @@ module Pd
       new_general_foorm(survey_names: PRE_SURVEY_CONFIG_PATHS, day: 0)
     end
 
-    # General post-workshop survey using foorm system.
-    # Enrollment code is an optional parameter, otherwise will show most recent workshop.
-    #
-    # If the post-survey has been already completed, will redirect to thanks page.
-    def new_post_foorm
-      new_general_foorm(survey_names: POST_SURVEY_CONFIG_PATHS, day: nil)
-    end
-
     def new_facilitator_post_foorm(workshop)
       survey_name = FACILITATOR_POST_SURVEY_CONFIG_PATH
 
@@ -107,13 +99,14 @@ module Pd
     # Post workshop survey. This one will be emailed and displayed in the my PL page,
     # and can persist for more than a day, so it uses an enrollment code to be tied to a specific workshop.
     # GET /pd/workshop_survey/post/:enrollment_code
-    # If Build Your Own, redirect to its specific survey link. Otherwise, use new_post_foorm.
+    # If Build Your Own, redirect to its specific survey link. Otherwise, use Foorm.
     def new_post
       course = get_workshop_by_enrollment_or_course_and_subject(enrollment_code: params[:enrollment_code], course: nil, subject: nil)&.course
       if course == COURSE_BUILD_YOUR_OWN
         redirect_to CDO.studio_url SURVEY_LINKS[:COURSE_BUILD_YOUR_OWN_TEACHER], CDO.default_scheme
       else
-        return new_post_foorm
+        # If the post-survey has been already completed, will redirect to thanks page.
+        return new_general_foorm(survey_names: POST_SURVEY_CONFIG_PATHS, day: nil)
       end
     end
 
