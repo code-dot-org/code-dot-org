@@ -733,11 +733,4 @@ module SharedConstants
     STUDENT: 'student',
     TEACHER: 'teacher',
   ).freeze
-
-  SIMPLE_SIGN_UP_FLOWS = OpenStruct.new(
-    {
-      LMS: 'lms',
-      WORKSHOP: 'workshop',
-    }
-  ).freeze
 end

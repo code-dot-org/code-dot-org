@@ -14,8 +14,8 @@ import i18n from '@cdo/locale';
 import styles from '../link-account.module.scss';
 
 const WorkshopExistingAccountCard: React.FunctionComponent<{
-  existingAccountUrlHref: string;
-}> = ({existingAccountUrlHref}) => (
+  existingAccountUrl: string;
+}> = ({existingAccountUrl}) => (
   <Card data-testid={'existing-account-card'}>
     <CardHeader
       title={i18n.ltiLinkAccountExistingAccountCardHeaderLabel()}
@@ -36,7 +36,7 @@ const WorkshopExistingAccountCard: React.FunctionComponent<{
         size="m"
         text={i18n.ltiLinkAccountExistingAccountCardActionLabel()}
         type="primary"
-        href={existingAccountUrlHref}
+        href={existingAccountUrl}
       />
     </CardActions>
   </Card>
