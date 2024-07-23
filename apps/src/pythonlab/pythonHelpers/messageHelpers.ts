@@ -1,3 +1,6 @@
+import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+
+import {HOME_FOLDER} from './constants';
 import {ALL_PATCHES} from './patches';
 
 /**
@@ -17,7 +20,6 @@ import {ALL_PATCHES} from './patches';
  * @param errorMessage - the error message from pyodide
  **/
 export function parseErrorMessage(errorMessage: string) {
-  console.log({errorMessage});
   // Special case for an unsupported module.
   const importErrorRegex =
     /ModuleNotFoundError: The module '([^']+)' is included in the Pyodide distribution, but it is not installed./;
@@ -28,7 +30,9 @@ export function parseErrorMessage(errorMessage: string) {
 
   // Parse to find the main.py error line.
   const errorLines = errorMessage.trim().split('\n');
-  const mainErrorRegex = /File "\/Files\/main.py", line \d+.*/;
+  const mainErrorRegex = new RegExp(
+    `File "\/${HOME_FOLDER}\/${MAIN_PYTHON_FILE}", line \\d+.*`
+  );
   const mainErrorLineRegex = /line (\d+)/;
   let mainErrorLine = 0;
   while (
@@ -46,7 +50,9 @@ export function parseErrorMessage(errorMessage: string) {
     mainErrorLineRegex
   );
   let currentLine = mainErrorLine + 1;
-  const lineRegex = /File "\/Files\/([^"]+)", line (\d+).*/;
+  const lineRegex = new RegExp(
+    `File "\/${HOME_FOLDER}\/([^"]+)", line (\\d+).*`
+  );
   let hasMultiFileStackTrace = false;
   while (currentLine < errorLines.length) {
     let newLine = errorLines[currentLine];

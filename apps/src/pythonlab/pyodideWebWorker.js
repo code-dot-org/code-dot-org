@@ -1,6 +1,9 @@
 import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import {loadPyodide, version} from 'pyodide';
 
+import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+
+import {HOME_FOLDER} from './pythonHelpers/constants';
 import {
   getUpdatedSourceAndDeleteFiles,
   importPackagesFromFiles,
@@ -22,7 +25,7 @@ async function loadPyodideAndPackages() {
       `/blockly/js/pyodide/${version}/pythonlab_setup-0.0.1-py3-none-any.whl`,
     ],
     env: {
-      HOME: '/Files/',
+      HOME: `/${HOME_FOLDER}/`,
     },
   });
   self.pyodide.setStdout(getStreamHandlerOptions('sysout'));
@@ -51,7 +54,7 @@ self.onmessage = async event => {
     writeSource(source, DEFAULT_FOLDER_ID, '', self.pyodide);
     await importPackagesFromFiles(source, self.pyodide);
     results = await self.pyodide.runPythonAsync(python, {
-      filename: '/Files/main.py',
+      filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
     });
   } catch (error) {
     self.postMessage({type: 'error', message: error.message, id});
