@@ -8,6 +8,7 @@ import {
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import {Button} from '@cdo/apps/componentLibrary/button';
+import Tabs, {TabsProps} from '@cdo/apps/componentLibrary/tabs/Tabs';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import ChatItemView from './ChatItemView';
@@ -52,6 +53,34 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const dispatch = useAppDispatch();
 
+  const studentShortName = 'Sam';
+  const tabs = [
+    {
+      value: 'viewStudentChatHIstory',
+      text: `View ${studentShortName} chat history`,
+      tabContent: <div>Viewing {studentShortName} chat history</div>,
+    },
+    {
+      value: 'testStudentModel',
+      text: 'Test student model',
+      tabContent: <div>Test student model here.</div>,
+    },
+  ];
+
+  const handleOnChange = (value: string) => {
+    console.log(value);
+  };
+
+  const tabArgs: TabsProps = {
+    name: 'teacherViewChatHistoryTabs',
+    tabs,
+    defaultSelectedTabValue: tabs[0].value,
+    onChange: handleOnChange,
+    type: 'secondary',
+    tabsContainerClassName: moduleStyles.tabsContainer,
+    tabPanelsContainerClassName: moduleStyles.tabPanels,
+  };
+
   const onCloseWarningModal = useCallback(
     () => dispatch(setShowWarningModal(false)),
     [dispatch]
@@ -72,6 +101,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {showWarningModal && <ChatWarningModal onClose={onCloseWarningModal} />}
+      <Tabs {...tabArgs} />
       <div
         id="chat-workspace-conversation"
         className={moduleStyles.conversationArea}

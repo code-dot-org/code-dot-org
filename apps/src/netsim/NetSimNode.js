@@ -61,6 +61,7 @@ NetSimNode.prototype.getDisplayName = function () {
  * but truncated to the first word if it's over a certain length.
  * @returns {string}
  */
+// For display name in tab, do something similar to this.
 NetSimNode.prototype.getShortDisplayName = function () {
   // If the name is longer than ten characters (longer than "Router 999")
   // then only show up to the first whitespace.
