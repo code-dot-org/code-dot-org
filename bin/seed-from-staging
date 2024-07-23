@@ -5,8 +5,13 @@ require 'cdo/rake_utils'
 
 Dir.chdir(dashboard_dir) do
   staging_dir = '../../staging'
-  Dir.chdir(staging_dir) do
-    RakeUtils.git_pull
+  begin
+    Dir.chdir(staging_dir) do
+      RakeUtils.git_pull
+    end
+  rescue Errno::ENOENT
+    puts 'Staging directory not found'
+    exit
   end
   RakeUtils.rake_stream_output 'seed:default', "CURRICULUM_CONTENT_DIR=#{staging_dir}/dashboard"
 end
