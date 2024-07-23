@@ -16,6 +16,7 @@ import CopyButton from './CopyButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
 import moduleStyles from './chatWorkspace.module.scss';
+import {ChatItem} from '../types';
 
 interface ChatWorkspaceProps {
   onClear: () => void;
@@ -53,6 +54,18 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const dispatch = useAppDispatch();
 
+  const showWaitingAnimation = () => {
+    if (isWaitingForChatResponse) {
+      return (
+        <img
+          src="/blockly/media/aichat/typing-animation.gif"
+          alt={'Waiting for response'}
+          className={moduleStyles.waitingForResponse}
+        />
+      );
+    }
+  };
+
   const studentShortName = 'Sam';
   const tabs = [
     {
@@ -63,7 +76,13 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     {
       value: 'testStudentModel',
       text: 'Test student model',
-      tabContent: <div>Test student model here.</div>,
+      tabContent: (
+        <TestModel
+          items={items}
+          showWaitingAnimation={showWaitingAnimation}
+          conversationContainerRef={conversationContainerRef}
+        />
+      ),
     },
   ];
 
@@ -78,7 +97,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     onChange: handleOnChange,
     type: 'secondary',
     tabsContainerClassName: moduleStyles.tabsContainer,
-    tabPanelsContainerClassName: moduleStyles.tabPanels,
+    tabPanelsContainerClassName: moduleStyles.conversationArea,
   };
 
   const onCloseWarningModal = useCallback(
@@ -86,32 +105,11 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     [dispatch]
   );
 
-  const showWaitingAnimation = () => {
-    if (isWaitingForChatResponse) {
-      return (
-        <img
-          src="/blockly/media/aichat/typing-animation.gif"
-          alt={'Waiting for response'}
-          className={moduleStyles.waitingForResponse}
-        />
-      );
-    }
-  };
-
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {showWarningModal && <ChatWarningModal onClose={onCloseWarningModal} />}
       <Tabs {...tabArgs} />
-      <div
-        id="chat-workspace-conversation"
-        className={moduleStyles.conversationArea}
-        ref={conversationContainerRef}
-      >
-        {items.map((item, index) => (
-          <ChatItemView item={item} key={index} />
-        ))}
-        {showWaitingAnimation()}
-      </div>
+
       <UserChatMessageEditor />
       <div className={moduleStyles.buttonRow}>
         <Button
@@ -124,6 +122,31 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         />
         <CopyButton />
       </div>
+    </div>
+  );
+};
+
+interface TestModelProps {
+  conversationContainerRef: React.RefObject<HTMLDivElement>;
+  items: ChatItem[];
+  showWaitingAnimation: () => React.ReactNode;
+}
+
+const TestModel: React.FunctionComponent<TestModelProps> = ({
+  items,
+  showWaitingAnimation,
+  conversationContainerRef,
+}) => {
+  return (
+    <div
+      id="chat-workspace-conversation"
+      className={moduleStyles.conversationArea}
+      ref={conversationContainerRef}
+    >
+      {items.map((item, index) => (
+        <ChatItemView item={item} key={index} />
+      ))}
+      {showWaitingAnimation()}
     </div>
   );
 };
