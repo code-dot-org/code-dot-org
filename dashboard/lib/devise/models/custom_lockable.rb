@@ -2,7 +2,7 @@ module Devise
   module Models
     # Extend Devise's built-in Lockable functionality for compatibility with
     # our particular implementation needs. In particular, we scope it to apply
-    # only to teachers and add SerializedProperties support.
+    # only to teachers, add SerializedProperties support, and log some metrics.
     #
     # See https://www.rubydoc.info/github/plataformatec/devise/Devise/Models/Lockable
     module CustomLockable
@@ -30,6 +30,47 @@ module Devise
         updated_failed_attempts = (failed_attempts || 0) + 1
         update!(failed_attempts: updated_failed_attempts)
         reload
+      end
+
+      # Record lock and unlock events.
+      #
+      # As a core system event related to the user model, we want to log these
+      # in CloudWatch in order to preverse metrics for the long term. And as a
+      # newly-enabled feature, we want to also log them in Statsig to make the
+      # metric available on the product team's dashboards in the short term.
+
+      # @override https://github.com/heartcombo/devise/blob/v4.9.3/lib/devise/models/lockable.rb#L42-L50
+      def lock_access!
+        # CloudWatch
+        Cdo::Metrics.put(
+          'User', 'DeviseLockableAccessLocked', 1, {
+            Environment: CDO.rack_env
+          }
+        )
+
+        # Statsig
+        Metrics::Events.log_event(
+          user: current_user,
+          event_name: 'devise-lockable-user-access-locked',
+        )
+        super
+      end
+
+      # @override https://github.com/heartcombo/devise/blob/v4.9.3/lib/devise/models/lockable.rb#L53-L58
+      def unlock_access!
+        # CloudWatch
+        Cdo::Metrics.put(
+          'User', 'DeviseLockableAccessUnlocked', 1, {
+            Environment: CDO.rack_env
+          }
+        )
+
+        # Statsig
+        Metrics::Events.log_event(
+          user: current_user,
+          event_name: 'devise-lockable-user-access-unlocked',
+        )
+        super
       end
 
       # Add support for `nil` values; this is necessary because we store the
