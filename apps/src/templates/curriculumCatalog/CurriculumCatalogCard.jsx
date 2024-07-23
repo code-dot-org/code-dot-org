@@ -1,14 +1,3 @@
-// The following styles are imported in a very specific order to preserve UI consistency.
-// `curriculum_catalog_card.module.scss` imports `phase1-design-system.scss`
-// `ExpandedCurriculumCatalogCard` imports `/componentLibrary/typography` which imports `typography.scss`
-// These two scss files have conflicting styles for `h4` and `p` tags.
-// We are importing them in the specific order they were imported before adding import/order in order to preserve the UI.
-// These are very small changes so this can likely be removed with no issues.
-/* eslint-disable import/order */
-import style from './curriculum_catalog_card.module.scss';
-import _typographyAfterStyle from '@cdo/apps/componentLibrary/typography/typography.module.scss'; // eslint-disable-line no-unused-vars
-/* eslint-enable import/order */
-
 import classNames from 'classnames';
 import {concat, intersection} from 'lodash';
 import PropTypes from 'prop-types';
@@ -43,6 +32,8 @@ import i18n from '@cdo/locale';
 
 import {defaultImageSrc} from './curriculumCatalogConstants';
 import ExpandedCurriculumCatalogCard from './ExpandedCurriculumCatalogCard';
+
+import style from './curriculum_catalog_card.module.scss';
 
 const CurriculumCatalogCard = ({
   courseKey,

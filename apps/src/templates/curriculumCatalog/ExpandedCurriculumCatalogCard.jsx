@@ -1,3 +1,14 @@
+// The following styles are imported in a very specific order to preserve UI consistency.
+// `curriculum_catalog_card.module.scss` imports `phase1-design-system.scss`
+// `ExpandedCurriculumCatalogCard` imports `/componentLibrary/typography` which imports `typography.scss`
+// These two scss files have conflicting styles for `h4` and `p` tags.
+// We are importing them in the specific order they were imported before adding import/order in order to preserve the UI.
+// These are very small changes so this can likely be removed with no issues.
+/* eslint-disable import/order */
+import centererStyle from './curriculum_catalog_card.module.scss';
+import _typographyAfterStyle from '@cdo/apps/componentLibrary/typography/typography.module.scss'; // eslint-disable-line no-unused-vars
+/* eslint-enable import/order */
+
 import {TextLink} from '@dsco_/link';
 import PropTypes from 'prop-types';
 import React, {useEffect, useRef} from 'react';
@@ -20,7 +31,6 @@ import {
 
 import {defaultImageSrc} from './curriculumCatalogConstants';
 
-import centererStyle from './curriculum_catalog_card.module.scss';
 import style from './expanded_curriculum_catalog_card.module.scss';
 
 const ExpandedCurriculumCatalogCard = ({
