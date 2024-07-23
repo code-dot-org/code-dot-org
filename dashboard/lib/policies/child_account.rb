@@ -3,7 +3,7 @@ require 'cpa'
 require 'date'
 
 class Policies::ChildAccount
-  # Values for the `child_account_compliance_state` attribute
+  # Values for the `cap_state` attribute
   module ComplianceState
     # The period for "existing" users before their accounts locked out.
     GRACE_PERIOD = SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.GRACE_PERIOD
@@ -19,7 +19,7 @@ class Policies::ChildAccount
     # def self.permission_granted?(student)
     SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.to_h.each do |key, value|
       define_singleton_method("#{key.downcase}?") do |student|
-        student.child_account_compliance_state == value
+        student.cap_state == value
       end
     end
   end
@@ -86,7 +86,7 @@ class Policies::ChildAccount
     grace_period_duration = user_state_policy[:grace_period_duration]
     return unless grace_period_duration
 
-    start_date = DateTime.parse(user.child_account_compliance_state_last_updated) if ComplianceState.grace_period?(user)
+    start_date = user.cap_state_date if ComplianceState.grace_period?(user)
     start_date = user_state_policy[:lockout_date] if approximate && start_date.nil?
 
     start_date&.since(grace_period_duration)

@@ -6,6 +6,6 @@ class ChildAccount::PendingPermissionRequestSerializer < ActiveModel::Serializer
   end
 
   def consent_status
-    object.user.child_account_compliance_state
+    object.user.cap_state
   end
 end
