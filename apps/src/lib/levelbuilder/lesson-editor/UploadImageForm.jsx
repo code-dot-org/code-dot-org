@@ -5,7 +5,6 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
 import styles from './uploadImage.module.scss';
 import classnames from 'classnames';
-import {image} from '@cdo/apps/applab/api';
 
 export default function UploadImageForm() {
   const [imgUrl, setImgUrl] = useState(undefined);
