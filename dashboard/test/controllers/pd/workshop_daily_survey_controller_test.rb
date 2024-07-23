@@ -76,7 +76,7 @@ module Pd
 
       sign_in @enrolled_summer_teacher
       create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
-      get `/pd/workshop_survey/post/#{@summer_enrollment.code}`
+      get "/pd/workshop_survey/post/#{@summer_enrollment.code}"
       assert_template :new_general_foorm
       assert_response :success
     end
@@ -86,7 +86,7 @@ module Pd
 
       sign_in @enrolled_byo_teacher
       create :pd_attendance, session: @byo_workshop.sessions[0], teacher: @enrolled_byo_teacher, enrollment: @byo_enrollment
-      get `/pd/workshop_survey/post/#{@byo_enrollment.code}`
+      get "/pd/workshop_survey/post/#{@byo_enrollment.code}"
       assert_match %r{#{SURVEY_LINKS[:COURSE_BUILD_YOUR_OWN_TEACHER]}.*redirected}, response.body
     end
 
@@ -94,7 +94,7 @@ module Pd
       setup_build_your_own_workshop
 
       sign_in @facilitator
-      get `/pd/workshop_survey/new_facilitator_post`
+      get '/pd/workshop_survey/new_facilitator_post'
       assert_match %r{#{SURVEY_LINKS[:COURSE_BUILD_YOUR_OWN_FACILITATOR]}.*redirected}, response.body
     end
 
