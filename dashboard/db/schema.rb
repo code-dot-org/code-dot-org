@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_07_02_214406) do
+ActiveRecord::Schema.define(version: 2024_07_19_223408) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1668,12 +1668,6 @@ ActiveRecord::Schema.define(version: 2024_07_02_214406) do
     t.datetime "updated_at", null: false
     t.index ["storage_app_id", "object_version_id"], name: "index_project_commits_on_storage_app_id_and_object_version_id", unique: true
     t.index ["storage_app_id"], name: "index_project_commits_on_storage_app_id"
-  end
-
-  create_table "project_use_datablock_storages", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.integer "project_id", null: false
-    t.boolean "use_datablock_storage", default: false, null: false
-    t.index ["project_id"], name: "index_project_use_datablock_storages_on_project_id"
   end
 
   create_table "projects", id: :integer, charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
