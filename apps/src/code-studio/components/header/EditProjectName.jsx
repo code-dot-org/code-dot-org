@@ -6,9 +6,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import ProjectNameFailureDialog from '@cdo/apps/templates/projects/ProjectNameFailureDialog';
 import i18n from '@cdo/locale';
 
-import ProjectNameFailureDialog from '@cdo/apps/templates/projects/ProjectNameFailureDialog';
 import NameFailureError from '../../NameFailureError';
 import {setNameFailure, unsetNameFailure} from '../../projectRedux';
 
