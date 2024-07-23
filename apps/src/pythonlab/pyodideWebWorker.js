@@ -20,6 +20,7 @@ async function loadPyodideAndPackages() {
       'numpy',
       'matplotlib',
       `/blockly/js/pyodide/${version}/pythonlab_setup-0.0.1-py3-none-any.whl`,
+      `/blockly/js/pyodide/${version}/unittest_runner-0.0.1-py3-none-any.whl`,
     ],
   });
   self.pyodide.setStdout(getStreamHandlerOptions('sysout'));
