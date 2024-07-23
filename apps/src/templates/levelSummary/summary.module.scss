@@ -263,7 +263,9 @@ label.sectionSelector {
 
       i {
         display: inline-block;
-        min-width: 2em;
+        min-width: 20px;
+        max-width: 20px;
+        margin: 0 8px;
       }
     }
 
