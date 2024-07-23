@@ -8,6 +8,7 @@ import React, {
   KeyboardEvent,
 } from 'react';
 
+import {Button, ButtonProps} from '@cdo/apps/componentLibrary/button';
 import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
 import {useDropdownContext} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
 import {getAriaPropsFromProps} from '@cdo/apps/componentLibrary/common/helpers';
@@ -51,7 +52,10 @@ export interface CustomDropdownProps extends AriaAttributes {
   isSomeValueSelected?: boolean;
   /** Custom icon to show for the dropdown button*/
   icon?: FontAwesomeV6IconProps;
-  TriggerComponent?: React.FC<TriggerComponentProps>;
+  /** Whether to use DSCO (Design System) Button component as DropdownTrigger or not */
+  useDSCOButtonAsTrigger?: boolean;
+  /** Dropdown Trigger DSCO (Design System) Button Props */
+  triggerButtonProps?: ButtonProps;
   /** Children */
   children: React.ReactNode;
 }
@@ -72,7 +76,8 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   disabled = false,
   color = dropdownColors.black,
   size = 'm',
-  TriggerComponent,
+  useDSCOButtonAsTrigger = false,
+  triggerButtonProps = {},
   ...rest
 }) => {
   const {activeDropdownName, setActiveDropdownName} = useDropdownContext();
@@ -146,13 +151,23 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
       ref={dropdownRef}
       aria-describedby={ariaProps['aria-describedby']}
     >
-      {TriggerComponent ? (
-        <TriggerComponent {...triggerComponentProps} />
+      {useDSCOButtonAsTrigger ? (
+        <Button
+          {...triggerComponentProps}
+          {...triggerButtonProps}
+          size={size}
+          aria-label={
+            triggerButtonProps?.isIconOnly
+              ? labelText
+              : triggerButtonProps['aria-label'] ||
+                triggerComponentProps['aria-label']
+          }
+        />
       ) : (
         <button
+          {...triggerComponentProps}
           type="button"
           className={moduleStyles.dropdownButton}
-          {...triggerComponentProps}
         >
           {isSomeValueSelected && (
             <FontAwesomeV6Icon iconName="check-circle" iconStyle="solid" />
