@@ -5,12 +5,13 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
 import styles from './uploadImage.module.scss';
 import classnames from 'classnames';
+import {image} from '@cdo/apps/applab/api';
 
 export default function UploadImageForm() {
   const [imgUrl, setImgUrl] = useState(undefined);
   const [error, setError] = useState(undefined);
   const [isUploading, setIsUploading] = useState(false);
-  const [formDataForImage, setFormDataForImage] = useState(undefined);
+  const [formDataForImages, setFormDataForImages] = useState(undefined);
   const [tempImageUrl, setTempImageUrl] = useState(undefined);
 
   const resetState = () => {
@@ -27,30 +28,24 @@ export default function UploadImageForm() {
     // assemble upload data
     const formData = new FormData();
     for (let i = 0; i < e.target.files.length; i++) {
-      formData.append(`file${i}`, e.target.files[i]); // check that this is accurate.
+      formData.append('file', e.target.files[i]);
+      console.log('Form data: ');
+      console.log(formData.get('file0'));
     }
-    console.log('Getting form data: ');
-    console.log(e.target.files);
-    setFormDataForImage(formData);
+    setFormDataForImages(formData);
     console.log(formData);
     setTempImageUrl(URL.createObjectURL(e.target.files[0]));
-
-    // formData.append('file', e.target.files[0]);
-    // console.log('Getting form data: ');
-    // console.log(e.target.files);
-    // setFormDataForImage(formData);
-    // setTempImageUrl(URL.createObjectURL(e.target.files[0]));
   };
 
-  // NEXT STEP: Modify this so that you can save multiple images at a time.
-  // need to loop through imageData - maybe do an async / await to accomplish this.
-  const saveImagesToS3 = () => {
+  // NEXT STEP: Test on an account that has AWS access
+  const saveImageToS3 = formData => {
+    console.log('Saving image to S3');
     setIsUploading(true);
     // POST
     const csrfContainer = document.querySelector('meta[name="csrf-token"]');
     fetch('/level_assets/upload', {
       method: 'post',
-      body: formDataForImage,
+      body: formData,
       headers: {
         'X-CSRF-Token': csrfContainer && csrfContainer.content,
       },
@@ -61,6 +56,15 @@ export default function UploadImageForm() {
         setError(err);
         setIsUploading(false);
       });
+  };
+
+  const saveImagesToS3 = () => {
+    console.log('Saving images to S3');
+    for (const image of formDataForImages.entries()) {
+      const singleFormData = new FormData();
+      singleFormData.append(image[0], image[1]);
+      saveImageToS3(singleFormData);
+    }
   };
 
   const handleResult = result => {
