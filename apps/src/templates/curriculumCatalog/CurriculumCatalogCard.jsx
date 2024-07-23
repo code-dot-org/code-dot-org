@@ -1,20 +1,10 @@
+import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {concat, intersection} from 'lodash';
-import PropTypes from 'prop-types';
-import React, {useState} from 'react';
-import {connect} from 'react-redux';
-
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import Button from '@cdo/apps/templates/Button';
-import CardLabels from '@cdo/apps/templates/curriculumCatalog/CardLabels';
-import {
-  CreateSectionsToAssignSectionsDialog,
-  SignInToAssignSectionsDialog,
-  UpgradeAccountToAssignSectionsDialog,
-} from '@cdo/apps/templates/curriculumCatalog/noSectionsToAssignDialogs';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import MultipleSectionsAssigner from '@cdo/apps/templates/MultipleSectionsAssigner';
+import Button from '@cdo/apps/templates/Button';
+import i18n from '@cdo/locale';
 import {
   translatedCourseOfferingCsTopics,
   translatedCourseOfferingSchoolSubjects,
@@ -22,18 +12,25 @@ import {
   subjectsAndTopicsOrder,
   translatedLabels,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
-import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import style from './curriculum_catalog_card.module.scss';
+import CardLabels from '@cdo/apps/templates/curriculumCatalog/CardLabels';
+import MultipleSectionsAssigner from '@cdo/apps/templates/MultipleSectionsAssigner';
+import {connect} from 'react-redux';
 import {
   assignToSection,
   sectionsForDropdown,
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import i18n from '@cdo/locale';
-
-import {defaultImageSrc} from './curriculumCatalogConstants';
+import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {
+  CreateSectionsToAssignSectionsDialog,
+  SignInToAssignSectionsDialog,
+  UpgradeAccountToAssignSectionsDialog,
+} from '@cdo/apps/templates/curriculumCatalog/noSectionsToAssignDialogs';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import ExpandedCurriculumCatalogCard from './ExpandedCurriculumCatalogCard';
-
-import style from './curriculum_catalog_card.module.scss';
+import {defaultImageSrc} from './curriculumCatalogConstants';
 
 const CurriculumCatalogCard = ({
   courseKey,
