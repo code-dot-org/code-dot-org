@@ -28,6 +28,7 @@ class LearningGoalAiEvaluation < ApplicationRecord
   has_one :rubric, through: :learning_goal
   has_one :lesson, through: :rubric
   has_one :level, through: :rubric
+  has_many :learning_goal_ai_evaluation_feedbacks, inverse_of: :learning_goal_ai_evaluation, dependent: :destroy
 
   AI_CONFIDENCE_LEVELS = {
     LOW: 1,
