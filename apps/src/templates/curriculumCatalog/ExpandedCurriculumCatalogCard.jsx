@@ -9,7 +9,11 @@ import {
   Heading4,
 } from '@cdo/apps/componentLibrary/typography';
 import {TextLink} from '@dsco_/link';
-import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
+import {
+  Button,
+  buttonColors,
+  LinkButton,
+} from '@cdo/apps/componentLibrary/button';
 import DeprecatedButton from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import {
@@ -259,7 +263,7 @@ const ExpandedCurriculumCatalogCard = ({
                 {isTeacherOrSignedOut ? (
                   <>
                     <LinkButton
-                      color="black"
+                      color={buttonColors.black}
                       type="secondary"
                       href={pathToCourse}
                       text={i18n.seeCurriculumDetails()}
@@ -269,7 +273,7 @@ const ExpandedCurriculumCatalogCard = ({
                       })}
                     />
                     <Button
-                      color="purple"
+                      color={buttonColors.purple}
                       type="primary"
                       onClick={() => assignButtonOnClick('expanded-card')}
                       ariaLabel={assignButtonDescription}
@@ -279,7 +283,7 @@ const ExpandedCurriculumCatalogCard = ({
                   </>
                 ) : (
                   <LinkButton
-                    color="purple"
+                    color={buttonColors.purple}
                     type="primary"
                     href={pathToCourse}
                     ariaLabel={i18n.tryCourseNow({
@@ -292,13 +296,18 @@ const ExpandedCurriculumCatalogCard = ({
               </div>
             </div>
             <div className={style.relatedCurriculaContainer}>
-              <div className={style.closeButton}>
+              <div className={style.closeButtonContainer}>
                 <Button
                   onClick={onClose}
-                  icon="xmark"
-                  iconClassName="fa-solid"
+                  icon={{
+                    iconName: 'xmark',
+                    iconStyle: 'solid',
+                  }}
                   ariaLabel="Close Button"
                   isIconOnly
+                  type="tertiary"
+                  color={buttonColors.black}
+                  className={style.closeButton}
                 />
               </div>
               <div className={style.relatedContainer}>

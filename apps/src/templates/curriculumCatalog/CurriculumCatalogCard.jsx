@@ -3,7 +3,11 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {concat, intersection} from 'lodash';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
+import {
+  Button,
+  buttonColors,
+  LinkButton,
+} from '@cdo/apps/componentLibrary/button';
 import i18n from '@cdo/locale';
 import {
   translatedCourseOfferingCsTopics,
@@ -289,12 +293,12 @@ const CustomizableCurriculumCatalogCard = ({
                 text={i18n.quickView()}
                 className={`${style.buttonFlex} ${style.quickViewButton}`}
                 type="secondary"
-                color="black"
+                color={buttonColors.black}
               />
               {isTeacherOrSignedOut && (
                 <>
                   <LinkButton
-                    color="black"
+                    color={buttonColors.black}
                     type="secondary"
                     href={pathToCourse}
                     ariaLabel={i18n.learnMoreDescription({
@@ -304,7 +308,7 @@ const CustomizableCurriculumCatalogCard = ({
                     className={`${style.buttonFlex} ${style.teacherAndSignedOutLearnMoreButton}`}
                   />
                   <Button
-                    color="purple"
+                    color={buttonColors.purple}
                     type="primary"
                     onClick={() => handleClickAssign('top-card')}
                     ariaLabel={assignButtonDescription}
@@ -315,7 +319,7 @@ const CustomizableCurriculumCatalogCard = ({
               )}
               {!isTeacherOrSignedOut && (
                 <LinkButton
-                  color="purple"
+                  color={buttonColors.purple}
                   type="primary"
                   href={pathToCourse}
                   ariaLabel={i18n.tryCourseNow({
