@@ -123,8 +123,8 @@ $black-font-weight: 900;
   font-style: italic;
 }
 
-$barlowSemiCondensed-semibold: 'Barlow Semi Condensed Semibold', sans-serif;
-$barlowSemiCondensed-medium: 'Barlow Semi Condensed Medium', sans-serif;
+$barlowSemiCondensed-semibold: 'Barlow Semi Condensed Semibold', $noto-sans-fonts, sans-serif;
+$barlowSemiCondensed-medium: 'Barlow Semi Condensed Medium', $noto-sans-fonts, sans-serif;
 
 $code-font: 'Source Code Pro', Monaco, 'Bitstream Vera Sans Mono', 'Lucida Console', Terminal, monospace;
 
