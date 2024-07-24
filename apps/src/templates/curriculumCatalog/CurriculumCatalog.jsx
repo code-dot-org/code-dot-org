@@ -1,3 +1,12 @@
+// The following styles are imported in a very specific order to preserve UI consistency.
+// `HeaderBanner` imports `typography.scss`
+// `typography.scss` has conflicting styles with `phase1-design-system.scss` which is imported later.
+// We are importing them in the specific order they were imported before adding import/order in order to preserve the UI.
+// These are very small changes so this can likely be removed with no issues.
+/* eslint-disable import/order */
+import HeaderBanner from '../HeaderBanner';
+/* eslint-enable import/order */
+
 import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 
@@ -15,7 +24,6 @@ import i18n from '@cdo/locale';
 import CourseCatalogBannerBackground from '../../../static/curriculum_catalog/course-catalog-banner-bg.png';
 import CourseCatalogIllustration01 from '../../../static/curriculum_catalog/course-catalog-illustration-01.png';
 import CourseCatalogNoSearchResultPenguin from '../../../static/curriculum_catalog/course-catalog-no-search-result-penguin.png';
-import HeaderBanner from '../HeaderBanner';
 
 import {curriculumDataShape} from './curriculumCatalogConstants';
 import CurriculumCatalogFilters from './CurriculumCatalogFilters';
