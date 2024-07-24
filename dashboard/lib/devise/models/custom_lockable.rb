@@ -44,7 +44,8 @@ module Devise
         # CloudWatch
         Cdo::Metrics.put(
           'User', 'DeviseLockableAccessLocked', 1, {
-            Environment: CDO.rack_env
+            Environment: CDO.rack_env,
+            UserType: user_type
           }
         )
 
@@ -61,7 +62,8 @@ module Devise
         # CloudWatch
         Cdo::Metrics.put(
           'User', 'DeviseLockableAccessUnlocked', 1, {
-            Environment: CDO.rack_env
+            Environment: CDO.rack_env,
+            UserType: user_type
           }
         )
 
