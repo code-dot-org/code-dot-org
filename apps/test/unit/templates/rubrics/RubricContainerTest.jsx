@@ -1,5 +1,5 @@
 // react testing library import
-import {render, fireEvent, act, waitFor, screen} from '@testing-library/react';
+import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
@@ -13,8 +13,8 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {
   getStore,
   registerReducers,
-  stubRedux,
   restoreRedux,
+  stubRedux,
 } from '@cdo/apps/redux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
@@ -779,7 +779,7 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
 
-    const wrapper = mount(
+    render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -796,18 +796,18 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
-    wrapper.update();
     expect(userFetchStub).to.have.been.called;
     expect(allFetchStub).to.have.been.called;
-    expect(wrapper.find('[title="info circle icon"]').length).to.be.greaterThan(
-      0
-    );
-    expect(wrapper.text()).to.include(
+    expect(screen.queryByTestId('info-alert')).to.exist;
+    screen.getByText(
       i18n.aiEvaluationStatus_teacher_limit_exceeded({
         limit: RubricAiEvaluationLimits.TEACHER_LIMIT,
       })
     );
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
+    const button = screen.getByRole('button', {
+      name: 'Run AI Assessment for Project',
+    });
+    expect(button).to.be.disabled;
   });
 
   // react testing library
