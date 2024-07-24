@@ -8,7 +8,7 @@ METRICS_NAMESPACE = 'code-dot-org/ActiveJob'
 
 def push_queue_length_metrics
   Cdo::Metrics.push(METRICS_NAMESPACE,
-    # Same me trics as "dashboard/app/jobs/application_job.rb"
+    # Same metrics as "dashboard/app/jobs/application_job.rb"
     [
       {
         metric_name: 'PendingJobCount',
