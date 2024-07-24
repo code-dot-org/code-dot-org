@@ -30,20 +30,27 @@ const PredictSummary: React.FunctionComponent = () => {
 
   useEffect(() => {
     if (currentSectionId && currentLevelId) {
-      getSectionSummary(currentSectionId, currentLevelId).then(response => {
-        if (response?.value) {
-          setResponseCount(response.value.response_count);
-          setNumStudents(response.value.num_students);
-        } else {
-          setResponseCount(null);
-          setNumStudents(null);
-        }
-      });
+      try {
+        getSectionSummary(currentSectionId, currentLevelId).then(response => {
+          if (response?.value) {
+            setResponseCount(response.value.response_count);
+            setNumStudents(response.value.num_students);
+          } else {
+            resetSummary();
+          }
+        });
+      } catch (e) {
+        resetSummary();
+      }
     } else {
-      setResponseCount(null);
-      setNumStudents(null);
+      resetSummary();
     }
   }, [currentSectionId, currentLevelId]);
+
+  const resetSummary = () => {
+    setResponseCount(null);
+    setNumStudents(null);
+  };
 
   return (
     <InstructorsOnly>
