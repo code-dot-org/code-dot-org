@@ -14,6 +14,7 @@ import {
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;
 const NO_EVENT_NAME = 'NO_VALID_EVENT_NAME_LOG_ERROR';
+const STABLE_ID_KEY = 'statsig_stable_id';
 
 class StatsigReporter {
   constructor() {
@@ -130,11 +131,10 @@ class StatsigReporter {
   }
 
   findOrCreateStableId() {
-    const stableIdKey = 'statsig_stable_id';
-    let stableId = cookies.get(stableIdKey);
+    let stableId = cookies.get(STABLE_ID_KEY);
     if (!stableId) {
       stableId = createUuid();
-      cookies.set(stableIdKey, stableId, {
+      cookies.set(STABLE_ID_KEY, stableId, {
         expires: 400,
         domain: 'code.org',
       });
