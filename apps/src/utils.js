@@ -2,6 +2,7 @@ import Immutable from 'immutable';
 import $ from 'jquery';
 import md5 from 'md5';
 import RGBColor from 'rgbcolor';
+import sanitizeHtml from 'sanitize-html';
 
 import {Position} from './constants';
 import {dataURIFromURI} from './imageUtils';
@@ -114,6 +115,16 @@ export function escapeHtml(unsafe) {
         .replace(/'/g, '&#39;')
         .replace(/\//g, '&#47;')
     : '';
+}
+
+/**
+ * Removes all HTML tags from a string.
+ * @param {string} unsafe - The string to sanitize.
+ */
+export function stripHtml(unsafe) {
+  return sanitizeHtml(unsafe, {
+    allowedTags: [],
+  });
 }
 
 /**

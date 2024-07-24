@@ -13,6 +13,7 @@ const {
   stripEncapsulatingDoubleQuotes,
   wrapNumberValidatorsForLevelBuilder,
   escapeHtml,
+  stripHtml,
   escapeText,
   unescapeText,
   makeEnum,
@@ -321,6 +322,31 @@ describe('utils modules', () => {
 
     it('should not escape regular characters', function () {
       assert.strictEqual(escapeHtml('abc123'), 'abc123');
+    });
+  });
+
+  describe('stripHtml', function () {
+    it('preserves strings without HTML tags', function () {
+      assert.equal('abc 123', stripHtml('abc 123'));
+    });
+
+    it('strips div tags', function () {
+      assert.equal('abc 123', stripHtml('<div>abc</div> 123'));
+    });
+
+    it('strips iframe tags', function () {
+      assert.equal('abc 123', stripHtml('<iframe>abc</iframe> 123'));
+    });
+
+    it('strips b tags', function () {
+      assert.equal('abc 123', stripHtml('<b>abc</b> 123'));
+    });
+
+    it('strips script tag and contents', function () {
+      assert.equal(
+        'abc 123',
+        stripHtml("abc<script>alert('hello')</script> 123")
+      );
     });
   });
 
