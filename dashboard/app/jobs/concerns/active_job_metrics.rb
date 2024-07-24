@@ -31,10 +31,10 @@ module ActiveJobMetrics
   end
 
   protected def report_job_count
-    Cdo::Metrics.push(
-      METRICS_NAMESPACE, [
+    Cdo::Metrics.push(METRICS_NAMESPACE,
+      # Same metrics as "bin/cron/report_activejob_metrics"
+      [
         {
-          # Same metric as "bin/cron/report_activejob_metrics"
           metric_name: 'JobCount',
           value: Delayed::Job.count,
           unit: 'Count',
@@ -42,7 +42,16 @@ module ActiveJobMetrics
           dimensions: [
             {name: 'Environment', value: CDO.rack_env},
           ],
-        },
+        }
+        # {
+        #   metric_name: 'FailedJobCount',
+        #   value: Delayed::Job.where.not(failed_at: nil).count,
+        #   unit: 'Count',
+        #   timestamp: Time.now,
+        #   dimensions: [
+        #     {name: 'Environment', value: CDO.rack_env},
+        #   ],
+        # }
       ]
     )
   rescue => exception
