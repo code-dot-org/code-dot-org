@@ -1,4 +1,5 @@
 import 'whatwg-fetch';
+import '@testing-library/jest-dom';
 
 /**
  * Import locales to jest environment
