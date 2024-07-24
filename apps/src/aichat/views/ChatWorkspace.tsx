@@ -71,17 +71,21 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   }, [messagesString, isWaitingForChatResponse]);
 
   useEffect(() => {
-    // If a teacher is viewing workspace as a student when level first loads (user_id param included in url)
-    // or from when viewing workspace as a participant, default to the student chat history view.
+    let selectedStudentName = null;
     if (viewAsUserId) {
       const selectedStudent = Object.values(students).find(
         student => student.id === viewAsUserId
       );
-      setSelectedStudentName(getShortName(selectedStudent.name));
-      console.log('selectedStudentName', selectedStudentName);
-    } else {
-      setSelectedStudentName(null);
+      if (selectedStudent) {
+        selectedStudentName = getShortName(selectedStudent.name);
+      }
     }
+    setSelectedStudentName(selectedStudentName);
+  }, [viewAsUserId, students]);
+
+  useEffect(() => {
+    // If a teacher is viewing workspace as a student when level first loads (user_id param included in url)
+    // or from when viewing workspace as a participant, default to the student chat history view.
     if (
       viewAsUserId &&
       (!viewMode || viewMode === WORKSPACE_VIEW_MODE.PARTICIPANT)
@@ -90,9 +94,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     } else if (!viewAsUserId) {
       setViewMode(WORKSPACE_VIEW_MODE.PARTICIPANT);
     }
-  }, [viewAsUserId, viewMode, setViewMode, students, selectedStudentName]);
-
-  const dispatch = useAppDispatch();
+  }, [viewAsUserId, viewMode]);
 
   const showWaitingAnimation = () => {
     if (isWaitingForChatResponse) {
@@ -143,6 +145,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabsContainerClassName: moduleStyles.tabsContainer,
     tabPanelsContainerClassName: moduleStyles.tabPanels,
   };
+
+  const dispatch = useAppDispatch();
 
   const onCloseWarningModal = useCallback(
     () => dispatch(setShowWarningModal(false)),
