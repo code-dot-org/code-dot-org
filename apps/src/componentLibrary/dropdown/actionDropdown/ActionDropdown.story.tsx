@@ -159,7 +159,7 @@ GroupOfActionDropdownColors.args = {
     {
       name: 'default-dropdown-dark',
       triggerButtonProps: {
-        color: 'purple',
+        color: 'white',
         type: 'primary',
         isIconOnly: true,
         icon: {iconName: 'smile', iconStyle: 'solid'},
@@ -217,7 +217,7 @@ GroupOfActionDropdownMenuPlacements.args = {
     {
       name: 'default-dropdown-right',
       triggerButtonProps: {
-        color: 'white',
+        color: 'purple',
         type: 'primary',
         isIconOnly: true,
         icon: {iconName: 'smile', iconStyle: 'solid'},
