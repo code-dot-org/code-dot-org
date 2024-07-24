@@ -135,6 +135,8 @@ en:
           description_audience: ''
           lesson_groups: {}
           student_description: Create images with bits and bytes.
+          lessons: {}
+          name: pixelation
         20-hour:
           title: Accelerated Intro to CS Course
           description: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
@@ -235,6 +237,7 @@ en:
           lesson_groups: {}
           student_description: Compress text by identifying repeated patterns.
           name: text-compression
+          lessons: {}
         CSPPD:
           title: Computer Science Principles PD
           description: 'Phase 1: Online Introduction for CSP'
@@ -1241,6 +1244,7 @@ en:
           lesson_groups: {}
           student_description: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.
           name: hoc-encryption
+          lessons: {}
         csd2-2017:
           title: CSD Unit 2 - Web Development ('17-'18)
           description_audience: ''
@@ -1997,6 +2001,7 @@ en:
           lesson_groups: {}
           student_description: Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
           name: applab-intro
+          lessons: {}
         e-f-ramp:
           title: Course E & F Ramp
           description_audience: ''
@@ -2874,6 +2879,7 @@ en:
           lesson_groups: {}
           student_description: Code your own dance party to share with your friends!
           name: dance
+          lessons: {}
         frozen-2018-test-b:
           title: New Frozen Script
           description: ''
@@ -2934,6 +2940,7 @@ en:
           lesson_groups: {}
           student_description: Go beyond the first hour with extended project ideas.
           name: dance-extras
+          lessons: {}
         coursef-2019:
           title: Course F (2019)
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
@@ -10440,6 +10447,8 @@ en:
               name: New Game Design Lesson 3
             lesson-13:
               name: Music Lab Testing
+            lesson-14:
+              name: Chatbots
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff

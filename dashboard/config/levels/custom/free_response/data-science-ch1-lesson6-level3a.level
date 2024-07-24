@@ -18,9 +18,10 @@
     "skip_dialog": true,
     "skip_sound": true,
     "display_name": "Gym Temperature Readings",
-    "bubble_choice_description": "This data was gathered from a sensor that measured the temperature in the main event space in the gym over the course of the day."
+    "bubble_choice_description": "This data was gathered from a sensor that measured the temperature in the main event space in the gym over the course of the day.",
+    "thumbnail_url": "https://images.code.org/3c7cb532faab38010364c1e1bb35df1b-thermometer.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-07-18 15:58:32 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-18 16:31:43 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-07-18 15:58:32 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-18 16:31:43 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-22 15:25:36 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
