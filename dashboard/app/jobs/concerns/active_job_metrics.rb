@@ -36,22 +36,22 @@ module ActiveJobMetrics
       [
         {
           metric_name: 'JobCount',
-          value: Delayed::Job.count,
+          value: Delayed::Job.where(failed_at: nil).count,
+          unit: 'Count',
+          timestamp: Time.now,
+          dimensions: [
+            {name: 'Environment', value: CDO.rack_env},
+          ],
+        },
+        {
+          metric_name: 'FailedJobCount',
+          value: Delayed::Job.where.not(failed_at: nil).count,
           unit: 'Count',
           timestamp: Time.now,
           dimensions: [
             {name: 'Environment', value: CDO.rack_env},
           ],
         }
-        # {
-        #   metric_name: 'FailedJobCount',
-        #   value: Delayed::Job.where.not(failed_at: nil).count,
-        #   unit: 'Count',
-        #   timestamp: Time.now,
-        #   dimensions: [
-        #     {name: 'Environment', value: CDO.rack_env},
-        #   ],
-        # }
       ]
     )
   rescue => exception

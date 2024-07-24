@@ -12,7 +12,7 @@ def push_queue_length_metrics
     [
       {
         metric_name: 'JobCount',
-        value: Delayed::Job.count,
+        value: Delayed::Job.where(failed_at: nil).count,
         unit: 'Count',
         timestamp: Time.now,
         dimensions: [
