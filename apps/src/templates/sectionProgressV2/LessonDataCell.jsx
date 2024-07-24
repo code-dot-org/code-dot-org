@@ -83,8 +83,9 @@ function LessonDataCell({
       <div className={styles.lessonDataCellExpanded}>
         {lessonCellUnexpanded}
         <div
-          id={'ui-test-time-spent-' + lesson.relative_position}
-          className={classNames(styles.gridBox, styles.gridBoxMetadata)}
+          className={classNames(styles.gridBox, styles.gridBoxMetadata, {
+            [`ui-test-time-spent-${lesson.relative_position}`]: true,
+          })}
         >
           {formatTimeSpent(studentLessonProgress)}
         </div>

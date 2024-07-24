@@ -61,9 +61,9 @@ Scenario: Viewing student metadata
   Then I click selector "#ui-test-expand-all"
   And I wait until element "div:contains(Last Updated)" is visible
   And I wait until element "div:contains(Time Spent)" is visible
-  And I wait until element "#ui-test-lesson-header-44" is visible
-  And I scroll to "#ui-test-lesson-header-44"
-  And I wait until "#ui-test-time-spent-44" contains one or more integers
+  And I wait until element ".ui-test-lesson-header-44" is visible
+  And I scroll to ".ui-test-lesson-header-44"
+  And I wait until ".ui-test-time-spent-44" contains one or more integers
   Then I click selector "#ui-see-more-options-dropdown"
   Then I click selector "#ui-test-collapse-all"
   And element "div:contains(Time Spent)" does not exist
