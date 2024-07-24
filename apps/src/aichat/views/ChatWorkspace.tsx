@@ -21,6 +21,12 @@ import moduleStyles from './chatWorkspace.module.scss';
 interface ChatWorkspaceProps {
   onClear: () => void;
 }
+interface Students {
+  [index: number]: {
+    id: number;
+    name: string;
+  };
+}
 
 const WORKSPACE_VIEW_MODE = {
   STUDENT_CHAT_HISTORY: 'viewStudentChatHistory',
@@ -35,12 +41,20 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   onClear,
 }) => {
   const [viewMode, setViewMode] = useState<string | null>(null);
+  const [selectedStudentName, setSelectedStudentName] = useState<string | null>(
+    null
+  );
 
   const {showWarningModal, isWaitingForChatResponse} = useAppSelector(
     state => state.aichat
   );
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const items = useSelector(selectAllMessages);
+
+  const students = useSelector(
+    (state: {teacherSections: {selectedStudents: Students}}) =>
+      state.teacherSections.selectedStudents
+  );
 
   // Compare the messages as a string since the object reference will change on every update.
   // This way we will only scroll when the contents of the messages have changed.
@@ -59,6 +73,15 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   useEffect(() => {
     // If a teacher is viewing workspace as a student when level first loads (user_id param included in url)
     // or from when viewing workspace as a participant, default to the student chat history view.
+    if (viewAsUserId) {
+      const selectedStudent = Object.values(students).find(
+        student => student.id === viewAsUserId
+      );
+      setSelectedStudentName(getShortName(selectedStudent.name));
+      console.log('selectedStudentName', selectedStudentName);
+    } else {
+      setSelectedStudentName(null);
+    }
     if (
       viewAsUserId &&
       (!viewMode || viewMode === WORKSPACE_VIEW_MODE.PARTICIPANT)
@@ -67,7 +90,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     } else if (!viewAsUserId) {
       setViewMode(WORKSPACE_VIEW_MODE.PARTICIPANT);
     }
-  }, [viewAsUserId, viewMode, setViewMode]);
+  }, [viewAsUserId, viewMode, setViewMode, students, selectedStudentName]);
 
   const dispatch = useAppDispatch();
 
@@ -83,12 +106,13 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     }
   };
 
-  const studentShortName = 'Sam';
   const tabs = [
     {
       value: 'viewStudentChatHistory',
-      text: `View ${studentShortName} chat history`,
-      tabContent: <div>Viewing {studentShortName} chat history</div>,
+      text: `View ${selectedStudentName}'s chat history`,
+      tabContent: (
+        <div>Viewing {selectedStudentName}'s chat history - TODO</div>
+      ),
     },
     {
       value: 'testStudentModel',
@@ -179,6 +203,14 @@ const TestModel: React.FunctionComponent<TestModelProps> = ({
       {showWaitingAnimation()}
     </div>
   );
+};
+
+const MAX_NAME_LENGTH = 15;
+const getShortName = (studentName: string): string => {
+  // If the student name contains a first and last name separated by whitespace, only use the first name.
+  const first = studentName.split(/\s/)[0];
+  // If the first name is longer than 10 characters, only use the first 10 characters.
+  return first.length > 10 ? first.slice(0, MAX_NAME_LENGTH) : first;
 };
 
 export default ChatWorkspace;
