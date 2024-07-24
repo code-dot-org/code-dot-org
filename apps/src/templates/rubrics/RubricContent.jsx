@@ -178,6 +178,7 @@ export const InfoAlert = ({text, dismissable}) => {
         [style.infoAlert]: !closed,
         [style.infoAlertClosed]: !!closed,
       })}
+      data-testid="info-alert"
     >
       <div className={style.infoAlertLeft}>
         <FontAwesome

@@ -1,5 +1,5 @@
 // react testing library import
-import {render, fireEvent, act, waitFor} from '@testing-library/react';
+import {render, fireEvent, act, waitFor, screen} from '@testing-library/react';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
@@ -735,7 +735,7 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
 
-    const wrapper = mount(
+    const {queryByTestId} = render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -752,11 +752,14 @@ describe('RubricContainer', () => {
     // Perform fetches
     await wait();
 
-    wrapper.update();
     expect(userFetchStub).to.have.been.called;
     expect(allFetchStub).to.have.been.called;
-    expect(wrapper.find('[title="info circle icon"]').length).to.equal(0);
-    expect(wrapper.find('Button').at(0).props().disabled).to.be.false;
+    expect(queryByTestId('info-alert')).to.be.null;
+
+    const button = screen.getByRole('button', {
+      name: 'Run AI Assessment for Project',
+    });
+    expect(button).not.to.be.disabled;
   });
 
   it('shows error on initial load for status 1005', async () => {
