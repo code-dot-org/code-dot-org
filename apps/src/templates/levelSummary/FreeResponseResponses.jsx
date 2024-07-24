@@ -34,7 +34,11 @@ const FreeResponseResponses = ({responses, showStudentNames}) => {
     pinResponse = undefined,
     unpinResponse = undefined
   ) => (
-    <div key={response.user_id} className={styles.studentResponseBlock}>
+    <div
+      key={response.user_id}
+      className={styles.studentResponseBlock}
+      id="student-response"
+    >
       <div key={response.user_id} className={styles.studentAnswer}>
         <div
           className={classNames(
@@ -130,6 +134,7 @@ const FreeResponseResponses = ({responses, showStudentNames}) => {
             numHiddenResponses: hiddenResponses.length,
           })}
           type="gray"
+          id="hidden-responses-alert"
         />
       )}
     </div>

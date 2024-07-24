@@ -82,3 +82,62 @@ Scenario: Multi level 2
   Then I click selector "span:contains(Show answer)"
   And I see no difference for "multi level summary 2 show answer"
   And I close my eyes
+
+Scenario: Check for Understanding summaries
+  # Turn on cfu pin and hide until it is on by default.
+  Given I am on "http://code.org/test_dcdo"
+  When I use a cookie to mock the DCDO key "cfu-pin-hide-enabled" as "true"
+
+  Given I create an authorized teacher-associated student named "Sally"
+  And I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1/"
+  And I type "sample response" into ".free-response > textarea"
+  And I press ".submitButton" using jQuery to load a new page
+
+  When I sign in as "Teacher_Sally" and go home
+  And I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1/summary"
+
+  And I wait until element "#summary-container" is visible
+  And I dismiss the teacher panel
+  And element "#student-response" is visible
+  And element "#student-response" does not contain text "Sally"
+
+  And I click selector "label:contains('Show student names')" once I see it
+  And I wait until the first element "#student-response" contains text "Sally"
+
+  Then I press the first "#student-response-menu-button" element
+  And I wait until element "#student-response-menu" is visible
+
+  Then I press the first "#hide-response-button" element
+  And element "#student-response" is not visible
+  And I wait until element "a:contains('Show hidden responses')" is visible
+
+Scenario: Check for Understanding summaries eyes
+# Turn on cfu pin and hide until it is on by default.
+  Given I am on "http://code.org/test_dcdo"
+  When I use a cookie to mock the DCDO key "cfu-pin-hide-enabled" as "true"
+
+  When I open my eyes to test "Check for Understanding summaries"
+
+  Given I create an authorized teacher-associated student named "Sally"
+  And I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1/"
+  And I type "sample response" into ".free-response > textarea"
+  And I press ".submitButton" using jQuery to load a new page
+
+  And I create a student named "Student2"
+  And I join the section
+  And I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1/"
+  And I type "sample response 2" into ".free-response > textarea"
+  And I press ".submitButton" using jQuery to load a new page
+
+  When I sign in as "Teacher_Sally" and go home
+  And I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1/summary"
+
+  And I wait until element "#summary-container" is visible
+  And I dismiss the teacher panel
+
+  And I see no difference for "Student names hidden"
+
+  And I click selector "label:contains('Show student names')" once I see it
+  And I wait until the first element "#student-response" contains text "Sally"
+
+  And I see no difference for "Student names shown"

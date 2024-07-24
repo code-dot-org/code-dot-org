@@ -66,9 +66,13 @@ const ResponseMenuDropdown = ({
           styles.studentAnswerMenuButton,
           unpinResponse && styles.studentAnswerMenuButtonPinned
         )}
+        id="student-response-menu-button"
       />
       {isOpen && (
-        <div className={styles.studentAnswerMenuDropdown}>
+        <div
+          className={styles.studentAnswerMenuDropdown}
+          id="student-response-menu"
+        >
           <ul>
             <li>{getPinnedDropdownOption()}</li>
             <li>
@@ -79,6 +83,7 @@ const ResponseMenuDropdown = ({
                   setIsOpen(false);
                   hideResponse(response.user_id);
                 }}
+                id="hide-response-button"
               >
                 <FontAwesomeV6Icon iconName="eye-slash" />
                 {i18n.hideResponse()}
