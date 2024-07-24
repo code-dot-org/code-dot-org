@@ -35,7 +35,7 @@ module ActiveJobMetrics
       # Same metrics as "bin/cron/report_activejob_metrics"
       [
         {
-          metric_name: 'JobCount',
+          metric_name: 'PendingJobCount',
           value: Delayed::Job.where(failed_at: nil).count,
           unit: 'Count',
           timestamp: Time.now,

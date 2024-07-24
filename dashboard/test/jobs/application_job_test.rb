@@ -11,22 +11,22 @@ class ApplicationJobTest < ActiveJob::TestCase
     end
   end
 
-  test 'jobs log JobCount when enqueued' do
+  test 'jobs log job counts when enqueued' do
     # When testing, jobs aren't queued to the DB, so mock that.
     Delayed::Job.stubs(:count).returns(1)
 
     Cdo::Metrics.expects(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
       all_of(
-        includes_metrics(JobCount: 1),
-        includes_dimensions(:JobCount, Environment: CDO.rack_env)
+        includes_metrics(PendingJobCount: 1),
+        includes_dimensions(:PendingJobCount, Environment: CDO.rack_env)
       )
     )
 
     TestableJob.perform_later
   end
 
-  test 'enqueued jobs log JobCount, FailedJobCount, WaitTime, ExecutionTime, and TotalTime' do
+  test 'enqueued jobs log PendingJobCount, FailedJobCount, WaitTime, ExecutionTime, and TotalTime' do
     # mock some pending and failed jobs
     mock_job = MiniTest::Mock.new
     mock_job.expect(:failed_at, nil)  # Simulate a job without failed_at
@@ -36,24 +36,24 @@ class ApplicationJobTest < ActiveJob::TestCase
     mock_failed_job1.expect(:failed_at, Time.now)
     mock_failed_job2 = MiniTest::Mock.new
     mock_failed_job2.expect(:failed_at, Time.now)
-    pending_failed_jobs = [mock_failed_job1, mock_failed_job2]
+    failed_jobs = [mock_failed_job1, mock_failed_job2]
 
     Delayed::Job.stubs(:where).with(failed_at: nil).returns(pending_jobs)
-    Delayed::Job.stubs(:where).with.not(failed_at: nil).returns(pending_failed_jobs)
+    Delayed::Job.stubs(:where).with.not(failed_at: nil).returns(failed_jobs)
 
     # after_enqueue metrics
     Cdo::Metrics.expects(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
       all_of(
-        includes_metrics(JobCount: pending_jobs.size),
-        includes_dimensions(:JobCount, Environment: CDO.rack_env)
+        includes_metrics(PendingJobCount: pending_jobs.size),
+        includes_dimensions(:PendingJobCount, Environment: CDO.rack_env)
       )
     )
 
     Cdo::Metrics.expects(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
       all_of(
-        includes_metrics(FailedJobCount: pending_failed_jobs.size),
+        includes_metrics(FailedJobCount: failed_jobs.size),
         includes_dimensions(:FailedJobCount, Environment: CDO.rack_env)
       )
     )
@@ -99,7 +99,7 @@ class ApplicationJobTest < ActiveJob::TestCase
     Cdo::Metrics.stubs(:push)
     Cdo::Metrics.stubs(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
-      includes_metrics(JobCount: anything)
+      includes_metrics(PendingJobCount: anything)
     ).raises('An error that should be squashed')
 
     Honeybadger.expects(:notify).once
@@ -120,7 +120,7 @@ class ApplicationJobTest < ActiveJob::TestCase
     # Stub other calls
     Cdo::Metrics.stubs(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
-      includes_metrics(JobCount: anything)
+      includes_metrics(PendingJobCount: anything)
     )
     Cdo::Metrics.stubs(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
@@ -145,7 +145,7 @@ class ApplicationJobTest < ActiveJob::TestCase
     # Stub other calls
     Cdo::Metrics.stubs(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
-      includes_metrics(JobCount: anything)
+      includes_metrics(PendingJobCount: anything)
     )
     Cdo::Metrics.stubs(:push).with(
       ApplicationJob::METRICS_NAMESPACE,

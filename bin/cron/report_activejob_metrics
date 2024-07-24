@@ -11,7 +11,7 @@ def push_queue_length_metrics
     # Same me trics as "dashboard/app/jobs/application_job.rb"
     [
       {
-        metric_name: 'JobCount',
+        metric_name: 'PendingJobCount',
         value: Delayed::Job.where(failed_at: nil).count,
         unit: 'Count',
         timestamp: Time.now,
