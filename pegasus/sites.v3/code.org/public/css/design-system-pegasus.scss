@@ -1122,7 +1122,6 @@ section.quote {
 
   nav {
     border-bottom: 6px solid var(--brand_primary_default);
-    margin: 0 0 3rem;
     align-items: end;
     gap: 0.25rem;
 
@@ -1138,7 +1137,6 @@ section.quote {
       cursor: pointer;
       white-space: normal;
       height: -webkit-fit-content;
-      flex: 1;
 
       &:hover {
         background-color: var(--neutral_dark10);
@@ -1165,6 +1163,16 @@ section.quote {
         display: none;
       }
     }
+  }
+
+  .tab-content-container {
+    padding: 1.875rem;
+    border-radius: 0 0 .5rem .5rem;
+    border-right: 1px solid var(--light_gray200);
+    border-bottom: 1px solid var(--light_gray200);
+    border-left: 1px solid var(--light_gray200);
+    background: var(--neutral_white);
+    box-sizing: border-box;
   }
 
   // Hides tab content
