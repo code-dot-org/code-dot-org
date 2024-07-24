@@ -41,6 +41,8 @@ export interface CustomDropdownProps extends AriaAttributes {
   color?: DropdownColor;
   /** CustomDropdown size */
   size: ComponentSizeXSToL;
+  /** CustomDropdown menu placement */
+  menuPlacement?: 'left' | 'right';
   /** CustomDropdown disabled state */
   disabled?: boolean;
   /** CustomDropdown label
@@ -76,6 +78,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
   disabled = false,
   color = dropdownColors.black,
   size = 'm',
+  menuPlacement = 'left',
   useDSCOButtonAsTrigger = false,
   triggerButtonProps = {},
   ...rest
@@ -143,6 +146,7 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
       className={classNames(
         {[moduleStyles.open]: isOpen},
         moduleStyles.dropdownContainer,
+        moduleStyles[`dropdownContainer-${menuPlacement}-menuPlacement`],
         moduleStyles[`dropdownContainer-${color}`],
         moduleStyles[`dropdownContainer-${size}`],
         className

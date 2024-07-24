@@ -48,7 +48,6 @@
   .dropdownMenuContainer {
     position: absolute;
     bottom: auto;
-    left: 0;
     z-index: 1000;
     display: none;
     float: left;
@@ -176,6 +175,20 @@
 .dropdownContainer.open {
   .dropdownMenuContainer {
     display: block;
+  }
+}
+
+// Dropdrown Menu placements
+
+.dropdownContainer-left-menuPlacement {
+  .dropdownMenuContainer {
+    inset-inline-start: 0;
+  }
+}
+
+.dropdownContainer-right-menuPlacement {
+  .dropdownMenuContainer {
+    inset-inline-end: 0;
   }
 }
 
