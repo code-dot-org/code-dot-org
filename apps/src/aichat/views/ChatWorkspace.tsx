@@ -1,4 +1,4 @@
-import React, {useCallback, useRef, useEffect} from 'react';
+import React, {useCallback, useRef, useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {
@@ -9,14 +9,15 @@ import {
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import Tabs, {TabsProps} from '@cdo/apps/componentLibrary/tabs/Tabs';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {ChatItem} from '../types';
 
 import ChatItemView from './ChatItemView';
 import CopyButton from './CopyButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
 import moduleStyles from './chatWorkspace.module.scss';
-import {ChatItem} from '../types';
 
 interface ChatWorkspaceProps {
   onClear: () => void;
@@ -28,15 +29,13 @@ interface ChatWorkspaceProps {
 const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   onClear,
 }) => {
-  const showWarningModal = useSelector(
-    (state: {aichat: AichatState}) => state.aichat.showWarningModal
-  );
+  const [selectedTab, setSelectedTab] = useState('');
 
+  const {showWarningModal, isWaitingForChatResponse} = useAppSelector(
+    state => state.aichat
+  );
+  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const items = useSelector(selectAllMessages);
-
-  const isWaitingForChatResponse = useSelector(
-    (state: {aichat: AichatState}) => state.aichat.isWaitingForChatResponse
-  );
 
   // Compare the messages as a string since the object reference will change on every update.
   // This way we will only scroll when the contents of the messages have changed.
@@ -51,6 +50,12 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       });
     }
   }, [messagesString, isWaitingForChatResponse]);
+
+  useEffect(() => {
+    viewAsUserId
+      ? setSelectedTab('viewStudentChatHistory')
+      : setSelectedTab('');
+  }, [viewAsUserId]);
 
   const dispatch = useAppDispatch();
 
@@ -69,7 +74,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const studentShortName = 'Sam';
   const tabs = [
     {
-      value: 'viewStudentChatHIstory',
+      value: 'viewStudentChatHistory',
       text: `View ${studentShortName} chat history`,
       tabContent: <div>Viewing {studentShortName} chat history</div>,
     },
@@ -86,9 +91,12 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     },
   ];
 
-  const handleOnChange = (value: string) => {
-    console.log(value);
-  };
+  const handleOnChange = useCallback(
+    (value: string) => {
+      setSelectedTab(value);
+    },
+    [setSelectedTab]
+  );
 
   const tabArgs: TabsProps = {
     name: 'teacherViewChatHistoryTabs',
@@ -108,9 +116,16 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {showWarningModal && <ChatWarningModal onClose={onCloseWarningModal} />}
-      <Tabs {...tabArgs} />
+      {viewAsUserId && <Tabs {...tabArgs} />}
+      {!viewAsUserId && (
+        <TestModel
+          items={items}
+          showWaitingAnimation={showWaitingAnimation}
+          conversationContainerRef={conversationContainerRef}
+        />
+      )}
 
-      <UserChatMessageEditor />
+      {selectedTab !== 'viewStudentChatHistory' && <UserChatMessageEditor />}
       <div className={moduleStyles.buttonRow}>
         <Button
           text="Clear chat"
