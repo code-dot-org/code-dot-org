@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+
+# This script migrates CAP data from properties to separate indexed columns.
+
+require 'ruby-progressbar'
+require_relative '../../../dashboard/config/environment'
+
+progress_bar = ProgressBar.create(
+  total: nil,
+  title: 'Migrating CAP data',
+  format: '%t[%c]: |%B| %a',
+  unknown_progress_animation_steps: %w[>-- ->- -->]
+)
+
+User.select(:id).where(cap_state: nil).where("properties->>'$.child_account_compliance_state' IS NOT NULL").find_in_batches do |users_batch|
+  User.where(id: users_batch).update_all <<~SQL.strip
+    cap_state = IF(properties->>'$.child_account_compliance_state' = 's', 'l', properties->>'$.child_account_compliance_state'),
+    cap_state_date = properties->>'$.child_account_compliance_state_last_updated'
+  SQL
+
+  progress_bar.progress += users_batch.size
+end
+
+progress_bar.finish

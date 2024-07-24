@@ -50,10 +50,13 @@
 #  races                    :string(255)
 #  primary_contact_info_id  :integer
 #  unlock_token             :string(255)
+#  cap_state                :string(1)
+#  cap_state_date           :datetime
 #
 # Indexes
 #
 #  index_users_on_birthday                             (birthday)
+#  index_users_on_cap_state_and_cap_state_date         (cap_state,cap_state_date)
 #  index_users_on_current_sign_in_at                   (current_sign_in_at)
 #  index_users_on_deleted_at                           (deleted_at)
 #  index_users_on_email_and_deleted_at                 (email,deleted_at)
@@ -323,6 +326,14 @@ class User < ApplicationRecord
 
   validate :lti_roster_sync_enabled, if: -> {lti_roster_sync_enabled.present?} do
     self.lti_roster_sync_enabled = ActiveRecord::Type::Boolean.new.cast(lti_roster_sync_enabled)
+  end
+
+  # TODO(P20-1055): Remove in "CAP data migration Phase 2" once new CAP columns are populated
+  before_save if: -> {property_changed?('child_account_compliance_state')} do
+    self.cap_state = child_account_compliance_state.presence
+  end
+  before_save if: -> {property_changed?('child_account_compliance_state_last_updated')} do
+    self.cap_state_date = child_account_compliance_state_last_updated.presence
   end
 
   def save_email_preference
