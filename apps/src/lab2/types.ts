@@ -284,3 +284,9 @@ export interface ExtraLinksProjectData {
   };
   meesage?: string;
 }
+
+export interface ProjectVersion {
+  versionId: string;
+  lastModified: string;
+  isLatest: boolean;
+}

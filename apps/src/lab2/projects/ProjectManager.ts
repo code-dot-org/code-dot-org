@@ -75,13 +75,13 @@ export default class ProjectManager {
   }
 
   // Load the project from the sources and channels store.
-  async load(): Promise<ProjectAndSources> {
+  async load(versionId?: string): Promise<ProjectAndSources> {
     if (this.destroyed) {
       this.throwErrorIfDestroyed('load');
     }
     let sources: ProjectSources | undefined;
     try {
-      sources = await this.sourcesStore.load(this.channelId);
+      sources = await this.sourcesStore.load(this.channelId, versionId);
       this.lastSource = JSON.stringify(sources);
     } catch (error) {
       // If there was a validation error or sourceResponse is a 404 (not found),

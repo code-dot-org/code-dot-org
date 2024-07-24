@@ -12,7 +12,7 @@ import * as sourcesApi from './sourcesApi';
 const {getTabId} = require('@cdo/apps/utils');
 
 export interface SourcesStore {
-  load: (key: string) => Promise<ProjectSources>;
+  load: (key: string, versionId?: string) => Promise<ProjectSources>;
 
   save: (
     key: string,
@@ -39,8 +39,8 @@ export class RemoteSourcesStore implements SourcesStore {
   private firstSaveTime: string | null = null;
   private lastSaveTime: number | null = null;
 
-  async load(channelId: string) {
-    const {response, value} = await sourcesApi.get(channelId);
+  async load(channelId: string, versionId?: string) {
+    const {response, value} = await sourcesApi.get(channelId, versionId);
 
     if (response.ok) {
       this.currentVersionId = response.headers.get('S3-Version-Id');
