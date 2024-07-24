@@ -1,6 +1,7 @@
-import i18n from '@cdo/locale';
-import CdoFieldDanceAi from '../ai/cdoFieldDanceAi';
 import {BlockColors, BlockStyles} from '@cdo/apps/blockly/constants';
+import i18n from '@cdo/locale';
+
+import CdoFieldDanceAi from '../ai/cdoFieldDanceAi';
 
 // This color palette is limited to colors which have different hues, therefore
 // it should not contain different shades of the same color such as

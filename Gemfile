@@ -258,6 +258,7 @@ end
 # Reduce volume of production logs
 # Ref: https://github.com/roidrage/lograge/pull/252
 gem 'lograge', github: 'code-dot-org/lograge', ref: 'debug_exceptions'
+gem 'request_store', '~> 1.6.0', require: false
 
 # Enforce SSL
 gem 'rack-ssl-enforcer'
@@ -285,8 +286,6 @@ gem 'acmesmith', '~> 2.3.1'
 gem 'addressable'
 # bcrypt version specified due to "Invalid Hash" error in Linux
 gem 'bcrypt', '3.1.13'
-gem 'firebase'
-gem 'firebase_token_generator'
 gem 'sshkit'
 gem 'validates_email_format_of'
 

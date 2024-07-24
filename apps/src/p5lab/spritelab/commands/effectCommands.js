@@ -5,9 +5,11 @@ import drawStar from '@code-dot-org/dance-party/src/shapes/star';
 import drawStarstruck from '@code-dot-org/dance-party/src/shapes/starstruck';
 import drawTickled from '@code-dot-org/dance-party/src/shapes/tickled';
 import drawWink from '@code-dot-org/dance-party/src/shapes/wink';
+
 import {createUuid} from '@cdo/apps/utils';
-import * as utils from '../../utils';
+
 import {EFFECTS_PALETTES} from '../../constants';
+import * as utils from '../../utils';
 
 export const commands = {
   setForegroundEffect(effectName) {

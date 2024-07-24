@@ -4,12 +4,13 @@
 
 import $ from 'jquery';
 import React from 'react';
+
+import {setupApp} from '@cdo/apps/code-studio/initApp/loadApp';
+import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {
   showDialog,
   processResults,
 } from '@cdo/apps/code-studio/levels/dialogHelper';
-import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import {setupApp} from '@cdo/apps/code-studio/initApp/loadApp';
 import {
   LegacyStartOverDialog,
   LegacyInstructionsDialog,

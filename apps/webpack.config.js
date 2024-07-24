@@ -80,6 +80,7 @@ const circularDependenciesSet = new Set(circularDependencies);
 // as we see our known circular dependencies, we're gonna remove them from our list. That way,
 // we can report at the end if any circular dependencies have been cleaned up.
 let seenCircles = new Set();
+let numUnresolvedCircles = 0;
 const nodePolyfillConfig = {
   plugins: [
     new webpack.ProvidePlugin({
@@ -107,9 +108,10 @@ const nodePolyfillConfig = {
         const pathString = paths.join(' -> ');
         // if the path is not a known existing one, then note as an error
         if (!circularDependenciesSet.has(pathString)) {
+          numUnresolvedCircles++;
           compilation.errors.push(
             new Error(
-              `Circular Dependency Checker : A new Circular Dependency found.\nKnown circular dependencies can be found in 'apps/circular_dependencies.json'\n Circular dependency: ${pathString}.`
+              `Circular Dependency Checker : A new Circular Dependency found.\nKnown circular dependencies can be found in 'apps/circular_dependencies.json'\n Circular dependency: ${pathString}`
             )
           );
         }
@@ -119,10 +121,19 @@ const nodePolyfillConfig = {
       // finally, at the end, if we still have any circles that we previously knew about but did not see
       // this time, note it as a warning.
       onEnd: ({compilation}) => {
+        if (numUnresolvedCircles > 0) {
+          compilation.warnings.push(
+            new Error(
+              `Circular Dependency Checker : Number of total unresolved circular dependencies (see errors below): ${numUnresolvedCircles}`
+            )
+          );
+        }
         if (seenCircles.size > 0) {
           compilation.warnings.push(
             new Error(
-              `Circular Dependency Checker : Resolved circular dependencies can be removed from circular_dependencies.json :\n  ${Array.from(
+              `Circular Dependency Checker : ${
+                Array.from(seenCircles).length
+              } resolved circular dependencies can be removed from circular_dependencies.json :\n  ${Array.from(
                 seenCircles
               ).join('\n  ')}`
             )
@@ -233,7 +244,7 @@ const WEBPACK_BASE_CONFIG = {
       {
         test: /\.ejs$/,
         include: [p('src'), p('test')],
-        loader: 'ejs-webpack-loader',
+        loader: './lib/ejs-webpack-loader',
         options: {
           strict: true,
         },
@@ -277,22 +288,7 @@ const WEBPACK_BASE_CONFIG = {
           p('test'),
           p('../dashboard/app/assets/images'),
         ],
-        // note that in the name template given below, a dash prefixing
-        // the hash is explicitly avoided. If rails tries to serve
-        // this file when asset digests are turned off, it will return a
-        // 404 because it thinks the hash is a digest and it won't
-        // be able to find the file without the hash. :( :(
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 1024,
-              // uses the file-loader when file size is over the limit
-              name: '[name]wp[contenthash].[ext]',
-              esModule: false,
-            },
-          },
-        ],
+        type: 'asset/inline',
       },
       {
         test: /\.jsx?$/,
@@ -326,28 +322,6 @@ const WEBPACK_BASE_CONFIG = {
         ],
         exclude: /node_modules/,
       },
-      // modify WEBPACK_BASE_CONFIG's preLoaders for code coverage info
-      ...(envConstants.COVERAGE
-        ? [
-            {
-              test: /\.jsx?$/,
-              enforce: 'post',
-              loader: 'istanbul-instrumenter-loader',
-              include: p('src'),
-              exclude: [
-                // we need to turn off instrumentation for this file
-                // because we have tests that actually make assertions
-                // about the contents of the compiled version of this file :(
-                p('src/flappy/levels.js'),
-              ],
-              options: {
-                cacheDirectory: true,
-                compact: false,
-                esModules: true,
-              },
-            },
-          ]
-        : []),
       ...(process.env.DEV
         ? [
             // Enable source maps locally for Blockly for easier debugging.

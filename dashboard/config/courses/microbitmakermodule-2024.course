@@ -1,15 +1,20 @@
 {
   "name": "microbitmakermodule-2024",
   "script_names": [
-
+    "sandbox-welcome-to-maker",
+    "getting-started-with-code-maker",
+    "k5maker",
+    "k5microbitmaker",
+    "k5maker4thgrade",
+    "k5maker5thgrade",
+    "self-paced-pl-microbit-2024-2"
   ],
-  "published_state": "in_development",
-  "instruction_type": "teacher_led",
-  "participant_audience": "student",
-  "instructor_audience": "teacher",
+  "published_state": "stable",
+  "instruction_type": "self_paced",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
   "properties": {
     "family_name": "microbitmakermodule",
-    "has_numbered_units": true,
     "version_year": "2024"
   },
   "resources": [

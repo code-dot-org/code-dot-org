@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {files} from '@cdo/apps/clientApi';
 import clientState from '@cdo/apps/code-studio/clientState';
@@ -10,7 +10,7 @@ import loadAppOptions, {
 import project from '@cdo/apps/code-studio/initApp/project';
 import * as imageUtils from '@cdo/apps/imageUtils';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const SERVER_LEVEL_ID = 5;
 const SERVER_PROJECT_LEVEL_ID = 10;

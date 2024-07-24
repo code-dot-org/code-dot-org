@@ -4,8 +4,6 @@ import React from 'react';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import {UnconnectedCoteacherInviteNotification as CoteacherInviteNotification} from '@cdo/apps/templates/studioHomepages/CoteacherInviteNotification';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 describe('CoteacherInviteNotification', () => {
   const defaultProps = {
     isForPl: false,
@@ -35,7 +33,7 @@ describe('CoteacherInviteNotification', () => {
     const wrapper = shallow(
       <CoteacherInviteNotification {...defaultProps} coteacherInvite={null} />
     );
-    expect(wrapper.find(Notification).length).to.equal(0);
+    expect(wrapper.find(Notification).length).toBe(0);
   });
 
   it('renders no notification for PL sections if there is no coteacher invite', () => {
@@ -46,16 +44,16 @@ describe('CoteacherInviteNotification', () => {
         coteacherInviteForPl={null}
       />
     );
-    expect(wrapper.find(Notification).length).to.equal(0);
+    expect(wrapper.find(Notification).length).toBe(0);
   });
 
   it('renders notification if there is a coteacher invite', () => {
     const wrapper = shallow(<CoteacherInviteNotification {...defaultProps} />);
     const notification = wrapper.find(Notification);
-    expect(notification.length).to.equal(1);
-    expect(notification.props().dismissible).to.equal(false);
-    expect(notification.props().type).to.equal(NotificationType.collaborate);
-    expect(notification.props().notice).to.include('The Great Pumpkin');
+    expect(notification.length).toBe(1);
+    expect(notification.props().dismissible).toBe(false);
+    expect(notification.props().type).toBe(NotificationType.collaborate);
+    expect(notification.props().notice).toContain('The Great Pumpkin');
   });
 
   it('renders PL notification if there is a coteacher invite for PL', () => {
@@ -63,10 +61,10 @@ describe('CoteacherInviteNotification', () => {
       <CoteacherInviteNotification {...defaultProps} isForPl={true} />
     );
     const notification = wrapper.find(Notification);
-    expect(notification.length).to.equal(1);
-    expect(notification.props().dismissible).to.equal(false);
-    expect(notification.props().type).to.equal(NotificationType.collaborate);
-    expect(notification.props().notice).to.include('Ms. Frizzle');
+    expect(notification.length).toBe(1);
+    expect(notification.props().dismissible).toBe(false);
+    expect(notification.props().type).toBe(NotificationType.collaborate);
+    expect(notification.props().notice).toContain('Ms. Frizzle');
   });
 
   it('renders no notifications if there is no PL invite and isForPl is true', () => {
@@ -78,6 +76,6 @@ describe('CoteacherInviteNotification', () => {
         coteacherInviteForPl={null}
       />
     );
-    expect(wrapper.find(Notification).length).to.equal(0);
+    expect(wrapper.find(Notification).length).toBe(0);
   });
 });

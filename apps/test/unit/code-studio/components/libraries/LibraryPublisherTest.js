@@ -1,6 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
@@ -8,7 +8,7 @@ import LibraryPublisher, {
   PublishState,
 } from '@cdo/apps/code-studio/components/libraries/LibraryPublisher';
 
-import {assert, expect} from '../../../../util/reconfiguredChai';
+import {assert, expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('LibraryPublisher', () => {

@@ -11,7 +11,7 @@ question 'Which one of these does not belong?'
 wrong 'The brownie because it is square.'
 wrong 'The pink donut because everything else is brown. '
 wrong 'The cookie because it is the only one with no sprinkles. '
-right 'All of the above. The items can be sorted in multiple different ways: by shape, color, photo orientation, and toppings.'
+right 'Each of the above can be true. The items can be sorted in multiple different ways: by shape, color, photo orientation, and toppings.'
 allow_multiple_attempts true
 markdown <<MARKDOWN
 <div>

@@ -7,6 +7,9 @@ Dashboard::Application.routes.draw do
   # Redirect studio.code.org/courses to code.org/students
   get "/courses", to: redirect(CDO.code_org_url("/students"))
 
+  # Redirect studio.code.org/sections/teacher_dashboard/first_section_progress to most recent section
+  get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section"
+
   constraints host: CDO.codeprojects_hostname do
     # Routes needed for the footer on weblab share links on codeprojects
     get '/weblab/footer', to: 'projects#weblab_footer'
@@ -63,6 +66,8 @@ Dashboard::Application.routes.draw do
     end
 
     resources :images, only: [:new]
+
+    get "/ai_tutor/tester", to: "ai_tutor#tester"
 
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
@@ -350,6 +355,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
+    get 'course_offerings/self_paced_pl_course_offerings', to: 'course_offerings#self_paced_pl_course_offerings'
     get '/course/:course_name', to: redirect('/courses/%{course_name}')
     get '/courses/:course_name/vocab/edit', to: 'vocabularies#edit'
     # these routes use course_course_name to match generated routes below that are nested within courses
@@ -650,7 +656,6 @@ Dashboard::Application.routes.draw do
 
     post '/report_abuse', to: 'report_abuse#report_abuse'
     get '/report_abuse', to: 'report_abuse#report_abuse_form'
-    post '/report_abuse_pop_up', to: 'report_abuse#report_abuse_pop_up'
 
     get '/too_young', to: 'too_young#index'
 
@@ -1171,7 +1176,7 @@ Dashboard::Application.routes.draw do
 
     # DatablockStorageController powers the data features of applab,
     # and the key/value pair store feature of gamelab
-    resources :datablock_storage, path: '/datablock_storage/:channel_id/', only: [:index] do
+    resources :datablock_storage, path: '/datablock_storage/:channel_id/', only: [] do
       collection do
         # Datablock Storage: Key-Value-Pair API
         post :set_key_value
@@ -1211,11 +1216,6 @@ Dashboard::Application.routes.draw do
         # Datablock Storage: Project API
         get :project_has_data
         delete :clear_all_data
-
-        # TODO: post-firebase-cleanup, remove
-        # Project Use Datablock Storage API
-        put :use_datablock_storage
-        put :use_firebase_storage
       end
     end
   end

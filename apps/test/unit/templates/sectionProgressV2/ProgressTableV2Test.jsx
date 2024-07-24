@@ -7,36 +7,33 @@ import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
   setSortByFamilyName,
 } from '@cdo/apps/templates/currentUserRedux';
+import sectionProgress, {
+  addExpandedLesson,
+} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {
-  fakeLessonWithLevels,
-  fakeUnitData,
-} from '@cdo/apps/templates/progress/progressTestHelpers';
-import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import {createStore} from '@cdo/apps/templates/sectionProgress/sectionProgressTestHelpers';
+  createStore,
+  getScriptData,
+} from '@cdo/apps/templates/sectionProgress/sectionProgressTestHelpers';
 import ProgressTableV2 from '@cdo/apps/templates/sectionProgressV2/ProgressTableV2.jsx';
 import teacherSections, {
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
 const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};
 const SERVER_STUDENT_1 = {...STUDENT_1, family_name: STUDENT_1.familyName};
 const SERVER_STUDENT_2 = {...STUDENT_2, family_name: STUDENT_2.familyName};
-const LESSONS = [1, 2, 3, 4, 5].map(index =>
-  fakeLessonWithLevels({position: index}, index)
-);
-const SECTION_ID = 1;
-const UNIT_DATA = fakeUnitData({lessons: LESSONS});
+const SECTION_ID = 11;
+const UNIT_DATA = getScriptData(5);
 const DEFAULT_PROPS = {
-  expandedLessonIds: [],
-  setExpandedLessons: () => {},
   isSkeleton: false,
 };
 
-// ID 722 set by createStore
-const LESSON_ID_1 = 722;
+const LESSON_ID_1 = UNIT_DATA.lessons[0].id;
+
+const NUM_DEFAULT_LESSONS = 4;
 
 describe('ProgressTableV2', () => {
   let store;
@@ -169,27 +166,40 @@ describe('ProgressTableV2', () => {
   it('nothing expanded', () => {
     renderDefault();
 
-    expect(screen.getAllByTitle('Expand')).to.have.lengthOf(4);
+    // floating header doubles the number of lessons
+    expect(screen.getAllByTitle('Expand')).to.have.lengthOf(
+      NUM_DEFAULT_LESSONS * 2
+    );
     expect(screen.queryAllByTitle('Unexpand')).to.have.lengthOf(0);
   });
 
-  it('one lesson expanded', () => {
-    renderDefault(false, [SERVER_STUDENT_1, SERVER_STUDENT_2], {
-      expandedLessonIds: [LESSON_ID_1],
-    });
+  it('one lesson expanded', async () => {
+    renderDefault(false);
+    store.dispatch(
+      addExpandedLesson(UNIT_DATA.id, SECTION_ID, UNIT_DATA.lessons[0])
+    );
 
-    expect(screen.getAllByTitle('Expand')).to.have.lengthOf(3);
-    screen.getByTitle('Unexpand');
+    // floating header doubles the number of lessons
+    expect(screen.getAllByTitle('Expand')).to.have.lengthOf(
+      (NUM_DEFAULT_LESSONS - 1) * 2
+    );
+    expect(screen.getAllByTitle('Unexpand')).to.have.lengthOf(2);
   });
 
   it('multiple lessons expanded', () => {
     store = createStore(2, 5);
-    // ID 1558 set by createStore
-    renderDefault(false, [SERVER_STUDENT_1, SERVER_STUDENT_2], {
-      expandedLessonIds: [LESSON_ID_1, 1558],
-    });
+    renderDefault(false);
+    store.dispatch(
+      addExpandedLesson(UNIT_DATA.id, SECTION_ID, UNIT_DATA.lessons[0])
+    );
+    store.dispatch(
+      addExpandedLesson(UNIT_DATA.id, SECTION_ID, UNIT_DATA.lessons[1])
+    );
 
-    expect(screen.getAllByTitle('Expand')).to.have.lengthOf(2);
-    expect(screen.getAllByTitle('Unexpand')).to.have.lengthOf(2);
+    // floating header doubles the number of lessons
+    expect(screen.getAllByTitle('Expand')).to.have.lengthOf(
+      (NUM_DEFAULT_LESSONS - 2) * 2
+    );
+    expect(screen.getAllByTitle('Unexpand')).to.have.lengthOf(4);
   });
 });

@@ -4,7 +4,7 @@ import React from 'react';
 import {UnconnectedApplabVisualizationColumn} from '@cdo/apps/applab/ApplabVisualizationColumn';
 import {WIDGET_WIDTH} from '@cdo/apps/applab/constants';
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('AppLabVisualizationColumn', () => {
   describe('in widget mode', () => {

@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
 import ObjectiveLine from './ObjectiveLine';
 
 export default class ObjectivesEditor extends Component {

@@ -2,11 +2,12 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import commonMsg from '@cdo/locale';
-import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
-import {ViewType, changeViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+
 import {setViewAsUserId} from '@cdo/apps/code-studio/progressRedux';
+import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+import {ViewType, changeViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
+import commonMsg from '@cdo/locale';
 
 /**
  * Toggle that lets us change between seeing a page as a teacher, or as the

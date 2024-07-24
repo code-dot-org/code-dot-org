@@ -10,11 +10,12 @@
       "include_student_lesson_plans": true,
       "is_migrated": true,
       "project_sharing": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-24 23:40:35 UTC",
+    "serialized_at": "2024-07-11 20:56:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

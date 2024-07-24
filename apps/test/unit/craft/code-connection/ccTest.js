@@ -1,21 +1,17 @@
-import sinon from 'sinon';
-
 import {executeUserCode} from '@cdo/apps/craft/code-connection/craft';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 describe('Code Connection extension', () => {
   beforeEach(() => {
-    sinon.stub(studioApp(), 'highlight');
+    jest.spyOn(studioApp(), 'highlight').mockClear().mockImplementation();
   });
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
   });
   it('move forward block to verify single key-value parsing', done => {
     const mockClient = {
       async_command: command => {
-        expect(command).to.eql('move?direction=forward');
+        expect(command).toEqual('move?direction=forward');
         done();
       },
     };
@@ -25,7 +21,7 @@ describe('Code Connection extension', () => {
   it('place forward block to verify multiple key-value parsing', done => {
     const mockClient = {
       async_command: command => {
-        expect(command).to.eql('place?slotNum=0&direction=forward');
+        expect(command).toEqual('place?slotNum=0&direction=forward');
         done();
       },
     };
@@ -35,7 +31,7 @@ describe('Code Connection extension', () => {
   it('give block to verify item type', done => {
     const mockClient = {
       async_command: command => {
-        expect(command).to.eql(
+        expect(command).toEqual(
           'give?player=steve&itemName=stone&data=1&amount=2'
         );
         done();

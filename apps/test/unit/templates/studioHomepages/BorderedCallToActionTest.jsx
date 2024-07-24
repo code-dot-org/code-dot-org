@@ -1,11 +1,11 @@
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('BorderedCallToAction', () => {
   const headingText = 'Do Something';

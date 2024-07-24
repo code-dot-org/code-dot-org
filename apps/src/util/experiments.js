@@ -27,7 +27,7 @@ const EXPERIMENT_LIFESPAN_HOURS = 12;
 experiments.REDUX_LOGGING = 'reduxLogging';
 experiments.SCHOOL_AUTOCOMPLETE_DROPDOWN_NEW_SEARCH =
   'schoolAutocompleteDropdownNewSearch';
-experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES = 'showUnpublishedFirebaseTables';
+experiments.SHOW_UNPUBLISHED_DATASET_TABLES = 'showUnpublishedDatasetTables';
 experiments.TEACHER_DASHBOARD_SECTION_BUTTONS =
   'teacher-dashboard-section-buttons';
 experiments.TEACHER_DASHBOARD_SECTION_BUTTONS_ALTERNATE_TEXT =
@@ -46,6 +46,8 @@ experiments.SECTION_SETUP_REFRESH = 'sectionSetupRefresh';
 experiments.GENDER_FEATURE_ENABLED = 'gender';
 // Experiment for enabling the CPA lockout
 experiments.CPA_EXPERIENCE = 'cpa_experience';
+// Experiment for enabling the AI-TA differentiation chat
+experiments.AI_DIFFERENTIATION = 'ai-differentiation';
 experiments.AI_RUBRICS = 'ai-rubrics';
 experiments.NON_AI_RUBRICS = 'non-ai-rubrics';
 // Experiment for showing the toggle a teacher can use to turn on AI Tutor for their section

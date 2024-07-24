@@ -99,6 +99,7 @@ export type FolderId = string;
 export interface MultiFileSource {
   folders: Record<FolderId, ProjectFolder>;
   files: Record<FileId, ProjectFile>;
+  openFiles?: FileId[];
 }
 
 export interface ProjectFile {
@@ -144,7 +145,8 @@ export interface LevelProperties {
   isK1?: boolean;
   skin?: string;
   toolboxBlocks?: string;
-  source?: MultiFileSource;
+  startSources?: MultiFileSource;
+  templateSources?: MultiFileSource;
   sharedBlocks?: BlockDefinition[];
   validations?: Validation[];
   // An optional URL that allows the user to skip the progression.
@@ -160,6 +162,7 @@ export interface LevelProperties {
   // For Teachers Only value
   teacherMarkdown?: string;
   predictSettings?: LevelPredictSettings;
+  submittable?: boolean;
 }
 
 // Level configuration data used by project-backed labs that don't require
@@ -271,12 +274,13 @@ export interface ExtraLinksLevelData {
   is_standalone_project: boolean;
 }
 export interface ExtraLinksProjectData {
-  owner_info: {storage_id: number; name: string};
-  project_info: {
+  owner_info?: {storage_id: number; name: string};
+  project_info?: {
     id: number;
     sources_link: string;
     is_featured_project: boolean;
     featured_status: string;
     remix_ancestry: string[];
   };
+  meesage?: string;
 }

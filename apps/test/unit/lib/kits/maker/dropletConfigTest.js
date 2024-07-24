@@ -6,7 +6,7 @@ import dropletConfig, {
   configMicrobit,
 } from '@cdo/apps/lib/kits/maker/dropletConfig';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('maker/dropletConfig.js', () => {
   describe('getBoardEventDropdownForParam', () => {

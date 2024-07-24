@@ -3,8 +3,6 @@ import React from 'react';
 
 import ToggleButton from '@cdo/apps/templates/ToggleButton';
 
-import {expect} from '../../util/reconfiguredChai';
-
 describe('ToggleButton', () => {
   it('renders a "button" element', () => {
     const toggleButton = mount(
@@ -12,7 +10,7 @@ describe('ToggleButton', () => {
         <div>click me!</div>
       </ToggleButton>
     );
-    expect(toggleButton.find('button')).to.have.length(1);
+    expect(toggleButton.find('button')).toHaveLength(1);
   });
 
   it('applies id to the element if provided', () => {
@@ -28,6 +26,6 @@ describe('ToggleButton', () => {
         <div>click me!</div>
       </ToggleButton>
     );
-    expect(toggleButton.props().id).to.equal(id);
+    expect(toggleButton.props().id).toBe(id);
   });
 });

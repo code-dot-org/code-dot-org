@@ -1,6 +1,5 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -9,8 +8,6 @@ import AiAssessmentBox from '@cdo/apps/templates/rubrics/AiAssessmentBox';
 import AiAssessmentFeedbackContext from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 describe('AiAssessmentBox', () => {
   const reportingData = {
@@ -66,9 +63,7 @@ describe('AiAssessmentBox', () => {
         <AiAssessmentBox {...props} />
       </AiAssessmentFeedbackContext.Provider>
     );
-    expect(
-      wrapper.find('BodyFourText StrongText + span').first().text()
-    ).to.equal(
+    expect(wrapper.find('BodyFourText StrongText + span').first().text()).toBe(
       i18n.aiStudentAssessment({
         studentName: props.studentName,
         understandingLevel: i18n.aiAssessmentDoesMeet(),
@@ -82,7 +77,7 @@ describe('AiAssessmentBox', () => {
         <AiAssessmentBox {...props} />
       </AiAssessmentFeedbackContext.Provider>
     );
-    expect(wrapper.find('AiConfidenceBox')).to.have.lengthOf(1);
+    expect(wrapper.find('AiConfidenceBox')).toHaveLength(1);
   });
 
   it('renders AiAssessmentBox without AiConfidenceBox when unavailable', () => {
@@ -95,7 +90,7 @@ describe('AiAssessmentBox', () => {
         <AiAssessmentBox {...updatedProps} />
       </AiAssessmentFeedbackContext.Provider>
     );
-    expect(wrapper.find('AiConfidenceBox')).to.have.lengthOf(0);
+    expect(wrapper.find('AiConfidenceBox')).toHaveLength(0);
   });
 
   it('should render associated message for aiAssessed with convincing understanding', () => {
@@ -112,7 +107,7 @@ describe('AiAssessmentBox', () => {
           understandingLevel: i18n.aiAssessmentDoesMeet(),
         })
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('should render associated message for aiAssessed with limited understanding', () => {
@@ -133,7 +128,7 @@ describe('AiAssessmentBox', () => {
           understandingLevel: i18n.aiAssessmentDoesNotMeet(),
         })
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('renders AiAssessmentBox with notice that AI cannot be used when the topic is too subjective to be evaluated', () => {
@@ -143,9 +138,9 @@ describe('AiAssessmentBox', () => {
         <AiAssessmentBox {...updatedProps} />
       </AiAssessmentFeedbackContext.Provider>
     );
-    expect(wrapper.find('BodyThreeText')).to.have.lengthOf(0);
-    expect(wrapper.find('EmText')).to.have.lengthOf(1);
-    expect(wrapper.html().includes(i18n.aiCannotAssess())).to.be.true;
+    expect(wrapper.find('BodyThreeText')).toHaveLength(0);
+    expect(wrapper.find('EmText')).toHaveLength(1);
+    expect(wrapper.html().includes(i18n.aiCannotAssess())).toBe(true);
   });
 
   it('renders no evidence if none is given', () => {
@@ -155,8 +150,8 @@ describe('AiAssessmentBox', () => {
         <AiAssessmentBox {...updatedProps} />
       </AiAssessmentFeedbackContext.Provider>
     );
-    expect(wrapper.find('ul li')).to.have.lengthOf(0);
-    expect(wrapper.html().includes(props.aiEvidence[0].message)).to.be.false;
+    expect(wrapper.find('ul li')).toHaveLength(0);
+    expect(wrapper.html().includes(props.aiEvidence[0].message)).toBe(false);
   });
 
   it('renders evidence when given', () => {
@@ -165,14 +160,14 @@ describe('AiAssessmentBox', () => {
         <AiAssessmentBox {...props} />
       </AiAssessmentFeedbackContext.Provider>
     );
-    expect(wrapper.find('ul li')).to.have.lengthOf(2);
-    expect(wrapper.html().includes(props.aiEvidence[0].message)).to.be.true;
+    expect(wrapper.find('ul li')).toHaveLength(2);
+    expect(wrapper.html().includes(props.aiEvidence[0].message)).toBe(true);
 
     // Expect that lines are present
-    expect(wrapper.html().includes(`Lines`)).to.be.true;
+    expect(wrapper.html().includes(`Lines`)).toBe(true);
 
     // And we expect two links for each line for a total of 4 links
-    expect(wrapper.find('ul li p a')).to.have.lengthOf(4);
+    expect(wrapper.find('ul li p a')).toHaveLength(4);
   });
 
   it('falls back to rendering evidence as observations if there is no line numbers', () => {
@@ -183,16 +178,19 @@ describe('AiAssessmentBox', () => {
       </AiAssessmentFeedbackContext.Provider>
     );
     // Still one list item per evidence provided.
-    expect(wrapper.find('ul li')).to.have.lengthOf(3);
+    expect(wrapper.find('ul li')).toHaveLength(3);
     // We expect no links
-    expect(wrapper.find('ul li p a')).to.have.lengthOf(0);
+    expect(wrapper.find('ul li p a')).toHaveLength(0);
     // And it should not render line numbers in this case since it does not know
     // where any particular observation actually is.
-    expect(wrapper.html().includes(`Lines`)).to.be.false;
+    expect(wrapper.html().includes(`Lines`)).toBe(false);
   });
 
   it('navigates to the line when the evidence link for a line number is activated', () => {
-    const scrollToLineStub = sinon.stub(EditorAnnotator, 'scrollToLine');
+    const scrollToLineStub = jest
+      .spyOn(EditorAnnotator, 'scrollToLine')
+      .mockClear()
+      .mockImplementation();
 
     const wrapper = mount(
       <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
@@ -210,16 +208,19 @@ describe('AiAssessmentBox', () => {
     link.simulate('click');
 
     // Check that we called the editor annotator to scroll to the line we want.
-    sinon.assert.calledWith(scrollToLineStub, lineNumber);
+    expect(scrollToLineStub).toHaveBeenCalledWith(lineNumber);
 
     // Restore stubs
-    scrollToLineStub.restore();
+    scrollToLineStub.mockRestore();
   });
 
   it('should send an event when the evidence link is clicked', () => {
-    const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const sendEventSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
     const eventName = EVENTS.TA_RUBRIC_EVIDENCE_GOTO_CLICKED;
-    const scrollToLineStub = sinon.stub(EditorAnnotator, 'scrollToLine');
+    const scrollToLineStub = jest
+      .spyOn(EditorAnnotator, 'scrollToLine')
+      .mockClear()
+      .mockImplementation();
 
     const wrapper = mount(
       <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
@@ -234,7 +235,7 @@ describe('AiAssessmentBox', () => {
     link.simulate('click');
 
     // Check that we sent the event
-    expect(sendEventSpy).to.have.been.calledWith(eventName, {
+    expect(sendEventSpy).toHaveBeenCalledWith(eventName, {
       ...reportingData,
       learningGoalKey: props.learningGoals[props.currentLearningGoal].key,
       learningGoal: props.learningGoals[props.currentLearningGoal].learningGoal,
@@ -242,7 +243,7 @@ describe('AiAssessmentBox', () => {
     });
 
     // Restore stubs
-    scrollToLineStub.restore();
-    sendEventSpy.restore();
+    scrollToLineStub.mockRestore();
+    sendEventSpy.mockRestore();
   });
 });

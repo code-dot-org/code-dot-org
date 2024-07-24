@@ -1,17 +1,14 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon';
 
 import Alert from '@cdo/apps/componentLibrary/alert';
-
-import {expect} from '../../util/reconfiguredChai';
 
 describe('Design System - Alert', () => {
   it('Alert - renders with correct text', () => {
     render(<Alert text="Alert text" />);
 
-    expect(screen.getByText('Alert text')).to.exist;
+    expect(screen.getByText('Alert text')).toBeDefined();
   });
 
   it('Alert - renders icon when passed', () => {
@@ -19,28 +16,28 @@ describe('Design System - Alert', () => {
     render(<Alert text="Alert text" icon={icon} />);
 
     const iconElement = screen.getByTestId('font-awesome-v6-icon');
-    expect(iconElement).to.exist;
-    expect(iconElement.className).to.contain('fa-check-circle');
+    expect(iconElement).toBeDefined();
+    expect(iconElement.className).toContain('fa-check-circle');
   });
 
   it('Alert - renders default icon for specific types', () => {
     const {rerender} = render(<Alert text="Success Alert" type="success" />);
-    expect(screen.getByTestId('font-awesome-v6-icon').className).to.contain(
+    expect(screen.getByTestId('font-awesome-v6-icon').className).toContain(
       'fa-check-circle'
     );
 
     rerender(<Alert text="Danger Alert" type="danger" />);
-    expect(screen.getByTestId('font-awesome-v6-icon').className).to.contain(
+    expect(screen.getByTestId('font-awesome-v6-icon').className).toContain(
       'fa-circle-xmark'
     );
 
     rerender(<Alert text="Warning Alert" type="warning" />);
-    expect(screen.getByTestId('font-awesome-v6-icon').className).to.contain(
+    expect(screen.getByTestId('font-awesome-v6-icon').className).toContain(
       'fa-exclamation-circle'
     );
 
     rerender(<Alert text="Info Alert" type="info" />);
-    expect(screen.getByTestId('font-awesome-v6-icon').className).to.contain(
+    expect(screen.getByTestId('font-awesome-v6-icon').className).toContain(
       'fa-circle-info'
     );
   });
@@ -50,25 +47,25 @@ describe('Design System - Alert', () => {
     render(<Alert text="Alert with link" link={link} />);
 
     const linkElement = screen.getByText('Click here');
-    expect(linkElement).to.exist;
-    expect(linkElement.href).to.equal(link.href);
+    expect(linkElement).toBeDefined();
+    expect(linkElement.href).toBe(link.href);
   });
 
   it('Alert - calls onClose', async () => {
     const user = userEvent.setup();
-    const spyOnClose = sinon.spy();
+    const spyOnClose = jest.fn();
 
     render(<Alert text="Closable Alert" onClose={spyOnClose} />);
 
     const closeButton = screen.getByRole('button', {name: 'Close alert'});
     await user.click(closeButton);
 
-    expect(spyOnClose).to.have.been.calledOnce;
+    expect(spyOnClose).toHaveBeenCalledTimes(1);
   });
 
   it('Alert - renders icon, text, link, and onClose at the same time', async () => {
     const user = userEvent.setup();
-    const spyOnClose = sinon.spy();
+    const spyOnClose = jest.fn();
     const link = {href: 'https://google.com/', children: 'Click here'};
     const icon = {iconName: 'check-circle'};
 
@@ -84,13 +81,13 @@ describe('Design System - Alert', () => {
 
     const iconElement = container.querySelector('.fa-check-circle');
 
-    expect(screen.getByText('Full Alert')).to.exist;
-    expect(screen.getByText('Click here')).to.exist;
-    expect(iconElement).to.exist;
+    expect(screen.getByText('Full Alert')).toBeDefined();
+    expect(screen.getByText('Click here')).toBeDefined();
+    expect(iconElement).toBeDefined();
 
     const closeButton = screen.getByRole('button', {name: 'Close alert'});
     await user.click(closeButton);
 
-    expect(spyOnClose).to.have.been.calledOnce;
+    expect(spyOnClose).toHaveBeenCalledTimes(1);
   });
 });
