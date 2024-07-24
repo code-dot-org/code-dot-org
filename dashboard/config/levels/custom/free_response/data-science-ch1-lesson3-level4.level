@@ -8,16 +8,17 @@
   "properties": {
     "encrypted": "false",
     "title": "Check for Understanding",
-    "long_instructions": "Choose one of your statements about ethical data collection to submit and share.",
+    "long_instructions": " What were some of the themes that developed as you explored the scenarios?",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
     "optional": "false",
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "teacher_markdown": " Discussion Goal: There are several important themes that might arise from this discussion that all focus around the ethics of data collection and usage. These include:\r\n- Privacy and Anonymity\r\n- Misuse and Consent\r\n- Accuracy and Bias\r\n\r\nThe responses that students submitted on Level 1 can be used as a way to spur conversation. Student responses can be displayed on the screen after students have submitted by navigating to the level with your teacher account and pressing the “Show Responses” button.\r\n"
   },
-  "audit_log": "[{\"changed_at\":\"2024-06-11 18:05:02 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-06-11 18:05:02 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-22 18:10:33 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-22 18:16:19 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

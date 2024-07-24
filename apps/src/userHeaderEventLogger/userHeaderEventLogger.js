@@ -69,13 +69,15 @@ $(document).ready(function () {
     }
 
     // Log if the Sign in button is clicked
-    signInButton.addEventListener('click', () => {
-      analyticsReporter.sendEvent(
-        EVENTS.SIGNED_OUT_USER_CLICKS_SIGN_IN,
-        {pageUrl: pageUrl},
-        PLATFORMS.STATSIG
-      );
-    });
+    if (signInButton) {
+      signInButton.addEventListener('click', () => {
+        analyticsReporter.sendEvent(
+          EVENTS.SIGNED_OUT_USER_CLICKS_SIGN_IN,
+          {pageUrl: pageUrl},
+          PLATFORMS.STATSIG
+        );
+      });
+    }
 
     // Log if the Help icon menu is clicked
     helpIcon.addEventListener('click', () => {

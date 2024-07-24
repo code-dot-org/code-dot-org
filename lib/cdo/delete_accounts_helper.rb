@@ -324,6 +324,36 @@ class DeleteAccountsHelper
     @log.puts "Deleted #{count} AI Tutor Interactions" if count > 0
   end
 
+  def delete_rubric_ai_evaluations(user_id)
+    # This finds all RubricAiEvaluation records which evalute this user's work,
+    # whether they were implicitly requested by the student when they submitted
+    # the project, or explicitly requested by their teacher.
+    as_student = RubricAiEvaluation.where(user_id: user_id)
+    as_student_count = as_student.count
+    as_student.each(&:destroy)
+    @log.puts "Deleted #{as_student_count} RubricAiEvaluation as student" if as_student_count > 0
+
+    # We've already deleted all evaluations of this user's work as a student.
+    # Any remaining evaluations requested by this user are requests made
+    # by a teacher to evaluate a student's work.
+    as_teacher = RubricAiEvaluation.where(requester_id: user_id)
+    as_teacher_count = as_teacher.count
+    as_teacher.each(&:destroy)
+    @log.puts "Deleted #{as_teacher_count} RubricAiEvaluation as teacher" if as_teacher_count > 0
+  end
+
+  def delete_learning_goal_teacher_evaluations(user_id)
+    as_student = LearningGoalTeacherEvaluation.where(user_id: user_id)
+    as_student_count = as_student.count
+    as_student.each(&:destroy)
+    @log.puts "Deleted #{as_student_count} LearningGoalTeacherEvaluation as student" if as_student_count > 0
+
+    as_teacher = LearningGoalTeacherEvaluation.where(teacher_id: user_id)
+    as_teacher_count = as_teacher.count
+    as_teacher.each(&:destroy)
+    @log.puts "Deleted #{as_teacher_count} LearningGoalTeacherEvaluation as teacher" if as_teacher_count > 0
+  end
+
   def clean_and_destroy_code_reviews(user_id)
     # anonymize notes the user wrote
     comments_written = CodeReviewComment.where(commenter_id: user_id)
@@ -444,6 +474,8 @@ class DeleteAccountsHelper
     clean_pegasus_forms_for_user(user)
     delete_project_backed_progress(user)
     delete_ai_tutor_interactions(user.id)
+    delete_rubric_ai_evaluations(user.id)
+    delete_learning_goal_teacher_evaluations(user.id)
     clean_and_destroy_pd_content(user.id, user_email)
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)

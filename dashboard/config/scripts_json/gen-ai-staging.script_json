@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-staging",
-    "serialized_at": "2024-07-18 01:17:40 UTC",
+    "serialized_at": "2024-07-22 16:41:15 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -605,7 +605,7 @@
       "position": 3,
       "properties": {
         "duration": 5,
-        "name": "Warm Up"
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "a103b66b-6644-4dca-9da4-3a53784b9185",
@@ -732,19 +732,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "f630571f-1183-477c-bfae-51cc69f3fedb",
-        "lesson.key": "Understanding Embeddings",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "gen-ai-staging"
-      }
-    },
-    {
-      "key": "0017740c-e208-4883-9048-85f2a533df48",
-      "position": 4,
-      "properties": {
-        "name": "Pilot Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0017740c-e208-4883-9048-85f2a533df48",
         "lesson.key": "Understanding Embeddings",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "gen-ai-staging"
@@ -2412,7 +2399,7 @@
       "key": "cbba2873-df2a-4812-a7a9-995af84a9bdd",
       "position": 3,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/8639001290192cc68496a83c54328ed3-image-1712459938896.png\"></td>\n    <td style=\"width: 75%\">\n      <strong>Before Class:</strong> Have the <a href=\"https://research.google.com/semantris/\">Semantris game</a> loaded on your computer. Consider having it displayed as students walk in instead of this slide.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Play the <a href=\"https://research.google.com/semantris/\">Semantris Arcade game</a> as a class, with you driving the game while students shout out words to type in. After a few rounds, continue on with the lesson.\n\t\t<br />\n\t\t<br />(Optional): If your class has easy access to devices, have students play this game on their own before continuing.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/a461237766d22c9a7671c0fb0d190f30-image-1712459941410.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This exercise introduces this idea of “closeness” or “similarity” between words. At its core, it’s based on the idea that when you have an input of a single word…\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> you’re able to access additional information about that word in your head…\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> which then lets you think of similar words related to the one you started with…\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/6c90e8287b1e1cca2d4f6bb89692c387-image-1712459943340.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> It turns out this is our next step in understanding how language models work. We learned in the last few lessons how language models use training data to recognize individual words. \n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br />\n<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> And the next step is to learn how models can group these words in a logical way.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/325ac2ff18d1c9712afe337395e24d1b-image-1712459945571.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today, we’ll learn about the special representation it uses for these words. This is what allows models to approximate the meaning of words and determine how “close” or similar words are to each other, just like we did in this warm-up.\n<br />\n<br /><strong>Question of the Day:</strong> How do computers represent the meanings of words?\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/a461237766d22c9a7671c0fb0d190f30-image-1712459941410.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This exercise introduces this idea of “closeness” or “similarity” between words. At its core, it’s based on the idea that when you have an input of a single word…\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> you’re able to access additional information about that word in your head…\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> which then lets you think of similar words related to the one you started with…\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/6c90e8287b1e1cca2d4f6bb89692c387-image-1712459943340.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> It turns out this is our next step in understanding how language models work. We learned in the last few lessons how language models use training data to recognize individual words. \n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br />\n<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> And the next step is to learn how models can group these words in a logical way.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/325ac2ff18d1c9712afe337395e24d1b-image-1712459945571.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today, we’ll learn about the special representation it uses for these words. This is what allows models to approximate the meaning of words and determine how “close” or similar words are to each other, just like we did in this warm-up.\n<br />\n<br /><strong>Question of the Day:</strong> How do computers represent the meanings of words?\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "cbba2873-df2a-4812-a7a9-995af84a9bdd",
@@ -2432,8 +2419,19 @@
       }
     },
     {
-      "key": "3b2e332e-bf0c-4e47-9028-f9befb4eb3c0",
+      "key": "74576132-784b-49dd-9baf-a84f93b7b1e4",
       "position": 5,
+      "properties": {
+        "progression_name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "74576132-784b-49dd-9baf-a84f93b7b1e4",
+        "lesson_activity.key": "9faaca19-d813-4250-9953-11abc4a1104f"
+      }
+    },
+    {
+      "key": "3b2e332e-bf0c-4e47-9028-f9befb4eb3c0",
+      "position": 6,
       "properties": {
         "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/8639001290192cc68496a83c54328ed3-image-1712459938896.png\"></td>\n    <td style=\"width: 75%\">\n      <strong>Before Class:</strong> Have the <a href=\"https://research.google.com/semantris/\">Semantris game</a> loaded on your computer. Consider having it displayed as students walk in instead of this slide.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Play the <a href=\"https://research.google.com/semantris/\">Semantris Arcade game</a> as a class, with you driving the game while students shout out words to type in. After a few rounds, continue on with the lesson.\n\t\t<br />\n\t\t<br />(Optional): If your class has easy access to devices, have students play this game on their own before continuing.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/a461237766d22c9a7671c0fb0d190f30-image-1712459941410.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This exercise introduces this idea of “closeness” or “similarity” between words. At its core, it’s based on the idea that when you have an input of a single word…\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> you’re able to access additional information about that word in your head…\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> which then lets you think of similar words related to the one you started with…\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/6c90e8287b1e1cca2d4f6bb89692c387-image-1712459943340.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> It turns out this is our next step in understanding how language models work. We learned in the last few lessons how language models use training data to recognize individual words. \n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> And the next step is to learn how models can group these words in a logical way.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/325ac2ff18d1c9712afe337395e24d1b-image-1712459945571.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today, we’ll learn about the special representation it uses for these words. This is what allows models to approximate the meaning of words and determine how “close” or similar words are to each other, just like we did in this warm-up.\n<br />\n<br /><strong>Question of the Day:</strong> How do computers represent the meanings of words?\n    </td>\n  </tr>\n    "
       },
@@ -2528,25 +2526,25 @@
       }
     },
     {
-      "key": "5a48cffd-d4db-4113-95d1-05867833e31c",
+      "key": "942e1678-2ffb-47c8-9d84-c45fb8d2da08",
       "position": 1,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "942e1678-2ffb-47c8-9d84-c45fb8d2da08",
+        "lesson_activity.key": "f630571f-1183-477c-bfae-51cc69f3fedb"
+      }
+    },
+    {
+      "key": "5a48cffd-d4db-4113-95d1-05867833e31c",
+      "position": 2,
       "properties": {
         "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/11cc6b2bf688d6ca7af50a45911f9624-Storage.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> We’ve been exploring how a language model represents and stores the meaning of words. In your graphic organizer, update the Storage section with an explanation of how a model represents words.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/2daf9bd34ce43cd82fd7e72a5b115a39-image-1712459987641.png\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong> How do computers represent the meanings of words?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/66e598dbe01a59e62e462ed2cbc2f8c8-image-1712459990120.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> The key vocabulary from this lesson is provided on this slide and in the lesson plan.\n    </td>\n  </tr>\n\n</table>    "
       },
       "seeding_key": {
         "activity_section.key": "5a48cffd-d4db-4113-95d1-05867833e31c",
         "lesson_activity.key": "f630571f-1183-477c-bfae-51cc69f3fedb"
-      }
-    },
-    {
-      "key": "5e6d006b-a9bf-4005-94fa-fb269741389b",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLSf-4jHfSNooPbk44HLXnxjdwnD5Rjat7PqwDkMbsJZetT3ZYQ/viewform)\n- [**Submit Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdmFf5tZbaeaJo4IMsirKF6JM6_bGZg6sTGWWmMRL3OoS5pMQ/viewform) (required for Amazon Gift Card!)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/generative-ai-pilot/460)"
-      },
-      "seeding_key": {
-        "activity_section.key": "5e6d006b-a9bf-4005-94fa-fb269741389b",
-        "lesson_activity.key": "0017740c-e208-4883-9048-85f2a533df48"
       }
     },
     {
@@ -5722,6 +5720,50 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson4-warmup-level1"
+        ],
+        "lesson.key": "Understanding Embeddings",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "74576132-784b-49dd-9baf-a84f93b7b1e4"
+      },
+      "level_keys": [
+        "genai-lesson4-warmup-level1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson4-wrapup-level1"
+        ],
+        "lesson.key": "Understanding Embeddings",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "942e1678-2ffb-47c8-9d84-c45fb8d2da08"
+      },
+      "level_keys": [
+        "genai-lesson4-wrapup-level1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "Foundations AI - Outputs - Mad Lib Widget_2024"
         ],
@@ -5742,7 +5784,7 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5767,7 +5809,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 5,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5792,7 +5834,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 6,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5817,7 +5859,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 7,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5842,7 +5884,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 8,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -5867,7 +5909,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 9,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -5892,7 +5934,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 10,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5917,7 +5959,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 11,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5942,7 +5984,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 12,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5967,7 +6009,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5992,7 +6034,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6017,7 +6059,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 15,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6042,7 +6084,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 16,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6067,7 +6109,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 17,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6092,7 +6134,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 18,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6117,7 +6159,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 19,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6142,7 +6184,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6167,7 +6209,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6192,7 +6234,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6217,7 +6259,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6242,7 +6284,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 24,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -6267,7 +6309,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 25,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -6292,7 +6334,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 26,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6317,7 +6359,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 27,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -6342,7 +6384,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 28,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -6367,7 +6409,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 29,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6392,7 +6434,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -6417,7 +6459,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -6442,7 +6484,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -6467,7 +6509,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 33,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -6492,7 +6534,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6517,7 +6559,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6542,7 +6584,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6567,7 +6609,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6592,7 +6634,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6617,7 +6659,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6642,7 +6684,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6667,7 +6709,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6692,7 +6734,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6717,7 +6759,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6742,7 +6784,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -6767,7 +6809,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6792,7 +6834,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6817,7 +6859,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6842,7 +6884,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6867,7 +6909,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -6892,7 +6934,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -6917,7 +6959,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6942,7 +6984,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6967,7 +7009,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6992,7 +7034,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -7017,7 +7059,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7042,7 +7084,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 56,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7067,7 +7109,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 57,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7092,7 +7134,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 58,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7117,7 +7159,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7142,7 +7184,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 60,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -7167,7 +7209,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 61,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -7192,7 +7234,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -7217,7 +7259,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7242,7 +7284,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -7267,7 +7309,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -7292,7 +7334,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -7317,7 +7359,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7342,7 +7384,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 68,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7367,7 +7409,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 69,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7392,7 +7434,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 70,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7417,7 +7459,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 71,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -7442,7 +7484,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 72,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -7467,7 +7509,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 73,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7492,7 +7534,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 74,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -7517,7 +7559,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 75,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -7542,7 +7584,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 76,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -7567,7 +7609,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 77,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -7592,7 +7634,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 78,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -7617,7 +7659,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 79,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7642,7 +7684,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 80,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7667,7 +7709,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 81,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7692,7 +7734,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7717,7 +7759,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7742,7 +7784,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 84,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7767,7 +7809,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 85,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7792,7 +7834,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7817,7 +7859,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 87,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7842,7 +7884,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 88,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7867,7 +7909,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 89,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7892,7 +7934,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 90,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7917,7 +7959,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 91,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -7942,7 +7984,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 92,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -7967,7 +8009,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 93,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7992,7 +8034,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 94,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -8017,7 +8059,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 95,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -8042,7 +8084,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 96,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8067,7 +8109,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 97,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8092,7 +8134,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 98,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8117,7 +8159,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 99,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -8142,7 +8184,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 100,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -8167,7 +8209,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 101,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8192,7 +8234,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 102,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8217,7 +8259,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 103,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8242,7 +8284,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 104,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -8268,6 +8310,30 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson4-warmup-level1",
+        "script_level.level_keys": [
+          "genai-lesson4-warmup-level1"
+        ],
+        "lesson.key": "Understanding Embeddings",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "74576132-784b-49dd-9baf-a84f93b7b1e4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson4-wrapup-level1",
+        "script_level.level_keys": [
+          "genai-lesson4-wrapup-level1"
+        ],
+        "lesson.key": "Understanding Embeddings",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "942e1678-2ffb-47c8-9d84-c45fb8d2da08"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "Foundations AI - Outputs - Mad Lib Widget_2024",
