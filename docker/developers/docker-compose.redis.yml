@@ -1,0 +1,21 @@
+include:
+  - path: ./docker-compose.networks.yml
+
+services:
+  # Docker-managed redis server
+  redis-base: &redis-base
+    hostname: redis
+    image: redis:latest
+
+  redis-contained: 
+    <<: *redis-base
+    expose:
+      - "6379"
+    networks:
+      cdo_network_test:
+      cdo_network:
+
+  redis:
+    <<: *redis-base
+    ports:
+      - "6379:6379"
