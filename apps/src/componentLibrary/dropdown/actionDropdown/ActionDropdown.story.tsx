@@ -159,7 +159,7 @@ GroupOfActionDropdownColors.args = {
     {
       name: 'default-dropdown-dark',
       triggerButtonProps: {
-        color: 'white',
+        color: 'purple',
         type: 'primary',
         isIconOnly: true,
         icon: {iconName: 'smile', iconStyle: 'solid'},
@@ -184,6 +184,65 @@ GroupOfActionDropdownColors.args = {
     },
   ],
 };
+
+export const GroupOfActionDropdownMenuPlacements = MultipleTemplate.bind({});
+GroupOfActionDropdownMenuPlacements.args = {
+  components: [
+    {
+      name: 'default-dropdown-left',
+      triggerButtonProps: {
+        color: 'purple',
+        type: 'primary',
+        isIconOnly: true,
+        icon: {iconName: 'smile', iconStyle: 'solid'},
+      },
+      options: [
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+          onClick: () => null,
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+          onClick: () => null,
+        },
+      ],
+      labelText: 'Light Dropdown',
+      size: 'm',
+      menuPlacement: 'left',
+    },
+    {
+      name: 'default-dropdown-right',
+      triggerButtonProps: {
+        color: 'white',
+        type: 'primary',
+        isIconOnly: true,
+        icon: {iconName: 'smile', iconStyle: 'solid'},
+      },
+      options: [
+        {
+          value: 'option-1',
+          label: 'Option 1',
+          icon: {iconName: 'check', iconStyle: 'solid'},
+          onClick: () => null,
+        },
+        {
+          value: 'option-2',
+          label: 'Option 2',
+          icon: {iconName: 'xmark', iconStyle: 'solid'},
+          onClick: () => null,
+        },
+      ],
+      labelText: 'Black Dropdown',
+      size: 'm',
+      menuPlacement: 'right',
+    },
+  ],
+};
+
 export const GroupOfSizesOfActionDropdown = MultipleTemplate.bind({});
 GroupOfSizesOfActionDropdown.args = {
   components: [

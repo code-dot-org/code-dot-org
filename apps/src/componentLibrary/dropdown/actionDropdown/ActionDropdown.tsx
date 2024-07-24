@@ -29,7 +29,9 @@ export interface ActionDropdownProps extends AriaAttributes {
   /** ActionDropdown custom class name */
   className?: string;
   /** ActionDropdown size */
-  size: ComponentSizeXSToL;
+  size?: ComponentSizeXSToL;
+  /** ActionDropdown Menu placement */
+  menuPlacement?: 'left' | 'right';
   /** ActionDropdown disabled state */
   disabled?: boolean;
   /** ActionDropdown label
@@ -47,6 +49,7 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
   labelText,
   options,
   disabled = false,
+  menuPlacement = 'left',
   size = 'm',
   triggerButtonProps,
   ...rest
@@ -63,19 +66,20 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
   );
 
   /* TODO:
-      - onOptionClick +
-      - list items +
-      - trigger component +
-      - props +
-      - cleanup
-      - placement
-                      */
+        - onOptionClick +
+        - list items +
+        - trigger component +
+        - props +
+        - cleanup
+        - placement +
+        */
   return (
     <CustomDropdown
       name={name}
       className={className}
       labelText={labelText}
       disabled={disabled}
+      menuPlacement={menuPlacement}
       size={size}
       {...rest}
       useDSCOButtonAsTrigger
