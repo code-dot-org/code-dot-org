@@ -1,4 +1,5 @@
 import {BlockSvg, Workspace} from 'blockly';
+
 import {GeneratedEffect} from '../types';
 
 import {generateAiEffectBlocksFromResult} from './generateAiEffectBlocksFromResult';

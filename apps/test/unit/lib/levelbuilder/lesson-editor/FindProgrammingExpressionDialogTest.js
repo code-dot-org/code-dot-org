@@ -122,7 +122,14 @@ describe('FindProgrammingExpressionDialog', () => {
   });
 
   it('searches the programming_expressions endpoint', () => {
-    const fetchStub = sinon.stub(window, 'fetch').resolves();
+    const fetchStub = sinon.stub(window, 'fetch').resolves({
+      json: () => {
+        return {
+          programmingExpressions: [],
+          numPages: 0,
+        };
+      },
+    });
     const wrapper = shallow(
       <FindProgrammingExpressionDialog
         isOpen={true}

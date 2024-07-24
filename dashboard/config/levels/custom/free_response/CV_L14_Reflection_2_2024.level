@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2024-06-17T22:34:40.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# Role-Playing Reflection\r\n\r\n#### How did role-playing as a user persona change your perspective on the computer vision applications you reviewed?\r\n\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
+    "long_instructions": "## Role-Playing Reflection\r\n\r\nHow did role-playing as a user persona change your perspective on the computer vision applications you reviewed?",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -19,9 +20,8 @@
     "allow_multiple_attempts": "false",
     "teacher_markdown": "Encourages students to reflect on how adopting a user persona provided new insights into the user experience, highlighting the value of empathy in designing user-centered solutions.\r\n"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-06-17T22:34:40.501+00:00\",\"changed\":[\"cloned from \\\"CV_L14_Reflection_2\\\"\"],\"cloned_from\":\"CV_L14_Reflection_2\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-06-17T22:34:40.501+00:00\",\"changed\":[\"cloned from \\\"CV_L14_Reflection_2\\\"\"],\"cloned_from\":\"CV_L14_Reflection_2\"},{\"changed_at\":\"2024-07-04 18:44:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

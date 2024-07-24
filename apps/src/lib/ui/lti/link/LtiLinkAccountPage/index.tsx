@@ -13,7 +13,9 @@ import {LtiProviderContext} from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/c
 const LtiLinkAccountPage = () => {
   const {newCtaType} = useContext(LtiProviderContext)!;
   const handleCancel = () => {
-    navigateToHref(`/users/cancel`);
+    newCtaType === 'new'
+      ? navigateToHref(`/users/cancel`)
+      : navigateToHref(`/users/sign_out`);
   };
 
   return (

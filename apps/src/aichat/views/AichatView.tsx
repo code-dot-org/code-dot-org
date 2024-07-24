@@ -25,19 +25,19 @@ import aichatI18n from '../locale';
 import {
   addNotification,
   clearChatMessages,
-  endSave,
   onSaveComplete,
   onSaveFail,
+  onSaveNoop,
   resetToDefaultAiCustomizations,
   selectAllFieldsHidden,
   setStartingAiCustomizations,
   setViewMode,
+  updateAiCustomization,
 } from '../redux/aichatRedux';
 import {getNewMessageId} from '../redux/utils';
 import {AichatLevelProperties, Notification, ViewMode} from '../types';
 
 import ChatWorkspace from './ChatWorkspace';
-import CopyButton from './CopyButton';
 import {isDisabled} from './modelCustomization/utils';
 import ModelCustomizationWorkspace from './ModelCustomizationWorkspace';
 import PresentationView from './presentation/PresentationView';
@@ -89,14 +89,14 @@ const AichatView: React.FunctionComponent = () => {
     }
     // No save occurred
     projectManager.addSaveNoopListener(() => {
-      dispatch(endSave());
+      dispatch(onSaveNoop());
     });
 
     projectManager.addSaveSuccessListener(() => {
       dispatch(onSaveComplete());
     });
-    projectManager.addSaveFailListener(() => {
-      dispatch(onSaveFail());
+    projectManager.addSaveFailListener((e: Error) => {
+      dispatch(onSaveFail(e));
     });
   }, [projectManager, dispatch]);
 
@@ -163,6 +163,8 @@ const AichatView: React.FunctionComponent = () => {
 
   const resetProject = useCallback(() => {
     dispatch(resetToDefaultAiCustomizations(levelAichatSettings));
+    // Save the customizations to the user's project.
+    dispatch(updateAiCustomization());
     dispatch(clearChatMessages());
     dispatch(addNotification(getResetModelNotification()));
   }, [dispatch, levelAichatSettings]);
@@ -174,6 +176,17 @@ const AichatView: React.FunctionComponent = () => {
       dialogControl.showDialog(DialogType.StartOver, resetProject);
     }
   }, [dialogControl, resetProject]);
+
+  const onClear = useCallback(() => {
+    dispatch(clearChatMessages());
+    analyticsReporter.sendEvent(
+      EVENTS.CHAT_ACTION,
+      {
+        action: 'Clear chat history',
+      },
+      PLATFORMS.BOTH
+    );
+  }, [dispatch]);
 
   return (
     <div id="aichat-lab" className={moduleStyles.aichatLab}>
@@ -189,8 +202,13 @@ const AichatView: React.FunctionComponent = () => {
               <PanelContainer
                 id="aichat-instructions-panel"
                 headerContent={commonI18n.instructions()}
+                className={moduleStyles.panelContainer}
+                headerClassName={moduleStyles.panelHeader}
               >
-                <Instructions beforeNextLevel={beforeNextLevel} />
+                <Instructions
+                  beforeNextLevel={beforeNextLevel}
+                  className={moduleStyles.instructions}
+                />
               </PanelContainer>
             </div>
             {!allFieldsHidden && (
@@ -198,6 +216,8 @@ const AichatView: React.FunctionComponent = () => {
                 <PanelContainer
                   id="aichat-model-customization-panel"
                   headerContent="Model Customization"
+                  className={moduleStyles.panelContainer}
+                  headerClassName={moduleStyles.panelHeader}
                   rightHeaderContent={renderModelCustomizationHeaderRight(
                     () => {
                       onClickStartOver();
@@ -222,6 +242,8 @@ const AichatView: React.FunctionComponent = () => {
             <PanelContainer
               id="aichat-presentation-panel"
               headerContent={'Model Card'}
+              className={moduleStyles.panelContainer}
+              headerClassName={moduleStyles.panelHeader}
             >
               <PresentationView />
             </PanelContainer>
@@ -231,38 +253,13 @@ const AichatView: React.FunctionComponent = () => {
           <PanelContainer
             id="aichat-workspace-panel"
             headerContent={chatWorkspaceHeader}
-            rightHeaderContent={renderChatWorkspaceHeaderRight(() => {
-              dispatch(clearChatMessages());
-              analyticsReporter.sendEvent(
-                EVENTS.CHAT_ACTION,
-                {
-                  action: 'Clear chat history',
-                },
-                PLATFORMS.BOTH
-              );
-            })}
+            className={moduleStyles.panelContainer}
+            headerClassName={moduleStyles.panelHeader}
           >
-            <ChatWorkspace />
+            <ChatWorkspace onClear={onClear} />
           </PanelContainer>
         </div>
       </div>
-    </div>
-  );
-};
-
-const renderChatWorkspaceHeaderRight = (onClear: () => void) => {
-  return (
-    <div className={moduleStyles.chatHeaderRight}>
-      <Button
-        onClick={onClear}
-        text="Clear"
-        iconLeft={{iconName: 'paintbrush'}}
-        size="xs"
-        color="white"
-        type="secondary"
-        className={moduleStyles.aichatViewButton}
-      />
-      <CopyButton />
     </div>
   );
 };

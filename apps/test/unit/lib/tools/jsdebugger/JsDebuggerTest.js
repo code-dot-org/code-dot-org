@@ -200,17 +200,30 @@ describe('The JSDebugger component', () => {
 
       describe('when the mouse is moved', () => {
         it('changes the height of the debugger', () => {
-          document.body.dispatchEvent(
-            createMouseEvent('touchmove', 0, window.innerHeight - 200)
+          const mouseEvent = createMouseEvent(
+            'touchmove',
+            0,
+            window.innerHeight - 200
           );
+
+          mouseEvent.pageY = 568;
+
+          document.body.dispatchEvent(mouseEvent);
           jsDebugger.update();
           expect(debugAreaEl().instance().style.height).to.equal('200px');
         });
 
         it('and will do so multiple times', () => {
-          document.body.dispatchEvent(
-            createMouseEvent('touchmove', 0, window.innerHeight - 180)
+          const mouseEvent = createMouseEvent(
+            'touchmove',
+            0,
+            window.innerHeight - 200
           );
+
+          mouseEvent.pageY = 588;
+
+          document.body.dispatchEvent(mouseEvent);
+
           jsDebugger.update();
           expect(debugAreaEl().instance().style.height).to.equal('180px');
         });

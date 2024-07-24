@@ -10,21 +10,14 @@ import {
 } from '@cdo/apps/code-studio/levels/dialogHelper';
 
 describe('dialogHelper', () => {
-  before(() => {
+  beforeAll(() => {
     // We need bootstrap-sass for $.fn.modal. In the real app, this is provided by dashboard
     // boostrap-sass also depends on window.jQuery being set. We use require instead
     // of import for boostrap-sass, otherwise babel moves the import to the top of
     // the file (before we've globalized jQuery)
-    if (Object.hasOwn(window, 'jQuery')) {
-      throw new Error('window.jQuery already set');
-    }
-    window.jQuery = $;
     require('bootstrap-sass');
   });
 
-  after(() => {
-    delete window.jQuery;
-  });
   describe('showDialog', () => {
     let parent;
     beforeEach(() => {

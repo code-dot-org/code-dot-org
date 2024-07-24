@@ -53,6 +53,6 @@ describe('achievements', () => {
       stub.restore();
     });
 
-    after(() => {});
+    afterAll(() => {});
   });
 });

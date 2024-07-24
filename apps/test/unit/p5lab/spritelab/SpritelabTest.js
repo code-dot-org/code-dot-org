@@ -22,6 +22,7 @@ import 'script-loader!@code-dot-org/p5.play/lib/p5.play';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
 import {expect} from '../../../util/reconfiguredChai';
+import setBlocklyGlobal from '../../../util/setupBlocklyGlobal';
 import {setExternalGlobals} from '../../../util/testUtils';
 
 const backgroundSprite = {
@@ -38,9 +39,10 @@ const backgroundSprite = {
 
 describe('SpriteLab', () => {
   setExternalGlobals();
+  setBlocklyGlobal();
 
-  before(() => sinon.stub(ReactDOM, 'render'));
-  after(() => ReactDOM.render.restore());
+  beforeAll(() => sinon.stub(ReactDOM, 'render'));
+  afterAll(() => ReactDOM.render.restore());
 
   beforeEach(stubRedux);
   afterEach(restoreRedux);

@@ -1,14 +1,16 @@
 import PropTypes from 'prop-types';
-import React from 'react';
-import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
-import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
+import SelectedStudentPairing from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentPairing';
+import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/templates/Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
-import SelectedStudentPairing from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentPairing';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
 import {studentShape, levelWithProgress} from './types';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const RadiumFontAwesome = Radium(FontAwesome);
 

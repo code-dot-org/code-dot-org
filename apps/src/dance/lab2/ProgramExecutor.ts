@@ -1,18 +1,19 @@
-import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import {SongMetadata} from '../types';
-import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
-import * as danceMsg from '../locale';
-import {ASSET_BASE} from '../constants';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+
+import {ASSET_BASE} from '../constants';
+import * as danceMsg from '../locale';
+import {SongMetadata} from '../types';
 import utils from '../utils';
 
 // TODO: The Dance Party repo currently does not export types, so we need
 // use require() to import these components. We should add declaration files
 // to the Dance Party repo and switch to using import statements.
-const DanceParty = require('@code-dot-org/dance-party/src/p5.dance');
 const DanceAPI = require('@code-dot-org/dance-party/src/api');
-const ResourceLoader = require('@code-dot-org/dance-party/src/ResourceLoader');
+const DanceParty = require('@code-dot-org/dance-party/src/p5.dance');
 const danceCode = require('@code-dot-org/dance-party/src/p5.dance.interpreted.js');
+const ResourceLoader = require('@code-dot-org/dance-party/src/ResourceLoader');
 
 type HookName = 'runUserSetup' | 'runUserEvents' | 'getCueList';
 type Handler = {code: string; args?: string[]};

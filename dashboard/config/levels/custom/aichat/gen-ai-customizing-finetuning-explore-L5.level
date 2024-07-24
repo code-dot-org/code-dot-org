@@ -13,7 +13,7 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
-        "selectedModelId": "gen-ai-biomistral-7b",
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
         "temperature": "0.5",
         "systemPrompt": "",
         "retrievalContexts": [
@@ -33,19 +33,22 @@
       },
       "visibilities": {
         "selectedModelId": "editable",
-        "temperature": "hidden",
-        "systemPrompt": "hidden",
-        "retrievalContexts": "hidden",
+        "temperature": "editable",
+        "systemPrompt": "editable",
+        "retrievalContexts": "editable",
         "modelCardInfo": "hidden"
       },
       "hidePresentationPanel": true,
       "availableModelIds": [
-        "gen-ai-biomistral-7b",
-        "gen-ai-mistral-7b-inst-v01"
+        "gen-ai-mistral-7b-inst-v01",
+        "gen-ai-mistral-pirate-7b",
+        "gen-ai-karen-creative-mistral-7b",
+        "gen-ai-arithmo2-mistral-7b",
+        "gen-ai-biomistral-7b"
       ]
     },
-    "long_instructions": "## Switching Between Models\r\n\r\nThis tool has two base models: _BioMistral_ and _Mistral Instruct_. We can use the Compare Models button to change back and forth between them.\r\n\r\nTo change a base model, use the dropdown to update the model and then press the Update button to save the configuration.\r\n\r\n### Do This\r\n\r\n1) Ask a **medical question** to the _BioMistral_ model, then change to the _Mistral Instruct_ model and ask the same question\r\n    - How were the responses different? Was one better than the other?\r\n2) Ask a **question about a book or movie** to the _Mistral Instruct_ model, then change to the _BioMistral_ model and ask the same question\r\n    - How were the responses different? Was one better than the other?\r\n    \r\n<span style=\"background-color: yellow\">_A note for people piloting this unit: we plan to add more models later!! But for the pilot, we just have these two - Code.org Team_</span>"
+    "long_instructions": "## Explore Multiple Models\r\n\r\nThis level has _every_ base model available to experiment with and compare.\r\n\r\n### Do This\r\n1) Choose a model _other than the default one_ and try to create a chatbot with it.\r\n    - Come up with your own system prompt or retrieval and see if you can make a simple chatbot with it."
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-04T02:59:10.589+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-finetuning-explore-L1\\\"\"],\"cloned_from\":\"gen-ai-customizing-finetuning-explore-L1\"},{\"changed_at\":\"2024-05-13 07:24:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-18 00:16:25 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:59:10.589+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-finetuning-explore-L1\\\"\"],\"cloned_from\":\"gen-ai-customizing-finetuning-explore-L1\"},{\"changed_at\":\"2024-05-13 07:24:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-18 00:16:25 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-26 03:51:23 +0000\",\"changed\":[\"aichat_settings\",\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

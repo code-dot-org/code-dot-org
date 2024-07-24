@@ -20,6 +20,7 @@ en:
       Add Sprites: Add Sprites
       Add Style: Add Style
       Add Style to Your Page: Add Style to Your Page
+      Add Style to Your User's Page: Add Style to Your User's Page
       Add Text: Add Text
       Add a Welcome Screen: Add a Welcome Screen
       Adding Images: Adding Images
@@ -57,6 +58,7 @@ en:
       Artist Project: Artist Project
       'Artist: Variables': 'Artist: Variables'
       Assessment: Assessment
+      Assessment Level: Assessment Level
       Attribution: Attribution
       Back and Forth: Back and Forth
       Balance an Ecosystem: Balance an Ecosystem
@@ -84,6 +86,7 @@ en:
       Bunny Jumper: Bunny Jumper
       Button Circuits: Button Circuits
       Buttons and Switch: Buttons and Switch
+      COCO Dataset: COCO Dataset
       CS Discoveries Post-Course Survey: CS Discoveries Post-Course Survey
       CS Discoveries Post-course Survey: CS Discoveries Post-course Survey
       CSD U3 Interactive Card Exemplar: CSD U3 Interactive Card Exemplar
@@ -95,6 +98,9 @@ en:
       Cake Defender: Cake Defender
       Cake Survey: Cake Survey
       Captioned Scene Example: Captioned Scene Example
+      'Career Explorations: The Sports Industry': 'Career Explorations: The Sports Industry'
+      'Career Spotlight: Creative Technologist': 'Career Spotlight: Creative Technologist'
+      'Career Spotlight: Healthcare': 'Career Spotlight: Healthcare'
       Challenge: Challenge
       Challenge Levels: Challenge Levels
       Challenge/Practice: Challenge/Practice
@@ -188,6 +194,7 @@ en:
       Designing Screens with Code: Designing Screens with Code
       Designing for Accessibility: Designing for Accessibility
       Digital Sharing - Unplugged Activity: Digital Sharing - Unplugged Activity
+      Div & Flex Exploration: Div & Flex Exploration
       Dogger Example: Dogger Example
       Draw Your Background: Draw Your Background
       Draw a Background: Draw a Background
@@ -199,9 +206,11 @@ en:
       Editing Images: Editing Images
       Emotion Machine Example: Emotion Machine Example
       End of Course Projects: End of Course Projects
+      End-Of-Unit Assessment: End-Of-Unit Assessment
       End-Of-Unit Survey: End-Of-Unit Survey
       End-of-Unit Survey: End-of-Unit Survey
       Escape Room Example: Escape Room Example
+      Ethics Exploration: Ethics Exploration
       Event Types: Event Types
       Events: Events
       Events and Linking Screens: Events and Linking Screens
@@ -218,6 +227,8 @@ en:
       Expanding Your Website: Expanding Your Website
       Experiment with Web Lab: Experiment with Web Lab
       Exploration: Exploration
+      Exploration Level: Exploration Level
+      Exploration level: Exploration level
       'Exploration: Adding Style': 'Exploration: Adding Style'
       'Exploration: Clicker Game': 'Exploration: Clicker Game'
       'Exploration: For Loops': 'Exploration: For Loops'
@@ -260,10 +271,12 @@ en:
       Free Play - Landmarks: Free Play - Landmarks
       'Free Play: Make a Scene': 'Free Play: Make a Scene'
       'Free Play: Make an Interactive Scene': 'Free Play: Make an Interactive Scene'
+      From Data to Visualization: From Data to Visualization
       Fruit and Veggie Explorer: Fruit and Veggie Explorer
       Functions: Functions
       Functions Review: Functions Review
       Functions with Parameters: Functions with Parameters
+      Garden Image Files: Garden Image Files
       Geometric Sun: Geometric Sun
       Get In Formation: Get In Formation
       Getters and Setters: Getters and Setters
@@ -321,6 +334,7 @@ en:
       Investigate: Investigate
       Isaac's Survey Data: Isaac's Survey Data
       Iteration and Parameters: Iteration and Parameters
+      JuiceMind Assessment: JuiceMind Assessment
       Keep On Dancing!: Keep On Dancing!
       Keeping Data Secret: Keeping Data Secret
       Key Press & At Measure Events: Key Press & At Measure Events
@@ -357,8 +371,12 @@ en:
       Making an Interactive Card: Making an Interactive Card
       'Maze Intro: Programming with Blocks': 'Maze Intro: Programming with Blocks'
       Measures: Measures
+      MediaPipe Image Classification: MediaPipe Image Classification
+      MediaPipe Object Detection: MediaPipe Object Detection
+      MediaPipe Object Detection and Image Files: MediaPipe Object Detection and Image Files
       Medical Dataset Model Cards: Medical Dataset Model Cards
       Medical Priority App: Medical Priority App
+      Mid-Module Survey: Mid-Module Survey
       'Minecraft: Hero''s Journey': 'Minecraft: Hero''s Journey'
       'Mini-Project: About Me': 'Mini-Project: About Me'
       'Mini-Project: Alien Dance Moves': 'Mini-Project: Alien Dance Moves'
@@ -411,6 +429,7 @@ en:
       'Overview: onEvent': 'Overview: onEvent'
       'Overview: setPosition': 'Overview: setPosition'
       Pair Programming: Pair Programming
+      Personal Career Exploration: Personal Career Exploration
       Pet Recommender: Pet Recommender
       Physical Design Prototypes: Physical Design Prototypes
       Picturing Data: Picturing Data
@@ -436,7 +455,11 @@ en:
       Plotting Shapes in Game Lab: Plotting Shapes in Game Lab
       Polling Events: Polling Events
       Post-Course Survey Instructions: Post-Course Survey Instructions
+      Post-Module Survey: Post-Module Survey
       Practice: Practice
+      Practice Levels: Practice Levels
+      Pre-Assessment: Pre-Assessment
+      Pre-Module Survey: Pre-Module Survey
       Predict: Predict
       Predict - Introduction to Game Lab: Predict - Introduction to Game Lab
       Prediction: Prediction
@@ -453,8 +476,10 @@ en:
       Project Guide: Project Guide
       Project Work: Project Work
       Properties: Properties
+      Prototype Components: Prototype Components
       Prototype an Innovation: Prototype an Innovation
       Publishing Your Website: Publishing Your Website
+      QR Code Exploration: QR Code Exploration
       Quarter Notes: Quarter Notes
       Quick Check: Quick Check
       RGB Exploration: RGB Exploration
@@ -531,6 +556,7 @@ en:
       Simple Circuits: Simple Circuits
       Skill Building: Skill Building
       Skill Building - Map Setup: Skill Building - Map Setup
+      Skill Building Levels: Skill Building Levels
       Skill-Building: Skill-Building
       Sliders: Sliders
       Smart Bike - Blinkers: Smart Bike - Blinkers
@@ -538,6 +564,7 @@ en:
       Solution 1 - Fishing Zone: Solution 1 - Fishing Zone
       Solution 2 - Fishing Season: Solution 2 - Fishing Season
       Solution 3 - Fishing Limits: Solution 3 - Fishing Limits
+      Solving Healthcare Issues with Computer Vision: Solving Healthcare Issues with Computer Vision
       Songwriting - Functions Unplugged Activity: Songwriting - Functions Unplugged Activity
       Speed it Up, Slow it Down: Speed it Up, Slow it Down
       Sprite Interactions: Sprite Interactions
@@ -556,6 +583,7 @@ en:
       Styling your Website: Styling your Website
       Teach A.I. a new word: Teach A.I. a new word
       Teach AI a New Word: Teach AI a New Word
+      Teachable Machine: Teachable Machine
       'Technique: Frequency Analysis': 'Technique: Frequency Analysis'
       Terminology Recap: Terminology Recap
       Text Compression: Text Compression
@@ -573,6 +601,7 @@ en:
       The Internet - Unplugged Activity: The Internet - Unplugged Activity
       The Power of Words - Unplugged Activity: The Power of Words - Unplugged Activity
       The Right App - Unplugged Activity: The Right App - Unplugged Activity
+      The Search for Pixel: The Search for Pixel
       Title, Author, Background: Title, Author, Background
       Top Websites: Top Websites
       Tour of Design Mode: Tour of Design Mode
@@ -732,6 +761,7 @@ en:
       'Video: What is Machine Learning?': 'Video: What is Machine Learning?'
       'Video: While Loops with the Farmer': 'Video: While Loops with the Farmer'
       'Video: Wrap-up': 'Video: Wrap-up'
+      Visualizing Data: Visualizing Data
       Warm Up: Warm Up
       WeTube Video Recommendations (2.0): WeTube Video Recommendations (2.0)
       WeTube Video Recommendations (Beta): WeTube Video Recommendations (Beta)

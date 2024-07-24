@@ -25,11 +25,12 @@ global.$ = require('jquery');
 
 describe('FoormEntityEditor in Form editing mode', () => {
   let defaultProps, store, server;
-  beforeEach(() => {
-    // Warnings allowed due to usage of deprecated componentWillMount
-    // lifecycle method.
-    allowConsoleWarnings();
 
+  // Warnings allowed due to usage of deprecated componentWillMount
+  // lifecycle method.
+  allowConsoleWarnings();
+
+  beforeEach(() => {
     stubRedux();
     registerReducers({foorm});
 

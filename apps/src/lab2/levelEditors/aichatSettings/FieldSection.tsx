@@ -1,11 +1,14 @@
-import {AiCustomizations} from '@cdo/apps/aichat/types';
-import React, {useContext} from 'react';
-import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 import classNames from 'classnames';
-import moduleStyles from './edit-aichat-settings.module.scss';
-import VisibilityDropdown from './VisibilityDropdown';
-import {UpdateContext} from './UpdateContext';
+import React, {useContext} from 'react';
+
+import {AiCustomizations} from '@cdo/apps/aichat/types';
+import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
+
+import {UpdateContext} from './UpdateContext';
+import VisibilityDropdown from './VisibilityDropdown';
+
+import moduleStyles from './edit-aichat-settings.module.scss';
 
 interface FieldSectionProps {
   fieldName: keyof AiCustomizations;
@@ -34,7 +37,7 @@ const FieldSection: React.FunctionComponent<FieldSectionProps> = ({
   return (
     <div className={moduleStyles.fieldSection}>
       <hr />
-      <CollapsibleSection title={labelText}>
+      <CollapsibleSection headerContent={labelText}>
         {description && (
           <BodyFourText>
             <i>{description}</i>

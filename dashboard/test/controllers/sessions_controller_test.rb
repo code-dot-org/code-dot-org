@@ -333,6 +333,7 @@ class SessionsControllerTest < ActionController::TestCase
 
     before do
       Policies::ChildAccount::ComplianceState.stubs(:locked_out?).with(user).returns(user_is_locked_out)
+      user.update(child_account_compliance_lock_out_date: DateTime.now)
 
       sign_in user
     end
@@ -347,9 +348,9 @@ class SessionsControllerTest < ActionController::TestCase
       _(assigns[:disallowed_email]).must_equal ''
     end
 
-    it 'assigns @delete_date with 7 day after user creation' do
+    it 'assigns @delete_date with 7 day after user lockout date' do
       get :lockout
-      _(assigns[:delete_date]).must_equal user.created_at.since(7.days)
+      _(assigns[:delete_date]).must_equal DateTime.parse(user.child_account_compliance_lock_out_date).since(7.days)
     end
 
     it 'renders lockout page' do

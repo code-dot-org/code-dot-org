@@ -25,7 +25,7 @@ describe('Quick View', () => {
 
   describe('Initially', () => {
     let quickView;
-    before(() => {
+    beforeAll(() => {
       quickView = shallow(
         <QuickView
           regionalPartnerFilter={regionalPartnerFilter}
@@ -64,7 +64,7 @@ describe('Quick View', () => {
     ];
     let server;
     let quickView;
-    before(() => {
+    beforeAll(() => {
       server = sinon.fakeServer.create();
       server.respondWith(
         'GET',
@@ -87,7 +87,7 @@ describe('Quick View', () => {
       server.respond();
       quickView.update();
     });
-    after(() => {
+    afterAll(() => {
       server.restore();
     });
 

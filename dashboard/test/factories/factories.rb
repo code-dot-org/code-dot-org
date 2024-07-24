@@ -444,7 +444,16 @@ FactoryBot.define do
         created_at {Cpa::CREATED_AT_EXCEPTION_DATE}
       end
 
-      factory :non_compliant_child, traits: [:U13, :in_colorado, :p20_937_exception_date] do
+      factory :cpa_non_compliant_student, traits: [:U13, :in_colorado, :p20_937_exception_date], aliases: %i[non_compliant_child] do
+        trait :predates_policy do
+          created_at {Policies::ChildAccount.state_policies.dig('CO', :start_date).ago(1.second)}
+        end
+
+        trait :in_grace_period do
+          child_account_compliance_state {Policies::ChildAccount::ComplianceState::GRACE_PERIOD}
+          child_account_compliance_state_last_updated {DateTime.now}
+        end
+
         factory :locked_out_child do
           child_account_compliance_state {Policies::ChildAccount::ComplianceState::LOCKED_OUT}
           child_account_compliance_state_last_updated {DateTime.now}
@@ -468,6 +477,7 @@ FactoryBot.define do
 
     trait :with_lti_auth do
       after(:create) do |user|
+        user.lms_landing_opted_out = true
         user.authentication_options.destroy_all
         lti_auth = create(:lti_authentication_option, user: user)
         user.authentication_options << lti_auth
@@ -913,6 +923,11 @@ FactoryBot.define do
 
   factory :panels, parent: :level, class: Panels do
     game {Game.panels}
+    level_num {'custom'}
+  end
+
+  factory :pythonlab, parent: :level, class: Pythonlab do
+    game {Game.pythonlab}
     level_num {'custom'}
   end
 

@@ -5,12 +5,12 @@ class ScriptsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update, :new, :create]
   before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
-  before_action :set_unit_by_name, only: [:show, :vocab, :resources, :code, :standards, :edit]
+  before_action :set_unit_by_name, only: [:show, :vocab, :resources, :code, :standards, :edit, :destroy]
   before_action :set_current_unit_group, only: [:show]
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
-  authorize_resource class: 'Unit', except: [:update, :destroy]
-  load_and_authorize_resource class: 'Unit', only: [:update, :destroy]
+  authorize_resource class: 'Unit', except: [:update]
+  load_and_authorize_resource class: 'Unit', only: [:update]
 
   use_reader_connection_for_route(:show)
 

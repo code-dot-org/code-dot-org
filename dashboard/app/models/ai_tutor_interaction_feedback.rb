@@ -9,9 +9,11 @@
 #  thumbs_down             :boolean
 #  created_at              :datetime         not null
 #  updated_at              :datetime         not null
+#  details                 :text(65535)
 #
 # Indexes
 #
+#  fk_rails_105c1f9428                              (user_id)
 #  index_ai_tutor_feedback_on_interaction_and_user  (ai_tutor_interaction_id,user_id) UNIQUE
 #
 class AiTutorInteractionFeedback < ApplicationRecord

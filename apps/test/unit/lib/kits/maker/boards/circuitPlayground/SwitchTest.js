@@ -11,7 +11,7 @@ import {expect} from '../../../../../../util/reconfiguredChai';
 describe('Switch', () => {
   let fakeJohnnyFiveSwitch;
 
-  before(() =>
+  beforeAll(() =>
     sinon
       .stub(Switch, '_constructFiveSwitchController')
       .callsFake((board, pin) => {
@@ -20,7 +20,7 @@ describe('Switch', () => {
       })
   );
   afterEach(() => (fakeJohnnyFiveSwitch = null));
-  after(() => Switch._constructFiveSwitchController.restore());
+  afterAll(() => Switch._constructFiveSwitchController.restore());
 
   it('is an EventEmitter', () => {
     const testObj = new Switch({});

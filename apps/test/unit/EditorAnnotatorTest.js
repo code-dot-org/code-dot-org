@@ -101,7 +101,10 @@ describe('EditorAnnotator', () => {
         .true;
     });
 
-    it('should amend the styling for the tooltip element for an annotation when given', async () => {
+    /**
+     * This test can only be executed in a browser environment
+     */
+    it.skip('should amend the styling for the tooltip element for an annotation when given', async () => {
       let message = 'This is a line of code';
 
       // Mock out the Ace Editor DOM presence

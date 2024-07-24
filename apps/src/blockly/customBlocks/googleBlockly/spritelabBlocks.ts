@@ -170,7 +170,7 @@ export const blocks = {
                   fields: {
                     VAR: {
                       name: parameter.getName(),
-                      type: parameter.getTypes(),
+                      type: '',
                     },
                   },
                 });

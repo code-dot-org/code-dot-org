@@ -156,6 +156,9 @@ class Ability
         can?(:manage, section) || user.sections_as_student.include?(section)
       end
 
+      # all signed in users can get their level source
+      can :get_level_source, UserLevel
+
       if user.teacher?
         can :manage, Section do |s|
           s.instructors.include?(user)
@@ -342,8 +345,12 @@ class Ability
     end
 
     # We allow loading extra links on non-levelbuilder environments (such as prod)
-    if user.persisted? && user.permission?(UserPermission::LEVELBUILDER)
+    if user.persisted? && (user.permission?(UserPermission::LEVELBUILDER) || user.permission?(UserPermission::PROJECT_VALIDATOR))
       can :extra_links, Level
+    end
+
+    if user.persisted? && (user.permission?(UserPermission::PROJECT_VALIDATOR))
+      can :extra_links, ProjectsController
     end
 
     # In order to accommodate the possibility of there being no database, we

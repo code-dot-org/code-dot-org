@@ -45,7 +45,7 @@ const initialState: AITutorState = {
   isChatOpen: false,
 };
 
-const formatQuestionForAITutor = (chatContext: ChatContext) => {
+export const formatQuestionForAITutor = (chatContext: ChatContext) => {
   if (chatContext.actionType === AITutorTypes.GENERAL_CHAT) {
     return chatContext.studentInput;
   }
@@ -67,7 +67,6 @@ export const askAITutor = createAsyncThunk(
     const instructionsState = state as {instructions: InstructionsState};
     const levelContext = {
       levelId: aiTutorState.aiTutor.level?.id,
-      isProjectBacked: aiTutorState.aiTutor.level?.isProjectBacked,
       scriptId: aiTutorState.aiTutor.scriptId,
     };
 

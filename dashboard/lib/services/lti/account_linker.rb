@@ -16,6 +16,7 @@ module Services
           Services::Lti.create_lti_user_identity(user)
           handle_sections(rehydrated_user, user)
           user.lti_roster_sync_enabled = true if user.teacher?
+          user.lms_landing_opted_out = true
           PartialRegistration.delete(session)
           rehydrated_user.destroy if rehydrated_user.id
         end
@@ -41,10 +42,24 @@ module Services
       # via a roster sync. In this case, we need to swap the pre-existing user
       # into these sections to avoid the roster being in a bad state.
       private def handle_sections(user_to_remove, user_to_add)
+        handle_student_sections(user_to_remove, user_to_add) if user_to_remove.student?
+        handle_coteacher_sections(user_to_remove, user_to_add) if user_to_remove.teacher?
+      end
+
+      private def handle_student_sections(user_to_remove, user_to_add)
         return if user_to_remove.sections_as_student.empty?
         user_to_remove.sections_as_student.each do |section|
           section.students << user_to_add
-          section.students.destroy(user_to_remove)
+          section.students.destroy(user_to_remove&.id)
+        end
+      end
+
+      private def handle_coteacher_sections(user_to_remove, user_to_add)
+        return if user_to_remove.sections_instructed.empty?
+        user_to_remove.sections_instructed.each do |section|
+          section.add_instructor(user_to_add)
+          section.update(user_id: user_to_add.id) if section.user_id == user_to_remove.id
+          section.remove_instructor(user_to_remove)
         end
       end
 

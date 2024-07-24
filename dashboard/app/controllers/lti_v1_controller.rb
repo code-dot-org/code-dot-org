@@ -171,15 +171,7 @@ class LtiV1Controller < ApplicationController
       session[:user_return_to] = destination_url
 
       if user
-        original_sign_in_count = user.sign_in_count
         sign_in user
-
-        # If this is the user's first login, send them into the account linking flow
-        if original_sign_in_count < 1 && DCDO.get('lti_account_linking_enabled', false)
-          PartialRegistration.persist_attributes(session, user)
-          publish_linking_page_visit(user, integration[:platform_name])
-          render 'lti/v1/account_linking/landing', locals: {lti_provider: integration[:platform_name], email: Services::Lti.get_claim(decoded_jwt, :email), new_cta_type: 'continue'} and return
-        end
 
         metadata = {
           'user_type' => user.user_type,
@@ -190,6 +182,14 @@ class LtiV1Controller < ApplicationController
           event_name: 'lti_user_signin',
           metadata: metadata,
         )
+
+        # If this is the user's first login, send them into the account linking flow
+        if DCDO.get('lti_account_linking_enabled', false) && !user.lms_landing_opted_out
+          Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'continue', user.user_type)
+          PartialRegistration.persist_attributes(session, user)
+          publish_linking_page_visit(user, integration[:platform_name])
+          render 'lti/v1/account_linking/landing', locals: {email: Services::Lti.get_claim(decoded_jwt, :email)} and return
+        end
 
         # If on code.org, the user is a student and the LTI has the same user as a teacher, upgrade the student to a teacher.
         if lti_account_type == User::TYPE_TEACHER && user.user_type == User::TYPE_STUDENT
@@ -208,8 +208,9 @@ class LtiV1Controller < ApplicationController
         email_address = Services::Lti.get_claim(decoded_jwt, :email)
         PartialRegistration.persist_attributes(session, user)
         if DCDO.get('lti_account_linking_enabled', false)
+          Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'new', user.user_type)
           publish_linking_page_visit(user, integration[:platform_name])
-          render 'lti/v1/account_linking/landing', locals: {lti_provider: integration[:platform_name], email: email_address, new_cta_type: 'new'} and return
+          render 'lti/v1/account_linking/landing', locals: {email: email_address} and return
         end
 
         if DCDO.get('student-email-post-enabled', false)
@@ -420,7 +421,8 @@ class LtiV1Controller < ApplicationController
       metadata = {
         lms_name: platform_name,
       }
-      Metrics::Events.log_event(
+      Metrics::Events.log_event_with_session(
+        session: session,
         event_name: 'lti_portal_registration_completed',
         metadata: metadata,
       )

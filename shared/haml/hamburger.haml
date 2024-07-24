@@ -8,19 +8,19 @@
       - if entry[:type] == "divider"
         .divider{id: entry[:id], class: entry[:class]}
       - elsif entry[:type] == "expander"
-        .hamburger-expandable-item.item{id: entry[:id], tabindex: "0"}
+        .hamburger-expandable-item.item{id: entry[:id], class: entry[:class], tabindex: "0"}
           .text= entry[:title]
           %i.arrow-down{class: "fa fa-caret-down"}
           %i.arrow-up{class: "fa fa-caret-up"}
         .hamburger-expandable-items{id: "#{entry[:id]}-items"}
           - entry[:subentries].each do |subentry|
             .item
-              %a{id: subentry[:id], href: subentry[:url]}= subentry[:title]
+              %a.hamburgerlink{id: subentry[:id], href: subentry[:url]}= subentry[:title]
       - else
         %div{class: entry[:class]}
           .item
             - target = entry[:target] ? entry[:target] : "_self"
-            %a{id: entry[:id], href: entry[:url], target: target, rel: entry[:rel]}= entry[:title]
+            %a.hamburgerlink{id: entry[:id], href: entry[:url], target: target, rel: entry[:rel]}= entry[:title]
 
   #hamburger-icon.clicktag{class: contents[:visibility]}
     %span{style: "pointer-events: none"}

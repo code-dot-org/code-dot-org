@@ -102,8 +102,8 @@ class UnitGroup < ApplicationRecord
     published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
-  def self.file_path(name)
-    Rails.root.join("config/courses/#{name}.course")
+  def self.file_path(name, root_path = Rails.root)
+    root_path.join("config/courses/#{name}.course")
   end
 
   def self.load_from_path(path)
