@@ -26,14 +26,35 @@ class ApplicationJobTest < ActiveJob::TestCase
     TestableJob.perform_later
   end
 
-  test 'enqueued jobs log JobCount, WaitTime, ExecutionTime, and TotalTime' do
+  test 'enqueued jobs log JobCount, FailedJobCount, WaitTime, ExecutionTime, and TotalTime' do
+    # mock some pending and failed jobs
+    mock_job = MiniTest::Mock.new
+    mock_job.expect(:failed_at, nil)  # Simulate a job without failed_at
+    pending_jobs = [mock_job]
+
+    mock_failed_job1 = MiniTest::Mock.new
+    mock_failed_job1.expect(:failed_at, Time.now)
+    mock_failed_job2 = MiniTest::Mock.new
+    mock_failed_job2.expect(:failed_at, Time.now)
+    pending_failed_jobs = [mock_failed_job1, mock_failed_job2]
+
+    Delayed::Job.stubs(:where).with(failed_at: nil).returns(pending_jobs)
+    Delayed::Job.stubs(:where).with.not(failed_at: nil).returns(pending_failed_jobs)
+
     # after_enqueue metrics
-    Delayed::Job.stubs(:count).returns(1)
     Cdo::Metrics.expects(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
       all_of(
-        includes_metrics(JobCount: 1),
+        includes_metrics(JobCount: pending_jobs.size),
         includes_dimensions(:JobCount, Environment: CDO.rack_env)
+      )
+    )
+
+    Cdo::Metrics.expects(:push).with(
+      ApplicationJob::METRICS_NAMESPACE,
+      all_of(
+        includes_metrics(FailedJobCount: pending_failed_jobs.size),
+        includes_dimensions(:FailedJobCount, Environment: CDO.rack_env)
       )
     )
 
