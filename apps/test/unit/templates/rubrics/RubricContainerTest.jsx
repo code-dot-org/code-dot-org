@@ -735,7 +735,7 @@ describe('RubricContainer', () => {
     stubFetchTeacherEvaluations(noEvals);
     stubFetchAiEvaluations(mockAiEvaluations);
 
-    const {queryByTestId} = render(
+    render(
       <Provider store={store}>
         <RubricContainer
           rubric={defaultRubric}
@@ -754,8 +754,7 @@ describe('RubricContainer', () => {
 
     expect(userFetchStub).to.have.been.called;
     expect(allFetchStub).to.have.been.called;
-    expect(queryByTestId('info-alert')).to.be.null;
-
+    expect(screen.queryByTestId('info-alert')).not.to.exist;
     const button = screen.getByRole('button', {
       name: 'Run AI Assessment for Project',
     });
