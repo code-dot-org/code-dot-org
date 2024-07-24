@@ -3,8 +3,6 @@ import React from 'react';
 
 import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelect';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 const ROW_DATA = [
   {id: 1, name: 'itemb'},
   {id: 3, name: 'itemc'},
@@ -28,27 +26,27 @@ describe('SortedTableSelect', () => {
   it('renders an empty option as default', () => {
     const wrapper = shallow(<SortedTableSelect {...DEFAULT_PROPS} />);
     const options = wrapper.find('option');
-    expect(options.at(0).text()).to.equal('');
-    expect(options.at(1).text()).to.equal('optiona');
+    expect(options.at(0).text()).toBe('');
+    expect(options.at(1).text()).toBe('optiona');
   });
 
   it('renders row data as rows', () => {
     const wrapper = mount(<SortedTableSelect {...DEFAULT_PROPS} />);
     const rows = wrapper.find('tr');
-    expect(rows).to.have.length(ROW_DATA.length + 1);
+    expect(rows).toHaveLength(ROW_DATA.length + 1);
   });
 
   it('sorts items by name (ascending) by default', () => {
     const wrapper = mount(<SortedTableSelect {...DEFAULT_PROPS} />);
     const nameCells = wrapper.find('td');
-    expect(nameCells.at(1).text()).to.equal('itema');
-    expect(nameCells.at(3).text()).to.equal('itemb');
-    expect(nameCells.at(5).text()).to.equal('itemc');
+    expect(nameCells.at(1).text()).toBe('itema');
+    expect(nameCells.at(3).text()).toBe('itemb');
+    expect(nameCells.at(5).text()).toBe('itemc');
   });
 
   it('areAllSelected returns false on initial render', () => {
     const wrapper = shallow(<SortedTableSelect {...DEFAULT_PROPS} />);
-    expect(wrapper.instance().areAllSelected()).to.be.false;
+    expect(wrapper.instance().areAllSelected()).toBe(false);
   });
 
   it('areAllSelected returns true when all rows are checked', () => {
@@ -61,7 +59,7 @@ describe('SortedTableSelect', () => {
       ...{rowData: rowData},
     };
     const wrapper = shallow(<SortedTableSelect {...props} />);
-    expect(wrapper.instance().areAllSelected()).to.be.true;
+    expect(wrapper.instance().areAllSelected()).toBe(true);
   });
 
   it('areAllSelected returns false when at least one row is unchecked', () => {
@@ -74,6 +72,6 @@ describe('SortedTableSelect', () => {
       ...{rowData: rowData},
     };
     const wrapper = shallow(<SortedTableSelect {...props} />);
-    expect(wrapper.instance().areAllSelected()).to.be.false;
+    expect(wrapper.instance().areAllSelected()).toBe(false);
   });
 });

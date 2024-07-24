@@ -244,7 +244,7 @@ const WEBPACK_BASE_CONFIG = {
       {
         test: /\.ejs$/,
         include: [p('src'), p('test')],
-        loader: 'ejs-webpack-loader',
+        loader: './lib/ejs-webpack-loader',
         options: {
           strict: true,
         },

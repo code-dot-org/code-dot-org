@@ -80,7 +80,8 @@ function MoreOptionsDropdown({
     };
   }, [updateMenuLocation, opened]);
 
-  const handleDropdownClick = () => {
+  const handleDropdownClick = e => {
+    e.stopPropagation();
     setOpened(!opened);
   };
 

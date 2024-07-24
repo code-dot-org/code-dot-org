@@ -1,5 +1,4 @@
 import {render, screen} from '@testing-library/react';
-import {expect} from 'chai';
 import React from 'react';
 
 import EnrollmentUnitAssignment from '@cdo/apps/code-studio/pd/professional_learning_landing/plcElements/EnrollmentUnitAssignment';
@@ -24,7 +23,7 @@ describe('Enrollment unit assignment', () => {
 
   it('Renders module assignments if the unit has been started', () => {
     renderDefault();
-    expect(screen.getAllByText('new').length).to.equal(3);
+    expect(screen.getAllByText('new').length).toBe(3);
   });
 
   it("Renders 'coming soon' if the unit has not been started", () => {
@@ -36,7 +35,7 @@ describe('Enrollment unit assignment', () => {
         link: 'mylink',
       },
     });
-    expect(screen.queryByText('new')).to.be.null;
-    expect(screen.getAllByText('Coming soon!')).to.exist;
+    expect(screen.queryByText('new')).toBeNull();
+    expect(screen.getAllByText('Coming soon!')).toBeDefined();
   });
 });

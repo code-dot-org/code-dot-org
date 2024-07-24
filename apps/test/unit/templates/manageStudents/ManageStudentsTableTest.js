@@ -44,7 +44,7 @@ import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {ManageStudentsNotificationFull} from '../../../../src/templates/manageStudents/ManageStudentsTable';
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 import {allowConsoleWarnings} from '../../../util/throwOnConsole';
 
 describe('ManageStudentsTable', () => {

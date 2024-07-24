@@ -2,8 +2,6 @@ import {levelProgressStyle} from '@cdo/apps/templates/progress/progressStyles';
 import color from '@cdo/apps/util/color';
 import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 describe('progressStyles', () => {
   describe('levelProgressStyle', () => {
     it('when level is assessment and levelStatus is not tried has expected background and border color', () => {
@@ -12,8 +10,8 @@ describe('progressStyles', () => {
         LevelKind.assessment
       );
 
-      expect(progressStyle.backgroundColor).to.equal(color.level_not_tried);
-      expect(progressStyle.borderColor).to.equal(color.lighter_gray);
+      expect(progressStyle.backgroundColor).toBe(color.level_not_tried);
+      expect(progressStyle.borderColor).toBe(color.lighter_gray);
     });
 
     it('when level is assessment and levelStatus is attempted has expected background and border color', () => {
@@ -22,8 +20,8 @@ describe('progressStyles', () => {
         LevelKind.assessment
       );
 
-      expect(progressStyle.backgroundColor).to.equal(color.level_not_tried);
-      expect(progressStyle.borderColor).to.equal(color.level_submitted);
+      expect(progressStyle.backgroundColor).toBe(color.level_not_tried);
+      expect(progressStyle.borderColor).toBe(color.level_submitted);
     });
 
     it('when level is assessment and levelStatus is submitted has expected background and border color', () => {
@@ -32,8 +30,8 @@ describe('progressStyles', () => {
         LevelKind.assessment
       );
 
-      expect(progressStyle.backgroundColor).to.equal(color.level_submitted);
-      expect(progressStyle.borderColor).to.equal(color.level_submitted);
+      expect(progressStyle.backgroundColor).toBe(color.level_submitted);
+      expect(progressStyle.borderColor).toBe(color.level_submitted);
     });
 
     it('when level is assessment and levelStatus is completed has expected background and border color', () => {
@@ -42,8 +40,8 @@ describe('progressStyles', () => {
         LevelKind.assessment
       );
 
-      expect(progressStyle.backgroundColor).to.equal(color.level_submitted);
-      expect(progressStyle.borderColor).to.equal(color.level_submitted);
+      expect(progressStyle.backgroundColor).toBe(color.level_submitted);
+      expect(progressStyle.borderColor).toBe(color.level_submitted);
     });
 
     it('when level is assessment and levelStatus is perfect has expected background and border color', () => {
@@ -52,8 +50,8 @@ describe('progressStyles', () => {
         LevelKind.assessment
       );
 
-      expect(progressStyle.backgroundColor).to.equal(color.level_submitted);
-      expect(progressStyle.borderColor).to.equal(color.level_submitted);
+      expect(progressStyle.backgroundColor).toBe(color.level_submitted);
+      expect(progressStyle.borderColor).toBe(color.level_submitted);
     });
 
     it('when level is not assessment and levelStatus is not tried has expected background and border color', () => {
@@ -62,8 +60,8 @@ describe('progressStyles', () => {
         LevelKind.level
       );
 
-      expect(progressStyle.backgroundColor).to.equal(color.level_not_tried);
-      expect(progressStyle.borderColor).to.equal(color.lighter_gray);
+      expect(progressStyle.backgroundColor).toBe(color.level_not_tried);
+      expect(progressStyle.borderColor).toBe(color.lighter_gray);
     });
 
     it('when level is not assessment and levelStatus is attempted has expected background and border color', () => {
@@ -72,8 +70,8 @@ describe('progressStyles', () => {
         LevelKind.level
       );
 
-      expect(progressStyle.backgroundColor).to.equal(color.level_not_tried);
-      expect(progressStyle.borderColor).to.equal(color.level_perfect);
+      expect(progressStyle.backgroundColor).toBe(color.level_not_tried);
+      expect(progressStyle.borderColor).toBe(color.level_perfect);
     });
 
     it('when level is not assessment and levelStatus is perfect has expected background and border color', () => {
@@ -82,8 +80,8 @@ describe('progressStyles', () => {
         LevelKind.level
       );
 
-      expect(progressStyle.backgroundColor).to.equal(color.level_perfect);
-      expect(progressStyle.borderColor).to.equal(color.level_perfect);
+      expect(progressStyle.backgroundColor).toBe(color.level_perfect);
+      expect(progressStyle.borderColor).toBe(color.level_perfect);
     });
 
     it('when level is not assessment and levelStatus is free_play_complete has expected background and border color', () => {
@@ -92,8 +90,8 @@ describe('progressStyles', () => {
         LevelKind.level
       );
 
-      expect(progressStyle.backgroundColor).to.equal(color.level_perfect);
-      expect(progressStyle.borderColor).to.equal(color.level_perfect);
+      expect(progressStyle.backgroundColor).toBe(color.level_perfect);
+      expect(progressStyle.borderColor).toBe(color.level_perfect);
     });
 
     it('when level is not assessment and levelStatus is passed has expected background and border color', () => {
@@ -102,8 +100,8 @@ describe('progressStyles', () => {
         LevelKind.level
       );
 
-      expect(progressStyle.backgroundColor).to.equal(color.level_passed);
-      expect(progressStyle.borderColor).to.equal(color.level_perfect);
+      expect(progressStyle.backgroundColor).toBe(color.level_passed);
+      expect(progressStyle.borderColor).toBe(color.level_perfect);
     });
 
     it('when level is not assessment and levelStatus is submitted has expected background and border color', () => {
@@ -112,8 +110,8 @@ describe('progressStyles', () => {
         LevelKind.level
       );
 
-      expect(progressStyle.backgroundColor).to.equal(color.level_submitted);
-      expect(progressStyle.borderColor).to.equal(color.level_submitted);
+      expect(progressStyle.backgroundColor).toBe(color.level_submitted);
+      expect(progressStyle.borderColor).toBe(color.level_submitted);
     });
 
     it('when level is not assessment and levelStatus is completed assessment (submittable) has expected background and border color', () => {
@@ -122,8 +120,8 @@ describe('progressStyles', () => {
         LevelKind.level
       );
 
-      expect(progressStyle.backgroundColor).to.equal(color.level_submitted);
-      expect(progressStyle.borderColor).to.equal(color.level_submitted);
+      expect(progressStyle.backgroundColor).toBe(color.level_submitted);
+      expect(progressStyle.borderColor).toBe(color.level_submitted);
     });
 
     it('when level is not assessment and levelStatus is reviewed rejected has expected background and border color', () => {
@@ -132,10 +130,8 @@ describe('progressStyles', () => {
         LevelKind.level
       );
 
-      expect(progressStyle.backgroundColor).to.equal(
-        color.level_review_rejected
-      );
-      expect(progressStyle.borderColor).to.equal(color.level_review_rejected);
+      expect(progressStyle.backgroundColor).toBe(color.level_review_rejected);
+      expect(progressStyle.borderColor).toBe(color.level_review_rejected);
     });
 
     it('when level is not assessment and levelStatus is reviewed completed has expected background and border color', () => {
@@ -144,8 +140,8 @@ describe('progressStyles', () => {
         LevelKind.level
       );
 
-      expect(progressStyle.backgroundColor).to.equal(color.level_perfect);
-      expect(progressStyle.borderColor).to.equal(color.level_perfect);
+      expect(progressStyle.backgroundColor).toBe(color.level_perfect);
+      expect(progressStyle.borderColor).toBe(color.level_perfect);
     });
   });
 });
