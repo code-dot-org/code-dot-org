@@ -131,7 +131,7 @@ export default function UploadImageForm() {
                 </div>
                 <img
                   src={url}
-                  alt={`Uploaded image ${index + 1}`}
+                  alt={`Uploaded file ${index + 1}`}
                   style={{maxWidth: '100px', maxHeight: '100px'}}
                 />
               </div>
