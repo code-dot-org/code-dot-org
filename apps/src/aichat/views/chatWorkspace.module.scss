@@ -9,7 +9,6 @@ $default-spacing: 16px;
   display: flex;
   flex-direction: column;
   background-color: $light_white;
-  padding: 10px;
   overflow: hidden;
 }
 
@@ -45,8 +44,13 @@ $default-spacing: 16px;
   width: 50px;
 }
 
+.messageEditor {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .buttonRow {
   display: flex;
   gap: 8px;
-  padding: 0 10px 10px 10px;
+  padding: 0 20px 20px 20px;
 }
