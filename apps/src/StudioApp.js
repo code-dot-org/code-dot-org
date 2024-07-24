@@ -1416,19 +1416,23 @@ StudioApp.prototype.onResize = function () {
     onResizeSmallFooter();
   }
 
-  // Let's avoid an infinite recursion by making sure this is a genuine resize.
-  if (
-    window.innerWidth !== this.lastWindowInnerWidth ||
-    window.innerHeight !== this.lastWindowInnerHeight
-  ) {
-    this.maxVisualizationWidth = getMaxResizableVisualizationWidth();
+  if (isBigPlayspaceExperiment) {
+    // Let's avoid an infinite recursion by making sure this is a genuine resize.
+    if (
+      window.innerWidth !== this.lastWindowInnerWidth ||
+      window.innerHeight !== this.lastWindowInnerHeight
+    ) {
+      this.maxVisualizationWidth = getMaxResizableVisualizationWidth();
 
-    const visualizationColumn = document.getElementById('visualizationColumn');
-    const visualizationColumnWidth = $(visualizationColumn).width();
-    this.resizeVisualization(visualizationColumnWidth, true);
+      const visualizationColumn = document.getElementById(
+        'visualizationColumn'
+      );
+      const visualizationColumnWidth = $(visualizationColumn).width();
+      this.resizeVisualization(visualizationColumnWidth, true);
 
-    this.lastWindowInnerWidth = window.innerWidth;
-    this.lastWindowInnerHeight = window.innerHeight;
+      this.lastWindowInnerWidth = window.innerWidth;
+      this.lastWindowInnerHeight = window.innerHeight;
+    }
   }
 };
 
