@@ -2,7 +2,6 @@ import React, {useCallback, useRef, useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {
-  AichatState,
   selectAllMessages,
   setShowWarningModal,
 } from '@cdo/apps/aichat/redux/aichatRedux';
@@ -23,13 +22,19 @@ interface ChatWorkspaceProps {
   onClear: () => void;
 }
 
+const WORKSPACE_VIEW_MODE = {
+  STUDENT_CHAT_HISTORY: 'viewStudentChatHistory',
+  TEST_STUDENT_MODEL: 'testStudentModel',
+  PARTICIPANT: 'participant',
+};
+
 /**
  * Renders the AI Chat Lab main chat workspace component.
  */
 const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   onClear,
 }) => {
-  const [selectedTab, setSelectedTab] = useState('');
+  const [viewMode, setViewMode] = useState<string | null>(null);
 
   const {showWarningModal, isWaitingForChatResponse} = useAppSelector(
     state => state.aichat
@@ -52,10 +57,17 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   }, [messagesString, isWaitingForChatResponse]);
 
   useEffect(() => {
-    viewAsUserId
-      ? setSelectedTab('viewStudentChatHistory')
-      : setSelectedTab('');
-  }, [viewAsUserId]);
+    // If a teacher is viewing workspace as a student when level first loads (user_id param included in url)
+    // or from when viewing workspace as a participant, default to the student chat history view.
+    if (
+      viewAsUserId &&
+      (!viewMode || viewMode === WORKSPACE_VIEW_MODE.PARTICIPANT)
+    ) {
+      setViewMode(WORKSPACE_VIEW_MODE.STUDENT_CHAT_HISTORY);
+    } else if (!viewAsUserId) {
+      setViewMode(WORKSPACE_VIEW_MODE.PARTICIPANT);
+    }
+  }, [viewAsUserId, viewMode, setViewMode]);
 
   const dispatch = useAppDispatch();
 
@@ -93,9 +105,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const handleOnChange = useCallback(
     (value: string) => {
-      setSelectedTab(value);
+      setViewMode(value);
     },
-    [setSelectedTab]
+    [setViewMode]
   );
 
   const tabArgs: TabsProps = {
@@ -116,8 +128,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {showWarningModal && <ChatWarningModal onClose={onCloseWarningModal} />}
-      {viewAsUserId && <Tabs {...tabArgs} />}
-      {!viewAsUserId && (
+      {viewMode !== WORKSPACE_VIEW_MODE.PARTICIPANT && <Tabs {...tabArgs} />}
+      {viewMode === WORKSPACE_VIEW_MODE.PARTICIPANT && (
         <TestModel
           items={items}
           showWaitingAnimation={showWaitingAnimation}
@@ -125,7 +137,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         />
       )}
 
-      {selectedTab !== 'viewStudentChatHistory' && <UserChatMessageEditor />}
+      {viewMode !== WORKSPACE_VIEW_MODE.STUDENT_CHAT_HISTORY && (
+        <UserChatMessageEditor />
+      )}
       <div className={moduleStyles.buttonRow}>
         <Button
           text="Clear chat"
