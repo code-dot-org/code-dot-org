@@ -1,3 +1,4 @@
+import {userEvent, within, expect} from '@storybook/test';
 import React from 'react';
 
 import ExampleDialogButton from '../util/ExampleDialogButton';
@@ -19,11 +20,22 @@ export const HidingTheBackdrop = () => (
   <BaseDialog hideBackdrop={true}>This is the dialog content!</BaseDialog>
 );
 
-export const ClickToOpen = () => (
-  <ExampleDialogButton>
-    <BaseDialog>{EXAMPLE_DIALOG_BODY}</BaseDialog>
-  </ExampleDialogButton>
-);
+export const CalickToOpen = {
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('button'));
+    await expect(
+      canvas.getByText(
+        'Everything is perfect. Your account is ready and we should probably get you started!'
+      )
+    ).toBeInTheDocument();
+  },
+  render: () => (
+    <ExampleDialogButton>
+      <BaseDialog>{EXAMPLE_DIALOG_BODY}</BaseDialog>
+    </ExampleDialogButton>
+  ),
+};
 
 export const FullWidth = () => (
   <ExampleDialogButton>

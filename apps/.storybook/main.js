@@ -22,6 +22,7 @@ export default {
     '@storybook/addon-essentials',
     'storybook-addon-rtl',
     '@storybook/addon-webpack5-compiler-babel',
+    '@storybook/addon-interactions',
   ],
   // Storybook requires the use of the experimental indexer to dynamically create stories.
   // Typically, storybook stories are statically analyzed for performance reasons using named es6 exports.

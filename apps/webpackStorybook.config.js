@@ -20,6 +20,12 @@ function storybookConfig(sbConfig) {
         ...sbConfig.resolve.alias,
         '@cdo/apps/lib/util/firehose': path.resolve(__dirname, 'test', 'util'),
       },
+      fallback: {
+        ...WEBPACK_BASE_CONFIG.resolve.fallback,
+        ...sbConfig.resolve.fallback,
+        tty: require.resolve('tty-browserify'),
+        os: require.resolve('os-browserify/browser'),
+      },
     },
     // Overwrite rules
     module: {
