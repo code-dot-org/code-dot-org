@@ -66,6 +66,13 @@ const SummaryResponses = ({
     [scriptData, selectedSection]
   );
 
+  const eventData = {
+    levelId: scriptData.level.id,
+    levelName: scriptData.level.name,
+    curriculumUmbrella: scriptData.reportingData.curriculumUmbrella,
+    unitId: scriptData.reportingData.unitId,
+  };
+
   useEffect(() => {
     logEvent(EVENTS.SUMMARY_PAGE_LOADED);
   }, [logEvent]);
@@ -171,6 +178,7 @@ const SummaryResponses = ({
           <FreeResponseResponses
             responses={scriptData.responses}
             showStudentNames={showStudentNames}
+            eventData={eventData}
           />
         )}
 
