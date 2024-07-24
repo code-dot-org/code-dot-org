@@ -6,7 +6,6 @@ class UrlConverter
   HOUROFCODE_COM_REGEX = /#{'//hourofcode.com'}(?=$|\/)/
   CSEDWEEK_ORG_REGEX = /#{'//csedweek.org'}(?=$|\/)/
   DASHBOARD_REGEX = /#{'//studio.code.org'}(?=$|\/)/
-  ADVOCACY_REGEX = /#{'//advocacy.code.org'}(?=$|\/)/
 
   # For reference, a 'host' is a domain and (optionally) port without a protocol.
   # Examples: code.org, studio.code.org, localhost-studio.code.org:3000
@@ -31,8 +30,6 @@ class UrlConverter
       url = url.gsub(HOUROFCODE_COM_REGEX, "//" + @hourofcode_host)
     elsif @csedweek_host && CSEDWEEK_ORG_REGEX =~ url
       url = url.gsub(CSEDWEEK_ORG_REGEX, "//" + @csedweek_host)
-    elsif @advocacy_host && ADVOCACY_REGEX =~ url
-      url = url.gsub(ADVOCACY_REGEX, "//" + @advocacy_host)
     elsif @dashboard_host && DASHBOARD_REGEX =~ url
       url = url.gsub(DASHBOARD_REGEX, "//" + @dashboard_host)
     elsif @pegasus_host
