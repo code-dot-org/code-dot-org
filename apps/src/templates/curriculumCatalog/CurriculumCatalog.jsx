@@ -1,6 +1,6 @@
 // The following styles are imported in a very specific order to preserve UI consistency.
 // `HeaderBanner` imports `typography.scss`
-// `CurriculumCatalog` imports `phase1-design-system.scss`
+// `CurriculumCatalogCard` imports `phase1-design-system.scss`
 // `typography.scss` has conflicting styles with `phase1-design-system.scss` (specifically for `h4` and `p` elements)
 // We are importing them in the specific order they were imported before adding import/order in order to preserve the UI.
 // These are very small changes so this can likely be removed with no issues.
