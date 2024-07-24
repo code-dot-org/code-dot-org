@@ -1232,9 +1232,6 @@ export class WorkshopForm extends React.Component {
                                 checked={this.state.course_offerings.includes(
                                   topic.id
                                 )}
-                                onClick={e => {
-                                  e.nativeEvent.stopImmediatePropagation();
-                                }}
                                 onChange={e =>
                                   this.handleTopicSelect(
                                     topic.id,
