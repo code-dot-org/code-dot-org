@@ -1,0 +1,41 @@
+include:
+  - path: ./docker-compose.networks.yml
+
+services:
+  # Docker-managed database
+  mysql-base: &mysql-base
+    hostname: db
+    image: mysql/mysql-server:8.0
+    # You can add default options via the 'command':
+    #command:
+    # - '--log-error-verbosity=3'
+    environment:
+      MYSQL_DATABASE: 'db'
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+      MYSQL_ROOT_HOST: '%'
+    volumes:
+      - mysql_data:/var/lib/mysql
+    # Many default ulimits are just too high
+    # And, so, it will consume way too much memory (16GB+)
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+
+  mysql-contained:
+    <<: *mysql-base
+    expose:
+      - "3306"
+    networks:
+      cdo_network_test:
+      cdo_network:
+
+  mysql:
+    <<: *mysql-base
+    ports:
+      - "3306:3306"
+
+volumes:
+  mysql_data:
