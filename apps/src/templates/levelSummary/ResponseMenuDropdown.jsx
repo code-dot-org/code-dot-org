@@ -45,6 +45,7 @@ const ResponseMenuDropdown = ({
             setIsOpen(false);
             pinResponse(response.user_id);
           }}
+          id="pin-response-button"
         >
           <FontAwesomeV6Icon iconName="thumbtack" />
           {i18n.pinResponse()}

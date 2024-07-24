@@ -135,9 +135,16 @@ Scenario: Check for Understanding summaries eyes
   And I wait until element "#summary-container" is visible
   And I dismiss the teacher panel
 
-  And I see no difference for "Student names hidden"
+  And I see no difference for "student names hidden"
 
   And I click selector "label:contains('Show student names')" once I see it
   And I wait until the first element "#student-response" contains text "Sally"
 
-  And I see no difference for "Student names shown"
+  And I see no difference for "student names shown"
+
+  Then I press the first "#student-response-menu-button" element
+  And I wait until element "#student-response-menu" is visible
+
+  Then I press the first "#pin-response-button" element
+
+  And I see no difference for "pinned response"
