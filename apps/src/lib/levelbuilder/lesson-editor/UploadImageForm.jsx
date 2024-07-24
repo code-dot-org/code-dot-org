@@ -12,7 +12,6 @@ export default function UploadImageForm() {
   const [isUploading, setIsUploading] = useState(false);
   const [formDataForImages, setFormDataForImages] = useState(undefined);
   const [tempImageUrls, setTempImageUrls] = useState([]);
-  //const [imageUrls, setImageUrls] = useState([]);
 
   const resetState = () => {
     setImgUrls([]);
@@ -38,7 +37,6 @@ export default function UploadImageForm() {
   };
 
   const saveImageToS3 = formData => {
-    console.log('Saving image to S3');
     setIsUploading(true);
     // POST
     const csrfContainer = document.querySelector('meta[name="csrf-token"]');
@@ -58,7 +56,6 @@ export default function UploadImageForm() {
   };
 
   const saveImagesToS3 = () => {
-    console.log('Saving images to S3');
     for (const image of formDataForImages.entries()) {
       const singleFormData = new FormData();
       singleFormData.append(image[0], image[1]);
@@ -79,7 +76,7 @@ export default function UploadImageForm() {
 
   return (
     <div className={styles.topContainer}>
-      <h2>{i18n.uploadImage()}</h2>
+      <h2>{i18n.uploadImages()}</h2>
       {tempImageUrls && tempImageUrls.length > 0 && (
         <div className={styles.imageGrid}>
           {tempImageUrls.map((url, index) => (
@@ -124,16 +121,14 @@ export default function UploadImageForm() {
         {imgUrls && imgUrls.length > 0 && (
           <div>
             {imgUrls.map((url, index) => (
-              <div key={index}>
+              <div className={styles.tableContainer} key={index}>
+                <div className={styles.imageContainer}>
+                  <img src={url} alt={`Uploaded file ${index + 1}`} />
+                </div>
                 <div>
                   <strong>{i18n.imageURL()}</strong>
                   {url}
                 </div>
-                <img
-                  src={url}
-                  alt={`Uploaded file ${index + 1}`}
-                  style={{maxWidth: '100px', maxHeight: '100px'}}
-                />
               </div>
             ))}
           </div>

@@ -1,6 +1,9 @@
 .imageGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust based on your needs */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(100px, 1fr)
+  ); /* Adjust based on your needs */
   gap: 10px; /* Adjust the gap between images */
 }
 
@@ -22,4 +25,19 @@
 .spinner {
   font-size: 24;
   padding: 8;
+}
+.tableContainer {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+
+  .imageContainer {
+    width: 100px;
+
+    img {
+      max-width: 100px;
+      max-height: 100px;
+      margin: 8px;
+    }
+  }
 }
