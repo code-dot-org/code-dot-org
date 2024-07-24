@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState, useMemo} from 'react';
 import {connect} from 'react-redux';
 
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
@@ -66,12 +66,14 @@ const SummaryResponses = ({
     [scriptData, selectedSection]
   );
 
-  const eventData = {
-    levelId: scriptData.level.id,
-    levelName: scriptData.level.name,
-    curriculumUmbrella: scriptData.reportingData.curriculumUmbrella,
-    unitId: scriptData.reportingData.unitId,
-  };
+  const eventData = useMemo(() => {
+    return {
+      levelId: scriptData.level.id,
+      levelName: scriptData.level.name,
+      curriculumUmbrella: scriptData.reportingData.curriculumUmbrella,
+      unitId: scriptData.reportingData.unitId,
+    };
+  }, [scriptData]);
 
   useEffect(() => {
     logEvent(EVENTS.SUMMARY_PAGE_LOADED);
