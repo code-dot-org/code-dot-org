@@ -143,6 +143,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       <div className={moduleStyles.buttonRow}>
         <Button
           text="Clear chat"
+          disabled={viewMode === WORKSPACE_VIEW_MODE.STUDENT_CHAT_HISTORY}
           iconLeft={{iconName: 'eraser'}}
           size="s"
           type="secondary"
