@@ -23,6 +23,24 @@ $default-spacing: 16px;
   padding: $default-spacing;
 }
 
+.tabsContainer {
+  background-color: #eaebeb;
+}
+
+.tabPanels {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: $default-spacing;
+  box-sizing: border-box;
+  overflow-y: auto;
+  padding: 16px;
+  > div {
+    height: 100%;
+    margin: 0;
+  }
+}
+
 .waitingForResponse {
   width: 50px;
 }

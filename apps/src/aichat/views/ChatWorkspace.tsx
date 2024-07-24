@@ -141,7 +141,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     onChange: handleOnChange,
     type: 'secondary',
     tabsContainerClassName: moduleStyles.tabsContainer,
-    tabPanelsContainerClassName: moduleStyles.conversationArea,
+    tabPanelsContainerClassName: moduleStyles.tabPanels,
   };
 
   const onCloseWarningModal = useCallback(
