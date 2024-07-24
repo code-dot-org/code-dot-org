@@ -1,10 +1,12 @@
 // The following styles are imported in a very specific order to preserve UI consistency.
 // `HeaderBanner` imports `typography.scss`
-// `typography.scss` has conflicting styles with `phase1-design-system.scss` which is imported later.
+// `CurriculumCatalog` imports `phase1-design-system.scss`
+// `typography.scss` has conflicting styles with `phase1-design-system.scss` (specifically for `h4` and `p` elements)
 // We are importing them in the specific order they were imported before adding import/order in order to preserve the UI.
 // These are very small changes so this can likely be removed with no issues.
 /* eslint-disable import/order */
 import HeaderBanner from '../HeaderBanner';
+import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 /* eslint-enable import/order */
 
 import PropTypes from 'prop-types';
@@ -13,7 +15,6 @@ import React, {useState, useEffect} from 'react';
 import {Heading5, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import {
   getSimilarRecommendations,
   getStretchRecommendations,
