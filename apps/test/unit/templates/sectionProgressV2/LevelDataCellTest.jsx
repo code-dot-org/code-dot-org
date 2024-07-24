@@ -5,8 +5,6 @@ import {ITEM_TYPE} from '@cdo/apps/templates/sectionProgressV2/ItemType';
 import {UnconnectedLevelDataCell} from '@cdo/apps/templates/sectionProgressV2/LevelDataCell';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 const TEST_URL = 'https://www.test.com/';
 const PROGRESS = {
   status: LevelStatus.not_tried,
@@ -45,14 +43,14 @@ describe('LevelDataCell', () => {
   it('Redirects with sectionId and studentId when specified', () => {
     renderDefault();
 
-    expect(screen.getByRole('link').getAttribute('href')).to.equal(
+    expect(screen.getByRole('link').getAttribute('href')).toBe(
       TEST_URL + '?section_id=1&user_id=1'
     );
   });
   it('Redirects without sectionId and studentId', () => {
     renderDefault({sectionId: null, studentId: null});
 
-    expect(screen.getByRole('link').getAttribute('href')).to.equal(TEST_URL);
+    expect(screen.getByRole('link').getAttribute('href')).toBe(TEST_URL);
   });
 
   it('Expanded choice level', () => {

@@ -2,8 +2,6 @@ import stats, {
   setCompletedLevelCount,
 } from '@cdo/apps/templates/teacherDashboard/statsRedux';
 
-import {assert} from '../../../util/reconfiguredChai';
-
 // Key-value pairs where the key is the student id and value is
 // the count of completed levels for that student.
 const completedLevelCountByStudentId = {
@@ -25,7 +23,7 @@ describe('statsRedux', () => {
         123: completedLevelCountByStudentId,
       };
 
-      assert.deepEqual(nextState.completedLevelCountBySectionId, expectedState);
+      expect(nextState.completedLevelCountBySectionId).toEqual(expectedState);
     });
 
     it('sets completedLevelCountBySectionId for multiple sections', () => {
@@ -48,10 +46,7 @@ describe('statsRedux', () => {
         321: moreCompletedLevelCountByStudentId,
       };
 
-      assert.deepEqual(
-        secondState.completedLevelCountBySectionId,
-        expectedState
-      );
+      expect(secondState.completedLevelCountBySectionId).toEqual(expectedState);
     });
   });
 });

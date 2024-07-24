@@ -157,7 +157,6 @@ async function getTableNames({isSharedTable = false} = {}) {
   return await response.json();
 }
 
-// This is only called if isDatablockStorage()
 DatablockStorage.getTableNames = function () {
   return getTableNames();
 };

@@ -128,8 +128,15 @@ class AichatController < ApplicationController
       end
     end
 
-    if params[:aichatModelCustomizations] != JSON.parse(session.model_customizations) ||
-        params[:storedMessages] != JSON.parse(session.messages)
+    if params[:aichatModelCustomizations] != JSON.parse(session.model_customizations)
+      return false
+    end
+
+    # Compare stored messages in sessions table with stored message from front-end
+    # for the following fields only: chatMessageText, role, and status.
+    sessions_stored_messages = JSON.parse(session.messages).map {|message| message.slice('chatMessageText', 'role', 'status')}
+    frontend_stored_messages = params[:storedMessages].map {|message| message.slice('chatMessageText', 'role', 'status')}
+    if sessions_stored_messages != frontend_stored_messages
       return false
     end
 

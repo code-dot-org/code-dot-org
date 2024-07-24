@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-import {assert} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 var NetSim = require('@cdo/apps/netsim/netsim');
 var NetSimConstants = require('@cdo/apps/netsim/NetSimConstants');

@@ -8,36 +8,32 @@ import {
 } from '@cdo/apps/templates/NavigationBar';
 import color from '@cdo/apps/util/color';
 
-import {expect} from '../../util/reconfiguredChai';
-
 describe('NavigationItem', () => {
   it('item renders text', () => {
     const wrapper = isolateComponent(
       <NavigationItem text="hello world" href="url" />
     );
-    expect(wrapper.content()).to.include('hello world');
-    expect(wrapper.findOne('Link').props.href).to.equal('url');
+    expect(wrapper.content()).toContain('hello world');
+    expect(wrapper.findOne('Link').props.href).toBe('url');
   });
 
   it('item is indented', () => {
     const wrapper = isolateComponent(
       <NavigationItem text="hello world" href="url" indentLevel={2} />
     );
-    expect(wrapper.findOne('.nav-link').props.style.paddingLeft).to.equal(
-      '24px'
-    );
+    expect(wrapper.findOne('.nav-link').props.style.paddingLeft).toBe('24px');
   });
 
   it('active item has class for styling', () => {
     let wrapper = isolateComponent(
       <NavigationItem text="hello world" href="url" />
     );
-    expect(wrapper.exists('.active')).to.be.false;
+    expect(wrapper.exists('.active')).toBe(false);
 
     wrapper = isolateComponent(
       <NavigationItem text="hello world" href="url" isActive={true} />
     );
-    expect(wrapper.exists('.active')).to.be.true;
+    expect(wrapper.exists('.active')).toBe(true);
   });
 });
 
@@ -50,19 +46,19 @@ describe('NavigationCategory', () => {
         ))}
       </NavigationCategory>
     );
-    expect(wrapper.findAll('NavigationItem').length).to.equal(3);
+    expect(wrapper.findAll('NavigationItem').length).toBe(3);
   });
 
   it('category opens the initial category', () => {
     let wrapper = isolateComponent(
       <NavigationCategory name="category 1" initialIsOpen={false} />
     );
-    expect(wrapper.exists('.open')).to.be.false;
+    expect(wrapper.exists('.open')).toBe(false);
 
     wrapper = isolateComponent(
       <NavigationCategory name="category 1" initialIsOpen={true} />
     );
-    expect(wrapper.exists('.open')).to.be.true;
+    expect(wrapper.exists('.open')).toBe(true);
   });
 
   it('category changes color', () => {
@@ -73,7 +69,7 @@ describe('NavigationCategory', () => {
         initialIsOpen={true}
       />
     );
-    expect(wrapper.findOne('.category').props.style.backgroundColor).to.equal(
+    expect(wrapper.findOne('.category').props.style.backgroundColor).toBe(
       color.purple
     );
   });
@@ -90,6 +86,6 @@ describe('NavigationBar', () => {
         ))}
       </NavigationBar>
     );
-    expect(wrapper.findAll('NavigationCategory').length).to.equal(3);
+    expect(wrapper.findAll('NavigationCategory').length).toBe(3);
   });
 });
