@@ -1,0 +1,190 @@
+#!/usr/bin/env ruby
+
+require_relative '../../../dashboard/config/environment'
+require 'cdo/aws/s3'
+require 'json'
+require 'json-schema'
+require 'uri'
+
+# This script redelivers application event ('firehose') event records to Redshift from the Intermediate S3 bucket
+# where batches of records were stored by the Firehose data stream and where manifest objects identify the batches
+# that succeeded delivery to Redshift and those that failed delivery to Redshift.
+
+CDO.log = Logger.new($stdout)
+
+options = {actually_update: false}
+OptionParser.new do |opts|
+  opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
+  opts.on('-u', '--actually-update', 'Actually perform the update.') do
+    options[:actually_update] = true
+  end
+  opts.on('-h', '--help', 'Add -u to perform the update.') do
+    puts opts
+    exit
+  end
+end.parse!
+CDO.log.info "Called with options: #{options}"
+
+# To speed up the queries, we limit the query to an id range that we know covers
+# all possible affected users
+START_DATE_TIME = 71_826_397
+END_DATE_TIME = 71_929_059
+
+# batches_delivered = 0
+# batches_failed = 0
+# records_delivered = 0
+# records_failed = 0
+
+FIREHOSE_INTERMEDIATE_BUCKET = 'firehose-analysis-events'.freeze
+ERROR_MANIFESTS_PREFIX = 'errors/manifests/2024/07/14'.freeze
+
+def split_json_batch(batch_string)
+  batch_string.delete_prefix('{').
+    delete_suffix('}').
+    split('}{').
+    map {|obj| JSON.parse("{#{obj}}")}
+end
+
+# Custom validator for event property
+class EventValidator < JSON::Schema::FormatValidator
+  def self.validate(current_schema, data, fragments, processor, validator, options = {})
+    stringified = data.is_a?(Hash) ? data.to_json : data.to_s
+
+    if stringified.length > 128
+      message = "The event value (#{stringified}) is too long (#{stringified.length} > 128 characters)"
+      validation_error(processor, message, fragments, current_schema, self, options[:record_errors])
+    end
+  end
+end
+
+# Register a custom validator for the event property which is sometimes incorrectly populated with an Object.
+JSON::Validator.register_format_validator("event_format", EventValidator)
+
+event_json_schema = {
+  "type" => "object",
+  "properties" => {
+    "created_at" => {
+      "type" => "string",
+      "format" => "date-time"
+    },
+    "environment" => {
+      "type" => "string",
+      "maxLength" => 128
+    },
+    "study" => {
+      "type" => "string",
+      "maxLength" => 128
+    },
+    "study_group" => {
+      "type" => ["string", "null"],
+      "maxLength" => 128
+    },
+    "device" => {
+      "type" => ["string", "null"],
+      "maxLength" => 1024
+    },
+    "uuid" => {
+      "type" => ["string", "null"],
+      "maxLength" => 128
+    },
+    "user_id" => {
+      "type" => ["integer", "null"]
+    },
+    "script_id" => {
+      "type" => ["integer", "null"]
+    },
+    "level_id" => {
+      "type" => ["integer", "null"]
+    },
+    "project_id" => {
+      "type" => ["string", "integer", "null"],
+      "maxLength" => 128
+    },
+    "event" => {
+      "oneOf" => [
+        {"type" => "string"},
+        {"type" => "object"}
+      ],
+      "format" => "event_format"
+    },
+    "data_int" => {
+      "type" => ["integer", "null"]
+    },
+    "data_float" => {
+      "type" => ["number", "null"]
+    },
+    "data_string" => {
+      "type" => ["string", "null"],
+      "maxLength" => 4096
+    },
+    "data_json" => {
+      "type" => ["string", "null"],
+      "maxLength" => 65535
+    }
+  },
+  "required" => ["created_at", "environment", "study", "event"]
+}
+
+s3_client = AWS::S3.create_client
+
+continuation_token = nil
+
+loop do
+  list_error_manifests_response = s3_client.list_objects_v2(
+    bucket: FIREHOSE_INTERMEDIATE_BUCKET,
+    prefix: ERROR_MANIFESTS_PREFIX,
+    continuation_token: continuation_token
+  )
+
+  CDO.log.info list_error_manifests_response.contents.length
+  list_error_manifests_response.contents.each do |error_manifest|
+    CDO.log.info error_manifest.key
+    error_manifest_response = s3_client.get_object(
+      bucket: FIREHOSE_INTERMEDIATE_BUCKET,
+      key: error_manifest.key
+    )
+    error_manifest = error_manifest_response[:body].read
+    CDO.log.info error_manifest
+    error_manifest_json = JSON.parse(error_manifest)
+    error_manifest_entries = error_manifest_json["entries"]
+    error_manifest_entries.each do |entry|
+      undelivered_batch_uri = URI.parse(entry["url"])
+      CDO.log.info undelivered_batch_uri
+      undelivered_batch_response = s3_client.get_object(
+        bucket: undelivered_batch_uri.host,
+        key: undelivered_batch_uri.path&.delete_prefix('/')
+      )
+      undelivered_batch = undelivered_batch_response.body.read
+      undelivered_records = split_json_batch(undelivered_batch)
+      undelivered_records.each do |record|
+        # CDO.log.info record
+        JSON::Validator.validate!(event_json_schema, record)
+      rescue JSON::Schema::ValidationError => exception
+        CDO.log.info record
+        CDO.log.info exception.message
+      end
+    end
+    CDO.log.info error_manifest_json
+  end
+  break unless list_error_manifests_response.is_truncated
+  continuation_token = list_error_manifests_response.next_continuation_token
+end
+
+# LIST all error manifest files from START_DATE_TIME to END_DATE_TIME
+# For each error manifest file
+#   GET batch object
+#   split batch object into separate JSON records
+#   For each record
+#     parse JSON
+#     validate JSON Properties against destination Redshift table column datatypes
+#     log validation errors
+#     fix data (truncate Properties that exceed max length)
+#     Raise TestRun Error if DRY RUN
+#     queue record for re-delivery? add to a new batch file?
+#     append Batch ID and record identifier to redeliver log
+#     Rescue
+#       log error
+#       append Batch ID and record identifier to redelivery error log
+
+CDO.log.info "Script completed"
+# Log number of batches processed, number of records processed, success and failure for both.
