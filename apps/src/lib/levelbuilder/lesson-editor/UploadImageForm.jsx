@@ -7,15 +7,17 @@ import styles from './uploadImage.module.scss';
 import classnames from 'classnames';
 
 export default function UploadImageForm() {
-  const [imgUrl, setImgUrl] = useState(undefined);
+  const [imgUrls, setImgUrls] = useState([]);
   const [error, setError] = useState(undefined);
   const [isUploading, setIsUploading] = useState(false);
   const [formDataForImages, setFormDataForImages] = useState(undefined);
-  const [tempImageUrl, setTempImageUrl] = useState(undefined);
+  const [tempImageUrls, setTempImageUrls] = useState([]);
+  //const [imageUrls, setImageUrls] = useState([]);
 
   const resetState = () => {
-    setImgUrl(undefined);
+    setImgUrls([]);
     setError(undefined);
+    setTempImageUrls([]);
   };
 
   const handleChange = e => {
@@ -26,17 +28,15 @@ export default function UploadImageForm() {
 
     // assemble upload data
     const formData = new FormData();
+    let tempImageUrlList = [];
     for (let i = 0; i < e.target.files.length; i++) {
       formData.append('file', e.target.files[i]);
-      console.log('Form data: ');
-      console.log(formData.get('file0'));
+      tempImageUrlList.push(URL.createObjectURL(e.target.files[i]));
     }
     setFormDataForImages(formData);
-    console.log(formData);
-    setTempImageUrl(URL.createObjectURL(e.target.files[0]));
+    setTempImageUrls(tempImageUrlList);
   };
 
-  // NEXT STEP: Test on an account that has AWS access
   const saveImageToS3 = formData => {
     console.log('Saving image to S3');
     setIsUploading(true);
@@ -68,7 +68,7 @@ export default function UploadImageForm() {
 
   const handleResult = result => {
     if (result && result.newAssetUrl) {
-      setImgUrl(result.newAssetUrl);
+      setImgUrls(prevUrls => [...prevUrls, result.newAssetUrl]);
     } else if (result && result.message) {
       setError(result.message);
     } else {
@@ -80,12 +80,17 @@ export default function UploadImageForm() {
   return (
     <div className={styles.topContainer}>
       <h2>{i18n.uploadImage()}</h2>
-      {tempImageUrl && (
-        <img
-          src={tempImageUrl}
-          alt="preview of uploaded document"
-          className={styles.imagePreview}
-        />
+      {tempImageUrls && tempImageUrls.length > 0 && (
+        <div className={styles.imageGrid}>
+          {tempImageUrls.map((url, index) => (
+            <img
+              key={index}
+              src={url}
+              alt={`Preview ${index + 1}`}
+              className={styles.imagePreview}
+            />
+          ))}
+        </div>
       )}
       <div>
         <input
@@ -116,10 +121,21 @@ export default function UploadImageForm() {
             <FontAwesome icon="spinner" className="fa-spin" />
           </div>
         )}
-        {imgUrl && (
+        {imgUrls && imgUrls.length > 0 && (
           <div>
-            <strong>{i18n.imageURL()}</strong>
-            {imgUrl}
+            {imgUrls.map((url, index) => (
+              <div key={index}>
+                <div>
+                  <strong>{i18n.imageURL()}</strong>
+                  {url}
+                </div>
+                <img
+                  src={url}
+                  alt={`Uploaded image ${index + 1}`}
+                  style={{maxWidth: '100px', maxHeight: '100px'}}
+                />
+              </div>
+            ))}
           </div>
         )}
       </div>
