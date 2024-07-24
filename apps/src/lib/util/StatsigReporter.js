@@ -134,7 +134,10 @@ class StatsigReporter {
     let stableId = cookies.get(stableIdKey);
     if (!stableId) {
       stableId = createUuid();
-      cookies.set(stableIdKey, stableId, {expires: 60, domain: 'code.org'});
+      cookies.set(stableIdKey, stableId, {
+        expires: 400,
+        domain: 'code.org',
+      });
     }
     return stableId;
   }
