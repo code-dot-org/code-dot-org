@@ -5,21 +5,18 @@ require 'json'
 
 require_relative '../../../i18n_script_utils'
 require_relative '../../../utils/sync_in_base'
-require 'cdo/aws/s3'
+require_relative '../musiclab_libraries'
 
 module I18n
   module Resources
     module Apps
       module MusiclabLibraries
         class SyncIn < I18n::Utils::SyncInBase
-          # LIBRARY_FILENAMES = %w[music-library-intro2024.json music-library-launch2024.json].freeze
-          LIBRARY_FILENAMES = %w[music-library-intro2024.json].freeze
-
           def process
-            LIBRARY_FILENAMES.each do |filename|
+            LIBRARY_NAME_IN_OUT_MAPPINGS.each do |name_map|
               I18nScriptUtils.write_json_file(
-                CDO.dir(I18N_SOURCE_DIR, 'musiclab_libraries', filename),
-                get_translation_strings(filename)
+                CDO.dir(I18N_SOURCE_DIR, DIR_NAME, "#{name_map[:to]}.json"),
+                get_translation_strings("#{name_map[:from]}.json")
               )
             end
           end
@@ -32,38 +29,34 @@ module I18n
               )
             )
 
-            strings = {}
+            strings_to_translate = {}
 
             manifest['instruments'].each do |instrument|
-              name = instrument['name']
               id = instrument['id']
-              strings[id] = name
+              strings_to_translate[id] = instrument['name']
             end
 
             manifest['kits'].each do |kit|
-              kit_name = kit['name']
               kit_id = kit['id']
-              strings[kit_id] = kit_name
+              strings_to_translate[kit_id] = kit['name']
 
               kit['sounds'].each do |sound|
-                sound_name = sound['name']
                 id = "#{kit_id}/#{sound['src']}"
-                strings[id] = sound_name
+                strings_to_translate[id] = sound['name']
               end
             end
 
             manifest['packs'].each do |pack|
               pack_id = pack['id']
-              strings[pack_id] = pack['name'] unless pack['skipLocalization']
+              strings_to_translate[pack_id] = pack['name'] unless pack['skipLocalization']
 
               pack['sounds'].each do |sound|
-                sound_name = sound['name']
                 id = "#{pack_id}/#{sound['src']}"
-                strings[id] = sound_name unless sound['skipLocalization']
+                strings_to_translate[id] = sound['name'] unless sound['skipLocalization']
               end
             end
 
-            strings
+            strings_to_translate
           end
         end
       end

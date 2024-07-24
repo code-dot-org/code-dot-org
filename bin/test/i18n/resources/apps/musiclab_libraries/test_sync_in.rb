@@ -16,14 +16,16 @@ describe I18n::Resources::Apps::MusiclabLibraries::SyncIn do
   describe '#process' do
     let(:process) {described_instance.process}
 
-    let(:i18n_source_file_path) {CDO.dir('i18n/locales/source/musiclab_libraries/music-library-intro2024.json')}
+    let(:i18n_source_file_path_intro) {CDO.dir('i18n/locales/source/musiclab_libraries/music-library-intro2024.json')}
+    let(:i18n_source_file_path_launch_v2) {CDO.dir('i18n/locales/source/musiclab_libraries/music-library-launch2024-v2.json')}
 
     it 'prepares the i18n source file' do
-      described_instance.expects(:get_translation_strings).returns({'lady_gaga_born_this_way/vocals_verse_3': 'Verse 3'})
+      described_instance.expects(:get_translation_strings).returns({'lady_gaga_born_this_way/vocals_verse_3': 'Verse 3'}).twice
 
       process
 
-      assert_equal %Q[{\n  "lady_gaga_born_this_way/vocals_verse_3": "Verse 3"\n}], File.read(i18n_source_file_path)
+      assert_equal %Q[{\n  "lady_gaga_born_this_way/vocals_verse_3": "Verse 3"\n}], File.read(i18n_source_file_path_intro)
+      assert_equal %Q[{\n  "lady_gaga_born_this_way/vocals_verse_3": "Verse 3"\n}], File.read(i18n_source_file_path_launch_v2)
     end
   end
 end

@@ -2,6 +2,7 @@
 
 require_relative '../../../i18n_script_utils'
 require_relative '../../../utils/sync_up_base'
+require_relative '../musiclab_libraries'
 
 module I18n
   module Resources
@@ -9,8 +10,7 @@ module I18n
       module MusiclabLibraries
         class SyncUp < I18n::Utils::SyncUpBase
           config.source_paths.push(
-            CDO.dir(I18N_SOURCE_DIR, 'musiclab_libraries', 'music-library-intro2024.json'),
-            CDO.dir(I18N_SOURCE_DIR, 'musiclab_libraries', 'music-library-launch2024.json')
+            *LIBRARY_NAME_IN_OUT_MAPPINGS.map {|name_map| CDO.dir(I18N_SOURCE_DIR, DIR_NAME, "#{name_map[:to]}.json")}
           )
         end
       end

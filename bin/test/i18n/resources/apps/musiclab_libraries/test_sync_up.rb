@@ -19,6 +19,7 @@ describe I18n::Resources::Apps::MusiclabLibraries::SyncUp do
     let(:expected_source_files) do
       [
         CDO.dir('i18n/locales/source/musiclab_libraries/music-library-intro2024.json'),
+        CDO.dir('i18n/locales/source/musiclab_libraries/music-library-launch2024-v2.json'),
       ]
     end
 

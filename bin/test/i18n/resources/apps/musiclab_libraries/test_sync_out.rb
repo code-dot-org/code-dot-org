@@ -9,9 +9,9 @@ describe I18n::Resources::Apps::MusiclabLibraries::SyncOut do
   let(:js_locale) {'uk_ua'}
   let(:language) {{locale_s: i18n_locale}}
 
-  # around do |test|
-  #   FakeFS.with_fresh {test.call}
-  # end
+  around do |test|
+    FakeFS.with_fresh {test.call}
+  end
 
   it 'inherits from I18n::Utils::SyncOutBase' do
     assert_equal I18n::Utils::SyncOutBase, described_class.superclass

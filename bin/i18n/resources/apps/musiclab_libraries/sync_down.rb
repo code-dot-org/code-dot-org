@@ -2,13 +2,14 @@
 
 require_relative '../../../i18n_script_utils'
 require_relative '../../../utils/sync_down_base'
+require_relative '../musiclab_libraries'
 
 module I18n
   module Resources
     module Apps
       module MusiclabLibraries
         class SyncDown < I18n::Utils::SyncDownBase
-          config.download_paths << DownloadPath.new(crowdin_src: 'musiclab_libraries')
+          config.download_paths << DownloadPath.new(crowdin_src: DIR_NAME)
         end
       end
     end
