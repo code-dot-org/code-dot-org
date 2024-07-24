@@ -28,10 +28,12 @@ class DatablockStorageController < ApplicationController
   METHODS_CALLED_BY_DATA_BLOCKS = [
     :set_key_value,
     :get_key_value,
+    :get_column,
     :create_record,
     :read_records,
     :update_record,
     :delete_record,
+    :get_library_manifest,
   ]
 
   before_action :validate_channel_id
