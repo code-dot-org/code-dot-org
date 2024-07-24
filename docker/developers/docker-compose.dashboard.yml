@@ -1,0 +1,32 @@
+include:
+  - path: ./docker-compose.mysql.yml
+  - path: ./docker-compose.redis.yml
+  - path: ./docker-compose.networks.yml
+
+services:
+  # Runs all the dependent services when the dashboard server is running natively
+  dashboard-services:
+    image: alpine
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_started
+    command: >
+      /bin/sh -c "
+        echo 'Dashboard services running.' &&
+        echo &&
+        echo 'To shut down all containers:' &&
+        echo 'docker compose stop' &&
+        echo &&
+        echo 'To run the native dashboard server:' &&
+        echo './bin/dashboard-server' &&
+        echo &&
+        echo 'Be sure to have the following in your locals.yml to link to the contained services:' &&
+        echo &&
+        echo 'db_writer: mysql://root:password@127.0.0.1/' &&
+        echo 'db_endpoint_writer: 127.0.0.1' &&
+        echo 'db_credential_admin:' &&
+        echo '  username: user' &&
+        echo '  password: password'
+      "
