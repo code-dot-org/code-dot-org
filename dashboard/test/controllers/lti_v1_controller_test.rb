@@ -313,7 +313,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
       exp: 7.days.from_now.to_i,
       iat: 1.day.ago.to_i,
       iss: @integration.issuer,
-      sub: 'LTI-AUTH',
+      sub: SecureRandom.uuid,
       nonce: @nonce,
       'https://purl.imsglobal.org/spec/lti/claim/target_link_uri': target_link_uri,
       'https://purl.imsglobal.org/spec/lti/claim/message_type': 'LtiResourceLinkRequest',
@@ -479,6 +479,12 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   test 'auth - given a valid jwt with the audience as an array, redirect to target_link_url' do
     aud_is_array = true
     jwt = create_valid_jwt(aud_is_array)
+    payload = JWT.decode(jwt, @key)
+    puts payload.inspect
+    user = Services::Lti.initialize_lti_user(JWT.decode(jwt, @key))
+    user.update(lms_landing_opted_out: true)
+    # puts user.inspect
+    user.save!
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :redirect
   end
