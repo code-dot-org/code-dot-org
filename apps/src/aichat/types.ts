@@ -33,16 +33,16 @@ export type ChatItem = ChatMessage | ModelUpdate | Notification;
 
 // Type Predicates: checks if a ChatItem is a given type, and more helpfully,
 // automatically narrows to the specific type.
-export function isChatMessage(item: ChatItem): item is ChatMessage {
-  return (item as ChatMessage).chatMessageText !== undefined;
+export function isChatMessage(event: AichatEvent): event is ChatMessage {
+  return (event as ChatMessage).chatMessageText !== undefined;
 }
 
-export function isModelUpdate(item: ChatItem): item is ModelUpdate {
-  return (item as ModelUpdate).updatedField !== undefined;
+export function isModelUpdate(event: AichatEvent): event is ModelUpdate {
+  return (event as ModelUpdate).updatedField !== undefined;
 }
 
-export function isNotification(item: ChatItem): item is Notification {
-  return (item as Notification).notificationType !== undefined;
+export function isNotification(event: AichatEvent): event is Notification {
+  return (event as Notification).notificationType !== undefined;
 }
 
 export interface ChatApiResponse {

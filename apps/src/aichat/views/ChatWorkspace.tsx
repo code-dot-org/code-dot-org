@@ -13,10 +13,10 @@ import Tabs, {TabsProps} from '@cdo/apps/componentLibrary/tabs/Tabs';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {ChatItem, WorkspaceTeacherViewTab} from '../types';
+import {AichatEvent, ChatItem, WorkspaceTeacherViewTab} from '../types';
 import {getShortName} from '../utils';
 
-import ChatItemView from './ChatItemView';
+import ChatItemView from './AichatEventView';
 import CopyButton from './CopyButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
@@ -41,9 +41,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const [selectedTab, setSelectedTab] =
     useState<WorkspaceTeacherViewTab | null>(null);
 
-  const {showWarningModal, isWaitingForChatResponse} = useAppSelector(
-    state => state.aichat
-  );
+  const {showWarningModal, isWaitingForChatResponse, allStudentAichatEvents} =
+    useAppSelector(state => state.aichat);
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const items = useSelector(selectAllMessages);
 
@@ -120,9 +119,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     {
       value: 'viewStudentChatHistory',
       text: `View ${selectedStudentName}'s chat history`,
-      tabContent: (
-        <div>Viewing {selectedStudentName}'s chat history - TODO</div>
-      ),
+      tabContent: <ViewChatHistory events={allStudentAichatEvents} />,
       iconLeft: iconValue,
     },
     {
@@ -214,9 +211,25 @@ const ChatWithModel: React.FunctionComponent<ChatWithModelProps> = ({
       ref={conversationContainerRef}
     >
       {items.map((item, index) => (
-        <ChatItemView item={item} key={index} />
+        <ChatItemView event={item} key={index} />
       ))}
       {showWaitingAnimation()}
+    </div>
+  );
+};
+
+interface ViewChatHistoryProps {
+  events: AichatEvent[];
+}
+
+const ViewChatHistory: React.FunctionComponent<ViewChatHistoryProps> = ({
+  events,
+}) => {
+  return (
+    <div id="chat-workspace-history" className={moduleStyles.conversationArea}>
+      {events.map((event, index) => (
+        <ChatItemView event={event} key={index} />
+      ))}
     </div>
   );
 };
