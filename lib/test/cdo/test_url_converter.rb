@@ -38,6 +38,7 @@ class UrlConverterTest < Minitest::Test
       pegasus_host: 'test.code.org',
       dashboard_host: 'test-studio.code.org',
       hourofcode_host: 'test.hourofcode.com',
+      csedweek_host: 'test.csedweek.org'
     )
   end
 
@@ -70,6 +71,7 @@ class UrlConverterTest < Minitest::Test
       pegasus_host: 'localhost.code.org:3000',
       dashboard_host: 'localhost-studio.code.org:3000',
       hourofcode_host: 'localhost.hourofcode.com:3000',
+      csedweek_host: 'localhost.csedweek.org:3000'
     )
   end
 

@@ -4,15 +4,18 @@ class UrlConverter
   # It prevents us from matching something like //code.org.example.com
   LEARN_CODE_ORG_REGEX = /#{'//learn.code.org'}(?=$|\/)/
   HOUROFCODE_COM_REGEX = /#{'//hourofcode.com'}(?=$|\/)/
+  CSEDWEEK_ORG_REGEX = /#{'//csedweek.org'}(?=$|\/)/
   DASHBOARD_REGEX = /#{'//studio.code.org'}(?=$|\/)/
 
   # For reference, a 'host' is a domain and (optionally) port without a protocol.
   # Examples: code.org, studio.code.org, localhost-studio.code.org:3000
   # @see https://developer.mozilla.org/en-US/docs/Web/API/Location
-  def initialize(dashboard_host: nil, pegasus_host: nil, hourofcode_host: nil)
+  def initialize(dashboard_host: nil, pegasus_host: nil, hourofcode_host: nil, csedweek_host: nil, advocacy_host: nil)
+    @csedweek_host = csedweek_host
     @dashboard_host = dashboard_host
     @pegasus_host = pegasus_host
     @hourofcode_host = hourofcode_host
+    @csedweek_host = csedweek_host
   end
 
   # An 'origin' is a protocol, domain, and (optional) port.  This method may
@@ -24,6 +27,8 @@ class UrlConverter
 
     if @hourofcode_host && HOUROFCODE_COM_REGEX =~ url
       url = url.gsub(HOUROFCODE_COM_REGEX, "//" + @hourofcode_host)
+    elsif @csedweek_host && CSEDWEEK_ORG_REGEX =~ url
+      url = url.gsub(CSEDWEEK_ORG_REGEX, "//" + @csedweek_host)
     elsif @dashboard_host && DASHBOARD_REGEX =~ url
       url = url.gsub(DASHBOARD_REGEX, "//" + @dashboard_host)
     elsif @pegasus_host
