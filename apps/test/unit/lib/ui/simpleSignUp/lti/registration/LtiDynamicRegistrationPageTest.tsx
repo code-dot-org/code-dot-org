@@ -1,12 +1,12 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import $ from 'jquery';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import LtiDynamicRegistrationPage from '@cdo/apps/lib/ui/simpleSignUp/lti/registration/LtiDynamicRegistrationPage';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const MOCK_DATA = {
   email: 'test@code.org',

@@ -15,9 +15,12 @@
     "optional": "false",
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "display_name": "The Parent",
+    "bubble_choice_description": "Penelope is a 42-year-old librarian and mother of two children, ages 9 and 12, who frequently use the internet for schoolwork and entertainment.",
+    "thumbnail_url": "https://images.code.org/8a4dce8a611f5ed96c2b038e066452df-penelope.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-06-11 20:04:48 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-06-11 20:05:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-06-11 20:04:48 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-06-11 20:05:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-22 18:34:25 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

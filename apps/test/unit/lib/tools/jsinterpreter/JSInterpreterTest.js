@@ -1,10 +1,10 @@
 import Interpreter from '@code-dot-org/js-interpreter';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 import Observer from '@cdo/apps/Observer';
 
-import {expect, assert} from '../../../../util/reconfiguredChai';
+import {expect, assert} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('The JSInterpreter class', function () {
   var jsInterpreter;

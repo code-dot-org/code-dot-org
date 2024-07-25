@@ -4,8 +4,6 @@ import {BrowserRouter as Router} from 'react-router-dom';
 
 import TeacherDashboardNavigation from '@cdo/apps/templates/teacherDashboard/TeacherDashboardNavigation.jsx';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 const CUSTOM_LINKS = [
   {
     label: 'custom link 1',
@@ -28,9 +26,9 @@ describe('TeacherDashboardNavigation', () => {
     );
 
     screen.getByText(MANAGE_STUDENTS_LABEL);
-    expect(screen.queryByText(AI_TUTOR_LABEL)).to.not.exist;
+    expect(screen.queryByText(AI_TUTOR_LABEL)).toBeFalsy();
     CUSTOM_LINKS.forEach(({label}) => {
-      expect(screen.queryByText(label)).to.not.exist;
+      expect(screen.queryByText(label)).toBeFalsy();
     });
   });
 
@@ -44,7 +42,7 @@ describe('TeacherDashboardNavigation', () => {
     screen.getByText(MANAGE_STUDENTS_LABEL);
     screen.getByText(AI_TUTOR_LABEL);
     CUSTOM_LINKS.forEach(({label}) => {
-      expect(screen.queryByText(label)).to.not.exist;
+      expect(screen.queryByText(label)).toBeFalsy();
     });
   });
 
@@ -55,8 +53,8 @@ describe('TeacherDashboardNavigation', () => {
       </Router>
     );
 
-    expect(screen.queryByText(MANAGE_STUDENTS_LABEL)).to.not.exist;
-    expect(screen.queryByText(AI_TUTOR_LABEL)).to.not.exist;
+    expect(screen.queryByText(MANAGE_STUDENTS_LABEL)).toBeFalsy();
+    expect(screen.queryByText(AI_TUTOR_LABEL)).toBeFalsy();
     CUSTOM_LINKS.forEach(({label}) => {
       screen.getByText(label);
     });
@@ -72,7 +70,7 @@ describe('TeacherDashboardNavigation', () => {
       </Router>
     );
 
-    expect(screen.queryByText(MANAGE_STUDENTS_LABEL)).to.not.exist;
+    expect(screen.queryByText(MANAGE_STUDENTS_LABEL)).toBeFalsy();
     screen.getByText(AI_TUTOR_LABEL);
     CUSTOM_LINKS.forEach(({label}) => {
       screen.getByText(label);

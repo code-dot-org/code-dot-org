@@ -10,8 +10,6 @@ jobs:
       DISABLE_SPRING: 1   
       CLOUDFRONT_KEY_PAIR_ID: ${{ secrets.CLOUDFRONT_KEY_PAIR_ID }}
       CLOUDFRONT_PRIVATE_KEY: ${{ secrets.CLOUDFRONT_PRIVATE_KEY }}
-      FIREBASE_NAME: ${{ secrets.FIREBASE_NAME }}
-      FIREBASE_SECRET: ${{ secrets.FIREBASE_SECRET }}
       PROPERTIES_ENCRYPTION_KEY: $${{ secrets.PROPERTIES_ENCRYPTION_KEY }}      
       AWS_ACCESS_KEY_ID: $${{ secrets.CI_AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: $${{ secrets.CI_AWS_SECRET_ACCESS_KEY }}  
@@ -47,9 +45,6 @@ jobs:
             saucelabs_authkey: $SAUCE_ACCESS_KEY
             ignore_eyes_mismatches: true
             disable_all_eyes_running: true
-            firebase_name: $FIREBASE_NAME
-            firebase_secret: $FIREBASE_SECRET
-            firebase_shared_secret: $FIREBASE_SHARED_SECRET
             use_my_apps: true
             build_dashboard: true
             build_pegasus: true

@@ -1,15 +1,11 @@
-import sinon from 'sinon';
-
 import DropletAutocompleteParameterTooltipManager from '@cdo/apps/blockTooltips/DropletAutocompleteParameterTooltipManager.js';
 import commonI18n from '@cdo/locale';
-
-import {expect} from '../../util/reconfiguredChai';
 
 import {DropletTooltipManagerStub} from './stubs';
 
 describe('DropletAutocompleteParameterTooltipManager', () => {
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
   });
 
   describe('getTooltipHTML', () => {
@@ -40,7 +36,10 @@ describe('DropletAutocompleteParameterTooltipManager', () => {
 
     it('should render localized string for "Choose..."', () => {
       // Stub the i18n calls.
-      sinon.stub(commonI18n, 'choosePrefix').returns('i18n-choose-prefix');
+      jest
+        .spyOn(commonI18n, 'choosePrefix')
+        .mockClear()
+        .mockReturnValue('i18n-choose-prefix');
 
       // Create the parameter tooltip manager class.
       let tooltip = new DropletAutocompleteParameterTooltipManager(manager);
@@ -52,12 +51,15 @@ describe('DropletAutocompleteParameterTooltipManager', () => {
       let el = document.createElement('div');
       el.innerHTML = html;
       let a = el.querySelector('.tooltip-choose-link a');
-      expect(a.textContent).to.equal('i18n-choose-prefix');
+      expect(a.textContent).toBe('i18n-choose-prefix');
     });
 
     it('should render localized string for "Examples"', () => {
       // Stub the i18n calls.
-      sinon.stub(commonI18n, 'examples').returns('i18n-examples');
+      jest
+        .spyOn(commonI18n, 'examples')
+        .mockClear()
+        .mockReturnValue('i18n-examples');
 
       // Create the parameter tooltip manager class.
       let tooltip = new DropletAutocompleteParameterTooltipManager(manager);
@@ -69,7 +71,7 @@ describe('DropletAutocompleteParameterTooltipManager', () => {
       let el = document.createElement('div');
       el.innerHTML = html;
       let a = el.querySelector('.tooltip-example-link a');
-      expect(a.textContent).to.equal('i18n-examples');
+      expect(a.textContent).toBe('i18n-examples');
     });
   });
 });

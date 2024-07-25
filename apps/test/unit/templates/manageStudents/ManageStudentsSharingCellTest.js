@@ -5,7 +5,7 @@ import {Checkbox} from 'react-bootstrap'; // eslint-disable-line no-restricted-i
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {UnconnectedManageStudentsSharingCell as ManageStudentsSharingCell} from '@cdo/apps/templates/manageStudents/ManageStudentsSharingCell';
 
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('ManageStudentsSharingCell', () => {
   it('renders a checked Checkbox if editing and can share', () => {

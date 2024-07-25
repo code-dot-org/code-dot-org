@@ -1,11 +1,11 @@
 import GoogleBlockly from 'blockly/core';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {READ_ONLY_PROPERTIES} from '@cdo/apps/blockly/constants';
 import initializeGoogleBlocklyWrapper from '@cdo/apps/blockly/googleBlocklyWrapper';
 import '@cdo/apps/flappy/flappy'; // Importing the app forces the test to load Blockly
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Google Blockly Wrapper', () => {
   const cdoBlockly = Blockly;

@@ -7,8 +7,6 @@ import ProjectAppTypeArea from '@cdo/apps/templates/projects/ProjectAppTypeArea.
 import ProjectCardGrid from '@cdo/apps/templates/projects/ProjectCardGrid';
 import reducer from '@cdo/apps/templates/projects/projectsRedux';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 import {projects} from './projectsTestData';
 
 describe('ProjectCardGrid', () => {
@@ -24,15 +22,15 @@ describe('ProjectCardGrid', () => {
     const component = wrapper.find(ProjectCardGrid).childAt(0).instance();
 
     // Should show all project types.
-    expect(wrapper.find(ProjectAppTypeArea)).to.have.lengthOf(1);
+    expect(wrapper.find(ProjectAppTypeArea)).toHaveLength(1);
     const props1 = wrapper.find(ProjectAppTypeArea).first().props();
-    expect(props1.labKey).to.equal('featured');
-    expect(props1.labName).to.equal('Featured Projects');
-    expect(props1.numProjectsToShow).to.equal(16);
+    expect(props1.labKey).toBe('featured');
+    expect(props1.labName).toBe('Featured Projects');
+    expect(props1.numProjectsToShow).toBe(16);
 
     // Show all project types.
     component.viewAllProjects();
     wrapper.setProps({}); // Force a re-render
-    expect(wrapper.find(ProjectAppTypeArea)).to.have.lengthOf(1);
+    expect(wrapper.find(ProjectAppTypeArea)).toHaveLength(1);
   });
 });

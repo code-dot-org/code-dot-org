@@ -10,7 +10,7 @@ import msg from '@cdo/locale';
 import experiments from '../../util/experiments';
 import {WarningType} from '../constants';
 import {showWarning} from '../redux/data';
-import {isFirebaseStorage, storageBackend} from '../storage';
+import {storageBackend} from '../storage';
 
 import {getDatasetInfo} from './dataUtils';
 import LibraryCategory from './LibraryCategory';
@@ -39,28 +39,10 @@ class DataLibraryPane extends React.Component {
     }
   };
 
-  importTable = datasetInfo => {
-    // TODO: post-firebase-cleanup, remove this conditional: #56994
-    if (isFirebaseStorage()) {
-      if (datasetInfo.current) {
-        storageBackend().addCurrentTableToProject(
-          datasetInfo.name,
-          () => {},
-          this.onError
-        );
-      } else {
-        storageBackend().copyStaticTable(
-          datasetInfo.name,
-          () => {},
-          this.onError
-        );
-      }
-    } else {
-      storageBackend()
-        .addSharedTable(datasetInfo.name)
-        .then(() => refreshCurrentDataView());
-    }
-  };
+  importTable = datasetInfo =>
+    storageBackend()
+      .addSharedTable(datasetInfo.name)
+      .then(() => refreshCurrentDataView());
 
   search = e => {
     let searchValue = '';
@@ -98,7 +80,7 @@ class DataLibraryPane extends React.Component {
 
   render() {
     const showUnpublishedTables = experiments.isEnabled(
-      experiments.SHOW_UNPUBLISHED_FIREBASE_TABLES
+      experiments.SHOW_UNPUBLISHED_DATASET_TABLES
     );
     let categories = (this.props.libraryManifest.categories || []).filter(
       category => showUnpublishedTables || category.published
