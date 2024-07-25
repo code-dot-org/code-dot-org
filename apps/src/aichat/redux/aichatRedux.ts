@@ -17,7 +17,10 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {postAichatCompletionMessage} from '../aichatCompletionApi';
+import {
+  postAichatCompletionMessage,
+  fetchAichatStudentChatHistory,
+} from '../aichatCompletionApi';
 import {saveTypeToAnalyticsEvent} from '../constants';
 import {
   AiCustomizations,
@@ -48,6 +51,7 @@ import {
   getNewMessageId,
   hasFilledOutModelCard,
 } from './utils';
+import {allowConsoleWarnings} from 'test/util/throwOnConsole';
 
 const messageListKeys = ['chatItemsPast', 'chatItemsCurrent'] as const;
 type MessageLocation = {
@@ -395,6 +399,28 @@ export const submitChatContents = createAsyncThunk(
     chatApiResponse.messages.forEach(message =>
       thunkAPI.dispatch(addChatMessage({...message, timestamp: Date.now()}))
     );
+  }
+);
+
+// This thunk's callback function submits a teacher's student's id to the student chat history
+// endpoint, then waits for a response, and returns the ordered student's chat events.
+export const fetchStudentChatHistory = createAsyncThunk(
+  'aichat/fetchStudentChatHistory',
+  async (studentUserId: string, thunkAPI) => {
+    // Post teacher's student's user id to backend and retrieve student's chat history.
+    let chatApiResponse;
+    try {
+      chatApiResponse = await fetchAichatStudentChatHistory(studentUserId);
+    } catch (error) {
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError(
+          'Error in aichat student chat history request',
+          error as Error
+        );
+      return;
+    }
+    console.log('chatApiResponse', chatApiResponse);
   }
 );
 
