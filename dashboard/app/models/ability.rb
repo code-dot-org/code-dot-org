@@ -481,6 +481,7 @@ class Ability
           (!user.teachers.empty? &&
           user.teachers.any? {|teacher| teacher.has_pilot_experiment?(GENAI_PILOT)})
         can :chat_completion, :aichat
+        can :student_chat_history, :aichat
       end
     end
 
