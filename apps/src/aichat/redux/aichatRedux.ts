@@ -24,6 +24,7 @@ import {
 import {saveTypeToAnalyticsEvent} from '../constants';
 import {
   AiCustomizations,
+  AichatEvent,
   AichatContext,
   FieldVisibilities,
   LevelAichatSettings,
@@ -68,6 +69,8 @@ export interface AichatState {
   chatMessagePending?: ChatMessage;
   // Denotes whether we are waiting for a chat completion response from the backend
   isWaitingForChatResponse: boolean;
+  // Student events viewed by a teacher user in chat workspace
+  allStudentAichatEvents: AichatEvent[];
   // Denotes whether we should show the warning modal
   showWarningModal: boolean;
   // Denotes if there is an error with the chat completion response
@@ -88,6 +91,7 @@ const initialState: AichatState = {
   chatItemsCurrent: [],
   chatMessagePending: undefined,
   isWaitingForChatResponse: false,
+  allStudentAichatEvents: [],
   showWarningModal: true,
   chatMessageError: false,
   currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
@@ -432,6 +436,7 @@ export const fetchStudentChatHistory = createAsyncThunk(
       })
       .flat();
     console.log('chatHistoryMessages', chatHistoryMessages);
+    thunkAPI.dispatch(addAichatEvents(chatHistoryMessages));
   }
 );
 
@@ -447,6 +452,9 @@ const aichatSlice = createSlice({
     },
     addNotification: (state, action: PayloadAction<Notification>) => {
       state.chatItemsCurrent.push(action.payload);
+    },
+    addAichatEvents: (state, action: PayloadAction<AichatEvent[]>) => {
+      state.allStudentAichatEvents = action.payload;
     },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
@@ -660,6 +668,7 @@ export const selectHavePropertiesChanged = (state: RootState) =>
 // Actions not to be used outside of this file
 const {
   addChatMessage,
+  addAichatEvents,
   addModelUpdate,
   startSave,
   setChatMessagePending,

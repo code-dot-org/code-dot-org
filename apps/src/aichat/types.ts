@@ -5,25 +5,25 @@ import {Role} from '../aiComponentLibrary/chatItems/types';
 // TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
 export type AichatInteractionStatusValue = string;
 
-export interface ChatEvent {
+export interface AichatEvent {
   // UTC timestamp in milliseconds
   timestamp: number;
   description?: string;
 }
 
-export interface ChatMessage extends ChatEvent {
+export interface ChatMessage extends AichatEvent {
   chatMessageText: string;
   role: Role;
   status: AichatInteractionStatusValue;
 }
 
-export interface ModelUpdate extends ChatEvent {
+export interface ModelUpdate extends AichatEvent {
   id: number;
   updatedField: keyof AiCustomizations;
   updatedValue: AiCustomizations[keyof AiCustomizations];
 }
 
-export interface Notification extends ChatEvent {
+export interface Notification extends AichatEvent {
   id: number;
   text: string;
   notificationType: 'error' | 'success';
