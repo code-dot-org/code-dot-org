@@ -5,7 +5,7 @@
  */
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 
-import {ProjectSources, ProjectType} from '../types';
+import {ProjectSources, ProjectType, ProjectVersion} from '../types';
 
 import * as sourcesApi from './sourcesApi';
 
@@ -19,6 +19,8 @@ export interface SourcesStore {
     sources: ProjectSources,
     appType?: ProjectType
   ) => Promise<Response>;
+
+  getVersionList: (key: string) => Promise<ProjectVersion[]>;
 }
 
 export class LocalSourcesStore implements SourcesStore {
@@ -30,6 +32,10 @@ export class LocalSourcesStore implements SourcesStore {
   save(key: string, sources: ProjectSources) {
     localStorage.setItem(key, JSON.stringify(sources));
     return Promise.resolve(new Response());
+  }
+
+  getVersionList(key: string) {
+    return Promise.resolve([]);
   }
 }
 
@@ -79,6 +85,15 @@ export class RemoteSourcesStore implements SourcesStore {
       );
     }
     return response;
+  }
+
+  async getVersionList(key: string) {
+    const response = await sourcesApi.getVersionList(key);
+    if (response.response.ok) {
+      return response.value;
+    } else {
+      return [];
+    }
   }
 
   shouldReplace(): boolean {

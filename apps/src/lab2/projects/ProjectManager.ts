@@ -248,6 +248,10 @@ export default class ProjectManager {
     this.publishHelper(false);
   }
 
+  async getVersionList() {
+    return await this.sourcesStore.getVersionList(this.channelId);
+  }
+
   addSaveSuccessListener(listener: (channel: Channel) => void) {
     this.saveSuccessListeners.push(listener);
   }
