@@ -19,6 +19,7 @@ export interface ActionDropdownOption {
   label: string;
   onClick: () => void;
   isOptionDisabled?: boolean;
+  isOptionDestructive?: boolean;
   icon: FontAwesomeV6IconProps;
 }
 
@@ -66,13 +67,13 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
   );
 
   /* TODO:
-        - onOptionClick +
-        - list items +
-        - trigger component +
-        - props +
-        - cleanup
-        - placement +
-        */
+              - onOptionClick +
+              - list items +
+              - trigger component +
+              - props +
+              - cleanup
+              - placement +
+              */
   return (
     <CustomDropdown
       name={name}
@@ -93,6 +94,7 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
               label,
               onClick,
               isOptionDisabled,
+              isOptionDestructive,
               icon: {
                 iconName,
                 iconStyle,
@@ -105,7 +107,9 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
                 <button
                   className={classNames(
                     moduleStyles.dropdownMenuItem,
-                    isOptionDisabled && moduleStyles.disabledDropdownMenuItem
+                    isOptionDisabled && moduleStyles.disabledDropdownMenuItem,
+                    isOptionDestructive &&
+                      moduleStyles.destructiveDropdownMenuItem
                   )}
                   disabled={isOptionDisabled || disabled}
                   type="button"

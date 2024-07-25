@@ -127,6 +127,41 @@ WithDisabledOptionActionDropdown.args = {
   size: 'm',
 };
 
+export const WithDestructiveOptionActionDropdown = SingleTemplate.bind({});
+WithDestructiveOptionActionDropdown.args = {
+  name: 'withDisabledOption-dropdown',
+  triggerButtonProps: {
+    color: 'purple',
+    type: 'primary',
+    isIconOnly: true,
+    icon: {iconName: 'smile', iconStyle: 'solid'},
+  },
+  options: [
+    {
+      value: 'option-1',
+      label: 'Option 1',
+      icon: {iconName: 'check', iconStyle: 'solid'},
+      onClick: () => null,
+    },
+    {
+      isOptionDestructive: true,
+      value: 'option-2',
+      label: 'Option 2',
+      icon: {iconName: 'xmark', iconStyle: 'solid'},
+      onClick: () => null,
+    },
+    {
+      value: 'option-3',
+      label: 'Option 3',
+      icon: {iconName: 'xmark', iconStyle: 'solid'},
+      onClick: () => null,
+    },
+  ],
+  disabled: false,
+  labelText: 'Default Dropdown',
+  size: 'm',
+};
+
 export const GroupOfActionDropdownColors = MultipleTemplate.bind({});
 GroupOfActionDropdownColors.args = {
   components: [
