@@ -11,7 +11,7 @@ module I18n
         class SyncOut < I18n::Utils::SyncOutBase
           def process(language)
             LIBRARY_NAME_IN_OUT_MAPPINGS.each do |name_map|
-              crowdin_file_path = I18nScriptUtils.crowdin_locale_dir(language[:locale_s], DIR_NAME, "#{library_name}.json")
+              crowdin_file_path = I18nScriptUtils.crowdin_locale_dir(language[:locale_s], DIR_NAME, "#{name_map[:to]}.json")
               next unless File.exist?(crowdin_file_path)
 
               js_locale = I18nScriptUtils.to_js_locale(language[:locale_s])
