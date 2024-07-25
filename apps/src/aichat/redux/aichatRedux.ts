@@ -433,8 +433,8 @@ export const fetchStudentChatHistory = createAsyncThunk(
       .map(session => {
         return JSON.parse(session.messages);
       })
+      .reverse()
       .flat();
-    console.log('chatHistoryMessages', chatHistoryMessages);
     thunkAPI.dispatch(addAichatEvents(chatHistoryMessages));
   }
 );
