@@ -1,7 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import reducers, {
   initActivities,
@@ -14,8 +13,6 @@ import {
   getStore,
   registerReducers,
 } from '@cdo/apps/redux';
-
-import {expect} from '../../../../util/reconfiguredChai';
 
 describe('ProgrammingExpressionsEditor', () => {
   let defaultProps,
@@ -34,8 +31,8 @@ describe('ProgrammingExpressionsEditor', () => {
       initLevelSearching({searchOptions: {}, programmingEnvironments: []})
     );
 
-    addProgrammingExpression = sinon.spy();
-    removeProgrammingExpression = sinon.spy();
+    addProgrammingExpression = jest.fn();
+    removeProgrammingExpression = jest.fn();
     defaultProps = {
       programmingExpressions: [
         {
@@ -69,7 +66,7 @@ describe('ProgrammingExpressionsEditor', () => {
         <ProgrammingExpressionsEditor {...defaultProps} />
       </Provider>
     );
-    expect(wrapper.find('tr').length).to.equal(3);
+    expect(wrapper.find('tr').length).toBe(3);
   });
 
   it('can remove a programming expression', () => {
@@ -79,7 +76,7 @@ describe('ProgrammingExpressionsEditor', () => {
       </Provider>
     );
     const numProgrammingExpressions = wrapper.find('tr').length;
-    expect(numProgrammingExpressions).at.least(2);
+    expect(numProgrammingExpressions).toBeGreaterThanOrEqual(2);
     // Find one of the "remove" buttons and click it
     const removeProgrammingExpressionButton = wrapper
       .find('.unit-test-remove-programming-expression')
@@ -88,7 +85,7 @@ describe('ProgrammingExpressionsEditor', () => {
     const removeDialog = wrapper.find('Dialog');
     const deleteButton = removeDialog.find('button').at(2);
     deleteButton.simulate('click');
-    expect(removeProgrammingExpression).to.have.been.calledOnce;
+    expect(removeProgrammingExpression).toHaveBeenCalledTimes(1);
   });
 
   it('can cancel removing a programmingExpression', () => {
@@ -98,7 +95,7 @@ describe('ProgrammingExpressionsEditor', () => {
       </Provider>
     );
     const numProgrammingExpressions = wrapper.find('tr').length;
-    expect(numProgrammingExpressions).at.least(2);
+    expect(numProgrammingExpressions).toBeGreaterThanOrEqual(2);
     // Find one of the "remove" buttons and click it
     const removeProgrammingExpressionButton = wrapper
       .find('.unit-test-remove-programming-expression')
@@ -107,7 +104,7 @@ describe('ProgrammingExpressionsEditor', () => {
     const removeDialog = wrapper.find('Dialog');
     const cancelButton = removeDialog.find('button').at(1);
     cancelButton.simulate('click');
-    expect(removeProgrammingExpression).not.to.have.been.called;
+    expect(removeProgrammingExpression).not.toHaveBeenCalled();
   });
 
   it('clicking add a programming expression opens dialog', () => {
@@ -118,6 +115,6 @@ describe('ProgrammingExpressionsEditor', () => {
     );
     const addProgrammingExpressionButton = wrapper.find('Button');
     addProgrammingExpressionButton.simulate('click');
-    expect(wrapper.find('FindProgrammingExpressionDialog')).to.have.length(1);
+    expect(wrapper.find('FindProgrammingExpressionDialog')).toHaveLength(1);
   });
 });

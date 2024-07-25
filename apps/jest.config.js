@@ -13,7 +13,6 @@ const jestAliases = {
   '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
     'jest-transform-stub',
   '\\.(css)$': 'identity-obj-proxy',
-  '^firebase$': '<rootDir>/test/util/MockFirebase.js',
   '^firmata$': 'mock-firmata/mock-firmata',
   'script-loader!@code-dot-org/(.*)': '<rootDir>/node_modules/@code-dot-org/$1',
 };

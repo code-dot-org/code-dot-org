@@ -1,7 +1,6 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import CommitDialog from '@cdo/apps/javalab/CommitDialog';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
@@ -25,8 +24,6 @@ import {
 } from '@cdo/apps/redux';
 import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
 import javalabMsg from '@cdo/javalab/locale';
-
-import {expect} from '../../util/reconfiguredChai';
 
 describe('JavalabEditorDialogManager', () => {
   let defaultProps;
@@ -69,28 +66,26 @@ describe('JavalabEditorDialogManager', () => {
       });
 
       const deleteFileDialog = wrapper.find(JavalabDialog).first();
-      expect(deleteFileDialog).to.exist;
+      expect(deleteFileDialog).toBeDefined();
       const deleteProps = deleteFileDialog.props();
-      expect(deleteProps.isOpen).to.be.true;
-      expect(deleteProps.handleConfirm).to.be.equal(defaultProps.onDeleteFile);
-      expect(deleteProps.handleClose).to.be.equal(
-        defaultProps.closeEditorDialog
-      );
-      expect(deleteProps.message).to.be.equal(
+      expect(deleteProps.isOpen).toBe(true);
+      expect(deleteProps.handleConfirm).toBe(defaultProps.onDeleteFile);
+      expect(deleteProps.handleClose).toBe(defaultProps.closeEditorDialog);
+      expect(deleteProps.message).toBe(
         javalabMsg.deleteFileConfirmation({
           filename: filenameToDelete,
         })
       );
-      expect(deleteProps.confirmButtonText).to.be.equal(javalabMsg.delete());
-      expect(deleteProps.closeButtonText).to.be.equal(javalabMsg.cancel());
-      expect(deleteProps.displayTheme).to.be.equal(defaultProps.displayTheme);
+      expect(deleteProps.confirmButtonText).toBe(javalabMsg.delete());
+      expect(deleteProps.closeButtonText).toBe(javalabMsg.cancel());
+      expect(deleteProps.displayTheme).toBe(defaultProps.displayTheme);
     });
   });
 
   describe('Rename File Dialog', () => {
     it('Displays Rename File Dialog if selected', () => {
-      const closeEditorDialog = sinon.stub();
-      const clearRenameFileError = sinon.stub();
+      const closeEditorDialog = jest.fn();
+      const clearRenameFileError = jest.fn();
       const filenameToRename = 'fileToRename';
       const renameFileError = 'error';
 
@@ -103,28 +98,28 @@ describe('JavalabEditorDialogManager', () => {
       });
 
       const renameFileDialog = wrapper.find(NameFileDialog).first();
-      expect(renameFileDialog).to.exist;
+      expect(renameFileDialog).toBeDefined();
       const renameProps = renameFileDialog.props();
-      expect(renameProps.isOpen).to.be.true;
-      expect(renameProps.filename).to.equal(filenameToRename);
-      expect(renameProps.handleSave).to.equal(defaultProps.onRenameFile);
-      expect(renameProps.displayTheme).to.equal(defaultProps.displayTheme);
-      expect(renameProps.inputLabel).to.equal(javalabMsg.renameFile());
-      expect(renameProps.saveButtonText).to.equal(javalabMsg.rename());
-      expect(renameProps.errorMessage).to.equal(renameFileError);
+      expect(renameProps.isOpen).toBe(true);
+      expect(renameProps.filename).toBe(filenameToRename);
+      expect(renameProps.handleSave).toBe(defaultProps.onRenameFile);
+      expect(renameProps.displayTheme).toBe(defaultProps.displayTheme);
+      expect(renameProps.inputLabel).toBe(javalabMsg.renameFile());
+      expect(renameProps.saveButtonText).toBe(javalabMsg.rename());
+      expect(renameProps.errorMessage).toBe(renameFileError);
 
       // Verify Redux actions are called on close
       const handleClose = renameProps.handleClose;
       handleClose();
-      expect(closeEditorDialog).to.have.been.called;
-      expect(clearRenameFileError).to.have.been.called;
+      expect(closeEditorDialog).toHaveBeenCalled();
+      expect(clearRenameFileError).toHaveBeenCalled();
     });
   });
 
   describe('Create File Dialog', () => {
     it('Displays the Create File Dialog if selected', () => {
-      const closeEditorDialog = sinon.stub();
-      const clearNewFileError = sinon.stub();
+      const closeEditorDialog = jest.fn();
+      const clearNewFileError = jest.fn();
       const newFileError = 'error';
 
       const wrapper = createWrapper({
@@ -135,21 +130,21 @@ describe('JavalabEditorDialogManager', () => {
       });
 
       const createFileDialog = wrapper.find(NameFileDialog).at(1);
-      expect(createFileDialog).to.exist;
+      expect(createFileDialog).toBeDefined();
       const createProps = createFileDialog.props();
-      expect(createProps.isOpen).to.be.true;
-      expect(createProps.filename).to.equal(DEFAULT_FILE_NAME);
-      expect(createProps.handleSave).to.equal(defaultProps.onCreateFile);
-      expect(createProps.displayTheme).to.equal(defaultProps.displayTheme);
-      expect(createProps.inputLabel).to.equal(javalabMsg.createNewFile());
-      expect(createProps.saveButtonText).to.equal(javalabMsg.create());
-      expect(createProps.errorMessage).to.equal(newFileError);
+      expect(createProps.isOpen).toBe(true);
+      expect(createProps.filename).toBe(DEFAULT_FILE_NAME);
+      expect(createProps.handleSave).toBe(defaultProps.onCreateFile);
+      expect(createProps.displayTheme).toBe(defaultProps.displayTheme);
+      expect(createProps.inputLabel).toBe(javalabMsg.createNewFile());
+      expect(createProps.saveButtonText).toBe(javalabMsg.create());
+      expect(createProps.errorMessage).toBe(newFileError);
 
       // Verify Redux actions are called on close
       const handleClose = createProps.handleClose;
       handleClose();
-      expect(closeEditorDialog).to.have.been.called;
-      expect(clearNewFileError).to.have.been.called;
+      expect(closeEditorDialog).toHaveBeenCalled();
+      expect(clearNewFileError).toHaveBeenCalled();
     });
   });
 
@@ -171,12 +166,12 @@ describe('JavalabEditorDialogManager', () => {
       });
 
       const commitDialog = wrapper.find(CommitDialog).first();
-      expect(commitDialog).to.exist;
+      expect(commitDialog).toBeDefined();
       const commitProps = commitDialog.props();
-      expect(commitProps.isOpen).to.be.true;
-      expect(commitProps.files).to.equal(commitDialogFileNames);
-      expect(commitProps.handleClose).to.equal(defaultProps.closeEditorDialog);
-      expect(commitProps.handleCommit).to.equal(defaultProps.onCommitCode);
+      expect(commitProps.isOpen).toBe(true);
+      expect(commitProps.files).toBe(commitDialogFileNames);
+      expect(commitProps.handleClose).toBe(defaultProps.closeEditorDialog);
+      expect(commitProps.handleCommit).toBe(defaultProps.onCommitCode);
     });
 
     it('Filters non-visible sources in Redux', () => {
@@ -198,7 +193,7 @@ describe('JavalabEditorDialogManager', () => {
       );
 
       const commitDialog = wrapper.find(CommitDialog).first();
-      expect(commitDialog.props().files).to.deep.equal(['visible.java']);
+      expect(commitDialog.props().files).toEqual(['visible.java']);
     });
   });
 
@@ -211,18 +206,16 @@ describe('JavalabEditorDialogManager', () => {
       const versionHistoryDialog = wrapper
         .find(VersionHistoryWithCommitsDialog)
         .first();
-      expect(versionHistoryDialog).to.exist;
+      expect(versionHistoryDialog).toBeDefined();
       const versionHistoryProps = versionHistoryDialog.props();
-      expect(versionHistoryProps.isOpen).to.be.true;
-      expect(versionHistoryProps.handleClearPuzzle).to.equal(
+      expect(versionHistoryProps.isOpen).toBe(true);
+      expect(versionHistoryProps.handleClearPuzzle).toBe(
         defaultProps.handleClearPuzzle
       );
-      expect(versionHistoryProps.isProjectTemplateLevel).to.equal(
+      expect(versionHistoryProps.isProjectTemplateLevel).toBe(
         defaultProps.isProjectTemplateLevel
       );
-      expect(versionHistoryProps.onClose).to.equal(
-        defaultProps.closeEditorDialog
-      );
+      expect(versionHistoryProps.onClose).toBe(defaultProps.closeEditorDialog);
     });
   });
 });

@@ -5,7 +5,7 @@ import {injectJSInterpreter as injectJSInterpreterToGroup} from '@cdo/apps/p5lab
 import {injectJSInterpreter as injectJSInterpreterToSprite} from '@cdo/apps/p5lab/P5SpriteWrapper';
 import P5Wrapper from '@cdo/apps/p5lab/P5Wrapper';
 
-import {expect} from '../deprecatedChai';
+import {expect} from '../deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 /**
  * Builds a P5Wrapper object ready to use in a test and then be thrown away.

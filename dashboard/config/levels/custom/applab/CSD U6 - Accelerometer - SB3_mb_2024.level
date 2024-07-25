@@ -60,7 +60,6 @@
     "start_blocks": "onBoardEvent(accelerometer, \"data\", function() {\r\n  // 1) Get the `roll` property of the accelerometer and store it in a variable\r\n  \r\n  //2) If the board is tilted left: update the screen to say \"Left\"\r\n  \r\n  //3) If the board is tilted right: update the screen to say \"Right\"\r\n});\r\n",
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 34px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 200px; height: 39px; position: absolute; left: 55px; top: 190px; text-align: center; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"direction\">????</label></div></div>",
     "parent_level_id": 20560,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

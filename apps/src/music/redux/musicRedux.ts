@@ -1,4 +1,5 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+
 import {
   DEFAULT_BPM,
   DEFAULT_KEY,
@@ -6,8 +7,8 @@ import {
   MIN_BPM,
   MIN_NUM_MEASURES,
 } from '../constants';
-import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {FunctionEvents} from '../player/interfaces/FunctionEvents';
+import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {Key} from '../utils/Notes';
 
 const registerReducers = require('@cdo/apps/redux').registerReducers;

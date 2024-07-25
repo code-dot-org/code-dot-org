@@ -12,7 +12,7 @@ namespace :rds do
   desc 'Clone SOURCE_CLUSTER_ID to optional CLONE_CLUSTER_ID with optional INSTANCE_TYPE.'
   timed_task_with_logging :clone_cluster do
     options = {
-      source_cluster_id: ENV.fetch('SOURCE_CLUSTER_ID', nil),
+      source_cluster_id: ENV.fetch('SOURCE_CLUSTER_ID'),
       clone_cluster_id: ENV.fetch('CLONE_CLUSTER_ID', nil),
       instance_type: ENV.fetch('INSTANCE_TYPE', nil)
     }
@@ -22,6 +22,6 @@ namespace :rds do
   desc 'Delete CLUSTER_ID'
   timed_task_with_logging :delete_cluster do
     raise StandardError.new("CLUSTER_ID environment variable is required.") unless ENV['CLUSTER_ID'].present?
-    Cdo::RDS.delete_cluster(ENV.fetch('CLUSTER_ID', nil))
+    Cdo::RDS.delete_cluster(ENV.fetch('CLUSTER_ID'))
   end
 end

@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-16T15:13:45.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Warm Up",
+    "long_instructions": "####Fill in the following mad-libs:\r\n\r\n#####- Thank ________.\r\n#####- He dipped his french fries in ________.\r\n#####- The current President is ________.\r\n\r\n",
+    "teacher_markdown": "Discussion Goal: Students will likely use common phrases or personal knowledge to answer these questions. Thank You will likely be a common answer to the first mad-lib. The second answer may vary depending on the region you live in or the cultural background of your students - ketchup is a common US condiment to serve with french fries, but some countries use mayonnaise or vinegar, while others may use hot sauce. If this comes up, emphasize how prior experiences inform our answers here.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-16 15:14:04 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-16 15:14:52 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-16 15:15:19 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

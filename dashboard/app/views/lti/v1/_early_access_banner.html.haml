@@ -1,7 +1,0 @@
-#lti-early-access-banner.alert{aria: {label: t('lti.integration.early_access.title')}, role: 'banner', style: 'display: none;'}
-  %button.close{aria: {label: t('to_close')}}
-    %span{aria: {hidden: 'true'}} ×
-  != t('lti.integration.early_access.banner.text', bug_report_url: SharedConstants::LMS_LINKS.INTEGRATION_BUG_REPORT_URL, markdown: true)
-
-  %script{src: webpack_asset_path('js/lti/v1/_early_access_banner.js'),
-          data: {userKey: JSON.dump(Digest::MD5.hexdigest(current_user.id.to_s))}}

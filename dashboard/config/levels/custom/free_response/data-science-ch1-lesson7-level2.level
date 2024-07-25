@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-18T14:36:45.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Shape of Distribution",
+    "long_instructions": "#####The “shape of distribution” is a concept data scientists use to identify some overall patterns. We’ll talk more about this in upcoming lessons, but for now, let’s see what this graph tells us about the number of pizza slices students can eat.\r\n\r\n####Do This:\r\n#####1. Finish the sentences below about this graph:\r\n![](https://images.code.org/4b6a8882aeea826645c907002d301938-image-1721313236901.png)\r\n\r\n- The number of responses go from ____ to ____.\r\n- The tallest bar is...\r\n- There are peaks at...\r\n\r\n#####Why do you think identifying these aspects of this graph might be important?\r\n",
+    "teacher_markdown": "Possible response:\r\nThe number of responses go from 0 to 8.\r\nThe tallest bar is 2 slices.\r\nThere are peaks at 2 slices and 4 slices. \r\nThis might help understand the big picture of the data, spot any unusual patterns, and make smart decisions based on what's most typical or interesting in the data.\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-18 14:36:56 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-18 14:37:58 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>
