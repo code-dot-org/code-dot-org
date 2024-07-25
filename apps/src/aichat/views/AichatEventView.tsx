@@ -19,6 +19,7 @@ import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
 interface AichatEventViewProps {
   event: AichatEvent;
+  readOnly?: boolean;
 }
 
 function formatModelUpdateText(update: ModelUpdate): string {
@@ -47,6 +48,7 @@ function formatModelUpdateText(update: ModelUpdate): string {
  */
 const AichatEventView: React.FunctionComponent<AichatEventViewProps> = ({
   event,
+  readOnly = false,
 }) => {
   const dispatch = useAppDispatch();
 
@@ -60,7 +62,7 @@ const AichatEventView: React.FunctionComponent<AichatEventViewProps> = ({
       <Alert
         text={`${text} ${timestampToLocalTime(timestamp)}`}
         type={notificationType === 'error' ? 'danger' : 'success'}
-        onClose={() => dispatch(removeUpdateMessage(id))}
+        onClose={readOnly ? undefined : () => dispatch(removeUpdateMessage(id))}
         size="s"
       />
     );
@@ -71,7 +73,9 @@ const AichatEventView: React.FunctionComponent<AichatEventViewProps> = ({
       <Alert
         text={formatModelUpdateText(event)}
         type="success"
-        onClose={() => dispatch(removeUpdateMessage(event.id))}
+        onClose={
+          readOnly ? undefined : () => dispatch(removeUpdateMessage(event.id))
+        }
         size="s"
       />
     );

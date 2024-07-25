@@ -228,7 +228,7 @@ const ViewChatHistory: React.FunctionComponent<ViewChatHistoryProps> = ({
   return (
     <div id="chat-workspace-history" className={moduleStyles.conversationArea}>
       {events.map((event, index) => (
-        <AichatEventView event={event} key={index} />
+        <AichatEventView event={event} readOnly={true} key={index} />
       ))}
     </div>
   );
