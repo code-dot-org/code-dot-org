@@ -1,7 +1,6 @@
 /**
  * Form for creating / editing workshop details.
  */
-import classnames from 'classnames';
 import $ from 'jquery';
 import _ from 'lodash';
 import moment from 'moment';
