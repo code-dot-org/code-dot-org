@@ -3,6 +3,7 @@ export interface LevelPredictSettings {
   solution?: string;
   questionType?: PredictQuestionType;
   allowMultipleAttempts?: boolean;
+  codeEditableAfterSubmit?: boolean;
   // Free Response settings
   freeResponseHeight?: number;
   placeholderText?: string;
