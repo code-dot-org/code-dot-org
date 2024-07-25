@@ -1,4 +1,4 @@
-import {assert, expect} from 'chai';
+import {assert, expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {FormControl} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
@@ -7,13 +7,14 @@ import {Provider} from 'react-redux';
 import {MemoryRouter} from 'react-router-dom';
 import {createStore, combineReducers} from 'redux';
 import {Factory} from 'rosie';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {WorkshopForm} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_form';
 import Permission, {
   WorkshopAdmin,
   ProgramManager,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
+import {COURSE_BUILD_YOUR_OWN} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshopConstants';
 import {Subjects} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import mapboxReducer from '@cdo/apps/redux/mapbox';
 
@@ -552,7 +553,7 @@ describe('WorkshopForm test', () => {
 
     const courseField = wrapper.find('#course').first();
     courseField.simulate('change', {
-      target: {name: 'course', value: 'Build Your Own Workshop'},
+      target: {name: 'course', value: COURSE_BUILD_YOUR_OWN},
     });
 
     expect(wrapper.find('#subject')).to.have.lengthOf(0);
@@ -588,16 +589,16 @@ describe('WorkshopForm test', () => {
     );
     server.respond();
     // Verify the topics dropdown doesn't show up until Build Your Own is selected
-    expect(wrapper.find('#topics')).to.have.lengthOf(0);
+    expect(wrapper.find('#course_offerings')).to.have.lengthOf(0);
     const courseField = wrapper.find('#course').first();
     courseField.simulate('change', {
-      target: {name: 'course', value: 'Build Your Own Workshop'},
+      target: {name: 'course', value: COURSE_BUILD_YOUR_OWN},
     });
-    expect(wrapper.find('#topics')).to.have.lengthOf(1);
+    expect(wrapper.find('#course_offerings')).to.have.lengthOf(1);
     wrapper.find('#dropdownMenuButton').first().simulate('click');
     // A user can select either the label or checkbox, so we expect 2 for each here
-    expect(wrapper.find('#myPlTestTopic')).to.have.lengthOf(2);
-    expect(wrapper.find('#mySecondTopic')).to.have.lengthOf(2);
+    expect(wrapper.find({name: 'myPlTestTopic'})).to.have.lengthOf(2);
+    expect(wrapper.find({name: 'mySecondTopic'})).to.have.lengthOf(2);
   });
 
   it('editing form as non-admin does not show organizer field', () => {

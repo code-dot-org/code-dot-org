@@ -11465,6 +11465,40 @@
     description: "Why is it still important for students to learn to program? How are teachers in CS classrooms already incorporating AI? Explore the guidance and engage in the future of CS education in an age of AI."
     button_text: "Explore the guidance"
 
+  teach_labs_section:
+    header: "Build your way with labs"
+    description: "Discover programming environments tailored to meet students at their level, empowering them to express their creativity and build more freely as they grow their programming skills."
+    label_what_you_can_make: "What you can make:"
+    label_experience: "Experience:"
+    spritelab:
+      overline: "Ages 5-12"
+      title: "Sprite Lab"
+      what_you_can_make: "Simple animations and games with characters"
+      experience: "Beginner"
+      call_to_action_learn_more: "Learn more"
+      call_to_action_try: "Try Sprite Lab"
+    gamelab:
+      overline: "Ages 13+"
+      title: "Game Lab"
+      what_you_can_make: "Simple animations and games with characters"
+      experience: "Beginner"
+      call_to_action_learn_more: "Learn more"
+      call_to_action_try: "Try Game Lab"
+    applab:
+      overline: "Ages 13+"
+      title: "App Lab"
+      what_you_can_make: "Simple Javascript apps with blocks or code"
+      experience: "Beginner"
+      call_to_action_learn_more: "Learn more"
+      call_to_action_try: "Try App Lab"
+ 
+  resources_tabs:
+    progress:
+      tab_label: "Progress"
+      heading: "Track your students' progress"
+      desc: "Our powerful progress view helps you monitor student work by providing insights into completion status, time spent, and more. Easily track each student's learning journey, quickly assess participation, and give personalized feedback."
+      call_to_action: "Create a Code.org account"
+
   language_code:
     ar: "Arabic"
     az: "Azerbaijani"

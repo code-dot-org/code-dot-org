@@ -1,0 +1,25 @@
+name 'unplugged_happy loops_markdown_unplugged'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+##Happy Loops Unplugged Activity
+
+<div>
+<img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/bf3a55ca604a39892f6f0c64fc4dd74c-image-1719874781879.59.38 PM.png" />
+
+<div style="float: left; width: 70%; padding-left:20px">
+<h4>
+<strong>This is an Unplugged Activity! </strong>
+</h4>
+
+> Ask your teacher for these handouts:
+> - **<a href="https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view" target="_blank">Feeling Faces</a>**
+> - **<a href="https://docs.google.com/document/d/15uNhf_dISlr0ZT5j3sBu-z3I7v_v5Av9H5jsdLXhE8c/edit" target="_blank">Happy Map Cards</a>**
+> - **<a href="https://docs.google.com/document/d/19dHJCfmQNs3meKN3sTL91qsfmHYjZCYfbFq91J4fj3k/edit" target="_blank">Happy Map Game Pieces</a>**
+> - **<a href="https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit" target="_blank">Happy Map Game Pieces - Bonus Pack</a>**
+
+</div>
+
+
+MARKDOWN

@@ -5,8 +5,6 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {UnconnectedLessonGroup as LessonGroup} from '@cdo/apps/templates/progress/LessonGroup';
 import {fakeLesson} from '@cdo/apps/templates/progress/progressTestHelpers';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 const DEFAULT_PROPS = {
   isPlc: false,
   isSummaryView: false,
@@ -27,11 +25,11 @@ const DEFAULT_PROPS = {
 describe('LessonGroup', () => {
   it('renders clickable lesson group info button when there is a description or big questions', () => {
     const wrapper = shallow(<LessonGroup {...DEFAULT_PROPS} />);
-    expect(wrapper.find('FontAwesome')).to.have.lengthOf(2);
+    expect(wrapper.find('FontAwesome')).toHaveLength(2);
 
-    expect(wrapper.state('lessonGroupInfoDialogOpen')).to.be.false;
+    expect(wrapper.state('lessonGroupInfoDialogOpen')).toBe(false);
     wrapper.find('FontAwesome').at(1).simulate('click');
-    expect(wrapper.state('lessonGroupInfoDialogOpen')).to.be.true;
+    expect(wrapper.state('lessonGroupInfoDialogOpen')).toBe(true);
   });
   it('renders without lesson group info button when there is no description or big questions', () => {
     const props = {
@@ -46,7 +44,7 @@ describe('LessonGroup', () => {
       },
     };
     const wrapper = shallow(<LessonGroup {...props} />);
-    expect(wrapper.find('FontAwesome')).to.have.lengthOf(1);
+    expect(wrapper.find('FontAwesome')).toHaveLength(1);
   });
   it('does not render in participant view if there are no visible lessons', () => {
     const props = {
@@ -56,7 +54,7 @@ describe('LessonGroup', () => {
       viewAs: ViewType.Participant,
     };
     const wrapper = shallow(<LessonGroup {...props} />);
-    expect(wrapper.get(0)).to.be.null;
+    expect(wrapper.get(0)).toBeNull();
   });
   it('does render in instructor view if there are no lessons', () => {
     const props = {
@@ -69,6 +67,6 @@ describe('LessonGroup', () => {
       viewAs: ViewType.Instructor,
     };
     const wrapper = shallow(<LessonGroup {...props} />);
-    expect(wrapper.get(0)).to.not.be.null;
+    expect(wrapper.get(0)).not.toBeNull();
   });
 });

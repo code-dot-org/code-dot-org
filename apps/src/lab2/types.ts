@@ -99,6 +99,7 @@ export type FolderId = string;
 export interface MultiFileSource {
   folders: Record<FolderId, ProjectFolder>;
   files: Record<FileId, ProjectFile>;
+  openFiles?: FileId[];
 }
 
 export interface ProjectFile {
@@ -145,6 +146,7 @@ export interface LevelProperties {
   skin?: string;
   toolboxBlocks?: string;
   startSources?: MultiFileSource;
+  templateSources?: MultiFileSource;
   sharedBlocks?: BlockDefinition[];
   validations?: Validation[];
   // An optional URL that allows the user to skip the progression.

@@ -1,5 +1,13 @@
 /** @file Redux reducer and actions for the Animation Picker */
 import _ from 'lodash';
+
+import {animations as animationsApi} from '@cdo/apps/clientApi';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {makeEnum} from '@cdo/apps/utils';
+
+import {changeInterfaceMode} from '../actions';
+import {P5LabInterfaceMode} from '../constants';
+
 import {
   addBlankAnimation,
   addAnimation,
@@ -8,12 +16,8 @@ import {
   appendCustomFrames,
   appendLibraryFrames,
 } from './animationList';
-import {makeEnum} from '@cdo/apps/utils';
-import {animations as animationsApi} from '@cdo/apps/clientApi';
+
 var msg = require('@cdo/locale');
-import {changeInterfaceMode} from '../actions';
-import {P5LabInterfaceMode} from '../constants';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 /**
  * @enum {string} Export possible targets for animation picker for consumers

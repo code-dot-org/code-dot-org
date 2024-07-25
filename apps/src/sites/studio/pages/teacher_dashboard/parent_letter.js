@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
+
+import ParentLetter from '@cdo/apps/lib/ui/ParentLetter';
+import {setPegasusOrigin, setStudioOrigin} from '@cdo/apps/lib/util/urlHelpers';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import currentUser, {
+  setCurrentUserName,
+} from '@cdo/apps/templates/currentUserRedux';
 import teacherSections, {
   selectSection,
   setSections,
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import currentUser, {
-  setCurrentUserName,
-} from '@cdo/apps/templates/currentUserRedux';
-import {setPegasusOrigin, setStudioOrigin} from '@cdo/apps/lib/util/urlHelpers';
-import ParentLetter from '@cdo/apps/lib/ui/ParentLetter';
 
 const script = document.querySelector('script[data-json]');
 const scriptData = JSON.parse(script.dataset.json);

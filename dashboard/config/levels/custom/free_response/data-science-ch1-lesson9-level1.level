@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-18T17:07:57.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Data Talk",
+    "long_instructions": "##Dessert Dataset\r\n\r\n#####A teacher wanted to know which desserts they should have at their ESports club meetings throughout the year. They polled the club members to find out which desserts they liked and when they would prefer those desserts during the year.\r\n\r\n![](https://images.code.org/ae0b9f1a9a61d5fc35708a448712fbac-image-1721322287240.png)\r\n\r\n####Do This\r\n#####1. Look at the graph above. \r\n#####2. Use the space below to record at least one thing you **notice** and one thing you **wonder** about the data visualization.\r\n",
+    "teacher_markdown": "#####Outliers:\r\n- Pumpkin Pie in November: The sharp increase in pumpkin pie consumption in November is an outlier. This suggests that pumpkin pie is highly favored during Thanksgiving and should be a priority dessert for November school events.\r\n- Low Dessert Consumption in January: There is a noticeable drop in all dessert types in January, likely due to a post-holiday decrease in interest or health-driven New Year resolutions. This could imply that January school parties might focus less on desserts or offer healthier dessert options.\r\n#####Patterns:\r\n- Summer Preference for Ice Cream: Ice cream shows increased consumption during the summer months (June, July, August). This indicates a preference for cooler, refreshing desserts during warmer weather, making it an ideal choice for end-of-year or summer-related school celebrations.\r\n- General Popularity of Cookies and Cupcakes: Cookies and cupcakes maintain a relatively consistent popularity through most of the year, suggesting they are reliably favored choices that could regularly feature in school parties.\r\n#####Trends:\r\n- Rising Cookie Consumption in Spring and Summer: There is an upward trend in cookie consumption from March to July, peaking in July. This could indicate a growing preference for cookies during this period, possibly due to their convenience at events or their appeal to a broad range of students.\r\n#####Insights:\r\n- Seasonal Preferences: Different desserts are favored at different times of the year. Tailoring dessert offerings to seasonal preferences could enhance student enjoyment and participation in school parties.\r\n- Event-driven Choices: Certain desserts like pumpkin pie are extremely popular during specific months, likely due to cultural events such as Thanksgiving. Aligning dessert offerings with cultural or seasonal events can make school events feel more festive and relevant.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-18 17:08:01 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

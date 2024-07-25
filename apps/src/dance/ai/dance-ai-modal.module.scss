@@ -120,6 +120,11 @@ $ai-modal-border-width: 8px;
     }
   }
 
+  // override the x button in AccessibleDialog to get custom styling
+  .xCloseButton {
+    display: none;
+  }
+
   .innerArea {
     margin: $ai-modal-border-width;
     // There is a border on the left and right.

@@ -14,14 +14,15 @@
     %button.tab.employee-match{"data-content": "#employee-match"}
       =hoc_s(:donate_tabs_tab_label_employee_match)
   -# Tabs content
-  %div#daf-direct.content.show
-    = view :"tabs_section/donate/donate_tabs_daf_direct"
-  %div#amazon.content
-    = view :"tabs_section/donate/donate_tabs_amazon"
-  %div#bitpay.content.has-external-link
-    = view :"tabs_section/donate/donate_tabs_bitpay"
-  %div#employee-match.content
-    = view :"tabs_section/donate/donate_tabs_employee_match"
+  %div.tab-content-container
+    %div#daf-direct.content.show
+      = view :"tabs_section/donate/donate_tabs_daf_direct"
+    %div#amazon.content
+      = view :"tabs_section/donate/donate_tabs_amazon"
+    %div#bitpay.content.has-external-link
+      = view :"tabs_section/donate/donate_tabs_bitpay"
+    %div#employee-match.content
+      = view :"tabs_section/donate/donate_tabs_employee_match"
 
 -# Shows accordion UI on smaller screens
 .tabs-section.donate-tabs.show-tablet-and-mobile

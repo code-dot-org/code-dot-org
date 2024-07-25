@@ -701,10 +701,13 @@ exports.install = function (blockly, blockInstallOptions) {
         BlockStyles.LOOP
       );
       this.appendDummyInput()
-        .appendField(blockly.Msg.CONTROLS_FOR_INPUT_WITH)
+        .appendField(
+          blockly.Msg.CONTROLS_FOR_INPUT_WITH || msg.controlsForInputWith()
+        )
         .appendField(new blockly.FieldLabel(msg.loopVariable()), 'VAR');
       this.interpolateMsg(
-        blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY,
+        blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY ||
+          msg.controlsForInputFromToBy(),
         ['FROM', 'Number', blockly.ALIGN_RIGHT],
         ['TO', 'Number', blockly.ALIGN_RIGHT],
         ['BY', 'Number', blockly.ALIGN_RIGHT],
