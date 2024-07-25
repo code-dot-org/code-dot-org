@@ -101,12 +101,11 @@ export default class CdoFieldAngleDropdown extends CdoFieldDropdown {
 
   /**
    * Update the dropdown menu options to reflect the selected angle value.
-   * @param {string | number} angleValue The selected angle value.
    * @private
    */
   private updateDropdownMenuOptions(): void {
-    const angleValue = this.angleHelper?.getAngle() as number;
-    this.setValue(`${angleValue}`);
+    const angleValue = `${this.angleHelper?.getAngle()}`;
+    this.setValue(angleValue);
     // Blockly has no public methods for getting dropdown menu items, so this
     // is a necessary hack.
     const menuItems =
@@ -119,7 +118,7 @@ export default class CdoFieldAngleDropdown extends CdoFieldDropdown {
       Blockly.utils.dom.removeClass(menuItem, 'blocklyMenuItemSelected');
       // Set any matching option(s) to selected.
       const menuOptionValue = this.getOptions()[index][1];
-      if (menuOptionValue === `${angleValue}`) {
+      if (menuOptionValue === angleValue) {
         Blockly.utils.dom.addClass(menuItem, 'blocklyMenuItemSelected');
       }
     });
@@ -132,7 +131,7 @@ export default class CdoFieldAngleDropdown extends CdoFieldDropdown {
    */
   private animateAngleHelperOnMenuOptionHighlight() {
     // In order to preview dropdown a highlighted menu option, we detect changes to its
-    // class and animate the angle helper based on its value. A user might do this my
+    // class and animate the angle helper based on its value. A user might do this by
     // mousing over, pressing up or down, or using keyboard navigation commands.
     // This approach uses the MutationObserver API, which allows us to observe changes
     // to the DOM. We do this because Blockly swallows ArrowUp and ArrowDown key events.
