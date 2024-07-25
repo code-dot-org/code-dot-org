@@ -6,6 +6,7 @@ import CdoFieldNumber from './cdoFieldNumber';
 interface AngleTextInputOptions {
   directionTitle: string; // Ex. 'DIR'
   direction: 'turnRight' | 'turnLeft';
+  direction: 'turnRight' | 'turnLeft';
 }
 
 export default class CdoFieldAngleTextInput extends CdoFieldNumber {
@@ -18,8 +19,12 @@ export default class CdoFieldAngleTextInput extends CdoFieldNumber {
    * @param {AngleTextInputOptions} [opt_options] Legacy options, supported by CDO Blockly
    * @param {string} [opt_options.direction] a hardcoded direction setting
    * @param {string} [opt_options.directionTitle] the name of the field from which
+   * @param {AngleTextInputOptions} [opt_options] Legacy options, supported by CDO Blockly
+   * @param {string} [opt_options.direction] a hardcoded direction setting
+   * @param {string} [opt_options.directionTitle] the name of the field from which
    *     to obtain direction information
    */
+  constructor(text: string, opt_options?: AngleTextInputOptions) {
   constructor(text: string, opt_options?: AngleTextInputOptions) {
     super(text);
     this.direction = opt_options?.direction;
