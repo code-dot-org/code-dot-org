@@ -182,17 +182,17 @@ Function.prototype.inherits = function (parent) {
  * done so that level builders can specify required blocks with wildcard fields.
  */
 export function wrapNumberValidatorsForLevelBuilder() {
-  var nonNeg = Blockly.FieldTextInput.nonnegativeIntegerValidator;
-  var numVal = Blockly.FieldTextInput.numberValidator;
+  var nonNeg = Blockly.cdoUtils.nonnegativeIntegerValidator;
+  var numVal = Blockly.cdoUtils.numberValidator;
 
-  Blockly.FieldTextInput.nonnegativeIntegerValidator = function (text) {
+  Blockly.cdoUtils.nonnegativeIntegerValidator = function (text) {
     if (text === '???') {
       return text;
     }
     return nonNeg(text);
   };
 
-  Blockly.FieldTextInput.numberValidator = function (text) {
+  Blockly.cdoUtils.numberValidator = function (text) {
     if (text === '???') {
       return text;
     }
