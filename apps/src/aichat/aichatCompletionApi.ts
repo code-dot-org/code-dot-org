@@ -6,6 +6,7 @@ import {
   AichatModelCustomizations,
   ChatApiResponse,
   ChatMessage,
+  StudentChatHistoryApiResponse,
 } from './types';
 
 const CHAT_COMPLETION_URL = '/aichat/chat_completion';
@@ -49,8 +50,8 @@ export async function postAichatCompletionMessage(
 }
 
 export async function fetchAichatStudentChatHistory(
-  studentUserId: string
-): Promise<ChatApiResponse> {
+  studentUserId: number
+): Promise<StudentChatHistoryApiResponse> {
   const payload = {
     studentUserId,
   };

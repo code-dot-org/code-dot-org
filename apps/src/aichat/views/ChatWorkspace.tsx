@@ -2,6 +2,7 @@ import React, {useCallback, useRef, useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {
+  fetchStudentChatHistory,
   selectAllMessages,
   setShowWarningModal,
 } from '@cdo/apps/aichat/redux/aichatRedux';
@@ -70,6 +71,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     }
   }, [messagesString, isWaitingForChatResponse]);
 
+  const dispatch = useAppDispatch();
   useEffect(() => {
     let selectedStudentName = null;
     if (viewAsUserId) {
@@ -78,10 +80,11 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       );
       if (selectedStudent) {
         selectedStudentName = getShortName(selectedStudent.name);
+        dispatch(fetchStudentChatHistory(viewAsUserId));
       }
     }
     setSelectedStudentName(selectedStudentName);
-  }, [viewAsUserId, students]);
+  }, [viewAsUserId, students, dispatch]);
 
   useEffect(() => {
     // If a teacher is viewing workspace as a student when level first loads (user_id param included in url)
@@ -145,8 +148,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabsContainerClassName: moduleStyles.tabsContainer,
     tabPanelsContainerClassName: moduleStyles.tabPanels,
   };
-
-  const dispatch = useAppDispatch();
 
   const onCloseWarningModal = useCallback(
     () => dispatch(setShowWarningModal(false)),
