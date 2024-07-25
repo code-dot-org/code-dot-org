@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import './addons/plusMinusBlocks/if';
 import './addons/plusMinusBlocks/text_join';
+import './addons/extensions/logic_compare';
 import {
   ObservableProcedureModel,
   ObservableParameterModel,
