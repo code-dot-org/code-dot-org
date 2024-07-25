@@ -20,7 +20,7 @@ import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConsta
 import {
   postAichatCompletionMessage,
   fetchAichatStudentChatHistory,
-} from '../aichatCompletionApi';
+} from '../aichatApi';
 import {saveTypeToAnalyticsEvent} from '../constants';
 import {
   AiCustomizations,
@@ -36,7 +36,6 @@ import {
   ChatItem,
   isModelUpdate,
   isNotification,
-  isChatMessage,
   ModelUpdate,
   Notification,
 } from '../types';
@@ -355,7 +354,7 @@ export const submitChatContents = createAsyncThunk(
     try {
       chatApiResponse = await postAichatCompletionMessage(
         newMessage,
-        chatItemsCurrent.filter(isChatMessage) as ChatMessage[],
+        chatItemsCurrent, // For now, send all chat items.
         aiCustomizations,
         aichatContext,
         currentSessionId

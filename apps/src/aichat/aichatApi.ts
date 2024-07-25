@@ -6,6 +6,7 @@ import {
   AichatModelCustomizations,
   ChatApiResponse,
   ChatMessage,
+  AichatEvent,
   StudentChatHistoryApiResponse,
 } from './types';
 
@@ -19,7 +20,7 @@ const STUDENT_CHAT_HISTORY_URL = '/aichat/student_chat_history';
  */
 export async function postAichatCompletionMessage(
   newMessage: ChatMessage,
-  storedMessages: ChatMessage[],
+  storedMessages: AichatEvent[],
   aiCustomizations: AiCustomizations,
   aichatContext: AichatContext,
   sessionId?: number
