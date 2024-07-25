@@ -10,8 +10,8 @@ class UrlConverter
   # For reference, a 'host' is a domain and (optionally) port without a protocol.
   # Examples: code.org, studio.code.org, localhost-studio.code.org:3000
   # @see https://developer.mozilla.org/en-US/docs/Web/API/Location
-  def initialize(dashboard_host: nil, pegasus_host: nil, hourofcode_host: nil, csedweek_host: nil, advocacy_host: nil)
-    @csedweek_host = csedweek_host
+  def initialize(dashboard_host: nil, pegasus_host: nil, hourofcode_host: nil,
+    csedweek_host: nil, advocacy_host: nil)
     @dashboard_host = dashboard_host
     @pegasus_host = pegasus_host
     @hourofcode_host = hourofcode_host
