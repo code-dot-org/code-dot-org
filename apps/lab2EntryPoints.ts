@@ -1,7 +1,8 @@
 /*
  * All Lab2-based labs must be registered here.
  *
- * Want to add a new lab? See lab2/README.md: 'How to Create a New Lab'
+ * Want to add a new lab? See ./src/lab2/README.md: 'How to Create a New Lab'
+ * If you are going to pattern after one lab, start with pythonlab (2024).
  *
  * Note: old-style "lab1" labs use a different system, see webpackEntryPoints.js
  */
