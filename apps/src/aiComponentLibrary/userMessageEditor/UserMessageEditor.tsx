@@ -14,14 +14,14 @@ export interface UserMessageEditorProps {
   onSubmit: (userMessage: string) => void;
   disabled: boolean;
   showSubmitLabel?: boolean;
-  /** Custom className */
-  className?: string;
+  /** Custom className for editor container */
+  editorContainerClassName?: string;
 }
 
 const UserMessageEditor: React.FunctionComponent<UserMessageEditorProps> = ({
   onSubmit,
   disabled,
-  className,
+  editorContainerClassName,
   showSubmitLabel = false,
 }) => {
   const [userMessage, setUserMessage] = useState<string>('');
@@ -46,7 +46,12 @@ const UserMessageEditor: React.FunctionComponent<UserMessageEditorProps> = ({
 
   const icon = {iconName: 'paper-plane'};
   return (
-    <div className={classnames(moduleStyles.editorContainer, className)}>
+    <div
+      className={classnames(
+        moduleStyles.editorContainer,
+        editorContainerClassName
+      )}
+    >
       <textarea
         className={moduleStyles.textArea}
         placeholder={commonI18n.aiUserMessagePlaceholder()}

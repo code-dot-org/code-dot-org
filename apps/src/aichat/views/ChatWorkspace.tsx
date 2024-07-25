@@ -166,7 +166,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       )}
 
       {viewMode !== WORKSPACE_VIEW_MODE.STUDENT_CHAT_HISTORY && (
-        <UserChatMessageEditor className={moduleStyles.messageEditor} />
+        <UserChatMessageEditor
+          editorContainerClassName={moduleStyles.messageEditorContainer}
+        />
       )}
       <div className={moduleStyles.buttonRow}>
         <Button
