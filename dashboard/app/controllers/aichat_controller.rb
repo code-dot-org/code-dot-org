@@ -174,4 +174,12 @@ class AichatController < ApplicationController
   private def get_user_message(status)
     params[:newMessage].merge({status: status})
   end
+
+  def student_chat_history
+    puts "student_chat_history"
+    puts "current_user.id: #{current_user.id}"
+    puts "params #{params}"
+    sessions = AichatSession.where(user_id: params[:studentUserId]).order(created_at: :desc).limit(10)
+    render json: sessions
+  end
 end

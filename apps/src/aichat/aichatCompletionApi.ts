@@ -9,6 +9,7 @@ import {
 } from './types';
 
 const CHAT_COMPLETION_URL = '/aichat/chat_completion';
+const STUDENT_CHAT_HISTORY_URL = '/aichat/student_chat_history';
 
 /**
  * This function formats chat completion messages and aichatParameters, sends a POST request
@@ -37,6 +38,24 @@ export async function postAichatCompletionMessage(
   };
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
+    JSON.stringify(payload),
+    true,
+    {
+      'Content-Type': 'application/json; charset=UTF-8',
+    }
+  );
+
+  return await response.json();
+}
+
+export async function fetchAichatStudentChatHistory(
+  studentUserId: string
+): Promise<ChatApiResponse> {
+  const payload = {
+    studentUserId,
+  };
+  const response = await HttpClient.post(
+    STUDENT_CHAT_HISTORY_URL,
     JSON.stringify(payload),
     true,
     {
