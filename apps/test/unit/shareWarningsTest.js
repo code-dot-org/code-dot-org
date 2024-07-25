@@ -1,6 +1,6 @@
 import * as utils from '@cdo/apps/utils';
 
-import {assert, expect} from '../util/reconfiguredChai';
+import {assert, expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 var ReactDOM = require('react-dom');
 var sinon = require('sinon');

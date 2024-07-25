@@ -3,7 +3,6 @@ import {makeEnum} from './utils';
 
 const PageAction = makeEnum(
   'DropletTransitionError',
-  'FirebaseRateLimitExceeded',
   'SanitizedLevelHtml',
   'UserJavaScriptError',
   'RunButtonClick',

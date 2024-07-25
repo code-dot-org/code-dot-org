@@ -81,6 +81,7 @@ function StudentColumn({
       onClick={() => expandRow(student.id)}
       type="button"
       aria-expanded={false}
+      id={'ui-test-student-row-unexpanded-' + getFullName(student)}
     >
       <FontAwesome
         icon="caret-right"
@@ -98,6 +99,7 @@ function StudentColumn({
         onClick={() => collapseRow(student.id)}
         type="button"
         aria-expanded={true}
+        id={'ui-test-student-row-expanded-' + getFullName(student)}
       >
         <FontAwesome
           icon="caret-down"

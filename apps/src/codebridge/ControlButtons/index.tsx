@@ -11,6 +11,8 @@ import {
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import Button from '@cdo/apps/componentLibrary/button';
+import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {
   DialogContext,
@@ -53,7 +55,12 @@ const ControlButtons: React.FunctionComponent = () => {
   const hasSubmitted = useAppSelector(
     state => getCurrentLevel(state)?.status === LevelStatus.submitted
   );
-  const disableRunAndTest = loading || (isPredictLevel && !hasPredictResponse);
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  // We disable the run button in predict levels if we are not in start mode
+  // and the user has not yet written a prediction.
+  const awaitingPredictSubmit =
+    !isStartMode && isPredictLevel && !hasPredictResponse;
+  const disableRunAndTest = loading || awaitingPredictSubmit;
 
   const onContinue = () => dispatch(navigateToNextLevel());
   // No-op for now. TODO: figure out what the finish button should do.

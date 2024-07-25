@@ -1,11 +1,8 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon';
 
 import Toggle from '@cdo/apps/componentLibrary/toggle';
-
-import {expect} from '../../util/reconfiguredChai';
 
 describe('Design System - Toggle', () => {
   it('Toggle - renders with correct label', () => {
@@ -15,13 +12,13 @@ describe('Design System - Toggle', () => {
     );
 
     const toggle = screen.getByDisplayValue('test-toggle');
-    expect(toggle).to.exist;
-    expect(screen.getByText(toggleLabel)).to.exist;
+    expect(toggle).toBeDefined();
+    expect(screen.getByText(toggleLabel)).toBeDefined();
   });
 
   it('Toggle - changes checked state on click', async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     let checked = false;
     const onChange = () => {
@@ -42,9 +39,9 @@ describe('Design System - Toggle', () => {
 
     let toggle = screen.getByDisplayValue('test-toggle');
 
-    expect(toggle).to.exist;
-    expect(toggle.checked).to.be.false;
-    expect(toggle.disabled).to.be.false;
+    expect(toggle).toBeDefined();
+    expect(toggle.checked).toBe(false);
+    expect(toggle.disabled).toBe(false);
 
     await user.click(toggle);
 
@@ -61,10 +58,10 @@ describe('Design System - Toggle', () => {
 
     toggle = screen.getByDisplayValue('test-toggle');
 
-    expect(spyOnChange).to.have.been.calledOnce;
-    expect(spyOnChange).to.have.been.calledWith(true);
-    expect(toggle.checked).to.be.true;
-    expect(toggle.disabled).to.be.false;
+    expect(spyOnChange).toHaveBeenCalledTimes(1);
+    expect(spyOnChange).toHaveBeenCalledWith(true);
+    expect(toggle.checked).toBe(true);
+    expect(toggle.disabled).toBe(false);
 
     await user.click(toggle);
 
@@ -81,14 +78,14 @@ describe('Design System - Toggle', () => {
 
     toggle = screen.getByDisplayValue('test-toggle');
 
-    expect(spyOnChange).to.have.been.calledTwice;
-    expect(toggle.checked).to.be.false;
-    expect(toggle.disabled).to.be.false;
+    expect(spyOnChange).toHaveBeenCalledTimes(2);
+    expect(toggle.checked).toBe(false);
+    expect(toggle.disabled).toBe(false);
   });
 
   it("Toggle - renders disabled toggle, doesn't change on click", async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     let checked = false;
     const onChange = () => {
@@ -109,10 +106,10 @@ describe('Design System - Toggle', () => {
     );
 
     let toggle = screen.getByDisplayValue('test-toggle');
-    expect(toggle).to.exist;
+    expect(toggle).toBeDefined();
 
-    expect(toggle.checked).to.be.false;
-    expect(toggle.disabled).to.be.true;
+    expect(toggle.checked).toBe(false);
+    expect(toggle.disabled).toBe(true);
 
     await user.click(toggle);
 
@@ -130,8 +127,8 @@ describe('Design System - Toggle', () => {
 
     toggle = screen.getByDisplayValue('test-toggle');
 
-    expect(toggle.checked).to.be.false;
-    expect(toggle.disabled).to.be.true;
+    expect(toggle.checked).toBe(false);
+    expect(toggle.disabled).toBe(true);
 
     await user.click(toggle);
 
@@ -148,7 +145,7 @@ describe('Design System - Toggle', () => {
     );
 
     toggle = screen.getByDisplayValue('test-toggle');
-    expect(toggle.checked).to.be.false;
-    expect(toggle.disabled).to.be.true;
+    expect(toggle.checked).toBe(false);
+    expect(toggle.disabled).toBe(true);
   });
 });

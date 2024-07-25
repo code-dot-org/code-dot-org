@@ -3,8 +3,6 @@ import React from 'react';
 
 import {PersonalProjectsTableActionsCell} from '@cdo/apps/templates/projects/PersonalProjectsTableActionsCell';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 describe('PersonalProjectsTableActionsCell', () => {
   it('shows NameFailureDialog when there is a projectNameFailure', () => {
     const profanity = 'farts';
@@ -24,8 +22,8 @@ describe('PersonalProjectsTableActionsCell', () => {
         unsetNameFailure={() => {}}
       />
     );
-    expect(wrapper.find('h1').text()).to.include('Unable to rename project');
-    expect(wrapper.find('p').text()).to.include(profanity);
+    expect(wrapper.find('h1').text()).toContain('Unable to rename project');
+    expect(wrapper.find('p').text()).toContain(profanity);
   });
 
   it('does not show NameFailureDialog without projectNameFailure', () => {
@@ -45,7 +43,7 @@ describe('PersonalProjectsTableActionsCell', () => {
         unsetNameFailure={() => {}}
       />
     );
-    expect(wrapper.find('h1')).to.have.lengthOf(0);
-    expect(wrapper.find('p')).to.have.lengthOf(0);
+    expect(wrapper.find('h1')).toHaveLength(0);
+    expect(wrapper.find('p')).toHaveLength(0);
   });
 });

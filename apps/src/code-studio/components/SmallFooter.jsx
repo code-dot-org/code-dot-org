@@ -110,17 +110,18 @@ export default class SmallFooter extends React.Component {
     );
   }
 
-  clickBase = () => {
+  clickBase = e => {
     if (this.props.copyrightInBase) {
       // When we have multiple items in our base row, ignore clicks to the
       // row that aren't on those particular items
       return;
     }
-    this.clickBaseMenu();
+    this.clickBaseMenu(e);
   };
 
   clickBaseCopyright = e => {
     e.preventDefault();
+    e.stopPropagation();
 
     if (this.state.menuState === MenuState.MINIMIZING) {
       return;
@@ -136,16 +137,21 @@ export default class SmallFooter extends React.Component {
   };
 
   clickMenuCopyright = event => {
+    event.stopPropagation();
     this.setState({menuState: MenuState.COPYRIGHT});
     this.minimizeOnClickAnywhere();
   };
 
-  clickBaseMenu = () => {
+  clickBaseMenu = e => {
+    e.stopPropagation();
     if (this.state.menuState === MenuState.MINIMIZING) {
       return;
     }
 
-    if (this.state.menuState === MenuState.EXPANDED) {
+    if (
+      this.state.menuState === MenuState.EXPANDED ||
+      this.state.menuState === MenuState.COPYRIGHT
+    ) {
       this.setState({menuState: MenuState.MINIMIZED});
       return;
     }

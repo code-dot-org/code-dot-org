@@ -8,8 +8,6 @@ import CodeReviewTimelineElement, {
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
 import javalabMsg from '@cdo/javalab/locale';
 
-import {expect} from '../../../../util/reconfiguredChai';
-
 const DEFAULT_PROPS = {
   commit: {
     id: 1,
@@ -29,8 +27,8 @@ describe('CodeReviewTimelineCommit', () => {
   it('renders a CodeReviewTimelineElement of type commit', () => {
     const wrapper = setUp();
     const timelineElement = wrapper.find(CodeReviewTimelineElement);
-    expect(timelineElement).to.have.length(1);
-    expect(timelineElement.props().type).to.equal(
+    expect(timelineElement).toHaveLength(1);
+    expect(timelineElement.props().type).toBe(
       codeReviewTimelineElementType.COMMIT
     );
   });
@@ -40,19 +38,19 @@ describe('CodeReviewTimelineCommit', () => {
     const timelineElementProps = wrapper
       .find(CodeReviewTimelineElement)
       .props();
-    expect(timelineElementProps.projectVersionId).to.equal(
+    expect(timelineElementProps.projectVersionId).toBe(
       DEFAULT_PROPS.commit.projectVersion
     );
-    expect(timelineElementProps.isLast).to.equal(false);
+    expect(timelineElementProps.isLast).toBe(false);
   });
 
   it('renders the message Commit', () => {
     const wrapper = setUp();
-    expect(wrapper.contains(javalabMsg.commit())).to.be.true;
+    expect(wrapper.contains(javalabMsg.commit())).toBe(true);
   });
 
   it('renders the comment', () => {
     const wrapper = setUp();
-    expect(wrapper.contains(DEFAULT_PROPS.commit.comment)).to.be.true;
+    expect(wrapper.contains(DEFAULT_PROPS.commit.comment)).toBe(true);
   });
 });

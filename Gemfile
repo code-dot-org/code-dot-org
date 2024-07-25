@@ -286,8 +286,6 @@ gem 'acmesmith', '~> 2.3.1'
 gem 'addressable'
 # bcrypt version specified due to "Invalid Hash" error in Linux
 gem 'bcrypt', '3.1.13'
-gem 'firebase'
-gem 'firebase_token_generator'
 gem 'sshkit'
 gem 'validates_email_format_of'
 
@@ -344,8 +342,6 @@ gem 'require_all', require: false
 
 gem 'dotiw'
 
-gem 'datapackage'
-
 gem 'ruby-progressbar'
 
 gem 'pry', '~> 0.14.0'
@@ -367,3 +363,5 @@ gem 'statsig', '~> 1.33'
 
 gem 'mailgun-ruby', '~>1.2.14'
 gem 'mailjet', '~> 1.7.3'
+
+gem "json-schema", "~> 4.3"

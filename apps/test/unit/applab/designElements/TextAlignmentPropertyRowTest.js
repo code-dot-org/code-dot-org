@@ -1,6 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import EnumPropertyRow from '@cdo/apps/applab/designElements/EnumPropertyRow';
 import TextAlignmentPropertyRow, {
@@ -10,7 +10,7 @@ import TextAlignmentPropertyRow, {
   TEXT_ALIGNMENT_JUSTIFY,
 } from '@cdo/apps/applab/designElements/TextAlignmentPropertyRow';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('TextAlignmentPropertyRow', () => {
   let initialValue;

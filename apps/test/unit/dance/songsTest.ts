@@ -1,10 +1,10 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 import {StubFunction} from 'test/types/types';
 
 import {getFilteredSongKeys, getFilterStatus} from '@cdo/apps/dance/songs';
 import * as AgeDialog from '@cdo/apps/templates/AgeDialog';
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const testSongManifest = {
   allAgesSong: {
