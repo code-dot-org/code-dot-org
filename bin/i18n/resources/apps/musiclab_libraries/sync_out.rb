@@ -28,7 +28,7 @@ module I18n
             # change test prefix before merging
             AWS::S3.upload_to_bucket(
               'cdo-curriculum',
-              "media/musiclab-test/#{library_name}-loc/#{js_locale}.json",
+              "media/musiclab/#{library_name}-loc/#{js_locale}.json",
               JSON.pretty_generate(i18n_data),
               acl: 'public-read',
               no_random: true,
