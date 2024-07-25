@@ -12,7 +12,7 @@ $default-spacing: 16px;
   overflow: hidden;
 }
 
-%conversationArea,
+%conversation-area,
 .conversationArea {
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@ $default-spacing: 16px;
 }
 
 .tabPanels {
-  @extend %conversationArea;
+  @extend %conversation-area;
 }
 
 .waitingForResponse {
