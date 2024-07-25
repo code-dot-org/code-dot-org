@@ -287,6 +287,8 @@ class User < ApplicationRecord
 
   after_create :associate_with_potential_pd_enrollments
 
+  after_create :save_show_progress_table_v2
+
   after_save :save_email_preference, if: -> {email_preference_opt_in.present?}
 
   after_save :save_parent_email_preference, if: :parent_email_preference_opt_in_required?
@@ -355,6 +357,15 @@ class User < ApplicationRecord
     user = User.find_by_email_or_hashed_email(email)
     if teacher? && share_teacher_email_reg_partner_opt_in_radio_choice.casecmp?("yes")
       user.share_teacher_email_regional_partner_opt_in = DateTime.now
+      user.save!
+    end
+  end
+
+  # Puts teachers directly into the progress table v2 view when new account is created.
+  def save_show_progress_table_v2
+    user = User.find_by_email_or_hashed_email(email)
+    if teacher?
+      user.show_progress_table_v2 = true
       user.save!
     end
   end

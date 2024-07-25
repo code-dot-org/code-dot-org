@@ -113,6 +113,11 @@ class UserTest < ActiveSupport::TestCase
     assert_equal '21+', teacher.age
   end
 
+  test 'creating teacher sets show_progress_table_v2 to true' do
+    teacher = create :teacher
+    assert teacher.show_progress_table_v2
+  end
+
   # Disable this test if and when we do require teachers to complete school data
   test 'school info should not be validated' do
     school_attributes = {
