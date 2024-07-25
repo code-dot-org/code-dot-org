@@ -82,20 +82,20 @@ module Pd
     end
 
     test 'post-workshop special survey link shows for Build Your Own workshops when enrolled and attended' do
-      setup_build_your_own_workshop
+      setup_build_your_own_ended_workshop
 
       sign_in @enrolled_byo_teacher
       create :pd_attendance, session: @byo_workshop.sessions[0], teacher: @enrolled_byo_teacher, enrollment: @byo_enrollment
       get "/pd/workshop_survey/post/#{@byo_enrollment.code}"
-      assert_match %r{#{SURVEY_LINKS[:COURSE_BUILD_YOUR_OWN_TEACHER]}.*redirected}, response.body
+      assert_redirected_to CDO.studio_url SURVEY_LINKS[:COURSE_BUILD_YOUR_OWN_TEACHER], CDO.default_scheme
     end
 
     test 'post-workshop special facilitator survey link shows for ended Build Your Own workshops' do
-      setup_build_your_own_workshop
+      setup_build_your_own_ended_workshop
 
       sign_in @facilitator
-      get '/pd/workshop_survey/new_facilitator_post'
-      assert_match %r{#{SURVEY_LINKS[:COURSE_BUILD_YOUR_OWN_FACILITATOR]}.*redirected}, response.body
+      get "/pd/workshop_survey/new_facilitator_post?workshop_id=#{@byo_workshop.id}"
+      assert_redirected_to CDO.studio_url SURVEY_LINKS[:COURSE_BUILD_YOUR_OWN_FACILITATOR], CDO.default_scheme
     end
 
     test 'daily workshop survey displays not enrolled message when not enrolled' do
