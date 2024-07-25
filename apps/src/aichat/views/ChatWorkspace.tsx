@@ -11,13 +11,15 @@ import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Ic
 import Tabs, {TabsProps} from '@cdo/apps/componentLibrary/tabs/Tabs';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {ChatItem} from '../types';
+import {ChatItem, WorkspaceTeacherViewTab} from '../types';
+import {getShortName} from '../utils';
 
 import ChatItemView from './ChatItemView';
 import CopyButton from './CopyButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
 import moduleStyles from './chatWorkspace.module.scss';
+import { Workspace } from 'blockly';
 
 interface ChatWorkspaceProps {
   onClear: () => void;
@@ -29,19 +31,14 @@ interface Students {
   };
 }
 
-const WORKSPACE_VIEW_MODE = {
-  STUDENT_CHAT_HISTORY: 'viewStudentChatHistory',
-  TEST_STUDENT_MODEL: 'testStudentModel',
-  PARTICIPANT: 'participant',
-};
-
 /**
  * Renders the AI Chat Lab main chat workspace component.
  */
 const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   onClear,
 }) => {
-  const [viewMode, setViewMode] = useState<string | null>(null);
+  const [selectedTab, setSelectedTab] =
+    useState<WorkspaceTeacherViewTab | null>(null);
 
   const {showWarningModal, isWaitingForChatResponse} = useAppSelector(
     state => state.aichat
@@ -80,18 +77,20 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     return null;
   }, [viewAsUserId, students]);
 
+  // Teacher user is able to interact with chatbot.
+  const canChatWithModel = useMemo(
+    () => selectedTab !== WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY,
+    [selectedTab]
+  );
+
   useEffect(() => {
-    // If a teacher is viewing workspace as a student when level first loads (user_id param included in url)
-    // or from when viewing workspace as a participant, default to the student chat history view.
-    if (
-      viewAsUserId &&
-      (!viewMode || viewMode === WORKSPACE_VIEW_MODE.PARTICIPANT)
-    ) {
-      setViewMode(WORKSPACE_VIEW_MODE.STUDENT_CHAT_HISTORY);
+    // If we are viewing as a student, default to the student chat history tab if tab is not yet selected.
+    if (viewAsUserId && !selectedTab) {
+      setSelectedTab(WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY);
     } else if (!viewAsUserId) {
-      setViewMode(WORKSPACE_VIEW_MODE.PARTICIPANT);
+      setSelectedTab(null);
     }
-  }, [viewAsUserId, viewMode]);
+  }, [viewAsUserId, selectedTab]);
 
   const showWaitingAnimation = () => {
     if (isWaitingForChatResponse) {
@@ -123,7 +122,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       value: 'testStudentModel',
       text: 'Test student model',
       tabContent: (
-        <TestModel
+        <ChatWithModel
           items={items}
           showWaitingAnimation={showWaitingAnimation}
           conversationContainerRef={conversationContainerRef}
@@ -134,9 +133,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   const handleOnChange = useCallback(
     (value: string) => {
-      setViewMode(value);
+      setSelectedTab(value as WorkspaceTeacherViewTab);
     },
-    [setViewMode]
+    [setSelectedTab]
   );
 
   const tabArgs: TabsProps = {
@@ -159,16 +158,16 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {showWarningModal && <ChatWarningModal onClose={onCloseWarningModal} />}
-      {viewMode !== WORKSPACE_VIEW_MODE.PARTICIPANT && <Tabs {...tabArgs} />}
-      {viewMode === WORKSPACE_VIEW_MODE.PARTICIPANT && (
-        <TestModel
+      {viewAsUserId && <Tabs {...tabArgs} />}
+      {!viewAsUserId && (
+        <ChatWithModel
           items={items}
           showWaitingAnimation={showWaitingAnimation}
           conversationContainerRef={conversationContainerRef}
         />
       )}
 
-      {viewMode !== WORKSPACE_VIEW_MODE.STUDENT_CHAT_HISTORY && (
+      {canChatWithModel && (
         <UserChatMessageEditor
           editorContainerClassName={moduleStyles.messageEditorContainer}
         />
@@ -176,7 +175,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       <div className={moduleStyles.buttonRow}>
         <Button
           text="Clear chat"
-          disabled={viewMode === WORKSPACE_VIEW_MODE.STUDENT_CHAT_HISTORY}
+          disabled={!canChatWithModel}
           iconLeft={{iconName: 'eraser'}}
           size="s"
           type="secondary"
@@ -189,13 +188,13 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   );
 };
 
-interface TestModelProps {
+interface ChatWithModelProps {
   conversationContainerRef: React.RefObject<HTMLDivElement>;
   items: ChatItem[];
   showWaitingAnimation: () => React.ReactNode;
 }
 
-const TestModel: React.FunctionComponent<TestModelProps> = ({
+const ChatWithModel: React.FunctionComponent<ChatWithModelProps> = ({
   items,
   showWaitingAnimation,
   conversationContainerRef,
@@ -212,14 +211,6 @@ const TestModel: React.FunctionComponent<TestModelProps> = ({
       {showWaitingAnimation()}
     </div>
   );
-};
-
-const MAX_NAME_LENGTH = 15;
-const getShortName = (studentName: string): string => {
-  // If the student name contains a first and last name separated by whitespace, only use the first name.
-  const first = studentName.split(/\s/)[0];
-  // If the first name is longer than 10 characters, only use the first 10 characters.
-  return first.length > 10 ? first.slice(0, MAX_NAME_LENGTH) : first;
 };
 
 export default ChatWorkspace;

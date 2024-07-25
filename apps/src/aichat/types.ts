@@ -59,6 +59,11 @@ export enum ViewMode {
   PRESENTATION = 'presentation-mode',
 }
 
+export enum WorkspaceTeacherViewTab {
+  STUDENT_CHAT_HISTORY = 'viewStudentChatHistory',
+  TEST_STUDENT_MODEL = 'testStudentModel',
+}
+
 export interface AichatLevelProperties extends LevelProperties {
   /**
    * Initial AI chat customizations set by the level.

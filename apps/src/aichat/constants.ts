@@ -10,3 +10,5 @@ export const saveTypeToAnalyticsEvent: {[key in SaveType]: string} = {
   publishModelCard: EVENTS.PUBLISH_MODEL_CARD_INFO,
   saveModelCard: EVENTS.SAVE_MODEL_CARD_INFO,
 };
+
+export const MAX_NAME_LENGTH = 15;
