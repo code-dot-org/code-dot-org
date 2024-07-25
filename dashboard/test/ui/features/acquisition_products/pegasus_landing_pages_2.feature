@@ -6,7 +6,7 @@ Scenario Outline: Simple page view
   When I open my eyes to test "<test_name>"
   And I am on "<url>"
   And I dismiss the language selector
-  And I wait for the video thumbnails to load
+  And I wait for the document to load
   Then I see no difference for "initial load"
   And I close my eyes
   And I sign out
@@ -16,4 +16,4 @@ Examples:
   | http://code.org/tools/applab                                      | app lab tutorial landing   |
   | http://code.org/dance                                             | dance tutorial landing     |
   | http://code.org/educate/resources/videos                          | video resources landing    |
-#  | http://code.org/educate/resources/videos?force_youtube_fallback=1 | resources yt fallback      |
+  | http://code.org/educate/resources/videos?force_youtube_fallback=1 | resources yt fallback      |
