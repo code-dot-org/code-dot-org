@@ -1,12 +1,13 @@
 import GoogleBlockly from 'blockly/core';
 
+import {CLOCKWISE_TURN_DIRECTION} from '../constants';
 import {ExtendedBlockSvg} from '../types';
 
 import CdoAngleHelper from './cdoAngleHelper';
 
 interface AngleTextInputOptions {
   directionTitle: string; // Ex. 'DIR'
-  direction: string; // Ex. 'turnRight'
+  direction: 'turnRight' | 'turnLeft';
 }
 
 export default class CdoFieldAngleTextInput extends GoogleBlockly.FieldNumber {
@@ -51,7 +52,7 @@ export default class CdoFieldAngleTextInput extends GoogleBlockly.FieldNumber {
     if (!direction && this.directionFieldName) {
       direction = this.getSourceBlock()?.getFieldValue(this.directionFieldName);
     }
-    return direction || 'turnRight';
+    return direction || CLOCKWISE_TURN_DIRECTION;
   }
 
   /**
