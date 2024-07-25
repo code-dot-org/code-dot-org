@@ -1,3 +1,7 @@
+// Entrypoints for old-style "lab1" labs
+//
+// New labs should instead use Lab2, see: lab2EntryPoints.ts
+
 const ALL_APPS = [
   'ailab',
   'applab',
@@ -86,7 +90,6 @@ const CODE_STUDIO_ENTRIES = {
   'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
   'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
   'levels/show': './src/sites/studio/pages/levels/show.js',
-  'lti/v1/_early_access_banner': './src/sites/studio/pages/lti/v1/_early_access_banner.js',
   'lti/v1/iframe': './src/sites/studio/pages/lti/v1/iframe.js',
   'lti/v1/account_linking/landing': './src/sites/studio/pages/lti/v1/account_linking/landing.js',
   'lti/v1/dynamic_registration': './src/sites/studio/pages/lti/v1/dynamic_registration.js',
@@ -256,6 +259,8 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
 const SHARED_ENTRIES = {
   cookieBanner: './src/cookieBanner/cookieBanner.js',
   userHeaderEventLogger: './src/userHeaderEventLogger/userHeaderEventLogger.js',
+  userHeaderStatsigReporter:
+    './src/userHeaderStatsigReporter/userHeaderStatsigReporter.js',
 };
 
 // prettier-ignore

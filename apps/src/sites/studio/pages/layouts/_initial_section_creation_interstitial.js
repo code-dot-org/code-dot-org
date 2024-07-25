@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import InitialSectionCreationInterstitial from '@cdo/apps/templates/sectionSetup/InitialSectionCreationInterstitial';
-import {getStore} from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
+
+import {getStore} from '@cdo/apps/redux';
+import InitialSectionCreationInterstitial from '@cdo/apps/templates/sectionSetup/InitialSectionCreationInterstitial';
 import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
 
 const INITIAL_DIALOG_DISMISSED = 'initial_section_creation_dialog_dismissed';

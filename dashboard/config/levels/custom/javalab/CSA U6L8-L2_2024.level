@@ -1,5 +1,6 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 68,
   "created_at": "2024-01-12T21:04:47.000Z",
   "level_num": "custom",
@@ -19,11 +20,13 @@
       }
     },
     "project_template_level_name": "CSA U6L8-Removing PBT_2024",
-    "teacher_markdown": "This code causes a `ConcurrentModificationException` because it modifies the `numList` while iterating over it. Specifically, when an element is added to the list while iterating over it, the loop control variable becomes invalid because the list has been structurally modified.",
+    "teacher_markdown": "This code causes a `ConcurrentModificationException` because it modifies the `numList` while iterating over it. Specifically, when an element is added to the list while iterating over it, the loop control variable becomes invalid because the list has been structurally modified.\r\n\r\nWhen students change the enhanced for loop to a regular for loop, there will still be an error, because the error results in an infinite for loop due to the list continuing to grow, which causes the conditions of the for loop never being met. ",
     "name_suffix": "_2024",
-    "ai_tutor_available": true
+    "ai_tutor_available": "true",
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-01-12T21:04:47.341+00:00\",\"changed\":[\"cloned from \\\"CSA U6L8-L2_2023\\\"\"],\"cloned_from\":\"CSA U6L8-L2_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-01-12T21:04:47.341+00:00\",\"changed\":[\"cloned from \\\"CSA U6L8-L2_2023\\\"\"],\"cloned_from\":\"CSA U6L8-L2_2023\"},{\"changed_at\":\"2024-07-16 16:58:19 +0000\",\"changed\":[\"teacher_markdown\",\"ai_tutor_available\",\"contained_level_names\"],\"changed_by_id\":17326,\"changed_by_email\":\"larsensn@yahoo.com\"}]"
 }]]></config>
 </Javalab>

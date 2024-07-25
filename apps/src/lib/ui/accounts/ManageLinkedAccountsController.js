@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
+
 import {getStore, registerReducers} from '@cdo/apps/redux';
+
+import ManageLinkedAccounts from './ManageLinkedAccounts';
 import manageLinkedAccounts, {
   convertServerAuthOptions,
   initializeState,
 } from './manageLinkedAccountsRedux';
-import ManageLinkedAccounts from './ManageLinkedAccounts';
 
 export default class ManageLinkedAccountsController {
   constructor(

@@ -196,6 +196,7 @@ export const READ_ONLY_PROPERTIES = [
   'gamelab_locale',
   'Generator',
   'geras',
+  'Gesture',
   'getRelativeXY',
   'googlecode',
   'hasCategories',

@@ -3,8 +3,6 @@ import React from 'react';
 
 import AbuseExclamation from '@cdo/apps/code-studio/components/AbuseExclamation';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 describe('AbuseExclamation', () => {
   it('renders AbuseExclamation components', () => {
     const wrapper = shallow(
@@ -18,8 +16,8 @@ describe('AbuseExclamation', () => {
         isOwner
       />
     );
-    expect(wrapper.find('AbuseError').length).to.equal(1);
-    expect(wrapper.find('AlertExclamation').length).to.equal(1);
+    expect(wrapper.find('AbuseError').length).toBe(1);
+    expect(wrapper.find('AlertExclamation').length).toBe(1);
   });
 
   it('shows edit link if isOwner is true', () => {
@@ -34,7 +32,7 @@ describe('AbuseExclamation', () => {
         isOwner
       />
     );
-    expect(wrapper.find('a').text()).to.contain('edit project');
+    expect(wrapper.find('a').text()).toContain('edit project');
   });
 
   it('shows code studio link if isOwener is false', () => {
@@ -49,6 +47,6 @@ describe('AbuseExclamation', () => {
         isOwner={false}
       />
     );
-    expect(wrapper.find('a').text()).to.contain('go to code studio');
+    expect(wrapper.find('a').text()).toContain('go to code studio');
   });
 });

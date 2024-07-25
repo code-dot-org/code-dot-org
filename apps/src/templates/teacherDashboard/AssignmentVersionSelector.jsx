@@ -36,9 +36,12 @@ export default class AssignmentVersionSelector extends Component {
     e.preventDefault();
   };
 
-  handleClick = () => {
+  handleClick = e => {
+    e.stopPropagation();
     if (!this.state.isMenuOpen) {
       this.openMenu();
+    } else {
+      this.closeMenu();
     }
   };
 

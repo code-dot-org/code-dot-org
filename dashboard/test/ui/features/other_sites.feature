@@ -10,5 +10,4 @@ Scenario Outline: Simple page view
   And I sign out
 Examples:
   | url                                                               | test_name                  |
-  | http://advocacy.code.org/                                         | advocacy.code.org home     |
   | http://code.org/curriculum/unplugged                              | code.org curriculum        |

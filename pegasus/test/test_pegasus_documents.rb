@@ -38,7 +38,9 @@ class PegasusTest < Minitest::Test
       code.org/student
     ],
     301 => %w[
-      csedweek.org/resource_kit
+      code.org/dance
+      code.org/minecraft
+      code.org/naipi
     ]
   }
 
@@ -47,7 +49,6 @@ class PegasusTest < Minitest::Test
     'text/plain' => %w[
       code.org/health_check
       code.org/robots.txt
-      advocacy.code.org/health_check
       hourofcode.com/us/health_check
     ]
   }

@@ -84,7 +84,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "# Accessibility App\r\n\r\nCreate an app prototype that could be used to increase accessibility and access to technology for people with disabilities. For example, a non-verbal user could use the accelerometer and LEDs to communicate. For more ideas around accessibility and computing, you can visit the [Access CSforAll website](https://www.washington.edu/accesscomputing/accesscsforall/videos) for more ideas.\r\n\r\nYou may not be able to create the \"perfect\" app yet, but you can develop a **prototype** which shows the general idea of the app and some of the basic features behind how it could work.",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

@@ -3,9 +3,9 @@ import React from 'react';
 
 import {buildProgrammingExpressionMarkdown} from '@cdo/apps/templates/lessonOverview/StyledCodeBlock';
 
-import UploadImageDialog from './lesson-editor/UploadImageDialog';
-import FindResourceDialog from './lesson-editor/FindResourceDialog';
 import FindProgrammingExpressionDialog from './lesson-editor/FindProgrammingExpressionDialog';
+import FindResourceDialog from './lesson-editor/FindResourceDialog';
+import UploadImageDialog from './lesson-editor/UploadImageDialog';
 
 export const markdownFeaturesShape = PropTypes.shape({
   imageUpload: PropTypes.bool,

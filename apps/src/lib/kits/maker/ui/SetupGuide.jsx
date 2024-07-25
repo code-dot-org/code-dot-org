@@ -1,15 +1,17 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import SetupInstructions from '@cdo/apps/lib/kits/maker/ui/SetupInstructions';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
-import {isCodeOrgBrowser, getChromeVersion} from '../util/browserChecks';
+import React from 'react';
+
 import applabI18n from '@cdo/applab/locale';
-import i18n from '@cdo/locale';
+import SetupInstructions from '@cdo/apps/lib/kits/maker/ui/SetupInstructions';
 import {
   MAKER_DEPRECATION_SUPPORT_URL,
   MIN_CHROME_VERSION,
 } from '@cdo/apps/lib/kits/maker/util/makerConstants';
+import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
+
+import {isCodeOrgBrowser, getChromeVersion} from '../util/browserChecks';
 
 export default class SetupGuide extends React.Component {
   setupGuideContent = {
