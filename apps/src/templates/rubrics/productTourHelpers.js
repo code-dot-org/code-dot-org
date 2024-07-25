@@ -1,4 +1,3 @@
-import {stripHtml} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import evidenceDemo from '@cdo/static/ai-evidence-demo.gif';
 
@@ -6,36 +5,34 @@ export const INITIAL_STEP = 0;
 export const STEPS = [
   {
     element: '#ui-floatingActionButton',
-    title: stripHtml(i18n.rubricTourStepOneTitle()),
-    intro: stripHtml(i18n.rubricTourStepOneText()),
+    title: i18n.rubricTourStepOneTitle(),
+    intro: i18n.rubricTourStepOneText(),
   },
   {
     element: '#tour-ai-assessment',
-    title: stripHtml(i18n.rubricTourStepTwoTitle()),
-    intro: stripHtml(i18n.rubricTourStepTwoText()),
+    title: i18n.rubricTourStepTwoTitle(),
+    intro: i18n.rubricTourStepTwoText(),
   },
   {
     element: '#tour-ai-evidence',
-    title: stripHtml(i18n.rubricTourStepThreeTitle()),
+    title: i18n.rubricTourStepThreeTitle(),
     position: 'top',
-    intro: `<p>${stripHtml(
-      i18n.rubricTourStepThreeText()
-    )}</p><img src=${evidenceDemo}>`,
+    intro: `<p>${i18n.rubricTourStepThreeText()}</p><img src=${evidenceDemo}>`,
   },
   {
     element: '#tour-ai-confidence',
-    title: stripHtml(i18n.rubricTourStepFourTitle()),
-    intro: stripHtml(i18n.rubricTourStepFourText()),
+    title: i18n.rubricTourStepFourTitle(),
+    intro: i18n.rubricTourStepFourText(),
   },
   {
     element: '#tour-evidence-levels',
-    title: stripHtml(i18n.rubricTourStepFiveTitle()),
-    intro: stripHtml(i18n.rubricTourStepFiveText()),
+    title: i18n.rubricTourStepFiveTitle(),
+    intro: i18n.rubricTourStepFiveText(),
   },
   {
     element: '#tour-ai-assessment-feedback',
-    title: stripHtml(i18n.rubricTourStepSixTitle()),
-    intro: stripHtml(i18n.rubricTourStepSixText()),
+    title: i18n.rubricTourStepSixTitle(),
+    intro: i18n.rubricTourStepSixText(),
   },
 ];
 
@@ -47,7 +44,7 @@ export const DUMMY_PROPS = {
       {
         id: 1,
         key: '1',
-        learningGoal: stripHtml(i18n.catVariables()),
+        learningGoal: i18n.catVariables(),
         aiEnabled: true,
         evidenceLevels: [
           {
