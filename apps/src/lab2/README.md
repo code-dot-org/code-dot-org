@@ -28,6 +28,7 @@ This folder contains the code for **Lab2**, which is our set of shared component
 As of 2024, all new labs should be based on Lab2. To create a new lab, you need to do the following:
 
 - Backend changes (ruby):
+  - Backend changes can be modeled off [the initial aichat PR](modeled off [this PR](https://github.com/code-dot-org/code-dot-org/pull/52538))
   - Set up the new [level](https://github.com/code-dot-org/code-dot-org/pull/52538/files#diff-3c5dedf7c252ccdfebcad7b26ddc2b4e1d2cad5c5d4257943802c0af06fb7c83R1) and [game type](https://github.com/code-dot-org/code-dot-org/pull/52538/files#diff-ff86f86a12d97e95649d41a3da445d7e1fb3cdcf69ef4112e1c8d8a02fee7233R62), and add the new level to [levels_controller](https://github.com/code-dot-org/code-dot-org/pull/52538/files#diff-fb10c591e5aa0c82109ab9b5e3d5aac6f7ffdf5ebb2717de405afa7c661dd650R20). This is unchanged from how our previous labs were set up.
   - Override [uses_lab2](https://github.com/code-dot-org/code-dot-org/pull/52538/files#diff-3c5dedf7c252ccdfebcad7b26ddc2b4e1d2cad5c5d4257943802c0af06fb7c83R48) in the new level file and return true.
   - There are a few other minor backend changes required, see the linked PR.
