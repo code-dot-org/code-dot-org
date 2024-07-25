@@ -18,6 +18,7 @@ import customBlocks from './customBlocks/cdoBlockly/index.js';
 import {
   INFINITE_LOOP_TRAP,
   LOOP_HIGHLIGHT,
+  getCodeBlocks,
   handleCodeGenerationFailure,
   strip,
 } from './utils';
@@ -353,6 +354,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
     highlightBlock(id, spotlight) {
       Blockly.mainBlockSpace.highlightBlock(id, spotlight);
+    },
+    setLabCode() {
+      let codeBlocks = getCodeBlocks();
+      if (this.studioApp_.initializationBlocks) {
+        codeBlocks = this.studioApp_.initializationBlocks.concat(codeBlocks);
+      }
+      this.code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
+    },
+    getCodeFromBlocks(blockXmlString) {
+      const domBlocks = Blockly.Xml.textToDom(blockXmlString);
+      return Blockly.Generator.xmlToCode('JavaScript', domBlocks);
     },
   };
   blocklyWrapper.customBlocks = customBlocks;
