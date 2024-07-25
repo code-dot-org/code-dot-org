@@ -5,6 +5,7 @@ describe I18n::Resources::Apps::MusiclabLibraries::SyncOut do
   let(:described_class) {I18n::Resources::Apps::MusiclabLibraries::SyncOut}
   let(:described_instance) {described_class.new}
 
+  let(:library_filenames) {['music-library-intro2024', 'music-library-launch2024']}
   let(:i18n_locale) {'uk-UA'}
   let(:js_locale) {'uk_ua'}
   let(:language) {{locale_s: i18n_locale}}
@@ -23,35 +24,34 @@ describe I18n::Resources::Apps::MusiclabLibraries::SyncOut do
     let(:is_testing) {false}
     let(:options) {{testing: is_testing}}
 
-    let(:crowdin_file_path) {CDO.dir('i18n/crowdin', i18n_locale, 'musiclab_libraries/music-library-intro2024.json')}
     let(:crowdin_file_data) {{'i18n_key' => 'i18n_val'}}
-    let(:i18n_file_path) {CDO.dir('i18n/locales', i18n_locale, 'musiclab_libraries/music-library-intro2024.json')}
-
     let(:i18n_data) {crowdin_file_data}
 
     let(:expect_translation_upload) do
-      described_instance.expects(:upload_localized_strings).with(js_locale, crowdin_file_data)
-    end
-    let(:expect_crowdin_file_to_i18n_locale_dir_moving) do
-      I18nScriptUtils.expects(:move_file).with(crowdin_file_path, i18n_file_path)
-    end
-    let(:expect_crowdin_resource_dir_removing) do
-      I18nScriptUtils.expects(:remove_empty_dir).with(File.dirname(crowdin_file_path))
+      described_instance.expects(:upload_localized_strings)
     end
 
     before do
       described_instance.stubs(:options).returns(options)
 
-      FileUtils.mkdir_p File.dirname(crowdin_file_path)
-      File.write crowdin_file_path, JSON.dump(crowdin_file_data)
+      library_filenames.each do |name|
+        crowdin_file_path = CDO.dir('i18n/crowdin', i18n_locale, "musiclab_libraries/#{name}.json")
+        FileUtils.mkdir_p File.dirname(crowdin_file_path)
+        File.write crowdin_file_path, JSON.dump(crowdin_file_data)
+      end
     end
 
     it 'uploads localized manifest and then moves the Crowdin file to the i18n locale dir' do
       execution_sequence = sequence('execution')
 
-      expect_translation_upload.in_sequence(execution_sequence)
-      expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
-      expect_crowdin_resource_dir_removing.in_sequence(execution_sequence)
+      library_filenames.each do |name|
+        described_instance.expects(:upload_localized_strings).with(js_locale, crowdin_file_data, name).in_sequence(execution_sequence)
+
+        i18n_file_path = CDO.dir('i18n/locales', i18n_locale, "musiclab_libraries/#{name}.json")
+        crowdin_file_path = CDO.dir('i18n/crowdin', i18n_locale, "musiclab_libraries/#{name}.json")
+        I18nScriptUtils.expects(:move_file).with(crowdin_file_path, i18n_file_path).in_sequence(execution_sequence)
+        I18nScriptUtils.expects(:remove_empty_dir).with(File.dirname(crowdin_file_path)).in_sequence(execution_sequence)
+      end
 
       process_language
     end
@@ -61,7 +61,7 @@ describe I18n::Resources::Apps::MusiclabLibraries::SyncOut do
 
       it 'does not upload localized manifest' do
         expect_translation_upload.never
-        expect_crowdin_file_to_i18n_locale_dir_moving.once
+        I18nScriptUtils.expects(:move_file).twice
 
         process_language
       end
@@ -69,7 +69,9 @@ describe I18n::Resources::Apps::MusiclabLibraries::SyncOut do
 
     context 'when the Crowdin locale dir does not exists' do
       before do
-        FileUtils.rm(crowdin_file_path)
+        library_filenames.each do |name|
+          FileUtils.rm(CDO.dir('i18n/crowdin', i18n_locale, "musiclab_libraries/#{name}.json"))
+        end
       end
 
       it 'does not upload localized manifest' do
@@ -79,8 +81,8 @@ describe I18n::Resources::Apps::MusiclabLibraries::SyncOut do
       end
 
       it 'does not move the Crowdin file to the i18n locale dir' do
-        expect_crowdin_file_to_i18n_locale_dir_moving.never
-        expect_crowdin_resource_dir_removing.never
+        I18nScriptUtils.expects(:move_file).never
+        I18nScriptUtils.expects(:remove_empty_dir).never
 
         process_language
       end
