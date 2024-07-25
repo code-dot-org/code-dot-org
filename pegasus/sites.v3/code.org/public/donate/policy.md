@@ -1,6 +1,5 @@
 ---
 title: Donation Policy
-nav: about_nav
 theme: responsive
 ---
 # Donation Policy
