@@ -11,7 +11,7 @@ import {
 import ImageInput from '@cdo/apps/lib/levelbuilder/ImageInput';
 import PanelsView from '@cdo/apps/panels/PanelsView';
 import {Panel, PanelLayout} from '@cdo/apps/panels/types';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/olderSharedComponents/button/Button';
 import {createUuid} from '@cdo/apps/utils';
 
 import moduleStyles from './edit-panels.module.scss';

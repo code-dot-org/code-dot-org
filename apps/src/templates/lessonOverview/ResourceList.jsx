@@ -7,7 +7,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {windowOpen} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
-import Button from '../Button';
+import Button from '../../olderSharedComponents/button/Button';
 import DropdownButton from '../DropdownButton';
 
 import {

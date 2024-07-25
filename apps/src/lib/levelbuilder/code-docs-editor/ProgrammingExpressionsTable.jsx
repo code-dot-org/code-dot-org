@@ -4,7 +4,7 @@ import React, {useEffect, useState} from 'react';
 import * as Table from 'reactabular-table';
 
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/olderSharedComponents/button/Button';
 import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
 
 import CloneProgrammingExpressionDialog from './CloneProgrammingExpressionDialog';

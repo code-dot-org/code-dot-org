@@ -27,7 +27,7 @@ import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/olderSharedComponents/button/Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import {

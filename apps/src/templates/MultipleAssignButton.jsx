@@ -11,7 +11,7 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-import Button from './Button';
+import Button from '../olderSharedComponents/button/Button';
 
 class MultipleAssignButton extends React.Component {
   static propTypes = {

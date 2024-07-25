@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import i18n from '@cdo/locale';
 
-import Button from '../../templates/Button';
+import Button from '../../olderSharedComponents/button/Button';
 
 // Record events to Firehose to understand how often users:
 //   - see the download button,

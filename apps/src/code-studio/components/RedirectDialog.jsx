@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/olderSharedComponents/button/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';

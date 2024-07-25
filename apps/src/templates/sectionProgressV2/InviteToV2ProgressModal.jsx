@@ -8,7 +8,7 @@ import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import {default as LinkedButton} from '@cdo/apps/templates/Button';
+import {default as LinkedButton} from '@cdo/apps/olderSharedComponents/button/Button';
 import {
   setHasSeenProgressTableInvite,
   setDateProgressTableInvitationDelayed,

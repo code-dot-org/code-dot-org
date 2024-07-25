@@ -6,7 +6,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import Button from '../../templates/Button';
+import Button from '../../olderSharedComponents/button/Button';
 
 import {assetButtonStyles} from './AddAssetButtonRow';
 import {AudioErrorType} from './AssetManager';

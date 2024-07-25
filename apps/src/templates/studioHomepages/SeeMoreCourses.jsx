@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 
 import color from '../../util/color';
-import Button from '../Button';
+import Button from '../../olderSharedComponents/button/Button';
 import ContentContainer from '../ContentContainer';
 
 import CourseCard from './CourseCard';

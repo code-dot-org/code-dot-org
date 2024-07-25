@@ -12,7 +12,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import Button from '../../templates/Button';
+import Button from '../../olderSharedComponents/button/Button';
 import {
   importOrUpdateRoster,
   sectionCode,

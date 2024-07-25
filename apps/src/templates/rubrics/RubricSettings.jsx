@@ -17,7 +17,7 @@ import {
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/olderSharedComponents/button/Button';
 import {setAiRubricsDisabled} from '@cdo/apps/templates/currentUserRedux';
 import i18n from '@cdo/locale';
 

@@ -20,7 +20,7 @@ import i18n from '@cdo/locale';
 
 import {Heading3} from '../../lib/ui/Headings';
 import styleConstants from '../../styleConstants';
-import Button from '../Button';
+import Button from '../../olderSharedComponents/button/Button';
 
 import CardContainer from './CardContainer';
 import LoginTypeCard from './LoginTypeCard';

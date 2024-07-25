@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../../BaseDialog';
-import Button from '../../Button';
+import Button from '../../../olderSharedComponents/button/Button';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 
 import {hideDeleteDialog, deleteProject} from './deleteProjectDialogRedux';

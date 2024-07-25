@@ -4,7 +4,7 @@ import React from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import {Heading2} from '@cdo/apps/lib/ui/Headings';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/olderSharedComponents/button/Button';
 import color from '@cdo/apps/util/color';
 import {findProfanity} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';

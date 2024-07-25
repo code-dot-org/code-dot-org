@@ -8,7 +8,7 @@ import fontConstants from '@cdo/apps/fontConstants';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/olderSharedComponents/button/Button';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import color from '@cdo/apps/util/color';
 import {reload} from '@cdo/apps/utils';

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import styleConstants from '@cdo/apps/styleConstants';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/olderSharedComponents/button/Button';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 

@@ -23,7 +23,7 @@ import {
 } from '../componentLibrary/typography';
 import * as color from '../util/color';
 
-import Button from './Button';
+import Button from '../olderSharedComponents/button/Button';
 
 const WorkshopCard = props => {
   return (

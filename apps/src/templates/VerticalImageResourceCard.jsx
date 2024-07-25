@@ -6,7 +6,7 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 import color from '../util/color';
 
-import Button from './Button';
+import Button from '../olderSharedComponents/button/Button';
 
 /**
  * A card used on /congrats to display information about a particular course or

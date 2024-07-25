@@ -6,7 +6,7 @@ import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/olderSharedComponents/button/Button';
 import color from '@cdo/apps/util/color';
 import {reload} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';

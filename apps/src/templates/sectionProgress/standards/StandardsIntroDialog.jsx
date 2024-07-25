@@ -9,7 +9,7 @@ import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../../BaseDialog';
-import Button from '../../Button';
+import Button from '../../../olderSharedComponents/button/Button';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 
 import {cstaStandardsURL} from './standardsConstants';

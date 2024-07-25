@@ -4,7 +4,7 @@ import React, {useState, useCallback, ChangeEvent} from 'react';
 import {getFilteredSongKeys} from '@cdo/apps/dance/songs';
 import {SongData} from '@cdo/apps/dance/types';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/olderSharedComponents/button/Button';
 
 import moduleStyles from '@cdo/apps/dance/song-selector.module.scss';
 

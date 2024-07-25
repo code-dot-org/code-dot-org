@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux';
 
 import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/olderSharedComponents/button/Button';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';

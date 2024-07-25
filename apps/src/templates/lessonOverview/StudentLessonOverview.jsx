@@ -6,7 +6,7 @@ import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import {levelsForLessonId} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import styleConstants from '@cdo/apps/styleConstants';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/olderSharedComponents/button/Button';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';

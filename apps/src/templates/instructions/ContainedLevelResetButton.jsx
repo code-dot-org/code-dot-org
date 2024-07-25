@@ -6,7 +6,7 @@ import {resetContainedLevel} from '@cdo/apps/code-studio/levels/codeStudioLevels
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/olderSharedComponents/button/Button';
 import {CourseRoles} from '@cdo/apps/templates/currentUserRedux';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';

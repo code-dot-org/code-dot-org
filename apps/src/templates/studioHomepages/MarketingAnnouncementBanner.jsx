@@ -3,7 +3,7 @@ import React, {useState, useEffect, useRef, useCallback} from 'react';
 
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/olderSharedComponents/button/Button';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 import color from '../../util/color';

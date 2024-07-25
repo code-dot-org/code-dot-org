@@ -6,7 +6,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {isIE11} from '@cdo/apps/util/browser-detector';
 import i18n from '@cdo/locale';
 
-import Button from '../Button';
+import Button from '../../olderSharedComponents/button/Button';
 
 // used to give each instance a unique id to use for callback names
 let componentCount = 0;
