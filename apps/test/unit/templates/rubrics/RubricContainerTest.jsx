@@ -4,7 +4,7 @@ import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-impo
 import $ from 'jquery';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
 import * as utils from '@cdo/apps/code-studio/utils';
@@ -22,7 +22,7 @@ import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSection
 import {RubricAiEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 jest.mock('@cdo/apps/util/HttpClient', () => ({
   post: jest.fn().mockResolvedValue({

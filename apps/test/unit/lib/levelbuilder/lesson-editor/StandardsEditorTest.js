@@ -1,10 +1,7 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedStandardsEditor as StandardsEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/StandardsEditor';
-
-import {expect} from '../../../../util/reconfiguredChai';
 
 const fakeStandards = [
   {
@@ -28,8 +25,8 @@ const fakeStandards = [
 describe('StandardsEditor', () => {
   let defaultProps, addStandard, removeStandard;
   beforeEach(() => {
-    addStandard = sinon.spy();
-    removeStandard = sinon.spy();
+    addStandard = jest.fn();
+    removeStandard = jest.fn();
     defaultProps = {
       standardType: 'standard',
       standards: fakeStandards,
@@ -42,7 +39,7 @@ describe('StandardsEditor', () => {
   it('can remove a standard', () => {
     const wrapper = mount(<StandardsEditor {...defaultProps} />);
     const numStandards = wrapper.find('tr').length;
-    expect(numStandards).at.least(2);
+    expect(numStandards).toBeGreaterThanOrEqual(2);
     // Find one of the "remove" buttons and click it
     const removeStandardButton = wrapper
       .find('.unit-test-remove-standard')
@@ -51,13 +48,13 @@ describe('StandardsEditor', () => {
     const removeDialog = wrapper.find('Dialog');
     const deleteButton = removeDialog.find('button').at(2);
     deleteButton.simulate('click');
-    expect(removeStandard).to.have.been.calledOnce;
+    expect(removeStandard).toHaveBeenCalledTimes(1);
   });
 
   it('can cancel removing a standard', () => {
     const wrapper = mount(<StandardsEditor {...defaultProps} />);
     const numStandards = wrapper.find('tr').length;
-    expect(numStandards).at.least(2);
+    expect(numStandards).toBeGreaterThanOrEqual(2);
     // Find one of the "remove" buttons and click it
     const removeStandardButton = wrapper
       .find('.unit-test-remove-standard')
@@ -66,6 +63,6 @@ describe('StandardsEditor', () => {
     const removeDialog = wrapper.find('Dialog');
     const cancelButton = removeDialog.find('button').at(1);
     cancelButton.simulate('click');
-    expect(removeStandard).not.to.have.been.called;
+    expect(removeStandard).not.toHaveBeenCalled();
   });
 });

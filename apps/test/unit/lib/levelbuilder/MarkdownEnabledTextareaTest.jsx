@@ -1,15 +1,12 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledTextarea';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 describe('MarkdownEnabledTextarea', () => {
   let defaultProps, handleMarkdownChange;
   beforeEach(() => {
-    handleMarkdownChange = sinon.spy();
+    handleMarkdownChange = jest.fn();
     defaultProps = {
       markdown:
         '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*',
@@ -19,18 +16,18 @@ describe('MarkdownEnabledTextarea', () => {
 
   it('updates markdown', () => {
     const wrapper = shallow(<MarkdownEnabledTextarea {...defaultProps} />);
-    expect(wrapper.find('textarea').length).to.equal(1);
-    expect(wrapper.find('textarea').props().value).to.equal(
+    expect(wrapper.find('textarea').length).toBe(1);
+    expect(wrapper.find('textarea').props().value).toBe(
       '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
     );
 
     wrapper.find('textarea').simulate('change', {target: {value: '## Title'}});
-    expect(handleMarkdownChange).to.have.been.calledOnce;
+    expect(handleMarkdownChange).toHaveBeenCalledTimes(1);
   });
 
   it('selectively enables features', () => {
     const wrapper = shallow(<MarkdownEnabledTextarea {...defaultProps} />);
-    expect(wrapper.find('button').length).to.equal(0);
+    expect(wrapper.find('button').length).toBe(0);
 
     wrapper.setProps({features: {imageUpload: true}});
     expect(
@@ -38,7 +35,7 @@ describe('MarkdownEnabledTextarea', () => {
         .find('.btn-toolbar')
         .find('li')
         .map(li => li.text())
-    ).to.eql(['Image']);
+    ).toEqual(['Image']);
 
     wrapper.setProps({features: {resourceLink: true}});
     expect(
@@ -46,7 +43,7 @@ describe('MarkdownEnabledTextarea', () => {
         .find('.btn-toolbar')
         .find('li')
         .map(li => li.text())
-    ).to.eql(['Resource']);
+    ).toEqual(['Resource']);
 
     wrapper.setProps({features: {imageUpload: true, resourceLink: true}});
     expect(
@@ -54,18 +51,18 @@ describe('MarkdownEnabledTextarea', () => {
         .find('.btn-toolbar')
         .find('li')
         .map(li => li.text())
-    ).to.eql(['Image', 'Resource']);
+    ).toEqual(['Image', 'Resource']);
   });
 
   it('does not show toolbar if all features disabled', () => {
     const wrapper = shallow(<MarkdownEnabledTextarea {...defaultProps} />);
-    expect(wrapper.find('textarea').length).to.equal(1);
-    expect(wrapper.find('textarea').props().value).to.equal(
+    expect(wrapper.find('textarea').length).toBe(1);
+    expect(wrapper.find('textarea').props().value).toBe(
       '# Title \n This is the unit description with [link](https://studio.code.org/home) **Bold** *italics*'
     );
 
     wrapper.find('textarea').simulate('change', {target: {value: '## Title'}});
-    expect(handleMarkdownChange).to.have.been.calledOnce;
-    expect(wrapper.find('.btn-toolbar')).to.be.empty;
+    expect(handleMarkdownChange).toHaveBeenCalledTimes(1);
+    expect(wrapper.find('.btn-toolbar')).toHaveLength(0);
   });
 });

@@ -1,4 +1,4 @@
-const loader = require('ejs-webpack-loader');
+const loader = require('../lib/ejs-webpack-loader');
 
 module.exports = {
   process(src, filename, config, options) {

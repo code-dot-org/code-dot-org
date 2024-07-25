@@ -1,5 +1,3 @@
-import {expect} from 'chai';
-
 import PrincipalApprovalComponent, {
   RACE_LIST,
   MANUAL_SCHOOL_FIELDS,
@@ -13,7 +11,7 @@ describe('PrincipalApproval', () => {
       PrincipalApprovalComponent.getDynamicallyRequiredFields({
         doYouApprove: 'No',
       })
-    ).to.deep.equal(ALWAYS_REQUIRED_FIELDS);
+    ).toEqual(ALWAYS_REQUIRED_FIELDS);
   });
 
   it('Requires more fields if the application is accepted', () => {
@@ -25,7 +23,7 @@ describe('PrincipalApproval', () => {
       PrincipalApprovalComponent.getDynamicallyRequiredFields({
         doYouApprove: 'Yes',
       });
-    expect(actualFields).to.deep.equal(expectedFields);
+    expect(actualFields).toEqual(expectedFields);
   });
 
   it('Requires more fields if the application is accepted and the school is manually entered', () => {
@@ -39,7 +37,7 @@ describe('PrincipalApproval', () => {
         doYouApprove: 'Yes',
         school: '-1',
       }).sort();
-    expect(actualFields).to.deep.equal(expectedFields);
+    expect(actualFields).toEqual(expectedFields);
   });
 
   it('Requires more fields if the application is accepted and is replacing a csd course', () => {
@@ -52,7 +50,7 @@ describe('PrincipalApproval', () => {
         doYouApprove: 'Yes',
         course: 'Computer Science Discoveries',
       }).sort();
-    expect(actualFields).to.deep.equal(expectedFields);
+    expect(actualFields).toEqual(expectedFields);
   });
 
   it('Requires more fields if the application is accepted and is replacing a csp course', () => {
@@ -65,7 +63,7 @@ describe('PrincipalApproval', () => {
         doYouApprove: 'Yes',
         course: 'Computer Science Principles',
       }).sort();
-    expect(actualFields).to.deep.equal(expectedFields);
+    expect(actualFields).toEqual(expectedFields);
   });
 
   it('Expect student enrollment to be a positive integer', () => {
@@ -74,7 +72,7 @@ describe('PrincipalApproval', () => {
         PrincipalApprovalComponent.getErrorMessages({
           totalStudentEnrollment: validEnrollmentNumber,
         })
-      ).to.deep.equal({});
+      ).toEqual({});
     });
   });
 
@@ -84,7 +82,7 @@ describe('PrincipalApproval', () => {
         PrincipalApprovalComponent.getErrorMessages({
           totalStudentEnrollment: invalidEnrollmentNumber,
         })
-      ).to.deep.equal({
+      ).toEqual({
         totalStudentEnrollment: 'Must be a valid and positive number',
       });
     });
@@ -97,7 +95,7 @@ describe('PrincipalApproval', () => {
           PrincipalApprovalComponent.getErrorMessages({
             [key]: validPercent,
           })
-        ).to.deep.equal({});
+        ).toEqual({});
       });
     });
   });
@@ -109,7 +107,7 @@ describe('PrincipalApproval', () => {
           PrincipalApprovalComponent.getErrorMessages({
             [key]: invalidPercent,
           })
-        ).to.deep.equal({
+        ).toEqual({
           [key]: 'Must be a valid percent between 0 and 100',
         });
       });

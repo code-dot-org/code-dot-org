@@ -1,12 +1,9 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedback/EditableReviewState';
 import i18n from '@cdo/locale';
-
-import {expect} from '../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   latestReviewState: null,
@@ -22,44 +19,45 @@ const setUp = overrideProps => {
 describe('EditableReviewState', () => {
   it('displays keep working text', () => {
     const wrapper = setUp();
-    expect(wrapper.contains(i18n.keepWorking())).to.be.true;
+    expect(wrapper.contains(i18n.keepWorking())).toBe(true);
   });
 
   it('displays tooltip', () => {
     const wrapper = setUp();
     const tooltip = wrapper.find('ReactTooltip');
-    expect(tooltip).to.have.length(1);
-    expect(tooltip.contains(i18n.teacherFeedbackKeepWorkingTooltip())).to.be
-      .true;
+    expect(tooltip).toHaveLength(1);
+    expect(tooltip.contains(i18n.teacherFeedbackKeepWorkingTooltip())).toBe(
+      true
+    );
   });
 
   it('displays a checked checkbox if reviewState is keepWorking and student is not awaiting review', () => {
     const wrapper = setUp({
       latestReviewState: ReviewStates.keepWorking,
     });
-    expect(wrapper.instance().checkbox.checked).to.be.true;
+    expect(wrapper.instance().checkbox.checked).toBe(true);
   });
 
   it('displays a indeterminate checkbox if reviewState is keepWorking and student is awaiting reivew', () => {
     const wrapper = setUp({
       latestReviewState: ReviewStates.awaitingReview,
     });
-    expect(wrapper.instance().checkbox.indeterminate).to.be.true;
+    expect(wrapper.instance().checkbox.indeterminate).toBe(true);
   });
 
   it('displays an unchecked checkbox if no latestFeedback', () => {
     const wrapper = setUp({latestReviewState: null});
-    expect(wrapper.instance().checkbox.checked).to.be.false;
+    expect(wrapper.instance().checkbox.checked).toBe(false);
   });
 
   it('displays an unchecked checkbox if reviewState is completed', () => {
     const wrapper = setUp({latestReviewState: ReviewStates.completed});
-    expect(wrapper.instance().checkbox.checked).to.be.false;
+    expect(wrapper.instance().checkbox.checked).toBe(false);
   });
 
   describe('starting with an unchecked box', () => {
     it('when checkbox is clicked, it calls onReviewStateChange with value keepWorking', () => {
-      const onReviewStateChangeStub = sinon.stub();
+      const onReviewStateChangeStub = jest.fn();
 
       const wrapper = setUp({
         onReviewStateChange: onReviewStateChangeStub,
@@ -69,11 +67,11 @@ describe('EditableReviewState', () => {
       wrapper.instance().checkbox.checked = true;
       wrapper.find('input').simulate('change');
 
-      expect(onReviewStateChangeStub).to.have.been.calledWith('keepWorking');
+      expect(onReviewStateChangeStub).toHaveBeenCalledWith('keepWorking');
     });
 
     it('when checkbox is clicked twice, it calls onReviewStateChange with value null', () => {
-      const onReviewStateChangeStub = sinon.stub();
+      const onReviewStateChangeStub = jest.fn();
 
       const wrapper = setUp({
         onReviewStateChange: onReviewStateChangeStub,
@@ -83,13 +81,13 @@ describe('EditableReviewState', () => {
       wrapper.find('input').simulate('change');
       wrapper.find('input').simulate('change');
 
-      expect(onReviewStateChangeStub).to.have.been.calledWith(null);
+      expect(onReviewStateChangeStub).toHaveBeenCalledWith(null);
     });
   });
 
   describe('starting with a checked box', () => {
     it('when checkbox is clicked, it calls onReviewStateChange with value completed', () => {
-      const onReviewStateChangeStub = sinon.stub();
+      const onReviewStateChangeStub = jest.fn();
 
       const wrapper = setUp({
         onReviewStateChange: onReviewStateChangeStub,
@@ -98,7 +96,7 @@ describe('EditableReviewState', () => {
 
       wrapper.find('input').simulate('change');
 
-      expect(onReviewStateChangeStub).to.have.been.calledWith('completed');
+      expect(onReviewStateChangeStub).toHaveBeenCalledWith('completed');
     });
   });
 
@@ -107,7 +105,7 @@ describe('EditableReviewState', () => {
       const wrapper = setUp({
         latestReviewState: ReviewStates.awaitingReview,
       });
-      expect(wrapper.contains(i18n.waitingForTeacherReviewLabel())).to.be.true;
+      expect(wrapper.contains(i18n.waitingForTeacherReviewLabel())).toBe(true);
     });
 
     it('displays tooltip with awaiting review content', () => {
@@ -116,13 +114,14 @@ describe('EditableReviewState', () => {
       });
 
       const tooltip = wrapper.find('ReactTooltip');
-      expect(tooltip).to.have.length(1);
-      expect(tooltip.contains(i18n.teacherFeedbackAwaitingReviewTooltip())).to
-        .be.true;
+      expect(tooltip).toHaveLength(1);
+      expect(
+        tooltip.contains(i18n.teacherFeedbackAwaitingReviewTooltip())
+      ).toBe(true);
     });
 
     it('when checkbox is click, it calls onReviewStateChange with value completed', () => {
-      const onReviewStateChangeStub = sinon.stub();
+      const onReviewStateChangeStub = jest.fn();
 
       const wrapper = setUp({
         latestReviewState: ReviewStates.awaitingReview,
@@ -131,11 +130,11 @@ describe('EditableReviewState', () => {
 
       wrapper.find('input').simulate('change');
 
-      expect(onReviewStateChangeStub).to.have.been.calledWith('completed');
+      expect(onReviewStateChangeStub).toHaveBeenCalledWith('completed');
     });
 
     it('when checkbox is clicked twice, it calls onReviewStateChange with value keepWorking', () => {
-      const onReviewStateChangeStub = sinon.stub();
+      const onReviewStateChangeStub = jest.fn();
 
       const wrapper = setUp({
         latestReviewState: ReviewStates.awaitingReview,
@@ -145,7 +144,7 @@ describe('EditableReviewState', () => {
       wrapper.find('input').simulate('change');
       wrapper.find('input').simulate('change');
 
-      expect(onReviewStateChangeStub).to.have.been.calledWith('keepWorking');
+      expect(onReviewStateChangeStub).toHaveBeenCalledWith('keepWorking');
     });
   });
 });

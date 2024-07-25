@@ -148,6 +148,27 @@ module.exports = {
         pathGroupsExcludedImportTypes: ['builtin', 'object'],
       },
     ],
+    'no-restricted-imports': [
+      'error',
+      {
+        paths: [
+          {
+            name: 'chai',
+            message: 'Use jest matchers instead of chai',
+          },
+          {
+            name: 'sinon',
+            message: 'Use jest spys and stubs instead of sinon',
+          },
+        ],
+        patterns: [
+          {
+            group: ['*deprecatedChai', '*reconfiguredChai'],
+            message: 'Use jest matchers instead of chai',
+          },
+        ],
+      },
+    ],
   },
   settings: {
     react: {
@@ -177,18 +198,6 @@ module.exports = {
       rules: {
         'storybook/no-title-property-in-meta': 'error',
       },
-    },
-    {
-      rules: {
-        'import/order': 'off',
-      },
-      // We are actively working to decrease the number of folders in this list.
-      // To turn on the order rule for a folder, remove it from this list and run `yarn lint --fix`
-      // Commit any changes made.
-      files: [
-        // This one had some problems, see https://github.com/code-dot-org/code-dot-org/pull/58284
-        'src/templates/curriculumCatalog/**',
-      ],
     },
   ],
 };

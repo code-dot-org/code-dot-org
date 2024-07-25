@@ -1,10 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import Announcement from '@cdo/apps/lib/levelbuilder/announcementsEditor/Announcement';
-
-import {assert} from '../../../../util/reconfiguredChai';
 
 const sampleAnnouncement = {
   key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',
@@ -29,8 +26,8 @@ const sampleAnnouncementWithDismissibleAndButtonText = {
 describe('Announcement', () => {
   let defaultProps, onChange, onRemove;
   beforeEach(() => {
-    onChange = sinon.spy();
-    onRemove = sinon.spy();
+    onChange = jest.fn();
+    onRemove = jest.fn();
     defaultProps = {
       announcement: sampleAnnouncement,
       inputStyle: {},
@@ -44,10 +41,9 @@ describe('Announcement', () => {
     const wrapper = shallow(
       <Announcement {...defaultProps} announcement={sampleAnnouncement} />
     );
-    assert.equal(
-      wrapper.find('.uitest-announcement-dismissible').props().checked,
-      true
-    );
+    expect(
+      wrapper.find('.uitest-announcement-dismissible').props().checked
+    ).toEqual(true);
   });
 
   it('uses dismissible value if provided', () => {
@@ -57,20 +53,18 @@ describe('Announcement', () => {
         announcement={sampleAnnouncementWithDismissibleAndButtonText}
       />
     );
-    assert.equal(
-      wrapper.find('.uitest-announcement-dismissible').props().checked,
-      false
-    );
+    expect(
+      wrapper.find('.uitest-announcement-dismissible').props().checked
+    ).toEqual(false);
   });
 
   it('defaults button text to empty string if not specified', () => {
     const wrapper = shallow(
       <Announcement {...defaultProps} announcement={sampleAnnouncement} />
     );
-    assert.equal(
-      wrapper.find('.uitest-announcement-button-text').props().value,
-      ''
-    );
+    expect(
+      wrapper.find('.uitest-announcement-button-text').props().value
+    ).toEqual('');
   });
 
   it('uses buttonText value if provided', () => {
@@ -80,9 +74,8 @@ describe('Announcement', () => {
         announcement={sampleAnnouncementWithDismissibleAndButtonText}
       />
     );
-    assert.equal(
-      wrapper.find('.uitest-announcement-button-text').props().value,
-      'Push the button'
-    );
+    expect(
+      wrapper.find('.uitest-announcement-button-text').props().value
+    ).toEqual('Push the button');
   });
 });

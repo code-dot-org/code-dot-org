@@ -12,7 +12,7 @@ function addClickEventToLinks(selector, eventName) {
       analyticsReporter.sendEvent(
         eventName,
         {
-          [selector]: link.innerText,
+          [selector]: link.href,
         },
         PLATFORMS.STATSIG
       );
@@ -21,15 +21,27 @@ function addClickEventToLinks(selector, eventName) {
 }
 
 $(document).ready(function () {
+  const signInButton = document.getElementById('signin_button');
   const headerCreateMenu = document.getElementById('header_create_menu');
   const pageUrl = window.location.href;
   const helpIcon = document.querySelector('#help-icon');
   const createAccountButton = document.querySelector('#create_account_button');
+  const screenWidth = window.innerWidth;
+
+  function getHeaderType(screenWidth) {
+    if (screenWidth < 425) return 'mobile';
+    if (screenWidth < 1024) return 'tablet';
+    if (screenWidth <= 1268) return 'small desktop';
+    return 'large desktop';
+  }
 
   if (getScriptData('isSignedOut')) {
     analyticsReporter.sendEvent(
       EVENTS.SIGNED_OUT_USER_SEES_HEADER,
-      {pageUrl: pageUrl},
+      {
+        pageUrl: pageUrl,
+        headerType: getHeaderType(screenWidth),
+      },
       PLATFORMS.STATSIG
     );
 
@@ -52,6 +64,17 @@ $(document).ready(function () {
           EVENTS.CREATE_ACCOUNT_BUTTON_CLICKED,
           {pageUrl: pageUrl},
           PLATFORMS.BOTH
+        );
+      });
+    }
+
+    // Log if the Sign in button is clicked
+    if (signInButton) {
+      signInButton.addEventListener('click', () => {
+        analyticsReporter.sendEvent(
+          EVENTS.SIGNED_OUT_USER_CLICKS_SIGN_IN,
+          {pageUrl: pageUrl},
+          PLATFORMS.STATSIG
         );
       });
     }
