@@ -25,7 +25,7 @@ const ProjectNameFailureDialog: React.FunctionComponent<
       handleClose={handleClose}
     >
       <Heading3>{i18n.nameFailureDialogTitle()}</Heading3>
-      <div className={styles.body}>
+      <div className={styles.contents}>
         <p>{i18n.nameFailureDialogBody({text: flaggedText})}</p>
       </div>
       <DialogFooter rightAlign>
