@@ -10,7 +10,7 @@ import Dialog, {
   Footer,
   Confirm,
   Cancel,
-} from '../../templates/Dialog';
+} from '../../olderSharedComponents/Dialog';
 import color from '../../util/color';
 
 const style = {

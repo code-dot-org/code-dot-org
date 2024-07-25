@@ -4,10 +4,10 @@ import i18n from '@cdo/locale';
 import {queryParams, updateQueryParam} from '../../code-studio/utils';
 import style from '../../../style/code-studio/curriculum_catalog_filters.module.scss';
 import {curriculumDataShape} from './curriculumCatalogConstants';
-import CheckboxDropdown from '../CheckboxDropdown';
+import CheckboxDropdown from '../../olderSharedComponents/CheckboxDropdown';
 import Toggle from '../../componentLibrary/toggle/Toggle.tsx';
-import Button from '@cdo/apps/templates/Button';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import Button from '@cdo/apps/olderSharedComponents/Button';
+import FontAwesome from '@cdo/apps/olderSharedComponents/FontAwesome';
 import {Heading6, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {
   translatedCourseOfferingCsTopics,

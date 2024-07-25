@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../olderSharedComponents/FontAwesome';
 
 import {ITEM_TYPE, ITEM_TYPE_SHAPE} from './ItemType';
 

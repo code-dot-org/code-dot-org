@@ -4,9 +4,8 @@ import React, {Component} from 'react';
 import fontConstants from '@cdo/apps/fontConstants';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
+import Button from '../olderSharedComponents/Button';
 import color from '../util/color';
-
-import Button from './Button';
 
 /**
  * A card used on /congrats to display information about a particular course or

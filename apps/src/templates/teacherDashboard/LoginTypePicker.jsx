@@ -19,8 +19,8 @@ import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import {Heading3} from '../../lib/ui/Headings';
+import Button from '../../olderSharedComponents/Button';
 import styleConstants from '../../styleConstants';
-import Button from '../Button';
 
 import CardContainer from './CardContainer';
 import LoginTypeCard from './LoginTypeCard';

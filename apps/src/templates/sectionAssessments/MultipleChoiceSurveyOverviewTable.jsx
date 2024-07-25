@@ -7,8 +7,11 @@ import * as sort from 'sortabular';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import wrappedSortable from '../tables/wrapped_sortable';
+import {
+  tableLayoutStyles,
+  sortableOptions,
+} from '../../olderSharedComponents/tables/tableConstants';
+import wrappedSortable from '../../olderSharedComponents/tables/wrapped_sortable';
 
 import {multipleChoiceDataPropType} from './assessmentDataShapes';
 import MultipleChoiceSurveyQuestionDialog from './MultipleChoiceSurveyQuestionDialog';

@@ -7,7 +7,7 @@ import {navigateToHref} from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import BaseDialog from '../BaseDialog';
+import BaseDialog from '../../olderSharedComponents/BaseDialog';
 
 import LoginTypePicker from './LoginTypePicker';
 import PadAndCenter from './PadAndCenter';

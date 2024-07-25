@@ -8,7 +8,7 @@ import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
 import {PrincipalApprovalState} from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+import wrappedSortable from '@cdo/apps/olderSharedComponents/tables/wrapped_sortable';
 import color from '@cdo/apps/util/color';
 
 import {StatusColors, getApplicationStatuses} from './constants';

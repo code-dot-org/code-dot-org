@@ -9,7 +9,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {RootState} from '@cdo/apps/types/redux';
 import i18n from '@cdo/locale';
 
-import BaseDialog from '../../BaseDialog';
+import BaseDialog from '../../../olderSharedComponents/BaseDialog';
 
 import AgeGatedStudentsTable from './AgeGatedStudentsTable';
 

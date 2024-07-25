@@ -4,10 +4,10 @@ import {connect} from 'react-redux';
 
 import {BASE_DIALOG_WIDTH} from '@cdo/apps/constants';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
-import Dialog, {Body} from '@cdo/apps/templates/Dialog';
+import Dialog, {Body} from '@cdo/apps/olderSharedComponents/Dialog';
 import i18n from '@cdo/locale';
 
-import Button from '../templates/Button';
+import Button from '../olderSharedComponents/Button';
 import DialogFooter from '../templates/teacherDashboard/DialogFooter';
 
 import {actions, REDIRECT_RESPONSE} from './redux/applab';

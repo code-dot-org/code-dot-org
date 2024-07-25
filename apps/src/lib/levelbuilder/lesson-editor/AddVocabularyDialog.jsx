@@ -5,7 +5,7 @@ import Select from 'react-select';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import BaseDialog from '@cdo/apps/olderSharedComponents/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import color from '@cdo/apps/util/color';
 

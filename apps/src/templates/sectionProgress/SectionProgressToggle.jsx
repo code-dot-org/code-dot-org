@@ -8,7 +8,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import ToggleGroup from '../ToggleGroup';
+import ToggleGroup from '../../olderSharedComponents/ToggleGroup';
 
 import {ViewType} from './sectionProgressConstants';
 import {setCurrentView} from './sectionProgressRedux';

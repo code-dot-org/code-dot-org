@@ -14,10 +14,10 @@ import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstan
 import i18n from '@cdo/locale';
 
 import Spinner from '../../code-studio/pd/components/spinner';
+import Button from '../../olderSharedComponents/Button';
 import {getStore} from '../../redux';
 import * as color from '../../util/color';
 import {hashString} from '../../utils';
-import Button from '../Button';
 
 /**
  * This component allows students whose personal account linking has been

@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/templates/Button';
+import BaseDialog from '@cdo/apps/olderSharedComponents/BaseDialog';
+import Button from '@cdo/apps/olderSharedComponents/Button';
 import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import color from '@cdo/apps/util/color';

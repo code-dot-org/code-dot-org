@@ -9,7 +9,7 @@ import {
   removeStandard,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
 import {standardShape, frameworkShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import Dialog from '@cdo/apps/templates/Dialog';
+import Dialog from '@cdo/apps/olderSharedComponents/Dialog';
 import color from '@cdo/apps/util/color';
 
 import {lessonEditorTableStyles} from './TableConstants';

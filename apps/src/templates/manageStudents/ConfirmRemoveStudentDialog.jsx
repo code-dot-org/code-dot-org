@@ -13,9 +13,9 @@ import {
   Header,
   ConfirmCancelFooter,
 } from '../../lib/ui/SystemDialog/SystemDialog';
+import BaseDialog from '../../olderSharedComponents/BaseDialog';
+import Button from '../../olderSharedComponents/Button';
 import color from '../../util/color';
-import BaseDialog from '../BaseDialog';
-import Button from '../Button';
 
 // A stub set of otherwise-required props for use in stories and unit tests.
 export const MINIMUM_TEST_PROPS = {

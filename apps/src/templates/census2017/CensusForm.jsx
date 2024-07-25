@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 
 import i18n from '@cdo/locale';
 
-import Button from '../Button';
+import Button from '../../olderSharedComponents/Button';
 import CountryAutocompleteDropdown from '../CountryAutocompleteDropdown';
 import SchoolNotFound from '../SchoolNotFound';
 

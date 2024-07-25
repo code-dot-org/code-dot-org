@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import BaseDialog from '@cdo/apps/olderSharedComponents/BaseDialog';
 import msg from '@cdo/locale';
 
 import styles from './image-upload-warning.module.scss';

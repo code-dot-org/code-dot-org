@@ -8,8 +8,8 @@ import {Heading1} from '@cdo/apps/lib/ui/Headings';
 import {
   tableLayoutStyles,
   sortableOptions,
-} from '@cdo/apps/templates/tables/tableConstants';
-import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+} from '@cdo/apps/olderSharedComponents/tables/tableConstants';
+import wrappedSortable from '@cdo/apps/olderSharedComponents/tables/wrapped_sortable';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 

@@ -4,7 +4,7 @@ import React, {useState, useEffect, forwardRef} from 'react';
 import {connect} from 'react-redux';
 
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/olderSharedComponents/FontAwesome';
 import {useFetch} from '@cdo/apps/util/useFetch';
 import i18n from '@cdo/locale';
 

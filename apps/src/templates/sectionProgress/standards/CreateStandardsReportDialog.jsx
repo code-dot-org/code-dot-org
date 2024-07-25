@@ -5,7 +5,7 @@ import fontConstants from '@cdo/apps/fontConstants';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import BaseDialog from '../../BaseDialog';
+import BaseDialog from '../../../olderSharedComponents/BaseDialog';
 
 import CreateStandardsReportStep1 from './CreateStandardsReportStep1';
 import CreateStandardsReportStep2 from './CreateStandardsReportStep2';

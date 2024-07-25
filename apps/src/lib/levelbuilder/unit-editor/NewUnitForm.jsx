@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import BaseDialog from '@cdo/apps/olderSharedComponents/BaseDialog';
 
 import NewCourseFields from '../NewCourseFields';
 

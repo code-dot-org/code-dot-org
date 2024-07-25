@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 
 import msg from '@cdo/locale';
 
-import ToggleGroup from '../templates/ToggleGroup';
+import ToggleGroup from '../olderSharedComponents/ToggleGroup';
 
 import {ApplabInterfaceMode} from './constants';
 import {actions} from './redux/applab';

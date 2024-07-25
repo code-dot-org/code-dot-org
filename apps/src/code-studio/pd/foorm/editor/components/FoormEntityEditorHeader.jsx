@@ -4,8 +4,8 @@ import React, {Component} from 'react';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
+import FontAwesome from '@cdo/apps/olderSharedComponents/FontAwesome';
+import ToggleGroup from '@cdo/apps/olderSharedComponents/ToggleGroup';
 
 import Spinner from '../../../components/spinner';
 

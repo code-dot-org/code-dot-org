@@ -2,10 +2,10 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import CrosshairOverlay from '@cdo/apps/templates/CrosshairOverlay';
 import TooltipOverlay, {
   coordinatesProvider,
-} from '@cdo/apps/templates/TooltipOverlay';
+} from '@cdo/apps/olderSharedComponents/TooltipOverlay';
+import CrosshairOverlay from '@cdo/apps/templates/CrosshairOverlay';
 import VisualizationOverlay, {
   dispatchResizeEvent,
 } from '@cdo/apps/templates/VisualizationOverlay';

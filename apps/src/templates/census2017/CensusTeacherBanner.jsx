@@ -5,8 +5,8 @@ import fontConstants from '@cdo/apps/fontConstants';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '@cdo/apps/util/color';
 
+import Button from '../../olderSharedComponents/Button';
 import styleConstants from '../../styleConstants';
-import Button from '../Button';
 import SchoolInfoInputs from '../SchoolInfoInputs';
 
 export default class CensusTeacherBanner extends Component {

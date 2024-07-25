@@ -12,7 +12,7 @@ import {
 import ActivitySectionCard from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitySectionCard';
 import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
 import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/olderSharedComponents/FontAwesome';
 import color from '@cdo/apps/util/color';
 
 /*

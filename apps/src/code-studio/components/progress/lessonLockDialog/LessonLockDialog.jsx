@@ -12,7 +12,7 @@ import {
 import SkeletonRows from '@cdo/apps/code-studio/components/progress/lessonLockDialog/SkeletonRows';
 import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
 import fontConstants from '@cdo/apps/fontConstants';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import BaseDialog from '@cdo/apps/olderSharedComponents/BaseDialog';
 import {NO_SECTION} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import color from '@cdo/apps/util/color';

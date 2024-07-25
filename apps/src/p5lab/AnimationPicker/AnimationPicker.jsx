@@ -4,8 +4,8 @@ import {connect} from 'react-redux';
 
 import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import BaseDialog from '@cdo/apps/olderSharedComponents/BaseDialog.jsx';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
-import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import {createUuid, makeEnum} from '@cdo/apps/utils';
 
 import {

@@ -9,8 +9,8 @@ import {
   Heading5,
   BodyTwoText,
 } from '@cdo/apps/componentLibrary/typography';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import Button from '@cdo/apps/templates/Button';
+import AccessibleDialog from '@cdo/apps/olderSharedComponents/AccessibleDialog';
+import Button from '@cdo/apps/olderSharedComponents/Button';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {
   assignToSection,

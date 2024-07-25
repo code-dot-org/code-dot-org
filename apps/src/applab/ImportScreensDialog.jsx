@@ -7,11 +7,16 @@ import {connect} from 'react-redux';
 import AssetThumbnail, {
   styles as assetThumbnailStyles,
 } from '../code-studio/components/AssetThumbnail';
-import Sounds from '../Sounds';
-import Dialog, {Body, Buttons, Confirm, Cancel} from '../templates/Dialog';
+import Dialog, {
+  Body,
+  Buttons,
+  Confirm,
+  Cancel,
+} from '../olderSharedComponents/Dialog';
 import MultiCheckboxSelector, {
   styles as multiCheckboxStyles,
-} from '../templates/MultiCheckboxSelector';
+} from '../olderSharedComponents/MultiCheckboxSelector';
+import Sounds from '../Sounds';
 import color from '../util/color';
 
 import * as applabConstants from './constants';

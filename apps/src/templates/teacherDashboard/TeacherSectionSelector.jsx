@@ -3,7 +3,7 @@ import queryString from 'query-string';
 import React, {Component} from 'react';
 
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
-import SmallChevronLink from '@cdo/apps/templates/SmallChevronLink';
+import SmallChevronLink from '@cdo/apps/olderSharedComponents/SmallChevronLink';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 

@@ -8,9 +8,9 @@ import React, {Component} from 'react';
 import i18n from '@cdo/locale';
 
 import {Heading3} from '../../lib/ui/Headings';
+import Button from '../../olderSharedComponents/Button';
 import styleConstants from '../../styleConstants';
 import color from '../../util/color';
-import Button from '../Button';
 
 import CardContainer from './CardContainer';
 import LoginTypeCard from './LoginTypeCard';

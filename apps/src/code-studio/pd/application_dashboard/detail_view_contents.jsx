@@ -30,7 +30,7 @@ import {
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/olderSharedComponents/FontAwesome';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 
 import {

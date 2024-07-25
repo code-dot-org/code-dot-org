@@ -4,7 +4,7 @@ import React from 'react';
 import {isIE11} from '@cdo/apps/util/browser-detector';
 import i18n from '@cdo/locale';
 
-import Button from '../../templates/Button';
+import Button from '../../olderSharedComponents/Button';
 
 import AssetUploader from './AssetUploader';
 

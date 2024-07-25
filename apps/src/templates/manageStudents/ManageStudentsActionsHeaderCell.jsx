@@ -7,7 +7,7 @@ import i18n from '@cdo/locale';
 
 import QuickActionsCell, {
   QuickActionsCellType,
-} from '../tables/QuickActionsCell';
+} from '../../olderSharedComponents/tables/QuickActionsCell';
 
 import ControlProjectSharingDialog from './ControlProjectSharingDialog';
 import {setShowSharingColumn} from './manageStudentsRedux';

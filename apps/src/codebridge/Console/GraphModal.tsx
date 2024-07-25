@@ -1,6 +1,6 @@
 import React from 'react';
 
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
+import AccessibleDialog from '@cdo/apps/olderSharedComponents/AccessibleDialog';
 
 import moduleStyles from '@cdo/apps/templates/accessible-dialogue.module.scss';
 

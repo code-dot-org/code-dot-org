@@ -6,7 +6,7 @@ import React from 'react';
 
 import msg from '@cdo/locale';
 
-import FontAwesome from '../../templates/FontAwesome';
+import FontAwesome from '../../olderSharedComponents/FontAwesome';
 
 import {ColumnType} from './dataUtils';
 

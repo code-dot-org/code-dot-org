@@ -4,7 +4,7 @@ import {
   MAX_ASK_ABOUT_TOPICS,
   MODEL_CARD_FIELDS_LABELS_ICONS,
 } from '@cdo/apps/aichat/views/modelCustomization/constants';
-import MultiItemInput from '@cdo/apps/templates/MultiItemInput';
+import MultiItemInput from '@cdo/apps/olderSharedComponents/MultiItemInput';
 
 import {UpdateContext} from './UpdateContext';
 

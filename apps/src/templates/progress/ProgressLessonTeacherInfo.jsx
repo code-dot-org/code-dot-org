@@ -15,7 +15,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import i18n from '@cdo/locale';
 
-import Button from '../Button';
+import Button from '../../olderSharedComponents/Button';
 
 import HiddenForSectionToggle from './HiddenForSectionToggle';
 import LessonLock from './LessonLock';

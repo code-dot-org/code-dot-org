@@ -8,12 +8,12 @@ import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstan
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import Button from '@cdo/apps/olderSharedComponents/Button';
+import DropdownButton from '@cdo/apps/olderSharedComponents/DropdownButton';
 import styleConstants from '@cdo/apps/styleConstants';
-import Button from '@cdo/apps/templates/Button';
 import CopyrightInfo from '@cdo/apps/templates/CopyrightInfo';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
@@ -29,7 +29,7 @@ import {DefaultLocale} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import Announcements from '../../code-studio/components/progress/Announcements';
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../olderSharedComponents/FontAwesome';
 
 import LessonStandards from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/templates/Button';
+import BaseDialog from '@cdo/apps/olderSharedComponents/BaseDialog';
+import Button from '@cdo/apps/olderSharedComponents/Button';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './sections-refresh.module.scss';

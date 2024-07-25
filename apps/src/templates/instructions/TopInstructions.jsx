@@ -17,6 +17,7 @@ import StudentRubricView from '@cdo/apps/templates/rubrics/StudentRubricView';
 import i18n from '@cdo/locale';
 
 import commonStyles from '../../commonStyles';
+import Button from '../../olderSharedComponents/Button';
 import {
   toggleInstructionsCollapsed,
   setInstructionsMaxHeightNeeded,
@@ -26,7 +27,6 @@ import {
 } from '../../redux/instructions';
 import styleConstants from '../../styleConstants';
 import color from '../../util/color';
-import Button from '../Button';
 import ContainedLevel from '../ContainedLevel';
 import ContainedLevelAnswer from '../ContainedLevelAnswer';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';

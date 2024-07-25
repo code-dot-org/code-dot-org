@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from 'react';
 import style from './expanded_curriculum_catalog_card.module.scss';
 import centererStyle from './curriculum_catalog_card.module.scss';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/olderSharedComponents/FontAwesome';
 import PropTypes from 'prop-types';
 import {
   BodyTwoText,
@@ -9,7 +9,7 @@ import {
   Heading4,
 } from '@cdo/apps/componentLibrary/typography';
 import {TextLink} from '@dsco_/link';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/olderSharedComponents/Button';
 import i18n from '@cdo/locale';
 import {
   translatedCourseOfferingDeviceTypes,

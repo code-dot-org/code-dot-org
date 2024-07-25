@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {tableLayoutStyles} from '../../tables/tableConstants';
+import {tableLayoutStyles} from '../../../olderSharedComponents/tables/tableConstants';
 
 interface Props {
   id: number;

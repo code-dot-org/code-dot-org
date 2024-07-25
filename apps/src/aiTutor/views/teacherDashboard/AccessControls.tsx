@@ -5,7 +5,7 @@ import * as Table from 'reactabular-table';
 import {fetchStudents} from '@cdo/apps/aiTutor/accessControlsApi';
 import {StudentAccessData} from '@cdo/apps/aiTutor/types';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import {tableLayoutStyles as tableStyles} from '@cdo/apps/templates/tables/tableConstants';
+import {tableLayoutStyles as tableStyles} from '@cdo/apps/olderSharedComponents/tables/tableConstants';
 
 import {styleOverrides} from './InteractionsTable';
 import SectionAccessToggle from './SectionAccessToggle';

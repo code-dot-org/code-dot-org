@@ -5,8 +5,8 @@ import {connect} from 'react-redux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import i18n from '@cdo/locale';
 
-import BaseDialog from '../BaseDialog';
-import Button from '../Button';
+import BaseDialog from '../../olderSharedComponents/BaseDialog';
+import Button from '../../olderSharedComponents/Button';
 import DialogFooter from '../teacherDashboard/DialogFooter';
 
 import {addMultipleAddRows} from './manageStudentsRedux';

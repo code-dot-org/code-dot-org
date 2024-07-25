@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import Notification, {
+  NotificationType,
+} from '@cdo/apps/olderSharedComponents/Notification';
 import i18n from '@cdo/locale';
 
 export default class LessonExtrasNotification extends Component {

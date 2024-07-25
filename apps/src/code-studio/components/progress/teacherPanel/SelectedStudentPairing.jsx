@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Tooltip from '@cdo/apps/templates/Tooltip';
+import Tooltip from '@cdo/apps/olderSharedComponents/Tooltip';
 import i18n from '@cdo/locale';
 
 // Render a string and possibly a tooltip that describes the student's

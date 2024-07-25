@@ -6,9 +6,9 @@ import {connect} from 'react-redux';
 import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 
+import Button from '../../olderSharedComponents/Button';
 import styleConstants from '../../styleConstants';
 import color from '../../util/color';
-import Button from '../Button';
 
 import ProjectCardRow from './ProjectCardRow';
 import {

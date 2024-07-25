@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 
 import i18n from '@cdo/locale';
 
-import Button from '../Button';
+import Button from '../../olderSharedComponents/Button';
 
 import {studentOverviewDataPropType} from './assessmentDataShapes';
 import {

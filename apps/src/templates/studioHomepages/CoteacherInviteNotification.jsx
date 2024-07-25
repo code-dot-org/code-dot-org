@@ -5,7 +5,9 @@ import {connect} from 'react-redux';
 import {BodyTwoText, StrongText} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import Notification, {
+  NotificationType,
+} from '@cdo/apps/olderSharedComponents/Notification';
 import {
   asyncLoadCoteacherInvite,
   asyncLoadSectionData,
@@ -13,7 +15,7 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
-import Button from '../Button';
+import Button from '../../olderSharedComponents/Button';
 
 const CoteacherInviteNotification = ({
   isForPl,

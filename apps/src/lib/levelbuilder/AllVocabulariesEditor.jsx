@@ -9,7 +9,7 @@ import {
   removeVocabulary,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import Dialog from '@cdo/apps/templates/Dialog';
+import Dialog from '@cdo/apps/olderSharedComponents/Dialog';
 
 import AddVocabularyDialog from './lesson-editor/AddVocabularyDialog';
 import {lessonEditorTableStyles} from './lesson-editor/TableConstants';

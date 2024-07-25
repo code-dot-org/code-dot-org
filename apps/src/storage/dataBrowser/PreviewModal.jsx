@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
+import BaseDialog from '@cdo/apps/olderSharedComponents/BaseDialog.jsx';
 import msg from '@cdo/locale';
 
 import {hidePreview} from '../redux/data';

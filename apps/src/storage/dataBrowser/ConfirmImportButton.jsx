@@ -4,8 +4,8 @@ import React from 'react';
 
 import msg from '@cdo/locale';
 
-import Dialog from '../../templates/Dialog';
-import PendingButton from '../../templates/PendingButton';
+import Dialog from '../../olderSharedComponents/Dialog';
+import PendingButton from '../../olderSharedComponents/PendingButton';
 
 import dataStyles from './data-styles.module.scss';
 

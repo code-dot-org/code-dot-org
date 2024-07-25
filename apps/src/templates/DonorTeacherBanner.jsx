@@ -6,12 +6,13 @@ import fontConstants from '@cdo/apps/fontConstants';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import Notification, {
+  NotificationType,
+} from '@cdo/apps/olderSharedComponents/Notification';
 import i18n from '@cdo/locale';
 
+import Button from '../olderSharedComponents/Button';
 import color from '../util/color';
-
-import Button from './Button';
 
 export default class DonorTeacherBanner extends Component {
   static propTypes = {

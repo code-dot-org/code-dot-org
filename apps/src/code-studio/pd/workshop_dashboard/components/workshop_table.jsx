@@ -8,7 +8,7 @@ import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imp
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+import wrappedSortable from '@cdo/apps/olderSharedComponents/tables/wrapped_sortable.js';
 import color from '@cdo/apps/util/color';
 
 import {workshopShape} from '../types.js';

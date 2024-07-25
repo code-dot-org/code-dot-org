@@ -6,7 +6,7 @@ import ReactTooltip from 'react-tooltip';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import {OAuthProviders} from '@cdo/apps/lib/ui/accounts/constants';
-import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
+import {tableLayoutStyles} from '@cdo/apps/olderSharedComponents/tables/tableConstants';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 

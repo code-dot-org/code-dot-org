@@ -4,9 +4,9 @@ import React, {Component} from 'react';
 import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
+import Button from '@cdo/apps/olderSharedComponents/Button';
+import FontAwesome from '@cdo/apps/olderSharedComponents/FontAwesome';
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
-import Button from '@cdo/apps/templates/Button';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {
   getExportableFeedbackData,

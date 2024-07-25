@@ -6,11 +6,11 @@ import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import {getStore} from '@cdo/apps/redux';
 import i18n from '@cdo/locale';
 
+import BaseDialog from '../olderSharedComponents/BaseDialog';
+import LegacyButton from '../olderSharedComponents/LegacyButton';
 import color from '../util/color';
 
 import BackToFrontConfetti from './BackToFrontConfetti';
-import BaseDialog from './BaseDialog';
-import LegacyButton from './LegacyButton';
 import PuzzleRatingButtons from './PuzzleRatingButtons';
 
 class ChallengeDialog extends React.Component {

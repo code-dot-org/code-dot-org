@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import * as Table from 'reactabular-table';
 
+import {tableLayoutStyles} from '@cdo/apps/olderSharedComponents/tables/tableConstants';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 

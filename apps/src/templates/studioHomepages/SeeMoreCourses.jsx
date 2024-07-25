@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 
 import i18n from '@cdo/locale';
 
+import Button from '../../olderSharedComponents/Button';
 import color from '../../util/color';
-import Button from '../Button';
 import ContentContainer from '../ContentContainer';
 
 import CourseCard from './CourseCard';

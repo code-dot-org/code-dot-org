@@ -4,9 +4,9 @@ import React from 'react';
 import i18n from '@cdo/locale';
 
 import Spinner from '../code-studio/pd/components/spinner';
+import BaseDialog from '../olderSharedComponents/BaseDialog';
+import Button from '../olderSharedComponents/Button';
 
-import BaseDialog from './BaseDialog';
-import Button from './Button';
 import DialogFooter from './teacherDashboard/DialogFooter';
 
 /*

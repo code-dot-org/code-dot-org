@@ -7,7 +7,7 @@ import React from 'react';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+import wrappedSortable from '@cdo/apps/olderSharedComponents/tables/wrapped_sortable';
 import color from '@cdo/apps/util/color';
 
 export default class ReportTable extends React.Component {

@@ -2,7 +2,7 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
+import CollapserIcon from '@cdo/apps/olderSharedComponents/CollapserIcon';
 import BackgroundMusicMuteButton from '@cdo/apps/templates/instructions/BackgroundMusicMuteButton';
 import InlineAudio from '@cdo/apps/templates/instructions/InlineAudio';
 import InstructionsTab from '@cdo/apps/templates/instructions/InstructionsTab';

@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import {closeDialog} from '@cdo/apps/redux/instructionsDialog';
 
-import BaseDialog from '../BaseDialog';
+import BaseDialog from '../../olderSharedComponents/BaseDialog';
 
 /**
  * A super basic component which connects our generic BaseDialog component to

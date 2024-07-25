@@ -3,10 +3,12 @@ import React from 'react';
 
 import SwipePrompt from '@cdo/apps/templates/SwipePrompt';
 
+import TooltipOverlay, {
+  coordinatesProvider,
+} from '../olderSharedComponents/TooltipOverlay';
 import ArrowButtons from '../templates/ArrowButtons';
 import CrosshairOverlay from '../templates/CrosshairOverlay';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
-import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
 import VisualizationOverlay from '../templates/VisualizationOverlay';
 
 var msg = require('@cdo/locale');

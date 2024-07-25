@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import {removeLevel} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import Dialog from '@cdo/apps/templates/Dialog';
+import Dialog from '@cdo/apps/olderSharedComponents/Dialog';
 
 /**
  * Dialog which confirms removal of the level in the specified position

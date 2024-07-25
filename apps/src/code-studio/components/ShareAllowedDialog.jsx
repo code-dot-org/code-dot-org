@@ -7,15 +7,15 @@ import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import fontConstants from '@cdo/apps/fontConstants';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import FontAwesome from '@cdo/apps/olderSharedComponents/FontAwesome';
 import * as p5labConstants from '@cdo/apps/p5lab/constants';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 import defaultThumbnail from '@cdo/static/projects/project_default.png';
 
 import * as applabConstants from '../../applab/constants';
-import BaseDialog from '../../templates/BaseDialog';
+import BaseDialog from '../../olderSharedComponents/BaseDialog';
 import PublishDialog from '../../templates/projects/publishDialog/PublishDialog';
 import {showPublishDialog} from '../../templates/projects/publishDialog/publishDialogRedux';
 import color from '../../util/color';

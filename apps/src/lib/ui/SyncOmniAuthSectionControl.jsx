@@ -7,12 +7,12 @@ import LtiSectionSyncDialog, {
   LtiSectionSyncResultShape,
 } from '@cdo/apps/lib/ui/simpleSignUp/lti/sync/LtiSectionSyncDialog';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import BaseDialog from '@cdo/apps/olderSharedComponents/BaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import Button from '../../templates/Button';
+import Button from '../../olderSharedComponents/Button';
 import {
   importOrUpdateRoster,
   sectionCode,

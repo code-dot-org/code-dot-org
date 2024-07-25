@@ -13,7 +13,7 @@ import {connect} from 'react-redux';
 import Select from 'react-select/lib/Select';
 
 import ModalHelpTip from '@cdo/apps/lib/ui/ModalHelpTip';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/olderSharedComponents/FontAwesome';
 import color from '@cdo/apps/util/color';
 
 import ConfirmationDialog from '../../../components/confirmation_dialog';

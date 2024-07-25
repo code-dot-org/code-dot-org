@@ -12,8 +12,8 @@ import {
   programmingExpressionShape,
   programmingEnvironmentShape,
 } from '@cdo/apps/lib/levelbuilder/shapes';
-import Button from '@cdo/apps/templates/Button';
-import Dialog from '@cdo/apps/templates/Dialog';
+import Button from '@cdo/apps/olderSharedComponents/Button';
+import Dialog from '@cdo/apps/olderSharedComponents/Dialog';
 import color from '@cdo/apps/util/color';
 
 import {lessonEditorTableStyles} from './TableConstants';

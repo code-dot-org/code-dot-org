@@ -4,7 +4,7 @@ import React from 'react';
 import i18n from '@cdo/locale';
 
 import {hashEmail} from '../../../code-studio/hashEmail';
-import BaseDialog from '../../../templates/BaseDialog';
+import BaseDialog from '../../../olderSharedComponents/BaseDialog';
 import color from '../../../util/color';
 import {isEmail} from '../../../util/formatValidation';
 import {Header, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';

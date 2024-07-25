@@ -9,8 +9,11 @@ import * as sort from 'sortabular';
 import styleConstants from '@cdo/apps/styleConstants';
 import i18n from '@cdo/locale';
 
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import wrappedSortable from '../tables/wrapped_sortable';
+import {
+  tableLayoutStyles,
+  sortableOptions,
+} from '../../olderSharedComponents/tables/tableConstants';
+import wrappedSortable from '../../olderSharedComponents/tables/wrapped_sortable';
 
 import {optionDataPropTypeMatch} from './assessmentDataShapes';
 import PercentAnsweredCell from './PercentAnsweredCell';

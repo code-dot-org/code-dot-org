@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import BaseDialog from '@cdo/apps/olderSharedComponents/BaseDialog';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 import ShareAllowedDialog from './ShareAllowedDialog';

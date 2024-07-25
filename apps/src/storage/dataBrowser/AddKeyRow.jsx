@@ -5,7 +5,7 @@ import React from 'react';
 
 import msg from '@cdo/locale';
 
-import PendingButton from '../../templates/PendingButton';
+import PendingButton from '../../olderSharedComponents/PendingButton';
 import {WarningType} from '../constants';
 import {storageBackend} from '../storage';
 

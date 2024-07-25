@@ -6,7 +6,7 @@ import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/olderSharedComponents/Button';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import color from '@cdo/apps/util/color';
 import {
@@ -15,9 +15,12 @@ import {
 } from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import {
+  tableLayoutStyles,
+  sortableOptions,
+} from '../../olderSharedComponents/tables/tableConstants';
+import wrappedSortable from '../../olderSharedComponents/tables/wrapped_sortable';
 import {stringifyQueryParams} from '../../utils';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import wrappedSortable from '../tables/wrapped_sortable';
 
 import SectionActionDropdown from './SectionActionDropdown';
 import {sortableSectionShape} from './shapes';

@@ -8,8 +8,8 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import locale from '@cdo/locale';
 
 import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
+import BaseDialog from '../../olderSharedComponents/BaseDialog';
 import color from '../../util/color';
-import BaseDialog from '../BaseDialog';
 
 import {classroomShape, loadErrorShape} from './shapes';
 import {

@@ -6,7 +6,7 @@ import React from 'react';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import wrappedSortable from '../templates/tables/wrapped_sortable';
+import wrappedSortable from '../olderSharedComponents/tables/wrapped_sortable';
 import color from '../util/color';
 
 import Packet from './Packet';

@@ -4,8 +4,8 @@ import React, {Component} from 'react';
 import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 
-import BaseDialog from '../../BaseDialog';
-import Button from '../../Button';
+import BaseDialog from '../../../olderSharedComponents/BaseDialog';
+import Button from '../../../olderSharedComponents/Button';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 
 import LessonStatusList from './LessonStatusList';

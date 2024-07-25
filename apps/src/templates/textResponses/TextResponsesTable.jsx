@@ -4,12 +4,15 @@ import React, {Component} from 'react';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/olderSharedComponents/FontAwesome';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import wrappedSortable from '../tables/wrapped_sortable';
+import {
+  tableLayoutStyles,
+  sortableOptions,
+} from '../../olderSharedComponents/tables/tableConstants';
+import wrappedSortable from '../../olderSharedComponents/tables/wrapped_sortable';
 
 import {textResponsePropType} from './textReponsesDataApi';
 

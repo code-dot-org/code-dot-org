@@ -4,9 +4,9 @@ import React, {Component} from 'react';
 import fontConstants from '@cdo/apps/fontConstants';
 
 import PopUpMenu from '../../lib/ui/PopUpMenu';
+import FontAwesome from '../../olderSharedComponents/FontAwesome';
 import color from '../../util/color';
 
-import FontAwesome from './../FontAwesome';
 import {sectionForDropdownShape} from './shapes';
 
 export default class TeacherSectionSelectorMenuItem extends Component {

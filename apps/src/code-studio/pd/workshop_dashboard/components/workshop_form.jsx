@@ -39,7 +39,7 @@ import {
   MustSuppressEmailSubjects,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/olderSharedComponents/FontAwesome';
 import color from '@cdo/apps/util/color';
 
 import MapboxLocationSearchField from '../../../../templates/MapboxLocationSearchField';

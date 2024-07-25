@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 
-import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
+import CollapserIcon from '@cdo/apps/olderSharedComponents/CollapserIcon';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 

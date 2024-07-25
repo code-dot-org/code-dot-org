@@ -4,12 +4,12 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import FontAwesome from '@cdo/apps/olderSharedComponents/FontAwesome';
 import {
   getSelectedScriptFriendlyName,
   getSelectedScriptDescription,
   setScriptId,
 } from '@cdo/apps/redux/unitSelectionRedux';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {getCurrentUnitData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {sectionName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';

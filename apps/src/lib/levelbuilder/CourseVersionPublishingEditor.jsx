@@ -6,7 +6,7 @@ import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstan
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
 
-import Button from '../../templates/Button';
+import Button from '../../olderSharedComponents/Button';
 
 export default class CourseVersionPublishingEditor extends Component {
   static propTypes = {

@@ -9,9 +9,9 @@ import {
   Heading5,
 } from '@cdo/apps/componentLibrary/typography';
 import ImageInput from '@cdo/apps/lib/levelbuilder/ImageInput';
+import Button from '@cdo/apps/olderSharedComponents/Button';
 import PanelsView from '@cdo/apps/panels/PanelsView';
 import {Panel, PanelLayout} from '@cdo/apps/panels/types';
-import Button from '@cdo/apps/templates/Button';
 import {createUuid} from '@cdo/apps/utils';
 
 import moduleStyles from './edit-panels.module.scss';

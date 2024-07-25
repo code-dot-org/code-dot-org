@@ -3,14 +3,14 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/olderSharedComponents/Button';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import color from '@cdo/apps/util/color';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import {plTableLayoutStyles} from '../../olderSharedComponents/tables/tableConstants';
 import styleConstants from '../../styleConstants';
-import {plTableLayoutStyles} from '../tables/tableConstants';
 
 import shapes from './shapes';
 

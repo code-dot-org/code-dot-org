@@ -6,17 +6,17 @@ import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import QuickActionsCell from '@cdo/apps/olderSharedComponents/tables/QuickActionsCell';
 import {getStore} from '@cdo/apps/redux';
-import QuickActionsCell from '@cdo/apps/templates/tables/QuickActionsCell';
 import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import BaseDialog from '../../olderSharedComponents/BaseDialog';
+import Button from '../../olderSharedComponents/Button';
+import FontAwesome from '../../olderSharedComponents/FontAwesome';
 import color from '../../util/color';
-import BaseDialog from '../BaseDialog';
-import Button from '../Button';
-import FontAwesome from '../FontAwesome';
 
 import DialogFooter from './DialogFooter';
 import PrintCertificates from './PrintCertificates';

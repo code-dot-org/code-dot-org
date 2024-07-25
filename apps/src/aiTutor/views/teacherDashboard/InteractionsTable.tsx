@@ -13,9 +13,9 @@ import CheckboxDropdown, {
   CheckboxOption,
 } from '@cdo/apps/componentLibrary/dropdown/checkboxDropdown';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
+import {tableLayoutStyles as style} from '@cdo/apps/olderSharedComponents/tables/tableConstants';
 import styleConstants from '@cdo/apps/styleConstants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {tableLayoutStyles as style} from '@cdo/apps/templates/tables/tableConstants';
 import color from '@cdo/apps/util/color';
 
 // TODO: Condense use of inline and imported styles

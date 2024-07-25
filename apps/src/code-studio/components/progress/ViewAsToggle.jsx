@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import {setViewAsUserId} from '@cdo/apps/code-studio/progressRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {ViewType, changeViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
+import ToggleGroup from '@cdo/apps/olderSharedComponents/ToggleGroup';
 import commonMsg from '@cdo/locale';
 
 /**

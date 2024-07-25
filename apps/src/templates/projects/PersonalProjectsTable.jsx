@@ -12,10 +12,13 @@ import FrozenProjectInfoDialog from '@cdo/apps/templates/projects/frozenProjectI
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
+import {
+  tableLayoutStyles,
+  sortableOptions,
+} from '../../olderSharedComponents/tables/tableConstants';
+import wrappedSortable from '../../olderSharedComponents/tables/wrapped_sortable';
 import color from '../../util/color';
 import {ImageWithStatus} from '../ImageWithStatus';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import wrappedSortable from '../tables/wrapped_sortable';
 
 import PersonalProjectsNameCell from './PersonalProjectsNameCell';
 import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';

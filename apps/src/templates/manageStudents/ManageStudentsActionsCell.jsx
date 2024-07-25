@@ -11,10 +11,10 @@ import {navigateToHref} from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import Button from '../../olderSharedComponents/Button';
+import FontAwesome from '../../olderSharedComponents/FontAwesome';
+import QuickActionsCell from '../../olderSharedComponents/tables/QuickActionsCell';
 import color from '../../util/color';
-import Button from '../Button';
-import FontAwesome from '../FontAwesome';
-import QuickActionsCell from '../tables/QuickActionsCell';
 
 import ConfirmRemoveStudentDialog from './ConfirmRemoveStudentDialog';
 import {

@@ -9,7 +9,7 @@ import i18n from '@cdo/locale';
 import {
   tableLayoutStyles,
   NAME_CELL_INPUT_WIDTH,
-} from '../tables/tableConstants';
+} from '../../olderSharedComponents/tables/tableConstants';
 
 import {editStudent} from './manageStudentsRedux';
 

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
+import CollapserIcon from '@cdo/apps/olderSharedComponents/CollapserIcon';
 import PaneHeader, {
   PaneSection,
   PaneButton,

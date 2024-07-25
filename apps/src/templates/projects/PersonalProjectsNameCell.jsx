@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {showFrozenProjectInfoDialog} from '@cdo/apps/templates/projects/frozenProjectInfoDialog/frozenProjectInfoDialogRedux';
 
-import {tableLayoutStyles} from '../tables/tableConstants';
+import {tableLayoutStyles} from '../../olderSharedComponents/tables/tableConstants';
 
 import {updateProjectName} from './projectsRedux';
 

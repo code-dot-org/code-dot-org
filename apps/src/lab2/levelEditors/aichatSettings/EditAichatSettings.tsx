@@ -22,8 +22,8 @@ import {
   BodyFourText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
+import MultiItemInput from '@cdo/apps/olderSharedComponents/MultiItemInput';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
-import MultiItemInput from '@cdo/apps/templates/MultiItemInput';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 
 import FieldSection from './FieldSection';

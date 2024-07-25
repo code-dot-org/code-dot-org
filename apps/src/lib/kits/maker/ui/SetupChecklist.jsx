@@ -11,7 +11,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
-import Button from '../../../../templates/Button';
+import Button from '../../../../olderSharedComponents/Button';
 import trackEvent from '../../../../util/trackEvent';
 import * as utils from '../../../../utils';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';

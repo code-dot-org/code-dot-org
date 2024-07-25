@@ -9,7 +9,7 @@ import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
 import {WorkshopTypes} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
+import wrappedSortable from '@cdo/apps/olderSharedComponents/tables/wrapped_sortable';
 import color from '@cdo/apps/util/color';
 
 import {

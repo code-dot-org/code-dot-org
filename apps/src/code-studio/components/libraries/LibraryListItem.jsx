@@ -3,9 +3,9 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/olderSharedComponents/FontAwesome';
+import Tooltip from '@cdo/apps/olderSharedComponents/Tooltip';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
-import Tooltip from '@cdo/apps/templates/Tooltip';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 

@@ -8,8 +8,8 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import fontConstants from '@cdo/apps/fontConstants';
 
-import FontAwesome from '../templates/FontAwesome';
-import ToggleGroup from '../templates/ToggleGroup';
+import FontAwesome from '../olderSharedComponents/FontAwesome';
+import ToggleGroup from '../olderSharedComponents/ToggleGroup';
 import WidgetContinueButton from '../templates/WidgetContinueButton';
 import color from '../util/color';
 

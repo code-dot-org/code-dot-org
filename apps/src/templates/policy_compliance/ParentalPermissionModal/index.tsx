@@ -12,6 +12,7 @@ import {
 } from 'react-bootstrap';
 
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import Button from '@cdo/apps/olderSharedComponents/Button';
 import parentalPermissionRequestReducer, {
   REQUEST_PARENTAL_PERMISSION_SUCCESS,
   ParentalPermissionRequest,
@@ -19,7 +20,6 @@ import parentalPermissionRequestReducer, {
   requestParentalPermission,
   resetParentalPermissionRequest,
 } from '@cdo/apps/redux/parentalPermissionRequestReducer';
-import Button from '@cdo/apps/templates/Button';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import Skeleton from '@cdo/apps/util/loadingSkeleton';

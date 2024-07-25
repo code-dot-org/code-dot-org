@@ -8,8 +8,8 @@ import fontConstants from '@cdo/apps/fontConstants';
 import AddLevelFilters from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelFilters';
 import AddLevelTable from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTable';
 import CreateNewLevelInputs from '@cdo/apps/lib/levelbuilder/lesson-editor/CreateNewLevelInputs';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
+import FontAwesome from '@cdo/apps/olderSharedComponents/FontAwesome';
+import ToggleGroup from '@cdo/apps/olderSharedComponents/ToggleGroup';
 
 function AddLevelDialogTop(props) {
   const [methodOfAddingLevel, setMethodOfAddingLevel] = useState('Find Level');

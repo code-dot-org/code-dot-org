@@ -11,17 +11,19 @@ import {isProductionEnvironment} from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import Button from '../Button';
-import DropdownButton from '../DropdownButton';
+import Button from '../../olderSharedComponents/Button';
+import DropdownButton from '../../olderSharedComponents/DropdownButton';
+import FontAwesome from '../../olderSharedComponents/FontAwesome';
+import Notification, {
+  NotificationType,
+} from '../../olderSharedComponents/Notification';
 import {
   convertStudentDataToArray,
   filterAgeGatedStudents,
   loadSectionStudentData,
 } from '../manageStudents/manageStudentsRedux';
-import Notification, {NotificationType} from '../Notification';
 import {AgeGatedStudentsBanner} from '../policy_compliance/AgeGatedStudentsModal/AgeGatedStudentsBanner';
 
-import FontAwesome from './../FontAwesome';
 import {switchToSection, recordSwitchToSection} from './sectionHelpers';
 import {
   asyncLoadCourseOfferings,

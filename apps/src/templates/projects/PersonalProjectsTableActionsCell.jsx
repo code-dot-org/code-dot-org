@@ -7,9 +7,9 @@ import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
 import i18n from '@cdo/locale';
 
 import NameFailureDialog from '../../code-studio/components/NameFailureDialog';
+import FontAwesome from '../../olderSharedComponents/FontAwesome';
+import QuickActionsCell from '../../olderSharedComponents/tables/QuickActionsCell';
 import color from '../../util/color';
-import FontAwesome from '../FontAwesome';
-import QuickActionsCell from '../tables/QuickActionsCell';
 
 import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
 import {

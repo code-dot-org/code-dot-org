@@ -6,9 +6,12 @@ import * as sort from 'sortabular';
 
 import commonMsg from '@cdo/locale';
 
+import {
+  tableLayoutStyles,
+  sortableOptions,
+} from '../../olderSharedComponents/tables/tableConstants';
+import wrappedSortable from '../../olderSharedComponents/tables/wrapped_sortable';
 import {ImageWithStatus} from '../ImageWithStatus';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import wrappedSortable from '../tables/wrapped_sortable';
 
 import {PROJECT_TYPE_MAP} from './projectTypeMap';
 

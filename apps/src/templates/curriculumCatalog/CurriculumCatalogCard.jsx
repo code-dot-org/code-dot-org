@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {concat, intersection} from 'lodash';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Button from '@cdo/apps/templates/Button';
+import FontAwesome from '@cdo/apps/olderSharedComponents/FontAwesome';
+import Button from '@cdo/apps/olderSharedComponents/Button';
 import i18n from '@cdo/locale';
 import {
   translatedCourseOfferingCsTopics,

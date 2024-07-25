@@ -8,7 +8,7 @@ import {StudentGradeBandCards} from '@cdo/apps/util/courseBlockCardsConstants';
 import i18n from '@cdo/locale';
 
 import {tutorialTypes} from '../tutorialTypes.js';
-import VerticalImageResourceCardRow from '../VerticalImageResourceCardRow';
+import VerticalImageResourceCardRow from '../VerticalImageResourceCardRow.jsx';
 
 import {cardSets} from './congratsBeyondHocActivityCards';
 

@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
+import BaseDialog from '@cdo/apps/olderSharedComponents/BaseDialog.jsx';
 import {getStore} from '@cdo/apps/redux';
-import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import msg from '@cdo/locale';
 
 import color from '../util/color';

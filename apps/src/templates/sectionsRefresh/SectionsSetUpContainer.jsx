@@ -13,9 +13,11 @@ import {
 import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import Button from '@cdo/apps/olderSharedComponents/Button';
+import Notification, {
+  NotificationType,
+} from '@cdo/apps/olderSharedComponents/Notification';
 import {getStore} from '@cdo/apps/redux';
-import Button from '@cdo/apps/templates/Button';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';

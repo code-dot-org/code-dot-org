@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MultiItemInput from '@cdo/apps/templates/MultiItemInput';
+import MultiItemInput from '@cdo/apps/olderSharedComponents/MultiItemInput';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {setModelCardProperty} from '../../redux/aichatRedux';

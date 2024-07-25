@@ -6,8 +6,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import LtiFeedbackBanner from '@cdo/apps/lib/ui/simpleSignUp/lti/feedback/LtiFeedbackBanner';
+import Button from '@cdo/apps/olderSharedComponents/Button';
 import styleConstants from '@cdo/apps/styleConstants';
-import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';

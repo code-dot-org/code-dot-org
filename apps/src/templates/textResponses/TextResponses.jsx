@@ -14,8 +14,8 @@ import TextResponsesLessonSelector from '@cdo/apps/templates/textResponses/TextR
 import i18n from '@cdo/locale';
 
 import {h3Style} from '../../lib/ui/Headings';
+import Button from '../../olderSharedComponents/Button';
 import color from '../../util/color';
-import Button from '../Button';
 
 import TextResponsesTable from './TextResponsesTable';
 

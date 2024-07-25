@@ -10,8 +10,8 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 import i18n from '@cdo/locale';
 
-import BaseDialog from '../../templates/BaseDialog';
-import Button from '../../templates/Button';
+import BaseDialog from '../../olderSharedComponents/BaseDialog';
+import Button from '../../olderSharedComponents/Button';
 import SchoolInfoInputs, {
   SCHOOL_TYPES_HAVING_NCES_SEARCH,
   SCHOOL_TYPES_HAVING_NAMES,

@@ -25,11 +25,16 @@ import experiments from '@cdo/apps/util/experiments';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import Button from '../Button';
-import Notification, {NotificationType} from '../Notification';
+import Button from '../../olderSharedComponents/Button';
+import Notification, {
+  NotificationType,
+} from '../../olderSharedComponents/Notification';
+import {
+  tableLayoutStyles,
+  sortableOptions,
+} from '../../olderSharedComponents/tables/tableConstants';
+import wrappedSortable from '../../olderSharedComponents/tables/wrapped_sortable';
 import SafeMarkdown from '../SafeMarkdown';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import wrappedSortable from '../tables/wrapped_sortable';
 
 import AddMultipleStudents from './AddMultipleStudents';
 import CodeReviewGroupsDialog from './CodeReviewGroupsDialog';

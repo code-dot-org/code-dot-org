@@ -17,10 +17,10 @@ import headerThanksImage from '@cdo/static/common_images/penguin/dancing.png';
 import headerImage from '@cdo/static/common_images/penguin/yelling.png';
 
 import Spinner from '../../code-studio/pd/components/spinner';
+import Button from '../../olderSharedComponents/Button';
 import {getStore} from '../../redux';
 import * as color from '../../util/color';
 import {hashString} from '../../utils';
-import Button from '../Button';
 
 /**
  * This panel represents the page that is displayed to accounts that are being

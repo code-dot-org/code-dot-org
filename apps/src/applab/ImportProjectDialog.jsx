@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import Dialog, {Body, Buttons, Confirm} from '../templates/Dialog';
+import Dialog, {Body, Buttons, Confirm} from '../olderSharedComponents/Dialog';
 import color from '../util/color';
 
 import {fetchProject, toggleImportScreen} from './redux/screens';

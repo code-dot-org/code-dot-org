@@ -4,12 +4,12 @@ import React, {Component} from 'react';
 import fontConstants from '@cdo/apps/fontConstants';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import Dialog, {Body} from '@cdo/apps/templates/Dialog';
+import Dialog, {Body} from '@cdo/apps/olderSharedComponents/Dialog';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
+import Button from '../../olderSharedComponents/Button';
 import {getStore} from '../../redux';
-import Button from '../../templates/Button';
 
 import SchoolInfoInterstitial from './SchoolInfoInterstitial';
 

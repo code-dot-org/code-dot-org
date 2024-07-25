@@ -4,7 +4,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
+import TooltipOverlay, {
+  coordinatesProvider,
+} from '../olderSharedComponents/TooltipOverlay';
 import {ellipsify} from '../utils';
 
 import {ApplabInterfaceMode} from './constants';

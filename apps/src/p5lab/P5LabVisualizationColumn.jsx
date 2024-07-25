@@ -4,6 +4,9 @@ import React from 'react';
 import Pointable from 'react-pointable';
 import {connect} from 'react-redux';
 
+import TooltipOverlay, {
+  coordinatesProvider,
+} from '@cdo/apps/olderSharedComponents/TooltipOverlay';
 import ArrowButtons from '@cdo/apps/templates/ArrowButtons';
 import BelowVisualization from '@cdo/apps/templates/BelowVisualization';
 import CompletionButton from '@cdo/apps/templates/CompletionButton';
@@ -12,9 +15,6 @@ import GameButtons from '@cdo/apps/templates/GameButtons';
 import PauseButton from '@cdo/apps/templates/PauseButton';
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import ProtectedVisualizationDiv from '@cdo/apps/templates/ProtectedVisualizationDiv';
-import TooltipOverlay, {
-  coordinatesProvider,
-} from '@cdo/apps/templates/TooltipOverlay';
 import VisualizationOverlay from '@cdo/apps/templates/VisualizationOverlay';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 import {calculateOffsetCoordinates} from '@cdo/apps/utils';

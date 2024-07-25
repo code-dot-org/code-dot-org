@@ -8,7 +8,7 @@ import {connect} from 'react-redux';
 
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
 import fontConstants from '@cdo/apps/fontConstants';
-import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
+import BaseDialog from '@cdo/apps/olderSharedComponents/BaseDialog.jsx';
 import msg from '@cdo/locale';
 
 import color from '../../../util/color';

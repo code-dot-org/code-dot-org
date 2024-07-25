@@ -4,8 +4,8 @@ import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
 
+import Button from '../../olderSharedComponents/Button';
 import color from '../../util/color';
-import Button from '../Button';
 
 class ImageResourceCard extends Component {
   static propTypes = {
