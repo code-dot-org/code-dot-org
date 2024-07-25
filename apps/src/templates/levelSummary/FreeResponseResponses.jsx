@@ -7,13 +7,15 @@ import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {Heading3} from '@cdo/apps/componentLibrary/typography';
 import DCDO from '@cdo/apps/dcdo';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import ResponseMenuDropdown from './ResponseMenuDropdown';
 
 import styles from './summary.module.scss';
 
-const FreeResponseResponses = ({responses, showStudentNames}) => {
+const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
   const constructStudentName = response =>
     response.student_family_name
       ? response.student_display_name + ' ' + response.student_family_name
@@ -45,9 +47,14 @@ const FreeResponseResponses = ({responses, showStudentNames}) => {
           <p>{response.text}</p>
           <ResponseMenuDropdown
             response={response}
-            hideResponse={userId =>
-              setHiddenResponses(prevHidden => [...prevHidden, userId])
-            }
+            hideResponse={userId => {
+              analyticsReporter.sendEvent(
+                EVENTS.CFU_RESPONSE_HIDDEN,
+                eventData,
+                PLATFORMS.BOTH
+              );
+              setHiddenResponses(prevHidden => [...prevHidden, userId]);
+            }}
             pinResponse={pinResponse}
             unpinResponse={unpinResponse}
           />
@@ -74,7 +81,14 @@ const FreeResponseResponses = ({responses, showStudentNames}) => {
             <Heading3>{i18n.pinnedResponses()}</Heading3>
             <Button
               text={i18n.unpinAll()}
-              onClick={() => setPinnedResponseIds([])}
+              onClick={() => {
+                analyticsReporter.sendEvent(
+                  EVENTS.CFU_RESPONSE_ALL_UNPINNED,
+                  eventData,
+                  PLATFORMS.BOTH
+                );
+                setPinnedResponseIds([]);
+              }}
               color={buttonColors.gray}
               type="secondary"
             />
@@ -87,10 +101,16 @@ const FreeResponseResponses = ({responses, showStudentNames}) => {
                   response,
                   styles.pinnedResponse,
                   undefined,
-                  userId =>
+                  userId => {
+                    analyticsReporter.sendEvent(
+                      EVENTS.CFU_RESPONSE_UNPINNED,
+                      eventData,
+                      PLATFORMS.BOTH
+                    );
                     setPinnedResponseIds(prevPinned =>
                       prevPinned.filter(id => id !== userId)
-                    )
+                    );
+                  }
                 )
               )}
           </div>
@@ -107,8 +127,14 @@ const FreeResponseResponses = ({responses, showStudentNames}) => {
             getResponseBox(
               response,
               styles.unpinnedResponse,
-              userId =>
-                setPinnedResponseIds(prevPinned => [...prevPinned, userId]),
+              userId => {
+                analyticsReporter.sendEvent(
+                  EVENTS.CFU_RESPONSE_PINNED,
+                  eventData,
+                  PLATFORMS.BOTH
+                );
+                setPinnedResponseIds(prevPinned => [...prevPinned, userId]);
+              },
               undefined
             )
           )}
@@ -121,6 +147,11 @@ const FreeResponseResponses = ({responses, showStudentNames}) => {
             text: i18n.showHiddenResponses(),
             onClick: e => {
               e.preventDefault();
+              analyticsReporter.sendEvent(
+                EVENTS.CFU_RESPONSE_ALL_UNHID,
+                eventData,
+                PLATFORMS.BOTH
+              );
               setHiddenResponses([]);
             },
             role: 'button',
@@ -139,6 +170,7 @@ const FreeResponseResponses = ({responses, showStudentNames}) => {
 FreeResponseResponses.propTypes = {
   responses: PropTypes.arrayOf(PropTypes.object),
   showStudentNames: PropTypes.bool,
+  eventData: PropTypes.object,
 };
 
 export default FreeResponseResponses;
