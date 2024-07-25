@@ -730,3 +730,39 @@ export function toolboxWithoutIds(
   removeIdsFromBlocks(toolboxDom);
   return Blockly.Xml.domToText(toolboxDom);
 }
+
+// Sets the lab code based on the student's blocks and level initialization code
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function setLabCode(this: any) {
+  this.code = '';
+  if (this.studioApp_.initializationCode) {
+    this.code = this.studioApp_.initializationCode;
+  }
+
+  [Blockly.getHiddenDefinitionWorkspace(), Blockly.getMainWorkspace()].forEach(
+    workspace => {
+      if (workspace) {
+        Blockly.getGenerator().init(workspace);
+        const blocks = workspace.getTopBlocks(true);
+        const blocksCode = [] as Block[];
+        blocks.forEach(block =>
+          blocksCode.push(Blockly.JavaScript.blockToCode(block))
+        );
+        this.code += Blockly.getGenerator().finish(blocksCode.join('\n'));
+      }
+    }
+  );
+}
+
+// Returns the student's executable code based on blockXml
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function getCodeFromBlocks(this: any, blockXmlString: string) {
+  const domBlocks = Blockly.Xml.textToDom(blockXmlString);
+  const workspace = new Blockly.Workspace();
+  Blockly.Xml.domToBlockSpace(workspace, domBlocks);
+  Blockly.getGenerator().init(workspace);
+  const blocks = workspace.getTopBlocks(true);
+  const code = [] as string[];
+  blocks.forEach(block => code.push(Blockly.JavaScript.blockToCode(block)));
+  return Blockly.getGenerator().finish(code.join('\n'));
+}

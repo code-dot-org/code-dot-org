@@ -31,7 +31,6 @@ import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMa
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
-import {getCodeBlocks} from '../blockly/utils';
 import {TestResults} from '../constants';
 import {
   getContainedLevelResultInfo,
@@ -638,10 +637,9 @@ Artist.prototype.drawLogOnCanvas = function (log, canvas) {
  * Evaluates blocks or code, and draws onto given canvas.
  */
 Artist.prototype.drawBlocksOnCanvas = function (blocksOrCode, canvas) {
-  var code;
+  let code;
   if (this.studioApp_.isUsingBlockly()) {
-    var domBlocks = Blockly.Xml.textToDom(blocksOrCode);
-    code = Blockly.Generator.xmlToCode('JavaScript', domBlocks);
+    code = Blockly.cdoUtils.getCodeFromBlocks.call(this, blocksOrCode);
   } else {
     code = blocksOrCode;
   }
@@ -894,12 +892,8 @@ Artist.prototype.execute = function (executionInfo) {
   if (this.level.editCode) {
     this.initInterpreter();
   } else {
-    let codeBlocks = getCodeBlocks();
-    if (this.studioApp_.initializationBlocks) {
-      codeBlocks = this.studioApp_.initializationBlocks.concat(codeBlocks);
-    }
+    Blockly.cdoUtils.setLabCode.call(this);
 
-    this.code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
     this.evalCode(this.code, executionInfo);
   }
 
