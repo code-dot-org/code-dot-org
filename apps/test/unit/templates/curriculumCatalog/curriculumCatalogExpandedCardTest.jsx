@@ -1,7 +1,6 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import {
   getStore,
@@ -13,7 +12,6 @@ import ExpandedCurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog
 import {translatedAvailableResources} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-import {expect} from '../../../util/reconfiguredChai';
 import {FULL_TEST_COURSES} from '../../util/curriculumRecommenderTestCurricula';
 
 describe('CurriculumCatalogExpandedCard', () => {
@@ -76,7 +74,7 @@ describe('CurriculumCatalogExpandedCard', () => {
     const {container} = renderCurriculumExpandedCard();
 
     screen.getByText(defaultProps.gradeRange);
-    expect(container.querySelectorAll('i[class*=user]')).to.have.length(1);
+    expect(container.querySelectorAll('i[class*=user]')).toHaveLength(1);
   });
 
   it('renders single grade with icon when one grade passed in', () => {
@@ -87,7 +85,7 @@ describe('CurriculumCatalogExpandedCard', () => {
     });
 
     screen.getByText(grade);
-    expect(container.querySelectorAll('i[class*=user]')).to.have.length(1);
+    expect(container.querySelectorAll('i[class*=user]')).toHaveLength(1);
   });
 
   it('renders duration with icon', () => {
@@ -98,7 +96,7 @@ describe('CurriculumCatalogExpandedCard', () => {
     });
 
     screen.getByText(duration);
-    expect(container.querySelectorAll('i[class*=clock]')).to.have.length(1);
+    expect(container.querySelectorAll('i[class*=clock]')).toHaveLength(1);
   });
 
   it('renders topics with icon', () => {
@@ -107,7 +105,7 @@ describe('CurriculumCatalogExpandedCard', () => {
     screen.getByText(
       new RegExp(`Topic: ${defaultProps.subjectsAndTopics.join(', ')}`)
     );
-    expect(container.querySelectorAll('i[class*=book]')).to.have.length(1);
+    expect(container.querySelectorAll('i[class*=book]')).toHaveLength(1);
   });
 
   it('renders video if available', () => {
@@ -124,7 +122,7 @@ describe('CurriculumCatalogExpandedCard', () => {
 
     // Expect to find 3 images: one as the video replacement, one from the Similar
     // Curriculum recommendation, and one from the Stretch Curriculum recommendation
-    expect(screen.getAllByRole('img', {hidden: true}).length).to.equal(3);
+    expect(screen.getAllByRole('img', {hidden: true}).length).toBe(3);
   });
 
   it('renders image with alt text if passed and no video', () => {
@@ -159,7 +157,7 @@ describe('CurriculumCatalogExpandedCard', () => {
     });
 
     //Checks for correct amount of Horizontal dividers
-    expect(availableResourcesContainer.querySelectorAll('hr')).to.have.length(
+    expect(availableResourcesContainer.querySelectorAll('hr')).toHaveLength(
       Object.keys(availableResources).length
     );
   });
@@ -167,7 +165,7 @@ describe('CurriculumCatalogExpandedCard', () => {
   it('does not render available resources section when no available resources', () => {
     renderCurriculumExpandedCard();
 
-    expect(screen.queryByText('Available Resources')).to.be.null;
+    expect(screen.queryByText('Available Resources')).toBeNull();
   });
 
   it('renders professional learning section when professional learning available', () => {
@@ -187,7 +185,7 @@ describe('CurriculumCatalogExpandedCard', () => {
   it('does not render professional learning section when no professional learning available', () => {
     renderCurriculumExpandedCard();
 
-    expect(screen.queryByText('Profession Learning')).to.be.null;
+    expect(screen.queryByText('Profession Learning')).toBeNull();
   });
 
   it('does not render professional learning section when not in US', () => {
@@ -200,7 +198,7 @@ describe('CurriculumCatalogExpandedCard', () => {
       isInUS: false,
     });
 
-    expect(screen.queryByText('Profession Learning')).to.be.null;
+    expect(screen.queryByText('Profession Learning')).toBeNull();
   });
 
   it('renders devices and their correct icons', () => {
@@ -222,7 +220,7 @@ describe('CurriculumCatalogExpandedCard', () => {
         parentElement.querySelectorAll(
           `i[class*=${deviceIcons[devices[device]]}]`
         )
-      ).to.have.length(1);
+      ).toHaveLength(1);
     });
   });
 
@@ -233,7 +231,7 @@ describe('CurriculumCatalogExpandedCard', () => {
         '{"computer":"","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
     });
 
-    expect(screen.queryByText('Computer')).to.be.null;
+    expect(screen.queryByText('Computer')).toBeNull();
     screen.getByText('Chromebook');
     screen.getByText('Tablet');
     screen.getByText('Mobile');
@@ -241,13 +239,13 @@ describe('CurriculumCatalogExpandedCard', () => {
   });
 
   it('clicking assign button triggers onAssign function', () => {
-    const onAssign = sinon.spy();
+    const onAssign = jest.fn();
     renderCurriculumExpandedCard({
       ...defaultProps,
       assignButtonOnClick: onAssign,
     });
 
-    expect(onAssign).not.to.have.been.called;
+    expect(onAssign).not.toHaveBeenCalled();
 
     const assignButton = screen.getByRole('button', {
       name: new RegExp(
@@ -258,17 +256,17 @@ describe('CurriculumCatalogExpandedCard', () => {
 
     fireEvent.click(assignButton);
 
-    expect(onAssign).to.have.been.calledOnce;
+    expect(onAssign).toHaveBeenCalledTimes(1);
   });
 
   it('clicking close button triggers onClose function', () => {
-    const onClose = sinon.spy();
+    const onClose = jest.fn();
     renderCurriculumExpandedCard({
       ...defaultProps,
       onClose: onClose,
     });
 
-    expect(onClose).not.to.have.been.called;
+    expect(onClose).not.toHaveBeenCalled();
 
     const onCloseButton = screen.getByRole('button', {
       name: 'Close Button',
@@ -276,7 +274,7 @@ describe('CurriculumCatalogExpandedCard', () => {
     });
 
     fireEvent.click(onCloseButton);
-    expect(onClose).to.have.been.calledOnce;
+    expect(onClose).toHaveBeenCalledTimes(1);
   });
 
   it('renders curriculum details button with descriptive label', () => {
@@ -303,7 +301,7 @@ describe('CurriculumCatalogExpandedCard', () => {
 
   it('does not render Assign button for student', () => {
     renderCurriculumExpandedCard({...defaultProps, isTeacher: false});
-    expect(screen.queryByText('Assign to class sections')).to.be.null;
+    expect(screen.queryByText('Assign to class sections')).toBeNull();
   });
 
   it('renders Professional Learning section for signed out user', () => {
@@ -339,6 +337,6 @@ describe('CurriculumCatalogExpandedCard', () => {
       selfPacedPlCourseOfferingPath: self_paced_pl_course_offering_path,
       isTeacher: false,
     });
-    expect(screen.queryByText('Professional Learning')).to.be.null;
+    expect(screen.queryByText('Professional Learning')).toBeNull();
   });
 });

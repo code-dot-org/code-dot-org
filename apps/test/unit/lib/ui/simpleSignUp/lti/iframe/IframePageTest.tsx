@@ -1,12 +1,12 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon, {SinonStub} from 'sinon';
+import sinon, {SinonStub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import LtiIframePage from '@cdo/apps/lib/ui/simpleSignUp/lti/iframe/LtiIframePage';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   logoUrl: 'https://code.org/assets/logo.svg',

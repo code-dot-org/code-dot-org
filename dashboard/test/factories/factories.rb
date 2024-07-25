@@ -770,6 +770,13 @@ FactoryBot.define do
       end
     end
 
+    trait :with_instructions do
+      after(:create) do |level|
+        level.properties['long_instructions'] = 'Write a loop.'
+        level.save!
+      end
+    end
+
     factory :sublevel do
       sequence(:name) {|n| "sub_level_#{n}"}
     end
@@ -1185,6 +1192,13 @@ FactoryBot.define do
       after(:create) do |csf_script_level|
         csf_script_level.script.curriculum_umbrella = 'CSF'
         csf_script_level.save
+      end
+    end
+
+    factory :csa_script_level do
+      after(:create) do |csa_script_level|
+        csa_script_level.script.curriculum_umbrella = 'CSA'
+        csa_script_level.save
       end
     end
   end

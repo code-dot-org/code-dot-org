@@ -53,11 +53,7 @@ import {
   updateTableRecords,
   setLibraryManifest,
 } from '../storage/redux/data';
-import {
-  initStorage,
-  isFirebaseStorage,
-  DATABLOCK_STORAGE,
-} from '../storage/storage';
+import {initStorage, DATABLOCK_STORAGE} from '../storage/storage';
 import {singleton as studioApp} from '../StudioApp';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 import {shouldOverlaysBeVisible} from '../templates/VisualizationOverlay';
@@ -819,24 +815,7 @@ async function initDataTab(levelOptions) {
           // We don't know what this table is, we should just skip it.
           console.warn(`unknown table ${table}`);
         } else {
-          // TODO: post-firebase-cleanup, remove this conditional when we're done with firebase: #56994
-          if (isFirebaseStorage()) {
-            if (datasetInfo.current) {
-              Applab.storage.addCurrentTableToProject(
-                table,
-                () => console.log('success'),
-                outputError
-              );
-            } else {
-              Applab.storage.copyStaticTable(
-                table,
-                () => console.log('success'),
-                outputError
-              );
-            }
-          } else {
-            Applab.storage.addSharedTable(table);
-          }
+          Applab.storage.addSharedTable(table);
         }
       });
     }
@@ -874,12 +853,7 @@ function setupReduxSubscribers(store) {
       (isDataMode && view !== lastView) ||
       changedToDataMode(state, lastState)
     ) {
-      loadDataForView(
-        Applab.storage,
-        state.data.view,
-        lastState.data.tableName,
-        state.data.tableName
-      );
+      loadDataForView(Applab.storage, state.data.view, state.data.tableName);
     }
 
     const lastIsPreview = lastState.data && lastState.data.isPreviewOpen;

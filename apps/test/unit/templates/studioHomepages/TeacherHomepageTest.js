@@ -1,13 +1,13 @@
-import {assert} from 'chai';
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {UnconnectedTeacherHomepage as TeacherHomepage} from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 import {courses, topCourse, plCourses, topPlCourse} from './homepagesTestData';
 

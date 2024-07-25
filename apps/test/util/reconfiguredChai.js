@@ -1,9 +1,9 @@
 /** @file Import chai and configure it for our own test style. */
-import chai from 'chai';
+import chai from 'chai'; // eslint-disable-line no-restricted-imports
 import chaiAsPromised from 'chai-as-promised';
 import chaiSubset from 'chai-subset';
 import chaiXml from 'chai-xml';
-import sinonChai from 'sinon-chai';
+import sinonChai from 'sinon-chai'; // eslint-disable-line no-restricted-imports
 
 chai.use(sinonChai);
 chai.use(chaiSubset);

@@ -1,34 +1,32 @@
 import parser from '@cdo/apps/code-studio/components/libraries/libraryParser';
 
-import {expect} from '../../../../util/reconfiguredChai';
-
 describe('Library parser', () => {
   describe('sanitizeName', () => {
     it('removes whitespace', () => {
       let libraryName = 'Test Library\t\r\n\fName';
-      expect(parser.sanitizeName(libraryName)).to.equal('TestLibraryName');
+      expect(parser.sanitizeName(libraryName)).toBe('TestLibraryName');
     });
 
     it('removes non alphanumeric characters', () => {
       let libraryName = 'Test`~!Library🙃💩Name123';
-      expect(parser.sanitizeName(libraryName)).to.equal('TestLibraryName123');
+      expect(parser.sanitizeName(libraryName)).toBe('TestLibraryName123');
     });
   });
 
   describe('suggestName', () => {
     it('capitalizes the first letter of a library', () => {
       let libraryName = 'testLibrary';
-      expect(parser.suggestName(libraryName)).to.equal('TestLibrary');
+      expect(parser.suggestName(libraryName)).toBe('TestLibrary');
     });
 
     it('prepends Lib to the beginning of a library starting with a number', () => {
       let libraryName = '123testLibrary';
-      expect(parser.suggestName(libraryName)).to.equal('Lib123testLibrary');
+      expect(parser.suggestName(libraryName)).toBe('Lib123testLibrary');
     });
 
     it('names an empty library "Lib"', () => {
       let libraryName = '';
-      expect(parser.suggestName(libraryName)).to.equal('Lib');
+      expect(parser.suggestName(libraryName)).toBe('Lib');
     });
   });
 
@@ -46,7 +44,7 @@ describe('Library parser', () => {
           emptyLibraryName,
           emptyDescription
         )
-      ).to.equal(
+      ).toBe(
         JSON.stringify({
           name: emptyLibraryName,
           description: emptyDescription,
@@ -66,7 +64,7 @@ describe('Library parser', () => {
             undefined,
             emptyDescription
           )
-        ).to.equal(undefined);
+        ).toBeUndefined();
       });
 
       it('when the library name is empty', () => {
@@ -77,7 +75,7 @@ describe('Library parser', () => {
             '',
             emptyDescription
           )
-        ).to.equal(undefined);
+        ).toBeUndefined();
       });
 
       it('when no code is passed', () => {
@@ -88,7 +86,7 @@ describe('Library parser', () => {
             emptyLibraryName,
             emptyDescription
           )
-        ).to.equal(undefined);
+        ).toBeUndefined();
       });
 
       it('when functions are not passed as an array', () => {
@@ -99,7 +97,7 @@ describe('Library parser', () => {
             emptyLibraryName,
             emptyDescription
           )
-        ).to.equal(undefined);
+        ).toBeUndefined();
       });
 
       it("when a function doesn't have a name", () => {
@@ -111,7 +109,7 @@ describe('Library parser', () => {
             emptyLibraryName,
             emptyDescription
           )
-        ).to.equal(undefined);
+        ).toBeUndefined();
       });
 
       it('when no description is passed', () => {
@@ -122,7 +120,7 @@ describe('Library parser', () => {
             emptyLibraryName,
             undefined
           )
-        ).to.equal(undefined);
+        ).toBeUndefined();
       });
     });
 
@@ -153,7 +151,7 @@ describe('Library parser', () => {
           emptyLibraryName,
           emptyDescription
         )
-      ).to.deep.equal(
+      ).toEqual(
         JSON.stringify({
           name: emptyLibraryName,
           description: emptyDescription,
@@ -200,7 +198,7 @@ describe('Library parser', () => {
           emptyLibraryName,
           emptyDescription
         )
-      ).to.deep.equal(
+      ).toEqual(
         JSON.stringify({
           name: emptyLibraryName,
           description: emptyDescription,
@@ -234,7 +232,7 @@ describe('Library parser', () => {
         versionId,
         newName
       );
-      expect(newJson).to.deep.equal({
+      expect(newJson).toEqual({
         name: newName,
         originalName: emptyLibraryName,
         channelId: channelId,
@@ -264,7 +262,7 @@ describe('Library parser', () => {
         source: code,
       };
       let newJson = parser.createLibraryClosure(originalJson);
-      expect(newJson).to.deep.equal(closureCreator(emptyLibraryName, code));
+      expect(newJson).toEqual(closureCreator(emptyLibraryName, code));
     });
 
     // This is especially important when the user code ends with a comment
@@ -276,7 +274,7 @@ describe('Library parser', () => {
         source: code,
       };
       let newJson = parser.createLibraryClosure(originalJson);
-      expect(newJson).to.include('// comment;\nreturn');
+      expect(newJson).toContain('// comment;\nreturn');
     });
 
     it('is able to parse functions', () => {
@@ -290,7 +288,7 @@ describe('Library parser', () => {
       };
       let closureFunctions = `${firstFunction}: ${firstFunction},${secondFunction}: ${secondFunction}`;
       let newJson = parser.createLibraryClosure(originalJson);
-      expect(newJson).to.equal(
+      expect(newJson).toBe(
         closureCreator(emptyLibraryName, code, closureFunctions)
       );
     });

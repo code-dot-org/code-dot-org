@@ -15,8 +15,6 @@ import teacherSections, {
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
-
 const plSectionRowData = [
   {
     id: 1,
@@ -139,21 +137,21 @@ describe('OwnedPlSectionsTable', () => {
 
     // If section has 0 students, shows "Add students" button
     const noStudentsButton = screen.getByText('Add students').closest('a');
-    assert(
+    expect(
       noStudentsButton.href.includes(
         `/teacher_dashboard/sections/${plSectionRowData[2].id}/manage_students`
       )
-    );
+    ).toBeTruthy();
 
     // If section has 1+ students, displays number of students
     const someStudentsButton = screen
       .getByText(`${plSectionRowData[0].studentCount}`)
       .closest('a');
-    assert(
+    expect(
       someStudentsButton.href.includes(
         `/teacher_dashboard/sections/${plSectionRowData[0].id}/manage_students`
       )
-    );
+    ).toBeTruthy();
   });
 
   it('loginInfoFormatter shows the section code for sections managed on Code.org', () => {
@@ -163,22 +161,22 @@ describe('OwnedPlSectionsTable', () => {
     const googleClassroomSection = screen
       .getByText(i18n.loginTypeGoogleClassroom())
       .closest('a');
-    assert(
+    expect(
       googleClassroomSection.href.includes(
         `/teacher_dashboard/sections/${plSectionRowData[2].id}/login_info`
       )
-    );
-    expect(screen.queryByText(plSectionRowData[2].code)).to.be.null;
+    ).toBeTruthy();
+    expect(screen.queryByText(plSectionRowData[2].code)).toBeNull();
 
     // For sections with non-third-party login types, display section code
     const pictureSection = screen
       .getByText(plSectionRowData[0].code)
       .closest('a');
-    assert(
+    expect(
       pictureSection.href.includes(
         `/teacher_dashboard/sections/${plSectionRowData[0].id}/login_info`
       )
-    );
+    ).toBeTruthy();
   });
 
   it('courseLinkFormatter provides links to course information and section information', () => {
@@ -186,35 +184,35 @@ describe('OwnedPlSectionsTable', () => {
 
     // For sections with no assignment paths, show button to the catalog page
     const findCourseButton = screen.getByText('Find a course').closest('a');
-    assert(findCourseButton.href.includes('/catalog'));
+    expect(findCourseButton.href.includes('/catalog')).toBeTruthy();
 
     // For sections with 1 assignment path, show course name
     const oneAssignmentPathCourseName = screen
       .getByText(plSectionRowData[1].assignmentNames[0])
       .closest('a');
-    assert(
+    expect(
       oneAssignmentPathCourseName.href.includes(
         plSectionRowData[1].assignmentPaths[0]
       )
-    );
+    ).toBeTruthy();
 
     // For sections with 2 assignment paths, show course name and unit name
     const twoAssignmentPathsCourseName = screen
       .getByText(plSectionRowData[2].assignmentNames[0])
       .closest('a');
-    assert(
+    expect(
       twoAssignmentPathsCourseName.href.includes(
         plSectionRowData[2].assignmentPaths[0]
       )
-    );
+    ).toBeTruthy();
     const twoAssignmentPathsUnitName = screen
       .getByText(plSectionRowData[2].assignmentNames[1])
       .closest('a');
-    assert(
+    expect(
       twoAssignmentPathsUnitName.href.includes(
         plSectionRowData[2].assignmentPaths[1]
       )
-    );
+    ).toBeTruthy();
   });
 
   it('sectionLinkFormatter contains section link', () => {
@@ -222,9 +220,9 @@ describe('OwnedPlSectionsTable', () => {
 
     plSectionRowData.forEach(plSection => {
       const sectionName = screen.getByText(plSection.name).closest('a');
-      assert(
+      expect(
         sectionName.href.includes(`/teacher_dashboard/sections/${plSection.id}`)
-      );
+      ).toBeTruthy();
     });
   });
 });
