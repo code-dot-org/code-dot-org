@@ -2364,6 +2364,7 @@
   "rubricTourStepTwoText": "Your AI Teaching Assistant analyzes students’ code for each learning goal, then suggests one or two rubric scores. It will suggest one score for learning goals where it has trained extensively and two scores where more training data is needed. The final score is always up to you. In each case, your AI Teaching Assistant will provide evidence for its suggestion.",
   "rubricTourStepThreeTitle": "Using Evidence",
   "rubricTourStepThreeText": "Where possible, your AI Teaching Assistant will highlight the relevant lines of code in the student’s project so it is easy for you to double-check.",
+  "rubricTourStepThreeAltText": "An example of the AI Teaching Assistant highlighting relevant lines of code in a student's project.",
   "rubricTourStepFourTitle": "Understanding AI Confidence",
   "rubricTourStepFourText": "The confidence rating gives you an idea of how often your AI Teaching Assistant agreed with other teachers when scoring this learning goal. Just like humans, your AI Teaching Assistant isn't perfect.",
   "rubricTourStepFiveTitle": "Assigning a Rubric Score",

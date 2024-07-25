@@ -6,8 +6,8 @@ import evidenceDemo from '@cdo/static/ai-evidence-demo.gif';
 // intro.js-react allows a string or a react component for the intro prop.
 // Providing a string that was written by a translator is risky, because it
 // could contain malicious HTML. This helper method wraps the string in a react
-// component, which will take care of sanitizing the string.
-const sanitize = unsafe => <span>{unsafe}</span>;
+// fragment, which will take care of sanitizing the string.
+const sanitize = unsafe => <>{unsafe}</>;
 
 export const INITIAL_STEP = 0;
 export const STEPS = [
@@ -23,13 +23,13 @@ export const STEPS = [
   },
   {
     element: '#tour-ai-evidence',
-    title: i18n.rubricTourStepThreeTitle() + ' sanitized',
+    title: i18n.rubricTourStepThreeTitle(),
     position: 'top',
     intro: (
-      <span>
+      <>
         <p>{i18n.rubricTourStepThreeText()}</p>
-        <img src={evidenceDemo} alt="evidence highlighting example" />
-      </span>
+        <img src={evidenceDemo} alt={i18n.rubricTourStepThreeAltText()} />
+      </>
     ),
   },
   {
