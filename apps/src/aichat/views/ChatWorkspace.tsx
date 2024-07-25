@@ -7,6 +7,7 @@ import {
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import {Button} from '@cdo/apps/componentLibrary/button';
+import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import Tabs, {TabsProps} from '@cdo/apps/componentLibrary/tabs/Tabs';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -108,6 +109,11 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     }
   };
 
+  const iconValue: FontAwesomeV6IconProps = {
+    iconName: 'lock',
+    iconStyle: 'solid',
+  };
+
   const tabs = [
     {
       value: 'viewStudentChatHistory',
@@ -115,6 +121,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       tabContent: (
         <div>Viewing {selectedStudentName}'s chat history - TODO</div>
       ),
+      iconLeft: iconValue,
     },
     {
       value: 'testStudentModel',
