@@ -3,7 +3,7 @@ import React, {useEffect, useMemo, useState} from 'react';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import Button from '@cdo/apps/olderSharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/button/Button';
 import {RubricAiEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 

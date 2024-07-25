@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../../../templates/BaseDialog';
-import Button from '../../../olderSharedComponents/button/Button';
+import Button from '../../../legacySharedComponents/button/Button';
 import DialogFooter from '../../../templates/teacherDashboard/DialogFooter';
 import color from '../../../util/color';
 import {projectUpdatedStatuses as statuses} from '../../projectRedux';

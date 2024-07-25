@@ -3,7 +3,7 @@ import React from 'react';
 
 import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '@cdo/apps/lib/util/urlHelpers';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/olderSharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/button/Button';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 

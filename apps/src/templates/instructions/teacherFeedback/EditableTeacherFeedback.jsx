@@ -8,7 +8,7 @@ import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import Button from '@cdo/apps/olderSharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/button/Button';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import Comment from '@cdo/apps/templates/instructions/teacherFeedback/Comment';
 import EditableFeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/EditableFeedbackStatus';

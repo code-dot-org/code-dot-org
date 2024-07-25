@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import onClickOutside from 'react-onclickoutside';
 
-import Button from '@cdo/apps/olderSharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/button/Button';
 
 import style from './dropdown-button.module.scss';
 

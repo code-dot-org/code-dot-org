@@ -4,7 +4,7 @@ import React from 'react';
 
 import i18n from '@cdo/locale';
 
-import Button from '../../olderSharedComponents/button/Button';
+import Button from '../../legacySharedComponents/button/Button';
 
 import {assetButtonStyles} from './AddAssetButtonRow';
 import HiddenUploader from './HiddenUploader.jsx';

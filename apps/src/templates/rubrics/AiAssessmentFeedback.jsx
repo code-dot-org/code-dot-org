@@ -6,7 +6,7 @@ import {
   StrongText,
   EmText,
 } from '@cdo/apps/componentLibrary/typography';
-import Button from '@cdo/apps/olderSharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/button/Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';

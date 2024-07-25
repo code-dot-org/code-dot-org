@@ -4,7 +4,7 @@ import React from 'react';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import Button from '../../../olderSharedComponents/button/Button';
+import Button from '../../../legacySharedComponents/button/Button';
 
 /**
  * Footer for a "System" dialog style used on account pages.

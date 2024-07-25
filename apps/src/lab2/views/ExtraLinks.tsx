@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
 import {ExtraLinksLevelData, ExtraLinksProjectData} from '@cdo/apps/lab2/types';
-import Button from '@cdo/apps/olderSharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/button/Button';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 

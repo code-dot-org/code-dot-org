@@ -7,7 +7,7 @@ import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import Dialog, {Body} from '@cdo/apps/templates/Dialog';
 import i18n from '@cdo/locale';
 
-import Button from '../olderSharedComponents/button/Button';
+import Button from '../legacySharedComponents/button/Button';
 import DialogFooter from '../templates/teacherDashboard/DialogFooter';
 
 import {actions, REDIRECT_RESPONSE} from './redux/applab';

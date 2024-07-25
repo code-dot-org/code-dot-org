@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 import {BASE_DIALOG_WIDTH} from '../constants';
 import color from '../util/color';
 
-import Button from '../olderSharedComponents/button/Button';
+import Button from '../legacySharedComponents/button/Button';
 
 /**
  * BaseDialog

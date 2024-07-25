@@ -10,7 +10,7 @@ import {
   BodyTwoText,
 } from '@cdo/apps/componentLibrary/typography';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import Button from '@cdo/apps/olderSharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/button/Button';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {
   assignToSection,

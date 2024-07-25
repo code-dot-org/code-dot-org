@@ -7,7 +7,7 @@ import {
   filterAnimations,
 } from '@cdo/apps/code-studio/assets/searchAssets';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
-import Button from '@cdo/apps/olderSharedComponents/button/Button.jsx';
+import Button from '@cdo/apps/legacySharedComponents/button/Button.jsx';
 import SearchBar from '@cdo/apps/templates/SearchBar';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 import color from '@cdo/apps/util/color';

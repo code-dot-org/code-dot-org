@@ -5,7 +5,7 @@ import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
-import Button from '@cdo/apps/olderSharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/button/Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {

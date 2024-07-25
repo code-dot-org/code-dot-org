@@ -4,7 +4,7 @@ import React, {CSSProperties, useState} from 'react';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {LtiUpgradeAccountDialogProps} from '@cdo/apps/lib/ui/simpleSignUp/lti/upgrade/types';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/olderSharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/button/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';

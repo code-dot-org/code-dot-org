@@ -9,7 +9,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import {CIPHER, ALPHABET} from '../../constants';
-import Button from '../../olderSharedComponents/button/Button';
+import Button from '../../legacySharedComponents/button/Button';
 import * as color from '../../util/color';
 
 import {hideShareDialog, showLibraryCreationDialog} from './shareDialogRedux';

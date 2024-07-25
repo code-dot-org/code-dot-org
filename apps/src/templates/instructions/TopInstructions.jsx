@@ -26,7 +26,7 @@ import {
 } from '../../redux/instructions';
 import styleConstants from '../../styleConstants';
 import color from '../../util/color';
-import Button from '../../olderSharedComponents/button/Button';
+import Button from '../../legacySharedComponents/button/Button';
 import ContainedLevel from '../ContainedLevel';
 import ContainedLevelAnswer from '../ContainedLevelAnswer';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';

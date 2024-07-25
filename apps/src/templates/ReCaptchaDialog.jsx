@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 import Spinner from '../code-studio/pd/components/spinner';
 
 import BaseDialog from './BaseDialog';
-import Button from '../olderSharedComponents/button/Button';
+import Button from '../legacySharedComponents/button/Button';
 import DialogFooter from './teacherDashboard/DialogFooter';
 
 /*

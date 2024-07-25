@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/olderSharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/button/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import i18n from '@cdo/locale';

@@ -6,7 +6,7 @@ import fontConstants from '@cdo/apps/fontConstants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import color from '../../util/color';
-import Button from '../../olderSharedComponents/button/Button';
+import Button from '../../legacySharedComponents/button/Button';
 
 // If you want to include an image, you're probably looking for a ImageResourceCard.
 class ResourceCard extends Component {

@@ -18,7 +18,7 @@ import UnassignSectionButton from '@cdo/apps/templates/UnassignSectionButton';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import Button from '../../olderSharedComponents/button/Button';
+import Button from '../../legacySharedComponents/button/Button';
 
 import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
 

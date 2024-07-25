@@ -6,7 +6,7 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import BaseDialog from './BaseDialog';
-import Button from '../olderSharedComponents/button/Button';
+import Button from '../legacySharedComponents/button/Button';
 import DialogFooter from './teacherDashboard/DialogFooter';
 
 export default class FallbackPlayerCaptionDialogLink extends React.Component {

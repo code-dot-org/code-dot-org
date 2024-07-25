@@ -9,7 +9,7 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import Button from '../../olderSharedComponents/button/Button';
+import Button from '../../legacySharedComponents/button/Button';
 
 import {setSecretImage, setSecretWords} from './manageStudentsRedux';
 

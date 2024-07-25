@@ -3,7 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import Button from '@cdo/apps/olderSharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/button/Button';
 import i18n from '@cdo/locale';
 
 import styles from './summary-entry-point.module.scss';

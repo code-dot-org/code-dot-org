@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import Button from '@cdo/apps/olderSharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/button/Button';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 

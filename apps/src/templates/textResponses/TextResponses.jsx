@@ -15,7 +15,7 @@ import i18n from '@cdo/locale';
 
 import {h3Style} from '../../lib/ui/Headings';
 import color from '../../util/color';
-import Button from '../../olderSharedComponents/button/Button';
+import Button from '../../legacySharedComponents/button/Button';
 
 import TextResponsesTable from './TextResponsesTable';
 

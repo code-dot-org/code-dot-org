@@ -12,7 +12,7 @@ import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import color from '../../util/color';
-import Button from '../../olderSharedComponents/button/Button';
+import Button from '../../legacySharedComponents/button/Button';
 import FontAwesome from '../FontAwesome';
 import QuickActionsCell from '../tables/QuickActionsCell';
 

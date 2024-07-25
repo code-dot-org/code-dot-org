@@ -5,7 +5,7 @@ import React from 'react';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/olderSharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/button/Button';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 

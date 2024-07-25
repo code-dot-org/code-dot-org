@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/olderSharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/button/Button';
 import i18n from '@cdo/locale';
 
 import color from '../../util/color';

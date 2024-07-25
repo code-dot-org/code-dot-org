@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/olderSharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/button/Button';
 import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import color from '@cdo/apps/util/color';

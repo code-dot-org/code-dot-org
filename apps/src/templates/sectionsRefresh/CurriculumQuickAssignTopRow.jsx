@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {memo, useCallback} from 'react';
 
-import Button from '@cdo/apps/olderSharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/button/Button';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './sections-refresh.module.scss';

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/olderSharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/button/Button';
 import LevelFeedbackEntry from '@cdo/apps/templates/feedback/LevelFeedbackEntry';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';

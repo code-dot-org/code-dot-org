@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Button from '../../olderSharedComponents/button/Button';
+import Button from '../../legacySharedComponents/button/Button';
 
 import DialogFooter from './DialogFooter';
 

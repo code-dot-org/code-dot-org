@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/olderSharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/button/Button';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import i18n from '@cdo/locale';

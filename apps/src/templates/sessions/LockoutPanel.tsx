@@ -20,7 +20,7 @@ import Spinner from '../../code-studio/pd/components/spinner';
 import {getStore} from '../../redux';
 import * as color from '../../util/color';
 import {hashString} from '../../utils';
-import Button from '../../olderSharedComponents/button/Button';
+import Button from '../../legacySharedComponents/button/Button';
 
 /**
  * This panel represents the page that is displayed to accounts that are being

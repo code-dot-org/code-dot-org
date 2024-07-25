@@ -6,7 +6,7 @@ import {
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 import DefaultSpriteRow from '@cdo/apps/code-studio/assets/DefaultSpriteRow';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import Button from '@cdo/apps/olderSharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/button/Button';
 
 export default class DefaultSpritesEditor extends React.Component {
   state = {
