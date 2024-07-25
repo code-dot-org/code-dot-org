@@ -363,10 +363,12 @@ class User < ApplicationRecord
 
   # Puts teachers directly into the progress table v2 view when new account is created.
   def save_show_progress_table_v2
-    user = User.find_by_email_or_hashed_email(email)
-    if teacher?
-      user.show_progress_table_v2 = true
-      user.save!
+    if email.present?
+      user = User.find_by_email_or_hashed_email(email)
+      if teacher?
+        user.show_progress_table_v2 = true
+        user.save!
+      end
     end
   end
 
