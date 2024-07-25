@@ -139,7 +139,6 @@ Scenario: Check for Understanding summaries eyes
   And I am on "http://studio.code.org/s/allthethings/lessons/27/levels/1/summary"
 
   And I wait until element "#summary-container" is visible
-  And I dismiss the teacher panel
 
   And I see no difference for "student names hidden"
 
