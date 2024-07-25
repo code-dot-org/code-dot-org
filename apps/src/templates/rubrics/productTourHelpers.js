@@ -1,40 +1,61 @@
+import React from 'react';
+
 import i18n from '@cdo/locale';
 import evidenceDemo from '@cdo/static/ai-evidence-demo.gif';
+
+// intro.js-react allows a string or a react component for the intro prop.
+// Providing a string that was written by a translator is risky, because it
+// could contain malicious HTML. This helper method wraps the string in a react
+// component, which will take care of sanitizing the string.
+const sanitize = unsafe => <span>{unsafe}</span>;
 
 export const INITIAL_STEP = 0;
 export const STEPS = [
   {
     element: '#ui-floatingActionButton',
     title: i18n.rubricTourStepOneTitle(),
-    intro: i18n.rubricTourStepOneText(),
+    intro: sanitize(i18n.rubricTourStepOneText()),
   },
   {
     element: '#tour-ai-assessment',
     title: i18n.rubricTourStepTwoTitle(),
-    intro: i18n.rubricTourStepTwoText(),
+    intro: sanitize(i18n.rubricTourStepTwoText()),
   },
   {
     element: '#tour-ai-evidence',
-    title: i18n.rubricTourStepThreeTitle(),
+    title: i18n.rubricTourStepThreeTitle() + ' sanitized',
     position: 'top',
-    intro: `<p>${i18n.rubricTourStepThreeText()}</p><img src=${evidenceDemo}>`,
+    intro: (
+      <span>
+        <p>{i18n.rubricTourStepThreeText()}</p>
+        <img src={evidenceDemo} alt="evidence highlighting example" />
+      </span>
+    ),
   },
   {
     element: '#tour-ai-confidence',
     title: i18n.rubricTourStepFourTitle(),
-    intro: i18n.rubricTourStepFourText(),
+    intro: sanitize(i18n.rubricTourStepFourText()),
   },
   {
     element: '#tour-evidence-levels',
     title: i18n.rubricTourStepFiveTitle(),
-    intro: i18n.rubricTourStepFiveText(),
+    intro: sanitize(i18n.rubricTourStepFiveText()),
   },
   {
     element: '#tour-ai-assessment-feedback',
     title: i18n.rubricTourStepSixTitle(),
-    intro: i18n.rubricTourStepSixText(),
+    intro: sanitize(i18n.rubricTourStepSixText()),
   },
 ];
+
+STEPS.forEach((step, index) => {
+  if (typeof step.intro === 'string') {
+    throw new Error(
+      `Step ${index} intro has type 'string'. Please wrap it in a react component or a call to sanitize().`
+    );
+  }
+});
 
 // Dummy props for product tour
 export const DUMMY_PROPS = {
