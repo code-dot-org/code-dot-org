@@ -1,4 +1,4 @@
-import React, {useCallback, useRef, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {
@@ -42,9 +42,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   onClear,
 }) => {
   const [viewMode, setViewMode] = useState<string | null>(null);
-  const [selectedStudentName, setSelectedStudentName] = useState<string | null>(
-    null
-  );
 
   const {showWarningModal, isWaitingForChatResponse} = useAppSelector(
     state => state.aichat
@@ -71,17 +68,16 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     }
   }, [messagesString, isWaitingForChatResponse]);
 
-  useEffect(() => {
-    let selectedStudentName = null;
+  const selectedStudentName = useMemo(() => {
     if (viewAsUserId) {
       const selectedStudent = Object.values(students).find(
         student => student.id === viewAsUserId
       );
       if (selectedStudent) {
-        selectedStudentName = getShortName(selectedStudent.name);
+        return getShortName(selectedStudent.name);
       }
     }
-    setSelectedStudentName(selectedStudentName);
+    return null;
   }, [viewAsUserId, students]);
 
   useEffect(() => {
