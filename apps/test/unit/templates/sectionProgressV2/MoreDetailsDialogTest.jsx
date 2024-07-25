@@ -1,10 +1,10 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import MoreDetailsDialog from '@cdo/apps/templates/sectionProgressV2/MoreDetailsDialog';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('MoreDetailsDialog', () => {
   it('renders the dialog with required elements', () => {

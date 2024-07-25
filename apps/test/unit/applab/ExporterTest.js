@@ -1,4 +1,4 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import Exporter, {getAppOptionsFile} from '@cdo/apps/applab/Exporter';
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
@@ -13,7 +13,7 @@ import pageConstantsReducer, {
   setPageConstants,
 } from '@cdo/apps/redux/pageConstants';
 
-import {assert, expect} from '../../util/reconfiguredChai';
+import {assert, expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const assets = require('@cdo/apps/code-studio/assets');
 
@@ -565,7 +565,7 @@ describe('Applab Exporter,', function () {
           `,
         `<div><div class="screen" id="screen1" tabindex="1"></div></div>`,
         () => {
-          expect(window.write).to.have.been.calledWith([
+          expect(window.write).toHaveBeenCalledWith([
             'a',
             'b',
             'c',

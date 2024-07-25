@@ -3,8 +3,6 @@ import React from 'react';
 
 import NameFailureDialog from '@cdo/apps/code-studio/components/NameFailureDialog';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 describe('NameFailureDialog', () => {
   it('renders with flagged text', () => {
     const wrapper = shallow(
@@ -14,7 +12,7 @@ describe('NameFailureDialog', () => {
         handleClose={() => {}}
       />
     );
-    expect(wrapper.find('h1').text()).to.include('Unable to rename project');
-    expect(wrapper.find('p').text()).to.include('farts');
+    expect(wrapper.find('h1').text()).toContain('Unable to rename project');
+    expect(wrapper.find('p').text()).toContain('farts');
   });
 });

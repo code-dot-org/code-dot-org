@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState, useMemo} from 'react';
 import {connect} from 'react-redux';
 
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
-import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Toggle from '@cdo/apps/componentLibrary/toggle';
 import DCDO from '@cdo/apps/dcdo';
@@ -66,6 +65,15 @@ const SummaryResponses = ({
     },
     [scriptData, selectedSection]
   );
+
+  const eventData = useMemo(() => {
+    return {
+      levelId: scriptData.level.id,
+      levelName: scriptData.level.name,
+      curriculumUmbrella: scriptData.reportingData.curriculumUmbrella,
+      unitId: scriptData.reportingData.unitId,
+    };
+  }, [scriptData]);
 
   useEffect(() => {
     logEvent(EVENTS.SUMMARY_PAGE_LOADED);
@@ -140,6 +148,21 @@ const SummaryResponses = ({
             </label>
           )}
 
+          {/* Correct answer toggle */}
+          {showAnswerToggle && (
+            <div className={styles.toggleContainer}>
+              <Toggle
+                onChange={() => {
+                  setShowCorrectAnswer(!showCorrectAnswer);
+                }}
+                checked={showCorrectAnswer}
+                label={i18n.showAnswer()}
+                position={'right'}
+                size={'s'}
+                name={'summary-correct-answer'}
+              />
+            </div>
+          )}
           {isFreeResponse && DCDO.get('cfu-pin-hide-enabled', false) && (
             <Toggle
               onChange={toggleNames}
@@ -152,25 +175,12 @@ const SummaryResponses = ({
           )}
         </div>
 
-        {/* Correct answer toggle */}
-        {showAnswerToggle && (
-          <div className={styles.toggleContainer}>
-            <ToggleSwitch
-              isToggledOn={showCorrectAnswer}
-              onToggle={() => {
-                setShowCorrectAnswer(!showCorrectAnswer);
-              }}
-              label={i18n.showAnswer()}
-              expands="summary-correct-answer"
-            />
-          </div>
-        )}
-
         {/* Free response visualization */}
         {isFreeResponse && (
           <FreeResponseResponses
             responses={scriptData.responses}
             showStudentNames={showStudentNames}
+            eventData={eventData}
           />
         )}
 

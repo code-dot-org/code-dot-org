@@ -4,7 +4,7 @@ import _ from 'lodash';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 
-import {assert} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 var testCollectionUtils = require('./testCollectionUtils');
 

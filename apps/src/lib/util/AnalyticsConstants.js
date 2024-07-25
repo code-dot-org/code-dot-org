@@ -120,6 +120,27 @@ const EVENTS = {
   SORT_BY_FAMILY_NAME: 'Sorted by family name',
   SORT_BY_DISPLAY_NAME: 'Sorted by display name',
 
+  // Section table on teacher My Dashboard
+  SECTION_TABLE_PRINT_LOGIN_CARDS_CLICKED:
+    'Section table print login cards clicked',
+  SECTION_TABLE_JOIN_INSTRUCTIONS_CLICKED:
+    'Section table join instructions clicked',
+  SECTION_TABLE_EDIT_SECTION_DETAILS_CLICKED:
+    'Section table edit section details clicked',
+  SECTION_TABLE_VIEW_PROGRESS_CLICKED: 'Section table view progress clicked',
+  SECTION_TABLE_MANAGE_STUDENTS_CLICKED:
+    'Section table manage students clicked',
+  SECTION_TABLE_ARCHIVE_SECTION_CLICKED:
+    'Section table archive section clicked',
+  SECTION_TABLE_RESTORE_SECTION_CLICKED:
+    'Section table restore section clicked',
+  SECTION_TABLE_DELETE_SECTION_CLICKED: 'Section table delete section clicked',
+  SECTION_TABLE_PRINT_CERTIFICATES_CLICKED:
+    'Section table print certificates clicked',
+  SECTION_TABLE_SYNC_GOOGLE_CLASSROOM_CLICKED:
+    'Section table sync google classroom clicked',
+  SECTION_TABLE_SYNC_CLEVER_CLICKED: 'Section table sync clever clicked',
+
   // Section progress v2
   PROGRESS_V2_VIEW: 'Section New Progress Viewed ',
   PROGRESS_V2_VIEW_NEW_PROGRESS: 'New Progress Link Clicked',
@@ -157,6 +178,11 @@ const EVENTS = {
   // Check for understanding
   CFU_NAMES_TOGGLED_ON: 'Summary Page Names Toggled On',
   CFU_NAMES_TOGGLED_OFF: 'Summary Page Names Toggled Off',
+  CFU_RESPONSE_HIDDEN: 'Summary Page Response Hidden',
+  CFU_RESPONSE_PINNED: 'Summary Page Response Pinned',
+  CFU_RESPONSE_UNPINNED: 'Summary Page Response Unpinned',
+  CFU_RESPONSE_ALL_UNHID: 'Summary Page Response Hidden Responses Unhidden',
+  CFU_RESPONSE_ALL_UNPINNED: 'Summary Page Response All Unpinned',
 
   // Maker setup
   MAKER_SETUP_PAGE_BOARD_TYPE_EVENT: 'Board Type On Maker Setup Page',

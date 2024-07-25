@@ -3,8 +3,6 @@ import React from 'react';
 
 import UnitCalendar from '@cdo/apps/code-studio/components/progress/UnitCalendar';
 
-import {expect} from '../../../../util/reconfiguredChai';
-
 import {testLessonSchedule, testLessons} from './unitCalendarTestData';
 
 describe('UnitCalendar', () => {
@@ -16,9 +14,7 @@ describe('UnitCalendar', () => {
         weekWidth={585}
       />
     );
-    expect(wrapper.instance().generateSchedule()).to.deep.equal(
-      testLessonSchedule
-    );
-    expect(wrapper.find('UnitCalendarLessonChunk').length).to.equal(5);
+    expect(wrapper.instance().generateSchedule()).toEqual(testLessonSchedule);
+    expect(wrapper.find('UnitCalendarLessonChunk').length).toBe(5);
   });
 });

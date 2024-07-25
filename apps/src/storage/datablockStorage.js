@@ -58,7 +58,7 @@ DatablockStorage.getKeyValue = function (key, onSuccess, onError) {
 
 DatablockStorage.setKeyValue = function (key, value, onSuccess, onError) {
   value = value === undefined ? null : value;
-  return _fetch('set_key_value', 'POST', {
+  _fetch('set_key_value', 'POST', {
     key,
     value: JSON.stringify(value),
   }).then(() => onSuccess(), onError);
@@ -78,7 +78,7 @@ DatablockStorage.createRecord = function (
   onSuccess,
   onError
 ) {
-  return createRecord(tableName, record).then(onSuccess, onError);
+  createRecord(tableName, record).then(onSuccess, onError);
 };
 
 DatablockStorage.updateRecord = function (
@@ -87,7 +87,7 @@ DatablockStorage.updateRecord = function (
   onSuccess,
   onError
 ) {
-  return _fetch('update_record', 'PUT', {
+  _fetch('update_record', 'PUT', {
     table_name: tableName,
     record_id: record.id,
     record_json: JSON.stringify(record),
@@ -144,7 +144,7 @@ DatablockStorage.deleteRecord = function (
   onSuccess,
   onError
 ) {
-  return _fetch('delete_record', 'DELETE', {
+  _fetch('delete_record', 'DELETE', {
     table_name: tableName,
     record_id: record.id,
   }).then(() => onSuccess(true), onError);
