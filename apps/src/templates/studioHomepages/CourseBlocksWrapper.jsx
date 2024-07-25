@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import ResourceCard from '@cdo/apps/templates/studioHomepages/resourceCards/ResourceCard';
-import ResourceCardResponsiveContainer from '@cdo/apps/templates/studioHomepages/resourceCards/ResourceCardResponsiveContainer';
+import ResourceCard from '@cdo/apps/templates/studioHomepages/ResourceCard';
+import ResourceCardResponsiveContainer from '@cdo/apps/templates/studioHomepages/ResourceCardResponsiveContainer';
 
 import ContentContainer from '../ContentContainer';
 

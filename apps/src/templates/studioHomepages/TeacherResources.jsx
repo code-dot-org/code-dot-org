@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 import styleConstants from '../../styleConstants';
 import ContentContainer from '../ContentContainer';
 
-import ImageResourceCard from './resourceCards/ImageResourceCard';
+import ImageResourceCard from './ImageResourceCard';
 
 const contentWidth = styleConstants['content-width'];
 

@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
-import ResourceCard from '../studioHomepages/resourceCards/ResourceCard';
+import ResourceCard from '../studioHomepages/ResourceCard';
 
 class YourSchoolResources extends Component {
   render() {

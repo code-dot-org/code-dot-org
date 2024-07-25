@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import fontConstants from '@cdo/apps/fontConstants';
 
-import color from '../../../util/color';
+import color from '../../util/color';
 
 class ImageResourceCard extends Component {
   static propTypes = {
@@ -45,9 +45,8 @@ class ImageResourceCard extends Component {
             useAsLink={true}
             href={link}
             ariaLabel={buttonText}
-            color={buttonColors.gray}
+            color={buttonColors.purple}
             text={buttonText}
-            type="secondary"
             size="s"
           />
         </div>
