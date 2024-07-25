@@ -77,6 +77,10 @@ const AichatEventView: React.FunctionComponent<AichatEventViewProps> = ({
     );
   }
 
+  if (event.description) {
+    return <Alert text={event.description} type="success" size="s" />;
+  }
+
   return null;
 };
 

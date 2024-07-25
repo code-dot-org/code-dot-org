@@ -16,7 +16,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {AichatEvent, ChatItem, WorkspaceTeacherViewTab} from '../types';
 import {getShortName} from '../utils';
 
-import ChatItemView from './AichatEventView';
+import AichatEventView from './AichatEventView';
 import CopyButton from './CopyButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
@@ -211,7 +211,7 @@ const ChatWithModel: React.FunctionComponent<ChatWithModelProps> = ({
       ref={conversationContainerRef}
     >
       {items.map((item, index) => (
-        <ChatItemView event={item} key={index} />
+        <AichatEventView event={item} key={index} />
       ))}
       {showWaitingAnimation()}
     </div>
@@ -228,7 +228,7 @@ const ViewChatHistory: React.FunctionComponent<ViewChatHistoryProps> = ({
   return (
     <div id="chat-workspace-history" className={moduleStyles.conversationArea}>
       {events.map((event, index) => (
-        <ChatItemView event={event} key={index} />
+        <AichatEventView event={event} key={index} />
       ))}
     </div>
   );
