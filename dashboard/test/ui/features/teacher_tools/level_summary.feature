@@ -4,7 +4,7 @@ Feature: Level summary
 
 Scenario: Free Response level 1
   # Turn on cfu pin and hide until it is on by default.
-  Given I am on "http://studio.code.org/test_dcdo"
+  Given I am on "http://studio.code.org"
   When I use a cookie to mock the DCDO key "cfu-pin-hide-enabled" as "true"
 
   # Complex level with many different features in use, including a title h1.
@@ -19,7 +19,7 @@ Scenario: Free Response level 1
 
 Scenario: Free Response level 2
   # Turn on cfu pin and hide until it is on by default.
-  Given I am on "http://studio.code.org/test_dcdo"
+  Given I am on "http://studio.code.org"
   When I use a cookie to mock the DCDO key "cfu-pin-hide-enabled" as "true"
 
   # Simpler level with an h2 in the markdown.
@@ -34,7 +34,7 @@ Scenario: Free Response level 2
 
 Scenario: Free Response level 3
   # Turn on cfu pin and hide until it is on by default.
-  Given I am on "http://studio.code.org/test_dcdo"
+  Given I am on "http://studio.code.org"
   When I use a cookie to mock the DCDO key "cfu-pin-hide-enabled" as "true"
 
   # Minimal level with no heading, just text and a textarea.
@@ -49,7 +49,7 @@ Scenario: Free Response level 3
 
 Scenario: Multi level 1
   # Turn on cfu pin and hide until it is on by default.
-  Given I am on "http://studio.code.org/test_dcdo"
+  Given I am on "http://studio.code.org"
   When I use a cookie to mock the DCDO key "cfu-pin-hide-enabled" as "true"
 
   # Multiple content blocks, images in question and answers
@@ -67,7 +67,7 @@ Scenario: Multi level 1
 
 Scenario: Multi level 2
   # Turn on cfu pin and hide until it is on by default.
-  Given I am on "http://studio.code.org/test_dcdo"
+  Given I am on "http://studio.code.org"
   When I use a cookie to mock the DCDO key "cfu-pin-hide-enabled" as "true"
 
   # Markdown in question, images and text in answers, more than 4 answers
@@ -85,7 +85,7 @@ Scenario: Multi level 2
 
 Scenario: Check for Understanding summaries
   # Turn on cfu pin and hide until it is on by default.
-  Given I am on "http://studio.code.org/test_dcdo"
+  Given I am on "http://studio.code.org"
   When I use a cookie to mock the DCDO key "cfu-pin-hide-enabled" as "true"
 
   Given I create an authorized teacher-associated student named "Sally"
@@ -113,7 +113,7 @@ Scenario: Check for Understanding summaries
 
 Scenario: Check for Understanding summaries eyes
 # Turn on cfu pin and hide until it is on by default.
-  Given I am on "http://studio.code.org/test_dcdo"
+  Given I am on "http://studio.code.org"
   When I use a cookie to mock the DCDO key "cfu-pin-hide-enabled" as "true"
 
   When I open my eyes to test "Check for Understanding summaries"
