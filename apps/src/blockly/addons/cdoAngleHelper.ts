@@ -1,4 +1,22 @@
+/**
+ * Class for managing and rendering an angle picker UI component.
+ *
+ * This class is designed to add an interactive angle picker UI to block fields within the Artist lab.
+ * It provides functionality for:
+ *
+ * - Initializing and configuring the angle picker UI, including its appearance and behavior.
+ * - Handling user interactions, such as dragging to adjust the angle and rotating the background.
+ * - Updating the visual representation of the angle picker, including drawing lines, circles, and tick marks.
+ * - Animating angle changes when a new value is set (via text input or dropdown menu option selection).
+ */
+
 import * as Blockly from 'blockly/core';
+
+import color from '@cdo/apps/util/color';
+
+import {CLOCKWISE_TURN_DIRECTION} from '../constants';
+
+import {Vector} from './vector';
 
 interface AngleHelperOptions {
   arcColour?: string;
@@ -8,42 +26,6 @@ interface AngleHelperOptions {
   snapPoints?: number[];
   onUpdate?: () => void;
   enableBackgroundRotation?: boolean;
-}
-
-class Vector {
-  constructor(public x: number, public y: number) {}
-
-  clone(): Vector {
-    return new Vector(this.x, this.y);
-  }
-
-  add(vec: Vector): Vector {
-    return new Vector(this.x + vec.x, this.y + vec.y);
-  }
-
-  subtract(vec: Vector): Vector {
-    return new Vector(this.x - vec.x, this.y - vec.y);
-  }
-
-  rotate(angle: number): Vector {
-    const rad = angle * (Math.PI / 180);
-    const cos = Math.cos(rad);
-    const sin = Math.sin(rad);
-    const newX = this.x * cos - this.y * sin;
-    const newY = this.y * cos + this.x * sin;
-    return new Vector(newX, newY);
-  }
-
-  static rotateAroundPoint(vec: Vector, center: Vector, angle: number): Vector {
-    const res = vec.clone().subtract(center).rotate(angle);
-    return res.add(center);
-  }
-
-  static distance(vec1: Vector, vec2: Vector): number {
-    return Math.sqrt(
-      Math.pow(vec2.x - vec1.x, 2) + Math.pow(vec2.y - vec1.y, 2)
-    );
-  }
 }
 
 class CdoAngleHelper {
@@ -85,7 +67,7 @@ class CdoAngleHelper {
   private mouseDownWrapper_: ((e: MouseEvent) => void) | null;
 
   constructor(direction: string, options: AngleHelperOptions = {}) {
-    this.lineColour_ = '#4d575f';
+    this.lineColour_ = color.dark_charcoal;
     this.strokeWidth_ = 3;
     this.arcColour_ = options.arcColour || this.lineColour_;
     this.height_ = options.height || 150;
@@ -94,7 +76,7 @@ class CdoAngleHelper {
     this.onUpdate_ = options.onUpdate;
     this.enableBackgroundRotation_ = options.enableBackgroundRotation || false;
 
-    this.turnRight_ = direction === 'turnRight';
+    this.turnRight_ = direction === CLOCKWISE_TURN_DIRECTION;
 
     this.picker_ = {
       handleRadius: 10,
@@ -182,12 +164,10 @@ class CdoAngleHelper {
   }
 
   init(svgContainer: HTMLElement): void {
+    // Create the SVG container for the angle helper
     this.svg_ = Blockly.utils.dom.createSvgElement(
       'svg',
       {
-        xmlns: 'http://www.w3.org/2000/svg',
-        'xmlns:html': 'http://www.w3.org/1999/xhtml',
-        'xmlns:xlink': 'http://www.w3.org/1999/xlink',
         version: '1.1',
         height: `${this.height_}px`,
         width: `${this.width_}px`,
@@ -256,13 +236,18 @@ class CdoAngleHelper {
       this.svg_
     ) as SVGPathElement;
 
+    // Create tick marks around the circumference of the angle helper.
     for (let angle = 0; angle < 360; angle += this.background_.tickSpacing) {
       let markerSize;
+      // Determine the size of the tick mark based on the angle.
       if (angle % 90 === 0) {
+        // Large tick mark for 0, 90, 180, and 270 degrees.
         markerSize = 15;
       } else if (angle % 45 === 0) {
+        // Medium tick mark for 45, 135, 225, and 315 degrees.
         markerSize = 10;
       } else {
+        // Small tick mark for all other angles.
         markerSize = 5;
       }
       this.background_.ticks.push(
@@ -303,7 +288,7 @@ class CdoAngleHelper {
       {
         cx: this.picker_.handleCenter!.x,
         cy: this.picker_.handleCenter!.y,
-        fill: '#a69bc1',
+        fill: color.light_purple,
         r: this.picker_.handleRadius,
         stroke: this.lineColour_,
         'stroke-width': this.strokeWidth_,
@@ -490,7 +475,7 @@ class CdoAngleHelper {
     const largeArcFlag = Math.abs(startAngle - endAngle) > 180 ? '1' : '0';
     const sweepFlag = endAngle - startAngle < 0 ? '0' : '1';
 
-    const d = [
+    const pathData = [
       'M',
       start.x.toFixed(2),
       start.y.toFixed(2),
@@ -507,7 +492,7 @@ class CdoAngleHelper {
       center.y,
     ].join(' ');
 
-    return d;
+    return pathData;
   }
 
   private calculateAngle(
