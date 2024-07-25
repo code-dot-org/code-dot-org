@@ -10,7 +10,7 @@ import CourseCard from './CourseCard';
 import SeeMoreCourses from './SeeMoreCourses';
 import SetUpCourses from './SetUpCourses';
 import shapes from './shapes';
-import TopCourse from './topCourse/TopCourse';
+import TopCourse from './TopCourse';
 import ViewFeedback from './ViewFeedback';
 
 const contentWidth = styleConstants['content-width'];
@@ -42,6 +42,12 @@ export default class RecentCourses extends Component {
     const moreCourses = courses.slice(4);
     const hasCourse = courses.length > 0 || !!topCourse;
 
+    const tc = {
+      assignableName: 'CSP 1',
+      lessonName: 'Lesson 1: Intro to CSP',
+      linkToOverview: 'studio.code.org/s/csp1-2021',
+      linkToLesson: 'studio.code.org/s/csp1-2021/lessons/1',
+    }
     return (
       <div id="recent-courses">
         <ContentContainer
@@ -51,12 +57,12 @@ export default class RecentCourses extends Component {
               : i18n.myCourses()
           }
         >
-          {topCourse && (
+          {tc && (
             <TopCourse
-              assignableName={topCourse.assignableName}
-              lessonName={topCourse.lessonName}
-              linkToOverview={topCourse.linkToOverview}
-              linkToLesson={topCourse.linkToLesson}
+              assignableName={tc.assignableName}
+              lessonName={tc.lessonName}
+              linkToOverview={tc.linkToOverview}
+              linkToLesson={tc.linkToLesson}
             />
           )}
           {topFourCourses.length > 0 && (
