@@ -1,15 +1,17 @@
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+
 import {DEFAULT_CHORD_LENGTH, DEFAULT_PATTERN_LENGTH} from '../../constants';
 import {ChordEvent, ChordEventValue} from '../interfaces/ChordEvent';
 import {Effects, EffectValue} from '../interfaces/Effects';
+import {FunctionEvents} from '../interfaces/FunctionEvents';
 import {PatternEvent, PatternEventValue} from '../interfaces/PatternEvent';
 import {PlaybackEvent} from '../interfaces/PlaybackEvent';
-import {FunctionEvents} from '../interfaces/FunctionEvents';
 import {SkipContext} from '../interfaces/SkipContext';
 import {SoundEvent} from '../interfaces/SoundEvent';
 import MusicLibrary from '../MusicLibrary';
+
 import Sequencer from './Sequencer';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
 interface SequenceFrame {
   measure: number;

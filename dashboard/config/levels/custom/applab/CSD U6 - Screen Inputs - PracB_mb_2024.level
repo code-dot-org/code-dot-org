@@ -69,7 +69,6 @@
     "debugger_disabled": "false",
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/39f01938ced03ef94f30e86edd2b4a47-image-1648831845901.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Digital Menu Creator\r\n\r\nCreate an app that creates a customizable menu for a restaurant. The restaurant can enter their name, a special dish, and the price. Then they can use the menu to display outside their restaurant or on their website.\r\n\r\n## Do This\r\n\r\n_Note: You can click the instructions below to expand them and see more specific instructions_\r\n\r\n1) ::: details [Get the values from the text inputs and store it in three variables]\r\n\t- Use three [`var x`(#BB77C7)](/docs/applab/declareAssign_x/) and [`getText()`(#fff176)](/docs/applab/getText/) blocks to get the values from the `restaurantInput`, `specialInput`, and `priceInput` elements\r\n\t:::\r\n2) ::: details [Update the label elements on the screen]\r\n\t- Use three [`setText()`(#fff176)](/docs/applab/setText/) blocks to update the `restaurantLabel`, `specialLabel`, and `priceLabel` elements\r\n    :::\r\n\r\n**Run the program!** You should be able to enter text into the boxes and press \"Create!\", and the menu will update with your customizable text!\r\n\r\n![]()\r\n\r\n![]()",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

@@ -1,4 +1,4 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import Craft from '@cdo/apps/craft/code-connection/craft';
 import {
@@ -9,7 +9,7 @@ import {
 } from '@cdo/apps/redux';
 import pageConstants from '@cdo/apps/redux/pageConstants';
 
-import {assert} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Craft', () => {
   beforeAll(() => sinon.stub(Craft, 'render'));

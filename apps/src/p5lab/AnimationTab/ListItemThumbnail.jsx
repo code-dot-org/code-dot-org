@@ -1,11 +1,13 @@
 /** Animation or Frame thumbnail */
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import _ from 'lodash';
+
 import color from '@cdo/apps/util/color';
+
+import AnimationPreview from '../AnimationPicker/AnimationPreview';
 import {PlayBehavior} from '../constants';
 import * as shapes from '../shapes';
-import AnimationPreview from '../AnimationPicker/AnimationPreview';
 
 const staticStyles = {
   root: {

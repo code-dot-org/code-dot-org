@@ -1,8 +1,8 @@
 import appMain from '@cdo/apps/appMain';
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import GameLab from '@cdo/apps/p5lab/gamelab/GameLab';
-import skins from '@cdo/apps/p5lab/skins';
 import levels from '@cdo/apps/p5lab/levels';
+import skins from '@cdo/apps/p5lab/skins';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
 export default function loadGamelab(options) {
   options.skinsModule = skins;

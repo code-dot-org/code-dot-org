@@ -1,4 +1,5 @@
 import React from 'react';
+
 import LtiRosterSyncSettings from './LtiRosterSyncSettings';
 
 export default {

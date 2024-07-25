@@ -9,12 +9,16 @@
       "include_student_lesson_plans": true,
       "is_course": true,
       "is_migrated": true,
+      "supported_locales": [
+        "es-MX",
+        "fa-IR"
+      ],
       "tts": true,
       "version_year": "2023"
     },
     "new_name": null,
     "family_name": "ai-ethics",
-    "serialized_at": "2023-10-19 18:40:33 UTC",
+    "serialized_at": "2024-07-22 20:57:37 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

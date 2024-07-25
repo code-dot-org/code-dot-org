@@ -1,11 +1,14 @@
-import React, {useEffect, useState} from 'react';
 import Papa from 'papaparse';
+import React, {useEffect, useState} from 'react';
+
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
-import Button from '@cdo/apps/componentLibrary/button/Button';
 import {formatQuestionForAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {ChatContext} from '@cdo/apps/aiTutor/types';
-import styles from './ai-tutor-tester.module.scss';
+import Button from '@cdo/apps/componentLibrary/button/Button';
+
 import AITutorTesterSampleColumns from './AITutorTesterSampleColumns';
+
+import styles from './ai-tutor-tester.module.scss';
 
 /**
  * Renders a series of buttons that allow levelbuilders to upload a CSV of
@@ -13,7 +16,8 @@ import AITutorTesterSampleColumns from './AITutorTesterSampleColumns';
  */
 
 interface AIInteraction extends ChatContext {
-  systemPrompt: string | undefined;
+  systemPrompt?: string | undefined;
+  levelId?: number | undefined;
   aiResponse: string | undefined;
 }
 
@@ -58,7 +62,8 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
     const chatApiResponse = await getChatCompletionMessage(
       formatQuestionForAITutor(row),
       [],
-      row.systemPrompt
+      row.systemPrompt,
+      row.levelId
     );
     row.aiResponse = chatApiResponse.assistantResponse;
     setResponseCount(prevResponseCount => prevResponseCount + 1);

@@ -1,11 +1,9 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon';
 
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 
-import {expect} from '../../util/reconfiguredChai';
 describe('Design System - Checkbox', () => {
   it('Checkbox - renders with correct label', () => {
     render(
@@ -17,13 +15,13 @@ describe('Design System - Checkbox', () => {
     );
 
     const checkbox = screen.getByDisplayValue('test-checkbox');
-    expect(checkbox).to.exist;
-    expect(screen.getByText('Checkbox label')).to.exist;
+    expect(checkbox).toBeDefined();
+    expect(screen.getByText('Checkbox label')).toBeDefined();
   });
 
   it('Checkbox - changes checked state on click', async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     let checked = false;
     const onChange = () => {
@@ -43,11 +41,11 @@ describe('Design System - Checkbox', () => {
     );
 
     let checkbox = screen.getByDisplayValue('test-checkbox');
-    expect(checkbox).to.exist;
+    expect(checkbox).toBeDefined();
 
-    expect(checkbox.checked).to.be.false;
-    expect(checkbox.disabled).to.be.false;
-    expect(checkbox.indeterminate).to.be.false;
+    expect(checkbox.checked).toBe(false);
+    expect(checkbox.disabled).toBe(false);
+    expect(checkbox.indeterminate).toBe(false);
 
     await user.click(checkbox);
 
@@ -64,11 +62,11 @@ describe('Design System - Checkbox', () => {
 
     checkbox = screen.getByDisplayValue('test-checkbox');
 
-    expect(spyOnChange).to.have.been.calledOnce;
-    expect(spyOnChange).to.have.been.calledWith(true);
-    expect(checkbox.checked).to.be.true;
-    expect(checkbox.disabled).to.be.false;
-    expect(checkbox.indeterminate).to.be.false;
+    expect(spyOnChange).toHaveBeenCalledTimes(1);
+    expect(spyOnChange).toHaveBeenCalledWith(true);
+    expect(checkbox.checked).toBe(true);
+    expect(checkbox.disabled).toBe(false);
+    expect(checkbox.indeterminate).toBe(false);
 
     await user.click(checkbox);
 
@@ -85,16 +83,16 @@ describe('Design System - Checkbox', () => {
 
     checkbox = screen.getByDisplayValue('test-checkbox');
 
-    expect(spyOnChange).to.have.been.calledTwice;
-    expect(spyOnChange).to.have.been.calledWith(false);
-    expect(checkbox.checked).to.be.false;
-    expect(checkbox.disabled).to.be.false;
-    expect(checkbox.indeterminate).to.be.false;
+    expect(spyOnChange).toHaveBeenCalledTimes(2);
+    expect(spyOnChange).toHaveBeenCalledWith(false);
+    expect(checkbox.checked).toBe(false);
+    expect(checkbox.disabled).toBe(false);
+    expect(checkbox.indeterminate).toBe(false);
   });
 
   it('Checkbox - renders indeterminate checkbox, changes on click', async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     let checked = false;
     let indeterminate = true;
@@ -122,11 +120,11 @@ describe('Design System - Checkbox', () => {
     );
 
     let checkbox = screen.getByDisplayValue('test-checkbox');
-    expect(checkbox).to.exist;
+    expect(checkbox).toBeDefined();
 
-    expect(checkbox.checked).to.be.false;
-    expect(checkbox.disabled).to.be.false;
-    expect(checkbox.indeterminate).to.be.true;
+    expect(checkbox.checked).toBe(false);
+    expect(checkbox.disabled).toBe(false);
+    expect(checkbox.indeterminate).toBe(true);
 
     await user.click(checkbox);
 
@@ -144,11 +142,11 @@ describe('Design System - Checkbox', () => {
 
     checkbox = screen.getByDisplayValue('test-checkbox');
 
-    expect(spyOnChange).to.have.been.calledOnce;
-    expect(spyOnChange).to.have.been.calledWith(true);
-    expect(checkbox.checked).to.be.true;
-    expect(checkbox.disabled).to.be.false;
-    expect(checkbox.indeterminate).to.be.false;
+    expect(spyOnChange).toHaveBeenCalledTimes(1);
+    expect(spyOnChange).toHaveBeenCalledWith(true);
+    expect(checkbox.checked).toBe(true);
+    expect(checkbox.disabled).toBe(false);
+    expect(checkbox.indeterminate).toBe(false);
 
     await user.click(checkbox);
 
@@ -166,16 +164,16 @@ describe('Design System - Checkbox', () => {
 
     checkbox = screen.getByDisplayValue('test-checkbox');
 
-    expect(spyOnChange).to.have.been.calledTwice;
-    expect(spyOnChange).to.have.been.calledWith(false);
-    expect(checkbox.checked).to.be.false;
-    expect(checkbox.disabled).to.be.false;
-    expect(checkbox.indeterminate).to.be.false;
+    expect(spyOnChange).toHaveBeenCalledTimes(2);
+    expect(spyOnChange).toHaveBeenCalledWith(false);
+    expect(checkbox.checked).toBe(false);
+    expect(checkbox.disabled).toBe(false);
+    expect(checkbox.indeterminate).toBe(false);
   });
 
   it("Checkbox - renders disabled checkbox, doesn't change on click", async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     let checked = false;
     const onChange = () => {
@@ -196,11 +194,11 @@ describe('Design System - Checkbox', () => {
     );
 
     let checkbox = screen.getByDisplayValue('test-checkbox');
-    expect(checkbox).to.exist;
+    expect(checkbox).toBeDefined();
 
-    expect(checkbox.checked).to.be.false;
-    expect(checkbox.disabled).to.be.true;
-    expect(checkbox.indeterminate).to.be.false;
+    expect(checkbox.checked).toBe(false);
+    expect(checkbox.disabled).toBe(true);
+    expect(checkbox.indeterminate).toBe(false);
 
     await user.click(checkbox);
 
@@ -218,10 +216,10 @@ describe('Design System - Checkbox', () => {
 
     checkbox = screen.getByDisplayValue('test-checkbox');
 
-    expect(spyOnChange).to.not.have.been.called;
-    expect(checkbox.checked).to.be.false;
-    expect(checkbox.disabled).to.be.true;
-    expect(checkbox.indeterminate).to.be.false;
+    expect(spyOnChange).not.toHaveBeenCalled();
+    expect(checkbox.checked).toBe(false);
+    expect(checkbox.disabled).toBe(true);
+    expect(checkbox.indeterminate).toBe(false);
 
     await user.click(checkbox);
 
@@ -237,9 +235,9 @@ describe('Design System - Checkbox', () => {
       />
     );
 
-    expect(spyOnChange).to.not.have.been.called;
-    expect(checkbox.checked).to.be.false;
-    expect(checkbox.disabled).to.be.true;
-    expect(checkbox.indeterminate).to.be.false;
+    expect(spyOnChange).not.toHaveBeenCalled();
+    expect(checkbox.checked).toBe(false);
+    expect(checkbox.disabled).toBe(true);
+    expect(checkbox.indeterminate).toBe(false);
   });
 });
