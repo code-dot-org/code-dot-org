@@ -94,6 +94,17 @@ label.sectionSelector {
   justify-content: space-between;
 }
 
+.studentName {
+  min-height: 24px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+
+  p {
+    margin: 0;
+  }
+}
+
 .studentResponses {
   select {
     display: block;
@@ -105,35 +116,72 @@ label.sectionSelector {
     width: 100%;
   }
 
+  .studentResponseBlock {
+    margin-bottom: 22px;
+    // inline-block is necessary to prevent boxes from splitting across columns.
+    display: inline-block;
+    width: 100%;
+  }
+
   .studentResponsesColumns {
     width: 100%;
     columns: 2 auto;
     column-gap: 48px;
-    padding-top: 24px;
+    padding-top: 40px;
     padding-bottom: 12px;
 
-    .studentResponseBlock {
-      margin-bottom: 16px;
+  }
+
+  .pinResponsesSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pinnedResponsesColumns {
+    width: 100%;
+    columns: 2 auto;
+    column-gap: 48px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid $light_gray_200;
+  }
+
+  .pinnedResponse {
+    background-color: $light_secondary_500;
+    p {
+      color: $light_white;
+    }
+  }
+
+  .pinResponsesHeader {
+    display: flex;
+    flex-direction: row;
+    height: 42px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    align-items: center;
+
+    h3 {
+      margin: 0;
+      margin-inline-end: auto;
     }
 
-    .studentName {
-      min-height: 24px;
-      margin: 0;
-      font-size: 14px;
-      font-weight: bold;
-      padding-left: 12px;
+    .pinHeaderIcon {
+      color: $light_secondary_500;
+      margin-inline-end: 8px;
+      font-size: 20px;
     }
+  }
+
+  .unpinnedResponse {
+    background-color: #F6EDFD;
   }
 
   .studentAnswer {
     width: 100%;
     box-sizing: border-box;
     border-radius: 4px;
-    // inline-block is necessary to prevent boxes from splitting across columns.
-    display: inline-block;
 
     .studentAnswerInterior {
-      background-color: $lightest_cyan;
       padding: 12px;
       border-radius: 4px;
       display: flex;
@@ -149,6 +197,14 @@ label.sectionSelector {
     .studentAnswerMenuButton {
       width: 26px;
       height: 26px;
+    }
+
+    .studentAnswerMenuButtonPinned {
+      color: $light_white;
+
+      &:hover {
+        background-color: $light_secondary_700;
+      }
     }
 
     .studentAnswerMenuDropdownContainer {
@@ -207,7 +263,9 @@ label.sectionSelector {
 
       i {
         display: inline-block;
-        min-width: 2em;
+        min-width: 20px;
+        max-width: 20px;
+        margin: 0 8px;
       }
     }
 
