@@ -6,11 +6,14 @@ module EnvironmentAwareDynamicConfigHelper
       # Use the memory adapter if we're running unit tests, but not if we're
       # running the web application server.
       adapter = MemoryAdapter.new
-    elsif rack_or_rails_env == 'production' || managed_test_server?
+    elsif rack_or_rails_env == 'production'
       # Production and the managed test system web application servers
       # (test.code.org / studio.code.org) use DynamoDB.
       cache_expiration = 30
       adapter = DynamoDBAdapter.new(identifier)
+    elsif managed_test_server?
+      cache_expiration = 30
+      adapter = DynamoDBAdapter.new(identifier, consistent_read: true)
     else
       # Everything else writes out to the local filesystem
       file_path = "#{dashboard_dir(identifier)}_temp.json"

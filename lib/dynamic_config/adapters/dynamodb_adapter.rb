@@ -5,9 +5,10 @@ require 'oj'
 
 class DynamoDBAdapter
   # @param table_name [String] the name of the dynamodb table to use
-  def initialize(table_name)
+  def initialize(table_name, consistent_read: false)
     @table_name = table_name
     @client = Aws::DynamoDB::Client.new
+    @consistent_read = consistent_read
   end
 
   # @param key [String]
@@ -16,7 +17,8 @@ class DynamoDBAdapter
     resp = @client.get_item(
       {
         table_name: @table_name,
-        key: {'data-key' => key}
+        key: {'data-key' => key},
+        consistent_read: @consistent_read
       }
     )
     return nil if resp.item.nil?
