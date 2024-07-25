@@ -40,12 +40,11 @@ const ResponseMenuDropdown = ({
       return (
         <button
           type="button"
-          className={styles.dropdownOption}
+          className={classNames(styles.dropdownOption, 'uitest-pin-response')}
           onClick={() => {
             setIsOpen(false);
             pinResponse(response.user_id);
           }}
-          id="pin-response-button"
         >
           <FontAwesomeV6Icon iconName="thumbtack" />
           {i18n.pinResponse()}
@@ -59,7 +58,7 @@ const ResponseMenuDropdown = ({
       <Button
         onClick={() => setIsOpen(!isOpen)}
         isIconOnly={true}
-        icon={{iconName: 'ellipsis-vertical', title: i18n.additionalOptions()}}
+        icon={{iconName: 'ellipsis-vertical'}}
         color={buttonColors.purple}
         size="xs"
         type="tertiary"
@@ -67,24 +66,23 @@ const ResponseMenuDropdown = ({
           styles.studentAnswerMenuButton,
           unpinResponse && styles.studentAnswerMenuButtonPinned
         )}
-        id="student-response-menu-button"
+        aria-label={i18n.additionalOptions()}
       />
       {isOpen && (
-        <div
-          className={styles.studentAnswerMenuDropdown}
-          id="student-response-menu"
-        >
+        <div className={styles.studentAnswerMenuDropdown}>
           <ul>
             <li>{getPinnedDropdownOption()}</li>
             <li>
               <button
-                className={styles.dropdownOption}
+                className={classNames(
+                  styles.dropdownOption,
+                  'uitest-hide-response'
+                )}
                 type="button"
                 onClick={() => {
                   setIsOpen(false);
                   hideResponse(response.user_id);
                 }}
-                id="hide-response-button"
               >
                 <FontAwesomeV6Icon iconName="eye-slash" />
                 {i18n.hideResponse()}
