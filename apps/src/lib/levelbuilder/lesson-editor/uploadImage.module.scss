@@ -3,8 +3,8 @@
   grid-template-columns: repeat(
     auto-fill,
     minmax(100px, 1fr)
-  ); /* Adjust based on your needs */
-  gap: 10px; /* Adjust the gap between images */
+  ); 
+  gap: 10px; 
 }
 
 .imagePreview {

@@ -10,7 +10,7 @@ export default function UploadImageForm() {
   const [imgUrls, setImgUrls] = useState([]);
   const [error, setError] = useState(undefined);
   const [isUploading, setIsUploading] = useState(false);
-  const [formDataForImages, setFormDataForImages] = useState(undefined);
+  const [listOfImageFiles, setListOfImageFiles] = useState([]);
   const [tempImageUrls, setTempImageUrls] = useState([]);
 
   const resetState = () => {
@@ -26,13 +26,15 @@ export default function UploadImageForm() {
     }
 
     // assemble upload data
-    const formData = new FormData();
+    //const formData = new FormData();
+    let tempImageFileList = [];
     let tempImageUrlList = [];
     for (let i = 0; i < e.target.files.length; i++) {
-      formData.append('file', e.target.files[i]);
+      tempImageFileList.push(e.target.files[i]);
+      //formData.append('file', e.target.files[i]);
       tempImageUrlList.push(URL.createObjectURL(e.target.files[i]));
     }
-    setFormDataForImages(formData);
+    setListOfImageFiles(tempImageFileList);
     setTempImageUrls(tempImageUrlList);
   };
 
@@ -56,9 +58,9 @@ export default function UploadImageForm() {
   };
 
   const saveImagesToS3 = () => {
-    for (const image of formDataForImages.entries()) {
+    for (const image of listOfImageFiles) {
       const singleFormData = new FormData();
-      singleFormData.append(image[0], image[1]);
+      singleFormData.append('file', image);
       saveImageToS3(singleFormData);
     }
   };
