@@ -8284,7 +8284,6 @@ __metadata:
     codemirror-spell-checker: ^1.1.2
     copy-webpack-plugin: ^9.0.1
     css-loader: ^6.2.0
-    csv-parse: ^4.4.6
     dapjs: ^2.3.0
     dedent: ^1.5.1
     details-element-polyfill: "https://github.com/javan/details-element-polyfill"
@@ -10194,13 +10193,6 @@ canvg@gabelerner/canvg:
   version: 3.0.8
   resolution: "csstype@npm:3.0.8"
   checksum: 5939a003858a31a32cbc52a8f45496aa0c2bcb4629b21c5bc14a7ddcac1a3d4adfd655f56843dc14940f60563378e9444af2c9c373b3f212601b9eeb6740b8db
-  languageName: node
-  linkType: hard
-
-"csv-parse@npm:^4.4.6":
-  version: 4.4.6
-  resolution: "csv-parse@npm:4.4.6"
-  checksum: 09c37cd2f0179dd420338eb21823bf3cae221ae25e3558d6cecccc0654e6c5e019f34f0f3ce5c7f84cee2cd833e42d48b53e1993c0bcbddfdb7ce07a6760e19c
   languageName: node
   linkType: hard
 
