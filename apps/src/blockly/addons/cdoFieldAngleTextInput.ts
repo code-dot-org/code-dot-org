@@ -1,10 +1,11 @@
+import {CLOCKWISE_TURN_DIRECTION} from '../constants';
 import {FieldHelperOptions} from '../types';
 
 import CdoFieldNumber from './cdoFieldNumber';
 
 interface AngleTextInputOptions {
   directionTitle: string; // Ex. 'DIR'
-  direction: string; // Ex. 'turnRight'
+  direction: 'turnRight' | 'turnLeft';
 }
 
 export default class CdoFieldAngleTextInput extends CdoFieldNumber {
@@ -29,13 +30,12 @@ export default class CdoFieldAngleTextInput extends CdoFieldNumber {
    * @returns {string} The direction value.
    * @override
    */
-  getDirection(): string {
+  getAnglePickerDirection(): string {
     let direction = this.direction;
     if (!direction && this.directionFieldName) {
       direction = this.getSourceBlock()?.getFieldValue(this.directionFieldName);
     }
-    console.log({direction});
-    return direction || 'turnRight';
+    return direction || CLOCKWISE_TURN_DIRECTION;
   }
 
   getFieldHelperOptions(field_helper: string) {

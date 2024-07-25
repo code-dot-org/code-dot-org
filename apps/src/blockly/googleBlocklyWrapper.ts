@@ -12,7 +12,7 @@ import {
   ScrollBlockDragger,
   ScrollOptions,
 } from '@blockly/plugin-scroll-options';
-import {Options, Theme, Workspace} from 'blockly';
+import {inputTypes, Options, Theme, Workspace} from 'blockly';
 import {FieldProto} from 'blockly/core/field';
 import {javascriptGenerator} from 'blockly/javascript';
 
@@ -487,9 +487,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     fieldHelper: string,
     options: FieldHelperOptions
   ) {
-    // if (this.type !== Blockly.INPUT_VALUE) {
-    //   throw 'Only Value Inputs can be augmented with helpers';
-    // }
+    if (this.type !== inputTypes.VALUE) {
+      throw 'Only Value Inputs can be augmented with helpers';
+    }
 
     (this.connection as ExtendedConnection).addFieldHelper(
       fieldHelper,

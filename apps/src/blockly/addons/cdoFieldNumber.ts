@@ -52,6 +52,10 @@ export default class CdoFieldNumber extends GoogleBlockly.FieldNumber {
    * If this field is attached to a block whose output connection is attached to a
    * connection that has the specified field helper, get the options for that
    * field helper.
+   * For example, with a math_number block containing this field, we will look at
+   * the input connection of parent block. A draw_turn block will have field helper
+   * options whereas other blocks, like draw_move, will not. These options are found
+   * on the connection of the parent block's input.
    * @param {string} fieldHelper - the field helper to retrieve. One of
    *        Blockly.BlockFieldHelper
    * @return {Object|undefined} the options object if it exists
@@ -78,12 +82,13 @@ export default class CdoFieldNumber extends GoogleBlockly.FieldNumber {
   }
 
   /**
-   * Initialize the angle helper.
+   * Initialize the angle helper, which provides an angle-picking UI for Artist
+   * turn blocks. Only used when specific field helper options are present.
    * @private
    */
   private initializeAngleHelper() {
     const sourceBlock = this.getSourceBlock();
-    this.angleHelper = new Blockly.AngleHelper(this.getDirection(), {
+    this.angleHelper = new Blockly.AngleHelper(this.getAnglePickerDirection(), {
       arcColour: (sourceBlock as ExtendedBlockSvg)?.style.colourPrimary,
       onUpdate: this.updateAngleValue.bind(this),
       angle: parseInt(`${this.getValue()}`),
@@ -96,10 +101,11 @@ export default class CdoFieldNumber extends GoogleBlockly.FieldNumber {
   }
 
   /**
-   * Get the direction from either the hardcoded setting or the direction field.
+   * Get a direction from field helper options - either the hardcoded
+   * setting or the direction field. Only used by the angle helper.
    * @returns {string} The direction value.
    */
-  getDirection(): string {
+  getAnglePickerDirection(): string {
     const defaultDirection = 'turnRight';
     const options = this.getFieldHelperOptions(
       Blockly.BlockFieldHelper.ANGLE_HELPER
@@ -151,7 +157,8 @@ export default class CdoFieldNumber extends GoogleBlockly.FieldNumber {
   }
 
   /**
-   * Override to handle value update and animate the angle helper accordingly.
+   * Override to handle value update and animate the angle helper accordingly,
+   * if it exists.
    * @param {number} newValue The new value to update.
    * @private
    */
