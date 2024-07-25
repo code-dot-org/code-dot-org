@@ -25,7 +25,7 @@ end
 Then /^I complete the level on "([^"]*)"$/ do |puzzle_url|
   steps %{
     And I am on "#{append_noautoplay(puzzle_url)}"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
   }
   steps PUZZLE_SOLUTIONS[puzzle_url]
   steps %{

@@ -33,16 +33,16 @@ Otherwise don't show feedback tab
 
   #Not automatically visible on contained levels with no mini rubric
   Then I am on "http://studio.code.org/s/allthethings/lessons/18/levels/15"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And element ".uitest-feedback" is not visible
 
   #Not automatically visible on un-contained levels with no mini rubric
   Then I am on "http://studio.code.org/s/allthethings/lessons/18/levels/7"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And element ".uitest-feedback" is not visible
 
   And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I wait to see ".uitest-feedback"
   And element ".editor-column" contains text "Rubric"
   Then I click selector ".uitest-feedback"
@@ -76,7 +76,7 @@ Otherwise don't show feedback tab
 
   #As teacher, refresh page and latest feedback is visible
   And I reload the page
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I wait until ".editor-column" contains text "Nice!"
   And I wait to see "#rubric-input-performanceLevel1"
   And element "#rubric-input-performanceLevel1" is checked

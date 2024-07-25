@@ -5,7 +5,7 @@ Background:
 
 @no_mobile
 Scenario: Drag a dropdown and select a different option.
-  When I wait for the page to fully load
+  When I wait for the lab page to fully load
   And I dismiss the login reminder
   And I drag block "1" to offset "300, 250"
   And I press dropdown number 45

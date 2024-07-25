@@ -5,7 +5,7 @@ Background:
 
 Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appears as solved
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true&blocklyVersion=google"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I drag block "moveForward" to block "startBlock"
   And I press "runButton"
   Then I wait to see ".modal"
@@ -14,7 +14,7 @@ Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appe
   ## Verify that closing doesn't redirect to the next level
   Then check that I am on "http://studio.code.org/hoc/1?noautoplay=true&blocklyVersion=google"
   Then I am on "http://studio.code.org/hoc/2?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I verify progress in the header of the current page is "perfect" for level 1
   # Course overview should also show progress
   Then I navigate to the course page for "hourofcode"
@@ -26,22 +26,22 @@ Scenario: Solving puzzle 1, proceeding to puzzle 2, verifying that puzzle 1 appe
   # Level source is saved
   Then I am on "http://studio.code.org/hoc/1?noautoplay=true&blocklyVersion=google"
   Then I wait until I am on "http://studio.code.org/hoc/1?noautoplay=true&blocklyVersion=google"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And block "moveForward" is child of block "startBlock"
   # Level source is reset
   Then I am on "http://studio.code.org/hoc/reset"
   Then I am on "http://studio.code.org/hoc/1?noautoplay=true&blocklyVersion=google"
   Then I wait until I am on "http://studio.code.org/hoc/1?noautoplay=true&blocklyVersion=google"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And element "g[data-id=\'startBlock\'] g[data-id=\'moveForward\']" does not exist
 
 Scenario: Failing at puzzle 1, refreshing puzzle 1, bubble should show up as attempted
   Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I press "runButton"
   Then I wait to see ".uitest-topInstructions-inline-feedback"
   Then I reload the page
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I verify progress in the header of the current page is "attempted" for level 1
   And I navigate to the course page for "hourofcode"
   And I verify progress for lesson 1 level 1 is "attempted"
@@ -53,20 +53,20 @@ Scenario: Go to puzzle 10, see video, go somewhere else, return to puzzle 10, sh
   Then I close the dialog
   Then I am on "http://studio.code.org/hoc/11"
   Then I wait until I am on "http://studio.code.org/hoc/11"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then I am on "http://studio.code.org/hoc/10"
   Then I wait until I am on "http://studio.code.org/hoc/10"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then I click selector ".reference_area a:last"
 
 Scenario: Go to puzzle 9, see callouts, go somewhere else, return to puzzle 9, should not see callouts
   Given I am on "http://studio.code.org/hoc/9?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then element ".qtip-content:contains('Blocks that are grey')" is visible
   Then I am on "http://studio.code.org/hoc/10?noautoplay=true"
   Then I wait until I am on "http://studio.code.org/hoc/10?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then I am on "http://studio.code.org/hoc/9?noautoplay=true"
   Then I wait until I am on "http://studio.code.org/hoc/9?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then element ".qtip-content:contains('Blocks that are grey')" does not exist

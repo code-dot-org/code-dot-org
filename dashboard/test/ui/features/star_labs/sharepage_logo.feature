@@ -5,7 +5,7 @@ Feature: Lab share page logo
   @no_mobile
   Scenario: Select the logo on an applab share page while logged in and visit the homepage
     Given I am on "http://studio.code.org/projects/applab"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     Then I click selector ".project_share"
     And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL
@@ -17,7 +17,7 @@ Feature: Lab share page logo
   @no_mobile
   Scenario: Select the logo on a playlab share page while logged in and visit the homepage
     Given I am on "http://studio.code.org/projects/playlab"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     Then I click selector ".project_share"
     And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL
@@ -29,7 +29,7 @@ Feature: Lab share page logo
   @no_mobile
   Scenario: Select the logo on a gamelab share page while logged in and visit the homepage
     Given I am on "http://studio.code.org/projects/gamelab"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     Then I click selector ".project_share"
     And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL
@@ -41,7 +41,7 @@ Feature: Lab share page logo
   @no_mobile
   Scenario: Select the logo on an artist share page while logged in and visit the homepage
     Given I am on "http://studio.code.org/projects/artist"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     Then I click selector ".project_share"
     And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL
@@ -53,7 +53,7 @@ Feature: Lab share page logo
   @no_mobile
   Scenario: Select the logo on a playlab share page while logged out and visit the homepage
     Given I am on "http://studio.code.org/projects/playlab"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     Then I click selector ".project_share"
     And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL
@@ -68,7 +68,7 @@ Feature: Lab share page logo
   @no_mobile
   Scenario: Select the logo on a gamelab share page while logged out and visit the homepage
     Given I am on "http://studio.code.org/projects/gamelab"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     Then I click selector ".project_share"
     And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL
@@ -83,7 +83,7 @@ Feature: Lab share page logo
   @only_mobile
   Scenario: Select the logo on a playlab share page while logged out and visit the homepage
     Given I am on "http://studio.code.org/projects/applab"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     Then I click selector ".project_share"
     And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL
@@ -93,7 +93,7 @@ Feature: Lab share page logo
   @only_mobile
   Scenario: Select the logo on a playlab share page while logged out and visit the homepage
     Given I am on "http://studio.code.org/projects/gamelab"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     Then I click selector ".project_share"
     And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL

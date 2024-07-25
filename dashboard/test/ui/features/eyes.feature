@@ -47,14 +47,14 @@ Scenario:
 Scenario:
   When I open my eyes to test "maze"
   Given I am on "http://studio.code.org/s/allthethings/lessons/2/levels/1?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I press "runButton"
   And I wait until element ".uitest-topInstructions-inline-feedback" is visible
   And element ".uitest-topInstructions-inline-feedback" is visible
   And I see no difference for "maze feedback with blocks"
 
   Then I am on "http://studio.code.org/s/allthethings/lessons/2/levels/1/lang/ar-sa"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And The header is finished animating
   And I see no difference for "maze RTL"
   Given I am on "http://studio.code.org/reset_session/lang/en"

@@ -5,7 +5,7 @@ Feature: Eyes Tests for Top Instructions CSP
 Scenario: CSD and CSP Top Instructions
   When I open my eyes to test "top instructions in CSP"
   And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then I see no difference for "teacher in applab level with rubric"
   Then I click selector ".uitest-feedback"
   Then I see no difference for "teacher in applab level viewing rubric"
@@ -37,12 +37,12 @@ Scenario: Resizing CSD and CSP Top Instructions
   Then I save the section id from row 0 of the section table
 
   And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/1"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I wait until element "#teacher-panel-container" is visible
   And I wait until element ".uitest-sectionselect:contains(Untitled Section)" is visible
   And I wait until element ".student-table" is visible
   And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
 
   Then I see no difference for "teacher in feedback tab"
   Then I click selector ".uitest-instructionsTab"

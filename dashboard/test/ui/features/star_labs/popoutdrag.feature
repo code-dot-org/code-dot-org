@@ -2,7 +2,7 @@ Feature: Blocks can be dragged from popouts
 
 Background:
   Given I am on "http://studio.code.org/s/20-hour/lessons/11/levels/1?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I dismiss the login reminder
 
 Scenario: Connect two blocks from toolbox

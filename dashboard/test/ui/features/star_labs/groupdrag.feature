@@ -2,7 +2,7 @@ Feature: Blocks dragged in groups can have children attach to other blocks
 
 Background:
   Given I am on "http://studio.code.org/s/20-hour/lessons/7/levels/6?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
 
 Scenario: Connect two blocks from toolbox
   When I drag block "1" to offset "300, 150"

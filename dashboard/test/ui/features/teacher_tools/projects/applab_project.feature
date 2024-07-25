@@ -7,7 +7,7 @@ Feature: Applab Project
 Scenario: Applab Flow
   Given I am on "http://studio.code.org/projects/applab"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then evaluate JavaScript expression "localStorage.setItem('is13Plus', 'true'), true"
   And I switch to text mode
   And I add code "image('id', 'https://code.org/images/logo.png')" to ace editor
@@ -74,7 +74,7 @@ Scenario: Save Project After Signing Out
   Given I create a student named "Sally Student"
   And I am on "http://studio.code.org/projects/applab/new"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I wait for initial project save to complete
   And I ensure droplet is in block mode
   And I switch to text mode
@@ -91,7 +91,7 @@ Scenario: Save Project After Signing Out
 
   When I sign in as "Sally Student" from the sign in page
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I ensure droplet is in text mode
   Then ace editor code is equal to "// comment 1"
 
@@ -100,7 +100,7 @@ Scenario: Save Script Level After Signing Out
   Given I create a student named "Sally Student"
   Given I am assigned to unit "csp3-2017"
   And I am on "http://studio.code.org/s/csp3-2017/lessons/5/levels/3"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I wait for initial project save to complete
   And I ensure droplet is in block mode
   And I switch to text mode
@@ -117,7 +117,7 @@ Scenario: Save Script Level After Signing Out
 
   When I sign in as "Sally Student" from the sign in page
   And I get redirected to "/s/csp3-2017/lessons/5/levels/3" via "dashboard"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I ensure droplet is in text mode
   Then ace editor code is equal to "// turtle 1"
 
@@ -126,7 +126,7 @@ Scenario: Save Script Level After Signing Out
 Scenario: Remix project creates and redirects to new channel
   Given I am on "http://studio.code.org/projects/applab"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then evaluate JavaScript expression "localStorage.setItem('is13Plus', 'true'), true"
   And element "#runButton" is visible
   And element ".project_updated_at" eventually contains text "Saved"
@@ -138,7 +138,7 @@ Scenario: Remix project creates and redirects to new channel
   And I save the URL
 
   Then I click selector ".project_remix" to load a new page
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I should see title includes "Remix: Code Ninja - App Lab - Code.org"
   And check that the URL contains "/edit"
   And check that the URL contains "http://studio.code.org/projects/applab"

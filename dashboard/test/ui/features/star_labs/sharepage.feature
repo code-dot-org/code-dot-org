@@ -3,7 +3,7 @@ Feature: Puzzle share page
 
 Scenario: Share a flappy game, visit the share page, and visit the workspace
   Given I am on "http://studio.code.org/flappy/10?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I've initialized the workspace with my flappy puzzle.
 
   Then I press "runButton"
@@ -37,7 +37,7 @@ Scenario: Share a flappy game, visit the share page, and visit the workspace
 @as_student
 Scenario: Share and save an artist level to the project gallery
   Given I am on "http://studio.code.org/s/artist/lessons/1/levels/10"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I drag block "1" to block "12"
 
   When I press "runButton"
