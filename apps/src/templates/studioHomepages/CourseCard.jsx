@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import fontConstants from '@cdo/apps/fontConstants';
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
+import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 
 import color from '../../util/color';
