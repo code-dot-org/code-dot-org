@@ -8,7 +8,9 @@ import {submitChatContents} from '../redux/aichatRedux';
 /**
  * Renders the AI Chat Lab user chat message editor component.
  */
-const UserChatMessageEditor: React.FunctionComponent = () => {
+const UserChatMessageEditor: React.FunctionComponent<{
+  editorContainerClassName?: string;
+}> = ({editorContainerClassName}) => {
   const isWaitingForChatResponse = useAppSelector(
     state => state.aichat.isWaitingForChatResponse
   );
@@ -28,7 +30,13 @@ const UserChatMessageEditor: React.FunctionComponent = () => {
 
   const disabled = isWaitingForChatResponse || saveInProgress;
 
-  return <UserMessageEditor onSubmit={handleSubmit} disabled={disabled} />;
+  return (
+    <UserMessageEditor
+      onSubmit={handleSubmit}
+      disabled={disabled}
+      editorContainerClassName={editorContainerClassName}
+    />
+  );
 };
 
 export default UserChatMessageEditor;
