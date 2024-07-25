@@ -15,7 +15,7 @@ class EmailDeliveryObserverTest < ActiveSupport::TestCase
         metric_name: :EmailSent,
         dimensions: [
           {name: "Environment", value: CDO.rack_env},
-          {name: "Action", value: 'new_teacher_email'},
+          {name: "Action", value: 'verified_teacher_email'},
           {name: "Class", value: 'TeacherMailer'},
         ],
         value: 1
@@ -24,6 +24,6 @@ class EmailDeliveryObserverTest < ActiveSupport::TestCase
     Cdo::Metrics.expects(:push).with('ActionMailer', expected_metric)
 
     teacher = build :teacher, email: 'teacher@gmail.com'
-    TeacherMailer.new_teacher_email(teacher).deliver_now
+    TeacherMailer.verified_teacher_email(teacher).deliver_now
   end
 end
