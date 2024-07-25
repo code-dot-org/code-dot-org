@@ -57,12 +57,12 @@ export default class RecentCourses extends Component {
               : i18n.myCourses()
           }
         >
-          {tc && (
+          {topCourse && (
             <TopCourse
-              assignableName={tc.assignableName}
-              lessonName={tc.lessonName}
-              linkToOverview={tc.linkToOverview}
-              linkToLesson={tc.linkToLesson}
+              assignableName={topCourse.assignableName}
+              lessonName={topCourse.lessonName}
+              linkToOverview={topCourse.linkToOverview}
+              linkToLesson={topCourse.linkToLesson}
             />
           )}
           {topFourCourses.length > 0 && (
