@@ -5,6 +5,7 @@ require 'cdo/aws/s3'
 require 'json'
 require 'json-schema'
 require 'uri'
+require 'date'
 
 # This script redelivers application event ('firehose') event records to Redshift from the Intermediate S3 bucket
 # where batches of records were stored by the Firehose data stream and where manifest objects identify the batches
@@ -45,21 +46,6 @@ def split_json_batch(batch_string)
     map {|obj| JSON.parse("{#{obj}}")}
 end
 
-# Custom validator for event property
-class EventValidator < JSON::Schema::FormatValidator
-  def self.validate(current_schema, data, fragments, processor, validator, options = {})
-    stringified = data.is_a?(Hash) ? data.to_json : data.to_s
-
-    if stringified.length > 128
-      message = "The event value (#{stringified}) is too long (#{stringified.length} > 128 characters)"
-      validation_error(processor, message, fragments, current_schema, self, options[:record_errors])
-    end
-  end
-end
-
-# Register a custom validator for the event property which is sometimes incorrectly populated with an Object.
-JSON::Validator.register_format_validator("event_format", EventValidator)
-
 event_json_schema = {
   "type" => "object",
   "properties" => {
@@ -76,11 +62,11 @@ event_json_schema = {
       "maxLength" => 128
     },
     "study_group" => {
-      "type" => ["string", "null"],
+      "type" => ["string", "object", "null"],
       "maxLength" => 128
     },
     "device" => {
-      "type" => ["string", "null"],
+      "type" => ["string", "object", "null"],
       "maxLength" => 1024
     },
     "uuid" => {
@@ -101,11 +87,8 @@ event_json_schema = {
       "maxLength" => 128
     },
     "event" => {
-      "oneOf" => [
-        {"type" => "string"},
-        {"type" => "object"}
-      ],
-      "format" => "event_format"
+      "type" => ["string", "object", "null"],
+      "maxLength" => 128
     },
     "data_int" => {
       "type" => ["integer", "null"]
@@ -118,12 +101,80 @@ event_json_schema = {
       "maxLength" => 4096
     },
     "data_json" => {
-      "type" => ["string", "null"],
+      "type" => ["string", "object", "null"],
       "maxLength" => 65535
     }
   },
   "required" => ["created_at", "environment", "study", "event"]
 }
+
+class RecordValidationError < StandardError
+  attr_reader :errors
+
+  def initialize(errors)
+    @errors = errors
+    super("Record validation failed: #{errors.join(', ')}")
+  end
+end
+
+def validate_record(record, schema)
+  errors = []
+
+  # Validate required fields
+  schema['required'].each do |field|
+    if !record.key?(field) || record[field].nil?
+      errors << "Missing required field: #{field}"
+    end
+  end
+
+  # Validate each property
+  schema['properties'].each do |field, field_schema|
+    next unless record.key?(field) && !record[field].nil?
+    value = record[field]
+
+    # Type validation
+    types = Array(field_schema['type'])
+    unless types.any? {|t| valid_type?(value, t)}
+      errors << "Invalid type for #{field}: expected #{types.join(' or ')}, got #{value.class}"
+    end
+
+    # Format validation
+    if field_schema['format'] == 'date-time' && types.include?('string')
+      begin
+        DateTime.iso8601(value)
+      rescue ArgumentError
+        errors << "Invalid date-time format for #{field}: #{value}"
+      end
+    end
+
+    # Length validation
+    next unless field_schema['maxLength'] && (types.include?('string') || types.include?('object'))
+    string_value = value.is_a?(String) ? value : value.to_json
+    byte_length = string_value.encode('UTF-8').bytesize
+    if byte_length > field_schema['maxLength']
+      errors << "#{field} exceeds maximum byte length of #{field_schema['maxLength']} (current: #{byte_length} bytes)"
+    end
+  end
+
+  raise RecordValidationError.new(errors) unless errors.empty?
+end
+
+def valid_type?(value, type)
+  case type
+  when 'string'
+    value.is_a?(String)
+  when 'integer'
+    value.is_a?(Integer)
+  when 'number'
+    value.is_a?(Numeric)
+  when 'object'
+    value.is_a?(Hash)
+  when 'null'
+    value.nil?
+  else
+    false
+  end
+end
 
 s3_client = AWS::S3.create_client
 
@@ -158,8 +209,8 @@ loop do
       undelivered_records = split_json_batch(undelivered_batch)
       undelivered_records.each do |record|
         # CDO.log.info record
-        JSON::Validator.validate!(event_json_schema, record)
-      rescue JSON::Schema::ValidationError => exception
+        validate_record(record, event_json_schema)
+      rescue RecordValidationError => exception
         CDO.log.info record
         CDO.log.info exception.message
       end
