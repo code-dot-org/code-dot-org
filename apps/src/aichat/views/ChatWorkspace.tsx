@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {
+  fetchStudentChatHistory,
   selectAllMessages,
   setShowWarningModal,
 } from '@cdo/apps/aichat/redux/aichatRedux';
@@ -65,17 +66,21 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     }
   }, [messagesString, isWaitingForChatResponse]);
 
+  const dispatch = useAppDispatch();
+
   const selectedStudentName = useMemo(() => {
     if (viewAsUserId) {
       const selectedStudent = Object.values(students).find(
         student => student.id === viewAsUserId
       );
       if (selectedStudent) {
-        return getShortName(selectedStudent.name);
+        const shortName = getShortName(selectedStudent.name);
+        dispatch(fetchStudentChatHistory(parseInt(viewAsUserId)));
+        return shortName;
       }
     }
     return null;
-  }, [viewAsUserId, students]);
+  }, [viewAsUserId, students, dispatch]);
 
   // Teacher user is able to interact with chatbot.
   const canChatWithModel = useMemo(
@@ -149,8 +154,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabsContainerClassName: moduleStyles.tabsContainer,
     tabPanelsContainerClassName: moduleStyles.tabPanels,
   };
-
-  const dispatch = useAppDispatch();
 
   const onCloseWarningModal = useCallback(
     () => dispatch(setShowWarningModal(false)),

@@ -51,7 +51,6 @@ import {
   getNewMessageId,
   hasFilledOutModelCard,
 } from './utils';
-import {allowConsoleWarnings} from 'test/util/throwOnConsole';
 
 const messageListKeys = ['chatItemsPast', 'chatItemsCurrent'] as const;
 type MessageLocation = {
@@ -406,11 +405,17 @@ export const submitChatContents = createAsyncThunk(
 // endpoint, then waits for a response, and returns the ordered student's chat events.
 export const fetchStudentChatHistory = createAsyncThunk(
   'aichat/fetchStudentChatHistory',
-  async (studentUserId: string, thunkAPI) => {
+  async (studentUserId: number, thunkAPI) => {
     // Post teacher's student's user id to backend and retrieve student's chat history.
-    let chatApiResponse;
+    let studentChatHistoryApiResponse;
     try {
-      chatApiResponse = await fetchAichatStudentChatHistory(studentUserId);
+      studentChatHistoryApiResponse = await fetchAichatStudentChatHistory(
+        studentUserId
+      );
+      console.log(
+        'studentChatHistoryApiResponse',
+        studentChatHistoryApiResponse
+      );
     } catch (error) {
       Lab2Registry.getInstance()
         .getMetricsReporter()
@@ -420,7 +425,13 @@ export const fetchStudentChatHistory = createAsyncThunk(
         );
       return;
     }
-    console.log('chatApiResponse', chatApiResponse);
+    const sessions = studentChatHistoryApiResponse;
+    const chatHistoryMessages = sessions
+      .map(session => {
+        return JSON.parse(session.messages);
+      })
+      .flat();
+    console.log('chatHistoryMessages', chatHistoryMessages);
   }
 );
 

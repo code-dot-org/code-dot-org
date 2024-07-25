@@ -51,6 +51,18 @@ export interface ChatApiResponse {
   flagged_content?: string;
 }
 
+export type StudentChatHistoryApiResponse = AichatSession[];
+
+export interface AichatSession {
+  created_at: string;
+  id: number;
+  level_id: number;
+  messages: string;
+  project_id: number;
+  script_id: number;
+  updated_at: string;
+  user_id: number;
+}
 export type AichatContext = {
   currentLevelId: number | null;
   scriptId: number | null;
