@@ -30,7 +30,7 @@ export default class CdoFieldAngleTextInput extends CdoFieldNumber {
    * @returns {string} The direction value.
    * @override
    */
-  getDirection(): string {
+  getAnglePickerDirection(): string {
     let direction = this.direction;
     if (!direction && this.directionFieldName) {
       direction = this.getSourceBlock()?.getFieldValue(this.directionFieldName);
