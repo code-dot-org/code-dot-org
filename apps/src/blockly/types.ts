@@ -349,6 +349,7 @@ export interface ExtendedVariables extends VariablesType {
 }
 
 export interface ProcedureBlock extends ExtendedBlockSvg, IProcedureBlock {
+  invisible: boolean;
   userCreated: boolean;
   getTargetWorkspace_(): Workspace;
   hasReturn_: boolean;
