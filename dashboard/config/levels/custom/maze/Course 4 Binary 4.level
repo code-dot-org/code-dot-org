@@ -134,7 +134,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="procedures_callnoreturn" inline="true">
+        <block type="procedures_callnoreturn">
           <mutation name="draw">
             <arg name="binary"/>
           </mutation>
@@ -156,7 +156,7 @@
       <xml>
         <block type="when_run" movable="false" deletable="false">
           <next>
-            <block type="procedures_callnoreturn" inline="true">
+            <block type="procedures_callnoreturn">
               <mutation name="draw">
                 <arg name="binary"/>
               </mutation>
