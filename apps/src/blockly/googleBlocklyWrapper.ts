@@ -14,6 +14,7 @@ import {
 } from '@blockly/plugin-scroll-options';
 import {Options, Theme, Workspace} from 'blockly';
 import {FieldProto} from 'blockly/core/field';
+import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 import {javascriptGenerator} from 'blockly/javascript';
 
 import {
@@ -58,7 +59,7 @@ import CdoTrashcan from './addons/cdoTrashcan';
 import * as cdoUtils from './addons/cdoUtils';
 import initializeVariables from './addons/cdoVariables';
 import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
-import initializeBlocklyXml from './addons/cdoXml';
+import initializeBlocklyXml, {removeInvisibleBlocks} from './addons/cdoXml';
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import FunctionEditor from './addons/functionEditor';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
@@ -683,6 +684,13 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       media: '/blockly/media/google_blockly',
       modalInputs: false, // Prevents pop-up editor on mobile
     };
+    // Google Blockly doesn't support invisible blocks, so we want to prevent
+    // them from showing up in the toolbox.
+    options.toolbox = Blockly.Xml.domToText(
+      removeInvisibleBlocks(
+        Blockly.Xml.textToDom(options.toolbox as ToolboxDefinition as string)
+      )
+    );
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
     // apps, so we should also set it here.
     blocklyWrapper.assetUrl =
