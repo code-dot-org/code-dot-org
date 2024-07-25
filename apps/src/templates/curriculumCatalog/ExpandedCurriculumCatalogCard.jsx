@@ -7,6 +7,7 @@ import {
   buttonColors,
   LinkButton,
 } from '@cdo/apps/componentLibrary/button';
+import Link from '@cdo/apps/componentLibrary/link';
 import {
   BodyTwoText,
   Heading3,
@@ -14,7 +15,6 @@ import {
 } from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import DeprecatedButton from '@cdo/apps/templates/Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
 
@@ -23,7 +23,10 @@ import {
   translatedAvailableResources,
 } from '../teacherDashboard/CourseOfferingHelpers';
 
-import {defaultImageSrc} from './curriculumCatalogConstants';
+import {
+  curriculumCatalogCardIdPrefix,
+  defaultImageSrc,
+} from './curriculumCatalogConstants';
 
 import centererStyle from './curriculum_catalog_card.module.scss';
 import style from './expanded_curriculum_catalog_card.module.scss';
@@ -324,13 +327,12 @@ const ExpandedCurriculumCatalogCard = ({
                   src={recommendedSimilarCurriculum.image || defaultImageSrc}
                   alt={recommendedSimilarCurriculum.display_name}
                 />
-                <DeprecatedButton
+                <Link
                   id="similarCurriculumButton"
                   name={recommendedSimilarCurriculum.display_name}
-                  type="button"
-                  styleAsText
                   className={style.relatedCurriculaLink}
                   text={recommendedSimilarCurriculum.display_name}
+                  href={`#${curriculumCatalogCardIdPrefix}${recommendedSimilarCurriculum.key}`}
                   onClick={handleClickRecommendedSimilarCurriculum}
                 />
                 <img
@@ -338,13 +340,12 @@ const ExpandedCurriculumCatalogCard = ({
                   src={recommendedStretchCurriculum.image || defaultImageSrc}
                   alt={recommendedStretchCurriculum.display_name}
                 />
-                <DeprecatedButton
+                <Link
                   id="stretchCurriculumButton"
                   name={recommendedStretchCurriculum.display_name}
-                  type="button"
-                  styleAsText
                   className={style.relatedCurriculaLink}
                   text={recommendedStretchCurriculum.display_name}
+                  href={`#${curriculumCatalogCardIdPrefix}${recommendedStretchCurriculum.key}`}
                   onClick={handleClickRecommendedStretchCurriculum}
                 />
               </div>

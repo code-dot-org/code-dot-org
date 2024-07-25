@@ -188,7 +188,10 @@ p.subjectsText {
     width: 100%;
     text-wrap: wrap;
     margin-top: 8px;
-    color: $brand_secondary_default
+    color: $brand_secondary_default;
+    text-decoration: none !important;
+    font-size: 12px;
+    text-align: center;
   }
 
   .relatedCurriculaLink:hover {

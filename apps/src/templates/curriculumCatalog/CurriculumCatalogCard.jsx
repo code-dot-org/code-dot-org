@@ -34,7 +34,10 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-import {defaultImageSrc} from './curriculumCatalogConstants';
+import {
+  curriculumCatalogCardIdPrefix,
+  defaultImageSrc,
+} from './curriculumCatalogConstants';
 import ExpandedCurriculumCatalogCard from './ExpandedCurriculumCatalogCard';
 
 import style from './curriculum_catalog_card.module.scss';
@@ -250,7 +253,10 @@ const CustomizableCurriculumCatalogCard = ({
   };
 
   return (
-    <div className={style.cardsContainer}>
+    <div
+      id={`${curriculumCatalogCardIdPrefix}${courseKey}`}
+      className={style.cardsContainer}
+    >
       <div>
         <div
           className={classNames(
