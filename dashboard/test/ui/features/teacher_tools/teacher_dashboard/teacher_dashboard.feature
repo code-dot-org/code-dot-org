@@ -31,16 +31,11 @@ Feature: Using the teacher dashboard
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
-    Then I append "/?enableExperiments=section_progress_v2" to the URL
-    And I wait until element "#uitest-course-dropdown" is visible
-    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
-
-    # Toggle to V2 progress view
-    Then I click selector "#ui-test-toggle-progress-view"
     And I wait until element "h6:contains(Icon Key)" is visible
     And I wait until element "#ui-test-progress-table-v2" is visible
     Then I click selector "#ui-test-toggle-progress-view"
     And I wait until element "#uitest-course-dropdown" is visible
+    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
 
     # Stats tab
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Stats)" once I see it
@@ -236,6 +231,8 @@ Feature: Using the teacher dashboard
     And element ".announcement-notification" contains text matching "You are already an instructor for section"
 
   Scenario: Decline invitation to new progress view
+    Given I am on "http://studio.code.org"
+    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to unit "allthethings"
 
@@ -251,6 +248,8 @@ Feature: Using the teacher dashboard
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
 
   Scenario: Accept invitation to new progress view and see new view immediately. 
+    Given I am on "http://studio.code.org"
+    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to unit "allthethings"
 
@@ -266,6 +265,8 @@ Feature: Using the teacher dashboard
     And I wait until element "#ui-test-progress-table-v2" is visible
 
   Scenario: Delay responding to invitation to new progress view and see old view immediately. 
+    Given I am on "http://studio.code.org"
+    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to unit "allthethings"
 
@@ -275,6 +276,7 @@ Feature: Using the teacher dashboard
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
     Then I click selector "#ui-test-toggle-progress-view"
+    And I wait until element "#uitest-course-dropdown" is visible
     And I reload the page
     Then I click selector "#remind-me-later-option"
     And I wait until element "#uitest-course-dropdown" is visible
