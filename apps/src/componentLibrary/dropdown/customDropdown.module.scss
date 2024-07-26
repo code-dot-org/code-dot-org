@@ -48,7 +48,6 @@
   .dropdownMenuContainer {
     position: absolute;
     bottom: auto;
-    left: 0;
     z-index: 1000;
     display: none;
     float: left;
@@ -88,6 +87,29 @@
           display: flex;
           align-items: center;
           cursor: pointer;
+          color: $light_black;
+
+          &.destructiveDropdownMenuItem {
+            color: $light_negative_500;
+
+            i {
+              color: $light_negative_500;
+            }
+
+            &:hover {
+              background-color: $light_negative_100;
+            }
+
+            &:active {
+              background-color: $light_negative_500;
+              color: $light_white;
+
+              i::before {
+                background-color: $light_negative_500;
+                color: $light_white;
+              }
+            }
+          }
 
           &:focus-visible {
             outline: 2px solid $light_primary_500;
@@ -176,6 +198,20 @@
 .dropdownContainer.open {
   .dropdownMenuContainer {
     display: block;
+  }
+}
+
+// Dropdrown Menu placements
+
+.dropdownContainer-left-menuPlacement {
+  .dropdownMenuContainer {
+    inset-inline-start: 0;
+  }
+}
+
+.dropdownContainer-right-menuPlacement {
+  .dropdownMenuContainer {
+    inset-inline-end: 0;
   }
 }
 
@@ -349,6 +385,7 @@
 
           span {
             @include body-one;
+            color: inherit;
             margin-bottom: 0;
           }
         }
@@ -409,6 +446,7 @@
 
           span {
             @include body-two;
+            color: inherit;
             margin-bottom: 0;
           }
         }
@@ -469,6 +507,7 @@
 
           span {
             @include body-three;
+            color: inherit;
             margin-bottom: 0;
           }
         }
@@ -529,6 +568,7 @@
 
           span {
             @include body-four;
+            color: inherit;
             margin-bottom: 0;
           }
         }

@@ -4,7 +4,12 @@
   $lighter_cyan: #a6daed;
   $lightest_cyan: #d9eff7;
 
-  .script_text textarea { width: 100%; height: 100px}
+  .script_text textarea {
+    field-sizing: content;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   .markdown {
     border: 5px solid gray;
     border-radius: 5px;

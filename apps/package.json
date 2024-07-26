@@ -56,6 +56,7 @@
     "@storybook/csf-tools": "~8.1.11",
     "@storybook/react": "~8.1.11",
     "@storybook/react-webpack5": "~8.1.11",
+    "@testing-library/jest-dom": "^6.4.8",
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^14.4.3",
     "@types/chai": "^4.3.5",
@@ -174,7 +175,6 @@
   "dependencies": {
     "@amplitude/analytics-browser": "^1.5.4",
     "@blockly/block-shareable-procedures": "~4.0.5",
-    "@blockly/field-angle": "^4.0.0",
     "@blockly/field-bitmap": "^4.1.0",
     "@blockly/field-colour": "^4.0.0",
     "@blockly/field-grid-dropdown": "~4.0.9",
@@ -232,7 +232,6 @@
     "classnames": "^2.3.2",
     "codemirror": "5.5",
     "codemirror-spell-checker": "^1.1.2",
-    "csv-parse": "^4.4.6",
     "dapjs": "^2.3.0",
     "details-element-polyfill": "https://github.com/javan/details-element-polyfill",
     "ejs": "^3.1.10",
