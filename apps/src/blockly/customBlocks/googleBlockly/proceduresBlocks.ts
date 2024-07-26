@@ -285,13 +285,13 @@ GoogleBlockly.Extensions.register(
       getProcedureModel: function (
         this: ProcedureBlock
       ): IProcedureModel | null {
-        if (this?.model_) {
-          return this.model_;
+        if (!this.model_) {
+          this.model_ = this.findProcedureModel_(
+            this.getFieldValue('NAME'),
+            this.paramsFromSerializedState_
+          );
         }
-        return this.findProcedureModel_(
-          this.getFieldValue('NAME'),
-          this.paramsFromSerializedState_
-        );
+        return this.model_;
       },
 
       /**
@@ -301,9 +301,10 @@ GoogleBlockly.Extensions.register(
        * temporarily during mutation (which triggers this method).
        */
       syncArgsMap_: function (this: ProcedureBlock) {
-        // If we haven't yet assigned a model to the call block, we search for it
-        // and record its current state.
-        if (!this.model_) {
+        // If we haven't yet stored the previous parameters, do so now. This would
+        // normally happen when we or initialize the procedure block with a model
+        // or update its parameters.
+        if (!this.prevParams_.length) {
           this.prevParams_ = [...this.getProcedureModel().getParameters()];
         }
         // Original code from shareable procedures plugin follows unmodified:
