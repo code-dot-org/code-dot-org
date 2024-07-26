@@ -636,7 +636,19 @@ module SharedConstants
     PROFANITY_VIOLATION: 1002,
     # Request Too Large
     REQUEST_TOO_LARGE: 1003,
+    # Student exceeded max number of evaluations per project
+    STUDENT_LIMIT_EXCEEDED: 1004,
+    # Teacher exceeded max number of evaluations per student per project
+    TEACHER_LIMIT_EXCEEDED: 1005,
   }.freeze
+
+  RUBRIC_AI_EVALUATION_LIMITS = {
+    # Maximum number of evaluations we will automatically run for a student per project
+    STUDENT_LIMIT: 10,
+
+    # Maximum number of evaluations a teacher can request for a rubric per student
+    TEACHER_LIMIT: 10
+  }
 
   EMAIL_LINKS = OpenStruct.new(
     {
