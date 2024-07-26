@@ -467,6 +467,7 @@ export function numberValidator(text: string): string | null {
  * Ensure that only a nonnegative integer may be entered.
  * @param {string} text The user's text.
  * @returns {?string} A string representing a valid int, or null if invalid.
+ *   Returns '0' for negative numbers and null for truthy strings that do not contain numbers.
  * @static
  */
 export function nonnegativeIntegerValidator(text: string): string | null {
