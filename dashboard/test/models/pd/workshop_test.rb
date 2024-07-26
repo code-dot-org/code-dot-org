@@ -1120,7 +1120,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     unit_group = create :unit_group, name: 'pd-workshop-pre-survey-test-1991', family_name: 'pd-workshop-pre-survey-test', version_year: '1991'
     CourseOffering.add_course_offering(unit_group)
     next_position = 1
-    add_unit = ->(unit_name, lesson_names) do
+    add_unit = lambda do |unit_name, lesson_names|
       create(:script, name: unit_name).tap do |script|
         create :unit_group_unit, unit_group: unit_group, script: script, position: (next_position += 1)
         create :lesson_group, script: script

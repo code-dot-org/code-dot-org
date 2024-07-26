@@ -25,7 +25,7 @@ module Pd::SurveyPipeline
 
     test 'map and reduce basic data' do
       group_config = [:a, :b]
-      always_true = lambda {|_| true}
+      always_true = ->(_) { true}
       map_config = [{condition: always_true, field: :c, reducers: [Pd::SurveyPipeline::Reducer::Average]}]
 
       # Average value of field :c in @data, grouped by field :a and :b
@@ -67,8 +67,8 @@ module Pd::SurveyPipeline
 
     test 'map groups to matched reducers' do
       # Mapping conditions
-      is_odd_record = lambda {|hash| hash[:odd]}
-      is_even_record = lambda {|hash| !hash[:odd]}
+      is_odd_record = ->(hash) { hash[:odd]}
+      is_even_record = ->(hash) { !hash[:odd]}
 
       # Mapping routes
       map_config = [
@@ -88,7 +88,7 @@ module Pd::SurveyPipeline
     end
 
     test 'map all groups to match-all reducer' do
-      always_true = lambda {|_| true}
+      always_true = ->(_) { true}
       map_config = [{condition: always_true, field: :val, reducers: [Reducer::NoOp]}]
 
       Reducer::NoOp.expects(:reduce).times(@groups.count)
@@ -97,7 +97,7 @@ module Pd::SurveyPipeline
     end
 
     test 'map no group to unmatched reducer' do
-      always_false = lambda {|_| false}
+      always_false = ->(_) { false}
       map_config = [{condition: always_false, field: :val, reducers: [Reducer::NoOp]}]
 
       Reducer::NoOp.expects(:reduce).never

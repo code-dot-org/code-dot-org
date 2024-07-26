@@ -1088,7 +1088,7 @@ class RubricsControllerTest < ActionController::TestCase
 
     s3_client.stub_responses(
       :get_object,
-      ->(context) do
+      lambda do |context|
         key = context.params[:key]
         obj = bucket[key]
         raise AiRubricConfig::StubNoSuchKey.new(key) unless obj

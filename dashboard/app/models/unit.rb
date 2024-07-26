@@ -67,7 +67,7 @@ class Unit < ApplicationRecord
   has_many :unit_groups, through: :unit_group_units
   has_one :course_version, as: :content_root, dependent: :destroy
 
-  scope :with_associated_models, -> do
+  scope :with_associated_models, lambda {
     includes(
       [
         {
@@ -103,10 +103,10 @@ class Unit < ApplicationRecord
         }
       ]
     )
-  end
+  }
 
   # The set of models which may be touched by ScriptSeed
-  scope :with_seed_models, -> do
+  scope :with_seed_models, lambda {
     includes(
       [
         {
@@ -134,7 +134,7 @@ class Unit < ApplicationRecord
         :student_resources
       ]
     )
-  end
+  }
 
   attr_accessor :skip_name_format_validation
 

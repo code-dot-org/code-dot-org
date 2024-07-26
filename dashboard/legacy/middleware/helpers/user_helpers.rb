@@ -37,7 +37,7 @@ module UserHelpers
     # Fallback to a range-scan query to find an available gap in the integer sequence.
 
     # Use CAST() and SUBSTRING() to parse the suffix as an integer.
-    cast = lambda {|t| "CAST(SUBSTRING(#{t}, #{prefix.length + 1}) as unsigned)"}
+    cast = ->(t) { "CAST(SUBSTRING(#{t}, #{prefix.length + 1}) as unsigned)"}
 
     query = <<~SQL
       SELECT #{cast.call('username')} + 1

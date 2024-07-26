@@ -156,9 +156,9 @@ module Pd::SurveyPipeline::Helper
 
     # Rules to map groups of survey answers to reducers
     is_single_select_answer =
-      lambda {|hash| [ANSWER_SINGLE_SELECT, ANSWER_SCALE].include? hash[:answer_type]}
+      ->(hash) { [ANSWER_SINGLE_SELECT, ANSWER_SCALE].include? hash[:answer_type]}
     not_single_select_answer =
-      lambda {|hash| [ANSWER_SINGLE_SELECT, ANSWER_SCALE].exclude?(hash[:answer_type])}
+      ->(hash) { [ANSWER_SINGLE_SELECT, ANSWER_SCALE].exclude?(hash[:answer_type])}
 
     map_config = [
       {condition: is_single_select_answer, field: :answer, reducers: [Pd::SurveyPipeline::Reducer::Histogram]},
