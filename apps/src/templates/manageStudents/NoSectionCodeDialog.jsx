@@ -5,7 +5,7 @@ import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../BaseDialog';
-import Button from '../../legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 
 export default class NoSectionCodeDialog extends React.Component {
   static propTypes = {

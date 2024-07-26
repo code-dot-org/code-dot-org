@@ -12,7 +12,7 @@ import {
   programmingExpressionShape,
   programmingEnvironmentShape,
 } from '@cdo/apps/lib/levelbuilder/shapes';
-import Button from '@cdo/apps/legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import Dialog from '@cdo/apps/templates/Dialog';
 import color from '@cdo/apps/util/color';
 

@@ -7,7 +7,7 @@ import {getCurrentUnitData} from '@cdo/apps/templates/sectionProgress/sectionPro
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
-import Button from '../../../legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 
 class CreateStandardsReportStep2 extends Component {

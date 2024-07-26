@@ -10,7 +10,7 @@ import {
 import UnassignSectionDialog from '@cdo/apps/templates/UnassignSectionDialog';
 import i18n from '@cdo/locale';
 
-import Button from '../legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 
 const FIREHOSE_START_EVENT = 'start-course-unassigned-from-section';
 const FIREHOSE_CANCEL_EVENT = 'cancel-course-unassigned-from-section';

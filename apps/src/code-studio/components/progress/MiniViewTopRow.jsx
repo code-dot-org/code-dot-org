@@ -3,7 +3,7 @@ import React from 'react';
 
 import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {getStore} from '@cdo/apps/redux';
-import Button from '@cdo/apps/legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import color from '@cdo/apps/util/color';
 import {stringifyQueryParams} from '@cdo/apps/utils';

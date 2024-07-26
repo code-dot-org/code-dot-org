@@ -4,7 +4,7 @@ import DCDO from '@cdo/apps/dcdo';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
-import Button from '@cdo/apps/legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';

@@ -5,7 +5,7 @@ import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 
 import color from '../../util/color';
-import Button from '../../legacySharedComponents/button/Button';
+import Button from '../../legacySharedComponents/Button';
 
 import NewProjectButtons from './NewProjectButtons';
 

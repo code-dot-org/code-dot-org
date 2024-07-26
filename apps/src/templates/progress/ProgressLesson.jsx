@@ -10,7 +10,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import Button from '../../legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import FontAwesome from '../FontAwesome';
 
 import FocusAreaIndicator from './FocusAreaIndicator';

@@ -5,7 +5,7 @@ import AddLevelDialogTop from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevel
 import LevelToken from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
 import RemoveLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog';
 import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import Button from '@cdo/apps/legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import i18n from '@cdo/locale';
 

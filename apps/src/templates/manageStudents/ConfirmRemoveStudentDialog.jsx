@@ -15,7 +15,7 @@ import {
 } from '../../lib/ui/SystemDialog/SystemDialog';
 import color from '../../util/color';
 import BaseDialog from '../BaseDialog';
-import Button from '../../legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 
 // A stub set of otherwise-required props for use in stories and unit tests.
 export const MINIMUM_TEST_PROPS = {

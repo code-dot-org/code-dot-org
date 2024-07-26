@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 
 import i18n from '@cdo/locale';
 
-import Button from '../../../legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 
 export default class PrintReportButton extends Component {
   static propTypes = {

@@ -13,7 +13,7 @@ import {
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
-import Button from '../../legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 
 const CoteacherInviteNotification = ({
   isForPl,

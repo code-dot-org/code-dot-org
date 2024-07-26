@@ -7,7 +7,7 @@ import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelec
 import fontConstants from '@cdo/apps/fontConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import color from '@cdo/apps/util/color';

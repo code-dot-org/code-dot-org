@@ -4,7 +4,7 @@ import React, {useState} from 'react';
 import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import color from '@cdo/apps/util/color';
 
-import Button from '../../../legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 
 import EvidenceDescriptions from './EvidenceDescriptions';
 

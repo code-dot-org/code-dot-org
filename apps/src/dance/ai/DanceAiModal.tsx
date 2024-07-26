@@ -6,7 +6,7 @@ import {useSelector} from 'react-redux';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import Button from '@cdo/apps/legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import color from '@cdo/apps/util/color';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import inputLibraryJson from '@cdo/static/dance/ai/ai-inputs.json';

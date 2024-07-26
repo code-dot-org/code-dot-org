@@ -5,7 +5,7 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import BaseDialog from './BaseDialog';
-import Button from '../legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import DialogFooter from './teacherDashboard/DialogFooter';
 
 export default class GDPRDialog extends Component {

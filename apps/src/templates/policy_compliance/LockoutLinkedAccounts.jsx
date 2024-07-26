@@ -17,7 +17,7 @@ import Spinner from '../../code-studio/pd/components/spinner';
 import {getStore} from '../../redux';
 import * as color from '../../util/color';
 import {hashString} from '../../utils';
-import Button from '../../legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 
 /**
  * This component allows students whose personal account linking has been

@@ -10,7 +10,7 @@ import i18n from '@cdo/locale';
 import {Heading3} from '../../lib/ui/Headings';
 import styleConstants from '../../styleConstants';
 import color from '../../util/color';
-import Button from '../../legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 
 import CardContainer from './CardContainer';
 import LoginTypeCard from './LoginTypeCard';

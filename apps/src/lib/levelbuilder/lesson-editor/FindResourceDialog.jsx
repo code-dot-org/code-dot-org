@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import Button from '@cdo/apps/legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 
 import LessonEditorDialog from './LessonEditorDialog';

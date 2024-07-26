@@ -6,7 +6,7 @@ import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import Button from '@cdo/apps/legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {updateTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/teacherFeedbackDataApi';
 import {getTeacherFeedbackForStudent} from '@cdo/apps/templates/instructions/topInstructionsDataApi';
 import HttpClient from '@cdo/apps/util/HttpClient';

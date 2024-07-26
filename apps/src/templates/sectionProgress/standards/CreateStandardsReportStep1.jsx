@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import {getUnpluggedLessonsForScript} from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import i18n from '@cdo/locale';
 
-import Button from '../../../legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 
 import LessonStatusList from './LessonStatusList';

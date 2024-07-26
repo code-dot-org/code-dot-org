@@ -11,7 +11,7 @@ import i18n from '@cdo/locale';
 
 import color from '../util/color';
 
-import Button from '../legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 
 export default class DonorTeacherBanner extends Component {
   static propTypes = {

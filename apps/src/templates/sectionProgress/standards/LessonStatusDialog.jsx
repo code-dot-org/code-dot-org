@@ -5,7 +5,7 @@ import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../../BaseDialog';
-import Button from '../../../legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 
 import LessonStatusList from './LessonStatusList';

@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import i18n from '@cdo/locale';
 
-import Button from '../../legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 
 /**
  * A component that provides a toggle that goes between visible and hidden that

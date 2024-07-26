@@ -6,7 +6,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../BaseDialog';
-import Button from '../../legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import DialogFooter from '../teacherDashboard/DialogFooter';
 
 import {setShowSharingColumn, editAll} from './manageStudentsRedux';

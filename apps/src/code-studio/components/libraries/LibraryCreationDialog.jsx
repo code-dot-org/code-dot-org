@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 
 import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
 import {getStore} from '@cdo/apps/redux';
-import Button from '@cdo/apps/legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import Dialog, {Body} from '@cdo/apps/templates/Dialog';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';

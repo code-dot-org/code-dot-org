@@ -16,7 +16,7 @@ import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
-import Button from '../../legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import color from '../../util/color';
 
 const MenuState = {

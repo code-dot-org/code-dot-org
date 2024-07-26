@@ -11,7 +11,7 @@ import color from '@cdo/apps/util/color';
 
 import trackEvent from '../util/trackEvent';
 
-import Button from '../legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 
 export const NotificationType = {
   default: 'default',

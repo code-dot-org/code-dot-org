@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import Button from '@cdo/apps/legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import CardLabels from '@cdo/apps/templates/curriculumCatalog/CardLabels';
 import {
   CreateSectionsToAssignSectionsDialog,

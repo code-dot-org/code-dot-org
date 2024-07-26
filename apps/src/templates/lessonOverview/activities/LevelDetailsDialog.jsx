@@ -11,7 +11,7 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import styleConstants from '@cdo/apps/styleConstants';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import TeacherOnlyMarkdown from '@cdo/apps/templates/instructions/TeacherOnlyMarkdown';
 import {UnconnectedTopInstructions} from '@cdo/apps/templates/instructions/TopInstructions';
 import ProgressBubbleSet from '@cdo/apps/templates/progress/ProgressBubbleSet';

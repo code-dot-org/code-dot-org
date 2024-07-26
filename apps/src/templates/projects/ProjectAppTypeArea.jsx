@@ -8,7 +8,7 @@ import i18n from '@cdo/locale';
 
 import styleConstants from '../../styleConstants';
 import color from '../../util/color';
-import Button from '../../legacySharedComponents/button/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 
 import ProjectCardRow from './ProjectCardRow';
 import {
