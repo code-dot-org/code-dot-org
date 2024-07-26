@@ -8379,7 +8379,6 @@ __metadata:
     mocha: ^10.6.0
     mock-firmata: 0.2.0
     moment: ^2.29.4
-    node-js-marker-clusterer: ^1.0.0
     object-fit-images: ^3.2.3
     pa11y-ci: ^2.3.0
     path-browserify: ^1.0.1
@@ -19045,13 +19044,6 @@ es6-shim@latest:
   version: 0.4.0
   resolution: "node-int64@npm:0.4.0"
   checksum: d0b30b1ee6d961851c60d5eaa745d30b5c95d94bc0e74b81e5292f7c42a49e3af87f1eb9e89f59456f80645d679202537de751b7d72e9e40ceea40c5e449057e
-  languageName: node
-  linkType: hard
-
-"node-js-marker-clusterer@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "node-js-marker-clusterer@npm:1.0.0"
-  checksum: 6474cc2a082f76915fc49cb3a72c6d4a8b87a26206fd074c04266f613288c6b9e0ec63e23f5f0f173ba66627f8094077472dd67eca8c5a1594ff8c8fa7641c5d
   languageName: node
   linkType: hard
 
