@@ -47,12 +47,16 @@ class SessionsController < Devise::SessionsController
   end
 
   # DELETE /resource/expire_other
+  # Expire all existing sessions for the current user, then create a new
+  # authenticated session. The ultimate resulting experience will be that the
+  # user gets signed out of their account on all browsers other than the one
+  # they initiated the request with; on that one, they will still be signed in.
   def expire_other
     user = current_user
     user.expire_all_sessions!
     sign_out
     sign_in(:user, user)
-    flash[:notice] = "Successfully logged out of all other sessions"
+    flash[:notice] = I18n.t('devise.sessions.expired_other')
     redirect_back(fallback_location: users_edit_path)
   end
 

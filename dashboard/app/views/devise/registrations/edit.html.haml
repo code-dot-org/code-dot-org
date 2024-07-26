@@ -166,13 +166,6 @@
             = t('activerecord.attributes.user.ai_rubrics_disabled')
       %div= form.submit t('crud.update'), id: 'edit-ai-settings', class: 'btn btn-warning'
 
-%div#expire-other-sessions
-  %hr
-  %h2= "Manage Other Sessions"
-  %p= "If you would like to log out of your account on any other browsers that you may be signed in on, you can do so here"
-  = form_for(resource, as: resource_name, url: expire_other_path, html: {method: :delete}) do |form|
-    = form.submit 'Log Out of All Other Browsers', class: 'btn btn-warning'
-
 - if current_user.migrated?
   -# Mount point for React ManageLinkedAccounts component.
   %div#manage-linked-accounts
@@ -252,6 +245,13 @@
     .farSide
       %span#change-user-type-status
       %button.btn#change-user-type-button{disabled: true}= t('signup_form.user_type_button')
+
+%div#expire-other-sessions
+  %hr
+  %h2= t('expire_other_sessions')
+  %p= t('expire_other_sessions_description')
+  = form_for(resource, as: resource_name, url: expire_other_path, html: {method: :delete}) do |expire_other_form|
+    = expire_other_form.submit t('expire_other_sessions_button'), class: 'btn btn-warning'
 
 - if current_user.can_delete_own_account?
   -# Mount point for React DeleteAccount component.

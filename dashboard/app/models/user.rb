@@ -182,15 +182,16 @@ class User < ApplicationRecord
     :child_users,
   )
 
-  # Include default devise modules. Others available are:
+  # Include default Devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable
   devise :invitable, :database_authenticatable, :registerable, :omniauthable,
     :recoverable, :rememberable, :trackable
 
-  # Make sure to include this concern after devise, since the Devise methods it
-  # extends would otherwise be overwritten.
-  include Devise::ManualSessionExpiration
+  # Make sure to include this Concern after we include the default Devise
+  # modules, since it's trying to extend some methods added by those modules
+  # that would be overridden by them if we included it before.
+  include Devise::Models::ManualSessionExpiration
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
