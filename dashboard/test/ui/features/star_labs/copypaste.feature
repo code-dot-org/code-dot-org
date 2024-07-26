@@ -4,7 +4,7 @@ Feature: Blocks can be copied and pasted using the keyboard
 
 Background:
   Given I am on "http://studio.code.org/s/20-hour/lessons/7/levels/6?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
 
 Scenario: Copy and paste a block
   When I drag block "1" to offset "300, 150"
