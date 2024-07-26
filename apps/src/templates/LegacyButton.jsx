@@ -7,7 +7,7 @@ import color from '../util/color';
 /**
  * This file at one point represented our "default" button component. It has since
  * become outdated, and thus has been renamed to LegacyButton. New buttons should use
- * templates/Button.jsx
+ * componentLibrary/Button
  */
 
 const ARROW_WIDTH = 58;
