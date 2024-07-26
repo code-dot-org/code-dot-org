@@ -190,9 +190,8 @@ class Pd::Enrollment < ApplicationRecord
       CDO.studio_url "pd/workshop_survey/csf/post101/#{code}", CDO.default_scheme
     elsif workshop.csf? && workshop.subject == Pd::Workshop::SUBJECT_CSF_201
       CDO.studio_url "/pd/workshop_survey/csf/post201/#{code}", CDO.default_scheme
-    # any other non-academic year workshop uses foorm
     else
-      CDO.studio_url "/pd/workshop_post_survey?enrollmentCode=#{code}", CDO.default_scheme
+      CDO.studio_url "/pd/workshop_survey/post/#{code}", CDO.default_scheme
     end
   end
 

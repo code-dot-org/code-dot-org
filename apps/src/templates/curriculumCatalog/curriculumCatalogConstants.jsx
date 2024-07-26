@@ -15,3 +15,5 @@ export const curriculumDataShape = PropTypes.shape({
 
 export const defaultImageSrc =
   'https://images.code.org/0a24eb3b51bd86e054362f0760c6e64e-image-1681413990565.png';
+
+export const curriculumCatalogCardIdPrefix = 'curriculum-catalog-card-';

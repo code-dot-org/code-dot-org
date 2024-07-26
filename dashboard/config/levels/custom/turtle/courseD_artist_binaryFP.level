@@ -65,7 +65,7 @@
             </block>
           </value>
         </block>
-        <block type="procedures_callnoreturn">
+        <block type="procedures_callnoreturn" inline="true">
           <mutation name="draw">
             <arg name="binary"/>
           </mutation>

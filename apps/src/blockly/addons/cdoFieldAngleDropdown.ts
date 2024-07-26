@@ -1,118 +1,176 @@
-import {FieldAngle} from '@blockly/field-angle';
-import {MenuOption} from 'blockly';
+import {Block} from 'blockly';
 
-import {CLOCKWISE_TURN_DIRECTION} from '../constants';
+import {ExtendedBlockSvg} from '../types';
+
+import CdoAngleHelper from './cdoAngleHelper';
+import CdoFieldDropdown, {CustomMenuGenerator} from './cdoFieldDropdown';
 
 interface AngleDropdownOptions {
   direction: string; // Ex. 'turnRight'
   directionTitleName: string; // Ex. 'DIR'
-  menuGenerator: MenuOption[];
+  menuGenerator: CustomMenuGenerator;
 }
 
-export default class CdoFieldAngleDropdown extends FieldAngle {
+export default class CdoFieldAngleDropdown extends CdoFieldDropdown {
+  angleHelper?: CdoAngleHelper | null;
+  direction: string | undefined;
+  directionFieldName: string | undefined;
+
   /**
    * Class for an editable field with an angle picker.
-   * @param {Object} opt_options Legacy options, supported by CDO Blockly
-   * @param {string} opt_options.direction a hardcoded direction setting
-   * @param {string} opt_options.directionTitleName the name of the field from which
+   * @param {AngleDropdownOptions} [opt_options] Legacy options, supported by CDO Blockly
+   * @param {string} [opt_options.direction] a hardcoded direction setting
+   * @param {string} [opt_options.directionTitleName] the name of the field from which
    *     to obtain direction information
-   * @param {Array.<string>} opt_options.menuGenerator An array of valid
+   * @param {CustomMenuGenerator} [opt_options.menuGenerator] An array of valid
    *     value options.
-   * @extends {Blockly.FieldAngleDropdown}
+   * @extends {CdoFieldDropdown}
    * @constructor
    */
   constructor(opt_options?: AngleDropdownOptions) {
-    super();
+    super(opt_options?.menuGenerator);
+    this.angleHelper = null;
     this.direction = opt_options?.direction;
     this.directionFieldName = opt_options?.directionTitleName;
-    // Hide the degrees symbol, because our blocks have a separate "degrees" label.
-    this.symbol = '';
-    const menuGenerator = opt_options?.menuGenerator || [];
-    if (menuGenerator.length) {
-      this.menuGeneratorValues = menuGenerator.map(menuOption =>
-        parseInt(menuOption[1])
-      );
-      this.min_ = Math.min(...this.menuGeneratorValues);
-      this.max_ = Math.max(...this.menuGeneratorValues);
-    }
   }
 
   /**
    * Override to allow for clockwise orientation based on a hard-coded direction, or
    * a separate direction field on the block.
-   * @param {Event} e
+   * @param {MouseEvent} [e]
    * @override
    */
-  showEditor_(e?: Event) {
-    if (!this.direction && this.directionFieldName) {
-      this.direction = this.getSourceBlock().getFieldValue(
-        this.directionFieldName
-      );
-    }
-    if (this.direction === CLOCKWISE_TURN_DIRECTION) {
-      this.clockwise = true;
-    }
+  showEditor_(e?: MouseEvent) {
     super.showEditor_(e);
-  }
 
-  /**
-   * Ensure that the input value is a valid angle.
-   *
-   * @param newValue The input value.
-   * @returns A valid angle, or null if invalid.
-   */
-  protected doClassValidation_(newValue: number = 0): number | null {
-    // The plugin can handle validation automatically, unless our block
-    // or XML serialization includes a set of valid options.
-    if (!this.configValues && !this.menuGeneratorValues) {
-      return super.doClassValidation_(newValue);
-    }
-
-    // Get a valid angle value, then find the nearest custom option.
-    const validAngleValue = super.doClassValidation_(newValue);
-
-    // A field wouldn't normally have both a menu generator and xml config values.
-    // If both are present, we favor the config values as they come directly
-    // from the serialization.
-    const customValues = this.configValues || this.menuGeneratorValues;
-    const closestCustomValue = customValues.reduce(
-      (prev: number, curr: number) => {
-        return Math.abs(curr - validAngleValue) <
-          Math.abs(prev - validAngleValue)
-          ? curr
-          : prev;
-      }
+    // See cdoCss for custom styling of the dropdown.
+    Blockly.utils.dom.addClass(
+      Blockly.DropDownDiv.getContentDiv(),
+      'fieldAngleDropDownContainer'
     );
-    return closestCustomValue;
+
+    this.initializeAngleHelper();
+    this.animateAngleHelperOnMenuOptionHighlight();
   }
 
   /**
-   * Converts xml element into dropdown field
-   * @param {Element} element xml field
-   * @override
+   * Get the direction from either the hardcoded setting or the direction field.
+   * @returns {string} The direction value.
+   * @private
    */
-  fromXml(element: Element) {
-    // If the field xml contains a `config`, then we can use it to limit the valid selectable options.
-    this.config = element.getAttribute('config');
-    if (this.config) {
-      this.configValues = this.config.split(',').map(Number);
-      this.min_ = Math.min(...this.configValues);
-      this.max_ = Math.max(...this.configValues);
+  private getDirection(): string {
+    let direction = this.direction;
+    if (!direction && this.directionFieldName) {
+      const sourceBlock = this.getSourceBlock() as ExtendedBlockSvg;
+      direction = sourceBlock.getFieldValue(this.directionFieldName);
     }
-    super.fromXml(element);
+    return direction || 'turnRight';
   }
 
   /**
-   * Store config options into xml element
-   * @param {Element} element xml field
-   * @return element
-   * @override
+   * Create the container element for the angle helper.
+   * @returns {HTMLDivElement} The angle helper container element.
+   * @private
    */
-  toXml(element: Element) {
-    if (this.config) {
-      element.setAttribute('config', this.config);
+  private createAngleHelperContainer(): HTMLDivElement {
+    const angleHelperContainer = document.createElement('div');
+    Blockly.utils.dom.addClass(
+      angleHelperContainer,
+      'blocklyAngleHelperContainer'
+    );
+    return angleHelperContainer;
+  }
+
+  /**
+   * Initialize the angle helper.
+   * @private
+   */
+  private initializeAngleHelper(): void {
+    const container = this.createAngleHelperContainer();
+    const sourceBlock = this.getSourceBlock() as Block;
+    this.angleHelper = new Blockly.AngleHelper(this.getDirection(), {
+      onUpdate: this.updateDropdownMenuOptions.bind(this),
+      snapPoints: this.getOptions().map(option => parseInt(option[1])),
+      arcColour: (sourceBlock as ExtendedBlockSvg)?.style.colourPrimary,
+      angle: parseInt(`${this.getValue()}`),
+      enableBackgroundRotation: true,
+    });
+    Blockly.DropDownDiv.getContentDiv().appendChild(container);
+    this.angleHelper.init(container);
+  }
+
+  /**
+   * Update the dropdown menu options to reflect the selected angle value.
+   * @private
+   */
+  private updateDropdownMenuOptions(): void {
+    const angleValue = `${this.angleHelper?.getAngle()}`;
+    this.setValue(angleValue);
+    // Blockly has no public methods for getting dropdown menu items, so this
+    // is a necessary hack.
+    const menuItems =
+      Blockly.DropDownDiv.getContentDiv().querySelectorAll('.blocklyMenuItem');
+    // Mirror the selected angle value to the dropdown menu options.
+    menuItems.forEach((menuItem, index) => {
+      // Block doesn't directly support selecting a new menu option while keeping
+      // the dropdown open, so we modify the classes directly.
+      Blockly.utils.dom.removeClass(menuItem, 'blocklyMenuItemHighlight');
+      Blockly.utils.dom.removeClass(menuItem, 'blocklyMenuItemSelected');
+      // Set any matching option(s) to selected.
+      const menuOptionValue = this.getOptions()[index][1];
+      if (menuOptionValue === angleValue) {
+        Blockly.utils.dom.addClass(menuItem, 'blocklyMenuItemSelected');
+      }
+    });
+  }
+
+  /**
+   * Observe the menu element for changes and animate the angle helper based on the
+   * highlighted option's value.
+   * @private
+   */
+  private animateAngleHelperOnMenuOptionHighlight() {
+    // In order to preview dropdown a highlighted menu option, we detect changes to its
+    // class and animate the angle helper based on its value. A user might do this by
+    // mousing over, pressing up or down, or using keyboard navigation commands.
+    // This approach uses the MutationObserver API, which allows us to observe changes
+    // to the DOM. We do this because Blockly swallows ArrowUp and ArrowDown key events.
+    const menuElement = document.querySelector('.blocklyMenu');
+    if (menuElement) {
+      const mutationCallback: MutationCallback = mutationsList => {
+        mutationsList.forEach(mutation => {
+          if (
+            mutation.type === 'attributes' &&
+            mutation.attributeName === 'class'
+          ) {
+            const target = mutation.target as HTMLElement;
+            if (target.classList.contains('blocklyMenuItemHighlight')) {
+              const menuItemContent = target.querySelector(
+                '.blocklyMenuItemContent'
+              );
+              if (menuItemContent) {
+                const valueNode = menuItemContent.childNodes[1];
+                if (valueNode && valueNode.nodeType === Node.TEXT_NODE) {
+                  const angleValue =
+                    (valueNode as Text).nodeValue?.trim() || '0';
+                  this.angleHelper?.animateAngleChange(parseInt(angleValue));
+                }
+              }
+            }
+          }
+        });
+      };
+
+      // Create a MutationObserver instance with the callback
+      const observer = new MutationObserver(mutationCallback);
+
+      // Start observing the target element for attribute changes
+      const config: MutationObserverInit = {
+        attributes: true,
+        subtree: true,
+        attributeFilter: ['class'],
+      };
+      observer.observe(menuElement, config);
     }
-    super.toXml(element);
-    return element;
   }
 }
