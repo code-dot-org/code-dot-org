@@ -170,10 +170,14 @@ const config = {
   // runner: "jest-runner",
 
   // The paths to modules that run some code to configure or set up the testing environment before each test
-  setupFiles: ['jest-canvas-mock'],
+  setupFiles: [
+    './test/setupJest.js',
+    'jest-canvas-mock',
+    './test/setupJquery.js',
+  ],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  setupFilesAfterEnv: ['./test/setupJest.js', './test/setupJquery.js'],
+  setupFilesAfterEnv: ['./test/setupJestAfterEnv.js'],
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,
 
