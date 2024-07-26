@@ -120,9 +120,11 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     {
       value: 'viewStudentChatHistory',
       text:
-        selectedTab === WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY
-          ? `${selectedStudentName}'s chat history (view only)`
-          : `View ${selectedStudentName}'s chat history`,
+        `${selectedStudentName}'s chat history` +
+        (selectedTab === WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY
+          ? ' (view only)'
+          : ''),
+
       tabContent: (
         <div>Viewing {selectedStudentName}'s chat history - TODO</div>
       ),
