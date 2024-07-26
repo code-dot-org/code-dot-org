@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Button} from '@cdo/apps/componentLibrary/button';
+import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import {ProjectVersion} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
 
@@ -61,7 +61,14 @@ const VersionHistoryDropdown: React.FunctionComponent<
         </div>
       ))}
       <div className={moduleStyles.versionHistoryRow}>
-        <Button text={commonI18n.startOver()} size={'m'} onClick={startOver} />
+        <Button
+          text={commonI18n.startOver()}
+          size={'s'}
+          onClick={startOver}
+          color={buttonColors.destructive}
+          className={moduleStyles.startOverButton}
+          iconLeft={{iconStyle: 'solid', iconName: 'trash-undo'}}
+        />
       </div>
     </div>
   );
