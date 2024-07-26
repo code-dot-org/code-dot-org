@@ -48,7 +48,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="procedures_callnoreturn" inline="true">
+            <block type="procedures_callnoreturn">
               <mutation name="draw">
                 <arg name="binary"/>
               </mutation>
@@ -58,7 +58,7 @@
                 </block>
               </value>
               <next>
-                <block type="procedures_callnoreturn" inline="true">
+                <block type="procedures_callnoreturn">
                   <mutation name="draw">
                     <arg name="binary"/>
                   </mutation>
@@ -68,7 +68,7 @@
                     </block>
                   </value>
                   <next>
-                    <block type="procedures_callnoreturn" inline="true">
+                    <block type="procedures_callnoreturn">
                       <mutation name="draw">
                         <arg name="binary"/>
                       </mutation>
@@ -78,7 +78,7 @@
                         </block>
                       </value>
                       <next>
-                        <block type="procedures_callnoreturn" inline="true">
+                        <block type="procedures_callnoreturn">
                           <mutation name="draw">
                             <arg name="binary"/>
                           </mutation>
@@ -88,7 +88,7 @@
                             </block>
                           </value>
                           <next>
-                            <block type="procedures_callnoreturn" inline="true">
+                            <block type="procedures_callnoreturn">
                               <mutation name="draw">
                                 <arg name="binary"/>
                               </mutation>
@@ -98,7 +98,7 @@
                                 </block>
                               </value>
                               <next>
-                                <block type="procedures_callnoreturn" inline="true">
+                                <block type="procedures_callnoreturn">
                                   <mutation name="draw">
                                     <arg name="binary"/>
                                   </mutation>
@@ -108,7 +108,7 @@
                                     </block>
                                   </value>
                                   <next>
-                                    <block type="procedures_callnoreturn" inline="true">
+                                    <block type="procedures_callnoreturn">
                                       <mutation name="draw">
                                         <arg name="binary"/>
                                       </mutation>
@@ -118,7 +118,7 @@
                                         </block>
                                       </value>
                                       <next>
-                                        <block type="procedures_callnoreturn" inline="true">
+                                        <block type="procedures_callnoreturn">
                                           <mutation name="draw">
                                             <arg name="binary"/>
                                           </mutation>
@@ -128,7 +128,7 @@
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="procedures_callnoreturn" inline="true">
+                                            <block type="procedures_callnoreturn">
                                               <mutation name="draw">
                                                 <arg name="binary"/>
                                               </mutation>
@@ -138,7 +138,7 @@
                                                 </block>
                                               </value>
                                               <next>
-                                                <block type="procedures_callnoreturn" inline="true">
+                                                <block type="procedures_callnoreturn">
                                                   <mutation name="draw">
                                                     <arg name="binary"/>
                                                   </mutation>
@@ -155,7 +155,7 @@
                                                         </block>
                                                       </value>
                                                       <statement name="DO">
-                                                        <block type="procedures_callnoreturn" inline="true">
+                                                        <block type="procedures_callnoreturn">
                                                           <mutation name="draw">
                                                             <arg name="binary"/>
                                                           </mutation>
@@ -167,7 +167,7 @@
                                                         </block>
                                                       </statement>
                                                       <next>
-                                                        <block type="procedures_callnoreturn" inline="true">
+                                                        <block type="procedures_callnoreturn">
                                                           <mutation name="draw">
                                                             <arg name="binary"/>
                                                           </mutation>
@@ -177,7 +177,7 @@
                                                             </block>
                                                           </value>
                                                           <next>
-                                                            <block type="procedures_callnoreturn" inline="true">
+                                                            <block type="procedures_callnoreturn">
                                                             <mutation name="draw">
                                                             <arg name="binary"/>
                                                             </mutation>
@@ -187,7 +187,7 @@
                                                             </block>
                                                             </value>
                                                             <next>
-                                                            <block type="procedures_callnoreturn" inline="true">
+                                                            <block type="procedures_callnoreturn">
                                                             <mutation name="draw">
                                                             <arg name="binary"/>
                                                             </mutation>
@@ -492,7 +492,7 @@
             </block>
           </value>
         </block>
-        <block type="procedures_callnoreturn" inline="true">
+        <block type="procedures_callnoreturn">
           <mutation name="draw">
             <arg name="binary"/>
           </mutation>
@@ -506,7 +506,7 @@
       <xml>
         <block type="when_run" deletable="false" movable="false">
           <next>
-            <block type="procedures_callnoreturn" inline="true">
+            <block type="procedures_callnoreturn">
               <mutation name="draw">
                 <arg name="binary"/>
               </mutation>
@@ -516,7 +516,7 @@
                 </block>
               </value>
               <next>
-                <block type="procedures_callnoreturn" inline="true">
+                <block type="procedures_callnoreturn">
                   <mutation name="draw">
                     <arg name="binary"/>
                   </mutation>
@@ -529,7 +529,7 @@
                     <block type="controls_repeat">
                       <title name="TIMES">3</title>
                       <statement name="DO">
-                        <block type="procedures_callnoreturn" inline="true">
+                        <block type="procedures_callnoreturn">
                           <mutation name="draw">
                             <arg name="binary"/>
                           </mutation>
@@ -541,7 +541,7 @@
                         </block>
                       </statement>
                       <next>
-                        <block type="procedures_callnoreturn" inline="true">
+                        <block type="procedures_callnoreturn">
                           <mutation name="draw">
                             <arg name="binary"/>
                           </mutation>
@@ -551,7 +551,7 @@
                             </block>
                           </value>
                           <next>
-                            <block type="procedures_callnoreturn" inline="true">
+                            <block type="procedures_callnoreturn">
                               <mutation name="draw">
                                 <arg name="binary"/>
                               </mutation>
@@ -561,7 +561,7 @@
                                 </block>
                               </value>
                               <next>
-                                <block type="procedures_callnoreturn" inline="true">
+                                <block type="procedures_callnoreturn">
                                   <mutation name="draw">
                                     <arg name="binary"/>
                                   </mutation>
@@ -571,7 +571,7 @@
                                     </block>
                                   </value>
                                   <next>
-                                    <block type="procedures_callnoreturn" inline="true">
+                                    <block type="procedures_callnoreturn">
                                       <mutation name="draw">
                                         <arg name="binary"/>
                                       </mutation>
@@ -581,7 +581,7 @@
                                         </block>
                                       </value>
                                       <next>
-                                        <block type="procedures_callnoreturn" inline="true">
+                                        <block type="procedures_callnoreturn">
                                           <mutation name="draw">
                                             <arg name="binary"/>
                                           </mutation>
@@ -591,7 +591,7 @@
                                             </block>
                                           </value>
                                           <next>
-                                            <block type="procedures_callnoreturn" inline="true">
+                                            <block type="procedures_callnoreturn">
                                               <mutation name="draw">
                                                 <arg name="binary"/>
                                               </mutation>
@@ -601,7 +601,7 @@
                                                 </block>
                                               </value>
                                               <next>
-                                                <block type="procedures_callnoreturn" inline="true">
+                                                <block type="procedures_callnoreturn">
                                                   <mutation name="draw">
                                                     <arg name="binary"/>
                                                   </mutation>
@@ -611,7 +611,7 @@
                                                     </block>
                                                   </value>
                                                   <next>
-                                                    <block type="procedures_callnoreturn" inline="true">
+                                                    <block type="procedures_callnoreturn">
                                                       <mutation name="draw">
                                                         <arg name="binary"/>
                                                       </mutation>
@@ -621,7 +621,7 @@
                                                         </block>
                                                       </value>
                                                       <next>
-                                                        <block type="procedures_callnoreturn" inline="true">
+                                                        <block type="procedures_callnoreturn">
                                                           <mutation name="draw">
                                                             <arg name="binary"/>
                                                           </mutation>
@@ -631,7 +631,7 @@
                                                             </block>
                                                           </value>
                                                           <next>
-                                                            <block type="procedures_callnoreturn" inline="true">
+                                                            <block type="procedures_callnoreturn">
                                                             <mutation name="draw">
                                                             <arg name="binary"/>
                                                             </mutation>
@@ -641,7 +641,7 @@
                                                             </block>
                                                             </value>
                                                             <next>
-                                                            <block type="procedures_callnoreturn" inline="true">
+                                                            <block type="procedures_callnoreturn">
                                                             <mutation name="draw">
                                                             <arg name="binary"/>
                                                             </mutation>

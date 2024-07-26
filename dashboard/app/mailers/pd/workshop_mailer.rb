@@ -169,7 +169,7 @@ class Pd::WorkshopMailer < ApplicationMailer
     @user = user
     @workshop = workshop
     survey_params = "workshop_id=#{workshop.id}"
-    @survey_url = CDO.studio_url "pd/workshop_survey/facilitator_post_foorm?#{survey_params}", CDO.default_scheme
+    @survey_url = CDO.studio_url "pd/workshop_survey/new_facilitator_post?#{survey_params}", CDO.default_scheme
 
     @regional_partner_name = @workshop.regional_partner&.name
     @deadline = (Time.now + 10.days).strftime('%B %-d, %Y').strip

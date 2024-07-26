@@ -6,12 +6,12 @@ import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
 import i18n from '@cdo/locale';
 
-import NameFailureDialog from '../../code-studio/components/NameFailureDialog';
 import color from '../../util/color';
 import FontAwesome from '../FontAwesome';
 import QuickActionsCell from '../tables/QuickActionsCell';
 
 import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
+import ProjectNameFailureDialog from './ProjectNameFailureDialog';
 import {
   startRenamingProject,
   cancelRenamingProject,
@@ -110,7 +110,7 @@ export class PersonalProjectsTableActionsCell extends Component {
             />
           </div>
         )}
-        <NameFailureDialog
+        <ProjectNameFailureDialog
           flaggedText={this.props.projectNameFailure}
           isOpen={!!this.props.projectNameFailure}
           handleClose={this.handleNameFailureDialogClose}
