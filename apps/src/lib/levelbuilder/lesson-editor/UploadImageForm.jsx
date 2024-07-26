@@ -5,6 +5,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
 import styles from './uploadImage.module.scss';
 import classnames from 'classnames';
+import CopyUrlButton from '@cdo/apps/lib/levelbuilder/lesson-editor/CopyUrlButton.tsx';
 
 export default function UploadImageForm() {
   const [imgUrls, setImgUrls] = useState([]);
@@ -131,6 +132,7 @@ export default function UploadImageForm() {
                   <strong>{i18n.imageURL()}</strong>
                   {url}
                 </div>
+                <CopyUrlButton url={url} />
               </div>
             ))}
           </div>
