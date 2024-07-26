@@ -147,7 +147,7 @@ module RegistrationsControllerTests
         delete '/users', params: {password_confirmation: 'apassword'}
       end
 
-      assert_equal 2, ActionMailer::Base.deliveries.length
+      assert_equal 1, ActionMailer::Base.deliveries.length
       mail = ActionMailer::Base.deliveries.last
       assert_equal I18n.t('teacher_mailer.delete_teacher_subject'), mail.subject
       assert_equal [user.email], mail.to
