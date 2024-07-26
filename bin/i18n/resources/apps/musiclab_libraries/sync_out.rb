@@ -25,7 +25,6 @@ module I18n
           end
 
           private def upload_localized_strings(js_locale, i18n_data, library_name)
-            # change test prefix before merging
             AWS::S3.upload_to_bucket(
               'cdo-curriculum',
               "media/musiclab/#{library_name}-loc/#{js_locale}.json",
