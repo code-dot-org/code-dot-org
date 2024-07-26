@@ -178,6 +178,7 @@ class AichatController < ApplicationController
   def student_chat_history
     # TODO: check that teacher is authorized to view this student's chat history, i.e.,
     # the student is in the teacher user's section.
+    # Right now we fetch ALL chats from the student - will narrow to particular level.
     sessions = AichatSession.where(user_id: params[:studentUserId]).order(created_at: :desc).limit(10)
     render json: sessions
   end

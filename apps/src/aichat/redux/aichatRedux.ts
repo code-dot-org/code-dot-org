@@ -277,7 +277,7 @@ export const onSaveFail =
             getState().aichat.savedAiCustomizations,
             getState().aichat.currentAiCustomizations
           );
-          let flaggedProperties;
+          let flaggedProperties, description;
           if (
             changedProperties.includes('systemPrompt') &&
             changedProperties.includes('retrievalContexts')
@@ -286,12 +286,12 @@ export const onSaveFail =
           } else if (changedProperties.includes('systemPrompt')) {
             flaggedProperties = 'system prompt';
           } else if (changedProperties.includes('retrievalContexts')) {
-            flaggedProperties = 'retrieval contexts';
-          }
+            flaggedProperties = 'retrieval contexts';          }
           if (body?.details?.profaneWords?.length > 0 && flaggedProperties) {
             errorMessage = `Profanity detected in the ${flaggedProperties} and cannot be updated. Please try again.`;
+            description = 'profanity'; // If we want to add a message in teacher view that save error due to profanity.
           }
-          dispatchSaveFailNotification(dispatch, errorMessage);
+          dispatchSaveFailNotification(dispatch, errorMessage, description);
         })
         // Catch any errors in parsing the response body or if there was no response body
         // and fall back to the default error message.
@@ -306,7 +306,8 @@ export const onSaveFail =
 
 const dispatchSaveFailNotification = (
   dispatch: AppDispatch,
-  errorMessage: string
+  errorMessage: string,
+  description?: string
 ) => {
   dispatch(
     addNotification({
@@ -314,6 +315,7 @@ const dispatchSaveFailNotification = (
       text: errorMessage,
       notificationType: 'error',
       timestamp: Date.now(),
+      description: description,
     })
   );
   // Notify the UI that the save is complete.
