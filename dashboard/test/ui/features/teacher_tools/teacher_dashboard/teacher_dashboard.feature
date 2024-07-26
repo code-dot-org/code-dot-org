@@ -33,6 +33,13 @@ Feature: Using the teacher dashboard
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
     Then I append "/?enableExperiments=section_progress_v2" to the URL
+    Then I click selector "#ui-close-dialog"
+    And I wait until element "#uitest-course-dropdown" is visible
+    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
+
+    # Toggle to V2 progress view
+    Then I click selector "#ui-test-toggle-progress-view"
+    Then I click selector "#ui-test-toggle-progress-view"
 
     And I wait until element "h6:contains(Icon Key)" is visible
     And I wait until element "#ui-test-progress-table-v2" is visible
