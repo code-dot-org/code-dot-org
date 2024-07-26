@@ -8396,7 +8396,6 @@ __metadata:
     query-string: 4.1.0
     radium: ^0.25.2
     react: ^17.0.2
-    react-addons-test-utils: ~15.4.0
     react-beautiful-dnd: ^13.1.0
     react-bootstrap: ^0.33.1
     react-bootstrap-2: "npm:react-bootstrap@^2.7.4"
@@ -12810,21 +12809,6 @@ es6-shim@latest:
   dependencies:
     bser: 2.1.1
   checksum: b15a124cef28916fe07b400eb87cbc73ca082c142abf7ca8e8de6af43eca79ca7bd13eb4d4d48240b3bd3136eaac40d16e42d6edf87a8e5d1dd8070626860c78
-  languageName: node
-  linkType: hard
-
-"fbjs@npm:^0.8.4":
-  version: 0.8.18
-  resolution: "fbjs@npm:0.8.18"
-  dependencies:
-    core-js: ^1.0.0
-    isomorphic-fetch: ^2.1.1
-    loose-envify: ^1.0.0
-    object-assign: ^4.1.0
-    promise: ^7.1.1
-    setimmediate: ^1.0.5
-    ua-parser-js: ^0.7.30
-  checksum: 668731b946a765908c9cbe51d5160f973abb78004b3d122587c3e930e3e1ddcc0ce2b17f2a8637dc9d733e149aa580f8d3035a35cc2d3bc78b78f1b19aab90e2
   languageName: node
   linkType: hard
 
@@ -21298,18 +21282,6 @@ es6-shim@latest:
   bin:
     rc: ./cli.js
   checksum: 2e26e052f8be2abd64e6d1dabfbd7be03f80ec18ccbc49562d31f617d0015fbdbcf0f9eed30346ea6ab789e0fdfe4337f033f8016efdbee0df5354751842080e
-  languageName: node
-  linkType: hard
-
-"react-addons-test-utils@npm:~15.4.0":
-  version: 15.4.2
-  resolution: "react-addons-test-utils@npm:15.4.2"
-  dependencies:
-    fbjs: ^0.8.4
-    object-assign: ^4.1.0
-  peerDependencies:
-    react-dom: ^15.4.2
-  checksum: 5855faac602d21b7c5be16d90fea6d1998d635182ec1a10d52034db1868b4b1f9da9e54cf967004dd42637b0b2fdfdfffc7b597af08465407b495675c21307dd
   languageName: node
   linkType: hard
 
