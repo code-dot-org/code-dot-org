@@ -20,7 +20,7 @@ export async function get(
 ): Promise<GetResponse<ProjectSources>> {
   let url = rootUrl(channelId);
   if (versionId) {
-    url += `?versionId=${versionId}`;
+    url += `?version=${versionId}`;
   }
   return HttpClient.fetchJson<ProjectSources>(url, {}, SourceResponseValidator);
 }

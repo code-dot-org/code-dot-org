@@ -1,29 +1,63 @@
 import React from 'react';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
-import {ProjectVersion} from '@cdo/apps/lab2/types';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {
+  setProjectSource,
+  setAndSaveProjectSource,
+} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './version-history.module.scss';
 
 interface VersionHistoryDropdownProps {
   versionList: ProjectVersion[];
+  updatedSourceCallback?: (source: ProjectSources) => void;
+  startSource: ProjectSources;
+  closeDropdown: () => void;
 }
 
 const VersionHistoryDropdown: React.FunctionComponent<
   VersionHistoryDropdownProps
-> = ({versionList}) => {
-  const parseDate = (date: string) => {
-    const parsedDate = new Date(date);
-    return parsedDate.toLocaleString();
-  };
-
+> = ({versionList, updatedSourceCallback, startSource, closeDropdown}) => {
+  const dispatch = useAppDispatch();
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const restoreVersion = (version: ProjectVersion) => {
-    console.log({version});
+    const projectManager = Lab2Registry.getInstance().getProjectManager();
+    if (projectManager) {
+      // What should we do if we are in read only mode?
+      projectManager.load(version.versionId).then(project => {
+        if (project?.sources) {
+          dispatch(setProjectSource(project.sources));
+          if (updatedSourceCallback) {
+            updatedSourceCallback(project.sources);
+          }
+        } else {
+          // handle no source
+        }
+        closeDropdown();
+      });
+    }
   };
 
   const startOver = () => {
-    console.log('start over');
+    // TODO: confirm
+    const saveFunction = isReadOnly
+      ? setProjectSource
+      : setAndSaveProjectSource;
+    dispatch(saveFunction(startSource));
+    if (updatedSourceCallback) {
+      updatedSourceCallback(startSource);
+    }
+    closeDropdown();
+  };
+
+  const parseDate = (date: string) => {
+    const parsedDate = new Date(date);
+    return parsedDate.toLocaleString();
   };
 
   const renderVersionOptions = (version: ProjectVersion) => {

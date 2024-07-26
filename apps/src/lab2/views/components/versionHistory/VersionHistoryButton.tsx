@@ -2,14 +2,22 @@ import React, {useState} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {ProjectVersion} from '@cdo/apps/lab2/types';
+import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
 
 import VersionHistoryDropdown from './VersionHistoryDropdown';
 
 import moduleStyles from './version-history.module.scss';
 
-const VersionHistoryButton: React.FunctionComponent = () => {
+interface VersionHistoryProps {
+  startSource: ProjectSources;
+  updatedSourceCallback?: (source: ProjectSources) => void;
+}
+
+const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
+  startSource,
+  updatedSourceCallback,
+}) => {
   const [isVersionHistoryOpen, setIsVersionHistoryOpen] = useState(false);
   const [buttonRect, setButtonRect] = useState<DOMRect>();
   const [offsetParent, setOffsetParent] = useState<DOMRect>();
@@ -52,7 +60,12 @@ const VersionHistoryButton: React.FunctionComponent = () => {
           }}
           className={moduleStyles.versionHistoryDropdown}
         >
-          <VersionHistoryDropdown versionList={versionList} />
+          <VersionHistoryDropdown
+            versionList={versionList}
+            updatedSourceCallback={updatedSourceCallback}
+            startSource={startSource}
+            closeDropdown={() => setIsVersionHistoryOpen(false)}
+          />
         </div>
       )}
     </>
