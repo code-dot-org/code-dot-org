@@ -74,7 +74,9 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
         </div>
       </div>
       {teacherView && status === Status.PROFANITY_VIOLATION && (
-        <div>View hidden message</div>
+        <div className={moduleStyles.toggleTeacherView}>
+          View hidden message
+        </div>
       )}
     </>
   );
