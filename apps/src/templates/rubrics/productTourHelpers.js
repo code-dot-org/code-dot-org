@@ -49,14 +49,6 @@ export const STEPS = [
   },
 ];
 
-STEPS.forEach((step, index) => {
-  if (typeof step.intro === 'string') {
-    throw new Error(
-      `Step ${index} intro has type 'string'. Please wrap it in a react component or a call to sanitize().`
-    );
-  }
-});
-
 // Dummy props for product tour
 export const DUMMY_PROPS = {
   rubricDummy: {

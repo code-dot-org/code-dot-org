@@ -17,6 +17,7 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
+import {STEPS} from '@cdo/apps/templates/rubrics/productTourHelpers';
 import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {RubricAiEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
@@ -1126,5 +1127,14 @@ describe('RubricContainer', () => {
         {}
       )
     );
+  });
+
+  it('sanitizes all intro text rendered by introjs', () => {
+    STEPS.forEach((step, index) => {
+      expect(typeof step.intro).to.equal(
+        'object',
+        `STEP[${index}].intro should be wrapped in a react component or a call to sanitize(): ${step.intro}`
+      );
+    });
   });
 });
