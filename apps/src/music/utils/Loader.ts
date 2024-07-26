@@ -42,7 +42,16 @@ export const loadLibrary = async (
       {},
       LibraryValidator
     );
-    const translations = await loadTranslations('fr_fr');
+
+    // To do: load translations in parallel with library.
+    // To do: load locale from browser.
+    // To do: handle missing translation file.
+    // To do: wrap this (getting translations, localizing library)
+    //   in an experiment so we can ship it without any user-facing impact?
+    //   Or can just wait to merge it until we have real translations.
+    // Currently have fake translations for 'uk_ua' (Ukranian) and 'ar_sa' (Arabic)
+    const translations = await loadTranslations(libraryFilename, 'uk_ua');
+
     const libraryJsonLocalized = localizeLibrary(
       libraryJsonResponse.value,
       translations
@@ -53,10 +62,14 @@ export const loadLibrary = async (
 
 type Translations = {[key: string]: string};
 
-// set up to take libraryName as arg as well
-const loadTranslations = async (locale: string): Promise<Translations> => {
+// To do: specify values that libraryFilename can be?
+const loadTranslations = async (
+  libraryName: string,
+  locale: string
+): Promise<Translations> => {
+  // To do: change musiclab-test/ to musiclab/ once we have real translations.
   const translations = await HttpClient.fetchJson<Translations>(
-    `https://curriculum.code.org/media/musiclab-test/loc-intro2024/${locale}.json`
+    `https://curriculum.code.org/media/musiclab-test/${libraryName}-loc/${locale}.json`
   );
   return translations.value;
 };
@@ -70,19 +83,29 @@ const localizeLibrary = (
   ) as LibraryJson;
   libraryJsonLocalized.instruments.forEach(
     instrument =>
-      (instrument.name = translations[instrument.name] || instrument.name)
+      (instrument.name = translations[instrument.id] || instrument.name)
   );
+
   libraryJsonLocalized.kits.forEach(kit => {
-    kit.name = translations[kit.name] || kit.name;
-    kit.sounds.forEach(
-      sound => (sound.name = translations[sound.name] || sound.name)
-    );
+    const kitId = kit.id;
+    kit.name = translations[kitId] || kit.name;
+    kit.sounds.forEach(sound => {
+      const soundId = `${kitId}/${sound.src}`;
+      sound.name = translations[soundId] || sound.name;
+    });
   });
+
   libraryJsonLocalized.packs.forEach(pack => {
-    pack.name = translations[pack.name] || pack.name;
-    pack.sounds.forEach(
-      sound => (sound.name = translations[sound.name] || sound.name)
-    );
+    const packId = pack.id;
+    if (!pack.skipLocalization) {
+      pack.name = translations[packId] || pack.name;
+    }
+    pack.sounds.forEach(sound => {
+      if (!sound.skipLocalization) {
+        const soundId = `${packId}/${sound.src}`;
+        sound.name = translations[soundId] || sound.name;
+      }
+    });
   });
 
   return libraryJsonLocalized;

@@ -296,6 +296,7 @@ export interface SoundData {
   sequence?: SampleSequence;
   bpm?: number;
   key?: Key;
+  skipLocalization?: boolean;
 }
 
 export type SoundFolderType = 'sound' | 'kit' | 'instrument';
@@ -312,6 +313,7 @@ export interface SoundFolder {
   sounds: SoundData[];
   bpm?: number;
   key?: Key;
+  skipLocalization?: boolean;
 }
 
 export type LibraryJson = {
