@@ -83,10 +83,6 @@ module Cdo
       canonical_hostname('hourofcode.com')
     end
 
-    def advocacy_hostname
-      canonical_hostname('advocacy.code.org')
-    end
-
     def codeprojects_hostname
       canonical_hostname('codeprojects.org')
     end
@@ -130,10 +126,6 @@ module Cdo
 
     def code_org_url(path = '', scheme = '')
       site_url('code.org', path, scheme)
-    end
-
-    def advocacy_url(path = '', scheme = '')
-      site_url('advocacy.code.org', path, scheme)
     end
 
     def hourofcode_url(path = '', scheme = '')
