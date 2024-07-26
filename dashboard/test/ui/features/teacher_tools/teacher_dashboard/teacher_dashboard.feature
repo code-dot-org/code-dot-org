@@ -3,7 +3,6 @@ Feature: Using the teacher dashboard
 
   Scenario: Visiting student name URLs in teacher dashboard
     Given I create an authorized teacher-associated student named "Sally"
-    Given I am assigned to unit "allthethings"
     And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
 
     When I sign in as "Teacher_Sally" and go home
@@ -39,8 +38,6 @@ Feature: Using the teacher dashboard
 
     # Toggle to V2 progress view
     Then I click selector "#ui-test-toggle-progress-view"
-    Then I click selector "#ui-test-toggle-progress-view"
-
     And I wait until element "h6:contains(Icon Key)" is visible
     And I wait until element "#ui-test-progress-table-v2" is visible
     Then I click selector "#ui-test-toggle-progress-view"
@@ -250,9 +247,6 @@ Feature: Using the teacher dashboard
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
     Then I append "/?enableExperiments=section_progress_v2" to the URL
-    Then I click selector "#ui-test-toggle-progress-view"
-    And I wait until element "#uitest-course-dropdown" is visible
-    And I reload the page
     Then I click selector "#ui-close-dialog"
     And I wait until element "#uitest-course-dropdown" is visible
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
@@ -268,9 +262,6 @@ Feature: Using the teacher dashboard
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
     Then I append "/?enableExperiments=section_progress_v2" to the URL
-    Then I click selector "#ui-test-toggle-progress-view"
-    And I wait until element "#uitest-course-dropdown" is visible
-    And I reload the page
     Then I click selector "#accept-invitation"
     And I wait until element "h6:contains(Icon Key)" is visible
     And I wait until element "#ui-test-progress-table-v2" is visible
@@ -286,10 +277,6 @@ Feature: Using the teacher dashboard
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
     Then I append "/?enableExperiments=section_progress_v2" to the URL
-    Then I click selector "#ui-test-toggle-progress-view"
-    And I wait until element "#uitest-course-dropdown" is visible
-    And I reload the page
-    And I wait until element "#uitest-course-dropdown" is visible
     Then I click selector "#remind-me-later-option"
     And I wait until element "#uitest-course-dropdown" is visible
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
