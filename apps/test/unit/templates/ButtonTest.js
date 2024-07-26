@@ -4,7 +4,7 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import Button from '@cdo/apps/templates/Button';
 
-import style from '@cdo/apps/templates/button.module.scss';
+import style from '@cdo/apps/legacySharedComponents/button.module.scss';
 
 describe('Button', () => {
   it('renders an anchor tag when button has an href', () => {

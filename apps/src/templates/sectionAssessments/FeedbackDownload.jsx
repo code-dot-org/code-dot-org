@@ -15,7 +15,7 @@ import {
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import moduleStyles from '@cdo/apps/templates/button.module.scss';
+import moduleStyles from '@cdo/apps/legacySharedComponents/button.module.scss';
 
 const CSV_FEEDBACK_RUBRIC_HEADERS = [
   {label: i18n.studentName(), key: 'studentName'},

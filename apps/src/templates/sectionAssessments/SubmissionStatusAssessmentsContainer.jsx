@@ -15,7 +15,7 @@ import {
 } from './sectionAssessmentsRedux';
 import SubmissionStatusAssessmentsTable from './SubmissionStatusAssessmentsTable';
 
-import moduleStyles from '@cdo/apps/templates/button.module.scss';
+import moduleStyles from '@cdo/apps/legacySharedComponents/button.module.scss';
 
 export const studentExportableDataPropType = PropTypes.shape({
   studentName: PropTypes.string.isRequired,
