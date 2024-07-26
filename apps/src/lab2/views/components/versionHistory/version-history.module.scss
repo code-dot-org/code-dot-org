@@ -6,9 +6,26 @@
   border: 1px solid $black;
   background-color: $darkest_gray;
   color: $white;
-  min-width: 100px;
-  padding: 3px;
+  min-width: 400px;
   text-align: left;
   vertical-align: top;
   z-index: 1000;
+}
+
+.versionHistoryList {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.versionHistoryRow {
+  margin: 8px 8px;
+  display: flex;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 35px;
+  justify-content: space-between;
+}
+
+.latestVersionLabel {
+  font-size: 16px;
 }
