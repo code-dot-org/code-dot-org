@@ -39,7 +39,10 @@ export const PopUpButton = ({
       setIsOpen(oldIsOpen => {
         const newIsOpen = !oldIsOpen;
         if (newIsOpen) {
-          document.addEventListener('click', setIsOpenFalse);
+          setTimeout(
+            () => document.addEventListener('click', setIsOpenFalse),
+            0
+          );
         } else {
           document.removeEventListener('click', setIsOpenFalse);
         }
