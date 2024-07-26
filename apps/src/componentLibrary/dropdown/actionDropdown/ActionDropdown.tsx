@@ -66,14 +66,6 @@ const ActionDropdown: React.FunctionComponent<ActionDropdownProps> = ({
     [disabled, setActiveDropdownName]
   );
 
-  /* TODO:
-              - onOptionClick +
-              - list items +
-              - trigger component +
-              - props +
-              - cleanup
-              - placement +
-              */
   return (
     <CustomDropdown
       name={name}
