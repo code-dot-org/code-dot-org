@@ -7,14 +7,14 @@ GAMELAB_ALLTHETHINGS_LESSON = 19
 Given /^I start a new Game ?Lab project$/ do
   steps <<-STEPS
     And I am on "http://studio.code.org/projects/gamelab/new"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
   STEPS
 end
 
 Given /^I am on the (\d+)(?:st|nd|rd|th)? Game ?Lab test level$/ do |level_index|
   steps <<-STEPS
     And I am on "http://studio.code.org/s/allthethings/lessons/#{GAMELAB_ALLTHETHINGS_LESSON}/levels/#{level_index}"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
   STEPS
 end
 
