@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
 import color from '../../util/color';
@@ -24,19 +24,22 @@ class CourseCard extends Component {
     const {title, description, link, isRtl} = this.props;
 
     return (
-      <a href={link} style={styles.card}>
+      <div style={styles.card}>
         <div style={styles.header} />
         <div style={isRtl ? styles.titleRtl : styles.title}>{title}</div>
         <div style={styles.description}>
           <p>{description}</p>
           <Button
-            style={styles.linkBox}
-            color={Button.ButtonColor.neutralDark}
-            text={i18n.viewCourse()}
+            useAsLink={true}
             href={link}
+            ariaLabel={i18n.viewCourse()}
+            color={buttonColors.gray}
+            text={i18n.viewCourse()}
+            type="secondary"
+            size="s"
           />
         </div>
-      </a>
+      </div>
     );
   }
 }

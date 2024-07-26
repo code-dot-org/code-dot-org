@@ -32,6 +32,8 @@ export const STATUS = {
   PROFANITY_ERROR: 'profanity_error',
   // request too large
   REQUEST_TOO_LARGE: 'request_too_large',
+  // teacher exceeded limit of evaluations per student project
+  TEACHER_LIMIT_EXCEEDED: 'teacher_limit_exceeded',
 };
 
 const fetchAiEvaluationStatus = (rubricId, studentUserId) => {
@@ -94,6 +96,10 @@ export default function RunAIAssessmentButton({
               data.status === RubricAiEvaluationStatus.REQUEST_TOO_LARGE
             ) {
               setStatus(STATUS.REQUEST_TOO_LARGE);
+            } else if (
+              data.status === RubricAiEvaluationStatus.TEACHER_LIMIT_EXCEEDED
+            ) {
+              setStatus(STATUS.TEACHER_LIMIT_EXCEEDED);
             } else {
               setStatus(STATUS.READY);
             }
@@ -136,6 +142,10 @@ export default function RunAIAssessmentButton({
                 data.status === RubricAiEvaluationStatus.REQUEST_TOO_LARGE
               ) {
                 setStatus(STATUS.REQUEST_TOO_LARGE);
+              } else if (
+                data.status === RubricAiEvaluationStatus.TEACHER_LIMIT_EXCEEDED
+              ) {
+                setStatus(STATUS.TEACHER_LIMIT_EXCEEDED);
               }
             });
           }

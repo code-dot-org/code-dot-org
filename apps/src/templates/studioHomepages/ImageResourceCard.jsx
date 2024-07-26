@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 
@@ -42,11 +43,12 @@ class ImageResourceCard extends Component {
             <div style={styles.description}>{description}</div>
           </div>
           <Button
-            __useDeprecatedTag
+            useAsLink={true}
             href={link}
-            color={Button.ButtonColor.brandSecondaryDefault}
+            ariaLabel={buttonText}
+            color={buttonColors.purple}
             text={buttonText}
-            style={styles.button}
+            size="s"
           />
         </div>
         <img style={styles.image} src={this.getImage()} alt={altText} />

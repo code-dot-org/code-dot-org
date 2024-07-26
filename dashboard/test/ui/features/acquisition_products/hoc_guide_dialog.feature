@@ -11,7 +11,7 @@ Feature: HOC Guide Email Conversion Dialog
     Then I am on "http://studio.code.org/s/allthethings/lessons/37/levels/2?noautoplay=true"
     And I see no difference for "signedInGuide"
     And I dismiss the hoc guide dialog
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I close my eyes
 
   Scenario: Send Email as signed In Instructor
@@ -24,7 +24,7 @@ Feature: HOC Guide Email Conversion Dialog
   Scenario: View Dialog and send Email as signed out User
     When I open my eyes to test "dialogForSignedOutInstructor"
     Given I am on "http://studio.code.org/s/allthethings/lessons/37/levels/2?noautoplay=true"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
     And I select age 21 in the age dialog
