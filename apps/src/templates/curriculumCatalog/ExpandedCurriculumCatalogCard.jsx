@@ -13,7 +13,6 @@ import {
   Heading3,
   Heading4,
 } from '@cdo/apps/componentLibrary/typography';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
