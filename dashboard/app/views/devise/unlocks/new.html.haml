@@ -1,0 +1,11 @@
+%h2= t('devise.unlocks.resend_instructions')
+
+= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: {method: :post}) do |f|
+  = render('devise/shared/error_messages', resource: resource)
+
+  .field
+    %p= f.label(:email)
+    %p= f.email_field(:email, autofocus: true, autocomplete: 'email')
+
+  .actions
+    = f.submit(t('devise.unlocks.resend_instructions'))

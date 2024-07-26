@@ -5,7 +5,7 @@ Scenario: Teacher can view student versions
   Given I create an authorized teacher-associated student named "Ron"
   Then I sign in as "Ron"
   And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/1"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I click selector "#runButton"
   And I press "show-code-header"
 
@@ -31,7 +31,7 @@ Scenario: Teacher can view student versions
   And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/1"
   And I wait until element ".student-table" is visible
   And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I dismiss the teacher panel
   And I press "versions-header"
   And I wait until element "div:contains(Latest Version)" is visible

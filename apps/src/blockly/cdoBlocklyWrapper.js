@@ -290,6 +290,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     bindBrowserEvent: function (element, name, thisObject, func, useCapture) {
       return Blockly.bindEvent_(element, name, thisObject, func, useCapture);
     },
+    nonnegativeIntegerValidator: function (text) {
+      return Blockly.FieldTextInput.nonnegativeIntegerValidator(text);
+    },
+    numberValidator: function (text) {
+      return Blockly.FieldTextInput.numberValidator(text);
+    },
     getField: function (type) {
       return new Blockly.FieldTextInput('', getFieldInputChangeHandler(type));
     },

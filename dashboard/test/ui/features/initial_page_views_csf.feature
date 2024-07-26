@@ -9,7 +9,7 @@ Feature: Looking at a few things with Applitools Eyes - CSF Levels
     And I am a student
     When I open my eyes to test "<test_name>"
     And I am on "<url>"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I see no difference for "initial load"
     And I close my eyes
     And I sign out

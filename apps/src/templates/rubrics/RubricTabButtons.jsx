@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
+import {RubricAiEvaluationLimits} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {InfoAlert} from './RubricContent';
@@ -49,6 +50,10 @@ export default function RubricTabButtons({
         return i18n.aiEvaluationStatus_profanity_error();
       case STATUS.REQUEST_TOO_LARGE:
         return i18n.aiEvaluationStatus_request_too_large();
+      case STATUS.TEACHER_LIMIT_EXCEEDED:
+        return i18n.aiEvaluationStatus_teacher_limit_exceeded({
+          limit: RubricAiEvaluationLimits.TEACHER_LIMIT,
+        });
     }
   };
 

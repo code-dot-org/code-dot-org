@@ -4,6 +4,7 @@ require 'testing/includes_metrics'
 class EvaluateRubricJobTest < ActiveJob::TestCase
   setup do
     @student = create :student
+    @teacher = create :teacher
     @script_level = create :script_level
     assert_equal @script_level.script, @script_level.lesson.script
 
@@ -498,6 +499,58 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
         script_level_id: @script_level.id
       )
     end
+  end
+
+  test 'job is not performed when student limits are exceeded' do
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
+    channel_id = channel_token.channel
+
+    # create more existing RubricAiEvaluation records than are allowed
+    existing_job_count = SharedConstants::RUBRIC_AI_EVALUATION_LIMITS[:STUDENT_LIMIT] + 1
+    existing_job_count.times do
+      create(
+        :rubric_ai_evaluation, user: @student, requester: @student, rubric: @rubric,
+        status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS], project_id: channel_id
+      )
+    end
+    assert_equal existing_job_count, RubricAiEvaluation.where(user_id: @student.id).count
+    assert_equal SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS], RubricAiEvaluation.where(user_id: @student.id).last.status
+
+    # make sure we do not try to make an API call
+    HTTParty.stubs(:post).never
+
+    perform_enqueued_jobs do
+      EvaluateRubricJob.perform_later(user_id: @student.id, requester_id: @student.id, script_level_id: @script_level.id)
+    end
+
+    assert_equal SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:STUDENT_LIMIT_EXCEEDED], RubricAiEvaluation.where(user_id: @student.id).last.status
+  end
+
+  test 'job is not performed when teacher limits are exceeded' do
+    channel_token = ChannelToken.find_or_create_channel_token(@script_level.level, @fake_ip, @storage_id, @script_level.script_id)
+    channel_id = channel_token.channel
+
+    # create more existing RubricAiEvaluation records than are allowed
+    existing_job_count = SharedConstants::RUBRIC_AI_EVALUATION_LIMITS[:TEACHER_LIMIT] + 1
+    existing_job_count.times do
+      create(
+        :rubric_ai_evaluation, user: @student, requester: @teacher, rubric: @rubric,
+        status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS], project_id: channel_id
+      )
+    end
+    assert_equal existing_job_count, RubricAiEvaluation.where(user: @student).count
+    last_eval = RubricAiEvaluation.where(user: @student, requester: @teacher).last
+    assert_equal SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS], last_eval.status
+    assert_equal @teacher.id, last_eval.requester_id
+
+    # make sure we do not try to make an API call
+    HTTParty.stubs(:post).never
+
+    perform_enqueued_jobs do
+      EvaluateRubricJob.perform_later(user_id: @student.id, requester_id: @teacher.id, script_level_id: @script_level.id)
+    end
+
+    assert_equal SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:TEACHER_LIMIT_EXCEEDED], RubricAiEvaluation.where(user_id: @student.id).last.status
   end
 
   # stub out the calls to fetch project data from S3. Because the call to S3

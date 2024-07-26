@@ -69,9 +69,9 @@ Feature: Using the Lesson Edit Page
     And I press keys "Standalone_Artist_1" for element ".uitest-add-level-name-input"
     And element ".fa-search" is visible
     And I press ".fa-search" using jQuery
-    # We will know the search has completed after the following step, because we
-    # confirmed earlier that there were no Artist levels in the initial view.
-    And I wait until element ".uitest-level-dialog-content td" contains text "Artist"
+    # We will know the search has completed after the following step, because the
+    # test level does not show up in the initial view.
+    And I wait until element ".uitest-level-dialog-content td" contains text "Standalone_Artist_1"
     And element ".uitest-level-dialog-content td .fa-plus" is visible
     And I press ".uitest-level-dialog-content td .fa-plus:first" using jQuery
     And I click selector ".save-add-levels-button"

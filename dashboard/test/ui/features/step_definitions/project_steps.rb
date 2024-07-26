@@ -21,7 +21,7 @@ Then(/^I make a "([^"]*)" project named "([^"]*)"$/) do |project_type, name|
   steps <<~GHERKIN
     Then I am on "http://studio.code.org/projects/#{project_type}/new"
     And I get redirected to "/projects/#{project_type}/([^/]*?)/edit" via "dashboard"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And element "#runButton" is visible
     And element ".project_updated_at" eventually contains text "Saved"
     And I click selector ".project_edit"
@@ -69,7 +69,7 @@ end
 Then /^I reload the project page/ do
   steps <<-GHERKIN
     And I reload the page
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And element ".project_updated_at" eventually contains text "Saved"
   GHERKIN
 end

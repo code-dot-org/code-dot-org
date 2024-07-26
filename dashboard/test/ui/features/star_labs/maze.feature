@@ -3,7 +3,7 @@ Feature: Complete a complicated maze level
 Background:
   Given I am on "http://studio.code.org/reset_session"
   Given I am on "http://studio.code.org/s/20-hour/lessons/2/levels/15?noautoplay=true&blocklyVersion=google"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I dismiss the login reminder
   And element ".csf-top-instructions p" has text "Ok, this is just like the last puzzle, but you need to remember how you used the \"if\" block and the \"repeat\" block together."
 
@@ -25,7 +25,7 @@ Scenario: Submit an invalid solution
 
 @no_mobile
 Scenario: Submit a valid solution
-  When I wait for the page to fully load
+  When I wait for the lab page to fully load
   Then element "#resetButton" is hidden
   Then I drag block "repeatForever" to block "topBlock"
   And I drag block "moveForward" into first position in repeat block "repeatForever"
@@ -45,7 +45,7 @@ Scenario: Submit a valid solution
 
   # Make sure the work on level 15 was saved.
   When I am on "http://studio.code.org/s/20-hour/lessons/2/levels/15?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then I press "runButton"
   Then I wait until element ".congrats" is visible
   And element ".congrats" has text "Congratulations! You completed Puzzle 15."

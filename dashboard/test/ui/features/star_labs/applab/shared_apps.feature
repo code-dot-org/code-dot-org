@@ -4,7 +4,7 @@ Feature: App Lab Scenarios
 
   Background:
     Given I start a new Applab project
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
 
   Scenario: App Lab Share
     Given I ensure droplet is in text mode

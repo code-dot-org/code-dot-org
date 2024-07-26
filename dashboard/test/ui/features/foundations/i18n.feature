@@ -3,7 +3,7 @@ Feature: Hour of Code, Frozen, and Minecraft:Agent tutorials in various language
 
 Scenario: HoC tutorial in Spanish
   Given I am on "http://studio.code.org/hoc/15/lang/es-MX"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then element ".csf-top-instructions p" has "es-MX" text from key "data.level.instructions.maze_2_14"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
@@ -11,7 +11,7 @@ Scenario: HoC tutorial in Spanish
 
 Scenario: Frozen tutorial in Spanish
   Given I am on "http://studio.code.org/s/frozen/lessons/1/levels/2/lang/es-MX"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then element ".csf-top-instructions p" has "es-MX" text from key "data.short_instructions.frozen perpendicular"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
@@ -19,7 +19,7 @@ Scenario: Frozen tutorial in Spanish
 
 Scenario: Minecraft:Agent tutorial in Spanish
   Given I am on "http://studio.code.org/s/hero/lessons/1/levels/1/lang/es-MX"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then element "#toggleButton" is visible
   And I click selector "#toggleButton"
   And I wait until element ".csf-top-instructions p" is visible
@@ -27,7 +27,7 @@ Scenario: Minecraft:Agent tutorial in Spanish
 
 Scenario: Toolbox Categories in Spanish
   Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/7/lang/es-MX"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then element ".blocklyTreeRoot #\\\:1" has "es-MX" text from key "data.block_categories.Actions"
   Then element ".blocklyTreeRoot #\\\:2" has "es-MX" text from key "data.block_categories.Color"
   Then element ".blocklyTreeRoot #\\\:3" has "es-MX" text from key "data.block_categories.Category"
@@ -40,7 +40,7 @@ Scenario: Toolbox Categories in Spanish
 
 Scenario: Translated function names in Spanish
   Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/3/lang/es-MX"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   # Toolbox call block is translated
   Then element "[block-id=6] .blocklyText" has "es-MX" text from key "data.function_definitions.2-3 Artist Functions 4.draw a square.name"
   # Workspace call block is translated
@@ -50,7 +50,7 @@ Scenario: Translated function names in Spanish
 
 Scenario: HoC tutorial in Portuguese
   Given I am on "http://studio.code.org/hoc/15/lang/pt-br"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then element ".csf-top-instructions p" has "pt-BR" text from key "data.level.instructions.maze_2_14"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
@@ -59,7 +59,7 @@ Scenario: HoC tutorial in Portuguese
 @no_circle
 Scenario: Frozen tutorial in Portuguese
   Given I am on "http://studio.code.org/s/frozen/lessons/1/levels/2/lang/pt-br"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then element ".csf-top-instructions p" has "pt-BR" text from key "data.short_instructions.frozen perpendicular"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
@@ -67,7 +67,7 @@ Scenario: Frozen tutorial in Portuguese
 
 Scenario: Minecraft:Agent tutorial in Portuguese
   Given I am on "http://studio.code.org/s/hero/lessons/1/levels/1/lang/pt-br"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then element "#toggleButton" is visible
   And I click selector "#toggleButton"
   And I wait until element ".csf-top-instructions p" is visible
@@ -75,7 +75,7 @@ Scenario: Minecraft:Agent tutorial in Portuguese
 
 Scenario: Toolbox Categories in Portuguese
   Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/7/lang/pt-br"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then element ".blocklyTreeRoot #\\:1" has "pt-BR" text from key "data.block_categories.Actions"
   Then element ".blocklyTreeRoot #\\:2" has "pt-BR" text from key "data.block_categories.Color"
   Then element ".blocklyTreeRoot #\\:3" has "pt-BR" text from key "data.block_categories.Category"
@@ -88,7 +88,7 @@ Scenario: Toolbox Categories in Portuguese
 
 Scenario: Translated function names in Portuguese
   Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/3/lang/pt-BR"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   # Toolbox call block is translated
   Then element "[block-id=6] .blocklyText" has "pt-BR" text from key "data.function_definitions.2-3 Artist Functions 4.draw a square.name"
   # Workspace call block is translated
@@ -98,7 +98,7 @@ Scenario: Translated function names in Portuguese
 
 Scenario: HoC tutorial in Arabic (RTL)
   Given I am on "http://studio.code.org/hoc/15/lang/ar-sa"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then element ".csf-top-instructions p" has "ar-SA" text from key "data.level.instructions.maze_2_14"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
@@ -106,7 +106,7 @@ Scenario: HoC tutorial in Arabic (RTL)
 
 Scenario: Frozen tutorial in Arabic (RTL)
   Given I am on "http://studio.code.org/s/frozen/lessons/1/levels/2/lang/ar-sa"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then element ".csf-top-instructions p" has "ar-SA" text from key "data.short_instructions.frozen perpendicular"
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
@@ -114,7 +114,7 @@ Scenario: Frozen tutorial in Arabic (RTL)
 
 Scenario: Minecraft:Agent tutorial in Arabic (RTL)
   Given I am on "http://studio.code.org/s/hero/lessons/1/levels/1/lang/ar-sa"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then element "#toggleButton" is visible
   And I click selector "#toggleButton"
   And I wait until element ".csf-top-instructions p" is visible
@@ -122,7 +122,7 @@ Scenario: Minecraft:Agent tutorial in Arabic (RTL)
 
 Scenario: Translated function names in Arabic
   Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/3/lang/ar-SA"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   # Toolbox call block is translated
   Then element "[block-id=6] .blocklyText" has "ar-SA" text from key "data.function_definitions.2-3 Artist Functions 4.draw a square.name"
   # Workspace call block is translated
@@ -132,7 +132,7 @@ Scenario: Translated function names in Arabic
 
 Scenario: Toolbox Categories in Arabic (RTL)
   Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/7/lang/ar-sa"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then element ".blocklyTreeRoot #\\:1" has "ar-SA" text from key "data.block_categories.Actions"
   Then element ".blocklyTreeRoot #\\:2" has "ar-SA" text from key "data.block_categories.Color"
   Then element ".blocklyTreeRoot #\\:3" has "ar-SA" text from key "data.block_categories.Category"

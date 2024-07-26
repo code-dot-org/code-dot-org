@@ -53,7 +53,7 @@ function installControlsRepeatSimplified(blockly, skin) {
         .appendField(
           new blockly.FieldTextInput(
             '10',
-            blockly.FieldTextInput.nonnegativeIntegerValidator
+            blockly.cdoUtils.nonnegativeIntegerValidator
           ),
           'TIMES'
         );

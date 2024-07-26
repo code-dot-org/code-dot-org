@@ -182,7 +182,7 @@ When /^I close the instructions overlay if it exists$/ do
   steps 'When I click selector "#overlay" if it exists'
 end
 
-When /^I wait for the page to fully load$/ do
+When /^I wait for the lab page to fully load$/ do
   steps <<-GHERKIN
     When I wait to see "#runButton"
     And I wait to see ".header_user"
