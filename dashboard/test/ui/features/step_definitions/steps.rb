@@ -67,7 +67,6 @@ def replace_hostname(url)
     pegasus_host: ENV.fetch('PEGASUS_TEST_DOMAIN', nil),
     hourofcode_host: ENV.fetch('HOUROFCODE_TEST_DOMAIN', nil),
     csedweek_host: ENV.fetch('CSEDWEEK_TEST_DOMAIN', nil),
-    advocacy_host: ENV.fetch('ADVOCACY_TEST_DOMAIN', nil)
   ).replace_origin(url)
 end
 

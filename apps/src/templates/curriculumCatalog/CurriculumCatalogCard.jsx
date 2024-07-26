@@ -4,9 +4,13 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
+import {
+  Button,
+  buttonColors,
+  LinkButton,
+} from '@cdo/apps/componentLibrary/button';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import Button from '@cdo/apps/templates/Button';
 import CardLabels from '@cdo/apps/templates/curriculumCatalog/CardLabels';
 import {
   CreateSectionsToAssignSectionsDialog,
@@ -30,7 +34,10 @@ import {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-import {defaultImageSrc} from './curriculumCatalogConstants';
+import {
+  curriculumCatalogCardIdPrefix,
+  defaultImageSrc,
+} from './curriculumCatalogConstants';
 import ExpandedCurriculumCatalogCard from './ExpandedCurriculumCatalogCard';
 
 import style from './curriculum_catalog_card.module.scss';
@@ -246,7 +253,10 @@ const CustomizableCurriculumCatalogCard = ({
   };
 
   return (
-    <div className={style.cardsContainer}>
+    <div
+      id={`${curriculumCatalogCardIdPrefix}${courseKey}`}
+      className={style.cardsContainer}
+    >
       <div>
         <div
           className={classNames(
@@ -287,43 +297,41 @@ const CustomizableCurriculumCatalogCard = ({
               )}
             >
               <Button
-                color={Button.ButtonColor.neutralDark}
-                type="button"
                 onClick={onQuickViewClick}
-                aria-label={quickViewButtonDescription}
+                ariaLabel={quickViewButtonDescription}
                 text={i18n.quickView()}
                 className={`${style.buttonFlex} ${style.quickViewButton}`}
+                type="secondary"
+                color={buttonColors.black}
               />
               {isTeacherOrSignedOut && (
                 <>
-                  <Button
-                    __useDeprecatedTag
-                    color={Button.ButtonColor.neutralDark}
-                    type="button"
+                  <LinkButton
+                    color={buttonColors.black}
+                    type="secondary"
                     href={pathToCourse}
-                    aria-label={i18n.learnMoreDescription({
+                    ariaLabel={i18n.learnMoreDescription({
                       course_name: courseDisplayName,
                     })}
                     text={i18n.learnMore()}
                     className={`${style.buttonFlex} ${style.teacherAndSignedOutLearnMoreButton}`}
                   />
                   <Button
-                    color={Button.ButtonColor.brandSecondaryDefault}
-                    type="button"
+                    color={buttonColors.purple}
+                    type="primary"
                     onClick={() => handleClickAssign('top-card')}
-                    aria-label={assignButtonDescription}
+                    ariaLabel={assignButtonDescription}
                     text={assignButtonText}
                     className={style.buttonFlex}
                   />
                 </>
               )}
               {!isTeacherOrSignedOut && (
-                <Button
-                  __useDeprecatedTag
-                  color={Button.ButtonColor.brandSecondaryDefault}
-                  type="button"
+                <LinkButton
+                  color={buttonColors.purple}
+                  type="primary"
                   href={pathToCourse}
-                  aria-label={i18n.tryCourseNow({
+                  ariaLabel={i18n.tryCourseNow({
                     course_name: courseDisplayName,
                   })}
                   text={i18n.tryNow()}

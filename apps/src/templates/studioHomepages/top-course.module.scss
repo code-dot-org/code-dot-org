@@ -1,0 +1,75 @@
+@import 'color';
+@import 'style-constants';
+
+.card {
+    overflow: hidden;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $light_gray_200;
+    position: relative;
+    height: 200px;
+    width: $content-width;
+    margin-bottom: 20px;
+    background-color: $neutral_light;
+}
+
+.header {
+    position: absolute;
+    width: $content-width;
+    height: 80px;
+    background-color: $brand_primary_default;
+}
+
+.name {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 15px;
+    font-size: 30px;
+    color: $neutral_white;
+    width: $content-width - 35;
+    z-index: 2;
+    position: absolute;
+    display: inline;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.description {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    margin-top: 80px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: $neutral_dark;
+    width: 65%;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 2;
+}
+
+.details {
+    margin-top: 10px;
+}
+
+.buttonBox {
+    margin-top: 120px;
+    z-index: 2;
+}
+
+.lessonButton {
+    margin-left: 8px;
+    margin-right: 25px;
+}
+
+.ltr {
+    float: left;
+}
+
+.rtl {
+    float: right;
+}
