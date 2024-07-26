@@ -43,6 +43,28 @@ class AiRubricMetrics
     )
   end
 
+  # Log thumbs up / down feedback for AI evaluation
+  # @param [LearningGoalAiEvaluationFeedback] feedback
+  def self.log_feedback(feedback)
+    lesson = feedback.learning_goal_ai_evaluation&.learning_goal&.rubric&.lesson
+
+    Cdo::Metrics.push(
+      AI_RUBRIC_METRICS_NAMESPACE,
+      [
+        {
+          metric_name: 'LearningGoalAiEvaluationFeedback',
+          value: feedback.ai_feedback_approval,
+          dimensions: [
+            {name: 'Environment', value: CDO.rack_env},
+            {name: 'Unit', value: lesson&.script&.name},
+            {name: 'Lesson', value: lesson&.relative_position},
+          ],
+          unit: 'Count',
+        }
+      ]
+    )
+  end
+
   def self.log_to_firehose(job:, error:, event_name:, agent: nil)
     options = job.arguments.first
     script_level = ScriptLevel.find(options[:script_level_id])
