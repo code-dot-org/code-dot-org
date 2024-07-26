@@ -39,7 +39,7 @@ class UnitGroup < ApplicationRecord
   has_many :student_resources, through: :unit_groups_student_resources, source: :resource
   has_one :course_version, as: :content_root, dependent: :destroy
 
-  scope :with_associated_models, lambda {
+  scope :with_associated_models, lambda do
     includes(
       [
         :plc_course,
@@ -52,7 +52,7 @@ class UnitGroup < ApplicationRecord
         }
       ]
     )
-  }
+  end
 
   def cached
     return self unless UnitGroup.should_cache?

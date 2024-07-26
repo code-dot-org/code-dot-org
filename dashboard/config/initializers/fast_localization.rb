@@ -19,7 +19,7 @@ end
 Dashboard::Application.config.after_initialize do |app|
   app.reloaders.each do |reloader|
     if reloader.is_a?(ActiveSupport::FileUpdateChecker) && reloader.files == I18n.load_path
-      reloader.block = ->(files) { I18n.backend.load_translations(files)}
+      reloader.block = ->(files) {I18n.backend.load_translations(files)}
     end
   end
 end
