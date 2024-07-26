@@ -161,6 +161,21 @@ class SchoolDistrict < ApplicationRecord
           }
         end
       end
+
+      CDO.log.info "Seeding 2022-2023 school district data"
+      import_options_2223 = {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}
+      AWS::S3.seed_from_file('cdo-nces', "2022-2023/ccd/district.csv") do |filename|
+        SchoolDistrict.merge_from_csv(filename, import_options_2223, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
+          {
+            id:                           row['Agency ID - NCES Assigned [District] Latest available year'].tr('"=', '').to_i,
+            name:                         row['Agency Name'].upcase,
+            city:                         row['Location City [District] 2022-23'].to_s.upcase.presence,
+            state:                        row['Location State Abbr [District] 2022-23'].strip.to_s.upcase.presence,
+            zip:                          row['Location ZIP [District] 2022-23'].tr('"=', ''),
+            last_known_school_year_open:  OPEN_SCHOOL_STATUSES.include?(row['Updated Status [District] 2022-23']) ? '2022-2023' : nil
+          }
+        end
+      end
     end
   end
 
@@ -175,7 +190,7 @@ class SchoolDistrict < ApplicationRecord
   # @param ignore_attributes [Array] List of attributes included in a given import that should not be used to determine whether a record is being "updated" or "unchanged". Allows us to more clearly identify which schools have real changes to existing data.
   # @param parse_row [Block] A block to parse a row of new data -- see School.seed_from_s3 for examples.
   def self.seed_s3_object(bucket, filepath, import_options, is_dry_run: false, ignore_attributes: [], &parse_row)
-    AWS::S3.seed_from_file(bucket, filepath, is_dry_run) do |filename|
+    AWS::S3.seed_from_file(bucket, filepath, dry_run: is_dry_run) do |filename|
       merge_from_csv(
         filename,
         import_options,

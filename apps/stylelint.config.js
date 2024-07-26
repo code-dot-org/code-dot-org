@@ -23,17 +23,11 @@ module.exports = {
     'selector-pseudo-class-no-unknown': [
       true,
       {
-        ignorePseudoClasses: ['export'],
+        ignorePseudoClasses: ['export', 'global'],
       },
     ],
     'property-no-unknown': [
       true,
-      {
-        ignoreSelectors: [':export'],
-      },
-    ],
-    'property-case': [
-      'lower',
       {
         ignoreSelectors: [':export'],
       },

@@ -1,13 +1,15 @@
+import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount, shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import RubricsContainer from '@cdo/apps/lib/levelbuilder/rubrics/RubricsContainer';
-import * as rubricHelper from '@cdo/apps/lib/levelbuilder/rubrics/rubricHelper';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
 import RubricEditor from '@cdo/apps/lib/levelbuilder/rubrics/RubricEditor';
+import * as rubricHelper from '@cdo/apps/lib/levelbuilder/rubrics/rubricHelper';
+import RubricsContainer from '@cdo/apps/lib/levelbuilder/rubrics/RubricsContainer';
 import Button from '@cdo/apps/templates/Button';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
-import sinon from 'sinon';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('RubricsContainerTest', () => {
   const defaultProps = {
@@ -101,6 +103,9 @@ describe('RubricsContainerTest', () => {
     expect(wrapper.find('Heading1').text()).to.equal('Modify your rubric');
     expect(wrapper.find('select#rubric_level_id option')).to.have.length(
       defaultProps.submittableLevels.length
+    );
+    expect(wrapper.find(RubricEditor).prop('learningGoalList')).to.equal(
+      rubricInfo.learningGoals
     );
     expect(wrapper.find(LearningGoalItem)).to.have.length(
       rubricInfo.learningGoals.length

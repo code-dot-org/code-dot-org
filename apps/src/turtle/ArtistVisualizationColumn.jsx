@@ -2,11 +2,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import GameButtons from '@cdo/apps/templates/GameButtons';
-import BelowVisualization from '../templates/BelowVisualization';
-
-import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
-import SaveImageButton from './SaveImageButton';
 import msg from '@cdo/locale';
+
+import BelowVisualization from '../templates/BelowVisualization';
+import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
+
+import SaveImageButton from './SaveImageButton';
 
 export default class ArtistVisualizationColumn extends React.Component {
   static propTypes = {
@@ -60,10 +61,11 @@ export default class ArtistVisualizationColumn extends React.Component {
               src="/blockly/media/turtle/loading.gif"
               height="15"
               width="15"
+              alt=""
             />{' '}
             {this.props.showFinishButton && (
               <button type="button" id="finishButton" className="share">
-                <img src="/blockly/media/1x1.gif" />
+                <img src="/blockly/media/1x1.gif" alt="" />
                 {msg.finish()}
               </button>
             )}

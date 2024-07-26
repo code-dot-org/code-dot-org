@@ -1,17 +1,26 @@
-import React, {useCallback, useContext, useState} from 'react';
 import classNames from 'classnames';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import moduleStyles from './instructions.module.scss';
+import React, {useCallback, useContext, useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
+
 import {navigateToNextLevel} from '@cdo/apps/code-studio/progressRedux';
+import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
 import {
-  levelCount,
-  currentLevelIndex,
-} from '@cdo/apps/code-studio/progressReduxSelectors';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+  isPredictAnswerLocked,
+  setPredictResponse,
+} from '@cdo/apps/lab2/redux/predictLevelRedux';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
 import {LabState} from '../../lab2Redux';
-import {ProjectLevelData} from '../../types';
 import {ThemeContext} from '../ThemeWrapper';
+
+import PredictQuestion from './PredictQuestion';
+import PredictSummary from './PredictSummary';
+
+import moduleStyles from './instructions.module.scss';
+
 const commonI18n = require('@cdo/locale');
 
 interface InstructionsProps {
@@ -29,6 +38,13 @@ interface InstructionsProps {
    * are currently unsupported. Defaults to right.
    */
   imagePopOutDirection?: 'right' | 'left';
+  /**
+   * A callback when the user clicks on clickable text.
+   */
+  handleInstructionsTextClick?: (id: string) => void;
+  manageNavigation?: boolean;
+  /** Optional classname for the container */
+  className?: string;
 }
 
 /**
@@ -44,24 +60,34 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
   baseUrl,
   layout,
   imagePopOutDirection,
+  handleInstructionsTextClick,
+  className,
+  manageNavigation = true,
 }) => {
-  // Prefer using long instructions if available, otherwise fall back to level data text.
   const instructionsText = useSelector(
-    (state: {lab: LabState}) =>
-      state.lab.levelProperties?.longInstructions ||
-      (state.lab.levelProperties?.levelData as ProjectLevelData | undefined)
-        ?.text
+    (state: {lab: LabState}) => state.lab.levelProperties?.longInstructions
   );
-  const levelIndex = useSelector(currentLevelIndex);
-  const currentLevelCount = useSelector(levelCount);
-  const {hasConditions, message, satisfied} = useSelector(
+  const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
+  const {hasConditions, message, satisfied, index} = useSelector(
     (state: {lab: LabState}) => state.lab.validationState
   );
+  const predictSettings = useAppSelector(
+    state => state.lab.levelProperties?.predictSettings
+  );
+  const predictResponse = useAppSelector(state => state.predictLevel.response);
+  const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
 
-  // If there are no validation conditions, we can show the next button so long as
-  // there is another level. If validation is present, also check that conditions are satisfied.
-  const showNextButton =
-    (!hasConditions || satisfied) && levelIndex + 1 < currentLevelCount;
+  // If there are no validation conditions, we can show the continue button so long as
+  // there is another level and manageNavigation is true.
+  // If validation is present, also check that conditions are satisfied.
+  const showContinueButton =
+    manageNavigation && (!hasConditions || satisfied) && hasNextLevel;
+
+  // If there are no validation conditions, we can show the finish button so long as
+  // this is the last level in the progression and the instructions panel is managing navigation.
+  // If validation is present, also check that conditions are satisfied.
+  const showFinishButton =
+    manageNavigation && (!hasConditions || satisfied) && !hasNextLevel;
 
   const dispatch = useAppDispatch();
 
@@ -83,10 +109,20 @@ const Instructions: React.FunctionComponent<InstructionsProps> = ({
     <InstructionsPanel
       text={instructionsText}
       message={message || undefined}
-      showNextButton={showNextButton}
+      messageIndex={index}
+      showContinueButton={showContinueButton}
+      showFinishButton={showFinishButton}
+      beforeFinish={beforeNextLevel}
       onNextPanel={onNextPanel}
       theme={theme}
-      {...{baseUrl, layout, imagePopOutDirection}}
+      predictSettings={predictSettings}
+      predictResponse={predictResponse}
+      setPredictResponse={response => dispatch(setPredictResponse(response))}
+      predictAnswerLocked={predictAnswerLocked}
+      layout={layout}
+      imagePopOutDirection={imagePopOutDirection}
+      handleInstructionsTextClick={handleInstructionsTextClick}
+      className={className}
     />
   );
 };
@@ -96,10 +132,16 @@ interface InstructionsPanelProps {
   text: string;
   /** Optional message to display under the main text. This is typically a validation message. */
   message?: string;
+  /** Key for rendering the optional message. A unique value ensures the appearance animation shows. */
+  messageIndex?: number;
   /** Optional image URL to display. */
   imageUrl?: string;
-  /** If the next button should be shown. */
-  showNextButton?: boolean;
+  /** If the continue button should be shown. */
+  showContinueButton?: boolean;
+  /** If the finish button should be shown. */
+  showFinishButton?: boolean;
+  /** Additional callback to fire before finishing the level. */
+  beforeFinish?: () => void;
   /** Callback to call when clicking the next button. */
   onNextPanel?: () => void;
   /** If the instructions panel should be rendered vertically or horizontally. Defaults to vertical. */
@@ -111,23 +153,48 @@ interface InstructionsPanelProps {
   imagePopOutDirection?: 'right' | 'left';
   /** Display theme. Defaults to dark. */
   theme?: 'dark' | 'light';
+  /**
+   * A callback when the user clicks on clickable text.
+   */
+  handleInstructionsTextClick?: (id: string) => void;
+  predictSettings?: LevelPredictSettings;
+  predictResponse?: string;
+  setPredictResponse: (response: string) => void;
+  predictAnswerLocked: boolean;
+  /** Optional classname for the container */
+  className?: string;
 }
 
 /**
- * Renders the instructions panel view. This is a separate component so that it can be
- * used without the Lab2 redux integration if necessary.
+ * Renders the instructions panel view. This was initially set up as a separate component
+ * so that it could be used without the Lab2 redux integration if necessary.
+ * If the level is a predict level, the predict reset button now uses redux, as it needs
+ * multiple unique redux values and there isn't a clear use case for having no redux integration
+ * anymore.
+ * TODO: Determine if we need this separate component anymore, or if we can merge this into Instructions.
+ * https://codedotorg.atlassian.net/browse/CT-671
  */
 const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
   text,
   message,
+  messageIndex,
   imageUrl,
-  showNextButton,
+  showContinueButton,
+  showFinishButton,
+  beforeFinish,
   onNextPanel,
   layout = 'vertical',
   imagePopOutDirection = 'right',
   theme = 'dark',
+  handleInstructionsTextClick,
+  predictSettings,
+  predictResponse,
+  setPredictResponse,
+  predictAnswerLocked,
+  className,
 }) => {
   const [showBigImage, setShowBigImage] = useState(false);
+  const [isFinished, setIsFinished] = useState(false);
 
   const imageClicked = () => {
     setShowBigImage(!showBigImage);
@@ -135,14 +202,33 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
 
   const vertical = layout === 'vertical';
 
-  const canShowNextButton = showNextButton && onNextPanel;
+  const canShowContinueButton = showContinueButton && onNextPanel;
+
+  const canShowFinishButton = showFinishButton;
+
+  const onFinish = useCallback(() => {
+    if (beforeFinish) {
+      beforeFinish();
+    }
+    setIsFinished(true);
+  }, [beforeFinish]);
+
+  // Reset the Finish button state when it changes from shown to hidden.
+  useEffect(() => {
+    setIsFinished(false);
+  }, [canShowFinishButton]);
+
+  const finalMessage =
+    'You finished this lesson! Check in with your teacher for the next activity';
 
   return (
     <div
       id="instructions"
       className={classNames(
         moduleStyles['instructions-' + theme],
-        vertical && moduleStyles.vertical
+        vertical && moduleStyles.vertical,
+        'instructions',
+        className
       )}
     >
       <div
@@ -159,6 +245,10 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
               !vertical && moduleStyles.horizontal
             )}
           >
+            {
+              // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+              // Verify or update this alt-text as necessary
+            }
             <img
               src={imageUrl}
               className={classNames(
@@ -166,6 +256,7 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                 !vertical && moduleStyles.fixedHeight
               )}
               onClick={() => imageClicked()}
+              alt=""
             />
             {showBigImage && (
               <div
@@ -174,7 +265,11 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
                   imagePopOutDirection === 'left' && moduleStyles.bigImageLeft
                 )}
               >
-                <img src={imageUrl} onClick={() => imageClicked()} />
+                {
+                  // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+                  // Verify or update this alt-text as necessary
+                }
+                <img src={imageUrl} onClick={() => imageClicked()} alt="" />
               </div>
             )}
           </div>
@@ -185,33 +280,60 @@ const InstructionsPanel: React.FunctionComponent<InstructionsPanelProps> = ({
             id="instructions-text"
             className={moduleStyles['text-' + theme]}
           >
-            <SafeMarkdown
+            {predictSettings?.isPredictLevel && <PredictSummary />}
+            <EnhancedSafeMarkdown
               markdown={text}
               className={moduleStyles.markdownText}
+              handleInstructionsTextClick={handleInstructionsTextClick}
+            />
+            <PredictQuestion
+              predictSettings={predictSettings}
+              predictResponse={predictResponse}
+              setPredictResponse={setPredictResponse}
+              predictAnswerLocked={predictAnswerLocked}
             />
           </div>
         )}
-        {(message || canShowNextButton) && (
-          <div id="instructions-feedback" className={moduleStyles.feedback}>
+        {(message || canShowContinueButton || canShowFinishButton) && (
+          <div
+            key={messageIndex + ' - ' + message}
+            id="instructions-feedback"
+            className={moduleStyles.feedback}
+          >
             <div
               id="instructions-feedback-message"
               className={moduleStyles['message-' + theme]}
             >
               {message && (
-                <SafeMarkdown
+                <EnhancedSafeMarkdown
                   markdown={message}
                   className={moduleStyles.markdownText}
+                  handleInstructionsTextClick={handleInstructionsTextClick}
                 />
               )}
-              {canShowNextButton && (
+              {canShowContinueButton && (
                 <button
-                  id="instructions-feedback-button"
+                  id="instructions-continue-button"
                   type="button"
                   onClick={onNextPanel}
-                  className={moduleStyles.buttonNext}
+                  className={moduleStyles.buttonInstruction}
                 >
                   {commonI18n.continue()}
                 </button>
+              )}
+              {canShowFinishButton && (
+                <>
+                  <button
+                    id="instructions-finish-button"
+                    type="button"
+                    onClick={onFinish}
+                    disabled={isFinished}
+                    className={moduleStyles.buttonInstruction}
+                  >
+                    {commonI18n.finish()}
+                  </button>
+                  {isFinished && <Heading6>{finalMessage}</Heading6>}
+                </>
               )}
             </div>
           </div>

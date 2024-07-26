@@ -1,29 +1,46 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import * as utils from '../../utils';
+
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+import LtiSectionSyncDialog, {
+  LtiSectionSyncResultShape,
+} from '@cdo/apps/lib/ui/simpleSignUp/lti/sync/LtiSectionSyncDialog';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import {Heading1} from './Headings';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import Button from '../../templates/Button';
 import {
   importOrUpdateRoster,
   sectionCode,
   sectionProvider,
+  sectionProviderName,
   sectionName,
+  ltiSyncResult,
+  syncEnabled,
 } from '../../templates/teacherDashboard/teacherSectionsRedux';
-import Button from '../../templates/Button';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import * as utils from '../../utils';
 
-const PROVIDER_NAME = {
-  [OAuthSectionTypes.clever]: i18n.loginTypeClever(),
-  [OAuthSectionTypes.google_classroom]: i18n.loginTypeGoogleClassroom(),
-};
+import {Heading1} from './Headings';
+
+const SUPPORTED_PROVIDERS = [
+  OAuthSectionTypes.clever,
+  OAuthSectionTypes.google_classroom,
+  SectionLoginType.lti_v1,
+];
+
+const SYNC_PROVIDERS = [
+  ...Object.values(OAuthSectionTypes),
+  SectionLoginType.lti_v1,
+];
 
 export const READY = 'ready';
 export const IN_PROGRESS = 'in-progress';
 export const SUCCESS = 'success';
+export const DISABLED = 'disabled';
 
 /**
  * Button that will re-sync an omniauth section's roster with the third-paty
@@ -33,17 +50,22 @@ export const SUCCESS = 'success';
 class SyncOmniAuthSectionControl extends React.Component {
   static propTypes = {
     sectionId: PropTypes.number.isRequired,
+    studioUrlPrefix: PropTypes.string,
     // Provided by Redux
     sectionCode: PropTypes.string,
     sectionName: PropTypes.string,
-    sectionProvider: PropTypes.oneOf(Object.values(OAuthSectionTypes)),
+    sectionProvider: PropTypes.oneOf(SYNC_PROVIDERS),
+    sectionProviderName: PropTypes.string.isRequired,
     updateRoster: PropTypes.func.isRequired,
+    ltiSyncResult: LtiSectionSyncResultShape,
+    syncEnabled: PropTypes.bool,
   };
 
   state = {
     buttonState: READY,
     isDialogOpen: false,
     syncFailErrorLog: '',
+    isLtiDialogOpen: false,
   };
 
   onClick = () => {
@@ -64,7 +86,7 @@ class SyncOmniAuthSectionControl extends React.Component {
       {includeUserId: true}
     );
 
-    if ([IN_PROGRESS, SUCCESS].includes(buttonState)) {
+    if ([IN_PROGRESS, SUCCESS, DISABLED].includes(buttonState)) {
       // Don't acknowledge click events while request is in progress.
       // For now, ignore them on success too - the page reload will take care of it.
       return;
@@ -76,12 +98,16 @@ class SyncOmniAuthSectionControl extends React.Component {
     const courseId = sectionCode.replace(/^[GC]-/, '');
     updateRoster(courseId, sectionName)
       .then(() => {
-        this.setState({buttonState: SUCCESS});
-        // While we are embedded in an angular page, reloading is the easiest
-        // way to pick up roster changes.  Once everything is React maybe we
-        // won't need to do this.
+        if (sectionProvider === SectionLoginType.lti_v1) {
+          this.setState({isLtiDialogOpen: true, buttonState: SUCCESS});
+        } else {
+          this.setState({buttonState: SUCCESS});
+          // While we are embedded in an angular page, reloading is the easiest
+          // way to pick up roster changes.  Once everything is React maybe we
+          // won't need to do this.
 
-        utils.reload();
+          utils.reload();
+        }
       })
       .catch(sync_error => {
         this.setState({
@@ -112,13 +138,24 @@ class SyncOmniAuthSectionControl extends React.Component {
     this.setState({buttonState: READY, isDialogOpen: false});
   };
 
+  onLtiDialogClose = () => {
+    utils.reload();
+  };
+
+  getButtonState = () => {
+    const {syncEnabled, sectionProvider} = this.props;
+    if (sectionProvider === SectionLoginType.lti_v1 && !syncEnabled) {
+      return DISABLED;
+    }
+    return this.state.buttonState;
+  };
+
   render() {
-    const {sectionProvider, sectionCode} = this.props;
-    const {buttonState} = this.state;
-    const supportedType = Object.prototype.hasOwnProperty.call(
-      PROVIDER_NAME,
-      sectionProvider
-    );
+    const {sectionProvider, sectionProviderName, sectionCode, ltiSyncResult} =
+      this.props;
+    const buttonState = this.getButtonState();
+    const isLtiDialogOpen = this.state;
+    const supportedType = SUPPORTED_PROVIDERS.includes(sectionProvider);
     if (!supportedType || !sectionCode) {
       // Possibly not loaded yet.
       return null;
@@ -128,9 +165,18 @@ class SyncOmniAuthSectionControl extends React.Component {
       <div>
         <SyncOmniAuthSectionButton
           provider={sectionProvider}
+          providerName={sectionProviderName}
           buttonState={buttonState}
           onClick={this.onClick}
         />
+        {ltiSyncResult && isLtiDialogOpen && (
+          <LtiSectionSyncDialog
+            isOpen={isLtiDialogOpen}
+            syncResult={ltiSyncResult}
+            onClose={this.onLtiDialogClose}
+            lmsName={sectionProviderName}
+          />
+        )}
         <BaseDialog
           useUpdatedStyles
           isOpen={this.state.isDialogOpen}
@@ -171,6 +217,9 @@ export default connect(
     sectionCode: sectionCode(state, props.sectionId),
     sectionName: sectionName(state, props.sectionId),
     sectionProvider: sectionProvider(state, props.sectionId),
+    sectionProviderName: sectionProviderName(state, props.sectionId),
+    ltiSyncResult: ltiSyncResult(state),
+    syncEnabled: syncEnabled(state, props.sectionId),
   }),
   {
     updateRoster: importOrUpdateRoster,
@@ -180,34 +229,54 @@ export default connect(
 /**
  * Pure view component of the omniauth sync control.
  */
-export function SyncOmniAuthSectionButton({provider, buttonState, onClick}) {
-  const providerName = PROVIDER_NAME[provider];
+export function SyncOmniAuthSectionButton({
+  provider,
+  providerName,
+  buttonState,
+  onClick,
+}) {
   return (
     <Button
       __useDeprecatedTag
-      text={buttonText(buttonState, providerName)}
+      text={buttonText(buttonState, provider, providerName)}
       color={Button.ButtonColor.gray}
       size={Button.ButtonSize.default}
-      disabled={buttonState === IN_PROGRESS}
+      disabled={[IN_PROGRESS, DISABLED].includes(buttonState)}
       onClick={onClick}
       {...iconProps(buttonState)}
       style={{float: 'left'}}
+      title={
+        buttonState === DISABLED
+          ? i18n.ltiSectionSyncButtonDisabledAltText()
+          : undefined
+      }
+      aria-label={
+        buttonState === DISABLED
+          ? i18n.ltiSectionSyncButtonDisabledAltText()
+          : undefined
+      }
     />
   );
 }
 SyncOmniAuthSectionButton.propTypes = {
-  provider: PropTypes.oneOf(Object.values(OAuthSectionTypes)).isRequired,
-  buttonState: PropTypes.oneOf([READY, IN_PROGRESS, SUCCESS]).isRequired,
+  provider: PropTypes.oneOf(SYNC_PROVIDERS).isRequired,
+  providerName: PropTypes.string.isRequired,
+  buttonState: PropTypes.oneOf([READY, IN_PROGRESS, SUCCESS, DISABLED])
+    .isRequired,
   onClick: PropTypes.func,
 };
 
-function buttonText(buttonState, providerName) {
+function buttonText(buttonState, provider, providerName) {
   if (buttonState === IN_PROGRESS) {
     return i18n.loginTypeSyncButton_inProgress({providerName});
   } else if (buttonState === SUCCESS) {
     return i18n.loginTypeSyncButton_success({providerName});
   }
-  return i18n.loginTypeSyncButton({providerName});
+  if (provider === SectionLoginType.lti_v1) {
+    return i18n.loginTypeSyncButtonLti({providerName});
+  } else {
+    return i18n.loginTypeSyncButton({providerName});
+  }
 }
 
 function iconProps(buttonState) {

@@ -1,6 +1,7 @@
 import $ from 'jquery';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 $(document).ready(() => {
   $('#user_login').placeholder();
@@ -12,10 +13,6 @@ $(document).ready(() => {
     });
 
     window.dashboard.clientState.reset();
-  });
-
-  document.getElementById('user_signup').addEventListener('click', () => {
-    analyticsReporter.sendEvent(EVENTS.SIGN_UP_STARTED_EVENT);
   });
 
   if (window.location.href.includes('user_return_to=/catalog')) {

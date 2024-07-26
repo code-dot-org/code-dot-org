@@ -253,6 +253,7 @@ tr-TR:
   class_submission_out_of_school_summer_camp: Yaz kampı
   classicmaze_name: Klasik Labirent
   code_hoc_coming: Kod Saati burada - Aralık 8-14!
+  code_org_logo_alt: Code.org Ana Sayfası
   code_sign_up: CS Education Week' e katılmak için kaydolun.
   codea_beyond_gradelevel: Lise +
   codea_beyond_longdescription: Koduna iPad için Java Oyunlar ve simülasyonlar oluşturmayı
@@ -1147,7 +1148,9 @@ tr-TR:
   header_about_us: Hakkımızda
   header_course_catalog: Kurs Kataloğu
   header_courses: kurslar
+  header_districts: İlçeler
   header_documentation: Belgeler
+  header_donate: Bağış Yap
   header_educate_beyond: Code.org ötesi
   header_educate_community: Çevrimiçi Topluluk
   header_educate_elementary: İlköğretim Okulu
@@ -1165,6 +1168,7 @@ tr-TR:
   header_incubator: İnkübatör
   header_learn: Öğren
   header_legal: Gizlilik & Hukuk
+  header_legal_cookie_notice: Çerez Bildirimi
   header_legal_privacy: Gizlilik Politikası
   header_legal_tos: Hizmet Şartları
   header_my_dashboard: Kontrol panelim
@@ -1172,6 +1176,7 @@ tr-TR:
   header_project_gallery: Projeler
   header_report_abuse: Hata Rapor Et
   header_report_bug: Hata bildir
+  header_schools: Okullar
   header_screen_reader_hamburger: 'Menü
 
     '
@@ -1603,6 +1608,7 @@ tr-TR:
   homepage_slot_text_link_k5: K-5 sınıflar için kurslar
   homepage_slot_text_link_local: En yakın sınıfı bulun
   homepage_slot_text_link_middle: Orta öğretim
+  homepage_slot_text_link_middle_and_high: Ortaokul ve Lise
   homepage_slot_text_link_othercourses: Diğer online kurslar
   homepage_slot_text_link_pd: Mesleki Gelişim
   homepage_slot_text_link_shop: Tişörtler, şapkalar ve daha fazlası
@@ -2495,6 +2501,8 @@ tr-TR:
   user_header_applab: Uygulama Laboratuvarı
   user_header_artist: 'Sanatçı '
   user_header_create: 'Oluştur '
+  user_header_create_account: 'Hesap oluştur '
+  user_header_create_account_low_cap: Hesap oluştur
   user_header_dance: Dans Partisi
   user_header_flappy: Flappy
   user_header_gamelab: Oyun Laboratuvarı
@@ -2502,6 +2510,8 @@ tr-TR:
   user_header_logout: Çıkış Yap
   user_header_minecraft: Minecraft
   user_header_my_projects: Projelerim
+  user_header_new_project: Yeni Proje
+  user_header_new_project_low_cap: Yeni proje
   user_header_playlab: Oyun Laboratuvarı
   user_header_settings: Hesap Ayarları
   user_header_signin: Giriş Yap
@@ -2614,25 +2624,14 @@ tr-TR:
     on milyonlarca öğrenciye erişen ve bir saatliğine bilgisayar bilimleri eğitimi
     veren küresel bir hareket. Lütfen 7-13 Aralık tarihlerinde gerçekleşecek olan
     Bilgisayar Bilimleri Eğitimi Haftasına katılın.
-  volunteer_engineer_submission_intro_guide: Bizim <a href="%{volunteer_guide}"> gönüllü
-    programımız</a> hakkında daha fazla bilgi edinin.
   volunteer_engineer_submission_intro_guide_markdown: Bizim [gönüllü programımız](%{volunteer_guide})
     hakkında daha fazla bilgi edinin.
-  volunteer_engineer_submission_intro_links: Kendi Kod Saati etkinliğini düzenlemek
-    ve <a href="%{volunteer_local}">yerel gönüllü haritamızdan</a> gönüllü bulmak
-    için <a href="%{learn_more}">daha fazlasını öğren.</a>.
   volunteer_engineer_submission_intro_links_markdown: Gönüllü arayan bir öğretmen
     misiniz? [Gönüllü haritamızdan](%{volunteer_local}) yerel bir gönüllü bulun.
-  volunteer_engineer_submission_intro_recruit: Öğretmenler sınıfta veya hangi görüntülü
-    sohbet ile bilgisayar bilimi konusunda yardımcı olabilecek ve Bilgisayar Bilimleri
-    Eğitimi hakkında tutkulu kişileri arıyor.
   volunteer_engineer_submission_intro_recruit_markdown: Öğretmenler, sınıfta yardım
     edebilecekleri **bilgisayar bilimi eğitimi hakkında tutkulu** bir kişi veya bilgisayar
     bilimine dair imkanların genişliği ile ilgili konuşarak (görüntülü konuşma ile
     yapılabilir) öğrencilerine **ilham olabilecek** bir kişinin olmasını ister.
-  volunteer_engineer_submission_intro_signup: Bir bilgisayar bilimleri öğrencisi veya
-    yazılım profesyonel iseniz lütfen aşağıdaki bilgileri girin. <span class="form-required-field">
-    *</span> ile işaretlenmiş alanların doldurulması zorunludur.
   volunteer_engineer_submission_intro_signup_markdown: Bir bilgisayar bilimi öğrencisi
     veya yazılım profesyonel iseniz lütfen aşağıdaki bilgileri girin. Gönüllü olarak
     kaydolmanız için en az 18 yaşında olmalısınız. Bu bölümde dolduracağınız tüm alanların,

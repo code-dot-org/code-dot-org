@@ -58,11 +58,9 @@ It's also possible to run a subset of tests:
 * `yarn lint`
 * `yarn test:unit`
 * `yarn test:integration`
-* `yarn test:unit --entry=./test/unit/gridUtilsTest.js`
+* `yarn test:unit test/unit/gridUtilsTest.js`
 
-To debug tests in Chrome, append `--browser=Chrome --watchTests` to any test command.
-
-For more details, see [apps/README.md](./apps/README.md#running-tests).
+For more details, see [apps/README.md](./apps/README.md#testing).
 
 ### Dashboard Tests
 
@@ -74,7 +72,7 @@ Before running dashboard tests for the first time, run these commands to seed th
 
 1. `RAILS_ENV=test bundle exec rake assets:precompile`
 2. `RAILS_ENV=test UTF8=1 bundle exec rake db:reset db:test:prepare` : seed the DB with test data
-3. `cd ../pegasus && RAILS_ENV=test rake test:reset_dependencies && cd ../dashboard` : the pegasus test DB must be seeded as well.
+3. `cd ../pegasus && RAILS_ENV=test bundle exec rake test:reset_dependencies && cd ../dashboard` : the pegasus test DB must be seeded as well.
 
 To run all dashboard tests, which takes about 15 mintues:
 

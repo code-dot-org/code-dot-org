@@ -1,6 +1,6 @@
-import sinon from 'sinon';
-import {expect} from '../../util/reconfiguredChai';
-import JavabuilderConnection from '@cdo/apps/javalab/JavabuilderConnection';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import project from '@cdo/apps/code-studio/initApp/project';
 import {
   WebSocketMessageType,
   StatusMessageType,
@@ -8,13 +8,15 @@ import {
   ExecutionType,
   CsaViewMode,
 } from '@cdo/apps/javalab/constants';
+import JavabuilderConnection from '@cdo/apps/javalab/JavabuilderConnection';
 import * as ExceptionHandler from '@cdo/apps/javalab/javabuilderExceptionHandler';
 import * as TestResultHandler from '@cdo/apps/javalab/testResultHandler';
-import project from '@cdo/apps/code-studio/initApp/project';
+
 import {
   UserTestResultSignalType,
   TestStatus,
 } from '../../../src/javalab/constants';
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('JavabuilderConnection', () => {
   let onOutputMessage,

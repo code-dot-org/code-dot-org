@@ -1,10 +1,12 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../util/reconfiguredChai';
-import sinon from 'sinon';
-import {shallow} from 'enzyme';
-import javalabMsg from '@cdo/javalab/locale';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {UnconnectedJavalabCaptchaDialog as JavalabCaptchaDialog} from '@cdo/apps/javalab/JavalabCaptchaDialog';
 import ReCaptchaDialog from '@cdo/apps/templates/ReCaptchaDialog';
+import javalabMsg from '@cdo/javalab/locale';
+
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('JavalabCaptchaDialog', () => {
   let defaultProps,

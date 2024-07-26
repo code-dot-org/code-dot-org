@@ -1,8 +1,11 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import color from '../../util/color';
+import React, {Component} from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import commonMsg from '@cdo/locale';
+
+import color from '../../util/color';
 
 export const ALL_STUDENTS = '_all_students';
 
@@ -55,7 +58,7 @@ const styles = {
   },
   filterText: {
     color: color.charcoal,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
 };
 

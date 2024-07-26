@@ -1,7 +1,9 @@
 require 'test_helper'
 require 'testing/projects_test_utils'
 require 'cdo/delete_accounts_helper'
+# rubocop:disable CustomCops/PegasusRequires
 require_relative '../../../pegasus/test/fixtures/mock_pegasus'
+# rubocop:enable CustomCops/PegasusRequires
 
 #
 # This test is the comprehensive spec on the desired behavior when purging a
@@ -17,7 +19,7 @@ require_relative '../../../pegasus/test/fixtures/mock_pegasus'
 # Getting this right is important for compliance with various privacy
 # regulations around the globe, so changes to this behavior should be carefully
 # reviewed by the product team.
-#
+# rubocop:disable CustomCops/PegasusDbUsage
 class DeleteAccountsHelperTest < ActionView::TestCase
   include ProjectsTestUtils
 
@@ -47,9 +49,8 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       bucket.any_instance.stubs(:hard_delete_channel_content)
     end
 
-    # Skip real Firebase operations
-    FirebaseHelper.stubs(:delete_channel)
-    FirebaseHelper.stubs(:delete_channels)
+    # Skip MailJet calls
+    MailJet.stubs(:delete_contact)
 
     # Global log used to check expected log output
     @log = StringIO.new
@@ -617,6 +618,19 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 
+  test "removes lti user identities rows" do
+    lti_user_identity = create :lti_user_identity
+    user = lti_user_identity.user
+
+    assert_equal 1, user.lti_user_identities.with_deleted.count,
+    'Expected user to have one lti user identities'
+
+    purge_user user
+
+    assert_equal 0, user.lti_user_identities.with_deleted.count,
+      'Expected user to have no lti user identities'
+  end
+
   #
   # Table: dashboard.authored_hint_view_requests
   #
@@ -727,52 +741,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     Census::CensusSubmission.expects(:where).never
 
     purge_user student
-  end
-
-  #
-  # Table: dashboard.circuit_playground_discount_applications
-  #
-
-  test 'anonymizes signature on circuit_playground_discount_application' do
-    application = create :circuit_playground_discount_application, signature: 'Will Halloway'
-    user = application.user
-
-    assert_equal 'Will Halloway', application.signature
-
-    purge_user user
-    application.reload
-
-    assert_equal '(anonymized signature)', application.signature
-
-    assert_logged "Anonymized 1 CircuitPlaygroundDiscountApplication"
-  end
-
-  test 'leaves blank signature blank on circuit_playground_discount_application' do
-    application = create :circuit_playground_discount_application
-    user = application.user
-
-    assert_nil application.signature
-
-    purge_user user
-    application.reload
-
-    assert_nil application.signature
-
-    assert_logged "Anonymized 1 CircuitPlaygroundDiscountApplication"
-  end
-
-  test 'removes school id from circuit_playground_discount_application' do
-    application = create :circuit_playground_discount_application, school_id: create(:school).id
-    user = application.user
-
-    refute_nil application.school_id
-
-    purge_user user
-    application.reload
-
-    assert_nil application.school_id
-
-    assert_logged "Anonymized 1 CircuitPlaygroundDiscountApplication"
   end
 
   #
@@ -1222,22 +1190,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Table: dashboard.pd_workshop_surveys
-  # Associated via enrollment
-  #
-
-  test "clears form_data from pd_workshop_surveys" do
-    enrollment = create :pd_enrollment, :from_user
-    survey = create :pd_workshop_survey, pd_enrollment: enrollment
-    refute_equal '{}', survey.form_data
-
-    purge_user survey.pd_enrollment.user
-
-    survey.reload
-    assert_equal '{}', survey.form_data
-  end
-
-  #
   # Table dashboard.peer_reviews
   # Could delete submitter or viewer
   #
@@ -1632,6 +1584,64 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.ai_tutor_interactions
+  #
+
+  test "deletes all of a purged user's ai tutor interactions (chat messages)" do
+    student = create :student_with_ai_tutor_access
+    num_ai_tutor_interactions = 3
+    create_list :ai_tutor_interaction, num_ai_tutor_interactions, user: student
+
+    assert_changes -> {AiTutorInteraction.where(user: student).count}, from: num_ai_tutor_interactions, to: 0 do
+      purge_user student
+    end
+  end
+
+  #
+  # Table: dashboard.rubric_ai_evaluations
+  # Table: dashboard.learning_goal_ai_evaluations
+  # Table: dashboard.learning_goal_ai_evaluation_feedbacks
+  # Table: dashboard.learning_goal_teacher_evaluations
+  #
+
+  test "deletes all of a purged user's ai evaluations and teacher evaluations as student" do
+    student = create :student
+    rubric_ai_evaluation = create :rubric_ai_evaluation, user: student, requester: student
+    learning_goal_ai_evaluation = create :learning_goal_ai_evaluation, user: student, rubric_ai_evaluation: rubric_ai_evaluation
+    create :learning_goal_ai_evaluation_feedback, learning_goal_ai_evaluation: learning_goal_ai_evaluation
+    create :learning_goal_teacher_evaluation, user: student
+
+    assert_changes -> {RubricAiEvaluation.where(user: student).count}, from: 1, to: 0 do
+      assert_changes -> {LearningGoalAiEvaluation.where(rubric_ai_evaluation: rubric_ai_evaluation).count}, from: 1, to: 0 do
+        assert_changes -> {LearningGoalAiEvaluationFeedback.where(learning_goal_ai_evaluation: learning_goal_ai_evaluation).count}, from: 1, to: 0 do
+          assert_changes -> {LearningGoalTeacherEvaluation.where(user: student).count}, from: 1, to: 0 do
+            purge_user student
+          end
+        end
+      end
+    end
+  end
+
+  test "deletes all of a purged user's ai evaluations and teacher evaluations as teacher" do
+    student = create :student
+    teacher = create :teacher
+    rubric_ai_evaluation = create :rubric_ai_evaluation, user: student, requester: teacher
+    learning_goal_ai_evaluation = create :learning_goal_ai_evaluation, user: student, rubric_ai_evaluation: rubric_ai_evaluation
+    create :learning_goal_ai_evaluation_feedback, learning_goal_ai_evaluation: learning_goal_ai_evaluation
+    create :learning_goal_teacher_evaluation, user: student, teacher: teacher
+
+    assert_changes -> {RubricAiEvaluation.where(requester_id: teacher).count}, from: 1, to: 0 do
+      assert_changes -> {LearningGoalAiEvaluation.where(rubric_ai_evaluation: rubric_ai_evaluation).count}, from: 1, to: 0 do
+        assert_changes -> {LearningGoalAiEvaluationFeedback.where(learning_goal_ai_evaluation: learning_goal_ai_evaluation).count}, from: 1, to: 0 do
+          assert_changes -> {LearningGoalTeacherEvaluation.where(teacher: teacher).count}, from: 1, to: 0 do
+            purge_user teacher
+          end
+        end
+      end
+    end
+  end
+
+  #
   # Table: dashboard.projects
   #
 
@@ -1846,12 +1856,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         project_id: project_id,
         featured_at: Time.now
 
-      assert featured_project.featured?
+      assert featured_project.active?
 
       student.destroy
 
       featured_project.reload
-      refute featured_project.featured?
+      refute featured_project.active?
     end
   end
 
@@ -1862,12 +1872,12 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         project_id: project_id,
         featured_at: Time.now
 
-      assert featured_project.featured?
+      assert featured_project.active?
 
       purge_user student
 
       featured_project.reload
-      refute featured_project.featured?
+      refute featured_project.active?
     end
   end
 
@@ -1881,14 +1891,14 @@ class DeleteAccountsHelperTest < ActionView::TestCase
         featured_at: featured_time,
         unfeatured_at: unfeatured_time
 
-      refute featured_project.featured?
+      refute featured_project.active?
       assert_equal unfeatured_time.utc.to_s,
         featured_project.unfeatured_at.utc.to_s
 
       student.destroy
 
       featured_project.reload
-      refute featured_project.featured?
+      refute featured_project.active?
       assert_equal unfeatured_time.utc.to_s,
         featured_project.unfeatured_at.utc.to_s
     end
@@ -1943,23 +1953,50 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Firebase
+  # Project tables and kvps i.e. datablock storage
   #
 
-  test "Firebase: deletes content for all of user's channels" do
+  # Table: dashboard.datablock_storage_tables, dashboard.datablock_storage_records
+  test "Datablock Storage: hard-deletes all of user's project tables" do
     student = create :student
     with_channel_for student do |project_id_a, _|
-      with_channel_for student do |project_id_b, storage_id|
-        projects_table.where(id: project_id_a).update(state: 'deleted')
+      with_channel_for student do |project_id_b, _|
+        timestamp = DateTime.now
+        DatablockStorageTable.create(project_id: project_id_a, table_name: "table_a", columns: '["id", "name"]', created_at: timestamp, updated_at: timestamp)
+        DatablockStorageRecord.create(project_id: project_id_a, table_name: "table_a", record_id: 1, record_json: '{"id": 1, "name": "Bob"}')
+        DatablockStorageTable.create(project_id: project_id_b, table_name: "table_b", columns: '["id", "name"]', created_at: timestamp, updated_at: timestamp)
+        DatablockStorageRecord.create(project_id: project_id_b, table_name: "table_b", record_id: 1, record_json: '{"id": 1, "name": "Alice"}')
 
-        student_channels = [storage_encrypt_channel_id(storage_id, project_id_a),
-                            storage_encrypt_channel_id(storage_id, project_id_b)]
-        FirebaseHelper.
-          expects(:delete_channels).
-          with(student_channels)
+        assert_equal 1, DatablockStorageTable.where(project_id: project_id_a).count
+        assert_equal 1, DatablockStorageTable.where(project_id: project_id_b).count
+        assert_equal 1, DatablockStorageRecord.where(project_id: project_id_a).count
+        assert_equal 1, DatablockStorageRecord.where(project_id: project_id_b).count
 
         purge_user student
-        assert_logged "Deleting Firebase contents for 2 channels"
+        assert_logged "Deleting Datablock Storage contents for 2 projects"
+        assert_empty DatablockStorageTable.where(project_id: project_id_a)
+        assert_empty DatablockStorageTable.where(project_id: project_id_b)
+        assert_empty DatablockStorageRecord.where(project_id: project_id_a)
+        assert_empty DatablockStorageRecord.where(project_id: project_id_b)
+      end
+    end
+  end
+
+  # Table: dashboard.datablock_storage_kvps
+  test "Datablock Storage: hard-deletes all of user's project kvps" do
+    student = create :student
+    with_channel_for student do |project_id_a, _|
+      with_channel_for student do |project_id_b, _|
+        DatablockStorageKvp.set_kvp(project_id_a, "key_a", '"value_a"')
+        DatablockStorageKvp.set_kvp(project_id_b, "key_b", '"value_b"')
+
+        assert_equal 1, DatablockStorageKvp.where(project_id: project_id_a).count
+        assert_equal 1, DatablockStorageKvp.where(project_id: project_id_b).count
+
+        purge_user student
+        assert_logged "Deleting Datablock Storage contents for 2 projects"
+        assert_empty DatablockStorageKvp.where(project_id: project_id_a)
+        assert_empty DatablockStorageKvp.where(project_id: project_id_b)
       end
     end
   end
@@ -2208,9 +2245,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     refute_nil ContactRollupsPardotMemory.find_by_email(teacher_email).marked_for_deletion_at
   end
 
-  private
-
-  def assert_logged(expected_message)
+  private def assert_logged(expected_message)
     assert_includes @log.string, expected_message
   end
 
@@ -2219,7 +2254,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # Performs our account purge on the provided user instance, and then reloads
   # that instance so we can assert things about its final state.
   #
-  def purge_user(user)
+  private def purge_user(user)
     unpurged_users_before = User.with_deleted.where(purged_at: nil).count
 
     DeleteAccountsHelper.new(log: @log).purge_user(user)
@@ -2234,17 +2269,17 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     user.reload
   end
 
-  def unsafe_purge_user(user)
+  private def unsafe_purge_user(user)
     DeleteAccountsHelper.new(log: @log, bypass_safety_constraints: true).purge_user(user)
 
     user.reload
   end
 
-  def purge_all_accounts_with_email(email)
+  private def purge_all_accounts_with_email(email)
     DeleteAccountsHelper.new(log: @log).purge_all_accounts_with_email(email)
   end
 
-  def assert_removes_field_from_forms(field, expect: :nil)
+  private def assert_removes_field_from_forms(field, expect: :nil)
     user = create :teacher
     with_form(user: user) do |form_id|
       initial_value = PEGASUS_DB[:forms].where(id: form_id).first[field]
@@ -2273,7 +2308,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 
-  def assert_removes_field_from_form_geos(field)
+  private def assert_removes_field_from_form_geos(field)
     user = create :teacher
     with_form_geo(user) do |form_geo_id|
       initial_value = PEGASUS_DB[:form_geos].where(id: form_geo_id).first[field]
@@ -2296,7 +2331,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # @param [String] email - An email for the form submitter.
   # @yields [Integer] The id for the created form.
   #
-  def with_form(user: nil, email: nil)
+  private def with_form(user: nil, email: nil)
     use_name = user&.name || 'Fake Name'
     use_email = user ? user.email : email
     form_id = PEGASUS_DB[:forms].insert(
@@ -2331,7 +2366,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   # @param [User] user to create an associated form.
   # @yields [Integer] the id of the form_geos row.
   #
-  def with_form_geo(user)
+  private def with_form_geo(user)
     with_form(user: user) do |form_id|
       form_geo_id = PEGASUS_DB[:form_geos].insert(
         {
@@ -2354,3 +2389,4 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     end
   end
 end
+# rubocop:enable CustomCops/PegasusDbUsage

@@ -1,13 +1,19 @@
+import {compact} from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import {compact} from 'lodash';
-import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import Button from '@cdo/apps/templates/Button';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+
 import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelect';
+import fontConstants from '@cdo/apps/fontConstants';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import Button from '@cdo/apps/templates/Button';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import {getVisibleSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import color from '@cdo/apps/util/color';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
 import {
   updateStudentTransfer,
   transferStudents,
@@ -15,9 +21,6 @@ import {
   TransferStatus,
   cancelStudentTransfer,
 } from './manageStudentsRedux';
-import color from '@cdo/apps/util/color';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 const OTHER_TEACHER = 'otherTeacher';
 const PADDING = 20;
@@ -312,10 +315,10 @@ const styles = {
   },
   radioOption: {
     paddingLeft: PADDING / 2,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
   },
   error: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: color.red,
     paddingBottom: PADDING / 2,
   },

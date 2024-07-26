@@ -1,6 +1,8 @@
 import $ from 'jquery';
-import designMode from './designMode';
+
 import {stripSpaceAndSpecial} from '@cdo/apps/aiUtils';
+
+import designMode from './designMode';
 
 function generateCodeDesignElements(modelId, modelData) {
   var x = 20;

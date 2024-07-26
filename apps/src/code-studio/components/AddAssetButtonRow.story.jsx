@@ -1,6 +1,7 @@
-import React from 'react';
-import AddAssetButtonRow from './AddAssetButtonRow';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
+import AddAssetButtonRow from './AddAssetButtonRow';
 
 const mockApi = {
   getUploadUrl: () => {
@@ -15,7 +16,6 @@ const mockApi = {
 };
 
 export default {
-  title: 'AddAssetButtonRow',
   component: AddAssetButtonRow,
 };
 

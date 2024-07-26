@@ -1,19 +1,29 @@
+import $ from 'jquery';
+import PropTypes from 'prop-types';
+import queryString from 'query-string';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
+import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
+import fontConstants from '@cdo/apps/fontConstants';
 import {
   WorkshopApplicationStates,
   WorkshopSearchErrors,
   ActiveCourseWorkshops,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
-import Notification from '@cdo/apps/templates/Notification';
-import * as color from '../util/color';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import Notification from '@cdo/apps/templates/Notification';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {currentLocation} from '@cdo/apps/utils';
-import PropTypes from 'prop-types';
-import queryString from 'query-string';
-import $ from 'jquery';
+
+import {
+  BodyThreeText,
+  Heading2,
+  Heading3,
+} from '../componentLibrary/typography';
+import * as color from '../util/color';
+
+import Button from './Button';
 
 const WorkshopCard = props => {
   return (
@@ -177,10 +187,35 @@ class RegionalPartnerSearch extends Component {
 
     return (
       <div>
+        {this.state.nominated && (
+          <div>
+            <Heading3>
+              Congratulations on your nomination for a scholarship!
+            </Heading3>
+            <BodyThreeText>
+              You’ve been nominated as a talented, passionate educator who can
+              bring computer science to the students at your school. Your local
+              partner will have your nomination as they consider your
+              application for the regional scholarships or discounts they have
+              available. Grant funding is limited, so apply soon if you are
+              interested.
+            </BodyThreeText>
+          </div>
+        )}
+        <div>
+          <Heading2>Find your local workshop and apply</Heading2>
+          <BodyThreeText>
+            Look up details of the Professional Learning Program in your region
+            by submitting your zip code below.
+          </BodyThreeText>
+        </div>
         {this.state.showZip && (
           <form onSubmit={this.handleZipSubmit}>
-            <label style={styles.schoolZipLabel}>School ZIP Code:</label>
+            <label style={styles.schoolZipLabel} htmlFor="zipCode">
+              School ZIP Code:
+            </label>
             <input
+              id="zipCode"
               type="text"
               value={this.state.zipValue}
               onChange={this.handleZipChange}
@@ -219,7 +254,7 @@ class RegionalPartnerSearch extends Component {
           <div>
             <hr style={styles.hr} />
             <div style={styles.noPartner}>
-              <h3>Code.org Regional Partner for your region:</h3>
+              <Heading3>Code.org Regional Partner for your region:</Heading3>
               <p>
                 We do not have a Regional Partner in your area. However, we have
                 a number of partners in nearby states or regions who may have
@@ -277,7 +312,6 @@ class RegionalPartnerSearch extends Component {
                 !partnerInfo.link_to_partner_application && (
                   <StartApplicationButton
                     className="professional_learning_link"
-                    id={`id-${partnerInfo.id}`}
                     nominated={this.state.nominated}
                     priorityDeadlineDate={appsPriorityDeadlineDate}
                   />
@@ -288,7 +322,6 @@ class RegionalPartnerSearch extends Component {
                 partnerInfo.link_to_partner_application && (
                   <StartApplicationButton
                     className="professional_learning_link"
-                    id={`id-${partnerInfo.id}`}
                     link={partnerInfo.link_to_partner_application}
                     partnerSite={true}
                     nominated={this.state.nominated}
@@ -300,7 +333,9 @@ class RegionalPartnerSearch extends Component {
             {appState !== WorkshopApplicationStates.now_closed &&
               partnerInfo.pl_programs_offered?.length > 0 && (
                 <div>
-                  <h3>Workshop information (hosted by {partnerInfo.name}):</h3>
+                  <Heading3>
+                    Workshop information (hosted by {partnerInfo.name}):
+                  </Heading3>
                   {courseWorkshops.map((currCourse, currCourseIndex) => {
                     if (currCourse.summerWorkshops.length === 0) {
                       // If no current workshops for the given course
@@ -340,9 +375,9 @@ class RegionalPartnerSearch extends Component {
                                   This Regional Partner is not offering{' '}
                                   {currCourse.name} workshops at this time.
                                   Code.org will review your application and
-                                  contact you with options for joining the
-                                  program hosted by a Regional Partner from a
-                                  different region.
+                                  contact you with options for joining a virtual
+                                  cohort of {currCourse.name} teachers from
+                                  another region.
                                 </div>
                               </>
                             }
@@ -382,18 +417,18 @@ class RegionalPartnerSearch extends Component {
 
             <div style={styles.action}>
               {appState === WorkshopApplicationStates.now_closed && (
-                <h3>Applications are now closed.</h3>
+                <Heading3>Applications are now closed.</Heading3>
               )}
 
               {appState === WorkshopApplicationStates.opening_at && (
-                <h3>Applications will open on {appsOpenDate}.</h3>
+                <Heading3>Applications will open on {appsOpenDate}.</Heading3>
               )}
 
               {appState === WorkshopApplicationStates.opening_sometime && (
-                <h3>
+                <Heading3>
                   Program information and the application for this region will
                   be available soon!
-                </h3>
+                </Heading3>
               )}
 
               {appState !== WorkshopApplicationStates.currently_open && (
@@ -416,7 +451,7 @@ class RegionalPartnerSearch extends Component {
               {appState !== WorkshopApplicationStates.now_closed &&
                 partnerInfo.cost_scholarship_information && (
                   <div>
-                    <h3>Program information</h3>
+                    <Heading3>Program information</Heading3>
                     <div style={styles.scholarship}>
                       <SafeMarkdown
                         markdown={partnerInfo.cost_scholarship_information}
@@ -427,7 +462,7 @@ class RegionalPartnerSearch extends Component {
 
               {partnerInfo.additional_program_information && (
                 <div>
-                  <h3>More about your Regional Partner</h3>
+                  <Heading3>More about your Regional Partner</Heading3>
                   <SafeMarkdown
                     markdown={partnerInfo.additional_program_information}
                   />
@@ -436,7 +471,7 @@ class RegionalPartnerSearch extends Component {
             </div>
 
             <div style={styles.partnerContact}>
-              <h3>Have more questions?</h3>
+              <Heading3>Have more questions?</Heading3>
               <div>Your Code.org Regional Partner is here to help:</div>
               <div style={styles.bold}>{partnerInfo.name}</div>
               {partnerInfo.contact_name && (
@@ -467,7 +502,6 @@ class RegionalPartnerSearch extends Component {
               !partnerInfo.link_to_partner_application && (
                 <StartApplicationButton
                   className="professional_learning_link"
-                  id={`id-${partnerInfo.id}`}
                   nominated={this.state.nominated}
                   priorityDeadlineDate={appsPriorityDeadlineDate}
                 />
@@ -478,7 +512,6 @@ class RegionalPartnerSearch extends Component {
               partnerInfo.link_to_partner_application && (
                 <StartApplicationButton
                   className="professional_learning_link"
-                  id={`id-${partnerInfo.id}`}
                   link={partnerInfo.link_to_partner_application}
                   partnerSite={true}
                   nominated={this.state.nominated}
@@ -494,14 +527,18 @@ class RegionalPartnerSearch extends Component {
 
 const styles = {
   schoolZipLabel: {
+    display: 'inline-block',
     marginRight: 40,
   },
   zipInput: {
+    display: 'inline-block',
     height: 28,
+    padding: '1px 2px',
+    margin: 0,
   },
   zipSubmit: {
-    marginTop: 20,
     display: 'inline-block',
+    marginTop: 20,
     marginLeft: 10,
   },
   hr: {
@@ -522,10 +559,10 @@ const styles = {
     marginTop: 20,
   },
   bold: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
   },
   linkLike: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     cursor: 'pointer',
     color: color.purple,
   },
@@ -561,7 +598,11 @@ const styles = {
   bigButton: {
     padding: '10px 20px 10px 20px',
     height: 'initial',
-    marginTop: 22,
+    backgroundColor: color.brand_secondary_default,
+    borderColor: color.brand_secondary_default,
+    ...fontConstants['main-font-semi-bold'],
+    color: color.neutral_white,
+    fontSize: '14px',
   },
   clear: {
     clear: 'both',
@@ -571,7 +612,6 @@ const styles = {
 const StartApplicationButton = ({
   buttonOnly,
   className,
-  id,
   link,
   partnerSite,
   nominated,
@@ -599,11 +639,12 @@ const StartApplicationButton = ({
   }
 
   const button = (
-    <a className={className} id={id} target={target} href={link}>
-      <button type="button" style={styles.bigButton}>
-        {buttonText}
-      </button>
-    </a>
+    <Button
+      color="brandSecondaryDefault"
+      text={buttonText}
+      href={link}
+      target={target}
+    />
   );
 
   if (buttonOnly) {
@@ -616,9 +657,11 @@ const StartApplicationButton = ({
           notice={notificationHeading}
           details={notificationText}
           dismissible={false}
-        >
-          {button}
-        </Notification>
+          buttonText={buttonText}
+          buttonColor={Button.ButtonColor.brandSecondaryDefault}
+          buttonLink={link}
+          buttonClassName={className}
+        />
       </div>
     );
   }

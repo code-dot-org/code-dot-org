@@ -1,21 +1,29 @@
+import {orderBy, sortBy, random} from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import color from '@cdo/apps/util/color';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import i18n from '@cdo/locale';
-import wrappedSortable from '../tables/wrapped_sortable';
-import {orderBy, sortBy} from 'lodash';
-import {getSectionRows} from './teacherSectionsRedux';
-import {sortableSectionShape} from './shapes';
+
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import SectionActionDropdown from './SectionActionDropdown';
 import Button from '@cdo/apps/templates/Button';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import color from '@cdo/apps/util/color';
+import {
+  StudentGradeLevels,
+  SectionLoginType,
+} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
 import {stringifyQueryParams} from '../../utils';
-import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+import wrappedSortable from '../tables/wrapped_sortable';
+
+import SectionActionDropdown from './SectionActionDropdown';
+import {sortableSectionShape} from './shapes';
+import {getSectionRows} from './teacherSectionsRedux';
+
+import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
 
 /** @enum {number} */
 export const COLUMNS = {
@@ -28,11 +36,6 @@ export const COLUMNS = {
   EDIT_DELETE: 6,
 };
 
-const participantNames = {
-  facilitator: i18n.participantTypeFacilitatorTitle(),
-  teacher: i18n.participantTypeTeacherTitle(),
-};
-
 // Cell formatters for sortable OwnedSectionsTable.
 export const sectionLinkFormatter = function (name, {rowData}) {
   return (
@@ -43,36 +46,46 @@ export const sectionLinkFormatter = function (name, {rowData}) {
 };
 
 export const courseLinkFormatter = function (course, {rowData}) {
-  const {assignmentNames, assignmentPaths} = rowData;
+  const {assignmentNames, assignmentPaths, courseOfferingsAreLoaded} = rowData;
   return (
     <div>
-      <a
-        href={`${rowData.assignmentPaths[0]}${stringifyQueryParams({
-          section_id: rowData.id,
-        })}`}
-        style={tableLayoutStyles.link}
-      >
-        {rowData.assignmentNames[0]}
-      </a>
-      {assignmentPaths.length > 1 && (
-        <div style={styles.currentUnit}>
-          <div>{i18n.currentUnit()}</div>
+      {courseOfferingsAreLoaded ? (
+        <>
           <a
-            href={`${rowData.assignmentPaths[1]}${stringifyQueryParams({
+            href={`${assignmentPaths[0]}${stringifyQueryParams({
               section_id: rowData.id,
             })}`}
             style={tableLayoutStyles.link}
           >
-            {assignmentNames[1]}
+            {assignmentNames[0]}
           </a>
-        </div>
-      )}
-      {assignmentPaths.length < 1 && (
-        <Button
-          __useDeprecatedTag
-          text={i18n.coursesCardAction()}
-          href={'/courses'}
-          color={Button.ButtonColor.neutralDark}
+          {assignmentPaths.length > 1 && (
+            <div style={styles.currentUnit}>
+              <div>{i18n.currentUnit()}</div>
+              <a
+                href={`${assignmentPaths[1]}${stringifyQueryParams({
+                  section_id: rowData.id,
+                })}`}
+                style={tableLayoutStyles.link}
+              >
+                {assignmentNames[1]}
+              </a>
+            </div>
+          )}
+          {assignmentPaths.length < 1 && (
+            <Button
+              __useDeprecatedTag
+              text={i18n.coursesCardAction()}
+              href={'/catalog'}
+              color={Button.ButtonColor.neutralDark}
+            />
+          )}
+        </>
+      ) : (
+        <span
+          className={skeletonizeContent.skeletonizeContent}
+          data-testid={'skeletonize-content'}
+          style={{width: random(30, 90) + '%'}}
         />
       )}
     </div>
@@ -87,6 +100,8 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
     sectionCode = i18n.loginTypeClever();
   } else if (rowData.loginType === OAuthSectionTypes.google_classroom) {
     sectionCode = i18n.loginTypeGoogleClassroom();
+  } else if (rowData.loginType === SectionLoginType.lti_v1) {
+    sectionCode = rowData.loginTypeName;
   } else {
     sectionCode = rowData.code;
   }
@@ -145,7 +160,6 @@ class OwnedSectionsTable extends Component {
   static propTypes = {
     sectionIds: PropTypes.arrayOf(PropTypes.number).isRequired,
     onEdit: PropTypes.func.isRequired,
-    isPlSections: PropTypes.bool,
 
     //Provided by redux
     sectionRows: PropTypes.arrayOf(sortableSectionShape).isRequired,
@@ -164,7 +178,7 @@ class OwnedSectionsTable extends Component {
   determineSorter = (data, activeColumn, directionArray) => {
     // If we are sorting on grade
     const gradeCol = COLUMNS.GRADE.toString();
-    if (this.state.sortingColumns[gradeCol] && !this.props.isPlSections) {
+    if (this.state.sortingColumns[gradeCol]) {
       const mult = directionArray[0] === 'asc' ? 1 : -1;
       return sortBy(data, function (obj) {
         return (
@@ -181,13 +195,7 @@ class OwnedSectionsTable extends Component {
 
   gradeFormatter = (grades, {rowData}) => {
     const formattedGrades = rowData.grades ? rowData.grades.join(', ') : null;
-    return (
-      <div>
-        {this.props.isPlSections
-          ? participantNames[rowData.participantType]
-          : formattedGrades}
-      </div>
-    );
+    return <div>{formattedGrades}</div>;
   };
 
   actionCellFormatter = (temp, {rowData}) => {
@@ -249,13 +257,11 @@ class OwnedSectionsTable extends Component {
         },
       },
       {
-        property: this.props.isPlSections ? 'participantType' : 'grades',
+        property: 'grades',
         header: {
-          label: this.props.isPlSections ? i18n.participants() : i18n.grade(),
+          label: i18n.grade(),
           props: {
-            className: this.props.isPlSections
-              ? 'uitest-participant-type-header'
-              : 'uitest-grade-header',
+            className: 'uitest-grade-header',
             style: tableLayoutStyles.headerCell,
           },
           transforms: [sortable],

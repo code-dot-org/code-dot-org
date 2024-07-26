@@ -21,13 +21,6 @@ section.fundraise {
   }
 }
 
-section.bg-primary-light {
-
-  p {
-    font-family: $gotham-regular;
-  }
-}
-
 section.donate-options {
 
   @media screen and (max-width: $width-md) {
@@ -37,7 +30,12 @@ section.donate-options {
   }
 
   .tabs-section {
-    min-height: 518px;
+    min-height: 307px;
+    margin-bottom: 3rem;
+    
+    button.tab {
+      flex: 1;
+    }
 
     @media screen and (max-width: $width-md) {
       margin-bottom: 2rem;
@@ -53,6 +51,19 @@ section.donate-options {
       .dafdirectInputAmount > br {
         display: none !important;
       }
+    }
+  }
+}
+
+section.supporters {
+
+  .logos {
+    margin-block: 3rem;
+    gap: 3rem;
+
+    img {
+      width: 100px;
+      align-self: center;
     }
   }
 }

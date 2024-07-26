@@ -34,7 +34,8 @@
 //  More info here: https://github.com/code-dot-org/code-dot-org/pull/50895
 .purpleHeader {
   height: style-constants.$workspace-headers-height;
-  background-color: color.$purple;
+  // THIS IS AN OLD PURPLE COLOR. DO NOT USE THIS COLOR FOR NEW STYLES. ONLY USE IT FOR JAVALAB HEADER.
+  background-color: #7665A0;
   color: color.$white;
   overflow-y: hidden;
   -webkit-user-select: none;

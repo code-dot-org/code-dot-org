@@ -27,6 +27,7 @@ class HocSignup2017 < HocSignup2014
     nces_school_name = ''
     if nces_school_id && nces_school_id != "-1"
       # id is the primary key of the schools table so we shouldn't get back more than one row
+      # rubocop:disable CustomCops/DashboardDbUsage
       DASHBOARD_DB[:schools].where(id: nces_school_id).each do |school_data|
         school_address_field_names = [:address_line1, :address_line2, :address_line3, :city, :state, :zip]
         school_address_fields = school_address_field_names.map {|k| school_data[k]}
@@ -34,6 +35,7 @@ class HocSignup2017 < HocSignup2014
         data['event_location_s'] = school_address
         nces_school_name = school_data[:name]
       end
+      # rubocop:enable CustomCops/DashboardDbUsage
     end
     # Call process in the parent class.
     process(data).merge!(nces_school_name_s: nces_school_name)

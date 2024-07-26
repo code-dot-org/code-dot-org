@@ -16,31 +16,26 @@ module I18n
         class SyncIn < I18n::Utils::SyncInBase
           def process
             prepare_level_content
-            progress_bar.progress = 25
-
-            prepare_project_content
             progress_bar.progress = 50
 
+            prepare_project_content
+            progress_bar.progress = 75
+
             write_to_yml(VARIABLE_NAMES_TYPE, variable_strings)
-            progress_bar.progress = 65
+            progress_bar.progress = 90
 
             write_to_yml(PARAMETER_NAMES_TYPE, parameter_strings)
-            progress_bar.progress = 80
-
-            redact_level_content
           end
 
-          private
-
-          def variable_strings
+          private def variable_strings
             @variable_strings ||= {}
           end
 
-          def parameter_strings
+          private def parameter_strings
             @parameter_strings ||= {}
           end
 
-          def get_all_placeholder_text_types(blocks)
+          private def get_all_placeholder_text_types(blocks)
             results = {}
 
             results.merge! get_placeholder_texts(blocks, 'text', %w[TEXT])
@@ -50,7 +45,7 @@ module I18n
             results
           end
 
-          def get_placeholder_texts(document, block_type, title_names)
+          private def get_placeholder_texts(document, block_type, title_names)
             results = {}
 
             document.xpath("//block[@type=\"#{block_type}\"]").each do |block|
@@ -70,7 +65,7 @@ module I18n
             results
           end
 
-          def get_i18n_strings(level)
+          private def get_i18n_strings(level)
             i18n_strings = {}
 
             case level
@@ -154,14 +149,43 @@ module I18n
                 i18n_strings['placeholder_texts'].merge! get_all_placeholder_text_types(processed_doc)
               end
 
-              # start_html
-              if level.start_html
-                start_html = Nokogiri::XML(level.start_html, &:noblanks)
-                i18n_strings['start_html'] = Hash.new unless level.start_html.empty?
+              # start_libraries
+              # These start libraries are used as short term solution to make Sample Apps translatable.
+              # Student Libraries are required to have a name, a description and at least one function.
+              # Student libraries are stringify when used in a level and stored as start_libraries.
+              # libraries that do not follow those rules will fail to load,and the level wont work.
+              if level.start_libraries.present?
+                level_libraries = JSON.parse(level.start_libraries)
+                level_libraries.each do |library|
+                  library_name = library["name"]
+                  next unless /^i18n_/i.match?(library_name)
+                  library_source = library["source"]
+                  translation_json = library_source[/var TRANSLATIONTEXT = (\{[^}]*});/m, 1]
+                  next if translation_json.blank?
+                  i18n_strings['start_libraries'] ||= {}
+                  i18n_strings['start_libraries'][library_name] = {}
 
-                # match any element that contains text
-                start_html.xpath('//*[text()[normalize-space()]]').each do |element|
-                  i18n_strings['start_html'][element.text] = element.text
+                  JSON.parse(translation_json).each do |key, value|
+                    i18n_strings['start_libraries'][library_name][key] = value
+                  end
+                end
+              end
+
+              # Lab2 Validations
+              if level.uses_lab2? && level.try(:validations)
+                validations = level.validations
+                i18n_strings['validations'] = Hash.new unless validations.empty?
+                validations.each do |validation|
+                  i18n_strings['validations'][validation['key']] = validation['message']
+                end
+              end
+
+              # Panels
+              if level.is_a? Panels
+                panels = level.panels
+                i18n_strings['panels'] = Hash.new unless panels.empty?
+                panels.each do |panel|
+                  i18n_strings['panels'][panel['key']] = panel['text']
                 end
               end
 
@@ -258,7 +282,7 @@ module I18n
             i18n_strings.delete_if {|_, value| value.blank?}
           end
 
-          def write_to_yml(type, strings)
+          private def write_to_yml(type, strings)
             FileUtils.mkdir_p(I18n::Resources::Dashboard::I18N_SOURCE_DIR_PATH)
 
             File.open(File.join(I18n::Resources::Dashboard::I18N_SOURCE_DIR_PATH, "#{type}.yml"), 'w') do |file|
@@ -275,7 +299,7 @@ module I18n
             end
           end
 
-          def prepare_level_content
+          private def prepare_level_content
             block_category_strings = {}
             progression_strings = {}
 
@@ -318,27 +342,26 @@ module I18n
               # We want to make sure to categorize HoC scripts as HoC scripts even if
               # they have a version year, so this ordering is important
               script_i18n_directory =
-                if Unit.unit_in_category?('hoc', script.name)
+                if script.in_initiative?('HOC')
                   File.join(I18N_SOURCE_DIR_PATH, 'Hour of Code')
                 elsif script.unversioned?
                   File.join(I18N_SOURCE_DIR_PATH, 'other')
                 else
                   File.join(I18N_SOURCE_DIR_PATH, script.version_year)
                 end
-              FileUtils.mkdir_p(script_i18n_directory)
 
-              script_i18n_name = "#{script.name}.json"
-              script_i18n_filename = File.join(script_i18n_directory, script_i18n_name)
-              next if I18nScriptUtils.unit_directory_change?(I18N_SOURCE_DIR_PATH, script_i18n_name, script_i18n_filename)
+              source_file_path = File.join(script_i18n_directory, "#{script.name}.json")
+              next if I18nScriptUtils.unit_directory_change?(I18N_SOURCE_DIR_PATH, source_file_path)
 
-              File.write(script_i18n_filename, JSON.pretty_generate(script_strings))
+              I18nScriptUtils.write_json_file(source_file_path, script_strings)
+              redact_json_file(source_file_path)
             end
 
             write_to_yml(BLOCK_CATEGORIES_TYPE, block_category_strings)
             write_to_yml(PROGRESSIONS_TYPE, progression_strings)
           end
 
-          def prepare_project_content
+          private def prepare_project_content
             project_content_file = File.join(I18N_SOURCE_DIR_PATH, 'projects.json')
             project_strings = {}
 
@@ -366,15 +389,18 @@ module I18n
 
             project_strings.delete_if {|_, value| value.blank?}
 
-            File.write(project_content_file, JSON.pretty_generate(project_strings))
+            I18nScriptUtils.write_json_file(project_content_file, project_strings)
+            redact_json_file(project_content_file)
           end
 
-          def select_redactable(i18n_strings)
+          private def select_redactable(i18n_strings)
             redactable_content = %w(
               authored_hints
               long_instructions
               short_instructions
               teacher_markdown
+              validations
+              panels
             )
 
             redactable = i18n_strings.select do |key, _|
@@ -388,22 +414,19 @@ module I18n
             redactable.delete_if {|_k, v| v.blank?}
           end
 
-          def redact_level_content
-            Dir[File.join(I18N_SOURCE_DIR_PATH, '/**/*.json')].each do |source_path|
-              source_data = JSON.load_file(source_path)
-              next if source_data.blank?
+          private def redact_json_file(source_path)
+            source_data = JSON.load_file(source_path)
+            return if source_data.blank?
 
-              redactable_data = source_data.map do |level_url, i18n_strings|
-                [level_url, select_redactable(i18n_strings)]
-              end.to_h
-
-              backup_path = source_path.sub('source', 'original')
-              FileUtils.mkdir_p(File.dirname(backup_path))
-              File.write(backup_path, JSON.pretty_generate(redactable_data))
-
-              redacted_data = RedactRestoreUtils.redact_data(redactable_data, REDACT_PLUGINS)
-              File.write(source_path, JSON.pretty_generate(source_data.deep_merge(redacted_data)))
+            redactable_data = source_data.transform_values do |i18n_strings|
+              select_redactable(i18n_strings)
             end
+
+            backup_path = source_path.sub('source', 'original')
+            I18nScriptUtils.write_json_file(backup_path, redactable_data)
+
+            redacted_data = RedactRestoreUtils.redact_data(redactable_data, REDACT_PLUGINS)
+            I18nScriptUtils.write_json_file(source_path, source_data.deep_merge(redacted_data))
           end
         end
       end

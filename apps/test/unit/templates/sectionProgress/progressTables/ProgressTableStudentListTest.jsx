@@ -1,14 +1,14 @@
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../../../util/reconfiguredChai';
-import {shallow, mount} from 'enzyme';
-import i18n from '@cdo/locale';
-import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
 import * as Sticky from 'reactabular-sticky';
 import * as Virtualized from 'reactabular-virtualized';
+
+import ProgressTableStudentList from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableStudentList';
 import {
   fakeRowsForStudents,
   fakeDetailRowsForStudent,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressTestHelpers';
+import i18n from '@cdo/locale';
 
 const TEST_STUDENT_1 = {
   id: 1,
@@ -53,9 +53,9 @@ describe('ProgressTableStudentList', () => {
   it('displays a name for each student', () => {
     const wrapper = setUp();
     const studentRows = wrapper.find(Virtualized.Body).props().rows;
-    expect(studentRows).to.have.length(2);
-    expect(studentRows.includes(STUDENT_ROWS[0])).to.be.true;
-    expect(studentRows.includes(STUDENT_ROWS[1])).to.be.true;
+    expect(studentRows).toHaveLength(2);
+    expect(studentRows.includes(STUDENT_ROWS[0])).toBe(true);
+    expect(studentRows.includes(STUDENT_ROWS[1])).toBe(true);
   });
 
   it('displays detail labels if detail rows are passed in', () => {
@@ -67,7 +67,7 @@ describe('ProgressTableStudentList', () => {
     const wrapper = mount(
       <ProgressTableStudentList {...DEFAULT_PROPS} rows={rows} />
     );
-    expect(wrapper.contains(i18n.timeSpentMins())).to.be.true;
-    expect(wrapper.contains(i18n.lastUpdatedTitle())).to.be.true;
+    expect(wrapper.contains(i18n.timeSpentMins())).toBe(true);
+    expect(wrapper.contains(i18n.lastUpdatedTitle())).toBe(true);
   });
 });

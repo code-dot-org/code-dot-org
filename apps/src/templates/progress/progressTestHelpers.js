@@ -5,21 +5,23 @@
  * into test.
  */
 
+import Immutable from 'immutable';
 import _ from 'lodash';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {createStore} from 'redux';
+
 import {
   levelProgressFromServer,
   lessonProgressForSection,
 } from '@cdo/apps/templates/progress/progressHelpers';
-import {createStore} from 'redux';
-import Immutable from 'immutable';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 export const fakeLesson = (
   name,
   id,
   lockable = false,
   lessonNumber = undefined,
-  lessonStartUrl = 'code.org'
+  lessonStartUrl = 'code.org',
+  levels = []
 ) => ({
   name,
   id,
@@ -27,6 +29,7 @@ export const fakeLesson = (
   lessonNumber,
   lessonStartUrl,
   isFocusArea: false,
+  levels,
 });
 
 export const fakeLevel = (overrides = {}) => {
@@ -44,6 +47,26 @@ export const fakeLevel = (overrides = {}) => {
     isUnplugged: false,
     ...overrides,
   };
+};
+
+export const fakeLevelWithSubLevels = (
+  numSublevels,
+  startLevel = 1,
+  overrides = {}
+) => {
+  const sublevels = _.range(numSublevels).map(index => {
+    const overrideData = {
+      id: index + startLevel,
+      levelNumber: index + startLevel,
+    };
+    return fakeLevel(overrideData);
+  });
+  return fakeLevel({
+    sublevels: sublevels,
+    id: startLevel + numSublevels,
+    levelNumber: startLevel + numSublevels,
+    ...overrides,
+  });
 };
 
 export const fakeLevels = (numLevels, {startLevel = 1, named = true} = {}) =>
@@ -174,6 +197,7 @@ export const fakeLessonWithLevels = (overrideFields = {}, levelCount = 1) => {
   return {
     id: lessonId++,
     name: `Lesson - ${position}`,
+    title: `Lesson ${position}: Lesson - ${position}`,
     lockable: false,
     relative_position: position,
     position: position,
@@ -192,7 +216,7 @@ export const fakeStudents = studentCount => {
     }));
 };
 
-export const fakeScriptData = (overrideFields = {}) => {
+export const fakeUnitData = (overrideFields = {}) => {
   return {
     id: 1,
     name: 'csd1-2020',
@@ -247,7 +271,7 @@ export const fakeProgressTableReduxInitialState = (
     lessons = [lesson1, lesson2];
   }
   if (!scriptData) {
-    scriptData = fakeScriptData({lessons: lessons});
+    scriptData = fakeUnitData({lessons: lessons});
   }
   const levelProgressData = fakeStudentLevelProgress(
     scriptData.lessons[0].levels,

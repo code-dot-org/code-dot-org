@@ -6,8 +6,10 @@ ja-JP:
   accelerated_gradelevel: 10-18 才
   accelerated_name: 上級コース
   account_sign_up_child_accept_terms: Code.orgのサービスを利用することについて、親または保護者の許可を得ていることを確認します。
-  account_sign_up_email_opt_in: 当社のコースについての最新情報、各地域における機会、コンピュータサイエンスに関するニュースなどを電子メールを介して送付してもよろしいですか？
+  account_sign_up_email_opt_in: コースの最新情報、地元でのイベント、その他コンピュータサイエンスに関する情報などをメールでお知らせしてもよろしいですか？
+    ( 概ね月1回)
   ai_activity: アクティビティ
+  ai_aiedu_intro: 'AiEdu: 人工知能入門'
   ai_aiedu_intro_description: Intro to AI は、学生が AI とは何か、そしてそれが現実世界でどのように使用されているかについて、概念的な知識を身につけることができる、革新的で文化的な関連性を備えた無料のカリキュラムです。
   ai_and_ethics: 人工知能と倫理
   ai_and_ethics_tile_description: 生徒たちはAIの倫理的意味合いを振り返り、協力して、あらゆる場所のAIクリエイターや立法者のために「AI倫理規定」リソースを作成します。
@@ -190,6 +192,7 @@ ja-JP:
   class_submission_out_of_school_summer_camp: サマーキャンプ
   classicmaze_name: 古典的な迷路
   code_hoc_coming: Hour of Codeはこちら - 12月8日 - 14日です！
+  code_org_logo_alt: Code.orgホーム
   code_sign_up: コンピュタサイエンス教育週間の間に参加する
   codea_beyond_gradelevel: 高校生以上
   codea_beyond_longdescription: iPad アプリの Codea ではゲーム作り、またはあなたの持っているアイデアを表現することができます。タッチ機能や加速度計を使って、そのアイデアを作品にしてみよう。Codea
@@ -783,6 +786,8 @@ ja-JP:
   footer_store: ストア
   footer_support: ヘルプとコミュニティ
   footer_terms: 利用規約
+  footer_trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logoとHour
+    of Code&reg; は Code.org の商標です"
   frozen_gradelevel: 4才-104才
   frozen_longdescription: コードを使って、アナとエルサの氷の魔法を試しましょう。アイススケートをしながら雪の結晶を作って、友だちとも共有しよう！
   frozen_name: アナとエルザとコーディング
@@ -838,7 +843,9 @@ ja-JP:
   header_about_us: 私たちについて
   header_course_catalog: コース カタログ
   header_courses: コース
+  header_districts: 地区
   header_documentation: ドキュメント
+  header_donate: 寄付する
   header_educate_beyond: Code.org を超えて
   header_educate_community: オンライン コミュニティ
   header_educate_elementary: 小学校
@@ -856,6 +863,7 @@ ja-JP:
   header_incubator: インキュベーター
   header_learn: 学ぶ
   header_legal: プライバシーと法的事項
+  header_legal_cookie_notice: クッキーについての通知
   header_legal_privacy: プライバシー ポリシー
   header_legal_tos: 利用規約
   header_my_dashboard: マイ ダッシュボード
@@ -863,6 +871,7 @@ ja-JP:
   header_project_gallery: プロジェクト
   header_report_abuse: 不正行為を報告
   header_report_bug: バグを報告
+  header_schools: 学校
   header_screen_reader_hamburger: メニュー
   header_screen_reader_help: "[ヘルプ] メニュー"
   header_sections: セクション
@@ -1069,6 +1078,8 @@ ja-JP:
   hoc2022_mc_mee_title: Minecraftエスケープエステート
   hoc2022_nasa_banner_description: NASA STEMのYouTubeチャンネルで12月5日午前10時（東部標準時）に初公開されます。
   hoc2022_nasa_banner_heading: NASAに参加して、宇宙でのコンピューターサイエンスに関する特別な「Hour of Code」特集に参加しましょう！
+  hoc2022_nasa_banner_heading_posthoc: 宇宙でのコンピューターサイエンスに関するNASAの特別なHour of Code機能をチェックしてください！
+  hoc2022_nasa_webb_alt_text: NASAのジェイムズウェッブ望遠鏡のイラスト
   hoc_is_here: コンピュータ サイエンスを学ぶ。それはすべてを変えます。 https://youtu.be/xJqSu1IbcHg 。
   hoc_leaderboards: Hour of Codeが行われている場所
   hoc_overview_dance_2019_subtitle: ダンスパーティーをプログラミングして友だちと共有しましょう。ケイティ・ペリー、ショーン・メンデス、パニック!
@@ -1119,6 +1130,7 @@ ja-JP:
   homepage_below_hero_announcement_link_text: もっと詳しく知る
   homepage_below_hero_announcement_text: Code.orgは、プライバシー保護に努めております。現在、5月25日付で有効となる、Code.orgのプライバシーポリシーの一部改定を進めています。
   homepage_csa_body: エクイティ主導型のカリキュラムで、現実世界とつながったクリエイティブなプロジェクトで学生を支援します。
+  homepage_csa_title: AP® コンピューターサイエンスA
   homepage_diversity_pledge: ダイバーシティーを認める誓約をしてください。
   homepage_donors_donate: 寄付する
   homepage_donors_seall: すべてを見る
@@ -1187,6 +1199,7 @@ ja-JP:
   homepage_slot_text_link_k5: 小学生以下向けのコース
   homepage_slot_text_link_local: 地元のクラスを探す
   homepage_slot_text_link_middle: 中学校
+  homepage_slot_text_link_middle_and_high: 中学生・高校生
   homepage_slot_text_link_othercourses: その他のオンラインコース
   homepage_slot_text_link_pd: プロになるために
   homepage_slot_text_link_shop: T シャツ、帽子、その他
@@ -1859,6 +1872,8 @@ ja-JP:
   user_header_applab: 'アプリラボ '
   user_header_artist: 'アーティスト '
   user_header_create: 'つくる '
+  user_header_create_account: アカウントを作成
+  user_header_create_account_low_cap: アカウントを作成
   user_header_dance: ダンスパーティー
   user_header_flappy: フラッピー
   user_header_gamelab: ゲーム ラボ
@@ -1866,6 +1881,8 @@ ja-JP:
   user_header_logout: サインアウト
   user_header_minecraft: マインクラフト
   user_header_my_projects: 私のプロジェクト
+  user_header_new_project: 新しいプロジェクト
+  user_header_new_project_low_cap: 新しいプロジェクト
   user_header_playlab: プレイラボ
   user_header_settings: アカウント
   user_header_signin: サインイン
@@ -1956,23 +1973,12 @@ ja-JP:
   volunteer_engineer_submission_header_shared: ボランティア マップ上で教師と共有される情報
   volunteer_engineer_submission_intro_background: Hour of Code は1時間のコンピューター・サイエンス入門の世界的な運動です。180以上の国で数千万人の生徒に提供されています。12
     月 7-13 日のコンピューター・サイエンス学習週間に参加しましょう。
-  volunteer_engineer_submission_intro_guide: 私たちの <a href="%{volunteer_guide}"> ボランティア
-    プログラム</a> について詳しく見る。
   volunteer_engineer_submission_intro_guide_markdown: ボランティアプログラムの詳細を [こちら] (%{volunteer_guide})
     からご覧ください。
-  volunteer_engineer_submission_intro_links: あなたはボランティアをお探しの先生ですか？<a href="%{volunteer_local}">ボランティア
-    マップ</a> で地域のボランティアを探してください。
   volunteer_engineer_submission_intro_links_markdown: あなたはボランティアをお探しの先生ですか？ [ボランティアマップ]
     (%{volunteer_local}) で地元のボランティアを見つけてください。
-  volunteer_engineer_submission_intro_recruit: '教師は、クラスルームを助けてくれる <span style="font-family:
-    ''Gotham 7r'', sans-serif;"> コンピューターサイエンス教育に情熱的な</span> 誰かを求めています。または、コンピューターサイエンスの持つ可能性の幅広さについて生徒を
-    <span style="font-family: ''Gotham 7r'', sans-serif;"> 励ます</span> ことができる人を求めています。
-    (これはビデオ チャットで行うことができます)'
   volunteer_engineer_submission_intro_recruit_markdown: 先生は、**コンピューター サイエンス教育**に情熱を傾け、教室でサポートしてくれる人や、コンピューター
     サイエンスがもたらす幅広い可能性について話すことで (これはビデオチャットを通じて行うことができます) 生徒に**インスピレーション**を与えられる人を求めています。
-  volunteer_engineer_submission_intro_signup: コンピューター サイエンスの生徒やソフトウェアのプロフェッショナルの方は、次の情報を入力してください。ボランティアとして登録をするためには18歳以上である必要があります。入力された情報はすべて<a
-    href="/volunteer/local">ボランティアマップ</a>にて公開されますのでご注意ください。 <span class="form-required-field">*</span>
-    がついている欄は入力が必須です。
   volunteer_engineer_submission_intro_signup_markdown: コンピューター サイエンスの学習者またはソフトウェアの専門家の方は、次の情報を入力してください。ボランティアとして登録するには、18歳以上である必要があります。このセクションで入力するすべてのフィールドは、[ボランティアマップ]
     (/ volunteer/local) を見ている人なら誰でも見ることができることに注意してください。 _ * _が付いているフィールドは必須です。
   volunteer_engineer_submission_location_flexibility_curriculum: オープンソース カリキュラム プロジェクトに貢献したい

@@ -1,4 +1,5 @@
 import {TestResults} from './constants';
+
 var parseXmlElement = require('./xml').parseElement;
 
 /**
@@ -65,10 +66,7 @@ FeedbackBlocks.prototype.render = function () {
   }
 
   var parsedXml = parseXmlElement(this.xml);
-  var blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
-    this.div,
-    parsedXml
-  );
+  var blockSpace = Blockly.createEmbeddedWorkspace(this.div, parsedXml);
   this.blockSpaceEditor = blockSpace.blockSpaceEditor;
 };
 

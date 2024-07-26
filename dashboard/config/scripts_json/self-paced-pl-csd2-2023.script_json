@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-04 01:45:39 UTC",
+    "serialized_at": "2024-01-11 15:14:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -93,6 +93,7 @@
       "key": "396a5008-6258-43d4-ab11-9a405ed6db0e",
       "position": 1,
       "properties": {
+        "duration": 30
       },
       "seeding_key": {
         "lesson_activity.key": "396a5008-6258-43d4-ab11-9a405ed6db0e",
@@ -105,6 +106,7 @@
       "key": "f68d5a80-fbde-48ba-b24d-d75427874987",
       "position": 1,
       "properties": {
+        "duration": 25
       },
       "seeding_key": {
         "lesson_activity.key": "f68d5a80-fbde-48ba-b24d-d75427874987",
@@ -117,6 +119,7 @@
       "key": "294a9613-badf-4bf8-91a7-fe542c45d2b8",
       "position": 1,
       "properties": {
+        "duration": 15
       },
       "seeding_key": {
         "lesson_activity.key": "294a9613-badf-4bf8-91a7-fe542c45d2b8",
@@ -831,6 +834,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-Navigation-Mod2_2023"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -1166,6 +1172,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

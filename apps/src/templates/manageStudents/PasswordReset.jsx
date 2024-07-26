@@ -1,10 +1,12 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
-import _ from 'lodash';
-import Button from '../Button';
-import i18n from '@cdo/locale';
+
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import i18n from '@cdo/locale';
+
+import Button from '../Button';
 
 // This min length is configured in user.rb with validates_length_of :password
 const MIN_PASSWORD_LENGTH = 6;

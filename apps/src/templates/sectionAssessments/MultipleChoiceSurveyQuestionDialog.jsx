@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import Button from '@cdo/apps/templates/Button';
+
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import i18n from '@cdo/locale';
+import Button from '@cdo/apps/templates/Button';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import color from '@cdo/apps/util/color';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
+
 import {multipleChoiceDataPropType} from './assessmentDataShapes';
 
 class MultipleChoiceSurveyQuestionDialog extends Component {

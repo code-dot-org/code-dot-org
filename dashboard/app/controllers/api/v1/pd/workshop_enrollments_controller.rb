@@ -41,7 +41,7 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     end
 
     enrollment_email = params[:email]
-    user = User.find_by_email_or_hashed_email enrollment_email
+    user = User.find(params[:user_id])
 
     # See if a previous enrollment exists for this email
     previous_enrollment = @workshop.enrollments.find_by(email: enrollment_email)
@@ -58,15 +58,20 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
     else
       ActiveRecord::Base.transaction do
         enrollment = ::Pd::Enrollment.new workshop: @workshop
-        enrollment.update!(enrollment_params.merge(school_info_attributes: school_info_params))
 
-        user&.update_school_info(enrollment.school_info)
+        if @workshop.course == COURSE_BUILD_YOUR_OWN
+          enrollment.update!(enrollment_params)
+        else
+          enrollment.update!(enrollment_params.merge(school_info_attributes: school_info_params))
+          user&.update_school_info(enrollment.school_info)
+        end
+
         Pd::WorkshopMailer.teacher_enrollment_receipt(enrollment).deliver_now
         Pd::WorkshopMailer.organizer_enrollment_receipt(enrollment).deliver_now
 
         render json: {
           workshop_enrollment_status: RESPONSE_MESSAGES[:SUCCESS],
-          account_exists: enrollment.resolve_user.present?,
+          account_exists: user.present?,
           sign_up_url: url_for('/users/sign_up'),
           cancel_url: url_for(action: :cancel, controller: '/pd/workshop_enrollment', code: enrollment.code)
         }
@@ -115,11 +120,12 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
   def edit
     return head :forbidden unless current_user.workshop_admin?
     enrollment = Pd::Enrollment.find_by(id: params[:id])
-    enrollment.update!(first_name: params[:first_name], last_name: params[:last_name])
+    enrollment.update!(first_name: params[:first_name], last_name: params[:last_name], email: params[:email])
   end
 
   private def enrollment_params
     {
+      user_id: params[:user_id],
       first_name: params[:first_name]&.strip_utf8mb4,
       last_name: params[:last_name]&.strip_utf8mb4,
       email: params[:email]&.strip_utf8mb4,
@@ -129,7 +135,6 @@ class Api::V1::Pd::WorkshopEnrollmentsController < ApplicationController
       csf_course_experience: params[:csf_course_experience],
       csf_courses_planned: params[:csf_courses_planned],
       previous_courses: params[:previous_courses],
-      replace_existing: params[:replace_existing],
       csf_intro_intent: params[:csf_intro_intent],
       csf_intro_other_factors: params[:csf_intro_other_factors],
       # params only collected in CSP returning teachers workshop

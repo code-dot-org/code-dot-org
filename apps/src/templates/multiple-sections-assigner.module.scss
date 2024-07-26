@@ -1,5 +1,17 @@
 @import "color";
 
+.popUpContainer{
+  max-height: 80vh !important;
+  overflow: visible !important;
+  padding: 30px;
+  padding-bottom: 25px
+}
+
+.information{
+  overflow-y: scroll;
+  max-height: 70vh;
+}
+
 .sectionsDirections {
   font-size: 14px;
   margin: 12px 0;
@@ -15,25 +27,17 @@
 
 .sectionList {
   margin: 24px 0 12px 0;
-  padding: 0 0 24px 0;
-  border-bottom: 1px solid $neutral_dark50;
+  padding: 0 0 5px 5px;
 
   h5 {
     margin-bottom: 0;
   }
 
   .sectionListOptionsContainer {
-    &:focus {
-      outline: 2px solid blue;  
-      outline-offset: 2px;     
-  }
-  
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 12px 0 4px 0;
-    overflow-y: scroll;
-    max-height: 300px;
 
     label {
       width: 280px;
@@ -41,7 +45,7 @@
     }
   }
 }
-
+  
 .modalHeader h3 {
   margin-bottom: 0;
 }
@@ -49,4 +53,6 @@
 .buttonContainer {
   display: flex;
   justify-content: space-between;
+  border-top: 1px solid $neutral_dark50;
+  padding-top: 10px;
 }

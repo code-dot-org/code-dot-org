@@ -1,7 +1,8 @@
 /** @file controls below an animation looping toggle */
+import PropTypes from 'prop-types';
 import React from 'react';
 import {OverlayTrigger, Tooltip} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import PropTypes from 'prop-types';
+
 import style from './item-loop-toggle.module.scss';
 
 /**
@@ -34,7 +35,11 @@ class ItemLoopToggle extends React.Component {
           className={style.loopToggle}
           onClick={this.toggleClicked}
         >
-          <img src={iconImageSrc} />
+          {
+            // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+            // Verify or update this alt-text as necessary
+          }
+          <img src={iconImageSrc} alt="" />
         </div>
       </OverlayTrigger>
     );

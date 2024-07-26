@@ -2,24 +2,27 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
-import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
+
+import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import fontConstants from '@cdo/apps/fontConstants';
+import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import Announcements from './Announcements';
-import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
+import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
-import i18n from '@cdo/locale';
+import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
+import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import color from '@cdo/apps/util/color';
 import {
   dismissedRedirectWarning,
   onDismissRedirectWarning,
 } from '@cdo/apps/util/dismissVersionRedirect';
-import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
-import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
-import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
+
+import Announcements from './Announcements';
 
 const SCRIPT_OVERVIEW_WIDTH = 1100;
 
@@ -229,7 +232,7 @@ const styles = {
     alignItems: 'baseline',
   },
   versionLabel: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 15,
     color: color.charcoal,
   },

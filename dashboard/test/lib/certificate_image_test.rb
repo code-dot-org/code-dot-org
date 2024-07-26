@@ -33,6 +33,12 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert_equal 'blank_certificate.png', CertificateImage.certificate_template_for('course4')
   end
 
+  def test_pl_course_template
+    course_version = create :course_version, :with_unit
+    course_version.content_root.update!(instructor_audience: 'facilitator', participant_audience: 'teacher')
+    assert_equal 'self_paced_pl_certificate.png', CertificateImage.certificate_template_for(course_version.name)
+  end
+
   def test_image_generation
     mc_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', 'mc')
     assert_image mc_certificate_image, 1754, 1235, 'PNG'
@@ -86,6 +92,13 @@ class CertificateImageTest < ActiveSupport::TestCase
     assert_image twenty_hour_certificate_image, 1754, 1240, 'JPEG'
   end
 
+  def test_pl_certificate_image_generation
+    course_version = create :course_version, :with_unit
+    course_version.content_root.update!(instructor_audience: 'facilitator', participant_audience: 'teacher')
+    pl_certificate_image = CertificateImage.create_course_certificate_image('Robot Tester', course_version.name)
+    assert_image pl_certificate_image, 2526, 1786, 'PNG'
+  end
+
   def test_escape_image_magick_string
     # Imagemagick will interperate a '@' at the beginning of a string to be a
     # filepath
@@ -112,11 +125,11 @@ class CertificateImageTest < ActiveSupport::TestCase
 
     hello = create :script, name: 'hello', is_course: true
     cv = create :course_version, content_root: hello
-    create :course_offering, course_versions: [cv], key: 'hello', category: 'hoc'
+    create :course_offering, course_versions: [cv], key: 'hello', marketing_initiative: 'HOC'
 
     other = create :script, name: 'other', is_course: true
     cv = create :course_version, content_root: other
-    create :course_offering, course_versions: [cv], key: 'other', category: 'other'
+    create :course_offering, course_versions: [cv], key: 'other', marketing_initiative: 'CSF'
 
     assert CertificateImage.hoc_course?('flappy')
     assert CertificateImage.hoc_course?('oceans')
@@ -132,9 +145,7 @@ class CertificateImageTest < ActiveSupport::TestCase
     refute CertificateImage.hoc_course?('other')
   end
 
-  private
-
-  def assert_image(image, width, height, format)
+  private def assert_image(image, width, height, format)
     info_line = image.inspect
     assert info_line.match(/#{format}/)
     assert info_line.match(/#{width}x/)

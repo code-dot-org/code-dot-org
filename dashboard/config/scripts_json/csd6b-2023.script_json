@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-09-11 22:30:42 UTC",
+    "serialized_at": "2024-04-15 16:16:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -9869,6 +9869,7 @@
       "key": "functions",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/callingfunctions-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -9941,6 +9942,7 @@
       "key": "if_statements_1",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csd-u6-if-statements-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -9953,6 +9955,7 @@
       "key": "input_output_devices",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/computer_iosp_video-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -10515,6 +10518,7 @@
       "key": "variables_1",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csd-u6-variables-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {

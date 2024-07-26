@@ -1,13 +1,17 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import BaseDialog from '../../BaseDialog';
-import DialogFooter from '../../teacherDashboard/DialogFooter';
-import Button from '../../Button';
 import {connect} from 'react-redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import {setCurrentUserHasSeenStandardsReportInfo} from '@cdo/apps/templates/currentUserRedux';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import BaseDialog from '../../BaseDialog';
+import Button from '../../Button';
+import DialogFooter from '../../teacherDashboard/DialogFooter';
+
 import {cstaStandardsURL} from './standardsConstants';
 
 /*
@@ -78,7 +82,6 @@ class StandardsIntroDialog extends Component {
         </div>
         <DialogFooter rightAlign>
           <Button
-            __useDeprecatedTag
             text={i18n.gotIt()}
             onClick={this.dismissStandardsDialog}
             color={Button.ButtonColor.brandSecondaryDefault}
@@ -86,6 +89,7 @@ class StandardsIntroDialog extends Component {
             disabled={this.state.pending}
             isPending={this.state.pending}
             pendingText={i18n.loading()}
+            style={styles.button}
           />
         </DialogFooter>
       </BaseDialog>
@@ -98,12 +102,15 @@ const styles = {
     color: color.dark_charcoal,
   },
   boldText: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
   },
   dialog: {
     paddingLeft: 20,
     paddingRight: 20,
     paddingBottom: 20,
+  },
+  button: {
+    margin: 0,
   },
 };
 

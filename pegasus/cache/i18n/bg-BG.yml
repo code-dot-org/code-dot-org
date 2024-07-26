@@ -10,7 +10,7 @@ bg-BG:
   account_sign_up_email_opt_in: Можем ли да ви изпращаме обновления на нашите курсове,
     локални  възможности или други новини свързани с компютърните науки? (горе-долу
     веднъж на месец)
-  ai_activity: Упражнение
+  ai_activity: Дейност
   ai_audience: Публика
   ai_description: Описание
   ai_for_oceans_lesson_plan: план на урок
@@ -198,6 +198,7 @@ bg-BG:
   class_submission_out_of_school_summer_camp: Летен лагер
   classicmaze_name: Класически лабиринт
   code_hoc_coming: Часът на кода е тук - декември 8-14!
+  code_org_logo_alt: Начална страница Code.org
   code_sign_up: Регистрирайте се за участие по време на CS седмицата на образованието
   codea_beyond_gradelevel: Гимназия +
   codea_beyond_longdescription: Codea за iPad ви позволява да създавате игри и симулации
@@ -971,6 +972,7 @@ bg-BG:
   header_course_catalog: Каталог на курса
   header_courses: Курсове
   header_documentation: Документация
+  header_donate: Дарения
   header_educate_beyond: Отвъд Code.org
   header_educate_community: Онлайн общност
   header_educate_elementary: Начално училище
@@ -986,9 +988,11 @@ bg-BG:
   header_incubator: Инкубатор
   header_learn: Научете
   header_legal: Поверителност и Легално
+  header_legal_cookie_notice: Известие за Бисквитки
   header_legal_privacy: Защита на личните данни
   header_legal_tos: Термини
   header_my_dashboard: Моето табло
+  header_professional_learning: Професионално обучение
   header_project_gallery: Проекти
   header_report_abuse: Съобщете за злоупотреба
   header_report_bug: Съобщи за бъгове
@@ -2127,7 +2131,7 @@ bg-BG:
   volunteer_engineer_submission_field_email_placeholder: Имейл адрес
   volunteer_engineer_submission_field_email_preference_no: Не
   volunteer_engineer_submission_field_email_preference_privacy: "(Вижте нашата политика
-    за поверителност)"
+    за поверителността)"
   volunteer_engineer_submission_field_email_preference_yes: Да
   volunteer_engineer_submission_field_experience_level: Ниво на опит
   volunteer_engineer_submission_field_facebook: Facebook профил
@@ -2158,19 +2162,6 @@ bg-BG:
     което предоставя един час въведение в компютърните науки. То достига до десетки
     милиони ученици в 180 + страни. Моля, включете се по време на CSEdWeek, декември
     7-13."
-  volunteer_engineer_submission_intro_links: Не сте доброволец? <a href="%{learn_more}">
-    Научете повече</a> за организиране на Ваш Hour of Code събитие и намерете местни
-    доброволци на нашата <a href="%{volunteer_local}"> доброволческа карта</a>.
-  volunteer_engineer_submission_intro_recruit: 'Тези учители ще се радват да има някой,
-    <span style="font-family: ''Gotham 7r'', sans-serif;"> технически спец,</span>
-    който може да помогне в класната стая, или някой, който може да <span style="font-family:
-    ''Gotham 7r'', sans-serif;"> вдъхнови</span> учениците с разговори за многобройните
-    възможности на компютърните науки (което може да бъде направено и чрез видео чат).
-    Ако не желаеш да бъдеш доброволец, <a href="%{url}"> научи повече</a> за възможността
-    сам да организираш Hour of Code събитие.'
-  volunteer_engineer_submission_intro_signup: Моля, въведете следната информация,
-    ако сте студент, учещ компютърни науки или професионален софтуерен инжинер. Полетата,
-    отбелязани със <span class="form-required-field"> *</span> са задължителни.
   volunteer_engineer_submission_location_flexibility_curriculum: Желае да допринесе
     за проекти с отворен код
   volunteer_engineer_submission_location_flexibility_onsite: посещение в сайта от

@@ -2,46 +2,46 @@
 //   Blockly
 
 import $ from 'jquery';
-import {getStore} from './redux';
+import QRCode from 'qrcode.react';
 import React from 'react';
-import {Provider} from 'react-redux';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import color from '@cdo/apps/util/color';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import msg from '@cdo/locale';
-import dom from './dom';
-import LegacyDialog from './code-studio/LegacyDialog';
-import ChallengeDialog from './templates/ChallengeDialog';
+
+import {getAllBlocks} from './blockly/utils';
+import DownloadReplayVideoButton from './code-studio/components/DownloadReplayVideoButton';
 import project from './code-studio/initApp/project';
+import LegacyDialog from './code-studio/LegacyDialog';
+import testImageAccess from './code-studio/url_test';
+import {TestResults, KeyCodes} from './constants';
+import {getValidatedResult} from './containedLevels';
+import dom from './dom';
 import FeedbackBlocks from './feedbackBlocks';
+import {dataURIToBlob} from './imageUtils';
 import puzzleRatingUtils from './puzzleRatingUtils';
+import {getStore} from './redux';
+import ChallengeDialog from './templates/ChallengeDialog';
 import DialogButtons from './templates/DialogButtons';
 import CodeWritten from './templates/feedback/CodeWritten';
 import GeneratedCode from './templates/feedback/GeneratedCode';
-import {dataURIToBlob} from './imageUtils';
-import trackEvent from './util/trackEvent';
-import {getValidatedResult} from './containedLevels';
 import PublishDialog from './templates/projects/publishDialog/PublishDialog';
-import DownloadReplayVideoButton from './code-studio/components/DownloadReplayVideoButton';
 import {
   showPublishDialog,
   PUBLISH_REQUEST,
   PUBLISH_SUCCESS,
   PUBLISH_FAILURE,
 } from './templates/projects/publishDialog/publishDialogRedux';
+import trackEvent from './util/trackEvent';
 import {createHiddenPrintWindow} from './utils';
-import testImageAccess from './code-studio/url_test';
-import {TestResults, KeyCodes} from './constants';
-import QRCode from 'qrcode.react';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import experiments from '@cdo/apps/util/experiments';
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import color from '@cdo/apps/util/color';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
 const UNCOUNTED_BLOCK_TYPES = ['draw_colour', 'alpha', 'comment'];
-
-const FIREHOSE_STUDY = 'feedback_dialog';
-let dialog_type = 'default';
 
 /**
  * Bag of utility functions related to building and displaying feedback
@@ -259,15 +259,6 @@ FeedbackUtils.prototype.displayFeedback = function (
   const showPuzzleRatingButtons =
     options.response && options.response.puzzle_ratings_enabled;
 
-  if (showingSharing) {
-    dialog_type = 'share';
-    if (idealBlocks !== Infinity) {
-      dialog_type += '_validate';
-    }
-  } else if (idealBlocks !== Infinity) {
-    dialog_type = 'validate';
-  }
-
   if (getStore().getState().pageConstants.isChallengeLevel) {
     const container = document.createElement('div');
     document.body.appendChild(container);
@@ -317,11 +308,6 @@ FeedbackUtils.prototype.displayFeedback = function (
 
   if (againButton) {
     dom.addClickTouchEvent(againButton, function () {
-      logDialogActions(
-        'replay_level',
-        options,
-        idealBlocks === Infinity ? null : isPerfect
-      );
       feedbackDialog.hide();
     });
   }
@@ -404,12 +390,11 @@ FeedbackUtils.prototype.displayFeedback = function (
     }
 
     dom.addClickTouchEvent(continueButton, function () {
-      logDialogActions(
-        'continue',
-        options,
-        idealBlocks === Infinity ? null : isPerfect
-      );
       feedbackDialog.hide();
+      recordFinishShare(
+        'FINISH_BUTTON_CERTIFICATE',
+        project.getStandaloneApp()
+      );
 
       if (options.response && options.response.puzzle_ratings_enabled) {
         puzzleRatingUtils.cachePuzzleRating(feedback, {
@@ -450,6 +435,7 @@ FeedbackUtils.prototype.displayFeedback = function (
   if (publishButton) {
     dom.addClickTouchEvent(publishButton, () => {
       // Hide the current dialog since we're about to show the publish dialog
+      recordFinishShare('FINISH_SHARING_PUBLISH', project.getStandaloneApp());
       feedbackDialog.hide();
 
       const store = getStore();
@@ -529,18 +515,10 @@ FeedbackUtils.prototype.displayFeedback = function (
   }
 };
 
-function logDialogActions(event, options, isPerfect) {
-  if (experiments.isEnabled(experiments.FINISH_DIALOG_METRICS)) {
-    firehoseClient.putRecord({
-      study: FIREHOSE_STUDY,
-      study_group: dialog_type,
-      event: event,
-      data_json: JSON.stringify({
-        level_type: options.level ? options.level.skin : null,
-        level_id: options.response ? options.response.level_id : null,
-        level_path: options.response ? options.response.level_path : null,
-        isPerfectBlockCount: isPerfect,
-      }),
+function recordFinishShare(type, appType) {
+  if (EVENTS[type]) {
+    analyticsReporter.sendEvent(EVENTS[type], {
+      lab_type: appType,
     });
   }
 }
@@ -714,7 +692,6 @@ FeedbackUtils.prototype.getFeedbackMessage = function (options) {
     // Otherwise, the message will depend on the test result.
     switch (options.feedbackType) {
       case TestResults.FREE_PLAY_UNCHANGED_FAIL:
-        logDialogActions('level_unchanged_failure', options, null);
         message = options.useDialog
           ? msg.freePlayUnchangedFail()
           : msg.freePlayUnchangedFailInline();
@@ -978,9 +955,26 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   );
   if (sharingCopyButton) {
     dom.addClickTouchEvent(sharingCopyButton, function () {
+      recordFinishShare('FINISH_SHARING_LINK_COPY', project.getStandaloneApp());
       copyToClipboard(options.shareLink, () => {
         sharingCopyButton.className = 'sharing-dialog-copy-button-shared';
       });
+    });
+  }
+
+  const twitterButtonSelector = '#twitter-button';
+  const twitterButton = sharingDiv.querySelector(twitterButtonSelector);
+  if (twitterButton) {
+    dom.addClickTouchEvent(twitterButton, () => {
+      recordFinishShare('FINISH_SHARING_TWITTER', project.getStandaloneApp());
+    });
+  }
+
+  const facebookButtonSelector = '#facebook-button';
+  const facebookButton = sharingDiv.querySelector(facebookButtonSelector);
+  if (facebookButton) {
+    dom.addClickTouchEvent(facebookButton, () => {
+      recordFinishShare('FINISH_SHARING_FB', project.getStandaloneApp());
     });
   }
 
@@ -1003,6 +997,10 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
   //  QR Code & SMS-to-phone feature
   var sharingPhone = sharingDiv.querySelector('#sharing-phone');
   dom.addClickTouchEvent(sharingPhone, function () {
+    recordFinishShare(
+      'FINISH_SHARING_LINK_SEND_TO_PHONE',
+      project.getStandaloneApp()
+    );
     var sendToPhone = sharingDiv.querySelector('#send-to-phone');
     if ($(sendToPhone).is(':hidden')) {
       $(sendToPhone).show();
@@ -1294,6 +1292,7 @@ FeedbackUtils.prototype.showClearPuzzleConfirmation = function (
  * @param {string} options.isDangerCancel Should cancel button has a danger type
  * @param {string} options.confirmText Text for confirm button
  * @param {boolean} [options.hideIcon=false] Whether to hide the icon
+ * @param {boolean} [options.disableSpaceClose=false] Whether to disable closing the dialog with the spacebar
  * @param {onConfirmCallback} [options.onConfirm] Function to be called after clicking confirm
  * @param {onCancelCallback} [options.onCancel] Function to be called after clicking cancel
  */
@@ -1328,6 +1327,7 @@ FeedbackUtils.prototype.showSimpleDialog = function (options) {
     contentDiv: contentDiv,
     icon: options.hideIcon ? null : this.studioApp_.icon,
     defaultBtnSelector: '#again-button',
+    disableSpaceClose: !!options.disableSpaceClose,
   });
 
   var cancelButton = contentDiv.querySelector('#again-button');
@@ -1448,14 +1448,6 @@ FeedbackUtils.prototype.throwOnInvalidExampleBlocks = function (
   if (!resultBlock) {
     throw new Error('Invalid Result Block');
   }
-
-  if (resultBlock.hasUnfilledFunctionalInput()) {
-    throw new Error('Result has unfilled inputs');
-  }
-
-  if (callBlock.hasUnfilledFunctionalInput()) {
-    throw new Error('Call has unfilled inputs');
-  }
 };
 
 /**
@@ -1479,9 +1471,9 @@ FeedbackUtils.prototype.hasAllBlocks_ = function (blocks) {
  * @return {Array<Object>} The blocks.
  */
 FeedbackUtils.prototype.getUserBlocks_ = function () {
-  var allBlocks = Blockly.mainBlockSpace.getAllUsedBlocks();
-  var blocks = allBlocks.filter(function (block) {
-    var blockValid = !block.disabled && block.type !== 'when_run';
+  const allBlocks = getAllBlocks();
+  const blocks = allBlocks.filter(function (block) {
+    let blockValid = !block.disabled && block.type !== 'when_run';
     // If Blockly is in readOnly mode, then all blocks are uneditable
     // so this filter would be useless. Ignore uneditable blocks only if
     // Blockly is in edit mode.
@@ -1526,8 +1518,8 @@ FeedbackUtils.blockShouldBeCounted_ = function (block) {
  * @return {Array<Object>} The blocks.
  */
 FeedbackUtils.prototype.getCountableBlocks_ = function () {
-  var allBlocks = Blockly.mainBlockSpace.getAllUsedBlocks();
-  var blocks = allBlocks.filter(FeedbackUtils.blockShouldBeCounted_);
+  const allBlocks = getAllBlocks();
+  const blocks = allBlocks.filter(FeedbackUtils.blockShouldBeCounted_);
   return blocks;
 };
 
@@ -1789,6 +1781,7 @@ function simulateClick(element) {
  * @param {string} options.id
  * @param {HTMLElement} options.header
  * @param {boolean} options.showXButton
+ * @param {boolean} [options.disableSpaceClose]
  */
 FeedbackUtils.prototype.createModalDialog = function (options) {
   var modalBody = document.createElement('div');
@@ -1811,7 +1804,12 @@ FeedbackUtils.prototype.createModalDialog = function (options) {
 
   var btn = options.contentDiv.querySelector(options.defaultBtnSelector);
   var keydownHandler = function (e) {
-    if (e.keyCode === KeyCodes.ENTER || e.keyCode === KeyCodes.SPACE) {
+    if (
+      e.keyCode === KeyCodes.ENTER ||
+      // This dialog is also used for renaming variables in Blockly labs.
+      // We disable this check for these instances so that spaces can be entered.
+      (!options.disableSpaceClose && e.keyCode === KeyCodes.SPACE)
+    ) {
       simulateClick(btn);
 
       e.stopPropagation();

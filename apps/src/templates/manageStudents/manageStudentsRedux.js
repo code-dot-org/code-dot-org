@@ -1,11 +1,12 @@
+import $ from 'jquery';
 import _ from 'lodash';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+
 import {
   sectionCode,
   sectionName,
   asyncLoadSectionData,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import $ from 'jquery';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 export const ParentLetterButtonMetricsCategory = {
   ABOVE_TABLE: 'above-table',
@@ -866,6 +867,11 @@ export const convertStudentServerData = (studentData, loginType, sectionId) => {
       isSaving: false,
       rowType: RowType.STUDENT,
       userType: student.user_type,
+      atRiskAgeGatedStudent: student.at_risk_age_gated,
+      childAccountComplianceState: student.child_account_compliance_state,
+      latestPermissionRequestSentAt:
+        student.latest_permission_request_sent_at &&
+        new Date(student.latest_permission_request_sent_at),
     };
   }
   return studentLookup;
@@ -989,4 +995,8 @@ export const loadSectionStudentData = sectionId => {
       dispatch(finishLoadingStudents());
     }
   };
+};
+
+export const filterAgeGatedStudents = studentData => {
+  return studentData.filter(student => student.atRiskAgeGatedStudent);
 };

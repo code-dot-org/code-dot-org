@@ -48,7 +48,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2023-03-09T15:14:50.055+00:00\",\"changed\":[\"cloned from \\\"poetry_module_share\\\"\"],\"cloned_from\":\"poetry_module_share\"},{\"changed_at\":\"2023-03-16 00:24:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"project_template_level_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-03-16 00:25:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-03-23 20:20:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\",\"available_poems\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-06-28 22:12:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-06-28 22:13:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-06-28 22:14:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-09T15:14:50.055+00:00\",\"changed\":[\"cloned from \\\"poetry_module_share\\\"\"],\"cloned_from\":\"poetry_module_share\"},{\"changed_at\":\"2023-03-16 00:24:30 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"project_template_level_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-03-16 00:25:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-03-23 20:20:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\",\"contained_level_names\",\"available_poems\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2023-06-28 22:12:38 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-06-28 22:13:54 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2023-06-28 22:14:30 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-03-07 00:49:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-03-07 00:51:17 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -61,14 +61,12 @@
     </start_blocks>
     <toolbox_blocks>
       <xml xmlns="https://developers.google.com/blockly/xml">
-        <category name="Events"/>
-        <category name="Text"/>
-        <category name="Effects"/>
-        <category name="Sounds"/>
-        <category name="Sprites">
+        <category name="Events">
           <block type="Poetry_whenLineShows" id="16+NqtvDPRi!xOnNP,Xk">
             <field name="N">0</field>
           </block>
+        </category>
+        <category name="Text">
           <block type="Poetry_setFont" id="Uds-t#DZ*u$3?dyK321D">
             <field name="FONT">"Courier"</field>
           </block>
@@ -89,6 +87,8 @@
               </shadow>
             </value>
           </block>
+        </category>
+        <category name="Effects">
           <block type="Poetry_setBackground" id="K[-Cyzg@1ejN`C!c3Kb4">
             <value name="COLOR">
               <shadow type="colour_picker" id="_5,0-#I{daqNhD|(?3C$">
@@ -109,12 +109,16 @@
           <block type="Poetry_setForegroundEffect" id="aA_a9$,eGq)R*mw`7Zfs">
             <field name="EFFECT">"rain"</field>
           </block>
+        </category>
+        <category name="Sounds">
           <block type="Poetry_playSound" id=".7QM.h6Il=XNtq3MTT~a">
             <field name="SOUND">"sound://category_bell/long_bell_notification.mp3"</field>
           </block>
           <block type="Poetry_playMusic" id="%2=YetbP)G:}xX`XIrWP">
             <field name="SOUND">"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"</field>
           </block>
+        </category>
+        <category name="Sprites">
           <block type="Poetry_makeNewSpriteAnon" id="A(~CdS0j,`]]`SKMLfTJ">
             <field name="ANIMATION_NAME">"cloud_single"</field>
             <field name="LOCATION">{"x":75,"y":200}</field>

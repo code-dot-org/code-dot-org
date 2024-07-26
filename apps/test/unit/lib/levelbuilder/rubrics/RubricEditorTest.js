@@ -1,14 +1,13 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+
 import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
-import Button from '@cdo/apps/templates/Button';
-import {expect} from '../../../../util/reconfiguredChai';
 import RubricEditor from '@cdo/apps/lib/levelbuilder/rubrics/RubricEditor';
-import sinon from 'sinon';
+import Button from '@cdo/apps/templates/Button';
 
 describe('RubricEditorTest ', () => {
   let wrapper;
-  const addNewConceptSpy = sinon.spy();
+  const addNewConceptSpy = jest.fn();
   const sampleLearningGoalList = [
     {id: 1, learningGoal: 'Goal 1', aiEnabled: true},
     {id: 2, learningGoal: 'Goal 2', aiEnabled: false},
@@ -25,18 +24,27 @@ describe('RubricEditorTest ', () => {
     wrapper = shallow(<RubricEditor {...defaultProps} />);
   });
 
-  it('renders correct number of LearningGoalItem components', () => {
-    expect(wrapper.find(LearningGoalItem)).to.have.length(
+  it('renders correct LearningGoalItem components', () => {
+    expect(wrapper.find(LearningGoalItem)).toHaveLength(
       sampleLearningGoalList.length
     );
+    expect(
+      wrapper.find('LearningGoalItem').at(0).prop('exisitingLearningGoalData')
+    ).toBe(sampleLearningGoalList[0]);
+    expect(
+      wrapper.find('LearningGoalItem').at(1).prop('exisitingLearningGoalData')
+    ).toBe(sampleLearningGoalList[1]);
+    expect(
+      wrapper.find('LearningGoalItem').at(2).prop('exisitingLearningGoalData')
+    ).toBe(sampleLearningGoalList[2]);
   });
 
   it('renders the "Add new Key Concept" button and it can be clicked when submittable levels are available', () => {
     const addButton = wrapper
       .find(Button)
       .findWhere(n => n.props().text === 'Add new Key Concept');
-    expect(addButton).to.have.length(1);
+    expect(addButton).toHaveLength(1);
     addButton.simulate('click');
-    expect(addNewConceptSpy).to.have.been.calledOnce;
+    expect(addNewConceptSpy).toHaveBeenCalledTimes(1);
   });
 });

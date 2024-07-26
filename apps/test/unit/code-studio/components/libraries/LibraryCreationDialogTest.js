@@ -1,7 +1,7 @@
-import {expect} from '../../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {
   UnconnectedLibraryCreationDialog as LibraryCreationDialog,
   DialogState,
@@ -9,8 +9,10 @@ import {
   UnpublishSuccessDisplay,
   ErrorDisplay,
 } from '@cdo/apps/code-studio/components/libraries/LibraryCreationDialog.jsx';
-import PublishSuccessDisplay from '@cdo/apps/code-studio/components/libraries/PublishSuccessDisplay.jsx';
 import LibraryPublisher from '@cdo/apps/code-studio/components/libraries/LibraryPublisher.jsx';
+import PublishSuccessDisplay from '@cdo/apps/code-studio/components/libraries/PublishSuccessDisplay.jsx';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('LibraryCreationDialog', () => {
   describe('UI', () => {

@@ -355,7 +355,8 @@
       }
     },
     "long_instructions": "##Welcome to The Neighborhood!",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:22:43.907+00:00\",\"changed\":[\"cloned from \\\"CSA 2022 Neighborhood - No Bucket Sandbox\\\"\"],\"cloned_from\":\"CSA 2022 Neighborhood - No Bucket Sandbox\"}]"

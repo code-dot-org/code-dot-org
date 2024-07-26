@@ -1,6 +1,35 @@
+import {java} from '@codemirror/lang-java';
+import {EditorState, Compartment} from '@codemirror/state';
+import {EditorView} from '@codemirror/view';
+import classNames from 'classnames';
+import _ from 'lodash';
+import PropTypes from 'prop-types';
 import React from 'react';
+import {Tab, Nav, NavItem} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
-import {setRenderedHeight, setEditorColumnHeight} from './redux/viewRedux';
+
+import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
+import {hasQueryParam} from '@cdo/apps/code-studio/utils';
+import {editorConfig} from '@cdo/apps/lab2/views/components/editor/editorConfig';
+import {
+  darkMode,
+  lightMode,
+} from '@cdo/apps/lab2/views/components/editor/editorThemes';
+import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import javalabMsg from '@cdo/javalab/locale';
+import i18n from '@cdo/locale';
+
+import {DisplayTheme} from './DisplayTheme';
+import JavalabEditorDialogManager from './JavalabEditorDialogManager';
+import JavalabEditorHeader from './JavalabEditorHeader';
+import JavalabEditorTabMenu from './JavalabEditorTabMenu';
+import JavalabFileExplorer from './JavalabFileExplorer';
+import {
+  getDefaultFileContents,
+  getTabKey,
+  isJavaFile,
+} from './JavalabFileHelper';
 import {
   setSource,
   sourceTextUpdated,
@@ -21,33 +50,10 @@ import {
   clearNewFileError,
   setRenameFileError,
 } from './redux/editorRedux';
-import {DisplayTheme} from './DisplayTheme';
-import PropTypes from 'prop-types';
-import {EditorView} from '@codemirror/view';
-import {editorSetup} from './editorSetup';
-import {EditorState, Compartment} from '@codemirror/state';
-import {projectChanged} from '@cdo/apps/code-studio/initApp/project';
-import classNames from 'classnames';
-import {Tab, Nav, NavItem} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import style from './javalab-editor.module.scss';
-import JavalabEditorTabMenu from './JavalabEditorTabMenu';
-import JavalabFileExplorer from './JavalabFileExplorer';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import _ from 'lodash';
-import i18n from '@cdo/locale';
-import javalabMsg from '@cdo/javalab/locale';
-import {
-  getDefaultFileContents,
-  getTabKey,
-  isJavaFile,
-} from './JavalabFileHelper';
-import {darkMode, lightMode} from './editorThemes';
-import {hasQueryParam} from '@cdo/apps/code-studio/utils';
-import JavalabEditorDialogManager from './JavalabEditorDialogManager';
+import {setRenderedHeight, setEditorColumnHeight} from './redux/viewRedux';
 import {JavalabEditorDialog} from './types';
-import JavalabEditorHeader from './JavalabEditorHeader';
-import {java} from '@codemirror/lang-java';
-import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
+
+import style from './javalab-editor.module.scss';
 
 // This is the height of the "editor" header and the file tabs combined
 const HEADER_OFFSET = 63;
@@ -202,7 +208,7 @@ class JavalabEditor extends React.Component {
   createEditor(key, doc) {
     const {displayTheme, isReadOnlyWorkspace, fileMetadata, editorFontSize} =
       this.props;
-    const extensions = [...editorSetup];
+    const extensions = [...editorConfig];
 
     extensions.push(
       displayTheme === DisplayTheme.DARK

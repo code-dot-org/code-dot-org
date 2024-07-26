@@ -4,10 +4,12 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+import {Sticky} from 'react-sticky';
+
+import i18n from '@cdo/tutorialExplorer/locale';
+
 import FilterGroupHeaderSelection from './filterGroupHeaderSelection';
 import {getResponsiveValue} from './responsive';
-import {Sticky} from 'react-sticky';
-import i18n from '@cdo/tutorialExplorer/locale';
 
 export default class FilterHeader extends React.Component {
   static propTypes = {

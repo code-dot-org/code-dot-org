@@ -10,6 +10,7 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import Spinner from '../../components/spinner';
 
 export default class WorkshopTableLoader extends React.Component {
@@ -96,7 +97,10 @@ export default class WorkshopTableLoader extends React.Component {
     if (this.state.loading) {
       return (
         // While reloading, preserve the height of the previous child component so the refresh is smoother.
-        <div style={{height: this.childHeight}}>
+        <div
+          style={{height: this.childHeight}}
+          data-testid={'enrolled-workshops-loader'}
+        >
           <Spinner />
         </div>
       );

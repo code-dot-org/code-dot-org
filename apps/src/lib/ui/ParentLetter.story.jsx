@@ -1,7 +1,10 @@
 import React from 'react';
-import {UnconnectedParentLetter as ParentLetter} from './ParentLetter';
-import {SectionLoginType} from '../../util/sharedConstants';
+
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+
 import wizardPng from '../../../static/skins/studio/wizard_thumb.png';
+
+import {UnconnectedParentLetter as ParentLetter} from './ParentLetter';
 
 const sampleSection = {
   id: 7,
@@ -24,7 +27,6 @@ const sampleStudents = [
 ];
 
 export default {
-  title: 'ParentLetter',
   component: ParentLetter,
 };
 

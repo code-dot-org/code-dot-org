@@ -26,23 +26,22 @@ LOG_FILE = "#{Dir.tmpdir}/dotd.log".freeze
   "[#{time.strftime('%I:%M %p')}]: #{msg}\n"
 end
 
-# Checks that CDO.github_access_token, CDO.slack_bot_token, CDO.honeybadger_api_token, and CDO.devinternal_db_writer
+# Checks that CDO.github_access_token, CDO.slack_bot_token, CDO.honeybadger_api_token
 # are defined. If not, exits the program.
 def check_for_cdo_keys
-  return if CDO.github_access_token && CDO.slack_bot_token && CDO.honeybadger_api_token && CDO.devinternal_db_writer
+  missing_cdo_keys = [
+    CDO.github_access_token ? nil :   "#{bold 'CDO.github_access_token'}: set `github_access_token: <your token>` in locals.yml. Get <your token> from https://github.com/settings/tokens, by creating a classic token with the \"public_repo\" permission.",
+    CDO.honeybadger_api_token ? nil : "#{bold 'CDO.honeybadger_api_token'}: this should be pulled in automatically from AWS Secrets Manager, does `bin/aws_access` succeed?",
+    CDO.slack_bot_token ? nil :       "#{bold 'CDO.slack_bot_token'}: this should be pulled in automatically from AWS Secrets Manager, does `bin/aws_access` succeed?"
+  ].compact
 
-  puts <<-EOS.unindent
+  return if missing_cdo_keys.empty?
 
-    This script requires CDO.github_access_token, CDO.slack_bot_token, and CDO.honeybadger_api_token and CDO.devinternal_db_writer.
+  puts <<~EOS.unindent
 
-    Create your API tokens from these pages:
+    Error, missing required CDO keys: #{missing_cdo_keys.map {|msg| "\n  - #{msg}"}.join}
 
-      https://github.com/settings/tokens (classic token with 'public_repo' permission)
-      https://app.honeybadger.io/users/edit#authentication
-
-    Please add them to your locals.yml and rerun the script.
-    CDO.devinternal_db_writer and CDO.slack_bot_token should be pulled automatically from AWS Secrets Manager.
-
+    Please fix the required CDO keys and rerun the script.
   EOS
   exit
 end
@@ -257,8 +256,7 @@ def dotd_menu(dotd_name)
         end
       end
       menu.choice(:DTS) do
-        unless GitHub.compare(base: 'staging', head: 'levelbuilder').
-            any? {|message| message.include?('levelbuilder content changes')}
+        if GitHub.compare(base: 'staging', head: 'levelbuilder').empty?
           warn_and_confirm 'No content commit available to merge from levelbuilder to staging'
           next
         end
@@ -306,7 +304,7 @@ def dotd_menu(dotd_name)
       end
       menu.choice(:DTP) {do_dtp(dotd_name)}
       menu.choice(:L) do
-        if run_on 'levelbuilder-staging', "levelbuilder/bin/content-push --name=\"#{dotd_name}\""
+        if run_on 'levelbuilder', "levelbuilder/bin/content-push --name=\"#{dotd_name}\""
           @logger.info 'commits content on levelbuilder'
         else
           @logger.info 'error attempting to commit content on levelbuilder'
@@ -341,7 +339,7 @@ end
 def puts_script_conclusion
   puts <<-EOS.unindent
 
-   #{bold "Send your DOTD Report to dev@code.org. You can find a log of your day at #{LOG_FILE}"}
+   #{bold "Post a summary of your DOTD shift in the #developers Slack channel. You can find a log of your day at #{LOG_FILE}"}
 
   #{bold "You're done!"}
   EOS
@@ -359,7 +357,7 @@ def puts_quit_message
   EOS
 end
 
-# Flushes STDIN, returning the results of gets.
+# Flushes $stdin, returning the results of gets.
 # @return [String] The result of gets.
 def flush_and_gets
   $stdin.iflush
@@ -479,7 +477,7 @@ end
 # properly set up for all standard Dev of the Day operations.
 def perform_self_check
   puts "Checking access to internal servers"
-  %w(staging test levelbuilder-staging production-console).each do |environment|
+  %w(staging test levelbuilder production-console).each do |environment|
     run_on(environment, "echo 'successfully connected to #{environment}'")
   end
 
@@ -518,10 +516,15 @@ end
 
 # The main method of the script, responsible for dispatching control flow to other methods.
 def main
+  puts
+  puts "👋, if you run into trouble or have questions, consult the DotD guide:"
+  puts "https://docs.google.com/document/d/166j9G-Kn_PeHoV4RRX9l-x-42NlahPn0sT6tTFTX5LY/edit#heading=h.mf5058xaezl2"
+  puts
+
   check_for_cdo_keys
   check_github_token
 
-  dotd_name = ENV['CDODEV_DOTD_NAME'] || ENV['USER']
+  dotd_name = ENV['CDODEV_DOTD_NAME'] || ENV.fetch('USER', nil)
   @logger.info("#{Time.new.strftime('%A, %B %d %Y')}: #{dotd_name} is DOTD")
 
   puts_script_intro(dotd_name)

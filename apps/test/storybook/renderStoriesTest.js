@@ -1,13 +1,15 @@
 // Load all .story.jsx files and render them with enzyme, checking for
 // render errors and other problems.
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import enzyme from 'enzyme'; // eslint-disable-line no-restricted-imports
+import $ from 'jquery';
+
 import {
   throwOnConsoleErrorsEverywhere,
   clearTimeoutsBetweenTests,
 } from '../util/testUtils';
+
 import testStorybook from './util/testStorybook';
-import $ from 'jquery';
-import Adapter from 'enzyme-adapter-react-16';
-import enzyme from 'enzyme';
 enzyme.configure({adapter: new Adapter()});
 
 describe('react-storybook stories render without errors or warnings', function () {

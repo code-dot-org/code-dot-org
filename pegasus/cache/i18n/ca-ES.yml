@@ -157,6 +157,7 @@ ca-ES:
   class_submission_out_of_school_summer_camp: Campament d'estiu
   classicmaze_name: Laberint clàssic
   code_hoc_coming: L'hora del Codi és aquí - 8-14 de desembre!
+  code_org_logo_alt: Inici de Code.org
   code_sign_up: Inscriure's a participar durant la setmana de l'educació CS
   codea_beyond_gradelevel: ESO +
   codea_beyond_longdescription: Codea per a iPad et permet crear jocs i simulacions
@@ -855,7 +856,9 @@ ca-ES:
   header_about_us: Sobre nosaltres
   header_course_catalog: Catàleg de cursos
   header_courses: cursos
+  header_districts: Districte/regió
   header_documentation: Documentació
+  header_donate: Feu una donació
   header_educate_beyond: Més enllà de Code.org
   header_educate_community: Comunitat virtual
   header_educate_elementary: Escola primària
@@ -870,6 +873,7 @@ ca-ES:
   header_help_us: Ajuda'ns
   header_incubator: Incubadora
   header_learn: Aprèn
+  header_legal_cookie_notice: Política de galetes
   header_legal_privacy: Política de privacitat
   header_legal_tos: Condicions d'ús
   header_my_dashboard: El meu panell de control

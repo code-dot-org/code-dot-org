@@ -266,6 +266,7 @@ fr-FR:
   class_submission_out_of_school_summer_camp: Camp d'été
   classicmaze_name: Labyrinthe classique
   code_hoc_coming: L'Heure de Code est là — du 8 au 14 décembre&#160;!
+  code_org_logo_alt: Accueil Code.org
   code_sign_up: Enregistrez-vous pour participer à la Semaine de l'enseignement de
     l'informatique.
   codea_beyond_gradelevel: Lycée et +
@@ -1255,7 +1256,9 @@ fr-FR:
   header_about_us: À propos
   header_course_catalog: Catalogue des cours
   header_courses: Cours
+  header_districts: Institutions
   header_documentation: Documentation
+  header_donate: Donner
   header_educate_beyond: Aller plus loin
   header_educate_community: Communauté en ligne
   header_educate_elementary: École primaire
@@ -1273,6 +1276,7 @@ fr-FR:
   header_incubator: Incubateur
   header_learn: Apprendre
   header_legal: Confidentialité et mentions légales
+  header_legal_cookie_notice: " Utilisation des cookies"
   header_legal_privacy: Politique de confidentialité
   header_legal_tos: Conditions Générales d'Utilisation
   header_my_dashboard: Mon Tableau de Bord
@@ -1280,6 +1284,7 @@ fr-FR:
   header_project_gallery: Projets
   header_report_abuse: Signaler un abus
   header_report_bug: Signaler un problème
+  header_schools: Les écoles
   header_screen_reader_hamburger: Menu
   header_screen_reader_help: Menu d'aide
   header_sections: Sections
@@ -1718,6 +1723,7 @@ fr-FR:
   homepage_slot_text_link_k5: Cours de la petite section à la CM2
   homepage_slot_text_link_local: Trouvez un cours près de chez vous
   homepage_slot_text_link_middle: Collège
+  homepage_slot_text_link_middle_and_high: Collège et lycée
   homepage_slot_text_link_othercourses: Autres cours en ligne
   homepage_slot_text_link_pd: Développement professionnel
   homepage_slot_text_link_shop: T-shirts, casquettes & plus
@@ -2672,6 +2678,8 @@ fr-FR:
   user_header_applab: 'Labo des applis '
   user_header_artist: 'Artiste '
   user_header_create: 'Créer '
+  user_header_create_account: Créer un compte
+  user_header_create_account_low_cap: Créer un compte
   user_header_dance: Soirée Dansante
   user_header_flappy: Flappy
   user_header_gamelab: Labo Jeux
@@ -2679,6 +2687,8 @@ fr-FR:
   user_header_logout: Déconnexion
   user_header_minecraft: Minecraft
   user_header_my_projects: Mes projets
+  user_header_new_project: Nouveau projet
+  user_header_new_project_low_cap: Nouveau projet
   user_header_playlab: Labo de jeux
   user_header_settings: Mon compte
   user_header_signin: Connexion
@@ -2797,32 +2807,15 @@ fr-FR:
     qui a pour but de présenter l'informatique durant une heure à des dizaines de
     millions d’élèves dans plus de 180 pays. Engagez-vous dans la Semaine de l’Enseignement
     de l’Informatique, du 7 au 13 décembre.
-  volunteer_engineer_submission_intro_guide: En savoir plus sur notre <a href="%{volunteer_guide}">
-    programme de bénévolat</a>.
   volunteer_engineer_submission_intro_guide_markdown: Pour en savoir plus sur notre
     [programme de bénévolat, cliquez ici] (%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: Êtes-vous un enseignant et cherchez-vous
-    des bénévoles ? Trouvez un bénévole près de chez vous sur notre <a href="%{volunteer_local}">carte
-    des bénévoles</a>.
   volunteer_engineer_submission_intro_links_markdown: Vous êtes enseignant à la recherche
     de bénévoles ? Trouvez un bénévole local sur notre [carte des bénévoles] (%{volunteer_local}).
-  volunteer_engineer_submission_intro_recruit: 'Les enseignants aimeraient avoir quelqu''un
-    de <span style="font-family: ''Gotham 7r'', sans-serif;">passionné par l''enseignement
-    de l’informatique, </span> qui pourrait les aider dans la salle de classe, ou
-    quelqu''un qui pourrait <span style="font-family: ''Gotham 7r'', sans-serif;">inspirer</span>
-    leurs élèves en leur parlant des nombreuses possibilités qu’offre l''informatique
-    (ce qui pourrait se faire par un échange vidéo).'
   volunteer_engineer_submission_intro_recruit_markdown: Les enseignants aimeraient
     avoir quelqu'un **passionné par l'enseignement de l'informatique** qui puisse
     aider en classe, ou pour quelqu'un qui puisse **inspirer** leurs élèves en parlant
     de l'étendue des possibilités offertes par l'informatique (ce qui pourrait se
     faire par le biais d'un chat vidéo).
-  volunteer_engineer_submission_intro_signup: Veuillez saisir les informations suivantes
-    si vous êtes étudiant en informatique ou professionnel des logiciels. Vous devez
-    être âgé d’au moins 18 ans pour vous inscrire en tant que bénévole. Notez que
-    toutes les informations que vous fournirez, dans cette section, seront accessibles
-    à quiconque consultera la <a href="/volunteer/local">carte des bénévoles</a>.  Les
-    champs marqués d'un <span class="form-required-field">*</span> sont obligatoires.
   volunteer_engineer_submission_intro_signup_markdown: Veuillez saisir les informations
     suivantes si vous êtes un étudiant en informatique ou un professionnel du logiciel.
     Vous devez être âgé d'au moins 18 ans pour vous inscrire en tant que bénévole.

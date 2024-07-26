@@ -1,5 +1,9 @@
 <GamelabJr>
   <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2022-09-19T19:15:14.000Z",
+  "level_num": "custom",
+  "user_id": 182,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -61,7 +65,7 @@
     "hide_pause_button": "false",
     "display_name": "Sounds",
     "bubble_choice_description": "Learn how to play sounds.",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"hello_world_new\",\r\n  \"callout_text\": \"New block!\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"4\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"hello_world_new\",\"callout_text\":\"New block!\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"4\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"4\\\"]\",\"localization_key\":\"hello_world_new\",\"callout_text\":\"New block!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "thumbnail_url": "https://studio.code.org/api/v1/animation-library/gamelab/D9I677s9Rz4Ww_Znrcm36XWuz8WA0Kh8/category_food/face_apple.png",
     "instructions_icon": "soccerball",
     "validation_code": "//This level requires zValidationHelperFunctions and zHelloWorldValidation\r\nlevel10();",
@@ -69,10 +73,6 @@
     "encrypted_examples": "rM1rgv1j0m0BPQQ1d7Vk4j/m1LH6q8rR+wM9wvYPSTz/o1vMCO0yuYu4CEkO\nOoP0STqbD4gvX2cwIFU320/oNg==\n",
     "preload_asset_list": null
   },
-  "level_num": "custom",
-  "game_id": 64,
-  "created_at": "2022-09-19T19:15:14.000Z",
-  "user_id": 182,
   "published": true,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-09-19T19:15:14.193+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_sounds\\\"\"],\"cloned_from\":\"helloworld_food_sounds\"},{\"changed_at\":\"2022-10-06 03:01:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 03:02:30 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 03:03:29 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 03:27:01 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 17:15:25 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2022-10-07 20:14:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-12 18:17:07 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-12 18:32:48 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
@@ -2741,7 +2741,7 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_playSoundOptionsSoccer">
+        <block type="gamelab_playSoundOptionsSoccer" id="4">
           <field name="SOUND">'sound://category_sports/Airhorn_SFX.mp3'</field>
         </block>
         <block type="gamelab_makeNewSpriteAnon">

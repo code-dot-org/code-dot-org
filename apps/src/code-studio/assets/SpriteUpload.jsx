@@ -1,7 +1,5 @@
 import React from 'react';
-import color from '@cdo/apps/util/color';
-import {makeEnum} from '@cdo/apps/utils';
-import ValidationStep, {Status} from '../../lib/ui/ValidationStep';
+
 import {
   getManifest,
   getLevelAnimationsFiles,
@@ -9,6 +7,11 @@ import {
   uploadAnimationToAnimationLibrary,
   uploadMetadataToAnimationLibrary,
 } from '@cdo/apps/assetManagement/animationLibraryApi';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import color from '@cdo/apps/util/color';
+import {makeEnum} from '@cdo/apps/utils';
+
+import ValidationStep, {Status} from '../../lib/ui/ValidationStep';
 
 const EXTENSION_CHECK = 'extensionError';
 const FILENAME_CHECK = 'filenameError';
@@ -318,7 +321,7 @@ export default class AnimationUpload extends React.Component {
       case Status.SUCCEEDED:
         return 'This path and filename are available.';
       case Status.ALERT:
-        return 'Filename already exists at this path. Would you like to replace the existing animation?';
+        return 'Filename already exists at this path. Would you like to replace the existing animation and metadata?';
       case Status.WAITING:
         return 'Select a file and destination above.';
     }
@@ -471,7 +474,11 @@ export default class AnimationUpload extends React.Component {
           </div>
           <label>
             <h3>Image Preview:</h3>
-            <img ref="imagePreview" src={filePreviewURL} />
+            {
+              // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+              // Verify or update this alt-text as necessary
+            }
+            <img ref="imagePreview" src={filePreviewURL} alt="" />
           </label>
           <h2 style={styles.animationUploadStep}>
             Step 2: Settings and Metadata
@@ -557,7 +564,11 @@ export default class AnimationUpload extends React.Component {
                 />
                 {animationExistsStatus === Status.ALERT && (
                   <div style={styles.animationReplace}>
-                    <img src={this.getExistingAnimationSrc()} />
+                    {
+                      // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+                      // Verify or update this alt-text as necessary
+                    }
+                    <img src={this.getExistingAnimationSrc()} alt="" />
                     <label>
                       <input
                         type="checkbox"
@@ -605,6 +616,11 @@ export default class AnimationUpload extends React.Component {
             <h2 style={styles.animationUploadStep}>
               Step 3: Upload image and metadata to S3
             </h2>
+            <SafeMarkdown
+              markdown={
+                'If you upload an image and metadata as a library animation, please request an engineer to update the `spritelabCostumeLibrary.json` file located in S3 - [reference doc](https://docs.google.com/document/d/1ytp-ss-TBKxgULI2kybSaDNF-tLLbVII6OYxuFP9_8k/edit).'
+              }
+            />
             <button
               type="submit"
               disabled={uploadButtonDisabled}

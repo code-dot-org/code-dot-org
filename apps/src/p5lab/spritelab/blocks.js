@@ -1,15 +1,16 @@
-import {SVG_NS} from '@cdo/apps/constants';
-import {getStore} from '@cdo/apps/redux';
-import {getLocation} from '../redux/locationPicker';
-import {P5LabInterfaceMode} from '../constants';
-import {TOOLBOX_EDIT_MODE} from '../../constants';
 import {NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
-import {animationSourceUrl} from '../redux/animationList';
-import {changeInterfaceMode} from '../actions';
+import {parseSoundPathString} from '@cdo/apps/blockly/utils';
+import {SVG_NS} from '@cdo/apps/constants';
+import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
+import {getStore} from '@cdo/apps/redux';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
-import {parseSoundPathString} from '@cdo/apps/blockly/utils';
-import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
+
+import {TOOLBOX_EDIT_MODE} from '../../constants';
+import {changeInterfaceMode} from '../actions';
+import {P5LabInterfaceMode} from '../constants';
+import {animationSourceUrl} from '../redux/animationList';
+import {getLocation} from '../redux/locationPicker';
 
 function animations(includeBackgrounds) {
   const animationList = getStore().getState().animationList;
@@ -54,31 +55,6 @@ function costumeList() {
 }
 function backgroundList() {
   return animations(true);
-}
-function getAllBehaviors() {
-  let allowBehaviorEditing = Blockly.useModalFunctionEditor;
-  const noBehaviorLabel = allowBehaviorEditing
-    ? `${i18n.createBlocklyBehavior()}\u2026`
-    : i18n.behaviorsNotFound();
-  const behaviors = [];
-  Blockly.mainBlockSpace?.getAllBlocks().forEach(function (block) {
-    if (
-      block.type === 'behavior_definition' &&
-      block.getProcedureInfo()?.name &&
-      block.getProcedureInfo()?.id
-    ) {
-      const newOption = [
-        block.getProcedureInfo().name,
-        block.getProcedureInfo().id,
-      ];
-      behaviors.push(newOption);
-    }
-  });
-  behaviors.sort();
-  if (allowBehaviorEditing || behaviors.length === 0) {
-    behaviors.push([noBehaviorLabel, NO_OPTIONS_MESSAGE]);
-  }
-  return behaviors;
 }
 
 // This color palette is limited to colors which have different hues, therefore
@@ -198,7 +174,7 @@ const customInputTypes = {
         );
     },
     generateCode(block, arg) {
-      return `'${block.getFieldValue(arg.name)}'`;
+      return JSON.stringify(block.getFieldValue(arg.name));
     },
   },
   costumePicker: {
@@ -222,7 +198,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new Blockly.FieldImageDropdown(costumeList, 32, 32, buttons),
+          new Blockly.FieldAnimationDropdown(costumeList, 32, 32, buttons),
           inputConfig.name
         );
     },
@@ -251,7 +227,7 @@ const customInputTypes = {
       currentInputRow
         .appendField(inputConfig.label)
         .appendField(
-          new Blockly.FieldImageDropdown(backgroundList, 40, 40, buttons),
+          new Blockly.FieldAnimationDropdown(backgroundList, 40, 40, buttons),
           inputConfig.name
         );
     },
@@ -336,27 +312,6 @@ const customInputTypes = {
           ],
         };
       };
-      block.renameVar = function (oldName, newName) {
-        if (
-          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
-        ) {
-          block.setTitleValue(newName, inputConfig.name);
-        }
-      };
-      block.removeVar = function (oldName) {
-        if (
-          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
-        ) {
-          block.dispose(true, true);
-        }
-      };
-      block.superSetTitleValue = block.setTitleValue;
-      block.setTitleValue = function (newValue, name) {
-        if (name === inputConfig.name && block.blockSpace.isFlyout) {
-          newValue = Blockly.Variables.generateUniqueName(newValue);
-        }
-        block.superSetTitleValue(newValue, name);
-      };
 
       currentInputRow
         .appendField(inputConfig.label)
@@ -379,39 +334,24 @@ const customInputTypes = {
   },
   behaviorPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
+      const dropdownField = new Blockly.FieldBehaviorPicker(
+        Blockly.customBlocks.getAllBehaviorOptions
+      );
       currentInputRow
         .appendField(inputConfig.label)
-        .appendField(
-          new Blockly.FieldDropdown(getAllBehaviors, undefined, undefined),
-          inputConfig.name
-        );
-      let allowBehaviorEditing = Blockly.useModalFunctionEditor;
-      if (
-        window.appOptions && // global appOptions is not available on level edit page
-        appOptions.level.toolbox &&
-        !appOptions.readonlyWorkspace &&
-        !Blockly.hasCategories
-      ) {
-        allowBehaviorEditing = false;
-      }
-      if (allowBehaviorEditing) {
-        const editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
-        Blockly.cdoUtils.bindBrowserEvent(
-          editLabel.fieldGroup_,
-          'mousedown',
-          block,
-          this.openEditor
-        );
-        currentInputRow.appendField(editLabel);
-      }
+        .appendField(dropdownField, inputConfig.name);
+      Blockly.customBlocks.addBehaviorPickerEditButton.call(
+        this,
+        block,
+        inputConfig,
+        currentInputRow,
+        dropdownField
+      );
     },
     generateCode(block, arg) {
-      const invalidBehavior =
-        block.getFieldValue(arg.name) === NO_OPTIONS_MESSAGE;
-      const behaviorId = Blockly.JavaScript.variableDB_?.getName(
-        block.getFieldValue(arg.name),
-        'PROCEDURE'
-      );
+      const fieldValue = block.getFieldValue(arg.name);
+      const invalidBehavior = fieldValue === NO_OPTIONS_MESSAGE;
+      const behaviorId = Blockly.JavaScript.getName(fieldValue, 'PROCEDURE');
       if (invalidBehavior) {
         console.warn('No behaviors available');
         return undefined;
@@ -466,6 +406,45 @@ const customInputTypes = {
       return '';
     },
   },
+  // Custom input for a variable field that generates the name of the variable
+  // rather than the value of the variable.
+  variableFieldNamePicker: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(new Blockly.FieldVariable(), inputConfig.name);
+    },
+
+    generateCode(block, arg) {
+      const id = block.getFieldValue(arg.name);
+      const label = Blockly.getMainWorkspace()
+        .getVariableMap()
+        .getVariableById(id).name;
+      const name = Blockly.JavaScript.getVariableName(id);
+      return [`"${label}"`, `"${name}"`];
+    },
+  },
+
+  bitmap: {
+    addInput(blockly, block, inputConfig, currentInputRow) {
+      const config = {
+        height: 8,
+        width: 8,
+        fieldHeight: 42,
+        buttons: {randomize: false},
+      };
+      currentInputRow
+        .appendField(inputConfig.label)
+        .appendField(
+          new Blockly.FieldBitmap(null, null, config),
+          inputConfig.name
+        );
+    },
+    generateCode(block, arg) {
+      // Convert 2d array into a string.
+      return JSON.stringify(block.getFieldValue(arg.name));
+    },
+  },
 };
 
 export default {
@@ -504,7 +483,7 @@ export default {
         var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
         // Must be marked EDITABLE so that cloned blocks share the same var name
         fieldLabel.EDITABLE = true;
-        this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+        this.setHelpUrl('/docs/spritelab/codestudio_spriteName');
         this.appendDummyInput()
           .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
           .appendField(
@@ -522,10 +501,7 @@ export default {
           .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
         this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
         this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
-        // setStyle is undefined for CDO Blockly
-        if (typeof this.setStyle === 'function') {
-          this.setStyle('sprite_blocks');
-        }
+        this.setStyle('sprite_blocks');
       },
       getVars: function () {
         return Blockly.Variables.getVars.bind(this)(
@@ -539,19 +515,27 @@ export default {
       },
       removeVar: Blockly.Blocks.variables_get.removeVar,
     };
-    generator.sprite_variables_get = function () {
-      return [
-        `{name: '${Blockly.JavaScript.translateVarName(
-          this.getFieldValue('VAR')
-        )}'}`,
-        Blockly.JavaScript.ORDER_ATOMIC,
-      ];
-    };
+    Blockly.customBlocks.defineNewBlockGenerator(
+      generator,
+      'sprite_variables_get',
+      function () {
+        return [
+          `{name: '${Blockly.JavaScript.translateVarName(
+            this.getFieldValue('VAR')
+          )}'}`,
+          Blockly.JavaScript.ORDER_ATOMIC,
+        ];
+      }
+    );
     Blockly.Variables.registerGetter(
       Blockly.BlockValueType.SPRITE,
       'sprite_variables_get'
     );
-
+    Blockly.customBlocks.defineNewBlockGenerator(
+      generator,
+      'math_random_int',
+      Blockly.customBlocks.mathRandomIntGenerator
+    );
     // NOTE: On the page where behaviors are created (the functions/#/edit page)
     // blockInstallOptions is undefined.
     if (
@@ -559,6 +543,8 @@ export default {
       !blockInstallOptions.level ||
       blockInstallOptions.level.editBlocks !== TOOLBOX_EDIT_MODE
     ) {
+      // This is only used by CDO Blockly. When we are ready to remove support
+      // for CDO Blockly we can remove this call.
       Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
         initialize(flyout, cursor) {
           if (behaviorEditor && !behaviorEditor.isOpen()) {

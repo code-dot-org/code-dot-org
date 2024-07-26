@@ -1,15 +1,16 @@
-import React, {Component} from 'react';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
+import React, {Component} from 'react';
 import {Motion, spring} from 'react-motion';
-import color from '@cdo/apps/util/color';
+import {connect} from 'react-redux';
+
 import {borderRadius, tokenMargin} from '@cdo/apps/lib/levelbuilder/constants';
+import {toggleExpand} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import LevelTokenDetails from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
 import {scriptLevelShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
-import LevelTokenDetails from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
-import {toggleExpand} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import _ from 'lodash';
+import color from '@cdo/apps/util/color';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 /**
  * Component for editing puzzle dots with one or more level variants.
@@ -276,7 +277,7 @@ const styles = {
     display: 'table-cell',
     color: 'white',
     background: color.teal,
-    border: '1px solid #00adbc',
+    border: '1px solid #0093a4',
     boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.6)',
     padding: '7px 13px',
     cursor: 'pointer',

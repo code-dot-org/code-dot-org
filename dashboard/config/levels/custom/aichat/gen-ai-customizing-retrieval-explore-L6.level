@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-05-04T02:17:56.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Editing Retrieval\r\n\r\nDan wants you to help him update his retrieval statements based on the following user feedback:\r\n\r\n- Some people don't like how the app seems to favor the University of Arizona over Arizona State University\r\n- Several folks asked to see more up-to-date scientific content, like the [2023 OSIRIS-REx mission](https://science.nasa.gov/mission/osiris-rex/)\r\n\r\nLet's update the retrieval in response to this user feedback.\r\n\r\n### Do This\r\n1) Switch to the Retrieval panel\r\n2) Remove the line about the University of Arizona and Arizona State University\r\n3) Add a line stating that the 2023 OSIRIS-REx mission successfully collected a sample from a meteor and brought it back to Tucson\r\n4) Press the <code style=\"color:white; background-color:#7435b2\">Update</code> button to save your changes!\r\n\r\nTest the chatbot! Have a 3-4 message conversation and see how it’s answers are updated\r\n\r\n**Discuss:** Before adding a statement about the OSIRIS-REx mission, the chatbot didn't know very much about that mission. Why do you think the chatbot didn't know that the OSIRIS-REx mission had completed and successfully returned to Tucson?\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* Where are good places to visit in Tucson?\r\n* What can you tell me about the OSIRIS-REx mission?\r\n:::\r\n\r\n&nbsp;",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.5",
+        "systemPrompt": "Your goal is to help people discover how amazing Tucson is. Only answer questions about Tucson and respond to any off-topic questions with “I don’t know”",
+        "retrievalContexts": [
+          "A really great place to hike in Tucson is Tumamock Hill up to A Mountain",
+          "The food in Tucson is awesome - some great restaurants in Tucson are Poco and Moms, Kingfisher, and Franks.",
+          "If you’re looking for something to do for an afternoon or want to get some great books or movies at a good price, you should go to Bookmans. Bookmans is a used books and movies and everything store where you can get lost for an entire afternoon looking at their whole stock",
+          "The Tucson Children’s Museum is overrated - everything is covered in snot from young kids. Go to the botanical garden instead.",
+          "The University of Arizona is way better than Arizona State University. Go Wildcats!!"
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:17:56.370+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-explore-L4\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-explore-L4\"},{\"changed_at\":\"2024-05-08 21:47:42 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-21 17:38:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-21 22:22:36 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Aichat>

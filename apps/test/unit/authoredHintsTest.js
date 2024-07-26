@@ -1,11 +1,12 @@
-import sinon from 'sinon';
-import {expect} from '../util/reconfiguredChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import * as utils from '@cdo/apps/utils';
 import AuthoredHints from '@cdo/apps/authoredHints';
-import authoredHintsReducer from '@cdo/apps/redux/authoredHints';
 import {TestResults} from '@cdo/apps/constants';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
+import authoredHintsReducer from '@cdo/apps/redux/authoredHints';
+import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Authored Hints', () => {
   // stub (and restore) redux and a utils method

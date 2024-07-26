@@ -134,26 +134,7 @@
   },
   "https://studio.code.org/s/csc-mappinglandmarks-2023/lessons/3/levels/1": {
     "short_instructions": "Start with adding a background to your project. ",
-    "long_instructions": "**Add a background**\n\n-   Add a <code style=\"color:black; background-color:#B3B2FB\">set background</code> block under <code style=\"color:black; background-color:#FFBD46\">when run</code>.\n-   Choose a background or upload your own.\n-   Click <code style=\"color:black; background-color:#FFBD46\">Run</code> to see the background appear.",
-    "behavior_descriptions": {
-      "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
-      "move a sprite to the right across the screen": "move a sprite to the right across the screen",
-      "rotate a sprite to its left": "rotate a sprite to its left",
-      "rotate a sprite to its right": "rotate a sprite to its right",
-      "change the size of a sprite": "change the size of a sprite",
-      "move a sprite downwards across the screen": "move a sprite downwards across the screen",
-      "move a sprite horizontally, reversing direction if it touches the edges of the screen": "move a sprite horizontally, reversing direction if it touches the edges of the screen",
-      "move a sprite upwards across the screen": "move a sprite upwards across the screen",
-      "randomly change the size of a sprite": "randomly change the size of a sprite",
-      "move a sprite to the left across the screen": "move a sprite to the left across the screen",
-      "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
-      "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
-      "randomly change the vertical position of a sprite": "randomly change the vertical position of a sprite",
-      "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
-      "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.",
-      "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.",
-      "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen.": "Move a sprite up across the screen. When it goes off the top of the screen, move it back to the bottom of the screen."
-    }
+    "long_instructions": "**Add a background**\n\n-   Add a <code style=\"color:black; background-color:#B3B2FB\">set background</code> block under <code style=\"color:black; background-color:#FFBD46\">when run</code>.\n-   Choose a background or upload your own.\n-   Click <code style=\"color:black; background-color:#FFBD46\">Run</code> to see the background appear."
   },
   "https://studio.code.org/s/csc-mappinglandmarks-2023/lessons/3/levels/2": {
     "short_instructions": "Choose a tour guide for your project by adding a new sprite. ",

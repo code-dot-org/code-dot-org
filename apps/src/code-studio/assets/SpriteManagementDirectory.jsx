@@ -5,7 +5,7 @@ export default class SpriteManagementDirectory extends React.Component {
     return (
       <div>
         <h1>Manage Sprite Lab Assets</h1>
-        <p>This is an internal set of tools for Code.org content authors.</p>
+        <p>This is an internal set of tools for Code.org content editors.</p>
         <h2>Add/Replace Animations</h2>
         <ul>
           <li>

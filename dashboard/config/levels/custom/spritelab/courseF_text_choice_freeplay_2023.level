@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2023-03-14T20:40:13.000Z",
   "level_num": "custom",
@@ -44,7 +45,7 @@
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
     "hide_custom_blocks": "true",
-    "use_default_sprites": "false",
+    "use_default_sprites": "true",
     "auto_run_setup": "DRAW_LOOP",
     "parent_level_id": 27567,
     "show_type_hints": "true",
@@ -57,7 +58,6 @@
     "mini_rubric": "false",
     "encrypted": "false",
     "long_instructions": "<div style=\"float:right\">\r\n\r\n![expandable]()\r\n\r\n</div>\r\n\r\nCreate your own program using text, prompts, and variables!\r\n\r\n\r\n## Do This\r\n* Add at least one sprite to your project.\r\n* Add at least one prompt.\r\n* Use the variable for your prompt somewhere else in your program:\r\n  * Printed text\r\n  * Title screen\r\n  * Changing the background color.\r\n\r\nYou can also add whatever you like to your code, including more sprites, behaviors, sounds, and more!\r\n",
-    "start_animations": "{\r\n  \"orderedKeys\": [\r\n    \"0a2424f1-b746-4da8-8ba0-ffde4f93003d\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"0a2424f1-b746-4da8-8ba0-ffde4f93003d\": {\r\n      \"name\": \"grid_1\",\r\n      \"sourceUrl\": \"https://studio.code.org/api/v1/animation-library/gamelab/6udB34wA0EBLf0wwVkEWGCKKSjt5rRRr/category_backgrounds/background_grid.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"6udB34wA0EBLf0wwVkEWGCKKSjt5rRRr\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    }\r\n  }\r\n}",
     "validation_enabled": "false",
     "mini_toolbox": "true",
     "callout_json": "[]",
@@ -76,11 +76,11 @@
     "project_template_level_name": "courseF_text_choice_template_2023",
     "encrypted_examples": "HlnzoQVplrIN7jMuFz9IdEVi99VJJEzJ0G+o+H97NuY7AhKSoe/IZaA6Qjnm\nd4dVHKMN/jf4nzuQveuaBN+llLeCghfsE2St8HbTlXLGheYyL3Cq32Mwg064\nXXt5lA87BBDSyorHlEHuPu00v9aEHQ==\n",
     "hint_prompt_attempts_threshold": "1",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "standalone_app_name": "spritelab"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-14T20:40:13.607+00:00\",\"changed\":[\"cloned from \\\"courseF_text_choice_freeplay_-2022-2\\\"\"],\"cloned_from\":\"courseF_text_choice_freeplay_-2022-2\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-14T20:40:13.607+00:00\",\"changed\":[\"cloned from \\\"courseF_text_choice_freeplay_-2022-2\\\"\"],\"cloned_from\":\"courseF_text_choice_freeplay_-2022-2\"},{\"changed_at\":\"2024-02-01 19:16:19 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-02-01 19:17:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"use_default_sprites\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 1,
     "events": 1,

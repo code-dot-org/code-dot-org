@@ -1,4 +1,5 @@
 @import 'color.scss';
+@import 'font.scss';
 
 @keyframes slidein {
   from {
@@ -35,7 +36,7 @@
 
 .instructions-light {
   @extend %instructions;
-  background-color: $neutral_dark10;
+  background-color: $light_white;
 }
 
 .item {
@@ -119,7 +120,7 @@
 
 .text-light {
   @extend %text;
-  background-color: $neutral_white;
+  background-color: $light_white;
   color: $neutral_dark;
 }
 
@@ -139,12 +140,12 @@
 
 .message-light {
   @extend %message;
-  background-color: $neutral_white;
+  background-color: $light_gray_50;
   color: $neutral_dark;
-  border: dashed $neutral_white 2px;
+  border: dashed $light_gray_100 2px;
 }
 
-.buttonNext {
+.buttonInstruction {
   font-size: 14px;
   background-color: $brand_secondary_default;
   border-color: $brand_secondary_default;
@@ -154,14 +155,25 @@
   border-radius: 4px;
   height: 38px;
   margin: 0 0 10px 0;
+  &:disabled,
+  &[aria-disabled='true'] {
+    cursor: not-allowed;
+    border-color: $light_gray_200;
+    background-color: $light_gray_200;
+    color: $light_white;
+  }
 }
 
 .markdownText {
   line-height: 0;
 
   h1,
-  h2 {
+  h2,
+  h3,
+  h4 {
     margin: 0 0 10px 0;
+    font-family: $barlowSemiCondensed-semibold;
+    font-size: 1.75em;
     line-height: 1.2em;
   }
 
@@ -174,7 +186,7 @@
   }
 
   code {
-    color: $neutral_light;
+    color: $light_primary_700;
   }
 
   p {

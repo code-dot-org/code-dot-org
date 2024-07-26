@@ -1,47 +1,35 @@
 import React from 'react';
-import {UnconnectedPersonalProjectsTable as PersonalProjectsTable} from './PersonalProjectsTable';
-import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
-import deleteDialog from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
-import {stubFakePersonalProjectData} from './generateFakeProjects';
+import {Provider} from 'react-redux';
 
-const initialState = {
-  publishDialog: {
-    isOpen: false,
-    isPublishPending: false,
-  },
-  deleteDialog: {
-    isOpen: false,
-  },
+import deleteDialog from '@cdo/apps/templates/projects/deleteDialog/deleteProjectDialogRedux';
+import frozenProjectInfoDialog from '@cdo/apps/templates/projects/frozenProjectInfoDialog/frozenProjectInfoDialogRedux';
+import publishDialog from '@cdo/apps/templates/projects/publishDialog/publishDialogRedux';
+import {reduxStore} from '@cdo/storybook/decorators';
+
+import {stubFakePersonalProjectData} from './generateFakeProjects';
+import {UnconnectedPersonalProjectsTable as PersonalProjectsTable} from './PersonalProjectsTable';
+export default {
+  component: PersonalProjectsTable,
 };
 
-export default storybook => {
-  storybook
-    .storiesOf('Projects/PersonalProjectsTable', module)
-    .withReduxStore({publishDialog, deleteDialog}, initialState)
-    .addStoryTable([
-      {
-        name: 'Personal Project Table',
-        description: 'Table of personal projects',
-        story: () => (
-          <PersonalProjectsTable
-            personalProjectsList={stubFakePersonalProjectData}
-            isLoadingPersonalProjectsList={false}
-            isUserSignedIn={true}
-            canShare={true}
-          />
-        ),
-      },
-      {
-        name: 'Empty Personal Project Table',
-        description: 'Table when there are 0 personal projects',
-        story: () => (
-          <PersonalProjectsTable
-            personalProjectsList={[]}
-            isLoadingPersonalProjectsList={false}
-            isUserSignedIn={true}
-            canShare={true}
-          />
-        ),
-      },
-    ]);
+const Template = args => (
+  <Provider
+    store={reduxStore({publishDialog, deleteDialog, frozenProjectInfoDialog})}
+  >
+    <PersonalProjectsTable {...args} />
+  </Provider>
+);
+
+export const WithProjects = Template.bind({});
+WithProjects.args = {
+  personalProjectsList: stubFakePersonalProjectData,
+  isLoadingPersonalProjectsList: false,
+  isUserSignedIn: true,
+};
+
+export const WithoutProjects = Template.bind({});
+WithoutProjects.args = {
+  personalProjectsList: [],
+  isLoadingPersonalProjectsList: false,
+  isUserSignedIn: true,
 };

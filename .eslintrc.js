@@ -32,7 +32,8 @@ module.exports = {
 
     // In Feb 2022, we voted to deprecate Radium (proposal at https://docs.google.com/document/d/1Y3uK_iYMhTUaCI6yIDwOAMprIJCuzXSs2fECQggwp60/edit#heading=h.htf3pg55q2kt)
     // We are now using 'react-bootstrap-2'. See further work at https://github.com/code-dot-org/code-dot-org/pull/51681
-    "no-restricted-imports": ["error", "radium", "react-bootstrap"],
+    // We are deprecating enzyme in favor of react-testing-library. See further work at https://docs.google.com/document/d/1eX-LV7d2GtuAypy9BYiT5HOwu7FQjc4kVu6qx_6bDiI
+    "no-restricted-imports": ["error", "radium", "react-bootstrap", "enzyme"],
 
     "no-trailing-spaces": "error",
     "no-undef": "error",

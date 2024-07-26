@@ -1,6 +1,6 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import AbuseExclamation from '@cdo/apps/code-studio/components/AbuseExclamation';
 
 describe('AbuseExclamation', () => {
@@ -16,8 +16,8 @@ describe('AbuseExclamation', () => {
         isOwner
       />
     );
-    expect(wrapper.find('AbuseError').length).to.equal(1);
-    expect(wrapper.find('AlertExclamation').length).to.equal(1);
+    expect(wrapper.find('AbuseError').length).toBe(1);
+    expect(wrapper.find('AlertExclamation').length).toBe(1);
   });
 
   it('shows edit link if isOwner is true', () => {
@@ -32,7 +32,7 @@ describe('AbuseExclamation', () => {
         isOwner
       />
     );
-    expect(wrapper.find('a').text()).to.contain('edit project');
+    expect(wrapper.find('a').text()).toContain('edit project');
   });
 
   it('shows code studio link if isOwener is false', () => {
@@ -47,6 +47,6 @@ describe('AbuseExclamation', () => {
         isOwner={false}
       />
     );
-    expect(wrapper.find('a').text()).to.contain('go to code studio');
+    expect(wrapper.find('a').text()).toContain('go to code studio');
   });
 });

@@ -1,42 +1,48 @@
+import {EventEmitter} from 'events';
 import $ from 'jquery';
+import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {EventEmitter} from 'events';
-import _ from 'lodash';
 import {Provider} from 'react-redux';
-import trackEvent from './util/trackEvent';
 
 // Make sure polyfills are available in all code studio apps and level tests.
 import './polyfills';
-import * as aceMode from './acemode/mode-javascript_codeorg';
-import * as assetPrefix from './assetManagement/assetPrefix';
-import * as assets from './code-studio/assets';
-import * as blockUtils from './block_utils';
-var codegen = require('./lib/tools/jsinterpreter/codegen');
-import * as dom from './dom';
-import * as dropletUtils from './dropletUtils';
-import * as shareWarnings from './shareWarnings';
-import * as utils from './utils';
-import AbuseError from './code-studio/components/AbuseError';
-import Alert from './templates/alert';
-import AuthoredHints from './authoredHints';
-import ChallengeDialog from './templates/ChallengeDialog';
-import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
-import FeedbackUtils from './feedback';
+import {
+  Renderers,
+  stringIsXml,
+  stripUserCreated,
+} from '@cdo/apps/blockly/constants';
+import {addCallouts} from '@cdo/apps/code-studio/callouts';
+import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
+import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
+import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
+import {
+  setUserRoleInCourse,
+  CourseRoles,
+} from '@cdo/apps/templates/currentUserRedux';
 import InstructionsDialog from '@cdo/apps/templates/instructions/InstructionsDialog';
-import SmallFooter from './code-studio/components/SmallFooter';
-import Sounds from './Sounds';
-import VersionHistory from './templates/VersionHistory';
-import WireframeButtons from './lib/ui/WireframeButtons';
-import annotationList from './acemode/annotationList';
-import color from './util/color';
-import firehoseClient from './lib/util/firehose';
-import getAchievements from './achievements';
-import logToCloud from './logToCloud';
+import {workspace_running_background, white} from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
 import msg from '@cdo/locale';
+
+import annotationList from './acemode/annotationList';
+import * as aceMode from './acemode/mode-javascript_codeorg';
+import getAchievements from './achievements';
+import * as assetPrefix from './assetManagement/assetPrefix';
+import AuthoredHints from './authoredHints';
+import * as blockUtils from './block_utils';
+import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
+import {assets as assetsApi} from './clientApi';
+import * as assets from './code-studio/assets';
+import AbuseError from './code-studio/components/AbuseError';
+import SmallFooter from './code-studio/components/SmallFooter';
 import project from './code-studio/initApp/project';
-import puzzleRatingUtils from './puzzleRatingUtils';
-import userAgentParser from './code-studio/initApp/userAgentParser';
+import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
+import {closeWorkspaceAlert} from './code-studio/projectRedux';
 import {
   KeyCodes,
   TestResults,
@@ -44,49 +50,50 @@ import {
   NOTIFICATION_ALERT_TYPE,
   START_BLOCKS,
 } from './constants';
-import {Renderers, stringIsXml} from '@cdo/apps/blockly/constants';
-import {assets as assetsApi} from './clientApi';
+import {getValidatedResult, initializeContainedLevel} from './containedLevels';
+import * as dom from './dom';
+import * as dropletUtils from './dropletUtils';
+import FeedbackUtils from './feedback';
 import {
   configCircuitPlayground,
   configMicrobit,
 } from './lib/kits/maker/dropletConfig';
-import {getStore} from './redux';
-import {getValidatedResult, initializeContainedLevel} from './containedLevels';
-import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
-import {parseElement as parseXmlElement} from './xml';
-import {setIsRunning, setIsEditWhileRun, setStepSpeed} from './redux/runState';
-import {
-  getIdleTimeSinceLastReport,
-  resetIdleTime,
-} from './redux/studioAppActivity';
 import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
-import {setPageConstants} from './redux/pageConstants';
-import {setVisualizationScale} from './redux/layout';
-import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
+import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
+import WireframeButtons from './lib/ui/WireframeButtons';
+import firehoseClient from './lib/util/firehose';
+import puzzleRatingUtils from './puzzleRatingUtils';
+import {getStore} from './redux';
 import {
   setAchievements,
   setBlockLimit,
   setFeedbackData,
   showFeedback,
 } from './redux/feedback';
-import experiments from '@cdo/apps/util/experiments';
 import {
   determineInstructionsConstants,
   setInstructionsConstants,
   setFeedback,
 } from './redux/instructions';
+import {setVisualizationScale} from './redux/layout';
+import {setPageConstants} from './redux/pageConstants';
+import {setIsRunning, setIsEditWhileRun, setStepSpeed} from './redux/runState';
 import {
-  setUserRoleInCourse,
-  CourseRoles,
-} from '@cdo/apps/templates/currentUserRedux';
-import {addCallouts} from '@cdo/apps/code-studio/callouts';
-import {queryParams} from '@cdo/apps/code-studio/utils';
-import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
-import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
-import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
-import {workspace_running_background, white} from '@cdo/apps/util/color';
-import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
-import {closeWorkspaceAlert} from './code-studio/projectRedux';
+  getIdleTimeSinceLastReport,
+  resetIdleTime,
+} from './redux/studioAppActivity';
+import * as shareWarnings from './shareWarnings';
+import Sounds from './Sounds';
+import Alert from './templates/alert';
+import ChallengeDialog from './templates/ChallengeDialog';
+import VersionHistory from './templates/VersionHistory';
+import color from './util/color';
+import KeyHandler from './util/KeyHandler';
+import trackEvent from './util/trackEvent';
+import * as utils from './utils';
+import {parseElement as parseXmlElement} from './xml';
+
+var codegen = require('./lib/tools/jsinterpreter/codegen');
 
 var copyrightStrings;
 
@@ -95,7 +102,11 @@ var copyrightStrings;
  */
 const MIN_WIDTH = 1400;
 const DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
-export const MAX_VISUALIZATION_WIDTH = 400;
+export const MAX_VISUALIZATION_WIDTH = experiments.isEnabled(
+  experiments.BIG_PLAYSPACE
+)
+  ? 0.75 * window.innerHeight
+  : 400;
 export const MIN_VISUALIZATION_WIDTH = 200;
 
 /**
@@ -238,6 +249,11 @@ class StudioApp extends EventEmitter {
      * Stores the code at run. It's undefined if the code is not running.
      */
     this.executingCode = undefined;
+
+    /**
+     * Global key handler for the app.
+     */
+    this.keyHandler = new KeyHandler(document);
   }
 }
 /**
@@ -510,6 +526,14 @@ StudioApp.prototype.init = function (config) {
       }, this)
     );
 
+    if (Blockly.getHiddenDefinitionWorkspace()) {
+      this.hiddenWorkspaceChangeListener =
+        Blockly.getHiddenDefinitionWorkspace().addChangeListener(
+          _.bind(function () {
+            this.updateBlockCount();
+          }, this)
+        );
+    }
     if (config.level.openFunctionDefinition) {
       this.openFunctionDefinition_(config);
     }
@@ -838,7 +862,7 @@ StudioApp.prototype.handleClearPuzzle = function (config) {
     if (Blockly.functionEditor) {
       Blockly.functionEditor.hideIfOpen();
     }
-    Blockly.mainBlockSpace.clear();
+    Blockly.clearAllStudentWorkspaces();
     this.setStartBlocks_(config, false);
     if (config.level.openFunctionDefinition) {
       this.openFunctionDefinition_(config);
@@ -1049,6 +1073,14 @@ StudioApp.prototype.setupChangeHandlers = function () {
   const runAllHandlers = this.runChangeHandlers.bind(this);
   if (this.isUsingBlockly()) {
     Blockly.addChangeListener(Blockly.mainBlockSpace, runAllHandlers);
+    if (Blockly.getHiddenDefinitionWorkspace()) {
+      // If we have a hidden definition workspace, run change listeners on it too.
+      // This ensures code changes in the hidden workspace trigger updates.
+      Blockly.addChangeListener(
+        Blockly.getHiddenDefinitionWorkspace(),
+        runAllHandlers
+      );
+    }
   } else {
     this.editor.on('change', runAllHandlers);
     // Droplet doesn't automatically bubble up aceEditor changes
@@ -1217,6 +1249,8 @@ StudioApp.prototype.inject = function (div, options) {
   } else if (experiments.isEnabled('geras')) {
     options.renderer = Renderers.GERAS;
   }
+
+  options.levelBlockIds = utils.findExplicitlySetBlockIds(window.appOptions);
   Blockly.inject(div, utils.extend(defaults, options), Sounds.getSingleton());
 };
 
@@ -1242,14 +1276,9 @@ StudioApp.prototype.initReadonly = function (options) {
 /**
  * Load the editor with blocks.
  * @param {string} source Text representation of blocks (XML or JSON).
- * @param {string | undefined} hiddenDefinitions Text representation of hidden procedure definitions (JSON)
  */
-StudioApp.prototype.loadBlocks = function (source, hiddenDefinitions) {
-  Blockly.cdoUtils.loadBlocksToWorkspace(
-    Blockly.mainBlockSpace,
-    source,
-    hiddenDefinitions
-  );
+StudioApp.prototype.loadBlocks = function (source) {
+  Blockly.cdoUtils.loadBlocksToWorkspace(Blockly.mainBlockSpace, source);
 };
 
 /**
@@ -1510,6 +1539,10 @@ StudioApp.prototype.resizeVisualization = function (width) {
   visualizationColumn.style.maxWidth = newVizWidth + vizSideBorderWidth + 'px';
   visualization.style.maxWidth = newVizWidthString;
   visualization.style.maxHeight = newVizHeightString;
+  if (experiments.isEnabled(experiments.BIG_PLAYSPACE)) {
+    visualization.style.width = newVizWidthString;
+    visualization.style.height = newVizHeightString;
+  }
 
   var scale = newVizWidth / this.nativeVizWidth;
   getStore().dispatch(setVisualizationScale(scale));
@@ -1574,13 +1607,10 @@ StudioApp.prototype.resizeToolboxHeader = function () {
 StudioApp.prototype.highlight = function (id, spotlight) {
   if (this.isUsingBlockly() && !isEditWhileRun(getStore().getState())) {
     if (id) {
-      var m = id.match(/^block_id_(\d+)$/);
-      if (m) {
-        id = m[1];
-      }
+      id = id.replace(/^block_id_/, '');
     }
 
-    Blockly.mainBlockSpace.highlightBlock(id, spotlight);
+    Blockly.cdoUtils.highlightBlock(id, spotlight);
   }
 };
 
@@ -1994,6 +2024,9 @@ StudioApp.prototype.setConfigValues_ = function (config) {
     config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
   this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
+  if (experiments.isEnabled(experiments.BIG_PLAYSPACE)) {
+    this.nativeVizWidth = 400;
+  }
 
   if (config.level.initializationBlocks) {
     var xml = parseXmlElement(config.level.initializationBlocks);
@@ -2001,6 +2034,16 @@ StudioApp.prototype.setConfigValues_ = function (config) {
       'JavaScript',
       xml
     );
+
+    // Generate code for the initialization blocks. Used at execution time
+    // for labs like Maze.
+    if (this.initializationBlocks.length) {
+      const generator = Blockly.getGenerator();
+      generator.init(this.initializationBlocks[0].workspace);
+      this.initializationCode = generator.finish(
+        Blockly.Generator.blocksToCode('JavaScript', this.initializationBlocks)
+      );
+    }
   }
 
   // enableShowCode defaults to true if not defined
@@ -2049,7 +2092,7 @@ function runButtonClickWrapper(callback) {
     );
     Blockly.mainBlockSpace.getCanvas().dispatchEvent(customEvent);
   }
-
+  getStore().dispatch(setFeedback(null));
   callback();
 }
 
@@ -2079,6 +2122,9 @@ StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
   var codeWorkspace = container.querySelector('#codeWorkspace');
 
+  const isSignedOut = !config.isSignedIn;
+  const isStandaloneProject = config.level.isProjectLevel;
+
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
   var runClick = this.runButtonClick.bind(this);
@@ -2087,9 +2133,31 @@ StudioApp.prototype.configureDom = function (config) {
     leading: true,
     trailing: false,
   });
+
+  function handleRunButtonClick() {
+    throttledRunClick.call(this);
+    // Sends a Statsig event when the Run button is pressed by a signed out user
+    // This is related to the Create Account Button A/B Test; see Jira ticket:
+    // https://codedotorg.atlassian.net/browse/ACQ-1938
+    if (isSignedOut && isStandaloneProject) {
+      analyticsReporter.sendEvent(
+        EVENTS.RUN_BUTTON_PRESSED_SIGNED_OUT,
+        {},
+        PLATFORMS.STATSIG
+      );
+    }
+  }
+
   if (runButton && resetButton) {
-    dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
+    dom.addClickTouchEvent(runButton, _.bind(handleRunButtonClick, this));
     dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
+    this.keyHandler.registerEvent(['Control', 'Enter'], () => {
+      if (this.isRunning()) {
+        this.resetButtonClick();
+      } else {
+        throttledRunClick();
+      }
+    });
   }
   var skipButton = container.querySelector('#skipButton');
   if (skipButton) {
@@ -2236,29 +2304,6 @@ StudioApp.prototype.handleHideSource_ = function (options) {
         });
 
         buttonRow.appendChild(openWorkspace);
-
-        if (
-          ['algebra_game', 'calc', 'eval'].includes(
-            appOptions?.level?.projectType
-          )
-        ) {
-          const deprecationUrl =
-            'https://support.code.org/hc/en-us/articles/16268528601101-List-of-Deprecated-or-Non-Supported-Code-org-Courses';
-          ReactDOM.render(
-            <div style={{color: '#ff7a7a', textAlign: 'initial'}}>
-              {msg.deprecatedCalcAndEvalBrief()}
-              &nbsp;
-              <a
-                href={deprecationUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {msg.learnMore()}
-              </a>
-            </div>,
-            buttonRow.appendChild(document.createElement('div'))
-          );
-        }
       }
     }
   }
@@ -2276,7 +2321,17 @@ StudioApp.prototype.handleIframeEmbedAppAndCode_ = function () {
  * @param {object} config The object containing all metadata about the project
  */
 StudioApp.prototype.loadLibraryBlocks = function (config) {
-  if (!config.level.libraries && config.level.startLibraries) {
+  // We use start libaries if we should ignore last attempt, the level has contained levels,
+  // or if the level does not have libraries saved to it yet.
+  // Always use the source code from the level definition for contained and embed levels,
+  // so that changes made in levelbuilder will show up for users who have
+  // already run the level.
+  if (
+    (!config.level.libraries ||
+      config.ignoreLastAttempt ||
+      config.hasContainedLevels) &&
+    config.level.startLibraries
+  ) {
     config.level.libraries = JSON.parse(config.level.startLibraries);
   }
   if (!config.level.libraries) {
@@ -2737,31 +2792,34 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     loadLastAttempt = false;
   }
   var startBlocks = config.level.startBlocks || '';
+  // When procedure definition blocks are set using the modal function editor,
+  // they will end up deletable by the student unless the XML is manually
+  // updated. Removing usercreated="true" ensures functions and behaviors
+  // are not deletable by the student using the modal editor.
+  if (stringIsXml(startBlocks)) {
+    startBlocks = stripUserCreated(startBlocks);
+  }
   // TODO: When we start using json in levelbuilder, we will need to pull this from the level config.
-  // For now, if we aren't loading last attempt hidden definitions will always be undefined.
-  let startHiddenDefinitions = undefined;
   if (loadLastAttempt && config.levelGameName !== 'Jigsaw') {
     startBlocks = config.level.lastAttempt || startBlocks;
-    startHiddenDefinitions = config.level.hiddenDefinitions;
   }
 
+  // Only used in Sprite Lab.
+  if (config.level.sharedFunctions) {
+    startBlocks = Blockly.cdoUtils.appendSharedFunctions(
+      startBlocks,
+      config.level.sharedFunctions
+    );
+  }
   let isXml = stringIsXml(startBlocks);
 
   if (isXml) {
-    // Only used in Calc/Eval, Craft, Maze, and Artist
+    // Only used in Craft, Maze, and Artist
     if (config.forceInsertTopBlock) {
       // Adds a 'when_run' or similar block to workspace, if there isn't one.
       startBlocks = blockUtils.forceInsertTopBlock(
         startBlocks,
         config.forceInsertTopBlock
-      );
-    }
-    // Only used in Sprite Lab.
-    if (config.level.sharedFunctions) {
-      // TODO: Re-implement for JSON before migrating Sprite Lab
-      startBlocks = blockUtils.appendNewFunctions(
-        startBlocks,
-        config.level.sharedFunctions
       );
     }
     // Not needed if source is JSON, as these blocks will already have positions.
@@ -2771,11 +2829,11 @@ StudioApp.prototype.setStartBlocks_ = function (config, loadLastAttempt) {
     );
   }
   try {
-    this.loadBlocks(startBlocks, startHiddenDefinitions);
+    this.loadBlocks(startBlocks);
   } catch (e) {
     if (loadLastAttempt) {
       try {
-        Blockly.mainBlockSpace.clear();
+        Blockly.clearAllStudentWorkspaces();
         // Try loading the default start blocks instead.
         this.setStartBlocks_(config, false);
       } catch (otherException) {
@@ -2829,12 +2887,24 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
 
   // If levelbuilder provides an empty toolbox, some apps (like artist)
   // replace it with a full toolbox. I think some levels may depend on this
-  // behavior. We want a way to specify no toolbox, which is <xml></xml>
+  // behavior. We want a way to specify no toolbox, which is <xml></xml>.
+  // Google Blockly may also add a xmlns attribute to this xml.
   if (config.level.toolbox) {
-    var toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
+    // Update CDO Blockly XML so it is compatible with mainline Google Blockly
+    // (Nothing is changed if we are using CDO Blockly.)
+    config.level.toolbox = Blockly.cdoUtils.processToolboxXml(
+      config.level.toolbox
+    );
+
+    const toolboxWithoutWhitespace = config.level.toolbox.replace(/\s/g, '');
+    const emptyToolboxOptionsWithoutWhitespace = [
+      '<xml></xml>',
+      '<xml/>',
+      '<xmlxmlns="https://developers.google.com/blockly/xml"/>',
+      '<xmlxmlns="https://developers.google.com/blockly/xml"></xml>',
+    ];
     if (
-      toolboxWithoutWhitespace === '<xml></xml>' ||
-      toolboxWithoutWhitespace === '<xml/>'
+      emptyToolboxOptionsWithoutWhitespace.includes(toolboxWithoutWhitespace)
     ) {
       config.level.toolbox = undefined;
     }
@@ -2914,13 +2984,11 @@ StudioApp.prototype.handleUsingBlockly_ = function (config) {
   }
   this.setStartBlocks_(config, true);
 
-  if (userAgentParser.isMobile() && userAgentParser.isSafari()) {
-    // Mobile Safari resize events fire too early, see:
-    // https://openradar.appspot.com/31725316
-    // Rerun the blockly resize handler after 500ms when clientWidth/Height
-    // should be correct
-    window.setTimeout(() => Blockly.fireUiEvent(window, 'resize'), 500);
-  }
+  // In some cases, resize events fire too early. For example, see:
+  // https://openradar.appspot.com/31725316
+  // Resize the Blockly workspace after 500ms when clientWidth/Height
+  // should be correct.
+  window.setTimeout(() => Blockly.fireUiEvent(window, 'resize'), 500);
 };
 
 /**
@@ -3001,11 +3069,6 @@ StudioApp.prototype.getFilteredUnfilledFunctionalBlock_ = function (filter) {
     var rootBlock = block.getRootBlock();
     if (!filter(rootBlock)) {
       return false;
-    }
-
-    if (block.hasUnfilledFunctionalInput()) {
-      unfilledBlock = block;
-      return true;
     }
   });
 
@@ -3249,6 +3312,8 @@ StudioApp.prototype.displayPlayspaceAlert = function (type, alertContents) {
 
   const playspaceAlert = React.createElement(Alert, alertProps, alertContents);
   ReactDOM.render(playspaceAlert, renderElement);
+
+  return renderElement;
 };
 
 /**
@@ -3414,6 +3479,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
       locale: config.locale,
       assetUrl: this.assetUrl,
       inStartBlocksMode: level.edit_blocks === START_BLOCKS,
+      inToolboxBlocksMode: level.edit_blocks === TOOLBOX_EDIT_MODE,
       isReadOnlyWorkspace: !!config.readonlyWorkspace,
       isDroplet: !!level.editCode,
       isBlockly: this.isUsingBlockly(),
@@ -3443,6 +3509,7 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
       isK1: config.level.isK1,
       appType: config.app,
       nextLevelUrl: config.nextLevelUrl,
+      currentScriptLevelUrl: config.currentScriptLevelUrl,
       isProjectTemplateLevel:
         !!config.level.projectTemplateLevelName && !config.level.isK1,
       showProjectTemplateWorkspaceIcon:
@@ -3465,27 +3532,6 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
 
   const instructionsConstants = determineInstructionsConstants(config);
   getStore().dispatch(setInstructionsConstants(instructionsConstants));
-};
-
-StudioApp.prototype.showRateLimitAlert = function () {
-  // only show the alert once per session
-  if (this.hasSeenRateLimitAlert_) {
-    return false;
-  }
-  this.hasSeenRateLimitAlert_ = true;
-
-  var alert = <div>{msg.dataLimitAlert()}</div>;
-  if (this.share) {
-    this.displayPlayspaceAlert('error', alert);
-  } else {
-    this.displayWorkspaceAlert('error', alert);
-  }
-
-  logToCloud.addPageAction(logToCloud.PageAction.FirebaseRateLimitExceeded, {
-    isEditing: project.isEditing(),
-    isOwner: project.isOwner(),
-    share: !!this.share,
-  });
 };
 
 /** @return Promise */
@@ -3532,10 +3578,14 @@ if (IN_UNIT_TEST) {
   };
 
   module.exports.restoreStudioApp = function () {
+    instance = singleton();
     instance.removeAllListeners();
     instance.libraries = {};
     if (instance.changeListener) {
       Blockly.removeChangeListener(instance.changeListener);
+    }
+    if (instance.hiddenWorkspaceChangeListener) {
+      Blockly.removeChangeListener(instance.hiddenWorkspaceChangeListener);
     }
     instance = __oldInstance;
     __oldInstance = null;

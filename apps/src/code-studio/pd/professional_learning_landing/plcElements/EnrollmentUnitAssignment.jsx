@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
+
 import color from '../../../../util/color';
+
 import ModuleAssignment from './ModuleAssignment';
 
 export default class EnrollmentUnitAssignment extends React.Component {
@@ -26,8 +30,8 @@ export default class EnrollmentUnitAssignment extends React.Component {
 
   render() {
     return (
-      <div style={styles.courseUnitSection}>
-        <a href={this.props.courseUnitData.link}>
+      <div style={styles.courseUnitSection} className="course_unit_section">
+        <a href={this.props.courseUnitData.link} className="course_unit_title">
           <div style={styles.courseUnitSectionHeader}>
             {this.props.courseUnitData['unitName']}
           </div>
@@ -48,7 +52,7 @@ const styles = {
   },
   courseUnitSectionHeader: {
     color: color.dark_charcoal,
-    fontFamily: '"Gotham 4r"',
+    ...fontConstants['main-font-regular'],
     fontSize: '18px',
   },
   comingSoonMessage: {

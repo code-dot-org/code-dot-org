@@ -9,7 +9,7 @@ vi-VN:
     hộ hợp pháp cho phép sử dụng dịch vụ Code.org.
   account_sign_up_email_opt_in: Chúng tôi có thể gửi email cho bạn thông tin cập nhật
     về các khóa học của chúng tôi, các cơ hội ở địa phương hay tin tức về khoa học
-    máy tính khác không?
+    máy tính khác không? (khoảng một tháng một lần)
   ai_activity: Hoạt động
   ai_aiedu_intro: 'AiEdu: Giới thiệu về trí tuệ nhân tạo'
   ai_aiedu_intro_description: Giới thiệu về AI là một chương trình giảng dạy miễn
@@ -257,6 +257,7 @@ vi-VN:
   class_submission_out_of_school_summer_camp: Trại hè
   classicmaze_name: Mê cung cổ điển
   code_hoc_coming: Giờ lập trình là ở đây - ngày 8-14 tháng 12!
+  code_org_logo_alt: Trang chủ Code.org
   code_sign_up: Đăng ký để tham gia trong tuần giáo dục Khoa học máy tính
   codea_beyond_gradelevel: Trung học +
   codea_beyond_longdescription: Codea cho iPad giúp bạn làm game và bản mô phỏng &mdash;
@@ -1199,7 +1200,9 @@ vi-VN:
   header_about_us: Giới thiệu về chúng tôi
   header_course_catalog: Danh mục khóa học
   header_courses: Các khóa học
+  header_districts: Quận
   header_documentation: Tài liệu
+  header_donate: Quyên góp
   header_educate_beyond: Đằng sau Code.org
   header_educate_community: Cộng đồng trực tuyến
   header_educate_elementary: Tiểu học
@@ -1217,6 +1220,7 @@ vi-VN:
   header_incubator: Ấp ấp
   header_learn: Học
   header_legal: Quyền riêng tư & Pháp lý
+  header_legal_cookie_notice: Thông báo về cookie
   header_legal_privacy: Chính sách bảo mật
   header_legal_tos: Các điều khoản của Code.org
   header_my_dashboard: Bảng điều khiển của tôi
@@ -1224,6 +1228,7 @@ vi-VN:
   header_project_gallery: Dự án
   header_report_abuse: Báo cáo lạm dụng
   header_report_bug: Báo cáo sự cố
+  header_schools: Trường học
   header_screen_reader_hamburger: Menu
   header_screen_reader_help: Danh sách hỗ trợ
   header_sections: Mục
@@ -1668,6 +1673,7 @@ vi-VN:
   homepage_slot_text_link_k5: Các khoá cho cấp tiểu học
   homepage_slot_text_link_local: Tìm lớp ở địa phương
   homepage_slot_text_link_middle: Trung học cơ sở
+  homepage_slot_text_link_middle_and_high: Trung học cơ sở và Trung học phổ thông
   homepage_slot_text_link_othercourses: Các khoá trực tuyến khác
   homepage_slot_text_link_pd: Phát triển nghề nghiệp
   homepage_slot_text_link_shop: Áo phông, nón và nhiều hơn nữa
@@ -2610,6 +2616,8 @@ vi-VN:
   user_header_applab: Phòng thí nghiệm ứng dụng
   user_header_artist: Họa sĩ
   user_header_create: Tạo
+  user_header_create_account: Tạo Tài Khoản
+  user_header_create_account_low_cap: Tạo tài khoản
   user_header_dance: Bữa Tiệc Khiêu Vũ
   user_header_flappy: Flappy bird
   user_header_gamelab: Phòng thí nghiệm trò chơi
@@ -2617,6 +2625,8 @@ vi-VN:
   user_header_logout: Đăng xuất
   user_header_minecraft: Minecraft
   user_header_my_projects: Chương trình của tôi
+  user_header_new_project: Dự Án Mới
+  user_header_new_project_low_cap: New project
   user_header_playlab: Phòng trò chơi
   user_header_settings: Cài đặt tài khoản
   user_header_signin: Đăng nhập
@@ -2736,29 +2746,15 @@ vi-VN:
     cầu về việc giới thiệu công nghệ thông tin trong một giờ đồng hồ, với mười triệu
     học sinh/sinh viên ở 180+ quốc gia. Xin vui lòng tham gia Tuần Lễ Công Nghệ Thông
     Tin, từ ngày 7 đến 13 tháng 12.
-  volunteer_engineer_submission_intro_guide: Tìm hiểu thêm về Hour of Codechương trình
-    tình nguyện tại đây</a>.
   volunteer_engineer_submission_intro_guide_markdown: Tìm hiểu thêm về [chương trình
     tình nguyện viên tại đây](%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: Bạn có cần tìm tình nguyện viên? Hãy
-    tìm một tình nguyện viên ở khu vực của bạn trên <a href="%{volunteer_local}">
-    bản đồ tình nguyện viên của chúng tôi </a>.
   volunteer_engineer_submission_intro_links_markdown: Bạn là giáo viên đang tìm kiếm
     tình nguyện viên? Hãy tìm tình nguyện viên tại địa phương trên [bản đồ tình nguyện
     viên](%{volunteer_local}).
-  volunteer_engineer_submission_intro_recruit: 'Các giáo viên đang cần sự giúp đỡ
-    từ một vài người <span style="font-family: ''Gotham 7r'', sans-serif;"> đam mê
-    về việc giảng dạy công nghệ thông tin </span>, những người có thể trợ giúp trong
-    lớp học, hoặc những người có thể <span style="font-family: ''Gotham 7r'', sans-serif;">
-    truyền cảm hứng </span> đến học sinh/sinh viên thông qua việc trò chuyện chi tiết
-    về công nghệ thông tin (có thể được thực hiên bằng một cuộc gọi video).'
   volunteer_engineer_submission_intro_recruit_markdown: Giáo viên rất muốn có ai đó
     **đam mê giảng dạy khoa học máy tính** có thể trợ giúp trong lớp học hoặc ai đó
     có thể **truyền cảm hứng** cho học sinh của họ bằng cách nói về tiềm năng rộng
     lớn của khoa học máy tính (có thể tiến hành thông qua cuộc gọi video).
-  volunteer_engineer_submission_intro_signup: Xin vui lòng nhập vào thông tin sau
-    đây nếu bạn là một sinh viên ngành công nghệ thông tin hay chuyên gia phần mềm.
-    Những mục đánh dấu với <span class="form-required-field">*</span> là bắt buộc.
   volunteer_engineer_submission_intro_signup_markdown: Vui lòng nhập thông tin sau
     nếu bạn là học sinh học khoa học máy tính hoặc chuyên gia phần mềm. Bạn phải đủ
     18 tuổi trở lên để đăng ký làm tình nguyện viên. Lưu ý rằng tất cả các thông tin

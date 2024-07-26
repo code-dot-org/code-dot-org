@@ -1,5 +1,9 @@
-import {createStore} from '../../util/redux';
-import {expect} from '../../util/reconfiguredChai';
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
+import {combineReducers, Store} from 'redux';
+import Sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+import {StubFunction} from 'test/types/types';
+
+import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
 import {
   DanceState,
   initSongs,
@@ -8,17 +12,15 @@ import {
   setSong,
   setSongData,
 } from '@cdo/apps/dance/danceRedux';
-import {setExternalGlobals} from '../../util/testUtils';
-import * as commonReducers from '@cdo/apps/redux/commonReducers';
-import {combineReducers, Store} from 'redux';
 import * as songs from '@cdo/apps/dance/songs';
-import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
-import * as utils from '@cdo/apps/utils';
-import {assert} from 'chai';
-import Sinon from 'sinon';
-import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {SongData, SongMetadata} from '@cdo/apps/dance/types';
-import {StubFunction} from 'test/types/types';
+import * as commonReducers from '@cdo/apps/redux/commonReducers';
+import {AppDispatch} from '@cdo/apps/util/reduxHooks';
+import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {createStore} from '../../util/redux';
+import {setExternalGlobals} from '../../util/testUtils';
 
 describe('danceRedux', function () {
   let store: Store;
@@ -104,7 +106,7 @@ describe('danceRedux', function () {
       userManifest = 'user-manifest';
       queryParams.returns(userManifest);
 
-      songManifest = {};
+      songManifest = [{id: 'a'}, {id: 'b'}, {id: 'c'}];
       getSongManifest.returns(new Promise(resolve => resolve(songManifest)));
 
       parseSongOptions.returns(songData);
@@ -140,6 +142,38 @@ describe('danceRedux', function () {
         assert.isTrue(parseSongOptions.calledWithExactly(songManifest));
         assert.isTrue(
           getSelectedSong.calledWithExactly(songManifest, selectSongOptions)
+        );
+        assert.isTrue(loadSong.calledWith(selectedSong));
+        assert.isTrue(onSongSelected.calledWithExactly(selectedSong));
+
+        assert.deepEqual(store.getState().dance.songData, songData);
+        assert.deepEqual(store.getState().dance.selectedSong, selectedSong);
+      });
+
+      it('initializes filtered songs correctly', async () => {
+        const selectSongOptions = {
+          isProjectLevel,
+          freePlay,
+          defaultSong,
+          selectedSong,
+          songSelection: ['a'],
+        };
+        await dispatch(
+          initSongs({
+            useRestrictedSongs,
+            selectSongOptions,
+            onAuthError,
+            onSongSelected,
+          })
+        );
+
+        assert.isTrue(queryParams.calledWithExactly('manifest'));
+        assert.isTrue(
+          getSongManifest.calledWithExactly(useRestrictedSongs, userManifest)
+        );
+        assert.isTrue(parseSongOptions.calledWithExactly([{id: 'a'}]));
+        assert.isTrue(
+          getSelectedSong.calledWithExactly([{id: 'a'}], selectSongOptions)
         );
         assert.isTrue(loadSong.calledWith(selectedSong));
         assert.isTrue(onSongSelected.calledWithExactly(selectedSong));

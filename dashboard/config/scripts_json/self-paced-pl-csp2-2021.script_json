@@ -4,13 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "CSP Self Paced PL",
       "is_migrated": true,
       "student_detail_progress_view": true,
       "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-12-14 21:33:39 UTC",
+    "serialized_at": "2024-01-25 21:34:56 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -488,6 +489,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod2-progress-c4u-csp"
+        ],
         "progression": "Track student progress and provide feedback"
       },
       "bonus": false,
@@ -835,6 +839,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSP-21-Navigation-Mod2"
+        ],
         "progression": "Wrap up"
       },
       "bonus": false,
@@ -1170,6 +1177,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

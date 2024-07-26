@@ -1,6 +1,7 @@
-import React from 'react';
-import ChangeEmailForm from './ChangeEmailForm';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
+import ChangeEmailForm from './ChangeEmailForm';
 
 const DEFAULT_PROPS = {
   values: {
@@ -21,7 +22,6 @@ const DEFAULT_PROPS = {
 };
 
 export default {
-  title: 'ChangeEmailForm',
   component: ChangeEmailForm,
 };
 

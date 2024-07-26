@@ -1,12 +1,15 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {setShowSharingColumn, editAll} from './manageStudentsRedux';
 import {connect} from 'react-redux';
-import Button from '../Button';
-import i18n from '@cdo/locale';
-import BaseDialog from '../BaseDialog';
-import DialogFooter from '../teacherDashboard/DialogFooter';
+
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
+
+import BaseDialog from '../BaseDialog';
+import Button from '../Button';
+import DialogFooter from '../teacherDashboard/DialogFooter';
+
+import {setShowSharingColumn, editAll} from './manageStudentsRedux';
 
 class ControlProjectSharingDialog extends Component {
   static propTypes = {

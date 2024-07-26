@@ -52,7 +52,7 @@
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
     "makerlab_enabled": "circuitPlayground",
-    "long_instructions": "# Light Patterns\r\n\r\nThis app creates different light patterns on the circuit playground by pressing buttons on the screen. It already has one light pattern, which can be activated by clicking a button on the screen. \r\n\r\nAdd your own button to the screen that creates your own light pattern - maybe the colors of your favorite holiday, college, sports team, or try to create an image with the lights.\r\n\r\n## Do This\r\n\r\n**In Design Mode:**\r\n1) Add a new button to your screen. Give it a meaningful ID\r\n\r\n**In Code Mode:**\r\n2) When the user clicks the button, a light pattern appears\r\n\t- Add an [`onEvent()`(#fff176)](/docs/applab/onEvent/) block for your button\r\n    - Add the [`colorLEDs.color()`(#f78183)](/docs/applab/color/) and [`colorLEDs.intensity()`(#f78183)](/docs/applab/color/) blocks to create your own light design. You should use each LED on your board.\r\n\r\n",
+    "long_instructions": "# Light Patterns\r\n\r\nThis app creates different light patterns on the circuit playground by pressing buttons on the screen. It already has one light pattern, which can be activated by clicking a button on the screen. \r\n\r\nAdd your own button to the screen that creates your own light pattern - maybe the colors of your favorite holiday, college, sports team, or try to create an image with the lights.\r\n\r\n## Do This\r\n\r\n**In Design Mode:**\r\n1) Add a new button to your screen. Give it a meaningful ID\r\n\r\n**In Code Mode:**\r\n2) When the user clicks the button, a light pattern appears\r\n\t- Add an [`onEvent()`(#fff176)](/docs/applab/onEvent/) block for your button\r\n    - Add the [`colorLEDs.color()`(#f78183)](/docs/applab/color/) and [`colorLEDs.intensity()`(#f78183)](/docs/applab/color/) blocks to create your own light design. You should use at least 3 different colors and change the intensity of some of the LEDs on your board.\r\n\r\n",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "expand_debugger": "false",
@@ -81,7 +81,7 @@
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:00:09.497+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - A_2222\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - A_2222\"},{\"changed_at\":\"2023-08-16 17:43:16 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:00:09.497+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - A_2222\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - A_2222\"},{\"changed_at\":\"2023-08-16 17:43:16 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-07 15:42:01 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

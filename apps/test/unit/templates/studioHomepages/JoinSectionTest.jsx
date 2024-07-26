@@ -1,8 +1,10 @@
-import {expect} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {UnconnectedJoinSection as JoinSection} from '@cdo/apps/templates/studioHomepages/JoinSection';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   enrolledInASection: false,

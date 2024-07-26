@@ -1,15 +1,20 @@
-import React, {useState} from 'react';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
-import color from '@cdo/apps/util/color';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Button from './Button';
-import trackEvent from '../util/trackEvent';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import _ from 'lodash';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import color from '@cdo/apps/util/color';
+
+import trackEvent from '../util/trackEvent';
+
+import Button from './Button';
 
 export const NotificationType = {
+  default: 'default',
   information: 'information',
   success: 'success',
   failure: 'failure',
@@ -27,6 +32,7 @@ const Notification = ({
   buttons,
   buttonsStyles,
   buttonText,
+  buttonColor,
   children,
   details,
   detailsLink,
@@ -45,6 +51,7 @@ const Notification = ({
   type,
   tooltipText,
   width,
+  colors,
 }) => {
   const [open, setOpen] = useState(true);
 
@@ -122,7 +129,7 @@ const Notification = ({
     return null;
   }
 
-  const colorStyles = styles.colors[type];
+  const colorStyles = {...styles.colors[type], ...colors};
 
   const tooltipId = _.uniqueId();
 
@@ -131,7 +138,9 @@ const Notification = ({
       <div style={{...colorStyles, ...mainStyle}}>
         {type !== NotificationType.course && (
           <div style={{...styles.iconBox, ...colorStyles, ...iconStyles}}>
-            <FontAwesome icon={icons[type]} style={styles.icon} />
+            {icons[type] && (
+              <FontAwesome icon={icons[type]} style={styles.icon} />
+            )}
           </div>
         )}
         <div style={styles.contentBox}>
@@ -175,7 +184,7 @@ const Notification = ({
               <Button
                 __useDeprecatedTag
                 href={buttonLink}
-                color={Button.ButtonColor.gray}
+                color={buttonColor || Button.ButtonColor.gray}
                 text={buttonText}
                 style={styles.button}
                 target={newWindow ? '_blank' : null}
@@ -186,13 +195,11 @@ const Notification = ({
             {buttons &&
               buttons.map((button, index) => (
                 <Button
-                  __useDeprecatedTag
                   key={index}
                   href={button.link}
                   color={button.color || Button.ButtonColor.gray}
                   text={button.text}
                   style={{...styles.button, ...button.style}}
-                  target={button.newWindow ? '_blank' : null}
                   onClick={button.onClick}
                   className={button.className}
                 />
@@ -220,6 +227,7 @@ Notification.propTypes = {
   detailsLinkNewWindow: PropTypes.bool,
   buttonText: PropTypes.string,
   buttonLink: PropTypes.string,
+  buttonColor: PropTypes.string,
   dismissible: PropTypes.bool.isRequired,
   iconStyles: PropTypes.object,
   onDismiss: PropTypes.func,
@@ -242,7 +250,6 @@ Notification.propTypes = {
     PropTypes.shape({
       text: PropTypes.string,
       link: PropTypes.string,
-      newWindow: PropTypes.bool,
       onClick: PropTypes.func,
       className: PropTypes.string,
       color: PropTypes.oneOf(Object.keys(Button.ButtonColor)),
@@ -255,6 +262,17 @@ Notification.propTypes = {
 
   // Can be specified to override default width
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+
+  colors: PropTypes.shape({
+    backgroundColor: PropTypes.string,
+    borderColor: PropTypes.string,
+    color: PropTypes.string,
+  }),
+};
+
+Notification.defaultProps = {
+  type: NotificationType.default,
+  colors: {},
 };
 
 const styles = {
@@ -270,16 +288,15 @@ const styles = {
     boxSizing: 'border-box',
   },
   notice: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     fontSize: 18,
-    fontWeight: 'bold',
     letterSpacing: -0.2,
     lineHeight: 1.5,
     marginTop: 16,
     backgroundColor: color.white,
   },
   details: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     fontSize: 14,
     lineHeight: 1.5,
     paddingTop: 6,
@@ -287,7 +304,7 @@ const styles = {
     color: color.charcoal,
   },
   detailsLink: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: color.teal,
   },
   wordBox: {
@@ -331,6 +348,10 @@ const styles = {
     marginBottom: 18,
   },
   colors: {
+    [NotificationType.default]: {
+      borderColor: color.teal,
+      backgroundColor: color.teal,
+    },
     [NotificationType.information]: {
       borderColor: color.teal,
       color: color.teal,

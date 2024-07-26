@@ -22,15 +22,16 @@ class Foorm::Library < ApplicationRecord
 
   after_commit :write_library_to_file
 
-  def self.setup
+  def self.setup(dashboard_root = '.')
     # Seed all libraries inside of a transaction, such that all libraries are imported/updated successfully
     # or none at all.
     ActiveRecord::Base.transaction do
-      Dir.glob('config/foorm/library/**/*.json').each do |path|
+      prefix = "#{dashboard_root}/config/foorm/library/"
+      Dir.glob("#{prefix}**/*.json").each do |path|
         # Given: "config/foorm/library/surveys/pd/pre_workshop_survey.0.json"
         # we get full_name: "surveys/pd/pre_workshop_survey"
         #      and version: 0
-        unique_path = path.partition("config/foorm/library/")[2]
+        unique_path = path.partition(prefix)[2]
         filename_and_version = File.basename(unique_path, ".json")
         filename, version = filename_and_version.split(".")
         version = version.to_i

@@ -1,16 +1,17 @@
 /* eslint-disable react/jsx-no-target-blank */
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from '../../util/color';
-import i18n from '@cdo/locale';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import style from './project-card.module.scss';
-import ReportAbusePopUp from './ReportAbusePopUp.jsx';
+import i18n from '@cdo/locale';
 
-const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
-
+import color from '../../util/color';
 import {UnlocalizedTimeAgo} from '../TimeAgo';
+
+import {getProjectCardImageUrl} from './projectUtils';
+
+import style from './project-card.module.scss';
 
 export default class ProjectCard extends React.Component {
   static propTypes = {
@@ -18,75 +19,11 @@ export default class ProjectCard extends React.Component {
     currentGallery: PropTypes.oneOf(['personal', 'public']).isRequired,
     showFullThumbnail: PropTypes.bool,
     isDetailView: PropTypes.bool,
+    showReportAbuseHeader: PropTypes.bool,
   };
 
   constructor(props) {
     super(props);
-
-    this.state = {
-      showReportAbuse: false,
-      showReportHeader: false, // may need to change this state in the future to utilize report cookies - if gallery ever keeps an immediate report
-    };
-    this.showReportAbusePopUp = this.showReportAbusePopUp.bind(this);
-    this.closeReportAbusePopUp = this.closeReportAbusePopUp.bind(this);
-    this.showReportedHeader = this.showReportedHeader.bind(this);
-  }
-
-  showReportAbusePopUp() {
-    this.setState({
-      showReportAbuse: true,
-    });
-  }
-
-  closeReportAbusePopUp() {
-    this.setState({
-      showReportAbuse: false,
-    });
-  }
-
-  showReportedHeader() {
-    this.setState({
-      showReportHeader: true,
-    });
-  }
-
-  renderHeader() {
-    const {showReportHeader} = this.state;
-
-    if (!showReportHeader) {
-      return (
-        <div
-          style={{
-            ...styles.thumbnail,
-            ...styles.header,
-            justifyContent: 'flex-end',
-          }}
-        >
-          <button
-            type="button"
-            onClick={this.showReportAbusePopUp}
-            className={style.cautionButton}
-          >
-            <FontAwesome
-              icon="circle-exclamation"
-              className={style.cautionIcon}
-            />
-          </button>
-        </div>
-      );
-    } else {
-      return (
-        <div
-          style={{
-            ...styles.thumbnail,
-            ...styles.header,
-            justifyContent: 'center',
-          }}
-        >
-          <p className={style.reported}>{i18n.reported()}</p>
-        </div>
-      );
-    }
   }
 
   render() {
@@ -98,31 +35,18 @@ export default class ProjectCard extends React.Component {
       ? `/projects/${type}/${channel}/edit`
       : `/projects/${type}/${channel}`;
 
-    const thumbnailStyle = styles.thumbnail;
+    let thumbnailStyle = styles.thumbnail;
     if (this.props.showFullThumbnail) {
-      Object.assign(thumbnailStyle, styles.fullThumbnail);
+      thumbnailStyle = {...thumbnailStyle, ...styles.fullThumbnail};
     }
 
     const shouldShowPublicDetails =
       isPublicGallery && isDetailView && projectData.publishedAt;
     const noTimeOnCardStyle = shouldShowPublicDetails ? {} : styles.noTime;
 
-    const {showReportAbuse} = this.state;
-
     return (
       <div className="project_card">
-        {showReportAbuse ? (
-          <ReportAbusePopUp
-            abuseUrl={url}
-            projectData={this.props.projectData}
-            onClose={this.closeReportAbusePopUp}
-            onReport={this.showReportedHeader}
-          />
-        ) : null}
-
         <div className={style.card}>
-          {this.renderHeader()}
-
           <div style={thumbnailStyle}>
             <a
               href={studio(url)}
@@ -130,7 +54,7 @@ export default class ProjectCard extends React.Component {
               target={isPublicGallery ? '_blank' : undefined}
             >
               <img
-                src={projectData.thumbnailUrl || PROJECT_DEFAULT_IMAGE}
+                src={getProjectCardImageUrl(projectData.thumbnailUrl, type)}
                 className={style.image}
                 alt={i18n.projectThumbnail()}
               />
@@ -200,7 +124,7 @@ const styles = {
     paddingTop: 18,
     paddingBottom: 5,
     fontSize: 16,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: color.neutral_dark,
     overflow: 'hidden',
     textOverflow: 'ellipsis',

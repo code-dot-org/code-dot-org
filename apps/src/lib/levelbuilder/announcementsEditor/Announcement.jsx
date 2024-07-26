@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
 import {
   announcementShape,
   VisibilityType,
 } from '@cdo/apps/code-studio/announcementsRedux';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import {NotificationType} from '@cdo/apps/templates/Notification';
 
 export default class Announcement extends Component {
@@ -38,6 +40,17 @@ export default class Announcement extends Component {
         </label>
         <label>
           Link
+          <HelpTip>
+            <p>
+              If linking to a studio.code.org, use the relative path, ie
+              "/projects".
+            </p>
+            <p>
+              {' '}
+              If linking to a code.org url, use the full path including
+              protocol, ie "https://code.org/about".
+            </p>
+          </HelpTip>
           <input
             value={announcement.link}
             style={inputStyle}

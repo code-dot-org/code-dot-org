@@ -19,7 +19,8 @@
     "name_suffix": "_pilot-2022",
     "contained_level_names": [
       "CSA U6L6-L2 Predict_pilot-2022"
-    ]
+    ],
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:53:07.193+00:00\",\"changed\":[\"cloned from \\\"CSA U6L6-L2_2022\\\"\"],\"cloned_from\":\"CSA U6L6-L2_2022\"}]"

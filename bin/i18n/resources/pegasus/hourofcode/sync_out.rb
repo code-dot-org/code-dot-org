@@ -5,6 +5,7 @@ require 'yaml'
 
 require_relative '../../../../../dashboard/config/environment'
 require_relative '../../../i18n_script_utils'
+require_relative '../../../utils/sync_out_base'
 require_relative '../../../utils/pegasus_markdown'
 require_relative '../hourofcode'
 
@@ -12,52 +13,18 @@ module I18n
   module Resources
     module Pegasus
       module HourOfCode
-        class SyncOut
-          def self.perform
-            new.execute
+        class SyncOut < I18n::Utils::SyncOutBase
+          def process(language)
+            crowdin_locale_dir = I18nScriptUtils.crowdin_locale_dir(language[:locale_s], DIR_NAME)
+            return unless File.directory?(crowdin_locale_dir)
+
+            distribute_origin_i18n_file(language[:unique_language_s], crowdin_locale_dir)
+            distribute_markdown_files(language[:unique_language_s], crowdin_locale_dir)
+
+            I18nScriptUtils.rename_dir(crowdin_locale_dir, I18nScriptUtils.locale_dir(language[:locale_s], DIR_NAME))
           end
 
-          def execute
-            progress_bar.start
-
-            I18nScriptUtils.process_in_threads(pegasus_languages) do |pegasus_lang|
-              crowdin_locale = pegasus_lang[:crowdin_name_s]
-              crowdin_locale_dir = I18nScriptUtils.locale_dir(crowdin_locale, DIR_NAME)
-              next unless File.directory?(crowdin_locale_dir)
-
-              locale = pegasus_lang[:locale_s]
-              unless locale == 'en-US'
-                distribute_origin_i18n_file(pegasus_lang[:unique_language_s], crowdin_locale_dir)
-                distribute_markdown_files(pegasus_lang[:unique_language_s], crowdin_locale_dir)
-              end
-
-              I18nScriptUtils.rename_dir(crowdin_locale_dir, I18nScriptUtils.locale_dir(locale, DIR_NAME))
-              I18nScriptUtils.remove_empty_dir(I18nScriptUtils.locale_dir(crowdin_locale))
-            ensure
-              mutex.synchronize {progress_bar.increment}
-            end
-
-            progress_bar.finish
-          end
-
-          private
-
-          def pegasus_languages
-            @pegasus_languages ||= PegasusLanguages.hoc_languages
-          end
-
-          def progress_bar
-            @progress_bar ||= I18nScriptUtils.create_progress_bar(
-              title: 'Pegasus/hoc sync-out',
-              total: pegasus_languages.size,
-            )
-          end
-
-          def mutex
-            @mutex ||= Thread::Mutex.new
-          end
-
-          def distribute_origin_i18n_file(unique_language_code, crowdin_locale_dir)
+          private def distribute_origin_i18n_file(unique_language_code, crowdin_locale_dir)
             crowdin_en_file_path = File.join(crowdin_locale_dir, ORIGIN_I18N_FILE_NAME)
             return unless File.exist?(crowdin_en_file_path)
 
@@ -75,7 +42,7 @@ module I18n
           end
 
           # Copy the markdown files representing individual page content
-          def distribute_markdown_files(unique_language_code, crowdin_locale_dir)
+          private def distribute_markdown_files(unique_language_code, crowdin_locale_dir)
             Dir.glob(File.join(crowdin_locale_dir, '**/*.md')) do |crowdin_file_path|
               file_name = crowdin_file_path.delete_prefix(crowdin_locale_dir)
 

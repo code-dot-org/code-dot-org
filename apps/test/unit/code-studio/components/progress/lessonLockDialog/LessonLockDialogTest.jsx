@@ -1,12 +1,12 @@
+import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount, shallow} from 'enzyme';
-import {expect} from '../../../../../util/reconfiguredChai';
-import sinon from 'sinon';
-import {UnconnectedLessonLockDialog as LessonLockDialog} from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDialog';
-import {LockStatus} from '@cdo/apps/code-studio/lessonLockRedux';
-import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
+import {Provider} from 'react-redux';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import * as lessonLockDataApi from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
-import i18n from '@cdo/locale';
+import {UnconnectedLessonLockDialog as LessonLockDialog} from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDialog';
+import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
+import {LockStatus} from '@cdo/apps/code-studio/lessonLockRedux';
 import {
   getStore,
   registerReducers,
@@ -14,7 +14,9 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {Provider} from 'react-redux';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const fakeSectionId = 42;
 const fakeUnitId = 1;
@@ -100,7 +102,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
       expect(row.props().lockStatus).to.equal(LockStatus.Locked);
     });
 
-    const allowEditingButton = wrapper.find('button').at(0);
+    const allowEditingButton = wrapper.find('button').at(1);
     expect(allowEditingButton.text() === 'Allow editing');
     allowEditingButton.simulate('click');
     wrapper.update();
@@ -131,7 +133,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
       expect(row.props().lockStatus).to.equal(LockStatus.Editable);
     });
 
-    const lockLessonButton = wrapper.find('button').at(1);
+    const lockLessonButton = wrapper.find('button').at(2);
     expect(lockLessonButton.text() === 'Lock lesson');
     lockLessonButton.simulate('click');
     wrapper.update();
@@ -162,7 +164,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
       expect(row.props().lockStatus).to.equal(LockStatus.Editable);
     });
 
-    const showAnswersButton = wrapper.find('button').at(2);
+    const showAnswersButton = wrapper.find('button').at(3);
     expect(showAnswersButton.text() === 'Show answers');
     showAnswersButton.simulate('click');
     wrapper.update();
@@ -185,7 +187,7 @@ describe('LessonLockDialog with stubbed section selector', () => {
         </Provider>
       );
 
-      const viewSectionButton = wrapper.find('button').at(4);
+      const viewSectionButton = wrapper.find('button').at(5);
       expect(viewSectionButton.text() === 'View section');
       viewSectionButton.simulate('click');
       wrapper.update();
@@ -221,12 +223,12 @@ describe('LessonLockDialog with stubbed section selector', () => {
       </Provider>
     );
 
-    const lockLessonButton = wrapper.find('button').at(1);
+    const lockLessonButton = wrapper.find('button').at(2);
     expect(lockLessonButton.text() === 'Lock lesson');
     lockLessonButton.simulate('click');
     wrapper.update();
 
-    const saveButton = wrapper.find('button').at(6);
+    const saveButton = wrapper.find('button').at(7);
     expect(saveButton.text() === 'Save');
     saveButton.simulate('click');
     wrapper.update();
@@ -267,12 +269,12 @@ describe('LessonLockDialog with stubbed section selector', () => {
       </Provider>
     );
 
-    const lockLessonButton = wrapper.find('button').at(1);
+    const lockLessonButton = wrapper.find('button').at(2);
     expect(lockLessonButton.text() === 'Lock lesson');
     lockLessonButton.simulate('click');
     wrapper.update();
 
-    const saveButton = wrapper.find('button').at(6);
+    const saveButton = wrapper.find('button').at(7);
     expect(saveButton.text() === 'Save');
     saveButton.simulate('click');
     wrapper.update();
@@ -318,12 +320,12 @@ describe('LessonLockDialog with stubbed section selector', () => {
       </Provider>
     );
 
-    const lockLessonButton = wrapper.find('button').at(1);
+    const lockLessonButton = wrapper.find('button').at(2);
     expect(lockLessonButton.text() === 'Lock lesson');
     lockLessonButton.simulate('click');
     wrapper.update();
 
-    const saveButton = wrapper.find('button').at(6);
+    const saveButton = wrapper.find('button').at(7);
     expect(saveButton.text() === 'Save');
     saveButton.simulate('click');
     wrapper.update();

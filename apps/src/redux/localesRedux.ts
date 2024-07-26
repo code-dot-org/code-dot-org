@@ -1,6 +1,6 @@
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
-interface LocaleState {
+export interface LocaleState {
   localeCode: null | string;
 }
 

@@ -13,6 +13,7 @@ $container-width: 960px;
   align-items: center;
   column-gap: 20px;
   text-align: center;
+
   button,
   a,
   a:link,
@@ -20,7 +21,12 @@ $container-width: 960px;
     margin: 0;
     height: 40px;
     font-size: 1em;
-    line-height: 36.5px;
+  }
+
+  a,
+  a:link,
+  a:visited {
+    line-height: 38px;
   }
 }
 
@@ -68,14 +74,18 @@ $container-width: 960px;
   width: 736px;
   padding: 16px 32px 16px 16px;
   box-sizing: border-box;
+
+  > h3 {
+    margin-bottom: 8px;
+  }
 }
 
 .descriptionContainer {
   margin-bottom: 20px;
-}
 
-.descriptionText {
-  font-size: 0.875em;
+  > p {
+    font-size: 0.875em;
+  }
 }
 
 .descriptionVideoContainer {
@@ -138,6 +148,10 @@ $container-width: 960px;
   }
 }
 
+p.subjectsText {
+  white-space: normal;
+}
+
 .infoContainer {
   display: flex;
   column-gap: 20px;
@@ -145,6 +159,7 @@ $container-width: 960px;
 
 .linksContainer {
   width: 200px;
+
   hr {
     margin: 8px 0;
   }
@@ -154,7 +169,7 @@ $container-width: 960px;
   }
 }
 
-.professionalLearningContainer {
+.professionalLearningContainer, .relatedContainer {
   a {
     color: $brand_secondary_default !important;
     text-decoration: underline !important;
@@ -169,13 +184,28 @@ $container-width: 960px;
 .relatedContainer {
   margin-top: 32px;
 
+  .relatedCurriculaLink {
+    width: 100%;
+    text-wrap: wrap;
+    margin-top: 8px;
+    color: $brand_secondary_default
+  }
+
+  .relatedCurriculaLink:hover {
+    color: $brand_secondary_dark
+  }
+
   h4 {
     margin-bottom: 0;
   }
 
   hr {
     margin-top: 8px;
-    margin-bottom: 16px;
+    margin-bottom: 0;
+  }
+
+  img {
+    margin-top: 16px;
   }
 }
 
@@ -210,11 +240,6 @@ $container-width: 960px;
     font-size: 14px;
     margin-bottom: 0;
   }
-}
-
-.subjectsText {
-  overflow: hidden;
-  white-space: normal;
 }
 
 .thickDivider {

@@ -1,5 +1,7 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import color from '@cdo/apps/util/color';
 
 class Comment extends React.Component {
@@ -47,8 +49,7 @@ const styles = {
     marginBottom: 8,
     fontSize: 18,
     lineHeight: '18px',
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'normal',
+    ...fontConstants['main-font-semi-bold'],
   },
 };
 

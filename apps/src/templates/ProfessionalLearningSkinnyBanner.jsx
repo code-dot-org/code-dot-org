@@ -1,5 +1,7 @@
 import React from 'react';
+
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+
 import './professionalLearningSkinnyBanner.scss';
 import bgDesktop from './images/superhero-banner-bg.png';
 import bgTablet from './images/superhero-banner-half-blue.png';

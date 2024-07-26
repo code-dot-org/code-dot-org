@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import Button from '@cdo/apps/templates/Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
 
 import LessonEditorDialog from './LessonEditorDialog';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 export default function UploadImageDialog({
   isOpen,
@@ -81,8 +81,11 @@ export default function UploadImageDialog({
   return (
     <LessonEditorDialog isOpen={isOpen} handleClose={handleDialogClose}>
       <h2>Upload Image</h2>
-
-      {imgUrl && <img src={imgUrl} />}
+      {
+        // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+        // Verify or update this alt-text as necessary
+      }
+      {imgUrl && <img src={imgUrl} alt="" />}
       <input
         type="file"
         name="file"

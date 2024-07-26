@@ -3,12 +3,14 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
-import {connect} from 'react-redux';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {connect} from 'react-redux';
+
 import {
   WorkshopTypes,
   SubjectNames,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
 import ConfirmationDialog from '../../components/confirmation_dialog';
 import {PermissionPropType} from '../permission';
 import {shouldUseFoormSurvey} from '../workshop_summary_utils';
@@ -49,8 +51,6 @@ export class WorkshopManagement extends React.Component {
         surveyBaseUrl = 'workshop_daily_survey_results';
       } else if (this.use_daily_survey_route()) {
         surveyBaseUrl = 'daily_survey_results';
-      } else if (props.subject === WorkshopTypes.local_summer) {
-        surveyBaseUrl = 'local_summer_workshop_survey_results';
       }
 
       if (surveyBaseUrl) {

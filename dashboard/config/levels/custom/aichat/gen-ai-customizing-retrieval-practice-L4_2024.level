@@ -1,0 +1,51 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2024-06-28T19:57:13.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Study Guide\r\n\r\nMario wants to create a chatbot that will help him study for a class that he is taking. However, he needs the chatbot to help him with the specific terms used in the class which have precise definitions. This requires adding them as Retrieval so the chatbot knows which definitions to reference specifically.\r\n\r\n### Do This\r\n\r\n1) Go to this website to view the vocabulary words that Mario needs to study: https://studio.code.org/s/csp2-2023/vocab \r\n2) Choose at least 5 words and copy-and-paste the word and their definition into Retrieval\r\n    - You don’t need to make any edits - just copy-and-paste the line directly from the website\r\n3) Update the chatbot and then test it out. Start by saying \"Let’s get started!\"",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.8",
+        "systemPrompt": "You are helping a student study for a quiz over several vocabulary words. A list of vocabulary words and their definitions will be provided. You should only reference this list of words when helping the student. When responding, use the following steps:\nStep 1) Pick a word from the list of vocabulary words and ask the user to define it\nStep 2) After the user responds, provide the definition for the word and provide feedback on how closely the student's response matched the definition\nStep 3) If correct, give them a new word. If incorrect, ask them to try again.\n\nRepeat these steps forever.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "readonly",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
+    },
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:57:13.151+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L4\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L4\"}]"
+}]]></config>
+</Aichat>

@@ -1,19 +1,20 @@
-import React from 'react';
-import LessonStatusDialog from './LessonStatusDialog';
 import {action} from '@storybook/addon-actions';
-import {createStore, combineReducers} from 'redux';
+import React from 'react';
 import {Provider} from 'react-redux';
-import sectionStandardsProgress from './sectionStandardsProgressRedux';
+import {createStore, combineReducers} from 'redux';
+
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+
+import LessonStatusDialog from './LessonStatusDialog';
+import sectionStandardsProgress from './sectionStandardsProgressRedux';
 
 export default {
-  title: 'LessonStatusDialog',
   component: LessonStatusDialog,
 };
 
-export const overview = () => {
+export const Overview = () => {
   const store = createStore(
     combineReducers({
       sectionStandardsProgress,

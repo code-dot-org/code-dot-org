@@ -1,4 +1,5 @@
 import React from 'react';
+
 import MazeThumbnail from './MazeThumbnail';
 
 const sampleMap = [
@@ -298,7 +299,6 @@ const harvesterMap = [
 ];
 
 export default {
-  title: 'MazeThumbnail',
   component: MazeThumbnail,
 };
 

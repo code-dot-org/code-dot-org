@@ -5,6 +5,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import fontConstants from '@cdo/apps/fontConstants';
+
 export default class FilterGroupHeaderSelection extends React.Component {
   static propTypes = {
     containerStyle: PropTypes.object.isRequired,
@@ -78,7 +80,7 @@ const styles = {
   item: {
     backgroundColor: 'white',
     color: 'dimgrey',
-    fontFamily: "'Gotham 4r', sans-serif",
+    ...fontConstants['main-font-regular'],
     fontSize: 15,
     cursor: 'pointer',
     float: 'left',

@@ -1,8 +1,8 @@
 import React from 'react';
+
 import ImagePicker from './ImagePicker';
 
 export default {
-  title: 'ImagePicker',
   component: ImagePicker,
 };
 

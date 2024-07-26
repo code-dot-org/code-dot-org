@@ -1,6 +1,6 @@
 :css
   body {
-    font-family: Gotham, sans-serif;
+    font-family: Metropolis, sans-serif;
   }
 
 %p
@@ -22,13 +22,10 @@
 
 %p
   If this is a mistake and you did not mean to cancel your workshop registration,
-  contact your workshop organizer
-  = @workshop.organizer.name
-  at
+  please email
   = mail_to(@workshop.organizer.email) + '.'
 
-- if @workshop.course == Pd::Workshop::COURSE_CSF
-  %p
-    Thank you,
-    %br Dave Frye
-    %br Director of Program Development and Operations, Code.org
+%p
+  Thank you,
+  %br
+  = @workshop.organizer.name

@@ -6,13 +6,22 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {connect} from 'react-redux';
-import SessionTime from '../components/session_time';
-import Spinner from '../../components/spinner';
-import SessionAttendance from './session_attendance';
-import {PermissionPropType, WorkshopAdmin, Organizer} from '../permission';
-import color from '@cdo/apps/util/color';
 import {Row, Col, ButtonToolbar, Button, Tabs, Tab} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import {connect} from 'react-redux';
+
+import color from '@cdo/apps/util/color';
+
+import Spinner from '../../components/spinner';
+import SessionTime from '../components/session_time';
+import {
+  PermissionPropType,
+  WorkshopAdmin,
+  Organizer,
+  Facilitator,
+  ProgramManager,
+} from '../permission';
+
+import SessionAttendance from './session_attendance';
 
 export class WorkshopAttendance extends React.Component {
   static contextTypes = {
@@ -132,7 +141,12 @@ export class WorkshopAttendance extends React.Component {
 
     const isReadOnly =
       this.hasWorkshopEnded() &&
-      !this.props.permission.hasAny(WorkshopAdmin, Organizer);
+      !this.props.permission.hasAny(
+        WorkshopAdmin,
+        Organizer,
+        Facilitator,
+        ProgramManager
+      );
 
     let intro = null;
     if (isReadOnly) {

@@ -1,0 +1,20 @@
+name 'game_variables_matchPL'
+title 'Match the code to the animation'
+height '200'
+question '![](https://images.code.org/fc9ce7945e934cbaa95ad46c34988dae-image-1709767957304.gif)'
+answer '![](https://images.code.org/6698ec412ee301462adf0b1981eb201a-image-1711145088166.jpg)'
+question '![](https://images.code.org/a90af922d882fa28bbbcaba3d4bfa2fc-image-1709754767007.gif)'
+answer '![](https://images.code.org/35755e1aa5626aa43401ba71d491e754-image-1711145007105.jpg)'
+question '![](https://images.code.org/e743f3f78c0deb76a4d04bdb95213635-image-1711145119582.gif)'
+answer '![](https://images.code.org/c846957180d7f468d41e18111a887f3d-image-1711145135983.jpg)'
+
+markdown <<MARKDOWN
+Look at these coding blocks using variables. Match the correct code to the animation.
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN
+
+allow_multiple_attempts true

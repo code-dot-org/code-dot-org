@@ -36,9 +36,7 @@ class ApiControllerQueriesTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  private
-
-  def sign_in_as(user)
+  private def sign_in_as(user)
     sign_in user
     # Required become some queries are triggered on the first IntegrationTest
     # request after a user signs in, and we don't want them to be counted in

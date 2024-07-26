@@ -255,6 +255,7 @@ hi-IN:
   class_submission_out_of_school_summer_camp: ग्रीष्मकालीन शिविर
   classicmaze_name: क्लासिक मेज़ (Classic Maze)
   code_hoc_coming: आवर ऑफ़ कोड - 8-14 दिसम्बर को आ रहा है!
+  code_org_logo_alt: Code.org होम
   code_sign_up: CS शिक्षा सप्ताह के दौरान भाग लेने के लिए साइन अप करें
   codea_beyond_gradelevel: हाई स्कूल +
   codea_beyond_longdescription: Ipad के लिए Codea से &mdash; या किसी भी दृश्य डेटे
@@ -1176,7 +1177,9 @@ hi-IN:
   header_about_us: हमारे बारे में
   header_course_catalog: कोर्स कैटलॉग
   header_courses: पाठ्यक्रम
+  header_districts: डिस्ट्रिक्ट्स
   header_documentation: दस्तावेजीकरण
+  header_donate: दान करे
   header_educate_beyond: Code.org से परे
   header_educate_community: ऑनलाइन समुदाय
   header_educate_elementary: प्राथमिक स्कूल
@@ -1194,6 +1197,7 @@ hi-IN:
   header_incubator: इनक्यूबेटर
   header_learn: सीखें
   header_legal: निजता और कानूनी
+  header_legal_cookie_notice: कुकी नोटिस
   header_legal_privacy: गोपनीयता नीति
   header_legal_tos: सेवा की शर्तें
   header_my_dashboard: मेरा डैशबोर्ड
@@ -1201,6 +1205,7 @@ hi-IN:
   header_project_gallery: प्रोजेक्ट्स
   header_report_abuse: दुरुपयोग की रिपोर्ट करें
   header_report_bug: समस्या की रिपोर्ट करें
+  header_schools: स्कूल
   header_screen_reader_hamburger: मेन्यू
   header_screen_reader_help: मदद मेन्यू
   header_sections: अनुभाग
@@ -1619,6 +1624,7 @@ hi-IN:
   homepage_slot_text_link_k5: ग्रेड K-5 के लिए कोर्स
   homepage_slot_text_link_local: स्थानीय कक्षा ढूंढें
   homepage_slot_text_link_middle: माध्यमिक विद्यालय
+  homepage_slot_text_link_middle_and_high: मिडिल और हाई स्कूल
   homepage_slot_text_link_othercourses: अन्य ऑनलाइन कोर्स
   homepage_slot_text_link_pd: पेशेवर विकास
   homepage_slot_text_link_shop: टी-शर्टें, टोप आदि
@@ -2539,6 +2545,8 @@ hi-IN:
   user_header_applab: 'ऐप लैब '
   user_header_artist: 'कलाकार '
   user_header_create: 'बनाएं '
+  user_header_create_account: खाता बनाएं
+  user_header_create_account_low_cap: खाता बनाएँ
   user_header_dance: डांस पार्टी
   user_header_flappy: फ्लैपी
   user_header_gamelab: गेम लैब
@@ -2546,6 +2554,8 @@ hi-IN:
   user_header_logout: साइन आउट करें
   user_header_minecraft: माइनक्राफ्ट
   user_header_my_projects: मेरे प्रोजेक्ट
+  user_header_new_project: नया प्रोजेक्ट
+  user_header_new_project_low_cap: New project
   user_header_playlab: प्ले लैब
   user_header_settings: खाता सेटिंग्स
   user_header_signin: दाखिल करना
@@ -2660,33 +2670,16 @@ hi-IN:
     लाखों छात्रों तक पहुंचने वाला, एक घंटे तक कंप्यूटर साइंस का परिचय कराने के प्रयास
     का वैश्विक अभियान है। कृपया कंप्यूटर साइंस एजुकेशन वीक, 7-13 दिसम्बर के दौरान
     शामिल हों।
-  volunteer_engineer_submission_intro_guide: यहां हमारे <a href="%{volunteer_guide}">स्वयं
-    सेवक प्रोग्राम के बारे में जानें</a>।
   volunteer_engineer_submission_intro_guide_markdown: हमारे [स्वयंसेवक कार्यक्रम के
     बारे में यहाँ] (%{volunteer_guide}) के बारे में और जानें।
-  volunteer_engineer_submission_intro_links: क्या आप ऐसे अध्यापक हैं, जिन्हें स्वयं
-    सेवकों की तलाश है? हमारे<a href="%{volunteer_local}">स्वयं सेवक मानचित्र पर स्थानीय
-    स्वयं सेवक ढूंढें</a>।
   volunteer_engineer_submission_intro_links_markdown: क्या आप एक शिक्षक हैं जो स्वयंसेवकों
     की तलाश कर रहे हैं? हमारे [स्वयंसेवक मानचित्र] (%{volunteer_local}) पर एक स्थानीय
     स्वयंसेवक खोजें।
-  volunteer_engineer_submission_intro_recruit: 'अध्यापक किसी ऐसे व्यक्ति को शामिल
-    करना पसंद करेंगे, जिसमें <span style="font-family: ''Gotham 7r'', sans-serif;">कंप्यूटर
-    साइंस की शिक्षा को लेकर जुनून हो</span> जो कक्षा में मदद कर सकता हो, या किसी ऐसे
-    व्यक्ति को, जो कंप्यूटर साइंस के साथ संभावनाओं के विस्तार के बारे में बात करके
-    अपने छात्रों को <span style="font-family: ''Gotham 7r'', sans-serif;">प्रेरित</span>
-    कर सके (जो वीडियो चैट के माध्यम से किया जा सकता है)।'
   volunteer_engineer_submission_intro_recruit_markdown: शिक्षक किसी को कंप्यूटर विज्ञान
     शिक्षा के बारे में भावुक होना पसंद करेंगे** जो कक्षा में मदद कर सकता है, या किसी
     ऐसे व्यक्ति के लिए जो कंप्यूटर विज्ञान के साथ संभावनाओं की चौड़ाई के बारे में
     बात करके** अपने छात्रों को प्रेरित कर सकता है (जो एक वीडियो चैट के माध्यम से किया
     जा सकता है)।
-  volunteer_engineer_submission_intro_signup: यदि आप कंप्यूटर साइंस के छात्र या सॉफ्टवेयर
-    पेशेवर हैं तो निम्न जानकारी दर्ज करें। स्वयं सेवक के तौर पर साइन अप करने के लिए
-    आपकी आयु कम से कम 18 वर्ष होनी आवश्यक है। ध्यान दें कि इस सेक्शन में आपके द्वारा
-    भरे जाने वाले सभी भाग <a href="/volunteer/local">स्वयं सेवक मानचित्र</a> पर किसी
-    के भी देखने के लिए सावर्जनिक तौर पर उपलब्ध होंगे। <span class="form-required-field">*</span>
-    से चिन्हित किए गए भाग आवश्यक हैं।
   volunteer_engineer_submission_intro_signup_markdown: यदि आप कंप्यूटर विज्ञान के
     छात्र या सॉफ्टवेयर पेशेवर हैं तो कृपया निम्नलिखित जानकारी दर्ज करें। स्वयंसेवक
     के रूप में साइन अप करने के लिए आपकी आयु कम से कम 18 वर्ष होनी चाहिए। ध्यान दें

@@ -1,8 +1,8 @@
 import React from 'react';
+
 import ProjectsList from './ProjectsList';
 
 export default {
-  title: 'ProjectsList',
   component: ProjectsList,
 };
 

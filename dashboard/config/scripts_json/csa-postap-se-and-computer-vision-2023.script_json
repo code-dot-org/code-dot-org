@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csa-software-engineering",
-    "serialized_at": "2023-10-03 21:34:50 UTC",
+    "serialized_at": "2024-05-17 14:23:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2393,6 +2393,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-se-setup-part1_2023"
+        ],
         "progression": "Software Setup"
       },
       "bonus": false,
@@ -2415,6 +2418,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-se-setup-part2_2023"
+        ],
         "progression": "Software Setup"
       },
       "bonus": false,
@@ -2437,6 +2443,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-se-setup-part3_2023"
+        ],
         "progression": "Software Setup"
       },
       "bonus": false,
@@ -2459,6 +2468,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-se-setup-part4_2023"
+        ],
         "progression": "GitHub Setup"
       },
       "bonus": false,
@@ -2481,6 +2493,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-se-setup-part5_2023"
+        ],
         "progression": "GitHub Setup"
       },
       "bonus": false,
@@ -2503,6 +2518,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-se-setup-part6_2023"
+        ],
         "progression": "Software Setup Test"
       },
       "bonus": false,
@@ -2525,6 +2543,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-se-setup-part7_2023"
+        ],
         "progression": "TensorFlow Setup (Mac Only)"
       },
       "bonus": false,
@@ -2547,6 +2568,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-SE-CV-PreSurvey-and-Assessment_2023"
+        ],
         "progression": "Pre-Survey and Assessment: Software Engineering and Computer Vision"
       },
       "bonus": false,
@@ -2569,6 +2593,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-SE-L1-Repo_2023"
+        ],
         "progression": "GitHub Scavenger Hunt"
       },
       "bonus": false,
@@ -2591,6 +2618,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-SE-L1L1_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2613,6 +2643,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-SE-L1-Survey_2023"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -2635,6 +2668,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-SE-Copilot-Navigator_2023"
+        ],
         "progression": "Copilot as the Navigator"
       },
       "bonus": false,
@@ -2657,6 +2693,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-SE-Copilot-Driver_2023"
+        ],
         "progression": "Copilot as the Driver"
       },
       "bonus": false,
@@ -2679,6 +2718,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-SE-L2L1_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2701,6 +2743,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-SE-L2-Survey_2023"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -2723,6 +2768,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-SE-L3-L1_2023"
+        ],
         "progression": "Copilot as a Dev Tool"
       },
       "bonus": false,
@@ -2745,6 +2793,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-SE-L3-L2_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2767,6 +2818,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-SE-L3-Survey_2023"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -2789,6 +2843,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L1-L1_2023"
+        ],
         "progression": "MediaPipe Object Detection Model Demo"
       },
       "bonus": false,
@@ -2811,6 +2868,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L1-L2_2023"
+        ],
         "progression": "MediaPipe Model Testing: Image Files"
       },
       "bonus": false,
@@ -2833,6 +2893,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L1-L3_2023"
+        ],
         "progression": "COCO - Common Objects in Context Dataset"
       },
       "bonus": false,
@@ -2855,6 +2918,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L1-L4_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2877,6 +2943,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L1-Survey_2023"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -2899,6 +2968,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L2-L1_2023"
+        ],
         "progression": "Select a Program"
       },
       "bonus": false,
@@ -2921,6 +2993,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L2-L2_2023"
+        ],
         "progression": "Teachable Machine"
       },
       "bonus": false,
@@ -2943,6 +3018,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L2-L3_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2965,6 +3043,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L2-Survey_2023"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -2987,6 +3068,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L3-L1_2023"
+        ],
         "progression": "Incorporate Your Model"
       },
       "bonus": false,
@@ -3009,6 +3093,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L3-L2_2023"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3031,6 +3118,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L3-Survey_2023"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -3053,6 +3143,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-SE-CV-PostSurvey-and-Assessment_2023"
+        ],
         "progression": "Post-Survey and Assessment: Software Engineering and Computer Vision"
       },
       "bonus": false,
@@ -3458,6 +3551,186 @@
       }
     },
     {
+      "name": "[EXEMPLAR] BinaryBazaar",
+      "url": "https://github.com/jamjamgobambam/binaryBazaar",
+      "key": "_exemplar_binarybazaar",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_binarybazaar"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] BrandBook",
+      "url": "https://github.com/jamjamgobambam/brandbook-exemplar",
+      "key": "_exemplar_brandbook",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_brandbook"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] ByteBud",
+      "url": "https://github.com/jamjamgobambam/bytebud-exemplar",
+      "key": "_exemplar_bytebud",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_bytebud"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] FlixRate",
+      "url": "https://github.com/jamjamgobambam/movieratingsgui",
+      "key": "_exemplar_flixrate",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_flixrate"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Guessing Game",
+      "url": "https://github.com/jamjamgobambam/guessinggame-exemplar",
+      "key": "_exemplar_guessing_game",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_guessing_game"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] HarmonyHelper",
+      "url": "https://github.com/jamjamgobambam/harmonyhelper-exemplar",
+      "key": "_exemplar_harmonyhelper",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_harmonyhelper"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] HonestHeadlines",
+      "url": "https://github.com/jamjamgobambam/honestheadlines-exemplar",
+      "key": "_exemplar_honestheadlines",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_honestheadlines"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] PixelPedia",
+      "url": "https://github.com/jamjamgobambam/pixelpedia-exemplar",
+      "key": "_exemplar_pixelpedia",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_pixelpedia"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Rock, Paper, Scissors",
+      "url": "https://github.com/jamjamgobambam/rockpaperscissors-exemplar",
+      "key": "_exemplar_rock_paper_scissors",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_rock_paper_scissors"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] SocialSense",
+      "url": "https://github.com/jamjamgobambam/socialsense-exemplar",
+      "key": "_exemplar_socialsense",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_socialsense"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] TextTrekkers",
+      "url": "https://github.com/jamjamgobambam/texttrekkers-exemplar",
+      "key": "_exemplar_texttrekkers",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_texttrekkers"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Unlock the App",
+      "url": "https://github.com/jamjamgobambam/unlock-exemplar",
+      "key": "_exemplar_unlock_the_app",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_unlock_the_app"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] UrbanExplorer",
+      "url": "https://github.com/jamjamgobambam/urbanexplorer-exemplar",
+      "key": "_exemplar_urbanexplorer",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_urbanexplorer"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Virtual Pet",
+      "url": "https://github.com/jamjamgobambam/virtualpet",
+      "key": "_exemplar_virtual_pet",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_virtual_pet"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] WeatherWise",
+      "url": "https://github.com/jamjamgobambam/weatherapp",
+      "key": "_exemplar_weatherwise",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_weatherwise"
+      }
+    },
+    {
       "name": "[KEY] GitHub Scavenger Hunt",
       "url": "https://docs.google.com/document/d/1_P9xE9PFtgoxjAK9rtTvkjkG0vGegT9m0fITJ5JaQic/edit?usp=sharing",
       "key": "_key_github_scavenger_hunt",
@@ -3491,6 +3764,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_use_your_model"
+      }
+    },
+    {
+      "name": "Alternatives to VS Code and GitHub Copilot",
+      "url": "https://docs.google.com/document/d/1aTwNnWY0wfDP3trPgFO2Jpnh2xrIJJqcIKHdgmH4s6A/edit?usp=sharing",
+      "key": "alternatives_to_vs_code_and_github_copilot",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "alternatives_to_vs_code_and_github_copilot"
       }
     },
     {
@@ -3617,7 +3902,7 @@
     },
     {
       "name": "Frame of Reference: Teamwork and Collaboration",
-      "url": "https://docs.google.com/document/d/1MNTpgngHWVlkWkQR\\_Vg1xgDV2j96XQ39X33INECIYfc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1MNTpgngHWVlkWkQR_Vg1xgDV2j96XQ39X33INECIYfc/edit?usp=sharing",
       "key": "frame_of_reference_teamwork_and_collaboration",
       "properties": {
         "audience": "Student",
@@ -3643,7 +3928,7 @@
     },
     {
       "name": "Getting Started on GitHub (Teachers)",
-      "url": "https://docs.google.com/document/d/16qrRG9ez9Yn\\_ZL44vM54dQb4EzKMtHSWvtKllFNRa6Y/edit?usp=share\\_link",
+      "url": "https://docs.google.com/document/d/16qrRG9ez9Yn_ZL44vM54dQb4EzKMtHSWvtKllFNRa6Y/edit?usp=sharing",
       "key": "getting_started_on_github_teachers_",
       "properties": {
         "audience": "Verified Teacher",
@@ -3717,7 +4002,7 @@
     },
     {
       "name": "How AI Works: Chatbots and Large Language Models",
-      "url": "https://youtu.be/T45kEEBzrT8",
+      "url": "https://youtu.be/X-AWdfSFCHQ",
       "key": "how_ai_works_chatbots_and_large_language_models",
       "properties": {
         "audience": "Student",
@@ -3887,7 +4172,7 @@
     },
     {
       "name": "Submitting an Assignment on GitHub Classroom",
-      "url": "https://docs.google.com/document/d/1eOlMx2YW3qRI5DJzpInnN10dSGEupIRa-qOfL\\_xNMR0/edit?usp=share\\_link",
+      "url": "https://docs.google.com/document/d/1eOlMx2YW3qRI5DJzpInnN10dSGEupIRa-qOfL_xNMR0/edit?usp=sharing",
       "key": "submitting_an_assignment_on_github_classroom",
       "properties": {
         "audience": "Student",
@@ -4111,6 +4396,30 @@
     {
       "seeding_key": {
         "lesson.key": "Build with Copilot",
+        "resource.key": "_exemplar_binarybazaar"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build with Copilot",
+        "resource.key": "_exemplar_flixrate"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build with Copilot",
+        "resource.key": "_exemplar_virtual_pet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build with Copilot",
+        "resource.key": "_exemplar_weatherwise"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build with Copilot",
         "resource.key": "binarybazaar_app"
       }
     },
@@ -4214,6 +4523,54 @@
       "seeding_key": {
         "lesson.key": "Intro to AI Models",
         "resource.key": "training_data_and_bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Copilot",
+        "resource.key": "_exemplar_brandbook"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Copilot",
+        "resource.key": "_exemplar_bytebud"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Copilot",
+        "resource.key": "_exemplar_harmonyhelper"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Copilot",
+        "resource.key": "_exemplar_honestheadlines"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Copilot",
+        "resource.key": "_exemplar_pixelpedia"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Copilot",
+        "resource.key": "_exemplar_socialsense"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Copilot",
+        "resource.key": "_exemplar_texttrekkers"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Intro to Copilot",
+        "resource.key": "_exemplar_urbanexplorer"
       }
     },
     {
@@ -4411,6 +4768,24 @@
     {
       "seeding_key": {
         "lesson.key": "Using Your Model",
+        "resource.key": "_exemplar_guessing_game"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Your Model",
+        "resource.key": "_exemplar_rock_paper_scissors"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Your Model",
+        "resource.key": "_exemplar_unlock_the_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Your Model",
         "resource.key": "_key_use_your_model"
       }
     },
@@ -4428,6 +4803,12 @@
     }
   ],
   "scripts_resources": [
+    {
+      "seeding_key": {
+        "resource.key": "alternatives_to_vs_code_and_github_copilot",
+        "script.name": "csa-postap-se-and-computer-vision-2023"
+      }
+    },
     {
       "seeding_key": {
         "resource.key": "software_engineering_computer_vision_overview",

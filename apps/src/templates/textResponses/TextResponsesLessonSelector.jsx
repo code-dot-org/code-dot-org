@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 
 const DEFAULT_FILTER_KEY = i18n.all();
@@ -44,7 +46,7 @@ const styles = {
     alignItems: 'center',
   },
   dropdownLabel: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
   dropdown: {
     display: 'block',

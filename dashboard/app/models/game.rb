@@ -60,6 +60,9 @@ class Game < ApplicationRecord
   POETRY = 'poetry'.freeze
   MUSIC = 'music'.freeze
   AICHAT = 'aichat'.freeze
+  PYTHONLAB = 'pythonlab'.freeze
+  PANELS = 'panels'.freeze
+  WEBLAB2 = 'weblab2'.freeze
 
   def self.bounce
     @@game_bounce ||= find_by_name("Bounce")
@@ -189,6 +192,18 @@ class Game < ApplicationRecord
     @@game_aichat ||= find_by_name('Aichat')
   end
 
+  def self.pythonlab
+    @@game_pythonlab ||= find_by_name('Pythonlab')
+  end
+
+  def self.panels
+    @@game_panels ||= find_by_name('Panels')
+  end
+
+  def self.weblab2
+    @@game_weblab2 ||= find_by_name("Weblab2")
+  end
+
   def unplugged?
     app == UNPLUG
   end
@@ -218,7 +233,8 @@ class Game < ApplicationRecord
       WEBLAB,
       DANCE,
       SPRITELAB,
-      POETRY
+      POETRY,
+      MUSIC
     ].include? app
   end
 
@@ -235,7 +251,7 @@ class Game < ApplicationRecord
   end
 
   def uses_small_footer?
-    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, DANCE, FISH, AILAB, JAVALAB, AICHAT].include? app
+    [NETSIM, APPLAB, TEXT_COMPRESSION, GAMELAB, WEBLAB, DANCE, FISH, AILAB, JAVALAB, AICHAT, PYTHONLAB, WEBLAB2].include? app
   end
 
   def no_footer?
@@ -251,22 +267,18 @@ class Game < ApplicationRecord
     !([NETSIM].include? app)
   end
 
-  def use_firebase?
-    [APPLAB, GAMELAB].include? app
-  end
-
   def use_azure_speech_service?
     [APPLAB, GAMELAB, SPRITELAB].include? app
   end
 
   def channel_backed?
-    [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB, JAVALAB, POETRY, MUSIC].include? app
+    [APPLAB, GAMELAB, WEBLAB, PIXELATION, SPRITELAB, JAVALAB, POETRY, MUSIC, PYTHONLAB, WEBLAB2, AICHAT].include? app
   end
 
   def use_restricted_songs?
     return false unless [DANCE, MUSIC].include? app
     dev_with_credentials = rack_env?(:development) && !!CDO.cloudfront_key_pair_id
-    CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV['CI'])
+    CDO.cdn_enabled || dev_with_credentials || (rack_env?(:test) && ENV.fetch('CI', nil))
   end
 
   # Format: name:app:intro_video
@@ -345,6 +357,9 @@ class Game < ApplicationRecord
     Poetry:poetry
     Music:music
     Aichat:aichat
+    Pythonlab:pythonlab
+    Panels:panels
+    Weblab2:weblab2
   )
 
   def self.setup

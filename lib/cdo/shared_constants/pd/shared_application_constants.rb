@@ -20,9 +20,11 @@ module Pd
     ].freeze
 
     APPLICATION_CURRENT_YEAR = YEAR_24_25
+    NEXT_APPLICATION_YEAR = YEAR_25_26
 
     COHORT_CALCULATOR_STATUSES = %w(
       accepted
+      enrolled
     )
   end
 end

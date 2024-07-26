@@ -5,11 +5,14 @@
  * intervals. The text box can also be edited directly.
  */
 
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
-import moment from 'moment';
 import {FormControl, InputGroup, Dropdown, MenuItem} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
+import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+
 import {TIME_FORMAT} from '../workshopConstants';
 
 const INTERVAL = {minutes: 30};
@@ -131,10 +134,10 @@ const styles = {
     width: '100%',
   },
   input: {
-    fontFamily: '"Gotham 4r"',
+    ...fontConstants['main-font-regular'],
   },
   readOnlyInput: {
-    fontFamily: '"Gotham 4r"',
+    ...fontConstants['main-font-regular'],
     backgroundColor: 'inherit',
     cursor: 'default',
     border: 'none',

@@ -6,15 +6,27 @@
 // boundary; a fade-in between levels; a loading spinner when a level takes a
 // while to load; and a sad bee when things go wrong.
 
-import React from 'react';
-import {useSelector} from 'react-redux';
 import classNames from 'classnames';
-import moduleStyles from './Lab2Wrapper.module.scss';
+import React, {useEffect} from 'react';
+import {useSelector} from 'react-redux';
+
+import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
 import ErrorBoundary from '../ErrorBoundary';
-import {LabState, isLabLoading, hasPageError} from '../lab2Redux';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Lab2MetricsReporter from '../Lab2MetricsReporter';
-const i18n = require('@cdo/locale');
+import {
+  LabState,
+  isLabLoading,
+  hasPageError,
+  setIsShareView,
+} from '../lab2Redux';
+import Lab2Registry from '../Lab2Registry';
+import {getAppOptionsLevelId, getIsShareView} from '../projects/utils';
+
+import {ErrorFallbackPage, ErrorUI} from './ErrorFallbackPage';
+import Loading from './Loading';
+
+import moduleStyles from './Lab2Wrapper.module.scss';
 
 export interface Lab2WrapperProps {
   children: React.ReactNode;
@@ -27,76 +39,55 @@ const Lab2Wrapper: React.FunctionComponent<Lab2WrapperProps> = ({children}) => {
     (state: {lab: LabState}) =>
       state.lab.pageError?.errorMessage || state.lab.pageError?.error?.message
   );
-  const overlayStyle: string = isLoading
-    ? moduleStyles.showingBlock
-    : moduleStyles.fadeInBlock;
+
+  // Store some server-provided data in redux.
+
+  const dispatch = useAppDispatch();
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+
+  // Store the level ID provided by App Options in redux if necessary.
+  // This is needed on pages without a header, such as the share view.
+  const appOptionsLevelId = getAppOptionsLevelId();
+  useEffect(() => {
+    if (!currentLevelId && appOptionsLevelId) {
+      dispatch(setCurrentLevelId(appOptionsLevelId.toString()));
+    }
+  }, [currentLevelId, appOptionsLevelId, dispatch]);
+
+  // Store whether we are in share view in redux, from App Options.
+  const isShareView = getIsShareView();
+  useEffect(() => {
+    if (isShareView !== undefined) {
+      dispatch(setIsShareView(isShareView));
+    }
+  }, [isShareView, dispatch]);
 
   return (
     <ErrorBoundary
       fallback={<ErrorFallbackPage />}
       onError={(error, componentStack) =>
-        Lab2MetricsReporter.logError('Uncaught React Error', error, {
-          componentStack,
-        })
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Uncaught React Error', error, {
+            componentStack,
+          })
       }
     >
       <div
         id="lab-container"
         className={classNames(
           moduleStyles.labContainer,
-          isLoading && moduleStyles.labContainerLoading
+          isLoading && moduleStyles.labContainerLoading,
+          isShareView && moduleStyles.labContainerShareView
         )}
       >
         {children}
-        <div
-          id="fade-overlay"
-          className={classNames(moduleStyles.solidBlock, overlayStyle)}
-        >
-          {isLoading && (
-            <div className={moduleStyles.slowLoadContainer}>
-              <div className={moduleStyles.spinnerContainer}>
-                <FontAwesome
-                  title={undefined}
-                  icon="spinner"
-                  className={classNames('fa-pulse', 'fa-3x')}
-                />
-              </div>
-              <div className={moduleStyles.spinnerText}>
-                {i18n.slowLoading()}
-              </div>
-            </div>
-          )}
-        </div>
+        <Loading isLoading={isLoading} />
 
         {isPageError && <ErrorUI message={errorMessage} />}
       </div>
     </ErrorBoundary>
   );
 };
-
-export interface ErrorUIProps {
-  message?: string;
-}
-
-export const ErrorUI: React.FunctionComponent<ErrorUIProps> = ({message}) => (
-  <div id="page-error-container" className={moduleStyles.pageErrorContainer}>
-    <div id="page-error" className={moduleStyles.pageError}>
-      <img
-        className={moduleStyles.pageErrorImage}
-        src="/shared/images/sad-bee-avatar.png"
-      />
-      <div>{i18n.loadingError()}</div>
-      {message && (
-        <div className={moduleStyles.pageErrorMessage}>({message})</div>
-      )}
-    </div>
-  </div>
-);
-
-export const ErrorFallbackPage = () => (
-  <div id="lab-container" className={moduleStyles.labContainer}>
-    <ErrorUI />
-  </div>
-);
 
 export default Lab2Wrapper;

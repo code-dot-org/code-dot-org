@@ -1,14 +1,16 @@
+import {Pagination} from '@react-bootstrap/pagination';
+import $ from 'jquery';
+import {isEqual, omit} from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useCallback, useMemo} from 'react';
-import $ from 'jquery';
 import {Button, Alert, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import {Pagination} from '@react-bootstrap/pagination';
-import {isEqual, omit} from 'lodash';
-import i18n from '@cdo/locale';
-import usePrevious from '@cdo/apps/util/usePrevious';
+
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import usePrevious from '@cdo/apps/util/usePrevious';
+import i18n from '@cdo/locale';
+
 import {useRegionalPartner} from '../components/useRegionalPartner';
 
 const defaultSubmitButtonText = i18n.submit();
@@ -125,12 +127,15 @@ const FormController = props => {
     onSetPageInternal(initialPage);
   }, [onInitialize, onSetPageInternal, initialPage]);
 
-  // on matching to an RP with apps closed
+  // when updating regional partner, determine if we should show
+  // the application closed message
   useEffect(() => {
     if (regionalPartner?.are_apps_closed) {
       setShowApplicationClosedMessage(true);
       scrollToTop();
       return;
+    } else {
+      setShowApplicationClosedMessage(false);
     }
   }, [regionalPartner]);
 

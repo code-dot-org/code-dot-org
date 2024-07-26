@@ -6,8 +6,8 @@ describe I18n::Utils::PegasusMarkdown do
 
   let(:pegasus_documents_helper) {stub}
 
-  def around
-    FakeFS.with_fresh {yield}
+  def around(&block)
+    FakeFS.with_fresh(&block)
   end
 
   before do

@@ -54,14 +54,6 @@ module CdoApps
       notifies :run, "execute[restart #{app_name} service]", :delayed
     end
 
-    # TODO: remove this once all persistent managed servers have been cleaned up
-    old_init_script = "/etc/init.d/#{app_name}"
-    execute "remove old SysV #{app_name} implementation" do
-      command "#{old_init_script} stop && mv #{old_init_script} /tmp/old-init-d-#{app_name}"
-      only_if {::File.exist?(old_init_script)}
-      notifies :run, "execute[restart #{app_name} service]", :delayed
-    end
-
     # Define an execute resource for restarting (or starting) the entire
     # SystemD service, which can be invoked by other Chef resources
     execute "restart #{app_name} service" do

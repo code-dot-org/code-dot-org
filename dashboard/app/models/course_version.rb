@@ -196,6 +196,7 @@ class CourseVersion < ApplicationRecord
 
   def summarize_for_unit_selector
     {
+      id: id,
       display_name: content_root.launched? ? content_root.localized_title : content_root.localized_title + ' *',
       units: units.map(&:summarize_for_unit_selector).sort_by {|u| u[:position]}
     }

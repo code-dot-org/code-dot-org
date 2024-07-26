@@ -1,12 +1,15 @@
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import sinon from 'sinon';
-import {assert} from 'chai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {UnconnectedTeacherHomepage as TeacherHomepage} from '@cdo/apps/templates/studioHomepages/TeacherHomepage';
 import TeacherSections from '@cdo/apps/templates/studioHomepages/TeacherSections';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 import {courses, topCourse, plCourses, topPlCourse} from './homepagesTestData';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   announcements: [],
@@ -15,7 +18,6 @@ const DEFAULT_PROPS = {
   topCourse,
   plCourses,
   topPlCourse,
-  isEnglish: true,
   joinedStudentSections: [],
   joinedPlSections: [],
   ncesSchoolId: 'school-id',
@@ -43,13 +45,9 @@ describe('TeacherHomepage', () => {
   beforeEach(() => {
     server = sinon.fakeServer.create();
     server.respondWith('POST', '/dashboardapi/sections', successResponse());
-    sinon.stub(sessionStorage, 'getItem');
-    sinon.stub(sessionStorage, 'setItem');
   });
   afterEach(() => {
     server.restore();
-    sessionStorage.setItem.restore();
-    sessionStorage.getItem.restore();
   });
 
   it('shows a Header Banner that says My Dashboard', () => {
@@ -65,24 +63,20 @@ describe('TeacherHomepage', () => {
 
   it('logs an Amplitude event only on first render', () => {
     const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
-    sessionStorage.getItem.withArgs('logged_teacher_session').returns(false);
+    sessionStorage.setItem('logged_teacher_session', 'false');
     setUp();
 
-    expect(sessionStorage.setItem).to.have.been.calledOnce;
-    expect(sessionStorage.setItem).to.have.been.calledWith(
-      'logged_teacher_session',
-      'true'
-    );
+    expect(sessionStorage.getItem('logged_teacher_session')).to.equal('true');
     expect(analyticsSpy).to.have.been.calledOnce;
     expect(analyticsSpy.firstCall.args).to.deep.eq([
       'Teacher Login',
       {'user id': 42},
+      'Both',
     ]);
 
     // After setting the session value to true, we should not see sessionStorage.setItem or analyticsSpy called again.
-    sessionStorage.getItem.withArgs('logged_teacher_session').returns('true');
+    sessionStorage.setItem('logged_teacher_session', 'true');
     setUp();
-    expect(sessionStorage.setItem).to.have.been.calledOnce;
     expect(analyticsSpy).to.have.been.calledOnce;
 
     analyticsSpy.restore();
@@ -139,19 +133,21 @@ describe('TeacherHomepage', () => {
     assert(!wrapper.find('Notification').exists());
   });
 
-  it('renders CensusTeacherBanner if showCensusBanner is true', () => {
+  /*
+   * Update according to whether or not we are showing CensusBanner on TeacherHomepage
+   */
+  it('renders CensusTeacherBanner if showCensusBanner is true and forceHide is false', () => {
     const wrapper = setUp({showCensusBanner: true});
-    assert(wrapper.find('CensusTeacherBanner').exists());
+    assert(!wrapper.find('CensusTeacherBanner').exists());
   });
 
   /*
-    We have disabled the AFE Banner on the Teacher Homepage (September 2023) to conserve
-    space. If we decide to show the banner again this test will need to be updated. See
-    TeacherHomepage.jsx to make the banner show.
+    This test will need to be updated according to whether the banner is showing,
+    as determined by shouldShowAFEBanner in TeacherHomepage.jsx.
    */
-  it('does not render a DonorTeacherBanner even if isEnglish and afeEligible are true', () => {
-    const wrapper = setUp({isEnglish: true, afeEligible: true});
-    assert(!wrapper.find('DonorTeacherBanner').exists());
+  it('renders a DonorTeacherBanner only if afeEligible is true and shouldShowAFEBanner', () => {
+    const wrapper = setUp({afeEligible: true});
+    assert(wrapper.find('DonorTeacherBanner').exists());
   });
 
   it('renders a TeacherSections component', () => {
@@ -159,24 +155,16 @@ describe('TeacherHomepage', () => {
     assert(wrapper.containsMatchingElement(<TeacherSections />));
   });
 
-  it('renders two RecentCourses component', () => {
+  it('renders one RecentCourses component', () => {
     const wrapper = setUp();
     const recentCourses = wrapper.find('RecentCourses');
-    assert.equal(recentCourses.length, 2);
+    assert.equal(recentCourses.length, 1);
     assert.deepEqual(recentCourses.at(0).props(), {
       showAllCoursesLink: true,
       isTeacher: true,
       hasFeedback: false,
       courses: courses,
       topCourse: topCourse,
-    });
-    assert.deepEqual(recentCourses.at(1).props(), {
-      showAllCoursesLink: true,
-      isTeacher: false,
-      hasFeedback: false,
-      isProfessionalLearningCourse: true,
-      courses: plCourses,
-      topCourse: topPlCourse,
     });
   });
 
@@ -190,48 +178,6 @@ describe('TeacherHomepage', () => {
       hasFeedback: false,
       courses: courses,
       topCourse: topCourse,
-    });
-  });
-
-  it('renders PL recentCourse if topPlCourse but no plCourses', () => {
-    const wrapper = setUp({plCourses: [], topPlCourse: topPlCourse});
-    const recentCourses = wrapper.find('RecentCourses');
-    assert.equal(recentCourses.length, 2);
-    assert.deepEqual(recentCourses.at(0).props(), {
-      showAllCoursesLink: true,
-      isTeacher: true,
-      hasFeedback: false,
-      courses: courses,
-      topCourse: topCourse,
-    });
-    assert.deepEqual(recentCourses.at(1).props(), {
-      showAllCoursesLink: true,
-      isTeacher: false,
-      hasFeedback: false,
-      isProfessionalLearningCourse: true,
-      courses: [],
-      topCourse: topPlCourse,
-    });
-  });
-
-  it('renders PL recentCourse if plCourses but no topPlCourse', () => {
-    const wrapper = setUp({plCourses: plCourses, topPlCourse: null});
-    const recentCourses = wrapper.find('RecentCourses');
-    assert.equal(recentCourses.length, 2);
-    assert.deepEqual(recentCourses.at(0).props(), {
-      showAllCoursesLink: true,
-      isTeacher: true,
-      hasFeedback: false,
-      courses: courses,
-      topCourse: topCourse,
-    });
-    assert.deepEqual(recentCourses.at(1).props(), {
-      showAllCoursesLink: true,
-      isTeacher: false,
-      hasFeedback: false,
-      isProfessionalLearningCourse: true,
-      courses: plCourses,
-      topCourse: null,
     });
   });
 

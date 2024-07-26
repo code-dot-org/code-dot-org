@@ -6,7 +6,8 @@ require_relative '../../deployment'
 # This module serves as a thin wrapper around Octokit, itself a wrapper around
 # the GitHub API.
 module GitHub
-  REPO = "code-dot-org/code-dot-org".freeze
+  ORGANIZATION = 'code-dot-org'.freeze
+  REPO = "#{ORGANIZATION}/code-dot-org".freeze
   DASHBOARD_DB_DIR = 'dashboard/db/'.freeze
   PEGASUS_DB_DIR = 'pegasus/migrations/'.freeze
   STAGING_BRANCH = 'staging'.freeze
@@ -135,7 +136,10 @@ module GitHub
   #         and head, or a new PR if one didn't already exist.
   def self.find_or_create_pull_request(base:, head:, title:, body: nil)
     configure_octokit
-    existing_pull_requests = Octokit.pull_requests(REPO, {base: base, head: head})
+    # The "List pull requests" endpoint has special requirements for the `head` property.
+    # See https://docs.github.com/en/rest/pulls/pulls?apiVersion=2022-11-28#list-pull-requests--parameters
+    formatted_head = "#{ORGANIZATION}:#{head}"
+    existing_pull_requests = Octokit.pull_requests(REPO, {base: base, head: formatted_head})
     return existing_pull_requests.first['number'] unless existing_pull_requests.empty?
 
     return create_pull_request(base: base, head: head, title: title, body: body)
@@ -252,6 +256,21 @@ module GitHub
     true
   end
 
+  # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Commits.html#compare-instance_method
+  # @param base [String] The base branch to compare against.
+  # @param compare [String] The comparison branch to compare.
+  # @return [Boolean] Whether compare is ahead of base, i.e., whether compare has commits
+  #   missing in base.
+  def self.ahead?(base:, compare:)
+    response = Octokit.compare(REPO, base, compare)
+    response.ahead_by > 0
+  rescue Octokit::InternalServerError
+    # This can happen for comparisons with extremely large diffs. See https://developer.github.com/v3/repos/commits/#compare-two-commits
+    # In this case, we can safely assume that we are indeed ahead, since there
+    # otherwise would not be a diff to break on
+    true
+  end
+
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Repositories.html#branch-instance_method
   # @param branch [String] The name of the branch.
   # @raise [Octokit::NotFound] If the specified branch does not exist.
@@ -356,10 +375,10 @@ module GitHub
   end
 
   # Iterate over a paged resource, given the first response
-  def self.paged_for_each(response)
+  def self.paged_for_each(response, &block)
     loop do
       resources = response.data
-      resources.each {|resource| yield(resource)}
+      resources.each(&block)
       break unless response.rels[:next]
       response = response.rels[:next].get
     end

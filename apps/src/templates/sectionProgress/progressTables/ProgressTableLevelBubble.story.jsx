@@ -1,8 +1,10 @@
 import React from 'react';
-import ProgressTableLevelBubble from './ProgressTableLevelBubble';
-import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
-import color from '@cdo/apps/util/color';
+
 import {BubbleSize} from '@cdo/apps/templates/progress/BubbleFactory';
+import color from '@cdo/apps/util/color';
+import {LevelKind, LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+
+import ProgressTableLevelBubble from './ProgressTableLevelBubble';
 
 const statuses = [
   LevelStatus.not_tried,
@@ -27,20 +29,13 @@ const wrapperStyle = {
   justifyContent: 'center',
 };
 
-const defaultExport = {
-  name: 'ProgressTableLevelBubble',
-  component: ProgressTableLevelBubble,
-};
-
 const SingleTemplate = args => (
   <div style={wrapperStyle}>
     <ProgressTableLevelBubble {...args} />
   </div>
 );
 
-const stories = {};
-
-const LockedBubble = SingleTemplate.bind({});
+export const LockedBubble = SingleTemplate.bind({});
 LockedBubble.args = {
   levelStatus: LevelStatus.not_tried,
   levelKind: LevelKind.level,
@@ -48,79 +43,74 @@ LockedBubble.args = {
   title: '3',
   url: '/foo/bar',
 };
-stories['LockedBubble'] = LockedBubble;
 
-statuses.map(status => {
-  const story = SingleTemplate.bind({});
-  story.args = {
-    levelStatus: status,
-    levelKind: LevelKind.level,
-    title: '3',
-    url: '/foo/bar',
-  };
-  stories[`BubbleStatus-${status}`] = story;
-});
+LockedBubble.argTypes = {
+  levelStatus: {control: 'select', options: statuses},
+};
 
-statuses.map(status => {
-  const story = SingleTemplate.bind({});
-  story.args = {
-    levelStatus: status,
-    levelKind: LevelKind.level,
-    title: '3',
-    url: '/foo/bar',
-    isConcept: true,
-  };
-  stories[`ConceptBubbleStatus-${status}`] = story;
-});
+export const BubbleStatus = SingleTemplate.bind({});
+BubbleStatus.args = {
+  levelStatus: LevelStatus.not_tried,
+  levelKind: LevelKind.level,
+  title: '3',
+  url: '/foo/bar',
+};
 
-assessmentStatuses.map(status => {
-  const story = SingleTemplate.bind({});
-  story.args = {
-    levelStatus: status,
-    levelKind: LevelKind.assessment,
-    title: '3',
-    url: '/foo/bar',
-  };
-  stories[`AssessmentBubbleStatus-${status}`] = story;
-});
+export const ConceptBubbleStatus = SingleTemplate.bind({});
+ConceptBubbleStatus.args = {
+  levelStatus: LevelStatus.not_tried,
+  levelKind: LevelKind.level,
+  title: '3',
+  url: '/foo/bar',
+  isConcept: true,
+};
 
-statuses.map(status => {
-  const story = SingleTemplate.bind({});
-  story.args = {
-    levelStatus: status,
-    levelKind: LevelKind.level,
-    title: '3',
-    url: '/foo/bar',
-    isBonus: true,
-  };
-  stories[`BonusBubbleStatus-${status}`] = story;
-});
+export const AssessmentBubbleStatus = SingleTemplate.bind({});
+AssessmentBubbleStatus.args = {
+  levelStatus: LevelStatus.not_tried,
+  levelKind: LevelKind.assessment,
+  title: '3',
+  url: '/foo/bar',
+};
 
-statuses.slice(1).map(status => {
-  const story = SingleTemplate.bind({});
-  story.args = {
-    levelStatus: status,
-    levelKind: LevelKind.level,
-    title: '3',
-    url: '/foo/bar',
-    isPaired: true,
-  };
-  stories[`PairedBubbleStatus-${status}`] = story;
-});
+AssessmentBubbleStatus.argTypes = {
+  levelStatus: {control: 'select', options: assessmentStatuses},
+};
 
-statuses.map(status => {
-  const story = SingleTemplate.bind({});
-  story.args = {
-    levelStatus: status,
-    levelKind: LevelKind.level,
-    title: '3',
-    url: '/foo/bar',
-    isUnplugged: true,
-  };
-  stories[`UnpluggedBubbleStatus-${status}`] = story;
-});
+export const BonusBubbleStatus = SingleTemplate.bind({});
+BonusBubbleStatus.args = {
+  levelStatus: LevelStatus.not_tried,
+  levelKind: LevelKind.level,
+  title: '3',
+  url: '/foo/bar',
+  isBonus: true,
+};
 
-const LetterBubbles = () => (
+const pairedBubbleStatuses = [...statuses].slice(1);
+
+export const PairedBubbleStatus = SingleTemplate.bind({});
+PairedBubbleStatus.args = {
+  levelStatus: pairedBubbleStatuses[0],
+  levelKind: LevelKind.level,
+  title: '3',
+  url: '/foo/bar',
+  isPaired: true,
+};
+
+PairedBubbleStatus.argTypes = {
+  levelStatus: {control: 'select', options: pairedBubbleStatuses},
+};
+
+export const UnpluggedBubbleStatus = SingleTemplate.bind({});
+UnpluggedBubbleStatus.args = {
+  levelStatus: LevelStatus.not_tried,
+  levelKind: LevelKind.level,
+  title: '3',
+  url: '/foo/bar',
+  isUnplugged: true,
+};
+
+export const LetterBubbles = () => (
   <div style={{...wrapperStyle, width: null, height: null}}>
     <ProgressTableLevelBubble
       levelStatus={LevelStatus.perfect}
@@ -145,9 +135,10 @@ const LetterBubbles = () => (
     />
   </div>
 );
-stories['LetterBubbles'] = LetterBubbles;
 
-const DotBubbles = () => (
+LetterBubbles.argTypes = {};
+
+export const DotBubbles = () => (
   <div style={{...wrapperStyle, width: null, height: null}}>
     <ProgressTableLevelBubble
       levelStatus={LevelStatus.perfect}
@@ -173,9 +164,12 @@ const DotBubbles = () => (
     />
   </div>
 );
-stories['DotBubbles'] = DotBubbles;
 
-module.exports = {
-  ...stories,
-  default: defaultExport,
+DotBubbles.argTypes = {};
+
+export default {
+  component: ProgressTableLevelBubble,
+  argTypes: {
+    levelStatus: {control: 'select', options: statuses},
+  },
 };

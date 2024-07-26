@@ -1,12 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import _ from 'lodash';
-import libraryParser from './libraryParser';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
+import PropTypes from 'prop-types';
+import React from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import {Heading2} from '@cdo/apps/lib/ui/Headings';
 import Button from '@cdo/apps/templates/Button';
+import color from '@cdo/apps/util/color';
 import {findProfanity} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import libraryParser from './libraryParser';
 
 /**
  * @readonly
@@ -440,7 +443,7 @@ const styles = {
   selectAllFunctionsLabel: {
     margin: 0,
     fontSize: 20,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
   functionLabel: {
     margin: 0,

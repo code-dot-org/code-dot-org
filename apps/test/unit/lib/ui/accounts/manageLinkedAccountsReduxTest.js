@@ -1,9 +1,11 @@
-import sinon from 'sinon';
-import {assert} from '../../../../util/reconfiguredChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import manageLinkedAccounts, {
   initializeState,
   convertServerAuthOptions,
 } from '@cdo/apps/lib/ui/accounts/manageLinkedAccountsRedux';
+
+import {assert} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('manageLinkedAccountsRedux', () => {
   let server;

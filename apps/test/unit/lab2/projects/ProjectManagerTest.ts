@@ -1,10 +1,12 @@
+import {expect, assert} from 'chai'; // eslint-disable-line no-restricted-imports
+import sinon, {stubObject, StubbedInstance} from 'ts-sinon';
+
 import {RemoteChannelsStore} from '@cdo/apps/lab2/projects/ChannelsStore';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
 import {RemoteSourcesStore} from '@cdo/apps/lab2/projects/SourcesStore';
 import {ValidationError} from '@cdo/apps/lab2/responseValidators';
 import {ProjectSources, Channel} from '@cdo/apps/lab2/types';
-import {expect, assert} from 'chai';
-import sinon, {stubObject, StubbedInstance} from 'ts-sinon';
+import {NetworkError} from '@cdo/apps/util/HttpClient';
 
 const FAKE_CHANNEL_ID = 'fakeChannelId';
 
@@ -189,8 +191,11 @@ describe('ProjectManager', () => {
   });
 
   it('can still save if initial load returned a 404', async () => {
-    // Error message will contain a 404 if sources store encountered a 404.
-    sourcesStore.load.throws(new Error('404'));
+    const networkError: NetworkError = new NetworkError(
+      'network error',
+      new Response(null, {status: 404})
+    );
+    sourcesStore.load.throws(networkError);
     const projectManager = new ProjectManager(
       sourcesStore,
       channelsStore,
@@ -220,8 +225,11 @@ describe('ProjectManager', () => {
   });
 
   it('throw an error if loading sources fails for any other reason', async () => {
-    const error = new Error('500 Network Error');
-    sourcesStore.load.throws(error);
+    const networkError: NetworkError = new NetworkError(
+      'network error',
+      new Response(null, {status: 500})
+    );
+    sourcesStore.load.throws(networkError);
     const projectManager = new ProjectManager(
       sourcesStore,
       channelsStore,
@@ -232,7 +240,7 @@ describe('ProjectManager', () => {
     try {
       await projectManager.load();
     } catch (e) {
-      assert.deepEqual(e, error);
+      assert.deepEqual((e as Error).cause, networkError);
     }
   });
 

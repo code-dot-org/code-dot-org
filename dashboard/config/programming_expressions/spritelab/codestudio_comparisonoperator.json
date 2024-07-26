@@ -20,13 +20,13 @@
       "app": "https://studio.code.org/projects/spritelab/sOXRJcZJe-z5xSkg_AapcMIhbU1JkjzNUm4Zu4rKRbA",
       "image": null,
       "app_display_type": "embedAppWithCode",
-      "embed_app_with_code_height": 310
+      "embed_app_with_code_height": "500"
     }
   ],
   "image_url": "https://curriculum.code.org/media/blocks/equality.PNG",
   "palette_params": [
     {
-      "name": "value1",
+      "name": "value 1",
       "type": "",
       "required": true,
       "description": "Variable, number, color, text, or logic block to be compared with value 2"
@@ -35,7 +35,7 @@
       "name": "operator",
       "type": "",
       "required": true,
-      "description": "Allows the two values to be compared.  = ≠ < ≤ >≥"
+      "description": "Allows the two values to be compared: = ≠ < ≤ >≥"
     },
     {
       "name": "value 2",
@@ -44,6 +44,6 @@
       "description": "Variable, number, color, text, or logic block to be compared with value 1"
     }
   ],
-  "short_description": "Gets the result of an expression that compares two values.",
+  "short_description": "Returns true or false after evaluating an expression that compares two values.",
   "syntax": "logic_compare"
 }

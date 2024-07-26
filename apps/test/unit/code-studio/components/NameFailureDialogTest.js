@@ -1,6 +1,6 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import NameFailureDialog from '@cdo/apps/code-studio/components/NameFailureDialog';
 
 describe('NameFailureDialog', () => {
@@ -12,7 +12,7 @@ describe('NameFailureDialog', () => {
         handleClose={() => {}}
       />
     );
-    expect(wrapper.find('h1').text()).to.include('Unable to rename project');
-    expect(wrapper.find('p').text()).to.include('farts');
+    expect(wrapper.find('h1').text()).toContain('Unable to rename project');
+    expect(wrapper.find('p').text()).toContain('farts');
   });
 });

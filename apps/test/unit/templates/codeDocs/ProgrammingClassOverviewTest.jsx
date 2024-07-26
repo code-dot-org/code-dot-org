@@ -1,7 +1,9 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import ProgrammingClassOverview from '@cdo/apps/templates/codeDocs/ProgrammingClassOverview';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('ProgrammingClassOverview', () => {
   let defaultProgrammingClass;

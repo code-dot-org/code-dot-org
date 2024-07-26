@@ -1,8 +1,8 @@
 import React from 'react';
+
 import ButtonList from './ButtonList';
 
 export default {
-  title: 'ButtonList',
   component: ButtonList,
 };
 

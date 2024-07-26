@@ -1,5 +1,5 @@
 {
-  "title": "Software Engineering and Computer Vision - {survey_variable}",
+  "title": "Software Engineering and Computer Vision - {survey_variable_name}",
   "logoPosition": "right",
   "pages": [
     {
@@ -8,7 +8,7 @@
         {
           "type": "panel",
           "name": "testing_panel",
-          "visible": true,
+          "visible": false,
           "title": " ",
           "elements": [
             {
@@ -18,8 +18,10 @@
             },
             {
               "type": "radiogroup",
-              "name": "survey_variable",
-              "defaultValueExpression": "{pre_module}",
+              "name": "survey_variable_name",
+              "defaultValueExpression": "{survey_variable}",
+              "startWithNewLine": false,
+              "readOnly": true,
               "visible": true,
               "choices": [
                 {
@@ -60,7 +62,7 @@
               "type": "html",
               "name": "variable_testing",
               "visible": true,
-              "html": "<h3>variables</h3>\n<p>Test to make sure variables are working as expected - make invisible when live</p><p><li>survey_variable = {survey_variable}</p>"
+              "html": "<h3>variables</h3>\n<p>Test to make sure variables are working as expected - make invisible when live</p><p><li>survey_variable_name = {survey_variable_name}</p>"
             },
             {
               "type": "html",
@@ -74,21 +76,21 @@
           "library_name": "surveys/pd/csa_computer_vision",
           "library_version": 0,
           "name": "pre_module_survey_header_panel",
-          "natalia_comment": "NOTE: Header - Pre-module survey: Displays if {survey_variable}='pre_module', conditional logic in library item."
+          "natalia_comment": "NOTE: Header - Pre-module survey: Displays if {survey_variable_name}='pre_module', conditional logic in library item."
         },
         {
           "type": "library_item",
           "library_name": "surveys/pd/csa_computer_vision",
           "library_version": 0,
           "name": "post_module_survey_header_panel",
-          "natalia_comment": "NOTE: Header - Post-module survey: Displays if {survey_variable}='post_module', conditional logic in library item."
+          "natalia_comment": "NOTE: Header - Post-module survey: Displays if {survey_variable_name}='post_module', conditional logic in library item."
         },
         {
           "type": "library_item",
           "library_name": "surveys/pd/csa_computer_vision",
           "library_version": 0,
           "name": "post_lesson_survey_header_panel",
-          "natalia_comment": "NOTE: Header - Post-lesson survey: Displays for all lessons, this is when {survey_variable}<>'pre_module' and {survey_variable} <> 'post_module', conditional logic in library item."
+          "natalia_comment": "NOTE: Header - Post-lesson survey: Displays for all lessons, this is when {survey_variable_name}<>'pre_module' and {survey_variable_name} <> 'post_module', conditional logic in library item."
         }
       ]
     },
@@ -100,56 +102,56 @@
           "library_name": "surveys/pd/csa_computer_vision",
           "library_version": 0,
           "name": "pre_module_survey_questions_panel",
-          "natalia_comment": "NOTE: Question panel - Pre-module survey: Displays if {survey_variable}='pre_module', conditional logic in library item."
+          "natalia_comment": "NOTE: Question panel - Pre-module survey: Displays if {survey_variable_name}='pre_module', conditional logic in library item."
         },
         {
           "type": "library_item",
           "library_name": "surveys/pd/csa_computer_vision",
           "library_version": 0,
           "name": "post_module_survey_questions_panel",
-          "natalia_comment": "NOTE: Question panel - Post-module survey: Displays if {survey_variable}='post_module', conditional logic in library item."
+          "natalia_comment": "NOTE: Question panel - Post-module survey: Displays if {survey_variable_name}='post_module', conditional logic in library item."
         },
         {
           "type": "library_item",
           "library_name": "surveys/pd/csa_computer_vision",
           "library_version": 0,
           "name": "post_lesson_2_survey_questions_panel",
-          "natalia_comment": "NOTE: Question panel - Post-lesson 2 survey: Displays if {survey_variable}='post_lesson_2', conditional logic in library item."
+          "natalia_comment": "NOTE: Question panel - Post-lesson 2 survey: Displays if {survey_variable_name}='post_lesson_2', conditional logic in library item."
         },
         {
           "type": "library_item",
           "library_name": "surveys/pd/csa_computer_vision",
           "library_version": 0,
           "name": "post_lesson_3_survey_questions_panel",
-          "natalia_comment": "NOTE: Question panel - Post-lesson 3 survey: Displays if {survey_variable}='post_lesson_3', conditional logic in library item."
+          "natalia_comment": "NOTE: Question panel - Post-lesson 3 survey: Displays if {survey_variable_name}='post_lesson_3', conditional logic in library item."
         },
         {
           "type": "library_item",
           "library_name": "surveys/pd/csa_computer_vision",
           "library_version": 0,
           "name": "post_lesson_4_survey_questions_panel",
-          "natalia_comment": "NOTE: Question panel - Post-lesson 4 survey: Displays if {survey_variable}='post_lesson_4', conditional logic in library item."
+          "natalia_comment": "NOTE: Question panel - Post-lesson 4 survey: Displays if {survey_variable_name}='post_lesson_4', conditional logic in library item."
         },
         {
           "type": "library_item",
           "library_name": "surveys/pd/csa_computer_vision",
           "library_version": 0,
           "name": "post_lesson_5_survey_questions_panel",
-          "natalia_comment": "NOTE: Question panel - Post-lesson 5 survey: Displays if {survey_variable}='post_lesson_5', conditional logic in library item."
+          "natalia_comment": "NOTE: Question panel - Post-lesson 5 survey: Displays if {survey_variable_name}='post_lesson_5', conditional logic in library item."
         },
         {
           "type": "library_item",
           "library_name": "surveys/pd/csa_computer_vision",
           "library_version": 0,
           "name": "post_lesson_6_survey_questions_panel",
-          "natalia_comment": "NOTE: Question panel - Post-lesson 6 survey: Displays if {survey_variable}='post_lesson_6', conditional logic in library item."
+          "natalia_comment": "NOTE: Question panel - Post-lesson 6 survey: Displays if {survey_variable_name}='post_lesson_6', conditional logic in library item."
         },
         {
           "type": "library_item",
           "library_name": "surveys/pd/csa_computer_vision",
           "library_version": 0,
           "name": "post_lesson_7_survey_questions_panel",
-          "natalia_comment": "NOTE: Question panel - Post-lesson 7 survey: Displays if {survey_variable}='post_lesson_7', conditional logic in library item."
+          "natalia_comment": "NOTE: Question panel - Post-lesson 7 survey: Displays if {survey_variable_name}='post_lesson_7', conditional logic in library item."
         },
         {
           "type": "html",

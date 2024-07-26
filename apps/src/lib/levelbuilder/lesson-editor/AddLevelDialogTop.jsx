@@ -1,13 +1,15 @@
-import PropTypes from 'prop-types';
-import React, {useState, useEffect} from 'react';
-import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
-import AddLevelTable from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTable';
-import AddLevelFilters from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelFilters';
-import CreateNewLevelInputs from '@cdo/apps/lib/levelbuilder/lesson-editor/CreateNewLevelInputs';
 import $ from 'jquery';
+import PropTypes from 'prop-types';
 import queryString from 'query-string';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import React, {useState, useEffect} from 'react';
 import {connect} from 'react-redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import AddLevelFilters from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelFilters';
+import AddLevelTable from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTable';
+import CreateNewLevelInputs from '@cdo/apps/lib/levelbuilder/lesson-editor/CreateNewLevelInputs';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 
 function AddLevelDialogTop(props) {
   const [methodOfAddingLevel, setMethodOfAddingLevel] = useState('Find Level');
@@ -100,6 +102,7 @@ function AddLevelDialogTop(props) {
                 currentPage={currentPage}
                 addLevel={props.addLevel}
                 levels={levels}
+                currentLevelIds={props.currentLevelIds}
                 numPages={numPages}
               />
             </div>
@@ -119,6 +122,7 @@ function AddLevelDialogTop(props) {
 
 AddLevelDialogTop.propTypes = {
   addLevel: PropTypes.func.isRequired,
+  currentLevelIds: PropTypes.array,
 
   // from redux
   searchOptions: PropTypes.object.isRequired,
@@ -130,7 +134,7 @@ const styles = {
     paddingRight: 20,
     paddingBottom: 20,
     width: 1100,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif',
+    ...fontConstants['main-font-regular'],
     marginLeft: -600,
   },
   dialogContent: {

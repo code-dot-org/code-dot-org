@@ -1,11 +1,11 @@
+import {configureStore} from '@reduxjs/toolkit';
 import React from 'react';
 import {Provider} from 'react-redux';
+
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {configureStore} from '@reduxjs/toolkit';
 
 export default {
-  title: 'CurriculumCatalogCard',
   component: CurriculumCatalogCard,
 };
 
@@ -25,7 +25,11 @@ const defaultArgs = {
   isEnglish: true,
   pathToCourse: '/s/course',
   isSignedOut: false,
+  isTeacher: true,
   onQuickViewClick: () => {},
+  handleSetExpandedCardKey: () => {},
+  recommendedSimilarCurriculum: {},
+  recommendedStretchCurriculum: {},
 };
 
 export const AllOptionsCard = Template.bind({});

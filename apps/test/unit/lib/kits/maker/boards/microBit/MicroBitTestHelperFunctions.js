@@ -1,4 +1,5 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {MICROBIT_FIRMWARE_VERSION} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 
 export function boardSetupAndStub(board) {

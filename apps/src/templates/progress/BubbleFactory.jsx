@@ -1,15 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import classNames from 'classnames';
 import {uniqueId} from 'lodash';
+import PropTypes from 'prop-types';
 import queryString from 'query-string';
-import i18n from '@cdo/locale';
+import React from 'react';
+
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {currentLocation, makeEnum} from '@cdo/apps/utils';
-import TooltipWithIcon from './TooltipWithIcon';
+import i18n from '@cdo/locale';
+
 import {getIconForLevel, isLevelAssessment} from './progressHelpers';
 import {flex, font, marginLeftRight, marginTopBottom} from './progressStyles';
 import {levelWithProgressType} from './progressTypes';
+import TooltipWithIcon from './TooltipWithIcon';
 import './styles.scss';
 
 export const BubbleSize = makeEnum('dot', 'letter', 'full');
@@ -213,6 +215,13 @@ export function getBubbleUrl(
   const params = preserveQueryParams
     ? queryString.parse(currentLocation().search)
     : {};
+
+  // We want to preserve all of the queryParams EXCEPT version because navigating
+  // between levels backed by different projects or between a project level and
+  // a non-project level puts the user in an error state since the version id doesn't
+  // exist.
+  delete params.version;
+
   if (sectionId) {
     params.section_id = sectionId;
   }

@@ -90,32 +90,30 @@ class BugCrowdAccountInfo
     return user_params
   end
 
-  private
-
-  def user_type
+  private def user_type
     return 'teacher'.freeze
   end
 
-  def username
+  private def username
     email_name_tokens = get_email_name_tokens
     return email_name_tokens.join("_")
   end
 
-  def name
+  private def name
     email_name_tokens = get_email_name_tokens
     return email_name_tokens.join(" ")
   end
 
   #This is the current value for teachers' new accounts
-  def age
+  private def age
     return 21
   end
 
-  def password
+  private def password
     return @email.split('@')[0]
   end
 
-  def get_email_name_tokens
+  private def get_email_name_tokens
     return @email.split('@')[0].split('-').slice(0, 2)
   end
 end

@@ -3,18 +3,18 @@ require 'test_helper'
 class LearningGoalTeacherEvaluationsControllerTest < ActionController::TestCase
   setup do
     @teacher = create :teacher
-    @student = create :student
     sign_in @teacher
+    @student = create :student
     @learning_goal = create :learning_goal
     @learning_goal_teacher_evaluation = create :learning_goal_teacher_evaluation, teacher_id: @teacher.id, user_id: @student.id, learning_goal_id: @learning_goal.id
   end
 
-  test 'create learning goal evaluation' do
+  test 'create learning goal teacher evaluation' do
     user_id = @student.id
     teacher_id = @teacher.id
     learning_goal_id = @learning_goal.id
-    understanding = 5
-    feedback = 'abc'
+    understanding = 1
+    feedback = 'feedback'
 
     post :create, params: {
       userId: user_id,
@@ -39,13 +39,11 @@ class LearningGoalTeacherEvaluationsControllerTest < ActionController::TestCase
     user_id = @student.id
     teacher_id = @teacher.id
     learning_goal_id = @learning_goal.id
-    understanding = 6
-    feedback = 'ghi'
+    understanding = 2
+    feedback = 'kcabdeef'
 
     post :update, params: {
       id: id,
-      userId: user_id,
-      learningGoalId: learning_goal_id,
       understanding: understanding,
       feedback: feedback
     }
@@ -64,7 +62,6 @@ class LearningGoalTeacherEvaluationsControllerTest < ActionController::TestCase
   test 'get_evaluation method' do
     get :get_evaluation, params: {
       userId: @learning_goal_teacher_evaluation.user_id,
-      teacherId: @learning_goal_teacher_evaluation.teacher_id,
       learningGoalId: @learning_goal_teacher_evaluation.learning_goal_id
     }
     assert_response :success
@@ -73,7 +70,7 @@ class LearningGoalTeacherEvaluationsControllerTest < ActionController::TestCase
     assert_equal response_json['id'], @learning_goal_teacher_evaluation.id
   end
 
-  test 'get_or_create_evaluation method' do
+  test 'get_or_create_evaluation method gets existing evaluation' do
     post :get_or_create_evaluation, params: {
       userId: @learning_goal_teacher_evaluation.user_id,
       learningGoalId: @learning_goal_teacher_evaluation.learning_goal_id
@@ -82,9 +79,10 @@ class LearningGoalTeacherEvaluationsControllerTest < ActionController::TestCase
 
     response_json = JSON.parse(response.body)
     assert_equal response_json['id'], @learning_goal_teacher_evaluation.id
+  end
 
+  test 'get_or_create_evaluation method creates evaluation if one does not exist' do
     new_student = create :student
-
     user_id = new_student.id
     learning_goal_id = @learning_goal.id
 

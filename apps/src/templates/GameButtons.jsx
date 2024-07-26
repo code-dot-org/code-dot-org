@@ -1,19 +1,20 @@
-import React from 'react';
-import msg from '@cdo/locale';
-
-import ProtectedStatefulDiv from './ProtectedStatefulDiv';
-import commonStyles from '../commonStyles';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import SkipButton from './SkipButton';
+import React from 'react';
 import {connect} from 'react-redux';
 
+import msg from '@cdo/locale';
+
 import blankImg from '../../static/common_images/1x1.gif';
+import commonStyles from '../commonStyles';
+
+import ProtectedStatefulDiv from './ProtectedStatefulDiv';
+import SkipButton from './SkipButton';
 
 export const FinishButton = () => (
   <button type="button" id="finishButton" className="share">
-    <img src="/blockly/media/1x1.gif" />
+    <img src="/blockly/media/1x1.gif" alt="" />
     {msg.finish()}
   </button>
 );
@@ -36,6 +37,10 @@ RunButton.propTypes = {
 };
 RunButton.displayName = 'RunButton';
 
+// The reset button is hidden by default,
+// then shown either by passing in style props to override
+// or imperatively by selecting the DOM node by ID
+// elsewhere in our code base (eg, StudioApp)
 export const ResetButton = Radium(props => (
   <button
     type="button"
@@ -91,7 +96,6 @@ UnconnectedGameButtons.propTypes = {
   hideRunButton: PropTypes.bool,
   hideResetButton: PropTypes.bool,
   runButtonText: PropTypes.string,
-  playspacePhoneFrame: PropTypes.bool,
   nextLevelUrl: PropTypes.string,
   showSkipButton: PropTypes.bool,
   widgetMode: PropTypes.bool,
@@ -105,7 +109,6 @@ export default connect(state => ({
   hideRunButton: state.pageConstants.hideRunButton,
   hideResetButton: state.pageConstants.hideResetButton,
   runButtonText: state.pageConstants.runButtonText,
-  playspacePhoneFrame: state.pageConstants.playspacePhoneFrame,
   nextLevelUrl: state.pageConstants.nextLevelUrl,
   showSkipButton: state.pageConstants.isChallengeLevel,
   widgetMode: state.pageConstants.widgetMode,

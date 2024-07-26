@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
 import i18n from '@cdo/locale';
+
 import {editStudent} from './manageStudentsRedux';
 
 const GENDERS = {

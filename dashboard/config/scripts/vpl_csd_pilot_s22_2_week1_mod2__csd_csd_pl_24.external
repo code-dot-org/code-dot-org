@@ -1,0 +1,135 @@
+name 'VPL-CSD-pilot-S22-2-week1-mod2_-csd_CSD-PL-24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lessons 1 - 5
+
+#### Unit 2 - Web Development begins with an opportunity for students to think about developing websites for other users. They will first encounter Web Lab by viewing sample web pages created within the tool for different purposes and different users. 
+
+#### Students will then learn to build the structure of a web page using HTML in a set of scaffolded lessons that introduce them to Web Lab. These first few lessons help students build foundational skills and knowledge that they will use later in the unit where they will need to apply these skills and knowledge to create their own web sites.  
+</p></div>
+<br>
+
+<div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
+
+### **Key Unit Vocabulary**
+
+* #### **Website content** - the text and images on a website
+* #### **Website structure** - how the content on the website is organized
+* #### **HTML** - Hypertext Markup Language, a language used to create the structure of web pages
+* #### **CSS** - Cascading Style Sheets; a language used to describe how HTML elements should be styled
+* #### **Digital footprint** - the collected information about an individual across multiple website on the Internet
+</p></div>
+<br>
+
+## Overview of Lessons 1 - 5 
+
+##### Click the dropdown arrows below to view lesson overviews.
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 1: Exploring Web Pages</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+<img src="https://images.code.org/46806d01b09f7572920599c6f5118251-image-1710458545993.22.22 PM.png" alt="Several sample websites on Code Studio" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** How can we choose websites based on the needs of a user?
+
+#### **Lesson Overview:**
+
+#### To kick off a unit devoted to group problem solving and developing websites for other users, students begin by investigating the design of different websites. Students look at a variety of websites and attempt to match each design with a potential user. Then students choose a user and attempt to prototype a website design for them on paper or in a digital template. To conclude the activity, students consider what it means to be a web designer and create resources for other users.
+
+#### **Students will be able to:** 
+* #### Create a prototype of a web design to meet the needs of a user using the problem-solving process
+* #### Identify features of a web design that match the needs of users
+* #### Understand the steps of the problem-solving process
+</p></div>
+</details>
+
+<div style="clear:both"/>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 2: Intro to HTML</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/db49d3fe50911bd3c60fe65e0e0d697e-image-1710458713989.25.09 PM.png" alt="Web Lab page showing the heading Welcome to Web Lab!" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** How can we tell the computer both *what* to put on the web page, and *how* to organize it?
+
+#### **Lesson Overview:**
+
+#### This lesson introduces many new concepts and tools to students: they are introduced to HTML, the Web Lab tool, and how to navigate lesson resources on Code.org in general. In this lesson, students are introduced to HTML as a solution to the problem of how to communicate both the content and structure of a website to a computer. The lesson begins with a brief unplugged activity demonstrating the challenges of effectively communicating the structure of a web page. Students then look at an exemplar HTML page in Web Lab and discuss with their classmates how HTML tags help solve this problem. Students then write their first HTML. A wrap-up discussion helps to solidify the understanding of content vs. structure that was developed throughout the lesson.
+
+#### **Students will be able to:**
+* #### Explain that HTML allows a programmer to communicate the way content should be structured on a web page
+* #### Understand how to use lesson resources provided in Web Lab
+* #### Write a simple HTML document that uses opening and closing tags to structure content
+</p></div>
+</details>
+
+<div style="clear:both"/>
+
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 3: Headings and Lists</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/0c7cabda71953d03d876905932aa6a35-image-1710458865890.27.42 PM.png" alt="A Web Lab level demonstrating different sizes of HTML headings" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** How can we work together to fix problems with our websites?
+
+#### **Lesson Overview:**
+
+#### This lesson introduces the core practices of pair programming and debugging. In this lesson, students continue to use HTML to structure text on web pages, this time in pairs, with a focus on working together and debugging problems with their sites. Students learn how to use the different heading and list elements and practice using them to give their web pages more structure.
+
+#### **Students will be able to:**
+* #### Structure content into headings, subheadings, lists and paragraphs.
+* #### Use a structured practice to collaboratively create a digital artifact.
+* #### Use heading and list tags to change the appearance of text on a web page.
+</p></div>
+</details>
+
+<div style="clear:both"/>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 4: Digital Footprint</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:40px;">
+    <p>
+<img src="https://images.code.org/e1be14e7973d04621a1d4e8bff3be3b9-image-1710458949464.29.05 PM.png" alt="Several sample social media pages" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** How can you make sure that your private information stays private?
+
+#### **Lesson Overview:**
+
+#### In this lesson, students pause their own on developing web pages so they can develop an understanding of how personal information is surfaced on the internet, sometimes intentionally and sometimes unintentionally. Students look at several fictitious social media pages to see what they can learn about different people purely from publicly available information. They then reflect on what guidelines are appropriate for posting their own information online, especially as they prepare to create more personalized websites.
+
+#### The ultimate point of this lesson is not to scare students, but rather to experientially bring students to realize that they don’t have control over information released online.
+
+#### **Students will be able to:**
+* #### Understand and explain reasons that it is difficult to control who sees information published online
+* #### Understand and justify guidelines for safely publishing information online
+</p></div>
+</details>
+
+<div style="clear:both"/>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🔎 Lesson 5: Mini-Project: HTML Web Page</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p>
+<img src="https://images.code.org/d4a91e2262f022b7bfbc1aaff6cb08a2-image-1710459018246.30.13 PM.png" alt="The Activity Guide for Unit 2 Lesson 5 directing students through the mini project" width="300px" style="float:left; margin: 20px 20px 20px 20px;">
+
+#### **Question of the Day:** How can I use HTML to design and build a web page for a user?
+
+#### **Lesson Overview:**
+
+#### In this mini-project, students use what they have learned to create a web page for a user. Students begin their project by using the Problem Solving Process to help them design a web page for a user. As they determine what content to include on the web page for their user, they will identify which tags they will use to implement their design. Students then build their user’s web page in Web Lab. Optionally, after engaging in a formal feedback process, they may change their web pages based on feedback before reflecting on their process. The lesson also includes an optional review of the HTML students have learned ‌before building the web page.
+
+#### **Students will be able to:**
+* #### Build a webpage using HTML
+* #### Design a webpage based on user needs
+* #### Write readable code
+</p></div>
+</details>
+MARKDOWN

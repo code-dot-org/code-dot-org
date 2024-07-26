@@ -1,8 +1,10 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import AdvancedSettingToggles from '@cdo/apps/templates/sectionsRefresh/AdvancedSettingToggles';
-import sinon from 'sinon';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('AdvancedSettingToggles', () => {
   it('renders PairProgramming and LockThisSection toggles to true and false as default respectively', () => {

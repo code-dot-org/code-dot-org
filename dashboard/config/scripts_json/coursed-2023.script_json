@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "key": "d475e7d2-6327-4d5c-880f-be3022ed8068",
+          "notice": "Free Teacher Resources from Amazon Future Engineer",
+          "details": "Code.org has partnered with Amazon Future Engineer to offer teachers at underserved schools a growing number of resources and benefits at no cost! ",
+          "link": "https://code.org/afe",
+          "type": "bullhorn",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Get free resources"
+        }
+      ],
       "curriculum_umbrella": "CSF",
       "has_lesson_plan": true,
       "hideable_lessons": true,
@@ -15,7 +27,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2023-08-08 17:50:26 UTC",
+    "serialized_at": "2024-01-31 21:32:16 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3993,7 +4005,7 @@
       "key": "f8ca2207-8cd9-4a8b-94f0-18d78bdf7047",
       "position": 1,
       "properties": {
-        "description": "To build on the skills you learned in CS Fundamentals Course D, click [here](https://code.org/maker/csf-microbit)  to check out Extension Lessons with the micro:bit. These [4 micro:bit lessons](https://code.org/maker/assets/CSF-Booklet-Course-D-v4.pdf) cover the following topics: Meet your micro:bit, Loops, Conditionals (if...then...else), Inputs and outputs, Events, and Variables.",
+        "description": "To build on the skills you learned in CS Fundamentals Course D, [click here to check out Extension Lessons with the micro:bit](https://code.org/maker/csf-microbit).. These 4 micro:bit lessons cover the following topics: Meet your micro:bit, Loops, Conditionals (if...then...else), Inputs and outputs, Events, and Variables.",
         "name": "Extension Lessons with the micro:bit"
       },
       "seeding_key": {
@@ -11989,7 +12001,35 @@
       "seeding_key": {
         "lesson.key": "Build a Star Wars Game",
         "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Star Wars Game",
+        "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Star Wars Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Build a Star Wars Game",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals with Cards",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
       }
     },
     {
@@ -12015,9 +12055,44 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Dance Party",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging with Laurel",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Debugging with Laurel",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging with Laurel",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging with Laurel",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Debugging with Laurel",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-03"
       }
     },
     {
@@ -12050,6 +12125,13 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Drawing Shapes with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "End of Course Project",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-10"
@@ -12073,6 +12155,13 @@
       "seeding_key": {
         "lesson.key": "End of Course Project",
         "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-17"
       }
     },
@@ -12087,7 +12176,21 @@
       "seeding_key": {
         "lesson.key": "Events in Bounce",
         "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Bounce",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
       }
     },
     {
@@ -12113,7 +12216,42 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Graph Paper Programming",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Graph Paper Programming",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "If/Else with Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "If/Else with Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Online Puzzles",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to Online Puzzles",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-11"
       }
@@ -12122,7 +12260,7 @@
       "seeding_key": {
         "lesson.key": "Introduction to Online Puzzles",
         "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
+        "standard.shortcode": "1B-CS-03"
       }
     },
     {
@@ -12158,6 +12296,20 @@
         "lesson.key": "Loops in Ice Age",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
       }
     },
     {
@@ -12206,7 +12358,21 @@
       "seeding_key": {
         "lesson.key": "Relay Programming",
         "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Relay Programming",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
       }
     },
     {

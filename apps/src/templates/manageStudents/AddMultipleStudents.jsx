@@ -1,12 +1,15 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {addMultipleAddRows} from './manageStudentsRedux';
-import Button from '../Button';
-import i18n from '@cdo/locale';
-import BaseDialog from '../BaseDialog';
-import DialogFooter from '../teacherDashboard/DialogFooter';
+
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import i18n from '@cdo/locale';
+
+import BaseDialog from '../BaseDialog';
+import Button from '../Button';
+import DialogFooter from '../teacherDashboard/DialogFooter';
+
+import {addMultipleAddRows} from './manageStudentsRedux';
 
 class AddMultipleStudents extends Component {
   static propTypes = {
@@ -84,6 +87,7 @@ class AddMultipleStudents extends Component {
             cols="70"
             ref="studentsTextBox"
             style={styles.textarea}
+            aria-label={i18n.addStudentsMultiple()}
           />
           <DialogFooter>
             <Button

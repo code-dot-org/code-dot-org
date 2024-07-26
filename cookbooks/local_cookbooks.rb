@@ -3,7 +3,7 @@
 # instance_eval File.read('../local_cookbooks.rb'), __FILE__
 metadata = Chef::Cookbook::Metadata.new
 metadata.from_file('metadata.rb')
-metadata.dependencies.keys.each do |cookbook|
+metadata.dependencies.each_key do |cookbook|
   path = "../#{cookbook}"
   next unless File.directory? path
   cookbook cookbook, path: path

@@ -18,4 +18,6 @@
 ActiveSupport::Inflector.inflections(:en) do |inflect|
   inflect.acronym "DSL" # Domain-Specific Language
   inflect.acronym "JSON" # JavaScript Object Notation
+  inflect.acronym 'NRPS' # Names and Role Provisioning Services
+  inflect.acronym 'CAP' # Child Account Policy
 end

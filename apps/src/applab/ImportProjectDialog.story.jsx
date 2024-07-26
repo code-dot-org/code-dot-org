@@ -1,9 +1,9 @@
-import React from 'react';
-import {ImportProjectDialog} from './ImportProjectDialog';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
+import {ImportProjectDialog} from './ImportProjectDialog';
 
 export default {
-  title: 'ImportProjectDialog',
   component: ImportProjectDialog,
 };
 

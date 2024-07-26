@@ -1,14 +1,14 @@
 /* @file Test of our p5.play Sprite wrapper object */
 
-import {expect} from '../../util/reconfiguredChai';
-import {
-  forEveryBooleanPermutation,
-  sandboxDocumentBody,
-} from '../../util/testUtils';
 import createP5Wrapper, {
   createStatefulP5Wrapper,
   expectAnimationsAreClones,
 } from '../../util/gamelab/TestableP5Wrapper';
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {
+  forEveryBooleanPermutation,
+  sandboxDocumentBody,
+} from '../../util/testUtils';
 
 describe('P5SpriteWrapper', function () {
   let p5Wrapper, createSprite;

@@ -1,0 +1,19 @@
+name 'game_variables_intro_choices_2024'
+display_name 'Games with variables as score'
+description '**Try out one of these simple games!** How does the scoring work? When you are ready to code your own scoreboard click Finish!
+
+The spicy peppers indicate how difficult the game is to win. 
+
+🌶️: Mild and easy 
+
+🌶️🌶️: Medium with some spice
+
+🌶️🌶️🌶️: Spicy! Difficult! 
+
+🌶️🌶️🌶️🌶️: Extra hot! Can you handle it? '
+
+sublevels
+level 'game_variables_intro_choices_a_2024'
+level 'game_variables_intro_choices_b_2024'
+level 'game_variables_intro_choices_c_2024'
+level 'game_variables_intro_choices_d_2024'

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "dance-draft",
-    "serialized_at": "2022-04-08 15:40:57 UTC",
+    "serialized_at": "2024-02-28 15:03:17 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -20,7 +20,17 @@
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "dance-draft"
+      }
+    }
   ],
   "lessons": [
 
@@ -65,6 +75,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

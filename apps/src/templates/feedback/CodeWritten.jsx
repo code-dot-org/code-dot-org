@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+
 import msg from '@cdo/locale';
+
 import trackEvent from '../../util/trackEvent';
 
 class CodeWritten extends React.Component {
@@ -19,7 +21,9 @@ class CodeWritten extends React.Component {
         className="lines-of-code-message"
         style={useChallengeStyles ? styles.challengeLineCounts : null}
       >
-        {msg.numLinesOfCodeWritten({numLines: numLinesWritten})}
+        {numLinesWritten > 0
+          ? msg.numLinesOfCodeWritten({numLines: numLinesWritten})
+          : null}
       </p>
     );
 
@@ -29,7 +33,6 @@ class CodeWritten extends React.Component {
         style={useChallengeStyles ? styles.details : null}
       >
         <summary
-          role="button"
           style={{
             ...styles.summary,
             ...(useChallengeStyles ? styles.challengeSummary : {}),

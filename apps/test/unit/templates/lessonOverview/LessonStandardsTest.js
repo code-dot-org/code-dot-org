@@ -1,9 +1,12 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import LessonStandards, {
   ExpandMode,
 } from '@cdo/apps/templates/lessonOverview/LessonStandards';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 import {cspStandards, cstaStandards} from './sampleStandardsData';
 
 describe('LessonStandards', () => {

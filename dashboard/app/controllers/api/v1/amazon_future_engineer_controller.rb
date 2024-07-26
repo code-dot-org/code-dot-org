@@ -14,16 +14,19 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
     return head :forbidden unless current_user&.teacher?
 
     afe_params = submit_params
+    # Retrieve the school to fill in address (and other) details
+    school = School.find_by(id: afe_params['schoolId'])
+
     submission_body = Services::AFEEnrollment.submit(
       first_name: afe_params['firstName'],
       last_name: afe_params['lastName'],
       email: afe_params['email'],
       nces_id: afe_params['schoolId'],
-      street_1: afe_params['street1'],
-      street_2: afe_params['street2'],
-      city: afe_params['city'],
-      state: afe_params['state'],
-      zip: afe_params['zip'],
+      street_1: school&.address_line1 || '',
+      street_2: school&.address_line2 || '',
+      city: school&.city || '',
+      state: school&.state || '',
+      zip: school&.zip || '',
       marketing_kit: afe_params['inspirationKit'],
       csta_plus: afe_params['csta'],
       amazon_terms: afe_params['consentAFE'],
@@ -47,7 +50,6 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
 
     # If the teacher requested it, submit to CSTA as well
     if to_bool(afe_params['csta'])
-      school = School.find_by(id: afe_params['schoolId'])
       school_district = school&.school_district
 
       Services::CSTAEnrollment.submit(
@@ -56,11 +58,11 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
         email: afe_params['email'],
         school_district_name: school_district&.name || '',
         school_name: school&.name || '',
-        street_1: afe_params['street1'] || school&.address_line1 || '',
-        street_2: afe_params['street2'] || school&.address_line2 || '',
-        city: afe_params['city'] || school&.city || '',
-        state: afe_params['state'] || school&.state || '',
-        zip: afe_params['zip'] || school&.zip || '',
+        street_1: school&.address_line1 || '',
+        street_2: school&.address_line2 || '',
+        city: school&.city || '',
+        state: school&.state || '',
+        zip: school&.zip || '',
         professional_role: afe_params['primaryProfessionalRole'] || '',
         grades_teaching: afe_params['gradesTeaching'] || '',
         privacy_permission: to_bool(afe_params['consentCSTA'])
@@ -83,12 +85,6 @@ class Api::V1::AmazonFutureEngineerController < ApplicationController
 
   PERMITTED_PARAMETERS = [
     *REQUIRED_PARAMETERS,
-    'street1',
-    'street2',
-    'street3',
-    'city',
-    'state',
-    'zip',
     'primaryProfessionalRole',
     'gradesTeaching',
     'consentCSTA'

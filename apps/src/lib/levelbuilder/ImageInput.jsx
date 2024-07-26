@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import Button from '@cdo/apps/templates/Button';
+import React, {useState} from 'react';
+
 import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 
 export default function ImageInput({
@@ -47,7 +48,9 @@ export default function ImageInput({
           />
         </label>
         {showPreview && !!currentImageUrl && (
-          <img src={currentImageUrl} style={styles.image} />
+          // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+          // Verify or update this alt-text as necessary
+          <img src={currentImageUrl} style={styles.image} alt="" />
         )}
       </div>
       <UploadImageDialog

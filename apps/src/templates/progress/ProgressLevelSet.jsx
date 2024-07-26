@@ -1,13 +1,16 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import ProgressBubbleSet from './ProgressBubbleSet';
+import React from 'react';
+import {connect} from 'react-redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import color from '@cdo/apps/util/color';
-import {levelWithProgressType} from './progressTypes';
+import i18n from '@cdo/locale';
+
+import ProgressBubbleSet from './ProgressBubbleSet';
 import {getIconForLevel} from './progressHelpers';
 import ProgressPill from './ProgressPill';
-import i18n from '@cdo/locale';
-import {connect} from 'react-redux';
+import {levelWithProgressType} from './progressTypes';
 
 /**
  * A set of one or more levels that are part of the same progression
@@ -117,7 +120,7 @@ const styles = {
   },
   text: {
     display: 'inline-block',
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 14,
     letterSpacing: -0.12,
   },

@@ -1,12 +1,14 @@
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import React from 'react';
 import memoize from 'memoize-one';
-import * as shapes from '../shapes';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
+
 import {KeyCodes} from '@cdo/apps/constants';
 import {selectors} from '@cdo/apps/lib/tools/jsdebugger/redux';
-import {PromptType} from '../redux/spritelabInput';
+
 import {animationSourceUrl} from '../redux/animationList';
+import {PromptType} from '../redux/spritelabInput';
+import * as shapes from '../shapes';
 
 class SpritelabInput extends React.Component {
   static propTypes = {
@@ -125,10 +127,15 @@ class SpritelabInput extends React.Component {
                   disabled={disabled}
                   style={styles.choiceSpriteContainer}
                 >
+                  {
+                    // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+                    // Verify or update this alt-text as necessary
+                  }
                   <img
                     src={spriteMap[choice]}
                     value={choice}
                     style={styles.choiceSpriteImage}
+                    alt=""
                   />
                 </button>
               ) : (

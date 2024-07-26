@@ -1,0 +1,41 @@
+@mixin approval-animation {
+  @keyframes approval-animation {
+    0%   { transform: rotate(0deg) }
+    25%  { transform: rotate(-10deg) }
+    50%  { transform: rotate(5deg) }
+    100% { transform: rotate(0deg) }
+  }
+
+  animation-name: approval-animation;
+  animation-timing-function: ease-in-out;
+  animation-duration: .75s;
+  transform-origin: -10% 100%;
+}
+
+@mixin wave-animation {
+  @keyframes wave-animation {
+    0%   { transform: rotate(0deg) }
+    25%  { transform: rotate(-10deg) }
+    75%  { transform: rotate(12deg) }
+    100% { transform: rotate(0deg) }
+  }
+
+  animation-name: wave-animation;
+  animation-timing-function: linear;
+  animation-duration: .75s;
+  transform-origin: 70% 70%;
+}
+
+@mixin high-five-animation {
+  @keyframes high-five-animation {
+    0%   { cursor: grab;    transform: rotate(0)     scale(1); }
+    25%  { cursor: grab;    transform: rotate(50deg) scale(1); }
+    50%  { cursor: grab;    transform: rotate(50deg) scale(1.5); }
+    75%  { cursor: grab;    transform: rotate(50deg) scale(1); }
+    100% { cursor: initial; transform: rotate(0)     scale(1); }
+  }
+
+  animation-name: high-five-animation;
+  animation-timing-function: ease-in-out;
+  animation-duration: .5s;
+}

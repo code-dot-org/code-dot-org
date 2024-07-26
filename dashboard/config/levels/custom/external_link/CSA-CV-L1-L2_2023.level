@@ -9,7 +9,8 @@
     "link_title": "Image Files",
     "url": "https://drive.google.com/file/d/1dnhvbfde7zKupHwz6LjTGTP_OGbp3wPp/view?usp=drive_link",
     "long_instructions": "# MediaPipe Model Testing\r\n\r\nDownload the images to test the MediaPipe object detection model!",
-    "name_suffix": "_2023"
+    "name_suffix": "_2023",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2023-10-03T21:34:17.753+00:00\",\"changed\":[\"cloned from \\\"CSA-CV-L1-L2\\\"\"],\"cloned_from\":\"CSA-CV-L1-L2\"}]"

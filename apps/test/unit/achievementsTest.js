@@ -1,7 +1,9 @@
-import {expect} from '../util/reconfiguredChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import * as achievements from '@cdo/apps/achievements';
-import sinon from 'sinon';
 import authoredHintUtils from '@cdo/apps/authoredHintUtils';
+
+import {expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('achievements', () => {
   describe('puzzleComplete', () => {
@@ -51,6 +53,6 @@ describe('achievements', () => {
       stub.restore();
     });
 
-    after(() => {});
+    afterAll(() => {});
   });
 });

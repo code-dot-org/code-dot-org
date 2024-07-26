@@ -1,7 +1,10 @@
 require_relative '../../shared/middleware/helpers/storage_id'
 require 'cdo/aws/s3'
+require 'cdo/mailjet'
 require 'cdo/db'
 
+# rubocop:disable CustomCops/PegasusDbUsage
+# rubocop:disable CustomCops/DashboardDbUsage
 class DeleteAccountsHelper
   class SafetyConstraintViolation < RuntimeError; end
 
@@ -26,7 +29,7 @@ class DeleteAccountsHelper
   #   usual checks on account type, row limits, etc.  For use only when an
   #   engineer needs to purge an account manually after investigating whatever
   #   prevented it from being automatically purged.
-  def initialize(log: STDERR, bypass_safety_constraints: false)
+  def initialize(log: $stderr, bypass_safety_constraints: false)
     @pegasus_db = PEGASUS_DB
 
     @log = log
@@ -68,9 +71,13 @@ class DeleteAccountsHelper
       bucket.hard_delete_channel_content encrypted_channel_id
     end
 
-    # Clear Firebase contents for user's channels
-    @log.puts "Deleting Firebase contents for #{channel_count} channels"
-    FirebaseHelper.delete_channels encrypted_channel_ids
+    # Clear Datablock Storage contents for user's projects
+    @log.puts "Deleting Datablock Storage contents for #{project_ids.count} projects"
+    project_ids.each do |project_id|
+      DatablockStorageTable.where(project_id: project_id).delete_all
+      DatablockStorageKvp.where(project_id: project_id).delete_all
+      DatablockStorageRecord.where(project_id: project_id).delete_all
+    end
 
     @log.puts "Deleted #{channel_count} channels" if channel_count > 0
   end
@@ -197,7 +204,6 @@ class DeleteAccountsHelper
 
     unless pd_enrollment_ids.empty?
       Pd::PreWorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
-      Pd::WorkshopSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
       Pd::TeacherconSurvey.where(pd_enrollment_id: pd_enrollment_ids).update_all(form_data: '{}')
       Pd::Enrollment.with_deleted.where(id: pd_enrollment_ids).each(&:clear_data)
     end
@@ -247,6 +253,10 @@ class DeleteAccountsHelper
     ContactRollupsPardotMemory.find_or_create_by(email: email).update(marked_for_deletion_at: Time.now.utc)
   end
 
+  def remove_mailjet_contact(email)
+    MailJet.delete_contact(email)
+  end
+
   # Removes the StudioPerson record associated with the user IF it is not
   # associated with any other users.
   # @param [User] user The user whose studio person we will delete if it's not shared
@@ -287,16 +297,6 @@ class DeleteAccountsHelper
     @log.puts "Removed #{record_count} EmailPreference" if record_count > 0
   end
 
-  # Removes signature and school_id from applications for this user
-  # @param [User] user
-  def anonymize_circuit_playground_discount_application(user)
-    @log.puts "Anonymizing CircuitPlaygroundDiscountApplication"
-    if user.circuit_playground_discount_application
-      user.circuit_playground_discount_application.anonymize
-      @log.puts "Anonymized 1 CircuitPlaygroundDiscountApplication"
-    end
-  end
-
   def purge_teacher_feedbacks(user_id)
     @log.puts "Removing TeacherFeedback"
 
@@ -315,6 +315,43 @@ class DeleteAccountsHelper
       feedback.save!
     end
     @log.puts "Cleared #{as_student_count} TeacherFeedback" if as_student_count > 0
+  end
+
+  def delete_ai_tutor_interactions(user_id)
+    chat_messages_to_delete = AiTutorInteraction.where(user_id: user_id)
+    count = chat_messages_to_delete.count
+    chat_messages_to_delete.in_batches.destroy_all
+    @log.puts "Deleted #{count} AI Tutor Interactions" if count > 0
+  end
+
+  def delete_rubric_ai_evaluations(user_id)
+    # This finds all RubricAiEvaluation records which evalute this user's work,
+    # whether they were implicitly requested by the student when they submitted
+    # the project, or explicitly requested by their teacher.
+    as_student = RubricAiEvaluation.where(user_id: user_id)
+    as_student_count = as_student.count
+    as_student.each(&:destroy)
+    @log.puts "Deleted #{as_student_count} RubricAiEvaluation as student" if as_student_count > 0
+
+    # We've already deleted all evaluations of this user's work as a student.
+    # Any remaining evaluations requested by this user are requests made
+    # by a teacher to evaluate a student's work.
+    as_teacher = RubricAiEvaluation.where(requester_id: user_id)
+    as_teacher_count = as_teacher.count
+    as_teacher.each(&:destroy)
+    @log.puts "Deleted #{as_teacher_count} RubricAiEvaluation as teacher" if as_teacher_count > 0
+  end
+
+  def delete_learning_goal_teacher_evaluations(user_id)
+    as_student = LearningGoalTeacherEvaluation.where(user_id: user_id)
+    as_student_count = as_student.count
+    as_student.each(&:destroy)
+    @log.puts "Deleted #{as_student_count} LearningGoalTeacherEvaluation as student" if as_student_count > 0
+
+    as_teacher = LearningGoalTeacherEvaluation.where(teacher_id: user_id)
+    as_teacher_count = as_teacher.count
+    as_teacher.each(&:destroy)
+    @log.puts "Deleted #{as_teacher_count} LearningGoalTeacherEvaluation as teacher" if as_teacher_count > 0
   end
 
   def clean_and_destroy_code_reviews(user_id)
@@ -374,6 +411,12 @@ class DeleteAccountsHelper
     user.authentication_options.with_deleted.order(deleted_at: :desc).each(&:really_destroy!)
   end
 
+  def purge_lti_user_identities(user)
+    @log.puts "Deleting lti user identities"
+    # Delete most recently destroyed (soft-deleted) record first
+    user.lti_user_identities.with_deleted.order(deleted_at: :desc).each(&:really_destroy!)
+  end
+
   def purge_contact_rollups(email)
     @log.puts "Deleting ContactRollups records for email #{email}"
     return unless email
@@ -422,18 +465,22 @@ class DeleteAccountsHelper
 
     user.destroy
 
+    purge_lti_user_identities(user)
     purge_teacher_feedbacks(user.id)
     clean_and_destroy_code_reviews(user.id)
     remove_census_submissions(user_email) if user_email&.present?
     remove_email_preferences(user_email) if user_email&.present?
-    anonymize_circuit_playground_discount_application(user)
     clean_level_source_backed_progress(user.id)
     clean_pegasus_forms_for_user(user)
     delete_project_backed_progress(user)
+    delete_ai_tutor_interactions(user.id)
+    delete_rubric_ai_evaluations(user.id)
+    delete_learning_goal_teacher_evaluations(user.id)
     clean_and_destroy_pd_content(user.id, user_email)
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
     remove_poste_data(user_email) if user_email&.present?
+    remove_mailjet_contact(user_email) if user_email&.present?
     purge_contact_rollups(user_email)
     purge_unshared_studio_person(user)
     anonymize_user(user)
@@ -463,18 +510,16 @@ class DeleteAccountsHelper
     clean_pegasus_forms_for_email(email)
   end
 
-  private
-
-  def clean_pegasus_forms_for_user(user)
+  private def clean_pegasus_forms_for_user(user)
     @log.puts "Cleaning pegasus forms for user"
     clean_pegasus_forms(@pegasus_db[:forms].where(user_id: user.id))
   end
 
-  def clean_pegasus_forms_for_email(email)
+  private def clean_pegasus_forms_for_email(email)
     clean_pegasus_forms(@pegasus_db[:forms].where(email: email))
   end
 
-  def clean_pegasus_forms(forms_recordset)
+  private def clean_pegasus_forms(forms_recordset)
     form_ids = forms_recordset.map {|f| f[:id]}
     @pegasus_db[:form_geos].
       where(form_id: form_ids).
@@ -498,3 +543,5 @@ class DeleteAccountsHelper
       )
   end
 end
+# rubocop:enable CustomCops/PegasusDbUsage
+# rubocop:enable CustomCops/DashboardDbUsage

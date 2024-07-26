@@ -1,7 +1,9 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
+
 import {DisplayTheme} from './DisplayTheme';
 
 export default class NameFileDialog extends Component {
@@ -26,6 +28,7 @@ export default class NameFileDialog extends Component {
 
   componentDidUpdate(prevProps) {
     if (!prevProps.isOpen && this.props.isOpen) {
+      this.textInput.focus();
       this.textInput.setSelectionRange(0, 0);
     }
   }
@@ -85,7 +88,6 @@ export default class NameFileDialog extends Component {
               ...(displayTheme === DisplayTheme.DARK && styles.darkDialog),
             }}
             onKeyDown={this.onKeyDown}
-            autoFocus
           />
           <div>
             <button

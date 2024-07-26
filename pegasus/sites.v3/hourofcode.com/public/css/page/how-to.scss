@@ -1,4 +1,4 @@
-@import 'breakpoints';
+@import 'breakpoints', 'action-blocks', 'video-responsive';
 
 $border-radius: 4px;
 
@@ -22,44 +22,32 @@ html {
 
 h2 {
   font-size: 2rem;
-  font-family: var(--main-font-extra-bold);
+  font-family: var(--main-font);
+  font-weight: var(--bold-font-weight);
   margin: 0 0 1rem;
   line-height: 1.2;
-}
-
-.flex-container {
-  display: flex;
 }
 
 .button-wrapper {
   margin: 2rem 0 0;
   display: flex;
   justify-content: start;
+  align-items: flex-start;
   flex-wrap: wrap;
   gap: 1em;
-}
-
-a.link-button {
-  &.secondary {
-    background: none;
-    border: 2px solid var(--brand_secondary_default);
-    color: var(--brand_secondary_default);
-
-    &:hover {
-      background-color: var(--neutral_dark10);
-    }
-  }
 }
 
 section.banner {
   padding: 0;
 
   .wrapper {
-    padding: 2rem 0px 12rem;
+    padding: 2rem 0px 11rem;
   }
 
   h1 {
     margin-bottom: 1rem;
+    font-size: 3rem;
+    color: var(--neutral_white);
   }
 
   .show-overflow {
@@ -86,7 +74,8 @@ section.banner {
     @include reset-spacing;
 
     li {
-      font-family: var(--main-font-bold);
+      font-family: var(--main-font);
+      font-weight: var(--semi-bold-font-weight);
       color: var(--neutral_dark);
       @include reset-list-item-spacing;
 
@@ -195,7 +184,8 @@ section.steps {
     color: var(--brand_primary_dark);
     padding: 2px 6px;
     border-radius: $border-radius;
-    font-family: var(--main-font-bold);
+    font-family: var(--main-font);
+    font-weight: var(--semi-bold-font-weight);
     font-size: 0.65rem;
     line-height: 1.6;
     text-transform: uppercase;
@@ -261,7 +251,8 @@ section.steps {
           }
 
           p.body-two {
-            font-family: var(--main-font-bold);
+            font-family: var(--main-font);
+            font-weight: var(--semi-bold-font-weight);
           }
         }
 
@@ -275,6 +266,7 @@ section.steps {
 
           &.body-two {
             width: 90%;
+            font-weight: var(--regular-font-weight);
           }
         }
       }
@@ -337,17 +329,22 @@ section.steps {
       border-radius: 100%;
       font-size: 1rem;
       text-align: center;
-      line-height: 2;
-      font-family: var(--main-font-bold);
+      line-height: 2.1;
+      font-family: var(--main-font);
+      font-weight: var(--semi-bold-font-weight);
     }
 
     h3 {
-      margin-top: 0;
+      margin-top: 2px;
     }
 
     img {
       border-radius: $border-radius;
       width: 100%;
+    }
+
+    ul li {
+      margin-bottom: 1rem;
     }
   }
 }
@@ -376,96 +373,16 @@ section.faq {
     }
   }
 
+  ul li {
+    margin-bottom: 1rem;
+  }
+
   @media screen and (max-width: $width-sm) {
     h2 {
       text-align: center;
     }
     a.link-button {
       margin: 1rem auto;
-    }
-  }
-}
-
-section.resources {
-
-  // Action blocks wrappers
-  .action-block__wrapper {
-    margin-top: 2rem;
-    display: grid;
-    grid-gap: 1.25rem;
-
-    @media screen and (min-width: $width-sm) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    &.action-block__wrapper--three-col {
-      @media screen and (min-width: $width-lg) {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    &.action-block__wrapper--four-col {
-      @media screen and (min-width: $width-lg) {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-  }
-
-  // Action blocks shared styles
-  .action-block {
-    background: var(--neutral_light);
-    border: 1px solid var(--neutral_dark20);
-    border-radius: $border-radius;
-    display: flex;
-    align-content: baseline;
-
-    h3 {
-      width: 100%;
-      margin-top: 0;
-    }
-  }
-
-  .action-block--one-col {
-    flex-wrap: wrap;
-    flex-direction: column;
-    padding: 1.25rem;
-
-    &.flex-space-between {
-      justify-content: space-between;
-    }
-
-    @media screen and (max-width: $width-md) {
-      height: 100%;
-    }
-
-    img {
-      width: 100%;
-      margin-bottom: 1rem;
-    }
-
-    a.link-button {
-      width: 100%;
-      text-align: center;
-      padding-left: 0.5rem;
-      padding-right: 0.5rem;
-      margin: 1rem 0 0;
-    }
-  }
-
-  // Two column action block
-  .action-block--two-col {
-    flex-wrap: wrap;
-    overflow: hidden;
-
-    .text-wrapper {
-      padding: 1rem 1.5rem;
-    }
-
-    @media screen and (max-width: $width-sm) {
-      a.link-button, button {
-        width: 100%;
-        text-align: center;
-      }
     }
   }
 }

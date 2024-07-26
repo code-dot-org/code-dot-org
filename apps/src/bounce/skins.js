@@ -8,6 +8,7 @@
 // graph: Colour of optional grid lines, or false.
 
 var skinsBase = require('../skins');
+
 var msg = require('./locale');
 
 var CONFIGS = {
@@ -119,6 +120,7 @@ var CONFIGS = {
       'Houston Rockets',
       'Indiana Fever',
       'Indiana Pacers',
+      'Las Vegas Aces',
       'Los Angeles Clippers',
       'Los Angeles Lakers',
       'Los Angeles Sparks',
@@ -138,7 +140,6 @@ var CONFIGS = {
       'Portland Trail Blazers',
       'Sacramento Kings',
       'San Antonio Spurs',
-      'San Antonio Stars',
       'Seattle Storm',
       'Toronto Raptors',
       'Utah Jazz',

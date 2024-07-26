@@ -1,5 +1,8 @@
-import GoogleBlockly from 'blockly/core';
 import HighContrastTheme from '@blockly/theme-highcontrast';
+import GoogleBlockly from 'blockly/core';
+
+import fontConstants from '@cdo/apps/fontConstants';
+
 import {Themes} from '../constants';
 
 // Intentionally overriden styles from Google Blockly.
@@ -58,6 +61,9 @@ const cdoCustomHighContrastStyles = {
   world_blocks: {
     colourPrimary: '#4A4A88',
   },
+  ai_blocks: {
+    colourPrimary: '#566065',
+  },
   ...spriteLabHighContrastStyles,
 };
 
@@ -74,7 +80,8 @@ export default GoogleBlockly.Theme.defineTheme(Themes.HIGH_CONTRAST, {
     toolboxBackgroundColour: '#DDDDDD',
   },
   fontStyle: {
-    family: '"Gotham 4r", sans-serif',
+    family: fontConstants['main-font'],
+    weight: fontConstants['regular-font-weight'],
   },
   startHats: null,
 });

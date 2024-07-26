@@ -338,6 +338,26 @@ class TeacherFeedbackTest < ActiveSupport::TestCase
     assert_equal([expected_feedback], retrieved)
   end
 
+  test 'get_latest_feedbacks_received returns latest feedback for student on level from coteacher' do
+    teacher1 = create :teacher
+    teacher2 = create :teacher
+
+    student = create :student
+    section = create :section, user: teacher1
+    create :section_instructor, section: section, instructor: teacher2, status: :active
+    section.add_student(student)
+
+    script_level = create :script_level
+    script = script_level.script
+    level = script_level.levels.first
+
+    expected_feedback = create :teacher_feedback, teacher: teacher2, student: student, script: script, level: level
+
+    retrieved = TeacherFeedback.get_latest_feedbacks_received(student.id, level.id, script.id)
+
+    assert_equal([expected_feedback], retrieved)
+  end
+
   test 'get_latest_feedbacks_received returns latest feedback for student each level (when multiple are provided) sorted by most recent first' do
     teacher = create :teacher
     student = create :student

@@ -3,6 +3,7 @@ Feature: Dropdowns work as expected
 Background:
   Given I am on "http://studio.code.org/s/playlab/lessons/1/levels/8?noautoplay=true"
 
+@no_mobile
 Scenario: Drag a dropdown and select a different option.
   When I wait for the page to fully load
   And I dismiss the login reminder

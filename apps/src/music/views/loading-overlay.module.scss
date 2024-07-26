@@ -1,0 +1,26 @@
+@import 'color.scss';
+
+.loadingContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba($neutral_dark, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+  transition: opacity 0.2s ease;
+
+  &Show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.loadingSpinner {
+  font-size: 35px;
+}

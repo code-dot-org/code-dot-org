@@ -1,13 +1,16 @@
 import PropTypes from 'prop-types';
 import React, {useRef} from 'react';
-import UniqueSounds from '../utils/UniqueSounds';
-import TimelineElement from './TimelineElement';
 import {useSelector} from 'react-redux';
+
+import UniqueSounds from '../utils/UniqueSounds';
+
+import TimelineElement from './TimelineElement';
 
 /**
  * Renders timeline events, organized by unique sample ID.
  */
 const TimelineSampleEvents = ({
+  paddingOffset,
   barWidth,
   eventVerticalSpace,
   getEventHeight,
@@ -42,8 +45,8 @@ const TimelineSampleEvents = ({
           height={
             getEventHeight(currentUniqueSounds.length) - eventVerticalSpace
           }
-          top={20 + getVerticalOffsetForEventId(eventData.id)}
-          left={barWidth * (eventData.when - 1)}
+          top={32 + getVerticalOffsetForEventId(eventData.id)}
+          left={paddingOffset + barWidth * (eventData.when - 1)}
           when={eventData.when}
         />
       ))}
@@ -52,6 +55,7 @@ const TimelineSampleEvents = ({
 };
 
 TimelineSampleEvents.propTypes = {
+  paddingOffset: PropTypes.number.isRequired,
   barWidth: PropTypes.number.isRequired,
   eventVerticalSpace: PropTypes.number.isRequired,
   getEventHeight: PropTypes.func.isRequired,

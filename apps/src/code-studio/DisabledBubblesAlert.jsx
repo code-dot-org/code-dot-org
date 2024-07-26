@@ -1,6 +1,9 @@
 import React from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import Alert from '@cdo/apps/templates/alert';
 import i18n from '@cdo/locale';
+
 import {disabledBubblesSupportArticle} from './disabledBubbles';
 
 /**
@@ -12,9 +15,8 @@ export default class DisabledBubblesAlert extends React.Component {
     super(props);
 
     // Once alert has been dismissed, don't show again.
-    const disabledBubblesAlertSeen = sessionStorage.getItem(
-      'disabledBubblesAlertSeen'
-    );
+    const disabledBubblesAlertSeen =
+      sessionStorage.getItem('disabledBubblesAlertSeen') === 'true';
     this.state = {
       visible: !disabledBubblesAlertSeen,
     };
@@ -50,6 +52,6 @@ export default class DisabledBubblesAlert extends React.Component {
 
 const styles = {
   bold: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
 };

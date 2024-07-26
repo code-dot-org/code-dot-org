@@ -101,13 +101,13 @@ class LibraryBucketTest < FilesApiTestBase
       }
     )
 
-    @library_bucket.s3.stub :list_object_versions, fake_object_versions_response do
-      @library_bucket.s3.stub :delete_objects, fake_delete_objects_response do
-        err = assert_raises RuntimeError do
-          @library_bucket.hard_delete_channel_content @channel
-        end
-        assert_match /Error deleting channel content/, err.message
-      end
+    @library_bucket.s3.stubs(:list_object_versions).returns(fake_object_versions_response)
+    @library_bucket.s3.stubs(:delete_objects).returns(fake_delete_objects_response)
+    err = assert_raises RuntimeError do
+      @library_bucket.hard_delete_channel_content @channel
     end
+    assert_match /Error deleting channel content/, err.message
+    @library_bucket.s3.unstub(:list_object_versions)
+    @library_bucket.s3.unstub(:delete_objects)
   end
 end

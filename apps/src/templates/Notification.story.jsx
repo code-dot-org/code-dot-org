@@ -1,11 +1,12 @@
+import {action} from '@storybook/addon-actions';
 import React from 'react';
 import {Provider} from 'react-redux';
+
 import {reduxStore} from '@cdo/storybook/decorators';
+
 import Notification from './Notification';
-import {action} from '@storybook/addon-actions';
 
 export default {
-  title: 'Notification',
   component: Notification,
 };
 

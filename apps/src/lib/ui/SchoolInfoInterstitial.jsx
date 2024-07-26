@@ -1,29 +1,22 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Provider} from 'react-redux';
-import $ from 'jquery';
+import {combineReducers, createStore} from 'redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 import i18n from '@cdo/locale';
-import color from '../../util/color';
+
 import BaseDialog from '../../templates/BaseDialog';
 import Button from '../../templates/Button';
 import SchoolInfoInputs, {
   SCHOOL_TYPES_HAVING_NCES_SEARCH,
   SCHOOL_TYPES_HAVING_NAMES,
 } from '../../templates/SchoolInfoInputs';
-import firehoseClient from '../util/firehose';
-import {combineReducers, createStore} from 'redux';
-import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
-
-const FIREHOSE_EVENTS = {
-  // Interstitial is displayed to the teacher.
-  SHOW: 'show',
-  // Teacher clicked "Save"
-  SUBMIT: 'submit',
-  // School information saved successfully
-  SAVE_SUCCESS: 'save_success',
-  // School information failed to save
-  SAVE_FAILURE: 'save_failure',
-};
+import color from '../../util/color';
 
 const store = createStore(
   combineReducers({
@@ -93,21 +86,6 @@ export default class SchoolInfoInterstitial extends React.Component {
     }
   }
 
-  logEvent(eventName, data = {}) {
-    firehoseClient.putRecord({
-      study: 'school_info_interstitial',
-      study_group: 'control',
-      event: eventName,
-      // Send "has NCES id" as data_int
-      data_int:
-        this.state.ncesSchoolId && this.state.ncesSchoolId !== '-1' ? 1 : 0,
-      data_json: JSON.stringify({
-        isComplete: SchoolInfoInterstitial.isSchoolInfoComplete(this.state),
-        ...data,
-      }),
-    });
-  }
-
   static isSchoolInfoComplete(state) {
     if (!state.country) {
       return false;
@@ -133,7 +111,11 @@ export default class SchoolInfoInterstitial extends React.Component {
   }
 
   componentDidMount() {
-    this.logEvent(FIREHOSE_EVENTS.SHOW);
+    analyticsReporter.sendEvent(
+      EVENTS.SCHOOL_INTERSTITIAL_SHOW,
+      {},
+      PLATFORMS.BOTH
+    );
   }
 
   buildSchoolData() {
@@ -238,9 +220,17 @@ export default class SchoolInfoInterstitial extends React.Component {
     if (!isValid) {
       return;
     }
-    this.logEvent(FIREHOSE_EVENTS.SUBMIT, {
-      attempt: this.state.showSchoolInfoUnknownError ? 2 : 1,
-    });
+    analyticsReporter.sendEvent(
+      EVENTS.SCHOOL_INTERSTITIAL_SUBMIT,
+      {
+        hasNcesId:
+          this.state.ncesSchoolId && this.state.ncesSchoolId !== '-1'
+            ? 'true'
+            : 'false',
+        attempt: this.state.showSchoolInfoUnknownError ? 2 : 1,
+      },
+      PLATFORMS.BOTH
+    );
 
     const schoolData = this.buildSchoolData();
     const {formUrl, authTokenName, authTokenValue} = this.props.scriptData;
@@ -254,16 +244,24 @@ export default class SchoolInfoInterstitial extends React.Component {
       },
     })
       .done(() => {
-        this.logEvent(FIREHOSE_EVENTS.SAVE_SUCCESS, {
-          attempt: this.state.showSchoolInfoUnknownError ? 2 : 1,
-        });
+        analyticsReporter.sendEvent(
+          EVENTS.SCHOOL_INTERSTITIAL_SAVE_SUCCESS,
+          {
+            attempt: this.state.showSchoolInfoUnknownError ? 2 : 1,
+          },
+          PLATFORMS.BOTH
+        );
 
         this.props.onClose();
       })
       .fail(() => {
-        this.logEvent(FIREHOSE_EVENTS.SAVE_FAILURE, {
-          attempt: this.state.showSchoolInfoUnknownError ? 2 : 1,
-        });
+        analyticsReporter.sendEvent(
+          EVENTS.SCHOOL_INTERSTITIAL_SAVE_FAILURE,
+          {
+            attempt: this.state.showSchoolInfoUnknownError ? 2 : 1,
+          },
+          PLATFORMS.BOTH
+        );
 
         if (!this.state.showSchoolInfoUnknownError) {
           // First failure, display error message and give the teacher a chance
@@ -277,6 +275,11 @@ export default class SchoolInfoInterstitial extends React.Component {
   };
 
   dismissSchoolInfoForm = () => {
+    analyticsReporter.sendEvent(
+      EVENTS.SCHOOL_INTERSTITIAL_DISMISS,
+      {},
+      PLATFORMS.BOTH
+    );
     this.setState({isOpen: false});
     this.props.onClose();
   };
@@ -322,16 +325,12 @@ export default class SchoolInfoInterstitial extends React.Component {
           overflow={'visible'}
         >
           <div style={styles.container}>
-            <div style={styles.heading}>
-              {i18n.schoolInfoInterstitialTitle()}
-            </div>
             {this.state.showSchoolInfoUnknownError && (
               <p style={styles.error}>
                 {i18n.schoolInfoInterstitialUnknownError()}
               </p>
             )}
             <div style={styles.middle}>
-              <p>{i18n.schoolInfoInterstitialDescription()}</p>
               <SchoolInfoInputs
                 ref={ref => (this.schoolInfoInputs = ref)}
                 onCountryChange={this.onCountryChange}
@@ -351,7 +350,6 @@ export default class SchoolInfoInterstitial extends React.Component {
             </div>
             <div style={styles.bottom}>
               <Button
-                __useDeprecatedTag
                 onClick={this.dismissSchoolInfoForm}
                 style={styles.button}
                 color="gray"
@@ -360,7 +358,6 @@ export default class SchoolInfoInterstitial extends React.Component {
                 id="dismiss-button"
               />
               <Button
-                __useDeprecatedTag
                 onClick={this.handleSchoolInfoSubmit}
                 style={styles.button}
                 size="large"
@@ -384,7 +381,7 @@ const styles = {
   },
   heading: {
     fontSize: 16,
-    fontFamily: "'Gotham 5r', sans-serif",
+    ...fontConstants['main-font-semi-bold'],
   },
   middle: {
     marginTop: 20,

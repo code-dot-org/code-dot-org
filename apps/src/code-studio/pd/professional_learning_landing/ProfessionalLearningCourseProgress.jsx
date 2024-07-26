@@ -3,8 +3,8 @@
  */
 
 import PropTypes from 'prop-types';
-
 import React, {Component} from 'react';
+
 import PlcEnrollment from './plcElements/PlcEnrollment';
 
 export default class ProfessionalLearningCourseProgress extends Component {
@@ -19,12 +19,9 @@ export default class ProfessionalLearningCourseProgress extends Component {
     ) {
       return (
         <div>
-          <h2>Online Professional Learning Courses</h2>
-          <div>
-            {this.props.deeperLearningCourseData.map((plcData, i) => (
-              <PlcEnrollment key={i} plcData={plcData} />
-            ))}
-          </div>
+          {this.props.deeperLearningCourseData.map((plcData, i) => (
+            <PlcEnrollment key={i} plcData={plcData} />
+          ))}
         </div>
       );
     } else {

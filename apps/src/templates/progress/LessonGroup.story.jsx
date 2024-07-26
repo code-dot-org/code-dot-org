@@ -1,13 +1,15 @@
 import React from 'react';
+import {Provider} from 'react-redux';
+
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+
 import LessonGroup from './LessonGroup';
 import {
   fakeLesson,
   fakeLevels,
   createStoreWithHiddenLesson,
 } from './progressTestHelpers';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import {Provider} from 'react-redux';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 const lessons = [
   fakeLesson('Jigsaw', 1),
@@ -51,8 +53,7 @@ const groupedLesson = {
 };
 
 export default {
-  name: 'LessonGroup',
-  compoent: LessonGroup,
+  component: LessonGroup,
 };
 
 export const WithDetailView = () => (

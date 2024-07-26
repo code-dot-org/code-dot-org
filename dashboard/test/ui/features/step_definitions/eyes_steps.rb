@@ -15,8 +15,8 @@ When(/^I open my eyes to test "([^"]*)"$/) do |test_name|
   next if CDO.disable_all_eyes_running
   ensure_eyes_available
 
-  batch = Applitools::BatchInfo.new(ENV['BATCH_NAME'])
-  batch.id = ENV['BATCH_ID']
+  batch = Applitools::BatchInfo.new(ENV.fetch('BATCH_NAME', nil))
+  batch.id = ENV.fetch('BATCH_ID', nil)
   @eyes.batch = batch
 
   @eyes.branch_name = GitUtils.current_branch
@@ -65,6 +65,14 @@ And(/^I see no difference for "([^"]*)"(?: using stitch mode "([^"]*)")?$/) do |
 
   # Return to default stitch mode for remaining checkpoints in this Scenario.
   @eyes.stitch_mode = Applitools::STITCH_MODE[:css]
+end
+
+And(/^The header is finished animating$/) do
+  wait_for_jquery
+
+  wait_until do
+    @browser.execute_script('return $("#header_middle_content").css("opacity") === \'1\'') == true
+  end
 end
 
 def ensure_eyes_available

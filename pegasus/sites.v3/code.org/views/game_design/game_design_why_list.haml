@@ -1,0 +1,29 @@
+:ruby
+  list_items = [
+    {
+      icon: "fa-solid fa-smile",
+      heading: hoc_s("game_design_page.why.inclusive.title"),
+      desc: hoc_s("game_design_page.why.inclusive.desc"),
+    },
+    {
+      icon: "fa-solid fa-palette",
+      heading: hoc_s("game_design_page.why.creative.title"),
+      desc: hoc_s("game_design_page.why.creative.desc"),
+    },
+    {
+      icon: "fa-solid fa-lightbulb-on",
+      heading: hoc_s("game_design_page.why.problem_solving.title"),
+      desc: hoc_s("game_design_page.why.problem_solving.desc"),
+    },
+  ]
+
+%ul.steps-list.three-col
+  - list_items.each do |list_item|
+    %li
+      .icon-wrapper
+        %span
+          %i{class: list_item[:icon]}
+      %h3
+        = list_item[:heading]
+      %p
+        = list_item[:desc]

@@ -1,11 +1,11 @@
 require_relative '../../i18n_script_utils'
 
-Dir[File.expand_path('../markdown/**/*.rb', __FILE__)].sort.each {|file| require file}
-
 module I18n
   module Resources
     module Pegasus
       module Markdown
+        CROWDIN_PROJECT = 'codeorg-markdown'.freeze
+        DIR_NAME = 'codeorg-markdown'.freeze
         PARTIAL_EXTNAME = '.partial'.freeze
         ORIGIN_DIR_PATH = CDO.dir('pegasus/sites.v3/code.org').freeze
         ORIGIN_I18N_DIR_PATH = File.join(ORIGIN_DIR_PATH, 'i18n').freeze
@@ -15,6 +15,14 @@ module I18n
           SyncIn.perform
         end
 
+        def self.sync_up(**opts)
+          SyncUp.perform(**opts)
+        end
+
+        def self.sync_down(**opts)
+          SyncDown.perform(**opts)
+        end
+
         def self.sync_out
           SyncOut.perform
         end
@@ -22,3 +30,5 @@ module I18n
     end
   end
 end
+
+Dir[File.expand_path('../markdown/**/*.rb', __FILE__)].sort.each {|file| require file}

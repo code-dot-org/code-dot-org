@@ -1,10 +1,12 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import ActivitySection from '@cdo/apps/templates/lessonOverview/activities/ActivitySection';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import Button from '@cdo/apps/templates/Button';
 import Activity from '@cdo/apps/templates/lessonOverview/activities/Activity';
+import ActivitySection from '@cdo/apps/templates/lessonOverview/activities/ActivitySection';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import color from '@cdo/apps/util/color';
 
 export default class OrderControls extends Component {
@@ -119,7 +121,7 @@ const styles = {
     paddingRight: 20,
     paddingBottom: 20,
     width: 970,
-    fontFamily: '"Gotham 4r", sans-serif, sans-serif',
+    ...fontConstants['main-font-regular'],
     marginLeft: -500,
   },
 };

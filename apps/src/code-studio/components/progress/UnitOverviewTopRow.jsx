@@ -1,25 +1,27 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
+
+import BulkLessonVisibilityToggle from '@cdo/apps/code-studio/components/progress/BulkLessonVisibilityToggle';
+import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
+import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import Assigned from '@cdo/apps/templates/Assigned';
 import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
-import Assigned from '@cdo/apps/templates/Assigned';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
-import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
-import BulkLessonVisibilityToggle from '@cdo/apps/code-studio/components/progress/BulkLessonVisibilityToggle';
-import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import i18n from '@cdo/locale';
+
 import FontAwesome from '../../../templates/FontAwesome';
-import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';
@@ -45,7 +47,6 @@ class UnitOverviewTopRow extends React.Component {
     scriptResourcesPdfUrl: PropTypes.string,
     courseOfferingId: PropTypes.number,
     courseVersionId: PropTypes.number,
-    isProfessionalLearningCourse: PropTypes.bool,
     publishedState: PropTypes.oneOf(Object.values(PublishedState)),
     courseLink: PropTypes.string,
     participantAudience: PropTypes.string,
@@ -140,7 +141,6 @@ class UnitOverviewTopRow extends React.Component {
       hasPerLevelResults,
       courseOfferingId,
       courseVersionId,
-      isProfessionalLearningCourse,
       publishedState,
       participantAudience,
       isUnitWithLevels,
@@ -161,13 +161,6 @@ class UnitOverviewTopRow extends React.Component {
       unitProgress = IN_PROGRESS;
     }
 
-    /*
-     * We are turning off Printing Certificates for Professional Learning Courses
-     * until we can create a specialized certificate for PL courses.
-     * */
-    let completedProfessionalLearningCourse =
-      isProfessionalLearningCourse && unitProgress === COMPLETED;
-
     const displayPrintingOptionsDropwdown =
       pdfDropdownOptions.length > 0 &&
       publishedState !== PublishedState.pilot &&
@@ -177,7 +170,7 @@ class UnitOverviewTopRow extends React.Component {
       <div style={styles.buttonRow} className="unit-overview-top-row">
         {!deeperLearningCourse && viewAs === ViewType.Participant && (
           <div style={styles.buttonsInRow}>
-            {!completedProfessionalLearningCourse && isUnitWithLevels && (
+            {isUnitWithLevels && (
               <Button
                 __useDeprecatedTag
                 href={`/s/${scriptName}/next`}

@@ -5,9 +5,10 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
+
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
 
 export const LegacySingleLevelGroupDialog = ({id, title, body}) => (
   <ProtectedStatefulDiv id={id}>
@@ -43,7 +44,7 @@ export const LegacyMatchAngiGifDialog = () => (
       <p className="dialog-title">{i18n.instructions()}</p>
       <p>{i18n.dragBlocksToMatch()}</p>
       <div className="aniGif example-image" style={{overflow: 'hidden'}}>
-        <img src="/script_assets/images/matching_ani.gif" />
+        <img src="/script_assets/images/matching_ani.gif" alt="" />
       </div>
       <div className="farSide">
         <button type="button" id="ok-button">

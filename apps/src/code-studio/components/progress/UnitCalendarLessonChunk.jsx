@@ -1,9 +1,11 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import ReactTooltip from 'react-tooltip';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {unitCalendarLessonChunk} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import color from '@cdo/apps/util/color';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import ReactTooltip from 'react-tooltip';
 
 class UnitCalendarLessonChunk extends Component {
   static propTypes = {
@@ -133,7 +135,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     height: '100%',
   },
   assessment: {

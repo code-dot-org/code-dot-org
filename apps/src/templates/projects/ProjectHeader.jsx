@@ -1,17 +1,17 @@
 /** @file Header banner and start new project buttons for the project gallery */
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
-import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
+
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
+import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
+import i18n from '@cdo/locale';
+
 import ProjectsPromo from './ProjectsPromo';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 
 export default class ProjectHeader extends React.Component {
   static propTypes = {
     canViewAdvancedTools: PropTypes.bool,
     projectCount: PropTypes.number,
-    showDeprecatedCalcAndEvalWarning: PropTypes.bool,
   };
 
   render() {
@@ -28,14 +28,6 @@ export default class ProjectHeader extends React.Component {
           backgroundImageStyling={{backgroundPosition: '90% 40%'}}
         />
         <div className={'container main'}>
-          {this.props.showDeprecatedCalcAndEvalWarning && (
-            <Notification
-              type={NotificationType.warning}
-              notice={i18n.deprecatedCalcAndEvalWarning()}
-              details={i18n.deprecatedCalcAndEvalDetails()}
-              dismissible={false}
-            />
-          )}
           <ProjectsPromo />
           <StartNewProject
             canViewFullList

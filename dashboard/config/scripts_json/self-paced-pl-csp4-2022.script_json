@@ -4,13 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "CSP Self Paced PL",
       "is_migrated": true,
       "student_detail_progress_view": true,
       "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-30 13:39:41 UTC",
+    "serialized_at": "2024-01-25 21:36:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1561,6 +1562,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

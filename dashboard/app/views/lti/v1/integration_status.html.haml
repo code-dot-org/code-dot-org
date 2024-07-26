@@ -1,0 +1,29 @@
+#lti-integration-portal
+  .row
+    .span10
+      .padded-container
+        - if @integration_status == :created
+          .row
+            .span10.header
+              %h1= t('lti.integration.success_header')
+          .row
+            .span10
+              %p= t('lti.integration.success_body')
+              %p
+                != I18n.t('lti.integration.guide_instructions', lms_guides: SharedConstants::LMS_LINKS.INTEGRATION_GUIDE_URL, contact_us: SharedConstants::EMAIL_LINKS.CONTACT_US_URL, markdown: true)
+        - else
+          .row
+            .span10.header
+              %h1= t('lti.integration.exists_header')
+          .row
+            .span10
+              %p= t('lti.integration.exists_body')
+              %p
+                != I18n.t('lti.integration.guide_instructions', lms_guides: SharedConstants::LMS_LINKS.INTEGRATION_GUIDE_URL, contact_us: SharedConstants::EMAIL_LINKS.CONTACT_US_URL, markdown: true)
+        .row
+          .span10
+            %br
+            = link_to :home do
+              %button.lti-btn-purple-right= t('lti.integration.navigate_home')
+            = link_to :lti_v1_integrations do
+              %button.lti-btn-white= t('lti.integration.navigate_registration')

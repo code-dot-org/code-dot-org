@@ -7,6 +7,7 @@ module Pd
       COURSE_CSA = 'Computer Science A'.freeze,
       COURSE_FACILITATOR = 'Facilitator'.freeze,
       COURSE_ADMIN_COUNSELOR = 'Admin/Counselor Workshop'.freeze,
+      COURSE_BUILD_YOUR_OWN = 'Build Your Own Workshop'.freeze,
     ].freeze
 
     ARCHIVED_COURSES = [
@@ -135,9 +136,17 @@ module Pd
     ].freeze
 
     CSD_CUSTOM_WORKSHOP_MODULES = [
+      CS_BASICS_FOR_K5_TEACHERS = 'Computer Science Basics for K-5 Teachers'.freeze,
+      CS_FUNDAMENTALS_MAKER_MICROBIT = 'CS Fundamentals Maker with micro:bit'.freeze,
+      ARTIFICIAL_INTELLIGENCE_AND_MACHINE_LEARNING = 'Teaching Artificial Intelligence and Machine Learning'.freeze,
       CIRCUIT_PLAYGROUND = 'Teaching Creating Apps with Devices (Circuit Playground)'.freeze,
       MICRO_BIT = 'Teaching Creating Apps with Devices (micro:bit)'.freeze,
-      ARTIFICIAL_INTELLIGENCE_AND_MACHINE_LEARNING = 'Teaching Artificial Intelligence and Machine Learning'.freeze,
+      TEACHING_CS_CONNECTIONS = 'Teaching CS Connections'.freeze,
+      TEACHING_DATA_AND_SOCIETY = 'Teaching Data and Society'.freeze,
+      TEACHING_DESIGN_PROCESS = 'Teaching Design Process'.freeze,
+      INTERACTIVE_ANIMATIONS_AND_GAMES = 'Teaching Interactive Animations and Games'.freeze,
+      PROBLEM_SOLVING_AND_COMPUTING = 'Teaching Problem Solving and Computing'.freeze,
+      WEB_DEVELOPMENT = 'Teaching Web Development'.freeze,
     ].freeze
 
     NOT_FUNDED_SUBJECTS = [

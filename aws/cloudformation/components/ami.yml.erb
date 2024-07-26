@@ -30,7 +30,7 @@ ssh_key_name ||= {Ref: 'SSHKeyName'}.to_json
 instance_type ||= {Ref: 'InstanceType'}.to_json
 
 ami_timeout ||= 'PT10M'
-frontend_timeout ||= 'PT10M'
+frontend_timeout ||= 'PT20M'
 lifecycle_timeout ||= 1200 # seconds = 20 minutes
 frontend_volume_size ||= 16
 frontend_device_name ||= '/dev/sda1'
@@ -112,18 +112,17 @@ frontend_device_name ||= '/dev/sda1'
     LaunchConfiguration: {Ref: 'FrontendLaunchConfig'}
   %>
   Frontends:
-    DependsOn: [ASGCount]
     Type: AWS::AutoScaling::AutoScalingGroup
     CreationPolicy:
       ResourceSignal:
         Timeout: <%=frontend_timeout%>
-        Count: !GetAtt [ASGCount, DesiredCapacity]
+        Count: !GetAtt ASGCount.DesiredCapacity
       AutoScalingCreationPolicy:
         MinSuccessfulInstancesPercent: 80
     UpdatePolicy:
       AutoScalingRollingUpdate:
         MaxBatchSize: !Ref AutoscaleRollingBatchSize
-        MinInstancesInService: !GetAtt [ASGCount, DesiredCapacity]
+        MinInstancesInService: !GetAtt ASGCount.DesiredCapacity
         MinSuccessfulInstancesPercent: 80
         PauseTime: <%=frontend_timeout%>
         SuspendProcesses: [ScheduledActions]
@@ -132,14 +131,21 @@ frontend_device_name ||= '/dev/sda1'
       AutoScalingGroupName: !Sub "Frontends-${AWS::StackName}"
       VPCZoneIdentifier: <%= subnets.to_json %>
       LaunchConfigurationName: !Ref FrontendLaunchConfig
-      MinSize: !GetAtt [ASGCount, MinSize]
-      MaxSize: !GetAtt [ASGCount, MaxSize]
-      DesiredCapacity: !GetAtt [ASGCount, DesiredCapacity]
+      MinSize: !GetAtt ASGCount.MinSize
+      MaxSize: !GetAtt ASGCount.MaxSize
+      DesiredCapacity: !GetAtt ASGCount.DesiredCapacity
       HealthCheckType: EC2 # TODO: use ELB health check that returns healthy even when fully loaded.
       HealthCheckGracePeriod: 2000
       <%=indent(add_properties(frontend_properties), 6)%>
       MetricsCollection:
         - Granularity: 1Minute
+      Tags:
+        - Key: "Name"
+          Value: !Sub "Frontend-${AWS::StackName}"
+          PropagateAtLaunch: true
+        - Key: "environment"
+          Value: <%=environment%>
+          PropagateAtLaunch: true
   FrontendLaunchConfig:
     Type: AWS::AutoScaling::LaunchConfiguration
     DependsOn: FastSnapshotRestore

@@ -1,11 +1,12 @@
 /** @file Test maker droplet config behavior */
-import {expect} from '../../../../util/reconfiguredChai';
-import dropletConfig, {
-  configMicrobit,
-} from '@cdo/apps/lib/kits/maker/dropletConfig';
 import {CP_COMPONENT_EVENTS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import {MB_COMPONENT_EVENTS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import * as commands from '@cdo/apps/lib/kits/maker/commands';
+import dropletConfig, {
+  configMicrobit,
+} from '@cdo/apps/lib/kits/maker/dropletConfig';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('maker/dropletConfig.js', () => {
   describe('getBoardEventDropdownForParam', () => {

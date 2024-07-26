@@ -1,24 +1,32 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React, {useState} from 'react';
 import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
+import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
 import {
   PageLabels,
   SectionHeaders,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import {styles, getProgramInfo} from './TeacherApplicationConstants';
-import {RegionalPartnerMiniContactPopupLink} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
-import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
-import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
-import {FormContext} from '../../form_components_func/FormComponent';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
+import {FormContext} from '../../form_components_func/FormComponent';
+import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
+import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
+
+import {styles, getProgramInfo} from './TeacherApplicationConstants';
 
 const CSD_URL = 'https://code.org/educate/csd';
 const CSP_URL = 'https://code.org/educate/csp';
 const CSA_URL = 'https://code.org/educate/csa';
 
 const ChooseYourProgram = props => {
+  const [programChanged, setProgramChanged] = useState(false);
+
   const onProgramChange = newProgram => {
+    if (props.data.program) {
+      setProgramChanged(true);
+    }
     props.onChange(newProgram);
     analyticsReporter.sendEvent(EVENTS.PROGRAM_PICKED_EVENT, {
       'professional learning program': getProgramInfo(newProgram.program)
@@ -48,8 +56,12 @@ const ChooseYourProgram = props => {
             <a href={CSP_URL} target="_blank" rel="noopener noreferrer">
               CS Principles
             </a>
-            , and <a href={CSA_URL}>CSA</a> landing pages. For additional
-            questions regarding the program or application, please{' '}
+            , and{' '}
+            <a href={CSA_URL} target="_blank" rel="noopener noreferrer">
+              Computer Science A
+            </a>{' '}
+            landing pages. For additional questions regarding the program or
+            application, please{' '}
             <RegionalPartnerMiniContactPopupLink
               sourcePageId="teacher-application-first-page"
               notes="Please tell me more about the professional learning program for grades 6-12!"
@@ -63,6 +75,15 @@ const ChooseYourProgram = props => {
             name="program"
             onChange={program => onProgramChange(program)}
           />
+          {programChanged && (
+            <p>
+              Note: If you have previously started the application and decide to
+              change your program, that will impact which questions you need to
+              answer to complete the application. In this case, please check all
+              pages to make sure you have answered all questions for this new
+              program choice.
+            </p>
+          )}
         </FormGroup>
       </LabelsContext.Provider>
     </FormContext.Provider>

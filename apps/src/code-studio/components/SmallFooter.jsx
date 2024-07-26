@@ -8,12 +8,16 @@ https://github.com/code-dot-org/code-dot-org/blob/b2efc7ca8331f8261ebd55a326e23f
 /* eslint-disable react/no-danger */
 import $ from 'jquery';
 import _ from 'lodash';
+import debounce from 'lodash/debounce';
 import PropTypes from 'prop-types';
 import React from 'react';
-import debounce from 'lodash/debounce';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
+
+import Button from '../../templates/Button';
+import color from '../../util/color';
 
 const MenuState = {
   MINIMIZING: 'MINIMIZING',
@@ -29,7 +33,7 @@ export default class SmallFooter extends React.Component {
     i18nDropdown: PropTypes.string,
     copyrightInBase: PropTypes.bool.isRequired,
     copyrightStrings: PropTypes.shape({
-      thank_you: PropTypes.string.isRequired,
+      thanks: PropTypes.string.isRequired,
       help_from_html: PropTypes.string.isRequired,
       art_from_html: PropTypes.string.isRequired,
       code_from_html: PropTypes.string.isRequired,
@@ -106,17 +110,18 @@ export default class SmallFooter extends React.Component {
     );
   }
 
-  clickBase = () => {
+  clickBase = e => {
     if (this.props.copyrightInBase) {
       // When we have multiple items in our base row, ignore clicks to the
       // row that aren't on those particular items
       return;
     }
-    this.clickBaseMenu();
+    this.clickBaseMenu(e);
   };
 
   clickBaseCopyright = e => {
     e.preventDefault();
+    e.stopPropagation();
 
     if (this.state.menuState === MenuState.MINIMIZING) {
       return;
@@ -132,16 +137,21 @@ export default class SmallFooter extends React.Component {
   };
 
   clickMenuCopyright = event => {
+    event.stopPropagation();
     this.setState({menuState: MenuState.COPYRIGHT});
     this.minimizeOnClickAnywhere();
   };
 
-  clickBaseMenu = () => {
+  clickBaseMenu = e => {
+    e.stopPropagation();
     if (this.state.menuState === MenuState.MINIMIZING) {
       return;
     }
 
-    if (this.state.menuState === MenuState.EXPANDED) {
+    if (
+      this.state.menuState === MenuState.EXPANDED ||
+      this.state.menuState === MenuState.COPYRIGHT
+    ) {
       this.setState({menuState: MenuState.MINIMIZED});
       return;
     }
@@ -171,6 +181,17 @@ export default class SmallFooter extends React.Component {
         width: 650,
         maxWidth: '50%',
         minWidth: this.state.baseWidth,
+      },
+      copyrightXClose: {
+        position: 'absolute',
+        top: 0,
+        right: 0,
+        padding: 0,
+        color: color.neutral_dark30,
+        backgroundColor: color.background_gray,
+        cursor: 'pointer',
+        fontSize: 24,
+        border: 'none',
       },
       copyrightScrollArea: {
         maxHeight: this.props.phoneFooter ? 210 : undefined,
@@ -211,7 +232,8 @@ export default class SmallFooter extends React.Component {
           {this.renderCopyright()}
           {!!this.props.unitYear && yearIsNumeric && (
             <p style={styles.version}>
-              {i18n.version()}: {this.props.unitYear}
+              <span className="version-caption">{i18n.version()}: </span>
+              {this.props.unitYear}
             </p>
           )}
           {this.renderMoreMenuButton()}
@@ -220,9 +242,7 @@ export default class SmallFooter extends React.Component {
           <div id="copyright-scroll-area" style={styles.copyrightScrollArea}>
             <h4>{this.props.baseCopyrightString}</h4>
             <SafeMarkdown
-              markdown={decodeURIComponent(
-                this.props.copyrightStrings.thank_you
-              )}
+              markdown={decodeURIComponent(this.props.copyrightStrings.thanks)}
             />
             <p>{this.props.copyrightStrings.help_from_html}</p>
             <SafeMarkdown
@@ -247,6 +267,13 @@ export default class SmallFooter extends React.Component {
               markdown={decodeURIComponent(
                 this.props.copyrightStrings.trademark
               )}
+            />
+            <Button
+              id="x-close-copyright"
+              onClick={() => this.setState({menuState: MenuState.MINIMIZED})}
+              icon="fa-solid fa-xmark"
+              style={styles.copyrightXClose}
+              aria-label={i18n.closeDialog()}
             />
           </div>
         </div>

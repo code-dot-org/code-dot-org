@@ -1,6 +1,6 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import StandardsReportCurrentCourseInfo from '@cdo/apps/templates/sectionProgress/standards/StandardsReportCurrentCourseInfo';
 
 describe('StandardsReportCurrentCourseInfo', () => {
@@ -28,7 +28,7 @@ describe('StandardsReportCurrentCourseInfo', () => {
     const wrapper = shallow(
       <StandardsReportCurrentCourseInfo {...DEFAULT_PROPS} />
     );
-    expect(wrapper.contains('Express Course (2019)')).to.equal(true);
-    expect(wrapper.contains('This script teaches things')).to.equal(true);
+    expect(wrapper.contains('Express Course (2019)')).toBe(true);
+    expect(wrapper.contains('This script teaches things')).toBe(true);
   });
 });

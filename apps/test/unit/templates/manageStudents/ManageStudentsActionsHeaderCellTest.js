@@ -1,8 +1,10 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import i18n from '@cdo/locale';
+
 import {UnconnectedManageStudentsActionsHeaderCell as ManageStudentsActionsHeaderCell} from '@cdo/apps/templates/manageStudents/ManageStudentsActionsHeaderCell';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('ManageStudentsActionsCell', () => {
   it('renders the edit all option', () => {

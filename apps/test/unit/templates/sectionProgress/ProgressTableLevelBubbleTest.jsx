@@ -1,24 +1,26 @@
-import {expect} from '../../../util/reconfiguredChai';
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow, mount} from 'enzyme';
-import ProgressTableLevelBubble from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelBubble';
-import color from '@cdo/apps/util/color';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
-import {unitTestExports as cacheExports} from '@cdo/apps/util/CachedElement';
-import i18n from '@cdo/locale';
-import sinon from 'sinon';
+import BubbleBadge, {
+  KeepWorkingBadge,
+  BadgeType,
+} from '@cdo/apps/templates/progress/BubbleBadge';
 import {
   BasicBubble,
   BubbleLink,
   BubbleSize,
   BubbleShape,
 } from '@cdo/apps/templates/progress/BubbleFactory';
-import BubbleBadge, {
-  KeepWorkingBadge,
-  BadgeType,
-} from '@cdo/apps/templates/progress/BubbleBadge';
-import {ReviewStates} from '@cdo/apps/templates/feedback/types';
+import ProgressTableLevelBubble from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelBubble';
+import {unitTestExports as cacheExports} from '@cdo/apps/util/CachedElement';
+import color from '@cdo/apps/util/color';
+import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const TITLE = '1';
 
@@ -123,7 +125,7 @@ describe('ProgressTableLevelBubble', () => {
     cacheExports.clearElementsCache('BasicBubble');
   });
 
-  after(() => {
+  afterAll(() => {
     renderPropsSpy.resetHistory();
     cacheExports.clearElementsCache('BasicBubble');
   });

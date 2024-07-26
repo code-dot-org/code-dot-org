@@ -1,9 +1,11 @@
-import {assert} from '../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import sinon from 'sinon';
-import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
+
+import {assert} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const sectionId = 11;
 

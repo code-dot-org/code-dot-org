@@ -116,6 +116,7 @@ module ScriptConstants
       # with code_s matching the script name (in quotes) in this list.
 
       nil,
+      DANCE_AI_2023 = 'dance-ai-2023'.freeze, # 2023 hour of code
       POEM_ART_2021_NAME = 'poem-art-2021'.freeze, # 2021 hour of code
       HELLO_WORLD_FOOD_2021_NAME = 'hello-world-food-2021'.freeze, # 2021 hour of code
       HELLO_WORLD_ANIMALS_2021_NAME = 'hello-world-animals-2021'.freeze, # 2021 hour of code
@@ -131,6 +132,7 @@ module ScriptConstants
       MINECRAFT_HERO_NAME = 'hero'.freeze,
       MINECRAFT_NAME = 'mc'.freeze,
       MINECRAFT_DESIGNER_NAME = 'minecraft'.freeze,
+      MINECRAFT_AI_NAME = 'generation-ai'.freeze,
       APPLAB_INTRO = 'applab-intro'.freeze,
       HOC_2013_NAME = 'Hour of Code'.freeze, # 2013 hour of code
       FROZEN_NAME = 'frozen'.freeze,
@@ -227,7 +229,8 @@ module ScriptConstants
       MINECRAFT_NAME,
       MINECRAFT_DESIGNER_NAME,
       MINECRAFT_HERO_NAME,
-      MINECRAFT_AQUATIC_NAME
+      MINECRAFT_AQUATIC_NAME,
+      MINECRAFT_AI_NAME,
     ],
   }.freeze
 
@@ -253,6 +256,9 @@ module ScriptConstants
     HELLO_WORLD_EMOJI = 'hello-world-emoji'.freeze,
     HELLO_WORLD_RETRO = 'hello-world-retro'.freeze,
     K1HOC_2017 = 'k1hoc2017'.freeze,
+    MUSIC_INTRO_2024 = 'music-intro-2024'.freeze,
+    MUSIC_ONBOARD = 'music-onboard'.freeze,
+    MUSIC_TUTORIAL_2024 = 'music-tutorial-2024'.freeze,
     NETSIM = 'netsim'.freeze,
     ODOMETER = 'odometer'.freeze,
     OUTBREAK = 'outbreak'.freeze,
@@ -263,7 +269,9 @@ module ScriptConstants
     K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
     K5_ONLINEPD = 'K5-OnlinePD'.freeze,
     KODEA_PD_2021 = 'kodea-pd-2021'.freeze,
-    ALLTHETHINGS = 'allthethings'.freeze
+    ALLTHETHINGS = 'allthethings'.freeze,
+    COMPUTER_VISION = 'computer-vision'.freeze,
+    CSD2_2024 = 'csd2-2024'.freeze,
   ]
 
   DEFAULT_VERSION_YEAR = '2017'
@@ -300,6 +308,30 @@ module ScriptConstants
   end
 
   CSF_COURSE_PATTERNS = [/^(course[a-f])-([0-9]+)$/, /^(express)-([0-9]+)$/, /^(pre-express)-([0-9]+)$/]
+
+  TRANSLATEABLE_UNITS = [
+    *CATEGORIES[:csd],
+    *CATEGORIES[:csd_2018],
+    *CATEGORIES[:csd_2019],
+    *CATEGORIES[:csd_2021],
+    *CATEGORIES[:csd_2022],
+    *CATEGORIES[:csd_2023],
+
+    *CATEGORIES[:csf],
+    *CATEGORIES[:csf_2018],
+    *CATEGORIES[:csf_2019],
+    *CATEGORIES[:csf_2020],
+    *CATEGORIES[:csf_2021],
+    *CATEGORIES[:csf_2022],
+    *CATEGORIES[:csf_2023],
+    *CATEGORIES[:csf_international],
+
+    *CATEGORIES[:hoc],
+    *CATEGORIES[:twenty_hour],
+    *ADDITIONAL_I18N_UNITS,
+    *TRANSLATEABLE_CSC_UNITS,
+    JIGSAW_NAME,
+  ].freeze
 
   def self.csf_next_course_recommendation(course_name)
     # These course names without years in them should be mapped statically to their recommendation.
@@ -342,25 +374,11 @@ module ScriptConstants
     return nil
   end
 
-  def self.i18n?(script)
-    ScriptConstants.unit_in_category?(:csf_international, script) ||
-      ScriptConstants.unit_in_category?(:csf, script) ||
-      ScriptConstants.unit_in_category?(:csf_2018, script) ||
-      ScriptConstants.unit_in_category?(:csf_2019, script) ||
-      ScriptConstants.unit_in_category?(:csf_2020, script) ||
-      ScriptConstants.unit_in_category?(:csf_2021, script) ||
-      ScriptConstants.unit_in_category?(:csf_2022, script) ||
-      ScriptConstants.unit_in_category?(:csf_2023, script) ||
-      ScriptConstants.unit_in_category?(:csd, script) ||
-      ScriptConstants.unit_in_category?(:csd_2018, script) ||
-      ScriptConstants.unit_in_category?(:csd_2019, script) ||
-      ScriptConstants.unit_in_category?(:csd_2021, script) ||
-      ScriptConstants.unit_in_category?(:csd_2022, script) ||
-      ScriptConstants.unit_in_category?(:csd_2023, script) ||
-      ScriptConstants.unit_in_category?(:twenty_hour, script) ||
-      ScriptConstants.unit_in_category?(:hoc, script) ||
-      script == JIGSAW_NAME ||
-      TRANSLATEABLE_CSC_UNITS.include?(script) ||
-      ADDITIONAL_I18N_UNITS.include?(script)
+  # Checks if the unit is translatable
+  #
+  # @param unit_name [String] the Unit name
+  # @return [true, false]
+  def self.i18n?(unit_name)
+    TRANSLATEABLE_UNITS.include?(unit_name)
   end
 end

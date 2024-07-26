@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2023-05-07T21:19:04.000Z",
   "level_num": "custom",
@@ -73,11 +74,14 @@
     "hide_pause_button": "false",
     "short_instructions": "Read the code below. Press \"Run\" to play this game. Make changes to the code. Press \"Finish\" when you are done.",
     "instructions_icon": "purplebunny",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "standalone_app_name": "spritelab"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-05-07T21:19:04.421+00:00\",\"changed\":[\"cloned from \\\"courseF_apps_collector_drive_-2022-2\\\"\"],\"cloned_from\":\"courseF_apps_collector_drive_-2022-2\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-05-07T21:19:04.421+00:00\",\"changed\":[\"cloned from \\\"courseF_apps_collector_drive_-2022-2\\\"\"],\"cloned_from\":\"courseF_apps_collector_drive_-2022-2\"},{\"changed_at\":\"2024-03-07 00:11:15 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -1,11 +1,11 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import StudentsBeyondHoc from '@cdo/apps/templates/certificates/StudentsBeyondHoc';
 import {combineReducers, createStore} from 'redux';
-import responsive from '@cdo/apps/code-studio/responsiveRedux';
+
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import responsive from '@cdo/apps/code-studio/responsiveRedux';
+import StudentsBeyondHoc from '@cdo/apps/templates/certificates/StudentsBeyondHoc';
 
 const store = createStore(combineReducers({responsive, isRtl}));
 
@@ -36,17 +36,5 @@ describe('StudentsBeyondHoc', () => {
       />
     );
     expect(wrapper.find('CourseBlocksStudentGradeBands').exists());
-  });
-
-  it('renders a LocalClassActionBlock component', () => {
-    const wrapper = wrapped(
-      <StudentsBeyondHoc
-        completedTutorialType="other"
-        MCShareLink="code.org/minecraft/sharelink"
-        userType="signedOut"
-        isEnglish={true}
-      />
-    );
-    expect(wrapper.find('LocalClassActionBlock').exists());
   });
 });

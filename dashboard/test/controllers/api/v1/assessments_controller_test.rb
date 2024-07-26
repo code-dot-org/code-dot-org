@@ -19,6 +19,8 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
     @teacher_other = create(:teacher)
     @teacher_other.permission = UserPermission::AUTHORIZED_TEACHER
+
+    @unit = create :script
   end
 
   # index tests - gets assessment questions and answers
@@ -45,7 +47,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
   test 'verified teacher can get assessment questions and answers' do
     sign_in @teacher
-    get :index, params: {section_id: @section.id, script_id: 2}
+    get :index, params: {section_id: @section.id, script_id: @unit.id}
     assert_response :success
     assert_equal '{}', @response.body
   end
@@ -119,21 +121,21 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
     expected_match_options = [{"text" => "one"}, {"text" => "two"}]
 
     expected_questions = [
-      {"level_id" => sub_level1.id.to_s, "type" => "TextMatch", "name" => sub_level1.name,
+      {"level_id" => sub_level1.id.to_s, "type" => "TextMatch", "name" => sub_level1.name, 'is_validated' => true, 'can_have_feedback' => false,
         "display_name" => nil, "title" => "title", "question_text" => nil, "question_index" => 0},
-      {"level_id" => sub_level2.id.to_s, "type" => "Multi", "name" => sub_level2.name,
+      {"level_id" => sub_level2.id.to_s, "type" => "Multi", "name" => sub_level2.name, 'is_validated' => true, 'can_have_feedback' => false,
         "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level2.get_question_text, "question_index" => 1},
-      {"level_id" => sub_level3.id.to_s, "type" => "Multi", "name" => sub_level3.name,
+      {"level_id" => sub_level3.id.to_s, "type" => "Multi", "name" => sub_level3.name, 'is_validated' => true, 'can_have_feedback' => false,
         "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level3.get_question_text, "question_index" => 2},
-      {"level_id" => sub_level4.id.to_s, "type" => "Multi", "name" => sub_level4.name,
+      {"level_id" => sub_level4.id.to_s, "type" => "Multi", "name" => sub_level4.name, 'is_validated' => true, 'can_have_feedback' => false,
         "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level4.get_question_text, "question_index" => 3},
-      {"level_id" => sub_level6.id.to_s, "type" => "Match", "name" => sub_level6.name,
+      {"level_id" => sub_level6.id.to_s, "type" => "Match", "name" => sub_level6.name, 'is_validated' => false, 'can_have_feedback' => false,
        "display_name" => nil, "answers" => expected_match_answers, "options" => expected_match_options, "question_text" => sub_level6.get_question_text, "question" => sub_level6.question, "question_index" => 4},
-      {"level_id" => sub_level7.id.to_s, "type" => "Match", "name" => sub_level7.name,
+      {"level_id" => sub_level7.id.to_s, "type" => "Match", "name" => sub_level7.name, 'is_validated' => false, 'can_have_feedback' => false,
        "display_name" => nil, "answers" => expected_match_answers, "options" => expected_match_options, "question_text" => sub_level7.get_question_text, "question" => sub_level7.question, "question_index" => 5},
-      {"level_id" => sub_level8.id.to_s, "type" => "Match", "name" => sub_level8.name,
+      {"level_id" => sub_level8.id.to_s, "type" => "Match", "name" => sub_level8.name, 'is_validated' => false, 'can_have_feedback' => false,
        "display_name" => nil, "answers" => expected_match_answers, "options" => expected_match_options, "question_text" => sub_level8.get_question_text, "question" => sub_level8.question, "question_index" => 6},
-      {"level_id" => sub_level5.id.to_s, "type" => "Multi", "name" => sub_level5.name,
+      {"level_id" => sub_level5.id.to_s, "type" => "Multi", "name" => sub_level5.name, 'is_validated' => true, 'can_have_feedback' => false,
         "display_name" => nil, "answers" => expected_answers, "question_text" => sub_level5.get_question_text, "question_index" => 7},
     ]
     level_response = JSON.parse(@response.body)[level1.id.to_s]
@@ -167,7 +169,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
   test 'gets no assessment responses from students when no assessment' do
     sign_in @teacher
-    get :section_responses, params: {section_id: @section.id, script_id: 2}
+    get :section_responses, params: {section_id: @section.id, script_id: @unit.id}
     assert_response :success
     assert_equal '{}', @response.body
   end
@@ -458,7 +460,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
 
   test 'gets no survey responses from students when no survey' do
     sign_in @teacher
-    get :section_surveys, params: {section_id: @section.id, script_id: 2}
+    get :section_surveys, params: {section_id: @section.id, script_id: @unit.id}
     assert_response :success
     assert_equal '{}', @response.body
   end
@@ -711,7 +713,7 @@ class Api::V1::AssessmentsControllerTest < ActionController::TestCase
       create :teacher_feedback, script: script, level: weblab_level, student: student, teacher: @teacher
     end
 
-    assert_queries 11 do
+    assert_queries 14 do
       get :section_feedback, params: {section_id: @section.id, script_id: script.id}
     end
 

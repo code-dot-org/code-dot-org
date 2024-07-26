@@ -29,7 +29,7 @@ namespace :build do
       RakeUtils.system "npm run #{npm_target}"
       File.write(commit_hash, calculate_apps_commit_hash)
 
-      if rack_env?(:staging) && DCDO.get('deploy_storybook', false)
+      if rack_env?(:staging) && DCDO.get('deploy_storybook', true)
         ChatClient.log 'Deploying <b>storybook</b>...'
         RakeUtils.system 'npm run storybook:deploy'
       end
@@ -85,7 +85,7 @@ namespace :build do
 
         # Allow developers to skip the time-consuming step of seeding the dashboard DB.
         # Additionally allow skipping when running in CircleCI, as it will be seeded during `rake install`
-        if (rack_env?(:development) || ENV['CI']) && CDO.skip_seed_all
+        if (rack_env?(:development) || ENV.fetch('CI', nil)) && CDO.skip_seed_all
           ChatClient.log "Not seeding <b>dashboard</b> due to CDO.skip_seed_all...\n" \
               "Until you manually run 'rake seed:all' or disable this flag, you won't\n" \
               "see changes to: videos, concepts, levels, scripts, prize providers, \n " \
@@ -111,7 +111,14 @@ namespace :build do
         # The sequencing described here is the best for mitigating any issues
         # that may arise when that best practice is not followed.
         ChatClient.log 'Restarting <b>dashboard</b> Active Job worker(s).'
-        RakeUtils.system 'bin/delayed_job', 'restart'
+        # Issue a stop command to all workers. Will kill if not stopped within ~20 seconds.
+        RakeUtils.system 'bin/delayed_job', 'stop'
+        # Start new workers
+        if rack_env?(:production)
+          RakeUtils.system 'bin/delayed_job', '-n', '10', 'start'
+        elsif !rack_env?(:development)
+          RakeUtils.system 'bin/delayed_job', 'start'
+        end
 
         # Commit dsls.en.yml changes on staging
         dsls_file = dashboard_dir('config/locales/dsls.en.yml')
@@ -122,12 +129,12 @@ namespace :build do
           RakeUtils.git_push
         end
 
-        # if rack_env?(:staging)
-        #  This step will only complete successfully if we succeed in
-        #  generating all curriculum PDFs.
-        #  ChatClient.log "Generating missing pdfs..."
-        #  RakeUtils.rake_stream_output 'curriculum_pdfs:generate_missing_pdfs'
-        # end
+        if rack_env?(:staging)
+          # This step will only complete successfully if we succeed in
+          # generating all curriculum PDFs.
+          ChatClient.log "Generating missing pdfs..."
+          RakeUtils.rake_stream_output 'curriculum_pdfs:generate_missing_pdfs'
+        end
       end
 
       # Skip asset precompile in development.
@@ -140,7 +147,7 @@ namespace :build do
         ChatClient.log 'Cleaning <b>dashboard</b> assets...'
         RakeUtils.rake 'assets:clean'
         ChatClient.log 'Precompiling <b>dashboard</b> assets...'
-        RakeUtils.rake 'assets:precompile'
+        RakeUtils.rake 'assets:precompile', '--quiet'
       end
 
       ChatClient.log 'Restarting <b>dashboard</b> web server.'

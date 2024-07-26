@@ -46,10 +46,8 @@ const SILENCED = [
   'ailab',
   'applab',
   'bounce',
-  'calc',
   'craft',
   'dance',
-  'eval',
   'fish',
   'flappy',
   'gamelab',
@@ -83,6 +81,8 @@ const SILENCED = [
   // referenced by multiple sites
   'tutorialExplorer',
   'cookieBanner',
+  'userHeaderEventLogger',
+  'userHeaderStatsigReporter',
   'regionalPartnerMiniContact',
 
   // other entry points

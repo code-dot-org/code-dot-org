@@ -1,6 +1,7 @@
-import i18n from './locale';
-import trackEvent from '@cdo/apps/util/trackEvent';
 import * as craftRedux from '@cdo/apps/craft/redux';
+import trackEvent from '@cdo/apps/util/trackEvent';
+
+import i18n from './locale';
 
 export const ARROW_KEY_NAMES = [
   'ArrowLeft',

@@ -1,12 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 import {TextLink} from '@dsco_/link';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
+
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
-import javalabMsg from '@cdo/javalab/locale';
 import {stringifyQueryParams} from '@cdo/apps/utils';
-import {queryParams} from '@cdo/apps/code-studio/utils';
+import javalabMsg from '@cdo/javalab/locale';
 
 export const codeReviewTimelineElementType = {
   CREATED: 'created',
@@ -182,8 +184,7 @@ const styles = {
     paddingTop: '2px',
   },
   createdText: {
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontStyle: 'italic',
+    ...fontConstants['main-font-semi-bold-italic'],
   },
   commitChild: {
     padding: '0 0 25px 20px',

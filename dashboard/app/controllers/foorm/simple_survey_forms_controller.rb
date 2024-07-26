@@ -141,9 +141,7 @@ module Foorm
       }
     end
 
-    protected
-
-    def response_exists?(key_params)
+    protected def response_exists?(key_params)
       SimpleSurveySubmission.exists?(
         user_id: key_params[:user_id],
         simple_survey_form_id: key_params[:simple_survey_form_id]
@@ -152,7 +150,7 @@ module Foorm
 
     # Check that for any provided survey data,
     # we have both a key and a value.
-    def valid_survey_data?(params)
+    protected def valid_survey_data?(params)
       (0..2).to_a.each do |id|
         key = "survey_data_key_#{id}".to_sym
         value = "survey_data_value_#{id}".to_sym
@@ -167,7 +165,7 @@ module Foorm
     # representing variable names and the values to be inserted into the survey.
     # eg, if params: {survey_data_key_1: 'course', survey_data_value_1: 'CS Principles'}
     # returns: {'course' => 'CS Principles'}
-    def parse_survey_data(params)
+    protected def parse_survey_data(params)
       survey_data = Hash.new
 
       (0..2).to_a.each do |id|

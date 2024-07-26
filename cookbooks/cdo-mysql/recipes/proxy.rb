@@ -13,24 +13,22 @@
 #   action :upgrade
 # end
 
-# Use patched ProxySQL with fix for Aurora 2.09 bug.
-# See: https://github.com/sysown/proxysql/issues/3082
-proxysql_filename = 'proxysql_2.0.15-ubuntu18_amd64.deb'
+proxysql_filename = 'proxysql_2.6.2-ubuntu20_amd64.deb'
 proxysql_file = "#{Chef::Config[:file_cache_path]}/#{proxysql_filename}"
 remote_file proxysql_file do
-  source "https://github.com/wjordan/proxysql/releases/download/v2.0.15-aurora_2.09_fix/#{proxysql_filename}"
-  checksum "29fe79e54bce0f532084bfd8e5a13a55f1f8530f92be8a0e7db847aefcb1762f"
+  source "https://github.com/sysown/proxysql/releases/download/v2.6.2/#{proxysql_filename}"
+  checksum "bd4e4bf310927789d387341160c5a44b74d5fa0cd3d65783d40a75dd983791e1"
+  action :create_if_missing
 end
 dpkg_package('proxysql') do
   source proxysql_file
-  version '2.0.15'
+  version '2.6.2'
   options '--force-confold'
 end
 
 writer = URI.parse(node['cdo-secrets']['db_writer'] || 'mysql2://root@localhost/')
 writer.hostname = '127.0.0.1' if writer.hostname == 'localhost'
 reader = URI.parse((node['cdo-secrets']['db_reader'] || writer).to_s)
-reporting = URI.parse((node['cdo-secrets']['reporting_db_writer'] || writer).to_s)
 
 admin = URI.parse(node['cdo-mysql']['proxy']['admin'])
 admin_opt_str = %w(user host port).map {|x| "--#{x}=#{admin.send(x)}"}.join(' ')
@@ -39,7 +37,6 @@ admin_password = "--defaults-extra-file=<(printf \"[client]\\npassword=#{admin.p
 mysql_admin = "mysql #{admin_password} #{admin_opt_str}"
 
 proxy_port = node['cdo-mysql']['proxy']['port']
-reporting_port = node['cdo-mysql']['proxy']['reporting_port']
 data_dir = '/var/lib/proxysql'
 
 template 'proxysql.cnf' do
@@ -48,14 +45,12 @@ template 'proxysql.cnf' do
   variables(
     mysql_servers: [
       {writer => [0, 1, 2]},
-      {reader => [1, 2]},
-      {reporting => [3]}
+      {reader => [1, 2]}
     ],
     data_dir: data_dir,
     is_aurora: true, # All environments that have ProxySQL enabled used Aurora.
     admin: admin,
-    port: proxy_port,
-    reporting_port: reporting_port
+    port: proxy_port
   )
 end
 
@@ -122,7 +117,6 @@ end
 # Override application config to use proxy endpoint for DB reads and writes.
 node.override['cdo-secrets']['db_writer'] = writer.dup.tap {|r| r.hostname = '127.0.0.1'; r.port = proxy_port}.to_s
 node.override['cdo-secrets']['db_reader'] = reader.dup.tap {|r| r.hostname = '127.0.0.1'; r.port = proxy_port}.to_s
-node.override['cdo-secrets']['reporting_db_writer'] = reporting.dup.tap {|r| r.hostname = '127.0.0.1'; r.port = reporting_port}.to_s
 
 node.override['cdo-secrets']['db_proxy_admin'] = admin.to_s
 # Send log to CloudWatch.

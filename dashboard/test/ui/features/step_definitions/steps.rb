@@ -63,11 +63,11 @@ end
 
 def replace_hostname(url)
   UrlConverter.new(
-    dashboard_host: ENV['DASHBOARD_TEST_DOMAIN'],
-    pegasus_host: ENV['PEGASUS_TEST_DOMAIN'],
-    hourofcode_host: ENV['HOUROFCODE_TEST_DOMAIN'],
-    csedweek_host: ENV['CSEDWEEK_TEST_DOMAIN'],
-    advocacy_host: ENV['ADVOCACY_TEST_DOMAIN']
+    dashboard_host: ENV.fetch('DASHBOARD_TEST_DOMAIN', nil),
+    pegasus_host: ENV.fetch('PEGASUS_TEST_DOMAIN', nil),
+    hourofcode_host: ENV.fetch('HOUROFCODE_TEST_DOMAIN', nil),
+    csedweek_host: ENV.fetch('CSEDWEEK_TEST_DOMAIN', nil),
+    advocacy_host: ENV.fetch('ADVOCACY_TEST_DOMAIN', nil)
   ).replace_origin(url)
 end
 
@@ -83,7 +83,15 @@ end
 def navigate_to(url)
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, sleep: 10, tries: 3) do
     with_read_timeout(DEFAULT_WAIT_TIMEOUT + 5.seconds) do
+      root = @browser.find_element(css: ':root')
       @browser.navigate.to url
+      # Wait until the document has actually changed
+      if root
+        wait_until do
+          root != @browser.find_element(css: ':root')
+        end
+      end
+      # Then, wait until the document is done loading
       wait_until do
         @browser.execute_script('return document.readyState;') == 'complete'
       end
@@ -95,19 +103,32 @@ end
 
 Given /^I am on "([^"]*)"$/ do |url|
   check_window_for_js_errors('before navigation')
-  navigate_to replace_hostname(url)
+  begin
+    navigate_to replace_hostname(url)
+  rescue Selenium::WebDriver::Error::TimeoutError => exception
+    puts "Timeout: I am not on #{url} like I want."
+    puts "         I am on #{@browser.current_url} instead."
+    raise exception
+  end
 end
 
 And /^I take note of the current loaded page$/ do
   # Remember this page
   @current_page_body = @browser.find_element(:css, 'body')
+  @current_page_body_url = @browser.current_url
 end
 
 Then /^I wait until I am on a different page than I noted before$/ do
   # When we've seen a page before, look for a different page
   if @current_page_body
-    wait_until do
-      @current_page_body != @browser.find_element(:css, 'body')
+    begin
+      wait_until do
+        @current_page_body != @browser.find_element(:css, 'body')
+      end
+    rescue Selenium::WebDriver::Error::TimeoutError => exception
+      puts "Timeout: I am not still on #{@current_page_body_url} like I want."
+      puts "         I am on #{@browser.current_url} instead."
+      raise exception
     end
   end
 end
@@ -121,6 +142,10 @@ When /^I go to a new tab$/ do
   page_load('tab', blank_tab: true) do
     @browser.execute_script('window.open();')
   end
+end
+
+When /^I go back$/ do
+  @browser.execute_script('window.history.back();')
 end
 
 When /^I close the current tab$/ do
@@ -283,6 +308,10 @@ When /^I wait until element "([^"]*)" is visible within element "([^"]*)"$/ do |
   wait_until {@browser.execute_script("return $(#{selector.dump}, $(#{parent_selector.dump}).contents()).is(':visible')")}
 end
 
+Then /^I wait until element "([^"]*)" is (not )?open$/ do |selector, negation|
+  wait_until {element_open?(selector) == negation.nil?}
+end
+
 When /^I wait until jQuery Ajax requests are finished$/ do
   wait_short_until {@browser.execute_script("return $.active == 0")}
 end
@@ -306,8 +335,17 @@ And /^check that the URL matches "([^"]*)"$/ do |regex_text|
 end
 
 Then /^I wait until I am on "([^"]*)"$/ do |url|
+  if @browser.capabilities.browser_name == 'Safari'
+    puts "WARNING: 'I wait until I am on' is not reliable in Safari. Consider 'to load a new page' steps instead."
+  end
   url = replace_hostname(url)
-  wait_until {@browser.current_url == url}
+  begin
+    wait_until {@browser.current_url == url}
+  rescue Selenium::WebDriver::Error::TimeoutError => exception
+    puts "Timeout: I am not on #{url} like I want."
+    puts "         I am on #{@browser.current_url} instead."
+    raise exception
+  end
 end
 
 Then /^check that the URL contains "([^"]*)"$/i do |url|
@@ -600,8 +638,10 @@ Then /^evaluate JavaScript expression "([^"]*)"$/ do |expression|
   expect(@browser.execute_script("return #{expression}")).to eq(true)
 end
 
-Then /^execute JavaScript expression "([^"]*)"$/ do |expression|
-  @browser.execute_script("return #{expression}")
+Then /^execute JavaScript expression "([^"]*)"( to load a new page)?$/ do |expression, load|
+  page_load(load) do
+    @browser.execute_script("return #{expression}")
+  end
 end
 
 Then /^I navigate to the course page for "([^"]*)"$/ do |course|
@@ -749,6 +789,25 @@ Then /^element "([^"]*)" has attribute "((?:[^"\\]|\\.)*)" equal to "((?:[^"\\]|
   element_has_attribute(selector, attribute, replace_hostname(expected_text))
 end
 
+Then /^element "([^"]*)" is (not )?categorized by OneTrust$/ do |selector, negation|
+  wait_for_jquery
+  elements = @browser.execute_script("return $(\"#{selector}\").map((index, elem) => { return {src:elem.src, class:elem.className}}).get()")
+  # The element needs to exist if we want to verify it is categorized.
+  if negation.nil?
+    expect(elements).to satisfy('have at least one element should be found', &:any?)
+  end
+  # Check each element which matches the selector to see if it has the
+  # expected OneTrust categorization.
+  elements.each do |element|
+    # When OneTrust categorizes an element, it adds the class
+    # "optanon-category-..." to it, for example "optanon-category-C0002"
+    element_class = element['class'] || ''
+    has_category = element_class.include?('optanon-category-')
+    desc = "#{negation ? 'not ' : ''}have a category"
+    expect(element).to satisfy(desc) {|_| has_category == !negation}
+  end
+end
+
 Then /^element "([^"]*)" is (not )?read-?only$/ do |selector, negation|
   readonly = @browser.execute_script("return $(\"#{selector}\").attr(\"readonly\");")
   if negation.nil?
@@ -765,6 +824,7 @@ Then /^element "([^"]*)" has id "([^ "']+)"$/ do |selector, id|
 end
 
 def jquery_element_exists(selector)
+  wait_for_jquery
   "return $(#{selector.dump}).length > 0"
 end
 
@@ -788,6 +848,10 @@ Then /^element "([^"]*)" is (not )?visible$/ do |selector, negation|
   expect(element_visible?(selector)).to eq(negation.nil?)
 end
 
+Then /^element "([^"]*)" does exist/ do |selector|
+  expect(element_exists?(selector)).to eq(true)
+end
+
 Then /^element "([^"]*)" does not exist/ do |selector|
   expect(element_exists?(selector)).to eq(false)
 end
@@ -805,9 +869,13 @@ Then /^element "([^"]*)" is (not )?displayed$/ do |selector, negation|
 end
 
 And(/^I select age (\d+) in the age dialog/) do |age|
+  dropdown_selection = age
+  if age == 21
+    dropdown_selection = "21+"
+  end
   steps <<~GHERKIN
     And element ".age-dialog" is visible
-    And I select the "#{age}" option in dropdown "uitest-age-selector"
+    And I select the "#{dropdown_selection}" option in dropdown "uitest-age-selector"
     And I click selector "#uitest-submit-age"
   GHERKIN
 end
@@ -887,6 +955,11 @@ end
 Then /^I wait for image "([^"]*)" to load$/ do |selector|
   wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
   wait.until {@browser.execute_script("return $('#{selector}').prop('complete');")}
+end
+
+Then /^I wait for the video thumbnails to load$/ do
+  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
+  wait.until {@browser.execute_script("return Array.from(document.querySelectorAll('img.thumbnail-image')).filter((img) => !img.complete).length == 0;")}
 end
 
 Then /^I see jquery selector (.*)$/ do |selector|
@@ -969,32 +1042,36 @@ Then /^element "([^"]*)" is a child of element "([^"]*)"$/ do |child_id, parent_
   expect(actual_parent_id).to eq(parent_id)
 end
 
-And(/^I set the language cookie$/) do
+def set_cookie(key, value)
   params = {
-    name: "_language",
-    value: 'en'
+    name: key,
+    value: value,
   }
 
-  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /\.code.org/ &&
-      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /\.code.org/
+  if ENV.fetch('DASHBOARD_TEST_DOMAIN', nil) && ENV.fetch('DASHBOARD_TEST_DOMAIN', nil) =~ /\.code.org/ &&
+      ENV.fetch('PEGASUS_TEST_DOMAIN', nil) && ENV.fetch('PEGASUS_TEST_DOMAIN', nil) =~ /\.code.org/
     params[:domain] = '.code.org' # top level domain cookie
   end
 
   @browser.manage.add_cookie params
 end
 
+Given(/^I use a cookie to mock the DCDO key "([^"]*)" as "(.*)"$/) do |key, json|
+  mock_dcdo(key, JSON.parse(json))
+rescue JSON::ParserError
+  mock_dcdo(key, json)
+end
+
+And(/^I set the language cookie$/) do
+  set_cookie '_language', 'en'
+end
+
 And(/^I set the pagemode cookie to "([^"]*)"$/) do |cookie_value|
-  params = {
-    name: "pm",
-    value: cookie_value
-  }
+  set_cookie 'pm', cookie_value
+end
 
-  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /\.code.org/ &&
-      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /\.code.org/
-    params[:domain] = '.code.org' # top level domain cookie
-  end
-
-  @browser.manage.add_cookie params
+And(/^I set the cookie named "([^"]*)" to "([^"]*)"$/) do |key, value|
+  set_cookie key, value
 end
 
 Given(/^I am enrolled in a plc course$/) do
@@ -1052,6 +1129,13 @@ And /^I dismiss the teacher panel$/ do
   GHERKIN
 end
 
+And /^I dismiss the hoc guide dialog$/ do
+  steps <<~GHERKIN
+    And I click selector "#uitest-no-email-guide" if I see it
+    And I wait until I don't see selector "#uitest-no-email-guide"
+  GHERKIN
+end
+
 # Call `execute_async_script` on the provided `js` code.
 # Provides a workaround for Appium (mobile) which doesn't support execute_async_script on HTTPS.
 # For Appium, wrap `execute_script` with a polling wait on a window variable that records the result.
@@ -1074,8 +1158,8 @@ end
 # Send an asynchronous XmlHttpRequest from the browser.
 def browser_request(url:, method: 'GET', headers: {}, body: nil, code: 200, tries: 3)
   if body
-    headers['Content-Type'] = 'application/x-www-form-urlencoded'
-    body = "'#{body.to_param}'" if body
+    headers['Content-Type'] = 'application/json'
+    body = "'#{body.to_json}'"
   end
 
   js = <<~JS
@@ -1445,4 +1529,12 @@ And(/^I see custom certificate image with name "([^"]*)" and course "([^"]*)"$/)
   params = JSON.parse(Base64.urlsafe_decode64(encoded_params))
   expect(params['name']).to eq(name)
   expect(params['course']).to eq(course)
+end
+
+And(/^I validate rubric ai config for all lessons$/) do
+  Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, tries: 3) do
+    response = HTTParty.get(replace_hostname("http://studio.code.org/api/test/get_validate_rubric_ai_config"))
+    response_code = response.code
+    expect(response_code).to eq(200), "Error code #{response_code}:\n#{response.body}"
+  end
 end

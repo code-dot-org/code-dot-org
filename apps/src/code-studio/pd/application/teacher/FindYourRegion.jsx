@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
+import React, {useEffect, useState} from 'react';
 /* eslint-disable no-restricted-imports */
 import {
   FormGroup,
@@ -9,25 +9,28 @@ import {
   Row,
   Col,
 } from 'react-bootstrap';
+
 /* eslint-enable no-restricted-imports */
-import {styles} from './TeacherApplicationConstants';
 import {
   PageLabels,
   SectionHeaders,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import {LabeledInput} from '../../form_components_func/labeled/LabeledInput';
-import {LabeledSelect} from '../../form_components_func/labeled/LabeledSelect';
-import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
-import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
+import {isZipCode} from '@cdo/apps/util/formatValidation';
+
+import {useRegionalPartner} from '../../components/useRegionalPartner';
 import {
   FormContext,
   getValidationState,
 } from '../../form_components_func/FormComponent';
-import {isZipCode} from '@cdo/apps/util/formatValidation';
-import {useRegionalPartner} from '../../components/useRegionalPartner';
-import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {LabeledInput} from '../../form_components_func/labeled/LabeledInput';
+import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
+import {LabeledSelect} from '../../form_components_func/labeled/LabeledSelect';
+import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
+
+import {getProgramInfo, styles} from './TeacherApplicationConstants';
 
 const PD_RESOURCES_URL =
   'https://support.code.org/hc/en-us/articles/115003865532';
@@ -41,6 +44,8 @@ const FindYourRegion = props => {
   const resetCountry = () => onChange({country: US});
   const [regionalPartner] = useRegionalPartner(data);
   const [lastRPLogged, setLastRPLogged] = useState(regionalPartner?.name);
+
+  const programInfo = getProgramInfo(data.program);
 
   useEffect(() => {
     onChange({
@@ -140,11 +145,8 @@ const FindYourRegion = props => {
           </p>
           <p>
             Code.org will review your application and contact you with options
-            for joining the program hosted by a Regional Partner from a
-            different region. Please note that we are not able to guarantee a
-            space for you with another Regional Partner, and you will be
-            responsible for the costs associated with traveling to that location
-            if a virtual option is not available.
+            for joining a virtual cohort of {programInfo.name} teachers from
+            another region.
           </p>
         </>
       );

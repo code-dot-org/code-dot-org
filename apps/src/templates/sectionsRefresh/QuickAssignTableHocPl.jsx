@@ -1,10 +1,14 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import moduleStyles from './sections-refresh.module.scss';
+import React from 'react';
+
+import {Heading4} from '@cdo/apps/componentLibrary/typography';
+import {assignmentCourseOfferingShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import i18n from '@cdo/locale';
+
 import {MARKETING_AUDIENCE} from './CurriculumQuickAssign';
 import {renderRows} from './QuickAssignTableHelpers';
-import {Heading4} from '@cdo/apps/componentLibrary/typography';
+
+import moduleStyles from './sections-refresh.module.scss';
 
 const TABLE_COUNT = 3;
 /*
@@ -95,7 +99,7 @@ export default function QuickAssignTableHocPl({
 
 QuickAssignTableHocPl.propTypes = {
   marketingAudience: PropTypes.string.isRequired,
-  courseOfferings: PropTypes.object.isRequired,
+  courseOfferings: assignmentCourseOfferingShape.isRequired,
   setSelectedCourseOffering: PropTypes.func.isRequired,
   updateCourse: PropTypes.func.isRequired,
   sectionCourse: PropTypes.object,

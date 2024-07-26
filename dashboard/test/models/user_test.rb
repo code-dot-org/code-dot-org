@@ -7,6 +7,38 @@ class UserTest < ActiveSupport::TestCase
   include ProjectsTestUtils
   self.use_transactional_test_case = true
 
+  class UsStateCodeTest < ActiveSupport::TestCase
+    test 'returns student us_state if present' do
+      student = create(:student, :in_colorado)
+      assert_equal 'CO', student.us_state_code
+    end
+
+    test 'returns nil if student us_state is unknown' do
+      student = create(:student, :unknown_us_region)
+      assert_nil student.us_state_code
+    end
+
+    test 'returns teacher school US state code' do
+      teacher = create(:teacher, school_info: create(:school_info, country: 'US', state: 'ny'))
+      assert_equal 'NY', teacher.us_state_code
+    end
+
+    test 'returns teacher school US state code when state is name' do
+      teacher = create(:teacher, school_info: create(:school_info, country: 'USA', state: 'washington dc'))
+      assert_equal 'DC', teacher.us_state_code
+    end
+
+    test 'returns nil if teacher school state is not set' do
+      teacher = create(:teacher, school_info: create(:school_info, :skip_validation, state: ''))
+      assert_nil teacher.us_state_code
+    end
+
+    test 'returns nil if teacher school is not in USA' do
+      teacher = create(:teacher, school_info: create(:school_info, :skip_validation, country: 'CA', state: 'AL')) # Alberta, Canada
+      assert_nil teacher.us_state_code
+    end
+  end
+
   setup_all do
     @good_data = {
       email: 'foo@bar.com',
@@ -292,6 +324,30 @@ class UserTest < ActiveSupport::TestCase
     assert_equal hashed_email, teacher.read_attribute(:hashed_email)
   end
 
+  test 'email_for_enrollments returns user.email if user has no latest accepted application' do
+    user = create :teacher
+    assert_equal user.email_for_enrollments, user.email
+  end
+
+  test 'email_for_enrollments returns user.email if users latest accepted application has no alternate email' do
+    user = create :teacher
+    application = create :pd_teacher_application, user: user
+    application_form_data = application.form_data_hash
+    application_form_data['alternateEmail'] = nil
+    application.update!(form_data_hash: application_form_data)
+
+    assert application.form_data_hash['alternateEmail'].blank?
+    assert_equal user.email_for_enrollments, user.email
+  end
+
+  test 'email_for_enrollments returns app alternate email if users latest accepted application has alternate email' do
+    user = create :teacher
+    application = create :pd_teacher_application, user: user, status: 'accepted'
+    app_alternate_email = application.form_data_hash['alternateEmail']
+
+    assert_equal user.email_for_enrollments, app_alternate_email
+  end
+
   test "log in with password with pepper" do
     assert Devise.pepper
 
@@ -427,6 +483,38 @@ class UserTest < ActiveSupport::TestCase
   test "cannot create multi-auth user with duplicate of multi-auth user's second email" do
     create_multi_auth_user_with_second_email COLLISION_EMAIL
     cannot_create_multi_auth_users_with_email COLLISION_EMAIL
+  end
+
+  test "can create multi-auth LTI user with duplicate of multi-auth user's second email" do
+    create :student, email: COLLISION_EMAIL
+    # trigger the email validation by changing the email (partial registration has email as "" which becomes the actual
+    # email in the finish sign up flow)
+    user = create :student
+    user.authentication_options.destroy_all
+
+    lti_authentication_option = create(:lti_authentication_option, user: user, email: COLLISION_EMAIL)
+    user.authentication_options << lti_authentication_option
+    user.email = COLLISION_EMAIL
+
+    user.save!
+
+    user.valid?
+  end
+
+  test "cannot create multi-auth LTI user multiple auth options and duplicate of multi-auth user's second email" do
+    create :student, email: COLLISION_EMAIL
+    # trigger the email validation by changing the email (partial registration has email as "" which becomes the actual
+    # email in the finish sign up flow)
+    user = create :student
+    user.authentication_options.destroy_all
+
+    lti_authentication_option = create(:lti_authentication_option, user: user, email: COLLISION_EMAIL)
+    user.authentication_options << lti_authentication_option
+    user.email = COLLISION_EMAIL
+
+    user.save!
+    user.authentication_options << create(:lti_authentication_option, user: user, email: COLLISION_EMAIL)
+    cannot_create_user_with_email :google_authentication_option, user: user, email: COLLISION_EMAIL
   end
 
   def cannot_create_multi_auth_users_with_email(email)
@@ -714,6 +802,58 @@ class UserTest < ActiveSupport::TestCase
       )
     end
     refute_nil user.errors[:email]
+  end
+
+  test "LTI users should have a LtiUserIdentity when created" do
+    lti_integration = create :lti_integration
+    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
+    user = build :student
+    user.authentication_options << build(:lti_authentication_option, user: user, authentication_id: auth_id)
+    user.save
+    assert user.lti_user_identities
+    assert_equal 1, user.lti_user_identities.count
+  end
+
+  test "LTI users should not be created when something goes wrong during LtiUserIdentity creation" do
+    lti_integration = create :lti_integration
+    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
+    user = build :student
+    user.authentication_options << build(:lti_authentication_option, user: user, authentication_id: auth_id)
+
+    expected_error_message = 'expected_lti_user_identity_creation_error'
+    Services::Lti.expects(:create_lti_user_identity).with(user).raises(expected_error_message)
+
+    assert_no_difference 'User.count' do
+      actual_error = assert_raises {user.save!}
+      assert_equal expected_error_message, actual_error.message
+    end
+  end
+
+  test "non LTI users should not have a LtiUserIdentity when created" do
+    user = create :user
+    assert_empty user.lti_user_identities
+  end
+
+  test 'LTI teacher should be verified after creation' do
+    lti_integration = create(:lti_integration)
+    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
+
+    lti_teacher = build(:teacher)
+    lti_teacher.authentication_options << build(:lti_authentication_option, user: lti_teacher, authentication_id: auth_id)
+    lti_teacher.save!
+
+    assert lti_teacher.verified_teacher?
+  end
+
+  test 'LTI student should not be verified after creation' do
+    lti_integration = create(:lti_integration)
+    auth_id = "#{lti_integration[:issuer]}|#{lti_integration[:client_id]}|#{SecureRandom.alphanumeric}"
+
+    lti_student = build(:student)
+    lti_student.authentication_options << build(:lti_authentication_option, user: lti_student, authentication_id: auth_id)
+    lti_student.save!
+
+    refute lti_student.verified_teacher?
   end
 
   # FND-1130: This test will no longer be required
@@ -1155,6 +1295,72 @@ class UserTest < ActiveSupport::TestCase
     refute next_script_level.nil?
   end
 
+  test 'completed_progression_levels returns false if not all progression levels have a passing result' do
+    user = create :user
+    script = create(:script, :with_levels, levels_count: 3)
+
+    # Only complete the first one
+    UserLevel.create(
+      user: user,
+      level: script.script_levels.first.level,
+      script: script,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT
+    )
+
+    refute(user.completed_progression_levels?(script))
+  end
+
+  test 'completed_progression_levels returns true if all progression levels have a passing result' do
+    user = create :user
+    script = create(:script, :with_levels, levels_count: 3)
+
+    script.script_levels.each do |sl|
+      UserLevel.create(
+        user: user,
+        level: sl.level,
+        script: script,
+        attempts: 1,
+        best_result: Activity::MINIMUM_PASS_RESULT
+      )
+    end
+
+    assert(user.completed_progression_levels?(script))
+  end
+
+  test 'completed_progression_levels returns true if all progression levels with contained levels have a passing result' do
+    user = create :user
+    script = create(:script, :with_levels, levels_count: 3)
+
+    # Set up the first level to have contained_levels
+    contained_level = create :free_response, name: 'contained level'
+    level_with_contained_levels = script.script_levels.first.level
+    level_with_contained_levels.contained_level_names = [contained_level.name]
+    level_with_contained_levels.save!
+
+    # User progress in contained_level
+    UserLevel.create(
+      user: user,
+      level: level_with_contained_levels.contained_levels.first,
+      script: script,
+      attempts: 1,
+      best_result: Activity::MINIMUM_PASS_RESULT
+    )
+
+    # User progress in remaining levels
+    script.script_levels.drop(1).each do |sl|
+      UserLevel.create(
+        user: user,
+        level: sl.level,
+        script: script,
+        attempts: 1,
+        best_result: Activity::MINIMUM_PASS_RESULT
+      )
+    end
+
+    assert(user.completed_progression_levels?(script))
+  end
+
   test 'track_level_progress does not record quiz or survey responses for partner when pairing' do
     user = create :user
     partner = create :user
@@ -1453,6 +1659,25 @@ class UserTest < ActiveSupport::TestCase
     user = user.reload
     assert user.age.nil?
     assert user.under_13?
+  end
+
+  test 'over 21' do
+    user = create :user
+    user.age = 15
+    refute user.over_21?
+    user.save!
+    refute user.over_21?
+
+    user.age = 21
+    assert user.over_21?
+    user.save!
+    assert user.over_21?
+
+    user = create :user
+    user.update_attribute(:birthday, nil) # cheating...
+    user = user.reload
+    assert user.age.nil?
+    refute user.over_21?
   end
 
   test "reset_secrets calls generate_secret_picture and generate_secret_words" do
@@ -1810,6 +2035,45 @@ class UserTest < ActiveSupport::TestCase
     refute student.can_change_own_user_type?
   end
 
+  test 'sections_instructed omits deleted sections' do
+    section = create :section
+    teacher = section.teacher
+
+    refute_empty teacher.sections_instructed
+
+    section.destroy!
+
+    assert_empty teacher.sections_instructed
+  end
+
+  test 'section_instructors get deleted when user gets deleted' do
+    section = create :section
+    teacher = section.teacher
+    section_instructors = section.section_instructors
+
+    refute_empty section_instructors
+
+    teacher.destroy!
+
+    assert_empty section_instructors
+  end
+
+  test 'sections_instructed omits sections with in-active section_instructors' do
+    section = create :section
+    teacher = create :teacher
+    create :section_instructor, section: section, instructor: teacher, status: :invited
+
+    assert_empty teacher.sections_instructed
+  end
+
+  test 'sections_instructed includes sections with active section_instructors' do
+    section = create :section
+    teacher = create :teacher
+    create :section_instructor, section: section, instructor: teacher, status: :active
+
+    refute_empty teacher.sections_instructed
+  end
+
   test 'cannot change own user type as a teacher with sections' do
     section = create :section
     teacher = section.teacher
@@ -1824,6 +2088,13 @@ class UserTest < ActiveSupport::TestCase
 
   test 'can delete own account if independent student' do
     user = create :student
+    refute user.teacher_managed_account?
+    assert user.can_delete_own_account?
+  end
+
+  test 'can delete own account if LTI student' do
+    user = create :student
+    user.authentication_options << create(:lti_authentication_option)
     refute user.teacher_managed_account?
     assert user.can_delete_own_account?
   end
@@ -2846,9 +3117,9 @@ class UserTest < ActiveSupport::TestCase
     assert_equal [], teacher.sections_as_student
     assert_equal [], other_user.sections_as_student
 
-    assert_equal [], student.sections
-    assert_equal [section], teacher.sections
-    assert_equal [], other_user.sections
+    assert_equal [], student.sections_instructed
+    assert_equal [section], teacher.sections_instructed
+    assert_equal [], other_user.sections_instructed
 
     # can_pair? method
     assert_equal true, student.can_pair?
@@ -3716,6 +3987,10 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'summarize' do
+    latest_permission_request_sent_at = 1.month.ago.change(usec: 0)
+
+    create(:parental_permission_request, user: @student, updated_at: latest_permission_request_sent_at)
+
     assert_equal(
       {
         id: @student.id,
@@ -3734,7 +4009,11 @@ class UserTest < ActiveSupport::TestCase
         location: "/v2/users/#{@student.id}",
         age: @student.age,
         sharing_disabled: false,
-        has_ever_signed_in: @student.has_ever_signed_in?
+        has_ever_signed_in: @student.has_ever_signed_in?,
+        ai_tutor_access_denied: !!@student.ai_tutor_access_denied,
+        at_risk_age_gated: false,
+        child_account_compliance_state: @student.child_account_compliance_state,
+        latest_permission_request_sent_at: latest_permission_request_sent_at,
       },
       @student.summarize
     )
@@ -4956,16 +5235,224 @@ class UserTest < ActiveSupport::TestCase
     assert_equal User.marketing_segment_data_keys.sort, teacher.marketing_segment_data.keys.map(&:to_s).sort
   end
 
-  test "given a noncompliant child account, that account is locked out" do
-    student = create :non_compliant_child
-    student.save!
-    assert_equal Policies::ChildAccount::ComplianceState::LOCKED_OUT, student.child_account_compliance_state
-    refute_empty student.child_account_compliance_lock_out_date
+  test "does not return deleted followers from the followers helper" do
+    student = create :student
+    teacher = create :teacher
+    section = create :section, teacher: teacher
+    follower = create :follower, section: section, user: student
+    follower.destroy
+    assert_empty teacher.reload.followers
   end
 
-  test "given a compliant child account, that account is NOT locked out" do
-    student = create :non_compliant_child, :with_parent_permission
-    student.save!
-    assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, student.child_account_compliance_state
+  test 'does not return followers from formerly-instructed sections with deleted SectionInstructor in active status' do
+    student = create :student
+    teacher = create :teacher
+    section = create :section, teacher: teacher
+    SectionInstructor.where(section: section).destroy_all
+    create :follower, section: section, user: student
+    assert_empty teacher.reload.followers
+  end
+
+  test 'persists nested attributes when creating a teacher from a partial registration' do
+    session = {}
+    params = {
+      'authentication_options_attributes' => {
+        '0' => {
+          'email' => 'test@email.com',
+        }
+      },
+      'school_info_attributes' => {
+        'country' => 'US',
+        'school_type' => 'public',
+        'school_state' => 'Washington',
+        'school_name' => 'Test School',
+        'school_zip' => '99999'
+      }
+    }
+    partial_teacher = build :teacher
+    partial_teacher.authentication_options = [AuthenticationOption.new(user: partial_teacher, email: 'old_email@email.com', credential_type: AuthenticationOption::EMAIL)]
+    PartialRegistration.persist_attributes session, partial_teacher
+    fully_registered_teacher = User.new_with_session(params, session)
+    fully_registered_teacher.save
+    assert_equal fully_registered_teacher.school_info.school_name, params.dig('school_info_attributes', 'school_name')
+    assert_equal fully_registered_teacher.authentication_options.first.email, params.dig('authentication_options_attributes', '0', 'email')
+  end
+
+  test 'pl_units_started only counts parent BubbleChoice level' do
+    pl_unit = create :pl_unit
+    create :course_version, content_root: pl_unit
+
+    sublevels = []
+    3.times do
+      sublevels << create(:level)
+    end
+    bubble_choice_level = create :bubble_choice_level, sublevels: sublevels
+    lg = create :lesson_group, script: pl_unit
+    lesson = create :lesson, script: pl_unit, lesson_group: lg
+    create :script_level, script: pl_unit, levels: [bubble_choice_level], position: 0, lesson: lesson
+    pl_unit.reload
+
+    user = create :teacher
+    create :user_script, user: user, script: pl_unit
+
+    sublevels.each {|sl| create :user_level, user: user, script: pl_unit, level: sl, best_result: ActivityConstants::MINIMUM_PASS_RESULT}
+    create :user_level, user: user, script: pl_unit, level: bubble_choice_level, best_result: ActivityConstants::MINIMUM_PASS_RESULT
+
+    pl_units_started = user.pl_units_started
+    assert_equal 100, pl_units_started[0][:percent_completed]
+  end
+
+  test "pl_units_started counts predict level" do
+    pl_unit = create :pl_unit
+    create :course_version, content_root: pl_unit
+
+    free_response_level = create :free_response, name: 'free response level'
+    game_level = create :level
+    game_level.contained_level_names = ['free response level']
+    game_level.save!
+
+    lg = create :lesson_group, script: pl_unit
+    lesson = create :lesson, script: pl_unit, lesson_group: lg
+    create :script_level, script: pl_unit, levels: [game_level], position: 0, lesson: lesson
+    pl_unit.reload
+
+    user = create :teacher
+    create :user_script, user: user, script: pl_unit
+
+    create :user_level, user: user, script: pl_unit, level: free_response_level, best_result: ActivityConstants::MINIMUM_PASS_RESULT
+
+    pl_units_started = user.pl_units_started
+    assert_equal 100, pl_units_started[0][:percent_completed]
+  end
+
+  test "username characters are only validated when changed" do
+    student = create :student
+    # White spaces are not allowed in usernames
+    student.username = "big husky"
+    student.save!(validate: false)
+
+    # We only want to validate the username if it changes.
+    # An invalid username should not block other attributes of the user from
+    # changing.
+    # This is a temporary behavior while we investigate why users have invalid
+    # usernames.
+    student.update!(name: "#{student.name} Jr.")
+
+    # The username has changed to a new invalid value, so we expected validation
+    # to fail.
+    assert_raises(ActiveRecord::RecordInvalid) do
+      student.update!(username: "very big husky")
+    end
+  end
+
+  test "validate_us_state" do
+    # If we don't know what country they are in, we don't require US State.
+    student = create :student
+    student.update!(name: 'test_coder')
+    assert_equal 'test_coder', student.name
+
+    # If the student is not in the US, we don't require US State
+    student = create :student, country_code: "JP"
+    student.update!(name: 'test_coder')
+    assert_equal 'test_coder', student.name
+
+    # If the student is in the US, they must tell us what US State they live in
+    assert_raises(ActiveRecord::RecordInvalid) do
+      create :student, country_code: "US"
+    end
+    # If us_state is invalid, error should be raised
+    assert_raises(ActiveRecord::RecordInvalid) do
+      create :student, country_code: "US", us_state: 'INVALID_STATE'
+    end
+    # Can create student with valid country_code and valid us_state
+    student = create :student, country_code: "US", us_state: 'CO'
+    # Updating to an invalid us_state should raise an error
+    assert_raises(ActiveRecord::RecordInvalid) do
+      student.update!(us_state: 'INVALID_STATE')
+    end
+    # Can update us_state to valid us_state
+    student.update!(us_state: 'WA')
+    assert_equal 'WA', student.us_state
+
+    # country_code set, us_state nil
+    student = create :student, country_code: "US", us_state: 'CO'
+    # set us_state to invalid value, some of our current users have nil us_state and no country_code
+    # Jira P20-939: On account creation, students in the US were allowed to sign up without providing us_state.
+    # Users should still be able to update other attributes even thought they have a nil us_state.
+    student.update_attribute(:us_state, nil) # bypass validation
+    student.update!(name: 'test_coder')
+    assert_equal 'test_coder', student.name
+
+    # country_code nil, us_state set
+    student = create :student
+    # set us_state to invalid value, some of our current users have invalid us_state and no country_code
+    # Jira P20-939: We had a feature where we automatically filled the us_state but sometimes it put in the full state name instead of
+    # the two letter code. Users should still be able to update other attributes even thought they have an invalid us_state value
+    student.update_attribute(:us_state, 'Washington D.C.') # bypass validation
+    student.update!(name: 'test_coder')
+    assert_equal 'test_coder', student.name
+  end
+
+  test "us_state_changed?" do
+    student = create :student, country_code: "US", us_state: 'CO'
+    refute student.us_state_changed?
+    student.us_state = 'WA'
+    assert student.us_state_changed?
+  end
+
+  test "student in cpa lockout flow cannot change us_state or age" do
+    student = create :student, :U13, :in_colorado, :without_parent_permission
+    assert_raises(ActiveRecord::RecordInvalid) do
+      student.update!(us_state: 'CA')
+    end
+
+    assert_raises(ActiveRecord::RecordInvalid) do
+      student.update!(age: 16)
+    end
+    student.reload
+    refute_equal student.age, 16
+
+    student = create :student, :U13, :in_colorado, :with_parent_permission
+    student.update!(us_state: 'WA')
+    student.reload
+    assert_equal student.us_state, 'WA'
+
+    student = create :student, :U13
+    student.update!(us_state: 'WA')
+    student.reload
+    assert_equal student.us_state, 'WA'
+
+    student = create :student, :in_colorado
+    student.update!(us_state: 'WA')
+    student.reload
+    assert_equal student.us_state, 'WA'
+  end
+
+  describe '#latest_parental_permission_request' do
+    let(:latest_parental_permission_request) {user.latest_parental_permission_request}
+
+    let(:user) {create(:non_compliant_child)}
+
+    let(:user_permission_request1) {create(:parental_permission_request, user: user, parent_email: 'test1@example.org')}
+    let(:user_permission_request2) {create(:parental_permission_request, user: user, parent_email: 'test2@example.org')}
+
+    before do
+      user_permission_request1
+      user_permission_request2
+    end
+
+    it 'returns latest parental permission request' do
+      _(latest_parental_permission_request).must_equal user_permission_request2
+    end
+
+    context 'when oldest parental permission request was resent' do
+      before do
+        user_permission_request1.update(resends_sent: 1)
+      end
+
+      it 'returns resend parental permission request' do
+        _(latest_parental_permission_request).must_equal user_permission_request1
+      end
+    end
   end
 end

@@ -2,9 +2,11 @@
 // because they are quite complex and progressRedux.js is already quite large.
 
 import _ from 'lodash';
-import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
-import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
+
 import {TestResults} from '@cdo/apps/constants';
+import {processedLevel} from '@cdo/apps/templates/progress/progressHelpers';
+import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
+
 import {activityCssClass} from './activityUtils';
 
 const PEER_REVIEW_ID = -1;
@@ -103,12 +105,25 @@ export const getLevelPropertiesPath = state => {
     const lessonPosition = state.progress.lessons?.find(
       lesson => lesson.id === state.progress.currentLessonId
     ).relative_position;
-    const levelNumber =
-      levelsForLessonId(
+
+    let levelPosition, sublevelPosition;
+    const currentLevel = getCurrentLevel(state);
+    levelPosition = currentLevel.levelNumber;
+
+    // Use the sublevel position if we're on a sublevel
+    if (currentLevel.parentLevelId) {
+      const parentLevel = levelById(
         state.progress,
-        state.progress.currentLessonId
-      ).findIndex(level => level.isCurrentLevel) + 1;
-    return `/s/${scriptName}/lessons/${lessonPosition}/levels/${levelNumber}/level_properties`;
+        state.progress.currentLessonId,
+        currentLevel.parentLevelId
+      );
+      levelPosition = parentLevel.levelNumber;
+      sublevelPosition = currentLevel.levelNumber;
+    }
+
+    return `/s/${scriptName}/lessons/${lessonPosition}/levels/${levelPosition}/${
+      sublevelPosition === undefined ? '' : `sublevel/${sublevelPosition}/`
+    }level_properties`;
   } else if (state.progress.currentLevelId !== null) {
     const levelId = state.progress.currentLevelId;
     return `/levels/${levelId}/level_properties`;
@@ -126,9 +141,10 @@ export const getLevelPropertiesPath = state => {
 const levelWithProgress = (
   {levelResults, unitProgress, levelPairing = {}, currentLevelId},
   level,
-  isLockable
+  isLockable,
+  parentLevelId
 ) => {
-  const normalizedLevel = processedLevel(level);
+  const normalizedLevel = processedLevel(level, parentLevelId);
   if (level.ids) {
     // make sure we're using the id with best progress
     normalizedLevel.id = bestResultLevelId(level.ids, levelResults);
@@ -167,6 +183,14 @@ const levelWithProgress = (
     paired: levelPairing[level.activeId],
     isLocked: locked,
     teacherFeedbackReviewState: teacherFeedbackReviewState,
+    sublevels: level.sublevels?.map(sublevel =>
+      levelWithProgress(
+        {levelResults, unitProgress, levelPairing, currentLevelId},
+        sublevel,
+        isLockable,
+        normalizedLevel.id
+      )
+    ),
   };
 };
 
@@ -187,15 +211,6 @@ export const levelsByLesson = ({
         level,
         lesson.lockable
       );
-      if (statusLevel.sublevels) {
-        statusLevel.sublevels = level.sublevels.map(sublevel =>
-          levelWithProgress(
-            {levelResults, unitProgress, levelPairing, currentLevelId},
-            sublevel,
-            lesson.lockable
-          )
-        );
-      }
       return statusLevel;
     })
   );
@@ -211,21 +226,44 @@ export const levelsForLessonId = (state, lessonId) => {
 };
 
 /**
- * Get the index of the current level. On script levels, check
- * which level has isCurrentLevel set. For single levels, return 0.
- * Otherwise, return undefined.
+ * Given a lesson ID, and a level ID, returns the requested level.
  */
-export const currentLevelIndex = state => {
-  if (getProgressLevelType(state) === ProgressLevelType.LEVEL) {
-    return 0;
+export const levelById = (state, lessonId, levelId) => {
+  return levelsForLessonId(state, lessonId)
+    ?.flatMap(level => [level, ...(level?.sublevels || [])])
+    ?.find(level => level.id === levelId);
+};
+
+export const getCurrentLevel = state => {
+  return getCurrentLevels(state)
+    ?.flatMap(level => [level, ...(level?.sublevels || [])])
+    ?.find(level => level.isCurrentLevel);
+};
+
+export const getCurrentLevels = state => {
+  return levelsForLessonId(state.progress, state.progress.currentLessonId);
+};
+
+/**
+ * Get the script level ID of the current level. If the current level is a sublevel,
+ * (and therefore not a script level) return the parent script level ID.
+ * Returns undefined if there is no current level.
+ */
+export const getCurrentScriptLevelId = state => {
+  const currentLevel = getCurrentLevel(state);
+  if (!currentLevel) {
+    return;
   }
-  if (getProgressLevelType(state) === ProgressLevelType.SCRIPT_LEVEL) {
-    return levelsForLessonId(
+
+  if (currentLevel.parentLevelId) {
+    return levelById(
       state.progress,
-      state.progress.currentLessonId
-    ).findIndex(level => level.isCurrentLevel);
+      state.progress.currentLessonId,
+      currentLevel.parentLevelId
+    )?.scriptLevelId;
+  } else {
+    return currentLevel.scriptLevelId;
   }
-  return undefined;
 };
 
 /**
@@ -242,7 +280,12 @@ export const nextLevelId = state => {
     state.progress,
     state.progress.currentLessonId
   );
-  const currentLevelIndex = levels.findIndex(level => level.isCurrentLevel);
+  const currentLevel = getCurrentLevel(state);
+  // If we are on a sublevel, navigate back to the parent level.
+  if (currentLevel.parentLevelId) {
+    return currentLevel.parentLevelId;
+  }
+  const currentLevelIndex = currentLevel.levelNumber - 1;
   if (currentLevelIndex === levels.length - 1) {
     return undefined;
   }
@@ -256,8 +299,7 @@ export const levelCount = state => {
     return 1;
   }
   if (getProgressLevelType(state) === ProgressLevelType.SCRIPT_LEVEL) {
-    return levelsForLessonId(state.progress, state.progress.currentLessonId)
-      .length;
+    return getCurrentLevels(state).length;
   }
   return 0;
 };

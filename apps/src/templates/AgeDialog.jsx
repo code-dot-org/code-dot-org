@@ -1,15 +1,17 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import color from '@cdo/apps/util/color';
-import Button from '@cdo/apps/templates/Button';
-import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import i18n from '@cdo/locale';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import Button from '@cdo/apps/templates/Button';
+import {SignInState, setOver21} from '@cdo/apps/templates/currentUserRedux';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 /*
  * SignInOrAgeDialog uses 'anon_over13' as its session storage key.
@@ -37,6 +39,7 @@ class AgeDialog extends Component {
     turnOffFilter: PropTypes.func.isRequired,
     storage: PropTypes.object.isRequired,
     unitName: PropTypes.string,
+    setOver21: PropTypes.func.isRequired,
   };
 
   static defaultProps = {
@@ -79,6 +82,7 @@ class AgeDialog extends Component {
         unit_name: this.props.unitName,
         current_path: document.location.pathname,
       });
+      this.props.setOver21(true);
     }
   };
 
@@ -130,7 +134,7 @@ const styles = {
   },
   dancePartyHeading: {
     fontSize: 32,
-    fontFamily: "'Gotham 7r', sans-serif",
+    ...fontConstants['main-font-bold'],
   },
   middle: {
     marginTop: 20,
@@ -163,7 +167,14 @@ const styles = {
 
 export const UnconnectedAgeDialog = AgeDialog;
 
-export default connect(state => ({
-  signedIn: state.currentUser.signInState === SignInState.SignedIn,
-  unitName: state.progress.scriptName,
-}))(AgeDialog);
+export default connect(
+  state => ({
+    signedIn: state.currentUser.signInState === SignInState.SignedIn,
+    unitName: state.progress.scriptName,
+  }),
+  dispatch => ({
+    setOver21(over21) {
+      dispatch(setOver21(over21));
+    },
+  })
+)(AgeDialog);

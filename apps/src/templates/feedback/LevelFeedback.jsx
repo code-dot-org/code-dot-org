@@ -1,9 +1,12 @@
 import React, {useState} from 'react';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
-import {levelFeedbackType} from './types';
-import LevelFeedbackEntry from '@cdo/apps/templates/feedback/LevelFeedbackEntry';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/templates/Button';
+import LevelFeedbackEntry from '@cdo/apps/templates/feedback/LevelFeedbackEntry';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import {levelFeedbackType} from './types';
 
 function LevelFeedback({
   lessonName,
@@ -66,7 +69,7 @@ const styles = {
     fontSize: 18,
     lineHeight: '24px',
     color: color.teal,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
   unit: {
     color: color.dark_charcoal,
@@ -74,11 +77,11 @@ const styles = {
     lineHeight: '17px',
     marginBottom: 8,
     marginTop: 4,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
   showOlderComments: {
     float: 'right',
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 16,
   },
 };

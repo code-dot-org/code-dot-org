@@ -3,10 +3,12 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import {getChannelIdFromUrl} from '@cdo/apps/reportAbuse';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import msg from '@cdo/locale';
-import {getChannelIdFromUrl} from '@cdo/apps/reportAbuse';
+
 import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
 
 /**
@@ -25,7 +27,6 @@ const alert = window.alert;
 export default class ReportAbuseForm extends React.Component {
   static propTypes = {
     abuseUrl: PropTypes.string.isRequired,
-    name: PropTypes.string,
     email: PropTypes.string,
     age: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     requireCaptcha: PropTypes.bool,
@@ -106,9 +107,8 @@ export default class ReportAbuseForm extends React.Component {
             name="channel_id"
             defaultValue={this.getChannelId()}
           />
-          <input type="hidden" name="name" defaultValue={this.props.name} />
           <div style={{display: this.props.email ? 'none' : 'block'}}>
-            <div>{msg.email()}</div>
+            <label htmlFor="uitest-email">{msg.email()}</label>
             <input
               type="text"
               style={{width: INPUT_WIDTH}}
@@ -128,7 +128,7 @@ export default class ReportAbuseForm extends React.Component {
             />
           </div>
 
-          <div>{msg.abusiveUrl()}</div>
+          <label htmlFor="uitest-abuse-url">{msg.abusiveUrl()}</label>
           <input
             type="text"
             readOnly={!!this.props.abuseUrl}
@@ -150,6 +150,7 @@ export default class ReportAbuseForm extends React.Component {
             name="abuse_type"
             ref="abuse_type"
             id="uitest-abuse-type"
+            aria-label={msg.abuseTypes()}
           >
             <option value="" />
             <option value="harassment">{msg.abuseTypeHarassment()}</option>
@@ -158,7 +159,7 @@ export default class ReportAbuseForm extends React.Component {
             <option value="other">{msg.abuseTypeOther()}</option>
           </select>
 
-          <div>{msg.abuseFormDetail()}</div>
+          <label htmlFor="uitest-abuse-detail">{msg.abuseFormDetail()}</label>
           <textarea
             style={{width: INPUT_WIDTH, height: 100}}
             name="abuse_detail"

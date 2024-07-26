@@ -1,16 +1,26 @@
-- require '../shared/middleware/helpers/experiments'
+- require deploy_dir('shared/middleware/helpers/experiments')
 -# OneTrust Cookies Consent Notice scripts for code.org
-- cookie_script_env = experiment_value('onetrust_cookie_scripts', request)
-- if cookie_script_env == 'off'
-  return
-- elsif cookie_script_env == 'test'
-  %script{src: 'https://cdn.cookielaw.org/consent/27cca70a-7db3-4852-9ef0-a6660fd0977d-test/OtAutoBlock.js', type: 'text/javascript'}
-  %script{src: 'https://cdn.cookielaw.org/scripttemplates/otSDKStub.js', type: 'text/javascript', charset: 'UTF-8', 'data-domain-script' => '27cca70a-7db3-4852-9ef0-a6660fd0977d-test'}
-  :javascript
-    function OptanonWrapper() { }
-- else
-  -# Default to loading the OneTrust UI
-  %script{src: 'https://cdn.cookielaw.org/consent/27cca70a-7db3-4852-9ef0-a6660fd0977d/OtAutoBlock.js', type: 'text/javascript'}
-  %script{src: 'https://cdn.cookielaw.org/scripttemplates/otSDKStub.js', type: 'text/javascript', charset: 'UTF-8', 'data-domain-script' => '27cca70a-7db3-4852-9ef0-a6660fd0977d'}
+-# default to loading the prod OneTrust configuration.
+- cookie_script_env = experiment_value('onetrust_cookie_scripts', request) || 'prod'
+-# The OneTrust config to load should be passed in.
+- domain ||= nil
+:ruby
+  one_trust_domains = {
+    'code.org' => {
+      'test' => '27cca70a-7db3-4852-9ef0-a6660fd0977d-test',
+      'prod' => '27cca70a-7db3-4852-9ef0-a6660fd0977d',
+    },
+    'hourofcode.com' => {
+      'test' => '7c79c547-a2fc-4998-9b21-0c7a5e67e345-test',
+      'prod' => '7c79c547-a2fc-4998-9b21-0c7a5e67e345',
+    }
+  }
+-# Don't add the libraries if the feature is 'off' or an unknown
+-# domain was given.
+- one_trust_domain = one_trust_domains.dig(domain, cookie_script_env)
+- if cookie_script_env != 'off' && one_trust_domain.present?
+  - auto_block_src = "https://cdn.cookielaw.org/consent/#{one_trust_domain}/OtAutoBlock.js"
+  %script{src: auto_block_src, type: 'text/javascript'}
+  %script{src: 'https://cdn.cookielaw.org/scripttemplates/otSDKStub.js', type: 'text/javascript', charset: 'UTF-8', 'data-domain-script' => one_trust_domain}
   :javascript
     function OptanonWrapper() { }

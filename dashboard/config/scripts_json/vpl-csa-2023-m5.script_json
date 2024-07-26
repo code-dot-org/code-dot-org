@@ -4,7 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "curriculum_umbrella": "CSA Virtual PL",
+      "curriculum_umbrella": "PD Workshop Activity CSA",
       "hideable_lessons": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
@@ -12,8 +12,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-17 20:33:17 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-04-18 15:30:26 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -56,6 +56,7 @@
       "key": "be531667-b296-4e36-a62f-d7543c983b47",
       "position": 1,
       "properties": {
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "be531667-b296-4e36-a62f-d7543c983b47",

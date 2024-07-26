@@ -1,13 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import fontConstants from '@cdo/apps/fontConstants';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
 const defaultStyle = {
   paddingLeft: 20,
   paddingRight: 20,
   paddingBottom: 20,
-  fontFamily: '"Gotham 4r", sans-serif, sans-serif',
+  ...fontConstants['main-font-regular'],
 };
 
 export default class LessonEditorDialog extends React.Component {

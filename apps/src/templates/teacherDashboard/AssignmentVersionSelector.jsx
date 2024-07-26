@@ -1,13 +1,17 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
-import {assignmentCourseVersionShape} from './shapes';
+
 import PopUpMenu, {STANDARD_PADDING} from '../../lib/ui/PopUpMenu';
+
+import AssignmentVersionMenuHeader from './AssignmentVersionMenuHeader';
 import AssignmentVersionMenuItem, {
   columnWidths,
 } from './AssignmentVersionMenuItem';
-import AssignmentVersionMenuHeader from './AssignmentVersionMenuHeader';
-import _ from 'lodash';
+import {assignmentCourseVersionShape} from './shapes';
 
 const menuItemWidth = _(columnWidths).values().reduce(_.add);
 const menuWidth = menuItemWidth + 2 * STANDARD_PADDING;
@@ -32,9 +36,12 @@ export default class AssignmentVersionSelector extends Component {
     e.preventDefault();
   };
 
-  handleClick = () => {
+  handleClick = e => {
+    e.stopPropagation();
     if (!this.state.isMenuOpen) {
       this.openMenu();
+    } else {
+      this.closeMenu();
     }
   };
 
@@ -127,7 +134,7 @@ const styles = {
     marginTop: 4,
   },
   dropdownLabel: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
   popUpMenuStyle: {
     // must appear in front of .modal from application.scss

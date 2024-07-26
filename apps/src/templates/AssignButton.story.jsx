@@ -1,10 +1,11 @@
-import React from 'react';
 import {action} from '@storybook/addon-actions';
-import {UnconnectedAssignButton as AssignButton} from './AssignButton';
+import React from 'react';
+
 import {fakeTeacherSectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/sectionAssignmentTestHelper';
 
+import {UnconnectedAssignButton as AssignButton} from './AssignButton';
+
 export default {
-  title: 'AssignButton',
   component: AssignButton,
 };
 

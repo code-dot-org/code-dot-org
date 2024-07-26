@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import color from '@cdo/apps/util/color';
+
+import styleConstants from '../../styleConstants';
 import Button from '../Button';
 import SchoolInfoInputs from '../SchoolInfoInputs';
-import styleConstants from '../../styleConstants';
-import color from '@cdo/apps/util/color';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
 export default class CensusTeacherBanner extends Component {
   static propTypes = {
@@ -557,6 +560,6 @@ const styles = {
   },
   updateSchoolLink: {
     cursor: 'pointer',
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
 };

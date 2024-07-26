@@ -971,7 +971,9 @@ nn-NO:
   header_about_us: Om oss
   header_course_catalog: Kurskatalog
   header_courses: Kurs
+  header_districts: Distrikt
   header_documentation: Dokumentasjon
+  header_donate: Gi eit bidrag
   header_educate_beyond: Utover Code.org
   header_educate_community: Nettforum
   header_educate_elementary: Grunnskule
@@ -992,6 +994,7 @@ nn-NO:
   header_professional_learning: Lærarutdanning
   header_project_gallery: Prosjekt
   header_report_bug: Rapporter feil
+  header_schools: Skole
   header_sections: Seksjonar
   header_stats: Statistikk
   header_teach: Undervis
@@ -1326,6 +1329,7 @@ nn-NO:
   homepage_slot_text_link_pd: Fagleg utvikling
   homepage_slot_text_link_shop: T-skjorter, hattar & meir
   homepage_slot_text_link_stats: Sjå statistikken
+  homepage_slot_text_link_thebadguys: Kod med Barske Bøller
   homepage_slot_text_shop: Nettbutikk
   homepage_slot_text_studio: Alle våre opplæringsprogram
   homepage_slot_text_teacher: Lærarmodus
@@ -2279,22 +2283,6 @@ nn-NO:
     gir ein time introduksjon til informatikk og programmering og som når ut til titals
     millionar elevar i meir enn 180 land. Bli gjerne med under Computer Science Education
     Week, 7.-13. desember.
-  volunteer_engineer_submission_intro_guide: Lær mer om vårt <a href="%{volunteer_guide}">program
-    for frivillige her</a>.
-  volunteer_engineer_submission_intro_links: Er du ein lærar som ser etter frivillige?
-    Finn ein lokal frivillig på vårt <a href="%{volunteer_local}">kart over frivillige</a>.
-  volunteer_engineer_submission_intro_recruit: 'Lærarar skulle gjerne hatt nokre som
-    er<span style="font-family: ''Gotham 7r'', sans-serif;"> lidenskapleg opptatt
-    av utdanning innan informatikk</span> til å hjelpe til i klasserommet, eller nokon
-    som kan <span style="font-family: ''Gotham 7r'', sans-serif;">inspirere</span>
-    elevane med å preike om alle dei moglegheitene som finst innan informatikk og
-    programmering (som kan bli gjort gjennom ein video-chat).'
-  volunteer_engineer_submission_intro_signup: Fint om du oppgir følgande informasjon
-    dersom du er ein informatikkstudent eller jobbar med programmering. Du må vere
-    minst 18 år for å registrere deg som frivillig. Merk deg at felta du fyller ut
-    i denne seksjonen vil bli tilgjengelege offentleg for alle å sjå på <a href="/volunteer/local">kartet
-    over frivillige</a>Felt som er markert med <span class="form-required-field">*</span>
-    er påkrevde.
   volunteer_engineer_submission_location_flexibility_curriculum: bidra til undervisingsprosjekt
     med open kildekode
   volunteer_engineer_submission_location_flexibility_onsite: komme på besøk til ein

@@ -2,25 +2,23 @@ require_relative '../../../../test_helper'
 require_relative '../../../../../i18n/resources/pegasus/markdown/sync_in'
 
 describe I18n::Resources::Pegasus::Markdown::SyncIn do
-  def around
-    FakeFS.with_fresh {yield}
+  let(:described_class) {I18n::Resources::Pegasus::Markdown::SyncIn}
+  let(:described_instance) {described_class.new}
+
+  around do |test|
+    FakeFS.with_fresh {test.call}
   end
 
   before do
-    STDOUT.stubs(:print)
     I18n::Utils::PegasusMarkdown.stubs(:sanitize_file_header)
   end
 
-  describe '.perform' do
-    it 'calls #execute' do
-      I18n::Resources::Pegasus::Markdown::SyncIn.any_instance.expects(:execute).once
-
-      I18n::Resources::Pegasus::Markdown::SyncIn.perform
-    end
+  it 'inherits from I18n::Utils::SyncInBase' do
+    assert_equal I18n::Utils::SyncInBase, described_class.superclass
   end
 
-  describe '#execute' do
-    let(:sync_in) {I18n::Resources::Pegasus::Markdown::SyncIn.new}
+  describe '#process' do
+    let(:process) {described_instance.process}
 
     before do
       FileUtils.mkdir_p(File.dirname(origin_markdown_file_path))
@@ -39,7 +37,7 @@ describe I18n::Resources::Pegasus::Markdown::SyncIn do
           I18nScriptUtils.expects(:copy_file).with(origin_markdown_file_path, expected_i18n_source_file_path).in_sequence(execution_sequence)
           I18n::Utils::PegasusMarkdown.expects(:sanitize_file_header).with(expected_i18n_source_file_path).in_sequence(execution_sequence)
 
-          sync_in.execute
+          process
         end
       end
     end
@@ -56,7 +54,7 @@ describe I18n::Resources::Pegasus::Markdown::SyncIn do
           I18nScriptUtils.expects(:copy_file).with(origin_markdown_file_path, expected_i18n_source_path).in_sequence(execution_sequence)
           I18n::Utils::PegasusMarkdown.expects(:sanitize_file_header).with(expected_i18n_source_path).in_sequence(execution_sequence)
 
-          sync_in.execute
+          process
         end
       end
     end

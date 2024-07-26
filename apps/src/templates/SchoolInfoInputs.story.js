@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
 import SchoolInfoInputs from './SchoolInfoInputs';
 
 class SchoolInfoInputsWrapper extends Component {
@@ -65,7 +66,6 @@ class SchoolInfoInputsWrapper extends Component {
 }
 
 export default {
-  title: 'SchoolInfoInputs',
   component: SchoolInfoInputs,
 };
 

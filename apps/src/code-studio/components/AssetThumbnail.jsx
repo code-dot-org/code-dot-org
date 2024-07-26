@@ -1,7 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import color from '@cdo/apps/util/color';
+import React from 'react';
+
 import {assets as assetsApi} from '@cdo/apps/clientApi';
+import color from '@cdo/apps/util/color';
 
 const defaultIcons = {
   image: 'fa fa-picture-o',
@@ -159,10 +160,15 @@ const ImageThumbnail = class extends React.Component {
   render() {
     return (
       <a href={this.props.src} target="_blank" rel="noopener noreferrer">
+        {
+          // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+          // Verify or update this alt-text as necessary
+        }
         <img
           src={this.props.src}
           style={assetThumbnailStyle}
           id="ui-image-thumbnail"
+          alt=""
         />
       </a>
     );

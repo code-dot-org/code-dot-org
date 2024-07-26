@@ -25,7 +25,8 @@
   color: white;
   margin: 0;
   font-size: 1.45em;
-  font-family: "Gotham 5r", sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   width: 55%;
   text-align: center;
 }

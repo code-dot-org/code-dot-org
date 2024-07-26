@@ -1,11 +1,13 @@
+import throttle from 'lodash/debounce';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import color from '../../util/color';
+
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
-import styleConstants from '../../styleConstants';
-import throttle from 'lodash/debounce';
-import FontAwesome from '../FontAwesome';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+
+import styleConstants from '../../styleConstants';
+import color from '../../util/color';
+import FontAwesome from '../FontAwesome';
 
 export const QuickActionsCellType = {
   header: 'header',
@@ -35,6 +37,17 @@ export default class QuickActionsCell extends Component {
     menuTop: 0, // location of dropdown menu
     menuLeft: 0,
     currWindowWidth: window.innerWidth, // used to calculate location of menu on resize
+  };
+
+  handleClick = e => {
+    e.stopPropagation();
+
+    if (this.state.open) {
+      this.close();
+      this.onClose();
+    } else {
+      this.state.canOpen ? this.open() : undefined;
+    }
   };
 
   // Menu open
@@ -110,8 +123,15 @@ export default class QuickActionsCell extends Component {
         <FontAwesome
           icon={icons[type]}
           style={iconStyle}
-          onClick={this.state.canOpen ? this.open : undefined}
           className="ui-test-section-dropdown ui-projects-table-dropdown"
+          onClick={this.handleClick}
+          tabIndex="0"
+          onKeyDown={e => {
+            if ([' ', 'Enter', 'Spacebar'].includes(e.key)) {
+              e.preventDefault();
+              this.state.canOpen ? this.open() : undefined;
+            }
+          }}
         />
         <PopUpMenu
           targetPoint={targetPoint}
@@ -138,13 +158,11 @@ const styles = {
     [QuickActionsCellType.body]: {
       border: '1px solid ' + color.white,
       borderRadius: 5,
-      color: color.darker_gray,
       margin: 3,
     },
     [QuickActionsCellType.header]: {
       fontSize: 20,
       lineHeight: '15px',
-      color: color.charcoal,
     },
   },
   hoverFocus: {
@@ -152,7 +170,6 @@ const styles = {
       backgroundColor: color.lighter_gray,
       border: '1px solid ' + color.light_gray,
       borderRadius: 5,
-      color: color.white,
     },
   },
 };

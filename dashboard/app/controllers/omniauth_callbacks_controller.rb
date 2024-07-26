@@ -1,13 +1,26 @@
 require 'cdo/shared_cache'
 require 'honeybadger/ruby'
+require 'services/lti'
+require 'policies/lti'
+require 'metrics/events'
 
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   include UsersHelper
 
   skip_before_action :clear_sign_up_session_vars
 
+  # TODO: figure out how to avoid skipping CSRF verification for Powerschool
+  skip_before_action :verify_authenticity_token, only: :powerschool
+
+  before_action :check_account_linking_lock
+
   # Note: We can probably remove these once we've broken out all providers
-  BROKEN_OUT_TYPES = [AuthenticationOption::CLEVER, AuthenticationOption::GOOGLE]
+  BROKEN_OUT_TYPES = [
+    AuthenticationOption::CLEVER,
+    AuthenticationOption::GOOGLE,
+    AuthenticationOption::FACEBOOK,
+    AuthenticationOption::MICROSOFT,
+  ]
   TYPES_ROUTED_TO_ALL = AuthenticationOption::OAUTH_CREDENTIAL_TYPES - BROKEN_OUT_TYPES
 
   # GET /users/auth/clever/callback
@@ -15,6 +28,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     return connect_provider if should_connect_provider?
 
     user = find_user_by_credential
+    return link_accounts user if should_link_accounts?
     if user
       sign_in_clever user
     else
@@ -22,43 +36,22 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
-  # POST /users/auth/maker_google_oauth2
-  def maker_google_oauth2
-    if params[:secret_code].nil_or_empty?
-      flash.now[:alert] = I18n.t('maker.google_oauth.error_no_code')
-      return render 'maker/login_code'
-    end
+  # GET /users/auth/facebook/callback
+  def facebook
+    user = find_user_by_credential
+    user&.update_oauth_credential_tokens auth_hash
 
-    secret = Encryption.decrypt_string_utf8(params[:secret_code])
-    time = DateTime.strptime(secret.slice!(0..19), '%Y%m%dT%H%M%S%z')
-    time_difference = (Time.now - time) / 1.minute
-
-    # Reject - code was generated more than 5 minutes ago or incorrect provider
-    if time_difference >= 5
-      flash.now[:alert] = I18n.t('maker.google_oauth.error_token_expired')
-      return render 'maker/login_code'
-    elsif !secret.ends_with?(AuthenticationOption::GOOGLE)
-      flash.now[:alert] = I18n.t('maker.google_oauth.error_wrong_provider')
-      return render 'maker/login_code'
-    else
-      secret.slice!(AuthenticationOption::GOOGLE)
-    end
-
-    # Check authentication_id only contains numbers.
-    if secret.scan(/\D/).empty?
-      # Look up user and use devise to sign user in
-      user = User.find_by_credential(type: AuthenticationOption::GOOGLE, id: secret)
-      sign_in_and_redirect user
-    else
-      flash.now[:alert] = I18n.t('maker.google_oauth.error_invalid_user')
-      render 'maker/login_code'
-    end
+    return link_accounts user if should_link_accounts?
+    return connect_provider if should_connect_provider?
+    login
   end
 
   # GET /users/auth/google_oauth2/callback
   def google_oauth2
     user = find_user_by_credential
     user&.update_oauth_credential_tokens auth_hash
+
+    return link_accounts user if should_link_accounts?
 
     # Redirect to open roster dialog on home page if user just authorized access
     # to Google Classroom courses and rosters
@@ -70,6 +63,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     else
       sign_up_google_oauth2
     end
+  end
+
+  # GET /users/auth/microsoft_v2_auth/callback
+  def microsoft_v2_auth
+    user = find_user_by_credential
+    user&.update_oauth_credential_tokens auth_hash
+
+    return link_accounts user if should_link_accounts?
+    return connect_provider if should_connect_provider?
+    login
   end
 
   # All remaining providers
@@ -314,11 +317,17 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   private def register_new_user(user)
     PartialRegistration.persist_attributes(session, user)
-    redirect_to new_user_registration_url
-  end
 
-  # TODO: figure out how to avoid skipping CSRF verification for Powerschool
-  skip_before_action :verify_authenticity_token, only: :powerschool
+    if DCDO.get('student-email-post-enabled', false)
+      @form_data = {
+        email: user.email
+      }
+
+      render 'omniauth/redirect', {layout: false}
+    else
+      redirect_to new_user_registration_url
+    end
+  end
 
   private def extract_powerschool_data(auth)
     # OpenID 2.0 data comes back in a different format compared to most of our other oauth data.
@@ -511,8 +520,14 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     return !!lookup_user
   end
 
+  # Are we trying to connect a new OAuth provider?
+  private def connecting_new_provider?
+    current_user && auth_params.fetch("action", nil) == "connect"
+  end
+
+  # Should we try to add a new OAuth provider?
   private def should_connect_provider?
-    return current_user && auth_params.fetch("action", nil) == "connect"
+    connecting_new_provider? && !account_linking_locked?
   end
 
   private def get_connect_provider_errors(auth_option)
@@ -520,5 +535,70 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     return errors.first unless errors.empty?
     I18n.t('auth.unable_to_connect_provider', provider: I18n.t("auth.#{auth_option.credential_type}"))
+  end
+
+  # Is this user able to link new providers?
+  private def account_linking_locked?
+    user = current_user || find_user_by_credential
+    return unless user
+
+    account_linking_lock_reason(user)
+  end
+
+  # If we are trying to connect a new provider to an existing account and the
+  # user does not have permission to add new providers, then stop the linking
+  # and report an error.
+  private def check_account_linking_lock
+    # Only check for account link locking when trying to link a new provider.
+    return unless connecting_new_provider? || lti_registration?
+    lock_reason = account_linking_locked?
+    return unless lock_reason
+    redirect_back fallback_location: new_user_session_path, alert: lock_reason
+  end
+
+  # Are we trying to link a new provider while registering an LTI account?
+  private def lti_registration?
+    DCDO.get('lti_account_linking_enabled', false) && Policies::Lti.lti_registration_in_progress?(session)
+  end
+
+  # Determine whether to link a new LTI auth option to an existing account
+  # Not to be confused with the connect_provider flow
+  private def should_link_accounts?
+    lti_registration? && !account_linking_locked?
+  end
+
+  # For linking new LTI auth options to existing accounts
+  private def link_accounts(user)
+    if user
+      if user.admin?
+        flash[:alert] = I18n.t('lti.account_linking.admin_not_allowed')
+        redirect_to user_session_path and return
+      end
+      begin
+        Services::Lti::AccountLinker.call(user: user, session: session)
+      rescue => exception
+        Honeybadger.notify(exception, context: {message: 'Error linking LTI account to oauth account', user_id: user.id})
+        PartialRegistration.delete(session)
+
+        flash.alert = I18n.t('lti.account_linking.backend_error')
+        redirect_to user_session_path and return
+      end
+
+      metadata = {
+        'user_type' => user.user_type,
+        'lms_name' => user.lti_user_identities.first.lti_integration[:platform_name],
+      }
+      Metrics::Events.log_event(
+        user: user,
+        event_name: 'lti_user_signin',
+        metadata: metadata,
+      )
+      sign_in_and_redirect user and return
+    end
+
+    # If no user was found for the provided credentials, redirect back to
+    # the sign-in page instead of creating a new account.
+    flash.alert = I18n.t('lti.account_linking.account_not_found')
+    return redirect_to user_session_path
   end
 end

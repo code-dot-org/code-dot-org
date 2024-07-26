@@ -264,6 +264,7 @@ ru-RU:
   class_submission_out_of_school_summer_camp: Летний лагерь
   classicmaze_name: Классический лабиринт
   code_hoc_coming: '"Час кода" наступает  8-14 декабря!'
+  code_org_logo_alt: Code.org Home
   code_sign_up: Зарегистрируйтесь для участия в неделе информатики
   codea_beyond_gradelevel: Средняя школа +
   codea_beyond_longdescription: Codea для iPad позволяет создавать игры и симуляторы
@@ -1196,7 +1197,9 @@ ru-RU:
   header_about_us: О нас
   header_course_catalog: Каталог курсов
   header_courses: курсы
+  header_districts: Район
   header_documentation: Документация
+  header_donate: Пожертвовать
   header_educate_beyond: За пределами Code.org
   header_educate_community: Онлайн сообщество
   header_educate_elementary: Начальная школа
@@ -1214,6 +1217,7 @@ ru-RU:
   header_incubator: Инкубатор
   header_learn: Обучение
   header_legal: Правовая информация
+  header_legal_cookie_notice: Уведомление о cookie
   header_legal_privacy: Политика конфиденциальности
   header_legal_tos: Условия предоставления услуг
   header_my_dashboard: Моя Доска
@@ -1221,6 +1225,7 @@ ru-RU:
   header_project_gallery: Проекты
   header_report_abuse: Сообщить о нарушении
   header_report_bug: Сообщить об ошибке
+  header_schools: школы
   header_screen_reader_hamburger: Меню
   header_screen_reader_help: Меню Помощи
   header_sections: Секции
@@ -2587,6 +2592,8 @@ ru-RU:
   user_header_logout: Выйти
   user_header_minecraft: Minecraft
   user_header_my_projects: Мои проекты
+  user_header_new_project: Новый проект
+  user_header_new_project_low_cap: Новый проект
   user_header_playlab: Лаборатория игр
   user_header_settings: Настройки аккаунта
   user_header_signin: Вход
@@ -2706,29 +2713,14 @@ ru-RU:
     представляющее собой вводный урок в информатику продолжительностью 1 час и охватывающее
     десятки миллионов учеников в более чем 180 странах. Присоединяйтесь во время проведения
     недели информатики с 7 по 13 декабря.
-  volunteer_engineer_submission_intro_guide: Узнайте больше о нашей <a href="%{volunteer_guide}">волонтерской
-    программе здесь</a>.
   volunteer_engineer_submission_intro_guide_markdown: Узнайте больше о нашей [волонтерской
     программе здесь](%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: Хотите найти волонтеров? Найдите волонтера
-    в своем регионе на нашей <a href="%{volunteer_local}">карте волонтеров</a>.
   volunteer_engineer_submission_intro_links_markdown: Вы учитель и ищете волонтеров?
     Найдите местного волонтера на нашей [карте волонтеров](%{volunteer_local}).
-  volunteer_engineer_submission_intro_recruit: 'Учителям очень хотелось бы, чтобы
-    кто-то, <span style="font-family: ''Gotham 7r'', sans-serif;">заинтересованный
-    в обучении информатике,</span> мог бы помочь в классе или <span style="font-family:
-    ''Gotham 7r'', sans-serif;">мотивировать</span> учеников рассказом о безграничных
-    возможностях, которые открываются при изучении информатики (к примеру, через видеочат).'
   volunteer_engineer_submission_intro_recruit_markdown: Учителя мечтают о том, чтобы
     какой-нибудь **горячий сторонник образования в сфере компьютерных наук** помогал
     им в классе или **вдохновил** их учащихся, рассказав им (например в видеочате)
     об огромных возможностях, открываемых компьютерными науками.
-  volunteer_engineer_submission_intro_signup: Укажите следующую информацию, если вы
-    являетесь студентом факультета компьютерных наук или специалистом по программному
-    обеспечению. К регистрации в качестве волонтеров допускаются лица не моложе 18
-    лет. Просьба учесть, что вся информация, которую вы приведете в этом разделе,
-    будет доступна для любого просматривающего <a href="/volunteer/local">карту волонтеров</a>.
-    Поля, отмеченные <span class="form-required-field">*</span>, являются обязательными.
   volunteer_engineer_submission_intro_signup_markdown: Укажите следующую информацию,
     если вы являетесь студентом факультета компьютерных наук или специалистом по программному
     обеспечению. К регистрации в качестве волонтеров допускаются лица не моложе 18

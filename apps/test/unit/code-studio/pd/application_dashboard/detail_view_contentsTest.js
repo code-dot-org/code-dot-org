@@ -1,31 +1,31 @@
-import {DetailViewContents} from '@cdo/apps/code-studio/pd/application_dashboard/detail_view_contents';
+import {render, screen, fireEvent, within} from '@testing-library/react';
+import _ from 'lodash';
+import React from 'react';
+import {Provider} from 'react-redux';
+import {BrowserRouter as Router} from 'react-router-dom';
+
 import {
   getApplicationStatuses,
   ScholarshipStatusRequiredStatuses,
 } from '@cdo/apps/code-studio/pd/application_dashboard/constants';
+import {DetailViewContents} from '@cdo/apps/code-studio/pd/application_dashboard/detail_view_contents';
 import {PrincipalApprovalState} from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import React from 'react';
-import _ from 'lodash';
-import sinon from 'sinon';
-import {expect} from '../../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
+import {getStore, restoreRedux, stubRedux} from '@cdo/apps/redux';
+
 import {allowConsoleWarnings} from '../../../../util/testUtils';
 
 describe('DetailViewContents', () => {
   allowConsoleWarnings();
+  let store;
 
-  // We aren't testing any of the responses of the workshop selector control, so just
-  // have a fake server to handle calls and suppress warnings
-  let server;
-  before(() => {
-    server = sinon.fakeServer.create();
+  beforeEach(() => {
+    stubRedux();
+    store = getStore();
   });
 
-  after(() => {
-    server.restore();
+  afterEach(() => {
+    restoreRedux();
   });
-
-  let context;
 
   const DEFAULT_APPLICATION_DATA = {
     regionalPartner: 'partner',
@@ -69,99 +69,105 @@ describe('DetailViewContents', () => {
     school_stats: {},
   };
 
+  const DEFAULT_PROPS = {
+    canLock: true,
+    applicationId: '1',
+    applicationData: DEFAULT_APPLICATION_DATA,
+    isWorkshopAdmin: false,
+  };
+
   // Nobody is able to set an application status to incomplete or to awaiting_admin_approval from detail view
   const getSelectableApplicationStatuses = (addAutoEmail = true) =>
     _.omit(getApplicationStatuses(addAutoEmail), [
       'incomplete',
       'awaiting_admin_approval',
+      'enrolled',
     ]);
 
-  const mountDetailView = (overrides = {}) => {
-    const defaultApplicationData = {
-      ...DEFAULT_APPLICATION_DATA,
-    };
-    const defaultProps = {
-      canLock: true,
-      applicationId: '1',
-      applicationData: defaultApplicationData,
-      isWorkshopAdmin: false,
-    };
-
-    // No-op router context
-    context = {
-      router: {
-        push() {},
-      },
-    };
-
-    return mount(<DetailViewContents {..._.merge(defaultProps, overrides)} />, {
-      context,
-    });
-  };
+  function renderDefault(overrideProps = {}) {
+    render(
+      <Router>
+        <Provider store={store}>
+          <DetailViewContents {...DEFAULT_PROPS} {...overrideProps} />
+        </Provider>
+      </Router>
+    );
+  }
 
   describe('Notes', () => {
     it('Does not supply value for teacher applications with no notes', () => {
-      const teacherDetailView = mountDetailView({
-        applicationData: {notes: ''},
-      });
-      expect(teacherDetailView.state().notes).to.eql('');
+      const overrideProps = {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          notes: '',
+        },
+      };
+      renderDefault(overrideProps);
+
+      expect(screen.getAllByDisplayValue('')[0].id).toEqual('notes');
     });
   });
 
   describe('Edit controls in Teacher', () => {
     it("cannot change status if application is currently in 'Awaiting Admin Approval'", () => {
-      const detailView = mountDetailView({
+      const overrideProps = {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           status: 'awaiting_admin_approval',
         },
-      });
+      };
+      renderDefault(overrideProps);
 
-      expect(detailView.find('#DetailViewHeader FormControl').prop('disabled'))
-        .to.be.true;
+      const statusDropdowns = screen.getAllByDisplayValue(
+        'Awaiting Admin Approval'
+      );
+      statusDropdowns.forEach(statusDropdown => {
+        expect(statusDropdown.disabled).toBeTruthy();
+      });
     });
 
     it("cannot make status 'Awaiting Admin Approval' from dropdown", () => {
-      const detailView = mountDetailView();
-      expect(
-        detailView
-          .find('#DetailViewHeader select')
-          .find('option')
-          .find('[value="awaiting_admin_approval"]')
-      ).to.have.lengthOf(0);
+      renderDefault();
+
+      const statusDropdowns = screen.getAllByDisplayValue('Accepted');
+      statusDropdowns.forEach(statusDropdown => {
+        expect(
+          within(statusDropdown).queryByText('Awaiting Admin Approval')
+        ).toBeNull();
+      });
     });
 
     it("cannot make status 'Incomplete' from dropdown", () => {
-      const detailView = mountDetailView();
-      expect(
-        detailView
-          .find('#DetailViewHeader select')
-          .find('option')
-          .find('[value="incomplete"]')
-      ).to.have.lengthOf(0);
+      renderDefault();
+
+      const statusDropdowns = screen.getAllByDisplayValue('Accepted');
+      statusDropdowns.forEach(statusDropdown => {
+        expect(within(statusDropdown).queryByText('Incomplete')).toBeNull();
+      });
     });
 
     it('incomplete status is in dropdown if teacher application is incomplete', () => {
-      const detailView = mountDetailView({
+      const overrideProps = {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           status: 'incomplete',
           scholarship_status: null,
           update_emails_sent_by_system: false,
         },
+      };
+      renderDefault(overrideProps);
+
+      const statusDropdowns = screen.getAllByDisplayValue('Incomplete');
+      expect(statusDropdowns.length).toBe(2);
+      statusDropdowns.forEach(statusDropdown => {
+        within(statusDropdown).queryByText('Incomplete');
       });
-      expect(
-        detailView
-          .find('#DetailViewHeader select')
-          .find('option')
-          .find('[value="incomplete"]')
-      ).to.have.lengthOf(1);
     });
 
     it('changelog logs all possible status changes', () => {
       let status_change_log = [];
 
-      // get logs for changing through possible status
+      // Get logs for changing through possible status
       Object.keys(getSelectableApplicationStatuses()).forEach(status => {
         status_change_log.push({
           changing_user: 'Test use',
@@ -170,380 +176,319 @@ describe('DetailViewContents', () => {
         });
       });
 
-      // check that recorded change logs are rendered in ChangeLog element
-      const overrides = {
-        applicationData: {status_change_log: status_change_log},
+      // Check that recorded change logs are rendered in ChangeLog element
+      const overrideProps = {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          status_change_log: status_change_log,
+        },
       };
-      const detailView = mountDetailView(overrides);
-      expect(detailView.find('ChangeLog').props().changeLog).to.deep.equal(
-        status_change_log
-      );
+      renderDefault(overrideProps);
+
+      Object.keys(getSelectableApplicationStatuses()).forEach(status => {
+        screen.getByText(status);
+      });
     });
   });
 
   describe('Admin edit dropdown', () => {
     it('Is not visible to regional partners', () => {
-      const detailView = mountDetailView({
+      const overrideProps = {
         isWorkshopAdmin: false,
-      });
-      expect(detailView.find('button#admin-edit')).to.have.length(0);
+      };
+      renderDefault(overrideProps);
+
+      expect(screen.queryByLabelText('Edit')).toBeNull();
+      expect(screen.queryByText('(Admin) Edit Form Data')).toBeNull();
+      expect(screen.queryByText('Delete Application')).toBeNull();
     });
 
     it('Is visible to admins', () => {
-      const detailView = mountDetailView({
+      const overrideProps = {
         isWorkshopAdmin: true,
-      });
-      expect(detailView.find('button#admin-edit')).to.have.length(2);
-    });
+      };
+      renderDefault(overrideProps);
 
-    it('Edit redirects to edit page', () => {
-      const detailView = mountDetailView({
-        isWorkshopAdmin: true,
-      });
-      const mockRouter = sinon.mock(context.router);
-
-      detailView.find('button#admin-edit').first().simulate('click');
-      const adminEditMenuitem = detailView
-        .find('.dropdown.open a')
-        .findWhere(a => a.text() === '(Admin) Edit Form Data')
-        .first();
-
-      mockRouter.expects('push').withExactArgs('/1/edit');
-      adminEditMenuitem.simulate('click');
-      mockRouter.verify();
-    });
-
-    it('Has Delete Application menu item', () => {
-      const detailView = mountDetailView({
-        isWorkshopAdmin: true,
-      });
-      detailView.find('button#admin-edit').first().simulate('click');
-      const deleteApplicationMenuitem = detailView
-        .find('.dropdown.open a')
-        .findWhere(a => a.text() === 'Delete Application')
-        .first();
-
-      expect(deleteApplicationMenuitem).to.have.length(1);
+      expect(screen.getAllByLabelText('Edit').length).toBe(2);
+      expect(screen.getAllByText('(Admin) Edit Form Data').length).toBe(2);
+      expect(screen.getAllByText('Delete Application').length).toBe(2);
     });
   });
 
   describe('Edit controls behavior', () => {
     it('the dropdown is disabled until the Edit button is clicked in Teacher Application', () => {
-      const detailView = mountDetailView();
+      renderDefault();
 
-      let expectedButtons = ['Edit', 'Delete'];
-      expect(
-        detailView.find('#DetailViewHeader Button').map(button => {
-          return button.text();
-        })
-      ).to.deep.equal(expectedButtons);
-      expect(detailView.find('#DetailViewHeader FormControl').prop('disabled'))
-        .to.be.true;
-      expect(detailView.find('textarea#notes').prop('disabled')).to.be.true;
-      expect(detailView.find('textarea#notes_2').prop('disabled')).to.be.true;
+      // Dropdowns and notes are disabled before Edit button is clicked
+      screen.getAllByDisplayValue('Accepted').forEach(dropdown => {
+        expect(dropdown.disabled).toBeTruthy();
+      });
+      expect(screen.getByDisplayValue('notes').disabled).toBeTruthy();
 
-      expectedButtons = ['Save', 'Cancel'];
-      detailView.find('button#edit').first().simulate('click');
-      expect(
-        detailView.find('#DetailViewHeader Button').map(button => {
-          return button.text();
-        })
-      ).to.deep.equal(expectedButtons);
-      expect(detailView.find('#DetailViewHeader FormControl').prop('disabled'))
-        .to.be.false;
-      expect(detailView.find('textarea#notes').prop('disabled')).to.be.false;
-      expect(detailView.find('textarea#notes_2').prop('disabled')).to.be.false;
+      // Dropdowns and notes are enabled after Edit button is clicked
+      fireEvent.click(screen.getAllByText('Edit')[0]);
+      screen.getAllByDisplayValue('Accepted').forEach(dropdown => {
+        expect(!dropdown.disabled).toBeTruthy();
+      });
+      expect(!screen.getByDisplayValue('notes').disabled).toBeTruthy();
 
-      detailView.find('#DetailViewHeader Button').last().simulate('click');
-      expect(detailView.find('#DetailViewHeader FormControl').prop('disabled'))
-        .to.be.true;
-      expect(detailView.find('textarea#notes').prop('disabled')).to.be.true;
-      expect(detailView.find('textarea#notes_2').prop('disabled')).to.be.true;
+      // Dropdowns and notes are disabled after Cancel or Save button is clicked
+      fireEvent.click(screen.getAllByText('Cancel')[0]);
+      screen.getAllByDisplayValue('Accepted').forEach(dropdown => {
+        expect(dropdown.disabled).toBeTruthy();
+      });
+      expect(screen.getByDisplayValue('notes').disabled).toBeTruthy();
     });
   });
 
   describe('Principal Approvals', () => {
     it(`Shows principal responses if approval is complete`, () => {
-      const detailView = mountDetailView();
-      expect(detailView.text()).to.contain(
-        'Administrator Approval and School Information'
-      );
+      renderDefault();
+
+      screen.getByText('Administrator Approval and School Information');
     });
+
     it(`Shows URL to principal approval if sent and incomplete`, () => {
       const guid = '1020304';
-      const detailView = mountDetailView({
+      const overrideProps = {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           application_guid: guid,
           principal_approval_state: PrincipalApprovalState.inProgress,
         },
-      });
-      expect(detailView.text()).to.contain(`Incomplete`);
+      };
+      renderDefault(overrideProps);
+
       expect(
-        detailView.find('#principal-approval-url').props().href
-      ).to.contain(`principal_approval/${guid}`);
+        screen
+          .getAllByRole('link')[1]
+          .href.includes(`/pd/application/principal_approval/${guid}`)
+      ).toBeTruthy();
     });
+
     it(`Shows complete text for principal approval if complete`, () => {
       const guid = '1020305';
-      const detailView = mountDetailView({
+      const overrideProps = {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           application_guid: guid,
           principal_approval_state: PrincipalApprovalState.complete,
         },
-      });
-      expect(detailView.text()).to.contain(`Complete`);
+      };
+      renderDefault(overrideProps);
+
+      screen.getByText(PrincipalApprovalState.complete.trim());
     });
+
     it(`Shows button to make principal approval required if not`, () => {
-      const detailView = mountDetailView({
+      const overrideProps = {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           principal_approval_not_required: true,
         },
-      });
-      expect(detailView.find('PrincipalApprovalButtons').text()).to.contain(
-        'Make required'
-      );
+      };
+      renderDefault(overrideProps);
+
+      screen.getByRole('button', {name: 'Make required'});
     });
+
     it(`Shows button to make principal approval not required if it is`, () => {
-      const detailView = mountDetailView({
+      const overrideProps = {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           principal_approval_not_required: null, // principal approval is required
         },
-      });
-      expect(detailView.find('PrincipalApprovalButtons').text()).to.contain(
-        'Make not required'
-      );
+      };
+      renderDefault(overrideProps);
+
+      screen.getByRole('button', {name: 'Make not required'});
     });
+
     it(`Shows button to resend admin email if status is awaiting_admin_approval and it is allowed to be resent`, () => {
-      const detailView = mountDetailView({
+      const overrideProps = {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           principal_approval_state: PrincipalApprovalState.inProgress,
           allow_sending_principal_email: true,
           status: 'awaiting_admin_approval',
         },
-      });
-      expect(detailView.find('PrincipalApprovalButtons').text()).to.contain(
-        'Resend request'
-      );
+      };
+      renderDefault(overrideProps);
+
+      screen.getByRole('button', {name: 'Resend request'});
     });
+
     it(`Does not show button to resend admin email if status is awaiting_admin_approval but is not allowed to be resent`, () => {
-      const detailView = mountDetailView({
+      const overrideProps = {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           principal_approval_state: PrincipalApprovalState.inProgress,
           allow_sending_principal_email: false,
           status: 'awaiting_admin_approval',
         },
-      });
-      expect(detailView.find('PrincipalApprovalButtons').text()).not.to.contain(
-        'Resend request'
-      );
+      };
+      renderDefault(overrideProps);
+
+      expect(screen.queryByRole('button', {name: 'Resend request'})).toBeNull();
     });
+
     it(`Does not show button to resend admin email if is allowed to be resent but status is pending`, () => {
-      const detailView = mountDetailView({
+      const overrideProps = {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           principal_approval_state: PrincipalApprovalState.inProgress,
           allow_sending_principal_email: true,
           status: 'pending',
         },
-      });
-      expect(detailView.find('PrincipalApprovalButtons').text()).not.to.contain(
-        'Resend request'
-      );
+      };
+      renderDefault(overrideProps);
+
+      expect(screen.queryByRole('button', {name: 'Resend request'})).toBeNull();
     });
   });
 
   describe('Regional Partner View', () => {
     it('has delete button', () => {
-      const detailView = mountDetailView({
+      const overrideProps = {
         isWorkshopAdmin: false,
-      });
-      const deleteButton = detailView.find('button#delete');
-      expect(deleteButton).to.have.length(2);
+      };
+      renderDefault(overrideProps);
+
+      expect(screen.getAllByText('Delete').length).toBe(2);
     });
   });
 
   describe('Scholarship Teacher? row', () => {
     it('on teacher applications', () => {
-      const detailView = mountDetailView({
+      const overrideProps = {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          scholarship_status: 'no',
+        },
         isWorkshopAdmin: true,
         regionalPartners: [{id: 1, name: 'test'}],
-      });
-      const getLastRow = () =>
-        detailView
-          .find('tr')
-          .filterWhere(row => row.text().includes('Scholarship Teacher?'));
+      };
+      renderDefault(overrideProps);
+
+      const selectDropdown =
+        screen.getByText('No, paid teacher').parentElement.parentElement
+          .parentElement.parentElement;
 
       // Dropdown is disabled
-      expect(getLastRow().find('Select').prop('disabled')).to.equal(true);
+      expect(selectDropdown.classList.contains('is-disabled')).toBeTruthy();
 
       // Click "Edit"
-      detailView
-        .find('#DetailViewHeader Button')
-        .not('#admin-edit')
-        .last()
-        .simulate('click');
+      fireEvent.click(screen.getAllByText('Edit')[0]);
 
       // Dropdown is no longer disabled
-      expect(getLastRow().find('Select').prop('disabled')).to.equal(false);
+      expect(!selectDropdown.classList.contains('is-disabled')).toBeTruthy();
 
-      // Click "Save"
-      detailView.find('#DetailViewHeader Button').last().simulate('click');
+      // Click "Cancel"
+      fireEvent.click(screen.getAllByText('Cancel')[0]);
 
       // Dropdown is disabled
-      expect(getLastRow().find('Select').prop('disabled')).to.equal(true);
+      expect(selectDropdown.classList.contains('is-disabled')).toBeTruthy();
     });
   });
 
   describe('Teacher application scholarship status', () => {
-    let detailView;
-
-    afterEach(() => {
-      detailView.unmount();
-    });
-
-    for (const applicationStatus of ScholarshipStatusRequiredStatuses) {
-      it(`is required in order to set application status to ${applicationStatus}`, () => {
-        detailView = mountDetailView({
-          applicationData: {
-            ...DEFAULT_APPLICATION_DATA,
-            status: 'unreviewed',
-            scholarship_status: null,
-            update_emails_sent_by_system: false,
-          },
-        });
-        expect(isModalShowing()).to.be.false;
-        expect(getScholarshipStatus()).to.be.null;
-        expect(getApplicationStatus()).to.equal('unreviewed');
-
-        setApplicationStatusTo(applicationStatus);
-        expect(isModalShowing()).to.be.true;
-        expect(getApplicationStatus()).to.equal('unreviewed');
-
-        dismissModal();
-        expect(isModalShowing()).to.be.false;
-        expect(getApplicationStatus()).to.equal('unreviewed');
-
-        clickEditButton();
-        setScholarshipStatusTo('no');
-        expect(getScholarshipStatus()).to.equal('no');
-
-        setApplicationStatusTo(applicationStatus);
-        expect(isModalShowing()).to.be.false;
-        expect(getApplicationStatus()).to.equal(applicationStatus);
-      });
-    }
-
-    for (const applicationStatus of _.difference(
-      Object.keys(getSelectableApplicationStatuses()),
-      ScholarshipStatusRequiredStatuses
-    )) {
-      it(`is not required to set application status to ${applicationStatus}`, () => {
-        detailView = mountDetailView({
-          applicationData: {
-            ...DEFAULT_APPLICATION_DATA,
-            status: 'unreviewed',
-            scholarship_status: null,
-            update_emails_sent_by_system: false,
-          },
-        });
-        expect(isModalShowing()).to.be.false;
-        expect(getScholarshipStatus()).to.be.null;
-
-        setApplicationStatusTo(applicationStatus);
-        expect(isModalShowing()).to.be.false;
-        expect(getApplicationStatus()).to.equal(applicationStatus);
-      });
-    }
-
     it('appends auto email text if set to true', () => {
-      detailView = mountDetailView({
+      const overrideProps = {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           status: 'unreviewed',
           scholarship_status: null,
           update_emails_sent_by_system: true,
         },
-      });
-      let options = detailView.find('#DetailViewHeader select').find('option');
-      let applicationStatuses = Object.values(
-        getSelectableApplicationStatuses(true)
-      );
-      var i = 0;
-      options.forEach(option => {
-        expect(option.text()).to.equal(applicationStatuses[i]);
-        i++;
-      });
+      };
+      renderDefault(overrideProps);
+
+      expect(screen.getAllByText('Accepted (auto-email)').length).toBe(2);
+      expect(screen.getAllByText('Declined (auto-email)').length).toBe(2);
     });
 
     it('does not append auto email text if set to false', () => {
-      detailView = mountDetailView({
+      const overrideProps = {
         applicationData: {
           ...DEFAULT_APPLICATION_DATA,
           status: 'unreviewed',
           scholarship_status: null,
           update_emails_sent_by_system: false,
         },
-      });
-      let options = detailView.find('#DetailViewHeader select').find('option');
-      let applicationStatuses = Object.values(
-        getSelectableApplicationStatuses(false)
-      );
-      var i = 0;
-      options.forEach(option => {
-        expect(option.text()).to.equal(applicationStatuses[i]);
-        i++;
-      });
+      };
+      renderDefault(overrideProps);
+
+      expect(screen.queryAllByText('Accepted (auto-email)').length).toBe(0);
+      expect(screen.queryAllByText('Declined (auto-email)').length).toBe(0);
+      expect(screen.getAllByText('Accepted').length).toBe(2);
+      expect(screen.getAllByText('Declined').length).toBe(2);
     });
 
+    it(`is required in order to set application status to accepted`, () => {
+      const overrideProps = {
+        applicationData: {
+          ...DEFAULT_APPLICATION_DATA,
+          status: 'unreviewed',
+          scholarship_status: null,
+          update_emails_sent_by_system: false,
+        },
+      };
+      renderDefault(overrideProps);
+
+      // Ensure application status is 'Unreviewed' and scholarship status is null (showing default "Select..." value)
+      expect(!isModalShowing()).toBeTruthy();
+      screen.getByText('Select...');
+      expect(screen.getAllByDisplayValue('Unreviewed').length).toBe(2);
+
+      // Attempt to change application status without updating scholarship status, resulting in modal that instructs
+      // the user to set the scholarship status first
+      clickEditButton();
+      setApplicationStatusTo('Unreviewed', 'accepted');
+      expect(isModalShowing()).toBeTruthy();
+    });
+
+    for (const applicationStatus of _.difference(
+      Object.keys(getSelectableApplicationStatuses()),
+      ScholarshipStatusRequiredStatuses
+    )) {
+      it(`is not required to set application status to ${applicationStatus}`, () => {
+        const overrideProps = {
+          applicationData: {
+            ...DEFAULT_APPLICATION_DATA,
+            status: 'unreviewed',
+            scholarship_status: null,
+            update_emails_sent_by_system: false,
+          },
+        };
+        renderDefault(overrideProps);
+
+        // Ensure application status is 'Unreviewed' and scholarship status is null (showing default "Select..." value)
+        expect(!isModalShowing()).toBeTruthy();
+        screen.getByText('Select...');
+        expect(screen.getAllByDisplayValue('Unreviewed').length).toBe(2);
+
+        // Change application status without updating scholarship status, and ensure that no modal pops up
+        clickEditButton();
+        setApplicationStatusTo('Unreviewed', applicationStatus);
+        expect(!isModalShowing()).toBeTruthy();
+
+        // Check that status successfully updated
+        const statusDisplayValue = getApplicationStatuses()[applicationStatus];
+        expect(screen.getAllByDisplayValue(statusDisplayValue).length).toBe(2);
+      });
+    }
+
     function clickEditButton() {
-      detailView.find('#DetailViewHeader Button').last().simulate('click');
+      fireEvent.click(screen.getAllByText('Edit')[0]);
     }
 
-    function getApplicationStatus() {
-      return detailView.find('#DetailViewHeader select').prop('value');
-    }
-
-    function setApplicationStatusTo(newStatus) {
-      detailView
-        .find('#DetailViewHeader select')
-        .simulate('change', {target: {value: newStatus}});
-    }
-
-    function getScholarshipStatus() {
-      const scholarshipDropdown = detailView
-        .find('tr')
-        .filterWhere(row => row.text().includes('Scholarship Teacher?'))
-        .find('Select');
-      return scholarshipDropdown.prop('value');
-    }
-
-    function setScholarshipStatusTo(newValue) {
-      const scholarshipDropdown = detailView
-        .find('tr')
-        .filterWhere(row => row.text().includes('Scholarship Teacher?'))
-        .find('Select');
-      scholarshipDropdown.prop('onChange')({value: newValue});
-      detailView.update();
+    function setApplicationStatusTo(currentStatus, newStatus) {
+      const applicationDropdown = screen.getAllByDisplayValue(currentStatus)[0];
+      fireEvent.change(applicationDropdown, {target: {value: newStatus}});
     }
 
     function isModalShowing() {
-      const modal = detailView
-        .find('ConfirmationDialog')
-        .filterWhere(
-          dialog => dialog.prop('headerText') === 'Cannot save applicant status'
-        )
-        .first();
-      return !!modal.prop('show');
-    }
-
-    function dismissModal() {
-      detailView.find('ConfirmationDialog').first().prop('onOk')();
-      detailView.update();
+      return screen.queryAllByText('Cannot save applicant status').length > 0;
     }
   });
 });

@@ -1,0 +1,34 @@
+@import 'color.scss';
+
+.multipleChoiceContainer {
+  display: flex;
+  align-items: start;
+  input {
+    margin: 4px 4px 0 0;
+  }
+}
+
+.multipleChoiceLetter {
+  font-weight: bold;
+  margin-left: 4px;
+}
+
+.multipleChoiceLabel {
+  margin-left: 6px;
+}
+
+.freeResponse {
+  max-width: 100%;
+}
+
+.predictSolutionContainer {
+  margin: 10px;
+  padding: 5px;
+  background-color: $light_white;
+  border-radius: 5px;
+}
+
+.resetError {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}

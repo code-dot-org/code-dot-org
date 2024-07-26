@@ -6,11 +6,10 @@ describe I18n::Resources::Dashboard::Courses::SyncOut do
   let(:described_instance) {described_class.new}
   let(:malformed_i18n_reporter) {stub}
 
-  let(:crowdin_locale) {'expected_crowdin_locale'}
   let(:i18n_locale) {'expected_i18n_locale'}
-  let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
+  let(:language) {{locale_s: i18n_locale}}
 
-  let(:crowdin_file_path) {CDO.dir('i18n/locales', crowdin_locale, 'dashboard/courses.yml')}
+  let(:crowdin_file_path) {CDO.dir('i18n/crowdin', i18n_locale, 'dashboard/courses.yml')}
   let(:i18n_file_path) {CDO.dir('i18n/locales', i18n_locale, 'dashboard/courses.yml')}
   let(:i18n_backup_file_path) {CDO.dir('i18n/locales/original/dashboard/courses.yml')}
 
@@ -19,7 +18,7 @@ describe I18n::Resources::Dashboard::Courses::SyncOut do
   end
 
   before do
-    PegasusLanguages.stubs(:all).returns([language])
+    described_instance.stubs(:languages).returns([language])
     I18n::Utils::MalformedI18nReporter.stubs(:new).with(i18n_locale).returns(malformed_i18n_reporter)
   end
 
@@ -27,32 +26,35 @@ describe I18n::Resources::Dashboard::Courses::SyncOut do
     assert_equal I18n::Utils::SyncOutBase, described_class.superclass
   end
 
-  describe '.perform' do
-    let(:perform_sync_out) {described_class.perform}
+  describe '.process' do
+    let(:perform_sync_out) {described_instance.process(language)}
 
     let(:expect_localization_restoration) do
-      described_class.any_instance.expects(:restore_localization).with(language)
+      described_instance.expects(:restore_localization).with(language)
     end
     let(:expect_localization_urls_fixing) do
-      described_class.any_instance.expects(:fix_localization_urls).with(language)
+      described_instance.expects(:fix_localization_urls).with(language)
     end
     let(:expect_malformed_i18n_reporting) do
-      described_class.any_instance.expects(:report_malformed_i18n).with(language)
+      described_instance.expects(:report_malformed_i18n).with(language)
     end
     let(:expect_localization_distribution) do
-      described_class.any_instance.expects(:distribute_localization).with(language)
+      described_instance.expects(:distribute_localization).with(language)
     end
     let(:expect_crowdin_file_to_i18n_locale_dir_moving) do
       I18nScriptUtils.expects(:move_file).with(crowdin_file_path, i18n_file_path)
     end
+    let(:expect_crowdin_resource_dir_removing) do
+      I18nScriptUtils.expects(:remove_empty_dir).with(File.dirname(crowdin_file_path))
+    end
 
     before do
-      I18nScriptUtils.stubs(:source_lang?).with(language).returns(false)
+      I18n::Metrics.stubs(:report_runtime).yields(nil)
 
-      described_class.any_instance.stubs(:restore_localization)
-      described_class.any_instance.stubs(:fix_localization_urls)
-      described_class.any_instance.stubs(:report_malformed_i18n)
-      described_class.any_instance.stubs(:distribute_localization)
+      described_instance.stubs(:restore_localization)
+      described_instance.stubs(:fix_localization_urls)
+      described_instance.stubs(:report_malformed_i18n)
+      described_instance.stubs(:distribute_localization)
       I18nScriptUtils.stubs(:move_file)
 
       FileUtils.mkdir_p File.dirname(crowdin_file_path)
@@ -67,39 +69,9 @@ describe I18n::Resources::Dashboard::Courses::SyncOut do
       expect_malformed_i18n_reporting.in_sequence(execution_sequence)
       expect_localization_distribution.in_sequence(execution_sequence)
       expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
+      expect_crowdin_resource_dir_removing.in_sequence(execution_sequence)
 
       perform_sync_out
-    end
-
-    context 'when the language is the source language' do
-      before do
-        I18nScriptUtils.expects(:source_lang?).with(language).returns(true)
-      end
-
-      it 'does not restore localization' do
-        expect_localization_restoration.never
-        perform_sync_out
-      end
-
-      it 'does not fix localization urls' do
-        expect_localization_urls_fixing.never
-        perform_sync_out
-      end
-
-      it 'does not report malformed i18n strings' do
-        expect_localization_restoration.never
-        perform_sync_out
-      end
-
-      it 'does not distribute localization' do
-        expect_localization_distribution.never
-        perform_sync_out
-      end
-
-      it 'moves file from the Crowdin locale dir to the I18n locale dir' do
-        expect_crowdin_file_to_i18n_locale_dir_moving.once
-        perform_sync_out
-      end
     end
 
     context 'when the Crowdin file does not exist' do
@@ -131,6 +103,11 @@ describe I18n::Resources::Dashboard::Courses::SyncOut do
         expect_crowdin_file_to_i18n_locale_dir_moving.never
         perform_sync_out
       end
+
+      it 'does not try to remove the Crowdin resource dir' do
+        expect_crowdin_resource_dir_removing.never
+        perform_sync_out
+      end
     end
   end
 
@@ -158,17 +135,6 @@ describe I18n::Resources::Dashboard::Courses::SyncOut do
       expect_localization_restoration.once
       restore_localization_of_language
     end
-
-    context 'when the backup file does not exist' do
-      before do
-        FileUtils.rm(i18n_backup_file_path)
-      end
-
-      it 'does not restores localization' do
-        expect_localization_restoration.never
-        restore_localization_of_language
-      end
-    end
   end
 
   describe '#fix_localization_urls' do
@@ -194,7 +160,7 @@ describe I18n::Resources::Dashboard::Courses::SyncOut do
     end
 
     it 'fixes course urls' do
-      expected_crowdin_file_content = <<-YAML.gsub(/^ {8}/, '')
+      expected_crowdin_file_content = <<~YAML
         ---
         en:
           data:

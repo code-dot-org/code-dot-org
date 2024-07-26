@@ -8,6 +8,13 @@ require:
   - rubocop-rails
   - rubocop-rails-accessibility
   - './tools/customLinters/rubocop_only_allowed_characters.rb'
+  - './tools/customLinters/rubocop_prefer_mocha_stubs_to_minitest_stub.rb'
+  - './tools/customLinters/rubocop_pegasus_db_usage.rb'
+  - './tools/customLinters/rubocop_dashboard_db_usage.rb'
+  - './tools/customLinters/rubocop_pegasus_requires.rb'
+  - './tools/customLinters/rubocop_dashboard_requires.rb'
+  - './tools/customLinters/rubocop_grouped_inline_private_methods.rb'
+  - './tools/customLinters/rubocop_dashboard_webmock_require_order.rb'
 
 AllCops:
   SuggestExtensions: false
@@ -83,6 +90,9 @@ Style/EmptyElse:
 
 Style/EmptyMethod:
   EnforcedStyle: expanded
+
+Style/FormatStringToken:
+  EnforcedStyle: template
 
 Style/NumericLiterals:
   MinDigits: 7

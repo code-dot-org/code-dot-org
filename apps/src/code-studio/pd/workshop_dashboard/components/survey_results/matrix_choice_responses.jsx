@@ -2,9 +2,10 @@
 // It will split the matrix into individual questions and display them with
 // the title "matrix title -> question title"
 
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import _ from 'lodash';
+
 import ChoiceResponses from './choice_responses.jsx';
 
 export default class MatrixChoiceResponses extends React.Component {

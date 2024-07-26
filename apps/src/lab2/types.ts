@@ -6,6 +6,13 @@
 // If the ChannelsApi on the server doesn't care about these, they should
 // live elsewhere.
 // The library data should definitely live elsewhere.
+
+import {BlockDefinition} from '@cdo/apps/blockly/types';
+import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
+
+/// ------ PROJECTS ------ ///
+
+/** Identifies a project. Corresponds to the "value" JSON column for the entry in the projects table. */
 export interface Channel {
   id: string;
   name: string;
@@ -14,35 +21,47 @@ export interface Channel {
   publishedAt: string | null;
   createdAt: string;
   updatedAt: string;
+  hidden?: boolean;
+  thumbnailUrl?: string;
+  frozen?: boolean;
+  // Optional lab-specific configuration for this project.  If provided, this will be saved
+  // to the Project model in the database along with the other entries in this interface,
+  // inside the value field JSON.
+  labConfig?: {[key: string]: {[key: string]: string}};
 }
 
 export type DefaultChannel = Pick<Channel, 'name'>;
 
+/** A project and its corresponding sources if present, fetched together when loading a level. */
+export interface ProjectAndSources {
+  // When projects are loaded for the first time, sources may not be present
+  sources?: ProjectSources;
+  channel: Channel;
+}
+
+/// ------ SOURCES ------ ///
+
 // Represents the structure of the full project sources object (i.e. the main.json file)
 export interface ProjectSources {
-  // Stringified source code. Some labs (ex. Javalab) store multiple files
-  // as nested JSON which we'll need to support eventually.
-  source: string;
+  // Source code can either be a string or a nested JSON object (for multi-file).
+  source: string | MultiFileSource;
   // Optional lab-specific configuration for this project
-  labConfig?: {[key: string]: object};
+  labConfig?: {[key: string]: {[key: string]: string}};
   // Add other properties (animations, html, etc) as needed.
 }
 
 // We will eventually make this a union type to include other source types.
-export type Source = BlocklySource;
+export type Source = BlocklySource | MultiFileSource;
 
 export interface SourceUpdateOptions {
   currentVersion: string;
   replace: boolean;
   firstSaveTimestamp: string;
   tabId: string | null;
+  projectType?: ProjectType;
 }
 
-export interface Project {
-  // When projects are loaded for the first time, sources may not be present
-  sources?: ProjectSources;
-  channel: Channel;
-}
+// -- BLOCKLY -- //
 
 export interface BlocklySource {
   blocks: {
@@ -67,43 +86,88 @@ export interface BlocklyVariable {
   id: string;
 }
 
-// TODO: these are not all the properties of the level.
-// Fill this in as we need them.
-export interface Level {
-  projectType: ProjectType;
-  isK1: boolean;
-  standaloneAppName: StandaloneAppName;
-  useContractEditor: boolean;
-  // Minecraft specific properties
-  isAgentLevel: boolean;
-  isEventLevel: boolean;
-  isConnectionLevel: boolean;
-  isAquaticLevel: boolean;
+// -- MULTI-FILE -- //
+
+export type FileId = string;
+export type FolderId = string;
+
+// This structure (as well as ProjectFolder and ProjectFile) is still in flux
+// and may change going forward. It should only be used for labs that are not released
+// yet.
+// Note that if it changes files_api.has_valid_encoding? may need to be updated to correctly validate
+// the new structure.
+export interface MultiFileSource {
+  folders: Record<FolderId, ProjectFolder>;
+  files: Record<FileId, ProjectFile>;
+  openFiles?: FileId[];
 }
+
+export interface ProjectFile {
+  id: FileId;
+  name: string;
+  language: string;
+  contents: string;
+  open?: boolean;
+  active?: boolean;
+  folderId: string;
+  type?: ProjectFileType;
+}
+
+export enum ProjectFileType {
+  STARTER = 'starter',
+  SUPPORT = 'support',
+  VALIDATION = 'validation',
+}
+
+export interface ProjectFolder {
+  id: FolderId;
+  name: string;
+  parentId: string;
+  open?: boolean;
+}
+
+/// ------ LEVELS ------ ///
 
 /**
  * Labs may extend this type to add lab-specific properties.
  */
 export interface LevelProperties {
   // Not a complete list; add properties as needed.
+  id: number;
   isProjectLevel?: boolean;
   hideShareAndRemix?: boolean;
-  // TODO: Rework this field into an "enableProjects" or more complex list of
-  // "enabledFeatures" that is calculated on the back end. For now, since
-  // the only labs we support have projects enabled, it's easier to make this a
-  // disabled flag for specific exceptions.
-  disableProjects?: boolean;
+  usesProjects?: boolean;
   levelData?: LevelData;
   appName: AppName;
   longInstructions?: string;
   freePlay?: boolean;
+  edit_blocks?: string;
+  isK1?: boolean;
+  skin?: string;
+  toolboxBlocks?: string;
+  startSources?: MultiFileSource;
+  templateSources?: MultiFileSource;
+  sharedBlocks?: BlockDefinition[];
+  validations?: Validation[];
+  // An optional URL that allows the user to skip the progression.
+  skipUrl?: string;
+  // Project Template level name for the level if it exists.
+  projectTemplateLevelName?: string;
+  // Help and Tips values
+  mapReference?: string;
+  referenceLinks?: string[];
+  // Exemplars
+  exampleSolutions?: string[];
+  exemplarSources?: MultiFileSource;
+  // For Teachers Only value
+  teacherMarkdown?: string;
+  predictSettings?: LevelPredictSettings;
+  submittable?: boolean;
 }
 
 // Level configuration data used by project-backed labs that don't require
 // reloads between levels. Labs may define more specific fields.
 export interface ProjectLevelData {
-  text?: string;
-  validations?: Validation[];
   startSources: Source;
 }
 
@@ -114,39 +178,7 @@ export interface VideoLevelData {
   download: string;
 }
 
-// TODO: Add AichatLevelData.
-
 export type LevelData = ProjectLevelData | VideoLevelData;
-
-// A validation condition.
-export interface Condition {
-  name: string;
-  value?: string | number;
-}
-
-export interface ConditionType {
-  name: string;
-  hasValue: boolean;
-  valueType?: 'string' | 'number';
-}
-
-// Validation in the level.
-export interface Validation {
-  conditions: Condition[];
-  message: string;
-  next: boolean;
-  key: string;
-}
-
-// TODO: these are not all the properties of app options.
-// Fill this in as we need them.
-export interface AppOptions {
-  app: AppName;
-  level: Level;
-  skinId: string;
-  droplet: boolean;
-  channel: string;
-}
 
 export type ProjectType =
   | AppName
@@ -187,8 +219,11 @@ export type AppName =
   | 'studio'
   | 'bounce'
   | 'poetry'
+  | 'pythonlab'
   | 'spritelab'
-  | 'standalone_video';
+  | 'standalone_video'
+  | 'panels'
+  | 'weblab2';
 
 export type StandaloneAppName =
   | 'spritelab'
@@ -199,7 +234,53 @@ export type StandaloneAppName =
   | 'time_capsule'
   | 'dance';
 
+/// ------ VALIDATIONS ------ ///
+
+// A validation condition.
+export interface Condition {
+  name: string;
+  value?: string | number;
+}
+
+export interface ConditionType {
+  name: string;
+  valueType?: 'string' | 'number';
+}
+
+// Validation in the level.
+export interface Validation {
+  conditions: Condition[];
+  message: string;
+  next: boolean;
+  key: string;
+}
+
+/// ------ MISC ------ ///
+
 export enum ProjectManagerStorageType {
   LOCAL = 'LOCAL',
   REMOTE = 'REMOTE',
+}
+
+export interface ExtraLinksLevelData {
+  links: {[key: string]: {text: string; url: string; access_key?: string}[]};
+  can_clone: boolean;
+  can_delete: boolean;
+  level_name: string;
+  script_level_path_links: {
+    script: string;
+    path: string;
+  }[];
+  is_standalone_project: boolean;
+}
+export interface ExtraLinksProjectData {
+  owner_info?: {storage_id: number; name: string};
+  project_info?: {
+    id: number;
+    sources_link: string;
+    is_featured_project: boolean;
+    featured_status: string;
+    remix_ancestry: string[];
+  };
+  meesage?: string;
 }

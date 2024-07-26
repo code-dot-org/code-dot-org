@@ -1,11 +1,12 @@
 import React from 'react';
 import {Provider} from 'react-redux';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {reduxStore} from '@cdo/storybook/decorators';
+
 import ParticipantFeedbackNotification from './ParticipantFeedbackNotification';
-import sinon from 'sinon';
 
 export default {
-  title: 'ParticipantFeedbackNotification',
   component: ParticipantFeedbackNotification,
 };
 

@@ -674,6 +674,39 @@ class CourseOfferingTest < ActiveSupport::TestCase
     Unit.clear_cache
   end
 
+  test 'missing_required_device_compatibility? returns false for pl course offerings' do
+    pl_co = create :course_offering
+    pl_unit = create :script, participant_audience: 'teacher', instructor_audience: 'facilitator'
+    create :course_version, content_root: pl_unit, course_offering: pl_co
+    co = create :course_offering, self_paced_pl_course_offering: pl_co
+
+    refute(co.missing_required_device_compatibility?)
+  end
+
+  test 'missing_required_device_compatibility? returns true for student course offering with nil device_compatibility' do
+    co = create :course_offering, device_compatibility: nil
+    unit = create :script, participant_audience: 'student', instructor_audience: 'teacher'
+    create :course_version, content_root: unit, course_offering: co
+
+    assert(co.missing_required_device_compatibility?)
+  end
+
+  test 'missing_required_device_compatibility? returns true for student course offering missing a device_compatibility' do
+    co = create :course_offering, device_compatibility: '{"computer":"","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}'
+    unit = create :script, participant_audience: 'student', instructor_audience: 'teacher'
+    create :course_version, content_root: unit, course_offering: co
+
+    assert(co.missing_required_device_compatibility?)
+  end
+
+  test 'missing_required_device_compatibility? returns false for student course offering not missing any device_compatibility' do
+    co = create :course_offering, device_compatibility: '{"computer":"ideal","chromebook":"not_recommended","tablet":"incompatible","mobile":"incompatible","no_device":"incompatible"}'
+    unit = create :script, participant_audience: 'student', instructor_audience: 'teacher'
+    create :course_version, content_root: unit, course_offering: co
+
+    refute(co.missing_required_device_compatibility?)
+  end
+
   test 'duration returns nil if latest_published_version does not exist' do
     unit = create(:script, family_name: 'test-duration', version_year: '1997', is_course: true, published_state: 'in_development')
     co = CourseOffering.add_course_offering(unit)
@@ -879,6 +912,44 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert course5.high_school_level?
     assert course6.high_school_level?
     assert course7.high_school_level?
+  end
+
+  test 'finds corresponding offerings for pl course' do
+    pl_course_offering = create :course_offering
+    pl_unit = create :script, participant_audience: 'teacher', instructor_audience: 'facilitator'
+    create :course_version, content_root: pl_unit, course_offering: pl_course_offering
+
+    course_offering = create :course_offering, self_paced_pl_course_offering: pl_course_offering
+
+    assert_equal [course_offering], pl_course_offering.find_corresponding_offerings_for_pl_course
+  end
+
+  test 'does not find corresponding offerings for non-pl course' do
+    course_offering = create :course_offering
+
+    assert_nil course_offering.find_corresponding_offerings_for_pl_course
+  end
+
+  test 'pl_for_elementary_school? returns true if non-pl offering is targeted at elementary' do
+    pl_course_offering = create :course_offering
+    pl_unit = create :script, participant_audience: 'teacher', instructor_audience: 'facilitator'
+    create :course_version, content_root: pl_unit, course_offering: pl_course_offering
+
+    non_pl_course_offering = create :course_offering, grade_levels: 'K,1,2,3,4,5', self_paced_pl_course_offering: pl_course_offering
+
+    assert non_pl_course_offering.elementary_school_level?
+    assert pl_course_offering.pl_for_elementary_school?
+  end
+
+  test 'pl_for_elementary_school? returns false if non-pl offering is not targeted at elementary' do
+    pl_course_offering = create :course_offering
+    pl_unit = create :script, participant_audience: 'teacher', instructor_audience: 'facilitator'
+    create :course_version, content_root: pl_unit, course_offering: pl_course_offering
+
+    non_pl_course_offering = create :course_offering, grade_levels: '9,10,11,12', self_paced_pl_course_offering: pl_course_offering
+
+    refute non_pl_course_offering.elementary_school_level?
+    refute pl_course_offering.pl_for_elementary_school?
   end
 
   def course_offering_with_versions(num_versions, content_root_trait = :with_unit_group)

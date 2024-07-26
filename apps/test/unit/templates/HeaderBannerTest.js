@@ -1,14 +1,14 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import {mount} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
-import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 import {combineReducers, createStore} from 'redux';
+
 import responsive, {
   setResponsiveSize,
   ResponsiveSize,
 } from '@cdo/apps/code-studio/responsiveRedux';
 import styleConstants from '@cdo/apps/styleConstants';
+import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 
 const store = createStore(combineReducers({responsive}));
 store.dispatch(setResponsiveSize(ResponsiveSize.lg));

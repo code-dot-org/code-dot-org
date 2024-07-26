@@ -963,7 +963,7 @@ nl-NL:
   dashboard_sections_switch_section: 'switch groep:'
   dashboard_sections_table_code: Groepscode
   dashboard_sections_table_course: Cursus
-  dashboard_sections_table_grade: Cijfer
+  dashboard_sections_table_grade: Klas
   dashboard_sections_table_pairing_allowed: Programmeren in Tweetallen
   dashboard_sections_table_secret: Login-Type
   dashboard_sections_table_section: Groep
@@ -1162,7 +1162,9 @@ nl-NL:
   header_about_us: Over Ons
   header_course_catalog: Cursuscatalogus
   header_courses: Cursussen
+  header_districts: Districten
   header_documentation: Documentatie
+  header_donate: Doneren
   header_educate_beyond: Achter Code.org
   header_educate_community: Online gemeenschap
   header_educate_elementary: Basisschool
@@ -1178,6 +1180,7 @@ nl-NL:
   header_home: Home
   header_learn: Leren
   header_legal: Privacy & juridisch
+  header_legal_cookie_notice: Cookiebeleid
   header_legal_privacy: Privacybeleid
   header_legal_tos: Gebruiksvoorwaarden
   header_my_dashboard: Mijn Dashboard
@@ -1185,6 +1188,7 @@ nl-NL:
   header_project_gallery: Projecten overzicht
   header_report_abuse: Misbruik melden
   header_report_bug: Rapporteer bugs
+  header_schools: Scholen
   header_screen_reader_hamburger: Menu
   header_screen_reader_help: Help-menu
   header_sections: Secties
@@ -2508,6 +2512,8 @@ nl-NL:
   user_header_logout: Uitloggen
   user_header_minecraft: Minecraft
   user_header_my_projects: Mijn projecten
+  user_header_new_project: Nieuw project
+  user_header_new_project_low_cap: Nieuw project
   user_header_playlab: Speel Lab
   user_header_settings: Mijn account
   user_header_signin: Aanmelden
@@ -2617,27 +2623,14 @@ nl-NL:
     beweging om een uur informatica uit te proberen, met een bereik van tientallen
     miljoenen leerlingen in meer dan 180 landen. Doe mee tijdens de Computer Science
     Eductaion Week, 7-13 december.
-  volunteer_engineer_submission_intro_guide: Lees hier meer over ons <a href="%{volunteer_guide}">vrijwilligersprogramma</a>.
   volunteer_engineer_submission_intro_guide_markdown: Lees meer over ons [vrijwilligersprogramma
     hier] (%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: Ben je op zoek naar vrijwilligers? Vind
-    een vrijwilliger op onze <a href="%{volunteer_local}">kaart</a>.
   volunteer_engineer_submission_intro_links_markdown: Ben je een leraar die vrijwilligers
     zoekt? Vind een lokale vrijwilliger op onze [vrijwilligerskaart] (%{volunteer_local}).
-  volunteer_engineer_submission_intro_recruit: 'Deze leerkrachten zijn op zoek naa
-    iemand die <span style="font-family: ''Gotham 7r'', sans-serif;">gepassioneerd
-    is over informaticaonderwijs</span> die kan helpen in de klas, of iemand die hun
-    leerlingen kan <span style="font-family: ''Gotham 7r'', sans-serif;">inspireren</span>
-    door ze te vertellen over wat je allemaal kan doen met informatie (dat zou via
-    videochat kunnen). Als je geen vrijwilliger wil worden, <a href="%{url}">lees
-    hier</a> over het organiseren van je eigen Uur Code.'
   volunteer_engineer_submission_intro_recruit_markdown: Leraren zouden graag iemand
     hebben die **gepassioneerd is door informaticaonderwijs** die kan helpen in de
     klas, of voor iemand die **inspireer** hun leerlingen kan door te praten over
     de brede mogelijkheden met informatica (dat kan via een videochat).
-  volunteer_engineer_submission_intro_signup: Voer de volgende gegevens in als je
-    een informaticastudent of software ontwikkelaar bent. Velden met een <span class="form-required-field">*</span>
-    zijn verplicht.
   volunteer_engineer_submission_intro_signup_markdown: Voer de volgende informatie
     in als u een student informatica of softwareprofessional bent. Je moet minstens
     18 jaar oud zijn om je als vrijwilliger aan te melden. Houd er rekening mee dat

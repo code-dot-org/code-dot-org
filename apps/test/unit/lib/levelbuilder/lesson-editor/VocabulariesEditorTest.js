@@ -1,15 +1,14 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import sinon from 'sinon';
-import {expect} from '../../../../util/reconfiguredChai';
+
 import {UnconnectedVocabulariesEditor as VocabulariesEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/VocabulariesEditor';
 
 describe('VocabulariesEditor', () => {
   let defaultProps, addVocabulary, updateVocabulary, removeVocabulary;
   beforeEach(() => {
-    addVocabulary = sinon.spy();
-    updateVocabulary = sinon.spy();
-    removeVocabulary = sinon.spy();
+    addVocabulary = jest.fn();
+    updateVocabulary = jest.fn();
+    removeVocabulary = jest.fn();
     defaultProps = {
       vocabularies: [
         {
@@ -35,36 +34,36 @@ describe('VocabulariesEditor', () => {
 
   it('renders default props', () => {
     const wrapper = mount(<VocabulariesEditor {...defaultProps} />);
-    expect(wrapper.find('tr').length).to.equal(3);
+    expect(wrapper.find('tr').length).toBe(3);
   });
 
   it('can remove a vocabulary', () => {
     const wrapper = mount(<VocabulariesEditor {...defaultProps} />);
     const numVocabularies = wrapper.find('tr').length;
-    expect(numVocabularies).at.least(2);
+    expect(numVocabularies).toBeGreaterThanOrEqual(2);
     // Find one of the "remove" buttons and click it
     const removeVocabularyButton = wrapper
       .find('.unit-test-remove-vocabulary')
       .first();
     removeVocabularyButton.simulate('mouseDown');
     const removeDialog = wrapper.find('Dialog');
-    const deleteButton = removeDialog.find('button').at(1);
+    const deleteButton = removeDialog.find('button').at(2);
     deleteButton.simulate('click');
-    expect(removeVocabulary).to.have.been.calledOnce;
+    expect(removeVocabulary).toHaveBeenCalledTimes(1);
   });
 
   it('can cancel removing a vocabulary', () => {
     const wrapper = mount(<VocabulariesEditor {...defaultProps} />);
     const numVocabularies = wrapper.find('tr').length;
-    expect(numVocabularies).at.least(2);
+    expect(numVocabularies).toBeGreaterThanOrEqual(2);
     // Find one of the "remove" buttons and click it
     const removeVocabularyButton = wrapper
       .find('.unit-test-remove-vocabulary')
       .first();
     removeVocabularyButton.simulate('mouseDown');
     const removeDialog = wrapper.find('Dialog');
-    const cancelButton = removeDialog.find('button').at(0);
+    const cancelButton = removeDialog.find('button').at(1);
     cancelButton.simulate('click');
-    expect(removeVocabulary).not.to.have.been.called;
+    expect(removeVocabulary).not.toHaveBeenCalled();
   });
 });

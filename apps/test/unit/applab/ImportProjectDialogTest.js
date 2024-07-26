@@ -1,7 +1,6 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
-import {shallow} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
+
 import {ImportProjectDialog} from '@cdo/apps/applab/ImportProjectDialog';
 import {
   sources as sourcesApi,
@@ -16,13 +15,13 @@ describe('Applab ImportProjectDialog component', function () {
   };
 
   beforeEach(() => {
-    sinon.stub(sourcesApi, 'ajax');
-    sinon.stub(channelsApi, 'ajax');
+    jest.spyOn(sourcesApi, 'ajax').mockClear().mockImplementation();
+    jest.spyOn(channelsApi, 'ajax').mockClear().mockImplementation();
   });
 
   afterEach(() => {
-    sourcesApi.ajax.restore();
-    channelsApi.ajax.restore();
+    sourcesApi.ajax.mockRestore();
+    channelsApi.ajax.mockRestore();
   });
 
   function render(theForm) {
@@ -33,13 +32,13 @@ describe('Applab ImportProjectDialog component', function () {
 
   it('renders a div with a text input and next button', () => {
     render(<ImportProjectDialog {...defaultProps} />);
-    expect(urlInput).to.have.length(1);
-    expect(nextButton).to.have.length(1);
+    expect(urlInput).toHaveLength(1);
+    expect(nextButton).toHaveLength(1);
   });
 
   it('renders a warning if there was an error', () => {
     render(<ImportProjectDialog {...defaultProps} error={true} />);
-    expect(form.find('p').last().text()).to.equal(
+    expect(form.find('p').last().text()).toBe(
       "We can't seem to find this project. " +
         "Please make sure you've entered a valid App Lab project URL."
     );
@@ -47,15 +46,15 @@ describe('Applab ImportProjectDialog component', function () {
 
   it('it disables the next button and shows a spinner while the url is fetched', () => {
     render(<ImportProjectDialog {...defaultProps} isFetching={true} />);
-    expect(nextButton.prop('disabled')).to.equal(true);
-    expect(nextButton.find('.fa-spin')).to.have.length(1);
+    expect(nextButton.prop('disabled')).toBe(true);
+    expect(nextButton.find('.fa-spin')).toHaveLength(1);
   });
 
   it('calls the onImport prop with the url when the next button is clicked', () => {
-    var onImport = sinon.spy();
+    var onImport = jest.fn();
     render(<ImportProjectDialog {...defaultProps} onImport={onImport} />);
     urlInput.simulate('change', {target: {value: 'some url'}});
     nextButton.simulate('click');
-    expect(onImport.calledWith('some url')).to.be.true;
+    expect(onImport).toHaveBeenCalledWith('some url');
   });
 });

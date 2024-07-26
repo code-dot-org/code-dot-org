@@ -4,17 +4,25 @@
  * A ChannelsStore manages the loading and saving of channels.
  */
 import {Channel, DefaultChannel} from '../types';
+
 import * as channelsApi from './channelsApi';
 import * as projectsApi from './projectsApi';
 
 export interface ChannelsStore {
   load: (key: string) => Promise<Channel>;
 
-  loadForLevel: (levelId: number, scriptId?: number) => Promise<Response>;
+  loadForLevel: (
+    levelId: number,
+    scriptId?: number,
+    scriptLevelId?: string,
+    userId?: number
+  ) => Promise<Response>;
 
   save: (channel: Channel) => Promise<Response>;
 
   redirectToRemix: (channel: Channel) => void;
+
+  redirectToView: (channel: Channel) => void;
 
   publish: (channel: Channel) => Promise<Response>;
 
@@ -47,6 +55,10 @@ export class LocalChannelsStore implements ChannelsStore {
     // Remix is not supported for local storage.
   }
 
+  redirectToView() {
+    // View is not supported for local storage.
+  }
+
   publish() {
     // Publishing is not supported for local storage.
     return Promise.resolve(new Response(''));
@@ -61,8 +73,18 @@ export class LocalChannelsStore implements ChannelsStore {
 export class RemoteChannelsStore implements ChannelsStore {
   defaultChannel: DefaultChannel = {name: 'New Project'};
 
-  loadForLevel(levelId: number, scriptId?: number) {
-    return projectsApi.getChannelForLevel(levelId, scriptId);
+  loadForLevel(
+    levelId: number,
+    scriptId?: number,
+    scriptLevelId?: string,
+    userId?: number
+  ) {
+    return projectsApi.getChannelForLevel(
+      levelId,
+      scriptId,
+      scriptLevelId,
+      userId
+    );
   }
 
   load(channelId: string) {
@@ -76,6 +98,10 @@ export class RemoteChannelsStore implements ChannelsStore {
 
   redirectToRemix(channel: Channel) {
     projectsApi.redirectToRemix(channel.id, channel.projectType);
+  }
+
+  redirectToView(channel: Channel) {
+    projectsApi.redirectToView(channel.id, channel.projectType);
   }
 
   publish(channel: Channel) {

@@ -355,7 +355,8 @@
       }
     },
     "long_instructions": "##Welcome to The Theater!",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:32:47.613+00:00\",\"changed\":[\"cloned from \\\"CSA 2022 Theater Sandbox\\\"\"],\"cloned_from\":\"CSA 2022 Theater Sandbox\"}]"

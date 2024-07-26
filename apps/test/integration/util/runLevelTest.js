@@ -1,14 +1,10 @@
 import $ from 'jquery';
 import _ from 'lodash';
-import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
-import {assert} from '../../util/reconfiguredChai';
-import {
-  getConfigRef,
-  getProjectDatabase,
-} from '@cdo/apps/storage/firebaseUtils';
-import Firebase from 'firebase';
-import MockFirebase from '../../util/MockFirebase';
+
 import {installCustomBlocks} from '@cdo/apps/block_utils';
+import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
+
+import {assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 var testCollectionUtils = require('./testCollectionUtils');
 
@@ -117,9 +113,7 @@ module.exports = function (testCollection, testData, dataItem, done) {
 
 const appLoaders = {
   applab: require('@cdo/apps/sites/studio/pages/init/loadApplab'),
-  calc: require('@cdo/apps/sites/studio/pages/init/loadCalc'),
   craft: require('@cdo/apps/sites/studio/pages/init/loadCraft'),
-  eval: require('@cdo/apps/sites/studio/pages/init/loadEval'),
   gamelab: require('../../util/gamelab/loadTestableGamelab'),
   maze: require('@cdo/apps/sites/studio/pages/init/loadMaze'),
   studio: require('@cdo/apps/sites/studio/pages/init/loadStudio'),
@@ -137,7 +131,6 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
   if (level.editCode) {
     assert(window.droplet, 'droplet is in global');
   }
-  setAppSpecificGlobals(app);
 
   const unexpectedExecutionErrorMsg =
     'Unexpected execution error. ' +
@@ -152,9 +145,6 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
     assetPathPrefix: testData.assetPathPrefix,
     containerId: 'app',
     embed: testData.embed,
-    firebaseName: 'test-firebase-name',
-    firebaseSharedAuthToken: 'test-firebase-shared-auth-token',
-    firebaseAuthToken: 'test-firebase-auth-token',
     isSignedIn: true,
     onFeedback: finished,
     onExecutionError: testData.onExecutionError
@@ -168,30 +158,6 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
       var timeout = 0;
       if (level.editCode && !studioApp().editor) {
         timeout = 500;
-      }
-
-      if (app === 'applab') {
-        // Karma must be configured to use MockFirebase in our webpack config.
-        assert(
-          Firebase === MockFirebase,
-          'Expected to be using apps/test/util/MockFirebase in level tests.'
-        );
-
-        getProjectDatabase().autoFlush();
-        getConfigRef().autoFlush();
-        getConfigRef().set({
-          limits: {
-            15: 5,
-            60: 10,
-          },
-          maxRecordSize: 100,
-          maxPropertySize: 100,
-          maxTableRows: 20,
-          maxTableCount: 10,
-        });
-        timeout = 500;
-
-        getProjectDatabase().set(null);
       }
 
       setTimeout(function () {
@@ -217,17 +183,5 @@ function runLevel(app, skinId, level, onAttempt, finished, testData) {
       blockDefinitions: level.sharedBlocks,
       customInputTypes: options.blocksModule.customInputTypes,
     });
-  }
-}
-
-function setAppSpecificGlobals(app) {
-  // app specific hacks
-  switch (app.toLowerCase()) {
-    case 'calc':
-      global.Calc = window.Calc;
-      break;
-    case 'eval':
-      global.Eval = window.Eval;
-      break;
   }
 }

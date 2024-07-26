@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {ages} from '../AgeDropdown';
 import {connect} from 'react-redux';
+
+import {ages} from '../AgeDropdown';
+
 import {editStudent, setSharingDefault} from './manageStudentsRedux';
 
 class ManageStudentAgeCell extends Component {

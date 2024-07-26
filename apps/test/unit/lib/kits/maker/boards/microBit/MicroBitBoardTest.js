@@ -1,14 +1,17 @@
-import {expect} from '../../../../../../util/reconfiguredChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';
+import ExternalButton from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalButton';
+import ExternalLed from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalLed';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
+import {MB_COMPONENT_COUNT} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
-import sinon from 'sinon';
+
+import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardInterfaceTestUtil';
+
 import {itMakesMicroBitComponentsAvailable} from './MicroBitComponentTestUtil';
 import {boardSetupAndStub} from './MicroBitTestHelperFunctions';
-import {MB_COMPONENT_COUNT} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
-import ExternalLed from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalLed';
-import ExternalButton from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalButton';
-import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';
 
 describe('MicroBitBoard', () => {
   let board;

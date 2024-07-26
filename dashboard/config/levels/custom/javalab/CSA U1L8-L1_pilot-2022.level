@@ -359,7 +359,8 @@
       ]
     ],
     "long_instructions": "##Style and Documentation\r\n\r\n1. What do you notice about the way this code is written? Is it easy to read? Why or why not?\r\n\r\n2. Can you easily tell what the program is supposed to do without running it?\r\n\r\n3. What would you tell this programmer to help improve their code?",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:21:32.795+00:00\",\"changed\":[\"cloned from \\\"CSA U1L8-L1_2022\\\"\"],\"cloned_from\":\"CSA U1L8-L1_2022\"}]"

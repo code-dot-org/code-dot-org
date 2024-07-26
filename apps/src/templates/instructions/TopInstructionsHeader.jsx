@@ -1,15 +1,18 @@
 import $ from 'jquery';
-import React from 'react';
 import PropTypes from 'prop-types';
-import PaneHeader, {PaneButton} from '@cdo/apps/templates/PaneHeader';
-import InstructionsTab from '@cdo/apps/templates/instructions/InstructionsTab';
-import BackgroundMusicMuteButton from '@cdo/apps/templates/instructions/BackgroundMusicMuteButton';
+import React from 'react';
+
 import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
+import BackgroundMusicMuteButton from '@cdo/apps/templates/instructions/BackgroundMusicMuteButton';
 import InlineAudio from '@cdo/apps/templates/instructions/InlineAudio';
-import {TabType} from './TopInstructions';
+import InstructionsTab from '@cdo/apps/templates/instructions/InstructionsTab';
+import PaneHeader, {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import i18n from '@cdo/locale';
-import color from '../../util/color';
+
 import styleConstants from '../../styleConstants';
+import color from '../../util/color';
+
+import {TabType} from './TopInstructions';
 
 function TopInstructionsHeader(props) {
   const {
@@ -57,6 +60,7 @@ function TopInstructionsHeader(props) {
     ...(isRtl
       ? styles.collapserIcon.showHideButtonRtl
       : styles.collapserIcon.showHideButtonLtr),
+    ...(!isOldPurpleColor && styles.collapserIcon.rebrandPhase1StylesColor),
     ...(teacherOnly && styles.collapserIcon.teacherOnlyColor),
   };
 
@@ -268,6 +272,9 @@ const styles = {
     },
     showHideButtonRtl: {
       right: 8,
+    },
+    rebrandPhase1StylesColor: {
+      color: color.white,
     },
     teacherOnlyColor: {
       color: color.lightest_cyan,

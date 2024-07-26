@@ -27,7 +27,7 @@ theme: responsive
 
 <a id="hoc"></a>
 <h2>透過有趣的入門級教程，試聽《程式設計一小時》</h2>
-<p>試聽<a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">一小時教程</a>，讓《我的世界》、《冰雪奇緣》和《星球大戰》等熱門遊戲和電影伴你學習。 許多教程採用類似於遊戲的設計方式，旨在以有趣、引人入勝的方式教授基本的電腦科學概念。</p>
+<p>試試 <a class="linktag" id="hoc-overview" href="/hourofcode" target="_blank">一個小時</a> 的教程，其中包含《Minecraft》、《冰雪奇緣》和《星際大戰》等熱門遊戲和電影。 許多教程採用類似於遊戲的設計方式，旨在以有趣、引人入勝的方式教授基本的電腦科學概念。</p>
 
 <br>
 
@@ -155,7 +155,7 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="學前速學課程"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">適合學前兒童的速學課程</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="學前速學課程"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express" target="_blank">預讀者快速課程</a>
 
 </div>
 <div style="clear: both; margin-bottom: 2rem"></div>
@@ -222,7 +222,7 @@ theme: responsive
 
 <br>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">應用實驗室</h3></a>
     <p style="color:#ffffff">應用實驗室是一個程式設計環境，你可以在其中編寫簡單的應用程式。 設計一款應用，使用代碼塊或JavaScript編寫代碼並使其運行，然後在幾秒鐘內分享你的設計。</p>
@@ -231,7 +231,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">遊戲實驗室</h3></a>
     <p style="color:#ffffff">遊戲實驗室是一個程式設計環境，你可以在其中使用相互交互的物件和角色製作簡單的動畫和遊戲。</p>
@@ -241,7 +241,7 @@ theme: responsive
   <div style="clear: both"></div>
 </div>
 
-<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
+<div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:var(--brand_primary_default)">
   <div style="width: 87%; float: left">
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">網頁實驗室</h3></a>
     <p style="color:#ffffff">網路實驗室是一個程式設計環境，你可以在其中使用HTML和CSS製作簡單的網頁。 設計自己的網頁並在幾秒鐘內分享網站。</p>

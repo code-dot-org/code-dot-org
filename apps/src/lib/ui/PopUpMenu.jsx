@@ -1,10 +1,12 @@
 /** @file Pop-over menu component.  Combine with react-portal to use. */
-import React, {Component, Children} from 'react';
 import PropTypes from 'prop-types';
-
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React, {Component, Children} from 'react';
 import {PortalWithState} from 'react-portal';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import msg from '@cdo/locale';
+
 import color from '../../util/color';
 
 const TAIL_WIDTH = 14;
@@ -158,6 +160,7 @@ class MenuBubbleUnwrapped extends Component {
     );
   }
 }
+
 export const MenuBubble = Radium(MenuBubbleUnwrapped);
 
 export class MenuBreak extends Component {
@@ -184,6 +187,7 @@ class Item extends Component {
     openInNewTab: PropTypes.bool,
     className: PropTypes.string,
     style: PropTypes.object,
+    hrefOnClick: PropTypes.func,
   };
 
   render() {
@@ -196,6 +200,7 @@ class Item extends Component {
       openInNewTab,
       className,
       style,
+      hrefOnClick,
     } = this.props;
     const defaultClassName = 'pop-up-menu-item';
     const classList = className
@@ -231,7 +236,7 @@ class Item extends Component {
     const textStyle = {
       color: this.props.color ? this.props.color : color.dark_charcoal,
       textDecoration: 'none', // Remove underline from anchor tags
-      fontFamily: "'Gotham 4r', sans-serif",
+      ...fontConstants['main-font-regular'],
     };
 
     const target = openInNewTab ? '_blank' : '';
@@ -244,6 +249,7 @@ class Item extends Component {
             href={href}
             style={{...textStyle, ...areaStyle}}
             target={target}
+            onClick={hrefOnClick}
           >
             {children}
           </a>

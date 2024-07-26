@@ -1,0 +1,23 @@
+.config-modal {
+  position: absolute;
+  background-color: gray;
+  padding: 25px;
+  left: 15vw;
+  right: 15vw;
+  top: 15vh;
+  z-index: 100;
+}
+
+.config-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.config-modal textarea {
+  width: 100%;
+}
+
+.config-modal input {
+  width: 100%;
+}

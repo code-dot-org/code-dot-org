@@ -1,6 +1,5 @@
 <Javalab>
   <config><![CDATA[{
-  "published": true,
   "game_id": 68,
   "created_at": "2023-04-03T15:58:54.000Z",
   "level_num": "custom",
@@ -20,11 +19,10 @@
       }
     },
     "project_template_level_name": "CSA U6L9-NLP PBT_2023",
-    "encrypted_examples": [
-
-    ],
-    "teacher_markdown": "Students notice that the overall sentiment is now `-0.02063829787234043` instead of `-0.004490740740740741`. While the overall sentiment is still negative, excluding words with a sentiment of `0.0` does change the overall result.\r\n\r\nThe `count` variable is used to keep track of the number of words that are not `0.0`. Otherwise, if the size of the list is used, the average would be inaccurate since the list includes words with a sentiment of `0.0`."
+    "teacher_markdown": "Students notice that the overall sentiment is now `-0.02063829787234043` instead of `-0.004490740740740741`. While the overall sentiment is still negative, excluding words with a sentiment of `0.0` does change the overall result.\r\n\r\nThe `count` variable is used to keep track of the number of words that are not `0.0`. Otherwise, if the size of the list is used, the average would be inaccurate since the list includes words with a sentiment of `0.0`.",
+    "ai_tutor_available": true
   },
+  "published": true,
   "audit_log": "[{\"changed_at\":\"2023-04-03T15:58:54.279+00:00\",\"changed\":[\"cloned from \\\"CSA U6L8-L4_2023\\\"\"],\"cloned_from\":\"CSA U6L8-L4_2023\"},{\"changed_at\":\"2023-04-03 15:58:55 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-02 13:22:32 +0000\",\"changed\":[\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-06 15:40:32 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2023-05-06 15:45:50 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </Javalab>

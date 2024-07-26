@@ -1,8 +1,8 @@
-import {assert} from '../../util/reconfiguredChai';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import i18n from '@cdo/locale';
+
 import {UnconnectedUnassignSectionButton as UnassignSectionButton} from '@cdo/apps/templates/UnassignSectionButton';
+import i18n from '@cdo/locale';
 
 const DEFAULT_PROPS = {
   sectionId: 1,
@@ -24,20 +24,20 @@ describe('UnassignSectionButton', () => {
   it('turns grey when user hovers over, icon and text change', () => {
     const wrapper = setUp();
 
-    assert.equal(wrapper.find('Button').props().text, i18n.assigned());
-    assert.equal(wrapper.find('Button').props().icon, 'check');
+    expect(wrapper.find('Button').props().text).toEqual(i18n.assigned());
+    expect(wrapper.find('Button').props().icon).toEqual('check');
 
     wrapper.find('Button').simulate('mouseOver');
 
-    assert.equal(wrapper.find('Button').props().text, i18n.unassign());
-    assert.equal(wrapper.find('Button').props().icon, 'times');
+    expect(wrapper.find('Button').props().text).toEqual(i18n.unassign());
+    expect(wrapper.find('Button').props().icon).toEqual('times');
   });
 
   it('opens unassign dialog when clicked', () => {
     const wrapper = setUp();
 
-    assert.equal(wrapper.find('UnassignSectionDialog').props().isOpen, false);
+    expect(wrapper.find('UnassignSectionDialog').props().isOpen).toEqual(false);
     wrapper.find('Button').simulate('click');
-    assert.equal(wrapper.find('UnassignSectionDialog').props().isOpen, true);
+    expect(wrapper.find('UnassignSectionDialog').props().isOpen).toEqual(true);
   });
 });

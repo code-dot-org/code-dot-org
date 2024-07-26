@@ -1,14 +1,17 @@
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {assert} from 'chai';
-import {shallow} from 'enzyme';
-import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
-import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
-import {courses, topCourse, joinedSections} from './homepagesTestData';
-import Notification from '@cdo/apps/templates/Notification';
-import i18n from '@cdo/locale';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {expect} from '../../../util/reconfiguredChai';
+import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
+import Notification from '@cdo/apps/templates/Notification';
+import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
+import {courses, topCourse, joinedSections} from './homepagesTestData';
 
 describe('StudentHomepage', () => {
   const TEST_PROPS = {
@@ -19,6 +22,17 @@ describe('StudentHomepage', () => {
     studentId: 123,
     isEnglish: true,
     showVerifiedTeacherWarning: false,
+    specialAnnouncement: {
+      id: 'id',
+      image: '/image',
+      title: 'title',
+      body: 'body',
+      link: '/link',
+      description: 'description',
+      buttonUrl: '/url',
+      buttonText: 'press me',
+      heading: 'heading',
+    },
   };
 
   it('shows a Header Banner that says My Dashboard', () => {
@@ -64,18 +78,9 @@ describe('StudentHomepage', () => {
     analyticsSpy.restore();
   });
 
-  it('shows the special announcement for English', () => {
-    const wrapper = shallow(
-      <StudentHomepage {...TEST_PROPS} isEnglish={true} />
-    );
-    assert(wrapper.find('SpecialAnnouncement').exists());
-  });
-
-  it('does not show the special announcement for non-English', () => {
-    const wrapper = shallow(
-      <StudentHomepage {...TEST_PROPS} isEnglish={false} />
-    );
-    assert.isFalse(wrapper.find('SpecialAnnouncement').exists());
+  it('shows the special announcement for all languages', () => {
+    const wrapper = shallow(<StudentHomepage {...TEST_PROPS} />);
+    assert(wrapper.find('MarketingAnnouncementBanner').exists());
   });
 
   it('displays a notification for verified teacher permissions if showVerifiedTeacherWarning is true', () => {

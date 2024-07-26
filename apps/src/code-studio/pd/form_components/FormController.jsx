@@ -1,8 +1,9 @@
+import {Pagination} from '@react-bootstrap/pagination';
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import $ from 'jquery';
 import {Button, Alert, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import {Pagination} from '@react-bootstrap/pagination';
+
 import i18n from '@cdo/locale';
 
 /**
@@ -12,7 +13,7 @@ import i18n from '@cdo/locale';
  * Resulting form will then display those components paginated and in order,
  * with a submit button on the last page.
  *
- * @see WorkshopSurvey component for example usage.
+ * @see TeacherApplication component for example usage.
  */
 export default class FormController extends React.Component {
   constructor(props) {

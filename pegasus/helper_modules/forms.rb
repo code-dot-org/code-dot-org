@@ -8,14 +8,15 @@ module Forms
   using CacheMethod
   FORMS = ::PEGASUS_DB[:forms]
 
-  # Converts a simple x.y JSON-attribute path to a MySQL 5.7 JSON expression using the inline-path operator.
-  # Ref: https://dev.mysql.com/doc/refman/5.7/en/json-search-functions.html#operator_json-inline-path
+  # Converts a simple x.y JSON-attribute path to a MySQL JSON expression
+  # (available in MySQL 5.7.13 and later) using the inline-path operator.
+  # Ref: https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html#operator_json-inline-path
   def self.json(path)
     column, attribute = path.split('.')
     "#{column}->>'$.#{attribute}'".lit
   end
 
-  COUNTRY_CODE = :location_country_code_s
+  COUNTRY_CODE = json('data.hoc_event_country_s')
   STATE_CODE = json('processed_data.location_state_code_s')
 
   class << self
@@ -36,7 +37,7 @@ module Forms
         where(kind: kind).
         where(entire_school ? {json('data.entire_school_flag_b') => true} : {}).
         where(review_approved ? {review: 'approved'} : {}).
-        exclude(country_column => except_country).
+        exclude(country_column => except_country.upcase).
         group_and_count(country_column.as(:country_code)).
         tap {|x| puts x.sql, x.explain if explain}.
         all
@@ -54,7 +55,7 @@ module Forms
       FORMS.
         where(
           kind: kind,
-          country_column => country
+          country_column => country.upcase
         ).
         where(entire_school ? {json('data.entire_school_flag_b') => true} : {}).
         where(review_approved ? {review: 'approved'} : {}).
@@ -88,7 +89,7 @@ module Forms
         ).
         where(
           kind: kind,
-          country_column => country
+          country_column => country.upcase
         ).
         where(state ? {state_column => state.upcase} : {}).
         where(entire_school ? {json('data.entire_school_flag_b') => true} : {}).

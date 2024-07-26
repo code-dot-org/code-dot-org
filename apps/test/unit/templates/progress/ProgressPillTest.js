@@ -1,13 +1,14 @@
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {UnconnectedProgressPill as ProgressPill} from '@cdo/apps/templates/progress/ProgressPill';
-import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
 import ReactTooltip from 'react-tooltip';
+
+import * as utils from '@cdo/apps/code-studio/utils';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
-import * as utils from '@cdo/apps/code-studio/utils';
-import sinon from 'sinon';
+import {UnconnectedProgressPill as ProgressPill} from '@cdo/apps/templates/progress/ProgressPill';
+import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
+
+import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const unpluggedLevel = {
   id: '1',
@@ -86,12 +87,12 @@ describe('ProgressPill', () => {
   });
 
   it('includes user_id in href when user_id query param is present', () => {
-    sinon.stub(utils, 'queryParams').returns('123');
+    jest.spyOn(utils, 'queryParams').mockClear().mockReturnValue('123');
     const wrapper = shallow(
       <ProgressPill levels={[levelWithUrl]} text="Unplugged Activity" />
     );
     assert.equal(wrapper.find('a').props().href, '/foo/bar?user_id=123');
-    utils.queryParams.restore();
+    utils.queryParams.mockRestore();
   });
 
   it('does not have an href when disabled', () => {

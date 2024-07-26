@@ -5,9 +5,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+
 import i18n from '@cdo/locale';
-import {actions, selectors} from './redux';
+
 import trackEvent from '../../../util/trackEvent';
+
+import {actions, selectors} from './redux';
 
 export default connect(
   state => ({
@@ -97,7 +100,11 @@ export default connect(
               style={{display: canRunNext ? 'none' : 'inline-block'}}
               disabled={!isAttached}
             >
-              <img src="/blockly/media/1x1.gif" className="pause-btn icon21" />
+              <img
+                src="/blockly/media/1x1.gif"
+                className="pause-btn icon21"
+                alt=""
+              />
               {i18n.pause()}
             </button>
             {
@@ -113,6 +120,7 @@ export default connect(
               <img
                 src="/blockly/media/1x1.gif"
                 className="continue-btn icon21"
+                alt=""
               />
               {i18n.continue()}
             </button>
@@ -130,6 +138,7 @@ export default connect(
               <img
                 src="/blockly/media/1x1.gif"
                 className="step-over-btn icon21"
+                alt=""
               />
               {i18n.stepOver()}
             </button>
@@ -145,6 +154,7 @@ export default connect(
               <img
                 src="/blockly/media/1x1.gif"
                 className="step-out-btn icon21"
+                alt=""
               />
               {i18n.stepOut()}
             </button>
@@ -162,6 +172,7 @@ export default connect(
               <img
                 src="/blockly/media/1x1.gif"
                 className="step-in-btn icon21"
+                alt=""
               />
               {i18n.stepIn()}
             </button>

@@ -1,6 +1,7 @@
-import React from 'react';
-import AddParentEmailModal from './AddParentEmailModal';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
+import AddParentEmailModal from './AddParentEmailModal';
 
 const DEFAULT_PROPS = {
   handleSubmit: action('handleSubmit callback'),
@@ -8,7 +9,6 @@ const DEFAULT_PROPS = {
 };
 
 export default {
-  title: 'AddParentEmailModal',
   component: AddParentEmailModal,
 };
 

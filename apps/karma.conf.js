@@ -1,7 +1,7 @@
-var webpackKarmaConfig = require('./webpackKarma.config');
-var envConstants = require('./envConstants');
-
 var path = require('path');
+
+var envConstants = require('./envConstants');
+var webpackKarmaConfig = require('./webpackKarma.config');
 
 // We run all tests in the UTC timezone so datetimes don't vary by local timezone
 process.env.TZ = 'UTC';
@@ -94,23 +94,13 @@ module.exports = function (config) {
       KARMA_CLI_FLAGS,
     },
 
-    reporters: [
-      'mocha',
-      ...(envConstants.DRONE ? ['junit', 'coverage-istanbul'] : []),
-      ...(envConstants.COVERAGE ? ['coverage-istanbul'] : []),
-    ],
+    reporters: ['mocha'],
 
     junitReporter: {
       outputDir: envConstants.CIRCLECI
         ? `${envConstants.CIRCLE_TEST_REPORTS}/apps`
         : '',
       outputFile: `${KARMA_CLI_FLAGS.testType}.xml`,
-    },
-
-    coverageIstanbulReporter: {
-      reports: ['html', 'lcovonly'],
-      dir: `coverage/${KARMA_CLI_FLAGS.testType}`,
-      fixWebpackSourcePaths: true,
     },
 
     mochaReporter: {

@@ -1,67 +1,30 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
+import {
+  PageLabels,
+  SectionHeaders,
+  Year,
+} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import color from '@cdo/apps/util/color';
+
+import {FormContext} from '../../form_components_func/FormComponent';
+import {LabeledCheckBoxes} from '../../form_components_func/labeled/LabeledCheckBoxes';
+import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
+import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
+
 import {
   PROGRAM_CSD,
   PROGRAM_CSP,
   PROGRAM_CSA,
   getProgramInfo,
 } from './TeacherApplicationConstants';
-import {
-  PageLabels,
-  SectionHeaders,
-  TextFields,
-  Year,
-} from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
-import {FormContext} from '../../form_components_func/FormComponent';
-import {LabeledCheckBoxes} from '../../form_components_func/labeled/LabeledCheckBoxes';
-import {
-  LabeledRadioButtons,
-  LabeledRadioButtonsWithAdditionalTextFields,
-} from '../../form_components_func/labeled/LabeledRadioButtons';
-
-const WhichGradesSelector = props => {
-  return (
-    <>
-      <LabeledCheckBoxes name={props.courseName} />
-      {props.showScholarshipWarning && (
-        <p style={styles.error}>
-          Note: This program is designed to work best for teachers who are
-          teaching this course in the {Year} school year. Scholarship
-          eligibility is often dependent on whether or not you will be teaching
-          the course during the {Year} school year.
-        </p>
-      )}
-    </>
-  );
-};
-WhichGradesSelector.propTypes = {
-  courseName: PropTypes.string,
-  showScholarshipWarning: PropTypes.bool,
-};
 
 const ImplementationPlan = props => {
   const {data} = props;
   const programInfo = getProgramInfo(data.program);
   const hasNoProgramSelected = data.program === undefined;
-
-  const notSureTeachPlanOption = `Not sure yet if my school plans to offer ${programInfo.name} in the ${Year} school year`;
-  let showScholarshipEligibilityWarning = false;
-  if (
-    (data.program === PROGRAM_CSD &&
-      data.csdWhichGrades &&
-      data.csdWhichGrades.includes(notSureTeachPlanOption)) ||
-    (data.program === PROGRAM_CSP &&
-      data.cspWhichGrades &&
-      data.cspWhichGrades.includes(notSureTeachPlanOption)) ||
-    (data.program === PROGRAM_CSA &&
-      data.csaWhichGrades &&
-      data.csaWhichGrades.includes(notSureTeachPlanOption))
-  ) {
-    showScholarshipEligibilityWarning = true;
-  }
 
   const renderContents = () => {
     if (hasNoProgramSelected) {
@@ -73,30 +36,21 @@ const ImplementationPlan = props => {
           </p>
         </div>
       );
-    } else {
+    } else if (data.willTeach === 'Yes') {
       return (
         <>
           {data.program === PROGRAM_CSD && (
-            <WhichGradesSelector
-              courseName="csdWhichGrades"
-              showScholarshipWarning={showScholarshipEligibilityWarning}
-            />
+            <LabeledCheckBoxes name="csdWhichGrades" />
           )}
           {data.program === PROGRAM_CSP && (
             <>
-              <WhichGradesSelector
-                courseName="cspWhichGrades"
-                showScholarshipWarning={showScholarshipEligibilityWarning}
-              />
+              <LabeledCheckBoxes name="cspWhichGrades" />
               <LabeledRadioButtons name="cspHowOffer" />
             </>
           )}
           {data.program === PROGRAM_CSA && (
             <>
-              <WhichGradesSelector
-                courseName="csaWhichGrades"
-                showScholarshipWarning={showScholarshipEligibilityWarning}
-              />
+              <LabeledCheckBoxes name="csaWhichGrades" />
               <LabeledRadioButtons name="csaHowOffer" />
             </>
           )}
@@ -117,14 +71,16 @@ const ImplementationPlan = props => {
               .replace('{{CS program}}', programInfo.name)
               .replace('{{min hours}}', programInfo.minCourseHours)}
           />
-
-          <LabeledRadioButtonsWithAdditionalTextFields
-            name="replaceExisting"
-            textFieldMap={{
-              [TextFields.iDontKnowExplain]: 'other',
-            }}
-          />
         </>
+      );
+    } else if (!!data.willTeach) {
+      return (
+        <p style={styles.error}>
+          Note: This program is designed to work best for teachers who are
+          teaching this course in the {Year} school year. Scholarship
+          eligibility is often dependent on whether or not you will be teaching
+          the course during the {Year} school year.
+        </p>
       );
     }
   };
@@ -134,7 +90,7 @@ const ImplementationPlan = props => {
       <LabelsContext.Provider value={PageLabels.implementationPlan}>
         <FormGroup>
           <h3>Section 6: {SectionHeaders.implementationPlan}</h3>
-
+          <LabeledRadioButtons name="willTeach" />
           {renderContents()}
         </FormGroup>
       </LabelsContext.Provider>
@@ -156,10 +112,13 @@ const uniqueRequiredFields = {
 };
 
 ImplementationPlan.getDynamicallyRequiredFields = data => {
-  const requiredFields = [];
+  const requiredFields = ['willTeach'];
 
-  if (data.program) {
-    requiredFields.push(...uniqueRequiredFields[data.program]);
+  if (data.willTeach === 'Yes') {
+    requiredFields.push('enoughCourseHours');
+    if (data.program) {
+      requiredFields.push(...uniqueRequiredFields[data.program]);
+    }
   }
 
   return requiredFields;

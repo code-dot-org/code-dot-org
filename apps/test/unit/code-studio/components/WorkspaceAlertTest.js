@@ -1,9 +1,11 @@
-import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
-import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
-import sinon from 'sinon';
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('WorkspaceAlert', () => {
   let jQueryHeight;

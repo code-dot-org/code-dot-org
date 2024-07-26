@@ -12,7 +12,8 @@
     "submittable": "false",
     "hide_share_and_remix": "false",
     "csa_view_mode": "console",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:53:30.846+00:00\",\"changed\":[\"cloned from \\\"CSA U6L11-L1_2022\\\"\"],\"cloned_from\":\"CSA U6L11-L1_2022\"}]"

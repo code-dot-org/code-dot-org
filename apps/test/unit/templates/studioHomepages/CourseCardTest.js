@@ -1,15 +1,19 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import {mount} from 'enzyme';
+import {combineReducers, createStore} from 'redux';
+
+import isRtl, {setRtl} from '@cdo/apps/code-studio/isRtlRedux';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
+
+// eslint-disable-next-line no-restricted-imports
 import {
   expect,
   // assert
-} from '../../../util/reconfiguredChai';
-import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 import {courses} from './homepagesTestData';
-import {combineReducers, createStore} from 'redux';
-import isRtl, {setRtl} from '@cdo/apps/code-studio/isRtlRedux';
 
 const store = createStore(combineReducers({isRtl}));
 
@@ -29,7 +33,6 @@ describe('CourseCard', () => {
     expect(
       wrapper.containsMatchingElement(
         <a href={courses[0].link}>
-          <img />
           <div>{courses[0].title}</div>
           <div>
             {courses[0].description}
@@ -55,7 +58,6 @@ describe('CourseCard', () => {
     expect(
       wrapper.containsMatchingElement(
         <a href={courses[0].link}>
-          <img />
           <div>{courses[0].title}</div>
           <div>
             {courses[0].description}

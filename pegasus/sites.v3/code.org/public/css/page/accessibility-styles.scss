@@ -1,7 +1,7 @@
 // Custom styles for code.org/accessibility
 // — supplemental to shared/css/design-system-pegasus.scss
 
-@import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
+@import 'breakpoints';
 
 .hero-banner-basic {
   background-image: url("/images/accessibility/hero-bg.jpg");
@@ -10,7 +10,7 @@
 }
 
 section.accessibility-efforts {
-  padding-bottom: calc(64px - 10px);
+
   .grid-container {
     margin-top: 5rem;
     gap: 4rem;

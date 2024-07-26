@@ -2,10 +2,12 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import commonMsg from '@cdo/locale';
-import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
-import {ViewType, changeViewType} from '@cdo/apps/code-studio/viewAsRedux';
+
+import {setViewAsUserId} from '@cdo/apps/code-studio/progressRedux';
 import {updateQueryParam} from '@cdo/apps/code-studio/utils';
+import {ViewType, changeViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
+import commonMsg from '@cdo/locale';
 
 /**
  * Toggle that lets us change between seeing a page as a teacher, or as the
@@ -16,6 +18,7 @@ class ViewAsToggle extends React.Component {
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     changeViewType: PropTypes.func.isRequired,
     logToFirehose: PropTypes.func,
+    isAsync: PropTypes.bool,
   };
 
   componentDidMount() {
@@ -35,11 +38,11 @@ class ViewAsToggle extends React.Component {
   };
 
   onChange = viewType => {
-    const {changeViewType, logToFirehose} = this.props;
+    const {changeViewType, isAsync, logToFirehose} = this.props;
 
     updateQueryParam('viewAs', viewType);
 
-    changeViewType(viewType);
+    changeViewType(viewType, isAsync);
 
     if (logToFirehose) {
       logToFirehose('toggle_view', {view_type: viewType});
@@ -94,8 +97,11 @@ export default connect(
     viewAs: state.viewAs,
   }),
   dispatch => ({
-    changeViewType(viewAs) {
-      dispatch(changeViewType(viewAs));
+    changeViewType(viewAs, isAsync) {
+      if (viewAs === ViewType.Participant) {
+        dispatch(setViewAsUserId(null));
+      }
+      dispatch(changeViewType(viewAs, isAsync));
     },
   })
 )(UnconnectedViewAsToggle);

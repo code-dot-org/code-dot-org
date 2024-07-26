@@ -1,8 +1,10 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import sinon from 'sinon';
-import {expect} from '../../util/deprecatedChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import FilterChoice from '@cdo/apps/tutorialExplorer/filterChoice';
+
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const TEST_GROUP_NAME = 'Mansfield Park';
 const TEST_NAME = 'Persuasion';

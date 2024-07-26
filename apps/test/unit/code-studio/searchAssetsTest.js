@@ -1,9 +1,9 @@
 /** @file Test of searchAssetsTest.js. */
 
-import assert from 'assert';
 import {searchAssets} from '@cdo/apps/code-studio/assets/searchAssets';
-import testAnimationLibrary from '../p5lab/testAnimationLibrary.json';
 import soundLibrary from '@cdo/apps/code-studio/soundLibrary.json';
+
+import testAnimationLibrary from '../p5lab/testAnimationLibrary.json';
 
 describe('search assets from animation library', function () {
   it('searchAssets searches the animation library in a category', function () {
@@ -17,12 +17,12 @@ describe('search assets from animation library', function () {
       maxResults
     );
 
-    assert.equal(searchedData.pageCount, 1);
-    assert.equal(searchedData.results.length, 4);
-    assert.equal(searchedData.results[0].name, 'hippo');
-    assert.equal(searchedData.results[1].name, 'hippo_gray');
-    assert.equal(searchedData.results[2].name, 'hippo_square');
-    assert.equal(searchedData.results[3].name, 'hippo_token');
+    expect(searchedData.pageCount).toEqual(1);
+    expect(searchedData.results.length).toEqual(4);
+    expect(searchedData.results[0].name).toEqual('hippo');
+    expect(searchedData.results[1].name).toEqual('hippo_gray');
+    expect(searchedData.results[2].name).toEqual('hippo_square');
+    expect(searchedData.results[3].name).toEqual('hippo_token');
   });
 
   it('searchAssets searches the animation library without a category', function () {
@@ -36,13 +36,13 @@ describe('search assets from animation library', function () {
       maxResults
     );
 
-    assert.equal(searchedData.pageCount, 1);
-    assert.equal(searchedData.results.length, 5);
-    assert.equal(searchedData.results[0].name, 'hippo');
-    assert.equal(searchedData.results[1].name, 'hippo_gray');
-    assert.equal(searchedData.results[2].name, 'hippo_square');
-    assert.equal(searchedData.results[3].name, 'hippo_token');
-    assert.equal(searchedData.results[4].name, 'hip');
+    expect(searchedData.pageCount).toEqual(1);
+    expect(searchedData.results.length).toEqual(5);
+    expect(searchedData.results[0].name).toEqual('hippo');
+    expect(searchedData.results[1].name).toEqual('hippo_gray');
+    expect(searchedData.results[2].name).toEqual('hippo_square');
+    expect(searchedData.results[3].name).toEqual('hippo_token');
+    expect(searchedData.results[4].name).toEqual('hip');
   });
 
   it('searchAssets searches the sound library with a cateogry', function () {
@@ -56,10 +56,10 @@ describe('search assets from animation library', function () {
       maxResults
     );
 
-    assert.equal(searchedData.pageCount, 1);
-    assert.equal(searchedData.results.length, 2);
-    assert.equal(searchedData.results[0].name, 'click');
-    assert.equal(searchedData.results[1].name, 'metal_click');
+    expect(searchedData.pageCount).toEqual(1);
+    expect(searchedData.results.length).toEqual(2);
+    expect(searchedData.results[0].name).toEqual('click');
+    expect(searchedData.results[1].name).toEqual('metal_click');
   });
 
   it('searchAssets finds results where search term is not at the begining', function () {
@@ -73,12 +73,12 @@ describe('search assets from animation library', function () {
       maxResults
     );
 
-    assert.equal(searchedData.results.length, 5);
-    assert.equal(searchedData.results[0].name, 'elephant_square');
-    assert.equal(searchedData.results[1].name, 'giraffe_square');
-    assert.equal(searchedData.results[2].name, 'hippo_square');
-    assert.equal(searchedData.results[3].name, 'monkey_square');
-    assert.equal(searchedData.results[4].name, 'panda_square');
+    expect(searchedData.results.length).toEqual(5);
+    expect(searchedData.results[0].name).toEqual('elephant_square');
+    expect(searchedData.results[1].name).toEqual('giraffe_square');
+    expect(searchedData.results[2].name).toEqual('hippo_square');
+    expect(searchedData.results[3].name).toEqual('monkey_square');
+    expect(searchedData.results[4].name).toEqual('panda_square');
   });
 
   it('searchAssets searches the sound library without a cateogry, using multiple pages', function () {
@@ -92,10 +92,9 @@ describe('search assets from animation library', function () {
       maxResults
     );
 
-    assert.equal(searchedData.pageCount, 407);
-    assert.equal(searchedData.results.length, 1);
-    assert.equal(
-      searchedData.results[0].name,
+    expect(searchedData.pageCount).toEqual(407);
+    expect(searchedData.results.length).toEqual(1);
+    expect(searchedData.results[0].name).toEqual(
       'lighthearted_bonus_objective_1'
     );
   });
@@ -111,10 +110,9 @@ describe('search assets from animation library', function () {
       maxResults
     );
 
-    assert.equal(searchedData.pageCount, 407);
-    assert.equal(searchedData.results.length, 1);
-    assert.equal(
-      searchedData.results[0].name,
+    expect(searchedData.pageCount).toEqual(407);
+    expect(searchedData.results.length).toEqual(1);
+    expect(searchedData.results[0].name).toEqual(
       'lighthearted_bonus_objective_2'
     );
   });
@@ -130,7 +128,7 @@ describe('search assets from animation library', function () {
       pageCount,
       maxResults
     );
-    assert.equal(searchedData.results.length, 2);
+    expect(searchedData.results.length).toEqual(2);
 
     searchedData = searchAssets(
       'медведь с рыбой',
@@ -139,6 +137,6 @@ describe('search assets from animation library', function () {
       pageCount,
       maxResults
     );
-    assert.equal(searchedData.results.length, 1);
+    expect(searchedData.results.length).toEqual(1);
   });
 });

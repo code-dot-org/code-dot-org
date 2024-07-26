@@ -1,12 +1,13 @@
 // We have to include the locale files below as translations must be loaded in the global
 // scope for HeadlessChrome to run properly.
-import commonI18n from '@cdo/locale'; // eslint-disable-line no-unused-vars
-import craftI18n from '@cdo/apps/craft/locale'; // eslint-disable-line no-unused-vars
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import {expect} from '../../util/reconfiguredChai';
-import sinon from 'sinon';
-import * as utils from '@cdo/apps/craft/utils';
+import craftI18n from '@cdo/apps/craft/locale'; // eslint-disable-line no-unused-vars
 import * as craftRedux from '@cdo/apps/craft/redux';
+import * as utils from '@cdo/apps/craft/utils';
+import commonI18n from '@cdo/locale'; // eslint-disable-line no-unused-vars
+
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('craft utils', () => {
   describe('handlePlayerSelection', () => {

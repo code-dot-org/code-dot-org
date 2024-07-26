@@ -1,7 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/javalab/locale';
+import React from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/javalab/locale';
+
 import CommitDialogFileRow from './CommitDialogFileRow';
 
 export const fileShape = {
@@ -63,7 +66,7 @@ CommitDialogBody.propTypes = {
 
 const styles = {
   bold: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: color.dark_charcoal,
   },
   filesHeader: {

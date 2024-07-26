@@ -1,9 +1,7 @@
 #!/usr/bin/env ruby
 
-require 'fileutils'
-require 'json'
-
 require_relative '../../../i18n_script_utils'
+require_relative '../../../utils/sync_in_base'
 require_relative '../../../redact_restore_utils'
 require_relative '../blocks'
 
@@ -11,31 +9,18 @@ module I18n
   module Resources
     module Dashboard
       module Blocks
-        class SyncIn
-          def self.perform
-            new.execute
-          end
-
-          def execute
-            progress_bar.start
-
+        class SyncIn < I18n::Utils::SyncInBase
+          def process
             prepare
             progress_bar.progress = 50
 
             redact
-
-            progress_bar.finish
+            progress_bar.progress = 100
           end
 
-          private
-
-          def progress_bar
-            @progress_bar ||= I18nScriptUtils.create_progress_bar(title: 'Dashboard/blocks sync-in')
-          end
-
-          def blocks_data
+          private def blocks_data
             Dir.glob(CDO.dir('dashboard/config/blocks/**/*.json')).each_with_object({}) do |file_path, blocks|
-              config = JSON.load_file(file_path)['config']
+              config = I18nScriptUtils.parse_file(file_path)['config']
               block_name = File.basename(file_path, '.*')
               blocks[block_name] = {}
 
@@ -54,7 +39,7 @@ module I18n
             end
           end
 
-          def i18n_data
+          private def i18n_data
             {
               'en' => {
                 'data' => {
@@ -64,12 +49,12 @@ module I18n
             }
           end
 
-          def prepare
-            I18nScriptUtils.write_file(ORIGIN_I18N_FILE_PATH, I18nScriptUtils.to_crowdin_yaml(i18n_data))
+          private def prepare
+            I18nScriptUtils.write_yaml_file(ORIGIN_I18N_FILE_PATH, i18n_data)
             I18nScriptUtils.copy_file(ORIGIN_I18N_FILE_PATH, I18N_SOURCE_FILE_PATH)
           end
 
-          def redact
+          private def redact
             I18nScriptUtils.copy_file(I18N_SOURCE_FILE_PATH, I18N_BACKUP_FILE_PATH)
             RedactRestoreUtils.redact(I18N_SOURCE_FILE_PATH, I18N_SOURCE_FILE_PATH, REDACT_PLUGINS, REDACT_FORMAT)
           end

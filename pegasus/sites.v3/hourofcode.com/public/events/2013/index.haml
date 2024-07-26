@@ -13,12 +13,17 @@ nav: events_nav
   state_column = Forms.json('data.state_code_s')
   events = Forms.events_by_country(kind, country_column: country_column)
   us_events = Forms.events_by_state(kind, country_column: country_column, state_column: state_column)
+  us_events_count = us_events.inject(0) do |result, element|
+    result + element[:count]
+  rescue
+    0
+  end
 
 %h1= hoc_s(:events_all_old_title).gsub(/\@year/, hoc_year.to_s)
 
 %ul
   %li{class: "hoc-event-country"}
-    %span{style: "font-weight: bold;"}= "United States (#{us_events.count rescue '0'} #{hoc_s(:events)})"
+    %span{style: "font-weight: bold;"}= "United States (#{us_events_count} #{hoc_s(:events)})"
     %ul{style: "margin-top: 0; margin-bottom: 0;"}
       -us_events.each do |event|
         %li{class: "hoc-event-state"}

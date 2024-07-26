@@ -1,17 +1,18 @@
-import {expect, assert} from 'chai';
-import Simple2Sequencer from '@cdo/apps/music/player/sequencer/Simple2Sequencer';
-import MusicLibrary, {SoundData} from '@cdo/apps/music/player/MusicLibrary';
-import Sinon, {SinonStubbedInstance} from 'sinon';
-import {
-  PatternEventValue,
-  PatternEvent,
-} from '@cdo/apps/music/player/interfaces/PatternEvent';
-import {SoundEvent} from '@cdo/apps/music/player/interfaces/SoundEvent';
+import {expect, assert} from 'chai'; // eslint-disable-line no-restricted-imports
+import Sinon, {SinonStubbedInstance} from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {DEFAULT_PATTERN_LENGTH} from '@cdo/apps/music/constants';
 import {
   ChordEventValue,
   ChordEvent,
 } from '@cdo/apps/music/player/interfaces/ChordEvent';
+import {
+  PatternEventValue,
+  PatternEvent,
+} from '@cdo/apps/music/player/interfaces/PatternEvent';
+import {SoundEvent} from '@cdo/apps/music/player/interfaces/SoundEvent';
+import MusicLibrary, {SoundData} from '@cdo/apps/music/player/MusicLibrary';
+import Simple2Sequencer from '@cdo/apps/music/player/sequencer/Simple2Sequencer';
 
 const testSound: SoundData = {
   name: 'name',
@@ -27,8 +28,13 @@ describe('Simple2Sequencer', () => {
   beforeEach(() => {
     library = Sinon.createStubInstance(MusicLibrary);
     library.getSoundForId.returns(testSound);
+    Sinon.stub(MusicLibrary, 'getInstance').returns(library);
 
-    sequencer = new Simple2Sequencer(library);
+    sequencer = new Simple2Sequencer();
+  });
+
+  afterEach(() => {
+    Sinon.restore();
   });
 
   it('starts a new sequence at the given measure', () => {

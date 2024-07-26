@@ -59,7 +59,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-14T20:48:44.743+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_events82022\\\"\"],\"cloned_from\":\"courseC_PlayLab_events82022\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-14T20:48:44.743+00:00\",\"changed\":[\"cloned from \\\"courseC_PlayLab_events82022\\\"\"],\"cloned_from\":\"courseC_PlayLab_events82022\"},{\"changed_at\":\"2024-01-11 21:25:19 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 2,
     "events": 3
@@ -68,57 +68,57 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="studio_whenUp">
+        <block type="studio_whenUp" deletable="false">
           <next>
             <block type="studio_move">
-              <title name="SPRITE">0</title>
-              <title name="DIR">1</title>
+              <field name="SPRITE">0</field>
+              <field name="DIR">1</field>
             </block>
           </next>
         </block>
-        <block type="studio_whenDown">
+        <block type="studio_whenDown" deletable="false">
           <next>
             <block type="studio_move">
-              <title name="SPRITE">0</title>
-              <title name="DIR">4</title>
+              <field name="SPRITE">0</field>
+              <field name="DIR">4</field>
             </block>
           </next>
         </block>
-        <block type="studio_whenLeft">
+        <block type="studio_whenLeft" deletable="false">
           <next>
             <block type="studio_move">
-              <title name="SPRITE">0</title>
-              <title name="DIR">8</title>
+              <field name="SPRITE">0</field>
+              <field name="DIR">8</field>
             </block>
           </next>
         </block>
-        <block type="studio_whenRight">
+        <block type="studio_whenRight" deletable="false">
           <next>
             <block type="studio_move">
-              <title name="SPRITE">0</title>
-              <title name="DIR">2</title>
+              <field name="SPRITE">0</field>
+              <field name="DIR">2</field>
             </block>
           </next>
         </block>
         <block type="studio_repeatForever">
           <statement name="DO">
             <block type="studio_moveDistance">
-              <title name="SPRITE">1</title>
-              <title name="DIR">1</title>
-              <title name="DISTANCE">400</title>
+              <field name="SPRITE">1</field>
+              <field name="DIR">1</field>
+              <field name="DISTANCE">400</field>
               <next>
                 <block type="studio_moveDistance">
-                  <title name="SPRITE">1</title>
-                  <title name="DIR">4</title>
-                  <title name="DISTANCE">400</title>
+                  <field name="SPRITE">1</field>
+                  <field name="DIR">4</field>
+                  <field name="DISTANCE">400</field>
                 </block>
               </next>
             </block>
           </statement>
         </block>
         <block type="studio_whenSpriteCollided">
-          <title name="SPRITE1">0</title>
-          <title name="SPRITE2">1</title>
+          <field name="SPRITE1">0</field>
+          <field name="SPRITE2">1</field>
         </block>
       </xml>
     </start_blocks>

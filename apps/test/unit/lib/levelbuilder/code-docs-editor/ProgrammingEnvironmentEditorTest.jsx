@@ -1,10 +1,12 @@
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow, mount} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
+import {Provider} from 'react-redux';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import ProgrammingEnvironmentEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingEnvironmentEditor';
 import {getStore} from '@cdo/apps/redux';
-import {Provider} from 'react-redux';
-import sinon from 'sinon';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('ProgrammingEnvironmentEditor', () => {
   let defaultProps, fetchSpy;

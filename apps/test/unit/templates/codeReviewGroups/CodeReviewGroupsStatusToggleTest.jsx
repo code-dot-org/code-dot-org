@@ -1,6 +1,6 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import {UnconnectedCodeReviewGroupsStatusToggle} from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsStatusToggle';
 
 describe('Code Review Groups Status Toggle', () => {
@@ -19,9 +19,9 @@ describe('Code Review Groups Status Toggle', () => {
       />
     );
     const toggle = wrapper.find('ToggleSwitch');
-    expect(toggle.prop('isToggledOn')).to.be.false;
+    expect(toggle.prop('isToggledOn')).toBe(false);
     // expect to not find the enabled message
-    expect(wrapper.find('p')).to.have.lengthOf(0);
+    expect(wrapper.find('p')).toHaveLength(0);
   });
 
   it('renders enable toggle if code review expiration date is before today', () => {
@@ -34,7 +34,7 @@ describe('Code Review Groups Status Toggle', () => {
       />
     );
     const toggle = wrapper.find('ToggleSwitch');
-    expect(toggle.prop('isToggledOn')).to.be.false;
+    expect(toggle.prop('isToggledOn')).toBe(false);
   });
 
   it('renders disable toggle if code review expiration date is after today', () => {
@@ -47,11 +47,11 @@ describe('Code Review Groups Status Toggle', () => {
       />
     );
     const toggle = wrapper.find('ToggleSwitch');
-    expect(toggle.prop('isToggledOn')).to.be.true;
+    expect(toggle.prop('isToggledOn')).toBe(true);
     // expect to see enabled message
     const enabledMessage = wrapper.find('p').at(0).text();
     const expectedEnabledMessage =
       'Code review will be automatically disabled in 1 days. To reset this time, disable and re-enable code review.';
-    expect(enabledMessage).to.equal(expectedEnabledMessage);
+    expect(enabledMessage).toBe(expectedEnabledMessage);
   });
 });

@@ -1,10 +1,12 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../util/deprecatedChai';
-import {TutorialsSortByOptions} from '@cdo/apps/tutorialExplorer/util';
-import FilterSet from '@cdo/apps/tutorialExplorer/filterSet';
+
 import FilterGroup from '@cdo/apps/tutorialExplorer/filterGroup';
 import FilterGroupOrgNames from '@cdo/apps/tutorialExplorer/filterGroupOrgNames';
+import FilterSet from '@cdo/apps/tutorialExplorer/filterSet';
+import {TutorialsSortByOptions} from '@cdo/apps/tutorialExplorer/util';
+
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const FAKE_ON_USER_INPUT = () => {};
 const FAKE_ORG_NAME = 'fake org name';

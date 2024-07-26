@@ -1,7 +1,7 @@
 -# The following dimensions must match in order the custom dimension settings in our Google Analytics account.
 - selected_language_dim, age_dim, gender_dim, user_type_dim, env_dim, pixel_ratio, has_teacher = (1..7).map{|x|"dimension#{x}"}
 - dimensions = {}
-- dimensions[selected_language_dim] = language if (accepted_languages.present? && accepted_languages.first != language)
+- dimensions[selected_language_dim] = language if accepted_languages.include?(language)
 - dimensions[env_dim] = Rails.env
 - if user_signed_in?
   - dimensions[age_dim] = current_user.age.to_s

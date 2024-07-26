@@ -122,10 +122,11 @@ namespace :test do
           Dir["#{fixture_path}/{**,*}/*.yml"].
             push(dashboard_dir('db/schema.rb')).
             push(dashboard_dir('config/videos.csv')).
+            push("#{fixture_path}/schools.tsv").
             push(dashboard_dir('lib/tasks/seed.rake')).
-            select(&File.method(:file?)).
+            select {|filename| File.file?(filename)}.
             sort.
-            map(&Digest::MD5.method(:file)).
+            map {|filename| Digest::MD5.file(filename)}.
             join
         )
         CDO.log.info "Fixture hash: #{fixture_hash}"
@@ -382,7 +383,16 @@ namespace :test do
 
     desc 'Runs lib tests if lib might have changed from staging.'
     timed_task_with_logging :lib do
-      run_tests_if_changed('lib', ['Gemfile', 'Gemfile.lock', 'deployment.rb', 'lib/**/*']) do
+      run_tests_if_changed(
+        'lib',
+        [
+          'Gemfile',
+          'Gemfile.lock',
+          'deployment.rb',
+          'lib/**/*',
+          'config/**/*'
+        ]
+      ) do
         TestRunUtils.run_lib_tests
       end
     end

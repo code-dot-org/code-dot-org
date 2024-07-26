@@ -1,7 +1,8 @@
 /** @file Button that can be active or inactive, for use inside ToggleGroup */
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React, {Component} from 'react';
+
 import styles from './ToggleButtonStyles';
 
 class ToggleButton extends Component {
@@ -16,6 +17,7 @@ class ToggleButton extends Component {
     style: PropTypes.object,
     onClick: PropTypes.func,
     children: PropTypes.node,
+    useRebrandedLikeStyles: PropTypes.bool,
   };
 
   render() {
@@ -50,6 +52,9 @@ class ToggleButton extends Component {
         },
       this.props.first ? styles.firstButtonStyle : null,
       this.props.last ? styles.lastButtonStyle : null,
+      this.props.useRebrandedLikeStyles
+        ? styles.rebrandedLikeButtonStyle
+        : null,
       // used to override any style properties
       this.props.style
     );

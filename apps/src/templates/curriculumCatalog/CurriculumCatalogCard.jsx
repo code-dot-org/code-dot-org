@@ -1,10 +1,20 @@
-import React, {useState} from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {concat, intersection} from 'lodash';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+import {connect} from 'react-redux';
+
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import Button from '@cdo/apps/templates/Button';
-import i18n from '@cdo/locale';
+import CardLabels from '@cdo/apps/templates/curriculumCatalog/CardLabels';
+import {
+  CreateSectionsToAssignSectionsDialog,
+  SignInToAssignSectionsDialog,
+  UpgradeAccountToAssignSectionsDialog,
+} from '@cdo/apps/templates/curriculumCatalog/noSectionsToAssignDialogs';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import MultipleSectionsAssigner from '@cdo/apps/templates/MultipleSectionsAssigner';
 import {
   translatedCourseOfferingCsTopics,
   translatedCourseOfferingSchoolSubjects,
@@ -12,24 +22,18 @@ import {
   subjectsAndTopicsOrder,
   translatedLabels,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
-import style from './curriculum_catalog_card.module.scss';
-import CardLabels from '@cdo/apps/templates/curriculumCatalog/CardLabels';
-import MultipleSectionsAssigner from '@cdo/apps/templates/MultipleSectionsAssigner';
-import {connect} from 'react-redux';
+import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {
   assignToSection,
   sectionsForDropdown,
   unassignSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {
-  CreateSectionsToAssignSectionsDialog,
-  SignInToAssignSectionsDialog,
-  UpgradeAccountToAssignSectionsDialog,
-} from '@cdo/apps/templates/curriculumCatalog/noSectionsToAssignDialogs';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import i18n from '@cdo/locale';
+
+import {defaultImageSrc} from './curriculumCatalogConstants';
 import ExpandedCurriculumCatalogCard from './ExpandedCurriculumCatalogCard';
+
+import style from './curriculum_catalog_card.module.scss';
 
 const CurriculumCatalogCard = ({
   courseKey,
@@ -37,7 +41,7 @@ const CurriculumCatalogCard = ({
   duration,
   gradesArray,
   imageAltText = '', // for decorative images
-  imageSrc = 'https://images.code.org/0a24eb3b51bd86e054362f0760c6e64e-image-1681413990565.png',
+  imageSrc = defaultImageSrc,
   subjects = [],
   topics = [],
   pathToCourse,
@@ -49,9 +53,14 @@ const CurriculumCatalogCard = ({
   publishedDate,
   selfPacedPlCourseOfferingPath,
   isExpanded,
+  handleSetExpandedCardKey,
   onQuickViewClick,
   isInUS,
   availableResources,
+  isSignedOut,
+  isTeacher,
+  recommendedSimilarCurriculum,
+  recommendedStretchCurriculum,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -80,7 +89,11 @@ const CurriculumCatalogCard = ({
     quickViewButtonText={i18n.quickView()}
     imageAltText={imageAltText}
     translationIconTitle={i18n.courseInYourLanguage()}
-    pathToCourse={pathToCourse + '?viewAs=Instructor'}
+    pathToCourse={`${
+      isSignedOut || isTeacher
+        ? pathToCourse + '?viewAs=Instructor'
+        : pathToCourse
+    }`}
     onAssignSuccess={onAssignSuccess}
     deviceCompatibility={deviceCompatibility}
     description={description}
@@ -90,8 +103,13 @@ const CurriculumCatalogCard = ({
     selfPacedPlCourseOfferingPath={selfPacedPlCourseOfferingPath}
     isExpanded={isExpanded}
     onQuickViewClick={onQuickViewClick}
+    handleSetExpandedCardKey={handleSetExpandedCardKey}
     isInUS={isInUS}
     availableResources={availableResources}
+    isSignedOut={isSignedOut}
+    isTeacher={isTeacher}
+    recommendedSimilarCurriculum={recommendedSimilarCurriculum}
+    recommendedStretchCurriculum={recommendedStretchCurriculum}
     {...props}
   />
 );
@@ -127,9 +145,14 @@ CurriculumCatalogCard.propTypes = {
   publishedDate: PropTypes.string,
   selfPacedPlCourseOfferingPath: PropTypes.string,
   isExpanded: PropTypes.bool,
+  handleSetExpandedCardKey: PropTypes.func.isRequired,
   onQuickViewClick: PropTypes.func,
   isInUS: PropTypes.bool,
   availableResources: PropTypes.object,
+  isTeacher: PropTypes.bool.isRequired,
+  isSignedOut: PropTypes.bool.isRequired,
+  recommendedSimilarCurriculum: PropTypes.object,
+  recommendedStretchCurriculum: PropTypes.object,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -161,12 +184,16 @@ const CustomizableCurriculumCatalogCard = ({
   publishedDate,
   selfPacedPlCourseOfferingPath,
   isExpanded,
+  handleSetExpandedCardKey,
   onQuickViewClick,
   isInUS,
   availableResources,
+  recommendedSimilarCurriculum,
+  recommendedStretchCurriculum,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
+  const isTeacherOrSignedOut = isSignedOut || isTeacher;
 
   const handleClickAssign = cardType => {
     setIsAssignDialogOpen(true);
@@ -233,9 +260,7 @@ const CustomizableCurriculumCatalogCard = ({
           <img src={imageSrc} alt={imageAltText} />
           <div className={style.curriculumInfoContainer}>
             <div className={style.labelsAndTranslatabilityContainer}>
-              <div className={style.labelsContainer}>
-                <CardLabels subjectsAndTopics={subjectsAndTopics} />
-              </div>
+              <CardLabels subjectsAndTopics={subjectsAndTopics} />
               {!isEnglish && isTranslated && (
                 <FontAwesome
                   icon="language"
@@ -267,14 +292,44 @@ const CustomizableCurriculumCatalogCard = ({
                 onClick={onQuickViewClick}
                 aria-label={quickViewButtonDescription}
                 text={i18n.quickView()}
+                className={`${style.buttonFlex} ${style.quickViewButton}`}
               />
-              <Button
-                color={Button.ButtonColor.brandSecondaryDefault}
-                type="button"
-                onClick={() => handleClickAssign('top-card')}
-                aria-label={assignButtonDescription}
-                text={assignButtonText}
-              />
+              {isTeacherOrSignedOut && (
+                <>
+                  <Button
+                    __useDeprecatedTag
+                    color={Button.ButtonColor.neutralDark}
+                    type="button"
+                    href={pathToCourse}
+                    aria-label={i18n.learnMoreDescription({
+                      course_name: courseDisplayName,
+                    })}
+                    text={i18n.learnMore()}
+                    className={`${style.buttonFlex} ${style.teacherAndSignedOutLearnMoreButton}`}
+                  />
+                  <Button
+                    color={Button.ButtonColor.brandSecondaryDefault}
+                    type="button"
+                    onClick={() => handleClickAssign('top-card')}
+                    aria-label={assignButtonDescription}
+                    text={assignButtonText}
+                    className={style.buttonFlex}
+                  />
+                </>
+              )}
+              {!isTeacherOrSignedOut && (
+                <Button
+                  __useDeprecatedTag
+                  color={Button.ButtonColor.brandSecondaryDefault}
+                  type="button"
+                  href={pathToCourse}
+                  aria-label={i18n.tryCourseNow({
+                    course_name: courseDisplayName,
+                  })}
+                  text={i18n.tryNow()}
+                  className={`${style.buttonFlex} ${style.studentLearnMoreButton}`}
+                />
+              )}
             </div>
           </div>
         </div>
@@ -282,6 +337,7 @@ const CustomizableCurriculumCatalogCard = ({
       </div>
       {isExpanded && (
         <ExpandedCurriculumCatalogCard
+          courseKey={courseKey}
           courseDisplayName={courseDisplayName}
           duration={duration}
           gradeRange={gradeRange}
@@ -296,10 +352,15 @@ const CustomizableCurriculumCatalogCard = ({
           assignButtonOnClick={handleClickAssign}
           assignButtonDescription={assignButtonDescription}
           onClose={onQuickViewClick}
+          handleSetExpandedCardKey={handleSetExpandedCardKey}
           isInUS={isInUS}
           imageSrc={imageSrc}
           imageAltText={imageAltText}
           availableResources={availableResources}
+          isSignedOut={isSignedOut}
+          isTeacher={isTeacher}
+          recommendedSimilarCurriculum={recommendedSimilarCurriculum}
+          recommendedStretchCurriculum={recommendedStretchCurriculum}
         />
       )}
     </div>
@@ -326,7 +387,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   scriptId: PropTypes.number,
   isStandAloneUnit: PropTypes.bool,
   sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
-  isTeacher: PropTypes.bool,
+  isTeacher: PropTypes.bool.isRequired,
   isSignedOut: PropTypes.bool.isRequired,
   onAssignSuccess: PropTypes.func,
   // for screenreaders
@@ -341,9 +402,12 @@ CustomizableCurriculumCatalogCard.propTypes = {
   publishedDate: PropTypes.string,
   selfPacedPlCourseOfferingPath: PropTypes.string,
   isExpanded: PropTypes.bool,
+  handleSetExpandedCardKey: PropTypes.func.isRequired,
   onQuickViewClick: PropTypes.func,
   isInUS: PropTypes.bool,
   availableResources: PropTypes.object,
+  recommendedSimilarCurriculum: PropTypes.object,
+  recommendedStretchCurriculum: PropTypes.object,
 };
 
 export default connect(

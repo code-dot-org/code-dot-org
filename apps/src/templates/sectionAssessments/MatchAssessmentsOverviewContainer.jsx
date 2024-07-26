@@ -1,5 +1,13 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
+import i18n from '@cdo/locale';
+
+import {
+  QUESTION_CHARACTER_LIMIT,
+  matchDataPropType,
+} from './assessmentDataShapes';
 import MatchAssessmentsOverviewTable from './MatchAssessmentsOverviewTable';
 import {
   getMatchSectionSummary,
@@ -7,12 +15,6 @@ import {
   ALL_STUDENT_FILTER,
   setQuestionIndex,
 } from './sectionAssessmentsRedux';
-import {connect} from 'react-redux';
-import {
-  QUESTION_CHARACTER_LIMIT,
-  matchDataPropType,
-} from './assessmentDataShapes';
-import i18n from '@cdo/locale';
 
 class MatchAssessmentsOverviewContainer extends Component {
   static propTypes = {

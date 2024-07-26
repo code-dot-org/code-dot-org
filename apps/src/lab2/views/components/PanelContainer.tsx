@@ -1,16 +1,19 @@
-import React, {useContext} from 'react';
 import classNames from 'classnames';
-import moduleStyles from './panelContainer.module.scss';
+import React, {useContext} from 'react';
+
 import {ThemeContext} from '../ThemeWrapper';
+
+import moduleStyles from './panelContainer.module.scss';
 
 interface PanelContainerProps {
   id: string;
-  headerText: string;
+  headerContent: React.ReactNode;
   children?: React.ReactNode;
   rightHeaderContent?: React.ReactNode;
   leftHeaderContent?: React.ReactNode;
   hideHeaders?: boolean;
   className?: string;
+  headerClassName?: string;
 }
 
 /**
@@ -22,12 +25,13 @@ interface PanelContainerProps {
  */
 const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
   id,
-  headerText,
+  headerContent,
   rightHeaderContent,
   leftHeaderContent,
   children,
   hideHeaders,
   className,
+  headerClassName,
 }) => {
   const {theme} = useContext(ThemeContext);
 
@@ -44,7 +48,8 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
         <div
           className={classNames(
             'panelContainerHeader',
-            moduleStyles['panelContainerHeader-' + theme]
+            moduleStyles['panelContainerHeader-' + theme],
+            headerClassName
           )}
         >
           {leftHeaderContent && (
@@ -65,7 +70,7 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
               moduleStyles.panelContainerHeaderItemText
             )}
           >
-            {headerText}
+            {headerContent}
           </div>
           {rightHeaderContent && (
             <div

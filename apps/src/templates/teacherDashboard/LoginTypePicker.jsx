@@ -7,17 +7,23 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import {Heading3} from '../../lib/ui/Headings';
+
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
-import CardContainer from './CardContainer';
-import LoginTypeCard from './LoginTypeCard';
-import Button from '../Button';
+import fontConstants from '@cdo/apps/fontConstants';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import styleConstants from '../../styleConstants';
+import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {getStore} from '@cdo/apps/redux';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
+import i18n from '@cdo/locale';
+
+import {Heading3} from '../../lib/ui/Headings';
+import styleConstants from '../../styleConstants';
+import Button from '../Button';
+
+import CardContainer from './CardContainer';
+import LoginTypeCard from './LoginTypeCard';
 
 const LOGIN_TYPE_SELECTED_EVENT = 'Login Type Selected';
 const CANCELLED_EVENT = 'Section Setup Cancelled';
@@ -53,9 +59,13 @@ class LoginTypePicker extends Component {
   };
 
   recordSectionSetupExitEvent = eventName => {
-    analyticsReporter.sendEvent(eventName, {
-      source: SELECT_LOGIN_TYPE,
-    });
+    analyticsReporter.sendEvent(
+      eventName,
+      {
+        source: SELECT_LOGIN_TYPE,
+      },
+      PLATFORMS.BOTH
+    );
   };
 
   openImportDialog = provider => {
@@ -84,6 +94,13 @@ class LoginTypePicker extends Component {
     const withClever =
       providers && providers.includes(OAuthSectionTypes.clever);
     const hasThirdParty = withGoogle | withMicrosoft | withClever;
+    const currentUser = getStore().getState().currentUser;
+    const inUSA =
+      ['US', 'RD'].includes(currentUser.countryCode) ||
+      !!currentUser.usStateCode;
+    const showStudentsToSectionPermissionWarning =
+      (inUSA && currentUser.isTeacher) ||
+      experiments.isEnabledAllowingQueryString(experiments.CPA_EXPERIENCE);
 
     const style = {
       container: {
@@ -117,7 +134,7 @@ class LoginTypePicker extends Component {
       mediumText: {
         fontSize: '.75em',
         color: color.neutral_dark,
-        fontFamily: '"Gotham 5r", sans-serif',
+        ...fontConstants['main-font-semi-bold'],
       },
       learnHow: {
         marginTop: '12px',
@@ -133,9 +150,7 @@ class LoginTypePicker extends Component {
       <div style={style.container}>
         <Heading3 isRebranded>{title}</Heading3>
         <p>{i18n.addStudentsToSectionInstructionsUpdated()}</p>
-        {experiments.isEnabledAllowingQueryString(
-          experiments.CPA_EXPERIENCE
-        ) && (
+        {showStudentsToSectionPermissionWarning && (
           <p>
             <span
               className="fa fa-exclamation-triangle"
@@ -194,9 +209,7 @@ class LoginTypePicker extends Component {
           <p style={{...style.mediumText, ...style.emailPolicyNote}}>
             {i18n.note()}
             {' ' + i18n.emailAddressPolicy() + ' '}
-            <a href="http://blog.code.org/post/147756946588/codeorgs-new-login-approach-to-student-privacy">
-              {i18n.moreInfo()}
-            </a>
+            <a href="https://code.org/privacy">{i18n.moreInfo()}</a>
           </p>
           <Button
             onClick={this.cancel}
@@ -209,6 +222,7 @@ class LoginTypePicker extends Component {
     );
   }
 }
+
 export const UnconnectedLoginTypePicker = LoginTypePicker;
 export default connect(state => ({
   providers: state.teacherSections.providers,

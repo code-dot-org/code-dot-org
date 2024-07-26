@@ -1,10 +1,11 @@
 import React from 'react';
-import ImageResourceCard from './ImageResourceCard';
 import {Provider} from 'react-redux';
+
 import {reduxStore} from '@cdo/storybook/decorators';
 
+import ImageResourceCard from './ImageResourceCard';
+
 export default {
-  title: 'ImageResourceCard',
   component: ImageResourceCard,
 };
 

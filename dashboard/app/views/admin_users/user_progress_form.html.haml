@@ -54,3 +54,5 @@
           %td= format_time(user_script.assigned_at)
           %td= format_time(user_script.last_progress_at)
           %td= link_to 'Delete...', delete_progress_form_path(user_id: @target_user.id, script_id: user_script.script_id)
+
+= render partial: 'home/admin'

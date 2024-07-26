@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-04 01:44:38 UTC",
+    "serialized_at": "2024-01-11 15:12:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -76,6 +76,7 @@
       "key": "0861fbf0-1cb8-4150-8ad0-997469a88b8d",
       "position": 1,
       "properties": {
+        "duration": 8
       },
       "seeding_key": {
         "lesson_activity.key": "0861fbf0-1cb8-4150-8ad0-997469a88b8d",
@@ -88,6 +89,7 @@
       "key": "8b2cf30b-aa71-4b1f-ac0d-691f0880b2c9",
       "position": 1,
       "properties": {
+        "duration": 2
       },
       "seeding_key": {
         "lesson_activity.key": "8b2cf30b-aa71-4b1f-ac0d-691f0880b2c9",
@@ -325,6 +327,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-Navigation_2023"
+        ],
         "progression": "Engaging in this course"
       },
       "bonus": false,
@@ -468,6 +473,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

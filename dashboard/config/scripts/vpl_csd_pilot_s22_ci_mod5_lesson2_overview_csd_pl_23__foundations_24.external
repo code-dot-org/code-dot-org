@@ -1,0 +1,19 @@
+name 'VPL-CSD-PILOT-S22-CI-mod5-lesson2-overview_CSD_PL_23_-foundations-24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Explore Data At A Small Scale
+
+<img src="https://images.code.org/c39f330eecf5fcdfb64e6bb3b55260f2-image-1707523174538.59.31 PM.png" style="float:right; width:300px; border-radius:30px; margin-left:15px; margin-right: 15px;" alt="A teacher stands next to two smiling students.">
+
+#### In the next section of this professional learning module, you will get an introduction Representing Information unit as you practice representing data using binary systems.</p></div>
+
+### **You will:**
+
+* #### Learn how to represent text, images, and numbers using a binary system. 
+* #### Apply a method of encryption to keep data private. 
+<br>
+
+#### **Suggested time:** 30 minutes
+MARKDOWN

@@ -63,6 +63,7 @@ class SurveyResult < ApplicationRecord
     DIVERSITY_2021 = 'Diversity2021'.freeze,
     DIVERSITY_2022 = 'Diversity2022'.freeze,
     DIVERSITY_2023 = 'Diversity2023'.freeze,
+    DIVERSITY_2024 = 'Diversity2024'.freeze,
     NET_PROMOTER_SCORE_2015 = 'NetPromoterScore2015'.freeze,
     NET_PROMOTER_SCORE_2017 = 'NetPromoterScore2017'.freeze,
     NET_PROMOTER_SCORE_2019 = 'NetPromoterScore2019'.freeze,

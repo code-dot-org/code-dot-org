@@ -1,12 +1,13 @@
-import React from 'react';
 import {action} from '@storybook/addon-actions';
-import {UnconnectedUnassignSectionButton as UnassignSectionButton} from './UnassignSectionButton';
+import React from 'react';
+
 import {fakeTeacherSectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/sectionAssignmentTestHelper';
+
+import {UnconnectedUnassignSectionButton as UnassignSectionButton} from './UnassignSectionButton';
 
 const assignedSection = fakeTeacherSectionsForDropdown[1];
 
 export default {
-  name: 'UnassignSectionButton',
   component: UnassignSectionButton,
 };
 

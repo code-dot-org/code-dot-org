@@ -360,7 +360,8 @@
     ],
     "long_instructions": "##Commits and the Backpack\r\nSoftware engineers commit their code to save changes made to their programs so it is easy to go back to an earlier version.\r\n\r\nThe **Backpack** allows you to save classes that you create so you can import them into other projects.\r\n\r\nTo commit your code and save your `PainterPlus.java`(#e7e8ea) file to your **Backpack**:\r\n\r\n1. Click the **Commit Code** button in the upper-right corner of the **Editor**.\r\n\r\n2. Enter a short description about the current version of your program, such as \"PainterPlus with turnRight()\"\r\n\r\n3. Check the `PainterPlus.java`(#e7e8ea) file in the **Save to Backpack** section.\r\n\r\n4. Click the **Commit and Save** button.",
     "project_template_level_name": "CSA U1L6 PBT_pilot-2022",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:21:33.107+00:00\",\"changed\":[\"cloned from \\\"CSA U1L8-L3_2022\\\"\"],\"cloned_from\":\"CSA U1L8-L3_2022\"}]"

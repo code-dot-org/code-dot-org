@@ -14,7 +14,7 @@ social:
   og:video:type: ''
 ---
 
-<div style="background-color: #00adbc; padding: 15px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>
+<div style="background-color: var(--brand_primary_default); padding: 15px; margin-top:50px;"><img src="/images/athome/CodeBreak-horizontal.png" style="max-width: 100%"/></div>
 <h1>Kumuha ng Code Break</h1>
 <div class="col-66" style="padding-right: 28px; padding-bottom: 20px;">
 
@@ -49,14 +49,14 @@ social:
 <div style="clear: both;"></div>
 <a id="activities"></a>
 
-<div style="background-color: #7665a0; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Mga Lingguhang Aktibidad &amp; Mga nakaraang Episode</h1></div>
+<div style="background-color: var(--brand_secondary_default); margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">Mga Lingguhang Aktibidad &amp; Mga nakaraang Episode</h1></div>
 <h2>Episode 1 - Algorithms kasama si Hill Harper</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Panoorin ang 3/25 na episode</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Panoorin ang 3/25 na episode</h4>
 <a href="https://www.youtube.com/watch?v=IiHveVqxvcw"><img src="/images/marketing/episode-1-hill-harper.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br> <a href="https://www.youtube.com/watch?v=IiHveVqxvcw"><i>View on Youtube</a></i> I <i><a href="https://www.facebook.com/Code.org/videos/212168439992679/">View on Facebook</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Lingguhang Aktibidad - Mga Algorithm</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Lingguhang Aktibidad - Mga Algorithm</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> Walang kinakailangang pag-sign in</p>
@@ -72,11 +72,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episode 2 - Mga Prototype kasama sina Mark Cuban at Lyndsey Scott</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Panoorin ang 4/1 na episode</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Panoorin ang 4/1 na episode</h4>
 <a href="https://www.youtube.com/watch?v=guNM-3CXgnQ"><img src="/images/marketing/code-break-episode2-screenshot.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=guNM-3CXgnQ"><i>View on Youtube</i></a> I <a href="https://www.facebook.com/Code.org/videos/231140824935457/"><i>Tingnan sa Facebook</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Lingguhang Aktibidad - Mga Prototype</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Lingguhang Aktibidad - Mga Prototype</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> Walang kinakailangang pag-sign in</p>
@@ -93,11 +93,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episode 3 - Encryption kasama sina Ashton Kutcher at Mia Gil Epner</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Panoorin ang 4/8 na episode</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Panoorin ang 4/8 na episode</h4>
 <a href="https://youtu.be/_RrmereHcTQ"><img src="/images/marketing/code-break-april-8-video-final.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://youtu.be/_RrmereHcTQ"><i>Tingnan sa Youtube</i></a> I <a href="https://www.facebook.com/Code.org/videos/221983958869058/"><i>Tingnan sa Facebook</i></a></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Lingguhang Aktibidad - Encryption</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Lingguhang Aktibidad - Encryption</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> Walang kinakailangang pag-sign in</p>
@@ -116,11 +116,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episode 4 - Digital na Impormasyon kasama sina Mike Krieger at Alice Keeler</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Panoorin ang 4/15 na episode</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Panoorin ang 4/15 na episode</h4>
 <a href="https://www.youtube.com/watch?v=kL-3o5EiLsM"><img src="/images/marketing/code-break-april-15-video.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=kL-3o5EiLsM"><i>Tingnan sa Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/1642489922621088/">Tingnan sa Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Lingguhang Aktibidad - Digital na Impormasyon</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Lingguhang Aktibidad - Digital na Impormasyon</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> Walang kinakailangang pag-sign in</p>
@@ -139,11 +139,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episode 5 - Mga Simulation at Data kasama si Bill Gates</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Panoorin ang 4/22 na episode</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Panoorin ang 4/22 na episode</h4>
 <a href="https://www.youtube.com/watch?v=fv5g9xw_jek"><img src="/images/marketing/code-break-bill-gates.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=fv5g9xw_jek"><i>View on Youtube</i></a> I <i><a href="https://www.facebook.com/watch/live/?v=870396600091039&ref=watch_permalink">Tingnan sa Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Lingguhang Aktibidad - Mga Simulation at Data</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Lingguhang Aktibidad - Mga Simulation at Data</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> Walang kinakailangang pag-sign in</p>
@@ -162,11 +162,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episode 6 - Ang Internet kasama sina Keegan-Michael Key at Vint Cerf</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Panoorin ang 4/29 na episode</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Panoorin ang 4/29 na episode</h4>
 <a href="https://www.youtube.com/watch?v=7jcnJR6aZfs"><img src="/images/marketing/code-break-episode-6.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=7jcnJR6aZfs"><i>Tingnan sa Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/267326194655266/">Tingnan sa Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Lingguhang Aktibidad - Ang Internet</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Lingguhang Aktibidad - Ang Internet</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> Walang kinakailangang pag-sign in</p>
@@ -185,11 +185,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episode 7 - Mga Kondisyon kasama sina Sal Khan at Flo Vaughn</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Panoorin ang 5/6 na episode</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Panoorin ang 5/6 na episode</h4>
 <a href="https://www.youtube.com/watch?v=oKwvRwmvXsE"><img src="/images/marketing/episode-7-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=oKwvRwmvXsE"><i>Tingnan sa Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/838885113258946/">Tingnan sa Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Lingguhang Aktibidad - Mga Kondisyon</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Lingguhang Aktibidad - Mga Kondisyon</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> Walang kinakailangang pag-sign in</p>
@@ -206,11 +206,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episode 8 - Mga Variable kasama sina Yara Shahidi at Fuzzy Khosrowshahi</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Panoorin ang 5/13 na episode</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Panoorin ang 5/13 na episode</h4>
 <a href="https://www.youtube.com/watch?v=bQElba6x6yI"><img src="/images/marketing/episode-8-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=bQElba6x6yI"><i>Tingnan sa Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/580781632554625/">Tingnan sa Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Lingguhang Aktibidad - Mga Variable</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Lingguhang Aktibidad - Mga Variable</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> Walang kinakailangang pag-sign in</p>
@@ -227,11 +227,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episode 9 - Mga Kaganapan kasama sina Macklemore at Scott Forstall</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Panoorin ang 5/20 na episode</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Panoorin ang 5/20 na episode</h4>
 <a href="https://www.youtube.com/watch?v=-bcO-X9thds"><img src="/images/marketing/episode-9-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=-bcO-X9thds"><i>Tingnan sa Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/3261824343882823/">Tingnan sa Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Lingguhang Aktibidad - Mga Kaganapan</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Lingguhang Aktibidad - Mga Kaganapan</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> Walang kinakailangang pag-sign in</p>
@@ -248,11 +248,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episode 10 - Artificial Intelligence kasama sina Kat Graham at Kate Park</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Panoorin ang 5/27 na episode</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Panoorin ang 5/27 na episode</h4>
 <a href="https://www.youtube.com/watch?v=MLH2bKpXkm8"><img src="/images/marketing/episode-10-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=MLH2bKpXkm8"><i>Tingnan sa Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/551511042204493/">Tingnan sa Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Lingguhang Aktibidad - Artificial Intelligence (AI)</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Lingguhang Aktibidad - Artificial Intelligence (AI)</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> Walang kinakailangang pag-sign in</p>
@@ -269,11 +269,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episode 11 - Abstraction kasama sina Susan Wojcicki at China Anne McClain</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Panoorin ang 6/3 na episode</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Panoorin ang 6/3 na episode</h4>
 <a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><img src="/images/marketing/episode-11-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=LPnRS3F0VWw"><i>Tingnan sa Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/581342096133818/">Tingnan sa Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Lingguhang Aktibidad - Abstraction</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Lingguhang Aktibidad - Abstraction</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> Walang kinakailangang pag-sign in</p>
@@ -290,11 +290,11 @@ social:
 <div style="clear: both;"></div>
 <h2>Episode 12 - Hardware kasama sina Aloe Blacc, Bret Taylor, at Paola Mejia Minaya</h2>
 <div class="col-33" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Panoorin ang 6/10 na episode</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Panoorin ang 6/10 na episode</h4>
 <a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><img src="/images/marketing/episode-12-screengrab.png" class="responsive" style="padding-bottom: 10px; max-width: 100%"></a><br><a href="https://www.youtube.com/watch?v=4-JZYqk2K6w"><i>Tingnan sa Youtube</i></a> I <i><a href="https://www.facebook.com/Code.org/videos/258344332114141/">Tingnan sa Facebook</a></i></div>
 
 <div class="col-66" style="padding-right:20px;">
-<h4 style="background:#00adbc;color:#ffffff; padding:8px;">Lingguhang Aktibidad - Hardware</h4>
+<h4 style="background:var(--brand_primary_default);color:#ffffff; padding:8px;">Lingguhang Aktibidad - Hardware</h4>
 
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
 <p><span style="font-weight:bold">Younger students:</span> Walang kinakailangang pag-sign in</p>
@@ -314,3 +314,4 @@ social:
 <div style="text-align:center">
 <img src="/images/athome/unescovid19.png" style="width:35%">
 </div>
+

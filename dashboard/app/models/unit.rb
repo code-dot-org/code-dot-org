@@ -45,6 +45,7 @@ class Unit < ApplicationRecord
   include Curriculum::CourseTypes
   include Curriculum::AssignableCourse
   include Rails.application.routes.url_helpers
+  include Unit::TextToSpeech
 
   include Seeded
   has_many :lesson_groups, -> {order(:position)}, foreign_key: 'script_id', dependent: :destroy
@@ -62,7 +63,7 @@ class Unit < ApplicationRecord
   has_one :plc_course_unit, class_name: 'Plc::CourseUnit', foreign_key: 'script_id', inverse_of: :script, dependent: :destroy
   belongs_to :wrapup_video, class_name: 'Video', optional: true
   belongs_to :user, optional: true
-  has_many :unit_group_units, foreign_key: 'script_id'
+  has_many :unit_group_units, foreign_key: 'script_id', dependent: :destroy
   has_many :unit_groups, through: :unit_group_units
   has_one :course_version, as: :content_root, dependent: :destroy
 
@@ -197,6 +198,8 @@ class Unit < ApplicationRecord
   after_save :generate_plc_objects
 
   UNIT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
+
+  TEACHER_FEEDBACK_INITIATIVES = %w(CSF CSC CSD CSP CSA).freeze
 
   def prevent_course_version_change?
     resources.any? ||
@@ -372,20 +375,6 @@ class Unit < ApplicationRecord
     end
   end
 
-  # @return [Array<Unit>] An array of modern elementary units.
-  def self.modern_elementary_courses
-    Unit::CATEGORIES[:csf].map {|name| Unit.get_from_cache(name)}
-  end
-
-  # @param locale [String] An "xx-YY" locale string.
-  # @return [Boolean] Whether all the modern elementary courses are available in the given locale.
-  def self.modern_elementary_courses_available?(locale)
-    @modern_elementary_courses_available = modern_elementary_courses.all? do |unit|
-      supported_languages = unit.supported_locales || []
-      supported_languages.any? {|s| locale.casecmp?(s)}
-    end
-  end
-
   def starting_level
     raise "Unit #{name} has no level to start at" if script_levels.empty?
     candidate_level = script_levels.first.or_next_progression_level
@@ -395,7 +384,7 @@ class Unit < ApplicationRecord
 
   # Find the lesson based on its relative position, lockable value, and if it has a lesson plan.
   # Raises `ActiveRecord::RecordNotFound` if no matching lesson is found.
-  def lesson_by_relative_position(position, unnumbered_lesson = false)
+  def lesson_by_relative_position(position, unnumbered_lesson: false)
     if unnumbered_lesson
       lessons.where(lockable: true, has_lesson_plan: false).find_by!(relative_position: position)
     else
@@ -449,7 +438,7 @@ class Unit < ApplicationRecord
   def self.script_level_cache
     return nil unless should_cache?
     @@script_level_cache ||= {}.tap do |cache|
-      script_cache.values.each do |unit|
+      script_cache.each_value do |unit|
         cache.merge!(unit.script_levels.index_by(&:id))
       end
     end
@@ -460,7 +449,7 @@ class Unit < ApplicationRecord
   def self.level_cache
     return nil unless should_cache?
     @@level_cache ||= {}.tap do |cache|
-      script_level_cache.values.each do |script_level|
+      script_level_cache.each_value do |script_level|
         level = script_level.level
         next unless level
         cache[level.id] = level unless cache.key? level.id
@@ -718,6 +707,16 @@ class Unit < ApplicationRecord
     user.assigned_script?(self)
   end
 
+  # If this unit is in a unit group, returns the next unit in the unit group.
+  # If it's the last unit in the unit group, returns nil.
+  # If it's not in a unit group, returns nil.
+  def next_unit(user)
+    return nil unless unit_group
+    other_units = unit_group.units_for_user(user)
+    self_index = other_units.index {|u| u.id == id}
+    other_units[self_index + 1] if self_index
+  end
+
   # @param family_name [String] The family name for a unit family.
   # @param version_year [String] Version year to return. Optional.
   # @param locale [String] User or request locale. Optional.
@@ -789,11 +788,17 @@ class Unit < ApplicationRecord
     text_response_levels = []
     script_levels.map do |script_level|
       script_level.levels.map do |level|
-        next if level.contained_levels.empty? ||
+        # We are looking for two types of text response levels: levels with contained levels
+        # that are text response levels, and predict levels that are free response (predict
+        # levels are used by lab2).
+        is_not_contained = level.contained_levels.empty? ||
           TEXT_RESPONSE_TYPES.exclude?(level.contained_levels.first.class)
+        is_not_predict_free_response = !level.predict_level? || level.properties.dig('predict_settings', 'questionType') != 'freeResponse'
+        next if is_not_contained && is_not_predict_free_response
+        text_response_level = level.predict_level? ? level : level.contained_levels.first
         text_response_levels << {
           script_level: script_level,
-          levels: [level.contained_levels.first]
+          levels: [text_response_level]
         }
       end
     end
@@ -816,8 +821,8 @@ class Unit < ApplicationRecord
     name
   end
 
-  def self.unit_in_category?(category, script)
-    return Unit.get_from_cache(script)&.course_version&.course_offering&.category == category
+  def in_initiative?(initiative)
+    return cached&.course_version&.course_offering&.marketing_initiative == initiative
   end
 
   # Legacy levels have different video and title logic in LevelsHelper.
@@ -845,7 +850,7 @@ class Unit < ApplicationRecord
   end
 
   def csf_international?
-    Unit.unit_in_category?('csf_international', name)
+    ScriptConstants::CATEGORIES[:csf_international].include?(name)
   end
 
   def self.unit_names_by_curriculum_umbrella(curriculum_umbrella)
@@ -872,6 +877,7 @@ class Unit < ApplicationRecord
     lessons.sum(&:total_lesson_duration)
   end
 
+  # curriculum umbrella is deprecated. use in_initiative? instead.
   def under_curriculum_umbrella?(specific_curriculum_umbrella)
     curriculum_umbrella == specific_curriculum_umbrella
   end
@@ -915,7 +921,7 @@ class Unit < ApplicationRecord
   end
 
   def csc?
-    Unit.unit_in_category?('csc', name)
+    in_initiative?('CSC')
   end
 
   # TODO: (Dani) Update to use new course types framework.
@@ -975,15 +981,6 @@ class Unit < ApplicationRecord
       }
     end
     summarized_lesson_levels
-  end
-
-  def text_to_speech_enabled?
-    tts?
-  end
-
-  # Generates TTS files for each level in a unit.
-  def tts_update(update_all = false)
-    levels.each {|l| l.tts_update(update_all)}
   end
 
   def hint_prompt_enabled?
@@ -1234,7 +1231,7 @@ class Unit < ApplicationRecord
         end
 
         source_course_version&.reference_guides&.each do |reference_guide|
-          reference_guide.copy_to_course_version(destination_unit_group.course_version)
+          reference_guide.copy_to_course_version(copied_unit.get_course_version)
         end
 
         if destination_professional_learning_course.nil?
@@ -1360,7 +1357,7 @@ class Unit < ApplicationRecord
     end
     update_teacher_resources(general_params[:resourceIds])
     update_student_resources(general_params[:studentResourceIds])
-    tts_update(true) if need_to_update_tts
+    tts_update(update_all: true) if need_to_update_tts
     begin
       if Rails.application.config.levelbuilder_mode
         unit = Unit.find_by_name(unit_name)
@@ -1462,7 +1459,8 @@ class Unit < ApplicationRecord
   def finish_url
     return hoc_finish_url if hoc?
     return csf_finish_url if csf?
-    nil
+    return CDO.code_org_url "/congrats/#{unit_group.name}" if unit_group
+    CDO.code_org_url "/congrats/#{name}"
   end
 
   # A unit that the general public can assign. Has been soft or
@@ -1612,16 +1610,21 @@ class Unit < ApplicationRecord
     include_lessons = false
     summary = summarize(include_lessons)
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
-    summary[:courseOfferingEditPath] = edit_course_offering_path(course_version.course_offering.key) if course_version
+    summary[:courseOfferingEditPath] = edit_course_offering_path(course_version&.course_offering&.key) if course_version
+    summary[:missingRequiredDeviceCompatibilities] = course_version&.course_offering&.missing_required_device_compatibility?
     summary[:coursePublishedState] = unit_group ? unit_group.published_state : published_state
     summary[:unitPublishedState] = unit_group ? published_state : nil
     summary[:isCSDCourseOffering] = unit_group&.course_version&.course_offering&.csd?
     summary
   end
 
+  def allow_major_curriculum_changes?
+    get_published_state == PUBLISHED_STATE.in_development || get_published_state == PUBLISHED_STATE.pilot
+  end
+
   def summarize_for_lesson_edit
     {
-      allowMajorCurriculumChanges: get_published_state == PUBLISHED_STATE.in_development || get_published_state == PUBLISHED_STATE.pilot,
+      allowMajorCurriculumChanges: allow_major_curriculum_changes?,
       courseVersionId: get_course_version&.id,
       unitPath: script_path(self),
       lessonExtrasAvailableForUnit: lesson_extras_available,
@@ -1637,7 +1640,7 @@ class Unit < ApplicationRecord
   #   initializeHiddenScripts in hiddenLessonRedux.js.
   def section_hidden_unit_info(user)
     return {} unless user && can_be_instructor?(user)
-    hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections).pluck(:section_id)
+    hidden_section_ids = SectionHiddenScript.where(script_id: id, section: user.sections_instructed).pluck(:section_id)
     hidden_section_ids.index_with([id])
   end
 
@@ -1718,6 +1721,7 @@ class Unit < ApplicationRecord
     raise "only call this in a test!" unless Rails.env.test?
     @@unit_cache = nil
     @@unit_family_cache = nil
+    @@script_level_cache = nil
     @@level_cache = nil
     @@all_scripts = nil
     @@visible_units = nil
@@ -1909,7 +1913,8 @@ class Unit < ApplicationRecord
       version_year: version_year,
       name: launched? ? localized_title : localized_title + " *",
       position: unit_group_units&.first&.position,
-      description: localized_description ? Services::MarkdownPreprocessor.process(localized_description) : nil
+      description: localized_description ? Services::MarkdownPreprocessor.process(localized_description) : nil,
+      is_feedback_enabled: teacher_feedback_enabled?
     }
   end
 
@@ -2088,5 +2093,10 @@ class Unit < ApplicationRecord
   # send students on the last level of a lesson to the unit overview page.
   def show_unit_overview_between_lessons?
     middle_high? || ['vpl-csd-summer-pilot'].include?(get_course_version&.course_offering&.key)
+  end
+
+  private def teacher_feedback_enabled?
+    initiative = get_course_version&.course_offering&.marketing_initiative
+    TEACHER_FEEDBACK_INITIATIVES.include? initiative
   end
 end

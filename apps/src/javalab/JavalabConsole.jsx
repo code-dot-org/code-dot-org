@@ -1,22 +1,24 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import javalabMsg from '@cdo/javalab/locale';
-import color from '@cdo/apps/util/color';
+
 import {KeyCodes} from '@cdo/apps/constants';
-import {
-  appendInputLog,
-  clearConsoleLogs,
-  closePhotoPrompter,
-} from './redux/consoleRedux';
-import {DisplayTheme} from './DisplayTheme';
 import CommandHistory from '@cdo/apps/lib/tools/jsdebugger/CommandHistory';
 import PaneHeader, {
   PaneSection,
   PaneButton,
 } from '@cdo/apps/templates/PaneHeader';
-import PhotoSelectionView from './components/PhotoSelectionView';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import color from '@cdo/apps/util/color';
+import javalabMsg from '@cdo/javalab/locale';
+
+import PhotoSelectionView from './components/PhotoSelectionView';
+import {DisplayTheme} from './DisplayTheme';
+import {
+  appendInputLog,
+  clearConsoleLogs,
+  closePhotoPrompter,
+} from './redux/consoleRedux';
 
 /**
  * Set the cursor position to the end of the text content in a div element.
@@ -73,6 +75,7 @@ class JavalabConsole extends React.Component {
 
   jumpToBottom = () => {
     this._consoleLogs.scrollTop = this._consoleLogs.scrollHeight;
+    this.focusInput();
   };
 
   // Transform this.props.consoleLogs into an array of strings, with each string
@@ -134,7 +137,6 @@ class JavalabConsole extends React.Component {
               onKeyDown={this.onInputKeyDown}
               aria-label="console input"
               ref={ref => (this.inputRef = ref)}
-              autoFocus
             />
           </div>
         );
@@ -171,7 +173,7 @@ class JavalabConsole extends React.Component {
       );
     } else {
       return (
-        <div onClick={this.onLogsClick} style={styles.logs}>
+        <div onClick={this.focusInput} style={styles.logs}>
           {this.renderConsoleLogs(displayTheme)}
         </div>
       );
@@ -199,7 +201,7 @@ class JavalabConsole extends React.Component {
     }
   };
 
-  onLogsClick = () => {
+  focusInput = () => {
     // only jump to input if the program is currently in run or test mode.
     if (this.props.shouldJumpToInput) {
       this.inputRef.focus();

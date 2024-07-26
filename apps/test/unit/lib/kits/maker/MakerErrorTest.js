@@ -1,9 +1,10 @@
 /** @file Tests for our MakerError classes */
-import {expect} from '../../../../util/reconfiguredChai';
 import MakerError, {
   ConnectionFailedError,
   wrapKnownMakerErrors,
 } from '@cdo/apps/lib/kits/maker/MakerError';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('MakerError', () => {
   describe('wrapKnownMakerErrors(originalError)', () => {

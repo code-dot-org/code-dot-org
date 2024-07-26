@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import color from '@cdo/apps/util/color';
 
 class FeatureDetails extends React.Component {
@@ -120,15 +122,15 @@ const styles = {
     overflowWrap: 'break-word',
   },
   bold: {
-    fontFamily: "'Gotham 7r', sans-serif",
+    ...fontConstants['main-font-bold'],
   },
   header: {
-    fontFamily: "'Gotham 7r', sans-serif",
+    ...fontConstants['main-font-bold'],
     marginTop: 0,
     lineHeight: '20px',
   },
   heading: {
-    fontFamily: "'Gotham 7r', sans-serif",
+    ...fontConstants['main-font-bold'],
     fontSize: 14,
     marginBottom: 5,
     textAlign: 'center',

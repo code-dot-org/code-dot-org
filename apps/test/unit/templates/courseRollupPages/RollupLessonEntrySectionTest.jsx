@@ -1,13 +1,14 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import RollupLessonEntrySection from '@cdo/apps/templates/courseRollupPages/RollupLessonEntrySection';
-import {courseData} from './rollupTestData';
-import i18n from '@cdo/locale';
 import {Provider} from 'react-redux';
+
 import {getStore} from '@cdo/apps/redux';
+import RollupLessonEntrySection from '@cdo/apps/templates/courseRollupPages/RollupLessonEntrySection';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import LessonStandards from '@cdo/apps/templates/lessonOverview/LessonStandards';
+import i18n from '@cdo/locale';
+
+import {courseData} from './rollupTestData';
 
 describe('RollupLessonEntrySection', () => {
   let defaultProps;
@@ -21,10 +22,10 @@ describe('RollupLessonEntrySection', () => {
   it('renders list of resources when there are resources', () => {
     const wrapper = mount(<RollupLessonEntrySection {...defaultProps} />);
 
-    expect(wrapper.text()).to.include('Teacher Resource');
-    expect(wrapper.text()).to.include('Slides');
-    expect(wrapper.text()).to.include('Student Resource');
-    expect(wrapper.text()).to.include('Activity Guide');
+    expect(wrapper.text()).toContain('Teacher Resource');
+    expect(wrapper.text()).toContain('Slides');
+    expect(wrapper.text()).toContain('Student Resource');
+    expect(wrapper.text()).toContain('Activity Guide');
   });
 
   it('renders no resources message when no resources', () => {
@@ -35,8 +36,9 @@ describe('RollupLessonEntrySection', () => {
       />
     );
 
-    expect(wrapper.containsMatchingElement(<p>{i18n.rollupNoResources()}</p>))
-      .to.be.true;
+    expect(
+      wrapper.containsMatchingElement(<p>{i18n.rollupNoResources()}</p>)
+    ).toBe(true);
   });
 
   it('renders list of prep when there is prep', () => {
@@ -53,7 +55,7 @@ describe('RollupLessonEntrySection', () => {
           expandableImages
         />
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('renders no prep message when no prep', () => {
@@ -65,8 +67,9 @@ describe('RollupLessonEntrySection', () => {
       />
     );
 
-    expect(wrapper.containsMatchingElement(<p>{i18n.rollupNoPrep()}</p>)).to.be
-      .true;
+    expect(wrapper.containsMatchingElement(<p>{i18n.rollupNoPrep()}</p>)).toBe(
+      true
+    );
   });
 
   it('renders list of vocab when there is vocab', () => {
@@ -77,8 +80,8 @@ describe('RollupLessonEntrySection', () => {
       />
     );
 
-    expect(wrapper.text()).to.include('word');
-    expect(wrapper.text()).to.include('definition');
+    expect(wrapper.text()).toContain('word');
+    expect(wrapper.text()).toContain('definition');
   });
 
   it('renders no vocab message when no vocab', () => {
@@ -90,8 +93,9 @@ describe('RollupLessonEntrySection', () => {
       />
     );
 
-    expect(wrapper.containsMatchingElement(<p>{i18n.rollupNoVocab()}</p>)).to.be
-      .true;
+    expect(wrapper.containsMatchingElement(<p>{i18n.rollupNoVocab()}</p>)).toBe(
+      true
+    );
   });
 
   it('renders list of code when there is code', () => {
@@ -99,7 +103,7 @@ describe('RollupLessonEntrySection', () => {
       <RollupLessonEntrySection {...defaultProps} objectToRollUp={'Code'} />
     );
 
-    expect(wrapper.text()).to.include('playSound');
+    expect(wrapper.text()).toContain('playSound');
   });
 
   it('renders no code message when no code', () => {
@@ -111,8 +115,9 @@ describe('RollupLessonEntrySection', () => {
       />
     );
 
-    expect(wrapper.containsMatchingElement(<p>{i18n.rollupNoCode()}</p>)).to.be
-      .true;
+    expect(wrapper.containsMatchingElement(<p>{i18n.rollupNoCode()}</p>)).toBe(
+      true
+    );
   });
 
   it('renders list of standards when there are standards', () => {
@@ -127,7 +132,7 @@ describe('RollupLessonEntrySection', () => {
       wrapper.containsMatchingElement(
         <LessonStandards standards={defaultProps.lesson.standards} />
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('renders no standards message when no standards', () => {
@@ -139,7 +144,8 @@ describe('RollupLessonEntrySection', () => {
       />
     );
 
-    expect(wrapper.containsMatchingElement(<p>{i18n.rollupNoStandards()}</p>))
-      .to.be.true;
+    expect(
+      wrapper.containsMatchingElement(<p>{i18n.rollupNoStandards()}</p>)
+    ).toBe(true);
   });
 });

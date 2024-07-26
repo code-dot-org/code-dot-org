@@ -1,6 +1,7 @@
-import React from 'react';
-import DeleteAccountDialog from './DeleteAccountDialog';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
+import DeleteAccountDialog from './DeleteAccountDialog';
 import {getCheckboxes} from './DeleteAccountHelpers';
 
 const PASSWORD = 'MY_PASSWORD';
@@ -18,10 +19,10 @@ const DEFAULT_PROPS = {
   onCancel: action('Cancel'),
   disableConfirm: false,
   deleteUser: action('Delete my Account'),
+  isAdmin: false,
 };
 
 export default {
-  title: 'DeleteAccountDialog',
   component: DeleteAccountDialog,
 };
 

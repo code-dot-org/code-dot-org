@@ -1,19 +1,19 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
-import {Provider, connect} from 'react-redux';
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import ProjectAppTypeArea from '@cdo/apps/templates/projects/ProjectAppTypeArea';
-import sinon from 'sinon';
+import {Provider, connect} from 'react-redux';
+
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import ProjectAppTypeArea from '@cdo/apps/templates/projects/ProjectAppTypeArea';
 import projectsReducer, {
   appendProjects,
 } from '@cdo/apps/templates/projects/projectsRedux';
+
 import {
   allowConsoleErrors,
   allowConsoleWarnings,
@@ -48,6 +48,7 @@ function generateFakeProjectData(numProjects, projectType) {
     publishedAt: new Date(startTime + projectNum).toISOString(),
     publishedToPublic: true,
     publishedToClass: true,
+    featuredAt: new Date(startTime + projectNum).toISOString(),
   }));
 }
 
@@ -61,13 +62,13 @@ describe('ProjectAppTypeArea', () => {
     stubRedux();
     registerReducers({projects: projectsReducer});
     ajaxDeferred = new $.Deferred();
-    stubAjax = sinon.stub($, 'ajax');
-    stubAjax.returns(ajaxDeferred);
-    stubNavigate = sinon.spy();
+    stubAjax = jest.spyOn($, 'ajax').mockClear().mockImplementation();
+    stubAjax.mockReturnValue(ajaxDeferred);
+    stubNavigate = jest.fn();
   });
 
   afterEach(() => {
-    stubAjax.restore();
+    stubAjax.mockRestore();
     restoreRedux();
   });
 
@@ -85,9 +86,9 @@ describe('ProjectAppTypeArea', () => {
           isDetailView={true}
         />
       );
-      expect(wrapper.find('ProjectCard')).to.have.length(12);
-      expect(wrapper.find('Button').first().text()).to.equal('View more');
-      expect(stubAjax).not.to.have.been.called;
+      expect(wrapper.find('ProjectCard')).toHaveLength(12);
+      expect(wrapper.find('Button').first().text()).toBe('View more');
+      expect(stubAjax).not.toHaveBeenCalled();
     });
 
     it('renders a working link to view more projects of a specific type', () => {
@@ -104,10 +105,10 @@ describe('ProjectAppTypeArea', () => {
           isDetailView={true}
         />
       );
-      expect(wrapper.find('.viewMoreLink')).to.have.length(1);
-      expect(wrapper.find('.viewMoreLink').text()).to.equal(viewMoreLink);
+      expect(wrapper.find('.viewMoreLink')).toHaveLength(1);
+      expect(wrapper.find('.viewMoreLink').text()).toBe(viewMoreLink);
       wrapper.find('.viewMoreLink').simulate('click');
-      expect(stubNavigate).to.have.been.called;
+      expect(stubNavigate).toHaveBeenCalled();
     });
 
     it('displays more projects when View More is pressed', () => {
@@ -130,24 +131,24 @@ describe('ProjectAppTypeArea', () => {
       );
       // some of the most useful selectors like [text="View more"] don't work
       // with mount(). see: https://github.com/airbnb/enzyme/issues/534
-      expect(wrapper.find('ProjectCard')).to.have.length(12);
+      expect(wrapper.find('ProjectCard')).toHaveLength(12);
       let viewMoreWrapper = wrapper.find('Button').first();
-      expect(viewMoreWrapper.text()).to.equal('View more');
+      expect(viewMoreWrapper.text()).toBe('View more');
 
       // Each click shows 12 more projects.
       viewMoreWrapper.simulate('click');
-      expect(wrapper.find('ProjectCard')).to.have.length(24);
+      expect(wrapper.find('ProjectCard')).toHaveLength(24);
       viewMoreWrapper = wrapper.find('Button').first();
-      expect(viewMoreWrapper.text()).to.equal('View more');
-      expect(viewMoreWrapper).to.have.length(1);
-      expect(stubAjax).not.to.have.been.called;
+      expect(viewMoreWrapper.text()).toBe('View more');
+      expect(viewMoreWrapper).toHaveLength(1);
+      expect(stubAjax).not.toHaveBeenCalled();
 
       // Requests more from the server once all projects are displayed.
       viewMoreWrapper.simulate('click');
-      expect(wrapper.find('ProjectCard')).to.have.length(30);
+      expect(wrapper.find('ProjectCard')).toHaveLength(30);
       viewMoreWrapper = wrapper.find('Button').first();
-      expect(viewMoreWrapper.text()).to.equal('View more');
-      expect(stubAjax).to.have.been.calledOnce;
+      expect(viewMoreWrapper.text()).toBe('View more');
+      expect(stubAjax).toHaveBeenCalledTimes(1);
 
       // Simulate the network request completing.
       ajaxDeferred.resolve({
@@ -156,17 +157,17 @@ describe('ProjectAppTypeArea', () => {
       wrapper.setProps({}); // Force refresh
 
       // Displays additional projects returned from the server.
-      expect(wrapper.find('ProjectCard')).to.have.length(36);
+      expect(wrapper.find('ProjectCard')).toHaveLength(36);
       viewMoreWrapper = wrapper.find('Button').first();
-      expect(viewMoreWrapper.text()).to.equal('View more');
+      expect(viewMoreWrapper.text()).toBe('View more');
 
       // Skips fetching projects from the server and hides the View More button
       // once all projects on the server and client are shown.
       viewMoreWrapper.simulate('click');
-      expect(wrapper.find('ProjectCard')).to.have.length(40);
+      expect(wrapper.find('ProjectCard')).toHaveLength(40);
       const otherButtonWrapper = wrapper.find('Button').first();
-      expect(otherButtonWrapper.text()).not.to.equal('View more');
-      expect(stubAjax).to.have.been.calledOnce;
+      expect(otherButtonWrapper.text()).not.toBe('View more');
+      expect(stubAjax).toHaveBeenCalledTimes(1);
     });
   });
 });

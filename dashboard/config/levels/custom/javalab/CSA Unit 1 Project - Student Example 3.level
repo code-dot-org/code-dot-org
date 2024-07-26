@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-10-18T13:52:50.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "mini_rubric": "false",
@@ -5214,12 +5218,9 @@
         "isVisible": true
       }
     },
-    "long_instructions": "**Teacher Feedback:** I had two that were at this level with their use of variables and colors. His GradientPainter class is extremely complex, but is cool in how it works and makes a great background. Still helping him comment out his code better, but was happy with the time and effort he put into this."
+    "long_instructions": "**Teacher Feedback:** I had two that were at this level with their use of variables and colors. His GradientPainter class is extremely complex, but is cool in how it works and makes a great background. Still helping him comment out his code better, but was happy with the time and effort he put into this.",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2021-10-18T13:52:50.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-10-18T13:52:50.554+00:00\",\"changed\":[\"cloned from \\\"CSA Unit 1 Project - Student Example 2\\\"\"],\"cloned_from\":\"CSA Unit 1 Project - Student Example 2\"},{\"changed_at\":\"2021-10-18 13:53:06 +0000\",\"changed\":[\"serialized_maze\",\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-18 13:54:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>

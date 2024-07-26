@@ -1,0 +1,26 @@
+name 'SP-VPL-21-CSD-mod5-Overview-AIML_-22_23k5PL1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Why Game Design?
+
+#### Game design enhances creativity and technical skills by introducing students to basic programming and digital tools. It also improves problem-solving abilities and storytelling skills, as students create narratives and work through game mechanics. Additionally, game design teaches perseverance through iterative testing and improvement, and fosters collaboration through group projects. It helps students understand complex systems and rules, and builds empathy by considering the player's experience.  
+
+
+## Example Student Projects: 
+<div style="float: left; text-align:center;"><strong>Cute Food Game </strong><br /><a href="https://studio.code.org/projects/game_design/HCreCXs4VSDQW6wkdle7qMsYvs17dE1SuQtnPz3iFR8" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin-left:25px; margin-right:25px; margin-bottom:5px;  margin-top:0px;" src="https://images.code.org/691413bcd00013d7f1b01c0f56414c3a-image-1720467761191.42.37 PM.png" width="200px"; alt="cartoon fries and cartoon pizza in a maze"></a></div>
+
+<div style="float: left; text-align:center;"><strong>Custom Cheetahs</strong><br /><a href="https://studio.code.org/projects/game_design/H2_zZSWx781bIZEbiXByTITXCwtIT3ZopMtq2zRYlzg" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin-left:25px; margin-right:25px; margin-bottom:5px; margin-top:0px;" src="https://images.code.org/2ed3b323cd83dea9e7aa20aa71195029-image-1720468062249.47.38 PM.png" width="200px" alt="cheetahs and a lion on a platformer game"></a></div>
+
+<div style="float: left; text-align:center;"><strong>Funny Plants</strong><br /><a href="https://studio.code.org/projects/game_design/6IJhNDYPYqow4L4tSOIINTuefj_Qsy5ie1h-hfUdMro" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin-left:25px; margin-right:25px; margin-bottom:5px; margin-top:0px;" src="https://images.code.org/5b5d00ee6af599ea890adb00c9505e5b-image-1720468201413.49.58 PM.png" width="200px" alt="handrawn cartoon person on a platformer"></a></div>
+
+
+<div style="clear:both"/>
+<br>
+ 
+
+## In this module, your students will use Sprite Lab to design and create games. 
+
+
+MARKDOWN

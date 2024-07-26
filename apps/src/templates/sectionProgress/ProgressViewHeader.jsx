@@ -1,15 +1,18 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import {getCurrentUnitData} from './sectionProgressRedux';
-import {ViewType, scriptDataPropType} from './sectionProgressConstants';
-import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
-import firehoseClient from '../../lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import color from '../../util/color';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
+import i18n from '@cdo/locale';
+
 import {h3Style} from '../../lib/ui/Headings';
+import firehoseClient from '../../lib/util/firehose';
+import color from '../../util/color';
+
+import {ViewType, unitDataPropType} from './sectionProgressConstants';
+import {getCurrentUnitData} from './sectionProgressRedux';
 import StandardsViewHeaderButtons from './standards/StandardsViewHeaderButtons';
 
 class ProgressViewHeader extends Component {
@@ -19,7 +22,7 @@ class ProgressViewHeader extends Component {
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     sectionId: PropTypes.number.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
-    scriptData: scriptDataPropType,
+    scriptData: unitDataPropType,
   };
 
   getLinkToOverview() {
@@ -44,6 +47,8 @@ class ProgressViewHeader extends Component {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
       sectionId: this.props.sectionId,
       unitId: this.props.scriptId,
+      windowWidth: window.innerWidth,
+      windowHeight: window.innerHeight,
     });
   };
 

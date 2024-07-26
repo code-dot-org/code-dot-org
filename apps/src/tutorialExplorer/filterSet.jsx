@@ -3,9 +3,10 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import FilterGroup from './filterGroup';
-import FilterGroupSortBy from './filterGroupSortBy';
 import FilterGroupOrgNames from './filterGroupOrgNames';
+import FilterGroupSortBy from './filterGroupSortBy';
 import {TutorialsSortByOptions} from './util';
 
 export default class FilterSet extends React.Component {

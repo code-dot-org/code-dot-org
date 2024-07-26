@@ -1,11 +1,12 @@
 import React from 'react';
-import ProjectWidget from './ProjectWidget';
-import {generateFakePersonalProjects} from './generateFakeProjects';
-import {reduxStore} from '../../../.storybook/decorators';
 import {Provider} from 'react-redux';
 
+import {reduxStore} from '../../../.storybook/decorators';
+
+import {generateFakePersonalProjects} from './generateFakeProjects';
+import ProjectWidget from './ProjectWidget';
+
 export default {
-  title: 'ProjectWidget',
   component: ProjectWidget,
 };
 

@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-23T20:25:05.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
   "properties": {
     "encrypted": "false",
     "long_instructions": "This program contains a `mountain`(#e7e8ea) array of the top five highest mountains in the world, and the `height`(#e7e8ea) array contains the height of each mountain in feet (in order).\r\n\r\n##In WorldMountains.java:\r\n\r\n1. Write the method `printMountainHeights()`(#e7e8ea).\r\n\r\n   * Traverse the `mountains`(#e7e8ea) and `heights`(#e7e8ea) arrays using a `while`(#e7e8ea) loop to create and return `mountainString`(#e7e8ea).\r\n   \r\n   * The `mountainString`(#e7e8ea) should contain each mountain name and height on a new line.\r\n\r\n##In MyConsole.java:\r\n\r\n2. Call the `printMountainHeights()`(#e7e8ea) method and print the result.\r\n\r\n![](https://images.code.org/692b0c9eef9d2dcda2e458bba1a2f83a-image-1648496712531.png)\r\n\r\n***Curious about this dataset?*** *Learn more about it [**here**](https://www.summitpost.org/)!*\r\n\r\n::: details [**Show Me How**]\r\nLoop through a 1D array using the following syntax:\r\n  \r\n  ```\r\n  // a variable to keep track of the current position in the array\r\n  int variableName = startingIndex;\r\n  \r\n  while (variableName < arrayName.length) {\r\n    // code to execute\r\n    // change of variableName\r\n  }\r\n  ```\r\n\r\nBe sure to change `variableName`(#e7e8ea) to a name you can easily identify, such as `index`(#e7e8ea), and set the `startingIndex`(#e7e8ea) to the index position you want to start at in the array.\r\n\r\nInside the `while`(#e7e8ea) loop, change the `variableName`(#e7e8ea) by the amount you want to move in the array, such as `variableName += 1`(#e7e8ea) to move one index at a time.\r\n:::",
@@ -19,12 +23,9 @@
         "text": "/*\n * Manages data about mountains\n */\npublic class WorldMountains {\n\n  private String[] names;\n  private int[] heights;\n\n  /*\n   * Creates a WorldMountains with a\n   * names array and a heights array\n   */\n  public WorldMountains(String[] names, int[] heights) {\n    this.names = names;\n    this.heights = heights;\n  }\n\n  /*\n   * Returns the array containing the mountain names\n   */\n  public String[] getNames() {\n    return names;\n  }\n\n  /*\n   * Returns the array containing the mountain heights\n   */\n  public int[] getHeights() {\n    return heights;\n  }\n\n  /*\n   * Returns a String containing the mountain names and their heights\n   */\n  public String printMountainHeights() {\n    String mountainString = \"\";\n    \n    // TO DO #1: Traverse the names and heights array to create\n    // a String containing each mountain name and height on a new line.\n\n    \n\n    return mountainString;\n  }\n  \n}",
         "isVisible": true
       }
-    }
+    },
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2022-08-23T20:25:05.000Z",
-  "level_num": "custom",
-  "user_id": 16889,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:25:05.283+00:00\",\"changed\":[\"cloned from \\\"CSA U3L2-L5_2022\\\"\"],\"cloned_from\":\"CSA U3L2-L5_2022\"},{\"changed_at\":\"2022-08-30 16:52:23 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 16:52:23 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 16:53:22 +0000\",\"changed\":[\"encrypted_exemplar_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 17:01:38 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-08-30 17:01:41 +0000\",\"changed\":[],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 19:32:55 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2022-09-07 19:33:02 +0000\",\"changed\":[\"encrypted_validation\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>

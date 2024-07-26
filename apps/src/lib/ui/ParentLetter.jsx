@@ -1,13 +1,17 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import {studio, pegasus} from '../util/urlHelpers';
-import {SectionLoginType} from '../../util/sharedConstants';
+
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {
+  EmailLinks,
+  SectionLoginType,
+} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
 import {queryParams} from '../../code-studio/utils';
 import color from '../../util/color';
-import i18n from '@cdo/locale';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {EmailLinks} from '@cdo/apps/util/sharedConstants';
+import {studio, pegasus} from '../util/urlHelpers';
 
 const RESEARCH_ARTICLE_URL =
   'https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536';
@@ -156,7 +160,7 @@ export default connect(state => ({
 const Header = ({logoUrl}) => {
   return (
     <header style={styles.header}>
-      <img src={logoUrl} style={styles.codeOrgLogo} />
+      <img src={logoUrl} style={styles.codeOrgLogo} alt={i18n.codeLogo()} />
     </header>
   );
 };
@@ -192,6 +196,7 @@ const SignInInstructions = ({
             <img
               src="/shared/images/clever_code_org_logo.png"
               style={styles.cleverCodeOrgLogo}
+              alt={i18n.codeLogoClever()}
             />
           </li>
         </ol>
@@ -223,6 +228,7 @@ const SignInInstructions = ({
                 <img
                   src={pegasus(`/images/${secretPicturePath}`)}
                   style={{width: 60, margin: 10}}
+                  alt={i18n.parentLetterPicturePasswordImg()}
                 />
               </span>
             )}

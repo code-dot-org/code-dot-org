@@ -91,7 +91,7 @@
         Comment: Redirects a subdomain to the root domain
         Runtime: cloudfront-js-1.0
       AutoPublish: true
-      FunctionCode: !Sub |
+      FunctionCode: |
         function handler(event) {
           var newUrl = 'https://<%=CDO.pegasus_hostname%>';
 

@@ -4,11 +4,6 @@
     "func": "makeProjectile",
     "inline": false,
     "blockText": "create projectile \n{ANIMATION_NAME} from {LOCATION} with speed {SPEED}direction{DIRECTION}",
-    "color": [
-      355,
-      ".7",
-      ".7"
-    ],
     "style": "sprite_blocks",
     "args": [
       {

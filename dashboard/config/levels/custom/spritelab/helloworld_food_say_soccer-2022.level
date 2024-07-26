@@ -1,5 +1,9 @@
 <GamelabJr>
   <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2022-09-19T19:15:11.000Z",
+  "level_num": "custom",
+  "user_id": 9,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -58,7 +62,7 @@
     "start_animations": "{\"orderedKeys\":[\"86af775d-bab1-4497-9118-53f3aa526b6d\",\"dfc8390d-812a-4d7c-88c3-6adba48ecfb5\"],\"propsByKey\":{\"dfc8390d-812a-4d7c-88c3-6adba48ecfb5\":{\"name\":\"soccer_player_7\",\"frameCount\":1,\"frameSize\":{\"x\":394,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"sports\"],\"jsonLastModified\":\"2022-10-06 22:48:19 UTC\",\"pngLastModified\":\"2022-10-06 22:48:19 UTC\",\"version\":\"XKOSqkBc4G_DuCsSOeqHdnwJDIj28dSt\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/XKOSqkBc4G_DuCsSOeqHdnwJDIj28dSt/category_sports/soccer_player_7.png\",\"sourceSize\":{\"x\":394,\"y\":400}},\"86af775d-bab1-4497-9118-53f3aa526b6d\":{\"name\":\"soccer_player_6\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"sports\"],\"jsonLastModified\":\"2022-10-06 22:48:36 UTC\",\"pngLastModified\":\"2022-10-06 22:48:36 UTC\",\"version\":\"XRhxuSw4Yp.hxkhLHBDZy0lsD7QZSv96\",\"sourceUrl\":\"/api/v1/animation-library/spritelab/XRhxuSw4Yp.hxkhLHBDZy0lsD7QZSv96/category_sports/soccer_player_6.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}\r\n\r\n\r\n\r\n",
     "validation_enabled": "true",
     "mini_toolbox": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"hello_world_say\",\r\n  \"callout_text\": \"Use this block to make sprites speak.\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"3\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left top\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"hello_world_make_sprite\",\r\n  \"callout_text\": \"Use this block to create a sprite.\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"1\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": -120,\r\n     \"y\": 10\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"hello_world_say\",\"callout_text\":\"Use this block to make sprites speak.\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"3\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left top\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"localization_key\":\"hello_world_make_sprite\",\"callout_text\":\"Use this block to create a sprite.\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"1\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":-120,\"y\":10}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"3\\\"]\",\"localization_key\":\"hello_world_say\",\"callout_text\":\"Use this block to make sprites speak.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left top\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"},{\"element_id\":\".blocklyFlyout [data-id=\\\"1\\\"]\",\"localization_key\":\"hello_world_make_sprite\",\"callout_text\":\"Use this block to create a sprite.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":-120,\"y\":10}}},\"on\":\"\"}]",
     "validation_code": "//Requires zHelloWorldValidation and zValidationHelperFunctions\r\nlevel1();",
     "hide_pause_button": "true",
     "hint_prompt_attempts_threshold": "1",
@@ -70,11 +74,7 @@
     "encrypted_examples": "5xgROt2I2rizbfYFq+7NroY9yjj/hEWZf1KgT6gSGjNuZEvvEuSZVO5tn5Kn\n9//AiQdVwMM1kRUHzChVHKQDoA==\n",
     "preload_asset_list": null
   },
-  "game_id": 64,
   "published": true,
-  "created_at": "2022-09-19T19:15:11.000Z",
-  "level_num": "custom",
-  "user_id": 9,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2022-09-19T19:15:11.648+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_say\\\"\"],\"cloned_from\":\"helloworld_food_say\"},{\"changed_at\":\"2022-10-06 01:58:45 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"instructions_icon\",\"authored_hints\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 01:59:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 02:00:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 02:06:08 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-06 16:58:10 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 03:02:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 03:36:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-07 15:37:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 22:26:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"authored_hints\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
@@ -88,7 +88,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_makeNewSpriteAnon">
+        <block type="gamelab_makeNewSpriteAnon" id="1">
           <title name="ANIMATION_NAME">"face_pizza_1"</title>
           <value name="LOCATION">
             <block type="gamelab_location_picker" can_disconnect_from_parent="false">
@@ -96,7 +96,7 @@
             </block>
           </value>
         </block>
-        <block type="gamelab_spriteSay">
+        <block type="gamelab_spriteSay" id="3">
           <title name="SPEECH">Hello, world!</title>
           <value name="SPRITE">
             <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">

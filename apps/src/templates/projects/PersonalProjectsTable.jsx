@@ -1,30 +1,27 @@
+import orderBy from 'lodash/orderBy';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import color from '../../util/color';
-import {ImageWithStatus} from '../ImageWithStatus';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
+
+import {DEPRECATED_PROJECT_TYPES} from '@cdo/apps/constants';
+import {isSignedIn} from '@cdo/apps/templates/currentUserRedux';
+import DeleteProjectDialog from '@cdo/apps/templates/projects/deleteDialog/DeleteProjectDialog';
+import FrozenProjectInfoDialog from '@cdo/apps/templates/projects/frozenProjectInfoDialog/FrozenProjectInfoDialog';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
+
+import color from '../../util/color';
+import {ImageWithStatus} from '../ImageWithStatus';
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
-import orderBy from 'lodash/orderBy';
+
+import PersonalProjectsNameCell from './PersonalProjectsNameCell';
+import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
 import {personalProjectDataPropType} from './projectConstants';
 import {PROJECT_TYPE_MAP} from './projectTypeMap';
-import {
-  AlwaysPublishableProjectTypes,
-  ConditionallyPublishableProjectTypes,
-  RestrictedPublishProjectTypes,
-} from '@cdo/apps/util/sharedConstants';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import PersonalProjectsTableActionsCell from './PersonalProjectsTableActionsCell';
-import PersonalProjectsNameCell from './PersonalProjectsNameCell';
-import PersonalProjectsPublishedCell from './PersonalProjectsPublishedCell';
-import PublishDialog from '@cdo/apps/templates/projects/publishDialog/PublishDialog';
-import DeleteProjectDialog from '@cdo/apps/templates/projects/deleteDialog/DeleteProjectDialog';
-import {isSignedIn} from '@cdo/apps/templates/currentUserRedux';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-
-const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
+import {getThumbnailUrl} from './projectUtils';
 
 const THUMBNAIL_SIZE = 65;
 
@@ -34,14 +31,11 @@ export const COLUMNS = {
   PROJECT_NAME: 1,
   APP_TYPE: 2,
   LAST_EDITED: 3,
-  LAST_PUBLISHED: 4,
-  ACTIONS: 5,
+  ACTIONS: 4,
 };
 
 class PersonalProjectsTable extends React.Component {
   static propTypes = {
-    canShare: PropTypes.bool.isRequired,
-
     // Provided by Redux
     personalProjectsList: PropTypes.arrayOf(personalProjectDataPropType),
     isLoadingPersonalProjectsList: PropTypes.bool.isRequired,
@@ -57,24 +51,6 @@ class PersonalProjectsTable extends React.Component {
     },
   };
 
-  publishedAtFormatter = (publishedAt, {rowData}) => {
-    const {canShare} = this.props;
-    const isPublishable =
-      AlwaysPublishableProjectTypes.includes(rowData.type) ||
-      (ConditionallyPublishableProjectTypes.includes(rowData.type) &&
-        canShare) ||
-      RestrictedPublishProjectTypes.includes(rowData.type);
-
-    return (
-      <PersonalProjectsPublishedCell
-        isPublishable={isPublishable}
-        isPublished={!!rowData.publishedAt}
-        projectId={rowData.channel}
-        projectType={rowData.type}
-      />
-    );
-  };
-
   actionsFormatter = (actions, {rowData}) => {
     return (
       <PersonalProjectsTableActionsCell
@@ -83,6 +59,7 @@ class PersonalProjectsTable extends React.Component {
         isEditing={rowData.isEditing}
         updatedName={rowData.updatedName}
         projectNameFailure={rowData.projectNameFailure}
+        isFrozen={rowData.frozen}
       />
     );
   };
@@ -157,7 +134,7 @@ class PersonalProjectsTable extends React.Component {
       {
         property: 'type',
         header: {
-          label: i18n.projectType(),
+          label: i18n.projectTypeTable(),
           props: {style: tableLayoutStyles.headerCell},
           transforms: [sortable],
         },
@@ -165,7 +142,6 @@ class PersonalProjectsTable extends React.Component {
           formatters: [typeFormatter],
           props: {
             style: {
-              ...styles.cellType,
               ...tableLayoutStyles.cell,
             },
           },
@@ -181,23 +157,6 @@ class PersonalProjectsTable extends React.Component {
         cell: {
           formatters: [dateFormatter],
           props: {style: tableLayoutStyles.cell},
-        },
-      },
-      {
-        property: 'publishedAt',
-        header: {
-          label: i18n.published(),
-          props: {style: tableLayoutStyles.headerCell},
-          transforms: [sortable],
-        },
-        cell: {
-          formatters: [this.publishedAtFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              ...styles.centeredCell,
-            },
-          },
         },
       },
       {
@@ -228,6 +187,11 @@ class PersonalProjectsTable extends React.Component {
   render() {
     const personalProjectsList = this.props.personalProjectsList || [];
 
+    // Filter out projects of deprecated labs, like Calc and Eval.
+    const supportedPersonalProjectsList = personalProjectsList.filter(
+      project => !DEPRECATED_PROJECT_TYPES.includes(project.type)
+    );
+
     // Define a sorting transform that can be applied to each column
     const sortable = wrappedSortable(
       this.getSortingColumns,
@@ -241,9 +205,9 @@ class PersonalProjectsTable extends React.Component {
       columns,
       sortingColumns,
       sort: orderBy,
-    })(personalProjectsList);
+    })(supportedPersonalProjectsList);
 
-    const noProjects = personalProjectsList.length === 0;
+    const noProjects = supportedPersonalProjectsList.length === 0;
 
     return (
       <div>
@@ -277,8 +241,8 @@ class PersonalProjectsTable extends React.Component {
             )}
           </div>
         )}
-        <PublishDialog />
         <DeleteProjectDialog />
+        <FrozenProjectInfoDialog />
       </div>
     );
   }
@@ -321,9 +285,6 @@ export const styles = {
     borderColor: color.border_light_gray,
     padding: 15,
   },
-  cellType: {
-    width: 120,
-  },
   centeredCell: {
     textAlign: 'center',
   },
@@ -344,7 +305,7 @@ export const styles = {
 // Cell formatters.
 const thumbnailFormatter = function (thumbnailUrl, {rowData}) {
   const projectUrl = `/projects/${rowData.type}/${rowData.channel}/edit`;
-  thumbnailUrl = thumbnailUrl || PROJECT_DEFAULT_IMAGE;
+  thumbnailUrl = getThumbnailUrl(thumbnailUrl, rowData.type);
   return (
     <a
       style={tableLayoutStyles.link}
@@ -371,6 +332,7 @@ const nameFormatter = (projectName, {rowData}) => {
       projectName={projectName}
       isEditing={rowData.isEditing}
       updatedName={updatedName}
+      isFrozen={rowData.frozen}
     />
   );
 };

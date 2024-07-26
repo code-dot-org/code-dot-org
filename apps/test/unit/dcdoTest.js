@@ -1,5 +1,6 @@
 import {DCDO} from '@cdo/apps/dcdo';
-import {expect} from '../util/reconfiguredChai';
+
+import {expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('DCDO.constructor', () => {
   it('still works given no config', () => {

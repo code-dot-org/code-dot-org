@@ -1,11 +1,6 @@
 {
   "category": "Experimental",
   "config": {
-    "color": [
-      120,
-      0.6,
-      0.6
-    ],
     "style": "procedure_blocks",
     "func": "addFourBlock",
     "blockText": "addFour",

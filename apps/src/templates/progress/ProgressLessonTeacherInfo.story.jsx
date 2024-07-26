@@ -1,20 +1,22 @@
 import React from 'react';
 import {Provider} from 'react-redux';
-import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
-import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
-import {LevelKind} from '@cdo/apps/util/sharedConstants';
-import {initProgress} from '@cdo/apps/code-studio/progressRedux';
-import {lessons} from '@cdo/apps/code-studio/progressReduxSelectors';
+
+import {setHiddenLessons} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {
   authorizeLockable,
   setSectionLockStatus,
 } from '@cdo/apps/code-studio/lessonLockRedux';
+import {initProgress} from '@cdo/apps/code-studio/progressRedux';
+import {lessons} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {setHiddenLessons} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 import teacherSections, {
   setSections,
   selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {LevelKind} from '@cdo/generated-scripts/sharedConstants';
+
+import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
 
 // 0
 const lockableNoPlanYesUrl = {
@@ -156,7 +158,6 @@ const style = {
 };
 
 export default {
-  title: 'ProgressLessonTeacherInfo',
   component: ProgressLessonTeacherInfo,
 };
 
@@ -250,43 +251,43 @@ HideableNonLockableNoPlanYesUrl.args = {
   lessonIndex: 3,
 };
 
-export const nonHideableNonLockableYesPlanYesUrl = Template.bind({});
-nonHideableNonLockableYesPlanYesUrl.args = {
+export const NonHideableNonLockableYesPlanYesUrl = Template.bind({});
+NonHideableNonLockableYesPlanYesUrl.args = {
   store: hiddenStore,
   state: hiddenStoreState,
   lessonIndex: 1,
 };
 
-export const nonHideableNonLockableNoPlanNoUrl = Template.bind({});
-nonHideableNonLockableNoPlanNoUrl.args = {
+export const NonHideableNonLockableNoPlanNoUrl = Template.bind({});
+NonHideableNonLockableNoPlanNoUrl.args = {
   store: hiddenStore,
   state: hiddenStoreState,
   lessonIndex: 6,
 };
 
-export const nonHideableNonLockableNoPlanYesUrl = Template.bind({});
-nonHideableNonLockableNoPlanYesUrl.args = {
+export const NonHideableNonLockableNoPlanYesUrl = Template.bind({});
+NonHideableNonLockableNoPlanYesUrl.args = {
   store: hiddenStore,
   state: hiddenStoreState,
   lessonIndex: 3,
 };
 
-export const nonHideableLockableYesPlanYesUrl = Template.bind({});
-nonHideableLockableYesPlanYesUrl.args = {
+export const NonHideableLockableYesPlanYesUrl = Template.bind({});
+NonHideableLockableYesPlanYesUrl.args = {
   store: hiddenStore,
   state: hiddenStoreState,
   lessonIndex: 2,
 };
 
-export const nonHideableLockableNoPlanNoUrl = Template.bind({});
-nonHideableLockableNoPlanNoUrl.args = {
+export const NonHideableLockableNoPlanNoUrl = Template.bind({});
+NonHideableLockableNoPlanNoUrl.args = {
   store: hiddenStore,
   state: hiddenStoreState,
   lessonIndex: 4,
 };
 
-export const nonHideableLockableNoPlanYesUrl = Template.bind({});
-nonHideableLockableNoPlanYesUrl.args = {
+export const NonHideableLockableNoPlanYesUrl = Template.bind({});
+NonHideableLockableNoPlanYesUrl.args = {
   store: hiddenStore,
   state: hiddenStoreState,
   lessonIndex: 0,

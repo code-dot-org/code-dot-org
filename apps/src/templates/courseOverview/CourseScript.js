@@ -1,22 +1,26 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import color from '@cdo/apps/util/color';
-import i18n from '@cdo/locale';
-import Button from '../Button';
-import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
-import AssignButton from '@cdo/apps/templates/AssignButton';
-import UnassignSectionButton from '@cdo/apps/templates/UnassignSectionButton';
-import Assigned from '@cdo/apps/templates/Assigned';
-import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+
 import {
   isScriptHiddenForSection,
   toggleHiddenScript,
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
-import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import fontConstants from '@cdo/apps/fontConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import AssignButton from '@cdo/apps/templates/AssignButton';
+import Assigned from '@cdo/apps/templates/Assigned';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import UnassignSectionButton from '@cdo/apps/templates/UnassignSectionButton';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import Button from '../Button';
+
+import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
 
 class CourseScript extends Component {
   static propTypes = {
@@ -192,7 +196,7 @@ const styles = {
   },
   title: {
     fontSize: 18,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
   // TODO: share better with ProgressLesson
   hidden: {

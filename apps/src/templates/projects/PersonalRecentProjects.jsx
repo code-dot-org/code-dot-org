@@ -1,11 +1,15 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import ProjectCard from './ProjectCard.jsx';
-import {personalProjectDataPropType} from './projectConstants';
-import color from '../../util/color';
-import i18n from '@cdo/locale';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import i18n from '@cdo/locale';
+
+import color from '../../util/color';
+
+import ProjectCard from './ProjectCard.jsx';
+import {personalProjectDataPropType} from './projectConstants';
 
 class PersonalRecentProjects extends Component {
   static propTypes = {
@@ -60,7 +64,7 @@ const styles = {
     paddingRight: 10,
     paddingBottom: 10,
     fontSize: 16,
-    fontFamily: 'Gotham 4r',
+    ...fontConstants['main-font-regular'],
     zIndex: 2,
     color: color.neutral_dark,
     width: 940,

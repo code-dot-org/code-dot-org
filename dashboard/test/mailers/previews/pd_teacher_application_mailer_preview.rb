@@ -34,9 +34,7 @@ class PdTeacherApplicationMailerPreview < ActionMailer::Preview
     Pd::Application::TeacherApplicationMailer.send :confirmation, build_application(matched: false, is_awaiting_admin_approval: true)
   end
 
-  private
-
-  def build_application(matched: true, is_awaiting_admin_approval: true, partner_contact_info: true)
+  private def build_application(matched: true, is_awaiting_admin_approval: true, partner_contact_info: true)
     # Build user explicitly (instead of create) so it's not saved
     school_info = build :school_info, school: School.first
     user = build :teacher, email: 'rubeus@hogwarts.co.uk', school_info: school_info

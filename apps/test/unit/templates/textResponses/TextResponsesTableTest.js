@@ -1,7 +1,9 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+
 import TextResponsesTable from '@cdo/apps/templates/textResponses/TextResponsesTable';
+
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const responses = [
   {

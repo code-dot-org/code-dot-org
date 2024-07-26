@@ -1,5 +1,10 @@
 <Weblab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 58,
+  "created_at": "2022-09-19T22:26:47.000Z",
+  "level_num": "custom",
+  "user_id": 155,
   "properties": {
     "long_instructions": "# Your Favorite Month\r\n\r\nThis page lists information on the different months of the year.\r\n\r\n# Do This\r\n\r\n1) Create a class for your favorite month so that it looks different from the others.  Use at least three properties in the CSS rule-set.\r\n",
     "instructions_important": "false",
@@ -31,12 +36,7 @@
     "encrypted_examples": "LgR/8dBQoJ76JdZKla8FY3KpQyXf/AzXgDjE1QCX+SFFeEmOlTsNOyq160rQ\nCEHZW1tdN4GbWrdVD5nYdOGngA==\n",
     "validation_enabled": "false"
   },
-  "game_id": 58,
-  "published": true,
-  "created_at": "2022-09-19T22:26:47.000Z",
-  "level_num": "custom",
-  "user_id": 155,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:26:47.756+00:00\",\"changed\":[\"cloned from \\\"CSD U2 classes months_2022\\\"\"],\"cloned_from\":\"CSD U2 classes months_2022\"},{\"changed_at\":\"2023-02-22 00:06:31 +0000\",\"changed\":[\"long_instructions\",\"reference_links\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:26:47.756+00:00\",\"changed\":[\"cloned from \\\"CSD U2 classes months_2022\\\"\"],\"cloned_from\":\"CSD U2 classes months_2022\"},{\"changed_at\":\"2023-02-22 00:06:31 +0000\",\"changed\":[\"long_instructions\",\"reference_links\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-27 15:54:47 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
 </Weblab>

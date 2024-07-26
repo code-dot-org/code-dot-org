@@ -2,13 +2,15 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
+
+import msg from '@cdo/locale';
+
+import ToggleGroup from '../templates/ToggleGroup';
 
 import {ApplabInterfaceMode} from './constants';
-import msg from '@cdo/locale';
 import {actions} from './redux/applab';
-import {connect} from 'react-redux';
 import ScreenSelector from './ScreenSelector';
-import ToggleGroup from '../templates/ToggleGroup';
 
 class PlaySpaceHeader extends React.Component {
   static propTypes = {

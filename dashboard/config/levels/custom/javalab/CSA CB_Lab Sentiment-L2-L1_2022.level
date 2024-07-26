@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2022-08-09T13:51:15.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
   "properties": {
     "encrypted": "false",
     "long_instructions": "With a partner, discuss how you\r\n\r\nuse the cleanSentiment.csv file provided here",
@@ -16,15 +20,9 @@
     "contained_level_names": [
       "CSA CB_Lab Sentiment-L2-FR1_2022"
     ],
-    "encrypted_examples": [
-
-    ]
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2022-08-09T13:51:15.000Z",
-  "level_num": "custom",
-  "user_id": 18603,
   "audit_log": "[{\"changed_at\":\"2022-08-09 13:51:24 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-09 13:51:59 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-09 13:52:02 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2022-08-09 14:05:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -258,6 +258,7 @@ de-DE:
   class_submission_out_of_school_summer_camp: Sommercamp
   classicmaze_name: Klassisches Labyrinth
   code_hoc_coming: '"The Hour of Code" ist da - 8.-14. Dezember!'
+  code_org_logo_alt: Code.org Startseite
   code_sign_up: Melden Sie sich an, um an der Informatikwoche teilzunehmen
   codea_beyond_gradelevel: Ab der 9. Klasse
   codea_beyond_longdescription: Mit Codea für iPad können Sie Spiele und Simulationen
@@ -1188,7 +1189,9 @@ de-DE:
   header_about_us: 'Über uns '
   header_course_catalog: Kurs Katalog
   header_courses: Kurse
+  header_districts: Bezirke
   header_documentation: Dokumentation
+  header_donate: Spenden
   header_educate_beyond: Jenseits von Code.org
   header_educate_community: Online Community
   header_educate_elementary: Grundschule
@@ -1206,6 +1209,7 @@ de-DE:
   header_incubator: Inkubator
   header_learn: Lernen
   header_legal: Privatsphäre und Rechtliches
+  header_legal_cookie_notice: Cookie-Meldung
   header_legal_privacy: Datenschutzerklärung
   header_legal_tos: AGBs
   header_my_dashboard: Meine Übersicht
@@ -1213,6 +1217,7 @@ de-DE:
   header_project_gallery: Projekte
   header_report_abuse: Missbrauch melden
   header_report_bug: Einen Fehler melden
+  header_schools: Schulen
   header_screen_reader_hamburger: Speisekarte
   header_screen_reader_help: Hilfe Menu
   header_sections: Lerngruppen
@@ -1224,7 +1229,7 @@ de-DE:
   help_recruit: Hilf uns, weitere Programmierer zu rekrutieren!
   help_recruit_coders: Hilf uns, weitere Programmierer/-innen für dein Team zu gewinnen!
   help_translate: Hilf mit, bei der Übersetzung.
-  hero_name: Minecraft Helden Reise
+  hero_name: Minecraft Heldenreise
   hoc-encryption_name: Einfache Verschlüsselung
   hoc-impact-study_name: Klassisches Labyrinth mit Umfrage
   hoc2014_everyone: Jeder
@@ -1647,6 +1652,7 @@ de-DE:
   homepage_slot_text_link_k5: Kurse für die Vor- und Grundschule
   homepage_slot_text_link_local: Unterricht vor Ort finden
   homepage_slot_text_link_middle: Mittelstufe
+  homepage_slot_text_link_middle_and_high: Mittel- und weiterführende Schule
   homepage_slot_text_link_othercourses: Andere Onlinekurse
   homepage_slot_text_link_pd: Fortbildung
   homepage_slot_text_link_shop: T-shirts, Hüte & mehr
@@ -2705,25 +2711,13 @@ de-DE:
     die erste Schritte in der Informatik fördert. Millionen von Schülern in über 180
     Ländern machen mit. Beteiligen auch Sie sich während der Informatikwoche vom 7.
     bis 13. Dezember
-  volunteer_engineer_submission_intro_guide: Erfahre mehr über unser <a href="%{volunteer_guide}">Volunteerprogramm
-    hier</a>.
   volunteer_engineer_submission_intro_guide_markdown: Mehr Informationen über unser
     [Freiwilligen Programm hier](%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: Suchen Sie Freiwillige? Finden Sie Freiwillige
-    vor Ort auf unserer <a href="%{volunteer_local}">Unterstützerkarte</a>.
   volunteer_engineer_submission_intro_links_markdown: Sind die Lehrer und suchen Freiwillige?
     Finden Sie Freiwillige vor Ort auf unserer [Unterstützerkarte](%{volunteer_local}).
-  volunteer_engineer_submission_intro_recruit: 'Viele Lehrer brauchen <span style="font-family:
-    ''Gotham 7r'', sans-serif;">Informatikbegeisterte</span>, die im Unterricht helfen
-    möchten oder <span style="font-family: ''Gotham 7r'', sans-serif;">Schüler inspirieren</span>,
-    indem sie über die vielfältigen Möglichkeiten der Informatik sprechen (auch über
-    Video-Chat).'
   volunteer_engineer_submission_intro_recruit_markdown: Viele Lehrer brauchen **Informatikbegeisterte**,
     die im Unterricht helfen möchten oder Schüler **inspirieren**, indem sie über
     die vielfältigen Möglichkeiten der Informatik sprechen (auch über Video-Chat).
-  volunteer_engineer_submission_intro_signup: Wenn Sie Informatikstudent oder Softwareexperte
-    sind, geben Sie bitte folgende Informationen ein. Die mit <span class="form-required-field">*</span>
-    markierten Felder sind obligatorisch.
   volunteer_engineer_submission_intro_signup_markdown: Bitte geben Sie die folgenden
     Informationen ein, wenn Sie Informatikstudent oder Softwareprofi sind. Sie müssen
     mindestens 18 Jahre alt sein, um sich als Freiwilliger anmelden zu können. Beachten

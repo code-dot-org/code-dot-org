@@ -1,6 +1,7 @@
 import React from 'react';
-import Typography from './Typography';
+
 import {SemanticTag, VisualAppearance, TypographyElementProps} from './types';
+import Typography from './Typography';
 
 interface TypographyElementToGenerateTemplate {
   displayName: string;

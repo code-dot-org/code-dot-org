@@ -570,15 +570,13 @@ class AnimationsTest < FilesApiTestBase
     )
   end
 
-  private
-
   #
   # Upload a new version of an animation.
   # @param [String] filename of the animation
   # @param [String] body of the animation
   # @return [String] S3 version id of the newly uploaded animation
   #
-  def upload(filename, body)
+  private def upload(filename, body)
     @api.post_file(filename, body, 'image/png')
     assert successful?
     JSON.parse(last_response.body)['versionId']
@@ -592,7 +590,7 @@ class AnimationsTest < FilesApiTestBase
   # @param [String] body of the animation
   # @return [String] S3 version id of the uploaded animation
   #
-  def replace_version(filename, version, body)
+  private def replace_version(filename, version, body)
     @api.post_file_version(filename, version, body, 'image/png')
     assert successful?
     JSON.parse(last_response.body)['versionId']
@@ -603,12 +601,12 @@ class AnimationsTest < FilesApiTestBase
   # on the end of its history.
   # @param [String] filename of the animation
   #
-  def soft_delete(filename)
+  private def soft_delete(filename)
     @api.delete_object(filename)
     assert successful?
   end
 
-  def delete_all_animation_versions(filename)
+  private def delete_all_animation_versions(filename)
     delete_all_versions(CDO.animations_s3_bucket, "animations_test/1/1/#{filename}")
   end
 
@@ -616,7 +614,7 @@ class AnimationsTest < FilesApiTestBase
   # Attempts to restore the file to the named version
   # @param [String] filename of the animation
   # @param [String] version - S3 version id
-  def restore_version(filename, version)
+  private def restore_version(filename, version)
     # We use AnimationBucket directly because there's no public API for this.
     # It does happen as part of a project restore though.
     AnimationBucket.new.restore_previous_version(@channel_id, filename, version, nil)

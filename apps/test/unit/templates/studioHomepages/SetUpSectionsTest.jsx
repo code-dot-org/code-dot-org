@@ -1,11 +1,10 @@
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow, mount} from 'enzyme';
-import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
-import Button from '@cdo/apps/templates/Button';
+
+import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import {UnconnectedSetUpSections as SetUpSections} from '@cdo/apps/templates/studioHomepages/SetUpSections';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 
 describe('SetUpSections', () => {
   it('renders as expected', () => {
@@ -26,26 +25,27 @@ describe('SetUpSections', () => {
   });
 
   it('calls beginEditingSection with no arguments when button is clicked', () => {
-    const spy = sinon.spy();
+    const spy = jest.fn();
     const wrapper = mount(<SetUpSections beginEditingSection={spy} />);
-    expect(spy).not.to.have.been.called;
+    expect(spy).not.toHaveBeenCalled();
 
-    wrapper.find(Button).simulate('click', {fake: 'event'});
-    expect(spy).to.have.been.calledOnce;
-    expect(spy.firstCall.args).to.be.empty;
+    wrapper.find('button').simulate('click', {fake: 'event'});
+    expect(spy).toHaveBeenCalledTimes(1);
+    expect(spy.mock.calls[0]).toHaveLength(0);
   });
 
   it('sends start event when button is clicked', () => {
     const wrapper = mount(<SetUpSections beginEditingSection={() => {}} />);
-    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
 
-    wrapper.find(Button).simulate('click', {fake: 'event'});
-    expect(analyticsSpy).to.have.been.calledOnce;
-    expect(analyticsSpy.firstCall.args).to.deep.eq([
+    wrapper.find('button').simulate('click', {fake: 'event'});
+    expect(analyticsSpy).toHaveBeenCalledTimes(1);
+    expect(analyticsSpy.mock.calls[0]).toEqual([
       'Section Setup Started',
       {},
+      PLATFORMS.BOTH,
     ]);
 
-    analyticsSpy.restore();
+    analyticsSpy.mockRestore();
   });
 });

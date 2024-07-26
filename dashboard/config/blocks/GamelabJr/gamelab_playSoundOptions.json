@@ -2,7 +2,7 @@
   "category": "World",
   "config": {
     "func": "playSoundOptions",
-    "docFunc": "gamelab_playSoundOptions",
+    "docFunc": "gamelab_playSound",
     "blockText": "play sound {SOUND}",
     "args": [
       {

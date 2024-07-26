@@ -1,6 +1,7 @@
+import $ from 'jquery';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {connect} from 'react-redux';
 /* eslint-disable no-restricted-imports */
 import {
   Row,
@@ -13,15 +14,11 @@ import {
   Table,
 } from 'react-bootstrap';
 /* eslint-enable no-restricted-imports */
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import $ from 'jquery';
-import {
-  RegionalPartnerDropdown,
-  UNMATCHED_PARTNER_VALUE,
-  UNMATCHED_PARTNER_LABEL,
-} from '../components/regional_partner_dropdown';
-import ConfirmationDialog from '../components/confirmation_dialog';
-import ScholarshipDropdown from '../components/scholarshipDropdown';
+import {connect} from 'react-redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import {CourseSpecificScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
+import {CourseKeyMap} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import {
   LabelOverrides as TeacherLabelOverrides,
   PageLabels as TeacherPageLabelsOverrides,
@@ -31,26 +28,33 @@ import {
   ValidScores as TeacherValidScores,
   PrincipalApprovalState,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import {CourseSpecificScholarshipDropdownOptions} from '@cdo/apps/generated/pd/scholarshipInfoConstants';
-import {CourseKeyMap} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import _ from 'lodash';
-import {
-  getApplicationStatuses,
-  ApplicationFinalStatuses,
-  ScholarshipStatusRequiredStatuses,
-} from './constants';
-import PrincipalApprovalButtons from './principal_approval_buttons';
-import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
-import ChangeLog from './detail_view/change_log';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
+
 import {
   PROGRAM_CSD,
   PROGRAM_CSP,
   PROGRAM_CSA,
   getProgramInfo,
 } from '../application/teacher/TeacherApplicationConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import ConfirmationDialog from '../components/confirmation_dialog';
+import {
+  RegionalPartnerDropdown,
+  UNMATCHED_PARTNER_VALUE,
+  UNMATCHED_PARTNER_LABEL,
+} from '../components/regional_partner_dropdown';
+import ScholarshipDropdown from '../components/scholarshipDropdown';
+
+import {
+  getApplicationStatuses,
+  ApplicationFinalStatuses,
+  ScholarshipStatusRequiredStatuses,
+} from './constants';
+import ChangeLog from './detail_view/change_log';
+import DetailViewWorkshopAssignmentResponse from './detail_view_workshop_assignment_response';
+import PrincipalApprovalButtons from './principal_approval_buttons';
 
 const NA = 'N/A';
 
@@ -490,7 +494,7 @@ export class DetailViewContents extends React.Component {
   };
 
   renderStatusSelect = () => {
-    let statusesToHide = [];
+    let statusesToHide = ['enrolled'];
     // Hide "Awaiting Admin Approval" status if it is not currently "awaiting_admin_approval"
     if (this.state.status !== 'awaiting_admin_approval') {
       statusesToHide.push('awaiting_admin_approval');
@@ -817,6 +821,14 @@ export class DetailViewContents extends React.Component {
               ] || NA}
             </p>
           )}
+          {this.multiAnswerQuestionFields[key]['census'] && (
+            <p>
+              Data from Census:{' '}
+              {this.props.applicationData.school_stats[
+                this.multiAnswerQuestionFields[key]['census']
+              ] || NA}
+            </p>
+          )}
         </div>
       );
     } else {
@@ -1032,7 +1044,7 @@ const styles = {
     width: 'auto',
   },
   lockedStatus: {
-    fontFamily: '"Gotham 7r"',
+    ...fontConstants['main-font-bold'],
     marginTop: 10,
   },
   caption: {

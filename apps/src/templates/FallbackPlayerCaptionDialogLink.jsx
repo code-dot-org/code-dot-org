@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import Button from './Button';
-import i18n from '@cdo/locale';
-import BaseDialog from './BaseDialog';
-import DialogFooter from './teacherDashboard/DialogFooter';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import i18n from '@cdo/locale';
+
+import BaseDialog from './BaseDialog';
+import Button from './Button';
+import DialogFooter from './teacherDashboard/DialogFooter';
 
 export default class FallbackPlayerCaptionDialogLink extends React.Component {
   static propTypes = {
@@ -86,7 +89,7 @@ const styles = {
     paddingRight: 20,
     paddingBottom: 20,
     textAlign: 'left',
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
   },
   dialogLinkContainer: {
     marginTop: 20,

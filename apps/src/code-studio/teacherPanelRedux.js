@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import queryString from 'query-string';
 
+import {getCurrentLevel} from './progressReduxSelectors';
+
 const SET_LEVELS_WITH_PROGRESS = 'progress/SET_LEVELS_WITH_PROGRESS';
 const SET_LOADING_LEVELS_WITH_PROGRESS =
   'progress/SET_LOADING_LEVELS_WITH_PROGRESS';
@@ -75,9 +77,11 @@ const getLevelProgressQueryParams = state => {
       script_id: state.progress.scriptId,
     };
   } else {
+    const currentLevel = getCurrentLevel(state);
+    // If we are on a sublevel, use the level ID of the main (parent) level
     return {
       script_id: state.progress.scriptId,
-      level_id: state.progress.currentLevelId,
+      level_id: currentLevel?.parentLevelId || state.progress.currentLevelId,
     };
   }
 };

@@ -1,7 +1,9 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+
 import {ImagePreview} from '@cdo/apps/templates/instructions/AniGifPreview';
+
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('ImagePreview', () => {
   it('renders normal size if noVisualization is false', () => {

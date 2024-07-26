@@ -1,7 +1,9 @@
-import React from 'react';
 import {isolateComponentTree} from 'isolate-react';
+import React from 'react';
+
 import DataDocIndex from '@cdo/apps/templates/dataDocs/DataDocIndex';
-import {expect} from '../../../util/reconfiguredChai';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('DataDocIndex', () => {
   const dataDoc1 = {

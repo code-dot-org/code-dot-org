@@ -9,276 +9,276 @@ layout: wide
   }
 </style>
 
-# دستورالعمل های ایجاد و ارسال آموزش ها و درس های ساعت کد™ و هفته آموزش علوم کامپیوتر
+# Guidelines for creating and submitting tutorials and lessons for Hour of Code™ and Computer Science Education Week
 
-Code.org میزبان انواع فعالیت ها، درس ها و فیلم های Hour of Code™ در وب سایت های Code.org و Hour of Code است. لیست فعلی در []({{ urls/learn }})hourofcode.com/learn است.
+Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org and Hour of Code websites. لیست فعلی در []({{ urls/learn }})hourofcode.com/learn است.
 
-آیا می خواهید آموزش خود هدایت شده، درس تحت رهبری معلم یا فعالیت رباتیک/سازنده خود را ارائه دهید که یک اصل علوم کامپیوتر را توضیح می دهد؟ به این جنبش جهانی بپیوندید و به شرکت کنندگان در سراسر جهان کمک کنید تا با یک ساعت کد شروع کنند یا با فعالیت های چند درس، روزانه یا یک هفته ای پیش بروند.
+آیا می‌خواهید آموزش خود خوان، درس تحت راهنمایی معلم، یا فعالیت‌های روباتیک/سازنده خودتان را که یک اصل علوم رایانه را توضیح می‌دهد، ارسال کنید؟ به این جنبش جهانی بپیوندید و به شرکت کنندگان در سراسر جهان کمک کنید تا با یک ساعت کد شروع کنند یا فعالیت های چند درس، یک روزه یا یک هفته ای را ادامه دهند.
 
-**پس از مطالعه دستورالعمل ها، می توانید فعالیت خود را از طریق صفحه [ساعت کد™ ارسال فعالیت](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform)ارسال کنید. شما می توانید یک فعالیت را در هر زمان ارسال کنید، اما مهلت ورود به هر سال تقویم داده شده 1 اکتبر است. (به عنوان مثال، هر فعالیتی که پس از 1 اکتبر 2023 دریافت شود، برای ساعت کد 2023 ذکر نخواهد شد.)** اگر در مورد ارسال فعالیت خود سؤالی دارید، لطفاً از طریق support@code.org با ما تماس بگیرید.
+**پس از مطالعه دستورالعمل ها، می توانید فعالیت خود را از طریق صفحه [ساعت کد™ ارسال فعالیت](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform) ارسال کنید. **شما می‌توانید هر زمان که بخواهید فعالیتی را ارسال کنید، اما مهلت درج در هر سال تقویمی معین دارد، اول اکتبر برای فعالیت‌های غیر هوش مصنوعی است و برای سال 2023، اگر روی ارسال AI کار می‌کنید، مهلت در هر زمانی از حالا تا 31 اکتبر است.</strong> به طور واضح، هرگونه فعالیتی که پس از ۱ اکتبر ۲۰۲۳ برای غیر AI یا ۳۱ اکتبر ۲۰۲۳ برای هوش مصنوعی دریافت شود، برای ساعت کدگذاری ۲۰۲۳ فهرست نخواهد شد. اگر در مورد ارسال فعالیت خود سؤالی دارید، لطفاً با ما در support@code.org تماس بگیرید.
 
-چند راهنمایی:
+چند نکته:
 
-1. **ارسال بیش از یک فعالیت**: اگر فعالیت هایی را برای سطوح مختلف، سنین مختلف یا دسته های دیگر ایجاد کرده اید، فعالیت های شما را به طور جداگانه لیست می کنیم تا هر معلم بتواند چیز مناسب را برای کلاس خود پیدا کند. هر آموزش یا فعالیت را به صورت جداگانه ارسال کنید. با توجه به تعداد ارسال هایی که در سال های اخیر دیده ایم، ما زمان برای بررسی **تا 5 فعالیت** در هر شریک خواهیم داشت. پس از آن، ما بهترین تلاش را برای بررسی هرچه بیشتر قبل از شروع ساعت کد خواهیم کرد.
+1. **ارسال بیش از یک فعالیت:**:اگر فعالیت‌هایی را برای سطوح مختلف، سنین مختلف یا دسته‌های دیگر ساخته‌اید، ما فعالیت‌های شما را به‌طور جداگانه فهرست می‌کنیم تا هر معلم بتواند مورد مناسب برای کلاس درس خود را پیدا کند. Submit each tutorial or activity individually. با توجه به تعداد ارسال هایی که در سال های اخیر شاهد بوده ایم، ما زمان برای بررسی **تا 5 فعالیت** در هر شریک خواهیم داشت. پس از آن، ما تمام تلاش خود را می کنیم تا قبل از شروع ساعت کد تا حد امکان، تعداد زیادی را بررسی کنیم.
 
-2. **فراتر از درس های مبتدی**: علاوه بر درس هایی برای معلمان و دانش آموزانی که برای اولین بار در حال یادگیری علوم کامپیوتر هستند، ما تجربیات یادگیری را برای کلاس های درس علوم کامپیوتر که می خواهند کمی بیشتر پیش بروند، لیست می کنیم! با ارسال درس برای کلاس هایی که قبلا با اصول اولیه راحت هستند، به ما کمک کنید.
+2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! با ارائه دروس برای کلاس هایی که از قبل با اصول اولیه راحت هستند به ما کمک کنید.
 
-3. **حوزه های موضوعی**: آیا یک ایده درس عالی دارید که علوم کامپیوتر را به ریاضی ادغام کند؟ تاريخ؟ هنر زبان؟ علم؟ هنر؟ یا یک موضوع دیگر؟ ما درخواست های متعددی از معلمان داشته ایم که می خواهند ساعت کد را به موضوع خود متصل کنند. معلمان می توانند برای نوع کلاس خود (گروه درجه یا موضوع) فیلتر کنند، بنابراین ما به کمک شما برای پر کردن شکاف ها برای ارائه فعالیت های کلاس درس یا برنامه های درسی که CS را به هر موضوع اصلی برای گروه های مختلف کلاس مرتبط می کند، نیاز داریم. ما همچنین یک دسته «علوم کامپیوتر» برای معلمان که به دنبال فعالیت های عمومی CS هستند، ادامه می دهیم.
+3. **Subject areas**: Have a great lesson idea that integrates Computer Science into Math? History? هنرهای زبان؟ علوم؟ Art? Or another subject? درخواست‌های زیادی از معلمانی داشته‌ایم که می‌خواهند ساعت کد را به حوزه موضوعی خود متصل کنند. Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
 
 <a id="top"></a>
 
-## شاخص:
+## فهرست مطالب:
 
-- [چه چیزی را ارسال کنید](#whatsubmit)
-- [دستورالعمل های عمومی برای ایجاد یک ساعت از کد™ فعالیت](#guidelines)
-- [نحوه ارسال](#submit)
-- [فعالیت ها چگونه ارزیابی خواهند شد](#inclusion)
-- [پیشنهاداتی برای طراحی فعالیت شما](#design)
-- [دستورالعمل های علامت تجاری](#tm)
-- [ردیابی پیکسل](#pixel)
-- [ترویج فعالیت، CSEDweek و ساعت کد](#promote)
+- [What to submit](#whatsubmit)
+- [دستورالعمل های کلی برای ایجاد یک فعالیت Hour of Code™](#guidelines)
+- [How to Submit](#submit)
+- [How activities will be evaluated](#inclusion)
+- [Suggestions for designing your activity](#design)
+- [Trademark Guidelines](#tm)
+- [Tracking Pixel](#pixel)
+- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
 
 <a id="whatsubmit"></a>
 
-## چه چیزی را ارسال کنید
+## What to submit
 
-**خود هدایت پازل یا بازی ([مثال](https://code.org/dance))**
+**پازل یا بازی خود هدایت شونده ([مثال](https://code.org/dance))**
 
-این فعالیت ها برای دانش آموزان طراحی شده است تا از طریق یک آموزش خود را هدایت کنند. آنها نیازی به آموزش زیادی از یک معلم یا کار آماده سازی معلم ندارند.
+این فعالیت‌ها برای دانش‌آموزان طراحی شده‌اند تا از طریق یک آموزش خود هدایت شوند. آنها به آموزش زیادی برای معلم یا کار آماده‌سازی معلم نیاز ندارند.
 
-**معلم تسهیل درس ([مثال](https://studio.code.org/s/course1/lessons/2/levels/1)، [قالب](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+** درس تسهیل شده معلم ([مثال](https://studio.code.org/s/course1/lessons/2/levels/1)، [قالب](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-اکنون که صدها هزار نفر از مربیان ساعت کد را امتحان کرده اند، بسیاری از کلاس های درس آماده فعالیت های خلاقانه تر هستند که اصول اولیه علوم کامپیوتر را آموزش می دهند. برای کمک به معلمان پیشرفته تر در پیدا کردن الهام، ما درس ها و برنامه های فعالیت «معلم رهبری» را برای جانبازان ساعت کد جمع آوری و تنظیم می کنیم.
+اکنون که صدها هزار مربی ساعت کد را امتحان کرده‌اند، بسیاری از کلاس‌های درس آماده فعالیت‌های خلاقانه‌تر هستند که اصول اولیه علوم کامپیوتر را آموزش می‌دهند. برای کمک به معلمان پیشرفته‌تر در یافتن الهام، ما درس‌ها و برنامه‌های فعالیت «مدیریت معلم» را برای کارآزموده ها Hour of Code جمع‌آوری و تنظیم می‌کنیم.
 
-یک نوع فعالیت که ما برای معلمان با تجربه ارائه خواهیم داد، پروژه های ایجاد «جعبه شن باز» است. فعالیت هایی که دانش آموزان را تشویق می کند تا برنامه، بازی، وب سایت یا پروژه های دیگر خود را بسازند. اگر به درستی تسهیل شود، فعالیت های باز بیشتر می توانند ماهیت خلاقانه علوم کامپیوتر را بهتر نشان دهند.
+One type of activity that we will feature for experienced teachers are “open sandbox” creation projects. Activities that encourage students to build their own app, game, website or other project. اگر به درستی تسهیل شود، فعالیت های بازتر می تواند ماهیت خلاقانه علم کامپیوتر را بهتر به نمایش بگذارد.
 
-برخی از مربیان همچنین ممکن است ترجیح دهند میزبان فعالیت های ساعت کد باشند که از یک قالب درس سنتی پیروی می کنند تا یک تجربه معمایی راهنما/بازی.
+برخی از مربیان نیز ممکن است ترجیح دهند که میزبان فعالیت‌های Hour of Code در قالب درس سنتی که از یک تجربه پازل/بازی هدایت‌شده پیروی میکنند باشند.
 
-شما می توانید با این [الگو](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) برای طرح درس خود شروع کنید.
+You can start with this [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) for your lesson plan.
 
-**فعالیت برای معلمان در سایر موضوعات/زمینه**
+**Activities for teachers in other subjects/fields**
 
-ما همچنین برنامه های درسی طراحی شده برای زمینه های مختلف موضوعی را ارائه می دهیم. به عنوان مثال، یک برنامه درسی یک ساعته برای آموزش کد در یک کلاس هندسه. یا یک تمرین mad-lib برای کلاس انگلیسی. یا یک فعالیت ایجاد مسابقه خلاقانه برای کلاس تاریخ. اینها می توانند به استخدام معلمان در سایر زمینه های موضوعی کمک کنند تا فعالیت ساعت کد را که منحصر به رشته آنها است هدایت کنند، در حالی که نشان می دهد چگونه CS می تواند بر بسیاری از زمینه های مختلف تأثیر بگذارد و آنها را تقویت کند.
+ما همچنین طرح های درسی را که برای حوزه های موضوعی مختلف طراحی شده اند ارائه می دهیم. به عنوان مثال، طرح درس یک ساعته برای آموزش کد در کلاس هندسه. یا یک تمرین mad-lib برای کلاس انگلیسی . Or a creative quiz-creation activity for history class. اینها می‌توانند به استخدام معلمان در سایر حوزه‌های موضوعی کمک کنند تا فعالیت‌های Hour of Code را که مختص رشته آن‌ها است، هدایت کنند، و در عین حال نشان دهند که چگونه CS می‌تواند بر بسیاری از حوزه‌های موضوعی مختلف تأثیر بگذارد و آن‌ها را تقویت کند.
 
-مثال‌ها:
+Examples:
 
-- تصاویر آینه (فعالیتی برای یک معلم هنر)
-- یک فعالیت آردوینو برای یک معلم فیزیک
-- تاریخچه فعالیت فناوری برای یک معلم تاریخ
-- و [این لیست](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) را برای ایده های بیشتر از مربیان مشاهده کنید (یا خودتان را به لیست اضافه کنید تا دیگران را الهام بخشید)
+- تصاویر آینه ای (فعالیتی برای یک معلم هنر) 
+- An arduino activity for a physics teacher
+- A history of technology activity for a history teacher
+- And see [this list](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) for more ideas from educators (or add your own to the list to inspire others)
 
-**برای دانش آموزان با نیازهای ویژه**
+**For students with special needs**
 
-اگر یک فعالیت یا آموزش ایجاد می کنید که برای دانش آموزان با نیازهای ویژه طراحی شده است، لطفا آن را در توضیحات تماس بگیرید. به طور خاص، گزینه های بسیار کمی برای افراد کم بینا وجود دارد. اگر فعالیت شما برای این مخاطب طراحی شده است، لطفا به ما اطلاع دهید.
+اگر فعالیت یا آموزشی ایجاد می‌کنید که برای دانش‌آموزان با نیازهای خاص طراحی شده است، لطفاً آن را در توضیحات فراخوانی کنید. In particular, there are very few options for the vision-impaired. If your activity is designed for this audience, please let us know.
 
-[**بازگشت به بالا**](#top)
+[**Back to the top**](#top)
 
 <a id="guidelines"></a>
 
-## دستورالعمل های عمومی برای ایجاد یک ساعت فعالیت کد
+## دستورالعمل های کلی برای ایجاد یک فعالیت Hour of Code
 
-هدف یک ساعت کد این است که به مبتدیان اولین طعم قابل دسترسی از علوم کامپیوتر یا برنامه نویسی را بدهد. لحن باید این باشد:
+هدف Hour of Code این است که به مبتدیان اولین مزه در دسترس از علوم کامپیوتر یا برنامه نویسی را بدهد. The tone should be that:
 
-- هر کس می تواند علوم کامپیوتر را یاد بگیرد - صرف نظر از سن، جنسیت، نژاد، یا توانایی/ناتوانی.
-- علوم کامپیوتر به طیف گسترده ای از زمینه ها و منافع متصل است. همه باید یاد بگیرند!
-- دانش آموزان را تشویق کنید تا چیزی منحصر به فرد ایجاد کنند که می تواند با والدین/دوستان یا آنلاین به اشتراک گذاشته شود.
+- هر کس می تواند علوم کامپیوتر را - صرف نظر از سن، جنسیت، نژاد، یا توانایی/ناتوانی یاد بگیرد.
+- علوم کامپیوتر به طیف گسترده ای از زمینه ها و منافع مرتبط است. Everybody should learn it!
+- دانش آموزان را تشویق کنید تا چیزی منحصر به فرد ایجاد کنند که می تواند با والدین/دوستان آنلاین به اشتراک گذاشته شود.
 
-این فعالیت ها باید یک مفهوم علوم رایانه مانند حلقه ها، شرط ها، رمزگذاری یا نحوه کار اینترنت را آموزش دهند. یک فعالیت همچنین می تواند در مورد چگونگی ارتباط علم کامپیوتر با مشاغل، حوادث یا تاریخ دنیای واقعی آموزش دهد. به عنوان مثال، آموزش طراحی UX برای ایجاد برنامه هایی که برای مخاطبان یا علت معنی دار هستند. ما فعالیت هایی را که بر نحو برنامه نویسی به جای مفاهیم تمرکز می کنند، دلسرد می کنیم. به عنوان مثال، ما فعالیت هایی را که HTML را آموزش می دهند لیست می کنیم، اما برجسته نمی کنیم. به طور مشابه، ما درس های برنامه نویسی بلوک را که بر تنظیم/تغییر گزینه های پیکربندی تمرکز می کنند، به جای یادگیری نحوه مدل سازی الگوریتم یا فرآیند، دلسرد می کنیم.
+The activities should teach a computer science concept such as loops, conditionals, encryption, or how the Internet works. An activity can also teach about how computer science connects to real world occupations, events, or history. به عنوان مثال، آموزش طراحی UX برای ساخت اپلیکیشن‌هایی که برای مخاطب یا هدف معنادار هستند. ما از فعالیت هایی که به جای مفاهیم بر روی نحوی برنامه نویسی تمرکز دارند، منع می کنیم. For example, we will list, but not highlight, activities that teach HTML. به طور مشابه، ما درس‌های برنامه‌نویسی بلوکی را که بر روی تنظیم/تغییر گزینه‌های پیکربندی تمرکز می‌کنند به جای یادگیری نحوه مدل‌سازی یک الگوریتم یا فرآیند، منع می‌کنیم.
 
-*الزامات فنی: به* دلیل طیف گسترده ای از تنظیمات فناوری مدرسه و کلاس، بهترین فعالیت ها مبتنی بر وب یا تلفن های هوشمند هستند، یا فعالیت هایی به سبک غیر از برق که مفاهیم علوم کامپیوتر را بدون استفاده از رایانه آموزش می دهند (به http://csunplugged.com/ مراجعه کنید). [](http://csunplugged.com/) فعالیت هایی که نیاز به نصب برنامه، برنامه دسکتاپ یا تجربه کنسول بازی دارند، خوب هستند اما ایده آل نیستند. ما فعالیت هایی را که نیاز به ثبت نام یا پرداخت دارند لیست نمی کنیم. (فعالیت های رباتیک می تواند نیاز به خرید رباتیک داشته باشد.)
+*الزامات فنی: به* دلیل طیف گسترده ای از تنظیمات فناوری مدرسه و کلاس، بهترین فعالیت ها مبتنی بر وب یا تلفن های هوشمند هستند، یا فعالیت هایی به سبک غیر از برق که مفاهیم علوم کامپیوتر را بدون استفاده از رایانه آموزش می دهند (به http://csunplugged.com/ مراجعه کنید). [](http://csunplugged.com/) Activities that require an app-install, desktop app, or game-console experiences are okay but not ideal. We will not list activities that require sign up or payment. (Robotics activities can require robotics purchase.)
 
-*قالب مبتنی بر دانش آموز (خود هدایت شده):* ساعت اصلی کد بیشتر بر موفقیت آموزش ها یا درس های خود هدایت شده ساخته شده است، که به صورت اختیاری توسط معلم تسهیل می شود. گزینه های موجود زیادی وجود دارد، اما اگر می خواهید یک مورد جدید ایجاد کنید، این فعالیت ها باید طراحی شوند تا بتوانند برای دانش آموزی که به تنهایی کار می کند یا در کلاسی که معلم آن حداقل آمادگی یا پس زمینه CS را دارد، سرگرم کننده باشد. آنها باید دستورالعمل هایی را برای دانش آموزان فراهم کنند، در مقابل یک چالش یک ساعته باز. در حالت ایده آل، دستورالعمل ها و آموزش ها به طور مستقیم به پلت فرم برنامه نویسی متصل می شوند تا از تغییر زبانه ها یا پنجره ها بین آموزش و پلت فرم برنامه نویسی جلوگیری شود.
+*Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. گزینه های موجود زیادی وجود دارد، اما اگر می خواهید یک مورد جدید ایجاد کنید، این فعالیت ها باید طراحی شوند تا بتوانند برای دانش آموزی که به تنهایی کار می کند یا در کلاسی که معلم آن حداقل آمادگی یا پس زمینه CS را دارد، سرگرم‌کننده باشد. آنها باید دستورالعمل هایی را برای دانش آموزان ، در مقابل یک چالش یک ساعته باز فراهم کنند. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
 
-برای درک طیف گسترده ای از انواع آموزش ها و برنامه های درسی که می توانید ایجاد کنید، به صفحه [ساعت فعالیت کد](https://hourofcode.com/us/learn)مراجعه کنید.
+To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
 
-[**بازگشت به بالا**](#top)
+[**Back to the top**](#top)
 
 <a id="submit"></a>
 
-## نحوه ارسال
+## How to submit
 
-به صفحه ارسال فعالیت [ساعت کد™](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform) مراجعه کرده و سوالات را برای ارسال فعالیت خود تکمیل کنید.
+Visit the [Hour of Code™ Activity and AI Submission page](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform) and complete the questions to submit your activity.
 
-آنچه شما نیاز دارید:
+What you’ll need:
 
-* نام و ایمیل مخاطب اصلی نماینده فعالیت ارسال شده
-* نام فعالیت (نمی تواند شامل «ساعت کد» در نام باشد)
-* پیوند URL به فعالیت
-* آیا این فعالیت شامل AI است: بله یا خیر
-* شرح فعالیت (حداکثر تعداد کاراکتر: 400) 
-    * لطفاً در توضیحات ذکر کنید که آیا عمدتا توسط دانش آموز هدایت می شود یا توسط معلم تسهیل می شود. علاوه بر این، برخی از مدارس علاقه مند به دانستن اینکه آیا فعالیت های ساعت کد مربوط به هسته مشترک یا استانداردهای علمی نسل بعدی است. اگر فعالیت به استانداردهای خاصی مربوط می شود، این اطلاعات را در نظر بگیرید.
-* سطح (های) درجه توصیه شده برای کاربران در نظر گرفته شده. شما می توانید به \[استانداردهای K-12 انجمن معلمان علوم کامپیوتر\] (https://k12cs.org/framework-statements-by-grade-band/) برای مفاهیم علوم کامپیوتر مناسب مراجعه کنید. سطح درجه نمونه شامل موارد زیر است: 
-    * مهد کودک - درجه 1 (سنین 4-6)
-    * نمرات 2-5 (سنین 7-10)
-    * نمرات 6-8 (سنین 11-13)
-    * نمرات 9+ (سنین 14 +)
-* لیستی از زبان های برنامه نویسی که فعالیت شما آموزش می دهد. به عنوان مثال C/C ++، جاوا، جاوا اسکریپت و غیره یا مستقل از زبان (برای برنامه های درسی که می تواند به چندین زبان تدریس شود) هنر زبان را انتخاب کنید.
-* لیستی از زبان های طبیعی پشتیبانی شده توجه: تشخیص زبان مسئولیت ارائه دهنده فعالیت است؛ ما همه کاربران را به URL ارائه شده هدایت خواهیم کرد. یا مستقل از زبان (برای برنامه های درسی که می تواند به چندین زبان تدریس شود)
-* یک مربی باید از فعالیت شما در چه سطحی از تجربه استفاده کند؟ (به عنوان مثال مبتدی یا راحت.) دانش آموزان چه سطحی از تجربه را باید داشته باشند؟
-* یک مربی باید از فعالیت شما در چه سطحی از تجربه استفاده کند؟ (به عنوان مثال مبتدی یا راحت.) دانش آموزان چه سطحی از تجربه را باید داشته باشند؟ اگر می خواهید فعالیت های پیشرفته تر Hour of Code™ را آماده کنید، لطفاً دانش قبلی مورد نیاز را در توضیحات فعالیت خود بگنجانید.
-* طول فعالیت شما 
-    * فقط 1 ساعت
-    * 1 ساعت با دوره پیگیری
-    * 2-6 ساعت (می تواند چندین درس باشد)
-* لیستی از امکانات دسترسی، اگر فعالیت شما آنها را داشته باشد. این موارد شامل سازگاری صفحه خوان، قابلیت های متن به گفتار، استفاده از رنگ های کنتراست بالا یا هر گونه امکانات دیگری است که برای زبان آموزان معلول ساخته شده است.
+* Name and email of the primary contact representing the submitted activity
+* Activity Name (cannot include “Hour of Code” in the name)
+* URL link to the activity
+* Does this activity include AI: Yes or No
+* An activity description (max character count: 400) 
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* سطح (های) در نظر گرفته شده درجه توصیه شده برای کاربران. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. نمونه سطوح درجه عبارتند از: 
+    * مهد کودک - کلاس 1 (سنین 4-6)
+    * کلاس های 2-5 (سن 7-10)
+    * کلاس های 6-8 (سنین 11 تا 13)
+    * کلاس های 9+ (سنین 14 +)
+* لیستی از زمینه های موضوعی که فعالیت شما در بر می گیرد (علاوه بر علوم کامپیوتر). For example, if a math teacher can use your activity to teach about angles or parabolas, list as math. If you have a mad libs activity that teaches verbs/nouns/etc. هنرهای زبان را انتخاب کنید.
+* لیستی از زبان های برنامه نویسی که فعالیت شما آموزش می دهد. یعنی C/C ++، جاوا، جاوا اسکریپت و غیره یا مستقل از زبان (برای برنامه های درسی که می توانند به چندین زبان تدریس شوند)
+* لیستی از زبان های طبیعی پشتیبانی شده توجه: تشخیص زبان بر عهده ارائه دهنده فعالیت است؛ ما همه کاربران را به یک URL ارائه شده هدایت خواهیم کرد.
+* یک مربی برای استفاده از فعالیت شما چه سطح تجربه ای باید داشته باشد؟ (به عنوان مثال مبتدی یا ماهر.) دانش آموزان چه سطحی از تجربه را باید داشته باشند؟ اگر می خواهید فعالیت های پیشرفته‌تر Hour of Code™ را آماده کنید، لطفاً دانش قبلی مورد نیاز را در توضیحات فعالیت خود بگنجانید.
+* The length of your activity 
+    * 1 hour only
+    * 1 hour with follow-on course
+    * 2-6 hours (can be multiple lessons)
+* لیستی از امکانات قابل دسترسی، اگر فعالیت شما آنها را داشته باشند. این موارد شامل سازگاری با صفحه خوان، قابلیت های متن به گفتار، استفاده از رنگهای با کنتراست بالا یا هر گونه سازگاری دیگر برای یادگیرندگان دارای معلولیت است.
 
-#### موارد اضافی که هنگام ارسال برنامه های درس به آنها نیاز دارید
+#### Additional things you’ll need when submitting Lesson Plans
 
-* پیوند به طرح درس خود را. این می تواند یک صفحه وب، لینک dropbox، درایو گوگل یا سرویس مشابه باشد.
-* معلم برای انجام برنامه درسی شما به چه نرم افزار و/یا سخت افزاری نیاز دارد (Scratch؟ روبات ها؟ هیچ چیز؟)
+* پیوند به برنامه درس خود. This can be a web page, dropbox link, google drive or similar service.
+* What software and/or hardware the teacher will need to do your lesson plan (Scratch? Robots? Nothing?)
 
-#### موارد اضافی که هنگام ارسال فعالیت های آنلاین به آنها نیاز دارید
+#### Additional things you’ll need when submitting Online Activities
 
-* نام و آرم سازمان شما
-* این که آیا COPPA سازگار است یا نه
-* پیوند URL به یادداشت های معلم (اختیاری)
-* لیستی از سیستم عامل های تست شده/سازگار: 
-    * مبتنی بر وب: کدام سیستم عامل ها را آزمایش کرده اید؟ 
-        * سیستم عامل - Mac، Win و نسخه های دیگر
-        * مرورگرها - IE11، لبه، فایرفاکس، کروم، سافاری
-        * در iOS موبایل سافاری (موبایل بهینه سازی شده)
-        * آندروید کروم (موبایل بهینه سازی شده)
-    * غیر مبتنی بر وب: مشخص کردن پلت فرم برای کد بومی (مک، وین، iOS، آندروید، ایکس باکس، دیگر)
+* Name and logo of your organization
+* آیا سازگار با COPPA باشد یا نه
+* یک لینک URL به یادداشت های معلم (اختیاری)
+* A list of tested/compatible platforms: 
+    * Web based: Which platforms have you tested? 
+        * OS - Mac, Win, and other versions
+        * Browsers - IE11, Edge, Firefox, Chrome, Safari
+        * سافاری موبایل iOS (بهینه شده برای تلفن همراه)
+        * اندروید کروم (بهینه سازی شده برای تلفن همراه)
+    * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
     * آنپلاگد
-* تصویر یا تصویر بازاریابی از ساعت فعالیت کد. لطفا حداقل یک تصویر با ابعاد 4:3 ارسال کنید. این باید حداقل 520px در 390px باشد. این تصویر نباید هیچ متنی روی آن داشته باشد (به غیر از آرم شما)، به منظور دسترسی بیشتر به آن برای غیر انگلیسی زبانان. اگر یک تصویر مناسب ارائه نشده باشد، ما ممکن است تصویر خود را از آموزش خود بگیریم یا ممکن است تصمیم بگیریم که آن را لیست نکنیم. همه تصاویر باید به عنوان یک لینک URL به یک .jpg، .jpeg یا .png ارسال شوند.
-* به منظور پیگیری دقیق تر مشارکت، شرکای آموزش شخص ثالث باید تصاویر ردیابی 1 پیکسل را در صفحه اول آموزش Hour of Code خود قرار دهند. برای جزئیات بیشتر به بخش [ردیابی پیکسل](#pixel) در زیر مراجعه کنید.
+* اسکرین شات یا تصویر بازاریابی فعالیت ساعت کد. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. این تصویر نباید هیچ متنی بر روی آن داشته باشد (به غیر از لوگوی شما)، تا برای غیر انگلیسی زبانان قابل دسترسی تر باشد. اگر تصویر مناسبی ارائه نشده باشد، ممکن است اسکرین شات خود را از آموزش شما بگیریم یا ممکن است انتخاب کنیم که آن را لیست نکنیم. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
+* In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. See the [Tracking Pixel](#pixel) section below for more details.
 * پس از اتمام فعالیت خود، کاربران باید به [](https://code.org/api/hour/finish) code.org/api/hour/finish هدایت شوند تا بتوانند: 
-    * در رسانه های اجتماعی به اشتراک بگذارید که آنها ساعت کد را تکمیل کرده اند
-    * یک گواهی دریافت کنید که آنها ساعت کد را تکمیل کرده اند
-    * به تابلوهای راهنما مراجعه کنید که کدام کشورها/شهرها بالاترین نرخ مشارکت را در فعالیتهای ساعت کد دارند
-    * برای کاربرانی که یک ساعت را صرف فعالیت شما می کنند و آن را کامل نمی کنند، لطفاً دکمه ای را روی فعالیت خود قرار دهید که روی آن نوشته شده است «I't Find with my Hour of Code» که به [](https://code.org/api/hour/finish) code.org/api/hour/finish نیز پیوند دارد.
-* (اختیاری) ما ممکن است با یک پیوند نظرسنجی/فرم آنلاین پیگیری کنیم و گزارشی از معیارهای فعالیت زیر را درخواست کنیم: 
-    * برای فعالیت های آنلاین (به ویژه برنامه های تلفن هوشمند/رایانه لوحی): 
-        * تعداد کاربران
-        * چند نفر این کار را انجام دادند
-        * میانگین زمان انجام وظیفه
-        * تعداد کل خطوط کد نوشته شده بر روی تمام کاربران
-        * چند نفر به یادگیری بیشتر ادامه دادند (اندازه گیری شده به عنوان هر کاربری که کار را تمام می کند و به کارهای اضافی در سایت شما می رود)
-    * برای فعالیت های آفلاین 
-        * تعداد دانلود نسخه کاغذی فعالیت (در صورت وجود)
+    * در رسانه های اجتماعی به اشتراک بگذارید که آنها ساعت کد را به پایان رسانده اند
+    * دریافت گواهی مبنی بر تکمیل ساعت کد
+    * جدول رتبه بندی درباره اینکه کدام کشورها/شهرهایی دارای بالاترین نرخ مشارکت در فعالیت های Hour of Code هستند را ببینید
+    * برای کاربرانی که یک ساعت را صرف فعالیت شما می کنند و آن را تکمیل نمی کنند، لطفاً دکمه ای را در فعالیت خود قرار دهید که می گوید «ساعت کد من تمام شده است» که به [code.org/api/hour/finish](https://code.org/api/hour/finish) نیز پیوند می دهد.
+* (اختیاری) ما ممکن است با یک لینک نظرسنجی/فرم آنلاین پیگیری کنیم که بخواهیم گزارش معیارهای فعالیت زیر را ارائه دهیم: 
+    * برای فعالیت های آنلاین (به ویژه برنامه های تلفن هوشمند/تبلت): 
+        * Number of users
+        * چند نفر کار را تکمیل کردند
+        * میانگین زمان در سایت
+        * Number of total lines of code written over all users
+        * چند نفر به یادگیری بیشتر ادامه می دهند (اندازه گیری می شود که هر کاربری که کار را تمام کرده و کارهای اضافی را در سایت شما انجام می دهد)
+    * For offline activities 
+        * تعداد دانلود نسخه کاغذی فعالیت (در صورت لزوم)
 
-#### موارد اضافی که هنگام ارسال Robotics به آنها نیاز دارید
+#### Additional things you’ll need when submitting Robotics
 
-* اگر شما یک فعالیت رباتیک ارائه دهید، ما باید هزینه هر دانش آموز را برای رباتیک بدانیم.
-* برای ارزیابی فعالیت های رباتیک برای ورود به وب سایت، ما به شما نیاز داریم که نمونه کیت ها را برای داوران ارسال کنید.
+* اگر یک فعالیت رباتیک ارائه می دهید، ما باید هزینه هر دانش آموز برای رباتیک را بدانیم.
+* To evaluate robotics activities for inclusion on the website, we will need you to send sample kits to reviewers.
 
-[**بازگشت به بالا**](#top)
+[**Back to the top**](#top)
 
 <a id="inclusion"></a>
 
-## فعالیت ها چگونه ارزیابی خواهند شد
+## How activities will be evaluated
 
-کمیته متنوعی از مربیان علوم رایانه، مقالات ارسالی را بر اساس معیارهای کمی و کیفی رتبه بندی می کنند. تمام فعالیت هایی که متناسب با معیارهای اساسی هستند ذکر شده است.
+**For 2023:** AI submissions will have an evaluation process separate from the base coding activities submissions. AI submission will be evaluated based upon level of engagement, creativity, and opportunities for participants to learn about AI.
 
-برای فعالیت های کدگذاری سنتی، کمیته متنوعی از مربیان علوم رایانه، مطالب ارسالی را بر اساس معیارهای کمی و کیفی رتبه بندی می کنند. تمام فعالیت هایی که متناسب با معیارهای اساسی هستند ذکر شده است. معلمان قادر خواهند بود فیلتر و مرتب سازی کنند تا بهترین فعالیت ها را برای کلاس خود پیدا کنند.
+For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
-اگر کمیته بازبینی فعالیت را در کیفیت تولید صفر ارزیابی کند (به دلیل اشکالات بد یا دستورالعمل هایی که استفاده از آن را بسیار دشوار می کند)، در ترویج یادگیری در گروه های کم نماینده (به دلیل مواد نژادپرستانه یا جنسیتی)، در ارزش آموزشی (مفاهیم CS را آموزش نمی دهد)، یا سرگرم کننده/جذاب (به دلیل مشکل/دلسرد کننده بودن دانش آموزان برای انجام کار)، فعالیت ذکر نخواهد شد.
+بخش ارزیابی فعالیت ها و طرح درس معیارهای زیر را در مورد همه فعالیت ها جستجو می کند و آنها را بر اساس آن رتبه بندی می کند:
 
-- کیفیت تولید بالا
-- ترویج یادگیری توسط تمام گروه های جمعیت شناختی (ESP. دانش آموزانی که در CS کمتر حضور دارند، مانند زنان جوان، دانش آموزان از گروه های نژادی و قومی به حاشیه رانده شده و دانش آموزان دارای معلولیت)
-- آموزشی (مفاهیم علوم کامپیوتر را به خوبی آموزش می دهد)
-- سرگرم کننده و جذاب
-- دانش آموزان را تشویق می کند تا چیزی منحصر به فرد ایجاد کنند که بتوانند به اشتراک بگذارند (برای دانش آموزان جوان تر: با والدین و همکلاسی ها. برای دانش آموزان قدیمی: در اینترنت)
+- High production quality
+- Promote learning by all demographic groups (esp. دانشجویانی که در رشته علوم CS پایه کمتر حضور دارند، مانند زنان جوان، دانشجویان گروه های نژادی و قومی به حاشیه رانده و دانش آموزان دارای معلولیت)
+- Educational (teaches computer science concepts well)
+- سرگرم‌کننده و جذاب
+- Encourages students to create something unique they can share (For younger students: with parents and classmates. For olders students: on the Internet)
 
-علاوه بر این، به منظور ذکر، تمام فعالیت ها باید:
+اگر کمیته بررسی فعالیت را در کیفیت تولید صفر (به دلیل اشکالات بد یا دستورالعمل هایی که استفاده از آن را بسیار دشوار می کند)، در ترویج یادگیری در گروه های کم تعداد(به دلیل مطالب نژادپرست/جنسیستی)، در ارزش آموزشی (مفاهیم CS را آموزش نمی دهد) یا سرگرمی/جذاب (به دلیل دشوار بودن یا دلسرد بودن دانش آموزان)، فعالیت در لیست قرار نمی گیرد.
 
-برای فعالیت های خود هدایت شده برای معلمان و دانش آموزان جدید، کمیته بررسی به دنبال این خواهد بود که آیا:
+علاوه بر این، برای ذکر شدن، تمام فعالیت ها باید:
 
-- مناسب برای یک کلاس مدرسه دولتی (بدون اسلحه، بدون محتوای روشن/بالغ، بدون محتوای مذهبی، و غیره)
-- نیازی به ثبت نام نیست
-- بدون نیاز به پرداخت (به استثنای فعالیت های رباتیک که ممکن است نیاز به خرید ربات/کیت داشته باشند)
+- Be appropriate for a public school classroom (no guns, no explicit/mature content, no religious content, etc.)
+- Require no sign up
+- Require no payment (exception for robotics activities these can require robot/kit purchase)
 
-برای فعالیت های خود هدایت شده برای معلمان و دانش آموزان جدید، کمیته بررسی به دنبال این خواهد بود که آیا:
+For self-directed activities for new teachers and students the review committee will be looking for whether:
 
-- معلمان می توانند از آموزش یا فعالیت بدون پیش زمینه در علوم کامپیوتر استفاده کنند
-- دانش آموزان می توانند بدون هیچ زمینه ای در علوم کامپیوتر موفق باشند
-- دانش آموزان می توانند خود را از طریق آموزش بدون راهنمایی والدین یا معلم هدایت کنند
+- معلمان می توانند از آموزش یا فعالیت بدون سابقه در علوم کامپیوتر استفاده کنند
+- Students can be successful with no background in computer science
+- Students can direct themselves through the tutorial without parental or teacher guidance
 
-معلمان و دانش آموزان می توانند لیست فعالیت های ما را بر اساس فیلترهایی مانند درجه، سطح تجربه، موضوع، سخت افزار و غیره جستجو و فیلتر کنند. به طور پیش فرض، ابتدا برنامه ها و فعالیت های درسی را نشان خواهیم داد که:
+Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
 
-- دریافت بالاترین رتبه از کمیته بررسی
-- فعالیت های یک ساعته خود هدایت شده برای مبتدیان (دانش آموزان و معلمان)
-- درخواست برای طیف گسترده ای از کاربران (در سراسر سیستم عامل ها، زبان ها و سنین)
-- نیاز به نصب ندارد
-- امسال جدید هستند
+- Receive the highest ratings from the review committee
+- Are one hour self-directed activities designed for beginners (students and teachers)
+- Appeal to a wide range of users (across platforms, languages, and ages)
+- Require no installation
+- Are new this year
 
-[**بازگشت به بالا**](#top)
+[**Back to the top**](#top)
 
 <a id="design"></a>
 
-## پیشنهاداتی برای طراحی آموزش های یک ساعته خود هدایت
+## پیشنهاداتی برای طراحی یک ساعته آموزش های خودراهنما
 
-لازم نیست فعالیتها شامل هوش مصنوعی باشند، اگرچه ما به دنبال ارائه فعالیتهای مرتبط با هوش مصنوعی بیشتر هستیم.
+فعالیت ها لزوماً شامل هوش مصنوعی نیستند، اگرچه ما به دنبال ارائه فعالیت های بیشتر مربوط به هوش مصنوعی هستیم.
 
-شما می توانید لوگوی [Hour of Code](https://hourofcode.com/us/promote/resources#logo) را در آموزش خود قرار دهید، اما این مورد لازم نیست. نه تنها دانش آموزان تازه کار هستند، بلکه برخی از معلمان نیز هستند. شامل اطلاعاتی مانند:
+You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. اگر از آرم Hour of Code استفاده می کنید، دستورالعمل های علامت تجاری زیر را ببینید. <u>تحت هیچ شرایطی نمی توان از آرم و نام Code.org استفاده کرد.</u> هر دو دارای علامت تجاری هستند و بدون اجازه کتبی نمی توانند با نام تجاری شخص ثالث ترکیب شوند.
 
-**بازخورد را در پایان فعالیت وارد کنید.** (به عنوان مثال «شما 10 سطح را به پایان رساندید و در مورد حلقه ها یاد گرفتید! کار بزرگ!»)
+**اطمینان حاصل کنید که دانش آموز متوسط می تواند در عرض یک ساعت راحت به پایان برسد.** در نظر بگیرید که یک فعالیت باز را در پایان برای دانش آموزانی که سریعتر در درس حرکت می کنند اضافه کنید. به یاد داشته باشید که اکثر کودکان مبتدی کاملا در علوم کامپیوتر و برنامه نویسی خواهند بود.
 
-**دانش آموزان را تشویق کنید تا پس از اتمام کار در رسانه های اجتماعی (در صورت لزوم) پست بگذارند.** به عنوان مثال «من یک ساعت کد را با ________ انجام داده ام، آیا شما؟ #HourOfCode «یا «من #HourOfCode را به عنوان بخشی از #CSEdWeek انجام داده ام. تو داري؟
+**یادداشت های معلم را شامل کنید.** بیشتر فعالیتها باید توسط دانش آموزان هدایت شوند، اما اگر یک فعالیت توسط معلم تسهیل یا مدیریت شود، لطفاً دستورالعمل های روشن و ساده برای معلم را در قالب یادداشت های معلم در یک URL جداگانه ارسال شده همراه با فعالیت خود وارد کنید. نه تنها دانش آموزان تازه‌کار هستند، بلکه برخی از معلمان نیز هستند. شامل اطلاعاتی مانند:
 
-- این آموزش در چه سیستم عامل ها و مرورگرهایی بهتر کار می کند؟
-- آیا بر روی گوشی های هوشمند کار می کند؟ قرص؟
-- آیا برنامه نویسی جفت را توصیه می کنید؟
-- ملاحظات برای استفاده در کلاس درس؟ به عنوان مثال اگر فیلم وجود دارد، به معلمان توصیه کنید که فیلم ها را در یک صفحه نمایش پیش بینی شده برای کل کلاس نشان دهند تا با هم مشاهده شوند
+- آموزش در چه پلتفرم ها و مرورگرهایی بهتر کار می کند؟
+- Does it work on smartphones? تبلت ها
+- آیا برنامه نویسی مشارکتی را توصیه می کنید؟
+- ملاحظاتی برای استفاده در کلاس درس؟ E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
 
-**بازخورد را در پایان فعالیت وارد کنید.** (به عنوان مثال «شما 10 سطح را به پایان رساندید و در مورد حلقه ها یاد گرفتید! کار بزرگ!»)
+**بازخورد را در پایان فعالیت بگنجانید.** (به عنوان مثال «شما 10 سطح را به پایان رسانده اید و در مورد حلقه ها یاد گرفتید! کارت عالی بود!”)
 
-**دانش آموزان را تشویق کنید تا پس از اتمام کار در رسانه های اجتماعی (در صورت لزوم) پست بگذارند.** به عنوان مثال «من یک ساعت کد را با ________ انجام داده ام، آیا شما؟ #HourOfCode «یا «من #HourOfCode را به عنوان بخشی از #CSEdWeek انجام داده ام. تو داري؟ @Scratch.» از هشتگ **#HourOfCode** (با حروف بزرگ H، O، C) استفاده کنید
+**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. آیا دارید؟ @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
 
-**فعالیت خود را به زبان اسپانیایی یا زبان های دیگر علاوه بر انگلیسی ایجاد کنید.**
+**Create your activity in Spanish or in other languages besides English.**
 
-**فعالیت را به یک زمینه اجتماعی قابل توجه توضیح دهید یا آن را مرتبط کنید.** برنامه نویسی کامپیوتر به یک ابرقدرت تبدیل می شود زمانی که دانش آموزان می بینند که چگونه می تواند جهان را به سمت بهتر تغییر دهد!
+**فعالیت را توضیح دهید یا به یک زمینه مهم اجتماعی مرتبط کنید.** برنامه نویسی کامپیوتر زمانی تبدیل به یک قدرت فوق‌العاده می شود که دانش آموزان می بینند چگونه می تواند جهان را به سمت بهتر تغییر دهد!
 
-**اطمینان حاصل کنید که آموزش شما می تواند در یک الگوی [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) استفاده شود.** این به ویژه برای ساعت کد مفید است زیرا بسیاری از کلاس ها سخت افزار 1:1 برای همه دانش آموزان ندارند.
+**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
 
-[**بازگشت به بالا**](#top)
+[**Back to the top**](#top)
 
 <a id="tm"></a>
 
-## دستورالعمل های علامت تجاری
+## Trademark Guidelines
 
-ساعت کد® و Hora del Código® علائم تجاری ثبت شده Code.org هستند. بسیاری از شرکای آموزشی ما از علائم تجاری «ساعت کد» ما در وب سایت های خود در ارتباط با فعالیت های ساعت کد خود استفاده کرده اند. ما نمی خواهیم از این استفاده جلوگیری کنیم، اما می خواهیم اطمینان حاصل کنیم که استفاده از آن در چند محدودیت قرار دارد:
+Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
 
-1. استفاده از «ساعت کد» فقط در ارتباط با فعالیت های غیر تجاری CS آموزش و پرورش در زمینه کمپین ساعت کد، و بدون هیچ هدف دیگری.
-2. هر اشاره ای به «ساعت کد» باید به گونه ای استفاده شود که نشان نمی دهد که نام تجاری شما است، بلکه به ساعت کد به عنوان یک جنبش مردمی اشاره می کند. مثال خوب: «در ساعت کد® در AcmeCORP.com شرکت کنید». مثال بد: «ساعت کد توسط ACME Corp را امتحان کنید».
-3. از یک متن «®» در برجسته ترین مکان هایی که «ساعت کد» را ذکر می کنید، هم در وب سایت و هم در توضیحات برنامه استفاده کنید.
-4. زبان را در صفحه (یا در پایین صفحه) قرار دهید، از جمله پیوندهایی به وب سایت های ساعت کد، CSEDWeek و Code.org، که هر دو موارد زیر را فاش می کند: ساعت کد® و Hora del Código® علائم تجاری ثبت شده Code.org هستند؛ و ب. «[ساعت کد](http://hourofcode.com/) ® یک ابتکار ملی توسط [Code.org](http://code.org/) است که میلیون ها دانش آموز را با یک ساعت علوم کامپیوتر و برنامه نویسی کامپیوتر آشنا می کند.»
-5. از «ساعت کد» در نام برنامه استفاده نکنید.
-6. از «ساعت کد» در ارتباط با هرگونه استفاده یا هدف تجاری استفاده نکنید (به عنوان مثال، قرار دادن فعالیت ساعت کد خود در پشت دیوار پرداخت، تبلیغ یک سرویس پرداخت شده دیگر به عنوان بخشی از فعالیت ساعت کد خود؛ فروش کالاهای ساعت کد).
-7. از «ساعت کد» در ارتباط با هر فعالیتی که نیاز به ورود به سیستم یا ایجاد حساب دارد استفاده نکنید.
+1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
+2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
+3. در برجسته‌ترین مکان هایی که به «ساعت کد» اشاره می کنید، هم در وب سایت خود و هم در توضیحات برنامه، از یک فوق علامت «®» استفاده کنید.
+4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
+5. Do not use "Hour of Code" in app names.
+6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
+7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
 
-[**بازگشت به بالا**](#top)
+[**Back to the top**](#top)
 
 <a id="pixel"></a>
 
-## ردیابی پیکسل
+## Tracking Pixel
 
-اگر آموزش شما تأیید شده و در صفحه آموزش نهایی گنجانده شده باشد، Code.org یک پیکسل ردیابی منحصر به فرد برای شما فراهم می کند تا بتوانید در آموزش خود ادغام کنید. به عنوان مثال زیر را ببینید. در هیچ صفحه موقت آموزش خود قرار ندهید.
+به منظور ردیابی دقیق تر مشارکت، از هر شریک آموزشی می خواهیم که یک تصویر ردیابی 1 پیکسلی را در صفحه اول آموزش Hour of Code خود قرار دهند. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
 
-این به ما اجازه می دهد تا کاربرانی را که آموزش ساعت کد خود را انجام می دهند، شمارش کنیم. این به تعداد مشارکت دقیق تر برای آموزش شما منجر خواهد شد.
+This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
 
-اگر آموزش شما تأیید شده و در صفحه آموزش نهایی گنجانده شده باشد، Code.org یک پیکسل ردیابی منحصر به فرد برای شما فراهم می کند تا بتوانید در آموزش خود ادغام کنید. به عنوان مثال زیر را ببینید.
+If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. مثال زیر را ببینید.
 
-توجه: انجام این کار برای برنامه های قابل نصب (برنامه های IOS/Android یا برنامه های نصب دسک تاپ) مهم نیست
+NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
 
-مثال ردیابی پیکسل برای حزب رقص:
+مثال پیکسل ردیابی برای پارتی رقص:
 
 IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
 
-[**بازگشت به بالا**](#top)
+[**Back to the top**](#top)
 
 <a id="promote"></a>
 
-## ترویج فعالیت های خود، CSEDweek و ساعت کد
+## Promoting your activities, CSEdWeek, and Hour of Code
 
-لطفا فعالیت خود را به شبکه خود ارتقا دهید! آنها را به صفحه ساعت کد خود هدایت کنید. کاربران شما به احتمال زیاد به یک ایمیل از شما در مورد فعالیت شما واکنش نشان می دهند. از کمپین بین المللی ساعت کد در هفته آموزش علوم کامپیوتر به عنوان بهانه ای برای تشویق کاربران به دعوت دیگران برای پیوستن به آن استفاده کنید و به ما کمک کنید تا به دانش آموزان بیشتری دسترسی پیدا کنیم!
+Please promote your activity to your network! Direct them to your Hour of Code page. کاربران شما به احتمال زیاد به ارسال نامه ای از شما در مورد فعالیت شما واکنش نشان می دهند. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
 
-- ویژگی ساعت کد و CSEDweek در وب سایت شما. مثال: <http://www.tynker.com/hour-of-code>
-- تبلیغ ساعت کد با استفاده از رسانه های اجتماعی، رسانه های سنتی، لیست های پستی و غیره، با استفاده از هشتگ #HourOfCode (با حروف بزرگ H، O، C)
-- یک رویداد محلی را میزبانی کنید یا از کارمندان خود بخواهید که یک رویداد را در مدارس محلی یا گروه های اجتماعی برگزار کنند.
-- برای اطلاعات بیشتر به [منبع کیت](https://hourofcode.com/us/promote) ما مراجعه کنید.
+- Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
+- Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
+- Host a local event or ask your employees to host an event at local schools or community groups.
+- See our [resource kit](https://hourofcode.com/us/promote) for further information.
 
-[**بازگشت به بالا**](#top)
+[**Back to the top**](#top)
 
 {{ signup_button }}

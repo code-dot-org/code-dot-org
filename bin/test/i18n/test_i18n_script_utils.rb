@@ -1,149 +1,147 @@
 require_relative '../test_helper'
 require_relative '../../i18n/i18n_script_utils'
 
-class I18nScriptUtilsTest < Minitest::Test
-  def test_crowdin_projects
-    assert_equal %i[codeorg codeorg-markdown hour-of-code codeorg-restricted], CROWDIN_PROJECTS.keys
-  end
-
-  def test_to_crowdin_yaml
-    assert_equal "---\n:en:\n  test: \"#example\"\n  'yes': 'y'\n", I18nScriptUtils.to_crowdin_yaml({en: {'test' => '#example', 'yes' => 'y'}})
-  end
-
-  def test_error_logging
-    expected_error_class = 'expected_error_class'
-    expected_error_message = 'expected_error_message'
-
-    I18nScriptUtils.expects(:puts).with('[expected_error_class] expected_error_message').once
-
-    I18nScriptUtils.log_error(expected_error_class, expected_error_message)
-  end
-
-  def test_unit_directory_changing
-    exec_seq = sequence('execution')
-
-    expected_content_dir         = CDO.dir('i18n/locales/source/expected_content_dir')
-    expected_unit_i18n_filename  = 'expected_unit_i18n.json'
-    expected_unit_i18n_filepath1 = CDO.dir('i18n/locales/source/expected_content_dir/1/expected_unit_i18n.json')
-    expected_unit_i18n_filepath2 = CDO.dir('i18n/locales/source/expected_content_dir/2/expected_unit_i18n.json')
-
-    Dir.expects(:glob).with(File.join(expected_content_dir, '**', expected_unit_i18n_filename)).in_sequence(exec_seq).returns([expected_unit_i18n_filepath2])
-    I18nScriptUtils.expects(:log_error).with(
-      'Destination directory for unit is attempting to change',
-      'Unit expected_unit_i18n wants to output strings to 1/expected_unit_i18n.json, but 2/expected_unit_i18n.json already exists'
-    ).in_sequence(exec_seq)
-
-    assert I18nScriptUtils.unit_directory_change?(expected_content_dir, expected_unit_i18n_filename, expected_unit_i18n_filepath1)
-  end
-
-  def test_unit_directory_changing_when_no_matching_files
-    expected_content_dir        = CDO.dir('i18n/locales/source/expected_content_dir')
-    expected_unit_i18n_filename = 'expected_unit_i18n.json'
-    expected_unit_i18n_filepath = CDO.dir('i18n/locales/source/expected_content_dir/expected_unit_i18n.json')
-
-    Dir.expects(:glob).with(File.join(expected_content_dir, '**', expected_unit_i18n_filename)).once.returns([expected_unit_i18n_filepath])
-
-    refute I18nScriptUtils.unit_directory_change?(expected_content_dir, expected_unit_i18n_filename, expected_unit_i18n_filepath)
-  end
-
-  def test_yml_file_fixing
-    provided_yaml_file_path = 'provided_yaml_file_path'
-
-    File.expects(:read).with(provided_yaml_file_path).returns("---\nen-US:\n  data\n")
-    File.expects(:write).with(provided_yaml_file_path, %Q["en-US":\n  data\n])
-
-    I18nScriptUtils.fix_yml_file(provided_yaml_file_path)
-  end
-
-  def test_to_js_locale_returns_formated_js_locale
-    assert_equal 'en_us', I18nScriptUtils.to_js_locale('en-US')
-  end
-end
-
 describe I18nScriptUtils do
-  def around
-    FakeFS.with_fresh {yield}
+  let(:described_class) {I18nScriptUtils}
+
+  around do |test|
+    FakeFS.with_fresh {test.call}
   end
 
-  describe '.file_changed?' do
+  describe '.crowdin_creds' do
+    let(:crowdin_creds) {I18nScriptUtils.crowdin_creds}
+
+    let(:crowdin_creds_file_path) {CDO.dir('bin/i18n/crowdin_credentials.yml')}
+    let(:crowdin_creds_file_data) {{'api_token' => 'expected_api_token'}}
+
     before do
-      I18nScriptUtils.remove_instance_variable(:@change_data) if I18nScriptUtils.instance_variable_get(:@change_data)
+      FileUtils.mkdir_p File.dirname(crowdin_creds_file_path)
+      File.write crowdin_creds_file_path, YAML.dump(crowdin_creds_file_data)
     end
 
-    context 'when expected file is found by i18_locale' do
-      it 'returns true' do
-        expected_files_to_sync_out_json = 'expected/files_to_sync_out.json'
+    it 'returns crowdin_credentials.yml data' do
+      _(crowdin_creds).must_equal crowdin_creds_file_data
+    end
+  end
 
-        I18nScriptUtils.stub_const(:CROWDIN_PROJECTS, {expected_project: {files_to_sync_out_json: expected_files_to_sync_out_json}}) do
-          exec_seq = sequence('execution')
+  describe '.parse_options' do
+    let(:parse_options) {described_class.parse_options}
 
-          expected_locale = 'expected_i18_locale'
-          expected_file_path = '/expected/file.json'
+    describe ':testing' do
+      let(:option_testing) {parse_options[:testing]}
 
-          File.expects(:exist?).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns(true)
-          JSON.expects(:load_file).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns({expected_locale => {expected_file_path => 'true'}})
-          PegasusLanguages.expects(:get_code_by_locale).with(expected_locale).in_sequence(exec_seq).returns('unexpected_crowdin_locale')
+      it 'returns false by default' do
+        _(option_testing).must_equal false
+      end
 
-          assert I18nScriptUtils.file_changed?(expected_locale, expected_file_path)
+      context 'when "-t" command line option is set' do
+        before do
+          ARGV << '-t'
+        end
+
+        it 'returns true' do
+          _(option_testing).must_equal true
+        end
+      end
+
+      context 'when "--testing" command line option is set' do
+        before do
+          ARGV << '--testing'
+        end
+
+        it 'returns true' do
+          _(option_testing).must_equal true
         end
       end
     end
+  end
 
-    context 'when expected file is found by crowdin_locale' do
-      it 'returns true' do
-        expected_files_to_sync_out_json = 'expected/files_to_sync_out.json'
+  describe '.to_crowdin_yaml' do
+    let(:to_crowdin_yaml) {described_class.to_crowdin_yaml(to_crowdin_yaml_data)}
 
-        I18nScriptUtils.stub_const(:CROWDIN_PROJECTS, {expected_project: {files_to_sync_out_json: expected_files_to_sync_out_json}}) do
-          exec_seq = sequence('execution')
+    let(:to_crowdin_yaml_data) {{en: {'test' => '#example', 'yes' => 'y'}}}
+    let(:to_crowdin_yaml_output) {"---\n:en:\n  test: \"#example\"\n  'yes': 'y'\n"}
 
-          expected_locale = 'expected_i18_locale'
-          expected_crowdin_locale = 'expected_crowdin_locale'
-          expected_file_path = '/expected/file.json'
+    it 'returns correctly formatted yaml' do
+      _(to_crowdin_yaml).must_equal to_crowdin_yaml_output
+    end
+  end
 
-          File.expects(:exist?).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns(true)
-          JSON.expects(:load_file).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns({expected_crowdin_locale => {expected_file_path => 'true'}})
-          PegasusLanguages.expects(:get_code_by_locale).with(expected_locale).in_sequence(exec_seq).returns(expected_crowdin_locale)
+  describe '.unit_directory_change?' do
+    let(:unit_directory_change?) {I18nScriptUtils.unit_directory_change?(content_dir, unit_i18n_filepath)}
 
-          assert I18nScriptUtils.file_changed?(expected_locale, expected_file_path)
-        end
-      end
+    let(:content_dir) {CDO.dir('i18n/locales/source/expected_content_dir')}
+    let(:unit_i18n_filename) {'expected_unit_i18n.json'}
+    let(:unit_i18n_filepath) {File.join(content_dir, 'new_unit_dir', unit_i18n_filename)}
+
+    before do
+      I18nScriptUtils.stubs(:log_error)
     end
 
-    context 'when expected file is not found' do
-      it 'returns false' do
-        expected_files_to_sync_out_json = 'expected/files_to_sync_out.json'
+    it 'returns false' do
+      I18nScriptUtils.expects(:log_error).never
 
-        I18nScriptUtils.stub_const(:CROWDIN_PROJECTS, {expected_project: {files_to_sync_out_json: expected_files_to_sync_out_json}}) do
-          exec_seq = sequence('execution')
-
-          expected_locale = 'expected_i18_locale'
-          expected_file_path = '/expected/file.json'
-
-          File.expects(:exist?).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns(true)
-          JSON.expects(:load_file).with(expected_files_to_sync_out_json).in_sequence(exec_seq).returns({expected_locale => {'unexpected_file_path' => 'true'}})
-          PegasusLanguages.expects(:get_code_by_locale).with(expected_locale).in_sequence(exec_seq).returns('unexpected_crowdin_locale')
-
-          refute I18nScriptUtils.file_changed?(expected_locale, expected_file_path)
-        end
-      end
+      _(unit_directory_change?).must_equal false
     end
 
-    context 'when project :files_to_sync_out_json_file does not exist' do
-      it 'raises error' do
-        expected_files_to_sync_out_json = 'expected/files_to_sync_out.json'
+    context 'when the unit file already exists in another dir' do
+      let(:old_unit_i18n_filepath) {File.join(content_dir, 'old_unit_dir', unit_i18n_filename)}
 
-        I18nScriptUtils.stub_const(:CROWDIN_PROJECTS, {expected_project: {files_to_sync_out_json: expected_files_to_sync_out_json}}) do
-          expected_locale = 'expected_i18_locale'
-          expected_file_path = '/expected/file.json'
-
-          File.expects(:exist?).with(expected_files_to_sync_out_json).once.returns(false)
-          JSON.expects(:load_file).with(expected_files_to_sync_out_json).never
-          PegasusLanguages.expects(:get_code_by_locale).with(expected_locale).never
-
-          actual_error = assert_raises(RuntimeError) {I18nScriptUtils.file_changed?(expected_locale, expected_file_path)}
-          assert_match /File not found #{expected_files_to_sync_out_json}/, actual_error.message
-        end
+      before do
+        FileUtils.mkdir_p File.dirname(old_unit_i18n_filepath)
+        FileUtils.touch(old_unit_i18n_filepath)
       end
+
+      it 'logs the error and returns true' do
+        I18nScriptUtils.expects(:log_error).with(
+          'Destination directory for unit is attempting to change',
+          'Unit expected_unit_i18n wants to output strings to new_unit_dir/expected_unit_i18n.json, but old_unit_dir/expected_unit_i18n.json already exists'
+        ).once
+
+        _(unit_directory_change?).must_equal true
+      end
+    end
+  end
+
+  describe '.log_error' do
+    let(:log_error) {described_class.log_error(error_class, error_message)}
+
+    let(:error_class) {'expected_error_class'}
+    let(:error_message) {'expected_error_message'}
+
+    it 'returns error class and message' do
+      described_class.expects(:puts).with('[expected_error_class] expected_error_message').once
+      _(log_error)
+    end
+  end
+
+  describe '.fix_yml_file' do
+    let(:fix_yml_file) {described_class.fix_yml_file(provided_yaml_file_path)}
+
+    let(:provided_yaml_file_path) {'provided_yaml_file_path'}
+    let(:provided_yaml_file_data) {"---\nen-US:\n  data\n"}
+    let(:expected_yaml_output) {%Q["en-US":\n  data\n]}
+
+    before do
+      FileUtils.mkdir_p File.dirname(provided_yaml_file_path)
+      File.write provided_yaml_file_path, provided_yaml_file_data
+    end
+
+    it 'yml file should be reformatted correctly' do
+      assert_changes -> {File.read(provided_yaml_file_path)}, from: provided_yaml_file_data, to: expected_yaml_output do
+        fix_yml_file
+      end
+    end
+  end
+
+  describe '.to_js_locale' do
+    let(:to_js_locale) {described_class.to_js_locale(locale)}
+
+    let(:locale) {'en-US'}
+    let(:expected_locale_string) {'en_us'}
+
+    it 'locale string should be formatted correctly' do
+      _(to_js_locale).must_equal expected_locale_string
     end
   end
 
@@ -359,6 +357,48 @@ describe I18nScriptUtils do
     end
   end
 
+  describe '.write_json_file' do
+    let(:write_json_file) {I18nScriptUtils.write_json_file(file_path, data)}
+
+    let(:file_path) {'/expected/file.json'}
+    let(:data) {{key: {key2: 'val'}}}
+
+    it 'writes pretty json content to the file' do
+      expected_file_content = <<~JSON.strip
+        {
+          "key": {
+            "key2": "val"
+          }
+        }
+      JSON
+
+      write_json_file
+
+      assert File.exist?(file_path)
+      assert_equal expected_file_content, File.read(file_path)
+    end
+  end
+
+  describe '.write_yaml_file' do
+    let(:write_yaml_file) {I18nScriptUtils.write_yaml_file(file_path, data)}
+
+    let(:file_path) {'/expected/file.yaml'}
+    let(:data) {{key: {'key2' => 'val'}}}
+
+    it 'writes pretty json content to the file' do
+      expected_file_content = <<~YAML
+        ---
+        :key:
+          key2: val
+      YAML
+
+      write_yaml_file
+
+      assert File.exist?(file_path)
+      assert_equal expected_file_content, File.read(file_path)
+    end
+  end
+
   describe '.copy_file' do
     let(:copy_file) {I18nScriptUtils.copy_file(file_path, dest_path)}
 
@@ -486,23 +526,15 @@ describe I18nScriptUtils do
     end
   end
 
-  describe '.source_lang?' do
-    let(:is_source_lang) {I18nScriptUtils.source_lang?(language)}
+  describe '.crowdin_locale_dir' do
+    let(:crowdin_locale_dir) {I18nScriptUtils.crowdin_locale_dir(locale, subdir, file_path)}
 
-    context 'when the language is the i18n source language' do
-      let(:language) {{locale_s: 'en-US'}}
+    let(:locale) {'uk-UA'}
+    let(:subdir) {nil}
+    let(:file_path) {'expected_file.json'}
 
-      it 'returns true' do
-        assert is_source_lang
-      end
-    end
-
-    context 'when the language is not the i18n source language' do
-      let(:language) {{locale_s: 'not-EN'}}
-
-      it 'returns false' do
-        refute is_source_lang
-      end
+    it 'returns the correct Crowdin translation file path' do
+      _(crowdin_locale_dir).must_equal CDO.dir('i18n/crowdin', locale, file_path)
     end
   end
 end

@@ -4,13 +4,13 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "CSA Self Paced PL",
+      "curriculum_umbrella": "PD Workshop Activity CSA",
       "is_migrated": true,
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2022-06-03 14:32:18 UTC",
+    "serialized_at": "2024-03-06 20:07:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1092,6 +1092,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -3,6 +3,10 @@ require 'test_helper'
 class ScriptsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
 
+  setup_all do
+    seed_deprecated_unit_fixtures
+  end
+
   setup do
     @coursez_2017 = create :script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
     @coursez_2018 = create :script, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable
@@ -107,19 +111,9 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_select 'a', text: 'Overview of Courses 1, 2, and 3'
   end
 
-  test "should redirect to /s/course1" do
-    get :show, params: {id: Unit.find_by_name("course1").id}
-    assert_redirected_to "/s/course1"
-  end
-
   test "show of hourofcode redirects to hoc" do
     get :show, params: {id: 'hourofcode'}
     assert_response :success
-  end
-
-  test "show of hourofcode by id should redirect to hoc" do
-    get :show, params: {id: Unit.find_by_name('hourofcode').id}
-    assert_redirected_to '/s/hourofcode'
   end
 
   test "should get show if not signed in" do
@@ -372,14 +366,14 @@ class ScriptsControllerTest < ActionController::TestCase
   test "platformization partner cannot edit our units" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:platformization_partner)
-    get :edit, params: {id: @coursez_2019.id}
+    get :edit, params: {id: @coursez_2019.name}
     assert_response :forbidden
   end
 
   test "platformization partner can edit their units" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:platformization_partner)
-    get :edit, params: {id: @partner_unit.id}
+    get :edit, params: {id: @partner_unit.name}
     assert_response :success
   end
 
@@ -407,19 +401,6 @@ class ScriptsControllerTest < ActionController::TestCase
       lesson_groups: '[]',
     }
     assert_response :success
-  end
-
-  # These two tests are the only remaining dependency on script seed order.  Check that /s/1 redirects to /s/20-hour in
-  # production. On a fresh db the only guarantee that '20-hour.script' has id:1 is by manually specifying ID in the DSL.
-
-  test "should redirect old k-8" do
-    get :show, params: {id: 1}
-    assert_redirected_to script_path(Unit.twenty_hour_unit)
-  end
-
-  test "show should redirect to flappy" do
-    get :show, params: {id: 6}
-    assert_redirected_to "/s/flappy"
   end
 
   test 'create' do
@@ -503,9 +484,20 @@ class ScriptsControllerTest < ActionController::TestCase
       evil_unit = Unit.new(name: name)
       evil_unit.save(validate: false)
       assert_raise ArgumentError do
-        delete :destroy, params: {id: evil_unit.id}
+        delete :destroy, params: {id: evil_unit.name}
       end
     end
+  end
+
+  test 'destroy successfully deletes the unit' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+
+    unit_to_delete = create :script
+    delete :destroy, params: {id: unit_to_delete.name}
+
+    assert_response :found
+    assert_nil Unit.find_by(name: unit_to_delete.name)
   end
 
   test "cannot update on production" do
@@ -1523,14 +1515,18 @@ class ScriptsControllerTest < ActionController::TestCase
 
   class CoursePilotTests < ActionController::TestCase
     setup do
+      @pilot_section_owner = create :teacher, pilot_experiment: 'my-experiment'
       @pilot_teacher = create :teacher, pilot_experiment: 'my-experiment'
       @pilot_unit = create :script, pilot_experiment: 'my-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
-      @pilot_section = create :section, user: @pilot_teacher, script: @pilot_unit
+      @pilot_section = create :section, user: @pilot_section_owner, script: @pilot_unit
+      create :section_instructor, instructor: @pilot_teacher, section: @pilot_section, status: :active
       @pilot_student = create(:follower, section: @pilot_section).student_user
 
+      @pilot_pl_section_owner = create :teacher, pilot_experiment: 'my-pl-experiment'
       @pilot_instructor = create :facilitator, pilot_experiment: 'my-pl-experiment'
       @pilot_pl_unit = create :script, pilot_experiment: 'my-pl-experiment', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot, instructor_audience: Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher
-      @pilot_pl_section = create :section, user: @pilot_instructor, script: @pilot_pl_unit
+      @pilot_pl_section = create :section, user: @pilot_pl_section_owner, script: @pilot_pl_unit
+      create :section_instructor, instructor: @pilot_instructor, section: @pilot_pl_section, status: :active
       @pilot_pl_participant = create :facilitator
       create(:follower, section: @pilot_pl_section, student_user: @pilot_pl_participant)
     end
@@ -1785,6 +1781,40 @@ class ScriptsControllerTest < ActionController::TestCase
     Unit.expects(:get_from_cache).with(@migrated_unit.name, raise_exceptions: false).returns(@migrated_unit).once
     Unit.expects(:get_without_cache).never
     get :show, params: {id: @migrated_unit.name}
+  end
+
+  test "legacy path look up by id fails with not found" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in(create(:levelbuilder))
+    legacy_path_validation_unit = create :script
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :edit, params: {id: legacy_path_validation_unit.id}
+    end
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :show, params: {id: legacy_path_validation_unit.id}
+    end
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :standards, params: {id: legacy_path_validation_unit.id}
+    end
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :code, params: {id: legacy_path_validation_unit.id}
+    end
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :vocab, params: {id: legacy_path_validation_unit.id}
+    end
+
+    assert_raises ActiveRecord::RecordNotFound do
+      get :resources, params: {id: legacy_path_validation_unit.id}
+    end
+
+    assert_raises ActiveRecord::RecordNotFound do
+      delete :destroy, params: {id: legacy_path_validation_unit.id}
+    end
   end
 
   def stub_file_writes(unit_name, family_name: nil)

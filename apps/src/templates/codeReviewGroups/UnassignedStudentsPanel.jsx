@@ -1,9 +1,12 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import React from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import JavalabButton from '@cdo/apps/javalab/JavalabButton';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
 import StudentGroup from './StudentGroup';
 
 export default function UnassignedStudentsPanel({
@@ -51,7 +54,7 @@ export const HEADER_STYLE = {
   padding: '5px 10px',
   border: `1px solid ${color.lighter_gray}`,
   background: color.lightest_gray,
-  fontFamily: '"Gotham 5r", sans-serif',
+  ...fontConstants['main-font-semi-bold'],
   fontSize: 14,
 };
 

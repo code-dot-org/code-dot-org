@@ -260,9 +260,7 @@ module RegistrationsControllerTests
       assert can_edit_password_with_password? teacher_with_password, 'oldpassword'
     end
 
-    private
-
-    def can_edit_password_without_password?(user)
+    private def can_edit_password_without_password?(user)
       new_password = 'newpassword'
 
       sign_in user
@@ -277,7 +275,7 @@ module RegistrationsControllerTests
       user.valid_password? new_password
     end
 
-    def can_edit_password_with_password?(user, current_password)
+    private def can_edit_password_with_password?(user, current_password)
       new_password = 'newpassword'
 
       sign_in user

@@ -1,30 +1,35 @@
 import $ from 'jquery';
-import sinon from 'sinon';
-import {expect} from '../util/reconfiguredChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import {assets as assetsApi} from '@cdo/apps/clientApi';
+import {listStore} from '@cdo/apps/code-studio/assets';
+import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
+import project from '@cdo/apps/code-studio/initApp/project';
+import * as redux from '@cdo/apps/redux';
+import * as commonReducers from '@cdo/apps/redux/commonReducers';
+import {resetIdleTime} from '@cdo/apps/redux/studioAppActivity';
+import Sounds from '@cdo/apps/Sounds';
 import {
   singleton as studioApp,
   stubStudioApp,
   restoreStudioApp,
   makeFooterMenuItems,
 } from '@cdo/apps/StudioApp';
-import Sounds from '@cdo/apps/Sounds';
-import {assets as assetsApi} from '@cdo/apps/clientApi';
-import {listStore} from '@cdo/apps/code-studio/assets';
-import * as commonReducers from '@cdo/apps/redux/commonReducers';
-import * as redux from '@cdo/apps/redux';
-import project from '@cdo/apps/code-studio/initApp/project';
+import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import setBlocklyGlobal from '../util/setupBlocklyGlobal';
 import {
   sandboxDocumentBody,
   replaceOnWindow,
   restoreOnWindow,
 } from '../util/testUtils';
+
 import sampleLibrary from './code-studio/components/libraries/sampleLibrary.json';
-import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
-import * as utils from '@cdo/apps/utils';
-import {resetIdleTime} from '@cdo/apps/redux/studioAppActivity';
 
 describe('StudioApp', () => {
   sandboxDocumentBody();
+  setBlocklyGlobal();
 
   describe('StudioApp.singleton', () => {
     let containerDiv, codeWorkspaceDiv;
@@ -387,6 +392,37 @@ describe('StudioApp', () => {
       var footItems = makeFooterMenuItems();
       var itemKeys = footItems.map(item => item.key);
       expect(itemKeys).to.include('try-hoc');
+    });
+  });
+
+  describe('getCode', () => {
+    beforeEach(() => stubStudioApp);
+    afterEach(() => restoreStudioApp);
+
+    it('should get the starting blocks if the source is hidden', () => {
+      studioApp().editCode = true;
+      studioApp().hideSource = true;
+      studioApp().startBlocks_ = 'start blocks';
+      expect(studioApp().getCode()).to.equal('start blocks');
+    });
+
+    it('should get the blockly workspace code if it is read only', () => {
+      studioApp().editCode = false;
+      let stub = sinon
+        .stub(Blockly, 'getWorkspaceCode')
+        .returns('blockly workspace');
+      expect(studioApp().getCode()).to.equal('blockly workspace');
+      stub.restore();
+    });
+
+    it('should get the code from the editor itself if editable and the source is not hidden', () => {
+      studioApp().editCode = true;
+      studioApp().hideSource = false;
+      let oldEditor = studioApp().editor;
+      studioApp().editor = sinon.stub();
+      studioApp().editor.getValue = sinon.stub().returns('editor code');
+      expect(studioApp().getCode()).to.equal('editor code');
+      studioApp().editor = oldEditor;
     });
   });
 

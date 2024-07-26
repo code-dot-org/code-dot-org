@@ -1,17 +1,20 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 import classNames from 'classnames';
-import PreviewPaneHeader from '../PreviewPaneHeader';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
+
+import {toggleVisualizationCollapsed} from '@cdo/apps/javalab/redux/viewRedux';
 import {
   VISUALIZATION_DIV_ID,
   isResponsiveFromState,
 } from '@cdo/apps/templates/ProtectedVisualizationDiv';
-import {toggleVisualizationCollapsed} from '@cdo/apps/javalab/redux/viewRedux';
-import style from './theater-visualization-column.module.scss';
+
 import JavalabCrosshairOverlay, {
   showOverlayFromState,
 } from '../JavalabCrosshairOverlay';
+import PreviewPaneHeader from '../PreviewPaneHeader';
+
+import style from './theater-visualization-column.module.scss';
 
 class TheaterVisualizationColumn extends React.Component {
   static propTypes = {
@@ -65,7 +68,14 @@ class TheaterVisualizationColumn extends React.Component {
                 showOverlay && style.overlay
               )}
             >
-              <img id="theater" className={style.image} />
+              {
+                // TODO: A11y279 (https://codedotorg.atlassian.net/browse/A11Y-279)
+                // Verify or update this alt-text as necessary
+              }
+              <img id="theater" className={style.image} alt="" />
+              {/* The audio here is generated dynamically from a student's code,
+                  and we don't have text that would appropriately represent the audio being generated. */}
+              {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
               <audio id="theater-audio" preload="auto" />
             </div>
             <JavalabCrosshairOverlay visible={showOverlay} />

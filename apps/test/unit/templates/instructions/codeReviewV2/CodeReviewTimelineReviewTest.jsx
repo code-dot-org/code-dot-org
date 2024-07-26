@@ -1,17 +1,19 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import {UnconnectedCodeReviewTimelineReview as CodeReviewTimelineReview} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineReview';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import * as utils from '@cdo/apps/code-studio/utils';
+import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
+import {timelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
+import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
 import CodeReviewTimelineElement, {
   codeReviewTimelineElementType,
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineElement';
-import javalabMsg from '@cdo/javalab/locale';
+import {UnconnectedCodeReviewTimelineReview as CodeReviewTimelineReview} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimelineReview';
 import Comment from '@cdo/apps/templates/instructions/codeReviewV2/Comment';
-import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
-import {timelineElementType} from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
-import sinon from 'sinon';
-import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
-import * as utils from '@cdo/apps/code-studio/utils';
+import javalabMsg from '@cdo/javalab/locale';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_REVIEW = {
   id: 1,

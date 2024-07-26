@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+
 import {hideShareDialog} from './shareDialogRedux';
 
 class ShareDisallowedDialog extends Component {
@@ -12,6 +15,7 @@ class ShareDisallowedDialog extends Component {
     isOpen: PropTypes.bool.isRequired,
     hideShareDialog: PropTypes.func.isRequired,
   };
+
   render() {
     return (
       <BaseDialog
@@ -51,7 +55,7 @@ const styles = {
   },
   heading: {
     fontSize: 16,
-    fontFamily: "'Gotham 5r', sans-serif",
+    ...fontConstants['main-font-semi-bold'],
   },
   middle: {
     marginTop: 20,

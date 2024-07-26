@@ -1,6 +1,10 @@
 import GoogleBlockly from 'blockly/core';
-import {Themes} from '../constants.js';
-import cdoBlockStyles from './cdoBlockStyles.mjs';
+
+import fontConstants from '@cdo/apps/fontConstants';
+
+import {Themes} from '../constants';
+
+import cdoBlockStyles from './cdoBlockStyles.js';
 
 export default GoogleBlockly.Theme.defineTheme(Themes.MODERN, {
   base: GoogleBlockly.Themes.Classic,
@@ -10,7 +14,8 @@ export default GoogleBlockly.Theme.defineTheme(Themes.MODERN, {
     toolboxBackgroundColour: '#DDDDDD',
   },
   fontStyle: {
-    family: '"Gotham 4r", sans-serif',
+    family: fontConstants['main-font'],
+    weight: fontConstants['regular-font-weight'],
   },
   startHats: null,
 });

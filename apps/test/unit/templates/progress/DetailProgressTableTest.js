@@ -1,6 +1,6 @@
-import {assert} from '../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
 import {
   fakeLesson,
@@ -30,11 +30,11 @@ describe('DetailProgressTable', () => {
     );
 
     const rows = wrapper.props().children;
-    assert.equal(rows.length, 4);
+    expect(rows.length).toEqual(4);
   });
 
   it('throws if passed mismatched props', () => {
-    assert.throws(() =>
+    expect(() =>
       shallow(
         <DetailProgressTable
           groupedLesson={{
@@ -43,6 +43,6 @@ describe('DetailProgressTable', () => {
           }}
         />
       )
-    );
+    ).toThrow();
   });
 });

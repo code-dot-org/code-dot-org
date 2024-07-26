@@ -4,8 +4,10 @@
  */
 
 import {Record} from 'immutable';
+
 import {DataView} from '../constants';
 
+const UPDATE_TABLE_LIST = 'data/UPDATE_TABLE_LIST';
 const ADD_TABLE_NAME = 'data/ADD_TABLE_NAME';
 const CHANGE_VIEW = 'data/CHANGE_VIEW';
 const DELETE_TABLE_NAME = 'data/DELETE_TABLE_NAME';
@@ -45,6 +47,8 @@ const initialState = new DataState();
 
 export default function (state = initialState, action) {
   switch (action.type) {
+    case UPDATE_TABLE_LIST:
+      return state.set('tableListMap', action.tableListMap);
     case ADD_TABLE_NAME:
       return state.set(
         'tableListMap',
@@ -65,10 +69,6 @@ export default function (state = initialState, action) {
       return state.set('tableListMap', map);
     }
     case UPDATE_KEY_VALUE_DATA:
-      // "if all of the keys are integers, and more than half of the keys between 0 and
-      // the maximum key in the object have non-empty values, then Firebase will render
-      // it as an array."
-      // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
       // For simplicity, always coerce it to an object.
       return state.set('keyValueData', Object.assign({}, action.keyValueData));
     case UPDATE_TABLE_COLUMNS:
@@ -78,10 +78,6 @@ export default function (state = initialState, action) {
       return state;
     case UPDATE_TABLE_RECORDS:
       if (state.tableName === action.tableName) {
-        // "if all of the keys are integers, and more than half of the keys between 0 and
-        // the maximum key in the object have non-empty values, then Firebase will render
-        // it as an array."
-        // https://firebase.googleblog.com/2014/04/best-practices-arrays-in-firebase.html
         // For simplicity, always coerce it to an array (list of records).
         if (!action.tableRecords) {
           return state.set('tableRecords', []);
@@ -119,6 +115,11 @@ export default function (state = initialState, action) {
       return state;
   }
 }
+
+export const updateTableList = tableListMap => ({
+  type: UPDATE_TABLE_LIST,
+  tableListMap,
+});
 
 /**
  * Action which adds a table name to the table list map, if it doesn't exist already.

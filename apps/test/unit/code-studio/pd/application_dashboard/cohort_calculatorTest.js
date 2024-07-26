@@ -1,9 +1,10 @@
+import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import CohortCalculator from '@cdo/apps/code-studio/pd/application_dashboard/cohort_calculator';
 import {AllPartnersValue} from '@cdo/apps/code-studio/pd/application_dashboard/constants';
-import {expect} from 'chai';
-import sinon from 'sinon';
 
 describe('Cohort Calculator', () => {
   describe('Initially', () => {
@@ -11,18 +12,18 @@ describe('Cohort Calculator', () => {
     let xhr;
     const regionalPartnerFilterValue = AllPartnersValue;
 
-    before(() => {
+    beforeAll(() => {
       xhr = sinon.useFakeXMLHttpRequest();
       cohortCalculator = shallow(
         <CohortCalculator
           regionalPartnerFilterValue={regionalPartnerFilterValue}
-          role="csp_teachers"
+          role="csp_teachers" // eslint-disable-line jsx-a11y/aria-role
           accepted={0}
         />
       );
     });
 
-    after(() => {
+    afterAll(() => {
       xhr.restore();
     });
 
@@ -40,7 +41,7 @@ describe('Cohort Calculator', () => {
     let server;
     let cohortCalculator;
 
-    before(() => {
+    beforeAll(() => {
       server = sinon.fakeServer.create();
       server.respondWith(
         'GET',
@@ -51,14 +52,14 @@ describe('Cohort Calculator', () => {
       cohortCalculator = shallow(
         <CohortCalculator
           regionalPartnerFilterValue={regionalPartnerFilterValue}
-          role="csp_teachers"
+          role="csp_teachers" // eslint-disable-line jsx-a11y/aria-role
           accepted={0}
         />
       );
 
       server.respond();
     });
-    after(() => {
+    afterAll(() => {
       server.restore();
     });
 

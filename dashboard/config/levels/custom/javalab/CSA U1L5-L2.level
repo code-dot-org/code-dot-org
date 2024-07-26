@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-07-27T22:56:01.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "long_instructions": "Create a new `Painter` using the parameterized constructor and paint the street as shown below.\r\n\r\nSyntax for creating a new `Painter`:\r\n```\r\nClassName painterName = new ClassName(int x, int y, String direction, int paint);\r\n```\r\n\r\n![](https://images.code.org/c6121ff67001bc20343a5b22f76333f6-image-1625241670316.png)",
@@ -535,13 +539,10 @@
       }
     },
     "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tO0nOYr2OrrDpdi13jL\naGdCGdUKjec+EbuxMbH+RHNiYIv7bXSOKvQJBBqFBpSA3l8=\n",
-    "parent_level_id": 28794
+    "parent_level_id": 28794,
+    "ai_tutor_available": true
   },
-  "game_id": 68,
   "published": true,
-  "created_at": "2021-07-27T22:56:01.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "audit_log": "[{\"changed_at\":\"2021-07-27T22:56:01.569+00:00\",\"changed\":[\"cloned from \\\"CSA U1L5-L3\\\"\"],\"cloned_from\":\"CSA U1L5-L3\"},{\"changed_at\":\"2021-07-27 22:56:06 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-28 01:33:15 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-28 01:53:12 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-30 14:18:53 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-30 14:21:00 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-07-30 14:21:53 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

@@ -1,10 +1,12 @@
-import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import {spy, stub} from 'sinon';
-import {expect} from '../../../../util/reconfiguredChai';
-import i18n from '@cdo/locale';
-import * as utils from '@cdo/apps/utils';
+import ReactDOM from 'react-dom';
+import {spy, stub} from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeController';
+import * as utils from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('ChangeUserTypeController', () => {
   let controller, form, button, status, dropdown;

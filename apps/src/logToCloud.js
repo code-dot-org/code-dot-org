@@ -1,9 +1,8 @@
-import {makeEnum} from './utils';
 import experiments from './util/experiments';
+import {makeEnum} from './utils';
 
 const PageAction = makeEnum(
   'DropletTransitionError',
-  'FirebaseRateLimitExceeded',
   'SanitizedLevelHtml',
   'UserJavaScriptError',
   'RunButtonClick',

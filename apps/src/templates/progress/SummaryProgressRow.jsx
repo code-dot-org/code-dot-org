@@ -1,20 +1,23 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from '@cdo/apps/util/color';
-import ReactTooltip from 'react-tooltip';
-import ProgressBubbleSet from './ProgressBubbleSet';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {levelWithProgressType, lessonType} from './progressTypes';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import FocusAreaIndicator from './FocusAreaIndicator';
-import _ from 'lodash';
-import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
+import ReactTooltip from 'react-tooltip';
+
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import fontConstants from '@cdo/apps/fontConstants';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import FocusAreaIndicator from './FocusAreaIndicator';
+import ProgressBubbleSet from './ProgressBubbleSet';
 import {
   lessonIsLockedForAllStudents,
   lessonIsLockedForUser,
   lessonIsVisible,
 } from './progressHelpers';
+import {levelWithProgressType, lessonType} from './progressTypes';
 
 function SummaryProgressRow({
   dark,
@@ -175,7 +178,7 @@ export const styles = {
   },
   colText: {
     color: color.charcoal,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 12,
     overflow: 'hidden',
     textOverflow: 'ellipsis',

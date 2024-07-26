@@ -1,10 +1,19 @@
+import {render, screen} from '@testing-library/react';
 import React from 'react';
-import {expect} from '../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
+import {Provider} from 'react-redux';
+
 import ControlButtons from '@cdo/apps/javalab/ControlButtons';
+import javalabView from '@cdo/apps/javalab/redux/viewRedux';
+import {
+  getStore,
+  registerReducers,
+  restoreRedux,
+  stubRedux,
+} from '@cdo/apps/redux';
 
 describe('Java Lab Control Buttons Test', () => {
   let defaultProps;
+  let store;
 
   beforeEach(() => {
     defaultProps = {
@@ -21,49 +30,49 @@ describe('Java Lab Control Buttons Test', () => {
       isSubmittable: false,
       isSubmitted: false,
     };
+    stubRedux();
+    registerReducers({javalabView});
+    store = getStore();
   });
 
-  it('submit button for unsubmitted submittable level', () => {
-    const wrapper = shallow(
-      <ControlButtons {...defaultProps} isSubmittable isSubmitted={false} />
+  afterEach(() => {
+    restoreRedux();
+  });
+
+  function renderDefault(props) {
+    return render(
+      <Provider store={store}>
+        <ControlButtons {...defaultProps} {...props} />
+      </Provider>
     );
-    const submitButton = wrapper.find('#submitButton');
-    expect(submitButton).to.not.be.null;
-    expect(submitButton.props().text).to.equal('Submit');
-    expect(submitButton.props().onClick).to.be.null;
+  }
+
+  it('submit button for unsubmitted submittable level', () => {
+    renderDefault({isSubmittable: true, isSubmitted: false});
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeDefined();
   });
 
   it('finish button says finish for non-submittable level', () => {
-    const wrapper = shallow(
-      <ControlButtons {...defaultProps} isSubmittable={false} />
-    );
-    const finishButton = wrapper.find('#finishButton');
-    expect(finishButton).to.not.be.null;
-    expect(finishButton.props().text).to.equal('Finish');
-    expect(finishButton.props().onClick).to.not.be.null;
+    renderDefault({isSubmittable: false});
+    expect(screen.getByRole('button', {name: 'Finish'})).toBeDefined();
   });
 
   it('disables run button if disableRunButton is true', () => {
-    const wrapper = shallow(
-      <ControlButtons {...defaultProps} disableRunButton />
-    );
-    const runButton = wrapper.find('#runButton');
-    expect(runButton.props().isDisabled).to.be.true;
+    renderDefault({disableRunButton: true});
+    expect(
+      screen.getByRole('button', {name: 'Run'}).getAttribute('disabled')
+    ).toBeDefined();
   });
 
   it('disables test button if disableTestButton is true', () => {
-    const wrapper = shallow(
-      <ControlButtons {...defaultProps} disableTestButton />
-    );
-    const testButton = wrapper.find('#testButton');
-    expect(testButton.props().isDisabled).to.be.true;
+    renderDefault({disableTestButton: true});
+    expect(
+      screen.getByRole('button', {name: 'Test'}).getAttribute('disabled')
+    ).toBeDefined();
   });
 
   it('hides test button if showTestButton is false', () => {
-    const wrapper = shallow(
-      <ControlButtons {...defaultProps} showTestButton={false} />
-    );
-    const testButton = wrapper.find('#testButton');
-    expect(testButton).to.be.empty;
+    renderDefault({showTestButton: false});
+    expect(screen.queryByRole('button', {name: 'Test'})).toBeNull();
   });
 });

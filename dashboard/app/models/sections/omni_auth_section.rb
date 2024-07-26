@@ -23,10 +23,13 @@
 #  restrict_section     :boolean          default(FALSE)
 #  properties           :text(65535)
 #  participant_type     :string(255)      default("student"), not null
+#  lti_integration_id   :bigint
+#  ai_tutor_enabled     :boolean          default(FALSE)
 #
 # Indexes
 #
 #  fk_rails_20b1e5de46        (course_id)
+#  fk_rails_f0d4df9901        (lti_integration_id)
 #  index_sections_on_code     (code) UNIQUE
 #  index_sections_on_user_id  (user_id)
 #
@@ -35,8 +38,19 @@ class OmniAuthSection < Section
   def self.from_omniauth(code:, type:, owner_id:, students:, section_name: I18n.t('sections.default_name', default: 'Untitled Section'))
     oauth_section = with_deleted.where(code: code).first_or_create
 
-    oauth_section.name = section_name || I18n.t('sections.default_name', default: 'Untitled Section')
-    oauth_section.user_id = owner_id
+    course_name_limit = OmniAuthSection.column_for_attribute(:name).limit
+    oauth_section.name = section_name.length > course_name_limit ? section_name.truncate(course_name_limit) : section_name
+
+    # Add the user as an owner if the section does not exist. Otherwise add as a coteacher to existing section.
+    if oauth_section.user_id.nil? || oauth_section.deleted?
+      oauth_section.user_id = owner_id
+    else
+      # create a section instructor record if one doesn't exist
+      section_instructor = oauth_section.section_instructors.with_deleted.where(instructor_id: owner_id).first_or_create(status: :active)
+      section_instructor.restore if section_instructor.deleted?
+      section_instructor.status = :active
+      section_instructor.save! if section_instructor.changed?
+    end
     oauth_section.login_type = type
 
     oauth_section.save! if oauth_section.changed?
@@ -49,7 +63,6 @@ class OmniAuthSection < Section
 
     oauth_section.set_exact_student_list(oauth_students)
 
-    oauth_section.name = section_name
     oauth_section.save! if oauth_section.changed?
 
     oauth_section

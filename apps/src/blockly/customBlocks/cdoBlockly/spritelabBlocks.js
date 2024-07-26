@@ -1,4 +1,11 @@
 // This file contains customizations to CDO Blockly Sprite Lab blocks.
+// When we are ready to remove support for CDO Blockly we can remove this file.
+import {
+  BlockColors,
+  BlockStyles,
+  BLOCK_TYPES,
+  NO_OPTIONS_MESSAGE,
+} from '@cdo/apps/blockly/constants';
 import i18n from '@cdo/locale';
 
 export const blocks = {
@@ -108,7 +115,11 @@ export const blocks = {
         // Must be marked EDITABLE so that cloned blocks share the same var name
         fieldLabel.EDITABLE = true;
         this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
-        Blockly.cdoUtils.setHSV(this, 136, 0.84, 0.8);
+        Blockly.cdoUtils.handleColorAndStyle(
+          this,
+          BlockColors.BEHAVIOR,
+          BlockStyles.BEHAVIOR
+        );
         const mainTitle = this.appendDummyInput()
           .appendField(fieldLabel, 'VAR')
           .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
@@ -244,16 +255,18 @@ export const blocks = {
           getVars(category) {
             return {};
           },
-          callType_: 'gamelab_behavior_get',
+          callType_: BLOCK_TYPES.behaviorGet,
         },
       });
 
     generator.behavior_definition = generator.procedures_defnoreturn;
 
-    Blockly.Procedures.DEFINITION_BLOCK_TYPES.push('behavior_definition');
+    Blockly.Procedures.DEFINITION_BLOCK_TYPES.push(
+      BLOCK_TYPES.behaviorDefinition
+    );
     Blockly.Variables.registerGetter(
       Blockly.BlockValueType.BEHAVIOR,
-      'gamelab_behavior_get'
+      BLOCK_TYPES.behaviorGet
     );
 
     Blockly.Blocks.sprite_parameter_get = {
@@ -278,5 +291,57 @@ export const blocks = {
       removeVar: Blockly.Blocks.variables_get.removeVar,
     };
     generator.sprite_parameter_get = generator.variables_get;
+  },
+
+  // All logic for behavior picker custom input type
+  addBehaviorPickerEditButton(block, inputConfig, currentInputRow) {
+    let allowBehaviorEditing = Blockly.useModalFunctionEditor;
+    // Don't allow behaviors to be edited for uncategorized toolboxes.
+    if (
+      window.appOptions && // global appOptions is not available on level edit page
+      appOptions.level.toolbox &&
+      !appOptions.readonlyWorkspace &&
+      !Blockly.hasCategories
+    ) {
+      allowBehaviorEditing = false;
+    }
+    if (allowBehaviorEditing) {
+      const editLabel = new Blockly.FieldIcon(Blockly.Msg.FUNCTION_EDIT);
+      Blockly.cdoUtils.bindBrowserEvent(
+        editLabel.fieldGroup_,
+        'mousedown',
+        block,
+        this.openEditor
+      );
+      currentInputRow.appendField(editLabel);
+    }
+  },
+  // Get a list of behavior options for a dropdown field, based on
+  // blocks found on the main workspace.
+  getAllBehaviorOptions() {
+    let allowBehaviorEditing = Blockly.useModalFunctionEditor;
+    const noBehaviorLabel = allowBehaviorEditing
+      ? `${i18n.createBlocklyBehavior()}\u2026`
+      : i18n.behaviorsNotFound();
+    const behaviors = [];
+    Blockly.mainBlockSpace?.getTopBlocks().forEach(function (block) {
+      if (
+        block.type === BLOCK_TYPES.behaviorGet &&
+        block.getProcedureInfo()?.name &&
+        block.getProcedureInfo()?.id
+      ) {
+        const newOption = [
+          block.getProcedureInfo().name,
+          block.getProcedureInfo().id,
+        ];
+        behaviors.push(newOption);
+      }
+    });
+    behaviors.sort();
+    // Add a "Create a behavior" or "No behaviors found" option
+    if (allowBehaviorEditing || behaviors.length === 0) {
+      behaviors.push([noBehaviorLabel, NO_OPTIONS_MESSAGE]);
+    }
+    return behaviors;
   },
 };

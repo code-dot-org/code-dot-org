@@ -13,6 +13,22 @@ When(/^I click block "([^"]*)"$/) do |block|
   @browser.execute_script("$(\"[#{id_selector}='#{get_block_id(block)}']\").simulate( 'drag', {handle: 'corner', dx: 0, dy: 0, moves: 5});")
 end
 
+# This helps click on a field in Google Blockly. It always picks the first element from the list generated
+# by the selector.
+When(/^I click block field "([^"]*)"$/) do |selector|
+  steps "Then I click block field \"#{selector}\" number 0"
+end
+
+# This helps click on a field in Google Blockly.
+When(/^I click block field "([^"]*)" number (\d+)$/) do |selector, index|
+  code = <<~CODE
+    $("#{selector}")[#{index}].dispatchEvent(new PointerEvent('pointerdown', {bubbles: true}));
+    $("#{selector}")[#{index}].dispatchEvent(new PointerEvent('pointerup', {bubbles: true}));
+  CODE
+
+  @browser.execute_script(code)
+end
+
 # Note: this is an offset relative to the current position of the block
 When /^I drag block "([^"]*)" to offset "([^"]*), ([^"]*)"$/ do |block_id, dx, dy|
   drag_block_relative(get_block_id(block_id), dx, dy)
@@ -26,6 +42,21 @@ end
 
 When /^I drag block "([^"]*)" to block "([^"]*)"$/ do |from, to|
   code = generate_drag_code(get_block_id(from), get_block_id(to), 0, 30)
+  @browser.execute_script code
+end
+
+When /^I connect block "([^"]*)" to block "([^"]*)"$/ do |from, to|
+  code = connect_block(from, to)
+  @browser.execute_script code
+end
+
+When /^I connect block "([^"]*)" inside block "([^"]*)"$/ do |from, to|
+  code = connect_block_statement(from, to)
+  @browser.execute_script code
+end
+
+When /^I delete block "([^"]*)"$/ do |id|
+  code = delete_block(id)
   @browser.execute_script code
 end
 
@@ -52,6 +83,11 @@ end
 When /^I drag block "([^"]*)" into first position in repeat block "([^"]*)"$/ do |from, to|
   code = generate_drag_code(get_block_id(from), get_block_id(to), 35, 50)
   @browser.execute_script code
+end
+
+When /^I drag block number (\d+) to offset "([^"]*), ([^"]*)"$/ do |index, dx, dy|
+  block_selector = get_indexed_blockly_draggable_selector(index.to_i)
+  drag_indexed_block_to_offset(block_selector, dx, dy)
 end
 
 Then /^block "([^"]*)" is near offset "([^"]*), ([^"]*)"$/ do |block, x, y|
@@ -81,6 +117,11 @@ Then /^I scroll the ([a-zA-Z]*) blockspace to the bottom$/ do |workspace_type|
   block_space_name = workspace_type + 'BlockSpace'
   scrollable_height = get_scrollable_height(block_space_name)
   @browser.execute_script("Blockly.#{block_space_name}.scrollTo(0, #{scrollable_height})")
+end
+
+# This function only works for Google Blockly
+Then /^I scroll the main blockspace to block "(.*?)"$/ do |block_id|
+  @browser.execute_script("Blockly.mainBlockSpace.centerOnBlock('#{block_id}')")
 end
 
 Then /^block "([^"]*)" is visible in the workspace$/ do |block|
@@ -253,11 +294,11 @@ Then /^the modal function editor is open$/ do
   expect(modal_dialog_visible).to eq(true)
 end
 
-When(/^I set block "([^"]*)" to have a value of "(.*?)" for title "(.*?)"$/) do |block_id, value, title|
+When(/^I set block "([^"]*)" to have a value of "(.*?)" for field "(.*?)"$/) do |block_id, value, field_name|
   script = "
-    Blockly.mainBlockSpace.getAllBlocks().forEach(function (b) {
-      if (b.id === #{get_block_id(block_id)}) {
-        b.setTitleValue('#{value}', '#{title}');
+    Blockly.getMainWorkspace().getAllBlocks().forEach(function (b) {
+      if (b.id === '#{get_block_id(block_id)}') {
+        b.setFieldValue('#{value}', '#{field_name}');
       }
     });"
   puts script
@@ -276,6 +317,34 @@ end
 Then(/^the project matches my memorized code$/) do
   expect(memorized_code).to_not be_nil
   expect(current_block_xml).to eq(memorized_code)
+end
+
+Then(/^I click toolbox block with selector "(.*?)"$/) do |selector|
+  script = "
+    $('#{selector}').simulate('pointerdown')
+    $('#{selector}').simulate('pointerup')
+  "
+  @browser.execute_script(script)
+end
+
+# This only works for Google Blockly
+Then(/^I click block field that is number (.*?) in the list of blocks and number (.*?) in the field row$/) do |n1, n2|
+  script = "
+    Blockly.mainBlockSpace.getAllBlocks()[#{n1.to_i}].inputList[0].fieldRow[#{n2.to_i}].onClick()
+  "
+  @browser.execute_script(script)
+end
+
+# This only works for Google Blockly
+Then(/^the open flyout has (.*?) blocks$/) do |n|
+  script = "return Blockly.mainBlockSpace.getFlyout().getWorkspace().getTopBlocks().length"
+  expect(@browser.execute_script(script)).to eq(n.to_i)
+end
+
+# This only works for Google Blockly
+Then(/^the function editor workspace has (\d+) blocks$/) do |n|
+  script = "return Blockly.getFunctionEditorWorkspace().getAllBlocks().length"
+  expect(@browser.execute_script(script)).to eq(n)
 end
 
 def current_block_xml

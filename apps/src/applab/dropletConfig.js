@@ -1,23 +1,26 @@
 import $ from 'jquery';
-import * as api from './api';
-import dontMarshalApi from '../dontMarshalApi';
-import {dropletStringBlocks, dropletArrayBlocks} from '../dropletUtils';
-import consoleApi from '../consoleApi';
+
+import * as makerApi from '@cdo/apps/lib/kits/maker/api';
 import * as audioApi from '@cdo/apps/lib/util/audioApi';
 import audioApiDropletConfig from '@cdo/apps/lib/util/audioApiDropletConfig';
 import * as timeoutApi from '@cdo/apps/lib/util/timeoutApi';
-import * as makerApi from '@cdo/apps/lib/kits/maker/api';
-import color from '../util/color';
-import getAssetDropdown from '../assetManagement/getAssetDropdown';
 import {getTables, getColumns} from '@cdo/apps/storage/getColumnDropdown';
+
+import getAssetDropdown from '../assetManagement/getAssetDropdown';
+import consoleApi from '../consoleApi';
+import dontMarshalApi from '../dontMarshalApi';
+import {dropletStringBlocks, dropletArrayBlocks} from '../dropletUtils';
+import {getStore} from '../redux';
+import color from '../util/color';
+
+import * as api from './api';
 import ChartApi from './ChartApi';
+import * as applabConstants from './constants';
 import * as elementUtils from './designElements/elementUtils';
 import {
   setPropertyDropdown,
   setPropertyValueSelector,
 } from './setPropertyDropdown';
-import {getStore} from '../redux';
-import * as applabConstants from './constants';
 
 var DEFAULT_WIDTH = applabConstants.APP_WIDTH.toString();
 var DEFAULT_HEIGHT = (
@@ -684,17 +687,6 @@ export var blocks = [
     allowFunctionDrop: {2: true},
     nativeIsAsync: true,
     type: 'either',
-  },
-  {
-    func: 'onRecordEvent',
-    parent: api,
-    category: 'Data',
-    paletteParams: ['table', 'callback'],
-    params: [
-      '"mytable"',
-      "function(record, eventType) {\n  if (eventType === 'create') {\n    textLabel('id', 'record with id ' + record.id + ' was created');\n  } \n}",
-    ],
-    allowFunctionDrop: {1: true},
   },
   {func: 'getUserId', parent: api, category: 'Data', type: 'value'},
   {

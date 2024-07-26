@@ -1,13 +1,17 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import {ICON_PREFIX} from '@cdo/apps/applab/constants';
+import fontConstants from '@cdo/apps/fontConstants';
 import {getStore} from '@cdo/apps/redux';
-import AssetManager, {ImageMode} from './AssetManager';
+import i18n from '@cdo/locale';
+
 import color from '../../util/color';
+
+import AssetManager, {ImageMode} from './AssetManager';
 import IconLibrary from './IconLibrary';
 import ImageURLInput from './ImageURLInput';
-import {ICON_PREFIX} from '@cdo/apps/applab/constants';
 import {RecordingFileType} from './recorders';
-import i18n from '@cdo/locale';
 
 const extensionFilter = {
   // Note: .jfif files will be converted to .jpg by the server.
@@ -98,7 +102,6 @@ export default class ImagePicker extends React.Component {
       fileModeToggle: {
         float: 'left',
         margin: '0 20px 0 0',
-        fontFamily: this.state.mode === ImageMode.FILE ? '"Gotham 5r"' : null,
         color: this.state.mode === ImageMode.FILE ? null : '#999',
         fontSize: '16px',
         cursor: 'pointer',
@@ -106,14 +109,12 @@ export default class ImagePicker extends React.Component {
       iconModeToggle: {
         margin: 0,
         fontSize: '16px',
-        fontFamily: this.state.mode === ImageMode.ICON ? '"Gotham 5r"' : null,
         color: this.state.mode === ImageMode.ICON ? null : '#999',
         cursor: 'pointer',
       },
       urlModeToggle: {
         margin: '0 20px 0 0',
         fontSize: '16px',
-        fontFamily: this.state.mode === ImageMode.URL ? '"Gotham 5r"' : null,
         color: this.state.mode === ImageMode.URL ? null : '#999',
         cursor: 'pointer',
       },
@@ -127,6 +128,27 @@ export default class ImagePicker extends React.Component {
         fontWeight: 'bold',
       },
     };
+
+    if (this.state.mode === ImageMode.FILE) {
+      styles.fileModeToggle = {
+        ...styles.fileModeToggle,
+        ...fontConstants['main-font-semi-bold'],
+      };
+    }
+
+    if (this.state.mode === ImageMode.ICON) {
+      styles.iconModeToggle = {
+        ...styles.iconModeToggle,
+        ...fontConstants['main-font-semi-bold'],
+      };
+    }
+
+    if (this.state.mode === ImageMode.URL) {
+      styles.urlModeToggle = {
+        ...styles.urlModeToggle,
+        ...fontConstants['main-font-semi-bold'],
+      };
+    }
 
     let modeSwitch,
       title = this.props.assetChosen ? (

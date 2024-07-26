@@ -5,15 +5,22 @@ module HocEventReview
   Sequel.extension :core_refinements
   using Sequel::CoreRefinements
 
-  # Converts a simple x.y JSON-attribute path to a MySQL 5.7 JSON expression using the inline-path operator.
-  # Ref: https://dev.mysql.com/doc/refman/5.7/en/json-search-functions.html#operator_json-inline-path
+  # Converts a simple x.y JSON-attribute path to a MySQL JSON expression
+  # (available in MySQL 5.7.13 and later) using the inline-path operator.
+  # Ref: https://dev.mysql.com/doc/refman/8.0/en/json-search-functions.html#operator_json-inline-path
+  #
+  # Because we use this method to initialize some constants, it must be
+  # declared before the constants, in violation of the usual convention for
+  # private methods.
+  # rubocop:disable CustomCops/GroupedInlinePrivateMethods
   private_class_method def self.json(path)
     column, attribute = path.split('.')
     "#{column}->>'$.#{attribute}'".lit
   end
+  # rubocop:enable CustomCops/GroupedInlinePrivateMethods
 
   FORMS = ::PEGASUS_DB[:forms]
-  COUNTRY_CODE_COLUMN = :location_country_code_s
+  COUNTRY_CODE_COLUMN = json('data.hoc_event_country_s')
   STATE_CODE_COLUMN = json('processed_data.location_state_code_s')
   SPECIAL_EVENT_FLAG_COLUMN = json('data.special_event_flag_b')
 
@@ -51,6 +58,10 @@ module HocEventReview
       end
   end
 
+  def self.kind
+    "HocSignup#{DCDO.get('hoc_year', 2017)}"
+  end
+
   private_class_method def self.events_query(
     special_events_only: false,
     reviewed: nil,
@@ -74,9 +85,5 @@ module HocEventReview
     end
 
     query
-  end
-
-  def self.kind
-    "HocSignup#{DCDO.get('hoc_year', 2017)}"
   end
 end

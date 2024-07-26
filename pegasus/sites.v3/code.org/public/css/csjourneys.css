@@ -38,7 +38,8 @@
 }
 
 h1.csjourneys-banner-header {
-  font-family: "Gotham 4r", sans-serif;
+  font-family: var(--main-font);
+  font-weight: var(--semi-bold-font-weight);
   color: #fff;
   font-size: 18px;
   z-index: 1;

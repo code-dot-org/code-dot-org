@@ -1,6 +1,7 @@
 %script{src: webpack_asset_path('js/sections/edit.js'),
   data: {
-    section: @section
+    section: @section,
+    canEnableAITutor: current_user.can_enable_ai_tutor?.to_json
   }
 }
 

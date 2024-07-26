@@ -13,10 +13,21 @@ class Projects
   class ValidationError < StandardError
   end
 
+  class PublishError < StandardError
+  end
+
   def initialize(storage_id)
     @storage_id = storage_id
 
     @table = Projects.table
+  end
+
+  #### NOTE: This references the Rails model (Project, singular)
+  #### rather than this middleware class (Projects, plural)
+  #### such that we can make use of model associations managed by Rails.
+  def get_rails_project(project_id)
+    return @rails_project if @rails_project
+    @rails_project = Project.find(project_id)
   end
 
   def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true, level: nil)
@@ -121,8 +132,17 @@ class Projects
       project_type: type,
       published_at: DateTime.now,
     }
-    update_count = @table.where(id: project_id).exclude(state: 'deleted').update(row)
-    raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
+
+    project_query_result = @table.where(id: project_id).exclude(state: 'deleted')
+    raise NotFound, "channel `#{channel_id}` not found" if project_query_result.empty?
+
+    rails_project = get_rails_project(project_id)
+    if rails_project.apply_project_age_publish_limits?
+      raise PublishError, "User too new to publish channel `#{channel_id}`" unless rails_project.owner_existed_long_enough_to_publish?
+      raise PublishError, "Project too new to publish channel `#{channel_id}`" unless rails_project.existed_long_enough_to_publish?
+    end
+
+    project_query_result.update(row)
 
     project = @table.where(id: project_id).first
     Projects.get_published_project_data(project, channel_id).merge(
@@ -347,6 +367,7 @@ class Projects
         updatedAt: row[:updated_at],
         publishedAt: row[:published_at],
         projectType: row[:project_type],
+        frozen: JSON.parse(row[:value])['frozen'],
       }
     )
   end
@@ -426,8 +447,6 @@ class Projects
     return project_src.in_restricted_share_mode?
   end
 
-  private
-
   #
   # Discovering a channel's project type is a real mess.  We don't usually
   # need to do this because the project type is usually part of the URL,
@@ -438,7 +457,7 @@ class Projects
   # @returns [String] The discovered project type, or 'unknown' if the type
   #   can't be determined with given information.
   #
-  def project_type_from_merged_row(row)
+  private def project_type_from_merged_row(row)
     # We can derive channel project type from a few places.
     #
     # 1. The `project_type` column in the projects table.
@@ -465,7 +484,7 @@ class Projects
     'unknown'
   end
 
-  def validate_thumbnail_url(channel_id, thumbnail_url)
+  private def validate_thumbnail_url(channel_id, thumbnail_url)
     return true unless thumbnail_url
     raise ValidationError unless valid_thumbnail_url?(thumbnail_url)
     true
@@ -477,7 +496,7 @@ class Projects
   # so we assert on the start/end of the URL.
   # We also use placeholder thumbnail images in a couple of labs (dance, flappy),
   # so accepting those as valid as well
-  def valid_thumbnail_url?(thumbnail_url)
+  private def valid_thumbnail_url?(thumbnail_url)
     (thumbnail_url.start_with?('/v3/files/') && thumbnail_url.end_with?('.metadata/thumbnail.png')) ||
       thumbnail_url.start_with?('/blockly/media')
   end

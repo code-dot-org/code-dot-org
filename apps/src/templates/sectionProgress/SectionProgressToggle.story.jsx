@@ -1,12 +1,13 @@
 import React from 'react';
-import {UnconnectedSectionProgressToggle as SectionProgressToggle} from './SectionProgressToggle';
-import {ViewType} from './sectionProgressConstants';
-import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
+import {createStore, combineReducers} from 'redux';
+
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
+import {ViewType} from './sectionProgressConstants';
+import {UnconnectedSectionProgressToggle as SectionProgressToggle} from './SectionProgressToggle';
+
 export default {
-  title: 'SectionProgressToggle',
   component: SectionProgressToggle,
 };
 

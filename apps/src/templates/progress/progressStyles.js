@@ -1,5 +1,6 @@
+import fontConstants from '@cdo/apps/fontConstants';
 import color from '@cdo/apps/util/color';
-import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 
 /**
  * Note: these constants will be removed in favor of `BubbleFactory.bubbleSizes`
@@ -47,7 +48,7 @@ export const marginTopBottom = margin => {
  */
 
 export const font = {
-  fontFamily: '"Gotham 5r", sans-serif',
+  ...fontConstants['main-font-semi-bold'],
 };
 
 export const hoverStyle = {

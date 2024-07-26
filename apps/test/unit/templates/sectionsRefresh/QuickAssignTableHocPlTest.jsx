@@ -1,10 +1,11 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
-import QuickAssignTableHocPl from '@cdo/apps/templates/sectionsRefresh/QuickAssignTableHocPl';
+
 import {MARKETING_AUDIENCE} from '@cdo/apps/templates/sectionsRefresh/CurriculumQuickAssign';
-import {hocCourseOfferings, plCourseOfferings} from './CourseOfferingsTestData';
+import QuickAssignTableHocPl from '@cdo/apps/templates/sectionsRefresh/QuickAssignTableHocPl';
 import i18n from '@cdo/locale';
+
+import {hocCourseOfferings, plCourseOfferings} from './CourseOfferingsTestData';
 
 const DEFAULT_PROPS = {
   marketingAudience: MARKETING_AUDIENCE.HOC,
@@ -22,19 +23,19 @@ const setUp = (overrideProps = {}) => {
 describe('QuickAssignTable', () => {
   it('renders Hour of Code as the first and only table/column header', () => {
     const wrapper = setUp();
-    expect(wrapper.find('table').length).to.equal(3);
-    expect(wrapper.contains(i18n.courseOfferingHOC())).to.be.true;
+    expect(wrapper.find('table').length).toBe(3);
+    expect(wrapper.contains(i18n.courseOfferingHOC())).toBe(true);
   });
 
   it('renders extra two headers in the first and second tables', () => {
     const wrapper = setUp();
-    expect(wrapper.find('table').length).to.equal(3);
+    expect(wrapper.find('table').length).toBe(3);
     // First header displays in table 0
-    expect(wrapper.find('table').at(0).contains('Favorites')).to.be.true;
+    expect(wrapper.find('table').at(0).contains('Favorites')).toBe(true);
     // Fourth header displays in table 0
-    expect(wrapper.find('table').at(0).contains('Popular Media')).to.be.true;
+    expect(wrapper.find('table').at(0).contains('Popular Media')).toBe(true);
     // Fifth header displays in table 1
-    expect(wrapper.find('table').at(1).contains('Sports')).to.be.true;
+    expect(wrapper.find('table').at(1).contains('Sports')).toBe(true);
   });
 
   it('renders Professional Learning as the first and only table/column header', () => {
@@ -42,8 +43,8 @@ describe('QuickAssignTable', () => {
       marketingAudience: MARKETING_AUDIENCE.PL,
       courseOfferings: plCourseOfferings,
     });
-    expect(wrapper.find('table').length).to.equal(3);
-    expect(wrapper.contains(i18n.professionalLearning())).to.be.true;
+    expect(wrapper.find('table').length).toBe(3);
+    expect(wrapper.contains(i18n.professionalLearning())).toBe(true);
   });
 
   it('renders one header in each of the first two columns', () => {
@@ -51,15 +52,15 @@ describe('QuickAssignTable', () => {
       marketingAudience: MARKETING_AUDIENCE.PL,
       courseOfferings: plCourseOfferings,
     });
-    expect(wrapper.find('table').length).to.equal(3);
+    expect(wrapper.find('table').length).toBe(3);
     // First header displays in table 0
     expect(
       wrapper
         .find('table')
         .at(0)
         .contains('6–12 Virtual Academic Year Workshops')
-    ).to.be.true;
+    ).toBe(true);
     // Second header displays in table 1
-    expect(wrapper.find('table').at(1).contains('Self-Paced')).to.be.true;
+    expect(wrapper.find('table').at(1).contains('Self-Paced')).toBe(true);
   });
 });

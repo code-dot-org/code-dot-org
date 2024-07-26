@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
+
 import color from '../../../../util/color';
+
 import EnrollmentUnitAssignment from './EnrollmentUnitAssignment';
 
 export default class PlcEnrollment extends React.Component {
@@ -9,7 +13,7 @@ export default class PlcEnrollment extends React.Component {
   };
 
   renderEnrollmentUnitAssignments() {
-    const courseUnits = this.props.plcData['courseUnits'].map(
+    const courseUnits = this.props.plcData['courseUnits']?.map(
       (courseUnit, i) => {
         return <EnrollmentUnitAssignment key={i} courseUnitData={courseUnit} />;
       }
@@ -40,7 +44,7 @@ const styles = {
   },
   courseSectionHeader: {
     color: color.dark_charcoal,
-    fontFamily: '"Gotham 4r"',
+    ...fontConstants['main-font-regular'],
     fontSize: '18px',
   },
 };

@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "PD Workshop Activity CSD",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
@@ -13,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "vpl-csd",
-    "serialized_at": "2022-11-10 20:25:08 UTC",
+    "serialized_at": "2024-03-06 20:07:26 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "facilitator",
@@ -5398,6 +5399,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

@@ -1,8 +1,8 @@
 import React from 'react';
+
 import AssetThumbnail from './AssetThumbnail';
 
 export default {
-  title: 'AssetThumbnail',
   component: AssetThumbnail,
 };
 

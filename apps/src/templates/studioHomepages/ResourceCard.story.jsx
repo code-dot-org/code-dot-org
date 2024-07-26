@@ -1,10 +1,11 @@
 import React from 'react';
-import ResourceCard from './ResourceCard';
 import {Provider} from 'react-redux';
+
 import {reduxStore} from '@cdo/storybook/decorators';
 
+import ResourceCard from './ResourceCard';
+
 export default {
-  title: 'ResourceCard',
   component: ResourceCard,
 };
 

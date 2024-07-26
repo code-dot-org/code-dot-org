@@ -1,25 +1,21 @@
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
+
+import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import i18n from '@cdo/locale';
-import experiments from '@cdo/apps/util/experiments';
-import {expect} from '../../../util/deprecatedChai';
-import {shallow, mount} from 'enzyme';
-import ManageStudentsTable, {
-  UnconnectedManageStudentsTable,
-  sortRows,
-} from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
 import ManageStudentsActionsCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
-import ManageStudentNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsNameCell';
+import ManageStudentActionsHeaderCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsHeaderCell';
 import ManageStudentFamilyNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsFamilyNameCell';
 import ManageStudentsGenderCell from '@cdo/apps/templates/manageStudents/ManageStudentsGenderCell';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import ManageStudentNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsNameCell';
 import manageStudents, {
   RowType,
   setLoginType,
@@ -34,14 +30,21 @@ import manageStudents, {
   TransferStatus,
   TransferType,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import ManageStudentsTable, {
+  UnconnectedManageStudentsTable,
+  sortRows,
+} from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
+import NoSectionCodeDialog from '@cdo/apps/templates/manageStudents/NoSectionCodeDialog';
 import teacherSections, {
   setSections,
   selectSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
-import isRtl from '@cdo/apps/code-studio/isRtlRedux';
-import NoSectionCodeDialog from '@cdo/apps/templates/manageStudents/NoSectionCodeDialog';
+import experiments from '@cdo/apps/util/experiments';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
 import {ManageStudentsNotificationFull} from '../../../../src/templates/manageStudents/ManageStudentsTable';
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 import {allowConsoleWarnings} from '../../../util/throwOnConsole';
 
 describe('ManageStudentsTable', () => {
@@ -188,12 +191,42 @@ describe('ManageStudentsTable', () => {
       );
     });
 
+    describe('LTI section tests', () => {
+      it('does not render the Actions column if loginType is lti_v1 and sync is enabled', () => {
+        const store = getStore();
+        store.dispatch(setLoginType(SectionLoginType.lti_v1));
+        store.dispatch(setSections([{...fakeSection, sync_enabled: true}]));
+        const wrapper = mount(
+          <Provider store={store}>
+            <ManageStudentsTable />
+          </Provider>
+        );
+
+        expect(wrapper.find(ManageStudentActionsHeaderCell).exists()).to.be
+          .false;
+      });
+
+      it('does render the Actions column if loginType is lti_v1 and sync is disabled', () => {
+        const store = getStore();
+        store.dispatch(setLoginType(SectionLoginType.lti_v1));
+        store.dispatch(setSections([{...fakeSection, sync_enabled: false}]));
+        const wrapper = mount(
+          <Provider store={store}>
+            <ManageStudentsTable />
+          </Provider>
+        );
+
+        expect(wrapper.find(ManageStudentActionsHeaderCell).exists()).to.be
+          .true;
+      });
+    });
+
     describe('Gender field feature flag', () => {
-      before(() => {
+      beforeAll(() => {
         experiments.setEnabled(experiments.GENDER_FEATURE_ENABLED, true);
       });
 
-      after(() => {
+      afterAll(() => {
         experiments.setEnabled(experiments.GENDER_FEATURE_ENABLED, false);
       });
 

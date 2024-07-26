@@ -1,0 +1,1727 @@
+{
+  "script": {
+    "name": "k5maker5thgrade",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "curriculum_umbrella": "CSF Self Paced PL",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2024-07-11 20:34:51 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "k5maker5thgrade"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Events",
+      "name": "Events",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade"
+      }
+    },
+    {
+      "key": "Dance Party",
+      "name": "Dance Party",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "preparation": " - Play through the puzzles to find any potential problem areas for your class.\n - Consider the need for headphones. This activity relies on sound.",
+        "purpose": "This lesson introduces the core CS concepts of coding and event programming (using blocks)."
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade"
+      }
+    },
+    {
+      "key": "Counting with Variables",
+      "name": "Counting with Variables",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "89e712e5-d3c6-4322-9875-defacf2643e3",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "89e712e5-d3c6-4322-9875-defacf2643e3",
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade"
+      }
+    },
+    {
+      "key": "61e18dc8-6b4a-4790-b2b2-2a9aaf44629f",
+      "position": 1,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "61e18dc8-6b4a-4790-b2b2-2a9aaf44629f",
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade"
+      }
+    },
+    {
+      "key": "9aefd15b-a75d-4073-be9c-c9b319ce4d5e",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9aefd15b-a75d-4073-be9c-c9b319ce4d5e",
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "5eeb4ec4-f42c-4d5c-b99d-06037ed359a3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unplugged Lesson with Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "5eeb4ec4-f42c-4d5c-b99d-06037ed359a3",
+        "lesson_activity.key": "89e712e5-d3c6-4322-9875-defacf2643e3"
+      }
+    },
+    {
+      "key": "2c80fa6d-da3a-43f1-bec6-9f15a1635a49",
+      "position": 2,
+      "properties": {
+        "progression_name": "Intro to Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "2c80fa6d-da3a-43f1-bec6-9f15a1635a49",
+        "lesson_activity.key": "89e712e5-d3c6-4322-9875-defacf2643e3"
+      }
+    },
+    {
+      "key": "92815f76-c7be-4088-9c8b-f0751a0a15ba",
+      "position": 3,
+      "properties": {
+        "progression_name": "Events with Flappy Bird"
+      },
+      "seeding_key": {
+        "activity_section.key": "92815f76-c7be-4088-9c8b-f0751a0a15ba",
+        "lesson_activity.key": "89e712e5-d3c6-4322-9875-defacf2643e3"
+      }
+    },
+    {
+      "key": "da408ac9-dd68-4f0e-88ce-139acde05ef6",
+      "position": 4,
+      "properties": {
+        "progression_name": "Print Block + Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "da408ac9-dd68-4f0e-88ce-139acde05ef6",
+        "lesson_activity.key": "89e712e5-d3c6-4322-9875-defacf2643e3"
+      }
+    },
+    {
+      "key": "f76d8c56-7004-4f51-9177-005a78fcdc04",
+      "position": 5,
+      "properties": {
+        "progression_name": "Events Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "f76d8c56-7004-4f51-9177-005a78fcdc04",
+        "lesson_activity.key": "89e712e5-d3c6-4322-9875-defacf2643e3"
+      }
+    },
+    {
+      "key": "581d9771-fe20-4500-a0d8-484b67712efe",
+      "position": 1,
+      "properties": {
+        "name": "Level by Level Support",
+        "progression_name": "Video: Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "581d9771-fe20-4500-a0d8-484b67712efe",
+        "lesson_activity.key": "61e18dc8-6b4a-4790-b2b2-2a9aaf44629f"
+      }
+    },
+    {
+      "key": "0a4eeb5a-5f08-47e6-8569-66b83b2c0fc2",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "0a4eeb5a-5f08-47e6-8569-66b83b2c0fc2",
+        "lesson_activity.key": "61e18dc8-6b4a-4790-b2b2-2a9aaf44629f"
+      }
+    },
+    {
+      "key": "5354149e-00b1-4c64-b487-b2e246c77a56",
+      "position": 3,
+      "properties": {
+        "progression_name": "Video: Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "5354149e-00b1-4c64-b487-b2e246c77a56",
+        "lesson_activity.key": "61e18dc8-6b4a-4790-b2b2-2a9aaf44629f"
+      }
+    },
+    {
+      "key": "817fa4b9-7a55-4706-9d33-494062b44899",
+      "position": 4,
+      "properties": {
+        "progression_name": "Events"
+      },
+      "seeding_key": {
+        "activity_section.key": "817fa4b9-7a55-4706-9d33-494062b44899",
+        "lesson_activity.key": "61e18dc8-6b4a-4790-b2b2-2a9aaf44629f"
+      }
+    },
+    {
+      "key": "b8953797-e4af-4daf-9128-a62b57bf63be",
+      "position": 5,
+      "properties": {
+        "progression_name": "Video: Measures"
+      },
+      "seeding_key": {
+        "activity_section.key": "b8953797-e4af-4daf-9128-a62b57bf63be",
+        "lesson_activity.key": "61e18dc8-6b4a-4790-b2b2-2a9aaf44629f"
+      }
+    },
+    {
+      "key": "c3cec606-b13f-4230-9aec-6c3874e34def",
+      "position": 6,
+      "properties": {
+        "progression_name": "Measures"
+      },
+      "seeding_key": {
+        "activity_section.key": "c3cec606-b13f-4230-9aec-6c3874e34def",
+        "lesson_activity.key": "61e18dc8-6b4a-4790-b2b2-2a9aaf44629f"
+      }
+    },
+    {
+      "key": "4c7b58d7-061b-4760-acdd-3d7bbad7fb13",
+      "position": 7,
+      "properties": {
+        "progression_name": "Video: Properties"
+      },
+      "seeding_key": {
+        "activity_section.key": "4c7b58d7-061b-4760-acdd-3d7bbad7fb13",
+        "lesson_activity.key": "61e18dc8-6b4a-4790-b2b2-2a9aaf44629f"
+      }
+    },
+    {
+      "key": "7180f9ca-a37b-4255-9529-cc021c58fdab",
+      "position": 8,
+      "properties": {
+        "progression_name": "Properties"
+      },
+      "seeding_key": {
+        "activity_section.key": "7180f9ca-a37b-4255-9529-cc021c58fdab",
+        "lesson_activity.key": "61e18dc8-6b4a-4790-b2b2-2a9aaf44629f"
+      }
+    },
+    {
+      "key": "c16f32f3-3bdb-412e-9260-755ac90860ad",
+      "position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c16f32f3-3bdb-412e-9260-755ac90860ad",
+        "lesson_activity.key": "61e18dc8-6b4a-4790-b2b2-2a9aaf44629f"
+      }
+    },
+    {
+      "key": "a53773bf-7cd5-439b-ba21-be297cfe52a6",
+      "position": 10,
+      "properties": {
+        "progression_name": "Video: Wrap-up"
+      },
+      "seeding_key": {
+        "activity_section.key": "a53773bf-7cd5-439b-ba21-be297cfe52a6",
+        "lesson_activity.key": "61e18dc8-6b4a-4790-b2b2-2a9aaf44629f"
+      }
+    },
+    {
+      "key": "b65ccf39-ca2f-46ce-a0f8-867766ac0aff",
+      "position": 11,
+      "properties": {
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "b65ccf39-ca2f-46ce-a0f8-867766ac0aff",
+        "lesson_activity.key": "61e18dc8-6b4a-4790-b2b2-2a9aaf44629f"
+      }
+    },
+    {
+      "key": "11b587fc-7326-421c-9a97-f66aaf7e5e7f",
+      "position": 12,
+      "properties": {
+        "progression_name": "Lesson Extras"
+      },
+      "seeding_key": {
+        "activity_section.key": "11b587fc-7326-421c-9a97-f66aaf7e5e7f",
+        "lesson_activity.key": "61e18dc8-6b4a-4790-b2b2-2a9aaf44629f"
+      }
+    },
+    {
+      "key": "5a609ec1-d8e9-4aa3-9981-fad1d6b084a9",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "5a609ec1-d8e9-4aa3-9981-fad1d6b084a9",
+        "lesson_activity.key": "9aefd15b-a75d-4073-be9c-c9b319ce4d5e"
+      }
+    },
+    {
+      "key": "f7e142d0-6f4f-4485-89e6-7548e9dcd086",
+      "position": 2,
+      "properties": {
+        "progression_name": "Coding with Variables"
+      },
+      "seeding_key": {
+        "activity_section.key": "f7e142d0-6f4f-4485-89e6-7548e9dcd086",
+        "lesson_activity.key": "9aefd15b-a75d-4073-be9c-c9b319ce4d5e"
+      }
+    },
+    {
+      "key": "6ccf79be-7755-4250-b270-cc47351614a8",
+      "position": 3,
+      "properties": {
+        "progression_name": "Create a Clicker Game"
+      },
+      "seeding_key": {
+        "activity_section.key": "6ccf79be-7755-4250-b270-cc47351614a8",
+        "lesson_activity.key": "9aefd15b-a75d-4073-be9c-c9b319ce4d5e"
+      }
+    },
+    {
+      "key": "64cec072-cd7c-4daa-8719-57740de9ffc7",
+      "position": 4,
+      "properties": {
+        "progression_name": "Next Steps"
+      },
+      "seeding_key": {
+        "activity_section.key": "64cec072-cd7c-4daa-8719-57740de9ffc7",
+        "lesson_activity.key": "9aefd15b-a75d-4073-be9c-c9b319ce4d5e"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PLPLIntro to Events_1_prod"
+        ],
+        "progression": "Unplugged Lesson with Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLPLIntro to Events_1_prod"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "5eeb4ec4-f42c-4d5c-b99d-06037ed359a3"
+      },
+      "level_keys": [
+        "PLPLIntro to Events_1_prod"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "dancepartyPL_prod"
+        ],
+        "progression": "Unplugged Lesson with Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "dancepartyPL_prod"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "5eeb4ec4-f42c-4d5c-b99d-06037ed359a3"
+      },
+      "level_keys": [
+        "dancepartyPL_prod"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid1_prod"
+        ],
+        "progression": "Video: Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid1_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "581d9771-fe20-4500-a0d8-484b67712efe"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_vid1_prod"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_01_prod"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_01_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "0a4eeb5a-5f08-47e6-8569-66b83b2c0fc2"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_01_prod"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid2_prod"
+        ],
+        "progression": "Video: Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid2_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "5354149e-00b1-4c64-b487-b2e246c77a56"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_vid2_prod"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_02_prod"
+        ],
+        "progression": "Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_02_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "817fa4b9-7a55-4706-9d33-494062b44899"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_02_prod"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_03_prod"
+        ],
+        "progression": "Events"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_03_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "817fa4b9-7a55-4706-9d33-494062b44899"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_03_prod"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid3_prod"
+        ],
+        "progression": "Video: Measures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid3_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "b8953797-e4af-4daf-9128-a62b57bf63be"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_vid3_prod"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_04_prod"
+        ],
+        "progression": "Measures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_04_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "c3cec606-b13f-4230-9aec-6c3874e34def"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_04_prod"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_05_prod"
+        ],
+        "progression": "Measures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_05_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "c3cec606-b13f-4230-9aec-6c3874e34def"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_05_prod"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_06_prod"
+        ],
+        "progression": "Measures"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_06_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "c3cec606-b13f-4230-9aec-6c3874e34def"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_06_prod"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid4_prod"
+        ],
+        "progression": "Video: Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid4_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "4c7b58d7-061b-4760-acdd-3d7bbad7fb13"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_vid4_prod"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 11,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_07_prod"
+        ],
+        "progression": "Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_07_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "7180f9ca-a37b-4255-9529-cc021c58fdab"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_07_prod"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 12,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_08_prod"
+        ],
+        "progression": "Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_08_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "7180f9ca-a37b-4255-9529-cc021c58fdab"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_08_prod"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 13,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_09_prod"
+        ],
+        "progression": "Properties"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_09_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "7180f9ca-a37b-4255-9529-cc021c58fdab"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_09_prod"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 14,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid5_prod"
+        ],
+        "progression": "Video: Wrap-up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid5_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "a53773bf-7cd5-439b-ba21-be297cfe52a6"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_vid5_prod"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_10_prod"
+        ],
+        "progression": "Free Play"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_10_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "b65ccf39-ca2f-46ce-a0f8-867766ac0aff"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_10_prod"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 16,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_bonus1_prod"
+        ],
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_bonus1_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "11b587fc-7326-421c-9a97-f66aaf7e5e7f"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_bonus1_prod"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 17,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_bonus3_prod"
+        ],
+        "progression": "Lesson Extras"
+      },
+      "bonus": true,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_bonus3_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "11b587fc-7326-421c-9a97-f66aaf7e5e7f"
+      },
+      "level_keys": [
+        "CourseD_Dance_2020_bonus3_prod"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "intro to variables_1_prod"
+        ],
+        "progression": "Introduction to Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "intro to variables_1_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "5a609ec1-d8e9-4aa3-9981-fad1d6b084a9"
+      },
+      "level_keys": [
+        "intro to variables_1_prod"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Variable MB_prod"
+        ],
+        "progression": "Introduction to Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Variable MB_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "5a609ec1-d8e9-4aa3-9981-fad1d6b084a9"
+      },
+      "level_keys": [
+        "Variable MB_prod"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_variables2_predict_2023MB_prod"
+        ],
+        "progression": "Coding with Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables2_predict_2023MB_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "f7e142d0-6f4f-4485-89e6-7548e9dcd086"
+      },
+      "level_keys": [
+        "courseF_variables2_predict_2023MB_prod"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_variables2_set_2023MB_prod"
+        ],
+        "progression": "Coding with Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables2_set_2023MB_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "f7e142d0-6f4f-4485-89e6-7548e9dcd086"
+      },
+      "level_keys": [
+        "courseF_variables2_set_2023MB_prod"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_variables2_change_2023MB_prod"
+        ],
+        "progression": "Coding with Variables"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_variables2_change_2023MB_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "f7e142d0-6f4f-4485-89e6-7548e9dcd086"
+      },
+      "level_keys": [
+        "courseF_variables2_change_2023MB_prod"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_clicker_sprites_2023MB_prod"
+        ],
+        "progression": "Create a Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_sprites_2023MB_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "6ccf79be-7755-4250-b270-cc47351614a8"
+      },
+      "level_keys": [
+        "courseF_clicker_sprites_2023MB_prod"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_clicker_remove_2023MB_prod"
+        ],
+        "progression": "Create a Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_remove_2023MB_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "6ccf79be-7755-4250-b270-cc47351614a8"
+      },
+      "level_keys": [
+        "courseF_clicker_remove_2023MB_prod"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_clicker_variable_2023MB_prod"
+        ],
+        "progression": "Create a Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_variable_2023MB_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "6ccf79be-7755-4250-b270-cc47351614a8"
+      },
+      "level_keys": [
+        "courseF_clicker_variable_2023MB_prod"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 9,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_clicker_score_2023MB_prod"
+        ],
+        "progression": "Create a Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_score_2023MB_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "6ccf79be-7755-4250-b270-cc47351614a8"
+      },
+      "level_keys": [
+        "courseF_clicker_score_2023MB_prod"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 10,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseF_clicker_finish_2023MB_prod"
+        ],
+        "progression": "Create a Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseF_clicker_finish_2023MB_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "6ccf79be-7755-4250-b270-cc47351614a8"
+      },
+      "level_keys": [
+        "courseF_clicker_finish_2023MB_prod"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 11,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U2L4 Multiple Choice packets2022_2023MB1_1_prod"
+        ],
+        "progression": "Create a Clicker Game"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L4 Multiple Choice packets2022_2023MB1_1_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "6ccf79be-7755-4250-b270-cc47351614a8"
+      },
+      "level_keys": [
+        "U2L4 Multiple Choice packets2022_2023MB1_1_prod"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Next Steps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "maker_microbit_PL_end_naviagtion_D_pl_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "64cec072-cd7c-4daa-8719-57740de9ffc7"
+      },
+      "level_keys": [
+        "maker_microbit_PL_end_naviagtion_D_pl_prod"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "PLPLIntro to Events_1_prod",
+        "script_level.level_keys": [
+          "PLPLIntro to Events_1_prod"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "5eeb4ec4-f42c-4d5c-b99d-06037ed359a3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "dancepartyPL_prod",
+        "script_level.level_keys": [
+          "dancepartyPL_prod"
+        ],
+        "lesson.key": "Events",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "5eeb4ec4-f42c-4d5c-b99d-06037ed359a3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_vid1_prod",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid1_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "581d9771-fe20-4500-a0d8-484b67712efe"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_01_prod",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_01_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "0a4eeb5a-5f08-47e6-8569-66b83b2c0fc2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_vid2_prod",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid2_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "5354149e-00b1-4c64-b487-b2e246c77a56"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_02_prod",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_02_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "817fa4b9-7a55-4706-9d33-494062b44899"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_03_prod",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_03_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "817fa4b9-7a55-4706-9d33-494062b44899"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_vid3_prod",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid3_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "b8953797-e4af-4daf-9128-a62b57bf63be"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_04_prod",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_04_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "c3cec606-b13f-4230-9aec-6c3874e34def"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_05_prod",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_05_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "c3cec606-b13f-4230-9aec-6c3874e34def"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_06_prod",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_06_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "c3cec606-b13f-4230-9aec-6c3874e34def"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_vid4_prod",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid4_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "4c7b58d7-061b-4760-acdd-3d7bbad7fb13"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_07_prod",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_07_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "7180f9ca-a37b-4255-9529-cc021c58fdab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_08_prod",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_08_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "7180f9ca-a37b-4255-9529-cc021c58fdab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_09_prod",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_09_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "7180f9ca-a37b-4255-9529-cc021c58fdab"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_vid5_prod",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_vid5_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "a53773bf-7cd5-439b-ba21-be297cfe52a6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_10_prod",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_10_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "b65ccf39-ca2f-46ce-a0f8-867766ac0aff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_bonus1_prod",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_bonus1_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "11b587fc-7326-421c-9a97-f66aaf7e5e7f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CourseD_Dance_2020_bonus3_prod",
+        "script_level.level_keys": [
+          "CourseD_Dance_2020_bonus3_prod"
+        ],
+        "lesson.key": "Dance Party",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "11b587fc-7326-421c-9a97-f66aaf7e5e7f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "intro to variables_1_prod",
+        "script_level.level_keys": [
+          "intro to variables_1_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "5a609ec1-d8e9-4aa3-9981-fad1d6b084a9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Variable MB_prod",
+        "script_level.level_keys": [
+          "Variable MB_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "5a609ec1-d8e9-4aa3-9981-fad1d6b084a9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables2_predict_2023MB_prod",
+        "script_level.level_keys": [
+          "courseF_variables2_predict_2023MB_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "f7e142d0-6f4f-4485-89e6-7548e9dcd086"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables2_set_2023MB_prod",
+        "script_level.level_keys": [
+          "courseF_variables2_set_2023MB_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "f7e142d0-6f4f-4485-89e6-7548e9dcd086"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_variables2_change_2023MB_prod",
+        "script_level.level_keys": [
+          "courseF_variables2_change_2023MB_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "f7e142d0-6f4f-4485-89e6-7548e9dcd086"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_sprites_2023MB_prod",
+        "script_level.level_keys": [
+          "courseF_clicker_sprites_2023MB_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "6ccf79be-7755-4250-b270-cc47351614a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_remove_2023MB_prod",
+        "script_level.level_keys": [
+          "courseF_clicker_remove_2023MB_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "6ccf79be-7755-4250-b270-cc47351614a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_variable_2023MB_prod",
+        "script_level.level_keys": [
+          "courseF_clicker_variable_2023MB_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "6ccf79be-7755-4250-b270-cc47351614a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_score_2023MB_prod",
+        "script_level.level_keys": [
+          "courseF_clicker_score_2023MB_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "6ccf79be-7755-4250-b270-cc47351614a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseF_clicker_finish_2023MB_prod",
+        "script_level.level_keys": [
+          "courseF_clicker_finish_2023MB_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "6ccf79be-7755-4250-b270-cc47351614a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L4 Multiple Choice packets2022_2023MB1_1_prod",
+        "script_level.level_keys": [
+          "U2L4 Multiple Choice packets2022_2023MB1_1_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "6ccf79be-7755-4250-b270-cc47351614a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "maker_microbit_PL_end_naviagtion_D_pl_prod",
+        "script_level.level_keys": [
+          "maker_microbit_PL_end_naviagtion_D_pl_prod"
+        ],
+        "lesson.key": "Counting with Variables",
+        "lesson_group.key": "",
+        "script.name": "k5maker5thgrade",
+        "activity_section.key": "64cec072-cd7c-4daa-8719-57740de9ffc7"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "**Grade 5 - Maker with micro:bit slides",
+      "url": "https://docs.google.com/presentation/d/1CrNrbnG4-DuDf4Pejrcnz1ZStBotO-Oq59aik-iq4DE/template/preview",
+      "key": "_grade_5_-_maker_with_micro_bit_slides",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1CrNrbnG4-DuDf4Pejrcnz1ZStBotO-Oq59aik-iq4DE/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "_grade_5_-_maker_with_micro_bit_slides"
+      }
+    },
+    {
+      "name": "Dance Party Project Guide",
+      "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit",
+      "key": "dance_party_project_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Worksheet"
+      },
+      "seeding_key": {
+        "resource.key": "dance_party_project_guide"
+      }
+    },
+    {
+      "name": "Dance Party: Unplugged",
+      "url": "https://curriculum.code.org/hoc/unplugged/4/",
+      "key": "dance_party_unplugged",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "dance_party_unplugged"
+      }
+    },
+    {
+      "name": "Open-ended Programming Levels",
+      "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view",
+      "key": "open-ended_programming_levels",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "open-ended_programming_levels"
+      }
+    },
+    {
+      "name": "Spotify Playlist (all ages)",
+      "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw",
+      "key": "spotify_playlist_all_ages_",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "spotify_playlist_all_ages_"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "resource.key": "_grade_5_-_maker_with_micro_bit_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "resource.key": "dance_party_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "resource.key": "dance_party_unplugged"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "resource.key": "open-ended_programming_levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "resource.key": "spotify_playlist_all_ages_"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "code",
+      "word": "code",
+      "definition": "(v) to write code, or to write instructions for a computer.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "key": "event",
+      "word": "Event",
+      "definition": "An action that causes something to happen.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "key": "program",
+      "word": "Program",
+      "definition": "An algorithm that has been coded into something that can be run by a machine.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "program"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "vocabulary.key": "code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "vocabulary.key": "event"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "vocabulary.key": "program"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "7f782e12-7e53-4321-ae17-55ff5ec16102",
+      "properties": {
+        "description": "Create dance animations with code"
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "objective.key": "7f782e12-7e53-4321-ae17-55ff5ec16102"
+      }
+    },
+    {
+      "key": "a32901a5-5fd5-4041-83b0-4b7080c36dfe",
+      "properties": {
+        "description": "Develop programs that respond to user input"
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "objective.key": "a32901a5-5fd5-4041-83b0-4b7080c36dfe"
+      }
+    },
+    {
+      "key": "af20b8f8-ece9-4ba9-8806-f5a1306c137f",
+      "properties": {
+        "description": "Develop programs that respond to timed events"
+      },
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "objective.key": "af20b8f8-ece9-4ba9-8806-f5a1306c137f"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Dance Party",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

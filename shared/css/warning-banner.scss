@@ -7,13 +7,11 @@
   overflow: hidden;
   width: 100%;
   box-sizing: border-box;
-  padding: 10px 20px;
-  font-size: 13px;
-  line-height: 16px;
-  background-color: $purple;
-  color: white;
+  padding: 1rem;
+  background-color: $light_secondary_700;
   display: flex;
   align-items: center;
+  gap: 0.75rem;
 
   #dismiss-icon {
     margin-left: auto;
@@ -24,12 +22,18 @@
   }
 
   a, a:visited {
-    font-family: $gotham-extra-bold;
+    @include main-font-bold;
     color: white;
     text-decoration: underline;
   }
   a:hover {
     background: transparent;
+  }
+
+  p {
+    color: $light_white;
+    margin-bottom: 0;
+    font-size: 0.875rem;
   }
 
   #message {

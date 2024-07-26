@@ -1,42 +1,60 @@
-import React, {useCallback, useEffect} from 'react';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import React, {useCallback, useRef, useEffect} from 'react';
 import {useSelector} from 'react-redux';
-import ChatWarningModal from '@cdo/apps/aichat/views/ChatWarningModal';
-import ChatMessage from './ChatMessage';
-import UserChatMessageEditor from './UserChatMessageEditor';
-import moduleStyles from './chatWorkspace.module.scss';
+
 import {
   AichatState,
-  clearChatMessages,
+  selectAllMessages,
   setShowWarningModal,
 } from '@cdo/apps/aichat/redux/aichatRedux';
-import {ProgressState} from '@cdo/apps/code-studio/progressRedux';
+import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
+import {Button} from '@cdo/apps/componentLibrary/button';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+
+import ChatItemView from './ChatItemView';
+import CopyButton from './CopyButton';
+import UserChatMessageEditor from './UserChatMessageEditor';
+
+import moduleStyles from './chatWorkspace.module.scss';
+
+interface ChatWorkspaceProps {
+  onClear: () => void;
+}
 
 /**
  * Renders the AI Chat Lab main chat workspace component.
  */
-const ChatWorkspace: React.FunctionComponent = () => {
+const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
+  onClear,
+}) => {
   const showWarningModal = useSelector(
     (state: {aichat: AichatState}) => state.aichat.showWarningModal
   );
 
-  const storedMessages = useSelector(
-    (state: {aichat: AichatState}) => state.aichat.chatMessages
-  );
+  const items = useSelector(selectAllMessages);
 
   const isWaitingForChatResponse = useSelector(
     (state: {aichat: AichatState}) => state.aichat.isWaitingForChatResponse
   );
+
+  // Compare the messages as a string since the object reference will change on every update.
+  // This way we will only scroll when the contents of the messages have changed.
+  const messagesString = JSON.stringify(items);
+  const conversationContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (conversationContainerRef.current) {
+      conversationContainerRef.current.scrollTo({
+        top: conversationContainerRef.current.scrollHeight,
+        behavior: 'smooth',
+      });
+    }
+  }, [messagesString, isWaitingForChatResponse]);
 
   const dispatch = useAppDispatch();
 
   const onCloseWarningModal = useCallback(
     () => dispatch(setShowWarningModal(false)),
     [dispatch]
-  );
-
-  const currentLevelId = useSelector(
-    (state: {progress: ProgressState}) => state.progress.currentLevelId
   );
 
   const showWaitingAnimation = () => {
@@ -51,28 +69,30 @@ const ChatWorkspace: React.FunctionComponent = () => {
     }
   };
 
-  // When the level changes, clear the chat message history.
-  useEffect(() => {
-    dispatch(clearChatMessages());
-  }, [currentLevelId, dispatch]);
-
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {showWarningModal && <ChatWarningModal onClose={onCloseWarningModal} />}
       <div
         id="chat-workspace-conversation"
         className={moduleStyles.conversationArea}
+        ref={conversationContainerRef}
       >
-        {storedMessages.map(message => (
-          <ChatMessage message={message} key={message.id} />
+        {items.map((item, index) => (
+          <ChatItemView item={item} key={index} />
         ))}
         {showWaitingAnimation()}
       </div>
-      <div
-        id="chat-workspace-editor"
-        className={moduleStyles.userChatMessageEditor}
-      >
-        <UserChatMessageEditor />
+      <UserChatMessageEditor />
+      <div className={moduleStyles.buttonRow}>
+        <Button
+          text="Clear chat"
+          iconLeft={{iconName: 'eraser'}}
+          size="s"
+          type="secondary"
+          color="gray"
+          onClick={onClear}
+        />
+        <CopyButton />
       </div>
     </div>
   );

@@ -1,7 +1,10 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
+
 import SendToPhone from '../../code-studio/components/SendToPhone';
 import project from '../../code-studio/initApp/project';
 
@@ -132,11 +135,13 @@ SendToPhoneControls.propTypes = _.pick(WireframeButtons.propTypes, [
 
 const styles = {
   main: {
-    font: '12pt "Gotham 5r", sans-serif',
+    fontSize: '12pt',
+    ...fontConstants['main-font-semi-bold'],
   },
   sendToPhone: {
     label: {
-      font: '12pt "Gotham 5r", sans-serif',
+      fontSize: '12pt',
+      ...fontConstants['main-font-semi-bold'],
       lineHeight: 'normal',
       cursor: 'default',
     },

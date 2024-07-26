@@ -1,6 +1,7 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import $ from 'jquery';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 
@@ -49,6 +50,7 @@ export default class CreateNewLevelInputs extends Component {
         data: JSON.stringify({
           type: this.state.levelType,
           name: this.state.levelName,
+          published: true,
         }),
         contentType: 'application/json;charset=UTF-8',
       })

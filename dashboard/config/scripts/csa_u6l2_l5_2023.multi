@@ -1,7 +1,7 @@
 name 'CSA U6L2-L5_2023'
 title 'Check for Understanding'
 
-right '`Prograav`'
+right '`Prograv`'
 wrong '`Progvaav`'
 wrong '`aProgav`'
 wrong '`Progav`'
@@ -31,7 +31,7 @@ teacher_markdown <<MARKDOWN
 
 `String result3 = result2.substring(1, 3);` - This line extracts a substring from `result2` (`"Java"`) starting at index `1` (inclusive) and ending at index `3` (exclusive). The substring extracted is `"av"`.
 
-`String finalResult = result1 + result3;` - This line concatenates the two substrings, `"Progr"` and `"av"`, resulting in the final string `"Prograav"`.
+`String finalResult = result1 + result3;` - This line concatenates the two substrings, `"Progr"` and `"av"`, resulting in the final string `"Prograv"`.
 
-`System.out.println(finalResult);` - This line prints the final result `"Prograav"` to the console.
+`System.out.println(finalResult);` - This line prints the final result `"Prograv"` to the console.
 MARKDOWN

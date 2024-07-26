@@ -1,5 +1,9 @@
 <Javalab>
   <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2021-10-18T13:45:50.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
   "properties": {
     "encrypted": "false",
     "mini_rubric": "false",
@@ -5214,12 +5218,9 @@
         "isVisible": true
       }
     },
-    "long_instructions": "**Teacher Feedback:** Many of my students did amazing projects using both their classes well along with some great while loops. I am sharing this one because she did an amazing job of figuring out the logic needed to make her loops works, and she really paid attention to the order and and flow of the program."
+    "long_instructions": "**Teacher Feedback:** Many of my students did amazing projects using both their classes well along with some great while loops. I am sharing this one because she did an amazing job of figuring out the logic needed to make her loops works, and she really paid attention to the order and and flow of the program.",
+    "ai_tutor_available": true
   },
-  "game_id": 68,
-  "created_at": "2021-10-18T13:45:50.000Z",
-  "level_num": "custom",
-  "user_id": 9271,
   "published": true,
   "audit_log": "[{\"changed_at\":\"2021-10-18T13:45:50.538+00:00\",\"changed\":[\"cloned from \\\"CSA Unit 1 Project - Student Example 1\\\"\"],\"cloned_from\":\"CSA Unit 1 Project - Student Example 1\"},{\"changed_at\":\"2021-10-18 13:48:00 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-18 13:50:02 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-18 13:51:18 +0000\",\"changed\":[\"start_sources\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>

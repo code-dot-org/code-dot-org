@@ -236,7 +236,7 @@ module Pegasus
     end
 
     after do
-      response.headers.keys.each {|i| response.headers.delete(i) if /^X-Pegasus-/.match?(i)}
+      response.headers.each_key {|i| response.headers.delete(i) if /^X-Pegasus-/.match?(i)}
 
       status = response.status.to_s.to_i
       message = "#{status} returned for #{request.site}#{request.path_info}"
@@ -372,10 +372,6 @@ end
 require src_dir 'curriculum_course'
 
 class CurriculumRouter < Pegasus::Base
-  get '/curriculum/mss*' do
-    redirect "/curriculum/science/#{params['splat'][0]}"
-  end
-
   get '/curriculum/msm*' do
     redirect "/curriculum/algebra/#{params['splat'][0]}"
   end

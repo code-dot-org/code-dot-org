@@ -358,7 +358,8 @@
     "project_template_level_name": "CSA U1L6 PBT_pilot-2022",
     "teacher_markdown": "Refer students to their notes on the Unit 1 Guide to help them write their code.",
     "encrypted_exemplar_sources": "R6CdU+VhUSkKblWJHUDBND8hxPwuFNueck9vf8s9vK0Xic8DQfC7Mk4FfrGa\nEL3FkZQNCViCvt+bqrqKr105G8X1patFohzLqsgGqDvR/XowPZP+opoafB83\niPKQ012dDosAad9LJfZax5DN3NyHCoxqUFzCesItZ5nUZpp1dy7q8hHklw+N\nAKvAZXhBQ7WYMS+j7q8FXdfgUEjF5+7zSQgYMFIAzVxLBSHxhKWaLtR69TMl\neCAtvN6fJWFA1D0Q07r+MPP4VZFpmxhj99AVD3FtPPuS39QLlr65Io73LRgl\ngOYNVBJpx2mt8tFlcP+4W1nH8gd4mO685/Ar8zfLzEnTZeqxbx50aym7r9aD\nnkogAfCmoTK7DmbDxTpk5170qoqqo9eoDxVZZX3do1Fwpv3yE/abhnBBXaxn\nMJlwoyH15E+yek2y2HrfpFsB6/9sre4X7cqFUkN5NIo8tPT7X1bHiYJjagKF\nFtnHWqdL+v/RIrWX5Y79in3P2Abj1nT59Rn4qa0l1JgVlghrrC4eGT63Cxyv\noz35VwQEgn4+/jdOzVsNaA9RpLjmhbCjX758hdNKGNvn11YnG9ydkD6CC6w6\nZzTc59+biGc4pZAbIcosf9egzqLF+0c7bMsHj6gftWN+HqiBTkvo0SrUuf23\naiKJnS6fHuQ+lKjogK/x6oc+DitGQkLI6KkUrys+UVYv29NpgVCtf3HkEQjY\n2L3q9F9euIJnZotPlhV/Nj3iYAOI5/a7OQ0ZLRGJIkMv3PBQoq6i/8bWTyMH\nxWvwHzcdtHEp/vooYDQItQpXJ/ZhnOiy6fAbcS139B8DJSckhV+fXfSlhn72\nN9entq9DqtfE+pjkhZjeXe9UFJ+/Fkw/Zy9KqN5CC5eDk59qX1a7rDCwYtHS\nP0SItJlf7zQkH26K0uyGiektA0wWEWSDLdczzcU=\n",
-    "name_suffix": "_pilot-2022"
+    "name_suffix": "_pilot-2022",
+    "ai_tutor_available": true
   },
   "published": true,
   "audit_log": "[{\"changed_at\":\"2022-08-23T20:21:30.284+00:00\",\"changed\":[\"cloned from \\\"CSA U1L7-L1_2022\\\"\"],\"cloned_from\":\"CSA U1L7-L1_2022\"}]"

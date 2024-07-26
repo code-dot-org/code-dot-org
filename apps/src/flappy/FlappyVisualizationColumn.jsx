@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
+
 var msg = require('@cdo/locale');
 
-var GameButtons = require('../templates/GameButtons').default;
 var BelowVisualization = require('../templates/BelowVisualization');
-import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
+var GameButtons = require('../templates/GameButtons').default;
 
 const FlappyVisualizationColumn = ({showFinishButton}) => {
   return (
@@ -16,7 +18,7 @@ const FlappyVisualizationColumn = ({showFinishButton}) => {
         {showFinishButton && (
           <div id="right-button-cell">
             <button type="button" id="rightButton" className="share">
-              <img src="/blockly/media/1x1.gif" />
+              <img src="/blockly/media/1x1.gif" alt="" />
               {msg.finish()}
             </button>
           </div>

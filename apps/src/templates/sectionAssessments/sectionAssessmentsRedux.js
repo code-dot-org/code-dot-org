@@ -1,6 +1,7 @@
 import {
   SET_SCRIPT,
   getSelectedScriptName,
+  doesCurrentCourseUseFeedback,
 } from '@cdo/apps/redux/unitSelectionRedux';
 
 export const ALL_STUDENT_FILTER = 0;
@@ -1076,14 +1077,6 @@ export const getExportableFeedbackData = state => {
   });
 
   return feedback;
-};
-
-/*
- * Only show feedback option if its CSD and CSP
- * */
-export const doesCurrentCourseUseFeedback = state => {
-  const scriptName = getSelectedScriptName(state) || '';
-  return scriptName.includes('csp') || scriptName.includes('csd');
 };
 
 export const isCurrentScriptCSD = state => {

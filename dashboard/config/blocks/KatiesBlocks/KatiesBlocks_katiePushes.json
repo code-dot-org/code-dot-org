@@ -1,0 +1,18 @@
+{
+  "category": "Experimental",
+  "config": {
+    "func": "katiePushes",
+    "blockText": "{SPRITE} bumps {TARGET}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "TARGET",
+        "type": "Sprite"
+      }
+    ],
+    "style": "default"
+  }
+}

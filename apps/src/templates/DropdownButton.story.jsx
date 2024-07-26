@@ -1,9 +1,10 @@
 import React from 'react';
-import DropdownButton from './DropdownButton';
+
 import Button from '@cdo/apps/templates/Button';
 
+import DropdownButton from './DropdownButton';
+
 export default {
-  title: 'DropdownButton',
   component: DropdownButton,
 };
 

@@ -1,9 +1,11 @@
-import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
-import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {commands} from '@cdo/apps/p5lab/spritelab/commands/actionCommands';
 import {commands as spriteCommands} from '@cdo/apps/p5lab/spritelab/commands/spriteCommands';
+import CoreLibrary from '@cdo/apps/p5lab/spritelab/CoreLibrary';
+
 import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Action Commands', () => {
   let coreLibrary;

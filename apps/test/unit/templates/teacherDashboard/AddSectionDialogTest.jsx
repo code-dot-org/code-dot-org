@@ -1,10 +1,12 @@
-import React from 'react';
-import {shallow} from 'enzyme';
-import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
-import {UnconnectedAddSectionDialog as AddSectionDialog} from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import {UnconnectedAddSectionDialog as AddSectionDialog} from '@cdo/apps/templates/teacherDashboard/AddSectionDialog';
 import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('AddSectionDialog', () => {
   let defaultProps,
@@ -40,7 +42,6 @@ describe('AddSectionDialog', () => {
         courseVersionId: null,
         unitId: null,
         hidden: false,
-        isAssigned: undefined,
         restrictSection: false,
       },
       beginImportRosterFlow,
@@ -93,7 +94,7 @@ describe('AddSectionDialog', () => {
       navigateToHrefSpy.restore();
     });
 
-    it('redirects to new section setup when selecting non-student participant type', () => {
+    it('redirects to new section setup with redirect to MyPL page when selecting non-student participant type', () => {
       const newSection = _.cloneDeep(defaultProps.section);
       const wrapper = shallow(
         <AddSectionDialog
@@ -108,7 +109,7 @@ describe('AddSectionDialog', () => {
       );
       expect(navigateToHrefSpy).to.be.called.once;
       expect(navigateToHrefSpy.getCall(0).args[0]).to.equal(
-        '/sections/new?participantType=teacher&loginType=email'
+        '/sections/new?participantType=teacher&loginType=email&redirectToPage=my-professional-learning'
       );
     });
 

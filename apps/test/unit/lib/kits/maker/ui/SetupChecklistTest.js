@@ -1,35 +1,30 @@
 /** @file Test SetupChecklist component */
+import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
-import sinon from 'sinon';
-import {expect} from '../../../../../util/reconfiguredChai';
-import {mount} from 'enzyme';
-import * as utils from '@cdo/apps/utils';
-import * as boardUtils from '@cdo/apps/lib/kits/maker/util/boardUtils';
-import SetupChecklist from '@cdo/apps/lib/kits/maker/ui/SetupChecklist';
-import SetupChecker from '@cdo/apps/lib/kits/maker/util/SetupChecker';
 import {Provider} from 'react-redux';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import microBitReducer, {
+  setMicroBitFirmataUpdatePercent,
+} from '@cdo/apps/lib/kits/maker/microBitRedux';
+import SetupChecklist from '@cdo/apps/lib/kits/maker/ui/SetupChecklist';
+import * as boardUtils from '@cdo/apps/lib/kits/maker/util/boardUtils';
+import SetupChecker from '@cdo/apps/lib/kits/maker/util/SetupChecker';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import microBitReducer, {
-  setMicroBitFirmataUpdatePercent,
-} from '@cdo/apps/lib/kits/maker/microBitRedux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
+// Speed up the tests by reducing the artificial delay between steps
+const STEP_DELAY_MS = 1;
 
 describe('SetupChecklist', () => {
-  let checker;
-
-  // Speed up the tests by reducing the artificial delay between steps
-  const STEP_DELAY_MS = 1;
-
-  // Helpful selectors
-  const REDETECT_BUTTON = 'input[value="re-detect"]';
-  const WAITING_ICON = '.fa-clock-o';
-  const SUCCESS_ICON = '.fa-check-circle';
-
   beforeEach(() => {
     sinon.stub(utils, 'reload');
     sinon.stub(window.console, 'error');
@@ -67,62 +62,58 @@ describe('SetupChecklist', () => {
     SetupChecker.prototype.celebrate.restore();
     restoreRedux();
   });
+
+  function renderDefault() {
+    return render(
+      <Provider store={getStore()}>
+        <SetupChecklist stepDelay={STEP_DELAY_MS} />
+      </Provider>
+    );
+  }
   describe('Should use WebSerial', () => {
-    before(() => {
+    beforeAll(() => {
       sinon.stub(boardUtils, 'shouldUseWebSerial').returns(true);
     });
 
-    after(() => {
+    afterAll(() => {
       boardUtils.shouldUseWebSerial.restore();
     });
 
     it('renders success', async () => {
-      const wrapper = mount(
-        <Provider store={getStore()}>
-          <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
-        </Provider>
-      );
-      expect(wrapper.find(REDETECT_BUTTON)).to.be.disabled;
-      expect(wrapper.find(WAITING_ICON)).to.have.length(1);
-      await yieldUntilDoneDetecting(wrapper);
-      expect(wrapper.find(REDETECT_BUTTON)).not.to.be.disabled;
-      expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
+      const {rerender} = renderDefault();
+      expect(screen.getByRole('button', {name: 're-detect'})).to.be.disabled;
+      expect(screen.getByTitle('waiting')).to.exist;
+      await yieldUntilDoneDetecting(screen, rerender);
+      expect(screen.getAllByTitle('success')).to.have.length(4);
       expect(window.console.error).not.to.have.been.called;
     });
 
     it('sends analytic event when a board is connected on /maker/setup page', async () => {
-      const wrapper = mount(
-        <Provider store={getStore()}>
-          <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
-        </Provider>
-      );
+      const {rerender} = renderDefault();
       const sendEventSpy = sinon.stub(analyticsReporter, 'sendEvent');
-      await yieldUntilDoneDetecting(wrapper);
+      await yieldUntilDoneDetecting(screen, rerender);
       expect(sendEventSpy).to.be.calledOnce;
       expect(sendEventSpy).calledWith('Board Type On Maker Setup Page');
       analyticsReporter.sendEvent.restore();
     });
 
     it('does reload the page on re-detect', async () => {
-      const wrapper = mount(
-        <Provider store={getStore()}>
-          <SetupChecklist setupChecker={checker} stepDelay={STEP_DELAY_MS} />
-        </Provider>
-      );
-      await yieldUntilDoneDetecting(wrapper);
-      expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
-      wrapper.find(REDETECT_BUTTON).simulate('click');
-      await yieldUntilDoneDetecting(wrapper);
-      expect(wrapper.find(SUCCESS_ICON)).to.have.length(4);
+      const {rerender} = renderDefault();
+      await yieldUntilDoneDetecting(screen, rerender);
+      expect(screen.getAllByTitle('success')).to.have.length(4);
+      const redetectButton = screen.getByRole('button', {name: 're-detect'});
+      fireEvent.click(redetectButton);
+      await yieldUntilDoneDetecting(screen, rerender);
+      expect(screen.getAllByTitle('success')).to.have.length(4);
       expect(utils.reload).to.have.been.called;
     });
   });
 
-  function yieldUntilDoneDetecting(wrapper) {
-    return yieldUntil(
-      wrapper,
-      () => !wrapper.find(REDETECT_BUTTON).prop('disabled')
-    );
+  function yieldUntilDoneDetecting(screen, rerender) {
+    return yieldUntil(screen, rerender, screen => {
+      const button = screen.getByRole('button', {name: 're-detect'});
+      return !button.disabled;
+    });
   }
 });
 
@@ -135,16 +126,27 @@ describe('SetupChecklist', () => {
  * @param {number} intervalMs - time to wait between steps
  * @return {Promise}
  */
-function yieldUntil(wrapper, predicate, timeoutMs = 3500, intervalMs = 5) {
+function yieldUntil(
+  screen,
+  rerender,
+  predicate,
+  timeoutMs = 3500,
+  intervalMs = 5
+) {
   return new Promise((resolve, reject) => {
     let elapsedTime = 0;
     const key = setInterval(() => {
-      if (predicate()) {
+      if (predicate(screen)) {
         clearInterval(key);
         resolve();
       } else {
         elapsedTime += intervalMs;
-        wrapper.update();
+        // Update the screen.
+        rerender(
+          <Provider store={getStore()}>
+            <SetupChecklist stepDelay={STEP_DELAY_MS} />
+          </Provider>
+        );
         if (elapsedTime > timeoutMs) {
           clearInterval(key);
           reject(new Error(`yieldUntil exceeded timeout of ${timeoutMs}ms`));

@@ -53,7 +53,7 @@ class Pd::Attendance < ApplicationRecord
   def resolve_enrollment
     Pd::Enrollment.with_deleted.find_by(id: pd_enrollment_id) ||
       workshop.enrollments.find_by(user_id: teacher_id) ||
-      workshop.enrollments.find_by(email: User.with_deleted.find_by(id: teacher_id).try(&:email))
+      workshop.enrollments.find_by(email: User.with_deleted.find_by(id: teacher_id).try(&:email_for_enrollments))
   end
 
   def self.for_teacher(teacher)

@@ -1,25 +1,9 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import UnitCard from '@cdo/apps/lib/levelbuilder/unit-editor/UnitCard';
-import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
-import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
-import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/unit-editor/LessonExtrasEditor';
-import color from '@cdo/apps/util/color';
-import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
-import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
-import $ from 'jquery';
-import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
-import {
-  init,
-  mapLessonGroupDataForEditor,
-} from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
-import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import {lessonGroupShape} from './shapes';
-import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
+
+import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import {
   InstructionType,
   PublishedState,
@@ -27,9 +11,28 @@ import {
   ParticipantAudience,
   CurriculumUmbrella,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
+import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
+import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
+import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
+import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
+import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
+import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/unit-editor/LessonExtrasEditor';
+import UnitCard from '@cdo/apps/lib/levelbuilder/unit-editor/UnitCard';
+import {
+  init,
+  mapLessonGroupDataForEditor,
+} from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import Button from '@cdo/apps/templates/Button';
 import Dialog from '@cdo/apps/templates/Dialog';
-import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
+import MultiCheckboxSelector from '@cdo/apps/templates/MultiCheckboxSelector';
+import color from '@cdo/apps/util/color';
+import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
+
+import {lessonGroupShape} from './shapes';
 
 /**
  * Component for editing units in unit_groups or stand alone courses
@@ -93,6 +96,7 @@ class UnitEditor extends React.Component {
     scriptPath: PropTypes.string.isRequired,
     courseOfferingEditorLink: PropTypes.string,
     isCSDCourseOffering: PropTypes.bool,
+    isMissingRequiredDeviceCompatibilities: PropTypes.bool,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
@@ -162,15 +166,8 @@ class UnitEditor extends React.Component {
     this.setState({supportedLocales: []});
   };
 
-  handleChangeSupportedLocales = e => {
-    var options = e.target.options;
-    var supportedLocales = [];
-    for (var i = 0, l = options.length; i < l; i++) {
-      if (options[i].selected) {
-        supportedLocales.push(options[i].value);
-      }
-    }
-    this.setState({supportedLocales});
+  handleChangeSupportedLocales = selectedOptions => {
+    this.setState({supportedLocales: selectedOptions});
   };
 
   handleFamilyNameChange = event => {
@@ -251,6 +248,18 @@ class UnitEditor extends React.Component {
       this.setState({
         isSaving: false,
         error: 'Please set both version year and family name.',
+      });
+      return;
+    } else if (
+      [PublishedState.preview, PublishedState.stable].includes(
+        this.state.publishedState
+      ) &&
+      this.props.isMissingRequiredDeviceCompatibilities
+    ) {
+      this.setState({
+        isSaving: false,
+        error:
+          'Please set all device compatibilities in order to save with published state as preview or stable.',
       });
       return;
     }
@@ -380,6 +389,14 @@ class UnitEditor extends React.Component {
         }
       })
       .fail(error => {
+        if (error.status === 504) {
+          this.setState({
+            isSaving: false,
+            error:
+              'The save request timed out. Please refresh the page and verify your changes have been saved correctly.',
+          });
+          return;
+        }
         this.setState({isSaving: false, error: error.responseText});
       });
   };
@@ -566,34 +583,6 @@ class UnitEditor extends React.Component {
               }}
             />
           )}
-          <label>
-            Supported locales
-            <HelpTip>
-              <p>
-                A list of other locales supported by this unit besides en-US.
-              </p>
-            </HelpTip>
-            <p>
-              <span>
-                {'Select additional locales supported by this unit. Select '}
-              </span>
-              <a onClick={this.handleClearSupportedLocalesSelectClick}>none</a>
-              <span>{' or shift-click or cmd-click to select multiple.'}</span>
-            </p>
-            <select
-              multiple
-              value={this.state.supportedLocales}
-              onChange={this.handleChangeSupportedLocales}
-            >
-              {this.state.locales
-                .filter(locale => !locale[1].startsWith('en'))
-                .map(locale => (
-                  <option key={locale[1]} value={locale[1]}>
-                    {locale[1]}
-                  </option>
-                ))}
-            </select>
-          </label>
           {this.props.isLevelbuilder && (
             <label>
               Editor Experiment
@@ -626,6 +615,31 @@ class UnitEditor extends React.Component {
               onChange={e => this.setState({wrapupVideo: e.target.value})}
             />
           </label>
+        </CollapsibleEditorSection>
+        <CollapsibleEditorSection title="Supported locales" collapsed={true}>
+          <p>
+            <span>
+              {'Select additional locales supported by this unit. Click '}
+            </span>
+            <a
+              style={{cursor: 'pointer'}}
+              onClick={this.handleClearSupportedLocalesSelectClick}
+            >
+              none
+            </a>
+            <span>{' to clear the selection.'}</span>
+          </p>
+          <p>A list of other locales supported by this unit besides en-US.</p>
+          <MultiCheckboxSelector
+            noHeader={true}
+            items={this.state.locales
+              .filter(locale => !locale[1].startsWith('en'))
+              .map(locale => locale[1])}
+            selected={this.state.supportedLocales}
+            onChange={this.handleChangeSupportedLocales}
+          >
+            <LocaleItemComponent />
+          </MultiCheckboxSelector>
         </CollapsibleEditorSection>
 
         {this.props.hasCourse && (
@@ -736,7 +750,7 @@ class UnitEditor extends React.Component {
                   </div>
                 )}
               {!this.props.hasCourse && (
-                <div>
+                <div data-testid="course-version-publishing-editor">
                   <CourseVersionPublishingEditor
                     pilotExperiment={this.state.pilotExperiment}
                     versionYear={this.state.versionYear}
@@ -1083,6 +1097,12 @@ class UnitEditor extends React.Component {
     );
   }
 }
+
+const LocaleItemComponent = function ({item}) {
+  return <strong>{item}</strong>;
+};
+
+LocaleItemComponent.propTypes = {item: PropTypes.string};
 
 const styles = {
   input: {

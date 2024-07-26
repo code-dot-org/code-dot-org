@@ -1,13 +1,15 @@
-import {expect, assert} from '../../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
+import LibraryListItem from '@cdo/apps/code-studio/components/libraries/LibraryListItem';
 import LibraryManagerDialog, {
   mapUserNameToProjectLibraries,
 } from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
-import LibraryListItem from '@cdo/apps/code-studio/components/libraries/LibraryListItem';
-import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
+
+import {expect, assert} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('LibraryManagerDialog', () => {

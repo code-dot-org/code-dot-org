@@ -1,3 +1,4 @@
+@no_phone
 @as_student
 Feature: App Lab Versions
 

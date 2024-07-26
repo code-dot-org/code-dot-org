@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 export const sectionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
@@ -20,6 +21,7 @@ export const sectionShape = PropTypes.shape({
   providerManaged: PropTypes.bool.isRequired,
   restrictSection: PropTypes.bool,
   postMilestoneDisabled: PropTypes.bool,
+  syncEnabled: PropTypes.bool,
 });
 
 export const assignmentUnitShape = PropTypes.shape({
@@ -46,11 +48,10 @@ export const assignmentCourseVersionShape = PropTypes.shape({
 });
 
 export const assignmentCourseOfferingShape = PropTypes.shape({
-  id: PropTypes.number.isRequired,
-  display_name: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
-  is_featured: PropTypes.bool.isRequired,
-  course_versions: PropTypes.object.isRequired,
+  elementary: PropTypes.object,
+  high: PropTypes.object,
+  hoc: PropTypes.object,
+  middle: PropTypes.object,
 });
 
 export const classroomShape = PropTypes.shape({
@@ -83,9 +84,4 @@ export const sectionForDropdownShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   isAssigned: PropTypes.bool.isRequired,
-});
-
-export const multiSelectOptionShape = PropTypes.shape({
-  value: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
 });

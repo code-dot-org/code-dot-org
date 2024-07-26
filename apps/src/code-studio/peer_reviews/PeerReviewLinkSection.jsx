@@ -1,12 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import moment from 'moment';
+import PropTypes from 'prop-types';
+import React from 'react';
+
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 class PeerReviewLinkSection extends React.Component {
   static propTypes = {
     reviews: PropTypes.arrayOf(PropTypes.array).isRequired,
-    escalatedReviewId: PropTypes.number,
   };
 
   getIconForStatus(status) {

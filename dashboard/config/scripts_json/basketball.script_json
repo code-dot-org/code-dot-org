@@ -4,15 +4,54 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "key": "694bed45-10c5-40b8-8efe-9c3d0a19495f",
+          "notice": "New Self-Paced Professional Learning Module!",
+          "details": "Are you an elementary school teacher who wants to teach computer science, but you’re not sure where to start? Discover Code.org's newly released professional learning module on Computer Science Basics. Click the button to start this two-hour, self-paced course to equip yourself with the skills to teach foundational computer science concepts to your students.",
+          "link": "https://studio.code.org/courses/self-paced-pl-k5-2024",
+          "type": "information",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": " Computer Science Basics for K-5 Teachers "
+        }
+      ],
       "curriculum_umbrella": "HOC",
       "is_course": true,
       "is_migrated": true,
+      "supported_locales": [
+        "ar-SA",
+        "de-DE",
+        "el-GR",
+        "es-ES",
+        "es-MX",
+        "fa-IR",
+        "fil-PH",
+        "fr-FR",
+        "hu-HU",
+        "id-ID",
+        "it-IT",
+        "ja-JP",
+        "ko-KR",
+        "kn-IN",
+        "pl-PL",
+        "pt-BR",
+        "ro-RO",
+        "ru-RU",
+        "sk-SK",
+        "zh-TW",
+        "zh-CN",
+        "vi-VN",
+        "uk-UA",
+        "tr-TR",
+        "th-TH"
+      ],
       "tts": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "basketball",
-    "serialized_at": "2022-03-17 22:44:11 UTC",
+    "serialized_at": "2024-07-22 23:56:09 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -718,6 +757,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

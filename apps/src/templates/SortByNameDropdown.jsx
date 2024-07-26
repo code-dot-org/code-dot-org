@@ -1,49 +1,68 @@
-import {useDispatch} from 'react-redux';
 import PropTypes from 'prop-types';
-import React from 'react';
-import i18n from '@cdo/locale';
+import React, {useCallback} from 'react';
+import {connect} from 'react-redux';
+
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
+import i18n from '@cdo/locale';
+
+const FAMILY_NAME = 'familyName';
+const DISPLAY_NAME = 'displayName';
 
 function SortByNameDropdown({
-  sortByStyles,
-  selectStyles,
   sectionId,
   unitName,
   source,
+  isSortedByFamilyName,
+  setSortByFamilyName,
+  className,
 }) {
-  const dispatch = useDispatch();
+  const onSortByFamilyNameChange = useCallback(
+    e => {
+      const newSort = e.target.value === FAMILY_NAME;
+      new UserPreferences().setSortByFamilyName(newSort);
+      setSortByFamilyName(newSort, sectionId, unitName, source);
+    },
+    [sectionId, unitName, source, setSortByFamilyName]
+  );
+
+  const selectedValue = isSortedByFamilyName ? FAMILY_NAME : DISPLAY_NAME;
   return (
-    <div>
-      <div style={sortByStyles}>{i18n.sortBy()}</div>
-      <select
-        name="familyNameSort"
-        aria-label={i18n.sortBy()}
-        style={selectStyles}
-        defaultValue={i18n.displayName}
-        onChange={e => {
-          dispatch(
-            setSortByFamilyName(
-              e.target.value === 'true',
-              sectionId,
-              unitName,
-              source
-            )
-          );
-        }}
-      >
-        <option value={false}>{i18n.displayName()}</option>
-        <option value={true}>{i18n.familyName()}</option>
-      </select>
-    </div>
+    <SimpleDropdown
+      items={[
+        {value: DISPLAY_NAME, text: i18n.displayName()},
+        {value: FAMILY_NAME, text: i18n.familyName()},
+      ]}
+      selectedValue={selectedValue}
+      name="familyNameSort"
+      onChange={onSortByFamilyNameChange}
+      labelText={i18n.sortBy()}
+      className={className}
+      size="s"
+      dropdownTextThickness="thin"
+      color="gray"
+    />
   );
 }
 
 SortByNameDropdown.propTypes = {
-  sortByStyles: PropTypes.object,
-  selectStyles: PropTypes.object,
   sectionId: PropTypes.number,
   unitName: PropTypes.string,
   source: PropTypes.string,
+  isSortedByFamilyName: PropTypes.bool,
+  setSortByFamilyName: PropTypes.func,
+  className: PropTypes.string,
 };
 
-export default SortByNameDropdown;
+export const UnconnectedSortByNameDropdown = SortByNameDropdown;
+
+export default connect(
+  state => ({isSortedByFamilyName: state.currentUser.isSortedByFamilyName}),
+  dispatch => ({
+    setSortByFamilyName: (sortByFamilyName, sectionId, unitName, source) =>
+      dispatch(
+        setSortByFamilyName(sortByFamilyName, sectionId, unitName, source)
+      ),
+  })
+)(SortByNameDropdown);

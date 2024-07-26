@@ -46,7 +46,7 @@
     "contained_level_names": [
       "courseF_variables_predict_multi2022"
     ],
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"variablesPredict\",\r\n  \"callout_text\": \"Look closely at the code below this point.\",\r\n  \"element_id\": \".svgGroup [block-id=\\\"9\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"bottom center\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"variablesPredict\",\"callout_text\":\"Look closely at the code below this point.\",\"element_id\":\".svgGroup [block-id=\\\"9\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"bottom center\",\"at\":\"top left\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklySvg [data-id=\\\"9\\\"]\",\"localization_key\":\"variablesPredict\",\"callout_text\":\"Look closely at the code below this point.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"bottom center\",\"at\":\"top left\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "encrypted": "false",
     "mini_rubric": "false",
     "name_suffix": "2022",
@@ -93,7 +93,7 @@
                       <next>
                         <block type="gamelab_setPrompt">
                           <value name="QUESTION">
-                            <block type="text">
+                            <block type="text" id="9">
                               <title name="TEXT">What is your name?</title>
                             </block>
                           </value>

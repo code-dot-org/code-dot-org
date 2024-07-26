@@ -1,12 +1,31 @@
 import $ from 'jquery';
-import msg from '@cdo/locale';
-import * as utils from '../../utils';
-import {CIPHER, ALPHABET} from '../../constants';
-import {files as filesApi} from '../../clientApi';
+
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {AbuseConstants} from '@cdo/apps/util/sharedConstants';
-import NameFailureError from '../NameFailureError';
+import {AbuseConstants} from '@cdo/generated-scripts/sharedConstants';
+import msg from '@cdo/locale';
+
+import {files as filesApi} from '../../clientApi';
+import {CIPHER, ALPHABET} from '../../constants';
 import {CP_API} from '../../lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
+import {getStore} from '../../redux';
+import * as utils from '../../utils';
+import header from '../header';
+import NameFailureError from '../NameFailureError';
+import {
+  workspaceAlertTypes,
+  displayWorkspaceAlert,
+  refreshInRestrictedShareMode,
+  refreshTeacherHasConfirmedUploadWarning,
+} from '../projectRedux';
+import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
+
+var showProjectAdmin = require('../showProjectAdmin');
+
+var assets = require('./clientApi').create('/v3/assets');
+var files = require('./clientApi').create('/v3/files');
+var sources = require('./clientApi').create('/v3/sources');
+var sourcesPublic = require('./clientApi').create('/v3/sources-public');
+var channels = require('./clientApi').create('/v3/channels');
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -18,23 +37,6 @@ var ABUSE_THRESHOLD = AbuseConstants.ABUSE_THRESHOLD;
 var hasProjectChanged = false;
 let projectSaveInProgress = false;
 let projectChangedWhileSaveInProgress = false;
-
-var assets = require('./clientApi').create('/v3/assets');
-var files = require('./clientApi').create('/v3/files');
-var sources = require('./clientApi').create('/v3/sources');
-var sourcesPublic = require('./clientApi').create('/v3/sources-public');
-var channels = require('./clientApi').create('/v3/channels');
-
-var showProjectAdmin = require('../showProjectAdmin');
-import header from '../header';
-import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
-import {getStore} from '../../redux';
-import {
-  workspaceAlertTypes,
-  displayWorkspaceAlert,
-  refreshInRestrictedShareMode,
-  refreshTeacherHasConfirmedUploadWarning,
-} from '../projectRedux';
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
@@ -119,7 +121,6 @@ var currentSources = {
   selectedPoem: null,
   inRestrictedShareMode: false,
   teacherHasConfirmedUploadWarning: false,
-  hiddenDefinitions: null,
 };
 
 /**
@@ -147,7 +148,6 @@ function unpackSources(data) {
     libraries: data.libraries,
     inRestrictedShareMode: data.inRestrictedShareMode,
     teacherHasConfirmedUploadWarning: data.teacherHasConfirmedUploadWarning,
-    hiddenDefinitions: data.hiddenDefinitions,
   };
 }
 
@@ -577,13 +577,17 @@ var projects = (module.exports = {
 
   // Students should not be able to easily see source for embedded applab or
   // gamelab levels.
+  // Hide Share/Remix for studio app because converting studio level to standalone project
+  // is problematic.
   shouldHideShareAndRemix() {
+    const appType = appOptions.app;
     return (
       (appOptions.level && appOptions.level.hideShareAndRemix) ||
       (appOptions.embed &&
-        (appOptions.app === 'applab' ||
-          appOptions.app === 'gamelab' ||
-          appOptions.app === 'spritelab'))
+        (appType === 'applab' ||
+          appType === 'gamelab' ||
+          appType === 'spritelab')) ||
+      appType === 'studio'
     );
   },
 
@@ -724,11 +728,6 @@ var projects = (module.exports = {
           if (currentSources.source) {
             sourceHandler.setInitialLevelSource(currentSources.source);
           }
-          if (currentSources.hiddenDefinitions) {
-            sourceHandler.setInitialHiddenDefinitions(
-              currentSources.hiddenDefinitions
-            );
-          }
         } else {
           this.setName('My Project');
         }
@@ -865,9 +864,7 @@ var projects = (module.exports = {
     }
     switch (appOptions.app) {
       case 'applab':
-      case 'calc':
       case 'dance':
-      case 'eval':
       case 'flappy':
       case 'weblab':
       case 'gamelab':
@@ -1327,7 +1324,6 @@ var projects = (module.exports = {
             this.sourceHandler.inRestrictedShareMode();
           const teacherHasConfirmedUploadWarning =
             this.sourceHandler.teacherHasConfirmedUploadWarning();
-          const hiddenDefinitions = this.sourceHandler.getHiddenDefinitions();
           callback({
             source,
             html,
@@ -1338,7 +1334,6 @@ var projects = (module.exports = {
             libraries,
             inRestrictedShareMode,
             teacherHasConfirmedUploadWarning,
-            hiddenDefinitions,
           });
         })
         .catch(error => callback({error}))
@@ -1576,6 +1571,8 @@ var projects = (module.exports = {
   /**
    * Freezes the project. Also hides so that it's not available for
    * deleting/renaming in the user's project list.
+   * Only the owner of the project can manually freeze it and this is used for
+   * exemplar projects in curriculum.
    */
   freeze(callback) {
     if (!(current && current.isOwner)) {
@@ -1587,8 +1584,7 @@ var projects = (module.exports = {
   },
 
   /**
-   * Unfreezes the project. Also unhides so that it's available for
-   * deleting/renaming in the user's project list.
+   * Unfreezes the project. Also unhides the project if it was hidden.
    */
   unfreeze(callback) {
     if (!(current && current.isOwner)) {

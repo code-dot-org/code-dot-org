@@ -1,7 +1,9 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+
 import CodeWritten from '@cdo/apps/templates/feedback/CodeWritten';
+
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   numLinesWritten: 0,
@@ -12,7 +14,7 @@ describe('CodeWritten', () => {
     const wrapper = shallow(<CodeWritten {...DEFAULT_PROPS} />);
     expect(wrapper).to.containMatchingElement(
       <div>
-        <p>You just wrote 0 lines of code!</p>
+        <p />
         <details>
           <summary>
             <b>Show code</b>
@@ -30,7 +32,7 @@ describe('CodeWritten', () => {
     );
     expect(wrapper).to.containMatchingElement(
       <div>
-        <p>You just wrote 0 lines of code!</p>
+        <p />
         <details>
           <summary>
             <b>Show code</b>
@@ -59,7 +61,7 @@ describe('CodeWritten', () => {
 
     expect(wrapper).to.containMatchingElement(
       <div>
-        <p style={{fontSize: 16}}>You just wrote 0 lines of code!</p>
+        <p />
         <details style={{textAlign: 'left'}}>
           <summary
             style={{

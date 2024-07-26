@@ -1,0 +1,134 @@
+@import 'phase1-design-system';
+@import 'color', 'font', 'typography', 'breakpoints',
+  'barlow-semi-condensed-font';
+
+  :root {
+    --swiper-pagination-color: #{$light_primary_500};
+    --swiper-pagination-bullet-size: 1rem;
+    --swiper-pagination-bullet-inactive-color: #{$light_primary_100};
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 0.5rem;
+  }
+
+.headerContainer {
+  margin-top: 50px;
+}
+
+h1.header {
+  color: $neutral_dark;
+}
+
+.inputContainer {
+  background-color: $neutral_light;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.certificateContainer {
+  display: flex;
+  width: 100%;
+}
+
+.certificateImageContainer {
+  display: flex;
+  position: relative;
+  width: 55%;
+}
+
+.certificateImage {
+  width: 450px;
+  margin-inline: auto;
+  display: flex;
+}
+
+h1.heading {
+  width: 100%;
+}
+
+.container {
+  margin-bottom: 50px;
+  float: left;
+  width: 100%;
+}
+
+h1.mobileHeading {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.desktopHalf {
+  width: 50%;
+  float: left;
+}
+
+.mobileFull {
+  width: 100%;
+  float: left;
+}
+
+.nameInput {
+  height: 26px !important;
+  border: 1px solid $neutral_dark !important;
+  flex: 2;
+}
+
+.submit {
+  background: $light_secondary_500;
+  color: $neutral_white;
+  font-size: 16px;
+  padding: 8px 20px;
+  margin: 0 5px;
+  height: 38px;
+}
+
+.confetti {
+  top: 100px;
+}
+p.enterName {
+  font-weight: bold;
+  margin: 0;
+}
+
+.inputButtonContainer {
+  display: flex;
+}
+
+.swiperContainer {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 0;
+  min-width: 0;
+}
+
+.navButton {
+  position: absolute;
+  top: 40%;
+  border: 0;
+  height: 48px;
+  z-index: 1;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+.prevElNav {
+  background: url('//code.org/images/carousel/prev.svg')
+    no-repeat;
+  left: 1rem;
+  border: 0;
+  background-size: contain;
+}
+
+.nextElNav {
+  background: url('//code.org/images/carousel/next.svg')
+    no-repeat;
+  right: 1rem;
+  background-size: contain;
+}

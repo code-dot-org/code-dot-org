@@ -1,5 +1,3 @@
-Sinatra::Verbs.custom :review
-
 post '/v2/forms/:kind' do |kind|
   dont_cache
   # TODO(asher): Change this to automatically pass on any non-current year HOC signup by using the
@@ -19,11 +17,13 @@ end
 get '/v2/forms/:kind' do |kind|
   dont_cache
   results = []
+  # rubocop:disable CustomCops/DashboardDbUsage
   if dashboard_user
     DB[:forms].where(kind: kind, user_id: dashboard_user[:id]).each do |i|
       results << JSON.parse(i[:data]).merge(secret: i[:secret], id: i[:id])
     end
   end
+  # rubocop:enable CustomCops/DashboardDbUsage
   content_type :json
   JSON.pretty_generate(results)
 end
@@ -61,16 +61,20 @@ post '/v2/forms/:kind/:secret/update' do |kind, secret|
   call(env.merge('REQUEST_METHOD' => 'PATCH', 'PATH_INFO' => "/v2/forms/#{kind}/#{secret}"))
 end
 
-review '/v2/forms/:kind/:secret' do |kind, secret|
+post '/v2/forms/:kind/:secret/review' do |kind, secret|
   dont_cache
   hoc_year = DCDO.get("hoc_year", 2017)
   case kind
   when "HocSignup#{hoc_year}"
+    # rubocop:disable CustomCops/DashboardDbUsage
     unless dashboard_user && (dashboard_user[:user_type] == 'teacher' || dashboard_user[:admin])
       forbidden!
     end
+    # rubocop:enable CustomCops/DashboardDbUsage
   else
+    # rubocop:disable CustomCops/DashboardDbUsage
     forbidden! unless dashboard_user && dashboard_user[:admin]
+    # rubocop:enable CustomCops/DashboardDbUsage
   end
   forbidden! if settings.read_only
   unsupported_media_type! unless payload = request.json_body
@@ -80,13 +84,12 @@ review '/v2/forms/:kind/:secret' do |kind, secret|
 
   forms = DB[:forms].where(kind: kind, secret: secret)
   forbidden! if forms.empty?
+  # rubocop:disable CustomCops/DashboardDbUsage
   forms.update(review: review, reviewed_by: dashboard_user[:id], reviewed_at: DateTime.now, reviewed_ip: request.ip, indexed_at: nil)
+  # rubocop:enable CustomCops/DashboardDbUsage
 
   content_type :json
   ({review: review}).to_json
-end
-post '/v2/forms/:kind/:secret/review' do |kind, secret|
-  call(env.merge('REQUEST_METHOD' => 'REVIEW', 'PATH_INFO' => "/v2/forms/#{kind}/#{secret}"))
 end
 
 get '/v2/forms/:parent_kind/:parent_secret/children/:kind' do |parent_kind, parent_secret, kind|

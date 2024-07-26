@@ -1,5 +1,6 @@
-import {APP_HEIGHT, APP_WIDTH} from './constants';
 import * as colors from '@cdo/apps/util/color';
+
+import {APP_HEIGHT, APP_WIDTH} from './constants';
 
 /**
  * A set of P5 helpers for drawing.
@@ -20,6 +21,59 @@ export function getTextWidth(p5, text, size) {
   p5.pop();
 
   return width;
+}
+
+/**
+ * Draws a bubble on the canvas that displays a piece of text, representing a variable name and value.
+ * The bubble is dynamically sized and has a black background with a white border/text and rounded corners.
+ * The x and y parameters determine the bubble's center, except the location will be adjusted if the bubble
+ * would overflow the canvas.
+ *
+ * Note: Truncating the text so it fits within the playspace width (APP_WIDTH) should be handled before this function.
+ *
+ * @param {p5} p5 - The p5 instance used to draw the bubble.
+ * @param {number} x - The x-coordinate of the center of the bubble.
+ * @param {number} y - The y-coordinate of the center of the bubble.
+ * @param {string} text - The text to display inside the bubble. This should represent the variable's name and value.
+ */
+export function variableBubble(p5, x, y, text, config) {
+  const textWidth = getTextWidth(p5, text, config.textSize);
+  const textWidthValue = textWidth + 2 * config.padding;
+  const textHeightValue = config.textSize + 2 * config.padding;
+
+  const halfWidth = textWidthValue / 2;
+  const halfHeight = textHeightValue / 2;
+  const leftBound = x - halfWidth;
+  const rightBound = x + halfWidth;
+  const topBound = y - halfHeight;
+  const bottomBound = y + halfHeight;
+
+  // If the bubble is too close to the edge of the canvas, adjust the position so it fits.
+  if (leftBound < 0) {
+    x = halfWidth;
+  } else if (rightBound > APP_WIDTH) {
+    x = APP_WIDTH - halfWidth;
+  }
+
+  if (topBound < 0) {
+    y = halfHeight;
+  } else if (bottomBound > APP_HEIGHT) {
+    y = APP_HEIGHT - halfHeight;
+  }
+
+  p5.push();
+  p5.fill(colors.darkest_gray);
+  p5.stroke('white');
+  p5.strokeWeight(config.strokeWeight);
+  p5.rectMode(p5.CENTER);
+  p5.rect(x, y, textWidthValue, textHeightValue, config.strokeRadius);
+
+  p5.fill('white');
+  p5.noStroke();
+  p5.textSize(config.textSize);
+  p5.textAlign(p5.CENTER, p5.CENTER);
+  p5.text(text, x, y);
+  p5.pop();
 }
 
 /**
@@ -186,4 +240,35 @@ export function validationBar(
   p5.strokeWeight(1);
   p5.rect(x, y, width, barHeight);
   p5.pop();
+}
+
+/**
+ * Truncates the given text to fit within a specified width, adding an ellipsis if truncation occurs.
+ * This function ensures the text (such as variable labels or values) does not exceed the available space
+ * in a given context (e.g., within the variable bubble).
+ *
+ * @param {p5} p5 - The p5 instance.
+ * @param {string} text - The text to be potentially truncated.
+ * @param {number} maxWidth - The maximum width (in pixels) the text is allowed to occupy. This value should account for any desired padding or margins.
+ * @param {number} textSize - The font size (in pixels) to be used when measuring and displaying the text.
+ * @returns {string} The original text or a truncated version with an ellipsis appended if the text exceeded maxWidth.
+ */
+export function truncateText(p5, text, maxWidth, textSize) {
+  let ellipsis = '...';
+  let textWidth = getTextWidth(p5, text, textSize);
+
+  if (textWidth <= maxWidth) {
+    return text;
+  }
+
+  const ellipsisWidth = getTextWidth(p5, ellipsis, textSize);
+  maxWidth -= ellipsisWidth;
+
+  let truncatedText = text;
+  while (textWidth > maxWidth && truncatedText.length > 1) {
+    truncatedText = truncatedText.slice(0, -1);
+    textWidth = getTextWidth(p5, truncatedText, textSize);
+  }
+
+  return truncatedText + ellipsis;
 }

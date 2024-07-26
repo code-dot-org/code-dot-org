@@ -1,13 +1,8 @@
-import sinon from 'sinon';
 import ReactDOM from 'react-dom';
-import {expect} from '../../util/reconfiguredChai';
-import Javalab from '@cdo/apps/javalab/Javalab';
+
 import project from '@cdo/apps/code-studio/initApp/project';
-import {
-  singleton as studioApp,
-  stubStudioApp,
-  restoreStudioApp,
-} from '@cdo/apps/StudioApp';
+import Javalab from '@cdo/apps/javalab/Javalab';
+import {setAllSourcesAndFileMetadata} from '@cdo/apps/javalab/redux/editorRedux';
 import {
   getStore,
   registerReducers,
@@ -15,7 +10,15 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
-import {setAllSourcesAndFileMetadata} from '@cdo/apps/javalab/redux/editorRedux';
+import {
+  singleton as studioApp,
+  stubStudioApp,
+  restoreStudioApp,
+} from '@cdo/apps/StudioApp';
+
+window.fetch = jest
+  .fn()
+  .mockResolvedValue({json: jest.fn(), headers: {get: jest.fn()}});
 
 describe('Javalab', () => {
   let javalab;
@@ -25,9 +28,9 @@ describe('Javalab', () => {
     javalab = new Javalab();
     stubRedux();
     registerReducers(commonReducers);
-    sinon.stub(project, 'autosave');
-    sinon.stub(ReactDOM, 'render');
-    sinon.stub(getStore(), 'dispatch');
+    jest.spyOn(project, 'autosave').mockClear().mockImplementation();
+    jest.spyOn(ReactDOM, 'render').mockClear().mockImplementation();
+    jest.spyOn(getStore(), 'dispatch').mockClear().mockImplementation();
     stubStudioApp();
     javalab.studioApp_ = studioApp();
     config = {
@@ -37,7 +40,7 @@ describe('Javalab', () => {
   });
 
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
     restoreRedux();
     restoreStudioApp();
   });
@@ -47,21 +50,24 @@ describe('Javalab', () => {
 
     beforeEach(() => {
       eventStub = {
-        preventDefault: sinon.stub(),
+        preventDefault: jest.fn(),
         returnValue: undefined,
       };
     });
 
     it('triggers an autosave if there are unsaved changes', () => {
-      sinon.stub(project, 'hasOwnerChangedProject').returns(true);
+      jest
+        .spyOn(project, 'hasOwnerChangedProject')
+        .mockClear()
+        .mockReturnValue(true);
 
       javalab.beforeUnload(eventStub);
 
-      expect(project.autosave).to.have.been.calledOnce;
-      expect(eventStub.preventDefault).to.have.been.calledOnce;
-      expect(eventStub.returnValue).to.equal('');
+      expect(project.autosave).toHaveBeenCalledTimes(1);
+      expect(eventStub.preventDefault).toHaveBeenCalledTimes(1);
+      expect(eventStub.returnValue).toBe('');
 
-      project.hasOwnerChangedProject.restore();
+      project.hasOwnerChangedProject.mockRestore();
     });
   });
 
@@ -78,7 +84,7 @@ describe('Javalab', () => {
 
       javalab.init(config);
 
-      expect(getStore().dispatch).to.have.been.calledWith(
+      expect(getStore().dispatch).toHaveBeenCalledWith(
         setAllSourcesAndFileMetadata(config.level.startSources)
       );
     });
@@ -100,7 +106,7 @@ describe('Javalab', () => {
       };
       javalab.init(config);
 
-      expect(getStore().dispatch).to.have.been.calledWith(
+      expect(getStore().dispatch).toHaveBeenCalledWith(
         setAllSourcesAndFileMetadata(config.level.lastAttempt)
       );
     });
@@ -111,7 +117,7 @@ describe('Javalab', () => {
       };
       javalab.init(config);
 
-      expect(getStore().getState().javalab.sources).to.not.equal(
+      expect(getStore().getState().javalab.sources).not.toBe(
         config.level.startSources
       );
     });
@@ -126,7 +132,7 @@ describe('Javalab', () => {
       };
       javalab.init(config);
 
-      expect(getStore().dispatch).to.have.been.calledWith(
+      expect(getStore().dispatch).toHaveBeenCalledWith(
         setAllSourcesAndFileMetadata(config.level.exemplarSources)
       );
     });

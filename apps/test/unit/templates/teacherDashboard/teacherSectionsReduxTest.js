@@ -1,12 +1,16 @@
-import sinon from 'sinon';
-import {assert, expect} from '../../../util/reconfiguredChai';
+import $ from 'jquery';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {
   stubRedux,
   restoreRedux,
   registerReducers,
   getStore,
 } from '@cdo/apps/redux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
+import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 import reducer, {
   __testInterface__,
   setAuthProviders,
@@ -41,8 +45,8 @@ import reducer, {
   assignToSection,
   NO_SECTION,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
+
+import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const {
   EDIT_SECTION_SUCCESS,
@@ -76,6 +80,14 @@ const sections = [
     hidden: false,
     restrict_section: false,
     post_milestone_disabled: false,
+    section_instructors: [
+      {
+        id: 1,
+        status: 'accepted',
+        instructor_name: 'teacher',
+        instructor_email: 'teacher@code.org',
+      },
+    ],
   },
   {
     id: 12,
@@ -98,6 +110,20 @@ const sections = [
     hidden: false,
     restrict_section: false,
     post_milestone_disabled: false,
+    section_instructors: [
+      {
+        id: 2,
+        status: 'accepted',
+        instructor_name: 'teacher',
+        instructor_email: 'teacher@code.org',
+      },
+      {
+        id: 3,
+        status: 'invited',
+        instructor_name: 'coteacher',
+        instructor_email: 'coteacher@code.org',
+      },
+    ],
   },
   {
     id: 307,
@@ -120,6 +146,14 @@ const sections = [
     hidden: false,
     restrict_section: false,
     post_milestone_disabled: false,
+    section_instructors: [
+      {
+        id: 4,
+        status: 'accepted',
+        instructor_name: 'teacher',
+        instructor_email: 'teacher@code.org',
+      },
+    ],
   },
 ];
 
@@ -144,7 +178,7 @@ describe('teacherSectionsRedux', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({teacherSections: reducer});
+    registerReducers({currentUser, teacherSections: reducer});
     store = getStore();
   });
 
@@ -326,8 +360,8 @@ describe('teacherSectionsRedux', () => {
         courseVersionId: null,
         unitId: null,
         hidden: false,
-        isAssigned: undefined,
         restrictSection: false,
+        aiTutorEnabled: false,
       });
     });
 
@@ -358,8 +392,8 @@ describe('teacherSectionsRedux', () => {
         courseVersionId: courseVersionId,
         unitId: unitId,
         hidden: false,
-        isAssigned: undefined,
         restrictSection: false,
+        aiTutorEnabled: false,
       });
     });
   });
@@ -386,8 +420,8 @@ describe('teacherSectionsRedux', () => {
         courseVersionId: null,
         unitId: null,
         hidden: false,
-        isAssigned: undefined,
         restrictSection: false,
+        aiTutorEnabled: false,
       });
     });
 
@@ -400,6 +434,7 @@ describe('teacherSectionsRedux', () => {
         name: 'My Other Section',
         courseVersionName: 'coursea-2017',
         loginType: 'picture',
+        loginTypeName: undefined,
         grades: ['11'],
         participantType: 'student',
         providerManaged: false,
@@ -415,11 +450,26 @@ describe('teacherSectionsRedux', () => {
         createdAt: createdAt,
         studentCount: 1,
         hidden: false,
-        isAssigned: undefined,
         restrictSection: false,
         postMilestoneDisabled: false,
         codeReviewExpiresAt: null,
         isAssignedCSA: undefined,
+        sectionInstructors: [
+          {
+            id: 2,
+            status: 'accepted',
+            instructor_name: 'teacher',
+            instructor_email: 'teacher@code.org',
+          },
+          {
+            id: 3,
+            status: 'invited',
+            instructor_name: 'coteacher',
+            instructor_email: 'coteacher@code.org',
+          },
+        ],
+        syncEnabled: undefined,
+        aiTutorEnabled: undefined,
       });
     });
   });
@@ -427,7 +477,7 @@ describe('teacherSectionsRedux', () => {
   describe('editSectionProperties', () => {
     let editingNewSectionState;
 
-    before(() => {
+    beforeAll(() => {
       editingNewSectionState = reducer(initialState, beginEditingSection());
     });
 
@@ -577,6 +627,7 @@ describe('teacherSectionsRedux', () => {
       hidden: false,
       restrict_section: false,
       post_milestone_disabled: false,
+      ai_tutor_enabled: false,
     };
 
     function successResponse(customProps = {}) {
@@ -702,6 +753,7 @@ describe('teacherSectionsRedux', () => {
           login_type: 'picture',
           grades: ['3'],
           participantType: 'student',
+          section_instructors: [],
         })
       );
 
@@ -716,6 +768,7 @@ describe('teacherSectionsRedux', () => {
           name: 'Aquarius PM Block 2',
           courseVersionName: undefined,
           loginType: 'picture',
+          loginTypeName: undefined,
           grades: ['3'],
           participantType: 'student',
           providerManaged: false,
@@ -731,11 +784,13 @@ describe('teacherSectionsRedux', () => {
           courseId: undefined,
           createdAt: createdAt,
           hidden: false,
-          isAssigned: undefined,
           restrictSection: false,
           postMilestoneDisabled: false,
           codeReviewExpiresAt: null,
           isAssignedCSA: undefined,
+          sectionInstructors: [],
+          syncEnabled: undefined,
+          aiTutorEnabled: false,
         },
       });
     });
@@ -1633,8 +1688,10 @@ describe('teacherSectionsRedux', () => {
           name: 'My Section',
           courseVersionName: 'csd-2017',
           loginType: 'picture',
+          loginTypeName: undefined,
           studentCount: 10,
           code: 'PMTKVH',
+          courseOfferingsAreLoaded: true,
           grades: ['2'],
           participantType: 'student',
           providerManaged: false,
@@ -1647,8 +1704,10 @@ describe('teacherSectionsRedux', () => {
           name: 'My Other Section',
           courseVersionName: 'coursea-2017',
           loginType: 'picture',
+          loginTypeName: undefined,
           studentCount: 1,
           code: 'DWGMFX',
+          courseOfferingsAreLoaded: true,
           grades: ['11'],
           participantType: 'student',
           providerManaged: false,
@@ -1679,22 +1738,26 @@ describe('teacherSectionsRedux', () => {
   });
 
   describe('AnalyticsReporter events', () => {
-    let analyticsSpy;
+    let analyticsSpy, jqueryStub;
 
     beforeEach(() => {
       store.dispatch(setSections(sections));
       analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+
+      jqueryStub = sinon.stub($, 'ajax');
+      jqueryStub.returns({done: sinon.stub().returns({fail: sinon.stub()})});
     });
 
     afterEach(() => {
       analyticsSpy.restore();
+      jqueryStub.restore();
     });
 
     it('sends an event when course offering is assigned', () => {
       const testSection = getState().teacherSections.sections[11];
       store.dispatch(assignToSection(testSection.id, 100, 101, 102, 103));
       expect(analyticsSpy).to.be.called.once;
-      assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
+      assert.deepEqual(analyticsSpy.getCall(0).args[1], {
         sectionName: testSection.name,
         sectionId: testSection.id,
         sectionLoginType: testSection.loginType,
@@ -1719,7 +1782,7 @@ describe('teacherSectionsRedux', () => {
         )
       );
       expect(analyticsSpy).to.be.called.once;
-      assert.deepEqual(analyticsSpy.getCall(0).lastArg, {
+      assert.deepEqual(analyticsSpy.getCall(0).args[1], {
         sectionName: testSection.name,
         sectionId: testSection.id,
         sectionLoginType: testSection.loginType,
@@ -1733,6 +1796,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('doesnt send an event when course offering is unchanged', () => {
+      jest.mock('@cdo/apps/lib/util/firehose');
       store.dispatch(assignToSection(11, 2, 2, 3, null));
       expect(analyticsSpy).to.not.be.called;
     });

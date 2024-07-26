@@ -1,41 +1,17 @@
-import MD5 from 'crypto-js/md5';
+import classNames from 'classnames';
+import md5 from 'md5';
 import PropTypes from 'prop-types';
-import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {connect} from 'react-redux';
-import trackEvent from '../../util/trackEvent';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import moduleStyles from './inline-audio.module.scss';
-import classNames from 'classnames';
 
-// TODO (elijah): have these constants shared w/dashboard
-const VOICES = {
-  en_us: {
-    VOICE: 'sharon22k',
-    SPEED: 180,
-    SHAPE: 100,
-  },
-  es_es: {
-    VOICE: 'ines22k',
-    SPEED: 180,
-    SHAPE: 100,
-  },
-  es_mx: {
-    VOICE: 'rosa22k',
-    SPEED: 180,
-    SHAPE: 100,
-  },
-  it_it: {
-    VOICE: 'vittorio22k',
-    SPEED: 180,
-    SHAPE: 100,
-  },
-  pt_br: {
-    VOICE: 'marcia22k',
-    SPEED: 180,
-    SHAPE: 100,
-  },
-};
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {Voices} from '@cdo/generated-scripts/sharedVoices';
+
+import trackEvent from '../../util/trackEvent';
+
+import {AudioQueueContext} from './AudioQueue';
+
+import moduleStyles from './inline-audio.module.scss';
 
 const TTS_URL = 'https://tts.code.org';
 
@@ -101,8 +77,29 @@ class InlineAudio extends React.Component {
         ? document.getElementById(autoplayTriggerElementId)
         : document;
 
-      this.playAudio();
+      const {addToQueue} = this.context;
+      addToQueue(this);
     }
+  }
+
+  componentWillUnmount() {
+    // remove reference to existing Audio object when a hint is unmounted before the audio finishes.
+    const audio = this.state.audio;
+    if (audio) {
+      audio.pause();
+      audio.removeAttribute('src');
+      audio.load();
+    }
+    this.setState({
+      audio: undefined,
+      playing: false,
+      error: false,
+    });
+    audio.removeEventListener('ended', this.audioEndedListener);
+
+    const {clearQueue, isPlaying} = this.context;
+    clearQueue();
+    if (this.state.playing) isPlaying.current = false;
   }
 
   UNSAFE_componentWillUpdate(nextProps) {
@@ -150,16 +147,14 @@ class InlineAudio extends React.Component {
         playing: false,
         autoplayed: this.props.ttsAutoplayEnabled,
       });
+      if (this.props.ttsAutoplayEnabled) {
+        const {playNextAudio, isPlaying} = this.context;
+        isPlaying.current = this.state.playing;
+        playNextAudio();
+      }
     });
 
-    audio.addEventListener('error', e => {
-      // e is an instance of a MediaError object
-      trackEvent('InlineAudio', 'error', e.target.error.code);
-      this.setState({
-        playing: false,
-        error: true,
-      });
-    });
+    audio.addEventListener('error', this.audioEndedListener);
 
     this.setState({audio});
     trackEvent('InlineAudio', 'getAudioElement', src);
@@ -167,18 +162,18 @@ class InlineAudio extends React.Component {
   }
 
   isLocaleSupported() {
-    return Object.prototype.hasOwnProperty.call(VOICES, this.props.locale);
+    return Object.prototype.hasOwnProperty.call(Voices, this.props.locale);
   }
 
   getAudioSrc() {
     if (this.props.src) {
       return this.props.src;
-    } else if (this.props.message && VOICES[this.props.locale]) {
-      const voice = VOICES[this.props.locale];
+    } else if (this.props.message && Voices[this.props.locale]) {
+      const voice = Voices[this.props.locale];
       const voicePath = `${voice.VOICE}/${voice.SPEED}/${voice.SHAPE}`;
 
       const message = this.props.message.replace('"???"', 'the question marks');
-      const hash = MD5(message).toString();
+      const hash = md5(message).toString();
       const contentPath = `${hash}/${encodeURIComponent(message)}.mp3`;
 
       return `${TTS_URL}/${voicePath}/${contentPath}`;
@@ -250,7 +245,22 @@ class InlineAudio extends React.Component {
   pauseAudio() {
     this.getAudioElement().pause();
     this.setState({playing: false});
+    if (this.props.ttsAutoplayEnabled) {
+      const {clearQueue} = this.context;
+      clearQueue();
+    }
   }
+
+  audioEndedListener = e => {
+    // e is an instance of a MediaError object
+    trackEvent('InlineAudio', 'error', e.target.error.code);
+    this.setState({
+      playing: false,
+      error: true,
+    });
+    const {isPlaying} = this.context;
+    isPlaying.current = this.state.playing;
+  };
 
   render() {
     const {isRoundedVolumeIcon, isLegacyStyles} = this.props;
@@ -274,7 +284,11 @@ class InlineAudio extends React.Component {
           type="button"
         >
           <div
-            style={[this.props.style && this.props.style.button]}
+            style={
+              this.props.style && this.props.style.button
+                ? this.props.style.button
+                : {}
+            }
             className={classNames(
               moduleStyles.iconWrapper,
               isRoundedVolumeIcon
@@ -289,7 +303,11 @@ class InlineAudio extends React.Component {
                 moduleStyles.buttonImg,
                 moduleStyles.buttonImgVolume
               )}
-              style={[this.props.style && this.props.style.buttonImg]}
+              style={
+                this.props.style && this.props.style.buttonImg
+                  ? this.props.style.buttonImg
+                  : {}
+              }
             />
           </div>
           <div
@@ -298,14 +316,22 @@ class InlineAudio extends React.Component {
               moduleStyles.iconWrapper,
               moduleStyles.iconWrapperPlayPause
             )}
-            style={[this.props.style && this.props.style.button]}
+            style={
+              this.props.style && this.props.style.button
+                ? this.props.style.button
+                : {}
+            }
           >
             <i
               className={classNames(
                 this.state.playing ? 'fa fa-pause' : 'fa fa-play',
                 moduleStyles.buttonImg
               )}
-              style={[this.props.style && this.props.style.buttonImg]}
+              style={
+                this.props.style && this.props.style.buttonImg
+                  ? this.props.style.buttonImg
+                  : {}
+              }
             />
           </div>
         </button>
@@ -318,8 +344,10 @@ class InlineAudio extends React.Component {
 InlineAudio.defaultProps = {
   ttsAutoplayEnabled: false,
 };
+InlineAudio.contextType = AudioQueueContext;
 
-export const StatelessInlineAudio = Radium(InlineAudio);
+export const UnconnectedInlineAudio = InlineAudio;
+
 export default connect(function propsFromStore(state) {
   return {
     assetUrl: state.pageConstants.assetUrl,
@@ -331,4 +359,4 @@ export default connect(function propsFromStore(state) {
     isOnCSFPuzzle: !state.instructions.noInstructionsWhenCollapsed,
     ttsAutoplayEnabled: state.instructions.ttsAutoplayEnabledForLevel,
   };
-})(StatelessInlineAudio);
+})(InlineAudio);

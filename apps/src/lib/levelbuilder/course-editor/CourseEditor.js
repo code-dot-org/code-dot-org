@@ -1,26 +1,27 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import CourseUnitsEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseUnitsEditor';
-import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import color from '@cdo/apps/util/color';
-import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
-import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
-import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
-import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
-import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {connect} from 'react-redux';
-import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
-import $ from 'jquery';
-import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
-import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
+
+import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import {
   PublishedState,
   InstructionType,
   InstructorAudience,
   ParticipantAudience,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
+import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
+import CourseUnitsEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseUnitsEditor';
+import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
+import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
+import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import color from '@cdo/apps/util/color';
+import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 
 class CourseEditor extends Component {
   static propTypes = {
@@ -53,6 +54,7 @@ class CourseEditor extends Component {
     courseVersionId: PropTypes.number,
     coursePath: PropTypes.string.isRequired,
     courseOfferingEditorLink: PropTypes.string,
+    isMissingRequiredDeviceCompatibilities: PropTypes.bool,
 
     // Provided by redux
     teacherResources: PropTypes.arrayOf(resourceShape),
@@ -142,6 +144,18 @@ class CourseEditor extends Component {
       this.setState({
         isSaving: false,
         error: 'Please set both version year and family name.',
+      });
+      return;
+    } else if (
+      [PublishedState.preview, PublishedState.stable].includes(
+        this.state.publishedState
+      ) &&
+      this.props.isMissingRequiredDeviceCompatibilities
+    ) {
+      this.setState({
+        isSaving: false,
+        error:
+          'Please set all device compatibilities in order to save with published state as preview or stable.',
       });
       return;
     }

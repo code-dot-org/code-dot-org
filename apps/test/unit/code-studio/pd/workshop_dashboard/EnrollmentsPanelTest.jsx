@@ -1,9 +1,10 @@
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
-import {shallow, mount} from 'enzyme';
-import {assert} from 'chai';
-import sinon from 'sinon';
 import {Factory} from 'rosie';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import EnrollmentsPanel, {
   MOVE_ENROLLMENT_BUTTON_NAME,
   EDIT_ENROLLMENT_NAME_BUTTON_NAME,
@@ -220,9 +221,13 @@ describe('EnrollmentsPanel', () => {
         EDIT_ENROLLMENT_NAME_BUTTON_NAME
     );
 
-    // Confirm the updated name
-    const updatedName = {firstName: 'Rubeus', lastName: 'Hagrid'};
-    wrapper.instance().handleEditEnrollmentConfirmed(updatedName);
+    // Confirm the updated name and email
+    const updatedInfo = {
+      firstName: 'Rubeus',
+      lastName: 'Hagrid',
+      email: 'rubeushagrid@code.org',
+    };
+    wrapper.instance().handleEditEnrollmentConfirmed(updatedInfo);
     wrapper.update();
     assert(wrapper.state('enrollmentChangeDialogOpen') === null);
     assert.deepEqual([], wrapper.state('selectedEnrollments'));

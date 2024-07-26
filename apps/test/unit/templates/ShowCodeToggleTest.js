@@ -1,20 +1,26 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
-import sinon from 'sinon';
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../util/reconfiguredChai';
-import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
-import {PaneButton} from '@cdo/apps/templates/PaneHeader';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
+import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
+import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import {
   singleton as studioApp,
   stubStudioApp,
   restoreStudioApp,
 } from '@cdo/apps/StudioApp';
-import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
+import {PaneButton} from '@cdo/apps/templates/PaneHeader';
+import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
 import * as utils from '@cdo/apps/utils';
-import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
-import * as commonReducers from '@cdo/apps/redux/commonReducers';
-import project from '@cdo/apps/code-studio/initApp/project';
+
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
+jest.mock('@cdo/apps/code-studio/initApp/project', () => ({
+  ...jest.requireActual('@cdo/apps/code-studio/initApp/project'),
+  getCurrentId: jest.fn().mockReturnValue('some-project-id'),
+}));
 
 describe('The ShowCodeToggle component', () => {
   let config, toggle, containerDiv, codeWorkspaceDiv, server, editor;
@@ -23,14 +29,12 @@ describe('The ShowCodeToggle component', () => {
     server = sinon.fakeServerWithClock.create();
     sinon.spy($, 'post');
     sinon.spy($, 'getJSON');
-    sinon.stub(project, 'getCurrentId').returns('some-project-id');
     sinon.stub(utils, 'fireResizeEvent'); // Called by StudioApp.js
   });
   afterEach(() => {
     server.restore();
     $.post.restore();
     $.getJSON.restore();
-    project.getCurrentId.restore();
     utils.fireResizeEvent.restore();
   });
 

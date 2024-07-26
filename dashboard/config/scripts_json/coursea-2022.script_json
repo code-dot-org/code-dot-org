@@ -16,8 +16,11 @@
       ],
       "project_widget_visible": true,
       "supported_locales": [
+        "es-MX",
         "fa-AF",
-        "fa-IR"
+        "fa-IR",
+        "ko-KR",
+        "sq-AL"
       ],
       "tts": true,
       "version_year": "2022",
@@ -25,7 +28,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2023-08-16 14:56:12 UTC",
+    "serialized_at": "2023-12-15 21:54:07 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

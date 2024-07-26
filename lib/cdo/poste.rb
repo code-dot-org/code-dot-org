@@ -8,6 +8,7 @@ require 'mail'
 require 'openssl'
 require 'cdo/honeybadger'
 
+# rubocop:disable CustomCops/PegasusDbUsage
 module Poste
   def self.logger
     @@logger ||= $log
@@ -51,9 +52,11 @@ module Poste
   # Returns whether there is a dashboard student account associated with the
   # specified hashed_email.
   def self.dashboard_student?(hashed_email)
+    # rubocop:disable CustomCops/DashboardDbUsage
     dashboard_user = DASHBOARD_DB[:users].
       where(hashed_email: hashed_email).
       first
+    # rubocop:enable CustomCops/DashboardDbUsage
     return !dashboard_user.nil? && dashboard_user[:user_type] == 'student'
   end
 
@@ -187,6 +190,20 @@ module Poste
 end
 
 class Deliverer
+  # Attempt SMTP connections up to 5 times, retrying on the following error types AND message match.
+  CONNECTION_ATTEMPTS = 5
+  RETRYABLE_ERROR_TYPES = [
+    Net::SMTPServerBusy,
+    Net::SMTPAuthenticationError,
+    EOFError
+  ].freeze
+  RETRYABLE_ERROR_MESSAGES = [
+    'Too many connections, try again later',
+    'Temporary authentication failure',
+    'end of file reached'
+  ].map(&:freeze).freeze
+  RETRYABLE_ERROR_MESSAGE_MATCH = Regexp.new RETRYABLE_ERROR_MESSAGES.map {|m| "(#{m})"}.join('|')
+
   def initialize(params)
     @params = params.dup
     @smtp = reset_connection
@@ -336,19 +353,6 @@ class Deliverer
     end
   end
 
-  # Attempt SMTP connections up to 5 times, retrying on the following error types AND message match.
-  CONNECTION_ATTEMPTS = 5
-  RETRYABLE_ERROR_TYPES = [
-    Net::SMTPServerBusy,
-    Net::SMTPAuthenticationError,
-    EOFError
-  ].freeze
-  RETRYABLE_ERROR_MESSAGES = [
-    'Too many connections, try again later',
-    'Temporary authentication failure',
-    'end of file reached'
-  ].map(&:freeze).freeze
-  RETRYABLE_ERROR_MESSAGE_MATCH = Regexp.new RETRYABLE_ERROR_MESSAGES.map {|m| "(#{m})"}.join('|')
   private def smtp_connect
     Retryable.retryable(
       tries: CONNECTION_ATTEMPTS,
@@ -581,3 +585,4 @@ module Poste2
     end
   end
 end
+# rubocop:enable CustomCops/PegasusDbUsage

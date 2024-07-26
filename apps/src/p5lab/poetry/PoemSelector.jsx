@@ -1,19 +1,23 @@
-import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
+import React, {useState, useEffect} from 'react';
 import {connect} from 'react-redux';
 import Select from 'react-select';
+
 import 'react-select/dist/react-select.css';
-import color from '@cdo/apps/util/color';
+import project from '@cdo/apps/code-studio/initApp/project';
 import StylizedBaseDialog, {
   FooterButton,
 } from '@cdo/apps/componentLibrary/StylizedBaseDialog';
-import project from '@cdo/apps/code-studio/initApp/project';
-import {setPoem} from '../redux/poetry';
+import fontConstants from '@cdo/apps/fontConstants';
+import color from '@cdo/apps/util/color';
+import * as utils from '@cdo/apps/utils';
 import msg from '@cdo/poetry/locale';
+
 import {APP_WIDTH} from '../constants';
+import {setPoem} from '../redux/poetry';
+
 import {PoetryStandaloneApp} from './constants';
 import {getPoem, shouldAlphabetizePoems} from './poem';
-import * as utils from '@cdo/apps/utils';
 
 const poemShape = PropTypes.shape({
   key: PropTypes.string,
@@ -263,7 +267,7 @@ const styles = {
     marginRight: 5,
   },
   warning: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     textAlign: 'end',
     padding: '0 10px 10px 0',
   },

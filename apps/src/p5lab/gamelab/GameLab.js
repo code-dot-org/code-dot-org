@@ -1,10 +1,15 @@
-import msg from '@cdo/gamelab/locale';
-import {getStore} from '@cdo/apps/redux';
-import P5Lab from '../P5Lab';
-import {P5LabType} from '../constants';
 import project from '@cdo/apps/code-studio/initApp/project';
-import {showLevelBuilderSaveButton} from '../../code-studio/header';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {getStore} from '@cdo/apps/redux';
 import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
+import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
+import msg from '@cdo/gamelab/locale';
+
+import {showLevelBuilderSaveButton} from '../../code-studio/header';
+import {P5LabType} from '../constants';
+import P5Lab from '../P5Lab';
 
 export default class GameLab extends P5Lab {
   getAvatarUrl(levelInstructor) {
@@ -69,6 +74,23 @@ export default class GameLab extends P5Lab {
   }
 
   runButtonClick() {
+    // For AI Rubrics Pilot
+    const inRubricsPilot =
+      experiments.isEnabled('ai-rubrics') ||
+      experiments.isEnabled('non-ai-rubrics');
+    if (inRubricsPilot && hasScriptData('script[data-rubricdata]')) {
+      const rubricData = getScriptData('rubricdata');
+      const teacherId = getStore().getState().currentUser.userId;
+      const {rubric, studentLevelInfo} = rubricData;
+      if (studentLevelInfo && rubric.level.name === this.level.name) {
+        analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_RUN_BUTTON_CLICKED, {
+          lessonName: rubric.lesson.name,
+          levelName: this.level.name,
+          studentUserId: studentLevelInfo.user_id,
+          teacherUserId: teacherId,
+        });
+      }
+    }
     if (!this.studioApp_.config.readonlyWorkspace) {
       $('.droplet-main-canvas').css(
         'background-color',

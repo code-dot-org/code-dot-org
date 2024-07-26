@@ -6,7 +6,6 @@ require 'cdo/geocoder'
 require 'varnish_environment'
 require_relative '../legacy/middleware/files_api'
 require_relative '../legacy/middleware/channels_api'
-require_relative '../legacy/middleware/tables_api'
 require 'shared_resources'
 require_relative '../legacy/middleware/net_sim_api'
 require_relative '../legacy/middleware/sound_library_api'
@@ -15,6 +14,7 @@ require_relative '../legacy/middleware/animation_library_api'
 require 'bootstrap-sass'
 require 'cdo/hash'
 require 'cdo/i18n_backend'
+require 'cdo/shared_constants'
 
 # load and configure pycall before numpy and any other python-related gems
 # can be automatically loaded just below.
@@ -40,6 +40,13 @@ module Dashboard
     config.active_support.use_authenticated_message_encryption = false
     # added in Rails 6.0 (https://github.com/rails/rails/pull/32937)
     config.action_dispatch.use_cookies_with_metadata = false
+
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins CDO.pegasus_site_host
+        resource '/dashboardapi/*', headers: :any, methods: [:get]
+      end
+    end
 
     unless CDO.chef_managed
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
@@ -73,8 +80,7 @@ module Dashboard
     config.middleware.insert_after VarnishEnvironment, FilesApi
 
     config.middleware.insert_after FilesApi, ChannelsApi
-    config.middleware.insert_after ChannelsApi, TablesApi
-    config.middleware.insert_after TablesApi, SharedResources
+    config.middleware.insert_after ChannelsApi, SharedResources
     config.middleware.insert_after SharedResources, NetSimApi
     config.middleware.insert_after NetSimApi, AnimationLibraryApi
     config.middleware.insert_after AnimationLibraryApi, SoundLibraryApi
@@ -85,6 +91,12 @@ module Dashboard
 
     require 'cdo/rack/upgrade_insecure_requests'
     config.middleware.use ::Rack::UpgradeInsecureRequests
+
+    if CDO.use_cookie_dcdo
+      # Enables the setting of DCDO via cookies for testing purposes.
+      require 'cdo/rack/cookie_dcdo'
+      config.middleware.insert_after ActionDispatch::RequestId, Rack::CookieDCDO
+    end
 
     config.encoding = 'utf-8'
 
@@ -105,9 +117,9 @@ module Dashboard
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.json').to_s]
     config.i18n.backend = CDO.i18n_backend
     config.i18n.enforce_available_locales = false
-    config.i18n.available_locales = ['en-US']
-    config.i18n.fallbacks[:defaults] = ['en-US']
-    config.i18n.default_locale = 'en-US'
+    config.i18n.available_locales = [SharedConstants::DEFAULT_LOCALE]
+    config.i18n.fallbacks[:defaults] = [SharedConstants::DEFAULT_LOCALE]
+    config.i18n.default_locale = SharedConstants::DEFAULT_LOCALE
     LOCALES = YAML.load_file("#{Rails.root}/config/locales.yml")
     LOCALES.each do |locale, data|
       next unless data.is_a? Hash
@@ -183,6 +195,8 @@ module Dashboard
 
     # use https://(*-)studio.code.org urls in mails
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
+    config.action_mailer.delivery_job = 'MailDeliveryJob'
+    config.action_mailer.deliver_later_queue_name = CDO.active_job_queues[:mailers]
 
     # Rails.cache is a fast memory store, cleared every time the application reloads.
     config.cache_store = :memory_store, {
@@ -211,5 +225,6 @@ module Dashboard
     config.exceptions_app = routes
 
     config.active_job.queue_adapter = :delayed_job
+    config.active_job.default_queue_name = CDO.active_job_queues[:default]
   end
 end

@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-18T16:16:18.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Popularity of Past Event Spaces",
+    "long_instructions": "####This data was gathered from a sensor that averaged the amount of people that were within each square meter of space in various locations. This data has been taken from past events that have been held at the school.\r\n\r\n###[Event Space Data](https://codap.concord.org/app/static/dg/en/cert/index.html#file=googleDrive:1ahId3qBULiUT3iV8IhgBM4xgEi14-5X7)\r\n\r\n\r\n![](https://images.code.org/c8e2af335f19604e473a4c6844c49182-image-1721319315196.png)\r\n\r\n####Examine the data and create a persuasive 2-3 sentence data story that helps guide the party planners to make a decision.",
+    "teacher_markdown": "Help students to choose a dataset on which to focus if necessary. In this activity, students will need to choose data from the charts that they find to be persuasive and to articulate a decision that can be based on that data. Although interpretations of the data might vary, here is a sample response for this dataset:\r\nIn the Popularity of Past Event Spaces dataset, it is clear that the gym is the most popular space for students to gather with a density reading of 4.6 students per meter squared. In particular, the dance floor portion of the gym attracts most students. This shows the importance of choosing music that broadly appeals to all students since dancing seems to be the most popular activity during school events.\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Event Space Popularity",
+    "bubble_choice_description": "This data was gathered from a sensor that averaged the amount of people that were within each square meter of space in various locations.",
+    "thumbnail_url": "https://images.code.org/a80e7ceb40072ca7185fb4333f94817b-people.png"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-18 16:16:21 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-18 16:22:10 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-22 15:26:22 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -100,7 +100,7 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
 
   test 'resolve_enrollment' do
     teacher = create :teacher
-    enrollment = create :pd_enrollment, workshop: @workshop, user_id: teacher.id, email: teacher.email
+    enrollment = create :pd_enrollment, workshop: @workshop, user_id: teacher.id, email: teacher.email_for_enrollments
     attendance = create :pd_attendance, teacher: teacher, workshop: @workshop, session: @workshop.sessions.first
 
     # by user id

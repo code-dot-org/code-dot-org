@@ -1,8 +1,10 @@
-import React, {memo, useCallback} from 'react';
-import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import i18n from '@cdo/locale';
+import PropTypes from 'prop-types';
+import React, {memo, useCallback} from 'react';
+
 import Button from '@cdo/apps/templates/Button';
+import i18n from '@cdo/locale';
+
 import moduleStyles from './sections-refresh.module.scss';
 
 export const MARKETING_AUDIENCE = {

@@ -25,6 +25,13 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal 'staging.code.org', CDO.canonical_hostname('code.org')
   end
 
+  test "canonical_hostname in CI" do
+    set_env :test
+    CDO.stubs(:ci_webserver?).returns(true)
+    assert_equal 'localhost-studio.code.org', CDO.canonical_hostname('studio.code.org')
+    assert_equal 'localhost.code.org', CDO.canonical_hostname('code.org')
+  end
+
   test "canonical_hostname in development" do
     set_env :development
     assert_equal 'localhost-studio.code.org', CDO.canonical_hostname('studio.code.org')
@@ -146,6 +153,36 @@ class ApplicationHelperTest < ActionView::TestCase
     refute client_state.callout_seen? 'callout2'
   end
 
+  test 'callout_seen only has a truncated list' do
+    refute client_state.callout_seen? 'callout'
+    client_state.add_callout_seen 'callout'
+    25.times do |i|
+      client_state.add_callout_seen "callout_#{i}"
+    end
+    assert client_state.callout_seen? 'callout_24'
+    refute client_state.callout_seen? 'callout'
+  end
+
+  test 'callout_seen maintains most recently used order' do
+    refute client_state.callout_seen? 'callout'
+    client_state.add_callout_seen 'callout'
+    assert client_state.callout_seen? 'callout'
+    10.times do |i|
+      client_state.add_callout_seen "callout_#{i}"
+    end
+    assert client_state.callout_seen? 'callout'
+    client_state.add_callout_seen 'callout'
+    10.times do |i|
+      client_state.add_callout_seen "callout_#{i + 10}"
+    end
+    assert client_state.callout_seen? 'callout'
+    client_state.add_callout_seen 'callout'
+    10.times do |i|
+      client_state.add_callout_seen "callout_#{i + 10}"
+    end
+    assert client_state.callout_seen? 'callout'
+  end
+
   test 'client state with invalid cookie' do
     sl = create :script_level
     cookies[:progress] = '&*%$% mangled #$#$$'
@@ -224,9 +261,7 @@ class ApplicationHelperTest < ActionView::TestCase
     assert_equal LEVEL_STATUS.attempted,  best_activity_css_class([user_level1, user_level2])
   end
 
-  private
-
-  def assert_equal_unordered(array1, array2)
+  private def assert_equal_unordered(array1, array2)
     Set.new(array1) == Set.new(array2)
   end
 end

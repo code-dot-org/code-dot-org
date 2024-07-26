@@ -1,17 +1,19 @@
+import PropTypes from 'prop-types';
 import React from 'react';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
 import {
   PageLabels,
   SectionHeaders,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import PropTypes from 'prop-types';
-import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
+import {isEmail} from '@cdo/apps/util/formatValidation';
+
+import {useRegionalPartner} from '../../components/useRegionalPartner';
+import UsPhoneNumberInput from '../../form_components/UsPhoneNumberInput';
 import {FormContext} from '../../form_components_func/FormComponent';
 import {LabeledInput} from '../../form_components_func/labeled/LabeledInput';
-import UsPhoneNumberInput from '../../form_components/UsPhoneNumberInput';
 import {LabeledUsPhoneNumberInput} from '../../form_components_func/labeled/LabeledUsPhoneNumberInput';
-import {isEmail} from '@cdo/apps/util/formatValidation';
-import {useRegionalPartner} from '../../components/useRegionalPartner';
+import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 
 const AdministratorInformation = props => {
   const {data} = props;
@@ -21,13 +23,9 @@ const AdministratorInformation = props => {
     'Please provide information for an Administrator/School Leader (i.e. ' +
     'Principal, Vice Principal, STEM Program Director, etc) who can\n' +
     'certify that the course will be offered at your school. Upon your\n' +
-    'submission of this application, we will contact the\n' +
+    'submission of this application, we may contact the\n' +
     'Administrator/School Leader that you listed via email in order to\n' +
-    'obtain their approval. Note that your application cannot be fully\n' +
-    'reviewed until there is approval from your Administrator/School\n' +
-    'Leader. Therefore, we encourage you to follow up with them directly\n' +
-    'to let them know about your application and to expect an email\n' +
-    'seeking their approval.';
+    'obtain their approval.';
   const formDescriptionWithoutAdminApprovalRequired =
     'Please provide information for an Administrator/School Leader (i.e. Principal, ' +
     'Vice Principal, STEM Program Director, etc) who can certify that the course ' +

@@ -1,20 +1,26 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import memoize from 'memoize-one';
-import {DebounceInput} from 'react-debounce-input';
-import _ from 'lodash';
-import msg from '@cdo/locale';
-import color from '../../../util/color';
-import dataStyles from '../data-styles.module.scss';
 import classNames from 'classnames';
+import _ from 'lodash';
+import memoize from 'memoize-one';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {DebounceInput} from 'react-debounce-input';
+import {connect} from 'react-redux';
+
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
-import {ChartType, isBlank, isNumber, isBoolean, toBoolean} from '../dataUtils';
+import fontConstants from '@cdo/apps/fontConstants';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
-import DropdownField from './DropdownField';
+import msg from '@cdo/locale';
+
+import color from '../../../util/color';
+import {ChartType, isBlank, isNumber, isBoolean, toBoolean} from '../dataUtils';
+
+import {MAX_CROSSTAB_CELLS, MAX_CROSSTAB_COLUMNS} from './CrossTabChart';
 import DataVisualizer from './DataVisualizer';
-import Snapshot from './Snapshot';
+import DropdownField from './DropdownField';
 import placeholderImage from './placeholder.png';
+import Snapshot from './Snapshot';
+
+import dataStyles from '../data-styles.module.scss';
 
 export const OperatorType = {
   EQUAL: 0,
@@ -138,9 +144,10 @@ class VisualizerModal extends React.Component {
       case ChartType.CROSS_TAB:
         return msg.crossTab();
       default:
-        return chartType;
+        return '';
     }
   }
+
   getDisplayNameForOperator(operator) {
     switch (operator) {
       case OperatorType.GREATER_THAN:
@@ -194,9 +201,37 @@ class VisualizerModal extends React.Component {
     return options.join(', ');
   }
 
+  getValuesByColumn = memoize((records, tableColumns, chartType) => {
+    if (chartType !== ChartType.CROSS_TAB) {
+      return undefined;
+    } else {
+      return records.reduce((bucket, record) => {
+        tableColumns.forEach(column => {
+          bucket[column] ||= new Set();
+          bucket[column].add(record[column]);
+        });
+        return bucket;
+      }, new Set());
+    }
+  });
+
+  tooBigColumns = memoize((tableColumns, valuesByColumn, selectedColumn1) => {
+    if (!valuesByColumn) {
+      return [];
+    } else {
+      const xCount = selectedColumn1 ? valuesByColumn[selectedColumn1].size : 0;
+      return tableColumns.filter(
+        column =>
+          valuesByColumn[column].size >= MAX_CROSSTAB_COLUMNS ||
+          xCount * valuesByColumn[column].size >= MAX_CROSSTAB_CELLS
+      );
+    }
+  });
+
   render() {
     const parsedRecords = this.parseRecords(this.props.tableRecords);
     let filteredRecords = parsedRecords;
+
     if (this.state.filterColumn !== '' && this.state.filterValue !== '') {
       filteredRecords = this.filterRecords(
         parsedRecords,
@@ -210,13 +245,22 @@ class VisualizerModal extends React.Component {
       this.props.tableColumns
     );
 
-    let disabledOptions = [];
+    const valuesByColumn = this.getValuesByColumn(
+      filteredRecords,
+      this.props.tableColumns,
+      this.state.chartType
+    );
+
+    let disabledNonNumericOptions = [];
     const disableNonNumericColumns = [
       ChartType.SCATTER_PLOT,
       ChartType.HISTOGRAM,
     ].includes(this.state.chartType);
     if (disableNonNumericColumns) {
-      disabledOptions = _.difference(this.props.tableColumns, numericColumns);
+      disabledNonNumericOptions = _.difference(
+        this.props.tableColumns,
+        numericColumns
+      );
     }
     const isMultiColumnChart = [
       ChartType.SCATTER_PLOT,
@@ -225,6 +269,7 @@ class VisualizerModal extends React.Component {
     const isFilterColumnNumeric = numericColumns.includes(
       this.state.filterColumn
     );
+
     return (
       <span
         style={
@@ -313,7 +358,10 @@ class VisualizerModal extends React.Component {
                     : msg.dataVisualizerValues()
                 }
                 options={this.props.tableColumns}
-                disabledOptions={disabledOptions}
+                disabledOptions={_.union(
+                  disabledNonNumericOptions,
+                  this.tooBigColumns(this.props.tableColumns, valuesByColumn)
+                )}
                 value={this.state.selectedColumn1}
                 onChange={event =>
                   this.setState({selectedColumn1: event.target.value})
@@ -324,7 +372,14 @@ class VisualizerModal extends React.Component {
                 <DropdownField
                   displayName={msg.dataVisualizerYValues()}
                   options={this.props.tableColumns}
-                  disabledOptions={disabledOptions}
+                  disabledOptions={_.union(
+                    disabledNonNumericOptions,
+                    this.tooBigColumns(
+                      this.props.tableColumns,
+                      valuesByColumn,
+                      this.state.selectedColumn1
+                    )
+                  )}
                   value={this.state.selectedColumn2}
                   onChange={event =>
                     this.setState({selectedColumn2: event.target.value})
@@ -461,7 +516,7 @@ const styles = {
     position: 'absolute',
     width: '100%',
     bottom: '50%',
-    fontFamily: '"Gotham 5r", sans-serif, sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 20,
     color: color.dark_charcoal,
   },

@@ -1,7 +1,8 @@
 /** @file Exports a set of tests that verify the MakerBoard interface */
-import sinon from 'sinon';
 import {EventEmitter} from 'events'; // see node-libs-browser
-import {expect} from '../../../../../util/reconfiguredChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import {expect} from '../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 /**
  * Interface that our board controllers must implement to be usable with

@@ -1,9 +1,9 @@
-import React from 'react';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
 import DisallowedHtmlWarningDialog from './DisallowedHtmlWarningDialog';
 
 export default {
-  title: 'DisallowedHtmlWarningDialog',
   component: DisallowedHtmlWarningDialog,
 };
 

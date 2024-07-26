@@ -1,9 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import NewProjectButtons from './NewProjectButtons';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
-import Button from '../Button';
+
 import color from '../../util/color';
+import Button from '../Button';
+
+import NewProjectButtons from './NewProjectButtons';
 
 export default class StartNewProject extends React.Component {
   static propTypes = {
@@ -46,12 +50,7 @@ export default class StartNewProject extends React.Component {
       ? DEFAULT_PROJECT_TYPES_ADVANCED
       : DEFAULT_PROJECT_TYPES_BASIC;
 
-    const OPEN_ENDED_PROJECT_TYPES = [
-      'spritelab',
-      'dance',
-      'poetry',
-      'thebadguys',
-    ];
+    const OPEN_ENDED_PROJECT_TYPES = ['spritelab', 'dance', 'poetry', 'music'];
 
     const DRAWING_PROJECT_TYPES = ['artist', 'frozen'];
 
@@ -146,7 +145,7 @@ const styles = {
     paddingRight: 10,
     paddingBottom: 10,
     fontSize: 16,
-    fontFamily: '"Gotham 4r"',
+    ...fontConstants['main-font-regular'],
     color: color.neutral_dark,
     marginBottom: -10,
   },

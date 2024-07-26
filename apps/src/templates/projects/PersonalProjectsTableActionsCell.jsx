@@ -1,12 +1,17 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import QuickActionsCell from '../tables/QuickActionsCell';
+
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import i18n from '@cdo/locale';
+
+import NameFailureDialog from '../../code-studio/components/NameFailureDialog';
 import color from '../../util/color';
 import FontAwesome from '../FontAwesome';
-import Button from '../Button';
-import i18n from '@cdo/locale';
+import QuickActionsCell from '../tables/QuickActionsCell';
+
+import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
 import {
   startRenamingProject,
   cancelRenamingProject,
@@ -14,14 +19,8 @@ import {
   remix,
   unsetNameFailure,
 } from './projectsRedux';
-import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
-import NameFailureDialog from '../../code-studio/components/NameFailureDialog';
 
-export const styles = {
-  xIcon: {
-    paddingRight: 5,
-  },
-};
+import moduleStyles from './personal-projects-table-actions-cell.module.scss';
 
 export class PersonalProjectsTableActionsCell extends Component {
   static propTypes = {
@@ -37,6 +36,7 @@ export class PersonalProjectsTableActionsCell extends Component {
     remix: PropTypes.func.isRequired,
     projectNameFailure: PropTypes.string,
     unsetNameFailure: PropTypes.func.isRequired,
+    isFrozen: PropTypes.bool,
   };
 
   onDelete = () => {
@@ -70,36 +70,43 @@ export class PersonalProjectsTableActionsCell extends Component {
       <div>
         {!isEditing && (
           <QuickActionsCell>
-            <PopUpMenu.Item onClick={this.onRename}>
-              {i18n.rename()}
-            </PopUpMenu.Item>
+            {!this.props.isFrozen && (
+              <PopUpMenu.Item onClick={this.onRename}>
+                {i18n.rename()}
+              </PopUpMenu.Item>
+            )}
             <PopUpMenu.Item onClick={this.onRemix}>
               {i18n.remix()}
             </PopUpMenu.Item>
-            <MenuBreak />
-            <PopUpMenu.Item onClick={this.onDelete} color={color.red}>
-              <FontAwesome icon="times-circle" style={styles.xIcon} />
-              {i18n.delete()}
-            </PopUpMenu.Item>
+            {!this.props.isFrozen && <MenuBreak />}
+            {!this.props.isFrozen && (
+              <PopUpMenu.Item onClick={this.onDelete} color={color.red}>
+                <FontAwesome
+                  icon="times-circle"
+                  className={moduleStyles.xIcon}
+                />
+                {i18n.delete()}
+              </PopUpMenu.Item>
+            )}
           </QuickActionsCell>
         )}
         {isEditing && (
           <div>
             <Button
-              __useDeprecatedTag
               onClick={this.onSave}
-              color={Button.ButtonColor.brandSecondaryDefault}
               text={i18n.save()}
-              style={styles.saveButton}
+              size="s"
+              color={buttonColors.purple}
               disabled={isSaving}
-              className="ui-projects-rename-save"
+              id="ui-projects-rename-save"
+              className={moduleStyles.buttonMargin}
             />
-            <br />
             <Button
-              __useDeprecatedTag
               onClick={this.onCancel}
-              color={Button.ButtonColor.gray}
               text={i18n.cancel()}
+              size="s"
+              type="secondary"
+              color={buttonColors.gray}
             />
           </div>
         )}

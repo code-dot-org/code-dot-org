@@ -15,9 +15,11 @@ title: IT Requirements
 
 ## Minimum Supported Browsers and Platforms
 
+Starting in July 2024, we will update the minimum versions required for browsers and operating systems. While the old versions may still work, we will be unable to support requests for bug fixes in the older versions.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Browser
@@ -38,8 +40,30 @@ title: IT Requirements
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Browser July '24
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Mobile Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Edge 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Platform
@@ -60,8 +84,30 @@ title: IT Requirements
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platform July '24
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Sites to Unblock
@@ -71,13 +117,13 @@ For the very best experience with all Code.org content, we recommend consulting 
 | Priority                                                                                 | URL                                                                                                                                                    |
 | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Required**                                                                             | `https://code.org`<br/>`https://*.code.org`                                                                                                            |
+| **To ensure CAPTCHA systems can distinguish your usage from automated fraudulent (“bot”) activity** | `https://www.google.com/recaptcha/api.js` |
 | **Optional**                                                                             | `https://www.google-analytics.com`<br/>`https://www.googleoptimize.com`                                               |
 | **To use YouTube hosted videos (Enhanced Privacy Mode)**                                 | `https://youtube-nocookie.com/*`<br/>`https://*.googlevideo.com/*`<br/>`https://*.ytimg.com/*`                                                         |
 | **To use Code.org hosted videos**                                                        | `https://videos.code.org` |
 | **To use Internet Simulator**                                                            | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                                                                           |
 | **To use Web Lab**                                                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                                                                              |
 | **To use Google Classroom Share Button**                                                 | `https://apis.google.com`                                                                                                                              |
-| **To use App Lab datasets** | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com` |
 
 ## Mobile and Tablet Support Details
 
@@ -101,7 +147,7 @@ We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our 
 Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
 
 <!--
-The following HTML is a copy of video_with_fallback.haml. once this file can be converted to 
+The following HTML is a copy of video_with_fallback.haml. once this file can be converted to
 .md.erb without breaking i18n sync, this file should include that partial instead.
 -->
 <figure style="width:100%; height: 100%; margin: 0 auto;">

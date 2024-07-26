@@ -1,28 +1,28 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {assert} from '../../../util/reconfiguredChai';
-import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
+
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
+import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
 
 describe('SetUpCourses', () => {
   it('renders as expected for a teacher', () => {
     const wrapper = shallow(<SetUpCourses isTeacher={true} />);
-    assert(
+    expect(
       wrapper.containsMatchingElement(
         <BorderedCallToAction
           type="courses"
           headingText="Start learning"
           descriptionText="Assign a course to your classroom or start your own course."
           buttonText="Find a course"
-          buttonUrl="/courses"
+          buttonUrl="/catalog"
         />
       )
-    );
+    ).toBeTruthy();
   });
 
   it('renders as expected for a student', () => {
     const wrapper = shallow(<SetUpCourses isTeacher={false} />);
-    assert(
+    expect(
       wrapper.containsMatchingElement(
         <BorderedCallToAction
           type="courses"
@@ -32,6 +32,6 @@ describe('SetUpCourses', () => {
           buttonUrl="/courses"
         />
       )
-    );
+    ).toBeTruthy();
   });
 });

@@ -23,9 +23,10 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
   describe '.perform' do
     let(:perform_sync_out) {described_class.perform}
 
-    let(:language) {{crowdin_name_s: 'expected Crowdin locale'}}
+    let(:language) {{locale_s: 'expected_locale'}}
 
     before do
+      I18n::Metrics.stubs(:report_runtime).yields(nil)
       I18n::Resources::Dashboard::CourseContent::SyncOut.any_instance.stubs(:languages).returns([language])
     end
 
@@ -61,7 +62,7 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
       RedactRestoreUtils.
         expects(:restore_file).
         with(original_file_path, crowdin_file_path, %w[blockly]).
-        returns({'en' => {'i18n_key' => 'restored_i18n_data'}})
+        returns(JSON.generate({'en' => {'i18n_key' => 'restored_i18n_data'}}))
     end
 
     before do
@@ -75,7 +76,7 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
     it 'restores the Crowdin file level content and returns true' do
       expect_level_content_restoration.once
 
-      expected_restored_crowdin_file_content = <<-JSON.strip.gsub(/^ {8}/, '')
+      expected_restored_crowdin_file_content = <<~JSON.strip
         {
           "en": {
             "i18n_key": "restored_i18n_data",
@@ -192,11 +193,10 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
   describe '#i18n_data_of' do
     let(:i18n_data_of_language) {described_instance.send(:i18n_data_of, language, crowdin_locale_dir)}
 
-    let(:crowdin_locale) {'expected_crowdin_locale'}
     let(:i18n_locale) {'expected_i18n_locale'}
-    let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
+    let(:language) {{locale_s: i18n_locale}}
 
-    let(:crowdin_locale_dir) {CDO.dir('i18n/locales', crowdin_locale, 'course_content')}
+    let(:crowdin_locale_dir) {CDO.dir('i18n/crowdin', i18n_locale, 'course_content')}
 
     let(:level) {'expected_level_instance'}
     let(:level_url) {'expected_level_url'}
@@ -299,9 +299,8 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
   describe '#distribute_level_content' do
     let(:distribute_level_content) {described_instance.send(:distribute_level_content, language)}
 
-    let(:crowdin_locale) {'expected_crowdin_locale'}
     let(:i18n_locale) {'expected_i18n_locale'}
-    let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
+    let(:language) {{locale_s: i18n_locale}}
     let(:level_type) {'expected_type'}
     let(:level_type_i18n_data) {{'level_type_1i8n_key' => 'level_type_1i8n_val'}}
     let(:i18n_data) {{level_type => level_type_i18n_data}}
@@ -309,7 +308,7 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
     let(:expected_dashboard_i18n_data) {{i18n_locale => {'data' => i18n_data}}}
     let(:expected_target_i18n_file_format) {'json'}
 
-    let(:crowdin_locale_dir) {CDO.dir('i18n/locales', crowdin_locale, 'course_content')}
+    let(:crowdin_locale_dir) {CDO.dir('i18n/crowdin', i18n_locale, 'course_content')}
     let(:target_i18n_file_path) {CDO.dir("dashboard/config/locales/#{level_type}.#{i18n_locale}.#{expected_target_i18n_file_format}")}
 
     let(:expect_i18n_data_collecting) do
@@ -395,22 +394,6 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
       end
     end
 
-    context 'when the processed language is the source language' do
-      before do
-        I18nScriptUtils.expects(:source_lang?).with(language).returns(true)
-      end
-
-      it 'does not distribute level content localization' do
-        execution_sequence = sequence('execution')
-
-        expect_i18n_data_collecting.in_sequence(execution_sequence).returns(i18n_data)
-        expect_crowdin_course_content_files_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
-        expect_localization_distribution.never
-
-        distribute_level_content
-      end
-    end
-
     context 'when the Crowdin locale dir does not exist' do
       before do
         FileUtils.rm_r(crowdin_locale_dir)
@@ -429,13 +412,11 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
   describe '#distribute_localization_of' do
     let(:distribute_localization) {described_instance.send(:distribute_localization_of, type, language)}
 
-    let(:crowdin_locale) {'English'}
     let(:i18n_locale) {'en-US'}
-
     let(:type) {'expected_type'}
-    let(:language) {{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}}
+    let(:language) {{locale_s: i18n_locale}}
 
-    let(:crowdin_file_path) {CDO.dir('i18n/locales', crowdin_locale, "dashboard/#{type}.yml")}
+    let(:crowdin_file_path) {CDO.dir('i18n/crowdin', i18n_locale, "dashboard/#{type}.yml")}
     let(:i18n_file_path) {CDO.dir('i18n/locales', i18n_locale, "dashboard/#{type}.yml")}
     let(:target_i18n_file_path) {CDO.dir("dashboard/config/locales/#{type}.#{i18n_locale}.yml")}
 
@@ -447,8 +428,6 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
     end
 
     before do
-      I18nScriptUtils.stubs(:source_lang?).with(language).returns(false)
-
       FileUtils.mkdir_p File.dirname(crowdin_file_path)
       FileUtils.touch(crowdin_file_path)
     end
@@ -460,19 +439,6 @@ describe I18n::Resources::Dashboard::CourseContent::SyncOut do
       expect_crowdin_file_to_i18n_locale_dir_moving.in_sequence(execution_sequence)
 
       distribute_localization
-    end
-
-    context 'when the language is the source language' do
-      before do
-        I18nScriptUtils.expects(:source_lang?).with(language).returns(true)
-      end
-
-      it 'does not distribute the localization of the type' do
-        expect_localization_distribution.never
-        expect_crowdin_file_to_i18n_locale_dir_moving.once
-
-        distribute_localization
-      end
     end
 
     context 'when the type Crowdin file does not exist' do

@@ -1,23 +1,27 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import ProgressLessonContent from './ProgressLessonContent';
-import FontAwesome from '../FontAwesome';
-import color from '@cdo/apps/util/color';
-import {levelWithProgressType, lessonType} from './progressTypes';
+import ReactTooltip from 'react-tooltip';
+
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import fontConstants from '@cdo/apps/fontConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+
+import Button from '../Button';
+import FontAwesome from '../FontAwesome';
+
+import FocusAreaIndicator from './FocusAreaIndicator';
 import {
   lessonIsVisible,
   lessonIsLockedForUser,
   lessonIsLockedForAllStudents,
 } from './progressHelpers';
+import ProgressLessonContent from './ProgressLessonContent';
 import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
-import FocusAreaIndicator from './FocusAreaIndicator';
-import ReactTooltip from 'react-tooltip';
-import _ from 'lodash';
-import Button from '../Button';
+import {levelWithProgressType, lessonType} from './progressTypes';
 
 class ProgressLesson extends React.Component {
   static propTypes = {
@@ -157,7 +161,19 @@ class ProgressLesson extends React.Component {
               ...{marginBottom: this.state.collapsed ? 0 : 15},
             }}
           >
-            <div style={styles.headingText} onClick={this.toggleCollapsed}>
+            <div
+              style={styles.headingText}
+              onClick={this.toggleCollapsed}
+              tabIndex="0"
+              role="button"
+              onKeyDown={e => {
+                if ([' ', 'Enter', 'Spacebar'].includes(e.key)) {
+                  e.preventDefault();
+                  this.toggleCollapsed();
+                }
+              }}
+              aria-expanded={!this.state.collapsed}
+            >
               <FontAwesome icon={caret} style={caretStyle} />
               {hiddenForStudents && (
                 <FontAwesome icon="eye-slash" style={styles.icon} />
@@ -259,7 +275,7 @@ const styles = {
   },
   heading: {
     fontSize: 18,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     display: 'flex',
     alignItems: 'center',
   },
@@ -297,8 +313,7 @@ const styles = {
   },
   notAuthorizedWarning: {
     color: color.red,
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontStyle: 'italic',
+    ...fontConstants['main-font-semi-bold-italic'],
     marginTop: 10,
   },
   learnMoreLink: {

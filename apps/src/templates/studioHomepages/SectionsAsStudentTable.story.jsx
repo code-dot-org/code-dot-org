@@ -1,8 +1,10 @@
-import React from 'react';
-import SectionsAsStudentTable from './SectionsAsStudentTable';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
 import {Provider} from 'react-redux';
+
 import {reduxStore} from '@cdo/storybook/decorators';
+
+import SectionsAsStudentTable from './SectionsAsStudentTable';
 
 const sections = [
   {
@@ -65,7 +67,6 @@ const sections = [
 ];
 
 export default {
-  title: 'SectionAsStudentTable',
   component: SectionsAsStudentTable,
 };
 

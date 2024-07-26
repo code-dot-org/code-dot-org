@@ -1,16 +1,18 @@
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
-import {PaneButton} from '@cdo/apps/templates/PaneHeader';
+
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {setMuteMusic, SignInState} from '@cdo/apps/templates/currentUserRedux';
+import {PaneButton} from '@cdo/apps/templates/PaneHeader';
+import i18n from '@cdo/locale';
+
+import UserPreferences from '../../lib/util/UserPreferences';
 import {
   muteCookieValue,
   setMuteCookie,
   removeMuteCookie,
 } from '../../util/muteCookieHelpers';
-import {setMuteMusic, SignInState} from '@cdo/apps/templates/currentUserRedux';
-import UserPreferences from '../../lib/util/UserPreferences';
 
 function BackgroundMusicMuteButton({
   className,
@@ -28,9 +30,15 @@ function BackgroundMusicMuteButton({
 
   const [isBackgroundMusicMuted, setIsBackgroundMusicMuted] =
     useState(initialMuteState);
+  const [isSavingMutePreference, setIsSavingMutePreference] = useState(false);
 
   const updateMuteMusic = updatedMuteValue => {
-    signedIn ? new UserPreferences().setMuteMusic(updatedMuteValue) : {};
+    if (signedIn) {
+      setIsSavingMutePreference(true);
+      new UserPreferences()
+        .setMuteMusic(updatedMuteValue)
+        .always(() => setIsSavingMutePreference(false));
+    }
     setMuteMusic(updatedMuteValue);
   };
 
@@ -82,7 +90,8 @@ function BackgroundMusicMuteButton({
       }
       isRtl={isRtl}
       isMinecraft={isMinecraft}
-      onClick={handleMuteMusicTabClick}
+      isDisabled={isSavingMutePreference}
+      onClick={isSavingMutePreference ? () => {} : handleMuteMusicTabClick}
       style={{
         ...styles.button,
         ...(!isMinecraft

@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2024-05-06T18:30:45.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Heading\r\n\r\nParagraph\r\n\r\n### Do This\r\n\r\n1) Thing\r\n   * Sub-bullet\r\n   * Sub-bullet\r\n2) Thing\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the `Continue`(#7435b2) button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* Idea 1\r\n* Idea 2\r\n* Idea 3\r\n:::\r\n\r\n&nbsp;",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.8",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "editable",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "readonly"
+      },
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+
+      ]
+    }
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-05-06T18:30:45.710+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-project-L3\\\"\"],\"cloned_from\":\"gen-ai-customizing-project-L3\"}]"
+}]]></config>
+</Aichat>

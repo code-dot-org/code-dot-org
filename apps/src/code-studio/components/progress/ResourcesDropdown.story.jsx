@@ -1,4 +1,5 @@
 import React from 'react';
+
 import ResourcesDropdown from './ResourcesDropdown';
 
 const migratedSampleResources = [
@@ -15,7 +16,6 @@ const migratedSampleResources = [
 ];
 
 export default {
-  title: 'ResourcesDropdown',
   component: ResourcesDropdown,
 };
 

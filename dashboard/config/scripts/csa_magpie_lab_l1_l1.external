@@ -3,15 +3,11 @@ title 'Chatbots'
 description 'description here'
 
 markdown <<MARKDOWN
-##Chatbots
+##Sample Chatbot
 
-* [**ELIZA**](https://web.njit.edu/~ronkowit/eliza.html) – an early natural language processing program written in the mid-1960s to demonstrate how superficial human to computer communications were at that time
+* [**ELIZA**](https://www.masswerk.at/elizabot/) – an early natural language processing program written in the mid-1960s to demonstrate how superficial human to computer communications were at that time
 
-* [**Telecom Bot**](https://nanosemantics.ai/en/chatbot-demos/telecom-bot-en/) – a demo chatbot for a telecommunications company
-
-* [**Captain Jack Sparrow Chatbot**](https://nanosemantics.ai/en/chatbot-demos/sparrow-bot-en/) – this chatbot can maintain a conversation on topics related to the character Captain Jack Sparrow from the movie *Pirates of the Caribbean*
-
-* [**Watson Assistant Demo**](https://watson-assistant-demo.ng.bluemix.net/) – a question-answering computer system capable of answering questions posed in natural language
+* [**ELIZA**](https://www.masswerk.at/eliza/) - a more advanced implementation of the Eliza bot that incorporates speech.
 
 ##Current Work in NLP
 

@@ -15,7 +15,7 @@ a.whitefooterlink {
 }
 
 #block a {
-  color: #7665a0;
+  color: var(--brand_secondary_default);
   text-decoration: none;
 }
 

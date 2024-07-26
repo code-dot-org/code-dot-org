@@ -19,8 +19,6 @@ db_credential_admin: {"username":"ACCESS_DISABLED", "password":"ACCESS_DISABLED"
 
 newrelic_logging: true
 stack_name: autoscale-prod
-firebase_name: cdo-v3-prod
-db_cluster_id: production-aurora-cluster
 solr_server:                            solr.code.org
 use_pusher:                             true
 
@@ -39,7 +37,19 @@ imm_reader_subdomain:     'cdo-immersive-reader-prod'
 # General CDO Amplitude key
 cdo_amplitude_api_key: !Secret
 
+# AI Proxy for OpenAI API
+ai_proxy_origin: https://aiproxy.code.org
+
 # Mapbox
 mapbox_upload_tileset:    'censustiles'
 mapbox_upload_token:      !Secret
 mapbox_access_tileset:    'censustiles'
+
+# Statsig API keys
+statsig_server_secret_key: !Secret
+statsig_api_client_key: !Secret
+
+# MailGun/MailJet API keys
+mailjet_api_key: !Secret
+mailjet_secret_key: !Secret
+mailgun_api_key: !Secret

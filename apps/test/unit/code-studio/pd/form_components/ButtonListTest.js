@@ -1,8 +1,5 @@
-import ButtonList from '@cdo/apps/code-studio/pd/form_components/ButtonList';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
-import sinon from 'sinon';
 /* eslint-disable no-restricted-imports */
 import {
   Radio,
@@ -11,15 +8,16 @@ import {
   FormGroup,
   HelpBlock,
 } from 'react-bootstrap';
-/* eslint-enable no-restricted-imports */
+
+import ButtonList from '@cdo/apps/code-studio/pd/form_components/ButtonList';
 
 describe('ButtonList', () => {
   describe('With type: radio', () => {
     let radioList;
     let onChangeCallback;
 
-    before(() => {
-      onChangeCallback = sinon.spy();
+    beforeAll(() => {
+      onChangeCallback = jest.fn();
 
       radioList = shallow(
         <ButtonList
@@ -48,15 +46,15 @@ describe('ButtonList', () => {
             <br />
           </FormGroup>
         )
-      ).to.be.ok;
+      ).toBeTruthy();
     });
 
     it('Calls the onChange callback with a single result when one is selected', () => {
       radioList
         .find("Radio[value='Cat']")
         .simulate('change', {target: {value: 'Cat'}});
-      expect(onChangeCallback).to.have.been.calledOnce;
-      expect(onChangeCallback).to.have.been.calledWith({favoritePet: 'Cat'});
+      expect(onChangeCallback).toHaveBeenCalledTimes(1);
+      expect(onChangeCallback).toHaveBeenCalledWith({favoritePet: 'Cat'});
     });
   });
 
@@ -65,7 +63,7 @@ describe('ButtonList', () => {
     let onChangeCallback;
 
     beforeEach(() => {
-      onChangeCallback = sinon.spy();
+      onChangeCallback = jest.fn();
 
       checkboxList = shallow(
         <ButtonList
@@ -94,7 +92,7 @@ describe('ButtonList', () => {
             <br />
           </FormGroup>
         )
-      ).to.be.ok;
+      ).toBeTruthy();
     });
 
     it('Calls the onChange callback with a list of all checked when one is checked', () => {
@@ -102,8 +100,8 @@ describe('ButtonList', () => {
       checkboxList
         .find("Checkbox[value='Cat']")
         .simulate('change', {target: {value: 'Cat', checked: true}});
-      expect(onChangeCallback).to.have.been.calledOnce;
-      expect(onChangeCallback).to.have.been.calledWith({favoritePet: ['Cat']});
+      expect(onChangeCallback).toHaveBeenCalledTimes(1);
+      expect(onChangeCallback).toHaveBeenCalledWith({favoritePet: ['Cat']});
     });
 
     it('Calls the onChange callback with a list of all remaining checked when one is unchecked', () => {
@@ -112,8 +110,8 @@ describe('ButtonList', () => {
       checkboxList
         .find("Checkbox[value='Cat']")
         .simulate('change', {target: {value: 'Cat', checked: false}});
-      expect(onChangeCallback).to.have.been.calledOnce;
-      expect(onChangeCallback).to.have.been.calledWith({favoritePet: ['Dog']});
+      expect(onChangeCallback).toHaveBeenCalledTimes(1);
+      expect(onChangeCallback).toHaveBeenCalledWith({favoritePet: ['Dog']});
     });
 
     it('Calls the onChange callback with null when the last checked item is unchecked', () => {
@@ -122,8 +120,8 @@ describe('ButtonList', () => {
       checkboxList
         .find("Checkbox[value='Cat']")
         .simulate('change', {target: {value: 'Cat', checked: false}});
-      expect(onChangeCallback).to.have.been.calledOnce;
-      expect(onChangeCallback).to.have.been.calledWith({favoritePet: null});
+      expect(onChangeCallback).toHaveBeenCalledTimes(1);
+      expect(onChangeCallback).toHaveBeenCalledWith({favoritePet: null});
     });
   });
 
@@ -139,8 +137,8 @@ describe('ButtonList', () => {
     );
 
     const helpBlock = buttonList.find(HelpBlock);
-    expect(helpBlock).to.have.length(1);
-    expect(helpBlock.childAt(0).text()).to.equal('You must choose!');
+    expect(helpBlock).toHaveLength(1);
+    expect(helpBlock.childAt(0).text()).toBe('You must choose!');
   });
 
   it('Adds an other option when includeOther is set', () => {
@@ -155,7 +153,7 @@ describe('ButtonList', () => {
     );
 
     const checkboxes = buttonList.find(Checkbox);
-    expect(checkboxes).to.have.length(3);
+    expect(checkboxes).toHaveLength(3);
     const otherCheckbox = checkboxes.at(2);
     expect(
       otherCheckbox.containsMatchingElement(
@@ -167,7 +165,7 @@ describe('ButtonList', () => {
           </div>
         </Checkbox>
       )
-    ).to.be.ok;
+    ).toBeTruthy();
   });
 
   describe('With input fields', () => {
@@ -175,8 +173,8 @@ describe('ButtonList', () => {
     let onDogBreedInputChange;
     let dogBreedInput;
 
-    before(() => {
-      onDogBreedInputChange = sinon.spy();
+    beforeAll(() => {
+      onDogBreedInputChange = jest.fn();
 
       buttonList = shallow(
         <ButtonList
@@ -218,18 +216,18 @@ describe('ButtonList', () => {
             </Checkbox>
           </FormGroup>
         )
-      ).to.be.ok;
+      ).toBeTruthy();
     });
 
     it('Displays supplied input value', () => {
-      expect(dogBreedInput.prop('value')).to.equal('--enter dog breed--');
+      expect(dogBreedInput.prop('value')).toBe('--enter dog breed--');
     });
 
     it('Calls the onInputChange callback when text is entered', () => {
       dogBreedInput.simulate('change', {target: {value: 'all dogs'}});
 
-      expect(onDogBreedInputChange).to.have.been.calledOnce;
-      expect(onDogBreedInputChange).to.have.been.calledWith('all dogs');
+      expect(onDogBreedInputChange).toHaveBeenCalledTimes(1);
+      expect(onDogBreedInputChange).toHaveBeenCalledWith('all dogs');
     });
   });
 });

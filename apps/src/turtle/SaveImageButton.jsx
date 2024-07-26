@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
+
 import * as imageUtils from '@cdo/apps/imageUtils';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 export default class SaveImageButton extends React.Component {
   static propTypes = {

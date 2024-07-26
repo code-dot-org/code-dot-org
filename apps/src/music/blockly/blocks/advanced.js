@@ -1,8 +1,8 @@
+import musicI18n from '../../locale';
 import {BlockTypes} from '../blockTypes';
 import {isBlockInsideWhenRun} from '../blockUtils';
 import {FIELD_SOUNDS_NAME} from '../constants';
 import {fieldSoundsDefinition} from '../fields';
-import musicI18n from '../../locale';
 
 export const playSound = {
   definition: {
@@ -36,5 +36,7 @@ export const playSound = {
     ) +
     ', ' +
     (isBlockInsideWhenRun(ctx) ? 'true' : 'false') +
-    ');\n',
+    ', "' +
+    ctx.id +
+    '");\n',
 };

@@ -1,0 +1,15 @@
+name 'gen-ai-customizing-retrieval-explore-L9'
+editor_experiment ''
+display_name 'Make Levels'
+description 'Choose 1-2 levels to try and make something of your own!'
+
+sublevels
+level 'gen-ai-customizing-retrieval-explore-L9A'
+level 'gen-ai-customizing-retrieval-explore-L9B'
+level 'gen-ai-customizing-retrieval-explore-L9C'
+level 'gen-ai-customizing-retrieval-explore-L9D'
+level 'gen-ai-customizing-retrieval-explore-L9E'
+
+markdown <<MARKDOWN
+
+MARKDOWN

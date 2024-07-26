@@ -1,10 +1,12 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect, assert} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
-import {UnconnectedSectionProgressToggle} from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
-import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
+import {UnconnectedSectionProgressToggle} from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
+
+import {expect, assert} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('SectionProgressToggle', () => {
   let DEFAULT_PROPS;

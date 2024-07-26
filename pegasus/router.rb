@@ -2,7 +2,6 @@ require_relative 'src/env'
 require 'rack'
 require 'cdo/rack/locale'
 require 'sinatra/base'
-require 'sinatra/verbs'
 require 'cdo/sinatra'
 require 'cdo/geocoder'
 require 'cdo/pegasus/graphics'
@@ -38,7 +37,6 @@ require src_dir 'social_metadata'
 require src_dir 'forms'
 require src_dir 'curriculum_router'
 require src_dir 'homepage'
-require src_dir 'advocacy_site'
 require 'cdo/hamburger'
 
 require pegasus_dir 'helper_modules/multiple_extname_file_utils'
@@ -112,7 +110,7 @@ class Documents < Sinatra::Base
         ['.fetch']
     # Note: shared_resources.rb has additional configuration for Sass::Plugin
     Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
-    ['code.org', 'hourofcode.com', 'advocacy.code.org'].each do |site|
+    ['code.org', 'hourofcode.com'].each do |site|
       Sass::Plugin.add_template_location(
         sites_v3_dir(site, 'public', 'css'),
         sites_v3_dir(site, 'public', 'css', 'generated')
@@ -220,8 +218,10 @@ class Documents < Sinatra::Base
   ['/private', '/private/*'].each do |uri|
     get_head_or_post uri do
       unless rack_env?(:development)
+        # rubocop:disable CustomCops/DashboardDbUsage
         not_authorized! unless dashboard_user_helper
         forbidden! unless dashboard_user_helper.admin?
+        # rubocop:enable CustomCops/DashboardDbUsage
       end
       pass
     end
@@ -319,7 +319,9 @@ class Documents < Sinatra::Base
     # TODO: Switch to using `dashboard_user_helper` everywhere and remove this
     def dashboard_user
       return nil if (id = dashboard_user_id).nil?
+      # rubocop:disable CustomCops/DashboardDbUsage
       @dashboard_user ||= Dashboard.db[:users][id: id]
+      # rubocop:enable CustomCops/DashboardDbUsage
     end
 
     # Get the current dashboard user wrapped in a helper
@@ -328,7 +330,9 @@ class Documents < Sinatra::Base
     # TODO: When we are using this everywhere, rename to just `dashboard_user`
     def dashboard_user_helper
       return nil if (id = dashboard_user_id).nil?
+      # rubocop:disable CustomCops/DashboardDbUsage
       @dashboard_user_helper ||= Dashboard::User.get(id)
+      # rubocop:enable CustomCops/DashboardDbUsage
     end
 
     # Get the current dashboard user ID
@@ -444,7 +448,7 @@ class Documents < Sinatra::Base
       nil
     end
 
-    def resolve_template(subdir, extnames, uri, is_document = false)
+    def resolve_template(subdir, extnames, uri, is_document: false)
       dirs = is_document ? @dirs - [@config[:base_no_documents]] : @dirs
       dirs.each do |dir|
         # Negotiate for a locale specific partial
@@ -510,7 +514,7 @@ class Documents < Sinatra::Base
         File.join(uri, "index")
       ]
       paths.each do |path|
-        template = resolve_template('public', settings.non_static_extnames, path, true)
+        template = resolve_template('public', settings.non_static_extnames, path, is_document: true)
         return template if template
       end
 
@@ -520,7 +524,7 @@ class Documents < Sinatra::Base
       while at != '/'
         parent = File.dirname(at)
 
-        path = resolve_template('public', settings.non_static_extnames, File.join(parent, 'splat'), true)
+        path = resolve_template('public', settings.non_static_extnames, File.join(parent, 'splat'), is_document: true)
         if path
           request.env[:splat_path_info] = uri[parent.length..]
           return path

@@ -1,10 +1,14 @@
-import React, {Component} from 'react';
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
 import $ from 'jquery';
-import i18n from '@cdo/locale';
-import style from './print-certificates.module.scss';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
+import i18n from '@cdo/locale';
+
+import style from './print-certificates.module.scss';
 
 class PrintCertificates extends Component {
   static propTypes = {
@@ -17,6 +21,11 @@ class PrintCertificates extends Component {
   };
 
   onClickPrintCerts = () => {
+    analyticsReporter.sendEvent(
+      EVENTS.SECTION_TABLE_PRINT_CERTIFICATES_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
     $.ajax(`/dashboardapi/sections/${this.props.sectionId}/students`).done(
       result => {
         const names = result.map(student => student.name);

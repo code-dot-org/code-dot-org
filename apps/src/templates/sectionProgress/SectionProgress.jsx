@@ -1,29 +1,34 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import UnitSelector from './UnitSelector';
+import {connect} from 'react-redux';
+
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import logToCloud from '@cdo/apps/logToCloud';
+import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import StandardsView from '@cdo/apps/templates/sectionProgress/standards/StandardsView';
-import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
-import LessonSelector from './LessonSelector';
-import {connect} from 'react-redux';
+import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import i18n from '@cdo/locale';
+
 import {h3Style} from '../../lib/ui/Headings';
+import firehoseClient from '../../lib/util/firehose';
+
+import LessonSelector from './LessonSelector';
+import ProgressViewHeader from './ProgressViewHeader';
+import {ViewType, unitDataPropType} from './sectionProgressConstants';
+import {loadUnitProgress} from './sectionProgressLoader';
 import {
   getCurrentUnitData,
   setLessonOfInterest,
   setCurrentView,
 } from './sectionProgressRedux';
-import {loadScriptProgress} from './sectionProgressLoader';
-import {ViewType, scriptDataPropType} from './sectionProgressConstants';
-import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
-import firehoseClient from '../../lib/util/firehose';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import ProgressViewHeader from './ProgressViewHeader';
-import logToCloud from '@cdo/apps/logToCloud';
-import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
+import UnitSelector from './UnitSelector';
+
 import styleConstants from './progressTables/progress-table-constants.module.scss';
+import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
 const SECTION_PROGRESS = 'SectionProgress';
 
@@ -41,7 +46,7 @@ class SectionProgress extends Component {
     coursesWithProgress: PropTypes.array.isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     setCurrentView: PropTypes.func.isRequired,
-    scriptData: scriptDataPropType,
+    scriptData: unitDataPropType,
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
@@ -58,10 +63,10 @@ class SectionProgress extends Component {
   }
 
   componentDidMount() {
-    loadScriptProgress(this.props.scriptId, this.props.sectionId);
+    loadUnitProgress(this.props.scriptId, this.props.sectionId);
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     if (this.levelDataInitialized() && !this.state.reportedInitialRender) {
       logToCloud.addPageAction(
         logToCloud.PageAction.SectionProgressRenderedWithData,
@@ -72,22 +77,46 @@ class SectionProgress extends Component {
       );
       this.setState({reportedInitialRender: true});
     }
+
+    if (
+      (prevProps.scriptId !== this.props.scriptId ||
+        prevProps.sectionId !== this.props.sectionId ||
+        prevProps.isLoadingProgress !== this.props.isLoadingProgress ||
+        prevProps.isRefreshingProgress !== this.props.isRefreshingProgress) &&
+      !this.props.isLoadingProgress &&
+      !this.props.isRefreshingProgress
+    ) {
+      analyticsReporter.sendEvent(
+        EVENTS.PROGRESS_VIEWED_FIXED,
+        {
+          sectionId: this.props.sectionId,
+          unitId: this.props.scriptId,
+          windowWidth: window.innerWidth,
+          windowHeight: window.innerHeight,
+        },
+        PLATFORMS.BOTH
+      );
+    }
   }
 
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
-    loadScriptProgress(scriptId, this.props.sectionId);
+    loadUnitProgress(scriptId, this.props.sectionId);
 
     this.recordEvent('change_script', {
       old_script_id: this.props.scriptId,
       new_script_id: scriptId,
     });
 
-    analyticsReporter.sendEvent(EVENTS.PROGRESS_CHANGE_UNIT, {
-      sectionId: this.props.sectionId,
-      oldUnitId: this.props.scriptId,
-      unitId: scriptId,
-    });
+    analyticsReporter.sendEvent(
+      EVENTS.PROGRESS_CHANGE_UNIT,
+      {
+        sectionId: this.props.sectionId,
+        oldUnitId: this.props.scriptId,
+        unitId: scriptId,
+      },
+      PLATFORMS.BOTH
+    );
   };
 
   onChangeLevel = lessonOfInterest => {
@@ -147,8 +176,12 @@ class SectionProgress extends Component {
       (currentView === ViewType.SUMMARY || currentView === ViewType.DETAIL);
     const standardsStyle =
       currentView === ViewType.STANDARDS ? styles.show : styles.hide;
+
     return (
-      <div>
+      <div
+        className={dashboardStyles.dashboardPage}
+        data-testid="section-progress-v1"
+      >
         <div style={styles.topRowContainer}>
           <div>
             <div style={{...h3Style, ...styles.heading}}>
@@ -174,12 +207,13 @@ class SectionProgress extends Component {
         </div>
         <div style={styles.topRowContainer}>
           {showProgressTable && (
-            <SortByNameDropdown
-              selectStyles={styles.sortOrderSelect}
-              sectionId={sectionId}
-              unitName={scriptData?.title}
-              source={SECTION_PROGRESS}
-            />
+            <div style={styles.sortOrderSelect}>
+              <SortByNameDropdown
+                sectionId={sectionId}
+                unitName={scriptData?.title}
+                source={SECTION_PROGRESS}
+              />
+            </div>
           )}
           {levelDataInitialized && <ProgressViewHeader />}
         </div>
@@ -206,7 +240,7 @@ class SectionProgress extends Component {
   }
 }
 
-const sortOrderMargin = 22;
+const sortOrderMargin = 15;
 
 const styles = {
   heading: {
@@ -216,6 +250,7 @@ const styles = {
     display: 'flex',
     alignItems: 'flex-end',
     marginBottom: 10,
+    width: '100%',
   },
   chevronLink: {
     display: 'flex',
@@ -240,6 +275,7 @@ const styles = {
   },
   sortOrderSelect: {
     marginRight: sortOrderMargin,
+    marginBottom: 8,
     width: parseInt(styleConstants.STUDENT_LIST_WIDTH) - sortOrderMargin,
   },
 };

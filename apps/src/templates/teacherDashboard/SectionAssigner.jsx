@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import {sectionForDropdownShape} from './shapes';
-import TeacherSectionSelector from './TeacherSectionSelector';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import MultipleAssignButton from '@cdo/apps/templates/MultipleAssignButton';
 import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import i18n from '@cdo/locale';
+
+import {sectionForDropdownShape} from './shapes';
+import TeacherSectionSelector from './TeacherSectionSelector';
 
 class SectionAssigner extends Component {
   static propTypes = {
@@ -113,7 +116,7 @@ const styles = {
   label: {
     width: '100%',
     fontSize: 16,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     paddingTop: 10,
     paddingBottom: 10,
     display: 'flex',
@@ -121,7 +124,7 @@ const styles = {
   },
   confirmText: {
     fontSize: 12,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
   },
 };
 

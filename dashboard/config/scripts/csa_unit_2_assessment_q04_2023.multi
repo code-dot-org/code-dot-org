@@ -55,8 +55,8 @@ public Store(String name, String website)
 
 **Option E**
 ```
-public String name;
-private String website;
+private String name;
+public String website;
 
 private Store(String name, String website)
 {  /* implementation not shown */  }

@@ -768,7 +768,7 @@
     }
   },
   "https://studio.code.org/s/coursee-2023/lessons/7/levels/6": {
-    "short_instructions": "Take the squares from before, but this time only make 7 of them, and lay them out in a row."
+    "short_instructions": "In the previous lesson (Lesson 6: Drawing with Loops) you learned how to code a square. This time, you will make 7 of them, and lay them out in a row.\n\n-   Each square has a side length of 50 pixels.\n-   Each square begins just 50 pixels from where the last one ended."
   },
   "https://studio.code.org/s/coursee-2023/lessons/7/levels/7": {
     "dsls": {
@@ -1289,9 +1289,6 @@
       },
       "draw square": {
         "name": "draw square"
-      },
-      "do something": {
-        "name": "do something"
       },
       "staggered squares": {
         "name": "staggered squares"
@@ -1977,70 +1974,7 @@
       "Course E: Frozen Project_examples_2023": {
         "display_name": "Snowflake Flowers",
         "short_instructions": "You are about to start your final project. Before you begin, spend some time looking at the example projects.",
-        "long_instructions": "You are about to start your final project. Before you begin, spend some time looking at the example projects.",
-        "function_definitions": {
-          "small flower": {
-            "name": "small flower"
-          },
-          "LOGIC FLOWERS2": {
-            "name": "LOGIC FLOWERS2"
-          },
-          "LOGIC FLOWER": {
-            "name": "LOGIC FLOWER"
-          },
-          "LOGIC FLOWERS": {
-            "name": "LOGIC FLOWERS"
-          },
-          "draw a star": {
-            "name": "draw a star",
-            "description": "draw a star with given points and sides of given length",
-            "parameters": {
-              "points": "points",
-              "length": "length"
-            }
-          },
-          "draw a circle": {
-            "name": "draw a circle",
-            "description": "draw a circle of given radius",
-            "parameters": {
-              "radius": "radius"
-            }
-          },
-          "draw a pinwheel": {
-            "name": "draw a pinwheel",
-            "parameters": {
-              "sides": "sides",
-              "length": "length",
-              "repeat": "repeat"
-            }
-          },
-          "draw a triangle": {
-            "name": "draw a triangle",
-            "parameters": {
-              "length": "length"
-            }
-          },
-          "draw a shape": {
-            "name": "draw a shape",
-            "parameters": {
-              "sides": "sides",
-              "length": "length"
-            }
-          },
-          "draw a house": {
-            "name": "draw a house",
-            "parameters": {
-              "length": "length"
-            }
-          },
-          "draw a square": {
-            "name": "draw a square",
-            "parameters": {
-              "length": "length",
-              "sides": "sides"
-            }
-          }
-        }
+        "long_instructions": "You are about to start your final project. Before you begin, spend some time looking at the example projects."
       }
     }
   },

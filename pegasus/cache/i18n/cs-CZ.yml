@@ -243,6 +243,7 @@ cs-CZ:
   class_submission_out_of_school_summer_camp: Letní tábor
   classicmaze_name: Klasické bludiště
   code_hoc_coming: Hodina kód je zde - prosinec 8-14!
+  code_org_logo_alt: Hlavní strana Code.org
   code_sign_up: Přihlaste se k účasti během týdne vzdělávání CS
   codea_beyond_gradelevel: Střední škola a vyšší
   codea_beyond_longdescription: Codea pro iPad umožňuje vytvářet hry a simulace nebo
@@ -1131,7 +1132,9 @@ cs-CZ:
   header_about_us: O nás
   header_course_catalog: Katalog kurzů
   header_courses: Kurzy
+  header_districts: Kraje
   header_documentation: Dokumentace
+  header_donate: Přispějte
   header_educate_beyond: Nad rámec Code.org
   header_educate_community: Online komunita
   header_educate_elementary: Základní škola
@@ -1149,6 +1152,7 @@ cs-CZ:
   header_incubator: Inkubátor
   header_learn: Učit se
   header_legal: Ochrana osobních údajů a právní
+  header_legal_cookie_notice: Oznámení o souborech cookie
   header_legal_privacy: Zásady ochrany osobních údajů
   header_legal_tos: Podmínky
   header_my_dashboard: Můj přehled
@@ -1156,6 +1160,7 @@ cs-CZ:
   header_project_gallery: Projekty
   header_report_abuse: Nahlásit zneužití
   header_report_bug: Nahlásit chybu
+  header_schools: Škola
   header_screen_reader_hamburger: Menu
   header_screen_reader_help: Nabídka Nápověda
   header_sections: Sekce
@@ -1584,6 +1589,7 @@ cs-CZ:
   homepage_slot_text_link_k5: Kurzy pro 1. stupeň ZŠ
   homepage_slot_text_link_local: Najděte si třídu v místě
   homepage_slot_text_link_middle: 2. stupeň ZŠ
+  homepage_slot_text_link_middle_and_high: Druhý stupeň a střední škola
   homepage_slot_text_link_othercourses: Další on-line kurzy
   homepage_slot_text_link_pd: Profesní rozvoj
   homepage_slot_text_link_shop: Trička, čepice a další
@@ -2476,6 +2482,8 @@ cs-CZ:
   user_header_applab: 'App Lab '
   user_header_artist: 'Umělec '
   user_header_create: 'Vytvoř '
+  user_header_create_account: Vytvořit účet
+  user_header_create_account_low_cap: Vytvořit účet
   user_header_dance: Taneční večírek
   user_header_flappy: Flappy
   user_header_gamelab: Game Lab
@@ -2483,6 +2491,8 @@ cs-CZ:
   user_header_logout: Odhlásit se
   user_header_minecraft: Minecraft
   user_header_my_projects: Moje projekty
+  user_header_new_project: Nový projekt
+  user_header_new_project_low_cap: Nový projekt
   user_header_playlab: Play Lab
   user_header_settings: Můj účet
   user_header_signin: Přihlásit se
@@ -2595,29 +2605,14 @@ cs-CZ:
     cílem přinést hodinu informatiky do každé školy. Hodiny kódu se zúčastnili desítky
     milionů studentů z více než 180 zemí. Zapojte se i vy během týdne informatiky
     7.-13. prosince, prosím.
-  volunteer_engineer_submission_intro_guide: Více informací o našem <a href="%{volunteer_guide}">programu
-    dobrovolníků zde</a>.
   volunteer_engineer_submission_intro_guide_markdown: Přečtěte si více o našem [dobrovolnický
     program zde] (%{volunteer_guide}).
-  volunteer_engineer_submission_intro_links: Nehledáte dobrovolníkas? <a href="%{learn_more}">Dozvi
-    se více</a> o organizování tvé Hodiny kódu a nalezení dobrovolníka v místě na
-    naší <a href="%{volunteer_local}">mapě dobrovolníků</a>.
   volunteer_engineer_submission_intro_links_markdown: Jste učitel, který hledá dobrovolníky?
     Najděte místního dobrovolníka na naší [mapě dobrovolníků] (%{volunteer_local}).
-  volunteer_engineer_submission_intro_recruit: 'Tito učitelé by rádi našli někoho
-    <span style="font-family: ''Gotham 7r'', sans-serif;">nadšeného do výuky informatiky</span>,
-    kdo jim může pomoci v učebně, nebo někoho kodo může <span style="font-family:
-    ''Gotham 7r'', sans-serif;">inspirovat</span> jejich studenty přednáškou o šíři
-    možností v informatice (to lze provést přes videokonferenci). Pokud se nechcete
-    přihlásit jako dobrovolník, <a href="%{url}">zjistěte více</a> o možnosti zorganizovat
-    svoji vlastní Hodinu kódu.'
   volunteer_engineer_submission_intro_recruit_markdown: Učitelé by rádi měli někoho,
     kdo by byl vášnivý vzděláváním informatiky, který může pomoci ve třídě, nebo pro
     někoho, kdo může inspirovat své studenty tím, že mluví o šíři možností s informatikou
     (což by mohlo být provedeno prostřednictvím videochatu).
-  volunteer_engineer_submission_intro_signup: Zadejte následující informace, pokud
-    jste počítačové vědy student nebo software profesionál, prosím. Pole označená
-    <span class="form-required-field"> *</span> jsou požadovaná.
   volunteer_engineer_submission_intro_signup_markdown: Pokud jste student počítačové
     vědy nebo odborník na software, zadejte prosím následující informace. Musíte být
     nejméně 18 let, abyste se přihlásil jako dobrovolník. Všimněte si, že všechna

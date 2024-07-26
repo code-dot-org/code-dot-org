@@ -2,11 +2,13 @@
 // each theme will look like
 import PropTypes from 'prop-types';
 import React from 'react';
-import applabMsg from '@cdo/applab/locale';
-import {themeOptionsForSelect, DEFAULT_THEME_INDEX} from '../constants';
 import Select from 'react-select';
-import 'react-select/dist/react-select.css';
+
+import applabMsg from '@cdo/applab/locale';
+
 import FontAwesome from '../../templates/FontAwesome';
+import {themeOptionsForSelect, DEFAULT_THEME_INDEX} from '../constants';
+import 'react-select/dist/react-select.css';
 
 export default class ThemeDropdown extends React.Component {
   static propTypes = {
@@ -37,7 +39,11 @@ export default class ThemeDropdown extends React.Component {
         value: themeOption.option,
         label: (
           <div className="theme-dropdown-label" style={styles.dropdownLabel}>
-            <img style={styles.icon} src={themeOption.icon} />
+            <img
+              style={styles.icon}
+              src={themeOption.icon}
+              alt={applabMsg.iconForTheme({selectedTheme: themeOption.option})}
+            />
             <div style={styles.label}>
               {applabMsg[`designElementTheme_${themeOption.option}`]()}
             </div>

@@ -1,14 +1,14 @@
-- video_curricula_index = 4
+- video_curricula_index = 5
 
-- video_curricula_tags = [hoc_s(:module_grade_6_10), hoc_s(:module_grade_3_12), hoc_s(:module_grade_3_12), hoc_s(:module_grade_k_12)]
+- video_curricula_tags = [hoc_s(:module_grade_6_10), hoc_s(:module_grade_3_12), hoc_s(:module_grade_3_12), hoc_s(:module_grade_3_12), hoc_s(:module_grade_k_12)]
 
-- video_curricula_title = [hoc_s(:curriculum_name_csd), hoc_s(:curriculum_name_artificial_intelligence), hoc_s(:curriculum_name_maker), hoc_s(:hour_of_code)]
+- video_curricula_title = [hoc_s(:curriculum_name_csd), hoc_s(:curriculum_name_artificial_intelligence), hoc_s(:curriculum_name_maker), hoc_s('curricula_pages.game_design.title'), hoc_s(:hour_of_code)]
 
-- video_curricula_desc = [hoc_s(:csf_page_top_desc), hoc_s(:ai_hero_desc), hoc_s(:curriculum_desc_maker), hoc_s(:hoc_homepage_what_is_hoc_subhead)]
+- video_curricula_desc = [hoc_s(:csd_page_top_desc), hoc_s(:ai_hero_desc), hoc_s(:curriculum_desc_maker), hoc_s('curricula_pages.game_design.desc'), hoc_s(:hoc_homepage_what_is_hoc_subhead)]
 
 - video_id = ["cs_discoveries", "ai_intelligence", "courses_maker", "hour_of_code"]
-- video_link = ["/csd", "/ai", "/maker", "/hourofcode"]
-- video_link_title = [:call_to_action_explore_csd, :ai_why_link_01, :call_to_action_explore_maker, :call_to_action_explore_hoc]
+- video_link = ["/csd", "/ai", "/maker", "/curriculum/game-design", "/hourofcode"]
+- video_link_title = [:call_to_action_explore_csd, :ai_why_link_01, :call_to_action_explore_maker, 'curricula_pages.game_design.button', :call_to_action_explore_hoc]
 - video_code = ["uQim0hBHco0", "dWRnCXbUDgA", "sLIJNEIE0Rs"]
 
 - video_curricula_index.times do |index|
@@ -17,6 +17,9 @@
       %figure.video-101__video.col-50
         = view :display_video_thumbnail, id: video_id[index], video_code: video_code[index], play_button: 'center', letterbox: 'false'
     - if index === 3
+      .video-101__image
+        %img{src: "/images/game-design-illustration.png", style: "width: 100%" }
+    - if index === 4
       .video-101__image
         %img{src: "/images/hoc2022-banner.png", style: "width: 100%" }
     .text-wrapper.col-50

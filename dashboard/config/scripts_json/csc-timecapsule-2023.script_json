@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-timecapsule",
-    "serialized_at": "2023-07-25 22:13:52 UTC",
+    "serialized_at": "2024-07-01 20:06:30 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -944,6 +944,7 @@
       "position": 4,
       "properties": {
         "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=“true”></i> **Display**: Show “Level 2 - Bring Your Time Capsule to Life\" slide\n\n**Level 2 - Choice Level**: Level 2 is a choice level in which students will review the skills from lesson 1 to add backgrounds, text effects, sounds, sprites, events and sprite behaviors. Students also have the option to return to Lesson 1 and rewatch any of the videos.\n",
+        "progression_name": "Choice Level: Add Effects",
         "tips": [
           {
             "type": "teachingTip",
@@ -1479,7 +1480,8 @@
       "properties": {
         "level_keys": [
           "csc_timecapsule_choice_lesson_3"
-        ]
+        ],
+        "progression": "Choice Level: Add Effects"
       },
       "bonus": false,
       "seeding_key": {
@@ -2623,6 +2625,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

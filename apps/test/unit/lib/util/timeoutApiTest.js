@@ -1,5 +1,7 @@
-import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
+import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
 import {
   commands,
   executors,
@@ -7,8 +9,8 @@ import {
   injectExecuteCmd,
 } from '@cdo/apps/lib/util/timeoutApi';
 import * as apiTimeoutList from '@cdo/apps/lib/util/timeoutList';
-import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
-import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Timeout API', () => {
   let testErrorHandler, clock;

@@ -1,7 +1,9 @@
-import * as api from './api';
 import _ from 'lodash';
-import color from '../../../util/color';
+
 import {getFirstParam} from '../../../dropletUtils';
+import color from '../../../util/color';
+
+import * as api from './api';
 import {
   N_COLOR_LEDS,
   CP_BUTTON_VARS,
@@ -9,7 +11,6 @@ import {
   SONG_CHARGE,
   SONG_SINGLE_NOTE,
 } from './boards/circuitPlayground/PlaygroundConstants';
-
 import {
   MB_BUTTON_VARS,
   MB_SENSOR_VARS,
@@ -409,13 +410,6 @@ const circuitPlaygroundBlocks = [
     type: 'readonlyproperty',
   },
   {
-    func: 'soundSensor.getAveragedValue',
-    category: CIRCUIT_CATEGORY,
-    params: ['500'],
-    paletteParams: ['ms'],
-    type: 'value',
-  },
-  {
     func: 'soundSensor.setScale',
     category: CIRCUIT_CATEGORY,
     params: ['0', '100'],
@@ -428,13 +422,6 @@ const circuitPlaygroundBlocks = [
     func: 'lightSensor.value',
     category: CIRCUIT_CATEGORY,
     type: 'readonlyproperty',
-  },
-  {
-    func: 'lightSensor.getAveragedValue',
-    category: CIRCUIT_CATEGORY,
-    params: ['500'],
-    paletteParams: ['ms'],
-    type: 'value',
   },
   {
     func: 'lightSensor.setScale',
@@ -566,13 +553,6 @@ const microBitBlocks = [
     func: 'lightSensor.value',
     category: MICROBIT_CATEGORY,
     type: 'readonlyproperty',
-  },
-  {
-    func: 'lightSensor.getAveragedValue',
-    category: MICROBIT_CATEGORY,
-    params: ['500'],
-    paletteParams: ['ms'],
-    type: 'value',
   },
   {
     func: 'lightSensor.setScale',

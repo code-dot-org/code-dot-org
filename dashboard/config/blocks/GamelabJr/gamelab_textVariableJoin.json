@@ -2,13 +2,9 @@
   "category": "World",
   "config": {
     "func": "textVariableJoin",
+    "docFunc": "codestudio_variableName",
     "blockText": "{VAR}{TEXT2}",
     "returnType": "String",
-    "color": [
-      312,
-      0.32,
-      0.62
-    ],
     "style": "variable_blocks",
     "args": [
       {

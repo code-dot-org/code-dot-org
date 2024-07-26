@@ -26,6 +26,17 @@ class ScaryChangeDetector
     @all = @added + @deleted + @modified
   end
 
+  def detect_scary_changes
+    detect_new_models
+    detect_new_table_or_new_column
+    detect_column_rename
+    detect_migration_causing_db_performance_risk
+    detect_missing_yarn_lock
+    detect_special_files
+    detect_dropbox_conflicts
+    detect_changed_feature_files
+  end
+
   private def detect_new_models
     changes = @added.grep(/^dashboard\/app\/models\/levels\//)
     return if changes.empty?
@@ -96,7 +107,7 @@ class ScaryChangeDetector
         Making these types of changes on a large table (>10M rows) needs to be reviewed and
         tested with the Infrastructure team to avoid negatively impacting production database performance.
         The may cause MySQL to rebuild the entire table.
-        For more information see https://dev.mysql.com/doc/refman/5.7/en/innodb-online-ddl-operations.html#online-ddl-column-operations.
+        For more information see https://dev.mysql.com/doc/refman/8.0/en/innodb-online-ddl-operations.html#online-ddl-column-operations-table
 
     EOS
   end
@@ -153,17 +164,6 @@ class ScaryChangeDetector
       EOS
       raise "Commit blocked."
     end
-  end
-
-  def detect_scary_changes
-    detect_new_models
-    detect_new_table_or_new_column
-    detect_column_rename
-    detect_migration_causing_db_performance_risk
-    detect_missing_yarn_lock
-    detect_special_files
-    detect_dropbox_conflicts
-    detect_changed_feature_files
   end
 end
 

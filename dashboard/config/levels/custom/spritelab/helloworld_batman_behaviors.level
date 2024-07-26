@@ -1,5 +1,9 @@
 <GamelabJr>
   <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2021-09-13T20:54:47.000Z",
+  "level_num": "custom",
+  "user_id": 9,
   "properties": {
     "skin": "gamelab",
     "show_debug_watch": "true",
@@ -60,22 +64,15 @@
     "validation_enabled": "true",
     "mini_toolbox": "false",
     "validation_code": "if (!validationProps.successCriteria) {\r\n  validationProps.successCriteria = {\r\n  \tstarterSprite: false,\r\n    changedBehavior: false,\r\n    changedBehaviorEvent: false\r\n  };\r\n}\r\n\r\n// Keep track of sprites' current behaviors\r\nif (!validationProps.previous) {\r\n  validationProps.previous = {\r\n    numSpritesBehaviors: {}\r\n  };\r\n}\r\n\r\n// Helper variables\r\nvar spriteIds = getSpriteIdsInUse();\r\nvar eventLog = getEventLog();\r\n\r\n// Check for a sprite\r\nif (!validationProps.successCriteria.starterSprite) {\r\n  validationProps.successCriteria.starterSprite = spriteIds.length>=1;\r\n}\r\n\r\nif (World.frameCount == 1) {\r\n  for (var i = 0; i < spriteIds.length; i++) {\r\n    var numSpriteBehaviors = getNumBehaviorsForSpriteId(spriteIds[i]);\r\n    if (numSpriteBehaviors >= 1) {\r\n      validationProps.successCriteria.changedBehavior = true;\r\n    }\r\n    validationProps.previous.numSpritesBehaviors[spriteIds[i]] = numSpriteBehaviors;\r\n  }\r\n} else {\r\n  // Check if new event happened\r\n  if ((eventLog.length > validationProps.previous.eventLogLength) &&\r\n      !validationProps.successCriteria.changedBehaviorsEvent) {\r\n    var currentEvent = eventLog[eventLog.length - 1];\r\n    // check eventLog for WhenClick or WhileClick event\r\n    if (currentEvent.includes(\"whenClick: \") || currentEvent.includes(\"whileClick: \")) {\r\n      for (var i = 0; i < spriteIds.length; i++) {\r\n        var numSpriteBehaviors = getNumBehaviorsForSpriteId(spriteIds[i]);\r\n        // check if sprite has changed behaviors since previous frame\r\n        if (numSpriteBehaviors > validationProps.previous.numSpritesBehaviors[spriteIds[i]]) {\r\n          validationProps.successCriteria.changedBehaviorEvent = true;\r\n          break;\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\n// Store previous event log length\r\nvalidationProps.previous.eventLogLength = eventLog.length;\r\n\r\n// Set success time if success\r\nif ((validationProps.successCriteria.starterSprite &&\r\n    validationProps.successCriteria.changedBehavior) ||\r\n    (validationProps.successCriteria.starterSprite &&\r\n    validationProps.successCriteria.changedBehaviorEvent) &&\r\n    !validationProps.successTime)\r\n{\r\n  validationProps.successTime = World.frameCount;\r\n}\r\n\r\nvar earlyFailTime = 10;\r\nvar failTime = 150;\r\n\r\nif (World.frameCount > earlyFailTime) {\r\n  if (!validationProps.successCriteria.starterSprite) {\r\n  \tlevelFailure(3, \"noSprites\");\r\n  }\r\n}\r\n\r\nif (World.frameCount > failTime) {\r\n  if (!validationProps.successTime) {\r\n    // fail\r\n  \tlevelFailure(3, \"noBehavior\");\r\n  } else if (validationProps.successCriteria.changedBehaviorEvent) {\r\n    // bonus pass\r\n    levelFailure(0, \"genericBonusSuccess\");\r\n  } else if (validationProps.successCriteria.changedBehavior) {\r\n    // pass\r\n    levelFailure(0, \"genericSuccess\");\r\n  }\r\n}\r\n\r\npush();\r\nstroke(\"white\");\r\nif (!validationProps.successCriteria.starterSprite) {\r\n  fill(rgb(118,102,160));\r\n  rect(0,390,(World.frameCount*400/earlyFailTime),10);\r\n} else if (!validationProps.successTime) {\r\n  fill(rgb(118,102,160));\r\n  rect(0,390,(World.frameCount*400/failTime),10);\r\n} else {\r\n  fill(rgb(0,173,188));\r\n  rect(0,390,((World.frameCount)*400/failTime),10);\r\n}\r\npop();",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"hello_world_behavior_blocks\",\r\n  \"callout_text\": \"Use this block with one of the behaviors below.\",\r\n  \"element_id\": \".svgFlyoutGroup [block-id=\\\"19\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"hello_world_behavior_blocks\",\"callout_text\":\"Use this block with one of the behaviors below.\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"19\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"19\\\"]\",\"localization_key\":\"hello_world_behavior_blocks\",\"callout_text\":\"Use this block with one of the behaviors below.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "hide_pause_button": "true",
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Let's learn to animate sprites using behaviors. ",
     "instructions_icon": "batman",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"*Note:* To give a sprite a behavior, you need to use a `sprite begins` block with one of the green behavior blocks, such as `spinning right`.\\n\\n<xml><block type=\\\"gamelab_addBehaviorSimple\\\">\\n            <value name=\\\"SPRITE\\\">\\n              <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n                <title name=\\\"ANIMATION\\\">\\\"face_burger_1\\\"</title>\\n              </block>\\n            </value>\\n            <value name=\\\"BEHAVIOR\\\">\\n              <block type=\\\"gamelab_behavior_get\\\">\\n                <mutation></mutation>\\n                <title name=\\\"VAR\\\" id=\\\"spinning right\\\">spinning right</title>\\n              </block>\\n              </value></block></xml>\",\"hint_id\":\"storyboard_behavior_example\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8c3cc5caca0ba69be58ce14d9fd7a983/generic_storyboard_choices_behaviors.mp3\"}]",
-    "preload_asset_list": null,
-    "encrypted_examples": [
-
-    ]
+    "preload_asset_list": null
   },
-  "game_id": 64,
   "published": true,
-  "created_at": "2021-09-13T20:54:47.000Z",
-  "level_num": "custom",
-  "user_id": 9,
   "notes": "",
   "audit_log": "[{\"changed_at\":\"2021-09-13T20:54:47.281+00:00\",\"changed\":[\"cloned from \\\"helloworld_retro_behaviors\\\"\"],\"cloned_from\":\"helloworld_retro_behaviors\"},{\"changed_at\":\"2021-09-13 20:54:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"preload_asset_list\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"},{\"changed_at\":\"2021-09-13 22:50:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":13468,\"changed_by_email\":\"gabrielle.hemlick@code.org\"}]",
   "level_concept_difficulty": {
@@ -205,7 +202,7 @@
         </block>
         <block type="gamelab_addBehaviorSimple">
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation">
+            <block type="gamelab_allSpritesWithAnimation" id="19">
               <title name="ANIMATION">"face_burger_1"</title>
             </block>
           </value>

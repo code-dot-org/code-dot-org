@@ -1,4 +1,5 @@
 const skinBase = require('../skins');
+
 const linePatterns = require('./linePatterns');
 
 exports.load = function (assetUrl, id) {

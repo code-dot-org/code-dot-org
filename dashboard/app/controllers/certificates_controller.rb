@@ -3,8 +3,6 @@ require 'base64'
 class CertificatesController < ApplicationController
   include CertificatesHelper
 
-  before_action :authenticate_user!, only: [:batch]
-
   # GET /certificates/:encoded_params
   # encoded_params includes:
   #   name - student name (optional)
@@ -21,8 +19,17 @@ class CertificatesController < ApplicationController
 
     announcement = Announcements.get_announcement_for_page('/certificates')
 
+    @image_url = certificate_image_url(data['name'], data['course'], data['donor'])
+    course_name = CurriculumHelper.find_matching_unit_or_unit_group(data['course'])&.localized_title || I18n.t('certificates.one_hour_of_code')
+    image_alt = data['name'] ?
+      I18n.t('certificates.alt_text_with_name', course_name: course_name, student_name: data['name']) :
+      I18n.t('certificates.alt_text_no_name', course_name: course_name)
+    # The alt text string is a good page title, so re-using it here.
+    @page_title = I18n.t('certificates.alt_text_no_name', course_name: course_name)
+
     @certificate_data = {
-      imageUrl: certificate_image_url(data['name'], data['course'], data['donor']),
+      imageUrl: @image_url,
+      imageAlt: image_alt,
       printUrl: certificate_print_url(data['name'], data['course'], data['donor']),
       announcement: announcement
     }
@@ -43,7 +50,7 @@ class CertificatesController < ApplicationController
   # GET /certificates/batch
   # POST /certificates/batch
   def batch
-    unless current_user.teacher?
+    if current_user&.student?
       return redirect_to root_path, alert: 'You must be signed in as a teacher to bulk print certificates.'
     end
 

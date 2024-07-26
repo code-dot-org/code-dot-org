@@ -146,6 +146,7 @@ hr-HR:
   class_submission_out_of_school_summer_camp: Ljetni kamp
   classicmaze_name: Klasični labirint
   code_hoc_coming: Sat Kodiranja je ovdje - 8. - 14. prosinca!
+  code_org_logo_alt: Početna stranica Code.org
   code_sign_up: Prijavite se za sudjelovanje u Tjednu poučavanja informatike
   codea_beyond_gradelevel: Srednja škola +
   codea_beyond_longdescription: Codea za iPad vam omogućuje stvaranje igara i simulacija
@@ -653,6 +654,7 @@ hr-HR:
   header_about_us: O nama
   header_course_catalog: Katalog tečajeva
   header_courses: Tečajevi
+  header_donate: Donirajte
   header_educate_hoc: Hour of Code
   header_help_support: 'Pomoć i podrška '
   header_legal_privacy: Politika privatnosti
@@ -1384,9 +1386,6 @@ hr-HR:
     država ili ulica
   volunteer_engineer_submission_field_name: Ime
   volunteer_engineer_submission_field_name_placeholder: Ime i prezime
-  volunteer_engineer_submission_intro_signup: Ako si student računarstva ili iskusni
-    programer, molimo te da uneseš sljedeće informacije. Polja označena s <span class="form-required-field">*</span>
-    su obavezna.
   volunteer_engineer_submission_location_flexibility_curriculum: Spremni doprinijeti
     projektima kurikuluma otvorenog koda
   volunteer_engineer_submission_location_flexibility_onsite: Na licu mjesta u školi

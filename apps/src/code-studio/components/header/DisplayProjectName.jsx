@@ -2,12 +2,15 @@
  * Displays the current project name and a button to begin editing it.
  * This should only be shown when the project name is not being edited.
  */
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import i18n from '@cdo/locale';
+
 import ProjectUpdatedAt from './ProjectUpdatedAt';
+
 import styles from './project-header.module.scss';
-import classNames from 'classnames';
 
 export default class DisplayProjectName extends React.Component {
   static propTypes = {
@@ -18,7 +21,7 @@ export default class DisplayProjectName extends React.Component {
   render() {
     return (
       <div className={styles.buttonWrapper}>
-        <div className="project_name_wrapper header_text" tabIndex={0}>
+        <div className="project_name_wrapper header_text">
           <div className="project_name header_text">
             {this.props.projectName}
           </div>

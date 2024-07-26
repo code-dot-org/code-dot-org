@@ -18,7 +18,7 @@ Verified student access is required to obtain free access to GitHub Copilot. You
 
 ### If you're on a Windows PC
 
-1. Navigate to [**git-scm.com/download/win**](https://git-scm.com/download/win), then click the **Click here to download** link at the top of the page to download the latest version of Git.
+1. Navigate to <a href="https://git-scm.com/download/win" target="_blank">**git-scm.com/download/win**</a>, then click the **Click here to download** link at the top of the page to download the latest version of Git.
 
 2. Double-click the file that is saved to your computer to run the installation. During installation, you'll encounter several setup windows. Here's a brief description of the most relevant ones:
 
@@ -26,7 +26,7 @@ Verified student access is required to obtain free access to GitHub Copilot. You
    
    * **Adjusting your PATH environment:** Choose "Git from the command line and also from 3rd-party software" unless you have a specific reason not to. This option will allow you to use Git from the Command Prompt or PowerShell.
    
-   * **Choosing the SSH executable:** If you're not sure, stick with "Use OpenSSH".
+   * **Choosing the SSH executable:** If you're not sure, stick with "Use bundled OpenSSH".
    
    * **Choosing HTTPS transport backend:** The default option, "Use the OpenSSL library", is usually fine for most users.
    
@@ -40,7 +40,7 @@ Click **Install** and wait for the installation to complete.
 
 ### If you're on a Mac
 
-**Using Homebrew (Recommended**
+**Using Homebrew (Recommended)**
 
 If you don't have Homebrew installed, it's a widely-used package manager for macOS. To install Homebrew:
 

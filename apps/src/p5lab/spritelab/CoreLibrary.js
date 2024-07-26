@@ -1,17 +1,21 @@
-import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
-import commands from './commands/index';
+import * as locationUtils from '@cdo/apps/p5lab/locationUtils';
 import {getStore} from '@cdo/apps/redux';
-import {APP_HEIGHT, APP_WIDTH} from '../constants';
-import {MAX_NUM_SPRITES, SPRITE_WARNING_BUFFER} from './constants';
+import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
+import msg from '@cdo/locale';
+
 import {
   workspaceAlertTypes,
   displayWorkspaceAlert,
 } from '../../code-studio/projectRedux';
-import msg from '@cdo/locale';
+import {APP_HEIGHT, APP_WIDTH} from '../constants';
+import {formatForPlayspace} from '../utils';
+
+import commands from './commands/index';
+import {MAX_NUM_SPRITES, SPRITE_WARNING_BUFFER} from './constants';
 
 export default class CoreLibrary {
-  constructor(p5) {
+  constructor(p5, jsInterpreter) {
     this.p5 = p5;
     this.spriteId = 0;
     this.nativeSpriteMap = {};
@@ -43,6 +47,9 @@ export default class CoreLibrary {
       pass: 90,
       successFrame: 0,
     };
+    this.foregroundEffects = [];
+    this.variableBubbles = [];
+    this.jsInterpreter = jsInterpreter;
 
     this.commands = {
       executeDrawLoopAndCallbacks() {
@@ -50,7 +57,12 @@ export default class CoreLibrary {
         this.runBehaviors();
         this.runEvents();
         this.p5.drawSprites();
+        this.drawVariableBubbles();
         this.drawSpeechBubbles();
+        // Don't show foreground effect in preview
+        if (!this.isPreviewFrame()) {
+          this.foregroundEffects.forEach(effect => effect.func());
+        }
         if (this.screenText.title || this.screenText.subtitle) {
           commands.drawTitle.apply(this);
         }
@@ -105,6 +117,90 @@ export default class CoreLibrary {
         bubbleType
       );
     });
+  }
+
+  /**
+   * Draws bubbles for each variable in the `variableBubbles` array. Labels are truncated with an ellipsis
+   * if they exceed the maximum character limit. Values are truncated as needed to fit the remaining space.
+   *
+   * @param {Object[]} this.variableBubbles - An array of objects, each representing a variable to be displayed. Each object should include:
+   *  - `name`: A string identifier for the variable used to get the value from the JSInterpreter.
+   *  - `label`: A label for the variable to be displayed in the bubble.
+   *  - `location`: An object specifying the `x` and `y` coordinates where the bubble should be drawn.
+   */
+  drawVariableBubbles() {
+    const config = {
+      textSize: 20,
+      padding: 10,
+      strokeWeight: 3,
+      strokeRadius: 24,
+      maxLabelLength: 20, // Maximum number of characters to display in the label
+    };
+
+    // Calculate the width for the label and value separator (colon and space)
+    const separatorWidth = drawUtils.getTextWidth(
+      this.p5,
+      ': ',
+      config.textSize
+    );
+    const totalReservedSpace = config.padding * 2 + separatorWidth;
+
+    this.variableBubbles.forEach(variable => {
+      const {name, label, location} = variable;
+      if (!name.length || !label.length || !location) {
+        return;
+      }
+
+      // Use variable value or empty string (if undefined).
+      const value = this.getVariableValue(name, '');
+
+      // Determine if the label needs truncation and append an ellipsis if so
+      const displayLabel =
+        label.length > config.maxLabelLength
+          ? label.slice(0, config.maxLabelLength) + '…'
+          : label;
+      const labelWidth = drawUtils.getTextWidth(
+        this.p5,
+        displayLabel,
+        config.textSize
+      );
+
+      // Truncate the value if necessary to fit within the available space
+      const availableSpaceForValue =
+        APP_WIDTH - totalReservedSpace - labelWidth;
+      const displayValue = drawUtils.truncateText(
+        this.p5,
+        formatForPlayspace(value),
+        availableSpaceForValue,
+        config.textSize
+      );
+
+      const displayText = `${displayLabel}: ${displayValue}`;
+      drawUtils.variableBubble(
+        this.p5,
+        location.x,
+        location.y,
+        displayText,
+        config
+      );
+    });
+  }
+
+  getVariableValue(variableName, defaultValue) {
+    if (!this.jsInterpreter) {
+      console.error('JS Interpreter not set in CoreLibrary');
+      return;
+    }
+
+    try {
+      // Blockly does not execute code or track the runtime values of variables, so we need to
+      // evaluate the variable's value using the JSInterpreter.
+      const result = this.jsInterpreter.evaluateWatchExpression(variableName);
+      return typeof result === 'undefined' ? defaultValue : result;
+    } catch (e) {
+      console.error(`Error evaluating variable '${variableName}': ${e}`);
+      return '';
+    }
   }
 
   /**
@@ -190,6 +286,41 @@ export default class CoreLibrary {
         horizontalAlign: this.p5.CENTER,
       }
     );
+  }
+
+  addVariableBubble(label, name, locationInput) {
+    const existingBubble = this.variableBubbles.find(
+      bubble => bubble.label === label
+    );
+
+    // We only want the new bubble to overwrite the location of the existing
+    // bubble if the new location is defined
+    const location = locationUtils.resolveLocation(
+      locationInput,
+      existingBubble ? existingBubble.location : undefined
+    );
+
+    // If the variable bubble already exists, update its location
+    // Otherwise, add a new bubble to the array
+    if (existingBubble) {
+      existingBubble.location = location;
+    } else {
+      this.variableBubbles.push({label, name, location});
+    }
+  }
+
+  removeVariableBubble(label) {
+    this.variableBubbles = this.variableBubbles.filter(
+      variable => variable.label !== label
+    );
+  }
+
+  getVariableBubbles() {
+    return this.variableBubbles;
+  }
+
+  getForegroundEffects() {
+    return this.foregroundEffects;
   }
 
   addSpeechBubble(sprite, text, seconds = null, bubbleType = 'say') {
@@ -290,6 +421,18 @@ export default class CoreLibrary {
           sprite => sprite.getAnimationLabel() === spriteArg.costume
         );
       }
+    }
+    if (typeof spriteArg.group === 'string') {
+      // The group property is undefined for sprites unless explicitly set.
+      // We're using '' as a way to signal that we want to return the ones without a group.
+      if (spriteArg.group === '') {
+        return Object.values(this.nativeSpriteMap).filter(
+          sprite => !sprite.group
+        );
+      }
+      return Object.values(this.nativeSpriteMap).filter(
+        sprite => sprite.group === spriteArg.group
+      );
     }
     return [];
   }
@@ -410,13 +553,13 @@ export default class CoreLibrary {
       return;
     }
     let name = opts.name;
-    let location = opts.location || {x: 200, y: 200};
-    if (typeof location === 'function') {
-      location = location();
-    }
+    let location = locationUtils.resolveLocation(opts.location);
     let animation = opts.animation;
 
     const sprite = this.p5.createSprite(location.x, location.y);
+    if (opts.group) {
+      sprite.group = opts.group;
+    }
     this.nativeSpriteMap[this.spriteId] = sprite;
     sprite.id = this.spriteId;
     if (name) {
@@ -435,6 +578,7 @@ export default class CoreLibrary {
       sprite.initialAngle = opts.initialAngle;
     }
 
+    const minimumScale = opts.minimumScale || 100;
     sprite.baseScale = 1;
     sprite.setScale = function (scale) {
       sprite.scale = scale * sprite.baseScale;
@@ -448,7 +592,7 @@ export default class CoreLibrary {
       sprite.baseScale =
         100 /
         Math.max(
-          100,
+          minimumScale,
           sprite.animation.getHeight(),
           sprite.animation.getWidth()
         );
@@ -870,5 +1014,20 @@ export default class CoreLibrary {
 
   runBehaviors() {
     this.behaviors.forEach(behavior => behavior.func({id: behavior.sprite.id}));
+  }
+
+  // polyfill for https://github.com/processing/p5.js/blob/main/src/color/p5.Color.js#L355
+  getP5Color(hex, alpha) {
+    let color = this.p5.color(hex);
+    if (alpha !== undefined) {
+      color._array[3] = alpha / color.maxes[color.mode][3];
+    }
+    const array = color._array;
+    // (loop backwards for performance)
+    const levels = (color.levels = new Array(array.length));
+    for (let i = array.length - 1; i >= 0; --i) {
+      levels[i] = Math.round(array[i] * 255);
+    }
+    return color;
   }
 }

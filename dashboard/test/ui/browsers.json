@@ -26,11 +26,11 @@
   {
     "name": "iPhone",
     "platformName": "iOS",
-    "platformVersion": "15.4",
+    "appium:platformVersion": "16.2",
     "browserName": "safari",
     "appium:deviceName": "iPhone Simulator",
-    "mobile": true,
-    "rotatable": true,
+    "appium:automationName": "XCUITest",
+    "appium:mobile": true,
     "sauce:options": {
       "deviceOrientation": "LANDSCAPE"
     }
@@ -38,11 +38,11 @@
   {
     "name": "iPad",
     "platformName": "iOS",
-    "platformVersion": "14.5",
+    "appium:platformVersion": "14.5",
     "browserName": "safari",
     "appium:deviceName": "iPad Simulator",
-    "mobile": true,
-    "rotatable": true,
+    "appium:mobile": true,
+    "appium:automationName": "XCUITest",
     "sauce:options": {
       "deviceOrientation": "LANDSCAPE"
     }

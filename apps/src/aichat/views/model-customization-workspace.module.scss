@@ -1,0 +1,108 @@
+@import 'color';
+@import '../../mixins.scss';
+@import './aichat-common.module.scss';
+
+%full-width,
+.full-width {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modelCustomizationWorkspace {
+  @extend %panel-section;
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  flex-direction: column;
+  background: $light_white;
+
+  .tabsContainer {
+    background-color: #eaebeb;
+  }
+
+  .tabPanels {
+    padding: 16px 0;
+    flex: 1;
+    overflow: hidden;
+
+    > div {
+      height: 100%;
+    }
+  }
+
+  textarea {
+    @extend %full-width;
+    height: 120px;
+    min-height: 50px;
+    resize: vertical;
+    margin: 0;
+    border-radius: 4px;
+    border-color: $light_black;
+  }
+
+  input {
+    @extend %full-width;
+    height: 30px;
+    border-radius: 4px;
+    border-color: $light_black;
+  }
+}
+
+.horizontalFlexContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.verticalFlexContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.customizationContainer {
+  overflow-y: auto;
+  flex: 1;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footerButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid $light_gray_200;
+  padding: 10px 26px;
+}
+
+.selectedModelDropdown {
+  @extend %full-width;
+  padding-bottom: 10px;
+}
+
+.updateButton {
+  width: 100%;
+  margin: 10px;
+}
+
+.buttonNoMargin {
+  width: 100%;
+  margin: 0;
+}
+
+.compareModelsButton {
+  padding: 5px 16px;
+  margin: 10px 0;
+}
+
+.fieldLabelContainer {
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+}
+
+.fieldLabel {
+  margin: 0;
+}

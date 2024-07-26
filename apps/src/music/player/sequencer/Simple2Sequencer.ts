@@ -1,13 +1,16 @@
-import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+
 import {DEFAULT_CHORD_LENGTH, DEFAULT_PATTERN_LENGTH} from '../../constants';
 import {ChordEvent, ChordEventValue} from '../interfaces/ChordEvent';
 import {Effects, EffectValue} from '../interfaces/Effects';
+import {FunctionEvents} from '../interfaces/FunctionEvents';
 import {PatternEvent, PatternEventValue} from '../interfaces/PatternEvent';
 import {PlaybackEvent} from '../interfaces/PlaybackEvent';
-import {FunctionEvents} from '../interfaces/FunctionEvents';
 import {SkipContext} from '../interfaces/SkipContext';
 import {SoundEvent} from '../interfaces/SoundEvent';
 import MusicLibrary from '../MusicLibrary';
+
 import Sequencer from './Sequencer';
 
 interface SequenceFrame {
@@ -36,7 +39,9 @@ export default class Simple2Sequencer extends Sequencer {
   private startMeasure: number;
   private inTrigger: boolean;
 
-  constructor(private readonly library: MusicLibrary) {
+  constructor(
+    private readonly metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
+  ) {
     super();
     this.sequenceStack = [];
     this.functionStack = [];
@@ -166,7 +171,7 @@ export default class Simple2Sequencer extends Sequencer {
   // Move to the next child of a play_random block.
   nextRandom() {
     if (this.randomStack.length === 0) {
-      Lab2MetricsReporter.logWarning(
+      this.metricsReporter.logWarning(
         'Invalid state; tried to call nextRandom() without active random context'
       );
       return;
@@ -197,9 +202,9 @@ export default class Simple2Sequencer extends Sequencer {
    * Play a sound at the current location.
    */
   playSound(id: string, blockId: string) {
-    const soundData = this.library.getSoundForId(id);
-    if (soundData === null) {
-      Lab2MetricsReporter.logWarning('Could not find sound with ID: ' + id);
+    const soundData = MusicLibrary.getInstance()?.getSoundForId(id);
+    if (!soundData) {
+      this.metricsReporter.logWarning('Could not find sound with ID: ' + id);
       return;
     }
 
@@ -286,7 +291,7 @@ export default class Simple2Sequencer extends Sequencer {
   private addNewEvent<T extends PlaybackEvent>(event: T) {
     const currentFunctionId = this.getCurrentFunctionId();
     if (currentFunctionId === null) {
-      Lab2MetricsReporter.logWarning('Invalid state: no current function ID');
+      this.metricsReporter.logWarning('Invalid state: no current function ID');
       return;
     }
     const currentFunction = this.functionMap[currentFunctionId];

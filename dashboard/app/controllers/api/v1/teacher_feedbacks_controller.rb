@@ -86,7 +86,7 @@ class Api::V1::TeacherFeedbacksController < Api::V1::JSONApiController
       teacher_feedback.level_id,
       teacher_feedback.script_id,
       ActivityConstants::TEACHER_FEEDBACK_KEEP_WORKING,
-      false
+      touch_updated_at: false
     )
   end
 

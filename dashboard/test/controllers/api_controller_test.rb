@@ -10,7 +10,9 @@ class ApiControllerTest < ActionController::TestCase
 
     @teacher_other = create(:teacher)
 
-    @section = create(:section, user: @teacher, login_type: 'word')
+    @section_owner = create(:teacher)
+    @section = create(:section, user: @section_owner, login_type: 'word')
+    create(:section_instructor, instructor: @teacher, section: @section, status: :active)
 
     @script = create(:script, :with_levels, levels_count: 1)
     @script_level = @script.script_levels[0]
@@ -40,45 +42,6 @@ class ApiControllerTest < ActionController::TestCase
 
   setup do
     sign_in @teacher
-  end
-
-  private def create_script_with_bonus_levels
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
-
-    regular_level = create :maze
-    create :script_level, script: script, levels: [regular_level], lesson: lesson
-
-    bonus_level = create :maze
-    create :script_level, script: script, levels: [bonus_level], lesson: lesson, bonus: true
-
-    [script, lesson, regular_level, bonus_level]
-  end
-
-  private def create_script_with_lockable_lesson
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-
-    # Create a LevelGroup level.
-    level = create :level_group, :with_sublevels, name: 'LevelGroupLevel1'
-    level.properties['title'] =  'Long assessment 1'
-    level.properties['submittable'] = true
-    level.save!
-
-    lesson = create :lesson, name: 'Lesson1', script: script, lockable: true, lesson_group: lesson_group
-
-    # Create a ScriptLevel joining this level to the script.
-    create :script_level, script: script, levels: [level], assessment: true, lesson: lesson
-
-    [script, level, lesson]
-  end
-
-  private def make_text_progress_in_script(script, student)
-    level = script.script_levels.map(&:oldest_active_level).find {|l| l.is_a? TextMatch}
-    level_source = create :level_source
-    create :user_level, level: level, user: student, script: script, level_source: level_source
-    # UserLevel.create!(level_id: level.id, user_id: student.id, script_id: script.id, level_source: level_source)
   end
 
   test "example_solutions should return expected example solutions" do
@@ -282,10 +245,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get lock state when no user_level" do
     script, level, lesson = create_script_with_lockable_lesson
 
-    get :lockable_state, params: {
-      section_id: @section.id,
-      script_id: script.id
-    }
+    get :lockable_state, params: {script_id: script.id}
     assert_response :success
     assert_match "no-store", response.headers["Cache-Control"]
     body = JSON.parse(response.body)
@@ -328,7 +288,7 @@ class ApiControllerTest < ActionController::TestCase
 
   # Helper for setting up student lock tests
   def get_student_response(script, level, lesson, student_number)
-    get :lockable_state, params: {section_id: @section.id, script_id: script.id}
+    get :lockable_state, params: {script_id: script.id}
     assert_response :success
     body = JSON.parse(response.body)
 
@@ -1150,7 +1110,7 @@ class ApiControllerTest < ActionController::TestCase
   test "should get progress for section with section script" do
     Unit.stubs(:should_cache?).returns true
 
-    assert_queries 5 do
+    assert_queries 8 do
       get :section_progress, params: {section_id: @flappy_section.id}
     end
     assert_response :success
@@ -1466,7 +1426,8 @@ class ApiControllerTest < ActionController::TestCase
 
     response = JSON.parse(@response.body)
     assert_equal @section.id, response["id"]
-    assert_equal @teacher.name, response["teacherName"]
+    assert_equal @section_owner.name, response["teacherName"]
+    assert_equal @teacher.name, response['sectionInstructors'].last['instructor_name']
     assert_equal 7, response["students"].length
   end
 
@@ -1784,5 +1745,44 @@ class ApiControllerTest < ActionController::TestCase
     assert_nil @response.cookies['CloudFront-Expires']
 
     assert_equal "max-age=3600, private", @response.headers["Cache-Control"]
+  end
+
+  private def create_script_with_bonus_levels
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group
+
+    regular_level = create :maze
+    create :script_level, script: script, levels: [regular_level], lesson: lesson
+
+    bonus_level = create :maze
+    create :script_level, script: script, levels: [bonus_level], lesson: lesson, bonus: true
+
+    [script, lesson, regular_level, bonus_level]
+  end
+
+  private def create_script_with_lockable_lesson
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+
+    # Create a LevelGroup level.
+    level = create :level_group, :with_sublevels, name: 'LevelGroupLevel1'
+    level.properties['title'] =  'Long assessment 1'
+    level.properties['submittable'] = true
+    level.save!
+
+    lesson = create :lesson, name: 'Lesson1', script: script, lockable: true, lesson_group: lesson_group
+
+    # Create a ScriptLevel joining this level to the script.
+    create :script_level, script: script, levels: [level], assessment: true, lesson: lesson
+
+    [script, level, lesson]
+  end
+
+  private def make_text_progress_in_script(script, student)
+    level = script.script_levels.map(&:oldest_active_level).find {|l| l.is_a? TextMatch}
+    level_source = create :level_source
+    create :user_level, level: level, user: student, script: script, level_source: level_source
+    # UserLevel.create!(level_id: level.id, user_id: student.id, script_id: script.id, level_source: level_source)
   end
 end

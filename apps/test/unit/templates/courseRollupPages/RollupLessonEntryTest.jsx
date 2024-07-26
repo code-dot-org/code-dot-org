@@ -1,7 +1,8 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import RollupLessonEntry from '@cdo/apps/templates/courseRollupPages/RollupLessonEntry';
+
 import {courseData} from './rollupTestData';
 
 describe('RollupLessonEntry', () => {
@@ -16,7 +17,7 @@ describe('RollupLessonEntry', () => {
   it('renders one RollupLessonEntry usually', () => {
     const wrapper = shallow(<RollupLessonEntry {...defaultProps} />);
 
-    expect(wrapper.find('RollupLessonEntrySection').length).to.equal(1);
+    expect(wrapper.find('RollupLessonEntrySection').length).toBe(1);
   });
 
   it('renders two RollupLessonEntry sections for resources', () => {
@@ -24,6 +25,6 @@ describe('RollupLessonEntry', () => {
       <RollupLessonEntry {...defaultProps} objectToRollUp={'Resources'} />
     );
 
-    expect(wrapper.find('RollupLessonEntrySection').length).to.equal(2);
+    expect(wrapper.find('RollupLessonEntrySection').length).toBe(2);
   });
 });

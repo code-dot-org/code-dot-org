@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
-import ImageResourceCard from './ImageResourceCard';
-import ContentContainer from '../ContentContainer';
-import i18n from '@cdo/locale';
+
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import i18n from '@cdo/locale';
+
 import styleConstants from '../../styleConstants';
+import ContentContainer from '../ContentContainer';
+
+import ImageResourceCard from './ImageResourceCard';
 
 const contentWidth = styleConstants['content-width'];
 

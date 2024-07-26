@@ -2,18 +2,22 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {getStore} from '@cdo/apps/redux';
-import MigrateToMultiAuth from '@cdo/apps/lib/ui/accounts/MigrateToMultiAuth';
-import LockoutLinkedAccounts from '@cdo/apps/templates/policy_compliance/LockoutLinkedAccounts';
+
 import AddParentEmailController from '@cdo/apps/lib/ui/accounts/AddParentEmailController';
-import RemoveParentEmailController from '@cdo/apps/lib/ui/accounts/RemoveParentEmailController';
-import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
 import AddPasswordController from '@cdo/apps/lib/ui/accounts/AddPasswordController';
+import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
 import ChangeUserTypeController from '@cdo/apps/lib/ui/accounts/ChangeUserTypeController';
-import ManageLinkedAccountsController from '@cdo/apps/lib/ui/accounts/ManageLinkedAccountsController';
 import DeleteAccount from '@cdo/apps/lib/ui/accounts/DeleteAccount';
-import getScriptData from '@cdo/apps/util/getScriptData';
+import LtiRosterSyncSettings from '@cdo/apps/lib/ui/accounts/LtiRosterSyncSettings';
+import ManageLinkedAccountsController from '@cdo/apps/lib/ui/accounts/ManageLinkedAccountsController';
+import MigrateToMultiAuth from '@cdo/apps/lib/ui/accounts/MigrateToMultiAuth';
+import RemoveParentEmailController from '@cdo/apps/lib/ui/accounts/RemoveParentEmailController';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {getStore} from '@cdo/apps/redux';
+import LockoutLinkedAccounts from '@cdo/apps/templates/policy_compliance/LockoutLinkedAccounts';
 import color from '@cdo/apps/util/color';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 // Values loaded from scriptData are always initial values, not the latest
 // (possibly unsaved) user-edited values on the form.
@@ -21,14 +25,15 @@ const scriptData = getScriptData('edit');
 const {
   userAge,
   userType,
+  isAdmin,
   isPasswordRequired,
   authenticationOptions,
   isGoogleClassroomStudent,
   isCleverStudent,
   dependedUponForLogin,
-  dependentStudents,
-  studentCount,
+  dependentStudentsCount,
   personalAccountLinkingEnabled,
+  lmsName,
 } = scriptData;
 
 $(document).ready(() => {
@@ -82,13 +87,29 @@ $(document).ready(() => {
     new AddPasswordController($('#add-password-form'), addPasswordMountPoint);
   }
 
+  const ltiSyncSettingsMountPoint =
+    document.getElementById('lti-sync-settings');
+  if (ltiSyncSettingsMountPoint) {
+    ReactDOM.render(
+      <LtiRosterSyncSettings
+        ltiRosterSyncEnabled={
+          ltiSyncSettingsMountPoint.getAttribute(
+            'data-lti-roster-sync-enabled'
+          ) === 'true'
+        }
+        formId={'lti-sync-settings-form'}
+        lmsName={lmsName}
+      />,
+      ltiSyncSettingsMountPoint
+    );
+  }
+
   const lockoutLinkedAccountsMountPoint = document.getElementById(
     'lockout-linked-accounts'
   );
   if (lockoutLinkedAccountsMountPoint) {
     ReactDOM.render(
       <LockoutLinkedAccounts
-        apiUrl={lockoutLinkedAccountsMountPoint.getAttribute('data-api-url')}
         pendingEmail={lockoutLinkedAccountsMountPoint.getAttribute(
           'data-pending-email'
         )}
@@ -104,6 +125,12 @@ $(document).ready(() => {
         )}
         userEmail={lockoutLinkedAccountsMountPoint.getAttribute(
           'data-user-email'
+        )}
+        inSection={JSON.parse(
+          lockoutLinkedAccountsMountPoint.getAttribute('data-in-section')
+        )}
+        providers={JSON.parse(
+          lockoutLinkedAccountsMountPoint.getAttribute('data-providers')
         )}
       />,
       lockoutLinkedAccountsMountPoint
@@ -131,12 +158,19 @@ $(document).ready(() => {
         isPasswordRequired={isPasswordRequired}
         isTeacher={userType === 'teacher'}
         dependedUponForLogin={dependedUponForLogin}
-        dependentStudents={dependentStudents}
-        hasStudents={studentCount > 0}
+        dependentStudentsCount={dependentStudentsCount}
+        hasStudents={dependentStudentsCount > 0}
+        isAdmin={isAdmin}
       />,
       deleteAccountMountPoint
     );
   }
+
+  analyticsReporter.sendEvent(
+    EVENTS.ACCOUNT_SETTINGS_PAGE_VISITED,
+    {'user type': userType},
+    PLATFORMS.BOTH
+  );
 
   initializeCreatePersonalAccountControls();
 });

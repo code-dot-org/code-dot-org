@@ -20,10 +20,9 @@ module Infrastructure
       unless @enabled
         return
       end
-      metric_name = "#{CLOUD_WATCH_NAMESPACE}/#{metric_name}"
       metric_value = 1 if metric_value.nil?
       dimensions = extra_dimensions.nil? ? extra_dimensions : extra_dimensions.merge(@dimensions)
-      Cdo::Metrics.put(metric_name, metric_value, dimensions)
+      Cdo::Metrics.put(CLOUD_WATCH_NAMESPACE, metric_name, metric_value, dimensions)
     end
 
     def self.flush

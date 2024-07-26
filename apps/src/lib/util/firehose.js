@@ -1,11 +1,14 @@
 /** @file Provides clients to AWS Firehose, whose data is imported into AWS Redshift. */
 
+import logToCloud from '@cdo/apps/logToCloud';
+import {getStore} from '@cdo/apps/redux';
+import currentLocale from '@cdo/apps/util/currentLocale';
 import {
   createUuid,
   trySetLocalStorage,
   tryGetLocalStorage,
 } from '@cdo/apps/utils';
-import {getStore} from '@cdo/apps/redux';
+
 import {
   getEnvironment,
   isDevelopmentEnvironment,
@@ -52,6 +55,11 @@ import {
  */
 
 const deliveryStreamName = 'analysis-events';
+
+// These limits are based on the maximum lengths in the coresponding Redshift
+// data columns. See firehose.rb for matching data validation.
+const maxDataJSONBytes = 65500;
+const maxDataStringBytes = 4095;
 
 // TODO(asher): Add the ability to queue records individually, to be submitted
 // as a batch.
@@ -112,6 +120,8 @@ class FirehoseClient {
   getLocale() {
     if (window.appOptions) {
       return window.appOptions.locale;
+    } else {
+      return currentLocale();
     }
   }
 
@@ -211,6 +221,11 @@ class FirehoseClient {
       return;
     }
 
+    if (validateFirehoseDataSize(data.data)) {
+      // Don't call putRecord if the size will fail the batch
+      return;
+    }
+
     this.firehose.putRecord(
       {
         DeliveryStreamName: deliveryStreamName,
@@ -281,6 +296,20 @@ class FirehoseClient {
   }
 }
 
+// Verifies that given data will not fail firehose batch
+function validateFirehoseDataSize(data) {
+  const json_size = new Blob([data?.data_json]).size;
+  const string_size = new Blob([data?.data_string]).size;
+  if (json_size > maxDataJSONBytes) {
+    logToCloud.logError(`data_json column too large (${json_size} bytes)`);
+    return true;
+  }
+  if (string_size > maxDataStringBytes) {
+    logToCloud.logError(`data_json column too large (${string_size} bytes)`);
+    return true;
+  }
+}
+
 // This code sets up an AWS config against a very restricted user, so this is
 // not a concern, we just don't want to make things super obvious. For more
 // info, contact the infrastructure team.
@@ -301,7 +330,7 @@ function createNewFirehose(AWS, Firehose) {
       '\x71\x42\x2f\x7a\x37\x77\x32\x4f\x64\x4e\x36\x53\x45\x4b\x73\x47\x4f\x4d\x71\x52\x64\x48\x6a\x45\x47\x2f\x50\x2b\x33\x39\x35\x76\x72\x42\x62\x6f\x43\x69\x4b\x35'
     ),
     '\x75\x73\x2d\x65\x61\x73\x74\x2d\x31',
-    '\x63\x6f\x6e\x66\x69\x67'
+    '\x63\x6f\x6e\x66\x69\x67',
   ];
   (function (_0xb54a92, _0x4e682a) {
     var _0x44f3e8 = function (_0x35c55a) {
@@ -319,12 +348,12 @@ function createNewFirehose(AWS, Firehose) {
   AWS[_0xd12e('0x0')] = new AWS['\x43\x6f\x6e\x66\x69\x67']({
     accessKeyId: _0xd12e('0x1'),
     secretAccessKey: _0xd12e('0x2'),
-    region: _0xd12e('0x3')
+    region: _0xd12e('0x3'),
   });
 
   return new Firehose({
     apiVersion: '2015-08-04',
-    correctClockSkew: true
+    correctClockSkew: true,
   });
 }
 /* eslint-enable */
@@ -363,4 +392,4 @@ function putRecordBatch(data, options) {
   );
 }
 
-export default {putRecord, putRecordBatch};
+export default {validateFirehoseDataSize, putRecord, putRecordBatch};

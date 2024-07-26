@@ -13,6 +13,8 @@ module PosteAssertions
     delivery_method = Poste2::DeliveryMethod.new
     delivery_id = delivery_method.deliver! mail
   ensure
+    # rubocop:disable CustomCops/PegasusDbUsage
     POSTE_DB[:poste_deliveries].where(id: delivery_id).delete if delivery_id
+    # rubocop:enable CustomCops/PegasusDbUsage
   end
 end

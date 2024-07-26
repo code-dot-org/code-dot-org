@@ -1,11 +1,17 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import Dialog, {Body} from '@cdo/apps/templates/Dialog';
-import Button from '../../templates/Button';
-import SchoolInfoInterstitial from './SchoolInfoInterstitial';
-import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
 import {getStore} from '../../redux';
+import Button from '../../templates/Button';
+
+import SchoolInfoInterstitial from './SchoolInfoInterstitial';
 
 export const styles = {
   button: {
@@ -17,14 +23,16 @@ export const styles = {
     marginRight: '50%',
   },
   updateButton: {
+    marginTop: 20,
     marginLeft: 5,
   },
   updateButtonRTL: {
+    marginTop: 20,
     marginRight: 5,
   },
   intro: {
     fontSize: 18,
-    fontFamily: "'Gotham 5r', sans-serif",
+    ...fontConstants['main-font-semi-bold'],
     color: color.charcoal,
     paddingRight: 20,
   },
@@ -68,11 +76,21 @@ class SchoolInfoConfirmationDialog extends Component {
   }
 
   closeModal = () => {
+    analyticsReporter.sendEvent(
+      EVENTS.UPDATE_SCHOOL_INFO_DIALOG_CLOSED,
+      {},
+      PLATFORMS.BOTH
+    );
     this.setState({isOpen: false});
     this.props.onClose();
   };
 
   handleClickYes = () => {
+    analyticsReporter.sendEvent(
+      EVENTS.CONFIRM_SCHOOL_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
     const {authTokenName, authTokenValue} = this.props.scriptData;
     const formData = new FormData();
     formData.append(authTokenName, authTokenValue);
@@ -90,10 +108,20 @@ class SchoolInfoConfirmationDialog extends Component {
   };
 
   handleClickUpdate = () => {
+    analyticsReporter.sendEvent(
+      EVENTS.UPDATE_SCHOOL_CLICKED,
+      {},
+      PLATFORMS.BOTH
+    );
     this.setState({showSchoolInterstitial: true});
   };
 
   renderInitialContent = () => {
+    analyticsReporter.sendEvent(
+      EVENTS.UPDATE_SCHOOL_INFO_DIALOG_SHOWN,
+      {},
+      PLATFORMS.BOTH
+    );
     const {schoolName} = this.state;
     const isRTL = getStore().getState()?.isRtl;
     return (
@@ -107,7 +135,6 @@ class SchoolInfoConfirmationDialog extends Component {
           </p>
         </div>
         <Button
-          __useDeprecatedTag
           style={isRTL ? styles.updateButtonRTL : styles.updateButton}
           text={i18n.schoolInfoDialogUpdate()}
           color={Button.ButtonColor.blue}
@@ -115,7 +142,6 @@ class SchoolInfoConfirmationDialog extends Component {
           id="update-button"
         />
         <Button
-          __useDeprecatedTag
           style={isRTL ? styles.buttonRTL : styles.button}
           text={i18n.yes()}
           color={Button.ButtonColor.brandSecondaryDefault}

@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-30T04:42:58.000Z",
   "level_num": "custom",
@@ -32,8 +33,8 @@
     "validation_enabled": "true",
     "text_mode_at_start": "false",
     "hide_view_data_button": "true",
-    "show_debug_watch": "false",
-    "expand_debugger": "false",
+    "show_debug_watch": "true",
+    "expand_debugger": "true",
     "debugger_disabled": "false",
     "show_turtle_before_run": "false",
     "autocomplete_palette_apis_only": "false",
@@ -43,7 +44,6 @@
     "beginner_mode": "false",
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><button id=\"addOneButton\" style=\"padding: 0px; margin: 0px; height: 140px; width: 290px; color: rgb(255, 255, 255); position: absolute; left: 15px; top: 295px; background-color: purple; font-size: 90px;\">+1</button><label style=\"margin: 0px; padding: 2px; line-height: 1; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 290px; height: 100px; position: absolute; top: 95px; left: 15px; text-align: center; font-size: 90px;\" id=\"counter\">0</label></div></div>",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "false",
     "long_instructions": "This program has a scope bug created by accidentally using a **local variable**.\r\n\r\n# Do This\r\n\r\n* Read the yellow warning. Why might you see this when you create a local variable?\r\n* Run this program once. Click the \"+1\" button to see how it works now.\r\n* Remove the `var` command inside the `onEvent()` to remove the local variable.",
     "parent_level_id": 15835,
     "map_reference": "/docs/concepts/patterns/counter-patterns-with-event/",
@@ -59,11 +59,11 @@
     "name_suffix": "_new2023",
     "video_key": "csp_global_vs_local",
     "ai_enabled": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "watchers_prepopulated": "[\"clicks\"]"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-30T04:42:58.919+00:00\",\"changed\":[\"cloned from \\\"U4 L03 Scope Issue2022\\\"\"],\"cloned_from\":\"U4 L03 Scope Issue2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-30T04:42:58.919+00:00\",\"changed\":[\"cloned from \\\"U4 L03 Scope Issue2022\\\"\"],\"cloned_from\":\"U4 L03 Scope Issue2022\"},{\"changed_at\":\"2023-10-11 17:41:13 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"expand_debugger\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2023-10-11 17:41:54 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
