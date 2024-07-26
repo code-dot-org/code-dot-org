@@ -24,7 +24,7 @@ class CourseCard extends Component {
     const {title, description, link, isRtl} = this.props;
 
     return (
-      <a href={link} style={styles.card}>
+      <div style={styles.card}>
         <div style={styles.header} />
         <div style={isRtl ? styles.titleRtl : styles.title}>{title}</div>
         <div style={styles.description}>
@@ -39,7 +39,7 @@ class CourseCard extends Component {
             size="s"
           />
         </div>
-      </a>
+      </div>
     );
   }
 }
