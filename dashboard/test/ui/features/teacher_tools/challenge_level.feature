@@ -3,7 +3,7 @@ Feature: Challenge level shows different dialogs
 Background:
   Given I am on "http://studio.code.org/reset_session"
   Given I am on "http://studio.code.org/s/allthethings/lessons/2/levels/6?noautoplay=true&blocklyVersion=google"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
 
 Scenario: Submit passing and perfect solutions
   Given I wait until element "#uitest-challenge-title" is visible

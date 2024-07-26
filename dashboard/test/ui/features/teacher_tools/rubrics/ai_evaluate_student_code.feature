@@ -15,7 +15,7 @@ Feature: Evaluate student code against rubrics using AI
     And I wait until element "#homepage-container" is visible
     And I add the current user to the "ai-rubrics" single user experiment
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I verify progress in the header of the current page is "not_tried" for level 2
 
     # Student submits code
@@ -35,10 +35,10 @@ Feature: Evaluate student code against rubrics using AI
     And element "#sign_in_or_user" contains text "Teacher_Aiden"
     And I add the current user to the "ai-rubrics" single user experiment
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
     And I click selector ".teacher-panel td:eq(1)" to load a new page
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I click selector ".introjs-skipbutton" if it exists
     Then I verify progress in the header of the current page is "perfect_assessment" for level 2
     And element "#ui-floatingActionButton" is visible
@@ -65,7 +65,7 @@ Feature: Evaluate student code against rubrics using AI
     And I wait until element "#homepage-container" is visible
     And I add the current user to the "ai-rubrics" single user experiment
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I verify progress in the header of the current page is "not_tried" for level 2
 
     # Student runs code
@@ -82,10 +82,10 @@ Feature: Evaluate student code against rubrics using AI
     And element "#sign_in_or_user" contains text "Teacher_Aiden"
     And I add the current user to the "ai-rubrics" single user experiment
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
     And I click selector ".teacher-panel td:eq(1)" to load a new page
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
     And I click selector ".introjs-skipbutton" if it exists
     And I wait until element ".congrats" is gone
@@ -117,7 +117,7 @@ Feature: Evaluate student code against rubrics using AI
     And I wait until element "#homepage-container" is visible
     And I add the current user to the "ai-rubrics" single user experiment
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I verify progress in the header of the current page is "not_tried" for level 2
 
     # Student runs code
@@ -134,10 +134,10 @@ Feature: Evaluate student code against rubrics using AI
     And I get debug info for the current user
     And I add the current user to the "ai-rubrics" single user experiment
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And element ".teacher-panel td:eq(1)" contains text "Aiden"
     And I click selector ".teacher-panel td:eq(1)" to load a new page
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
     And I click selector ".introjs-skipbutton" if it exists
     And I wait until element ".congrats" is gone
