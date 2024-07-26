@@ -1,9 +1,11 @@
 import React, {useState} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import VersionHistoryDropdown from './VersionHistoryDropdown';
 
@@ -22,7 +24,9 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
   const [buttonRect, setButtonRect] = useState<DOMRect>();
   const [offsetParent, setOffsetParent] = useState<DOMRect>();
 
-  const [versionList, setVersionList] = React.useState<ProjectVersion[]>([]);
+  const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
+
+  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const toggleVersionHistory = (
     e: React.MouseEvent<HTMLButtonElement> | React.MouseEvent<HTMLAnchorElement>
   ) => {
@@ -50,6 +54,7 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
         onClick={toggleVersionHistory}
         ariaLabel={commonI18n.versionHistory_header()}
         size={'xs'}
+        disabled={isReadOnly}
       />
       {isVersionHistoryOpen && buttonRect && offsetParent && (
         <div

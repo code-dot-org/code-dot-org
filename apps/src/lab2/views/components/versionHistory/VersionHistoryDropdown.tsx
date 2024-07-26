@@ -1,7 +1,6 @@
 import React from 'react';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
   setProjectSource,
@@ -9,7 +8,7 @@ import {
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './version-history.module.scss';
 
@@ -24,11 +23,9 @@ const VersionHistoryDropdown: React.FunctionComponent<
   VersionHistoryDropdownProps
 > = ({versionList, updatedSourceCallback, startSource, closeDropdown}) => {
   const dispatch = useAppDispatch();
-  const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const restoreVersion = (version: ProjectVersion) => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (projectManager) {
-      // What should we do if we are in read only mode?
       projectManager.load(version.versionId).then(project => {
         if (project?.sources) {
           dispatch(setProjectSource(project.sources));
@@ -45,10 +42,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
 
   const startOver = () => {
     // TODO: confirm
-    const saveFunction = isReadOnly
-      ? setProjectSource
-      : setAndSaveProjectSource;
-    dispatch(saveFunction(startSource));
+    dispatch(setAndSaveProjectSource(startSource));
     if (updatedSourceCallback) {
       updatedSourceCallback(startSource);
     }
