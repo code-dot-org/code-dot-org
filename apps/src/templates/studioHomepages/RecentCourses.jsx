@@ -42,12 +42,6 @@ export default class RecentCourses extends Component {
     const moreCourses = courses.slice(4);
     const hasCourse = courses.length > 0 || !!topCourse;
 
-    const tc = {
-      assignableName: 'CSP 1',
-      lessonName: 'Lesson 1: Intro to CSP',
-      linkToOverview: 'studio.code.org/s/csp1-2021',
-      linkToLesson: 'studio.code.org/s/csp1-2021/lessons/1',
-    }
     return (
       <div id="recent-courses">
         <ContentContainer
