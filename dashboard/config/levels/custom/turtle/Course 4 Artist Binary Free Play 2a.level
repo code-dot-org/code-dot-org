@@ -68,7 +68,7 @@
                     </block>
                   </value>
                   <statement name="DO">
-                    <block type="procedures_callnoreturn" inline="true">
+                    <block type="procedures_callnoreturn">
                       <mutation name="draw">
                         <arg name="binary"/>
                       </mutation>
@@ -97,7 +97,7 @@
                         </block>
                       </value>
                       <statement name="DO">
-                        <block type="procedures_callnoreturn" inline="true">
+                        <block type="procedures_callnoreturn">
                           <mutation name="draw">
                             <arg name="binary"/>
                           </mutation>
@@ -361,7 +361,7 @@
         <block type="math_arithmetic" inline="true">
           <title name="OP">ADD</title>
         </block>
-        <block type="procedures_callnoreturn" inline="true">
+        <block type="procedures_callnoreturn">
           <mutation name="draw">
             <arg name="binary"/>
           </mutation>
