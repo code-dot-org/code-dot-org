@@ -27,6 +27,7 @@ import {javascriptGenerator} from 'blockly/javascript';
 
 import BlockSvgFrame from './addons/blockSvgFrame';
 import BlockSvgLimitIndicator from './addons/blockSvgLimitIndicator';
+import CdoAngleHelper from './addons/cdoAngleHelper';
 import CdoFieldAngleDropdown from './addons/cdoFieldAngleDropdown';
 import CdoFieldAngleTextInput from './addons/cdoFieldAngleTextInput';
 import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
@@ -104,6 +105,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     onMainBlockSpaceCreated: (callback: () => void) => void;
   };
 
+  AngleHelper: typeof CdoAngleHelper;
   FieldAngleDropdown: typeof CdoFieldAngleDropdown;
   FieldAngleTextInput: typeof CdoFieldAngleTextInput;
   FieldBehaviorPicker: typeof CdoFieldBehaviorPicker;

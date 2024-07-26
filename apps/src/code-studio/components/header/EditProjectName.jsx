@@ -6,11 +6,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import ProjectNameFailureDialog from '@cdo/apps/templates/projects/ProjectNameFailureDialog';
 import i18n from '@cdo/locale';
 
 import NameFailureError from '../../NameFailureError';
 import {setNameFailure, unsetNameFailure} from '../../projectRedux';
-import NameFailureDialog from '../NameFailureDialog';
 
 import styles from './project-header.module.scss';
 
@@ -116,7 +116,7 @@ class UnconnectedEditProjectName extends React.Component {
             {i18n.save()}
           </button>
         </form>
-        <NameFailureDialog
+        <ProjectNameFailureDialog
           flaggedText={this.props.projectNameFailure}
           isOpen={!!this.props.projectNameFailure}
           handleClose={this.props.unsetNameFailure}
