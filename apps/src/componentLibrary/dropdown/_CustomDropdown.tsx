@@ -110,6 +110,14 @@ const CustomDropdown: React.FunctionComponent<CustomDropdownProps> = ({
     };
   }, [handleClickOutside]);
 
+  useEffect(() => {
+    if (useDSCOButtonAsTrigger && !triggerButtonProps) {
+      console.warn(
+        'Warning: `triggerButtonProps` must be defined when `useDSCOButtonAsTrigger` is true.'
+      );
+    }
+  }, [useDSCOButtonAsTrigger, triggerButtonProps]);
+
   const toggleDropdown = useCallback(() => {
     if (activeDropdownName !== name) {
       setActiveDropdownName(name);
