@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 

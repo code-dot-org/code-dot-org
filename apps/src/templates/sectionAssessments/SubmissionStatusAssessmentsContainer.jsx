@@ -4,9 +4,8 @@ import React, {Component} from 'react';
 import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
-import i18n from '@cdo/locale';
-
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import i18n from '@cdo/locale';
 
 import {studentOverviewDataPropType} from './assessmentDataShapes';
 import {

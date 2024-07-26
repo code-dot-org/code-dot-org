@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 
 import LessonEditorDialog from './LessonEditorDialog';

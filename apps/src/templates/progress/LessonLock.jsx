@@ -6,9 +6,8 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
 import LessonLockDialog from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDialog';
-import i18n from '@cdo/locale';
-
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import i18n from '@cdo/locale';
 
 const LessonLock = ({unitId, lessonId, isHidden}) => {
   const [dialogOpen, setDialogOpen] = useState(false);
