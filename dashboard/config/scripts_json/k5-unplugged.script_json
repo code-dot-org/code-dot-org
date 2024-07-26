@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "k5-unplugged",
-    "serialized_at": "2024-07-19 16:35:34 UTC",
+    "serialized_at": "2024-07-25 19:42:38 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -5003,6 +5003,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "HappyMaps-Unplugged2022_unplugged"
+        ],
         "progression": "Video: Happy Maps - Unplugged Activity"
       },
       "bonus": false,
@@ -5025,6 +5028,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_happy maps_markdown_unplugged"
+        ],
         "progression": "Happy Maps - Student Resources "
       },
       "bonus": false,
@@ -5047,94 +5053,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Happy Loops - Unplugged Activity"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "course_a_unplugged_happy_loops_markdown_unplugged"
+        "level_keys": [
+          "MoveItMoveIt-Unplugged2022_unplugged"
         ],
-        "lesson.key": "Happy Loops",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "c4b839b9-e754-4042-a100-2dd03c24230d"
-      },
-      "level_keys": [
-        "course_a_unplugged_happy_loops_markdown_unplugged"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Happy Loops - Student Resources"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "unplugged_happy loops_markdown_unplugged"
-        ],
-        "lesson.key": "Happy Loops",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "4cb5fe83-42a8-4c5d-aacd-19c8646bdd43"
-      },
-      "level_keys": [
-        "unplugged_happy loops_markdown_unplugged"
-      ]
-    },
-    {
-      "chapter": 5,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "The Big Event - Unplugged Activity"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "BigEvent-Unplugged2022_unplugged"
-        ],
-        "lesson.key": "The Big Event Jr",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "778a1fda-660b-4b02-b042-1fc08b7aec5d"
-      },
-      "level_keys": [
-        "BigEvent-Unplugged2022_unplugged"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "The Big Event Jr. - Student Resources "
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "unplugged_the big event jr._markdown_unplugged"
-        ],
-        "lesson.key": "The Big Event Jr",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "02df1200-13b6-4a8b-b2ea-aeeba41b11f7"
-      },
-      "level_keys": [
-        "unplugged_the big event jr._markdown_unplugged"
-      ]
-    },
-    {
-      "chapter": 7,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Move It Move it Video  - Unplugged Activity"
       },
       "bonus": false,
@@ -5152,11 +5073,14 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 4,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_move it move it_markdown_unplugged"
+        ],
         "progression": "Move It, Move It - Student Resources"
       },
       "bonus": false,
@@ -5174,99 +5098,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Getting Loopy"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "GettingLoopy-Unplugged2022_unplugged"
+        "level_keys": [
+          "MyRoboticFriends-Unplugged2022_unplugged"
         ],
-        "lesson.key": "Getting Loopy",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "9083551b-cb7e-4591-b26f-e4e94f643847"
-      },
-      "level_keys": [
-        "GettingLoopy-Unplugged2022_unplugged"
-      ]
-    },
-    {
-      "chapter": 10,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Getting Loopy - Student Handout"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "unplugged_getting loopy_markdown_unplugged"
-        ],
-        "lesson.key": "Getting Loopy",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "0a1dc7ff-f81c-4213-9111-210d009db3be"
-      },
-      "level_keys": [
-        "unplugged_getting loopy_markdown_unplugged"
-      ]
-    },
-    {
-      "chapter": 11,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "The Right App - Unplugged Activity"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "TheRightAppMarkdownLevel2022_unplugged"
-        ],
-        "lesson.key": "The Right App",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "5c2ec2f3-2a4b-4edb-a058-c13dc75c3450"
-      },
-      "level_keys": [
-        "TheRightAppMarkdownLevel2022_unplugged"
-      ]
-    },
-    {
-      "chapter": 12,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "The Right App - Student Resource"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "unplugged_the right app_markdown_unplugged"
-        ],
-        "lesson.key": "The Right App",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "15078b51-4375-4f2a-a0c5-ed11b435435f"
-      },
-      "level_keys": [
-        "unplugged_the right app_markdown_unplugged"
-      ]
-    },
-    {
-      "chapter": 13,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "My Robotic Friends - Unplugged Activity"
       },
       "bonus": false,
@@ -5284,11 +5123,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 6,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_my robotic friend_markdown_unplugged"
+        ],
         "progression": "My Robotic Friend - Student Resources"
       },
       "bonus": false,
@@ -5306,11 +5148,164 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "GraphPaperProgramming-Unplugged2022_unplugged"
+        ],
+        "progression": "Graph Paper Programming - Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GraphPaperProgramming-Unplugged2022_unplugged"
+        ],
+        "lesson.key": "Graph Paper Programming",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "9b4448de-a0d8-459e-89d5-8e3548999099"
+      },
+      "level_keys": [
+        "GraphPaperProgramming-Unplugged2022_unplugged"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "unplugged_graph paper programming_markdown_unplugged"
+        ],
+        "progression": "Graph Paper Programming - Student Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_graph paper programming_markdown_unplugged"
+        ],
+        "lesson.key": "Graph Paper Programming",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "45c4e437-cf7e-4194-84c1-5d070c2e078a"
+      },
+      "level_keys": [
+        "unplugged_graph paper programming_markdown_unplugged"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "course_a_unplugged_happy_loops_markdown_unplugged"
+        ],
+        "progression": "Happy Loops - Unplugged Activity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_a_unplugged_happy_loops_markdown_unplugged"
+        ],
+        "lesson.key": "Happy Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "c4b839b9-e754-4042-a100-2dd03c24230d"
+      },
+      "level_keys": [
+        "course_a_unplugged_happy_loops_markdown_unplugged"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "unplugged_happy loops_markdown_unplugged"
+        ],
+        "progression": "Happy Loops - Student Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_happy loops_markdown_unplugged"
+        ],
+        "lesson.key": "Happy Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "4cb5fe83-42a8-4c5d-aacd-19c8646bdd43"
+      },
+      "level_keys": [
+        "unplugged_happy loops_markdown_unplugged"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "GettingLoopy-Unplugged2022_unplugged"
+        ],
+        "progression": "Video: Getting Loopy"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "GettingLoopy-Unplugged2022_unplugged"
+        ],
+        "lesson.key": "Getting Loopy",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "9083551b-cb7e-4591-b26f-e4e94f643847"
+      },
+      "level_keys": [
+        "GettingLoopy-Unplugged2022_unplugged"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "unplugged_getting loopy_markdown_unplugged"
+        ],
+        "progression": "Getting Loopy - Student Handout"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_getting loopy_markdown_unplugged"
+        ],
+        "lesson.key": "Getting Loopy",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "0a1dc7ff-f81c-4213-9111-210d009db3be"
+      },
+      "level_keys": [
+        "unplugged_getting loopy_markdown_unplugged"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "MyLoopyRoboticFriends-Unplugged2022_unplugged"
+        ],
         "progression": "My Loopy Robotic Friends - Unplugged Activity"
       },
       "bonus": false,
@@ -5328,11 +5323,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_my loopy robotic friend_markdown_unplugged"
+        ],
         "progression": "My Loopy Robotic Friend - Student Resources"
       },
       "bonus": false,
@@ -5350,11 +5348,64 @@
       ]
     },
     {
+      "chapter": 15,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "BigEvent-Unplugged2022_unplugged"
+        ],
+        "progression": "The Big Event - Unplugged Activity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BigEvent-Unplugged2022_unplugged"
+        ],
+        "lesson.key": "The Big Event Jr",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "778a1fda-660b-4b02-b042-1fc08b7aec5d"
+      },
+      "level_keys": [
+        "BigEvent-Unplugged2022_unplugged"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "unplugged_the big event jr._markdown_unplugged"
+        ],
+        "progression": "The Big Event Jr. - Student Resources "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_the big event jr._markdown_unplugged"
+        ],
+        "lesson.key": "The Big Event Jr",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "02df1200-13b6-4a8b-b2ea-aeeba41b11f7"
+      },
+      "level_keys": [
+        "unplugged_the big event jr._markdown_unplugged"
+      ]
+    },
+    {
       "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BigEvent-Unplugged2022_unplugged"
+        ],
         "progression": "The Big Event - Unplugged Activity"
       },
       "bonus": false,
@@ -5377,6 +5428,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_the big event_markdown_unplugged"
+        ],
         "progression": "The Big Event - Student Resources"
       },
       "bonus": false,
@@ -5399,292 +5453,59 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Picturing Data"
+        "level_keys": [
+          "TheRightAppMarkdownLevel2022_unplugged"
+        ],
+        "progression": "The Right App - Unplugged Activity"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "courseC_data wizard_unplugged"
+          "TheRightAppMarkdownLevel2022_unplugged"
         ],
-        "lesson.key": "Picturing Data",
-        "lesson_group.key": "lessonGroup-6",
+        "lesson.key": "The Right App",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "k5-unplugged",
-        "activity_section.key": "3910251d-897e-4fc4-b672-2eae758a3c3a"
+        "activity_section.key": "5c2ec2f3-2a4b-4edb-a058-c13dc75c3450"
       },
       "level_keys": [
-        "courseC_data wizard_unplugged"
+        "TheRightAppMarkdownLevel2022_unplugged"
       ]
     },
     {
       "chapter": 20,
-      "position": 1,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Pattern Block Data - Unplugged Activity"
+        "level_keys": [
+          "unplugged_the right app_markdown_unplugged"
+        ],
+        "progression": "The Right App - Student Resource"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "PatternBlock-Unplugged2022_unplugged"
+          "unplugged_the right app_markdown_unplugged"
         ],
-        "lesson.key": "Pattern Block Data",
-        "lesson_group.key": "lessonGroup-6",
+        "lesson.key": "The Right App",
+        "lesson_group.key": "lessonGroup-5",
         "script.name": "k5-unplugged",
-        "activity_section.key": "7b952025-90a5-4d79-9a72-f966c8b97b0c"
+        "activity_section.key": "15078b51-4375-4f2a-a0c5-ed11b435435f"
       },
       "level_keys": [
-        "PatternBlock-Unplugged2022_unplugged"
+        "unplugged_the right app_markdown_unplugged"
       ]
     },
     {
       "chapter": 21,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Pattern Block Data - Resource Reminder"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "unplugged_pattern block data_markdown_unplugged"
-        ],
-        "lesson.key": "Pattern Block Data",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "1a045e8b-bdaf-4cd1-81ed-dcae8d841c4a"
-      },
-      "level_keys": [
-        "unplugged_pattern block data_markdown_unplugged"
-      ]
-    },
-    {
-      "chapter": 22,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Binary Bracelets - Unplugged Activity"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "BinaryBracelets-Unplugged2022_unplugged"
+        "level_keys": [
+          "DesigningForAccessibilityMarkdownLevel2022_unplugged"
         ],
-        "lesson.key": "Binary Bracelets",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "dc0b0423-a4f1-4875-a120-a77c365ad59b"
-      },
-      "level_keys": [
-        "BinaryBracelets-Unplugged2022_unplugged"
-      ]
-    },
-    {
-      "chapter": 23,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Binary Bracelets - Student Resources"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "unplugged_binary bracelets_markdown_unplugged"
-        ],
-        "lesson.key": "Binary Bracelets",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "73b3649a-66c7-43c4-a268-d25372cfd5cb"
-      },
-      "level_keys": [
-        "unplugged_binary bracelets_markdown_unplugged"
-      ]
-    },
-    {
-      "chapter": 24,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Graph Paper Programming - Video"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "GraphPaperProgramming-Unplugged2022_unplugged"
-        ],
-        "lesson.key": "Graph Paper Programming",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "9b4448de-a0d8-459e-89d5-8e3548999099"
-      },
-      "level_keys": [
-        "GraphPaperProgramming-Unplugged2022_unplugged"
-      ]
-    },
-    {
-      "chapter": 25,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Graph Paper Programming - Student Resources"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "unplugged_graph paper programming_markdown_unplugged"
-        ],
-        "lesson.key": "Graph Paper Programming",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "45c4e437-cf7e-4194-84c1-5d070c2e078a"
-      },
-      "level_keys": [
-        "unplugged_graph paper programming_markdown_unplugged"
-      ]
-    },
-    {
-      "chapter": 26,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Unplugged Activity - Hardware and Software Skits"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "HardwareSkits-Unplugged2022_unplugged"
-        ],
-        "lesson.key": "Hardware and Software Skits",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "1c6ce2ba-b83c-43a7-8d77-31923b37b378"
-      },
-      "level_keys": [
-        "HardwareSkits-Unplugged2022_unplugged"
-      ]
-    },
-    {
-      "chapter": 27,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Hardware and Software Skits - Student Reminder"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "unplugged_hardware and software skits_markdown_unplugged"
-        ],
-        "lesson.key": "Hardware and Software Skits",
-        "lesson_group.key": "lessonGroup-7",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "91390532-d26e-4f60-9841-194c485f6a61"
-      },
-      "level_keys": [
-        "unplugged_hardware and software skits_markdown_unplugged"
-      ]
-    },
-    {
-      "chapter": 28,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Conditionals with Cards - Video"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "ConditionalsWithCards-Unplugged2022_unplugged"
-        ],
-        "lesson.key": "Conditionals with Cards",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "d9db9d3e-c885-4a5d-b566-06b4e464d07d"
-      },
-      "level_keys": [
-        "ConditionalsWithCards-Unplugged2022_unplugged"
-      ]
-    },
-    {
-      "chapter": 29,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Conditionals with Cards - Student Resources "
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "unplugged_conditionals with cards_markdown_unplugged"
-        ],
-        "lesson.key": "Conditionals with Cards",
-        "lesson_group.key": "lessonGroup-8",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "f19c6220-3b44-4640-b407-e885edf3deb4"
-      },
-      "level_keys": [
-        "unplugged_conditionals with cards_markdown_unplugged"
-      ]
-    },
-    {
-      "chapter": 30,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Songwriting - Functions Video "
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Songwriting-Unplugged2022_unplugged"
-        ],
-        "lesson.key": "Songwriting",
-        "lesson_group.key": "lessonGroup-9",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "1c66f0ba-6616-4797-b135-5368cc27984c"
-      },
-      "level_keys": [
-        "Songwriting-Unplugged2022_unplugged"
-      ]
-    },
-    {
-      "chapter": 31,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Songwriting - Student Resources"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "unplugged_songwriting_markdown_unplugged"
-        ],
-        "lesson.key": "Songwriting",
-        "lesson_group.key": "lessonGroup-9",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "0749e9e4-e26b-4b4a-b2b4-ea274f1c198e"
-      },
-      "level_keys": [
-        "unplugged_songwriting_markdown_unplugged"
-      ]
-    },
-    {
-      "chapter": 32,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Designing for Accessibility"
       },
       "bonus": false,
@@ -5702,11 +5523,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_designing for accessibility_markdown_unplugged"
+        ],
         "progression": "Designing for Accessibility - Student Discussion"
       },
       "bonus": false,
@@ -5724,11 +5548,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 23,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "DigitalSharing-Unplugged2022_unplugged"
+        ],
         "progression": "Digital Sharing - Video"
       },
       "bonus": false,
@@ -5746,11 +5573,14 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 24,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_digital sharing_markdown_unplugged"
+        ],
         "progression": "Digital Sharing - Discussion Questions"
       },
       "bonus": false,
@@ -5768,55 +5598,139 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 25,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Unplugged Variables in Envelopes"
+        "level_keys": [
+          "courseC_data wizard_unplugged"
+        ],
+        "progression": "Picturing Data"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2_unplugged"
+          "courseC_data wizard_unplugged"
         ],
-        "lesson.key": "Blank Space Stories",
-        "lesson_group.key": "lessonGroup-10",
+        "lesson.key": "Picturing Data",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "k5-unplugged",
-        "activity_section.key": "546686f2-f2a2-4182-830d-58e528c8be79"
+        "activity_section.key": "3910251d-897e-4fc4-b672-2eae758a3c3a"
       },
       "level_keys": [
-        "EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2_unplugged"
+        "courseC_data wizard_unplugged"
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "PatternBlock-Unplugged2022_unplugged"
+        ],
+        "progression": "Pattern Block Data - Unplugged Activity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PatternBlock-Unplugged2022_unplugged"
+        ],
+        "lesson.key": "Pattern Block Data",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "7b952025-90a5-4d79-9a72-f966c8b97b0c"
+      },
+      "level_keys": [
+        "PatternBlock-Unplugged2022_unplugged"
+      ]
+    },
+    {
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Blank Space Stories - Student Resources"
+        "level_keys": [
+          "unplugged_pattern block data_markdown_unplugged"
+        ],
+        "progression": "Pattern Block Data - Resource Reminder"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "unplugged_blank space stories_markdown_unplugged"
+          "unplugged_pattern block data_markdown_unplugged"
         ],
-        "lesson.key": "Blank Space Stories",
-        "lesson_group.key": "lessonGroup-10",
+        "lesson.key": "Pattern Block Data",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "k5-unplugged",
-        "activity_section.key": "fc34ccbd-c441-4caa-9ae2-39aa24fcbb24"
+        "activity_section.key": "1a045e8b-bdaf-4cd1-81ed-dcae8d841c4a"
       },
       "level_keys": [
-        "unplugged_blank space stories_markdown_unplugged"
+        "unplugged_pattern block data_markdown_unplugged"
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BinaryBracelets-Unplugged2022_unplugged"
+        ],
+        "progression": "Binary Bracelets - Unplugged Activity"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "BinaryBracelets-Unplugged2022_unplugged"
+        ],
+        "lesson.key": "Binary Bracelets",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "dc0b0423-a4f1-4875-a120-a77c365ad59b"
+      },
+      "level_keys": [
+        "BinaryBracelets-Unplugged2022_unplugged"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "unplugged_binary bracelets_markdown_unplugged"
+        ],
+        "progression": "Binary Bracelets - Student Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_binary bracelets_markdown_unplugged"
+        ],
+        "lesson.key": "Binary Bracelets",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "73b3649a-66c7-43c4-a268-d25372cfd5cb"
+      },
+      "level_keys": [
+        "unplugged_binary bracelets_markdown_unplugged"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Internet-Unplugged2022_2022_pilot_-2022-2_unplugged"
+        ],
         "progression": "The Internet - Unplugged Activity"
       },
       "bonus": false,
@@ -5834,11 +5748,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_the internet_markdown_unplugged"
+        ],
         "progression": "The Internet - Student Resources"
       },
       "bonus": false,
@@ -5853,6 +5770,206 @@
       },
       "level_keys": [
         "unplugged_the internet_markdown_unplugged"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "HardwareSkits-Unplugged2022_unplugged"
+        ],
+        "progression": "Unplugged Activity - Hardware and Software Skits"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HardwareSkits-Unplugged2022_unplugged"
+        ],
+        "lesson.key": "Hardware and Software Skits",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "1c6ce2ba-b83c-43a7-8d77-31923b37b378"
+      },
+      "level_keys": [
+        "HardwareSkits-Unplugged2022_unplugged"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "unplugged_hardware and software skits_markdown_unplugged"
+        ],
+        "progression": "Hardware and Software Skits - Student Reminder"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_hardware and software skits_markdown_unplugged"
+        ],
+        "lesson.key": "Hardware and Software Skits",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "91390532-d26e-4f60-9841-194c485f6a61"
+      },
+      "level_keys": [
+        "unplugged_hardware and software skits_markdown_unplugged"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "ConditionalsWithCards-Unplugged2022_unplugged"
+        ],
+        "progression": "Conditionals with Cards - Video"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ConditionalsWithCards-Unplugged2022_unplugged"
+        ],
+        "lesson.key": "Conditionals with Cards",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "d9db9d3e-c885-4a5d-b566-06b4e464d07d"
+      },
+      "level_keys": [
+        "ConditionalsWithCards-Unplugged2022_unplugged"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "unplugged_conditionals with cards_markdown_unplugged"
+        ],
+        "progression": "Conditionals with Cards - Student Resources "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_conditionals with cards_markdown_unplugged"
+        ],
+        "lesson.key": "Conditionals with Cards",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "f19c6220-3b44-4640-b407-e885edf3deb4"
+      },
+      "level_keys": [
+        "unplugged_conditionals with cards_markdown_unplugged"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Songwriting-Unplugged2022_unplugged"
+        ],
+        "progression": "Songwriting - Functions Video "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Songwriting-Unplugged2022_unplugged"
+        ],
+        "lesson.key": "Songwriting",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "1c66f0ba-6616-4797-b135-5368cc27984c"
+      },
+      "level_keys": [
+        "Songwriting-Unplugged2022_unplugged"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "unplugged_songwriting_markdown_unplugged"
+        ],
+        "progression": "Songwriting - Student Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_songwriting_markdown_unplugged"
+        ],
+        "lesson.key": "Songwriting",
+        "lesson_group.key": "lessonGroup-9",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "0749e9e4-e26b-4b4a-b2b4-ea274f1c198e"
+      },
+      "level_keys": [
+        "unplugged_songwriting_markdown_unplugged"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2_unplugged"
+        ],
+        "progression": "Video: Unplugged Variables in Envelopes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2_unplugged"
+        ],
+        "lesson.key": "Blank Space Stories",
+        "lesson_group.key": "lessonGroup-10",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "546686f2-f2a2-4182-830d-58e528c8be79"
+      },
+      "level_keys": [
+        "EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2_unplugged"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "unplugged_blank space stories_markdown_unplugged"
+        ],
+        "progression": "Blank Space Stories - Student Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_blank space stories_markdown_unplugged"
+        ],
+        "lesson.key": "Blank Space Stories",
+        "lesson_group.key": "lessonGroup-10",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "fc34ccbd-c441-4caa-9ae2-39aa24fcbb24"
+      },
+      "level_keys": [
+        "unplugged_blank space stories_markdown_unplugged"
       ]
     }
   ],
@@ -5883,54 +6000,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "course_a_unplugged_happy_loops_markdown_unplugged",
-        "script_level.level_keys": [
-          "course_a_unplugged_happy_loops_markdown_unplugged"
-        ],
-        "lesson.key": "Happy Loops",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "c4b839b9-e754-4042-a100-2dd03c24230d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "unplugged_happy loops_markdown_unplugged",
-        "script_level.level_keys": [
-          "unplugged_happy loops_markdown_unplugged"
-        ],
-        "lesson.key": "Happy Loops",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "4cb5fe83-42a8-4c5d-aacd-19c8646bdd43"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "BigEvent-Unplugged2022_unplugged",
-        "script_level.level_keys": [
-          "BigEvent-Unplugged2022_unplugged"
-        ],
-        "lesson.key": "The Big Event Jr",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "778a1fda-660b-4b02-b042-1fc08b7aec5d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "unplugged_the big event jr._markdown_unplugged",
-        "script_level.level_keys": [
-          "unplugged_the big event jr._markdown_unplugged"
-        ],
-        "lesson.key": "The Big Event Jr",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "02df1200-13b6-4a8b-b2ea-aeeba41b11f7"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "MoveItMoveIt-Unplugged2022_unplugged",
         "script_level.level_keys": [
           "MoveItMoveIt-Unplugged2022_unplugged"
@@ -5955,54 +6024,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "GettingLoopy-Unplugged2022_unplugged",
-        "script_level.level_keys": [
-          "GettingLoopy-Unplugged2022_unplugged"
-        ],
-        "lesson.key": "Getting Loopy",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "9083551b-cb7e-4591-b26f-e4e94f643847"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "unplugged_getting loopy_markdown_unplugged",
-        "script_level.level_keys": [
-          "unplugged_getting loopy_markdown_unplugged"
-        ],
-        "lesson.key": "Getting Loopy",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "0a1dc7ff-f81c-4213-9111-210d009db3be"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "TheRightAppMarkdownLevel2022_unplugged",
-        "script_level.level_keys": [
-          "TheRightAppMarkdownLevel2022_unplugged"
-        ],
-        "lesson.key": "The Right App",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "5c2ec2f3-2a4b-4edb-a058-c13dc75c3450"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "unplugged_the right app_markdown_unplugged",
-        "script_level.level_keys": [
-          "unplugged_the right app_markdown_unplugged"
-        ],
-        "lesson.key": "The Right App",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "15078b51-4375-4f2a-a0c5-ed11b435435f"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "MyRoboticFriends-Unplugged2022_unplugged",
         "script_level.level_keys": [
           "MyRoboticFriends-Unplugged2022_unplugged"
@@ -6023,6 +6044,78 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "k5-unplugged",
         "activity_section.key": "59c4fb89-9f95-466d-84a6-c4b4052a261f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GraphPaperProgramming-Unplugged2022_unplugged",
+        "script_level.level_keys": [
+          "GraphPaperProgramming-Unplugged2022_unplugged"
+        ],
+        "lesson.key": "Graph Paper Programming",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "9b4448de-a0d8-459e-89d5-8e3548999099"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unplugged_graph paper programming_markdown_unplugged",
+        "script_level.level_keys": [
+          "unplugged_graph paper programming_markdown_unplugged"
+        ],
+        "lesson.key": "Graph Paper Programming",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "45c4e437-cf7e-4194-84c1-5d070c2e078a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_a_unplugged_happy_loops_markdown_unplugged",
+        "script_level.level_keys": [
+          "course_a_unplugged_happy_loops_markdown_unplugged"
+        ],
+        "lesson.key": "Happy Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "c4b839b9-e754-4042-a100-2dd03c24230d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unplugged_happy loops_markdown_unplugged",
+        "script_level.level_keys": [
+          "unplugged_happy loops_markdown_unplugged"
+        ],
+        "lesson.key": "Happy Loops",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "4cb5fe83-42a8-4c5d-aacd-19c8646bdd43"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "GettingLoopy-Unplugged2022_unplugged",
+        "script_level.level_keys": [
+          "GettingLoopy-Unplugged2022_unplugged"
+        ],
+        "lesson.key": "Getting Loopy",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "9083551b-cb7e-4591-b26f-e4e94f643847"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unplugged_getting loopy_markdown_unplugged",
+        "script_level.level_keys": [
+          "unplugged_getting loopy_markdown_unplugged"
+        ],
+        "lesson.key": "Getting Loopy",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "0a1dc7ff-f81c-4213-9111-210d009db3be"
       }
     },
     {
@@ -6055,6 +6148,30 @@
         "script_level.level_keys": [
           "BigEvent-Unplugged2022_unplugged"
         ],
+        "lesson.key": "The Big Event Jr",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "778a1fda-660b-4b02-b042-1fc08b7aec5d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unplugged_the big event jr._markdown_unplugged",
+        "script_level.level_keys": [
+          "unplugged_the big event jr._markdown_unplugged"
+        ],
+        "lesson.key": "The Big Event Jr",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "02df1200-13b6-4a8b-b2ea-aeeba41b11f7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "BigEvent-Unplugged2022_unplugged",
+        "script_level.level_keys": [
+          "BigEvent-Unplugged2022_unplugged"
+        ],
         "lesson.key": "The Big Event",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "k5-unplugged",
@@ -6071,6 +6188,78 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "k5-unplugged",
         "activity_section.key": "0421dc49-24e5-4c3f-9daf-74546372deb1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "TheRightAppMarkdownLevel2022_unplugged",
+        "script_level.level_keys": [
+          "TheRightAppMarkdownLevel2022_unplugged"
+        ],
+        "lesson.key": "The Right App",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "5c2ec2f3-2a4b-4edb-a058-c13dc75c3450"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unplugged_the right app_markdown_unplugged",
+        "script_level.level_keys": [
+          "unplugged_the right app_markdown_unplugged"
+        ],
+        "lesson.key": "The Right App",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "15078b51-4375-4f2a-a0c5-ed11b435435f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "DesigningForAccessibilityMarkdownLevel2022_unplugged",
+        "script_level.level_keys": [
+          "DesigningForAccessibilityMarkdownLevel2022_unplugged"
+        ],
+        "lesson.key": "Designing for Accessibility",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "48954930-a257-485c-92ae-9533100f470f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unplugged_designing for accessibility_markdown_unplugged",
+        "script_level.level_keys": [
+          "unplugged_designing for accessibility_markdown_unplugged"
+        ],
+        "lesson.key": "Designing for Accessibility",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "e8942c0a-fed2-4729-9ed6-d1fc3dc694c0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "DigitalSharing-Unplugged2022_unplugged",
+        "script_level.level_keys": [
+          "DigitalSharing-Unplugged2022_unplugged"
+        ],
+        "lesson.key": "Digital Sharing",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "699c3656-164e-4ed0-ac06-f8e87c1c13c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unplugged_digital sharing_markdown_unplugged",
+        "script_level.level_keys": [
+          "unplugged_digital sharing_markdown_unplugged"
+        ],
+        "lesson.key": "Digital Sharing",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "k5-unplugged",
+        "activity_section.key": "55e8c6f3-ac13-4a3d-8237-b94222e2ca33"
       }
     },
     {
@@ -6135,26 +6324,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "GraphPaperProgramming-Unplugged2022_unplugged",
+        "level.key": "Internet-Unplugged2022_2022_pilot_-2022-2_unplugged",
         "script_level.level_keys": [
-          "GraphPaperProgramming-Unplugged2022_unplugged"
+          "Internet-Unplugged2022_2022_pilot_-2022-2_unplugged"
         ],
-        "lesson.key": "Graph Paper Programming",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson.key": "The Internet",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "k5-unplugged",
-        "activity_section.key": "9b4448de-a0d8-459e-89d5-8e3548999099"
+        "activity_section.key": "34231f5a-7c97-416f-944e-31862988b798"
       }
     },
     {
       "seeding_key": {
-        "level.key": "unplugged_graph paper programming_markdown_unplugged",
+        "level.key": "unplugged_the internet_markdown_unplugged",
         "script_level.level_keys": [
-          "unplugged_graph paper programming_markdown_unplugged"
+          "unplugged_the internet_markdown_unplugged"
         ],
-        "lesson.key": "Graph Paper Programming",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson.key": "The Internet",
+        "lesson_group.key": "lessonGroup-6",
         "script.name": "k5-unplugged",
-        "activity_section.key": "45c4e437-cf7e-4194-84c1-5d070c2e078a"
+        "activity_section.key": "b5923773-82e5-4713-a610-81db9bce7201"
       }
     },
     {
@@ -6231,54 +6420,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "DesigningForAccessibilityMarkdownLevel2022_unplugged",
-        "script_level.level_keys": [
-          "DesigningForAccessibilityMarkdownLevel2022_unplugged"
-        ],
-        "lesson.key": "Designing for Accessibility",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "48954930-a257-485c-92ae-9533100f470f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "unplugged_designing for accessibility_markdown_unplugged",
-        "script_level.level_keys": [
-          "unplugged_designing for accessibility_markdown_unplugged"
-        ],
-        "lesson.key": "Designing for Accessibility",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "e8942c0a-fed2-4729-9ed6-d1fc3dc694c0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "DigitalSharing-Unplugged2022_unplugged",
-        "script_level.level_keys": [
-          "DigitalSharing-Unplugged2022_unplugged"
-        ],
-        "lesson.key": "Digital Sharing",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "699c3656-164e-4ed0-ac06-f8e87c1c13c8"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "unplugged_digital sharing_markdown_unplugged",
-        "script_level.level_keys": [
-          "unplugged_digital sharing_markdown_unplugged"
-        ],
-        "lesson.key": "Digital Sharing",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "55e8c6f3-ac13-4a3d-8237-b94222e2ca33"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2_unplugged",
         "script_level.level_keys": [
           "EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2_unplugged"
@@ -6299,30 +6440,6 @@
         "lesson_group.key": "lessonGroup-10",
         "script.name": "k5-unplugged",
         "activity_section.key": "fc34ccbd-c441-4caa-9ae2-39aa24fcbb24"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Internet-Unplugged2022_2022_pilot_-2022-2_unplugged",
-        "script_level.level_keys": [
-          "Internet-Unplugged2022_2022_pilot_-2022-2_unplugged"
-        ],
-        "lesson.key": "The Internet",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "34231f5a-7c97-416f-944e-31862988b798"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "unplugged_the internet_markdown_unplugged",
-        "script_level.level_keys": [
-          "unplugged_the internet_markdown_unplugged"
-        ],
-        "lesson.key": "The Internet",
-        "lesson_group.key": "lessonGroup-6",
-        "script.name": "k5-unplugged",
-        "activity_section.key": "b5923773-82e5-4713-a610-81db9bce7201"
       }
     }
   ],
@@ -6897,11 +7014,11 @@
     },
     {
       "name": "Graph Paper Programming",
-      "url": "https://docs.google.com/presentation/d/1nBPAUS9ojdR8U22bik6etgmxPGVaWQ-hdNI_oE6HRyY/template/preview",
+      "url": "https://docs.google.com/presentation/d/1H7v_NK-5uhFHw17ThrbXJ4nOnxLffW4Y8zvN_JWNavQ/template/preview",
       "key": "graph_paper_programming_6",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1nBPAUS9ojdR8U22bik6etgmxPGVaWQ-hdNI_oE6HRyY/export/pdf",
+        "download_url": "https://docs.google.com/presentation/d/1H7v_NK-5uhFHw17ThrbXJ4nOnxLffW4Y8zvN_JWNavQ/export/pdf",
         "type": "Slides"
       },
       "seeding_key": {
