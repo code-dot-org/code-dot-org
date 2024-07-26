@@ -5,6 +5,7 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
 import styles from './uploadImage.module.scss';
 import classnames from 'classnames';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 
 export default function UploadImageForm() {
   const [imgUrls, setImgUrls] = useState([]);
@@ -26,12 +27,10 @@ export default function UploadImageForm() {
     }
 
     // assemble upload data
-    //const formData = new FormData();
     let tempImageFileList = [];
     let tempImageUrlList = [];
     for (let i = 0; i < e.target.files.length; i++) {
       tempImageFileList.push(e.target.files[i]);
-      //formData.append('file', e.target.files[i]);
       tempImageUrlList.push(URL.createObjectURL(e.target.files[i]));
     }
     setListOfImageFiles(tempImageFileList);
@@ -74,6 +73,16 @@ export default function UploadImageForm() {
       setError(result);
     }
     setIsUploading(false);
+  };
+
+  const handleCopy = text => {
+    copyToClipboard(
+      text,
+      () => alert('Text copied to clipboard'),
+      () => {
+        console.error('Error in copying text');
+      }
+    );
   };
 
   return (
@@ -131,6 +140,14 @@ export default function UploadImageForm() {
                   <strong>{i18n.imageURL()}</strong>
                   {url}
                 </div>
+                <Button
+                  color={Button.ButtonColor.white}
+                  icon={'clipboard'}
+                  key="copy"
+                  onClick={() => handleCopy(url)}
+                  size={Button.ButtonSize.small}
+                  text="Copy Image URL"
+                />
               </div>
             ))}
           </div>
