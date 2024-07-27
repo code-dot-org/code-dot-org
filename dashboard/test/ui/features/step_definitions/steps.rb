@@ -962,11 +962,6 @@ Then /^I wait for the video thumbnails to load$/ do
   wait.until {@browser.execute_script("return Array.from(document.querySelectorAll('img.thumbnail-image')).filter((img) => !img.complete).length == 0;")}
 end
 
-Then /^I wait for the document to load $/ do
-  wait = Selenium::WebDriver::Wait.new(timeout: DEFAULT_WAIT_TIMEOUT)
-  wait.until {@browser.execute_script("return document.readyState == 'complete';")}
-end
-
 Then /^I see jquery selector (.*)$/ do |selector|
   exists = @browser.execute_script("return $(\"#{selector}\").length != 0;")
   expect(exists).to eq(true)
