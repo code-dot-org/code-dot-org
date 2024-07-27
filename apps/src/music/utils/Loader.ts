@@ -49,8 +49,10 @@ export const loadLibrary = async (
     // To do: wrap this (getting translations, localizing library)
     //   in an experiment so we can ship it without any user-facing impact?
     //   Or can just wait to merge it until we have real translations.
-    // Currently have fake translations for 'uk_ua' (Ukranian) and 'ar_sa' (Arabic)
-    const translations = await loadTranslations(libraryFilename, 'uk_ua');
+    // Currently have fake translations for 'uk_ua' (Ukranian), 'ar_sa' (Arabic), and 'fr_fr' (French).
+    // I recommend using French for testing because the translations look like their English counterparts,
+    // so easier to hand test that things look good.
+    const translations = await loadTranslations(libraryFilename, 'fr_fr');
 
     const libraryJsonLocalized = localizeLibrary(
       libraryJsonResponse.value,
