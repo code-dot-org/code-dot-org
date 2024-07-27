@@ -2,6 +2,8 @@
 Feature: Using the teacher dashboard
 
   Scenario: Visiting student name URLs in teacher dashboard
+    Given I am on "http://studio.code.org"
+    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
     And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
 
