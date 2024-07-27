@@ -386,6 +386,8 @@ end
 
 And /^I navigate to the V2 progress dashboard for "([^"]+)"$/ do |section_name|
   steps <<-GHERKIN
+    Given I am on "http://studio.code.org"
+    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     When I click selector "a:contains(#{section_name})" once I see it to load a new page
     And I wait until element "#uitest-teacher-dashboard-nav" is visible
     And check that the URL contains "/teacher_dashboard/sections/"
