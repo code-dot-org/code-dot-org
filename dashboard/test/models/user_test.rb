@@ -5467,7 +5467,7 @@ class UserTest < ActiveSupport::TestCase
       end
     end
 
-    it 'assigns "cap_state_date" with data from "child_account_compliance_state"' do
+    it 'assigns "cap_state_date" with data from "child_account_compliance_state_last_updated"' do
       expected_cap_state_date = Time.now.change(usec: 0)
 
       assert_changes -> {user.reload.cap_state_date}, from: nil, to: expected_cap_state_date do
