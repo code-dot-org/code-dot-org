@@ -24,6 +24,8 @@ Feature: Using the teacher dashboard
     And check that the URL contains "viewAs=Instructor"
 
   Scenario: Viewing a student
+    Given I am on "http://studio.code.org"
+    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to unit "allthethings"
     And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
@@ -32,8 +34,6 @@ Feature: Using the teacher dashboard
 
     # Progress tab
     When I sign in as "Teacher_Sally" and go home
-    Given I am on "http://studio.code.org"
-    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     And I get levelbuilder access
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
