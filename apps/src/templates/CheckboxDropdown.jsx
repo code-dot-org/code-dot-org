@@ -4,7 +4,7 @@ import React, {useCallback} from 'react';
 
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 import Typography from '@cdo/apps/componentLibrary/typography';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
 import FontAwesome from './FontAwesome';

@@ -45,7 +45,6 @@ Scenario: Multi level 1
   And I wait until element "#summary-container" is visible
   And I wait to see ".uitest-sectionselect"
   Then I see no difference for "multi level summary 1"
-  And I dismiss the teacher panel
   Then I click selector "span:contains(Show answer)"
   And I see no difference for "multi level summary 1 show answer"
   And I close my eyes
@@ -60,7 +59,6 @@ Scenario: Multi level 2
   And I wait until element "#summary-container" is visible
   And I wait to see ".uitest-sectionselect"
   Then I see no difference for "multi level summary 2"
-  And I dismiss the teacher panel
   Then I click selector "span:contains(Show answer)"
   And I see no difference for "multi level summary 2 show answer"
   And I close my eyes

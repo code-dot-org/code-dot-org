@@ -2,7 +2,7 @@
 Feature: Droplet levels work as expected
   Background:
     Given I am on "http://studio.code.org/s/allthethings/lessons/18/levels/5?noautoplay=true"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
 
   Scenario: Open editcode level and write some autocompleted, tooltipped code
     When I ensure droplet is in text mode

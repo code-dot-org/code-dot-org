@@ -7,6 +7,8 @@ import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/Font
 import DCDO from '@cdo/apps/dcdo';
 import i18n from '@cdo/locale';
 
+import unpinIcon from './images/solid-thumbtack-slash.svg';
+
 import styles from './summary.module.scss';
 
 const ResponseMenuDropdown = ({
@@ -32,7 +34,9 @@ const ResponseMenuDropdown = ({
             unpinResponse(response.user_id);
           }}
         >
-          <FontAwesomeV6Icon iconName="thumbtack" />
+          <i className={styles.unpinIcon}>
+            <img src={unpinIcon} alt="" />
+          </i>
           {i18n.unpinResponse()}
         </button>
       );

@@ -15,6 +15,10 @@ const JS_DATA = {
     id: 0,
   },
   responses: [{user_id: 0, text: 'student answer'}],
+  reportingData: {
+    curriculumUmbrella: 'curriculum',
+    unitId: 0,
+  },
 };
 
 const INITIAL_STATE = {

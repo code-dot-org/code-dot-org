@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import Button from '@cdo/apps/templates/Button';
 import color from '@cdo/apps/util/color';
 
 export default function ImageInput({
