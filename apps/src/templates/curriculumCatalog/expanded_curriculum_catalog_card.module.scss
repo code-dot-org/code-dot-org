@@ -35,12 +35,12 @@ $container-width: 960px;
   column-gap: 48px;
 }
 
-.closeButton {
+.closeButtonContainer {
   display: flex;
   justify-content: end;
   line-height: normal;
 
-  button {
+  button.closeButton {
     background: none;
     border: none;
     padding: 0;
@@ -188,7 +188,10 @@ p.subjectsText {
     width: 100%;
     text-wrap: wrap;
     margin-top: 8px;
-    color: $brand_secondary_default
+    color: $brand_secondary_default;
+    text-decoration: none !important;
+    font-size: 12px;
+    text-align: center;
   }
 
   .relatedCurriculaLink:hover {

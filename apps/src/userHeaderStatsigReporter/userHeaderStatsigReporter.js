@@ -1,15 +1,5 @@
 import statsigReporter from '../lib/util/StatsigReporter';
 
-const isInCreateAccountButtonExperiment = statsigReporter.getIsInExperiment(
-  'create_account_button',
-  'showCreateAccountButton',
-  false
-);
-
-export function showCreateAccountButton() {
-  return isInCreateAccountButtonExperiment;
-}
-
 document.addEventListener('DOMContentLoaded', function () {
   const createAccountButton = document.querySelector('#create_account_button');
   const createAccountButtonDesktop = document.querySelector(
@@ -18,6 +8,16 @@ document.addEventListener('DOMContentLoaded', function () {
   const signInButtonDesktop = document.querySelector('#signin_button.desktop');
   const hamburgerButtons = document.querySelector('#hamburger-sign-up-buttons');
   const signUpPage = window.location.pathname.includes('/users/sign_up');
+
+  const isInCreateAccountButtonExperiment = statsigReporter.getIsInExperiment(
+    'create_account_button_2',
+    'showCreateAccountButton',
+    false
+  );
+
+  function showCreateAccountButton() {
+    return isInCreateAccountButtonExperiment;
+  }
 
   // This function is only called for the Create Account A/B Test experiment
   function handleWindowResize() {

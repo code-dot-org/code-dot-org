@@ -39,7 +39,12 @@ export const PopUpButton = ({
       setIsOpen(oldIsOpen => {
         const newIsOpen = !oldIsOpen;
         if (newIsOpen) {
-          document.addEventListener('click', setIsOpenFalse);
+          // React 17 changed the location where clickhandlers are added, so we want to defer adding the close
+          // handler until the next tick of the event loop, otherwise it'll fire immediately and re-close the pop up.'
+          setTimeout(
+            () => document.addEventListener('click', setIsOpenFalse),
+            0
+          );
         } else {
           document.removeEventListener('click', setIsOpenFalse);
         }

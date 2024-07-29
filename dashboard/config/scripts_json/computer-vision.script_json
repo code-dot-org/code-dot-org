@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "computer-vision",
-    "serialized_at": "2024-07-12 14:30:14 UTC",
+    "serialized_at": "2024-07-26 02:08:22 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

@@ -1,44 +1,6 @@
 - content_for(:head) do
   = stylesheet_link_tag 'css/pd', media: 'all'
+  %script{src: webpack_asset_path('js/pd/workshop_enrollment/logged_out.js'), data: @script_data}
 
-:css
-  /* Make the X in regional partner mini-contact form's header look correct. */
-  div.modal-content .modal-header .close {
-    height: 34px
-  }
-
-%h1
-  Start your enrollment
-
-.teacher-application-logged-out
-  .paragraph
-    To get started, you need to be logged into a Code.org account.
-
-  .paragraph
-    If you’d like more information about the program before you start your enrollment, please check out the
-    = link_to("Professional Learning Program overview", CDO.code_org_url('/educate/professional-learning'), target: "_blank")
-    or
-    = succeed "." do
-      #regional-partner-mini-contact-popup-link-container{"data-source-page-id" => "workshop-enrollment-logged-out", "data-options" => {notes: "Please tell me more about the professional learning program!"}, "data-link-text" => "contact your local regional partner"}
-
-  .paragraph
-    Please sign in or create an account:
-
-  #signin
-    = link_to "/users/sign_in?user_return_to=#{request.fullpath}", class: "paragraph" do
-      %button= I18n.t('nav.user.signin')
-
-    = link_to "/users/sign_up?user[user_type]=teacher&user_return_to=#{request.fullpath}" do
-      %button.blue-button= I18n.t('nav.user.signup')
-
-%br/
-%br/
-
-- js_locale = request.locale.to_s.downcase.tr('-', '_')
-%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
-%script{src: webpack_asset_path('js/regionalPartnerMiniContact.js')}
-
-:javascript
-  $(document).ready(function() {
-    window.showRegionalPartnerMiniContactPopupLink();
-  });
+#workshop-enroll-simple-sign-up
+  -# populated by React
