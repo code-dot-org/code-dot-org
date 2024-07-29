@@ -36,7 +36,24 @@ class AichatController < ApplicationController
     unless has_required_params?(AICHAT_ENDPOINTS[:log_aichat_event])
       return render status: :bad_request, json: {}
     end
-    render(status: :ok, json: {})
+
+    context = params[:aichatContext]
+    event = params[:newAichatEvent]
+
+    project_id = nil
+    if context[:channelId]
+      _, project_id = storage_decrypt_channel_id(context[:channelId])
+    end
+
+    response_body = AichatEvent.create(
+      user_id: current_user.id,
+      level_id: context[:currentLevelId],
+      script_id: context[:scriptId],
+      project_id: project_id,
+      event: event.to_json
+    )
+
+    render(status: :ok, json: response_body)
   end
 
   private def get_response_body
