@@ -108,11 +108,6 @@ export default class AnalyticsReporter {
         featuresUsed: {},
       };
       setSessionId(this.session.startTime);
-
-      const identifyEvent = new Identify();
-      identifyEvent.unset('viewAsUserId');
-      identify(identifyEvent);
-
       this.log(`Session start. Session ID: ${this.session.startTime}`);
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
