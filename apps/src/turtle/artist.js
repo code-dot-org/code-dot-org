@@ -639,7 +639,7 @@ Artist.prototype.drawLogOnCanvas = function (log, canvas) {
 Artist.prototype.drawBlocksOnCanvas = function (blocksOrCode, canvas) {
   let code;
   if (this.studioApp_.isUsingBlockly()) {
-    code = Blockly.cdoUtils.getCodeFromBlocks.call(this, blocksOrCode);
+    code = Blockly.cdoUtils.getCodeFromBlockXmlSource(blocksOrCode);
   } else {
     code = blocksOrCode;
   }
@@ -892,9 +892,10 @@ Artist.prototype.execute = function (executionInfo) {
   if (this.level.editCode) {
     this.initInterpreter();
   } else {
-    Blockly.cdoUtils.setLabCode.call(this);
-
-    this.evalCode(this.code, executionInfo);
+    const code = Blockly.cdoUtils.getAllGeneratedCode(
+      this.studioApp_.initializationCode
+    );
+    this.evalCode(code, executionInfo);
   }
 
   // api.log now contains a transcript of all the user's actions.
