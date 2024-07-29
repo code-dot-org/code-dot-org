@@ -50,6 +50,14 @@ interface BlockStats {
   maxTriggerBlocksWithCode: number;
 }
 
+interface Session {
+  startTime: number;
+  soundsUsed: Set<string>;
+  soundsPlayed: {[id: string]: number};
+  blockStats: BlockStats;
+  featuresUsed: {[feature: string]: boolean};
+}
+
 interface SessionEndPayload {
   durationSeconds: number;
   soundsUsed: string[];
@@ -58,51 +66,54 @@ interface SessionEndPayload {
   soundsPlayed: {[id: string]: number};
 }
 
+const trackedProjectProperties = [
+  'levelType',
+  'mode',
+  'channelId',
+  'levelPath',
+  'scriptName',
+] as const;
+
 /**
  * An analytics reporter specifically used for the Music Lab prototype, which logs analytics
  * to Amplitude. For the more general Amplitude Analytics Reporter used across the application
  * outside of Music Lab, check {@link apps/src/lib/util/AnalyticsReporter}.
  */
 export default class AnalyticsReporter {
-  private sessionInProgress: boolean;
-  private identifyObj: Identify;
-  private sessionStartTime: number;
-  private soundsUsed: Set<string>;
-  private soundsPlayed: {[id: string]: number};
-  private blockStats: BlockStats;
-  private featuresUsed: {[feature: string]: boolean};
+  private initialized: boolean;
+  private session: Session | undefined;
 
   constructor() {
-    this.sessionInProgress = false;
-    this.identifyObj = new Identify();
-    this.sessionStartTime = -1;
-    this.soundsUsed = new Set();
-    this.soundsPlayed = {};
-    this.blockStats = {
-      endingBlockCount: 0,
-      endingTriggerBlockCount: 0,
-      endingTriggerBlocksWithCode: 0,
-      maxBlockCount: 0,
-      maxTriggerBlockCount: 0,
-      maxTriggerBlocksWithCode: 0,
-    };
-
-    this.featuresUsed = {};
-    blockFeatureList.forEach(feature => {
-      this.featuresUsed[feature] = false;
-    });
+    this.initialized = false;
   }
 
   async startSession() {
     // Capture start time before making init call
-    this.sessionStartTime = Date.now();
+    const startTime = Date.now();
 
     try {
       await this.initialize();
-      setSessionId(this.sessionStartTime);
+      this.session = {
+        startTime,
+        soundsUsed: new Set(),
+        soundsPlayed: {},
+        blockStats: {
+          endingBlockCount: 0,
+          endingTriggerBlockCount: 0,
+          endingTriggerBlocksWithCode: 0,
+          maxBlockCount: 0,
+          maxTriggerBlockCount: 0,
+          maxTriggerBlocksWithCode: 0,
+        },
+        featuresUsed: {},
+      };
+      setSessionId(this.session.startTime);
 
-      this.log(`Session start. Session ID: ${this.sessionStartTime}`);
-      this.sessionInProgress = true;
+      const identifyEvent = new Identify();
+      identifyEvent.unset('viewAsUserId');
+      identify(identifyEvent);
+
+      this.log(`Session start. Session ID: ${this.session.startTime}`);
     } catch (error) {
       const message = error instanceof Error ? error.message : String(error);
       this.log(`Did not initialize analytics reporter.  (${message})`);
@@ -116,7 +127,10 @@ export default class AnalyticsReporter {
     }
   }
 
-  async initialize(): Promise<void> {
+  private async initialize(): Promise<void> {
+    if (this.initialized) {
+      return;
+    }
     const response = await fetch(API_KEY_ENDPOINT);
     const responseJson = await response.json();
 
@@ -124,26 +138,52 @@ export default class AnalyticsReporter {
       throw new Error('No key for analytics.');
     }
 
-    return init(responseJson.key, undefined, {minIdLength: 1}).promise;
+    init(responseJson.key);
+    this.initialized = true;
+  }
+
+  isSessionInProgress() {
+    return !!this.session;
   }
 
   setUserProperties(userId: number, userType: string, signInState: string) {
-    if (!this.sessionInProgress) {
+    if (!this.session) {
       this.log('No session in progress');
       return;
     }
 
-    const formattedUserId = this.formatUserId(userId);
-    setUserId(formattedUserId);
+    if (userId) {
+      setUserId(this.formatUserId(userId));
+    }
 
-    this.identifyObj.set('userType', userType);
-    this.identifyObj.set('signInState', signInState);
+    const identifyEvent = new Identify();
+    identifyEvent.set('userType', userType);
+    identifyEvent.set('signInState', signInState);
 
-    identify(this.identifyObj);
+    identify(identifyEvent);
 
     this.log(
       `User properties: userId: ${userId}, userType: ${userType}, signInState: ${signInState}`
     );
+  }
+
+  setProjectProperty(
+    property: (typeof trackedProjectProperties)[number],
+    value: string | number | undefined
+  ) {
+    if (!this.session) {
+      this.log('No session in progress');
+      return;
+    }
+
+    const identifyEvent = new Identify();
+    if (value) {
+      identifyEvent.set(property, value);
+    } else {
+      identifyEvent.unset(property);
+    }
+    identify(identifyEvent);
+    this.log(`Project property: ${property}: ${value}`);
   }
 
   onButtonClicked(buttonName: string, properties?: object) {
@@ -163,7 +203,7 @@ export default class AnalyticsReporter {
   private trackUIEvent(eventType: string, payload: object) {
     const logMessage = `${eventType}. Payload: ${JSON.stringify(payload)}`;
 
-    if (!this.sessionInProgress) {
+    if (!this.session) {
       this.log(`No session in progress.  (${logMessage})`);
       return;
     } else {
@@ -178,16 +218,16 @@ export default class AnalyticsReporter {
     if (!shouldReport) {
       return;
     }
-    if (!this.sessionInProgress) {
+    if (!this.session) {
       this.log('No session in progress');
       return;
     }
 
-    this.soundsPlayed[id] = 1 + (this.soundsPlayed[id] ?? 0);
+    this.session.soundsPlayed[id] = 1 + (this.session.soundsPlayed[id] ?? 0);
   }
 
   onBlocksUpdated(blocks: Block[]) {
-    if (!this.sessionInProgress) {
+    if (!this.session) {
       this.log('No session in progress');
       return;
     }
@@ -203,53 +243,54 @@ export default class AnalyticsReporter {
         }
       }
 
-      if (blockFeatureList.includes(block.type)) {
-        this.featuresUsed[block.type] = true;
+      if (this.session && blockFeatureList.includes(block.type)) {
+        this.session.featuresUsed[block.type] = true;
       }
 
-      if (functionBlocks.includes(block.type)) {
-        this.featuresUsed.functions = true;
+      if (this.session && functionBlocks.includes(block.type)) {
+        this.session.featuresUsed.functions = true;
       }
 
-      if (block.getField(FIELD_SOUNDS_NAME)) {
-        this.soundsUsed.add(block.getFieldValue(FIELD_SOUNDS_NAME));
+      if (this.session && block.getField(FIELD_SOUNDS_NAME)) {
+        this.session.soundsUsed.add(block.getFieldValue(FIELD_SOUNDS_NAME));
       }
     });
 
-    this.blockStats = {
+    this.session.blockStats = {
       endingBlockCount: totalBlockCount,
       endingTriggerBlockCount: triggerBlocksCount,
       endingTriggerBlocksWithCode: triggerBlocksWithCode,
-      maxBlockCount: Math.max(this.blockStats.maxBlockCount, totalBlockCount),
+      maxBlockCount: Math.max(
+        this.session.blockStats.maxBlockCount,
+        totalBlockCount
+      ),
       maxTriggerBlockCount: Math.max(
-        this.blockStats.maxTriggerBlockCount,
+        this.session.blockStats.maxTriggerBlockCount,
         triggerBlocksCount
       ),
       maxTriggerBlocksWithCode: Math.max(
-        this.blockStats.maxTriggerBlocksWithCode,
+        this.session.blockStats.maxTriggerBlocksWithCode,
         triggerBlocksWithCode
       ),
     };
   }
 
   endSession() {
-    if (!this.sessionInProgress) {
+    if (!this.session) {
       this.log('No session in progress');
       return;
     }
-    const duration = Date.now() - this.sessionStartTime;
-    this.sessionStartTime = -1;
-    this.sessionInProgress = false;
-
-    identify(this.identifyObj);
+    const duration = Date.now() - this.session.startTime;
 
     const payload: SessionEndPayload = {
       durationSeconds: duration / 1000,
-      soundsUsed: Array.from(this.soundsUsed),
-      blockStats: this.blockStats,
-      featuresUsed: this.featuresUsed,
-      soundsPlayed: this.soundsPlayed,
+      soundsUsed: Array.from(this.session.soundsUsed),
+      blockStats: this.session.blockStats,
+      featuresUsed: this.session.featuresUsed,
+      soundsPlayed: this.session.soundsPlayed,
     };
+
+    this.session = undefined;
 
     track('Session end', payload);
     flush();
