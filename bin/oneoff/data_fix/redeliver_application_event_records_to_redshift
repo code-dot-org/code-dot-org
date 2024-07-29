@@ -117,14 +117,15 @@ class RecordValidationError < StandardError
   end
 end
 
-def validate_record(record, schema)
+def validate_record(record, schema, truncate: false)
   errors = []
 
   # Validate required fields
   schema['required'].each do |field|
-    if !record.key?(field) || record[field].nil?
-      errors << "Missing required field: #{field}"
-    end
+    next unless !record.key?(field) || record[field].nil?
+    error_msg = "Missing required field: #{field}"
+    errors << error_msg
+    CDO.log.error(error_msg)
   end
 
   # Validate each property
@@ -135,7 +136,9 @@ def validate_record(record, schema)
     # Type validation
     types = Array(field_schema['type'])
     unless types.any? {|t| valid_type?(value, t)}
-      errors << "Invalid type for #{field}: expected #{types.join(' or ')}, got #{value.class}"
+      error_msg = "Invalid type for #{field}: expected #{types.join(' or ')}, got #{value.class}"
+      errors << error_msg
+      CDO.log.error(error_msg)
     end
 
     # Format validation
@@ -143,20 +146,37 @@ def validate_record(record, schema)
       begin
         DateTime.iso8601(value)
       rescue ArgumentError
-        errors << "Invalid date-time format for #{field}: #{value}"
+        error_msg = "Invalid date-time format for #{field}: #{value}"
+        errors << error_msg
+        CDO.log.error(error_msg)
       end
     end
 
-    # Length validation
+    # Length validation and truncation
     next unless field_schema['maxLength'] && (types.include?('string') || types.include?('object'))
     string_value = value.is_a?(String) ? value : value.to_json
     byte_length = string_value.encode('UTF-8').bytesize
-    if byte_length > field_schema['maxLength']
-      errors << "#{field} exceeds maximum byte length of #{field_schema['maxLength']} (current: #{byte_length} bytes)"
+    next unless byte_length > field_schema['maxLength']
+    error_msg = "#{field} exceeds maximum byte length of #{field_schema['maxLength']} (current: #{byte_length} bytes)"
+    errors << error_msg
+    CDO.log.error(error_msg)
+
+    if truncate
+      truncated_value = truncate_to_byte_length(string_value, field_schema['maxLength'])
+      record[field] = truncated_value.is_a?(String) ? truncated_value : JSON.parse(truncated_value)
     end
   end
 
-  raise RecordValidationError.new(errors) unless errors.empty?
+  raise RecordValidationError.new(errors) if errors.any? && !truncate
+  record
+end
+
+def truncate_to_byte_length(string, max_bytes)
+  return string if string.encode('UTF-8').bytesize <= max_bytes
+
+  truncated = string.encode('UTF-8')
+  truncated = truncated[0...-1] while truncated.bytesize > max_bytes
+  truncated
 end
 
 def valid_type?(value, type)
@@ -206,14 +226,17 @@ loop do
         key: undelivered_batch_uri.path&.delete_prefix('/')
       )
       undelivered_batch = undelivered_batch_response.body.read
+      modified_batch = ''
       undelivered_records = split_json_batch(undelivered_batch)
       undelivered_records.each do |record|
         # CDO.log.info record
-        validate_record(record, event_json_schema)
+        modified_record = validate_record(record, event_json_schema, truncate: true)
+        modified_batch += modified_record.to_json
       rescue RecordValidationError => exception
         CDO.log.info record
         CDO.log.info exception.message
       end
+      File.write(undelivered_batch_uri.path.split('/').last, modified_batch)
     end
     CDO.log.info error_manifest_json
   end
