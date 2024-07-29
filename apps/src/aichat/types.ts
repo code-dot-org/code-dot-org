@@ -8,6 +8,9 @@ export type AichatInteractionStatusValue = string;
 export interface AichatEvent {
   // UTC timestamp in milliseconds
   timestamp: number;
+  // `description` can be used to display information about an event that is not
+  // a ChatMessage in the chat workspace when in teacher view.
+  // for example, "The user cleared the chat workspace."
   description?: string;
 }
 
@@ -29,6 +32,10 @@ export interface Notification extends AichatEvent {
   notificationType: 'error' | 'success';
 }
 
+// ChatItems are types of messages that are displayed for the user in the chat workspace.
+// ChatEvents that are not ChatItems are NOT displayed to the user. However, they
+// are displayed when a teacher views a student's chat history in the chat workspace.
+// An example of a ChatEvent that is not a ChatItem is 'The user cleared the chat workspace.'
 export type ChatItem = ChatMessage | ModelUpdate | Notification;
 
 // Type Predicates: checks if a AichatEvent is a given type, and more helpfully,
