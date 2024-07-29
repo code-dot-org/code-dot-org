@@ -1,5 +1,3 @@
-%script{src: webpack_asset_path('js/code.org/views/diversity_videos.js')}
-
 :ruby
   videos = [
     {
@@ -20,7 +18,7 @@
   ]
 
 .carousel-wrapper.video-carousel 
-  %swiper-container.diversity-videos{navigation: "true", "navigation-next-el": ".nav-next-el", "navigation-prev-el": ".nav-prev-el", pagination: "true", init: "false", "allow-touch-move": "false"}
+  %swiper-container.two-col.diversity-videos{navigation: "true", "navigation-next-el": ".swiper-nav-next", "navigation-prev-el": ".swiper-nav-prev", pagination: "true", init: "false", "allow-touch-move": "false"}
     - videos.each do |video|
       %swiper-slide
         %figure
@@ -28,5 +26,7 @@
         %figcaption.no-margin-bottom
           = video[:title]
 
-  %button.swiper-nav-prev.nav-prev-el
-  %button.swiper-nav-next.nav-next-el
+  %button.swiper-nav-prev
+  %button.swiper-nav-next
+
+= view :swiper
