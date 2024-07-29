@@ -42,6 +42,8 @@ namespace :install do
     if RakeUtils.local_environment?
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
+        RakeUtils.pipenv_install
+
         puts CDO.dashboard_db_writer
         if ENV['CI']
           # Prepare for dashboard unit tests to run. We can't seed UI test data
@@ -73,14 +75,7 @@ namespace :install do
     end
   end
 
-  desc 'Install python virtual env'
-  timed_task_with_logging :pybin do
-    if RakeUtils.local_environment?
-      RakeUtils.system_stream_output 'bash bin/setup_python_venv.sh'
-    end
-  end
-
-  tasks = [:pybin]
+  tasks = []
   tasks << :hooks if rack_env?(:development)
   tasks << :locals_yml if rack_env?(:development)
   tasks << :apps if CDO.build_apps

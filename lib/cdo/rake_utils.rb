@@ -131,6 +131,25 @@ module RakeUtils
     end
   end
 
+  def self.pipenv_install(*args)
+    flags = []
+
+    # --dev: install dev packages like pytest
+    flags << "--dev" unless rack_env?(:production, :staging)
+
+    # --deploy: fail unless Pipfile and Pipfile.lock are already in sync (=same hash stamp)
+    flags << "--deploy" unless local_environment? && !ENV['CI']
+
+    # --ignore-pipfile: don't try to validate deps, blindly install what's in the lockfile
+    flags << "--ignore-pipfile" if rack_env?(:production)
+
+    run_pipenv_command 'install', *flags, *args
+  end
+
+  def self.run_pipenv_command(*args)
+    system('pipenv', *args)
+  end
+
   def self.git_add(*args)
     system 'git', 'add', *args
   end

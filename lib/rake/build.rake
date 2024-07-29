@@ -55,6 +55,9 @@ namespace :build do
       ChatClient.log 'Installing <b>dashboard</b> bundle...'
       RakeUtils.bundle_install
 
+      ChatClient.log 'Installing <b>dashboard</b> python dependencies (pipenv)'
+      RakeUtils.pipenv_install
+
       if CDO.daemon
         ChatClient.log 'Migrating <b>dashboard</b> database...'
         RakeUtils.rake 'db:setup_or_migrate'
@@ -187,12 +190,7 @@ namespace :build do
     end
   end
 
-  # set up python virtual environment
-  timed_task_with_logging :pybin do
-    RakeUtils.system_stream_output 'bash bin/setup_python_venv.sh'
-  end
-
-  tasks = [:pybin]
+  tasks = []
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
