@@ -12,6 +12,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@adobe/css-tools@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "@adobe/css-tools@npm:4.4.0"
+  checksum: 1f08fb49bf17fc7f2d1a86d3e739f29ca80063d28168307f1b0a962ef37501c5667271f6771966578897f2e94e43c4770fd802728a6e6495b812da54112d506a
+  languageName: node
+  linkType: hard
+
 "@amplitude/analytics-browser@npm:^1.5.4":
   version: 1.5.4
   resolution: "@amplitude/analytics-browser@npm:1.5.4"
@@ -2576,15 +2583,6 @@ __metadata:
   peerDependencies:
     blockly: ^10.2.0
   checksum: ef0ee49918357ba64bcfe21fc31f3011a5a1ef6e2d16ea702c597c434f666a34940245356ec8f783c880a3f8fc794f5d6db9499fd9cb686380dad7a8f16b9505
-  languageName: node
-  linkType: hard
-
-"@blockly/field-angle@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "@blockly/field-angle@npm:4.0.0"
-  peerDependencies:
-    blockly: ^10.0.0
-  checksum: d21b7ad0785b579eb9fee8945709dce2fe7a5a773d0bda18cb38fa253a5da1781f19cd93babbe7a21b8884fdf3b862634504211b41dc61f3edd994534b6137cb
   languageName: node
   linkType: hard
 
@@ -5576,6 +5574,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@testing-library/jest-dom@npm:^6.4.8":
+  version: 6.4.8
+  resolution: "@testing-library/jest-dom@npm:6.4.8"
+  dependencies:
+    "@adobe/css-tools": ^4.4.0
+    "@babel/runtime": ^7.9.2
+    aria-query: ^5.0.0
+    chalk: ^3.0.0
+    css.escape: ^1.5.1
+    dom-accessibility-api: ^0.6.3
+    lodash: ^4.17.21
+    redent: ^3.0.0
+  checksum: b601688950e522557c2c6bbc0f026ae31a10583577c8a557814b0eb33648fe82afc06299f3cdb79ff0c5076fd1a6106f3d76e2ca0dde6f7ee0555e63008fbd72
+  languageName: node
+  linkType: hard
+
 "@testing-library/react@npm:^12.1.5":
   version: 12.1.5
   resolution: "@testing-library/react@npm:12.1.5"
@@ -8189,7 +8203,6 @@ __metadata:
     "@babel/preset-env": ^7.24.4
     "@babel/preset-react": ^7.24.1
     "@blockly/block-shareable-procedures": ~4.0.5
-    "@blockly/field-angle": ^4.0.0
     "@blockly/field-bitmap": ^4.1.0
     "@blockly/field-colour": ^4.0.0
     "@blockly/field-grid-dropdown": ~4.0.9
@@ -8243,6 +8256,7 @@ __metadata:
     "@storybook/csf-tools": ~8.1.11
     "@storybook/react": ~8.1.11
     "@storybook/react-webpack5": ~8.1.11
+    "@testing-library/jest-dom": ^6.4.8
     "@testing-library/react": ^12.1.5
     "@testing-library/user-event": ^14.4.3
     "@types/chai": ^4.3.5
@@ -8284,7 +8298,6 @@ __metadata:
     codemirror-spell-checker: ^1.1.2
     copy-webpack-plugin: ^9.0.1
     css-loader: ^6.2.0
-    csv-parse: ^4.4.6
     dapjs: ^2.3.0
     dedent: ^1.5.1
     details-element-polyfill: "https://github.com/javan/details-element-polyfill"
@@ -10130,6 +10143,13 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
+"css.escape@npm:^1.5.1":
+  version: 1.5.1
+  resolution: "css.escape@npm:1.5.1"
+  checksum: f6d38088d870a961794a2580b2b2af1027731bb43261cfdce14f19238a88664b351cc8978abc20f06cc6bbde725699dec8deb6fe9816b139fc3f2af28719e774
+  languageName: node
+  linkType: hard
+
 "css@npm:2.2.4":
   version: 2.2.4
   resolution: "css@npm:2.2.4"
@@ -10194,13 +10214,6 @@ canvg@gabelerner/canvg:
   version: 3.0.8
   resolution: "csstype@npm:3.0.8"
   checksum: 5939a003858a31a32cbc52a8f45496aa0c2bcb4629b21c5bc14a7ddcac1a3d4adfd655f56843dc14940f60563378e9444af2c9c373b3f212601b9eeb6740b8db
-  languageName: node
-  linkType: hard
-
-"csv-parse@npm:^4.4.6":
-  version: 4.4.6
-  resolution: "csv-parse@npm:4.4.6"
-  checksum: 09c37cd2f0179dd420338eb21823bf3cae221ae25e3558d6cecccc0654e6c5e019f34f0f3ce5c7f84cee2cd833e42d48b53e1993c0bcbddfdb7ce07a6760e19c
   languageName: node
   linkType: hard
 
@@ -10887,6 +10900,13 @@ canvg@gabelerner/canvg:
   version: 0.5.16
   resolution: "dom-accessibility-api@npm:0.5.16"
   checksum: 005eb283caef57fc1adec4d5df4dd49189b628f2f575af45decb210e04d634459e3f1ee64f18b41e2dcf200c844bc1d9279d80807e686a30d69a4756151ad248
+  languageName: node
+  linkType: hard
+
+"dom-accessibility-api@npm:^0.6.3":
+  version: 0.6.3
+  resolution: "dom-accessibility-api@npm:0.6.3"
+  checksum: c325b5144bb406df23f4affecffc117dbaec9af03daad9ee6b510c5be647b14d28ef0a4ea5ca06d696d8ab40bb777e5fed98b985976fdef9d8790178fa1d573f
   languageName: node
   linkType: hard
 
