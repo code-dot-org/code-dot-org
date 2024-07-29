@@ -9,9 +9,14 @@ import {ProjectSources, Channel} from '@cdo/apps/lab2/types';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 
 const FAKE_CHANNEL_ID = 'fakeChannelId';
+const FAKE_VERSION_ID = 'fakeVersionId';
 
 const FAKE_SOURCE: ProjectSources = {
   source: 'fakeSource',
+};
+
+const FAKE_VERSIONED_SOURCE: ProjectSources = {
+  source: 'fakeVersionedSource',
 };
 
 const FAKE_CHANNEL: Channel = {
@@ -61,6 +66,19 @@ describe('ProjectManager', () => {
     );
     const {sources, channel} = await projectManager.load();
     expect(sources).to.deep.equal(FAKE_SOURCE);
+    expect(channel).to.deep.equal(FAKE_CHANNEL);
+  });
+
+  it('returns versioned sources and channel on versioned load', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    const projectManager = new ProjectManager(
+      sourcesStore,
+      channelsStore,
+      FAKE_CHANNEL_ID,
+      false
+    );
+    const {sources, channel} = await projectManager.load(FAKE_VERSION_ID);
+    expect(sources).to.deep.equal(FAKE_VERSIONED_SOURCE);
     expect(channel).to.deep.equal(FAKE_CHANNEL);
   });
 
@@ -265,5 +283,10 @@ describe('ProjectManager', () => {
 function stubSuccessfulSourceLoad(
   sourcesStore: StubbedInstance<RemoteSourcesStore>
 ) {
-  sourcesStore.load.returns(Promise.resolve(FAKE_SOURCE));
+  sourcesStore.load
+    .withArgs(FAKE_CHANNEL_ID, undefined)
+    .returns(Promise.resolve(FAKE_SOURCE));
+  sourcesStore.load
+    .withArgs(FAKE_CHANNEL_ID, FAKE_VERSION_ID)
+    .returns(Promise.resolve(FAKE_VERSIONED_SOURCE));
 }
