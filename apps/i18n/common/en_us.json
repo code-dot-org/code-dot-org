@@ -2382,6 +2382,7 @@
   "rubricNextLearningGoal": "Go to next learning goal",
   "rubricPreviousLearningGoal": "Go to previous learning goal",
   "rubricAiHeaderText": "AI Teaching Assistant",
+  "rubricAiInternalError": "We're sorry, but there is an error on our end.",
   "rubricTourNextButtonText": "Next Tip",
   "rubricTourStepOneTitle": "Getting Started with Your AI Teaching Assistant",
   "rubricTourStepOneText": "Launch your AI Teaching Assistant from the bottom left corner of the screen.",

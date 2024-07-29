@@ -1138,6 +1138,11 @@ p.evidenceLevelHeaderText {
   }
 }
 
+.fabErrorBackground {
+  background: $bootstrap_error_background !important;
+  color: $bootstrap_error_text !important;
+}
+
 .sectionSelector {
   width: 180px;
 }

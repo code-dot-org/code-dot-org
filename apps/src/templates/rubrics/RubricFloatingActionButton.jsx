@@ -1,13 +1,16 @@
-import classNames from 'classnames';
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useEffect, useMemo, useState} from 'react';
 import {connect} from 'react-redux';
 
+import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
 import aiFabIcon from '@cdo/static/ai-bot-centered-teal.png';
+import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 import taIcon from '@cdo/static/ai-bot-tag-TA.png';
 import rubricFabIcon from '@cdo/static/rubric-fab-background.png';
 
@@ -19,6 +22,34 @@ import {
 } from './rubricShapes';
 
 import style from './rubrics.module.scss';
+
+export const RubricErrorContainer = ({open}) => (
+  <div
+    className={classnames(style.rubricContainer, {
+      [style.hiddenRubricContainer]: !open,
+    })}
+  >
+    <div className={style.rubricHeaderRedesign}>
+      <div className={style.rubricHeaderLeftSide}>
+        <img
+          src={aiBotOutlineIcon}
+          className={style.aiBotOutlineIcon}
+          alt={i18n.rubricAiHeaderText()}
+        />
+        <span>{i18n.rubricAiHeaderText()}</span>
+      </div>
+    </div>
+    <div className={classnames(style.fabBackground, style.fabErrorBackground)}>
+      <div className={style.visibleRubricContent}>
+        <p>{i18n.rubricAiInternalError()}</p>
+      </div>
+    </div>
+  </div>
+);
+
+RubricErrorContainer.propTypes = {
+  open: PropTypes.bool,
+};
 
 function RubricFloatingActionButton({
   rubric,
@@ -40,6 +71,8 @@ function RubricFloatingActionButton({
   const [isFabImageLoaded, setIsFabImageLoaded] = useState(false);
   const [isTaImageLoaded, setIsTaImageLoaded] = useState(false);
 
+  const [internalError, setInternalError] = useState(null);
+
   const eventData = useMemo(() => {
     return {
       ...reportingData,
@@ -54,6 +87,19 @@ function RubricFloatingActionButton({
       : EVENTS.TA_RUBRIC_OPENED_FROM_FAB_EVENT;
     analyticsReporter.sendEvent(eventName, eventData);
     setIsOpen(!isOpen);
+  };
+
+  const logInternalError = (error, componentStack) => {
+    console.error(
+      'Internal error in the RubricFloatingActionButton component:',
+      error,
+      componentStack
+    );
+  };
+
+  const onInternalError = (error, componentStack) => {
+    logInternalError(error, componentStack);
+    setInternalError(error);
   };
 
   useEffect(() => {
@@ -94,7 +140,7 @@ function RubricFloatingActionButton({
 
   const showPulse = isFirstSession && isFabImageLoaded && isTaImageLoaded;
   const classes = showPulse
-    ? classNames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
+    ? classnames(style.floatingActionButton, style.pulse, 'unittest-fab-pulse')
     : style.floatingActionButton;
 
   return (
@@ -122,16 +168,21 @@ function RubricFloatingActionButton({
         />
       </div>
       {/* TODO: do not hardcode in AI setting */}
-      <RubricContainer
-        rubric={rubric}
-        studentLevelInfo={studentLevelInfo}
-        reportingData={reportingData}
-        currentLevelName={currentLevelName}
-        teacherHasEnabledAi={aiEnabled}
-        open={isOpen}
-        closeRubric={handleClick}
-        sectionId={sectionId}
-      />
+      <ErrorBoundary
+        fallback={<RubricErrorContainer open={isOpen} error={internalError} />}
+        onError={onInternalError}
+      >
+        <RubricContainer
+          rubric={rubric}
+          studentLevelInfo={studentLevelInfo}
+          reportingData={reportingData}
+          currentLevelName={currentLevelName}
+          teacherHasEnabledAi={aiEnabled}
+          open={isOpen}
+          closeRubric={handleClick}
+          sectionId={sectionId}
+        />
+      </ErrorBoundary>
     </div>
   );
 }
