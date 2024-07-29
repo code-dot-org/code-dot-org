@@ -302,8 +302,8 @@ GoogleBlockly.Extensions.register(
        */
       syncArgsMap_: function (this: ProcedureBlock) {
         // If we haven't yet stored the previous parameters, do so now. This would
-        // normally happen when we or initialize the procedure block with a model
-        // or update its parameters.
+        // normally happen when we initialize the procedure block with a model or
+        // update its parameters.
         if (!this.prevParams_.length) {
           this.prevParams_ = [
             ...(this.getProcedureModel().getParameters() || []),
