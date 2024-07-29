@@ -45,18 +45,13 @@ class AichatController < ApplicationController
       _, project_id = storage_decrypt_channel_id(context[:channelId])
     end
 
-    logged_event = AichatEvent.create(
+    response_body = AichatEvent.create(
       user_id: current_user.id,
       level_id: context[:currentLevelId],
       script_id: context[:scriptId],
       project_id: project_id,
       aichat_event: event.to_json
     )
-
-    response_body = {
-      aichat_event_id: logged_event.id,
-      aichat_event: logged_event.aichat_event
-    }
 
     render(status: :ok, json: response_body)
   end
