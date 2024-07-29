@@ -119,7 +119,7 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
 
 1. Install **brew packages**:
    ```
-   brew install rbenv ruby-build nvm mysql@8.0 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java
+   brew install rbenv ruby-build nvm pipenv mysql@8.0 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java
    ```
 
 1. Initialize **Git LFS**:
@@ -208,7 +208,7 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
 Note: Virtual Machine Users should check the [Alternative note](#alternative-use-an-ubuntu-vm) below before starting
 
 1. `sudo apt-get update`
-1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript build-essential redis-server rbenv chromium-browser parallel`
+1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript build-essential redis-server rbenv chromium-browser parallel pipenv`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
     <details> 
       <summary>Troubleshoot: `E: Package 'pdftk' has no installation candidate`.</summary>
