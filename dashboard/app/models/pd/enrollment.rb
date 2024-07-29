@@ -55,10 +55,6 @@ class Pd::Enrollment < ApplicationRecord
 
   validates_presence_of :first_name, unless: :deleted?
 
-  # Some old enrollments, from before the first/last name split, don't have last names.
-  # Require on all new enrollments.
-  validates_presence_of :last_name, unless: -> {deleted? || created_before_name_split?}
-
   validates_presence_of :email, unless: :deleted?
   validates_confirmation_of :email, unless: :deleted?
   validates_email_format_of :email, allow_blank: true
