@@ -6,7 +6,7 @@ import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalIte
 import RubricEditor from '@cdo/apps/lib/levelbuilder/rubrics/RubricEditor';
 import * as rubricHelper from '@cdo/apps/lib/levelbuilder/rubrics/rubricHelper';
 import RubricsContainer from '@cdo/apps/lib/levelbuilder/rubrics/RubricsContainer';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 
 import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports

@@ -3,7 +3,7 @@ import React from 'react';
 
 import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
 import RubricEditor from '@cdo/apps/lib/levelbuilder/rubrics/RubricEditor';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 
 describe('RubricEditorTest ', () => {
   let wrapper;

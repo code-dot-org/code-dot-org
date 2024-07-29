@@ -12,7 +12,7 @@ import {
   DISABLED,
 } from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import * as utils from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
