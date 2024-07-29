@@ -85,6 +85,7 @@ RUN apt-get install -y --no-install-recommends \
     moreutils \
     openssh-client \
     parallel \
+    pipenv \
     python \
     python-dev \
     software-properties-common \
