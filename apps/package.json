@@ -262,7 +262,6 @@
     "ml-knn": "^3.0.0",
     "moment": "^2.29.4",
     "object-fit-images": "^3.2.3",
-    "pa11y-ci": "^2.3.0",
     "papaparse": "^5.4.1",
     "path-browserify": "^1.0.1",
     "pepjs": "^0.4.3",
