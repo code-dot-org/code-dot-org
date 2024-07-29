@@ -1,3 +1,4 @@
+import cookies from 'js-cookie';
 import Statsig from 'statsig-js';
 
 import logToCloud from '@cdo/apps/logToCloud';
@@ -7,11 +8,13 @@ import {
   getEnvironment,
   isProductionEnvironment,
   isDevelopmentEnvironment,
+  createUuid,
 } from '../../utils';
 
 // A flag that can be toggled to send events regardless of environment
 const ALWAYS_SEND = false;
 const NO_EVENT_NAME = 'NO_VALID_EVENT_NAME_LOG_ERROR';
+const STABLE_ID_KEY = 'statsig_stable_id';
 
 class StatsigReporter {
   constructor() {
@@ -41,10 +44,12 @@ class StatsigReporter {
       ? managed_test_environment_element.dataset.managedTestServer === 'true'
       : false;
     this.local_mode = !(isProductionEnvironment() || managed_test_environment);
+    this.stable_id = this.findOrCreateStableId();
     const options = {
       environment: {tier: getEnvironment()},
       localMode: this.local_mode,
       disableErrorLogging: true,
+      overrideStableID: this.stable_id,
     };
     this.initialize(api_key, user, options);
   }
@@ -123,6 +128,18 @@ class StatsigReporter {
       const environment = getEnvironment();
       return `${environment}-${userIdString}`;
     }
+  }
+
+  findOrCreateStableId() {
+    let stableId = cookies.get(STABLE_ID_KEY);
+    if (!stableId) {
+      stableId = createUuid();
+      cookies.set(STABLE_ID_KEY, stableId, {
+        expires: 400,
+        domain: 'code.org',
+      });
+    }
+    return stableId;
   }
 
   /**

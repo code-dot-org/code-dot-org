@@ -43,7 +43,7 @@ export default class ProjectManagerFactory {
   static async getProjectManagerForLevel(
     projectManagerStorageType: ProjectManagerStorageType,
     levelId: number,
-    userId?: string,
+    userId?: number,
     scriptId?: number,
     scriptLevelId?: string
   ): Promise<ProjectManager | null> {

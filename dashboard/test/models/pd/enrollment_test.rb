@@ -93,7 +93,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   test 'required field validations with country' do
     enrollment = Pd::Enrollment.new
     enrollment.first_name = 'FirstName'
-    enrollment.last_name = 'LastName'
     enrollment.email = 'teacher@example.net'
     assert enrollment.valid?
   end
@@ -161,12 +160,21 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     csp_wfrt = create :csp_wfrt, :ended
     csp_wfrt_enrollment = create :pd_enrollment, workshop: csp_wfrt
 
+    byo_workshop = create :pd_workshop,
+      :ended,
+      funded: false,
+      course: Pd::Workshop::COURSE_BUILD_YOUR_OWN,
+      subject: nil,
+      course_offerings: [] << (create :course_offering)
+    byo_enrollment = create :pd_enrollment, workshop: byo_workshop
+
     studio_url = ->(path) {CDO.studio_url(path, CDO.default_scheme)}
     assert_equal studio_url["/pd/workshop_survey/csf/post101/#{csf_enrollment.code}"], csf_enrollment.exit_survey_url
     assert_equal studio_url["/pd/workshop_survey/csf/post101/#{csf_district_enrollment.code}"], csf_district_enrollment.exit_survey_url
-    assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
-    assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{csp_enrollment.code}"], csp_enrollment.exit_survey_url
-    assert_equal studio_url["/pd/workshop_post_survey?enrollmentCode=#{csp_wfrt_enrollment.code}"], csp_wfrt_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_survey/post/#{local_summer_enrollment.code}"], local_summer_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_survey/post/#{csp_enrollment.code}"], csp_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_survey/post/#{csp_wfrt_enrollment.code}"], csp_wfrt_enrollment.exit_survey_url
+    assert_equal studio_url["/pd/workshop_survey/post/#{byo_enrollment.code}"], byo_enrollment.exit_survey_url
   end
 
   test 'should_send_exit_survey' do
@@ -245,20 +253,10 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     end
   end
 
-  test 'old enrollments with no last name are still valid' do
-    old_enrollment = create :pd_enrollment
-    old_enrollment.update!(created_at: '2016-11-09', last_name: '')
-    assert old_enrollment.valid?
-  end
-
-  test 'last name is required on new enrollments, create and update' do
-    e = assert_raises ActiveRecord::RecordInvalid do
-      create :pd_enrollment, last_name: ''
-    end
-    assert_includes(e.message, 'Validation failed: Last name is required')
-
+  test 'enrollments with no last name are still valid' do
     enrollment = create :pd_enrollment
-    refute enrollment.update(last_name: '')
+    enrollment.update!(last_name: '')
+    assert enrollment.valid?
   end
 
   test 'email must be unique on enrollments within a workshop' do

@@ -5047,17 +5047,6 @@ columns:
     comment:
   - *20
   - *21
-  project_use_datablock_storages:
-  - *10
-  - *35
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: use_datablock_storage
-    sql_type_metadata: *7
-    'null': false
-    default: '0'
-    default_function:
-    collation:
-    comment:
   projects:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -7808,7 +7797,6 @@ primary_keys:
   programming_expressions: id
   programming_methods: id
   project_commits: id
-  project_use_datablock_storages: id
   projects: id
   puzzle_ratings: id
   queued_account_purges: id
@@ -8008,7 +7996,6 @@ data_sources:
   programming_expressions: true
   programming_methods: true
   project_commits: true
-  project_use_datablock_storages: true
   projects: true
   puzzle_ratings: true
   queued_account_purges: true
@@ -11849,20 +11836,6 @@ indexes:
     type:
     using: :btree
     comment:
-  project_use_datablock_storages:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: project_use_datablock_storages
-    name: index_project_use_datablock_storages_on_project_id
-    unique: false
-    columns:
-    - project_id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where:
-    type:
-    using: :btree
-    comment:
   projects:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: projects
@@ -13571,7 +13544,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20240702214406
+version: 20240719223408
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

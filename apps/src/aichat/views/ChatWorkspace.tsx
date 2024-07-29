@@ -13,7 +13,7 @@ import Tabs, {TabsProps} from '@cdo/apps/componentLibrary/tabs/Tabs';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {AichatEvent, ChatItem, WorkspaceTeacherViewTab} from '../types';
+import {AichatEvent, ChatItem} from '../types';
 import {getShortName} from '../utils';
 
 import AichatEventView from './AichatEventView';
@@ -30,6 +30,11 @@ interface Students {
     id: number;
     name: string;
   };
+}
+
+enum WorkspaceTeacherViewTab {
+  STUDENT_CHAT_HISTORY = 'viewStudentChatHistory',
+  TEST_STUDENT_MODEL = 'testStudentModel',
 }
 
 /**
@@ -55,6 +60,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   // This way we will only scroll when the contents of the messages have changed.
   const messagesString = JSON.stringify(items);
   const conversationContainerRef = useRef<HTMLDivElement>(null);
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     if (conversationContainerRef.current) {
@@ -65,8 +71,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     }
   }, [messagesString, isWaitingForChatResponse]);
 
-  const dispatch = useAppDispatch();
-
   const selectedStudentName = useMemo(() => {
     if (viewAsUserId) {
       const selectedStudent = Object.values(students).find(
@@ -74,7 +78,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       );
       if (selectedStudent) {
         const shortName = getShortName(selectedStudent.name);
-        dispatch(fetchStudentChatHistory(parseInt(viewAsUserId)));
+        dispatch(fetchStudentChatHistory(viewAsUserId));
         return shortName;
       }
     }
@@ -118,7 +122,12 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const tabs = [
     {
       value: 'viewStudentChatHistory',
-      text: `View ${selectedStudentName}'s chat history`,
+      text:
+        `${selectedStudentName}'s chat history` +
+        (selectedTab === WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY
+          ? ' (view only)'
+          : ''),
+
       tabContent: <ViewChatHistory events={allStudentAichatEvents} />,
       iconLeft: iconValue,
     },
@@ -160,11 +169,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {showWarningModal && <ChatWarningModal onClose={onCloseWarningModal} />}
-      {experiments.isEnabled(experiments.VIEW_CHAT_HISTORY) && viewAsUserId && (
+      {experiments.isEnabled(experiments.VIEW_CHAT_HISTORY) && viewAsUserId ? (
         <Tabs {...tabArgs} />
-      )}
-      {(!experiments.isEnabled(experiments.VIEW_CHAT_HISTORY) ||
-        !viewAsUserId) && (
+      ) : (
         <ChatWithModel
           items={items}
           showWaitingAnimation={showWaitingAnimation}

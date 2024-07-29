@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-11 19:05:30 UTC",
+    "serialized_at": "2024-07-23 21:15:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -8904,15 +8904,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites intro sprites_2024"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U3 Sprites intro sprites_2024"
+          "CSD U3 Sprites test intro sprites_2024"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
@@ -8920,7 +8917,7 @@
         "activity_section.key": "e2a99aa3-ce8e-49b0-afac-449d60d6194e"
       },
       "level_keys": [
-        "CSD U3 Sprites intro sprites_2024"
+        "CSD U3 Sprites test intro sprites_2024"
       ]
     },
     {
@@ -8929,9 +8926,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites anitab 1_2024"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8954,9 +8948,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites sequencing_2024"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -13917,9 +13908,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U3 Sprites intro sprites_2024",
+        "level.key": "CSD U3 Sprites test intro sprites_2024",
         "script_level.level_keys": [
-          "CSD U3 Sprites intro sprites_2024"
+          "CSD U3 Sprites test intro sprites_2024"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",

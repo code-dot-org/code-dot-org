@@ -133,6 +133,12 @@ GroupOfColorsOf_BaseButtons.args = {
       onClick: () => null,
     },
     {
+      text: 'Button Primary Destructive',
+      color: buttonColors.destructive,
+      size: 'm',
+      onClick: () => null,
+    },
+    {
       text: 'Button Secondary Black',
       color: buttonColors.black,
       type: 'secondary',
@@ -149,6 +155,13 @@ GroupOfColorsOf_BaseButtons.args = {
     {
       text: 'Button Secondary White',
       color: buttonColors.white,
+      type: 'secondary',
+      size: 'm',
+      onClick: () => null,
+    },
+    {
+      text: 'Button Secondary Destructive',
+      color: buttonColors.destructive,
       type: 'secondary',
       size: 'm',
       onClick: () => null,
@@ -175,6 +188,13 @@ GroupOfColorsOf_BaseButtons.args = {
       onClick: () => null,
     },
     {
+      text: 'Button Tertiary Destructive',
+      color: buttonColors.destructive,
+      type: 'tertiary',
+      size: 'm',
+      onClick: () => null,
+    },
+    {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       color: buttonColors.purple,
       type: 'primary',
@@ -193,6 +213,14 @@ GroupOfColorsOf_BaseButtons.args = {
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       color: buttonColors.white,
+      type: 'primary',
+      isIconOnly: true,
+      size: 'm',
+      onClick: () => null,
+    },
+    {
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      color: buttonColors.destructive,
       type: 'primary',
       isIconOnly: true,
       size: 'm',
@@ -224,6 +252,14 @@ GroupOfColorsOf_BaseButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      color: buttonColors.destructive,
+      type: 'secondary',
+      isIconOnly: true,
+      size: 'm',
+      onClick: () => null,
+    },
+    {
+      icon: {iconName: 'smile', iconStyle: 'solid'},
       color: buttonColors.purple,
       type: 'tertiary',
       isIconOnly: true,
@@ -241,6 +277,14 @@ GroupOfColorsOf_BaseButtons.args = {
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       color: buttonColors.white,
+      type: 'tertiary',
+      isIconOnly: true,
+      size: 'm',
+      onClick: () => null,
+    },
+    {
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      color: buttonColors.destructive,
       type: 'tertiary',
       isIconOnly: true,
       size: 'm',
