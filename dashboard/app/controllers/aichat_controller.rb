@@ -50,7 +50,7 @@ class AichatController < ApplicationController
       level_id: context[:currentLevelId],
       script_id: context[:scriptId],
       project_id: project_id,
-      aichat_event: event.to_json
+      event: event.to_json
     )
 
     render(status: :ok, json: response_body)
