@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-23 21:15:39 UTC",
+    "serialized_at": "2024-07-29 07:06:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5546,7 +5546,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Scaffolded Tasks:** The tasks for this mini-project are broken down for students with each level focusing on a particular part of the project (background, sprites, text, etc). Encourage students to follow the instructions in each level, focusing on one task at a time."
+            "markdown": "**Scaffolded Tasks:** The tasks for this mini-project are broken down for students with each level focusing on a particular part of the project (background, sprites, text, etc). Encourage students to follow the instructions in each level, focusing on one task at a time.\n\n**Variable Names** Take an opportunity to go over the importance of naming variables with descriptive names.  (Note that the Exemplar uses Surpise1 and Suprise2 as variable names so that it doesn't give away what the surprises are).  You can have a discussion around variable names and how it can impact their program if they have vague names making it harder to identify their variables later as they code."
           }
         ]
       },
@@ -8904,6 +8904,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites test intro sprites_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8926,6 +8929,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites anitab 1_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8948,6 +8954,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites sequencing_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
