@@ -22,13 +22,13 @@ import {saveTypeToAnalyticsEvent} from '../constants';
 import {
   AiCustomizations,
   AichatContext,
-  AichatEvent,
   FieldVisibilities,
   LevelAichatSettings,
   ModelCardInfo,
   SaveType,
   ViewMode,
   Visibility,
+  AichatEvent,
   ChatMessage,
   ChatItem,
   isModelUpdate,
@@ -69,6 +69,7 @@ export interface AichatState {
   // Student events viewed by a teacher user in chat workspace
   studentChatHistory: AichatEvent[];
   // Denotes whether we should show the warning modal
+  aichatEventsToLog: AichatEvent[];
   showWarningModal: boolean;
   // Denotes if there is an error with the chat completion response
   chatMessageError: boolean;
@@ -87,6 +88,7 @@ const initialState: AichatState = {
   chatItemsPast: [],
   chatItemsCurrent: [],
   chatMessagePending: undefined,
+  aichatEventsToLog: [],
   isWaitingForChatResponse: false,
   studentChatHistory: [],
   showWarningModal: true,
@@ -318,6 +320,38 @@ const dispatchSaveFailNotification = (
   dispatch(endSave());
 };
 
+export const logAichatEvents = createAsyncThunk(
+  'aichat/logAichatEvents',
+  async (newUserMessageText: string, thunkAPI) => {
+    const state = thunkAPI.getState() as RootState;
+    const {aichatEventsToLog} = state.aichat;
+
+    const aichatContext: AichatContext = {
+      currentLevelId: parseInt(state.progress.currentLevelId || ''),
+      scriptId: state.progress.scriptId,
+      channelId: state.lab.channel?.id,
+    };
+    while (aichatEventsToLog.length > 0) {
+      const event = aichatEventsToLog.shift(); // Remove the first element from the array.
+      if (event) {
+        let logAichatEventResponse;
+        try {
+          logAichatEventResponse = await postLogAichatEvent(
+            event,
+            aichatContext
+          );
+          console.log('logAichatEventResponse', logAichatEventResponse);
+        } catch (error) {
+          Lab2Registry.getInstance()
+            .getMetricsReporter()
+            .logError('Error in aichat event logging request', error as Error);
+          return;
+        }
+      }
+    }
+  }
+);
+
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
 // the user messages.
@@ -344,19 +378,19 @@ export const submitChatContents = createAsyncThunk(
       timestamp: Date.now(),
     };
     // FOR TESTING PURPOSES:
-    let logAichatEventResponse;
-    try {
-      logAichatEventResponse = await postLogAichatEvent(
-        newMessage,
-        aichatContext
-      );
-      console.log('logAichatEventResponse', logAichatEventResponse);
-    } catch (error) {
-      Lab2Registry.getInstance()
-        .getMetricsReporter()
-        .logError('Error in aichat event logging request', error as Error);
-      return;
-    }
+    // let logAichatEventResponse;
+    // try {
+    //   logAichatEventResponse = await postLogAichatEvent(
+    //     newMessage,
+    //     aichatContext
+    //   );
+    //   console.log('logAichatEventResponse', logAichatEventResponse);
+    // } catch (error) {
+    //   Lab2Registry.getInstance()
+    //     .getMetricsReporter()
+    //     .logError('Error in aichat event logging request', error as Error);
+    //   return;
+    // }
     thunkAPI.dispatch(setChatMessagePending(newMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
@@ -422,12 +456,15 @@ const aichatSlice = createSlice({
   reducers: {
     addChatMessage: (state, action: PayloadAction<ChatMessage>) => {
       state.chatItemsCurrent.push(action.payload);
+      state.aichatEventsToLog.push(action.payload);
     },
     addModelUpdate: (state, action: PayloadAction<ModelUpdate>) => {
       state.chatItemsCurrent.push(action.payload);
+      state.aichatEventsToLog.push(action.payload);
     },
     addNotification: (state, action: PayloadAction<Notification>) => {
       state.chatItemsCurrent.push(action.payload);
+      state.aichatEventsToLog.push(action.payload);
     },
     setStudentChatHistory: (state, action: PayloadAction<AichatEvent[]>) => {
       state.studentChatHistory = action.payload;
