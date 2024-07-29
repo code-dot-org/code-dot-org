@@ -53,11 +53,11 @@ class AiRubricMetrics
       [
         {
           metric_name: 'LearningGoalAiEvaluationFeedback',
-          value: feedback.ai_feedback_approval,
+          value: feedback.ai_feedback_approval ? 1 : 0,
           dimensions: [
             {name: 'Environment', value: CDO.rack_env},
-            {name: 'Unit', value: lesson&.script&.name},
-            {name: 'Lesson', value: lesson&.relative_position},
+            {name: 'Unit', value: lesson&.script&.name || ''},
+            {name: 'Lesson', value: lesson&.relative_position&.to_s || ''},
           ],
           unit: 'Count',
         }
