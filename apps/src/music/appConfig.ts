@@ -1,4 +1,5 @@
 import {queryParams} from '@cdo/apps/code-studio/utils';
+
 import {BlockMode, baseAssetUrl} from './constants';
 
 // Helper function for specifically fetching the 'blocks' config value. Provides

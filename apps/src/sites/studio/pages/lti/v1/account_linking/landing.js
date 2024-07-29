@@ -6,9 +6,10 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import LtiLinkAccountPage from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage';
+
+import LtiLinkAccountPage from '@cdo/apps/lib/ui/simpleSignUp/lti/link/LtiLinkAccountPage';
+import {LtiProviderContext} from '@cdo/apps/lib/ui/simpleSignUp/lti/link/LtiLinkAccountPage/context';
 import getScriptData from '@cdo/apps/util/getScriptData';
-import {LtiProviderContext} from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/context';
 
 document.addEventListener('DOMContentLoaded', () => {
   const mountPoint = document.getElementById('mount-point');
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const emailAddress = scriptData['email'];
   const newCtaType = scriptData['new_cta_type'];
   const continueAccountUrl = scriptData['continue_account_url'];
+  const userType = scriptData['user_type'];
 
   const ltiProviderContext = {
     ltiProvider,
@@ -29,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     emailAddress,
     newCtaType,
     continueAccountUrl,
+    userType,
   };
 
   ReactDOM.render(

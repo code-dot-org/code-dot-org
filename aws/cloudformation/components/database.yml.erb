@@ -262,10 +262,10 @@
         # Send reporting/analytics queries to the reader database instances, but use the database connection
         # initialization to configure reporting sessions so that queries do not negatively impact cluster performance
         # and to permit long running queries.
-        InitQuery: 'SET SESSION aurora_read_replica_read_committed=ON; SET SESSION tx_isolation="READ-COMMITTED"; SET SESSION max_execution_time = 0;'
+        InitQuery: 'SET SESSION aurora_read_replica_read_committed=ON; SET SESSION transaction_isolation="READ-COMMITTED"; SET SESSION max_execution_time = 0;'
         # Ensure that connections to the reader database instances that are carrying out "reporting" queries do not
-        # exceed 5% of the total database connection capacity of a reader instance.
-        MaxConnectionsPercent: 5
+        # exceed 10% of the total database connection capacity of a reader instance.
+        MaxConnectionsPercent: 10
   WriterSQLUser:
     Type: Custom::SQLUser
 <%  unless rack_env?(:production)%>

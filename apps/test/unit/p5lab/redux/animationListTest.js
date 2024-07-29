@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import {combineReducers} from 'redux';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {EMPTY_IMAGE} from '@cdo/apps/p5lab/constants';
@@ -31,7 +31,7 @@ import pageConstantsReducer, {
   setPageConstants,
 } from '@cdo/apps/redux/pageConstants';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {createStore} from '../../../util/redux';
 import {setExternalGlobals} from '../../../util/testUtils';
 
@@ -54,7 +54,7 @@ describe('animationList', function () {
   describe('animationSourceUrl', function () {
     const key = 'foo';
 
-    before(() => assetPrefix.init({}));
+    beforeAll(() => assetPrefix.init({}));
 
     it(`returns the sourceUrl from props if it exists and is not an uploaded image`, function () {
       const props = {sourceUrl: 'bar'};

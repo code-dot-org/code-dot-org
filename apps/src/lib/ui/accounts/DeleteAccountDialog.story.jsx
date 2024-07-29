@@ -1,6 +1,7 @@
-import React from 'react';
-import DeleteAccountDialog from './DeleteAccountDialog';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
+import DeleteAccountDialog from './DeleteAccountDialog';
 import {getCheckboxes} from './DeleteAccountHelpers';
 
 const PASSWORD = 'MY_PASSWORD';

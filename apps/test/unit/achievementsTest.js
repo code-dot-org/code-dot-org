@@ -1,9 +1,9 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import * as achievements from '@cdo/apps/achievements';
 import authoredHintUtils from '@cdo/apps/authoredHintUtils';
 
-import {expect} from '../util/reconfiguredChai';
+import {expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('achievements', () => {
   describe('puzzleComplete', () => {
@@ -53,6 +53,6 @@ describe('achievements', () => {
       stub.restore();
     });
 
-    after(() => {});
+    afterAll(() => {});
   });
 });

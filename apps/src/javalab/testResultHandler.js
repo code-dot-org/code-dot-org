@@ -1,5 +1,6 @@
-import {UserTestResultSignalType, TestStatus} from './constants';
 import msg from '@cdo/javalab/locale';
+
+import {UserTestResultSignalType, TestStatus} from './constants';
 import {getExceptionMessage} from './javabuilderExceptionHandler';
 
 const CHECK_MARK = '✔';

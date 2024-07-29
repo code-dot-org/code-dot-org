@@ -1,11 +1,13 @@
 import $ from 'jquery';
-import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import {connect} from 'react-redux';
-import {ViewType} from '../viewAsRedux';
+
 import {lessonIsLockedForAllStudents} from '@cdo/apps/templates/progress/progressHelpers';
+
 import {isLessonHiddenForSection} from '../hiddenLessonRedux';
+import {ViewType} from '../viewAsRedux';
 
 /**
  * When viewing a puzzle, we want teachers to be able to toggle between what the

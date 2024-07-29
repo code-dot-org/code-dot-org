@@ -1,16 +1,13 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialog';
-
-import {expect} from '../../../../util/reconfiguredChai';
 
 describe('EditTipDialog', () => {
   let defaultProps, handleConfirm, handleDelete;
   beforeEach(() => {
-    handleConfirm = sinon.spy();
-    handleDelete = sinon.spy();
+    handleConfirm = jest.fn();
+    handleDelete = jest.fn();
     defaultProps = {
       isOpen: true,
       handleConfirm,
@@ -25,23 +22,23 @@ describe('EditTipDialog', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<EditTipDialog {...defaultProps} />);
-    expect(wrapper.contains('Add Callout')).to.be.true;
-    expect(wrapper.find('LessonTip').length).to.equal(1);
-    expect(wrapper.find('select').length).to.equal(1);
-    expect(wrapper.find('MarkdownEnabledTextarea').length).to.equal(1);
-    expect(wrapper.find('LessonEditorDialog').length).to.equal(1);
+    expect(wrapper.contains('Add Callout')).toBe(true);
+    expect(wrapper.find('LessonTip').length).toBe(1);
+    expect(wrapper.find('select').length).toBe(1);
+    expect(wrapper.find('MarkdownEnabledTextarea').length).toBe(1);
+    expect(wrapper.find('LessonEditorDialog').length).toBe(1);
   });
 
   it('edit tip values', () => {
     const wrapper = shallow(<EditTipDialog {...defaultProps} />);
 
     const dropdown = wrapper.find('select');
-    expect(dropdown.props().value).to.equal('teachingTip');
+    expect(dropdown.props().value).toBe('teachingTip');
     dropdown.simulate('change', {target: {value: 'contentCorner'}});
 
     const textarea = wrapper.find('MarkdownEnabledTextarea');
-    expect(textarea.props().markdown).to.include('');
+    expect(textarea.props().markdown).toContain('');
 
-    expect(wrapper.state().tip.type).to.equal('contentCorner');
+    expect(wrapper.state().tip.type).toBe('contentCorner');
   });
 });

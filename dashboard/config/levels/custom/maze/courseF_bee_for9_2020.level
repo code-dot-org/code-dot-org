@@ -35,7 +35,7 @@
     "fast_get_nectar_animation": "true",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Try doing some math with the counter variable.\\n\\nWhat do you have to do to the counter at each flower to equal the amount of nectar you need to collect?\",\"hint_id\":\"courseF_bee_for9_a\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/67950f7621306790d9d6d0b0c1a97afd/courseF_bee_for9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"It looks like you will need to turn the bee at the beginning of each loop iteration if you want to solve the puzzle.\",\"hint_id\":\"courseF_bee_for9_c\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1343df8608cb1e23100e4f612d7fa313/courseF_bee_for9.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"**Remember:** If your loop is counting up, the increment is added to your `counter` variable each time through.\",\"hint_id\":\"courseF_bee_for9_b\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/2a54c9009ac81ecedb9171714de63e70/courseF_bee_for9.mp3\"}]",
     "instructions_important": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseF_bee_for9_1\",\r\n  \"callout_text\": \"You will find the `math` block in here.\",\r\n  \"element_id\": \"[id=':2.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"courseF_bee_for9_1\",\"callout_text\":\"You will find the `math` block in here.\",\"element_id\":\"[id=':2.label']\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\"[id='blockly-1.label']\",\"localization_key\":\"courseF_bee_for9_1\",\"callout_text\":\"You will find the `math` block in here.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "disable_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
@@ -44,8 +44,7 @@
     "name_suffix": "_2020",
     "show_type_hints": "false",
     "parent_level_id": 14855,
-    "preload_asset_list": null,
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

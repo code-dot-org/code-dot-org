@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2024-06-17T22:34:30.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# Bias in Training Data\r\n\r\n#### How can bias in the data used to train computer vision models affect the performance and reliability of these systems?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
+    "long_instructions": "## Bias in Training Data\r\n\r\nHow can bias in the data used to train computer vision models affect the performance and reliability of these systems?",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -19,9 +20,8 @@
     "allow_multiple_attempts": "false",
     "teacher_markdown": "Students should discuss how biased training data can lead to computer vision systems that are unfair or inaccurate, particularly by failing to recognize or improperly categorizing objects or people not adequately represented in the training data.\r\n"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-06-17T22:34:30.287+00:00\",\"changed\":[\"cloned from \\\"CV_L9_Reflection_2\\\"\"],\"cloned_from\":\"CV_L9_Reflection_2\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-06-17T22:34:30.287+00:00\",\"changed\":[\"cloned from \\\"CV_L9_Reflection_2\\\"\"],\"cloned_from\":\"CV_L9_Reflection_2\"},{\"changed_at\":\"2024-07-04 18:35:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

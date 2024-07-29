@@ -4,6 +4,7 @@
 
 /lib
 /build
+/storybook-deploy
 node_modules
 
 !.storybook

@@ -1,5 +1,8 @@
 name 'gen-ai-humanities-L1G'
 title 'Crafting Prompts'
+display_name 'Email Draft'
+bubble_choice_description 'Draft a formal email to a teacher requesting an extension on a project deadline.'
+thumbnail_url 'https://images.code.org/6cb0a14c03cca38bab189e73d65fa63b-image-1719504640208.png'
 
 markdown <<MARKDOWN
 ## Email Draft

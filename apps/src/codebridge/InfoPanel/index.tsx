@@ -22,6 +22,12 @@ const panelMap = {
   [Panels.ForTeachersOnly]: ForTeachersOnly,
 };
 
+const panelProps = {
+  [Panels.Instructions]: {manageNavigation: false},
+  [Panels.HelpAndTips]: {},
+  [Panels.ForTeachersOnly]: {},
+};
+
 export const InfoPanel = React.memo(() => {
   const mapReference = useAppSelector(
     state => state.lab.levelProperties?.mapReference
@@ -38,12 +44,15 @@ export const InfoPanel = React.memo(() => {
   const [panelOptions, setPanelOptions] = useState<Panels[]>([
     Panels.Instructions,
   ]);
+  const hasPredictSolution = useAppSelector(
+    state => !!state.lab.levelProperties?.predictSettings?.solution
+  );
 
   useEffect(() => {
     // For now, always include Instructions panel.
     // TODO: support hiding this panel completely if there are no instructions.
     const options = [Panels.Instructions];
-    if (isUserTeacher && teacherMarkdown) {
+    if (isUserTeacher && (teacherMarkdown || hasPredictSolution)) {
       options.push(Panels.ForTeachersOnly);
     }
     if (mapReference || referenceLinks) {
@@ -52,7 +61,13 @@ export const InfoPanel = React.memo(() => {
     setPanelOptions(options);
     // Close the dropdown if we change levels.
     setIsDropdownOpen(false);
-  }, [isUserTeacher, mapReference, referenceLinks, teacherMarkdown]);
+  }, [
+    isUserTeacher,
+    mapReference,
+    referenceLinks,
+    teacherMarkdown,
+    hasPredictSolution,
+  ]);
 
   useEffect(() => {
     // If we change levels and were on a panel that no longer exists,
@@ -112,7 +127,7 @@ export const InfoPanel = React.memo(() => {
           </ul>
         </form>
       )}
-      <CurrentPanelView />
+      <CurrentPanelView {...panelProps[currentPanel]} />
     </PanelContainer>
   );
 });

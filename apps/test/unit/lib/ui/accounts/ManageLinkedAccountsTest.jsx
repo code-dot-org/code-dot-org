@@ -6,7 +6,7 @@ import {
   ENCRYPTED,
 } from '@cdo/apps/lib/ui/accounts/ManageLinkedAccounts';
 
-import {expect} from '../../../../util/deprecatedChai';
+import {expect} from '../../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 const DEFAULT_PROPS = {

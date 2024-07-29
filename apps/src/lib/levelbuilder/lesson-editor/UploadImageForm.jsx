@@ -1,10 +1,11 @@
+import classnames from 'classnames';
 import React, {useState} from 'react';
 
 import Button from '@cdo/apps/templates/Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
+
 import styles from './uploadImage.module.scss';
-import classnames from 'classnames';
 
 export default function UploadImageForm() {
   const [imgUrl, setImgUrl] = useState(undefined);

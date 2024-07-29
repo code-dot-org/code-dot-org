@@ -63,11 +63,10 @@ end
 
 def replace_hostname(url)
   UrlConverter.new(
-    dashboard_host: ENV['DASHBOARD_TEST_DOMAIN'],
-    pegasus_host: ENV['PEGASUS_TEST_DOMAIN'],
-    hourofcode_host: ENV['HOUROFCODE_TEST_DOMAIN'],
-    csedweek_host: ENV['CSEDWEEK_TEST_DOMAIN'],
-    advocacy_host: ENV['ADVOCACY_TEST_DOMAIN']
+    dashboard_host: ENV.fetch('DASHBOARD_TEST_DOMAIN', nil),
+    pegasus_host: ENV.fetch('PEGASUS_TEST_DOMAIN', nil),
+    hourofcode_host: ENV.fetch('HOUROFCODE_TEST_DOMAIN', nil),
+    csedweek_host: ENV.fetch('CSEDWEEK_TEST_DOMAIN', nil),
   ).replace_origin(url)
 end
 
@@ -183,7 +182,7 @@ When /^I close the instructions overlay if it exists$/ do
   steps 'When I click selector "#overlay" if it exists'
 end
 
-When /^I wait for the page to fully load$/ do
+When /^I wait for the lab page to fully load$/ do
   steps <<-GHERKIN
     When I wait to see "#runButton"
     And I wait to see ".header_user"
@@ -255,6 +254,14 @@ end
 
 When /^I wait until the first (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
   wait_until {@browser.execute_script("return $(#{selector.dump}).first().text();").include? text}
+end
+
+When /^I wait until (?:element )?"([^"]*)" (?:has|contains) one or more integers$/ do |selector|
+  wait_for_jquery
+  wait_until do
+    element_text = @browser.execute_script("return $(#{selector.dump}).text();")
+    element_text.match?(/\d+/)
+  end
 end
 
 When /^I wait until (?:element )?"([^"]*)" is (not )?checked$/ do |selector, negation|
@@ -1048,12 +1055,18 @@ def set_cookie(key, value)
     value: value,
   }
 
-  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /\.code.org/ &&
-      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /\.code.org/
+  if ENV.fetch('DASHBOARD_TEST_DOMAIN', nil) && ENV.fetch('DASHBOARD_TEST_DOMAIN', nil) =~ /\.code.org/ &&
+      ENV.fetch('PEGASUS_TEST_DOMAIN', nil) && ENV.fetch('PEGASUS_TEST_DOMAIN', nil) =~ /\.code.org/
     params[:domain] = '.code.org' # top level domain cookie
   end
 
   @browser.manage.add_cookie params
+end
+
+Given(/^I use a cookie to mock the DCDO key "([^"]*)" as "(.*)"$/) do |key, json|
+  mock_dcdo(key, JSON.parse(json))
+rescue JSON::ParserError
+  mock_dcdo(key, json)
 end
 
 And(/^I set the language cookie$/) do

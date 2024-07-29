@@ -346,8 +346,12 @@ class ApplicationController < ActionController::Base
 
     # URLs we should not redirect.
     return if Set[
+      # Allow retrieval of current user data for event reporting
+      api_v1_users_current_path,
       # Don't block any user from signing out
       destroy_user_session_path,
+      # Allow retrieval of CSRF token
+      get_token_path,
       # Don't block any user from changing the language
       locale_path,
       # Avoid an infinite redirect loop to the lockout page
@@ -372,7 +376,7 @@ class ApplicationController < ActionController::Base
 
   # Check that the user has completed the LMS onboarding flow
   protected def assert_lms_landing_policy
-    return unless Policies::Lti.lti?(current_user) && !current_user.lms_landing_opted_out
+    return unless Policies::Lti.account_linking?(session, current_user)
 
     # URLs we should not redirect.
     return if Set[

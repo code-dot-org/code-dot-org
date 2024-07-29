@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-06-25T21:46:28.000Z",
   "level_num": "custom",
@@ -40,7 +41,7 @@
     "parent_level_id": 28361,
     "short_instructions": "New items ",
     "mini_rubric": "false",
-    "long_instructions": "**Click Run. Then click and drag each item into a box.**\r\n\r\n<img src=\"\" width=30% style=\"padding-left: 100px\" >\r\n\r\n",
+    "long_instructions": "\r\n\r\n**Click Run. Then click and drag each item into a box.**\r\n\r\n<img src=\"\" width=30% style=\"padding-left: 100px\" >\r\n\r\n",
     "encrypted": "false",
     "auto_run_setup": "DRAW_LOOP",
     "name_suffix": "_pl",
@@ -57,11 +58,13 @@
     "contained_level_names": [
       "ai_sorting_items_predict_2_pl"
     ],
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-06-25T21:46:28.547+00:00\",\"changed\":[\"cloned from \\\"sorting_items_prediction_2\\\"\"],\"cloned_from\":\"sorting_items_prediction_2\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-06-25T21:46:28.547+00:00\",\"changed\":[\"cloned from \\\"sorting_items_prediction_2\\\"\"],\"cloned_from\":\"sorting_items_prediction_2\"},{\"changed_at\":\"2024-06-26 19:30:37 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-06-26 19:49:26 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

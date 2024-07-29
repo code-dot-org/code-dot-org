@@ -3,7 +3,7 @@ Feature: Artist Project
 Scenario: Save Artist Project
   Given I am on "http://studio.code.org/projects/artist"
   And I get redirected to "/projects/artist/([^\/]*?)/edit" via "dashboard"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And element "#runButton" is visible
   And element ".project_updated_at" eventually contains text "Saved"
   Then I open the topmost blockly category "Brushes"
@@ -11,7 +11,6 @@ Scenario: Save Artist Project
 
   When I am not signed in
   And I open the project share dialog
-  Then the project cannot be published
 
   And I navigate to the share URL
   And I wait until element "#visualization" is visible

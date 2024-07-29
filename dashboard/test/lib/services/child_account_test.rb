@@ -33,6 +33,15 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
   end
 
   class GrantPermissionRequest < ActionDispatch::IntegrationTest
+    let(:grant_permission_request!) {Services::ChildAccount.grant_permission_request!(parental_permission_request)}
+
+    let(:user) {create(:non_compliant_child)}
+    let(:parental_permission_request) {create(:parental_permission_request, user: user)}
+
+    let(:expect_permission_granting_cap_event_logging) do
+      Services::ChildAccount::EventLogger.expects(:log_permission_granting).with(user)
+    end
+
     def assert_enqueued_parent_permission_confirm_mail(permission, &block)
       assert_enqueued_with(
         job: ParentMailer.delivery_job,
@@ -52,8 +61,8 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
     end
 
     test 'given permission request it should update user and send email' do
-      permission = create :parental_permission_request
-      user = permission.user
+      permission = parental_permission_request
+      expect_permission_granting_cap_event_logging.once
       assert_enqueued_parent_permission_confirm_mail(permission) do
         Services::ChildAccount.grant_permission_request! permission
       end
@@ -63,8 +72,8 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
     end
 
     test 'granting permission twice only makes changes once' do
-      permission = create :parental_permission_request
-      user = permission.user
+      permission = parental_permission_request
+      expect_permission_granting_cap_event_logging.once
       assert_enqueued_parent_permission_confirm_mail(permission) do
         Services::ChildAccount.grant_permission_request! permission
       end
@@ -81,6 +90,19 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
       user.reload
       # The date shouldn't be updated
       assert_equal last_updated, user.child_account_compliance_state_last_updated
+    end
+
+    context 'when something goes wrong during user saving' do
+      let(:error) {'expected_error'}
+
+      before do
+        user.stubs(:save!).raises(error)
+      end
+
+      it 'does not log "permission_granting" CAP user event' do
+        expect_permission_granting_cap_event_logging.never
+        assert_raises(error) {grant_permission_request!}
+      end
     end
   end
 
@@ -100,8 +122,39 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
 
       assert_attributes user, {
         child_account_compliance_state: 'p',
+        child_account_compliance_lock_out_date: nil,
         child_account_compliance_state_last_updated: DateTime.now.iso8601(3),
       }
+    end
+
+    it 'logs "grace_period_start" CAP user event' do
+      assert_difference 'CAP::UserEvent.count' do
+        start_grace_period
+      end
+
+      cap_user_event = CAP::UserEvent.find_by(user: user)
+
+      refute_nil cap_user_event
+      assert_attributes cap_user_event, {
+        name: 'grace_period_start',
+        policy: 'cpa',
+        state_before: nil,
+        state_after: 'p',
+      }
+    end
+
+    context 'when something goes wrong during user saving' do
+      let(:error) {'expected_error'}
+
+      before do
+        user.stubs(:save!).raises(error)
+      end
+
+      it 'does not log "grace_period_start" CAP user event' do
+        assert_no_difference 'CAP::UserEvent.count' do
+          assert_raises(error) {start_grace_period}
+        end
+      end
     end
   end
 
@@ -119,11 +172,41 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
         lock_out
       end
 
-      assert_attributes user, {
+      assert_attributes user.reload, {
         child_account_compliance_state: 'l',
         child_account_compliance_lock_out_date: DateTime.now.iso8601(3),
         child_account_compliance_state_last_updated: DateTime.now.iso8601(3),
       }
+    end
+
+    it 'logs "account_locking" CAP user event' do
+      assert_difference 'CAP::UserEvent.count' do
+        lock_out
+      end
+
+      cap_user_event = CAP::UserEvent.find_by(user: user)
+
+      refute_nil cap_user_event
+      assert_attributes cap_user_event, {
+        name: 'account_locking',
+        policy: 'cpa',
+        state_before: nil,
+        state_after: 'l',
+      }
+    end
+
+    context 'when something goes wrong during user saving' do
+      let(:error) {'expected_error'}
+
+      before do
+        user.stubs(:save!).raises(error)
+      end
+
+      it 'does not log "account_locking" CAP user event' do
+        assert_no_difference 'CAP::UserEvent.count' do
+          assert_raises(error) {lock_out}
+        end
+      end
     end
   end
 
@@ -151,6 +234,36 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
     it 'updates user CAP compliance state last updated date' do
       assert_changes -> {user.reload.child_account_compliance_state_last_updated}, from: user_cap_compliance_updated_at.iso8601(3), to: DateTime.now.iso8601(3) do
         remove_user_cap_compliance_state
+      end
+    end
+
+    it 'logs "compliance_removing" CAP user event' do
+      assert_difference 'CAP::UserEvent.count' do
+        remove_user_cap_compliance_state
+      end
+
+      cap_user_event = CAP::UserEvent.find_by(user: user)
+
+      refute_nil cap_user_event
+      assert_attributes cap_user_event, {
+        name: 'compliance_removing',
+        policy: 'cpa',
+        state_before: 'p',
+        state_after: nil,
+      }
+    end
+
+    context 'when something goes wrong during user saving' do
+      let(:error) {'expected_error'}
+
+      before do
+        user.stubs(:save!).raises(error)
+      end
+
+      it 'does not log "compliance_removing" CAP user event' do
+        assert_no_difference 'CAP::UserEvent.count' do
+          assert_raises(error) {remove_user_cap_compliance_state}
+        end
       end
     end
   end

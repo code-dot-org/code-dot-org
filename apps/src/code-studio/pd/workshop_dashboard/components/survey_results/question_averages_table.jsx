@@ -1,6 +1,6 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import _ from 'lodash';
 
 export default class QuestionAveragesTable extends React.Component {
   static propTypes = {

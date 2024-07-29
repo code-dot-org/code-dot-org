@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import './addons/plusMinusBlocks/if';
 import './addons/plusMinusBlocks/text_join';
+import './addons/extensions/logic_compare';
 import {
   ObservableProcedureModel,
   ObservableParameterModel,
@@ -23,12 +24,14 @@ import {
   SETTABLE_PROPERTIES,
   WORKSPACE_EVENTS,
 } from '@cdo/apps/blockly/constants';
+import DCDO from '@cdo/apps/dcdo';
 import {MetricEvent} from '@cdo/apps/lib/metrics/events';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
 
+import CdoAngleHelper from './addons/cdoAngleHelper';
 import CdoBlockSerializer from './addons/cdoBlockSerializer';
 import CdoConnectionChecker from './addons/cdoConnectionChecker';
 import initializeCdoConstants from './addons/cdoConstants';
@@ -44,10 +47,12 @@ import CdoFieldFlyout from './addons/cdoFieldFlyout';
 import CdoFieldImage from './addons/cdoFieldImage';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldLabel from './addons/cdoFieldLabel';
+import CdoFieldNumber from './addons/cdoFieldNumber';
 import CdoFieldParameter from './addons/cdoFieldParameter';
 import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import initializeGenerator from './addons/cdoGenerator';
+import {overrideHandleTouchMove} from './addons/cdoGesture';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
@@ -58,7 +63,7 @@ import CdoTrashcan from './addons/cdoTrashcan';
 import * as cdoUtils from './addons/cdoUtils';
 import initializeVariables from './addons/cdoVariables';
 import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
-import initializeBlocklyXml from './addons/cdoXml';
+import initializeBlocklyXml, {removeInvisibleBlocks} from './addons/cdoXml';
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import FunctionEditor from './addons/functionEditor';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
@@ -92,10 +97,12 @@ import {
   ExtendedBlock,
   ExtendedBlockSvg,
   ExtendedBlocklyOptions,
+  ExtendedConnection,
   ExtendedInput,
   ExtendedVariableMap,
   ExtendedWorkspace,
   ExtendedWorkspaceSvg,
+  FieldHelperOptions,
   GoogleBlocklyInstance,
 } from './types';
 import {
@@ -259,6 +266,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   const fieldOverrides: [string, string, FieldProto][] = [
     ['field_variable', 'FieldVariable', CdoFieldVariable],
     ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
+    ['field_number', 'FieldNumber', CdoFieldNumber],
     // CdoFieldBitmap extends from a JavaScript class without typing.
     // We know it's a field, so it's safe to cast as unknown.
     ['field_bitmap', 'FieldBitmap', CdoFieldBitmap as unknown as FieldProto],
@@ -276,6 +284,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan as any;
 
   // Code.org custom fields
+  blocklyWrapper.AngleHelper = CdoAngleHelper;
   blocklyWrapper.FieldButton = CdoFieldButton;
   blocklyWrapper.FieldImage = CdoFieldImage;
   blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
@@ -359,6 +368,13 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   Object.defineProperty(blocklyWrapper, 'selected', {
     get: function () {
       return this.blockly_.getSelected();
+    },
+  });
+  Object.defineProperty(blocklyWrapper, 'BlockFieldHelper', {
+    get: function () {
+      return {
+        ANGLE_HELPER: 'Angle Helper',
+      };
     },
   });
 
@@ -450,6 +466,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   };
 
   const extendedInput = blocklyWrapper.Input.prototype as ExtendedInput;
+  const extendedConnection = blocklyWrapper.Connection
+    .prototype as ExtendedConnection;
 
   extendedInput.setStrictCheck = function (check) {
     return this.setCheck(check);
@@ -460,6 +478,37 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     return this.fieldRow;
   };
 
+  /**
+   * Enable the specified field helper with the specified options for this
+   * input's connection
+   * @param {string} fieldHelper the field helper to retrieve. One of
+   *        Blockly.BlockFieldHelper
+   * @param {*} options for this helper
+   * @return {!Blockly.Input} The input being modified (to allow chaining).
+   */
+  extendedInput.addFieldHelper = function (
+    fieldHelper: string,
+    options: FieldHelperOptions
+  ) {
+    (this.connection as ExtendedConnection).addFieldHelper(
+      fieldHelper,
+      options
+    );
+    return this;
+  };
+
+  extendedConnection.addFieldHelper = function (
+    fieldHelper: string,
+    options: FieldHelperOptions
+  ) {
+    if (!this.fieldHelpers_) {
+      this.fieldHelpers_ = {};
+    }
+    this.fieldHelpers_[fieldHelper] = options;
+  };
+  extendedConnection.getFieldHelperOptions = function (fieldHelper: string) {
+    return this.fieldHelpers_ && this.fieldHelpers_[fieldHelper];
+  };
   const extendedBlock = blocklyWrapper.Block.prototype as ExtendedBlock;
 
   extendedBlock.interpolateMsg = interpolateMsg;
@@ -490,7 +539,9 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   extendedWorkspaceSvg.addUnusedBlocksHelpListener = function () {};
 
   extendedWorkspaceSvg.getAllUsedBlocks = function () {
-    return this.getAllBlocks().filter(block => block.isEnabled());
+    return this.getAllBlocks().filter(
+      block => block.isEnabled() && block.getRootBlock().isEnabled()
+    );
   };
 
   extendedWorkspaceSvg.isReadOnly = function () {
@@ -533,6 +584,10 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     variableList.forEach(varName => this.createVariable(varName));
   };
 
+  if (DCDO.get('blockly-move', true)) {
+    overrideHandleTouchMove(blocklyWrapper);
+  }
+
   // Used for spritelab behavior blocks.
   // We can remove this once we are ready to no longer support sprite lab on CDO Blockly.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -555,8 +610,20 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     return this.embeddedWorkspaces.includes(workspace.id);
   };
 
-  // TODO - used for validation in CS in Algebra.
-  blocklyWrapper.findEmptyContainerBlock = function () {};
+  blocklyWrapper.findEmptyContainerBlock = function (blocks) {
+    for (const block of blocks) {
+      const emptyInput = block.inputList.find(
+        input =>
+          input.type === blocklyWrapper.inputTypes.STATEMENT &&
+          input.connection?.targetConnection === null
+      );
+      if (emptyInput) {
+        return block;
+      }
+    }
+    return null;
+  };
+
   blocklyWrapper.BlockSpace = {
     EVENTS: WORKSPACE_EVENTS,
     onMainBlockSpaceCreated: callback => {
@@ -669,6 +736,13 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       media: '/blockly/media/google_blockly',
       modalInputs: false, // Prevents pop-up editor on mobile
     };
+    // Google Blockly doesn't support invisible blocks, so we want to prevent
+    // them from showing up in the toolbox.
+    if (typeof options.toolbox === 'string') {
+      options.toolbox = Blockly.Xml.domToText(
+        removeInvisibleBlocks(Blockly.Xml.textToDom(options.toolbox))
+      );
+    }
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
     // apps, so we should also set it here.
     blocklyWrapper.assetUrl =
@@ -827,14 +901,23 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
 
   // Google Blockly labs also need to clear separate workspaces for the function editor.
   blocklyWrapper.clearAllStudentWorkspaces = function () {
-    Blockly.getMainWorkspace().clear();
-    const functionEditorWorkspace = Blockly.getFunctionEditorWorkspace();
-    if (functionEditorWorkspace) {
-      functionEditorWorkspace.clear();
-    }
-    if (Blockly.getHiddenDefinitionWorkspace()) {
-      Blockly.getHiddenDefinitionWorkspace().clear();
-    }
+    // Disable Blockly events to prevent unnecessary event mirroring
+    Blockly.Events.disable();
+
+    const studentWorkspaces = [
+      Blockly.getMainWorkspace(),
+      Blockly.getFunctionEditorWorkspace(),
+      Blockly.getHiddenDefinitionWorkspace(),
+    ];
+
+    studentWorkspaces.forEach(workspace => {
+      if (workspace) {
+        workspace.clear();
+        workspace.getProcedureMap().clear();
+      }
+    });
+
+    Blockly.Events.enable();
   };
 
   blocklyWrapper.customBlocks = customBlocks;

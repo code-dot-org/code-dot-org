@@ -1,9 +1,5 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import color from '@cdo/apps/util/color';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import ConfirmationDialog from '../../../components/confirmation_dialog';
-import {connect} from 'react-redux';
 /* eslint-disable no-restricted-imports */
 import {
   Modal,
@@ -13,10 +9,15 @@ import {
   FormControl,
 } from 'react-bootstrap';
 /* eslint-enable no-restricted-imports */
+import {connect} from 'react-redux';
 import Select from 'react-select/lib/Select';
-import {SelectStyleProps} from '../../../constants';
-import 'react-select/dist/react-select.css';
+
 import ModalHelpTip from '@cdo/apps/lib/ui/ModalHelpTip';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import color from '@cdo/apps/util/color';
+
+import ConfirmationDialog from '../../../components/confirmation_dialog';
+import {SelectStyleProps} from '../../../constants';
 import {
   setFormData,
   addFetchableEntity,
@@ -24,6 +25,8 @@ import {
   setSaveError,
   setLastSavedQuestions,
 } from '../foormEditorRedux';
+
+import 'react-select/dist/react-select.css';
 
 // Save bar that stays at bottom of the screen of the Foorm Editor when editing forms.
 // Shows last saved time, any errors, and requires confirmation for published forms.

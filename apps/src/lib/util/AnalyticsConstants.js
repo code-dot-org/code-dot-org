@@ -40,17 +40,22 @@ const EVENTS = {
   CAP_PARENT_CONSENT_GRANTED: 'CAP Parent Consent Granted',
   CAP_PARENT_EMAIL_BANNER_SHOWN: 'CAP Parent Email Banner Shown',
   CAP_PARENT_EMAIL_BANNER_CLICKED: 'CAP Parent Email Banner Clicked',
-  CAP_PARENT_EMAIL_BANNER_SUBMITTED: 'CAP Parent Email Banner Submitted',
-  CAP_PARENT_EMAIL_BANNER_UPDATED: 'CAP Parent Email Banner Updated',
-  CAP_PARENT_EMAIL_BANNER_RESEND: 'CAP Parent Email Banner Resend',
-  CAP_PARENT_EMAIL_BANNER_CLOSED: 'CAP Parent Email Banner Closed',
   CAP_PARENT_EMAIL_MODAL_SHOWN: 'CAP Parent Email Modal Shown',
-  CAP_PARENT_EMAIL_MODAL_SUBMITTED: 'CAP Parent Email Modal Submitted',
-  CAP_PARENT_EMAIL_MODAL_UPDATED: 'CAP Parent Email Modal Updated',
-  CAP_PARENT_EMAIL_MODAL_RESEND: 'CAP Parent Email Modal Resend',
   CAP_PARENT_EMAIL_MODAL_CLOSED: 'CAP Parent Email Modal Closed',
+  CAP_LOCKOUT_SHOWN: 'CAP Lockout Shown',
+  CAP_LOCKOUT_SIGN_OUT: 'CAP Lockout Sign Out',
+  CAP_LOCKOUT_EMAIL_SUBMITTED: 'CAP Lockout Email Submitted',
+  CAP_LOCKOUT_EMAIL_UPDATED: 'CAP Lockout Email Updated',
+  CAP_LOCKOUT_EMAIL_RESEND: 'CAP Lockout Email Resend',
+  CAP_PARENT_EMAIL_SUBMITTED: 'CAP Parent Email Submitted',
+  CAP_PARENT_EMAIL_UPDATED: 'CAP Parent Email Updated',
+  CAP_PARENT_EMAIL_RESEND: 'CAP Parent Email Resend',
   CAP_AGE_GATED_MODAL_SHOWN: 'CAP Teacher Students Warning Modal Shown',
   CAP_AGE_GATED_MODAL_CLOSED: 'CAP Teacher Students Warning Modal Closed',
+  CAP_SETTINGS_SHOWN: 'CAP Settings Shown',
+  CAP_SETTINGS_EMAIL_SUBMITTED: 'CAP Settings Email Submitted',
+  CAP_SETTINGS_EMAIL_UPDATED: 'CAP Settings Email Updated',
+  CAP_SETTINGS_EMAIL_RESEND: 'CAP Settings Email Resend',
   CAP_STUDENT_WARNING_LINK_CLICKED:
     'CAP Teacher Students Warning Modal Documentation Clicked',
   CAP_AGE_GATED_BANNER_SHOWN: 'CAP Teacher Students Banner Shown',
@@ -115,6 +120,27 @@ const EVENTS = {
   SORT_BY_FAMILY_NAME: 'Sorted by family name',
   SORT_BY_DISPLAY_NAME: 'Sorted by display name',
 
+  // Section table on teacher My Dashboard
+  SECTION_TABLE_PRINT_LOGIN_CARDS_CLICKED:
+    'Section table print login cards clicked',
+  SECTION_TABLE_JOIN_INSTRUCTIONS_CLICKED:
+    'Section table join instructions clicked',
+  SECTION_TABLE_EDIT_SECTION_DETAILS_CLICKED:
+    'Section table edit section details clicked',
+  SECTION_TABLE_VIEW_PROGRESS_CLICKED: 'Section table view progress clicked',
+  SECTION_TABLE_MANAGE_STUDENTS_CLICKED:
+    'Section table manage students clicked',
+  SECTION_TABLE_ARCHIVE_SECTION_CLICKED:
+    'Section table archive section clicked',
+  SECTION_TABLE_RESTORE_SECTION_CLICKED:
+    'Section table restore section clicked',
+  SECTION_TABLE_DELETE_SECTION_CLICKED: 'Section table delete section clicked',
+  SECTION_TABLE_PRINT_CERTIFICATES_CLICKED:
+    'Section table print certificates clicked',
+  SECTION_TABLE_SYNC_GOOGLE_CLASSROOM_CLICKED:
+    'Section table sync google classroom clicked',
+  SECTION_TABLE_SYNC_CLEVER_CLICKED: 'Section table sync clever clicked',
+
   // Section progress v2
   PROGRESS_V2_VIEW: 'Section New Progress Viewed ',
   PROGRESS_V2_VIEW_NEW_PROGRESS: 'New Progress Link Clicked',
@@ -133,6 +159,13 @@ const EVENTS = {
   PROGRESS_V2_DELAY_INVITATION:
     'Section Progress Invitation Modal Remind Later',
   PROGRESS_V2_SEEN_INVITATION: 'Section Progress Invitation Modal seen by user',
+  PROGRESS_V2_ONE_ROW_EXPANDED: 'Section New Progress One Student Row Expanded',
+  PROGRESS_V2_ALL_ROWS_EXPANDED:
+    'Section New Progress All Student Rows Expanded',
+  PROGRESS_V2_ONE_ROW_COLLAPSED:
+    'Section New Progress One Student Row Collapsed',
+  PROGRESS_V2_ALL_ROWS_COLLAPSED:
+    'Section New Progress All Student Rows Collapsed',
 
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
@@ -141,6 +174,15 @@ const EVENTS = {
   SUMMARY_PAGE_LOADED: 'Summary Page Loaded',
   SUMMARY_PAGE_NEXT_LEVEL_CLICKED: 'Summary Page Next Level Clicked',
   SUMMARY_PAGE_BACK_TO_LEVEL_CLICKED: 'Summary Page Back To Level Clicked',
+
+  // Check for understanding
+  CFU_NAMES_TOGGLED_ON: 'Summary Page Names Toggled On',
+  CFU_NAMES_TOGGLED_OFF: 'Summary Page Names Toggled Off',
+  CFU_RESPONSE_HIDDEN: 'Summary Page Response Hidden',
+  CFU_RESPONSE_PINNED: 'Summary Page Response Pinned',
+  CFU_RESPONSE_UNPINNED: 'Summary Page Response Unpinned',
+  CFU_RESPONSE_ALL_UNHID: 'Summary Page Response Hidden Responses Unhidden',
+  CFU_RESPONSE_ALL_UNPINNED: 'Summary Page Response All Unpinned',
 
   // Maker setup
   MAKER_SETUP_PAGE_BOARD_TYPE_EVENT: 'Board Type On Maker Setup Page',
@@ -245,11 +287,24 @@ const EVENTS = {
   // PL Landing Page
   MY_PL_PAGE_VISITED: 'My Professional Learning Page Visited',
 
+  // Header navigation
+  SIGNED_OUT_USER_SEES_HEADER: 'Signed Out Navigation Header Shown',
+  SIGNED_OUT_USER_CLICKS_HEADER_LINK: 'Signed Out User Clicks Header Link',
+  SIGNED_OUT_USER_CLICKS_HAMBURGER_LINK:
+    'Signed Out User Clicks Hamburger Link',
+  SIGNED_OUT_USER_CLICKS_SIGN_IN: 'Signed Out User Clicks Sign In Button',
+  SIGNED_OUT_USER_CLICKS_HELP_MENU: 'Signed Out User Clicks Help Menu',
+  CREATE_ACCOUNT_BUTTON_CLICKED: 'Create Account Button Clicked',
+
   // Header Create menu
   SIGNED_OUT_USER_CLICKS_CREATE_DROPDOWN:
     'Signed Out User Clicks Create Dropdown',
   SIGNED_OUT_USER_SELECTS_CREATE_DROPDOWN_OPTION:
     'Signed Out User Selects Create Dropdown Option',
+
+  // Projects
+  RUN_BUTTON_PRESSED_SIGNED_OUT:
+    'Signed Out User Presses Run Button on Standalone Project',
 
   // Project sharing via 'Share' button
   SHARING_DIALOG_OPEN: 'User Opens Project Share Dialog',

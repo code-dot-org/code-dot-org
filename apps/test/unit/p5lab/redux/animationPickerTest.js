@@ -8,8 +8,6 @@ import {
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 var Goal = animationPicker.Goal;
 
 const testAnimation = {
@@ -47,12 +45,12 @@ describe('animationPicker', function () {
     };
 
     it('has expected default state', function () {
-      expect(reducer(undefined, {})).to.deep.equal(initialState);
+      expect(reducer(undefined, {})).toEqual(initialState);
     });
 
     it('returns original state on unhandled action', function () {
       var state = {};
-      expect(reducer(state, {})).to.equal(state);
+      expect(reducer(state, {})).toBe(state);
     });
 
     describe('action: show', function () {
@@ -61,39 +59,39 @@ describe('animationPicker', function () {
       it('sets state to visible if state was not visible', function () {
         var state = {};
         var newState = reducer(state, show(Goal.NEW_ANIMATION, false));
-        expect(newState).not.to.equal(state);
-        expect(newState.visible).to.be.true;
+        expect(newState).not.toBe(state);
+        expect(newState.visible).toBe(true);
       });
 
       it('sets goal to provided goal', function () {
         var state = {};
         var newState = reducer(state, show(Goal.NEW_ANIMATION, false));
-        expect(newState).not.to.equal(state);
-        expect(newState.goal).to.equal(Goal.NEW_ANIMATION);
+        expect(newState).not.toBe(state);
+        expect(newState.goal).toBe(Goal.NEW_ANIMATION);
 
         state = {};
         newState = reducer(state, show(Goal.NEW_FRAME, false));
-        expect(newState).not.to.equal(state);
-        expect(newState.goal).to.equal(Goal.NEW_FRAME);
+        expect(newState).not.toBe(state);
+        expect(newState.goal).toBe(Goal.NEW_FRAME);
       });
 
       it('returns original state if already visible', function () {
         var state = {visible: true};
         var newState = reducer(state, show(Goal.NEW_ANIMATION, false));
-        expect(newState).to.equal(state);
+        expect(newState).toBe(state);
       });
 
       it('sets state to isSpriteLab if isSpriteLab was false', function () {
         var state = {};
         var newState = reducer(state, show(Goal.NEW_ANIMATION, true));
-        expect(newState).not.to.equal(state);
-        expect(newState.isSpriteLab).to.be.true;
+        expect(newState).not.toBe(state);
+        expect(newState.isSpriteLab).toBe(true);
       });
 
       it('sets state to not isBackground', function () {
         var state = {};
         var newState = reducer(state, show(Goal.NEW_ANIMATION, true));
-        expect(newState.isBackground).to.be.false;
+        expect(newState.isBackground).toBe(false);
       });
     });
 
@@ -103,7 +101,7 @@ describe('animationPicker', function () {
       it('sets state to isBackground', function () {
         var state = {};
         var newState = reducer(state, showBackground(Goal.NEW_ANIMATION));
-        expect(newState.isBackground).to.be.true;
+        expect(newState.isBackground).toBe(true);
       });
     });
 
@@ -113,15 +111,15 @@ describe('animationPicker', function () {
       it('sets state to not visible if state was visible', function () {
         var state = {visible: true};
         var newState = reducer(state, hide());
-        expect(newState).not.to.equal(state);
-        expect(newState.visible).to.be.false;
+        expect(newState).not.toBe(state);
+        expect(newState.visible).toBe(false);
       });
 
       it('removes goal', function () {
         var state = {visible: true, goal: Goal.NEW_ANIMATION};
         var newState = reducer(state, hide());
-        expect(newState).not.to.equal(state);
-        expect(newState.goal).to.be.null;
+        expect(newState).not.toBe(state);
+        expect(newState.goal).toBeNull();
       });
     });
 
@@ -130,15 +128,15 @@ describe('animationPicker', function () {
 
       it('sets uploadInProgress', function () {
         var newState = reducer(initialState, beginUpload('filename.png'));
-        expect(newState).not.to.equal(initialState);
-        expect(newState.uploadInProgress).to.be.true;
+        expect(newState).not.toBe(initialState);
+        expect(newState.uploadInProgress).toBe(true);
       });
 
       it('records the upload filename', function () {
         var filename = 'filename.png';
         var newState = reducer(initialState, beginUpload(filename));
-        expect(newState).not.to.equal(initialState);
-        expect(newState.uploadFilename).to.equal(filename);
+        expect(newState).not.toBe(initialState);
+        expect(newState.uploadFilename).toBe(filename);
       });
     });
 
@@ -148,15 +146,15 @@ describe('animationPicker', function () {
       it('unsets uploadInProgress', function () {
         var state = {uploadInProgress: true};
         var newState = reducer(state, handleUploadError('Error Status'));
-        expect(newState).not.to.equal(state);
-        expect(newState.uploadInProgress).to.be.false;
+        expect(newState).not.toBe(state);
+        expect(newState.uploadInProgress).toBe(false);
       });
 
       it('records the error status', function () {
         var status = 'Error Status';
         var newState = reducer(initialState, handleUploadError(status));
-        expect(newState).not.to.equal(initialState);
-        expect(newState.uploadError).to.equal(status);
+        expect(newState).not.toBe(initialState);
+        expect(newState.uploadError).toBe(status);
       });
     });
 
@@ -166,10 +164,10 @@ describe('animationPicker', function () {
       it('adds object to selectedAnimations state', function () {
         const state = {selectedAnimations: {}};
         const newState = reducer(state, addSelectedAnimation(testAnimation));
-        expect(newState).not.to.equal(state);
-        expect(
-          newState.selectedAnimations[testAnimation.sourceUrl]
-        ).to.deep.equal(testAnimation);
+        expect(newState).not.toBe(state);
+        expect(newState.selectedAnimations[testAnimation.sourceUrl]).toEqual(
+          testAnimation
+        );
       });
     });
 
@@ -181,8 +179,8 @@ describe('animationPicker', function () {
         testAnimationState[testAnimation.sourceUrl] = testAnimation;
         const state = {selectedAnimations: testAnimationState};
         const newState = reducer(state, removeSelectedAnimation(testAnimation));
-        expect(newState).not.to.equal(state);
-        expect(Object.keys(newState.selectedAnimations).length).to.equal(0);
+        expect(newState).not.toBe(state);
+        expect(Object.keys(newState.selectedAnimations).length).toBe(0);
       });
     });
   });
@@ -209,17 +207,17 @@ describe('animationPicker', function () {
       getStore().dispatch(pickLibraryAnimation(testAnimation));
 
       let newState = getStore().getState().animationPicker;
-      expect(Object.keys(newState.selectedAnimations).length).to.equal(1);
+      expect(Object.keys(newState.selectedAnimations).length).toBe(1);
     });
 
     it('removes from the selectedAnimations object', function () {
       getStore().dispatch(pickLibraryAnimation(testAnimation));
       let newState = getStore().getState().animationPicker;
-      expect(Object.keys(newState.selectedAnimations).length).to.equal(1);
+      expect(Object.keys(newState.selectedAnimations).length).toBe(1);
 
       getStore().dispatch(pickLibraryAnimation(testAnimation));
       newState = getStore().getState().animationPicker;
-      expect(Object.keys(newState.selectedAnimations).length).to.equal(0);
+      expect(Object.keys(newState.selectedAnimations).length).toBe(0);
     });
   });
 
@@ -228,7 +226,7 @@ describe('animationPicker', function () {
     let show = animationPicker.show;
     let saveSelectedAnimations = animationPicker.saveSelectedAnimations;
 
-    before(() => {
+    beforeAll(() => {
       stubRedux();
       registerReducers(commonReducers);
       registerReducers({animationPicker: reducer});
@@ -236,7 +234,7 @@ describe('animationPicker', function () {
       getStore().dispatch(show(Goal.NEW_ANIMATION, true));
     });
 
-    after(() => {
+    afterAll(() => {
       restoreRedux();
     });
 
@@ -245,8 +243,8 @@ describe('animationPicker', function () {
       getStore().dispatch(saveSelectedAnimations());
 
       let newState = getStore().getState().animationPicker;
-      expect(newState.visible).to.be.false;
-      expect(Object.keys(newState.selectedAnimations).length).to.equal(0);
+      expect(newState.visible).toBe(false);
+      expect(Object.keys(newState.selectedAnimations).length).toBe(0);
     });
   });
 });

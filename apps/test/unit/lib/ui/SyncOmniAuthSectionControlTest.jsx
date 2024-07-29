@@ -1,6 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {stub} from 'sinon';
+import {stub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {
@@ -16,7 +16,7 @@ import Button from '@cdo/apps/templates/Button';
 import * as utils from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('SyncOmniAuthSectionControl', () => {
   let updateRoster, testSyncSucceeds, testSyncFails, defaultProps;

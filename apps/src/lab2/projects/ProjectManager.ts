@@ -10,14 +10,17 @@
  *
  * If a project manager is destroyed, the enqueued save will be cancelled, if it exists.
  */
-import {SourcesStore} from './SourcesStore';
-import {ChannelsStore} from './ChannelsStore';
-import {Channel, ProjectAndSources, ProjectSources} from '../types';
-import {currentLocation} from '@cdo/apps/utils';
-import LabMetricsReporter from '../Lab2MetricsReporter';
-import {ValidationError} from '../responseValidators';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
+import {currentLocation} from '@cdo/apps/utils';
+
+import LabMetricsReporter from '../Lab2MetricsReporter';
 import Lab2Registry from '../Lab2Registry';
+import {ValidationError} from '../responseValidators';
+import {Channel, ProjectAndSources, ProjectSources} from '../types';
+
+import {ChannelsStore} from './ChannelsStore';
+import {SourcesStore} from './SourcesStore';
+
 const {reload} = require('@cdo/apps/utils');
 
 export default class ProjectManager {
@@ -304,7 +307,11 @@ export default class ProjectManager {
     // Only save the source if it has changed.
     if (this.sourcesToSave && sourceChanged) {
       try {
-        await this.sourcesStore.save(this.channelId, this.sourcesToSave);
+        await this.sourcesStore.save(
+          this.channelId,
+          this.sourcesToSave,
+          this.lastChannel.projectType
+        );
       } catch (error) {
         this.onSaveFail('Error saving sources', error as Error);
         return;

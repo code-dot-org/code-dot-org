@@ -6,7 +6,6 @@ require 'cdo/geocoder'
 require 'varnish_environment'
 require_relative '../legacy/middleware/files_api'
 require_relative '../legacy/middleware/channels_api'
-require_relative '../legacy/middleware/tables_api'
 require 'shared_resources'
 require_relative '../legacy/middleware/net_sim_api'
 require_relative '../legacy/middleware/sound_library_api'
@@ -77,8 +76,7 @@ module Dashboard
     config.middleware.insert_after VarnishEnvironment, FilesApi
 
     config.middleware.insert_after FilesApi, ChannelsApi
-    config.middleware.insert_after ChannelsApi, TablesApi
-    config.middleware.insert_after TablesApi, SharedResources
+    config.middleware.insert_after ChannelsApi, SharedResources
     config.middleware.insert_after SharedResources, NetSimApi
     config.middleware.insert_after NetSimApi, AnimationLibraryApi
     config.middleware.insert_after AnimationLibraryApi, SoundLibraryApi
@@ -89,6 +87,12 @@ module Dashboard
 
     require 'cdo/rack/upgrade_insecure_requests'
     config.middleware.use ::Rack::UpgradeInsecureRequests
+
+    if CDO.use_cookie_dcdo
+      # Enables the setting of DCDO via cookies for testing purposes.
+      require 'cdo/rack/cookie_dcdo'
+      config.middleware.insert_after ActionDispatch::RequestId, Rack::CookieDCDO
+    end
 
     config.encoding = 'utf-8'
 

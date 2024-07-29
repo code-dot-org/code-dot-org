@@ -1,5 +1,3 @@
-- show_game_design_curriculum = !!DCDO.get('curriculum-launch-2024', false)
-
 - video_curricula_index = 7
 
 - video_curricula_tags = [hoc_s(:module_grade_6_10), hoc_s(:module_grade_9_12), hoc_s(:module_grade_9_12), hoc_s(:module_grade_3_12), hoc_s(:module_grade_3_12), hoc_s(:module_grade_3_12), hoc_s(:module_grade_k_12)]
@@ -15,25 +13,24 @@
 
 
 - video_curricula_index.times do |index|
-  - unless index == 5 && !show_game_design_curriculum
-    .action-block.action-block--two-col.video-101__text
-      - if index === 0 || index === 1 || index === 2 || index === 3 || index === 4
-        %figure.video-101__video.col-50
-          = view :display_video_thumbnail, id: video_id[index], video_code: video_code[index], play_button: 'center', letterbox: 'false'
-      - if index === 5
-        .video-101__image
-          %img{src: "/images/game-design-illustration.png", style: "width: 100%" }
-      - if index === 6
-        .video-101__image
-          %img{src: "/images/hoc2022-banner.png", style: "width: 100%" }
-      .text-wrapper.col-50
-        %p.overline
-          Grades:
-          = video_curricula_tags[index]
-        %h3
-          = video_curricula_title[index]
-        %p.heading-sm
-          = video_curricula_desc[index]
+  .action-block.action-block--two-col.video-101__text
+    - if index === 0 || index === 1 || index === 2 || index === 3 || index === 4
+      %figure.video-101__video.col-50
+        = view :display_video_thumbnail, id: video_id[index], video_code: video_code[index], play_button: 'center', letterbox: 'false'
+    - if index === 5
+      .video-101__image
+        %img{src: "/images/game-design-illustration.png", style: "width: 100%" }
+    - if index === 6
+      .video-101__image
+        %img{src: "/images/hoc2022-banner.png", style: "width: 100%" }
+    .text-wrapper.col-50
+      %p.overline
+        Grades:
+        = video_curricula_tags[index]
+      %h3
+        = video_curricula_title[index]
+      %p.heading-sm
+        = video_curricula_desc[index]
 
-        %a.link-button{href: video_link[index]}
-          = hoc_s(video_link_title[index])
+      %a.link-button{href: video_link[index]}
+        = hoc_s(video_link_title[index])

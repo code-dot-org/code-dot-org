@@ -1,8 +1,8 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import experiments from '@cdo/apps/util/experiments';
 
-import {assert} from '../util/reconfiguredChai';
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {setExternalGlobals} from '../util/testUtils';
 
 describe('experiments', function () {
@@ -11,7 +11,7 @@ describe('experiments', function () {
 
   setExternalGlobals();
 
-  before(function () {
+  beforeAll(function () {
     experiments.getQueryString_ = function () {
       return mockedQueryString;
     };

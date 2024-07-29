@@ -27,7 +27,7 @@
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Make sure the eat block is connected to the event block. \\n\\nThey should snap together like puzzle pieces!\",\"hint_id\":\"Connect\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/dbb73181d1df5d325e3dff62f827017d/csc_ecosystems_ocean_algae_2023.mp3\"}]",
     "instructions_important": "false",
     "short_instructions": "Add a block to simulate how the fish eat the algae in the ocean.",
-    "long_instructions": "<div style=\"background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;\">\r\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; \"> \r\nIf students want to rewatch the video, they can access it beneath the playspace.\r\n</p>\r\n</div>\r\n\r\n##Food Chain - Fish Eat Algae\r\n**When the fish touches an algae, the fish eats the algae**\r\n\r\n- Find the event <code style=\"color:black; background-color:#6AF36C\">when fish touches algae</code>\r\n- Connect an <code style=\"color:black; background-color:#5ED5DD\">eat object</code> block under the event\r\n- Press <code style=\"color:black; background-color:#FFBD46\">Run</code>. **Are the fish eating the algae?**\r\n\r\n",
+    "long_instructions": "##Food Chain - Fish Eat Algae\r\n**When the fish touches an algae, the fish eats the algae**\r\n\r\n- Find the event <code style=\"color:black; background-color:#6AF36C\">when fish touches algae</code>\r\n- Connect an <code style=\"color:black; background-color:#5ED5DD\">eat object</code> block under the event\r\n- Press <code style=\"color:black; background-color:#FFBD46\">Run</code>. **Are the fish eating the algae?**\r\n\r\n",
     "submittable": "false",
     "hide_share_and_remix": "true",
     "never_autoplay_video": "false",
@@ -50,7 +50,7 @@
     "encrypted_examples": "Q00Be2qsdk+4kI7XNyTpKOqfk3O3NI1zRjaMgEnHRGq0W6bwkBfrhmWJ150Q\nBjYYrIFMVSZsT7lJkLI/oRkm+A==\n",
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-23T19:37:19.075+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_algae_maker\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_algae_maker\"},{\"changed_at\":\"2024-06-24 23:16:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-23T19:37:19.075+00:00\",\"changed\":[\"cloned from \\\"csc_ecosystems_ocean_algae_maker\\\"\"],\"cloned_from\":\"csc_ecosystems_ocean_algae_maker\"},{\"changed_at\":\"2024-06-24 23:16:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-06-26 17:43:42 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

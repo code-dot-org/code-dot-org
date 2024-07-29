@@ -1,17 +1,18 @@
 import $ from 'jquery';
+import jsonic from 'jsonic';
+
+import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
+import {installCustomBlocks} from '@cdo/apps/block_utils';
+import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
-import jsonic from 'jsonic';
-import {installCustomBlocks} from '@cdo/apps/block_utils';
-import {customInputTypes as spritelabCustomInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
 import {customInputTypes as dancelabCustomInputTypes} from '@cdo/apps/dance/blockly/blocks';
-import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/spritelab/constants';
 import animationList, {
   setInitialAnimationList,
 } from '@cdo/apps/p5lab/redux/animationList';
-import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
+import {customInputTypes as spritelabCustomInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
+import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/spritelab/constants';
 import {getStore, registerReducers} from '@cdo/apps/redux';
-import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 
 const VALID_COLOR = 'black';
 const INVALID_COLOR = '#d00';

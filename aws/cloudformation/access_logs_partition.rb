@@ -6,9 +6,9 @@
 require 'aws-sdk-glue'
 GLUE = Aws::Glue::Client.new
 
-DATABASE = ENV['DATABASE']
-TABLE = ENV['TABLE']
-PREFIX = ENV['PREFIX']
+DATABASE = ENV.fetch('DATABASE', nil)
+TABLE = ENV.fetch('TABLE', nil)
+PREFIX = ENV.fetch('PREFIX', nil)
 
 STORAGE_DESCRIPTOR = GLUE.get_table(
   database_name: DATABASE,

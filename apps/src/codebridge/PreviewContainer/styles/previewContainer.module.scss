@@ -1,0 +1,8 @@
+@import 'color.scss';
+
+.previewContainer {
+  height: 100%;
+  grid-area: preview-container;
+  background-color: $darkest_gray;
+  color: $white;
+}

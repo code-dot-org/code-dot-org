@@ -3,9 +3,9 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Variables as Score
+# Environment and Players
 
-##### So far, you have learned about players, background, and behaviors. In this lesson, you will learn how to use variables in game design. 
+#### So far, you have used some example games, coded background and players, and used variables. 
 
 
 <img src="https://images.code.org/a8b084f98d4de41f5759dcbd016260db-image-1718727974560.26.10 AM.png" alt="pixelated cartoon unicorn" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
@@ -13,9 +13,9 @@ markdown <<MARKDOWN
 
 ## In this lesson, you will:
 
-* ##### Learn about how variables can be used in games. 
-* ##### Practice using variables.
-* ##### Create programs using variables.
+* #### Explore game mechanics like player movement, obstacles, scoring systems, and win/lose conditions.
+* #### Modify and build upon existing code to create a game with players and an environment. 
+
 
 
 ### **Suggested time:** 30 minutes

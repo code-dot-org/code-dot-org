@@ -14,7 +14,7 @@ class NewRelicClient
   # The production alert policy id for Code.org servers.
   PRODUCTION_ALERT_POLICY_ID = 368270
 
-  def initialize(api_key = ENV['NEWRELIC_API_KEY'])
+  def initialize(api_key = ENV.fetch('NEWRELIC_API_KEY', nil))
     @api_key = api_key
   end
 

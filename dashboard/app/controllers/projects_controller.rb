@@ -197,7 +197,6 @@ class ProjectsController < ApplicationController
     end
 
     view_options(full_width: true, responsive_content: false, no_padding_container: true, has_i18n: true)
-    @limited_gallery = limited_gallery?
     @current_tab = params[:tab_name]
     @project_count_millions = PROJECT_COUNT_MILLIONS
   end
@@ -545,9 +544,12 @@ class ProjectsController < ApplicationController
     render json: {channel_id: new_channel_id}
   end
 
+  def datablock_storage_options
+    {}
+  end
+
   def export_config
     return if redirect_under_13_without_tos_teacher(@level)
-    # TODO: post-firebase-cleanup, remove both branches of this conditional: #56994
     if params[:script_call]
       render js: "#{params[:script_call]}(#{datablock_storage_options.to_json});"
     else
@@ -558,17 +560,6 @@ class ProjectsController < ApplicationController
   def set_level
     @level = get_from_cache STANDALONE_PROJECTS[params[:key]][:name]
     @game = @level.game
-  end
-
-  # Due to risk of inappropriate content, we can hide non-featured Applab
-  # and Gamelab projects via DCDO. Internally, project_validators should
-  # always have access to all Applab and Gamelab projects, even if there is a
-  # limited gallery for others.
-  def limited_gallery?
-    dcdo_flag = DCDO.get('image_moderation', {})['limited_project_gallery']
-    limited_project_gallery = dcdo_flag.nil? ? true : dcdo_flag
-    project_validator = current_user&.permission? UserPermission::PROJECT_VALIDATOR
-    !project_validator && limited_project_gallery
   end
 
   # GET /projects/:channel_id/extra_links

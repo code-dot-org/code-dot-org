@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
+import {Link, TextLink} from '@dsco_/link';
 import $ from 'jquery';
 import PropTypes from 'prop-types';
-import {Link, TextLink} from '@dsco_/link';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import React, {useState} from 'react';
+
 import Dialog, {Title as DialogTitle} from '@cdo/apps/templates/Dialog';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const DataDocEditAll = props => {
   const {dataDocs: initialDataDocs} = props;

@@ -1,31 +1,38 @@
-# TODO(P20-990): Fix Policy Compliance UI tests
+@no_mobile
 Feature: Policy Compliance and Parental Permission
-
-  @skip
   Scenario: New under 13 account should be able to send a parental request.
-    Given I create a young student in Colorado who has never signed in named "Sally Student" after CPA exception and go home
-    Given I am on "http://studio.code.org/lockout"
+    Given I am on "http://studio.code.org"
+    # CPA new user lockout phase starts 1 month before CPA exception
+    Given CPA new user lockout phase starts at "2024-04-26T00:00:00MDT"
+
+    When I create a young student in Colorado who has never signed in named "Sally Student" after CPA exception and go home
+    Then I am on "http://studio.code.org/lockout"
 
     # It should not be a pending request
     Then I wait to see "#lockout-panel-form"
-    And element "#permission-status" contains text "Not Submitted"
+    Then I wait until element "#permission-status" contains text "Not Submitted"
+    And element ".lockout-panel h2" contains text "Just one more thing!"
+    And element "#lockout-panel-form > p:nth-child(1)" contains text "We need your parent or guardian to approve your account before you can get started. Please supply us with your parent or guardian's email address so they can grant you permission."
+    And element "#lockout-panel-form > p:nth-child(2)" contains text "Note: Your account will be deleted if we do not receive your parent or guardian's permission by "
 
     # Type in the email do re-enable the button
     And I press keys "parent@example.com" for element "#parent-email"
     Then element "#lockout-submit" is enabled
 
     # Ensure that we are now "pending"
-    And I take note of the current loaded page
     When I press "lockout-submit"
-    Then I wait until I am on a different page than I noted before
+    Then I wait until element "#permission-status" contains text "Pending"
+    And element ".lockout-panel h2" contains text "Thanks! We've contacted your parent/guardian."
+    And element "#lockout-panel-form > p:nth-child(1)" contains text "We sent an email to parent@example.com. Didn't receive anything? Update your parent or guardian's email below or send another request."
+    And element "#lockout-panel-form > p:nth-child(2)" contains text "Note: Your account will be deleted if we do not receive your parent or guardian's permission by "
 
-    Then I wait to see "#lockout-panel-form"
-    And element "#permission-status" contains text "Pending"
-
-  @skip
   Scenario: New under 13 account should be able to provide state and see lockout page to send parental request.
-    Given I create a young student who has never signed in named "Sally Student" after CPA exception
-    Given I am on "http://studio.code.org/home?forceStudentInterstitial=true"
+    Given I am on "http://studio.code.org"
+    # CPA new user lockout phase starts 1 month before CPA exception
+    Given CPA new user lockout phase starts at "2024-04-26T00:00:00MDT"
+
+    When I create a young student who has never signed in named "Sally Student" after CPA exception
+    Then I am on "http://studio.code.org/home?forceStudentInterstitial=true"
 
     Then I wait to see "#student-information-modal"
     And I select the "Colorado" option in dropdown "user_us_state"
@@ -43,17 +50,16 @@ Feature: Policy Compliance and Parental Permission
     Then element "#lockout-submit" is enabled
 
     # Ensure that we are now "pending"
-    And I take note of the current loaded page
     When I press "lockout-submit"
-    Then I wait until I am on a different page than I noted before
+    Then I wait until element "#permission-status" contains text "Pending"
 
-    Then I wait to see "#lockout-panel-form"
-    And element "#permission-status" contains text "Pending"
-
-  @skip
   Scenario: New under 13 account should be able to elect to sign out at the lockout.
-    Given I create a young student in Colorado who has never signed in named "Sally Student" after CPA exception and go home
-    Given I am on "http://studio.code.org/lockout"
+    Given I am on "http://studio.code.org"
+    # CPA new user lockout phase starts 1 month before CPA exception
+    Given CPA new user lockout phase starts at "2024-04-26T00:00:00MDT"
+
+    When I create a young student in Colorado who has never signed in named "Sally Student" after CPA exception and go home
+    Then I am on "http://studio.code.org/lockout"
 
     # It should not be a pending request
     Then I wait to see "#lockout-panel-form"
@@ -63,10 +69,13 @@ Feature: Policy Compliance and Parental Permission
     When I press "lockout-signout"
     Then I wait to see "#header_user_signin"
 
-  @skip
   Scenario: New under 13 account should be able to resend the email
-    Given I create a young student in Colorado who has never signed in named "Sally Student" after CPA exception and go home
-    Given I am on "http://studio.code.org/lockout"
+    Given I am on "http://studio.code.org"
+    # CPA new user lockout phase starts 1 month before CPA exception
+    Given CPA new user lockout phase starts at "2024-04-26T00:00:00MDT"
+
+    When I create a young student in Colorado who has never signed in named "Sally Student" after CPA exception and go home
+    Then I am on "http://studio.code.org/lockout"
 
     # It should not be a pending request
     Then I wait to see "#lockout-panel-form"
@@ -77,23 +86,20 @@ Feature: Policy Compliance and Parental Permission
     Then element "#lockout-submit" is enabled
 
     # Ensure that we are now "pending"
-    And I take note of the current loaded page
     When I press "lockout-submit"
-    Then I wait until I am on a different page than I noted before
-
-    Then I wait to see "#lockout-panel-form"
     Then I wait until element "#permission-status" contains text "Pending"
 
     # Perform a "resend"
-    And I take note of the current loaded page
     When I press "lockout-resend"
-    Then I wait until I am on a different page than I noted before
     Then I wait to see "#lockout-panel-form"
 
-  @skip
   Scenario: New under 13 account should be able to send a different email
-    Given I create a young student in Colorado who has never signed in named "Sally Student" after CPA exception and go home
-    Given I am on "http://studio.code.org/lockout"
+    Given I am on "http://studio.code.org"
+    # CPA new user lockout phase starts 1 month before CPA exception
+    Given CPA new user lockout phase starts at "2024-04-26T00:00:00MDT"
+
+    When I create a young student in Colorado who has never signed in named "Sally Student" after CPA exception and go home
+    Then I am on "http://studio.code.org/lockout"
 
     # It should not be a pending request
     Then I wait to see "#lockout-panel-form"
@@ -104,12 +110,8 @@ Feature: Policy Compliance and Parental Permission
     Then element "#lockout-submit" is enabled
 
     # Ensure that we are now "pending"
-    And I take note of the current loaded page
     When I press "lockout-submit"
-    Then I wait until I am on a different page than I noted before
-
-    Then I wait to see "#lockout-panel-form"
-    And element "#permission-status" contains text "Pending"
+    Then I wait until element "#permission-status" contains text "Pending"
 
     # Type in the email do re-enable the button
     When I clear the text from element "#parent-email"
@@ -117,17 +119,18 @@ Feature: Policy Compliance and Parental Permission
     Then element "#lockout-submit" is enabled
 
     # Ensure that the new email was used
-    And I take note of the current loaded page
     When I press "lockout-submit"
-    Then I wait until I am on a different page than I noted before
-
+    And I reload the page
     Then I wait to see "#lockout-panel-form"
     And element "#parent-email" has value "parent2@example.com"
 
-  @skip
   Scenario: Student should not be able to enter their own email as their parent's email
-    Given I create a young student in Colorado who has never signed in named "Sally Student" after CPA exception and go home
-    Given I am on "http://studio.code.org/lockout"
+    Given I am on "http://studio.code.org"
+    # CPA new user lockout phase starts 1 month before CPA exception
+    Given CPA new user lockout phase starts at "2024-04-26T00:00:00MDT"
+
+    When I create a young student in Colorado who has never signed in named "Sally Student" after CPA exception and go home
+    Then I am on "http://studio.code.org/lockout"
 
     # It should not be a pending request
     Then I wait to see "#lockout-panel-form"
@@ -137,10 +140,13 @@ Feature: Policy Compliance and Parental Permission
     And I press keys for the email for "Sally Student" into element "#parent-email"
     Then element "#lockout-submit" is disabled
 
-  @skip
   Scenario: Student should be able to enter their parent's email if their parent created their account
-    Given I create as a parent a young student in Colorado who has never signed in named "Sally Student" after CPA exception and go home
-    Given I am on "http://studio.code.org/lockout"
+    Given I am on "http://studio.code.org"
+    # CPA new user lockout phase starts 1 month before CPA exception
+    Given CPA new user lockout phase starts at "2024-04-26T00:00:00MDT"
+
+    When I create as a parent a young student in Colorado who has never signed in named "Sally Student" after CPA exception and go home
+    Then I am on "http://studio.code.org/lockout"
 
     # It should not be a pending request
     Then I wait to see "#lockout-panel-form"
@@ -150,10 +156,13 @@ Feature: Policy Compliance and Parental Permission
     And I press keys for the email for "Sally Student" into element "#parent-email"
     Then element "#lockout-submit" is enabled
 
-  @skip
   Scenario: Existing under 13 account in Colorado should not be locked out.
-    Given I create a young student in Colorado who has never signed in named "Sally Student" before CPA exception and go home
-    Given I am on "http://studio.code.org/home"
+    Given I am on "http://studio.code.org"
+    # CPA new user lockout phase starts 1 month before CPA exception
+    Given CPA new user lockout phase starts at "2024-04-26T00:00:00MDT"
+
+    When I create a young student in Colorado who has never signed in named "Sally Student" before CPA exception and go home
+    Then I am on "http://studio.code.org/home"
 
   Scenario: Teacher should be able to connect a third-party account even without a state specified
     Given I create a teacher who has never signed in named "Amstrad Teacher" after CPA exception and go home
@@ -264,3 +273,124 @@ Feature: Policy Compliance and Parental Permission
 
     # And it should tell me that the request was granted
     And element "#permission-status" contains text "Granted"
+
+  Scenario: Student account Under-13 in Colorado created before CPA exception cannot change age and state
+    Given I create a young student in Colorado named "Tandy" before CPA exception
+
+    Given I am on "http://studio.code.org/users/edit"
+
+    Then I wait to see "#user_age"
+    Then I wait to see "#user_us_state"
+    Then element "#user_us_state" is disabled
+    Then element "#user_age" is disabled
+
+  Scenario: Student account Under-13 in Colorado created after CPA exception cannot change age and state
+    Given I create a young student in Colorado named "Tandy" after CPA exception
+
+    Given I am on "http://studio.code.org/users/edit"
+
+    Then I wait to see "#user_age"
+    Then I wait to see "#user_us_state"
+    Then element "#user_us_state" is disabled
+    Then element "#user_age" is disabled
+
+  Scenario: Student account Under-13 not in Colorado created after CPA exception can change their age and state
+    Given I create a young student named "Tandy" after CPA exception
+
+    Given I am on "http://studio.code.org/users/edit"
+
+    Then I wait to see "#user_age"
+    Then I wait to see "#user_us_state"
+    Then element "#user_us_state" is enabled
+    Then element "#user_age" is enabled
+
+  Scenario: Student account Under-13 not in Colorado created before CPA exception can change their age and state
+    Given I create a young student named "Tandy" before CPA exception
+
+    Given I am on "http://studio.code.org/users/edit"
+
+    Then I wait to see "#user_age"
+    Then I wait to see "#user_us_state"
+    Then element "#user_us_state" is enabled
+    Then element "#user_age" is enabled
+
+  Scenario: Student account Over-13 and in Colorado created after CPA exception can change their age and state
+    Given I create a student in Colorado named "Tandy" after CPA exception
+
+    Given I am on "http://studio.code.org/users/edit"
+
+    Then I wait to see "#user_age"
+    Then I wait to see "#user_us_state"
+    Then element "#user_us_state" is enabled
+    Then element "#user_age" is enabled
+
+  Scenario: Student account Over-13 and in Colorado created before CPA exception can change their age and state
+    Given I create a student in Colorado named "Tandy" before CPA exception
+
+    Given I am on "http://studio.code.org/users/edit"
+
+    Then I wait to see "#user_age"
+    Then I wait to see "#user_us_state"
+    Then element "#user_us_state" is enabled
+    Then element "#user_age" is enabled
+
+  Scenario: Student account under-13 and in Colorado created after CPA exception using only clever cannot change their age and state
+    Given I create a young student using clever in Colorado named "Tandy" after CPA exception
+
+    Given I am on "http://studio.code.org/users/edit"
+
+    Then I wait to see "#user_age"
+    Then I wait to see "#user_us_state"
+    Then element "#user_us_state" is disabled
+    Then element "#user_age" is disabled
+
+   Scenario: Student account under-13 and in Colorado created before CPA exception using only clever cannot change their age and state
+    Given I create a young student using clever in Colorado named "Tandy" before CPA exception
+
+    Given I am on "http://studio.code.org/users/edit"
+
+    Then I wait to see "#user_age"
+    Then I wait to see "#user_us_state"
+    Then element "#user_us_state" is disabled
+    Then element "#user_age" is disabled
+
+  Scenario: Student account under-13 and in Colorado created before CPA exception using google cannot change their age and state
+    Given I create a young student using google in Colorado named "Tandy" before CPA exception
+
+    Given I am on "http://studio.code.org/users/edit"
+
+    Then I wait to see "#user_age"
+    Then I wait to see "#user_us_state"
+    Then element "#user_us_state" is disabled
+    Then element "#user_age" is disabled
+
+  Scenario: Student account under-13 and in Colorado created after CPA exception using google cannot change their age and state
+    Given I create a young student using google in Colorado named "Tandy" after CPA exception
+
+    Given I am on "http://studio.code.org/users/edit"
+
+    Then I wait to see "#user_age"
+    Then I wait to see "#user_us_state"
+    Then element "#user_us_state" is disabled
+    Then element "#user_age" is disabled
+
+   Scenario: Student account under-13 not in Colorado created after CPA exception using clever cannot change their age and state
+    Given I create a young student using clever named "Tandy" after CPA exception
+
+    Given I am on "http://studio.code.org/users/edit"
+
+    Then I wait to see "#user_age"
+    Then I wait to see "#user_us_state"
+    Then element "#user_us_state" is enabled
+    Then element "#user_age" is enabled
+
+  Scenario: Student account under-13 not in Colorado created before CPA exception using clever cannot change their age and state
+    Given I create a young student using clever named "Tandy" before CPA exception
+
+    Given I am on "http://studio.code.org/users/edit"
+
+    Then I wait to see "#user_age"
+    Then I wait to see "#user_us_state"
+    Then element "#user_us_state" is enabled
+    Then element "#user_age" is enabled
+  

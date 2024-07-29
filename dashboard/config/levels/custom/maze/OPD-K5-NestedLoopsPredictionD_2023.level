@@ -1,5 +1,6 @@
 <Karel>
   <config><![CDATA[{
+  "published": true,
   "game_id": 25,
   "created_at": "2023-03-24T18:15:49.000Z",
   "level_num": "custom",
@@ -47,9 +48,8 @@
     "show_type_hints": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-24T18:15:49.962+00:00\",\"changed\":[\"cloned from \\\"OPD-K5-NestedLoopsPredictionD_2022\\\"\"],\"cloned_from\":\"OPD-K5-NestedLoopsPredictionD_2022\"}]",
+  "audit_log": "[{\"changed_at\":\"2023-03-24T18:15:49.962+00:00\",\"changed\":[\"cloned from \\\"OPD-K5-NestedLoopsPredictionD_2022\\\"\"],\"cloned_from\":\"OPD-K5-NestedLoopsPredictionD_2022\"},{\"changed_at\":\"2024-06-27 19:47:56 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

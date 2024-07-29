@@ -48,24 +48,44 @@ const multiChartData = (data, highlightCorrect = false) => [
 ];
 
 const MultiResponses = ({scriptData, showCorrectAnswer = false}) => {
-  const answers = scriptData.level.properties.answers;
+  // Get the number of answers and a list of correct answers.
+  // The correct answers will be the letters for the correct answers, ex. ['A', 'C']
+  const [numAnswers, correctAnswers] = useMemo(() => {
+    let answers = [];
+    let correctIndices = [];
+    if (scriptData.level.properties.answers) {
+      // If the level is a multi/contained level, the answers are in the level properties.
+      answers = scriptData.level.properties.answers;
+      correctIndices = answers
+        .filter(answer => answer.correct)
+        .map(answer => answers.indexOf(answer));
+    } else if (scriptData.level.properties.predict_settings) {
+      // If the level is a predict level (lab2) the answers are in predict_settings.
+      const predictSettings = scriptData.level.properties.predict_settings;
+      // We should only be trying to load this component if this is a multiple choice question.
+      if (predictSettings.multipleChoiceOptions) {
+        answers = predictSettings.multipleChoiceOptions;
+
+        // solution is a comma-separated list of strings.
+        correctIndices = predictSettings.solution
+          .split(',')
+          .map(answer => answers.indexOf(answer));
+      }
+    }
+    const correctAnswers = correctIndices.map(index => LETTERS.charAt(index));
+    return [answers.length, correctAnswers];
+  }, [
+    scriptData.level.properties.answers,
+    scriptData.level.properties.predict_settings,
+  ]);
+
   const answerData = useMemo(
-    () => multiAnswerCounts(scriptData.responses, answers.length),
-    [scriptData.responses, answers.length]
+    () => multiAnswerCounts(scriptData.responses, numAnswers),
+    [scriptData.responses, numAnswers]
   );
   const answerMax = useMemo(
     () => Math.max(...Object.values(answerData)),
     [answerData]
-  );
-  const correctAnswers = useMemo(
-    () =>
-      answers.reduce((acc, cur, i) => {
-        if (cur.correct) {
-          acc.push([...LETTERS][i]);
-        }
-        return acc;
-      }, []),
-    [answers]
   );
 
   return (

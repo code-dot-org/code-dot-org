@@ -1,7 +1,8 @@
-import moduleStyles from '../views/toolbox.module.scss';
-import {BlockTypes} from './blockTypes';
 import {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
+import musicI18n from '../locale';
+
+import {BlockTypes} from './blockTypes';
 import {
   FIELD_REST_DURATION_NAME,
   PRIMARY_SOUND_INPUT_NAME,
@@ -11,7 +12,8 @@ import {
   DEFAULT_EFFECT_VALUE,
   FIELD_EFFECTS_VALUE,
 } from './constants';
-import musicI18n from '../locale';
+
+import moduleStyles from '../views/toolbox.module.scss';
 
 const baseCategoryCssConfig = {
   container: moduleStyles.toolboxCategoryContainer,

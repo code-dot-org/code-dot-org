@@ -1,6 +1,6 @@
-import onClickOutside from 'react-onclickoutside';
 import PropTypes from 'prop-types';
 import React from 'react';
+import onClickOutside from 'react-onclickoutside';
 
 export default onClickOutside(
   class AutocompleteSelector extends React.Component {

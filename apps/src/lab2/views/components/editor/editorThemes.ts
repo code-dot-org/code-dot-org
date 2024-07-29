@@ -1,11 +1,12 @@
-import {EditorView} from '@codemirror/view';
-import color from '@cdo/apps/util/color';
 import {
   syntaxHighlighting,
   defaultHighlightStyle,
   HighlightStyle,
 } from '@codemirror/language';
+import {EditorView} from '@codemirror/view';
 import {tags} from '@lezer/highlight';
+
+import color from '@cdo/apps/util/color';
 
 // modified from @codemirror/theme-one-dark
 const chalky = '#e5c07b',

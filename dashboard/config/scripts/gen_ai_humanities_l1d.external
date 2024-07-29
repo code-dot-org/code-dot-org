@@ -1,5 +1,8 @@
 name 'gen-ai-humanities-L1D'
 title 'Crafting Prompts'
+display_name 'Argumentative Essay Points'
+bubble_choice_description 'List three strong arguments against the use of single-use plastics.'
+thumbnail_url 'https://images.code.org/ed96c290fb37533f671fd46e58b1c1fb-image-1719504469532.png'
 
 markdown <<MARKDOWN
 ## Argumentative Essay Points

@@ -1,19 +1,22 @@
-import React from 'react';
 import cookies from 'js-cookie';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
-import danceMsg from './locale';
-import GameButtons from '../templates/GameButtons';
-import ArrowButtons from '../templates/ArrowButtons';
-import BelowVisualization from '../templates/BelowVisualization';
-import {MAX_GAME_WIDTH, GAME_HEIGHT} from './constants';
-import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
-import AgeDialog from '../templates/AgeDialog';
-import HourOfCodeGuideEmailDialog from '../templates/HourOfCodeGuideEmailDialog';
+
 import {getFilterStatus} from '@cdo/apps/dance/songs';
-import DanceAiModal from './ai/DanceAiModal';
 import SongSelector from '@cdo/apps/dance/SongSelector';
 import DCDO from '@cdo/apps/dcdo';
+
+import AgeDialog from '../templates/AgeDialog';
+import ArrowButtons from '../templates/ArrowButtons';
+import BelowVisualization from '../templates/BelowVisualization';
+import GameButtons from '../templates/GameButtons';
+import HourOfCodeGuideEmailDialog from '../templates/HourOfCodeGuideEmailDialog';
+import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
+
+import DanceAiModal from './ai/DanceAiModal';
+import {MAX_GAME_WIDTH, GAME_HEIGHT} from './constants';
+import danceMsg from './locale';
 
 const isHocEmailTimeOfYear = ['soon-hoc', 'actual-hoc'].includes(
   DCDO.get('hoc_mode', false)

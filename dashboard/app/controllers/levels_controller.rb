@@ -647,7 +647,7 @@ class LevelsController < ApplicationController
     # Parse a few specific JSON fields used by modern (Lab2) labs so that they are
     # stored in the database as a first-order member of the properties JSON, rather
     # than simply as a string of JSON belonging to a single property.
-    [:level_data, :aichat_settings, :validations, :panels].each do |key|
+    [:level_data, :aichat_settings, :validations, :panels, :predict_settings].each do |key|
       level_params[key] = JSON.parse(level_params[key]) if level_params[key]
     end
     # Delete validations from level data if present. We'll use the validations in level properties instead.

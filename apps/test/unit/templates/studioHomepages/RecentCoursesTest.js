@@ -8,8 +8,6 @@ import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
 import SetUpCourses from '@cdo/apps/templates/studioHomepages/SetUpCourses';
 import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
-
 import {
   courses,
   moreCourses,
@@ -28,7 +26,7 @@ describe('RecentCourses', () => {
           isProfessionalLearningCourse={false}
         />
       );
-      assert.equal(wrapper.find('ViewFeedback').length, 1);
+      expect(wrapper.find('ViewFeedback').length).toEqual(1);
     });
 
     it('shows ViewFeedback when hasFeedback is false', () => {
@@ -40,7 +38,7 @@ describe('RecentCourses', () => {
           isProfessionalLearningCourse={false}
         />
       );
-      assert.equal(wrapper.find('ViewFeedback').length, 0);
+      expect(wrapper.find('ViewFeedback').length).toEqual(0);
     });
     it('shows SetUpCourses when there are no courses', () => {
       const wrapper = shallow(
@@ -55,19 +53,19 @@ describe('RecentCourses', () => {
           </div>
         )
       );
-      expect(wrapper.find('TopCourse').exists()).to.be.false;
-      expect(wrapper.find('CourseCard').exists()).to.be.false;
-      expect(wrapper.find('SeeMoreCourses').exists()).to.be.false;
+      expect(wrapper.find('TopCourse').exists()).toBe(false);
+      expect(wrapper.find('CourseCard').exists()).toBe(false);
+      expect(wrapper.find('SeeMoreCourses').exists()).toBe(false);
     });
 
     it('SetUpCourses has no course when topCourse is null', () => {
       const wrapper = shallow(<RecentCourses topCourse={null} />);
-      expect(wrapper.find('SetUpCourses').prop('hasCourse')).to.be.false;
+      expect(wrapper.find('SetUpCourses').prop('hasCourse')).toBe(false);
     });
 
     it('SetUpCourses has no course when topCourse is undefined', () => {
       const wrapper = shallow(<RecentCourses topCourse={undefined} />);
-      expect(wrapper.find('SetUpCourses').prop('hasCourse')).to.be.false;
+      expect(wrapper.find('SetUpCourses').prop('hasCourse')).toBe(false);
     });
 
     it('shows a TopCourse if there is one course', () => {
@@ -89,8 +87,8 @@ describe('RecentCourses', () => {
           </div>
         )
       );
-      expect(wrapper.find('CourseCard').exists()).to.be.false;
-      expect(wrapper.find('SeeMoreCourses').exists()).to.be.false;
+      expect(wrapper.find('CourseCard').exists()).toBe(false);
+      expect(wrapper.find('SeeMoreCourses').exists()).toBe(false);
     });
 
     it('shows TopCourse and 2 CourseCards when there are 3 courses', () => {
@@ -192,7 +190,7 @@ describe('RecentCourses', () => {
           isProfessionalLearningCourse={true}
         />
       );
-      assert.equal(wrapper.find('SetUpCourses').length, 0);
+      expect(wrapper.find('SetUpCourses').length).toEqual(0);
     });
 
     it('shows ViewFeedback when hasFeedback is true', () => {
@@ -204,7 +202,7 @@ describe('RecentCourses', () => {
           isProfessionalLearningCourse={true}
         />
       );
-      assert.equal(wrapper.find('ViewFeedback').length, 1);
+      expect(wrapper.find('ViewFeedback').length).toEqual(1);
     });
 
     it('shows ViewFeedback when hasFeedback is false', () => {
@@ -216,7 +214,7 @@ describe('RecentCourses', () => {
           isProfessionalLearningCourse={true}
         />
       );
-      assert.equal(wrapper.find('ViewFeedback').length, 0);
+      expect(wrapper.find('ViewFeedback').length).toEqual(0);
     });
 
     it('sets header to professional learning header', () => {
@@ -227,8 +225,7 @@ describe('RecentCourses', () => {
           isProfessionalLearningCourse={true}
         />
       );
-      assert.equal(
-        wrapper.find('Connect(ContentContainer)').props().heading,
+      expect(wrapper.find('Connect(ContentContainer)').props().heading).toEqual(
         'My Professional Learning Courses'
       );
     });

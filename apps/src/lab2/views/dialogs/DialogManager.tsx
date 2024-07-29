@@ -1,8 +1,10 @@
 import React, {useCallback, useState} from 'react';
-import moduleStyles from './dialog-manager.module.scss';
-import StartOverDialog from './StartOverDialog';
-import SkipDialog from './SkipDialog';
+
 import GenericConfirmationDialog from './GenericConfirmationDialog';
+import SkipDialog from './SkipDialog';
+import StartOverDialog from './StartOverDialog';
+
+import moduleStyles from './dialog-manager.module.scss';
 
 /**
  * Manages displaying common dialogs for Lab2.

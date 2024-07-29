@@ -1,5 +1,7 @@
 import {LevelProperties} from '@cdo/apps/lab2/types';
 
+import {Role} from '../aiComponentLibrary/chatItems/types';
+
 // TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
 export type AichatInteractionStatusValue = string;
 
@@ -51,11 +53,6 @@ export type AichatContext = {
   scriptId: number | null;
   channelId: string | undefined;
 };
-
-export enum Role {
-  ASSISTANT = 'assistant',
-  USER = 'user',
-}
 
 export enum ViewMode {
   EDIT = 'edit-mode',

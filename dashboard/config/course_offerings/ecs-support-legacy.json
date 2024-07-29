@@ -1,7 +1,6 @@
 {
   "key": "ecs-support-legacy",
   "display_name": "ecs-support-legacy",
-  "category": "other",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,

@@ -1,13 +1,15 @@
-import React, {useCallback, useState} from 'react';
-import Typography from '@cdo/apps/componentLibrary/typography';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import FocusLock from 'react-focus-lock';
-import moduleStyles from './ShareDialog.module.scss';
 import QRCode from 'qrcode.react';
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import React, {useCallback, useState} from 'react';
+import FocusLock from 'react-focus-lock';
+
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import Typography from '@cdo/apps/componentLibrary/typography';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
+
+import moduleStyles from './ShareDialog.module.scss';
 
 const CopyToClipboardButton: React.FunctionComponent<{shareUrl: string}> = ({
   shareUrl,

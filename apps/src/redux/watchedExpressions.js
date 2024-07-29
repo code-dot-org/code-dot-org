@@ -1,4 +1,5 @@
 import Immutable from 'immutable';
+
 import {createUuid} from '../utils';
 
 /**

@@ -1,0 +1,107 @@
+:ruby
+  block_items = [
+    {
+      overline: hoc_s("maker_page.curricula_microbit.creating_apps.overline"),
+      title: hoc_s("maker_page.curricula_microbit.creating_apps.title"),
+      img: "/images/maker/maker-curriculum-microbit.png",
+      desc: hoc_s("maker_page.curricula_microbit.creating_apps.desc"),
+      duration: hoc_s("maker_page.curricula_microbit.creating_apps.duration"),
+      url_primary: CDO.studio_url("/s/microbit?viewAs=Instructor"),
+      url_secondary: CDO.studio_url("/courses/self-paced-pl-physical-computing"),
+      button_label_primary: hoc_s("maker_page.curricula_microbit.creating_apps.button.explore_unit.label"),
+      button_label_secondary: hoc_s("maker_page.curricula_microbit.creating_apps.button.teach.label"),
+      aria_label_primary: hoc_s("maker_page.curricula_microbit.creating_apps.button.explore_unit.aria_label"),
+      aria_label_secondary: hoc_s("maker_page.curricula_microbit.creating_apps.button.teach.aria_label"),
+    },
+    {
+      overline: hoc_s("maker_page.curricula_microbit.module_grade_2.overline"),
+      title: hoc_s("maker_page.curricula_microbit.module_grade_2.title"),
+      img: "/images/action-blocks/action-block-maker-grade-2.png",
+      desc: hoc_s("maker_page.curricula_microbit.module_grade_2.desc"),
+      duration: hoc_s("maker_page.curricula_microbit.module_grade_2.duration"),
+      url_primary: CDO.studio_url("/s/grade2-maker-2024"),
+      url_secondary: CDO.studio_url("/courses/microbitmakermodule-2024"),
+      button_label_primary: hoc_s("maker_page.curricula_microbit.button.explore_unit.label"),
+      button_label_secondary: hoc_s("maker_page.curricula_microbit.button.teach.label"),
+      aria_label_primary: hoc_s("maker_page.curricula_microbit.button.explore_unit.aria_label", markdown: :inline, locals:{grade: "2"}),
+      aria_label_secondary: hoc_s("maker_page.curricula_microbit.button.teach.aria_label", markdown: :inline, locals:{grade: "2"}),
+      new: true,
+    },
+    {
+      overline: hoc_s("maker_page.curricula_microbit.module_grade_3.overline"),
+      title: hoc_s("maker_page.curricula_microbit.module_grade_3.title"),
+      img: "/images/action-blocks/action-block-maker-grade-3.png",
+      desc: hoc_s("maker_page.curricula_microbit.module_grade_3.desc"),
+      duration: hoc_s("maker_page.curricula_microbit.module_grade_3.duration"),
+      url_primary: CDO.studio_url("/s/grade3-maker-2024"),
+      url_secondary: CDO.studio_url("/courses/microbitmakermodule-2024"),
+      button_label_primary: hoc_s("maker_page.curricula_microbit.button.explore_unit.label"),
+      button_label_secondary: hoc_s("maker_page.curricula_microbit.button.teach.label"),
+      aria_label_primary: hoc_s("maker_page.curricula_microbit.button.explore_unit.aria_label", markdown: :inline, locals:{grade: "3"}),
+      aria_label_secondary: hoc_s("maker_page.curricula_microbit.button.teach.aria_label", markdown: :inline, locals:{grade: "3"}),
+      new: true,
+    },
+    {
+      overline: hoc_s("maker_page.curricula_microbit.module_grade_4.overline"),
+      title: hoc_s("maker_page.curricula_microbit.module_grade_4.title"),
+      img: "/images/action-blocks/action-block-maker-grade-4.png",
+      desc: hoc_s("maker_page.curricula_microbit.module_grade_4.desc"),
+      duration: hoc_s("maker_page.curricula_microbit.module_grade_4.duration"),
+      url_primary: CDO.studio_url("/s/grade4-maker-2024"),
+      url_secondary: CDO.studio_url("/courses/microbitmakermodule-2024"),
+      button_label_primary: hoc_s("maker_page.curricula_microbit.button.explore_unit.label"),
+      button_label_secondary: hoc_s("maker_page.curricula_microbit.button.teach.label"),
+      aria_label_primary: hoc_s("maker_page.curricula_microbit.button.explore_unit.aria_label", markdown: :inline, locals:{grade: "4"}),
+      aria_label_secondary: hoc_s("maker_page.curricula_microbit.button.teach.aria_label", markdown: :inline, locals:{grade: "4"}),
+      new: true,
+    },
+    {
+      overline: hoc_s("maker_page.curricula_microbit.module_grade_5.overline"),
+      title: hoc_s("maker_page.curricula_microbit.module_grade_5.title"),
+      img: "/images/action-blocks/action-block-maker-grade-5.png",
+      desc: hoc_s("maker_page.curricula_microbit.module_grade_5.desc"),
+      duration: hoc_s("maker_page.curricula_microbit.module_grade_5.duration"),
+      url_primary: CDO.studio_url("/s/grade5-maker-2024"),
+      url_secondary: CDO.studio_url("/courses/microbitmakermodule-2024"),
+      button_label_primary: hoc_s("maker_page.curricula_microbit.button.explore_unit.label"),
+      button_label_secondary: hoc_s("maker_page.curricula_microbit.button.teach.label"),
+      aria_label_primary: hoc_s("maker_page.curricula_microbit.button.explore_unit.aria_label", markdown: :inline, locals:{grade: "5"}),
+      aria_label_secondary: hoc_s("maker_page.curricula_microbit.button.teach.aria_label", markdown: :inline, locals:{grade: "5"}),
+      new: true,
+    },
+  ]
+
+.carousel-wrapper
+  %swiper-container.three-col{navigation: "true", "navigation-next-el": ".swiper-nav-next", "navigation-prev-el": ".swiper-nav-prev", init: "false"}
+    - block_items.each do |block_item|
+      %swiper-slide
+        .action-block.action-block--one-col.flex-space-between
+          .content-wrapper
+            - if block_item[:new]
+              .flex-container.justify-space-between.align-items-start
+                %p.overline
+                  = block_item[:overline]
+                %p.new
+                  =hoc_s(:new)
+            - else
+              %p.overline
+                = block_item[:overline]
+            %h3
+              = block_item[:title]
+            %img{src: block_item[:img], alt: ""}
+            %p
+              = block_item[:desc]
+            %p
+              %strong
+                =hoc_s(:module_label_duration)
+              = block_item[:duration]
+          .content-footer
+            %a.link-button{href: block_item[:url_primary], aria:{label: block_item[:aria_label_primary]}}
+              = block_item[:button_label_primary]
+            %a.link-button.secondary{href: block_item[:url_secondary], aria:{label: block_item[:aria_label_secondary]}}
+              = block_item[:button_label_secondary]
+
+  %button.swiper-nav-prev
+  %button.swiper-nav-next
+
+= view :swiper

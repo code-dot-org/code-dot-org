@@ -1,10 +1,10 @@
 // react testing library import
-import {render, fireEvent, act, waitFor} from '@testing-library/react';
+import {act, fireEvent, render, screen, waitFor} from '@testing-library/react';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
 import * as utils from '@cdo/apps/code-studio/utils';
@@ -13,16 +13,28 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {
   getStore,
   registerReducers,
-  stubRedux,
   restoreRedux,
+  stubRedux,
 } from '@cdo/apps/redux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
+import {STEPS} from '@cdo/apps/templates/rubrics/productTourHelpers';
 import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {RubricAiEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
+import {
+  RubricAiEvaluationLimits,
+  RubricAiEvaluationStatus,
+} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  post: jest.fn().mockResolvedValue({
+    json: jest.fn().mockReturnValue({}),
+  }),
+}));
+
+fetch.mockIf(/\/rubrics\/.*/, JSON.stringify(''));
 
 describe('RubricContainer', () => {
   let clock;
@@ -698,10 +710,104 @@ describe('RubricContainer', () => {
     wrapper.update();
     expect(userFetchStub).to.have.been.called;
     expect(allFetchStub).to.have.been.called;
+    expect(wrapper.find('[title="info circle icon"]').length).to.be.greaterThan(
+      0
+    );
     expect(wrapper.text()).to.include(
       i18n.aiEvaluationStatus_request_too_large()
     );
     expect(wrapper.find('Button').at(0).props().disabled).to.be.true;
+  });
+
+  it('shows ready state on initial load for status 1004', async () => {
+    const returnedJson = {
+      attempted: true,
+      lastAttemptEvaluated: false,
+      status: 1004,
+    };
+    const returnedJsonAll = {
+      attemptedCount: 1,
+      attemptedUnevaluatedCount: 0,
+      csrfToken: 'abcdef',
+    };
+
+    const userFetchStub = stubFetchEvalStatusForUser(returnedJson);
+    const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchAiEvaluations(mockAiEvaluations);
+
+    render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          sectionId={42}
+          open
+        />
+      </Provider>
+    );
+
+    // Perform fetches
+    await wait();
+
+    expect(userFetchStub).to.have.been.called;
+    expect(allFetchStub).to.have.been.called;
+    expect(screen.queryByTestId('info-alert')).not.to.exist;
+    const button = screen.getByRole('button', {
+      name: 'Run AI Assessment for Project',
+    });
+    expect(button).not.to.be.disabled;
+  });
+
+  it('shows error on initial load for status 1005', async () => {
+    const returnedJson = {
+      attempted: true,
+      lastAttemptEvaluated: false,
+      status: 1005,
+    };
+    const returnedJsonAll = {
+      attemptedCount: 1,
+      attemptedUnevaluatedCount: 0,
+      csrfToken: 'abcdef',
+    };
+
+    const userFetchStub = stubFetchEvalStatusForUser(returnedJson);
+    const allFetchStub = stubFetchEvalStatusForAll(returnedJsonAll);
+    stubFetchTeacherEvaluations(noEvals);
+    stubFetchAiEvaluations(mockAiEvaluations);
+
+    render(
+      <Provider store={store}>
+        <RubricContainer
+          rubric={defaultRubric}
+          studentLevelInfo={defaultStudentInfo}
+          teacherHasEnabledAi={true}
+          currentLevelName={'test_level'}
+          reportingData={{}}
+          sectionId={42}
+          open
+        />
+      </Provider>
+    );
+
+    // Perform fetches
+    await wait();
+
+    expect(userFetchStub).to.have.been.called;
+    expect(allFetchStub).to.have.been.called;
+    expect(screen.queryByTestId('info-alert')).to.exist;
+    screen.getByText(
+      i18n.aiEvaluationStatus_teacher_limit_exceeded({
+        limit: RubricAiEvaluationLimits.TEACHER_LIMIT,
+      })
+    );
+    const button = screen.getByRole('button', {
+      name: 'Run AI Assessment for Project',
+    });
+    expect(button).to.be.disabled;
   });
 
   // react testing library
@@ -974,6 +1080,9 @@ describe('RubricContainer', () => {
       </Provider>
     );
 
+    const tourFabBg = document.getElementById('tour-fab-bg');
+    tourFabBg.scrollBy = jest.fn();
+
     const nextButton = await findByText('Next Tip');
 
     fireEvent.click(nextButton);
@@ -1017,7 +1126,11 @@ describe('RubricContainer', () => {
       </Provider>
     );
 
-    const skipButton = await findByRole('button', {name: '×'});
+    const skipButton = await findByRole(
+      'button',
+      {name: '×'},
+      {timeout: 10_000} // wait for introjs to load
+    );
 
     fireEvent.click(skipButton);
 
@@ -1050,7 +1163,8 @@ describe('RubricContainer', () => {
         />
       </Provider>
     );
-
+    const tourFabBg = document.getElementById('tour-fab-bg');
+    tourFabBg.scrollBy = jest.fn();
     const nextButton = await findByText('Next Tip');
 
     fireEvent.click(nextButton);
@@ -1094,6 +1208,8 @@ describe('RubricContainer', () => {
       </Provider>
     );
 
+    const tourFabBg = document.getElementById('tour-fab-bg');
+    tourFabBg.scrollBy = jest.fn();
     await wait();
 
     expect(queryByText('Getting Started with Your AI Teaching Assistant')).to
@@ -1108,5 +1224,14 @@ describe('RubricContainer', () => {
         {}
       )
     );
+  });
+
+  it('sanitizes all intro text rendered by introjs', () => {
+    STEPS.forEach((step, index) => {
+      expect(typeof step.intro).to.equal(
+        'object',
+        `STEP[${index}].intro should be wrapped in a react component or a call to sanitize(): ${step.intro}`
+      );
+    });
   });
 });

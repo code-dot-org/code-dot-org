@@ -3,11 +3,7 @@ include_recipe 'cdo-mysql::repo'
 apt_package 'mysql-server' do
   action :upgrade
 
-  if node['cdo-mysql']['target_version'] == '5.7'
-    version '5.7.42-1ubuntu18.04'
-  elsif node['cdo-mysql']['target_version'] == '8.0'
-    version '8.0.37-0ubuntu0.20.04.3'
-  end
+  version '8.0.37-0ubuntu0.20.04.3'
 
   notifies :create, 'template[cdo.cnf]', :immediately
   notifies :start, 'service[mysql]', :immediately

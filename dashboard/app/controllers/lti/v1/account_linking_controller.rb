@@ -1,3 +1,5 @@
+require 'metrics/events'
+
 module Lti
   module V1
     class AccountLinkingController < ApplicationController
@@ -31,9 +33,22 @@ module Lti
         head :bad_request unless PartialRegistration.in_progress?(session)
         params.require([:email, :password])
         existing_user = User.find_by_email_or_hashed_email(params[:email])
+        if existing_user&.admin?
+          flash[:alert] = I18n.t('lti.account_linking.admin_not_allowed')
+          redirect_to user_session_path(lti_provider: params[:lti_provider], lms_name: params[:lms_name]) and return
+        end
         if existing_user&.valid_password?(params[:password])
           Services::Lti::AccountLinker.call(user: existing_user, session: session)
           sign_in existing_user
+          metadata = {
+            'user_type' => existing_user.user_type,
+            'lms_name' => existing_user.lti_user_identities.first.lti_integration[:platform_name],
+          }
+          Metrics::Events.log_event(
+            user: existing_user,
+            event_name: 'lti_user_signin',
+            metadata: metadata,
+          )
           target_url = session[:user_return_to] || home_path
           redirect_to target_url
         else

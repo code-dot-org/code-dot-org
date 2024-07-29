@@ -1,7 +1,7 @@
-import {assert} from 'chai';
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
@@ -9,7 +9,7 @@ import Notification from '@cdo/apps/templates/Notification';
 import StudentHomepage from '@cdo/apps/templates/studioHomepages/StudentHomepage';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 import {courses, topCourse, joinedSections} from './homepagesTestData';
 

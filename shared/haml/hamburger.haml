@@ -4,23 +4,36 @@
 
 #hamburger{class: contents[:visibility], tabindex: "0", 'aria-label': I18n.t('header_screen_reader_hamburger')}
   #hamburger-contents.hide-responsive-menu
+    -# Show the Sign in and Create account buttons if the user is not signed in
+    - unless user_type
+      #hamburger-sign-up-buttons
+        .button-wrapper
+          %a.linktag{href: CDO.studio_url('users/sign_in'), class: 'button-signin', id: 'signin_button'}
+            .header_button.header_user#header_user_signin
+              %span= I18n.t("user_header_signin")
+              .signin_callout_wrapper
+          -# Create Acount button for the A/B test
+          %a.linktag{href: CDO.studio_url('users/sign_up'), class: 'button-create-account', id: 'create_account_button'}
+            .header_button.header_user#header_user_create_account
+              %span= I18n.t("user_header_create_account_low_cap")
+        .divider
     - contents[:entries].each do |entry|
       - if entry[:type] == "divider"
         .divider{id: entry[:id], class: entry[:class]}
       - elsif entry[:type] == "expander"
-        .hamburger-expandable-item.item{id: entry[:id], tabindex: "0"}
+        .hamburger-expandable-item.item{id: entry[:id], class: entry[:class], tabindex: "0"}
           .text= entry[:title]
           %i.arrow-down{class: "fa fa-caret-down"}
           %i.arrow-up{class: "fa fa-caret-up"}
         .hamburger-expandable-items{id: "#{entry[:id]}-items"}
           - entry[:subentries].each do |subentry|
             .item
-              %a{id: subentry[:id], href: subentry[:url]}= subentry[:title]
+              %a.hamburgerlink{id: subentry[:id], href: subentry[:url]}= subentry[:title]
       - else
         %div{class: entry[:class]}
           .item
             - target = entry[:target] ? entry[:target] : "_self"
-            %a{id: entry[:id], href: entry[:url], target: target, rel: entry[:rel]}= entry[:title]
+            %a.hamburgerlink{id: entry[:id], href: entry[:url], target: target, rel: entry[:rel]}= entry[:title]
 
   #hamburger-icon.clicktag{class: contents[:visibility]}
     %span{style: "pointer-events: none"}

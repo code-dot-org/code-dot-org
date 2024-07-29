@@ -1,11 +1,13 @@
 /** @file controls below an animation thumbnail */
+import PropTypes from 'prop-types';
 import React from 'react';
 import {OverlayTrigger, Tooltip} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import color from '@cdo/apps/util/color';
-import PropTypes from 'prop-types';
+
 import SpeedSlider from '@cdo/apps/templates/SpeedSlider';
-import ItemLoopToggle from './ItemLoopToggle';
+import color from '@cdo/apps/util/color';
+
 import DeleteAnimationDialog from './DeleteAnimationDialog';
+import ItemLoopToggle from './ItemLoopToggle';
 
 const sliderStyle = {
   float: 'none',

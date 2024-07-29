@@ -20,8 +20,8 @@ class AichatControllerTest < ActionController::TestCase
         channelId: "test"
       }
     }
-    valid_message = {role: 'user', chatMessageText: 'hello'}
-    @profanity_violation_message = {role: 'user', chatMessageText: 'Damn you, robot'}
+    valid_message = {role: 'user', chatMessageText: 'hello', status: 'unknown', timestamp: Time.now.to_i}
+    @profanity_violation_message = {role: 'user', chatMessageText: 'Damn you, robot', status: 'unknown', timestamp: Time.now.to_i}
     @valid_params = @common_params.merge(newMessage: valid_message)
     @profanity_violation_params = @common_params.merge(
       newMessage: @profanity_violation_message
@@ -31,7 +31,6 @@ class AichatControllerTest < ActionController::TestCase
 
   setup do
     @assistant_response = "This is an assistant response from Sagemaker"
-    AichatSagemakerHelper.stubs(:request_sagemaker_chat_completion).returns({status: 200, json: {body: {}}})
     AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).returns(@assistant_response)
     @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
   end
@@ -74,7 +73,7 @@ class AichatControllerTest < ActionController::TestCase
 
   test 'returns user profanity status when chat message contains profanity' do
     sign_in(@genai_pilot_student)
-    ShareFiltering.stubs(:find_failure).returns(ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn'))
+    ShareFiltering.stubs(:find_profanity_failure).returns(ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn'))
     post :chat_completion, params: @profanity_violation_params, as: :json
 
     assert_response :success
@@ -100,8 +99,7 @@ class AichatControllerTest < ActionController::TestCase
 
     # Note that second expected argument filters out the previous profane message
     # in what we send to Sagemaker.
-    AichatSagemakerHelper.expects(:format_inputs_for_sagemaker_request).
-      with(params[:aichatModelCustomizations], [ok_message], params[:newMessage].stringify_keys).once
+    AichatSagemakerHelper.expects(:get_sagemaker_assistant_response).with(params[:aichatModelCustomizations], [ok_message], params[:newMessage].stringify_keys).once
 
     sign_in(@genai_pilot_student)
     post :chat_completion, params: params, as: :json
@@ -114,7 +112,7 @@ class AichatControllerTest < ActionController::TestCase
 
   test 'returns model profanity status when model response contains profanity' do
     sign_in(@genai_pilot_student)
-    ShareFiltering.stubs(:find_failure).returns(
+    ShareFiltering.stubs(:find_profanity_failure).returns(
       nil,
       ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn')
     )
@@ -213,5 +211,25 @@ class AichatControllerTest < ActionController::TestCase
     ),
       as: :json
     refute_equal session.id, json_response['session_id']
+  end
+
+  test 'updates existing chat session when session id provided and a message field outside of chatMessageText, role, and status do not match' do
+    sign_in(@genai_pilot_teacher)
+
+    post :chat_completion, params: @valid_params, as: :json
+    session = AichatSession.find(json_response['session_id'])
+
+    post :chat_completion, params: @valid_params.merge(
+      {
+        sessionId: session.id,
+        storedMessages: [
+          @valid_params[:newMessage].merge(status: 'ok').stringify_keys,
+          {role: 'assistant', chatMessageText: @assistant_response, status: 'ok', timestamp: Time.now.to_i}.stringify_keys
+        ],
+        aichatModelCustomizations: @default_model_customizations
+      }
+    ),
+      as: :json
+    assert_equal session.id, json_response['session_id']
   end
 end

@@ -1,8 +1,10 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import {Motion, spring} from 'react-motion';
-import color from '@cdo/apps/util/color';
+
 import {borderRadius, tokenMargin} from '@cdo/apps/lib/levelbuilder/constants';
+import color from '@cdo/apps/util/color';
+
 import {lessonShapeForUnitEdit} from './shapes';
 
 /**

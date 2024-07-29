@@ -3,9 +3,10 @@
  * @see @code-dot-org/maze/src/harvesterCell
  */
 
-import React from 'react';
-import CellEditor from './CellEditor';
 import {cells, tiles} from '@code-dot-org/maze';
+import React from 'react';
+
+import CellEditor from './CellEditor';
 const PlanterCell = cells.PlanterCell;
 const SquareType = tiles.SquareType;
 

@@ -69,6 +69,9 @@ echo "#     Running test jobs with ${PROCS}x-parallelism     #"
 echo "##################################################"
 echo
 
+echo && echo "Starting jest"
+
+npx jest --silent --maxWorkers ${PROCS}
 
 echo && echo "Pre-webpacking karma tests before running them:"
 

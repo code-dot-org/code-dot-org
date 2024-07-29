@@ -1,8 +1,8 @@
 import appMain from '@cdo/apps/appMain';
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
-import WebLab from '@cdo/apps/weblab/WebLab';
 import skins from '@cdo/apps/skins';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import levels from '@cdo/apps/weblab/levels';
+import WebLab from '@cdo/apps/weblab/WebLab';
 
 export default function loadweblab(options) {
   options.skinsModule = skins;

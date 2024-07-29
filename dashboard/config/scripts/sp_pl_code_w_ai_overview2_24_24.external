@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Teaching Coding with AI
+# Coding with AI
 
 #### This unit empowers students to become confident, ethical coders. Students learn how to leverage generative AI tools to help **explain code, tackle problems, and even generate code.** More than just coding, this unit emphasizes **ethical considerations and responsible use of AI**, preparing students for the ever-evolving tech landscape.
  
@@ -22,5 +22,5 @@ markdown <<MARKDOWN
 
 ## Let's start learning! 
 
-![]()
+
 MARKDOWN

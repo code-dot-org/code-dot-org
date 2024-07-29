@@ -1,12 +1,13 @@
-import React, {Component} from 'react';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import ReactTooltip from 'react-tooltip';
+
+import {tipShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import LessonTip, {
   tipTypes,
 } from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
-import ReactTooltip from 'react-tooltip';
-import _ from 'lodash';
-import {tipShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import color from '@cdo/apps/util/color';
 
 export default class LessonTipIconWithTooltip extends Component {

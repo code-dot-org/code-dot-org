@@ -1,10 +1,13 @@
 /** @file Upload button wrapping a hidden uploader component. */
 import PropTypes from 'prop-types';
 import React from 'react';
-import HiddenUploader from './HiddenUploader.jsx';
-import Button from '../../templates/Button';
-import {assetButtonStyles} from './AddAssetButtonRow';
+
 import i18n from '@cdo/locale';
+
+import Button from '../../templates/Button';
+
+import {assetButtonStyles} from './AddAssetButtonRow';
+import HiddenUploader from './HiddenUploader.jsx';
 
 /**
  * A file upload component.

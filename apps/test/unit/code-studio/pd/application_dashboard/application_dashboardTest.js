@@ -1,4 +1,3 @@
-import {expect} from 'chai';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -30,7 +29,7 @@ describe('ApplicationDashboard', () => {
         regionalPartners: [{id: 1, name: 'A+ College Ready', group: 1}],
         isWorkshopAdmin: true,
       });
-      expect(state.regionalPartners.regionalPartnerFilter.label).to.eql(
+      expect(state.regionalPartners.regionalPartnerFilter.label).toEqual(
         UNMATCHED_PARTNER_LABEL
       );
     });
@@ -43,7 +42,7 @@ describe('ApplicationDashboard', () => {
         ],
         isWorkshopAdmin: false,
       });
-      expect(state.regionalPartners.regionalPartnerFilter.label).to.eql(
+      expect(state.regionalPartners.regionalPartnerFilter.label).toEqual(
         ALL_PARTNERS_LABEL
       );
     });
@@ -53,7 +52,7 @@ describe('ApplicationDashboard', () => {
         regionalPartners: [{id: 1, name: 'A+ College Ready', group: 1}],
         isWorkshopAdmin: false,
       });
-      expect(state.regionalPartners.regionalPartnerFilter.label).to.eql(
+      expect(state.regionalPartners.regionalPartnerFilter.label).toEqual(
         'A+ College Ready'
       );
     });

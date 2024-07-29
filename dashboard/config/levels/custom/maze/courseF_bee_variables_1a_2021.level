@@ -36,7 +36,7 @@
     "authored_hints": "[]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseF_bee_functions_1_2018_1\",\r\n  \"callout_text\": \"You can find your variables under here!\",\r\n  \"element_id\": \"[id=':5.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"courseF_bee_functions_1_2018_1\",\"callout_text\":\"You can find your variables under here!\",\"element_id\":\"[id=':5.label']\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\"[id='blockly-4.label']\",\"localization_key\":\"courseF_bee_functions_1_2018_1\",\"callout_text\":\"You can find your variables under here!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
     "name_suffix": "_2021",
@@ -46,8 +46,7 @@
     "show_type_hints": "false",
     "encrypted": "false",
     "hint_prompt_attempts_threshold": "1",
-    "preload_asset_list": null,
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

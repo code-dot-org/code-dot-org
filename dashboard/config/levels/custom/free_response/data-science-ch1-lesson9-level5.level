@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-18T17:30:02.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Data Interpretation",
+    "long_instructions": "\r\n![](https://images.code.org/d558f33bd4c421b26a31835ad6d935ec-image-1721323680387.png)\r\n\r\n###Do This\r\n####Use the graph above to answer the following questions in the boxes below:\r\n\r\n- #####What are the outliers, patterns or trends found in this data? What insights do they provide?\r\n\r\n- #####What do you think is the story this data tells, and what are the potential causes?\r\n\r\n- #####Why is it important to recognize outliers, patterns, and trends in data?\r\n",
+    "teacher_markdown": "What are the outliers, patterns or trends found in this data? What insights do they provide?\r\nThe goal of this question is to assess students' abilities to identify and interpret significant data features such as outliers, trends, and patterns. \r\nStudents should point out specific outliers, such as the noted speeches for \"Argo,\" Roman Polanski for \"The Pianist,\" and Woody Allen for \"Midnight in Paris,\" discussing why these speeches might be exceptionally long or short.\r\nThey should identify trends like increasing length of speeches over time, particularly in certain categories like Best Picture or Directing, and suggest that these trends could reflect changing cultural norms around acceptance speeches, increased importance of certain awards, or evolving styles of expression within the film industry.\r\nA high-quality response might also analyze why there are fewer words in Technical or Writing category speeches compared to Best Picture or Acting categories, perhaps inferring that high-profile categories receive longer speeches due to their broader appeal or significance.\r\n\r\nWhat do you think is the story this data tells, and what are the potential causes?\r\nThis question encourages deeper analytical and interpretive skills by having students construct a narrative based on the observed data and hypothesize potential underlying causes or factors influencing that narrative.\r\nAn effective answer would weave the identified data points into a coherent narrative that might suggest how and why the film industry’s recognition events have evolved. For instance, a student might theorize that the gradual lengthening of speeches reflects an increasing acceptance of the Oscars as a platform not just for acknowledgment but for advocacy and personal expression, which may correlate with broader social and political movements.\r\nStudents might also discuss the impact of media coverage and public interest on the length and content of speeches, suggesting that as global interest in the Oscars grew, so did the pressure on winners to use their speech time effectively to thank, inspire, or advocate.\r\nAnother angle might explore the logistical changes in the event’s broadcast constraints or format over the years, including time limits imposed by broadcasters.\r\n\r\nWhy is it important to recognize outliers, patterns, and trends in data?\r\nThis question aims to evaluate students' understanding of the fundamental role that data features such as outliers, patterns, and trends play in data analysis across any context, including academic studies, industry research, and everyday problem-solving.\r\nA high-quality response should discuss how identifying outliers helps in pinpointing data that may require special attention or indicate anomalies that could skew analysis results. \r\nStudents should be able to explain how trends provide insights into historical changes and future directions, aiding in strategic planning and forecasting. \r\nPatterns, once recognized, can reveal recurring themes or behaviors that might otherwise be overlooked, providing a basis for systematic approaches or interventions. \r\nStudents might also mention how these skills are transferable to various real-world applications, enhancing their ability to navigate complex information landscapes effectively.\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-18 17:30:06 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

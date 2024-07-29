@@ -2,13 +2,17 @@
   "script": {
     "name": "self-paced-pl-computer-vision-2024",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "curriculum_umbrella": "Foundations of CS",
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-06-18 18:22:25 UTC",
+    "serialized_at": "2024-07-11 17:26:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -232,6 +236,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_overview_sandbox_24_24"
+        ],
         "progression": "Overview of Teaching Computer Vision"
       },
       "bonus": false,
@@ -254,6 +261,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_ cert_sandbox_24_24"
+        ],
         "progression": "Overview of Teaching Computer Vision"
       },
       "bonus": false,
@@ -276,6 +286,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_overview2_24_24"
+        ],
         "progression": "Overview of Teaching Computer Vision"
       },
       "bonus": false,
@@ -298,6 +311,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_definingCv_24_24"
+        ],
         "progression": "What is Computer Vision"
       },
       "bonus": false,
@@ -320,6 +336,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_Video_24"
+        ],
         "progression": "What is Computer Vision"
       },
       "bonus": false,
@@ -342,6 +361,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV-chk_LLM_24_24"
+        ],
         "progression": "What is Computer Vision"
       },
       "bonus": false,
@@ -364,6 +386,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_Design_Process_24_24"
+        ],
         "progression": "What is Computer Vision"
       },
       "bonus": false,
@@ -386,6 +411,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_lesson_structure_24_24"
+        ],
         "progression": "What is Computer Vision"
       },
       "bonus": false,
@@ -408,6 +436,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_Lesson_resources_24_24"
+        ],
         "progression": "What is Computer Vision"
       },
       "bonus": false,
@@ -430,6 +461,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV-lesson2Overview_24_24"
+        ],
         "progression": "Introduction to Computer Vision"
       },
       "bonus": false,
@@ -452,6 +486,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_Intro-to-CV_24_24"
+        ],
         "progression": "Introduction to Computer Vision"
       },
       "bonus": false,
@@ -474,6 +511,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl-CV_The Search for Pixel - review copy_24"
+        ],
         "progression": "Introduction to Computer Vision"
       },
       "bonus": false,
@@ -496,6 +536,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp_PL_CV_check_introCV_Pixel_24"
+        ],
         "progression": "Introduction to Computer Vision"
       },
       "bonus": false,
@@ -518,6 +561,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_reflection_wrapup_24_24"
+        ],
         "progression": "Introduction to Computer Vision"
       },
       "bonus": false,
@@ -540,6 +586,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_empathize_24_24"
+        ],
         "progression": "Empathize "
       },
       "bonus": false,
@@ -562,6 +611,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_empathize_Lessons_24_24"
+        ],
         "progression": "Empathize "
       },
       "bonus": false,
@@ -584,6 +636,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_empathize_Communities_24_24"
+        ],
         "progression": "Empathize "
       },
       "bonus": false,
@@ -606,6 +661,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_empathize_problem_observations_24_24"
+        ],
         "progression": "Empathize "
       },
       "bonus": false,
@@ -628,6 +686,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_defining_24_24"
+        ],
         "progression": "Defining"
       },
       "bonus": false,
@@ -650,6 +711,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_defining_Lessons_24_24"
+        ],
         "progression": "Defining"
       },
       "bonus": false,
@@ -672,6 +736,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_defining_userstories_24_24"
+        ],
         "progression": "Defining"
       },
       "bonus": false,
@@ -694,6 +761,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_defining_digDeeper_24_24"
+        ],
         "progression": "Defining"
       },
       "bonus": false,
@@ -716,6 +786,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_defining_diggingDeeper_24_24"
+        ],
         "progression": "Defining"
       },
       "bonus": false,
@@ -738,6 +811,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp_PL_CV_Check_Empaty_Define_24_24"
+        ],
         "progression": "Defining"
       },
       "bonus": false,
@@ -760,6 +836,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_ideating_24_24"
+        ],
         "progression": "Ideating"
       },
       "bonus": false,
@@ -782,6 +861,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_ideating_Lessons_24_24"
+        ],
         "progression": "Ideating"
       },
       "bonus": false,
@@ -804,6 +886,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_ideating_Lessons2_24_24"
+        ],
         "progression": "Ideating"
       },
       "bonus": false,
@@ -826,6 +911,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_ideating_Trainingdata_bias_24"
+        ],
         "progression": "Ideating"
       },
       "bonus": false,
@@ -848,6 +936,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_ideating_MediaPipe_24_24"
+        ],
         "progression": "Ideating"
       },
       "bonus": false,
@@ -870,6 +961,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pl_CV_L9_MediaPipe_ObDet-Images_Link_24"
+        ],
         "progression": "Ideating"
       },
       "bonus": false,
@@ -892,6 +986,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp_PL_CV_check_ideaing_bias_24_24"
+        ],
         "progression": "Ideating"
       },
       "bonus": false,
@@ -914,6 +1011,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_prototyping_24_24"
+        ],
         "progression": "Prototyping"
       },
       "bonus": false,
@@ -936,6 +1036,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_protoyping_Lessons_24_24"
+        ],
         "progression": "Prototyping"
       },
       "bonus": false,
@@ -958,6 +1061,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_prototyping_teachableMachine_24_24"
+        ],
         "progression": "Prototyping"
       },
       "bonus": false,
@@ -980,6 +1086,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_prototyping_trainingAModel_24_24"
+        ],
         "progression": "Prototyping"
       },
       "bonus": false,
@@ -1002,6 +1111,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp_pl_CV_L10_TeachableMachine_Link_24"
+        ],
         "progression": "Prototyping"
       },
       "bonus": false,
@@ -1024,6 +1136,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_final_project_24_24"
+        ],
         "progression": "Final Project"
       },
       "bonus": false,
@@ -1046,6 +1161,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_define_testing_24_24"
+        ],
         "progression": "Final Project"
       },
       "bonus": false,
@@ -1068,6 +1186,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_feedback_Lessons_24_24"
+        ],
         "progression": "Final Project"
       },
       "bonus": false,
@@ -1090,6 +1211,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_feedback_wrapUp_24_24"
+        ],
         "progression": "Final Project"
       },
       "bonus": false,
@@ -1112,6 +1236,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp_PL_CV_check_design_process_24_24"
+        ],
         "progression": "Final Project"
       },
       "bonus": false,
@@ -1134,6 +1261,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV-teacher_resources_overview_24_24"
+        ],
         "progression": "Teaching Resources"
       },
       "bonus": false,
@@ -1156,6 +1286,34 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-computer_vision_juiceMInd_intro"
+        ],
+        "progression": "Teaching Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-computer_vision_juiceMInd_intro"
+        ],
+        "lesson.key": "Teaching Resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-computer-vision-2024",
+        "activity_section.key": "39762dab-fc53-4dc1-8307-9fc654c333a4"
+      },
+      "level_keys": [
+        "self-paced-pl-computer_vision_juiceMInd_intro"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl_CV_teaching_bias_24_24"
+        ],
         "progression": "Teaching Resources"
       },
       "bonus": false,
@@ -1173,11 +1331,14 @@
       ]
     },
     {
-      "chapter": 44,
-      "position": 3,
-      "activity_section_position": 3,
+      "chapter": 45,
+      "position": 4,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV-teachingTipsCode_24_24"
+        ],
         "progression": "Teaching Resources"
       },
       "bonus": false,
@@ -1195,11 +1356,14 @@
       ]
     },
     {
-      "chapter": 45,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 46,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV-nextsteps_24_24"
+        ],
         "progression": "Teaching Resources"
       },
       "bonus": false,
@@ -1715,6 +1879,18 @@
         "level.key": "sp-pl-CV-teacher_resources_overview_24_24",
         "script_level.level_keys": [
           "sp-pl-CV-teacher_resources_overview_24_24"
+        ],
+        "lesson.key": "Teaching Resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-computer-vision-2024",
+        "activity_section.key": "39762dab-fc53-4dc1-8307-9fc654c333a4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-computer_vision_juiceMInd_intro",
+        "script_level.level_keys": [
+          "self-paced-pl-computer_vision_juiceMInd_intro"
         ],
         "lesson.key": "Teaching Resources",
         "lesson_group.key": "",

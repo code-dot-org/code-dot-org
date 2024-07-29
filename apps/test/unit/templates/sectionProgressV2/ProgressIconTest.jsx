@@ -4,7 +4,7 @@ import React from 'react';
 import {ITEM_TYPE} from '@cdo/apps/templates/sectionProgressV2/ItemType';
 import ProgressIcon from '@cdo/apps/templates/sectionProgressV2/ProgressIcon';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('ProgressIconComponent', () => {
   it('renders the FontAwesome icon for a specific itemType represented with a FontAwesomeIcon', () => {

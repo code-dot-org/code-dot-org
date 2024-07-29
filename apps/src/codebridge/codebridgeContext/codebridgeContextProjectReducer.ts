@@ -1,5 +1,5 @@
 import {ProjectType, ReducerAction, FileId, FolderId} from '@codebridge/types';
-import {sortFilesByName} from '@codebridge/utils';
+import {sortFilesByName, getOpenFileIds} from '@codebridge/utils';
 
 import {getActiveFileForProject} from '@cdo/apps/lab2/projects/utils';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
@@ -104,12 +104,18 @@ export const projectReducer = (project: ProjectType, action: ReducerAction) => {
         return project;
       }
 
+      const newOpenFileIds = getOpenFileIds(project);
+      if (!newOpenFileIds.find(openFileId => openFileId === fileId)) {
+        newOpenFileIds.push(fileId);
+      }
+
       const newProject = {
         ...project,
         files: {
           ...project.files,
           [fileId]: {...project.files[fileId], active: true, open: true},
         },
+        openFiles: newOpenFileIds,
       };
 
       if (activeFile) {
@@ -133,6 +139,9 @@ export const projectReducer = (project: ProjectType, action: ReducerAction) => {
           ...project.files,
           [fileId]: {...project.files[fileId], open: false, active: false},
         },
+        openFiles: project.openFiles?.filter(
+          openFileId => openFileId !== fileId
+        ),
       };
 
       // if the file -was- active, then we want to activate whatever file was next to it.
@@ -279,6 +288,15 @@ export const projectReducer = (project: ProjectType, action: ReducerAction) => {
         },
       };
     }
+
+    case PROJECT_REDUCER_ACTIONS.REARRANGE_FILES: {
+      const {fileIds} = <{fileIds: FileId[]}>action.payload;
+      return {
+        ...project,
+        openFiles: fileIds,
+      };
+    }
+
     default:
       return project;
   }

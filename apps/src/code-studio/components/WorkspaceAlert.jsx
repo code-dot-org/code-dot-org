@@ -1,7 +1,8 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import Alert from '@cdo/apps/templates/alert';
-import $ from 'jquery';
 
 export default class WorkspaceAlert extends React.Component {
   static propTypes = {

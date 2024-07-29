@@ -1,8 +1,7 @@
 /** @file Test of progress.js. */
 
-import assert from 'assert';
 import queryString from 'query-string';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {initViewAs} from '@cdo/apps/code-studio/progress';
 import {__testonly__} from '@cdo/apps/code-studio/progressReduxSelectors';
@@ -12,7 +11,7 @@ describe('bestResultLevelId', function () {
   var progressData;
   const bestResultLevelId = __testonly__.bestResultLevelId;
 
-  before(function () {
+  beforeAll(function () {
     progressData = {
       1: 0,
       2: 0,
@@ -24,25 +23,25 @@ describe('bestResultLevelId', function () {
     };
   });
   it("returns the level when there's only one", function () {
-    assert.strictEqual(bestResultLevelId([1], progressData), 1);
+    expect(bestResultLevelId([1], progressData)).toBe(1);
   });
   it('returns the first level when none have progress', function () {
-    assert.strictEqual(bestResultLevelId([1, 2], progressData), 1);
+    expect(bestResultLevelId([1, 2], progressData)).toBe(1);
   });
   it('returns the passed level', function () {
-    assert.strictEqual(bestResultLevelId([1, 4], progressData), 4);
+    expect(bestResultLevelId([1, 4], progressData)).toBe(4);
   });
   it('returns the unsubmitted level', function () {
-    assert.strictEqual(bestResultLevelId([1, 3], progressData), 3);
+    expect(bestResultLevelId([1, 3], progressData)).toBe(3);
   });
   it('returns the perfect level over the passed level', function () {
-    assert.strictEqual(bestResultLevelId([4, 5], progressData), 5);
+    expect(bestResultLevelId([4, 5], progressData)).toBe(5);
   });
 });
 
 describe('initViewAs', function () {
   let mockStore, mockSetViewType, mockQueryStringParse;
-  before(function () {
+  beforeAll(function () {
     mockStore = {
       dispatch: sinon.fake(),
     };
@@ -51,39 +50,51 @@ describe('initViewAs', function () {
     mockQueryStringParse = sinon.stub(queryString, 'parse').returns({});
   });
 
-  after(function () {
+  afterAll(function () {
     mockSetViewType.restore();
     mockQueryStringParse.restore();
   });
 
   it('defaults to Participant', function () {
     initViewAs(mockStore, null);
-    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Participant));
+    expect(
+      mockSetViewType.calledWith(viewAsRedux.ViewType.Participant)
+    ).toBeTruthy();
   });
 
   it('defaults to instructor if current user is instructor for course', function () {
     initViewAs(mockStore, true, true);
-    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor));
+    expect(
+      mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor)
+    ).toBeTruthy();
   });
 
   it('prevents overriding default if current user is not an instructor', function () {
     mockQueryStringParse.returns({viewAs: viewAsRedux.ViewType.Instructor});
     initViewAs(mockStore, true, false);
-    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Participant));
+    expect(
+      mockSetViewType.calledWith(viewAsRedux.ViewType.Participant)
+    ).toBeTruthy();
   });
 
   it('allows overriding default if current user is not a student', function () {
     mockQueryStringParse.returns({viewAs: viewAsRedux.ViewType.Instructor});
 
     initViewAs(mockStore, null, false);
-    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor));
+    expect(
+      mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor)
+    ).toBeTruthy();
 
     initViewAs(mockStore, true, true);
-    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor));
+    expect(
+      mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor)
+    ).toBeTruthy();
 
     mockQueryStringParse.returns({viewAs: viewAsRedux.ViewType.Participant});
 
     initViewAs(mockStore, true, true);
-    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Participant));
+    expect(
+      mockSetViewType.calledWith(viewAsRedux.ViewType.Participant)
+    ).toBeTruthy();
   });
 });

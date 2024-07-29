@@ -60,19 +60,9 @@ class HocEventReviewTest < Minitest::Test
           with_form country: 'MX' do
             with_form country: 'IT' do
               expected = [
-                {country_code: 'IT', count: 1},
                 {country_code: 'MX', count: 2},
+                {country_code: 'IT', count: 1}
               ]
-              # In the absense of an explicit ORDER BY clause, the order of
-              # results is arbitrary, and dependent on the underlying
-              # implementation details.
-              #
-              # Whatever those details are, they appear to have changed between
-              # MySQL 5.7 and 8.0, so we want to accommodate both versions.
-              #
-              # TODO infra: once we've updated to MySQL 8.0 everywhere, this
-              # can be reduced back down to a single case.
-              expected.reverse! if current_mysql_version >= 8.0
               actual = HocEventReview.event_counts_by_country
               assert_equal expected, actual
             end

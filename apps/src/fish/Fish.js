@@ -1,10 +1,14 @@
+import {setAssetPath} from '@code-dot-org/ml-activities/dist/assetPath';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import FishView from './FishView';
 import {Provider} from 'react-redux';
-import {getStore} from '../redux';
-import {setAssetPath} from '@code-dot-org/ml-activities/dist/assetPath';
+
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TestResults} from '@cdo/apps/constants';
+
+import {getStore} from '../redux';
+
+import FishView from './FishView';
 import fishMsg from './locale';
 
 /**
@@ -113,8 +117,9 @@ Fish.prototype.onContinue = function () {
 };
 
 Fish.prototype.initMLActivities = function () {
-  const {mode} = this.level;
+  const {mode, guides} = this.level;
   const onContinue = this.onContinue.bind(this);
+  const textToSpeechLocale = queryParams('tts');
 
   // Set up initial state
   const canvas = document.getElementById('activity-canvas');
@@ -129,6 +134,8 @@ Fish.prototype.initMLActivities = function () {
     canvas,
     backgroundCanvas,
     appMode: mode,
+    guides,
+    textToSpeechLocale,
     onContinue,
     registerSound: this.studioApp_.registerAudio.bind(this.studioApp_),
     playSound: this.studioApp_.playAudio.bind(this.studioApp_),

@@ -11,9 +11,12 @@ import sectionProgress, {
   finishRefreshingProgress,
   expandMetadataForStudents,
   collapseMetadataForStudents,
+  toggleExpandedChoiceLevel,
+  addExpandedLesson,
+  removeExpandedLesson,
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const fakeUnitData789 = {
   unitDataByUnit: {
@@ -213,6 +216,87 @@ describe('sectionProgressRedux', () => {
       const collapseAction = collapseMetadataForStudents([1, 2]);
       const nextState = sectionProgress(intermediateState, collapseAction);
       assert.deepEqual(nextState.expandedMetadataStudentIds, []);
+    });
+  });
+
+  describe('expandedChoiceLevelIds', () => {
+    it('Adds level ids', () => {
+      const action = toggleExpandedChoiceLevel(1, {
+        id: 1,
+        sublevels: [1, 2, 3],
+      });
+      const nextState = sectionProgress(initialState, action);
+      assert.deepEqual(nextState.expandedChoiceLevelIds, [1]);
+
+      const action2 = toggleExpandedChoiceLevel(1, {
+        id: 2,
+        sublevels: [1, 2, 3],
+      });
+      const nextState2 = sectionProgress(nextState, action2);
+      assert.deepEqual(nextState2.expandedChoiceLevelIds, [1, 2]);
+    });
+
+    it('Removes level', () => {
+      const action = toggleExpandedChoiceLevel(1, {
+        id: 1,
+        sublevels: [1, 2, 3],
+      });
+      const intermediateState = sectionProgress(initialState, action);
+
+      const collapseAction = toggleExpandedChoiceLevel(1, {
+        id: 1,
+        sublevels: [1, 2, 3],
+      });
+      const nextState = sectionProgress(intermediateState, collapseAction);
+      assert.deepEqual(nextState.expandedChoiceLevelIds, []);
+    });
+
+    it('Does not add level without sublevels', () => {
+      const action = toggleExpandedChoiceLevel(1, {id: 1});
+      const nextState = sectionProgress(initialState, action);
+      assert.deepEqual(nextState.expandedChoiceLevelIds, []);
+    });
+  });
+
+  describe('expandedLessonIds', () => {
+    it('Adds lesson', () => {
+      const action = addExpandedLesson(1, 1, {id: 1, levels: [{id: 1}]});
+      const nextState = sectionProgress(initialState, action);
+      assert.deepEqual(nextState.expandedLessonIds, {1: [1]});
+    });
+
+    it('Removes lesson', () => {
+      const addAction = addExpandedLesson(1, 1, {id: 1, levels: [{id: 1}]});
+      const intermediateState = sectionProgress(initialState, addAction);
+
+      const removeAction = removeExpandedLesson(1, 1, 1);
+      const nextState = sectionProgress(intermediateState, removeAction);
+      assert.deepEqual(nextState.expandedLessonIds, {1: []});
+    });
+
+    it('Does not add duplicate lesson', () => {
+      const addAction = addExpandedLesson(1, 1, {id: 1, levels: [{id: 1}]});
+      const intermediateState = sectionProgress(initialState, addAction);
+
+      const addAction2 = addExpandedLesson(1, 1, {id: 1, levels: [{id: 1}]});
+      const nextState = sectionProgress(intermediateState, addAction2);
+      assert.deepEqual(nextState.expandedLessonIds, {1: [1]});
+    });
+
+    it('Does not add lockable lesson', () => {
+      const addAction = addExpandedLesson(1, 1, {
+        id: 1,
+        levels: [{id: 1}],
+        lockable: true,
+      });
+      const nextState = sectionProgress(initialState, addAction);
+      assert.deepEqual(nextState.expandedLessonIds, {});
+    });
+
+    it('Does not add a lesson with no levels', () => {
+      const addAction = addExpandedLesson(1, 1, {id: 1});
+      const nextState = sectionProgress(initialState, addAction);
+      assert.deepEqual(nextState.expandedLessonIds, {});
     });
   });
 });

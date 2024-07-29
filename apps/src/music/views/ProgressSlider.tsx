@@ -1,4 +1,5 @@
 import React, {memo} from 'react';
+
 import moduleStyles from './progress-slider.module.scss';
 
 interface ProgressSliderProps {

@@ -24,6 +24,8 @@ type LinkBaseProps = {
   size?: ComponentSizeXSToL;
   /** Type of link */
   type?: 'primary' | 'secondary';
+  /** Role of link */
+  role?: string;
 };
 
 type LinkWithChildren = LinkBaseProps & {
@@ -66,6 +68,7 @@ const Link: React.FunctionComponent<LinkProps> = ({
   onClick,
   size = 'm',
   type = 'primary',
+  role,
 }) => {
   return (
     <a
@@ -80,6 +83,7 @@ const Link: React.FunctionComponent<LinkProps> = ({
       onClick={!disabled ? onClick : undefined}
       rel={openInNewTab || external ? 'noopener noreferrer' : undefined}
       target={(openInNewTab || undefined) && '_blank'}
+      role={role}
       {...(disabled ? {'aria-disabled': true} : {})}
     >
       {text || children}

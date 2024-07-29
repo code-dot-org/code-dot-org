@@ -1,20 +1,22 @@
 /** @file Maker connection status visualization overlay */
 import PropTypes from 'prop-types';
-
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import color from '../../../../util/color';
-import FontAwesome from '../../../../templates/FontAwesome';
+
+import applabI18n from '@cdo/applab/locale';
+
 import {getVisualizationScale} from '../../../../redux/layout';
+import FontAwesome from '../../../../templates/FontAwesome';
+import color from '../../../../util/color';
+import {UnsupportedBrowserError} from '../MakerError';
 import {
   isConnecting,
   hasConnectionError,
   getConnectionError,
   useVirtualBoardOnNextRun,
 } from '../redux';
-import {UnsupportedBrowserError} from '../MakerError';
+
 import OverlayButton from './OverlayButton';
-import applabI18n from '@cdo/applab/locale';
 
 const overlayDimensionsPropTypes = {
   width: PropTypes.number.isRequired,

@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-23T20:00:36.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Measures of Center",
+    "long_instructions": "###**Do This:**\r\n####1. Use the word bank below to describe the **measures of center** of your data based on the graph you created. \r\n- ####You do not have to use every single sentence starter from the word bank. Instead, use the one(s) that make sense with your data.\r\n\r\n####2. Record your answer below.\r\n\r\n\r\n![](https://images.code.org/b54386d2f55f72d6ea03dbd4d6e6346e-image-1721764799993.png)\r\n\r\n####[Roller Coaster Dataset](https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FlW0LxPFSKmF5SD6jD4B6%2Ffile.json)\r\n",
+    "teacher_markdown": "Students should have created the displayed dot plot and for which, most of the sentence starters in the word bank will work. Guide students to effectively use the sentence starters to describe and discuss the measures of center. The goal is to help them learn how to accurately apply these phrases when analyzing and communicating about the measures of center, enhancing their ability to articulate data insights clearly and correctly.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-23 20:00:38 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-24 18:31:37 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

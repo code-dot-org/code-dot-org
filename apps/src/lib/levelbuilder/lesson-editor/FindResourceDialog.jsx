@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 import LessonEditorDialog from './LessonEditorDialog';
 

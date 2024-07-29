@@ -2,13 +2,17 @@
   "script": {
     "name": "self-paced-pl-coding-with-ai-2024",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "curriculum_umbrella": "Foundations of CS",
+      "is_migrated": true,
+      "project_sharing": true,
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-06-18 18:27:44 UTC",
+    "serialized_at": "2024-07-11 18:27:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -255,6 +259,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-code_w_AI_overview_sandbox_24_24"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -277,6 +284,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Code_w_AI_ cert_sandbox_24_24"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -299,6 +309,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Code_w_AI_overview2_24_24"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -321,6 +334,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Code_w_AI_LLM_24"
+        ],
         "progression": "Large Language Models"
       },
       "bonus": false,
@@ -343,6 +359,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Code-w-AI-explore_LLM_24_24"
+        ],
         "progression": "Large Language Models"
       },
       "bonus": false,
@@ -365,6 +384,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Code-w-AI-prompt_guide_24_24"
+        ],
         "progression": "Large Language Models"
       },
       "bonus": false,
@@ -387,6 +409,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Code_w_AI-chk_LLM_24_24"
+        ],
         "progression": "Large Language Models"
       },
       "bonus": false,
@@ -409,6 +434,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Code_w_AI_whichLLM_24_24"
+        ],
         "progression": "Large Language Models"
       },
       "bonus": false,
@@ -431,6 +459,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Code_w_AI_lesson_structure_24_24"
+        ],
         "progression": "Lesson Structure and Resources"
       },
       "bonus": false,
@@ -453,6 +484,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Code_w_AI-Lesson_resources_24_24"
+        ],
         "progression": "Lesson Structure and Resources"
       },
       "bonus": false,
@@ -475,6 +509,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Code_w_AI-lesson2Overview_24_24"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -497,6 +534,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Code_w_AI-lesson2_DigitalJournal_24_24"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -519,6 +559,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Code_w_AI-L1_Learner_Scenarios_24_24"
+        ],
         "progression": "Learner Scenarios"
       },
       "bonus": false,
@@ -541,6 +584,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl_Code-w-AI_scenario1_24"
+        ],
         "progression": "Learner Scenarios"
       },
       "bonus": false,
@@ -563,6 +609,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl_Code_w_AI-scenario2_24"
+        ],
         "progression": "Learner Scenarios"
       },
       "bonus": false,
@@ -585,6 +634,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pd-Code_w_AI-L1scenario_wrap_24_24"
+        ],
         "progression": "Learner Scenarios"
       },
       "bonus": false,
@@ -607,6 +659,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pd-Code_w_AI-L2-AI_Ideation_24_24"
+        ],
         "progression": "AI as Your Ideation Partner"
       },
       "bonus": false,
@@ -629,6 +684,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pd-Code_w_AI-L2-AI_Ideation_strategy_24_24"
+        ],
         "progression": "AI as Your Ideation Partner"
       },
       "bonus": false,
@@ -651,6 +709,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pd-Code_w_AI-L3-AI_Brainstorm_strategy_24_24"
+        ],
         "progression": "AI as Your Ideation Partner"
       },
       "bonus": false,
@@ -673,6 +734,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pd-Code_w_AI-L2-AI_Brainstorm_wrap_24_24"
+        ],
         "progression": "AI as Your Ideation Partner"
       },
       "bonus": false,
@@ -695,6 +759,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pd-Code_w_AI-L3-Algorithms_24_24"
+        ],
         "progression": "AI as your "
       },
       "bonus": false,
@@ -717,6 +784,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pd-Code_w_AI-L3-Algorithms_strategy_24_24"
+        ],
         "progression": "AI as your "
       },
       "bonus": false,
@@ -739,6 +809,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pd-Code_w_AI-L3-Algorithms_wrap_24_24"
+        ],
         "progression": "AI as your "
       },
       "bonus": false,
@@ -761,6 +834,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pd-Code_w_AI-L4-Debugging_24_24"
+        ],
         "progression": "AI as Your Debugging Partner"
       },
       "bonus": false,
@@ -783,6 +859,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pd-Code_w_AI-L4-Debugging_strategy_24_24"
+        ],
         "progression": "AI as Your Debugging Partner"
       },
       "bonus": false,
@@ -805,6 +884,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pd-Code_w_AI-L4-Debugging_wrap_24_24"
+        ],
         "progression": "AI as Your Debugging Partner"
       },
       "bonus": false,
@@ -827,6 +909,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pd-Code_w_AI-L5-beyond-finished_24_24"
+        ],
         "progression": "Beyond the Finished Code"
       },
       "bonus": false,
@@ -849,6 +934,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pd-Code_w_AI-L5-beyond-finished_strategy_24_24"
+        ],
         "progression": "Beyond the Finished Code"
       },
       "bonus": false,
@@ -871,6 +959,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pd-Code_w_AI-L5-beyond-finished_wrap_24_24"
+        ],
         "progression": "Beyond the Finished Code"
       },
       "bonus": false,
@@ -893,6 +984,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Code_w_AI-chk_lessons_24_24"
+        ],
         "progression": "Beyond the Finished Code"
       },
       "bonus": false,
@@ -915,6 +1009,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Code_w_AI-teacher_resources_overview_24_24"
+        ],
         "progression": "Teaching Resources"
       },
       "bonus": false,
@@ -937,6 +1034,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Code_w_AI-bestpractice_24_24"
+        ],
         "progression": "Teaching Resources"
       },
       "bonus": false,
@@ -959,6 +1059,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Code_w_AI-bestpractice2_24_24"
+        ],
         "progression": "Teaching Resources"
       },
       "bonus": false,
@@ -981,6 +1084,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Code_w_AI-bestpractice3_24_24"
+        ],
         "progression": "Teaching Resources"
       },
       "bonus": false,
@@ -1003,6 +1109,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Code_w_AI-additionalbestpractice_24_24"
+        ],
         "progression": "Teaching Resources"
       },
       "bonus": false,
@@ -1025,6 +1134,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Coding_w_AI-teachingTipsCode_24_24"
+        ],
         "progression": "Teaching Resources"
       },
       "bonus": false,
@@ -1047,6 +1159,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-Coding_w_AI-teachAI_24_24"
+        ],
         "progression": "Teaching Resources"
       },
       "bonus": false,
@@ -1069,6 +1184,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ssp-pl-Code_w_AI-nextsteps_24_24"
+        ],
         "progression": "Next Steps"
       },
       "bonus": false,

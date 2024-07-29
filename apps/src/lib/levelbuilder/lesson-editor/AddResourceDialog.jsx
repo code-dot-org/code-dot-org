@@ -1,14 +1,14 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import _ from 'lodash';
 
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
-import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import color from '@cdo/apps/util/color';
 
 import LessonEditorDialog from './LessonEditorDialog';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const TYPE_OPTIONS = [
   'Activity Guide',

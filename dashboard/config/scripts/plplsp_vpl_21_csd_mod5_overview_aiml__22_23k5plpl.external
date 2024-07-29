@@ -8,13 +8,19 @@ markdown <<MARKDOWN
   <img src="https://images.code.org/787c345ede31df8f9c792eff29c72f6b-image-1717795118474.png" alt="The three steps in Use/Modify/Create">
 </p>
 
+## What is Use-Modify-Create?
 
-#### The "Use-Modify-Create" approach in computer science education involves three progressive stages to help students develop their programming skills. Initially, students use existing software to understand basic functionality. Next, they modify this software to explore how changes affect outcomes, deepening their understanding of the code's mechanics. Finally, they create their own projects from scratch, applying their acquired skills to design and implement original software. This method supports incremental learning, builds confidence, and mirrors real-world programming practices, making it an effective pedagogical strategy for teaching computer science.
+* #### Three progressive stages to help students develop their programming skills
+* #### First, students use existing software.
+* #### Then, they modify this software to explore how changes affect outcomes.
+* #### Last, they create their own projects from scratch, applying their acquired skills to design and implement original software. 
+
+#### This method supports incremental learning, builds confidence, and mirrors real-world programming practices, making it an effective pedagogical strategy for teaching computer science.
 
 ##Use-Modify-Create in Game Design Module 
-####In the game design module, students begin by <b>using</b> four pre-created games. <br></brT>Then, they will practice coding with variables by <b>modifying</b> and building on existing code. <br>To complete this lesson, students will have an opportunity to use what they learned to practice and free-play to <b>create</b> a game. 
+####In the game design module, students begin by <b>using</b> four pre-created games.Then, they will practice coding with variables by <b>modifying</b> and building on existing code.To complete this lesson, students will have an opportunity to use what they learned to practice and free-play to <b>create</b> a game. 
 
-##Let’s get started.
+##Let’s get started!
 
 <div style="clear:both"/>
 

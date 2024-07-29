@@ -1,17 +1,17 @@
 <ExternalLink>
   <config><![CDATA[{
+  "published": true,
   "game_id": 55,
   "created_at": "2024-06-17T22:34:24.000Z",
   "level_num": "custom",
   "user_id": 16889,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "# Binary to Base 10\r\n\r\n#### Click the link below to convert your binary number to a base 10 number.",
+    "long_instructions": "## Binary to Base 10\r\n\r\nClick the link below to convert your binary number to a base 10 number.",
     "link_title": "Binary to Base 10",
     "url": "https://www.rapidtables.com/convert/number/binary-to-decimal.html",
     "name_suffix": "_2024"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-06-17T22:34:24.077+00:00\",\"changed\":[\"cloned from \\\"CV_L6_BaseToBinary_Link\\\"\"],\"cloned_from\":\"CV_L6_BaseToBinary_Link\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-17T22:34:24.077+00:00\",\"changed\":[\"cloned from \\\"CV_L6_BaseToBinary_Link\\\"\"],\"cloned_from\":\"CV_L6_BaseToBinary_Link\"},{\"changed_at\":\"2024-07-04 18:29:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
 }]]></config>
 </ExternalLink>

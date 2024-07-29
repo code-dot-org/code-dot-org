@@ -83,14 +83,9 @@ const setSwiperParams = (swiper, params) => {
 
 const swipers = [
   {swiper: swiperActionBlocksMiddleHigh, params: actionBlocksParams},
+  {swiper: swiperActionBlocksPl, params: actionBlocksParams},
   {swiper: swiperQuotes, params: quotesParams},
   {swiper: swiperVideos, params: videosParams},
 ];
-
-// TODO - Move this object to the array above once the
-// DCDO flag curriculum-launch-2024 is launched
-if (swiperActionBlocksPl) {
-  swipers.push({swiper: swiperActionBlocksPl, params: actionBlocksParams});
-}
 
 swipers.forEach(({swiper, params}) => setSwiperParams(swiper, params));

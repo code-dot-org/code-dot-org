@@ -24,7 +24,7 @@
     "min_workspace_height": "1250",
     "success_condition": "function successCondition() {\r\n\t      return Studio.sprite[0].isCollidingWith(1);\r\n\t    }",
     "short_instructions": "Change the scene to an icy background and set Sid’s (actor 1) speed to fast.",
-    "callout_json": "[{\"localization_key\":\"playlab_add_blocks\",\"callout_text\":null,\"element_id\":\"[block-id='7']\",\"qtip_config\":{\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":22,\"y\":4}}},\"on\":null}]",
+    "callout_json": "[{\"localization_key\":\"playlab_add_blocks\",\"callout_text\":null,\"element_id\":\"[block-id='7']\",\"qtip_config\":{\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":22,\"y\":4}}},\"on\":null},{\"element_id\":\"[data-id='7']\",\"localization_key\":\"playlab_add_blocks\",\"callout_text\":null,\"qtip_config\":{\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":22,\"y\":4}}},\"on\":null}]",
     "maze": "[[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[16,0,0,0,0,0,16,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]",
     "embed": "false",
     "long_instructions": "Everyone needs to move faster because an ice storm is coming! \r\nChange the scene to an icy background and set Sid’s (actor 1) speed to fast.\r\nPress \"Run\" and move Sid to Diego to warn him.",
@@ -57,7 +57,7 @@
     "sprites_hidden_to_start": "false",
     "timeout_after_when_run": "false",
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
@@ -90,7 +90,7 @@
             <block type="studio_playSound">
               <title name="SOUND">winpoint2</title>
               <next>
-                <block type="studio_saySprite">
+                <block type="studio_saySprite" id="7">
                   <title name="SPRITE">0</title>
                   <title name="TEXT">Ice Storm!</title>
                 </block>

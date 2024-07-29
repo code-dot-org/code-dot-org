@@ -2,11 +2,11 @@
  * @file Exports a set of tests that verify  that the Circuit Playground board
  * components and component constructors are available from the interpreter
  */
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {N_COLOR_LEDS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 export function itMakesCircuitPlaygroundComponentsAvailable(
   BoardClient,
@@ -189,8 +189,12 @@ export function itMakesCircuitPlaygroundComponentsAvailable(
             component = jsInterpreter.globalProperties[button];
           });
 
-          it('isPressed', () => expect(component.isPressed).to.be.a('boolean'));
-          it('holdtime', () => expect(component.holdtime).to.be.a('number'));
+          it('isPressed', () => {
+            expect(component.isPressed).to.be.a('boolean');
+          });
+          it('holdtime', () => {
+            expect(component.holdtime).to.be.a('number');
+          });
         });
       });
 
@@ -239,11 +243,15 @@ export function itMakesCircuitPlaygroundComponentsAvailable(
           component = jsInterpreter.globalProperties.accelerometer;
         });
 
-        it('start()', () => expect(component.start).to.be.a('function'));
-        it('getOrientation()', () =>
-          expect(component.getOrientation).to.be.a('function'));
-        it('getAcceleration()', () =>
-          expect(component.getAcceleration).to.be.a('function'));
+        it('start()', () => {
+          expect(component.start).to.be.a('function');
+        });
+        it('getOrientation()', () => {
+          expect(component.getOrientation).to.be.a('function');
+        });
+        it('getAcceleration()', () => {
+          expect(component.getAcceleration).to.be.a('function');
+        });
       });
 
       describe('board', () => {

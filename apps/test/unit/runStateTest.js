@@ -1,6 +1,6 @@
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 
-import {assert} from '../util/reconfiguredChai';
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 var runState = require('@cdo/apps/redux/runState');
 

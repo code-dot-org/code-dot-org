@@ -30,6 +30,10 @@ class Maze < Grid
     step_mode
     shape_shift
   )
+  # Use a DCDO flag here so we can revert back to CDO Blockly without a deploy
+  def uses_google_blockly?
+    DCDO.get('maze_sw_google_blockly', true)
+  end
 
   # List of possible skins, the first is used as a default.
   def self.skins

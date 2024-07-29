@@ -151,6 +151,37 @@ module Pd::Foorm
       assert_equal expected_choice_3, form_data['question3']['choices']
     end
 
+    test 'parses boolean questions correctly' do
+      panel_form_data = {
+        pages: [
+          name: 'sample',
+          elements: [
+            {
+              type: "boolean",
+              name: "question1",
+              title: "True or false?"
+            },
+          ]
+        ]
+      }.to_json
+      form = Foorm::Form.create(name: 'sample', version: 0, questions: panel_form_data)
+      parsed_form = FoormParser.parse_forms([form]).with_indifferent_access
+
+      expected_form = {
+        general: {
+          'sample.0': {
+            question1: {
+              title: "True or false?",
+              type: "boolean",
+            },
+          }
+        },
+        facilitator: {}
+      }
+
+      assert_equal expected_form.with_indifferent_access, parsed_form.with_indifferent_access
+    end
+
     test 'correctly parses form with facilitator panel' do
       parsed_form = FoormParser.parse_forms([@csf_survey]).with_indifferent_access
 
