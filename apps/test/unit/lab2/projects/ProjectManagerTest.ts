@@ -1,4 +1,4 @@
-import {expect, assert} from 'chai';
+import {expect, assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import sinon, {stubObject, StubbedInstance} from 'ts-sinon';
 
 import {RemoteChannelsStore} from '@cdo/apps/lab2/projects/ChannelsStore';

@@ -1,64 +1,70 @@
-import React, {useState, useEffect, useRef, useCallback, useMemo} from 'react';
-import moduleStyles from './dance-ai-modal.module.scss';
+import {FieldDropdown, Workspace} from 'blockly/core';
+import classNames from 'classnames';
+import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import {useSelector} from 'react-redux';
+
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import Button from '@cdo/apps/templates/Button';
-import {useSelector} from 'react-redux';
+import color from '@cdo/apps/util/color';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import {closeAiModal, DanceState} from '../danceRedux';
-import classNames from 'classnames';
-import {FieldDropdown, Workspace} from 'blockly/core';
-import DanceAiScore, {ScoreColors} from './DanceAiScore';
-import AiVisualizationPreview from './AiVisualizationPreview';
+import inputLibraryJson from '@cdo/static/dance/ai/ai-inputs.json';
+import aiBotBodyNormal from '@cdo/static/dance/ai/bot/ai-bot-body-normal.png';
+import aiBotBodyThink0 from '@cdo/static/dance/ai/bot/ai-bot-body-think0.png';
+import aiBotBodyThink1 from '@cdo/static/dance/ai/bot/ai-bot-body-think1.png';
+import aiBotBodyThink2 from '@cdo/static/dance/ai/bot/ai-bot-body-think2.png';
+import aiBotBodyYes from '@cdo/static/dance/ai/bot/ai-bot-body-yes.png';
+import aiBotHeadNormal from '@cdo/static/dance/ai/bot/ai-bot-head-normal.png';
+import aiBotHeadYes from '@cdo/static/dance/ai/bot/ai-bot-head-yes.png';
 
+import danceMetricsReporter from '../danceMetricsReporter';
+import {closeAiModal, DanceState} from '../danceRedux';
+
+// Disabling import order in order to add require statements first
+// Require statements can change behavior based on the order they are called.
+// This might be safe to remove but needs investigation whether any behavior is changed by order.
+/* eslint-disable import/order */
+const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
+
+const i18n = require('../locale');
+/* eslint-enable import/order */
+
+import AiVisualizationPreview from './AiVisualizationPreview';
+import CdoFieldDanceAi from './cdoFieldDanceAi';
+import {DANCE_AI_FIELD_NAME} from './constants';
+import DanceAiModalFlipCard from './DanceAiModalFlipCard';
+import DanceAiModalHeader from './DanceAiModalHeader';
+import DanceAiScore, {ScoreColors} from './DanceAiScore';
+import EmojiIcon from './EmojiIcon';
+import EmojiInputGrid from './EmojiInputGrid';
+import ModalButton from './ModalButton';
 import {
   AiFieldValue,
+  DanceAiModalMode,
   DanceAiModalOutputType,
+  DanceAiPreviewButtonToggleState,
   DanceAiSound,
+  EffectsQuality,
+  EmojiItem,
   FieldKey,
   GeneratedEffect,
   MinMax,
-  EffectsQuality,
-  DanceAiModalMode,
-  DanceAiPreviewButtonToggleState,
-  EmojiItem,
 } from './types';
 import {
   chooseEffects,
   generateAiEffectBlocks,
   generateAiEffectBlocksFromResult,
   getAiEmojiItem,
-  getPreviewCode,
   getGeneratedEffectScores,
   getLabelMap,
+  getPreviewCode,
   getRangeArray,
   lerp,
   useInterval,
 } from './utils';
-import color from '@cdo/apps/util/color';
-const ToggleGroup = require('@cdo/apps/templates/ToggleGroup').default;
-const i18n = require('../locale');
 
-import EmojiIcon from './EmojiIcon';
-import DanceAiModalHeader from './DanceAiModalHeader';
-import DanceAiModalFlipCard from './DanceAiModalFlipCard';
-import EmojiInputGrid from './EmojiInputGrid';
-
-import aiBotHeadNormal from '@cdo/static/dance/ai/bot/ai-bot-head-normal.png';
-import aiBotBodyNormal from '@cdo/static/dance/ai/bot/ai-bot-body-normal.png';
-import aiBotHeadYes from '@cdo/static/dance/ai/bot/ai-bot-head-yes.png';
-import aiBotBodyYes from '@cdo/static/dance/ai/bot/ai-bot-body-yes.png';
-import aiBotBodyThink0 from '@cdo/static/dance/ai/bot/ai-bot-body-think0.png';
-import aiBotBodyThink1 from '@cdo/static/dance/ai/bot/ai-bot-body-think1.png';
-import aiBotBodyThink2 from '@cdo/static/dance/ai/bot/ai-bot-body-think2.png';
-
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import ModalButton from './ModalButton';
-import danceMetricsReporter from '../danceMetricsReporter';
-import CdoFieldDanceAi from './cdoFieldDanceAi';
-import {DANCE_AI_FIELD_NAME} from './constants';
-
-import inputLibraryJson from '@cdo/static/dance/ai/ai-inputs.json';
+import moduleStyles from './dance-ai-modal.module.scss';
 
 // Progress in the generating mode has a step and a substep.
 // Each step is a now effect, while each substep shows progress for
@@ -632,7 +638,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       className={moduleStyles.dialog}
       onClose={handleOnClose}
       initialFocus={false}
-      styles={{modalBackdrop: moduleStyles.modalBackdrop}}
+      styles={{
+        modalBackdrop: moduleStyles.modalBackdrop,
+        xCloseButton: moduleStyles.xCloseButton,
+      }}
     >
       <DanceAiModalHeader
         onClose={onClose}

@@ -1,30 +1,36 @@
 import $ from 'jquery';
+import queryString from 'query-string';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {getStore} from '../redux';
-import {setAppLoadStarted, setAppLoaded} from '@cdo/apps/code-studio/appRedux';
+
 import {files} from '@cdo/apps/clientApi';
-var renderAbusive = require('./renderAbusive');
+import {setAppLoadStarted, setAppLoaded} from '@cdo/apps/code-studio/appRedux';
+import PlayZone from '@cdo/apps/code-studio/components/playzone';
+import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import * as imageUtils from '@cdo/apps/imageUtils';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import msg from '@cdo/locale';
+
+import getScriptData from '../../util/getScriptData';
+import trackEvent from '../../util/trackEvent';
+import {getStore} from '../redux';
+
 import renderProjectNotFound from './renderProjectNotFound';
 import renderVersionNotFound from './renderVersionNotFound';
-var userAgentParser = require('./userAgentParser');
-var clientState = require('../clientState');
-import getScriptData from '../../util/getScriptData';
-import PlayZone from '@cdo/apps/code-studio/components/playzone';
-var timing = require('@cdo/apps/code-studio/initApp/timing');
-var project = require('@cdo/apps/code-studio/initApp/project');
+
 var createCallouts = require('@cdo/apps/code-studio/callouts').default;
-var reporting = require('@cdo/apps/code-studio/reporting');
+var project = require('@cdo/apps/code-studio/initApp/project');
+var timing = require('@cdo/apps/code-studio/initApp/timing');
 var LegacyDialog = require('@cdo/apps/code-studio/LegacyDialog');
+var reporting = require('@cdo/apps/code-studio/reporting');
 var showVideoDialog = require('@cdo/apps/code-studio/videos').showVideoDialog;
-import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import queryString from 'query-string';
-import * as imageUtils from '@cdo/apps/imageUtils';
-import trackEvent from '../../util/trackEvent';
-import msg from '@cdo/locale';
-import {queryParams} from '@cdo/apps/code-studio/utils';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
+var clientState = require('../clientState');
+
+var renderAbusive = require('./renderAbusive');
+var userAgentParser = require('./userAgentParser');
 
 const SHARE_IMAGE_NAME = '_share_image.png';
 

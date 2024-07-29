@@ -2960,6 +2960,17 @@
   "https://studio.code.org/s/allthethings/lessons/50/levels/4": {
     "long_instructions": "## Project-backed level\n\nThis level shares a project with level 3 in the progression."
   },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/5": {
+    "long_instructions": "## Predict and Run\n\n**What do you think this program does?**\n\nTake a look at the code in this program. Write down what you think this program will do. There are no wrong answers!",
+    "teacher_markdown": "Teachers should see this extra info."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/6": {
+    "long_instructions": "## Predict and Run\n\n**What do you think this program does?**\n\nTake a look at the code in this program. Which of the following matches what the program will print?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/7": {
+    "long_instructions": "## Submittable Level\n\nHere's a sample submittable level!",
+    "teacher_markdown": "Teachers should see this extra info."
+  },
   "https://studio.code.org/s/allthethings/lessons/51/levels/1": {
     "long_instructions": "Add **html** pages and preview them in the right pane.\n\nAdd **css** pages (and link them to your html).\n\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)"
   },

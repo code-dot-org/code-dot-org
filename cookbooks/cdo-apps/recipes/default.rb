@@ -130,6 +130,8 @@ end
 # which causes this error: https://github.com/tzinfo/tzinfo/wiki/Resolving-TZInfo::DataSourceNotFound-Errors
 apt_package 'tzdata'
 
+include_recipe 'cdo-apps::logrotate'
+
 include_recipe 'cdo-apps::dashboard'
 include_recipe 'cdo-apps::pegasus'
 include_recipe node['cdo-apps']['nginx_enabled'] ?

@@ -1,27 +1,14 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
 import DisabledBubblesAlert from '@cdo/apps/code-studio/DisabledBubblesAlert';
 import Alert from '@cdo/apps/templates/alert';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../util/reconfiguredChai';
-
 describe('DisabledBubblesAlert', () => {
-  beforeEach(() => {
-    sinon.stub(sessionStorage, 'getItem');
-    sinon.stub(sessionStorage, 'setItem');
-  });
-
-  afterEach(() => {
-    sessionStorage.setItem.restore();
-    sessionStorage.getItem.restore();
-  });
-
   it('is visible at first, if not seen before', () => {
-    sessionStorage.getItem.withArgs('disabledBubblesAlertSeen').returns(false);
+    sessionStorage.setItem('disabledBubblesAlertSeen', 'false');
     const wrapper = shallow(<DisabledBubblesAlert />);
     expect(
       wrapper.containsMatchingElement(
@@ -39,28 +26,25 @@ describe('DisabledBubblesAlert', () => {
           </div>
         </Alert>
       )
-    ).to.equal(true);
+    ).toBe(true);
   });
 
   it('is hidden at first, if seen before', () => {
-    sessionStorage.getItem.withArgs('disabledBubblesAlertSeen').returns(true);
+    sessionStorage.setItem('disabledBubblesAlertSeen', 'true');
     const wrapper = shallow(<DisabledBubblesAlert />);
-    expect(wrapper.find('Alert').length).to.equal(0);
+    expect(wrapper.find('Alert').length).toBe(0);
   });
 
   it('hides and remembers that the alert was seen when closed', () => {
-    sessionStorage.getItem.withArgs('disabledBubblesAlertSeen').returns(false);
+    sessionStorage.setItem('disabledBubblesAlertSeen', 'false');
     const wrapper = shallow(<DisabledBubblesAlert />);
-    expect(wrapper.find('Alert').length).to.equal(1);
+    expect(wrapper.find('Alert').length).toBe(1);
 
     // Call whatever close handler we passed to the alert
     wrapper.find('Alert').prop('onClose')();
     wrapper.update();
 
-    expect(wrapper.find('Alert').length).to.equal(0);
-    expect(sessionStorage.setItem).to.have.been.calledWith(
-      'disabledBubblesAlertSeen',
-      true
-    );
+    expect(wrapper.find('Alert').length).toBe(0);
+    expect(sessionStorage.getItem('disabledBubblesAlertSeen')).toBe('true');
   });
 });

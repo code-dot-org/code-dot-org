@@ -21,7 +21,6 @@ const ProgressFeedbackBanner = ({
   fetchProgressV2Feedback,
   createProgressV2Feedback,
   errorWhenCreatingOrLoading,
-  bannerStatusCallback,
 }) => {
   const [bannerStatus, setBannerStatus] = React.useState(BANNER_STATUS.UNSET);
 
@@ -71,10 +70,6 @@ const ProgressFeedbackBanner = ({
     }
   }, [errorWhenCreatingOrLoading, fetchProgressV2Feedback]);
 
-  React.useEffect(() => {
-    bannerStatusCallback?.(bannerStatus);
-  }, [bannerStatus, bannerStatusCallback]);
-
   const answer = satisfied => {
     if (bannerStatus === BANNER_STATUS.UNANSWERED) {
       createProgressV2Feedback(satisfied);
@@ -112,7 +107,6 @@ ProgressFeedbackBanner.propTypes = {
   fetchProgressV2Feedback: PropTypes.func.isRequired,
   createProgressV2Feedback: PropTypes.func.isRequired,
   errorWhenCreatingOrLoading: PropTypes.string,
-  bannerStatusCallback: PropTypes.func,
 };
 
 export const UnconnectedProgressFeedbackBanner = ProgressFeedbackBanner;

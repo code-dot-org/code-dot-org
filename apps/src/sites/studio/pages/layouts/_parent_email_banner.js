@@ -1,4 +1,5 @@
 import $ from 'jquery';
+
 import AddParentEmailController from '@cdo/apps/lib/ui/accounts/AddParentEmailController';
 
 $(document).ready(() => {

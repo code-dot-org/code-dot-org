@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2024-06-28T19:58:59.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "<img style=\"width: 40%; float: right;  margin: 10px; border: solid 2px black\" src=\"https://images.code.org/bb09c78334acde0f7637e7e5d1177ba7-image-1715990442289.png\" />\r\n\r\n# Predict (Part 2)\r\n\r\n#### What would you expect to happen when you interact with this chatbot?\r\n\r\n#### What's a question you might ask, and what answer would you expect?\r\n\r\n> **Try to predict how this chatbot will behave when you ask it questions** in 1-2 sentences. _There is no wrong answer - it's just your prediction_.\r\n>\r\n> Type in your response, then press the `Run`(#FFA400) button to lock it in!",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19018,
+    "name_suffix": "_2024",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "placeholder": "Type your answer here!"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:58:59.739+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-finetuning-explore-L3\\\"\"],\"cloned_from\":\"gen-ai-customizing-finetuning-explore-L3\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

@@ -1,0 +1,26 @@
+name 'variables lesson plan'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Classroom Implementation
+
+<img src="https://images.code.org/710d415d1966301e80612b266698a9a3-image-1720556012290.13.28 PM.png" alt="cartoon panda" width="200px" style="border-radius:10px; float:right; margin: 0 40px 40px 40px;">
+
+#### The lesson plan explains the lesson in detail with suggestions for discussions, remarks, and teacher actions.
+
+##Lesson Plan
+
+#### Preview this lesson plan from the <a href="https://levelbuilder-studio.code.org/s/elem-game-design-2024/lessons/2" target="blank">Variables as Score lesson</a>.
+
+### **When exploring the lesson plan, locate...**
+* #### Slide decks
+* #### Activity guides
+* #### Answer keys
+<br>
+
+#### Take your time working through all of the lesson features. Think about how you could implement the lesson in your class. 
+
+## Let's keep learning! 
+
+MARKDOWN

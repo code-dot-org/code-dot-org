@@ -1,10 +1,13 @@
-import React, {useCallback, useEffect, useMemo, useState} from 'react';
-import styles from './panels.module.scss';
-import EnhancedSafeMarkdown from '../templates/EnhancedSafeMarkdown';
 import classNames from 'classnames';
-import {commonI18n} from '../types/locale';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
+
+import EnhancedSafeMarkdown from '../templates/EnhancedSafeMarkdown';
 import FontAwesome from '../templates/FontAwesome';
+import {commonI18n} from '../types/locale';
+
 import {Panel} from './types';
+
+import styles from './panels.module.scss';
 
 // Leave a margin to the left and the right of the panels, to the edges
 // of the screen.

@@ -1,35 +1,37 @@
-import React, {useState} from 'react';
+import {TextLink} from '@dsco_/link';
 import PropTypes from 'prop-types';
+import React, {useState} from 'react';
 import {FormGroup, Row, Col, ControlLabel} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
 import {
   PageLabels,
   TextFields,
 } from '@cdo/apps/generated/pd/principalApprovalApplicationConstants';
-import {TextLink} from '@dsco_/link';
 import {Year} from '@cdo/apps/generated/pd/teacherApplicationConstants';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
+import {isInt, isPercent, isZipCode} from '@cdo/apps/util/formatValidation';
+
+import {useRegionalPartner} from '../../components/useRegionalPartner';
+import {PrivacyDialogMode} from '../../constants';
 import {
   FormContext,
   getValidationState,
 } from '../../form_components_func/FormComponent';
-import PrivacyDialog from '../PrivacyDialog';
-import {PrivacyDialogMode} from '../../constants';
-import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
-import {isInt, isPercent, isZipCode} from '@cdo/apps/util/formatValidation';
-import {styles} from '../teacher/TeacherApplicationConstants';
 import {
   LabeledInput,
   LabeledNumberInput,
 } from '../../form_components_func/labeled/LabeledInput';
-import {LabeledSelect} from '../../form_components_func/labeled/LabeledSelect';
-import {LabeledSingleCheckbox} from '../../form_components_func/labeled/LabeledSingleCheckbox';
 import {
   LabeledRadioButtons,
   LabeledRadioButtonsWithAdditionalTextFields,
 } from '../../form_components_func/labeled/LabeledRadioButtons';
+import {LabeledSelect} from '../../form_components_func/labeled/LabeledSelect';
+import {LabeledSingleCheckbox} from '../../form_components_func/labeled/LabeledSingleCheckbox';
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
-import {useRegionalPartner} from '../../components/useRegionalPartner';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import PrivacyDialog from '../PrivacyDialog';
+import {styles} from '../teacher/TeacherApplicationConstants';
 
 const MANUAL_SCHOOL_FIELDS = [
   'schoolName',

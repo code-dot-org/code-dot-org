@@ -1,5 +1,5 @@
-import {assert} from 'chai';
-import sinon, {stub} from 'sinon';
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
+import sinon, {stub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
 import reducer, {
@@ -14,7 +14,7 @@ import {
 } from '@cdo/apps/redux';
 import * as appsUtils from '@cdo/apps/utils';
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('viewAs redux', () => {
   // Create a store so that we get the benefits of our thunk middleware
@@ -74,12 +74,12 @@ describe('viewAs redux', () => {
   });
 
   describe('with stubs', () => {
-    before(() => {
+    beforeAll(() => {
       stub(appsUtils, 'reload');
       stub(codeStudioUtils, 'queryParams').callsFake(() => 'fake_user_id');
     });
 
-    after(() => {
+    afterAll(() => {
       appsUtils.reload.restore();
       codeStudioUtils.queryParams.restore();
     });

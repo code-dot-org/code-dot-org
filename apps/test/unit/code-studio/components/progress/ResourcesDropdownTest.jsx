@@ -6,8 +6,6 @@ import Button from '@cdo/apps/templates/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../../util/reconfiguredChai';
-
 describe('ResourcesDropdown', () => {
   it('renders resources for teacher', () => {
     const wrapper = shallow(
@@ -38,7 +36,7 @@ describe('ResourcesDropdown', () => {
           </DropdownButton>
         </div>
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('renders resources for student', () => {
@@ -71,6 +69,6 @@ describe('ResourcesDropdown', () => {
           </DropdownButton>
         </div>
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 });

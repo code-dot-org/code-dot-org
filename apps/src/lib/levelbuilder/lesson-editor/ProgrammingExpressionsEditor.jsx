@@ -1,20 +1,22 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {
-  programmingExpressionShape,
-  programmingEnvironmentShape,
-} from '@cdo/apps/lib/levelbuilder/shapes';
-import color from '@cdo/apps/util/color';
-import Dialog from '@cdo/apps/templates/Dialog';
 import {connect} from 'react-redux';
+import * as Table from 'reactabular-table';
+
+import FindProgrammingExpressionDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindProgrammingExpressionDialog';
 import {
   addProgrammingExpression,
   removeProgrammingExpression,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
-import * as Table from 'reactabular-table';
-import {lessonEditorTableStyles} from './TableConstants';
+import {
+  programmingExpressionShape,
+  programmingEnvironmentShape,
+} from '@cdo/apps/lib/levelbuilder/shapes';
 import Button from '@cdo/apps/templates/Button';
-import FindProgrammingExpressionDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindProgrammingExpressionDialog';
+import Dialog from '@cdo/apps/templates/Dialog';
+import color from '@cdo/apps/util/color';
+
+import {lessonEditorTableStyles} from './TableConstants';
 
 class ProgrammingExpressionsEditor extends Component {
   static propTypes = {

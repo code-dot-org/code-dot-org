@@ -8,8 +8,6 @@ import Button from '@cdo/apps/templates//Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Notification from '@cdo/apps/templates/Notification';
 
-import {expect} from '../../util/reconfiguredChai';
-
 const announcement = {
   heading: 'Go beyond an Hour of Code',
   buttonText: 'Go Beyond',
@@ -312,10 +310,10 @@ describe('Notification', () => {
         dismissible={false}
       />
     );
-    expect(wrapper.find('FontAwesome').length).to.equal(1);
-    expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal('users');
-    expect(wrapper.text()).to.include(collaborate.notice);
-    expect(wrapper.text()).to.include(collaborate.details);
+    expect(wrapper.find('FontAwesome').length).toBe(1);
+    expect(wrapper.find('FontAwesome').at(0).props().icon).toBe('users');
+    expect(wrapper.text()).toContain(collaborate.notice);
+    expect(wrapper.text()).toContain(collaborate.details);
   });
   it('renders a dismissible notification', () => {
     const wrapper = wrapped(
@@ -326,11 +324,9 @@ describe('Notification', () => {
         dismissible={true}
       />
     );
-    expect(wrapper.find('FontAwesome').length).to.equal(2);
-    expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal(
-      'info-circle'
-    );
-    expect(wrapper.find('FontAwesome').at(1).props().icon).to.equal('times');
+    expect(wrapper.find('FontAwesome').length).toBe(2);
+    expect(wrapper.find('FontAwesome').at(0).props().icon).toBe('info-circle');
+    expect(wrapper.find('FontAwesome').at(1).props().icon).toBe('times');
   });
   it('renders a tooltip', () => {
     const wrapper = wrapped(
@@ -342,16 +338,12 @@ describe('Notification', () => {
         tooltipText={information.tooltip}
       />
     );
-    expect(wrapper.find('FontAwesome').length).to.equal(2);
-    expect(wrapper.find('FontAwesome').at(0).props().icon).to.equal(
-      'info-circle'
-    );
-    expect(wrapper.find('FontAwesome').at(1).props().icon).to.equal(
-      'info-circle'
-    );
+    expect(wrapper.find('FontAwesome').length).toBe(2);
+    expect(wrapper.find('FontAwesome').at(0).props().icon).toBe('info-circle');
+    expect(wrapper.find('FontAwesome').at(1).props().icon).toBe('info-circle');
 
-    expect(wrapper.text()).to.include(information.notice);
-    expect(wrapper.text()).to.include(information.details);
-    expect(wrapper.text()).to.include(information.tooltip);
+    expect(wrapper.text()).toContain(information.notice);
+    expect(wrapper.text()).toContain(information.details);
+    expect(wrapper.text()).toContain(information.tooltip);
   });
 });

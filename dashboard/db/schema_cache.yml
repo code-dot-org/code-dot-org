@@ -1519,14 +1519,6 @@ columns:
   - *20
   - *21
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: category
-    sql_type_metadata: *3
-    'null': false
-    default: other
-    default_function:
-    collation: utf8mb3_unicode_ci
-    comment:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
     name: is_featured
     sql_type_metadata: *7
     'null': false
@@ -1646,6 +1638,25 @@ columns:
     default_function:
     collation:
     comment:
+  course_offerings_pd_workshops:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: pd_workshop_id
+    sql_type_metadata: *33
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: course_offering_id
+    sql_type_metadata: *33
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  - *14
+  - *15
   course_scripts:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -5036,17 +5047,6 @@ columns:
     comment:
   - *20
   - *21
-  project_use_datablock_storages:
-  - *10
-  - *35
-  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: use_datablock_storage
-    sql_type_metadata: *7
-    'null': false
-    default: '0'
-    default_function:
-    collation:
-    comment:
   projects:
   - *5
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
@@ -7593,6 +7593,14 @@ columns:
     default_function:
     collation:
     comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: unlock_token
+    sql_type_metadata: *3
+    'null': true
+    default:
+    default_function:
+    collation: utf8mb3_unicode_ci
+    comment:
   videos:
   - *5
   - *102
@@ -7672,6 +7680,7 @@ primary_keys:
   contained_level_answers: id
   contained_levels: id
   course_offerings: id
+  course_offerings_pd_workshops:
   course_scripts: id
   course_versions: id
   courses: id
@@ -7788,7 +7797,6 @@ primary_keys:
   programming_expressions: id
   programming_methods: id
   project_commits: id
-  project_use_datablock_storages: id
   projects: id
   puzzle_ratings: id
   queued_account_purges: id
@@ -7878,6 +7886,7 @@ data_sources:
   contained_level_answers: true
   contained_levels: true
   course_offerings: true
+  course_offerings_pd_workshops: true
   course_scripts: true
   course_versions: true
   courses: true
@@ -7987,7 +7996,6 @@ data_sources:
   programming_expressions: true
   programming_methods: true
   project_commits: true
-  project_use_datablock_storages: true
   projects: true
   puzzle_ratings: true
   queued_account_purges: true
@@ -8835,6 +8843,33 @@ indexes:
     unique: true
     columns:
     - key
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  course_offerings_pd_workshops:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: course_offerings_pd_workshops
+    name: index_course_offerings_pd_workshops_on_pd_workshop_id
+    unique: false
+    columns:
+    - pd_workshop_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: course_offerings_pd_workshops
+    name: index_course_offerings_pd_workshops_on_course_offering_id
+    unique: false
+    columns:
+    - course_offering_id
     lengths: {}
     orders: {}
     opclasses: {}
@@ -11801,20 +11836,6 @@ indexes:
     type:
     using: :btree
     comment:
-  project_use_datablock_storages:
-  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
-    table: project_use_datablock_storages
-    name: index_project_use_datablock_storages_on_project_id
-    unique: false
-    columns:
-    - project_id
-    lengths: {}
-    orders: {}
-    opclasses: {}
-    where:
-    type:
-    using: :btree
-    comment:
   projects:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: projects
@@ -13323,6 +13344,19 @@ indexes:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: users
+    name: index_users_on_unlock_token
+    unique: true
+    columns:
+    - unlock_token
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: users
     name: index_users_on_birthday
     unique: false
     columns:
@@ -13510,7 +13544,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20240624164604
+version: 20240719223408
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8

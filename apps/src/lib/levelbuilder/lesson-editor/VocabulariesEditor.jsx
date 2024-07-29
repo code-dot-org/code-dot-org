@@ -1,17 +1,19 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import color from '@cdo/apps/util/color';
-import SearchBox from './SearchBox';
-import Dialog from '@cdo/apps/templates/Dialog';
-import AddVocabularyDialog from './AddVocabularyDialog';
 import {connect} from 'react-redux';
+import * as Table from 'reactabular-table';
+
 import {
   addVocabulary,
   updateVocabulary,
   removeVocabulary,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
-import * as Table from 'reactabular-table';
+import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import Dialog from '@cdo/apps/templates/Dialog';
+import color from '@cdo/apps/util/color';
+
+import AddVocabularyDialog from './AddVocabularyDialog';
+import SearchBox from './SearchBox';
 import {lessonEditorTableStyles} from './TableConstants';
 
 class VocabulariesEditor extends Component {

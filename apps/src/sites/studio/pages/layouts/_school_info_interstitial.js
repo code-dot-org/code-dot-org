@@ -6,6 +6,7 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import SchoolInfoInterstitial from '@cdo/apps/lib/ui/SchoolInfoInterstitial';
 import getScriptData from '@cdo/apps/util/getScriptData';
 

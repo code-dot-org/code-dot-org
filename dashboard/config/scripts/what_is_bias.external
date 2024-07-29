@@ -8,16 +8,16 @@ markdown <<MARKDOWN
 ##Bias: when a decision favors some things and not others
 
 
-#### Because each student had a different idea of what constitutes a “hungry fish”,  <b>their biases impacted the results</b>. 
+#### Because each student had a <b>different idea</b> of what constitutes a “hungry fish”,  <b>their biases impacted AI Bot's predictions</b>. 
 ![](https://images.code.org/57fc1d6ca95e11d5e31e89a1d77b19e8-image-1719510094671.png)
 
-#### For example, Melissa’s results were biased in favor of colors and mouth, and biased against body and dorsal fin. <b>Melissa was more likely to classify a green fish as hungry than a purple or red fish. </b> As a result, <b>AI predicted that most green fish were hungry.</b>
+#### For example, Melissa’s results were biased in favor of colors, and biased against  dorsal fin. <b>Melissa was more likely to classify a green fish as hungry than a purple or red fish. </b> As a result, <b>AI predicted that most green fish were hungry.</b>
 
 
-#### Dan’s results were biased in favor of eyes and mouth, but biased against body and tail. 
+#### Dan’s results were biased in favor of eyes, but biased against tail. 
 
 
-#### Amanda’s results were biased in favor of colors and mouth, but against body and dorsal fin. 
+#### Amanda’s results were biased in favor of colors, but against dorsal fin. 
 
 
 ## Consider This: 
@@ -25,7 +25,8 @@ markdown <<MARKDOWN
 #### How did Dan’s and Amanda’s biases impact AI’s predictions? 
 
 ## Teacher Tip: 
-#### It’s important for students to understand that there are no “right” or “wrong” answers. The important concept they should internalize is that <b>different biases impact the results of AI. </b>
+#### It’s important for students to understand that there are no “right” or “wrong” answers. <b>Bias in training data leads to biased AI predictions.</b> In fact, according to some studies,   <a href="https://medium.com/@laurahelendouglas/ai-is-not-just-learning-our-biases-it-is-amplifying-them-4d0dee75931d" target="_blank">AI even amplifies bias from the training data</a>.
+
 
 
 

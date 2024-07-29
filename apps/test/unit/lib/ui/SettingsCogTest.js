@@ -1,7 +1,6 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import * as assets from '@cdo/apps/code-studio/assets';
 import JavalabDropdown from '@cdo/apps/javalab/components/JavalabDropdown';
@@ -19,37 +18,35 @@ import pageConstantsReducer, {
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import msg from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 describe('SettingsCog', () => {
   it('renders as a FontAwesome icon', () => {
     const wrapper = shallow(<SettingsCog />);
-    expect(wrapper.find(FontAwesome)).to.have.lengthOf(1);
+    expect(wrapper.find(FontAwesome)).toHaveLength(1);
   });
 
   it('opens the menu when the cog is clicked', () => {
     const wrapper = shallow(<SettingsCog />);
-    expect(wrapper.find(JavalabDropdown)).to.be.empty;
+    expect(wrapper.find(JavalabDropdown)).toHaveLength(0);
     wrapper.instance().open();
     wrapper.update();
-    expect(wrapper.find(JavalabDropdown)).to.have.lengthOf(1);
+    expect(wrapper.find(JavalabDropdown)).toHaveLength(1);
   });
 
   it('can close the menu', () => {
     const wrapper = shallow(<SettingsCog />);
     wrapper.instance().open();
     wrapper.update();
-    expect(wrapper.find(JavalabDropdown)).to.have.lengthOf(1);
+    expect(wrapper.find(JavalabDropdown)).toHaveLength(1);
     wrapper.instance().close();
     wrapper.update();
-    expect(wrapper.find(JavalabDropdown)).to.be.empty;
+    expect(wrapper.find(JavalabDropdown)).toHaveLength(0);
   });
 
   it('does not show maker toggle when "showMakerToggle" is false', () => {
     const wrapper = mount(<SettingsCog showMakerToggle={false} />);
     wrapper.instance().open();
     wrapper.update();
-    expect(wrapper.text()).to.not.include(msg.enableMaker());
+    expect(wrapper.text()).not.toContain(msg.enableMaker());
   });
 
   describe('menu items', () => {
@@ -63,81 +60,81 @@ describe('SettingsCog', () => {
 
     describe('manage assets', () => {
       beforeEach(() => {
-        sinon.stub(assets, 'showAssetManager');
+        jest.spyOn(assets, 'showAssetManager').mockClear().mockImplementation();
       });
 
       afterEach(() => {
-        assets.showAssetManager.restore();
+        assets.showAssetManager.mockRestore();
       });
 
       it('calls showAssetManager when clicked', () => {
-        expect(assets.showAssetManager).not.to.have.been.called;
+        expect(assets.showAssetManager).not.toHaveBeenCalled();
         wrapper.instance().manageAssets();
         wrapper.update();
-        expect(assets.showAssetManager).to.have.been.calledOnce;
+        expect(assets.showAssetManager).toHaveBeenCalledTimes(1);
       });
 
       it('closes the menu when clicked', () => {
         wrapper.instance().manageAssets();
         wrapper.update();
-        expect(wrapper.find(JavalabDropdown)).to.be.empty;
+        expect(wrapper.find(JavalabDropdown)).toHaveLength(0);
       });
     });
 
     describe('maker toggle', () => {
       beforeEach(() => {
-        sinon.stub(makerRedux, 'isAvailable');
-        sinon.stub(makerRedux, 'isEnabled');
+        jest.spyOn(makerRedux, 'isAvailable').mockClear().mockImplementation();
+        jest.spyOn(makerRedux, 'isEnabled').mockClear().mockImplementation();
       });
 
       afterEach(() => {
-        makerRedux.isEnabled.restore();
-        makerRedux.isAvailable.restore();
+        makerRedux.isEnabled.mockRestore();
+        makerRedux.isAvailable.mockRestore();
       });
 
       it('renders with enable maker option if maker is available and disabled', () => {
-        makerRedux.isAvailable.returns(true);
-        makerRedux.isEnabled.returns(false);
+        makerRedux.isAvailable.mockReturnValue(true);
+        makerRedux.isEnabled.mockReturnValue(false);
         const wrapper = shallow(renderMakerButton(() => {}));
-        expect(wrapper.text()).to.include(msg.enableMaker());
+        expect(wrapper.text()).toContain(msg.enableMaker());
       });
 
       it('renders with disable maker option if maker is available and enabled', () => {
-        makerRedux.isAvailable.returns(true);
-        makerRedux.isEnabled.returns(true);
+        makerRedux.isAvailable.mockReturnValue(true);
+        makerRedux.isEnabled.mockReturnValue(true);
         const wrapper = shallow(renderMakerButton(() => {}));
-        expect(wrapper.text()).to.include(msg.disableMaker());
+        expect(wrapper.text()).toContain(msg.disableMaker());
       });
 
       it('hides maker toggle if maker is not available', () => {
-        makerRedux.isAvailable.returns(false);
-        expect(renderMakerButton(() => {})).to.be.null;
+        makerRedux.isAvailable.mockReturnValue(false);
+        expect(renderMakerButton(() => {})).toBeNull();
       });
 
       it('asks for confirmation when clicked', () => {
-        makerRedux.isAvailable.returns(true);
-        makerRedux.isEnabled.returns(false);
+        makerRedux.isAvailable.mockReturnValue(true);
+        makerRedux.isEnabled.mockReturnValue(false);
         let settings = shallow(<SettingsCog showMakerToggle={true} />);
-        expect(settings.state().confirmingEnableMaker).to.be.false;
+        expect(settings.state().confirmingEnableMaker).toBe(false);
         settings.instance().toggleMakerToolkit();
         settings.update();
-        expect(settings.state().confirmingEnableMaker).to.be.true;
+        expect(settings.state().confirmingEnableMaker).toBe(true);
       });
     });
 
     describe('curriculum level vs standalone project - maker toolkit enabled', () => {
       beforeEach(() => {
-        sinon.stub(makerRedux, 'isAvailable');
-        sinon.stub(makerRedux, 'isEnabled');
+        jest.spyOn(makerRedux, 'isAvailable').mockClear().mockImplementation();
+        jest.spyOn(makerRedux, 'isEnabled').mockClear().mockImplementation();
         stubRedux();
         registerReducers({pageConstants: pageConstantsReducer});
-        makerRedux.isAvailable.returns(true);
-        makerRedux.isEnabled.returns(true);
+        makerRedux.isAvailable.mockReturnValue(true);
+        makerRedux.isEnabled.mockReturnValue(true);
       });
 
       afterEach(() => {
-        makerRedux.isEnabled.restore();
-        makerRedux.isAvailable.restore();
+        makerRedux.isEnabled.mockRestore();
+        makerRedux.isAvailable.mockRestore();
         restoreRedux();
       });
 
@@ -155,7 +152,7 @@ describe('SettingsCog', () => {
         let settings = wrapper.find('SettingsCog');
         settings.instance().open();
         settings.update();
-        expect(settings.text()).to.not.include(msg.disableMaker());
+        expect(settings.text()).not.toContain(msg.disableMaker());
       });
 
       it('does display maker toggle if not a curriculum level (standalone project)', () => {
@@ -172,7 +169,7 @@ describe('SettingsCog', () => {
         let settings = wrapper.find('SettingsCog');
         settings.instance().open();
         settings.update();
-        expect(settings.text()).to.include(msg.disableMaker());
+        expect(settings.text()).toContain(msg.disableMaker());
       });
     });
   });

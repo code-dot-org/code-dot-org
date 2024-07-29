@@ -117,34 +117,9 @@ def search_for_address(address)
   Geocoder.search(address).first
 end
 
-# Temporary helper method to help us determine which version of MySQL is
-# available in the local environment, so we can conditionally apply
-# version-specific logic as we transition from MySQL 5.7 to MySQL 8.
-#
-# TODO infra: remove this once we've updated everything to MySQL 8.
-def current_mysql_version
-  $current_mysql_version ||= begin
-    raw_version = DB.fetch('SELECT VERSION()').first[:'VERSION()']
-    case raw_version
-    when /^8.0.\d+/
-      8.0
-    when /^5.7.\d+/
-      5.7
-    else
-      raise "cannot parse MySQL version #{raw_version.inspect}"
-    end
-  end
-end
-
 def geocode_address(address)
   location = search_for_address(address)
   return nil unless location
   return nil unless location.latitude && location.longitude
-  # TODO infra: once we've updated everything to MySQL 8+, we can reduce this
-  # back to a single case.
-  if current_mysql_version < 8
-    "#{location.latitude},#{location.longitude}"
-  else
-    "#{location.longitude},#{location.latitude}"
-  end
+  return "#{location.longitude},#{location.latitude}"
 end

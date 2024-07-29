@@ -1,6 +1,7 @@
 import MBFirmataClient from '../../../../../third-party/maker/MBFirmataClient';
-import {SAMPLE_INTERVAL} from './MicroBitConstants';
 import {isWebSerialPort} from '../../util/boardUtils';
+
+import {SAMPLE_INTERVAL} from './MicroBitConstants';
 
 export const ACCEL_EVENT_ID = 13;
 

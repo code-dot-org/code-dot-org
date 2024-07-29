@@ -1,17 +1,19 @@
 /**
  * Application Cohort View
  */
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {Button, Col, Row} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
-import Spinner from '../components/spinner';
-import $ from 'jquery';
-import CohortViewTable from './cohort_view_table';
-import CohortCalculator, {countAcceptedApplications} from './cohort_calculator';
+
 import RegionalPartnerDropdown, {
   RegionalPartnerPropType,
 } from '../components/regional_partner_dropdown';
-import {Button, Col, Row} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import Spinner from '../components/spinner';
+
+import CohortCalculator, {countAcceptedApplications} from './cohort_calculator';
+import CohortViewTable from './cohort_view_table';
 
 class CohortView extends React.Component {
   static propTypes = {

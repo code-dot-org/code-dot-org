@@ -29,7 +29,10 @@ export const useSource = (defaultSources: ProjectSources) => {
   const isEditingExemplarMode = getAppOptionsEditingExemplar();
   const initialSources = useInitialSources(defaultSources);
   const levelStartSource = useAppSelector(
-    state => state.lab.levelProperties?.source
+    state => state.lab.levelProperties?.startSources
+  );
+  const templateStartSource = useAppSelector(
+    state => state.lab.levelProperties?.templateSources
   );
   const previousLevelIdRef = useRef<number | null>(null);
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
@@ -53,13 +56,24 @@ export const useSource = (defaultSources: ProjectSources) => {
   );
 
   const resetToStartSource = useCallback(() => {
-    setSource(levelStartSource || (defaultSources.source as MultiFileSource));
-  }, [defaultSources.source, levelStartSource, setSource]);
+    // When resetting in start mode, we always use the level start source.
+    setSource(
+      (!isStartMode && templateStartSource) ||
+        levelStartSource ||
+        (defaultSources.source as MultiFileSource)
+    );
+  }, [
+    defaultSources.source,
+    isStartMode,
+    templateStartSource,
+    levelStartSource,
+    setSource,
+  ]);
 
   useEffect(() => {
     if (isStartMode) {
       header.showLevelBuilderSaveButton(() => {
-        return {source};
+        return {start_sources: source};
       });
     } else if (isEditingExemplarMode) {
       header.showLevelBuilderSaveButton(

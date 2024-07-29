@@ -1,8 +1,11 @@
 import React from 'react';
-import {LevelPredictSettings} from '../types';
-import moduleStyles from './edit-predict-settings.module.scss';
+
 import {Button} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
+
+import {LevelPredictSettings} from '../types';
+
+import moduleStyles from './edit-predict-settings.module.scss';
 
 interface MultipleChoiceFieldsProps {
   predictSettings: LevelPredictSettings;
@@ -15,8 +18,8 @@ const MultipleChoiceFields: React.FunctionComponent<
   const handleToggleMultipleChoiceAnswer = (
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
-    const newCorrectAnswers = predictSettings.multipleChoiceAnswers
-      ? [...predictSettings.multipleChoiceAnswers]
+    const newCorrectAnswers = predictSettings.solution
+      ? predictSettings.solution.split(',')
       : [];
     if (e.target.checked && !newCorrectAnswers.includes(e.target.value)) {
       newCorrectAnswers.push(e.target.value);
@@ -28,7 +31,7 @@ const MultipleChoiceFields: React.FunctionComponent<
     }
     setPredictSettings({
       ...predictSettings,
-      multipleChoiceAnswers: newCorrectAnswers,
+      solution: newCorrectAnswers.join(','),
     });
   };
 
@@ -37,8 +40,8 @@ const MultipleChoiceFields: React.FunctionComponent<
     index: number
   ) => {
     const newOptions = [...predictSettings.multipleChoiceOptions!];
-    const newAnswers = predictSettings.multipleChoiceAnswers
-      ? [...predictSettings.multipleChoiceAnswers]
+    const newAnswers = predictSettings.solution
+      ? predictSettings.solution.split(',')
       : [];
     const oldValue = predictSettings.multipleChoiceOptions![index];
     const newValue = e.target.value;
@@ -49,7 +52,7 @@ const MultipleChoiceFields: React.FunctionComponent<
     setPredictSettings({
       ...predictSettings,
       multipleChoiceOptions: newOptions,
-      multipleChoiceAnswers: newAnswers,
+      solution: newAnswers.join(','),
     });
   };
 
@@ -71,9 +74,7 @@ const MultipleChoiceFields: React.FunctionComponent<
             />
             <Checkbox
               label="Correct answer"
-              checked={
-                predictSettings.multipleChoiceAnswers?.includes(option) || false
-              }
+              checked={predictSettings.solution?.includes(option) || false}
               onChange={handleToggleMultipleChoiceAnswer}
               name={`mark_correct_answer_${index}`}
               value={option}
@@ -114,6 +115,18 @@ const MultipleChoiceFields: React.FunctionComponent<
           size={'s'}
           icon={{iconName: 'plus'}}
           ariaLabel={'Add Option'}
+        />
+
+        <Checkbox
+          label="Mark as multiple select"
+          checked={predictSettings.isMultiSelect || false}
+          onChange={e =>
+            setPredictSettings({
+              ...predictSettings,
+              isMultiSelect: e.target.checked,
+            })
+          }
+          name={`mark_multiple_select`}
         />
       </label>
     </div>

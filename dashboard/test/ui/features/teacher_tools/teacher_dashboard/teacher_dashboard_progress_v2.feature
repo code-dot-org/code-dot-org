@@ -4,7 +4,7 @@ Feature: Using the V2 teacher dashboard
 Scenario: Teacher can open and close Icon Key and details
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
-  And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+  And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
 
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
@@ -27,6 +27,52 @@ Scenario: Teacher can open and close Icon Key and details
   And I wait until element "h3:contains(Progress Tracking Icon Key)" is visible
   And I click selector "#ui-close-dialog"
   And element "h3:contains(Progress Tracking Icon Key)" is hidden
+
+Scenario: Viewing student metadata
+  Given I create an authorized teacher-associated student named "Sally"
+  Given I am assigned to unit "allthethings"
+  And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/9?noautoplay=true"
+  And I wait to see "#runButton"
+  When I press "runButton"
+  And I wait for 5 seconds
+  And I submit this level
+
+  # Progress tab
+  When I sign in as "Teacher_Sally" and go home
+  And I get levelbuilder access
+  And I navigate to the V2 progress dashboard for "Untitled Section"
+
+  # Toggle to V2 progress view
+  And I wait until element "h6:contains(Icon Key)" is visible
+  And I wait until element "#ui-test-progress-table-v2" is visible
+
+  # Can see and open menu with more options
+  And I wait until element "#ui-see-more-options-dropdown" is visible
+  Then I click selector "#ui-see-more-options-dropdown"
+  And I wait until element "div:contains(Expand all student rows)" is visible
+  And I wait until element "div:contains(Collapse all student rows)" is visible
+
+  # Can click on more options and it responds appropriately
+  Then I click selector "#ui-test-expand-all"
+  And I wait until element "div:contains(Last Updated)" is visible
+  And I wait until element "div:contains(Time Spent)" is visible
+  And I wait until element "#ui-test-lesson-header-44" is visible
+  And I scroll to "#ui-test-lesson-header-44"
+  And I wait until ".ui-test-time-spent-44" contains one or more integers
+  Then I click selector "#ui-see-more-options-dropdown"
+  Then I click selector "#ui-test-collapse-all"
+  And element "div:contains(Time Spent)" does not exist
+  And element "div:contains(Last Updated)" does not exist
+
+  # Can click on individual row and it opens with lesson and level data
+  Then I click selector "#ui-test-student-row-unexpanded-Sally"
+  And I wait until element "div:contains(Last Updated)" is visible
+  And I wait until element "div:contains(Time Spent)" is visible
+
+  # Can click on individual row and it closes with lesson and level data
+  Then I click selector "#ui-test-student-row-expanded-Sally"
+  And element "div:contains(Time Spent)" does not exist
+  And element "div:contains(Last Updated)" does not exist
 
 Scenario: Teacher can open and close lessons and see level data cells
   Given I create an authorized teacher-associated student named "Sally"
@@ -86,7 +132,7 @@ Scenario: Teacher can view lesson progress for when students have completed a le
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
   # Student completes one of many levels in lesson 2
-  And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
+  And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
 
   # Student completes all the levels in lesson 10 (there is only one level)
   Given I am on "http://studio.code.org/s/allthethings/lessons/10/levels/1?noautoplay=true"
@@ -195,3 +241,5 @@ Scenario: Teacher can view choice levels
   # View expanded choice level
   And I click selector "button:contains(b)"
   And I see no difference for "unexpanded choice level - closed"
+
+  And I close my eyes

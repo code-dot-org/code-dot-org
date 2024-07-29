@@ -1,11 +1,15 @@
 import React, {useState} from 'react';
-import {LevelPredictSettings, PredictQuestionType} from '../types';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
-import moduleStyles from './edit-predict-settings.module.scss';
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
+
+import {LevelPredictSettings, PredictQuestionType} from '../types';
+
 import FreeResponseFields from './FreeResponseFields';
 import MultipleChoiceFields from './MultipleChoiceFields';
+
+import moduleStyles from './edit-predict-settings.module.scss';
 
 interface EditPredictSettingsProps {
   initialSettings: LevelPredictSettings;
@@ -22,8 +26,8 @@ const EditPredictSettings: React.FunctionComponent<
     allowMultipleAttempts: false,
     placeholderText: '',
     multipleChoiceOptions: [''],
-    multipleChoiceAnswers: [],
     freeResponseHeight: 20,
+    codeEditableAfterSubmit: false,
   };
 
   const [predictSettings, setPredictSettings] = useState<LevelPredictSettings>(
@@ -45,6 +49,7 @@ const EditPredictSettings: React.FunctionComponent<
     setPredictSettings({
       ...predictSettings,
       questionType: e.target.value as PredictQuestionType,
+      solution: '', // Reset solution as it is used by both question types.
     });
   };
 
@@ -114,6 +119,17 @@ const EditPredictSettings: React.FunctionComponent<
               })
             }
             name="allow_multiple_tries"
+          />
+          <Checkbox
+            label="Allow user to edit code after submitting a response"
+            checked={predictSettings.codeEditableAfterSubmit || false}
+            onChange={e =>
+              setPredictSettings({
+                ...predictSettings,
+                codeEditableAfterSubmit: e.target.checked,
+              })
+            }
+            name="code_editable_after_submit"
           />
         </div>
       )}

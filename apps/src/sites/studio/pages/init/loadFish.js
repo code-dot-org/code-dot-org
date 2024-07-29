@@ -1,8 +1,8 @@
 import appMain from '@cdo/apps/appMain';
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
 import Fish from '@cdo/apps/fish/Fish';
-import skins from '@cdo/apps/skins';
 import levels from '@cdo/apps/fish/levels';
+import skins from '@cdo/apps/skins';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
 export default function loadFish(options) {
   options.skinsModule = skins;

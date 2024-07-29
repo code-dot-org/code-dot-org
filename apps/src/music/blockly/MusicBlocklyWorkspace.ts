@@ -1,20 +1,24 @@
-import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import {BlockTypes} from './blockTypes';
+import {BlocklyOptions, Workspace, WorkspaceSvg} from 'blockly';
+import {Abstract} from 'blockly/core/events/events_abstract';
+
+import {Renderers} from '@cdo/apps/blockly/constants';
 import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
-import {getToolbox} from './toolbox';
+import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+
+import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {getBlockMode} from '../appConfig';
 import {BlockMode, Triggers} from '../constants';
+
+import {GeneratorHelpersSimple2} from './blocks/simple2';
+import {BlockTypes} from './blockTypes';
 import {
   FIELD_TRIGGER_START_NAME,
   TriggerStart,
   TRIGGER_FIELD,
 } from './constants';
-import {GeneratorHelpersSimple2} from './blocks/simple2';
-import {Renderers} from '@cdo/apps/blockly/constants';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {BlocklyOptions, Workspace, WorkspaceSvg} from 'blockly';
-import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
-import {Abstract} from 'blockly/core/events/events_abstract';
+import {getToolbox} from './toolbox';
+
 const experiments = require('@cdo/apps/util/experiments');
 
 const triggerIdToEvent = (id: string) => `triggeredAtButton-${id}`;

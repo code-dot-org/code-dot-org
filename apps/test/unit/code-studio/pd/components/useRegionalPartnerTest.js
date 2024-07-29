@@ -3,7 +3,7 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {act} from 'react-dom/test-utils';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {
   PROGRAM_CSD,
@@ -11,7 +11,7 @@ import {
 } from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplicationConstants';
 import {useRegionalPartner} from '@cdo/apps/code-studio/pd/components/useRegionalPartner';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 let regionalPartnerData, regionalPartnerError;
 

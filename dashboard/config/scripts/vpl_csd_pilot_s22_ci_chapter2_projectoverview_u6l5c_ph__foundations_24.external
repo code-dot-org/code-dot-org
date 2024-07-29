@@ -1,0 +1,30 @@
+name 'VPL-CSD-PILOT-S22-CI-Chapter2-ProjectOverview-U6L5C_ph_-foundations-24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Chapter 2 Project: Prototype an Innovation
+
+#### In this final project for the unit, students team up to develop and test a prototype for an innovative computing device based on the micro:bit. Using the inputs and outputs available on the board, groups will <strong>create programs that allow for interesting and unique user interactions.</strong>
+</p></div>
+
+#### The activities you completed in the previous levels were a selection of activities from Chapter 2 of the Creating Apps for Devices unit. These levels were intended to give you an overview of the skills students will building as they work towards the end of chapter project.
+
+## Sample Student Project
+
+#### Click the image below to view the sample project in a new tab.
+
+<div style="float: left; text-align:center;"><strong>Example Project</strong><br /><a href="https://docs.google.com/document/d/1lujGcifyqK4lNZzeCMQaZ68EL90qx0tc5z6Q9pZHl1c/edit" target="blank" rel="noopener noreferrer"><img style="border-radius:10px; margin-left:25px; margin-top:0px; margin-bottom:5px;" src="https://images.code.org/be843f288d5c0d28e517126a10840d23-image-1654791855692.23.52 AM.png" width="450px"; alt="Image of example project"></a></div>
+
+<div style="clear:both"/>
+<br>
+
+## Project Resources
+
+* #### <a href="https://studio.code.org/s/csd6b-2024/lessons/17" target="blank" rel="noopener noreferrer" >Lesson Plan</a>  
+* #### <a href="https://docs.google.com/document/d/1Xpf-V95a25CFhDCjSmc3wo0J3onJ8UqAbb4MF9-zUAc/edit" target="blank" rel="noopener noreferrer" >Project Guide</a> 
+* #### <a href="https://docs.google.com/document/d/1zM8GOzwJnyfxQ_Tmxr_SP0rtatqMwQTbifRYjYQ1F4k/edit" target="blank" rel="noopener noreferrer" >Student Checklist</a> 
+* #### <a href="https://docs.google.com/document/d/1ZaP6QEwtawn12Aw526NlSbavGpGetIhy8qtEVdkhDQ0/edit" target="blank" rel="noopener noreferrer" >Project Rubric</a> 
+
+
+MARKDOWN

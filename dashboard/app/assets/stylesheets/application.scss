@@ -22,7 +22,8 @@
  *
  * Shared
  *= require barlow-semi-condensed-font
- *= require metropolis-font
+ *= require fonts/metropolis
+ *= require fonts/noto-sans
  *= require user-menu
  *= require buttons
  *= require course-blocks
@@ -230,8 +231,9 @@ img.video_thumbnail {
     }
   }
 
-  @media screen and (max-width: 1120px) {
-    .create_menu {
+  @media (min-width: 1024px) and (max-width: 1268px) {
+    &.hide-small-desktop,
+    .hide-small-desktop {
       display: none !important;
     }
   }
@@ -312,10 +314,15 @@ img.video_thumbnail {
     }
   }
 
+  #header_user_create_account {
+    background-color: $light_white !important;
+    color: $light_primary_500;
+    font-weight: $semi-bold-font-weight;
+  }
+
   .button-signin {
     text-decoration: none;
   }
-
   .project_updated_at {
     font-size: 10px;
     .project-save-error {
@@ -1258,6 +1265,7 @@ $default-modal-width: 640px;
 
 #sign_in_or_user {
   float: left;
+  display: flex;
 }
 
 input.header_input {

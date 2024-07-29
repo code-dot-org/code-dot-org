@@ -1,0 +1,16 @@
+name 'SP-VPL-PC-22-ClassroomCulture_CSD-PL-24_-foundations-24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Classroom Culture
+
+#### In a computer science classroom, students are expected to solve problems that don't have clear answers, work together with their peers, and play an active role in their learning. For some students, this might be a new way of learning. The culture that is created within the classroom from the start is crucial in helping students feel like they belong in CS and in setting students up for success.
+</p></div>
+
+## What is my role as the teacher? 
+
+#### The lesson plans contain teaching tips to give you guidance on how to implement each lesson. In addition, there are some teaching and learning strategies that can be implemented throughout computer science courses to promote an inclusive classroom culture where all students feel like they can succeed. You as the teacher, will need to decide which strategies you will use to support student learning in your classroom.
+
+### **Up next**: Let's explore some strategies for teaching and learning computer science! 
+MARKDOWN

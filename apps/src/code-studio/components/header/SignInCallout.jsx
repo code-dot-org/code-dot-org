@@ -1,6 +1,7 @@
-import React from 'react';
-import i18n from '@cdo/locale';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import i18n from '@cdo/locale';
 
 const CALLOUT_COLOR = '#454545';
 const TRIANGLE_BASE = 30;

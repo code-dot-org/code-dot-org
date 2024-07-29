@@ -1,4 +1,5 @@
 import {TestResults} from '@cdo/apps/constants';
+
 import tickWrapper from '../../util/tickWrapper';
 
 const levelDef = {

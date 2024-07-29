@@ -1,18 +1,19 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import _ from 'lodash';
 
+import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledTextarea';
+import {tipShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import Button from '@cdo/apps/templates/Button';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import LessonTip, {
   tipTypes,
 } from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import i18n from '@cdo/locale';
-import {tipShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 import ConfirmDeleteButton from '../../../storage/dataBrowser/ConfirmDeleteButton';
+
 import LessonEditorDialog from './LessonEditorDialog';
-import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledTextarea';
 
 export default class EditTipDialog extends Component {
   static propTypes = {

@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import {removeLevel} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import Dialog from '@cdo/apps/templates/Dialog';
 import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import Dialog from '@cdo/apps/templates/Dialog';
 
 /**
  * Dialog which confirms removal of the level in the specified position

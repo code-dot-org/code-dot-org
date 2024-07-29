@@ -1,8 +1,9 @@
 import _ from 'lodash';
-import color from './util/color';
-import {singleton as studioApp} from './StudioApp';
-import {globalFunctions} from './dropletUtilsGlobalFunctions';
+
 import dontMarshalApi from './dontMarshalApi';
+import {globalFunctions} from './dropletUtilsGlobalFunctions';
+import {singleton as studioApp} from './StudioApp';
+import color from './util/color';
 
 /**
  * @name DropletBlock

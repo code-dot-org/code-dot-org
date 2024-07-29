@@ -6,20 +6,22 @@
 
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
-import Lab2Registry from '../Lab2Registry';
+
+import header from '@cdo/apps/code-studio/header';
+import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
+import {
+  getCurrentScriptLevelId,
+  getLevelPropertiesPath,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
 import {
   isReadOnlyWorkspace,
   setUpWithLevel,
   setUpWithoutLevel,
   shouldHideShareAndRemix,
 } from '../lab2Redux';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {
-  getCurrentScriptLevelId,
-  getLevelPropertiesPath,
-} from '@cdo/apps/code-studio/progressReduxSelectors';
-import header from '@cdo/apps/code-studio/header';
-import {clearHeader} from '@cdo/apps/code-studio/headerRedux';
+import Lab2Registry from '../Lab2Registry';
 import {AppName} from '../types';
 
 const ProjectContainer: React.FunctionComponent<ProjectContainerProps> = ({

@@ -20,6 +20,9 @@ class FilesApi < Sinatra::Base
 
   SOURCES_PUBLIC_CACHE_DURATION = 20.seconds
 
+  # Can set this to an empty array if we do not want aichat checked for profanity.
+  LABS_TO_CHECK_FOR_PROFANITY = DCDO.get('labs_to_check_for_profanity', ['aichat'])
+
   def get_bucket_impl(endpoint)
     case endpoint
     when 'animations'
@@ -387,7 +390,7 @@ class FilesApi < Sinatra::Base
     end
   end
 
-  def put_file(endpoint, encrypted_channel_id, filename, body)
+  def put_file(endpoint, encrypted_channel_id, filename, body, project_type = nil)
     not_authorized unless owns_channel?(encrypted_channel_id)
     file_type = File.extname(filename)
     buckets = get_bucket_impl(endpoint).new
@@ -413,13 +416,19 @@ class FilesApi < Sinatra::Base
     end
 
     # Block libraries with PII/profanity from being published.
+    # Block main.json file from aichat lab flagged with profanity from being saved.
     #
     # Javalab's "backpack" feature uses libraries to allow students to share code
     # between their own projects -- skip this check for .java files, since in this use case
     # the files are only being used by a single user.
-    if endpoint == 'libraries' && file_type != '.java'
+    if (endpoint == 'libraries' && file_type != '.java') || profanity_project_type?(project_type)
       begin
-        share_failure = ShareFiltering.find_failure(body, request.locale)
+        if profanity_project_type?(project_type)
+          text_to_check = get_text_for_profanity_check(project_type, body)
+          share_failure = ShareFiltering.find_profanity_failure(text_to_check, request.locale)
+        else
+          share_failure = ShareFiltering.find_failure(body, request.locale)
+        end
       rescue StandardError => exception
         return file_too_large(endpoint) if exception.instance_of?(WebPurify::TextTooLongError)
         details = exception.message.empty? ? nil : exception.message
@@ -428,7 +437,7 @@ class FilesApi < Sinatra::Base
       # TODO(JillianK): we are temporarily ignoring address share failures because our address detection is very broken.
       # Once we have a better geocoding solution in H1, we should start filtering for addresses again.
       # Additional context: https://codedotorg.atlassian.net/browse/STAR-1361
-      if share_failure && share_failure[:type] != "address"
+      if share_failure && share_failure[:type] != ShareFiltering::FailureType::ADDRESS
         details_key = share_failure.type == ShareFiltering::FailureType::PROFANITY ? "profaneWords" : "pIIWords"
         details = {details_key => [share_failure.content]}
         return json_bad_request(details)
@@ -483,7 +492,7 @@ class FilesApi < Sinatra::Base
     if source.is_a?(Hash)
       # Iterate over each file
       source.each_key do |key|
-        if source[key]["text"].is_a?(String)
+        if source[key].is_a?(Hash) && source[key]["text"].is_a?(String)
           # Multi-file source structure, used in Java Lab
           # {"source":{"MyClass.java":{"text":"“public class ClassName: {...<code here>...}”","isVisible":true}}
           return false unless source[key]["text"]&.force_encoding("UTF-8")&.valid_encoding?
@@ -552,8 +561,9 @@ class FilesApi < Sinatra::Base
     # this prevents us from rejecting large files based on the Content-Length
     # header.
     body = request.body.read
+    project_type = params[:projectType]
 
-    put_file(endpoint, encrypted_channel_id, filename, body)
+    put_file(endpoint, encrypted_channel_id, filename, body, project_type)
   end
 
   # POST /v3/assets/<channel-id>/
@@ -1080,5 +1090,18 @@ class FilesApi < Sinatra::Base
   private def moderate_channel?(encrypted_channel_id)
     project = Projects.new(get_storage_id)
     !project.content_moderation_disabled?(encrypted_channel_id)
+  end
+
+  private def profanity_project_type?(project_type)
+    LABS_TO_CHECK_FOR_PROFANITY.include?(project_type)
+  end
+
+  private def get_text_for_profanity_check(project_type, body)
+    if project_type == 'aichat'
+      source = JSON.parse(body)['source']
+      source_json = JSON.parse(source)
+      return source_json['systemPrompt'] + ' ' + source_json['retrievalContexts'].join(' ')
+    end
+    body
   end
 end

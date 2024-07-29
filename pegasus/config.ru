@@ -50,6 +50,12 @@ if CDO.image_optim
   use Rack::Optimize
 end
 
+if CDO.use_cookie_dcdo
+  # Enables the setting of DCDO via cookies for testing purposes.
+  require 'cdo/rack/cookie_dcdo'
+  use Rack::CookieDCDO
+end
+
 # Disable Sinatra auto-initialization.
 # Add Honeybadger::Rack::ErrorNotifier to Rack middleware directly.
 use Honeybadger::Rack::ErrorNotifier

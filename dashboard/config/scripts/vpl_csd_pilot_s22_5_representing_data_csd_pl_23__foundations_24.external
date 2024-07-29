@@ -14,11 +14,11 @@ markdown <<MARKDOWN
 </p></div>
 <br>
 
-#### **Data** is information that has been collected about the world. Data can be any type of information, not just numbers. In Chapter 1 of the Data and Society unit, students will learn the different representation systems that computers use to represent information. 
+#### **Data** is information that has been collected about the world. Data can be any type of information, not just numbers. In this unit, students will learn the different representation systems that computers use to represent information. 
 
 ## Creating a Data Representation System
 
-#### Students begin by creating their own system for representing information in <a href="https://studio.code.org/s/csd5-2024/lessons/2" target="blank" rel="noopener noreferrer">Lesson 2: Patterns and Representation</a>. This prompts students to explore for themselves the qualities of good systems for representing information. They should find through creating and testing their systems that:
+#### Students begin by creating their own system for representing information in <a href="https://studio.code.org/s/fcs2-beta-2024/lessons/2" target="blank" rel="noopener noreferrer">Lesson 2: Patterns and Representation</a>. This prompts students to explore for themselves the qualities of good systems for representing information. They should find through creating and testing their systems that:
 
 * #### There are typically many possible systems for representing information.
 * #### People must agree on a common set of rules for a system to work.

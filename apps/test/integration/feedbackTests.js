@@ -1,11 +1,15 @@
-import {assert} from '../util/reconfiguredChai';
-var testUtils = require('../util/testUtils');
-import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-var testCollectionUtils = require('./util/testCollectionUtils');
 import {TestResults} from '@cdo/apps/constants';
 import * as redux from '@cdo/apps/redux';
-import sinon from 'sinon';
+
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
+import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
+
+var testUtils = require('../util/testUtils');
+
+var testCollectionUtils = require('./util/testCollectionUtils');
 
 /**
  * Loads blocks into the workspace, then calls

@@ -1,5 +1,4 @@
-import {assert} from 'chai';
-import _ from 'lodash';
+import _ from 'lodash'; // eslint-disable-line no-restricted-imports
 
 import createStandardsEditor, {
   addStandard,
@@ -49,10 +48,11 @@ describe('standardsEditorRedux reducer', () => {
       initialState,
       addStandard('standard', newStandard)
     );
-    assert.deepEqual(
-      nextState.map(s => s.shortcode),
-      ['shortcode-1', 'shortcode-3', 'shortcode-4']
-    );
+    expect(nextState.map(s => s.shortcode)).toEqual([
+      'shortcode-1',
+      'shortcode-3',
+      'shortcode-4',
+    ]);
   });
 
   it('sorts standards by framework', () => {
@@ -61,10 +61,11 @@ describe('standardsEditorRedux reducer', () => {
       initialState,
       addStandard('standard', newStandard)
     );
-    assert.deepEqual(
-      nextState.map(s => s.shortcode),
-      ['shortcode-4', 'shortcode-1', 'shortcode-3']
-    );
+    expect(nextState.map(s => s.shortcode)).toEqual([
+      'shortcode-4',
+      'shortcode-1',
+      'shortcode-3',
+    ]);
   });
 
   it('sorts standards within framework by shortcode', () => {
@@ -73,10 +74,11 @@ describe('standardsEditorRedux reducer', () => {
       initialState,
       addStandard('standard', newStandard)
     );
-    assert.deepEqual(
-      nextState.map(s => s.shortcode),
-      ['shortcode-1', 'shortcode-2', 'shortcode-3']
-    );
+    expect(nextState.map(s => s.shortcode)).toEqual([
+      'shortcode-1',
+      'shortcode-2',
+      'shortcode-3',
+    ]);
   });
 
   it('removes standard', () => {
@@ -87,10 +89,7 @@ describe('standardsEditorRedux reducer', () => {
         shortcode: 'shortcode-1',
       })
     );
-    assert.deepEqual(
-      nextState.map(s => s.shortcode),
-      ['shortcode-3']
-    );
+    expect(nextState.map(s => s.shortcode)).toEqual(['shortcode-3']);
   });
 
   it('adds opportunity standard without adding regular standard', () => {
@@ -98,18 +97,19 @@ describe('standardsEditorRedux reducer', () => {
       initialState,
       addStandard('opportunityStandard', newStandard)
     );
-    assert.deepEqual(
-      nextState.map(s => s.shortcode),
-      ['shortcode-1', 'shortcode-3', 'shortcode-4']
-    );
+    expect(nextState.map(s => s.shortcode)).toEqual([
+      'shortcode-1',
+      'shortcode-3',
+      'shortcode-4',
+    ]);
 
     nextState = standardsEditor(
       initialState,
       addStandard('opportunityStandard', newStandard)
     );
-    assert.deepEqual(
-      nextState.map(s => s.shortcode),
-      ['shortcode-1', 'shortcode-3']
-    );
+    expect(nextState.map(s => s.shortcode)).toEqual([
+      'shortcode-1',
+      'shortcode-3',
+    ]);
   });
 });

@@ -13,12 +13,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-06-27 05:06:26 UTC",
+    "serialized_at": "2024-07-24 04:47:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1779,7 +1780,7 @@
       "key": "c6478334-9eec-4d96-a67b-b2922645ee10",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Run a quick [Kahoot quiz](https://create.kahoot.it/share/unit-10-security-risks/5961fcf0-0dd2-4c76-bd0a-081fc9f1cf8b) to review Security Risks. \r\n\r\n---"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Run a quick [Kahoot quiz](https://create.kahoot.it/details/fc7211ac-50fd-407d-b8ff-cc8394e10620) to review Security Risks. \n\n---"
       },
       "seeding_key": {
         "activity_section.key": "c6478334-9eec-4d96-a67b-b2922645ee10",
@@ -3585,6 +3586,18 @@
       }
     },
     {
+      "name": "CSP Unit 8 - Slides",
+      "url": "https://drive.google.com/drive/folders/1ad6AxACidf5p-cSG6SRVu0kQrSar74lg?usp=drive_link",
+      "key": "csp_unit_8_-_slides",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_8_-_slides"
+      }
+    },
+    {
       "name": "Cybersecurity and Global Impacts (Unit Slides)",
       "url": "https://docs.google.com/presentation/d/1T6Bk9nNHyOi8OLn8ZDLzzNWPr-ujIJo881rH1l2DRUU/template/preview",
       "key": "cybersecurity_and_global_impacts_unit_slides_",
@@ -3972,6 +3985,12 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
+        "script.name": "csp8-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_unit_8_-_slides",
         "script.name": "csp8-2024"
       }
     },

@@ -1,7 +1,7 @@
-import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
-import {MultiFileSource, ProjectFile, ProjectFileType} from '../types';
-
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
+
+import {MultiFileSource, ProjectFile, ProjectFileType} from '../types';
 
 // Partial definition of the App Options structure, only defining the
 // pieces we need in this component.

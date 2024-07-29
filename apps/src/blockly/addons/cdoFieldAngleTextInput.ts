@@ -1,44 +1,53 @@
-import {FieldAngle} from '@blockly/field-angle';
-
 import {CLOCKWISE_TURN_DIRECTION} from '../constants';
+import {FieldHelperOptions} from '../types';
+
+import CdoFieldNumber from './cdoFieldNumber';
 
 interface AngleTextInputOptions {
   directionTitle: string; // Ex. 'DIR'
-  direction: string; // Ex. 'turnRight'
+  direction: 'turnRight' | 'turnLeft';
 }
-export default class CdoFieldAngleTextInput extends FieldAngle {
+
+export default class CdoFieldAngleTextInput extends CdoFieldNumber {
+  direction: string | undefined;
+  directionFieldName: string | undefined;
+
   /**
    * Class for an editable text field which will shows an angle picker.
    * @param {string} text The initial content of the field.
-   * @param {Object} opt_options Legacy options, supported by CDO Blockly
-   * @param {string} opt_options.direction a hardcoded direction setting
-   * @param {string} opt_options.directionTitle the name of the field from which
+   * @param {AngleTextInputOptions} [opt_options] Legacy options, supported by CDO Blockly
+   * @param {string} [opt_options.direction] a hardcoded direction setting
+   * @param {string} [opt_options.directionTitle] the name of the field from which
+   * @param {AngleTextInputOptions} [opt_options] Legacy options, supported by CDO Blockly
+   * @param {string} [opt_options.direction] a hardcoded direction setting
+   * @param {string} [opt_options.directionTitle] the name of the field from which
    *     to obtain direction information
    */
-  constructor(text: string, opt_options: AngleTextInputOptions) {
+  constructor(text: string, opt_options?: AngleTextInputOptions) {
     super(text);
-    this.direction = opt_options?.directionTitle;
-    this.directionFieldName = opt_options?.direction;
-    // Hide the degrees symbol, because our blocks have a separate "degrees" label.
-    this.symbol = '';
+    this.direction = opt_options?.direction;
+    this.directionFieldName = opt_options?.directionTitle;
   }
-
   /**
-   * Override to allow for clockwise orientation based on a hard-coded direction or
-   * a separate direction field on the block.
-   * @param {Event} e
+   * Get the direction from either the hardcoded setting or the direction field.
+   * @returns {string} The direction value.
    * @override
    */
-  showEditor_(e?: Event) {
-    if (!this.direction && this.directionFieldName) {
-      this.direction = this.getSourceBlock().getFieldValue(
-        this.directionFieldName
-      );
+  getAnglePickerDirection(): string {
+    let direction = this.direction;
+    if (!direction && this.directionFieldName) {
+      direction = this.getSourceBlock()?.getFieldValue(this.directionFieldName);
     }
+    return direction || CLOCKWISE_TURN_DIRECTION;
+  }
 
-    if (this.direction === CLOCKWISE_TURN_DIRECTION) {
-      this.clockwise = true;
+  getFieldHelperOptions(field_helper: string) {
+    if (field_helper === Blockly.BlockFieldHelper.ANGLE_HELPER) {
+      return {
+        direction: this.direction,
+        directionTitle: this.directionFieldName,
+        block: this.getSourceBlock(),
+      } as FieldHelperOptions;
     }
-    super.showEditor_(e);
   }
 }

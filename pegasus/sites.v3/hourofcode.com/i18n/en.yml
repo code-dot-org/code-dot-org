@@ -2069,6 +2069,26 @@
         desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
         button: "Explore the catalog"
 
+  csa_page:
+    ap_quizzes_banner: "Quizzes now available in AP Classroom! [Learn more](%{learn_more_url})"
+    additional_resources:
+      heading: "Additional AP CSA resources for educators"
+      pl:
+        overline: "Professional Learning"
+        title: "6-12 Educator Workshops"
+        desc: "Our highly supportive Professional Learning Program will bring you together with a group of teachers to learn from each other as well as expert facilitators as you take on the first year of teaching the free CSA curriculum to your students."
+        button_label: "Apply for 6-12 workshops"
+      ap_class_quiz:
+        overline: "Prep for the exam"
+        title: "Custom Quizzes for AP Classroom"
+        desc: "Unlock the full potential of AP Classroom with Code.org's custom quizzes, seamlessly mapped to our curriculum sequence. Empower your teaching and boost your students' AP exam readiness with practice materials that resonate with the way you teach."
+        button_label: "Learn more about quizzes"
+      ap_csa_computer_vision:
+        overline: "After the exam"
+        title: "AP CSA Computer Vision"
+        desc: "This two-chapter post-AP® CSA module offers high school students hands-on experience with professional software development tools, including GitHub and GitHub Copilot, and imparts them with the real-world skills to develop a computer vision program."
+        button_label: "Explore module"
+
   poetry_page:
     heading: "Coding with Poetry"
     desc: "Explore how coding can bring poems to life, creating your own digital poetry masterpieces. Available in 25+ languages!"
@@ -11278,6 +11298,7 @@
   video_library_page_inspirational_video_title_14: "It's More Than A Game (1 min)"
   video_library_page_inspirational_video_title_15: "Create With Computer Science (1 min)"
   video_library_page_inspirational_video_title_16: "Young Women in Computer Science (2 min)"
+  video_library_page_inspirational_video_title_17: "Beyond Binary: Computer Science is for Everyone (3 min)"
   video_library_page_not_hacked_video_title_1: "How Not To Get Hacked: Introduction"
   video_library_page_not_hacked_video_title_2: "How Not To Get Hacked: Passwords"
   video_library_page_not_hacked_video_title_3: "How Not To Get Hacked: Authentication and Device Locks"
@@ -11443,6 +11464,40 @@
     subtitle: "New"
     description: "Why is it still important for students to learn to program? How are teachers in CS classrooms already incorporating AI? Explore the guidance and engage in the future of CS education in an age of AI."
     button_text: "Explore the guidance"
+
+  teach_labs_section:
+    header: "Build your way with labs"
+    description: "Discover programming environments tailored to meet students at their level, empowering them to express their creativity and build more freely as they grow their programming skills."
+    label_what_you_can_make: "What you can make:"
+    label_experience: "Experience:"
+    spritelab:
+      overline: "Ages 5-12"
+      title: "Sprite Lab"
+      what_you_can_make: "Simple animations and games with characters"
+      experience: "Beginner"
+      call_to_action_learn_more: "Learn more"
+      call_to_action_try: "Try Sprite Lab"
+    gamelab:
+      overline: "Ages 13+"
+      title: "Game Lab"
+      what_you_can_make: "Simple animations and games with characters"
+      experience: "Beginner"
+      call_to_action_learn_more: "Learn more"
+      call_to_action_try: "Try Game Lab"
+    applab:
+      overline: "Ages 13+"
+      title: "App Lab"
+      what_you_can_make: "Simple Javascript apps with blocks or code"
+      experience: "Beginner"
+      call_to_action_learn_more: "Learn more"
+      call_to_action_try: "Try App Lab"
+ 
+  resources_tabs:
+    progress:
+      tab_label: "Progress"
+      heading: "Track your students' progress"
+      desc: "Our powerful progress view helps you monitor student work by providing insights into completion status, time spent, and more. Easily track each student's learning journey, quickly assess participation, and give personalized feedback."
+      call_to_action: "Create a Code.org account"
 
   language_code:
     ar: "Arabic"

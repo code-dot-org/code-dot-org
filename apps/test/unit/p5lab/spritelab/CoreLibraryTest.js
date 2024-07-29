@@ -1,4 +1,4 @@
-import {stub} from 'sinon';
+import {stub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {
   workspaceAlertTypes,
@@ -14,7 +14,7 @@ import * as redux from '@cdo/apps/redux';
 import msg from '@cdo/locale';
 
 import createP5Wrapper from '../../../util/gamelab/TestableP5Wrapper';
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('SpriteLab Core Library', () => {
   let coreLibrary;

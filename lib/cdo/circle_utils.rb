@@ -28,7 +28,7 @@ module CircleUtils
   end
 
   def self.circle?
-    ENV['CIRCLECI']
+    ENV.fetch('CIRCLECI', nil)
   end
 
   # In unit tests, we want to bypass the cache and recompute tags.

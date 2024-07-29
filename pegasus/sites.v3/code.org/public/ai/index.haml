@@ -90,54 +90,7 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s(:ai_pl_heading)
     %p=hoc_s("ai_page.pl.desc")
-    -# TODO - Remove this DCDO flag logic once the 2024 curriculum is live
-    -# and remove everything below the else statement
-    - if !!DCDO.get('curriculum-launch-2024', false)
-      = view :"ai_landing_page/ai_carousel_pl"
-    - else
-      .action-block__wrapper.action-block__wrapper--three-col
-        .action-block.action-block--one-col.flex-space-between
-          .content-wrapper
-            %p.overline
-              =hoc_s(:module_label_self_paced)
-            %h3=hoc_s(:ai_pl_101_title)
-            %img{src: "/images/self-paced-pl-tile-ai-101.jpg", alt: ""}
-            %p=hoc_s(:ai_pl_101_desc)
-          .content-footer
-            %p
-              %strong
-                =hoc_s(:module_label_duration)
-              =hoc_s(:module_duration_5_hrs)
-            %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-ai-101")}
-              =hoc_s(:call_to_action_start_module)
-        .action-block.action-block--one-col.flex-space-between
-          .content-wrapper
-            %p.overline
-              =hoc_s(:module_label_video_series)
-            %h3=hoc_s(:ai_pl_101_hero_heading)
-            %img{src: "/shared/images/announcement/announcement_ai_pl_2023.png", alt: ""}
-            %p=hoc_s(:ai_pl_101_hero_desc)
-          .content-footer
-            %p
-              %strong
-                =hoc_s(:module_label_duration)
-              =hoc_s(:module_duration_5_hrs)
-            %a.link-button{href: "/ai/pl/101"}
-              =hoc_s(:call_to_action_watch_videos)
-        .action-block.action-block--one-col.flex-space-between
-          .content-wrapper
-            %p.overline
-              =hoc_s(:module_label_self_paced)
-            %h3=hoc_s(:ai_pl_title)
-            %img{src: "/images/ai/ai-professional-learning.png", alt: ""}
-            %p=hoc_s(:ai_pl_desc)
-          .content-footer
-            %p
-              %strong
-                =hoc_s(:module_label_duration)
-              =hoc_s(:module_duration_2_hrs)
-            %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-aiml")}
-              =hoc_s(:call_to_action_start_module)
+    = view :"ai_landing_page/ai_carousel_pl"
 
 %section#ai-integrations.bg-neutral-light
   .wrapper
@@ -154,16 +107,16 @@ theme: responsive_full_width
 %section.bg-neutral-light
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
     %figure.col-45{style: "margin-bottom: 1rem"}
-      %img{src: "/images/ai/pl/101/TeachAI.png", alt: "", style: "width: 100%"}
+      %img{src: "/images/ai/pl/101/teach-ai-future-of-cs.png", alt: "", style: "width: 100%"}
     .text-wrapper.col-50{style: "margin-bottom: 1rem"}
       %p.new
-        =hoc_s(:new)
+        =hoc_s('teach_ai_banner_july_2024.subtitle')
       %h2.heading-lg
-        =hoc_s(:ai_promote_literacy)
+        =hoc_s('teach_ai_banner_july_2024.headline')
       %p.body-three
-        =hoc_s(:ai_section_body)
-      %a.link-button.has-external-link{href: "https://teachai.org/policy", target: "_blank", rel: "noopener noreferrer"}
-        =hoc_s(:ai_explore_the_resources)
+        =hoc_s('teach_ai_banner_july_2024.description')
+      %a.link-button.has-external-link{href: "https://teachai.org/cs", target: "_blank", rel: "noopener noreferrer"}
+        =hoc_s('teach_ai_banner_july_2024.button_text')
   .clear
 
 %section.no-padding-bottom

@@ -6,7 +6,7 @@
 
 #special-levels.in.collapse
   -# Dance and Spritelab are special types of Gamelab levels
-  - if @level.is_a?(Gamelab) || @level.is_a?(Applab) || @level.is_a?(Weblab) || @level.is_a?(FreeResponse) || @level.is_a?(Javalab)
+  - if @level.is_a?(Gamelab) || @level.is_a?(Applab) || @level.is_a?(Weblab) || @level.is_a?(FreeResponse) || @level.is_a?(Javalab) || @level.is_a?(Pythonlab)
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :submittable, description: "Submittable"}
     %p
       If checked, students with teachers can "submit" a solution for

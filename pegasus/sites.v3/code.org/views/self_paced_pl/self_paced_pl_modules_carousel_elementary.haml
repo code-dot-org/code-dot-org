@@ -12,52 +12,46 @@
       aria_label_primary: hoc_s(:aria_label_call_to_action_ai_101),
       aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_ai_101),
       new: true
-    }
-  ]
-  if !!DCDO.get('curriculum-launch-2024', false)
-    block_items +=[
-      {
-        overline: hoc_s(:module_grade_3_5_teachers),
-        title: hoc_s(:module_label_teaching_how_ai_makes_decisions),
-        image: '/images/self-paced-pl-tile-how-ai-makes-decisions.jpg',
-        curriculum: hoc_s(:curriculum_name_how_ai_makes_decisions),
-        duration: hoc_s(:module_duration_1_hr),
-        prerequisites: hoc_s(:module_prerequisites_none),
-        url_primary: CDO.studio_url("/courses/elementaryai-2024"),
-        url_secondary: CDO.studio_url('/s/k5-ai-data-2024'),
-        aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_how_ai_makes_decisions),
-        aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_how_ai_makes_decisions),
-        new: true
-      },
-      {
-        overline: hoc_s(:module_grade_3_5_teachers),
-        title: hoc_s(:module_label_teaching_elementary_game_design),
-        image: '/images/self-paced-pl-tile-elementary-game-design.jpg',
-        curriculum: hoc_s(:curriculum_name_elementary_game_design),
-        duration: hoc_s(:module_duration_1_hr_30_minutes),
-        prerequisites: hoc_s(:module_prerequisites_none),
-        url_primary: CDO.studio_url("/courses/3-5gamedesign-2024"),
-        url_secondary: CDO.studio_url('/s/elem-game-design-2024'),
-        aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_elementary_game_design),
-        aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_elementary_game_design),
-        new: true
-      },
-      {
-        overline: hoc_s(:module_grade_2_5_teachers),
-        title: hoc_s(:module_label_teaching_microbit_maker_module),
-        image: "/images/self-paced-pl-tile-micro-bit-maker.png",
-        curriculum: hoc_s(:curriculum_name_microbit_maker_modules),
-        duration: hoc_s(:module_duration_1_hr_30_minutes),
-        prerequisites: hoc_s(:module_prerequisites_none),
-        url_primary: CDO.studio_url("/courses/microbitmakermodule-2024"),
-        url_secondary: "/maker#curriculum-link-microbit",
-        aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_microbit_maker_module),
-        aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_microbit_maker_module),
-        new: true
-      }
-    ]
-  end
-  block_items += [
+    },
+    {
+      overline: hoc_s(:module_grade_3_5_teachers),
+      title: hoc_s(:module_label_teaching_how_ai_makes_decisions),
+      image: '/images/self-paced-pl-tile-how-ai-makes-decisions.jpg',
+      curriculum: hoc_s(:curriculum_name_how_ai_makes_decisions),
+      duration: hoc_s(:module_duration_1_hr),
+      prerequisites: hoc_s(:module_prerequisites_none),
+      url_primary: CDO.studio_url("/courses/elementaryai-2024"),
+      url_secondary: CDO.studio_url('/s/k5-ai-data-2024?viewAs=Instructor'),
+      aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_how_ai_makes_decisions),
+      aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_how_ai_makes_decisions),
+      new: true
+    },
+    {
+      overline: hoc_s(:module_grade_3_5_teachers),
+      title: hoc_s(:module_label_teaching_elementary_game_design),
+      image: '/images/action-blocks/action-block-game-design.png',
+      curriculum: hoc_s(:curriculum_name_elementary_game_design),
+      duration: hoc_s(:module_duration_1_hr_30_minutes),
+      prerequisites: hoc_s(:module_prerequisites_none),
+      url_primary: CDO.studio_url("/courses/3-5gamedesign-2024"),
+      url_secondary: CDO.studio_url('/s/elem-game-design-2024?viewAs=Instructor'),
+      aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_elementary_game_design),
+      aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_elementary_game_design),
+      new: true
+    },
+    {
+      overline: hoc_s(:module_grade_2_5_teachers),
+      title: hoc_s(:module_label_teaching_microbit_maker_module),
+      image: "/images/self-paced-pl-tile-micro-bit-maker.png",
+      curriculum: hoc_s(:curriculum_name_microbit_maker_modules),
+      duration: hoc_s(:module_duration_1_hr_30_minutes),
+      prerequisites: hoc_s(:module_prerequisites_none),
+      url_primary: CDO.studio_url("/courses/microbitmakermodule-2024"),
+      url_secondary: "/maker#curriculum-link-microbit",
+      aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_microbit_maker_module),
+      aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_microbit_maker_module),
+      new: true
+    },
     {
       overline: hoc_s(:module_grade_k_5_teachers),
       title: hoc_s(:module_label_teaching_k5_basics),

@@ -1,4 +1,5 @@
 import React from 'react';
+
 import moduleStyles from './no-exemplar-page.module.scss';
 
 const NoExemplarPage: React.FunctionComponent = () => {

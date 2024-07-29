@@ -1,15 +1,15 @@
 /**
  * Utilities for initializing MicroBit board components
  */
-import MicroBitButton from './MicroBitButton';
-import LedScreen from './LedScreen';
 import Accelerometer from './Accelerometer';
-import MicroBitThermometer from './MicroBitThermometer';
-import Compass from './Compass';
-import LightSensor from './LightSensor';
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
+import Compass from './Compass';
 import ExternalButton from './ExternalButton';
 import ExternalLed from './ExternalLed';
+import LedScreen from './LedScreen';
+import LightSensor from './LightSensor';
+import MicroBitButton from './MicroBitButton';
+import MicroBitThermometer from './MicroBitThermometer';
 
 /**
  * Initializes a set of components for the currently

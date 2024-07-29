@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-06-21 22:11:14 UTC",
+    "serialized_at": "2024-07-09 21:08:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6521,6 +6521,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Allthethings Python Lab 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6538,6 +6541,51 @@
     },
     {
       "chapter": 182,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Allthethings Python Lab 6"
+        ]
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Python Lab 6"
+        ],
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
+      },
+      "level_keys": [
+        "Allthethings Python Lab 6"
+      ]
+    },
+    {
+      "chapter": 183,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Allthethings Python Lab 7"
+        ],
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
+      },
+      "level_keys": [
+        "Allthethings Python Lab 7"
+      ]
+    },
+    {
+      "chapter": 184,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6561,7 +6609,7 @@
       ]
     },
     {
-      "chapter": 183,
+      "chapter": 185,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6585,7 +6633,7 @@
       ]
     },
     {
-      "chapter": 184,
+      "chapter": 186,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6609,7 +6657,7 @@
       ]
     },
     {
-      "chapter": 185,
+      "chapter": 187,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6633,7 +6681,7 @@
       ]
     },
     {
-      "chapter": 186,
+      "chapter": 188,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6657,7 +6705,7 @@
       ]
     },
     {
-      "chapter": 187,
+      "chapter": 189,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6681,7 +6729,7 @@
       ]
     },
     {
-      "chapter": 188,
+      "chapter": 190,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -6705,7 +6753,7 @@
       ]
     },
     {
-      "chapter": 189,
+      "chapter": 191,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -6729,7 +6777,7 @@
       ]
     },
     {
-      "chapter": 190,
+      "chapter": 192,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -6753,7 +6801,7 @@
       ]
     },
     {
-      "chapter": 191,
+      "chapter": 193,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
@@ -9069,6 +9117,30 @@
         "level.key": "Allthethings Python Lab 5",
         "script_level.level_keys": [
           "Allthethings Python Lab 5"
+        ],
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Python Lab 6",
+        "script_level.level_keys": [
+          "Allthethings Python Lab 6"
+        ],
+        "lesson.key": "lesson-53",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "465bc905-13b5-487c-8fd6-8043676ee607"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Allthethings Python Lab 7",
+        "script_level.level_keys": [
+          "Allthethings Python Lab 7"
         ],
         "lesson.key": "lesson-53",
         "lesson_group.key": "",

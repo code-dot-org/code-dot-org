@@ -1,7 +1,5 @@
 import {MazeController} from '@code-dot-org/maze';
 
-import {expect} from '../../util/reconfiguredChai';
-
 const BeeHandler = require('@cdo/apps/maze/results/bee');
 const CollectorHandler = require('@cdo/apps/maze/results/collector');
 const FarmerHandler = require('@cdo/apps/maze/results/farmer');
@@ -45,7 +43,7 @@ describe('ResultsHandlers', function () {
         const handler = createResultsHandlerForSubtype(mazeController, {
           level: {},
         });
-        expect(handler).to.be.an.instanceof(value);
+        expect(handler).toBeInstanceOf(value);
       });
     });
   });

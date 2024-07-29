@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-05-17T16:37:28.000Z",
   "level_num": "custom",
@@ -45,11 +46,14 @@
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"Press `Run` then try to click on the bouncing balls!\",\"hint_id\":\"Hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/27594aa7e4494e1019dedd9820680284/game_variables_intro_choices_c.mp3\"}]",
     "short_instructions": "Play the game!",
     "name_suffix": "_course-e",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-05-17T16:37:28.658+00:00\",\"changed\":[\"cloned from \\\"game_variables_intro_choices_c_2024\\\"\"],\"cloned_from\":\"game_variables_intro_choices_c_2024\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-17T16:37:28.658+00:00\",\"changed\":[\"cloned from \\\"game_variables_intro_choices_c_2024\\\"\"],\"cloned_from\":\"game_variables_intro_choices_c_2024\"},{\"changed_at\":\"2024-07-15 22:11:10 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
+    "events": 1
   }
 }]]></config>
   <blocks>

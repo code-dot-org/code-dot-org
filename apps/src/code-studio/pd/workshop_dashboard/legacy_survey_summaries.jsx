@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import Spinner from '../components/spinner';
 
 class LegacySurveySummaryTable extends React.Component {

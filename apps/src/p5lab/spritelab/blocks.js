@@ -1,15 +1,16 @@
+import {NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
+import {parseSoundPathString} from '@cdo/apps/blockly/utils';
 import {SVG_NS} from '@cdo/apps/constants';
+import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
 import {getStore} from '@cdo/apps/redux';
-import {getLocation} from '../redux/locationPicker';
-import {P5LabInterfaceMode} from '../constants';
-import {TOOLBOX_EDIT_MODE} from '../../constants';
-import {animationSourceUrl} from '../redux/animationList';
-import {changeInterfaceMode} from '../actions';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
-import {parseSoundPathString} from '@cdo/apps/blockly/utils';
-import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
-import {NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
+
+import {TOOLBOX_EDIT_MODE} from '../../constants';
+import {changeInterfaceMode} from '../actions';
+import {P5LabInterfaceMode} from '../constants';
+import {animationSourceUrl} from '../redux/animationList';
+import {getLocation} from '../redux/locationPicker';
 
 function animations(includeBackgrounds) {
   const animationList = getStore().getState().animationList;

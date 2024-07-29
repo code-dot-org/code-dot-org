@@ -1,4 +1,4 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {
   regenerateDefaultSpriteMetadata,
@@ -8,7 +8,7 @@ import {
   generateLevelAnimationsManifest,
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 
-import {expect, assert} from '../../util/reconfiguredChai';
+import {expect, assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 import testAnimationLibrary from './testAnimationLibrary.json';
 

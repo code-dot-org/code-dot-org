@@ -1,4 +1,5 @@
-import sinon from 'sinon';
+import $ from 'jquery';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -8,6 +9,7 @@ import {
   registerReducers,
   getStore,
 } from '@cdo/apps/redux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 import reducer, {
   __testInterface__,
@@ -44,7 +46,7 @@ import reducer, {
   NO_SECTION,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const {
   EDIT_SECTION_SUCCESS,
@@ -176,7 +178,7 @@ describe('teacherSectionsRedux', () => {
 
   beforeEach(() => {
     stubRedux();
-    registerReducers({teacherSections: reducer});
+    registerReducers({currentUser, teacherSections: reducer});
     store = getStore();
   });
 
@@ -475,7 +477,7 @@ describe('teacherSectionsRedux', () => {
   describe('editSectionProperties', () => {
     let editingNewSectionState;
 
-    before(() => {
+    beforeAll(() => {
       editingNewSectionState = reducer(initialState, beginEditingSection());
     });
 
@@ -1736,15 +1738,19 @@ describe('teacherSectionsRedux', () => {
   });
 
   describe('AnalyticsReporter events', () => {
-    let analyticsSpy;
+    let analyticsSpy, jqueryStub;
 
     beforeEach(() => {
       store.dispatch(setSections(sections));
       analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+
+      jqueryStub = sinon.stub($, 'ajax');
+      jqueryStub.returns({done: sinon.stub().returns({fail: sinon.stub()})});
     });
 
     afterEach(() => {
       analyticsSpy.restore();
+      jqueryStub.restore();
     });
 
     it('sends an event when course offering is assigned', () => {
@@ -1790,6 +1796,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('doesnt send an event when course offering is unchanged', () => {
+      jest.mock('@cdo/apps/lib/util/firehose');
       store.dispatch(assignToSection(11, 2, 2, 3, null));
       expect(analyticsSpy).to.not.be.called;
     });

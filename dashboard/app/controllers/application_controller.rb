@@ -346,8 +346,12 @@ class ApplicationController < ActionController::Base
 
     # URLs we should not redirect.
     return if Set[
+      # Allow retrieval of current user data for event reporting
+      api_v1_users_current_path,
       # Don't block any user from signing out
       destroy_user_session_path,
+      # Allow retrieval of CSRF token
+      get_token_path,
       # Don't block any user from changing the language
       locale_path,
       # Avoid an infinite redirect loop to the lockout page

@@ -1,7 +1,6 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import reducers, {
   initActivities,
@@ -21,7 +20,6 @@ import {
   registerReducers,
 } from '@cdo/apps/redux';
 
-import {expect} from '../../../../util/reconfiguredChai';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 import {sampleActivities, searchOptions} from './activitiesTestData';
@@ -63,16 +61,16 @@ describe('ActivitySectionCard', () => {
     store.dispatch(initResources('lessonResource', resourceTestData));
     store.dispatch(initVocabularies([]));
 
-    setTargetActivitySection = sinon.spy();
-    updateTargetActivitySection = sinon.spy();
-    clearTargetActivitySection = sinon.spy();
-    updateActivitySectionMetrics = sinon.spy();
-    moveActivitySection = sinon.spy();
-    removeActivitySection = sinon.spy();
-    updateActivitySectionField = sinon.spy();
-    reorderLevel = sinon.spy();
-    moveLevelToActivitySection = sinon.spy();
-    addLevel = sinon.spy();
+    setTargetActivitySection = jest.fn();
+    updateTargetActivitySection = jest.fn();
+    clearTargetActivitySection = jest.fn();
+    updateActivitySectionMetrics = jest.fn();
+    moveActivitySection = jest.fn();
+    removeActivitySection = jest.fn();
+    updateActivitySectionField = jest.fn();
+    reorderLevel = jest.fn();
+    moveLevelToActivitySection = jest.fn();
+    addLevel = jest.fn();
     defaultProps = {
       activitySection: sampleActivities[0].activitySections[0],
       activityPosition: 1,
@@ -103,14 +101,12 @@ describe('ActivitySectionCard', () => {
 
   it('renders activity section without levels', () => {
     const wrapper = shallow(<ActivitySectionCard {...defaultProps} />);
-    expect(wrapper.find('Connect(ActivitySectionCardButtons)').length).to.equal(
-      1
-    );
-    expect(wrapper.find('LevelToken').length).to.equal(0);
-    expect(wrapper.find('textarea').length).to.equal(1);
-    expect(wrapper.find('OrderControls').length).to.equal(1);
-    expect(wrapper.contains('Remarks')).to.be.true;
-    expect(wrapper.contains('Progression Title:')).to.be.false;
+    expect(wrapper.find('Connect(ActivitySectionCardButtons)').length).toBe(1);
+    expect(wrapper.find('LevelToken').length).toBe(0);
+    expect(wrapper.find('textarea').length).toBe(1);
+    expect(wrapper.find('OrderControls').length).toBe(1);
+    expect(wrapper.contains('Remarks')).toBe(true);
+    expect(wrapper.contains('Progression Title:')).toBe(false);
   });
 
   it('show OrderControls when allowed to make major curriculum changes', () => {
@@ -120,7 +116,7 @@ describe('ActivitySectionCard', () => {
         allowMajorCurriculumChanges={true}
       />
     );
-    expect(wrapper.find('OrderControls').length).to.equal(1);
+    expect(wrapper.find('OrderControls').length).toBe(1);
   });
 
   it('hides OrderControls when not allowed to make major curriculum changes and levels in activity section', () => {
@@ -131,7 +127,7 @@ describe('ActivitySectionCard', () => {
         activitySection={sampleActivities[0].activitySections[2]}
       />
     );
-    expect(wrapper.find('OrderControls').length).to.equal(0);
+    expect(wrapper.find('OrderControls').length).toBe(0);
   });
 
   it('show OrderControls when not allowed to make major curriculum changes and no levels in activity section', () => {
@@ -141,7 +137,7 @@ describe('ActivitySectionCard', () => {
         allowMajorCurriculumChanges={false}
       />
     );
-    expect(wrapper.find('OrderControls').length).to.equal(1);
+    expect(wrapper.find('OrderControls').length).toBe(1);
   });
 
   it('renders activity section with levels', () => {
@@ -151,13 +147,11 @@ describe('ActivitySectionCard', () => {
         activitySection={sampleActivities[0].activitySections[2]}
       />
     );
-    expect(wrapper.find('Connect(ActivitySectionCardButtons)').length).to.equal(
-      1
-    );
-    expect(wrapper.find('Connect(UnconnectedLevelToken)').length).to.equal(2);
-    expect(wrapper.find('textarea').length).to.equal(1);
-    expect(wrapper.find('OrderControls').length).to.equal(1);
-    expect(wrapper.contains('Progression Title:')).to.be.true;
+    expect(wrapper.find('Connect(ActivitySectionCardButtons)').length).toBe(1);
+    expect(wrapper.find('Connect(UnconnectedLevelToken)').length).toBe(2);
+    expect(wrapper.find('textarea').length).toBe(1);
+    expect(wrapper.find('OrderControls').length).toBe(1);
+    expect(wrapper.contains('Progression Title:')).toBe(true);
   });
 
   it('renders activity section with levels for lesson with lesson plan', () => {
@@ -168,13 +162,11 @@ describe('ActivitySectionCard', () => {
         hasLessonPlan={false}
       />
     );
-    expect(wrapper.find('Connect(ActivitySectionCardButtons)').length).to.equal(
-      1
-    );
-    expect(wrapper.find('Connect(UnconnectedLevelToken)').length).to.equal(2);
-    expect(wrapper.find('textarea').length).to.equal(0);
-    expect(wrapper.find('OrderControls').length).to.equal(1);
-    expect(wrapper.contains('Progression Title:')).to.be.true;
+    expect(wrapper.find('Connect(ActivitySectionCardButtons)').length).toBe(1);
+    expect(wrapper.find('Connect(UnconnectedLevelToken)').length).toBe(2);
+    expect(wrapper.find('textarea').length).toBe(0);
+    expect(wrapper.find('OrderControls').length).toBe(1);
+    expect(wrapper.contains('Progression Title:')).toBe(true);
   });
 
   it('edit activity section title', () => {
@@ -182,7 +174,7 @@ describe('ActivitySectionCard', () => {
 
     const titleInput = wrapper.find('input').at(0);
     titleInput.simulate('change', {target: {value: 'New Title'}});
-    expect(updateActivitySectionField).to.have.been.calledWith(
+    expect(updateActivitySectionField).toHaveBeenCalledWith(
       1,
       1,
       'displayName',
@@ -195,7 +187,7 @@ describe('ActivitySectionCard', () => {
 
     const durationInput = wrapper.find('input').at(1);
     durationInput.simulate('change', {target: {value: '5'}});
-    expect(updateActivitySectionField).to.have.been.calledWith(
+    expect(updateActivitySectionField).toHaveBeenCalledWith(
       1,
       1,
       'duration',
@@ -208,7 +200,7 @@ describe('ActivitySectionCard', () => {
 
     const remarksInput = wrapper.find('input').at(2);
     remarksInput.simulate('change', {target: {value: ''}});
-    expect(updateActivitySectionField).to.have.been.calledWith(
+    expect(updateActivitySectionField).toHaveBeenCalledWith(
       1,
       1,
       'remarks',
@@ -226,7 +218,7 @@ describe('ActivitySectionCard', () => {
 
     const progressionInput = wrapper.find('input').at(3);
     progressionInput.simulate('change', {target: {value: 'Progression Name'}});
-    expect(updateActivitySectionField).to.have.been.calledWith(
+    expect(updateActivitySectionField).toHaveBeenCalledWith(
       1,
       3,
       'progressionName',
@@ -239,7 +231,7 @@ describe('ActivitySectionCard', () => {
 
     const titleInput = wrapper.find('textarea').at(0);
     titleInput.simulate('change', {target: {value: 'My section description'}});
-    expect(updateActivitySectionField).to.have.been.calledWith(
+    expect(updateActivitySectionField).toHaveBeenCalledWith(
       1,
       1,
       'text',
@@ -254,13 +246,13 @@ describe('ActivitySectionCard', () => {
       </Provider>
     );
 
-    expect(wrapper.find('OrderControls').length).to.equal(1);
+    expect(wrapper.find('OrderControls').length).toBe(1);
     const orderControls = wrapper.find('OrderControls');
-    expect(orderControls.find('.fa-caret-down').length).to.equal(1);
+    expect(orderControls.find('.fa-caret-down').length).toBe(1);
     const down = orderControls.find('.fa-caret-down');
     down.simulate('mouseDown');
 
-    expect(moveActivitySection).to.have.been.calledWith(1, 1, 'down');
+    expect(moveActivitySection).toHaveBeenCalledWith(1, 1, 'down');
   });
 
   it('can not move activity section up if first activity section in first activity', () => {
@@ -270,13 +262,13 @@ describe('ActivitySectionCard', () => {
       </Provider>
     );
 
-    expect(wrapper.find('OrderControls').length).to.equal(1);
+    expect(wrapper.find('OrderControls').length).toBe(1);
     const orderControls = wrapper.find('OrderControls');
-    expect(orderControls.find('.fa-caret-up').length).to.equal(1);
+    expect(orderControls.find('.fa-caret-up').length).toBe(1);
     const up = orderControls.find('.fa-caret-up');
     up.simulate('mouseDown');
 
-    expect(moveActivitySection).to.not.have.been.called;
+    expect(moveActivitySection).not.toHaveBeenCalled();
   });
 
   it('can move activity section up to previous activity', () => {
@@ -290,13 +282,13 @@ describe('ActivitySectionCard', () => {
       </Provider>
     );
 
-    expect(wrapper.find('OrderControls').length).to.equal(1);
+    expect(wrapper.find('OrderControls').length).toBe(1);
     const orderControls = wrapper.find('OrderControls');
-    expect(orderControls.find('.fa-caret-up').length).to.equal(1);
+    expect(orderControls.find('.fa-caret-up').length).toBe(1);
     const up = orderControls.find('.fa-caret-up');
     up.simulate('mouseDown');
 
-    expect(moveActivitySection).to.have.been.calledWith(2, 1, 'up');
+    expect(moveActivitySection).toHaveBeenCalledWith(2, 1, 'up');
   });
 
   it('can not move activity section down if last activity section in last activity', () => {
@@ -311,13 +303,13 @@ describe('ActivitySectionCard', () => {
       </Provider>
     );
 
-    expect(wrapper.find('OrderControls').length).to.equal(1);
+    expect(wrapper.find('OrderControls').length).toBe(1);
     const orderControls = wrapper.find('OrderControls');
-    expect(orderControls.find('.fa-caret-down').length).to.equal(1);
+    expect(orderControls.find('.fa-caret-down').length).toBe(1);
     const down = orderControls.find('.fa-caret-down');
     down.simulate('mouseDown');
 
-    expect(moveActivitySection).to.not.have.been.called;
+    expect(moveActivitySection).not.toHaveBeenCalled();
   });
 
   it('can insert at text cusor positon with insertMarkdownSyntaxAtSelection', () => {
@@ -330,14 +322,14 @@ describe('ActivitySectionCard', () => {
 
     // inserting without a cursor position will insert at the beginning
     instance.insertMarkdownSyntaxAtSelection('new syntax ');
-    expect(updateActivitySectionField.lastCall.args[3]).to.equal(
+    expect(updateActivitySectionField.mock.lastCall[3]).toBe(
       'new syntax Simple text'
     );
 
     // inserting with a cursor position will insert at that position
     instance.editorTextAreaRef.selectionStart = 6;
     instance.insertMarkdownSyntaxAtSelection(' new syntax');
-    expect(updateActivitySectionField.lastCall.args[3]).to.equal(
+    expect(updateActivitySectionField.mock.lastCall[3]).toBe(
       'Simple new syntax text'
     );
   });
@@ -352,15 +344,13 @@ describe('ActivitySectionCard', () => {
     instance.editorTextAreaRef.selectionStart = 0;
     instance.editorTextAreaRef.selectionEnd = 6;
     instance.insertMarkdownSyntaxAtSelection('Basic insertion');
-    expect(updateActivitySectionField.lastCall.args[3]).to.equal(
+    expect(updateActivitySectionField.mock.lastCall[3]).toBe(
       'Basic insertion text'
     );
 
     instance.editorTextAreaRef.selectionStart = 7;
     instance.editorTextAreaRef.selectionEnd = 11;
     instance.insertMarkdownSyntaxAtSelection('example');
-    expect(updateActivitySectionField.lastCall.args[3]).to.equal(
-      'Simple example'
-    );
+    expect(updateActivitySectionField.mock.lastCall[3]).toBe('Simple example');
   });
 });

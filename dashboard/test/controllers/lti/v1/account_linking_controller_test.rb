@@ -24,6 +24,18 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
     PartialRegistration.persist_attributes session, partial_lti_teacher
     User.any_instance.stubs(:valid_password?).returns(true)
 
+    Metrics::Events.expects(:log_event).with(
+      has_entries(
+        user: @user,
+        event_name: 'lti_account_linked'
+      )
+    )
+    Metrics::Events.expects(:log_event).with(
+      has_entries(
+        user: @user,
+        event_name: 'lti_user_signin'
+      )
+    )
     post :link_email, params: {email: @user.email, password: 'password'}
     assert_redirected_to target_url
     assert Policies::Lti.lti?(@user)

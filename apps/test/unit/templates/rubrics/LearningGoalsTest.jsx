@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {act} from 'react-dom/test-utils';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -18,7 +18,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 // These are test observations that would be given by the AI.
 const observations = 'This is an observation. This is another observation.';
@@ -524,7 +524,7 @@ describe('LearningGoals - Enzyme', () => {
         sinon.match.any,
         sinon.match.any,
         sinon.match.any,
-        sinon.match({backgroundImage: sinon.match(tipIconImage)})
+        sinon.match({backgroundImage: sinon.match(`${tipIconImage}`)})
       );
     });
 

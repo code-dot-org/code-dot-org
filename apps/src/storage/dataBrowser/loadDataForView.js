@@ -2,37 +2,28 @@ import {getStore} from '../../redux';
 import {DataView} from '../constants';
 import {
   tableType,
-  addTableName,
-  deleteTableName,
   updateTableColumns,
   updateTableRecords,
   updateKeyValueData,
   updateTableList,
 } from '../redux/data';
-import {isDatablockStorage, isFirebaseStorage} from '../storage';
 
 let lastView;
 let lastTableName;
 let lastStorage;
 
 export function refreshCurrentDataView() {
-  // TODO: post-firebase-cleanup, remove if guard, but keep the contents: #56994
-  if (isDatablockStorage()) {
-    loadDataForView(lastStorage, lastView, null, lastTableName);
-  }
+  loadDataForView(lastStorage, lastView, lastTableName);
 }
 
 /**
  * Given a particular view in the data sets browser, invoke appropriate
  * commands to the storageBackend() loading the data needed for that view.
- * @param {StorageBackend} storage - firebaseStorage or datablockStorage
+ * @param {StorageBackend} storage
  * @param {DataView} view
- * @param {string} oldTableName - a previously subscribed table name, for firebase to unsubscribe
  * @param {string} newTableName - name of the table being displayed, if any
  */
-export function loadDataForView(storage, view, oldTableName, newTableName) {
-  // TODO: post-firebase-cleanup, remove oldTableName: #56994
-
+export function loadDataForView(storage, view, newTableName) {
   // Save for later use in refreshCurrentDataView()
   lastView = view;
   lastTableName = newTableName;
@@ -40,14 +31,6 @@ export function loadDataForView(storage, view, oldTableName, newTableName) {
 
   if (!getStore().getState().pageConstants.hasDataMode) {
     throw new Error('onDataViewChange triggered without data mode enabled');
-  }
-
-  // TODO: post-firebase-cleanup, remove this conditional: #56994
-  if (isFirebaseStorage()) {
-    storage.unsubscribeFromKeyValuePairs();
-    if (oldTableName) {
-      storage.unsubscribeFromTable(oldTableName);
-    }
   }
 
   switch (view) {
@@ -70,26 +53,17 @@ export function loadDataForView(storage, view, oldTableName, newTableName) {
       return;
     }
     case DataView.OVERVIEW: {
-      // Initialize redux's list of tables from firebase, and keep it up to date as
+      // Initialize redux's list of tables from Datablock Storage, and keep it up to date as
       // new tables are added and removed.
 
-      // TODO: post-firebase-cleanup, remove this conditional: #56994
-      if (isFirebaseStorage()) {
-        // Firebase
-        storage.subscribeToListOfProjectTables(
-          (tableName, tableType) =>
-            getStore().dispatch(addTableName(tableName, tableType)),
-          tableName => getStore().dispatch(deleteTableName(tableName))
+      // Datablock Storage
+      storage.getTableNames().then(tableNames => {
+        const tableListMap = Object.fromEntries(
+          tableNames.map(tableName => [tableName, tableType.PROJECT])
         );
-      } else {
-        // Datablock Storage
-        storage.getTableNames().then(tableNames => {
-          const tableListMap = Object.fromEntries(
-            tableNames.map(tableName => [tableName, tableType.PROJECT])
-          );
-          getStore().dispatch(updateTableList(tableListMap));
-        });
-      }
+        getStore().dispatch(updateTableList(tableListMap));
+      });
+
       return;
     }
     default:

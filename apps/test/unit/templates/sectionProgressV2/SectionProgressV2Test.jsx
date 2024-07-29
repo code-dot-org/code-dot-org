@@ -16,12 +16,12 @@ import teacherSections, {
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
 const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};
 const STUDENTS = [STUDENT_1, STUDENT_2];
 const DEFAULT_PROPS = {};
+
+jest.mock('@cdo/apps/templates/sectionProgress/sectionProgressLoader');
 
 describe('SectionProgressV2', () => {
   let store;
@@ -68,7 +68,7 @@ describe('SectionProgressV2', () => {
     screen.getByText('Progress (beta)');
     screen.getByText('Students');
     screen.getAllByTestId('skeleton-cell');
-    expect(screen.queryAllByText(/Student [1-9]/)).to.be.empty;
+    expect(screen.queryAllByText(/Student [1-9]/)).toHaveLength(0);
   });
 
   it('shows students and unit selector', () => {
@@ -79,8 +79,6 @@ describe('SectionProgressV2', () => {
     screen.getByText('Progress (beta)');
     screen.getByText('Students');
 
-    expect(screen.getAllByText(/Student [1-9]/).length).to.equal(
-      STUDENTS.length
-    );
+    expect(screen.getAllByText(/Student [1-9]/).length).toBe(STUDENTS.length);
   });
 });

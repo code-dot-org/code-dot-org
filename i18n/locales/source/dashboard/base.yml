@@ -43,6 +43,9 @@ en:
           attributes:
             reset_password_token:
               invalid: "is invalid. Note that each link can only be used once to reset your password, and only the most recently sent link will work."
+            unlock_token:
+              invalid: "is invalid or expired, possibly because your account has already been unlocked."
+            lockout_flow: "cannot be updated because you need parent or guardian permission first."
       messages:
         blank: "is required"
         blank_plural: "are required"
@@ -416,6 +419,7 @@ en:
       learn: "Learn"
       stats: "Stats"
       help_us: "Help Us"
+      donate: "Donate"
       teach: "Teach"
       about: "About"
       incubator: "Incubator"
@@ -555,6 +559,7 @@ en:
     parent_email_hint: "(this can be used for password recovery)"
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
     update: "Update Account"
+    update_field_parent_permission_required: '(You must obtain parental permission before updating this field)'
     account_successfully_updated: "Account successfully updated."
     auth_option_saved: "You have successfully linked your %{provider} account with email %{email}."
     auth_option_saved_no_email: "You have successfully linked your %{provider} account."
@@ -1428,6 +1433,7 @@ en:
   lti:
     account_linking:
       account_not_found: "Account not found"
+      admin_not_allowed: "Admins cannot link LTI accounts"
       connect_button: "Connect with %{provider}"
       connect_with: "Connect with..."
       connect_with_email: "Connect with personal login"

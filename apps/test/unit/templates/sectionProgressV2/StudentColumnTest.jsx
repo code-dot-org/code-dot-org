@@ -13,8 +13,6 @@ import currentUser from '@cdo/apps/templates/currentUserRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import StudentColumn from '@cdo/apps/templates/sectionProgressV2/StudentColumn.jsx';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 const studentA = {
   name: 'Sherlock',
   familyName: 'Holmes',
@@ -68,7 +66,7 @@ describe('StudentColumn', () => {
 
   it('shows no students if empty', () => {
     renderDefault();
-    expect(screen.queryByText('Holmes')).to.be.null;
+    expect(screen.queryByText('Holmes')).toBeNull();
   });
 
   it('shows all students', () => {
@@ -98,12 +96,12 @@ describe('StudentColumn', () => {
       sortedStudents: [studentA, studentB],
     });
     let holmes = screen.getByText('Sherlock Holmes');
-    expect(holmes.ariaExpanded).to.equal('false');
+    expect(holmes.getAttribute('aria-expanded')).toBe('false');
 
     fireEvent.click(holmes);
 
     holmes = screen.getByText('Sherlock Holmes');
-    expect(holmes.ariaExpanded).to.equal('true');
+    expect(holmes.getAttribute('aria-expanded')).toBe('true');
 
     screen.getByText('Time Spent (mins)');
     screen.getByText('Last Updated');

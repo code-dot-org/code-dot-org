@@ -1,9 +1,10 @@
-import {singleton as studioApp} from '@cdo/apps/StudioApp';
-import annotationList from '@cdo/apps/acemode/annotationList';
-import {interpolateColors} from '@cdo/apps/utils';
-import {border_gray} from '@cdo/apps/util/color';
-import RGBColor from 'rgbcolor';
 import md5 from 'md5';
+import RGBColor from 'rgbcolor';
+
+import annotationList from '@cdo/apps/acemode/annotationList';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
+import {border_gray} from '@cdo/apps/util/color';
+import {interpolateColors} from '@cdo/apps/utils';
 
 /**
  * Represents an implementation of an editing environment and wraps functionality

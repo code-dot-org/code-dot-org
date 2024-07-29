@@ -1,9 +1,10 @@
 // This component renders a survey answer that consists of one question
 // Ex. checkbox or radio button question
 
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import _ from 'lodash';
+
 import ChoiceResponses from './choice_responses.jsx';
 
 export default class SingleQuestionChoiceResponses extends React.Component {

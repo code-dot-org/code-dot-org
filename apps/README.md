@@ -68,23 +68,24 @@ See also: [Full build with blockly changes](#full-build-with-blockly-changes)
 
 ## Testing
 
-Apps tests are run in a browser using [Karma](https://karma-runner.github.io/). By default they run inside a [headless chrome browser](https://developer.chrome.com/blog/headless-karma-mocha-chai/) but they can also be run in the browser of your choice. See below for information on [writing new tests](#writing-tests).
+Apps unit tests are run using [jest](https://jestjs.io/) and integration tests are run in a browser using [Karma](https://karma-runner.github.io/). By default they run inside a [headless chrome browser](https://developer.chrome.com/blog/headless-karma-mocha-chai/) but they can also be run in the browser of your choice. See below for information on [writing new tests](#writing-tests).
 
-| To Run... | Example Command |
-| --- | --- |
-| All tests in parallel | `yarn test` |
-| Unit tests | `yarn test:unit` |
-| Integration tests | `yarn test:integration` |
-| A single unit test file | `yarn test:unit --entry=./test/unit/utilsTest.js` |
-| All unit tests in a folder | `yarn test:unit --entry=./test/unit/applab/` |
-| Unit tests named \*Tutorial\* | `yarn test:unit --grep='Tutorial'` |
-| Integration tests named \*data_blocks\* | `yarn test:integration --grep='data_blocks'` |
-| Integration tests for maze levels | `yarn test:integration --levelType=maze` |
-| **Other useful flags:** | **Example Command** |
-| Stream pass/fail to stdout/stderr | `yarn test:unit --verbose` |
-| Rerun tests when files change | `yarn test:unit --watchTests` |
-| Debug tests in Chrome | `yarn test:unit --browser=Chrome --watchTests` |
-| Directly invoke Karma (same flags) | `npx karma start --testType=unit --browser=Chrome` |
+| To Run...                               | Example Command                                           |
+|-----------------------------------------|-----------------------------------------------------------|
+| All tests in parallel                   | `yarn test`                                               |
+| Unit tests                              | `yarn test:unit`                                          |
+| Integration tests                       | `yarn test:integration`                                   |
+| A single unit test file                 | `yarn test:unit test/unit/utilsTest.js`                   |
+| All unit tests in a folder              | `yarn test:unit test/unit/applab/`                        |
+| Unit tests named \*Tutorial\*           | `yarn test:unit --testNamePattern='Tutorial'`             |
+| Integration tests named \*data_blocks\* | `yarn test:integration --grep='data_blocks'`              |
+| Integration tests for maze levels       | `yarn test:integration --levelType=maze`                  |
+| **Other useful flags:**                 | **Example Command**                                       |
+| Stream pass/fail to stdout/stderr       | `yarn test:unit --verbose`                                |
+| Rerun tests when files change           | `yarn test:unit --watch`                                  |
+| Debug tests in Chrome                   | `yarn test:integration --browser=Chrome --watchTests`     |
+| Directly invoke Karma (same flags)      | `npx karma start --testType=integration --browser=Chrome` |
+| Directly invoke jest                    | `npx jest`                                                |
 
 #### Testing Notes
 
@@ -92,7 +93,14 @@ Apps tests are run in a browser using [Karma](https://karma-runner.github.io/). 
 - You'll need to run `yarn build` at least once before running tests. If you don't, you'll see errors like `Module not found: Error: Can't resolve '../../../build/`.
 - You probably don't need to keep running `yarn build` while fixing tests, `yarn test --watchTests` will watch and rebuild most test/ and src/ files for you.
 
-### Debugging Tests
+### IDE Support
+
+You can run and debug jest unit tests with an IDE extension. For more details, check your IDE's documentation.
+
+* [VSCode](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
+* [Rubymine/Webstorm](https://www.jetbrains.com/help/webstorm/running-unit-tests-on-jest.html)
+
+### Debugging Karma Tests
 
 To debug tests, your best bet is to run them in Chrome:
 
@@ -124,7 +132,7 @@ open coverage/PhantomJS\ 2.1.1\ \(Mac\ OS\ X\ 0.0.0\)/index.html
 
 ### Writing Tests
 
-You can add new test files as /test/unit/\*Tests.js; see
+New or updated tests are executed using [jest](https://jestjs.io/). You can add new test files as `/test/unit/\*Tests.js`; see
 `/test/unit/feedbackTests.js` as an example of adding a mock Blockly
 instance. Note that each test file in `/test/unit/**` should include tests for
 exactly one file in `src/**` and the test file should have the same file name as
@@ -143,7 +151,9 @@ if (IN_UNIT_TEST) {
 
 These if statements will be removed from production source files at build time.
 
-The test runner starts a server which can serve files in the apps directory to
+### Karma Tests (Deprecated)
+
+Karma is used to run tests that depend on a browser. The test runner starts a server which can serve files in the apps directory to
 your test code. Only allowlisted files and directories are available. See the
 `files` array in `karma.conf.js` for the allowlist. When
 fetching files served by the test runner, prefix the file path with

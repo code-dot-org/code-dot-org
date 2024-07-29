@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "data-science-playground",
-    "serialized_at": "2024-06-17 19:00:14 UTC",
+    "serialized_at": "2024-07-01 20:01:19 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -97,6 +97,21 @@
         "lesson_group.key": "",
         "script.name": "data-science-playground"
       }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Python Lab Playground",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground"
+      }
     }
   ],
   "lesson_activities": [
@@ -144,6 +159,18 @@
       "seeding_key": {
         "lesson_activity.key": "4650af87-0eec-4db4-b1e8-75bef33f8f64",
         "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground"
+      }
+    },
+    {
+      "key": "fccb4f4b-9a21-4b5f-9057-a80c4a9d17c0",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fccb4f4b-9a21-4b5f-9057-a80c4a9d17c0",
+        "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "data-science-playground"
       }
@@ -239,6 +266,17 @@
       "seeding_key": {
         "activity_section.key": "9a78e5ce-4fe0-45ac-a549-36d45d212ea2",
         "lesson_activity.key": "4650af87-0eec-4db4-b1e8-75bef33f8f64"
+      }
+    },
+    {
+      "key": "d7bcf459-fcdc-49d0-b891-f840f9079eae",
+      "position": 1,
+      "properties": {
+        "progression_name": "Python Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "d7bcf459-fcdc-49d0-b891-f840f9079eae",
+        "lesson_activity.key": "fccb4f4b-9a21-4b5f-9057-a80c4a9d17c0"
       }
     }
   ],
@@ -349,6 +387,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data_science_L8_level1"
+        ],
         "progression": "Data Talk"
       },
       "bonus": false,
@@ -371,6 +412,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "data_science_L8_level2"
+        ],
         "progression": "Cleaning Data"
       },
       "bonus": false,
@@ -435,6 +479,28 @@
       },
       "level_keys": [
         "data_sci ch1_viz"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Python Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ken_python_test"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground",
+        "activity_section.key": "d7bcf459-fcdc-49d0-b891-f840f9079eae"
+      },
+      "level_keys": [
+        "ken_python_test"
       ]
     }
   ],
@@ -533,6 +599,18 @@
         "lesson_group.key": "",
         "script.name": "data-science-playground",
         "activity_section.key": "00df9750-9091-413f-b93f-19602495ef6f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ken_python_test",
+        "script_level.level_keys": [
+          "ken_python_test"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground",
+        "activity_section.key": "d7bcf459-fcdc-49d0-b891-f840f9079eae"
       }
     }
   ],

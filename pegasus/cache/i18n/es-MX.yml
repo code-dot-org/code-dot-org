@@ -23,8 +23,8 @@ es-MX:
     de la Inteligencia Artificial de todo el mundo.
   ai_audience: Audiencia
   ai_cognimates: Cognimates
-  ai_cognimates_description: Una plataforma educativa de IA para crear juegos, programar
-    robots y entrenar.
+  ai_cognimates_description: Una plataforma educativa de IA para construir juegos,
+    programar robots y entrenamiento.
   ai_description: Descripción
   ai_ecs: 'ECS: Inteligencia Artificial (IA)'
   ai_ecs_description: Una nueva unidad de plan de estudios alternativo para el plan
@@ -47,12 +47,12 @@ es-MX:
     los sesgos y cómo la Inteligencia Artificial puede abordar los problemas del mundo.
     Ver"
   ai_google: Experimentos de Inteligencia Artificial con Google
-  ai_google_description: Empieza a explorar el aprendizaje automático a través de
-    imágenes, dibujos, lenguaje, música y mucho más.
+  ai_google_description: Comienza a explorar el aprendizaje automático a través de
+    imágenes, dibujos, lenguaje, música y más.
   ai_ibm_machine_learning_for_kids: 'IBM: Aprendizaje Automático para Niños'
   ai_in_partnership_with: En colaboración con
   ai_k_12_audience: K-12 (se requiere saber leer)
-  ai_machine_learning_for_kids: Aprendizaje automático para niños
+  ai_machine_learning_for_kids: Aprendizaje automático para niños/as
   ai_machine_learning_for_kids_description: Entrena un modelo de aprendizaje automático
     con texto, números o imágenes y úsalo para crear juegos en Scratch.
   ai_microsoft_thanks: Agradecemos a Microsoft por el apoyo a nuestra visión y misión
@@ -69,8 +69,8 @@ es-MX:
   ai_seeing_ai: Viendo la Inteligencia Artificial
   ai_seeing_ai_description: Una aplicación gratuita que narra el mundo que te rodea
     en varios idiomas.
-  ai_teachable_machine: Enseñar a una máquina
-  ai_teachable_machine_description: Entrena a un ordenador para que reconozca tus
+  ai_teachable_machine: Máquina enseñable
+  ai_teachable_machine_description: Entrena una computadora para que reconozca tus
     propias imágenes, sonidos y poses.
   ai_try_activity: Prueba la actividad
   ai_zooniverse: Zooniverse - Snapshot Mountain Zebra
@@ -236,7 +236,7 @@ es-MX:
   carousel_heading_webpages: Aprende a crear páginas web
   cded_sign_up: Registrarse
   cded_try_it: Pruébalo
-  certificate_sponsor_message: "%{sponsor_name} tuve el generoso gesto de patrocinar
+  certificate_sponsor_message: "%{sponsor_name} hizo el generoso gesto de patrocinar
     tu aprendizaje."
   city: Ciudad
   class_submission_in_school: En la escuela
@@ -437,7 +437,7 @@ es-MX:
   compatibility_unsupported_browser_markdown: Tu navegador no es compatible. Actualiza
     tu navegador a [uno de nuestros navegadores compatibles](%{supported_browsers_url})
     Puedes tratar de ver la página, pero la funcionalidad podría verse afectada.
-  computer_science_edweek: Semana de Educación en Ciencias de la Computación
+  computer_science_edweek: La Hora del Código está aquí
   condcards_gradelevel: De 8 a 12 años
   condcards_longdescription: Aprende sobre algoritmos y sentencias condicionales en
     esta actividad sin computadora, utilizando una baraja de cartas. Los estudiantes
@@ -574,16 +574,16 @@ es-MX:
     avanzados).
   coursec-2017_gradelevel: Edades de 6 a 10 años
   coursec-2017_name: Curso C (2017)
-  coursec-2017_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias
-    de la Computación y crea tu propio arte, historias y juegos.
+  coursec-2017_shortdescription_congrats: Aprende los fundamentos de la informática
+    y crea tu propio arte, historias y juegos.
   coursec-2018_gradelevel: Edades de 6 a 10 años
   coursec-2018_name: Curso C (2018)
-  coursec-2018_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias
-    de la Computación y crea tu propio arte, historias y juegos.
+  coursec-2018_shortdescription_congrats: Aprende los fundamentos de la informática
+    y crea tu propio arte, historias y juegos.
   coursec-2019_gradelevel: Edades de 6 a 10 años
   coursec-2019_name: Curso C (2019)
-  coursec-2019_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias
-    de la Computación y crea tu propio arte, historias y juegos.
+  coursec-2019_shortdescription_congrats: Aprende los fundamentos de la informática
+    y crea tu propio arte, historias y juegos.
   coursec-2020_gradelevel: Edades de 6 a 10 años
   coursec-2020_name: Curso C (2020)
   coursec-2020_shortdescription_congrats: Crea programas con secuencias, bucles y
@@ -605,8 +605,8 @@ es-MX:
   coursec-draft_name: Curso C
   coursec_gradelevel: Edades de 6 a 10 años
   coursec_name: Curso C
-  coursec_shortdescription_congrats: Aprende los conceptos básicos de las Ciencias
-    de la Computación y crea tu propio arte, historias y juegos.
+  coursec_shortdescription_congrats: Aprende los fundamentos de la informática y crea
+    tu propio arte, historias y juegos.
   coursed-2017_gradelevel: Edades de 7 a 11 años
   coursed-2017_name: Curso D (2017)
   coursed-2017_shortdescription_congrats: Rápidamente repasada conceptos del Curso
@@ -737,8 +737,8 @@ es-MX:
   csedweek_banner_teachers: '<a href="/csteacher" style="color: white; text-decoration:
     none; font-weight: 400">¿Eres profesor de informática? Mira otros recursos de
     CSEdWeek</a>'
-  csedweek_banner_teachers_text: "¿Eres profesor de Ciencias de la Computación? Mira
-    otros recursos de CSEdWeek"
+  csedweek_banner_teachers_text: "¿Eres profesor de informática? Mira otros recursos
+    de CSEdWeek"
   csedweek_dates: Del 3 al 9 de diciembre de 2018
   csedweek_map_header: "# CSEdWeek / Eventos sobre Hora del Código en el mundo"
   csedweek_map_header_num: "%{num} eventos de CSEdWeek/Hora del Código en todo el
@@ -802,7 +802,7 @@ es-MX:
   dashboard_course2: 'Curso 2:'
   dashboard_course3: 'Curso 3:'
   dashboard_course4: 'Curso 4: '
-  dashboard_course_csina: Ciencias de la computación en álgebra
+  dashboard_course_csina: Informática en Álgebra
   dashboard_course_csina_desc: Code.org se ha asociado con Bootstrap para desarrollar
     un currículo para enseñar conceptos algebraicos y geométricos a través de la programación
     de computadoras.
@@ -1104,7 +1104,7 @@ es-MX:
   dashboard_unplugged: Si no tienes computadoras, <a href='%{unplugged_url}'>prueba
     estas lecciones sin conexión</a> en tu aula.
   dashboard_unplugged_markdown: Si no tienes computadoras, [prueba estas lecciones
-    sin conexión](%{unplugged_url}) en tu aula.
+    sin conexión](%{unplugged_url}) en tu clase.
   dashboard_view_all_lesson_plans: Descarga el plan de estudios completo para los
     cursos 1 a 4
   download_offline: Descarga la versión sin conexión.
@@ -1122,7 +1122,7 @@ es-MX:
   edx_beyond_shortdescription: La clase más popular de Harvard
   email: Correo electrónico
   en: Ciencias de la computación
-  enter_certificate_names: Ingresa hasta 30 nombres, **uno por línea**. Se generará
+  enter_certificate_names: Escribe hasta 30 nombres, **uno por línea**. Se generará
     una página imprimible con certificados %{script_name} personalizados.
   enter_country: Ingresa tu país si resides fuera de los Estados Unidos
   enter_valid_age: Selecciona una edad válida
@@ -1188,8 +1188,8 @@ es-MX:
     Ahora, continúa con nuestros <a href='http://studio.code.org'>otros cursos</a>,
     o vé más opciones en <a href='/learn/beyond'>Aprender más allá de Una Hora</a>.
   get_a_certificate_message_after_markdown: Haz clic en el certificado para descargarlo
-    o imprimirlo. Ahora, continúa con nuestros [otros cursos] (http://studio.code.org),
-    o explora opciones en [Aprender más allá de una hora] (/ learn / beyond).
+    o imprimirlo. Ahora, sigue con nuestros [otros cursos](http://studio.code.org),
+    o consulta más opciones para [Aprender más allá de una hora](/learn/beyond).
   get_a_certificate_of_achievement: Recibe un certificado de tu logro
   get_started: Comenzar
   girl: Femenino
@@ -1244,6 +1244,7 @@ es-MX:
   header_courses: Cursos
   header_districts: Distritos Escolares
   header_documentation: Documentación
+  header_donate: Dona
   header_educate_beyond: Más allá de Code.org
   header_educate_community: Comunidad en línea
   header_educate_elementary: Escuela primaria
@@ -1355,10 +1356,9 @@ es-MX:
     con otras necesidades, y ayudarlos a seguir una carrera en ciencias de la computación.
     <a href='%{amazon_future_engineer_link}' target='_blank'>Conoce más</a>
   hoc2018_dance_amazon_sponsor_section_with_logo_description_with_link_markdown: Amazon
-    Future Engineer* es un programa integral que abarca desde la niñez hasta la carrera
-    y tiene el objetivo de inspirar, educar y capacitar a niños y jóvenes de bajos
-    ingresos y otros niños y jóvenes desfavorecidos para que sigan carreras en ciencias
-    de la computación. [Más información](%{amazon_future_engineer_link})
+    Future Engineer* es un programa integral que abarca desde la niñez hasta profesional
+    que inspira, educa y capacita a niños y jóvenes de bajos ingresos y otros niños
+    y jóvenes desfavorecidos para que sigan carreras en informática. [Más información](%{amazon_future_engineer_link})
   hoc2018_dance_amazon_sponsor_section_with_logo_title: En colaboración con
   hoc2018_dance_amazon_try_coding_this_summer_button: Únete a un campamento
   hoc2018_dance_amazon_try_coding_this_summer_description: "¡Participa en los campamentos
@@ -1491,12 +1491,12 @@ es-MX:
   hoc2018_mc_with_microsoft: En colaboración con
   hoc2019_dance_previous_versions: "¿Estás buscando una versión anterior de Fiesta
     de baile?  \nHaz clic aquí para iniciar [Parte 1](%{dance_2018_link}) y [Parte
-    2](%{dance_extras_2018_link}) del último año."
+    2](%{dance_extras_2018_link}) desde 2018."
   hoc2019_mc_aquatic_description: Explora y crea mundos submarinos a través del código.
-  hoc2019_mc_mee_description1: 'El nuevo tutorial para Minecraft de la Hora del Código
-    ya está disponible en Minecraft: Education Edition para Windows, Mac y iPad. ¡Aprende
-    los conceptos básicos de programar y explorar la inteligencia artificial con tus
-    estudiantes!'
+  hoc2019_mc_mee_description1: El nuevo tutorial para Minecraft de la Hora del Código
+    ya está disponible en Minecraft Education Edition para Windows, Mac y iPad. ¡Aprende
+    los conceptos básicos de programación y explorar la inteligencia artificial con
+    tus estudiantes!
   hoc2019_mc_mee_description2: Accede a recursos gratuitos que incluyen un plan de
     lecciones, videos, un plan de estudios en ciencias de la computación y entrenamientos
     para docentes.
@@ -1535,7 +1535,7 @@ es-MX:
   hoc2022_landing_page_create_description: "¡Haz algo extraordinario y maravilloso!"
   hoc2022_landing_page_create_title: Crear
   hoc2022_landing_page_explore_description: "¡Abre las puertas a nuevos mundos con
-    las ciencias de la computación!"
+    la informática!"
   hoc2022_landing_page_explore_title: Explorar
   hoc2022_landing_page_play_description: "¡Sal al campo y anota!"
   hoc2022_landing_page_play_title: Jugar
@@ -1550,12 +1550,11 @@ es-MX:
     200 horas de contenido que cubre programación con bloques y python.
   hoc2022_mc_mee_description: "¡Escapa de la misteriosa mansión al amanecer y gana
     un millón de esmeraldas! El nuevo tutorial de la Hora del código de Minecraft
-    ya está disponible en Minecraft: Education Edition para Windows, Mac, Chromebook,
-    iPad y dispositivos móviles. Comience con recursos, capacitaciones y videos gratuitos
-    para educadores. "
+    ya está disponible en Minecraft Education para Windows, Mac, Chromebook, iPad
+    y Celular. Comience con recursos, capacitaciones y videos gratuitos para educadores. "
   hoc2022_mc_mee_timecraft_description: 'Viaja al pasado para salvar el futuro en
     esta lección de programación gratuita en Minecraft: Education Edition.'
-  hoc2022_mc_mee_title: Finca de escape de Minecraft
+  hoc2022_mc_mee_title: Minecraft Escape Estate
   hoc2022_nasa_banner_description: Sintonízate a las 10AM ET el 5 de Diciembre via
     el canal de YouTube de NASA STEM.
   hoc2022_nasa_banner_heading: "¡Aprende sobre las ciencias de la computación en el
@@ -1578,11 +1577,11 @@ es-MX:
     alrededor de una ilustración de la tierra
   hoc_overview_hello_world_2022_subtitle: Elige entre seis temas divertidos para programar
     personajes interactivos en un mundo creado por ti.
-  hoc_overview_more_resources: Para obtener más recursos sobre cómo participar en
-    tu aula a distancia, consulta nuestra guía para organizar una [Hora del Código
-    virtual](https://hourofcode.com/us/how-to/virtual). Para los alumnos con tecnología
-    o conectividad limitada o nula, comparte este paquete de [Actividades de la Hora
-    del Código Desconectadas](https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
+  hoc_overview_more_resources: Quieres más información recursos para animar a tus
+    estudiantes en tus clases remotas? consulta a nuestra guía de [Hora de Código
+    virtual](https://hourofcode.com/us/how-to/virtual). Para estudiantes sin computadoras,
+    o con poca conectividad, comparte este paquete que contiene [actividades desconectadas
+    de la Hora de Codigo]{https://code.org/files/Hour-of-Code-Unplugged-Activities.pdf).
   hoc_overview_partner_activities_body: El sitio web de la Hora del Código cuenta
     con más de 500 actividades sobre ciencias de la computación para todas las edades
     y niveles de experiencia, desarrolladas por Code.org y nuestros socios.
@@ -1642,7 +1641,7 @@ es-MX:
   homepage_csa_title: AP® Informática A
   homepage_diversity_pledge: Toma la promesa de diversidad
   homepage_donors_donate: Dona
-  homepage_donors_seall: Ver todos
+  homepage_donors_seall: Ver más seguidores
   homepage_gallery_header: Más de %{project_count} millones de proyectos de Code.org
     creados
   homepage_header_donors: Code.org agradece a sus colaboradores
@@ -1892,7 +1891,7 @@ es-MX:
   kodu_beyond_name: Kodu
   kodu_beyond_platformtext: Windows, xBox
   kodu_beyond_shortdescription: Diseña el mundo de un juego 3D
-  landscape_recommended_certificates: Se recomienda que elijas **Horizontal** cuando
+  landscape_recommended_certificates: Se recomienda que escogas **Horizontal** cuando
     imprimas los certificados.
   leaderboards_for_hoc: Clasificaciones para la Hora del Código.
   learn_are_you_educator: ¿Es Ud. un educador? Aprenda <a href="http://hourofcode.com/resources/how-to">cómo
@@ -2288,7 +2287,7 @@ es-MX:
   scratchjr_beyond_shortdescription: 'Crea historias y juegos interactivos con Scratch
     Jr. '
   see_more_activities: Prueba más actividades
-  select_language: Seleccione su idioma
+  select_language: Selecciona tu idioma
   share_achievement: Comparte tu logro
   share_on_facebook: Compartir en Facebook
   share_on_twitter: Compartir en Twitter
@@ -2388,8 +2387,10 @@ es-MX:
     aprender". - Frank Martinez, profesor'
   stats_nina: '"Cada día produjo los mismos resultados — 100% de compromiso." - Nina
     Nichols Peery, profesora'
-  stats_nina_markdown: '"Todos los días arrojaron los mismos resultados: 100 % de
-    compromiso". - Nina Nichols Peery, profesora'
+  stats_nina_markdown: '"Todos los días se obtuvieron los mismos resultados: 100%
+    de compromiso". - Nina Nichols Peery, profesora
+
+    '
   stats_student: '"Sabía que era una oportunidad<b> única en la vida</b>." - Mariana
     Alzate, estudiante de 5º grado'
   stats_student_markdown: '"Sabía que esta sería una oportunidad **única**". - Mariana
@@ -2824,16 +2825,16 @@ es-MX:
   volunteer_engineer_submission_intro_links_markdown: "¿Eres un profesor buscando
     voluntarios? Encuentra un voluntario local en nuestro [mapa de voluntarios](%{volunteer_local})."
   volunteer_engineer_submission_intro_recruit_markdown: A los profesores les encantaría
-    tener a alguien **apasionado por la educación en la ciencia de la computación**
-    que pueda ayudar en el aula, o alguien que pueda **inspirar** a sus estudiantes
-    mediante charlas sobre la amplitud de posibilidades que brinda la ciencia de la
-    computación (lo cual podría hacerse a través de un chat de video).
-  volunteer_engineer_submission_intro_signup_markdown: Ingresa la siguiente información
-    si eres un estudiante de ciencias de la computación o un profesional del software.
+    tener a alguien **apasionado por la educación en la informática** que pueda ayudar
+    en la clase, o alguien que pueda **inspirar** a sus estudiantes mediante charlas
+    sobre la amplitud de posibilidades que brinda la informática (lo cual podría hacerse
+    a través de un chat de video).
+  volunteer_engineer_submission_intro_signup_markdown: Por favor, introduce la siguiente
+    información si eres un estudiante de informática o un profesional del software.
     Debes tener al menos 18 años para inscribirte como voluntario. Ten en cuenta que
-    todos los campos que completes en esta sección estarán disponibles públicamente
-    para cualquiera que esté mirando el [mapa de voluntarios](/volunteer/local). Los
-    campos marcados con un "*" son obligatorios.
+    todos los campos que rellenes en esta sección estarán disponibles públicamente
+    para cualquier persona que consulte el [mapa de voluntarios](/voluntario/local).
+    Los campos marcados con un _*_ son obligatorios.
   volunteer_engineer_submission_location_flexibility_curriculum: aporte a proyectos
     de planes de estudio de código abierto
   volunteer_engineer_submission_location_flexibility_onsite: visita presencial a una

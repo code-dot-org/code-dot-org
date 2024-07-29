@@ -143,10 +143,7 @@ exports.install = function (blockly, blockInstallOptions) {
       );
       this.appendDummyInput()
         .appendField(
-          new blockly.FieldTextInput(
-            '100',
-            blockly.FieldTextInput.numberValidator
-          ),
+          new blockly.FieldTextInput('100', blockly.cdoUtils.numberValidator),
           'VALUE'
         )
         .appendField(msg.dots());
@@ -701,10 +698,13 @@ exports.install = function (blockly, blockInstallOptions) {
         BlockStyles.LOOP
       );
       this.appendDummyInput()
-        .appendField(blockly.Msg.CONTROLS_FOR_INPUT_WITH)
+        .appendField(
+          blockly.Msg.CONTROLS_FOR_INPUT_WITH || msg.controlsForInputWith()
+        )
         .appendField(new blockly.FieldLabel(msg.loopVariable()), 'VAR');
       this.interpolateMsg(
-        blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY,
+        blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY ||
+          msg.controlsForInputFromToBy(),
         ['FROM', 'Number', blockly.ALIGN_RIGHT],
         ['TO', 'Number', blockly.ALIGN_RIGHT],
         ['BY', 'Number', blockly.ALIGN_RIGHT],
@@ -1112,10 +1112,7 @@ exports.install = function (blockly, blockInstallOptions) {
       );
       this.appendDummyInput()
         .appendField(
-          new blockly.FieldTextInput(
-            '100',
-            blockly.FieldTextInput.numberValidator
-          ),
+          new blockly.FieldTextInput('100', blockly.cdoUtils.numberValidator),
           'VALUE'
         )
         .appendField(msg.dots());
@@ -1217,19 +1214,13 @@ exports.install = function (blockly, blockInstallOptions) {
         msg.jumpToOverDown(),
         () => {
           this.appendDummyInput().appendField(
-            new blockly.FieldTextInput(
-              '0',
-              blockly.FieldTextInput.numberValidator
-            ),
+            new blockly.FieldTextInput('0', blockly.cdoUtils.numberValidator),
             'XPOS'
           );
         },
         () => {
           this.appendDummyInput().appendField(
-            new blockly.FieldTextInput(
-              '0',
-              blockly.FieldTextInput.numberValidator
-            ),
+            new blockly.FieldTextInput('0', blockly.cdoUtils.numberValidator),
             'YPOS'
           );
         },
@@ -1338,7 +1329,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.appendDummyInput().appendField(msg.setWidth());
       this.appendDummyInput().appendField(
-        new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator),
+        new blockly.FieldTextInput('1', blockly.cdoUtils.numberValidator),
         'WIDTH'
       );
       this.setPreviousStatement(true);
@@ -1607,10 +1598,7 @@ exports.install = function (blockly, blockInstallOptions) {
       block
         .appendDummyInput()
         .appendField(
-          new blockly.FieldTextInput(
-            '0',
-            blockly.FieldTextInput.numberValidator
-          ),
+          new blockly.FieldTextInput('0', blockly.cdoUtils.numberValidator),
           'SIZE'
         )
         .appendField(msg.pixels());
@@ -1701,10 +1689,7 @@ exports.install = function (blockly, blockInstallOptions) {
       block
         .appendDummyInput()
         .appendField(
-          new blockly.FieldTextInput(
-            '0',
-            blockly.FieldTextInput.numberValidator
-          ),
+          new blockly.FieldTextInput('0', blockly.cdoUtils.numberValidator),
           'SIZE'
         )
         .appendField(msg.pixels());

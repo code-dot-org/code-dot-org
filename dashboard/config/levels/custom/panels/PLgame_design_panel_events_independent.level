@@ -9,7 +9,13 @@
     "encrypted": "false",
     "panels": [
       {
-        "text": "#Events in Game Design\nYou will find informational levels in the curriculum. For example, this page features interactive elements to help students and teachers understand events. \n\nTeacher Tip: To ensure students engage with this level, frontload the concept as a whole group. \n\n\n\n\n###Using Events\n\nEvents do not snap into your main program.\n\nThey create little programs of their own.",
+        "text": "# Teaching Events\n\n#### Students may rush through this level without internalizing the concept of events. \n\n #### <b> Teacher Tip </b>: To ensure students engage with this level, frontload the concept as a whole group. \n\n## Click \"Next\" to learn more about events",
+        "imageUrl": "",
+        "key": "PLgame_design_panel_events_independent-0dfa2686-22bc-4351-975c-efd1cf8a6b34",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "#Events in Game Design\nYou will find informational levels in the curriculum. For example, this page features interactive elements to help students and teachers understand events. \n\n\n\n\n\n\n###Using Events\n\nEvents do not snap into your main program.\n\nThey create little programs of their own.\n\n##### <b> Teacher Tip: </b> To ensure students engage with this level, frontload the concept as a whole group. ",
         "imageUrl": "https://images.code.org/9da18ffb06b15ac54cbbe2cad591a28d-eventsalone panel.gif",
         "key": "game_design_panel_events-adeb522e-b960-4614-8df7-dfe6a2d2c354"
       },
@@ -31,6 +37,6 @@
     ],
     "name_suffix": "_independent"
   },
-  "audit_log": "[{\"changed_at\":\"2024-06-07T20:26:28.382+00:00\",\"changed\":[\"cloned from \\\"game_design_panel_events_independent\\\"\"],\"cloned_from\":\"game_design_panel_events_independent\"},{\"changed_at\":\"2024-06-07 20:30:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-06-20 15:26:45 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-06-20 15:27:06 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-07T20:26:28.382+00:00\",\"changed\":[\"cloned from \\\"game_design_panel_events_independent\\\"\"],\"cloned_from\":\"game_design_panel_events_independent\"},{\"changed_at\":\"2024-06-07 20:30:40 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-06-20 15:26:45 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-06-20 15:27:06 +0000\",\"changed\":[],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-07-08 20:16:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-07-08 20:39:11 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-07-08 20:43:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]"
 }]]></config>
 </Panels>

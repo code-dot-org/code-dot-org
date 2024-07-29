@@ -1781,6 +1781,18 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         end
 
         it 'links an LTI auth option to an existing account' do
+          Metrics::Events.expects(:log_event).with(
+            has_entries(
+              user: user,
+              event_name: 'lti_user_signin'
+            )
+          )
+          Metrics::Events.expects(:log_event).with(
+            has_entries(
+              user: user,
+              event_name: 'lti_account_linked'
+            )
+          )
           get provider
           # The user factory automatically creates an email auth option,
           # so this includes 1 email, 1 SSO, and 1 LTI auth option

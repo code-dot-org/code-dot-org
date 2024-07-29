@@ -1,7 +1,6 @@
 {
   "key": "contagion-pilot",
   "display_name": "Contagion Simulator",
-  "category": "other",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,

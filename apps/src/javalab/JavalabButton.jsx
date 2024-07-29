@@ -1,6 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import style from './javalab-button.module.scss';
 
 // TODO: This component should be refactored to use <Button/> (apps/src/templates/Button.jsx).

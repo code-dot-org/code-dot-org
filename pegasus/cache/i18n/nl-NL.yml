@@ -1164,6 +1164,7 @@ nl-NL:
   header_courses: Cursussen
   header_districts: Districten
   header_documentation: Documentatie
+  header_donate: Doneren
   header_educate_beyond: Achter Code.org
   header_educate_community: Online gemeenschap
   header_educate_elementary: Basisschool
@@ -2511,6 +2512,8 @@ nl-NL:
   user_header_logout: Uitloggen
   user_header_minecraft: Minecraft
   user_header_my_projects: Mijn projecten
+  user_header_new_project: Nieuw project
+  user_header_new_project_low_cap: Nieuw project
   user_header_playlab: Speel Lab
   user_header_settings: Mijn account
   user_header_signin: Aanmelden

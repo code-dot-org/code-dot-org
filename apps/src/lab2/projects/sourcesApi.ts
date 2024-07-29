@@ -3,10 +3,12 @@
  * A source is the code of a project.
  */
 
-import {ProjectSources, SourceUpdateOptions} from '../types';
-import {SOURCE_FILE} from '../constants';
 import HttpClient, {GetResponse} from '@cdo/apps/util/HttpClient';
+
+import {SOURCE_FILE} from '../constants';
 import {SourceResponseValidator} from '../responseValidators';
+import {ProjectSources, SourceUpdateOptions} from '../types';
+
 const {stringifyQueryParams} = require('@cdo/apps/utils');
 
 const rootUrl = (channelId: string) =>

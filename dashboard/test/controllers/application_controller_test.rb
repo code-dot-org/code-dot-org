@@ -32,8 +32,18 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       assert_redirected_to lockout_path
     end
 
+    it 'allows current user data retrieving' do
+      get api_v1_users_current_path
+      refute_redirect_to lockout_path
+    end
+
     it 'allows sign out' do
       get destroy_user_session_path
+      refute_redirect_to lockout_path
+    end
+
+    it 'allows CSRF token retrieving' do
+      get get_token_path
       refute_redirect_to lockout_path
     end
 

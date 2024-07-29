@@ -23,7 +23,9 @@ import {lessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '@cdo/apps/util/color';
+import currentLocale from '@cdo/apps/util/currentLocale';
 import {linkWithQueryParams} from '@cdo/apps/utils';
+import {DefaultLocale} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import Announcements from '../../code-studio/components/progress/Announcements';
@@ -31,6 +33,13 @@ import FontAwesome from '../FontAwesome';
 
 import LessonStandards from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';
+
+const ResourceActions = {
+  PRINT: 'print',
+  NAVIGATE: 'navigate',
+};
+
+const WINDOW_PRINT = 'windowPrint';
 
 class LessonOverview extends Component {
   static propTypes = {
@@ -62,14 +71,15 @@ class LessonOverview extends Component {
     );
   }
 
-  recordAndNavigateToPdf = (e, firehoseKey, url) => {
-    // Prevent navigation to url until callback
-    e.preventDefault();
+  recordAndHandleResource = (e, firehoseKey, action, url = null) => {
+    e.preventDefault(); // Prevent navigation to url until callback
+    const event =
+      action === ResourceActions.NAVIGATE ? 'open-pdf' : 'print-from-browser';
     firehoseClient.putRecord(
       {
         study: 'pdf-click',
         study_group: 'lesson',
-        event: 'open-pdf',
+        event: event,
         data_json: JSON.stringify({
           name: this.props.lesson.key,
           pdfType: firehoseKey,
@@ -78,7 +88,11 @@ class LessonOverview extends Component {
       {
         includeUserId: true,
         callback: () => {
-          window.location.href = url;
+          if (action === ResourceActions.NAVIGATE && url) {
+            window.location.href = url; // Navigate to the URL
+          } else if (action === ResourceActions.PRINT) {
+            window.print(); // Trigger the print dialog
+          }
         },
       }
     );
@@ -110,6 +124,41 @@ class LessonOverview extends Component {
     return options;
   };
 
+  renderPrintOptions = () => {
+    const pdfDropdownOptions = this.compilePdfDropdownOptions();
+
+    if (pdfDropdownOptions.length > 0 && currentLocale() === DefaultLocale) {
+      return pdfDropdownOptions.map(option => (
+        <a
+          key={option.key}
+          onClick={e =>
+            this.recordAndHandleResource(
+              e,
+              option.key,
+              ResourceActions.NAVIGATE,
+              option.url
+            )
+          }
+          href={option.url}
+        >
+          {option.name}
+        </a>
+      ));
+    } else {
+      return [
+        <a
+          key={WINDOW_PRINT}
+          onClick={e =>
+            this.recordAndHandleResource(e, WINDOW_PRINT, ResourceActions.PRINT)
+          }
+          href="#"
+        >
+          {i18n.printLessonPlan()}
+        </a>,
+      ];
+    }
+  };
+
   render() {
     const {
       lesson,
@@ -125,8 +174,6 @@ class LessonOverview extends Component {
       !isVerifiedInstructor &&
       hasVerifiedResources;
 
-    const pdfDropdownOptions = this.compilePdfDropdownOptions();
-
     return (
       <div className="lesson-overview">
         <div className="lesson-overview-header">
@@ -138,33 +185,21 @@ class LessonOverview extends Component {
               {`< ${lesson.unit.displayName}`}
             </a>
             <div style={styles.dropdowns}>
-              {pdfDropdownOptions.length > 0 && (
-                <div style={{marginRight: 5}}>
-                  <DropdownButton
-                    color={Button.ButtonColor.gray}
-                    customText={
-                      <div>
-                        <FontAwesome icon="print" style={styles.icon} />
-                        <span style={styles.customText}>
-                          {i18n.printingOptions()}
-                        </span>
-                      </div>
-                    }
-                  >
-                    {pdfDropdownOptions.map(option => (
-                      <a
-                        key={option.key}
-                        onClick={e =>
-                          this.recordAndNavigateToPdf(e, option.key, option.url)
-                        }
-                        href={option.url}
-                      >
-                        {option.name}
-                      </a>
-                    ))}
-                  </DropdownButton>
-                </div>
-              )}
+              <div style={{marginRight: 5}}>
+                <DropdownButton
+                  color={Button.ButtonColor.gray}
+                  customText={
+                    <div>
+                      <FontAwesome icon="print" style={styles.icon} />
+                      <span style={styles.customText}>
+                        {i18n.printingOptions()}
+                      </span>
+                    </div>
+                  }
+                >
+                  {this.renderPrintOptions()}
+                </DropdownButton>
+              </div>
               <LessonNavigationDropdown lesson={lesson} />
             </div>
           </div>

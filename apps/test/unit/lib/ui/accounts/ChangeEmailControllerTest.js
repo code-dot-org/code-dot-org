@@ -1,12 +1,12 @@
 import $ from 'jquery';
 import ReactDOM from 'react-dom';
-import {spy, stub} from 'sinon';
+import {spy, stub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
 import ChangeEmailController from '@cdo/apps/lib/ui/accounts/ChangeEmailController';
 import color from '@cdo/apps/util/color';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 export const ENCRYPTED_EMAIL_PLACEHOLDER = '***encrypted***';
 

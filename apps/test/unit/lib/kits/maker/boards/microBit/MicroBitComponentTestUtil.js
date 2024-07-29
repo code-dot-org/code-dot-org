@@ -2,17 +2,14 @@
  * @file Exports a set of tests that verify  that the micro:bit board
  * components and component constructors are available from the interpreter
  */
-import sinon from 'sinon';
-
 import {
   MB_COMPONENT_COUNT,
   MB_COMPONENTS,
 } from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 import {boardSetupAndStub} from './MicroBitTestHelperFunctions';
-
 export function itMakesMicroBitComponentsAvailable(
   Board,
   boardSpecificSetup = null,
@@ -35,7 +32,7 @@ export function itMakesMicroBitComponentsAvailable(
         createGlobalProperty: function (key, value) {
           jsInterpreter.globalProperties[key] = value;
         },
-        addCustomMarshalObject: sinon.spy(),
+        addCustomMarshalObject: jest.fn(),
       };
       // Opportunity to stub anything needed to test a board
       if (boardSpecificSetup) {
@@ -57,7 +54,7 @@ export function itMakesMicroBitComponentsAvailable(
       });
 
       it(`correct number of them`, () => {
-        expect(jsInterpreter.addCustomMarshalObject).to.have.callCount(
+        expect(jsInterpreter.addCustomMarshalObject.mock.calls).to.have.length(
           MB_COMPONENTS.length
         );
       });
@@ -70,9 +67,10 @@ export function itMakesMicroBitComponentsAvailable(
           expect(jsInterpreter.globalProperties[constructor]).to.be.a(
             'function'
           );
-          const passedObjects = jsInterpreter.addCustomMarshalObject.args.map(
-            call => call[0].instance
-          );
+          const passedObjects =
+            jsInterpreter.addCustomMarshalObject.mock.calls.map(
+              call => call[0].instance
+            );
           expect(passedObjects).to.include(
             jsInterpreter.globalProperties[constructor]
           );
@@ -100,8 +98,12 @@ export function itMakesMicroBitComponentsAvailable(
             component = jsInterpreter.globalProperties[button];
           });
 
-          it('isPressed', () => expect(component.isPressed).to.be.a('boolean'));
-          it('holdtime', () => expect(component.holdtime).to.be.a('number'));
+          it('isPressed', () => {
+            expect(component.isPressed).to.be.a('boolean');
+          });
+          it('holdtime', () => {
+            expect(component.holdtime).to.be.a('number');
+          });
         });
       });
 
@@ -172,11 +174,15 @@ export function itMakesMicroBitComponentsAvailable(
           component = jsInterpreter.globalProperties.accelerometer;
         });
 
-        it('start()', () => expect(component.start).to.be.a('function'));
-        it('getOrientation()', () =>
-          expect(component.getOrientation).to.be.a('function'));
-        it('getAcceleration()', () =>
-          expect(component.getAcceleration).to.be.a('function'));
+        it('start()', () => {
+          expect(component.start).to.be.a('function');
+        });
+        it('getOrientation()', () => {
+          expect(component.getOrientation).to.be.a('function');
+        });
+        it('getAcceleration()', () => {
+          expect(component.getAcceleration).to.be.a('function');
+        });
       });
 
       describe('compass', () => {
@@ -186,9 +192,12 @@ export function itMakesMicroBitComponentsAvailable(
           component = jsInterpreter.globalProperties.compass;
         });
 
-        it('start()', () => expect(component.start).to.be.a('function'));
-        it('getHeading()', () =>
-          expect(component.getHeading).to.be.a('function'));
+        it('start()', () => {
+          expect(component.start).to.be.a('function');
+        });
+        it('getHeading()', () => {
+          expect(component.getHeading).to.be.a('function');
+        });
       });
 
       describe('board', () => {

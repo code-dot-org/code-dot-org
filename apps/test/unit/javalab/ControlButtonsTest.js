@@ -11,8 +11,6 @@ import {
   stubRedux,
 } from '@cdo/apps/redux';
 
-import {expect} from '../../util/reconfiguredChai';
-
 describe('Java Lab Control Buttons Test', () => {
   let defaultProps;
   let store;
@@ -51,28 +49,30 @@ describe('Java Lab Control Buttons Test', () => {
 
   it('submit button for unsubmitted submittable level', () => {
     renderDefault({isSubmittable: true, isSubmitted: false});
-    expect(screen.getByRole('button', {name: 'Submit'})).to.exist;
+    expect(screen.getByRole('button', {name: 'Submit'})).toBeDefined();
   });
 
   it('finish button says finish for non-submittable level', () => {
     renderDefault({isSubmittable: false});
-    expect(screen.getByRole('button', {name: 'Finish'})).to.exist;
+    expect(screen.getByRole('button', {name: 'Finish'})).toBeDefined();
   });
 
   it('disables run button if disableRunButton is true', () => {
     renderDefault({disableRunButton: true});
-    expect(screen.getByRole('button', {name: 'Run'}).getAttribute('disabled'))
-      .to.exist;
+    expect(
+      screen.getByRole('button', {name: 'Run'}).getAttribute('disabled')
+    ).toBeDefined();
   });
 
   it('disables test button if disableTestButton is true', () => {
     renderDefault({disableTestButton: true});
-    expect(screen.getByRole('button', {name: 'Test'}).getAttribute('disabled'))
-      .to.exist;
+    expect(
+      screen.getByRole('button', {name: 'Test'}).getAttribute('disabled')
+    ).toBeDefined();
   });
 
   it('hides test button if showTestButton is false', () => {
     renderDefault({showTestButton: false});
-    expect(screen.queryByRole('button', {name: 'Test'})).to.be.null;
+    expect(screen.queryByRole('button', {name: 'Test'})).toBeNull();
   });
 });

@@ -1,24 +1,23 @@
 Feature: Clear Puzzle
 
 Background:
-  Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
-  And I wait for the page to fully load
+  Given I am on "http://studio.code.org/hoc/1?noautoplay=true&blocklyVersion=google"
+  And I wait for the lab page to fully load
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
 
 Scenario: Deleting start blocks then clearing the puzzle
-  Then I drag block "5" to offset "-500, 0"
-  And block "5" has been deleted
+  Then I delete block "startBlock"
   Then I press "clear-puzzle-header"
   And I wait to see ".modal"
   And I press "confirm-button"
-  Then block "7" is child of block "6"
+  Then block "startBlock" is child of block "topBlock"
 
 Scenario: Adding blocks then clearing the puzzle
-  Then I drag block "1" to block "5"
-  Then I drag block "1" to block "6"
+  Then I drag block "moveForward" to block "startBlock"
+  Then I drag block "turnRight" to block "moveForward"
   Then I press "clear-puzzle-header"
   And I wait to see ".modal"
   And I press "confirm-button"
-  And block "6" has been deleted
-  And block "7" has been deleted
+  And block "moveForward" has been deleted
+  And block "turnRight" has been deleted

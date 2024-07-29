@@ -1,7 +1,7 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import dom from '@cdo/apps/dom';
 import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
@@ -16,7 +16,7 @@ import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../../util/deprecatedChai';
+import {expect} from '../../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 import {
   allowConsoleWarnings,
   createMouseEvent,
@@ -200,17 +200,30 @@ describe('The JSDebugger component', () => {
 
       describe('when the mouse is moved', () => {
         it('changes the height of the debugger', () => {
-          document.body.dispatchEvent(
-            createMouseEvent('touchmove', 0, window.innerHeight - 200)
+          const mouseEvent = createMouseEvent(
+            'touchmove',
+            0,
+            window.innerHeight - 200
           );
+
+          mouseEvent.pageY = 568;
+
+          document.body.dispatchEvent(mouseEvent);
           jsDebugger.update();
           expect(debugAreaEl().instance().style.height).to.equal('200px');
         });
 
         it('and will do so multiple times', () => {
-          document.body.dispatchEvent(
-            createMouseEvent('touchmove', 0, window.innerHeight - 180)
+          const mouseEvent = createMouseEvent(
+            'touchmove',
+            0,
+            window.innerHeight - 200
           );
+
+          mouseEvent.pageY = 588;
+
+          document.body.dispatchEvent(mouseEvent);
+
           jsDebugger.update();
           expect(debugAreaEl().instance().style.height).to.equal('180px');
         });

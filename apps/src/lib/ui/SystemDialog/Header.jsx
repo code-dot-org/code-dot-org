@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import color from '@cdo/apps/util/color';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import color from '@cdo/apps/util/color';
 
 /**
  * Header for a "System" dialog style used on account pages.

@@ -1,8 +1,9 @@
-import {fetchSignedCookies} from '@cdo/apps/utils';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
-import {LoadFinishedCallback} from '../types';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {fetchSignedCookies} from '@cdo/apps/utils';
+
 import {baseAssetUrlRestricted} from '../constants';
+import {LoadFinishedCallback} from '../types';
 
 class SoundCache {
   private readonly audioContext: AudioContext;

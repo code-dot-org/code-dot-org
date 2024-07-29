@@ -1,7 +1,8 @@
+import {Link} from '@dsco_/link';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import color from '@cdo/apps/util/color';
-import {Link} from '@dsco_/link';
 
 export default function MethodNameEditor({method, updateMethod}) {
   const editLink = (

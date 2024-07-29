@@ -75,8 +75,6 @@ SkeletonProgressDataColumn.propTypes = {
   expandedMetadataStudentIds: PropTypes.array.isRequired,
 };
 
-export const UnconnectedSkeletonProgressDataColumn = SkeletonProgressDataColumn;
-
 export default connect(state => ({
   expandedMetadataStudentIds: state.sectionProgress.expandedMetadataStudentIds,
 }))(SkeletonProgressDataColumn);

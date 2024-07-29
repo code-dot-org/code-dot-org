@@ -1,12 +1,14 @@
 // Utilities for retrieving various types of data for Music Lab.
 
 import HttpClient from '@cdo/apps/util/HttpClient';
+
+import {getBaseAssetUrl} from '../appConfig';
 import MusicLibrary, {
   LibraryJson,
   LibraryValidator,
 } from '../player/MusicLibrary';
+
 const AppConfig = require('../appConfig').default;
-import {getBaseAssetUrl} from '../appConfig';
 
 // This value can be modifed each time we know that there is an important new version
 // of the library on S3, to help bypass any caching of an older version.

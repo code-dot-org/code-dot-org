@@ -24,12 +24,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-23 17:29:04 UTC",
+    "serialized_at": "2024-07-11 19:04:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -13730,16 +13731,6 @@
       }
     },
     {
-      "key": "45e6e834-b1f7-4ee3-8b9f-b5d6952f7347",
-      "properties": {
-        "description": "Apply Flexbox properties in CSS"
-      },
-      "seeding_key": {
-        "lesson.key": "Websites for Expression",
-        "objective.key": "45e6e834-b1f7-4ee3-8b9f-b5d6952f7347"
-      }
-    },
-    {
       "key": "4c5d3778-7924-4696-a8d7-80573652342a",
       "properties": {
         "description": "Write a simple HTML document that uses opening and closing tags to structure content"
@@ -13767,6 +13758,16 @@
       "seeding_key": {
         "lesson.key": "Team Problem Solving",
         "objective.key": "500a9c65-79a8-494b-a0a0-a9dff0f9fd98"
+      }
+    },
+    {
+      "key": "52651590-94dc-4432-8fa3-2c1d4a123c0c",
+      "properties": {
+        "description": "Apply Flexbox properties in CSS"
+      },
+      "seeding_key": {
+        "lesson.key": "Websites for Expression",
+        "objective.key": "52651590-94dc-4432-8fa3-2c1d4a123c0c"
       }
     },
     {
@@ -13867,26 +13868,6 @@
       "seeding_key": {
         "lesson.key": "Websites for a Purpose",
         "objective.key": "694e5850-ccd9-47ba-a2cd-bc755ac1b28a"
-      }
-    },
-    {
-      "key": "69cf2c6b-e8ac-47ab-8ffd-aa80d419f492",
-      "properties": {
-        "description": "Analyze and solve common web design layout challenges using div tags and Flexbox"
-      },
-      "seeding_key": {
-        "lesson.key": "Websites for Expression",
-        "objective.key": "69cf2c6b-e8ac-47ab-8ffd-aa80d419f492"
-      }
-    },
-    {
-      "key": "71cf9da7-f188-4b32-bf5c-968a82caecfe",
-      "properties": {
-        "description": "Identify and explain the purpose and use of div tags in HTML"
-      },
-      "seeding_key": {
-        "lesson.key": "Websites for Expression",
-        "objective.key": "71cf9da7-f188-4b32-bf5c-968a82caecfe"
       }
     },
     {
@@ -14030,6 +14011,16 @@
       }
     },
     {
+      "key": "d29092a2-0a57-451e-8bbc-e2b5b23cd5a5",
+      "properties": {
+        "description": "Analyze and solve common web design layout challenges using div tags and Flexbox"
+      },
+      "seeding_key": {
+        "lesson.key": "Websites for Expression",
+        "objective.key": "d29092a2-0a57-451e-8bbc-e2b5b23cd5a5"
+      }
+    },
+    {
       "key": "d85ab2ef-0091-4823-afec-2873f5f5382e",
       "properties": {
         "description": "Design a webpage based on user needs"
@@ -14077,6 +14068,16 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: HTML Web Page",
         "objective.key": "f4b15a53-b0f8-45ff-8dcd-72faabed7a5a"
+      }
+    },
+    {
+      "key": "f8cc060a-ffdc-47b5-9f44-4ba5ed6d63e2",
+      "properties": {
+        "description": "Identify and explain the purpose and use of div tags in HTML"
+      },
+      "seeding_key": {
+        "lesson.key": "Websites for Expression",
+        "objective.key": "f8cc060a-ffdc-47b5-9f44-4ba5ed6d63e2"
       }
     },
     {

@@ -1,13 +1,22 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {registerReducers, stubRedux} from '@cdo/apps/redux';
+import commonReducers from '@cdo/apps/redux/commonReducers';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import {UnconnectedLoginTypePicker as LoginTypePicker} from '@cdo/apps/templates/teacherDashboard/LoginTypePicker';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('LoginTypePicker', () => {
+  beforeEach(() => {
+    stubRedux();
+    registerReducers(commonReducers);
+    registerReducers({currentUser});
+  });
+
   it('sends analytic event when a login type is selected', () => {
     const wrapper = shallow(
       <LoginTypePicker

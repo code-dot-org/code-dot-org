@@ -1,7 +1,6 @@
 {
   "key": "tess-test-course",
   "display_name": "tess-test-course",
-  "category": "other",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": null,

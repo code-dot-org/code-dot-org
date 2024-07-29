@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {Portal} from 'react-portal';
+
 import msg from '@cdo/locale';
-import color from '../../util/color';
+
 import Dialog, {
   Title,
   Body,
@@ -10,6 +11,7 @@ import Dialog, {
   Confirm,
   Cancel,
 } from '../../templates/Dialog';
+import color from '../../util/color';
 
 const style = {
   description: {

@@ -2,21 +2,21 @@ Feature: Challenge level shows different dialogs
 
 Background:
   Given I am on "http://studio.code.org/reset_session"
-  Given I am on "http://studio.code.org/s/allthethings/lessons/2/levels/6?noautoplay=true"
-  And I wait for the page to fully load
+  Given I am on "http://studio.code.org/s/allthethings/lessons/2/levels/6?noautoplay=true&blocklyVersion=google"
+  And I wait for the lab page to fully load
 
 Scenario: Submit passing and perfect solutions
   Given I wait until element "#uitest-challenge-title" is visible
   Then element "#uitest-challenge-title" has text "Challenge Puzzle!"
   Given I press "challengePrimaryButton"
-  And I drag block "7" to block "5"
+  And I connect block "stoneTurn" to block "stoneMoveTop"
   When I press "runButton"
   And I wait until element "#uitest-challenge-title" is visible
   Then element "#uitest-challenge-title" has text "You did it!"
   Given I press "challengeCancelButton"
   And I wait until element ".modal-body" is not visible
   And I press "resetButton"
-  And I drag block "6" to block "2"
+  And I delete block "extraBlock"
   When I press "runButton"
   And I wait until element "#uitest-challenge-title" is visible
   Then element "#uitest-challenge-title" has text "Challenge Complete!"

@@ -15,6 +15,6 @@
   "professional_learning_program": null,
   "video": null,
   "published_date": "2024-07-10 05:00:00 UTC",
-  "self_paced_pl_course_offering_id": null,
-  "self_paced_pl_course_offering_key": null
+  "self_paced_pl_course_offering_id": 556,
+  "self_paced_pl_course_offering_key": "self-paced-foundations-cs"
 }
