@@ -10,9 +10,15 @@ module I18n
       module Mobile
         class SyncIn < I18n::Utils::SyncInBase
           def process
-            # TODO: fix `i18n/locales/source/pegasus/mobile.yml` instead of the original file `pegasus/cache/i18n/en-US.yml`
-            I18nScriptUtils.fix_yml_file(ORIGINAL_I18N_FILE_PATH)
-            I18nScriptUtils.copy_file(ORIGINAL_I18N_FILE_PATH, I18N_SOURCE_FILE_PATH)
+            file_content = File.read(ORIGINAL_I18N_FILE_PATH)
+            i18n_data = JSON.parse(file_content)
+            I18nScriptUtils.sanitize_data_and_write(i18n_data['en-US'], I18N_SOURCE_FILE_PATH)
+          rescue Errno::ENOENT => exception
+            puts("File not found: #{ORIGINAL_I18N_FILE_PATH} - #{exception.message}")
+            nil
+          rescue JSON::ParserError => exception
+            puts("JSON parsing error in file #{ORIGINAL_I18N_FILE_PATH} - #{exception.message}")
+            nil
           end
         end
       end
