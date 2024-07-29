@@ -5,6 +5,7 @@ import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
+import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import VersionHistoryDropdown from './VersionHistoryDropdown';
@@ -21,8 +22,9 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
   updatedSourceCallback,
 }) => {
   const [isVersionHistoryOpen, setIsVersionHistoryOpen] = useState(false);
-  const [buttonRect, setButtonRect] = useState<DOMRect>();
-  const [offsetParent, setOffsetParent] = useState<DOMRect>();
+  const menuRef = useOutsideClick<HTMLDivElement>(() =>
+    setIsVersionHistoryOpen(false)
+  );
 
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
 
@@ -30,11 +32,8 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
   const toggleVersionHistory = (
     e: React.MouseEvent<HTMLButtonElement> | React.MouseEvent<HTMLAnchorElement>
   ) => {
+    setVersionList([]);
     const projectManager = Lab2Registry.getInstance().getProjectManager();
-    setButtonRect((e.target as HTMLElement).getBoundingClientRect());
-    setOffsetParent(
-      (e.target as HTMLElement).offsetParent?.getBoundingClientRect()
-    );
     if (!isVersionHistoryOpen && projectManager) {
       projectManager.getVersionList().then(versionList => {
         setVersionList(versionList);
@@ -56,15 +55,8 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
         size={'xs'}
         disabled={isReadOnly}
       />
-      {isVersionHistoryOpen && buttonRect && offsetParent && (
-        <div
-          style={{
-            top:
-              buttonRect.top + buttonRect.height + 5 - (offsetParent.top || 0),
-            right: buttonRect['right'] - (offsetParent['right'] || 0) + 5,
-          }}
-          className={moduleStyles.versionHistoryDropdown}
-        >
+      {isVersionHistoryOpen && (
+        <div className={moduleStyles.versionHistoryDropdown} ref={menuRef}>
           <VersionHistoryDropdown
             versionList={versionList}
             updatedSourceCallback={updatedSourceCallback}
