@@ -6108,7 +6108,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/papaparse@npm:^5.3.14, @types/papaparse@npm:^5.3.9":
+"@types/papaparse@npm:^5.3.14":
   version: 5.3.14
   resolution: "@types/papaparse@npm:5.3.14"
   dependencies:
@@ -8379,9 +8379,9 @@ __metadata:
     mocha: ^10.6.0
     mock-firmata: 0.2.0
     moment: ^2.29.4
-    node-js-marker-clusterer: ^1.0.0
     object-fit-images: ^3.2.3
     pa11y-ci: ^2.3.0
+    papaparse: ^5.4.1
     path-browserify: ^1.0.1
     pepjs: ^0.4.3
     pixelmatch: ^5.2.0
@@ -8397,7 +8397,6 @@ __metadata:
     query-string: 4.1.0
     radium: ^0.25.2
     react: ^17.0.2
-    react-addons-test-utils: ~15.4.0
     react-beautiful-dnd: ^13.1.0
     react-bootstrap: ^0.33.1
     react-bootstrap-2: "npm:react-bootstrap@^2.7.4"
@@ -8417,7 +8416,6 @@ __metadata:
     react-motion: ^0.5.2
     react-onclickoutside: ~5.11.1
     react-paginate: ^6.3.0
-    react-papaparse: ^4.4.0
     react-pointable: ^1.1.1
     react-portal: ^4.2.1
     react-redux: ~8.0.5
@@ -12811,21 +12809,6 @@ es6-shim@latest:
   dependencies:
     bser: 2.1.1
   checksum: b15a124cef28916fe07b400eb87cbc73ca082c142abf7ca8e8de6af43eca79ca7bd13eb4d4d48240b3bd3136eaac40d16e42d6edf87a8e5d1dd8070626860c78
-  languageName: node
-  linkType: hard
-
-"fbjs@npm:^0.8.4":
-  version: 0.8.18
-  resolution: "fbjs@npm:0.8.18"
-  dependencies:
-    core-js: ^1.0.0
-    isomorphic-fetch: ^2.1.1
-    loose-envify: ^1.0.0
-    object-assign: ^4.1.0
-    promise: ^7.1.1
-    setimmediate: ^1.0.5
-    ua-parser-js: ^0.7.30
-  checksum: 668731b946a765908c9cbe51d5160f973abb78004b3d122587c3e930e3e1ddcc0ce2b17f2a8637dc9d733e149aa580f8d3035a35cc2d3bc78b78f1b19aab90e2
   languageName: node
   linkType: hard
 
@@ -19048,13 +19031,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"node-js-marker-clusterer@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "node-js-marker-clusterer@npm:1.0.0"
-  checksum: 6474cc2a082f76915fc49cb3a72c6d4a8b87a26206fd074c04266f613288c6b9e0ec63e23f5f0f173ba66627f8094077472dd67eca8c5a1594ff8c8fa7641c5d
-  languageName: node
-  linkType: hard
-
 "node-notifier@npm:^9.0.0":
   version: 9.0.1
   resolution: "node-notifier@npm:9.0.1"
@@ -21309,18 +21285,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"react-addons-test-utils@npm:~15.4.0":
-  version: 15.4.2
-  resolution: "react-addons-test-utils@npm:15.4.2"
-  dependencies:
-    fbjs: ^0.8.4
-    object-assign: ^4.1.0
-  peerDependencies:
-    react-dom: ^15.4.2
-  checksum: 5855faac602d21b7c5be16d90fea6d1998d635182ec1a10d52034db1868b4b1f9da9e54cf967004dd42637b0b2fdfdfffc7b597af08465407b495675c21307dd
-  languageName: node
-  linkType: hard
-
 "react-beautiful-dnd@npm:^13.1.0":
   version: 13.1.0
   resolution: "react-beautiful-dnd@npm:13.1.0"
@@ -21777,16 +21741,6 @@ es6-shim@latest:
   peerDependencies:
     react: ^16.0.0
   checksum: 9810a693a394ea648ccec068d29e827fb59bd364f444ca76eded437c7eb5bf3b0d87fe787be871bdc7203daa97955f05953ee980955ab6d0049078e7126257ad
-  languageName: node
-  linkType: hard
-
-"react-papaparse@npm:^4.4.0":
-  version: 4.4.0
-  resolution: "react-papaparse@npm:4.4.0"
-  dependencies:
-    "@types/papaparse": ^5.3.9
-    papaparse: ^5.4.1
-  checksum: 1404659aba4bd4e5a77667a80e72d5d3a4ca6c1d9e1db7f9f07f34e46331217846ddd522398bbd835be6ca9d0a3993d3f413a13dafe4582ac6f9aad020ec9c40
   languageName: node
   linkType: hard
 
