@@ -15,7 +15,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {ChatItem} from '../types';
 import {getShortName} from '../utils';
 
-import ChatItemView from './ChatItemView';
+import AichatEventView from './AichatEventView';
 import CopyButton from './CopyButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
@@ -219,7 +219,7 @@ const ChatWithModel: React.FunctionComponent<ChatWithModelProps> = ({
       ref={conversationContainerRef}
     >
       {items.map((item, index) => (
-        <ChatItemView item={item} key={index} />
+        <AichatEventView event={item} key={index} />
       ))}
       {showWaitingAnimation()}
     </div>

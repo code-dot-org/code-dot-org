@@ -22,6 +22,7 @@ import {saveTypeToAnalyticsEvent} from '../constants';
 import {
   AiCustomizations,
   AichatContext,
+  AichatEvent,
   FieldVisibilities,
   LevelAichatSettings,
   ModelCardInfo,
@@ -65,6 +66,8 @@ export interface AichatState {
   chatMessagePending?: ChatMessage;
   // Denotes whether we are waiting for a chat completion response from the backend
   isWaitingForChatResponse: boolean;
+  // Student events viewed by a teacher user in chat workspace
+  studentChatHistory: AichatEvent[];
   // Denotes whether we should show the warning modal
   showWarningModal: boolean;
   // Denotes if there is an error with the chat completion response
@@ -85,6 +88,7 @@ const initialState: AichatState = {
   chatItemsCurrent: [],
   chatMessagePending: undefined,
   isWaitingForChatResponse: false,
+  studentChatHistory: [],
   showWarningModal: true,
   chatMessageError: false,
   currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
@@ -425,6 +429,9 @@ const aichatSlice = createSlice({
     addNotification: (state, action: PayloadAction<Notification>) => {
       state.chatItemsCurrent.push(action.payload);
     },
+    setStudentChatHistory: (state, action: PayloadAction<AichatEvent[]>) => {
+      state.studentChatHistory = action.payload;
+    },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
         action.payload,
@@ -656,6 +663,7 @@ export const {
   setViewMode,
   setStartingAiCustomizations,
   setAiCustomizationProperty,
+  setStudentChatHistory,
   setModelCardProperty,
   endSave,
 } = aichatSlice.actions;
