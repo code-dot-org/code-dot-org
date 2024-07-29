@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import color from '@cdo/apps/util/color';
-
-import Button from '../../../templates/Button';
 
 import EvidenceDescriptions from './EvidenceDescriptions';
 
