@@ -361,15 +361,15 @@ function initializeBlocklyWrapper(blocklyInstance) {
     highlightBlock(id, spotlight) {
       Blockly.mainBlockSpace.highlightBlock(id, spotlight);
     },
-    setLabCode() {
-      let codeBlocks = getCodeBlocks();
-      if (this.studioApp_.initializationBlocks) {
-        codeBlocks = this.studioApp_.initializationBlocks.concat(codeBlocks);
-      }
-      this.code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
+    getAllGeneratedCode(extraCode) {
+      const studentCode = Blockly.Generator.blocksToCode(
+        'JavaScript',
+        getCodeBlocks()
+      );
+      return (extraCode || '') + studentCode;
     },
-    getCodeFromBlocks(blockXmlString) {
-      const domBlocks = Blockly.Xml.textToDom(blockXmlString);
+    getCodeFromBlockXmlSource(xmlString) {
+      const domBlocks = Blockly.Xml.textToDom(xmlString);
       return Blockly.Generator.xmlToCode('JavaScript', domBlocks);
     },
   };
