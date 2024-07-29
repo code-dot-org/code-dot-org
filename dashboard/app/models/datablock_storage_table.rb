@@ -264,6 +264,10 @@ class DatablockStorageTable < ApplicationRecord
     create_records(new_records)
   rescue CSV::MalformedCSVError => exception
     raise StudentFacingError.new(:IMPORT_FAILED), "Could not import CSV as it was not in the format we expected: #{exception.message}"
+  rescue StudentFacingError => exception
+    # If we ran into any StudentFacingErrors in create_records, we need to re-raise them here
+    # as :IMPORT_FAILED for them to surface in the UI
+    raise StudentFacingError.new(:IMPORT_FAILED), exception.message
   end
 
   def add_column(column_name)
