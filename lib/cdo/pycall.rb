@@ -1,22 +1,26 @@
 # Configures python to work via pycall.
 
 # This file must be loaded before application.rb automatically loads all gems
-# in the Gemfile, for two reasons:
-# 1. python must be configured before pycall is loaded
-# 2. on Mac OS, PyCall.sys.path must be configured after pycall is loaded but
-#    before any other python-related gems are loaded, such as numpy
+# in the Gemfile so that the PYTHON environment variable is set correctly.
+# Otherwise various pycall related gems like numpy will fail to load.
 
-pybin_path = File.expand_path('../../../pybin', __FILE__)
-pybin_bin_path = "#{pybin_path}/bin"
-ENV['PATH'] = "#{pybin_bin_path}:#{ENV['PATH']}" unless ENV['PATH'].split(':').include? pybin_bin_path
-ENV['PYTHON'] = "#{pybin_bin_path}/python3.8"
+def pipenv_venv_path
+  unless system("which pipenv > /dev/null 2>&1")
+    raise 'pipenv not found. Please install pipenv and try again, see SETUP.md.'
+  end
 
-which_python = `which python3.8`.strip
-unless which_python == ENV['PYTHON']
-  raise "python3.8 not found at #{ENV['PYTHON'].inspect} (was #{which_python.inspect}). Please run bin/setup_python_venv.sh or rake build and try again."
+  stdout, stderr, status = Open3.capture3('pipenv --venv')
+  raise "Failed to get virtual environment path from pipenv, try `pipenv install`? Error: #{stderr}" unless status.success?
+  stdout.strip
+end
+
+venv_path = pipenv_venv_path
+
+ENV['PYTHON'] = "#{venv_path}/bin/python"
+ENV['PYTHONPATH'] = "#{venv_path}/lib/python3.8/site-packages"
+
+unless File.exist? ENV['PYTHON']
+  raise "Python bin not found at #{ENV['PYTHON']}. Please run `pipenv install` again."
 end
 
 require 'pycall'
-
-# Needed for python3.8 on Mac to find any packages in the virtual environment.
-PyCall.sys.path.append("#{pybin_path}/lib/python3.8/site-packages")
