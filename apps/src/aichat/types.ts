@@ -42,15 +42,10 @@ export function isNotification(item: ChatItem): item is Notification {
   return (item as Notification).notificationType !== undefined;
 }
 
-export interface AichatCompletionApiResponse {
+export interface ChatApiResponse {
   messages: ChatMessage[];
   session_id: number;
   flagged_content?: string;
-}
-
-export interface LogAichatEventApiResponse {
-  aichat_event_id: number;
-  aichat_event: ChatMessage;
 }
 
 export type AichatContext = {

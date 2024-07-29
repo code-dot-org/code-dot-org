@@ -17,7 +17,7 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {postAichatCompletionMessage, postLogAichatEvent} from '../aichatApi';
+import {postAichatCompletionMessage} from '../aichatCompletionApi';
 import {saveTypeToAnalyticsEvent} from '../constants';
 import {
   AiCustomizations,
@@ -339,20 +339,6 @@ export const submitChatContents = createAsyncThunk(
       chatMessageText: newUserMessageText,
       timestamp: Date.now(),
     };
-    // FOR TESTING PURPOSES:
-    let logAichatEventResponse;
-    try {
-      logAichatEventResponse = await postLogAichatEvent(
-        newMessage,
-        aichatContext
-      );
-      console.log('logAichatEventResponse', logAichatEventResponse);
-    } catch (error) {
-      Lab2Registry.getInstance()
-        .getMetricsReporter()
-        .logError('Error in aichat event logging request', error as Error);
-      return;
-    }
     thunkAPI.dispatch(setChatMessagePending(newMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
