@@ -75,32 +75,11 @@ export default class ProjectManager {
   }
 
   // Load the project from the sources and channels store.
-  async load(versionId?: string): Promise<ProjectAndSources> {
+  async load(): Promise<ProjectAndSources> {
     if (this.destroyed) {
       this.throwErrorIfDestroyed('load');
     }
-    let sources: ProjectSources | undefined;
-    try {
-      sources = await this.sourcesStore.load(this.channelId, versionId);
-      this.lastSource = JSON.stringify(sources);
-    } catch (error) {
-      // If there was a validation error or sourceResponse is a 404 (not found),
-      // we still want to load the channel. In the case of a validation error,
-      // we will default to empty sources. Source can return not found if the project
-      // is new. If neither of these cases, throw the error.
-      if (error instanceof ValidationError) {
-        this.metricsReporter.logWarning(
-          `Error validating sources (${error.message}). Defaulting to empty sources.`
-        );
-      } else if (
-        error instanceof NetworkError &&
-        (error as NetworkError).response.status === 404
-      ) {
-        // This is expected if the project is new. Default to empty sources.
-      } else {
-        throw new Error('Error loading sources', {cause: error});
-      }
-    }
+    const sources = await this.loadHelper();
 
     let channel: Channel;
     try {
@@ -111,6 +90,19 @@ export default class ProjectManager {
 
     this.lastChannel = channel;
     return {sources, channel};
+  }
+
+  async restore(versionId: string): Promise<ProjectSources | undefined> {
+    if (this.destroyed) {
+      this.throwErrorIfDestroyed('restore');
+    }
+    const sources = await this.loadHelper(versionId);
+    try {
+      await this.sourcesStore.restore(this.channelId, versionId);
+    } catch (e) {
+      console.log({e});
+    }
+    return sources;
   }
 
   hasUnsavedChanges(): boolean {
@@ -491,6 +483,32 @@ export default class ProjectManager {
     } else {
       return this.channelsStore.unpublish(this.lastChannel);
     }
+  }
+
+  private async loadHelper(versionId?: string) {
+    let sources: ProjectSources | undefined;
+    try {
+      sources = await this.sourcesStore.load(this.channelId, versionId);
+      this.lastSource = JSON.stringify(sources);
+    } catch (error) {
+      // If there was a validation error or sourceResponse is a 404 (not found),
+      // we still want to load the channel. In the case of a validation error,
+      // we will default to empty sources. Source can return not found if the project
+      // is new. If neither of these cases, throw the error.
+      if (error instanceof ValidationError) {
+        this.metricsReporter.logWarning(
+          `Error validating sources (${error.message}). Defaulting to empty sources.`
+        );
+      } else if (
+        error instanceof NetworkError &&
+        (error as NetworkError).response.status === 404
+      ) {
+        // This is expected if the project is new. Default to empty sources.
+      } else {
+        throw new Error('Error loading sources', {cause: error});
+      }
+    }
+    return sources;
   }
 
   // LISTENERS

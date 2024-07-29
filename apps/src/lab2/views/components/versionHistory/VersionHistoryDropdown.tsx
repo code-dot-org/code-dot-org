@@ -26,11 +26,11 @@ const VersionHistoryDropdown: React.FunctionComponent<
   const restoreVersion = (version: ProjectVersion) => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (projectManager) {
-      projectManager.load(version.versionId).then(project => {
-        if (project?.sources) {
-          dispatch(setProjectSource(project.sources));
+      projectManager.restore(version.versionId).then(sources => {
+        if (sources) {
+          dispatch(setProjectSource(sources));
           if (updatedSourceCallback) {
-            updatedSourceCallback(project.sources);
+            updatedSourceCallback(sources);
           }
         } else {
           // handle no source

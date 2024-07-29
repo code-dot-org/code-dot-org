@@ -1,9 +1,4 @@
-import {
-  PayloadAction,
-  ThunkAction,
-  createAsyncThunk,
-  createSlice,
-} from '@reduxjs/toolkit';
+import {PayloadAction, ThunkAction, createSlice} from '@reduxjs/toolkit';
 import {AnyAction} from 'redux';
 
 import {ProjectSources} from '@cdo/apps/lab2/types';
@@ -33,18 +28,6 @@ export const setAndSaveProjectSource = (
     }
   };
 };
-
-// Loads a specific version of the project from the project manager.
-export const loadProjectVersion = createAsyncThunk(
-  'lab2Project/loadProjectVersion',
-  async (payload: {versionId: string}, thunkAPI) => {
-    const projectManager = Lab2Registry.getInstance().getProjectManager();
-    if (projectManager) {
-      const project = await projectManager.load(payload.versionId);
-      thunkAPI.dispatch(setProjectSource(project.sources));
-    }
-  }
-);
 
 // SLICE
 

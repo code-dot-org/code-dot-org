@@ -69,18 +69,18 @@ describe('ProjectManager', () => {
     expect(channel).to.deep.equal(FAKE_CHANNEL);
   });
 
-  it('returns versioned sources and channel on versioned load', async () => {
-    stubSuccessfulSourceLoad(sourcesStore);
-    const projectManager = new ProjectManager(
-      sourcesStore,
-      channelsStore,
-      FAKE_CHANNEL_ID,
-      false
-    );
-    const {sources, channel} = await projectManager.load(FAKE_VERSION_ID);
-    expect(sources).to.deep.equal(FAKE_VERSIONED_SOURCE);
-    expect(channel).to.deep.equal(FAKE_CHANNEL);
-  });
+  // it('returns versioned sources and channel on versioned load', async () => {
+  //   stubSuccessfulSourceLoad(sourcesStore);
+  //   const projectManager = new ProjectManager(
+  //     sourcesStore,
+  //     channelsStore,
+  //     FAKE_CHANNEL_ID,
+  //     false
+  //   );
+  //   const {sources, channel} = await projectManager.load(FAKE_VERSION_ID);
+  //   expect(sources).to.deep.equal(FAKE_VERSIONED_SOURCE);
+  //   expect(channel).to.deep.equal(FAKE_CHANNEL);
+  // });
 
   it('triggers save immediately on first save', async () => {
     stubSuccessfulSourceLoad(sourcesStore);

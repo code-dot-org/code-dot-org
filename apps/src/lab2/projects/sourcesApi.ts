@@ -43,3 +43,8 @@ export async function getVersionList(
   const requestUrl = rootUrl(channelId) + '/versions';
   return HttpClient.fetchJson<ProjectVersion[]>(requestUrl);
 }
+
+export async function restore(channelId: string, versionId: string) {
+  const url = rootUrl(channelId) + `/restore?version=${versionId}`;
+  return HttpClient.put(url);
+}

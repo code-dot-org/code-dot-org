@@ -21,6 +21,8 @@ export interface SourcesStore {
   ) => Promise<Response>;
 
   getVersionList: (key: string) => Promise<ProjectVersion[]>;
+
+  restore: (key: string, versionId: string) => Promise<void>;
 }
 
 export class LocalSourcesStore implements SourcesStore {
@@ -37,6 +39,10 @@ export class LocalSourcesStore implements SourcesStore {
   getVersionList(key: string) {
     return Promise.resolve([]);
   }
+
+  restore() {
+    return Promise.resolve();
+  }
 }
 
 export class RemoteSourcesStore implements SourcesStore {
@@ -48,7 +54,8 @@ export class RemoteSourcesStore implements SourcesStore {
   async load(channelId: string, versionId?: string) {
     const {response, value} = await sourcesApi.get(channelId, versionId);
 
-    if (response.ok) {
+    if (response.ok && !versionId) {
+      // Don't update the version id if we're loading a specific version.
       this.currentVersionId = response.headers.get('S3-Version-Id');
     }
 
@@ -87,12 +94,20 @@ export class RemoteSourcesStore implements SourcesStore {
     return response;
   }
 
-  async getVersionList(key: string) {
-    const response = await sourcesApi.getVersionList(key);
+  async getVersionList(channelId: string) {
+    const response = await sourcesApi.getVersionList(channelId);
     if (response.response.ok) {
       return response.value;
     } else {
       return [];
+    }
+  }
+
+  async restore(channelId: string, versionId: string) {
+    const response = await sourcesApi.restore(channelId, versionId);
+    const body = await response.json();
+    if (body?.version_id) {
+      this.currentVersionId = body.version_id;
     }
   }
 
