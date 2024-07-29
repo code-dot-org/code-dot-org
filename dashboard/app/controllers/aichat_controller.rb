@@ -1,4 +1,8 @@
 ROLES_FOR_MODEL = %w(assistant user).freeze
+AICHAT_ENDPOINTS = {
+  chat_completion: 'chat_completion',
+  log_aichat_event: 'log_aichat_event'
+}.freeze
 
 class AichatController < ApplicationController
   include AichatSagemakerHelper
@@ -12,18 +16,27 @@ class AichatController < ApplicationController
   # POST /aichat/chat_completion
   def chat_completion
     return render status: :forbidden, json: {} unless AichatSagemakerHelper.can_request_aichat_chat_completion?
-    unless has_required_params?
+    unless has_required_params?(AICHAT_ENDPOINTS[:chat_completion])
       return render status: :bad_request, json: {}
     end
 
     response_body = get_response_body
-    response_body[:session_id] = log_chat_session(response_body[:messages])
+    response_body[:session_id] = log_chat_session(response_body[:messages]) # Keep logging to AichatSessions for now.
 
     # Rails controller tests reuse the same controller instance across requests within a test,
     # which causes tests to fail. Nulling out the session ID before responding fixes this issue.
     # More detail/other confused developers here: https://github.com/rails/rails/issues/24566
     @session_id = nil
     render(status: :ok, json: response_body)
+  end
+
+  # params are newAichatEvent: AichatEvent, aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
+  # POST /aichat/log_aichat_event
+  def log_aichat_event
+    unless has_required_params?(AICHAT_ENDPOINTS[:log_aichat_event])
+      return render status: :bad_request, json: {}
+    end
+    render(status: :ok, json: {})
   end
 
   private def get_response_body
@@ -64,7 +77,7 @@ class AichatController < ApplicationController
         context: {
           model_response: latest_assistant_response_from_sagemaker,
           flagged_content: filter_result.content,
-          aichat_session_id: log_chat_session(messages)
+          aichat_session_id: log_chat_session(messages) # Keep logging to AichatSessions for now.
         }
       )
 
@@ -84,18 +97,31 @@ class AichatController < ApplicationController
     {messages: messages}
   end
 
-  private def has_required_params?
-    begin
-      params.require([:newMessage, :aichatModelCustomizations, :aichatContext])
-    rescue ActionController::ParameterMissing
-      return false
+  private def has_required_params?(endpoint)
+    case endpoint
+    when AICHAT_ENDPOINTS[:chat_completion]
+      begin
+        params.require([:newMessage, :aichatModelCustomizations, :aichatContext])
+      rescue ActionController::ParameterMissing
+        return false
+      end
+      # It is possible that storedMessages is an empty array.
+      # If so, the above require check will not pass.
+      # Check storedMessages param separately.
+      params[:storedMessages].is_a?(Array)
+    when AICHAT_ENDPOINTS[:log_aichat_event]
+      begin
+        params.require([:newAichatEvent, :aichatContext])
+      rescue ActionController::ParameterMissing
+        return false
+      end
+      true
+    else
+      false
     end
-    # It is possible that storedMessages is an empty array.
-    # If so, the above require check will not pass.
-    # Check storedMessages param separately.
-    params[:storedMessages].is_a?(Array)
   end
 
+  # Will remove once logging to AichatEvents is in place.
   private def log_chat_session(new_messages)
     # Allows us to create/update a new session when we log to Honeybadger
     # and reuse it when we respond to the client.
@@ -113,6 +139,7 @@ class AichatController < ApplicationController
     @session_id = create_session(new_messages)
   end
 
+  # Will remove once logging to AichatEvents is in place.
   private def matches_existing_session?(session)
     context = params[:aichatContext]
     if session.level_id != context[:currentLevelId] ||
@@ -143,12 +170,14 @@ class AichatController < ApplicationController
     true
   end
 
+  # Will remove once logging to AichatEvents is in place.
   private def update_session(session, new_messages)
     session.messages = updated_message_list(new_messages).to_json
     session.save
     session.id
   end
 
+  # Will remove once logging to AichatEvents is in place.
   private def create_session(new_messages)
     context = params[:aichatContext]
 
@@ -167,6 +196,7 @@ class AichatController < ApplicationController
     ).id
   end
 
+  # Will remove once logging to AichatEvents is in place.
   private def updated_message_list(new_messages)
     params[:storedMessages] + new_messages
   end
