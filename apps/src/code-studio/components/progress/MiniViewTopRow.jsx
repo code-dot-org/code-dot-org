@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {getStore} from '@cdo/apps/redux';
-import Button from '@cdo/apps/templates/Button';
 import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
 import color from '@cdo/apps/util/color';
 import {stringifyQueryParams} from '@cdo/apps/utils';

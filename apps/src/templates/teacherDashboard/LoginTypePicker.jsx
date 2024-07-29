@@ -10,6 +10,7 @@ import {connect} from 'react-redux';
 
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -20,7 +21,6 @@ import i18n from '@cdo/locale';
 
 import {Heading3} from '../../lib/ui/Headings';
 import styleConstants from '../../styleConstants';
-import Button from '../Button';
 
 import CardContainer from './CardContainer';
 import LoginTypeCard from './LoginTypeCard';
