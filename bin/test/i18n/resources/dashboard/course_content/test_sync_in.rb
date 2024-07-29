@@ -1000,7 +1000,7 @@ describe I18n::Resources::Dashboard::CourseContent::SyncIn do
         let(:start_blocks) do
           <<~XML.strip
             <xml>
-              <block type="variables_get" />
+              <block type="variables_set" />
             </xml>
           XML
         end
