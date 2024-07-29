@@ -6,14 +6,14 @@ Feature: Dance Party
     Then page text does not contain "placeholder for testing"
 
     When I am on "http://studio.code.org/s/dance/lessons/1/levels/1"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I am on "http://studio.code.org/restricted/placeholder.txt"
     Then page text does contain "placeholder for testing"
 
   @no_mobile
   Scenario: Can toggle run/reset in Dance Party
     Given I am on "http://studio.code.org/s/allthethings/lessons/37/levels/2?noautoplay=true"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
     And I select age 10 in the age dialog
@@ -33,7 +33,7 @@ Feature: Dance Party
   @no_mobile
   Scenario: Can get to level success in Dance Party
     Given I am on "http://studio.code.org/s/allthethings/lessons/37/levels/1?noautoplay=true"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
     And I select age 10 in the age dialog
@@ -46,11 +46,11 @@ Feature: Dance Party
   @no_mobile
   Scenario: Dance Party 12 loads
     Given I am on "http://studio.code.org/s/dance/lessons/1/levels/12?noautoplay=true"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
 
   Scenario: Dance Party 8 runs new set tint block
     Given I am on "http://studio.code.org/s/dance/lessons/1/levels/8?noautoplay=true"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I select age 10 in the age dialog
     And I close the instructions overlay if it exists
     # drag the "set tint" block from the toolbox to below "after 4 measures"
@@ -63,7 +63,7 @@ Feature: Dance Party
   @no_safari
   Scenario: Dance Party Share
     Given I am on "http://studio.code.org/s/dance/lessons/1/levels/13?noautoplay=true"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I wait for the song selector to load
     And element "#song_selector" has value "cheapthrills_sia"
 
@@ -102,7 +102,7 @@ Feature: Dance Party
   @no_mobile
   Scenario: Dance Party can share while logged out
     Given I am on "http://studio.code.org/s/dance/lessons/1/levels/13?noautoplay=true"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
 
     When I navigate to the shared version of my project
     Then I wait until element "#runButton" is visible

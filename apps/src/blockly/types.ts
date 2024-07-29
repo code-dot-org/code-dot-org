@@ -17,7 +17,7 @@ import {
   WorkspaceSvg,
   Xml,
 } from 'blockly';
-import GoogleBlockly from 'blockly/core';
+import GoogleBlockly, {Connection} from 'blockly/core';
 import {Abstract} from 'blockly/core/events/events_abstract';
 import {Field, FieldProto} from 'blockly/core/field';
 import {
@@ -31,6 +31,7 @@ import {javascriptGenerator} from 'blockly/javascript';
 
 import BlockSvgFrame from './addons/blockSvgFrame';
 import BlockSvgLimitIndicator from './addons/blockSvgLimitIndicator';
+import CdoAngleHelper from './addons/cdoAngleHelper';
 import CdoFieldAngleDropdown from './addons/cdoFieldAngleDropdown';
 import CdoFieldAngleTextInput from './addons/cdoFieldAngleTextInput';
 import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
@@ -83,6 +84,7 @@ type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  BlockFieldHelper: {[fieldHelper: string]: string};
   enableParamEditing: boolean;
   selected: BlockSvg;
   blockCountMap: Map<string, number> | undefined;
@@ -108,6 +110,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     onMainBlockSpaceCreated: (callback: () => void) => void;
   };
 
+  AngleHelper: typeof CdoAngleHelper;
   FieldAngleDropdown: typeof CdoFieldAngleDropdown;
   FieldAngleTextInput: typeof CdoFieldAngleTextInput;
   FieldBehaviorPicker: typeof CdoFieldBehaviorPicker;
@@ -201,11 +204,29 @@ export interface ExtendedBlockSvg extends BlockSvg {
   workspace: ExtendedWorkspaceSvg;
 }
 
+export interface FieldHelperOptions {
+  block: Block;
+  directionTitle?: string; // Ex. 'DIR'
+  direction?: string; // Ex. 'turnRight'
+}
+
+export interface FieldHelpers {
+  [fieldHelper: string]: FieldHelperOptions;
+}
 export interface ExtendedInput extends Input {
+  addFieldHelper: (
+    fieldHelper: string,
+    options: FieldHelperOptions
+  ) => ExtendedInput;
   setStrictCheck: (check: string | string[] | null) => Input;
   // Blockly explicitly uses any for this type
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   getFieldRow: () => Field<any>[];
+}
+export interface ExtendedConnection extends Connection {
+  getFieldHelperOptions: (fieldHelper: string) => FieldHelperOptions;
+  fieldHelpers_: FieldHelpers;
+  addFieldHelper(fieldHelper: string, options: FieldHelperOptions): unknown;
 }
 
 export interface ExtendedBlock extends Block {
@@ -332,6 +353,7 @@ export interface ExtendedVariables extends VariablesType {
 }
 
 export interface ProcedureBlock extends ExtendedBlockSvg, IProcedureBlock {
+  invisible: boolean;
   userCreated: boolean;
   getTargetWorkspace_(): Workspace;
   hasReturn_: boolean;
