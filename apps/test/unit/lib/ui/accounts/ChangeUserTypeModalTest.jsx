@@ -2,8 +2,8 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import ChangeUserTypeModal from '@cdo/apps/lib/ui/accounts/ChangeUserTypeModal';
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import ChangeUserTypeModal from '@cdo/apps/lib/ui/accounts/ChangeUserTypeModal';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
