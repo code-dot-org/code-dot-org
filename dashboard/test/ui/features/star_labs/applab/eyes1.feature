@@ -5,7 +5,7 @@ Feature: App Lab Eyes -  Part 1
 Scenario: Design elements are visible in local and shared projects
   When I open my eyes to test "applab eyes"
   Given I start a new Applab project
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then I see no difference for "initial load" using stitch mode "none"
   And I press "show-code-header"
   And I add code for a canvas and a button
@@ -24,7 +24,7 @@ Scenario: App Lab UI elements from initial code and html
   # this level displays each ui element by generating it dynamically as well as
   # displaying design-mode-created elements.
   And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/9?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And element "#runButton" is visible
   Then I see no difference for "design mode elements in code mode"
   And I press "runButton"
@@ -32,7 +32,7 @@ Scenario: App Lab UI elements from initial code and html
   And I wait to see "#radioid"
   Then I see no difference for "dynamically generated elements in code mode"
   And I press "designModeButton"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then I see no difference for "design mode elements in design mode"
   And I close my eyes
 
@@ -74,7 +74,7 @@ Scenario: Text area with multiple lines, radio button, checkbox
 Scenario: Applab Instructions Resize
   When I open my eyes to test "Applab instructions resize"
   And I am on "http://studio.code.org/s/allthethings/lessons/18/levels/9"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I see no difference for "base case"
   Then I drag the instructions grippy by -150 pixels
   And I see no difference for "small instructions"

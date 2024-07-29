@@ -2,7 +2,7 @@ Feature: Playing the Artist Game
 
 Background:
   Given I am on "http://studio.code.org/s/20-hour/lessons/5/levels/1?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I dismiss the login reminder
   Then element "#runButton" is visible
   And element "#resetButton" is hidden

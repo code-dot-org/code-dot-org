@@ -178,9 +178,14 @@ export const InfoAlert = ({text, dismissable}) => {
         [style.infoAlert]: !closed,
         [style.infoAlertClosed]: !!closed,
       })}
+      data-testid="info-alert"
     >
       <div className={style.infoAlertLeft}>
-        <FontAwesome icon="info-circle" className={style.infoAlertIcon} />
+        <FontAwesome
+          icon="info-circle"
+          className={style.infoAlertIcon}
+          title="info circle icon"
+        />
         <BodyTwoText>{text}</BodyTwoText>
       </div>
       {!!dismissable && (

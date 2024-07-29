@@ -114,6 +114,8 @@ class User < ApplicationRecord
   #   ai_rubrics_tour_seen: Tracks whether user has viewed the AI rubric product tour.
   #   lti_roster_sync_enabled: Enable/disable LTI roster syncing for a User.
   #   user_provided_us_state: Indicates if the us_state was provided by the user as opposed to being interpolated.
+  #   failed_attempts and locked_at: Used by Devise#Lockable to prevent
+  #     brute-force password attempts
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -163,6 +165,8 @@ class User < ApplicationRecord
     date_progress_table_invitation_last_delayed
     user_provided_us_state
     lms_landing_opted_out
+    failed_attempts
+    locked_at
   )
 
   attr_accessor(
@@ -185,10 +189,9 @@ class User < ApplicationRecord
   )
 
   # Include default devise modules. Others available are:
-  # :token_authenticatable, :confirmable,
-  # :lockable, :timeoutable
+  # :token_authenticatable, :confirmable, :timeoutable
   devise :invitable, :database_authenticatable, :registerable, :omniauthable,
-    :recoverable, :rememberable, :trackable
+    :recoverable, :rememberable, :trackable, :lockable
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
@@ -371,13 +374,6 @@ class User < ApplicationRecord
       end
     end
   end
-
-  # after_create :send_new_teacher_email
-  # def send_new_teacher_email
-  # TODO: it's not easy to pass cookies into an after_create call, so for now while this is behind a page mode
-  # flag, we send the email from the controller instead. This should ultimately live here, though.
-  # TeacherMailer.new_teacher_email(self).deliver_now if teacher?
-  # end
 
   # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
   # based on the passed attributes.

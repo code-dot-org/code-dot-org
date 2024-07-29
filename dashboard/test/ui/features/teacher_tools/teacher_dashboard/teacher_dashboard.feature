@@ -131,7 +131,7 @@ Feature: Using the teacher dashboard
     # Create an applab project and generate a thumbnail
 
     When I am on "http://studio.code.org/projects/applab/new"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I ensure droplet is in text mode
     And I append text to droplet "createCanvas('id', 320, 450);\nsetFillColor('red');\ncircle(160, 225, 160);"
     And I press "runButton"
@@ -145,7 +145,7 @@ Feature: Using the teacher dashboard
     # Create a gamelab project and generate a thumbnail
 
     When I am on "http://studio.code.org/projects/gamelab/new"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I ensure droplet is in text mode
     And I append text to droplet "\nfill('orange');\nellipse(200,200,400,400);"
     And I press "runButton"
@@ -169,12 +169,12 @@ Feature: Using the teacher dashboard
     # until it is resolved we want to make sure thumbnails include predraw.
 
     When I am on "http://studio.code.org/s/allthethings/lessons/3/levels/8"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I press "runButton"
     And I wait until element ".project_updated_at" contains text "Saved"
     And I wait until initial thumbnail capture is complete
     And I press the first ".project_remix" element to load a new page
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
 
     # Create a dance party project level and generate a thumbnail.
 
@@ -182,13 +182,13 @@ Feature: Using the teacher dashboard
     # an existing project-backed level, and then run the project.
 
     When I am on "http://studio.code.org/s/dance/lessons/1/levels/13"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
     And I click selector "#x-close" once I see it
     And I close the instructions overlay if it exists
     And I press the first ".project_remix" element to load a new page
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I press "runButton"
     And I wait until element ".project_updated_at" contains text "Saved"
     And I wait until initial thumbnail capture is complete
