@@ -305,7 +305,9 @@ GoogleBlockly.Extensions.register(
         // normally happen when we or initialize the procedure block with a model
         // or update its parameters.
         if (!this.prevParams_.length) {
-          this.prevParams_ = [...this.getProcedureModel().getParameters()];
+          this.prevParams_ = [
+            ...(this.getProcedureModel().getParameters() || []),
+          ];
         }
         // Original code from shareable procedures plugin follows unmodified:
         for (const [i, p] of this.prevParams_.entries()) {
