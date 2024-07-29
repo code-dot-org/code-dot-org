@@ -6,7 +6,7 @@ Feature: Callouts
 
   Scenario Outline: Callouts having correct content and being dismissable via the target element
     Given I am on "<url>"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And callout "<callout_id>" is visible
     And callout "<callout_id>" has text: <text>
     And I send click events to selector "<close_target>"
@@ -26,7 +26,7 @@ Feature: Callouts
   @no_mobile
   Scenario Outline: Callouts having correct content and being dismissable via the x-button
     Given I am on "<url>"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I dismiss the login reminder
     And callout "<callout_id>" is visible
     And callout "<callout_id>" has text: <text>
@@ -39,12 +39,12 @@ Feature: Callouts
 
   Scenario: Modal ordering
     Given I am on "http://studio.code.org/s/20-hour/lessons/2/levels/1?noautoplay=true"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And callout "0" is visible
 
   Scenario: Closing using "x" button
     Given I am on "http://studio.code.org/s/20-hour/lessons/2/levels/1?noautoplay=true"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I dismiss the login reminder
     And element ".tooltip-x-close" is visible
     And callout "0" is visible
@@ -57,17 +57,17 @@ Feature: Callouts
 
   Scenario: Only showing seen callouts once
     Given I am on "http://studio.code.org/s/20-hour/lessons/2/levels/1?noautoplay=true"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And callout "0" exists
     Given I am on "http://studio.code.org/s/20-hour/lessons/2/levels/1?noautoplay=true"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And callout "0" does not exist
 
   # Show Code button is hidden on small screens.
   @no_mobile
   Scenario: Opening the Show Code dialog
     Given I am on "http://studio.code.org/s/20-hour/lessons/2/levels/1?noautoplay=true"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I dismiss the login reminder
     When I press "show-code-header"
     Then ".modal-backdrop" should be in front of "#qtip-0"

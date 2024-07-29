@@ -2,7 +2,7 @@ Feature: Visiting a jigsaw page
 
 Background:
   Given I am on "http://studio.code.org/s/course1/lessons/3/levels/1?noautoplay=1"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
 
 Scenario: Loading the first jigsaw level
   Then there's an image "jigsaw/blank.png"
