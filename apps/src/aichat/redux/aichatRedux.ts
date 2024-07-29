@@ -17,7 +17,7 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {postAichatCompletionMessage, postLogAichatEvent} from '../aichatApi';
+import {postAichatCompletionMessage} from '../aichatApi';
 import {saveTypeToAnalyticsEvent} from '../constants';
 import {
   AiCustomizations,
@@ -43,6 +43,7 @@ import {
 } from '../views/modelCustomization/constants';
 import {validateModelId} from '../views/modelCustomization/utils';
 
+import AichatEventsLogger from './AichatEventLogger';
 import {
   allFieldsHidden,
   findChangedProperties,
@@ -320,35 +321,16 @@ const dispatchSaveFailNotification = (
   dispatch(endSave());
 };
 
-export const logAichatEvents = createAsyncThunk(
-  'aichat/logAichatEvents',
-  async (newUserMessageText: string, thunkAPI) => {
+export const logAichatEvent = createAsyncThunk(
+  'aichat/logAichatEvent',
+  async (aichatEvent: AichatEvent, thunkAPI) => {
     const state = thunkAPI.getState() as RootState;
-    const {aichatEventsToLog} = state.aichat;
-
     const aichatContext: AichatContext = {
       currentLevelId: parseInt(state.progress.currentLevelId || ''),
       scriptId: state.progress.scriptId,
       channelId: state.lab.channel?.id,
     };
-    while (aichatEventsToLog.length > 0) {
-      const event = aichatEventsToLog.shift(); // Remove the first element from the array.
-      if (event) {
-        let logAichatEventResponse;
-        try {
-          logAichatEventResponse = await postLogAichatEvent(
-            event,
-            aichatContext
-          );
-          console.log('logAichatEventResponse', logAichatEventResponse);
-        } catch (error) {
-          Lab2Registry.getInstance()
-            .getMetricsReporter()
-            .logError('Error in aichat event logging request', error as Error);
-          return;
-        }
-      }
-    }
+    AichatEventsLogger.getInstance().logAichatEvent(aichatEvent, aichatContext);
   }
 );
 
@@ -377,20 +359,6 @@ export const submitChatContents = createAsyncThunk(
       chatMessageText: newUserMessageText,
       timestamp: Date.now(),
     };
-    // FOR TESTING PURPOSES:
-    // let logAichatEventResponse;
-    // try {
-    //   logAichatEventResponse = await postLogAichatEvent(
-    //     newMessage,
-    //     aichatContext
-    //   );
-    //   console.log('logAichatEventResponse', logAichatEventResponse);
-    // } catch (error) {
-    //   Lab2Registry.getInstance()
-    //     .getMetricsReporter()
-    //     .logError('Error in aichat event logging request', error as Error);
-    //   return;
-    // }
     thunkAPI.dispatch(setChatMessagePending(newMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
@@ -456,15 +424,15 @@ const aichatSlice = createSlice({
   reducers: {
     addChatMessage: (state, action: PayloadAction<ChatMessage>) => {
       state.chatItemsCurrent.push(action.payload);
-      state.aichatEventsToLog.push(action.payload);
+      logAichatEvent(action.payload);
     },
     addModelUpdate: (state, action: PayloadAction<ModelUpdate>) => {
       state.chatItemsCurrent.push(action.payload);
-      state.aichatEventsToLog.push(action.payload);
+      logAichatEvent(action.payload);
     },
     addNotification: (state, action: PayloadAction<Notification>) => {
       state.chatItemsCurrent.push(action.payload);
-      state.aichatEventsToLog.push(action.payload);
+      logAichatEvent(action.payload);
     },
     setStudentChatHistory: (state, action: PayloadAction<AichatEvent[]>) => {
       state.studentChatHistory = action.payload;
