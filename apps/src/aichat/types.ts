@@ -5,41 +5,44 @@ import {Role} from '../aiComponentLibrary/chatItems/types';
 // TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
 export type AichatInteractionStatusValue = string;
 
-export interface ChatItem {
+export interface AichatEvent {
   // UTC timestamp in milliseconds
   timestamp: number;
+  description?: string;
 }
 
-export interface ChatMessage extends ChatItem {
+export interface ChatMessage extends AichatEvent {
   chatMessageText: string;
   role: Role;
   status: AichatInteractionStatusValue;
 }
 
-export interface ModelUpdate extends ChatItem {
+export interface ModelUpdate extends AichatEvent {
   id: number;
   updatedField: keyof AiCustomizations;
   updatedValue: AiCustomizations[keyof AiCustomizations];
 }
 
-export interface Notification extends ChatItem {
+export interface Notification extends AichatEvent {
   id: number;
   text: string;
   notificationType: 'error' | 'success';
 }
 
-// Type Predicates: checks if a ChatItem is a given type, and more helpfully,
+export type ChatItem = ChatMessage | ModelUpdate | Notification;
+
+// Type Predicates: checks if a AichatEvent is a given type, and more helpfully,
 // automatically narrows to the specific type.
-export function isChatMessage(item: ChatItem): item is ChatMessage {
-  return (item as ChatMessage).chatMessageText !== undefined;
+export function isChatMessage(event: AichatEvent): event is ChatMessage {
+  return (event as ChatMessage).chatMessageText !== undefined;
 }
 
-export function isModelUpdate(item: ChatItem): item is ModelUpdate {
-  return (item as ModelUpdate).updatedField !== undefined;
+export function isModelUpdate(event: AichatEvent): event is ModelUpdate {
+  return (event as ModelUpdate).updatedField !== undefined;
 }
 
-export function isNotification(item: ChatItem): item is Notification {
-  return (item as Notification).notificationType !== undefined;
+export function isNotification(event: AichatEvent): event is Notification {
+  return (event as Notification).notificationType !== undefined;
 }
 
 export interface ChatApiResponse {
