@@ -24,6 +24,8 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
      ruby --version     # --> ruby 3.0.5
      node --version     # --> v18.16.0
      git-lfs --version  #  >= git-lfs/3.0
+     pipenv --version   #  >= 2024.0.1
+     pyenv --version    #  >= 2.4.8
      ```
 
 1. `git lfs pull`
