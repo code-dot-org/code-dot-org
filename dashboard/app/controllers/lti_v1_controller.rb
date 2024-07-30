@@ -122,6 +122,7 @@ class LtiV1Controller < ApplicationController
     # in a new tab. This flow appends a 'new_tab=true' query param, so it will
     # pass this block once the iframe "jail break" has happened.
     if Policies::Lti.force_iframe_launch?(decoded_jwt[:iss]) && !params[:new_tab]
+      puts 'IN IFRAME IF'
       auth_url_base = CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme)
 
       query_params = {
@@ -206,9 +207,9 @@ class LtiV1Controller < ApplicationController
         # PartialRegistration removes the email address, so store it in a local variable first
         email_address = Services::Lti.get_claim(decoded_jwt, :email)
         PartialRegistration.persist_attributes(session, user)
-
         Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'new', user.user_type)
         publish_linking_page_visit(user, integration[:platform_name])
+        puts "EMAIL ADDRESS: #{email_address}"
         render 'lti/v1/account_linking/landing', locals: {email: email_address} and return
 
         # if DCDO.get('student-email-post-enabled', false)
