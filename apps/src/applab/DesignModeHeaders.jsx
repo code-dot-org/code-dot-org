@@ -71,7 +71,7 @@ export default class DesignModeHeaders extends React.Component {
     return (
       <button
         type="button"
-        style={[commonStyles.hidden, this.chevronStyle(!this.props.isRtl)]}
+        style={[commonStyles.hidden, this.chevronStyle(this.props.isRtl)]}
         className="show-toolbox-icon"
       >
         <i className="fa fa-chevron-circle-right" />
