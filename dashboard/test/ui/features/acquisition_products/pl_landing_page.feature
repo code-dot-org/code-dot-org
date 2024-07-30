@@ -63,7 +63,7 @@ Feature: Professional Learning landing page
     And I wait until element "button:contains(Create a section)" is visible
 
   Scenario: Regional Partner sees relevant content sections
-    Given I am a program manager with started and completed courses
+    Given I am a program manager with a started course
     And I am on "http://studio.code.org/my-professional-learning"
 
     # Go to the right My PL page tab
@@ -81,7 +81,7 @@ Feature: Professional Learning landing page
     # Sees Workshops table
     And I wait until element "button:contains(Workshop Details)" is visible
 
-    And I delete the program manager, regional partner, teacher, and application
+    And I delete the program manager and workshop
 
   Scenario: Workshop Organizer sees relevant content sections
     Given I am an organizer with started and completed courses

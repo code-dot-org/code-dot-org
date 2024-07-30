@@ -119,13 +119,11 @@ Given(/^I am an organizer with started and completed courses$/) do
   GHERKIN
 end
 
-Given(/^I am a program manager with started and completed courses$/) do
+Given(/^I am a program manager with a started course$/) do
   random_name = "TestProgramManager" + SecureRandom.hex[0..9]
   steps <<~GHERKIN
     And I am a program manager named "#{random_name}" for regional partner "Test Partner"
     And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and start it
-    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people and end it
-    And I create a workshop for course "CS Fundamentals" organized by "#{random_name}" with 5 people
   GHERKIN
 end
 
@@ -510,6 +508,8 @@ def create_facilitator(course)
   facilitator
 end
 
+@workshop_id = nil
+
 And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) (people|facilitators)(.*)$/) do |course, role, name, number, number_type, post_create_actions|
   # Organizer
   organizer =
@@ -533,6 +533,8 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
       enrolled_and_attending_users: number_type == 'people' ? number.to_i : 0
     )
   end
+
+  @workshop_id = workshop.id
 
   # Facilitators
   if number_type == 'facilitators'
@@ -563,4 +565,14 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
   else
     workshop.update!(started_at: nil, ended_at: nil)
   end
+end
+
+puts @workshop_id
+
+Given(/^I delete the program manager and workshop$/) do
+  browser_request(
+    url: '/api/test/delete_pm_workshop',
+    method: 'POST',
+    body: {workshop_id: @workshop_id, pm_name: @pm_name}
+  )
 end
