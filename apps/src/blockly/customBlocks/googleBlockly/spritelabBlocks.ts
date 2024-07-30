@@ -16,8 +16,8 @@ import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
 import {ExtendedBlockSvg, ProcedureBlock} from '@cdo/apps/blockly/types';
 import {FALSEY_DEFAULT, readBooleanAttribute} from '@cdo/apps/blockly/utils';
 import {SVG_NS} from '@cdo/apps/constants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
-import Button from '@cdo/apps/templates/Button';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {getAlphanumericId} from '@cdo/apps/utils';
 

@@ -5,10 +5,10 @@ import Select from 'react-select';
 
 import 'react-select/dist/react-select.css';
 import project from '@cdo/apps/code-studio/initApp/project';
+import fontConstants from '@cdo/apps/fontConstants';
 import StylizedBaseDialog, {
   FooterButton,
-} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
-import fontConstants from '@cdo/apps/fontConstants';
+} from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import color from '@cdo/apps/util/color';
 import * as utils from '@cdo/apps/utils';
 import msg from '@cdo/poetry/locale';
