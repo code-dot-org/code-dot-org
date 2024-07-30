@@ -25,6 +25,7 @@ import aichatI18n from '../locale';
 import {
   addNotification,
   clearChatMessages,
+  logAichatEvent,
   onSaveComplete,
   onSaveFail,
   onSaveNoop,
@@ -35,7 +36,12 @@ import {
   updateAiCustomization,
 } from '../redux/aichatRedux';
 import {getNewMessageId} from '../redux/utils';
-import {AichatLevelProperties, Notification, ViewMode} from '../types';
+import {
+  AichatEvent,
+  AichatLevelProperties,
+  Notification,
+  ViewMode,
+} from '../types';
 
 import ChatWorkspace from './ChatWorkspace';
 import {isDisabled} from './modelCustomization/utils';
@@ -179,6 +185,12 @@ const AichatView: React.FunctionComponent = () => {
 
   const onClear = useCallback(() => {
     dispatch(clearChatMessages());
+    dispatch(
+      logAichatEvent({
+        timestamp: Date.now(),
+        description: 'User clears chat history in the workspace.',
+      } as AichatEvent)
+    );
     analyticsReporter.sendEvent(
       EVENTS.CHAT_ACTION,
       {
