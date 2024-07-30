@@ -3,11 +3,10 @@ import React, {useState} from 'react';
 
 import Button from '@cdo/apps/templates/Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import i18n from '@cdo/locale';
 
 import styles from './uploadImage.module.scss';
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-
 
 export default function UploadImageForm() {
   const [imgUrls, setImgUrls] = useState([]);
