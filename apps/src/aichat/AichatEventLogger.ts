@@ -1,7 +1,7 @@
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
-import {postLogAichatEvent} from '../aichatApi';
-import {AichatEvent, AichatContext} from '../types';
+import {postLogAichatEvent} from './aichatApi';
+import {AichatEvent, AichatContext} from './types';
 
 interface AichatEventsLoggerPayload {
   aichatEvent: AichatEvent;

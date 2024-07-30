@@ -18,6 +18,7 @@ import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {postAichatCompletionMessage} from '../aichatApi';
+import AichatEventsLogger from '../AichatEventLogger';
 import {saveTypeToAnalyticsEvent} from '../constants';
 import {
   AiCustomizations,
@@ -43,7 +44,6 @@ import {
 } from '../views/modelCustomization/constants';
 import {validateModelId} from '../views/modelCustomization/utils';
 
-import AichatEventsLogger from './AichatEventLogger';
 import {
   allFieldsHidden,
   findChangedProperties,
