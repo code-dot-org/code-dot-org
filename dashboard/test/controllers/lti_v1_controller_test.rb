@@ -313,7 +313,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
       exp: 7.days.from_now.to_i,
       iat: 1.day.ago.to_i,
       iss: @integration.issuer,
-      sub: SecureRandom.uuid,
+      sub: 'LTI-AUTH',
       nonce: @nonce,
       'https://purl.imsglobal.org/spec/lti/claim/target_link_uri': target_link_uri,
       'https://purl.imsglobal.org/spec/lti/claim/message_type': 'LtiResourceLinkRequest',
@@ -479,12 +479,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   test 'auth - given a valid jwt with the audience as an array, redirect to target_link_url' do
     aud_is_array = true
     jwt = create_valid_jwt(aud_is_array)
-    payload = JWT.decode(jwt, @key)
-    puts payload.inspect
-    user = Services::Lti.initialize_lti_user(JWT.decode(jwt, @key))
-    user.update(lms_landing_opted_out: true)
-    # puts user.inspect
-    user.save!
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :redirect
   end
@@ -585,6 +579,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     Cpa.stubs(:cpa_experience).with(any_parameters).returns(false)
     SignUpTracking.stubs(:begin_sign_up_tracking).returns(false)
     DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
+    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(false)
     DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
     payload = {**get_valid_payload, Policies::Lti::LTI_ROLES_KEY => [Policies::Lti::CONTEXT_LEARNER_ROLE]}
     jwt = create_jwt_and_stub(payload)
@@ -601,6 +596,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     Cpa.stubs(:cpa_experience).with(any_parameters).returns(false)
     SignUpTracking.stubs(:begin_sign_up_tracking).returns(false)
     DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
+    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
     DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
     payload = {**get_valid_payload, Policies::Lti::LTI_ROLES_KEY => [Policies::Lti::CONTEXT_LEARNER_ROLE]}
     jwt = create_jwt_and_stub(payload)
