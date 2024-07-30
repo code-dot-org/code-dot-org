@@ -23,24 +23,36 @@
     display: flex;
   }
 
-  .noteGridContainer {
+  .eventGridContainer {
     position: relative;
     width: 315px;
     margin: 10px 0;
-    height: 110px;
+    //height: 110px;
     border-radius: 4px;
-    background-color: $neutral_dark90;
+    //background-color: $neutral_dark90;
+    display: flex;
+    flex-direction: column-reverse;
 
-    .gridNote {
+    .gridEvent {
       position: absolute;
       background-color: $light_cyan;
       border-radius: 3px;
     }
   }
 
+
+  .row {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background-color: rgba($background_gray, 0.2);
+    }
+  }
+
   .outerCell {
     display: inline-block;
-    padding: 5px 3px;
+    padding: 1px 3px;
     box-sizing: border-box;
     cursor: pointer;
 
@@ -50,11 +62,10 @@
   }
 
   .cell {
-    padding: 2px;
+    padding: 1px;
     width: 10px;
     height: 5px;
     background-color: #555;
-    border-radius: 50%;
   }
 
   .activeCell {

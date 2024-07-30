@@ -79,7 +79,7 @@ const TunePanel: React.FunctionComponent<TunePanelProps> = ({
       } else {
         // Not found, so add.
         currentValue.events.push({note, tick});
-        //previewNote(note, currentValue.instrument);
+        previewNote(note, currentValue.instrument);
       }
 
       onChange(currentValue);
@@ -166,7 +166,7 @@ const TunePanel: React.FunctionComponent<TunePanelProps> = ({
       <div className={moduleStyles.optionsRow}>
         <select
           value={currentValue.instrument}
-          onChange={event => handleFolderChange}
+          onChange={handleFolderChange}
           className={moduleStyles.dropdown}
           disabled={isLoading}
         >
@@ -215,9 +215,9 @@ const TunePanel: React.FunctionComponent<TunePanelProps> = ({
       </div>
       <LoadingOverlay show={isLoading} />
       <PreviewControls
-        enabled={[].length > 0 && !isLoading}
+        enabled={currentValue.events.length > 0 && !isLoading}
         playPreview={startPreview}
-        onClickClear={() => {}}
+        onClickClear={onClear}
         cancelPreviews={stopPreview}
         isPlayingPreview={currentPreviewTick > 0}
       />

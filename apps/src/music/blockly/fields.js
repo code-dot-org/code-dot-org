@@ -83,8 +83,8 @@ export const fieldTuneDefinition = {
   previewTune: (tuneValue, onTick, onStop) => {
     Globals.getPlayer().previewTune(tuneValue, onTick, onStop);
   },
-  previewTune: (tune, instrument, onStop) => {
-    Globals.getPlayer().previewTune(tune, instrument, onStop);
+  previewNote: (tune, instrument, onStop) => {
+    Globals.getPlayer().previewNote(tune, instrument, onStop);
   },
   currentValue: DEFAULT_TUNE,
   ...instrumentCommonOptions,

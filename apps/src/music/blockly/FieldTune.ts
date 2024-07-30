@@ -121,15 +121,15 @@ export default class FieldTune extends Field {
       this.backgroundElement
     );
 
-    const graphNotes: TuneGraphEvent[] = [];/* generateGraphDataFromChord({
-      chordEventValue: this.getValue(),
+    const graphNotes: TuneGraphEvent[] = generateGraphDataFromTune({
+      tuneEventValue: this.getValue(),
       width: FIELD_WIDTH,
       height: FIELD_HEIGHT,
       numOctaves: 3,
       startOctave: 4,
       padding: 2,
       noteHeightScale: 4,
-    });*/
+    });
 
     graphNotes.forEach(graphNote => {
       GoogleBlockly.utils.dom.createSvgElement(
