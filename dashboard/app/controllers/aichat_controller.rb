@@ -54,8 +54,8 @@ class AichatController < ApplicationController
     )
 
     response_body = {
-      aichat_event_id: logged_event.id,
-      aichat_event: logged_event.aichat_event
+      chat_item_id: logged_event.id,
+      chat_item: logged_event.aichat_event
     }
 
     render(status: :ok, json: response_body)
