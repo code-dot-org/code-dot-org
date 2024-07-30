@@ -19,6 +19,11 @@ interface VersionHistoryDropdownProps {
   closeDropdown: () => void;
 }
 
+/**
+ * Dropdown that displays a list of versions for the current project.
+ * Each version has a "restore" button that will restore the project to that version.
+ * There is also a "start over" button that will restore the project to the start source.
+ */
 const VersionHistoryDropdown: React.FunctionComponent<
   VersionHistoryDropdownProps
 > = ({versionList, updatedSourceCallback, startSource, closeDropdown}) => {

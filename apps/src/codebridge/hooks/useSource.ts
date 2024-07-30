@@ -56,6 +56,7 @@ export const useSource = (defaultSources: ProjectSources) => {
   );
 
   const getStartSource = useCallback(() => {
+    // When resetting in start mode, we always use the level start source.
     return {
       source:
         (!isStartMode && templateStartSource) ||

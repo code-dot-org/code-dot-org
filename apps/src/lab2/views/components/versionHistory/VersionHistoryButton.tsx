@@ -17,6 +17,9 @@ interface VersionHistoryProps {
   updatedSourceCallback?: (source: ProjectSources) => void;
 }
 
+/**
+ * Button that opens a dropdown with a list of versions for the current project.
+ */
 const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
   startSource,
   updatedSourceCallback,

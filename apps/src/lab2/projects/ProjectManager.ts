@@ -245,6 +245,7 @@ export default class ProjectManager {
   }
 
   async getVersionList() {
+    // TODO: Error handling
     return await this.sourcesStore.getVersionList(this.channelId);
   }
 
