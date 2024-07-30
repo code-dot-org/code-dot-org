@@ -10,7 +10,7 @@ import {
 import CustomDropdown, {
   _CustomDropdownOption,
 } from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import i18n from '@cdo/locale';

@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "computer-vision",
-    "serialized_at": "2024-07-12 14:30:14 UTC",
+    "serialized_at": "2024-07-26 20:53:51 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1313,7 +1313,7 @@
       "key": "5a2ae495-4449-4496-8b1c-3aa87e2eb6b0",
       "position": 3,
       "properties": {
-        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/create/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
+        "description": "You can assign students a content assessment hosted on the JuiceMind platform either within the lesson or at the end of the lesson. To assign the assessment to your students, [**click here**](https://play.juicemind.com/quizzes/OIcMzfkoETJJUXSpMMrj).\n\nClick **Assign** on the assessment page, then have students join your unique class session. Students have a link to the **Join** page on the level after the reflection level and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note:** You will need to [**sign up**](https://play.juicemind.com/signup) for an account on JuiceMind to assign the assessment.",
         "name": "(Optional) JuiceMind Assessment",
         "progression_name": "JuiceMind Assessment"
       },

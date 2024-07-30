@@ -15,7 +15,6 @@ class PegasusSites
       code.org
       csedweek.org
       hourofcode.com
-      advocacy.code.org
     ).concat(CDO.partners.map {|partner| "#{partner}.code.org"})
     @pegasus_hosts = pegasus_domains.map {|i| CDO.canonical_hostname(i)}
     @config = HttpCache.config(rack_env)

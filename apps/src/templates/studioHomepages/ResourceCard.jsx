@@ -3,10 +3,10 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 import color from '../../util/color';
-import Button from '../Button';
 
 // If you want to include an image, you're probably looking for a ImageResourceCard.
 class ResourceCard extends Component {

@@ -2,7 +2,7 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {DropdownButton} from '@cdo/apps/templates/DropdownButton';
 
 const clickSpy = sinon.spy();

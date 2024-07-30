@@ -2,11 +2,10 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {isIE11} from '@cdo/apps/util/browser-detector';
 import i18n from '@cdo/locale';
-
-import Button from '../Button';
 
 // used to give each instance a unique id to use for callback names
 let componentCount = 0;

@@ -10,12 +10,12 @@ Scenario: Game lab level where student has not started
   And I wait until element ".uitest-owned-sections" is visible
 
   And I am on "http://studio.code.org/s/allthethings/lessons/38/levels/3"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I wait until element "#teacher-panel-container" is visible
   And I wait until element ".uitest-sectionselect:contains(Untitled Section)" is visible
   And I wait until element ".student-table" is visible
   And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
 
   And I wait until element ".editor-column" contains text "This student has not started the level."
   Then I see no difference for "student not started warning"
@@ -27,12 +27,12 @@ Scenario: Maze level where student has not started
   And I wait until element ".uitest-owned-sections" is visible
 
   And I am on "http://studio.code.org/s/allthethings/lessons/4/levels/2"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I wait until element "#teacher-panel-container" is visible
   And I wait until element ".uitest-sectionselect:contains(Untitled Section)" is visible
   And I wait until element ".student-table" is visible
   And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
 
   And I wait until element ".editor-column" contains text "This student has not started the level."
   Then I see no difference for "student not started warning"
@@ -44,12 +44,12 @@ Scenario: Contained level
   And I wait until element ".uitest-owned-sections" is visible
 
   And I am on "http://studio.code.org/s/allthethings/lessons/41/levels/1"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I wait until element "#teacher-panel-container" is visible
   And I wait until element ".uitest-sectionselect:contains(Untitled Section)" is visible
   And I wait until element ".student-table" is visible
   And I click selector "#teacher-panel-container tr:nth(1)" to load a new page
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
 
   And I wait until element ".editor-column" does not contain text "This student has not started the level."
   Then I see no difference for "no student not started warning"

@@ -2,9 +2,9 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 
-import style from '@cdo/apps/templates/button.module.scss';
+import style from '@cdo/apps/legacySharedComponents/button.module.scss';
 
 describe('Button', () => {
   it('renders an anchor tag when button has an href', () => {
