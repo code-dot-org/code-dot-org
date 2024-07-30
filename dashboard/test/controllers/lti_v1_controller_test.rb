@@ -515,6 +515,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     jwt = create_jwt_and_stub(payload)
 
     user = create :student
+    user.update(lms_landing_opted_out: true)
     ao = AuthenticationOption.new(
       user: user,
       email: Services::Lti.get_claim(payload, :email),
@@ -536,6 +537,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     jwt = create_jwt_and_stub(payload)
 
     user = create :student
+    user.update(lms_landing_opted_out: true)
     ao = AuthenticationOption.new(
       user: user,
       email: Services::Lti.get_claim(payload, :email),
@@ -574,29 +576,11 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to '/users/sign_up'
   end
 
-  test 'auth - should render oauth redirector if student-email-post-enabled' do
-    DCDO.stubs(:get)
-    Cpa.stubs(:cpa_experience).with(any_parameters).returns(false)
-    SignUpTracking.stubs(:begin_sign_up_tracking).returns(false)
-    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
-    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(false)
-    DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
-    payload = {**get_valid_payload, Policies::Lti::LTI_ROLES_KEY => [Policies::Lti::CONTEXT_LEARNER_ROLE]}
-    jwt = create_jwt_and_stub(payload)
-
-    deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
-    assert deployment
-    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
-
-    assert_template 'omniauth/redirect'
-  end
-
   test 'auth - should render the landing page and store session state' do
     DCDO.stubs(:get)
     Cpa.stubs(:cpa_experience).with(any_parameters).returns(false)
     SignUpTracking.stubs(:begin_sign_up_tracking).returns(false)
     DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
-    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
     DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
     payload = {**get_valid_payload, Policies::Lti::LTI_ROLES_KEY => [Policies::Lti::CONTEXT_LEARNER_ROLE]}
     jwt = create_jwt_and_stub(payload)
