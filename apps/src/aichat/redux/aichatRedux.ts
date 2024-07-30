@@ -220,7 +220,17 @@ export const onSaveComplete =
         timestamp: Date.now(),
       };
       dispatch(addModelUpdate(modelUpdate));
-      dispatch(logAichatEvent(modelUpdate));
+      const {updatedField, updatedValue} = modelUpdate;
+      const updatedValueToLog =
+        updatedField === 'temperature' || updatedField === 'selectedModelId'
+          ? updatedValue
+          : 'n/a';
+      dispatch(
+        logAichatEvent({
+          ...modelUpdate,
+          updatedValue: updatedValueToLog,
+        } as AichatEvent)
+      );
 
       // Report to analytics the changed value for only selected model id and temperature properties.
       // Do not include the free text changes (system prompt and retrieval contexts).

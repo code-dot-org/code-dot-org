@@ -115,6 +115,12 @@ const AichatView: React.FunctionComponent = () => {
         studentAiCustomizations,
       })
     );
+    dispatch(
+      logAichatEvent({
+        timestamp: Date.now(),
+        description: AichatEventDescriptions.LOAD_LEVEL,
+      } as AichatEvent)
+    );
   }, [dispatch, initialSources, levelAichatSettings]);
 
   // When the level changes or if we are viewing aichat level as a different user
