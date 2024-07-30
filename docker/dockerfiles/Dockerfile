@@ -71,9 +71,6 @@ FROM base as pyenv
 # This should match the `python_version` specified in the Pipfile
 ENV PYTHON_VERSION=3.12
 
-RUN apt-get install -y --no-install-recommends python3-pip
-RUN pip3 install --system pipenv
-
 USER ${USER}
 
 RUN curl https://pyenv.run | bash
@@ -104,6 +101,7 @@ RUN apt-get install -y --no-install-recommends \
     parallel \
     python \
     python-dev \
+    python3-pip \
     software-properties-common \
     sudo \
     tar \
@@ -203,6 +201,9 @@ RUN curl -SsL https://github.com/boxboat/fixuid/releases/download/v0.4/fixuid-0.
     mkdir -p /etc/fixuid && \
     printf "user: ${USER}\ngroup: ${GROUP}\n" > /etc/fixuid/config.yml
 
+# install pipenv
+RUN pip3 install --system pipenv
+
 USER ${USER}
 
 WORKDIR /home/${USER}
@@ -215,9 +216,13 @@ RUN git lfs install
 # docker exec -it <container_name> bash, which bypasses the entrypoint script.
 RUN echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
-# Finally, merge in the ruby and python layers
-COPY --from=rbenv --chown=${USER}:${GROUP} /home/${USER}/.rbenv /home/${USER}/.rbenv
+# Merge in python layer & setup pyenv
 COPY --from=pyenv --chown=${USER}:${GROUP} /home/${USER}/.pyenv /home/${USER}/.pyenv
+ENV PATH="/home/${USER}/.pyenv/bin:$PATH"
+
+# Finally, merge in the ruby layer
+COPY --from=rbenv --chown=${USER}:${GROUP} /home/${USER}/.rbenv /home/${USER}/.rbenv
+
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
