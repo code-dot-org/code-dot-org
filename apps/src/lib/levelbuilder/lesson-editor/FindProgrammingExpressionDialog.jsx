@@ -3,7 +3,7 @@ import queryString from 'query-string';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import StyledCodeBlock from '@cdo/apps/templates/lessonOverview/StyledCodeBlock';
 import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';

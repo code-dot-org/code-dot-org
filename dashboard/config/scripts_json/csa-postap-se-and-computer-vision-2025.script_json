@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "csa-software-engineering",
-    "serialized_at": "2024-01-17 00:48:34 UTC",
+    "serialized_at": "2024-07-29 19:34:11 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2393,6 +2393,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-se-setup-part1_2025"
+        ],
         "progression": "Software Setup"
       },
       "bonus": false,
@@ -2415,6 +2418,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-se-setup-part2_2025"
+        ],
         "progression": "Software Setup"
       },
       "bonus": false,
@@ -2437,6 +2443,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-se-setup-part3_2025"
+        ],
         "progression": "Software Setup"
       },
       "bonus": false,
@@ -2459,6 +2468,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-se-setup-part4_2025"
+        ],
         "progression": "GitHub Setup"
       },
       "bonus": false,
@@ -2481,6 +2493,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-se-setup-part5_2025"
+        ],
         "progression": "GitHub Setup"
       },
       "bonus": false,
@@ -2503,6 +2518,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-se-setup-part6_2025"
+        ],
         "progression": "Software Setup Test"
       },
       "bonus": false,
@@ -2525,6 +2543,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csa-se-setup-part7_2025"
+        ],
         "progression": "TensorFlow Setup (Mac Only)"
       },
       "bonus": false,
@@ -2547,6 +2568,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-SE-CV-PreSurvey-and-Assessment_2025"
+        ],
         "progression": "Pre-Survey and Assessment: Software Engineering and Computer Vision"
       },
       "bonus": false,
@@ -2569,6 +2593,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-SE-L1-Repo_2025"
+        ],
         "progression": "GitHub Scavenger Hunt"
       },
       "bonus": false,
@@ -2591,6 +2618,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-SE-L1L1_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2613,6 +2643,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-SE-L1-Survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -2635,6 +2668,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-SE-Copilot-Navigator_2025"
+        ],
         "progression": "Copilot as the Navigator"
       },
       "bonus": false,
@@ -2657,6 +2693,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-SE-Copilot-Driver_2025"
+        ],
         "progression": "Copilot as the Driver"
       },
       "bonus": false,
@@ -2679,6 +2718,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-SE-L2L1_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2701,6 +2743,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-SE-L2-Survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -2723,6 +2768,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-SE-L3-L1_2025"
+        ],
         "progression": "Copilot as a Dev Tool"
       },
       "bonus": false,
@@ -2745,6 +2793,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-SE-L3-L2_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2767,6 +2818,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-SE-L3-Survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -2789,6 +2843,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L1-L1_2025"
+        ],
         "progression": "MediaPipe Object Detection Model Demo"
       },
       "bonus": false,
@@ -2811,6 +2868,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L1-L2_2025"
+        ],
         "progression": "MediaPipe Model Testing: Image Files"
       },
       "bonus": false,
@@ -2833,6 +2893,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L1-L3_2025"
+        ],
         "progression": "COCO - Common Objects in Context Dataset"
       },
       "bonus": false,
@@ -2855,6 +2918,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L1-L4_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2877,6 +2943,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L1-Survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -2899,6 +2968,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L2-L1_2025"
+        ],
         "progression": "Select a Program"
       },
       "bonus": false,
@@ -2921,6 +2993,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L2-L2_2025"
+        ],
         "progression": "Teachable Machine"
       },
       "bonus": false,
@@ -2943,6 +3018,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L2-L3_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2965,6 +3043,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L2-Survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -2987,6 +3068,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L3-L1_2025"
+        ],
         "progression": "Incorporate Your Model"
       },
       "bonus": false,
@@ -3009,6 +3093,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L3-L2_2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3031,6 +3118,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L3-Survey_2025"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -3053,6 +3143,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-SE-CV-PostSurvey-and-Assessment_2025"
+        ],
         "progression": "Post-Survey and Assessment: Software Engineering and Computer Vision"
       },
       "bonus": false,
@@ -3629,7 +3722,7 @@
     },
     {
       "name": "Frame of Reference: Teamwork and Collaboration",
-      "url": "https://docs.google.com/document/d/1MNTpgngHWVlkWkQR\\_Vg1xgDV2j96XQ39X33INECIYfc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1MNTpgngHWVlkWkQR_Vg1xgDV2j96XQ39X33INECIYfc/edit?usp=sharing",
       "key": "frame_of_reference_teamwork_and_collaboration",
       "properties": {
         "audience": "Student",
@@ -3899,7 +3992,7 @@
     },
     {
       "name": "Submitting an Assignment on GitHub Classroom",
-      "url": "https://docs.google.com/document/d/1eOlMx2YW3qRI5DJzpInnN10dSGEupIRa-qOfL\\_xNMR0/edit?usp=share\\_link",
+      "url": "https://docs.google.com/document/d/1eOlMx2YW3qRI5DJzpInnN10dSGEupIRa-qOfL_xNMR0/edit?usp=share\\_link",
       "key": "submitting_an_assignment_on_github_classroom",
       "properties": {
         "audience": "Student",

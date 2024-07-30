@@ -3,13 +3,13 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {setCurrentUserHasSeenStandardsReportInfo} from '@cdo/apps/templates/currentUserRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../../BaseDialog';
-import Button from '../../Button';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 
 import {cstaStandardsURL} from './standardsConstants';
