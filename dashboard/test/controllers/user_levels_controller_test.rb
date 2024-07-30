@@ -236,4 +236,49 @@ class UserLevelsControllerTest < ActionController::TestCase
     body = JSON.parse(response.body)
     assert_nil body['data']
   end
+
+  test "teacher can get their section respose summary" do
+    teacher = create :teacher
+    sign_in teacher
+
+    section = create :section, user: teacher
+    student = create :student
+    section.students << student
+    student2 = create :student
+    section.students << student2
+    level = create :level
+
+    create :user_level, user: student, level: level
+
+    get :get_section_response_summary, params: {section_id: section.id, level_id: level.id}
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal 1, body['response_count']
+    assert_equal 2, body['num_students']
+  end
+
+  test "student cannot get section response summary" do
+    student = create :student
+    sign_in student
+
+    section = create :section
+    section.students << student
+    level = create :level
+
+    get :get_section_response_summary, params: {section_id: section.id, level_id: level.id}
+    assert_response :forbidden
+  end
+
+  test "teacher cannot get section response summary for section they don't own" do
+    teacher = create :teacher
+    sign_in teacher
+
+    section = create :section
+    student = create :student
+    section.students << student
+    level = create :level
+
+    get :get_section_response_summary, params: {section_id: section.id, level_id: level.id}
+    assert_response :forbidden
+  end
 end

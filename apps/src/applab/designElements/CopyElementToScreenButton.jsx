@@ -58,6 +58,7 @@ class CopyElementToScreenButton extends React.Component {
   };
 
   handleDropdownClick = event => {
+    event.stopPropagation();
     this.setState({opened: !this.state.opened});
   };
 

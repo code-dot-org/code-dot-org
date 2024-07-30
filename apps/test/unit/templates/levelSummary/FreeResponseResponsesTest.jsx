@@ -73,4 +73,46 @@ describe('FreeResponseResponses', () => {
 
     screen.getByText('student response 1');
   });
+
+  it('pins and unpins responses', () => {
+    DCDO.set('cfu-pin-hide-enabled', true);
+    renderDefault();
+
+    let student1 = screen.getByText('student response 1');
+    let student5 = screen.getByText('student response 5');
+
+    expect(student1.compareDocumentPosition(student5)).toBe(
+      Node.DOCUMENT_POSITION_FOLLOWING
+    );
+    expect(screen.queryByText('Pinned responses')).toBeNull();
+
+    // pin response
+    const dropdownButton = screen.getAllByTitle('Additional options')[4];
+    dropdownButton.click();
+
+    const pinResponseButton = screen.getByRole('button', {
+      name: 'Pin response',
+    });
+    pinResponseButton.click();
+
+    student1 = screen.getByText('student response 1');
+    student5 = screen.getByText('student response 5');
+    expect(student1.compareDocumentPosition(student5)).toBe(
+      Node.DOCUMENT_POSITION_PRECEDING
+    );
+    screen.getByText('Pinned responses');
+
+    // unpin response
+    const unpinAll = screen.getByText('Unpin all');
+    unpinAll.click();
+
+    screen.getByText('student response 1');
+
+    student1 = screen.getByText('student response 1');
+    student5 = screen.getByText('student response 5');
+    expect(student1.compareDocumentPosition(student5)).toBe(
+      Node.DOCUMENT_POSITION_FOLLOWING
+    );
+    expect(screen.queryByText('Pinned responses')).toBeNull();
+  });
 });

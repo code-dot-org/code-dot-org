@@ -39,6 +39,17 @@ export default class QuickActionsCell extends Component {
     currWindowWidth: window.innerWidth, // used to calculate location of menu on resize
   };
 
+  handleClick = e => {
+    e.stopPropagation();
+
+    if (this.state.open) {
+      this.close();
+      this.onClose();
+    } else {
+      this.state.canOpen ? this.open() : undefined;
+    }
+  };
+
   // Menu open
   open = () => {
     this.updateMenuLocation();
@@ -113,7 +124,7 @@ export default class QuickActionsCell extends Component {
           icon={icons[type]}
           style={iconStyle}
           className="ui-test-section-dropdown ui-projects-table-dropdown"
-          onClick={this.state.canOpen ? this.open : undefined}
+          onClick={this.handleClick}
           tabIndex="0"
           onKeyDown={e => {
             if ([' ', 'Enter', 'Spacebar'].includes(e.key)) {

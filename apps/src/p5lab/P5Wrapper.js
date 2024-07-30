@@ -2,13 +2,12 @@ import p5 from '@code-dot-org/p5';
 
 import {getStore} from '@cdo/apps/redux';
 
+import {allAnimationsSingleFrameSelector} from './redux/animationList';
 // Disabling import order in order to maintain p5 import first.
 // This might be safe to remove but needs investigation whether any behavior is changed by order.
 /* eslint-disable import/order */
-import {allAnimationsSingleFrameSelector} from './redux/animationList';
 window.p5 = p5;
 import '@code-dot-org/p5.play/lib/p5.play';
-
 import p5SpriteWrapper from './P5SpriteWrapper';
 import p5GroupWrapper from './P5GroupWrapper';
 import {backgrounds} from './spritelab/backgrounds.json';

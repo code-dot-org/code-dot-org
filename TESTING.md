@@ -58,11 +58,9 @@ It's also possible to run a subset of tests:
 * `yarn lint`
 * `yarn test:unit`
 * `yarn test:integration`
-* `yarn test:unit --entry=./test/unit/gridUtilsTest.js`
+* `yarn test:unit test/unit/gridUtilsTest.js`
 
-To debug tests in Chrome, append `--browser=Chrome --watchTests` to any test command.
-
-For more details, see [apps/README.md](./apps/README.md#running-tests).
+For more details, see [apps/README.md](./apps/README.md#testing).
 
 ### Dashboard Tests
 

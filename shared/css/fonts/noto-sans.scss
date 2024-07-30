@@ -11,65 +11,29 @@
  * 700 – Bold
  * 800 – Extra Bold (Ultra Bold)
  * 900 – Black (Heavy)
+ *
+ * Latin, Cyrillic and Greek: az-AZ, bs-BA, ca-ES, co-FR, cs-CZ, da-DK, de-DE, el-GR, en-GB, en-US, es-ES, es-MX, et-EE,
+ * eu-ES, fi-FI, fil-PH, fr-FR, ga-IE, gl-ES, haw-HI, hr-HR, hu-HU, id-ID, is-IS, it-IT, kk-KZ, ky-KG, lt-LT, lv-LV,
+ * mi-NZ, mk-MK, ms-MY, mt-MT, nl-NL, nn-NO, no-NO, pl-PL, pt-BR, pt-PT, ro-RO, ru-RU, se-FI, sk-SK, sl-SI, sm-WS, sq-AL,
+ * sr-SP, sv-SE, tg-TJ, tr-TR, uk-UA, uz-UZ, vi-VN, zu-ZA
+ * Arabic (العربية): ar-SA, fa-AF, fa-IR, ps-AF
+ * Armenian (հայերեն): hy-AM
+ * Bengali (বাংলা): bn-BD
+ * Simplified Chinese (简化字): zh-CN
+ * Traditional Chinese (繁体字): zh-TW
+ * Devanagari (देवनागरी): hi-IN, mr-IN, ne-NP
+ * Georgian (ქართული): ka-GE
+ * Hebrew (עברית): he-IL
+ * Japanese (日本語): ja-JP
+ * Kannada (ಕನ್ನಡ): kn-IN
+ * Khmer (ភាសាខ្មែរ): km-KH
+ * Korean (한국어): ko-KR
+ * Myanmar/Burmese (ဗမာစာ): my-MM
+ * Sinhala (සිංහල): si-LK
+ * Tamil (தமிழ்): ta-IN
+ * Telugu (తెలుగు): te-IN
+ * Thai (ภาษาไทย): th-TH
+ * Thaana/Dhivehi (ދިވެހި): dv-MV
  */
 
- // Latin, Cyrillic and Greek:
- // az-AZ, bs-BA, ca-ES, co-FR, cs-CZ, da-DK, de-DE, el-GR, en-GB, en-US, es-ES, es-MX, et-EE, eu-ES, fi-FI, fil-PH,
- // fr-FR, ga-IE, gl-ES, haw-HI, hr-HR, hu-HU, id-ID, is-IS, it-IT, kk-KZ, ky-KG, lt-LT, lv-LV, mi-NZ, mk-MK, ms-MY,
- // mt-MT, nl-NL, nn-NO, no-NO, pl-PL, pt-BR, pt-PT, ro-RO, ru-RU, se-FI, sk-SK, sl-SI, sm-WS, sq-AL, sr-SP, sv-SE,
- // tg-TJ, tr-TR, uk-UA, uz-UZ, vi-VN, zu-ZA
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap');
-
-// Arabic (العربية): ar-SA, fa-AF, fa-IR, ps-AF
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap');
-
-// Armenian (հայերեն): hy-AM
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wdth,wght@62.5..100,100..900&display=swap');
-
-// Bengali (বাংলা): bn-BD
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wdth,wght@62.5..100,100..900&display=swap');
-
-// Simplified Chinese (简化字): zh-CN
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100..900&display=swap');
-
-// Traditional Chinese (繁体字): zh-TW
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
-
-// Devanagari (देवनागरी): hi-IN, mr-IN, ne-NP
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wdth,wght@62.5..100,100..900&display=swap');
-
-// Georgian (ქართული): ka-GE
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&display=swap');
-
-// Hebrew (עברית): he-IL
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wdth,wght@62.5..100,100..900&display=swap');
-
-// Japanese (日本語): ja-JP
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
-
-// Kannada (ಕನ್ನಡ): kn-IN
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wdth,wght@62.5..100,100..900&display=swap');
-
-// Khmer (ភាសាខ្មែរ): km-KH
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wdth,wght@62.5..100,100..900&display=swap');
-
-// Korean (한국어): ko-KR
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
-
-// Myanmar/Burmese (ဗမာစာ): my-MM
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-// Sinhala (සිංහල): si-LK
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Sinhala:wdth,wght@62.5..100,100..900&display=swap');
-
-// Tamil (தமிழ்): ta-IN
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@100..900&display=swap');
-
-// Telugu (తెలుగు): te-IN
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wdth,wght@62.5..100,100..900&display=swap');
-
-// Thai (ภาษาไทย): th-TH
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap');
-
-// Thaana/Dhivehi (ދިވެހި): dv-MV
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thaana:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wdth,wght@62.5..100,100..900&family=Noto+Sans+Armenian:wdth,wght@62.5..100,100..900&family=Noto+Sans+Bengali:wdth,wght@62.5..100,100..900&family=Noto+Sans+Devanagari:wdth,wght@62.5..100,100..900&family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&family=Noto+Sans+Hebrew:wdth,wght@62.5..100,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+Kannada:wdth,wght@62.5..100,100..900&family=Noto+Sans+Khmer:wdth,wght@62.5..100,100..900&family=Noto+Sans+Myanmar:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+Sinhala:wdth,wght@62.5..100,100..900&family=Noto+Sans+TC:wght@100..900&family=Noto+Sans+Tamil:wdth,wght@62.5..100,100..900&family=Noto+Sans+Telugu:wdth,wght@62.5..100,100..900&family=Noto+Sans+Thaana:wght@100..900&family=Noto+Sans+Thai:wdth,wght@62.5..100,100..900&family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap');

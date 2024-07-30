@@ -1598,6 +1598,50 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.rubric_ai_evaluations
+  # Table: dashboard.learning_goal_ai_evaluations
+  # Table: dashboard.learning_goal_ai_evaluation_feedbacks
+  # Table: dashboard.learning_goal_teacher_evaluations
+  #
+
+  test "deletes all of a purged user's ai evaluations and teacher evaluations as student" do
+    student = create :student
+    rubric_ai_evaluation = create :rubric_ai_evaluation, user: student, requester: student
+    learning_goal_ai_evaluation = create :learning_goal_ai_evaluation, user: student, rubric_ai_evaluation: rubric_ai_evaluation
+    create :learning_goal_ai_evaluation_feedback, learning_goal_ai_evaluation: learning_goal_ai_evaluation
+    create :learning_goal_teacher_evaluation, user: student
+
+    assert_changes -> {RubricAiEvaluation.where(user: student).count}, from: 1, to: 0 do
+      assert_changes -> {LearningGoalAiEvaluation.where(rubric_ai_evaluation: rubric_ai_evaluation).count}, from: 1, to: 0 do
+        assert_changes -> {LearningGoalAiEvaluationFeedback.where(learning_goal_ai_evaluation: learning_goal_ai_evaluation).count}, from: 1, to: 0 do
+          assert_changes -> {LearningGoalTeacherEvaluation.where(user: student).count}, from: 1, to: 0 do
+            purge_user student
+          end
+        end
+      end
+    end
+  end
+
+  test "deletes all of a purged user's ai evaluations and teacher evaluations as teacher" do
+    student = create :student
+    teacher = create :teacher
+    rubric_ai_evaluation = create :rubric_ai_evaluation, user: student, requester: teacher
+    learning_goal_ai_evaluation = create :learning_goal_ai_evaluation, user: student, rubric_ai_evaluation: rubric_ai_evaluation
+    create :learning_goal_ai_evaluation_feedback, learning_goal_ai_evaluation: learning_goal_ai_evaluation
+    create :learning_goal_teacher_evaluation, user: student, teacher: teacher
+
+    assert_changes -> {RubricAiEvaluation.where(requester_id: teacher).count}, from: 1, to: 0 do
+      assert_changes -> {LearningGoalAiEvaluation.where(rubric_ai_evaluation: rubric_ai_evaluation).count}, from: 1, to: 0 do
+        assert_changes -> {LearningGoalAiEvaluationFeedback.where(learning_goal_ai_evaluation: learning_goal_ai_evaluation).count}, from: 1, to: 0 do
+          assert_changes -> {LearningGoalTeacherEvaluation.where(teacher: teacher).count}, from: 1, to: 0 do
+            purge_user teacher
+          end
+        end
+      end
+    end
+  end
+
+  #
   # Table: dashboard.projects
   #
 

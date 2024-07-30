@@ -31,4 +31,17 @@ class DeviseMailerTest < ActionMailer::TestCase
     assert_match 'https://test-studio.code.org/users/password/edit?reset_password_token=faketoken', mail.body.encoded
     assert_no_http_urls mail.body.encoded
   end
+
+  test "unlock account instructions" do
+    user = create :teacher
+
+    mail = Devise::Mailer.unlock_instructions(user, 'faketoken')
+
+    assert_equal "Unlock Instructions", mail.subject
+    assert_equal [user.email], mail.to
+    assert_equal ["noreply@code.org"], mail.from
+
+    assert_match 'https://test-studio.code.org/users/unlock?unlock_token=faketoken', mail.body.encoded
+    assert_no_http_urls mail.body.encoded
+  end
 end
