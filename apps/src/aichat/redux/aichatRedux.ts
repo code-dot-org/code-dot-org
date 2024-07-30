@@ -213,14 +213,14 @@ export const onSaveComplete =
 
     changedProperties.forEach(property => {
       const typedProperty = property as keyof AiCustomizations;
-      dispatch(
-        addModelUpdate({
-          id: getNewMessageId(),
-          updatedField: typedProperty,
-          updatedValue: currentAiCustomizations[typedProperty],
-          timestamp: Date.now(),
-        })
-      );
+      const modelUpdate = {
+        id: getNewMessageId(),
+        updatedField: typedProperty,
+        updatedValue: currentAiCustomizations[typedProperty],
+        timestamp: Date.now(),
+      };
+      dispatch(addModelUpdate(modelUpdate));
+      dispatch(logAichatEvent(modelUpdate));
 
       // Report to analytics the changed value for only selected model id and temperature properties.
       // Do not include the free text changes (system prompt and retrieval contexts).
@@ -309,14 +309,13 @@ const dispatchSaveFailNotification = (
   dispatch: AppDispatch,
   errorMessage: string
 ) => {
-  dispatch(
-    addNotification({
-      id: getNewMessageId(),
-      text: errorMessage,
-      notificationType: 'error',
-      timestamp: Date.now(),
-    })
-  );
+  const errorNotification = {
+    id: getNewMessageId(),
+    text: errorMessage,
+    notificationType: 'error',
+    timestamp: Date.now(),
+  };
+  dispatch(addNotification(errorNotification as Notification));
   // Notify the UI that the save is complete.
   dispatch(endSave());
 };
@@ -379,15 +378,18 @@ export const submitChatContents = createAsyncThunk(
         .logError('Error in aichat completion request', error as Error);
 
       thunkAPI.dispatch(clearChatMessagePending());
-      thunkAPI.dispatch(addChatMessage({...newMessage, status: Status.ERROR}));
+      const erroredUserChatMessage = {...newMessage, status: Status.ERROR};
+      thunkAPI.dispatch(addChatMessage(erroredUserChatMessage));
+      thunkAPI.dispatch(logAichatEvent(erroredUserChatMessage));
 
-      const assistantChatMessage: ChatMessage = {
+      const erroredAssistantChatMessage: ChatMessage = {
         role: Role.ASSISTANT,
         status: Status.ERROR,
         chatMessageText: 'error',
         timestamp: Date.now(),
       };
-      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
+      thunkAPI.dispatch(addChatMessage(erroredAssistantChatMessage));
+      thunkAPI.dispatch(logAichatEvent(erroredAssistantChatMessage));
 
       return;
     }
@@ -412,9 +414,11 @@ export const submitChatContents = createAsyncThunk(
     }
 
     thunkAPI.dispatch(clearChatMessagePending());
-    chatApiResponse.messages.forEach(message =>
-      thunkAPI.dispatch(addChatMessage({...message, timestamp: Date.now()}))
-    );
+    chatApiResponse.messages.forEach(message => {
+      const successfulChatMessage = {...message, timestamp: Date.now()};
+      thunkAPI.dispatch(addChatMessage(successfulChatMessage));
+      thunkAPI.dispatch(logAichatEvent(successfulChatMessage));
+    });
   }
 );
 
@@ -424,15 +428,12 @@ const aichatSlice = createSlice({
   reducers: {
     addChatMessage: (state, action: PayloadAction<ChatMessage>) => {
       state.chatItemsCurrent.push(action.payload);
-      logAichatEvent(action.payload);
     },
     addModelUpdate: (state, action: PayloadAction<ModelUpdate>) => {
       state.chatItemsCurrent.push(action.payload);
-      logAichatEvent(action.payload);
     },
     addNotification: (state, action: PayloadAction<Notification>) => {
       state.chatItemsCurrent.push(action.payload);
-      logAichatEvent(action.payload);
     },
     setStudentChatHistory: (state, action: PayloadAction<AichatEvent[]>) => {
       state.studentChatHistory = action.payload;

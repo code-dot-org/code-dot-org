@@ -40,20 +40,18 @@ export default class AichatEventsLogger {
       this.aichatEventsQueue.length > 0 &&
       !this.sendingAichatEventInProgress
     ) {
-      const aichatEventLoggerPayload = this.aichatEventsQueue.shift(); // Remove the first element from the array.
+      const aichatEventLoggerPayload = this.aichatEventsQueue.shift(); // Remove the first element from the queue.
       if (aichatEventLoggerPayload) {
         const {aichatEvent, aichatContext} = aichatEventLoggerPayload;
         let logAichatEventResponse;
         this.sendingAichatEventInProgress = true;
         try {
-          this.sendingAichatEventInProgress = true;
           logAichatEventResponse = await postLogAichatEvent(
             aichatEvent,
             aichatContext
           );
-          this.sendingAichatEventInProgress = false;
-          // if queue not empty - send event - in a loop.
           console.log('logAichatEventResponse', logAichatEventResponse);
+          this.sendingAichatEventInProgress = false;
         } catch (error) {
           Lab2Registry.getInstance()
             .getMetricsReporter()
