@@ -1,35 +1,24 @@
 import classnames from 'classnames';
-import React, {useCallback, useState} from 'react';
+import React from 'react';
 
-import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
-import _Tab, {TabModel} from '@cdo/apps/componentLibrary/tabs/_Tab';
-import _TabPanel from '@cdo/apps/componentLibrary/tabs/_TabPanel';
+import CloseButton from '@cdo/apps/componentLibrary/closeButton';
+import FontAwesomeV6Icon, {
+  FontAwesomeV6IconProps,
+} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import {BodyTwoText, Heading5} from '@cdo/apps/componentLibrary/typography';
 
-import moduleStyles from './tabs.module.scss';
+import moduleStyles from './popover.module.scss';
 
-export interface TabsProps {
-  /** Array of props for Tabs to render */
-  tabs: TabModel[];
-  /** The function that is called when a Tab is clicked/selected tab is changed */
-  onChange: (value: string) => void;
-  /** The value of the default selected Tab */
-  defaultSelectedTabValue: string;
-  /** The name attribute specifies the name of a Tabs group.
-     The name attribute is used to reference elements in a JavaScript.
-     */
-  name: string;
-  /** Type of Tabs */
-  type?: 'primary' | 'secondary';
-  /** Size of Tabs */
-  size?: ComponentSizeXSToL;
-  /** Custom className for Tabs container */
-  tabsContainerClassName?: string;
-  /** Custom className for Tab Panels container */
-  tabsContainerId?: string;
-  /** Custom className for Tab Panels container */
-  tabPanelsContainerClassName?: string;
-  /** Custom id for Tab Panels container */
-  tabPanelsContainerId?: string;
+export interface PopoverProps {
+  title: string;
+  direction?: 'onTop' | 'onRight' | 'onBottom' | 'onLeft' | 'none';
+  icon?: FontAwesomeV6IconProps;
+  image?: {
+    src: string;
+    alt: string;
+  };
+  content: string;
+  onClose: () => void;
 }
 
 // TODO:
@@ -55,73 +44,26 @@ export interface TabsProps {
  * Design System: Popover Component.
  * Can be used to render a Popover.
  */
-const Tabs: React.FunctionComponent<TabsProps> = ({
-  tabs,
-  name,
-  onChange,
-  defaultSelectedTabValue,
-  tabsContainerId,
-  tabsContainerClassName,
-  tabPanelsContainerId,
-  tabPanelsContainerClassName,
-  type = 'primary',
-  size = 'm',
+const Popover: React.FunctionComponent<PopoverProps> = ({
+  icon,
+  image,
+  title,
+  content,
+  onClose,
 }) => {
-  const [selectedTabValue, setSelectedValue] = useState(
-    defaultSelectedTabValue
-  );
-  const handleChange = useCallback(
-    (value: string) => {
-      setSelectedValue(value);
-      if (onChange) {
-        onChange(value);
-      }
-    },
-    [setSelectedValue, onChange]
-  );
-
-  const nameStripped = name.replace(' ', '-');
-
   return (
-    <>
-      <div
-        className={classnames(
-          moduleStyles.tabs,
-          moduleStyles[`tabs-${size}`],
-          moduleStyles[`tabs-${type}`],
-          tabsContainerClassName
-        )}
-        id={tabsContainerId}
-      >
-        <ul role="tablist">
-          {tabs.map((tab, index) => (
-            <_Tab
-              {...tab}
-              key={tab.value}
-              isSelected={tab.value === selectedTabValue}
-              onClick={handleChange}
-              tabPanelId={`${nameStripped}-panel-${tab.value}`}
-              tabButtonId={`${nameStripped}-tab-${tab.value}`}
-            />
-          ))}
-        </ul>
-      </div>
-      <div
-        className={classnames(tabPanelsContainerClassName)}
-        id={tabPanelsContainerId}
-      >
-        {tabs.map(tab => (
-          <_TabPanel
-            key={tab.value}
-            content={tab.tabContent}
-            isActive={tab.value === selectedTabValue}
-            id={`${nameStripped}-panel-${tab.value}`}
-            labelledBy={`${nameStripped}-tab-${tab.value}`}
-          />
-        ))}
-      </div>
-    </>
+    <div className={classnames(moduleStyles.popover)}>
+      <CloseButton onClick={onClose} aria-label={'Close'} />
+      {image && <img src={image.src} alt={image.alt} />}
+      {icon && <FontAwesomeV6Icon {...icon} />}
+      <Heading5>{title}</Heading5>
+      <BodyTwoText>{content}</BodyTwoText>
+
+      {/*{content}*/}
+      {/*{button1}*/}
+      {/*{button2}*/}
+    </div>
   );
 };
 
-export default Tabs;
+export default Popover;

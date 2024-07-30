@@ -1,2 +1,2 @@
-export type {TabsProps} from './Tabs';
-export {default as default} from './Tabs';
+export type {PopoverProps} from './Popover';
+export {default as default} from './Popover';
