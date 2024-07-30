@@ -4,6 +4,9 @@
 # in the Gemfile so that the PYTHON environment variable is set correctly.
 # Otherwise various pycall related gems like numpy will fail to load.
 
+# This should only be the MAJOR.MINOR, but should otherwise match `python_version` in the Pipfile.
+PYTHON_VERSION = "3.12"
+
 def pipenv_venv_path
   unless system("which pipenv > /dev/null 2>&1")
     raise 'pipenv not found. Please install pipenv and try again, see SETUP.md.'
@@ -16,8 +19,13 @@ end
 
 venv_path = pipenv_venv_path
 
+# Use the python interpreter from the pipenv virtualenv
 ENV['PYTHON'] = "#{venv_path}/bin/python"
-ENV['PYTHONPATH'] = "#{venv_path}/lib/python3.8/site-packages"
+
+# pycall.rb is following symlinks from the virtualenv, and finding the underlying
+# interpreter directory, which means its missing the site-packages directory for
+# our virtualenv. As a result, we specify it manually.
+ENV['PYTHONPATH'] = "#{venv_path}/lib/python#{PYTHON_VERSION}/site-packages"
 
 unless File.exist? ENV['PYTHON']
   raise "Python bin not found at #{ENV['PYTHON']}. Please run `pipenv install` again."

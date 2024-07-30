@@ -36,4 +36,7 @@ pytest-mock = "*"
 coverage = "*"
 
 [requires]
+# Should match PYTHON_VERSION in:
+# - docker/dockerfiles/Dockerfile
+# - lib/cdo/pycall.rb
 python_version = "3.12"
