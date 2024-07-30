@@ -1,5 +1,7 @@
 import {useRef, useEffect} from 'react';
 
+// Hook to call the given callback when a click occurs outside the given element.
+// Useful for closing elements when clicking outside of them.
 export default function useOutsideClick<T extends HTMLElement>(
   callback: () => void
 ) {

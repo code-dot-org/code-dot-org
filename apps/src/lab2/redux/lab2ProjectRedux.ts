@@ -22,7 +22,7 @@ export const setAndSaveProjectSource = (
   projectSource: ProjectSources
 ): ThunkAction<void, RootState, undefined, AnyAction> => {
   return dispatch => {
-    dispatch(setProjectSource(projectSource));
+    dispatch(projectSlice.actions.setProjectSource(projectSource));
     if (Lab2Registry.getInstance().getProjectManager()) {
       Lab2Registry.getInstance().getProjectManager()?.save(projectSource);
     }
