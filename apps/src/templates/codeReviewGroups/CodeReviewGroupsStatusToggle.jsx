@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
-import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
 import {
   setSectionCodeReviewExpiresAt,
   selectedSection,
@@ -51,9 +51,10 @@ function CodeReviewGroupsStatusToggle({
   return (
     <div>
       <div style={styles.toggleAndError}>
-        <ToggleSwitch
-          isToggledOn={isToggledOn}
-          onToggle={toggleEnableCodeReview}
+        <Toggle
+          name="enableCodeReviewToggle"
+          checked={isToggledOn}
+          onChange={toggleEnableCodeReview}
           label={i18n.enableCodeReview()}
         />
         {saveInProgress && <Spinner style={styles.spinner} size="medium" />}
