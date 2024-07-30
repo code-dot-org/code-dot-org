@@ -1,6 +1,8 @@
 import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
 
+import {Button} from '@cdo/apps/componentLibrary/button';
+
 import Popover, {PopoverProps} from './index';
 
 export default {
@@ -35,12 +37,23 @@ DefaultPopover.args = {
   // direction: 'onTop' | 'onRight' | 'onBottom' | 'onLeft' | 'none';
   icon: {iconName: 'smile'},
   image: {
-    src: 'asd',
-    alt: 'das',
+    src: 'https://variety.com/wp-content/uploads/2023/05/spider-2.jpg?w=1000',
+    alt: 'Spider-Man Miles Morales Image',
   },
   content:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   onClose: () => console.log('onClose'),
+  buttons: (
+    <>
+      <Button
+        type="secondary"
+        color="black"
+        text="Cancel"
+        onClick={() => console.log('Canceled Clicked')}
+      />
+      <Button text="Ok" onClick={() => console.log('Ok Clicked')} />
+    </>
+  ),
 };
 //
 // export const DefaultPopoverWithDisabledTab = SingleTemplate.bind({});

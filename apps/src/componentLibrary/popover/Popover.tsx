@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import React from 'react';
+import React, {ReactNode} from 'react';
 
 import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 import FontAwesomeV6Icon, {
@@ -19,6 +19,7 @@ export interface PopoverProps {
   };
   content: string;
   onClose: () => void;
+  buttons?: ReactNode;
 }
 
 // TODO:
@@ -49,19 +50,30 @@ const Popover: React.FunctionComponent<PopoverProps> = ({
   image,
   title,
   content,
+  buttons,
   onClose,
 }) => {
   return (
-    <div className={classnames(moduleStyles.popover)}>
-      <CloseButton onClick={onClose} aria-label={'Close'} />
-      {image && <img src={image.src} alt={image.alt} />}
-      {icon && <FontAwesomeV6Icon {...icon} />}
-      <Heading5>{title}</Heading5>
-      <BodyTwoText>{content}</BodyTwoText>
-
-      {/*{content}*/}
-      {/*{button1}*/}
-      {/*{button2}*/}
+    <div
+      className={classnames(
+        moduleStyles.popover,
+        image && moduleStyles['popover-withImage']
+      )}
+    >
+      <CloseButton
+        className={moduleStyles.closeButton}
+        onClick={onClose}
+        aria-label={'Close'}
+      />
+      <div>
+        {image && <img src={image.src} alt={image.alt} />}
+        {icon && !image && <FontAwesomeV6Icon {...icon} />}
+      </div>
+      <div className={moduleStyles.contentSection}>
+        <Heading5>{title}</Heading5>
+        <BodyTwoText>{content}</BodyTwoText>
+        <div className={moduleStyles.buttonsSection}>{buttons}</div>
+      </div>
     </div>
   );
 };
