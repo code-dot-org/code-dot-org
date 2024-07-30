@@ -43,7 +43,7 @@ function formatModelUpdateText(update: ModelUpdate): string {
 }
 
 /**
- * Renders AI Chat {@link Chatevent}s using common AI design components.
+ * Renders AI Chat {@link Aichatevent}s using common AI design components.
  */
 const AichatEventView: React.FunctionComponent<AichatEventViewProps> = ({
   event,
@@ -78,7 +78,7 @@ const AichatEventView: React.FunctionComponent<AichatEventViewProps> = ({
   }
 
   if (event.description) {
-    return <Alert text={event.description} type="success" size="s" />;
+    return <Alert text={event.description as string} type="success" size="s" />;
   }
 
   return null;
