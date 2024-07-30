@@ -69,7 +69,7 @@ FROM base as pyenv
 #########################################################
 
 # This should match the `python_version` specified in the Pipfile
-ENV PYTHON_VERSION=3.8
+ENV PYTHON_VERSION=3.12
 
 RUN apt-get install -y --no-install-recommends python3-pip
 RUN pip3 install --system pipenv
