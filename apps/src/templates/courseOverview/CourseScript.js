@@ -8,6 +8,7 @@ import {
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import AssignButton from '@cdo/apps/templates/AssignButton';
 import Assigned from '@cdo/apps/templates/Assigned';
@@ -17,8 +18,6 @@ import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherS
 import UnassignSectionButton from '@cdo/apps/templates/UnassignSectionButton';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-
-import Button from '../Button';
 
 import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
 
