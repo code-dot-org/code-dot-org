@@ -2,7 +2,7 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import i18n from '@cdo/locale';
 

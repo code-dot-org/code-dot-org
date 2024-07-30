@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import CodeReviewTimeline from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimeline';
 import ReviewNavigator from '@cdo/apps/templates/instructions/codeReviewV2/ReviewNavigator';
 import {UnconnectedCommitsAndReviewTab as CommitsAndReviewTab} from '@cdo/apps/templates/instructions/CommitsAndReviewTab';

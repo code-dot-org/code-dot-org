@@ -4,7 +4,7 @@ import {
   getDefaultListMetadata,
   moveDefaultSpriteMetadataToProduction,
 } from '@cdo/apps/assetManagement/animationLibraryApi';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import color from '@cdo/apps/util/color';
 
 export default class ReleaseDefaultSprites extends React.Component {

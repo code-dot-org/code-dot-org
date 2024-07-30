@@ -270,8 +270,6 @@ gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 
 gem 'daemons', '1.1.9' # Pinned to old version, see PR 57938
 gem 'httparty'
-gem 'net-scp'
-gem 'net-ssh'
 gem 'oj', '~> 3.10'
 
 gem 'rest-client', '~> 2.0.1'
