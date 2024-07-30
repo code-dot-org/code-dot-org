@@ -2,16 +2,18 @@ import {LevelProperties} from '@cdo/apps/lab2/types';
 
 import {Role} from '../aiComponentLibrary/chatItems/types';
 
+export enum AichatEventDescriptions {
+  CLEAR_CHAT = 'The user clears the chat workspace.',
+  LOAD_LEVEL = 'The user loads the aichat level.',
+}
+
 // TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
 export type AichatInteractionStatusValue = string;
 
 export interface AichatEvent {
   // UTC timestamp in milliseconds
   timestamp: number;
-  // `description` can be used to display information about an event that is not
-  // a ChatMessage in the chat workspace when in teacher view.
-  // for example, "The user cleared the chat workspace."
-  description?: string;
+  description?: AichatEventDescriptions[keyof AichatEventDescriptions];
 }
 
 export interface ChatMessage extends AichatEvent {
@@ -32,10 +34,11 @@ export interface Notification extends AichatEvent {
   notificationType: 'error' | 'success';
 }
 
-// ChatItems are types of messages that are displayed for the user in the chat workspace.
-// ChatEvents that are not ChatItems are NOT displayed to the user. However, they
-// are displayed when a teacher views a student's chat history in the chat workspace.
-// An example of a ChatEvent that is not a ChatItem is 'The user cleared the chat workspace.'
+// ChatItems are AichatEvents that are displayed for the user in the chat workspace.
+// We also log AichatEvents that are not displayed to the user such as 'The user clears
+// the workspace.' and 'The user loads the aichat level', and these are not ChatItems.
+// However, all AichatEvents are displayed when a teacher views the chat history of a student
+// in their section.
 export type ChatItem = ChatMessage | ModelUpdate | Notification;
 
 // Type Predicates: checks if a AichatEvent is a given type, and more helpfully,
