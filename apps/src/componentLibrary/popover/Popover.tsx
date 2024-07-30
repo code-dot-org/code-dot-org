@@ -79,8 +79,10 @@ const Popover: React.FunctionComponent<PopoverProps> = ({
           </div>
         )}
         <div className={moduleStyles.contentSection}>
-          <Heading5>{title}</Heading5>
-          <BodyTwoText>{content}</BodyTwoText>
+          <div className={moduleStyles.textSection}>
+            <Heading5>{title}</Heading5>
+            <BodyTwoText>{content}</BodyTwoText>
+          </div>
           {buttons && (
             <div className={moduleStyles.buttonsSection}>{buttons}</div>
           )}
