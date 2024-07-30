@@ -1163,7 +1163,7 @@ Dashboard::Application.routes.draw do
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
 
     post '/aichat/chat_completion', to: 'aichat#chat_completion'
-    post '/aichat/log_aichat_event', to: 'aichat#log_aichat_event'
+    post '/aichat/log_chat_event', to: 'aichat#log_chat_event'
 
     resources :ai_tutor_interactions, only: [:create, :index] do
       resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]

@@ -1,8 +1,4 @@
 ROLES_FOR_MODEL = %w(assistant user).freeze
-AICHAT_ENDPOINTS = {
-  chat_completion: 'chat_completion',
-  log_aichat_event: 'log_aichat_event'
-}.freeze
 
 class AichatController < ApplicationController
   include AichatSagemakerHelper
@@ -16,7 +12,7 @@ class AichatController < ApplicationController
   # POST /aichat/chat_completion
   def chat_completion
     return render status: :forbidden, json: {} unless AichatSagemakerHelper.can_request_aichat_chat_completion?
-    unless has_required_params?(AICHAT_ENDPOINTS[:chat_completion])
+    unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
     end
 
@@ -30,10 +26,12 @@ class AichatController < ApplicationController
     render(status: :ok, json: response_body)
   end
 
-  # params are newAichatEvent: AichatEvent, aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
-  # POST /aichat/log_aichat_event
-  def log_aichat_event
-    unless has_required_params?(AICHAT_ENDPOINTS[:log_aichat_event])
+  # params are newChatEvent: ChatEvent, aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
+  # POST /aichat/log_chat_event
+  def log_chat_event
+    begin
+      params.require([:newAichatEvent, :aichatContext])
+    rescue ActionController::ParameterMissing
       return render status: :bad_request, json: {}
     end
 
@@ -45,7 +43,7 @@ class AichatController < ApplicationController
       _, project_id = storage_decrypt_channel_id(context[:channelId])
     end
 
-    logged_event = AichatEvent.create(
+    logged_event = AichatEvent.create!(
       user_id: current_user.id,
       level_id: context[:currentLevelId],
       script_id: context[:scriptId],
@@ -54,8 +52,8 @@ class AichatController < ApplicationController
     )
 
     response_body = {
-      aichat_event_id: logged_event.id,
-      aichat_event: logged_event.aichat_event
+      chat_event_id: logged_event.id,
+      chat_event: logged_event.aichat_event
     }
 
     render(status: :ok, json: response_body)
@@ -119,28 +117,16 @@ class AichatController < ApplicationController
     {messages: messages}
   end
 
-  private def has_required_params?(endpoint)
-    case endpoint
-    when AICHAT_ENDPOINTS[:chat_completion]
-      begin
-        params.require([:newMessage, :aichatModelCustomizations, :aichatContext])
-      rescue ActionController::ParameterMissing
-        return false
-      end
-      # It is possible that storedMessages is an empty array.
-      # If so, the above require check will not pass.
-      # Check storedMessages param separately.
-      params[:storedMessages].is_a?(Array)
-    when AICHAT_ENDPOINTS[:log_aichat_event]
-      begin
-        params.require([:newAichatEvent, :aichatContext])
-      rescue ActionController::ParameterMissing
-        return false
-      end
-      true
-    else
-      false
+  private def chat_completion_has_required_params?
+    begin
+      params.require([:newMessage, :aichatModelCustomizations, :aichatContext])
+    rescue ActionController::ParameterMissing
+      return false
     end
+    # It is possible that storedMessages is an empty array.
+    # If so, the above require check will not pass.
+    # Check storedMessages param separately.
+    params[:storedMessages].is_a?(Array)
   end
 
   private def log_chat_session(new_messages)
