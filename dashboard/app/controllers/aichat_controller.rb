@@ -43,13 +43,17 @@ class AichatController < ApplicationController
       _, project_id = storage_decrypt_channel_id(context[:channelId])
     end
 
-    logged_event = AichatEvent.create!(
-      user_id: current_user.id,
-      level_id: context[:currentLevelId],
-      script_id: context[:scriptId],
-      project_id: project_id,
-      aichat_event: event.to_json
-    )
+    begin
+      logged_event = AichatEvent.create!(
+        user_id: current_user.id,
+        level_id: context[:currentLevelId],
+        script_id: context[:scriptId],
+        project_id: project_id,
+        aichat_event: event.to_json
+      )
+    rescue StandardError => exception
+      return render status: :bad_request, json: {error: exception.message}
+    end
 
     response_body = {
       chat_event_id: logged_event.id,
