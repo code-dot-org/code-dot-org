@@ -30,13 +30,13 @@ class AichatController < ApplicationController
   # POST /aichat/log_chat_event
   def log_chat_event
     begin
-      params.require([:newAichatEvent, :aichatContext])
+      params.require([:newChatEvent, :aichatContext])
     rescue ActionController::ParameterMissing
       return render status: :bad_request, json: {}
     end
 
     context = params[:aichatContext]
-    event = params[:newAichatEvent]
+    event = params[:newChatEvent]
 
     project_id = nil
     if context[:channelId]
