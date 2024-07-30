@@ -62,6 +62,23 @@ RUN mkdir -p "$(rbenv root)"/plugins && \
     rbenv rehash && \
     gem install bundler -v 2.3.22
 
+#########################################################
+FROM base as pyenv
+#########################################################
+# compile python to /home/${USER}/.pyenv
+#########################################################
+
+# This should match the `python_version` specified in the Pipfile
+ENV PYTHON_VERSION=3.8
+
+RUN apt-get install -y --no-install-recommends python3-pip
+RUN pip3 install --system pipenv
+
+USER ${USER}
+
+RUN curl https://pyenv.run | bash
+ENV PATH="$PATH:/home/${USER}/.pyenv/bin"
+RUN pyenv install ${PYTHON_VERSION}
 
 #########################################################
 FROM base as primary-layer
@@ -85,7 +102,6 @@ RUN apt-get install -y --no-install-recommends \
     moreutils \
     openssh-client \
     parallel \
-    pipenv \
     python \
     python-dev \
     software-properties-common \
@@ -199,8 +215,9 @@ RUN git lfs install
 # docker exec -it <container_name> bash, which bypasses the entrypoint script.
 RUN echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
-# Finally, merge in the ruby layer
+# Finally, merge in the ruby and python layers
 COPY --from=rbenv --chown=${USER}:${GROUP} /home/${USER}/.rbenv /home/${USER}/.rbenv
+COPY --from=pyenv --chown=${USER}:${GROUP} /home/${USER}/.pyenv /home/${USER}/.pyenv
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
