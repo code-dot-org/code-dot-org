@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">Volg een inleidende cursus in je eigen tempo</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">Maak een game of een app</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">Probeer CS zonder computer ('unplugged'& mobile opties)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Leer CS van het Code.org team en speciale gasten</a></li>
 </ul>
 
 <br>
@@ -282,59 +281,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - 's Werelds meest grillige manier om meer te weten te komen over computers, technologie en programmeren. Activiteiten over de CS pilaren, zoals het vermogen om een probleem te ontbinden, patronen te herkennen, algoritmisch te denken, bugs te fixen en samen te werken. (leeftijdsgroep 4-10)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - Een verzameling van gratis lesmateriaal om informatica te leren door middel van boeiende games en puzzels die spelkaarten, touwtjes, kleurpotloden en veel rondrennen gebruiken. (leeftijdsgroep 5-14)</li>
 </ul>
-
-<h2>Geen computer thuis? Probeer de CS op je smartphone met deze apps van onze partners</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Een charmant mobiel coderingsspel dat leerlingen meeneemt op een spannend avontuur en tegelijkertijd de basisprincipes van coderen leert, zoals algoritmen, patroonherkenning, sequenties, loops en conditionals. <i>(alle leeftijdsgroepen)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodeSpark</h3></a>Award-winnende platform om te leren coderen voor kinderen van 5-9 jaar. Los puzzels op en maak games met De Foos terwijl je leert te coderen. <strong>Opmerking: codeSpark biedt een gratis proefperiode van 3 maanden aan. Bij het inschrijven wordt gevraagd naar het e-mailadres en creditcardgegevens van de ouders </strong> <i>(voor kinderen tot groep 6)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Terug aan de top]</a></p>
-
-<a id="livecoding"></a>
-<h2>Leer van de Code.org team en zijn speciale gasten!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="CodeBytes logo">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes zijn eenvoudig te verwerken interactieve lessen van 20 minuten waarin informatica wordt gecombineerd met onderwerpen uit de praktijk. Train een AI om de symbolentaal te lezen, design een app voor altijd, ontdek het wereld van Minecraft en meer!</div>
-       <br>
-       <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Bekijk de episodes</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Code Break">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break</h3>
-        <div class="smalltext" style="">Houd informatica leuk door een codebreak te nemen! Je kunt een code maken met Ashton Kutcher, meer te weten komen over variabelen met Yara Shahidi en zelfs ontdekken hoe internet werkt met de eigenlijke uitvinder
-van het internet, Vint Cerf!</div>
- 
-
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Maak verbinding</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 
