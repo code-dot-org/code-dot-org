@@ -17,7 +17,7 @@ import {
   WorkspaceSvg,
   Xml,
 } from 'blockly';
-import GoogleBlockly, {Connection} from 'blockly/core';
+import GoogleBlockly, {Connection, Names} from 'blockly/core';
 import {Abstract} from 'blockly/core/events/events_abstract';
 import {Field, FieldProto} from 'blockly/core/field';
 import {IProcedureBlock, IProcedureModel} from 'blockly/core/procedures';
@@ -291,6 +291,8 @@ export interface ExtendedGenerator extends CodeGeneratorType {
   ) => string;
   blocksToCode: (name: string, blocksToGenerate: Block[]) => string;
   prefixLines: (text: string, prefix: string) => string;
+  nameDB_: Names | undefined;
+  variableDB_: Names | undefined;
 }
 
 type XmlType = typeof Xml;
