@@ -2,27 +2,114 @@
 @import 'font';
 @import "@cdo/apps/componentLibrary/common/styles/mixins";
 
+/*
+Popover classNames structure:
+  .popover {
+    .imageSection {
+      img
+    }
+    .informationalSection {
+      .iconSection {
+        i
+      }
+      .contentSection {
+        h5
+        p
+        .buttonsSection {
+        button[]
+        }
+      }
+    }
+  }
+*/
+
+// Popover styles
 .popover {
   position: absolute;
-  display: flex;
-  padding: 24px 32px 24px 24px;
-  align-items: flex-start;
-  gap: 20px;
-  align-self: stretch;
-  border-radius: 8px;
   width: 450px;
   min-width: 450px;
   max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 8px;
   background-color: $light_white;
-
   box-shadow: 0 0 16px 0 rgba(0 0 0 / 0.19);
 
-  &.popover-withImage {
+  .informationalSection {
     display: flex;
-    min-width: 450px;
-    flex-direction: column;
+    padding: 24px 32px 24px 24px;
     align-items: flex-start;
     align-self: stretch;
+
+    &:has(.iconSection) {
+      gap: 20px;
+    }
+
+    .iconSection {
+      color: $light_secondary_500;
+      text-align: center;
+      font-size: 32px;
+      line-height: 125%; /* 40px */
+      width: 42px;
+    }
+
+    .contentSection {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 16px;
+      flex: 1 0 0;
+
+      h5, p, div {
+        margin: 0;
+      }
+
+      h5 {
+        align-self: stretch;
+      }
+
+      .buttonsSection {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 8px;
+      }
+    }
+  }
+
+
+  // Popover with image styles
+  &.popover-withImage {
+    display: flex;
+    max-width: 800px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    .imageSection {
+      display: flex;
+      padding: 40px 24px 0 24px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      align-self: stretch;
+    }
+
+    .informationalSection {
+      display: flex;
+      padding: 24px;
+
+
+      .contentSection {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        align-self: stretch;
+        gap: 16px;
+      }
+    }
   }
 }
 
@@ -32,29 +119,13 @@
   top: 6px;
 }
 
-.contentSection {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 16px;
-  flex: 1 0 0;
-
-  h5, p, div {
-    margin: 0;
-  }
-
-  h5 {
-    align-self: stretch;
-  }
-
-  .buttonsSection {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-}
+//.contentSection {
+//  display: flex;
+//  flex-direction: column;
+//  align-items: flex-end;
+//  gap: 16px;
+//  flex: 1 0 0;
+//}
 
 
 // Popover placement

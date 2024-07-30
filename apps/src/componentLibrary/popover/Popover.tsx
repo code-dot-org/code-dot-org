@@ -63,16 +63,28 @@ const Popover: React.FunctionComponent<PopoverProps> = ({
       <CloseButton
         className={moduleStyles.closeButton}
         onClick={onClose}
-        aria-label={'Close'}
+        size="l"
+        aria-label="Close"
       />
-      <div>
-        {image && <img src={image.src} alt={image.alt} />}
-        {icon && !image && <FontAwesomeV6Icon {...icon} />}
-      </div>
-      <div className={moduleStyles.contentSection}>
-        <Heading5>{title}</Heading5>
-        <BodyTwoText>{content}</BodyTwoText>
-        <div className={moduleStyles.buttonsSection}>{buttons}</div>
+      {image && (
+        <div className={moduleStyles.imageSection}>
+          <img src={image.src} alt={image.alt} />
+        </div>
+      )}
+
+      <div className={moduleStyles.informationalSection}>
+        {icon && (
+          <div className={moduleStyles.iconSection}>
+            <FontAwesomeV6Icon {...icon} />
+          </div>
+        )}
+        <div className={moduleStyles.contentSection}>
+          <Heading5>{title}</Heading5>
+          <BodyTwoText>{content}</BodyTwoText>
+          {buttons && (
+            <div className={moduleStyles.buttonsSection}>{buttons}</div>
+          )}
+        </div>
       </div>
     </div>
   );

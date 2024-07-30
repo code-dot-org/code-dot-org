@@ -35,11 +35,51 @@ export const DefaultPopover = SingleTemplate.bind({});
 DefaultPopover.args = {
   title: 'Title',
   // direction: 'onTop' | 'onRight' | 'onBottom' | 'onLeft' | 'none';
-  icon: {iconName: 'smile'},
+  content:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  onClose: () => console.log('onClose'),
+  buttons: (
+    <>
+      <Button
+        type="secondary"
+        color="black"
+        text="Cancel"
+        onClick={() => console.log('Canceled Clicked')}
+      />
+      <Button text="Ok" onClick={() => console.log('Ok Clicked')} />
+    </>
+  ),
+};
+
+export const WithImagePopover = SingleTemplate.bind({});
+WithImagePopover.args = {
+  title: 'Title',
+  // direction: 'onTop' | 'onRight' | 'onBottom' | 'onLeft' | 'none';
   image: {
     src: 'https://variety.com/wp-content/uploads/2023/05/spider-2.jpg?w=1000',
     alt: 'Spider-Man Miles Morales Image',
   },
+  content:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  onClose: () => console.log('onClose'),
+  buttons: (
+    <>
+      <Button
+        type="secondary"
+        color="black"
+        text="Cancel"
+        onClick={() => console.log('Canceled Clicked')}
+      />
+      <Button text="Ok" onClick={() => console.log('Ok Clicked')} />
+    </>
+  ),
+};
+
+export const WithIconPopover = SingleTemplate.bind({});
+WithIconPopover.args = {
+  title: 'Title',
+  // direction: 'onTop' | 'onRight' | 'onBottom' | 'onLeft' | 'none';
+  icon: {iconName: 'smile'},
   content:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   onClose: () => console.log('onClose'),
