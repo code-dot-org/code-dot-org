@@ -32,7 +32,7 @@ end
 When /^I set up the (blockly|droplet|minecraft) free play level for "([^"]*)"/i do |level_type, level_name|
   individual_steps <<-STEPS
     And I am on "#{free_play_level_urls[level_type][level_name]}"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I bypass the age dialog
     And I close the instructions overlay if it exists
   STEPS

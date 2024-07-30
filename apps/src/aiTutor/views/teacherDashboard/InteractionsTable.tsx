@@ -10,7 +10,7 @@ import {
 } from '@cdo/apps/aiTutor/types';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import CheckboxDropdown, {
-  CheckboxOption,
+  CheckboxDropdownOption,
 } from '@cdo/apps/componentLibrary/dropdown/checkboxDropdown';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
 import styleConstants from '@cdo/apps/styleConstants';
@@ -90,7 +90,7 @@ interface InteractionsTableProps {
 const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
   const [chatMessages, setChatMessages] = useState<StudentChatRow[]>([]);
   const [studentFilterOptions, setStudentFilterOptions] = useState<
-    CheckboxOption[]
+    CheckboxDropdownOption[]
   >([]);
   const [selectedStatuses, setSelectedStatuses] = useState<string[]>([]);
   const [selectedUserIds, setSelectedUserIds] = useState<string[]>([]);
@@ -113,7 +113,7 @@ const InteractionsTable: React.FC<InteractionsTableProps> = ({sectionId}) => {
   }, [sectionId]);
 
   const generateStudentFilterOptions = (messages: StudentChatRow[]) => {
-    return messages.reduce<CheckboxOption[]>((acc, message) => {
+    return messages.reduce<CheckboxDropdownOption[]>((acc, message) => {
       const userId = `${message.userId}`;
       if (!acc.some(student => student.value === userId)) {
         acc.push({label: message.studentName, value: userId});
