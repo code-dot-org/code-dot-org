@@ -5,26 +5,32 @@
 require 'ruby-progressbar'
 require_relative '../../../dashboard/config/environment'
 
-max_id = User.maximum(:id)
-batch_size = 100_000
+# @see https://github.com/code-dot-org/code-dot-org/pull/52244
+CAP_RELEASE_DATE = DateTime.parse('2023-06-09')
+
+users = User.where(current_sign_in_at: CAP_RELEASE_DATE..)
 total_updated = 0
+failed_user_ids = []
 
 progress_bar_title = proc {|num_updates = 0| "Processed[%c/%C]: |%W| Updated: #{total_updated += num_updates} %a"}
-progress_bar = ProgressBar.create(total: max_id, format: progress_bar_title.call)
+progress_bar = ProgressBar.create(total: users.count, format: progress_bar_title.call)
 
-(1..max_id).step(batch_size) do |start_id|
-  finish_id = [start_id + batch_size.pred, max_id].min
-
-  User.select(:id).where(cap_state: nil).where("properties->>'$.child_account_compliance_state' IS NOT NULL").find_in_batches(start: start_id, finish: finish_id) do |users_batch|
-    User.where(id: users_batch).update_all <<~SQL.strip
+users.in_batches(of: 100_000) do |users_batch|
+  users_batch.select(:id).where(cap_state: nil).where("properties->>'$.child_account_compliance_state' IS NOT NULL").find_in_batches do |cap_users_batch|
+    User.where(id: cap_users_batch).update_all <<~SQL.strip
       cap_state = IF(properties->>'$.child_account_compliance_state' = 's', 'l', properties->>'$.child_account_compliance_state'),
       cap_state_date = CAST(properties->>'$.child_account_compliance_state_last_updated' AS DATETIME)
     SQL
-
-    progress_bar.format progress_bar_title.call(users_batch.size)
+  rescue StandardError => exception
+    failed_user_ids += cap_users_batch.map(&:id)
+    progress_bar.log "Error updating users: #{exception.inspect}".red
+  ensure
+    progress_bar.format progress_bar_title.call(cap_users_batch.size)
   end
 
-  progress_bar.progress = finish_id
+  progress_bar.progress += users_batch.count
 end
 
 progress_bar.finish
+
+puts "Failed to update #{failed_user_ids.size} users: #{failed_user_ids.inspect}".yellow unless failed_user_ids.empty?
