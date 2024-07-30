@@ -100,7 +100,7 @@ var copyrightStrings;
 /**
  * Store experiment parameters.
  */
-const isBigPlayspaceExperiment = experiments.isEnabledAllowingQueryString(
+const isBigPlayspaceEnabled = experiments.isEnabledAllowingQueryString(
   experiments.BIG_PLAYSPACE
 );
 const bigPlaySpacePadding = queryParams('bigPlayspacePadding') || 160;
@@ -109,7 +109,7 @@ const bigPlaySpacePadding = queryParams('bigPlayspacePadding') || 160;
  * Get the maximum resizable width of the playspace.
  */
 const getMaxResizableVisualizationWidth = () => {
-  return isBigPlayspaceExperiment
+  return isBigPlayspaceEnabled
     ? Math.min(window.innerHeight - bigPlaySpacePadding, window.innerWidth / 2)
     : 400;
 };
@@ -1416,7 +1416,7 @@ StudioApp.prototype.onResize = function () {
     onResizeSmallFooter();
   }
 
-  if (isBigPlayspaceExperiment) {
+  if (isBigPlayspaceEnabled) {
     // Let's avoid an infinite recursion by making sure this is a genuine resize.
     if (
       window.innerWidth !== this.lastWindowInnerWidth ||
@@ -1575,7 +1575,7 @@ StudioApp.prototype.resizeVisualization = function (width, skipFire = false) {
   visualizationColumn.style.maxWidth = newVizWidth + vizSideBorderWidth + 'px';
   visualization.style.maxWidth = newVizWidthString;
   visualization.style.maxHeight = newVizHeightString;
-  if (isBigPlayspaceExperiment) {
+  if (isBigPlayspaceEnabled) {
     // Override the max visualization column width.
     visualizationColumn.style.width = visualizationColumn.style.maxWidth;
     // Override the visualization height.
