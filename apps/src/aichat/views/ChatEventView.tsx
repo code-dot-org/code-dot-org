@@ -9,6 +9,7 @@ import {removeUpdateMessage} from '../redux/aichatRedux';
 import {timestampToLocalTime} from '../redux/utils';
 import {
   ChatEvent,
+  ChatEventDescriptions,
   ModelUpdate,
   isChatMessage,
   isNotification,
@@ -77,8 +78,14 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
     );
   }
 
-  if (event.description) {
-    return <Alert text={event.description as string} type="success" size="s" />;
+  if (event.descriptionKey) {
+    return (
+      <Alert
+        text={ChatEventDescriptions[event.descriptionKey] as string}
+        type="success"
+        size="s"
+      />
+    );
   }
 
   return null;

@@ -14,7 +14,7 @@ export interface ChatEvent {
   // UTC timestamp in milliseconds
   timestamp: number;
   hideForParticipants?: true;
-  description?: keyof typeof ChatEventDescriptions;
+  descriptionKey?: keyof typeof ChatEventDescriptions;
 }
 
 export interface ChatMessage extends ChatEvent {
@@ -35,7 +35,7 @@ export interface Notification extends ChatEvent {
   notificationType: 'error' | 'success';
 }
 
-// Type Predicates: checks if a AichatEvent is a given type, and more helpfully,
+// Type Predicates: checks if a ChatEvent is a given type, and more helpfully,
 // automatically narrows to the specific type.
 export function isChatMessage(event: ChatEvent): event is ChatMessage {
   return (event as ChatMessage).chatMessageText !== undefined;
