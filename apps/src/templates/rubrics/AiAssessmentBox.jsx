@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 
 import {
   EmText,
@@ -136,6 +136,8 @@ export default function AiAssessmentBox({
     );
   };
 
+  const [aiFeedbackId, setAiFeedbackId] = useState(null);
+
   const {aiFeedback, setAiFeedback} = useContext(AiAssessmentFeedbackContext);
 
   return (
@@ -151,11 +153,15 @@ export default function AiAssessmentBox({
           <AiAssessmentFeedbackRadio
             onChosen={val => setAiFeedback(val)}
             aiEvalId={aiEvalInfo.id}
+            setAiFeedbackId={setAiFeedbackId}
           />
         </div>
       )}
       {isAiAssessed && aiFeedback === thumbsdownval && (
-        <AiAssessmentFeedback aiEvalInfo={aiEvalInfo} />
+        <AiAssessmentFeedback
+          aiEvalInfo={aiEvalInfo}
+          aiFeedbackId={aiFeedbackId}
+        />
       )}
       {isAiAssessed && aiEvidence && aiEvidence.length > 0 && (
         <div id="tour-ai-evidence">

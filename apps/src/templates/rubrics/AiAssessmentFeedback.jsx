@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, {useContext, useState} from 'react';
 
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
@@ -16,14 +17,17 @@ import {aiEvaluationShape} from './rubricShapes';
 
 import style from './rubrics.module.scss';
 
-export function submitAiFeedback(values) {
+async function updateAiFeedback(values, aiFeedbackId) {
   const baseUrl = '/learning_goal_ai_evaluation_feedbacks';
-  HttpClient.post(baseUrl, JSON.stringify(values), true, {
-    'Content-Type': 'application/json',
-  });
+  await HttpClient.put(
+    `${baseUrl}/${aiFeedbackId}`,
+    JSON.stringify(values),
+    true,
+    {'Content-Type': 'application/json'}
+  );
 }
 
-export default function AiAssessmentFeedback({aiEvalInfo}) {
+export default function AiAssessmentFeedback({aiEvalInfo, aiFeedbackId}) {
   const thumbsdownval = 0;
 
   const {aiFeedback, setAiFeedback} = useContext(AiAssessmentFeedbackContext);
@@ -35,7 +39,7 @@ export default function AiAssessmentFeedback({aiEvalInfo}) {
   const [aiOtherContent, setAIOtherContent] = useState('');
   const [aiFeedbackReceived, setAIFeedbackReceived] = useState(false);
 
-  const submitAiFeedbackCallback = () => {
+  const submitAiFeedbackCallback = async () => {
     const bodyData = {
       learningGoalAiEvaluationId: aiEvalInfo.id,
       aiFeedbackApproval: aiFeedback,
@@ -48,7 +52,7 @@ export default function AiAssessmentFeedback({aiEvalInfo}) {
       otherContent: aiOtherContent,
     };
 
-    submitAiFeedback(bodyData);
+    await updateAiFeedback(bodyData, aiFeedbackId);
 
     setAISubmitted(true);
     setAIFeedbackReceived(true);
@@ -75,7 +79,7 @@ export default function AiAssessmentFeedback({aiEvalInfo}) {
           {i18n.aiFeedbackReceived()}
         </EmText>
       )}
-      {!aiSubmitted && aiFeedback === thumbsdownval && (
+      {!aiSubmitted && aiFeedback === thumbsdownval && aiFeedbackId && (
         <div className={style.aiAssessmentFeedback}>
           <BodyFourText>
             <StrongText>{i18n.aiFeedbackNegativeWhy()}</StrongText>
@@ -152,4 +156,5 @@ export default function AiAssessmentFeedback({aiEvalInfo}) {
 
 AiAssessmentFeedback.propTypes = {
   aiEvalInfo: aiEvaluationShape,
+  aiFeedbackId: PropTypes.number,
 };

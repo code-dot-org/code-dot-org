@@ -3,14 +3,26 @@ import PropTypes from 'prop-types';
 import React, {useContext} from 'react';
 
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
-import {submitAiFeedback} from './AiAssessmentFeedback';
 import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
 
 import style from './rubrics.module.scss';
 
-export default function AiAssessmentFeedbackRadio({aiEvalId, onChosen}) {
+async function createAiFeedback(values, setAiFeedbackId) {
+  const baseUrl = '/learning_goal_ai_evaluation_feedbacks';
+  const response = await HttpClient.post(
+    baseUrl,
+    JSON.stringify(values),
+    true,
+    {'Content-Type': 'application/json'}
+  );
+  const data = await response.json();
+  setAiFeedbackId(data.id);
+}
+
+export default function AiAssessmentFeedbackRadio({aiEvalId, setAiFeedbackId}) {
   const radioGroupName = `ai-assessment-feedback-${aiEvalId}`;
   const thumbsupval = 1;
   const thumbsdownval = 0;
@@ -19,13 +31,11 @@ export default function AiAssessmentFeedbackRadio({aiEvalId, onChosen}) {
 
   const updateFeedback = value => {
     setAiFeedback(value);
-
-    if (value === thumbsupval) {
-      submitAiFeedback({
-        learningGoalAiEvaluationId: aiEvalId,
-        aiFeedbackApproval: thumbsupval,
-      });
-    }
+    const data = {
+      learningGoalAiEvaluationId: aiEvalId,
+      aiFeedbackApproval: thumbsupval,
+    };
+    createAiFeedback(data, setAiFeedbackId);
   };
 
   return (
@@ -93,5 +103,5 @@ export default function AiAssessmentFeedbackRadio({aiEvalId, onChosen}) {
 
 AiAssessmentFeedbackRadio.propTypes = {
   aiEvalId: PropTypes.number.isRequired,
-  onChosen: PropTypes.func.isRequired,
+  setAiFeedbackId: PropTypes.func.isRequired,
 };
