@@ -11126,7 +11126,7 @@ en:
           title: Coding a Geometric Star Quilt
           description_audience: ''
           description_short: ''
-          description: "##Suggested Pre-Work for this Module\n \n**Math:** Students will be working with shapes and angles in this module. To build familiarity, we recommend playing these active songs [Types of Angles song](https://www.youtube.com/watch?v=kGAGkysDunw&t=1s) (2:47 minutes) and [Angles & Lines](https://www.youtube.com/watch?v=an1tG3upvow) (3:06 minutes). \n\nThese are a few children's books to build some background knowledge and deepen connections to the real world:  \n- [Shota and the Star Quilt](https://www.amazon.com/Shota-Star-Quilt-Folk-Tales/dp/1840890231) Picture book about the tradition of quilting and how traditions can change over time\n- [Rainbow Weavers](https://www.amazon.com/Rainbow-Weaver-Tejedora-del-Arcoiris/dp/0892393742/ref=asc_df_0892393742/?tag=hyprod-20&linkCode=df0&hvadid=312089887152&hvpos=&hvnetw=g&hvrand=526653230527463008&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9033356&hvtargid=pla-522520885864&psc=1) This picture book is about weaving, not quilting, but it could deepen students' understanding of how indigenous traditions evolve.\n- [A Trapezoid is Not a Dinosaur](https://www.mathsthroughstories.org/a-trapezoid-is-not-a-dinosaur.html) by Suzanne Morris \n- [The Greedy Triangle](https://youngmathematicians.edc.org/picture_book/%EF%BB%BF%EF%BB%BFthe-greedy-triangle/) by Marilyn Burns\n- Any of these [Geometry Read Alouds](https://www.k-5mathteachingresources.com/geometry-read-aloud.html)\n\n**Computer Science:** In this module, students will use Code.org's Artist tool. If students are not yet familiar with it, we recommend trying [Intro to Artist lesson](https://studio.code.org/s/artist/lessons/1) (50 minutes) for a basic introduction to the tool. \n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n\n"
+          description: "##Suggested Pre-Work for this Module\n \n**Math:** Students will be working with shapes and angles in this module. To build familiarity, we recommend playing these active songs [Types of Angles song](https://www.youtube.com/watch?v=kGAGkysDunw&t=1s) (2:47 minutes) and [Angles & Lines](https://www.youtube.com/watch?v=an1tG3upvow) (3:06 minutes). \n\nFor a quick introduction to shapes and angles with the Artist tool, watch this [Turns and Angles video](https://www.youtube.com/watch?v=sPKXZBL_Yvs) (2 mins).\n\nThese are a few children's books to build some background knowledge and deepen connections to the real world:  \n- [Shota and the Star Quilt](https://www.amazon.com/Shota-Star-Quilt-Folk-Tales/dp/1840890231) Picture book about the tradition of quilting and how traditions can change over time\n- [Rainbow Weavers](https://www.amazon.com/Rainbow-Weaver-Tejedora-del-Arcoiris/dp/0892393742/ref=asc_df_0892393742/?tag=hyprod-20&linkCode=df0&hvadid=312089887152&hvpos=&hvnetw=g&hvrand=526653230527463008&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9033356&hvtargid=pla-522520885864&psc=1) This picture book is about weaving, not quilting, but it could deepen students' understanding of how indigenous traditions evolve.\n- [A Trapezoid is Not a Dinosaur](https://www.mathsthroughstories.org/a-trapezoid-is-not-a-dinosaur.html) by Suzanne Morris \n- [The Greedy Triangle](https://youngmathematicians.edc.org/picture_book/%EF%BB%BF%EF%BB%BFthe-greedy-triangle/) by Marilyn Burns\n- Any of these [Geometry Read Alouds](https://www.k-5mathteachingresources.com/geometry-read-aloud.html)\n\n**Computer Science:** In this module, students will use Code.org's Artist tool. If students are not yet familiar with it, we recommend trying [Intro to Artist lesson](https://studio.code.org/s/artist/lessons/1) (50 minutes) for a basic introduction to the tool. \n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n\n"
           student_description: ''
         focus-on-creativity4-2023:
           lessons: {}
@@ -18469,4 +18469,40 @@ en:
             <br>
             <br>
             <br>
+          student_description: ''
+        csa1-alt-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: csa1-alt-2025
+          title: Using Objects and Methods
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa2-alt-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: csa2-alt-2025
+          title: Selection and Iteration
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa3-alt-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: csa3-alt-2025
+          title: Class Creation
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa4-alt-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: csa4-alt-2025
+          title: Data Collections
+          description_audience: ''
+          description_short: ''
+          description: ''
           student_description: ''
