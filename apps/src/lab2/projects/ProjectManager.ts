@@ -302,6 +302,8 @@ export default class ProjectManager {
     // If neither source nor channel has actually changed, no need to save again.
     if (!sourceChanged && !channelChanged) {
       this.saveInProgress = false;
+      // We can clear sourcesToSave since they have not changed.
+      this.sourcesToSave = undefined;
       this.executeSaveNoopListeners(this.lastChannel);
       return;
     }
@@ -358,6 +360,7 @@ export default class ProjectManager {
 
     this.saveInProgress = false;
     this.channelToSave = undefined;
+    this.sourcesToSave = undefined;
     this.executeSaveSuccessListeners(this.lastChannel);
     this.initialSaveComplete = true;
   }
