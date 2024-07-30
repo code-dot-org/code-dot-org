@@ -3,8 +3,8 @@ import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import ChangeEmailModal from '@cdo/apps/lib/ui/accounts/ChangeEmailModal';
-import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 
 import {expect} from '../../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports

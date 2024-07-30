@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../BaseDialog';
-import Button from '../Button';
 
 export default class NoSectionCodeDialog extends React.Component {
   static propTypes = {

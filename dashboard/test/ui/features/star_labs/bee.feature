@@ -2,7 +2,7 @@ Feature: Complete a bee level
 
 Scenario: Complete Bee Conditions 4-5 Level 3
   Given I am on "http://studio.code.org/s/course3/lessons/7/levels/3?noautoplay=true&blocklyVersion=google"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   When I dismiss the login reminder
   # repeat to when run
   And I drag block "repeat" to block "whenRun"

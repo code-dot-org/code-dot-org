@@ -1052,8 +1052,6 @@ DEPENDENCIES
   nakayoshi_fork
   naturally
   net-http-persistent
-  net-scp
-  net-ssh
   newrelic_rpm (~> 6.14.0)
   nokogiri (>= 1.10.0)
   octokit

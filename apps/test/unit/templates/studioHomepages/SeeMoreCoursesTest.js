@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import ContentContainer from '@cdo/apps/templates/ContentContainer';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
 import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
@@ -14,11 +14,7 @@ describe('SeeMoreCourses', () => {
     const wrapper = shallow(<SeeMoreCourses courses={courses} />);
     expect(
       wrapper.containsMatchingElement(
-        <Button
-          color={Button.ButtonColor.neutralDark}
-          icon="caret-down"
-          text="View more"
-        />
+        <Button icon="caret-down" text="View more" />
       )
     ).toBeTruthy();
   });
