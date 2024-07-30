@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ChatMessage from '@cdo/apps/aiComponentLibrary/chatItems/ChatMessage';
+import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
