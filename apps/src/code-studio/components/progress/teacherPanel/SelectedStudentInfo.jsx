@@ -4,7 +4,7 @@ import React from 'react';
 
 import SelectedStudentPairing from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentPairing';
 import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
