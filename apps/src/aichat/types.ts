@@ -13,7 +13,7 @@ export type AichatInteractionStatusValue = string;
 export interface AichatEvent {
   // UTC timestamp in milliseconds
   timestamp: number;
-  description?: AichatEventDescriptions[keyof AichatEventDescriptions];
+  description?: `${AichatEventDescriptions}`;
 }
 
 export interface ChatMessage extends AichatEvent {

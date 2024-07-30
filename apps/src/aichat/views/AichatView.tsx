@@ -38,6 +38,7 @@ import {
 import {getNewMessageId} from '../redux/utils';
 import {
   AichatEvent,
+  AichatEventDescriptions,
   AichatLevelProperties,
   Notification,
   ViewMode,
@@ -188,7 +189,7 @@ const AichatView: React.FunctionComponent = () => {
     dispatch(
       logAichatEvent({
         timestamp: Date.now(),
-        description: 'User clears chat history in the workspace.',
+        description: AichatEventDescriptions.CLEAR_CHAT,
       } as AichatEvent)
     );
     analyticsReporter.sendEvent(
