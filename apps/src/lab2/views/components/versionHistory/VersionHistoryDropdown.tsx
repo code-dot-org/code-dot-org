@@ -33,7 +33,8 @@ const VersionHistoryDropdown: React.FunctionComponent<
             updatedSourceCallback(sources);
           }
         } else {
-          // handle no source
+          // TODO: handle no source
+          console.error('no source found!');
         }
         closeDropdown();
       });

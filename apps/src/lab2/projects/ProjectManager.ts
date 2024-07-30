@@ -79,7 +79,7 @@ export default class ProjectManager {
     if (this.destroyed) {
       this.throwErrorIfDestroyed('load');
     }
-    const sources = await this.loadHelper(/* storeUpdatedVersion */ true);
+    const sources = await this.loadHelper();
 
     let channel: Channel;
     try {
@@ -103,12 +103,9 @@ export default class ProjectManager {
     } catch (e) {
       throw new Error('Error restoring sources', {cause: e});
     }
-    // We don't store the updated version when restoring, as we are loading a specific version
-    // and restore will create a new version.
-    const sources = await this.loadHelper(
-      /* storeUpdatedVersion */ false,
-      versionId
-    );
+    // Now that we've restored to the previous version, loading sources
+    // will load the newly-restored version.
+    const sources = await this.loadHelper();
     return sources;
   }
 
@@ -492,15 +489,14 @@ export default class ProjectManager {
     }
   }
 
-  private async loadHelper(storeUpdatedVersion: boolean, versionId?: string) {
+  private async loadHelper(versionId?: string, isPreview?: boolean) {
     let sources: ProjectSources | undefined;
     try {
-      sources = await this.sourcesStore.load(
-        this.channelId,
-        storeUpdatedVersion,
-        versionId
-      );
-      this.lastSource = JSON.stringify(sources);
+      sources = await this.sourcesStore.load(this.channelId, versionId);
+      // If we are previewing a project, we don't want to save the source.
+      if (!isPreview) {
+        this.lastSource = JSON.stringify(sources);
+      }
     } catch (error) {
       // If there was a validation error or sourceResponse is a 404 (not found),
       // we still want to load the channel. In the case of a validation error,
