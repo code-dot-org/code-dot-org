@@ -69,18 +69,17 @@ describe('ProjectManager', () => {
     expect(channel).to.deep.equal(FAKE_CHANNEL);
   });
 
-  // it('returns versioned sources and channel on versioned load', async () => {
-  //   stubSuccessfulSourceLoad(sourcesStore);
-  //   const projectManager = new ProjectManager(
-  //     sourcesStore,
-  //     channelsStore,
-  //     FAKE_CHANNEL_ID,
-  //     false
-  //   );
-  //   const {sources, channel} = await projectManager.load(FAKE_VERSION_ID);
-  //   expect(sources).to.deep.equal(FAKE_VERSIONED_SOURCE);
-  //   expect(channel).to.deep.equal(FAKE_CHANNEL);
-  // });
+  it('returns versioned sources and channel on restore', async () => {
+    stubSuccessfulSourceLoad(sourcesStore);
+    const projectManager = new ProjectManager(
+      sourcesStore,
+      channelsStore,
+      FAKE_CHANNEL_ID,
+      false
+    );
+    const sources = await projectManager.restore(FAKE_VERSION_ID);
+    expect(sources).to.deep.equal(FAKE_VERSIONED_SOURCE);
+  });
 
   it('triggers save immediately on first save', async () => {
     stubSuccessfulSourceLoad(sourcesStore);
@@ -284,9 +283,9 @@ function stubSuccessfulSourceLoad(
   sourcesStore: StubbedInstance<RemoteSourcesStore>
 ) {
   sourcesStore.load
-    .withArgs(FAKE_CHANNEL_ID, undefined)
+    .withArgs(FAKE_CHANNEL_ID)
     .returns(Promise.resolve(FAKE_SOURCE));
   sourcesStore.load
-    .withArgs(FAKE_CHANNEL_ID, FAKE_VERSION_ID)
+    .withArgs(FAKE_CHANNEL_ID, false, FAKE_VERSION_ID)
     .returns(Promise.resolve(FAKE_VERSIONED_SOURCE));
 }

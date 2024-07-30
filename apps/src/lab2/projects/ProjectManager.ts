@@ -79,7 +79,7 @@ export default class ProjectManager {
     if (this.destroyed) {
       this.throwErrorIfDestroyed('load');
     }
-    const sources = await this.loadHelper();
+    const sources = await this.loadHelper(/* storeUpdatedVersion */ true);
 
     let channel: Channel;
     try {
@@ -96,12 +96,19 @@ export default class ProjectManager {
     if (this.destroyed) {
       this.throwErrorIfDestroyed('restore');
     }
-    const sources = await this.loadHelper(versionId);
+    // Flush the enqueued save, if it exists, before restoring.
+    await this.flushSave();
     try {
       await this.sourcesStore.restore(this.channelId, versionId);
     } catch (e) {
-      console.log({e});
+      throw new Error('Error restoring sources', {cause: e});
     }
+    // We don't store the updated version when restoring, as we are loading a specific version
+    // and restore will create a new version.
+    const sources = await this.loadHelper(
+      /* storeUpdatedVersion */ false,
+      versionId
+    );
     return sources;
   }
 
@@ -485,10 +492,14 @@ export default class ProjectManager {
     }
   }
 
-  private async loadHelper(versionId?: string) {
+  private async loadHelper(storeUpdatedVersion: boolean, versionId?: string) {
     let sources: ProjectSources | undefined;
     try {
-      sources = await this.sourcesStore.load(this.channelId, versionId);
+      sources = await this.sourcesStore.load(
+        this.channelId,
+        storeUpdatedVersion,
+        versionId
+      );
       this.lastSource = JSON.stringify(sources);
     } catch (error) {
       // If there was a validation error or sourceResponse is a 404 (not found),

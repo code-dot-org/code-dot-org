@@ -12,7 +12,11 @@ import * as sourcesApi from './sourcesApi';
 const {getTabId} = require('@cdo/apps/utils');
 
 export interface SourcesStore {
-  load: (key: string, versionId?: string) => Promise<ProjectSources>;
+  load: (
+    key: string,
+    storeUpdatedVersion?: boolean,
+    versionId?: string
+  ) => Promise<ProjectSources>;
 
   save: (
     key: string,
@@ -51,11 +55,14 @@ export class RemoteSourcesStore implements SourcesStore {
   private firstSaveTime: string | null = null;
   private lastSaveTime: number | null = null;
 
-  async load(channelId: string, versionId?: string) {
+  async load(
+    channelId: string,
+    storeUpdatedVersion = true,
+    versionId?: string
+  ) {
     const {response, value} = await sourcesApi.get(channelId, versionId);
 
-    if (response.ok && !versionId) {
-      // Don't update the version id if we're loading a specific version.
+    if (response.ok && storeUpdatedVersion) {
       this.currentVersionId = response.headers.get('S3-Version-Id');
     }
 
