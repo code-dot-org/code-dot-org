@@ -46,8 +46,6 @@ class AiRubricMetrics
   # Log thumbs up / down feedback for AI evaluation
   # @param [LearningGoalAiEvaluationFeedback] feedback
   def self.log_feedback(feedback)
-    lesson = feedback.learning_goal_ai_evaluation&.learning_goal&.rubric&.lesson
-
     Cdo::Metrics.push(
       AI_RUBRIC_METRICS_NAMESPACE,
       [
@@ -56,8 +54,6 @@ class AiRubricMetrics
           value: 1,
           dimensions: [
             {name: 'Environment', value: CDO.rack_env},
-            {name: 'Unit', value: lesson&.script&.name || ''},
-            {name: 'Lesson', value: lesson&.relative_position&.to_s || ''},
             {name: 'Approval', value: feedback.ai_feedback_approval ? 'thumbs_up' : 'thumbs_down'}
           ],
           unit: 'Count',
