@@ -301,7 +301,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
             @integration.client_id
           end
     roles_key = Policies::Lti::LTI_ROLES_KEY
-    custom_claims_key = Policies::Lti::LTI_CUSTOM_CLAIMS
+    custom_claims_key = Policies::Lti::LTI_CUSTOM_CLAIMS.to_sym
     teacher_roles = Policies::Lti::STAFF_ROLES
     nrps_url_key = Policies::Lti::LTI_NRPS_CLAIM
     resource_link_key = Policies::Lti::LTI_RESOURCE_LINK_CLAIM
@@ -567,13 +567,14 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   test 'auth - should NOT redirect to iframe route if LMS caller is Schoology AND new_tab=true param is present' do
     issuer = Policies::Lti::LMS_PLATFORMS[:schoology][:issuer]
     integration = create :lti_integration, issuer: issuer
+    integration.update(platform_name: 'schoology')
     # Override read_cache stub with this integration
     LtiV1Controller.any_instance.stubs(:read_cache).with("#{integration.issuer}/#{integration.client_id}").returns(integration)
     payload = {**get_valid_payload, iss: issuer, aud: integration.client_id, azp: integration.client_id}
     jwt = create_jwt_and_stub(payload)
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state, new_tab: true}
-    assert_response :redirect
-    assert_redirected_to '/users/sign_up'
+    assert_response :ok
+    assert_template 'lti/v1/account_linking/landing'
   end
 
   test 'auth - should render the landing page and store session state' do
