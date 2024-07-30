@@ -147,7 +147,7 @@ module RakeUtils
   end
 
   def self.run_pipenv_command(*args)
-    system_stream_output('PIPENV_YES=1 pipenv', *args)
+    system_stream_output('PIPENV_YES=1 PIPENV_MAX_DEPTH=5 pipenv', *args)
   end
 
   def self.git_add(*args)
