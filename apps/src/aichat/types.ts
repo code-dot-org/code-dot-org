@@ -1,57 +1,51 @@
 import {LevelProperties} from '@cdo/apps/lab2/types';
 
-import {Role} from '../aiComponentLibrary/chatItems/types';
+import {Role} from '../aiComponentLibrary/chatMessage/types';
 
-export enum AichatEventDescriptions {
-  CLEAR_CHAT = 'The user clears the chat workspace.',
-  LOAD_LEVEL = 'The user loads the aichat level.',
-}
+export const ChatEventDescriptions = {
+  CLEAR_CHAT: 'The user clears the chat workspace.',
+  LOAD_LEVEL: 'The user loads the aichat level.',
+} as const;
 
 // TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
 export type AichatInteractionStatusValue = string;
 
-export interface AichatEvent {
+export interface ChatEvent {
   // UTC timestamp in milliseconds
   timestamp: number;
-  description?: `${AichatEventDescriptions}`;
+  hideForParticipants?: true;
+  description?: keyof typeof ChatEventDescriptions;
 }
 
-export interface ChatMessage extends AichatEvent {
+export interface ChatMessage extends ChatEvent {
   chatMessageText: string;
   role: Role;
   status: AichatInteractionStatusValue;
 }
 
-export interface ModelUpdate extends AichatEvent {
+export interface ModelUpdate extends ChatEvent {
   id: number;
   updatedField: keyof AiCustomizations;
   updatedValue: AiCustomizations[keyof AiCustomizations];
 }
 
-export interface Notification extends AichatEvent {
+export interface Notification extends ChatEvent {
   id: number;
   text: string;
   notificationType: 'error' | 'success';
 }
 
-// ChatItems are AichatEvents that are displayed for the user in the chat workspace.
-// We also log AichatEvents that are not displayed to the user such as 'The user clears
-// the workspace.' and 'The user loads the aichat level', and these are not ChatItems.
-// However, all AichatEvents are displayed when a teacher views the chat history of a student
-// in their section.
-export type ChatItem = ChatMessage | ModelUpdate | Notification;
-
 // Type Predicates: checks if a AichatEvent is a given type, and more helpfully,
 // automatically narrows to the specific type.
-export function isChatMessage(event: AichatEvent): event is ChatMessage {
+export function isChatMessage(event: ChatEvent): event is ChatMessage {
   return (event as ChatMessage).chatMessageText !== undefined;
 }
 
-export function isModelUpdate(event: AichatEvent): event is ModelUpdate {
+export function isModelUpdate(event: ChatEvent): event is ModelUpdate {
   return (event as ModelUpdate).updatedField !== undefined;
 }
 
-export function isNotification(event: AichatEvent): event is Notification {
+export function isNotification(event: ChatEvent): event is Notification {
   return (event as Notification).notificationType !== undefined;
 }
 

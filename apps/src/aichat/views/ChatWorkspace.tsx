@@ -12,10 +12,10 @@ import Tabs, {TabsProps} from '@cdo/apps/componentLibrary/tabs/Tabs';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {ChatItem} from '../types';
+import {ChatEvent} from '../types';
 import {getShortName} from '../utils';
 
-import AichatEventView from './AichatEventView';
+import AichatEventView from './ChatEventView';
 import CopyButton from './CopyButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
@@ -203,7 +203,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
 interface ChatWithModelProps {
   conversationContainerRef: React.RefObject<HTMLDivElement>;
-  items: ChatItem[];
+  items: ChatEvent[];
   showWaitingAnimation: () => React.ReactNode;
 }
 

@@ -8,7 +8,7 @@ import {modelDescriptions} from '../constants';
 import {removeUpdateMessage} from '../redux/aichatRedux';
 import {timestampToLocalTime} from '../redux/utils';
 import {
-  AichatEvent,
+  ChatEvent,
   ModelUpdate,
   isChatMessage,
   isNotification,
@@ -17,8 +17,8 @@ import {
 
 import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
-interface AichatEventViewProps {
-  event: AichatEvent;
+interface ChatEventViewProps {
+  event: ChatEvent;
 }
 
 function formatModelUpdateText(update: ModelUpdate): string {
@@ -43,9 +43,9 @@ function formatModelUpdateText(update: ModelUpdate): string {
 }
 
 /**
- * Renders AI Chat {@link AichatEvent}s using common AI design components.
+ * Renders AI Chat {@link ChatEvent}s using common AI design components.
  */
-const AichatEventView: React.FunctionComponent<AichatEventViewProps> = ({
+const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
   event,
 }) => {
   const dispatch = useAppDispatch();
@@ -84,4 +84,4 @@ const AichatEventView: React.FunctionComponent<AichatEventViewProps> = ({
   return null;
 };
 
-export default AichatEventView;
+export default ChatEventView;
