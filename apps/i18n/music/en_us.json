@@ -17,6 +17,8 @@
   "blockly_blockPlaySoundsSequentialTooltip": "play sounds sequentially",
   "blockly_blockPlaySoundsTogether": "play together",
   "blockly_blockPlaySoundsTogetherTooltip": "play sounds together",
+  "blockly_blockPlayTune": "play tune {tune}",
+  "blockly_blockPlayTuneTooltip": "play tune",
   "blockly_blockPlayPattern": "play drums {pattern}",
   "blockly_blockPlayPatternTooltip": "play drums",
   "blockly_blockRest": "rest for {duration}",

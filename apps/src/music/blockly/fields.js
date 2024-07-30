@@ -1,6 +1,11 @@
 // Common field definitions used across multiple music blocks
 
-import {DEFAULT_PATTERN, DEFAULT_CHORD, Triggers} from '../constants';
+import {
+  DEFAULT_PATTERN,
+  DEFAULT_CHORD,
+  DEFAULT_TUNE,
+  Triggers,
+} from '../constants';
 import Globals from '../globals';
 import musicI18n from '../locale';
 import MusicLibrary from '../player/MusicLibrary';
@@ -13,6 +18,8 @@ import {
   FIELD_PATTERN_TYPE,
   FIELD_CHORD_TYPE,
   FIELD_CHORD_NAME,
+  FIELD_TUNE_TYPE,
+  FIELD_TUNE_NAME,
   TRIGGER_FIELD,
 } from './constants';
 
@@ -67,6 +74,19 @@ export const fieldChordDefinition = {
     Globals.getPlayer().previewNote(note, instrument, onStop);
   },
   currentValue: DEFAULT_CHORD,
+  ...instrumentCommonOptions,
+};
+
+export const fieldTuneDefinition = {
+  type: FIELD_TUNE_TYPE,
+  name: FIELD_TUNE_NAME,
+  previewTune: (tuneValue, onTick, onStop) => {
+    Globals.getPlayer().previewTune(tuneValue, onTick, onStop);
+  },
+  previewTune: (tune, instrument, onStop) => {
+    Globals.getPlayer().previewTune(tune, instrument, onStop);
+  },
+  currentValue: DEFAULT_TUNE,
   ...instrumentCommonOptions,
 };
 

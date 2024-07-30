@@ -63,6 +63,16 @@ export const DEFAULT_CHORD = {
 
 export const DEFAULT_CHORD_LENGTH = 1;
 
+
+// For reference, events look like this:
+// events: [{note: '', tick: 3}]
+export const DEFAULT_TUNE = {
+  instrument: 'piano',
+  events: [],
+};
+
+export const DEFAULT_TUNE_LENGTH = 1;
+
 export const LOCAL_STORAGE = 'local';
 export const REMOTE_STORAGE = 'remote';
 

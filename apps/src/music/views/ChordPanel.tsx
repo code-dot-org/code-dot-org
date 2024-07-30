@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+
 import React, {useState, useEffect, useCallback} from 'react';
 
 import musicI18n from '../locale';
@@ -6,7 +6,7 @@ import {ChordEventValue, PlayStyle} from '../player/interfaces/ChordEvent';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
 import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
-import {getNoteName, isBlackKey} from '../utils/Notes';
+import Keybed from './Keybed';
 
 import LoadingOverlay from './LoadingOverlay';
 import PreviewControls from './PreviewControls';
@@ -168,6 +168,7 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
         selectedNotes={selectedNotes}
         onPressKey={onPressKey}
         isDisabled={isDisabled || isLoading}
+        isVertical={false}
       />
       <NoteGrid
         numOctaves={NUM_OCTAVES}
@@ -184,79 +185,6 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
         cancelPreviews={stopPreview}
         isPlayingPreview={isPlayingPreview}
       />
-    </div>
-  );
-};
-
-interface KeybedProps {
-  numOctaves: number;
-  startOctave: number;
-  selectedNotes: number[];
-  onPressKey: (note: number) => void;
-  isDisabled: boolean;
-}
-
-const Keybed: React.FunctionComponent<KeybedProps> = ({
-  numOctaves,
-  startOctave,
-  selectedNotes,
-  onPressKey,
-  isDisabled,
-}) => {
-  const keys = [];
-  const startingNote = startOctave * 12;
-
-  for (
-    let currentNote = startingNote;
-    currentNote < startingNote + numOctaves * 12;
-    currentNote++
-  ) {
-    keys.push(
-      <Key
-        key={currentNote}
-        type={isBlackKey(currentNote) ? 'black' : 'white'}
-        isDisabled={isDisabled}
-        isSelected={selectedNotes.includes(currentNote)}
-        onClick={() => onPressKey(currentNote)}
-        text={!isBlackKey(currentNote) ? getNoteName(currentNote) : undefined}
-      />
-    );
-  }
-
-  return (
-    <div id="keypad" className={moduleStyles.keybed}>
-      {keys}
-    </div>
-  );
-};
-
-interface KeyProps {
-  type: 'white' | 'black';
-  isSelected: boolean;
-  isDisabled: boolean;
-  onClick: () => void;
-  text?: string;
-}
-
-const Key: React.FunctionComponent<KeyProps> = ({
-  type,
-  isSelected,
-  isDisabled,
-  onClick,
-  text,
-}: KeyProps) => {
-  return (
-    <div
-      className={classNames(
-        moduleStyles.key,
-        isDisabled && moduleStyles.disabled,
-        isSelected && moduleStyles.selected,
-        type === 'white' && moduleStyles.whiteKey,
-        type === 'black' && moduleStyles.blackKey
-      )}
-      onClick={isSelected || !isDisabled ? onClick : undefined}
-    >
-      <div className={moduleStyles.noteLabel}>{text}</div>
     </div>
   );
 };
