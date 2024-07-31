@@ -1102,3 +1102,9 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: "'25-'26"
+        sandbox-csf-2025:
+          title: sandbox-csf-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''

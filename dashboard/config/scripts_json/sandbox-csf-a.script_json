@@ -8,11 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-28 18:16:22 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "serialized_at": "2024-07-31 19:38:04 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "sandbox-csf-a"
     }
@@ -31,19 +31,339 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Learn to Drag and Drop",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "Block-Based Coding",
+      "name": "Block-Based Coding",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**You will:**\n\n* Learn about block based programming.\n* Practice connecting, taking apart, and trashing blocks.\n* Use blocks from the toolbox.\n\n\n**Suggested time:** 5 minutes",
+        "student_overview": "**You will:**\n\n* Learn about block based programming.\n* Practice connecting, taking apart, and trashing blocks.\n* Use blocks from the toolbox.\n\n\n**Suggested time:** 5 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "e53709a9-1b88-4c6c-9ff7-a5540dbcebc3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e53709a9-1b88-4c6c-9ff7-a5540dbcebc3",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "856d0331-558b-4b25-9db0-3fa25a0499ee",
+      "position": 1,
+      "properties": {
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "856d0331-558b-4b25-9db0-3fa25a0499ee",
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "36bb8243-2a63-4a1e-96f2-4af8fe7a37c7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "36bb8243-2a63-4a1e-96f2-4af8fe7a37c7",
+        "lesson_activity.key": "e53709a9-1b88-4c6c-9ff7-a5540dbcebc3"
+      }
+    },
+    {
+      "key": "32caf200-304b-44fc-ac9c-10595543d3ba",
+      "position": 1,
+      "properties": {
+        "progression_name": "Practicing Block-Based Coding"
+      },
+      "seeding_key": {
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba",
+        "lesson_activity.key": "856d0331-558b-4b25-9db0-3fa25a0499ee"
+      }
+    },
+    {
+      "key": "7a9e9bed-b188-4a4e-b90d-b03fb61ee5b5",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7a9e9bed-b188-4a4e-b90d-b03fb61ee5b5",
+        "lesson_activity.key": "856d0331-558b-4b25-9db0-3fa25a0499ee"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLOPD-K5 Begin_2023_K5CSConcepts_TextPage"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "36bb8243-2a63-4a1e-96f2-4af8fe7a37c7"
+      },
+      "level_keys": [
+        "PLOPD-K5 Begin_2023_K5CSConcepts_TextPage"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practicing Block-Based Coding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-k5-2-behaviors -intro_2024_K5block_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      },
+      "level_keys": [
+        "pl-k5-2-behaviors -intro_2024_K5block_1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practicing Block-Based Coding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Begin_2023_K5CSConcepts_TextPage_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      },
+      "level_keys": [
+        "OPD-K5 Begin_2023_K5CSConcepts_TextPage_1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Practicing Block-Based Coding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp12022_2023_K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      },
+      "level_keys": [
+        "courseB_Scrat_ramp12022_2023_K5_1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Practicing Block-Based Coding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp3a2022_2023_K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      },
+      "level_keys": [
+        "courseB_Scrat_ramp3a2022_2023_K5_1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Practicing Block-Based Coding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp3b2022_2023_K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      },
+      "level_keys": [
+        "courseB_Scrat_ramp3b2022_2023_K5_1"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Practicing Block-Based Coding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L4 Multiple Choice packets2022_2023K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      },
+      "level_keys": [
+        "U2L4 Multiple Choice packets2022_2023K5_1"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "PLOPD-K5 Begin_2023_K5CSConcepts_TextPage",
+        "script_level.level_keys": [
+          "PLOPD-K5 Begin_2023_K5CSConcepts_TextPage"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "36bb8243-2a63-4a1e-96f2-4af8fe7a37c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-k5-2-behaviors -intro_2024_K5block_1",
+        "script_level.level_keys": [
+          "pl-k5-2-behaviors -intro_2024_K5block_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Begin_2023_K5CSConcepts_TextPage_1",
+        "script_level.level_keys": [
+          "OPD-K5 Begin_2023_K5CSConcepts_TextPage_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_Scrat_ramp12022_2023_K5_1",
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp12022_2023_K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_Scrat_ramp3a2022_2023_K5_1",
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp3a2022_2023_K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_Scrat_ramp3b2022_2023_K5_1",
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp3b2022_2023_K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L4 Multiple Choice packets2022_2023K5_1",
+        "script_level.level_keys": [
+          "U2L4 Multiple Choice packets2022_2023K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      }
+    }
   ],
   "resources": [
 

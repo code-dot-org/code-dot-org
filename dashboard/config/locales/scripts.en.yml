@@ -17783,7 +17783,9 @@ en:
           lesson_groups: {}
           name: focus-on-data-post-survey-2024
         sandbox-csf-a:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Learn to Drag and Drop
           lesson_groups: {}
           name: sandbox-csf-a
           title: 'SANDBOX CSF Course A '
@@ -18507,6 +18509,15 @@ en:
           description: ''
           student_description: ''
         hello-world-food-one:
+          title: 'Hello World: Food'
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        sandbox-csf-course-a:
+          lessons: {}
+          lesson_groups: {}
+        hello-world-transformers-one-2024:
           title: 'Hello World: Food'
           description: ''
           student_description: ''
