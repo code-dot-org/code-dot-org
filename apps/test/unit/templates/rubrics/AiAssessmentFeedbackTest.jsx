@@ -16,7 +16,7 @@ describe('AiAssessmentFeedback', () => {
     aiFeedbackId: 1,
   };
 
-  const defaultStatus = -1;
+  const defaultStatus = null;
   const thumbsupval = 1;
   const thumbsdownval = 0;
   const mockSetAiFeedback = () => {};
@@ -24,7 +24,7 @@ describe('AiAssessmentFeedback', () => {
   it('displays no checkboxes when neither thumb is selected', () => {
     const wrapper = mount(
       <AiAssessmentFeedbackContext.Provider
-        value={{defaultStatus, mockSetAiFeedback}}
+        value={{aiFeedback: defaultStatus, setAiFeedback: mockSetAiFeedback}}
       >
         <AiAssessmentFeedback {...props} />
       </AiAssessmentFeedbackContext.Provider>
@@ -33,32 +33,36 @@ describe('AiAssessmentFeedback', () => {
   });
 
   it('displays no checkboxes when thumbs up is selected', () => {
-    const wrapper = mount(<AiAssessmentFeedback {...props} />, {
-      wrappingComponent: AiAssessmentFeedbackContext.Provider,
-      wrappingComponentProps: {
-        value: {aiFeedback: thumbsupval, setAiFeedback: mockSetAiFeedback},
-      },
-    });
+    const wrapper = mount(
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: thumbsupval, setAiFeedback: mockSetAiFeedback}}
+      >
+        <AiAssessmentFeedback {...props} />
+      </AiAssessmentFeedbackContext.Provider>
+    );
+
     expect(wrapper.find('Checkbox')).toHaveLength(0);
   });
 
   it('displays checkboxes when thumbs down is selected', () => {
-    const wrapper = mount(<AiAssessmentFeedback {...props} />, {
-      wrappingComponent: AiAssessmentFeedbackContext.Provider,
-      wrappingComponentProps: {
-        value: {aiFeedback: thumbsdownval, setAiFeedback: mockSetAiFeedback},
-      },
-    });
+    const wrapper = mount(
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: thumbsdownval, setAiFeedback: mockSetAiFeedback}}
+      >
+        <AiAssessmentFeedback {...props} />
+      </AiAssessmentFeedbackContext.Provider>
+    );
     expect(wrapper.find('Checkbox')).toHaveLength(4);
   });
 
   it('displays textbox when checkbox labelled "other" is selected', () => {
-    const wrapper = mount(<AiAssessmentFeedback {...props} />, {
-      wrappingComponent: AiAssessmentFeedbackContext.Provider,
-      wrappingComponentProps: {
-        value: {aiFeedback: thumbsdownval, setAiFeedback: mockSetAiFeedback},
-      },
-    });
+    const wrapper = mount(
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: thumbsdownval, setAiFeedback: mockSetAiFeedback}}
+      >
+        <AiAssessmentFeedback {...props} />
+      </AiAssessmentFeedbackContext.Provider>
+    );
     wrapper.find('Checkbox').at(3).find('input').first().simulate('change');
     expect(wrapper.find('textarea')).toHaveLength(1);
   });
