@@ -147,7 +147,17 @@ module RakeUtils
   end
 
   def self.run_pipenv_command(*args)
-    system_stream_output('PIPENV_YES=1 PIPENV_MAX_DEPTH=5 pipenv', *args)
+    # pipenv will not install the exact version of python we specify if pyenv is
+    # not present, instead it silently falls back to the system version. Thus:
+    if `which pyenv` == ''
+      raise 'Tried `which pyenv`: pyenv not found. Please install pyenv and try again, see SETUP.md.'
+    end
+
+    if `which pipenv` == ''
+      raise 'Tried `which pipenv`: pipenv not found. Please install pipenv and try again, see SETUP.md.'
+    end
+
+    system_stream_output('PIPENV_YES=1 pipenv', *args)
   end
 
   def self.git_add(*args)
