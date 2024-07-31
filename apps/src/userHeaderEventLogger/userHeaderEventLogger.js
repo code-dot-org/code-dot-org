@@ -179,13 +179,6 @@ const addSignedInMetrics = (pageUrl, headerCreateMenu) => {
     additionalOptions
   );
 
-  // Log if a hamburger link is clicked
-  addClickEventToLinks(
-    'hamburgerlink',
-    EVENTS.SIGNED_IN_USER_CLICKS_HAMBURGER_LINK,
-    additionalOptions
-  );
-
   addMenuMetrics(
     'header_user_menu',
     USER_MENU_OPTION_IDS,
