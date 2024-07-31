@@ -109,7 +109,7 @@
 .state-buttons
   -if ! state.nil_or_empty?
     .state-button.download-fact-sheet
-      %a{:href=>CDO.code_org_url("/assets/advocacy/stateofcs/2023/#{state}.pdf"), target: '_blank'}
+      %a{href: "https://code.org/assets/advocacy/stateofcs/2023/#{statename}.pdf", target: '_blank'}
         %button<
           View state fact-sheet
 
