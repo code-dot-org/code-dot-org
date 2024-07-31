@@ -483,16 +483,18 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     create_preexisting_user(payload)
 
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
-    assert_response :redirect
+    assert_response :ok
+    assert_template 'omniauth/redirect'
   end
 
-  test 'auth - given a valid jwt, redirect to target_link_url' do
+  test 'auth - given a valid jwt, render omniauth redirector' do
     payload = get_valid_payload
     jwt = create_jwt_and_stub(payload)
     create_preexisting_user(payload)
 
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
-    assert_response :redirect
+    assert_response :ok
+    assert_template 'omniauth/redirect'
     # could confirm more things here
   end
 
@@ -565,11 +567,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'auth - should render the landing page and store session state' do
-    DCDO.stubs(:get)
-    Cpa.stubs(:cpa_experience).with(any_parameters).returns(false)
-    SignUpTracking.stubs(:begin_sign_up_tracking).returns(false)
-    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
-    DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
     payload = {**get_valid_payload, Policies::Lti::LTI_ROLES_KEY => [Policies::Lti::CONTEXT_LEARNER_ROLE]}
     jwt = create_jwt_and_stub(payload)
 
