@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Link from '@cdo/apps/componentLibrary/link';
 import i18n from '@cdo/locale';
 
 import WorkshopExistingAccountCard from './WorkshopExistingAccountCard';
@@ -24,9 +23,6 @@ const WorkshopStudentEnrollPage: React.FunctionComponent<{
         <WorkshopExistingAccountCard
           existingAccountUrl={switchAccountTypeUrl}
         />
-      </div>
-      <div className={styles.cancelButtonContainer}>
-        <Link text={i18n.cancel()} href={'/users/cancel'} />
       </div>
     </div>
   </main>
