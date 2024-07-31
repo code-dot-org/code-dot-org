@@ -11,7 +11,7 @@ import {
 } from './types';
 
 const CHAT_COMPLETION_URL = '/aichat/chat_completion';
-const LOG_CHAT_EVENT_URL = '/aichat/log_aichat_event';
+const LOG_CHAT_EVENT_URL = '/aichat/log_chat_event';
 
 /**
  * This function formats chat completion messages and aichatParameters, sends a POST request
@@ -55,11 +55,11 @@ export async function postAichatCompletionMessage(
  * the status of the response and logged event if successful.
  */
 export async function postLogChatEvent(
-  newAichatEvent: ChatEvent,
+  newChatEvent: ChatEvent,
   aichatContext: AichatContext
 ): Promise<LogChatEventApiResponse> {
   const payload = {
-    newAichatEvent,
+    newChatEvent,
     aichatContext,
   };
   const response = await HttpClient.post(
