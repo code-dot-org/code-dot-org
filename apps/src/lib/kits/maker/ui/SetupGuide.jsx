@@ -7,7 +7,9 @@ import {
   MAKER_DEPRECATION_SUPPORT_URL,
   MIN_CHROME_VERSION,
 } from '@cdo/apps/lib/kits/maker/util/makerConstants';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import Notification, {
+  NotificationType,
+} from '@cdo/apps/sharedComponents/Notification';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 

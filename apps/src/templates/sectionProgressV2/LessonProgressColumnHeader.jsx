@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import {lessonHasLevels} from '../progress/progressHelpers';
 import {addExpandedLesson} from '../sectionProgress/sectionProgressRedux';
 

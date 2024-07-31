@@ -1,5 +1,7 @@
 /** @file font-awesome helper component. */
 
+// NOTE: Prefer component/FontAwesomeV6Icon
+
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';

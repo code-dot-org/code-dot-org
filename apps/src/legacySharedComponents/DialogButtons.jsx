@@ -4,8 +4,9 @@ import React, {Component} from 'react';
 import {getStore} from '@cdo/apps/redux';
 import msg from '@cdo/locale';
 
+import Lightbulb from '../templates/Lightbulb';
+
 import LegacyButton from './LegacyButton';
-import Lightbulb from './Lightbulb';
 
 export default class DialogButtons extends Component {
   static propTypes = {
