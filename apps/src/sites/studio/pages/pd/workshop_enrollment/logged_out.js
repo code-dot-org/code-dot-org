@@ -12,6 +12,6 @@ document.addEventListener('DOMContentLoaded', function () {
       newAccountUrl={props.new_account_url}
       existingAccountUrl={props.existing_account_url}
     />,
-    document.getElementById('workshop-enroll-simple-sign-up')
+    document.getElementById('workshop-enroll-logged-out')
   );
 });
