@@ -151,25 +151,6 @@ class UnconnectedMusicView extends React.Component {
   }
 
   componentDidMount() {
-    // Only record Amplitude analytics events on standalone projects
-    if (this.props.isProjectLevel) {
-      this.analyticsReporter.startSession().then(() => {
-        this.analyticsReporter.setUserProperties(
-          this.props.userId,
-          this.props.userType,
-          this.props.signInState
-        );
-      });
-    }
-    // TODO: the 'beforeunload' callback is advised against as it is not guaranteed to fire on mobile browsers. However,
-    // we need a way of reporting analytics when the user navigates away from the page. Check with Amplitude for the
-    // correct approach.
-    window.addEventListener('beforeunload', event => {
-      if (this.props.isProjectLevel) {
-        this.analyticsReporter.endSession();
-      }
-    });
-
     if (this.props.levelProperties?.appName === 'music') {
       this.onLevelLoad(
         this.props.levelProperties?.levelData,
@@ -181,19 +162,6 @@ class UnconnectedMusicView extends React.Component {
 
   async componentDidUpdate(prevProps) {
     this.musicBlocklyWorkspace.resizeBlockly();
-
-    if (
-      this.props.isProjectLevel &&
-      (prevProps.userId !== this.props.userId ||
-        prevProps.userType !== this.props.userType ||
-        prevProps.signInState !== this.props.signInState)
-    ) {
-      this.analyticsReporter.setUserProperties(
-        this.props.userId,
-        this.props.userType,
-        this.props.signInState
-      );
-    }
 
     // When changing levels, stop playback and reset the initial sounds loaded flag
     // since a new set of sounds will be loaded on the next level.  Also clear the
@@ -323,9 +291,12 @@ class UnconnectedMusicView extends React.Component {
         .logInfo('Setting existing project to default pack');
     }
 
-    // Go ahead and compile and execute the initial song once code is loaded.
+    // Go ahead and compile and execute the initial song, and report initial block stats once code is loaded.
     this.compileSong();
     this.executeCompiledSong();
+    this.analyticsReporter.onBlocksUpdated(
+      this.musicBlocklyWorkspace.getAllBlocks()
+    );
 
     Globals.setShowSoundFilters(
       AppConfig.getValue('show-sound-filters') !== 'false' &&
@@ -484,11 +455,9 @@ class UnconnectedMusicView extends React.Component {
         }
       });
 
-      if (this.props.isProjectLevel) {
-        this.analyticsReporter.onBlocksUpdated(
-          this.musicBlocklyWorkspace.getAllBlocks()
-        );
-      }
+      this.analyticsReporter.onBlocksUpdated(
+        this.musicBlocklyWorkspace.getAllBlocks()
+      );
     }
 
     if (e.type === Blockly.Events.SELECTED) {
@@ -507,9 +476,7 @@ class UnconnectedMusicView extends React.Component {
   setPlaying = play => {
     if (play) {
       this.playSong();
-      if (this.props.isProjectLevel) {
-        this.analyticsReporter.onButtonClicked('play');
-      }
+      this.analyticsReporter.onButtonClicked('play');
       // Sends a Statsig event when the Run button is pressed by a signed out user
       // This is related to the Create Account Button A/B Test; see Jira ticket:
       // https://codedotorg.atlassian.net/browse/ACQ-1938
@@ -533,9 +500,7 @@ class UnconnectedMusicView extends React.Component {
     if (!this.props.isPlaying) {
       return;
     }
-    if (this.props.isProjectLevel) {
-      this.analyticsReporter.onButtonClicked('trigger', {id});
-    }
+    this.analyticsReporter.onButtonClicked('trigger', {id});
 
     const triggerStartPosition =
       this.musicBlocklyWorkspace.getTriggerStartPosition(
@@ -703,9 +668,7 @@ class UnconnectedMusicView extends React.Component {
 
   render() {
     return (
-      <AnalyticsContext.Provider
-        value={this.props.isProjectLevel ? this.analyticsReporter : null}
-      >
+      <AnalyticsContext.Provider value={this.analyticsReporter}>
         <KeyHandler
           togglePlaying={this.togglePlaying}
           playTrigger={this.playTrigger}
@@ -730,6 +693,7 @@ class UnconnectedMusicView extends React.Component {
             !this.props.levelProperties?.levelData?.packId &&
             this.props.isProjectLevel
           }
+          analyticsReporter={this.analyticsReporter}
         />
         <Callouts />
       </AnalyticsContext.Provider>

@@ -5,13 +5,13 @@ import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import mapboxReducer, {setMapboxAccessToken} from '@cdo/apps/redux/mapbox';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../../templates/BaseDialog';
-import Button from '../../templates/Button';
 import SchoolInfoInputs, {
   SCHOOL_TYPES_HAVING_NCES_SEARCH,
   SCHOOL_TYPES_HAVING_NAMES,
