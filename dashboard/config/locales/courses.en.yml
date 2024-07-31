@@ -1096,3 +1096,9 @@ en:
           description_student: testing fix for getting started
           description_teacher: testing fix for getting started
           version_title: ''
+        csa-alt-2025:
+          title: csa non-objects-first
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'25-'26"

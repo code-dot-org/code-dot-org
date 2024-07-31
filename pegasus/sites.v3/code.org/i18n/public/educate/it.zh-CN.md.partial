@@ -126,7 +126,6 @@ theme: responsive
 | **使用互联网模拟器**                              | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **使用网络实验室**                               | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **使用谷歌课堂共享按钮**                            | `https://apis.google.com`                                                                                  |
-| **使用 App Lab 数据集**                        | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## 移动设备/平板电脑支持详情
 
