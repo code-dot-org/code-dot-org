@@ -36,7 +36,6 @@ import MusicPlayerStubSequencer from '../player/sequencer/MusicPlayerStubSequenc
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 import MusicValidator from '../progress/MusicValidator';
 import {
-  setLibraryName,
   setPackId,
   setIsPlaying,
   setCurrentPlayheadPosition,
@@ -55,7 +54,6 @@ import {
   setSelectedTriggerId,
   clearSelectedTriggerId,
 } from '../redux/musicRedux';
-import {loadLibrary} from '../utils/Loader';
 import {Key} from '../utils/Notes';
 import SoundUploader from '../utils/SoundUploader';
 
@@ -80,8 +78,6 @@ class UnconnectedMusicView extends React.Component {
     userType: PropTypes.string,
     signInState: PropTypes.oneOf(Object.values(SignInState)),
     isRtl: PropTypes.bool,
-    libraryName: PropTypes.string,
-    setLibraryName: PropTypes.func,
     packId: PropTypes.string,
     setPackId: PropTypes.func,
     isPlaying: PropTypes.bool,
@@ -241,6 +237,14 @@ class UnconnectedMusicView extends React.Component {
     }
     await this.loadAndInitializePlayer(libraryName || DEFAULT_LIBRARY);
 
+    if (getBlockMode() === BlockMode.SIMPLE2) {
+      this.sequencer = new Simple2Sequencer();
+    } else if (getBlockMode() === BlockMode.ADVANCED) {
+      this.sequencer = new AdvancedSequencer();
+    } else {
+      this.sequencer = new MusicPlayerStubSequencer();
+    }
+
     this.props.isPlayView
       ? this.musicBlocklyWorkspace.initHeadless()
       : this.musicBlocklyWorkspace.init(
@@ -324,16 +328,10 @@ class UnconnectedMusicView extends React.Component {
 
   // Load the library and initialize the music player, if not already loaded.
   loadAndInitializePlayer = async libraryName => {
-    if (this.props.libraryName === libraryName) {
-      // Already loaded this library, no need to load again.
-      return;
-    }
-
     this.props.setIsLoading(true);
 
     try {
-      this.library = await loadLibrary(libraryName);
-      MusicLibrary.setCurrent(this.library);
+      this.library = await MusicLibrary.loadLibrary(libraryName);
     } catch (error) {
       this.props.setPageError({
         errorMessage: 'Error loading library',
@@ -343,20 +341,10 @@ class UnconnectedMusicView extends React.Component {
       return;
     }
 
-    if (getBlockMode() === BlockMode.SIMPLE2) {
-      this.sequencer = new Simple2Sequencer();
-    } else if (getBlockMode() === BlockMode.ADVANCED) {
-      this.sequencer = new AdvancedSequencer();
-    } else {
-      this.sequencer = new MusicPlayerStubSequencer();
-    }
-
     this.player.updateConfiguration(
       this.library.getBPM(),
       this.library.getKey()
     );
-
-    this.props.setLibraryName(libraryName);
 
     this.props.setIsLoading(false);
   };
@@ -598,10 +586,10 @@ class UnconnectedMusicView extends React.Component {
     };
 
     // Save the current library to sources as part of labConfig if present
-    if (this.props.libraryName) {
+    if (MusicLibrary.getInstance()?.name) {
       sourcesToSave.labConfig = {
         music: {
-          library: this.props.libraryName,
+          library: MusicLibrary.getInstance()?.name,
         },
       };
     }
@@ -711,7 +699,6 @@ const MusicView = connect(
 
     isRtl: state.isRtl,
 
-    libraryName: state.music.libraryName,
     packId: state.music.packId,
     isPlaying: state.music.isPlaying,
     selectedBlockId: state.music.selectedBlockId,
@@ -726,7 +713,6 @@ const MusicView = connect(
     isPlayView: state.lab.isShareView,
   }),
   dispatch => ({
-    setLibraryName: libraryName => dispatch(setLibraryName(libraryName)),
     setPackId: packId => dispatch(setPackId(packId)),
     setIsPlaying: isPlaying => dispatch(setIsPlaying(isPlaying)),
     setCurrentPlayheadPosition: currentPlayheadPosition =>
