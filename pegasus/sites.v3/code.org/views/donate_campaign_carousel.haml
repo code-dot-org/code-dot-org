@@ -1,0 +1,46 @@
+:ruby
+  block_items = [
+    {
+      img: "/images/farsi/farsi-students-snacking.png",
+      title: hoc_s(:farsi_page_top_heading),
+      desc: hoc_s(:donate_page_campaigns_farsi_desc),
+      primary_url: "https://donate.code.org/CodeDotOrgInFarsi",
+      primary_aria_label: hoc_s("donate_page.campaign.farsi.aria_label.primary"),
+      secondary_url: "/farsi",
+      secondary_aria_label: hoc_s("donate_page.campaign.farsi.aria_label.secondary"),
+    },
+    {
+      img: "/images/action-blocks/action-block-naipi.png",
+      title: hoc_s("donate_page.campaign.naipi.title"),
+      desc: hoc_s("donate_page.campaign.naipi.desc"),
+      primary_url: "https://donate.code.org/campaign/591022/donate",
+      primary_aria_label: hoc_s("donate_page.campaign.naipi.aria_label.primary"),
+      secondary_url: "/naipi",
+      secondary_aria_label: hoc_s("donate_page.campaign.naipi.aria_label.secondary"),
+    },
+  ]
+
+.carousel-wrapper.one-col
+  %swiper-container{navigation: "true", "navigation-next-el": ".swiper-nav-next", "navigation-prev-el": ".swiper-nav-prev", init: "false"}
+    - block_items.each_with_index do |block_item, index|
+      %swiper-slide
+        .action-block.action-block--two-col.white
+          .media-wrapper.col-50
+            %img{src: block_item[:img], alt: ""}
+          .text-wrapper.col-50
+            %h3
+              = block_item[:title]
+            %p
+              = block_item[:desc]
+            .button-wrapper
+              %a.link-button.has-external-link{href: block_item[:primary_url], target: "_blank", rel: "noopener noreferrer", aria:{label: block_item[:primary_aria_label]}}
+                =hoc_s(:call_to_action_donate)
+              %a.link-button.secondary{href: block_item[:secondary_url], class: index == 0 ? "has-external-link" : "", target: index == 0 ? "_blank" : "", rel: index == 0 ?  "noopener noreferrer" : "", aria:{label: block_item[:secondary_aria_label]}}
+                =hoc_s(:call_to_action_learn_more)
+
+  %button.swiper-nav-prev
+  %button.swiper-nav-next
+
+= view :swiper
+
+

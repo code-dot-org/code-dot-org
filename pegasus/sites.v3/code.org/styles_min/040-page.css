@@ -33,10 +33,12 @@
   /* Typography */
   --barlowSemiCondensed-semibold: "Barlow Semi Condensed Semibold", sans-serif;
   --barlowSemiCondensed-medium: "Barlow Semi Condensed Medium", sans-serif;
-  --main-font: 'Metropolis', 'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Armenian', 'Noto Sans Bengali', 'Noto Sans SC',
-               'Noto Sans TC', 'Noto Sans Devanagari', 'Noto Sans Georgian', 'Noto Sans Hebrew', 'Noto Sans JP',
-               'Noto Sans Kannada', 'Noto Sans Khmer', 'Noto Sans KR', 'Noto Sans Myanmar', 'Noto Sans Sinhala',
-               'Noto Sans Tamil', 'Noto Sans Telugu', 'Noto Sans Thai', 'Noto Sans Thaana', sans-serif;
+  --main-font: "Metropolis", "Noto Sans", "Noto Sans Arabic",
+    "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans SC", "Noto Sans TC",
+    "Noto Sans Devanagari", "Noto Sans Georgian", "Noto Sans Hebrew",
+    "Noto Sans JP", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans KR",
+    "Noto Sans Myanmar", "Noto Sans Sinhala", "Noto Sans Tamil",
+    "Noto Sans Telugu", "Noto Sans Thai", "Noto Sans Thaana", sans-serif;
   --thin-font-weight: 100;
   --extra-light-font-weight: 200;
   --light-font-weight: 300;
@@ -121,12 +123,26 @@ h6,
   margin-bottom: 0.5em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
 /* Use this class on text elements to turn them white */
-h1, h2, h3, h4, h5, h6, p, figcaption, span, a:not(.link-button) {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figcaption,
+span,
+a:not(.link-button) {
   &.white {
     color: var(--neutral_white) !important;
   }
@@ -631,8 +647,8 @@ nav.main #hamburger #hamburger-contents {
 /* Show the hamburger on small desktop
   with appropriate links hidden */
 @media (min-width: 1024px) and (max-width: 1268px) {
-  nav.main .left ul li:nth-child(n+4),
-  nav.main #hamburger-contents > div:nth-child(-n+5) {
+  nav.main .left ul li:nth-child(n + 4),
+  nav.main #hamburger-contents > div:nth-child(-n + 5) {
     display: none !important;
   }
 }
@@ -768,6 +784,11 @@ swiper-slide {
 .carousel-wrapper.video-carousel .swiper-nav-prev,
 .carousel-wrapper.video-carousel .swiper-nav-next {
   top: 28%;
+}
+
+.carousel-wrapper.one-col .swiper-nav-prev,
+.carousel-wrapper.one-col .swiper-nav-next {
+  top: 33%;
 }
 
 /* Begin legacy styles ------------------------ */

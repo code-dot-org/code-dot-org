@@ -46,23 +46,12 @@ theme: responsive_full_width
   .wrapper
     %h2.centered
       =hoc_s(:donate_page_campaigns_heading)
-    .action-block.action-block--two-col.white
-      .media-wrapper.col-50
-        %img{src: "/images/farsi/farsi-students-snacking.png", alt: ""}
-      .text-wrapper.col-50
-        %h3=hoc_s(:farsi_page_top_heading)
-        %p=hoc_s(:donate_page_campaigns_farsi_desc)
-        .button-wrapper
-          %a.link-button.has-external-link{href: "https://donate.code.org/CodeDotOrgInFarsi", target: "_blank", rel: "noopener noreferrer", aria:{label: hoc_s(:aria_label_call_to_action_farsi_donate)}}
-            =hoc_s(:call_to_action_donate)
-          %a.link-button.secondary{href: "/farsi", aria:{label: hoc_s(:aria_label_call_to_action_farsi_learn_more)}}
-            =hoc_s(:call_to_action_learn_more)
-    .clear
+    = view :donate_campaign_carousel
 
-%section.fundraise.bg-neutral-dark
+%section.bg-neutral-dark
   .wrapper.centered
-    %h2=hoc_s(:donate_page_fundraise_title)
-    %p=hoc_s(:donate_page_fundraise_desc)
+    %h2.white=hoc_s(:donate_page_fundraise_title)
+    %p.white=hoc_s(:donate_page_fundraise_desc)
     %a.link-button.has-external-link{href: "https://donate.code.org/campaign/computer-science-education/c142257", target: "_blank", rel: "noopener noreferrer"}
       =hoc_s(:call_to_action_start_fundraiser)
 
@@ -70,7 +59,7 @@ theme: responsive_full_width
   .wrapper.centered
     %h2=hoc_s(:donate_page_supporters_heading)
     %p.wrap-balance=hoc_s(:donate_page_supporters_desc)
-    .logos.flex-container.justify-center.wrap
+    .logos-wrapper
       %img{src: "/images/avatars/amazon.png", alt: hoc_s(:amazon_logo_alt)}
       %img{src: "/images/avatars/microsoft.png", alt: hoc_s(:microsoft_logo_alt)}
       %img{src: "/images/avatars/google.png", alt: hoc_s(:google_logo_alt)}
@@ -107,3 +96,6 @@ theme: responsive_full_width
     = view :about_seals
 
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::DONATE_PAGE_VISITED_EVENT
+
+-# TODO unhide this
+-# = view :classy_embed_form

@@ -1,28 +1,15 @@
 // Custom styles for code.org/donate
 // — supplemental to shared/css/design-system-pegasus.scss
 
-@import 'breakpoints';
+@import "breakpoints";
 
 section.top {
-
   .flex-container {
     gap: 1rem;
   }
 }
 
-section.fundraise {
-  background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
-  background-size: 10rem;
-  background-color: var(--neutral_dark);
-
-  h2,
-  p {
-    color: var(--neutral_white);
-  }
-}
-
 section.donate-options {
-
   @media screen and (max-width: $width-md) {
     .wrapper > hr {
       display: none;
@@ -44,7 +31,8 @@ section.donate-options {
     #dafdirectdiv {
       width: 262px !important;
 
-      .dafdirectInput, .dafdirectSelect {
+      .dafdirectInput,
+      .dafdirectSelect {
         margin: 0 !important;
       }
 
@@ -55,21 +43,11 @@ section.donate-options {
   }
 }
 
-section.supporters {
-
-  .logos {
-    margin-block: 3rem;
-    gap: 3rem;
-
-    img {
-      width: 100px;
-      align-self: center;
-    }
-  }
+.logos-wrapper img {
+  width: 100px;
 }
 
 section.spread-the-word {
-
   div.content-wrapper {
     gap: 2rem;
   }
@@ -101,8 +79,7 @@ section.spread-the-word {
   }
 }
 
-section.seals{
-
+section.seals {
   @media screen and (max-width: $width-sm) {
     padding: 0;
   }
