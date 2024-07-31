@@ -1,5 +1,7 @@
 # Configures python to work via pycall.
 
+require 'open3'
+
 # This file must be loaded before application.rb automatically loads all gems
 # in the Gemfile so that the PYTHON environment variable is set correctly.
 # Otherwise various pycall related gems like numpy will fail to load.
