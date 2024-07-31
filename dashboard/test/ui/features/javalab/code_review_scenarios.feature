@@ -6,35 +6,7 @@ Feature: Code review V2
   # does not work with automated testing.
   Scenario: Code review V2
     When I open my eyes to test "Javalab Code Review V2"
-    # Given I set up code review for teacher "Code Review Teacher" with 2 students in a group
-    Given I create a teacher named "Code Review Teacher"
-    And I give user "Code Review Teacher" authorized teacher permission
-    And I create a new student section assigned to "ui-test-csa-family-script"
-    And I sign in as "Code Review Teacher" and go home
-    And I save the student section url
-    And I save the section id from row 0 of the section table
-    Given I create a student named "student_0"
-    And I join the section
-    Given I create a student named "student_1"
-    And I join the section
-    And I wait to see ".alert-success"
-    And I sign out
-    Given I sign in as "Code Review Teacher" and go home
-    And I create a new code review group for the section I saved
-    #And I add the first student to the first code review group
-    And I focus selector "#uitest-unassign-all-button"
-    And I press keys ":tab"
-    And I press keys ":space"
-    And I press keys ":arrow_right"
-    And I press keys ":space"
-    #And I add the first student to the first code review group
-    And I focus selector "#uitest-unassign-all-button"
-    And I press keys ":tab"
-    And I press keys ":space"
-    And I press keys ":arrow_right"
-    And I press keys ":space"
-    And I click selector ".uitest-base-dialog-confirm"
-    And I click selector ".toggle-input"
+    Given I set up code review for teacher "Code Review Teacher" with 2 students in a group
     And I sign out using jquery
 
     # Sign in as a student in the code review group

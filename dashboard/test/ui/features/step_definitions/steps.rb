@@ -1501,11 +1501,13 @@ When /^I set up code review for teacher "([^"]*)" with (\d+(?:\.\d*)?) students 
     #{add_student_step_list.join("\n")}
     And I wait to see ".alert-success"
     And I sign out using jquery
+    And I wait for 5 seconds
     Given I sign in as "#{teacher_name}" and go home
     And I create a new code review group for the section I saved
     #{add_students_to_group_step_list.join("\n")}
     And I click selector ".uitest-base-dialog-confirm"
     And I click selector ".toggle-input"
+    And I wait until element "#uitest-code-review-groups-status-message" is visible
   GHERKIN
 end
 
