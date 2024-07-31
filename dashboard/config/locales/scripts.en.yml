@@ -18506,3 +18506,9 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        hello-world-food-one:
+          title: 'Hello World: Food'
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
