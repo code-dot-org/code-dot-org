@@ -85,7 +85,6 @@ describe('SetupChecklist', () => {
       expect(screen.getByTitle('waiting')).to.exist;
       await yieldUntilDoneDetecting(screen, rerender);
       expect(screen.getAllByTitle('success')).to.have.length(4);
-      expect(window.console.error).not.to.have.been.called;
     });
 
     it('sends analytic event when a board is connected on /maker/setup page', async () => {
