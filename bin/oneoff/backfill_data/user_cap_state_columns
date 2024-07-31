@@ -10,31 +10,31 @@ CAP_RELEASE_DATE = DateTime.parse('2023-06-09')
 
 users = User.with_deleted.where(current_sign_in_at: CAP_RELEASE_DATE..)
 total_updated = 0
-
-progress_bar_title = proc {|num_updates = 0| "Processed[%c/%C]: |%W| Updated: #{total_updated += num_updates} %a"}
-progress_bar = ProgressBar.create(total: users.count, format: progress_bar_title.call)
-
 failed_user_ids = []
-batch_size = 1000
 
-users.in_batches(of: batch_size) do |users_batch|
-  users_batch.where(cap_state: nil).where("properties->>'$.child_account_compliance_state' IS NOT NULL").in_batches do |cap_users_batch|
-    cap_user_ids = cap_users_batch.ids
+update_progress_title = proc {|num_updates = 1| "Processed[%c/%C]: |%W| Updated: #{total_updated += num_updates} %a"}
+progress_bar = ProgressBar.create(total: users.count, format: update_progress_title.call(0))
 
-    User.where(id: cap_user_ids).update_all <<~SQL.strip
-      cap_state = IF(properties->>'$.child_account_compliance_state' = 's', 'l', properties->>'$.child_account_compliance_state'),
-      cap_state_date = CAST(properties->>'$.child_account_compliance_state_last_updated' AS DATETIME)
-    SQL
+users.select(
+  :id,
+  :cap_state,
+  :cap_state_date,
+  "properties->>'$.child_account_compliance_state' AS raw_cap_state",
+  "properties->>'$.child_account_compliance_state_last_updated' AS raw_cap_state_date"
+).find_each(batch_size: 10_000) do |user|
+  next if user.cap_state || user.raw_cap_state.nil?
 
-    progress_bar.format progress_bar_title.call(cap_user_ids.size)
-  rescue StandardError => exception
-    failed_user_ids += cap_user_ids
-    progress_bar.log "Error updating users: #{exception.inspect}".red
-  end
+  user.update_columns(
+    cap_state: user.raw_cap_state == 's' ? 'l' : user.raw_cap_state,
+    cap_state_date: user.raw_cap_state_date && DateTime.parse(user.raw_cap_state_date)
+  )
 
-  progress_bar.progress += batch_size
-rescue ProgressBar::InvalidProgressError
-  progress_bar.finish
+  progress_bar.format update_progress_title.call
+rescue StandardError => exception
+  failed_user_ids << user.id
+  progress_bar.log "Error updating User[#{user.id}]: #{exception.inspect}".red
+ensure
+  progress_bar.increment
 end
 
 puts "Failed to update #{failed_user_ids.size} users: #{failed_user_ids.inspect}".yellow unless failed_user_ids.empty?
