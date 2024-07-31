@@ -126,7 +126,6 @@ theme: responsive
 | **ইন্টারনেট সিমুলেটর ব্যবহার করতে**                                                                          | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **ওয়েব ল্যাব ব্যবহার করতে**                                                                                 | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **গুগল ক্লাসরুম শেয়ার বোতাম ব্যবহার করতে**                                                                  | `https://apis.google.com`                                                                                  |
-| **অ্যাপ ল্যাব ডেটাসেট ব্যবহার করতে**                                                                         | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 

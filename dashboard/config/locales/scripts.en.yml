@@ -10492,7 +10492,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: csc-timecapsule-2023
-          title: Coding a Time Capsule (2023)
+          title: Coding a Time Capsule
           description_audience: ''
           description_short: ''
           description: "##Suggested Pre-Work for this Module\n\n**Social Studies:** Read any of these [Multiple Perspectives Read Alouds](https://docs.google.com/document/d/1GU2wLxQ2xkoYGrjJU2mbngZEDxOX7bEWTlh4Ns1cnh8/template/preview) together as a class to enrich the discussion questions throughout the module, especially regarding the importance of having your voice in your own story, and what happens if certain things are included or left out. \n\n**ELA:** Read poetry together: Read a few poems together as a class and practice naming the mood of each poem. Encourage students to share their interpretation, even if it’s different from someone else’s. Make sure that all students are familiar with the structure of a poem before Lesson 2, in which students will write their own poems.\n\n**Computer Science:**  Students will be working with sprites and events in the module. We recommend beginning with [Hello World](https://studio.code.org/s/coursee-2023/lessons/4) (45 minutes) where students will gain a basic introduction to sprites and how to animate them with events. \n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n"
@@ -10573,7 +10573,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: csc-mappinglandmarks-2023
-          title: Coding Interactive Maps (2023)
+          title: Coding Interactive Maps
           description_audience: ''
           description_short: ''
           description: "##Suggested Pre-Work for this Module\n \n**Social Studies:** Students will discuss and code several different types of maps. To build a base understanding together you might consider reading one of these books about maps: [Maps by Aleksandra and Daniel Mizielinski](https://oladaniel.com/maps), [The Once Upon a Time Map Book by BG Hennessy](https://bghennessy.com/f/the-once-upon-a-time-map-book), or [City Atlas: Travel the World with 30 City Maps by Georgia Cherry](https://www.youtube.com/watch?v=LRy3daJLhtg).\n\nAdditionally, it may be beneficial to spend some time **building interactive maps with hands on materials in your classroom**: fill a bucket with colored strips of felt to represent roads, rivers, houses and more. Let students build and play in an imaginary town. Or after a shared experience (ie recess or field trip) create a topographical map using play-dough or salt dough.\n\n\n**Computer Science:** In this module students will be working a lot with sprites including changing the location and size of them and initiating behaviors. [CSFundamentals Course F Lesson 3](https://studio.code.org/s/coursef-2023/lessons/3) is a great introduction to two concepts at the heart of this all: sprites and behaviors.\n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n"
@@ -10634,7 +10634,7 @@ en:
               name: Code Your Own Ecosystem (2023)
           lesson_groups: {}
           name: csc-ecosystems-2023
-          title: Simulating a Marine Ecosystem (2023)
+          title: Simulating a Marine Ecosystem
           description_audience: ''
           description_short: ''
           description: "##Suggested Pre-Work for this Module\n \n**Science:** Students will simulate a marine life ecosystem in Lessons 1 and 2. To build familiarity with this ecosystem, we recommend this [Ocean Animals Video](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42 minutes). \n\nIn Lesson 2, students will code several sustainable fishing practices. These are a few readings to build some background knowledge and deepen connections to the real world: [Understanding Overfishing](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing) (Monterey Bay Aquarium article), or [Mw,kwa Talks to the Loon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC) (Children's book).\n\n**Computer Science:** In this module, students will learn new coding concepts that might be difficult for new-to-computer science students. If students are not familiar with Code.org’s Sprite Lab we recommend trying [Swimming Fish with Sprite Lab](https://studio.code.org/s/coursee-2022/lessons/3) (55 minutes) for a basic introduction to the tool. \n\nThis module also uses an advanced CS concept called conditional statements. Students learn this concept in a scaffolded way, but some students may benefit from first engaging in this introduction to conditionals unplugged activity: [Conditionals with Cards](https://studio.code.org/s/coursed-2022/lessons/12) (50 minutes).\n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n\n"
@@ -10647,7 +10647,7 @@ en:
               name: Code Your Own Adaptation
           lesson_groups: {}
           name: csc-adaptations-2023
-          title: Modeling Animal Adaptations (2023)
+          title: Modeling Animal Adaptations
           description_audience: ''
           description_short: ''
           description: "##Suggested Pre-Work for this Module\n \n**Science:** Students will simulate several animal adaptations. To build familiarity with adaptations, we recommend this [Living Things Change Video](https://www.youtube.com/watch?v=xDSFlRunlrU&list=PLdG-lk1eEmZnq4ZO2CzERCv6jZkYIHCbR&index=4) (4:36 minutes). \n\n**Computer Science:** In this module students will be working a lot with sprites including changing the location and size of them and initiating behaviors. [CSF Making Sprites](https://studio.code.org/s/coursef-2023/lessons/3) is a great introduction to two concepts at the heart of this all: sprites and behaviors.\n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n\n"
@@ -10707,7 +10707,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: poetry-2023
-          title: Coding with Poetry (2023)
+          title: Coding with Poetry
           description_audience: ''
           description_short: ''
           description: "##Suggested Pre-Work for this Module\n \n**English Language Arts:** To prepare for this module and create some shared understanding of poetry together we recommend starting by reading poetry together: Read a few poems together as a class and practice naming the mood of each poem. Encourage students to share their interpretation, even if it’s different from someone else’s. Make sure that all students are familiar with the structure of a poem before Lesson 2, in which students will write their own poems.\n\n**Computer Science:**  As a warm up to the tool students can add art and animation to a classic poem in this [Poem Art](https://studio.code.org/s/poem-art-2021/lessons/1) (55 minutes) Hour of Code activity!\n\nAdditionally, in this module students will use event blocks to program changes at important lines in the poem. To start building skills with events try [Build a Flappy Game](https://studio.code.org/s/coursec-2023/lessons/12) (60 minutes). \n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n"
@@ -10745,7 +10745,7 @@ en:
               name: Plan Your Interactive Book Cover
           lesson_groups: {}
           name: csc-bookcovers-2023
-          title: Coding Book Covers (2023)
+          title: Coding Book Covers
           description_audience: ''
           description_short: ''
           description: "##Suggested Pre-Work for this Module\n \n**English Language Arts:** Building some familiarity with and background knowledge on book covers, the elements they all share (title, author, illustrations, etc) and design choices will help students focus. Here are two hands on activities to try in your classroom: \n- **Book sort**: Have groups of students organize books into genre piles, based only on the book cover. Students make inferences based on the book cover about what genre a book may fall under.\n- **Cover comparison**: show students multiple covers for the same book. Engage in a discussion about what is different in each cover and evaluation which version is best.\n\n\n**Computer Science:** In this module, students will learn the basics of coding using code.org's Sprite Lab. These activities may be supportive to engage in before starting the module:\n- Introduce students to the idea of **events** with this unplugged activity: [The Big Event](https://studio.code.org/s/course1/lessons/15/levels/1) (15-minute activity). The teacher will press buttons on a paper remote and students will react depending on which button is pressed. \n- [Making Sprites](https://studio.code.org/s/coursef-2023/lessons/3) (50 minutes) is a great self-paced introduction to the basics of coding with sprites.\n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n"
@@ -11123,7 +11123,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: csc-starquilts-2023
-          title: Coding a Geometric Star Quilt (2023)
+          title: Coding a Geometric Star Quilt
           description_audience: ''
           description_short: ''
           description: "##Suggested Pre-Work for this Module\n \n**Math:** Students will be working with shapes and angles in this module. To build familiarity, we recommend playing these active songs [Types of Angles song](https://www.youtube.com/watch?v=kGAGkysDunw&t=1s) (2:47 minutes) and [Angles & Lines](https://www.youtube.com/watch?v=an1tG3upvow) (3:06 minutes). \n\nThese are a few children's books to build some background knowledge and deepen connections to the real world:  \n- [Shota and the Star Quilt](https://www.amazon.com/Shota-Star-Quilt-Folk-Tales/dp/1840890231) Picture book about the tradition of quilting and how traditions can change over time\n- [Rainbow Weavers](https://www.amazon.com/Rainbow-Weaver-Tejedora-del-Arcoiris/dp/0892393742/ref=asc_df_0892393742/?tag=hyprod-20&linkCode=df0&hvadid=312089887152&hvpos=&hvnetw=g&hvrand=526653230527463008&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9033356&hvtargid=pla-522520885864&psc=1) This picture book is about weaving, not quilting, but it could deepen students' understanding of how indigenous traditions evolve.\n- [A Trapezoid is Not a Dinosaur](https://www.mathsthroughstories.org/a-trapezoid-is-not-a-dinosaur.html) by Suzanne Morris \n- [The Greedy Triangle](https://youngmathematicians.edc.org/picture_book/%EF%BB%BF%EF%BB%BFthe-greedy-triangle/) by Marilyn Burns\n- Any of these [Geometry Read Alouds](https://www.k-5mathteachingresources.com/geometry-read-aloud.html)\n\n**Computer Science:** In this module, students will use Code.org's Artist tool. If students are not yet familiar with it, we recommend trying [Intro to Artist lesson](https://studio.code.org/s/artist/lessons/1) (50 minutes) for a basic introduction to the tool. \n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n\n"

@@ -2,8 +2,7 @@
 @import '../../mixins.scss';
 @import './aichat-common.module.scss';
 
-%full-width,
-.full-width {
+%full-width {
   width: 100%;
   box-sizing: border-box;
 }

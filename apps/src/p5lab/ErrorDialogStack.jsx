@@ -4,10 +4,10 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {getCurrentId} from '@cdo/apps/code-studio/initApp/project';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
-import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import msg from '@cdo/locale';
 
