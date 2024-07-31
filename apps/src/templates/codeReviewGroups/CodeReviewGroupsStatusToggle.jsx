@@ -52,6 +52,7 @@ function CodeReviewGroupsStatusToggle({
     <div>
       <div style={styles.toggleAndError}>
         <Toggle
+          id="uitest-code-review-groups-toggle"
           name="enableCodeReviewToggle"
           checked={isToggledOn}
           onChange={toggleEnableCodeReview}
