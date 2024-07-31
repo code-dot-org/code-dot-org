@@ -62,11 +62,15 @@ describe('The DebugConsole component when the console is enabled', () => {
     expect(debugInput()).toBeDefined();
   });
 
-  it('jumps to bottom on componentDidUpdate if log output has changed', () => {
+  it('jumps to bottom on componentDidUpdate if log output has changed', async () => {
     expect(jumpToBottomSpy).not.toHaveBeenCalled();
-    getStore().dispatch(actions.attach(newJSInterpreter()));
+    await React.act(() => {
+      getStore().dispatch(actions.attach(newJSInterpreter()));
+    });
     expect(jumpToBottomSpy).not.toHaveBeenCalled();
-    getStore().dispatch(actions.appendLog({output: 1 + 1}));
+    await React.act(() => {
+      getStore().dispatch(actions.appendLog({output: 1 + 1}));
+    });
     expect(jumpToBottomSpy).toHaveBeenCalledTimes(1);
   });
 
@@ -185,101 +189,117 @@ describe('The DebugConsole component when the console is enabled', () => {
 
     describe('when input originates from code workspace console.logging', () => {
       it('a logged array prints an array with an expander icon', () => {
-        getStore().dispatch(
-          actions.appendLog({
-            output: ['test'],
-            fromConsoleLog: true,
-          })
-        );
+        React.act(() => {
+          getStore().dispatch(
+            actions.appendLog({
+              output: ['test'],
+              fromConsoleLog: true,
+            })
+          );
+        });
         expect(debugOutput().text()).toBe('▶["test"]');
       });
 
       it('a logged string prints a string without an arrow', () => {
-        getStore().dispatch(
-          actions.appendLog({
-            output: 'hello world',
-            fromConsoleLog: true,
-          })
-        );
+        React.act(() => {
+          getStore().dispatch(
+            actions.appendLog({
+              output: 'hello world',
+              fromConsoleLog: true,
+            })
+          );
+        });
         expect(debugOutput().text()).toBe('"hello world"');
       });
 
       it('a logged integer or mathematical operation prints an integer without an arrow', () => {
-        getStore().dispatch(
-          actions.appendLog({
-            output: 1 + 1,
-            fromConsoleLog: true,
-          })
-        );
+        React.act(() => {
+          getStore().dispatch(
+            actions.appendLog({
+              output: 1 + 1,
+              fromConsoleLog: true,
+            })
+          );
+        });
         expect(debugOutput().text()).toBe('2');
       });
 
       it('a logged object prints an object with an expandable arrow', () => {
-        getStore().dispatch(
-          actions.appendLog({
-            output: {foo: 'bar'},
-            fromConsoleLog: true,
-          })
-        );
+        React.act(() => {
+          getStore().dispatch(
+            actions.appendLog({
+              output: {foo: 'bar'},
+              fromConsoleLog: true,
+            })
+          );
+        });
         expect(debugOutput().text()).toBe('▶Object {foo: "bar"}');
       });
     });
 
     describe('when input originates from the command prompt in the debug console', () => {
-      it('the original array is prepended with >, and the interpreted array with an expander icon is prepended with < ', () => {
-        getStore().dispatch(
-          actions.appendLog({
-            input: '["test"]',
-          })
-        );
-        getStore().dispatch(
-          actions.appendLog({
-            output: ['test'],
-          })
-        );
+      it('the original array is prepended with >, and the interpreted array with an expander icon is prepended with < ', async () => {
+        await React.act(() => {
+          getStore().dispatch(
+            actions.appendLog({
+              input: '["test"]',
+            })
+          );
+          getStore().dispatch(
+            actions.appendLog({
+              output: ['test'],
+            })
+          );
+        });
         expect(debugOutput().text()).toBe('> ["test"]< ▶["test"]');
       });
 
-      it('the original string is prepended with >, and the interpreted string is prepended with <', () => {
+      it('the original string is prepended with >, and the interpreted string is prepended with <', async () => {
         var input = 'hello world';
-        getStore().dispatch(
-          actions.appendLog({
-            input: input,
-          })
-        );
-        getStore().dispatch(
-          actions.appendLog({
-            output: input,
-          })
-        );
+        await React.act(() => {
+          getStore().dispatch(
+            actions.appendLog({
+              input: input,
+            })
+          );
+          getStore().dispatch(
+            actions.appendLog({
+              output: input,
+            })
+          );
+        });
         expect(debugOutput().text()).toBe(`> ${input}< "${input}"`);
       });
 
-      it('the original integer or mathematical operation is prepended with >, and the interpreted integer or mathematical operation is prepended with <', () => {
-        getStore().dispatch(
-          actions.appendLog({
-            input: '1 + 1',
-          })
-        );
-        getStore().dispatch(
-          actions.appendLog({
-            output: 1 + 1,
-          })
-        );
+      it('the original integer or mathematical operation is prepended with >, and the interpreted integer or mathematical operation is prepended with <', async () => {
+        await React.act(() => {
+          getStore().dispatch(
+            actions.appendLog({
+              input: '1 + 1',
+            })
+          );
+          getStore().dispatch(
+            actions.appendLog({
+              output: 1 + 1,
+            })
+          );
+        });
         expect(debugOutput().text()).toBe('> 1 + 1< 2');
       });
 
-      it('the original object is prepended with >, and the interpreted object with an expander icon is prepended with <', () => {
-        getStore().dispatch(
-          actions.appendLog({
-            input: "{foo: 'bar'}",
-          })
-        );
-        getStore().dispatch(
-          actions.appendLog({
-            output: {foo: 'bar'},
-          })
-        );
+      it('the original object is prepended with >, and the interpreted object with an expander icon is prepended with <', async () => {
+        await React.act(() => {
+          getStore().dispatch(
+            actions.appendLog({
+              input: "{foo: 'bar'}",
+            })
+          );
+          getStore().dispatch(
+            actions.appendLog({
+              output: {foo: 'bar'},
+            })
+          );
+        });
         expect(debugOutput().text()).toBe(
           '> {foo: \'bar\'}< ▶Object {foo: "bar"}'
         );
@@ -338,24 +358,28 @@ describe('The DebugConsole component when the console is enabled', () => {
       expect(debugOutput().instance().style.backgroundColor).toBe('');
     });
 
-    it('warning debug output will change background color to lightest yellow', () => {
-      getStore().dispatch(actions.appendLog({output: 'test normal text'}));
-      getStore().dispatch(
-        actions.appendLog({output: 'test warning text'}, 'WARNING')
-      );
+    it('warning debug output will change background color to lightest yellow', async () => {
+      await React.act(() => {
+        getStore().dispatch(actions.appendLog({output: 'test normal text'}));
+        getStore().dispatch(
+          actions.appendLog({output: 'test warning text'}, 'WARNING')
+        );
+      });
       expect(debugOutput().instance().style.backgroundColor).toBe(
         'rgb(255, 247, 223)'
       );
     });
 
-    it('error debug output will change background color to lightest red', () => {
-      getStore().dispatch(actions.appendLog({output: 'test normal text'}));
-      getStore().dispatch(
-        actions.appendLog({output: 'test warning text'}, 'WARNING')
-      );
-      getStore().dispatch(
-        actions.appendLog({output: 'test error text'}, 'ERROR')
-      );
+    it('error debug output will change background color to lightest red', async () => {
+      await React.act(() => {
+        getStore().dispatch(actions.appendLog({output: 'test normal text'}));
+        getStore().dispatch(
+          actions.appendLog({output: 'test warning text'}, 'WARNING')
+        );
+        getStore().dispatch(
+          actions.appendLog({output: 'test error text'}, 'ERROR')
+        );
+      });
       expect(debugOutput().instance().style.backgroundColor).toBe(
         'rgb(255, 204, 204)'
       );
