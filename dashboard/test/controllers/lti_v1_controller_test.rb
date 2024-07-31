@@ -478,14 +478,19 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
   test 'auth - given a valid jwt with the audience as an array, redirect to target_link_url' do
     aud_is_array = true
-    jwt = create_valid_jwt(aud_is_array)
+    payload = get_valid_payload(aud_is_array)
+    jwt = create_jwt_and_stub(payload)
+    create_preexisting_user(payload)
+
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :redirect
   end
 
   test 'auth - given a valid jwt, redirect to target_link_url' do
-    aud_is_array = false
-    jwt = create_valid_jwt(aud_is_array)
+    payload = get_valid_payload
+    jwt = create_jwt_and_stub(payload)
+    create_preexisting_user(payload)
+
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :redirect
     # could confirm more things here
@@ -513,16 +518,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   test 'auth - should render the upgrade account page if the LTI has the same user as an instructor' do
     payload = get_valid_payload
     jwt = create_jwt_and_stub(payload)
-
-    user = create :student
-    user.update(lms_landing_opted_out: true)
-    ao = AuthenticationOption.new(
-      user: user,
-      email: Services::Lti.get_claim(payload, :email),
-      credential_type: AuthenticationOption::LTI_V1,
-      authentication_id: Services::Lti::AuthIdGenerator.new(payload).call
-    )
-    ao.save!
+    create_preexisting_user(payload, User::TYPE_STUDENT)
 
     deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
     assert deployment
@@ -535,16 +531,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   test 'auth - should NOT upgrade if student and LTI informs that this is a learner' do
     payload = {**get_valid_payload, Policies::Lti::LTI_ROLES_KEY => [Policies::Lti::CONTEXT_LEARNER_ROLE]}
     jwt = create_jwt_and_stub(payload)
-
-    user = create :student
-    user.update(lms_landing_opted_out: true)
-    ao = AuthenticationOption.new(
-      user: user,
-      email: Services::Lti.get_claim(payload, :email),
-      credential_type: AuthenticationOption::LTI_V1,
-      authentication_id: Services::Lti::AuthIdGenerator.new(payload).call
-    )
-    ao.save!
+    create_preexisting_user(payload, User::TYPE_STUDENT)
 
     deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
     assert deployment
@@ -591,7 +578,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
 
     expected = {
-      lti_provider_name: "platform_name",
+      lti_provider_name: "canvas_cloud",
       new_cta_type: "new",
       user_type: "student",
     }
@@ -944,5 +931,21 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
     assert_response :redirect
+  end
+
+  # Create a user with an auth option matching the given JWT.
+  # Useful for bypassing the landing/linking flow.
+  private def create_preexisting_user(jwt_payload, user_type = User::TYPE_TEACHER)
+    user = user_type == User::TYPE_TEACHER ? create(:teacher) : create(:student)
+    user.update(lms_landing_opted_out: true)
+    ao = AuthenticationOption.new(
+      user: user,
+      email: Services::Lti.get_claim(jwt_payload, :email),
+      credential_type: AuthenticationOption::LTI_V1,
+      authentication_id: Services::Lti::AuthIdGenerator.new(jwt_payload).call
+    )
+    ao.save!
+
+    user
   end
 end
