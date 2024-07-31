@@ -7,17 +7,24 @@
 # This should only be the MAJOR.MINOR, but should otherwise match `python_version` in the Pipfile.
 PYTHON_VERSION = "3.12"
 
-def pipenv_venv_path
-  unless system("which pipenv > /dev/null 2>&1")
-    raise 'pipenv not found. Please install pipenv and try again, see SETUP.md.'
+def get_pipenv_venv_path
+  if `which pipenv` == ''
+    raise 'Tried `which pipenv`: pipenv not found. Please install pipenv and try again, see SETUP.md.'
   end
 
-  stdout, stderr, status = Open3.capture3('pipenv --venv')
-  raise "Failed to get virtual environment path from pipenv, try `pipenv install`? Error: #{stderr}" unless status.success?
+  env = {
+    # Ensure `pipenv` still works when run from deeply nested directories, required for
+    # tests which invoke DashboardHelpers::require_rails_env from dashboard/test/ui.
+    'PIPENV_MAX_DEPTH' => '5',
+  }
+  stdout, stderr, status = Open3.capture3(env, 'pipenv --venv')
+  unless status.success?
+    raise "Failed to get virtual environment path from pipenv, try `pipenv install`? Error: #{stderr}"
+  end
   stdout.strip
 end
 
-venv_path = pipenv_venv_path
+venv_path = get_pipenv_venv_path
 
 # Use the python interpreter from the pipenv virtualenv
 ENV['PYTHON'] = "#{venv_path}/bin/python"
