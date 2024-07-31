@@ -170,7 +170,14 @@ const addSignedOutMetrics = (pageUrl, headerCreateMenu) => {
 
 const addSignedInMetrics = (pageUrl, headerCreateMenu) => {
   const userType = getScriptData('userType');
-  const additionalOptions = {userType: userType, pageUrl: pageUrl};
+  const action = getScriptData('action');
+  const controller = getScriptData('controller');
+  const additionalOptions = {
+    userType: userType,
+    pageUrl: pageUrl,
+    action: action,
+    controller: controller,
+  };
 
   // Log if a header link is clicked
   addClickEventToLinks(
