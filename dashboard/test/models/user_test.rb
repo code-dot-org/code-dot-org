@@ -581,7 +581,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "Creating Teacher with email causes email collision check" do
-    User.expects(:find_by_email_or_hashed_email).times(3)
+    User.expects(:find_by_email_or_hashed_email).times(4)
     create :teacher
   end
 

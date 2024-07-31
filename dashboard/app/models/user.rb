@@ -368,7 +368,7 @@ class User < ApplicationRecord
   def save_show_progress_table_v2
     if email.present?
       user = User.find_by_email_or_hashed_email(email)
-      if teacher?
+      if user&.teacher?
         user.show_progress_table_v2 = true
         user.save!
       end
