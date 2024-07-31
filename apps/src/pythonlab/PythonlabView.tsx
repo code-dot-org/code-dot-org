@@ -103,10 +103,9 @@ const PythonlabView: React.FunctionComponent = () => {
   const onRun = (
     runTests: boolean,
     dispatch: AppDispatch,
-    permissions: string[],
     source: MultiFileSource | undefined
   ) => {
-    handleRunClick(runTests, dispatch, permissions, source);
+    handleRunClick(runTests, dispatch, source);
     // Only send a predict level report if this is a predict level and the predict
     // answer was not locked.
     if (isPredictLevel && !predictAnswerLocked) {
