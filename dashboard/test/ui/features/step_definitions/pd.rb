@@ -67,6 +67,14 @@ Given(/^I delete the program manager, regional partner, teacher, and application
   )
 end
 
+Given(/^I delete the workshop$/) do
+  browser_request(
+    url: '/api/test/delete_workshop',
+    method: 'POST',
+    body: {workshop_id: @workshop_id}
+  )
+end
+
 Given /^there is a facilitator named "([^"]+)" for course "([^"]+)"$/ do |name, course|
   require_rails_env
 
@@ -531,6 +539,8 @@ And(/^I create a workshop for course "([^"]*)" ([a-z]+) by "([^"]*)" with (\d+) 
       enrolled_and_attending_users: number_type == 'people' ? number.to_i : 0
     )
   end
+
+  @workshop_id = workshop.id
 
   # Facilitators
   if number_type == 'facilitators'

@@ -81,6 +81,8 @@ Feature: Professional Learning landing page
     # Sees Workshops table
     And I wait until element "button:contains(Workshop Details)" is visible
 
+    And I delete the workshop
+
   Scenario: Workshop Organizer sees relevant content sections
     Given I am an organizer with started and completed courses
     And I am on "http://studio.code.org/my-professional-learning"
