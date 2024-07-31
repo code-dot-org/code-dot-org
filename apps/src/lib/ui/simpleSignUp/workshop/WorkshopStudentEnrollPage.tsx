@@ -2,16 +2,13 @@ import React from 'react';
 
 import i18n from '@cdo/locale';
 
-import WorkshopExistingAccountCard from './WorkshopExistingAccountCard';
 import WorkshopKeepStudentAccountCard from './WorkshopKeepStudentAccountCard';
+import WorkshopSwitchToTeacherAccountCard from './WorkshopSwitchToTeacherAccountCard';
 import WorkshopWelcomeBanner from './WorkshopWelcomeBanner';
 
 import styles from '../link-account.module.scss';
 
-const WorkshopStudentEnrollPage: React.FunctionComponent<{
-  cancelUrl: string;
-  switchAccountTypeUrl: string;
-}> = ({cancelUrl, switchAccountTypeUrl}) => (
+const WorkshopStudentEnrollPage: React.FunctionComponent = () => (
   <main>
     <div className={styles.contentContainer}>
       <WorkshopWelcomeBanner
@@ -19,10 +16,8 @@ const WorkshopStudentEnrollPage: React.FunctionComponent<{
         desc={i18n.accountNeedTeacherAccountWelcomeBannerHeaderDesc()}
       />
       <div className={styles.cardContainer}>
-        <WorkshopKeepStudentAccountCard cancelUrl={cancelUrl} />
-        <WorkshopExistingAccountCard
-          existingAccountUrl={switchAccountTypeUrl}
-        />
+        <WorkshopKeepStudentAccountCard />
+        <WorkshopSwitchToTeacherAccountCard />
       </div>
     </div>
   </main>

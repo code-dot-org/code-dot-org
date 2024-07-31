@@ -13,31 +13,31 @@ import i18n from '@cdo/locale';
 
 import styles from '../link-account.module.scss';
 
-const WorkshopKeepStudentAccountCard: React.FunctionComponent = () => (
-  <Card data-testid={'keep-student-account-card'}>
+const WorkshopSwitchToTeacherAccountCard: React.FunctionComponent = () => (
+  <Card data-testid={'switch-to-teacher-account-card'}>
     <CardHeader
-      title={i18n.accountKeepStudentAccountCardTitle()}
+      title={i18n.accountSwitchTeacherAccountCardTitle()}
       icon={
         <FontAwesomeV6Icon
           className={classNames(styles.cardIcon, 'fa-2x')}
-          iconName={'child'}
+          iconName={'chalkboard-user'}
         />
       }
     />
     <CardContent className={classNames(styles.cardContent)}>
-      {i18n.accountKeepStudentAccountCardContent()}
+      {i18n.accountSwitchTeacherAccountCardContent()}
     </CardContent>
     <CardActions>
       <LinkButton
         className={styles.button}
         color={buttonColors.black}
         size="m"
-        text={i18n.accountKeepStudentAccountCardButton()}
+        text={i18n.accountSwitchTeacherAccountCardButton()}
         type="secondary"
-        href="/home"
+        href="/users/edit"
       />
     </CardActions>
   </Card>
 );
 
-export default WorkshopKeepStudentAccountCard;
+export default WorkshopSwitchToTeacherAccountCard;
