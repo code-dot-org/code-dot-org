@@ -43,15 +43,16 @@
     "authored_hints": "[{\"hint_class\":null,\"hint_markdown\":\"You can choose a new behavior from the dropdown menu.\\n\\n\\n<xml>\\n<block xmlns=\\\"https://developers.google.com/blockly/xml\\\" type=\\\"gamelab_behaviorPicker\\\" id=\\\"QFwe.vcQr(0o*oW9iIUo\\\">\\n  <field name=\\\"BEHAVIOR\\\">wandering</field>\\n  <field name=\\\"EDIT\\\">Edit</field>\\n</block>\\n</xml>\",\"hint_id\":\"hint1\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e240f21b323b25ca05c8adf5b5d26b0b/game_design_behavior_2024.mp3\"}]",
     "short_instructions": "Try out some sprite behaviors! Press run to see them in action. Try different behaviors if you like. ",
     "validation_code": "if (World.frameCount == 1) {\r\n  addCriteria(function() {\r\n    \r\n    setFailTime(200);\r\n    setDelayTime(200);\r\n    \r\n    return minimumSprites(1); // Check whether or not the student created a sprite.\r\n  }, \"noSprites\");  // Failure message: \"You need to make a sprite.\"\r\n\r\n}\r\ncheck();\r\n",
+    "instructions_icon": "fox",
+    "hint_prompt_attempts_threshold": "1",
+    "preload_asset_list": null,
     "encrypted_examples": [
 
-    ],
-    "instructions_icon": "fox",
-    "preload_asset_list": null,
-    "hint_prompt_attempts_threshold": "1"
+    ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-17T16:35:14.944+00:00\",\"changed\":[\"cloned from \\\"game_design_behavior_2024\\\"\"],\"cloned_from\":\"game_design_behavior_2024\"},{\"changed_at\":\"2024-05-17 16:46:29 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-17T16:35:14.944+00:00\",\"changed\":[\"cloned from \\\"game_design_behavior_2024\\\"\"],\"cloned_from\":\"game_design_behavior_2024\"},{\"changed_at\":\"2024-05-17 16:46:29 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-07-30 18:24:59 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-30 18:55:43 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 1
   }
 }]]></config>
   <blocks>
