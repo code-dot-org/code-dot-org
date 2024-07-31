@@ -54,7 +54,7 @@ class ToneJSPlayer implements AudioPlayer {
 
   constructor(
     bpm = DEFAULT_BPM,
-    private readonly soundCache: SoundCache = new SoundCache(),
+    private readonly soundCache: SoundCache = SoundCache.getInstance(),
     private readonly metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {
     Transport.bpm.value = bpm;
