@@ -98,17 +98,15 @@ var codegen = require('./lib/tools/jsinterpreter/codegen');
 var copyrightStrings;
 
 /**
- * Store experiment parameters.
+ * If the bigPlayspace is enabled, either by experiment or by level property,
+ * then the padding can be configured via query param as well.
  */
-const isBigPlayspaceEnabled = experiments.isEnabledAllowingQueryString(
-  experiments.BIG_PLAYSPACE
-);
 const bigPlaySpacePadding = queryParams('bigPlayspacePadding') || 160;
 
 /**
  * Get the maximum resizable width of the playspace.
  */
-const getMaxResizableVisualizationWidth = () => {
+const getMaxResizableVisualizationWidth = isBigPlayspaceEnabled => {
   return isBigPlayspaceEnabled
     ? Math.min(window.innerHeight - bigPlaySpacePadding, window.innerWidth / 2)
     : 400;
@@ -292,8 +290,13 @@ StudioApp.prototype.configure = function (options) {
   // binding correctly as they pass this function around.
   this.assetUrl = _.bind(this.assetUrl_, this);
 
+  this.isBigPlayspaceEnabled =
+    experiments.isEnabledAllowingQueryString(experiments.BIG_PLAYSPACE) ||
+    options.level.showBigPlayspace;
+
   this.maxVisualizationWidth =
-    options.maxVisualizationWidth || getMaxResizableVisualizationWidth();
+    options.maxVisualizationWidth ||
+    getMaxResizableVisualizationWidth(this.isBigPlayspaceEnabled);
   this.minVisualizationWidth =
     options.minVisualizationWidth || MIN_VISUALIZATION_WIDTH;
 
@@ -1416,13 +1419,15 @@ StudioApp.prototype.onResize = function () {
     onResizeSmallFooter();
   }
 
-  if (isBigPlayspaceEnabled) {
+  if (this.isBigPlayspaceEnabled) {
     // Let's avoid an infinite recursion by making sure this is a genuine resize.
     if (
       window.innerWidth !== this.lastWindowInnerWidth ||
       window.innerHeight !== this.lastWindowInnerHeight
     ) {
-      this.maxVisualizationWidth = getMaxResizableVisualizationWidth();
+      this.maxVisualizationWidth = getMaxResizableVisualizationWidth(
+        this.isBigPlayspaceEnabled
+      );
 
       const visualizationColumn = document.getElementById(
         'visualizationColumn'
@@ -1575,7 +1580,7 @@ StudioApp.prototype.resizeVisualization = function (width, skipFire = false) {
   visualizationColumn.style.maxWidth = newVizWidth + vizSideBorderWidth + 'px';
   visualization.style.maxWidth = newVizWidthString;
   visualization.style.maxHeight = newVizHeightString;
-  if (isBigPlayspaceEnabled) {
+  if (this.isBigPlayspaceEnabled) {
     // Override the max visualization column width.
     visualizationColumn.style.width = visualizationColumn.style.maxWidth;
     // Override the visualization height.

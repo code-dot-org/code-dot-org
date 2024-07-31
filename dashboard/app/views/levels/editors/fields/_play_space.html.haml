@@ -1,0 +1,7 @@
+%h1.control-legend{data: {toggle: "collapse", target: "#play_space"}}
+  Play Space
+
+#play_space.in.collapse
+  %p
+    This feature is experimental and should be manually tested on the designated levels where it is used.
+  = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :show_big_playspace, description: "Show Big Playspace"}
