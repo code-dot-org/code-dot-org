@@ -7617,6 +7617,22 @@ columns:
     default_function:
     collation: utf8mb3_unicode_ci
     comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: cap_state
+    sql_type_metadata: *30
+    'null': true
+    default:
+    default_function:
+    collation: utf8mb3_unicode_ci
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: cap_state_date
+    sql_type_metadata: *4
+    'null': true
+    default:
+    default_function:
+    collation:
+    comment:
   videos:
   - *5
   - *102
@@ -13527,6 +13543,20 @@ indexes:
     unique: false
     columns:
     - studio_person_id
+    lengths: {}
+    orders: {}
+    opclasses: {}
+    where:
+    type:
+    using: :btree
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
+    table: users
+    name: index_users_on_cap_state_and_cap_state_date
+    unique: false
+    columns:
+    - cap_state
+    - cap_state_date
     lengths: {}
     orders: {}
     opclasses: {}

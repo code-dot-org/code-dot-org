@@ -1,6 +1,6 @@
 {
   "pages": {
-    "/home": "curriculum-launch-2024",
+    "/home": "progress-launch",
     "/student-home": "music-lab-launch"
   },
   "banners": {
@@ -43,7 +43,7 @@
       "title": "Progress tracking just leveled up!",
       "body": "Effortlessly monitor student work, provide timely feedback, and simplify grading with our fast, teacher-tested interface. Save time and gain valuable insights into your students' performance, all in one intuitive tool.",
       "buttonText": "Try it now",
-      "buttonUrl": "",
+      "buttonUrl": "/teacher_dashboard/sections/first_section_progress",
       "buttonId": "progress-launch"
     }
   }
