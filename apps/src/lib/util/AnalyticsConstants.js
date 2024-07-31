@@ -318,7 +318,7 @@ const EVENTS = {
   SIGNED_IN_USER_CLICKS_CREATE_DROPDOWN:
     'Signed In User Clicks Create Dropdown',
   SIGNED_IN_USER_SELECTS_CREATE_DROPDOWN_OPTION:
-    'Signed In Signed In User Selects Create Dropdown Option',
+    'Signed In User Selects Create Dropdown Option',
 
   // Projects
   RUN_BUTTON_PRESSED_SIGNED_OUT:
