@@ -1197,6 +1197,7 @@ export class WorkshopForm extends React.Component {
                         data-toggle="dropdown"
                         aria-haspopup={true}
                         aria-label="pl Topics dropdown"
+                        disabled={this.props.readOnly}
                       >
                         {this.state.course_offerings.length > 0 && (
                           <FontAwesome
