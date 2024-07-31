@@ -67,74 +67,78 @@ class Unit < ApplicationRecord
   has_many :unit_groups, through: :unit_group_units
   has_one :course_version, as: :content_root, dependent: :destroy
 
-  scope :with_associated_models, lambda do
-    includes(
-      [
-        {
-          script_levels: [
-            {
-              levels: [
-                :concepts,
-                :game,
-                :level_concept_difficulty,
-                :levels_child_levels
-              ]
-            },
-            :lesson,
-            :callouts
-          ]
-        },
-        :lesson_groups,
-        :resources,
-        :student_resources,
-        {
-          lessons: [
-            :lesson_activities,
-            {script_levels: [:levels]}
-          ]
-        },
-        {
-          unit_group_units: :unit_group
-        },
-        {
-          course_version: {
-            course_offering: :course_versions
+  scope(
+    :with_associated_models, lambda do
+      includes(
+        [
+          {
+            script_levels: [
+              {
+                levels: [
+                  :concepts,
+                  :game,
+                  :level_concept_difficulty,
+                  :levels_child_levels
+                ]
+              },
+              :lesson,
+              :callouts
+            ]
+          },
+          :lesson_groups,
+          :resources,
+          :student_resources,
+          {
+            lessons: [
+              :lesson_activities,
+              {script_levels: [:levels]}
+            ]
+          },
+          {
+            unit_group_units: :unit_group
+          },
+          {
+            course_version: {
+              course_offering: :course_versions
+            }
           }
-        }
-      ]
-    )
-  end
+        ]
+      )
+    end
+  )
 
   # The set of models which may be touched by ScriptSeed
-  scope :with_seed_models, lambda do
-    includes(
-      [
-        {
-          unit_group_units: {
-            unit_group: :course_version
-          }
-        },
-        :course_version,
-        :lesson_groups,
-        {
-          lessons: [
-            {lesson_activities: :activity_sections},
-            :resources,
-            :vocabularies,
-            :programming_expressions,
-            :objectives,
-            {rubric: {learning_goals: :learning_goal_evidence_levels}},
-            :standards,
-            :opportunity_standards
-          ]
-        },
-        :script_levels,
-        :levels,
-        :resources,
-        :student_resources
-      ]
-    )
-  end
+  scope(
+    :with_seed_models, lambda do
+      includes(
+        [
+          {
+            unit_group_units: {
+              unit_group: :course_version
+            }
+          },
+          :course_version,
+          :lesson_groups,
+          {
+            lessons: [
+              {lesson_activities: :activity_sections},
+              :resources,
+              :vocabularies,
+              :programming_expressions,
+              :objectives,
+              {rubric: {learning_goals: :learning_goal_evidence_levels}},
+              :standards,
+              :opportunity_standards
+            ]
+          },
+          :script_levels,
+          :levels,
+          :resources,
+          :student_resources
+        ]
+      )
+    end
+  )
 
   attr_accessor :skip_name_format_validation
 
