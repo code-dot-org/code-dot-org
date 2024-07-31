@@ -267,6 +267,8 @@ Resources:
         - arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess
 
 # Console & CLI Roles
+# The term 'FullAccess' means the role has the highest access for it's type, not
+# full access to all resources. It's in comparison to similar 'ReadOnly' roles.
 
 <%
 roles = {
@@ -335,6 +337,13 @@ roles = {
     GoogleIdsSSMParameter: 'BillingGoogleIDs',
     ManagedPolicyArns: [
       'arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess',
+    ]
+  },
+  ProductFullAccessRole: {
+    RoleName: 'Product_FullAccess',
+    GoogleIdsSSMParameter: 'ProductGoogleIDs',
+    ManagedPolicyArns: [
+      '!Ref BedrockKnowledgeBaseInvocationPolicy'
     ]
   }
 }
@@ -695,6 +704,29 @@ roles.each do |name, config| %>
             Resource: 
               - !Sub "arn:aws:s3:::aws-athena-query-results-${AWS::AccountId}-${AWS::Region}/*"
               - !Sub "arn:aws:s3:::aws-athena-query-results-${AWS::AccountId}-${AWS::Region}"
+  
+  ProductGoogleIDs:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /IAM/ProductGoogleIDs
+      Type: StringList
+      Value: initial,value
+      Description: List of Google IDs of people being granted product access.
+  
+  BedrockKnowledgeBaseInvocationPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: BedrockKnowledgeBaseInvocationPolicy
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - bedrock:InvokeModel
+              - bedrock:Retrieve
+              - bedrock:RetrieveAndGenerate
+            Resource:
+              - !Sub 'arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:knowledge-base/*'
 
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack
