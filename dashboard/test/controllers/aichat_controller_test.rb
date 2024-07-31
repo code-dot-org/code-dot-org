@@ -33,6 +33,7 @@ class AichatControllerTest < ActionController::TestCase
       newChatEvent: {timestamp: Time.now.to_i},
       aichatContext: @default_aichat_context
     }
+    @missing_aichat_context_params = @valid_params_log_chat_event.except(:aichatContext)
   end
 
   setup do
@@ -41,6 +42,7 @@ class AichatControllerTest < ActionController::TestCase
     @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
   end
 
+  # chat_completion tests
   test_user_gets_response_for :chat_completion,
     name: "student_no_access_chat_completion_test",
     user: :student,
@@ -49,18 +51,6 @@ class AichatControllerTest < ActionController::TestCase
 
   test_user_gets_response_for :chat_completion,
     name: "teacher_no_access_chat_completion_test",
-    user: :teacher,
-    method: :post,
-    response: :forbidden
-
-  test_user_gets_response_for :log_chat_event,
-    name: "student_no_access_log_chat_event_test",
-    user: :student,
-    method: :post,
-    response: :forbidden
-
-  test_user_gets_response_for :log_chat_event,
-    name: "teacher_no_access_log_chat_event_test",
     user: :teacher,
     method: :post,
     response: :forbidden
@@ -74,18 +64,6 @@ class AichatControllerTest < ActionController::TestCase
   test 'pilot student has access to chat_completion test' do
     sign_in(@genai_pilot_student)
     post :chat_completion, params: @valid_params_chat_completion, as: :json
-    assert_response :success
-  end
-
-  test 'pilot teacher has access to log_chat_event test' do
-    sign_in(@genai_pilot_teacher)
-    post :log_chat_event, params: @valid_params_log_chat_event, as: :json
-    assert_response :success
-  end
-
-  test 'pilot student has access to log_chat_event test' do
-    sign_in(@genai_pilot_student)
-    post :log_chat_event, params: @valid_params_log_chat_event, as: :json
     assert_response :success
   end
 
@@ -141,5 +119,47 @@ class AichatControllerTest < ActionController::TestCase
     sign_in(@genai_pilot_teacher)
     post :chat_completion, params: @valid_params_chat_completion, as: :json
     assert_response :forbidden
+  end
+
+  # log_chat_event tests
+  test_user_gets_response_for :log_chat_event,
+    name: "student_no_access_log_chat_event_test",
+    user: :student,
+    method: :post,
+    response: :forbidden
+
+  test_user_gets_response_for :log_chat_event,
+    name: "teacher_no_access_log_chat_event_test",
+    user: :teacher,
+    method: :post,
+    response: :forbidden
+
+  test 'pilot teacher has access to log_chat_event test' do
+    sign_in(@genai_pilot_teacher)
+    post :log_chat_event, params: @valid_params_log_chat_event, as: :json
+    assert_response :success
+  end
+
+  test 'pilot student has access to log_chat_event test' do
+    sign_in(@genai_pilot_student)
+    post :log_chat_event, params: @valid_params_log_chat_event, as: :json
+    assert_response :success
+  end
+
+  test 'Bad request if missing param for log_chat_event' do
+    sign_in(@genai_pilot_teacher)
+    post :log_chat_event, params: @missing_aichat_context_params, as: :json
+    assert_response :bad_request
+  end
+
+  test 'log_chat_event logs successfully to AichatEvents table' do
+    sign_in(@genai_pilot_student)
+    post :log_chat_event, params: @valid_params_log_chat_event, as: :json
+
+    assert_response :success
+    assert_equal json_response.keys, ['chat_event_id', 'chat_event']
+    session = AichatEvent.find(json_response['chat_event_id'])
+    stored_message = JSON.parse(session.aichat_event)
+    assert_equal stored_message['timestamp'], @valid_params_log_chat_event[:newChatEvent][:timestamp]
   end
 end
