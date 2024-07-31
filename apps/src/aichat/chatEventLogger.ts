@@ -13,7 +13,7 @@ export default class ChatEventLogger {
 
   private static _instance: ChatEventLogger;
 
-  constructor() {
+  private constructor() {
     this.chatEventsQueue = [];
     this.sendingChatEventInProgress = false;
   }
