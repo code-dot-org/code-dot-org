@@ -451,6 +451,11 @@ td {
   text-wrap: pretty;
 }
 
+/* Removes border from an element */
+.no-border {
+  border: none !important;
+}
+
 /* Styles for the "OR" divider line between paragraphs
   - see code.org/afe for an example */
 .or-divider-line {
