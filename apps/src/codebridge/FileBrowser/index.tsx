@@ -282,6 +282,39 @@ export const FileBrowser = React.memo(() => {
     setFileType,
   } = useCodebridgeContext();
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+  const dialogControl = useContext(DialogContext);
+
+  // Check if the filename is already in use in the given folder.
+  // If it is, alert the user and return true, otherwise return false.
+  const checkForDuplicateFilename = useMemo(
+    () =>
+      (
+        fileName: string,
+        folderId: string,
+        projectFiles: Record<string, ProjectFile>
+      ) => {
+        let message = null;
+        const existingFile = Object.values(projectFiles).find(
+          f => f.name === fileName && f.folderId === folderId
+        );
+        if (existingFile) {
+          message = codebridgeI18n.duplicateFileError({fileName});
+          if (
+            existingFile.type === ProjectFileType.SUPPORT ||
+            existingFile.type === ProjectFileType.VALIDATION
+          ) {
+            message = codebridgeI18n.duplicateSupportFileError({fileName});
+          }
+        }
+        if (message) {
+          dialogControl?.showDialog(DialogType.GenericAlert, () => {}, message);
+          return true;
+        } else {
+          return false;
+        }
+      },
+    [dialogControl]
+  );
 
   const newFolderPrompt: FilesComponentProps['newFolderPrompt'] = useMemo(
     () =>
@@ -297,13 +330,17 @@ export const FileBrowser = React.memo(() => {
           f => f.name === folderName && f.parentId === parentId
         );
         if (existingFolder) {
-          alert(codebridgeI18n.folderExistsError());
+          dialogControl?.showDialog(
+            DialogType.GenericAlert,
+            () => {},
+            codebridgeI18n.folderExistsError()
+          );
           return;
         }
 
         newFolder({parentId, folderName, folderId});
       },
-    [newFolder, project.folders]
+    [newFolder, project.folders, dialogControl]
   );
 
   const downloadFile: FilesComponentProps['downloadFile'] = useMemo(
@@ -331,7 +368,11 @@ export const FileBrowser = React.memo(() => {
         /* eslint-disable-next-line */
         const [_, extension] = fileName.split('.');
         if (!extension) {
-          window.alert(codebridgeI18n.noFileExtensionError());
+          dialogControl?.showDialog(
+            DialogType.GenericAlert,
+            () => {},
+            codebridgeI18n.noFileExtensionError()
+          );
           return;
         }
 
@@ -342,7 +383,7 @@ export const FileBrowser = React.memo(() => {
           folderId,
         });
       },
-    [newFile, project.files]
+    [newFile, project.files, checkForDuplicateFilename, dialogControl]
   );
 
   const moveFilePrompt: FilesComponentProps['moveFilePrompt'] = useMemo(
@@ -364,10 +405,20 @@ export const FileBrowser = React.memo(() => {
 
         moveFile(fileId, folderId);
       } catch (e) {
-        window.alert(getErrorMessage(e));
+        dialogControl?.showDialog(
+          DialogType.GenericAlert,
+          () => {},
+          getErrorMessage(e)
+        );
       }
     },
-    [moveFile, project.files, project.folders]
+    [
+      moveFile,
+      project.files,
+      project.folders,
+      checkForDuplicateFilename,
+      dialogControl,
+    ]
   );
 
   const renameFilePrompt: FilesComponentProps['renameFilePrompt'] = useMemo(
@@ -384,36 +435,8 @@ export const FileBrowser = React.memo(() => {
 
       renameFile(fileId, newName);
     },
-    [renameFile, project.files]
+    [renameFile, project.files, checkForDuplicateFilename]
   );
-
-  // Check if the filename is already in use in the given folder.
-  // If it is, alert the user and return true, otherwise return false.
-  const checkForDuplicateFilename = (
-    fileName: string,
-    folderId: string,
-    projectFiles: Record<string, ProjectFile>
-  ) => {
-    let message = null;
-    const existingFile = Object.values(projectFiles).find(
-      f => f.name === fileName && f.folderId === folderId
-    );
-    if (existingFile) {
-      message = codebridgeI18n.duplicateFileError({fileName});
-      if (
-        existingFile.type === ProjectFileType.SUPPORT ||
-        existingFile.type === ProjectFileType.VALIDATION
-      ) {
-        message = codebridgeI18n.duplicateSupportFileError({fileName});
-      }
-    }
-    if (message) {
-      alert(message);
-      return true;
-    } else {
-      return false;
-    }
-  };
 
   const renameFolderPrompt: FilesComponentProps['renameFolderPrompt'] = useMemo(
     () => folderId => {
@@ -427,13 +450,17 @@ export const FileBrowser = React.memo(() => {
         f => f.name === newName && f.parentId === folder.parentId
       );
       if (existingFolder) {
-        alert(codebridgeI18n.folderExistsError());
+        dialogControl?.showDialog(
+          DialogType.GenericAlert,
+          () => {},
+          codebridgeI18n.folderExistsError()
+        );
         return;
       }
 
       renameFolder(folder.id, newName);
     },
-    [renameFolder, project.folders]
+    [renameFolder, project.folders, dialogControl]
   );
 
   return (

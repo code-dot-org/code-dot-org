@@ -1,5 +1,6 @@
 import React, {useCallback, useState} from 'react';
 
+import GenericAlertDialog from './GenericAlertDialog';
 import GenericConfirmationDialog from './GenericConfirmationDialog';
 import SkipDialog from './SkipDialog';
 import StartOverDialog from './StartOverDialog';
@@ -14,6 +15,7 @@ export enum DialogType {
   StartOver = 'StartOver',
   Skip = 'Skip',
   GenericConfirmation = 'GenericConfirmation',
+  GenericAlert = 'GenericAlert',
 }
 
 export interface BaseDialogProps {
@@ -30,6 +32,7 @@ const DialogViews: {
   [DialogType.StartOver]: StartOverDialog,
   [DialogType.Skip]: SkipDialog,
   [DialogType.GenericConfirmation]: GenericConfirmationDialog,
+  [DialogType.GenericAlert]: GenericAlertDialog,
 };
 
 interface DialogManagerProps {
