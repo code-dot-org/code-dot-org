@@ -1654,7 +1654,11 @@ exports.install = function (blockly, blockInstallOptions) {
     return {
       helpUrl: '',
       init: function () {
-        this.setHSV(184, 1.0, 0.74);
+        Blockly.cdoUtils.handleColorAndStyle(
+          this,
+          BlockColors.DEFAULT,
+          BlockStyles.DEFAULT
+        );
         var dropdown;
         var input = this.appendDummyInput();
         input.appendField(msg.drawShape());
