@@ -228,7 +228,7 @@ describe('LessonEditor', () => {
     expect(wrapper.find('.add-activity-section').length).to.equal(4);
   });
 
-  it('can save and keep editing', () => {
+  it('can save and keep editing', async () => {
     const wrapper = createWrapper({});
     const lessonEditor = wrapper.find('LessonEditor');
 
@@ -253,7 +253,9 @@ describe('LessonEditor', () => {
 
     clock = sinon.useFakeTimers(new Date('2020-12-01'));
     const expectedLastSaved = Date.now();
-    server.respond();
+    await React.act(() => {
+      server.respond();
+    });
     clock.tick(50);
 
     lessonEditor.update();
@@ -266,7 +268,7 @@ describe('LessonEditor', () => {
     server.restore();
   });
 
-  it('shows error when save and keep editing has error saving', () => {
+  it('shows error when save and keep editing has error saving', async () => {
     const wrapper = createWrapper({});
     const lessonEditor = wrapper.find('LessonEditor');
 
@@ -289,7 +291,9 @@ describe('LessonEditor', () => {
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(lessonEditor.state().isSaving).to.equal(true);
 
-    server.respond();
+    await React.act(() => {
+      server.respond();
+    });
     lessonEditor.update();
     expect(utils.navigateToHref).to.not.have.been.called;
     expect(lessonEditor.state().isSaving).to.equal(false);
@@ -365,7 +369,7 @@ describe('LessonEditor', () => {
     server.restore();
   });
 
-  it('shows error when save and keep editing has error saving', () => {
+  it('shows error when save and keep editing has error saving', async () => {
     const wrapper = createWrapper({});
     const lessonEditor = wrapper.find('LessonEditor');
 
@@ -387,7 +391,9 @@ describe('LessonEditor', () => {
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
     expect(lessonEditor.state().isSaving).to.equal(true);
 
-    server.respond();
+    await React.act(() => {
+      server.respond();
+    });
 
     lessonEditor.update();
     expect(utils.navigateToHref).to.not.have.been.called;
