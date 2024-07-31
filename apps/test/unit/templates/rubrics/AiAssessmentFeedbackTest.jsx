@@ -13,6 +13,7 @@ describe('AiAssessmentFeedback', () => {
   };
   const props = {
     aiEvalInfo: mockAiInfo,
+    aiFeedbackId: 1,
   };
 
   const defaultStatus = -1;
