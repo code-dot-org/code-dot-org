@@ -7,7 +7,7 @@ import {
   ThunkDispatch,
 } from '@reduxjs/toolkit';
 
-import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatItems/types';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -60,7 +60,7 @@ type MessageLocation = {
 export interface AichatState {
   // Content from previous chat sessions that we track purely for visibility to the user
   // and do not send to the model as history.
-  chatItemsPast: ChatEvent[];
+  chatItemsPast: ChatItem[];
   // Items in the current chat session that we want to provide as history to the model.
   chatItemsCurrent: ChatItem[];
   // The user message currently awaiting response from the model (if any).
@@ -68,7 +68,7 @@ export interface AichatState {
   // Denotes whether we are waiting for a chat completion response from the backend
   isWaitingForChatResponse: boolean;
   // Student events viewed by a teacher user in chat workspace
-  studentChatHistory: ChatEvent[];
+  studentChatHistory: AichatEvent[];
   // Denotes whether we should show the warning modal
   aichatEventsToLog: AichatEvent[];
   showWarningModal: boolean;
