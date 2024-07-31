@@ -285,7 +285,9 @@ describe('ProjectManager', () => {
     assert.isTrue(sourcesStore.save.notCalled);
 
     // Restore a previous version.
-    const versionedSources = await projectManager.restore('fakeVersionId');
+    const versionedSources = await projectManager.restoreSources(
+      'fakeVersionId'
+    );
     expect(versionedSources).to.deep.equal(FAKE_MODIFIED_SOURCE);
     assert.isTrue(sourcesStore.restore.calledOnce);
 
@@ -309,7 +311,9 @@ describe('ProjectManager', () => {
     const {sources} = await projectManager.load();
     expect(sources).to.deep.equal(FAKE_SOURCE);
     projectManager.save(UPDATED_SOURCE);
-    const versionedSources = await projectManager.restore('fakeVersionId');
+    const versionedSources = await projectManager.restoreSources(
+      'fakeVersionId'
+    );
     expect(versionedSources).to.deep.equal(FAKE_MODIFIED_SOURCE);
     assert.isTrue(sourcesStore.restore.calledOnce);
     assert.isTrue(sourcesStore.save.calledOnce);

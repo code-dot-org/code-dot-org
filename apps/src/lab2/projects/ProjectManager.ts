@@ -79,7 +79,7 @@ export default class ProjectManager {
     if (this.destroyed) {
       this.throwErrorIfDestroyed('load');
     }
-    const sources = await this.loadHelper();
+    const sources = await this.loadSources();
 
     let channel: Channel;
     try {
@@ -92,7 +92,9 @@ export default class ProjectManager {
     return {sources, channel};
   }
 
-  async restore(versionId: string): Promise<ProjectSources | undefined> {
+  // Restore the given version of the project. This will call restore on the sources store
+  // and then load and return the updated sources.
+  async restoreSources(versionId: string): Promise<ProjectSources | undefined> {
     if (this.destroyed) {
       this.throwErrorIfDestroyed('restore');
     }
@@ -105,7 +107,7 @@ export default class ProjectManager {
     }
     // Now that we've restored to the previous version, loading sources
     // will load the newly-restored version.
-    const sources = await this.loadHelper();
+    const sources = await this.loadSources();
     return sources;
   }
 
@@ -493,11 +495,20 @@ export default class ProjectManager {
     }
   }
 
-  private async loadHelper(versionId?: string, isPreview?: boolean) {
+  /**
+   * Load the sources for this project. If a versionId is provided, load that version, otherwise
+   * load the latest version.
+   * @param versionId Optional version id to load. If not provided, the latest version is loaded.
+   * @param isPreview Optional boolean to indicate if we are previewing a project. If we are previewing,
+   * we won't store the source as lastSource.
+   * @returns sources for the project.
+   */
+  private async loadSources(versionId?: string, isPreview?: boolean) {
     let sources: ProjectSources | undefined;
     try {
       sources = await this.sourcesStore.load(this.channelId, versionId);
-      // If we are previewing a project, we don't want to save the source.
+      // If we are previewing a project, we don't want to store the source as lastSource.
+      // lastSource is used to decide if we have unsaved changes.
       if (!isPreview) {
         this.lastSource = JSON.stringify(sources);
       }

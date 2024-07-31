@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -28,32 +28,35 @@ const VersionHistoryDropdown: React.FunctionComponent<
   VersionHistoryDropdownProps
 > = ({versionList, updatedSourceCallback, startSource, closeDropdown}) => {
   const dispatch = useAppDispatch();
-  const restoreVersion = (version: ProjectVersion) => {
-    const projectManager = Lab2Registry.getInstance().getProjectManager();
-    if (projectManager) {
-      projectManager.restore(version.versionId).then(sources => {
-        if (sources) {
-          dispatch(setProjectSource(sources));
-          if (updatedSourceCallback) {
-            updatedSourceCallback(sources);
+  const restoreVersion = useCallback(
+    (version: ProjectVersion) => {
+      const projectManager = Lab2Registry.getInstance().getProjectManager();
+      if (projectManager) {
+        projectManager.restoreSources(version.versionId).then(sources => {
+          if (sources) {
+            dispatch(setProjectSource(sources));
+            if (updatedSourceCallback) {
+              updatedSourceCallback(sources);
+            }
+          } else {
+            // TODO: handle no source
+            console.error('no source found!');
           }
-        } else {
-          // TODO: handle no source
-          console.error('no source found!');
-        }
-        closeDropdown();
-      });
-    }
-  };
+          closeDropdown();
+        });
+      }
+    },
+    [dispatch, updatedSourceCallback, closeDropdown]
+  );
 
-  const startOver = () => {
+  const startOver = useCallback(() => {
     // TODO: confirm
     dispatch(setAndSaveProjectSource(startSource));
     if (updatedSourceCallback) {
       updatedSourceCallback(startSource);
     }
     closeDropdown();
-  };
+  }, [dispatch, startSource, updatedSourceCallback, closeDropdown]);
 
   const parseDate = (date: string) => {
     const parsedDate = new Date(date);
@@ -84,10 +87,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
   return (
     <div className={moduleStyles.versionHistoryList}>
       {versionList.map(version => (
-        <div
-          key={version.lastModified}
-          className={moduleStyles.versionHistoryRow}
-        >
+        <div key={version.versionId} className={moduleStyles.versionHistoryRow}>
           <div>{parseDate(version.lastModified)}</div>
           <div className={moduleStyles.versionOptions}>
             {renderVersionOptions(version)}
