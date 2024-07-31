@@ -13,6 +13,8 @@ export type AichatInteractionStatusValue = string;
 export interface ChatEvent {
   // UTC timestamp in milliseconds
   timestamp: number;
+  // This field is optional but when it is defined, it must be set to `true`.
+  // This allows the chat event to be visible by default without having to add an extra field.
   hideForParticipants?: true;
   descriptionKey?: keyof typeof ChatEventDescriptions;
 }
