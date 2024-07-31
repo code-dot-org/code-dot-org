@@ -588,14 +588,12 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'auth - should create teacher account if user is both teacher and student' do
-    DCDO.stubs(:get)
-    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
     payload = {**get_valid_payload, Policies::Lti::LTI_ROLES_KEY => [Policies::Lti::CONTEXT_LEARNER_ROLE, Policies::Lti::TEACHER_ROLES.first]}
     jwt = create_jwt_and_stub(payload)
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
 
     expected = {
-      lti_provider_name: "platform_name",
+      lti_provider_name: "canvas_cloud",
       new_cta_type: "new",
       user_type: "teacher",
     }
