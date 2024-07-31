@@ -8,7 +8,7 @@ require_relative '../../../dashboard/config/environment'
 # @see https://github.com/code-dot-org/code-dot-org/pull/52244
 CAP_RELEASE_DATE = DateTime.parse('2023-06-09')
 
-users = User.where(current_sign_in_at: CAP_RELEASE_DATE..)
+users = User.with_deleted.where(current_sign_in_at: CAP_RELEASE_DATE..)
 total_updated = 0
 
 progress_bar_title = proc {|num_updates = 0| "Processed[%c/%C]: |%W| Updated: #{total_updated += num_updates} %a"}
