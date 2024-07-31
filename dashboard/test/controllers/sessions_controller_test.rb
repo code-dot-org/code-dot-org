@@ -304,13 +304,6 @@ class SessionsControllerTest < ActionController::TestCase
       assert_template partial: 'devise/sessions/_login_lti_account_linking'
     end
 
-    test 'renders normal login page if the account linking DCDO flag is disabled' do
-      Policies::Lti.stubs(:lti_registration_in_progress?).returns(true)
-
-      get user_session_path
-      assert_template partial: 'devise/sessions/_login'
-    end
-
     test 'renders normal login page for non-LTI/non-partial registrations' do
       DCDO.stubs(:get)
       Policies::Lti.stubs(:lti_registration_in_progress?).returns(false)
