@@ -18,23 +18,24 @@ import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
 import {postAichatCompletionMessage} from '../aichatApi';
+import ChatEventLogger from '../chatEventLogger';
 import {saveTypeToAnalyticsEvent} from '../constants';
 import {
-  AiCustomizations,
   AichatContext,
+  AiCustomizations,
   ChatEvent,
+  ChatMessage,
   FieldVisibilities,
   LevelAichatSettings,
   ModelCardInfo,
+  ModelUpdate,
+  Notification,
   SaveType,
   ViewMode,
   Visibility,
-  ChatMessage,
   isModelUpdate,
   isNotification,
   isChatMessage,
-  ModelUpdate,
-  Notification,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -50,6 +51,7 @@ import {
 } from './utils';
 
 const messageListKeys = ['chatEventsPast', 'chatEventsCurrent'] as const;
+const PROFANITY_DETECTION = 'Profanity detected';
 type MessageLocation = {
   index: number;
   messageListKey: (typeof messageListKeys)[number];
@@ -209,13 +211,24 @@ export const onSaveComplete =
 
     changedProperties.forEach(property => {
       const typedProperty = property as keyof AiCustomizations;
+      const modelUpdate = {
+        id: getNewMessageId(),
+        updatedField: typedProperty,
+        updatedValue: currentAiCustomizations[typedProperty],
+        timestamp: Date.now(),
+      };
+      dispatch(addModelUpdate(modelUpdate));
+      const {updatedField, updatedValue} = modelUpdate;
+      // Only log updated value for temperature and selected model id - free text values are not logged.
+      const updatedValueToLog =
+        updatedField === 'temperature' || updatedField === 'selectedModelId'
+          ? updatedValue
+          : 'n/a';
       dispatch(
-        addModelUpdate({
-          id: getNewMessageId(),
-          updatedField: typedProperty,
-          updatedValue: currentAiCustomizations[typedProperty],
-          timestamp: Date.now(),
-        })
+        logChatEvent({
+          ...modelUpdate,
+          updatedValue: updatedValueToLog,
+        } as ChatEvent)
       );
 
       // Report to analytics the changed value for only selected model id and temperature properties.
@@ -286,7 +299,7 @@ export const onSaveFail =
             flaggedProperties = 'retrieval contexts';
           }
           if (body?.details?.profaneWords?.length > 0 && flaggedProperties) {
-            errorMessage = `Profanity detected in the ${flaggedProperties} and cannot be updated. Please try again.`;
+            errorMessage = `${PROFANITY_DETECTION} in the ${flaggedProperties} and cannot be updated. Please try again.`;
           }
           dispatchSaveFailNotification(dispatch, errorMessage);
         })
@@ -305,14 +318,19 @@ const dispatchSaveFailNotification = (
   dispatch: AppDispatch,
   errorMessage: string
 ) => {
-  dispatch(
-    addNotification({
-      id: getNewMessageId(),
-      text: errorMessage,
-      notificationType: 'error',
-      timestamp: Date.now(),
-    })
-  );
+  const errorNotification = {
+    id: getNewMessageId(),
+    text: errorMessage,
+    notificationType: 'error',
+    timestamp: Date.now(),
+  };
+  dispatch(addNotification(errorNotification as Notification));
+
+  // Log notification if save failure due to profanity in system prompt or retrieval contexts.
+  const isProfanitySaveFailError = errorMessage.includes(PROFANITY_DETECTION);
+  if (isProfanitySaveFailError) {
+    dispatch(logChatEvent(errorNotification));
+  }
   // Notify the UI that the save is complete.
   dispatch(endSave());
 };
@@ -362,15 +380,18 @@ export const submitChatContents = createAsyncThunk(
         .logError('Error in aichat completion request', error as Error);
 
       thunkAPI.dispatch(clearChatMessagePending());
-      thunkAPI.dispatch(addChatMessage({...newMessage, status: Status.ERROR}));
+      const erroredUserChatMessage = {...newMessage, status: Status.ERROR};
+      thunkAPI.dispatch(addChatMessage(erroredUserChatMessage));
+      thunkAPI.dispatch(logChatEvent(erroredUserChatMessage));
 
-      const assistantChatMessage: ChatMessage = {
+      const erroredAssistantChatMessage: ChatMessage = {
         role: Role.ASSISTANT,
         status: Status.ERROR,
         chatMessageText: 'error',
         timestamp: Date.now(),
       };
-      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
+      thunkAPI.dispatch(addChatMessage(erroredAssistantChatMessage));
+      thunkAPI.dispatch(logChatEvent(erroredAssistantChatMessage));
 
       return;
     }
@@ -395,9 +416,24 @@ export const submitChatContents = createAsyncThunk(
     }
 
     thunkAPI.dispatch(clearChatMessagePending());
-    chatApiResponse.messages.forEach(message =>
-      thunkAPI.dispatch(addChatMessage({...message, timestamp: Date.now()}))
-    );
+    chatApiResponse.messages.forEach(message => {
+      const successfulChatMessage = {...message, timestamp: Date.now()};
+      thunkAPI.dispatch(addChatMessage(successfulChatMessage));
+      thunkAPI.dispatch(logChatEvent(successfulChatMessage));
+    });
+  }
+);
+
+export const logChatEvent = createAsyncThunk(
+  'aichat/logChatEvent',
+  async (chatEvent: ChatEvent, thunkAPI) => {
+    const state = thunkAPI.getState() as RootState;
+    const aichatContext: AichatContext = {
+      currentLevelId: parseInt(state.progress.currentLevelId || ''),
+      scriptId: state.progress.scriptId,
+      channelId: state.lab.channel?.id,
+    };
+    ChatEventLogger.getInstance().logChatEvent(chatEvent, aichatContext);
   }
 );
 
