@@ -39,7 +39,6 @@ import {getNewMessageId} from '../redux/utils';
 import {
   AichatLevelProperties,
   ChatEvent,
-  ChatEventDescriptions,
   Notification,
   ViewMode,
 } from '../types';
@@ -118,7 +117,8 @@ const AichatView: React.FunctionComponent = () => {
     dispatch(
       logChatEvent({
         timestamp: Date.now(),
-        description: ChatEventDescriptions.LOAD_LEVEL,
+        descriptionKey: 'LOAD_LEVEL',
+        hideForParticipants: true,
       } as ChatEvent)
     );
   }, [dispatch, initialSources, levelAichatSettings]);
@@ -195,7 +195,8 @@ const AichatView: React.FunctionComponent = () => {
     dispatch(
       logChatEvent({
         timestamp: Date.now(),
-        description: ChatEventDescriptions.CLEAR_CHAT,
+        descriptionKey: 'CLEAR_CHAT',
+        hideForParticipants: true,
       } as ChatEvent)
     );
     analyticsReporter.sendEvent(
