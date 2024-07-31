@@ -5,13 +5,12 @@ import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 
 import trackEvent from '../util/trackEvent';
-
-import Button from './Button';
 
 export const NotificationType = {
   default: 'default',

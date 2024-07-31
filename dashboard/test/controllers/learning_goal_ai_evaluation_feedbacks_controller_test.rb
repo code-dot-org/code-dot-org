@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'testing/includes_metrics'
 
 class LearningGoalAiEvaluationFeedbacksControllerTest < ActionController::TestCase
   setup do
@@ -8,7 +9,7 @@ class LearningGoalAiEvaluationFeedbacksControllerTest < ActionController::TestCa
     @learning_goal_ai_evaluation_feedback = create :learning_goal_ai_evaluation_feedback, teacher_id: @teacher.id, learning_goal_ai_evaluation_id: @learning_goal_ai_evaluation.id
   end
 
-  test 'create learning goal ai evaluation feedback' do
+  test 'create learning goal ai evaluation feedback without approval' do
     learning_goal_ai_evaluation_id = @learning_goal_ai_evaluation.id
     ai_feedback_approval = false
     false_positive = true
@@ -16,6 +17,15 @@ class LearningGoalAiEvaluationFeedbacksControllerTest < ActionController::TestCa
     vague = true
     feedback_other = true
     other_content = 'other content'
+
+    # ensure thumbs down metric is logged
+    Cdo::Metrics.expects(:push).with(
+      AiRubricMetrics::AI_RUBRIC_METRICS_NAMESPACE,
+      all_of(
+        includes_metrics(LearningGoalAiEvaluationFeedback: 1),
+        includes_dimensions(:LearningGoalAiEvaluationFeedback, Environment: CDO.rack_env, Approval: 'thumbs_down')
+      )
+    )
 
     post :create, params: {
       learningGoalAiEvaluationId: learning_goal_ai_evaluation_id,
@@ -41,6 +51,32 @@ class LearningGoalAiEvaluationFeedbacksControllerTest < ActionController::TestCa
     refute_nil response_json['created_at']
   end
 
+  test 'create learning goal ai evaluation feedback with approval' do
+    learning_goal_ai_evaluation_id = @learning_goal_ai_evaluation.id
+    ai_feedback_approval = true
+
+    # ensure thumbs down metric is logged
+    Cdo::Metrics.expects(:push).with(
+      AiRubricMetrics::AI_RUBRIC_METRICS_NAMESPACE,
+      all_of(
+        includes_metrics(LearningGoalAiEvaluationFeedback: 1),
+        includes_dimensions(:LearningGoalAiEvaluationFeedback, Environment: CDO.rack_env, Approval: 'thumbs_up')
+      )
+    )
+
+    post :create, params: {
+      learningGoalAiEvaluationId: learning_goal_ai_evaluation_id,
+      aiFeedbackApproval: ai_feedback_approval,
+    }
+    assert_response :success
+
+    response_json = JSON.parse(response.body)
+    refute_nil response_json['id']
+    assert_equal @teacher.id, response_json['teacher_id']
+    assert_equal learning_goal_ai_evaluation_id, response_json['learning_goal_ai_evaluation_id']
+    assert_equal ai_feedback_approval, response_json['ai_feedback_approval']
+  end
+
   test 'update learning goal ai evaluation feedback' do
     id = @learning_goal_ai_evaluation_feedback.id
     learning_goal_ai_evaluation_id = @learning_goal_ai_evaluation_feedback.learning_goal_ai_evaluation_id
@@ -50,6 +86,8 @@ class LearningGoalAiEvaluationFeedbacksControllerTest < ActionController::TestCa
     vague = true
     feedback_other = true
     other_content = 'other content'
+
+    Cdo::Metrics.stubs(:push).never
 
     post :update, params: {
       id: id,

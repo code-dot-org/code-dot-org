@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/templates/Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';

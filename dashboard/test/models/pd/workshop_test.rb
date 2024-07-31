@@ -309,6 +309,26 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Workshop.process_ends
   end
 
+  test 'end workshop sends exit surveys to facilitators for Build Your Own workshops' do
+    byo_workshop = create :pd_workshop,
+      :ended,
+      funded: false,
+      course: Pd::Workshop::COURSE_BUILD_YOUR_OWN,
+      subject: nil,
+      course_offerings: [] << (create :course_offering),
+      num_facilitators: 1
+    byo_workshop.start!
+
+    Pd::Workshop.any_instance.expects(:send_exit_surveys)
+    Pd::WorkshopMailer.any_instance.expects(:facilitator_post_workshop)
+
+    byo_workshop.end!
+
+    # This is normally called by a cron job on production-daemon, but in this test
+    # we call it synchronously.
+    Pd::Workshop.process_ends
+  end
+
   test 'end workshop second time attempts sending exit surveys but they do not send again' do
     workshop = create :workshop
     workshop.start!

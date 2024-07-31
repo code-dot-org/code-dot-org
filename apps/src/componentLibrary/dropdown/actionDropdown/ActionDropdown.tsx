@@ -7,18 +7,17 @@ import {
   useDropdownContext,
 } from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
 import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
-import CustomDropdown from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
+import CustomDropdown, {
+  _CustomDropdownOption,
+} from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
 import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
 
-export interface ActionDropdownOption {
-  value: string;
-  label: string;
+export interface ActionDropdownOption extends _CustomDropdownOption {
   onClick: () => void;
-  isOptionDisabled?: boolean;
   isOptionDestructive?: boolean;
   icon: FontAwesomeV6IconProps;
 }

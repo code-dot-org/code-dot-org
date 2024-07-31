@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 
 import {DanceAiModalMode} from './types';
 

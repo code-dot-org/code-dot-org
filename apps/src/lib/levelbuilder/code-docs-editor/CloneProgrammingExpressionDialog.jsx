@@ -5,7 +5,7 @@ import React, {useState} from 'react';
 
 import StylizedBaseDialog, {
   FooterButton,
-} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+} from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
