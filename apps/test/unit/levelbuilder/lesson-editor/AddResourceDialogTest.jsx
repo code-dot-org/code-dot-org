@@ -42,21 +42,22 @@ describe('AddResourceDialog', () => {
     expect(handleCloseSpy).not.toHaveBeenCalled();
   });
 
-  it('saves if input is valid', () => {
+  it('saves if input is valid', async () => {
     const wrapper = mount(<AddResourceDialog {...defaultProps} />);
     const instance = wrapper.instance();
-    instance.setState({
-      name: 'my resource name',
-      url: 'code.org',
-      embeddabilityType: ResourceEmbeddabilityOptions.EMBED_ONLY.value,
-      curriculumCategory: 'curriculum',
-    });
+
     const saveResourceSpy = jest
       .spyOn(instance, 'saveResource')
       .mockClear()
       .mockImplementation();
-    instance.forceUpdate();
-    wrapper.update();
+
+    await React.act(() => {
+      instance.setState({
+        name: 'my resource name',
+        url: 'code.org',
+      });
+    });
+
     wrapper.find('#submit-button').simulate('submit');
     expect(saveResourceSpy).toHaveBeenCalledTimes(1);
   });
