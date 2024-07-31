@@ -49,10 +49,15 @@ export function isNotification(event: ChatEvent): event is Notification {
   return (event as Notification).notificationType !== undefined;
 }
 
-export interface ChatApiResponse {
+export interface ChatCompletionApiResponse {
   messages: ChatMessage[];
   session_id: number;
   flagged_content?: string;
+}
+
+export interface LogChatEventApiResponse {
+  chat_event_id: number;
+  chat_event: ChatMessage;
 }
 
 export type AichatContext = {

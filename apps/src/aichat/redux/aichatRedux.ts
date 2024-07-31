@@ -17,7 +17,7 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {postAichatCompletionMessage} from '../aichatCompletionApi';
+import {postAichatCompletionMessage} from '../aichatApi';
 import {saveTypeToAnalyticsEvent} from '../constants';
 import {
   AiCustomizations,
