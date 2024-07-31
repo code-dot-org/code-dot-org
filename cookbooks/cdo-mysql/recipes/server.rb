@@ -8,8 +8,6 @@ include_recipe 'apt'
 apt_package 'mysql-server' do
   action :upgrade
 
-  version '8.0.39-0ubuntu0.20.04.1'
-
   notifies :create, 'template[cdo.cnf]', :immediately
   notifies :start, 'service[mysql]', :immediately
   notifies :run, 'execute[mysql-upgrade]', :immediately
