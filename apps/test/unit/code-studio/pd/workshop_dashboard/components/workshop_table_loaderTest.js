@@ -63,7 +63,7 @@ describe('WorkshopTableLoader', () => {
     expect(loader.find('Spinner')).to.have.length(1);
   });
 
-  it('Loads workshops over ajax and passes them to the child component', () => {
+  it('Loads workshops over ajax and passes them to the child component', async () => {
     const responseJson = JSON.stringify(defaultFakeResponseData);
     server.respondWith('GET', 'fake-query-url', [
       200,
@@ -78,7 +78,10 @@ describe('WorkshopTableLoader', () => {
       </WorkshopTableLoader>
     );
 
-    server.respond();
+    await React.act(() => {
+      server.respond();
+    });
+
     expect(server.requests.length).to.equal(1);
     expect(server.requests[0].url).to.equal('fake-query-url');
 
@@ -116,7 +119,7 @@ describe('WorkshopTableLoader', () => {
     expect(server.requests[0].url).to.equal(expectedUrlWithParams);
   });
 
-  it('Passes delete function to child when canDelete is true', () => {
+  it('Passes delete function to child when canDelete is true', async () => {
     const fakeWorkshopsData = defaultFakeResponseData.workshops;
     const Child = sinon.stub().returns(null);
     const loader = mount(
@@ -125,9 +128,11 @@ describe('WorkshopTableLoader', () => {
       </WorkshopTableLoader>
     );
 
-    loader.setState({
-      loading: false,
-      workshops: fakeWorkshopsData,
+    await React.act(() => {
+      loader.setState({
+        loading: false,
+        workshops: fakeWorkshopsData,
+      });
     });
 
     expect(Child.calledOnce).to.be.true;
@@ -137,7 +142,7 @@ describe('WorkshopTableLoader', () => {
     });
   });
 
-  it('Displays no workshops found message when no workshops are found', () => {
+  it('Displays no workshops found message when no workshops are found', async () => {
     const Child = sinon.stub().returns(null);
     const loader = mount(
       <WorkshopTableLoader queryUrl="fake-query-url">
@@ -145,9 +150,11 @@ describe('WorkshopTableLoader', () => {
       </WorkshopTableLoader>
     );
 
-    loader.setState({
-      loading: false,
-      workshops: [],
+    await React.act(() => {
+      loader.setState({
+        loading: false,
+        workshops: [],
+      });
     });
 
     expect(Child.called).to.be.false;
@@ -155,7 +162,7 @@ describe('WorkshopTableLoader', () => {
     expect(loader.find('p').text()).to.eql('No workshops found');
   });
 
-  it('Renders null when hideNoWorkshopsMessage is specified and no workshops are found', () => {
+  it('Renders null when hideNoWorkshopsMessage is specified and no workshops are found', async () => {
     const Child = sinon.stub().returns(null);
     const loader = mount(
       <WorkshopTableLoader queryUrl="fake-query-url" hideNoWorkshopsMessage>
@@ -163,9 +170,11 @@ describe('WorkshopTableLoader', () => {
       </WorkshopTableLoader>
     );
 
-    loader.setState({
-      loading: false,
-      workshops: [],
+    await React.act(() => {
+      loader.setState({
+        loading: false,
+        workshops: [],
+      });
     });
 
     expect(Child.called).to.be.false;
