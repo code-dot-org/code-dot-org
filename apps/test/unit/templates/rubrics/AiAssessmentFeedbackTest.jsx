@@ -16,7 +16,7 @@ describe('AiAssessmentFeedback', () => {
     aiFeedbackId: 1,
   };
 
-  const defaultStatus = null;
+  const defaultStatus = -1;
   const thumbsupval = 1;
   const thumbsdownval = 0;
   const mockSetAiFeedback = () => {};
