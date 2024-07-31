@@ -775,7 +775,7 @@ export function getAllGeneratedCode(extraCode?: string) {
       if (workspace) {
         Blockly.getGenerator().init(workspace);
         const blocks = workspace.getTopBlocks(true);
-        const blocksCode = [] as Block[];
+        const blocksCode: Block[] = [];
         blocks.forEach(block =>
           blocksCode.push(Blockly.JavaScript.blockToCode(block))
         );
