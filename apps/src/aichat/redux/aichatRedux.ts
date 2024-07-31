@@ -223,7 +223,7 @@ export const onSaveComplete =
       const updatedValueToLog =
         updatedField === 'temperature' || updatedField === 'selectedModelId'
           ? updatedValue
-          : 'n/a';
+          : 'N/A';
       dispatch(
         logChatEvent({
           ...modelUpdate,

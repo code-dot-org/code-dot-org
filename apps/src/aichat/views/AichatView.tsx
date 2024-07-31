@@ -25,6 +25,7 @@ import aichatI18n from '../locale';
 import {
   addNotification,
   clearChatMessages,
+  logChatEvent,
   onSaveComplete,
   onSaveFail,
   onSaveNoop,
@@ -35,7 +36,13 @@ import {
   updateAiCustomization,
 } from '../redux/aichatRedux';
 import {getNewMessageId} from '../redux/utils';
-import {AichatLevelProperties, Notification, ViewMode} from '../types';
+import {
+  AichatLevelProperties,
+  ChatEvent,
+  ChatEventDescriptions,
+  Notification,
+  ViewMode,
+} from '../types';
 
 import ChatWorkspace from './ChatWorkspace';
 import {isDisabled} from './modelCustomization/utils';
@@ -108,6 +115,12 @@ const AichatView: React.FunctionComponent = () => {
         studentAiCustomizations,
       })
     );
+    dispatch(
+      logChatEvent({
+        timestamp: Date.now(),
+        description: ChatEventDescriptions.LOAD_LEVEL,
+      } as ChatEvent)
+    );
   }, [dispatch, initialSources, levelAichatSettings]);
 
   // When the level changes or if we are viewing aichat level as a different user
@@ -179,6 +192,12 @@ const AichatView: React.FunctionComponent = () => {
 
   const onClear = useCallback(() => {
     dispatch(clearChatMessages());
+    dispatch(
+      logChatEvent({
+        timestamp: Date.now(),
+        description: ChatEventDescriptions.CLEAR_CHAT,
+      } as ChatEvent)
+    );
     analyticsReporter.sendEvent(
       EVENTS.CHAT_ACTION,
       {
