@@ -66,6 +66,7 @@ class DatablockStorageController < ApplicationController
   ##########################################################
 
   def set_key_value
+    puts "trivial change"
     raise StudentFacingError, "Value must be specified" unless params[:value]
     value = JSON.parse params[:value]
     DatablockStorageKvp.set_kvp @project_id, params[:key], value
