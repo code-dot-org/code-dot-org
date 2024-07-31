@@ -7,17 +7,18 @@ import codeLogo from '../assets/codeLogo.svg';
 
 import styles from '../link-account.module.scss';
 
-const WorkshopWelcomeBanner = () => (
+const WorkshopWelcomeBanner: React.FunctionComponent<{
+  heading: string;
+  desc: string;
+}> = ({heading, desc}) => (
   <div className={styles.welcomeContainer}>
     <div className={styles.welcomeIconContainer}>
       <img src={codeLogo} alt={i18n.codeLogo()} />
     </div>
 
     <div className={styles.titleContainer}>
-      <Heading1>{i18n.accountWelcomeBannerHeaderLabel()}</Heading1>
-      <BodyTwoText className={styles.titleDesc}>
-        {i18n.accountWelcomeBannerContentWorkshopEnroll()}
-      </BodyTwoText>
+      <Heading1>{heading}</Heading1>
+      <BodyTwoText className={styles.titleDesc}>{desc}</BodyTwoText>
     </div>
   </div>
 );
