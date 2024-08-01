@@ -1,9 +1,12 @@
-include_recipe 'cdo-mysql::repo'
+# MySQL switch to Ubuntu Repo:
+# This cleans up the old mysql apt repository, which is no longer used.
+# We can remove this after transition back to the ubuntu repo:
+include_recipe 'cdo-mysql::remove-mysql-package-repo'
+
+include_recipe 'apt'
 
 apt_package 'mysql-server' do
   action :upgrade
-
-  version '8.0.37-0ubuntu0.20.04.3'
 
   notifies :create, 'template[cdo.cnf]', :immediately
   notifies :start, 'service[mysql]', :immediately
