@@ -19,14 +19,14 @@ users.select(
   :id,
   :cap_state,
   :cap_state_date,
-  "properties->>'$.child_account_compliance_state' AS raw_cap_state",
-  "properties->>'$.child_account_compliance_state_last_updated' AS raw_cap_state_date"
+  "properties->>'$.child_account_compliance_state' AS original_cap_state",
+  "properties->>'$.child_account_compliance_state_last_updated' AS original_cap_state_date"
 ).find_each(batch_size: 10_000) do |user|
-  next if user.cap_state || user.raw_cap_state.nil?
+  next if user.cap_state || user.original_cap_state.blank?
 
   user.update_columns(
-    cap_state: user.raw_cap_state == 's' ? 'l' : user.raw_cap_state,
-    cap_state_date: user.raw_cap_state_date && DateTime.parse(user.raw_cap_state_date)
+    cap_state: user.original_cap_state == 's' ? Policies::ChildAccount::ComplianceState::LOCKED_OUT : user.original_cap_state,
+    cap_state_date: user.original_cap_state_date.presence && DateTime.parse(user.original_cap_state_date)
   )
 
   progress_bar.format update_progress_title.call
