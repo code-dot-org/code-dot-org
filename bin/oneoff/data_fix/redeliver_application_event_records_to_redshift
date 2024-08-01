@@ -6,6 +6,8 @@ require 'json'
 require 'json-schema'
 require 'uri'
 require 'date'
+require 'cdo/redshift'
+require 'aws-sdk-sts'
 
 # This script redelivers application event ('firehose') event records to Redshift from the Intermediate S3 bucket
 # where batches of records were stored by the Firehose data stream and where manifest objects identify the batches
@@ -36,8 +38,16 @@ END_DATE_TIME = 71_929_059
 # records_delivered = 0
 # records_failed = 0
 
+FIREHOSE_STREAM = 'analysis-events'.freeze
 FIREHOSE_INTERMEDIATE_BUCKET = 'firehose-analysis-events'.freeze
 ERROR_MANIFESTS_PREFIX = 'errors/manifests/2024/07/14'.freeze
+REDELIVER_DATA_PREFIX = 'redeliveries'.freeze
+REDELIVERY_MANIFESTS_PREFIX = REDELIVER_DATA_PREFIX + '/manifests'
+REDELIVERY_ERROR_MANIFESTS_PREFIX = REDELIVER_DATA_PREFIX + '/errors'
+REDSHIFT_SCHEMA = 'analysis'.freeze
+REDSHIFT_TABLE = 'application_events'.freeze
+sts_client = Aws::STS::Client.new
+ACCOUNT_ID = sts_client.get_caller_identity.account
 
 def split_json_batch(batch_string)
   batch_string.delete_prefix('{').
@@ -197,6 +207,7 @@ def valid_type?(value, type)
 end
 
 s3_client = AWS::S3.create_client
+redshift_client = RedshiftClient.instance
 
 continuation_token = nil
 
@@ -236,29 +247,52 @@ loop do
         CDO.log.info record
         CDO.log.info exception.message
       end
-      File.write(undelivered_batch_uri.path.split('/').last, modified_batch)
+      modified_batch_s3_key = REDELIVER_DATA_PREFIX + undelivered_batch_uri.path
+      raise DryRun::Error if dry_run
+      s3_client.put_object(bucket: FIREHOSE_INTERMEDIATE_BUCKET, key: modified_batch_s3_key, body: modified_batch)
+      redelivery_manifest = {
+        entries: [
+          {
+            url: "s3://#{FIREHOSE_INTERMEDIATE_BUCKET}/#{modified_batch_s3_key}",
+            mandatory: true,
+            meta: {
+              content_length: modified_batch.encode('UTF-8').bytesize
+            }
+          }
+        ]
+      }
+      load_batch_query = <<~SQL
+        SET search_path TO #{REDSHIFT_SCHEMA};
+        BEGIN;
+          COPY #{REDSHIFT_TABLE} (created_at, environment, study, study_group, device, uuid, user_id, script_id, level_id, project_id, event, data_int, data_float, data_string, data_json)
+          FROM 's3://#{FIREHOSE_INTERMEDIATE_BUCKET}/#{modified_batch_s3_key}'
+          CREDENTIALS 'aws_iam_role=arn:aws:iam::#{ACCOUNT_ID}:role/redshift-s3'
+          json 'auto' timeformat 'auto';
+      SQL
+      CDO.log.info load_batch_query
+      redshift_client.exec(load_batch_query)
+      s3_client.put_object(
+        bucket: FIREHOSE_INTERMEDIATE_BUCKET,
+        key: REDELIVERY_MANIFESTS_PREFIX + undelivered_batch_uri.path,
+        body: redelivery_manifest.to_json
+      )
+      CDO.log.info "Successfully redelivered #{undelivered_batch_uri.path} to Redshift."
+    rescue PostgreSQLQueryError => exception
+      CDO.log.info "Error redelivering #{undelivered_batch_uri.path}"
+      CDO.log.info exception.message
+      s3_client.put_object(
+        bucket: FIREHOSE_INTERMEDIATE_BUCKET,
+        key: REDELIVERY_ERROR_MANIFESTS_PREFIX + undelivered_batch_uri.path,
+        body: redelivery_manifest
+      )
+    rescue Aws::Errors::ServiceError => exception
+      CDO.log.info exception.message
     end
     CDO.log.info error_manifest_json
   end
   break unless list_error_manifests_response.is_truncated
   continuation_token = list_error_manifests_response.next_continuation_token
 end
-
-# LIST all error manifest files from START_DATE_TIME to END_DATE_TIME
-# For each error manifest file
-#   GET batch object
-#   split batch object into separate JSON records
-#   For each record
-#     parse JSON
-#     validate JSON Properties against destination Redshift table column datatypes
-#     log validation errors
-#     fix data (truncate Properties that exceed max length)
-#     Raise TestRun Error if DRY RUN
-#     queue record for re-delivery? add to a new batch file?
-#     append Batch ID and record identifier to redeliver log
-#     Rescue
-#       log error
-#       append Batch ID and record identifier to redelivery error log
 
 CDO.log.info "Script completed"
 # Log number of batches processed, number of records processed, success and failure for both.
