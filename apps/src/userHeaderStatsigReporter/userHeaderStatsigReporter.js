@@ -1,6 +1,18 @@
 import statsigReporter from '../lib/util/StatsigReporter';
 
-document.addEventListener('DOMContentLoaded', function () {
+if (document.readyState !== 'loading') {
+  console.log('Document is ready');
+  runStatsigReporter();
+} else {
+  document.addEventListener('DOMContentLoaded', function () {
+    console.log('DOM content has loaded');
+    console.log(`Document ready state: ${document.readyState}`);
+    runStatsigReporter();
+  });
+}
+
+function runStatsigReporter() {
+  console.log('Running Statsig Reporter');
   const createAccountButton = document.querySelector('#create_account_button');
   const createAccountButtonDesktop = document.querySelector(
     '#create_account_button.desktop'
@@ -49,4 +61,4 @@ document.addEventListener('DOMContentLoaded', function () {
     // Hide the Sign in and Create account buttons in the hamburger
     hamburgerButtons ? (hamburgerButtons.style.display = 'none') : null;
   }
-});
+}

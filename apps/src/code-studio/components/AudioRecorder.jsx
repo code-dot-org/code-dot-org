@@ -2,11 +2,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import {assets as assetsApi} from '@cdo/apps/clientApi';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-
-import Button from '../../templates/Button';
 
 import {assetButtonStyles} from './AddAssetButtonRow';
 import {AudioErrorType} from './AssetManager';

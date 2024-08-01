@@ -2,7 +2,7 @@
 Feature: Recommended/Required Blocks Feedback
 
 Scenario: Solve without recommended blocks
-  Given I am on "http://studio.code.org/s/allthethings/lessons/4/levels/5?noautoplay=true&blocklyVersion=google"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/4/levels/5?noautoplay=true"
   And I wait for the lab page to fully load
 
   When I press "runButton"

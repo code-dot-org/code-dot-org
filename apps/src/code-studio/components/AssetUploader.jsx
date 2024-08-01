@@ -2,9 +2,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
-
-import Button from '../../templates/Button';
 
 import {assetButtonStyles} from './AddAssetButtonRow';
 import HiddenUploader from './HiddenUploader.jsx';

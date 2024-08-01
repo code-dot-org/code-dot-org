@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": "csa-software-engineering",
-    "serialized_at": "2024-07-11 16:08:03 UTC",
+    "serialized_at": "2024-07-26 19:50:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3725,7 +3725,7 @@
     },
     {
       "name": "Frame of Reference: Teamwork and Collaboration",
-      "url": "https://docs.google.com/document/d/1MNTpgngHWVlkWkQR\\_Vg1xgDV2j96XQ39X33INECIYfc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1MNTpgngHWVlkWkQR_Vg1xgDV2j96XQ39X33INECIYfc/edit?usp=sharing",
       "key": "frame_of_reference_teamwork_and_collaboration",
       "properties": {
         "audience": "Student",
@@ -3995,7 +3995,7 @@
     },
     {
       "name": "Submitting an Assignment on GitHub Classroom",
-      "url": "https://docs.google.com/document/d/1eOlMx2YW3qRI5DJzpInnN10dSGEupIRa-qOfL\\_xNMR0/edit?usp=share\\_link",
+      "url": "https://docs.google.com/document/d/1eOlMx2YW3qRI5DJzpInnN10dSGEupIRa-qOfL_xNMR0/edit?usp=share\\_link",
       "key": "submitting_an_assignment_on_github_classroom",
       "properties": {
         "audience": "Student",

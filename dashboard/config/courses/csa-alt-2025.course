@@ -1,0 +1,25 @@
+{
+  "name": "csa-alt-2025",
+  "script_names": [
+    "csa1-alt-2025",
+    "csa2-alt-2025",
+    "csa3-alt-2025",
+    "csa4-alt-2025"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
+  "properties": {
+    "family_name": "csa-alt",
+    "has_numbered_units": true,
+    "has_verified_resources": true,
+    "version_year": "2025"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

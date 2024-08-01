@@ -126,7 +126,6 @@ theme: responsive
 | **Използване на интернет симулатор**                                                                                         | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Използване на Web Lab**                                                                                                    | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Използване на бутона за споделяне на Google Classroom**                                                                    | `https://apis.google.com`                                                                                  |
-| **Използване на набори от данни за App Lab**                                                                                 | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 
