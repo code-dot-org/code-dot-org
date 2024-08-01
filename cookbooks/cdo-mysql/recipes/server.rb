@@ -1,8 +1,3 @@
-# MySQL switch to Ubuntu Repo:
-# This cleans up the old mysql apt repository, which is no longer used.
-# We can remove this after transition back to the ubuntu repo:
-include_recipe 'cdo-mysql::remove-mysql-package-repo'
-
 include_recipe 'apt'
 
 apt_package 'mysql-server' do
@@ -23,16 +18,6 @@ execute 'mysql-upgrade' do
   action :nothing
   notifies :start, 'service[mysql]', :before
   notifies :restart, 'service[mysql]', :immediately
-end
-
-# MySQL 5.7 Ubuntu package uses auth_socket plugin for local user by default.
-# Revert to mysql_native_password plugin to authenticate from non-root shell.
-# TODO: do we still need to do this on mysql8?
-execute 'mysql-user' do
-  command <<~SH
-    mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';"
-  SH
-  action :nothing
 end
 
 service 'mysql' do
