@@ -3,55 +3,51 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {postLogChatEvent} from './aichatApi';
 import {ChatEvent, AichatContext} from './types';
 
-interface ChatEventLoggerPayload {
+interface LoggerPayload {
   chatEvent: ChatEvent;
   aichatContext: AichatContext;
 }
 export default class ChatEventLogger {
-  private chatEventsQueue: ChatEventLoggerPayload[];
-  private sendingChatEventInProgress: boolean;
+  private queue: LoggerPayload[];
+  private sendingInProgress: boolean;
 
-  private static _instance: ChatEventLogger;
+  private static instance: ChatEventLogger;
 
   private constructor() {
-    this.chatEventsQueue = [];
-    this.sendingChatEventInProgress = false;
+    this.queue = [];
+    this.sendingInProgress = false;
   }
 
   public static getInstance(): ChatEventLogger {
-    if (ChatEventLogger._instance === undefined) {
+    if (ChatEventLogger.instance === undefined) {
       ChatEventLogger.create();
     }
-    return ChatEventLogger._instance;
+    return ChatEventLogger.instance;
   }
 
   public static create() {
-    ChatEventLogger._instance = new ChatEventLogger();
+    ChatEventLogger.instance = new ChatEventLogger();
   }
 
   logChatEvent(chatEvent: ChatEvent, aichatContext: AichatContext) {
-    this.chatEventsQueue.push({chatEvent, aichatContext});
-    this.sendChatEvent();
+    this.queue.push({chatEvent, aichatContext});
+    if (!this.sendingInProgress) {
+      this.sendChatEvent();
+    }
   }
 
-  async sendChatEvent() {
+  private async sendChatEvent() {
     // Send aichat events to the server to be logged.
-    while (
-      this.chatEventsQueue.length > 0 &&
-      !this.sendingChatEventInProgress
-    ) {
-      const chatEventLoggerPayload = this.chatEventsQueue.shift(); // Remove the first element from the queue.
-      if (chatEventLoggerPayload) {
-        const {chatEvent, aichatContext} = chatEventLoggerPayload;
-        let logChatEventResponse;
-        this.sendingChatEventInProgress = true;
+    while (this.queue.length > 0) {
+      const loggerPayload = this.queue.shift(); // Remove the first element from the queue.
+      if (loggerPayload) {
+        const {chatEvent, aichatContext} = loggerPayload;
+        let logResponse;
+        this.sendingInProgress = true;
         try {
-          logChatEventResponse = await postLogChatEvent(
-            chatEvent,
-            aichatContext
-          );
-          console.log('logChatEventResponse', logChatEventResponse);
-          this.sendingChatEventInProgress = false;
+          logResponse = await postLogChatEvent(chatEvent, aichatContext);
+          console.log('logChatEventResponse', logResponse);
+          this.sendingInProgress = false;
         } catch (error) {
           Lab2Registry.getInstance()
             .getMetricsReporter()
