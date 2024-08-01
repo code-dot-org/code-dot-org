@@ -483,18 +483,16 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     create_preexisting_user(payload)
 
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
-    assert_response :ok
-    assert_template 'omniauth/redirect'
+    assert_response :redirect
   end
 
-  test 'auth - given a valid jwt, render omniauth redirector' do
+  test 'auth - given a valid jwt, redirect to target_link_url' do
     payload = get_valid_payload
     jwt = create_jwt_and_stub(payload)
     create_preexisting_user(payload)
 
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
-    assert_response :ok
-    assert_template 'omniauth/redirect'
+    assert_response :redirect
     # could confirm more things here
   end
 
