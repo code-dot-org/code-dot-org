@@ -50,6 +50,7 @@ module Lti
             metadata: metadata,
           )
           target_url = session[:user_return_to] || home_path
+          flash[:notice] = I18n.t('lti.account_linking.successfully_linked')
           redirect_to target_url
         else
           flash.alert = I18n.t('lti.account_linking.invalid_credentials')
