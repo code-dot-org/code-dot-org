@@ -64,7 +64,7 @@ module Pd
     end
 
     def new_facilitator_post_foorm(workshop)
-      survey_name = FACILITATOR_POST_SURVEY_CONFIG_PATH
+      survey_name = workshop.subject == SUBJECT_CUSTOM_WORKSHOP ? FACILITATOR_CUSTOM_WORKSHOP_POST_SURVEY_CONFIG_PATH : FACILITATOR_POST_SURVEY_CONFIG_PATH
 
       agenda = params[:agenda] || nil
       # remove / from agenda url so module/1 => module1

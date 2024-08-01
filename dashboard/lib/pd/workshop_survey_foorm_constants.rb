@@ -20,7 +20,8 @@ module Pd
       SUBJECT_WORKSHOP_4 => 'surveys/pd/ayw_workshop_post_survey',
       SUBJECT_WORKSHOP_1_2 => 'surveys/pd/ayw_workshop_post_survey',
       SUBJECT_WORKSHOP_3_4 => 'surveys/pd/ayw_workshop_post_survey',
-      SUBJECT_VIRTUAL_KICKOFF => 'surveys/pd/ayw_kickoff_call'
+      SUBJECT_VIRTUAL_KICKOFF => 'surveys/pd/ayw_kickoff_call',
+      SUBJECT_CUSTOM_WORKSHOP => 'surveys/pd/custom_workshop_post_teachers'
     }
 
     PRE_SURVEY_CONFIG_PATHS = {
@@ -47,6 +48,7 @@ module Pd
     ].map(&:values).flatten.concat(TEST_PARTICIPANT_SURVEY_CONFIG_PATHS)
 
     FACILITATOR_POST_SURVEY_CONFIG_PATH = 'surveys/pd/csd_csp_facilitator_post_survey'
+    FACILITATOR_CUSTOM_WORKSHOP_POST_SURVEY_CONFIG_PATH = 'surveys/pd/custom_workshop_post_facilitators'
 
     FOORM_SUBMIT_API = '/api/v1/pd/foorm/workshop_survey_submission'
 
