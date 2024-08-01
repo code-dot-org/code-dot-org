@@ -18518,8 +18518,11 @@ en:
           lessons: {}
           lesson_groups: {}
         hello-world-transformers-one-2024:
-          title: 'Hello World: Food'
+          title: 'Hello World: Transformers One'
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: hello-world-transformers-one-2024
