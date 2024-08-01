@@ -22,7 +22,6 @@ import renderVersionNotFound from './renderVersionNotFound';
 
 var createCallouts = require('@cdo/apps/code-studio/callouts').default;
 var project = require('@cdo/apps/code-studio/initApp/project');
-var timing = require('@cdo/apps/code-studio/initApp/timing');
 var LegacyDialog = require('@cdo/apps/code-studio/LegacyDialog');
 var reporting = require('@cdo/apps/code-studio/reporting');
 var showVideoDialog = require('@cdo/apps/code-studio/videos').showVideoDialog;
@@ -44,8 +43,6 @@ export function setupApp(appOptions) {
   if (!window.dashboard) {
     throw new Error('Assume existence of window.dashboard');
   }
-  timing.startTiming('Puzzle', window.script_path, '');
-
   if (appOptions.hasContainedLevels) {
     if (appOptions.readonlyWorkspace) {
       // Lock the contained levels if this is a teacher viewing student work:
@@ -144,7 +141,6 @@ export function setupApp(appOptions) {
           path: window.script_path,
           value: report.attempt,
         });
-        timing.stopTiming('Puzzle', window.script_path, '');
       }
       reporting.sendReport(report);
     },

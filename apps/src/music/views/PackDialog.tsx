@@ -6,11 +6,11 @@ import Typography from '@cdo/apps/componentLibrary/typography';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {DEFAULT_PACK} from '../constants';
+import {AnalyticsContext} from '../context';
 import musicI18n from '../locale';
 import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
 import {setPackId} from '../redux/musicRedux';
-import {AnalyticsContext} from '../context';
 
 import styles from './PackDialog.module.scss';
 
@@ -135,7 +135,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
     library.setCurrentPackId(DEFAULT_PACK);
     setSelectedFolderId(null);
     analyticsReporter?.onPackSelected('default');
-  }, [dispatch, library, player]);
+  }, [dispatch, library, player, analyticsReporter]);
 
   const setPackToSelectedFolder = useCallback(() => {
     if (!library) {
@@ -149,7 +149,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
       setSelectedFolderId(null);
       analyticsReporter?.onPackSelected(selectedFolderId);
     }
-  }, [selectedFolderId, dispatch, library, player]);
+  }, [selectedFolderId, dispatch, library, player, analyticsReporter]);
 
   const onPreview = useCallback(
     (id: string) => {
