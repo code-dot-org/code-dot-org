@@ -110,10 +110,14 @@ theme: responsive_full_width
   .wrapper
     = view :"tabs_section/resources/resources_tabs", resources_heading: hoc_s(:resources_tabs_heading), resources_desc: hoc_s(:resources_tabs_desc, markdown: :inline, locals: {sign_up_url: CDO.studio_url("/users/sign_up")})
 
+%section.labs.centered
+  .wrapper
+    = view :teach_page_labs
+
 // TODO - Remove this once the Music Lab launch is over
 = view :"music/music_lab_skinny_banner"
 
-%section.pl-offerings.centered
+%section.pl-offerings.centered.bg-neutral-light
   .wrapper
     = view :teach_page_pl
 
