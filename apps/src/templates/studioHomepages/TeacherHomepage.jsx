@@ -211,7 +211,6 @@ export const UnconnectedTeacherHomepage = ({
               buttonText={announcement.buttonText}
               buttonLink={announcement.link}
               newWindow={true}
-              googleAnalyticsId={announcement.id}
             />
             <div style={styles.clear} />
           </div>

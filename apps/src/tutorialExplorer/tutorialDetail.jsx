@@ -6,12 +6,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
+import trackEvent from '@cdo/apps/util/trackEvent';
 import i18n from '@cdo/tutorialExplorer/locale';
 
 import Image from './image';
 import shapes from './shapes';
 import {getTagString, getTutorialDetailString, DoNotShow} from './util';
-import trackEvent from '../util/trackEvent';
 
 export default class TutorialDetail extends React.Component {
   static propTypes = {
@@ -48,8 +48,8 @@ export default class TutorialDetail extends React.Component {
 
   startTutorialClicked = () => {
     const shortCode = this.props.item.short_code;
-    trackEvent('learn', 'start', shortCode);
-    trackEvent('learn', `start-${this.props.grade}`, shortCode);
+    trackEvent('learn', 'learn-start', shortCode);
+    trackEvent('learn', `learn-start-${this.props.grade}`, shortCode);
   };
 
   render() {

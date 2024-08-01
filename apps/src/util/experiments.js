@@ -12,15 +12,12 @@ import DCDO from '@cdo/apps/dcdo';
 
 import {trySetLocalStorage} from '../utils';
 
-import trackEvent from './trackEvent';
-
 const queryString = require('query-string');
 
 const experiments = module.exports;
 // Needed to support TypeScript usage.
 export default experiments;
 const STORAGE_KEY = 'experimentsList';
-const GA_EVENT = 'experiments';
 const EXPERIMENT_LIFESPAN_HOURS = 12;
 
 // Specific experiment names
@@ -122,13 +119,11 @@ experiments.setEnabled = function (key, shouldEnable, expiration = undefined) {
   if (shouldEnable) {
     if (experimentIndex < 0) {
       allEnabled.push({key, expiration});
-      trackEvent(GA_EVENT, 'enable', key);
     } else {
       allEnabled[experimentIndex].expiration = expiration;
     }
   } else if (experimentIndex >= 0) {
     allEnabled.splice(experimentIndex, 1);
-    trackEvent(GA_EVENT, 'disable', key);
   } else {
     return;
   }

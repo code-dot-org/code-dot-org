@@ -58,9 +58,10 @@ class GoogleAnalyticsReporter {
   */
 
   /**
-   * GA4 compatible implementtion of a function that we have provided since Universal
+   * GA4 compatible implementation of a function that we have provided since Universal
    * Analytics, to report an event.
    */
+  // was trackEvent(category, action, label, value) {
   trackEvent(categoryValue, actionName, dimensions) {
     gtag('event', actionName, {
       eventCategory: categoryValue,

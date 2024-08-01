@@ -672,7 +672,9 @@ Dance.prototype.runButtonClick = async function () {
   await this.danceReadyPromise;
 
   //Log song count in Dance Lab
-  trackEvent('HoC_Song', 'Play-2019', getStore().getState().dance.selectedSong);
+  trackEvent('dance', 'dance-play-song', {
+    value: getStore().getState().dance.selectedSong,
+  });
 
   Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;

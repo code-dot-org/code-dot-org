@@ -128,13 +128,22 @@ export function setupApp(appOptions) {
         }
         report.callback = appOptions.report.callback;
       }
-      trackEvent('Activity', 'Lines of Code', window.script_path, report.lines);
+      trackEvent('activity', 'lines_of_code', {
+        path: window.script_path,
+        value: report.lines,
+      });
 
       report.fallbackResponse = appOptions.report.fallback_response;
       // Track puzzle attempt event
-      trackEvent('Puzzle', 'Attempt', window.script_path, report.pass ? 1 : 0);
+      trackEvent('puzzle', 'puzzle_attempt', {
+        path: window.script_path,
+        value: report.pass ? 1 : 0,
+      });
       if (report.pass) {
-        trackEvent('Puzzle', 'Success', window.script_path, report.attempt);
+        trackEvent('puzzle', 'puzzle_success', {
+          path: window.script_path,
+          value: report.attempt,
+        });
         timing.stopTiming('Puzzle', window.script_path, '');
       }
       reporting.sendReport(report);
