@@ -1358,7 +1358,7 @@ StudioApp.prototype.onReportComplete = function (response) {
   if (response.new_level_completed) {
     trackEvent('puzzle', 'puzzle_completed', {
       path: response.level_path,
-      attempts: response.level_attempts,
+      value: response.level_attempts,
     });
   }
 };
