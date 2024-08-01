@@ -5,4 +5,4 @@ import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
 
 let locale = safeLoadLocale('signup_locale');
 locale = localeWithI18nStringTracker(locale, 'signup');
-module.exports = locale;
+export default locale;
