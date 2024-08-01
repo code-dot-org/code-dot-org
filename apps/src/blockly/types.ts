@@ -17,10 +17,14 @@ import {
   WorkspaceSvg,
   Xml,
 } from 'blockly';
-import GoogleBlockly, {Connection} from 'blockly/core';
+import GoogleBlockly, {Connection, Names} from 'blockly/core';
 import {Abstract} from 'blockly/core/events/events_abstract';
 import {Field, FieldProto} from 'blockly/core/field';
-import {IProcedureBlock, IProcedureModel} from 'blockly/core/procedures';
+import {
+  IParameterModel,
+  IProcedureBlock,
+  IProcedureModel,
+} from 'blockly/core/procedures';
 import {ProcedureSerializer} from 'blockly/core/serialization/procedures';
 import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 import {javascriptGenerator} from 'blockly/javascript';
@@ -291,6 +295,8 @@ export interface ExtendedGenerator extends CodeGeneratorType {
   ) => string;
   blocksToCode: (name: string, blocksToGenerate: Block[]) => string;
   prefixLines: (text: string, prefix: string) => string;
+  nameDB_: Names | undefined;
+  variableDB_: Names | undefined;
 }
 
 type XmlType = typeof Xml;
@@ -378,6 +384,8 @@ export interface ProcedureBlock extends ExtendedBlockSvg, IProcedureBlock {
   description?: string | null;
   // used for behavior blocks
   behaviorId?: string | null;
+  prevParams_: IParameterModel[];
+  argsMap_: Map<string, Block>;
 }
 
 // Blockly uses {[key: string]: any} to define workspace serialization.

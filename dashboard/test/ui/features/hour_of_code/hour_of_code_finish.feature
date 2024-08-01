@@ -1,3 +1,4 @@
+@no_safari
 Feature: After completing the Hour of Code, the player is directed to a congratulations page
 
 Scenario: Completing Minecraft HoC should go to certificate page and generate a certificate
