@@ -37,7 +37,7 @@ export class RemoteSourcesStore implements SourcesStore {
   private readonly newVersionInterval: number = 15 * 60 * 1000; // 15 minutes
   private currentVersionId: string | null = null;
   private firstSaveTime: string | null = null;
-  private lastSaveTime: number | null = null;
+  private lastNewVersionTime: number | null = null;
 
   async load(channelId: string) {
     const {response, value} = await sourcesApi.get(channelId);
@@ -53,13 +53,23 @@ export class RemoteSourcesStore implements SourcesStore {
     channelId: string,
     sources: ProjectSources,
     projectType?: ProjectType,
-    replace = false
+    forceNewVersion = false
   ) {
     let options = undefined;
     if (this.currentVersionId) {
+      // If forceNewVersion is set to true, we will not replace the existing version (i.e., we will create
+      // a new version). Otherwise we check if we should replace the existing version based on the last new
+      // version saved in this session.
+      const shouldReplaceExistingVersion = forceNewVersion
+        ? false
+        : this.shouldReplaceExistingVersion();
+      if (!shouldReplaceExistingVersion) {
+        // If we're are creating a new version, update the last new version time.
+        this.lastNewVersionTime = Date.now();
+      }
       options = {
         currentVersion: this.currentVersionId,
-        replace: replace || this.shouldReplace(),
+        replace: shouldReplaceExistingVersion,
         firstSaveTimestamp: encodeURIComponent(this.firstSaveTime || ''),
         tabId: getTabId(),
         projectType: projectType,
@@ -68,7 +78,6 @@ export class RemoteSourcesStore implements SourcesStore {
     const response = await sourcesApi.update(channelId, sources, options);
 
     if (response.ok) {
-      this.lastSaveTime = Date.now();
       const {timestamp, versionId} = await response.json();
       this.firstSaveTime = this.firstSaveTime || timestamp;
       this.currentVersionId = versionId;
@@ -81,11 +90,13 @@ export class RemoteSourcesStore implements SourcesStore {
     return response;
   }
 
-  shouldReplace(): boolean {
-    if (!this.lastSaveTime) {
+  shouldReplaceExistingVersion(): boolean {
+    if (!this.lastNewVersionTime) {
       return false;
     }
 
-    return this.lastSaveTime + this.newVersionInterval < Date.now();
+    // We should replace the existing version if the last new version was less than 15 minutes ago
+    // (the last new version time plus the interval is greater than the current time).
+    return this.lastNewVersionTime + this.newVersionInterval > Date.now();
   }
 }
