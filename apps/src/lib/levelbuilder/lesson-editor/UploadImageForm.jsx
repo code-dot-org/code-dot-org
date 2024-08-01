@@ -3,20 +3,22 @@ import React, {useState} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import i18n from '@cdo/locale';
 
 import styles from './uploadImage.module.scss';
 
 export default function UploadImageForm() {
-  const [imgUrl, setImgUrl] = useState(undefined);
+  const [imgUrls, setImgUrls] = useState([]);
   const [error, setError] = useState(undefined);
   const [isUploading, setIsUploading] = useState(false);
-  const [formDataForImage, setFormDataForImage] = useState(undefined);
-  const [tempImageUrl, setTempImageUrl] = useState(undefined);
+  const [listOfImageFiles, setListOfImageFiles] = useState([]);
+  const [tempImageUrls, setTempImageUrls] = useState([]);
 
   const resetState = () => {
-    setImgUrl(undefined);
+    setImgUrls([]);
     setError(undefined);
+    setTempImageUrls([]);
   };
 
   const handleChange = e => {
@@ -26,19 +28,23 @@ export default function UploadImageForm() {
     }
 
     // assemble upload data
-    const formData = new FormData();
-    formData.append('file', e.target.files[0]);
-    setFormDataForImage(formData);
-    setTempImageUrl(URL.createObjectURL(e.target.files[0]));
+    let tempImageFileList = [];
+    let tempImageUrlList = [];
+    for (let i = 0; i < e.target.files.length; i++) {
+      tempImageFileList.push(e.target.files[i]);
+      tempImageUrlList.push(URL.createObjectURL(e.target.files[i]));
+    }
+    setListOfImageFiles(tempImageFileList);
+    setTempImageUrls(tempImageUrlList);
   };
 
-  const saveImageToS3 = () => {
+  const saveImageToS3 = formData => {
     setIsUploading(true);
     // POST
     const csrfContainer = document.querySelector('meta[name="csrf-token"]');
     fetch('/level_assets/upload', {
       method: 'post',
-      body: formDataForImage,
+      body: formData,
       headers: {
         'X-CSRF-Token': csrfContainer && csrfContainer.content,
       },
@@ -51,9 +57,17 @@ export default function UploadImageForm() {
       });
   };
 
+  const saveImagesToS3 = () => {
+    for (const image of listOfImageFiles) {
+      const singleFormData = new FormData();
+      singleFormData.append('file', image);
+      saveImageToS3(singleFormData);
+    }
+  };
+
   const handleResult = result => {
     if (result && result.newAssetUrl) {
-      setImgUrl(result.newAssetUrl);
+      setImgUrls(prevUrls => [...prevUrls, result.newAssetUrl]);
     } else if (result && result.message) {
       setError(result.message);
     } else {
@@ -62,15 +76,30 @@ export default function UploadImageForm() {
     setIsUploading(false);
   };
 
+  const handleCopy = text => {
+    copyToClipboard(
+      text,
+      () => alert('Text copied to clipboard'),
+      () => {
+        console.error('Error in copying text');
+      }
+    );
+  };
+
   return (
     <div className={styles.topContainer}>
-      <h2>{i18n.uploadImage()}</h2>
-      {tempImageUrl && (
-        <img
-          src={tempImageUrl}
-          alt="preview of uploaded document"
-          className={styles.imagePreview}
-        />
+      <h2>{i18n.uploadImages()}</h2>
+      {tempImageUrls && tempImageUrls.length > 0 && (
+        <div className={styles.imageGrid}>
+          {tempImageUrls.map((url, index) => (
+            <img
+              key={index}
+              src={url}
+              alt={`Preview ${index + 1}`}
+              className={styles.imagePreview}
+            />
+          ))}
+        </div>
       )}
       <div>
         <input
@@ -78,6 +107,7 @@ export default function UploadImageForm() {
           name="file"
           onChange={handleChange}
           disabled={isUploading}
+          multiple
         />
 
         {error && (
@@ -90,7 +120,7 @@ export default function UploadImageForm() {
       <div className={styles.contentContainer}>
         <Button
           text={i18n.saveAndViewUrl()}
-          onClick={saveImageToS3}
+          onClick={saveImagesToS3}
           color={Button.ButtonColor.brandSecondaryDefault}
           className={classnames(styles.saveButton, 'save-upload-image-button')}
           disabled={isUploading}
@@ -100,10 +130,27 @@ export default function UploadImageForm() {
             <FontAwesome icon="spinner" className="fa-spin" />
           </div>
         )}
-        {imgUrl && (
+        {imgUrls && imgUrls.length > 0 && (
           <div>
-            <strong>{i18n.imageURL()}</strong>
-            {imgUrl}
+            {imgUrls.map((url, index) => (
+              <div className={styles.tableContainer} key={index}>
+                <div className={styles.imageContainer}>
+                  <img src={url} alt={`Uploaded file ${index + 1}`} />
+                </div>
+                <div>
+                  <strong>{i18n.imageURL()}</strong>
+                  {url}
+                </div>
+                <Button
+                  color={Button.ButtonColor.white}
+                  icon={'clipboard'}
+                  key="copy"
+                  onClick={() => handleCopy(url)}
+                  size={Button.ButtonSize.small}
+                  text="Copy Image URL"
+                />
+              </div>
+            ))}
           </div>
         )}
       </div>
