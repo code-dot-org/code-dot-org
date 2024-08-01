@@ -12,11 +12,11 @@ import debounce from 'lodash/debounce';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
-import Button from '../../templates/Button';
 import color from '../../util/color';
 
 const MenuState = {
@@ -121,6 +121,7 @@ export default class SmallFooter extends React.Component {
 
   clickBaseCopyright = e => {
     e.preventDefault();
+    e.stopPropagation();
 
     if (this.state.menuState === MenuState.MINIMIZING) {
       return;

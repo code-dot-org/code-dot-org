@@ -7,19 +7,17 @@ import {
   ComponentSizeXSToL,
   DropdownColor,
 } from '@cdo/apps/componentLibrary/common/types';
-import CustomDropdown from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
-import Button from '@cdo/apps/templates/Button';
+import CustomDropdown, {
+  _CustomDropdownOption,
+} from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import i18n from '@cdo/locale';
 
 import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
 
-export interface CheckboxOption {
-  value: string;
-  label: string;
-  isOptionDisabled?: boolean;
-}
+export interface CheckboxDropdownOption extends _CustomDropdownOption {}
 
 export interface CheckboxDropdownProps extends AriaAttributes {
   /** CheckboxDropdown name.
@@ -39,7 +37,7 @@ export interface CheckboxDropdownProps extends AriaAttributes {
   /** CheckboxDropdown label style type*/
   labelType?: 'thick' | 'thin';
   /** CheckboxDropdown options */
-  allOptions: CheckboxOption[];
+  allOptions: CheckboxDropdownOption[];
   /** CheckboxDropdown checked options */
   checkedOptions: string[];
   /** CheckboxDropdown onChange handler */

@@ -16,7 +16,6 @@ import {setUpBlocklyForMusicLab} from '../blockly/setup';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
 import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
-import {loadLibrary} from '../utils/Loader';
 
 import moduleStyles from './MiniMusicPlayer.module.scss';
 
@@ -48,8 +47,7 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   const onMount = useCallback(async () => {
     setUpBlocklyForMusicLab();
     workspaceRef.current.initHeadless();
-    const library = await loadLibrary(libraryName);
-    MusicLibrary.setCurrent(library);
+    await MusicLibrary.loadLibrary(libraryName);
     setIsLoading(false);
     await analyticsReporter.current.startSession();
   }, [analyticsReporter, libraryName]);
