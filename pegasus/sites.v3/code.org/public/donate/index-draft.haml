@@ -4,7 +4,8 @@ theme: responsive_full_width
 ---
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
-%link{href: "/css/generated/page/donate-styles.css", rel: "stylesheet"}
+-# TODO - Update this to donate-styles.css
+%link{href: "/css/generated/page/donate-styles-draft.css", rel: "stylesheet"}
 
 -# Donate with Amazon
 %script{async: "", src: "https://static-na.payments-amazon.com/OffAmazonPayments/us/js/Widgets.js"}
@@ -97,4 +98,5 @@ theme: responsive_full_width
 
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::DONATE_PAGE_VISITED_EVENT
 
+-# Imports the embedded Classy donation form
 = view :classy_embed_form
