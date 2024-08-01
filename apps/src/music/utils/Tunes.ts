@@ -1,5 +1,4 @@
 import {TuneEventValue, TuneTickEvent} from '../player/interfaces/TuneEvent';
-import MusicLibrary from '../player/MusicLibrary';
 
 // This file contains a helper function for tunes, and is used by the
 // block's custom field.

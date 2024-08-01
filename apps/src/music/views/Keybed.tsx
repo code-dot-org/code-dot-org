@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {useState, useEffect, useCallback} from 'react';
+import React from 'react';
 
 import {getNoteName, isBlackKey} from '../utils/Notes';
 

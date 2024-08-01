@@ -5,8 +5,8 @@ import ReactDOM from 'react-dom';
 import {TuneEventValue} from '../player/interfaces/TuneEvent';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
-import {generateGraphDataFromTune, TuneGraphEvent} from '../utils/Tunes';
 import {getNoteName} from '../utils/Notes';
+import {generateGraphDataFromTune, TuneGraphEvent} from '../utils/Tunes';
 import TunePanel, {TunePanelProps} from '../views/TunePanel';
 
 const color = require('@cdo/apps/util/color');

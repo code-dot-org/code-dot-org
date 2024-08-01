@@ -8,16 +8,14 @@ import React, {
 } from 'react';
 
 import {TuneEventValue} from '../player/interfaces/TuneEvent';
-import MusicLibrary, {SoundData} from '../player/MusicLibrary';
+import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
-import Keybed from './Keybed';
 
+import Keybed from './Keybed';
 import LoadingOverlay from './LoadingOverlay';
 import PreviewControls from './PreviewControls';
 
 import moduleStyles from './tunePanel.module.scss';
-import notifyLevelChange from '@cdo/apps/lab2/utils/notifyLevelChange';
-import {event} from 'jquery';
 
 const NUM_OCTAVES = 3;
 const START_OCTAVE = 4;
@@ -58,14 +56,6 @@ const TunePanel: React.FunctionComponent<TunePanelProps> = ({
     return library.instruments;
   }, [library.instruments]);
 
-  const currentFolder = useMemo(() => {
-    // Default to the first available kit if the current kit is not found in this library.
-    return (
-      availableInstruments.find(
-        instrument => instrument.id === currentValue.instrument
-      ) || availableInstruments[0]
-    );
-  }, [availableInstruments, currentValue.instrument]);
   const [currentPreviewTick, setCurrentPreviewTick] = useState(0);
 
   const toggleEvent = useCallback(

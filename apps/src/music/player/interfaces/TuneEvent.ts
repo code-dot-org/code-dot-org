@@ -10,7 +10,7 @@ export interface TuneEvent extends PlaybackEvent {
 
 export interface TuneEventValue {
   instrument: string;
-  events: TuneTickEvent [];
+  events: TuneTickEvent[];
 }
 
 export interface TuneTickEvent {

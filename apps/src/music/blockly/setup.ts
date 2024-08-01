@@ -17,8 +17,8 @@ import {
 } from './extensions';
 import FieldChord from './FieldChord';
 import FieldPattern from './FieldPattern';
-import FieldTune from './FieldTune';
 import FieldSounds from './FieldSounds';
+import FieldTune from './FieldTune';
 import {MUSIC_BLOCKS} from './musicBlocks';
 import {BlockConfig} from './types';
 

@@ -1,4 +1,3 @@
-
 import React, {useState, useEffect, useCallback} from 'react';
 
 import musicI18n from '../locale';
@@ -6,8 +5,8 @@ import {ChordEventValue, PlayStyle} from '../player/interfaces/ChordEvent';
 import MusicLibrary from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
 import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
-import Keybed from './Keybed';
 
+import Keybed from './Keybed';
 import LoadingOverlay from './LoadingOverlay';
 import PreviewControls from './PreviewControls';
 

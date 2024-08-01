@@ -7,13 +7,13 @@ import {
   DEFAULT_TUNE_LENGTH,
 } from '../../constants';
 import {ChordEvent, ChordEventValue} from '../interfaces/ChordEvent';
-import {TuneEvent, TuneEventValue} from '../interfaces/TuneEvent';
 import {Effects, EffectValue} from '../interfaces/Effects';
 import {FunctionEvents} from '../interfaces/FunctionEvents';
 import {PatternEvent, PatternEventValue} from '../interfaces/PatternEvent';
 import {PlaybackEvent} from '../interfaces/PlaybackEvent';
 import {SkipContext} from '../interfaces/SkipContext';
 import {SoundEvent} from '../interfaces/SoundEvent';
+import {TuneEvent, TuneEventValue} from '../interfaces/TuneEvent';
 import MusicLibrary from '../MusicLibrary';
 
 import Sequencer from './Sequencer';

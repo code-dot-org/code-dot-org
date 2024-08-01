@@ -16,11 +16,11 @@ import {generateNotesFromChord, ChordNote} from '../utils/Chords';
 import {getPitchName, getTranposedNote, Key} from '../utils/Notes';
 
 import {ChordEvent, ChordEventValue} from './interfaces/ChordEvent';
-import {TuneEvent, TuneEventValue} from './interfaces/TuneEvent';
 import {Effects} from './interfaces/Effects';
 import {PatternEvent, PatternEventValue} from './interfaces/PatternEvent';
 import {PlaybackEvent} from './interfaces/PlaybackEvent';
 import {SoundEvent} from './interfaces/SoundEvent';
+import {TuneEvent, TuneEventValue} from './interfaces/TuneEvent';
 import MusicLibrary, {
   SampleSequence,
   SoundData,
