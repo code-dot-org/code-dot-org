@@ -1,45 +1,52 @@
 import {LevelProperties} from '@cdo/apps/lab2/types';
 
-import {Role} from '../aiComponentLibrary/chatItems/types';
+import {Role} from '../aiComponentLibrary/chatMessage/types';
+
+export const ChatEventDescriptions = {
+  CLEAR_CHAT: 'The user clears the chat workspace.',
+  LOAD_LEVEL: 'The user loads the aichat level.',
+} as const;
 
 // TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
 export type AichatInteractionStatusValue = string;
 
-export interface ChatItem {
+export interface ChatEvent {
   // UTC timestamp in milliseconds
   timestamp: number;
+  hideForParticipants?: true;
+  descriptionKey?: keyof typeof ChatEventDescriptions;
 }
 
-export interface ChatMessage extends ChatItem {
+export interface ChatMessage extends ChatEvent {
   chatMessageText: string;
   role: Role;
   status: AichatInteractionStatusValue;
 }
 
-export interface ModelUpdate extends ChatItem {
+export interface ModelUpdate extends ChatEvent {
   id: number;
   updatedField: keyof AiCustomizations;
   updatedValue: AiCustomizations[keyof AiCustomizations];
 }
 
-export interface Notification extends ChatItem {
+export interface Notification extends ChatEvent {
   id: number;
   text: string;
   notificationType: 'error' | 'success';
 }
 
-// Type Predicates: checks if a ChatItem is a given type, and more helpfully,
+// Type Predicates: checks if a ChatEvent is a given type, and more helpfully,
 // automatically narrows to the specific type.
-export function isChatMessage(item: ChatItem): item is ChatMessage {
-  return (item as ChatMessage).chatMessageText !== undefined;
+export function isChatMessage(event: ChatEvent): event is ChatMessage {
+  return (event as ChatMessage).chatMessageText !== undefined;
 }
 
-export function isModelUpdate(item: ChatItem): item is ModelUpdate {
-  return (item as ModelUpdate).updatedField !== undefined;
+export function isModelUpdate(event: ChatEvent): event is ModelUpdate {
+  return (event as ModelUpdate).updatedField !== undefined;
 }
 
-export function isNotification(item: ChatItem): item is Notification {
-  return (item as Notification).notificationType !== undefined;
+export function isNotification(event: ChatEvent): event is Notification {
+  return (event as Notification).notificationType !== undefined;
 }
 
 export interface ChatApiResponse {

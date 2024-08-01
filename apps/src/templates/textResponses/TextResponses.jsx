@@ -4,6 +4,7 @@ import React, {useState, useEffect, useRef, useCallback} from 'react';
 import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {
   setScriptId,
   getSelectedScriptName,
@@ -15,7 +16,6 @@ import i18n from '@cdo/locale';
 
 import {h3Style} from '../../lib/ui/Headings';
 import color from '../../util/color';
-import Button from '../Button';
 
 import TextResponsesTable from './TextResponsesTable';
 

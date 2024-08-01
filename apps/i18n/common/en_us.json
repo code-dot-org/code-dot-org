@@ -2907,7 +2907,7 @@
   "upgradeAccountToAssign": "Use a teacher account to assign a curriculum",
   "upgradeAccountToAssignButtonText": "Learn how to update account type",
   "upgradeAccountToAssignHelpText": "You need a teacher account to assign a curriculum. Please switch to a teacher account or update your account type.",
-  "uploadImage": "Upload Image",
+  "uploadImages": "Upload Images",
   "useCursorType": "Use {type} cursor",
   "usingCursorType": "Using {type} cursor",
   "useAiFeatures": "Use AI features",
