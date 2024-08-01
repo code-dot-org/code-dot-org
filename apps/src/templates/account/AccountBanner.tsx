@@ -7,7 +7,7 @@ import codeLogo from '../assets/codeLogo.svg';
 
 import styles from '../link-account.module.scss';
 
-const WorkshopAccountBanner: React.FunctionComponent<{
+const AccountBanner: React.FunctionComponent<{
   heading: string;
   desc: string;
 }> = ({heading, desc}) => (
@@ -23,4 +23,4 @@ const WorkshopAccountBanner: React.FunctionComponent<{
   </div>
 );
 
-export default WorkshopAccountBanner;
+export default AccountBanner;

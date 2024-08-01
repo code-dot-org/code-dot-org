@@ -3,8 +3,8 @@ import React from 'react';
 import Link from '@cdo/apps/componentLibrary/link';
 import i18n from '@cdo/locale';
 
-import WorkshopAccountBanner from './WorkshopAccountBanner';
-import WorkshopAccountCard from './WorkshopAccountCard';
+import WorkshopAccountBanner from '../../../../templates/account/AccountBanner';
+import WorkshopAccountCard from '../../../../templates/account/AccountCard';
 
 import styles from '../link-account.module.scss';
 
