@@ -5,7 +5,7 @@ if (document.readyState !== 'loading') {
   runStatsigReporter();
 } else {
   document.addEventListener('DOMContentLoaded', function () {
-    console.log('Document is loading');
+    console.log('DOM content has loaded');
     console.log(`Document ready state: ${document.readyState}`);
     runStatsigReporter();
   });
