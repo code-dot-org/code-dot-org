@@ -290,7 +290,7 @@ class User < ApplicationRecord
 
   after_create :associate_with_potential_pd_enrollments
 
-  after_create :save_show_progress_table_v2
+  before_create :save_show_progress_table_v2
 
   after_save :save_email_preference, if: -> {email_preference_opt_in.present?}
 
@@ -357,7 +357,6 @@ class User < ApplicationRecord
 
   # Enables/disables sharing of emails of teachers in the U.S. to Code.org regional partners based on user's choice.
   def save_email_reg_partner_preference
-    puts "inside save_email_reg_partner_preference"
     user = User.find_by_email_or_hashed_email(email)
     if teacher? && share_teacher_email_reg_partner_opt_in_radio_choice.casecmp?("yes")
       user.share_teacher_email_regional_partner_opt_in = DateTime.now
