@@ -672,7 +672,7 @@ Dance.prototype.runButtonClick = async function () {
   await this.danceReadyPromise;
 
   //Log song count in Dance Lab
-  trackEvent('dance', 'dance-play-song', {
+  trackEvent('dance', 'dance_play_song', {
     value: getStore().getState().dance.selectedSong,
   });
 
