@@ -51,6 +51,20 @@ module MailJet
     )
   end
 
+  def self.send_cap_section_warning_email(user, locale = 'en-US')
+    return unless enabled?
+
+    return unless user&.id.present?
+    return unless user.teacher?
+
+    contact = find_or_create_contact(user.email, user.name)
+    send_template_email(
+      contact,
+      EMAILS[:cap_section_warning],
+      locale
+    )
+  end
+
   def self.find_or_create_contact(email, name)
     return nil unless enabled?
     return nil unless valid_email?(email)

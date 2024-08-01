@@ -154,6 +154,24 @@ class MailJetTest < Minitest::Test
     MailJet.create_contact_and_send_welcome_email(user)
   end
 
+  def test_send_cap_section_warning_email
+    email = 'fake.email@test.xx'
+
+    sign_up_time = Time.now.to_datetime
+
+    user = mock
+    user.stubs(:id).returns(1)
+    user.stubs(:email).returns(email)
+    user.stubs(:name).returns('Fake Name')
+    user.stubs(:teacher?).returns(true)
+    user.stubs(:created_at).returns(sign_up_time)
+
+    mock_contactdata = mock('Mailjet::Contactdata')
+    MailJet.expects(:send_template_email).with(mock_contactdata, MailJet::EMAILS[:cap_section_warning], 'en-US')
+
+    MailJet.send_cap_section_warning_email(user)
+  end
+
   def test_valid_email_deliverable
     Mailgun::Address.any_instance.expects(:validate).returns({'result' => 'deliverable'})
     assert MailJet.valid_email?('test@email.com')
