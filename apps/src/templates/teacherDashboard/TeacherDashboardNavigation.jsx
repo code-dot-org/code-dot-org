@@ -16,6 +16,7 @@ export const TeacherDashboardPath = {
   loginInfo: '/login_info',
   standardsReport: '/standards_report',
   aiTutorChatMessages: '/ai_tutor',
+  navTestV2: '/nav_test_v2',
 };
 
 const teacherDashboardLinks = [

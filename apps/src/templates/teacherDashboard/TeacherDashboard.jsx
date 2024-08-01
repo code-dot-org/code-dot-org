@@ -17,6 +17,7 @@ import {Heading1} from '../../lib/ui/Headings';
 import firehoseClient from '../../lib/util/firehose';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
+import TeacherNavigationBar from '../teacherNavigation/TeacherNavigationBar';
 
 import EmptySection from './EmptySection';
 import StatsTableWithData from './StatsTableWithData';
@@ -187,6 +188,17 @@ function TeacherDashboard({
         <Route
           path={TeacherDashboardPath.progress}
           component={props => <SectionProgressSelector />}
+        />
+        <Route
+          path={TeacherDashboardPath.navigation}
+          component={props => (
+            <div className={dashboardStyles.pageContainer}>
+              <TeacherNavigationBar />
+              <div className={dashboardStyles.content}>
+                <SectionProgressSelector />
+              </div>
+            </div>
+          )}
         />
         <Route
           path={TeacherDashboardPath.textResponses}

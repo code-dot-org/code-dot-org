@@ -2,6 +2,16 @@
 @import 'font';
 @import 'style-constants';
 
+.pageContainer {
+  display: flex;
+  min-height: 100vh;
+}
+
+.content {
+  margin-left: 242px;
+  height: 100vh;
+}
+
 .navContainer {
   background-color: $neutral_dark;
   display: flex;
@@ -85,7 +95,10 @@
       margin-inline-end: 8px;
       color: $light_secondary_500;
 
-      &:hover, :active, :visited, :focus-visible {
+      &:hover,
+      :active,
+      :visited,
+      :focus-visible {
         color: $light_secondary_500;
       }
     }
