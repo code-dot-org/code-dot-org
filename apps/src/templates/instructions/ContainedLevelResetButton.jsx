@@ -42,6 +42,7 @@ export const UnconnectedContainedLevelResetButton = ({
   return (
     <div>
       <Button
+        name="containedLevelResetButton"
         text={i18n.deleteAnswer()}
         onClick={() => {
           resetContainedLevel().then(
