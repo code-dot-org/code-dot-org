@@ -19,7 +19,6 @@ class GoogleAnalyticsReporter {
   constructor() {
     this.initializeGoogleAnalytics();
     window.trackEvent = this.trackEvent;
-    // window.ga = ga;
   }
 
   /**
@@ -27,45 +26,18 @@ class GoogleAnalyticsReporter {
    */
   initializeGoogleAnalytics() {
     window.dataLayer = window.dataLayer || [];
-    window.ga = ga;
 
     gtag('js', new Date());
-    gtag('config', 'G-L9HT5MZ3HD', userAnalyticsDimensions);
+    gtag('config', 'G-L9HT5MZ3HD', window.userAnalyticsDimensions);
   }
 
   /**
-   * Support legacy ga() calls using the mapping suggested at
-   * https://support.google.com/analytics/answer/10271001.
-   * Back compat to match format described at
-   * https://web.archive.org/web/20170714001459/https://developers.google.com/analytics/devguides/collection/analyticsjs/events
+   * GA4 compatible function to track an event.
    */
-  /*
-  // experimental:
-  ga2(command, hitType, eventCategory, eventAction, eventLabel, eventValue) {
-    if (command === 'send' && hitType == 'event') {
-      //this.trackEvent(eventCategory, eventAction, dimensions);
-      gtag('event', actionName, {eventCategory, eventAction, eventLabel, eventValue, ...dimensions});
-    }
-  }
-
-  // works:
-  ga(type, event, categoryValue, actionName, dimensions) {
-    if (type === 'send' && event == 'event') {
-      this.trackEvent(categoryValue, actionName, dimensions);
-      //gtag('event', actionName, {eventCategory: categoryValue, ...dimensions});
-    }
-  }
-  */
-
-  /**
-   * GA4 compatible implementation of a function that we have provided since Universal
-   * Analytics, to report an event.
-   */
-  // was trackEvent(category, action, label, value) {
-  trackEvent(categoryValue, actionName, dimensions) {
+  trackEvent(categoryValue, actionName, parameters) {
     gtag('event', actionName, {
       eventCategory: categoryValue,
-      ...dimensions,
+      ...parameters,
     });
   }
 }

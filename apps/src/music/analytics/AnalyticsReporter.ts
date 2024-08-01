@@ -11,12 +11,12 @@ import {Block} from 'blockly';
 
 import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import trackEvent from '@cdo/apps/util/trackEvent';
 import {
   getEnvironment,
   isDevelopmentEnvironment,
   isProductionEnvironment,
 } from '@cdo/apps/utils';
-import trackEvent from '@cdo/apps/util/trackEvent';
 
 import {BlockTypes} from '../blockly/blockTypes';
 import {FIELD_SOUNDS_NAME} from '../blockly/constants';
@@ -189,8 +189,6 @@ export default class AnalyticsReporter {
       buttonName,
       ...properties,
     });
-
-    //trackEvent('music', 'button_clicked', buttonName);
   }
 
   onKeyPressed(keyName: string, properties?: object) {
@@ -198,12 +196,10 @@ export default class AnalyticsReporter {
       keyName,
       ...properties,
     });
-
-    //trackEvent('music', 'key_pressed', keyName);
   }
 
   onPackSelected(packId: string) {
-    trackEvent('music', 'pack_selected', {packId: packId});
+    trackEvent('music', 'pack_selected', {value: packId});
   }
 
   private trackUIEvent(eventType: string, payload: object) {

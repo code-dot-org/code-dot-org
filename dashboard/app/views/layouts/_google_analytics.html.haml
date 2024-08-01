@@ -8,7 +8,6 @@
   - dimensions[gender_dim] = current_user.gender
   - dimensions[user_type_dim] = current_user.user_type
   - dimensions[has_teacher] = current_user.teachers.any? ? '1' : '0'
-- google_id = "G-L9HT5MZ3HD"
 
 :javascript
   window.userAnalyticsDimensions = #{dimensions.to_json};
@@ -17,14 +16,6 @@
   }
 
 / Google tag (gtag.js)
-%script{:async => "", :src => "https://www.googletagmanager.com/gtag/js?id=#{google_id}"}
+%script{:async => "", :src => "https://www.googletagmanager.com/gtag/js?id=G-L9HT5MZ3HD"}
 
 %script{src: webpack_asset_path("js/code.org/views/theme_google_analytics.js")}
-
-:javascript
-  /*
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-L9HT5MZ3HD', userAnalyticsDimensions);
-  */

@@ -49,7 +49,7 @@ export default class TutorialDetail extends React.Component {
   startTutorialClicked = () => {
     const shortCode = this.props.item.short_code;
     trackEvent('learn', 'learn-start', shortCode);
-    trackEvent('learn', `learn-start-${this.props.grade}`, shortCode);
+    trackEvent('learn', `learn-start-${this.props.grade}`, {value: shortCode});
   };
 
   render() {
