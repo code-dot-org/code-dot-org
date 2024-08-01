@@ -1,7 +1,7 @@
 Feature: Clear Puzzle
 
 Background:
-  Given I am on "http://studio.code.org/hoc/1?noautoplay=true&blocklyVersion=google"
+  Given I am on "http://studio.code.org/hoc/1?noautoplay=true"
   And I wait for the lab page to fully load
   Then element "#runButton" is visible
   And element "#resetButton" is hidden
