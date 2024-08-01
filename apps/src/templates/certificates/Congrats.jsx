@@ -442,53 +442,6 @@ export default function Congrats(props) {
               {renderExtraCertificateLinks(language, tutorial, currentDate)}
             </Certificate>
           </div>
-          {/*<CurriculumCatalogCard
-              courseKey="aiml"
-              courseDisplayName="AI and Machine Learning"
-              courseDisplayNameWithLatestYear= "AI and Machine Learning ('23-'24)"
-              imageSrc= "https://images.code.org/354488da87cbb925dcf2a2a40c29b598-AIML.png"
-              duration= "quarter"
-              gradesArray= {[
-                "6",
-                "7",
-                "8",
-                "9",
-                "10",
-                "11",
-                "12"
-              ]}
-              topics={ [
-                "artificial_intelligence",
-                "data"
-              ]}
-              isTranslated
-              isEnglish
-              pathToCourse= "/s/aiml-2023"
-              courseVersionId={1270}
-              courseOfferingId={13}
-              scriptId={30372}
-              isStandAloneUnit
-              onAssignSuccess={() => console.log('onAssignSuccess')}
-              deviceCompatibility={"{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}"}
-              description= "Explore how computers learn from data to make decisions, then develop projects around real-world data and design an app to solve a personally relevant problem."
-              professionalLearningProgram="https://code.org/apply"
-              video="https://www.youtube-nocookie.com/embed/bGJ05vdI3xA/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=bGJ05vdI3xA&wmode=transparent"
-              publishedDate="2023-07-10T13:00:00.000Z"
-              selfPacedPlCourseOfferingPath="/courses/self-paced-pl-aiml-2023"
-              isExpanded={false}
-              handleSetExpandedCardKey={() => console.log('handleSetExpandedCardKey')}
-              onQuickViewClick={() => console.log('onQuickViewClick')}
-              isInUS
-              availableResources={{
-                "Lesson Plan": "/s/aiml-2023/lessons/1",
-                "Activity Guide": "https://docs.google.com/document/d/1ZCRVbRA6XLj1tRCzPed5fSGfqGjJ2I1ImES-BTo3GmY/view",
-                "Slide Deck": "https://docs.google.com/presentation/d/1ZOSt4G-bEqIiFIWFWQjvY54I2YgHlCURXmtX1FYnpFw/template/preview",
-                "Answer Key": "https://docs.google.com/document/d/1EEHJruthZ3ObknGOaVsC2SKY5RaZp042ozgzGau5NWw/view",
-                "Rubric": "https://docs.google.com/document/d/1vZrQXBaQclP25oPwNXCNSX1-CERz4vwNSIMl0ZyH4oc/view"
-              }}
-              isSignedOut={false}
-              isTeacher
-            />*/}
           {assignableCourseSuggestions && (
             <SuggestedAssignableCourses
               assignableCourseSuggestions={assignableCourseSuggestions}

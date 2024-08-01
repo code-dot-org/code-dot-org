@@ -163,7 +163,7 @@ button.buttonFlex {
   flex: 1;
 }
 
-.buttonsContainer a.teacherAndSignedOutLearnMoreButton {
+.buttonsContainer a.teacherAndSignedOutLearnMoreButton, .wideCardButtonsContainer a.teacherAndSignedOutLearnMoreButton {
   display: none;
   text-align: center;
   padding-top: 0;

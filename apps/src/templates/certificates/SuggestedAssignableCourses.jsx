@@ -213,12 +213,20 @@ function SuggestedAssignableCoursesCarousel({assignableCourseSuggestions}) {
       </swiper-container>
       <button
         id="assignable-course-swiper-nav-prev"
-        className={classNames(style.navButton, style.prevElNav)}
+        className={classNames(
+          style.navButton,
+          style.prevElNav,
+          style.suggestedAssignmentsPrevElNav
+        )}
         type="button"
       />
       <button
         id="assignable-course-swiper-nav-next"
-        className={classNames(style.navButton, style.nextElNav)}
+        className={classNames(
+          style.navButton,
+          style.nextElNav,
+          style.suggestedAssignmentsNextElNav
+        )}
         type="button"
       />
     </div>
