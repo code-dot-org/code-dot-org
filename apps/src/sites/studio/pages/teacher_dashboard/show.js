@@ -111,24 +111,21 @@ $(document).ready(function () {
   ReactDOM.render(
     <Provider store={store}>
       <Router basename={baseUrl}>
-        <Route
-          path="/"
-          component={props => (
-            <TeacherDashboard
-              {...props}
-              studioUrlPrefix={scriptData.studioUrlPrefix}
-              sectionId={selectedSection.id}
-              sectionName={selectedSection.name}
-              studentCount={selectedSection.students.length}
-              coursesWithProgress={coursesWithProgress}
-              showAITutorTab={showAITutorTab}
-              sectionProviderName={sectionProviderName(
-                store.getState(),
-                selectedSection.id
-              )}
-            />
-          )}
-        />
+        <Route path="/">
+          <TeacherDashboard
+            studioUrlPrefix={scriptData.studioUrlPrefix}
+            sectionId={selectedSection.id}
+            sectionName={selectedSection.name}
+            studentCount={selectedSection.students.length}
+            coursesWithProgress={coursesWithProgress}
+            showAITutorTab={showAITutorTab}
+            sectionProviderName={sectionProviderName(
+              store.getState(),
+              selectedSection.id
+            )}
+          />
+          )
+        </Route>
       </Router>
     </Provider>,
     document.getElementById('teacher-dashboard')

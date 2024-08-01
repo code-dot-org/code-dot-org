@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useEffect, useRef} from 'react';
-import {Route, Switch} from 'react-router-dom';
+import {Route, Switch, useLocation} from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -37,10 +37,11 @@ function TeacherDashboard({
   sectionName,
   studentCount,
   coursesWithProgress,
-  location,
   showAITutorTab,
   sectionProviderName,
 }) {
+  let location = useLocation();
+
   const usePrevious = value => {
     const ref = useRef();
     useEffect(() => {
@@ -137,76 +138,53 @@ function TeacherDashboard({
         </div>
       )}
       <Switch>
-        <Route
-          path={TeacherDashboardPath.manageStudents}
-          component={props =>
-            applyV1TeacherDashboardWidth(
-              <ManageStudents studioUrlPrefix={studioUrlPrefix} />
-            )
-          }
-        />
-        <Route
-          path={TeacherDashboardPath.loginInfo}
-          component={props =>
-            applyV1TeacherDashboardWidth(
-              <SectionLoginInfo
-                studioUrlPrefix={studioUrlPrefix}
-                sectionProviderName={sectionProviderName}
-              />
-            )
-          }
-        />
-        <Route
-          path={TeacherDashboardPath.standardsReport}
-          component={props => applyV1TeacherDashboardWidth(<StandardsReport />)}
-        />
+        <Route path={TeacherDashboardPath.manageStudents}>
+          {applyV1TeacherDashboardWidth(
+            <ManageStudents studioUrlPrefix={studioUrlPrefix} />
+          )}
+        </Route>
+        <Route path={TeacherDashboardPath.loginInfo}>
+          {applyV1TeacherDashboardWidth(
+            <SectionLoginInfo
+              studioUrlPrefix={studioUrlPrefix}
+              sectionProviderName={sectionProviderName}
+            />
+          )}
+        </Route>
+        <Route path={TeacherDashboardPath.standardsReport}>
+          {applyV1TeacherDashboardWidth(<StandardsReport />)}
+        </Route>
         {studentCount === 0 && (
-          <Route
-            component={props => generateEmptySectionGraphic(false, true)}
-          />
+          <Route>{generateEmptySectionGraphic(false, true)}</Route>
         )}
-        <Route
-          path={TeacherDashboardPath.projects}
-          component={props =>
+        <Route path={TeacherDashboardPath.projects}>
+          {props =>
             applyV1TeacherDashboardWidth(
               <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
             )
           }
-        />
-        <Route
-          path={TeacherDashboardPath.stats}
-          component={props =>
-            applyV1TeacherDashboardWidth(<StatsTableWithData />)
-          }
-        />
+        </Route>
+        <Route path={TeacherDashboardPath.stats}>
+          {applyV1TeacherDashboardWidth(<StatsTableWithData />)}
+        </Route>
         {coursesWithProgress.length === 0 && (
-          <Route
-            component={props => generateEmptySectionGraphic(true, false)}
-          />
+          <Route>{generateEmptySectionGraphic(true, false)}</Route>
         )}
-        <Route
-          path={TeacherDashboardPath.progress}
-          component={props => <SectionProgressSelector />}
-        />
-        <Route
-          path={TeacherDashboardPath.textResponses}
-          component={props => applyV1TeacherDashboardWidth(<TextResponses />)}
-        />
-        <Route
-          path={TeacherDashboardPath.assessments}
-          component={props =>
-            applyV1TeacherDashboardWidth(
-              <SectionAssessments sectionName={sectionName} />
-            )
-          }
-        />
+        <Route path={TeacherDashboardPath.progress}>
+          <SectionProgressSelector />
+        </Route>
+        <Route path={TeacherDashboardPath.textResponses}>
+          {applyV1TeacherDashboardWidth(<TextResponses />)}
+        </Route>
+        <Route path={TeacherDashboardPath.assessments}>
+          {applyV1TeacherDashboardWidth(
+            <SectionAssessments sectionName={sectionName} />
+          )}
+        </Route>
         {showAITutorTab && (
-          <Route
-            path={TeacherDashboardPath.aiTutorChatMessages}
-            component={props =>
-              applyV1TeacherDashboardWidth(<TutorTab sectionId={sectionId} />)
-            }
-          />
+          <Route path={TeacherDashboardPath.aiTutorChatMessages}>
+            {applyV1TeacherDashboardWidth(<TutorTab sectionId={sectionId} />)}
+          </Route>
         )}
       </Switch>
     </div>
@@ -221,9 +199,6 @@ TeacherDashboard.propTypes = {
   coursesWithProgress: PropTypes.array.isRequired,
   showAITutorTab: PropTypes.bool,
   sectionProviderName: PropTypes.string,
-
-  // Provided by React router in parent.
-  location: PropTypes.object.isRequired,
 };
 
 export default TeacherDashboard;
