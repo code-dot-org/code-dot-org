@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {useCallback, useState, useRef} from 'react';
+import React, {useCallback, useContext, useState, useRef} from 'react';
 import FocusLock from 'react-focus-lock';
 
 import Typography from '@cdo/apps/componentLibrary/typography';
@@ -10,6 +10,7 @@ import musicI18n from '../locale';
 import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
 import {setPackId} from '../redux/musicRedux';
+import {AnalyticsContext} from '../context';
 
 import styles from './PackDialog.module.scss';
 
@@ -92,6 +93,7 @@ interface PackDialogProps {
  * sound packs.
  */
 const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
+  const analyticsReporter = useContext(AnalyticsContext);
   const dispatch = useAppDispatch();
 
   const currentPackId = useAppSelector(state => state.music.packId);
@@ -132,6 +134,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
     dispatch(setPackId(DEFAULT_PACK));
     library.setCurrentPackId(DEFAULT_PACK);
     setSelectedFolderId(null);
+    analyticsReporter?.onPackSelected('default');
   }, [dispatch, library, player]);
 
   const setPackToSelectedFolder = useCallback(() => {
@@ -144,6 +147,7 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
       dispatch(setPackId(selectedFolderId));
       library.setCurrentPackId(selectedFolderId);
       setSelectedFolderId(null);
+      analyticsReporter?.onPackSelected(selectedFolderId);
     }
   }, [selectedFolderId, dispatch, library, player]);
 

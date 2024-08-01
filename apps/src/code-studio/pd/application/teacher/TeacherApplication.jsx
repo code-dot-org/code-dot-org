@@ -93,9 +93,6 @@ const TeacherApplication = props => {
     if (!isEmpty(parameters)) {
       url += `?${queryString.stringify(parameters)}`;
     }
-
-    ga('set', 'page', url);
-    ga('send', 'pageview');
   };
 
   return (

@@ -16,6 +16,7 @@ import {
   isDevelopmentEnvironment,
   isProductionEnvironment,
 } from '@cdo/apps/utils';
+import trackEvent from '@cdo/apps/util/trackEvent';
 
 import {BlockTypes} from '../blockly/blockTypes';
 import {FIELD_SOUNDS_NAME} from '../blockly/constants';
@@ -120,6 +121,8 @@ export default class AnalyticsReporter {
           .logError(message, error as Error);
       }
     }
+
+    trackEvent('music', 'session_start');
   }
 
   private async initialize(): Promise<void> {
@@ -186,6 +189,8 @@ export default class AnalyticsReporter {
       buttonName,
       ...properties,
     });
+
+    //trackEvent('music', 'button_clicked', buttonName);
   }
 
   onKeyPressed(keyName: string, properties?: object) {
@@ -193,6 +198,12 @@ export default class AnalyticsReporter {
       keyName,
       ...properties,
     });
+
+    //trackEvent('music', 'key_pressed', keyName);
+  }
+
+  onPackSelected(packId: string) {
+    trackEvent('music', 'pack_selected', {packId: packId});
   }
 
   private trackUIEvent(eventType: string, payload: object) {

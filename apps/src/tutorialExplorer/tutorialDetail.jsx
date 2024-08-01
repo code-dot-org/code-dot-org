@@ -11,6 +11,7 @@ import i18n from '@cdo/tutorialExplorer/locale';
 import Image from './image';
 import shapes from './shapes';
 import {getTagString, getTutorialDetailString, DoNotShow} from './util';
+import trackEvent from '../util/trackEvent';
 
 export default class TutorialDetail extends React.Component {
   static propTypes = {
@@ -47,8 +48,8 @@ export default class TutorialDetail extends React.Component {
 
   startTutorialClicked = () => {
     const shortCode = this.props.item.short_code;
-    ga('send', 'event', 'learn', 'start', shortCode);
-    ga('send', 'event', 'learn', `start-${this.props.grade}`, shortCode);
+    trackEvent('learn', 'start', shortCode);
+    trackEvent('learn', `start-${this.props.grade}`, shortCode);
   };
 
   render() {
