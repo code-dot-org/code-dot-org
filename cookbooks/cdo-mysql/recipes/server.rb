@@ -6,7 +6,6 @@ apt_package 'mysql-server' do
   notifies :create, 'template[cdo.cnf]', :immediately
   notifies :start, 'service[mysql]', :immediately
   notifies :run, 'execute[mysql-upgrade]', :immediately
-  notifies :run, 'execute[mysql-user]',    :immediately
 end
 
 template 'cdo.cnf' do
