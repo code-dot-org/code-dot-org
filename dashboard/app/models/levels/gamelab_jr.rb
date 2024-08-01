@@ -36,6 +36,7 @@ class GamelabJr < Gamelab
     blockly_variables
     instructions_icon
     standalone_app_name
+    show_big_playspace
   )
 
   def shared_blocks

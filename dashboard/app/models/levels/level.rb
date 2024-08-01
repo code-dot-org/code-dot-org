@@ -94,7 +94,6 @@ class Level < ApplicationRecord
     thumbnail_url
     start_libraries
     ai_tutor_available
-    show_big_playspace
   )
 
   # Fix STI routing http://stackoverflow.com/a/9463495
