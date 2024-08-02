@@ -78,6 +78,6 @@ When we [render the template that defines the bootstrap
 script](https://github.com/code-dot-org/code-dot-org/blob/bb519086d25905c10f801ce737629094fa25741d/aws/cloudformation/bootstrap_chef_stack.sh.erb#L152),
 it [uploads the output of `berks package` to S3 as a side
 effect](https://github.com/code-dot-org/code-dot-org/blob/bb519086d25905c10f801ce737629094fa25741d/lib/cdo/cloud_formation/cdo_app.rb#L163-L182).
-That artifact is then [downloaded to `/var/chef/cookbooks` as part of
-initial
-bootstrapping](https://github.com/code-dot-org/code-dot-org/blob/bb519086d25905c10f801ce737629094fa25741d/aws/chef-bootstrap.sh#L133-L135).
+That artifact is then [downloaded to `/var/chef/cookbooks` as part of initial
+bootstrapping](https://github.com/code-dot-org/code-dot-org/blob/bb519086d25905c10f801ce737629094fa25741d/aws/chef-bootstrap.sh#L133-L135),
+but will not thereafter be automatically updated.
