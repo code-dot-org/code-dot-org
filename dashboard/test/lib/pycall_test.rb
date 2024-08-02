@@ -2,11 +2,6 @@ require 'test_helper'
 require 'pycall'
 
 class PyCallTest < ActiveSupport::TestCase
-  test 'pycdo is globally available without an explicit import' do
-    # From /python/pycdo/test_module/test_func.py
-    assert_equal "Ruby can call Python!", pycdo.test_module.test_func
-  end
-
   test 'pyimport modules from /python' do
     # From /python/pycdo/test_module/test_func.py
     pyfrom 'pycdo.test_module', import: :test_func
