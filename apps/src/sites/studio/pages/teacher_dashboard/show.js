@@ -111,24 +111,6 @@ $(document).ready(function () {
   ReactDOM.render(
     <Provider store={store}>
       <Router basename={baseUrl}>
-<<<<<<< HEAD
-        <Switch>
-          <Route path="/">
-            <TeacherDashboard
-              studioUrlPrefix={scriptData.studioUrlPrefix}
-              sectionId={selectedSection.id}
-              sectionName={selectedSection.name}
-              studentCount={selectedSection.students.length}
-              coursesWithProgress={coursesWithProgress}
-              showAITutorTab={showAITutorTab}
-              sectionProviderName={sectionProviderName(
-                store.getState(),
-                selectedSection.id
-              )}
-            />
-          </Route>
-        </Switch>
-=======
         <Routes>
           <Route
             path="/*"
@@ -148,7 +130,6 @@ $(document).ready(function () {
             }
           />
         </Routes>
->>>>>>> 428104ca84a (Progress towards v6)
       </Router>
     </Provider>,
     document.getElementById('teacher-dashboard')

@@ -160,16 +160,6 @@ function TeacherDashboard({
         {studentCount === 0 && (
           <Route element={generateEmptySectionGraphic(false, true)} />
         )}
-<<<<<<< HEAD
-        <Route path={TeacherDashboardPath.projects}>
-          {applyV1TeacherDashboardWidth(
-            <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
-          )}
-        </Route>
-        <Route path={TeacherDashboardPath.stats}>
-          {applyV1TeacherDashboardWidth(<StatsTableWithData />)}
-        </Route>
-=======
         <Route
           path={TeacherDashboardPath.projects}
           element={applyV1TeacherDashboardWidth(
@@ -180,7 +170,6 @@ function TeacherDashboard({
           path={TeacherDashboardPath.stats}
           element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
         />
->>>>>>> 428104ca84a (Progress towards v6)
         {coursesWithProgress.length === 0 && (
           <Route element={generateEmptySectionGraphic(true, false)} />
         )}
