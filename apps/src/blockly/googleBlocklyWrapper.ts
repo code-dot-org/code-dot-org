@@ -41,6 +41,7 @@ import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
 import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
 import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
 import CdoFieldButton from './addons/cdoFieldButton';
+import CdoFieldColour from './addons/cdoFieldColour';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
 import CdoFieldImage from './addons/cdoFieldImage';
@@ -265,6 +266,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   const fieldOverrides: [string, string, FieldProto][] = [
     ['field_variable', 'FieldVariable', CdoFieldVariable],
     ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
+    ['field_colour', 'FieldColour', CdoFieldColour],
     ['field_number', 'FieldNumber', CdoFieldNumber],
     // CdoFieldBitmap extends from a JavaScript class without typing.
     // We know it's a field, so it's safe to cast as unknown.

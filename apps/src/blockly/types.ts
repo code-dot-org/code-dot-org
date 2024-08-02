@@ -38,6 +38,7 @@ import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
 import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
 import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
 import CdoFieldButton from './addons/cdoFieldButton';
+import CdoFieldColour from './addons/cdoFieldColour';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldParameter from './addons/cdoFieldParameter';
@@ -120,6 +121,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   FieldToggle: typeof CdoFieldToggle;
   FieldFlyout: typeof CdoFieldFlyout;
   FieldBitmap: typeof CdoFieldBitmap;
+  FieldColour: typeof CdoFieldColour;
   FieldVariable: typeof CdoFieldVariable;
   FieldParameter: typeof CdoFieldParameter;
   JavaScript: JavascriptGeneratorType;
