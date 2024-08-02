@@ -122,7 +122,7 @@ export default class AnalyticsReporter {
       }
     }
 
-    trackEvent('music', 'session_start');
+    trackEvent('music', 'music_session_start');
   }
 
   private async initialize(): Promise<void> {
@@ -199,7 +199,7 @@ export default class AnalyticsReporter {
   }
 
   onPackSelected(packId: string) {
-    trackEvent('music', 'pack_selected', {value: packId});
+    trackEvent('music', 'music_pack_selected', {value: packId});
   }
 
   private trackUIEvent(eventType: string, payload: object) {
