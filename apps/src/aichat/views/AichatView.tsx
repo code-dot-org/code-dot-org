@@ -23,9 +23,8 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import aichatI18n from '../locale';
 import {
-  addNotification,
+  addChatEvent,
   clearChatMessages,
-  logChatEvent,
   onSaveComplete,
   onSaveFail,
   onSaveNoop,
@@ -55,6 +54,7 @@ const getResetModelNotification = (): Notification => ({
   text: 'Model customizations and model card information have been reset to default settings.',
   notificationType: 'success',
   timestamp: Date.now(),
+  includeInChatHistory: true,
 });
 
 const AichatView: React.FunctionComponent = () => {
@@ -115,7 +115,7 @@ const AichatView: React.FunctionComponent = () => {
       })
     );
     dispatch(
-      logChatEvent({
+      addChatEvent({
         timestamp: Date.now(),
         descriptionKey: 'LOAD_LEVEL',
         hideForParticipants: true,
@@ -179,7 +179,7 @@ const AichatView: React.FunctionComponent = () => {
     // Save the customizations to the user's project.
     dispatch(updateAiCustomization());
     dispatch(clearChatMessages());
-    dispatch(addNotification(getResetModelNotification()));
+    dispatch(addChatEvent(getResetModelNotification()));
   }, [dispatch, levelAichatSettings]);
 
   const dialogControl = useContext(DialogContext);
@@ -193,7 +193,7 @@ const AichatView: React.FunctionComponent = () => {
   const onClear = useCallback(() => {
     dispatch(clearChatMessages());
     dispatch(
-      logChatEvent({
+      addChatEvent({
         timestamp: Date.now(),
         descriptionKey: 'CLEAR_CHAT',
         hideForParticipants: true,

@@ -29,7 +29,6 @@ import {
   LevelAichatSettings,
   ModelCardInfo,
   ModelUpdate,
-  Notification,
   SaveType,
   ViewMode,
   Visibility,
@@ -410,22 +409,9 @@ export const submitChatContents = createAsyncThunk(
   }
 );
 
-export const logChatEvent = createAsyncThunk(
-  'aichat/logChatEvent',
-  async (chatEvent: ChatEvent, thunkAPI) => {
-    const state = thunkAPI.getState() as RootState;
-    const aichatContext: AichatContext = {
-      currentLevelId: parseInt(state.progress.currentLevelId || ''),
-      scriptId: state.progress.scriptId,
-      channelId: state.lab.channel?.id,
-    };
-    ChatEventLogger.getInstance().logChatEvent(chatEvent, aichatContext);
-  }
-);
-
 // This thunk adds a chat event to chatEventsCurrent (displayed in current chat workspace)
-// if !hideForParticipants and then logs the event to the backend for all chat events
-// except notifications with includeInHistory !== true.
+// if hideForParticipants != true and then logs the event to the backend for all chat events
+// except notifications with includeInHistory != true.
 export const addChatEvent = createAsyncThunk(
   'aichat/addChatEvent',
   async (chatEvent: ChatEvent, thunkAPI) => {
@@ -469,9 +455,6 @@ const aichatSlice = createSlice({
   initialState,
   reducers: {
     addEventToChatEventsCurrent: (state, action: PayloadAction<ChatEvent>) => {
-      state.chatEventsCurrent.push(action.payload);
-    },
-    addNotification: (state, action: PayloadAction<Notification>) => {
       state.chatEventsCurrent.push(action.payload);
     },
     setStudentChatHistory: (state, action: PayloadAction<ChatEvent[]>) => {
@@ -697,7 +680,6 @@ const {
 
 registerReducers({aichat: aichatSlice.reducer});
 export const {
-  addNotification,
   removeUpdateMessage,
   setNewChatSession,
   setChatSessionId,
