@@ -79,7 +79,7 @@ export default class ProjectManager {
     if (this.destroyed) {
       this.throwErrorIfDestroyed('load');
     }
-    const sources = await this.loadSources();
+    const sources = await this.loadAndStoreSources();
 
     let channel: Channel;
     try {
@@ -107,7 +107,38 @@ export default class ProjectManager {
     }
     // Now that we've restored to the previous version, loading sources
     // will load the newly-restored version.
-    const sources = await this.loadSources();
+    const sources = await this.loadAndStoreSources();
+    return sources;
+  }
+
+  /**
+   * Load the sources for this project. If a versionId is provided, load that version, otherwise
+   * load the latest version. The sources are not stored by the Project Manager.
+   * @param versionId Optional version id to load. If not provided, the latest version is loaded.
+   * @returns sources for the project.
+   */
+  async loadSources(versionId?: string) {
+    let sources: ProjectSources | undefined;
+    try {
+      sources = await this.sourcesStore.load(this.channelId, versionId);
+    } catch (error) {
+      // If there was a validation error or sourceResponse is a 404 (not found),
+      // we still want to load the channel. In the case of a validation error,
+      // we will default to empty sources. Source can return not found if the project
+      // is new. If neither of these cases, throw the error.
+      if (error instanceof ValidationError) {
+        this.metricsReporter.logWarning(
+          `Error validating sources (${error.message}). Defaulting to empty sources.`
+        );
+      } else if (
+        error instanceof NetworkError &&
+        (error as NetworkError).response.status === 404
+      ) {
+        // This is expected if the project is new. Default to empty sources.
+      } else {
+        throw new Error('Error loading sources', {cause: error});
+      }
+    }
     return sources;
   }
 
@@ -496,40 +527,15 @@ export default class ProjectManager {
   }
 
   /**
-   * Load the sources for this project. If a versionId is provided, load that version, otherwise
-   * load the latest version.
+   * Load the sources for the given version id, or the latest version if no version id is provided.
+   * These sources are stored as lastSource, so any future changes to the sources will be compared
+   * to these sources.
    * @param versionId Optional version id to load. If not provided, the latest version is loaded.
-   * @param isPreview Optional boolean to indicate if we are previewing a project. If we are previewing,
-   * we won't store the source as lastSource.
    * @returns sources for the project.
    */
-  private async loadSources(versionId?: string, isPreview?: boolean) {
-    let sources: ProjectSources | undefined;
-    try {
-      sources = await this.sourcesStore.load(this.channelId, versionId);
-      // If we are previewing a project, we don't want to store the source as lastSource.
-      // lastSource is used to decide if we have unsaved changes.
-      if (!isPreview) {
-        this.lastSource = JSON.stringify(sources);
-      }
-    } catch (error) {
-      // If there was a validation error or sourceResponse is a 404 (not found),
-      // we still want to load the channel. In the case of a validation error,
-      // we will default to empty sources. Source can return not found if the project
-      // is new. If neither of these cases, throw the error.
-      if (error instanceof ValidationError) {
-        this.metricsReporter.logWarning(
-          `Error validating sources (${error.message}). Defaulting to empty sources.`
-        );
-      } else if (
-        error instanceof NetworkError &&
-        (error as NetworkError).response.status === 404
-      ) {
-        // This is expected if the project is new. Default to empty sources.
-      } else {
-        throw new Error('Error loading sources', {cause: error});
-      }
-    }
+  private async loadAndStoreSources(versionId?: string) {
+    const sources = await this.loadSources(versionId);
+    this.lastSource = JSON.stringify(sources);
     return sources;
   }
 
