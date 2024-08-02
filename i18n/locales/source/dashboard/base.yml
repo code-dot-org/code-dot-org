@@ -1454,7 +1454,6 @@ en:
       linking_page_header: "Link your %{provider} account to your existing Code.org account"
       linking_page_description: "Choose the sign-in method you normally use to access Code.org"
       sign_in_and_connect: "Sign in and connect"
-      successfully_linked: "You have successfully linked your Code.org account!"
     create_integration_success: "Successfully created your LTI integration"
     dynamic_registration_title: "Code.org Dynamic Registration"
     error:
