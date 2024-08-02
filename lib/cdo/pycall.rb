@@ -34,10 +34,22 @@ ENV['PYTHON'] = "#{venv_path}/bin/python"
 # pycall.rb is following symlinks from the virtualenv, and finding the underlying
 # interpreter directory, which means its missing the site-packages directory for
 # our virtualenv. As a result, we specify it manually.
-ENV['PYTHONPATH'] = "#{venv_path}/lib/python#{PYTHON_VERSION}/site-packages"
+ENV['PYTHONPATH'] = [
+  "#{venv_path}/lib/python#{PYTHON_VERSION}/site-packages", # site-packages for our virtualenv
+  File.expand_path('../../python', __dir__), # /python source dir
+].join(':')
 
 unless File.exist? ENV['PYTHON']
   raise "Python bin not found at #{ENV['PYTHON']}. Please run `pipenv install` again."
 end
 
 require 'pycall'
+
+# Put `pyimport` and `pyfrom` methods in the global namespace.
+require 'pycall/import'
+include PyCall::Import
+
+# Import /python/pycdo, and make it available globally
+def pycdo
+  PyCall.import_module 'pycdo'
+end

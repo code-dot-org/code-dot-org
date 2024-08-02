@@ -2,13 +2,49 @@ require 'test_helper'
 require 'pycall'
 
 class PyCallTest < ActiveSupport::TestCase
-  test 'pycall math library works' do
-    math = PyCall.import_module('math')
-    assert_equal 1.0, math.sin(math.pi / 2)
+  test 'pycdo is globally available without an explicit import' do
+    # From /python/pycdo/test_module/test_func.py
+    assert_equal "Ruby can call Python!", pycdo.test_module.test_func
   end
 
-  test 'import boto3 from site-packages works' do
-    boto3 = PyCall.import_module('boto3')
-    assert_equal 'boto3', boto3.__name__
+  test 'pyimport modules from /python' do
+    # From /python/pycdo/test_module/test_func.py
+    pyfrom 'pycdo.test_module', import: :test_func
+    assert_equal 'Ruby can call Python!', test_func
+  end
+
+  test 'pyimport packages from /Pipfile' do
+    pyimport 'openai'
+    assert_equal 'openai', openai.__name__
+  end
+
+  test 'pyimport and pyfrom' do
+    pyimport 'math'
+    assert_equal 5.0, math.sqrt(25)
+
+    pyfrom 'math', import: :sqrt
+    assert_equal 5.0, sqrt(25)
+
+    pyimport 'math', as: 'numberstuff'
+    assert_equal 5.0, numberstuff.sqrt(25)
+  end
+
+  test 'PyCall.exec' do
+    # Define a python function inside a string:
+    PyCall.exec <<~PYTHON
+      def py_do_thing():
+        return 5
+    PYTHON
+
+    # Get a reference to the python function
+    py_do_thing = PyCall.eval('py_do_thing')
+
+    # Call the function
+    assert_equal 5, py_do_thing.call
+  end
+
+  test 'PyCall.import_module' do
+    math = PyCall.import_module('math')
+    assert_equal 1.0, math.sin(math.pi / 2)
   end
 end
