@@ -2399,7 +2399,10 @@ ActiveRecord::Schema.define(version: 2024_07_26_205216) do
     t.string "races"
     t.integer "primary_contact_info_id"
     t.string "unlock_token"
+    t.string "cap_state", limit: 1
+    t.datetime "cap_state_date"
     t.index ["birthday"], name: "index_users_on_birthday"
+    t.index ["cap_state", "cap_state_date"], name: "index_users_on_cap_state_and_cap_state_date"
     t.index ["current_sign_in_at"], name: "index_users_on_current_sign_in_at"
     t.index ["deleted_at"], name: "index_users_on_deleted_at"
     t.index ["email", "deleted_at"], name: "index_users_on_email_and_deleted_at"
