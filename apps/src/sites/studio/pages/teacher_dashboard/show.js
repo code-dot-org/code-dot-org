@@ -125,7 +125,6 @@ $(document).ready(function () {
                 selectedSection.id
               )}
             />
-            )
           </Route>
         </Switch>
       </Router>
