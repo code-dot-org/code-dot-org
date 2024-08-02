@@ -11,16 +11,8 @@ import {runStudentTests, runValidationTests} from './pythonHelpers/scripts';
 export function handleRunClick(
   runTests: boolean,
   dispatch: Dispatch<AnyAction>,
-  permissions: string[],
   source: MultiFileSource | undefined
 ) {
-  // For now, restrict running python code to levelbuilders.
-  if (!permissions.includes('levelbuilder')) {
-    dispatch(
-      appendSystemMessage('You do not have permission to run python code.')
-    );
-    return;
-  }
   if (!source) {
     dispatch(appendSystemMessage('You have no code to run.'));
     return;
