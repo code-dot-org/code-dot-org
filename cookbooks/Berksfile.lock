@@ -29,6 +29,8 @@ DEPENDENCIES
     path: cdo-nodejs
   cdo-postfix
     path: cdo-postfix
+  cdo-python
+    path: cdo-python
   cdo-redis
     path: cdo-redis
   cdo-repository
@@ -103,6 +105,7 @@ GRAPH
   cdo-postfix (0.2.20)
     apt (>= 0.0.0)
     postfix (>= 0.0.0)
+  cdo-python (0.1.0)
   cdo-redis (0.1.14)
     redisio (>= 0.0.0)
   cdo-repository (0.2.56)
