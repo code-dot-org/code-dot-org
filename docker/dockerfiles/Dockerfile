@@ -68,7 +68,7 @@ FROM base as pyenv
 # compile python to /home/${USER}/.pyenv
 #########################################################
 
-# This should match the `python_version` specified in the Pipfile
+# This should match the `python_version` specified in /Pipfile
 ENV PYTHON_VERSION=3.12
 
 USER ${USER}

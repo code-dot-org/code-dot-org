@@ -39,4 +39,5 @@ coverage = "*"
 # Should match PYTHON_VERSION in:
 # - docker/dockerfiles/Dockerfile
 # - lib/cdo/pycall.rb
+# - cookbooks/cdo-python/recipes/default.rb
 python_version = "3.12"

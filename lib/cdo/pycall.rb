@@ -6,7 +6,7 @@ require 'open3'
 # in the Gemfile so that the PYTHON environment variable is set correctly.
 # Otherwise various pycall related gems like numpy will fail to load.
 
-# This should only be the MAJOR.MINOR, but should otherwise match `python_version` in the Pipfile.
+# This should only be the MAJOR.MINOR, but should otherwise match `python_version` in /Pipfile.
 PYTHON_VERSION = "3.12"
 
 def get_pipenv_venv_path
