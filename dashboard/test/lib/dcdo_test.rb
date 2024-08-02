@@ -3,10 +3,28 @@ require 'dynamic_config/dcdo'
 require 'timeout'
 
 class DCDOTest < ActiveSupport::TestCase
+  setup do
+    DCDO.unstub(:get)
+  end
+
   test 'basic set and get' do
-    assert_nil DCDO.get('key', nil)
-    DCDO.set('key', 'okay')
-    assert_equal DCDO.get('key', nil), 'okay'
+    key = SecureRandom.hex
+    assert_nil DCDO.get(key, nil)
+    DCDO.set(key, 'okay')
+
+    result = nil
+    Timeout.timeout(10) do
+      loop do
+        result = DCDO.get(key, nil)
+        if result.present?
+          break
+        else
+          sleep 1
+        end
+      end
+    end
+
+    assert_equal result, 'okay'
   end
 
   test 'returns default if key is not stored' do
@@ -18,7 +36,7 @@ class DCDOTest < ActiveSupport::TestCase
       'b' => 'yo dude',
       'c' => [1, 2, 3]
     }
-    key = 'random'
+    key = SecureRandom.hex
     DCDO.set(key, to_store)
 
     result = nil
