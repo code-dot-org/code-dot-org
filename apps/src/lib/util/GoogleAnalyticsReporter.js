@@ -1,3 +1,5 @@
+import getScriptData from '@cdo/apps/util/getScriptData';
+
 window.dataLayer = window.dataLayer || [];
 
 /**
@@ -14,8 +16,6 @@ function gtag() {
  * for code.org properties.
  */
 class GoogleAnalyticsReporter {
-  googleAnalyticsGTag = 'G-L9HT5MZ3HD';
-
   constructor() {
     this.initializeGoogleAnalytics();
     window.trackEvent = this.trackEvent;
@@ -27,8 +27,10 @@ class GoogleAnalyticsReporter {
   initializeGoogleAnalytics() {
     window.dataLayer = window.dataLayer || [];
 
+    const ga4MeasurementId = getScriptData('googleMeasurement').id;
+
     gtag('js', new Date());
-    gtag('config', 'G-L9HT5MZ3HD', window.userAnalyticsDimensions);
+    gtag('config', ga4MeasurementId, window.userAnalyticsDimensions);
   }
 
   /**

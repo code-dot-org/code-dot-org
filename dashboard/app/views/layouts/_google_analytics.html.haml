@@ -9,6 +9,9 @@
   - dimensions[user_type_dim] = current_user.user_type
   - dimensions[has_teacher] = current_user.teachers.any? ? '1' : '0'
 
+/ GA4 measurement ID for code.org
+- google_measurement = {id: "G-L9HT5MZ3HD"}
+
 :javascript
   window.userAnalyticsDimensions = #{dimensions.to_json};
   if ('devicePixelRatio' in window) {
@@ -16,6 +19,6 @@
   }
 
 / Google tag (gtag.js)
-%script{:async => "", :src => "https://www.googletagmanager.com/gtag/js?id=G-L9HT5MZ3HD"}
+%script{async: "", src: "https://www.googletagmanager.com/gtag/js?id=#{google_measurement[:id]}"}
 
-%script{src: webpack_asset_path("js/code.org/views/theme_google_analytics.js")}
+%script{src: webpack_asset_path("js/code.org/views/theme_google_analytics.js"), data: {googleMeasurement: google_measurement.to_json}}
