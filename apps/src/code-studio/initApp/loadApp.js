@@ -125,7 +125,7 @@ export function setupApp(appOptions) {
         }
         report.callback = appOptions.report.callback;
       }
-      trackEvent('activity', 'lines_of_code', {
+      trackEvent('activity', 'activity_lines_of_code', {
         path: window.script_path,
         value: report.lines,
       });
