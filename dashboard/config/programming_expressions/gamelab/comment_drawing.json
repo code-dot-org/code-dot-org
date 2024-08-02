@@ -4,6 +4,13 @@
   "category": "Drawing",
   "category_key": "drawing",
   "content": "// Comments are used document your code so it is easier for humans to understand. You should include a comment at the start of each function to explain what the function does, if it takes any arguments, and if it returns any values. It is also a good idea to comment any complex blocks of code so you, or another programmer, can more easily maintain or modify the code in the future.",
+  "examples": [
+    {
+      "name": "Example of Comments Using the Drawing Commands",
+      "description": "A drawing of two rectangles - the first one a red rectangle, and the second one a blue rectangle.",
+      "code": "```\n//Draw two rectangles with the blue rectangle on top of the red rectangle.\n\n//Draws a red rectangle.\nfill(\"red\");\nrect(175,175);\n\n//Draws a blue rectangle.\nfill(\"blue\");\nrect(200, 200);\n```"
+    }
+  ],
   "short_description": "// Comment",
   "syntax": "// Comment",
   "tips": "- You can type whatever you want on a comment line.\n- You can comment out a block of statements using /\\* before the first statement and \\*/ after the last statement."

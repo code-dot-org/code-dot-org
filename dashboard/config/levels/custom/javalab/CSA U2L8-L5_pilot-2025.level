@@ -1,0 +1,29 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-01T22:23:23.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Test the following expressions. Copy and paste one code segment at a time, then run the program to observe the results after each one.\r\n\r\n**Code Segment #1**\r\n<pre style=\"background-color: #333333; color: white;\">\r\nresult *= number;\r\nSystem.out.println(\"Result * number: \" + result);\r\n</pre>\r\n\r\n**Code Segment #2**\r\n<pre style=\"background-color: #333333; color: white;\">\r\nresult -= number;\r\nSystem.out.println(\"Result - number: \" + result);\r\n</pre>\r\n\r\n**Code Segment #3**\r\n<pre style=\"background-color: #333333; color: white;\">\r\nresult /= number;\r\nSystem.out.println(\"Result / number: \" + result);\r\n</pre>\r\n\r\n**Code Segment #4**\r\n<pre style=\"background-color: #333333; color: white;\">\r\nresult++;\r\nSystem.out.println(\"Result++: \" + result);\r\n</pre>\r\n\r\n**Code Segment #5**\r\n<pre style=\"background-color: #333333; color: white;\">\r\nresult++;\r\nSystem.out.println(\"Result--: \" + result);\r\n</pre>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "project_template_level_name": "CSA U2L8-Compound PBT_pilot-2025",
+    "teacher_markdown": "After adding the first code segment, students will see the following printed to the console:\r\n\r\n```\r\nResult: 0\r\nResult + number: 2\r\nResult * number: 4\r\n```\r\n\r\nThis is because on **Line 9**, the value assigned to `number` (`2`) is added to `result`. After **Line 9**, the value of `result` is `2`.\r\n\r\nWhen `result` is multiplied by the value assigned to `number` (`2`), the result is `2 * 2`, so `4` is assigned to `result`.\r\n\r\nAfter adding the second code segment, students will see the following printed to the console:\r\n\r\n```\r\nResult: 0\r\nResult + number: 2\r\nResult * number: 4\r\nResult - number: 2\r\n```\r\n\r\nThe value assigned to `result` is updated to the current value of `result` (`4`) minus the value assigned to `number` (`2`). The result is `2`, which is assigned to `result`.\r\n\r\nAfter adding the third code segment, students will see the following printed to the console:\r\n\r\n```\r\nResult: 0\r\nResult + number: 2\r\nResult * number: 4\r\nResult - number: 2\r\nResult / number: 1\r\n```\r\n\r\nThe value assigned to `result` is updated to the current value of `result` (`2`) divided by the value assigned to `number` (`2`). The result is `1`, which is assigned to `result`.",
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": "true"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-01T22:23:23.691+00:00\",\"changed\":[\"cloned from \\\"CSA U2L8-L5_2025\\\"\"],\"cloned_from\":\"CSA U2L8-L5_2025\"}]"
+}]]></config>
+</Javalab>
