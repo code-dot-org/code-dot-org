@@ -14,6 +14,6 @@ end
 pyenv_install 'system'
 
 # Use pyenv to build Python==$PYTHON_VERSION into /usr/local/pyenv/versions
-# This version of Python should be used automatically be pipenv, assuming
+# This version of Python should be selected automatically bb pipenv, assuming
 # it is compatible with the version of Python specified in the Pipfile.
 pyenv_python PYTHON_VERSION
