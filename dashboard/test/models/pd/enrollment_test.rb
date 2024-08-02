@@ -613,6 +613,16 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert teacher.permission? UserPermission::AUTHORIZED_TEACHER
   end
 
+  test 'Enrolling user in BYOW course makes them an authorized teacher' do
+    teacher = create :teacher
+    assert_empty teacher.permissions
+
+    workshop = create :workshop, course: Pd::SharedWorkshopConstants::COURSE_BUILD_YOUR_OWN
+    create :pd_enrollment, workshop: workshop, user: teacher
+
+    assert teacher.permission? UserPermission::AUTHORIZED_TEACHER
+  end
+
   test 'Enrolling user in CSF course does not make them authorized teacher' do
     teacher = create :teacher
     assert_empty teacher.permissions
