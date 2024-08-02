@@ -1,7 +1,5 @@
 /**
- * OLD Button. If you are updating or building new UI, please use the DSCO Button
- * component in the componentLibrary directory.
- *
+ * @deprecated use DSCO Button instead
  * This particular button is designed to operate in contexts where we have a solid
  * background. When we're a button on top of an image, we may want something different.
  */

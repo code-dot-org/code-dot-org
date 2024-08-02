@@ -1,3 +1,6 @@
+/**
+ * @deprecated use DSCO FontAwesomeV6Icon instead
+ */
 /** @file font-awesome helper component. */
 
 // NOTE: Prefer component/FontAwesomeV6Icon

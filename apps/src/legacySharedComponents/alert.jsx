@@ -1,3 +1,5 @@
+/** @deprecated use DSCO Alert instead */
+
 import PropTypes from 'prop-types';
 import React from 'react';
 

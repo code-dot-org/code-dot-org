@@ -1,14 +1,12 @@
+/**
+ * @deprecated use DSCO Button instead
+ */
+
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import color from '../util/color';
-
-/**
- * This file at one point represented our "default" button component. It has since
- * become outdated, and thus has been renamed to LegacyButton. New buttons should use
- * componentLibrary/Button
- */
 
 const ARROW_WIDTH = 58;
 const ARROW_HEIGHT = ARROW_WIDTH * 2;

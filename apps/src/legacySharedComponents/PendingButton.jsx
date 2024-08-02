@@ -1,3 +1,4 @@
+/** @deprecated use DSCO Button instead */
 /** @overview a button which shows a spinner while an operation is pending */
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
