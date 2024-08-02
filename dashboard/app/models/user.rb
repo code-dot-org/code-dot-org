@@ -50,10 +50,13 @@
 #  races                    :string(255)
 #  primary_contact_info_id  :integer
 #  unlock_token             :string(255)
+#  cap_state                :string(1)
+#  cap_state_date           :datetime
 #
 # Indexes
 #
 #  index_users_on_birthday                             (birthday)
+#  index_users_on_cap_state_and_cap_state_date         (cap_state,cap_state_date)
 #  index_users_on_current_sign_in_at                   (current_sign_in_at)
 #  index_users_on_deleted_at                           (deleted_at)
 #  index_users_on_email_and_deleted_at                 (email,deleted_at)
@@ -361,13 +364,6 @@ class User < ApplicationRecord
       user.save!
     end
   end
-
-  # after_create :send_new_teacher_email
-  # def send_new_teacher_email
-  # TODO: it's not easy to pass cookies into an after_create call, so for now while this is behind a page mode
-  # flag, we send the email from the controller instead. This should ultimately live here, though.
-  # TeacherMailer.new_teacher_email(self).deliver_now if teacher?
-  # end
 
   # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
   # based on the passed attributes.

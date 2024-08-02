@@ -26,8 +26,8 @@ import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
 import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import Button from '@cdo/apps/templates/Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import {

@@ -11,11 +11,10 @@ import {
   toggleHiddenLesson,
   isLessonHiddenForSection,
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import i18n from '@cdo/locale';
-
-import Button from '../Button';
 
 import HiddenForSectionToggle from './HiddenForSectionToggle';
 import LessonLock from './LessonLock';

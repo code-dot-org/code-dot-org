@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">Ta et introduksjonskurs i eget tempo</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">Lag et spill eller en app</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">Prøv CS uten datamaskin («frakoblet» og mobilalternativer)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Lær CS fra Code.org-teamet og spesielle gjester</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - Verdens mest finurlige måte å lære om datamaskiner, teknologi og programmering. Aktiviteter på en rekke CS-emner, som evnen til å dekomponere et problem, oppdage mønstre, tenke algoritmisk, feilsøke problemer og jobbe sammen. (for alderen 4-10)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - En samling gratis undervisningsmateriell som lærer informatikk gjennom engasjerende spill og gåter som bruker kort, snor, fargestifter og mye løping rundt. (for alderen 5-14)</li>
 </ul>
-
-<h2>Ingen datamaskin hjemme? Prøv CS på telefonen din med disse appene fra partnerne våre</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Et sjarmerende mobilkodingsspill som tar elevene med på et spennende eventyr, mens du lærer det grunnleggende om koding, som algoritmer, mønstergjenkjenning, sekvenser, løkker og betingelser. <i>(for alle aldre)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="CodeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodeSpark</h3></a>Award-vinnende lær-å-kode-plattform for barn i alderen 5-9 år. Løs gåter og lag spill med The Foos mens du lærer å kode. <strong>Merk: CodeSpark tilbyr en gratis 3-måneders prøveperiode. Foreldres e-postadresse og kredittkortinformasjon kreves ved påmelding.</strong> <i>(for forhåndslesere gjennom klasse 5)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Tilbake til toppen]</a></p>
-
-<a id="livecoding"></a>
-<h2>Lær av Code.org-teamet og spesielle gjester!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="CodeBytes logo">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes er lett å fordøye, 20 minutters interaktive leksjoner som blander informatikk med virkelige emner. Tren en AI for å lese tegnspråk, designe en app for godt, utforske Minecrafts verden, og mer!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Se episoder</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Kode Break">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Kodebrudd</h3>
-        <div class="smalltext" style="">Hold datavitenskap morsomt ved å ta en kodepause! Du kan lage en cypher med Ashton Kutcher, lære om variabler med Yara Shahidi, og til og med utforske hvordan Internett fungerer med den faktiske oppfinneren av Internett, Vint Cerf!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Bli tilkoblet</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

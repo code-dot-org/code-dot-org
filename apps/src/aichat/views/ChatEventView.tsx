@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ChatMessage from '@cdo/apps/aiComponentLibrary/chatItems/ChatMessage';
+import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
@@ -8,7 +8,8 @@ import {modelDescriptions} from '../constants';
 import {removeUpdateMessage} from '../redux/aichatRedux';
 import {timestampToLocalTime} from '../redux/utils';
 import {
-  ChatItem,
+  ChatEvent,
+  ChatEventDescriptions,
   ModelUpdate,
   isChatMessage,
   isNotification,
@@ -17,8 +18,8 @@ import {
 
 import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
-interface ChatItemViewProps {
-  item: ChatItem;
+interface ChatEventViewProps {
+  event: ChatEvent;
 }
 
 function formatModelUpdateText(update: ModelUpdate): string {
@@ -43,17 +44,19 @@ function formatModelUpdateText(update: ModelUpdate): string {
 }
 
 /**
- * Renders AI Chat {@link ChatItem}s using common AI design components.
+ * Renders AI Chat {@link ChatEvent}s using common AI design components.
  */
-const ChatItemView: React.FunctionComponent<ChatItemViewProps> = ({item}) => {
+const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
+  event,
+}) => {
   const dispatch = useAppDispatch();
 
-  if (isChatMessage(item)) {
-    return <ChatMessage {...item} />;
+  if (isChatMessage(event)) {
+    return <ChatMessage {...event} />;
   }
 
-  if (isNotification(item)) {
-    const {id, text, notificationType, timestamp} = item;
+  if (isNotification(event)) {
+    const {id, text, notificationType, timestamp} = event;
     return (
       <Alert
         text={`${text} ${timestampToLocalTime(timestamp)}`}
@@ -64,12 +67,22 @@ const ChatItemView: React.FunctionComponent<ChatItemViewProps> = ({item}) => {
     );
   }
 
-  if (isModelUpdate(item)) {
+  if (isModelUpdate(event)) {
     return (
       <Alert
-        text={formatModelUpdateText(item)}
+        text={formatModelUpdateText(event)}
         type="success"
-        onClose={() => dispatch(removeUpdateMessage(item.id))}
+        onClose={() => dispatch(removeUpdateMessage(event.id))}
+        size="s"
+      />
+    );
+  }
+
+  if (event.descriptionKey) {
+    return (
+      <Alert
+        text={ChatEventDescriptions[event.descriptionKey] as string}
+        type="success"
         size="s"
       />
     );
@@ -78,4 +91,4 @@ const ChatItemView: React.FunctionComponent<ChatItemViewProps> = ({item}) => {
   return null;
 };
 
-export default ChatItemView;
+export default ChatEventView;

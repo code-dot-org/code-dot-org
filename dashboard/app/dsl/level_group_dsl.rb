@@ -94,7 +94,7 @@ class LevelGroupDSL < LevelDSL
   def self.serialize(level)
     properties = level.properties
     new_dsl = "name '#{level.name}'"
-    new_dsl << "\ntitle '#{properties['title']}'" if properties['title']
+    new_dsl << "\ntitle '#{properties['title'].gsub("'", %q(\\\'))}'" if properties['title']
     new_dsl << "\nsubmittable '#{properties['submittable']}'" if properties['submittable']
     new_dsl << "\nanonymous '#{properties['anonymous']}'" if properties['anonymous']
 
