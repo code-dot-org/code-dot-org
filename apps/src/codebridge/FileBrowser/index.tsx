@@ -13,7 +13,7 @@ import {
   shouldShowFile,
 } from '@codebridge/utils';
 import fileDownload from 'js-file-download';
-import React, {useContext, useMemo} from 'react';
+import React, {useMemo} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
@@ -21,10 +21,7 @@ import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import {
-  DialogContext,
-  DialogType,
-} from '@cdo/apps/lab2/views/dialogs/DialogManager';
+import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
@@ -74,33 +71,33 @@ const InnerFileBrowser = React.memo(
       deleteFolder,
       config: {editableFileTypes},
     } = useCodebridgeContext();
-    const dialogControl = useContext(DialogContext);
+    const dialogControl = useDialogControl();
     const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
     const handleDeleteFile = (fileId: string) => {
       const filename = files[fileId].name;
       const title = `Are you sure?`;
       const message = `Are you sure you want to delete the file ${filename}?`;
-      dialogControl?.showDialog(
-        DialogType.GenericConfirmation,
-        () => deleteFile(fileId),
+      dialogControl?.showDialog({
+        type: DialogType.GenericConfirmation,
+        handleConfirm: () => deleteFile(fileId),
         title,
         message,
-        'Delete'
-      );
+        confirmText: 'Delete',
+      });
     };
 
     const handleDeleteFolder = (folderId: string) => {
       const folderName = folders[folderId].name;
       const title = `Are you sure?`;
       const message = `Are you sure you want to delete the folder ${folderName}? This will delete all files and folders inside ${folderName}.`;
-      dialogControl?.showDialog(
-        DialogType.GenericConfirmation,
-        () => deleteFolder(folderId),
+      dialogControl?.showDialog({
+        type: DialogType.GenericConfirmation,
+        handleConfirm: () => deleteFolder(folderId),
         title,
         message,
-        'Delete'
-      );
+        confirmText: 'Delete',
+      });
     };
 
     const hasValidationFile = Object.values(files).find(
@@ -282,7 +279,7 @@ export const FileBrowser = React.memo(() => {
     setFileType,
   } = useCodebridgeContext();
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
-  const dialogControl = useContext(DialogContext);
+  const dialogControl = useDialogControl();
 
   // Check if the filename is already in use in the given folder.
   // If it is, alert the user and return true, otherwise return false.
@@ -307,7 +304,10 @@ export const FileBrowser = React.memo(() => {
           }
         }
         if (message) {
-          dialogControl?.showDialog(DialogType.GenericAlert, () => {}, message);
+          dialogControl?.showDialog({
+            type: DialogType.GenericAlert,
+            title: message,
+          });
           return true;
         } else {
           return false;
@@ -330,11 +330,10 @@ export const FileBrowser = React.memo(() => {
           f => f.name === folderName && f.parentId === parentId
         );
         if (existingFolder) {
-          dialogControl?.showDialog(
-            DialogType.GenericAlert,
-            () => {},
-            codebridgeI18n.folderExistsError()
-          );
+          dialogControl?.showDialog({
+            type: DialogType.GenericAlert,
+            title: codebridgeI18n.folderExistsError(),
+          });
           return;
         }
 
@@ -368,11 +367,10 @@ export const FileBrowser = React.memo(() => {
         /* eslint-disable-next-line */
         const [_, extension] = fileName.split('.');
         if (!extension) {
-          dialogControl?.showDialog(
-            DialogType.GenericAlert,
-            () => {},
-            codebridgeI18n.noFileExtensionError()
-          );
+          dialogControl?.showDialog({
+            type: DialogType.GenericAlert,
+            title: codebridgeI18n.noFileExtensionError(),
+          });
           return;
         }
 
@@ -405,11 +403,10 @@ export const FileBrowser = React.memo(() => {
 
         moveFile(fileId, folderId);
       } catch (e) {
-        dialogControl?.showDialog(
-          DialogType.GenericAlert,
-          () => {},
-          getErrorMessage(e)
-        );
+        dialogControl?.showDialog({
+          type: DialogType.GenericAlert,
+          title: getErrorMessage(e),
+        });
       }
     },
     [
@@ -450,11 +447,11 @@ export const FileBrowser = React.memo(() => {
         f => f.name === newName && f.parentId === folder.parentId
       );
       if (existingFolder) {
-        dialogControl?.showDialog(
-          DialogType.GenericAlert,
-          () => {},
-          codebridgeI18n.folderExistsError()
-        );
+        dialogControl?.showDialog({
+          type: DialogType.GenericAlert,
+          title: codebridgeI18n.folderExistsError(),
+        });
+
         return;
       }
 

@@ -1,6 +1,6 @@
 /** @file Top-level view for AI Chat Lab */
 
-import React, {useCallback, useContext, useEffect} from 'react';
+import React, {useCallback, useEffect} from 'react';
 
 import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
 import Button from '@cdo/apps/componentLibrary/button/Button';
@@ -11,10 +11,7 @@ import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import {
-  DialogContext,
-  DialogType,
-} from '@cdo/apps/lab2/views/dialogs/DialogManager';
+import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
@@ -169,11 +166,14 @@ const AichatView: React.FunctionComponent = () => {
     dispatch(addNotification(getResetModelNotification()));
   }, [dispatch, levelAichatSettings]);
 
-  const dialogControl = useContext(DialogContext);
+  const dialogControl = useDialogControl();
 
   const onClickStartOver = useCallback(() => {
     if (dialogControl) {
-      dialogControl.showDialog(DialogType.StartOver, resetProject);
+      dialogControl.showDialog({
+        type: DialogType.StartOver,
+        handleConfirm: resetProject,
+      });
     }
   }, [dialogControl, resetProject]);
 
