@@ -10,9 +10,6 @@ execute 'install pipenv' do
   not_if 'pip show pipenv'
 end
 
-# Install pyenv
-include_recipe 'pyenv'
-
 # Install pyenv to /usr/local/pyenv
 pyenv_install 'system'
 
