@@ -158,11 +158,9 @@ function TeacherDashboard({
           <Route>{generateEmptySectionGraphic(false, true)}</Route>
         )}
         <Route path={TeacherDashboardPath.projects}>
-          {props =>
-            applyV1TeacherDashboardWidth(
-              <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
-            )
-          }
+          {applyV1TeacherDashboardWidth(
+            <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
+          )}
         </Route>
         <Route path={TeacherDashboardPath.stats}>
           {applyV1TeacherDashboardWidth(<StatsTableWithData />)}
