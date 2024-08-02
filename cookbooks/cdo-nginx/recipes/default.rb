@@ -1,5 +1,5 @@
 # We had previously manually added a repository here to install nginx, but
-# nginx is distributed by default in Ubuntu 24 so we no longer need to do so.
+# nginx is distributed by default in Ubuntu 20+ so we no longer need to do so.
 # Instead, we remove that addition from any persistent managed servers which
 # currently have it.
 #
