@@ -58,7 +58,7 @@ export const UnconnectedContainedLevelResetButton = ({
         disabled={!hasLevelResults || !!codeIsRunning}
         color={buttonColors.destructive}
         iconLeft={{iconStyle: 'solid', iconName: 'trash'}}
-        type={'primary'}
+        type={'secondary'}
       />
       <HelpTip>{i18n.deleteAnswerHelpTip()}</HelpTip>
       {resetFailed && (
