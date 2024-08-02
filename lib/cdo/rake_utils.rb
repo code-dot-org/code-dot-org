@@ -146,6 +146,10 @@ module RakeUtils
     run_pipenv_command 'install', *flags, *args
   end
 
+  def self.pipenv_run(*args)
+    run_pipenv_command 'run', *args
+  end
+
   def self.run_pipenv_command(*args)
     # pipenv will not install the exact version of python we specify if pyenv is
     # not present, instead it silently falls back to the system version. Thus:

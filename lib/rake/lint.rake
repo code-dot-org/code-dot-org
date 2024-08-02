@@ -39,7 +39,15 @@ namespace :lint do
     end
   end
 
-  timed_task_with_logging all: [:ruby, :haml, :scss, :javascript]
+  # lint python:
+  desc 'Lints Python code with ruff.'
+  timed_task_with_logging :python do
+    Dir.chdir(python_dir) do
+      RakeUtils.pipenv_run 'ruff check'
+    end
+  end
+
+  timed_task_with_logging all: [:ruby, :haml, :scss, :javascript, :python]
 end
 desc 'Lints all code.'
 timed_task_with_logging lint: ['lint:all']
