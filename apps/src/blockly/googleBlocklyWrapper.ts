@@ -1,7 +1,4 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import './addons/plusMinusBlocks/if';
-import './addons/plusMinusBlocks/text_join';
-import './addons/extensions/logic_compare';
 import {
   ObservableProcedureModel,
   ObservableParameterModel,
@@ -65,7 +62,10 @@ import initializeVariables from './addons/cdoVariables';
 import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
 import initializeBlocklyXml, {removeInvisibleBlocks} from './addons/cdoXml';
 import {registerAllContextMenuItems} from './addons/contextMenu';
+import registerLogicCompareMutator from './addons/extensions/logic_compare';
 import FunctionEditor from './addons/functionEditor';
+import registerIfMutator from './addons/plusMinusBlocks/if';
+import registerTextJoinMutator from './addons/plusMinusBlocks/text_join';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {Themes, Renderers} from './constants';
 import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/googleBlockly/behaviorBlocks';
@@ -194,6 +194,9 @@ const BlocklyWrapper = function (
  * Blockly.navigationController.dispose() before calling this function again.
  */
 function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
+  registerIfMutator();
+  registerLogicCompareMutator();
+  registerTextJoinMutator();
   // TODO: can we avoid using any here by converting BlocklyWrapper to a class?
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const blocklyWrapper = new (BlocklyWrapper as any)(
