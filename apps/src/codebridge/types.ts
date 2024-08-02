@@ -63,7 +63,6 @@ export type ResetProjectFunction = () => void;
 export type OnRunFunction = (
   runTests: boolean,
   dispatch: Dispatch<AnyAction>,
-  permissions: string[],
   source: MultiFileSource | undefined
 ) => void;
 
