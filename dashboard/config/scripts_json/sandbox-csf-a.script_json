@@ -8,11 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-28 18:16:22 UTC",
-    "published_state": "in_development",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "serialized_at": "2024-08-01 21:33:56 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "sandbox-csf-a"
     }
@@ -31,25 +31,1068 @@
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Course A overview ",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "Block-Based Coding",
+      "name": "Block-Based Coding",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**You will:**\n\n* Learn about block based programming.\n* Practice connecting, taking apart, and trashing blocks.\n* Use blocks from the toolbox.\n\n\n**Suggested time:** 5 minutes",
+        "student_overview": "**You will:**\n\n* Learn about block based programming.\n* Practice connecting, taking apart, and trashing blocks.\n* Use blocks from the toolbox.\n\n\n**Suggested time:** 5 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "Learn to Drag and Drop",
+      "name": "Learn to Drag and Drop",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "This **skill-building** lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.",
+        "preparation": "- Watch the ***How to Make a Class Section** on Code.org - Teacher Video. Create your own class section on Code.org and make sure every student has a card with their passcode on it.\n- Make sure students will be able to access Lesson 2 from their devices. Consider whether you want to hide future lessons to prevent students from moving ahead too quickly.\n- Have the school IT person add a quick link for your class section to the computer desktop.\n- Review the Common Sense Education website for more online safety content.",
+        "purpose": "The main goal of this lesson is to build students' experience with computers. By covering the most basic computer functions such as clicking, dragging, and dropping, we are creating a more equal playing field in the class for future puzzles. This lesson also provides a great opportunity to introduce basic computer hardware terminology, potentially including \"mouse\", \"trackpad\" or \"touchscreen\", depending on your devices.",
+        "student_overview": "Click and drag to finish the puzzles."
+      },
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "e53709a9-1b88-4c6c-9ff7-a5540dbcebc3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e53709a9-1b88-4c6c-9ff7-a5540dbcebc3",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "856d0331-558b-4b25-9db0-3fa25a0499ee",
+      "position": 1,
+      "properties": {
+        "duration": 5
+      },
+      "seeding_key": {
+        "lesson_activity.key": "856d0331-558b-4b25-9db0-3fa25a0499ee",
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "cdb1e375-0ded-4310-b450-69b20ab59680",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cdb1e375-0ded-4310-b450-69b20ab59680",
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "fda0955f-9cdc-461a-98fb-2a8e193206d6",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fda0955f-9cdc-461a-98fb-2a8e193206d6",
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "86ce67b0-b674-49d3-a24c-ab21e661e29e",
+      "position": 3,
+      "properties": {
+        "duration": 20,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "86ce67b0-b674-49d3-a24c-ab21e661e29e",
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "c7fd1acf-8bcd-4587-8f27-543ee142a58b",
+      "position": 4,
+      "properties": {
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c7fd1acf-8bcd-4587-8f27-543ee142a58b",
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "cad10050-3e6e-4523-bfee-9bf4a5ed94e3",
+      "position": 5,
+      "properties": {
+        "name": "Extended Learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cad10050-3e6e-4523-bfee-9bf4a5ed94e3",
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    },
+    {
+      "key": "41fe5ec6-40eb-478e-9971-a808a564ec9b",
+      "position": 6,
+      "properties": {
+        "name": "Cross-Curricular Opportunity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "41fe5ec6-40eb-478e-9971-a808a564ec9b",
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "36bb8243-2a63-4a1e-96f2-4af8fe7a37c7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "36bb8243-2a63-4a1e-96f2-4af8fe7a37c7",
+        "lesson_activity.key": "e53709a9-1b88-4c6c-9ff7-a5540dbcebc3"
+      }
+    },
+    {
+      "key": "32caf200-304b-44fc-ac9c-10595543d3ba",
+      "position": 1,
+      "properties": {
+        "progression_name": "Practicing Block-Based Coding"
+      },
+      "seeding_key": {
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba",
+        "lesson_activity.key": "856d0331-558b-4b25-9db0-3fa25a0499ee"
+      }
+    },
+    {
+      "key": "7a9e9bed-b188-4a4e-b90d-b03fb61ee5b5",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7a9e9bed-b188-4a4e-b90d-b03fb61ee5b5",
+        "lesson_activity.key": "856d0331-558b-4b25-9db0-3fa25a0499ee"
+      }
+    },
+    {
+      "key": "a70d2a5f-e62e-47de-add9-d387e297530d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a70d2a5f-e62e-47de-add9-d387e297530d",
+        "lesson_activity.key": "cdb1e375-0ded-4310-b450-69b20ab59680"
+      }
+    },
+    {
+      "key": "2e520d67-f798-4894-a38e-c55723ed5273",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2e520d67-f798-4894-a38e-c55723ed5273",
+        "lesson_activity.key": "fda0955f-9cdc-461a-98fb-2a8e193206d6"
+      }
+    },
+    {
+      "key": "f4369f90-c389-40c7-abe7-6f185234ecb6",
+      "position": 1,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6",
+        "lesson_activity.key": "86ce67b0-b674-49d3-a24c-ab21e661e29e"
+      }
+    },
+    {
+      "key": "c9834556-3f0a-4908-aac2-9b649cf29e86",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c9834556-3f0a-4908-aac2-9b649cf29e86",
+        "lesson_activity.key": "c7fd1acf-8bcd-4587-8f27-543ee142a58b"
+      }
+    },
+    {
+      "key": "a52c8ee3-9756-41a0-bef2-3018b575f67c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a52c8ee3-9756-41a0-bef2-3018b575f67c",
+        "lesson_activity.key": "cad10050-3e6e-4523-bfee-9bf4a5ed94e3"
+      }
+    },
+    {
+      "key": "b0379239-1896-4edc-877a-cd43098ec69a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b0379239-1896-4edc-877a-cd43098ec69a",
+        "lesson_activity.key": "41fe5ec6-40eb-478e-9971-a808a564ec9b"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLPLOPD-K5 Begin_2023_K5CSConcepts_TextPage"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "36bb8243-2a63-4a1e-96f2-4af8fe7a37c7"
+      },
+      "level_keys": [
+        "PLPLOPD-K5 Begin_2023_K5CSConcepts_TextPage"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "PLOPD-K5 Begin_2023_K5CSConcepts_TextPage"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "36bb8243-2a63-4a1e-96f2-4af8fe7a37c7"
+      },
+      "level_keys": [
+        "PLOPD-K5 Begin_2023_K5CSConcepts_TextPage"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practicing Block-Based Coding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "pl-k5-2-behaviors -intro_2024_K5block_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      },
+      "level_keys": [
+        "pl-k5-2-behaviors -intro_2024_K5block_1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Practicing Block-Based Coding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "OPD-K5 Begin_2023_K5CSConcepts_TextPage_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      },
+      "level_keys": [
+        "OPD-K5 Begin_2023_K5CSConcepts_TextPage_1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Practicing Block-Based Coding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp12022_2023_K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      },
+      "level_keys": [
+        "courseB_Scrat_ramp12022_2023_K5_1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Practicing Block-Based Coding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp3a2022_2023_K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      },
+      "level_keys": [
+        "courseB_Scrat_ramp3a2022_2023_K5_1"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Practicing Block-Based Coding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp3b2022_2023_K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      },
+      "level_keys": [
+        "courseB_Scrat_ramp3b2022_2023_K5_1"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Practicing Block-Based Coding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U2L4 Multiple Choice packets2022_2023K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      },
+      "level_keys": [
+        "U2L4 Multiple Choice packets2022_2023K5_1"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "why drag and drop"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "a70d2a5f-e62e-47de-add9-d387e297530d"
+      },
+      "level_keys": [
+        "why drag and drop"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:1"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:1"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:2"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:2"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:3"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:3"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:4"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:4"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:5"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:5"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:6"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:6"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 8,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:7"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:7"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 9,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:8"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:8"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 10,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:9"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:9"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 11,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:10"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:10"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 12,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:11"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:11"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 13,
+      "activity_section_position": 12,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "blockly:Jigsaw:12"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      },
+      "level_keys": [
+        "blockly:Jigsaw:12"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "PLPLOPD-K5 Begin_2023_K5CSConcepts_TextPage",
+        "script_level.level_keys": [
+          "PLPLOPD-K5 Begin_2023_K5CSConcepts_TextPage"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "36bb8243-2a63-4a1e-96f2-4af8fe7a37c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "PLOPD-K5 Begin_2023_K5CSConcepts_TextPage",
+        "script_level.level_keys": [
+          "PLOPD-K5 Begin_2023_K5CSConcepts_TextPage"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "36bb8243-2a63-4a1e-96f2-4af8fe7a37c7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "pl-k5-2-behaviors -intro_2024_K5block_1",
+        "script_level.level_keys": [
+          "pl-k5-2-behaviors -intro_2024_K5block_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "OPD-K5 Begin_2023_K5CSConcepts_TextPage_1",
+        "script_level.level_keys": [
+          "OPD-K5 Begin_2023_K5CSConcepts_TextPage_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_Scrat_ramp12022_2023_K5_1",
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp12022_2023_K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_Scrat_ramp3a2022_2023_K5_1",
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp3a2022_2023_K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseB_Scrat_ramp3b2022_2023_K5_1",
+        "script_level.level_keys": [
+          "courseB_Scrat_ramp3b2022_2023_K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U2L4 Multiple Choice packets2022_2023K5_1",
+        "script_level.level_keys": [
+          "U2L4 Multiple Choice packets2022_2023K5_1"
+        ],
+        "lesson.key": "Block-Based Coding",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "32caf200-304b-44fc-ac9c-10595543d3ba"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "why drag and drop",
+        "script_level.level_keys": [
+          "why drag and drop"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "a70d2a5f-e62e-47de-add9-d387e297530d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:1",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:1"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:2",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:2"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:3",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:3"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:4",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:4"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:5",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:5"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:6",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:6"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:7",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:7"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:8",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:8"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:9",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:9"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:10",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:10"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:11",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:11"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "blockly:Jigsaw:12",
+        "script_level.level_keys": [
+          "blockly:Jigsaw:12"
+        ],
+        "lesson.key": "Learn to Drag and Drop",
+        "lesson_group.key": "",
+        "script.name": "sandbox-csf-a",
+        "activity_section.key": "f4369f90-c389-40c7-abe7-6f185234ecb6"
+      }
+    }
   ],
   "resources": [
-
+    {
+      "name": "20/20/20 Rule",
+      "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
+      "key": "20_20_20_rule",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "20_20_20_rule"
+      }
+    },
+    {
+      "name": "CSF Course A Lesson Slides",
+      "url": "https://docs.google.com/presentation/d/1Fi51StQ8W2frzFwSHBWi_YxvOQpN2JivlFJ6MEYh4ZQ/template/preview",
+      "key": "csf_course_a_lesson_slides",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1Fi51StQ8W2frzFwSHBWi_YxvOQpN2JivlFJ6MEYh4ZQ/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csf_course_a_lesson_slides"
+      }
+    },
+    {
+      "name": "Getting Started - Creating a Class Section",
+      "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
+      "key": "getting_started_-_creating_a_class_section",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "getting_started_-_creating_a_class_section"
+      }
+    },
+    {
+      "name": "Pair Programming",
+      "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+      "key": "pair_programming",
+      "properties": {
+        "audience": "Student",
+        "type": "Student Video"
+      },
+      "seeding_key": {
+        "resource.key": "pair_programming"
+      }
+    },
+    {
+      "name": "Wiggles-Go Noodle",
+      "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
+      "key": "wiggles-go_noodle",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "wiggles-go_noodle"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "20_20_20_rule"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "csf_course_a_lesson_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "getting_started_-_creating_a_class_section"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "pair_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "resource.key": "wiggles-go_noodle"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -58,19 +1101,145 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "algorithm",
+      "word": "Algorithm",
+      "definition": "A list of steps to finish a task. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "key": "drag",
+      "word": "Drag",
+      "definition": "Click your mouse button and hold as you move the mouse pointer to a new location",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "drag"
+      }
+    },
+    {
+      "key": "drop",
+      "word": "Drop",
+      "definition": "Release your mouse button to \"let go\" of an item that you are dragging",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "drop"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "vocabulary.key": "drag"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "vocabulary.key": "drop"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "202455ad-e1d1-4df9-9227-3ae1dbf2d819",
+      "properties": {
+        "description": "Recognize what is expected when students transition into the computer lab."
+      },
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "objective.key": "202455ad-e1d1-4df9-9227-3ae1dbf2d819"
+      }
+    },
+    {
+      "key": "588c4fad-d580-472d-a34f-0cc3cb6d6a85",
+      "properties": {
+        "description": "Construct a precise sequence of instructions for dragging and dropping. "
+      },
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "objective.key": "588c4fad-d580-472d-a34f-0cc3cb6d6a85"
+      }
+    },
+    {
+      "key": "8c813d0b-73c4-4122-af92-371968a592f4",
+      "properties": {
+        "description": "Use appropriate terminology when referring to a computer mouse, trackpad, or touchscreen."
+      },
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "objective.key": "8c813d0b-73c4-4122-af92-371968a592f4"
+      }
+    },
+    {
+      "key": "ed6d5a8d-51d0-4228-a13b-dee97bb400c5",
+      "properties": {
+        "description": "Explain best practices for logging into a computer and logging out when done."
+      },
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "objective.key": "ed6d5a8d-51d0-4228-a13b-dee97bb400c5"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-NI-04"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 
