@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
-import {MemoryRouter} from 'react-router-dom/cjs/react-router-dom.min';
+import {MemoryRouter} from 'react-router-dom';
 
 import {registerReducers, restoreRedux, stubRedux} from '@cdo/apps/redux';
 import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
@@ -54,6 +54,8 @@ describe('TeacherDashboard', () => {
       .mockClear()
       .mockImplementation();
 
+    jest.spyOn($, 'getJSON').mockClear().mockImplementation();
+
     replaceOnWindow('opener', {
       teacherDashboardStoreInformation: {
         scriptId: 1,
@@ -65,6 +67,7 @@ describe('TeacherDashboard', () => {
   afterEach(() => {
     restoreRedux();
     progressLoader.loadUnitProgress.mockRestore();
+    $.getJSON.mockRestore();
     restoreOnWindow('opener');
   });
 
