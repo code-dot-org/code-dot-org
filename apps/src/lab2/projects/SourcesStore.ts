@@ -73,16 +73,15 @@ export class RemoteSourcesStore implements SourcesStore {
       // If forceNewVersion is set to true, we will not replace the existing version (i.e., we will create
       // a new version). Otherwise we check if we should replace the existing version based on the last new
       // version saved in this session.
-      const shouldReplaceExistingVersion = forceNewVersion
-        ? false
-        : this.shouldReplaceExistingVersion();
-      if (!shouldReplaceExistingVersion) {
+      const replaceExistingVersion =
+        !forceNewVersion && this.shouldReplaceExistingVersion();
+      if (!replaceExistingVersion) {
         // If we're are creating a new version, update the last new version time.
         this.lastNewVersionTime = Date.now();
       }
       options = {
         currentVersion: this.currentVersionId,
-        replace: shouldReplaceExistingVersion,
+        replace: replaceExistingVersion,
         firstSaveTimestamp: encodeURIComponent(this.firstSaveTime || ''),
         tabId: getTabId(),
         projectType: projectType,
