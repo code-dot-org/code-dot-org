@@ -6,6 +6,7 @@ apt_package 'mysql-server' do
   notifies :create, 'template[cdo.cnf]', :immediately
   notifies :start, 'service[mysql]', :immediately
   notifies :run, 'execute[mysql-upgrade]', :immediately
+  notifies :run, 'execute[mysql-user]', :immediately
 end
 
 template 'cdo.cnf' do
@@ -17,6 +18,15 @@ execute 'mysql-upgrade' do
   action :nothing
   notifies :start, 'service[mysql]', :before
   notifies :restart, 'service[mysql]', :immediately
+end
+
+# MySQL 8.0 Ubuntu package uses `auth_socket` plugin for local user by default.
+# Revert to `mysql_native_password` plugin to authenticate from non-root shell.
+execute 'mysql-user' do
+  command <<~SH
+    mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';"
+  SH
+  action :nothing
 end
 
 service 'mysql' do
