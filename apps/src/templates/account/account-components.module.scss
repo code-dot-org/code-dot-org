@@ -1,0 +1,43 @@
+.bannerContainer {
+  text-align: center;
+}
+
+.iconContainer {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 64px;
+}
+
+.iconContainer img {
+  width: 60px;
+  height: 60px;
+}
+
+.titleContainer {
+  margin-top: 24px;
+}
+
+.titleDesc {
+  margin: 10px 0 0 0 !important;
+}
+
+.cardIcon {
+  width: 45px;
+  height: 40px;
+  color: #0093A4;
+}
+
+.cardContent {
+  padding-bottom: 16px;
+}
+
+.button {
+  width: 100%;
+}
+
+// Increase specificity to override base button
+.cardSecondaryButton.cardSecondaryButton {
+  border: 1px solid #292F36
+}

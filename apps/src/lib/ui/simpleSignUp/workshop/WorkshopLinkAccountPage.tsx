@@ -1,10 +1,9 @@
 import React from 'react';
 
 import Link from '@cdo/apps/componentLibrary/link';
+import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
+import AccountCard from '@cdo/apps/templates/account/AccountCard';
 import i18n from '@cdo/locale';
-
-import WorkshopAccountBanner from './WorkshopAccountBanner';
-import WorkshopAccountCard from './WorkshopAccountCard';
 
 import styles from '../link-account.module.scss';
 
@@ -14,12 +13,12 @@ const WorkshopLinkAccountPage: React.FunctionComponent<{
 }> = ({newAccountUrl, existingAccountUrl}) => (
   <main>
     <div className={styles.contentContainer}>
-      <WorkshopAccountBanner
+      <AccountBanner
         heading={i18n.accountWelcomeBannerHeaderLabel()}
         desc={i18n.accountWelcomeBannerContentWorkshopEnroll()}
       />
       <div className={styles.cardContainer}>
-        <WorkshopAccountCard
+        <AccountCard
           id={'new-account-card'}
           icon={'user-plus'}
           title={i18n.ltiLinkAccountNewAccountCardHeaderLabel()}
@@ -28,7 +27,7 @@ const WorkshopLinkAccountPage: React.FunctionComponent<{
           buttonType="secondary"
           href={newAccountUrl}
         />
-        <WorkshopAccountCard
+        <AccountCard
           id={'existing-account-card'}
           icon={'user-check'}
           title={i18n.ltiLinkAccountExistingAccountCardHeaderLabel()}

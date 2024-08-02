@@ -14,9 +14,9 @@ import {
 } from '@cdo/apps/componentLibrary/card';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
-import styles from '../link-account.module.scss';
+import styles from './account-components.module.scss';
 
-const WorkshopAccountCard: React.FunctionComponent<{
+const AccountCard: React.FunctionComponent<{
   id: string;
   icon: string;
   title: string;
@@ -53,4 +53,4 @@ const WorkshopAccountCard: React.FunctionComponent<{
   </Card>
 );
 
-export default WorkshopAccountCard;
+export default AccountCard;
