@@ -5,6 +5,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {
   setProjectSource,
   setAndSaveProjectSource,
+  loadForViewVersion,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -49,6 +50,14 @@ const VersionHistoryDropdown: React.FunctionComponent<
     [dispatch, updatedSourceCallback, closeDropdown]
   );
 
+  const viewVersion = useCallback(
+    (version: ProjectVersion) => {
+      dispatch(loadForViewVersion({versionId: version.versionId}));
+      closeDropdown();
+    },
+    [dispatch, closeDropdown]
+  );
+
   const startOver = useCallback(() => {
     // TODO: confirm
     dispatch(setAndSaveProjectSource(startSource));
@@ -73,6 +82,12 @@ const VersionHistoryDropdown: React.FunctionComponent<
     } else {
       return (
         <>
+          <Button
+            text={commonI18n.view()}
+            color={'white'}
+            size={'s'}
+            onClick={() => viewVersion(version)}
+          />
           <Button
             text={commonI18n.restore()}
             color={'white'}
