@@ -35,6 +35,10 @@ export interface Notification extends ChatEvent {
   id: number;
   text: string;
   notificationType: 'error' | 'success';
+  // This field is optional but when it is defined, it must be set to `true`.
+  // This allows the notification to not be included in chat history as default
+  // without having to add an extra field.
+  includeInChatHistory?: true;
 }
 
 // Type Predicates: checks if a ChatEvent is a given type, and more helpfully,
