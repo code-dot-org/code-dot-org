@@ -25,18 +25,24 @@ export default class ChatEventLogger {
     return ChatEventLogger.instance;
   }
 
-  public static create() {
+  public static create(): void {
     ChatEventLogger.instance = new ChatEventLogger();
   }
 
-  logChatEvent(chatEvent: ChatEvent, aichatContext: AichatContext) {
+  // For testing purposes.
+  public setSendingInProgress(sendingInProgress: boolean): void {
+    this.sendingInProgress = sendingInProgress;
+  }
+
+  public logChatEvent(chatEvent: ChatEvent, aichatContext: AichatContext) {
     this.queue.push({chatEvent, aichatContext});
     if (!this.sendingInProgress) {
       this.sendChatEvent();
     }
   }
 
-  private async sendChatEvent() {
+  // Not private for testing purposes.
+  async sendChatEvent() {
     // Send aichat events to the server to be logged.
     while (this.queue.length > 0) {
       const loggerPayload = this.queue.shift(); // Remove the first element from the queue.
@@ -52,7 +58,6 @@ export default class ChatEventLogger {
           Lab2Registry.getInstance()
             .getMetricsReporter()
             .logError('Error in aichat event logging request', error as Error);
-          return;
         }
       }
     }
