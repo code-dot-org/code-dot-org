@@ -97,9 +97,9 @@ function TeacherDashboard({
   }
 
   // Include header components unless we are on the /login_info or /standards_report page.
-  const includeHeader =
-    location.pathname !== TeacherDashboardPath.loginInfo &&
-    location.pathname !== TeacherDashboardPath.standardsReport;
+  const includeHeader = false;
+  // location.pathname !== TeacherDashboardPath.loginInfo &&
+  // location.pathname !== TeacherDashboardPath.standardsReport;
 
   const generateEmptySectionGraphic = (hasStudents, hasCurriculumAssigned) => {
     return (

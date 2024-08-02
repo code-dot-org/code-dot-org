@@ -4,7 +4,8 @@
 
 .pageContainer {
   display: flex;
-  min-height: 100vh;
+  flex: 1; /* Take up the remaining space below the top nav bar */
+  overflow-y: auto; /* Make the page content scrollable */
 }
 
 .content {
