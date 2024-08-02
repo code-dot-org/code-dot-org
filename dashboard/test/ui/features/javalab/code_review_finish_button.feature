@@ -34,7 +34,6 @@ Feature: Code review Finish Button
     And I wait until element ".javalab-console" contains text "[JAVALAB] Program completed."
     Then element "#finishButton" is disabled
 
-  #@skip
   Scenario: Running code in your peer's code review does not enable the finish button
     Given I sign in as "student_1"
     And I am on "http://studio.code.org/s/allthethings/lessons/44/levels/2?noautoplay=true"
