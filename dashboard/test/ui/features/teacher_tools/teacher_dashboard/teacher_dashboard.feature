@@ -3,7 +3,7 @@ Feature: Using the teacher dashboard
 
   Scenario: Visiting student name URLs in teacher dashboard
     Given I create an authorized teacher-associated student named "Sally"
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
@@ -21,7 +21,7 @@ Feature: Using the teacher dashboard
   Scenario: Viewing a student
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to unit "allthethings"
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
     And I complete the free response on "http://studio.code.org/s/allthethings/lessons/27/levels/1"
     And I submit the assessment on "http://studio.code.org/s/allthethings/lessons/33/levels/1"
 
@@ -107,7 +107,7 @@ Feature: Using the teacher dashboard
 
   Scenario: Toggling student progress
     Given I create an authorized teacher-associated student named "Sally"
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
     And I complete the free response on "http://studio.code.org/s/allthethings/lessons/27/levels/1"
     And I submit the assessment on "http://studio.code.org/s/allthethings/lessons/33/levels/1"
 
@@ -239,7 +239,7 @@ Feature: Using the teacher dashboard
   Scenario: Decline invitation to new progress view
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to unit "allthethings"
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
@@ -254,7 +254,7 @@ Feature: Using the teacher dashboard
   Scenario: Accept invitation to new progress view and see new view immediately. 
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to unit "allthethings"
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
@@ -269,7 +269,7 @@ Feature: Using the teacher dashboard
   Scenario: Delay responding to invitation to new progress view and see old view immediately. 
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to unit "allthethings"
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
