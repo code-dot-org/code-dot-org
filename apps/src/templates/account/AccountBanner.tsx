@@ -3,16 +3,16 @@ import React from 'react';
 import {BodyTwoText, Heading1} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
-import codeLogo from '../assets/codeLogo.svg';
+import codeLogo from '../images/codeLogo.svg';
 
-import styles from '../link-account.module.scss';
+import styles from './account-components.module.scss';
 
 const AccountBanner: React.FunctionComponent<{
   heading: string;
   desc: string;
 }> = ({heading, desc}) => (
-  <div className={styles.welcomeContainer}>
-    <div className={styles.welcomeIconContainer}>
+  <div className={styles.bannerContainer}>
+    <div className={styles.iconContainer}>
       <img src={codeLogo} alt={i18n.codeLogo()} />
     </div>
 
