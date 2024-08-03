@@ -22,7 +22,6 @@ describe('ChatEventLogger', () => {
       scriptId: 321,
       channelId: 'abc123',
     };
-
     sinon.stub(aichatApi, 'postLogChatEvent').resolves({
       chat_event_id: 1,
       chat_event: userChatMessage as ChatMessage,
@@ -38,7 +37,6 @@ describe('ChatEventLogger', () => {
     expect(chatEventLogger).to.not.be.undefined;
     chatEventLogger.logChatEvent(userChatMessage as ChatMessage, aichatContext);
     expect(aichatApi.postLogChatEvent).to.have.been.calledOnce;
-    sinon.restore();
   });
 
   it('sendChatEvent not called when sendingInProgress is true', async () => {
@@ -48,7 +46,6 @@ describe('ChatEventLogger', () => {
     chatEventLogger.logChatEvent(userChatMessage as ChatMessage, aichatContext);
     // If sending in process is true, sendChatEvent should not be called.
     expect(aichatApi.postLogChatEvent).to.not.have.been.calledOnce;
-    sinon.restore();
   });
 
   it('postLogChatEvent called twice when logChatEvent called twice', async () => {
