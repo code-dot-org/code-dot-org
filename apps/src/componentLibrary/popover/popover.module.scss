@@ -25,17 +25,51 @@ Popover classNames structure:
   }
 */
 
+
+$m-tail-length: 12px;
+
+@mixin popover-tail-sizing($tail-length) {
+  &::after {
+    border-width: $tail-length;
+    margin-inline-start: -$tail-length;
+  }
+
+  &.popover-onTop {
+    &::after {
+      border-bottom-width: 0;
+    }
+  }
+
+  &.popover-onRight {
+    &::after {
+      border-inline-start-width: 0;
+    }
+  }
+
+  &.popover-onBottom {
+    &::after {
+      border-top-width: 0;
+    }
+  }
+
+  &.popover-onLeft {
+    &::after {
+      border-inline-end-width: 0;
+      margin-inline-start: 0;
+      margin-inline-end: -$tail-length;
+    }
+  }
+}
+
+
 // Popover styles
 .popover {
-  position: absolute;
-  width: 450px;
-  min-width: 450px;
-  max-width: 800px;
+  position: fixed;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  border-radius: 8px;
   background-color: $light_white;
   box-shadow: 0 0 16px 0 rgba(0 0 0 / 0.19);
 
@@ -128,14 +162,68 @@ Popover classNames structure:
   top: 6px;
 }
 
-//.contentSection {
-//  display: flex;
-//  flex-direction: column;
-//  align-items: flex-end;
-//  gap: 16px;
-//  flex: 1 0 0;
-//}
+// Popover directions (placement)
+.popover-onTop {
+  display: flex;
 
+  &::after {
+    content: "";
+    position: absolute;
+    inset-block-start: 100%;
+    inset-inline-start: 50%;
+    border-style: solid;
+    border-color: $light_white transparent transparent transparent;
+  }
+}
 
-// Popover placement
-//.popover_on
+.popover-onRight {
+  &::after {
+    content: "";
+    position: absolute;
+    inset-inline-end: 100%;
+    inset-block-start: 50%;
+    border-style: solid;
+    border-color: transparent $light_white transparent transparent;
+
+    html[dir='rtl'] & {
+      border-color: transparent transparent transparent $light_white;
+    }
+  }
+}
+
+.popover-onBottom {
+  &::after {
+    content: "";
+    position: absolute;
+    inset-block-end: 100%;
+    inset-inline-start: 50%;
+    border-style: solid;
+    border-color: transparent transparent $light_white transparent;
+  }
+}
+
+.popover-onLeft {
+  &::after {
+    content: "";
+    position: absolute;
+    inset-inline-start: 100%;
+    inset-block-start: 50%;
+    border-style: solid;
+    border-color: transparent transparent transparent $light_white;
+
+    html[dir='rtl'] & {
+      border-color: transparent $light_white transparent transparent;
+    }
+  }
+}
+
+.popover-none {
+  margin: 8px;
+}
+
+// Popover Sizes
+.popover-m {
+  width: 320px;
+
+  @include popover-tail-sizing($m-tail-length);
+}

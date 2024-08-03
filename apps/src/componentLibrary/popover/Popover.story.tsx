@@ -23,11 +23,19 @@ const SingleTemplate: StoryFn<PopoverProps> = args => {
 //   components: PopoverProps[];
 // }> = args => {
 //   return (
-//     <>
+//     <div
+//       style={{
+//         display: 'flex',
+//         flexFlow: 'wrap',
+//         alignItems: 'flex-start',
+//         gap: '20px',
+//         marginTop: 300,
+//       }}
+//     >
 //       {args.components?.map(componentArg => (
-//         <Popover key={componentArg.name} {...componentArg} />
+//         <Popover key={componentArg.title} {...componentArg} />
 //       ))}
-//     </>
+//     </div>
 //   );
 // };
 
