@@ -43,8 +43,10 @@ describe('ChatEventLogger', () => {
 
   it('sendChatEvent not called when sendingInProgress is true', async () => {
     const chatEventLogger = ChatEventLogger.getInstance();
+    // Simulate a sending in progress state.
     chatEventLogger.setSendingInProgress(true);
     chatEventLogger.logChatEvent(userChatMessage as ChatMessage, aichatContext);
+    // If sending in process is true, sendChatEvent should not be called.
     expect(aichatApi.postLogChatEvent).to.not.have.been.calledOnce;
     sinon.restore();
   });

@@ -29,8 +29,8 @@ export default class ChatEventLogger {
     ChatEventLogger.instance = new ChatEventLogger();
   }
 
-  // For testing purposes.
-  public setSendingInProgress(sendingInProgress: boolean): void {
+  // For testing purposes only.
+  setSendingInProgress(sendingInProgress: boolean): void {
     this.sendingInProgress = sendingInProgress;
   }
 
@@ -41,8 +41,7 @@ export default class ChatEventLogger {
     }
   }
 
-  // Not private for testing purposes.
-  async sendChatEvent() {
+  private async sendChatEvent() {
     // Send aichat events to the server to be logged.
     while (this.queue.length > 0) {
       const loggerPayload = this.queue.shift(); // Remove the first element from the queue.
