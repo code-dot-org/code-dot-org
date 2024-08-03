@@ -10,19 +10,35 @@ export type ButtonType = 'confirm' | 'cancel' | 'neutral';
 
 export type dialogCallback = (args?: unknown) => void;
 
-export interface GenericDialogProps {
-  buttons?: {
-    [key in ButtonType]?: {
-      text?: string;
-      callback?: dialogCallback;
+type GenericDialogTitleProps =
+  | {
+      title?: never;
+      TitleComponent?: React.FunctionComponent;
+    }
+  | {
+      title?: string;
+      TitleComponent?: never;
+    };
+
+type GenericDialogBodyProps =
+  | {
+      message?: never;
+      BodyComponent?: React.FunctionComponent;
+    }
+  | {
+      message?: string;
+      BodyComponent?: never;
+    };
+
+export type GenericDialogProps = GenericDialogTitleProps &
+  GenericDialogBodyProps & {
+    buttons?: {
+      [key in ButtonType]?: {
+        text?: string;
+        callback?: dialogCallback;
+      };
     };
   };
-
-  title?: string;
-  TitleComponent?: React.FunctionComponent;
-  message?: string;
-  BodyComponent?: React.FunctionComponent;
-}
 
 import moduleStyles from './generic-dialog.module.scss';
 
