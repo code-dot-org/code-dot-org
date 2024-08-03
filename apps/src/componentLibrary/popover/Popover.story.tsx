@@ -1,9 +1,9 @@
 import {Meta, StoryFn} from '@storybook/react';
-import React from 'react';
+import React, {useState} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 
-import Popover, {PopoverProps} from './index';
+import Popover, {PopoverProps, WithPopover} from './index';
 
 export default {
   title: 'DesignSystem/Popover', // eslint-disable-line storybook/no-title-property-in-meta
@@ -19,25 +19,51 @@ const SingleTemplate: StoryFn<PopoverProps> = args => {
   return <Popover {...args} />;
 };
 
-// const MultipleTemplate: StoryFn<{
-//   components: PopoverProps[];
-// }> = args => {
-//   return (
-//     <div
-//       style={{
-//         display: 'flex',
-//         flexFlow: 'wrap',
-//         alignItems: 'flex-start',
-//         gap: '20px',
-//         marginTop: 300,
-//       }}
-//     >
-//       {args.components?.map(componentArg => (
-//         <Popover key={componentArg.title} {...componentArg} />
-//       ))}
-//     </div>
-//   );
-// };
+const MultipleTemplate: StoryFn<{
+  components: PopoverProps[];
+}> = args => {
+  const [showPopoverMap, setShowPopoverMap] = useState<{
+    [key: string]: boolean;
+  }>({});
+  return (
+    <div
+      style={{
+        display: 'flex',
+        flexFlow: 'wrap',
+        alignItems: 'flex-start',
+        gap: '20px',
+        marginTop: 300,
+      }}
+    >
+      {args.components?.map(componentArg => {
+        return (
+          <WithPopover
+            key={componentArg.title}
+            showPopover={showPopoverMap[componentArg.title]}
+            popoverProps={{
+              ...componentArg,
+              onClose: () =>
+                setShowPopoverMap({
+                  ...showPopoverMap,
+                  [componentArg.title]: !showPopoverMap[componentArg.title],
+                }),
+            }}
+          >
+            <Button
+              text={componentArg.title}
+              onClick={() =>
+                setShowPopoverMap({
+                  ...showPopoverMap,
+                  [componentArg.title]: !showPopoverMap[componentArg.title],
+                })
+              }
+            />
+          </WithPopover>
+        );
+      })}
+    </div>
+  );
+};
 
 export const DefaultPopover = SingleTemplate.bind({});
 DefaultPopover.args = {
@@ -124,6 +150,37 @@ NoneDirectionPopover.args = {
     </>
   ),
 };
+
+export const GroupOfPositionedPopovers = MultipleTemplate.bind({});
+GroupOfPositionedPopovers.args = {
+  components: [
+    {
+      title: 'Right Popover',
+      direction: 'onRight',
+      content: 'This is a popover positioned on the right.',
+      onClose: () => console.log('Right Popover Closed'),
+    },
+    {
+      title: 'Top Popover',
+      direction: 'onTop',
+      content: 'This is a popover positioned on top.',
+      onClose: () => console.log('Top Popover Closed'),
+    },
+    {
+      title: 'Bottom Popover',
+      direction: 'onBottom',
+      content: 'This is a popover positioned at the bottom.',
+      onClose: () => console.log('Bottom Popover Closed'),
+    },
+    {
+      title: 'Left Popover',
+      direction: 'onLeft',
+      content: 'This is a popover positioned on the left.',
+      onClose: () => console.log('Left Popover Closed'),
+    },
+  ],
+};
+
 //
 // export const DefaultPopoverWithDisabledTab = SingleTemplate.bind({});
 // DefaultPopoverWithDisabledTab.args = {

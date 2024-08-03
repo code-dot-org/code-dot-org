@@ -39,13 +39,14 @@ export interface PopoverProps {
 }
 
 // TODO:
+// - Add withPopover ✔
 // - Add tests
-// - Add stories
-// - Add documentation
-// - add implementation
-// - add styles
-// - update Readme
-// - update index
+// - Add stories ✔
+// - Add documentation ✔
+// - add implementation ✔
+// - add styles ✔
+// - update Readme ✔
+// - update index ✔
 // - ✔ update Changelog ✔
 
 /**
@@ -61,59 +62,65 @@ export interface PopoverProps {
  * Design System: Popover Component.
  * Can be used to render a Popover.
  */
-const Popover: React.FunctionComponent<PopoverProps> = ({
-  icon,
-  image,
-  title,
-  content,
-  buttons,
-  direction,
-  onClose,
-  className,
-  size = 'm',
-  style = {},
-}) => {
-  return (
-    <div
-      className={classnames(
-        moduleStyles.popover,
-        image && moduleStyles['popover-withImage'],
-        moduleStyles[`popover-${direction}`],
-        moduleStyles[`popover-${size}`],
-        className
-      )}
-      style={style}
-    >
-      <CloseButton
-        className={moduleStyles.closeButton}
-        onClick={onClose}
-        size="l"
-        aria-label="Close"
-      />
-      {image && (
-        <div className={moduleStyles.imageSection}>
-          <img src={image.src} alt={image.alt} />
-        </div>
-      )}
-
-      <div className={moduleStyles.informationalSection}>
-        {icon && (
-          <div className={moduleStyles.iconSection}>
-            <FontAwesomeV6Icon {...icon} />
+const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(
+  (
+    {
+      icon,
+      image,
+      title,
+      content,
+      buttons,
+      direction = 'onTop',
+      onClose,
+      className,
+      size = 'm',
+      style = {},
+    },
+    ref
+  ) => {
+    return (
+      <div
+        ref={ref}
+        className={classnames(
+          moduleStyles.popover,
+          image && moduleStyles['popover-withImage'],
+          moduleStyles[`popover-${direction}`],
+          moduleStyles[`popover-${size}`],
+          className
+        )}
+        style={style}
+      >
+        <CloseButton
+          className={moduleStyles.closeButton}
+          onClick={onClose}
+          size="l"
+          aria-label="Close"
+        />
+        {image && (
+          <div className={moduleStyles.imageSection}>
+            <img src={image.src} alt={image.alt} />
           </div>
         )}
-        <div className={moduleStyles.contentSection}>
-          <div className={moduleStyles.textSection}>
-            <Heading5>{title}</Heading5>
-            <BodyTwoText>{content}</BodyTwoText>
-          </div>
-          {buttons && (
-            <div className={moduleStyles.buttonsSection}>{buttons}</div>
+
+        <div className={moduleStyles.informationalSection}>
+          {icon && (
+            <div className={moduleStyles.iconSection}>
+              <FontAwesomeV6Icon {...icon} />
+            </div>
           )}
+          <div className={moduleStyles.contentSection}>
+            <div className={moduleStyles.textSection}>
+              <Heading5>{title}</Heading5>
+              <BodyTwoText>{content}</BodyTwoText>
+            </div>
+            {buttons && (
+              <div className={moduleStyles.buttonsSection}>{buttons}</div>
+            )}
+          </div>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+);
 
 export default Popover;
