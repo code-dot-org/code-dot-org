@@ -2,9 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.3.2](https://github.com/code-dot-org/code-dot-org/pull/59607)
+## [0.3.2](https://github.com/code-dot-org/code-dot-org/pull/59328)
 
-* added ThemeContext.tsx to support themes change
+* minor types update
 
 ## [0.3.1](https://github.com/code-dot-org/code-dot-org/pull/59609)
 
