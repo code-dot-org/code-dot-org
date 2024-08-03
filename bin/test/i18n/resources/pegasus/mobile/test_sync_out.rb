@@ -22,8 +22,8 @@ describe I18n::Resources::Pegasus::Mobile::SyncOut do
     let(:crowdin_locale_dir) {CDO.dir('i18n/crowdin', i18n_locale)}
     let(:crowdin_resource_dir) {File.join(crowdin_locale_dir, 'pegasus')}
     let(:crowdin_file_path) {File.join(crowdin_resource_dir, 'mobile.yml')}
-    let(:i18n_file_path) {CDO.dir('i18n/locales', i18n_locale, 'pegasus/mobile.yml')}
-    let(:pegasus_i18n_file_path) {CDO.dir('pegasus/cache/i18n', "#{i18n_locale}.yml")}
+    let(:i18n_file_path) {CDO.dir('i18n/locales', i18n_locale, 'pegasus/mobile.json')}
+    let(:pegasus_i18n_file_path) {CDO.dir('pegasus/cache/i18n', "#{i18n_locale}.json")}
 
     let(:expect_localization_distribution) do
       I18nScriptUtils.expects(:sanitize_file_and_write).with(crowdin_file_path, pegasus_i18n_file_path)

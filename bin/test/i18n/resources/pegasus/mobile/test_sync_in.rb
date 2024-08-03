@@ -16,7 +16,7 @@ describe I18n::Resources::Pegasus::Mobile::SyncIn do
   describe '#process' do
     let(:process) {described_instance.process}
 
-    let(:pegasus_i18n_file_path) {CDO.dir('pegasus/cache/i18n/en-US.yml')}
+    let(:pegasus_i18n_file_path) {CDO.dir('pegasus/cache/i18n/en-US.json')}
 
     before do
       FileUtils.mkdir_p(File.dirname(pegasus_i18n_file_path))
@@ -27,7 +27,7 @@ describe I18n::Resources::Pegasus::Mobile::SyncIn do
       execution_sequence = sequence('execution')
 
       I18nScriptUtils.expects(:fix_yml_file).with(pegasus_i18n_file_path).in_sequence(execution_sequence)
-      I18nScriptUtils.expects(:copy_file).with(pegasus_i18n_file_path, CDO.dir('i18n/locales/source/pegasus/mobile.yml')).in_sequence(execution_sequence)
+      I18nScriptUtils.expects(:copy_file).with(pegasus_i18n_file_path, CDO.dir('i18n/locales/source/pegasus/mobile.json')).in_sequence(execution_sequence)
 
       process
     end
