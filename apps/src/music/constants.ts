@@ -64,7 +64,7 @@ export const DEFAULT_CHORD = {
 export const DEFAULT_CHORD_LENGTH = 1;
 
 // For reference, events look like this:
-// events: [{note: '', tick: 3}]
+// events: [{note: 60, tick: 3}]
 export const DEFAULT_TUNE = {
   instrument: 'piano',
   events: [],
