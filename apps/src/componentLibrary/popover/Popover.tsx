@@ -41,6 +41,9 @@ export interface PopoverProps {
 // TODO:
 // - Add withPopover ✔
 // - Add tests
+// - update withTooltip ✔
+// - clean up
+// - update README with how to use WithPopover component
 // - Add stories ✔
 // - Add documentation ✔
 // - add implementation ✔

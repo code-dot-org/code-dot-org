@@ -30,18 +30,8 @@ const WithPopover: React.FunctionComponent<WithPopoverProps> = ({
   popoverProps,
 }) => {
   const [nodePosition, setNodePosition] = useState<HTMLElement | null>(null);
-  // const [showTooltip, setShowTooltip] = useState<boolean>(false);
   const [popoverStyles, setPopoverStyles] = useState<React.CSSProperties>({});
   const popoverRef = useRef<HTMLDivElement | null>(null);
-
-  // Define the additional event handlers
-  // const handleShowTooltip = (
-  //   show: boolean,
-  //   event: React.SyntheticEvent<HTMLElement>
-  // ) => {
-  //   setShowTooltip(show);
-  //   setNodePosition(show ? (event.target as HTMLElement) : null);
-  // };
 
   const tailLength = tailLengths[popoverProps.size || 'm'];
 
@@ -79,35 +69,6 @@ const WithPopover: React.FunctionComponent<WithPopoverProps> = ({
     tailLength,
     updatePopoverStyles,
   ]);
-
-  // const tooltipStyleProps: React.CSSProperties = {
-  //   visibility: showTooltip ? 'visible' : 'hidden',
-  //   ...tooltipStyles,
-  // };
-
-  // Check if children is a valid React element and clone it with ariaDescribedBy attribute
-  // and additional event handlers to make sure the tooltip is displayed correctly
-  // const componentToWrap =
-  //   React.isValidElement<HTMLAttributes<HTMLElement>>(children) &&
-  //   React.cloneElement(children, {
-  //     'aria-describedby': tooltipProps.tooltipId,
-  //     onFocus: (event: React.FocusEvent<HTMLElement>) => {
-  //       handleShowTooltip(true, event);
-  //       children.props.onFocus?.(event);
-  //     },
-  //     onBlur: (event: React.FocusEvent<HTMLElement, Element>) => {
-  //       handleShowTooltip(false, event);
-  //       children.props.onBlur?.(event);
-  //     },
-  //     onMouseEnter: (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
-  //       handleShowTooltip(true, event);
-  //       children.props.onMouseEnter?.(event);
-  //     },
-  //     onMouseLeave: (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
-  //       handleShowTooltip(false, event);
-  //       children.props.onMouseLeave?.(event);
-  //     },
-  //   });
 
   const handleEvent = (event: React.SyntheticEvent<HTMLElement>) => {
     setNodePosition(event.currentTarget);
