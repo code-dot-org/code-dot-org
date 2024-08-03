@@ -1,2 +1,2 @@
-export * from './DialogContext';
+export * from './DialogControlContext';
 export * from './types';

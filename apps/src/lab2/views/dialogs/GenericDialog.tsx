@@ -3,7 +3,7 @@ import React from 'react';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import commonI18n from '@cdo/locale';
 
-import {useDialogControl} from './DialogContext';
+import {useDialogControl} from './DialogControlContext';
 import {closeDialogType} from './types';
 
 export type ButtonType = 'confirm' | 'cancel' | 'neutral';
@@ -13,21 +13,21 @@ export type dialogCallback = (args?: unknown) => void;
 type GenericDialogTitleProps =
   | {
       title?: never;
-      TitleComponent?: React.FunctionComponent;
+      titleComponent?: React.ReactNode;
     }
   | {
       title?: string;
-      TitleComponent?: never;
+      titleComponent?: never;
     };
 
 type GenericDialogBodyProps =
   | {
       message?: never;
-      BodyComponent?: React.FunctionComponent;
+      bodyComponent?: React.ReactNode;
     }
   | {
       message?: string;
-      BodyComponent?: never;
+      bodyComponent?: never;
     };
 
 export type GenericDialogProps = GenericDialogTitleProps &
@@ -64,24 +64,21 @@ const closingCallback =
 const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
   buttons,
   title,
-  TitleComponent,
+  titleComponent,
   message,
-  BodyComponent,
+  bodyComponent,
 }) => {
   const dialogControl = useDialogControl();
 
   return (
     <div className={moduleStyles.genericDialog}>
-      {TitleComponent ? (
-        <TitleComponent />
-      ) : (
+      {titleComponent || (
         <Typography semanticTag="h1" visualAppearance="heading-lg">
           {title}
         </Typography>
       )}
-      {BodyComponent ? (
-        <BodyComponent />
-      ) : (
+
+      {bodyComponent || (
         <Typography semanticTag="p" visualAppearance="body-two">
           {message}
         </Typography>

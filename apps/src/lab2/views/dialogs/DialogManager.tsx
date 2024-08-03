@@ -1,9 +1,10 @@
 import React, {useCallback, useState} from 'react';
 
-import {DialogContext} from './DialogContext';
+import {DialogControlContext} from './DialogControlContext';
 import GenericAlertDialog from './GenericAlertDialog';
 import GenericConfirmationDialog from './GenericConfirmationDialog';
 import GenericDialog from './GenericDialog';
+import GenericPrompt from './GenericPrompt';
 import SkipDialog from './SkipDialog';
 import StartOverDialog from './StartOverDialog';
 import {DialogType, TypedDialogProps, AnyDialogType} from './types';
@@ -20,6 +21,7 @@ const DialogViews = {
   [DialogType.GenericAlert]: GenericAlertDialog,
   [DialogType.GenericConfirmation]: GenericConfirmationDialog,
   [DialogType.GenericDialog]: GenericDialog,
+  [DialogType.GenericPrompt]: GenericPrompt,
 };
 
 interface DialogManagerProps {
@@ -54,7 +56,7 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
   const DialogView: any = openDialog && dialogArgs && DialogViews[openDialog];
 
   return (
-    <DialogContext.Provider
+    <DialogControlContext.Provider
       value={{
         closeDialog,
         showDialog,
@@ -66,7 +68,7 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
         </div>
       )}
       {children}
-    </DialogContext.Provider>
+    </DialogControlContext.Provider>
   );
 };
 

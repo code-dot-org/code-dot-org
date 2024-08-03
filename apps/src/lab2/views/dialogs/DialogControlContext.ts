@@ -7,8 +7,8 @@ interface DialogControl {
   showDialog: (args: TypedDialogProps) => void;
 }
 
-export const DialogContext = React.createContext<DialogControl>({
+export const DialogControlContext = React.createContext<DialogControl>({
   closeDialog: () => {},
   showDialog: () => {},
 });
-export const useDialogControl = () => useContext(DialogContext);
+export const useDialogControl = () => useContext(DialogControlContext);

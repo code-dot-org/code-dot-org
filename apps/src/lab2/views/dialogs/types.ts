@@ -1,35 +1,41 @@
 import {GenericAlertDialogProps} from './GenericAlertDialog';
 import {GenericConfirmationDialogProps} from './GenericConfirmationDialog';
 import {GenericDialogProps} from './GenericDialog';
+import {GenericPromptProps} from './GenericPrompt';
 import {SkipDialogProps} from './SkipDialog';
 import {StartOverDialogProps} from './StartOverDialog';
 
 export type closeDialogType = () => void;
 
 export enum DialogType {
-  StartOver = 'StartOver',
-  Skip = 'Skip',
   GenericAlert = 'GenericAlert',
   GenericConfirmation = 'GenericConfirmation',
+  GenericPrompt = 'GenericPrompt',
   GenericDialog = 'GenericDialog',
+  Skip = 'Skip',
+  StartOver = 'StartOver',
 }
 
 export type TypedDialogProps =
   | (GenericAlertDialogProps & {
       type: DialogType.GenericAlert;
     })
-  | (SkipDialogProps & {type: DialogType.Skip})
-  | (StartOverDialogProps & {type: DialogType.StartOver})
   | (GenericConfirmationDialogProps & {
       type: DialogType.GenericConfirmation;
     })
+  | (GenericPromptProps & {
+      type: DialogType.GenericPrompt;
+    })
   | (GenericDialogProps & {
       type: DialogType.GenericDialog;
-    });
+    })
+  | (SkipDialogProps & {type: DialogType.Skip})
+  | (StartOverDialogProps & {type: DialogType.StartOver});
 
 export type AnyDialogType =
   | GenericAlertDialogProps
-  | SkipDialogProps
-  | StartOverDialogProps
   | GenericConfirmationDialogProps
-  | GenericDialogProps;
+  | GenericDialogProps
+  | GenericPromptProps
+  | SkipDialogProps
+  | StartOverDialogProps;
