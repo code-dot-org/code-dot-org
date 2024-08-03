@@ -82,6 +82,7 @@ const Popover: React.FunctionComponent<PopoverProps> = ({
         moduleStyles[`popover-${size}`],
         className
       )}
+      style={style}
     >
       <CloseButton
         className={moduleStyles.closeButton}

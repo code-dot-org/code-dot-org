@@ -103,6 +103,27 @@ WithIconPopover.args = {
     </>
   ),
 };
+
+export const NoneDirectionPopover = SingleTemplate.bind({});
+NoneDirectionPopover.args = {
+  title: 'Title (Right Bottom Corner aligned)',
+  direction: 'none',
+  style: {right: 0, bottom: 0},
+  content:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  onClose: () => console.log('onClose'),
+  buttons: (
+    <>
+      <Button
+        type="secondary"
+        color="black"
+        text="Cancel"
+        onClick={() => console.log('Canceled Clicked')}
+      />
+      <Button text="Ok" onClick={() => console.log('Ok Clicked')} />
+    </>
+  ),
+};
 //
 // export const DefaultPopoverWithDisabledTab = SingleTemplate.bind({});
 // DefaultPopoverWithDisabledTab.args = {
