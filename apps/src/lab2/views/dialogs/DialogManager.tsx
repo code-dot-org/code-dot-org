@@ -47,7 +47,11 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
 
   const closeDialog = useCallback(() => setOpenDialog(null), [setOpenDialog]);
 
-  const DialogView = openDialog && dialogArgs && DialogViews[openDialog];
+  // Allow the any because if it's NOT any, then line 63 with DialogView's args will toss an error.
+  // Keep this until we have a better solution. ¯\_(ツ)_/¯
+  // The typing on the `showDialog` function ensures the props are correct, so we're still safe'
+  // eslint-disable-next-line
+  const DialogView: any = openDialog && dialogArgs && DialogViews[openDialog];
 
   return (
     <DialogContext.Provider
