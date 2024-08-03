@@ -57,7 +57,7 @@ describe('FreeResponseResponses', () => {
 
     screen.getByText('student response 1');
 
-    const dropdownButton = screen.getAllByTitle('Additional options')[0];
+    const dropdownButton = screen.getAllByLabelText('Additional options')[0];
 
     dropdownButton.click();
 
@@ -87,7 +87,7 @@ describe('FreeResponseResponses', () => {
     expect(screen.queryByText('Pinned responses')).toBeNull();
 
     // pin response
-    const dropdownButton = screen.getAllByTitle('Additional options')[4];
+    const dropdownButton = screen.getAllByLabelText('Additional options')[4];
     dropdownButton.click();
 
     const pinResponseButton = screen.getByRole('button', {

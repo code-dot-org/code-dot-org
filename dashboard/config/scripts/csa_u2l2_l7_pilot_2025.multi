@@ -1,0 +1,18 @@
+name 'CSA U2L2-L7_pilot-2025'
+title 'Check for Understanding'
+
+wrong '![](https://images.code.org/e5c1ea262df01c10aa0847a4e7e300d0-image-1667829020979.png)'
+wrong '![](https://images.code.org/3a7dfffaee996111faff71170ed3c38e-image-1667829026870.png)'
+right '![](https://images.code.org/1e7efbb3ceee70c6ee2014d0d9523b74-image-1667829032804.png)'
+wrong '![](https://images.code.org/2df62d9bc6fa4396cd540b34edf6d2f6-image-1667829038583.png)'
+wrong '![](https://images.code.org/3e72a87d8743524c0173cd60c78039ab-image-1667829044091.png)'
+
+markdown <<MARKDOWN
+Which of the following would be an appropriate no-argument constructor for a `Notebook` class that has instance variables for the color of a notebook and the number of pages a notebook has?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+For a "default" `Notebook` object, it would make the most sense that it would have a default color assigned, such as `"white"` and a default number of pages assigned, such as `50`. It would not make sense that a `Notebook` object would be created without a color or some set number of pages.
+MARKDOWN
+
+allow_multiple_attempts true

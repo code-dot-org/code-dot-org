@@ -4,12 +4,12 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import {CIPHER, ALPHABET} from '../../constants';
-import Button from '../../templates/Button';
 import * as color from '../../util/color';
 
 import {hideShareDialog, showLibraryCreationDialog} from './shareDialogRedux';

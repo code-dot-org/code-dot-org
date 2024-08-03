@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">Πάρτε ένα εισαγωγικό, αυτορυθμισμένο μάθημα</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">Δημιουργήστε ένα παιχνίδι ή μια εφαρμογή</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">Δοκιμάστε CS χωρίς υπολογιστή (επιλογές «αποσυνδεδεμένων» & κινητών)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Μάθετε CS από την ομάδα του Code.org και τους ειδικούς καλεσμένους</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - Ο πιο ιδιότροπος τρόπος στον κόσμο για να μάθετε για τους υπολογιστές, την τεχνολογία και τον προγραμματισμό. Δραστηριότητες σε μια γκάμα θεμάτων της επιστήμης των υπολογιστών, όπως η ικανότητα να αποσύνθετε προβλήματα, να εντοπίζετε μοτίβα, να σκέφτεστε με αλγορίθμους, να ασχολείστε με διορθώσεις προβλημάτων και να δουλεύετε μαζί.  (για ηλικίες 4-10 ετών)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - Μια συλλογή δωρεάν διδακτικού υλικού που διδάσκει την επιστήμη των υπολογιστών μέσα από συναρπαστικά παιχνίδια και παζλ που χρησιμοποιούν κάρτες, χορδές, κραγιόνια και πολλά τρεξίματα. (για ηλικίες 5-14 ετών)</li>
 </ul>
-
-<h2>Δεν υπάρχει υπολογιστής στο σπίτι; Δοκιμάστε το CS στο τηλέφωνό σας με αυτές τις εφαρμογές από τους συνεργάτες μας</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Νήσος Μποξ"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Ένα γοητευτικό παιχνίδι κωδικοποίησης για κινητά που οδηγεί τους μαθητές σε μια συναρπαστική περιπέτεια, ενώ διδάσκει τις βασικές αρχές της κωδικοποίησης, σαν αλγόριθμοι, αναγνώριση προτύπων, ακολουθίες, βρόχοι και προϋποθέσεις. <i>(για όλες τις ηλικίες)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="CodesPark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;"></h3></a>Βραβευμένη πλατφόρμα εκμάθησης κώδικα CodesPark για παιδιά ηλικίας 5-9 ετών. Επιλύστε παζλ και δημιουργήστε παιχνίδια με The Foos μαθαίνοντας ταυτόχρονα να φτιάχνετε κώδικες,. <strong>Σημείωση: codeSpark προσφέρει μια δωρεάν δοκιμή 3 μηνών. Η διεύθυνση ηλεκτρονικού ταχυδρομείου και οι πληροφορίες της πιστωτικής κάρτας των γονέων απαιτούνται κατά την εγγραφή.</strong><i>(για προαναγνώστες έως την έκτη δημοτικού)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Πίσω στην κορυφή]</a></p>
-
-<a id="livecoding"></a>
-<h2>Μάθετε από την ομάδα του Code.org και τους ειδικούς καλεσμένους!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Κωδικολογότυπος του Bytes">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes είναι εύπεπτα, 20 λεπτά διαδραστικά μαθήματα που συνδυάζουν την επιστήμη των υπολογιστών με θέματα πραγματικού κόσμου. Εκπαιδεύστε ένα AI για να διαβάσετε τη νοηματική γλώσσα, σχεδιάστε μια εφαρμογή για πάντα, εξερευνήστε τον κόσμο του Minecraft, κι αλλα!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Προβολή επεισοδίων</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Διακοπή κώδικα">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break</h3>
-        <div class="smalltext" style="">Διατηρήστε την επιστήμη των υπολογιστών διασκεδαστική κάνοντας ένα Code Break! Μπορείτε να δημιουργήσετε έναν κρυπτογράφο με τον Ashton Kutcher, μάθετε για τις μεταβλητές με την Yara Shahidi, και ακόμη και να εξερευνήσετε πώς λειτουργεί το Διαδίκτυο με τον πραγματικό εφευρέτη του Διαδικτύου, Vint Cerf!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Συνδεθείτε</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

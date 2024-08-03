@@ -1,0 +1,40 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-01T22:20:33.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "ContentRunner.java": {
+        "text": "public class ContentRunner {\n  public static void main(String[] args) {\n\n    System.out.println(\"Default Content Object\");\n    Content shortVideo = new Content();\n    shortVideo.printContentInfo();\n\n    System.out.println();\n\n    System.out.println(\"youTubeVideo Object\");\n    Content youTubeVideo = new Content(\"Change the Face of Computer Science\", 2021);\n    youTubeVideo.printContentInfo();\n\n    System.out.println();\n\n    System.out.println(\"Default Movie Object\");\n    Movie comingSoon = new Movie();\n    comingSoon.printMovieInfo();\n\n    System.out.println();\n\n    System.out.println(\"findingNemo Object\");\n    Movie findingNemo = new Movie(\"Finding Nemo\", 2003, 100);\n    findingNemo.printMovieInfo();\n\n    System.out.println();\n\n    System.out.println(\"friends Object\");\n    TVShow friends = new TVShow();\n    friends.printTVShowInfo();\n\n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Content.java": {
+        "text": "/*\n * Represents content on a streaming app\n */\npublic class Content {\n\n  private String title;     // The title of the content\n  private int year;         // The year the content was released\n\n  /*\n   * Sets the title to \"unknown\" and year to 1990\n   */\n  public Content() {\n    this(\"unknown\", 1990);\n  }\n\n  /*\n   * Sets the title to the specified title and\n   * the year to the specified year\n   */\n  public Content(String title, int year) {\n    this.title = title;\n    this.year = year;\n  }\n\n  /*\n   * Prints the title and year of the content\n   */\n  public void printContentInfo() {\n    System.out.println(\"Title: \" + title);\n    System.out.println(\"Year: \" + year);\n  }\n\n}",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "Movie.java": {
+        "text": "/*\n * Represents a movie on a streaming app\n */\npublic class Movie extends Content {\n\n  private int runningTime;  // The length of the movie in minutes\n\n  /*\n   * Sets the runningTime to 60\n   */\n  public Movie() {\n    runningTime = 60;\n  }\n\n  /*\n   * Sets the title to the specified title, the year to the specified\n   * year, and the runningTime to the specified running time\n   */\n  public Movie(String title, int year, int runningTime) {\n    super(title, year);\n    this.runningTime = runningTime;\n  }\n\n  /*\n   * Prints the running time of the movie\n   */\n  public void printMovieInfo() {\n    printContentInfo();\n    System.out.println(\"Running Time: \" + runningTime);\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 2
+      },
+      "TVShow.java": {
+        "text": "/*\n * Represents a TV show on a streaming app\n */\npublic class TVShow extends Content {\n\n  private int numEpisodes;  // The number of episodes\n\n  /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n\n\n\n\n  \n\n  /*\n   * Prints the title, year, and number of episodes for the TV show\n   */\n  public void printTVShowInfo() {\n    printContentInfo();\n    System.out.println(\"Number of Episodes: \" + numEpisodes);\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 3
+      }
+    },
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-01T22:20:33.758+00:00\",\"changed\":[\"cloned from \\\"CSA U2L5-Super PBT_2025\\\"\"],\"cloned_from\":\"CSA U2L5-Super PBT_2025\"}]"
+}]]></config>
+</Javalab>

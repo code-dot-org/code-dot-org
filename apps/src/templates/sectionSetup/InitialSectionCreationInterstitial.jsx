@@ -3,10 +3,10 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/templates/Button';
 import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
 import {beginEditingSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import color from '@cdo/apps/util/color';

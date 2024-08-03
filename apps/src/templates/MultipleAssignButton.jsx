@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import MultipleSectionsAssigner from '@cdo/apps/templates/MultipleSectionsAssigner';
 import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {
@@ -10,8 +11,6 @@ import {
   sectionsForDropdown,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
-
-import Button from './Button';
 
 class MultipleAssignButton extends React.Component {
   static propTypes = {

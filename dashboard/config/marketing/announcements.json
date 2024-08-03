@@ -1,7 +1,7 @@
 {
   "pages": {
-    "/home": "curriculum-launch-2024",
-    "/student-home": "music-lab-launch"
+    "/home": "progress-launch",
+    "/student-home": ""
   },
   "banners": {
     "superhero": {
@@ -20,15 +20,6 @@
       "buttonUrl": "https://code.org/hourofcode",
       "buttonId": "hoc-2023"
     },
-    "music-lab-launch": {
-      "dcdo": "music-lab-launch-2024",
-      "image": "/shared/images/banners/music-lab-with-afe-logo.png",
-      "title": "Introducing Music Lab",
-      "body": "Get creative with your favorite artist's music and code new songs and mixes!",
-      "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/music",
-      "buttonId": "music-lab-launch"
-    },
     "curriculum-launch-2024": {
       "dcdo": "curriculum-launch-2024",
       "image": "/shared/images/banners/banner-curriculum-launch-2024.png",
@@ -43,7 +34,7 @@
       "title": "Progress tracking just leveled up!",
       "body": "Effortlessly monitor student work, provide timely feedback, and simplify grading with our fast, teacher-tested interface. Save time and gain valuable insights into your students' performance, all in one intuitive tool.",
       "buttonText": "Try it now",
-      "buttonUrl": "",
+      "buttonUrl": "/teacher_dashboard/sections/first_section_progress",
       "buttonId": "progress-launch"
     }
   }
