@@ -135,7 +135,7 @@ export default class FieldTune extends Field {
       GoogleBlockly.utils.dom.createSvgElement(
         'rect',
         {
-          fill: color.light_cyan,
+          fill: '#68d1f7',
           x: graphNote.x,
           y: graphNote.y,
           width: graphNote.width,

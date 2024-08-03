@@ -86,7 +86,14 @@ const Key: React.FunctionComponent<KeyProps> = ({
       )}
       onClick={isSelected || !isDisabled ? onClick : undefined}
     >
-      <div className={moduleStyles.noteLabel}>{text}</div>
+      <div
+        className={classNames(
+          moduleStyles.noteLabel,
+          isVertical && moduleStyles.noteLabelVertical
+        )}
+      >
+        {text}
+      </div>
     </div>
   );
 };

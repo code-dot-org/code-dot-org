@@ -25,8 +25,8 @@
 
   .eventGridContainer {
     position: relative;
-    width: 315px;
-    margin: 10px 0;
+    //width: 315px;
+    //margin: 10px 0;
     //height: 110px;
     border-radius: 4px;
     //background-color: $neutral_dark90;
@@ -64,12 +64,13 @@
   .cell {
     padding: 1px;
     width: 10px;
-    height: 5px;
+    height: 4.75px;
     background-color: #555;
+    border-radius: 3px;
   }
 
   .activeCell {
-    background-color: white;
+    background-color: #68d1f7;
   }
 
   .highlightedCell {

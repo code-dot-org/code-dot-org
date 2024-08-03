@@ -71,6 +71,10 @@
       font-size: 8px;
       height: 8px;
       line-height: 1em;
+
+      &Vertical {
+        right: 1px;
+      }
     }
 
     &:hover {
