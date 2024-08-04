@@ -1,36 +1,12 @@
 [project]
 
-#
-# - Python Package Versions: don't overspecify them unless you need to! Trust
-#   the lockfile to do its job.
-#
-# - Where reasonable, split packages into sections using comments, explaining
-#   who's using the dependency. This makes long-term maintenance much easier.
-#
-
 dependencies = [
-    # Core packages, widely used in our codebase:
-    "boto3",
-    "numpy",
-    "openai",
-    
-    # Packages needed for foobar
-    # blah
-    # blah
-    # "test-package @ file:///${PROJECT_ROOT}/python/test_package",
+    "pycdo @ file:///${PROJECT_ROOT}/python/pycdo",
 ]
 requires-python = "==3.12.*"
 
 [tool.pdm]
 distribution = false
-
-[tool.pdm.dev-dependencies]
-dev = [
-    "pytest",
-    "pytest-mock",
-    "coverage",
-    "ipython",
-]
 
 # We use ruff for linting:
 [tool.ruff]

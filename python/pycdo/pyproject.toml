@@ -1,0 +1,30 @@
+[project]
+name = "pycdo"
+version = "0.1.0"
+description = "library package for code-dot-org"
+authors = [
+    { name = "Code.org Python Maintainers", email = "python@code.org" }
+]
+
+dependencies = [
+    "boto3",
+    "numpy",
+    "openai",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.pdm]
+package-dir = { "test_package" = "src/test_package" }
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest",
+    "pytest-mock",
+    "coverage",
+]
