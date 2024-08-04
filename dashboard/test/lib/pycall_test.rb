@@ -25,6 +25,9 @@ class PyCallTest < ActiveSupport::TestCase
   end
 
   test 'PyCall.exec' do
+    # Note you shouldn't use PyCall.exec like this, because now `py_run_callback`
+    # pollutes the global namespace in python.
+
     # Define a python function inside a string:
     PyCall.exec <<~PYTHON
       def py_do_thing():

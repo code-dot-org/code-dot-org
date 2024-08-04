@@ -47,6 +47,14 @@ yo = PyCall.import_module 'math'
 puts "Python says the square root of 16 is: #{yo.sqrt(16)}
 ```
 
+Importing `/python/pycdo/test_module/test_func.py` in ruby:
+
+```
+pyfrom 'pycdo.test_module`, import: :test_func
+puts test_func()
+# => "Ruby can call Python1"
+```
+
 Accessing python's builtin methods like `dir()` and `help()`:
 
 ```
@@ -63,12 +71,14 @@ ruby_callback = lambda do |arg|
 "ruby_callback('#{arg}') was invoked"
 end
 
+# Note its better not to use PyCall.exec like this, because now `py_run_callback`
+# pollutes the global namespace in python.
 PyCall.exec <<~PYTHON
   def py_run_callback(cb):
     return "Python says: " + cb("hi from py")
 PYTHON
-
 py_run_callback = PyCall.eval('py_run_callback')
+
 response = py_run_callback.call(ruby_callback)
 
 puts "Ruby says: #{response}"
