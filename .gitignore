@@ -101,3 +101,6 @@ npm-debug.log
 /i18n/locales/*/piskel/
 /i18n/locales/*/standards/
 /i18n/locales/*/docs/
+
+# Specifies the user-specific path to the venv for pdm
+.pdm-python

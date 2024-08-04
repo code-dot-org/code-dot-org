@@ -1,6 +1,7 @@
 require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
+require 'cdo/python_venv'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
 
@@ -40,10 +41,10 @@ namespace :lint do
   end
 
   # lint python:
-  desc 'Lints Python code with ruff.'
+  desc 'Lints Python code.'
   timed_task_with_logging :python do
     Dir.chdir(python_dir) do
-      RakeUtils.pipenv_run 'ruff check'
+      PythonVenv.lint
     end
   end
 

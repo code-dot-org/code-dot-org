@@ -55,8 +55,8 @@ namespace :build do
       ChatClient.log 'Installing <b>dashboard</b> bundle...'
       RakeUtils.bundle_install
 
-      ChatClient.log 'Installing <b>dashboard</b> python dependencies (pipenv)'
-      RakeUtils.pipenv_install
+      ChatClient.log 'Installing <b>dashboard</b> python dependencies'
+      RakeUtils.python_venv_install
 
       if CDO.daemon
         ChatClient.log 'Migrating <b>dashboard</b> database...'

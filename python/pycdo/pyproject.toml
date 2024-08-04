@@ -1,0 +1,28 @@
+[project]
+name = "pycdo"
+version = "0.1.0"
+description = "python equivalent of lib/cdo"
+authors = [
+    { name = "Code.org Python Devs", email = "python-devs@code.org" }
+]
+
+dependencies = [
+    "boto3",
+    "numpy",
+    "openai",
+]
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest",
+    "pytest-mock",
+    "coverage",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+

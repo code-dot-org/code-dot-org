@@ -1,0 +1,22 @@
+[project]
+requires-python = "==3.12.*"
+
+dependencies = [
+    # CDO python packages, from /python:
+    "pycdo @ file:///${PROJECT_ROOT}/python/pycdo",
+
+    ## Do not add dependencies here, add them to a local package's pyproject.toml ##
+]
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "ruff",
+    "ipython",
+]
+
+[tool.pdm]
+distribution = false
+
+[tool.ruff]
+# we use ruff for linting
+line-length = 100

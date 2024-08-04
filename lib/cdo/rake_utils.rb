@@ -5,6 +5,7 @@ require 'cdo/aws/s3'
 require 'cdo/chat_client'
 require 'digest'
 require 'parallel'
+require 'cdo/python_venv'
 
 module RakeUtils
   def self.system__(command)
@@ -131,37 +132,8 @@ module RakeUtils
     end
   end
 
-  def self.pipenv_install(*args)
-    flags = []
-
-    # --dev: install dev packages like pytest
-    flags << "--dev" unless rack_env?(:production, :staging)
-
-    # --deploy: fail unless Pipfile and Pipfile.lock are already in sync (=same hash stamp)
-    flags << "--deploy" unless local_environment? && !ENV['CI']
-
-    # --ignore-pipfile: don't try to validate deps, blindly install what's in the lockfile
-    flags << "--ignore-pipfile" if rack_env?(:production)
-
-    run_pipenv_command 'install', *flags, *args
-  end
-
-  def self.pipenv_run(*args)
-    run_pipenv_command 'run', *args
-  end
-
-  def self.run_pipenv_command(*args)
-    # pipenv will not install the exact version of python we specify if pyenv is
-    # not present, instead it silently falls back to the system version. Thus:
-    if `which pyenv` == ''
-      raise 'Tried `which pyenv`: pyenv not found. Please install pyenv and try again, see SETUP.md.'
-    end
-
-    if `which pipenv` == ''
-      raise 'Tried `which pipenv`: pipenv not found. Please install pipenv and try again, see SETUP.md.'
-    end
-
-    system_stream_output('PIPENV_YES=1 pipenv', *args)
+  def self.python_venv_install
+    PythonVenv.install
   end
 
   def self.git_add(*args)
