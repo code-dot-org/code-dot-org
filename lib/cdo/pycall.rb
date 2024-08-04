@@ -4,48 +4,15 @@
 # in the Gemfile so that the PYTHON environment variable is set correctly.
 # Otherwise various pycall related gems like numpy will fail to load.
 
-require 'open3'
-
-module ConfigurePyCall
-  # This should only be the MAJOR.MINOR, but should otherwise match `python_version` in /Pipfile.
-  PYTHON_VERSION = "3.12"
-
-  def self.get_pipenv_venv_path
-    if `which pipenv` == ''
-      raise 'Tried `which pipenv`: pipenv not found. Please install pipenv and try again, see SETUP.md.'
-    end
-
-    env = {
-      # Ensure `pipenv` still works when run from deeply nested directories, required for
-      # tests which invoke DashboardHelpers::require_rails_env from dashboard/test/ui.
-      'PIPENV_MAX_DEPTH' => '5',
-    }
-    stdout, stderr, status = Open3.capture3(env, 'pipenv --venv')
-    unless status.success?
-      raise "Failed to get virtual environment path from pipenv, try `pipenv install`? Error: #{stderr}"
-    end
-    stdout.strip
-  end
-
-  venv_path = get_pipenv_venv_path
-
-  # Use the python interpreter from the pipenv virtualenv
-  ENV['PYTHON'] = "#{venv_path}/bin/python"
-
-  # pycall.rb is following symlinks from the virtualenv, and finding the underlying
-  # interpreter directory, which means its missing the site-packages directory for
-  # our virtualenv. As a result, we specify it manually.
-  ENV['PYTHONPATH'] = [
-    "#{venv_path}/lib/python#{PYTHON_VERSION}/site-packages", # site-packages for our virtualenv
-    File.expand_path('../../python', __dir__), # /python source dir
-  ].join(':')
-
-  unless File.exist? ENV['PYTHON']
-    raise "Python bin not found at #{ENV['PYTHON']}. Please run `pipenv install` again."
-  end
+ENV['PYTHON'] = `pdm run which python`.strip
+unless File.exist? ENV['PYTHON']
+  raise "Python bin not found at #{ENV['PYTHON']}. Please run `pdm install` again."
 end
 
-require 'pycall'
+# pycall.rb is following symlinks from the virtualenv, and finding the underlying
+# interpreter directory, which means its missing the site-packages directory for
+# our virtualenv. As a result, we specify it manually.
+ENV['PYTHONPATH'] = `pdm run python -c "import site; print(site.getsitepackages()[0])"`.strip
 
 # Put `pyimport` and `pyfrom` methods in the global namespace.
 require 'pycall/import'
