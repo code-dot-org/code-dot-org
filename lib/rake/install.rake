@@ -42,7 +42,7 @@ namespace :install do
     if RakeUtils.local_environment?
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
-        RakeUtils.pipenv_install
+        RakeUtils.python_venv_install
 
         puts CDO.dashboard_db_writer
         if ENV['CI']

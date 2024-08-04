@@ -1,6 +1,7 @@
 require 'open3'
 require 'yaml'
 require_relative 'hooks_utils'
+require_relative '../../lib/cdo/python_venv'
 
 REPO_DIR = File.expand_path('../../../', __FILE__).freeze
 APPS_DIR = "#{REPO_DIR}/apps".freeze
@@ -16,8 +17,7 @@ def filter_eslint_apps(modified_files)
   end
 end
 
-def filter_ruff_python(modified_files)
-  puts "modified_files: #{modified_files}"
+def filter_python(modified_files)
   full_python_dir = File.expand_path(PYTHON_DIR)
 
   modified_files.select do |f|
@@ -78,8 +78,8 @@ def run_stylelint_apps(files)
   run("./node_modules/.bin/stylelint #{files.join(' ')} --config stylelint.config.js", APPS_DIR)
 end
 
-def run_ruff_python(files)
-  run("pipenv run ruff check #{files.join(' ')}", PYTHON_DIR)
+def run_python(files)
+  run("#{PythonVenv.lint_command} #{files.join(' ')}", PYTHON_DIR)
 end
 
 def run_haml(files)
@@ -119,7 +119,7 @@ def do_linting(base = nil, current = nil)
     Object.method(:run_eslint_apps) => filter_eslint_apps(modified_files),
     Object.method(:run_eslint_shared) => filter_eslint_shared(modified_files),
     Object.method(:run_stylelint_apps) => filter_scss_apps(modified_files),
-    Object.method(:run_ruff_python) => filter_ruff_python(modified_files),
+    Object.method(:run_python) => filter_python(modified_files),
     Object.method(:run_rubocop) => filter_rubocop(modified_files)
   }
 
