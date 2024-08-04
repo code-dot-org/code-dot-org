@@ -292,7 +292,7 @@ StudioApp.prototype.configure = function (options) {
 
   this.isBigPlayspaceEnabled =
     experiments.isEnabledAllowingQueryString(experiments.BIG_PLAYSPACE) ||
-    options.level.showBigPlayspace;
+    options.level.enableBigPlayspace;
 
   this.maxVisualizationWidth =
     options.maxVisualizationWidth ||
