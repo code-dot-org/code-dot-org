@@ -24,8 +24,8 @@ steps:
     image: curlimages/curl
     commands:
       # If running on EC2, get hostname from ec2 metadata
-      - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
-      - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
+      - 'IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")'
+      - 'hostname=$(curl -s -H "X-aws-ec2-metadata-token: $IMDS_TOKEN" http://169.254.169.254/latest/meta-data/public-hostname)'
       - echo "Running on $hostname"
 
   # We cache a clone of staging in the `cache-staging-clone` pipeline
@@ -70,7 +70,7 @@ steps:
 
   - name: unit-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:pycall
+    image: codedotorg/code-dot-org:pycall-pdm
     pull: always
     volumes:
       - name: rbenv
@@ -143,8 +143,8 @@ steps:
     image: curlimages/curl
     commands:
       # If running on EC2, get hostname from ec2 metadata
-      - "IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H \"X-aws-ec2-metadata-token-ttl-seconds: 21600\")"
-      - "hostname=$(curl -s -H \"X-aws-ec2-metadata-token: $IMDS_TOKEN\" http://169.254.169.254/latest/meta-data/public-hostname)"
+      - 'IMDS_TOKEN=$(curl -s -X PUT http://169.254.169.254/latest/api/token -H "X-aws-ec2-metadata-token-ttl-seconds: 21600")'
+      - 'hostname=$(curl -s -H "X-aws-ec2-metadata-token: $IMDS_TOKEN" http://169.254.169.254/latest/meta-data/public-hostname)'
       - echo "Running on $hostname"
 
   # We cache a clone of staging in the `cache-staging-clone` pipeline
@@ -189,7 +189,7 @@ steps:
 
   - name: ui-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:pycall
+    image: codedotorg/code-dot-org:pycall-pdm
     pull: always
     volumes:
       - name: rbenv
@@ -266,7 +266,7 @@ steps:
     image: bitnami/git
     commands:
       - git lfs install
-      - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL . 
+      - git clone --branch $DRONE_BRANCH $DRONE_GIT_HTTP_URL .
 
   - name: cache-staging-clone
     image: plugins/s3-cache
@@ -287,6 +287,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 7fbf5d91108534994bc86a9c133b2e6437367c927fc6c2e7c48d0518a17ce34e
+hmac: f7414a91188ebe36b65c65d67687cb31d1b58ad8f354374d6ac9c47d04f09512
 
 ...
