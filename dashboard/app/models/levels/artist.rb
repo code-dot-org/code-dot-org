@@ -40,6 +40,7 @@ class Artist < Blockly
     auto_run
     validation_enabled
     enable_download_image
+    enable_big_playspace
   )
 
   def xml_blocks
