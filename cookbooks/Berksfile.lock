@@ -48,7 +48,6 @@ DEPENDENCIES
   chef-client
   chef_client_updater (>= 3.3.2)
   ntp
-  pyenv
   seven_zip
   ssl_certificate
     git: https://github.com/code-dot-org/ssl_certificate-cookbook.git
@@ -135,7 +134,6 @@ GRAPH
   ntp (3.12.2)
   packagecloud (2.0.4)
   postfix (6.0.7)
-  pyenv (4.2.7)
   redisio (6.3.0)
     selinux (>= 0.0.0)
   selinux (6.0.7)
