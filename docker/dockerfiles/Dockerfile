@@ -62,6 +62,7 @@ RUN mkdir -p "$(rbenv root)"/plugins && \
     rbenv rehash && \
     gem install bundler -v 2.3.22
 
+
 #########################################################
 FROM base as primary-layer
 #########################################################
@@ -203,7 +204,6 @@ RUN echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
 # Finally, merge in the ruby layer
 COPY --from=rbenv --chown=${USER}:${GROUP} /home/${USER}/.rbenv /home/${USER}/.rbenv
-
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
