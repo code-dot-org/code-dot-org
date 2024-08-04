@@ -51,7 +51,33 @@ module MailJet
     )
   end
 
-  def self.send_cap_section_warning_email(user, locale = 'en-US')
+  # This method sends a "CAP section warning" email to a specified user if certain conditions are met.
+  #
+  # Parameters:
+  # user     - a single User object.
+  # sections - a JSON object containing an array of sections, each with a 'sectionName' and 'sectionLink'.
+  #            Example format:
+  #            {
+  #              sections: [
+  #                { sectionName: 'Section 1', sectionLink: 'http://example.com/section1' },
+  #                { sectionName: 'Section 2', sectionLink: 'http://example.com/section2' }
+  #              ]
+  #            }
+  # locale   - (optional) the locale for the email template. Defaults to 'en-US'.
+  #
+  # Returns:
+  #   Nothing if the function exits early due to any of the following conditions:
+  #     - the feature is not enabled.
+  #     - the user is nil or does not have a valid ID.
+  #     - the user is not a teacher.
+  #
+  # Workflow:
+  #   1. Checks if the feature is enabled.
+  #   2. Verifies the presence of a valid user ID.
+  #   3. Ensures the user has a teacher role.
+  #   4. Finds or creates a contact using the user's email and name.
+  #   5. Sends a template email with the specified sections in the specified locale.
+  def self.send_cap_section_warning_email(user, sections, locale = 'en-US')
     return unless enabled?
 
     return unless user&.id.present?
@@ -61,7 +87,8 @@ module MailJet
     send_template_email(
       contact,
       EMAILS[:cap_section_warning],
-      locale
+      locale,
+      sections
     )
   end
 
@@ -122,7 +149,7 @@ module MailJet
     end
   end
 
-  def self.send_template_email(contact, email_config, locale = 'en-US')
+  def self.send_template_email(contact, email_config, locale = 'en-US', variables = {})
     return unless enabled?
     return unless contact&.email.present?
 
@@ -151,6 +178,7 @@ module MailJet
         ],
         TemplateID: template_id,
         TemplateLanguage: true,
+        Variables: variables
       }]
     )
   end

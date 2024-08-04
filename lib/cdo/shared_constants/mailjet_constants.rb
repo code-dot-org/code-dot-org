@@ -20,6 +20,9 @@ module MailJetConstants
     },
     cap_section_warning: {
       template_id: {
+        staging: {
+          default: 6_179_441,
+        },
         development: {
           default: 6_179_441,
         }
