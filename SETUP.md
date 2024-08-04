@@ -24,8 +24,7 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
      ruby --version     # --> ruby 3.0.5
      node --version     # --> v18.16.0
      git-lfs --version  #  >= git-lfs/3.0
-     pipenv --version   #  >= 2024.0.1
-     pyenv --version    #  >= 2.4.8
+     pdm --version    #  >= 2.17
      ```
 
 1. `git lfs pull`
@@ -121,7 +120,7 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
 
 1. Install **brew packages**:
    ```
-   brew install rbenv ruby-build nvm pipenv pyenv mysql@8.0 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java
+   brew install rbenv ruby-build nvm pdm mysql@8.0 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java
    ```
 
 1. Initialize **Git LFS**:
@@ -253,9 +252,9 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. If your PATH is missing `~/.rbenv/shims`, the next two commands might not work. Edit your .bashrc to include the following line:
        `export PATH="$HOME/.rbenv/bin:~/.rbenv/shims:$PATH"`, then run `source .bashrc` for the change to take effect (as seen in [this github issue](https://github.com/rbenv/rbenv/issues/877)).
     1. `rbenv rehash`
-1. Install pyenv and pipenv, which will be used later by `rake install` to install python
-    1. Install pyenv: `curl https://pyenv.run | bash``
-    1. Install pipenv: `sudo pip3 install --prefix=/usr/local --upgrade pipenv`
+1. Install pdm, which will be used later by `rake install` to install python
+    1. `sudo pip3 install --prefix=/usr/local --upgrade pdm`
+        - alternatively, if you prefer pipx and have it configured path-wise: `pipx install pdm`
 1. Enable **corepack** to install **yarn**: `corepack enable`
 1. Make it so that you can run apps tests locally
     1. Add the following to `~/.bashrc` or your desired shell configuration file:
