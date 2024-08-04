@@ -70,7 +70,7 @@ steps:
 
   - name: unit-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:pycall-pdm
+    image: codedotorg/code-dot-org:pycall
     pull: always
     volumes:
       - name: rbenv
@@ -189,7 +189,7 @@ steps:
 
   - name: ui-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:pycall-pdm
+    image: codedotorg/code-dot-org:pycall
     pull: always
     volumes:
       - name: rbenv
@@ -287,6 +287,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: f7414a91188ebe36b65c65d67687cb31d1b58ad8f354374d6ac9c47d04f09512
+hmac: d9c32d89dff16a77f088321cb62f620eaa9240b9ab4364d861b11f44f7c0b2da
 
 ...
