@@ -107,7 +107,7 @@ GRAPH
   cdo-postfix (0.2.20)
     apt (>= 0.0.0)
     postfix (>= 0.0.0)
-  cdo-python (0.1.0)
+  cdo-python (0.1.1)
     apt (>= 0.0.0)
   cdo-redis (0.1.14)
     redisio (>= 0.0.0)
