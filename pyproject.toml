@@ -5,7 +5,7 @@ dependencies = [
     # CDO python packages, from /python:
     "pycdo @ file:///${PROJECT_ROOT}/python/pycdo",
 
-    ## Do not add dependencies here, add them to a local package's pyproject.toml ##
+    ## Do not add dependencies here, add them to a pyproject.toml in /python ##
 ]
 
 [tool.pdm.dev-dependencies]
