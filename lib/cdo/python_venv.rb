@@ -28,11 +28,11 @@ module PythonVenv
   end
 
   def self.python_bin_path
-    run 'which python'
+    `pdm run which python`.strip
   end
 
   def self.site_packages_path
-    run "python -c 'import site; print(site.getsitepackages()[0])'"
+    `pdm run python -c 'import site; print(site.getsitepackages()[0])'`.strip
   end
 
   def self.run(*args)
