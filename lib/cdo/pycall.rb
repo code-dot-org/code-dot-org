@@ -23,7 +23,7 @@ require 'pycall/import'
 include PyCall::Import
 
 # Do an import to ensure the Python interpreter is initialized.
-pyimport 'pycdo'
+pyimport 'sys'
 
 # Now unset PYTHON, PYTHONPATH & PYTHONHOME so we don't mess up python3-using apps
 # launched from our Ruby processes (like the aws cli)
