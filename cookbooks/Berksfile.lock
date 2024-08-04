@@ -109,7 +109,6 @@ GRAPH
     postfix (>= 0.0.0)
   cdo-python (0.1.0)
     apt (>= 0.0.0)
-    pyenv (>= 0.0.0)
   cdo-redis (0.1.14)
     redisio (>= 0.0.0)
   cdo-repository (0.2.56)
