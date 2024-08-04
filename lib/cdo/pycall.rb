@@ -16,6 +16,8 @@ end
 # our virtualenv. As a result, we specify it manually.
 ENV['PYTHONPATH'] = PythonVenv.site_packages_path
 
+require 'pycall'
+
 # Put `pyimport` and `pyfrom` methods in the global namespace.
 require 'pycall/import'
 include PyCall::Import

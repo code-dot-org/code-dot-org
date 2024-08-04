@@ -52,11 +52,16 @@ module PythonVenv
     CDO.log.info command
 
     output = ""
-    PTY.spawn(command) do |stdout, _, _|
-      stdout.each do |line|
-        puts line
+    IO.popen(command) do |io|
+      io.each_line do |line|
+        puts line if ENV['RAKE_VERBOSE']
         output << line
       end
+    end
+
+    unless $?.exitstatus == 0
+      error = RuntimeError.new("'#{command}' returned #{status}")
+      raise error, error.message, CDO.filter_backtrace([output])
     end
 
     output.strip
