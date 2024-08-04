@@ -25,8 +25,9 @@ include PyCall::Import
 # Do an import to ensure the Python interpreter is initialized.
 pyimport 'pycdo'
 
-# Now unset the PYTHONPATH & PYTHONHOME so we don't mess up python3-using apps
+# Now unset PYTHON, PYTHONPATH & PYTHONHOME so we don't mess up python3-using apps
 # launched from our Ruby processes (like the aws cli)
 # see: https://github.com/code-dot-org/code-dot-org/pull/60048#issuecomment-2267510208
 ENV.delete('PYTHONPATH')
 ENV.delete('PYTHONHOME')
+ENV.delete('PYTHON')
