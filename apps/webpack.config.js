@@ -205,6 +205,7 @@ const LOCALE_ALIASES = {
     localeDoNotImport('@cdo/standaloneVideo/locale'),
     localeDoNotImport('@cdo/tutorialExplorer/locale'),
     localeDoNotImport('@cdo/weblab/locale'),
+    localeDoNotImport('@cdo/signup/locale'),
     localeDoNotImportP5Lab('@cdo/gamelab/locale'),
     localeDoNotImportP5Lab('@cdo/poetry/locale'),
     localeDoNotImportP5Lab('@cdo/spritelab/locale'),
