@@ -2,7 +2,7 @@ require 'test_helper'
 require 'pycall'
 
 class PyCallTest < ActiveSupport::TestCase
-  test 'pyimport a module from /python/pycdo/test_module' do
+  test 'pyimport a module from /python' do
     # From /python/pycdo/test_module/test_func.py
     pyfrom 'pycdo.test_module', import: :test_func
     assert_equal 'Ruby can call Python!', test_func

@@ -47,7 +47,7 @@ yo = PyCall.import_module 'math'
 puts "Python says the square root of 16 is: #{yo.sqrt(16)}
 ```
 
-Importing `/python/pycdo/test_module/test_func.py` in ruby:
+Importing `/python/pycdo/pycdo/test_module/test_func.py` in ruby:
 
 ```
 pyfrom 'pycdo.test_module`, import: :test_func
