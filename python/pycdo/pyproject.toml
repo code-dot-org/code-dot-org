@@ -12,6 +12,13 @@ dependencies = [
     "openai",
 ]
 
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest",
+    "pytest-mock",
+    "coverage",
+]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 
@@ -19,12 +26,3 @@ testpaths = ["tests"]
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
 
-[tool.pdm]
-package-dir = { "test_package" = "src/test_package" }
-
-[tool.pdm.dev-dependencies]
-dev = [
-    "pytest",
-    "pytest-mock",
-    "coverage",
-]
