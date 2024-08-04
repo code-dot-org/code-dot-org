@@ -5,25 +5,22 @@ run Python code from Rails. This is enabled by [pycall.rb](https://github.com/mr
 and allows us to take advantage of Python's great package ecosystem. More information is available
 in [the initial pycall PR](https://github.com/code-dot-org/code-dot-org/pull/60048).
 
-For package management and virtual env we use [pipenv](https://pipenv.pypa.io/), see below.
+For package management and virtual env we use [pdm](https://pdm-project.org/), see below.
 
-## [pipenv](https://pipenv.pypa.io/): manage python packages and virtual env
+## [pdm](https://pdm-project.org/): manage python packages and virtual env
 
-pipenv uses the [Pipfile](../Pipfile) to create a python virtualenv, and install and manage its
+pdm uses [pyproject.toml](../pyproject.toml) to create a python virtualenv, and install and manage its
 dependencies. Its similar to `bundle` from the Ruby world, or `yarn`/`npm` from the Node world,
 and includes many of the same features.
 
-We use one `pipenv` for the whole repo, if you invoke `pipenv` in any sub-dir, it will be using
-the correct virtual env so you don't have to think about it much.
-
 Basics:
 
-- `pipenv install`: install dependencies specified in `/Pipfile`. like: `yarn install` or `bundle install`
-- `pipenv install boto9000`: add boto9000 to `/Pipfile` and install it. like: `yarn install boto9000`
-- `pipenv run ____`: run `____` inside the repo's python virtualenv. like: `bundle exec ____`
-  - example: `pipenv run ipython`: start ipython
-  - example: `pipenv run pytest`: run pytest in the current dir
-- `pipenv shell`: run a sub-shell where repo python is in the path. like: `source env/bin/activate`
+- `pdm install`: install dependencies specified in `pyproject.toml`. like: `yarn install` or `bundle install`
+- `pdm add boto9000`: add boto9000 to `pyproject.toml` and install it. like: `yarn install boto9000`
+- `pdm run ____`: run `____` inside the repo's python virtualenv. like: `bundle exec ____`
+  - example: `pdm run ipython`: start ipython
+  - example: `pdm run pytest`: run pytest in the current dir
+- `source .venv/bin/activate`: activate the python virtual environment created by pdm (see `pdm venv activate` for exact command)
 
 ## pycall.rb: how to invoke python code from rails
 
