@@ -60,7 +60,7 @@ module PythonVenv
     end
 
     unless $?.exitstatus == 0
-      error = RuntimeError.new("'#{command}' returned #{status}")
+      error = RuntimeError.new("'#{command}' returned #{$?.exitstatus}")
       raise error, error.message, CDO.filter_backtrace([output])
     end
 
