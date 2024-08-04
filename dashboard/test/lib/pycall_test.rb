@@ -2,13 +2,13 @@ require 'test_helper'
 require 'pycall'
 
 class PyCallTest < ActiveSupport::TestCase
-  test 'pyimport modules from /python' do
+  test 'pyimport a module from /python/pycdo/test_module' do
     # From /python/pycdo/test_module/test_func.py
     pyfrom 'pycdo.test_module', import: :test_func
     assert_equal 'Ruby can call Python!', test_func
   end
 
-  test 'pyimport packages from /Pipfile' do
+  test 'pyimport a package dep from /python/pycdo/pyproject.toml' do
     pyimport 'openai'
     assert_equal 'openai', openai.__name__
   end
