@@ -7,7 +7,6 @@ import '../build/locales/en_us/common_locale.js';
 import '../build/locales/en_us/aichat_locale.js';
 import '../build/locales/en_us/applab_locale.js';
 import '../build/locales/en_us/javalab_locale.js';
-import '../build/locales/en_us/signup_locale.js';
 import '../build/locales/en_us/music_locale.js';
 import '../build/locales/en_us/netsim_locale.js';
 import '../build/locales/en_us/standaloneVideo_locale.js';

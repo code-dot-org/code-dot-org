@@ -192,7 +192,6 @@ Dashboard::Application.routes.draw do
       get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
       post '/users/begin_sign_up', to: 'registrations#begin_sign_up'
       post '/users/finish_sign_up', to: 'registrations#new'
-      get '/users/new_sign_up', to: 'registrations#new_sign_up'
       patch '/dashboardapi/users', to: 'registrations#update'
       patch '/users/upgrade', to: 'registrations#upgrade'
       patch '/users/set_student_information', to: 'registrations#set_student_information'
