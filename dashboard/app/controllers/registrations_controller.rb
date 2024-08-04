@@ -70,13 +70,6 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   #
-  # Get /users/new_sign_up
-  #
-  def new_sign_up
-    render 'new_sign_up'
-  end
-
-  #
   # GET /users/cancel
   #
   # Cancels the in-progress partial user registration and redirects to sign-up page.
