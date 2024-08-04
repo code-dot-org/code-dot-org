@@ -12,7 +12,7 @@ import locale from '@cdo/apps/signup/locale';
 
 const LoginTypeSelection: React.FunctionComponent = () => {
   return (
-    <div id="signup">
+    <div id="newSignupFlow">
       <Heading1>{locale.pick_your_login_method()}</Heading1>
       <BodyTwoText>{locale.choose_one_method()}</BodyTwoText>
       <div className={'containerWrapper'}>
