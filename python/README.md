@@ -15,8 +15,8 @@ and includes many of the same features.
 
 Basics:
 
-- `pdm install`: install dependencies specified in `pyproject.toml`. like: `yarn install` or `bundle install`
-- `pdm add boto9000`: add boto9000 to `pyproject.toml` and install it. like: `yarn install boto9000`
+- `pdm install`: install dependencies specified in pyproject.toml. like: `yarn install` or `bundle install`
+- `pdm add boto9000`: add boto9000 to pyproject.toml and install it. like: `yarn install boto9000`
 - `pdm run ____`: run `____` inside the repo's python virtualenv. like: `bundle exec ____`
   - example: `pdm run ipython`: start ipython
   - example: `pdm run pytest`: run pytest in the current dir
@@ -26,7 +26,7 @@ Basics:
 
 - Ruby => Python function calls are very fast: microseconds not milliseconds
 - Ruby callbacks can be passed into Python functions
-- Python packages, specified in `/Pipfile`, can be imported in Ruby using `PyCall.import('pipname')`
+- Python packages, specified in sub-packages like `/python/pycdo/pyproject.toml`, can be imported in Ruby using `PyCall.import('pipname')`
 
 ### Examples
 
