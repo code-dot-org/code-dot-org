@@ -1,9 +1,9 @@
 [project]
 name = "pycdo"
 version = "0.1.0"
-description = "library package for code-dot-org"
+description = "python equivalent of lib/cdo"
 authors = [
-    { name = "Code.org Python Maintainers", email = "python@code.org" }
+    { name = "Code.org Python Devs", email = "python-devs@code.org" }
 ]
 
 dependencies = [
