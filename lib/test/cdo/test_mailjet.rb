@@ -63,6 +63,7 @@ class MailJetTest < Minitest::Test
     from_address = 'test@code.org'
     from_name = 'Test Name'
     template_id = 123
+    variables = {'Var1' => 'Value1', 'Var2' => 'Value2'}.to_json
 
     MailJet.stubs(:subaccount).returns('unit_test')
 
@@ -88,10 +89,11 @@ class MailJetTest < Minitest::Test
         messages[0][:To].length == 1 &&
         messages[0][:To][0][:Email] == to_email &&
         messages[0][:To][0][:Name] == to_name &&
-        messages[0][:TemplateID] == template_id
+        messages[0][:TemplateID] == template_id &&
+        messages[0][:Variables] == variables
     end
 
-    MailJet.send_template_email(mock_contact, email_config, 'en-US')
+    MailJet.send_template_email(mock_contact, email_config, 'en-US', variables)
   end
 
   def test_send_template_email_localized
@@ -166,10 +168,17 @@ class MailJetTest < Minitest::Test
     user.stubs(:teacher?).returns(true)
     user.stubs(:created_at).returns(sign_up_time)
 
-    mock_contactdata = mock('Mailjet::Contactdata')
-    MailJet.expects(:send_template_email).with(mock_contactdata, MailJet::EMAILS[:cap_section_warning], 'en-US')
+    sections = {'sections' => [
+      {'SectionName' => 'Section 1', 'SectionLink' => 'https://example.com/section1'},
+      {'SectionName' => 'Section 2', 'SectionLink' => 'https://example.com/section2'}
+    ]}.to_json
 
-    MailJet.send_cap_section_warning_email(user)
+    mock_contactdata = mock('Mailjet::Contactdata')
+    MailJet.expects(:find_or_create_contact).with(email, user.name).returns(mock_contactdata)
+
+    MailJet.expects(:send_template_email).with(mock_contactdata, MailJet::EMAILS[:cap_section_warning], 'en-US', sections)
+
+    MailJet.send_cap_section_warning_email(user, sections)
   end
 
   def test_valid_email_deliverable

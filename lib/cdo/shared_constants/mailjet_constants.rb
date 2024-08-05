@@ -21,10 +21,10 @@ module MailJetConstants
     cap_section_warning: {
       template_id: {
         staging: {
-          default: 6_179_441,
+          default: 6_190_124,
         },
         development: {
-          default: 6_179_441,
+          default: 6_189_697,
         }
       },
       from_address: 'hadi_partovi@code.org',

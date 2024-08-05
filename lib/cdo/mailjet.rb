@@ -59,8 +59,8 @@ module MailJet
   #            Example format:
   #            {
   #              sections: [
-  #                { sectionName: 'Section 1', sectionLink: 'http://example.com/section1' },
-  #                { sectionName: 'Section 2', sectionLink: 'http://example.com/section2' }
+  #                { sectionName: 'Section 1', sectionLink: 'https://example.com/section1' },
+  #                { sectionName: 'Section 2', sectionLink: 'https://example.com/section2' }
   #              ]
   #            }
   # locale   - (optional) the locale for the email template. Defaults to 'en-US'.
