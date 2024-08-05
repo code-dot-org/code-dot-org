@@ -108,8 +108,8 @@ include_recipe 'cdo-postfix'
 include_recipe 'cdo-cloudwatch-agent'
 include_recipe 'cdo-syslog'
 
-# Production analytics utilities.
-include_recipe 'cdo-analytics' if %w[production-daemon production-console].include?(node.name)
+# Production analytics utilities (also install on adhoc environments to as an integration test of the recipe).
+include_recipe 'cdo-analytics' if %w[production-daemon production-console].include?(node.name) || node.chef_environment == 'adhoc'
 
 include_recipe 'cdo-apps::jemalloc' if node['cdo-apps']['jemalloc']
 include_recipe 'cdo-apps::bundle_bootstrap'
