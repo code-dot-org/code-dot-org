@@ -33,6 +33,7 @@ const karmaConfig = {
             localeDoNotImportTest('@cdo/netsim/locale'),
             localeDoNotImportTest('@cdo/tutorialExplorer/locale'),
             localeDoNotImportTest('@cdo/weblab/locale'),
+            localeDoNotImportTest('@cdo/signup/locale'),
           ]),
           ...{
             // Use mock-firmata to unit test playground-io maker components
