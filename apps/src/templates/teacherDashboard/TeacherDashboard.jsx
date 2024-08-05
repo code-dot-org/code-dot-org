@@ -4,6 +4,7 @@ import React, {useEffect, useRef} from 'react';
 import {Route, Switch, useLocation} from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
+import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
@@ -11,6 +12,7 @@ import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionPro
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
 import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
 import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import {Heading1} from '../../lib/ui/Headings';
@@ -84,6 +86,10 @@ function TeacherDashboard({
       });
     }
   });
+
+  const teacherNavV2Enabled =
+    DCDO.get('teacher-local-nav-v2', false) ||
+    experiments.isEnabled(experiments.TEACHER_LOCAL_NAV_V2);
 
   // Select a default tab if current path doesn't match one of the paths in our TeacherDashboardPath type.
   const emptyOrInvalidPath = !Object.values(TeacherDashboardPath).includes(
@@ -180,18 +186,19 @@ function TeacherDashboard({
             <SectionAssessments sectionName={sectionName} />
           )}
         </Route>
-        {}
-        <Route
-          path={TeacherDashboardPath.navigation}
-          component={props => (
-            <div className={dashboardStyles.pageContainer}>
-              <TeacherNavigationBar />
-              <div className={dashboardStyles.content}>
-                <SectionProgressSelector />
+        {teacherNavV2Enabled && (
+          <Route
+            path={TeacherDashboardPath.navigation}
+            component={props => (
+              <div className={dashboardStyles.pageContainer}>
+                <TeacherNavigationBar />
+                <div className={dashboardStyles.content}>
+                  <SectionProgressSelector />
+                </div>
               </div>
-            </div>
-          )}
-        />
+            )}
+          />
+        )}
         {showAITutorTab && (
           <Route path={TeacherDashboardPath.aiTutorChatMessages}>
             {applyV1TeacherDashboardWidth(<TutorTab sectionId={sectionId} />)}
