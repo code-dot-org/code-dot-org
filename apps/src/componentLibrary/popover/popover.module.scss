@@ -25,7 +25,6 @@ Popover classNames structure:
   }
 */
 
-
 $m-tail-length: 12px;
 
 @mixin popover-tail-sizing($tail-length) {
@@ -62,7 +61,6 @@ $m-tail-length: 12px;
     }
   }
 }
-
 
 // Popover styles
 .popover {
@@ -124,7 +122,6 @@ $m-tail-length: 12px;
       }
     }
   }
-
 
   // Popover with image styles
   &.popover-withImage {

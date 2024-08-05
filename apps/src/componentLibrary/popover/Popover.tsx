@@ -39,18 +39,8 @@ export interface PopoverProps {
 }
 
 // TODO:
-// - Add withPopover ✔
-// - Add tests ✔
-// - update withTooltip ✔
 // - clean up
 // - update README with how to use WithPopover component
-// - Add stories ✔
-// - Add documentation ✔
-// - add implementation ✔
-// - add styles ✔
-// - update Readme ✔
-// - update index ✔
-// - ✔ update Changelog ✔
 
 /**
  * ### Production-ready Checklist:
@@ -60,7 +50,7 @@ export interface PopoverProps {
  * * (see apps/test/unit/componentLibrary/TabsTest.jsx)
  * * (?) passes accessibility checks;
  *
- * ###  Status: ```Wip```
+ * ###  Status: ```Ready For Dev```
  *
  * Design System: Popover Component.
  * Can be used to render a Popover.

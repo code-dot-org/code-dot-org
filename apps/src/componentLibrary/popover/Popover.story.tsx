@@ -13,8 +13,6 @@ export default {
 //
 // TEMPLATE
 //
-// This is needed to fix children type error (passing string instead of React.ReactNode type)
-// eslint-disable-next-line
 const SingleTemplate: StoryFn<PopoverProps> = args => {
   return <Popover {...args} />;
 };
@@ -68,7 +66,6 @@ const MultipleTemplate: StoryFn<{
 export const DefaultPopover = SingleTemplate.bind({});
 DefaultPopover.args = {
   title: 'Title',
-  // direction: 'onTop' | 'onRight' | 'onBottom' | 'onLeft' | 'none';
   content:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
   onClose: () => console.log('onClose'),
@@ -78,7 +75,7 @@ DefaultPopover.args = {
         type="secondary"
         color="black"
         text="Cancel"
-        onClick={() => console.log('Canceled Clicked')}
+        onClick={() => console.log('Cancel Clicked')}
       />
       <Button text="Ok" onClick={() => console.log('Ok Clicked')} />
     </>
@@ -88,7 +85,6 @@ DefaultPopover.args = {
 export const WithImagePopover = SingleTemplate.bind({});
 WithImagePopover.args = {
   title: 'Title',
-  // direction: 'onTop' | 'onRight' | 'onBottom' | 'onLeft' | 'none';
   image: {
     src: 'https://variety.com/wp-content/uploads/2023/05/spider-2.jpg?w=1000',
     alt: 'Spider-Man Miles Morales Image',
@@ -102,7 +98,7 @@ WithImagePopover.args = {
         type="secondary"
         color="black"
         text="Cancel"
-        onClick={() => console.log('Canceled Clicked')}
+        onClick={() => console.log('Cancel Clicked')}
       />
       <Button text="Ok" onClick={() => console.log('Ok Clicked')} />
     </>
@@ -112,7 +108,6 @@ WithImagePopover.args = {
 export const WithIconPopover = SingleTemplate.bind({});
 WithIconPopover.args = {
   title: 'Title',
-  // direction: 'onTop' | 'onRight' | 'onBottom' | 'onLeft' | 'none';
   icon: {iconName: 'smile'},
   content:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -123,7 +118,7 @@ WithIconPopover.args = {
         type="secondary"
         color="black"
         text="Cancel"
-        onClick={() => console.log('Canceled Clicked')}
+        onClick={() => console.log('Cancel Clicked')}
       />
       <Button text="Ok" onClick={() => console.log('Ok Clicked')} />
     </>
@@ -144,7 +139,7 @@ NoneDirectionPopover.args = {
         type="secondary"
         color="black"
         text="Cancel"
-        onClick={() => console.log('Canceled Clicked')}
+        onClick={() => console.log('Cancel Clicked')}
       />
       <Button text="Ok" onClick={() => console.log('Ok Clicked')} />
     </>
