@@ -1,4 +1,4 @@
-import {assert, expect} from 'chai';
+import {assert, expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {FormControl} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
@@ -7,7 +7,7 @@ import {Provider} from 'react-redux';
 import {MemoryRouter} from 'react-router-dom';
 import {createStore, combineReducers} from 'redux';
 import {Factory} from 'rosie';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {WorkshopForm} from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_form';
 import Permission, {

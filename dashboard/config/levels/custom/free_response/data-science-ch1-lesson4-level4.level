@@ -15,9 +15,12 @@
     "optional": "false",
     "allow_multiple_attempts": "false",
     "skip_dialog": true,
-    "skip_sound": true
+    "skip_sound": true,
+    "display_name": "The Researcher",
+    "bubble_choice_description": "Doc Brown is a 50-year-old academic researcher at a large university, focusing on public health studies, requiring him to handle large datasets of personal information.",
+    "thumbnail_url": "https://images.code.org/9d99bd6531e13708503019d31bd85ec0-docbrown.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-06-11 20:17:59 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-06-11 20:17:59 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-22 18:35:12 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-22 18:35:26 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import LtiSectionSyncDialog, {
   LtiSectionSyncResultShape,
@@ -12,7 +13,6 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import Button from '../../templates/Button';
 import {
   importOrUpdateRoster,
   sectionCode,

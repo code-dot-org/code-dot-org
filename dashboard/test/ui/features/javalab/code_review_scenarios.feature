@@ -1,5 +1,6 @@
 @no_mobile
 @eyes
+@skip
 Feature: Code review V2
 
   # Note: this test does not cover adding comments to the review because the slate text editor

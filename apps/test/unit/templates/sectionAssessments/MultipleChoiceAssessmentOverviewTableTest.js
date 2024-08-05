@@ -4,8 +4,6 @@ import React from 'react';
 import {UnconnectedMultipleChoiceAssessmentsOverviewTable} from '@cdo/apps/templates/sectionAssessments/MultipleChoiceAssessmentsOverviewTable';
 import commonMsg from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 const multipleChoiceData = [
   {
     id: 1,
@@ -163,12 +161,12 @@ describe('MultipleChoiceAssessmentsOverviewTable', () => {
     );
 
     const answerCells = wrapper.find('PercentAnsweredCell');
-    expect(answerCells).to.have.length(32);
+    expect(answerCells).toHaveLength(32);
 
     const tableHeaders = wrapper.find('th');
-    expect(tableHeaders).to.have.length(9);
+    expect(tableHeaders).toHaveLength(9);
 
     const tableRows = wrapper.find('tr');
-    expect(tableRows).to.have.length(5);
+    expect(tableRows).toHaveLength(5);
   });
 });

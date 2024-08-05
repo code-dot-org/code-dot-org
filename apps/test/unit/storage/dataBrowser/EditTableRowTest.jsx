@@ -1,11 +1,8 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import EditTableRow from '@cdo/apps/storage/dataBrowser/EditTableRow';
 import commonI18n from '@cdo/locale';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 describe('EditTableRow', () => {
   describe('localization', () => {
@@ -23,20 +20,20 @@ describe('EditTableRow', () => {
     }
 
     afterEach(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('should render a localized string for the "Edit" button', () => {
-      sinon.stub(commonI18n, 'edit').returns('i18n-edit');
+      jest.spyOn(commonI18n, 'edit').mockClear().mockReturnValue('i18n-edit');
 
       const wrapper = createEditTableRow();
 
       let button = wrapper.find('button').at(0);
-      expect(button.text()).to.contain('i18n-edit');
+      expect(button.text()).toContain('i18n-edit');
     });
 
     it('should render a localized string for "Save"', () => {
-      sinon.stub(commonI18n, 'save').returns('i18n-save');
+      jest.spyOn(commonI18n, 'save').mockClear().mockReturnValue('i18n-save');
 
       const wrapper = createEditTableRow();
 
@@ -44,11 +41,14 @@ describe('EditTableRow', () => {
       wrapper.setState({isEditing: true});
 
       let saveButton = wrapper.find('PendingButton').at(0);
-      expect(saveButton.prop('text')).to.contain('i18n-save');
+      expect(saveButton.prop('text')).toContain('i18n-save');
     });
 
     it('should render a localized string while saving the row', () => {
-      sinon.stub(commonI18n, 'saving').returns('i18n-saving');
+      jest
+        .spyOn(commonI18n, 'saving')
+        .mockClear()
+        .mockReturnValue('i18n-saving');
 
       const wrapper = createEditTableRow();
 
@@ -56,25 +56,31 @@ describe('EditTableRow', () => {
       wrapper.setState({isEditing: true});
 
       let saveButton = wrapper.find('PendingButton').at(0);
-      expect(saveButton.prop('pendingText')).to.contain('i18n-saving');
+      expect(saveButton.prop('pendingText')).toContain('i18n-saving');
     });
 
     it('should render a localized string for "Delete"', () => {
-      sinon.stub(commonI18n, 'delete').returns('i18n-delete');
+      jest
+        .spyOn(commonI18n, 'delete')
+        .mockClear()
+        .mockReturnValue('i18n-delete');
 
       const wrapper = createEditTableRow();
 
       let deleteButton = wrapper.find('PendingButton').at(0);
-      expect(deleteButton.prop('text')).to.contain('i18n-delete');
+      expect(deleteButton.prop('text')).toContain('i18n-delete');
     });
 
     it('should render a localized string while saving the row', () => {
-      sinon.stub(commonI18n, 'deletingWithEllipsis').returns('i18n-deleting');
+      jest
+        .spyOn(commonI18n, 'deletingWithEllipsis')
+        .mockClear()
+        .mockReturnValue('i18n-deleting');
 
       const wrapper = createEditTableRow();
 
       let deleteButton = wrapper.find('PendingButton').at(0);
-      expect(deleteButton.prop('pendingText')).to.contain('i18n-deleting');
+      expect(deleteButton.prop('pendingText')).toContain('i18n-deleting');
     });
   });
 });

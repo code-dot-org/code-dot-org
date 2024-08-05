@@ -1,10 +1,10 @@
 /** @file Tests for our johnny-five Led.RGB wrapper */
 import five from '@code-dot-org/johnny-five';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import NeoPixel from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/NeoPixel';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('NeoPixel', function () {
   beforeEach(() => {

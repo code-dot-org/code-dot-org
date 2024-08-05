@@ -1,8 +1,0 @@
-name 'genai-lesson4-wrapup-lv1'
-title 'Wrap Up'
-description 'description here'
-
-markdown <<MARKDOWN
-#Wrap Up
-###We’ve been exploring how a language model represents and **stores** the meaning of words. In your graphic organizer, update the **Storage** section with an explanation of how a model represents words.
-MARKDOWN

@@ -6,7 +6,7 @@ import {
   within,
 } from '@testing-library/react';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import DCDO from '@cdo/apps/dcdo';
 import LtiLinkAccountPage from '@cdo/apps/lib/ui/simpleSignUp/lti/link/LtiLinkAccountPage';
@@ -18,7 +18,7 @@ import * as authenticityTokenStore from '@cdo/apps/util/AuthenticityTokenStore';
 import * as utils from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_CONTEXT: LtiProviderContextProps = {
   ltiProvider: 'canvas_cloud',

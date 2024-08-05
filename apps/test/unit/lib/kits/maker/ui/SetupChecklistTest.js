@@ -2,7 +2,7 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import microBitReducer, {
   setMicroBitFirmataUpdatePercent,
@@ -19,7 +19,7 @@ import {
 } from '@cdo/apps/redux';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 // Speed up the tests by reducing the artificial delay between steps
 const STEP_DELAY_MS = 1;

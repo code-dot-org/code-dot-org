@@ -1,7 +1,6 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import {reducers} from '@cdo/apps/applab/redux/applab';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
@@ -20,8 +19,6 @@ import TableControls from '@cdo/apps/storage/dataBrowser/TableControls';
 import {changeView} from '@cdo/apps/storage/redux/data';
 import experiments from '@cdo/apps/util/experiments';
 import commonI18n from '@cdo/locale';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   isRtl: false,
@@ -73,7 +70,7 @@ describe('TableControls', () => {
   }
 
   function assertModalState(wrapper, expectedState) {
-    expect(getModal(wrapper).state()).to.deep.equal(expectedState);
+    expect(getModal(wrapper).state()).toEqual(expectedState);
   }
 
   function setModalState(wrapper, newState) {
@@ -88,11 +85,14 @@ describe('TableControls', () => {
 
   describe('localization', () => {
     afterEach(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('should render a localized string for "Clear Table"', () => {
-      sinon.stub(commonI18n, 'clearTable').returns('i18n-clear-table');
+      jest
+        .spyOn(commonI18n, 'clearTable')
+        .mockClear()
+        .mockReturnValue('i18n-clear-table');
 
       const store = getStore();
       const wrapper = mount(
@@ -102,8 +102,8 @@ describe('TableControls', () => {
       );
 
       let clearButton = wrapper.find('ConfirmDeleteButton');
-      expect(clearButton.text()).to.contain('i18n-clear-table');
-      expect(clearButton.prop('title')).to.contain('i18n-clear-table');
+      expect(clearButton.text()).toContain('i18n-clear-table');
+      expect(clearButton.prop('title')).toContain('i18n-clear-table');
     });
   });
 });

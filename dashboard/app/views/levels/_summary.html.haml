@@ -11,6 +11,8 @@
     {
       user_id: response.user_id,
       text: response.level_source&.data,
+      student_display_name: response.user&.name,
+      student_family_name: response.user&.family_name
     }
   end&.filter { |r| !!r[:text] }  # Remove empty responses.
 

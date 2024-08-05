@@ -864,6 +864,7 @@ sq-AL:
   help_recruit: Na ndihmo te rekrutojmë më shumë kodues!
   help_recruit_coders: Na ndihmoni të rekrutojmë më shumë kodues për skuadrën tënde!
   help_translate: Na ndihmo të përkthejmë.
+  hero_name: 'Minecraft: Udhëtimi i Heroit'
   hoc2014_everyone: Të gjithë
   hoc2014_heading: Bashkohuni në <a href="http://hourofcode.com"> Orën e Kodimit</a><br/>8-14
     Dhjetor, 2014<br/>
@@ -887,6 +888,7 @@ sq-AL:
   hoc2018_dance_party_main_heading: Festë vallëzimi
   hoc2018_dance_teacher_resources_tile1_button: Plani Mësimor
   hoc2018_dance_teacher_resources_tile2_button: Aktiviteti Unplugged
+  hoc2018_dance_teacher_resources_tile2_title: 'Festa e Vallëzimit: Aktivitet i shkëputur'
   hoc2018_mc_adventurer_description: Përdorni kodin për të marrë Alex apo Steve në
     një aventurë.
   hoc2018_mc_adventurer_title: Aventurieri Minecraft

@@ -125,20 +125,16 @@ class RegistrationsController < Devise::RegistrationsController
 
     if current_user && current_user.errors.blank?
       if current_user.teacher?
-        if MailJet.enabled? && request.locale != 'es-MX'
-          begin
-            MailJet.create_contact_and_send_welcome_email(current_user)
-          rescue => exception
-            # If the welcome email fails to send, we don't want to disrupt
-            # sign up, but we do want to know about it.
-            Honeybadger.notify(
-              exception,
-              error_message: 'Failed to send MailJet welcome email',
-              context: {}
-            )
-          end
-        else
-          TeacherMailer.new_teacher_email(current_user, request.locale).deliver_now
+        begin
+          MailJet.create_contact_and_send_welcome_email(current_user, request.locale)
+        rescue => exception
+          # If the welcome email fails to send, we don't want to disrupt
+          # sign up, but we do want to know about it.
+          Honeybadger.notify(
+            exception,
+            error_message: 'Failed to send MailJet welcome email',
+            context: {}
+          )
         end
       end
       ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now if current_user.parent_email.present?

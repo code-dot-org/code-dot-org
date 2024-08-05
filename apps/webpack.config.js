@@ -244,7 +244,7 @@ const WEBPACK_BASE_CONFIG = {
       {
         test: /\.ejs$/,
         include: [p('src'), p('test')],
-        loader: 'ejs-webpack-loader',
+        loader: './lib/ejs-webpack-loader',
         options: {
           strict: true,
         },
@@ -423,6 +423,9 @@ function createWebpackConfig({
           // Excludes these from minification to avoid breaking functionality,
           // but still adds .min to the output filename suffix.
           exclude: [/\/blockly.js$/, /\/brambleHost.js$/],
+          // Temporarily disable due to
+          // https://github.com/webpack-contrib/terser-webpack-plugin/issues/589
+          extractComments: false,
           terserOptions: {
             sourceMap: envConstants.DEBUG_MINIFIED,
             // Handle Safari 10.x issues: [See FND-2108 / FND-2109]

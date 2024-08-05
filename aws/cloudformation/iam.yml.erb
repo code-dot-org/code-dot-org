@@ -239,37 +239,6 @@ Resources:
         - Key: sqlworkbench-team
           Value: codedotorg
 
-# TODO: Migrate to Engineering_Contributor
-  ContributorRole:
-    Type: AWS::IAM::Role
-    Properties:
-      RoleName: Contributor
-      Description: Google-federated AWS Role for contributors, granting minimal access for local development.
-      Path: /engineering/
-      AssumeRolePolicyDocument:
-        Version: 2012-10-17
-        Statement:
-          - Effect: Allow
-            Principal: {Federated: !Sub "arn:aws:iam::${AWS::AccountId}:saml-provider/Google"}
-            Action: sts:AssumeRoleWithSAML
-            Condition:
-              StringEquals:
-                SAML:aud: https://signin.aws.amazon.com/saml
-          - Effect: Allow
-            Principal: {Federated: accounts.google.com}
-            Action: sts:AssumeRoleWithWebIdentity
-            Condition:
-              StringEquals:
-                accounts.google.com:aud: '{{resolve:secretsmanager:admin/google_client_id}}'
-              ForAnyValue:StringEquals:
-                accounts.google.com:sub: !Ref ContributorGoogleIDs
-      ManagedPolicyArns:
-        - !Ref ContributorS3Policy
-        - !Ref ContributorSecretsPolicy
-      Tags:
-        - Key: sqlworkbench-team
-          Value: codedotorg
-
 # TODO: Migrate to Billing_ReadOnly
   BillingRole:
     Type: AWS::IAM::Role
@@ -326,6 +295,7 @@ roles = {
     ManagedPolicyArns: [
       '!Ref ContributorS3Policy',
       '!Ref ContributorSecretsPolicy',
+      'arn:aws:iam::aws:policy/CloudFrontReadOnlyAccess'
     ]
   },
   TempS3LessEngineerRole: {

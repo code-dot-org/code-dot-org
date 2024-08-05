@@ -24,7 +24,7 @@ Scenario: Teachers can give and send feedback on the rubric to students.
   And I wait until element "#teacher-panel-container" is visible
   And I wait until element ".student-table" is visible
   And I click selector ".student-table tr:nth(1)" to load a new page
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
   And I click selector ".introjs-skipbutton" once I see it
   And I wait for 2 seconds
@@ -64,10 +64,10 @@ Scenario: Teacher views rubric product tour
   And element "#sign_in_or_user" contains text "Teacher_Aiden"
   And I add the current user to the "ai-rubrics" single user experiment
   And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And element ".teacher-panel td:eq(1)" contains text "Aiden"
   And I click selector ".teacher-panel td:eq(1)" to load a new page
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
 
   # Teacher views product tour step 1
   And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible
@@ -136,7 +136,7 @@ Scenario: Teacher views rubric product tour
 
   # Teacher does not see tour after completing and reloading page
   Then I reload the page
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I wait until element "h5:contains(Code Quality)" is visible
 
 @eyes
@@ -148,10 +148,10 @@ Scenario: Teacher views Rubric and Settings tabs
   And element "#sign_in_or_user" contains text "Teacher_Aiden"
   And I add the current user to the "ai-rubrics" single user experiment
   And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And element ".teacher-panel td:eq(1)" contains text "Aiden"
   And I click selector ".teacher-panel td:eq(1)" to load a new page
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I click selector ".introjs-skipbutton" if it exists
 
   When I open my eyes to test "teaching assistant rubric"
@@ -184,10 +184,10 @@ Scenario: Teacher views product tour
   And element "#sign_in_or_user" contains text "Teacher_Aiden"
   And I add the current user to the "ai-rubrics" single user experiment
   And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And element ".teacher-panel td:eq(1)" contains text "Aiden"
   And I click selector ".teacher-panel td:eq(1)" to load a new page
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
 
   # Teacher views product tour step 1
   And I wait until element "h1:contains(Getting Started with Your AI Teaching Assistant)" is visible

@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import SortedTableSelect from '@cdo/apps/code-studio/components/SortedTableSelect';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {
   setPersonalProjects,
   updateProjectLibrary,

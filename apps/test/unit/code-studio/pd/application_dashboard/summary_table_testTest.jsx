@@ -1,11 +1,10 @@
-import {assert} from 'chai';
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {getApplicationStatuses} from '@cdo/apps/code-studio/pd/application_dashboard/constants';
 
 import {SummaryTable} from '../../../../../src/code-studio/pd/application_dashboard/summary_table';
-import {expect} from '../../../../util/reconfiguredChai';
 
 const getTableContents = wrapper =>
   wrapper.find('td').map(tableContent => tableContent.text());
@@ -47,14 +46,14 @@ describe('SummaryTable', () => {
   it('does not show incomplete status by default', () => {
     const wrapper = customShallow(<SummaryTable {...DEFAULT_PROPS} />);
 
-    expect(getTableContents(wrapper)).not.to.contain('Incomplete');
+    expect(getTableContents(wrapper)).not.toContain('Incomplete');
   });
   it('shows incomplete status if a workshop admin', () => {
     const wrapper = customShallow(
       <SummaryTable {...DEFAULT_PROPS} isWorkshopAdmin />
     );
 
-    expect(getTableContents(wrapper)).to.contain('Incomplete');
+    expect(getTableContents(wrapper)).toContain('Incomplete');
   });
 });
 

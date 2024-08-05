@@ -3,10 +3,8 @@ import React from 'react';
 
 import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
 import DisabledBubblesAlert from '@cdo/apps/code-studio/DisabledBubblesAlert';
-import Alert from '@cdo/apps/templates/alert';
+import Alert from '@cdo/apps/legacySharedComponents/alert';
 import i18n from '@cdo/locale';
-
-import {expect} from '../../util/reconfiguredChai';
 
 describe('DisabledBubblesAlert', () => {
   it('is visible at first, if not seen before', () => {
@@ -28,25 +26,25 @@ describe('DisabledBubblesAlert', () => {
           </div>
         </Alert>
       )
-    ).to.equal(true);
+    ).toBe(true);
   });
 
   it('is hidden at first, if seen before', () => {
     sessionStorage.setItem('disabledBubblesAlertSeen', 'true');
     const wrapper = shallow(<DisabledBubblesAlert />);
-    expect(wrapper.find('Alert').length).to.equal(0);
+    expect(wrapper.find('Alert').length).toBe(0);
   });
 
   it('hides and remembers that the alert was seen when closed', () => {
     sessionStorage.setItem('disabledBubblesAlertSeen', 'false');
     const wrapper = shallow(<DisabledBubblesAlert />);
-    expect(wrapper.find('Alert').length).to.equal(1);
+    expect(wrapper.find('Alert').length).toBe(1);
 
     // Call whatever close handler we passed to the alert
     wrapper.find('Alert').prop('onClose')();
     wrapper.update();
 
-    expect(wrapper.find('Alert').length).to.equal(0);
-    expect(sessionStorage.getItem('disabledBubblesAlertSeen')).to.equal('true');
+    expect(wrapper.find('Alert').length).toBe(0);
+    expect(sessionStorage.getItem('disabledBubblesAlertSeen')).toBe('true');
   });
 });
