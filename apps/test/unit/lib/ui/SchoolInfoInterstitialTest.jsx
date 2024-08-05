@@ -4,6 +4,8 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import SchoolInfoInterstitial from '@cdo/apps/lib/ui/SchoolInfoInterstitial';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SchoolInfoInputs from '@cdo/apps/templates/SchoolInfoInputs';
@@ -22,7 +24,10 @@ describe('SchoolInfoInterstitial', () => {
     onClose: function () {},
   };
 
-  beforeEach(() => sinon.stub(firehoseClient, 'putRecord'));
+  beforeEach(() => {
+    sinon.restore();
+    sinon.stub(firehoseClient, 'putRecord');
+  });
   afterEach(() => firehoseClient.putRecord.restore());
 
   it('renders an uncloseable dialog with school info inputs, a dismiss button and a save button', () => {
@@ -64,6 +69,7 @@ describe('SchoolInfoInterstitial', () => {
   });
 
   it('closes the school info interstitial modal when the dismiss button is clicked', () => {
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
     const wrapper = mount(
       <SchoolInfoInterstitial
         {...MINIMUM_PROPS}
@@ -73,8 +79,6 @@ describe('SchoolInfoInterstitial', () => {
         }}
       />
     );
-    const wrapperInstance = wrapper.instance();
-    sinon.spy(wrapperInstance, 'dismissSchoolInfoForm');
     /**
      * When you shallow render a component, the render method of that component is called.
      * The onClick is already bound to the original, so if you do not re-render the component, spying on the
@@ -91,11 +95,16 @@ describe('SchoolInfoInterstitial', () => {
      */
     wrapper.instance().forceUpdate();
     wrapper.find('Button[id="dismiss-button"]').simulate('click');
-    expect(wrapperInstance.dismissSchoolInfoForm).to.have.been.called;
+    expect(analyticsSpy).to.have.been.calledWith(
+      EVENTS.SCHOOL_INTERSTITIAL_DISMISS,
+      {},
+      PLATFORMS.BOTH
+    );
     expect(wrapper.state('isOpen')).to.be.false;
   });
 
   it('closes the school info confirmation dialog when the dismiss button is clicked', () => {
+    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
     const onClose = sinon.spy();
     const wrapper = mount(
       <SchoolInfoInterstitial
@@ -107,11 +116,16 @@ describe('SchoolInfoInterstitial', () => {
         onClose={onClose}
       />
     );
-    const wrapperInstance = wrapper.instance();
-    sinon.spy(wrapperInstance, 'dismissSchoolInfoForm');
     wrapper.instance().forceUpdate();
-    wrapper.find('Button[id="dismiss-button"]').simulate('click');
-    expect(wrapperInstance.dismissSchoolInfoForm).to.have.been.called;
+    React.act(() => {
+      wrapper.find('Button[id="dismiss-button"]').simulate('click');
+    });
+
+    expect(analyticsSpy).to.have.been.calledWith(
+      EVENTS.SCHOOL_INTERSTITIAL_DISMISS,
+      {},
+      PLATFORMS.BOTH
+    );
     expect(wrapper.state('isOpen')).to.be.false;
     expect(onClose).to.have.been.calledOnce;
   });
